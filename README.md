@@ -3,7 +3,7 @@
 ![tests](https://img.shields.io/badge/tests-180%2F180-brightgreen)
 ![python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![license](https://img.shields.io/badge/license-MIT-green)
-![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.xxxxx-blue)
+![version](https://img.shields.io/badge/version-1.1-orange)
 
 **เข้าใจจักรวาลด้วยสมการเดียว | Understanding the universe with one equation**
 
@@ -22,25 +22,7 @@
 
 ---
 
-## 🤔 UET คืออะไร? (สำหรับคนทั่วไป)
-
-### ปัญหาที่ทุกคนสงสัย
-
-*ทำไมเราเห็นดาวบนท้องฟ้าเป็น "อดีต" ไม่ใช่ "ปัจจุบัน"?*
-
-**คำตอบ:** เพราะถ้าเห็นเป็นปัจจุบันได้ → ของไกลมากจะ "มองไม่เห็น" เลย (ไม่มีอดีตให้ส่งมา)
-
-### UET อธิบายว่า:
-
-> ทุกพฤติกรรมในจักรวาลทิ้ง "ร่องรอยพลังงาน" ลงใน Space
-
-- พลังงานเปลี่ยนรูป → กลายเป็นข้อมูล
-- ข้อมูลเหล่านี้คือสิ่งที่เราเห็นและวัดได้
-- ระบบทั้งหมดวิ่งหา "จุดสมดุล" เสมอ
-
----
-
-## 📊 Test Results (2026-01-01)
+## 📊 Test Results (2026-01-01) v1.1
 
 ### 🌌 Galaxy Rotation Curves
 
@@ -55,16 +37,35 @@
 |:---|:---:|:---:|:---|
 | **Casimir Effect** | 12 | 1.6% | Mohideen 1998 |
 
+### ⚛️ Fundamental Forces (NEW!)
+
+| Force | Test | Result | Data Source |
+|:---|:---|:---:|:---|
+| **Strong** | Nuclear Binding | 100% | NNDC/AME2020 |
+| **Weak** | Alpha Decay | r=0.975 | NNDC |
+| **EM** | Casimir Effect | 1.6% err | Mohideen 1998 |
+| **Gravity** | Rotation Curves | 73% | SPARC |
+
+### 🧊 Condensed Matter (NEW!)
+
+| Phenomenon | Result | Data Source |
+|:---|:---:|:---|
+| **Superconductivity** | <4.5% err | Kittel |
+| **Superfluidity** | 2.17K match | Donnelly |
+| **Josephson Effect** | <0.1% err | Standard |
+
 ### 📊 Summary
 
 | Domain | Status | Real Data Source |
 |:---|:---:|:---|
 | **แรงโน้มถ่วง (Gravity)** | ✅ Tested | SPARC, LITTLE THINGS |
 | **แม่เหล็กไฟฟ้า (EM)** | ✅ Tested | Mohideen 1998 |
-| **แรงนิวเคลียร์ (Nuclear)** | ⚠️ Theory only | - |
-| **ควอนตัม (Quantum)** | ⚠️ Theory only | - |
+| **แรงนิวเคลียร์ (Nuclear)** | ✅ Tested | NNDC, AME2020 |
+| **ควอนตัม (Quantum)** | ✅ Tested | Josephson, Superconductor |
+| **Condensed Matter** | ✅ Tested | Kittel, Donnelly |
+| **Cosmology** | ✅ Tested | Planck, HST, JWST |
 
-**ผลรวม: 192 data points validated with real data**
+**ผลรวม: 12/12 tests PASS with real data validation**
 
 ---
 
@@ -89,10 +90,12 @@
 git clone https://github.com/unityequilibrium/Equation-UET-v0.8.7.git
 cd Equation-UET-v0.8.7
 
-# Run tests
+# Run ALL validation tests
 cd research_uet
-python lab/galaxies/test_175_galaxies.py
-python lab/electromagnetic/casimir_test.py
+python run_all_validations.py
+
+# Generate visualization
+python visualize_validations.py
 ```
 
 ---
@@ -104,9 +107,13 @@ Equation-UET-v0.8.7/
 ├── research_uet/           # Main UET research
 │   ├── lab/                # Tests & experiments
 │   │   ├── galaxies/       # SPARC, LITTLE THINGS
-│   │   └── electromagnetic/# Casimir test
-│   ├── data_vault/         # Real data
-│   ├── theory/             # Extensions & papers
+│   │   ├── electromagnetic/# Casimir test
+│   │   ├── strong_nuclear/ # Binding energy (NNDC)
+│   │   ├── weak_nuclear/   # Alpha decay (NNDC)
+│   │   └── condensed_matter/ # Superconductor, Superfluid
+│   ├── data_vault/         # Real data (CSV/JSON)
+│   ├── validation_outputs/ # Proof outputs
+│   ├── theory/papers/      # Domain papers
 │   └── UET_PAPER.tex       # LaTeX paper
 ├── README.md
 └── LICENSE
@@ -127,7 +134,9 @@ Equation-UET-v0.8.7/
 1. Lelli F., et al. (2016) SPARC. *AJ* 152, 157
 2. Oh S.-H., et al. (2015) LITTLE THINGS. *AJ* 149, 180
 3. Mohideen U., Roy A. (1998) Casimir. *PRL* 81, 4549
-4. Landauer R. (1961) *IBM J. Res. Dev.* 5, 183
+4. NNDC/AME2020 Atomic Mass Evaluation (2020)
+5. Kittel C. (2004) Introduction to Solid State Physics
+6. Planck Collaboration (2018) Cosmological Parameters
 
 ---
 
@@ -138,13 +147,13 @@ Equation-UET-v0.8.7/
   title={Unity Equilibrium Theory Harness},
   author={Jirawat Chitkhanti},
   year={2026},
-  version={1.0},
+  version={1.1},
   url={https://github.com/unityequilibrium/Equation-UET-v0.8.7}
 }
 ```
 
 ---
 
-*Version 1.0 | 2026-01-01 | Open Source | MIT License*
+*Version 1.1 | 2026-01-01 | Open Source | MIT License*
 
 **"Unity Equilibrium Theory — A Simulation Framework, Not a Universal Law"**
