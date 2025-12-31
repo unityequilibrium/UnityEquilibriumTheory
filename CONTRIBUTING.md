@@ -1,70 +1,122 @@
-# Contributing to UET Harness
+# 🤝 Contributing to UET Harness
 
 Thank you for your interest in contributing! 🎉
 
-## Ways to Contribute
+---
+
+## 📋 Ways to Contribute
 
 ### 🐛 Report Bugs
-- Open an issue with:
-  - Description of the bug
-  - Steps to reproduce
-  - Expected vs actual behavior
-  - Python version and OS
 
-### 📝 Documentation
+Open an issue with:
+- Description of the bug
+- Steps to reproduce
+- Expected vs actual behavior
+- Python version and OS
+
+### 📖 Documentation
+
 - Improve README, docstrings, or tutorials
 - Add examples for new use cases
 - Fix typos or clarify explanations
 
 ### 🔬 Add Physics Tests
+
 - Propose new validation tests
 - Add real data comparisons
 - Extend to new physics domains
 
 ### 🚀 Code Improvements
+
 - Performance optimizations
 - Bug fixes
 - New features (discuss first in an issue)
 
-## Development Setup
+---
+
+## 🧪 Current Test Status (2026-01-01)
+
+| Domain | Tests | Pass Rate |
+|:---|:---:|:---:|
+| **Galaxies (SPARC)** | 154 | 73% |
+| **Dwarfs (LITTLE THINGS)** | 26 | 69% |
+| **EM (Casimir)** | 12 | 92% |
+| **Total** | 180+ | ✅ |
+
+### 🎯 Areas Needing Work:
+
+1. **Compact galaxies** - 40% pass rate (needs improvement)
+2. **Cosmology** - Not tested against CMB/LSS
+3. **Mathematical rigor** - Parameter derivation needed
+4. **Peer review** - Academic validation pending
+
+---
+
+## 🔧 Development Setup
 
 ```bash
-# Clone your fork
-git clone https://github.com/YOUR_USERNAME/uet-harness.git
-cd uet-harness
+git clone https://github.com/unityequilibrium/Equation-UET-v0.8.7.git
+cd Equation-UET-v0.8.7
 
 # Create virtual environment
 python -m venv .venv
 .venv\Scripts\activate  # Windows
+source .venv/bin/activate  # Linux/Mac
 
-# Install in development mode
-pip install -e ".[dev]"
+# Install dependencies
+pip install numpy scipy matplotlib
 
 # Run tests
-python research/run_unified_tests.py
+cd research_uet
+python lab/galaxies/test_175_galaxies.py
 ```
-
-## Pull Request Process
-
-1. **Fork** the repository
-2. **Create a branch** (`git checkout -b feature/amazing-feature`)
-3. **Make changes** and add tests
-4. **Run tests** (`python research/run_unified_tests.py`)
-5. **Commit** (`git commit -m 'Add amazing feature'`)
-6. **Push** (`git push origin feature/amazing-feature`)
-7. **Open a Pull Request**
-
-## Code Style
-
-- Follow PEP 8
-- Add type hints
-- Write docstrings (Google style)
-- Keep functions focused and small
-
-## Questions?
-
-Open an issue or start a discussion!
 
 ---
 
-*Thank you for helping make UET better!*
+## 📝 Pull Request Guidelines
+
+1. **Fork** the repository
+2. **Create a branch** for your feature
+3. **Write tests** if applicable
+4. **Update docs** if needed
+5. **Submit PR** with clear description
+
+---
+
+## 💡 Feature Requests
+
+Before proposing a new feature:
+
+1. Check existing issues
+2. Open a discussion issue first
+3. Explain the use case
+4. Be patient for feedback
+
+---
+
+## 🔬 Physics Contributions
+
+If you're adding new physics tests:
+
+1. **Use UET equations** - Must use the core `Ω[C, I]` framework
+2. **Real data required** - Include citations to data sources
+3. **Document limitations** - Be honest about what doesn't work
+
+---
+
+## 📜 Code of Conduct
+
+- Be respectful and inclusive
+- Focus on constructive feedback
+- Accept that UET has limitations (it's a simulation framework, not a universal law)
+
+---
+
+## 📬 Contact
+
+- **Issues:** GitHub Issues
+- **Discussions:** GitHub Discussions
+
+---
+
+*Thank you for helping improve UET!* 🙏
