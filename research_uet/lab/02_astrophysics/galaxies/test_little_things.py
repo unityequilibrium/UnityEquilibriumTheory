@@ -19,26 +19,31 @@ import sys
 # Import from UET V3.0 Master Equation
 import sys
 from pathlib import Path
+
 _root = Path(__file__).parent
 while _root.name != "research_uet" and _root.parent != _root:
     _root = _root.parent
 sys.path.insert(0, str(_root.parent))
 try:
     from research_uet.core.uet_master_equation import (
-        UETParameters, SIGMA_CRIT, strategic_boost, potential_V, KAPPA_BEKENSTEIN
+        UETParameters,
+        SIGMA_CRIT,
+        strategic_boost,
+        potential_V,
+        KAPPA_BEKENSTEIN,
     )
 except ImportError:
     pass  # Use local definitions if not available
 
 import os
 
-# Add engine to path
-sys.path.append(os.path.join(os.path.dirname(__file__), "..", "..", "engine"))
-sys.path.append(os.path.join(os.path.dirname(__file__), "..", "..", "data_vault", "cosmic"))
+# Add data paths - go up to research_uet then into data
+_data_path = os.path.join(os.path.dirname(__file__), "..", "..", "..", "data", "02_astrophysics")
+sys.path.insert(0, os.path.abspath(_data_path))
 
 try:
-    from di_cintio_profile import dc14_rotation_velocity, dc14_concentration, dc14_profile_params
     from little_things_data import LITTLE_THINGS_GALAXIES, save_data
+    from di_cintio_profile import dc14_rotation_velocity, dc14_concentration, dc14_profile_params
 
     DC14_AVAILABLE = True
 except ImportError as e:

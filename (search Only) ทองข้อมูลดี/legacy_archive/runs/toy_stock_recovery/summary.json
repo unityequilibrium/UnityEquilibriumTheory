@@ -1,9 +1,0 @@
-{
-  "case_id": "toy_stock_recovery",
-  "status": "PASS",
-  "scenario": "recovery",
-  "final_price": 1.137481427120556,
-  "max_volatility": 0.20317227410077826,
-  "n_shocks": 5,
-  "description": "UET Stock Market - RECOVERY"
-}

@@ -1,6 +1,0 @@
-{
-  "case_id": "toy_traffic_osm",
-  "status": "PASS",
-  "location": "Shibuya, Tokyo, Japan",
-  "description": "Real traffic flow on Shibuya, Tokyo, Japan road network from OpenStreetMap"
-}

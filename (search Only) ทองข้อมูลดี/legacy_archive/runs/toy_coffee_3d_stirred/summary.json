@@ -1,8 +1,0 @@
-{
-  "case_id": "toy_coffee_3d_stirred",
-  "status": "PASS",
-  "scenario": "stirred",
-  "final_mixing": 0.0,
-  "final_temp": 0.7999999999999999,
-  "description": "3D Coffee + Milk with Convection - STIRRED"
-}

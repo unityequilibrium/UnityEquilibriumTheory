@@ -1,8 +1,0 @@
-{
-  "case_id": "toy_physarum_ring",
-  "status": "PASS",
-  "scenario": "ring",
-  "n_cities": 6,
-  "final_network_mass": 3072.4340446995952,
-  "description": "Physarum Network - RING"
-}

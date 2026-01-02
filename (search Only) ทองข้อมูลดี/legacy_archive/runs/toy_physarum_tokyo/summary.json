@@ -1,8 +1,0 @@
-{
-  "case_id": "toy_physarum_tokyo",
-  "status": "PASS",
-  "scenario": "tokyo",
-  "n_cities": 9,
-  "final_network_mass": 3069.9380840168633,
-  "description": "Physarum Network - TOKYO"
-}

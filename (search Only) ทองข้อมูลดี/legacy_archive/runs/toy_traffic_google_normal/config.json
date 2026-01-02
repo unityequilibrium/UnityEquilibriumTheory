@@ -1,9 +1,0 @@
-{
-  "case_id": "toy_traffic_google_normal",
-  "model": "google_maps_traffic",
-  "scenario": "normal",
-  "description": "Google Maps style traffic - normal",
-  "grid": {
-    "N": 64
-  }
-}

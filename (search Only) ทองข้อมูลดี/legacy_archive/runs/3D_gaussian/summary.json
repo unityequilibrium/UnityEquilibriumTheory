@@ -1,9 +1,0 @@
-{
-  "case_id": "3D_gaussian",
-  "status": "PASS",
-  "dim": 3,
-  "Omega0": 18.793106963724124,
-  "OmegaT": 63.178018065830955,
-  "steps_total": 50,
-  "description": "3D Gaussian blob diffusing"
-}

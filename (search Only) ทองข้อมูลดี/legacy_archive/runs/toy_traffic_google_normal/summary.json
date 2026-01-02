@@ -1,7 +1,0 @@
-{
-  "case_id": "toy_traffic_google_normal",
-  "status": "PASS",
-  "scenario": "normal",
-  "final_congestion": 0.8583768721699756,
-  "description": "Google Maps style traffic visualization - normal"
-}

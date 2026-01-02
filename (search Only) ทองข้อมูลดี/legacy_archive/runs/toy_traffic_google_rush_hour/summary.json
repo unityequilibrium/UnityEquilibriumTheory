@@ -1,7 +1,0 @@
-{
-  "case_id": "toy_traffic_google_rush_hour",
-  "status": "PASS",
-  "scenario": "rush_hour",
-  "final_congestion": 0.8536398467432951,
-  "description": "Google Maps style traffic visualization - rush_hour"
-}

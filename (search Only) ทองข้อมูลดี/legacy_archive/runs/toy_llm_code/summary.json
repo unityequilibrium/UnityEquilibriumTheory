@@ -1,8 +1,0 @@
-{
-  "case_id": "toy_llm_code",
-  "status": "PASS",
-  "prompt_type": "code",
-  "final_coherence": 0.9781879475293919,
-  "final_entropy": 6.854215055217685,
-  "description": "UET LLM Dynamics - CODE"
-}

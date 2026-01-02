@@ -1,9 +1,0 @@
-{
-  "case_id": "toy_coffee_real_physics",
-  "status": "PASS",
-  "final_mixing": NaN,
-  "final_temp": NaN,
-  "description": "Realistic coffee brewing with real temperature, diffusion, and buoyancy",
-  "Omega0": 0.058363398115805626,
-  "OmegaT": NaN
-}

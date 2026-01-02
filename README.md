@@ -29,6 +29,7 @@ Current Status: **Active Development (v0.8.7)**
 | Phenomenon | Test Subject | Data Source | Result | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | **Galaxy Rotation** | 175 Galaxies | **SPARC** (Lelli 2016) | **75% Pass** | ✅ PASS |
+| **Dwarf Galaxies** | 26 Galaxies | **LITTLE THINGS** | **46% better** | ✅ PASS |
 | **Black Holes** | EHT + LIGO | M87*, Sgr A* | **3/3 Pass** | ✅ PASS |
 | **Cosmology** | Hubble Tension | JWST + Planck | **5 obs** | ✅ PASS |
 | **Galaxy Clusters** | Virial | Standard | **10.9x** | ✅ PASS |
@@ -38,6 +39,7 @@ Current Status: **Active Development (v0.8.7)**
 | :--- | :--- | :--- | :--- | :--- |
 | **QCD Hadron** | Masses | **PDG 2024** | **3.9% Error** | ✅ PASS |
 | **Strong Force** | Cornell | Lattice QCD | **2.5% Error** | ✅ PASS |
+| **Weak Force** | Alpha Decay | **NNDC Real** | **r=0.975** | ✅ PASS |
 | **Neutrino** | Mass Limit | **KATRIN 2025** | **PASS** | ✅ PASS |
 | **Bell Test** | Entanglement | **Nobel 2022** | **PASS** | ✅ PASS |
 

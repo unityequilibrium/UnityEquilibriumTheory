@@ -1,9 +1,21 @@
-# Isotope, Q_Value_MeV, Half_Life_Sec, Source
-Po-212, 8.95, 3.0e-7, NNDC
-Po-214, 7.83, 1.64e-4, NNDC
-Po-210, 5.41, 1.196e7, NNDC
-Rn-222, 5.59, 3.30e5, NNDC
-Ra-226, 4.87, 5.02e10, NNDC
-U-238, 4.27, 1.41e17, NNDC
-Th-232, 4.08, 4.43e17, NNDC
-Sm-147, 2.23, 3.34e18, NNDC
+# Alpha Decay Data (Real)
+# Source: NNDC - National Nuclear Data Center
+# Reference: https://www.nndc.bnl.gov/chart/
+# Format: Isotope, Q-value (MeV), Half-life (seconds)
+#
+# Citations:
+# - NNDC Nuclear Data, Brookhaven National Laboratory
+# - Audi et al., Nuclear Physics A 729 (2003) 337-676
+# - Wang et al., Chinese Physics C 45 (2021) 030003
+#
+Po-212, 8.78, 2.99e-7
+Po-214, 7.69, 1.64e-4
+Po-216, 6.78, 0.145
+Po-218, 6.00, 186.0
+Rn-220, 6.29, 55.6
+Rn-222, 5.49, 330350.0
+Ra-226, 4.78, 5.05e10
+U-234, 4.77, 7.74e12
+U-238, 4.20, 1.41e17
+Th-232, 4.01, 4.43e17
+Sm-147, 2.23, 3.35e18
