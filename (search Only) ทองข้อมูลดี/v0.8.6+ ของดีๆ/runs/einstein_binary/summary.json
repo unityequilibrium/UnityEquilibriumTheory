@@ -1,0 +1,12 @@
+{
+  "case_id": "einstein_binary",
+  "status": "PASS",
+  "scenario": "binary",
+  "final_energy": 773990.3999999998,
+  "final_curvature": 19166.22846102061,
+  "Omega0": 0.6904998397012179,
+  "OmegaT": 1578.8218749999996,
+  "delta_omega": 2285.4912983660683,
+  "omega_conserved": false,
+  "description": "UET \u2192 T\u03bc\u03bd \u2192 G\u03bc\u03bd | BINARY"
+}

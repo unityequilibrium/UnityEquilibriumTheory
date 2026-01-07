@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Traffic Analysis - Frame Player</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            color: white;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .player-container {
+            background: rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+        #frame-display {
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .controls {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: #4ecdc4;
+            color: #1a1a2e;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+        button:hover {
+            background: #45b7aa;
+            transform: scale(1.05);
+        }
+        button:active {
+            transform: scale(0.95);
+        }
+        .slider-container {
+            width: 100%;
+            margin-top: 20px;
+        }
+        #frame-slider {
+            width: 100%;
+            height: 8px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .info {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        #frame-info {
+            background: rgba(255,255,255,0.1);
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        .legend {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.9em;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+        .speed-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+            justify-content: center;
+        }
+        #speed-slider {
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚗 Traffic Analysis</h1>
+    
+    <div class="player-container">
+        <img id="frame-display" src="frames/frame_0000.png" alt="Traffic Frame">
+        
+        <div class="controls">
+            <button onclick="firstFrame()">⏮️ First</button>
+            <button onclick="prevFrame()">◀️ Prev</button>
+            <button id="play-btn" onclick="togglePlay()">▶️ Play</button>
+            <button onclick="nextFrame()">Next ▶️</button>
+            <button onclick="lastFrame()">Last ⏭️</button>
+        </div>
+        
+        <div class="slider-container">
+            <input type="range" id="frame-slider" min="0" max="50" value="0" 
+                   oninput="goToFrame(this.value)">
+        </div>
+        
+        <div class="speed-control">
+            <span>Speed:</span>
+            <input type="range" id="speed-slider" min="1" max="20" value="5">
+            <span id="speed-label">5 fps</span>
+        </div>
+        
+        <div class="info">
+            <div id="frame-info">Frame 0 / 50 | t = 0.0s</div>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item"><div class="legend-color" style="background:#2ECC71"></div> Free</div>
+            <div class="legend-item"><div class="legend-color" style="background:#F1C40F"></div> Moderate</div>
+            <div class="legend-item"><div class="legend-color" style="background:#E67E22"></div> Slow</div>
+            <div class="legend-item"><div class="legend-color" style="background:#E74C3C"></div> Heavy</div>
+            <div class="legend-item"><div class="legend-color" style="background:#8E2323"></div> Jam</div>
+        </div>
+    </div>
+    
+    <script>
+        const totalFrames = 51;
+        let currentFrame = 0;
+        let isPlaying = false;
+        let playInterval = null;
+        
+        const frameData = [{"frame": 0, "time": 0, "congestion": 0.0323570253983701}, {"frame": 1, "time": 0.2, "congestion": 0.8440380819691166}, {"frame": 2, "time": 0.4, "congestion": 0.8440264716126784}, {"frame": 3, "time": 0.6000000000000001, "congestion": 0.8440264716126784}, {"frame": 4, "time": 0.8, "congestion": 0.8440264716126784}, {"frame": 5, "time": 1.0, "congestion": 0.8440264716126784}, {"frame": 6, "time": 1.2000000000000002, "congestion": 0.8440264716126784}, {"frame": 7, "time": 1.4000000000000001, "congestion": 0.8440264716126784}, {"frame": 8, "time": 1.6, "congestion": 0.8440264716126784}, {"frame": 9, "time": 1.8, "congestion": 0.8440264716126784}, {"frame": 10, "time": 2.0, "congestion": 0.8440264716126784}, {"frame": 11, "time": 2.2, "congestion": 0.8440264716126784}, {"frame": 12, "time": 2.4000000000000004, "congestion": 0.8440264716126784}, {"frame": 13, "time": 2.6, "congestion": 0.8440264716126784}, {"frame": 14, "time": 2.8000000000000003, "congestion": 0.8440264716126784}, {"frame": 15, "time": 3.0, "congestion": 0.8440264716126784}, {"frame": 16, "time": 3.2, "congestion": 0.8440264716126784}, {"frame": 17, "time": 3.4000000000000004, "congestion": 0.8440264716126784}, {"frame": 18, "time": 3.6, "congestion": 0.8440264716126784}, {"frame": 19, "time": 3.8000000000000003, "congestion": 0.8440264716126784}, {"frame": 20, "time": 4.0, "congestion": 0.8440264716126784}, {"frame": 21, "time": 4.2, "congestion": 0.8440264716126784}, {"frame": 22, "time": 4.4, "congestion": 0.8440264716126784}, {"frame": 23, "time": 4.6000000000000005, "congestion": 0.8440264716126784}, {"frame": 24, "time": 4.800000000000001, "congestion": 0.8440264716126784}, {"frame": 25, "time": 5.0, "congestion": 0.8440264716126784}, {"frame": 26, "time": 5.2, "congestion": 0.8440264716126784}, {"frame": 27, "time": 5.4, "congestion": 0.8440264716126784}, {"frame": 28, "time": 5.6000000000000005, "congestion": 0.8440264716126784}, {"frame": 29, "time": 5.800000000000001, "congestion": 0.8440264716126784}, {"frame": 30, "time": 6.0, "congestion": 0.8440264716126784}, {"frame": 31, "time": 6.2, "congestion": 0.8440264716126784}, {"frame": 32, "time": 6.4, "congestion": 0.8440264716126784}, {"frame": 33, "time": 6.6000000000000005, "congestion": 0.8440264716126784}, {"frame": 34, "time": 6.800000000000001, "congestion": 0.8440264716126784}, {"frame": 35, "time": 7.0, "congestion": 0.8440264716126784}, {"frame": 36, "time": 7.2, "congestion": 0.8440264716126784}, {"frame": 37, "time": 7.4, "congestion": 0.8440264716126784}, {"frame": 38, "time": 7.6000000000000005, "congestion": 0.8440264716126784}, {"frame": 39, "time": 7.800000000000001, "congestion": 0.8440264716126784}, {"frame": 40, "time": 8.0, "congestion": 0.8440264716126784}, {"frame": 41, "time": 8.200000000000001, "congestion": 0.8440264716126784}, {"frame": 42, "time": 8.4, "congestion": 0.8440264716126784}, {"frame": 43, "time": 8.6, "congestion": 0.8440264716126784}, {"frame": 44, "time": 8.8, "congestion": 0.8440264716126784}, {"frame": 45, "time": 9.0, "congestion": 0.8440264716126784}, {"frame": 46, "time": 9.200000000000001, "congestion": 0.8440264716126784}, {"frame": 47, "time": 9.4, "congestion": 0.8440264716126784}, {"frame": 48, "time": 9.600000000000001, "congestion": 0.8440264716126784}, {"frame": 49, "time": 9.8, "congestion": 0.8440264716126784}, {"frame": 50, "time": 10.0, "congestion": 0.8440264716126784}];
+        
+        function updateDisplay() {
+            const frameStr = String(currentFrame).padStart(4, '0');
+            document.getElementById('frame-display').src = `frames/frame_${frameStr}.png`;
+            document.getElementById('frame-slider').value = currentFrame;
+            
+            const data = frameData[currentFrame];
+            document.getElementById('frame-info').textContent = 
+                `Frame ${currentFrame} / ${totalFrames-1} | t = ${data.time.toFixed(1)}s | Congestion: ${data.congestion.toFixed(3)}`;
+        }
+        
+        function goToFrame(n) {
+            currentFrame = parseInt(n);
+            updateDisplay();
+        }
+        
+        function nextFrame() {
+            if (currentFrame < totalFrames - 1) {
+                currentFrame++;
+                updateDisplay();
+            }
+        }
+        
+        function prevFrame() {
+            if (currentFrame > 0) {
+                currentFrame--;
+                updateDisplay();
+            }
+        }
+        
+        function firstFrame() {
+            currentFrame = 0;
+            updateDisplay();
+        }
+        
+        function lastFrame() {
+            currentFrame = totalFrames - 1;
+            updateDisplay();
+        }
+        
+        function togglePlay() {
+            isPlaying = !isPlaying;
+            document.getElementById('play-btn').textContent = isPlaying ? '⏸️ Pause' : '▶️ Play';
+            
+            if (isPlaying) {
+                const fps = parseInt(document.getElementById('speed-slider').value);
+                playInterval = setInterval(() => {
+                    if (currentFrame < totalFrames - 1) {
+                        currentFrame++;
+                        updateDisplay();
+                    } else {
+                        currentFrame = 0;
+                        updateDisplay();
+                    }
+                }, 1000 / fps);
+            } else {
+                clearInterval(playInterval);
+            }
+        }
+        
+        document.getElementById('speed-slider').addEventListener('input', (e) => {
+            document.getElementById('speed-label').textContent = e.target.value + ' fps';
+            if (isPlaying) {
+                clearInterval(playInterval);
+                const fps = parseInt(e.target.value);
+                playInterval = setInterval(() => {
+                    if (currentFrame < totalFrames - 1) {
+                        currentFrame++;
+                    } else {
+                        currentFrame = 0;
+                    }
+                    updateDisplay();
+                }, 1000 / fps);
+            }
+        });
+        
+        // Keyboard controls
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextFrame();
+            else if (e.key === 'ArrowLeft') prevFrame();
+            else if (e.key === ' ') { e.preventDefault(); togglePlay(); }
+            else if (e.key === 'Home') firstFrame();
+            else if (e.key === 'End') lastFrame();
+        });
+    </script>
+</body>
+</html>

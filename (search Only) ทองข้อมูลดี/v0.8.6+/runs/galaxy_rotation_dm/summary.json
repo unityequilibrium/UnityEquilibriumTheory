@@ -1,9 +1,0 @@
-{
-  "case_id": "galaxy_rotation_dm",
-  "status": "PASS",
-  "Omega0": 1.2830712530847006,
-  "OmegaT": 1.2830712530847006,
-  "delta_omega": 0.0,
-  "omega_conserved": true,
-  "description": "Galaxy rotation curve with dark matter halo - flat rotation curve evidence"
-}

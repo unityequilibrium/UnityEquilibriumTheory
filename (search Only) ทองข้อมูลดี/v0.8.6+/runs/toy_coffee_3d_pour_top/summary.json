@@ -1,8 +1,0 @@
-{
-  "case_id": "toy_coffee_3d_pour_top",
-  "status": "PASS",
-  "scenario": "pour_top",
-  "final_mixing": 9.713701328088097e-05,
-  "final_temp": 0.5,
-  "description": "3D Coffee + Milk with Convection - POUR_TOP"
-}

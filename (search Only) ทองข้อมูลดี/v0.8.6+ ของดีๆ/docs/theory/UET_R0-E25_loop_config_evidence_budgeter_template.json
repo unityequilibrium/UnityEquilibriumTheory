@@ -1,0 +1,25 @@
+{
+  "paths": {
+    "stress_spec": "stress_spec.json",
+    "band_dt_presets": "band_dt_presets.json",
+    "baseline_manifest": "baseline/baseline_manifest.json",
+    "work_dir": "loop_runs",
+    "scripts_dir": "scripts"
+  },
+  "params": {
+    "action_router": true,
+    "action_router_enforce": true,
+    "hold_apply_if_unstable": true,
+    "evidence_executor": true,
+    "evidence_rounds": 1,
+    "evidence_extra_seeds": 20,
+    "evidence_extra_seeds_multiplier": 2.0,
+    "evidence_seed_start": 500000,
+    "evidence_max_rows": 50000,
+    "evidence_budgeter": true,
+    "evidence_budget_max_n": 500,
+    "evidence_budget_total_extra_seeds": 200,
+    "evidence_budget_max_rounds": 3,
+    "evidence_budget_stop_on_unstable": true
+  }
+}

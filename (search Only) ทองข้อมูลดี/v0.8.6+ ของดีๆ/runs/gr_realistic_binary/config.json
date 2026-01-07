@@ -1,0 +1,24 @@
+{
+  "case_id": "gr_realistic_binary",
+  "model": "UET_GR_realistic",
+  "scenario": "binary",
+  "grid": {
+    "N": 48
+  },
+  "domain": {
+    "L": 2.0
+  },
+  "time": {
+    "T": 5.0,
+    "dt": 0.01
+  },
+  "params": {
+    "beta": 0.6,
+    "kappa": 0.3
+  },
+  "physics": {
+    "C_interpretation": "Matter distribution / metric perturbation",
+    "I_interpretation": "Gravitational potential",
+    "coupling": "UET \u2194 Einstein through stress-energy tensor"
+  }
+}

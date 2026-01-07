@@ -1,0 +1,73 @@
+# Biophysics Theory: GDS Mapping
+
+## 1. Domain Description
+
+Biophysics studies physical principles in biological systems: cell movement, protein folding, neural activity.
+
+---
+
+## 2. GDS → Biophysics Mapping
+
+### 2.1 Symbols
+
+| GDS | Biophysics | Description |
+|-----|------------|-------------|
+| **Ω** | Chemical potential | Concentration field |
+| **F** | Cell velocity | Migration direction |
+| **∇Ω** | Concentration gradient | dC/dx |
+| **λ** | Mobility | D/kT |
+
+### 2.2 Potential Function
+
+```
+Ω(x) = -kT ln(C(x))
+
+Where:
+  C(x) = Concentration at position x
+  kT = Thermal energy
+```
+
+Physical interpretation: **Chemical potential drives diffusion**
+
+### 2.3 Force Equation (Chemotaxis)
+
+```
+v = -D ∇C / C  (drift)
+  = -D ∇(ln C)
+  = -(D/kT) ∇Ω
+```
+
+**Prediction:** Cells move up concentration gradients (toward attractant)
+
+---
+
+## 3. Applications
+
+### 3.1 Chemotaxis
+Bacteria (E. coli) swim toward nutrients:
+- Run-and-tumble with bias
+- Average motion follows gradient
+
+### 3.2 Morphogen Gradients
+Embryo development:
+- Concentration patterns define cell fates
+- Wolpert's "French flag" model
+
+### 3.3 Protein Folding
+Energy landscape:
+- Native state = global minimum
+- Folding = gradient descent on landscape
+
+---
+
+## 4. Testable Predictions
+
+| Prediction | Test | Expected |
+|------------|------|----------|
+| Cells move toward attractant | Tracking | v ∝ -∇C |
+| Noisy but systematic | Correlation | r < 0 |
+| Speed ∝ gradient | Regression | Positive slope |
+
+---
+
+*Theory version: 1.0*

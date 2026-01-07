@@ -1,0 +1,20 @@
+{
+  "case_id": "3D_galaxy",
+  "model": "C_I_3D",
+  "grid": {
+    "N": 16,
+    "dim": 3
+  },
+  "domain": {
+    "L": 10.0
+  },
+  "time": {
+    "T": 2.0,
+    "dt": 0.02
+  },
+  "params": {
+    "beta": 0.5,
+    "kappa": 0.5
+  },
+  "description": "Galaxy-like spiral structure with central bulge"
+}

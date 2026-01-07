@@ -1,0 +1,9 @@
+{
+  "case_id": "toy_traffic_google_accident",
+  "model": "google_maps_traffic",
+  "scenario": "accident",
+  "description": "Google Maps style traffic - accident",
+  "grid": {
+    "N": 64
+  }
+}

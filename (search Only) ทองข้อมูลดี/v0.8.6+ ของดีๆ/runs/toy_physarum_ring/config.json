@@ -1,0 +1,59 @@
+{
+  "case_id": "toy_physarum_ring",
+  "model": "C_I",
+  "scenario": "ring",
+  "grid": {
+    "N": 64
+  },
+  "domain": {
+    "L": 10.0
+  },
+  "time": {
+    "T": 8.0,
+    "dt": 0.02
+  },
+  "params": {
+    "L": 10.0,
+    "T": 8.0,
+    "dt": 0.02,
+    "beta": 0.5,
+    "kappa": 0.6,
+    "decay": 0.02,
+    "reinforce": 0.8
+  },
+  "cities": [
+    [
+      53,
+      32
+    ],
+    [
+      42,
+      50
+    ],
+    [
+      21,
+      50
+    ],
+    [
+      11,
+      32
+    ],
+    [
+      21,
+      13
+    ],
+    [
+      42,
+      13
+    ]
+  ],
+  "city_names": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+  ],
+  "description": "Physarum slime mold - ring"
+}

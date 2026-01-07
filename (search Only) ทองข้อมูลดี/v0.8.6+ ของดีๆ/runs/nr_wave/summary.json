@@ -1,0 +1,10 @@
+{
+  "case_id": "nr_wave",
+  "status": "PASS",
+  "scenario": "wave",
+  "Omega0": 0.6582488010485203,
+  "OmegaT": 877.1935237052437,
+  "delta_omega": 1331.6169714368907,
+  "omega_conserved": false,
+  "description": "Numerical Relativity - WAVE"
+}

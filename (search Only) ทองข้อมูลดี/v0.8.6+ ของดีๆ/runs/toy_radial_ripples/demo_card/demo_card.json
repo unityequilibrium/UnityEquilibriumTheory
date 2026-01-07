@@ -1,0 +1,16 @@
+{
+  "title": "toy_radial_ripples",
+  "description": "Simulation of C_I model. Final phase: unknown. Energy reduction: 0.0%.",
+  "key_params": {
+    "model": "C_I",
+    "grid": 32,
+    "L": 10.0,
+    "T": 3.0,
+    "dt": 0.01,
+    "\u03b2": 0.3,
+    "\u03ba": 0.5
+  },
+  "metrics": {},
+  "model": "C_I",
+  "generated_at": "2025-12-21T18:06:30.797802"
+}

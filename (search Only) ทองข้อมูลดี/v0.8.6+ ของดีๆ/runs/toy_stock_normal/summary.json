@@ -1,0 +1,9 @@
+{
+  "case_id": "toy_stock_normal",
+  "status": "PASS",
+  "scenario": "normal",
+  "final_price": 0.9920032066806772,
+  "max_volatility": 0.20275910694144367,
+  "n_shocks": 5,
+  "description": "UET Stock Market - NORMAL"
+}

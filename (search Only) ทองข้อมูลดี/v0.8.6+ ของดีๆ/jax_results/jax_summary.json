@@ -1,0 +1,23 @@
+{
+  "n_runs": 1,
+  "grid_size": 32,
+  "omega_mean": 3876.6220703125,
+  "omega_std": 0.0,
+  "omega_ci_95": [
+    3876.6220703125,
+    3876.6220703125
+  ],
+  "elapsed_seconds": 65.03939008712769,
+  "runs_per_second": 0.015375297933458262,
+  "device": "cpu",
+  "backend": "jax",
+  "jax_available": true,
+  "params": {
+    "N": 32,
+    "T": 31536000.0,
+    "dt": 100.0,
+    "kappa": 0.3,
+    "beta": 0.5,
+    "s": 0.0
+  }
+}

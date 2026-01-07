@@ -1,0 +1,13 @@
+{
+  "case_id": "toy_traffic_rush_hour",
+  "status": "PASS",
+  "scenario": "rush_hour",
+  "avg_density": 1.0779430592073815,
+  "max_jam": 1.0779437274907422,
+  "flow_efficiency": 0.9999994447395749,
+  "Omega0": 5.783260683133217,
+  "OmegaT": 0.771073152259204,
+  "delta_omega": -0.8666715552857532,
+  "omega_conserved": false,
+  "description": "UET Traffic Flow - RUSH_HOUR"
+}

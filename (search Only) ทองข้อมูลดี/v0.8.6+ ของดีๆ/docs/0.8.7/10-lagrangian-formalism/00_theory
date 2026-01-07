@@ -1,0 +1,179 @@
+# Lagrangian Formalism: Literature Review
+
+## 1. Classical Mechanics Foundations
+
+### 1.1 Lagrangian Mechanics
+- **Lagrange, J.L.** (1788). *Mécanique Analytique*
+- L = T - V (kinetic - potential)
+- Euler-Lagrange equations: d/dt(∂L/∂q̇) - ∂L/∂q = 0
+- Coordinate-independent formulation
+
+### 1.2 Hamilton's Principle
+- **Hamilton, W.R.** (1834). Principle of least action
+- δS = δ∫L dt = 0
+- Action: S = ∫L dt
+- Variational approach to mechanics
+
+### 1.3 Noether's Theorem
+- **Noether, E.** (1918). Symmetry → Conservation
+- Time translation → Energy
+- Space translation → Momentum
+- Rotation → Angular momentum
+
+---
+
+## 2. Field Theory Lagrangians
+
+### 2.1 Scalar Field
+```
+L = ½ ∂μφ ∂^μφ - V(φ)
+```
+- Klein-Gordon equation: □φ + dV/dφ = 0
+- φ⁴ theory, Higgs field
+
+### 2.2 Electromagnetic Field
+```
+L = -¼ F_μν F^μν - J_μ A^μ
+```
+- **Maxwell's equations** from variation
+- U(1) gauge symmetry
+
+### 2.3 Standard Model
+```
+L_SM = L_gauge + L_Higgs + L_Yukawa + L_fermion
+```
+- SU(3) × SU(2) × U(1) gauge theory
+- ~20 free parameters
+
+---
+
+## 3. Gravity as Lagrangian Theory
+
+### 3.1 Einstein-Hilbert Action
+```
+S = (c⁴/16πG) ∫ R √-g d⁴x
+```
+- **Hilbert, D.** (1915). Variational derivation
+- Variation gives Einstein equations
+
+### 3.2 f(R) Theories
+```
+S = ∫ f(R) √-g d⁴x
+```
+- Generalizations of GR
+- Can explain dark energy
+- **Sotiriou, T. & Faraoni, V.** (2010). Rev. Mod. Phys.
+
+### 3.3 Teleparallel Gravity
+- **Einstein, A.** (1928). Teleparallel equivalent of GR
+- Uses torsion instead of curvature
+- Equivalent physics, different formulation
+
+---
+
+## 4. Energy-Based Formulations
+
+### 4.1 Thermodynamic Gravity
+- **Jacobson, T.** (1995). δQ = TdS → Einstein equations
+- Gravity emerges from thermodynamics
+- No fundamental action needed?
+
+### 4.2 Entropic Gravity
+- **Verlinde, E.** (2011). F = T ∂S/∂x
+- Newton's law from entropy
+- Connects to holographic principle
+
+### 4.3 Emergent Spacetime
+- **Sindoni, L.** (2012). Review of emergent approaches
+- Spacetime as collective phenomenon
+- Action emerges at low energies
+
+---
+
+## 5. Equation of State for Fields
+
+### 5.1 Cosmological Fluids
+- Radiation: w = 1/3
+- Matter: w = 0
+- Curvature: w = -1/3
+- Cosmological constant: w = -1
+
+### 5.2 Scalar Field Cosmology
+```
+ρ = ½φ̇² + V(φ)
+p = ½φ̇² - V(φ)
+```
+- w = (φ̇² - 2V)/(φ̇² + 2V)
+- Slow-roll: w → -1
+
+### 5.3 Dark Energy Models
+- **Quintessence** - rolling scalar
+- **k-essence** - non-canonical kinetic term
+- **Chameleon** - environment-dependent
+
+---
+
+## 6. Gauge Coupling
+
+### 6.1 Energy-Momentum Tensor
+```
+T_μν = -2/√-g × δS_matter/δg^μν
+```
+- Source of gravity in GR
+- Universal coupling to geometry
+
+### 6.2 Minimal Coupling
+- ∂_μ → D_μ = ∂_μ + igA_μ
+- Only gauge field introduces coupling
+- No direct matter-matter interaction
+
+### 6.3 Non-Minimal Coupling
+- ξRφ² terms
+- Higgs-gravity connection
+- Inflation models
+
+---
+
+## 7. UET Lagrangian
+
+### 7.1 Proposed Form
+```
+L_UET = ½ ∂μE ∂^μE - V(E)
+```
+
+Where E(x,t) is the energy density field.
+
+### 7.2 Properties
+- Lorentz invariant ✓
+- Recovers Newton via F = -∇E ✓
+- Gives w = -1 for static E ✓
+- Couples to T_μν universally ✓
+
+### 7.3 Comparison
+
+| Feature | Standard | UET |
+|---------|----------|-----|
+| Fundamental field | φ, A_μ, g_μν | E |
+| Forces | Gauge + gravity | All from ∇E |
+| Dark energy | Λ term | E₀ vacuum |
+| Unification | GUTs, Strings | Single E field |
+
+---
+
+## 8. Key References
+
+1. Lagrange, J.L. (1788). Mécanique Analytique
+2. Noether, E. (1918). Nachr. Ges. Wiss. Göttingen 235
+3. Hilbert, D. (1915). Nachr. Ges. Wiss. Göttingen 395
+4. Jacobson, T. (1995). Phys. Rev. Lett. 75, 1260
+5. Verlinde, E. (2011). JHEP 2011, 29
+6. Sotiriou, T. & Faraoni, V. (2010). Rev. Mod. Phys. 82, 451
+
+---
+
+## 9. Open Questions Addressed
+
+1. **What is the fundamental field?** → E
+2. **Why multiple forces?** → Different E profiles
+3. **Why w = -1?** → Static E field limit
+4. **Unification?** → Single Lagrangian L(E)

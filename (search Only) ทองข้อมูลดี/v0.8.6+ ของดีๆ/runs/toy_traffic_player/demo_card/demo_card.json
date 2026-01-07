@@ -1,0 +1,14 @@
+{
+  "title": "toy_traffic_player",
+  "description": "Simulation of interactive_player model. Final phase: unknown. Energy reduction: 0.0%.",
+  "key_params": {
+    "model": "interactive_player",
+    "grid": "?",
+    "L": "?",
+    "T": "?",
+    "dt": "?"
+  },
+  "metrics": {},
+  "model": "interactive_player",
+  "generated_at": "2025-12-21T17:02:23.540191"
+}

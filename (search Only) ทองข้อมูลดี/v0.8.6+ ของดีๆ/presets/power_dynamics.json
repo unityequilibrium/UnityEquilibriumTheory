@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "name": "power_dynamics",
+    "version": "1.0",
+    "description": "Power Dynamics simulation - Game Theory + Wave Function"
+  },
+  "run": {
+    "seed": 42,
+    "rounds": 50,
+    "use_wave": true
+  },
+  "world": {
+    "population": 100,
+    "types": {
+      "A": { "count": 25, "power": 0.3, "boldness": 0.2, "selfishness": 0.3 },
+      "B": { "count": 25, "power": 0.8, "boldness": 0.2, "selfishness": 0.5 },
+      "C": { "count": 25, "power": 0.3, "boldness": 0.9, "selfishness": 0.1 },
+      "D": { "count": 25, "power": 0.8, "boldness": 0.9, "selfishness": 0.8 }
+    }
+  },
+  "equations": {
+    "enabled": ["POWER_DYNAMICS"],
+    "params": {
+      "c_resources": 1.0,
+      "wave_decay": 0.5
+    }
+  },
+  "outputs": {
+    "metrics": ["NORMALIZATIONS", "EFFICIENCY", "WINNER", "TRANSITIONS"],
+    "logEvery": 10
+  },
+  "validation": {
+    "gates": [
+      { "id": "no_nan", "tol": 0 },
+      { "id": "determinism", "tol": 1e-10 }
+    ]
+  },
+  "feedback": {
+    "trackTransitions": true,
+    "transitionThreshold": 0.1,
+    "detectEquilibrium": true,
+    "trackTurningPoints": true
+  }
+}

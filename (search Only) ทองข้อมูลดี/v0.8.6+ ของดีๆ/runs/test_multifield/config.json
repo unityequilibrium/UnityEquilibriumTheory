@@ -1,0 +1,8 @@
+{
+  "case_id": "test_multifield",
+  "model": "UET_multifield",
+  "params": {
+    "n_fields": 3,
+    "kappa": 0.1
+  }
+}

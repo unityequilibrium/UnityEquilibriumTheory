@@ -1,0 +1,10 @@
+{
+  "case_id": "test_stochastic",
+  "model": "UET_with_noise",
+  "params": {
+    "sigma_C": 2.0,
+    "sigma_I": 0.8,
+    "beta": 0.5,
+    "kappa": 0.1
+  }
+}

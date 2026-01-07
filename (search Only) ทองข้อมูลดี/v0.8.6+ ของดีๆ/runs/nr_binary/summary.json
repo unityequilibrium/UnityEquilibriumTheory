@@ -1,0 +1,10 @@
+{
+  "case_id": "nr_binary",
+  "status": "PASS",
+  "scenario": "binary",
+  "Omega0": 0.9587536035927143,
+  "OmegaT": 2640.365758991202,
+  "delta_omega": 2752.9565422200476,
+  "omega_conserved": false,
+  "description": "Numerical Relativity - BINARY"
+}

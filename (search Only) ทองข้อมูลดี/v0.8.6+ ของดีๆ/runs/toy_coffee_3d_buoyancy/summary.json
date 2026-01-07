@@ -1,0 +1,8 @@
+{
+  "case_id": "toy_coffee_3d_buoyancy",
+  "status": "PASS",
+  "scenario": "buoyancy",
+  "final_mixing": 0.00011723808979820632,
+  "final_temp": 0.5,
+  "description": "3D Coffee + Milk with Convection - BUOYANCY"
+}

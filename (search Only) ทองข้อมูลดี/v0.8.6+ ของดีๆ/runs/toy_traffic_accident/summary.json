@@ -1,0 +1,13 @@
+{
+  "case_id": "toy_traffic_accident",
+  "status": "PASS",
+  "scenario": "accident",
+  "avg_density": 1.101896568248761,
+  "max_jam": 1.1019340421066495,
+  "flow_efficiency": 0.9999867186760668,
+  "Omega0": 68.79101258842618,
+  "OmegaT": 0.7920369963732669,
+  "delta_omega": -0.98848633031306,
+  "omega_conserved": false,
+  "description": "UET Traffic Flow - ACCIDENT"
+}

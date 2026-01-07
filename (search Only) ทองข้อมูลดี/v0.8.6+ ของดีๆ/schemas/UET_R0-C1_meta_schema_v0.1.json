@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UET meta.json schema v0.1",
+  "type": "object",
+  "required": [
+    "timestamp_utc",
+    "platform",
+    "python",
+    "numpy",
+    "code_hash"
+  ],
+  "properties": {
+    "timestamp_utc": {
+      "type": "string"
+    },
+    "platform": {
+      "type": "string"
+    },
+    "python": {
+      "type": "string"
+    },
+    "numpy": {
+      "type": "string"
+    },
+    "code_hash": {
+      "type": "string"
+    },
+    "git_branch": {
+      "type": "string"
+    },
+    "hostname": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,16 @@
+{
+  "title": "toy_traffic_accident",
+  "description": "Simulation of C_I model. Final phase: unknown. Energy reduction: 0.0%.",
+  "key_params": {
+    "model": "C_I",
+    "grid": 32,
+    "L": 10.0,
+    "T": 5.0,
+    "dt": 0.02,
+    "\u03b2": 0.7,
+    "\u03ba": 0.4
+  },
+  "metrics": {},
+  "model": "C_I",
+  "generated_at": "2025-12-21T11:02:27.209506"
+}

@@ -1,0 +1,10 @@
+{
+  "case_id": "gr_realistic_wave",
+  "status": "PASS",
+  "scenario": "wave",
+  "Omega0": 4.705362869074482,
+  "OmegaT": 1284.8916666666667,
+  "delta_omega": 272.06962341023393,
+  "omega_conserved": false,
+  "description": "GR Realistic - WAVE"
+}

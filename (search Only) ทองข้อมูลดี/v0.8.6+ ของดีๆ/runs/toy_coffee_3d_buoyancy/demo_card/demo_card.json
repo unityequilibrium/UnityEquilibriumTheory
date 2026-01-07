@@ -1,0 +1,14 @@
+{
+  "title": "toy_coffee_3d_buoyancy",
+  "description": "Simulation of C_T_v model. Final phase: unknown. Energy reduction: 0.0%.",
+  "key_params": {
+    "model": "C_T_v",
+    "grid": 24,
+    "L": 2.0,
+    "T": 5.0,
+    "dt": 0.01
+  },
+  "metrics": {},
+  "model": "C_T_v",
+  "generated_at": "2025-12-21T11:02:27.144123"
+}

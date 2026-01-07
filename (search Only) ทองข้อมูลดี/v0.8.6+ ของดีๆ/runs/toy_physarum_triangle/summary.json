@@ -1,0 +1,8 @@
+{
+  "case_id": "toy_physarum_triangle",
+  "status": "PASS",
+  "scenario": "triangle",
+  "n_cities": 3,
+  "final_network_mass": 3071.301545179017,
+  "description": "Physarum Network - TRIANGLE"
+}

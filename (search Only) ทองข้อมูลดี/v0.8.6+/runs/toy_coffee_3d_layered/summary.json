@@ -1,8 +1,0 @@
-{
-  "case_id": "toy_coffee_3d_layered",
-  "status": "PASS",
-  "scenario": "layered",
-  "final_mixing": 0.0023032874155179254,
-  "final_temp": 0.6499912680446955,
-  "description": "3D Coffee + Milk with Convection - LAYERED"
-}

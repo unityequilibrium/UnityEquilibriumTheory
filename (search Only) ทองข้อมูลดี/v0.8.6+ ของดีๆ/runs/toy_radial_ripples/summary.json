@@ -1,0 +1,10 @@
+{
+  "case_id": "toy_radial_ripples",
+  "status": "PASS",
+  "Omega0": 32.27905184339166,
+  "OmegaT": 4.8067180187938385,
+  "delta_omega": -0.8510886242224648,
+  "omega_conserved": false,
+  "steps_total": 60,
+  "description": "Concentric ripple patterns spreading"
+}

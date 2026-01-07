@@ -1,0 +1,68 @@
+{
+  "total_runs": 497664,
+  "elapsed_seconds": 4228.6925756931305,
+  "runs_per_second": 117.68743910602848,
+  "by_type": {
+    "stability": {
+      "count": 124416,
+      "stable": 123776,
+      "stability_rate": 0.9948559670781894,
+      "omega_mean": 30525.95852071092,
+      "omega_std": 49635.144848406075,
+      "omega_ci_95": [
+        322.28125,
+        194305.2045288086
+      ]
+    },
+    "seizure": {
+      "count": 124416,
+      "stable": 124368,
+      "stability_rate": 0.9996141975308642,
+      "omega_mean": 30521.012723487645,
+      "omega_std": 49490.19071916811,
+      "omega_ci_95": [
+        328.31640625,
+        194546.44720458984
+      ]
+    },
+    "traffic": {
+      "count": 124416,
+      "stable": 124372,
+      "stability_rate": 0.9996463477366255,
+      "omega_mean": 30844.692280289903,
+      "omega_std": 50082.06917207556,
+      "omega_ci_95": [
+        307.4753222751951,
+        196797.87268066406
+      ]
+    },
+    "galaxy": {
+      "count": 124416,
+      "stable": 52488,
+      "stability_rate": 0.421875,
+      "omega_mean": 1448.194652416088,
+      "omega_std": 863.2579124152106,
+      "omega_ci_95": [
+        304.0,
+        3151.03125
+      ]
+    }
+  },
+  "by_grid_size": {
+    "16": {
+      "count": 124416,
+      "stable": 122472,
+      "stability_rate": 0.984375
+    },
+    "32": {
+      "count": 124416,
+      "stable": 108224,
+      "stability_rate": 0.8698559670781894
+    },
+    "64": {
+      "count": 124416,
+      "stable": 101088,
+      "stability_rate": 0.8125
+    }
+  }
+}

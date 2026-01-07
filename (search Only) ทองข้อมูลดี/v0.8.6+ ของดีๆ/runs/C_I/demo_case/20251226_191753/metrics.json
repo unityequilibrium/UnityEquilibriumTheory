@@ -1,0 +1,22 @@
+{
+  "Omega0": {
+    "value": 123.45,
+    "unit": "sim",
+    "label": "\u03a9\u2080"
+  },
+  "OmegaT": {
+    "value": 98.76,
+    "unit": "sim",
+    "label": "\u03a9_T"
+  },
+  "dt": {
+    "value": 0.01,
+    "unit": "s",
+    "label": "\u0394t"
+  },
+  "energy": {
+    "value": 5.32,
+    "unit": "sim",
+    "label": "E"
+  }
+}

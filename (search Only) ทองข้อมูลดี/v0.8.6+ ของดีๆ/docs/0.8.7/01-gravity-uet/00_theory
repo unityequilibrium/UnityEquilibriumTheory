@@ -1,0 +1,86 @@
+# Gravity: Literature Review
+
+## 1. Historical Development
+
+### 1.1 Newton's Universal Gravitation (1687)
+- **Newton, I.** (1687). *Philosophiæ Naturalis Principia Mathematica*
+- Force law: F = Gm₁m₂/r²
+- Action at a distance - no mechanism proposed
+- Successful predictions: planetary orbits, tides, precession
+
+### 1.2 Field Theory Approach
+- **Faraday, M.** (1849). Concept of "lines of force"
+- **Maxwell, J.C.** (1865). Field equations for electromagnetism
+- Gravity as field: g = -GM/r² (gravitational field strength)
+
+### 1.3 General Relativity (1915)
+- **Einstein, A.** (1915). *Die Feldgleichungen der Gravitation*
+- Gravity = spacetime curvature
+- G_μν + Λg_μν = (8πG/c⁴)T_μν
+- Key predictions: precession, lensing, gravitational waves
+
+---
+
+## 2. Energy-Based Approaches
+
+### 2.1 Gravitational Potential Energy
+- U = -Gm₁m₂/r
+- F = -∇U = -dU/dr
+- Connects force to energy gradient
+
+### 2.2 Gravitational Energy Density
+- **Landau & Lifshitz** (1951). *Classical Theory of Fields*
+- Energy density: ρ_E = g²/(8πG) = GM²/(8πr⁴)
+- **Lynden-Bell & Katz** (1985). Gravitational energy localization
+
+### 2.3 Verlinde's Entropic Gravity
+- **Verlinde, E.** (2011). "On the Origin of Gravity and the Laws of Newton"
+- F = T ∂S/∂x (entropic force)
+- Gravity emerges from information/entropy
+- Successfully derives Newton's F = ma
+
+### 2.4 Jacobson's Thermodynamic Derivation
+- **Jacobson, T.** (1995). "Thermodynamics of Spacetime"
+- Einstein equations from δQ = TdS
+- Gravity is thermodynamic - not fundamental
+
+---
+
+## 3. UET Connection
+
+### 3.1 Energy Density Profile
+UET proposes: E(r) ∝ 1/r⁴
+
+This gives:
+- F = -∇E ∝ 1/r² (Newton's law!)
+- Consistent with Landau-Lifshitz energy density
+- Provides mechanism for "action at a distance"
+
+### 3.2 Comparison with Literature
+
+| Approach | Mechanism | UET Analog |
+|----------|-----------|------------|
+| Newton | Ad hoc | Derived |
+| Einstein | Curvature | E(r) field |
+| Verlinde | Entropy | Energy gradient |
+| Jacobson | Thermo | Consistent |
+
+---
+
+## 4. Key References
+
+1. Newton, I. (1687). Principia Mathematica
+2. Einstein, A. (1915). General Relativity
+3. Landau, L.D. & Lifshitz, E.M. (1951). Classical Theory of Fields
+4. Jacobson, T. (1995). Phys. Rev. Lett. 75, 1260
+5. Verlinde, E. (2011). JHEP 2011, 29
+6. Padmanabhan, T. (2010). Rep. Prog. Phys. 73, 046901
+
+---
+
+## 5. Open Questions Addressed by UET
+
+1. **Why 1/r²?** → Follows from E ∝ 1/r⁴ gradient
+2. **Action at a distance?** → Energy field mediates
+3. **Unification?** → Same mechanism for all forces
+4. **Dark energy?** → E₀ vacuum energy

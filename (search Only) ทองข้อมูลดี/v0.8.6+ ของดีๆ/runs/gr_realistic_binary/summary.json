@@ -1,0 +1,10 @@
+{
+  "case_id": "gr_realistic_binary",
+  "status": "PASS",
+  "scenario": "binary",
+  "Omega0": 2.4353752460058042,
+  "OmegaT": 1181.0166666666667,
+  "delta_omega": 483.94237945615214,
+  "omega_conserved": false,
+  "description": "GR Realistic - BINARY"
+}

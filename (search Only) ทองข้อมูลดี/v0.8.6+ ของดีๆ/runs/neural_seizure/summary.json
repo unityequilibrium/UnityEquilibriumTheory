@@ -1,0 +1,11 @@
+{
+  "case_id": "neural_seizure",
+  "status": "PASS",
+  "scenario": "seizure",
+  "fit_error": 0.029848457985016202,
+  "Omega0": 4.036688247323265,
+  "OmegaT": 4.007196186972021,
+  "delta_omega": -0.0073060039676830744,
+  "omega_conserved": true,
+  "description": "UET Neural: C-I dynamics for seizure"
+}

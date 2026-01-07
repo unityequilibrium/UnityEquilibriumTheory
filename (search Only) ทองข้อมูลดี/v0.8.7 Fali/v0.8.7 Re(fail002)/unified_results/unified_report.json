@@ -1,0 +1,229 @@
+{
+  "date": "2025-12-29T21:44:41.022542",
+  "api": "uet_core.solver.run_case",
+  "results": [
+    {
+      "test": "energy_decreasing",
+      "violations": 0,
+      "passed": true,
+      "phase": 1
+    },
+    {
+      "test": "phase_separation",
+      "max_C": 0.9999999999999998,
+      "passed": true,
+      "phase": 1
+    },
+    {
+      "test": "convergence",
+      "variation": 1.3434324225783372e-16,
+      "passed": true,
+      "phase": 1
+    },
+    {
+      "test": "coupled_ci",
+      "status": "PASS",
+      "passed": true,
+      "phase": 1
+    },
+    {
+      "test": "lyapunov",
+      "passed": true,
+      "phase": 2
+    },
+    {
+      "test": "numerical_stability",
+      "passed": true,
+      "phase": 2
+    },
+    {
+      "test": "vix_real_data",
+      "correlation": -0.7603180206445274,
+      "passed": true,
+      "phase": 3
+    },
+    {
+      "test": "ccbh_parameter",
+      "k_farrah": 3.0,
+      "k_uet": 3.0,
+      "passed": true,
+      "phase": 3
+    },
+    {
+      "test": "gravity_uet",
+      "passed": true,
+      "phase": 4
+    },
+    {
+      "test": "em_force_uet",
+      "passed": true,
+      "phase": 4
+    },
+    {
+      "test": "strong_force_uet",
+      "passed": true,
+      "phase": 4
+    },
+    {
+      "test": "weak_force_uet",
+      "passed": true,
+      "phase": 4
+    },
+    {
+      "test": "gravity_data",
+      "data_points": 16,
+      "passed": true,
+      "phase": 5
+    },
+    {
+      "test": "thermo_data",
+      "data_points": 16,
+      "passed": true,
+      "phase": 5
+    },
+    {
+      "test": "em_data",
+      "data_points": 16,
+      "passed": true,
+      "phase": 5
+    },
+    {
+      "test": "strong_data",
+      "data_points": 16,
+      "passed": true,
+      "phase": 5
+    },
+    {
+      "test": "weak_data",
+      "data_points": 16,
+      "passed": true,
+      "phase": 5
+    },
+    {
+      "test": "strong_multiscale",
+      "passed": true,
+      "phase": 6
+    },
+    {
+      "test": "weak_multiscale",
+      "passed": true,
+      "phase": 6
+    },
+    {
+      "test": "gravity_multiscale",
+      "passed": true,
+      "phase": 6
+    },
+    {
+      "test": "em_multiscale",
+      "passed": true,
+      "phase": 6
+    },
+    {
+      "test": "coupling_unification",
+      "alpha_em": 0.0072973525693,
+      "alpha_s": 0.118,
+      "passed": true,
+      "phase": 7
+    },
+    {
+      "test": "force_emergence",
+      "passed": true,
+      "phase": 7
+    },
+    {
+      "test": "gr_effects",
+      "passed": true,
+      "phase": 7
+    },
+    {
+      "test": "uncertainty_analog",
+      "hbar": 1.054571817e-34,
+      "passed": true,
+      "phase": 8
+    },
+    {
+      "test": "superposition",
+      "max_C": 0.9999999999999996,
+      "passed": true,
+      "phase": 8
+    },
+    {
+      "test": "gw_strain",
+      "max_strain": 3.2e-21,
+      "passed": true,
+      "phase": 9
+    },
+    {
+      "test": "chirp_mass",
+      "M_chirp": 28.3,
+      "passed": true,
+      "phase": 9
+    },
+    {
+      "test": "dark_energy",
+      "Omega_Lambda": 0.6847,
+      "passed": true,
+      "phase": 10
+    },
+    {
+      "test": "hubble_constant",
+      "H0": 67.36,
+      "passed": true,
+      "phase": 10
+    },
+    {
+      "test": "higgs_analog",
+      "m_H": 125250.0,
+      "passed": true,
+      "phase": 11
+    },
+    {
+      "test": "fermion_mass",
+      "hierarchy": true,
+      "passed": true,
+      "phase": 11
+    },
+    {
+      "test": "lagrangian_density",
+      "passed": true,
+      "phase": 12
+    },
+    {
+      "test": "euler_lagrange",
+      "passed": true,
+      "phase": 12
+    },
+    {
+      "test": "alpha_em",
+      "passed": true,
+      "phase": 13
+    },
+    {
+      "test": "fermion_antisymmetry",
+      "passed": true,
+      "phase": 14
+    },
+    {
+      "test": "exclusion_principle",
+      "passed": true,
+      "phase": 15
+    },
+    {
+      "test": "hamiltonian_conservation",
+      "passed": true,
+      "phase": 16
+    },
+    {
+      "test": "black_hole_metric",
+      "passed": true,
+      "real_data": true,
+      "phase": 17
+    }
+  ],
+  "summary": {
+    "passed": 39,
+    "total": 39,
+    "percentage": 100.0
+  }
+}

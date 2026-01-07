@@ -1,0 +1,59 @@
+{
+  "networks": [
+    {
+      "name": "ca_grqc",
+      "n_nodes": 2000,
+      "n_edges": 170,
+      "correlation": -0.9999999999999997,
+      "p_value": 0.0,
+      "slope": -0.5,
+      "n_samples": 56500,
+      "consistent": true
+    },
+    {
+      "name": "ca_hepth",
+      "n_nodes": 2000,
+      "n_edges": 68,
+      "correlation": -1.0,
+      "p_value": 0.0,
+      "slope": -0.5,
+      "n_samples": 28000,
+      "consistent": true
+    },
+    {
+      "name": "email_enron",
+      "n_nodes": 2000,
+      "n_edges": 73580,
+      "correlation": -0.9999999999999999,
+      "p_value": 0.0,
+      "slope": -0.09999999999999988,
+      "n_samples": 400000,
+      "consistent": true
+    },
+    {
+      "name": "facebook_combined",
+      "n_nodes": 4039,
+      "n_edges": 88234,
+      "correlation": -0.9999999999999999,
+      "p_value": 0.0,
+      "slope": -0.10000000000000023,
+      "n_samples": 807800,
+      "consistent": true
+    },
+    {
+      "name": "karate_club",
+      "n_nodes": 34,
+      "n_edges": 78,
+      "correlation": -1.0,
+      "p_value": 0.0,
+      "slope": -0.5,
+      "n_samples": 17000,
+      "consistent": true
+    }
+  ],
+  "summary": {
+    "total": 5,
+    "consistent": 5,
+    "rate": 1.0
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "case_id": "ATL_C_002_s2",
+  "model": "C_only",
+  "units": {
+    "mode": "dimensionless"
+  },
+  "domain": {
+    "dim": 2,
+    "L": 1.0,
+    "bc": "periodic"
+  },
+  "grid": {
+    "N": 64,
+    "dtype": "float64"
+  },
+  "time": {
+    "dt": 0.0005,
+    "T": 0.4,
+    "max_steps": 500000,
+    "tol_abs": 1e-06,
+    "tol_rel": 1e-06,
+    "progress_every_steps": 0,
+    "progress_every_s": 5.0,
+    "backtrack": {
+      "enabled": true,
+      "factor": 0.5,
+      "max_backtracks": 20
+    }
+  },
+  "integrator": {
+    "name": "semiimplicit",
+    "mode": "strict"
+  },
+  "rng": {
+    "seed": 2,
+    "algorithm": "numpy_pc64"
+  },
+  "params": {
+    "kappa": 1.0,
+    "M": 1.0,
+    "pot": {
+      "type": "quartic",
+      "a": -1.0,
+      "delta": 1.0,
+      "s": 0.0
+    }
+  },
+  "config_hash": "bb577671bab2",
+  "run_id": "20251226-155232_bb577671bab2"
+}

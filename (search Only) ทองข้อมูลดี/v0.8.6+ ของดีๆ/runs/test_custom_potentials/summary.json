@@ -1,0 +1,16 @@
+{
+  "test": "custom_potentials",
+  "potentials_tested": [
+    "double_well",
+    "single_well",
+    "triple_well",
+    "periodic"
+  ],
+  "result": "Different equilibria observed",
+  "status": "PASS",
+  "Omega0": 191.48205425862147,
+  "OmegaT": 411.7814624985409,
+  "delta_omega": 1.1504963694528594,
+  "omega_conserved": false,
+  "description": "Custom potentials with V(\u03c6) variations"
+}

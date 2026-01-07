@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UET Run Spec",
+  "description": "Schema for UET simulation preset files",
+  "type": "object",
+  "required": ["meta", "run", "world", "equations", "outputs"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "version": { "type": "string", "default": "1.0" },
+        "description": { "type": "string" }
+      },
+      "required": ["name"]
+    },
+    "run": {
+      "type": "object",
+      "properties": {
+        "seed": { "type": "integer", "default": 42 },
+        "dt": { "type": "number", "default": 0.01 },
+        "steps": { "type": "integer", "default": 1000 },
+        "integrator": { "type": "string", "enum": ["euler", "leapfrog", "rk4"], "default": "leapfrog" }
+      },
+      "required": ["steps"]
+    },
+    "world": {
+      "type": "object",
+      "properties": {
+        "units": { "type": "string", "default": "sim" },
+        "model": { "type": "string", "enum": ["C_only", "C_I"], "default": "C_only" },
+        "grid": { "type": "integer", "default": 64 },
+        "domain": { "type": "number", "default": 10.0 },
+        "initial": {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string", "enum": ["random", "gaussian", "custom"] },
+            "params": { "type": "object" }
+          }
+        }
+      }
+    },
+    "equations": {
+      "type": "object",
+      "properties": {
+        "enabled": { 
+          "type": "array", 
+          "items": { "type": "string", "enum": ["UET", "NEWTON", "GR", "PN"] }
+        },
+        "params": {
+          "type": "object",
+          "properties": {
+            "kappa": { "type": "number" },
+            "beta": { "type": "number" },
+            "potential": { "type": "string" }
+          }
+        }
+      }
+    },
+    "outputs": {
+      "type": "object",
+      "properties": {
+        "metrics": { 
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "logEvery": { "type": "integer", "default": 10 },
+        "snapshotEvery": { "type": "integer", "default": 100 }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "properties": {
+        "gates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "tol": { "type": "number" },
+              "enabled": { "type": "boolean", "default": true }
+            },
+            "required": ["id"]
+          }
+        }
+      }
+    },
+    "feedback": {
+      "type": "object",
+      "properties": {
+        "trackTransitions": { "type": "boolean", "default": true },
+        "transitionThreshold": { "type": "number", "default": 0.01 },
+        "detectEquilibrium": { "type": "boolean", "default": true }
+      }
+    }
+  }
+}

@@ -1,0 +1,161 @@
+# Experimental Predictions: Literature Review
+
+## 1. Testing Gravity at Short Distances
+
+### 1.1 Torsion Balance Experiments
+- **Eöt-Wash Group** (2000s). Sub-mm tests
+- Looking for deviations from 1/r² below 1 mm
+- Current limit: No deviation down to ~50 μm
+- **Adelberger, E. et al.** (2003). Annu. Rev. Nucl. Part. Sci.
+
+### 1.2 Casimir Force Precision
+- **Lamoreaux, S.** (1997). First precision measurement
+- **Mohideen, U. & Roy, A.** (1998). AFM measurements
+- Current precision: ~1% at d = 100 nm - 1 μm
+- Potential for new physics
+
+### 1.3 Atom Interferometry
+- **Kasevich, M. & Chu, S.** (1992). Atom fountains
+- Tests equivalence principle
+- Sensitivity: Δg/g ~ 10⁻⁹
+
+---
+
+## 2. Vacuum Birefringence
+
+### 2.1 QED Prediction
+- **Heisenberg, W. & Euler, H.** (1936). Vacuum polarization
+- Δn ~ α² (B/B_c)² where B_c = 4.4 × 10⁹ T
+- Requires extreme magnetic fields
+
+### 2.2 PVLAS Experiment
+- **PVLAS Collaboration** (2006-present). Ferrara, Italy
+- Sensitivity: ~10⁻²² in Δn
+- Initial claim (2006) not confirmed
+- Ongoing measurements with improved setup
+
+### 2.3 Magnetar Observations
+- **Mignani, R. et al.** (2017). VLT observations
+- Polarization from magnetar RX J1856.5-3754
+- B ~ 10⁹ T at surface
+- First claimed observation of vacuum birefringence
+
+---
+
+## 3. Fifth Force Searches
+
+### 3.1 History
+- **Fischbach, E.** (1986). Proposed fifth force
+- Initial evidence from mine surveys
+- Not confirmed by Eöt-Wash
+
+### 3.2 Current Searches
+- Range λ ~ 1 mm - 1 km under investigation
+- Satellite/lunar ranging for large λ
+- Atom interferometry for small λ
+- **Murata, J. & Tanaka, S.** (2015). Class. Quantum Grav.
+
+### 3.3 Constraints
+```
+α < 10⁻³ for λ ~ 1 mm
+α < 10⁻⁸ for λ ~ 1 m
+α < 10⁻¹⁰ for λ ~ 10 km
+```
+
+---
+
+## 4. Modified Gravity Tests
+
+### 4.1 MOND
+- **Milgrom, M.** (1983). Modified Newtonian Dynamics
+- Alternative to dark matter
+- a₀ ≈ 1.2 × 10⁻¹⁰ m/s²
+- Predicts galaxy rotation flat regions
+
+### 4.2 Galaxy Rotation Curves
+- **Rubin, V. & Ford, K.** (1970). Flat rotation curves
+- v(r) → const at large r
+- MOND succeeds without dark matter
+- Dark matter vs MOND debate ongoing
+
+### 4.3 Bullet Cluster
+- **Clowe, D. et al.** (2006). Lensing vs gas maps
+- Often cited as evidence against MOND
+- Counterarguments exist
+
+---
+
+## 5. Dark Energy Tests
+
+### 5.1 Equation of State
+- w = p/ρ = -1 for Λ
+- Current constraint: w = -1.03 ± 0.03
+- **Planck Collaboration** (2018)
+
+### 5.2 Future Experiments
+- **Euclid** (2024). ESA mission
+- **Roman Space Telescope** (~2027). NASA
+- **DESI** (2021-). Baryon acoustic oscillations
+- Will measure w(z) evolution
+
+### 5.3 Early Dark Energy
+- Could affect H₀ tension
+- Active research area
+
+---
+
+## 6. UET Predictions
+
+### 6.1 Casimir Correction
+**Prediction:** Correction at d > 12 μm
+- Standard: F ∝ 1/d⁴
+- UET adds: ΔF ~ E₀
+- Becomes 1% at d ≈ 12 μm
+
+**Test:** Precision Casimir at large separations
+
+### 6.2 Fifth Force from E₀
+**Prediction:** Range λ ~ (ℏc/E₀)^(1/4) ~ 0.1-1 m
+
+**Test:** Torsion balance at meter scale
+
+### 6.3 MOND Connection
+**Prediction:** a₀ ≈ cH₀/6 from UET
+
+UET gives: a₀(Verlinde) = 1.09 × 10⁻¹⁰ m/s²
+Observed: a₀(MOND) = 1.20 × 10⁻¹⁰ m/s²
+Match: 91%!
+
+**Test:** Precision galaxy rotation measurements
+
+### 6.4 Dark Energy
+**Prediction:** E₀ ≈ ρ_Λ
+
+UET: E₀ = 8.47 × 10⁻¹⁰ J/m³
+Observed: ρ_Λ = 5.96 × 10⁻¹⁰ J/m³
+Ratio: 1.42
+
+**Test:** w(z) evolution with future surveys
+
+---
+
+## 7. Key References
+
+1. Adelberger, E. et al. (2003). Annu. Rev. Nucl. Part. Sci. 53, 77
+2. Lamoreaux, S. (1997). Phys. Rev. Lett. 78, 5
+3. Mignani, R. et al. (2017). MNRAS 465, 492
+4. Milgrom, M. (1983). Astrophys. J. 270, 365
+5. Murata, J. & Tanaka, S. (2015). Class. Quantum Grav. 32, 033001
+6. Planck Collaboration (2018). A&A 641, A6
+
+---
+
+## 8. Summary: Testability
+
+| Prediction | Current Technology | Feasibility |
+|------------|-------------------|-------------|
+| Casimir 12 μm | Near-term | HIGH |
+| Birefringence | PVLAS ongoing | MEDIUM |
+| Fifth force 1 m | Future | MEDIUM |
+| MOND | Galaxy surveys | HIGH |
+| Dark energy | Euclid/Roman | HIGH |

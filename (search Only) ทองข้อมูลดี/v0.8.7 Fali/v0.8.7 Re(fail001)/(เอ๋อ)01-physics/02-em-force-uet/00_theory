@@ -1,0 +1,99 @@
+# Electromagnetic Force: Literature Review
+
+## 1. Historical Development
+
+### 1.1 Coulomb's Law (1785)
+- **Coulomb, C.A.** (1785). "Premier Mémoire sur l'Électricité et le Magnétisme"
+- F = kq₁q₂/r² (inverse square law)
+- Experimental discovery via torsion balance
+- Remarkable similarity to Newton's gravity
+
+### 1.2 Maxwell's Equations (1865)
+- **Maxwell, J.C.** (1865). "A Dynamical Theory of the Electromagnetic Field"
+- Unified electricity, magnetism, and light
+- ∇·E = ρ/ε₀, ∇×B = μ₀J + μ₀ε₀∂E/∂t
+- Predicted electromagnetic waves
+
+### 1.3 Quantum Electrodynamics (QED)
+- **Feynman, R.P.** (1948). QED formulation
+- **Schwinger, J.** (1948). Renormalization
+- **Tomonaga, S.** (1948). Covariant formulation
+- Most precise theory in physics: α = 1/137.035999...
+
+---
+
+## 2. Energy-Based Approaches
+
+### 2.1 Electromagnetic Field Energy
+- **Poynting, J.H.** (1884). Energy flow in EM fields
+- Energy density: u = ε₀E²/2 + B²/(2μ₀)
+- Total energy: U = ∫u d³x
+
+### 2.2 Potential Energy
+- U = kq₁q₂/r (electrostatic potential energy)
+- F = -∇U = -dU/dr
+- Same structure as gravitational case
+
+### 2.3 Zero-Point Energy
+- **Casimir, H.B.G.** (1948). "On the Attraction Between Two Perfectly Conducting Plates"
+- F = -π²ℏc/(240d⁴) (Casimir force)
+- Vacuum fluctuations create measurable force
+
+---
+
+## 3. Geometric/Emergent EM
+
+### 3.1 Kaluza-Klein Theory
+- **Kaluza, T.** (1921). 5D unification of gravity and EM
+- **Klein, O.** (1926). Compactification
+- EM emerges from 5th dimension geometry
+
+### 3.2 Lindgren's Approach
+- **Lindgren, J. & Liukkonen, J.** (2019). "On the Relation of Mass and Energy"
+- E field as geometric effect
+- Connection to spacetime structure
+
+### 3.3 Wheeler-Misner Geometrodynamics
+- **Wheeler, J.A.** (1962). Charge from topology
+- "Charge without charge" - wormhole model
+
+---
+
+## 4. UET Connection
+
+### 4.1 Energy Density Profile
+UET proposes: E(r) ∝ q²/r⁴
+
+This gives:
+- F = -∇E ∝ q₁q₂/r² (Coulomb's law!)
+- Same mechanism as gravity
+- Explains gravity-EM symmetry
+
+### 4.2 Comparison with Literature
+
+| Approach | Key Idea | UET Analog |
+|----------|----------|------------|
+| Coulomb | Empirical law | Derived |
+| Maxwell | Field theory | E(r) field |
+| Kaluza-Klein | Extra dimension | Single E field |
+| Casimir | Vacuum energy | E₀ contribution |
+
+---
+
+## 5. Key References
+
+1. Coulomb, C.A. (1785). Mémoires de l'Académie
+2. Maxwell, J.C. (1865). Phil. Trans. R. Soc. 155, 459
+3. Feynman, R.P. (1948). Phys. Rev. 76, 769
+4. Casimir, H.B.G. (1948). Proc. K. Ned. Akad. Wet. 51, 793
+5. Kaluza, T. (1921). Sitzungsber. Preuss. Akad. Wiss. 966
+6. Lindgren, J. & Liukkonen, J. (2019). arXiv:1903.00066
+
+---
+
+## 6. Open Questions Addressed by UET
+
+1. **Why same 1/r² as gravity?** → Same E(r) mechanism
+2. **Why α ≈ 1/137?** → Emerges from E field structure
+3. **Unification with gravity?** → Both from ∇E
+4. **Charge quantization?** → Topology of E field

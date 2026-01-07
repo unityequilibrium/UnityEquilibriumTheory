@@ -1,0 +1,16 @@
+{
+  "title": "galaxy_rotation_dm",
+  "description": "Simulation of UET_galaxy model. Final phase: unknown. Energy reduction: 0.0%.",
+  "key_params": {
+    "model": "UET_galaxy",
+    "grid": 256,
+    "L": "?",
+    "T": "?",
+    "dt": "?",
+    "\u03b2": 0.4,
+    "\u03ba": 0.3
+  },
+  "metrics": {},
+  "model": "UET_galaxy",
+  "generated_at": "2025-12-21T20:49:47.910937"
+}

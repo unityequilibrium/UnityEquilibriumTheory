@@ -1,0 +1,14 @@
+{
+  "title": "test_custom_potentials",
+  "description": "Simulation of UET_custom_potential model. Final phase: unknown. Energy reduction: 0.0%.",
+  "key_params": {
+    "model": "UET_custom_potential",
+    "grid": "?",
+    "L": "?",
+    "T": "?",
+    "dt": "?"
+  },
+  "metrics": {},
+  "model": "UET_custom_potential",
+  "generated_at": "2025-12-21T11:02:27.123358"
+}

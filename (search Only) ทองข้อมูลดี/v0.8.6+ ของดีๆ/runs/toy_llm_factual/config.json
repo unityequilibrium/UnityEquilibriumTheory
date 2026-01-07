@@ -1,0 +1,21 @@
+{
+  "case_id": "toy_llm_factual",
+  "model": "C_I",
+  "prompt_type": "factual",
+  "grid": {
+    "N": 32
+  },
+  "domain": {
+    "L": 10.0
+  },
+  "time": {
+    "T": 3.0,
+    "dt": 0.02
+  },
+  "params": {
+    "beta": 0.7,
+    "kappa": 0.2,
+    "temperature": 0.3
+  },
+  "description": "LLM simulation - factual prompt"
+}

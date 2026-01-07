@@ -1,0 +1,9 @@
+{
+  "case_id": "3D_shell",
+  "status": "PASS",
+  "dim": 3,
+  "Omega0": 292.02149182548817,
+  "OmegaT": 931.5832005644795,
+  "steps_total": 50,
+  "description": "3D spherical shell collapsing"
+}

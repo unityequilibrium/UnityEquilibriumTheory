@@ -4,14 +4,14 @@ Physics often feels like a conflict between Common Sense, Einstein, and Quantum 
 
 ---
 
-## Preface: The Ethical Origin
-**UET was not born in a physics lab. It was born from a question about how to live together.**
-The author is not a physicist, but a thinker seeking to solve the problem of *Social Friction*—why do we conflict? Why is "living together" so hard?
-The answer was found in **Balance**.
-*   Conflict is "Rejection" (High Energy Cost).
-*   Harmony is "Acceptance" (Low Energy Cost).
-We realized that the rules governing human relationships (Ethics) are identical to the rules governing atoms (Thermodynamics). Both seek to minimize the cost of interaction. We "borrowed" the language of physics to describe this universal truth, only to find that it fits the physical universe perfectly.
-**Ethics is not an opinion. It is a Thermodynamic Strategy for survival.**
+## Preface: The Ethical Origin (System Robustness)
+**UET was not born in a physics lab. It was born from a comparison between Nature and Civilization.**
+The author observed a fundamental contrast: Human systems are fragile and short-lived, while Natural systems are robust and persist for billions of years.
+The difference lies in **Self-Management**.
+*   **Nature** follows a strict protocol of internal energy management (Robustness).
+*   **Human Systems** generally lack this protocol, leading to inefficiency and collapse.
+We realized that what we call "Ethics" (Jariyasat) is actually the **Science of System Longevity**. It is the set of rules that allows a complex system to manage its own energy and survive. We applied this "Survival Logic" to the universe and found it matched the laws of physics perfectly.
+**Ethics is not moral opinion. It is the Thermodynamic Strategy for existence.**
 
 ---
 

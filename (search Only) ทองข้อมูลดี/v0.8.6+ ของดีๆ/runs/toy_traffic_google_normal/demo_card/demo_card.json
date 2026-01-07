@@ -1,0 +1,14 @@
+{
+  "title": "toy_traffic_google_normal",
+  "description": "Simulation of google_maps_traffic model. Final phase: unknown. Energy reduction: 0.0%.",
+  "key_params": {
+    "model": "google_maps_traffic",
+    "grid": 64,
+    "L": "?",
+    "T": "?",
+    "dt": "?"
+  },
+  "metrics": {},
+  "model": "google_maps_traffic",
+  "generated_at": "2025-12-21T16:01:29.927755"
+}

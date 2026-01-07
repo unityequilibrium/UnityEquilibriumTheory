@@ -1,0 +1,10 @@
+{
+  "case_id": "toy_traffic_siam_square",
+  "model": "traffic_osm",
+  "description": "Traffic simulation using OpenStreetMap data for Siam Square, Bangkok, Thailand",
+  "location": "Siam Square, Bangkok, Thailand",
+  "radius_m": 500,
+  "grid": {
+    "N": 128
+  }
+}

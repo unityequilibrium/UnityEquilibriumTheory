@@ -1,0 +1,10 @@
+{
+  "case_id": "test_delays",
+  "model": "UET_with_delays",
+  "params": {
+    "tau_CI": 1.0,
+    "tau_IC": 0.5,
+    "beta": 1.0,
+    "kappa": 0.1
+  }
+}

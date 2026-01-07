@@ -1,0 +1,34 @@
+{
+  "title": "archetype_bias_i",
+  "description": "Simulation of C_I model. Final phase: SYM. Energy reduction: 395.9%.",
+  "key_params": {
+    "model": "C_I",
+    "grid": 48,
+    "L": 10.0,
+    "T": 10.0,
+    "dt": 0.01,
+    "\u03b2": 0.5,
+    "\u03ba_C": 0.5,
+    "\u03ba_I": 0.5,
+    "aC_": -1.0,
+    "\u03b4C_": 1.0,
+    "sC_": -0.5,
+    "aI_": -1.0,
+    "\u03b4I_": 1.0,
+    "sI_": -0.5
+  },
+  "metrics": {
+    "\u03a9_0": 81.91895945655858,
+    "\u03a9_T": -242.4038105676658,
+    "\u0394\u03a9": 324.3227700242244,
+    "\u0394\u03a9_rel": 3.959068476647484,
+    "mean_C_final": -1.366025403784426,
+    "mean_I_final": -1.366025403784426,
+    "bias_CI_final": 0.0,
+    "phase": "SYM",
+    "\u03a9_std_tail": 2.842170943040401e-14,
+    "total_backtracks": 0
+  },
+  "model": "C_I",
+  "generated_at": "2025-12-20T16:45:07.017870"
+}

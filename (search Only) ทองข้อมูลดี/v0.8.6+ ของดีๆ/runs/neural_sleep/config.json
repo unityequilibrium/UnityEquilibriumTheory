@@ -1,0 +1,22 @@
+{
+  "case_id": "neural_sleep",
+  "model": "UET_Neural",
+  "scenario": "sleep",
+  "uet_mapping": {
+    "C": "Excitatory neural activity",
+    "I": "Inhibitory/metabolic state",
+    "kappa": "Spatial connectivity",
+    "beta": "E-I balance",
+    "V": "Bistable neural states"
+  },
+  "fitted_params": {
+    "kappa": 2.0,
+    "beta": 1.3112575066912036,
+    "s": -0.001754525168480362,
+    "tau_C": 0.025846409029401114,
+    "tau_I": 2.0,
+    "fit_error": 0.020396274420995827,
+    "success": true
+  },
+  "description": "UET Neural Prediction - sleep"
+}

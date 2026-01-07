@@ -1,0 +1,14 @@
+{
+  "title": "toy_coffee_photorealistic",
+  "description": "Simulation of photorealistic model. Final phase: unknown. Energy reduction: 0.0%.",
+  "key_params": {
+    "model": "photorealistic",
+    "grid": 48,
+    "L": "?",
+    "T": "?",
+    "dt": "?"
+  },
+  "metrics": {},
+  "model": "photorealistic",
+  "generated_at": "2025-12-21T15:23:07.225977"
+}

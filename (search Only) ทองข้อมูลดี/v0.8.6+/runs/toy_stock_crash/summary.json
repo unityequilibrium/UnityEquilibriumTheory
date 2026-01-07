@@ -1,9 +1,0 @@
-{
-  "case_id": "toy_stock_crash",
-  "status": "PASS",
-  "scenario": "crash",
-  "final_price": -0.888021001908717,
-  "max_volatility": 0.2069765305868134,
-  "n_shocks": 4,
-  "description": "UET Stock Market - CRASH"
-}

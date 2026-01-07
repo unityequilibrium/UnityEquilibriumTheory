@@ -1,8 +1,0 @@
-{
-  "case_id": "toy_llm_creative",
-  "status": "PASS",
-  "prompt_type": "creative",
-  "final_coherence": 0.9356919352673368,
-  "final_entropy": 6.842939505669654,
-  "description": "UET LLM Dynamics - CREATIVE"
-}

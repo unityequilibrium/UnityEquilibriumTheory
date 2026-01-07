@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UET Harness Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="dark-theme">
+    <div id="app">
+        <header class="glass-header">
+            <div class="logo">
+                <span class="accent-text">UET</span> HARNESS <small class="version">v0.1</small>
+            </div>
+            <div class="run-info" id="run-header">
+                <span class="run-id-label">RUN:</span> <span id="current-run-id">Loading...</span>
+                <span class="status-badge" id="overall-status">N/A</span>
+            </div>
+            <nav>
+                <button id="load-run-btn" class="btn secondary">Load Run</button>
+                <button id="refresh-btn" class="btn primary">Refresh</button>
+            </nav>
+        </header>
+
+        <main class="dashboard-layout">
+            <aside class="left-panel glass">
+                <h2>Simulation Config</h2>
+                <div id="config-content" class="scroll-v">
+                    <!-- Config details injected here -->
+                    <p class="placeholder">Select a run directory to view configuration.</p>
+                </div>
+            </aside>
+
+            <section class="center-hud">
+                <div class="metrics-grid" id="metrics-container">
+                    <!-- MetricCards injected here -->
+                </div>
+                <div class="graph-dock glass" id="graph-container">
+                    <canvas id="omega-chart"></canvas>
+                </div>
+
+                <!-- Visual Snapshots Section -->
+                <div id="visuals-section" class="glass hidden" style="margin-top: 1.5rem; padding: 1.5rem;">
+                    <h2 style="margin-bottom: 1.5rem;">🌌 State Snapshots</h2>
+                    <div id="visuals-grid" class="visuals-grid">
+                        <!-- Images/GIFs will be injected here -->
+                    </div>
+                </div>
+            </section>
+
+            <aside class="right-panel glass">
+                <h2>Validation Gates</h2>
+                <div id="gates-content" class="scroll-v">
+                    <!-- GateResults injected here -->
+                    <p class="placeholder">Gates output will appear after validation.</p>
+                </div>
+            </aside>
+        </main>
+
+        <footer class="glass-footer">
+            <div class="system-stats">
+                <span>Model: <b id="model-label">-</b></span>
+                <span>Runtime: <b id="runtime-label">-</b></span>
+            </div>
+            <div class="social-links">
+                <a href="#" class="link">Docs</a>
+                <a href="#" class="link">Theory</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modals -->
+    <div id="load-modal" class="modal hidden">
+        <div class="modal-content glass">
+            <h3>Load Run Data</h3>
+            <p>Paste the absolute path to your run directory:</p>
+            <input type="text" id="run-path-input" placeholder="C:\...\runs\model\case\id">
+            <div class="modal-actions">
+                <button id="modal-cancel" class="btn secondary">Cancel</button>
+                <button id="modal-load" class="btn primary">Load</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>

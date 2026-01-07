@@ -1,9 +1,0 @@
-{
-  "case_id": "toy_traffic_google_event",
-  "model": "google_maps_traffic",
-  "scenario": "event",
-  "description": "Google Maps style traffic - event",
-  "grid": {
-    "N": 64
-  }
-}

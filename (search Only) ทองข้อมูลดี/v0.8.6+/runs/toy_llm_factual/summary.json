@@ -1,8 +1,0 @@
-{
-  "case_id": "toy_llm_factual",
-  "status": "PASS",
-  "prompt_type": "factual",
-  "final_coherence": 0.973196671874761,
-  "final_entropy": 6.703388420472411,
-  "description": "UET LLM Dynamics - FACTUAL"
-}

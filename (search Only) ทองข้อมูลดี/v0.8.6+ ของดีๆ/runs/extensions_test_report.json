@@ -1,0 +1,89 @@
+{
+  "timestamp": "2025-12-21T18:12:04.105798",
+  "mode": "quick",
+  "total_tests": 6,
+  "passed": 6,
+  "failed": 0,
+  "total_time_sec": 4.45,
+  "all_passed": true,
+  "results": {
+    "delays": {
+      "status": "WARN",
+      "elapsed_sec": 0.65,
+      "has_output": true,
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\santa\\Desktop\\lad\\uet_harness_v0_1_hangfix_v5_3_dtladderfix\\uet_harness_v0_1\\scripts\\test_time_delays.py\", line 310, in <module>\n    main()\n    ~~~~",
+      "omega": {
+        "valid": true,
+        "Omega0": 3.9577024549002537,
+        "OmegaT": 0.9922256347420924,
+        "delta_omega": -0.7492925135103166,
+        "conserved": false
+      }
+    },
+    "multifield": {
+      "status": "WARN",
+      "elapsed_sec": 0.62,
+      "has_output": true,
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\santa\\Desktop\\lad\\uet_harness_v0_1_hangfix_v5_3_dtladderfix\\uet_harness_v0_1\\scripts\\test_multifield.py\", line 337, in <module>\n    main()\n    ~~~~^",
+      "omega": {
+        "valid": true,
+        "Omega0": 5.250969139701322,
+        "OmegaT": 1.4292431780465218,
+        "delta_omega": -0.7278134492849413,
+        "conserved": false
+      }
+    },
+    "nonlocal": {
+      "status": "WARN",
+      "elapsed_sec": 1.34,
+      "has_output": true,
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\santa\\Desktop\\lad\\uet_harness_v0_1_hangfix_v5_3_dtladderfix\\uet_harness_v0_1\\scripts\\test_nonlocal.py\", line 373, in <module>\n    main()\n    ~~~~^^\n",
+      "omega": {
+        "valid": true,
+        "Omega0": 1.9610406941170921,
+        "OmegaT": 3.5397886812067156,
+        "delta_omega": 0.8050562090963717,
+        "conserved": false
+      }
+    },
+    "stochastic": {
+      "status": "WARN",
+      "elapsed_sec": 0.62,
+      "has_output": true,
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\santa\\Desktop\\lad\\uet_harness_v0_1_hangfix_v5_3_dtladderfix\\uet_harness_v0_1\\scripts\\test_stochastic.py\", line 323, in <module>\n    main()\n    ~~~~^",
+      "omega": {
+        "valid": true,
+        "Omega0": 772.5228552148169,
+        "OmegaT": 784.4092551020017,
+        "delta_omega": 0.015386470195602828,
+        "conserved": true
+      }
+    },
+    "memory": {
+      "status": "WARN",
+      "elapsed_sec": 0.62,
+      "has_output": true,
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\santa\\Desktop\\lad\\uet_harness_v0_1_hangfix_v5_3_dtladderfix\\uet_harness_v0_1\\scripts\\test_memory.py\", line 388, in <module>\n    main()\n    ~~~~^^\n  ",
+      "omega": {
+        "valid": true,
+        "Omega0": 2.172716436575373,
+        "OmegaT": 11.338048166523794,
+        "delta_omega": 4.218374554387217,
+        "conserved": false
+      }
+    },
+    "custom_potentials": {
+      "status": "WARN",
+      "elapsed_sec": 0.6,
+      "has_output": true,
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\santa\\Desktop\\lad\\uet_harness_v0_1_hangfix_v5_3_dtladderfix\\uet_harness_v0_1\\scripts\\test_custom_potentials.py\", line 378, in <module>\n    main()\n  ",
+      "omega": {
+        "valid": true,
+        "Omega0": 191.48205425862147,
+        "OmegaT": 411.7814624985409,
+        "delta_omega": 1.1504963694528594,
+        "conserved": false
+      }
+    }
+  }
+}

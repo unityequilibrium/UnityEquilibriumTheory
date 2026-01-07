@@ -1,0 +1,74 @@
+{
+  "case_id": "toy_physarum_tokyo",
+  "model": "C_I",
+  "scenario": "tokyo",
+  "grid": {
+    "N": 64
+  },
+  "domain": {
+    "L": 10.0
+  },
+  "time": {
+    "T": 8.0,
+    "dt": 0.02
+  },
+  "params": {
+    "L": 10.0,
+    "T": 8.0,
+    "dt": 0.02,
+    "beta": 0.5,
+    "kappa": 0.6,
+    "decay": 0.02,
+    "reinforce": 0.8
+  },
+  "cities": [
+    [
+      32,
+      32
+    ],
+    [
+      16,
+      16
+    ],
+    [
+      48,
+      16
+    ],
+    [
+      16,
+      48
+    ],
+    [
+      48,
+      48
+    ],
+    [
+      32,
+      10
+    ],
+    [
+      32,
+      53
+    ],
+    [
+      10,
+      32
+    ],
+    [
+      53,
+      32
+    ]
+  ],
+  "city_names": [
+    "Central",
+    "SW",
+    "SE",
+    "NW",
+    "NE",
+    "South",
+    "North",
+    "West",
+    "East"
+  ],
+  "description": "Physarum slime mold - tokyo"
+}

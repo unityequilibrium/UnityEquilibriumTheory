@@ -1,0 +1,9 @@
+{
+  "case_id": "toy_traffic_google_rush_hour",
+  "model": "google_maps_traffic",
+  "scenario": "rush_hour",
+  "description": "Google Maps style traffic - rush_hour",
+  "grid": {
+    "N": 64
+  }
+}

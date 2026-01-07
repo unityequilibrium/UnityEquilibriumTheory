@@ -1,0 +1,14 @@
+{
+  "title": "toy_coffee_real_physics",
+  "description": "Simulation of realistic_brewing model. Final phase: unknown. Energy reduction: 0.0%.",
+  "key_params": {
+    "model": "realistic_brewing",
+    "grid": 32,
+    "L": "?",
+    "T": 30.0,
+    "dt": 0.05
+  },
+  "metrics": {},
+  "model": "realistic_brewing",
+  "generated_at": "2025-12-21T15:10:44.588562"
+}

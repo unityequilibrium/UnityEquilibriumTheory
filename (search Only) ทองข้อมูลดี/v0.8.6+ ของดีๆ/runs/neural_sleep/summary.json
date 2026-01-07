@@ -1,0 +1,11 @@
+{
+  "case_id": "neural_sleep",
+  "status": "PASS",
+  "scenario": "sleep",
+  "fit_error": 0.020396274420995827,
+  "Omega0": 4.009576757324199,
+  "OmegaT": 4.230553354696859,
+  "delta_omega": 0.05511220030119322,
+  "omega_conserved": true,
+  "description": "UET Neural: C-I dynamics for sleep"
+}

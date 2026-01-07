@@ -1,9 +1,0 @@
-{
-  "case_id": "cosmological_constant",
-  "model": "UET_cosmology",
-  "params": {
-    "Lambda": 0.1,
-    "kappa": 0.2,
-    "beta": 0.3
-  }
-}

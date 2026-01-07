@@ -1,9 +1,0 @@
-{
-  "case_id": "toy_stock_bubble",
-  "status": "PASS",
-  "scenario": "bubble",
-  "final_price": 0.8150720253533565,
-  "max_volatility": 0.19877903868680977,
-  "n_shocks": 6,
-  "description": "UET Stock Market - BUBBLE"
-}

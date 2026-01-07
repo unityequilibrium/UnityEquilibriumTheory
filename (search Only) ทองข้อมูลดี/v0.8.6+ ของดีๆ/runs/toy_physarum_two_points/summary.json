@@ -1,0 +1,8 @@
+{
+  "case_id": "toy_physarum_two_points",
+  "status": "PASS",
+  "scenario": "two_points",
+  "n_cities": 2,
+  "final_network_mass": 3072.0120692604924,
+  "description": "Physarum Network - TWO_POINTS"
+}

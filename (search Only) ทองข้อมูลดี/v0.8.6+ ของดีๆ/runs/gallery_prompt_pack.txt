@@ -1,0 +1,26 @@
+UET Gallery Authoring Prompt (copy/paste)
+
+Goal:
+- Produce a single-page demo gallery that feels like a dashboard.
+- Output format: standalone HTML file (no external deps), dark theme.
+- Must show for each demo:
+  - title, archetype, status
+  - GIF thumbnail
+  - quick metrics (beta, s, and placeholders for value/conflict/omega_final)
+  - gate badges: V/T/D/B
+  - a 1-sentence takeaway (plain language)
+- Must include: search, archetype filter, sort, "only PASS" toggle, "include candidates" toggle.
+- Must follow: Core-3-first philosophy (GIF → End → Conflict) with optional previews if assets exist.
+- Must be deterministic and easy to extend (render cards from a JS `demos` array).
+- Must avoid cosmology/GR claims; include a short policy note.
+
+Inputs you will be given:
+- existing folder layout: each demo has <DEMO>/CI_evolution.gif and <DEMO>/demo_card/demo_card.html
+- optional images if present: state_end.png, terrain_omega_grad_density.png, curve_omega.png in the same folder.
+
+Deliverables:
+1) gallery_v2.html (standalone)
+2) guidance comment inside code on how to add demos / wire to registry.json later.
+
+Tone:
+- minimal, clean, professional, readable, not flashy.

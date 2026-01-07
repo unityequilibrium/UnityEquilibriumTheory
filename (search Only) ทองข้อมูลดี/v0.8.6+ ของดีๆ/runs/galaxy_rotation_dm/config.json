@@ -1,0 +1,18 @@
+{
+  "case_id": "galaxy_rotation_dm",
+  "model": "UET_galaxy",
+  "grid": {
+    "N": 256
+  },
+  "physics": {
+    "C_interpretation": "Visible matter (stars, gas)",
+    "I_interpretation": "Dark matter halo (NFW profile)",
+    "rotation_curve": "Flat curve evidence for DM"
+  },
+  "params": {
+    "r_disk": 0.3,
+    "r_s": 0.5,
+    "kappa": 0.3,
+    "beta": 0.4
+  }
+}

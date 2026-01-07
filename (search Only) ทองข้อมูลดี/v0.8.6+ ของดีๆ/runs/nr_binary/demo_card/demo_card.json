@@ -1,0 +1,16 @@
+{
+  "title": "nr_binary",
+  "description": "Simulation of UET_NR model. Final phase: unknown. Energy reduction: 0.0%.",
+  "key_params": {
+    "model": "UET_NR",
+    "grid": 64,
+    "L": 2.0,
+    "T": 3.0,
+    "dt": 0.005,
+    "\u03b2": 0.5,
+    "\u03ba": 0.3
+  },
+  "metrics": {},
+  "model": "UET_NR",
+  "generated_at": "2025-12-21T20:49:47.896084"
+}

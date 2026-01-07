@@ -1,0 +1,12 @@
+{
+  "case_id": "einstein_collapse",
+  "status": "PASS",
+  "scenario": "collapse",
+  "final_energy": 464332.79999999993,
+  "final_curvature": 11566.087513456183,
+  "Omega0": 0.7794744782862819,
+  "OmegaT": 848.01875,
+  "delta_omega": 1086.9365182865467,
+  "omega_conserved": false,
+  "description": "UET \u2192 T\u03bc\u03bd \u2192 G\u03bc\u03bd | COLLAPSE"
+}

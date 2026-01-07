@@ -1,0 +1,10 @@
+{
+  "case_id": "toy_traffic_siam_square",
+  "status": "PASS",
+  "location": "Siam Square, Bangkok, Thailand",
+  "Omega0": 11.756706108283545,
+  "OmegaT": 165.88555145263672,
+  "delta_omega": 13.109866311598706,
+  "omega_conserved": false,
+  "description": "Real traffic flow on Siam Square road network from"
+}

@@ -1,0 +1,34 @@
+{
+  "title": "toy_coffee",
+  "description": "Simulation of C_I model. Final phase: BIAS_I. Energy reduction: 178.2%.",
+  "key_params": {
+    "model": "C_I",
+    "grid": 16,
+    "L": 10.0,
+    "T": 2.0,
+    "dt": 0.01,
+    "\u03b2": 0.5,
+    "\u03ba_C": 0.5,
+    "\u03ba_I": 0.5,
+    "aC_": -1.0,
+    "\u03b4C_": 1.0,
+    "sC_": 0.0,
+    "aI_": -1.0,
+    "\u03b4I_": 1.0,
+    "sI_": 0.0
+  },
+  "metrics": {
+    "\u03a9_0": 6.045547815104721,
+    "\u03a9_T": -4.726400995666622,
+    "\u0394\u03a9": 10.771948810771342,
+    "\u0394\u03a9_rel": 1.7817986293744583,
+    "mean_C_final": -0.115280920032615,
+    "mean_I_final": -0.1074108262972356,
+    "bias_CI_final": -0.0078700937353793,
+    "phase": "BIAS_I",
+    "\u03a9_std_tail": 0.2972874928427362,
+    "total_backtracks": 0
+  },
+  "model": "C_I",
+  "generated_at": "2025-12-20T18:20:29.886579"
+}

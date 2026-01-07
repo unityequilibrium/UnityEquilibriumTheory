@@ -1,0 +1,20 @@
+# theory_manifest.txt
+# Copy these files into repo/theory/
+
+UET_0_8_2_repo_scaffold.zip
+UET_Merged_2025-11-26_Before_Equation.md
+UET_Merged_2025-11-26_Chat_Physics_Objective_Raw.md
+UET_Merged_2025-11-26_Framework.md
+UET_Merged_2025-11-26_Physics_Objective_Raw.md
+UET_Merged_2025-12-08_0.3.md
+UET_Merged_2025-12-08_0.4.md
+UET_Merged_2025-12-08_0.5.md
+UET_Merged_2025-12-08_0.6.md
+UET_Merged_2025-12-08_0.7.md
+UET_Merged_2025-12-08_0.8.0.md
+UET_Merged_2025-12-08_0.8.1.md
+UET_Merged_2025-12-10_0.8.2_B5_Lyapunov_proof_report.md
+UET_Merged_2025-12-16_0.8.3.md
+UET_Merged_2025-12-16_0.8.4.md
+UET_Merged_2025-12-16_0.8.5.md
+0.8.5+.md

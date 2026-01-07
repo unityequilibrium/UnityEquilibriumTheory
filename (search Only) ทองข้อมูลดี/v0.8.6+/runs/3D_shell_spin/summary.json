@@ -1,9 +1,0 @@
-{
-  "case_id": "3D_shell_spin",
-  "status": "PASS",
-  "dim": 3,
-  "Omega0": 290.752985718019,
-  "OmegaT": 919.8328423018713,
-  "steps_total": 50,
-  "description": "Spinning spherical shell - rotating visualization"
-}

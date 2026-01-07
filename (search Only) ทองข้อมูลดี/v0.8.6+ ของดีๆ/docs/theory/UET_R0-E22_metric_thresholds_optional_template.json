@@ -1,0 +1,5 @@
+{
+  "backtracks_density_max": 0.5,
+  "dt_collapse_ratio_min": 0.2,
+  "note": "Optional thresholds used by metric_triage.py."
+}

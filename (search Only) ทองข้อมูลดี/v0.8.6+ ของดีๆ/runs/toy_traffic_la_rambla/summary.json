@@ -1,0 +1,10 @@
+{
+  "case_id": "toy_traffic_la_rambla",
+  "status": "PASS",
+  "location": "La Rambla, Barcelona, Spain",
+  "Omega0": 5.595086666402823,
+  "OmegaT": 300.39466094970703,
+  "delta_omega": 52.68900945779914,
+  "omega_conserved": false,
+  "description": "Real traffic flow on La Rambla road network from"
+}

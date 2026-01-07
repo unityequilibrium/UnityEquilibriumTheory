@@ -1,0 +1,15 @@
+{
+  "case_id": "landscape_comparison",
+  "status": "PASS",
+  "Omega0": 31.221074181965832,
+  "OmegaT": 1312.8999999999999,
+  "delta_omega": 41.05172417668985,
+  "omega_conserved": false,
+  "potentials_tested": [
+    "double_well",
+    "single_well",
+    "tilted",
+    "flat"
+  ],
+  "description": "Comparing different potential landscapes"
+}

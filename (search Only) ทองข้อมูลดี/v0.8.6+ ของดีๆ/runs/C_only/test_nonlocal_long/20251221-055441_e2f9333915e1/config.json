@@ -1,0 +1,48 @@
+{
+  "case_id": "test_nonlocal_long",
+  "model": "C_only",
+  "units": {
+    "mode": "dimensionless"
+  },
+  "domain": {
+    "dim": 2,
+    "L": 1.0,
+    "bc": "periodic"
+  },
+  "grid": {
+    "N": 128,
+    "dtype": "float64"
+  },
+  "time": {
+    "dt": 0.01,
+    "T": 100.0,
+    "max_steps": 500000,
+    "tol_abs": 1e-06,
+    "tol_rel": 1e-06,
+    "backtrack": {
+      "enabled": true,
+      "factor": 0.5,
+      "max_backtracks": 20
+    }
+  },
+  "integrator": {
+    "name": "semiimplicit",
+    "mode": "strict"
+  },
+  "rng": {
+    "seed": 42,
+    "algorithm": "numpy_pc64"
+  },
+  "params": {
+    "kappa": 1.0,
+    "M": 1.0,
+    "pot": {
+      "type": "quartic",
+      "a": 1.0,
+      "delta": 0.0,
+      "s": 0.0
+    }
+  },
+  "config_hash": "e2f9333915e1",
+  "run_id": "20251221-055441_e2f9333915e1"
+}

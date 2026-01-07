@@ -1,7 +1,0 @@
-{
-  "case_id": "toy_traffic_google_accident",
-  "status": "PASS",
-  "scenario": "accident",
-  "final_congestion": 0.858098223615465,
-  "description": "Google Maps style traffic visualization - accident"
-}

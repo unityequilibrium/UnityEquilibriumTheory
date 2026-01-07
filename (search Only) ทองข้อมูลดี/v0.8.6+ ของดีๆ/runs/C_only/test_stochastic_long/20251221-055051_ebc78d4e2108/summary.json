@@ -1,0 +1,30 @@
+{
+  "case_id": "test_stochastic_long",
+  "run_id": "20251221-055051_ebc78d4e2108",
+  "model": "C_only",
+  "status": "FAIL",
+  "fail_reasons": [
+    "COERCIVITY_NO_GROWTH"
+  ],
+  "warnings": [],
+  "Omega0": NaN,
+  "OmegaT": NaN,
+  "Omega0_density": NaN,
+  "OmegaT_density": NaN,
+  "max_energy_increase": 0.0,
+  "energy_increase_count": 0,
+  "nan_inf_detected": false,
+  "blowup_detected": false,
+  "max_abs_C": 0.0,
+  "max_abs_I": 0.0,
+  "max_L4_C": 0.0,
+  "max_L4_I": 0.0,
+  "steps_total": 0,
+  "steps_accepted": 0,
+  "dt_min": 0.01,
+  "dt_max": 0.01,
+  "dt_backtracks_total": 0,
+  "runtime_s": 0.00028896331787109375,
+  "config_hash": "ebc78d4e2108",
+  "code_hash": "uet_harness_v0.1"
+}

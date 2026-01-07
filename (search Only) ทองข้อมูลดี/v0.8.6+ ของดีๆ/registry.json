@@ -1,0 +1,179 @@
+{
+    "meta": {
+        "version": "1.0",
+        "generated": "2024-12-20",
+        "description": "UET Demo Registry"
+    },
+    "demos": [
+        {
+            "id": "BIAS_C",
+            "title": "BIAS_C (Conscience Dominant)",
+            "archetype": "BIAS_C",
+            "status": "published",
+            "params": {
+                "beta": 0.5,
+                "s": 0.5,
+                "kappa": 0.5,
+                "N": 32,
+                "T": 5
+            },
+            "metrics": {
+                "omega_final": -242.40,
+                "omega_0": 32.40,
+                "steps": 500,
+                "backtracks": 0,
+                "phase": "BIAS_C"
+            },
+            "paths": {
+                "gif": "BIAS_C/CI_evolution.gif",
+                "demo": "BIAS_C/demo_card/demo_card.html",
+                "end": "BIAS_C/snapshots/state_end.png",
+                "conflict": "BIAS_C/conflict_terrain.png",
+                "omega_curve": "BIAS_C/demo_card/omega_evolution.png"
+            },
+            "gates": {
+                "V": "PASS",
+                "T": "PASS",
+                "D": "PASS",
+                "B": "PASS"
+            },
+            "takeaway": "Positive tilt drives the system toward C-dominance with clear phase separation."
+        },
+        {
+            "id": "BIAS_I",
+            "title": "BIAS_I (Instinct Dominant)",
+            "archetype": "BIAS_I",
+            "status": "published",
+            "params": {
+                "beta": 0.5,
+                "s": -0.5,
+                "kappa": 0.5,
+                "N": 32,
+                "T": 5
+            },
+            "metrics": {
+                "omega_final": -242.40,
+                "omega_0": 32.89,
+                "steps": 500,
+                "backtracks": 0,
+                "phase": "BIAS_I"
+            },
+            "paths": {
+                "gif": "BIAS_I/CI_evolution.gif",
+                "demo": "BIAS_I/demo_card/demo_card.html",
+                "end": "BIAS_I/snapshots/state_end.png",
+                "conflict": "BIAS_I/conflict_terrain.png",
+                "omega_curve": "BIAS_I/demo_card/omega_evolution.png"
+            },
+            "gates": {
+                "V": "PASS",
+                "T": "PASS",
+                "D": "PASS",
+                "B": "PASS"
+            },
+            "takeaway": "Negative tilt drives the system toward I-dominance, mirroring BIAS_C behavior."
+        },
+        {
+            "id": "SYM",
+            "title": "SYM (Symmetric Balance)",
+            "archetype": "SYM",
+            "status": "published",
+            "params": {
+                "beta": 0.5,
+                "s": 0.0,
+                "kappa": 0.5,
+                "N": 32,
+                "T": 5
+            },
+            "metrics": {
+                "omega_final": -74.47,
+                "omega_0": 32.65,
+                "steps": 500,
+                "backtracks": 0,
+                "phase": "SYM"
+            },
+            "paths": {
+                "gif": "SYM/CI_evolution.gif",
+                "demo": "SYM/demo_card/demo_card.html",
+                "end": "SYM/snapshots/state_end.png",
+                "conflict": "SYM/conflict_terrain.png",
+                "omega_curve": "SYM/demo_card/omega_evolution.png"
+            },
+            "gates": {
+                "V": "PASS",
+                "T": "PASS",
+                "D": "PASS",
+                "B": "PASS"
+            },
+            "takeaway": "Zero tilt produces balanced dynamics with no dominant phase."
+        },
+        {
+            "id": "Strong_Coupling",
+            "title": "Strong Coupling (β=0.9)",
+            "archetype": "SYM",
+            "status": "candidate",
+            "params": {
+                "beta": 0.9,
+                "s": 0.0,
+                "kappa": 0.5,
+                "N": 32,
+                "T": 5
+            },
+            "metrics": {
+                "omega_final": -126.83,
+                "omega_0": 32.45,
+                "steps": 500,
+                "backtracks": 0,
+                "phase": "BIAS_C"
+            },
+            "paths": {
+                "gif": "Strong_Coupling/CI_evolution.gif",
+                "demo": "Strong_Coupling/demo_card/demo_card.html",
+                "end": "Strong_Coupling/snapshots/state_end.png",
+                "conflict": "Strong_Coupling/conflict_terrain.png",
+                "omega_curve": "Strong_Coupling/demo_card/omega_evolution.png"
+            },
+            "gates": {
+                "V": "PASS",
+                "T": "PASS",
+                "D": "PASS",
+                "B": "PASS"
+            },
+            "takeaway": "High β amplifies C-I interaction, creating sharper interfaces."
+        },
+        {
+            "id": "Weak_Coupling",
+            "title": "Weak Coupling (β=0.1)",
+            "archetype": "SYM",
+            "status": "candidate",
+            "params": {
+                "beta": 0.1,
+                "s": 0.0,
+                "kappa": 0.5,
+                "N": 32,
+                "T": 5
+            },
+            "metrics": {
+                "omega_final": -22.04,
+                "omega_0": 32.85,
+                "steps": 500,
+                "backtracks": 0,
+                "phase": "SYM"
+            },
+            "paths": {
+                "gif": "Weak_Coupling/CI_evolution.gif",
+                "demo": "Weak_Coupling/demo_card/demo_card.html",
+                "end": "Weak_Coupling/snapshots/state_end.png",
+                "conflict": "Weak_Coupling/conflict_terrain.png",
+                "omega_curve": "Weak_Coupling/demo_card/omega_evolution.png"
+            },
+            "gates": {
+                "V": "PASS",
+                "T": "PASS",
+                "D": "PASS",
+                "B": "PASS"
+            },
+            "takeaway": "Low β reduces coupling, allowing near-independent field evolution."
+        }
+    ]
+}

@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UET summary.json schema v0.1",
+  "type": "object",
+  "required": [
+    "case_id",
+    "run_id",
+    "model",
+    "status",
+    "fail_reasons",
+    "Omega0",
+    "OmegaT",
+    "max_energy_increase",
+    "energy_increase_count",
+    "nan_inf_detected",
+    "blowup_detected",
+    "steps_total",
+    "steps_accepted",
+    "dt_min",
+    "dt_max",
+    "dt_backtracks_total",
+    "runtime_s",
+    "config_hash",
+    "code_hash"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string",
+      "enum": [
+        "C_only",
+        "C_I"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PASS",
+        "FAIL",
+        "WARN"
+      ]
+    },
+    "fail_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "Omega0": {
+      "type": "number"
+    },
+    "OmegaT": {
+      "type": "number"
+    },
+    "max_energy_increase": {
+      "type": "number"
+    },
+    "energy_increase_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "nan_inf_detected": {
+      "type": "boolean"
+    },
+    "blowup_detected": {
+      "type": "boolean"
+    },
+    "max_abs_C": {
+      "type": "number"
+    },
+    "max_abs_I": {
+      "type": "number"
+    },
+    "max_L4_C": {
+      "type": "number"
+    },
+    "max_L4_I": {
+      "type": "number"
+    },
+    "steps_total": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "steps_accepted": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "dt_min": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "dt_max": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "dt_backtracks_total": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "runtime_s": {
+      "type": "number",
+      "minimum": 0
+    },
+    "config_hash": {
+      "type": "string"
+    },
+    "code_hash": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

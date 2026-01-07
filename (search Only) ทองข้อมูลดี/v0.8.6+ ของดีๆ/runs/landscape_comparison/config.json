@@ -1,0 +1,10 @@
+{
+  "case_id": "landscape_comparison",
+  "model": "UET_landscape",
+  "potentials": [
+    "double_well",
+    "single_well",
+    "tilted",
+    "flat"
+  ]
+}

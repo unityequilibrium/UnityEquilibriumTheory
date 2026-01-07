@@ -1,0 +1,10 @@
+{
+  "case_id": "cosmological_constant",
+  "status": "PASS",
+  "Omega0": 14.80621650697988,
+  "OmegaT": 95177.65681250002,
+  "delta_omega": 6427.222683872804,
+  "omega_conserved": false,
+  "final_scale_factor": -0.025729166666666668,
+  "description": "Cosmology with \u039b=0.1"
+}
