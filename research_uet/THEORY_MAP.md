@@ -35,6 +35,7 @@ How "Normal World" concepts translate to "UET Information" concepts.
 | **Relativity** | **Gravity** ($g$) | **Capacity Pressure** | Saturation of storage bends the path. |
 | **Quantum** | **Wave** ($\Psi$) | **Search Alg** | System checking all possible addresses. |
 | **Quantum** | **Collapse** | **Found Address** | System locks onto one ID. |
+| **Cosmology** | **Volume** ($V$) | **Total Equilibrium** ($\Omega_{total}$) | $V$ is the capacity of the Universe. Max $\Omega$ requires Max $V$. |
 
 ---
 
@@ -72,3 +73,10 @@ sequenceDiagram
 *   **Classical Physics** describes the **Result** (The apple fell).
 *   **UET** describes the **Reason** (Why it fell: To balance Information Density).
 *   They are compatible because Mechanism ($F=ma$) $\neq$ Origin ($\nabla I$).
+
+## 5. The Critical Variable: Volume ($V$)
+The user has identified that **Volume is the Key**.
+*   **$V = \Omega_{Total}$ (The Big Omega)**
+*   The Universe expands (increasing $V$) because it seeks to maximize its Total Equilibrium ($\Omega$).
+*   **Expansion is not a force; it is a Requirement.** To store more Information ($I$) without overheating (Efficiency), the System *must* increase its storage capacity ($V$).
+*   **Result**: $V \propto \sum \Omega$. We are living in a growing hard drive.
