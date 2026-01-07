@@ -90,11 +90,18 @@ python run_master_validation.py
 
 ---
 
-## 🔍 Transparency (Challenge to the Community)
+## 🔍 Transparency & Methodology
 
-**Invitation:** We challenge the global physics community to **falsify** this theory.
+**Invitation to Falsify**: We do not claim this theory is absolute truth. We claim it is a *compelling model* that fits the data. We invite the global physics community to test, break, and falsify it.
+
+**Methodology Disclosure (Human + AI)**:
+*   **Conceptual Framework**: Developed by the human author based on the "Thermodynamics of System Robustness" (Ethics).
+*   **Mathematical Derivations & Simulations**: Executed by advanced AI assistants to ensure rigorous mathematical consistency and code execution.
+*   **Verification**: All results are reproducible via the provided Python scripts in `lab/`.
+
+**Challenge:**
 1. Download the code.
-2. Run the `lab/` validation suite against the real data (SPARC, SDSS, AME2020).
+2. Run the `lab/` validation suite against the real data.
 3. If it fails, open an issue.
 
 *Version 0.8.7 | Open Source | MIT License*
