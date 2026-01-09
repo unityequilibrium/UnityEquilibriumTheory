@@ -53,27 +53,13 @@ $$\boxed{\Omega = C \cdot I}$$
 
 This is how we actually calculate physics:
 
-```
-       ┌─────────────────────────────────────────────────────────────┐
-       │                                                             │
-       │   Ω = V(C) + (κ/2)|∇C|² + β·C·I + ½I²                      │
-       │       ───┬──   ────┬────   ──┬───   ─┬─                    │
-       │          │         │         │       │                      │
-       │          ▼         ▼         ▼       ▼                      │
-       │     Physical   Gradient   THE     Vacuum                   │
-       │       Cost      Cost     BRIDGE   Energy                   │
-       │                                                             │
-       └─────────────────────────────────────────────────────────────┘
-```
+$$\Omega[C,I] = \int \left[ \underbrace{V(C)}_{\text{Physical Cost}} + \underbrace{\frac{\kappa}{2}|\nabla C|^2}_{\text{Interaction Limit}} + \underbrace{\beta C I}_{\text{THE BRIDGE}} \right] dx$$
 
-**แต่ละ term คืออะไร?**
+**แต่ละ term หมายถึงอะไร?**
 
-| Term | สูตร | หมายถึง | ตัวอย่างในธรรมชาติ |
-|:-----|:-----|:--------|:-------------------|
-| **Physical Cost** | V(C) | พลังงานในการ "มีอยู่" | ⚡ พลังงานของวัตถุ |
-| **Gradient Cost** | κ\|∇C\|² | พลังงานในการ "เปลี่ยนแปลง" | 🌊 แรงตึงผิว, Gravity |
-| **THE BRIDGE** | β·C·I | จุดเชื่อม Matter ↔ Information | 🌉 Landauer limit, Bekenstein bound |
-| **Vacuum Energy** | ½I² | พลังงานของ "ความว่างเปล่า" | 🌌 Dark Energy, Casimir force |
+- **V(C) — Physical Cost**: พลังงานในการ "มีอยู่" ⚡ (เช่น E = mc²)
+- **κ|∇C|²/2 — Interaction Limit**: พลังงานในการ "เปลี่ยนแปลง" 🌊 (เช่น แรงตึงผิว, Gravity gradient)
+- **βCI — THE BRIDGE**: จุดเชื่อมระหว่าง Matter ↔ Information 🌉 (Landauer limit, Bekenstein bound)
 
 ---
 
