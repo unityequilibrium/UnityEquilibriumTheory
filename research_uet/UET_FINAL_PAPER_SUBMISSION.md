@@ -1,8 +1,8 @@
 # Unity Equilibrium Theory (UET): The Thermodynamic Cost of Reality
-**Version**: 1.0 (Submission Ready)
-**Date**: 2026-01-07
+**Version**: 1.1 (Updated)
+**Date**: 2026-01-09
 **Abstract**:
-We propose a Unity-based physical framework where the fundamental constants and laws of nature emerge from a single constraint: the thermodynamic cost of information processing in a finite system. Unlike traditional theories that aim solely to predict outcomes, **Unity Equilibrium Theory (UET) is constructed as an engineering framework**. It defines "Laws of Physics" as tunable optimization protocols for managing energy resources. By defining the speed of light $c$ as a channel capacity limit and mass $I$ as information latency, we derive the master equation $\Omega = c \cdot I$. This equation serves as a **control mechanism** for simulating and managing system equilibrium, validated against 18 physical domains from quantum collapse to galactic dynamics.maly with zero parameter fixing.
+We propose a Unity-based physical framework where the fundamental constants and laws of nature emerge from a single constraint: the thermodynamic cost of information processing in a finite system. Unlike traditional theories that aim solely to predict outcomes, **Unity Equilibrium Theory (UET) is constructed as an engineering framework**. It defines "Laws of Physics" as tunable optimization protocols for managing energy resources. By defining the speed of light $c$ as a channel capacity limit and mass $I$ as information latency, we derive the master equation $\Omega = c \cdot I$. This equation serves as a **control mechanism** for simulating and managing system equilibrium, validated against **20 physical domains** with **117 tests (98.3% pass)** from quantum collapse to galactic dynamics.
 
 ---
 
@@ -53,7 +53,7 @@ graph TD
 
 ## Part 3: Empirical Verification (The Atomic Audit)
 
-We tested this framework against 18 distinct physical topics. The results show **Universal Consistency**.
+We tested this framework against **20 distinct physical topics** with **117 individual tests**. The results show **Universal Consistency** with **98.3% pass rate**.
 
 ### 3.1 Cosmic Scale (Gravity & Space)
 | Test | Data Source | Method | Finding |
