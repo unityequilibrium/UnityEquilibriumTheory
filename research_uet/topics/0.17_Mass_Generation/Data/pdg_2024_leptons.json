@@ -1,0 +1,36 @@
+{
+  "source": "Particle Data Group 2024",
+  "publication": {
+    "title": "Review of Particle Physics",
+    "authors": [
+      "Particle Data Group"
+    ],
+    "journal": "Prog. Theor. Exp. Phys.",
+    "year": 2024,
+    "doi": "10.1093/ptep/ptac097",
+    "url": "https://pdg.lbl.gov/"
+  },
+  "leptons": {
+    "electron": {
+      "mass_MeV": 0.51099895,
+      "uncertainty_MeV": 1.5e-10,
+      "mass_kg": 9.1093837015e-31
+    },
+    "muon": {
+      "mass_MeV": 105.6583755,
+      "uncertainty_MeV": 2.3e-06,
+      "mass_kg": 1.883531627e-28,
+      "lifetime_us": 2.1969811
+    },
+    "tau": {
+      "mass_MeV": 1776.86,
+      "uncertainty_MeV": 0.12,
+      "lifetime_fs": 290.3
+    }
+  },
+  "mass_ratios": {
+    "m_mu/m_e": 206.768283,
+    "m_tau/m_e": 3477.23,
+    "m_tau/m_mu": 16.817
+  }
+}

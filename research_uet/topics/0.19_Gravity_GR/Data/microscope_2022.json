@@ -1,0 +1,35 @@
+{
+  "source": "MICROSCOPE Collaboration (CNES/ONERA)",
+  "publication": {
+    "title": "MICROSCOPE Mission: Final Results of the Test of the Equivalence Principle",
+    "authors": [
+      "MICROSCOPE Collaboration"
+    ],
+    "journal": "Phys. Rev. Lett.",
+    "volume": 129,
+    "pages": "121102",
+    "year": 2022,
+    "doi": "10.1103/PhysRevLett.129.121102"
+  },
+  "experiment": {
+    "method": "Space-based differential accelerometer",
+    "mission": "MICROSCOPE satellite",
+    "orbit": "Circular, 710 km altitude",
+    "test_bodies": [
+      "Platinum-Rhodium alloy",
+      "Titanium alloy"
+    ],
+    "duration": "2.5 years"
+  },
+  "results": {
+    "eta": {
+      "value": -1.5e-15,
+      "stat_uncertainty": 2.3e-15,
+      "sys_uncertainty": 1.5e-15,
+      "combined_uncertainty": 2.7e-15,
+      "unit": "dimensionless",
+      "description": "Final Eötvös parameter (world's best)"
+    }
+  },
+  "precision": "10^-15 level (best ever achieved)"
+}

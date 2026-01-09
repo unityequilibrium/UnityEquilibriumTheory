@@ -29,11 +29,20 @@ root_dir = os.path.dirname(
 if root_dir not in sys.path:
     sys.path.insert(0, root_dir)
 
-from research_uet.theory.utility.universal_constants import kB, hbar, c, G, M_sun
+# Physical constants (CODATA 2018) - inline to avoid import issues
+kB = 1.380649e-23  # J/K (Boltzmann constant)
+hbar = 1.054571817e-34  # J·s (reduced Planck constant)
+c = 299792458  # m/s (speed of light)
+G = 6.67430e-11  # m³ kg⁻¹ s⁻² (gravitational constant)
+M_sun = 1.98892e30  # kg (solar mass)
 
 # Import from UET V3.0 Master Equation
 try:
-    from research_uet.core.uet_master_equation import UETParameters, KAPPA_BEKENSTEIN, L_P_SQUARED
+    from research_uet.core.uet_master_equation import (
+        UETParameters,
+        KAPPA_BEKENSTEIN,
+        L_P_SQUARED,
+    )
 except ImportError:
     sys.path.insert(0, os.path.join(root_dir, "research_uet"))
     from core.uet_master_equation import UETParameters, KAPPA_BEKENSTEIN, L_P_SQUARED
@@ -148,7 +157,9 @@ def test_area_theorem_ligo():
         results.append(passed)
         status = "✅" if passed else "❌"
 
-        print(f"   {event['name']:<12} {A_initial:.3e}   {A_final:.3e}   {ratio:.2f}x {status}")
+        print(
+            f"   {event['name']:<12} {A_initial:.3e}   {A_final:.3e}   {ratio:.2f}x {status}"
+        )
 
     print("-" * 65)
 
@@ -172,7 +183,9 @@ def test_bekenstein_entropy():
     print("=" * 70)
 
     print(f"\n📊 Black Hole Thermodynamics:")
-    print(f"   {'Object':<20} {'Mass (M☉)':<15} {'Entropy (Planck)':<20} {'T_Hawking (K)':<15}")
+    print(
+        f"   {'Object':<20} {'Mass (M☉)':<15} {'Entropy (Planck)':<20} {'T_Hawking (K)':<15}"
+    )
     print("-" * 75)
 
     for name, data in BLACK_HOLE_ENTROPY.items():

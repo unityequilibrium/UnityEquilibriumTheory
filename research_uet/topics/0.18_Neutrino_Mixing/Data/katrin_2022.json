@@ -1,0 +1,16 @@
+{
+  "source": "KATRIN Collaboration",
+  "publication": {
+    "title": "Direct neutrino-mass measurement with sub-electronvolt sensitivity",
+    "journal": "Nature Physics",
+    "volume": 18,
+    "pages": "160-166",
+    "year": 2022,
+    "doi": "10.1038/s41567-021-01463-1"
+  },
+  "results": {
+    "m_nu_upper_limit_eV": 0.8,
+    "confidence_level": "90% CL",
+    "method": "Tritium beta decay endpoint"
+  }
+}

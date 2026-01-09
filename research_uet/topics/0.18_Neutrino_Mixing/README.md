@@ -54,12 +54,14 @@ s_{12}s_{23}-c_{12}c_{23}s_{13}e^{i\delta} & -c_{12}s_{23}-s_{12}c_{23}s_{13}e^{
 
 ---
 
-## 📁 Files
+## 📁 Structure
 
 | Directory | Content |
 |:----------|:--------|
 | `Code/` | Extended PMNS tests |
-| `Data/` | NuFIT global fit |
+| `Data/` | NuFIT, KATRIN JSON data |
+| `Ref/` | REFERENCES.py with DOIs |
+| `Result/` | Test outputs |
 
 ---
 

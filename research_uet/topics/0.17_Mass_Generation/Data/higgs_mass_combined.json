@@ -1,0 +1,17 @@
+{
+  "source": "CMS/ATLAS Combined",
+  "publication": {
+    "title": "Combined Measurement of the Higgs Boson Mass",
+    "journal": "Phys. Rev. Lett.",
+    "volume": 114,
+    "pages": "191803",
+    "year": 2015,
+    "doi": "10.1103/PhysRevLett.114.191803"
+  },
+  "higgs": {
+    "mass_GeV": 125.09,
+    "uncertainty_GeV": 0.24,
+    "width_MeV": 4.07,
+    "width_uncertainty_MeV": 0.86
+  }
+}

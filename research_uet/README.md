@@ -27,7 +27,7 @@
 
 ## 📊 Test Results (v0.8.7) - Updated 2026-01-08
 
-### 🎯 Overall Score: **64 Tests across 20 Domains**
+### 🎯 Overall Score: **117 Tests across 20 Domains** (98.3% pass)
 
 *Each test validates UET against real experimental data.*
 

@@ -1,0 +1,46 @@
+{
+  "source": "Eöt-Wash Group, University of Washington",
+  "publication": {
+    "title": "Test of the equivalence principle using a rotating torsion balance",
+    "authors": [
+      "Schlamminger, S.",
+      "Choi, K.-Y.",
+      "Wagner, T.A.",
+      "Gundlach, J.H.",
+      "Adelberger, E.G."
+    ],
+    "journal": "Phys. Rev. Lett.",
+    "volume": 100,
+    "pages": "041101",
+    "year": 2008,
+    "doi": "10.1103/PhysRevLett.100.041101"
+  },
+  "experiment": {
+    "method": "Rotating torsion balance",
+    "test_bodies": [
+      "Beryllium",
+      "Titanium"
+    ],
+    "location": "University of Washington"
+  },
+  "results": {
+    "eta_Earth": {
+      "value": 3e-14,
+      "uncertainty": 1.8e-13,
+      "unit": "dimensionless",
+      "description": "Eötvös parameter for Earth gravity"
+    },
+    "eta_Sun": {
+      "value": -3.1e-13,
+      "uncertainty": 4.7e-13,
+      "unit": "dimensionless",
+      "description": "Eötvös parameter for Solar gravity"
+    },
+    "eta_galactic_DM": {
+      "value": -4e-05,
+      "uncertainty": 7e-05,
+      "unit": "dimensionless",
+      "description": "Eötvös parameter for galactic dark matter"
+    }
+  }
+}

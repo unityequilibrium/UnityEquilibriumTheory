@@ -1,0 +1,43 @@
+{
+  "source": "Vikhlinin et al. 2006",
+  "publication": {
+    "title": "Chandra Sample of Nearby Relaxed Galaxy Clusters",
+    "journal": "ApJ",
+    "volume": 640,
+    "pages": "691",
+    "year": 2006,
+    "doi": "10.1086/500288"
+  },
+  "clusters": [
+    {
+      "name": "A133",
+      "T_keV": 3.8,
+      "M500_Msun": 230000000000000.0,
+      "r500_Mpc": 0.89
+    },
+    {
+      "name": "A262",
+      "T_keV": 2.2,
+      "M500_Msun": 80000000000000.0,
+      "r500_Mpc": 0.58
+    },
+    {
+      "name": "A383",
+      "T_keV": 5.0,
+      "M500_Msun": 350000000000000.0,
+      "r500_Mpc": 0.97
+    },
+    {
+      "name": "A478",
+      "T_keV": 7.2,
+      "M500_Msun": 680000000000000.0,
+      "r500_Mpc": 1.21
+    },
+    {
+      "name": "A1795",
+      "T_keV": 6.0,
+      "M500_Msun": 520000000000000.0,
+      "r500_Mpc": 1.1
+    }
+  ]
+}

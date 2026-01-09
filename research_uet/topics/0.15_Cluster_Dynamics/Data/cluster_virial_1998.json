@@ -1,0 +1,51 @@
+{
+  "source": "Girardi et al. 1998",
+  "publication": {
+    "title": "Optical Mass Estimates of Galaxy Clusters",
+    "authors": [
+      "Girardi, M.",
+      "Giuricin, G.",
+      "Mardirossian, F.",
+      "Mezzetti, M.",
+      "Boschin, W."
+    ],
+    "journal": "ApJ",
+    "volume": 505,
+    "pages": "74",
+    "year": 1998,
+    "doi": "10.1086/306157"
+  },
+  "clusters": [
+    {
+      "name": "Coma",
+      "velocity_dispersion_km_s": 1008,
+      "virial_mass_Msun": 1200000000000000.0,
+      "r_virial_Mpc": 2.9
+    },
+    {
+      "name": "Perseus",
+      "velocity_dispersion_km_s": 1282,
+      "virial_mass_Msun": 1100000000000000.0,
+      "r_virial_Mpc": 2.1
+    },
+    {
+      "name": "Virgo",
+      "velocity_dispersion_km_s": 632,
+      "virial_mass_Msun": 420000000000000.0,
+      "r_virial_Mpc": 1.55
+    },
+    {
+      "name": "Abell 2199",
+      "velocity_dispersion_km_s": 801,
+      "virial_mass_Msun": 560000000000000.0,
+      "r_virial_Mpc": 1.8
+    },
+    {
+      "name": "Abell 85",
+      "velocity_dispersion_km_s": 969,
+      "virial_mass_Msun": 910000000000000.0,
+      "r_virial_Mpc": 2.3
+    }
+  ],
+  "virial_relation": "M_virial = 3 σ² R_v / G"
+}

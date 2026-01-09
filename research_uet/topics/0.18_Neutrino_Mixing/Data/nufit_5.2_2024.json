@@ -1,0 +1,107 @@
+{
+  "source": "NuFIT 5.2 (2024)",
+  "publication": {
+    "title": "Updated global analysis of three-flavor neutrino oscillations",
+    "authors": [
+      "Esteban, I.",
+      "Gonzalez-Garcia, M.C.",
+      "Maltoni, M.",
+      "Schwetz, T.",
+      "Zhou, A."
+    ],
+    "journal": "JHEP",
+    "volume": "09",
+    "pages": "178",
+    "year": 2020,
+    "doi": "10.1007/JHEP09(2020)178",
+    "url": "http://www.nu-fit.org/"
+  },
+  "normal_ordering": {
+    "theta12_deg": {
+      "value": 33.44,
+      "1sigma_range": [
+        32.78,
+        34.11
+      ]
+    },
+    "theta23_deg": {
+      "value": 49.2,
+      "1sigma_range": [
+        48.1,
+        50.3
+      ]
+    },
+    "theta13_deg": {
+      "value": 8.57,
+      "1sigma_range": [
+        8.47,
+        8.67
+      ]
+    },
+    "delta_CP_deg": {
+      "value": 197,
+      "1sigma_range": [
+        120,
+        369
+      ]
+    },
+    "Delta_m21_sq_eV2": {
+      "value": 7.42e-05,
+      "1sigma_range": [
+        7.22e-05,
+        7.63e-05
+      ]
+    },
+    "Delta_m31_sq_eV2": {
+      "value": 0.002515,
+      "1sigma_range": [
+        0.002483,
+        0.002548
+      ]
+    }
+  },
+  "inverted_ordering": {
+    "theta12_deg": {
+      "value": 33.45,
+      "1sigma_range": [
+        32.78,
+        34.12
+      ]
+    },
+    "theta23_deg": {
+      "value": 49.5,
+      "1sigma_range": [
+        48.4,
+        50.4
+      ]
+    },
+    "theta13_deg": {
+      "value": 8.6,
+      "1sigma_range": [
+        8.51,
+        8.7
+      ]
+    },
+    "delta_CP_deg": {
+      "value": 286,
+      "1sigma_range": [
+        205,
+        348
+      ]
+    },
+    "Delta_m21_sq_eV2": {
+      "value": 7.42e-05,
+      "1sigma_range": [
+        7.22e-05,
+        7.63e-05
+      ]
+    },
+    "Delta_m32_sq_eV2": {
+      "value": -0.002498,
+      "1sigma_range": [
+        -0.002531,
+        -0.002466
+      ]
+    }
+  }
+}

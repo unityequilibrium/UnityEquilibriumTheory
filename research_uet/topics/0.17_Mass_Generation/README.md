@@ -1,70 +1,116 @@
 # ⚖️ 0.17 Mass Generation
 
 ![Status](https://img.shields.io/badge/Status-100%25_PASS-brightgreen)
-![Data](https://img.shields.io/badge/Data-Koide_Formula-blue)
-![Physics](https://img.shields.io/badge/Physics-Higgs_Mechanism-green)
+![Data](https://img.shields.io/badge/Data-PDG_2024-blue)
+![Tests](https://img.shields.io/badge/Tests-1/1-green)
+![DOI](https://img.shields.io/badge/DOI-10.1093/ptep/ptac097-orange)
 
-> **UET อธิบาย Mass Generation ผ่าน V(C) Potential Breaking**  
-> **Koide Formula Emerges Naturally from I-Field Symmetry**
-
----
-
-## 📋 Overview
-
-**Mass Generation** คือปริศนาว่า "ทำไมอนุภาคมีมวล?"
-
-| Mechanism | Standard Model | UET |
-|:----------|:---------------|:----|
-| **Higgs** | V(φ) = -μ²|φ|² + λ|φ|⁴ | V(C) = (α/2)C² + (γ/4)C⁴ |
-| **Yukawa** | m_f = y_f × v | m_f = β_f × ⟨C⟩ |
-| **Koide** | 2(m_e+m_μ+m_τ) = (√m_e+√m_μ+√m_τ)² | I-field symmetry! |
+> **UET explains the lepton mass hierarchy from information coupling strength!**
 
 ---
 
-## 🔗 Koide Formula
+## 📋 Table of Contents
 
-### The Mystery
-
-$$\frac{m_e + m_\mu + m_\tau}{(\sqrt{m_e} + \sqrt{m_\mu} + \sqrt{m_\tau})^2} = \frac{2}{3} \pm 0.0002$$
-
-**Why 2/3 exactly?** Standard Model has no answer!
-
-### UET Explanation
-
-> **"2/3 comes from tri-symmetric I-field configuration"**
-
-Three lepton families share a common I-field structure with:
-- Equal angular spacing (120°)
-- Mass² proportional to I-field winding
+1. [Overview](#-overview)
+2. [The Problem](#-the-problem)
+3. [UET Solution](#-uet-solution)
+4. [Results](#-test-results)
+5. [Data Sources](#-data-sources--references)
+6. [Quick Start](#-quick-start)
+7. [Files](#-files-in-this-module)
 
 ---
 
-## 📊 Key Results
+## 📖 Overview
 
-| Test | Value | UET | Error |
-|:-----|:------|:----|:-----:|
-| Koide ratio | 0.66666 | 2/3 | 0.02% ✅ |
-| Higgs mass | 125.25 GeV | 125.1 GeV | 0.1% ✅ |
-| Lepton masses | (e, μ, τ) | Reproduced | ✅ |
+**Mass generation** in the Standard Model comes from Higgs mechanism.
+
+| Aspect | Description |
+|:-------|:------------|
+| **Question** | Why m_τ >> m_μ >> m_e? |
+| **Standard Model** | Yukawa couplings (free parameters) |
+| **UET Solution** | Information coupling strength |
 
 ---
 
-## 📁 Files
+## 🎯 The Problem
 
-| Directory | Content |
-|:----------|:--------|
-| `Code/` | Mass generation tests |
-| `Data/` | PDG lepton masses |
+### Higgs Mechanism
+
+$$m_f = y_f \frac{v}{\sqrt{2}}$$
+
+| Issue | Description |
+|:------|:------------|
+| **9 Yukawa couplings** | Arbitrary in SM |
+| **Mass hierarchy** | Not explained |
+| **Koide relation** | Unexplained pattern |
+
+---
+
+## ✅ UET Solution
+
+### Core Insight
+
+Mass = **Information latency** in I-field
+
+Heavier particles have stronger coupling to information field.
+
+### Koide Formula
+
+$$Q = \frac{m_e + m_\mu + m_\tau}{(\sqrt{m_e} + \sqrt{m_\mu} + \sqrt{m_\tau})^2} = \frac{2}{3}$$
+
+---
+
+## 📊 Test Results
+
+### Summary
+
+| Test | Data Source | Result | Status |
+|:-----|:------------|:------:|:------:|
+| Lepton Mass | PDG 2024 | Consistent | ✅ PASS |
+
+### Lepton Masses (PDG 2024)
+
+| Particle | Mass (MeV/c²) | Ratio to e | Status |
+|:---------|:-------------:|:----------:|:------:|
+| Electron | 0.51099895 | 1 | ✅ |
+| Muon | 105.6583755 | 206.77 | ✅ |
+| Tau | 1776.86 | 3477.23 | ✅ |
+
+### Koide Relation
+
+$$Q = \frac{0.511 + 105.66 + 1776.86}{(\sqrt{0.511} + \sqrt{105.66} + \sqrt{1776.86})^2} = 0.6666... = \frac{2}{3}$$
+
+---
+
+## 📚 Data Sources & References
+
+| Source | Description | DOI |
+|:-------|:------------|:----|
+| **PDG 2024** | Particle Data Group | [`10.1093/ptep/ptac097`](https://doi.org/10.1093/ptep/ptac097) |
+| **CMS/ATLAS** | Higgs mass | [`10.1103/PhysRevLett.114.191803`](https://doi.org/10.1103/PhysRevLett.114.191803) |
 
 ---
 
 ## 🚀 Quick Start
 
 ```bash
-cd research_uet/topics/0.17_Mass_Generation/Code
-python test_mass_generation.py
+cd research_uet/topics/0.17_Mass_Generation
+python Data/download_data.py
+python Code/lepton_mass/test_lepton_mass.py
 ```
 
 ---
 
-[← Back to Topics Index](../README.md) | [→ Next: Neutrino Mixing](../0.18_Neutrino_Mixing/README.md)
+## 📁 Files in This Module
+
+| Path | Content |
+|:-----|:--------|
+| `Code/lepton_mass/` | Test scripts |
+| `Data/` | PDG JSON + download script |
+| `Doc/section_1/` | before/after documentation |
+| `Ref/REFERENCES.py` | DOIs |
+
+---
+
+[← Heavy Nuclei](../0.16_Heavy_Nuclei/README.md) | [→ Neutrino Mixing](../0.18_Neutrino_Mixing/README.md)

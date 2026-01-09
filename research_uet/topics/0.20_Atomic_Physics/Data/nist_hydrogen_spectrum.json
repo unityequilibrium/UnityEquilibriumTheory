@@ -1,0 +1,87 @@
+{
+  "source": "NIST Atomic Spectra Database",
+  "publication": {
+    "title": "NIST Atomic Spectra Database (version 5.11)",
+    "authors": [
+      "Kramida, A.",
+      "Ralchenko, Yu.",
+      "Reader, J.",
+      "NIST ASD Team"
+    ],
+    "year": 2023,
+    "doi": "10.18434/T4W30F",
+    "url": "https://physics.nist.gov/asd"
+  },
+  "element": {
+    "name": "Hydrogen",
+    "symbol": "H",
+    "atomic_number": 1
+  },
+  "balmer_series": {
+    "description": "Transitions to n=2 (visible light)",
+    "lines": [
+      {
+        "name": "H-alpha",
+        "transition": "3 → 2",
+        "wavelength_vacuum_nm": 656.4614,
+        "wavelength_air_nm": 656.2819,
+        "frequency_THz": 456.676,
+        "energy_eV": 1.889,
+        "color": "red"
+      },
+      {
+        "name": "H-beta",
+        "transition": "4 → 2",
+        "wavelength_vacuum_nm": 486.2721,
+        "wavelength_air_nm": 486.1342,
+        "frequency_THz": 616.507,
+        "energy_eV": 2.55,
+        "color": "cyan"
+      },
+      {
+        "name": "H-gamma",
+        "transition": "5 → 2",
+        "wavelength_vacuum_nm": 434.1692,
+        "wavelength_air_nm": 434.0472,
+        "frequency_THz": 690.69,
+        "energy_eV": 2.856,
+        "color": "violet"
+      },
+      {
+        "name": "H-delta",
+        "transition": "6 → 2",
+        "wavelength_vacuum_nm": 410.2938,
+        "wavelength_air_nm": 410.1748,
+        "frequency_THz": 731.017,
+        "energy_eV": 3.023,
+        "color": "violet"
+      },
+      {
+        "name": "H-epsilon",
+        "transition": "7 → 2",
+        "wavelength_vacuum_nm": 397.1198,
+        "wavelength_air_nm": 397.0075,
+        "frequency_THz": 755.028,
+        "energy_eV": 3.123,
+        "color": "UV-violet"
+      }
+    ]
+  },
+  "lyman_series": {
+    "description": "Transitions to n=1 (UV)",
+    "lines": [
+      {
+        "name": "Lyman-alpha",
+        "transition": "2 → 1",
+        "wavelength_vacuum_nm": 121.567,
+        "energy_eV": 10.199
+      },
+      {
+        "name": "Lyman-beta",
+        "transition": "3 → 1",
+        "wavelength_vacuum_nm": 102.5728,
+        "energy_eV": 12.088
+      }
+    ]
+  }
+}

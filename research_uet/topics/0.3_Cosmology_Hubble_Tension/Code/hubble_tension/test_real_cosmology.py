@@ -24,13 +24,18 @@ import os
 # Import from UET V3.0 Master Equation
 import sys
 from pathlib import Path
+
 _root = Path(__file__).parent
 while _root.name != "research_uet" and _root.parent != _root:
     _root = _root.parent
 sys.path.insert(0, str(_root.parent))
 try:
     from research_uet.core.uet_master_equation import (
-        UETParameters, SIGMA_CRIT, strategic_boost, potential_V, KAPPA_BEKENSTEIN
+        UETParameters,
+        SIGMA_CRIT,
+        strategic_boost,
+        potential_V,
+        KAPPA_BEKENSTEIN,
     )
 except ImportError:
     pass  # Use local definitions if not available
@@ -39,11 +44,14 @@ import sys
 
 # Add research_uet root path
 current_dir = os.path.dirname(os.path.abspath(__file__))
-root_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(current_dir))))
+root_dir = os.path.dirname(
+    os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
+)
 if root_dir not in sys.path:
     sys.path.insert(0, root_dir)
 
-from research_uet.theory.utility.universal_constants import c
+# Physical constants (CODATA 2018) - inline to avoid import issues
+c = 299792458  # m/s (speed of light)
 
 
 def load_planck_data(filepath):
@@ -66,10 +74,13 @@ def run_test():
     print("🌌 UET COSMIC HISTORY: COMPARATIVE ANALYSIS (JWST vs HST vs PLANCK)")
     print("=" * 60)
 
-    # 1. Load Comparative Data
-    data_path = "research_uet/data/cosmo/cosmic_tension_data.txt"
-    if not os.path.exists(data_path):
-        print("❌ Error: Comparative data file not found!")
+    # 1. Load Comparative Data - use path relative to this script
+    script_dir = Path(__file__).parent
+    topic_dir = script_dir.parent.parent
+    data_path = topic_dir / "Data" / "hubble_tension" / "cosmic_tension_data.txt"
+
+    if not data_path.exists():
+        print(f"❌ Error: Comparative data file not found at {data_path}!")
         return
 
     datasets = []
@@ -120,9 +131,13 @@ def run_test():
     print("-" * 80)
     print("\n🧠 Conclusion on 'Hubble Tension':")
     print("   UET predicts Lambda directly from the Horizon Scale (H0).")
-    print("   The ratio ~1.4 (approx 1/Omega_L) implies UET naturally explains Dark Energy")
+    print(
+        "   The ratio ~1.4 (approx 1/Omega_L) implies UET naturally explains Dark Energy"
+    )
     print("   as a holographic surface effect, strictly tied to H0.")
-    print("   Any variation in H0 (Hubble vs JWST) simply rescales the UET prediction accordingly,")
+    print(
+        "   Any variation in H0 (Hubble vs JWST) simply rescales the UET prediction accordingly,"
+    )
     print(
         "   maintaining the solution to the Vacuum Catastrophe regardless of the specific measurement."
     )

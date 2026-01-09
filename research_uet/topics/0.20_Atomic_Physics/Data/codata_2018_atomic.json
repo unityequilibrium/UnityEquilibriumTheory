@@ -1,0 +1,64 @@
+{
+  "source": "CODATA 2018 Recommended Values",
+  "publication": {
+    "title": "CODATA recommended values of the fundamental physical constants: 2018",
+    "authors": [
+      "Tiesinga, E.",
+      "Mohr, P.J.",
+      "Newell, D.B.",
+      "Taylor, B.N."
+    ],
+    "journal": "J. Phys. Chem. Ref. Data",
+    "volume": 50,
+    "pages": "033105",
+    "year": 2021,
+    "doi": "10.1063/5.0064853"
+  },
+  "constants": {
+    "R_infinity": {
+      "value": 10973731.56816,
+      "uncertainty": 2.1e-05,
+      "unit": "m⁻¹",
+      "name": "Rydberg constant",
+      "relative_uncertainty": 1.9e-12
+    },
+    "R_H": {
+      "value": 10967758.3406,
+      "uncertainty": 0.0032,
+      "unit": "m⁻¹",
+      "name": "Rydberg constant for hydrogen",
+      "note": "R_H = R_∞ × m_p/(m_p + m_e)"
+    },
+    "a_0": {
+      "value": 5.29177210903e-11,
+      "uncertainty": 8e-21,
+      "unit": "m",
+      "name": "Bohr radius"
+    },
+    "alpha": {
+      "value": 0.0072973525693,
+      "uncertainty": 1.1e-12,
+      "unit": "dimensionless",
+      "name": "Fine-structure constant",
+      "inverse": 137.035999084
+    },
+    "E_h": {
+      "value": 4.3597447222071e-18,
+      "uncertainty": 8.5e-30,
+      "unit": "J",
+      "name": "Hartree energy"
+    },
+    "m_e": {
+      "value": 9.1093837015e-31,
+      "uncertainty": 2.8e-40,
+      "unit": "kg",
+      "name": "Electron mass"
+    },
+    "m_p": {
+      "value": 1.67262192369e-27,
+      "uncertainty": 5.1e-37,
+      "unit": "kg",
+      "name": "Proton mass"
+    }
+  }
+}
