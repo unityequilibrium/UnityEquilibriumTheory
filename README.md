@@ -4,7 +4,6 @@
 ![Topics](https://img.shields.io/badge/Topics-20_Domains-blue)
 ![Fluid](https://img.shields.io/badge/Fluid_Dynamics-816x_Faster-ff69b4)
 ![Version](https://img.shields.io/badge/Version-v0.8.7-orange)
-![License](https://img.shields.io/badge/License-MIT-green)
 
 > **"Physics is the System Administration of the Universe — managing resources to prevent the system from crashing."**
 
