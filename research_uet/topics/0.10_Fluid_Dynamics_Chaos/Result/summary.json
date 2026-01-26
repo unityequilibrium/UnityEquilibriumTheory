@@ -1,16 +1,33 @@
 {
-  "run_id": "Turbulence_Stress_Test",
-  "simulation": "Turbulence_Stress_Test",
-  "status": "FAILED",
-  "timestamp": "Mon Jan 26 07:56:10 2026",
-  "duration_seconds": 9.381970882415771,
-  "total_steps": 0,
+  "run_id": "UET_Fluid_2D",
+  "simulation": "UET_Fluid_2D",
+  "status": "COMPLETED",
+  "timestamp": "Mon Jan 26 13:35:55 2026",
+  "duration_seconds": 0.025449275970458984,
+  "total_steps": 2,
   "metadata": {
-    "fluid": "Air",
-    "viscosity": 1.825e-05,
-    "v_in": 50.0,
-    "grid_size": 50,
-    "optimization": "VectorizedMatrix"
+    "nx": 64,
+    "ny": 64,
+    "dt": 0.001,
+    "kappa": 1.0038068523342016e-06,
+    "beta": 1.0,
+    "alpha": 1.0,
+    "C0": 1.0
   },
-  "final_state": null
+  "final_state": {
+    "step": 0,
+    "time": 0.001,
+    "omega": -0.0009270936032277747,
+    "kinetic": 0.0,
+    "potential": 7.568359375127959e-05,
+    "entropy": 0.0,
+    "gradient_norm": 0.0,
+    "max_density": 1.1,
+    "min_density": 1.0,
+    "is_stable": true,
+    "gradient_energy": 4.015201820485114e-07,
+    "entropy_interaction": -0.001003178717161103,
+    "kinetic_energy": 81.920000001385,
+    "max_velocity": 1.6000000000135255
+  }
 }

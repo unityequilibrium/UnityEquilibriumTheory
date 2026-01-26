@@ -34,8 +34,8 @@
     - [Human + AI Collaboration](#human--ai-collaboration)
     - [Transparency](#transparency)
   - [📄 Key Files](#-key-files)
-  - [🏷️ Scientific Keywords \& Tags](#️-scientific-keywords--tags)
   - [❓ Questions Answered by UET (SEO \& Key Research)](#-questions-answered-by-uet-seo--key-research)
+  - [🏷️ Scientific Keywords \& Tags](#️-scientific-keywords--tags)
 
 ---
 
@@ -266,18 +266,6 @@ python research_uet/topics/run_all_tests.py
 
 ---
 
-*Version 0.9.0 Grand Unified | MIT License | Last Updated: 2026-01-26*
-
-*[GitHub](https://github.com/unityequilibrium/Equation-UET-v0.9.0) | [📊 View All Experiments](https://github.com/unityequilibrium/Equation-UET-v0.9.0/tree/main/research_uet/topics)*
-
----
-
-## 🏷️ Scientific Keywords & Tags
-
-`Unity Equilibrium Theory` `UET` `Unified Field Theory Alternative` `Quantum Gravity` `Dark Matter Alternative` `Navier-Stokes Solution` `Fluid Dynamics` `General Relativity` `Thermodynamics of Information` `Python Simulation` `Scientific Computing` `Physics Engine` `Hubble Tension Solution` `Muon g-2` `Neutrino Mass` `Galaxy Rotation Curves` `Bekenstein Bound` `Landauer Limit` `Information Theory` `Emergent Gravity` `Yang-Mills Mass Gap` `P vs NP` `Origin of Life` `AI Consciousness` `Economic Stability`
-
----
-
 ## ❓ Questions Answered by UET (SEO & Key Research)
 
 Physics students and researchers often search for these questions. UET provides Python-verified answers:
@@ -290,3 +278,17 @@ Physics students and researchers often search for these questions. UET provides 
 | **"Navier Stokes Smoothness proof"** | Fluid turbulence is proved to be smooth ($C^\infty$) when modeled as an *Energy Minimization* problem on a 4D manifold. | [0.10](./research_uet/topics/0.10_Fluid_Dynamics_Chaos/) |
 | **"Calculate Vacuum Energy Density"** | By applying a *Plank-scale Information Cutoff*, we calculate $\Lambda \approx 10^{-9} J/m^3$, matching Dark Energy observations (avoiding $10^{120}$ error). | [0.12](./research_uet/topics/0.12_Vacuum_Energy_Casimir/) |
 | **"Origin of Mass"** | Mass is the *Coupling Strength* to the Information Field. Heavier particles have higher informational complexity (drag). | [0.17](./research_uet/topics/0.17_Mass_Generation/) |
+
+---
+
+*Version 0.9.0 Grand Unified | MIT License | Last Updated: 2026-01-26*
+
+*[GitHub](https://github.com/unityequilibrium/Equation-UET-v0.9.0) | [📊 View All Experiments](https://github.com/unityequilibrium/Equation-UET-v0.9.0/tree/main/research_uet/topics)*
+
+---
+
+## 🏷️ Scientific Keywords & Tags
+
+`Unity Equilibrium Theory` `UET` `Unified Field Theory Alternative` `Quantum Gravity` `Dark Matter Alternative` `Navier-Stokes Solution` `Fluid Dynamics` `General Relativity` `Thermodynamics of Information` `Python Simulation` `Scientific Computing` `Physics Engine` `Hubble Tension Solution` `Muon g-2` `Neutrino Mass` `Galaxy Rotation Curves` `Bekenstein Bound` `Landauer Limit` `Information Theory` `Emergent Gravity` `Yang-Mills Mass Gap` `P vs NP` `Origin of Life` `AI Consciousness` `Economic Stability`
+
+---

@@ -1,0 +1,51 @@
+{
+  "date": "2026-01-11",
+  "description": "Head-to-head comparison of NS and UET fluid solvers",
+  "tests": [
+    {
+      "test_case": "lid_driven_cavity",
+      "grid": "32x32",
+      "steps": 500,
+      "solvers": {
+        "NS": {
+          "runtime_s": 63.47735810279846,
+          "final_energy": 27.390559563069115,
+          "max_velocity": 1.000176199823684,
+          "stable": true
+        },
+        "UET": {
+          "runtime_s": 0.0673980712890625,
+          "final_omega": -0.004550187853211,
+          "final_energy": 6.973822594835348,
+          "max_velocity": 0.8000000000000007,
+          "stable": true
+        }
+      },
+      "comparison": {
+        "speed_ratio_ns_over_uet": 941.8275165553544,
+        "both_stable": true
+      }
+    },
+    {
+      "test_case": "high_reynolds_stability",
+      "grid": "32x32",
+      "steps": 200,
+      "solvers": {
+        "NS": {
+          "reynolds": 10000.0,
+          "stable": true,
+          "runtime_s": 25.538633584976196
+        },
+        "UET": {
+          "stable": true,
+          "kappa": 0.0001,
+          "runtime_s": 0.02644491195678711
+        }
+      },
+      "comparison": {
+        "winner": "tie",
+        "reason": "both stable"
+      }
+    }
+  ]
+}

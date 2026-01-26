@@ -1,0 +1,4 @@
+{
+  "test_suite": "Lid Driven Cavity + High Re",
+  "competitor": "Navier-Stokes Solver"
+}
