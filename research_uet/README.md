@@ -16,6 +16,7 @@ To ensure this framework remains robust, we enforce a strict standard across all
 1.  **[Pass Rate: 100%]**: Every script runs and validates against real data.
 2.  **[Architecture: 5x4]**: Every folder follows the Logic/Evidence/Narrative/Citation/Proof grid.
 3.  **[Integrity: Zero-Fudge]**: No arbitrary parameters. All constants are derived from First Principles.
+    > **The "Unplugging" Analogy:** Comparing gravity to the strong force is a category error. Unplugging a computer (Gravity) just stops the flow. Pulling a Quark out of a Nucleus (Strong Force) is like pulling the wall socket out of the wall—the harder you pull, the more the system resists until it breaks (Particle Creation). UET handles both via $\kappa$ (Tension), but the *Scale* dictates the behavior.
 
 ---
 

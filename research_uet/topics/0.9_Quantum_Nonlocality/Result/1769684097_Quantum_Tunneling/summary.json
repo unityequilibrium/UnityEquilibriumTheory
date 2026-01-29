@@ -1,0 +1,34 @@
+{
+  "run_id": "1769684097_Quantum_Tunneling",
+  "simulation": "Quantum_Tunneling",
+  "status": "COMPLETED",
+  "timestamp": "Thu Jan 29 17:54:57 2026",
+  "duration_seconds": 0.06949901580810547,
+  "total_steps": 1,
+  "metadata": {
+    "nx": 60,
+    "ny": 1,
+    "dt": 0.001,
+    "kappa": 0.5,
+    "beta": 1.0,
+    "alpha": 1.0,
+    "C0": 1.0
+  },
+  "final_state": {
+    "step": 0,
+    "time": 0.001,
+    "omega": 1.1664801206080824,
+    "kinetic": 0.0,
+    "potential": 1.1664801206080824,
+    "entropy": 0.0,
+    "gradient_norm": 0.0,
+    "max_density": 9.99880071896471,
+    "min_density": 0.0,
+    "is_stable": true,
+    "gradient_energy": 0.0,
+    "entropy_interaction": 0.0,
+    "mode": "tunneling",
+    "metric_val": 9.99880071896471,
+    "violation": false
+  }
+}

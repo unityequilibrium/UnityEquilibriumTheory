@@ -2,8 +2,8 @@
   "run_id": "UET_Heavy_Nuclei",
   "simulation": "UET_Heavy_Nuclei",
   "status": "FAILED",
-  "timestamp": "Wed Jan 28 20:24:14 2026",
-  "duration_seconds": 0.00109100341796875,
+  "timestamp": "Thu Jan 29 21:01:47 2026",
+  "duration_seconds": 0.0013272762298583984,
   "total_steps": 0,
   "metadata": {
     "nx": 1,

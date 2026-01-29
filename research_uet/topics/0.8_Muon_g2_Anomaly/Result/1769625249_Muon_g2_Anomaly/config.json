@@ -1,0 +1,7 @@
+{
+  "data_source": "Fermilab 2023",
+  "method": "UET Information Coupling",
+  "parameters": {
+    "delta_a_uet": "2.5e-9"
+  }
+}

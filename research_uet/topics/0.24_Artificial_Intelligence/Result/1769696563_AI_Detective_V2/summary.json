@@ -1,0 +1,33 @@
+{
+  "run_id": "1769696563_AI_Detective_V2",
+  "simulation": "AI_Detective_V2",
+  "status": "COMPLETED",
+  "timestamp": "Thu Jan 29 21:22:43 2026",
+  "duration_seconds": 0.16937875747680664,
+  "total_steps": 4,
+  "metadata": {
+    "nx": 64,
+    "ny": 64,
+    "dt": 1.0,
+    "kappa": 0.1,
+    "beta": 0.5,
+    "alpha": 1.0,
+    "C0": 1.0
+  },
+  "final_state": {
+    "step": 0,
+    "time": 1.0,
+    "omega": 0.0,
+    "kinetic": 0.0,
+    "potential": 0.0,
+    "entropy": 0.0,
+    "gradient_norm": 0.0,
+    "max_density": 1.0,
+    "min_density": 1.0,
+    "is_stable": true,
+    "gradient_energy": 0.0,
+    "entropy_interaction": 0.0,
+    "thought_entropy": 1.0,
+    "evidence_count": 100
+  }
+}

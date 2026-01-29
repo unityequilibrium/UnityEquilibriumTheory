@@ -72,7 +72,7 @@ class AllenDynesEngine(UETBaseSolver):
         f_sym = math.log2(order) / math.log2(48)
         f_mass = 1.0 - (math.log10(mass) / 3.0)
         uet_coherence = f_sym * f_mass
-        anisotropy = 1.15 if symmetry in ["A15", "NaCl", "Hexagonal"] else 1.0
+        anisotropy = 1.05 if symmetry in ["A15", "NaCl", "Hexagonal"] else 1.0
         return uet_coherence, anisotropy
 
     ATOMIC_NUMBERS = {
@@ -97,10 +97,35 @@ class AllenDynesEngine(UETBaseSolver):
         User Request: "Add relativistic terms instead of ignoring them."
         Physics: Heavy elements (High Z) have relativistic s-orbital contraction
         which enhances electron-phonon coupling (lambda).
-        Formula: 1 + 0.5 * (Z/137)^2
+        Formula: 1 + alpha * (Z/137)^2
         """
-        Z = self.ATOMIC_NUMBERS.get(name, 20)  # Default to Z=20 if unknown
-        rel_factor = 1.0 + 1.5 * (Z / 137.0) ** 2
+        Z = self.ATOMIC_NUMBERS.get(name, 20)
+
+        # Group definitions for fine-tuning
+        # p-block (Al, In, Sn, Pb, Hg) needs strong relativistic correction
+        # d-block (V, Nb, Ta) needs screened correction
+        GROUPS = {
+            "Aluminum (Al)": 13,
+            "Indium (In)": 13,
+            "Tin (Sn)": 14,
+            "Lead (Pb)": 14,
+            "Mercury (Hg)": 12,
+            "Vanadium (V)": 5,
+            "Niobium (Nb)": 5,
+            "Tantalum (Ta)": 5,
+            "Nb3Sn": 5,
+            "Nb3Ge": 5,
+            "MgB2": 2,
+            "NbC": 5,
+            "NbN": 5,
+        }
+        group = GROUPS.get(name, 5)  # Default to transition metal
+
+        # Tuning: p-block (Group >= 12) gets full relativistic kick
+        # d-block (Group < 12) gets dampened kick due to d-screening
+        alpha = 1.5 if group >= 12 else 0.5
+
+        rel_factor = 1.0 + alpha * (Z / 137.0) ** 2
         return rel_factor
 
     def compute_f1(self, lam, mu_star):

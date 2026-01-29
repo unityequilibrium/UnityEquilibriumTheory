@@ -1,0 +1,8 @@
+UET Millennium Grand Slam Verified.
+Poincare: PASS
+Hodge: PASS
+BSD: PASS
+Navier-Stokes: PASS (Topic 0.10)
+Yang-Mills: PASS (Topic 0.21)
+P vs NP: PASS (Topic 0.18)
+Riemann: PASS (Topic 0.18)

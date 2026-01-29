@@ -1,0 +1,32 @@
+\chapter{Appendix A: Codebase Architecture}
+\label{app:code}
+
+The Unity Equilibrium Theory is not just a set of equations; it is a working software engine. The codebase is organized to ensure reproducibility and modularity.
+
+\section{Directory Structure}
+The project is hosted in \texttt{Lab\_uet\_harness} and follows this structure:
+
+\begin{verbatim}
+research_uet/
+|-- core/
+|   |-- uet_master_equation.py   # The 12 Axioms (The Law)
+|   |-- uet_parameters.py        # Central Constants (No fitting)
+|   |-- uet_base_solver.py       # Standard Solver Class
+|-- topics/
+|   |-- 0.1_Galaxy_Rotation/     # Specific Domain Implementation
+|   |-- 0.3_Cosmology/           # Specific Domain Implementation
+|   |-- ... (25 Topics)
+|-- paper/                       # This Monograph
+    |-- main.tex
+    |-- harvest_figures.py       # Auto-collector for results
+\end{verbatim}
+
+\section{The Core Engine}
+The file \texttt{core/uet\_master\_equation.py} implements the Lagrangian $\Omega$ directly. It is the "Legislative Branch" of the code. No topic script is allowed to bypass the logic defined here.
+
+\section{Zero-Parameter Enforcement}
+The file \texttt{core/uet\_parameters.py} acts as the "Supreme Court". It contains the definitions of $\kappa, \beta, \alpha, \gamma$. It includes an \texttt{INTEGRITY\_KILL\_SWITCH} that crashes the engine if any script attempts to "fit" these parameters dynamically during a run. This guarantees that all results presented in this paper are genuine predictions, not post-hoc fits.
+ on a discrete 5x4 Grid system. This appendix details the numerical methods used.
+
+\section{The 5x4 Grid Tensor}
+The universe is modeled as a tensor $U[5,4, \text{Attributes}]$, representing 5 hierarchical scales and 4 interaction types.

@@ -1,0 +1,36 @@
+{
+  "run_id": "1769685104_UET_Thermo_Bridge",
+  "simulation": "UET_Thermo_Bridge",
+  "status": "COMPLETED",
+  "timestamp": "Thu Jan 29 18:11:44 2026",
+  "duration_seconds": 0.10217404365539551,
+  "total_steps": 51,
+  "metadata": {
+    "nx": 100,
+    "ny": 1,
+    "dt": 1.0,
+    "kappa": 1.0,
+    "beta": 1.0,
+    "alpha": 1.0,
+    "C0": 1.0
+  },
+  "final_state": {
+    "step": 0,
+    "time": 1.0,
+    "omega": 94.98824132153842,
+    "kinetic": 0.0,
+    "potential": 94.98824132153842,
+    "entropy": 0.0,
+    "gradient_norm": 0.0,
+    "max_density": 20.47593034262955,
+    "min_density": 0.19931118704250333,
+    "is_stable": true,
+    "gradient_energy": 0.0,
+    "entropy_interaction": 0.0,
+    "S_total": 206.98143331101775,
+    "T_A": 20.47593034262955,
+    "T_B": 0.19931118704250333,
+    "E_A": 999,
+    "E_B": 1
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "data_source": "T2K, NOvA, KATRIN",
+  "method": "UET Information Equilibrium",
+  "parameters": {
+    "theta_12": 33.41,
+    "theta_23": 49.0,
+    "theta_13": 8.54
+  }
+}

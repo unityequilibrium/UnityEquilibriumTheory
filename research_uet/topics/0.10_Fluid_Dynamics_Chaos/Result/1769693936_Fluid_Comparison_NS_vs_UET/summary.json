@@ -1,0 +1,24 @@
+{
+  "run_id": "1769693936_Fluid_Comparison_NS_vs_UET",
+  "simulation": "Fluid_Comparison_NS_vs_UET",
+  "status": "COMPLETED",
+  "timestamp": "Thu Jan 29 20:38:56 2026",
+  "duration_seconds": 89.6816840171814,
+  "total_steps": 1,
+  "metadata": {
+    "test_suite": "Lid Driven Cavity + High Re",
+    "competitor": "Navier-Stokes Solver"
+  },
+  "final_state": {
+    "step": 1,
+    "time": 1.0,
+    "omega": 1.0,
+    "kinetic": 0.0,
+    "potential": 0.0,
+    "entropy": 0.0,
+    "gradient_norm": 0.0,
+    "max_density": 0.0,
+    "min_density": 0.0,
+    "is_stable": true
+  }
+}

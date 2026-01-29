@@ -1,0 +1,27 @@
+{
+  "run_id": "1769685556_Muon_g2_Anomaly",
+  "simulation": "Muon_g2_Anomaly",
+  "status": "COMPLETED",
+  "timestamp": "Thu Jan 29 18:19:16 2026",
+  "duration_seconds": 1.8881025314331055,
+  "total_steps": 1,
+  "metadata": {
+    "data_source": "Fermilab 2023",
+    "method": "UET Information Coupling",
+    "parameters": {
+      "delta_a_uet": "2.5e-9"
+    }
+  },
+  "final_state": {
+    "step": 1,
+    "time": 1.0,
+    "omega": 1.0,
+    "kinetic": 0.0,
+    "potential": 0.0,
+    "entropy": 0.0,
+    "gradient_norm": 0.0,
+    "max_density": 0.0,
+    "min_density": 0.0,
+    "is_stable": true
+  }
+}

@@ -64,50 +64,34 @@ def import_from_path(module_name, path_str):
 
 # 1. Gravity (Topic 0.1)
 galaxy_path = (
-    ROOT
-    / "research_uet/topics/0.1_Galaxy_Rotation_Problem/Code/01_Engine/Engine_Galaxy_V3.py"
+    ROOT / "research_uet/topics/0.1_Galaxy_Rotation_Problem/Code/01_Engine/Engine_Galaxy_V3.py"
 )
 mod_galaxy = import_from_path("Engine_Galaxy_V3", str(galaxy_path))
 UETGalaxyEngine = mod_galaxy.UETGalaxyEngine
 GalaxyParams = mod_galaxy.GalaxyParams
 
 # 2. Electroweak (Topic 0.6)
-ew_path = (
-    ROOT
-    / "research_uet/topics/0.6_Electroweak_Physics/Code/01_Engine/Engine_Electroweak.py"
-)
+ew_path = ROOT / "research_uet/topics/0.6_Electroweak_Physics/Code/01_Engine/Engine_Electroweak.py"
 mod_ew = import_from_path("Engine_Electroweak", str(ew_path))
 UETElectroweakSolver = mod_ew.UETElectroweakSolver
 
 # 3. Fluid (Topic 0.10)
-fluid_path = (
-    ROOT
-    / "research_uet/topics/0.10_Fluid_Dynamics_Chaos/Code/01_Engine/Engine_UET_2D.py"
-)
+fluid_path = ROOT / "research_uet/topics/0.10_Fluid_Dynamics_Chaos/Code/01_Engine/Engine_UET_2D.py"
 mod_fluid = import_from_path("Engine_UET_2D", str(fluid_path))
 UETFluidSolver = mod_fluid.UETFluidSolver
 
 # 4. Mass (Topic 0.17)
-mass_path = (
-    ROOT
-    / "research_uet/topics/0.17_Mass_Generation/Code/01_Engine/Engine_Mass_Higgs.py"
-)
+mass_path = ROOT / "research_uet/topics/0.17_Mass_Generation/Code/01_Engine/Engine_Mass_Higgs.py"
 mod_mass = import_from_path("Engine_Mass_Higgs", str(mass_path))
 UETMassEngine = mod_mass.UETMassEngine
 
 # 5. Quantum (Topic 0.18)
-quantum_path = (
-    ROOT
-    / "research_uet/topics/0.18_Quantum_Computing/Code/01_Engine/Engine_Quantum_Logic.py"
-)
+quantum_path = ROOT / "research_uet/topics/0.18_Mathnicry/Code/01_Engine/Engine_Quantum_Logic.py"
 mod_quantum = import_from_path("Engine_Quantum_Logic", str(quantum_path))
 UETQuantumSolver = mod_quantum.UETQuantumSolver
 
 # 6. AI (Topic 0.24)
-ai_path = (
-    ROOT
-    / "research_uet/topics/0.24_Artificial_Intelligence/Code/01_Engine/UET_AI_Core.py"
-)
+ai_path = ROOT / "research_uet/topics/0.24_Artificial_Intelligence/Code/01_Engine/UET_AI_Core.py"
 mod_ai = import_from_path("UET_AI_Core", str(ai_path))
 UetcortexNeuralNet = mod_ai.UetcortexNeuralNet
 
@@ -121,8 +105,7 @@ PowerDynamicsEngine = mod_econ.PowerDynamicsEngine
 
 # 8. Atomic Physics (Topic 0.20)
 atomic_path = (
-    ROOT
-    / "research_uet/topics/0.20_Atomic_Physics/Code/01_Engine/Engine_Atomic_Hydrogen.py"
+    ROOT / "research_uet/topics/0.20_Atomic_Physics/Code/01_Engine/Engine_Atomic_Hydrogen.py"
 )
 mod_atomic = import_from_path("Engine_Atomic_Hydrogen", str(atomic_path))
 UETAtomicEngine = mod_atomic.UETAtomicEngine
@@ -250,25 +233,15 @@ class UETOmniEngine:
         print(f"\n💎 UET UNIVERSAL DASHBOARD (Beta={state.beta_phase})")
         print("=" * 60)
         print(f"  🌌 Gravity (Halo Ratio):      {state.galaxy_chi2:.4f} (Ideal ~4-10)")
-        print(
-            f"  ⚛️  Electroweak (Angle):      {state.weinberg_angle:.5f} (Ideal ~0.23)"
-        )
-        print(
-            f"  🌊 Fluid (Crit Reynolds):     {state.reynolds_critical:.1f} (Ideal ~2262)"
-        )
+        print(f"  ⚛️  Electroweak (Angle):      {state.weinberg_angle:.5f} (Ideal ~0.23)")
+        print(f"  🌊 Fluid (Crit Reynolds):     {state.reynolds_critical:.1f} (Ideal ~2262)")
         print(f"  ⚖️  Mass (Tau MeV):           {state.tau_mass:.2f} (Ideal ~1776)")
-        print(
-            f"  🔮 Quantum (Entropy):         {state.entanglement_entropy:.4f} (Ideal 1.0)"
-        )
-        print(
-            f"  🧠 AI (Initial Loss):         {state.ai_learning_rate:.4f} (Lower is better)"
-        )
+        print(f"  🔮 Quantum (Entropy):         {state.entanglement_entropy:.4f} (Ideal 1.0)")
+        print(f"  🧠 AI (Initial Loss):         {state.ai_learning_rate:.4f} (Lower is better)")
         print(
             f"  💰 Economy (Wealth Omega):    {state.economic_omega:.4f} (Validation: Real Data Loaded)"
         )
-        print(
-            f"  ⚛️  Atomic (H-Alpha Error):    {state.atomic_error:.4f}% (Ideal < 0.1%)"
-        )
+        print(f"  ⚛️  Atomic (H-Alpha Error):    {state.atomic_error:.4f}% (Ideal < 0.1%)")
         print("-" * 60)
         print(f"  STATUS: {state.status}")
         print("=" * 60)

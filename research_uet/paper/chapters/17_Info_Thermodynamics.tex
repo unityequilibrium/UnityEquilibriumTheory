@@ -1,0 +1,19 @@
+\chapter{Information Thermodynamics: The Arrow of Time}
+\label{ch:thermodynamics}
+
+\section{Time as an Emergent Property (Topic 0.13)}
+In UET, time ($t$) is not a fundamental dimension but a derived parameter representing the gradient of entropy production.
+\begin{equation}
+    dt \propto \nabla S
+\end{equation}
+If the information state of the universe does not change (static entropy), time ceases to exist.
+
+\section{Resolution of Maxwell's Demon}
+\begin{itemize}
+    \item \textbf{Engine:} \texttt{Engine\_Thermodynamics.py}
+    \item \textbf{Mechanism:} The engine simulates energy exchange between reservoirs. It explicitly implements Landauer's Principle: "Information is Physical."
+    \item \textbf{Cost:} Any attempt by a "Demon" to sort particles (reduce entropy) requires measurement. This measurement increases the information content of the Demon's memory. Erasing this memory to reset the cycle dissipates heat $E \ge k_B T \ln 2$, balancing the total entropy budget.
+\end{itemize}
+
+\section{Unruh and Hawking Radiation}
+Both phenomena are unified as "Horizon Effects" where the observer's acceleration disrupts the vacuum information equilibrium, manifesting as thermal noise (Temperature).

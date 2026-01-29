@@ -26,7 +26,7 @@ We categorize our research into **3 Impact Zones**:
 |:---|:-----------|:------------|:-------------|:-------|
 | [0.10](0.10_Fluid_Dynamics_Chaos/) | **Fluid Dynamics** | Navier-Stokes smoothness | Smoothness on 4D Manifold | ✅ |
 | [0.21](0.21_Yang_Mills_Mass_Gap/) | **Yang-Mills** | Mass Gap existence | Information Saturation Limit | ✅ |
-| [0.18](0.18_Quantum_Computing/) | **Quantum Computing** | P vs NP / Riemann | Manifold Connectivity Opt. | ✅ |
+| [0.18](0.18_Mathnicry/) | **Mathnicry** | P vs NP / Riemann | Manifold Connectivity Opt. | ✅ |
 | [0.14](0.14_Complex_Systems/) | **Complex Systems** | Chaos & Emergence | $V=CI^k$ (Power Laws) | ✅ |
 
 ### 🌌 Zone 2: Physical Reality (The Engine)

@@ -1,0 +1,12 @@
+{
+  "data_source": "Event Horizon Telescope (EHT)",
+  "targets": [
+    "M87*",
+    "Sgr A*"
+  ],
+  "method": "UET_Schwarzschild_Shadow",
+  "parameters": {
+    "G": 6.6743e-11,
+    "c": 299792458
+  }
+}

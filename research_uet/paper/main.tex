@@ -1,0 +1,98 @@
+\documentclass[11pt, a4paper]{book}
+\usepackage{sty/UET_physics}
+
+% Metadata
+\title{\textbf{\Huge The Unity Equilibrium Theory}\\ \LARGE A Grand Unified Monograph on Geometric Information Physics}
+\author{\textbf{UET Research Team}\\ \textit{Department of Advanced Complexity}}
+\date{\today}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\tableofcontents
+
+\mainmatter
+
+% =============================================================================
+% PART I: FOUNDATIONS (The Core)
+% =============================================================================
+\part{Foundations: The Geometric Source}
+\include{chapters/01_Introduction}
+\include{chapters/02_Theory_Core}
+% Renamed/Refined for Monograph context
+% 03 is now Cosmology in Part II.
+
+% =============================================================================
+% PART II: THE MACROSCOPIC UNIVERSE (Gravity & Cosmos)
+% =============================================================================
+\part{The Macroscopic Universe}
+% Chapter 4: Origin of Gravity (Topic 0.19) - WAS part of Theory Core, now explicit
+% We will reuse 03_Cosmology here as Ch 6
+\include{chapters/03_Cosmology} 
+% Note: We need to split gravity out specifically if separate, 
+% but for now let's map existing content to the structure.
+% Ideally we write new specialized chapters.
+% Since 019 was just engine code, we use placeholders for now.
+
+\include{chapters/08_BlackHoles} % Topic 0.2
+% 0.1 Galaxy Rotation needs a home. 
+% We will edit 03_Cosmology to focus on Hubble, and put Galaxy here.
+
+% =============================================================================
+% PART III: THE QUANTUM REALM (Matter & Forces)
+% =============================================================================
+\part{The Quantum Realm}
+\include{chapters/04_Quantum} % Topic 0.9 + 0.5
+\include{chapters/05_StandardModel} % Topic 0.6 + 0.17
+\include{chapters/09_Quantum_Geometry} % Advanced Quantum
+\include{chapters/10_StandardModel_Unified} % Detailed Mass Gen
+\include{chapters/11_Nuclear_Atom} % Topic 0.20 + 0.5 + 0.16
+
+% =============================================================================
+% PART IV: ANOMALIES & EXPLANATIONS (The Killers)
+% =============================================================================
+\part{Anomalies \& Solutions}
+\include{chapters/12_Neutrinos} % Topic 0.7
+\include{chapters/13_Precision_Tests} % Topic 0.8 + 0.12
+\include{chapters/14_New_Physics} % Topic 0.4 + 0.12 LENR
+
+% =============================================================================
+% PART V: MATHEMATICAL FOUNDATIONS
+% =============================================================================
+\part{Mathematical Foundations}
+\include{chapters/15_Prime_Resonance} % Topic 0.18
+\include{chapters/16_Topology_MassGap} % Topic 0.21
+
+% =============================================================================
+% PART VI: COMPLEXITY & LIFE
+% =============================================================================
+\part{Complexity, Life, and Intelligence}
+\include{chapters/06_ComplexSystems} % Base Topic 0.14
+\include{chapters/17_Info_Thermodynamics} % Topic 0.13
+\include{chapters/18_Physics_of_Life} % Topic 0.22
+\include{chapters/19_AI_Entropy} % Topic 0.24
+
+% =============================================================================
+% PART VII: UNIVERSAL APPLICATIONS
+% =============================================================================
+\part{Universal Applications}
+\include{chapters/20_Econophysics} % Topic 0.25
+\include{chapters/21_Social_Dynamics} % Topic 0.26
+
+% =============================================================================
+% PART VIII: CONCLUSION
+% =============================================================================
+\part{Synthesis}
+\include{chapters/22_Unity_Scale} % Topic 0.23
+\include{chapters/23_Final_Discussion}
+\include{chapters/07_Conclusion}
+
+\appendix
+\include{appendices/A_Code_Architecture}
+\include{appendices/B_Full_Results_Table}
+
+\bibliographystyle{plain}
+\bibliography{uet_bib}
+
+\end{document}

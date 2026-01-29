@@ -1,0 +1,7 @@
+{
+  "data_source": "SPARC Database",
+  "method": "Zero Curve Fitting",
+  "parameters": {
+    "G": "Derived from info field logic"
+  }
+}

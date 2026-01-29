@@ -1,0 +1,21 @@
+{
+  "run_id": "1769702579_Superconductivity_Integrity",
+  "simulation": "Superconductivity_Integrity",
+  "status": "COMPLETED",
+  "timestamp": "Thu Jan 29 23:02:59 2026",
+  "duration_seconds": 0.0039052963256835938,
+  "total_steps": 1,
+  "metadata": {},
+  "final_state": {
+    "step": 1,
+    "time": 1.0,
+    "omega": 1.0,
+    "kinetic": 0.0,
+    "potential": 0.0,
+    "entropy": 0.0,
+    "gradient_norm": 0.0,
+    "max_density": 0.0,
+    "min_density": 0.0,
+    "is_stable": true
+  }
+}

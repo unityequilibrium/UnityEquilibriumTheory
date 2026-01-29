@@ -1,0 +1,14 @@
+{
+    "Topic": "0.18_Quantum_Computing",
+    "Category": "02_Proof",
+    "Test": "Bell_State_Fidelity",
+    "Samples": 1000,
+    "Counts": {
+        "(0, 0)": 474,
+        "(0, 1)": 0,
+        "(1, 0)": 0,
+        "(1, 1)": 526
+    },
+    "Fidelity": 1.0,
+    "Status": "PASS"
+}

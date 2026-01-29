@@ -62,9 +62,7 @@ def run_experiment():
 
     results = []
 
-    print(
-        f"{'Element':<10} | {'Tc Obs':<10} | {'Tc UET':<10} | {'Error':<10} | {'Status'}"
-    )
+    print(f"{'Element':<10} | {'Tc Obs':<10} | {'Tc UET':<10} | {'Error':<10} | {'Status'}")
     print("-" * 70)
 
     total_error = 0.0
@@ -72,7 +70,10 @@ def run_experiment():
     tolerance = 15.0  # Legacy used 20%. We target 15%.
 
     for name, tc_obs, theta, lam, mu in materials:
-        solver.set_material(theta, lam, mu)
+        if hasattr(solver, "set_material_named"):
+            solver.set_material_named(name, theta, lam, mu)
+        else:
+            solver.set_material(theta, lam, mu)
         tc_uet = solver.find_critical_temperature()
 
         error = abs(tc_uet - tc_obs) / tc_obs * 100
@@ -82,9 +83,7 @@ def run_experiment():
         if status == "PASS":
             pass_count += 1
 
-        print(
-            f"{name:<10} | {tc_obs:<10.2f} | {tc_uet:<10.2f} | {error:<9.2f}% | {status}"
-        )
+        print(f"{name:<10} | {tc_obs:<10.2f} | {tc_uet:<10.2f} | {error:<9.2f}% | {status}")
 
         results.append(
             {
@@ -111,9 +110,7 @@ def run_experiment():
     result_path = result_dir / "results_summary.csv"
 
     with open(result_path, "w", newline="") as f:
-        writer = csv.DictWriter(
-            f, fieldnames=["Metric", "UET", "Observed", "Error_Pct", "Status"]
-        )
+        writer = csv.DictWriter(f, fieldnames=["Metric", "UET", "Observed", "Error_Pct", "Status"])
         writer.writeheader()
         writer.writerows(results)
 

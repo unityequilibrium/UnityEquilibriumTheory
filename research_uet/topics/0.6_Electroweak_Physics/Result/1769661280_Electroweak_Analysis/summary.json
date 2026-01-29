@@ -1,0 +1,27 @@
+{
+  "run_id": "1769661280_Electroweak_Analysis",
+  "simulation": "Electroweak_Analysis",
+  "status": "COMPLETED",
+  "timestamp": "Thu Jan 29 11:34:40 2026",
+  "duration_seconds": 1.7813999652862549,
+  "total_steps": 1,
+  "metadata": {
+    "data_source": "PDG 2024",
+    "method": "UET Electroweak Mixing",
+    "parameters": {
+      "sin2_theta_w": "Derived from beta/kappa"
+    }
+  },
+  "final_state": {
+    "step": 1,
+    "time": 1.0,
+    "omega": 1.0,
+    "kinetic": 0.0,
+    "potential": 0.0,
+    "entropy": 0.0,
+    "gradient_norm": 0.0,
+    "max_density": 0.0,
+    "min_density": 0.0,
+    "is_stable": true
+  }
+}
