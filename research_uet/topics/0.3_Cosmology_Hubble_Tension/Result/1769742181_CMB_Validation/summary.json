@@ -1,0 +1,57 @@
+{
+  "run_id": "1769742181_CMB_Validation",
+  "simulation": "CMB_Validation",
+  "status": "COMPLETED",
+  "timestamp": "Fri Jan 30 10:03:01 2026",
+  "duration_seconds": 0.11780714988708496,
+  "total_steps": 1,
+  "metadata": {
+    "data_source": "Planck 2018",
+    "parameters": {
+      "H0": {
+        "value": 67.36,
+        "error": 0.54
+      },
+      "age_Gyr": {
+        "value": 13.787,
+        "error": 0.02
+      },
+      "Omega_m": {
+        "value": 0.3153,
+        "error": 0.0073
+      },
+      "Omega_Lambda": {
+        "value": 0.6847,
+        "error": 0.0073
+      },
+      "Omega_k": {
+        "value": 0.0007,
+        "error": 0.0019
+      },
+      "n_s": {
+        "value": 0.9649,
+        "error": 0.0042
+      },
+      "sigma_8": {
+        "value": 0.8111,
+        "error": 0.006
+      },
+      "source": "Planck 2018 (VI)",
+      "doi": "10.1051/0004-6361/201833910"
+    },
+    "method": "UET_Holographic_Analysis",
+    "description": "Validation of CMB power spectrum against holographic predictions"
+  },
+  "final_state": {
+    "step": 1,
+    "time": 1.0,
+    "omega": 1.0,
+    "kinetic": 0.0,
+    "potential": 0.0,
+    "entropy": 0.0,
+    "gradient_norm": 0.0,
+    "max_density": 0.0,
+    "min_density": 0.0,
+    "is_stable": true
+  }
+}

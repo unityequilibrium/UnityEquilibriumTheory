@@ -1,0 +1,5 @@
+Standard CVD Defect Simulation
+==============================
+Structure Type: POLYCRYSTALLINE
+Defect Density: 8.30 defects/nm^2
+Observation: Random thermal nucleation creates high-resistance grain boundaries.

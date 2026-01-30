@@ -1,19 +1,19 @@
 {
-    "timestamp": "2026-01-29",
+    "timestamp": "2026-01-30",
     "source": "UET_FINANCIAL_GATEWAY",
     "indicators": {
         "SET_INDEX": {
-            "value": 1367.46,
+            "value": 1336.04,
             "unit": "Points",
             "significance": "Local Market Entropy"
         },
         "GOLD_PRICE": {
-            "value": 2011.26,
+            "value": 2027.43,
             "unit": "USD/oz",
             "significance": "Global Stability Standard"
         },
         "USD_THB": {
-            "value": 35.23,
+            "value": 36.0,
             "unit": "THB",
             "significance": "Fluid Exchange Friction"
         },

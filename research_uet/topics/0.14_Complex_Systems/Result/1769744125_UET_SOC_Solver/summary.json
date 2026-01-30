@@ -1,0 +1,35 @@
+{
+  "run_id": "1769744125_UET_SOC_Solver",
+  "simulation": "UET_SOC_Solver",
+  "status": "COMPLETED",
+  "timestamp": "Fri Jan 30 10:35:25 2026",
+  "duration_seconds": 0.45523786544799805,
+  "total_steps": 1000,
+  "metadata": {
+    "nx": 20,
+    "ny": 20,
+    "dt": 1.0,
+    "kappa": 1.0,
+    "beta": 1.0,
+    "alpha": 1.0,
+    "C0": 0.0
+  },
+  "final_state": {
+    "step": 900,
+    "time": 901.0,
+    "omega": 264.56000000000006,
+    "kinetic": 0.0,
+    "potential": 2.5600000000000005,
+    "entropy": 0.0,
+    "gradient_norm": 0.0,
+    "max_density": 3.0,
+    "min_density": 0.0,
+    "is_stable": true,
+    "gradient_energy": 262.00000000000006,
+    "entropy_interaction": 0.0,
+    "max_avalanche": 275,
+    "avalanche_count": 112,
+    "mean_size": 8.589285714285714,
+    "power_law_exponent": 0.0
+  }
+}

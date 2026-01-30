@@ -1,6 +1,6 @@
-# 🔬 UET Research Topics: The 25 Pillars of Truth
+# 🔬 UET Research Topics: The 27 Pillars of Truth
 
-![Status](https://img.shields.io/badge/Topics-25_Master-blue)
+![Status](https://img.shields.io/badge/Topics-27_Master-blue)
 ![Tests](https://img.shields.io/badge/Verification-150+_Scripts-green)
 ![Coverage](https://img.shields.io/badge/Physics-Unified-purple)
 
@@ -15,7 +15,7 @@
 
 ---
 
-## 🌟 The Master Index (25 Domains)
+## 🌟 The Master Index (27 Domains)
 
 We categorize our research into **3 Impact Zones**:
 
@@ -62,6 +62,8 @@ We categorize our research into **3 Impact Zones**:
 | [0.11](0.11_Phase_Transitions/) | **Phase Transitions** | Critical Points | Spinodal Info Saturation | ✅ |
 | [0.13](0.13_Thermodynamic_Bridge/) | **Thermo Bridge** | Maxwell's Demon | Information = Energy | ✅ |
 | [0.15](0.15_Cluster_Dynamics/) | **Cluster Dynamics** | Missing Baryons | Virial Mod | ✅ |
+| [0.27](0.27_Cold_Light_Hologram/) | **Cold Light (Hologram)** | Stopping Light (Entropy) | Geometric Resonance Lock | ✅ |
+| [0.28](0.28_Material_Synthesis/) | **Material Synthesis** | Graphene Defects | Acoustic Guidance Field | ✅ |
 
 ---
 

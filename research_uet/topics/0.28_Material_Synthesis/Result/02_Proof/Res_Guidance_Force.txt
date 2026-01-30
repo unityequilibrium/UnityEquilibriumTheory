@@ -1,0 +1,6 @@
+Acoustic Guidance Force Analysis
+================================
+Thermal Noise (Brownian): 1.3254e-01 N
+Resonant Guidance Force:   6.6271e-01 N
+Signal-to-Noise Ratio:     5.00
+CONCLUSION: PASSED (Controllable)

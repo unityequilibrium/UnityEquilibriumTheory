@@ -1,0 +1,15 @@
+{
+  "reference": "Hau et al. (1999) / Bekenstein (1981)",
+  "doi": "10.1038/17561",
+  "description": "Standard benchmarks for Slow Light and Holographic Entropy limits.",
+  "benchmarks": {
+    "c_vacuum": 299792458,
+    "v_slow_light_eit": 17.0,
+    "entropy_limit_bits_per_area": 0.25, 
+    "thermal_noise_floor_k": 0.0001
+  },
+  "uet_target": {
+    "v_group_target": 0.0,
+    "entropy_leak_target": 1e-6
+  }
+}

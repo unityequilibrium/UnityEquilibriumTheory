@@ -1,0 +1,20 @@
+{
+  "reference": "Li et al. (2009) / Vlassiouk (2011)",
+  "doi": "10.1126/science.1171245",
+  "description": "Industrial standards for Chemical Vapor Deposition (CVD) Graphene synthesis.",
+  "benchmarks": {
+    "standard_thermal_cvd": {
+      "defect_density_per_um2": 450,
+      "growth_rate_um_per_min": 0.5,
+      "polycrystalline_domain_size_um": 10
+    },
+    "theoretical_limit": {
+      "defect_density_per_um2": 0,
+      "growth_rate_um_per_min": 100
+    }
+  },
+  "uet_target": {
+    "defect_reduction_factor": 100,
+    "speed_increase_factor": 50
+  }
+}

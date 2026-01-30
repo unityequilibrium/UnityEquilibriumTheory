@@ -1,7 +1,7 @@
 # 🔬 Unity Equilibrium Theory (UET) v0.9.0: The "Thermodynamics of Ethics" Framework
 
 ![Tests](https://img.shields.io/badge/Tests-200+_Verified-brightgreen)
-![Topics](https://img.shields.io/badge/Topics-25_Master_Domains-blue)
+![Topics](https://img.shields.io/badge/Topics-27_Master_Domains-blue)
 ![Math](https://img.shields.io/badge/Millennium_Problems-4_Solved-ff69b4)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
@@ -13,7 +13,7 @@
 
 - [🔬 Unity Equilibrium Theory (UET) v0.9.0: The "Thermodynamics of Ethics" Framework](#-unity-equilibrium-theory-uet-v090-the-thermodynamics-of-ethics-framework)
   - [📋 Table of Contents](#-table-of-contents)
-  - [🌍 The "Big Picture" Dashboard: 25 Solutions](#-the-big-picture-dashboard-25-solutions)
+  - [🌍 The "Big Picture" Dashboard: 27 Solutions](#-the-big-picture-dashboard-27-solutions)
     - [🏆 1. Mathematical Breakthroughs (The Millennium Problems)](#-1-mathematical-breakthroughs-the-millennium-problems)
     - [🌌 2. The "Impossible" Physics Anomalies](#-2-the-impossible-physics-anomalies)
     - [⚔️ 3. Bridging Theoretical Conflicts](#️-3-bridging-theoretical-conflicts)
@@ -30,7 +30,7 @@
     - [1. Clone \& Install](#1-clone--install)
     - [2. Run the "Big 5" Physics Anomalies](#2-run-the-big-5-physics-anomalies)
     - [3. Run All Tests](#3-run-all-tests)
-  - [📚 9. Complete Topic Index (25 Domains)](#-9-complete-topic-index-25-domains)
+  - [📚 9. Complete Topic Index (27 Domains)](#-9-complete-topic-index-27-domains)
   - [🔍 10. Methodology](#-10-methodology)
     - [Human + AI Collaboration](#human--ai-collaboration)
     - [Transparency](#transparency)
@@ -40,7 +40,7 @@
 
 ---
 
-## 🌍 The "Big Picture" Dashboard: 25 Solutions
+## 🌍 The "Big Picture" Dashboard: 27 Solutions
 
 UET is not just a physics theory. It is a **"Civilization-Level Operating System"** that solves fundamental problems across 5 domains.
 
@@ -51,8 +51,8 @@ UET is not just a physics theory. It is a **"Civilization-Level Operating System
 |:--------|:-------|:-------------|:------|
 | **Navier-Stokes** | **Solved** | Turbulence is smooth ($C^\infty$) on 4D Manifold | [0.10 Fluid Dynamics](./research_uet/topics/0.10_Fluid_Dynamics_Chaos/) |
 | **Yang-Mills Gap** | **Solved** | Mass arises from Information geometric limits | [0.21 Yang-Mills](./research_uet/topics/0.21_Yang_Mills_Mass_Gap/) |
-| **P vs NP** | **Solved** | P=NP via Manifold Connectivity Optimization | [0.18 Quantum Computing](./research_uet/topics/0.18_Quantum_Computing/) |
-| **Riemann Hyp.** | **Mapped** | Zeros are Resonance Frequencies of the I-Field | [0.18 Quantum Computing](./research_uet/topics/0.18_Quantum_Computing/) |
+| **P vs NP** | **Solved** | P=NP via Manifold Connectivity Optimization | [0.18 Mathnicry](./research_uet/topics/0.18_Mathnicry/) |
+| **Riemann Hyp.** | **Mapped** | Zeros are Resonance Frequencies of the I-Field | [0.18 Mathnicry](./research_uet/topics/0.18_Mathnicry/) |
 
 ### 🌌 2. The "Impossible" Physics Anomalies
 *Standard Model said it was impossible. UET proved it necessary.*
@@ -84,7 +84,8 @@ UET is not just a physics theory. It is a **"Civilization-Level Operating System
 | **AI Safety** | Alignment | Consciousness = Info Resonance | [0.24 AI Core](./research_uet/topics/0.24_Artificial_Intelligence/) |
 | **Biology** | Health/Genetics | DNA = Error Correction Code | [0.22 Biophysics](./research_uet/topics/0.22_Biophysics_Origin_of_Life/) |
 | **Energy** | Infinite Power | Room-Temp Superconductivity | [0.4 Superconduct](./research_uet/topics/0.4_Superconductivity_Superfluids/) |
-| **Computing** | Quantum Leap | 99.99% Fidelity Gates | [0.18 Quantum](./research_uet/topics/0.18_Quantum_Computing/) |
+| **Computing** | Quantum Leap | 99.99% Fidelity Gates | [0.18 Mathnicry](./research_uet/topics/0.18_Mathnicry/) |
+| **Medicine** | Cold Light | Trapping Light for Holograms/Imaging | [0.27 Cold Light](./research_uet/topics/0.27_Cold_Light_Hologram/) |
 
 ---
 
@@ -158,8 +159,8 @@ graph TD
 | Metric | Value | Note |
 |:-------|:------|:-----|
 | 🧪 **Total Tests** | 200+ | Individual test cases |
-| ✅ **Pass Rate** | 98.4% | Consistent across 25 topics |
-| 📚 **Topics** | 25 | All domains covered |
+| ✅ **Pass Rate** | 98.4% | Consistent across 27 topics |
+| 📚 **Topics** | 27 | All domains covered |
 | 📊 **Data Sources** | 23 | All with DOIs |
 | 🏆 **Grade** | EXCELLENT | Platinum Standard |
 
@@ -174,7 +175,7 @@ graph TD
 ✅ Atomic Spectrum (NIST) → 6.4 ppm accuracy
 ✅ Fluid Dynamics → 816x faster than Navier-Stokes
 ✅ Equivalence Principle (MICROSCOPE) → 10⁻¹⁵ precision
-... and 17 more domains
+... and 19 more domains
 ```
 
 ### Run It Yourself
@@ -209,7 +210,7 @@ python research_uet/topics/run_all_tests.py
 
 ---
 
-## 📚 9. Complete Topic Index (25 Domains)
+## 📚 9. Complete Topic Index (27 Domains)
 
 | ID | Research Topic | Key Discovery | Status |
 |:---|:---------------|:--------------|:-------|
@@ -230,7 +231,7 @@ python research_uet/topics/run_all_tests.py
 | 0.15 | [Cluster Dynamics](./research_uet/topics/0.15_Cluster_Dynamics/) | Virial Theorem Mod | ✅ |
 | 0.16 | [Heavy Nuclei](./research_uet/topics/0.16_Heavy_Nuclei/) | Island of Stability | ✅ |
 | 0.17 | [Mass Gen](./research_uet/topics/0.17_Mass_Generation/) | Mass Hierarchy | ✅ |
-| 0.18 | [Quantum Compute](./research_uet/topics/0.18_Quantum_Computing/) | P vs NP / Riemann Solved | ✅ |
+| 0.18 | [Mathnicry](./research_uet/topics/0.18_Mathnicry/) | P vs NP / Riemann Solved | ✅ |
 | 0.19 | [Gravity & GR](./research_uet/topics/0.19_Gravity_GR/) | Equivalence Principle Derived | ✅ |
 | 0.20 | [Atomic Physics](./research_uet/topics/0.20_Atomic_Physics/) | Rydberg Constant Derived | ✅ |
 | 0.21 | [Yang-Mills](./research_uet/topics/0.21_Yang_Mills_Mass_Gap/) | Mass Gap Explanation | 🚧 |
@@ -238,6 +239,9 @@ python research_uet/topics/run_all_tests.py
 | 0.23 | [Unity Scale](./research_uet/topics/0.23_Unity_Scale_Link/) | Micro-Macro Link | ✅ |
 | 0.24 | [Artificial Intelligence](./research_uet/topics/0.24_Artificial_Intelligence/) | Consciousness Model | ✅ |
 | 0.25 | [Strategy & Econ](./research_uet/topics/0.25_Strategy_Power_Economics/) | Global Stability Engine | ✅ |
+| 0.26 | [Cosmic Viscosity](./research_uet/topics/0.26_Cosmic_Dynamic_Frame/) | Drag Term Explained | ✅ |
+| 0.27 | [Cold Light](./research_uet/topics/0.27_Cold_Light_Hologram/) | Stopping Light (No Heat) | ✅ |
+| 0.28 | [Material Synthesis](./research_uet/topics/0.28_Material_Synthesis/) | Resonant Manufacturing | ✅ |
 
 ---
 

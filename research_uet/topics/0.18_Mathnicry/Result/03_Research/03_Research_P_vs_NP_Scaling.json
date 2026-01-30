@@ -5,112 +5,112 @@
             "States": 4,
             "Iterations": 1,
             "Fidelity": 0.9999999999999996,
-            "Time_Seconds": 0.0018782615661621094
+            "Time_Seconds": 0.0013813972473144531
         },
         {
             "Qubits": 3,
             "States": 8,
             "Iterations": 2,
             "Fidelity": 0.9453124999999996,
-            "Time_Seconds": 0.0013413429260253906
+            "Time_Seconds": 0.0008044242858886719
         },
         {
             "Qubits": 4,
             "States": 16,
             "Iterations": 3,
             "Fidelity": 0.9613189697265623,
-            "Time_Seconds": 0.0010325908660888672
+            "Time_Seconds": 0.0008513927459716797
         },
         {
             "Qubits": 5,
             "States": 32,
             "Iterations": 4,
             "Fidelity": 0.9991823155432925,
-            "Time_Seconds": 0.0009541511535644531
+            "Time_Seconds": 0.0008034706115722656
         },
         {
             "Qubits": 6,
             "States": 64,
             "Iterations": 6,
-            "Fidelity": 0.996585680786799,
-            "Time_Seconds": 0.00106048583984375
+            "Fidelity": 0.9965856807867989,
+            "Time_Seconds": 0.0008521080017089844
         },
         {
             "Qubits": 7,
             "States": 128,
             "Iterations": 8,
-            "Fidelity": 0.9956198656943223,
-            "Time_Seconds": 0.0011494159698486328
+            "Fidelity": 0.995619865694322,
+            "Time_Seconds": 0.0009210109710693359
         },
         {
             "Qubits": 8,
             "States": 256,
             "Iterations": 12,
             "Fidelity": 0.9999470421032736,
-            "Time_Seconds": 0.001058816909790039
+            "Time_Seconds": 0.0010671615600585938
         },
         {
             "Qubits": 9,
             "States": 512,
             "Iterations": 17,
             "Fidelity": 0.99944802615401,
-            "Time_Seconds": 0.0014972686767578125
+            "Time_Seconds": 0.0012013912200927734
         },
         {
             "Qubits": 10,
             "States": 1024,
             "Iterations": 25,
-            "Fidelity": 0.9994612447444086,
-            "Time_Seconds": 0.0012867450714111328
+            "Fidelity": 0.9994612447444075,
+            "Time_Seconds": 0.0012090206146240234
         },
         {
             "Qubits": 11,
             "States": 2048,
             "Iterations": 35,
-            "Fidelity": 0.9999968477766242,
-            "Time_Seconds": 0.001495361328125
+            "Fidelity": 0.9999968477766236,
+            "Time_Seconds": 0.0013742446899414062
         },
         {
             "Qubits": 12,
             "States": 4096,
             "Iterations": 50,
             "Fidelity": 0.9999453461091191,
-            "Time_Seconds": 0.002406597137451172
+            "Time_Seconds": 0.0019714832305908203
         },
         {
             "Qubits": 13,
             "States": 8192,
             "Iterations": 71,
-            "Fidelity": 0.999915775249421,
-            "Time_Seconds": 0.003866434097290039
+            "Fidelity": 0.9999157752494205,
+            "Time_Seconds": 0.0026051998138427734
         },
         {
             "Qubits": 14,
             "States": 16384,
             "Iterations": 100,
             "Fidelity": 0.9999997811142223,
-            "Time_Seconds": 0.005431175231933594
+            "Time_Seconds": 0.004297971725463867
         },
         {
             "Qubits": 15,
             "States": 32768,
             "Iterations": 142,
             "Fidelity": 0.9999868295189597,
-            "Time_Seconds": 0.013618707656860352
+            "Time_Seconds": 0.011093616485595703
         },
         {
             "Qubits": 16,
             "States": 65536,
             "Iterations": 201,
             "Fidelity": 0.9999882596461648,
-            "Time_Seconds": 0.06864500045776367
+            "Time_Seconds": 0.05981564521789551
         },
         {
             "Qubits": 17,
             "States": 131072,
             "Iterations": 284,
             "Fidelity": 0.9999992587165479,
-            "Time_Seconds": 0.15587854385375977
+            "Time_Seconds": 0.1458425521850586
         }
     ]
 }
