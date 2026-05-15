@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_single_field_patch_impact_preview",
+  "material": "Nb3Sn",
+  "field_under_review": "Theta_D_K_or_omega_log_K",
+  "checked_date": "2026-05-12",
+  "purpose": "Quantify the gate impact of using the captured Nb3Sn Table II omega_log value without editing the benchmark row.",
+  "raw_gate_context": {
+    "materials_tested": 10,
+    "raw_average_relative_error_percent": 62.41493526953724,
+    "average_relative_error_percent_gate": 20.0,
+    "per_material_relative_error_percent_gate": 20.0,
+    "raw_model_gate_status": "FAIL"
+  },
+  "source_capture_context": {
+    "phonon_capture_record": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/phonon_numeric_capture_record.json",
+    "sample_choice_review": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_sample_choice_review.json",
+    "phonon_lambda_sensitivity_review": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_lambda_sensitivity_review.json",
+    "captured_primary_value": {
+      "row_locator": "Nb3Sn I",
+      "reported_proxy_type": "omega_log_K",
+      "value_K": 127
+    },
+    "captured_sibling_value": {
+      "row_locator": "Nb3Sn II",
+      "reported_proxy_type": "omega_log_K",
+      "value_K": 123
+    },
+    "archive_status": "session_local_pdf_only_pending_repo_archive_policy"
+  },
+  "preview_cases": [
+    {
+      "case_id": "no_patch_current_raw_row",
+      "theta_or_prefactor_proxy_K": 280,
+      "lambda_ep": 1.8,
+      "mu_star": 0.13,
+      "nb3sn_predicted_tc_K": 28.605978578393114,
+      "nb3sn_relative_error_percent": 56.317125564989745,
+      "projected_average_relative_error_percent": 62.41493526953724,
+      "average_gate_status_after_case": "FAIL",
+      "per_row_gate_status_after_case": "FAIL"
+    },
+    {
+      "case_id": "phonon_only_preview_keep_current_lambda",
+      "theta_or_prefactor_proxy_K": 127,
+      "lambda_ep": 1.8,
+      "mu_star": 0.13,
+      "nb3sn_predicted_tc_K": 12.97485428434252,
+      "nb3sn_relative_error_percent": 29.099156916161086,
+      "projected_average_relative_error_percent": 59.69313840465438,
+      "average_gate_status_after_case": "FAIL",
+      "per_row_gate_status_after_case": "FAIL",
+      "impact_note": "This is the best current single-field preview: it improves Nb3Sn materially but remains above the 20 percent per-row gate and barely moves the topic average."
+    },
+    {
+      "case_id": "sibling_phonon_only_preview_keep_current_lambda",
+      "theta_or_prefactor_proxy_K": 123,
+      "lambda_ep": 1.8,
+      "mu_star": 0.13,
+      "nb3sn_predicted_tc_K": 12.566222,
+      "nb3sn_relative_error_percent": 31.332120,
+      "projected_average_relative_error_percent": 59.91643471303828,
+      "average_gate_status_after_case": "FAIL",
+      "per_row_gate_status_after_case": "FAIL",
+      "impact_note": "The sibling Nb3Sn II value improves the current row but is weaker than the Nb3Sn I preview and remains blocked."
+    },
+    {
+      "case_id": "phonon_plus_abstract_lambda_preview",
+      "theta_or_prefactor_proxy_K": 127,
+      "lambda_ep": 1.5,
+      "mu_star": 0.13,
+      "nb3sn_predicted_tc_K": 10.925842270914847,
+      "nb3sn_relative_error_percent": 40.29649032287078,
+      "projected_average_relative_error_percent": 60.81287174532534,
+      "average_gate_status_after_case": "FAIL",
+      "per_row_gate_status_after_case": "FAIL",
+      "impact_note": "Combining the captured omega_log with abstract-level lambda=1.5 worsens the single-row preview relative to keeping lambda=1.8."
+    }
+  ],
+  "decision": {
+    "allow_working_row_patch": false,
+    "allow_patch_preview_execution": false,
+    "best_current_single_field_preview": "phonon_only_preview_keep_current_lambda",
+    "why_blocked": [
+      "The best single-field preview still leaves Nb3Sn at 29.10 percent relative error, above the 20 percent per-row gate.",
+      "The projected topic average remains 59.69 percent, far above the 20 percent average gate.",
+      "The PDF is session-local only and the source has not been mirrored into the repo under an approved archive policy.",
+      "Sample choice is now weakly ranked toward Nb3Sn I, but it is not source-locked and same-family lambda compatibility remains unresolved."
+    ],
+    "next_useful_action": "Use this impact preview to prioritize row-level lambda and archive review, not to edit real_superconductor_data.json."
+  },
+  "claim_boundary": "This is a non-executing impact preview only. It does not edit the benchmark row, does not authorize a patch, and does not change the raw model gate status."
+}

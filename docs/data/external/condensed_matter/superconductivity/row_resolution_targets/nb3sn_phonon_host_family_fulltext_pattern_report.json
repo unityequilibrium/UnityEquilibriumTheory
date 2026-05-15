@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_field_host_family_fulltext_pattern_report",
+  "material": "Nb3Sn",
+  "field": "Theta_D_K_or_omega_log_K",
+  "checked_date": "2026-05-12",
+  "purpose": "Record the confirmed APS harvest full-text route that unlocked the current Nb3Sn phonon table-layer pass while keeping repo archive and patch approval separate.",
+  "target_doi": "10.1103/PhysRevB.27.1568",
+  "observed_host_family_pattern": "http://harvest.aps.org/v2/journals/articles/<doi>/fulltext",
+  "supporting_examples": [
+    {
+      "doi": "10.1103/PhysRevB.104.115301",
+      "evidence_source": "Tokyo City University research portal",
+      "reported_fulltext_url": "http://harvest.aps.org/v2/journals/articles/10.1103/PhysRevB.104.115301/fulltext"
+    },
+    {
+      "doi": "10.1103/PhysRevB.106.014518",
+      "evidence_source": "CiNii Research",
+      "reported_fulltext_url": "http://harvest.aps.org/v2/journals/articles/10.1103/PhysRevB.106.014518/fulltext"
+    },
+    {
+      "doi": "10.1103/PhysRevB.93.081301",
+      "evidence_source": "CiNii Research",
+      "reported_fulltext_url": "http://harvest.aps.org/v2/journals/articles/10.1103/PhysRevB.93.081301/fulltext"
+    }
+  ],
+  "candidate_unlock_path": "https://harvest.aps.org/v2/journals/articles/10.1103/PhysRevB.27.1568/fulltext",
+  "target_route_check_result": {
+    "status": "confirmed_reachable",
+    "http_status": 200,
+    "content_disposition": "inline; filename=PhysRevB.27.1568.pdf",
+    "session_local_pdf_path": "C:/tmp/PhysRevB.27.1568.pdf"
+  },
+  "interpretation": "The APS harvest route is no longer only a host-family inference for this DOI. It returned the target PDF in the current session and enabled Table II extraction.",
+  "current_limit": "The PDF is session-local only and has not been mirrored into the repo. The extracted value still needs sample-choice, archive, and A15 same-family review before any benchmark row patch.",
+  "repo_archive_policy_review": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_repo_archive_policy_review.json",
+  "claim_boundary": "This report certifies route reachability for the current session only. It does not approve repo mirroring or a benchmark row patch."
+}

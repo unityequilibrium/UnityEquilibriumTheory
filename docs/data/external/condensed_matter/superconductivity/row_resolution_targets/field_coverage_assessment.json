@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_field_coverage_assessment",
+  "source_role": "records which residual-row fields are actually supported by the current publication-anchor evidence",
+  "source_label": "Field coverage assessment for Vanadium, Nb3Sn, and Nb3Ge publication anchors",
+  "checked_date": "2026-05-12",
+  "materials": [
+    {
+      "material": "Vanadium (V)",
+      "publication_anchor": "10.1103/PhysRev.102.656",
+      "assessment_basis": "Secondary-host abstract-style text capture now supports Tc and Theta scope, but direct primary raw-page capture has not yet been archived.",
+      "fields": [
+        {
+          "field": "Tc_observed",
+          "coverage_status": "secondary_host_abstract_text_captured",
+          "note": "A secondary-host abstract mirror states Tc=5.03 K, which is stronger than title-only scope but still below primary raw-page evidence."
+        },
+        {
+          "field": "Theta_D_K",
+          "coverage_status": "secondary_host_abstract_text_captured",
+          "note": "A secondary-host abstract mirror states Theta=338+-5 K, which gives field-level support but still needs primary raw-page confirmation."
+        },
+        {
+          "field": "lambda_ep",
+          "coverage_status": "open_fulltext_numeric_capture_present",
+          "note": "An open full-text Eliashberg study explicitly reports lambda = 0.91 for vanadium, but compatibility with the benchmark row still needs review."
+        },
+        {
+          "field": "mu_star",
+          "coverage_status": "open_fulltext_numeric_capture_present",
+          "note": "An open full-text Eliashberg study gives explicit vanadium-specific mu_star values, but convention compatibility still needs review before benchmark-row use."
+        }
+      ]
+    },
+    {
+      "material": "Nb3Sn",
+      "publication_anchor": "10.1103/PhysRev.95.1435",
+      "assessment_basis": "APS abstract explicitly states the superconducting transition temperature near 18 K.",
+      "fields": [
+        {
+          "field": "Tc_observed",
+          "coverage_status": "abstract_scope_confirmed",
+          "note": "APS abstract explicitly reports the superconducting transition temperature of Nb3Sn at 18 K."
+        },
+        {
+          "field": "Theta_D_K_or_omega_log_K",
+          "coverage_status": "not_demonstrated_by_current_anchor",
+          "note": "The current anchor confirms discovery-stage Tc but does not demonstrate a phonon-proxy row."
+        },
+        {
+          "field": "lambda_ep",
+          "coverage_status": "primary_host_abstract_numeric_capture",
+          "note": "The ScienceDirect primary-host abstract for the chosen A15 source family explicitly reports lambda=1.5 for Nb3Sn, but this still remains below raw-page or table-level archival capture."
+        },
+        {
+          "field": "mu_star",
+          "coverage_status": "not_demonstrated_by_current_anchor",
+          "note": "The current anchor does not demonstrate a Coulomb pseudopotential row."
+        }
+      ]
+    },
+    {
+      "material": "Nb3Ge",
+      "publication_anchor": "10.1063/1.1654966",
+      "assessment_basis": "Publication record states films superconducting up to 22.3 K.",
+      "fields": [
+        {
+          "field": "Tc_observed",
+          "coverage_status": "abstract_scope_confirmed",
+          "note": "The publication record states superconductivity up to about 22.3 K, which supports Tc scope."
+        },
+        {
+          "field": "Theta_D_K_or_omega_log_K",
+          "coverage_status": "not_demonstrated_by_current_anchor",
+          "note": "The current anchor does not demonstrate a phonon-proxy row."
+        },
+        {
+          "field": "lambda_ep",
+          "coverage_status": "primary_host_abstract_numeric_capture",
+          "note": "The ScienceDirect primary-host abstract for the chosen A15 source family explicitly reports lambda=1.9 for Nb3Ge, but this still remains below raw-page or table-level archival capture."
+        },
+        {
+          "field": "mu_star",
+          "coverage_status": "not_demonstrated_by_current_anchor",
+          "note": "The current anchor does not demonstrate a Coulomb pseudopotential row."
+        }
+      ]
+    }
+  ],
+  "claim_boundary": "This assessment records field-scope support from the current publication anchors only. It does not replace row-level archival capture."
+}

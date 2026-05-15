@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_pair_numeric_execution_packet_summary",
+  "pair_label": "A15 residual blocker pair",
+  "materials": [
+    "Nb3Sn",
+    "Nb3Ge"
+  ],
+  "checked_date": "2026-05-12",
+  "purpose": "Summarize the field-specific numeric execution packets for the A15 pair so the next extraction pass can see all four row-value work items in one handoff surface.",
+  "summary": {
+    "execution_packets_total": 4,
+    "execution_packets_with_filled_numeric_values": 1,
+    "execution_packets_still_pending_numeric_capture": 3,
+    "first_row_to_push": "Nb3Sn",
+    "a15_lambda_abstract_numeric_review_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/a15_lambda_abstract_numeric_review_packet.json"
+  },
+  "material_execution_packets": [
+    {
+      "material": "Nb3Sn",
+      "phonon_execution_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_first_numeric_execution_packet.json",
+      "lambda_execution_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_first_numeric_execution_packet.json",
+      "recommended_order": [
+        "Theta_D_K_or_omega_log_K",
+        "lambda_ep"
+      ],
+      "execution_status": "phonon_execution_packet_filled_with_nb3sn_i_omega_log_127K_pending_review_lambda_still_pending_same_family_review"
+    },
+    {
+      "material": "Nb3Ge",
+      "phonon_execution_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3ge_phonon_first_numeric_execution_packet.json",
+      "lambda_execution_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3ge_lambda_first_numeric_execution_packet.json",
+      "recommended_order": [
+        "Theta_D_K_or_omega_log_K",
+        "lambda_ep"
+      ],
+      "execution_status": "phonon_and_lambda_execution_packets_present_pending_numeric_values"
+    }
+  ],
+  "claim_boundary": "This summary tracks execution-packet readiness only. It records the provisional Nb3Sn phonon capture but does not certify it as benchmark-ready and does not unblock patch review."
+}

@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_fulltext_numeric_acquisition_packet",
+  "source_role": "execution packet for the next full-text numeric extraction pass on the top-priority elemental blocker row",
+  "source_label": "Vanadium full-text numeric acquisition packet",
+  "checked_date": "2026-05-11",
+  "material": "Vanadium (V)",
+  "why_this_row_now": [
+    "Vanadium remains the top-priority residual blocker in the external queue.",
+    "The current source chain still has a citation-integrity wrinkle, so a disciplined full-text capture is required before any row can be treated as stable.",
+    "Unlike the A15 pair, the main bottleneck is not just missing numeric values but also direct confirmation of the primary publication page and row identity.",
+    "Secondary numeric hints now exist across Tc, Theta_D, lambda, and mu_star, so the next pass should upgrade evidence quality rather than continue exploratory searching."
+  ],
+  "canonical_sources": [
+    {
+      "field": "Tc_observed",
+      "source_title_or_doi": "10.1103/PhysRev.102.656",
+      "target_capture": "direct page confirmation, row identity, and raw-page archive"
+    },
+    {
+      "field": "Theta_D_K",
+      "source_title_or_doi": "10.1017/CBO9781139171090.060",
+      "target_capture": "explicit Debye-temperature-style value if the primary publication does not expose one clearly"
+    },
+    {
+      "field": "lambda_ep",
+      "source_title_or_doi": "10.1103/PhysRevB.101.094305",
+      "target_capture": "vanadium-specific electron-phonon coupling value or explicit coupling context"
+    },
+    {
+      "field": "mu_star",
+      "source_title_or_doi": "10.1007/s10948-017-4295-y",
+      "target_capture": "row-specific value if available, otherwise explicit convention scope anchored to vanadium-specific discussion"
+    }
+  ],
+  "secondary_numeric_hints": {
+    "tc_text_capture_K": 5.03,
+    "theta_text_capture_K": 338.0,
+    "theta_text_capture_uncertainty_K": 5.0,
+    "lambda_hint_dimensionless": 0.91,
+    "mu_star_hint_dimensionless": 0.173,
+    "mu_star_tunneling_hint_dimensionless": 0.15,
+    "mu_star_tunneling_hint_uncertainty": 0.03,
+    "status": "search_prior_only_not_row_usable"
+  },
+  "citation_integrity_gate": {
+    "issue": "MIT OCW citation text and APS bibliographic listing disagree on the page range for the historical Vanadium paper.",
+    "required_resolution": "Confirm the actual page span directly from the primary publication before using any row extracted from that paper."
+  },
+  "required_deliverables": [
+    {
+      "field": "Tc_observed",
+      "required_fields": [
+        "archived_raw_path",
+        "page_or_section_locator",
+        "table_or_figure_identifier",
+        "row_locator",
+        "quoted_source_text",
+        "normalized_value_K"
+      ]
+    },
+    {
+      "field": "Theta_D_K",
+      "required_fields": [
+        "archived_raw_path",
+        "page_or_section_locator",
+        "table_or_figure_identifier",
+        "row_locator",
+        "quoted_source_text",
+        "normalized_value_K",
+        "proxy_convention_note"
+      ]
+    },
+    {
+      "field": "lambda_ep",
+      "required_fields": [
+        "archived_raw_path",
+        "page_or_section_locator",
+        "table_or_figure_identifier",
+        "row_locator",
+        "quoted_source_text",
+        "normalized_value_dimensionless",
+        "proxy_compatibility_note"
+      ]
+    },
+    {
+      "field": "mu_star",
+      "required_fields": [
+        "row_specific_value_or_family_convention_note",
+        "source_title_or_doi",
+        "quoted_source_text",
+        "unit_basis"
+      ]
+    }
+  ],
+  "stopping_rule": "Do not treat the Vanadium row as stable unless the citation-integrity gate is cleared, the primary-publication page is directly confirmed for Tc and Theta, and the coupling fields are upgraded beyond secondary-hint status.",
+  "claim_boundary": "This packet organizes the next Vanadium full-text extraction pass only. It does not certify any numeric field and does not approve a topic-local edit."
+}

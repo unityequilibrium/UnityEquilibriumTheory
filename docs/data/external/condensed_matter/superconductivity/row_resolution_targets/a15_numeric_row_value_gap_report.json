@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_numeric_row_value_gap_report",
+  "source_role": "records which A15 fields still lack row-specific numeric values after the current abstract and record pass",
+  "source_label": "A15 numeric row-value gap report",
+  "checked_date": "2026-05-08",
+  "materials": [
+    {
+      "material": "Nb3Sn",
+      "fields": [
+        {
+          "field": "Tc_observed",
+          "numeric_row_value_status": "text_value_present",
+          "note": "A normalized Tc value is available from the primary-publication abstract layer."
+        },
+        {
+          "field": "Theta_D_K_or_omega_log_K",
+          "numeric_row_value_status": "missing_row_specific_value",
+          "note": "Only proxy-convention text is currently available; no row-specific phonon value has yet been archived."
+        },
+        {
+          "field": "lambda_ep",
+          "numeric_row_value_status": "missing_row_specific_value",
+          "note": "Only field-support text is currently available; no row-specific lambda value has yet been archived."
+        },
+        {
+          "field": "mu_star",
+          "numeric_row_value_status": "missing_row_specific_value",
+          "note": "No row-specific source has yet been pinned."
+        }
+      ]
+    },
+    {
+      "material": "Nb3Ge",
+      "fields": [
+        {
+          "field": "Tc_observed",
+          "numeric_row_value_status": "text_value_present",
+          "note": "A normalized Tc value is available from the primary-publication record layer."
+        },
+        {
+          "field": "Theta_D_K_or_omega_log_K",
+          "numeric_row_value_status": "missing_row_specific_value",
+          "note": "Only proxy-convention text is currently available; no row-specific phonon value has yet been archived."
+        },
+        {
+          "field": "lambda_ep",
+          "numeric_row_value_status": "missing_row_specific_value",
+          "note": "Only field-support text is currently available; no row-specific lambda value has yet been archived."
+        },
+        {
+          "field": "mu_star",
+          "numeric_row_value_status": "missing_row_specific_value",
+          "note": "No row-specific source has yet been pinned."
+        }
+      ]
+    }
+  ],
+  "claim_boundary": "This report records the boundary between text-layer support and row-specific numeric evidence. It does not certify any unresolved field."
+}

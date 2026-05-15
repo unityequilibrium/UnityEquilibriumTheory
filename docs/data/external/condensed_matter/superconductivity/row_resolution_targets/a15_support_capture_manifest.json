@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_text_capture_manifest",
+  "source_role": "indexes abstract-level support captures for A15 phonon proxy and lambda fields",
+  "source_label": "A15 phonon and lambda support capture manifest",
+  "checked_date": "2026-05-08",
+  "records": [
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/phonon_text_capture_record.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3ge/phonon_text_capture_record.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/lambda_text_capture_record.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3ge/lambda_text_capture_record.json"
+  ],
+  "claim_boundary": "This manifest indexes abstract-level support captures only. It does not certify row-specific values or raw-page archival completeness."
+}

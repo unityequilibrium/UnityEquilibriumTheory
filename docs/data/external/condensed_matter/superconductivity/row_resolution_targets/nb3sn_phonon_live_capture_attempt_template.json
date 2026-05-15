@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_field_live_capture_attempt_template",
+  "material": "Nb3Sn",
+  "field": "Theta_D_K_or_omega_log_K",
+  "checked_date": "2026-05-12",
+  "purpose": "Provide one operator-facing template for the first live Nb3Sn phonon numeric capture attempt so the full-text pass can be recorded without reconstructing the workflow from multiple files.",
+  "source_anchor": {
+    "article_title": "Heat-capacity analysis of a large number of A15-type compounds",
+    "source_title_or_doi": "10.1103/PhysRevB.27.1568",
+    "journal_citation": "Phys. Rev. B 27, 1568",
+    "host_layer": "PRB full article table layer"
+  },
+  "linked_workflow_artifacts": {
+    "execution_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_first_numeric_execution_packet.json",
+    "critical_blocker_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_critical_blocker_packet.json",
+    "acceptance_gate": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_capture_acceptance_gate.json",
+    "numeric_capture_record": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/phonon_numeric_capture_record.json"
+  },
+  "attempt_fields": {
+    "archived_raw_path": "C:/tmp/PhysRevB.27.1568.pdf",
+    "page_or_section_locator": "PDF page 6; printed page 1573",
+    "table_or_figure_identifier": "Table II",
+    "row_locator": "Nb3Sn I row; sibling Nb3Sn II row also present",
+    "quoted_source_text": "Table II: Nb3Sn I Nb3Sn II ... 127 123",
+    "reported_proxy_type": "omega_log_K",
+    "normalized_value_K": 127,
+    "unit_basis": "K",
+    "proxy_convention_note": "Table II reports generalized phonon-spectrum moments; the captured value is the omega_log column, not a Debye-temperature substitute. Nb3Sn II=123 K is retained as a sibling sample value."
+  },
+  "ready_if_filled": [
+    "archived_raw_path",
+    "page_or_section_locator",
+    "table_or_figure_identifier",
+    "row_locator",
+    "quoted_source_text",
+    "reported_proxy_type",
+    "normalized_value_K",
+    "proxy_convention_note"
+  ],
+  "rejection_shortcuts": [
+    "Leave the attempt unresolved if only abstract text is available.",
+    "Leave the attempt unresolved if the value cannot be tied to a row-specific line, table, or figure.",
+    "Leave the attempt unresolved if the proxy type cannot be named explicitly."
+  ],
+  "current_status": "filled_from_aps_harvest_pdf_pending_acceptance_review",
+  "claim_boundary": "This template is an operator-facing attempt sheet only. Filling it does not certify a value unless the acceptance gate is also satisfied."
+}

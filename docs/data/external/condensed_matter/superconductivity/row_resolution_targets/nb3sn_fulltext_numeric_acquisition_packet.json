@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_fulltext_numeric_acquisition_packet",
+  "source_role": "execution packet for the next full-text numeric extraction pass on the strongest A15 row candidate",
+  "source_label": "Nb3Sn full-text numeric acquisition packet",
+  "checked_date": "2026-05-10",
+  "material": "Nb3Sn",
+  "why_this_row_now": [
+    "Primary-publication Tc text capture already exists.",
+    "Phonon-proxy convention text already exists.",
+    "Lambda field-support text already exists.",
+    "Secondary numeric hints exist for lambda and Debye-scale temperature, making this the best current A15 shortcut candidate."
+  ],
+  "canonical_sources": [
+    {
+      "field": "Tc_observed",
+      "source_title_or_doi": "10.1103/PhysRev.95.1435",
+      "target_capture": "row identity and raw-page archive"
+    },
+    {
+      "field": "Theta_D_K_or_omega_log_K",
+      "source_title_or_doi": "10.1103/PhysRevB.27.1568",
+      "target_capture": "row-specific phonon proxy value with explicit proxy convention"
+    },
+    {
+      "field": "lambda_ep",
+      "source_title_or_doi": "10.1016/0378-4363(84)90167-0",
+      "target_capture": "row-specific electron-phonon coupling value"
+    }
+  ],
+  "secondary_hints": [
+    {
+      "field": "lambda_ep",
+      "source_title_or_doi": "10.1007/s10948-009-0483-8",
+      "hint_value": 1.46,
+      "unit_basis": "dimensionless",
+      "allowed_use": "search prioritization only"
+    },
+    {
+      "field": "Theta_D_K_or_omega_log_K",
+      "source_title_or_doi": "10.1007/s10948-009-0483-8",
+      "hint_value": 234.0,
+      "unit_basis": "K",
+      "allowed_use": "search prioritization only"
+    },
+    {
+      "field": "mu_star",
+      "source_title_or_doi": "10.1039/D3CP04614A",
+      "hint_range": [
+        0.10,
+        0.15
+      ],
+      "unit_basis": "dimensionless",
+      "allowed_use": "family-convention reference only"
+    }
+  ],
+  "required_deliverables": [
+    {
+      "field": "Tc_observed",
+      "required_fields": [
+        "archived_raw_path",
+        "page_or_section_locator",
+        "table_or_figure_identifier",
+        "row_locator",
+        "quoted_source_text",
+        "normalized_value_K"
+      ]
+    },
+    {
+      "field": "Theta_D_K_or_omega_log_K",
+      "required_fields": [
+        "archived_raw_path",
+        "page_or_section_locator",
+        "table_or_figure_identifier",
+        "row_locator",
+        "reported_proxy_type",
+        "quoted_source_text",
+        "normalized_value_K"
+      ]
+    },
+    {
+      "field": "lambda_ep",
+      "required_fields": [
+        "archived_raw_path",
+        "page_or_section_locator",
+        "table_or_figure_identifier",
+        "row_locator",
+        "quoted_source_text",
+        "normalized_value_dimensionless"
+      ]
+    },
+    {
+      "field": "mu_star",
+      "required_fields": [
+        "row_specific_value_or_family_convention_note",
+        "source_title_or_doi",
+        "quoted_source_text",
+        "unit_basis"
+      ]
+    }
+  ],
+  "stopping_rule": "Do not promote any secondary hint into the benchmark row. Stop the pass if only secondary or tertiary text is available and record the missing full-text row capture explicitly.",
+  "claim_boundary": "This packet organizes the next full-text extraction pass only. It does not certify any numeric field and does not approve a topic-local edit."
+}

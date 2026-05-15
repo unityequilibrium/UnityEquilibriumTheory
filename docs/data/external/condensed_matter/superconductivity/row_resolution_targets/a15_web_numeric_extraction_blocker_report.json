@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_web_numeric_extraction_blocker_report",
+  "source_role": "records that the current web-accessible abstract and record layer does not yet expose row-specific A15 numeric values",
+  "source_label": "A15 web-accessible numeric extraction blocker report",
+  "checked_date": "2026-05-08",
+  "materials": [
+    {
+      "material": "Nb3Sn",
+      "fields": [
+        {
+          "field": "Tc_observed",
+          "web_access_status": "text_value_present",
+          "note": "Primary-publication abstract exposes a usable Tc text statement at 18 K."
+        },
+        {
+          "field": "Theta_D_K_or_omega_log_K",
+          "web_access_status": "convention_text_only",
+          "note": "The accessible abstract layer confirms that Debye temperature is a poor proxy for omega_log, but no row-specific numeric value was exposed."
+        },
+        {
+          "field": "lambda_ep",
+          "web_access_status": "field_support_text_only",
+          "note": "The accessible abstract layer confirms that lambda is treated for Nb3Sn, but no row-specific numeric value was exposed."
+        },
+        {
+          "field": "mu_star",
+          "web_access_status": "no_explicit_numeric_support_found",
+          "note": "No row-specific or abstract-level numeric mu_star statement was found in the current web-accessible pass."
+        }
+      ]
+    },
+    {
+      "material": "Nb3Ge",
+      "fields": [
+        {
+          "field": "Tc_observed",
+          "web_access_status": "text_value_present",
+          "note": "Primary-publication record scope exposes a usable Tc text statement at 22.3 K."
+        },
+        {
+          "field": "Theta_D_K_or_omega_log_K",
+          "web_access_status": "convention_text_only",
+          "note": "The accessible abstract layer confirms that Debye temperature is a poor proxy for omega_log, but no row-specific numeric value was exposed."
+        },
+        {
+          "field": "lambda_ep",
+          "web_access_status": "field_support_text_only",
+          "note": "The accessible abstract layer confirms that lambda is treated for Nb3Ge, but no row-specific numeric value was exposed."
+        },
+        {
+          "field": "mu_star",
+          "web_access_status": "no_explicit_numeric_support_found",
+          "note": "No row-specific or abstract-level numeric mu_star statement was found in the current web-accessible pass."
+        }
+      ]
+    }
+  ],
+  "sources_checked": [
+    {
+      "source": "10.1103/PhysRev.95.1435",
+      "access_layer": "APS abstract",
+      "use": "Nb3Sn Tc text capture"
+    },
+    {
+      "source": "10.1063/1.1654966",
+      "access_layer": "OSTI and publication-record summary",
+      "use": "Nb3Ge Tc text capture"
+    },
+    {
+      "source": "10.1103/PhysRevB.27.1568",
+      "access_layer": "APS abstract and OSTI summary",
+      "use": "A15 phonon-proxy convention check"
+    },
+    {
+      "source": "10.1016/0378-4363(84)90167-0",
+      "access_layer": "ScienceDirect abstract",
+      "use": "A15 lambda field-support check"
+    }
+  ],
+  "next_requirement": "A row-specific numeric extraction pass now requires full-text, full-table, or mirrored-raw access beyond the currently accessible abstract and record layer.",
+  "claim_boundary": "This report does not certify any unresolved numeric field. It records that the current web-accessible layer is insufficient for row-specific A15 numeric extraction."
+}

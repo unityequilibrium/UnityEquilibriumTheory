@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_adjacent_phonon_context_report",
+  "checked_date": "2026-05-12",
+  "scope": "Adjacent phonon-context literature that may help the next A15 live capture pass without being promoted to canonical row evidence",
+  "materials": [
+    {
+      "material": "Nb3Sn",
+      "adjacent_sources": [
+        {
+          "title_or_doi": "10.1103/PhysRevB.19.4023",
+          "article_title": "Phonon dispersion in Nb3Sn",
+          "role": "adjacent phonon-context source",
+          "note": "This source appears useful for understanding specific softened phonon modes in Nb3Sn, but it is not the canonical table-layer source currently chosen for the benchmark-row phonon capture."
+        }
+      ]
+    },
+    {
+      "material": "Nb3Ge",
+      "adjacent_sources": [
+        {
+          "title_or_doi": "IBM Research: Large anisotropic vibrational correlations in A15 Nb3Ge",
+          "article_title": "Large anisotropic vibrational correlations in A15 Nb3Ge",
+          "role": "adjacent phonon-context source",
+          "note": "This source appears useful for qualitative vibrational context in Nb3Ge, but it is not the canonical table-layer source currently chosen for the benchmark-row phonon capture."
+        }
+      ]
+    }
+  ],
+  "practical_result": "Adjacent phonon-context literature is now pinned for both A15 rows, which may help orient a future full-text pass if the canonical source remains difficult to capture, but these sources still do not replace the chosen canonical row-capture path.",
+  "claim_boundary": "This report holds search-guidance context only. It does not certify any numeric value and does not unblock patch review."
+}

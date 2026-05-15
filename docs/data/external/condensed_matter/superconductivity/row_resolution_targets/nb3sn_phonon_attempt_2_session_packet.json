@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_field_followup_session_packet",
+  "material": "Nb3Sn",
+  "field": "Theta_D_K_or_omega_log_K",
+  "checked_date": "2026-05-12",
+  "purpose": "Turn the second Nb3Sn phonon attempt into a single follow-up session packet so the next pass can execute against the deeper full-text target without reconstructing strategy from multiple files.",
+  "attempt_2_strategy_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_attempt_2_strategy_packet.json",
+  "session_dependencies": {
+    "live_capture_bundle": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_live_capture_bundle.json",
+    "session_checklist": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_live_capture_session_checklist.json",
+    "session_log": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_live_capture_session_log.json",
+    "acceptance_gate": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_capture_acceptance_gate.json",
+    "canonical_pdf_access_hint": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_canonical_pdf_access_hint.json",
+    "attempt_2_access_candidate_report": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_attempt_2_access_candidate_report.json",
+    "attempt_2_checklist": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_attempt_2_session_checklist.json"
+  },
+  "attempt_2_mission": {
+    "do_not_repeat": [
+      "abstract-only APS pass",
+      "OSTI-summary confirmation only",
+      "adjacent-context-only literature pass"
+    ],
+    "preferred_first_step": "Try the canonical APS PDF hint first, including the likely direct host pattern https://journals.aps.org/prb/pdf/10.1103/PhysRevB.27.1568, before widening to mirrors.",
+    "must_reach": [
+      "full-text table layer",
+      "mirrored PDF layer",
+      "or equivalent archival layer with row-specific Nb3Sn phonon value"
+    ],
+    "target_outcome": "One row-specific phonon numeric value for Nb3Sn with locator, raw path, quoted text, and explicit proxy type."
+  },
+  "suggested_log_entry_template": {
+    "attempt_id": "nb3sn-phonon-attempt-002",
+    "attempt_date": null,
+    "source_path_or_url": null,
+    "candidate_table_or_section": null,
+    "nb3sn_row_specific": null,
+    "reported_proxy_type": null,
+    "normalized_value_K": null,
+    "acceptance_gate_result": "not_checked",
+    "failure_reason_if_any": null,
+    "notes": "This attempt must differ from attempt-001 by reaching beyond summary-layer confirmation and should record whether the canonical APS PDF hint was reachable."
+  },
+  "claim_boundary": "This packet is an execution aid for the second attempt only. It does not certify a value and does not unblock patch review by itself."
+}

@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "source_class": "allen_dynes_source_labeled_input_table",
+  "checked_date": "2026-05-15",
+  "purpose": "Smoke-test input table for the separate Allen-Dynes verifier branch. This table is intentionally separate from the raw McMillan working-copy table.",
+  "design_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/allen_dynes_verifier_branch_design_packet_20260515.json",
+  "rows": [
+    {
+      "material": "Nb3Sn",
+      "sample_label": "Nb3Sn I",
+      "tc_observed_K": 18.3,
+      "tc_observed_basis": "current working row",
+      "table_tc_K": 17.97,
+      "omega_log_K": 127,
+      "omega2_sqrt_K": 177,
+      "lambda_ep": 1.78,
+      "mu_star": 0.13,
+      "source_record_paths": [
+        "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/phonon_numeric_capture_record.json",
+        "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/lambda_numeric_capture_record.json"
+      ],
+      "archive_policy_state": "session_local_pdf_non_mirrored_citation_accepted_for_allen_dynes_branch",
+      "input_label": "source_locked_same_source_family",
+      "strict_gate_eligible": false,
+      "strict_gate_release_condition": {
+        "policy_request_path": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_physrevb_27_1568_unified_non_mirrored_policy_request_20260515.json",
+        "decision_field": "policy_decision_request.decision_state",
+        "accepted_decision_values": [
+          "accepted_for_this_source_package_only",
+          "accepted_for_topic_handoff_and_allen_dynes_strict_gate"
+        ],
+        "current_decision_state": "accepted_for_topic_handoff_and_allen_dynes_strict_gate"
+      },
+      "strict_gate_exclusion_reason": "Only applies if the policy request is no longer accepted; current decision releases this row for the Allen-Dynes strict branch gate.",
+      "notes": "Primary smoke-test row because Nb3Sn I has same-source Table II omega moments and Table V lambda."
+    },
+    {
+      "material": "Nb3Sn",
+      "sample_label": "Nb3Sn II",
+      "tc_observed_K": 18.3,
+      "tc_observed_basis": "current working row sibling comparison",
+      "table_tc_K": 17.93,
+      "omega_log_K": 123,
+      "omega2_sqrt_K": 175,
+      "lambda_ep": 1.82,
+      "mu_star": 0.13,
+      "source_record_paths": [
+        "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/phonon_numeric_capture_record.json",
+        "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/lambda_numeric_capture_record.json"
+      ],
+      "archive_policy_state": "session_local_pdf_non_mirrored_citation_accepted_for_allen_dynes_branch",
+      "input_label": "source_locked_same_source_family",
+      "strict_gate_eligible": false,
+      "strict_gate_release_condition": {
+        "policy_request_path": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_physrevb_27_1568_unified_non_mirrored_policy_request_20260515.json",
+        "decision_field": "policy_decision_request.decision_state",
+        "accepted_decision_values": [
+          "accepted_for_this_source_package_only",
+          "accepted_for_topic_handoff_and_allen_dynes_strict_gate"
+        ],
+        "current_decision_state": "accepted_for_topic_handoff_and_allen_dynes_strict_gate"
+      },
+      "strict_gate_exclusion_reason": "Only applies if the policy request is no longer accepted; current decision releases this sibling row for the Allen-Dynes strict branch gate.",
+      "notes": "Sibling comparison row from the same PhysRevB.27.1568 tables."
+    }
+  ],
+  "claim_boundary": "This input table supports only the separate Allen-Dynes smoke-test verifier. It does not edit or replace the raw McMillan benchmark data."
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_field_followup_access_candidate_report",
+  "material": "Nb3Sn",
+  "field": "Theta_D_K_or_omega_log_K",
+  "checked_date": "2026-05-12",
+  "purpose": "Summarize the best currently observed access candidates for Nb3Sn phonon attempt-002 so the next live pass can start from the narrowest plausible full-text path instead of restarting discovery.",
+  "canonical_source": {
+    "article_title": "Heat-capacity analysis of a large number of A15-type compounds",
+    "source_title_or_doi": "10.1103/PhysRevB.27.1568",
+    "journal": "Physical Review B",
+    "volume_issue": "27(3)",
+    "pages": "1568-1585"
+  },
+  "access_candidates": [
+    {
+      "candidate_type": "canonical_host_result_surface",
+      "host": "APS",
+      "url": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.27.1568",
+      "status": "reachable",
+      "evidence_note": "The APS result surface explicitly shows a PDF entry and confirms that phonon-spectrum moments including omega_log are tabulated.",
+      "attempt_2_value": "Best first-hop canonical host path."
+    },
+    {
+      "candidate_type": "likely_direct_canonical_pdf",
+      "host": "APS",
+      "url": "https://journals.aps.org/prb/pdf/10.1103/PhysRevB.27.1568",
+      "status": "pattern_inferred_from_host_surface",
+      "evidence_note": "The current APS result surface shows PDF for this DOI, and APS PRB article surfaces commonly expose direct PDF links under this stable URL pattern.",
+      "attempt_2_value": "Best direct full-text guess to try before broader mirrors."
+    },
+    {
+      "candidate_type": "metadata_reinforcement_record",
+      "host": "OSTI",
+      "url": "https://www.osti.gov/biblio/6265120",
+      "status": "reachable",
+      "evidence_note": "The OSTI record reinforces the canonical DOI and abstract-level statement that phonon moments are included and tabulated, but it does not provide a row-specific Nb3Sn value.",
+      "attempt_2_value": "Useful metadata cross-check only, not a successful table-layer path."
+    },
+    {
+      "candidate_type": "page_range_reinforcement",
+      "host": "third-party citation trail",
+      "url": "https://www.nature.com/articles/s41598-021-82325-x",
+      "status": "reachable",
+      "evidence_note": "A downstream citation trail explicitly cites the article as Phys. Rev. B 27, 1568-1585 (1983).",
+      "attempt_2_value": "Useful page-span reinforcement if a mirrored scan appears."
+    },
+    {
+      "candidate_type": "mirror_scan_result",
+      "host": "general web search layer",
+      "url": null,
+      "status": "no_trusted_fulltext_mirror_confirmed_yet",
+      "evidence_note": "The current web pass strengthened the canonical APS and OSTI access path, but did not confirm a separate trusted mirror that already exposes the table layer for this exact DOI.",
+      "attempt_2_value": "Keep the attempt focused on canonical APS-PDF first rather than widening immediately to weak mirrors."
+    }
+  ],
+  "recommended_attempt_2_order": [
+    "Try the APS result-surface PDF path first.",
+    "If the direct APS PDF path does not become reachable in practice, search for a mirrored or archived copy that preserves the same DOI and page span 1568-1585.",
+    "Use OSTI and the page-range reinforcement only to verify identity, not as substitutes for table-layer capture."
+  ],
+  "current_limit": "This report narrows the access path for attempt-002 and reinforces the page span 1568-1585, but no row-specific Nb3Sn phonon numeric value has yet been captured from any of these candidates and no separate trusted full-text mirror has been confirmed.",
+  "claim_boundary": "This file records access candidates and ordering only. It does not certify any numeric value and does not unblock patch review."
+}

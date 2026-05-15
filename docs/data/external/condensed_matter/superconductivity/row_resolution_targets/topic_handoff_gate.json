@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_to_topic_handoff_gate",
+  "source_role": "gate for handing archived row evidence back into topic-local compatibility review",
+  "source_label": "Superconductivity row-resolution topic handoff gate",
+  "checked_date": "2026-05-12",
+  "summary": {
+    "materials_total": 3,
+    "materials_ready_for_topic_handoff": 0,
+    "materials_blocked_by_missing_archive_or_locator": 3
+  },
+  "materials": [
+    {
+      "material": "Vanadium (V)",
+      "required_handoff_checks": [
+        "archived_raw_path present for each required field, or an accepted non-mirrored citation/transcription policy record for fields where mirroring is not approved",
+        "row locator present for each required field",
+        "unit basis present for each required field",
+        "source requirement class satisfied for each field",
+        "Tc and phonon proxy can be traced to one compatible source family",
+        "secondary numeric hints must not be the strongest evidence layer for lambda_ep or mu_star at handoff time",
+        "compatibility review must not report unresolved conflicts between the working row and the external lambda or mu_star captures",
+        "patch block decision must no longer report the older Vanadium preview as blocked"
+        ,
+        "primary capture requirement packet must be satisfied for bibliographic identity, Tc, and Theta/proxy context"
+      ],
+      "handoff_status": "blocked_pending_archive",
+      "ready_for_topic_review_packet": false
+    },
+    {
+      "material": "Nb3Sn",
+      "required_handoff_checks": [
+        "archived_raw_path present for each required field, or an accepted non-mirrored citation/transcription policy record for fields where mirroring is not approved",
+        "row locator present for each required field",
+        "unit basis present for each required field",
+        "source requirement class satisfied for each field",
+        "phonon proxy convention identified before lambda_ep review",
+        "Nb3Sn phonon non-mirrored citation criteria must have reviewer_policy_decision accepted if the APS PDF remains session-local",
+        "abstract-level lambda numerics alone must not be the strongest evidence layer at handoff time",
+        "A15 patch review block decision must no longer report the row as blocked for provisional phonon status or missing row-usable lambda support",
+        "Nb3Sn primary numeric capture requirement packet must be satisfied for Tc, phonon proxy, and lambda before topic review"
+      ],
+      "handoff_status": "blocked_pending_archive",
+      "ready_for_topic_review_packet": false
+    },
+    {
+      "material": "Nb3Ge",
+      "required_handoff_checks": [
+        "archived_raw_path present for each required field",
+        "row locator present for each required field",
+        "unit basis present for each required field",
+        "source requirement class satisfied for each field",
+        "phonon proxy convention identified before lambda_ep review",
+        "abstract-level lambda numerics alone must not be the strongest evidence layer at handoff time",
+        "A15 patch review block decision must no longer report the row as blocked for missing phonon or lambda numerics",
+        "Nb3Ge primary numeric capture requirement packet must be satisfied for Tc, phonon proxy, and lambda before topic review"
+      ],
+      "handoff_status": "blocked_pending_archive",
+      "ready_for_topic_review_packet": false
+    }
+  ],
+  "claim_boundary": "This handoff gate controls when external archive work can enter topic-local review. It does not approve a patch by itself."
+}

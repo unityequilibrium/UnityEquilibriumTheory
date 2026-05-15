@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_remote_a15_fulltext_capture_blocker_report",
+  "checked_date": "2026-05-12",
+  "scope": "A15 remote full-text and table-layer capture readiness",
+  "host_findings": [
+    {
+      "source_title_or_doi": "10.1103/PhysRevB.27.1568",
+      "host": "APS Phys. Rev. B",
+      "abstract_layer_status": "confirmed_via_search_result",
+      "deeper_capture_status": "table_value_not_captured",
+      "evidence_note": "Search-layer results confirm that omega_log-style phonon moments are included and tabulated, but no row-specific table value has yet been captured into the repo."
+    },
+    {
+      "source_title_or_doi": "10.1016/0378-4363(84)90167-0",
+      "host": "ScienceDirect",
+      "abstract_layer_status": "confirmed_via_search_result",
+      "deeper_capture_status": "host_fetch_blocked_for_full_open",
+      "evidence_note": "Search-layer results confirm that Nb3Sn and Nb3Ge calculations include alpha^2F(omega) and lambda, but the deeper host fetch path did not yield a table-level capture in this environment."
+    }
+  ],
+  "practical_result": "Remote source discovery is now good enough to confirm the correct A15 source family, but it is still not enough to complete a table-level numeric capture inside the current workflow.",
+  "claim_boundary": "This report records a remote full-text capture blocker only. It does not certify any numeric value and does not unblock patch review."
+}

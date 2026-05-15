@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_numeric_capture_record",
+  "source_role": "targeted numeric capture record for the Nb3Sn phonon-proxy field",
+  "material": "Nb3Sn",
+  "field": "Theta_D_K_or_omega_log_K",
+  "article_title": "Heat-capacity analysis of a large number of A15-type compounds",
+  "source_title_or_doi": "10.1103/PhysRevB.27.1568",
+  "journal_citation": "Phys. Rev. B 27, 1568",
+  "publication_date": "1983-02-01",
+  "capture_layer": "APS harvest PDF table extraction",
+  "page_or_section_locator": "PDF page 6; printed page 1573",
+  "table_or_figure_identifier": "Table II",
+  "row_locator": "Nb3Sn I row; sibling Nb3Sn II row also present",
+  "quoted_source_text": "Table II: Nb3Sn I Nb3Sn II ... 127 123",
+  "reported_proxy_type": "omega_log_K",
+  "normalized_value_K": 127,
+  "additional_same_row_moments": {
+    "omega1_K": 157,
+    "omega2_sqrt_K": 177,
+    "note": "Same Table II row values used only for Allen-Dynes harness preview; the primary captured proxy remains omega_log_K=127."
+  },
+  "sibling_or_alternative_values": [
+    {
+      "row_locator": "Nb3Sn II row",
+      "reported_proxy_type": "omega_log_K",
+      "normalized_value_K": 123,
+      "additional_same_row_moments": {
+        "omega1_K": 153,
+        "omega2_sqrt_K": 175
+      },
+      "note": "Same table reports a second Nb3Sn sample. Kept as an explicit sibling value rather than silently averaging."
+    }
+  ],
+  "unit_basis": "K",
+  "archived_raw_path": "C:/tmp/PhysRevB.27.1568.pdf",
+  "archive_note": "Session-local APS harvest PDF path only; repo-level mirroring remains pending rights/archive decision.",
+  "repo_archive_policy_review": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_repo_archive_policy_review.json",
+  "allen_dynes_same_source_harness_preview": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_allen_dynes_same_source_harness_preview_20260515.json",
+  "capture_status": "numeric_value_captured_from_aps_harvest_pdf_pending_repo_archive_and_harness_review",
+  "transcription_note": "APS harvest PDF extraction reached Table II. Nb3Sn I is captured as the primary row-specific omega_log value for the current benchmark review path; omega1 and omega2 moments are now recorded for Allen-Dynes harness preview only. Nb3Sn II is preserved as a sibling sample value.",
+  "checked_date": "2026-05-15",
+  "claim_boundary": "This record captures a row-specific table value from the APS harvest PDF. It still does not approve a benchmark row patch until repo archive policy, sample choice, and A15 same-family review are completed."
+}

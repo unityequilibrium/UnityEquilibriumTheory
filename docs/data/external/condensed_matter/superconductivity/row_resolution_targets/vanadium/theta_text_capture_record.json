@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_text_capture_record",
+  "source_role": "secondary-host Debye-temperature text capture for the Vanadium residual row",
+  "material": "Vanadium (V)",
+  "field": "Theta_D_K",
+  "source_title_or_doi": "10.1103/PhysRev.102.656",
+  "capture_layer": "ResearchGate abstract mirror snippet",
+  "page_or_section_locator": "Abstract snippet",
+  "row_locator": "Abstract normal-state fit statement",
+  "quoted_source_text": "the normal state atomic heat could be represented by Cn=gammaT+(12/5)pi^4R(T/Theta)^3 ... with Theta=338+-5 K",
+  "normalized_value_K": 338.0,
+  "unit_basis": "K",
+  "archived_raw_path": null,
+  "capture_status": "secondary_host_text_captured_pending_primary_raw_archive",
+  "transcription_note": "This record captures the Debye-temperature statement from a secondary-host abstract mirror. A primary raw page or mirrored PDF path is still required before archive-complete handoff.",
+  "checked_date": "2026-05-11",
+  "claim_boundary": "This text capture is evidence intake only. It does not approve topic-local row edits."
+}

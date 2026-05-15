@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_secondary_numeric_hint_record",
+  "source_role": "secondary numeric hint package for the Vanadium Coulomb pseudopotential field",
+  "material": "Vanadium (V)",
+  "field": "mu_star",
+  "source_title_or_doi": "10.1007/s10948-017-4295-y",
+  "capture_layer": "Springer abstract snippet",
+  "hint_values": {
+    "eliashberg_correspondence_mu_star": 0.173,
+    "tunneling_suggested_mu_star_center": 0.15,
+    "tunneling_suggested_mu_star_uncertainty": 0.03
+  },
+  "unit_basis": "dimensionless",
+  "hint_status": "secondary_numeric_hint_not_row_usable",
+  "transcription_note": "This record narrows the plausible mu_star range for vanadium but still does not count as a row-specific benchmark input or a primary-source replacement.",
+  "checked_date": "2026-05-11",
+  "claim_boundary": "This hint record is for search prioritization and convention control only. It does not approve topic-local row edits."
+}

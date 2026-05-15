@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_lambda_attempt_3_alternate_source_scan",
+  "material": "Nb3Sn",
+  "field": "lambda_ep",
+  "checked_date": "2026-05-13",
+  "purpose": "Record the third Nb3Sn lambda acquisition attempt, focused on alternate open-access sources after ScienceDirect and mirror routes failed to expose row-level lambda.",
+  "search_queries": [
+    "\"Nb3Sn\" \"electron-phonon\" \"lambda\" \"tunneling\"",
+    "\"Nb3Sn\" \"lambda\" \"Eliashberg function\"",
+    "\"Nb3Sn\" \"alpha2F\" \"lambda\"",
+    "\"Nb3Sn\" \"electron phonon coupling\" \"1.8\""
+  ],
+  "candidate_sources_reviewed": [
+    {
+      "source_type": "open_access_review_or_model_article",
+      "title": "GLAG theory for superconducting property variations with A15 composition in Nb3Sn wires",
+      "url": "https://www.nature.com/articles/s41598-017-01292-4",
+      "doi": "10.1038/s41598-017-01292-4",
+      "candidate_value_seen": {
+        "lambda_ep": 1.8,
+        "source_phrase_summary": "Experiments give lambda_ep approximately 1.8 for Nb3Sn."
+      },
+      "acceptance_result": "candidate_support_only_not_capture_record_fill",
+      "reason": "The value is useful because it matches the current working-row lambda, but it is reported as a general experimental value in a modeling/review context and is not tied to the Nb3Sn I Table II omega_log sample, a table locator, or alpha2F row-level presentation."
+    },
+    {
+      "source_type": "open_access_table_snippet_but_access_blocked",
+      "title": "Quantifying Nonadiabaticity in Major Families of Superconductors",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9824585/",
+      "candidate_value_seen": {
+        "lambda_ep": 1.8,
+        "source_layer": "search-result table snippet"
+      },
+      "acceptance_result": "not_captured",
+      "reason": "The search result snippet reports Nb3Sn lambda=1.8, but the page itself was blocked by an interstitial browser check in this session, so it cannot be used as an inspected source row."
+    },
+    {
+      "source_type": "thesis_or_secondary_compilation",
+      "title": "Experimental and computational thesis on Nb3Sn",
+      "url": "https://ris.utwente.nl/ws/portalfiles/portal/18462927/thesis_M_Mentink.pdf",
+      "candidate_value_seen": {
+        "source_layer": "snippet references experimentally observed alpha2F spectra for stoichiometric Nb3Sn"
+      },
+      "acceptance_result": "search_lead_only",
+      "reason": "The snippet points toward alpha2F datasets and named experimental sources, but no row-level lambda numeric cell was inspected and captured in this pass."
+    }
+  ],
+  "candidate_values_seen": [
+    {
+      "value_dimensionless": 1.8,
+      "source_layer": "open-access modeling/review article",
+      "usefulness": "supports retaining working lambda pending stronger evidence",
+      "capture_record_action": "do_not_fill_normalized_value_dimensionless"
+    },
+    {
+      "value_dimensionless": 1.8,
+      "source_layer": "search-result snippet from blocked page",
+      "usefulness": "lead only",
+      "capture_record_action": "do_not_fill_normalized_value_dimensionless"
+    }
+  ],
+  "attempt_result": {
+    "alternate_lambda_support_found": true,
+    "row_level_lambda_value_found": false,
+    "same_sample_family_as_nb3sn_i_omega127_confirmed": false,
+    "capture_record_fill_allowed": false,
+    "stop_rule_triggered": "alternate_sources_support_current_lambda_but_do_not_meet_row_level_capture_standard"
+  },
+  "next_allowed_move": "Follow the cited experimental alpha2F/tunneling/specific-heat sources behind the lambda=1.8 statements, preferably Orlando 1979, Valentinis 2014, or named alpha2F datasets, and capture a row-level lambda with locator if accessible.",
+  "claim_boundary": "This report records alternate-source search leads only. It does not certify lambda, does not fill the lambda capture record, and does not change the benchmark row or model gate."
+}

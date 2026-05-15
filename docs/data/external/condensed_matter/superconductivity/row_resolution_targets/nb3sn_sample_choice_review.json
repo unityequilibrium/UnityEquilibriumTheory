@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_sample_choice_review",
+  "material": "Nb3Sn",
+  "checked_date": "2026-05-12",
+  "purpose": "Compare the two Nb3Sn samples exposed in Table II before treating the captured omega_log value as a benchmark-row candidate.",
+  "source_context": {
+    "article_title": "Heat-capacity analysis of a large number of A15-type compounds",
+    "source_title_or_doi": "10.1103/PhysRevB.27.1568",
+    "phonon_capture_record": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/phonon_numeric_capture_record.json",
+    "table_or_figure_identifier": "Table II",
+    "table_layer_status": "APS harvest PDF extraction, session-local PDF only"
+  },
+  "working_row_context": {
+    "working_source_label": "Matthias 1954",
+    "working_tc_K": 18.3,
+    "working_theta_D_K": 280,
+    "working_lambda_ep": 1.8,
+    "working_mu_star": 0.13
+  },
+  "sample_candidates": [
+    {
+      "sample_label": "Nb3Sn I",
+      "table_tc_K": 17.97,
+      "omega_log_K": 127,
+      "tc_delta_from_working_row_K": 0.33,
+      "mcmillan_preview_with_working_lambda_K": 12.974880,
+      "relative_error_with_working_lambda_percent": 29.099018,
+      "mcmillan_preview_with_abstract_lambda_K": 10.925777,
+      "relative_error_with_abstract_lambda_percent": 40.296301,
+      "review_role": "primary_candidate"
+    },
+    {
+      "sample_label": "Nb3Sn II",
+      "table_tc_K": 17.93,
+      "omega_log_K": 123,
+      "tc_delta_from_working_row_K": 0.37,
+      "mcmillan_preview_with_working_lambda_K": 12.566222,
+      "relative_error_with_working_lambda_percent": 31.332120,
+      "mcmillan_preview_with_abstract_lambda_K": 10.581658,
+      "relative_error_with_abstract_lambda_percent": 42.176733,
+      "review_role": "sibling_comparison"
+    }
+  ],
+  "sample_choice_decision": {
+    "preferred_candidate_for_next_review": "Nb3Sn I",
+    "decision_strength": "weak_preference_not_source_lock",
+    "why": [
+      "Nb3Sn I is slightly closer to the working-row Tc value.",
+      "Nb3Sn I gives a slightly lower McMillan sensitivity error under the current lambda=1.8.",
+      "Both samples remain close enough that the table alone does not prove which sample maps to the benchmark row."
+    ],
+    "blocked_until": [
+      "repo archive policy for the source PDF is resolved",
+      "row identity is tied to a source-family convention rather than only numerical closeness",
+      "lambda support is reviewed under the same sample and phonon convention"
+    ]
+  },
+  "claim_boundary": "This review ranks the two Table II Nb3Sn samples for follow-up only. It does not source-lock the benchmark row and does not authorize any edit to real_superconductor_data.json."
+}

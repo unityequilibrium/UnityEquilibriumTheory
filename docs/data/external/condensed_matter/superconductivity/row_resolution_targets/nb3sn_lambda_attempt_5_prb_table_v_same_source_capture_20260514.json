@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_lambda_acquisition_attempt_report",
+  "material": "Nb3Sn",
+  "field": "lambda_ep",
+  "checked_date": "2026-05-14",
+  "attempt_id": "nb3sn-lambda-attempt-005",
+  "attempt_layer": "same-source APS harvest PDF table extraction",
+  "purpose": "Reinspect the existing PhysRevB.27.1568 heat-capacity PDF for a lambda value in the same source and row family as the captured omega_log value.",
+  "source": {
+    "article_title": "Heat-capacity analysis of a large number of A15-type compounds",
+    "authors": "A. Junod, T. Jarlborg, J. Muller",
+    "journal_citation": "Physical Review B 27, 1568-1585",
+    "publication_date": "1983-02-01",
+    "doi": "10.1103/PhysRevB.27.1568",
+    "fulltext_fetch_url": "https://harvest.aps.org/v2/journals/articles/10.1103/PhysRevB.27.1568/fulltext",
+    "session_local_raw_path": "C:/tmp/PhysRevB.27.1568.pdf",
+    "repo_mirrored_raw_path": null,
+    "repo_archive_policy_note": "The APS PDF remains session-local only under the existing phonon archive policy review."
+  },
+  "access_result": {
+    "harvest_pdf_already_available": true,
+    "pdf_pages_extracted": 18,
+    "candidate_value_found": true
+  },
+  "candidate_numeric_capture": {
+    "primary_row": {
+      "row_locator": "Nb3Sn I",
+      "table_or_figure_identifier": "Table V",
+      "page_or_section_locator": "PDF page 9; printed page 1576",
+      "normalized_value_dimensionless": 1.78,
+      "short_transcription": "Table V row Nb3Sn I includes lambda=1.78"
+    },
+    "sibling_row": {
+      "row_locator": "Nb3Sn II",
+      "table_or_figure_identifier": "Table V",
+      "page_or_section_locator": "PDF page 9; printed page 1576",
+      "normalized_value_dimensionless": 1.82,
+      "short_transcription": "Table V row Nb3Sn II includes lambda=1.82"
+    },
+    "source_context_note": "Table V is in the same PhysRevB.27.1568 article as the Table II omega_log capture. It is therefore a stronger row-family match than the PhysRevB.22.1214 tunneling source split."
+  },
+  "compatibility_review": {
+    "matches_material": true,
+    "matches_current_omega_log_source_family": true,
+    "matches_nb3sn_i_omega_log_127K_sample": true,
+    "matches_current_working_lambda_value": "approximately; current row lambda=1.8, captured Nb3Sn I lambda=1.78",
+    "remaining_blockers": [
+      "The APS PDF is still session-local and lacks accepted non-mirrored citation or repo-mirror policy.",
+      "The sample-choice review still treats Nb3Sn I as a weak preference, not a fully source-locked benchmark row.",
+      "The same-source preview still fails the 20 percent per-row gate under the current McMillan harness."
+    ]
+  },
+  "capture_record_action": "fill_nb3sn_lambda_numeric_capture_record_with_primary_nb3sn_i_value_pending_archive_and_patch_review",
+  "benchmark_patch_action": "no_patch",
+  "next_operator_instruction": "Use the same-source lambda capture for review and sensitivity. Do not edit verifier inputs until archive policy and patch gates clear.",
+  "claim_boundary": "This attempt captures a row-specific same-source lambda value. It does not authorize a benchmark patch and does not change the verifier inputs."
+}

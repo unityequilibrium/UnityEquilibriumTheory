@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_text_capture_record",
+  "source_role": "first-pass Tc text capture for the Nb3Sn residual row",
+  "material": "Nb3Sn",
+  "field": "Tc_observed",
+  "article_title": "Superconductivity of Nb3Sn",
+  "authors": [
+    "B. T. Matthias",
+    "T. H. Geballe",
+    "S. Geller",
+    "E. Corenzwit"
+  ],
+  "source_title_or_doi": "10.1103/PhysRev.95.1435",
+  "journal_citation": "Phys. Rev. 95, 1435",
+  "publication_date": "1954-09-15",
+  "volume_issue_context": "Vol. 95, Iss. 6",
+  "capture_layer": "APS primary-host abstract text",
+  "page_or_section_locator": "Abstract; bibliographic context Phys. Rev. 95, 1435",
+  "row_locator": "Abstract Tc statement",
+  "quoted_source_text": "transition temperature of Nb3Sn at 18 K",
+  "normalized_value_K": 18.0,
+  "unit_basis": "K",
+  "archived_raw_path": null,
+  "capture_status": "primary_host_text_captured_pending_raw_archive",
+  "transcription_note": "This record now captures Tc from the APS primary-host abstract and bibliographic context. A raw page or mirrored PDF path is still required before archive-complete handoff.",
+  "checked_date": "2026-05-12",
+  "claim_boundary": "This text capture is evidence intake only. It does not approve topic-local row edits."
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_field_followup_session_checklist",
+  "material": "Nb3Sn",
+  "field": "Theta_D_K_or_omega_log_K",
+  "checked_date": "2026-05-12",
+  "purpose": "Provide a linear checklist for the second Nb3Sn phonon capture attempt so the operator can stay on the deeper full-text path and avoid repeating the first summary-layer probe.",
+  "attempt_2_session_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_attempt_2_session_packet.json",
+  "attempt_2_access_candidate_report": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_attempt_2_access_candidate_report.json",
+  "steps": [
+    {
+      "order": 1,
+      "action": "Start from the canonical source family for 10.1103/PhysRevB.27.1568 and try the APS-host PDF entry point first, including the likely direct pattern https://journals.aps.org/prb/pdf/10.1103/PhysRevB.27.1568 if needed; otherwise fall back to another deeper full-text or mirrored-PDF path.",
+      "success_marker": "The session is pointed at a deeper full-text, APS-PDF, mirrored-PDF, or equivalent archival path."
+    },
+    {
+      "order": 2,
+      "action": "Search specifically for a row, table, or figure that gives a phonon moment for Nb3Sn rather than a family-level statement.",
+      "success_marker": "A candidate row-specific Nb3Sn phonon value is visible."
+    },
+    {
+      "order": 3,
+      "action": "Identify whether the value corresponds to omega_log, Debye temperature, or another phonon moment.",
+      "success_marker": "reported_proxy_type can be named explicitly."
+    },
+    {
+      "order": 4,
+      "action": "Fill the live capture attempt template and proposed attempt-002 log entry using the candidate value and locator fields.",
+      "success_marker": "The attempt template and log entry both contain the candidate value, locator, and source path."
+    },
+    {
+      "order": 5,
+      "action": "Run the acceptance gate against the candidate capture.",
+      "success_marker": "The capture either passes cleanly or fails with one explicit rejection reason instead of remaining ambiguous."
+    }
+  ],
+  "do_not_repeat_from_attempt_1": [
+    "Do not stop after confirming that phonon moments are tabulated.",
+    "Do not log success based on abstract wording alone.",
+    "Do not use adjacent-context literature as if it were the canonical row capture."
+  ],
+  "new_context_from_remote_probe": "The canonical APS result surface now explicitly shows a PDF entry for the target DOI, so attempt-002 has a narrower first-hop target than attempt-001 had.",
+  "current_status": "ready_for_attempt_2_session",
+  "claim_boundary": "This checklist guides the second attempt only. It does not certify a value and does not unblock patch review by itself."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_pair_numeric_capture_shell_summary",
+  "pair_label": "A15 residual blocker pair",
+  "materials": [
+    "Nb3Sn",
+    "Nb3Ge"
+  ],
+  "checked_date": "2026-05-12",
+  "purpose": "Summarize the current numeric-capture shell layer for the A15 pair so the next extraction pass can see, in one place, which field-specific records already exist and which still need actual row values.",
+  "summary": {
+    "materials_total": 2,
+    "fields_with_numeric_capture_shells": 4,
+    "fields_with_filled_numeric_values": 1,
+    "fields_still_pending_numeric_capture": 3,
+    "first_row_to_push": "Nb3Sn"
+  },
+  "material_shells": [
+    {
+      "material": "Nb3Sn",
+      "phonon_numeric_capture_record": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/phonon_numeric_capture_record.json",
+      "lambda_numeric_capture_record": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/lambda_numeric_capture_record.json",
+      "shell_status": "phonon_value_filled_pending_review_lambda_pending_numeric_review",
+      "next_numeric_target": "Review the captured Nb3Sn I omega_log=127 K Table II value against the sibling Nb3Sn II=123 K sample, then keep lambda in the same resolved source family and proxy convention."
+    },
+    {
+      "material": "Nb3Ge",
+      "phonon_numeric_capture_record": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3ge/phonon_numeric_capture_record.json",
+      "lambda_numeric_capture_record": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3ge/lambda_numeric_capture_record.json",
+      "shell_status": "phonon_and_lambda_shells_present_pending_numeric_values",
+      "next_numeric_target": "Fill the phonon numeric capture first, then keep lambda in the same resolved source family and proxy convention."
+    }
+  ],
+  "claim_boundary": "This shell summary tracks numeric-capture readiness only. It records the provisional Nb3Sn phonon capture but does not certify it as benchmark-ready and does not unblock patch review."
+}

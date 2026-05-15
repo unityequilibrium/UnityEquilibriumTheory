@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_compatibility_review_packet",
+  "material": "Nb3Ge",
+  "checked_date": "2026-05-12",
+  "purpose": "Compare the current Nb3Ge working-row package against the best external text-layer, abstract-level numeric capture, and secondary-hint captures before any A15 patch review is allowed.",
+  "working_row_package": {
+    "material": "Nb3Ge",
+    "current_working_copy_label": "Gavaler 1973",
+    "tc_observed_K": 23.2,
+    "theta_D_K": 302.0,
+    "lambda_ep": 2.1,
+    "mu_star": 0.14
+  },
+  "external_capture_package": {
+    "tc_text_capture_K": 22.3,
+    "tc_capture_status": "primary_record_text_captured_pending_raw_archive",
+    "phonon_secondary_hint_K": null,
+    "phonon_hint_status": "primary_host_proxy_text_present_but_no_row_specific_value",
+    "lambda_primary_host_abstract_numeric": 1.9,
+    "lambda_capture_status": "primary_host_abstract_numeric_capture_pending_same_family_review",
+    "lambda_secondary_hint": null,
+    "lambda_hint_status": "primary_host_abstract_numeric_capture_present_without_secondary_hint_layer",
+    "mu_star_family_hint_min": 0.1,
+    "mu_star_family_hint_max": 0.15,
+    "mu_star_hint_status": "family_range_only_not_row_specific"
+  },
+  "field_review": [
+    {
+      "field": "Tc_observed",
+      "status": "near_match_text_capture",
+      "working_value": 23.2,
+      "external_value": 22.3,
+      "interpretation": "The current publication-record Tc capture is close enough to support the same material family, but raw-page confirmation is still required before any row edit."
+    },
+    {
+      "field": "Theta_D_K_or_omega_log_K",
+      "status": "proxy_convention_open_and_numeric_value_missing",
+      "working_value": 302.0,
+      "external_value": null,
+      "interpretation": "The current package now has a stronger primary-host abstract note that omega_log-style moments are tabulated and preferred over Debye temperature, but it still has no row-usable external numeric phonon value for Nb3Ge."
+    },
+    {
+      "field": "lambda_ep",
+      "status": "row_specific_numeric_value_missing",
+      "working_value": 2.1,
+      "external_value": 1.9,
+      "interpretation": "The chosen ScienceDirect primary-host abstract now gives lambda=1.9 for Nb3Ge, which is below the working value but still within the same strong-coupling regime. Even so, same-family review and stronger archival support are still required before any patch decision."
+    },
+    {
+      "field": "mu_star",
+      "status": "family_range_contains_working_value",
+      "working_value": 0.14,
+      "external_value": [
+        0.1,
+        0.15
+      ],
+      "interpretation": "The working mu_star sits inside the current family-level hint range, so this field is less hostile than the missing phonon and lambda numerics, but it is still not row-specific evidence."
+    }
+  ],
+  "compatibility_summary": {
+    "fields_consistent_enough_for_patch": [],
+    "fields_requiring_raw_page_confirmation": [
+      "Tc_observed"
+    ],
+    "fields_requiring_proxy_or_numeric_resolution": [
+      "Theta_D_K_or_omega_log_K",
+      "lambda_ep"
+    ],
+    "fields_with_preliminarily_tolerable_family_convention": [
+      "mu_star"
+    ]
+  },
+  "next_decisions": [
+    "Confirm the Tc statement from the publication record or article at raw-page level before treating the row identity as stable.",
+    "Resolve whether the A15 row should use Debye temperature or omega_log-style phonon moments before any lambda comparison is attempted.",
+    "Do not revise lambda_ep away from 2.1 until the primary-host abstract capture at 1.9 is checked against the same phonon convention and, ideally, strengthened by raw-page or table-level support from the same source family.",
+    "Allow mu_star to remain a family-level convention only if the phonon and lambda captures later land inside the same source family."
+  ],
+  "claim_boundary": "This packet is a compatibility-control artifact only. It does not certify a row edit and does not change the FAIL status of the raw McMillan baseline."
+}

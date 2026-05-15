@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_non_mirrored_citation_acceptance_criteria",
+  "material": "Nb3Sn",
+  "fields": [
+    "lambda_ep",
+    "mu_star"
+  ],
+  "checked_date": "2026-05-13",
+  "purpose": "Define the minimum evidence needed if the PhysRevB.22.1214 APS tunneling PDF is not mirrored into the repo.",
+  "policy_context": {
+    "source_split_compatibility_policy_review": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_source_split_compatibility_policy_review_20260513.json",
+    "lambda_attempt_4_aps_tunneling_fulltext_capture": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_attempt_4_aps_tunneling_fulltext_capture_20260513.json",
+    "policy_decision_stub": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_tunneling_lambda_non_mirrored_citation_policy_decision_stub_20260513.json",
+    "reason_for_alternative_path": "The raw APS PDF remains session-local pending rights and archive policy, but the lambda and mu* values are short numeric transcriptions from a primary APS full-text source."
+  },
+  "source_identity": {
+    "article_title": "Tunneling and the electron-phonon-coupled superconductivity of Nb3Sn",
+    "doi": "10.1103/PhysRevB.22.1214",
+    "canonical_url": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.22.1214",
+    "harvest_url": "https://harvest.aps.org/v2/journals/articles/10.1103/PhysRevB.22.1214/fulltext",
+    "session_local_pdf_path": "C:/tmp/PhysRevB.22.1214.pdf",
+    "repo_mirrored_raw_path": null
+  },
+  "minimum_required_fields": [
+    "doi",
+    "canonical_url_or_harvest_url",
+    "article_title",
+    "journal_citation",
+    "page_or_section_locator",
+    "figure_or_discussion_identifier",
+    "material_or_junction_locator",
+    "reported_lambda_value",
+    "reported_lambda_uncertainty",
+    "reported_mu_star_value",
+    "reported_mu_star_uncertainty",
+    "short_numeric_transcription",
+    "derivation_context",
+    "source_split_compatibility_decision",
+    "reviewer_policy_decision"
+  ],
+  "current_evidence_status": {
+    "doi": "present",
+    "canonical_url_or_harvest_url": "present",
+    "article_title": "present",
+    "journal_citation": "present",
+    "page_or_section_locator": "present",
+    "figure_or_discussion_identifier": "present",
+    "material_or_junction_locator": "present_material_level_not_nb3sn_i_or_nb3sn_ii",
+    "reported_lambda_value": "present",
+    "reported_lambda_uncertainty": "present",
+    "reported_mu_star_value": "present",
+    "reported_mu_star_uncertainty": "present",
+    "short_numeric_transcription": "present",
+    "derivation_context": "present",
+    "source_split_compatibility_decision": "present_but_blocks_patch",
+    "reviewer_policy_decision": "not_accepted_pending_reviewer_or_project_policy"
+  },
+  "acceptance_state": {
+    "meets_content_fields": true,
+    "meets_policy_fields": false,
+    "can_replace_repo_mirrored_pdf_for_topic_handoff": false,
+    "can_support_benchmark_patch": false,
+    "why_not_yet": "The source has enough citation and transcription content for review, but no policy authority has accepted non-mirrored APS evidence for this field and source-split compatibility is currently blocked."
+  },
+  "allowed_if_accepted": [
+    "Treat the tunneling lambda and mu* values as source-reviewable without committing the APS PDF.",
+    "Keep the raw PDF path marked as session-local rather than repo-local.",
+    "Use the value in compatibility reviews or blocked patch previews with explicit source-split labeling."
+  ],
+  "not_allowed_even_if_accepted": [
+    "Do not fill the Weber-locked lambda capture record without a separate source-split acceptance decision.",
+    "Do not claim the raw PDF is archived in the repo.",
+    "Do not bypass the model gate, per-row gate, or topic patch-review block decision."
+  ],
+  "claim_boundary": "This file defines acceptance criteria only. It does not approve the non-mirrored citation route and does not authorize a benchmark patch."
+}

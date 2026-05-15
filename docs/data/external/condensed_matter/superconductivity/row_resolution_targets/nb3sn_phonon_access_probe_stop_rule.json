@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_field_access_probe_stop_rule",
+  "material": "Nb3Sn",
+  "field": "Theta_D_K_or_omega_log_K",
+  "checked_date": "2026-05-12",
+  "purpose": "Prevent the Nb3Sn phonon workflow from repeating access-layer probing that has already been tried twice without reaching a row-specific table value.",
+  "status": "satisfied_by_harvest_pdf_table_capture",
+  "completed_access_layer_attempts": [
+    "nb3sn-phonon-attempt-001",
+    "nb3sn-phonon-attempt-002"
+  ],
+  "do_not_repeat": [
+    "OSTI-summary-only confirmation",
+    "APS abstract-only confirmation",
+    "canonical PDF-path confirmation without table capture",
+    "mirror-search passes that do not add a new trusted full-text source"
+  ],
+  "unlock_conditions": [
+    "A trusted mirrored full text or scan appears for 10.1103/PhysRevB.27.1568",
+    "A reachable APS-host full-text or PDF path exposes the actual table layer",
+    "A local PDF or archival file is added to the repo and can be searched directly for Nb3Sn row content",
+    "The harvest-style APS host-family full-text route for 10.1103/PhysRevB.27.1568 is confirmed to work and exposes the table layer"
+  ],
+  "unlock_result": "The harvest-style APS host route returned the target PDF during the current session and exposed Table II with Nb3Sn omega_log values.",
+  "next_allowed_move": "Do not spend another pass on access-path confirmation alone. The next useful move is sample-choice and same-family review for the captured Nb3Sn I omega_log=127 K value.",
+  "claim_boundary": "This rule governs workflow only. It does not certify a value and does not unblock patch review."
+}

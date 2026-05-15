@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_field_extraction_plan",
+  "source_role": "execution-ready field extraction plan for the A15 residual blocker pair",
+  "source_label": "A15 field extraction plan for Nb3Sn and Nb3Ge",
+  "checked_date": "2026-05-07",
+  "materials": [
+    {
+      "material": "Nb3Sn",
+      "steps": [
+        {
+          "order": 1,
+          "field": "Tc_observed",
+          "preferred_reference": "10.1103/PhysRev.95.1435",
+          "target_capture": [
+            "explicit Tc statement or row",
+            "table_or_figure_identifier or equivalent text locator",
+            "unit_basis = K"
+          ],
+          "success_condition": "A repo-local archive entry can point to one exact Tc statement or row from the primary publication anchor."
+        },
+        {
+          "order": 2,
+          "field": "Theta_D_K_or_omega_log_K",
+          "preferred_reference": "10.1103/PhysRevB.27.1568",
+          "target_capture": [
+            "phonon-spectrum moment or omega_log style row if present",
+            "proxy convention note",
+            "unit_basis = K"
+          ],
+          "success_condition": "One explicit phonon proxy convention is archived and can be named in topic review."
+        },
+        {
+          "order": 3,
+          "field": "lambda_ep",
+          "preferred_reference": "10.1016/0378-4363(84)90167-0",
+          "target_capture": [
+            "explicit lambda or e-ph parameter statement",
+            "locator for the lambda source row or text statement",
+            "compatibility note against the chosen phonon proxy convention"
+          ],
+          "success_condition": "A lambda value or named coupling statement is archived from a source that is compatible with the chosen A15 proxy convention."
+        },
+        {
+          "order": 4,
+          "field": "mu_star",
+          "preferred_reference": null,
+          "target_capture": [
+            "row-specific source if available",
+            "otherwise explicit family-convention note"
+          ],
+          "success_condition": "The review packet can say honestly whether mu_star is row-specific or retained as a family convention."
+        }
+      ]
+    },
+    {
+      "material": "Nb3Ge",
+      "steps": [
+        {
+          "order": 1,
+          "field": "Tc_observed",
+          "preferred_reference": "10.1063/1.1654966",
+          "target_capture": [
+            "explicit Tc statement or row",
+            "table_or_figure_identifier or equivalent text locator",
+            "unit_basis = K"
+          ],
+          "success_condition": "A repo-local archive entry can point to one exact Tc statement or row from the primary publication anchor."
+        },
+        {
+          "order": 2,
+          "field": "Theta_D_K_or_omega_log_K",
+          "preferred_reference": "10.1103/PhysRevB.27.1568",
+          "target_capture": [
+            "phonon-spectrum moment or omega_log style row if present",
+            "proxy convention note",
+            "unit_basis = K"
+          ],
+          "success_condition": "One explicit phonon proxy convention is archived and can be named in topic review."
+        },
+        {
+          "order": 3,
+          "field": "lambda_ep",
+          "preferred_reference": "10.1016/0378-4363(84)90167-0",
+          "target_capture": [
+            "explicit lambda or e-ph parameter statement",
+            "locator for the lambda source row or text statement",
+            "compatibility note against the chosen phonon proxy convention"
+          ],
+          "success_condition": "A lambda value or named coupling statement is archived from a source that is compatible with the chosen A15 proxy convention."
+        },
+        {
+          "order": 4,
+          "field": "mu_star",
+          "preferred_reference": null,
+          "target_capture": [
+            "row-specific source if available",
+            "otherwise explicit family-convention note"
+          ],
+          "success_condition": "The review packet can say honestly whether mu_star is row-specific or retained as a family convention."
+        }
+      ]
+    }
+  ],
+  "claim_boundary": "This plan sequences extraction work only. It does not certify any captured value until the archive and topic handoff gates are passed."
+}

@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_phonon_lambda_sensitivity_review",
+  "material": "Nb3Sn",
+  "checked_date": "2026-05-12",
+  "purpose": "Evaluate the provisional Table II omega_log capture against the current working row and the abstract-level lambda capture before any benchmark row patch is considered.",
+  "observed_tc_K": 18.3,
+  "mu_star_assumed": 0.13,
+  "formula_context": "McMillan-style sensitivity only; omega_log is placed in the same prefactor position used by the current benchmark harness for Theta_D_K so the comparison is directional, not a final Allen-Dynes row patch.",
+  "source_captures_reviewed": {
+    "phonon_capture_record": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/phonon_numeric_capture_record.json",
+    "sample_choice_review": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_sample_choice_review.json",
+    "lambda_review_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/a15_lambda_abstract_numeric_review_packet.json",
+    "primary_phonon_value": {
+      "row_locator": "Nb3Sn I",
+      "reported_proxy_type": "omega_log_K",
+      "value_K": 127
+    },
+    "sibling_phonon_value": {
+      "row_locator": "Nb3Sn II",
+      "reported_proxy_type": "omega_log_K",
+      "value_K": 123
+    },
+    "abstract_lambda_value": {
+      "value_dimensionless": 1.5,
+      "capture_layer": "primary-host abstract numeric capture"
+    }
+  },
+  "sensitivity_cases": [
+    {
+      "case_id": "current_working_row",
+      "prefactor_proxy_K": 280,
+      "lambda_ep": 1.8,
+      "predicted_tc_K": 28.605978578393114,
+      "relative_error_percent": 56.31682392564543,
+      "interpretation": "This is the current raw benchmark behavior for Nb3Sn."
+    },
+    {
+      "case_id": "table_ii_omega_log_with_current_lambda",
+      "prefactor_proxy_K": 127,
+      "lambda_ep": 1.8,
+      "predicted_tc_K": 12.97485428434252,
+      "relative_error_percent": 29.099156916161086,
+      "interpretation": "The captured omega_log value materially improves the row versus the current working prefactor, but it still does not clear the 20 percent per-row gate."
+    },
+    {
+      "case_id": "table_ii_omega_log_with_abstract_lambda",
+      "prefactor_proxy_K": 127,
+      "lambda_ep": 1.5,
+      "predicted_tc_K": 10.925842270914847,
+      "relative_error_percent": 40.29649032287078,
+      "interpretation": "Pairing the captured omega_log value with the abstract-level lambda=1.5 worsens the sensitivity result relative to keeping lambda=1.8."
+    },
+    {
+      "case_id": "sibling_omega_log_with_current_lambda",
+      "prefactor_proxy_K": 123,
+      "lambda_ep": 1.8,
+      "predicted_tc_K": 12.566222,
+      "relative_error_percent": 31.332120,
+      "interpretation": "The sibling Nb3Sn II value improves the row compared with the current working prefactor, but it is weaker than Nb3Sn I and still above the 20 percent per-row gate."
+    },
+    {
+      "case_id": "sibling_omega_log_with_abstract_lambda",
+      "prefactor_proxy_K": 123,
+      "lambda_ep": 1.5,
+      "predicted_tc_K": 10.581721255294695,
+      "relative_error_percent": 42.17638658200167,
+      "interpretation": "The sibling Nb3Sn II value gives the same qualitative conclusion: the lambda=1.5 substitution should not be promoted on numeric sensitivity alone."
+    },
+    {
+      "case_id": "table_ii_omega_log_with_secondary_lambda_hint",
+      "prefactor_proxy_K": 127,
+      "lambda_ep": 1.46,
+      "predicted_tc_K": 10.615284613446742,
+      "relative_error_percent": 41.99300866969015,
+      "interpretation": "The secondary lambda hint is directionally similar to the abstract lambda case and does not make the row patch-ready."
+    }
+  ],
+  "review_decision": {
+    "phonon_capture_numeric_usefulness": "provisionally_useful_for_proxy_review",
+    "sample_choice_status": "Nb3Sn I retained as weak primary candidate; Nb3Sn II retained as sibling comparison, not source-locked",
+    "lambda_substitution_status": "do_not_promote_lambda_1_5_to_working_row_on_current_evidence",
+    "patch_readiness": false,
+    "next_action": "Seek stronger row-level lambda support or a source-family explanation before any combined Nb3Sn patch; keep the captured omega_log value as the main phonon review candidate."
+  },
+  "claim_boundary": "This review is a sensitivity-control artifact only. It does not edit the benchmark row, does not certify omega_log as the final proxy, and does not change the raw McMillan FAIL status."
+}

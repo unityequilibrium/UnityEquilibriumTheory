@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_policy_release_preview",
+  "material": "Nb3Sn",
+  "checked_date": "2026-05-15",
+  "purpose": "Preview the Allen-Dynes strict-gate impact if the unified PhysRevB.27.1568 non-mirrored citation policy request is accepted, without accepting that policy.",
+  "policy_request": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_physrevb_27_1568_unified_non_mirrored_policy_request_20260515.json",
+  "allen_dynes_smoke_test_artifact": "docs/topics/0.4_Superconductivity_Superfluids/Result/artifacts/0_4_superconductivity_superfluids_allen_dynes_verification.json",
+  "release_assumption": {
+    "assumed_policy_decision": "accepted_for_this_source_package_only",
+    "assumed_scope": [
+      "PhysRevB.27.1568 Table II omega moments",
+      "PhysRevB.27.1568 Table V lambda values",
+      "Allen-Dynes strict-gate eligibility for Nb3Sn smoke-test rows"
+    ],
+    "not_assumed": [
+      "repo mirroring of the APS PDF",
+      "benchmark patch approval",
+      "topic-level PASS",
+      "general non-mirrored APS policy for unrelated sources"
+    ]
+  },
+  "preview_rows": [
+    {
+      "material": "Nb3Sn",
+      "sample_label": "Nb3Sn I",
+      "predicted_tc_K": 17.981167779782506,
+      "tc_observed_K": 18.3,
+      "relative_error_percent": 1.742252569494505,
+      "would_be_strict_gate_status": "PASS"
+    },
+    {
+      "material": "Nb3Sn",
+      "sample_label": "Nb3Sn II",
+      "predicted_tc_K": 17.861612627441417,
+      "tc_observed_K": 18.3,
+      "relative_error_percent": 2.395559412888435,
+      "would_be_strict_gate_status": "PASS"
+    }
+  ],
+  "preview_gate_metrics": {
+    "would_be_strict_rows_counted": 2,
+    "would_be_strict_average_relative_error_percent": 2.0689059911914702,
+    "would_be_strict_rows_within_20_percent": 2,
+    "would_be_branch_model_gate_status": "PASS_FOR_NB3SN_SMOKE_TEST_ONLY"
+  },
+  "why_not_current_status": [
+    "The unified policy request is still not accepted.",
+    "The Allen-Dynes verifier currently counts these rows only in the diagnostic lane.",
+    "The preview covers only Nb3Sn rows from one source package and cannot support a topic-level pass."
+  ],
+  "next_allowed_moves": [
+    "A reviewer or project policy authority may fill the policy decision stub if they accept the non-mirrored route.",
+    "If accepted, update the source-labeled input rows to strict_gate_eligible=true with an explicit policy reference.",
+    "Then rerun the Allen-Dynes verifier and keep the raw McMillan artifact unchanged."
+  ],
+  "claim_boundary": "This file previews the effect of a policy decision. It does not make the decision and does not change any verifier gate by itself."
+}

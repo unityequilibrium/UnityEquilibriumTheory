@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_field_numeric_execution_packet",
+  "material": "Nb3Sn",
+  "field": "Theta_D_K_or_omega_log_K",
+  "checked_date": "2026-05-12",
+  "purpose": "Turn the first Nb3Sn phonon numeric pass into a single execution packet that can be followed without reconstructing the A15 workflow from multiple files.",
+  "source_anchor": {
+    "article_title": "Heat-capacity analysis of a large number of A15-type compounds",
+    "source_title_or_doi": "10.1103/PhysRevB.27.1568",
+    "journal_citation": "Phys. Rev. B 27, 1568",
+    "host_layer": "PRB primary-host abstract plus full article table layer"
+  },
+  "secondary_search_support": {
+    "host": "OSTI summary",
+    "support_note": "The OSTI summary independently confirms that experimentally determined phonon moments are tabulated and therefore strengthens the expectation that a row-specific Nb3Sn phonon value should exist in the full text."
+  },
+  "expected_numeric_target": {
+    "preferred_proxy_type": "omega_log_preferred_over_debye",
+    "unit_basis": "K",
+    "target_section_hint": "Tables or sections containing experimentally determined moments of the phonon spectra, especially omega_log, because the abstract says these values are tabulated.",
+    "row_identity_goal": "One row-specific phonon numeric value for Nb3Sn that can be tied to the same source family used by the future lambda capture."
+  },
+  "required_capture_fields": [
+    "archived_raw_path",
+    "page_or_section_locator",
+    "table_or_figure_identifier",
+    "row_locator",
+    "quoted_source_text",
+    "reported_proxy_type",
+    "normalized_value_K",
+    "proxy_convention_note"
+  ],
+  "success_condition": "The packet is complete only when one Nb3Sn phonon numeric value is captured from the primary full-text table layer and the packet explicitly states whether the benchmark is staying on Debye temperature or moving to omega_log-style moments.",
+  "stop_rule": "If the source yields only abstract-level convention text or a non-row-specific family statement, leave normalized_value_K empty and keep the capture unresolved.",
+  "downstream_dependency": "The next Nb3Sn lambda numeric capture must remain compatible with the same resolved source family and phonon convention chosen here.",
+  "claim_boundary": "This execution packet does not certify any phonon value. It only defines the first row-usable numeric-capture pass for Nb3Sn."
+}

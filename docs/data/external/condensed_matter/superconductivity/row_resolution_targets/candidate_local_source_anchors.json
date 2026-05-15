@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "source_class": "local_source_anchor_manifest",
+  "source_role": "local candidate anchors for future external row-resolution archive work",
+  "source_label": "Superconductivity residual-row local source anchors",
+  "checked_date": "2026-05-07",
+  "anchors": [
+    {
+      "material": "Vanadium (V)",
+      "anchor_type": "working_copy_citation_label",
+      "local_path": "docs/topics/0.4_Superconductivity_Superfluids/Code/03_Research/Experiment_Superconductor_Data.py",
+      "anchor_detail": "working-copy source label = MIT Junior Lab",
+      "status": "local_anchor_only_not_row_locked"
+    },
+    {
+      "material": "Vanadium (V)",
+      "anchor_type": "bibliographic_source_anchor",
+      "local_path": "https://journals.aps.org/pr/issues/102/3",
+      "anchor_detail": "APS issue listing confirms 'Atomic Heats of Normal and Superconducting Vanadium' at Phys. Rev. 102, 656 (1956)",
+      "status": "bibliographic_anchor_not_row_locked"
+    },
+    {
+      "material": "Vanadium (V)",
+      "anchor_type": "primary_source_anchor",
+      "local_path": "https://ocw.mit.edu/courses/8-13-14-experimental-physics-i-ii-junior-lab-fall-2016-spring-2017/external-resources/atomic-heats-of-normal-and-superconducting-vanadium_7fe7d4b4-1464-4057-a0af-2b731268a0da/",
+      "anchor_detail": "MIT OCW resource page anchors the Vanadium publication chain; DOI 10.1103/PhysRev.102.656; page range still needs confirmation against APS listing",
+      "status": "primary_source_anchor_not_archived_in_repo"
+    },
+    {
+      "material": "Nb3Sn",
+      "anchor_type": "working_copy_citation_label",
+      "local_path": "docs/topics/0.4_Superconductivity_Superfluids/Code/03_Research/Experiment_Superconductor_Data.py",
+      "anchor_detail": "working-copy source label = Matthias 1954",
+      "status": "local_anchor_only_not_row_locked"
+    },
+    {
+      "material": "Nb3Sn",
+      "anchor_type": "primary_source_anchor",
+      "local_path": "https://doi.org/10.1103/PhysRev.95.1435",
+      "anchor_detail": "APS primary-source anchor for Nb3Sn superconductivity at 18 K",
+      "status": "primary_source_anchor_not_archived_in_repo"
+    },
+    {
+      "material": "Nb3Ge",
+      "anchor_type": "working_copy_citation_label",
+      "local_path": "docs/topics/0.4_Superconductivity_Superfluids/Code/03_Research/Experiment_Superconductor_Data.py",
+      "anchor_detail": "working-copy source label = Gavaler 1973",
+      "status": "local_anchor_only_not_row_locked"
+    },
+    {
+      "material": "Nb3Ge",
+      "anchor_type": "primary_source_anchor",
+      "local_path": "https://www.osti.gov/biblio/4362329",
+      "anchor_detail": "OSTI anchor for Gavaler 1973 Appl. Phys. Lett. Nb3Ge superconductivity above 22 K; DOI 10.1063/1.1654966",
+      "status": "primary_source_anchor_not_archived_in_repo"
+    },
+    {
+      "material": "all_residual_rows",
+      "anchor_type": "formula_reference",
+      "local_path": "docs/topics/0.4_Superconductivity_Superfluids/Ref/references.bib",
+      "anchor_detail": "contains McMillan 1968 DOI but not row-level material parameters",
+      "status": "formula_anchor_only_not_row_locked"
+    },
+    {
+      "material": "all_residual_rows",
+      "anchor_type": "local_pdf_pool",
+      "local_path": "docs/topics/0.4_Superconductivity_Superfluids/Ref/PDF_Downloads",
+      "anchor_detail": "local PDF pool exists, but no residual row is source-locked from it yet",
+      "status": "local_anchor_only_not_row_locked"
+    }
+  ],
+  "claim_boundary": "These anchors only identify local hints that may help the next archive pass. They do not count as external row evidence."
+}

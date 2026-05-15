@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_primary_numeric_capture_requirement_packet",
+  "material": "Nb3Ge",
+  "checked_date": "2026-05-11",
+  "purpose": "Define the minimum raw-page or mirrored-table evidence needed before the Nb3Ge row can leave the current A15 patch-review block state.",
+  "primary_capture_requirements": [
+    {
+      "field": "Tc_observed",
+      "required_evidence": [
+        "archived_raw_path",
+        "page_or_section_locator",
+        "quoted_source_text",
+        "normalized_value_K",
+        "sample_or_row_identity_note"
+      ],
+      "success_condition": "The publication record or equivalent primary row clearly supports the Tc used for the Nb3Ge working row."
+    },
+    {
+      "field": "Theta_D_K_or_omega_log_K",
+      "required_evidence": [
+        "archived_raw_path",
+        "page_or_section_locator",
+        "table_or_figure_identifier",
+        "row_locator",
+        "reported_proxy_type",
+        "normalized_value_K",
+        "proxy_convention_note"
+      ],
+      "success_condition": "A single source-backed phonon numeric value is captured and the row declares whether the benchmark stays on Debye temperature or moves to omega_log-style phonon moments."
+    },
+    {
+      "field": "lambda_ep",
+      "required_evidence": [
+        "archived_raw_path",
+        "page_or_section_locator",
+        "table_or_figure_identifier",
+        "row_locator",
+        "quoted_source_text_or_numeric_cell",
+        "normalized_value_dimensionless",
+        "same_source_family_note"
+      ],
+      "success_condition": "The lambda capture is numeric, row-usable, and compatible with the same Nb3Ge source family and phonon convention chosen above."
+    },
+    {
+      "field": "mu_star",
+      "required_evidence": [
+        "row_specific_numeric_capture_or_family_convention_note",
+        "scope_note",
+        "same_source_family_or_modeling_note"
+      ],
+      "success_condition": "Either a row-specific mu_star is captured, or the row explicitly records why a family-level convention remains acceptable under the same source family."
+    }
+  ],
+  "unblock_rule": "Nb3Ge may leave the current patch-review block only after Tc is raw-page confirmed, the phonon proxy is numerically captured and declared, lambda is numerically captured under the same convention, and mu_star is either row-specific or explicitly justified as a family convention.",
+  "claim_boundary": "This packet defines capture requirements only. It does not certify any Nb3Ge row edit and does not change the FAIL status of the raw McMillan baseline."
+}

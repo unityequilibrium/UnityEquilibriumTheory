@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_mu_star_compatibility_preview",
+  "material": "Nb3Sn",
+  "checked_date": "2026-05-13",
+  "purpose": "Quantify the impact of using the mu* convention reported with the PhysRevB.22.1214 tunneling lambda source in the current McMillan preview.",
+  "source_context": {
+    "lambda_attempt_4_aps_tunneling_fulltext_capture": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_attempt_4_aps_tunneling_fulltext_capture_20260513.json",
+    "source_split_compatibility_policy_review": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_source_split_compatibility_policy_review_20260513.json",
+    "reported_lambda": 1.8,
+    "reported_lambda_uncertainty": 0.15,
+    "reported_mu_star": 0.16,
+    "reported_mu_star_uncertainty": 0.03,
+    "current_working_mu_star": 0.13,
+    "omega_log_preview_K": 127,
+    "tc_observed_K": 18.3
+  },
+  "preview_grid_under_current_harness_formula": [
+    {
+      "lambda_ep": 1.65,
+      "mu_star": 0.13,
+      "predicted_tc_K": 12.008509284963,
+      "relative_error_percent": 34.379730683262,
+      "per_row_gate_status": "FAIL"
+    },
+    {
+      "lambda_ep": 1.65,
+      "mu_star": 0.16,
+      "predicted_tc_K": 10.964838122955,
+      "relative_error_percent": 40.08285178713,
+      "per_row_gate_status": "FAIL"
+    },
+    {
+      "lambda_ep": 1.65,
+      "mu_star": 0.19,
+      "predicted_tc_K": 9.924950963589,
+      "relative_error_percent": 45.765295280936,
+      "per_row_gate_status": "FAIL"
+    },
+    {
+      "lambda_ep": 1.8,
+      "mu_star": 0.13,
+      "predicted_tc_K": 12.974879697343,
+      "relative_error_percent": 29.099018047308,
+      "per_row_gate_status": "FAIL"
+    },
+    {
+      "lambda_ep": 1.8,
+      "mu_star": 0.16,
+      "predicted_tc_K": 11.942079342507,
+      "relative_error_percent": 34.742735833295,
+      "per_row_gate_status": "FAIL"
+    },
+    {
+      "lambda_ep": 1.8,
+      "mu_star": 0.19,
+      "predicted_tc_K": 10.90900123742,
+      "relative_error_percent": 40.38797138022,
+      "per_row_gate_status": "FAIL"
+    },
+    {
+      "lambda_ep": 1.95,
+      "mu_star": 0.13,
+      "predicted_tc_K": 13.840183809632,
+      "relative_error_percent": 24.370580275237,
+      "per_row_gate_status": "FAIL"
+    },
+    {
+      "lambda_ep": 1.95,
+      "mu_star": 0.16,
+      "predicted_tc_K": 12.819815018887,
+      "relative_error_percent": 29.94636601701,
+      "per_row_gate_status": "FAIL"
+    },
+    {
+      "lambda_ep": 1.95,
+      "mu_star": 0.19,
+      "predicted_tc_K": 11.796168506065,
+      "relative_error_percent": 35.540062808387,
+      "per_row_gate_status": "FAIL"
+    }
+  ],
+  "interpretation": {
+    "best_case_in_grid": {
+      "lambda_ep": 1.95,
+      "mu_star": 0.13,
+      "relative_error_percent": 24.370580275237
+    },
+    "source_central_case": {
+      "lambda_ep": 1.8,
+      "mu_star": 0.16,
+      "relative_error_percent": 34.742735833295
+    },
+    "current_mu_star_vs_source_mu_star_effect": "At lambda=1.8 and omega_log=127 K, moving from the current row mu*=0.13 to the source-reported mu*=0.16 worsens the preview error from 29.10 percent to 34.74 percent.",
+    "gate_conclusion": "No combination in the lambda/mu* uncertainty grid clears the 20 percent per-row gate under the current harness formula."
+  },
+  "decision": {
+    "allow_mu_star_update_patch": false,
+    "allow_source_split_patch": false,
+    "allow_capture_record_fill": false,
+    "why_blocked": [
+      "The source-reported mu* convention worsens the already-failing omega_log plus lambda preview.",
+      "The best explored case still fails the per-row gate.",
+      "The source-split and non-mirrored citation policy decisions remain unaccepted."
+    ]
+  },
+  "claim_boundary": "This is a non-executing compatibility preview only. It does not edit verifier inputs and does not authorize a benchmark patch."
+}

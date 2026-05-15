@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_source_split_compatibility_policy_review",
+  "material": "Nb3Sn",
+  "checked_date": "2026-05-13",
+  "purpose": "Decide whether the current Nb3Sn row may combine a Weber omega_log capture with a Wolf/Zasadzinski APS tunneling lambda capture before any benchmark patch.",
+  "candidate_source_split": {
+    "phonon_source": {
+      "field": "Theta_D_K_or_omega_log_K",
+      "article_title": "Heat-capacity analysis of a large number of A15-type compounds",
+      "doi": "10.1103/PhysRevB.27.1568",
+      "captured_value": {
+        "reported_proxy_type": "omega_log_K",
+        "row_locator": "Nb3Sn I",
+        "normalized_value_K": 127,
+        "sibling_row_locator": "Nb3Sn II",
+        "sibling_normalized_value_K": 123
+      },
+      "capture_record": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/phonon_numeric_capture_record.json",
+      "archive_status": "session_local_pdf_only_pending_non_mirrored_policy_decision"
+    },
+    "lambda_source": {
+      "field": "lambda_ep",
+      "article_title": "Tunneling and the electron-phonon-coupled superconductivity of Nb3Sn",
+      "doi": "10.1103/PhysRevB.22.1214",
+      "captured_value": {
+        "normalized_value_dimensionless": 1.8,
+        "uncertainty_dimensionless": 0.15,
+        "mu_star_candidate": 0.16,
+        "mu_star_uncertainty": 0.03,
+        "row_locator": "Nb3Sn material-level tunneling reanalysis; no Nb3Sn I/Nb3Sn II row family is stated"
+      },
+      "capture_attempt": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_attempt_4_aps_tunneling_fulltext_capture_20260513.json",
+      "archive_status": "session_local_pdf_only_pending_non_mirrored_policy_decision"
+    }
+  },
+  "compatibility_findings": {
+    "same_material": true,
+    "same_source_family": false,
+    "same_sample_or_row_family": false,
+    "same_phonon_proxy_convention_explicit": false,
+    "lambda_value_matches_working_row": true,
+    "mu_star_conflict_or_update_needed": true,
+    "notes": [
+      "The lambda paper is experimentally stronger than the attempt-3 support-only lead and gives the current working lambda directly.",
+      "The lambda paper does not identify the Weber Table II Nb3Sn I or Nb3Sn II heat-capacity row.",
+      "The lambda paper reports mu*=0.16 +/- 0.03, while the current benchmark row uses mu*=0.13.",
+      "Combining omega_log from Weber with lambda from tunneling would be an explicit cross-source synthesis, not a same-row source capture."
+    ]
+  },
+  "numerical_preview_under_current_harness_formula": {
+    "tc_observed_K": 18.3,
+    "omega_log_K": 127,
+    "mu_star_kept_at_current_row": 0.13,
+    "lambda_cases": [
+      {
+        "lambda_ep": 1.65,
+        "predicted_tc_K": 12.008509284963115,
+        "relative_error_percent": 34.37973068326167,
+        "per_row_gate_status": "FAIL"
+      },
+      {
+        "lambda_ep": 1.8,
+        "predicted_tc_K": 12.974879697342596,
+        "relative_error_percent": 29.099018047308224,
+        "per_row_gate_status": "FAIL"
+      },
+      {
+        "lambda_ep": 1.95,
+        "predicted_tc_K": 13.840183809631665,
+        "relative_error_percent": 24.370580275236808,
+        "per_row_gate_status": "FAIL"
+      }
+    ],
+    "interpretation": "The full uncertainty band around the tunneling lambda improves the current Nb3Sn row but still does not clear the 20 percent per-row gate when mu*=0.13 is kept."
+  },
+  "policy_decision": {
+    "allow_source_split_for_topic_handoff": false,
+    "allow_source_split_for_benchmark_patch": false,
+    "allow_filling_weber_locked_lambda_numeric_capture_record": false,
+    "recommended_record_shape_if_later_accepted": "Create a distinct Nb3Sn tunneling-lambda capture record or add an explicit source_split_lambda_capture field, rather than silently filling the Weber-locked lambda shell.",
+    "why_blocked_now": [
+      "The phonon and lambda PDFs are both session-local only and lack accepted non-mirrored citation policy decisions.",
+      "The two sources do not share a row/sample identity.",
+      "The lambda source gives a different mu* convention than the current row.",
+      "The numerical preview still fails the per-row gate even before topic-average effects are considered."
+    ]
+  },
+  "next_allowed_moves": [
+    "Resolve the separate non-mirrored citation acceptance criteria and decision stub for PhysRevB.22.1214 if the project wants to use the tunneling lambda source.",
+    "Use the mu_star compatibility preview to decide whether the source's mu*=0.16 +/- 0.03 convention should remain blocked under the current harness.",
+    "Keep real_superconductor_data.json unchanged until archive policy, source-split compatibility, mu_star convention, and patch gate all clear."
+  ],
+  "downstream_policy_records": {
+    "tunneling_lambda_non_mirrored_citation_acceptance_criteria": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_tunneling_lambda_non_mirrored_citation_acceptance_criteria_20260513.json",
+    "tunneling_lambda_non_mirrored_citation_policy_decision_stub": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_tunneling_lambda_non_mirrored_citation_policy_decision_stub_20260513.json",
+    "tunneling_mu_star_compatibility_preview": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_tunneling_mu_star_compatibility_preview_20260513.json"
+  },
+  "claim_boundary": "This review blocks the source-split patch under the current evidence state. It does not reject the lambda source itself; it rejects silent combination without explicit policy and convention review."
+}

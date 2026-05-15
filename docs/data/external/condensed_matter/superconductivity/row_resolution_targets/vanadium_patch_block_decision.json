@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_patch_block_decision",
+  "source_role": "formal decision record for whether the older Vanadium patch preview may still be used",
+  "material": "Vanadium (V)",
+  "checked_date": "2026-05-11",
+  "upstream_preview_reference": "docs/topics/0.4_Superconductivity_Superfluids/Data/03_Research/vanadium_candidate_patch_preview.json",
+  "current_decision": "blocked_do_not_apply_preview",
+  "blocked_preview_fields": [
+    "lambda_ep"
+  ],
+  "why_blocked": [
+    "The older preview assumes lambda_ep = 0.6 under fixed Theta_D_K = 380 and mu_star = 0.11.",
+    "Open-fulltext Vanadium captures now report lambda = 0.91 and mu_star values near 0.173 or 0.15 +- 0.03.",
+    "The external captures do not directly support the older internal lambda-only patch preview.",
+    "Tc and Theta_D still lack page-confirmed primary capture, so row identity and proxy context are not locked."
+  ],
+  "unblock_requirements": [
+    "Primary page-confirmed Tc capture from the historical Vanadium source",
+    "Primary page-confirmed Theta_D or explicit proxy-context capture",
+    "Compatibility review showing whether lambda = 0.91 is row-compatible or whether a different row/convention should be used",
+    "Convention review showing whether mu_star can stay at 0.11 or must move to a higher sourced value"
+  ],
+  "safe_interim_policy": {
+    "keep_working_row_unchanged": true,
+    "allow_patch_preview_for_execution": false,
+    "allow_preview_as_historical_trace_only": true
+  },
+  "claim_boundary": "This decision file blocks execution of the older Vanadium patch preview. It does not by itself authorize any replacement patch."
+}

@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_unified_non_mirrored_policy_request",
+  "material": "Nb3Sn",
+  "source_title_or_doi": "10.1103/PhysRevB.27.1568",
+  "checked_date": "2026-05-15",
+  "purpose": "Consolidate the non-mirrored citation policy request for the PhysRevB.27.1568 Nb3Sn Table II omega-moment and Table V lambda captures.",
+  "source_identity": {
+    "article_title": "Heat-capacity analysis of a large number of A15-type compounds",
+    "journal_citation": "Physical Review B 27, 1568-1585",
+    "publication_date": "1983-02-01",
+    "doi": "10.1103/PhysRevB.27.1568",
+    "harvest_url": "https://harvest.aps.org/v2/journals/articles/10.1103/PhysRevB.27.1568/fulltext",
+    "session_local_pdf_path": "C:/tmp/PhysRevB.27.1568.pdf",
+    "repo_mirrored_raw_path": null
+  },
+  "evidence_records": {
+    "phonon_numeric_capture_record": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/phonon_numeric_capture_record.json",
+    "lambda_numeric_capture_record": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/lambda_numeric_capture_record.json",
+    "phonon_non_mirrored_acceptance_criteria": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_non_mirrored_citation_acceptance_criteria.json",
+    "phonon_non_mirrored_decision_stub": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_non_mirrored_citation_policy_decision_stub.json",
+    "same_source_lambda_attempt": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_attempt_5_prb_table_v_same_source_capture_20260514.json",
+    "allen_dynes_smoke_test_input_table": "docs/topics/0.4_Superconductivity_Superfluids/Data/03_Research/allen_dynes_source_labeled_inputs.json",
+    "allen_dynes_smoke_test_artifact": "docs/topics/0.4_Superconductivity_Superfluids/Result/artifacts/0_4_superconductivity_superfluids_allen_dynes_verification.json"
+  },
+  "content_field_status": {
+    "doi": "present",
+    "canonical_or_harvest_url": "present",
+    "article_title": "present",
+    "journal_citation": "present",
+    "table_ii_omega_log_locator": "present",
+    "table_ii_omega2_locator": "present",
+    "table_v_lambda_locator": "present",
+    "primary_row_locator": "Nb3Sn I present",
+    "sibling_row_locator": "Nb3Sn II present",
+    "short_numeric_transcriptions": "present",
+    "session_local_pdf_path": "present",
+    "repo_mirrored_pdf_path": "absent_by_policy"
+  },
+  "captured_values_summary": {
+    "primary_row": {
+      "sample_label": "Nb3Sn I",
+      "table_tc_K": 17.97,
+      "omega_log_K": 127,
+      "omega2_sqrt_K": 177,
+      "lambda_ep": 1.78,
+      "mu_star_used_by_smoke_test": 0.13
+    },
+    "sibling_row": {
+      "sample_label": "Nb3Sn II",
+      "table_tc_K": 17.93,
+      "omega_log_K": 123,
+      "omega2_sqrt_K": 175,
+      "lambda_ep": 1.82,
+      "mu_star_used_by_smoke_test": 0.13
+    }
+  },
+  "policy_decision_request": {
+    "requested_decision": "Decide whether DOI + harvest URL + locators + short numeric transcriptions may substitute for repo-mirroring the APS PDF for this source package.",
+    "requested_scope": [
+      "topic handoff review for Nb3Sn same-source omega/lambda evidence",
+      "Allen-Dynes strict gate eligibility for the smoke-test rows",
+      "not automatic benchmark patch approval",
+      "not a general approval for unrelated APS PDFs"
+    ],
+    "decision_state": "accepted_for_topic_handoff_and_allen_dynes_strict_gate",
+    "reviewer_or_policy_authority": "Codex project policy decision at user request",
+    "decision_date": "2026-05-15"
+  },
+  "effect_if_accepted": {
+    "allen_dynes_strict_gate_rows_unblocked": [
+      "Nb3Sn I",
+      "Nb3Sn II if sibling row is allowed by sample-choice policy"
+    ],
+    "raw_mcmillan_gate_effect": "none; the raw McMillan artifact remains unchanged",
+    "benchmark_patch_effect": "none by itself; patch/rewrite still requires harness and sample-choice approval",
+    "claim_upgrade_effect": "none by itself; diagnostic fit is not a topic-level prediction claim"
+  },
+  "effect_before_acceptance": {
+    "allen_dynes_smoke_test_model_gate_status": "BLOCKED_PENDING_SOURCE_POLICY",
+    "strict_rows_counted": 0,
+    "diagnostic_rows_allowed": true,
+    "raw_mcmillan_model_gate_status": "FAIL"
+  },
+  "claim_boundary": "This request packet accepts the non-mirrored citation route only for the PhysRevB.27.1568 Nb3Sn source package and the Allen-Dynes strict smoke-test gate. It does not approve unrelated APS PDFs, benchmark row patches, or topic-level PASS claims."
+}

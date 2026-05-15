@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_field_live_capture_session_checklist",
+  "material": "Nb3Sn",
+  "field": "Theta_D_K_or_omega_log_K",
+  "checked_date": "2026-05-12",
+  "purpose": "Provide a linear session checklist for one real Nb3Sn phonon capture attempt so the operator can execute and record the pass step by step.",
+  "source_of_truth_bundle": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_live_capture_bundle.json",
+  "steps": [
+    {
+      "order": 1,
+      "action": "Open the PRB source for 10.1103/PhysRevB.27.1568 and navigate to the table or section expected to contain tabulated phonon moments.",
+      "success_marker": "A candidate table, figure, or section for Nb3Sn phonon moments is visible."
+    },
+    {
+      "order": 2,
+      "action": "Check whether the candidate evidence is row-specific for Nb3Sn rather than only family-level or abstract-level.",
+      "success_marker": "The evidence can be tied to a row, line, table entry, or figure entry for Nb3Sn."
+    },
+    {
+      "order": 3,
+      "action": "Fill the live capture attempt template with raw path, locator fields, quoted text, proxy type, and normalized_value_K.",
+      "success_marker": "All attempt-template fields are populated except none that are genuinely unavailable."
+    },
+    {
+      "order": 4,
+      "action": "Check the filled attempt against the acceptance gate.",
+      "success_marker": "The attempt satisfies every accepted_if_all_true condition and triggers none of the reject_if_any_true conditions."
+    },
+    {
+      "order": 5,
+      "action": "If accepted, copy the successful result into the Nb3Sn phonon numeric capture record and preserve the proxy convention note for downstream lambda review.",
+      "success_marker": "The numeric capture record now contains a row-specific phonon value with locator, raw path, quoted text, and explicit proxy type."
+    }
+  ],
+  "abort_conditions": [
+    "Only abstract text is available.",
+    "The candidate value cannot be tied to Nb3Sn specifically.",
+    "The proxy type cannot be identified.",
+    "The evidence has a number but no stable locator or no raw path."
+  ],
+  "current_status": "ready_for_one_real_capture_session",
+  "claim_boundary": "This checklist is an execution aid only. Completing it still does not approve a row patch unless the broader A15 review gates are satisfied."
+}

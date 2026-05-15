@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_source_record",
+  "source_role": "primary-source anchor for the Nb3Ge residual blocker row",
+  "source_label": "J. R. Gavaler, Superconductivity in Nb-Ge films above 22 K",
+  "primary_reference_url": "https://www.osti.gov/biblio/4362329",
+  "doi": "10.1063/1.1654966",
+  "publisher": "OSTI / U.S. Department of Energy",
+  "publication": "Applied Physics Letters 23(8), 480-482",
+  "published_date": "1973-10-15",
+  "checked_date": "2026-05-07",
+  "unit_convention": "Critical temperature reported in Kelvin; row-level proxy and coupling fields still require explicit downstream source capture.",
+  "benchmark_role": "primary-source anchor for locking the historical Tc row identity of Nb3Ge before any topic-local patch review",
+  "field_coverage_note": "Current publication record supports Tc scope near 22.3 K, but it does not yet demonstrate phonon-proxy, lambda_ep, or mu_star row coverage.",
+  "repository_use": [
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3ge/archive_dossier.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/candidate_local_source_anchors.json"
+  ],
+  "limitations": [
+    "This record pins the publication anchor only; it is not yet an archived row transcription.",
+    "Theta_D_K or omega_log_K, lambda_ep, and mu_star still require row-level capture from compatible literature or downstream sources."
+  ]
+}

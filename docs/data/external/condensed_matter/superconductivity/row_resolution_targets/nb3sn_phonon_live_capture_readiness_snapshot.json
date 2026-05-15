@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_field_live_capture_readiness_snapshot",
+  "material": "Nb3Sn",
+  "field": "Theta_D_K_or_omega_log_K",
+  "checked_date": "2026-05-12",
+  "purpose": "Summarize, in one short snapshot, whether the first live Nb3Sn phonon capture is operationally ready and what still blocks it from being completed.",
+  "readiness_state": "numeric_value_captured_pending_repo_archive_and_review",
+  "source_of_truth_bundle": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_live_capture_bundle.json",
+  "currently_ready_components": [
+    "first live target packet exists",
+    "critical blocker packet exists",
+    "execution packet exists",
+    "acceptance gate exists",
+    "live capture attempt template exists",
+    "numeric capture record shell exists"
+  ],
+  "current_blockers": [
+    "Repo-level PDF mirroring remains pending rights/archive decision.",
+    "The captured Nb3Sn I omega_log=127 K value still needs sample-choice review against the sibling Nb3Sn II=123 K value.",
+    "The captured phonon value still needs A15 same-family review with the abstract-level lambda=1.5 before any benchmark row patch."
+  ],
+  "next_operator_instruction": "Stop access probing for Nb3Sn phonon. The next useful move is review: decide whether Nb3Sn I omega_log=127 K is the benchmark-row phonon proxy, preserve Nb3Sn II=123 K as the sibling sample, and then review the lambda=1.5 capture under the same source-family convention.",
+  "attempt_2_strategy_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_attempt_2_strategy_packet.json",
+  "attempt_2_session_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_attempt_2_session_packet.json",
+  "attempt_2_session_checklist": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_attempt_2_session_checklist.json",
+  "attempt_2_access_candidate_report": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_attempt_2_access_candidate_report.json",
+  "claim_boundary": "This snapshot reports readiness only. It does not certify a value and does not unblock patch review."
+}

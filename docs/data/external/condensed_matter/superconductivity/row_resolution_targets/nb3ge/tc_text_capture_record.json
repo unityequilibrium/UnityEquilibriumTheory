@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_text_capture_record",
+  "source_role": "first-pass Tc text capture for the Nb3Ge residual row",
+  "material": "Nb3Ge",
+  "field": "Tc_observed",
+  "article_title": "Superconductivity in Nb-Ge films above 22 K",
+  "authors": [
+    "J. R. Gavaler"
+  ],
+  "source_title_or_doi": "10.1063/1.1654966",
+  "journal_citation": "Appl. Phys. Lett. 23(8), 480-482",
+  "publication_date": "1973-10-15",
+  "volume_issue_context": "Vol. 23, Iss. 8",
+  "capture_layer": "primary publication-record summary",
+  "page_or_section_locator": "OSTI record summary; bibliographic context Appl. Phys. Lett. 23(8), 480-482",
+  "row_locator": "Summary Tc statement",
+  "quoted_source_text": "films which remain superconducting up to 22.3 K",
+  "normalized_value_K": 22.3,
+  "unit_basis": "K",
+  "archived_raw_path": null,
+  "capture_status": "primary_record_text_captured_pending_raw_archive",
+  "transcription_note": "This record now captures Tc from the primary publication-record summary and bibliographic context. A raw page or mirrored PDF path is still required before archive-complete handoff.",
+  "checked_date": "2026-05-12",
+  "claim_boundary": "This text capture is evidence intake only. It does not approve topic-local row edits."
+}

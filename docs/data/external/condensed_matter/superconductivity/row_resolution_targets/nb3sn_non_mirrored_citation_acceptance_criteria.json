@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_non_mirrored_citation_acceptance_criteria",
+  "material": "Nb3Sn",
+  "field": "Theta_D_K_or_omega_log_K",
+  "checked_date": "2026-05-12",
+  "purpose": "Define the minimum evidence needed if the Nb3Sn APS harvest PDF is not mirrored into the repo.",
+  "policy_context": {
+    "repo_archive_policy_review": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_repo_archive_policy_review.json",
+    "policy_decision_stub": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_non_mirrored_citation_policy_decision_stub.json",
+    "reason_for_alternative_path": "The raw APS PDF remains session-local pending rights and archive policy, but the project may still accept a rights-safe citation and transcription package for review.",
+    "current_status": "criteria_defined_not_yet_accepted_as_policy"
+  },
+  "minimum_required_fields": [
+    "doi",
+    "canonical_url_or_harvest_url",
+    "article_title",
+    "journal_citation",
+    "page_or_section_locator",
+    "table_or_figure_identifier",
+    "row_locator",
+    "reported_proxy_type",
+    "normalized_value_K",
+    "sibling_or_alternative_values",
+    "short_quoted_source_text",
+    "transcription_note",
+    "reviewer_policy_decision"
+  ],
+  "current_nb3sn_phonon_evidence_status": {
+    "doi": "present",
+    "canonical_url_or_harvest_url": "present",
+    "article_title": "present",
+    "journal_citation": "present",
+    "page_or_section_locator": "present",
+    "table_or_figure_identifier": "present",
+    "row_locator": "present",
+    "reported_proxy_type": "present",
+    "normalized_value_K": "present",
+    "sibling_or_alternative_values": "present",
+    "short_quoted_source_text": "present",
+    "transcription_note": "present",
+    "reviewer_policy_decision": "not_accepted_pending_reviewer_or_project_policy"
+  },
+  "acceptance_state": {
+    "meets_content_fields": true,
+    "meets_policy_fields": false,
+    "can_replace_repo_mirrored_pdf_for_topic_handoff": false,
+    "why_not_yet": "The policy decision stub records that DOI plus URL plus locator plus short transcription has not yet been accepted in place of a mirrored raw PDF."
+  },
+  "allowed_if_accepted": [
+    "Treat the Nb3Sn phonon capture as source-reviewable without committing the APS PDF.",
+    "Keep the raw PDF path marked as session-local rather than repo-local.",
+    "Continue to block benchmark row edits until sample choice, lambda compatibility, and broader A15 patch gates are also cleared."
+  ],
+  "not_allowed_even_if_accepted": [
+    "Do not claim the raw PDF is archived in the repo.",
+    "Do not use this policy path for lambda_ep unless a separate lambda citation/transcription package satisfies its own field requirements.",
+    "Do not bypass the model-gate artifact or patch-review block decision."
+  ],
+  "claim_boundary": "This file defines acceptance criteria only. It does not approve the non-mirrored citation policy, does not certify the phonon row, and does not authorize a benchmark patch."
+}

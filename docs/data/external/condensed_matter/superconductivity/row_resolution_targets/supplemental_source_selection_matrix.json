@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_supplemental_source_selection_matrix",
+  "source_role": "recommends the first source family to use for each unresolved residual-row field",
+  "source_label": "Supplemental source selection matrix for Vanadium, Nb3Sn, and Nb3Ge",
+  "checked_date": "2026-05-07",
+  "materials": [
+    {
+      "material": "Vanadium (V)",
+      "field_selection": [
+        {
+          "field": "Tc_observed",
+          "recommended_source_family": "primary publication anchor first",
+          "recommended_reference": "10.1103/PhysRev.102.656",
+          "selection_reason": "The historical publication anchor should be exhausted first before promoting any secondary compilation as the benchmark row."
+        },
+        {
+          "field": "Theta_D_K",
+          "recommended_source_family": "element-level compilation candidate",
+          "recommended_reference": "10.1017/CBO9781139171090.060",
+          "selection_reason": "The Cambridge element table is the clearest currently pinned candidate for Debye-temperature-style metadata in elemental superconductors."
+        },
+        {
+          "field": "lambda_ep",
+          "recommended_source_family": "modern electron-phonon context candidate",
+          "recommended_reference": "10.1103/PhysRevB.101.094305",
+          "selection_reason": "This is the strongest currently pinned vanadium-specific electron-phonon candidate, although it is still not guaranteed to provide the exact benchmark row."
+        },
+        {
+          "field": "mu_star",
+          "recommended_source_family": "hold as family convention pending explicit source",
+          "recommended_reference": null,
+          "selection_reason": "No pinned vanadium source currently demonstrates a row-specific Coulomb pseudopotential entry."
+        }
+      ]
+    },
+    {
+      "material": "Nb3Sn",
+      "field_selection": [
+        {
+          "field": "Tc_observed",
+          "recommended_source_family": "primary publication anchor first",
+          "recommended_reference": "10.1103/PhysRev.95.1435",
+          "selection_reason": "The discovery publication already confirms Tc scope and should be used first for row identity."
+        },
+        {
+          "field": "Theta_D_K_or_omega_log_K",
+          "recommended_source_family": "A15 heat-capacity and phonon-moment table source",
+          "recommended_reference": "10.1103/PhysRevB.27.1568",
+          "selection_reason": "This source explicitly discusses phonon-spectrum moments and states that Debye temperature is generally a bad estimate of omega_log in A15 compounds."
+        },
+        {
+          "field": "lambda_ep",
+          "recommended_source_family": "A15 phonon and electron-phonon calculation source",
+          "recommended_reference": "10.1016/0378-4363(84)90167-0",
+          "selection_reason": "This source explicitly covers Nb3Sn and includes the Eliashberg function and electron-phonon parameter lambda."
+        },
+        {
+          "field": "mu_star",
+          "recommended_source_family": "hold as family convention pending explicit source",
+          "recommended_reference": null,
+          "selection_reason": "The currently pinned A15 sources do not yet explicitly demonstrate a row-specific mu_star value."
+        }
+      ]
+    },
+    {
+      "material": "Nb3Ge",
+      "field_selection": [
+        {
+          "field": "Tc_observed",
+          "recommended_source_family": "primary publication anchor first",
+          "recommended_reference": "10.1063/1.1654966",
+          "selection_reason": "The historical publication record already supports Tc scope and should be used first for row identity."
+        },
+        {
+          "field": "Theta_D_K_or_omega_log_K",
+          "recommended_source_family": "A15 heat-capacity and phonon-moment table source",
+          "recommended_reference": "10.1103/PhysRevB.27.1568",
+          "selection_reason": "This source explicitly discusses phonon-spectrum moments and the mismatch between Debye temperature and omega_log in A15 compounds."
+        },
+        {
+          "field": "lambda_ep",
+          "recommended_source_family": "A15 phonon and electron-phonon calculation source",
+          "recommended_reference": "10.1016/0378-4363(84)90167-0",
+          "selection_reason": "This source explicitly covers Nb3Ge and includes the Eliashberg function and electron-phonon parameter lambda."
+        },
+        {
+          "field": "mu_star",
+          "recommended_source_family": "hold as family convention pending explicit source",
+          "recommended_reference": null,
+          "selection_reason": "The currently pinned A15 sources do not yet explicitly demonstrate a row-specific mu_star value."
+        }
+      ]
+    }
+  ],
+  "claim_boundary": "This matrix chooses the next source family to inspect first. It does not certify the chosen source as field-compatible until archived and reviewed."
+}

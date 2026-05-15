@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_field_source_gap_matrix",
+  "source_role": "maps which residual-row fields can rely on the current primary publication anchor and which need supplemental source capture",
+  "source_label": "Field source-gap matrix for Vanadium, Nb3Sn, and Nb3Ge",
+  "checked_date": "2026-05-12",
+  "summary": {
+    "materials_total": 3,
+    "primary_publication_tc_scope_confirmed": 2,
+    "primary_publication_tc_scope_partial": 1,
+    "fields_requiring_supplemental_source": 7,
+    "fields_with_secondary_host_primary_anchor_text": 2,
+    "fields_with_secondary_numeric_hint_only": 0,
+    "fields_with_open_fulltext_numeric_capture": 2,
+    "fields_with_primary_host_abstract_numeric_capture": 2
+  },
+  "materials": [
+    {
+      "material": "Vanadium (V)",
+      "primary_anchor": "10.1103/PhysRev.102.656",
+      "fields": [
+        {
+          "field": "Tc_observed",
+          "source_gap_class": "primary_anchor_partial_only",
+          "next_source_need": "direct row capture or explicit table/figure confirmation from the anchored publication"
+        },
+        {
+          "field": "Theta_D_K",
+          "source_gap_class": "secondary_host_primary_anchor_text_captured",
+          "next_source_need": "primary article page confirmation for the captured Theta statement, then row or fit-context capture from the anchored publication"
+        },
+        {
+          "field": "lambda_ep",
+          "source_gap_class": "open_fulltext_numeric_capture_present",
+          "next_source_need": "compatibility review against the benchmark row and proxy convention, then primary or mirrored support if needed"
+        },
+        {
+          "field": "mu_star",
+          "source_gap_class": "open_fulltext_numeric_capture_present",
+          "next_source_need": "convention review against the benchmark row, then explicit row-level or family-level adoption rule"
+        }
+      ]
+    },
+    {
+      "material": "Nb3Sn",
+      "primary_anchor": "10.1103/PhysRev.95.1435",
+      "fields": [
+        {
+          "field": "Tc_observed",
+          "source_gap_class": "primary_anchor_scope_confirmed",
+          "next_source_need": "row locator or explicit statement capture from the anchored publication"
+        },
+        {
+          "field": "Theta_D_K_or_omega_log_K",
+          "source_gap_class": "supplemental_source_required",
+          "next_source_need": "compatible A15 source that explicitly defines the phonon proxy convention"
+        },
+        {
+          "field": "lambda_ep",
+          "source_gap_class": "primary_host_abstract_numeric_capture_present",
+          "next_source_need": "same-family convention review plus raw-page or table-level capture to confirm whether the abstract-level lambda can be adopted for the benchmark row"
+        },
+        {
+          "field": "mu_star",
+          "source_gap_class": "supplemental_source_or_family_convention_required",
+          "next_source_need": "row-specific citation or explicit family-level convention note"
+        }
+      ]
+    },
+    {
+      "material": "Nb3Ge",
+      "primary_anchor": "10.1063/1.1654966",
+      "fields": [
+        {
+          "field": "Tc_observed",
+          "source_gap_class": "primary_anchor_scope_confirmed",
+          "next_source_need": "row locator or explicit statement capture from the anchored publication"
+        },
+        {
+          "field": "Theta_D_K_or_omega_log_K",
+          "source_gap_class": "supplemental_source_required",
+          "next_source_need": "compatible A15 source that explicitly defines the phonon proxy convention"
+        },
+        {
+          "field": "lambda_ep",
+          "source_gap_class": "primary_host_abstract_numeric_capture_present",
+          "next_source_need": "same-family convention review plus raw-page or table-level capture to confirm whether the abstract-level lambda can be adopted for the benchmark row"
+        },
+        {
+          "field": "mu_star",
+          "source_gap_class": "supplemental_source_or_family_convention_required",
+          "next_source_need": "row-specific citation or explicit family-level convention note"
+        }
+      ]
+    }
+  ],
+  "claim_boundary": "This matrix classifies field-level source gaps only. It does not certify any value or approve any topic-local row patch."
+}

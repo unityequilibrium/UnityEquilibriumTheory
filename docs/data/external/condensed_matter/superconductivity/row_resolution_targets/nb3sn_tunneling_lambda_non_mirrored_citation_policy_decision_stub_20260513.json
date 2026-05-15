@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_non_mirrored_citation_policy_decision_stub",
+  "material": "Nb3Sn",
+  "fields": [
+    "lambda_ep",
+    "mu_star"
+  ],
+  "checked_date": "2026-05-13",
+  "purpose": "Hold the reviewer policy decision for whether the PhysRevB.22.1214 tunneling lambda and mu* capture may use a non-mirrored citation/transcription package instead of a repo-local APS PDF.",
+  "criteria_record": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_tunneling_lambda_non_mirrored_citation_acceptance_criteria_20260513.json",
+  "lambda_attempt_4_aps_tunneling_fulltext_capture": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_attempt_4_aps_tunneling_fulltext_capture_20260513.json",
+  "source_split_compatibility_policy_review": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_source_split_compatibility_policy_review_20260513.json",
+  "decision_state": {
+    "reviewer_policy_decision": "not_accepted_pending_reviewer_or_project_policy",
+    "decision_date": null,
+    "reviewer_or_policy_authority": null,
+    "accepts_non_mirrored_citation_for_topic_handoff": false,
+    "accepts_non_mirrored_citation_for_benchmark_patch": false
+  },
+  "evidence_packet_summary": {
+    "content_fields_complete": true,
+    "doi_url_locator_and_numeric_transcription_present": true,
+    "lambda_and_mu_star_uncertainties_present": true,
+    "raw_pdf_repo_mirrored": false,
+    "raw_pdf_session_local_only": true,
+    "source_split_policy_currently_allows_patch": false
+  },
+  "decision_requirements_before_acceptance": [
+    "Identify the project policy or reviewer authority allowed to accept non-mirrored source evidence for lambda_ep and mu_star.",
+    "Confirm that DOI, URL, page locator, figure/discussion locator, material locator, numeric values, uncertainties, and short transcription are sufficient for this source.",
+    "Record whether this acceptance only permits review use or also permits benchmark patch use.",
+    "Keep this archive decision distinct from source-split compatibility and numerical patch-gate approval."
+  ],
+  "current_effect": {
+    "topic_handoff_unblocked": false,
+    "archive_status": "blocked_pending_policy_decision",
+    "patch_review_allowed": false
+  },
+  "claim_boundary": "This stub deliberately does not accept the non-mirrored citation route. It exists so the missing decision is explicit and auditable."
+}

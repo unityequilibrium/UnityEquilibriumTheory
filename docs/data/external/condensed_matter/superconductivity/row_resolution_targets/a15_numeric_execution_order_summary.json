@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_pair_numeric_execution_order_summary",
+  "pair_label": "A15 residual blocker pair",
+  "materials": [
+    "Nb3Sn",
+    "Nb3Ge"
+  ],
+  "checked_date": "2026-05-12",
+  "purpose": "Summarize the recommended execution order across the four A15 numeric execution packets so the next live extraction pass can start from a single ordered handoff.",
+  "ordered_execution_passes": [
+    {
+      "order": 1,
+      "material": "Nb3Sn",
+      "field": "Theta_D_K_or_omega_log_K",
+      "execution_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_first_numeric_execution_packet.json",
+      "reason": "This pass now has a provisional Table II value, Nb3Sn I omega_log=127 K, so the next action is sample-choice, archive-policy, and same-family review rather than another access search."
+    },
+    {
+      "order": 2,
+      "material": "Nb3Sn",
+      "field": "lambda_ep",
+      "execution_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_first_numeric_execution_packet.json",
+      "reason": "This should follow immediately after the Nb3Sn phonon pass so the lambda capture can stay inside the same resolved source family and phonon convention; the existing abstract-level lambda=1.5 can guide the pass but still does not replace stronger archival capture."
+    },
+    {
+      "order": 3,
+      "material": "Nb3Ge",
+      "field": "Theta_D_K_or_omega_log_K",
+      "execution_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3ge_phonon_first_numeric_execution_packet.json",
+      "reason": "This is the weaker A15 row, but the phonon pass still comes before lambda so the proxy convention is explicit before the coupling field is filled."
+    },
+    {
+      "order": 4,
+      "material": "Nb3Ge",
+      "field": "lambda_ep",
+      "execution_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3ge_lambda_first_numeric_execution_packet.json",
+      "reason": "This should close the A15 pair execution sequence after the Nb3Ge phonon convention has been resolved; the existing abstract-level lambda=1.9 can guide the pass but still does not replace stronger archival capture."
+    }
+  ],
+  "claim_boundary": "This summary defines execution order only. It records the provisional Nb3Sn phonon capture but does not certify it as benchmark-ready and does not unblock patch review."
+}

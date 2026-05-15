@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_primary_host_lambda_numeric_capture_report",
+  "source_role": "records abstract-level host-primary lambda numerics for the unresolved A15 rows without promoting them to row-final archive status",
+  "source_label": "A15 primary-host lambda numeric capture report",
+  "checked_date": "2026-05-12",
+  "source_title_or_doi": "10.1016/0378-4363(84)90167-0",
+  "article_title": "The phonons in high Tc A15 compounds",
+  "journal_citation": "Physica B+C 126(1-3), 217-228",
+  "capture_layer": "ScienceDirect primary-host abstract text",
+  "materials": [
+    {
+      "material": "Nb3Sn",
+      "field": "lambda_ep",
+      "quoted_source_text": "The increase of lambda and thus of Tc between the iso-electronic Nb3Sn (lambda=1.5) and Nb3Ge (lambda=1.9) is attributed to a steric effect",
+      "normalized_value_dimensionless": 1.5,
+      "capture_status": "primary_host_abstract_numeric_capture_pending_same_family_review",
+      "use_boundary": "This is stronger than field-support-only text because the abstract gives a row-specific lambda value, but it still remains below raw-page or table-level archival capture."
+    },
+    {
+      "material": "Nb3Ge",
+      "field": "lambda_ep",
+      "quoted_source_text": "The increase of lambda and thus of Tc between the iso-electronic Nb3Sn (lambda=1.5) and Nb3Ge (lambda=1.9) is attributed to a steric effect",
+      "normalized_value_dimensionless": 1.9,
+      "capture_status": "primary_host_abstract_numeric_capture_pending_same_family_review",
+      "use_boundary": "This is stronger than field-support-only text because the abstract gives a row-specific lambda value, but it still remains below raw-page or table-level archival capture."
+    }
+  ],
+  "claim_boundary": "This report records primary-host abstract-level numeric capture only. It does not settle proxy convention compatibility and does not authorize topic-local row edits."
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_compatibility_review_packet",
+  "material": "Nb3Sn",
+  "checked_date": "2026-05-12",
+  "purpose": "Compare the current Nb3Sn working-row package against the best external text-layer, abstract-level numeric capture, and secondary-hint captures before any A15 patch review is allowed.",
+  "working_row_package": {
+    "material": "Nb3Sn",
+    "current_working_copy_label": "Matthias 1954",
+    "tc_observed_K": 18.3,
+    "theta_D_K": 280.0,
+    "lambda_ep": 1.8,
+    "mu_star": 0.13
+  },
+  "external_capture_package": {
+    "tc_text_capture_K": 18.0,
+    "tc_capture_status": "primary_host_text_captured_pending_raw_archive",
+    "phonon_table_capture_K": 127.0,
+    "phonon_sibling_table_capture_K": 123.0,
+    "phonon_hint_status": "table_layer_numeric_capture_pending_repo_archive_sample_choice_and_same_family_review",
+    "lambda_primary_host_abstract_numeric": 1.5,
+    "lambda_capture_status": "primary_host_abstract_numeric_capture_pending_same_family_review",
+    "lambda_secondary_hint": 1.46,
+    "lambda_hint_status": "primary_host_abstract_numeric_capture_present_with_secondary_hint_support",
+    "mu_star_family_hint_min": 0.1,
+    "mu_star_family_hint_max": 0.15,
+    "mu_star_hint_status": "family_range_only_not_row_specific"
+  },
+  "field_review": [
+    {
+      "field": "Tc_observed",
+      "status": "near_match_text_capture",
+      "working_value": 18.3,
+      "external_value": 18.0,
+      "interpretation": "The current discovery-paper text capture is close enough to support the same material family, but raw-page confirmation is still required before any row edit."
+    },
+    {
+      "field": "Theta_D_K_or_omega_log_K",
+      "status": "table_layer_numeric_capture_pending_review",
+      "working_value": 280.0,
+      "external_value": 127.0,
+      "interpretation": "The current package now has a row-specific Table II omega_log value for Nb3Sn I, with Nb3Sn II=123 K retained as a sibling sample. This is stronger than abstract proxy text, but it still needs sample-choice, repo archive, and same-family lambda review before benchmark use."
+    },
+    {
+      "field": "lambda_ep",
+      "status": "directionally_close_but_not_confirmed",
+      "working_value": 1.8,
+      "external_value": 1.5,
+      "interpretation": "The chosen ScienceDirect primary-host abstract gives lambda=1.5 for Nb3Sn. Sensitivity review with the newly captured omega_log=127 K predicts a lower Tc than observed and is worse than keeping lambda=1.8 with the captured phonon value, so lambda=1.5 should remain a review foothold rather than a row replacement."
+    },
+    {
+      "field": "mu_star",
+      "status": "family_range_contains_working_value",
+      "working_value": 0.13,
+      "external_value": [
+        0.1,
+        0.15
+      ],
+      "interpretation": "The working mu_star sits inside the current family-level hint range, so this field is less hostile than the phonon and lambda fields, but it is still not row-specific evidence."
+    }
+  ],
+  "compatibility_summary": {
+    "fields_consistent_enough_for_patch": [],
+    "fields_requiring_raw_page_confirmation": [
+      "Tc_observed"
+    ],
+    "fields_requiring_proxy_or_convention_review": [
+      "lambda_ep"
+    ],
+    "fields_with_preliminarily_tolerable_family_convention": [
+      "mu_star"
+    ]
+  },
+  "next_decisions": [
+    "Confirm the Tc statement from the discovery paper at raw-page level before treating the row identity as stable.",
+    "Review whether Nb3Sn I omega_log=127 K or sibling Nb3Sn II=123 K is the correct sample choice before any benchmark row edit.",
+    "Do not revise lambda_ep away from 1.8 until the primary-host abstract capture at 1.5 is strengthened by raw-page or table-level support and reconciled with the captured omega_log sensitivity result.",
+    "Allow mu_star to remain a family-level convention only if the chosen phonon and lambda captures land inside the same source family."
+  ],
+  "claim_boundary": "This packet is a compatibility-control artifact only. It does not certify a row edit and does not change the FAIL status of the raw McMillan baseline."
+}

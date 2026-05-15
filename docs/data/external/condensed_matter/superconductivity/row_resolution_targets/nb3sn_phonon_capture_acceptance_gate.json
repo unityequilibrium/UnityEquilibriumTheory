@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_field_capture_acceptance_gate",
+  "material": "Nb3Sn",
+  "field": "Theta_D_K_or_omega_log_K",
+  "checked_date": "2026-05-12",
+  "purpose": "Define the exact acceptance and rejection rules for the first live Nb3Sn phonon numeric capture so the operator can tell whether the pass actually succeeded.",
+  "accepted_if_all_true": [
+    "A row-specific phonon numeric value is present in normalized_value_K.",
+    "archived_raw_path is non-null.",
+    "page_or_section_locator is non-null.",
+    "table_or_figure_identifier is non-null.",
+    "row_locator is non-null.",
+    "quoted_source_text is non-null.",
+    "reported_proxy_type is explicitly named.",
+    "proxy_convention_note explains why the chosen phonon proxy is acceptable for the benchmark row."
+  ],
+  "reject_if_any_true": [
+    "Only abstract-level convention text is captured.",
+    "The capture cannot say whether the value is omega_log, Debye, or another phonon moment.",
+    "The capture has a value but no locator or no raw path.",
+    "The captured value comes from a family-level statement rather than a row-specific line, table, or figure."
+  ],
+  "minimum_pass_artifact_set": [
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/phonon_numeric_capture_record.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_first_numeric_execution_packet.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_critical_blocker_packet.json"
+  ],
+  "downstream_effect_of_acceptance": [
+    "The Nb3Sn phonon field would stop being the dominant A15 blocker.",
+    "The abstract-level lambda=1.5 capture could be reviewed against a resolved same-family phonon convention.",
+    "The first live A15 target packet would be considered completed and the pair would advance to the next execution step."
+  ],
+  "claim_boundary": "This gate defines acceptance only. Passing it still does not approve a row patch until the broader A15 review gates are also satisfied."
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_lambda_acquisition_readiness_snapshot",
+  "material": "Nb3Sn",
+  "field": "lambda_ep",
+  "checked_date": "2026-05-13",
+  "purpose": "Record the current readiness state for the next Nb3Sn row-level lambda acquisition pass after the phonon capture was completed but not patch-approved.",
+  "readiness_state": "same_source_lambda_captured_but_not_ready_for_benchmark_patch",
+  "why_ready_to_search": [
+    "The phonon value is no longer missing: Nb3Sn I omega_log=127 K is the weak primary candidate and Nb3Sn II=123 K is retained as a sibling comparison.",
+    "The lambda target source family is identified as 10.1016/0378-4363(84)90167-0.",
+    "The lambda row-level evidence target now defines required fields and stop rules."
+  ],
+  "why_not_ready_to_fill_capture_record": [
+    "A same-source APS full-text Table V lambda value has now been captured from PhysRevB.27.1568, matching the Table II omega_log source family.",
+    "The abstract lambda=1.5 value worsens the captured omega_log preview and remains below archival standard.",
+    "The evidence path for the phonon source remains blocked by archive policy, and any lambda source path will need its own archive or accepted non-mirrored policy record."
+  ],
+  "must_use_records": {
+    "lambda_row_level_evidence_target": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_row_level_evidence_target_20260513.json",
+    "lambda_execution_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_first_numeric_execution_packet.json",
+    "lambda_numeric_capture_record": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/lambda_numeric_capture_record.json",
+    "phonon_handoff_snapshot": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_review_handoff_snapshot_20260513.json",
+    "lambda_acquisition_attempt_log": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_acquisition_attempt_log_20260513.json"
+  },
+  "latest_attempt_status": "attempt_004_found_primary_fulltext_tunneling_lambda_1_8_support_but_requires_source_split_policy_review",
+  "attempt_2_mirror_search_report": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_attempt_2_mirror_search_report_20260513.json",
+  "attempt_3_alternate_source_scan": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_attempt_3_alternate_source_scan_20260513.json",
+  "attempt_4_aps_tunneling_fulltext_capture": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_attempt_4_aps_tunneling_fulltext_capture_20260513.json",
+  "attempt_5_prb_table_v_same_source_capture": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_attempt_5_prb_table_v_same_source_capture_20260514.json",
+  "same_source_lambda_patch_impact_preview": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_same_source_lambda_patch_impact_preview_20260514.json",
+  "source_split_compatibility_policy_review": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_source_split_compatibility_policy_review_20260513.json",
+  "search_targets": [
+    {
+      "priority": 1,
+      "target": "Full article tables or figures in 10.1016/0378-4363(84)90167-0",
+      "look_for": "Explicit Nb3Sn lambda value, alpha2F(omega) integral, or electron-phonon coupling table."
+    },
+    {
+      "priority": 2,
+      "target": "Full article discussion around Nb3Sn and Nb3Ge comparison",
+      "look_for": "Whether lambda=1.5 is tied to a specific sample, calculation convention, or row family."
+    },
+    {
+      "priority": 3,
+      "target": "Compatible A15 literature row if the primary source remains abstract-only",
+      "look_for": "Row-level lambda support that explicitly states compatibility with omega_log-style phonon moments."
+    }
+  ],
+  "stop_rules": [
+    "Stop without filling normalized_value_dimensionless if only abstract lambda=1.5 is found.",
+    "Stop without filling normalized_value_dimensionless if the only candidate is the inverse-fit diagnostic near lambda=3.11.",
+    "Stop without patch preview if the value cannot be tied to the same source family, sample family, phonon convention, or an explicit source-split policy."
+  ],
+  "next_operator_instruction": "Prefer the PhysRevB.27.1568 same-source Table V lambda capture over the tunneling source split. Next resolve non-mirrored archive policy and harness-convention review; do not patch while the same-source preview still fails the per-row gate.",
+  "claim_boundary": "This readiness snapshot prepares the next search pass only. It does not certify a lambda value and does not change the benchmark or model gate."
+}

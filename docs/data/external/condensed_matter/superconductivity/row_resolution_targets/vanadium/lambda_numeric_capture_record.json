@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_numeric_capture_record",
+  "source_role": "open-fulltext numeric lambda capture for the Vanadium residual row",
+  "material": "Vanadium (V)",
+  "field": "lambda_ep",
+  "source_title_or_doi": "10.1007/s10948-017-4295-y",
+  "capture_layer": "Open full text abstract",
+  "page_or_section_locator": "Abstract",
+  "row_locator": "Abstract lambda statement",
+  "quoted_source_text": "Despite the relatively large electron-phonon coupling constant (lambda = 0.91)",
+  "normalized_value_dimensionless": 0.91,
+  "unit_basis": "dimensionless",
+  "archived_raw_path": null,
+  "capture_status": "open_fulltext_numeric_capture_pending_compatibility_review",
+  "transcription_note": "This is an explicit vanadium-specific numeric capture from an open full-text Eliashberg study. It is stronger than a hint, but it still requires compatibility review before being treated as a benchmark-row replacement.",
+  "checked_date": "2026-05-11",
+  "claim_boundary": "This numeric capture is evidence intake only. It does not approve topic-local row edits."
+}

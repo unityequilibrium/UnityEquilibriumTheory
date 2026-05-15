@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_primary_capture_requirement_packet",
+  "source_role": "explicit requirement packet for what the first primary Vanadium page capture must contain",
+  "material": "Vanadium (V)",
+  "checked_date": "2026-05-11",
+  "purpose": "Turn the current Vanadium blocker into one primary-capture checklist that is specific enough for a later raw-page extraction pass.",
+  "primary_source_target": {
+    "source_title_or_doi": "10.1103/PhysRev.102.656",
+    "required_outcome": "page-confirmed primary capture for Tc and Theta-related row context"
+  },
+  "required_primary_capture_elements": [
+    {
+      "field": "bibliographic_identity",
+      "must_show": [
+        "page span visible or inferable from the primary source itself",
+        "article title clearly tied to the captured pages",
+        "source path or mirrored raw capture path"
+      ],
+      "failure_if_missing": "citation_integrity_gate remains blocked"
+    },
+    {
+      "field": "Tc_observed",
+      "must_show": [
+        "exact page or section locator",
+        "quoted text containing the Tc statement",
+        "normalized Tc value in Kelvin",
+        "enough row context to show that the value belongs to the same Vanadium sample family under review"
+      ],
+      "failure_if_missing": "row_identity_locked remains false"
+    },
+    {
+      "field": "Theta_D_K_or_proxy_context",
+      "must_show": [
+        "exact page or section locator",
+        "quoted text containing the Theta or normal-state fit statement",
+        "normalized value in Kelvin if explicit",
+        "clear note on whether the captured quantity is being used as the active phonon proxy"
+      ],
+      "failure_if_missing": "proxy_convention_locked remains false"
+    }
+  ],
+  "secondary_followup_after_primary_capture": [
+    {
+      "field": "lambda_ep",
+      "followup_need": "compare the open-fulltext lambda = 0.91 capture against the now page-confirmed Vanadium row context"
+    },
+    {
+      "field": "mu_star",
+      "followup_need": "compare the open-fulltext mu-star captures against the now page-confirmed Vanadium row context and decide whether the benchmark row may keep mu* = 0.11"
+    }
+  ],
+  "success_condition": "The packet succeeds only when a future capture can page-confirm the Vanadium primary source and close the Tc and Theta identity gap.",
+  "claim_boundary": "This packet defines capture requirements only. It does not certify any value and does not authorize a patch."
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_text_capture_record",
+  "source_role": "secondary-host Tc text capture for the Vanadium residual row",
+  "material": "Vanadium (V)",
+  "field": "Tc_observed",
+  "source_title_or_doi": "10.1103/PhysRev.102.656",
+  "capture_layer": "ResearchGate abstract mirror snippet",
+  "page_or_section_locator": "Abstract snippet",
+  "row_locator": "Abstract Tc statement",
+  "quoted_source_text": "The atomic heats of vanadium ... have been determined from just above the transition temperature, Tc=5.03 K, down to 1.1 K.",
+  "normalized_value_K": 5.03,
+  "unit_basis": "K",
+  "archived_raw_path": null,
+  "capture_status": "secondary_host_text_captured_pending_primary_raw_archive",
+  "transcription_note": "This record captures a Tc statement from a secondary-host abstract mirror. The primary article page still needs to be mirrored or directly captured before archive-complete handoff.",
+  "checked_date": "2026-05-11",
+  "claim_boundary": "This text capture is evidence intake only. It does not approve topic-local row edits."
+}

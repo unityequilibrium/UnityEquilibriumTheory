@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_compatibility_review_packet",
+  "source_role": "compatibility review packet for the unresolved Vanadium benchmark row",
+  "material": "Vanadium (V)",
+  "checked_date": "2026-05-11",
+  "working_row_reference": {
+    "tc_observed_K": 5.36,
+    "theta_D_K": 380.0,
+    "lambda_ep": 0.8,
+    "mu_star": 0.11
+  },
+  "external_capture_reference": {
+    "tc_text_capture_K": 5.03,
+    "theta_text_capture_K": 338.0,
+    "theta_text_capture_uncertainty_K": 5.0,
+    "lambda_numeric_capture": 0.91,
+    "mu_star_numeric_capture": 0.173,
+    "mu_star_alternative_capture": 0.15,
+    "mu_star_alternative_uncertainty": 0.03
+  },
+  "field_review": [
+    {
+      "field": "Tc_observed",
+      "compatibility_status": "nearby_but_not_matched",
+      "working_value": 5.36,
+      "external_value": 5.03,
+      "review_note": "The captured Tc is in the same low-temperature regime but does not numerically match the current working row. Page-confirmed primary capture is still required before any replacement decision."
+    },
+    {
+      "field": "Theta_D_K",
+      "compatibility_status": "material_difference_not_explained",
+      "working_value": 380.0,
+      "external_value": 338.0,
+      "review_note": "The captured Theta value differs materially from the working row. This blocks any proxy-lock or patch decision until the primary source page is confirmed and the row context is checked."
+    },
+    {
+      "field": "lambda_ep",
+      "compatibility_status": "conflicts_with_working_row",
+      "working_value": 0.8,
+      "external_value": 0.91,
+      "review_note": "The open-fulltext Eliashberg capture is explicit, but it does not support the older internal candidate near 0.6 and does not match the current working row either. This field now requires convention review rather than blind substitution."
+    },
+    {
+      "field": "mu_star",
+      "compatibility_status": "multiple_external_conventions_present",
+      "working_value": 0.11,
+      "external_value": 0.173,
+      "alternative_external_value": 0.15,
+      "review_note": "External captures point to higher mu-star conventions than the retained working value 0.11. A convention decision is required before the Vanadium row can enter patch review."
+    }
+  ],
+  "compatibility_summary": {
+    "fields_consistent_enough_for_patch": [],
+    "fields_requiring_primary_page_confirmation": [
+      "Tc_observed",
+      "Theta_D_K"
+    ],
+    "fields_requiring_convention_review": [
+      "lambda_ep",
+      "mu_star"
+    ]
+  },
+  "next_decisions": [
+    "Confirm the primary Vanadium page span and capture the exact Tc and Theta statements from the article itself.",
+    "Decide whether the open-fulltext Eliashberg lambda and mu-star values are compatible with the benchmark row's intended convention.",
+    "Do not apply the older internal lambda=0.6 patch preview unless a source family clearly supports it."
+  ],
+  "claim_boundary": "This packet is a compatibility review aid only. It does not approve any topic-local row patch."
+}

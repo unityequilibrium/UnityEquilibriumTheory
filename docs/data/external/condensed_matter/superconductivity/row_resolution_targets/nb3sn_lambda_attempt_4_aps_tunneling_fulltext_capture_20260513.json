@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_lambda_acquisition_attempt_report",
+  "material": "Nb3Sn",
+  "field": "lambda_ep",
+  "checked_date": "2026-05-13",
+  "attempt_id": "nb3sn-lambda-attempt-004",
+  "attempt_layer": "APS harvest full-text capture of experimental tunneling lambda source",
+  "purpose": "Follow the experimental tunneling source behind the support-only lambda_ep approximately 1.8 lead found in attempt 003.",
+  "source": {
+    "article_title": "Tunneling and the electron-phonon-coupled superconductivity of Nb3Sn",
+    "authors": "E. L. Wolf, J. Zasadzinski, G. B. Arnold, D. F. Moore, J. M. Rowell, M. R. Beasley",
+    "journal_citation": "Physical Review B 22(3), 1214-1217",
+    "publication_date": "1980-08-01",
+    "doi": "10.1103/PhysRevB.22.1214",
+    "primary_host_url": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.22.1214",
+    "fulltext_fetch_url": "https://harvest.aps.org/v2/journals/articles/10.1103/PhysRevB.22.1214/fulltext",
+    "session_local_raw_path": "C:/tmp/PhysRevB.22.1214.pdf",
+    "repo_mirrored_raw_path": null,
+    "repo_archive_policy_note": "The APS PDF was downloaded only to the session-local temp path for inspection. It was not mirrored into the repo."
+  },
+  "access_result": {
+    "harvest_fetch_status": "success",
+    "pdf_pages_extracted": 4,
+    "text_extraction_status": "success_with_minor_pdf_pointer_warnings",
+    "candidate_value_found": true
+  },
+  "candidate_numeric_capture": {
+    "normalized_value_dimensionless": 1.8,
+    "uncertainty_dimensionless": 0.15,
+    "mu_star_candidate": 0.16,
+    "mu_star_uncertainty": 0.03,
+    "page_or_section_locator": "article abstract on page 1214; detailed reanalysis discussion on page 1216",
+    "table_or_figure_identifier": "Figure 2 / proximity inversion discussion, not a table row",
+    "row_locator": "Nb3Sn material-level tunneling reanalysis; no Nb3Sn I/Nb3Sn II row family is stated",
+    "short_transcription": "lambda = 1.8 +/- 0.15; mu* = 0.16 +/- 0.03",
+    "derivation_context": "Reanalysis of published Nb3Sn electron-tunneling spectra using a surface proximity layer model for Nb3Sn-oxide-Pb junctions."
+  },
+  "compatibility_review": {
+    "matches_material": true,
+    "matches_current_working_lambda_value": true,
+    "matches_current_omega_log_source_family": false,
+    "matches_nb3sn_i_omega_log_127K_sample": false,
+    "why_not_same_family": "The current phonon numeric capture is from Weber 1983/1984 A15 phonon-moment tables, while this source is an experimental tunneling reanalysis of Nb3Sn junction spectra.",
+    "why_still_important": "This is stronger than attempt-3 support because it is a primary APS full-text source with explicit lambda and mu* values matching the current working row lambda."
+  },
+  "acceptance_gate_result": {
+    "can_fill_existing_weber_locked_lambda_numeric_capture_record": false,
+    "reason": "The current lambda capture shell is locked to the Weber A15 phonon source family and asks for compatibility with the Nb3Sn I omega_log=127 K candidate. This APS tunneling paper supports the working lambda value but does not establish same-sample or same-source-family compatibility.",
+    "can_support_future_source_split_policy_review": true,
+    "minimum_remaining_work": [
+      "Decide whether the benchmark row may combine Weber omega_log with Wolf/Zasadzinski tunneling lambda under an explicit source-split policy.",
+      "If yes, create a separate accepted non-mirrored citation or rights-safe archive policy record for PhysRevB.22.1214.",
+      "Then update the lambda capture record or create a distinct tunneling-lambda capture record rather than silently filling the Weber-locked shell."
+    ]
+  },
+  "capture_record_action": "leave_nb3sn_lambda_numeric_capture_record_null",
+  "benchmark_patch_action": "no_patch",
+  "next_operator_instruction": "Treat PhysRevB.22.1214 as a strong lambda=1.8 support source. The next decision is compatibility/source-split policy, not another abstract-only search.",
+  "claim_boundary": "This attempt report records a strong primary-source lambda lead. It does not certify the combined Nb3Sn benchmark row and does not change the verifier inputs."
+}

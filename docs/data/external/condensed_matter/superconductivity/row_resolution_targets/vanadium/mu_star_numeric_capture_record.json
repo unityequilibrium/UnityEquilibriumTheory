@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_numeric_capture_record",
+  "source_role": "open-fulltext numeric mu-star capture for the Vanadium residual row",
+  "material": "Vanadium (V)",
+  "field": "mu_star",
+  "source_title_or_doi": "10.1007/s10948-017-4295-y",
+  "capture_layer": "Open full text abstract and body text",
+  "page_or_section_locator": "Abstract and post-equation discussion",
+  "row_locator": "Abstract AD correspondence and body tunneling comparison",
+  "quoted_source_text": "the experimental value of the critical temperature for vanadium corresponds mu*_K = 0.173 ... results suggest a rather low value of the Coulomb pseudopotential: mu*_ZBW = 0.15 +- 0.03",
+  "normalized_value_dimensionless": 0.173,
+  "alternative_value_dimensionless": 0.15,
+  "alternative_value_uncertainty": 0.03,
+  "unit_basis": "dimensionless",
+  "archived_raw_path": null,
+  "capture_status": "open_fulltext_numeric_capture_pending_convention_review",
+  "transcription_note": "This open full-text source gives explicit vanadium-specific mu-star values, but they arise in an Eliashberg and tunneling-interpretation context and still require convention review before benchmark-row use.",
+  "checked_date": "2026-05-11",
+  "claim_boundary": "This numeric capture is evidence intake only. It does not approve topic-local row edits."
+}

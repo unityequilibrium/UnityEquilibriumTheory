@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_fulltext_table_target_map",
+  "source_role": "maps the most likely full-text table or section targets for the next A15 numeric extraction pass",
+  "source_label": "A15 full-text table target map",
+  "checked_date": "2026-05-11",
+  "materials": [
+    {
+      "material": "Nb3Sn",
+      "targets": [
+        {
+          "field": "Tc_observed",
+          "source_title_or_doi": "10.1103/PhysRev.95.1435",
+          "host_layer": "APS abstract and full article",
+          "target_section_hint": "Abstract first, then discovery discussion or measurement summary in full text",
+          "why_this_section": "The abstract already exposes the Tc statement; the full-text pass should now confirm exact page context and row identity."
+        },
+        {
+          "field": "Theta_D_K_or_omega_log_K",
+          "source_title_or_doi": "10.1103/PhysRevB.27.1568",
+          "host_layer": "OSTI summary and full PRB article",
+          "target_section_hint": "Tables or sections containing experimentally determined moments of the phonon spectra, especially omega_log, because the abstract says these values are tabulated",
+          "why_this_section": "The primary-host abstract explicitly says phonon-spectrum moments including omega_log are included and tabulated, and also says Debye temperature is generally a bad estimate of omega_log."
+        },
+        {
+          "field": "lambda_ep",
+          "source_title_or_doi": "10.1016/0378-4363(84)90167-0",
+          "host_layer": "ScienceDirect abstract and full article",
+          "target_section_hint": "Sections, tables, or figures reporting alpha^2F(omega), full phonon dispersion, or explicit lambda values for Nb3Sn",
+          "why_this_section": "The abstract confirms that Nb3Sn-specific electron-phonon calculations and lambda are present, so the next pass should target the numeric presentation layer."
+        }
+      ]
+    },
+    {
+      "material": "Nb3Ge",
+      "targets": [
+        {
+          "field": "Tc_observed",
+          "source_title_or_doi": "10.1063/1.1654966",
+          "host_layer": "Publication record and full article",
+          "target_section_hint": "Summary statement first, then the film or sample description in full text",
+          "why_this_section": "The record layer already exposes the 22.3 K statement; the full-text pass should now confirm page context and sample identity."
+        },
+        {
+          "field": "Theta_D_K_or_omega_log_K",
+          "source_title_or_doi": "10.1103/PhysRevB.27.1568",
+          "host_layer": "OSTI summary and full PRB article",
+          "target_section_hint": "Tables or sections containing experimentally determined moments of the phonon spectra, especially omega_log, because the abstract says these values are tabulated",
+          "why_this_section": "The same A15 phonon-spectrum source should be checked for Nb3Ge row-level moments once the full table is visible, because the primary-host abstract says the moments are tabulated."
+        },
+        {
+          "field": "lambda_ep",
+          "source_title_or_doi": "10.1016/0378-4363(84)90167-0",
+          "host_layer": "ScienceDirect abstract and full article",
+          "target_section_hint": "Sections, tables, or figures reporting alpha^2F(omega), full phonon dispersion, or explicit lambda values for Nb3Ge",
+          "why_this_section": "The abstract confirms that Nb3Ge-specific electron-phonon calculations and lambda are present, so the next pass should target the numeric presentation layer."
+        }
+      ]
+    }
+  ],
+  "claim_boundary": "This map only narrows where to look in full text. It does not certify any value until a row-specific capture is archived."
+}

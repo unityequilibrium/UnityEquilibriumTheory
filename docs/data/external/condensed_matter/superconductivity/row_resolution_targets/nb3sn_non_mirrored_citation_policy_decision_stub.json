@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_non_mirrored_citation_policy_decision_stub",
+  "material": "Nb3Sn",
+  "field": "Theta_D_K_or_omega_log_K",
+  "checked_date": "2026-05-12",
+  "purpose": "Hold the reviewer policy decision for whether the Nb3Sn phonon capture may use a non-mirrored citation and transcription package instead of a repo-local APS PDF.",
+  "criteria_record": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_non_mirrored_citation_acceptance_criteria.json",
+  "repo_archive_policy_review": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_repo_archive_policy_review.json",
+  "decision_state": {
+    "reviewer_policy_decision": "not_accepted_pending_reviewer_or_project_policy",
+    "decision_date": null,
+    "reviewer_or_policy_authority": null,
+    "accepts_non_mirrored_citation_for_topic_handoff": false,
+    "accepts_non_mirrored_citation_for_benchmark_patch": false
+  },
+  "evidence_packet_summary": {
+    "content_fields_complete": true,
+    "doi_url_locator_and_table_present": true,
+    "short_transcription_present": true,
+    "raw_pdf_repo_mirrored": false,
+    "raw_pdf_session_local_only": true
+  },
+  "decision_requirements_before_acceptance": [
+    "Identify the project policy or reviewer authority allowed to accept non-mirrored source evidence.",
+    "Confirm that DOI, URL, page locator, table identifier, row locator, normalized value, sibling value, and short quote are sufficient for this topic's source-review standard.",
+    "Record whether the accepted policy applies only to phonon evidence or also to other fields such as lambda_ep.",
+    "Keep the decision distinct from benchmark patch approval."
+  ],
+  "current_effect": {
+    "topic_handoff_unblocked": false,
+    "archive_status": "blocked_pending_policy_decision",
+    "patch_review_allowed": false
+  },
+  "claim_boundary": "This stub deliberately does not accept the non-mirrored citation route. It exists so the missing decision is explicit and auditable."
+}

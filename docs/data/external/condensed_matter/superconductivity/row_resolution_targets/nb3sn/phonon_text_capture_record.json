@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_text_capture_record",
+  "source_role": "abstract-level phonon proxy convention capture for the Nb3Sn residual row",
+  "material": "Nb3Sn",
+  "field": "Theta_D_K_or_omega_log_K",
+  "article_title": "Heat-capacity analysis of a large number of A15-type compounds",
+  "source_title_or_doi": "10.1103/PhysRevB.27.1568",
+  "journal_citation": "Phys. Rev. B 27, 1568",
+  "publication_date": "1983-02-01",
+  "capture_layer": "PRB primary-host abstract text",
+  "page_or_section_locator": "Abstract; bibliographic context Phys. Rev. B 27, 1568",
+  "row_locator": "Abstract statements on tabulated phonon moments and proxy convention",
+  "quoted_source_text": "Experimentally determined moments of the phonon spectra (wbar, wbar2, omega_log) are included in the analysis. Values are tabulated. The Debye temperature is generally a bad estimate of omega_log.",
+  "reported_proxy_type": "omega_log_preferred_over_debye",
+  "normalized_value_K": null,
+  "unit_basis": "K",
+  "archived_raw_path": null,
+  "capture_status": "primary_host_proxy_text_captured_pending_row_value",
+  "transcription_note": "This record now captures both the proxy-convention statement and the primary-host abstract note that phonon moments including omega_log are tabulated. A row-specific omega_log or related phonon value is still missing.",
+  "checked_date": "2026-05-12",
+  "claim_boundary": "This text capture is evidence intake only. It does not approve topic-local row edits."
+}

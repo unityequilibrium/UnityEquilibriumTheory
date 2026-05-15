@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_remote_a15_search_expansion_report",
+  "checked_date": "2026-05-12",
+  "scope": "A15 remote search expansion beyond the first abstract pass",
+  "findings": [
+    {
+      "source_title_or_doi": "10.1103/PhysRevB.27.1568",
+      "host": "OSTI summary plus APS abstract",
+      "status": "search_layer_strengthened",
+      "evidence_note": "The OSTI summary reinforces that experimentally determined phonon moments are tabulated and also exposes the family-level relation lambda = 0.175 eta +/- 0.2 across A15 compounds, but it still does not provide a row-specific Nb3Sn or Nb3Ge numeric capture inside the repo."
+    },
+    {
+      "source_title_or_doi": "10.1016/0378-4363(84)90167-0",
+      "host": "ScienceDirect abstract",
+      "status": "search_layer_still_support_only",
+      "evidence_note": "The abstract continues to confirm Nb3Sn and Nb3Ge calculations with alpha^2F(omega) and lambda, but the current workflow still lacks a captured table or figure value."
+    }
+  ],
+  "practical_result": "Remote search expansion improves confidence about the relevance of the chosen A15 source family, but it still stops short of row-specific numeric capture.",
+  "claim_boundary": "This report records strengthened search-layer evidence only. It does not certify any numeric value and does not unblock patch review."
+}

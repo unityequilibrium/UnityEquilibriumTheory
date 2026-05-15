@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_tc_capture_stub",
+  "source_role": "capture stub for the first A15 extraction pass focused on Tc_observed",
+  "source_label": "A15 Tc capture stub for Nb3Sn and Nb3Ge",
+  "checked_date": "2026-05-07",
+  "materials": [
+    {
+      "material": "Nb3Sn",
+      "preferred_reference": "10.1103/PhysRev.95.1435",
+      "field": "Tc_observed",
+      "capture_stub": {
+        "source_title_or_doi": "10.1103/PhysRev.95.1435",
+        "page_or_section_locator": "Abstract; bibliographic context Phys. Rev. 95, 1435",
+        "table_or_figure_identifier": "Abstract",
+        "row_locator": "Abstract Tc statement",
+        "quoted_source_text": "transition temperature of Nb3Sn at 18 K",
+        "capture_record_path": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/tc_text_capture_record.json",
+        "archived_raw_path": null,
+        "normalized_value_K": 18.0,
+        "transcription_note": "Tc value captured from the APS primary-host abstract and bibliographic context; raw page or PDF archive path is still missing.",
+        "capture_status": "primary_host_text_captured_pending_raw_archive"
+      },
+      "success_condition": "One explicit Tc statement or row is captured from the primary publication anchor and normalized in Kelvin."
+    },
+    {
+      "material": "Nb3Ge",
+      "preferred_reference": "10.1063/1.1654966",
+      "field": "Tc_observed",
+      "capture_stub": {
+        "source_title_or_doi": "10.1063/1.1654966",
+        "page_or_section_locator": "OSTI record summary; bibliographic context Appl. Phys. Lett. 23(8), 480-482",
+        "table_or_figure_identifier": "Record summary",
+        "row_locator": "Summary Tc statement",
+        "quoted_source_text": "films which remain superconducting up to 22.3 K",
+        "capture_record_path": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3ge/tc_text_capture_record.json",
+        "archived_raw_path": null,
+        "normalized_value_K": 22.3,
+        "transcription_note": "Tc value captured from the primary publication-record summary and bibliographic context; raw page or PDF archive path is still missing.",
+        "capture_status": "primary_record_text_captured_pending_raw_archive"
+      },
+      "success_condition": "One explicit Tc statement or row is captured from the primary publication anchor and normalized in Kelvin."
+    }
+  ],
+  "claim_boundary": "This stub is for the first Tc extraction pass only. Filling it does not yet approve topic-local row edits."
+}

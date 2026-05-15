@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_numeric_capture_record",
+  "source_role": "targeted numeric capture record for the Nb3Sn lambda field",
+  "material": "Nb3Sn",
+  "field": "lambda_ep",
+  "article_title": "Heat-capacity analysis of a large number of A15-type compounds",
+  "source_title_or_doi": "10.1103/PhysRevB.27.1568",
+  "journal_citation": "Phys. Rev. B 27, 1568-1585",
+  "publication_date": "1983-02-01",
+  "capture_layer": "APS harvest PDF table extraction",
+  "page_or_section_locator": "PDF page 9; printed page 1576",
+  "table_or_figure_identifier": "Table V",
+  "row_locator": "Nb3Sn I row; sibling Nb3Sn II row also present",
+  "quoted_source_text": "Table V row Nb3Sn I includes lambda=1.78; sibling Nb3Sn II includes lambda=1.82",
+  "normalized_value_dimensionless": 1.78,
+  "sibling_or_alternative_values": [
+    {
+      "row_locator": "Nb3Sn II row",
+      "normalized_value_dimensionless": 1.82,
+      "note": "Same table reports a second Nb3Sn sample. Kept as an explicit sibling value rather than silently averaging."
+    }
+  ],
+  "unit_basis": "dimensionless",
+  "archived_raw_path": "C:/tmp/PhysRevB.27.1568.pdf",
+  "archive_note": "Session-local APS harvest PDF path only; repo-level mirroring remains pending rights/archive decision.",
+  "proxy_compatibility_note": "This numeric capture is now compatible with the same PhysRevB.27.1568 source family and Nb3Sn I/Nb3Sn II sample split used in the phonon capture record. It supersedes the earlier Weber-abstract lambda target for the current same-source review path.",
+  "row_level_evidence_target": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_row_level_evidence_target_20260513.json",
+  "acquisition_attempt_log": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_acquisition_attempt_log_20260513.json",
+  "source_split_compatibility_policy_review": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_source_split_compatibility_policy_review_20260513.json",
+  "same_source_lambda_attempt_5": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_attempt_5_prb_table_v_same_source_capture_20260514.json",
+  "same_source_patch_impact_preview": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_same_source_lambda_patch_impact_preview_20260514.json",
+  "capture_status": "numeric_value_captured_from_same_aps_harvest_pdf_pending_repo_archive_and_patch_review",
+  "transcription_note": "Attempt 005 found a same-source Table V lambda value for the Nb3Sn I row in PhysRevB.27.1568, matching the Table II omega_log source family. The value is captured for review but does not authorize a benchmark patch because archive policy, sample lock, and row-gate impact remain unresolved.",
+  "checked_date": "2026-05-14",
+  "claim_boundary": "This record captures a row-specific same-source lambda value from the APS harvest PDF. It still does not approve a benchmark row patch until repo archive policy, sample choice, and A15 patch gates are completed."
+}

@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_lambda_acquisition_attempt_log",
+  "material": "Nb3Sn",
+  "field": "lambda_ep",
+  "checked_date": "2026-05-13",
+  "purpose": "Record the first post-readiness attempt to acquire row-level Nb3Sn lambda evidence after the phonon capture handoff.",
+  "attempts": [
+    {
+      "attempt_id": "nb3sn-lambda-attempt-001",
+      "attempt_layer": "web search plus ScienceDirect primary-host access check",
+      "target_source_title_or_doi": "10.1016/0378-4363(84)90167-0",
+      "target_article_title": "The phonons in high Tc A15 compounds",
+      "access_results": [
+        {
+          "source": "ScienceDirect search result",
+          "url": "https://www.sciencedirect.com/science/article/pii/0378436384901670",
+          "result": "abstract_layer_reachable_in_search_result",
+          "lambda_content_found": "abstract reports Nb3Sn lambda=1.5 and Nb3Ge lambda=1.9"
+        },
+        {
+          "source": "ScienceDirect page fetch",
+          "url": "https://www.sciencedirect.com/science/article/pii/0378436384901670",
+          "result": "fetch_forbidden_403",
+          "lambda_content_found": "no full-text table or figure layer reached"
+        }
+      ],
+      "candidate_values_seen": [
+        {
+          "value_dimensionless": 1.5,
+          "source_layer": "primary-host abstract",
+          "acceptance_result": "rejected_for_capture_record_fill",
+          "reason": "Already known abstract-only value; below row-level archival standard and blocked by compatibility gap review."
+        }
+      ],
+      "acceptance_gate_result": "failed_row_level_lambda_capture",
+      "stop_rule_triggered": "only_abstract_lambda_seen",
+      "capture_record_action": "leave_normalized_value_dimensionless_null",
+      "notes": "No row-level lambda table, figure, alpha2F-derived value, or sample-family-specific full-text statement was captured in this attempt."
+    }
+    ,
+    {
+      "attempt_id": "nb3sn-lambda-attempt-002",
+      "attempt_layer": "open-web mirror and citation search",
+      "target_source_title_or_doi": "10.1016/0378-4363(84)90167-0",
+      "target_article_title": "The phonons in high Tc A15 compounds",
+      "attempt_report": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_attempt_2_mirror_search_report_20260513.json",
+      "access_results": [
+        {
+          "source": "Open web search",
+          "result": "primary abstract plus citation-only PDFs found",
+          "lambda_content_found": "No row-level lambda table, figure, or alpha2F layer found."
+        }
+      ],
+      "candidate_values_seen": [
+        {
+          "value_dimensionless": 1.5,
+          "source_layer": "ScienceDirect abstract",
+          "acceptance_result": "rejected_for_capture_record_fill",
+          "reason": "Already known abstract-only value; still blocked by compatibility gap review."
+        }
+      ],
+      "acceptance_gate_result": "failed_row_level_lambda_capture",
+      "stop_rule_triggered": "mirror_search_found_only_abstract_or_citation_layer",
+      "capture_record_action": "leave_normalized_value_dimensionless_null",
+      "notes": "Search found citation-only PDFs and bibliographic surfaces but no usable Weber 1984 full-text table or row-level lambda layer."
+    },
+    {
+      "attempt_id": "nb3sn-lambda-attempt-003",
+      "attempt_layer": "alternate open-access source scan",
+      "target_source_title_or_doi": "compatible Nb3Sn lambda literature beyond 10.1016/0378-4363(84)90167-0",
+      "attempt_report": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_attempt_3_alternate_source_scan_20260513.json",
+      "access_results": [
+        {
+          "source": "Scientific Reports open-access article",
+          "result": "general experimental lambda support found",
+          "lambda_content_found": "lambda_ep approximately 1.8 for Nb3Sn"
+        },
+        {
+          "source": "PMC/search-result table and thesis snippets",
+          "result": "leads found but not inspected as source rows",
+          "lambda_content_found": "lambda=1.8 lead and alpha2F dataset lead"
+        }
+      ],
+      "candidate_values_seen": [
+        {
+          "value_dimensionless": 1.8,
+          "source_layer": "open-access modeling/review article or search lead",
+          "acceptance_result": "rejected_for_capture_record_fill",
+          "reason": "Useful support for retaining working lambda, but not row-level evidence tied to Nb3Sn I omega_log=127 K with locator and sample-family note."
+        }
+      ],
+      "acceptance_gate_result": "failed_row_level_lambda_capture_but_found_alternate_support",
+      "stop_rule_triggered": "alternate_sources_support_current_lambda_but_do_not_meet_row_level_capture_standard",
+      "capture_record_action": "leave_normalized_value_dimensionless_null",
+      "notes": "Do not fill the capture record from the general lambda=1.8 support. Follow the cited experimental alpha2F/tunneling/specific-heat sources next."
+    },
+    {
+      "attempt_id": "nb3sn-lambda-attempt-004",
+      "attempt_layer": "APS harvest full-text capture of experimental tunneling lambda source",
+      "target_source_title_or_doi": "10.1103/PhysRevB.22.1214",
+      "target_article_title": "Tunneling and the electron-phonon-coupled superconductivity of Nb3Sn",
+      "attempt_report": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_attempt_4_aps_tunneling_fulltext_capture_20260513.json",
+      "access_results": [
+        {
+          "source": "APS harvest full text",
+          "url": "https://harvest.aps.org/v2/journals/articles/10.1103/PhysRevB.22.1214/fulltext",
+          "result": "session-local PDF captured and text-extracted",
+          "lambda_content_found": "explicit Nb3Sn tunneling reanalysis value lambda=1.8 +/- 0.15 with mu*=0.16 +/- 0.03"
+        }
+      ],
+      "candidate_values_seen": [
+        {
+          "value_dimensionless": 1.8,
+          "uncertainty_dimensionless": 0.15,
+          "source_layer": "APS full-text tunneling analysis",
+          "acceptance_result": "rejected_for_existing_weber_locked_capture_record_fill",
+          "reason": "Strong primary-source support for the current working lambda, but not the same Weber source family or Nb3Sn I omega_log=127 K sample context."
+        }
+      ],
+      "acceptance_gate_result": "failed_existing_capture_fill_but_found_primary_fulltext_lambda_support",
+      "stop_rule_triggered": "source_family_mismatch_requires_source_split_policy_review",
+      "capture_record_action": "leave_normalized_value_dimensionless_null",
+      "notes": "This attempt changes the blocker from numeric discovery to compatibility policy: decide whether a Weber omega_log plus Wolf/Zasadzinski tunneling lambda row can be accepted under an explicit source-split rule."
+    },
+    {
+      "attempt_id": "nb3sn-lambda-attempt-005",
+      "attempt_layer": "same-source APS harvest PDF table extraction",
+      "target_source_title_or_doi": "10.1103/PhysRevB.27.1568",
+      "target_article_title": "Heat-capacity analysis of a large number of A15-type compounds",
+      "attempt_report": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_attempt_5_prb_table_v_same_source_capture_20260514.json",
+      "access_results": [
+        {
+          "source": "Existing APS harvest full text",
+          "url": "https://harvest.aps.org/v2/journals/articles/10.1103/PhysRevB.27.1568/fulltext",
+          "result": "session-local PDF re-inspected and Table V extracted",
+          "lambda_content_found": "Nb3Sn I lambda=1.78 and Nb3Sn II lambda=1.82 in the same source family as the Table II omega_log values"
+        }
+      ],
+      "candidate_values_seen": [
+        {
+          "value_dimensionless": 1.78,
+          "source_layer": "APS full-text Table V",
+          "acceptance_result": "accepted_for_capture_record_review_but_not_patch",
+          "reason": "Same source family and same Nb3Sn I row as the omega_log capture; benchmark patch remains blocked by archive policy and row-gate impact."
+        }
+      ],
+      "acceptance_gate_result": "same_source_lambda_capture_record_filled_but_patch_blocked",
+      "stop_rule_triggered": "patch_gate_still_failed",
+      "capture_record_action": "fill_normalized_value_dimensionless_with_nb3sn_i_lambda_1_78",
+      "notes": "This attempt supersedes source-split lambda as the preferred review path because it gives a same-source Table V lambda value."
+    }
+  ],
+  "current_status": "five_attempts_logged_same_source_lambda_capture_filled_but_patch_blocked",
+  "next_allowed_move": "Resolve non-mirrored citation/archive policy for PhysRevB.27.1568 and decide whether the harness should use an Allen-Dynes omega_log path before any Nb3Sn row patch.",
+  "source_split_compatibility_policy_review": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_source_split_compatibility_policy_review_20260513.json",
+  "same_source_lambda_attempt_5": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_attempt_5_prb_table_v_same_source_capture_20260514.json",
+  "claim_boundary": "This log records an acquisition attempt only. It does not certify lambda and does not change the benchmark row or model gate."
+}

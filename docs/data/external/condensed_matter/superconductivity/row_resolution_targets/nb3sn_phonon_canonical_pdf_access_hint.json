@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_field_canonical_pdf_access_hint",
+  "material": "Nb3Sn",
+  "field": "Theta_D_K_or_omega_log_K",
+  "checked_date": "2026-05-12",
+  "purpose": "Record the strongest currently observed hint that the canonical APS host exposes a direct PDF access path for the chosen Nb3Sn phonon source.",
+  "source_anchor": {
+    "article_title": "Heat-capacity analysis of a large number of A15-type compounds",
+    "source_title_or_doi": "10.1103/PhysRevB.27.1568",
+    "host": "APS Phys. Rev. B abstract page"
+  },
+  "evidence_basis": [
+    "The current APS result surface for 10.1103/PhysRevB.27.1568 explicitly shows a PDF entry on the article result card.",
+    "Other APS Phys. Rev. B result surfaces in the same host family expose direct PDF links under the stable pattern journals.aps.org/prb/pdf/<doi>."
+  ],
+  "hint": {
+    "observed_signal": "The APS abstract result surface visibly exposes a PDF entry point for Phys. Rev. B 27, 1568.",
+    "likely_direct_pdf_url": "https://journals.aps.org/prb/pdf/10.1103/PhysRevB.27.1568",
+    "practical_use": "Attempt-002 should prefer this APS-host PDF path over repeating summary-layer confirmation routes if the PDF can be reached in the live session."
+  },
+  "current_limit": "This is still only an access hint. No table-layer phonon value has yet been captured from the PDF path.",
+  "claim_boundary": "This file records a likely canonical PDF access path only. It does not certify any numeric value and does not unblock patch review."
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_text_capture_record",
+  "source_role": "abstract-level electron-phonon field support capture for the Vanadium residual row",
+  "material": "Vanadium (V)",
+  "field": "lambda_ep",
+  "source_title_or_doi": "10.1103/PhysRevB.101.094305",
+  "capture_layer": "APS abstract text",
+  "page_or_section_locator": "Abstract",
+  "row_locator": "Abstract electron-phonon interaction statement",
+  "quoted_source_text": "the large thermal smearings from the atomic disorder and the Fermi-Dirac distribution reduced the effect of this ETT on the electron-phonon interactions.",
+  "secondary_hint_value_dimensionless": 0.91,
+  "normalized_value_dimensionless": null,
+  "unit_basis": "dimensionless",
+  "archived_raw_path": null,
+  "capture_status": "lambda_secondary_numeric_hint_captured_pending_row_value",
+  "transcription_note": "This record confirms field-level electron-phonon interaction relevance for vanadium and captures a secondary lambda hint of 0.91, but it still does not provide a row-specific benchmark value.",
+  "checked_date": "2026-05-11",
+  "claim_boundary": "This text capture is evidence intake only. It does not approve topic-local row edits."
+}

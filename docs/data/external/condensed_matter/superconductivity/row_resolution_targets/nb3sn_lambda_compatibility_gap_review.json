@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_lambda_compatibility_gap_review",
+  "material": "Nb3Sn",
+  "field": "lambda_ep",
+  "checked_date": "2026-05-12",
+  "purpose": "Explain why the abstract-level lambda=1.5 capture cannot be promoted after the Table II omega_log capture, and define the next row-level lambda evidence needed.",
+  "inputs_reviewed": {
+    "phonon_capture_record": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/phonon_numeric_capture_record.json",
+    "sample_choice_review": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_sample_choice_review.json",
+    "phonon_lambda_sensitivity_review": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_lambda_sensitivity_review.json",
+    "single_field_patch_impact_preview": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_single_field_patch_impact_preview.json",
+    "lambda_execution_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_first_numeric_execution_packet.json",
+    "lambda_numeric_capture_record": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/lambda_numeric_capture_record.json"
+  },
+  "current_numeric_context": {
+    "working_row_lambda_ep": 1.8,
+    "abstract_lambda_ep": 1.5,
+    "secondary_lambda_hint": 1.46,
+    "preferred_phonon_candidate": {
+      "sample": "Nb3Sn I",
+      "omega_log_K": 127,
+      "decision_strength": "weak_preference_not_source_lock"
+    },
+    "sibling_phonon_candidate": {
+      "sample": "Nb3Sn II",
+      "omega_log_K": 123
+    }
+  },
+  "directional_mcmillan_diagnostics": [
+    {
+      "case_id": "omega127_with_working_lambda_1_8",
+      "predicted_tc_K": 12.97485428434252,
+      "relative_error_percent": 29.099156916161086,
+      "diagnostic": "best current captured-phonon preview, still above the per-row gate"
+    },
+    {
+      "case_id": "omega127_with_abstract_lambda_1_5",
+      "predicted_tc_K": 10.925842270914847,
+      "relative_error_percent": 40.29649032287078,
+      "diagnostic": "worse than keeping the working lambda"
+    },
+    {
+      "case_id": "omega127_lambda_needed_for_near_match_under_same_harness_formula",
+      "lambda_ep": 3.11,
+      "predicted_tc_K": 18.2931593809087,
+      "relative_error_percent": 0.0373804321931459,
+      "diagnostic": "not a proposed row value; only shows that the captured omega_log prefactor is not compatible with lambda=1.5 under a naive single-formula substitution"
+    },
+    {
+      "case_id": "omega123_lambda_needed_for_near_match_under_same_harness_formula",
+      "lambda_ep": 3.35,
+      "predicted_tc_K": 18.3028407196485,
+      "relative_error_percent": 0.015523058188252,
+      "diagnostic": "sibling-sample version of the same warning"
+    }
+  ],
+  "compatibility_decision": {
+    "abstract_lambda_1_5_status": "review_foothold_only_do_not_promote",
+    "working_lambda_1_8_status": "retain_until_source_family_review",
+    "lambda_needed_diagnostic_status": "do_not_use_as_inverse_fit_patch",
+    "patch_readiness": false,
+    "why": [
+      "The abstract lambda=1.5 value is row-named but not yet table-level or raw-page archived.",
+      "Under the captured omega_log=127 K preview, lambda=1.5 moves the predicted Tc farther from the observed value than lambda=1.8.",
+      "The lambda value needed to fit Tc under the same harness formula is much larger than both known lambda candidates, which suggests a convention/model mismatch rather than a safe inverse-fit row patch.",
+      "Sample choice and repo archive policy are still not locked."
+    ]
+  },
+  "next_required_evidence": [
+    "Locate a row-level lambda value, table, figure, or alpha2F-derived statement for the same Nb3Sn sample family as the selected omega_log value.",
+    "Record archived_raw_path, locator, row identity, quoted text, normalized lambda, and explicit same-source-family note.",
+    "If only abstract lambda=1.5 remains available, keep it as a compatibility hint and do not fill normalized_value_dimensionless in the row-level lambda capture record."
+  ],
+  "claim_boundary": "This review is a compatibility-control artifact only. It does not infer a new lambda value, does not authorize inverse fitting, and does not edit the benchmark row."
+}

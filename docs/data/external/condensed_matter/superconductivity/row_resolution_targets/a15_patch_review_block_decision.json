@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_pair_patch_review_block_decision",
+  "pair_label": "A15 residual blocker pair",
+  "materials": [
+    "Nb3Sn",
+    "Nb3Ge"
+  ],
+  "checked_date": "2026-05-12",
+  "current_decision": "blocked_do_not_apply_patch_or_preview",
+  "scope": "Blocks topic-local patch review for the A15 pair until both rows clear their numeric extraction and convention gates.",
+  "nb3sn_single_field_impact_preview": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_single_field_patch_impact_preview.json",
+  "nb3sn_sample_choice_review": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_sample_choice_review.json",
+  "nb3sn_lambda_compatibility_gap_review": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_compatibility_gap_review.json",
+  "block_reasons": [
+    "Both rows have Tc text capture only; neither row has a page-confirmed raw archive path in the repo yet.",
+    "Nb3Sn now has a provisional Table II phonon value and a weak sample-choice preference for Nb3Sn I, but it is not yet row-usable because the preference is not source-locked and repo archive policy plus same-family review remain open; Nb3Ge still lacks a phonon numeric capture.",
+    "Both rows now have abstract-level lambda numerics from the chosen source family, but neither row has a row-usable lambda capture with the needed same-family review and stronger archival support.",
+    "Family-level mu_star hints are useful for control, but they are still below row-specific benchmark evidence."
+    ,
+    "The Nb3Sn phonon-only impact preview remains blocked: using omega_log=127 K while keeping lambda=1.8 improves the row but still leaves Nb3Sn above the per-row gate and the topic average far above the average gate."
+    ,
+    "The Nb3Sn lambda compatibility gap review blocks promotion of abstract lambda=1.5 because it worsens the captured omega_log preview and lacks row-level archival support."
+  ],
+  "per_material_status": [
+    {
+      "material": "Nb3Sn",
+      "tc_status": "near_match_text_capture_only",
+      "phonon_status": "provisional_nb3sn_i_omega_log_127K_capture_present_pending_sample_choice_archive_and_same_family_review",
+      "lambda_status": "abstract_lambda_1_5_present_but_gap_review_blocks_promotion",
+      "mu_star_status": "family_range_contains_working_value_but_not_row_specific",
+      "patch_review_allowed": false
+    },
+    {
+      "material": "Nb3Ge",
+      "tc_status": "near_match_text_capture_only",
+      "phonon_status": "proxy_convention_open_and_numeric_value_missing",
+      "lambda_status": "primary_host_abstract_numeric_capture_present_but_not_row_usable",
+      "mu_star_status": "family_range_contains_working_value_but_not_row_specific",
+      "patch_review_allowed": false
+    }
+  ],
+  "unblock_conditions": [
+    "Each row must have a raw-page or mirrored-table Tc capture with archived_raw_path, locator, and normalized value.",
+    "Each row must have one source-backed phonon numeric capture tied to the chosen proxy convention.",
+    "Each row must have one source-backed lambda numeric capture tied to the same source family and proxy convention.",
+    "The final A15 compatibility pass must no longer report unresolved convention conflict for the row being patched."
+  ],
+  "safe_interim_policy": {
+    "keep_working_rows_unchanged": true,
+    "allow_patch_preview_execution": false,
+    "allow_hint_layer_for_search_guidance_only": true
+  },
+  "claim_boundary": "This decision file controls patch review only. It does not certify the working rows and does not change the FAIL status of the raw McMillan baseline."
+}

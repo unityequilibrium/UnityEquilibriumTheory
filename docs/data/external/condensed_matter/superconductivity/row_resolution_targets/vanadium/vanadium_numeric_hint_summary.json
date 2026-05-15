@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_secondary_numeric_hint_summary",
+  "source_role": "consolidated secondary numeric hint package for the unresolved Vanadium row",
+  "material": "Vanadium (V)",
+  "checked_date": "2026-05-11",
+  "hints": {
+    "tc_text_capture_K": 5.03,
+    "theta_text_capture_K": 338.0,
+    "theta_text_capture_uncertainty_K": 5.0,
+    "lambda_secondary_hint": 0.91,
+    "mu_star_eliashberg_correspondence_hint": 0.173,
+    "mu_star_tunneling_hint_center": 0.15,
+    "mu_star_tunneling_hint_uncertainty": 0.03
+  },
+  "sources": [
+    "10.1103/PhysRev.102.656",
+    "10.1103/PhysRevB.101.094305",
+    "10.1007/s10948-017-4295-y"
+  ],
+  "status": "secondary_numeric_hints_not_row_usable",
+  "transcription_note": "This summary consolidates the current Vanadium hint layer only. It is useful for narrowing source review and convention control, but it does not replace page-confirmed primary capture or row-specific benchmark inputs.",
+  "claim_boundary": "This summary is for search prioritization only. It does not approve topic-local row edits."
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_local_archive_scan_report",
+  "source_role": "documents the current local-repo scan status for residual superconductivity row evidence",
+  "source_label": "Local archive scan report for Vanadium, Nb3Sn, and Nb3Ge residual rows",
+  "checked_date": "2026-05-07",
+  "searched_locations": [
+    "docs/topics/0.4_Superconductivity_Superfluids/Ref/references.bib",
+    "docs/topics/0.4_Superconductivity_Superfluids/Ref/BIBLIOGRAPHY_ANALYSIS.md",
+    "docs/topics/0.4_Superconductivity_Superfluids/Ref/PDF_Downloads/"
+  ],
+  "search_method": [
+    "exact DOI scan",
+    "material-name and author-name text scan",
+    "local PDF filename scan"
+  ],
+  "summary": {
+    "materials_total": 3,
+    "materials_with_exact_local_raw_candidate": 0,
+    "materials_with_publication_anchor_only": 3
+  },
+  "materials": [
+    {
+      "material": "Vanadium (V)",
+      "publication_anchor": "10.1103/PhysRev.102.656",
+      "exact_local_raw_candidate_present": false,
+      "search_result": "No exact DOI, title, or material-specific raw PDF match was found in the scanned local reference files or PDF filenames.",
+      "next_external_need": "Archive a direct source file or row transcription with row locator, extracted values, and unit basis."
+    },
+    {
+      "material": "Nb3Sn",
+      "publication_anchor": "10.1103/PhysRev.95.1435",
+      "exact_local_raw_candidate_present": false,
+      "search_result": "No exact DOI, title, or material-specific raw PDF match was found in the scanned local reference files or PDF filenames.",
+      "next_external_need": "Archive a direct source file or row transcription with row locator, extracted values, and unit basis."
+    },
+    {
+      "material": "Nb3Ge",
+      "publication_anchor": "10.1063/1.1654966",
+      "exact_local_raw_candidate_present": false,
+      "search_result": "No exact DOI, title, or material-specific raw PDF match was found in the scanned local reference files or PDF filenames.",
+      "next_external_need": "Archive a direct source file or row transcription with row locator, extracted values, and unit basis."
+    }
+  ],
+  "claim_boundary": "This report confirms only the absence of exact local raw candidates in the scanned repo locations. It does not invalidate the publication anchors, and it does not count as archived row evidence."
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_field_live_capture_session_log",
+  "material": "Nb3Sn",
+  "field": "Theta_D_K_or_omega_log_K",
+  "checked_date": "2026-05-12",
+  "purpose": "Record each real Nb3Sn phonon capture attempt so progress and failure modes are preserved without reconstructing the session from chat history.",
+  "source_of_truth_bundle": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_live_capture_bundle.json",
+  "log_status": "third_attempt_captured_numeric_value_pending_review",
+  "attempt_entries": [
+    {
+      "attempt_id": "nb3sn-phonon-attempt-001",
+      "attempt_date": "2026-05-12",
+      "source_path_or_url": "https://www.osti.gov/biblio/6265120",
+      "candidate_table_or_section": "OSTI summary and APS abstract layer",
+      "nb3sn_row_specific": false,
+      "reported_proxy_type": "omega_log_preferred_over_debye",
+      "normalized_value_K": null,
+      "acceptance_gate_result": "failed",
+      "failure_reason_if_any": "The probe confirmed that phonon moments are tabulated and that omega_log-style interpretation is preferred, but it did not expose a row-specific Nb3Sn table value with locator and raw-path support.",
+      "notes": "This first logged attempt reached the canonical source family and strengthened confidence in the target path, but it remained below table-level numeric capture."
+    },
+    {
+      "attempt_id": "nb3sn-phonon-attempt-002",
+      "attempt_date": "2026-05-12",
+      "source_path_or_url": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.27.1568 ; https://journals.aps.org/prb/pdf/10.1103/PhysRevB.27.1568 ; https://www.osti.gov/biblio/6265120 ; https://www.nature.com/articles/s41598-021-82325-x",
+      "candidate_table_or_section": "canonical APS PDF access path and mirror-candidate scan",
+      "nb3sn_row_specific": false,
+      "reported_proxy_type": "omega_log_preferred_over_debye",
+      "normalized_value_K": null,
+      "acceptance_gate_result": "failed",
+      "failure_reason_if_any": "The second pass strengthened the canonical APS PDF route and page-span identity 1568-1585, but it still did not expose a trusted full-text table layer or a row-specific Nb3Sn phonon value with locator and raw-path support.",
+      "notes": "This second logged attempt was materially different from attempt-001 because it focused on the canonical PDF and mirror-access layer rather than repeating summary-only confirmation, yet it still stopped short of a usable numeric capture."
+    },
+    {
+      "attempt_id": "nb3sn-phonon-attempt-003",
+      "attempt_date": "2026-05-12",
+      "source_path_or_url": "https://harvest.aps.org/v2/journals/articles/10.1103/PhysRevB.27.1568/fulltext ; C:/tmp/PhysRevB.27.1568.pdf",
+      "candidate_table_or_section": "Table II, PDF page 6, printed page 1573",
+      "nb3sn_row_specific": true,
+      "reported_proxy_type": "omega_log_K",
+      "normalized_value_K": 127,
+      "acceptance_gate_result": "provisionally_passed_pending_repo_archive_and_same_family_review",
+      "failure_reason_if_any": null,
+      "notes": "The harvest route returned the APS PDF and Table II exposed Nb3Sn I omega_log=127 K, with Nb3Sn II=123 K retained as a sibling sample value."
+    }
+  ],
+  "entry_template": {
+    "attempt_id": null,
+    "attempt_date": null,
+    "source_path_or_url": null,
+    "candidate_table_or_section": null,
+    "nb3sn_row_specific": null,
+    "reported_proxy_type": null,
+    "normalized_value_K": null,
+    "acceptance_gate_result": "not_checked",
+    "failure_reason_if_any": null,
+    "notes": null
+  },
+  "claim_boundary": "This log records execution history only. It does not certify a value and does not unblock patch review by itself."
+}

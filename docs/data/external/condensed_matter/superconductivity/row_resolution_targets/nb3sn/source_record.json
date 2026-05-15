@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_source_record",
+  "source_role": "primary-source anchor for the Nb3Sn residual blocker row",
+  "source_label": "B. T. Matthias et al., Superconductivity of Nb3Sn",
+  "primary_reference_url": "https://doi.org/10.1103/PhysRev.95.1435",
+  "doi": "10.1103/PhysRev.95.1435",
+  "publisher": "American Physical Society",
+  "publication": "Physical Review 95, 1435",
+  "published_date": "1954-09-15",
+  "checked_date": "2026-05-07",
+  "unit_convention": "Critical temperature reported in Kelvin; row-level proxy and coupling fields still require explicit downstream source capture.",
+  "benchmark_role": "primary-source anchor for locking the historical Tc row identity of Nb3Sn before any topic-local patch review",
+  "field_coverage_note": "APS abstract confirms a superconducting transition temperature near 18 K, but the current publication anchor does not yet demonstrate phonon-proxy, lambda_ep, or mu_star row coverage.",
+  "repository_use": [
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/archive_dossier.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/candidate_local_source_anchors.json"
+  ],
+  "limitations": [
+    "This record pins the primary publication anchor only; it is not yet an archived row transcription.",
+    "Theta_D_K or omega_log_K, lambda_ep, and mu_star still require row-level capture from compatible literature or downstream sources."
+  ]
+}

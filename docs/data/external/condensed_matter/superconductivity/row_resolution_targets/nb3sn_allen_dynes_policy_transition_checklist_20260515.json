@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_policy_transition_checklist",
+  "material": "Nb3Sn",
+  "checked_date": "2026-05-15",
+  "purpose": "Define the exact transition steps for moving the Allen-Dynes Nb3Sn smoke-test rows from policy-blocked diagnostic rows to strict-gate rows if a reviewer accepts the PhysRevB.27.1568 non-mirrored citation route.",
+  "current_state": {
+    "policy_request": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_physrevb_27_1568_unified_non_mirrored_policy_request_20260515.json",
+    "current_decision_state": "accepted_for_topic_handoff_and_allen_dynes_strict_gate",
+    "allen_dynes_artifact": "docs/topics/0.4_Superconductivity_Superfluids/Result/artifacts/0_4_superconductivity_superfluids_allen_dynes_verification.json",
+    "current_allen_dynes_model_gate_status": "PASS",
+    "current_strict_rows_counted": 2,
+    "current_diagnostic_average_relative_error_percent": 2.0689059911914702
+  },
+  "allowed_acceptance_values": [
+    "accepted_for_this_source_package_only",
+    "accepted_for_topic_handoff_and_allen_dynes_strict_gate"
+  ],
+  "transition_steps_if_accepted": [
+    {
+      "step": 1,
+      "action": "A reviewer or project policy authority edits only the policy request decision fields.",
+      "file": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_physrevb_27_1568_unified_non_mirrored_policy_request_20260515.json",
+      "required_field_updates": {
+        "policy_decision_request.decision_state": "one of the allowed_acceptance_values",
+        "policy_decision_request.reviewer_or_policy_authority": "non-null reviewer or policy authority",
+        "policy_decision_request.decision_date": "decision date"
+      }
+    },
+    {
+      "step": 2,
+      "action": "Do not edit Experiment_Allen_Dynes_Data.py and do not hand-toggle strict_gate_eligible in the input table.",
+      "reason": "The verifier resolves effective strict eligibility from the policy request at runtime."
+    },
+    {
+      "step": 3,
+      "action": "Rerun the Allen-Dynes verifier.",
+      "command": "python docs/topics/0.4_Superconductivity_Superfluids/Code/03_Research/Experiment_Allen_Dynes_Data.py",
+      "expected_effect": "Rows with accepted release conditions become effective_strict_gate_eligible=true."
+    },
+    {
+      "step": 4,
+      "action": "Rerun the raw McMillan verifier.",
+      "command": "python docs/topics/0.4_Superconductivity_Superfluids/Code/03_Research/Experiment_Superconductor_Data.py",
+      "expected_effect": "Raw McMillan gate remains an independent artifact and is expected to remain FAIL unless its own inputs are intentionally changed."
+    },
+    {
+      "step": 5,
+      "action": "Rerun topic/core audits.",
+      "commands": [
+        "python docs/scripts/audit/audit_topic_standards.py --topic docs/topics/0.4_Superconductivity_Superfluids",
+        "python docs/scripts/audit/audit_core_research_hardening.py --root docs"
+      ]
+    }
+  ],
+  "expected_after_acceptance": {
+    "allen_dynes_branch_model_gate_status": "PASS for the current Nb3Sn smoke-test row set if no other fields change",
+    "strict_source_locked_rows_counted": 2,
+    "strict_source_locked_average_relative_error_percent": 2.0689059911914702,
+    "raw_mcmillan_model_gate_status": "unchanged by this transition"
+  },
+  "not_allowed_by_this_transition": [
+    "Do not claim topic-level superconductivity PASS from a two-row Nb3Sn smoke test.",
+    "Do not claim the APS PDF is repo-mirrored.",
+    "Do not treat the policy acceptance as benchmark patch approval.",
+    "Do not count calibrated, inverse-fit, or heuristic UET rows in the strict gate.",
+    "Do not modify the raw McMillan gate meaning or thresholds."
+  ],
+  "claim_boundary": "This checklist records the accepted transition for the PhysRevB.27.1568 non-mirrored citation route. It does not turn the two-row smoke test into a topic-level PASS and does not approve unrelated source packages."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_field_live_capture_bundle",
+  "material": "Nb3Sn",
+  "field": "Theta_D_K_or_omega_log_K",
+  "checked_date": "2026-05-12",
+  "purpose": "Provide a single-file handoff bundle for the first live Nb3Sn phonon numeric capture so an operator can see the target, template, blocker, and acceptance logic together.",
+  "bundle_components": {
+    "first_live_target_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/a15_first_live_capture_target_packet.json",
+    "execution_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_first_numeric_execution_packet.json",
+    "critical_blocker_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_critical_blocker_packet.json",
+    "acceptance_gate": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_capture_acceptance_gate.json",
+    "live_capture_attempt_template": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_live_capture_attempt_template.json",
+    "numeric_capture_record": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/phonon_numeric_capture_record.json",
+    "session_checklist": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_live_capture_session_checklist.json",
+    "session_log": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_live_capture_session_log.json",
+    "attempt_2_strategy_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_attempt_2_strategy_packet.json",
+    "attempt_2_session_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_attempt_2_session_packet.json",
+    "attempt_2_access_candidate_report": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_attempt_2_access_candidate_report.json"
+  },
+  "operator_flow": [
+    "Open the PRB full-text source tied to 10.1103/PhysRevB.27.1568.",
+    "Look specifically for a row-specific phonon moment for Nb3Sn, preferring omega_log-style values over Debye proxies.",
+    "Fill the live capture attempt template first.",
+    "Check the attempt against the acceptance gate.",
+    "Only after a passing phonon capture should the abstract-level lambda=1.5 be treated as ready for stronger same-family compatibility review."
+  ],
+  "success_signal": "The bundle is considered successfully executed only when the attempt template and numeric capture record both contain a row-specific phonon value with locator, raw path, quoted text, and explicit proxy type.",
+  "failure_signal": "If only abstract-level text or proxy guidance is available, keep the bundle unresolved and leave the field blocked.",
+  "claim_boundary": "This bundle improves handoff only. It does not certify a value and does not unblock patch review by itself."
+}

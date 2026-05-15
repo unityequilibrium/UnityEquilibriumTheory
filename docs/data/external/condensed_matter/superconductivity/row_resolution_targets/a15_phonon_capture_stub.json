@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_phonon_capture_stub",
+  "source_role": "capture stub for the second A15 extraction pass focused on the phonon proxy field",
+  "source_label": "A15 phonon proxy capture stub for Nb3Sn and Nb3Ge",
+  "checked_date": "2026-05-08",
+  "materials": [
+    {
+      "material": "Nb3Sn",
+      "preferred_reference": "10.1103/PhysRevB.27.1568",
+      "field": "Theta_D_K_or_omega_log_K",
+      "capture_stub": {
+        "source_title_or_doi": "10.1103/PhysRevB.27.1568",
+        "article_title": "Heat-capacity analysis of a large number of A15-type compounds",
+        "journal_citation": "Phys. Rev. B 27, 1568",
+        "publication_date": "1983-02-01",
+        "page_or_section_locator": "Abstract; bibliographic context Phys. Rev. B 27, 1568",
+        "table_or_figure_identifier": "Abstract plus future phonon-moment table target",
+        "row_locator": "Abstract statements on tabulated phonon moments and proxy convention",
+        "quoted_source_text": "Experimentally determined moments of the phonon spectra (wbar, wbar2, omega_log) are included in the analysis. Values are tabulated. The Debye temperature is generally a bad estimate of omega_log.",
+        "capture_record_path": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/phonon_text_capture_record.json",
+        "archived_raw_path": null,
+        "reported_proxy_type": "omega_log_preferred_over_debye",
+        "normalized_value_K": null,
+        "proxy_convention_note": "The abstract now supports two things at once: omega_log is the preferred A15 proxy, and the paper should contain a table layer with tabulated phonon-spectrum moments worth targeting next.",
+        "capture_status": "proxy_text_captured_pending_row_value"
+      },
+      "success_condition": "One explicit phonon-proxy statement or row is captured and named as either Debye-style or omega-log-style evidence."
+    },
+    {
+      "material": "Nb3Ge",
+      "preferred_reference": "10.1103/PhysRevB.27.1568",
+      "field": "Theta_D_K_or_omega_log_K",
+      "capture_stub": {
+        "source_title_or_doi": "10.1103/PhysRevB.27.1568",
+        "article_title": "Heat-capacity analysis of a large number of A15-type compounds",
+        "journal_citation": "Phys. Rev. B 27, 1568",
+        "publication_date": "1983-02-01",
+        "page_or_section_locator": "Abstract; bibliographic context Phys. Rev. B 27, 1568",
+        "table_or_figure_identifier": "Abstract plus future phonon-moment table target",
+        "row_locator": "Abstract statements on tabulated phonon moments and proxy convention",
+        "quoted_source_text": "Experimentally determined moments of the phonon spectra (wbar, wbar2, omega_log) are included in the analysis. Values are tabulated. The Debye temperature is generally a bad estimate of omega_log.",
+        "capture_record_path": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3ge/phonon_text_capture_record.json",
+        "archived_raw_path": null,
+        "reported_proxy_type": "omega_log_preferred_over_debye",
+        "normalized_value_K": null,
+        "proxy_convention_note": "The abstract now supports two things at once: omega_log is the preferred A15 proxy, and the paper should contain a table layer with tabulated phonon-spectrum moments worth targeting next.",
+        "capture_status": "proxy_text_captured_pending_row_value"
+      },
+      "success_condition": "One explicit phonon-proxy statement or row is captured and named as either Debye-style or omega-log-style evidence."
+    }
+  ],
+  "claim_boundary": "This stub is for the A15 phonon-proxy extraction pass only. Filling it does not yet approve topic-local row edits."
+}

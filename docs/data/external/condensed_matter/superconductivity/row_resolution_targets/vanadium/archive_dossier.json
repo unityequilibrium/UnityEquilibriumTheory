@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "material": "Vanadium (V)",
+  "source_class": "external_material_archive_dossier",
+  "priority": "immediate",
+  "expected_source_family": "MIT Junior Lab citation chain or compatible literature row",
+  "candidate_source_anchors": [
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/candidate_local_source_anchors.json",
+    "docs/topics/0.4_Superconductivity_Superfluids/Code/03_Research/Experiment_Superconductor_Data.py",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/vanadium_fulltext_numeric_acquisition_packet.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/vanadium_raw_page_capture_checklist.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/vanadium_citation_integrity_report.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/vanadium/tc_text_capture_record.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/vanadium/theta_text_capture_record.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/vanadium/lambda_text_capture_record.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/vanadium/mu_star_hint_record.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/vanadium/vanadium_numeric_hint_summary.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/vanadium/lambda_numeric_capture_record.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/vanadium/mu_star_numeric_capture_record.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/vanadium_compatibility_review_packet.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/vanadium_patch_block_decision.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/vanadium_primary_capture_requirement_packet.json"
+  ],
+  "citation_integrity_warning": "Resolve the page-range discrepancy between the MIT OCW citation text and the APS bibliographic anchor before treating any archived Vanadium row as stable.",
+  "archive_targets": [
+    {
+      "field": "Tc_observed",
+      "required_artifacts": [
+        "raw_source_file",
+        "table_or_figure_identifier",
+        "row_locator",
+        "unit_basis",
+        "transcription_note"
+      ],
+      "status": "pending_archive"
+    },
+    {
+      "field": "Theta_D_K",
+      "required_artifacts": [
+        "raw_source_file",
+        "table_or_figure_identifier",
+        "row_locator",
+        "unit_basis",
+        "proxy_convention_note"
+      ],
+      "status": "pending_archive"
+    },
+    {
+      "field": "lambda_ep",
+      "required_artifacts": [
+        "raw_source_file",
+        "table_or_figure_identifier",
+        "row_locator",
+        "unit_basis",
+        "proxy_compatibility_note"
+      ],
+      "status": "pending_archive"
+    },
+    {
+      "field": "mu_star",
+      "required_artifacts": [
+        "raw_source_file_or_family_convention_note",
+        "table_or_figure_identifier",
+        "row_locator_or_convention_scope",
+        "unit_basis",
+        "transcription_note"
+      ],
+      "status": "pending_archive"
+    }
+  ],
+  "handoff_goal": "Produce one archive package that can answer Tc identity, active proxy convention, lambda compatibility, and mu_star convention for topic-local review.",
+  "claim_boundary": "This dossier is an archive-work checklist only and does not certify any row value."
+}

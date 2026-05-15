@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_raw_page_capture_checklist",
+  "source_role": "page-by-page checklist for the first real full-text numeric extraction pass on Vanadium",
+  "source_label": "Vanadium raw-page capture checklist",
+  "checked_date": "2026-05-11",
+  "material": "Vanadium (V)",
+  "precondition": "Clear the page-range discrepancy between the MIT OCW citation text and the APS bibliographic anchor before trusting any extracted row as stable.",
+  "steps": [
+    {
+      "step": 1,
+      "field": "Tc_observed",
+      "source_title_or_doi": "10.1103/PhysRev.102.656",
+      "open_target": "primary publication first",
+      "capture_goal": "confirm exact page span, page context, and Tc row identity from the historical Vanadium paper",
+      "checklist": [
+        "record archived_raw_path",
+        "record confirmed page span",
+        "record page_or_section_locator",
+        "record row_locator",
+        "copy quoted_source_text",
+        "normalize value into normalized_value_K"
+      ]
+    },
+    {
+      "step": 2,
+      "field": "Theta_D_K",
+      "source_title_or_doi": "10.1017/CBO9781139171090.060",
+      "open_target": "element-level compilation if the primary paper does not expose a usable phonon proxy value",
+      "capture_goal": "capture an explicit Debye-temperature-style value and state why it is being used as the active proxy",
+      "checklist": [
+        "record archived_raw_path",
+        "record page_or_section_locator",
+        "record table_or_figure_identifier",
+        "record row_locator",
+        "copy quoted_source_text",
+        "normalize value into normalized_value_K",
+        "write proxy_convention_note"
+      ]
+    },
+    {
+      "step": 3,
+      "field": "lambda_ep",
+      "source_title_or_doi": "10.1103/PhysRevB.101.094305",
+      "open_target": "vanadium-specific electron-phonon context source",
+      "capture_goal": "capture a vanadium-specific electron-phonon coupling value or an explicit statement that supports the chosen coupling convention",
+      "checklist": [
+        "record archived_raw_path",
+        "record page_or_section_locator",
+        "record table_or_figure_identifier",
+        "record row_locator",
+        "copy quoted_source_text",
+        "normalize value into normalized_value_dimensionless",
+        "write proxy_compatibility_note"
+      ]
+    },
+    {
+      "step": 4,
+      "field": "mu_star",
+      "source_title_or_doi": "family convention unless explicit row source appears",
+      "open_target": "same full-text pass only if an explicit mu_star statement appears",
+      "capture_goal": "either capture a row-specific value or document that the row remains on a family convention",
+      "checklist": [
+        "record source_title_or_doi or family convention note",
+        "copy quoted_source_text if available",
+        "record unit_basis",
+        "state whether row_specific_value_or_family_convention_note was resolved"
+      ]
+    }
+  ],
+  "stopping_rule": "Do not promote any Vanadium capture unless the citation-integrity precondition is cleared and the page-confirmed primary publication chain is preserved.",
+  "claim_boundary": "This checklist is an extraction aid only. Completion of the checklist still requires topic-level compatibility review before any row patch."
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_lambda_attempt_2_mirror_search_report",
+  "material": "Nb3Sn",
+  "field": "lambda_ep",
+  "checked_date": "2026-05-13",
+  "purpose": "Record the second Nb3Sn lambda acquisition attempt, focused on finding an accessible full-text or mirror route beyond the ScienceDirect abstract layer.",
+  "search_queries": [
+    "\"0378436384901670\" filetype:pdf",
+    "\"Physica B+C\" \"126\" \"217\" \"228\" \"Weber\" \"phonons\" PDF",
+    "\"The phonons in high Tc A15 compounds\" \"217-228\" \"pdf\"",
+    "\"Weber\" \"The phonons in high Tc A15 compounds\" \"alpha2F\""
+  ],
+  "results_reviewed": [
+    {
+      "result_type": "primary_host_abstract",
+      "url": "https://www.sciencedirect.com/science/article/pii/0378436384901670",
+      "useful_for_lambda_capture": false,
+      "reason": "Exposes the known abstract lambda=1.5 for Nb3Sn and lambda=1.9 for Nb3Ge, but not the full-text table, figure, alpha2F layer, or row-level numeric context required by the capture record."
+    },
+    {
+      "result_type": "citation_only_pdf",
+      "example_urls": [
+        "https://physics.ucsd.edu/~jorge/abstracts/bcs.pdf",
+        "https://scalettar.physics.ucdavis.edu/p298/BCS.pdf",
+        "https://www5.zzu.edu.cn/__local/B/EB/FA/F9B79477F80151C35FCBD1FA4F0_1AAA60E4_5A62A.pdf"
+      ],
+      "useful_for_lambda_capture": false,
+      "reason": "These PDFs cite Weber 1984 but do not reproduce the row-level lambda table or alpha2F content needed for Nb3Sn."
+    },
+    {
+      "result_type": "bibliographic_index_or_citation_database",
+      "example_url": "https://ouci.dntb.gov.ua/en/works/lm5BpOjl/",
+      "useful_for_lambda_capture": false,
+      "reason": "Confirms DOI and bibliographic presence only; no usable row-level lambda content."
+    }
+  ],
+  "candidate_values_seen": [
+    {
+      "value_dimensionless": 1.5,
+      "source_layer": "ScienceDirect abstract",
+      "acceptance_result": "rejected_for_capture_record_fill",
+      "reason": "Already known abstract-only value; the lambda compatibility gap review blocks promotion."
+    }
+  ],
+  "attempt_result": {
+    "accessible_fulltext_or_mirror_found": false,
+    "row_level_lambda_value_found": false,
+    "alpha2f_or_table_layer_found": false,
+    "capture_record_fill_allowed": false,
+    "stop_rule_triggered": "mirror_search_found_only_abstract_or_citation_layer"
+  },
+  "next_allowed_move": "Try connector/library access, institutional full-text access, or a different compatible A15 lambda source with row-level Nb3Sn lambda content. Do not rerun the same open-web citation search without a new lead.",
+  "claim_boundary": "This report records a failed mirror search only. It does not certify lambda and does not change the benchmark row or model gate."
+}

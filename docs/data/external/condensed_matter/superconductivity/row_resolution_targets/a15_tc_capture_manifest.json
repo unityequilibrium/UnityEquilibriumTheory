@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_text_capture_manifest",
+  "source_role": "indexes first-pass A15 Tc text captures",
+  "source_label": "A15 Tc text capture manifest",
+  "checked_date": "2026-05-08",
+  "records": [
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/tc_text_capture_record.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3ge/tc_text_capture_record.json"
+  ],
+  "claim_boundary": "This manifest indexes first-pass text captures only. It does not certify raw-page archival completeness."
+}

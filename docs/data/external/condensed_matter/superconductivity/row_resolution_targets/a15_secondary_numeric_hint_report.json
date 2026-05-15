@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_secondary_numeric_hint_report",
+  "source_role": "records weak or secondary web-accessible numeric hints that may guide A15 full-text extraction without authorizing row edits",
+  "source_label": "A15 secondary numeric hint report",
+  "checked_date": "2026-05-08",
+  "materials": [
+    {
+      "material": "Nb3Sn",
+      "hints": [
+        {
+          "field": "lambda_ep",
+          "hint_type": "secondary_abstract_numeric_hint",
+          "source_title_or_doi": "10.1007/s10948-009-0483-8",
+          "quoted_source_text": "The electron-phonon coupling constant lambda ep is estimated to be about 1.46",
+          "normalized_value": 1.46,
+          "unit_basis": "dimensionless",
+          "use_boundary": "This is a secondary literature hint only. It cannot replace the planned A15 canonical row extraction from the selected source family."
+        },
+        {
+          "field": "Theta_D_K_or_omega_log_K",
+          "hint_type": "secondary_abstract_numeric_hint",
+          "source_title_or_doi": "10.1007/s10948-009-0483-8",
+          "quoted_source_text": "the discrepancy between the Debye temperature Theta D as previously obtained experimentally (Theta D=234 K) and that given by our band-structure calculations (Theta D=300.2 K)",
+          "normalized_value": 234.0,
+          "unit_basis": "K",
+          "use_boundary": "The 234 K value is only a secondary abstract-level hint about an experimental Debye temperature. It does not yet certify the benchmark row or settle the omega_log versus Debye convention."
+        },
+        {
+          "field": "mu_star",
+          "hint_type": "family_convention_hint",
+          "source_title_or_doi": "10.1039/D3CP04614A",
+          "quoted_source_text": "The Coulomb pseudopotential, mu*, was selected within a range of 0.10 to 0.15.",
+          "normalized_value_range": [
+            0.10,
+            0.15
+          ],
+          "unit_basis": "dimensionless",
+          "use_boundary": "This is a modern model-choice range, not a row-specific historical benchmark value."
+        }
+      ]
+    },
+    {
+      "material": "Nb3Ge",
+      "hints": [
+        {
+          "field": "lambda_ep",
+          "hint_type": "tertiary_scope_hint_only",
+          "source_title_or_doi": "PMC10119179",
+          "quoted_source_text": "The coupling constant of Nb3Ge1 is lambda < 1",
+          "normalized_value": null,
+          "unit_basis": "dimensionless",
+          "use_boundary": "This is a tertiary synthesis statement and not a row-specific numeric value. It is too weak for benchmark transcription but still shows that a later literature trail exists."
+        }
+      ]
+    }
+  ],
+  "claim_boundary": "This report holds weak or secondary hints only. None of these values or ranges may be patched into the benchmark working copy unless a row-specific source capture later confirms them."
+}

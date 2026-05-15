@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_field_numeric_execution_packet",
+  "material": "Nb3Sn",
+  "field": "lambda_ep",
+  "checked_date": "2026-05-12",
+  "purpose": "Turn the first Nb3Sn lambda numeric pass into a single execution packet that can be followed without reconstructing the A15 workflow from multiple files, while preserving the distinction between abstract-level numeric capture and row-usable archival capture.",
+  "source_anchor": {
+    "article_title": "The phonons in high Tc A15 compounds",
+    "source_title_or_doi": "10.1016/0378-4363(84)90167-0",
+    "journal_citation": "Physica B+C 126(1-3), 217-228",
+    "host_layer": "ScienceDirect primary-host abstract plus full article table layer"
+  },
+  "expected_numeric_target": {
+    "unit_basis": "dimensionless",
+    "target_section_hint": "Sections, tables, or figures reporting alpha^2F(omega), full phonon dispersion, or explicit lambda values for Nb3Sn.",
+    "row_identity_goal": "One row-specific lambda value for Nb3Sn that stays inside the same source family and phonon convention already chosen for the phonon capture."
+  },
+  "required_capture_fields": [
+    "archived_raw_path",
+    "page_or_section_locator",
+    "table_or_figure_identifier",
+    "row_locator",
+    "quoted_source_text",
+    "normalized_value_dimensionless",
+    "same_source_family_note"
+  ],
+  "success_condition": "The packet is complete only when one Nb3Sn lambda value is captured from the primary full-text table or figure layer and the packet explicitly records compatibility with the same phonon convention used by the Nb3Sn phonon capture.",
+  "abstract_numeric_foothold": {
+    "value_dimensionless": 1.5,
+    "status": "primary_host_abstract_numeric_capture_pending_same_family_review",
+    "use_boundary": "This value may guide the search and compatibility review, but it must not be treated as the final row-usable capture unless stronger archival support is attached; the Nb3Sn lambda compatibility gap review shows that lambda=1.5 worsens the captured omega_log preview."
+  },
+  "compatibility_gap_review": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_compatibility_gap_review.json",
+  "row_level_evidence_target": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_row_level_evidence_target_20260513.json",
+  "lambda_acquisition_readiness_snapshot": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_acquisition_readiness_snapshot_20260513.json",
+  "stop_rule": "If the source yields only the already known abstract-level lambda=1.5 statement or any other non-row-specific family statement, keep the packet below row-usable status and do not treat normalized_value_dimensionless as final archive evidence.",
+  "downstream_dependency": "This lambda capture must remain compatible with the resolved Nb3Sn phonon proxy choice so the pair can move together into patch-review readiness later. Do not use inverse-fit lambda diagnostics as source evidence, and do not fill the capture record from abstract lambda=1.5 alone.",
+  "claim_boundary": "This execution packet does not certify any lambda value. It only defines the first row-usable numeric-capture pass for Nb3Sn."
+}

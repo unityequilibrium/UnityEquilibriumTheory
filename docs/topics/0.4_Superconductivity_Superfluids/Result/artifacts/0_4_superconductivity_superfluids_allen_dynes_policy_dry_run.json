@@ -1,0 +1,94 @@
+{
+  "command": "python docs/topics/0.4_Superconductivity_Superfluids/Code/03_Research/Experiment_Allen_Dynes_Policy_Dry_Run.py",
+  "dry_run": {
+    "actual_policy_decision_state": "accepted_for_topic_handoff_and_allen_dynes_strict_gate",
+    "assumed_decision_state": "accepted_for_this_source_package_only",
+    "claim_boundary": "This dry run does not edit or accept the policy request.",
+    "edits_policy_file": false
+  },
+  "dry_run_strict_summary": {
+    "strict_average_relative_error_percent": 2.0689059911914702,
+    "strict_gate_status": "PASS_FOR_NB3SN_SMOKE_TEST_ONLY",
+    "strict_row_count": 2,
+    "strict_rows_within_20_percent": 2
+  },
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python_version": "3.14.2"
+  },
+  "inputs": {
+    "input_table": {
+      "path": "docs\\topics\\0.4_Superconductivity_Superfluids\\Data\\03_Research\\allen_dynes_source_labeled_inputs.json",
+      "sha256": "46c6eb8e0e1eb4513cc2c80edf25b53ffd6227e7e25e502776f4d5ddcc7ea531"
+    },
+    "policy_request": {
+      "path": "docs\\data\\external\\condensed_matter\\superconductivity\\row_resolution_targets\\nb3sn_physrevb_27_1568_unified_non_mirrored_policy_request_20260515.json",
+      "sha256": "b669e1d372b5a72ed21400a21b0757e08344956f473fa055f18f1e570a72d1d3"
+    },
+    "transition_checklist": {
+      "allowed_acceptance_values": [
+        "accepted_for_this_source_package_only",
+        "accepted_for_topic_handoff_and_allen_dynes_strict_gate"
+      ],
+      "path": "docs\\data\\external\\condensed_matter\\superconductivity\\row_resolution_targets\\nb3sn_allen_dynes_policy_transition_checklist_20260515.json",
+      "sha256": "af09712d7f1c62ac7e336aa5ea61a01e9cc6a7c52cd3ef89a07884aa493fe9a2"
+    }
+  },
+  "interpretation": "This dry run verifies that the policy-aware strict-gate logic would release the Nb3Sn smoke-test rows if the policy decision were accepted. It is not the current model gate.",
+  "limitations": [
+    "Does not edit the policy request.",
+    "Does not replace the current Allen-Dynes artifact.",
+    "Does not replace the raw McMillan artifact.",
+    "Still covers only the Nb3Sn smoke-test row set."
+  ],
+  "model_gate_status": "PASS_FOR_NB3SN_SMOKE_TEST_ONLY",
+  "results": [
+    {
+      "declared_strict_gate_eligible": false,
+      "dry_run_assumed_decision_state": "accepted_for_this_source_package_only",
+      "dry_run_effective_strict_gate_eligible": true,
+      "dry_run_release_condition_satisfied": true,
+      "f1": 1.1016656643861975,
+      "f2": 1.0510038503206696,
+      "lambda_ep": 1.78,
+      "material": "Nb3Sn",
+      "mu_star": 0.13,
+      "omega2_sqrt_K": 177,
+      "omega_log_K": 127,
+      "per_row_gate_status": "PASS",
+      "predicted_tc_K": 17.981167779782506,
+      "relative_error_percent": 1.742252569494505,
+      "sample_label": "Nb3Sn I",
+      "signed_error_K": -0.31883222021749447,
+      "sqrt_omega2_over_omega_log": 1.3937007874015748,
+      "tc_observed_K": 18.3,
+      "tc_observed_basis": "current working row"
+    },
+    {
+      "declared_strict_gate_eligible": false,
+      "dry_run_assumed_decision_state": "accepted_for_this_source_package_only",
+      "dry_run_effective_strict_gate_eligible": true,
+      "dry_run_release_condition_satisfied": true,
+      "f1": 1.1047946453294204,
+      "f2": 1.0549202359189496,
+      "lambda_ep": 1.82,
+      "material": "Nb3Sn",
+      "mu_star": 0.13,
+      "omega2_sqrt_K": 175,
+      "omega_log_K": 123,
+      "per_row_gate_status": "PASS",
+      "predicted_tc_K": 17.861612627441417,
+      "relative_error_percent": 2.395559412888435,
+      "sample_label": "Nb3Sn II",
+      "signed_error_K": -0.4383873725585836,
+      "sqrt_omega2_over_omega_log": 1.4227642276422765,
+      "tc_observed_K": 18.3,
+      "tc_observed_basis": "current working row sibling comparison"
+    }
+  ],
+  "run_status": "PASS",
+  "schema_version": "1.0",
+  "timestamp_utc": "2026-05-15T16:20:17.250407+00:00",
+  "topic": "0.4_Superconductivity_Superfluids",
+  "verifier_branch": "Allen-Dynes policy-release dry run"
+}

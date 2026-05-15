@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_lambda_row_level_evidence_target",
+  "material": "Nb3Sn",
+  "field": "lambda_ep",
+  "checked_date": "2026-05-13",
+  "purpose": "Narrow the next Nb3Sn lambda evidence pass after the phonon handoff snapshot, avoiding abstract-only promotion and inverse-fit patching.",
+  "current_blocker_context": {
+    "phonon_handoff_snapshot": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_review_handoff_snapshot_20260513.json",
+    "lambda_compatibility_gap_review": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_compatibility_gap_review.json",
+    "lambda_execution_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_first_numeric_execution_packet.json",
+    "lambda_numeric_capture_record": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/lambda_numeric_capture_record.json",
+    "lambda_acquisition_readiness_snapshot": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_acquisition_readiness_snapshot_20260513.json",
+    "lambda_acquisition_attempt_log": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_acquisition_attempt_log_20260513.json",
+    "lambda_attempt_2_mirror_search_report": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_attempt_2_mirror_search_report_20260513.json",
+    "lambda_attempt_3_alternate_source_scan": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_attempt_3_alternate_source_scan_20260513.json",
+    "lambda_attempt_4_aps_tunneling_fulltext_capture": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_attempt_4_aps_tunneling_fulltext_capture_20260513.json",
+    "source_split_compatibility_policy_review": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_source_split_compatibility_policy_review_20260513.json",
+    "lambda_attempt_5_prb_table_v_same_source_capture": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_attempt_5_prb_table_v_same_source_capture_20260514.json",
+    "same_source_lambda_patch_impact_preview": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_same_source_lambda_patch_impact_preview_20260514.json"
+  },
+  "target_source_family": {
+    "article_title": "The phonons in high Tc A15 compounds",
+    "source_title_or_doi": "10.1016/0378-4363(84)90167-0",
+    "journal_citation": "Physica B+C 126(1-3), 217-228",
+    "preferred_layer": "full article table, figure, alpha2F(omega), or explicit row-level lambda discussion"
+  },
+  "must_match_or_explain": [
+    "Nb3Sn row identity, preferably compatible with the Nb3Sn I phonon candidate or explicitly explaining sample-family scope.",
+    "Dimensionless lambda value with locator and short source text.",
+    "Connection to the same A15 phonon convention rather than a generic family-level lambda statement.",
+    "Whether lambda is computed from alpha2F(omega), inferred from phonon dispersion, or stated as a fitted electron-phonon coupling."
+  ],
+  "known_values_that_do_not_suffice": [
+    {
+      "value": 1.5,
+      "source_layer": "ScienceDirect primary-host abstract",
+      "reason": "Row-named but abstract-only; worsens the captured omega_log=127 K preview relative to keeping lambda=1.8."
+    },
+    {
+      "value": 1.46,
+      "source_layer": "secondary hint",
+      "reason": "Below row-usable archival standard and directionally similar to the blocked abstract lambda case."
+    },
+    {
+      "value": 1.8,
+      "source_layer": "APS full-text tunneling reanalysis, PhysRevB.22.1214",
+      "reason": "Strong primary-source support for the current working lambda, but not yet accepted for the Weber-locked capture record because the selected omega_log=127 K source family and sample context differ."
+    },
+    {
+      "value": 3.11,
+      "source_layer": "inverse-fit diagnostic under current harness formula",
+      "reason": "Not source evidence; useful only as a warning that naive omega_log-plus-lambda substitution has a convention/model mismatch."
+    }
+  ],
+  "required_capture_fields": [
+    "source_title_or_doi",
+    "archived_raw_path_or_accepted_non_mirrored_policy_record",
+    "page_or_section_locator",
+    "table_or_figure_identifier",
+    "row_locator",
+    "quoted_source_text_or_numeric_cell",
+    "normalized_value_dimensionless",
+    "lambda_derivation_or_context_note",
+    "same_source_family_note",
+    "compatibility_with_nb3sn_i_omega_log_127K_note"
+  ],
+  "acceptance_gate": {
+    "can_fill_lambda_numeric_capture_record": false,
+    "minimum_to_flip_true": [
+      "A row-level lambda value is found beyond the already known abstract statement.",
+      "The evidence path is either repo-archived or accepted under a non-mirrored citation/transcription policy.",
+      "The value is compatible with the selected Nb3Sn phonon sample or the sample-family mismatch is explicitly documented."
+    ],
+    "stop_if_only_abstract_lambda_seen": true,
+    "stop_if_only_inverse_fit_value_seen": true
+  },
+  "next_operator_instruction": "The same-source PhysRevB.27.1568 Table V lambda value has been captured into the lambda record. Do not patch until non-mirrored archive policy, sample lock, and harness-convention review clear and the per-row gate impact is acceptable.",
+  "claim_boundary": "This target file narrows the next lambda evidence pass only. It does not certify lambda, does not change the benchmark row, and does not change the model gate."
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_pair_primary_numeric_capture_contract_summary",
+  "pair_label": "A15 residual blocker pair",
+  "materials": [
+    "Nb3Sn",
+    "Nb3Ge"
+  ],
+  "checked_date": "2026-05-11",
+  "purpose": "Summarize the first source-backed numeric capture requirements for the A15 pair in one handoff surface so the next extraction pass can work from a single file.",
+  "shared_endgame": [
+    "Confirm Tc from a raw page or mirrored publication record.",
+    "Capture one phonon numeric under an explicit Debye-versus-omega_log convention.",
+    "Capture one lambda numeric under the same source family and convention.",
+    "Carry mu_star only as row-specific evidence or an explicitly justified family convention."
+  ],
+  "material_contracts": [
+    {
+      "material": "Nb3Sn",
+      "primary_numeric_capture_requirement_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_primary_numeric_capture_requirement_packet.json",
+      "compatibility_review_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_compatibility_review_packet.json",
+      "first_practical_capture_order": [
+        "Tc_observed",
+        "Theta_D_K_or_omega_log_K",
+        "lambda_ep"
+      ],
+      "current_advantage": "Tc is already a near-match text capture, mu_star already sits inside the current family hint range, and the phonon pass now has a provisional Nb3Sn I omega_log=127 K Table II value.",
+      "current_blocker": "The provisional phonon value still needs sample-choice, repo archive, and same-family review before lambda=1.5 can be treated as row-usable under the same convention."
+    },
+    {
+      "material": "Nb3Ge",
+      "primary_numeric_capture_requirement_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3ge_primary_numeric_capture_requirement_packet.json",
+      "compatibility_review_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3ge_compatibility_review_packet.json",
+      "first_practical_capture_order": [
+        "Tc_observed",
+        "Theta_D_K_or_omega_log_K",
+        "lambda_ep"
+      ],
+      "current_advantage": "Tc is already a near-match text capture and mu_star already sits inside the current family hint range.",
+      "current_blocker": "The row still lacks even a modest numeric shortcut layer for phonon and lambda extraction."
+    }
+  ],
+  "priority_guidance": {
+    "first_row_to_push": "Nb3Sn",
+    "reason": "It now has the first provisional A15 phonon numeric capture, so it is the best row to push through review before expanding to the remaining A15 fields."
+  },
+  "claim_boundary": "This contract summary is an execution handoff only. It does not certify any row and does not change the FAIL status of the raw McMillan baseline."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_pair_first_live_capture_target_packet",
+  "pair_label": "A15 residual blocker pair",
+  "checked_date": "2026-05-12",
+  "purpose": "Identify and track the single first live numeric capture target across the A15 pair without requiring the operator to reconstruct priority from multiple workflow files.",
+  "current_status": "first_live_capture_value_obtained_pending_review",
+  "selected_first_target": {
+    "material": "Nb3Sn",
+    "field": "Theta_D_K_or_omega_log_K",
+    "reason_for_selection": [
+      "Nb3Sn remains the strongest A15 shortcut candidate.",
+      "Its phonon field was the narrowest decisive blocker before the abstract-level lambda=1.5 capture could gain more practical weight, and it now has a provisional Table II value pending review.",
+      "The PRB source family already says phonon moments are tabulated and prefers omega_log-style interpretation over Debye temperature."
+    ],
+    "execution_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_first_numeric_execution_packet.json",
+    "critical_blocker_packet": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_critical_blocker_packet.json",
+    "numeric_capture_record": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/phonon_numeric_capture_record.json",
+    "acceptance_gate": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_capture_acceptance_gate.json",
+    "live_capture_attempt_template": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_live_capture_attempt_template.json",
+    "live_capture_bundle": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_live_capture_bundle.json"
+  },
+  "what_success_looks_like": [
+    "One row-specific phonon numeric value is captured for Nb3Sn; this is now provisionally satisfied by Nb3Sn I omega_log=127 K from Table II.",
+    "The capture records archived_raw_path, locator fields, quoted text, and unit basis.",
+    "The capture explicitly states whether the accepted proxy is omega_log or another phonon moment.",
+    "The downstream Nb3Sn lambda=1.5 abstract capture can then be reviewed against a resolved same-family phonon convention."
+  ],
+  "what_not_to_do": [
+    "Do not treat abstract-only convention text as if it were the phonon numeric capture.",
+    "Do not promote the abstract-level lambda value to row-usable status before the Nb3Sn phonon convention is resolved.",
+    "Do not skip to Nb3Ge lambda before the first Nb3Sn phonon pass is attempted."
+  ],
+  "claim_boundary": "This packet records that the first live capture target has produced a provisional value. It does not certify that value as benchmark-ready and does not unblock patch review by itself."
+}

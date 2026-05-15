@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_supplemental_source_candidates",
+  "source_role": "pins candidate supplemental source families for residual-row fields not covered by the current primary publication anchors",
+  "source_label": "Supplemental source candidate map for Vanadium, Nb3Sn, and Nb3Ge",
+  "checked_date": "2026-05-07",
+  "materials": [
+    {
+      "material": "Vanadium (V)",
+      "primary_anchor": "10.1103/PhysRev.102.656",
+      "supplemental_candidates": [
+        {
+          "candidate_role": "element-level Debye and thermodynamic table",
+          "reference": "https://doi.org/10.1017/CBO9781139171090.060",
+          "scope_note": "Useful as an element-level compilation candidate for Tc and Debye-temperature-style metadata, not yet a row-level locked table in the repo."
+        },
+        {
+          "candidate_role": "modern electron-phonon interaction context",
+          "reference": "https://doi.org/10.1103/PhysRevB.101.094305",
+          "scope_note": "Useful as a candidate context source for electron-phonon behavior in vanadium, but not yet shown to provide the exact benchmark row fields used in the raw McMillan gate."
+        }
+      ],
+      "claim_boundary": "These are candidate supplemental sources only. None is yet archived or accepted as the row-level benchmark source."
+    },
+    {
+      "material": "Nb3Sn",
+      "primary_anchor": "10.1103/PhysRev.95.1435",
+      "supplemental_candidates": [
+        {
+          "candidate_role": "A15 phonon and electron-phonon calculation source",
+          "reference": "https://doi.org/10.1016/0378-4363(84)90167-0",
+          "scope_note": "Candidate source for phonon dispersion, Eliashberg function, and lambda in high-Tc A15 compounds including Nb3Sn and Nb3Ge."
+        },
+        {
+          "candidate_role": "A15 heat-capacity and phonon-moment table source",
+          "reference": "https://doi.org/10.1103/PhysRevB.27.1568",
+          "scope_note": "Candidate source for phonon-spectrum moments and related strong-coupling quantities across A15 compounds."
+        },
+        {
+          "candidate_role": "modern pressure-dependent Nb3Sn electron-phonon context",
+          "reference": "https://doi.org/10.1039/D3CP04614A",
+          "scope_note": "Candidate modern context source for Nb3Sn phonon softening and electron-phonon coupling, not yet accepted as the benchmark row source."
+        }
+      ],
+      "claim_boundary": "These are candidate supplemental sources only. None is yet archived or accepted as the row-level benchmark source."
+    },
+    {
+      "material": "Nb3Ge",
+      "primary_anchor": "10.1063/1.1654966",
+      "supplemental_candidates": [
+        {
+          "candidate_role": "A15 phonon and electron-phonon calculation source",
+          "reference": "https://doi.org/10.1016/0378-4363(84)90167-0",
+          "scope_note": "Candidate source for phonon dispersion, Eliashberg function, and lambda in high-Tc A15 compounds including Nb3Ge."
+        },
+        {
+          "candidate_role": "A15 heat-capacity and phonon-moment table source",
+          "reference": "https://doi.org/10.1103/PhysRevB.27.1568",
+          "scope_note": "Candidate source for phonon-spectrum moments and related strong-coupling quantities across A15 compounds."
+        },
+        {
+          "candidate_role": "A15 structural and thermal context source",
+          "reference": "https://doi.org/10.1016/j.mtcomm.2020.101410",
+          "scope_note": "Candidate context source for thermodynamic and elastic properties of Nb3Ge-type A15 compounds, not yet accepted as the benchmark row source."
+        }
+      ],
+      "claim_boundary": "These are candidate supplemental sources only. None is yet archived or accepted as the row-level benchmark source."
+    }
+  ],
+  "claim_boundary": "This file narrows the next literature pass. It does not certify any supplemental source as compatible until archived and reviewed field by field."
+}

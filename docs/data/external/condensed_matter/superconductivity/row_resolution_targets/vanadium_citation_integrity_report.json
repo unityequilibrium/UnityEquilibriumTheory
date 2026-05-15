@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_citation_integrity_report",
+  "source_role": "records the current state of the Vanadium page-range discrepancy and the bibliographic weight of the competing claims",
+  "source_label": "Vanadium citation integrity report",
+  "checked_date": "2026-05-11",
+  "material": "Vanadium (V)",
+  "observations": [
+    {
+      "source_layer": "APS issue listing",
+      "source_title_or_url": "https://journals.aps.org/pr/issues/102/3",
+      "reported_citation": "Phys. Rev. 102, 656 (1956)",
+      "page_claim": "656-661 inferred from article start page and next article start page",
+      "weight": "primary bibliographic anchor"
+    },
+    {
+      "source_layer": "secondary bibliography record",
+      "source_title_or_url": "https://ouci.dntb.gov.ua/en/works/40EDPv5l/",
+      "reported_citation": "Phys Rev 102 656-61 1956",
+      "page_claim": "656-661",
+      "weight": "independent secondary support for APS pagination"
+    },
+    {
+      "source_layer": "MIT course mirror reference list",
+      "source_title_or_url": "https://mitocw.ups.edu.ec/courses/physics/8-13-14-experimental-physics-i-ii-junior-lab-fall-2016-spring-2017/experiments/superconductivity",
+      "reported_citation": "The Physical Review 102, no. 3 (May 1956): 43-48",
+      "page_claim": "43-48",
+      "weight": "course-reference chain only"
+    }
+  ],
+  "current_interpretation": "The APS listing and an independent secondary bibliography both support the 656-661 pagination. The MIT course-reference chain still reports 43-48, so the discrepancy is narrowed but not fully cleared until a raw page or PDF capture confirms the primary article directly.",
+  "next_requirement": "Preserve the citation-integrity gate until a primary raw page, PDF, or equivalent archival capture confirms the page span from the article itself.",
+  "claim_boundary": "This report narrows the citation conflict but does not close it. Vanadium row extraction still requires direct page confirmation."
+}

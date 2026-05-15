@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_phonon_review_handoff_snapshot",
+  "material": "Nb3Sn",
+  "field": "Theta_D_K_or_omega_log_K",
+  "checked_date": "2026-05-13",
+  "purpose": "Provide a one-file current handoff snapshot for the Nb3Sn phonon capture and its remaining blockers after the APS harvest Table II extraction.",
+  "current_capture_state": {
+    "phonon_numeric_value_captured": true,
+    "primary_candidate": {
+      "sample": "Nb3Sn I",
+      "reported_proxy_type": "omega_log_K",
+      "value_K": 127,
+      "decision_strength": "weak_primary_candidate_not_source_locked"
+    },
+    "sibling_candidate": {
+      "sample": "Nb3Sn II",
+      "reported_proxy_type": "omega_log_K",
+      "value_K": 123,
+      "decision_role": "sibling_comparison"
+    },
+    "source_layer": "APS harvest PDF Table II extraction",
+    "raw_pdf_archive_state": "session_local_only"
+  },
+  "linked_review_records": {
+    "phonon_numeric_capture_record": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/phonon_numeric_capture_record.json",
+    "sample_choice_review": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_sample_choice_review.json",
+    "phonon_lambda_sensitivity_review": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_lambda_sensitivity_review.json",
+    "single_field_patch_impact_preview": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_single_field_patch_impact_preview.json",
+    "lambda_compatibility_gap_review": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_compatibility_gap_review.json",
+    "lambda_row_level_evidence_target": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_row_level_evidence_target_20260513.json",
+    "lambda_acquisition_readiness_snapshot": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_acquisition_readiness_snapshot_20260513.json",
+    "repo_archive_policy_review": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_repo_archive_policy_review.json",
+    "non_mirrored_citation_acceptance_criteria": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_non_mirrored_citation_acceptance_criteria.json",
+    "non_mirrored_citation_policy_decision_stub": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_non_mirrored_citation_policy_decision_stub.json",
+    "a15_patch_review_block_decision": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/a15_patch_review_block_decision.json",
+    "topic_handoff_gate": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/topic_handoff_gate.json"
+  },
+  "quantitative_review_summary": {
+    "current_working_row_relative_error_percent": 56.317125564989745,
+    "omega127_with_working_lambda_relative_error_percent": 29.099156916161086,
+    "omega123_with_working_lambda_relative_error_percent": 31.332120,
+    "omega127_with_abstract_lambda_1_5_relative_error_percent": 40.29649032287078,
+    "projected_topic_average_if_omega127_only_percent": 59.69313840465438,
+    "model_gate_status_after_any_current_allowed_action": "FAIL"
+  },
+  "remaining_blockers": [
+    {
+      "blocker": "archive_policy",
+      "status": "blocked",
+      "detail": "The APS PDF is session-local only. Repo mirroring is not approved, and the non-mirrored citation path is not accepted."
+    },
+    {
+      "blocker": "sample_choice",
+      "status": "weak_preference_only",
+      "detail": "Nb3Sn I is preferred over Nb3Sn II, but only weakly and not enough to source-lock the benchmark row."
+    },
+    {
+      "blocker": "lambda_compatibility",
+      "status": "blocked",
+      "detail": "Abstract lambda=1.5 worsens the captured omega_log preview and lacks row-level archival support."
+    },
+    {
+      "blocker": "patch_impact",
+      "status": "blocked",
+      "detail": "The best phonon-only preview still leaves Nb3Sn above the 20 percent per-row gate and the topic average far above the 20 percent average gate."
+    }
+  ],
+  "next_action_order": [
+    "Resolve archive policy: approve repo mirroring or accept a non-mirrored citation/transcription route.",
+    "Run the row-level lambda acquisition pass using the readiness snapshot and evidence target; do not fill the lambda capture record from abstract-only lambda=1.5.",
+    "Only after those clear, revisit whether Nb3Sn I omega_log=127 K can enter a controlled patch review.",
+    "Keep real_superconductor_data.json unchanged until patch review is explicitly allowed."
+  ],
+  "handoff_status": "blocked_but_numeric_phonon_capture_complete",
+  "claim_boundary": "This snapshot is a handoff surface only. It does not certify the phonon value as benchmark-ready, does not accept the non-mirrored citation policy, and does not authorize a benchmark patch."
+}

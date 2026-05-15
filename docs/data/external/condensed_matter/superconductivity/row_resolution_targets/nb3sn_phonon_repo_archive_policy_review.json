@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_repo_archive_policy_review",
+  "material": "Nb3Sn",
+  "field": "Theta_D_K_or_omega_log_K",
+  "checked_date": "2026-05-12",
+  "purpose": "Record why the APS harvest PDF used for the Nb3Sn phonon table capture remains session-local rather than mirrored into the repo.",
+  "source_context": {
+    "article_title": "Heat-capacity analysis of a large number of A15-type compounds",
+    "source_title_or_doi": "10.1103/PhysRevB.27.1568",
+    "harvest_url": "https://harvest.aps.org/v2/journals/articles/10.1103/PhysRevB.27.1568/fulltext",
+    "session_local_pdf_path": "C:/tmp/PhysRevB.27.1568.pdf",
+    "content_disposition_seen": "inline; filename=PhysRevB.27.1568.pdf"
+  },
+  "captured_table_value": {
+    "table_or_figure_identifier": "Table II",
+    "page_or_section_locator": "PDF page 6; printed page 1573",
+    "primary_row_locator": "Nb3Sn I",
+    "primary_reported_proxy_type": "omega_log_K",
+    "primary_normalized_value_K": 127,
+    "sibling_row_locator": "Nb3Sn II",
+    "sibling_reported_proxy_type": "omega_log_K",
+    "sibling_normalized_value_K": 123
+  },
+  "repo_archive_decision": {
+    "mirror_pdf_into_repo_now": false,
+    "archive_status": "session_local_pdf_only",
+    "reason": [
+      "The table value has been transcribed with locator and a short source quote, which is enough for the current review artifacts.",
+      "The raw APS PDF has not been cleared under a repo-level rights and archive policy.",
+      "Mirroring the PDF would increase provenance strength, but it should be an explicit archive decision rather than an incidental side effect of extraction."
+    ]
+  },
+  "allowed_current_use": [
+    "Keep the harvested PDF path as session-local provenance in the capture record.",
+    "Use the transcribed Table II values for sample-choice, sensitivity, and compatibility review artifacts.",
+    "Keep benchmark patch review blocked until either repo mirroring is approved or an accepted non-mirrored raw-source citation policy is documented."
+  ],
+  "not_allowed_current_use": [
+    "Do not mark archived_raw_path as repo-complete.",
+    "Do not treat the PDF as a committed raw artifact.",
+    "Do not promote the captured phonon value into real_superconductor_data.json on archive evidence alone."
+  ],
+  "next_archive_options": [
+    "Approve and record a repo policy for mirroring APS PDFs before copying the file into a controlled raw-source path.",
+    "If mirroring is not allowed, define a non-mirrored source-citation policy that accepts URL, DOI, locator, and short transcription as sufficient for row review.",
+    "Attach a rights-safe derived table transcription if the project accepts transcribed numeric source rows without raw PDF storage."
+  ],
+  "non_mirrored_citation_acceptance_criteria": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_non_mirrored_citation_acceptance_criteria.json",
+  "non_mirrored_citation_policy_decision_stub": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_non_mirrored_citation_policy_decision_stub.json",
+  "claim_boundary": "This policy review does not decide copyright or license status. It records the current archive boundary and keeps benchmark patch review blocked until an archive path is explicitly approved."
+}

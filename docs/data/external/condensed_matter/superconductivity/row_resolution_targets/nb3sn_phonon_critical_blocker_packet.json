@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_field_critical_blocker_packet",
+  "material": "Nb3Sn",
+  "field": "Theta_D_K_or_omega_log_K",
+  "checked_date": "2026-05-12",
+  "purpose": "Condense the current Nb3Sn phonon blocker into one packet so the next live extraction pass has a single decisive target before lambda can move further toward patch-review readiness.",
+  "why_this_field_is_currently_critical": [
+    "The chosen A15 source family now gives an abstract-level lambda value for Nb3Sn, but the row still lacks a row-usable phonon numeric capture.",
+    "Without a resolved phonon numeric value, the Debye-versus-omega_log convention remains open and the lambda capture cannot be judged compatible enough for row use.",
+    "The current A15 execution order already ranks Nb3Sn phonon as the first live numeric pass, so this field is the narrowest remaining blocker on the strongest A15 row."
+  ],
+  "source_anchor": {
+    "article_title": "Heat-capacity analysis of a large number of A15-type compounds",
+    "source_title_or_doi": "10.1103/PhysRevB.27.1568",
+    "journal_citation": "Phys. Rev. B 27, 1568",
+    "host_layers": [
+      "APS primary-host abstract",
+      "OSTI summary",
+      "full PRB article table layer"
+    ]
+  },
+  "current_evidence_state": {
+    "abstract_targeting_status": "primary_host_proxy_text_captured_pending_row_value",
+    "numeric_capture_shell_status": "primary_host_table_target_locked_pending_numeric_capture",
+    "remote_fulltext_capture_status": "table_value_not_captured",
+    "preferred_proxy_type": "omega_log_preferred_over_debye"
+  },
+  "minimum_unblock_requirements": [
+    "Capture one row-specific phonon numeric value for Nb3Sn from the full article table or equivalent archival layer.",
+    "Record archived_raw_path, page_or_section_locator, table_or_figure_identifier, row_locator, and quoted_source_text.",
+    "Explicitly state whether the captured value is omega_log or another phonon moment and why that proxy is being adopted for the benchmark row.",
+    "Leave the field blocked if only abstract-level convention text is available."
+  ],
+  "downstream_impact_if_completed": [
+    "The A15 phonon convention would stop being the dominant open question on the strongest row.",
+    "The abstract-level lambda=1.5 capture for Nb3Sn could then be reviewed against a resolved same-family phonon convention.",
+    "The pair-level A15 patch block would narrow further from phonon-plus-lambda ambiguity toward a smaller archival-strength question."
+  ],
+  "claim_boundary": "This packet records the critical blocker only. It does not certify a phonon value and does not unblock patch review by itself."
+}

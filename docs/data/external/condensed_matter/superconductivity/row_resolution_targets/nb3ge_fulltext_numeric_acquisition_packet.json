@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_fulltext_numeric_acquisition_packet",
+  "source_role": "execution packet for the next full-text numeric extraction pass on the weaker A15 row candidate",
+  "source_label": "Nb3Ge full-text numeric acquisition packet",
+  "checked_date": "2026-05-10",
+  "material": "Nb3Ge",
+  "why_this_row_now": [
+    "Primary-publication Tc text capture already exists.",
+    "Phonon-proxy convention text already exists.",
+    "Lambda field-support text already exists.",
+    "Unlike Nb3Sn, the current numeric hint layer is weak, so a direct full-text or mirrored-table pass is needed rather than another abstract-level sweep."
+  ],
+  "canonical_sources": [
+    {
+      "field": "Tc_observed",
+      "source_title_or_doi": "10.1063/1.1654966",
+      "target_capture": "row identity and raw-page archive"
+    },
+    {
+      "field": "Theta_D_K_or_omega_log_K",
+      "source_title_or_doi": "10.1103/PhysRevB.27.1568",
+      "target_capture": "row-specific phonon proxy value with explicit proxy convention"
+    },
+    {
+      "field": "lambda_ep",
+      "source_title_or_doi": "10.1016/0378-4363(84)90167-0",
+      "target_capture": "row-specific electron-phonon coupling value"
+    }
+  ],
+  "secondary_hints": [
+    {
+      "field": "lambda_ep",
+      "source_title_or_doi": "PMC10119179",
+      "hint_scope": "lambda < 1",
+      "unit_basis": "dimensionless",
+      "allowed_use": "tertiary search cue only"
+    }
+  ],
+  "required_deliverables": [
+    {
+      "field": "Tc_observed",
+      "required_fields": [
+        "archived_raw_path",
+        "page_or_section_locator",
+        "table_or_figure_identifier",
+        "row_locator",
+        "quoted_source_text",
+        "normalized_value_K"
+      ]
+    },
+    {
+      "field": "Theta_D_K_or_omega_log_K",
+      "required_fields": [
+        "archived_raw_path",
+        "page_or_section_locator",
+        "table_or_figure_identifier",
+        "row_locator",
+        "reported_proxy_type",
+        "quoted_source_text",
+        "normalized_value_K"
+      ]
+    },
+    {
+      "field": "lambda_ep",
+      "required_fields": [
+        "archived_raw_path",
+        "page_or_section_locator",
+        "table_or_figure_identifier",
+        "row_locator",
+        "quoted_source_text",
+        "normalized_value_dimensionless"
+      ]
+    },
+    {
+      "field": "mu_star",
+      "required_fields": [
+        "row_specific_value_or_family_convention_note",
+        "source_title_or_doi",
+        "quoted_source_text",
+        "unit_basis"
+      ]
+    }
+  ],
+  "stopping_rule": "Do not promote tertiary or synthesis-level hints into the benchmark row. If the full-text pass still does not expose a row-specific numeric value, record the failure explicitly and keep the field unresolved.",
+  "claim_boundary": "This packet organizes the next full-text extraction pass only. It does not certify any numeric field and does not approve a topic-local edit."
+}

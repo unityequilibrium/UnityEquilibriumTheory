@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_material_same_source_patch_impact_preview",
+  "material": "Nb3Sn",
+  "checked_date": "2026-05-14",
+  "purpose": "Quantify the impact of pairing PhysRevB.27.1568 Table II omega_log values with PhysRevB.27.1568 Table V lambda values without editing the benchmark row.",
+  "raw_gate_context": {
+    "materials_tested": 10,
+    "raw_average_relative_error_percent": 62.41493526953724,
+    "average_relative_error_percent_gate": 20.0,
+    "per_material_relative_error_percent_gate": 20.0,
+    "raw_model_gate_status": "FAIL"
+  },
+  "source_capture_context": {
+    "phonon_capture_record": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/phonon_numeric_capture_record.json",
+    "lambda_capture_record": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/lambda_numeric_capture_record.json",
+    "lambda_attempt_5_same_source_capture": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_lambda_attempt_5_prb_table_v_same_source_capture_20260514.json",
+    "archive_status": "session_local_pdf_only_pending_non_mirrored_policy_decision"
+  },
+  "preview_cases": [
+    {
+      "case_id": "current_raw_row_no_patch",
+      "theta_or_prefactor_proxy_K": 280,
+      "lambda_ep": 1.8,
+      "mu_star": 0.13,
+      "tc_observed_K": 18.3,
+      "nb3sn_predicted_tc_K": 28.605978578393114,
+      "nb3sn_relative_error_percent": 56.317125564989745,
+      "per_row_gate_status_after_case": "FAIL"
+    },
+    {
+      "case_id": "same_source_nb3sn_i_against_working_tc",
+      "theta_or_prefactor_proxy_K": 127,
+      "lambda_ep": 1.78,
+      "mu_star": 0.13,
+      "tc_observed_K": 18.3,
+      "nb3sn_predicted_tc_K": 12.852186415004816,
+      "nb3sn_relative_error_percent": 29.76947314205019,
+      "projected_average_relative_error_percent": 59.75917012224328,
+      "per_row_gate_status_after_case": "FAIL",
+      "average_gate_status_after_case": "FAIL"
+    },
+    {
+      "case_id": "same_source_nb3sn_i_against_table_tc",
+      "theta_or_prefactor_proxy_K": 127,
+      "lambda_ep": 1.78,
+      "mu_star": 0.13,
+      "tc_observed_K": 17.97,
+      "nb3sn_predicted_tc_K": 12.852186415004816,
+      "nb3sn_relative_error_percent": 28.47976396769718,
+      "per_row_gate_status_after_case": "FAIL"
+    },
+    {
+      "case_id": "same_source_nb3sn_ii_against_working_tc",
+      "theta_or_prefactor_proxy_K": 123,
+      "lambda_ep": 1.82,
+      "mu_star": 0.13,
+      "tc_observed_K": 18.3,
+      "nb3sn_predicted_tc_K": 12.683313472644212,
+      "nb3sn_relative_error_percent": 30.692276105769338,
+      "projected_average_relative_error_percent": 59.85145041861519,
+      "per_row_gate_status_after_case": "FAIL",
+      "average_gate_status_after_case": "FAIL"
+    },
+    {
+      "case_id": "same_source_nb3sn_ii_against_table_tc",
+      "theta_or_prefactor_proxy_K": 123,
+      "lambda_ep": 1.82,
+      "mu_star": 0.13,
+      "tc_observed_K": 17.93,
+      "nb3sn_predicted_tc_K": 12.683313472644212,
+      "nb3sn_relative_error_percent": 29.262055367293854,
+      "per_row_gate_status_after_case": "FAIL"
+    }
+  ],
+  "decision": {
+    "allow_working_row_patch": false,
+    "allow_patch_preview_execution": false,
+    "best_current_same_source_case": "same_source_nb3sn_i_against_table_tc",
+    "why_blocked": [
+      "The same-source capture improves provenance but still leaves the row above the 20 percent gate.",
+      "The projected topic average remains near 59.76 percent, far above the 20 percent average gate.",
+      "The source PDF is still session-local and lacks accepted non-mirrored citation or repo archive policy.",
+      "The sample choice remains a weak preference rather than a fully source-locked benchmark row."
+    ],
+    "next_useful_action": "Resolve non-mirrored/source archive policy and then focus on whether the current harness should use Allen-Dynes omega_log prefactors rather than raw McMillan Theta_D-style prefactors for this row."
+  },
+  "claim_boundary": "This is a non-executing impact preview only. It does not edit the benchmark row, does not authorize a patch, and does not change the raw model gate status."
+}

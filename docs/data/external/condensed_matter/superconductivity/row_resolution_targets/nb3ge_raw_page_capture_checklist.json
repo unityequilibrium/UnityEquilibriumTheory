@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_raw_page_capture_checklist",
+  "source_role": "page-by-page checklist for the first real full-text numeric extraction pass on Nb3Ge",
+  "source_label": "Nb3Ge raw-page capture checklist",
+  "checked_date": "2026-05-11",
+  "material": "Nb3Ge",
+  "steps": [
+    {
+      "step": 1,
+      "field": "Tc_observed",
+      "source_title_or_doi": "10.1063/1.1654966",
+      "open_target": "publication record and full article",
+      "capture_goal": "confirm exact Tc statement, page context, and sample identity",
+      "checklist": [
+        "record archived_raw_path",
+        "record page_or_section_locator",
+        "record row_locator",
+        "copy quoted_source_text",
+        "normalize value into normalized_value_K"
+      ]
+    },
+    {
+      "step": 2,
+      "field": "Theta_D_K_or_omega_log_K",
+      "source_title_or_doi": "10.1103/PhysRevB.27.1568",
+      "open_target": "full article tables or sections with phonon-spectrum moments",
+      "capture_goal": "find row-specific phonon proxy value for Nb3Ge and name the proxy explicitly",
+      "checklist": [
+        "record archived_raw_path",
+        "record page_or_section_locator",
+        "record table_or_figure_identifier",
+        "record row_locator",
+        "record reported_proxy_type",
+        "copy quoted_source_text",
+        "normalize value into normalized_value_K"
+      ]
+    },
+    {
+      "step": 3,
+      "field": "lambda_ep",
+      "source_title_or_doi": "10.1016/0378-4363(84)90167-0",
+      "open_target": "full article sections, tables, or figures with alpha^2F(omega) or explicit lambda values",
+      "capture_goal": "find a row-specific or explicit Nb3Ge lambda value",
+      "checklist": [
+        "record archived_raw_path",
+        "record page_or_section_locator",
+        "record table_or_figure_identifier",
+        "record row_locator",
+        "copy quoted_source_text",
+        "normalize value into normalized_value_dimensionless"
+      ]
+    },
+    {
+      "step": 4,
+      "field": "mu_star",
+      "source_title_or_doi": "family convention unless explicit row source appears",
+      "open_target": "full text only if an explicit mu_star statement appears during the same pass",
+      "capture_goal": "either capture a row-specific value or document that only a family convention is available",
+      "checklist": [
+        "record source_title_or_doi or family convention note",
+        "copy quoted_source_text if available",
+        "record unit_basis",
+        "state whether row_specific_value_or_family_convention_note was resolved"
+      ]
+    }
+  ],
+  "stopping_rule": "If any step yields only tertiary or synthesis-level text, mark the step unresolved and do not promote it into a benchmark row capture.",
+  "claim_boundary": "This checklist is an extraction aid only. Completion of the checklist still requires topic-level compatibility review before any row patch."
+}

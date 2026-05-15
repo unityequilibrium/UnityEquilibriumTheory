@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "material": "Nb3Sn",
+  "source_class": "external_material_archive_dossier",
+  "priority": "high",
+  "expected_source_family": "Matthias 1954 citation chain or compatible A15 literature row",
+  "candidate_source_anchors": [
+    "https://doi.org/10.1103/PhysRev.95.1435",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/candidate_local_source_anchors.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/supplemental_source_selection_matrix.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/a15_field_extraction_plan.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/a15_tc_capture_stub.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/a15_phonon_capture_stub.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/a15_lambda_capture_stub.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_fulltext_numeric_acquisition_packet.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/a15_fulltext_table_target_map.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_raw_page_capture_checklist.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_compatibility_review_packet.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/a15_patch_review_block_decision.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_primary_numeric_capture_requirement_packet.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/a15_primary_numeric_capture_contract_summary.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/tc_text_capture_record.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/phonon_text_capture_record.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/phonon_numeric_capture_record.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_repo_archive_policy_review.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/lambda_text_capture_record.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn/lambda_numeric_capture_record.json",
+    "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/a15_numeric_row_value_gap_report.json"
+  ],
+  "archive_targets": [
+    {
+      "field": "Tc_observed",
+      "required_artifacts": [
+        "raw_source_file",
+        "table_or_figure_identifier",
+        "row_locator",
+        "unit_basis",
+        "transcription_note"
+      ],
+      "status": "value_captured_pending_repo_archive_policy"
+    },
+    {
+      "field": "Theta_D_K_or_omega_log_K",
+      "required_artifacts": [
+        "raw_source_file",
+        "table_or_figure_identifier",
+        "row_locator",
+        "unit_basis",
+        "proxy_convention_note"
+      ],
+      "status": "pending_archive"
+    },
+    {
+      "field": "lambda_ep",
+      "required_artifacts": [
+        "raw_source_file",
+        "table_or_figure_identifier",
+        "row_locator",
+        "unit_basis",
+        "proxy_compatibility_note"
+      ],
+      "status": "pending_archive"
+    },
+    {
+      "field": "mu_star",
+      "required_artifacts": [
+        "raw_source_file_or_family_convention_note",
+        "table_or_figure_identifier",
+        "row_locator_or_convention_scope",
+        "unit_basis",
+        "transcription_note"
+      ],
+      "status": "pending_archive"
+    }
+  ],
+  "recommended_extraction_order": [
+    "Tc_observed",
+    "Theta_D_K_or_omega_log_K",
+    "lambda_ep",
+    "mu_star"
+  ],
+  "handoff_goal": "Produce one A15 row package that fixes Tc identity, phonon proxy convention, lambda compatibility, and mu_star scope before topic-local review.",
+  "claim_boundary": "This dossier is an archive-work checklist only and does not certify any row value."
+}

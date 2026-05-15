@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_pair_lambda_abstract_numeric_review_packet",
+  "pair_label": "A15 residual blocker pair",
+  "checked_date": "2026-05-12",
+  "purpose": "Summarize what the newly captured A15 abstract-level lambda numerics do and do not resolve before any row-level patch review is allowed.",
+  "source_anchor": {
+    "article_title": "The phonons in high Tc A15 compounds",
+    "source_title_or_doi": "10.1016/0378-4363(84)90167-0",
+    "journal_citation": "Physica B+C 126(1-3), 217-228",
+    "host_layer": "ScienceDirect primary-host abstract text"
+  },
+  "materials": [
+    {
+      "material": "Nb3Sn",
+      "working_lambda_ep": 1.8,
+      "abstract_lambda_ep": 1.5,
+      "difference_direction": "external_lower_than_working_row",
+      "compatibility_state": "same_family_numeric_signal_present_but_not_row_usable",
+      "interpretation": "The abstract-level value is close enough to keep the row in the same strong-coupling family, but the new Nb3Sn omega_log sensitivity review shows that lambda=1.5 should not be promoted by itself; stronger archival support and convention review are still required."
+    },
+    {
+      "material": "Nb3Ge",
+      "working_lambda_ep": 2.1,
+      "abstract_lambda_ep": 1.9,
+      "difference_direction": "external_lower_than_working_row",
+      "compatibility_state": "same_family_numeric_signal_present_but_not_row_usable",
+      "interpretation": "The abstract-level value is again close enough to keep the row in the same strong-coupling family, but it still cannot settle the benchmark row until the phonon convention is fixed and stronger archival support is attached."
+    }
+  ],
+  "shared_unresolved_conditions": [
+    "Nb3Sn has a provisional Table II omega_log capture, but it is not row-usable until sample-choice, repo archive, and same-family review are complete; Nb3Ge still lacks a row-specific phonon numeric capture.",
+    "Neither row has a raw-page or table-level lambda capture with archived_raw_path and row locator.",
+    "The pair still needs same-family review to show that the abstract-level lambda values are compatible with the phonon convention chosen for the benchmark rows."
+  ],
+  "practical_result": "The A15 pair now has source-family-consistent lambda numerics at abstract level, which is stronger than support-only text and stronger than weak secondary hints, but still not enough to unblock patch review.",
+  "claim_boundary": "This review packet records abstract-level numeric compatibility only. It does not certify row edits and does not change the FAIL status of the raw McMillan baseline."
+}

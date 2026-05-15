@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_field_followup_strategy_packet",
+  "material": "Nb3Sn",
+  "field": "Theta_D_K_or_omega_log_K",
+  "checked_date": "2026-05-12",
+  "purpose": "Define how the second Nb3Sn phonon capture attempt must differ from the first failed canonical-source probe so the workflow does not repeat the same abstract-level path.",
+  "attempt_1_reference": {
+    "session_log": "docs/data/external/condensed_matter/superconductivity/row_resolution_targets/nb3sn_phonon_live_capture_session_log.json",
+    "attempt_id": "nb3sn-phonon-attempt-001",
+    "outcome": "confirmed canonical source family path but failed to reach a row-specific table-layer value"
+  },
+  "attempt_2_goal": "Reach the canonical APS PDF path, a mirrored full-text PDF, or an equivalent table-layer capture path for 10.1103/PhysRevB.27.1568 instead of repeating abstract or summary confirmation.",
+  "must_do_differently": [
+    "Do not spend the next attempt re-confirming that phonon moments are tabulated.",
+    "Do not stop at APS abstract, OSTI summary, or adjacent-context literature.",
+    "Do not log the attempt as successful unless a row-specific Nb3Sn phonon value is captured with locator and raw-path support."
+  ],
+  "preferred_attempt_2_targets": [
+    "The APS-host PDF path hinted on the canonical abstract page for 10.1103/PhysRevB.27.1568",
+    "The likely direct APS PDF URL https://journals.aps.org/prb/pdf/10.1103/PhysRevB.27.1568",
+    "A mirrored or directly accessible full-text PDF for 10.1103/PhysRevB.27.1568",
+    "A host-layer view that exposes the actual table or figure containing Nb3Sn phonon moments",
+    "Any trusted archival path that preserves page, table, and row identity for the canonical source family"
+  ],
+  "new_attempt_2_advantage": "Unlike attempt-001, the current remote evidence now includes an explicit APS result-surface PDF signal for the canonical DOI, so the next pass can target a narrower likely full-text path instead of probing only summaries.",
+  "success_condition": "Attempt 2 succeeds only if it reaches beyond the summary layer and produces a row-specific phonon numeric capture that can pass the existing acceptance gate.",
+  "failure_condition": "Attempt 2 still fails if it merely reconfirms source relevance, abstract wording, or family-level phonon context without exposing a row-specific numeric value.",
+  "claim_boundary": "This packet defines follow-up strategy only. It does not certify a value and does not unblock patch review by itself."
+}

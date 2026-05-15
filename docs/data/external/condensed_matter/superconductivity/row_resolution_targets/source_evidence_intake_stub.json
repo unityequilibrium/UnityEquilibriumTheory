@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0",
+  "source_class": "external_source_evidence_intake_stub",
+  "source_role": "landing zone for raw row-level superconductivity evidence before topic-local patch review",
+  "source_label": "Superconductivity row-resolution external evidence intake",
+  "checked_date": "2026-05-11",
+  "materials": [
+    {
+      "material": "Vanadium (V)",
+      "priority": "immediate",
+      "expected_source_family": "MIT Junior Lab citation chain or compatible literature row",
+      "local_repo_archive_candidate_status": "none_found_in_repo_scan",
+      "archive_entries": [
+        {
+          "field": "Tc_observed",
+          "source_title_or_doi": "10.1103/PhysRev.102.656",
+          "source_requirement_class": "primary_anchor_partial_only",
+          "table_or_figure_identifier": "Abstract snippet",
+          "row_locator": "Abstract Tc statement",
+          "archived_raw_path": null,
+          "extracted_value": 5.03,
+          "unit_basis": "K",
+          "status": "secondary_host_text_captured_pending_primary_raw_archive"
+        },
+        {
+          "field": "Theta_D_K",
+          "source_title_or_doi": "10.1103/PhysRev.102.656",
+          "source_requirement_class": "supplemental_source_required",
+          "table_or_figure_identifier": "Abstract snippet",
+          "row_locator": "Abstract normal-state fit statement",
+          "archived_raw_path": null,
+          "extracted_value": 338.0,
+          "unit_basis": "K",
+          "status": "secondary_host_text_captured_pending_primary_raw_archive"
+        },
+        {
+          "field": "lambda_ep",
+          "source_title_or_doi": "10.1103/PhysRevB.101.094305",
+          "source_requirement_class": "supplemental_source_required",
+          "table_or_figure_identifier": "Abstract",
+          "row_locator": "Abstract electron-phonon interaction statement",
+          "archived_raw_path": null,
+          "extracted_value": 0.91,
+          "unit_basis": "dimensionless",
+          "status": "lambda_secondary_numeric_hint_captured_pending_row_value"
+        },
+        {
+          "field": "mu_star",
+          "source_title_or_doi": "10.1103/PhysRev.102.656",
+          "source_requirement_class": "supplemental_source_or_family_convention_required",
+          "table_or_figure_identifier": null,
+          "row_locator": null,
+          "archived_raw_path": null,
+          "extracted_value": null,
+          "unit_basis": "dimensionless",
+          "status": "source_anchor_present_field_unconfirmed"
+        }
+      ]
+    },
+    {
+      "material": "Nb3Sn",
+      "priority": "high",
+      "expected_source_family": "Matthias 1954 citation chain or compatible A15 literature row",
+      "local_repo_archive_candidate_status": "none_found_in_repo_scan",
+      "archive_entries": [
+        {
+          "field": "Tc_observed",
+          "source_title_or_doi": "10.1103/PhysRev.95.1435",
+          "source_requirement_class": "primary_anchor_scope_confirmed",
+          "table_or_figure_identifier": "Abstract",
+          "row_locator": "Abstract Tc statement",
+          "archived_raw_path": null,
+          "extracted_value": 18.0,
+          "unit_basis": "K",
+          "status": "source_text_captured_pending_raw_archive"
+        },
+        {
+          "field": "Theta_D_K_or_omega_log_K",
+          "source_title_or_doi": "10.1103/PhysRevB.27.1568",
+          "source_requirement_class": "supplemental_source_required",
+          "table_or_figure_identifier": "Abstract plus future phonon-moment table target",
+          "row_locator": "Abstract statements on tabulated phonon moments and proxy convention",
+          "archived_raw_path": null,
+          "extracted_value": null,
+          "unit_basis": "K",
+          "status": "primary_host_proxy_text_captured_pending_row_value"
+        },
+        {
+          "field": "lambda_ep",
+          "source_title_or_doi": "10.1016/0378-4363(84)90167-0",
+          "source_requirement_class": "primary_host_abstract_numeric_capture_present",
+          "table_or_figure_identifier": "Abstract",
+          "row_locator": "Abstract lambda comparison statement",
+          "archived_raw_path": null,
+          "extracted_value": 1.5,
+          "unit_basis": "dimensionless",
+          "status": "primary_host_abstract_numeric_capture_pending_same_family_review"
+        },
+        {
+          "field": "mu_star",
+          "source_title_or_doi": "10.1103/PhysRev.95.1435",
+          "source_requirement_class": "supplemental_source_or_family_convention_required",
+          "table_or_figure_identifier": null,
+          "row_locator": null,
+          "archived_raw_path": null,
+          "extracted_value": null,
+          "unit_basis": "dimensionless",
+          "status": "source_anchor_present_field_unconfirmed"
+        }
+      ]
+    },
+    {
+      "material": "Nb3Ge",
+      "priority": "high",
+      "expected_source_family": "Gavaler 1973 citation chain or compatible A15 literature row",
+      "local_repo_archive_candidate_status": "none_found_in_repo_scan",
+      "archive_entries": [
+        {
+          "field": "Tc_observed",
+          "source_title_or_doi": "10.1063/1.1654966",
+          "source_requirement_class": "primary_anchor_scope_confirmed",
+          "table_or_figure_identifier": "Record summary",
+          "row_locator": "Summary Tc statement",
+          "archived_raw_path": null,
+          "extracted_value": 22.3,
+          "unit_basis": "K",
+          "status": "source_text_captured_pending_raw_archive"
+        },
+        {
+          "field": "Theta_D_K_or_omega_log_K",
+          "source_title_or_doi": "10.1103/PhysRevB.27.1568",
+          "source_requirement_class": "supplemental_source_required",
+          "table_or_figure_identifier": "Abstract plus future phonon-moment table target",
+          "row_locator": "Abstract statements on tabulated phonon moments and proxy convention",
+          "archived_raw_path": null,
+          "extracted_value": null,
+          "unit_basis": "K",
+          "status": "primary_host_proxy_text_captured_pending_row_value"
+        },
+        {
+          "field": "lambda_ep",
+          "source_title_or_doi": "10.1016/0378-4363(84)90167-0",
+          "source_requirement_class": "primary_host_abstract_numeric_capture_present",
+          "table_or_figure_identifier": "Abstract",
+          "row_locator": "Abstract lambda comparison statement",
+          "archived_raw_path": null,
+          "extracted_value": 1.9,
+          "unit_basis": "dimensionless",
+          "status": "primary_host_abstract_numeric_capture_pending_same_family_review"
+        },
+        {
+          "field": "mu_star",
+          "source_title_or_doi": "10.1063/1.1654966",
+          "source_requirement_class": "supplemental_source_or_family_convention_required",
+          "table_or_figure_identifier": null,
+          "row_locator": null,
+          "archived_raw_path": null,
+          "extracted_value": null,
+          "unit_basis": "dimensionless",
+          "status": "source_anchor_present_field_unconfirmed"
+        }
+      ]
+    }
+  ],
+  "claim_boundary": "This intake stub is for external raw evidence archiving only. Filling it does not authorize topic-local row edits."
+}
