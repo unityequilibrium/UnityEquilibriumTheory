@@ -17,13 +17,25 @@ jobs:
     
     steps:
     - uses: actions/checkout@v4
+
+    - name: Detect Rust workspace
+      id: rust-workspace
+      run: |
+        if [ -f Cargo.toml ]; then
+          echo "present=true" >> "$GITHUB_OUTPUT"
+        else
+          echo "present=false" >> "$GITHUB_OUTPUT"
+          echo "No root Cargo.toml found; skipping Rust checks for this corpus-only checkout."
+        fi
     
     - name: Install Rust
+      if: steps.rust-workspace.outputs.present == 'true'
       uses: dtolnay/rust-toolchain@stable
       with:
         components: clippy, rustfmt
     
     - name: Cache cargo
+      if: steps.rust-workspace.outputs.present == 'true'
       uses: actions/cache@v4
       with:
         path: |
@@ -35,13 +47,16 @@ jobs:
           ${{ runner.os }}-cargo-
     
     - name: Check formatting
+      if: steps.rust-workspace.outputs.present == 'true'
       run: cargo fmt --all -- --check
     
     - name: Clippy
+      if: steps.rust-workspace.outputs.present == 'true'
       run: cargo clippy --workspace --all-targets -- -D warnings
       continue-on-error: true
     
     - name: Build
+      if: steps.rust-workspace.outputs.present == 'true'
       run: cargo build --release --workspace
 
   # ==================== Next.js Frontend ====================
@@ -54,8 +69,20 @@ jobs:
     
     steps:
     - uses: actions/checkout@v4
+
+    - name: Detect Next.js app
+      id: next-app
+      working-directory: .
+      run: |
+        if [ -f uet_web/package-lock.json ]; then
+          echo "present=true" >> "$GITHUB_OUTPUT"
+        else
+          echo "present=false" >> "$GITHUB_OUTPUT"
+          echo "No uet_web/package-lock.json found; skipping Next.js checks for this corpus-only checkout."
+        fi
     
     - name: Setup Node.js
+      if: steps.next-app.outputs.present == 'true'
       uses: actions/setup-node@v4
       with:
         node-version: '20'
@@ -63,13 +90,16 @@ jobs:
         cache-dependency-path: './uet_web/package-lock.json'
     
     - name: Install dependencies
+      if: steps.next-app.outputs.present == 'true'
       run: npm ci --legacy-peer-deps
     
     - name: Lint
+      if: steps.next-app.outputs.present == 'true'
       run: npm run lint
       continue-on-error: true
     
     - name: Build
+      if: steps.next-app.outputs.present == 'true'
       run: npm run build
       env:
         NEXT_TELEMETRY_DISABLED: 1
