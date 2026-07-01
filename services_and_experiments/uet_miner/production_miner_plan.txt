@@ -1,0 +1,13 @@
+# production_miner.py (Internal Implementation Plan)
+
+This script will be the final bridge to financial sovereignty.
+
+## Proposed Strategy
+1. **Network Layer:** Use `asyncio` for non-blocking Stratum communication.
+2. **Resonance Layer:** Integrate the `field_resonance_score` from Alpha with the `prime_anchors` from Siege.
+3. **Hardware Layer:** Implement multi-processing to maximize hashrate.
+
+## Configuration Details
+- **Username:** `santazazagamer` (Derived from email/default)
+- **Worker ID:** `Santa001`
+- **Pool URL:** `stratum+tcp://btc.viabtc.io:3333`

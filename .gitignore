@@ -94,3 +94,13 @@ uet_web/.env
 
 # Archived non-research platform/prototype material, if temporarily restored locally.
 _archive_non_research/
+
+# Local service experiment artifacts
+services_and_experiments/**/.env
+services_and_experiments/**/target/
+services_and_experiments/**/target_*/
+services_and_experiments/**/debug/
+services_and_experiments/**/.rustc_info.json
+services_and_experiments/**/CACHEDIR.TAG
+services_and_experiments/**/*.exe
+services_and_experiments/**/*_linux

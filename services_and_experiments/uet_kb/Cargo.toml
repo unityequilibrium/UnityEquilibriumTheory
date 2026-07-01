@@ -1,0 +1,33 @@
+[package]
+name = "uet_kb"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+uet_core = { path = "../uet_core" }
+tokio = { version = "1.0", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = "1.0"
+clap = { version = "4.0", features = ["derive"] }
+toml = "0.8"
+ndarray = "0.15"
+
+# For LanceDB (Vector Database)
+# lancedb = "0.4"
+# arrow-array = "50"
+
+
+
+# Database (Postgres)
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "postgres", "uuid", "chrono"] }
+uuid = { version = "1.8", features = ["v4", "serde"] }
+
+# For MCP (JSON-RPC)
+# We will implement basic stdio JSON-RPC loop manually or use a crate if available.
+# Simple text-io for now.
+crossbeam-channel = "0.5"
+chrono = { version = "=0.4.38", features = ["serde"] } # Pin to avoid conflict with arrow-arith 51.0.0
+sha3 = "0.10.8"
+axum = { version = "0.7", features = ["macros"] }
+tower-http = { version = "0.5", features = ["cors"] }

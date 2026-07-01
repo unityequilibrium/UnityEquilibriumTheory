@@ -1,0 +1,51 @@
+[package]
+name = "uet_api"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Async runtime
+tokio = { version = "1.0", features = ["full"] }
+
+# Web framework
+axum = { version = "0.7", features = ["macros"] }
+axum-extra = { version = "0.9", features = ["typed-header"] }
+tower = "0.4"
+tower-http = { version = "0.5", features = ["cors", "trace"] }
+
+# Database
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "postgres", "uuid", "chrono", "json"] }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Auth
+argon2 = "0.5"
+rand = "0.8"
+jsonwebtoken = "9.0"
+sha2 = "0.10"
+
+# OAuth
+oauth2 = { version = "4.0", features = ["reqwest"] }
+reqwest = { version = "0.11", features = ["json", "rustls-tls"] }
+
+# Types
+uuid = { version = "1.8", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Config
+dotenvy = "0.15"
+once_cell = "1.0"
+fastembed = { version = "5.12.0", features = ["hf-hub", "image-models", "ort-download-binaries"] }
+ndarray = { version = "0.17.2", features = ["serde"] }
+ureq = { version = "3.2.0", features = ["json"] }
+lazy_static = "1.5.0"
