@@ -1,7 +1,7 @@
 {
   "schema_version": "uet-major-result-closure-register-v1",
   "artifact": "uet_major_result_closure_register",
-  "generated_at": "2026-08-20",
+  "generated_at": "2026-08-21",
   "contract": {
     "path": "docs/core/artifacts/uet_major_result_closure_contract.json",
     "sha256": "3d69588169703282667cf6d82421277b02556c37f2b457fe6b2a40d267c38a08"
@@ -201,7 +201,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "127710a6f9e9009b3b4d16416f77c4a872ee79e505026cf6ed04ca6273b09c0c",
+          "sha256": "d06d9aa665bdda3fbfcdf1858c01afacfe423846afec29abac0f9590cfff9f3a",
           "summary": {
             "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
             "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
@@ -373,7 +373,7 @@
         },
         {
           "path": "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json",
-          "sha256": "72391c612528fbeed9d4749865fb6129ec3387bc8664d7ad34abb655ee592dfa",
+          "sha256": "4da5c96f5601bb10119959206375e0fc4dab759ac3b7fbcdda2ab2ac93699f9e",
           "summary": {
             "status": "PASS_SCOPED_NO_ELIGIBLE_PAIRED_ALPHA_RECORD",
             "candidate_count": 11,
@@ -511,7 +511,7 @@
         },
         {
           "path": "docs/core/artifacts/t13_oxford_tgs_numeric_rows_audit.json",
-          "sha256": "d754d72e136873fc31aa8b76bfe1f85cb07bbfb9b1c6cd8584fce89534bb8fd2",
+          "sha256": "0f176973797467f5265530b3fa141dc3bb5a392cfc88c72caa7a94d7fc25ad90",
           "summary": {
             "status": "PASS_OXFORD_TGS_NUMERIC_ROWS_SOURCE_LOCKED_COMPARATOR",
             "closure_level": "CLOSED_FOR_LANE",
@@ -709,7 +709,7 @@
         },
         {
           "path": "docs/core/artifacts/t13_desorbo_ceylon_graphite_cp_audit.json",
-          "sha256": "a8e865fc89d1edea8db9734a93bf533e675bdad13508d36ca58e6533c96da7c9",
+          "sha256": "7ef80f4d26f0df2d7762ed64183bbe4c9c324cc47ce99bbedbdca6bb44dcfbdc",
           "summary": {
             "status": "PASS_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_LOCKED_COMPARATOR",
             "closure_level": "CLOSED_FOR_LANE",
@@ -1620,7 +1620,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json",
-          "sha256": "72391c612528fbeed9d4749865fb6129ec3387bc8664d7ad34abb655ee592dfa",
+          "sha256": "4da5c96f5601bb10119959206375e0fc4dab759ac3b7fbcdda2ab2ac93699f9e",
           "summary": {
             "status": "PASS_SCOPED_NO_ELIGIBLE_PAIRED_ALPHA_RECORD",
             "major_result_id": "T13_ALPHA_PHI_K_PAIRED_RECORD_SEARCH",
@@ -2733,7 +2733,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_desorbo_ceylon_graphite_cp_audit.json",
-          "sha256": "a8e865fc89d1edea8db9734a93bf533e675bdad13508d36ca58e6533c96da7c9",
+          "sha256": "7ef80f4d26f0df2d7762ed64183bbe4c9c324cc47ce99bbedbdca6bb44dcfbdc",
           "summary": {
             "status": "PASS_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_LOCKED_COMPARATOR",
             "major_result_id": "T13_DESORBO_1955_CEYLON_GRAPHITE_CP_COMPARATOR",
@@ -4533,7 +4533,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_oxford_tgs_comparator_provenance_audit.json",
-          "sha256": "4637fd16e0447f6dfea5ebd3e89ca295e3c4f4436459c2406aa5f222eecad7d1",
+          "sha256": "09444962ecd67f59240843907ed09211f7802b9655f298ac206aafd646a2aa2c",
           "summary": {
             "status": "PASS_OXFORD_TGS_PROVENANCE_ARCHIVE_LOCKED_EXTRACTION_PENDING",
             "major_result_id": "T13_OXFORD_TGS_COMPARATOR_PROVENANCE",
@@ -4580,7 +4580,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_oxford_tgs_numeric_rows_audit.json",
-          "sha256": "d754d72e136873fc31aa8b76bfe1f85cb07bbfb9b1c6cd8584fce89534bb8fd2",
+          "sha256": "0f176973797467f5265530b3fa141dc3bb5a392cfc88c72caa7a94d7fc25ad90",
           "summary": {
             "status": "PASS_OXFORD_TGS_NUMERIC_ROWS_SOURCE_LOCKED_COMPARATOR",
             "major_result_id": "T13_OXFORD_TGS_NUMERIC_ROWS_COMPARATOR",

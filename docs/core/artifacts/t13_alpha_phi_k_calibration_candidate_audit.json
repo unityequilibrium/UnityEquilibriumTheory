@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-alpha-phi-k-calibration-candidate-audit-v1",
   "artifact": "t13_alpha_phi_k_calibration_candidate_audit",
-  "generated_at": "2026-08-20",
+  "generated_at": "2026-08-21",
   "status": "PASS_SCOPED_NO_ELIGIBLE_PAIRED_ALPHA_RECORD",
   "major_result": {
     "major_result_id": "T13_ALPHA_PHI_K_PAIRED_RECORD_SEARCH",
@@ -94,6 +94,9 @@
         "independence_statement": false
       },
       "eligible_paired_record": false,
+      "key_presence_eligible_paired_record": false,
+      "semantic_candidate_record_count": 12,
+      "semantic_eligible_record_count": 0,
       "holdout_read_by_audit": false,
       "holdout_policy_mentioned_in_package": true,
       "target_fit_input_detected_by_audit": false,
@@ -121,6 +124,9 @@
         "independence_statement": false
       },
       "eligible_paired_record": false,
+      "key_presence_eligible_paired_record": false,
+      "semantic_candidate_record_count": 8,
+      "semantic_eligible_record_count": 0,
       "holdout_read_by_audit": false,
       "holdout_policy_mentioned_in_package": true,
       "target_fit_input_detected_by_audit": false,
@@ -148,6 +154,9 @@
         "independence_statement": false
       },
       "eligible_paired_record": false,
+      "key_presence_eligible_paired_record": false,
+      "semantic_candidate_record_count": 19,
+      "semantic_eligible_record_count": 0,
       "holdout_read_by_audit": false,
       "holdout_policy_mentioned_in_package": true,
       "target_fit_input_detected_by_audit": false,
@@ -175,6 +184,9 @@
         "independence_statement": false
       },
       "eligible_paired_record": false,
+      "key_presence_eligible_paired_record": false,
+      "semantic_candidate_record_count": 18,
+      "semantic_eligible_record_count": 0,
       "holdout_read_by_audit": false,
       "holdout_policy_mentioned_in_package": true,
       "target_fit_input_detected_by_audit": false,
@@ -202,6 +214,9 @@
         "independence_statement": false
       },
       "eligible_paired_record": false,
+      "key_presence_eligible_paired_record": false,
+      "semantic_candidate_record_count": 9,
+      "semantic_eligible_record_count": 0,
       "holdout_read_by_audit": false,
       "holdout_policy_mentioned_in_package": true,
       "target_fit_input_detected_by_audit": false,
@@ -229,6 +244,9 @@
         "independence_statement": false
       },
       "eligible_paired_record": false,
+      "key_presence_eligible_paired_record": false,
+      "semantic_candidate_record_count": 32,
+      "semantic_eligible_record_count": 0,
       "holdout_read_by_audit": false,
       "holdout_policy_mentioned_in_package": true,
       "target_fit_input_detected_by_audit": false,
@@ -256,6 +274,9 @@
         "independence_statement": false
       },
       "eligible_paired_record": false,
+      "key_presence_eligible_paired_record": false,
+      "semantic_candidate_record_count": 11,
+      "semantic_eligible_record_count": 0,
       "holdout_read_by_audit": false,
       "holdout_policy_mentioned_in_package": true,
       "target_fit_input_detected_by_audit": false,
@@ -283,6 +304,9 @@
         "independence_statement": false
       },
       "eligible_paired_record": false,
+      "key_presence_eligible_paired_record": false,
+      "semantic_candidate_record_count": 6,
+      "semantic_eligible_record_count": 0,
       "holdout_read_by_audit": false,
       "holdout_policy_mentioned_in_package": false,
       "target_fit_input_detected_by_audit": false,
@@ -310,6 +334,9 @@
         "independence_statement": false
       },
       "eligible_paired_record": false,
+      "key_presence_eligible_paired_record": false,
+      "semantic_candidate_record_count": 19,
+      "semantic_eligible_record_count": 0,
       "holdout_read_by_audit": false,
       "holdout_policy_mentioned_in_package": false,
       "target_fit_input_detected_by_audit": false,
@@ -337,6 +364,9 @@
         "independence_statement": false
       },
       "eligible_paired_record": false,
+      "key_presence_eligible_paired_record": false,
+      "semantic_candidate_record_count": 50,
+      "semantic_eligible_record_count": 0,
       "holdout_read_by_audit": false,
       "holdout_policy_mentioned_in_package": true,
       "target_fit_input_detected_by_audit": false,
@@ -364,6 +394,9 @@
         "independence_statement": false
       },
       "eligible_paired_record": false,
+      "key_presence_eligible_paired_record": false,
+      "semantic_candidate_record_count": 3,
+      "semantic_eligible_record_count": 0,
       "holdout_read_by_audit": false,
       "holdout_policy_mentioned_in_package": false,
       "target_fit_input_detected_by_audit": false,

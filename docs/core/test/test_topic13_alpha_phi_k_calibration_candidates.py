@@ -31,6 +31,18 @@ def test_candidate_search_is_scoped_and_emits_no_alpha() -> None:
     assert calorine["controlling_blocker"] == "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing"
 
 
+def test_candidate_eligibility_requires_semantic_record_values() -> None:
+    artifact = load(AUDIT)
+    assert artifact["eligible_candidate_count"] == 0
+    assert all(
+        item["semantic_eligible_record_count"] == 0
+        for item in artifact["candidates"]
+    )
+    assert all(
+        item["eligible_paired_record"] is False
+        for item in artifact["candidates"]
+    )
+
 def test_full_gate_exposes_candidate_search_without_unlocking_alpha() -> None:
     gate = load(FULL)
     alpha = gate["verification_status"]["alpha_Phi_K"]

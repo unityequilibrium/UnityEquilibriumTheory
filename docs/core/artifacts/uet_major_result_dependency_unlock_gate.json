@@ -1,12 +1,12 @@
 {
   "schema_version": "uet-major-result-dependency-unlock-v1",
   "artifact": "uet_major_result_dependency_unlock_gate",
-  "generated_at": "2026-08-20",
+  "generated_at": "2026-08-21",
   "status": "BLOCKED_DOWNSTREAM_MAJOR_RESULTS",
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "ace527f744720fd85ae0ac309dabb71a6a79d053481ef7d86d9e514f14dfa3f3"
+    "sha256": "b52198d3f7013f74c55eed2fa50265878631b15202431414ccb482f0d785496a"
   },
   "decisions": {
     "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY": {
