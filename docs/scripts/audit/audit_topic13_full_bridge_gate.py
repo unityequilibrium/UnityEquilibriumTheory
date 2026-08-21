@@ -127,6 +127,7 @@ LANE_KEY_BY_ID["T13_PETERSON_SOURCE_IDENTITY_NO_GO"] = "peterson_source_identity
 LANE_KEY_BY_ID["T13_THERMAL_BRIDGE_SCALE_DEPENDENCY_NO_GO"] = "thermal_bridge_scale_dependency_no_go"
 LANE_KEY_BY_ID["T13_AIST_GRAPHITE_SOURCE_ROUTE_BOUNDARY"] = "aist_graphite_source_route_boundary"
 LANE_KEY_BY_ID["T13_NIST_SRM_3600_HEAT_CAPACITY_COMPARATOR_BOUNDARY"] = "nist_srm_3600_heat_capacity_comparator_boundary"
+LANE_KEY_BY_ID["T13_PEREZ_CASTANEDA_HOPG_SPECIFIC_HEAT_SOURCE_BOUNDARY"] = "perez_castaneda_hopg_specific_heat_source_boundary"
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -318,6 +319,9 @@ def main() -> int:
     )
     srm3600_path, srm3600 = load(
         "docs/core/artifacts/t13_nist_srm_3600_heat_capacity_boundary_audit.json"
+    )
+    perez_hopg_path, perez_hopg = load(
+        "docs/core/artifacts/t13_perez_castaneda_hopg_source_boundary_audit.json"
     )
     holdout_audit_path, holdout_audit = load(
         "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json"
@@ -759,6 +763,16 @@ def main() -> int:
                 "ding_material_match": srm3600.get("source", {}).get("material_identity", {}).get("ding_ttg_hopg_match"),
                 "controlling_blocker": srm3600.get("controlling_blocker"),
             }),
+            evidence(rel(perez_hopg_path), perez_hopg, {
+                "status": perez_hopg.get("status"),
+                "closure_level": perez_hopg.get("major_result", {}).get("closure_level"),
+                "data_role": perez_hopg.get("major_result", {}).get("data_role"),
+                "raw_sha256": perez_hopg.get("source", {}).get("local_sha256"),
+                "numeric_rows_emitted": perez_hopg.get("acceptance", {}).get("numeric_rows_emitted"),
+                "uncertainty_boundary": perez_hopg.get("source", {}).get("uncertainty_boundary", {}).get("method_comparison_relative_bound"),
+                "ding_material_match": perez_hopg.get("source", {}).get("material_identity", {}).get("ding_ttg_match"),
+                "controlling_blocker": perez_hopg.get("controlling_blocker"),
+            }),
             evidence(rel(holdout_audit_path), holdout_audit, {
                 "status": holdout_audit.get("status"),
                 "metadata_only_observed": holdout_controls.get("metadata_only_observed"),
@@ -874,6 +888,14 @@ def main() -> int:
         artifact["verification_status"]["source_package"]["nist_srm_3600_heat_capacity_comparator_boundary"] = srm3600_lane
         artifact["verification_status"]["eos_transport_kms_entropy"].pop(
             "nist_srm_3600_heat_capacity_comparator_boundary", None
+        )
+    perez_hopg_lane = discovered_lane_integrations.get(
+        "perez_castaneda_hopg_specific_heat_source_boundary"
+    )
+    if perez_hopg_lane:
+        artifact["verification_status"]["source_package"]["perez_castaneda_hopg_specific_heat_source_boundary"] = perez_hopg_lane
+        artifact["verification_status"]["eos_transport_kms_entropy"].pop(
+            "perez_castaneda_hopg_specific_heat_source_boundary", None
         )
     ding_public_supplementary_lane = discovered_lane_integrations.get(
         "ding_public_supplementary_payload_boundary"
@@ -1503,6 +1525,8 @@ def main() -> int:
         lane_closures.append("current alpha_Phi_K paired-record search is closed for lane with no eligible calibration record")
     if discovered_lane_integrations.get("ding_c_src_independent_reproduction_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("independent c_v comparator boundary is closed for lane without promoting it to Ding C_src")
+    if discovered_lane_integrations.get("perez_castaneda_hopg_specific_heat_source_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
+        lane_closures.append("Perez-Castaneda HOPG specific-heat source boundary is closed for lane; the specimen and below-3-percent method-comparison bound are source-locked, but figure-only rows, source-grade uncertainty, Ding C_src, and alpha remain open")
     if discovered_lane_integrations.get("ding_public_supplementary_payload_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("Ding public supplementary payload boundary is closed for lane without promoting PDFs or figures to numeric C_src")
     if discovered_lane_integrations.get("ding_2017_acs_supplementary_payload_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":

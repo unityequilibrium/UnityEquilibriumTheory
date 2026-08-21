@@ -1303,3 +1303,30 @@ VERIFICATION: Hash/source-boundary verifier and synchronized focused regression 
 CONTROLLING_BLOCKER: `figure_only_numeric_payload_and_Ding_material_mapping_missing`.
 NEXT_ACTION: Seek a permitted same-state numeric source or separately controlled Ding-compatible PBTE package with uncertainty and convergence; do not use Figure 3 or its approximate uncertainty as `C_src` or alpha calibration.
 CLAIM_BOUNDARY: Source-traceable comparator boundary only; not a formula derivation, SI calibration, temperature prediction, external validation, or Full Topic 13 closure.
+## T13-150 - Perez-Castaneda HOPG specific-heat source boundary
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for a source-traceable HOPG specific-heat comparator boundary; not CLOSED_FOR_CORE.
+
+WHAT_IS_ACTUALLY_CLOSED: The author-posted paper is hash-locked with DOI/arXiv and page-level locators. The HOPG specimen identity, natural-graphite comparison identity, temperature range, and below-3-percent method-comparison statement are recorded. The published numeric route is figure-only and cannot be promoted to row-level evidence.
+
+WHAT_REMAINS_OPEN: Machine-readable rows, row-level uncertainty, fixed-volume c_v, Ding material/state and PBTE-response mapping, Ding C_src, independent alpha_Phi_K, dimensional Phi mapping, and full EOS/transport/KMS/entropy closure remain open.
+
+DEPENDENCY_UNLOCKED: HOPG source-boundary lane only; no c_v, C_src, alpha, Full Topic 13, Core, Gravity, constitutive transport, or Galaxy dependency is unlocked.
+
+STATUS: PASS_SCOPED_HOPG_SPECIFIC_HEAT_SOURCE_BOUNDARY; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.
+
+WHAT_CHANGED: Added the hash-locked author-posted PDF source boundary, verifier, focused test, full-gate source-package projection, closure-register/dependency synchronization, and this formula-audit entry. No figure digitization, synthetic replacement, fit, threshold change, Landauer inference, or Xie 2026 access occurred.
+
+EQUATION_OR_MAPPING: Candidate standard-physics relation is c_p^m(T, material) with candidate volumetric map c_v^V(T, material) = rho(T, material) * c_p^m(T, material) - Cp-to-Cv correction. No numeric rows or correction are emitted. The UET measurement contract remains y_TTG = Delta_Tq(t) / Delta_Tq(0), y_TTG^UET = Delta_Phi(t) / Delta_Phi(0), and Delta_Tq = alpha_Phi_K * Delta_Phi; alpha remains uninstantiated.
+
+VERIFICATION: Raw PDF SHA-256 is f5056e3804275336deca634da84a47fec1e91876ff65ab62a84596a5ad3ebd4a, size 1141942 bytes, 21 pages; numeric_rows_emitted=0; figure_only_payload=true; method_comparison_relative_bound=0.03; row_level_standard_uncertainty_present=false; Ding match=false; focused source/gate/register/dependency regression passed 13 tests. Full gate remains 10 blockers, claim promotion=false, and Xie 2026 remains unconsumed.
+
+CONTROLLING_BLOCKER: figure_only_numeric_payload_and_Ding_PBTE_response_mapping_missing for this lane; the global primary blocker remains the missing independent dimensional/alpha anchor together with the other full-bridge blockers.
+
+NEXT_ACTION: Acquire a permitted machine-readable same-state heat-capacity or Ding PBTE C_src package with row locators, units, row-level uncertainty, preprocessing, convergence, material identity, and hash; do not digitize Figures 6-8 into calibration without a declared digitization and uncertainty contract.
+
+CLAIM_BOUNDARY: Comparator source boundary only; not numeric C_src, not alpha calibration, not a temperature prediction, not external validation, and not Full Topic 13 closure.
+
+EVIDENCE_PATHS: docs/core/artifacts/t13_perez_castaneda_hopg_source_boundary_audit.json; docs/scripts/audit/audit_topic13_perez_castaneda_hopg_boundary.py; docs/core/test/test_topic13_perez_castaneda_hopg_boundary.py; docs/scripts/audit/audit_topic13_full_bridge_gate.py; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json; docs/core/artifacts/uet_major_result_closure_register.json; docs/core/artifacts/uet_major_result_dependency_unlock_gate.json.
+
+EVIDENCE_HASHES: artifact a7116b76ede94cd71f70d61c488795159ca4cf9e9f9922b9960f9f1166640fdf; verifier 3adcfe4166b7f0729a43daa8d34b8644cc401040c470f8245304049d9842069c; regression a9ccf1c613494af41dc59d0720045f5124141fee424fbbdce8e8dc8c4832ab01; full gate fe00b27f371e78ef4f337ffd5a66e8c6e54bf5fdcc8ef19826cfd44e37f2143c; register a5a2c43cd059db34edc18b85866a7eb9e387bc47ccd4a4234989be69a0d01816; dependency d76237a766620684b46cb7fce270cfe553f6ed81c0ba8715ea542bd84c87a7fe.

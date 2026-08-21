@@ -2335,3 +2335,28 @@ NEXT_ACTION: Obtain a permitted same-state machine-readable heat-capacity/PBTE s
 CLAIM_BOUNDARY: Comparator source boundary only; not numeric `C_src`, not independent `alpha_Phi_K`, not a Kelvin prediction, not external validation, not `CLOSED_FOR_CORE`, and not global UET closure.
 EVIDENCE_PATHS: `docs/core/artifacts/t13_nist_srm_3600_heat_capacity_boundary_audit.json`; `docs/scripts/audit/audit_topic13_nist_srm_3600_heat_capacity_boundary.py`; `docs/core/test/test_topic13_nist_srm_3600_heat_capacity_boundary.py`; `docs/scripts/audit/audit_topic13_full_bridge_gate.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/artifacts/uet_major_result_closure_register.json`; `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`.
 EVIDENCE_HASHES: source `5bbbd0e3949a1e38cbb7ec00bbfc1a75a9d4708f6a0656e5e49c8d44d32ba5da`; source artifact `7317cadd672abd7eaacdda3eb5b4e5fdfc6bbe9fe6085a916ab93418ce6678b3`; full gate `17f9a8f09f17dacaaea987a086b1ad905bb206cc16dd8c6949538ff5167fe55c`; register `8037569bca69757892be6c7b216218fc7c437ad0413a1877dcdf723f75a40253`; dependency `3fcfbdbe603db366b0dc848df5da7602ac1ce649d07d86379e5fc3bf346b6016`.
+## T13-150 - Perez-Castaneda HOPG specific-heat source boundary
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for a source-traceable HOPG specific-heat comparator boundary; not CLOSED_FOR_CORE.
+
+WHAT_IS_ACTUALLY_CLOSED: The author-posted paper is archived with a reproducible PDF hash, DOI/arXiv locators, specimen details, and page-level source locators. Its below-3-percent method-comparison statement is preserved as a method/error boundary, not row-level standard uncertainty. The figure-only route is explicitly rejected for silent C_src or alpha promotion.
+
+WHAT_REMAINS_OPEN: Numeric rows, source-grade c_v uncertainty, Ding natural-graphite TTG/PBTE material and response mapping, Ding C_src, independent alpha_Phi_K, dimensional Phi map, physical Kubo coefficient, and EOS/transport/KMS/entropy closure remain open.
+
+DEPENDENCY_UNLOCKED: HOPG comparator/source-boundary lane only; no downstream dependency is unlocked.
+
+STATUS: PASS_SCOPED_HOPG_SPECIFIC_HEAT_SOURCE_BOUNDARY; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL with 10 blockers.
+
+WHAT_CHANGED: Added the HOPG source-boundary verifier, artifact, focused test, full-gate projection, closure-register/dependency sync, manifest, formula-audit entry, and update-log entry. The local raw PDF remains ignored and is not included in the public commit.
+
+EQUATION_OR_MAPPING: Candidate c_p^m(T, material) and c_v^V(T, material) = rho(T, material) * c_p^m(T, material) - Cp-to-Cv correction are recorded as standard-physics mapping contracts only. No numeric mapping is evaluated. The UET measurement equations remain y_TTG = Delta_Tq(t) / Delta_Tq(0), y_TTG^UET = Delta_Phi(t) / Delta_Phi(0), and Delta_Tq = alpha_Phi_K * Delta_Phi.
+
+VERIFICATION: Source hash f5056e3804275336deca634da84a47fec1e91876ff65ab62a84596a5ad3ebd4a; 1141942 bytes; 21 pages; zero numeric rows; figure-only payload; 3 percent method-comparison boundary; no Ding match; focused regression 13 passed; full gate remains blocked; claim promotion=false; Xie 2026 remains untouched.
+
+CONTROLLING_BLOCKER: figure_only_numeric_payload_and_Ding_PBTE_response_mapping_missing for this source route; globally the missing independent Phi/SI dimensional anchor and alpha_Phi_K remain controlling.
+
+NEXT_ACTION: Acquire a permitted machine-readable same-state heat-capacity or Ding PBTE C_src package with provenance, row uncertainty, convergence, material identity, and hash; keep this HOPG route outside calibration and holdout paths.
+
+CLAIM_BOUNDARY: Source comparator boundary only; not numeric C_src, not alpha calibration, not prediction, not external validation, and not Full Topic 13 closure.
+
+EVIDENCE_PATHS: docs/core/artifacts/t13_perez_castaneda_hopg_source_boundary_audit.json; docs/scripts/audit/audit_topic13_perez_castaneda_hopg_boundary.py; docs/core/test/test_topic13_perez_castaneda_hopg_boundary.py; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json; docs/core/artifacts/uet_major_result_closure_register.json; docs/core/artifacts/uet_major_result_dependency_unlock_gate.json.

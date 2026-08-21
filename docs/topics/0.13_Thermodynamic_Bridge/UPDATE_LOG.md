@@ -3406,3 +3406,30 @@ CONTROLLING_BLOCKER: `figure_only_numeric_payload_and_Ding_material_mapping_miss
 NEXT_ACTION: Obtain permitted same-state machine-readable heat-capacity/PBTE data with uncertainty, convergence, provenance, and hash; do not digitize Figure 3 into calibration without a declared uncertainty contract.
 CLAIM_BOUNDARY: Comparator boundary only; not numeric `C_src`, not alpha calibration, not prediction, not external validation, and not Full Topic 13 closure.
 EVIDENCE_PATHS: `docs/core/artifacts/t13_nist_srm_3600_heat_capacity_boundary_audit.json`; `docs/scripts/audit/audit_topic13_nist_srm_3600_heat_capacity_boundary.py`; `docs/core/test/test_topic13_nist_srm_3600_heat_capacity_boundary.py`; `docs/scripts/audit/audit_topic13_full_bridge_gate.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.
+### 2026-08-21 - Perez-Castaneda HOPG specific-heat source boundary (T13-150)
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for the HOPG specific-heat source boundary; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.
+
+WHAT_IS_ACTUALLY_CLOSED: The author-posted Perez-Castaneda et al. paper is source-locked with DOI/arXiv locators, raw PDF hash, specimen identity, page locators, and a below-3-percent method-comparison boundary. The captured paper supplies figures rather than machine-readable rows, so the route is closed as a comparator boundary only.
+
+WHAT_REMAINS_OPEN: Zero numeric rows were accepted; row-level standard uncertainty, fixed-volume c_v, Ding TTG/PBTE material and response mapping, Ding C_src, independent alpha_Phi_K, dimensional Phi mapping, and EOS/transport/KMS/entropy closure remain open.
+
+DEPENDENCY_UNLOCKED: None beyond source-route classification; Core, Gravity, constitutive transport, and Galaxy remain blocked.
+
+STATUS: PASS_SCOPED_HOPG_SPECIFIC_HEAT_SOURCE_BOUNDARY; full gate remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL with 10 blockers.
+
+WHAT_CHANGED: Added the HOPG source-boundary verifier, artifact, regression, full-gate source-package projection, closure-register/dependency synchronization, and documentation updates. No figure digitization, synthetic replacement, fit, threshold change, Landauer inference, or Xie 2026 access occurred.
+
+EQUATION_OR_MAPPING: Candidate c_p^m(T, material) and c_v^V = rho c_p^m - Cp-to-Cv correction are retained as standard-physics mapping contracts with no numeric evaluation. The UET measurement contract remains y_TTG = Delta_Tq(t) / Delta_Tq(0), y_TTG^UET = Delta_Phi(t) / Delta_Phi(0), and Delta_Tq = alpha_Phi_K * Delta_Phi.
+
+VERIFICATION: Raw PDF SHA-256 f5056e3804275336deca634da84a47fec1e91876ff65ab62a84596a5ad3ebd4a; artifact a7116b76ede94cd71f70d61c488795159ca4cf9e9f9922b9960f9f1166640fdf; focused source/gate/register/dependency regression 13 passed; full gate remains 10 blockers; downstream dependency remains blocked; holdout audit remains false.
+
+CONTROLLING_BLOCKER: figure_only_numeric_payload_and_Ding_PBTE_response_mapping_missing for this route; full Topic 13 remains controlled by the independent dimensional/alpha anchor plus Ding C_src, physical Kubo, source uncertainty, material mapping, and EOS/transport/KMS/entropy blockers.
+
+NEXT_ACTION: Acquire a permitted machine-readable same-state heat-capacity or Ding PBTE C_src package with units, uncertainty, preprocessing, convergence, material identity, locator, and hash; do not digitize Figures 6-8 into calibration without a declared uncertainty contract.
+
+CLAIM_BOUNDARY: Comparator source boundary only; no numeric C_src, alpha calibration, prediction, external validation, or Full Topic 13 closure.
+
+EVIDENCE_PATHS: docs/core/artifacts/t13_perez_castaneda_hopg_source_boundary_audit.json; docs/scripts/audit/audit_topic13_perez_castaneda_hopg_boundary.py; docs/core/test/test_topic13_perez_castaneda_hopg_boundary.py; docs/scripts/audit/audit_topic13_full_bridge_gate.py; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json; docs/core/artifacts/uet_major_result_closure_register.json; docs/core/artifacts/uet_major_result_dependency_unlock_gate.json.
+
+EVIDENCE_HASHES: full gate fe00b27f371e78ef4f337ffd5a66e8c6e54bf5fdcc8ef19826cfd44e37f2143c; register a5a2c43cd059db34edc18b85866a7eb9e387bc47ccd4a4234989be69a0d01816; dependency d76237a766620684b46cb7fce270cfe553f6ed81c0ba8715ea542bd84c87a7fe.
