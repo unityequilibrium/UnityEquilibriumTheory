@@ -85,7 +85,7 @@ jobs:
           violations = []
           for raw in changed:
               path = raw.replace("\\", "/")
-              if path.startswith(".github/workflows/") and path != ".github/workflows/pr-scope.yml":
+              if path.startswith(".github/workflows/") and path != ".github/workflows/pr-scope.yml" and Path(path).is_file():
                   text = Path(path).read_text(encoding="utf-8")
                   for token in forbidden:
                       if token in text:
