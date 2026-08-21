@@ -50,6 +50,7 @@ LANES = (
     ("T13_UET_O2_OPEN_SYSTEM_SK_KMS_ENTROPY_LANE", "uet_o2_open_system_sk_kms_entropy_lane"),
     ("T13_INDEPENDENT_C_SRC_ACCEPTANCE_CONTRACT", "independent_csrc_acceptance_contract"),
     ("T13_CALORINE_ZENODO_NEP_BTE_NUMERIC_REPRODUCTION", "calorine_zenodo_nep_bte_numeric_reproduction"),
+    ("T13_CALORINE_FULL_LBTE_NUMERICAL_STABILITY_BOUNDARY", "calorine_full_lbte_numerical_stability_boundary"),
     ("T13_UET_O2_CONSERVATIVE_CONTINUUM_COLLOCATION_LANE", "uet_o2_conservative_continuum_collocation_lane"),
     ("T13_UET_O2_TREE_LEVEL_BS_SK_MATCH_INTERFACE_LANE", "uet_o2_tree_level_bs_sk_match_interface_lane"),
     ("T13_UET_O2_ONE_LOOP_VERTEX_UV_BOUNDARY", "uet_o2_one_loop_vertex_uv_boundary"),

@@ -3433,3 +3433,18 @@ CLAIM_BOUNDARY: Comparator source boundary only; no numeric C_src, alpha calibra
 EVIDENCE_PATHS: docs/core/artifacts/t13_perez_castaneda_hopg_source_boundary_audit.json; docs/scripts/audit/audit_topic13_perez_castaneda_hopg_boundary.py; docs/core/test/test_topic13_perez_castaneda_hopg_boundary.py; docs/scripts/audit/audit_topic13_full_bridge_gate.py; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json; docs/core/artifacts/uet_major_result_closure_register.json; docs/core/artifacts/uet_major_result_dependency_unlock_gate.json.
 
 EVIDENCE_HASHES: full gate fe00b27f371e78ef4f337ffd5a66e8c6e54bf5fdcc8ef19826cfd44e37f2143c; register a5a2c43cd059db34edc18b85866a7eb9e387bc47ccd4a4234989be69a0d01816; dependency d76237a766620684b46cb7fce270cfe553f6ed81c0ba8715ea542bd84c87a7fe.
+## T13-151 - Calorine full-LBTE numerical stability boundary
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for the full-LBTE numerical-stability boundary; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.
+WHAT_IS_ACTUALLY_CLOSED: Full-LBTE source identity, natural-isotope control, pseudoinverse method comparison, collision-spectrum sign diagnostic, and the latest mesh response are now machine-readable.
+WHAT_REMAINS_OPEN: Positive-semidefinite collision spectrum, mesh convergence, source-grade uncertainty, Ding material/state mapping, independent alpha_Phi_K, dimensional Phi map, physical Kubo, and EOS/transport/KMS/entropy closure.
+DEPENDENCY_UNLOCKED: None beyond the numerical-boundary classification; downstream Core/Gravity/transport/Galaxy remain blocked.
+STATUS: WARN_FULL_LBTE_NUMERICAL_STABILITY_OPEN; full gate BLOCKED_OPEN_T13_FULL_BRIDGE with 10 blockers.
+WHAT_CHANGED: Added the full-LBTE stability audit, archived local payload hashes, focused regression, full-gate projection, major-result register/dependency sync, and this documentation entry. No holdout or calibration data was used.
+EQUATION_OR_MAPPING: C_src(T) = [sum_q w_q sum_mu c_qmu(T)]/[sum_q w_q V_primitive]; Delta_Tq = Delta_u_ph/C_src(T); kappa is a candidate W m^-1 K^-1 response. No Phi-to-temperature map is emitted.
+VERIFICATION: The method-0 control has negative in-plane kappa at 300 K; method 1 leaves a sign-indefinite spectrum and its latest adjacent mesh change is 0.129379135193. Xie 2026 was not accessed.
+CONTROLLING_BLOCKER: full_lbte_numerical_well_posedness_not_closed, with the existing independent dimensional/alpha and Ding/source/thermodynamic blockers unchanged.
+NEXT_ACTION: Resolve the collision-spectrum and convergence boundary without clipping, threshold changes, fit, or holdout access.
+CLAIM_BOUNDARY: Scoped numerical boundary only; not a physical UET transport coefficient, alpha calibration, prediction, external validation, Core closure, or global UET closure.
+EVIDENCE_PATHS: docs/core/artifacts/t13_calorine_full_lbte_stability_boundary_audit.json; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json; docs/core/artifacts/uet_major_result_closure_register.json; docs/core/artifacts/uet_major_result_dependency_unlock_gate.json.
+EVIDENCE_HASHES: artifact 8b5de32a8c33b0a646c8e26faf263585d98bcb939df8adb78b1b16f9d832859d; full gate 6505ad8b6b1aac6da67d8ba7a3c10ae77f2c6047def0502a47377f44bdd8f14a; register a0207ee94c1cdc4e5d5a86f33763a7bbe3267716d3ce5bd7290a7f806b424344; dependency 62195d85fbf71e31b98448215aa25e991a55b01f6d6dbca80b93cac1f561b91d.

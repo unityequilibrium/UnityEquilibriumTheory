@@ -52,6 +52,7 @@ LANE_KEY_BY_ID["T13_MP48_TEMPERATURE_VOLUME_UNCERTAINTY_BOUNDARY"] = "mp48_tempe
 LANE_KEY_BY_ID["T13_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY"] = "graphite_alpha_v_kt_matched_source_boundary"
 LANE_KEY_BY_ID["T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY_BOUNDARY"] = "ding_alternate_public_dataset_discovery_boundary"
 LANE_KEY_BY_ID["T13_CALORINE_ZENODO_NEP_BTE_NUMERIC_REPRODUCTION"] = "calorine_zenodo_nep_bte_numeric_reproduction"
+LANE_KEY_BY_ID["T13_CALORINE_FULL_LBTE_NUMERICAL_STABILITY_BOUNDARY"] = "calorine_full_lbte_numerical_stability_boundary"
 LANE_KEY_BY_ID["T13_CALORINE_ISOTOPE_MASS_SENSITIVITY"] = "calorine_isotope_mass_sensitivity"
 LANE_KEY_BY_ID["T13_CALORINE_STATE_UNCERTAINTY_DECOMPOSITION"] = "calorine_state_uncertainty_decomposition"
 LANE_KEY_BY_ID["T13_CALORINE_C_SRC_EQUILIBRIUM_CROSSCHECK"] = "calorine_csrc_equilibrium_crosscheck"
@@ -307,6 +308,9 @@ def main() -> int:
     )
     calorine_reproduction_path, calorine_reproduction = load(
         "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json"
+    )
+    calorine_full_lbte_path, calorine_full_lbte = load(
+        "docs/core/artifacts/t13_calorine_full_lbte_stability_boundary_audit.json"
     )
     calorine_isotope_path, calorine_isotope = load(
         "docs/core/artifacts/t13_calorine_isotope_mass_sensitivity_audit.json"
@@ -736,6 +740,13 @@ def main() -> int:
                 "latest_pair_max_relative_change": calorine_reproduction.get("reproduction", {}).get("convergence", {}).get("latest_pair", {}).get("max_relative_change"),
                 "controlling_blocker": calorine_reproduction.get("controlling_blocker"),
             }),
+            evidence(rel(calorine_full_lbte_path), calorine_full_lbte, {
+                "status": calorine_full_lbte.get("status"),
+                "closure_level": calorine_full_lbte.get("major_result", {}).get("closure_level"),
+                "latest_pair_max_relative_change": calorine_full_lbte.get("mesh_convergence", {}).get("latest_pair", {}).get("max_relative_change"),
+                "method0_negative_300K": calorine_full_lbte.get("checks", {}).get("method0_negative_in_plane_kappa_at_300K"),
+                "controlling_blocker": calorine_full_lbte.get("controlling_blocker"),
+            }),
             evidence(rel(calorine_isotope_path), calorine_isotope, {
                 "status": calorine_isotope.get("status"),
                 "closure_level": calorine_isotope.get("major_result", {}).get("closure_level"),
@@ -856,7 +867,7 @@ def main() -> int:
         artifact["verification_status"]["eos_transport_kms_entropy"].pop(
             "calorine_zenodo_nep_bte_numeric_reproduction", None
         )
-    for lane_key in ("calorine_isotope_mass_sensitivity", "calorine_state_uncertainty_decomposition", "calorine_csrc_equilibrium_crosscheck", "figshare_dft_force_data_boundary", "huang_2023_nims_mdr_payload_boundary", "calorine_public_model_variant_boundary", "calorine_nep1_backend_compatibility", "calorine_legacy_nep2_backend_probe", "calorine_legacy_nep2_pbte_reproduction"):
+    for lane_key in ("calorine_full_lbte_numerical_stability_boundary", "calorine_isotope_mass_sensitivity", "calorine_state_uncertainty_decomposition", "calorine_csrc_equilibrium_crosscheck", "figshare_dft_force_data_boundary", "huang_2023_nims_mdr_payload_boundary", "calorine_public_model_variant_boundary", "calorine_nep1_backend_compatibility", "calorine_legacy_nep2_backend_probe", "calorine_legacy_nep2_pbte_reproduction"):
         lane = discovered_lane_integrations.get(lane_key)
         if lane:
             artifact["verification_status"]["source_package"][lane_key] = lane

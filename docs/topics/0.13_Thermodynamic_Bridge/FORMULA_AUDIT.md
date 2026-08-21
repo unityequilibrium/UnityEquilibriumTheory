@@ -1330,3 +1330,17 @@ CLAIM_BOUNDARY: Comparator source boundary only; not numeric C_src, not alpha ca
 EVIDENCE_PATHS: docs/core/artifacts/t13_perez_castaneda_hopg_source_boundary_audit.json; docs/scripts/audit/audit_topic13_perez_castaneda_hopg_boundary.py; docs/core/test/test_topic13_perez_castaneda_hopg_boundary.py; docs/scripts/audit/audit_topic13_full_bridge_gate.py; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json; docs/core/artifacts/uet_major_result_closure_register.json; docs/core/artifacts/uet_major_result_dependency_unlock_gate.json.
 
 EVIDENCE_HASHES: artifact a7116b76ede94cd71f70d61c488795159ca4cf9e9f9922b9960f9f1166640fdf; verifier 3adcfe4166b7f0729a43daa8d34b8644cc401040c470f8245304049d9842069c; regression a9ccf1c613494af41dc59d0720045f5124141fee424fbbdce8e8dc8c4832ab01; full gate fe00b27f371e78ef4f337ffd5a66e8c6e54bf5fdcc8ef19826cfd44e37f2143c; register a5a2c43cd059db34edc18b85866a7eb9e387bc47ccd4a4234989be69a0d01816; dependency d76237a766620684b46cb7fce270cfe553f6ed81c0ba8715ea542bd84c87a7fe.
+## T13-151 - Calorine full-LBTE numerical stability boundary
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE`; this is an external full-LBTE numerical boundary, not a UET transport derivation.
+WHAT_IS_ACTUALLY_CLOSED: The source-locked force-constant identity, natural-isotope control, full-LBTE solver-method comparison, collision-spectrum sign diagnostic, and adjacent mesh response record are reproducible from the archived local payload hashes.
+WHAT_REMAINS_OPEN: `kappa` is not accepted as a UET coefficient. The collision matrix is not positive semidefinite at the high mesh, method-1 response is not converged, and material/state equivalence, source uncertainty, `alpha_Phi_K`, SI `Phi` mapping, Kubo, EOS, KMS, and entropy closure are absent.
+DEPENDENCY_UNLOCKED: None beyond the numerical-boundary lane.
+STATUS: `WARN_FULL_LBTE_NUMERICAL_STABILITY_OPEN`.
+WHAT_CHANGED: Added formula and solver semantics for `pinv_method=0/1` and kept the source mapping separate from UET variables.
+EQUATION_OR_MAPPING: `C_src(T) = [sum_q w_q sum_mu c_qmu(T)] / [sum_q w_q V_primitive]`; `Delta_Tq = Delta_u_ph/C_src(T)`; `kappa` is a candidate heat-current response. `C_src` is not UET `C`; `Phi` and `R_gen` are not relabeled.
+VERIFICATION: `pinv_method=0` yields negative in-plane `kappa` at 300 K; method `1` ignores negative eigenvalues but the latest mesh change is `0.129379135193`. No fit, calibration, or Xie 2026 holdout access occurred.
+CONTROLLING_BLOCKER: `full_lbte_collision_spectrum_positive_semidefinite_missing` and `full_lbte_mesh_convergence_missing`.
+NEXT_ACTION: Supply a declared, source-supported collision/transport stability and uncertainty contract before any physical transport comparison.
+CLAIM_BOUNDARY: Numerical boundary only; no UET dimensional map, `alpha_Phi_K`, TTG prediction, external validation, or Full Topic 13 closure.
+EVIDENCE: `docs/core/artifacts/t13_calorine_full_lbte_stability_boundary_audit.json` (SHA-256 `8b5de32a8c33b0a646c8e26faf263585d98bcb939df8adb78b1b16f9d832859d`).

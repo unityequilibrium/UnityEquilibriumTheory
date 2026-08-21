@@ -6,7 +6,7 @@
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "a5a2c43cd059db34edc18b85866a7eb9e387bc47ccd4a4234989be69a0d01816"
+    "sha256": "a0207ee94c1cdc4e5d5a86f33763a7bbe3267716d3ce5bd7290a7f806b424344"
   },
   "decisions": {
     "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY": {
@@ -75,7 +75,7 @@
   ],
   "claim_boundary": "Dependency decisions only; no downstream result is promoted by a checkpoint or comparator pass.",
   "topic13_partial_evidence": {
-    "register_sha256": "4496b453a49fec67455d6c62f63b31bef50d43c9a1e984c1f35b20fc46bffdff",
+    "register_sha256": "112714f2c45f97ae7940249b4c73cb8f4bbcc1010763adc52d52d56603997e7c",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",
@@ -787,7 +787,7 @@
         "full_core_unlock": false,
         "audit": {
           "path": "docs/core/artifacts/t13_oxford_tgs_numeric_rows_audit.json",
-          "sha256": "d754d72e136873fc31aa8b76bfe1f85cb07bbfb9b1c6cd8584fce89534bb8fd2",
+          "sha256": "0f176973797467f5265530b3fa141dc3bb5a392cfc88c72caa7a94d7fc25ad90",
           "summary": {
             "status": "PASS_OXFORD_TGS_NUMERIC_ROWS_SOURCE_LOCKED_COMPARATOR",
             "major_result_id": "T13_OXFORD_TGS_NUMERIC_ROWS_COMPARATOR",
@@ -802,7 +802,7 @@
         "full_core_unlock": false,
         "audit": {
           "path": "docs/core/artifacts/t13_desorbo_ceylon_graphite_cp_audit.json",
-          "sha256": "a8e865fc89d1edea8db9734a93bf533e675bdad13508d36ca58e6533c96da7c9",
+          "sha256": "7ef80f4d26f0df2d7762ed64183bbe4c9c324cc47ce99bbedbdca6bb44dcfbdc",
           "summary": {
             "status": "PASS_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_LOCKED_COMPARATOR",
             "major_result_id": "T13_DESORBO_1955_CEYLON_GRAPHITE_CP_COMPARATOR",
@@ -986,6 +986,21 @@
           "summary": {
             "status": "PASS_SCOPED_CALORINE_NUMERIC_C_SRC_REPRODUCTION",
             "major_result_id": "T13_CALORINE_ZENODO_NEP_BTE_NUMERIC_REPRODUCTION",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      },
+      "calorine_full_lbte_numerical_stability_boundary": {
+        "major_result_id": "T13_CALORINE_FULL_LBTE_NUMERICAL_STABILITY_BOUNDARY",
+        "closure_level": "CLOSED_FOR_LANE",
+        "status": "WARN_FULL_LBTE_NUMERICAL_STABILITY_OPEN",
+        "full_core_unlock": false,
+        "audit": {
+          "path": "docs/core/artifacts/t13_calorine_full_lbte_stability_boundary_audit.json",
+          "sha256": "8b5de32a8c33b0a646c8e26faf263585d98bcb939df8adb78b1b16f9d832859d",
+          "summary": {
+            "status": "WARN_FULL_LBTE_NUMERICAL_STABILITY_OPEN",
+            "major_result_id": "T13_CALORINE_FULL_LBTE_NUMERICAL_STABILITY_BOUNDARY",
             "closure_level": "CLOSED_FOR_LANE"
           }
         }

@@ -1,0 +1,861 @@
+{
+  "schema_version": "t13-calorine-full-lbte-stability-boundary-v1",
+  "artifact": "t13_calorine_full_lbte_stability_boundary_audit",
+  "generated_at": "2026-08-21",
+  "status": "WARN_FULL_LBTE_NUMERICAL_STABILITY_OPEN",
+  "major_result": {
+    "major_result_id": "T13_CALORINE_FULL_LBTE_NUMERICAL_STABILITY_BOUNDARY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "full-LBTE outputs are archived for a fixed source-locked 4x4x2 force-constant state",
+      "natural-isotope mass variance is recorded as an explicit numerical control",
+      "pinv_method=0 and pinv_method=1 are compared without changing the source or the thermal leakage threshold",
+      "the high-mesh collision spectrum is shown to be sign-indefinite and the method-1 positive response is not mesh-converged",
+      "the result is separated from Phi mapping, alpha_Phi_K calibration, Ding acceptance, and Xie 2026 holdout access"
+    ],
+    "equation_or_mapping": {
+      "source_heat_capacity": "C_src(T) = [sum_q w_q sum_mu c_qmu(T)] / [sum_q w_q V_primitive]",
+      "candidate_temperature_response": "Delta_Tq = Delta_u_ph / C_src(T)",
+      "lbte_observable": "kappa = full-LBTE heat-current response in W m^-1 K^-1",
+      "pseudoinverse_method_0": "treat |eigenvalue| < pinv_cutoff as zero",
+      "pseudoinverse_method_1": "treat eigenvalue < pinv_cutoff as zero; this ignores negative eigenvalues"
+    },
+    "units": {
+      "C_src": "J m^-3 K^-1",
+      "temperature": "K",
+      "kappa": "W m^-1 K^-1",
+      "collision_eigenvalues": "phono3py collision-matrix internal units; not promoted to SI"
+    },
+    "derivation_class": "EXTERNAL_CANDIDATE_FULL_LBTE_NUMERICAL_REPRODUCTION_NO_UET_DERIVATION",
+    "observable": "candidate graphite full-LBTE thermal-conductivity response",
+    "data_role": "EXTERNAL_CANDIDATE_REPRODUCTION_NOT_CALIBRATION_NOT_HOLDOUT",
+    "verification_status": "WARN_FULL_LBTE_NUMERICAL_STABILITY_OPEN",
+    "open_blockers": [
+      "full_lbte_collision_spectrum_positive_semidefinite_missing",
+      "full_lbte_mesh_convergence_missing",
+      "calorine_route_material_regime_mapping_to_ding_missing",
+      "calorine_route_source_grade_uncertainty_missing",
+      "alpha_Phi_K_independent_calibration_missing"
+    ],
+    "dependency_unlocked": "full-LBTE numerical-boundary evidence lane only; no physical transport, dimensional map, Topic 13, Core, Gravity, or Galaxy unlock",
+    "claim_boundary": "This closes a numerical-stability boundary for one source-locked external graphite candidate route. It does not establish a physical UET transport coefficient, a Ding TTG material match, an alpha_Phi_K calibration, a Phi-to-temperature prediction, or Full Topic 13 closure."
+  },
+  "source": {
+    "force_constants": {
+      "poscar": {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/force_constants_dim_4x4x2/POSCAR",
+        "size_bytes": 503,
+        "sha256": "c673b66e7750fa4abe594e6117879e1ca779dccfe120ae84aa842a15fcab1de7"
+      },
+      "fc2": {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/force_constants_dim_4x4x2/fc2.hdf5",
+        "size_bytes": 32706,
+        "sha256": "ea90e4790166ca54657d4f69a077f4d299d595dd27e107b82d96b4f9eeccad9c"
+      },
+      "fc3": {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/force_constants_dim_4x4x2/fc3.hdf5",
+        "size_bytes": 9346643,
+        "sha256": "9d42c80e59757b783462aea57227d0d58f3becc2e3d145fbb370cb137a60b7e2"
+      }
+    },
+    "material_state": "public Calorine graphite primitive C4 state; not declared equivalent to Ding natural-graphite TTG",
+    "isotope_mass_variance": 7.3872305e-05,
+    "isotope_mass_variance_source": "phono3py.other.isotope.get_mass_variances(['C']) in the installed runtime",
+    "software": {
+      "calorine": "3.5",
+      "phono3py": "4.4.0",
+      "phonopy": "4.4.0",
+      "ase": "3.29.0"
+    }
+  },
+  "numerical_contract": {
+    "supercell_dim": [
+      4,
+      4,
+      2
+    ],
+    "temperatures_K": [
+      200.0,
+      250.0,
+      300.0
+    ],
+    "is_LBTE": true,
+    "is_isotope": true,
+    "pinv_cutoff": 1e-08,
+    "mesh_convergence_tolerance": 0.01,
+    "no_clipping": true,
+    "no_cone_padding": true,
+    "no_fit": true,
+    "target_curve_used": false,
+    "alpha_Phi_K_fit_performed": false,
+    "holdout_accessed": false
+  },
+  "method1_runs": [
+    {
+      "label": "4x4x2",
+      "method": 1,
+      "mesh": [
+        4,
+        4,
+        2
+      ],
+      "temperatures_K": [
+        200.0,
+        250.0,
+        300.0
+      ],
+      "kappa_W_m^-1_K^-1": [
+        [
+          438.3763259226598,
+          438.3763259339094,
+          3.1662684980522207e-13,
+          6.697014272907391e-15,
+          6.709493120437979e-15,
+          2.103743805946852e-13
+        ],
+        [
+          300.92732312974687,
+          300.92732313746933,
+          -9.285167385621512e-14,
+          4.631050390535762e-15,
+          4.6036434801111404e-15,
+          1.3700077789304934e-13
+        ],
+        [
+          246.21482007576185,
+          246.21482008208022,
+          5.005567487563773e-14,
+          3.773822378811976e-15,
+          3.7736812844877926e-15,
+          1.1649361941492345e-13
+        ]
+      ],
+      "kappa_RTA_W_m^-1_K^-1": [
+        [
+          1009.1690883054906,
+          1009.169088331388,
+          39.98973948188671,
+          1.930567298101087e-14,
+          1.6388315244883532e-14,
+          4.840406305623598e-13
+        ],
+        [
+          407.54241037615395,
+          407.54241038661246,
+          12.731285039340547,
+          7.499384358109088e-15,
+          6.658841821593363e-15,
+          1.89685539225846e-13
+        ],
+        [
+          274.4152455127155,
+          274.41524551975755,
+          8.368890400628985,
+          5.803291842895768e-15,
+          3.907028522614741e-15,
+          1.240067678305334e-13
+        ]
+      ],
+      "in_plane_x_W_m^-1_K^-1": [
+        438.3763259226598,
+        300.92732312974687,
+        246.21482007576185
+      ],
+      "in_plane_y_W_m^-1_K^-1": [
+        438.3763259339094,
+        300.92732313746933,
+        246.21482008208022
+      ],
+      "in_plane_response_finite": true,
+      "in_plane_response_positive": true,
+      "in_plane_xy_max_abs_difference": 1.124959680964821e-08,
+      "collision_eigenvalue_shape": [
+        3,
+        288
+      ],
+      "collision_eigenvalue_min_by_temperature": [
+        -0.031036786226021927,
+        -0.03772222815131916,
+        -0.0441689623644928
+      ],
+      "collision_eigenvalue_negative_count_by_temperature": [
+        106,
+        113,
+        104
+      ],
+      "collision_eigenvalue_abs_below_cutoff_count_by_temperature": [
+        252,
+        252,
+        252
+      ],
+      "collision_spectrum_positive_semidefinite": false,
+      "payloads": {
+        "kappa": {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/full_lbte_natural_isotope_pinv_method1/mesh_4x4x2/kappa.hdf5",
+          "size_bytes": 52978,
+          "sha256": "fe849b4bbe13cafc7d2ee4dcbfe38bb18598877a2169df415af0a1ca813573e1"
+        },
+        "collision_eigenvalues": {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/full_lbte_natural_isotope_pinv_method1/mesh_4x4x2/coleigs.hdf5",
+          "size_bytes": 8989,
+          "sha256": "2fb67aeeed399aa4220b24f619feccead2388f9730a1884a97a7ee93349d6239"
+        }
+      }
+    },
+    {
+      "label": "6x6x3",
+      "method": 1,
+      "mesh": [
+        6,
+        6,
+        3
+      ],
+      "temperatures_K": [
+        200.0,
+        250.0,
+        300.0
+      ],
+      "kappa_W_m^-1_K^-1": [
+        [
+          388.83071971972936,
+          388.8307197297076,
+          1.610817014453611,
+          6.122845807771206e-15,
+          5.910426230091979e-15,
+          1.7997636867175836e-13
+        ],
+        [
+          395.87188466845805,
+          395.871884678617,
+          1.3751326584854064,
+          6.1196545785307985e-15,
+          6.057765052225485e-15,
+          1.8562624460354231e-13
+        ],
+        [
+          375.680179005504,
+          375.6801790151448,
+          1.2379160423815692,
+          5.93532789831745e-15,
+          5.760500852959167e-15,
+          1.7626092639891052e-13
+        ]
+      ],
+      "kappa_RTA_W_m^-1_K^-1": [
+        [
+          241.37731581841538,
+          241.37731582460958,
+          3.143274845743131,
+          4.062241722916684e-15,
+          3.678165822675983e-15,
+          1.1348423229897026e-13
+        ],
+        [
+          248.23065650041937,
+          248.23065650678953,
+          2.531564406465058,
+          4.0582434560475864e-15,
+          3.810290944580566e-15,
+          1.1910009587304234e-13
+        ],
+        [
+          243.66436684956363,
+          243.66436685581655,
+          2.098164998370277,
+          3.990254352732556e-15,
+          3.697448851913252e-15,
+          1.151849540974432e-13
+        ]
+      ],
+      "in_plane_x_W_m^-1_K^-1": [
+        388.83071971972936,
+        395.87188466845805,
+        375.680179005504
+      ],
+      "in_plane_y_W_m^-1_K^-1": [
+        388.8307197297076,
+        395.871884678617,
+        375.6801790151448
+      ],
+      "in_plane_response_finite": true,
+      "in_plane_response_positive": true,
+      "in_plane_xy_max_abs_difference": 1.0158942131965887e-08,
+      "collision_eigenvalue_shape": [
+        3,
+        504
+      ],
+      "collision_eigenvalue_min_by_temperature": [
+        -0.023755250557094675,
+        -0.02747934733720205,
+        -0.031232280432757945
+      ],
+      "collision_eigenvalue_negative_count_by_temperature": [
+        139,
+        140,
+        133
+      ],
+      "collision_eigenvalue_abs_below_cutoff_count_by_temperature": [
+        308,
+        308,
+        308
+      ],
+      "collision_spectrum_positive_semidefinite": false,
+      "payloads": {
+        "kappa": {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/full_lbte_natural_isotope_pinv_method1/mesh_6x6x3/kappa.hdf5",
+          "size_bytes": 69031,
+          "sha256": "125912267a9562f32ea1c2f4aa92eec11c133114cb5173e03459930429bb4168"
+        },
+        "collision_eigenvalues": {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/full_lbte_natural_isotope_pinv_method1/mesh_6x6x3/coleigs.hdf5",
+          "size_bytes": 14173,
+          "sha256": "9d5a281b99f16b1f08b4c16c55b17f2efbd7670edd0d257b3261aa93e83cd2ab"
+        }
+      }
+    },
+    {
+      "label": "8x8x4",
+      "method": 1,
+      "mesh": [
+        8,
+        8,
+        4
+      ],
+      "temperatures_K": [
+        200.0,
+        250.0,
+        300.0
+      ],
+      "kappa_W_m^-1_K^-1": [
+        [
+          464.26179715599545,
+          464.2617971679094,
+          1.6367218047748235,
+          7.295411073725106e-15,
+          7.146521666204189e-15,
+          2.2173725610550984e-13
+        ],
+        [
+          456.1132578746585,
+          456.11325788636344,
+          1.3250841967185678,
+          7.1039549681084824e-15,
+          6.991363547549958e-15,
+          2.1540867114909086e-13
+        ],
+        [
+          423.0861476867886,
+          423.08614769764586,
+          1.1515534248885502,
+          6.6068524971784536e-15,
+          6.47867770715844e-15,
+          2.0070371126638307e-13
+        ]
+      ],
+      "kappa_RTA_W_m^-1_K^-1": [
+        [
+          261.85346604964695,
+          261.85346605636664,
+          2.411820534863492,
+          4.299850838321377e-15,
+          4.031821176016065e-15,
+          1.240021954477956e-13
+        ],
+        [
+          275.0362986245687,
+          275.03629863162666,
+          1.979226203034236,
+          4.460755270762957e-15,
+          4.223411607421829e-15,
+          1.2997933604958819e-13
+        ],
+        [
+          271.38952044050814,
+          271.3895204474726,
+          1.6731640491704332,
+          4.341365610345141e-15,
+          4.156609973365712e-15,
+          1.2918061736016246e-13
+        ]
+      ],
+      "in_plane_x_W_m^-1_K^-1": [
+        464.26179715599545,
+        456.1132578746585,
+        423.0861476867886
+      ],
+      "in_plane_y_W_m^-1_K^-1": [
+        464.2617971679094,
+        456.11325788636344,
+        423.08614769764586
+      ],
+      "in_plane_response_finite": true,
+      "in_plane_response_positive": true,
+      "in_plane_xy_max_abs_difference": 1.1913925845874473e-08,
+      "collision_eigenvalue_shape": [
+        3,
+        1080
+      ],
+      "collision_eigenvalue_min_by_temperature": [
+        -0.017060216075937343,
+        -0.019276272385941613,
+        -0.021502736478947862
+      ],
+      "collision_eigenvalue_negative_count_by_temperature": [
+        342,
+        292,
+        307
+      ],
+      "collision_eigenvalue_abs_below_cutoff_count_by_temperature": [
+        664,
+        664,
+        664
+      ],
+      "collision_spectrum_positive_semidefinite": false,
+      "payloads": {
+        "kappa": {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/full_lbte_natural_isotope_pinv_method1/mesh_8x8x4/kappa.hdf5",
+          "size_bytes": 109388,
+          "sha256": "4d7fd7058eec6342852264a66b5ec789f148bb7b15f18e9043ea2228b2506132"
+        },
+        "collision_eigenvalues": {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/full_lbte_natural_isotope_pinv_method1/mesh_8x8x4/coleigs.hdf5",
+          "size_bytes": 27997,
+          "sha256": "f24bcaab117ece2c0b562e91f80b4ea0ebd8561fefae1e0e62314ba195b5ac46"
+        }
+      }
+    },
+    {
+      "label": "10x10x5",
+      "method": 1,
+      "mesh": [
+        10,
+        10,
+        5
+      ],
+      "temperatures_K": [
+        200.0,
+        250.0,
+        300.0
+      ],
+      "kappa_W_m^-1_K^-1": [
+        [
+          404.1960073366602,
+          404.1960073470329,
+          1.9312373281692805,
+          6.4037870291619824e-15,
+          6.230053501771156e-15,
+          1.8720906528097322e-13
+        ],
+        [
+          403.87402806797695,
+          403.87402807834115,
+          1.7550103812078657,
+          6.438526734852354e-15,
+          6.1979493991566814e-15,
+          1.905580335297523e-13
+        ],
+        [
+          383.86596609144067,
+          383.86596610129163,
+          1.0521718703902052,
+          5.9568197054818004e-15,
+          5.905737548390924e-15,
+          1.8141343539478353e-13
+        ]
+      ],
+      "kappa_RTA_W_m^-1_K^-1": [
+        [
+          239.19804938743522,
+          239.19804939357365,
+          1.570407098673496,
+          3.829705880767933e-15,
+          3.638182405582799e-15,
+          1.1195831946252487e-13
+        ],
+        [
+          255.09134915802488,
+          255.0913491645712,
+          1.311435739976226,
+          4.021705333226127e-15,
+          3.90911512843488e-15,
+          1.2131087994615307e-13
+        ],
+        [
+          254.60438737198223,
+          254.60438737851592,
+          1.115605927971914,
+          3.9927302446097975e-15,
+          3.88497399429699e-15,
+          1.2082373929675132e-13
+        ]
+      ],
+      "in_plane_x_W_m^-1_K^-1": [
+        404.1960073366602,
+        403.87402806797695,
+        383.86596609144067
+      ],
+      "in_plane_y_W_m^-1_K^-1": [
+        404.1960073470329,
+        403.87402807834115,
+        383.86596610129163
+      ],
+      "in_plane_response_finite": true,
+      "in_plane_response_positive": true,
+      "in_plane_xy_max_abs_difference": 1.0372673386882525e-08,
+      "collision_eigenvalue_shape": [
+        3,
+        1512
+      ],
+      "collision_eigenvalue_min_by_temperature": [
+        -0.0032083069229234358,
+        -0.0027239868903569473,
+        -0.0022225984331504557
+      ],
+      "collision_eigenvalue_negative_count_by_temperature": [
+        280,
+        296,
+        285
+      ],
+      "collision_eigenvalue_abs_below_cutoff_count_by_temperature": [
+        608,
+        608,
+        608
+      ],
+      "collision_spectrum_positive_semidefinite": false,
+      "payloads": {
+        "kappa": {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/full_lbte_natural_isotope_pinv_method1/mesh_10x10x5/kappa.hdf5",
+          "size_bytes": 143675,
+          "sha256": "6492e928fa109ea6eee64277ca9819ad20c8cc6ceac2ab8e3995faf76aeee17d"
+        },
+        "collision_eigenvalues": {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/full_lbte_natural_isotope_pinv_method1/mesh_10x10x5/coleigs.hdf5",
+          "size_bytes": 38365,
+          "sha256": "f41c0d19adf50d4298bfea04480e6574d4375f493f197139f986dbd23a38081b"
+        }
+      }
+    }
+  ],
+  "method0_control": {
+    "label": "10x10x5_method0_control",
+    "method": 0,
+    "mesh": [
+      10,
+      10,
+      5
+    ],
+    "temperatures_K": [
+      200.0,
+      250.0,
+      300.0
+    ],
+    "kappa_W_m^-1_K^-1": [
+      [
+        172.7156193036835,
+        172.71561930811586,
+        1.9312373281692379,
+        3.3313948594507858e-15,
+        3.263524693349913e-15,
+        7.725548919060139e-14
+      ],
+      [
+        73.43073826506092,
+        73.43073826694521,
+        1.7550103812078397,
+        1.7234216363831692e-15,
+        1.3335569389491863e-15,
+        3.656649671964249e-14
+      ],
+      [
+        -57.19984931204973,
+        -57.19984931351749,
+        0.24483074800853244,
+        -5.585912675158337e-16,
+        -6.052865270658868e-16,
+        -2.5652463424285097e-14
+      ]
+    ],
+    "kappa_RTA_W_m^-1_K^-1": [
+      [
+        239.19804938743522,
+        239.19804939357365,
+        1.570407098673496,
+        3.829705880767933e-15,
+        3.638182405582799e-15,
+        1.1195831946252487e-13
+      ],
+      [
+        255.09134915802488,
+        255.0913491645712,
+        1.311435739976226,
+        4.021705333226127e-15,
+        3.90911512843488e-15,
+        1.2131087994615307e-13
+      ],
+      [
+        254.60438737198223,
+        254.60438737851592,
+        1.115605927971914,
+        3.9927302446097975e-15,
+        3.88497399429699e-15,
+        1.2082373929675132e-13
+      ]
+    ],
+    "in_plane_x_W_m^-1_K^-1": [
+      172.7156193036835,
+      73.43073826506092,
+      -57.19984931204973
+    ],
+    "in_plane_y_W_m^-1_K^-1": [
+      172.71561930811586,
+      73.43073826694521,
+      -57.19984931351749
+    ],
+    "in_plane_response_finite": true,
+    "in_plane_response_positive": false,
+    "in_plane_xy_max_abs_difference": 4.432365585671505e-09,
+    "collision_eigenvalue_shape": [
+      3,
+      1512
+    ],
+    "collision_eigenvalue_min_by_temperature": [
+      -0.0032083069229234358,
+      -0.0027239868903569473,
+      -0.0022225984331504557
+    ],
+    "collision_eigenvalue_negative_count_by_temperature": [
+      280,
+      296,
+      285
+    ],
+    "collision_eigenvalue_abs_below_cutoff_count_by_temperature": [
+      608,
+      608,
+      608
+    ],
+    "collision_spectrum_positive_semidefinite": false,
+    "payloads": {
+      "kappa": {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/full_lbte_natural_isotope_pinv_method0/mesh_10x10x5/kappa.hdf5",
+        "size_bytes": 143693,
+        "sha256": "57e3e7b422c4ef35a11b546238411e3c43e9a7c559e3b4b711a68ec36eaf456a"
+      },
+      "collision_eigenvalues": {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/full_lbte_natural_isotope_pinv_method0/mesh_10x10x5/coleigs.hdf5",
+        "size_bytes": 38365,
+        "sha256": "f41c0d19adf50d4298bfea04480e6574d4375f493f197139f986dbd23a38081b"
+      }
+    }
+  },
+  "mesh_convergence": {
+    "criterion": "diagnostic adjacent-mesh relative change <= 0.01; this is not a UET acceptance threshold",
+    "declared_tolerance": 0.01,
+    "comparisons": [
+      {
+        "from_mesh": [
+          4,
+          4,
+          2
+        ],
+        "to_mesh": [
+          6,
+          6,
+          3
+        ],
+        "rows": [
+          {
+            "temperature_K": 200.0,
+            "previous_in_plane_x_W_m^-1_K^-1": 438.3763259226598,
+            "current_in_plane_x_W_m^-1_K^-1": 388.83071971972936,
+            "relative_change_from_previous": 0.11302071593088606
+          },
+          {
+            "temperature_K": 250.0,
+            "previous_in_plane_x_W_m^-1_K^-1": 300.92732312974687,
+            "current_in_plane_x_W_m^-1_K^-1": 395.87188466845805,
+            "relative_change_from_previous": 0.31550661651875056
+          },
+          {
+            "temperature_K": 300.0,
+            "previous_in_plane_x_W_m^-1_K^-1": 246.21482007576185,
+            "current_in_plane_x_W_m^-1_K^-1": 375.680179005504,
+            "relative_change_from_previous": 0.5258227709034933
+          }
+        ],
+        "max_relative_change": 0.5258227709034933
+      },
+      {
+        "from_mesh": [
+          6,
+          6,
+          3
+        ],
+        "to_mesh": [
+          8,
+          8,
+          4
+        ],
+        "rows": [
+          {
+            "temperature_K": 200.0,
+            "previous_in_plane_x_W_m^-1_K^-1": 388.83071971972936,
+            "current_in_plane_x_W_m^-1_K^-1": 464.26179715599545,
+            "relative_change_from_previous": 0.19399464499779517
+          },
+          {
+            "temperature_K": 250.0,
+            "previous_in_plane_x_W_m^-1_K^-1": 395.87188466845805,
+            "current_in_plane_x_W_m^-1_K^-1": 456.1132578746585,
+            "relative_change_from_previous": 0.15217391165996155
+          },
+          {
+            "temperature_K": 300.0,
+            "previous_in_plane_x_W_m^-1_K^-1": 375.680179005504,
+            "current_in_plane_x_W_m^-1_K^-1": 423.0861476867886,
+            "relative_change_from_previous": 0.1261870370877088
+          }
+        ],
+        "max_relative_change": 0.19399464499779517
+      },
+      {
+        "from_mesh": [
+          8,
+          8,
+          4
+        ],
+        "to_mesh": [
+          10,
+          10,
+          5
+        ],
+        "rows": [
+          {
+            "temperature_K": 200.0,
+            "previous_in_plane_x_W_m^-1_K^-1": 464.26179715599545,
+            "current_in_plane_x_W_m^-1_K^-1": 404.1960073366602,
+            "relative_change_from_previous": 0.12937913519331137
+          },
+          {
+            "temperature_K": 250.0,
+            "previous_in_plane_x_W_m^-1_K^-1": 456.1132578746585,
+            "current_in_plane_x_W_m^-1_K^-1": 403.87402806797695,
+            "relative_change_from_previous": 0.11453126806727694
+          },
+          {
+            "temperature_K": 300.0,
+            "previous_in_plane_x_W_m^-1_K^-1": 423.0861476867886,
+            "current_in_plane_x_W_m^-1_K^-1": 383.86596609144067,
+            "relative_change_from_previous": 0.09270022620637226
+          }
+        ],
+        "max_relative_change": 0.12937913519331137
+      }
+    ],
+    "latest_pair": {
+      "from_mesh": [
+        8,
+        8,
+        4
+      ],
+      "to_mesh": [
+        10,
+        10,
+        5
+      ],
+      "rows": [
+        {
+          "temperature_K": 200.0,
+          "previous_in_plane_x_W_m^-1_K^-1": 464.26179715599545,
+          "current_in_plane_x_W_m^-1_K^-1": 404.1960073366602,
+          "relative_change_from_previous": 0.12937913519331137
+        },
+        {
+          "temperature_K": 250.0,
+          "previous_in_plane_x_W_m^-1_K^-1": 456.1132578746585,
+          "current_in_plane_x_W_m^-1_K^-1": 403.87402806797695,
+          "relative_change_from_previous": 0.11453126806727694
+        },
+        {
+          "temperature_K": 300.0,
+          "previous_in_plane_x_W_m^-1_K^-1": 423.0861476867886,
+          "current_in_plane_x_W_m^-1_K^-1": 383.86596609144067,
+          "relative_change_from_previous": 0.09270022620637226
+        }
+      ],
+      "max_relative_change": 0.12937913519331137
+    },
+    "latest_pair_pass": false
+  },
+  "checks": {
+    "force_constant_identity_recorded": true,
+    "archived_method1_payloads_present": true,
+    "archived_method0_control_present": true,
+    "method1_in_plane_response_finite": true,
+    "method1_in_plane_response_positive": true,
+    "method1_collision_spectrum_positive_semidefinite": false,
+    "method0_negative_in_plane_kappa_at_300K": true,
+    "method1_and_method0_collision_spectrum_match_at_high_mesh": true,
+    "latest_method1_mesh_pair_converged": false,
+    "fit_performed": false,
+    "target_curve_used": false,
+    "alpha_Phi_K_fit_performed": false,
+    "holdout_accessed": false
+  },
+  "acceptance_for_full_topic13": false,
+  "controlling_blocker": "full_lbte_numerical_well_posedness_not_closed",
+  "next_controller": "Resolve the sign-indefinite collision spectrum and obtain a declared, source-supported convergence/uncertainty contract before using full-LBTE output as a physical transport comparator; do not use it for alpha_Phi_K or holdout prediction.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/full_lbte_natural_isotope_pinv_method1/mesh_4x4x2/kappa.hdf5",
+      "size_bytes": 52978,
+      "sha256": "fe849b4bbe13cafc7d2ee4dcbfe38bb18598877a2169df415af0a1ca813573e1"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/full_lbte_natural_isotope_pinv_method1/mesh_4x4x2/coleigs.hdf5",
+      "size_bytes": 8989,
+      "sha256": "2fb67aeeed399aa4220b24f619feccead2388f9730a1884a97a7ee93349d6239"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/full_lbte_natural_isotope_pinv_method1/mesh_6x6x3/kappa.hdf5",
+      "size_bytes": 69031,
+      "sha256": "125912267a9562f32ea1c2f4aa92eec11c133114cb5173e03459930429bb4168"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/full_lbte_natural_isotope_pinv_method1/mesh_6x6x3/coleigs.hdf5",
+      "size_bytes": 14173,
+      "sha256": "9d5a281b99f16b1f08b4c16c55b17f2efbd7670edd0d257b3261aa93e83cd2ab"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/full_lbte_natural_isotope_pinv_method1/mesh_8x8x4/kappa.hdf5",
+      "size_bytes": 109388,
+      "sha256": "4d7fd7058eec6342852264a66b5ec789f148bb7b15f18e9043ea2228b2506132"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/full_lbte_natural_isotope_pinv_method1/mesh_8x8x4/coleigs.hdf5",
+      "size_bytes": 27997,
+      "sha256": "f24bcaab117ece2c0b562e91f80b4ea0ebd8561fefae1e0e62314ba195b5ac46"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/full_lbte_natural_isotope_pinv_method1/mesh_10x10x5/kappa.hdf5",
+      "size_bytes": 143675,
+      "sha256": "6492e928fa109ea6eee64277ca9819ad20c8cc6ceac2ab8e3995faf76aeee17d"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/full_lbte_natural_isotope_pinv_method1/mesh_10x10x5/coleigs.hdf5",
+      "size_bytes": 38365,
+      "sha256": "f41c0d19adf50d4298bfea04480e6574d4375f493f197139f986dbd23a38081b"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/full_lbte_natural_isotope_pinv_method0/mesh_10x10x5/kappa.hdf5",
+      "size_bytes": 143693,
+      "sha256": "57e3e7b422c4ef35a11b546238411e3c43e9a7c559e3b4b711a68ec36eaf456a"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/full_lbte_natural_isotope_pinv_method0/mesh_10x10x5/coleigs.hdf5",
+      "size_bytes": 38365,
+      "sha256": "f41c0d19adf50d4298bfea04480e6574d4375f493f197139f986dbd23a38081b"
+    }
+  ],
+  "claim_boundary": "This closes a numerical-stability boundary for one source-locked external graphite candidate route. It does not establish a physical UET transport coefficient, a Ding TTG material match, an alpha_Phi_K calibration, a Phi-to-temperature prediction, or Full Topic 13 closure."
+}
