@@ -125,6 +125,7 @@ LANE_KEY_BY_ID["T13_JUN_FINAL_SOURCE_BOUNDARY"] = "jun_final_source_boundary"
 LANE_KEY_BY_ID["T13_HONG_FINAL_SOURCE_BOUNDARY"] = "hong_final_source_boundary"
 LANE_KEY_BY_ID["T13_PETERSON_SOURCE_IDENTITY_NO_GO"] = "peterson_source_identity_no_go"
 LANE_KEY_BY_ID["T13_THERMAL_BRIDGE_SCALE_DEPENDENCY_NO_GO"] = "thermal_bridge_scale_dependency_no_go"
+LANE_KEY_BY_ID["T13_AIST_GRAPHITE_SOURCE_ROUTE_BOUNDARY"] = "aist_graphite_source_route_boundary"
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -841,6 +842,16 @@ def main() -> int:
         ] = nims_graphite_route_lane
         artifact["verification_status"]["eos_transport_kms_entropy"].pop(
             "nims_graphite_ltc_route_no_go", None
+        )
+    aist_graphite_route_lane = discovered_lane_integrations.get(
+        "aist_graphite_source_route_boundary"
+    )
+    if aist_graphite_route_lane:
+        artifact["verification_status"]["source_package"][
+            "aist_graphite_source_route_boundary"
+        ] = aist_graphite_route_lane
+        artifact["verification_status"]["eos_transport_kms_entropy"].pop(
+            "aist_graphite_source_route_boundary", None
         )
     ding_public_supplementary_lane = discovered_lane_integrations.get(
         "ding_public_supplementary_payload_boundary"

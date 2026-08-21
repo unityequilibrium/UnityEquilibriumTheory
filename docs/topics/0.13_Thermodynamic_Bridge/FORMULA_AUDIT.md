@@ -1276,3 +1276,17 @@ CONTROLLING_BLOCKER: `independent_field_energy_and_temperature_scale_map_missing
 NEXT_ACTION: Seek a permitted source-locked field residue or independent paired Phi/SI observable anchor, then rerun dimensional and alpha admission without using normalized target residuals.
 
 CLAIM_BOUNDARY: Scoped structural no-go only; no physical coefficient, Kelvin prediction, external validation, or Core closure is claimed.
+
+## T13-148 - AIST source-route boundary
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE`; no formula or SI coefficient was promoted.
+WHAT_IS_ACTUALLY_CLOSED: The AIST TPDS route is catalogued as a possible thermophysical source surface, but its displayed terms do not permit embedding the numeric contents in the public repository. The local artifact stores metadata only and marks the route as non-calibration.
+WHAT_REMAINS_OPEN: Numeric `c_v`, density/uncertainty, material-state mapping, Ding `C_src`, and independent `alpha_Phi_K` remain open.
+DEPENDENCY_UNLOCKED: None beyond source-route classification.
+STATUS: `PASS_SCOPED_AIST_GRAPHITE_SOURCE_ROUTE_BOUNDARY`; full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_CHANGED: Added a source-route audit and gate lane with explicit no-payload and no-redistribution fields.
+EQUATION_OR_MAPPING: Candidate relation `c_v^V(T, material) = rho(T, material) * c_v(T, material)` is recorded with `c_v` in `J kg^-1 K^-1`, `rho` in `kg m^-3`, and `c_v^V` in `J m^-3 K^-1`; it is not evaluated numerically. The UET bridge remains `y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)` and `Delta_Tq = alpha_Phi_K * Delta_Phi`, with alpha uninstantiated.
+VERIFICATION: AIST metadata boundary artifact and focused regression passed; no material detail, numeric payload, fit, calibration, or holdout was accessed.
+CONTROLLING_BLOCKER: `aist_numeric_payload_not_publicly_redistributable` for this route; global full-bridge blockers are unchanged.
+NEXT_ACTION: Seek a permitted redistributable numeric source or a separately controlled private source package; do not relabel AIST metadata as c_v evidence.
+CLAIM_BOUNDARY: Source-provenance boundary only; no numeric thermodynamic correction, calibration, prediction, or external validation.
