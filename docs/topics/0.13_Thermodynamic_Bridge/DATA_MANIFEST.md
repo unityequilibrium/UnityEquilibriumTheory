@@ -973,3 +973,9 @@ locator, but no official binary, raw table, or separately exposed source-data
 package is stored locally. The two Berut JSON copies remain topic-derived
 summary rows and are not calibration-eligible. See `docs/core/artifacts/t13_berut_source_package_availability_boundary.json` for the
 source-surface scope, hashes, and next acquisition controller.
+
+## NIST SRM 3600 heat-capacity comparator boundary (2026-08-21)
+
+| Item | Local path | Source | Unit convention | Bytes | SHA-256 | Benchmark role | Provenance status |
+|:--|:--|:--|:--|--:|:--|:--|:--|
+| NIST SRM 3600 heat-capacity comparator boundary | `Data/03_Research/raw/nist_srm_3600_glassy_carbon_heat_capacity.pdf` (ignored local raw; not included in public commit); `docs/core/artifacts/t13_nist_srm_3600_heat_capacity_boundary_audit.json` | Cappelletti et al., Journal of Applied Crystallography 51 (2018), DOI `10.1107/S1600576718010828`; official NIST PDF locator `https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=921229` | temperature K; candidate specific heat J kg^-1 K^-1; source uncertainty boundary approximately +/-2 percent at 90 percent confidence | 758635 raw PDF; 0 numeric rows emitted | raw `5bbbd0e3949a1e38cbb7ec00bbfc1a75a9d4708f6a0656e5e49c8d44d32ba5da`; artifact `7317cadd672abd7eaacdda3eb5b4e5fdfc6bbe9fe6085a916ab93418ce6678b3` | Source-traceable comparator only; no Ding `C_src`, no calibration | `PASS_SCOPED_NIST_SRM_3600_HEAT_CAPACITY_COMPARATOR_BOUNDARY`; Figure 3 is not transcribed, glassy carbon/graphite powder is not accepted as Ding HOPG PBTE state, and the ignored raw source remains local-only pending publication-rights review. |

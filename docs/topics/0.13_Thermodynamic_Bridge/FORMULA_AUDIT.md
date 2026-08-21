@@ -1290,3 +1290,16 @@ VERIFICATION: AIST metadata boundary artifact and focused regression passed; no 
 CONTROLLING_BLOCKER: `aist_numeric_payload_not_publicly_redistributable` for this route; global full-bridge blockers are unchanged.
 NEXT_ACTION: Seek a permitted redistributable numeric source or a separately controlled private source package; do not relabel AIST metadata as c_v evidence.
 CLAIM_BOUNDARY: Source-provenance boundary only; no numeric thermodynamic correction, calibration, prediction, or external validation.
+## T13-149 - NIST SRM 3600 heat-capacity comparator boundary
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE`; this is a source/material/uncertainty boundary, not physical Topic 13 closure.
+WHAT_IS_ACTUALLY_CLOSED: The official NIST SRM 3600 PDF identity, hash, page locators, 20-295 K comparison range, and source-reported approximately +/-2 percent 90 percent-confidence uncertainty boundary are recorded. The paper's glassy-carbon and graphite-powder material identity is kept separate from Ding HOPG PBTE `C_src`.
+WHAT_REMAINS_OPEN: Figure 3 supplies no machine-readable rows in the archived paper; row-level standard uncertainty, same-state Ding mapping, volumetric `c_v`, `C_src`, `alpha_Phi_K`, SI map, and physical transport remain open.
+DEPENDENCY_UNLOCKED: Comparator lane only; no calibration or downstream dependency unlock.
+STATUS: `PASS_SCOPED_NIST_SRM_3600_HEAT_CAPACITY_COMPARATOR_BOUNDARY`.
+WHAT_CHANGED: Added a source-boundary artifact and verifier, connected it to the canonical full gate, and preserved the raw PDF as local-only ignored source material.
+EQUATION_OR_MAPPING: `c_v^V = rho c_v^m` is a declared standard-physics conversion contract only; no numeric row or UET mapping is emitted.
+VERIFICATION: Hash/source-boundary verifier and synchronized focused regression passed; `numeric_rows_emitted=0`, `figure_only_payload=true`, `material_match_to_Ding_TTG=false`, `holdout_accessed=false`.
+CONTROLLING_BLOCKER: `figure_only_numeric_payload_and_Ding_material_mapping_missing`.
+NEXT_ACTION: Seek a permitted same-state numeric source or separately controlled Ding-compatible PBTE package with uncertainty and convergence; do not use Figure 3 or its approximate uncertainty as `C_src` or alpha calibration.
+CLAIM_BOUNDARY: Source-traceable comparator boundary only; not a formula derivation, SI calibration, temperature prediction, external validation, or Full Topic 13 closure.

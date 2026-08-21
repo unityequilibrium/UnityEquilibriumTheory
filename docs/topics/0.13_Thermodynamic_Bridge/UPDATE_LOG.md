@@ -3392,3 +3392,17 @@ NEXT_ACTION: Obtain a permitted redistributable numeric source or a separately c
 CLAIM_BOUNDARY: Source-route boundary only; not c_v/C_src evidence, alpha calibration, prediction, external validation, Core closure, or global UET closure.
 EVIDENCE_PATHS: `docs/core/artifacts/t13_aist_graphite_source_route_boundary_audit.json`; `docs/scripts/audit/audit_topic13_aist_graphite_source_route_boundary.py`; `docs/core/test/test_topic13_aist_graphite_source_route_boundary.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.
 EVIDENCE_HASHES: artifact `3a37c2cd5a37dccaa7f0a5aa7f4704c54ed73a11e04d5e7168d00682de2ff3de`; verifier `96024a0bbabb09218681870804109eff417dfe0597a873c5a898cacefd5669ac`; full gate `7b156617b44d30367464e0d69ff5e13f82509d848c4c5bf320acfd43749ed663`.
+### 2026-08-21 - NIST SRM 3600 heat-capacity comparator boundary (T13-149)
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for a source-traceable NIST SRM 3600 heat-capacity comparator boundary; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE` / `PARTIAL`.
+WHAT_IS_ACTUALLY_CLOSED: Official source identity, raw PDF hash, page locators, 20-295 K range, and the paper's approximately +/-2 percent 90 percent-confidence uncertainty boundary are machine-readable. The paper's low-hydrogen glassy-carbon/graphite-powder material boundary is explicit.
+WHAT_REMAINS_OPEN: Figure-only payload means zero machine-readable numeric rows; Ding-compatible `C_src`, same-state material mapping, row-level `c_v` uncertainty, independent `alpha_Phi_K`, dimensional map, and physical EOS/transport/KMS/entropy remain open.
+DEPENDENCY_UNLOCKED: None beyond comparator/source classification; Core, Gravity, constitutive transport, and Galaxy remain blocked.
+STATUS: `PASS_SCOPED_NIST_SRM_3600_HEAT_CAPACITY_COMPARATOR_BOUNDARY`.
+WHAT_CHANGED: Added `t13_nist_srm_3600_heat_capacity_boundary_audit.json`, its verifier/test, full-gate source-package integration, and synchronized closure/dependency artifacts. The official PDF is retained as ignored local raw material under the repository raw-source boundary rather than force-added to the public commit.
+EQUATION_OR_MAPPING: Candidate `c_v^V(T, material) = rho(T, material) * c_v^m(T, material)`; no numeric `C_src`, `alpha_Phi_K`, or TTG temperature mapping is emitted.
+VERIFICATION: Focused source-boundary and synchronization regressions passed (`10 passed`); full gate remains 10 blockers, closure summary `172/15/10`, claim promotion `false`, and holdout access `false`.
+CONTROLLING_BLOCKER: `figure_only_numeric_payload_and_Ding_material_mapping_missing` for this lane; global primary remains the independent dimensional/alpha anchor.
+NEXT_ACTION: Obtain permitted same-state machine-readable heat-capacity/PBTE data with uncertainty, convergence, provenance, and hash; do not digitize Figure 3 into calibration without a declared uncertainty contract.
+CLAIM_BOUNDARY: Comparator boundary only; not numeric `C_src`, not alpha calibration, not prediction, not external validation, and not Full Topic 13 closure.
+EVIDENCE_PATHS: `docs/core/artifacts/t13_nist_srm_3600_heat_capacity_boundary_audit.json`; `docs/scripts/audit/audit_topic13_nist_srm_3600_heat_capacity_boundary.py`; `docs/core/test/test_topic13_nist_srm_3600_heat_capacity_boundary.py`; `docs/scripts/audit/audit_topic13_full_bridge_gate.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.

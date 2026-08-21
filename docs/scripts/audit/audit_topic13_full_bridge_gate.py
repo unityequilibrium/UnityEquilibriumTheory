@@ -126,6 +126,7 @@ LANE_KEY_BY_ID["T13_HONG_FINAL_SOURCE_BOUNDARY"] = "hong_final_source_boundary"
 LANE_KEY_BY_ID["T13_PETERSON_SOURCE_IDENTITY_NO_GO"] = "peterson_source_identity_no_go"
 LANE_KEY_BY_ID["T13_THERMAL_BRIDGE_SCALE_DEPENDENCY_NO_GO"] = "thermal_bridge_scale_dependency_no_go"
 LANE_KEY_BY_ID["T13_AIST_GRAPHITE_SOURCE_ROUTE_BOUNDARY"] = "aist_graphite_source_route_boundary"
+LANE_KEY_BY_ID["T13_NIST_SRM_3600_HEAT_CAPACITY_COMPARATOR_BOUNDARY"] = "nist_srm_3600_heat_capacity_comparator_boundary"
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -314,6 +315,9 @@ def main() -> int:
     )
     nims_graphite_route_path, nims_graphite_route = load(
         "docs/core/artifacts/t13_nims_graphite_ltc_route_no_go.json"
+    )
+    srm3600_path, srm3600 = load(
+        "docs/core/artifacts/t13_nist_srm_3600_heat_capacity_boundary_audit.json"
     )
     holdout_audit_path, holdout_audit = load(
         "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json"
@@ -745,6 +749,16 @@ def main() -> int:
                 "route_closed_as_no_go": nims_graphite_route.get("acceptance", {}).get("route_closed_as_no_go"),
                 "controlling_blocker": nims_graphite_route.get("controlling_blocker"),
             }),
+            evidence(rel(srm3600_path), srm3600, {
+                "status": srm3600.get("status"),
+                "closure_level": srm3600.get("major_result", {}).get("closure_level"),
+                "data_role": srm3600.get("major_result", {}).get("data_role"),
+                "raw_sha256": srm3600.get("source", {}).get("local_sha256"),
+                "numeric_rows_emitted": srm3600.get("acceptance", {}).get("numeric_rows_emitted"),
+                "uncertainty_boundary": srm3600.get("source", {}).get("uncertainty_boundary", {}).get("reported_relative_magnitude"),
+                "ding_material_match": srm3600.get("source", {}).get("material_identity", {}).get("ding_ttg_hopg_match"),
+                "controlling_blocker": srm3600.get("controlling_blocker"),
+            }),
             evidence(rel(holdout_audit_path), holdout_audit, {
                 "status": holdout_audit.get("status"),
                 "metadata_only_observed": holdout_controls.get("metadata_only_observed"),
@@ -852,6 +866,14 @@ def main() -> int:
         ] = aist_graphite_route_lane
         artifact["verification_status"]["eos_transport_kms_entropy"].pop(
             "aist_graphite_source_route_boundary", None
+        )
+    srm3600_lane = discovered_lane_integrations.get(
+        "nist_srm_3600_heat_capacity_comparator_boundary"
+    )
+    if srm3600_lane:
+        artifact["verification_status"]["source_package"]["nist_srm_3600_heat_capacity_comparator_boundary"] = srm3600_lane
+        artifact["verification_status"]["eos_transport_kms_entropy"].pop(
+            "nist_srm_3600_heat_capacity_comparator_boundary", None
         )
     ding_public_supplementary_lane = discovered_lane_integrations.get(
         "ding_public_supplementary_payload_boundary"
@@ -1285,6 +1307,8 @@ def main() -> int:
         lane_closures.append("Huberman 2019 public PBTE boundary is closed for lane without machine-readable C_src, raw force constants, accepted reproduction, or alpha promotion")
     if discovered_lane_integrations.get("nist_axm5q1_density_source_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("NIST AXM-5Q1 same-grade density availability is closed for lane; density uncertainty, c_v, and Ding mapping remain open")
+    if discovered_lane_integrations.get("nist_srm_3600_heat_capacity_comparator_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
+        lane_closures.append("NIST SRM 3600 glassy-carbon/graphite-powder heat-capacity comparator boundary is closed for lane without numeric rows, Ding material-match, c_v uncertainty closure, or calibration promotion")
     if discovered_lane_integrations.get("nist_graphite_alpha_v_source_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("NIST AXM-5Q1 graphite alpha_V source boundary is closed for lane without K_T or Ding material-match promotion")
     if discovered_lane_integrations.get("graphite_elastic_bulk_modulus_source", {}).get("closure_level") == "CLOSED_FOR_LANE":

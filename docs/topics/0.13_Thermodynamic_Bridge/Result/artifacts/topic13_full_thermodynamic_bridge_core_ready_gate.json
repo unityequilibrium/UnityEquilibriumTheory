@@ -21,6 +21,7 @@
       "Huang 2023 graphite supplementary boundary is closed for lane without numeric PBTE, Ding C_src, or alpha promotion",
       "Huberman 2019 public PBTE boundary is closed for lane without machine-readable C_src, raw force constants, accepted reproduction, or alpha promotion",
       "NIST AXM-5Q1 same-grade density availability is closed for lane; density uncertainty, c_v, and Ding mapping remain open",
+      "NIST SRM 3600 glassy-carbon/graphite-powder heat-capacity comparator boundary is closed for lane without numeric rows, Ding material-match, c_v uncertainty closure, or calibration promotion",
       "NIST AXM-5Q1 graphite alpha_V source boundary is closed for lane without K_T or Ding material-match promotion",
       "Bosak single-crystal graphite elastic bulk comparator is closed for lane without isothermal K_T or Ding material-match promotion",
       "Hanfland 300 K graphite isothermal K_T source is closed for lane without same-grade alpha_V or Ding material-match promotion",
@@ -163,7 +164,7 @@
     ],
     "dependency_unlocked": "Gravity/GR remains blocked until this full bridge and Core curved 3+1 gates pass",
     "closure_summary": {
-      "closed_lane_count": 171,
+      "closed_lane_count": 172,
       "closed_as_no_go_count": 15,
       "closed_lane_result_ids": [
         "T13_AIST_GRAPHITE_SOURCE_ROUTE_BOUNDARY",
@@ -233,6 +234,7 @@
         "T13_NIMS_GRAPHITE_LTC_ROUTE_NO_GO",
         "T13_NIST_AXM5Q1_DENSITY_SOURCE_BOUNDARY",
         "T13_NIST_GRAPHITE_ALPHA_V_SOURCE_BOUNDARY",
+        "T13_NIST_SRM_3600_HEAT_CAPACITY_COMPARATOR_BOUNDARY",
         "T13_OXFORD_TGS_COMPARATOR_PROVENANCE",
         "T13_OXFORD_TGS_NUMERIC_ROWS_COMPARATOR",
         "T13_PETERSON_SOURCE_IDENTITY_NO_GO",
@@ -3026,6 +3028,123 @@
           "c_v_source_uncertainty_not_closed",
           "density_uncertainty_not_source_locked",
           "material_regime_mapping_to_TTG_not_closed"
+        ]
+      },
+      "nist_srm_3600_heat_capacity_comparator_boundary": {
+        "status": "PASS_SCOPED_NIST_SRM_3600_HEAT_CAPACITY_COMPARATOR_BOUNDARY",
+        "source": {
+          "publisher": "National Institute of Standards and Technology (NIST)",
+          "title": "Glassy carbon, NIST Standard Reference Material (SRM 3600): hydrogen content, neutron vibrational density of states and heat capacity",
+          "authors": [
+            "Ronald L. Cappelletti",
+            "Terrence J. Udovic",
+            "Hui Li",
+            "Rick L. Paul"
+          ],
+          "journal": "Journal of Applied Crystallography",
+          "year": 2018,
+          "doi": "10.1107/S1600576718010828",
+          "official_locator": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=921229",
+          "nist_publication_locator": "https://www.nist.gov/publications/glassy-carbon-nist-standard-reference-material-srm-3600-hydrogen-content-neutron",
+          "local_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nist_srm_3600_glassy_carbon_heat_capacity.pdf",
+          "local_sha256": "5bbbd0e3949a1e38cbb7ec00bbfc1a75a9d4708f6a0656e5e49c8d44d32ba5da",
+          "local_bytes": 758635,
+          "page_count": 6,
+          "source_locators": [
+            {
+              "locator": "PDF p. 1323, abstract and section 2",
+              "content": "The source distinguishes low-hydrogen glassy carbon from graphite and describes the SRM 3600 plate material as commercial Type-2 glassy carbon."
+            },
+            {
+              "locator": "PDF p. 1326, section 4.1 and Figure 3",
+              "content": "Heat-capacity measurements are shown in Figure 3 for 20 K to 295 K; the plotted result is not supplied as machine-readable rows in this archive."
+            },
+            {
+              "locator": "PDF p. 1326, section 4.1",
+              "content": "The paper reports accumulated errors of approximately plus or minus 2 percent at each temperature with a 90 percent confidence interval and discusses a separate systematic discrepancy."
+            },
+            {
+              "locator": "PDF p. 1327, summary",
+              "content": "The work reports heat capacity of low-hydrogen glassy carbon and graphite powder for comparison, not Ding's mode-resolved PBTE C_src."
+            }
+          ],
+          "material_identity": {
+            "primary_sample": "low-hydrogen-content glassy carbon, NIST SRM 3600 / Type-2 material",
+            "comparison_sample": "spectroscopic-grade graphite powder, SP-1",
+            "ding_ttg_hopg_match": false,
+            "match_boundary": "Graphite-like spectral similarity is not accepted as identity with Ding's HOPG TTG PBTE state."
+          },
+          "temperature_range_K": {
+            "min": 20.0,
+            "max": 295.0
+          },
+          "uncertainty_boundary": {
+            "reported_relative_magnitude": 0.02,
+            "reported_relative_magnitude_text": "approximately +/-2 percent at each temperature",
+            "confidence_level": 0.9,
+            "confidence_text": "90 percent confidence interval",
+            "is_row_level_standard_uncertainty": false,
+            "systematic_discrepancy_discussed": true
+          },
+          "data_access": {
+            "numeric_rows_accessed": false,
+            "figure_digitized": false,
+            "raw_machine_readable_payload_stored": false,
+            "preprocessing": "No numeric transcription or digitization performed."
+          },
+          "source_record_sha256": "c44f75d2add2e58a7932ac213045eaa7a009051db34a1e5c581a50cd8d3c03d7"
+        },
+        "checks": {
+          "source_file_exists": true,
+          "pdf_signature_present": true,
+          "source_byte_count_matches": true,
+          "source_sha256_matches": true,
+          "declared_page_count": 6,
+          "machine_readable_numeric_rows_emitted": 0,
+          "figure_only_payload": true,
+          "source_reported_uncertainty_boundary_present": true,
+          "row_level_standard_uncertainty_present": false,
+          "material_identity_recorded": true,
+          "ding_hopg_pbte_material_match": false,
+          "target_curve_read": false,
+          "target_fit_performed": false,
+          "alpha_fit_performed": false,
+          "holdout_accessed": false
+        },
+        "acceptance": {
+          "accepted_as_heat_capacity_comparator": true,
+          "accepted_for_full_topic13": false,
+          "accepted_as_independent_csrc_reproduction": false,
+          "accepted_as_alpha_phi_k_calibration": false,
+          "numeric_rows_emitted": 0,
+          "figure_only_payload": true,
+          "source_reported_uncertainty_boundary_present": true,
+          "row_level_standard_uncertainty_present": false,
+          "material_match_to_Ding_TTG": false,
+          "target_fit_performed": false,
+          "alpha_fit_performed": false,
+          "holdout_accessed": false
+        },
+        "controlling_blocker": "figure_only_numeric_payload_and_Ding_material_mapping_missing",
+        "next_controller": "Acquire a permitted machine-readable same-state heat-capacity or Ding PBTE C_src package with row locators, units, row-level uncertainty, preprocessing, convergence, material identity, and hash; do not digitize Figure 3 into calibration without a declared digitization and uncertainty contract.",
+        "claim_boundary": "This closes only a source-traceable heat-capacity comparator boundary. It is not a machine-readable numeric C_src package, not a same-state Ding/HOPG source, not an uncertainty closure for Topic 13, not an independent alpha_Phi_K calibration, not a temperature prediction, and not external validation.",
+        "major_result_id": "T13_NIST_SRM_3600_HEAT_CAPACITY_COMPARATOR_BOUNDARY",
+        "closure_level": "CLOSED_FOR_LANE",
+        "data_role": "EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_DING_TTG_GRADE",
+        "audit": {
+          "path": "docs/core/artifacts/t13_nist_srm_3600_heat_capacity_boundary_audit.json",
+          "sha256": "7317cadd672abd7eaacdda3eb5b4e5fdfc6bbe9fe6085a916ab93418ce6678b3",
+          "summary": {
+            "status": "PASS_SCOPED_NIST_SRM_3600_HEAT_CAPACITY_COMPARATOR_BOUNDARY",
+            "major_result_id": "T13_NIST_SRM_3600_HEAT_CAPACITY_COMPARATOR_BOUNDARY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        },
+        "open_blockers": [
+          "c_v_source_uncertainty_not_closed",
+          "direct_volumetric_c_v_or_same_state_Cp_source_missing",
+          "material_regime_mapping_to_TTG_not_closed",
+          "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
         ]
       },
       "ding_public_supplementary_payload_boundary": {
@@ -74981,6 +75100,20 @@
         "status": "PASS_SCOPED_NIMS_GRAPHITE_ROUTE_NO_GO",
         "route_closed_as_no_go": true,
         "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+      }
+    },
+    {
+      "path": "docs/core/artifacts/t13_nist_srm_3600_heat_capacity_boundary_audit.json",
+      "sha256": "7317cadd672abd7eaacdda3eb5b4e5fdfc6bbe9fe6085a916ab93418ce6678b3",
+      "summary": {
+        "status": "PASS_SCOPED_NIST_SRM_3600_HEAT_CAPACITY_COMPARATOR_BOUNDARY",
+        "closure_level": "CLOSED_FOR_LANE",
+        "data_role": "EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_DING_TTG_GRADE",
+        "raw_sha256": "5bbbd0e3949a1e38cbb7ec00bbfc1a75a9d4708f6a0656e5e49c8d44d32ba5da",
+        "numeric_rows_emitted": 0,
+        "uncertainty_boundary": 0.02,
+        "ding_material_match": false,
+        "controlling_blocker": "figure_only_numeric_payload_and_Ding_material_mapping_missing"
       }
     },
     {
