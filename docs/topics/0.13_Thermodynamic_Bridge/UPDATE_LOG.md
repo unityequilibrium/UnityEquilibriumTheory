@@ -3337,3 +3337,27 @@ NEXT_ACTION: Obtain an authorized paired base-Phi/SI record or derive a coeffici
 CLAIM_BOUNDARY: This closes the admission and provenance boundary only. It is not a numeric calibration, temperature prediction, external validation, or Full Topic 13 closure.
 EVIDENCE_PATHS: docs/scripts/audit/audit_topic13_alpha_phi_k_calibration_candidates.py; docs/core/test/test_topic13_alpha_phi_k_calibration_candidates.py; docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json; docs/core/artifacts/uet_major_result_closure_register.json; docs/core/artifacts/uet_major_result_dependency_unlock_gate.json.
 EVIDENCE_HASHES: audit script 0f4d56c5317ba96595772cdc6fbdf476b7b9470045ba35927d72648368db8b23; regression 9238e75529d1082fa0ce18c2b10a78adcc97ed4081ff4ca2bba4a27237058c22; candidate artifact 4da5c96f5601bb10119959206375e0fc4dab759ac3b7fbcdda2ab2ac93699f9e; full gate d06d9aa665bdda3fbfcdf1858c01afacfe423846afec29abac0f9590cfff9f3a; register b52198d3f7013f74c55eed2fa50265878631b15202431414ccb482f0d785496a; dependency 00bdc9d3373bcb5006da35543e67eec7b05cf4de143f529e95e882c3eff5bbf5.
+
+## 2026-08-21 - Major-result visibility synchronization (T13-146)
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for the reporting surface; the full Topic 13 result remains PARTIAL / BLOCKED.
+
+WHAT_IS_ACTUALLY_CLOSED: The canonical Topic 13 report and formula audit now expose T13-145 as a named lane result. The report states that the semantic alpha-calibration admission contract is closed for lane with 11 candidates and zero eligible paired records.
+
+WHAT_REMAINS_OPEN: No independent paired base-Phi/SI record, numeric alpha_Phi_K, Ding-compatible C_src, dimensional map, physical Kubo record, or full EOS/transport/KMS/entropy closure was added.
+
+DEPENDENCY_UNLOCKED: Reporting visibility only; no calibration, Full Topic 13, Core, Gravity, transport, or Galaxy dependency is unlocked.
+
+STATUS: BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.
+
+WHAT_CHANGED: Synchronized FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md and FORMULA_AUDIT.md with the existing T13-145 artifact/register evidence. No source, equation, ontology, threshold, fit, calibration, or holdout policy changed.
+
+EQUATION_OR_MAPPING: y_TTG^UET = Delta_Phi(t) / Delta_Phi(0); Delta_Tq = alpha_Phi_K * Delta_Phi. The coefficient remains uninstantiated.
+
+VERIFICATION: Alpha admission audit reports candidate_count=11, eligible_candidate_count=0, numeric_alpha_Phi_K_emitted=false, and holdout_accessed=false. Full gate remains BLOCKED_OPEN_T13_FULL_BRIDGE with the same 10 blockers; closure/dependency audits passed; focused regression 7 passed.
+
+CONTROLLING_BLOCKER: independent_paired_base_Phi_amplitude_and_SI_observable_record_missing, together with the other nine full-bridge blockers.
+
+NEXT_ACTION: Obtain an authorized paired base-Phi/SI record or derive a coefficient-provenance-backed dimensional map, then rerun admission before any calibration or prediction.
+
+CLAIM_BOUNDARY: This is a reporting synchronization result only. It is not numeric alpha calibration, temperature prediction, external validation, Core closure, or global UET closure.

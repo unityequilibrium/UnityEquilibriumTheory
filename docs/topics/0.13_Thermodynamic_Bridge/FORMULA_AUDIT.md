@@ -1229,3 +1229,27 @@ NEXT_ACTION: Obtain a permissioned raw numeric table or numeric measurement unce
 CLAIM_BOUNDARY: This is a provenance and acquisition boundary, not a closed
 Berut numeric row, uncertainty result, `alpha_Phi_K`, UET bridge, or external
 validation.
+
+## T13-145 - Semantic alpha-calibration admission gate
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for the calibration-admission contract; the numeric alpha_Phi_K result remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: Candidate eligibility is evaluated from substantive values within one paired record rather than from field-name presence across an arbitrary JSON tree. The gate requires source identity and locator, matched material/state/geometry, finite base-Phi and SI response amplitudes, units, numeric uncertainty, preprocessing, row identity, a valid source hash, and an independence statement.
+
+WHAT_REMAINS_OPEN: All 11 current candidate packages remain ineligible. No independent paired base-Phi/SI record, numeric alpha_Phi_K, or base-Phi to Phi_E scale was produced.
+
+DEPENDENCY_UNLOCKED: Calibration-admission contract only; no alpha, dimensional map, Full Topic 13, Core, Gravity, or transport dependency is unlocked.
+
+STATUS: PASS_SCOPED_NO_ELIGIBLE_PAIRED_ALPHA_RECORD; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.
+
+WHAT_CHANGED: The candidate audit now validates semantic paired records and keeps key-presence diagnostics separate. The full gate, closure register, and dependency projection consume the regenerated candidate artifact.
+
+EQUATION_OR_MAPPING: y_TTG^UET = Delta_Phi(t) / Delta_Phi(0); Delta_Tq = alpha_Phi_K * Delta_Phi; no coefficient is emitted from normalized data, Landauer, or a comparator package.
+
+VERIFICATION: Candidate count is 11 and eligible count is 0; numeric_alpha_Phi_K_emitted=false, holdout_accessed=false, and target_fit_performed=false. The focused regression passed with 10 tests.
+
+CONTROLLING_BLOCKER: independent_paired_base_Phi_amplitude_and_SI_observable_record_missing.
+
+NEXT_ACTION: Obtain a permitted paired base-Phi/SI record or derive a coefficient-provenance-backed dimensional map without reading Xie 2026, then rerun the semantic admission gate before any calibration or prediction.
+
+CLAIM_BOUNDARY: This closes the admission and provenance boundary only. It is not a numeric calibration, temperature prediction, external validation, or Full Topic 13 closure.

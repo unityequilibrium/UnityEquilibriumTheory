@@ -20,7 +20,7 @@ WHAT_IS_ACTUALLY_CLOSED: The following results are closed only for their
  legacy NEP2 backend probe, which accepts the hash-locked C-CX model without
  producing fc2/fc3 or PBTE output; and (11) the legacy NEP2 candidate PBTE
  reproduction, which produces archived 4x4x2 fc2/fc3 and 8x8x4/10x10x5
- candidate C_src rows with a 0.2294% latest mesh change.
+ candidate C_src rows with a 0.2294% latest mesh change. The semantic alpha-calibration admission boundary evaluated 11 candidate packages and accepted zero as a paired base-Phi/SI record.
 These are evidence-producing sub-results, not Full Topic 13 closure.
 
 WHAT_REMAINS_OPEN: The current full-gate blockers are:
@@ -42,7 +42,7 @@ unlocked.
 
 STATUS: `BLOCKED_OPEN_T13_FULL_BRIDGE`
 
-WHAT_CHANGED: The canonical summary is synchronized to the current full gate and major-result register. The Figshare DFT archive audit closes only the public force-data provenance/capability boundary, the Huang 2023 NIMS MDR audit closes only the article-only public payload boundary, the Calorine equilibrium/unit cross-check remains lane-level evidence, the Calorine C-CX audit locks a public model-form input only, the current Calorine 3.5 compatibility audit records the rejection without rewriting source bytes, and the pinned Calorine 1.0 legacy NEP2 probe records model acceptance without PBTE output; the new legacy PBTE lane now runs the fixed 4x4x2 state through 8x8x4 and 10x10x5 q-meshes and archives candidate fc2/fc3 and C_src outputs, while source-grade uncertainty and Ding mapping remain open. C, Phi, R_gen, and R_obs meanings are unchanged, and no threshold, fit, calibration, or holdout policy changed.
+WHAT_CHANGED: The canonical summary is synchronized to the current full gate and major-result register. The Figshare DFT archive audit closes only the public force-data provenance/capability boundary, the Huang 2023 NIMS MDR audit closes only the article-only public payload boundary, the Calorine equilibrium/unit cross-check remains lane-level evidence, the Calorine C-CX audit locks a public model-form input only, the current Calorine 3.5 compatibility audit records the rejection without rewriting source bytes, and the pinned Calorine 1.0 legacy NEP2 probe records model acceptance without PBTE output; the new legacy PBTE lane now runs the fixed 4x4x2 state through 8x8x4 and 10x10x5 q-meshes and archives candidate fc2/fc3 and C_src outputs, while source-grade uncertainty and Ding mapping remain open. The latest alpha admission wave records substantive paired-record checks, with 11 candidates and zero eligible records. C, Phi, R_gen, and R_obs meanings are unchanged, and no threshold, fit, calibration, or holdout policy changed.
 
 EQUATION_OR_MAPPING:
 
@@ -59,7 +59,7 @@ rho_model = N_C M_C / (N_A V_primitive)
 c_v,implied = C_src / rho_model
 ```
 
-VERIFICATION: Analytic and finite-difference entropy derivatives agree on a synthetic unit witness. `T0` is K, `da_Phi/dT` is K^-1, and `e0` is an external J m^-3 input. The Figshare audit is source-hash locked with 4,788 configuration records, 742 graphite records, and no direct PBTE payload fields. The NIMS MDR archive is hash-locked and contains one article PDF member only, with no deposited ShengBTE/force-constant/C_src rows. No Landauer term, fit, source row, target, or Xie 2026 holdout was used. The public C-CX model input is SHA-256 cf75256947a8953b8041ccc26a34ac307724f69bf2edbcc97b46d87bc5e72408; the current Calorine 3.5 NEPY backend rejects the legacy NEP1 model, while the pinned Calorine 1.0 legacy NEP2 backend generates 1,220 force-displacement evaluations for a 128-atom 4x4x2 state. The archived 8x8x4 and 10x10x5 runs share the same POSCAR/fc2/fc3 hashes and emit `C_src(200 K)=993760.2797173061` and `C_src(300 K)=1689859.0705455516 J m^-3 K^-1` at 10x10x5; the latest relative mesh change is `0.0022937348623178356`, below the declared 0.01 candidate preflight. This is not source-grade uncertainty or Ding acceptance.
+VERIFICATION: Analytic and finite-difference entropy derivatives agree on a synthetic unit witness. `T0` is K, `da_Phi/dT` is K^-1, and `e0` is an external J m^-3 input. The Figshare audit is source-hash locked with 4,788 configuration records, 742 graphite records, and no direct PBTE payload fields. The NIMS MDR archive is hash-locked and contains one article PDF member only, with no deposited ShengBTE/force-constant/C_src rows. No Landauer term, fit, source row, target, or Xie 2026 holdout was used. The public C-CX model input is SHA-256 cf75256947a8953b8041ccc26a34ac307724f69bf2edbcc97b46d87bc5e72408; the current Calorine 3.5 NEPY backend rejects the legacy NEP1 model, while the pinned Calorine 1.0 legacy NEP2 backend generates 1,220 force-displacement evaluations for a 128-atom 4x4x2 state. The archived 8x8x4 and 10x10x5 runs share the same POSCAR/fc2/fc3 hashes and emit `C_src(200 K)=993760.2797173061` and `C_src(300 K)=1689859.0705455516 J m^-3 K^-1` at 10x10x5; the latest relative mesh change is `0.0022937348623178356`, below the declared 0.01 candidate preflight. The alpha candidate audit reports candidate_count=11, eligible_candidate_count=0, numeric_alpha_Phi_K_emitted=false, and holdout_accessed=false. This is not source-grade uncertainty, Ding acceptance, or numeric alpha calibration.
 
 CONTROLLING_BLOCKER: Full Topic 13 remains controlled by `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing` together with `alpha_Phi_K_independent_calibration_missing` and the remaining dimensional/thermodynamic closure blockers. The legacy PBTE lane is now controlled by `calorine_legacy_pbte_source_grade_uncertainty_and_ding_mapping_missing`; the backend-availability blocker has narrowed but has not become Ding acceptance or source-grade uncertainty.
 
@@ -2257,3 +2257,27 @@ NEXT_ACTION: Obtain a permissioned raw numeric table or numeric measurement unce
 CLAIM_BOUNDARY: This is a provenance and acquisition boundary, not a closed
 Berut numeric row, uncertainty result, `alpha_Phi_K`, UET bridge, or external
 validation.
+
+## T13-145 - Semantic alpha-calibration admission gate
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for the calibration-admission contract; the numeric alpha_Phi_K result remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: Candidate eligibility is evaluated from substantive values within one paired record rather than from field-name presence across an arbitrary JSON tree. The gate requires source identity and locator, matched material/state/geometry, finite base-Phi and SI response amplitudes, units, numeric uncertainty, preprocessing, row identity, a valid source hash, and an independence statement.
+
+WHAT_REMAINS_OPEN: All 11 current candidate packages remain ineligible. No independent paired base-Phi/SI record, numeric alpha_Phi_K, or base-Phi to Phi_E scale was produced.
+
+DEPENDENCY_UNLOCKED: Calibration-admission contract only; no alpha, dimensional map, Full Topic 13, Core, Gravity, or transport dependency is unlocked.
+
+STATUS: PASS_SCOPED_NO_ELIGIBLE_PAIRED_ALPHA_RECORD; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.
+
+WHAT_CHANGED: The candidate audit now validates semantic paired records and keeps key-presence diagnostics separate. The full gate, closure register, and dependency projection consume the regenerated candidate artifact.
+
+EQUATION_OR_MAPPING: y_TTG^UET = Delta_Phi(t) / Delta_Phi(0); Delta_Tq = alpha_Phi_K * Delta_Phi; no coefficient is emitted from normalized data, Landauer, or a comparator package.
+
+VERIFICATION: Candidate count is 11 and eligible count is 0; numeric_alpha_Phi_K_emitted=false, holdout_accessed=false, and target_fit_performed=false. The focused regression passed with 10 tests.
+
+CONTROLLING_BLOCKER: independent_paired_base_Phi_amplitude_and_SI_observable_record_missing.
+
+NEXT_ACTION: Obtain a permitted paired base-Phi/SI record or derive a coefficient-provenance-backed dimensional map without reading Xie 2026, then rerun the semantic admission gate before any calibration or prediction.
+
+CLAIM_BOUNDARY: This closes the admission and provenance boundary only. It is not a numeric calibration, temperature prediction, external validation, or Full Topic 13 closure.
