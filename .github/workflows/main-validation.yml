@@ -1,0 +1,153 @@
+
+name: Main Validation
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: main-validation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  public-boundary:
+    name: Public boundary and JSON validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Check new public-boundary paths
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          CURRENT_SHA: ${{ github.sha }}
+        run: |
+          python - <<'PY'
+          import os
+          import subprocess
+          from pathlib import Path
+
+          media = {".pdf", ".png", ".jpg", ".jpeg", ".gif", ".webp", ".mp3", ".m4a", ".wav", ".mp4", ".pptx"}
+          before = os.environ.get("BEFORE_SHA", "")
+          current = os.environ.get("CURRENT_SHA", "HEAD")
+          if before and set(before) != {"0"}:
+              changed = subprocess.check_output(["git", "diff", "--name-only", before, current], text=True).splitlines()
+          else:
+              changed = []
+
+          def blocked(path):
+              lower = path.lower().replace("\\", "/")
+              parts = set(lower.split("/"))
+              suffix = Path(lower).suffix
+              name = Path(lower).name
+              return (
+                  name.startswith(".env")
+                  or suffix in {".pem", ".key", ".p12", ".pfx", ".exe", ".dll", ".so", ".zip", ".7z", ".sqlite", ".sqlite3", ".db"}
+                  or bool(parts & {"target", "node_modules", ".next", "__pycache__", ".pytest_cache", "debug", "build", "dist"})
+                  or any(f"/{marker}/" in f"/{lower}/" for marker in ("1_raw", "ch_drafts", "raw"))
+                  or (lower.startswith("thailand_proposals/") and suffix in media)
+              )
+
+          tracked = subprocess.check_output(["git", "ls-files"], text=True).splitlines()
+          baseline = sorted({path for path in tracked if blocked(path)})
+          new = sorted({path for path in changed if blocked(path)})
+          Path("public-boundary-baseline.txt").write_text("\n".join(baseline) + "\n", encoding="utf-8")
+          print(f"Existing baseline violations: {len(baseline)}")
+          if baseline:
+              print(*baseline, sep="\n")
+          if new:
+              print("New public-boundary violations:")
+              print(*new, sep="\n")
+              raise SystemExit(1)
+          print("No new public-boundary violations in this push.")
+      - name: Upload public-boundary baseline
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-boundary-baseline
+          path: public-boundary-baseline.txt
+          if-no-files-found: warn
+      - name: Validate all tracked JSON
+        run: |
+          set -euo pipefail
+          git ls-files '*.json' -z | while IFS= read -r -d '' file; do
+            python -m json.tool "$file" >/dev/null
+          done
+      - name: Check whitespace
+        run: git diff --check
+
+  python-validation:
+    name: Repository Python validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m compileall -q docs services_and_experiments
+
+  rust-validation:
+    name: Optional Rust validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - id: rust-project
+        name: Detect Rust project
+        run: |
+          if test -f services_and_experiments/uet_core/Cargo.toml; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: dtolnay/rust-toolchain@stable
+        if: steps.rust-project.outputs.present == 'true'
+        with:
+          toolchain: stable
+          components: rustfmt, clippy
+      - name: Check Rust format
+        if: steps.rust-project.outputs.present == 'true'
+        run: cargo fmt --manifest-path services_and_experiments/uet_core/Cargo.toml --all -- --check
+      - name: Check Rust compilation
+        if: steps.rust-project.outputs.present == 'true'
+        run: cargo check --manifest-path services_and_experiments/uet_core/Cargo.toml --all-targets
+      - name: Record absence
+        if: steps.rust-project.outputs.present != 'true'
+        run: echo "No services_and_experiments/uet_core/Cargo.toml found; Rust validation is not applicable."
+
+  research-full:
+    name: Full research audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --upgrade pytest
+      - name: Run repository research tests
+        run: |
+          set -euo pipefail
+          if find docs -type f \( -name 'test_*.py' -o -name '*_test.py' \) | grep -q .; then
+            python -m pytest docs/core -q --disable-warnings --maxfail=20
+          else
+            echo "No repository research tests found."
+          fi
+      - name: Diagnostic baseline without legacy collection
+        if: always()
+        run: |
+          echo "Diagnostic only: the full suite above remains authoritative."
+          python -m pytest docs/core -q --disable-warnings --maxfail=20 --ignore=docs/core/data/scripts/Legacy
+      - name: Upload research report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: main-research-report
+          path: docs/**/Result/**/*
+          if-no-files-found: ignore

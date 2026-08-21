@@ -297,3 +297,48 @@ reproducible, link that change to the pilot in the relevant update log.
 The goal is not to make the repository look busy. It is to make each
 meaningful change understandable, reproducible within its stated boundary, and
 visible in the right history.
+
+## Branch lifecycle and CI enforcement
+
+main is the public canonical branch. The normal path is one focused,
+short-lived branch plus a PR:
+
+    codex/research/<task>
+    codex/book/<task>
+    codex/history/<task>
+    codex/policy/<task>
+    codex/services/<task>
+    codex/repo/<task>
+
+Do not create permanent develop, staging, or topic branches. A local branch
+that tracks origin/main is not the canonical main worktree. Before cleanup,
+inspect every worktree, remote head, PR, and unique commit. Run
+git fetch --prune origin to remove stale origin/codex/... tracking refs. Delete
+a branch only after confirming it is merged or explicitly superseded and has no
+unique work. Never delete a dirty worktree.
+
+The repository ruleset should require PR checks, prevent force-push and deletion
+of main, and auto-delete a merged PR head branch. No approval is required while
+this is a single-maintainer repository, but every required check must pass
+visibly. Direct push to main is an explicitly documented emergency only; record
+the reason in WORK_LEDGER/ and verify the local, remote, and GitHub main SHA.
+
+CI is split by responsibility:
+
+- pr-scope.yml checks branch naming, diff whitespace, raw/private/binary/cache
+  boundaries, JSON syntax, and path drift.
+- pr-validation.yml runs checks only for changed areas.
+- main-validation.yml runs after merge and stores validation reports.
+- nightly-research-audit.yml runs deeper audits on schedule or manual dispatch;
+  it never edits or pushes the repository.
+- GitHub Pages has its own workflow. Railway, API, and other platform deploys
+  remain paused until a real client, stable interface, provenance boundary,
+  tests, and regeneration path exist.
+
+Required checks must fail when their validation fails. Existing baseline
+failures must be repaired or explicitly moved to a visible, time-bounded
+non-required audit before a full suite becomes a required merge gate; they may
+not be hidden with continue-on-error.
+
+The PR template is the minimum submission contract. The work ledger, commit,
+PR/push, topic update log, and artifact/gate are separate records.

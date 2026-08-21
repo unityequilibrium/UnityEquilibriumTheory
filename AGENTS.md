@@ -532,3 +532,40 @@ required to explain the same hardening wave.
 
 Use the agent as a careful research assistant, auditor, and systems organizer, not as the
 final authority that upgrades evidence by confidence alone.
+
+### Repository branch and automation policy
+
+main is the public canonical branch. Normal work enters main through a pull
+request and required CI checks; do not use a second permanent integration
+branch such as develop or staging.
+
+Use one short-lived branch per coherent unit of work:
+
+    codex/research/<task>
+    codex/book/<task>
+    codex/history/<task>
+    codex/policy/<task>
+    codex/services/<task>
+    codex/repo/<task>
+
+Before editing, confirm the current branch, worktree, and upstream. A local
+branch that tracks origin/main is still a feature branch and must not be
+treated as the canonical main worktree. Reconcile worktrees and stale
+remote-tracking refs before deleting branches; never delete a dirty worktree
+or a branch that contains unique unmerged commits.
+
+Every normal PR must identify its area, canonical workspace, public-safety
+boundary, checks actually run, and next blocker. GitHub Actions may validate,
+build reports, and deploy GitHub Pages, but must not silently commit or push
+source changes. Required checks must fail visibly; do not use
+continue-on-error to make a required gate appear green.
+
+The repository ruleset should prevent force-push and deletion of main, require
+the scoped PR checks, and auto-delete a merged head branch. Direct push is an
+emergency exception only: record the reason in WORK_LEDGER/ and verify that
+local main, remote main, and the GitHub page show the same SHA.
+
+The normal publish checkpoint is the same day as the completed section: commit
+the coherent unit, push the branch, and open or update a draft PR when it is
+not ready to merge. Use git fetch --prune origin during branch inventory so
+stale origin/codex/... references do not look like active remote branches.

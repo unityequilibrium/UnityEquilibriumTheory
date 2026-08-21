@@ -1,0 +1,170 @@
+
+name: PR Changed-Area Validation
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr-validation-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  detect:
+    name: Detect changed areas
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      research: ${{ steps.areas.outputs.research }}
+      books: ${{ steps.areas.outputs.books }}
+      services: ${{ steps.areas.outputs.services }}
+      policy: ${{ steps.areas.outputs.policy }}
+      docs: ${{ steps.areas.outputs.docs }}
+      python: ${{ steps.areas.outputs.python }}
+      rust: ${{ steps.areas.outputs.rust }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - id: areas
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          git diff --name-only "$BASE_SHA" "$HEAD_SHA" | sort -u > changed-files.txt
+          set_output() {
+            local key="$1"
+            local pattern="$2"
+            if grep -Eq "$pattern" changed-files.txt; then
+              echo "$key=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "$key=false" >> "$GITHUB_OUTPUT"
+            fi
+          }
+          set_output research '^(docs/(core|topics|meta|scripts)/|docs/UET_Documentation_Details/)'
+          set_output books '^(uet_history/BOOK_WORKFLOW\.md|uet_history/3_publish/books/)'
+          set_output services '^services_and_experiments/'
+          set_output policy '^thailand_proposals/'
+          set_output docs '\.(md|yml|yaml)$'
+          set_output python '\.py$'
+          set_output rust '(^|/)(Cargo\.toml|Cargo\.lock|.*\.rs)$'
+
+  docs-validation:
+    name: Documentation validation
+    needs: detect
+    if: needs.detect.outputs.docs == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: git diff --check
+      - name: Check canonical path guardrails
+        run: |
+          test ! -d docs/topics/For_Work || {
+            echo "docs/topics/For_Work is a drifted path; use docs/topics/For Work/."
+            exit 1
+          }
+
+  python-validation:
+    name: Python changed-area validation
+    needs: detect
+    if: needs.detect.outputs.python == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --upgrade pytest
+      - run: python -m compileall -q docs services_and_experiments
+      - name: Run changed Python tests
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          git diff --name-only "$BASE_SHA" "$HEAD_SHA" | grep -E '(^|/)(test_[^/]+\.py|[^/]+_test\.py)$' > changed-tests.txt || true
+          if test -s changed-tests.txt; then
+            tests="$(cat changed-tests.txt)"
+            pytest -q $tests
+          else
+            echo "No changed Python test files; compile validation completed."
+          fi
+
+  research-validation:
+    name: Research contract validation
+    needs: detect
+    if: needs.detect.outputs.research == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m compileall -q docs
+      - name: Parse research JSON artifacts
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          for path in Path("docs/topics").glob("**/*.json"):
+              json.loads(path.read_text(encoding="utf-8"))
+          print("Research JSON artifacts are parseable.")
+          PY
+
+  book-validation:
+    name: Book registry validation
+    needs: detect
+    if: needs.detect.outputs.books == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate book registry
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          registry = Path("uet_history/3_publish/books/BOOK_REGISTRY.json")
+          if not registry.exists():
+              raise SystemExit("BOOK_REGISTRY.json is required for book changes.")
+          data = json.loads(registry.read_text(encoding="utf-8"))
+          if not isinstance(data, (dict, list)):
+              raise SystemExit("BOOK_REGISTRY.json must contain an object or list.")
+          print("Book registry JSON is valid.")
+          PY
+
+  service-validation:
+    name: Optional service boundary validation
+    needs: detect
+    if: needs.detect.outputs.services == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check service source boundary
+        run: |
+          set -euo pipefail
+          if find services_and_experiments -type f -name '.env' | grep -q .; then
+            echo "Service .env files must remain local-only."
+            exit 1
+          fi
+          echo "Services remain optional; no research workflow depends on them."
+      - name: Install Rust
+        if: hashFiles('services_and_experiments/uet_core/Cargo.toml') != ''
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: stable
+          components: rustfmt, clippy
+      - name: Rust format and compile
+        if: hashFiles('services_and_experiments/uet_core/Cargo.toml') != ''
+        run: |
+          cargo fmt --manifest-path services_and_experiments/uet_core/Cargo.toml --all -- --check
+          cargo check --manifest-path services_and_experiments/uet_core/Cargo.toml --all-targets
