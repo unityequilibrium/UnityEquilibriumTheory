@@ -1253,3 +1253,26 @@ CONTROLLING_BLOCKER: independent_paired_base_Phi_amplitude_and_SI_observable_rec
 NEXT_ACTION: Obtain a permitted paired base-Phi/SI record or derive a coefficient-provenance-backed dimensional map without reading Xie 2026, then rerun the semantic admission gate before any calibration or prediction.
 
 CLAIM_BOUNDARY: This closes the admission and provenance boundary only. It is not a numeric calibration, temperature prediction, external validation, or Full Topic 13 closure.
+## T13-147 - Joint thermal-bridge scale-dependency no-go
+
+MAJOR_RESULT_CLOSURE: `CLOSED_AS_NO_GO` for the current normalized/action scale question; the thermal dimensional bridge remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: Field rescaling of the declared scalar action leaves the action terms and normalized Phi coordinate invariant when the scalar coefficients and field scale transform together. A joint field/energy-density scale family leaves normalized TTG shape unchanged but changes the absolute Kelvin response and the normalized beta correspondence.
+
+WHAT_REMAINS_OPEN: Independent field-energy-temperature scale provenance, paired base-Phi/SI observable evidence, physical beta source provenance, and the base-Phi-to-Delta_u_ph mapping remain missing.
+
+DEPENDENCY_UNLOCKED: None. The result closes a structural identifiability question and does not satisfy the alpha, dimensional observable, EOS, transport, KMS, entropy, or source gates.
+
+STATUS: `PASS_SCOPED_THERMAL_BRIDGE_SCALE_DEPENDENCY_NO_GO`.
+
+WHAT_CHANGED: Added a deterministic field/action and joint-scale witness plus a machine-readable major-result artifact. The full gate places this lane under `dimensional_observable_map`.
+
+EQUATION_OR_MAPPING: `y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)`; `Delta_Tq = alpha_Phi_K * Delta_Phi`; `alpha_Phi_K' = alpha_Phi_K / s_phi`; `beta_T13 = (Phi_scale^2 / e0_scale) beta_Phi^nat`; `Delta_Tq = (e0 / c_v) r_Phi Delta_Phi`.
+
+VERIFICATION: `t13_thermal_bridge_scale_dependency_no_go.json` passed all structural checks; no numeric alpha_Phi_K/e0, target, fit, Landauer inference, threshold tuning, or Xie 2026 access was used. Full gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE` / `PARTIAL` with 10 blockers.
+
+CONTROLLING_BLOCKER: `independent_field_energy_and_temperature_scale_map_missing`.
+
+NEXT_ACTION: Seek a permitted source-locked field residue or independent paired Phi/SI observable anchor, then rerun dimensional and alpha admission without using normalized target residuals.
+
+CLAIM_BOUNDARY: Scoped structural no-go only; no physical coefficient, Kelvin prediction, external validation, or Core closure is claimed.

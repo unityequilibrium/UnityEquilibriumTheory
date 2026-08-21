@@ -147,6 +147,7 @@
         "Calorine numerical/state uncertainty decomposition is closed for lane; its mesh and mass-only envelopes are not source-grade uncertainty",
         "Phonix mp-47 graphite harmonic comparator is closed for lane; arbitrary-unit DOS and uncertainty prevent volumetric c_v or Ding C_src promotion",
         "MP48 named Phi_E dimensional comparator is closed for lane without base-Phi or alpha_Phi_K promotion",
+        "joint field, energy-density, and Kelvin scale dependency is closed as a scoped no-go for the current normalized/action lane",
         "permitted Ding Fig. 1d normalized-source lane is closed for lane without raw-author or alpha claims",
         "Oxford TGS Figure 1 provenance archive is closed for lane without numeric-row or calibration promotion",
         "Oxford TGS Figure 1 numeric rows are closed for lane without physical thermal or Phi calibration promotion",
@@ -201,7 +202,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "d06d9aa665bdda3fbfcdf1858c01afacfe423846afec29abac0f9590cfff9f3a",
+          "sha256": "9608343a463162ebf175220d51079f66c5ec1e644deebcba0cf6ab625eec97e8",
           "summary": {
             "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
             "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
@@ -1072,7 +1073,7 @@
         },
         {
           "path": "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json",
-          "sha256": "988b87eb5c29b276038cf82920a22fe29600121e68c0ab9c46eedb39182274ec",
+          "sha256": "fea0ca9bacd6497f67292a015f651d0183f65b150469eb0be533bdf91adee2c8",
           "summary": {
             "role": "normalized beta_T13 candidate contract"
           }
@@ -1202,8 +1203,8 @@
       "dependency_unlocked": "Gravity/GR remains blocked until this full bridge and Core curved 3+1 gates pass",
       "claim_boundary": "Full Topic 13 is not Core-ready; current evidence supports normalized/internal controls and constraint exports only. No temperature prediction, external validation, or global UET closure is claimed.",
       "closure_summary": {
-        "closed_lane_count": 169,
-        "closed_as_no_go_count": 14,
+        "closed_lane_count": 170,
+        "closed_as_no_go_count": 15,
         "closed_lane_result_ids": [
           "T13_ALPHA_PHI_K_CONDITIONAL_DERIVATION",
           "T13_ALPHA_PHI_K_NORMALIZED_SCALE_NO_GO",
@@ -1284,6 +1285,7 @@
           "T13_SOURCE_CP_95CI_ANCHOR",
           "T13_GATECH_STANDARD_TRANSPORT_COMPARATOR",
           "T13_STANDARD_O2_FINITE_TEMPERATURE_NORMAL_COMPARATOR",
+          "T13_THERMAL_BRIDGE_SCALE_DEPENDENCY_NO_GO",
           "T13_THERMAL_RESPONSE_BETA_CONTRACT",
           "T13_TPG_ANISOTROPIC_ALPHA_V_COMPARATOR",
           "T13_TRANSPORT_COEFFICIENT_IDENTIFIABILITY_NO_GO",
@@ -2595,7 +2597,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json",
-          "sha256": "5f41afcdb62b7794c35755eecd9e91d3b39ecb432130a74878e2f2b40c1627b9",
+          "sha256": "41cda98a01b282fa5c2789ef93ce2f249041550e40763cdcb083658712c564ac",
           "summary": {
             "status": "PASS_SCOPED_NO_GO_COVARIANT_FIELD_NORMALIZATION",
             "major_result_id": "T13_COVARIANT_FIELD_NORMALIZATION_IDENTIFIABILITY_NO_GO",
@@ -2781,7 +2783,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_dimensional_bridge_contract_audit.json",
-          "sha256": "09ffa787f7ae737cf1bf6f1004af1319c00eda424ca86c44040bdd32029084ad",
+          "sha256": "caf37f860838c1e424a2a37cde6a9c852e2f2af0f13e6b17a1e9589161faf500",
           "summary": {
             "status": "PASS_CONDITIONAL_FORMULA_OPEN_INPUTS",
             "major_result_id": "T13_ALPHA_PHI_K_CONDITIONAL_DERIVATION",
@@ -4725,7 +4727,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
-          "sha256": "4a79b2eb082e4a4f98de0c2b2c441b2144e05fe3a8232caccfd5ba414842b020",
+          "sha256": "ce0837792cd63918dc371f64fa49801bfb0dd0f715264c8557cf54f5dcbe9059",
           "summary": {
             "status": "PASS_SCOPED_NO_GO_NORMALIZED_PHI_ENERGY_ANCHOR",
             "major_result_id": "T13_PHI_ENERGY_ANCHOR_IDENTIFIABILITY_NO_GO",
@@ -5009,6 +5011,66 @@
       "claim_boundary": "This is a standard thermodynamic comparator. It does not derive the finite-temperature UET action, a two-fluid normal component, transport coefficients, KMS matching, SI Phi calibration, external validation, or global UET closure."
     },
     {
+      "major_result_id": "T13_THERMAL_BRIDGE_SCALE_DEPENDENCY_NO_GO",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "closure_level": "CLOSED_AS_NO_GO",
+      "what_is_closed": [
+        "the current normalized TTG lane is invariant under a continuous Phi field rescaling",
+        "the declared covariant scalar action admits the same field-rescaling redundancy as the existing field-normalization no-go",
+        "a field-only alpha compensation preserves Delta_Tq while changing the unanchored Phi amplitude",
+        "the joint field and energy-density scale family changes the absolute Kelvin response and normalized beta correspondence",
+        "the missing dimensional dependency is a structural blocker, not a failed fit or a failed holdout prediction"
+      ],
+      "equation_or_mapping": {
+        "normalized_observable": {
+          "y_TTG": "Delta_Tq(t) / Delta_Tq(0)",
+          "y_TTG_UET": "Delta_Phi(t) / Delta_Phi(0)"
+        },
+        "dimensional_map": "Delta_Tq = alpha_Phi_K * Delta_Phi",
+        "field_rescaling": "delta_phi_prime = s_phi delta_phi; Phi_scale_prime = s_phi Phi_scale",
+        "alpha_compensation": "alpha_Phi_K_prime = alpha_Phi_K / s_phi",
+        "beta_scale": "beta_T13 = (Phi_scale^2 / e0_scale) beta_Phi^nat",
+        "thermal_energy_map": "Delta_Tq = (e0 / c_v) r_Phi Delta_Phi",
+        "ontology": {
+          "C": "collective system-behaviour coordinate; not mass or thermodynamic scale",
+          "Phi": "effective response variable; not temperature, metric, particle, or information field",
+          "R_gen": "derived physical/history trace; not an independent state variable",
+          "R_obs": "observer record kept separate from physical dynamics"
+        }
+      },
+      "units": {
+        "normalized_Phi": "dimensionless normalized response",
+        "Delta_Tq": "K",
+        "alpha_Phi_K": "K per normalized Phi; no value identified",
+        "e0_scale": "J m^-3 scale factor remains open",
+        "c_v": "J m^-3 K^-1 only as a declared material unit contract",
+        "beta_Phi_nat": "natural-unit action coefficient; SI correspondence remains open"
+      },
+      "derivation_class": "algebraic structural identifiability no-go with explicit field/energy scale witnesses",
+      "observable": "normalized TTG response and conditional Delta_Tq dimensional map",
+      "data_role": "INTERNAL_STRUCTURAL_AUDIT_NO_TARGET_OR_HOLDOUT",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_thermal_bridge_scale_dependency_no_go.json",
+          "sha256": "a54b9e179e0905ea4c7cc8ecbd55922593d3b1bd96c2ae356b5fb22cd68d38e8",
+          "summary": {
+            "status": "PASS_SCOPED_THERMAL_BRIDGE_SCALE_DEPENDENCY_NO_GO",
+            "major_result_id": "T13_THERMAL_BRIDGE_SCALE_DEPENDENCY_NO_GO",
+            "closure_level": "CLOSED_AS_NO_GO"
+          }
+        }
+      ],
+      "verification_status": "PASS_SCOPED_THERMAL_BRIDGE_SCALE_DEPENDENCY_NO_GO",
+      "open_blockers": [
+        "independent_field_energy_and_temperature_scale_map_missing",
+        "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
+        "physical_beta_source_provenance_missing",
+        "base_Phi_to_Delta_u_ph_mapping_missing"
+      ],
+      "dependency_unlocked": "none; closes the scale-dependency question only",
+      "claim_boundary": "The no-go applies to the current normalized/action lane. It does not rule out a future source-locked field residue, energy-density anchor, or independent alpha_Phi_K calibration."
+    },
+    {
       "major_result_id": "T13_THERMAL_RESPONSE_BETA_CONTRACT",
       "topic": "0.13_Thermodynamic_Bridge",
       "closure_level": "CLOSED_FOR_LANE",
@@ -5043,7 +5105,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json",
-          "sha256": "988b87eb5c29b276038cf82920a22fe29600121e68c0ab9c46eedb39182274ec",
+          "sha256": "fea0ca9bacd6497f67292a015f651d0183f65b150469eb0be533bdf91adee2c8",
           "summary": {
             "status": "PASS_NAMED_FINITE_TEMPERATURE_BETA_CONTRACT",
             "major_result_id": "T13_THERMAL_RESPONSE_BETA_CONTRACT",

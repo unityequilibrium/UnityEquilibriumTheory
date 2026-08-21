@@ -111,6 +111,7 @@
       "Calorine numerical/state uncertainty decomposition is closed for lane; its mesh and mass-only envelopes are not source-grade uncertainty",
       "Phonix mp-47 graphite harmonic comparator is closed for lane; arbitrary-unit DOS and uncertainty prevent volumetric c_v or Ding C_src promotion",
       "MP48 named Phi_E dimensional comparator is closed for lane without base-Phi or alpha_Phi_K promotion",
+      "joint field, energy-density, and Kelvin scale dependency is closed as a scoped no-go for the current normalized/action lane",
       "permitted Ding Fig. 1d normalized-source lane is closed for lane without raw-author or alpha claims",
       "Oxford TGS Figure 1 provenance archive is closed for lane without numeric-row or calibration promotion",
       "Oxford TGS Figure 1 numeric rows are closed for lane without physical thermal or Phi calibration promotion",
@@ -162,8 +163,8 @@
     ],
     "dependency_unlocked": "Gravity/GR remains blocked until this full bridge and Core curved 3+1 gates pass",
     "closure_summary": {
-      "closed_lane_count": 169,
-      "closed_as_no_go_count": 14,
+      "closed_lane_count": 170,
+      "closed_as_no_go_count": 15,
       "closed_lane_result_ids": [
         "T13_ALPHA_PHI_K_CONDITIONAL_DERIVATION",
         "T13_ALPHA_PHI_K_NORMALIZED_SCALE_NO_GO",
@@ -244,6 +245,7 @@
         "T13_SOURCE_CP_95CI_ANCHOR",
         "T13_GATECH_STANDARD_TRANSPORT_COMPARATOR",
         "T13_STANDARD_O2_FINITE_TEMPERATURE_NORMAL_COMPARATOR",
+        "T13_THERMAL_BRIDGE_SCALE_DEPENDENCY_NO_GO",
         "T13_THERMAL_RESPONSE_BETA_CONTRACT",
         "T13_TPG_ANISOTROPIC_ALPHA_V_COMPARATOR",
         "T13_TRANSPORT_COEFFICIENT_IDENTIFIABILITY_NO_GO",
@@ -7566,7 +7568,7 @@
       "conditional_derivation_status": "PASS_CONDITIONAL_FORMULA_OPEN_INPUTS",
       "conditional_derivation_artifact": {
         "path": "docs/core/artifacts/t13_dimensional_bridge_contract_audit.json",
-        "sha256": "09ffa787f7ae737cf1bf6f1004af1319c00eda424ca86c44040bdd32029084ad",
+        "sha256": "caf37f860838c1e424a2a37cde6a9c852e2f2af0f13e6b17a1e9589161faf500",
         "summary": {
           "status": "PASS_CONDITIONAL_FORMULA_OPEN_INPUTS",
           "major_result_id": "T13_ALPHA_PHI_K_CONDITIONAL_DERIVATION",
@@ -8655,7 +8657,7 @@
         "data_role": "INTERNAL_STRUCTURAL_AUDIT_NO_TARGET_OR_HOLDOUT",
         "audit": {
           "path": "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json",
-          "sha256": "5f41afcdb62b7794c35755eecd9e91d3b39ecb432130a74878e2f2b40c1627b9",
+          "sha256": "41cda98a01b282fa5c2789ef93ce2f249041550e40763cdcb083658712c564ac",
           "summary": {
             "status": "PASS_SCOPED_NO_GO_COVARIANT_FIELD_NORMALIZATION",
             "major_result_id": "T13_COVARIANT_FIELD_NORMALIZATION_IDENTIFIABILITY_NO_GO",
@@ -8884,7 +8886,7 @@
         "data_role": "symbolic/formula audit; no target, calibration, or holdout data",
         "audit": {
           "path": "docs/core/artifacts/t13_dimensional_bridge_contract_audit.json",
-          "sha256": "09ffa787f7ae737cf1bf6f1004af1319c00eda424ca86c44040bdd32029084ad",
+          "sha256": "caf37f860838c1e424a2a37cde6a9c852e2f2af0f13e6b17a1e9589161faf500",
           "summary": {
             "status": "PASS_CONDITIONAL_FORMULA_OPEN_INPUTS",
             "major_result_id": "T13_ALPHA_PHI_K_CONDITIONAL_DERIVATION",
@@ -10017,7 +10019,7 @@
         "data_role": "INTERNAL_STRUCTURAL_AUDIT_NO_TARGET_OR_HOLDOUT",
         "audit": {
           "path": "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
-          "sha256": "4a79b2eb082e4a4f98de0c2b2c441b2144e05fe3a8232caccfd5ba414842b020",
+          "sha256": "ce0837792cd63918dc371f64fa49801bfb0dd0f715264c8557cf54f5dcbe9059",
           "summary": {
             "status": "PASS_SCOPED_NO_GO_NORMALIZED_PHI_ENERGY_ANCHOR",
             "major_result_id": "T13_PHI_ENERGY_ANCHOR_IDENTIFIABILITY_NO_GO",
@@ -10370,7 +10372,7 @@
         "data_role": "INTERNAL_FORMULA_AND_UNIT_CONTRACT_NO_CALIBRATION",
         "audit": {
           "path": "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json",
-          "sha256": "988b87eb5c29b276038cf82920a22fe29600121e68c0ab9c46eedb39182274ec",
+          "sha256": "fea0ca9bacd6497f67292a015f651d0183f65b150469eb0be533bdf91adee2c8",
           "summary": {
             "status": "PASS_NAMED_FINITE_TEMPERATURE_BETA_CONTRACT",
             "major_result_id": "T13_THERMAL_RESPONSE_BETA_CONTRACT",
@@ -73468,6 +73470,120 @@
           "finite_temperature_interacting_transport_SK_KMS_entropy_and_dissipative_balance_missing"
         ]
       },
+      "thermal_bridge_scale_dependency_no_go": {
+        "status": "PASS_SCOPED_THERMAL_BRIDGE_SCALE_DEPENDENCY_NO_GO",
+        "witness_role": "synthetic structural witness only; not a replacement data source or calibration record",
+        "witness": {
+          "field_rescaling": {
+            "scale": 3.7,
+            "delta_phi": 0.31,
+            "delta_phi_prime": 1.147,
+            "phi_scale": 1.9,
+            "phi_scale_prime": 7.03,
+            "coefficient_map": {
+              "Z_prime": 0.14609203798392986,
+              "m_Phi_sq_prime": 0.058436815193571946,
+              "lambda_prime": 0.0074700092468043015,
+              "xi_Phi_prime": 0.043827611395178954
+            },
+            "action_terms": {
+              "potential": 0.041672323500000004,
+              "potential_prime": 0.0416723235,
+              "kinetic": 0.0529,
+              "kinetic_prime": 0.05290000000000001,
+              "curvature_factor": 0.05766,
+              "curvature_factor_prime": 0.05765999999999999
+            },
+            "normalized_phi": 0.1631578947368421,
+            "normalized_phi_prime": 0.1631578947368421,
+            "checks": {
+              "potential_invariant": true,
+              "kinetic_invariant": true,
+              "curvature_factor_invariant": true,
+              "normalized_coordinate_invariant": true,
+              "coefficient_map_matches_field_rescaling": true
+            }
+          },
+          "joint_scale": {
+            "field_scale": 3.7,
+            "energy_density_scale": 5.0,
+            "c_v_j_per_m3_k": 1000000.0,
+            "response_ratio": 0.8,
+            "delta_phi_normalized": 0.25,
+            "normalized_curve_shape": [
+              1.0,
+              2.0,
+              0.8
+            ],
+            "normalized_curve_shape_prime": [
+              1.0,
+              2.0,
+              0.8
+            ],
+            "base_thermal_response_relative": 0.2,
+            "field_compensated_thermal_response_relative": 0.2,
+            "base_energy_response_k": 2.0000000000000002e-07,
+            "energy_rescaled_response_k": 1e-06,
+            "beta_scale_ratio": 2.7380000000000004,
+            "checks": {
+              "normalized_response_invariant": true,
+              "field_only_alpha_compensation_preserves_response": true,
+              "joint_energy_scale_changes_absolute_response": true,
+              "joint_scale_changes_beta": true,
+              "energy_scale_is_not_a_material_c_v_measurement": true
+            }
+          },
+          "checks": {
+            "field_action_rescaling_witness_passes": true,
+            "joint_scale_witness_passes": true,
+            "normalized_lane_is_invariant": true,
+            "absolute_response_depends_on_energy_scale": true,
+            "beta_depends_on_field_and_energy_scale": true
+          }
+        },
+        "checks": {
+          "field_action_rescaling_witness_passes": true,
+          "joint_scale_witness_passes": true,
+          "normalized_lane_is_invariant": true,
+          "absolute_response_depends_on_energy_scale": true,
+          "beta_depends_on_field_and_energy_scale": true,
+          "normalized_equation_is_declared": true,
+          "dimensional_equation_is_declared": true,
+          "ontology_contract_is_explicit": true,
+          "no_numeric_alpha_is_emitted": true,
+          "no_numeric_e0_is_emitted": true,
+          "no_landauer_beta_inference": true,
+          "no_target_or_holdout_access": true,
+          "no_fit_or_threshold_tuning": true
+        },
+        "numeric_alpha_Phi_K_emitted": false,
+        "numeric_e0_emitted": false,
+        "target_data_used": false,
+        "fit_performed": false,
+        "landauer_used_for_beta": false,
+        "xie_2026_accessed": false,
+        "controlling_blocker": "independent_field_energy_and_temperature_scale_map_missing",
+        "next_controller": "Obtain a source-locked covariant field residue or independently measured paired Phi/SI observable amplitude, then derive base Phi-to-Delta_u_ph and beta SI correspondence without using Xie 2026 or Landauer as an inference shortcut.",
+        "claim_boundary": "The no-go applies to the current normalized/action lane. It does not rule out a future source-locked field residue, energy-density anchor, or independent alpha_Phi_K calibration.",
+        "major_result_id": "T13_THERMAL_BRIDGE_SCALE_DEPENDENCY_NO_GO",
+        "closure_level": "CLOSED_AS_NO_GO",
+        "data_role": "INTERNAL_STRUCTURAL_AUDIT_NO_TARGET_OR_HOLDOUT",
+        "audit": {
+          "path": "docs/core/artifacts/t13_thermal_bridge_scale_dependency_no_go.json",
+          "sha256": "a54b9e179e0905ea4c7cc8ecbd55922593d3b1bd96c2ae356b5fb22cd68d38e8",
+          "summary": {
+            "status": "PASS_SCOPED_THERMAL_BRIDGE_SCALE_DEPENDENCY_NO_GO",
+            "major_result_id": "T13_THERMAL_BRIDGE_SCALE_DEPENDENCY_NO_GO",
+            "closure_level": "CLOSED_AS_NO_GO"
+          }
+        },
+        "open_blockers": [
+          "independent_field_energy_and_temperature_scale_map_missing",
+          "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
+          "physical_beta_source_provenance_missing",
+          "base_Phi_to_Delta_u_ph_mapping_missing"
+        ]
+      },
       "phi_si_anchor_public_source_boundary": {
         "status": "PASS_PUBLIC_SOURCE_BOUNDARY_NO_PAIRED_BASE_PHI_RECORD",
         "source_availability": {
@@ -73849,7 +73965,7 @@
       "data_role": "INTERNAL_STRUCTURAL_AUDIT_NO_TARGET_OR_HOLDOUT",
       "audit": {
         "path": "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json",
-        "sha256": "5f41afcdb62b7794c35755eecd9e91d3b39ecb432130a74878e2f2b40c1627b9",
+        "sha256": "41cda98a01b282fa5c2789ef93ce2f249041550e40763cdcb083658712c564ac",
         "summary": {
           "status": "PASS_SCOPED_NO_GO_COVARIANT_FIELD_NORMALIZATION",
           "major_result_id": "T13_COVARIANT_FIELD_NORMALIZATION_IDENTIFIABILITY_NO_GO",
@@ -73979,7 +74095,7 @@
       "data_role": "INTERNAL_STRUCTURAL_AUDIT_NO_TARGET_OR_HOLDOUT",
       "audit": {
         "path": "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
-        "sha256": "4a79b2eb082e4a4f98de0c2b2c441b2144e05fe3a8232caccfd5ba414842b020",
+        "sha256": "ce0837792cd63918dc371f64fa49801bfb0dd0f715264c8557cf54f5dcbe9059",
         "summary": {
           "status": "PASS_SCOPED_NO_GO_NORMALIZED_PHI_ENERGY_ANCHOR",
           "major_result_id": "T13_PHI_ENERGY_ANCHOR_IDENTIFIABILITY_NO_GO",
@@ -74116,7 +74232,7 @@
       "data_role": "INTERNAL_FORMULA_AND_UNIT_CONTRACT_NO_CALIBRATION",
       "audit": {
         "path": "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json",
-        "sha256": "988b87eb5c29b276038cf82920a22fe29600121e68c0ab9c46eedb39182274ec",
+        "sha256": "fea0ca9bacd6497f67292a015f651d0183f65b150469eb0be533bdf91adee2c8",
         "summary": {
           "status": "PASS_NAMED_FINITE_TEMPERATURE_BETA_CONTRACT",
           "major_result_id": "T13_THERMAL_RESPONSE_BETA_CONTRACT",

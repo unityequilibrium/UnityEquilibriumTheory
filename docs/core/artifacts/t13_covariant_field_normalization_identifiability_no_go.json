@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-covariant-field-normalization-identifiability-v1",
   "artifact": "t13_covariant_field_normalization_identifiability_no_go",
-  "generated_at": "2026-08-11",
+  "generated_at": "2026-08-21",
   "status": "PASS_SCOPED_NO_GO_COVARIANT_FIELD_NORMALIZATION",
   "major_result": {
     "major_result_id": "T13_COVARIANT_FIELD_NORMALIZATION_IDENTIFIABILITY_NO_GO",

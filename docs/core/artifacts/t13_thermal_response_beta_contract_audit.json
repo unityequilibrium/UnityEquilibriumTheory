@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-thermal-response-beta-contract-v1",
   "artifact": "t13_thermal_response_beta_contract_audit",
-  "generated_at": "2026-08-20",
+  "generated_at": "2026-08-21",
   "status": "PASS_NAMED_FINITE_TEMPERATURE_BETA_CONTRACT",
   "major_result": {
     "major_result_id": "T13_THERMAL_RESPONSE_BETA_CONTRACT",
@@ -54,7 +54,7 @@
       },
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
-        "sha256": "c3bf5059964ab80d2fa251cc79a599e1da072c34ac513ce659daa33d691d22d2"
+        "sha256": "60e3b52f7657893b0e6177a376905dd35e29187e11a40b615191519404d28643"
       },
       {
         "path": "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json"

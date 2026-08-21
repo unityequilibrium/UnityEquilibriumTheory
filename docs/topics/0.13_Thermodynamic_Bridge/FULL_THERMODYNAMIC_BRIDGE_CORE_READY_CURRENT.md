@@ -2281,3 +2281,26 @@ CONTROLLING_BLOCKER: independent_paired_base_Phi_amplitude_and_SI_observable_rec
 NEXT_ACTION: Obtain a permitted paired base-Phi/SI record or derive a coefficient-provenance-backed dimensional map without reading Xie 2026, then rerun the semantic admission gate before any calibration or prediction.
 
 CLAIM_BOUNDARY: This closes the admission and provenance boundary only. It is not a numeric calibration, temperature prediction, external validation, or Full Topic 13 closure.
+## T13-147 - Joint thermal-bridge scale-dependency no-go
+
+MAJOR_RESULT_CLOSURE: `CLOSED_AS_NO_GO` for the current normalized/action scale question; Full Topic 13 remains `PARTIAL` / `BLOCKED`.
+
+WHAT_IS_ACTUALLY_CLOSED: The declared scalar action and normalized TTG lane admit an explicit continuous field-rescaling family. A field-only alpha compensation preserves the dimensional response form while changing the unanchored Phi amplitude, and a joint field/energy-density rescaling changes the absolute Kelvin response and normalized beta correspondence.
+
+WHAT_REMAINS_OPEN: An independent field-energy-temperature scale map, an independent paired base-Phi/SI observable record, physical beta provenance, and the base-Phi-to-Delta_u_ph map remain open. No numeric alpha_Phi_K or e0 was emitted.
+
+DEPENDENCY_UNLOCKED: None. This closes a structural no-go lane only; it does not unlock Full Topic 13, Core, Gravity, constitutive transport, or Galaxy.
+
+STATUS: `PASS_SCOPED_THERMAL_BRIDGE_SCALE_DEPENDENCY_NO_GO`; canonical full gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE` / `PARTIAL` with 10 blockers.
+
+WHAT_CHANGED: Added `docs/core/t13_thermal_bridge_scale_dependency.py` and its verifier/artifact. The full gate now registers `T13_THERMAL_BRIDGE_SCALE_DEPENDENCY_NO_GO` under the dimensional observable map and records the no-go in lane closures.
+
+EQUATION_OR_MAPPING: `y_TTG = Delta_Tq(t) / Delta_Tq(0)`; `y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)`; `Delta_Tq = alpha_Phi_K * Delta_Phi`; `delta_phi_prime = s_phi delta_phi`; `beta_T13 = (Phi_scale^2 / e0_scale) beta_Phi^nat`.
+
+VERIFICATION: The structural witness passed action-term, normalized-response, field-compensation, absolute-scale, beta-scale, ontology, no-fit, no-Landauer, no-target, and no-holdout checks. Full closure summary is `closed_lane_count=170`, `closed_as_no_go_count=15`, `open_blocker_count=10`, `downstream_dependency_unlocked=false`. Xie 2026 remained unconsumed.
+
+CONTROLLING_BLOCKER: `independent_field_energy_and_temperature_scale_map_missing`, together with the existing independent alpha, Ding C_src, physical Kubo, EOS/transport/KMS/entropy, material-regime, and uncertainty blockers.
+
+NEXT_ACTION: Obtain a permitted source-locked field residue or paired base-Phi/SI observable anchor, or derive the map from a declared dimensionful action/free-energy origin. Do not infer it from normalized TTG, Landauer, or Xie 2026.
+
+CLAIM_BOUNDARY: Scoped structural no-go only. It is not numeric calibration, Kelvin prediction, external validation, `CLOSED_FOR_CORE`, or global UET closure.

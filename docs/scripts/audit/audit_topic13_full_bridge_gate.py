@@ -124,6 +124,7 @@ LANE_KEY_BY_ID["T13_TRANSPORT_KMS_ENTROPY_STATUS_BOUNDARY"] = "transport_kms_ent
 LANE_KEY_BY_ID["T13_JUN_FINAL_SOURCE_BOUNDARY"] = "jun_final_source_boundary"
 LANE_KEY_BY_ID["T13_HONG_FINAL_SOURCE_BOUNDARY"] = "hong_final_source_boundary"
 LANE_KEY_BY_ID["T13_PETERSON_SOURCE_IDENTITY_NO_GO"] = "peterson_source_identity_no_go"
+LANE_KEY_BY_ID["T13_THERMAL_BRIDGE_SCALE_DEPENDENCY_NO_GO"] = "thermal_bridge_scale_dependency_no_go"
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -900,6 +901,16 @@ def main() -> int:
         artifact["verification_status"]["eos_transport_kms_entropy"].pop(
             "mp48_phi_e_dimensional_anchor_comparator", None
         )
+    scale_dependency_lane = discovered_lane_integrations.get(
+        "thermal_bridge_scale_dependency_no_go"
+    )
+    if scale_dependency_lane:
+        artifact["verification_status"]["dimensional_observable_map"][
+            "thermal_bridge_scale_dependency_no_go"
+        ] = scale_dependency_lane
+        artifact["verification_status"]["eos_transport_kms_entropy"].pop(
+            "thermal_bridge_scale_dependency_no_go", None
+        )
     spectral_csrc_lane = discovered_lane_integrations.get(
         "mp48_spectral_csrc_reproduction"
     )
@@ -1445,6 +1456,8 @@ def main() -> int:
         lane_closures.append("Phonix mp-47 graphite harmonic comparator is closed for lane; arbitrary-unit DOS and uncertainty prevent volumetric c_v or Ding C_src promotion")
     if discovered_lane_integrations.get("mp48_phi_e_dimensional_anchor_comparator", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("MP48 named Phi_E dimensional comparator is closed for lane without base-Phi or alpha_Phi_K promotion")
+    if discovered_lane_integrations.get("thermal_bridge_scale_dependency_no_go", {}).get("closure_level") == "CLOSED_AS_NO_GO":
+        lane_closures.append("joint field, energy-density, and Kelvin scale dependency is closed as a scoped no-go for the current normalized/action lane")
     if discovered_lane_integrations.get("ding_fig1d_normalized_source_lane", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("permitted Ding Fig. 1d normalized-source lane is closed for lane without raw-author or alpha claims")
     if discovered_lane_integrations.get("oxford_tgs_comparator_provenance", {}).get("closure_level") == "CLOSED_FOR_LANE":
