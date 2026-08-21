@@ -24,6 +24,12 @@ def load(path: Path) -> dict:
 
 def test_oa_package_inventory_is_explicit_and_scoped() -> None:
     package = load(PACKAGE)
+    assert package["source_identity"]["publisher_url"] == (
+        "https://www.nature.com/articles/s41467-021-27907-z"
+    )
+    assert package["source_identity"]["publisher_data_availability_locator"] == (
+        "Nature Communications article, Data availability section"
+    )
     inventory = package["official_object_inventory"]
     assert inventory["object_count"] == 11
     assert inventory["media_payload_count"] == 7

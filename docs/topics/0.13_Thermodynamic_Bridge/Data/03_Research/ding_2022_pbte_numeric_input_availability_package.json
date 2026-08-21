@@ -8,6 +8,9 @@
   "source_identity": {
     "title": "Observation of Second Sound in Graphite over 200 K",
     "doi": "10.1038/s41467-021-27907-z",
+    "publisher_url": "https://www.nature.com/articles/s41467-021-27907-z",
+    "publisher_data_availability_locator": "Nature Communications article, Data availability section",
+    "publisher_data_availability_statement": "The data that support the findings of this study are available from the corresponding author on reasonable request.",
     "pmcid": "PMC8755757",
     "oa_record_url": "https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id=PMC8755757",
     "s3_inventory_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC8755757.1/",

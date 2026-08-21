@@ -3448,3 +3448,18 @@ NEXT_ACTION: Resolve the collision-spectrum and convergence boundary without cli
 CLAIM_BOUNDARY: Scoped numerical boundary only; not a physical UET transport coefficient, alpha calibration, prediction, external validation, Core closure, or global UET closure.
 EVIDENCE_PATHS: docs/core/artifacts/t13_calorine_full_lbte_stability_boundary_audit.json; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json; docs/core/artifacts/uet_major_result_closure_register.json; docs/core/artifacts/uet_major_result_dependency_unlock_gate.json.
 EVIDENCE_HASHES: artifact 8b5de32a8c33b0a646c8e26faf263585d98bcb939df8adb78b1b16f9d832859d; full gate 6505ad8b6b1aac6da67d8ba7a3c10ae77f2c6047def0502a47377f44bdd8f14a; register a0207ee94c1cdc4e5d5a86f33763a7bbe3267716d3ce5bd7290a7f806b424344; dependency 62195d85fbf71e31b98448215aa25e991a55b01f6d6dbca80b93cac1f561b91d.
+
+### 2026-08-22 - Ding publisher provenance locator wave (T13-151)
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE
+WHAT_IS_ACTUALLY_CLOSED: The Ding 2022 source package now records the primary Nature Communications locator and publisher-level data-availability statement; the captured official PMC OA inventory remains a verified no-go for machine-readable PBTE reproduction inputs.
+WHAT_REMAINS_OPEN: Numeric Ding C_src(T), uncertainty/convergence, an accepted same-regime independent reproduction, the independent alpha_Phi_K calibration, the dimensional Phi anchor, and the remaining beta/EOS/transport/KMS/entropy closure.
+DEPENDENCY_UNLOCKED: Source-provenance lane only; no Full Topic 13, Core, Gravity, constitutive-transport, or Galaxy dependency is unlocked.
+STATUS: PASS_SCOPED_OA_NUMERIC_INPUT_AVAILABILITY_NO_GO
+WHAT_CHANGED: Added publisher URL, publisher data-availability locator, and a verifier check that distinguishes the publisher route from the archived PMC OA inventory.
+EQUATION_OR_MAPPING: C_src(T) = sum_mu c_mu(T); no numeric c_mu or C_src value was emitted.
+VERIFICATION: Source audit passed; all archived records and supplementary hashes match; no reproduction payload candidate was found; focused regressions passed 8 tests; Xie 2026 remained unread and unconsumed.
+CONTROLLING_BLOCKER: ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing and independent_alpha_Phi_K_calibration_missing.
+NEXT_ACTION: Execute an authorized corresponding-author request or build an accepted same-regime PBTE reproduction with units, uncertainty, convergence, material/state mapping, and hash; keep calibration independent and do not read the locked holdout.
+CLAIM_BOUNDARY: This closes source-provenance/availability classification only. It is not numeric C_src, alpha_Phi_K calibration, temperature prediction, external validation, CLOSED_FOR_CORE, or global UET closure.
+EVIDENCE_HASHES: package b87680866ebed7ca25f27008f01e37dd47f0e6da54c3c1e27eb404e20fe600ad; source audit 1828db74760ac53c73345d0e4a8adc8fc00fc16bb25e84809a73aaa3cd9b3d9a; full gate fcd703b29b69e2e32ebc9d9572eca5fc33ffc9a9ad2893336c3f5ca81644c231; closure register 9158e95279a567780f8bd6fdce0cca7b37f7b01a732ad11bb6774b3fbefea25d; dependency gate 5d8bf0ca921d50ca57634c377b5ace7f71b58b6791441063fc1c71cf86490d88.

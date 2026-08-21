@@ -1,7 +1,7 @@
 {
   "schema_version": "uet-major-result-closure-register-v1",
   "artifact": "uet_major_result_closure_register",
-  "generated_at": "2026-08-21",
+  "generated_at": "2026-08-22",
   "contract": {
     "path": "docs/core/artifacts/uet_major_result_closure_contract.json",
     "sha256": "3d69588169703282667cf6d82421277b02556c37f2b457fe6b2a40d267c38a08"
@@ -204,7 +204,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "6505ad8b6b1aac6da67d8ba7a3c10ae77f2c6047def0502a47377f44bdd8f14a",
+          "sha256": "fcd703b29b69e2e32ebc9d9572eca5fc33ffc9a9ad2893336c3f5ca81644c231",
           "summary": {
             "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
             "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
@@ -1188,10 +1188,10 @@
         },
         {
           "path": "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
-          "sha256": "a48d41ed542d4505f1bd309bd3bdfea175e826efccf9b8a1c36fec4cfb17ba97",
+          "sha256": "1828db74760ac53c73345d0e4a8adc8fc00fc16bb25e84809a73aaa3cd9b3d9a",
           "summary": {
             "status": "PASS_SCOPED_OA_NUMERIC_INPUT_AVAILABILITY_NO_GO",
-            "scope": "captured official PMC OA distribution only"
+            "scope": "captured official PMC OA distribution and publisher data-availability route"
           }
         },
         {
@@ -3264,7 +3264,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
-          "sha256": "a48d41ed542d4505f1bd309bd3bdfea175e826efccf9b8a1c36fec4cfb17ba97",
+          "sha256": "1828db74760ac53c73345d0e4a8adc8fc00fc16bb25e84809a73aaa3cd9b3d9a",
           "summary": {
             "status": "PASS_SCOPED_OA_NUMERIC_INPUT_AVAILABILITY_NO_GO",
             "major_result_id": "T13_DING_PBTE_OA_NUMERIC_INPUT_NO_GO",

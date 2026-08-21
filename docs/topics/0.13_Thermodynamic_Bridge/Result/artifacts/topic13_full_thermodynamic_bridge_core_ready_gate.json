@@ -1,7 +1,7 @@
 {
   "schema_version": "topic13-full-thermodynamic-bridge-core-ready-v1",
   "artifact": "topic13_full_thermodynamic_bridge_core_ready_gate",
-  "generated_at": "2026-08-21",
+  "generated_at": "2026-08-22",
   "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
   "claim_promotion": false,
   "major_result": {
@@ -10268,6 +10268,8 @@
           "oa_record_identity_matches": true,
           "oa_record_license_is_cc_by": true,
           "oa_record_not_retracted": true,
+          "publisher_source_identity_is_locked": true,
+          "publisher_data_availability_statement_is_locked": true,
           "s3_prefix_is_complete_not_truncated": true,
           "s3_object_count_is_11": true,
           "s3_object_names_match_package": true,
@@ -10284,17 +10286,17 @@
           "xie_holdout_not_accessed": true,
           "xie_holdout_not_consumed": true
         },
-        "what_changed": "The Ding numeric-input source search now verifies the complete official OA inventory and all three locally archived supplementary PDFs with role-specific hashes before applying the scoped no-go.",
-        "verification": "The PMC OA API identity, complete S3 prefix, object metadata, full-text availability statement, published computational details, archived hashes, and holdout non-access are checked.",
+        "what_changed": "The Ding numeric-input source search now records the primary Nature Communications locator and publisher-level data-availability statement, then verifies the complete official OA inventory and all three locally archived supplementary PDFs with role-specific hashes before applying the scoped no-go.",
+        "verification": "The publisher identity and data-availability statement, PMC OA API identity, complete S3 prefix, object metadata, full-text availability statement, published computational details, archived hashes, and holdout non-access are checked.",
         "controlling_blocker": "ding_pbte_author_data_or_independent_reproduction_package_missing",
         "next_action": "Prepare a source-specific author request for relaxed structure, force constants, ShengBTE inputs/outputs, and c_mu(T), or source-lock an independent open graphite phonon package and label it independent reproduction; do not infer C_src from normalized TTG data.",
-        "claim_boundary": "The no-go applies only to the captured official PMC OA distribution. It does not prove that author-held or third-party data are unavailable and does not close numeric C_src or Topic 13.",
+        "claim_boundary": "The no-go applies only to the captured official PMC OA distribution and the publisher's stated author-request route. It does not prove that author-held or third-party data are unavailable and does not close numeric C_src or Topic 13.",
         "major_result_id": "T13_DING_PBTE_OA_NUMERIC_INPUT_NO_GO",
         "closure_level": "CLOSED_FOR_LANE",
         "data_role": "SOURCE_PROVENANCE_AND_ACQUISITION_DECISION_ONLY; no calibration consumed",
         "audit": {
           "path": "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
-          "sha256": "a48d41ed542d4505f1bd309bd3bdfea175e826efccf9b8a1c36fec4cfb17ba97",
+          "sha256": "1828db74760ac53c73345d0e4a8adc8fc00fc16bb25e84809a73aaa3cd9b3d9a",
           "summary": {
             "status": "PASS_SCOPED_OA_NUMERIC_INPUT_AVAILABILITY_NO_GO",
             "major_result_id": "T13_DING_PBTE_OA_NUMERIC_INPUT_NO_GO",
@@ -76759,14 +76761,6 @@
       }
     },
     {
-      "path": "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
-      "sha256": "2811cfd9ef4f0218cc5696a1a7ce5a4591a4a8012c28dad118a5b6171b3b67fa",
-      "summary": {
-        "status": "PASS_SCOPED_OA_NUMERIC_INPUT_AVAILABILITY_NO_GO",
-        "scope": "captured official PMC OA distribution only"
-      }
-    },
-    {
       "path": "docs/core/artifacts/t13_berut_figure3_digitization.json",
       "sha256": "cc7102b65e1d8a5284f17fd2f6b583105c4d82d4ab3601303ab8faa559258d2a",
       "summary": {
@@ -76797,6 +76791,14 @@
     {
       "path": "docs/core/artifacts/t13_uet_o2_regularized_continuum_heat_current_audit.json",
       "sha256": "46baa6fdcae6c479fc503c34a56957d5671327af0717191362ddbb8797f47363"
+    },
+    {
+      "path": "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
+      "sha256": "1828db74760ac53c73345d0e4a8adc8fc00fc16bb25e84809a73aaa3cd9b3d9a",
+      "summary": {
+        "status": "PASS_SCOPED_OA_NUMERIC_INPUT_AVAILABILITY_NO_GO",
+        "scope": "captured official PMC OA distribution only"
+      }
     }
   ],
   "source_acquisition_controller": "ding_pbte_author_data_or_independent_reproduction_package_missing"

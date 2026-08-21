@@ -1,12 +1,12 @@
 {
   "schema_version": "uet-major-result-dependency-unlock-v1",
   "artifact": "uet_major_result_dependency_unlock_gate",
-  "generated_at": "2026-08-21",
+  "generated_at": "2026-08-22",
   "status": "BLOCKED_DOWNSTREAM_MAJOR_RESULTS",
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "a0207ee94c1cdc4e5d5a86f33763a7bbe3267716d3ce5bd7290a7f806b424344"
+    "sha256": "9158e95279a567780f8bd6fdce0cca7b37f7b01a732ad11bb6774b3fbefea25d"
   },
   "decisions": {
     "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY": {
@@ -75,7 +75,7 @@
   ],
   "claim_boundary": "Dependency decisions only; no downstream result is promoted by a checkpoint or comparator pass.",
   "topic13_partial_evidence": {
-    "register_sha256": "112714f2c45f97ae7940249b4c73cb8f4bbcc1010763adc52d52d56603997e7c",
+    "register_sha256": "697e0e08b905bd2736ff50b7f7a3fd958a2289f550b94a25ae8d694f9154f64e",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",
