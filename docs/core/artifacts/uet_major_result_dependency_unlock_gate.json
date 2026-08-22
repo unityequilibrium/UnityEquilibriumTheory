@@ -6,7 +6,7 @@
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "9315fd0d4e5432e76591191589f2d6cffec885c8cee9d733b019768608b11636"
+    "sha256": "bdea6e57ee27f4cda524e905a55dde3c0e508f02125164fcfd2867675eeb1fad"
   },
   "decisions": {
     "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY": {
@@ -75,7 +75,7 @@
   ],
   "claim_boundary": "Dependency decisions only; no downstream result is promoted by a checkpoint or comparator pass.",
   "topic13_partial_evidence": {
-    "register_sha256": "d6d789d1e66526ac2b89b360ec15916bb0e2cb3e13c259511438163ffd333c87",
+    "register_sha256": "bdea6e57ee27f4cda524e905a55dde3c0e508f02125164fcfd2867675eeb1fad",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",

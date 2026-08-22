@@ -1148,3 +1148,29 @@ NEXT_ACTION: Obtain the missing UET response-state map; do not relabel this comp
 CLAIM_BOUNDARY: External transport-input evidence only; not UET calibration or Full Topic 13 closure.
 
 EVIDENCE: docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/kim_2018_graphite_green_kubo_source_package.json.
+
+## T13-164 - Ding supplementary content review
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.
+
+WHAT_IS_ACTUALLY_CLOSED: The three local Ding supplementary PDFs have page-level content findings, source object identity, byte counts, and SHA-256 hashes. The package records that MOESM1 contains symbolic PBTE/TTG equations, MOESM2 contains review/computational clarification, and MOESM3 is a reporting summary; none is admitted as numeric C_src data.
+
+WHAT_REMAINS_OPEN: Numeric Ding C_src, accepted same-regime independent reproduction, source-grade uncertainty/convergence, base-Phi SI anchor, and independent alpha_Phi_K remain open.
+
+DEPENDENCY_UNLOCKED: Public supplementary content-review boundary only; no calibration or downstream dependency unlock.
+
+STATUS: PASS_SCOPED_DING_SUPPLEMENTARY_CONTENT_BOUNDARY_NO_NUMERIC_PAYLOAD.
+
+WHAT_CHANGED: Added ding_2022_supplementary_content_review_package.json, a source/hash verifier, and the resulting audit artifact. No rows were digitized and no data role was promoted beyond source-content review.
+
+EQUATION_OR_MAPPING: C_src(T) = sum_mu c_mu(T) and Delta_Tq = Delta_u_ph / C_src remain source-level formula mappings; Delta_Tq = alpha_Phi_K * Delta_Phi remains uncalibrated.
+
+VERIFICATION: Three PDF hashes and page-count contracts pass; xie_2026_accessed=false; fit_performed=false; threshold_changed=false.
+
+CONTROLLING_BLOCKER: ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing.
+
+NEXT_ACTION: Obtain an authorized author package or accepted same-regime PBTE reproduction with mode rows, uncertainty, convergence, and material/state mapping.
+
+CLAIM_BOUNDARY: This is a provenance/content boundary only, not numeric C_src, independent alpha_Phi_K, TTG prediction, physical transport, external validation, or Full Topic 13 closure.
+
+EVIDENCE: docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_supplementary_content_review_package.json; docs/core/artifacts/t13_ding_supplementary_content_review_audit.json.

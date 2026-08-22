@@ -1455,3 +1455,29 @@ NEXT_ACTION: Find a source-locked UET space-response/Phi map or keep this record
 CLAIM_BOUNDARY: Standard-physics external transport input only; not physical UET Kubo, alpha_Phi_K, Ding C_src, or Full Topic 13 closure.
 
 EVIDENCE: package e3282c72a48883b25fc5dcb248ff840cbe7de08a3be2057bf01754c245ca472f; audit 13b2b2c677d2d4d0e1035df99b9b6ae40619040caa976f71baf1d406bb25b208; verifier da42657918ef109ad4130e7fa579c534d3016cfe8b7457d8f14a38d66a78f1f0; full gate 192bf678aa95ccdfcde21e14a476362066b9b2f8b57994ec964da3ca9dd14e8e.
+
+## T13-164 - Ding supplementary content boundary
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.
+
+WHAT_IS_ACTUALLY_CLOSED: Page-level content review and hash identity for MOESM1, MOESM2, and MOESM3. The reviewed equations preserve C_src(T) = sum_mu c_mu(T) and Delta_Tq = Delta_u_ph / C_src as source notation only; no numeric mode sum is emitted.
+
+WHAT_REMAINS_OPEN: Numeric Ding C_src, accepted independent reproduction, dimensional base-Phi map, independent alpha_Phi_K, and physical EOS/transport/KMS/entropy closure.
+
+DEPENDENCY_UNLOCKED: Public supplementary content boundary only.
+
+STATUS: PASS_SCOPED_DING_SUPPLEMENTARY_CONTENT_BOUNDARY_NO_NUMERIC_PAYLOAD.
+
+WHAT_CHANGED: Added a source-content review package with page locators, PDF size/hash identity, an audit verifier, and full-gate projection. This is not a derivation or calibration artifact.
+
+EQUATION_OR_MAPPING: C_src(T) = sum_mu c_mu(T); Delta_Tq = Delta_u_ph / C_src; y_TTG = Delta_Tq(t) / Delta_Tq(0); Delta_Tq = alpha_Phi_K * Delta_Phi remains open.
+
+VERIFICATION: All source-content checks pass; the three PDF hashes match the archived files; no figure digitization, fit, threshold change, or holdout access occurred.
+
+CONTROLLING_BLOCKER: ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing.
+
+NEXT_ACTION: Acquire an authorized numeric package or accepted same-regime PBTE reproduction with uncertainty and convergence; do not promote PDF equations or figures to numeric C_src.
+
+CLAIM_BOUNDARY: Source-content boundary only; not numeric C_src, alpha calibration, SI prediction, physical transport, external validation, or Full Topic 13 closure.
+
+EVIDENCE: docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_supplementary_content_review_package.json; docs/core/artifacts/t13_ding_supplementary_content_review_audit.json; docs/scripts/audit/audit_topic13_ding_supplementary_content_review.py.

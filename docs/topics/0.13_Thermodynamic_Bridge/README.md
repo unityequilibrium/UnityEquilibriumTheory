@@ -264,3 +264,29 @@ CONTROLLING_BLOCKER: UET_space_response_and_base_Phi_mapping_missing for this la
 NEXT_ACTION: Derive or independently source-lock the UET space-response and base-Phi mapping; retain Kim 2018 only as an external comparator until that mapping exists.
 
 CLAIM_BOUNDARY: This is source-locked standard-physics transport-input evidence only. It is not a UET Kubo coefficient, Ding C_src, alpha_Phi_K calibration, TTG prediction, external validation, or Full Topic 13 closure.
+
+## Current Major Result: T13-164 Ding supplementary content boundary (2026-08-22)
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for T13_DING_SUPPLEMENTARY_CONTENT_BOUNDARY; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.
+
+WHAT_IS_ACTUALLY_CLOSED: The three archived MOESM PDFs are reviewed at page-level locators with fixed size/hash identity. MOESM1 is bounded to symbolic PBTE/TTG equations and method context; MOESM2 to review/computational clarification; MOESM3 to reporting summary. No reviewed PDF supplies a machine-readable mode-resolved C_src table, force constants, scattering matrix, or paired Phi/SI response row.
+
+WHAT_REMAINS_OPEN: Numeric Ding C_src or an accepted same-regime independent reproduction, source-grade uncertainty/convergence, base-Phi SI mapping, independent alpha_Phi_K, and the remaining EOS/transport/KMS/entropy closure remain open.
+
+DEPENDENCY_UNLOCKED: Page-level public supplementary content boundary only; no C_src, alpha, calibration, transport, Core, Gravity, or Full Topic 13 dependency is unlocked.
+
+STATUS: PASS_SCOPED_DING_SUPPLEMENTARY_CONTENT_BOUNDARY_NO_NUMERIC_PAYLOAD; full gate remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL with 9 open blocker groups; claim_promotion=false.
+
+WHAT_CHANGED: Added a content-review package, page locators, source hashes, a verifier, focused regression, full-gate source-package projection, and closure/dependency regeneration. No PDF figure digitization, fit, threshold change, or Xie 2026 access was used.
+
+EQUATION_OR_MAPPING: C_src(T) = sum_mu c_mu(T); Delta_Tq = Delta_u_ph / C_src; y_TTG = Delta_Tq(t) / Delta_Tq(0); Delta_Tq = alpha_Phi_K * Delta_Phi remains uncalibrated.
+
+VERIFICATION: Ding content audit PASS; focused regression 4 passed; full gate reports 184 closed lanes and 9 open blocker groups; holdout_consumed=false; claim_promotion=false.
+
+CONTROLLING_BLOCKER: ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing; alpha_Phi_K_independent_calibration_missing remains separate and still open.
+
+NEXT_ACTION: Obtain an authorized author package or accepted same-regime PBTE reproduction with mode-resolved C_src, uncertainty, convergence, and material/state mapping; keep base-Phi calibration independent and do not use Xie 2026.
+
+CLAIM_BOUNDARY: This closes only the page-level public supplementary content boundary. It does not create numeric C_src, calibrate alpha_Phi_K, produce a temperature prediction, validate UET externally, or close Full Topic 13.
+
+EVIDENCE: docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_supplementary_content_review_package.json; docs/core/artifacts/t13_ding_supplementary_content_review_audit.json; docs/scripts/audit/audit_topic13_ding_supplementary_content_review.py; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json.

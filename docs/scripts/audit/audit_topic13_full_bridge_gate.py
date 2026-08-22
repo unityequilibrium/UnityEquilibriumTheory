@@ -137,6 +137,7 @@ LANE_KEY_BY_ID["T13_PEREZ_CASTANEDA_HOPG_SPECIFIC_HEAT_SOURCE_BOUNDARY"] = "pere
 LANE_KEY_BY_ID["T13_QH15_GRAPHITE_CV_COMPARATOR_BOUNDARY"] = "qh15_graphite_cv_comparator_boundary"
 LANE_KEY_BY_ID["T13_FORMAL_THERMODYNAMIC_BRIDGE_INTEGRATION"] = "formal_thermodynamic_bridge_integration"
 LANE_KEY_BY_ID["T13_DAY2012_PREFERRED_THERMODYNAMIC_ASSESSMENT_BOUNDARY"] = "day2012_preferred_thermodynamic_assessment_boundary"
+LANE_KEY_BY_ID["T13_DING_SUPPLEMENTARY_CONTENT_BOUNDARY"] = "ding_supplementary_content_boundary"
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -211,6 +212,9 @@ def main() -> int:
     )
     ding_public_supplementary_path, ding_public_supplementary = load(
         "docs/core/artifacts/t13_ding_public_supplementary_payload_boundary_audit.json"
+    )
+    ding_supplementary_content_path, ding_supplementary_content = load(
+        "docs/core/artifacts/t13_ding_supplementary_content_review_audit.json"
     )
     ding_experimental_heating_path, ding_experimental_heating = load(
         "docs/core/artifacts/t13_ding_experimental_heating_input_boundary_audit.json"
@@ -999,6 +1003,16 @@ def main() -> int:
         artifact["verification_status"]["eos_transport_kms_entropy"].pop(
             "ding_public_supplementary_payload_boundary", None
         )
+    ding_supplementary_content_lane = discovered_lane_integrations.get(
+        "ding_supplementary_content_boundary"
+    )
+    if ding_supplementary_content_lane:
+        artifact["verification_status"]["source_package"][
+            "ding_supplementary_content_boundary"
+        ] = ding_supplementary_content_lane
+        artifact["verification_status"]["eos_transport_kms_entropy"].pop(
+            "ding_supplementary_content_boundary", None
+        )
     ding_2017_acs_supplementary_lane = discovered_lane_integrations.get(
         "ding_2017_acs_supplementary_payload_boundary"
     )
@@ -1653,6 +1667,8 @@ def main() -> int:
         lane_closures.append("Ding C_src fixed-volume thermodynamic identity is closed for lane; numeric source rows, material/state equivalence, uncertainty, and alpha remain open")
     if discovered_lane_integrations.get("ding_public_supplementary_payload_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("Ding public supplementary payload boundary is closed for lane without promoting PDFs or figures to numeric C_src")
+    if discovered_lane_integrations.get("ding_supplementary_content_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
+        lane_closures.append("Ding supplementary content review is closed for lane with page locators and fixed hashes; no PDF content is promoted to numeric C_src")
     if discovered_lane_integrations.get("ding_2017_acs_supplementary_payload_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("Ding 2017 ACS supplementary payload boundary is closed for lane without promoting PDF equations or figures to numeric C_src")
     if discovered_lane_integrations.get("formal_thermodynamic_bridge_integration", {}).get("closure_level") == "CLOSED_FOR_LANE":
@@ -2183,6 +2199,27 @@ def main() -> int:
                     "closure_level": ding_public_supplementary.get("major_result", {}).get("closure_level"),
                     "numeric_payload_objects": len(ding_public_supplementary.get("source", {}).get("numeric_payload_objects", [])),
                     "controlling_blocker": ding_public_supplementary.get("controlling_blocker"),
+                },
+            )
+        )
+    supplementary_content_rel = rel(ding_supplementary_content_path)
+    if supplementary_content_rel not in {
+        item.get("path") for item in artifact.get("evidence_artifacts", [])
+        if isinstance(item, dict)
+    }:
+        artifact["evidence_artifacts"].append(
+            evidence(
+                supplementary_content_rel,
+                ding_supplementary_content,
+                {
+                    "status": ding_supplementary_content.get("status"),
+                    "closure_level": ding_supplementary_content.get("major_result", {}).get("closure_level"),
+                    "source_file_count": len(ding_supplementary_content.get("source_files", [])),
+                    "numeric_payload_present": all(
+                        not source.get("numeric_payload_present")
+                        for source in ding_supplementary_content.get("source_files", [])
+                    ),
+                    "controlling_blocker": ding_supplementary_content.get("controlling_blocker"),
                 },
             )
         )
