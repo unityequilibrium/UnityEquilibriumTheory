@@ -3718,3 +3718,31 @@ CLAIM_BOUNDARY: This closes only the formal normalized/natural-unit integration 
 EVIDENCE_PATHS: docs/core/t13_formal_thermodynamic_bridge_integration.py; docs/scripts/audit/audit_topic13_formal_thermodynamic_bridge_integration.py; docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json; docs/scripts/audit/audit_topic13_full_bridge_gate.py; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json; docs/core/artifacts/uet_major_result_closure_register.json; docs/core/artifacts/uet_major_result_dependency_unlock_gate.json.
 
 EVIDENCE_HASHES: integration artifact 42842e5e787a8de7007c026bf7c49dbeeeec7f48cabd403000f817e5c4a90c32; verifier cc45b7fd41d550767b6bae00bcc189234374075f45ae81bfe8dda118391c5c8e; full-gate code d60df8d65dd743ed4b7e504b3576aa77a24f7594c053749312a6ea61b9c38938; full gate 49502ae676d2a3f029fd2cc3c01bce9dc4e2955f10f2f261c1b1d95764aa2323; register dfac0aac672ac54569fa65d4474f49951d654e724d77f3052e5613cae96d95e9; dependency 5b8cc67e93b35f4c68cd3e6f1972eb5f7d0c80c565f4f6f10c6f0dc0a36c97c3.
+
+## 2026-08-22 - Day 2012 preferred thermodynamic assessment boundary (T13-162)
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for `T13_DAY2012_PREFERRED_THERMODYNAMIC_ASSESSMENT_BOUNDARY`; the full Topic 13 bridge remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+
+WHAT_IS_ACTUALLY_CLOSED: Day 2012 Table 2 is source-locked with publisher and printed-page locators. The graphite assessment records `B0 = 338 +/- 30 kbar` and `dB/dT = -0.07 +/- 0.02 kbar K^-1` at the reported 2-sigma level, plus the stated graphite volume-expansion function. The route is closed as a source-compatibility boundary, not as a usable same-specimen correction pair.
+
+WHAT_REMAINS_OPEN: The table reports no uncertainty for the graphite alpha function, does not establish same-specimen/state alpha_V/K_T matching, and does not close Ding TTG material mapping. The full gate still has 9 open blockers: Ding-compatible C_src, independent alpha_Phi_K, beta/SI correspondence, EOS/transport/KMS/entropy completion, dimensional Phi map, physical Kubo provenance, same-grade alpha_V/K_T, Ding material mapping, and source-grade c_v uncertainty.
+
+DEPENDENCY_UNLOCKED: Day route boundary only. No Cp-to-Cv correction, Ding C_src, alpha calibration, Core, Gravity, constitutive transport, Galaxy, external validation, or global claim dependency is unlocked.
+
+STATUS: `PASS_SCOPED_DAY2012_THERMODYNAMIC_ASSESSMENT_BOUNDARY_NO_GO`; full gate `BLOCKED_OPEN_T13_FULL_BRIDGE`; `claim_promotion=false`.
+
+WHAT_CHANGED: Added the source package, audit script, machine-readable artifact, full-gate lane/evidence hash, closure-register/dependency projection, README/formula/data-manifest entries, and focused regression. No cross-source correction, fit, threshold adjustment, Landauer-derived beta, or Xie 2026 access was used.
+
+EQUATION_OR_MAPPING: `V(T)/V0 = 1 + a0*(T - 298) - 20*a0*(sqrt(T) - sqrt(298))`; `K_T(T) = B0 + Bprime*(T - 298)` under the table notation; `c_p^V - c_v^V = T*alpha_V^2*K_T` remains unevaluated.
+
+VERIFICATION: Day audit all checks passed; focused regression `14 passed`; full gate status/closure/blocker count is `BLOCKED_OPEN_T13_FULL_BRIDGE` / `PARTIAL` / `9`; holdout consumed `false`.
+
+CONTROLLING_BLOCKER: `same_grade_alpha_V_and_K_T_missing` controls the screened route; `alpha_V_source_uncertainty_not_reported` is the route-specific sub-blocker. Globally, Ding-compatible C_src and independent alpha_Phi_K remain nearest closure controllers.
+
+NEXT_ACTION: Acquire a permitted same-state alpha_V/K_T source with units, uncertainty, material/state identity, and Ding-regime mapping, or retain this no-go while continuing independent Ding/PBTE and Phi/SI acquisition.
+
+CLAIM_BOUNDARY: Source-compatibility evidence only; not numeric c_v, Ding C_src, independent alpha_Phi_K, TTG prediction, physical transport, external validation, or Full Topic 13 closure.
+
+EVIDENCE_PATHS: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/day_2012_preferred_thermodynamic_table_source_package.json`; `docs/core/artifacts/t13_day2012_preferred_thermodynamic_table_boundary_audit.json`; `docs/scripts/audit/audit_topic13_day2012_preferred_thermodynamic_table.py`; `docs/scripts/audit/audit_topic13_full_bridge_gate.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/artifacts/uet_major_result_closure_register.json`; `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`.
+
+EVIDENCE_HASHES: package `315ac434db3025808a982eae86ed031c182e19b8957b50f557058c6e407f0367`; route audit `7880c5ed31264cbc6ff93ad4205e13c8ee6bd4e0fc71844a0c85701a5a137159`; route verifier `fada4828ec7b11157ca1099dc55e8419ae625d1f94ef5d30e0937504804b3619`; full-gate code `419d54d7486b950becd047b10cdc426eb21b21460b4c9db71cabf9678d24c941`; full gate `0981e9b3e3819b05780d231a187ccce3aedeaaf3dddcdf79d1f07f4071841b5e`; closure register `d6d789d1e66526ac2b89b360ec15916bb0e2cb3e13c259511438163ffd333c87`; dependency `638035820ec426815c751ddc5b4f1b2be5bda08dd28e10f9ba6582a9e5ad50f9`.

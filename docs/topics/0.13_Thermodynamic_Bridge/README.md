@@ -30,6 +30,23 @@ Current hardening result T13-160: Calorine model/state spread comparison is CLOS
 Current hardening result T13-161: the formal EOS-to-SK/KMS-to-entropy-to-heat-flux integration is CLOSED_FOR_LANE. It proves cross-module internal consistency only; physical Kubo coefficients, independent alpha_Phi_K, Ding-compatible C_src, SI mapping, and Full Topic 13 remain open.
 Machine-readable formal bridge artifact: docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json.
 
+Current hardening result T13-162: the Day 2012 preferred thermodynamic assessment route is CLOSED_FOR_LANE as a source-compatibility boundary. Table 2 records graphite B0 uncertainty and a thermal-expansion function, but it does not provide alpha uncertainty, a same-specimen alpha_V/K_T pair, or Ding TTG material mapping. Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.
+
+Machine-readable Day route artifact: docs/core/artifacts/t13_day2012_preferred_thermodynamic_table_boundary_audit.json.
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for T13_DAY2012_PREFERRED_THERMODYNAMIC_ASSESSMENT_BOUNDARY.
+WHAT_IS_ACTUALLY_CLOSED: Public Table 2 locator, graphite B0 and dB/dT uncertainty fields, the stated graphite volume-expansion function, source package hash, and the route-level no-go under the current same-state uncertainty contract.
+WHAT_REMAINS_OPEN: alpha_V source uncertainty, same-grade and same-state alpha_V/K_T matching, Ding material-regime mapping, c_v source uncertainty, independent alpha_Phi_K, and the other eight full-gate blockers.
+DEPENDENCY_UNLOCKED: Day thermodynamic-assessment boundary only; no Cp-to-Cv correction, Ding C_src, alpha calibration, Core, Gravity, transport, Galaxy, or external-validation dependency is unlocked.
+STATUS: PASS_SCOPED_DAY2012_THERMODYNAMIC_ASSESSMENT_BOUNDARY; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE.
+WHAT_CHANGED: Added a source package, verifier, artifact, full-gate projection, closure-register/dependency evidence, and regression test. No numeric correction, fit, threshold change, or holdout access was used.
+EQUATION_OR_MAPPING: V(T)/V0 = 1 + a0*(T - 298) - 20*a0*(sqrt(T) - sqrt(298)); K_T(T) = B0 + Bprime*(T - 298); c_p^V - c_v^V = T*alpha_V^2*K_T remains unevaluated.
+VERIFICATION: Day audit passed all checks; focused Topic 13/registry regression passed 14 tests; full gate remains PARTIAL with 9 open blockers; claim_promotion=false; Xie 2026 remains unconsumed.
+CONTROLLING_BLOCKER: same_grade_alpha_V_and_K_T_missing for this route; globally Ding-compatible C_src and independent alpha_Phi_K remain the nearest controllers.
+NEXT_ACTION: Acquire a permitted same-state alpha_V/K_T record with uncertainty and Ding-regime mapping, or retain this no-go and continue the independent Ding C_src and Phi/SI acquisition routes.
+CLAIM_BOUNDARY: This is a route-level source boundary, not a numeric Cp-to-Cv correction, Ding C_src, alpha_Phi_K calibration, TTG prediction, physical transport, external validation, or Full Topic 13 closure.
+
+
 <!--
 {
   "@context": "https://schema.org",

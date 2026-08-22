@@ -122,6 +122,7 @@
       "independent c_v comparator boundary is closed for lane without promoting it to Ding C_src",
       "Perez-Castaneda HOPG specific-heat source boundary is closed for lane; the specimen and below-3-percent method-comparison bound are source-locked, but figure-only rows, source-grade uncertainty, Ding C_src, and alpha remain open",
       "QH-15 macroscopic graphite C_v comparator is closed for lane; its unit conversion and Calorine cross-check do not establish Ding C_src, material equivalence, source-grade uncertainty, or alpha_Phi_K",
+      "Day 2012 Table 2 preferred thermodynamic assessment is closed for lane; its graphite B0 uncertainty and expansion function are source-locked, but alpha uncertainty, same-specimen alpha_V/K_T matching, and Ding material mapping remain open",
       "Ding C_src fixed-volume thermodynamic identity is closed for lane; numeric source rows, material/state equivalence, uncertainty, and alpha remain open",
       "Ding public supplementary payload boundary is closed for lane without promoting PDFs or figures to numeric C_src",
       "Ding 2017 ACS supplementary payload boundary is closed for lane without promoting PDF equations or figures to numeric C_src",
@@ -352,7 +353,7 @@
       }
     ],
     "closure_summary": {
-      "closed_lane_count": 181,
+      "closed_lane_count": 182,
       "closed_as_no_go_count": 16,
       "closed_lane_result_ids": [
         "T13_AIST_GRAPHITE_SOURCE_ROUTE_BOUNDARY",
@@ -388,6 +389,7 @@
         "T13_COVARIANT_MATTER_COUPLING_NORMALIZATION_IDENTIFIABILITY_NO_GO",
         "T13_COVARIANT_TRANSPORT_IMPLEMENTATION_BOUNDARY",
         "T13_CP_CV_CORRECTION_CONTRACT",
+        "T13_DAY2012_PREFERRED_THERMODYNAMIC_ASSESSMENT_BOUNDARY",
         "T13_DESORBO_1955_CEYLON_GRAPHITE_CP_COMPARATOR",
         "T13_DING_2017_ACS_SUPPLEMENTARY_PAYLOAD_BOUNDARY",
         "T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY_BOUNDARY",
@@ -4164,6 +4166,87 @@
           "qh15_to_ding_TTG_response_contract_missing",
           "qh15_source_grade_uncertainty_missing",
           "material_regime_mapping_to_TTG_not_closed",
+          "alpha_Phi_K_independent_calibration_missing"
+        ]
+      },
+      "day2012_preferred_thermodynamic_assessment_boundary": {
+        "status": "PASS_SCOPED_DAY2012_THERMODYNAMIC_ASSESSMENT_BOUNDARY_NO_GO",
+        "source": {
+          "source_id": "day_2012_revised_diamond_graphite_transition",
+          "doi": "10.2138/am.2011.3763",
+          "publisher_locator": "https://www.degruyterbrill.com/document/doi/10.2138/am.2011.3763/html",
+          "primary_table_locator": "Table 2, printed page 56",
+          "payload_state": "REMOTE_PRIMARY_TABLE_LOCATOR_SCREENED",
+          "package_sha256": "315ac434db3025808a982eae86ed031c182e19b8957b50f557058c6e407f0367"
+        },
+        "assessment_values": {
+          "B0_kbar": {
+            "value": 338.0,
+            "two_sigma": 30.0
+          },
+          "dB_dT_kbar_per_K": {
+            "value": -0.07,
+            "two_sigma": 0.02
+          },
+          "thermal_expansion_a0_K_minus_1": 4.84e-05,
+          "thermal_expansion_a0_uncertainty_status": "NOT_REPORTED_IN_TABLE"
+        },
+        "acceptance": {
+          "required_for_same_grade_alpha_V_K_T_pair": [
+            "same specimen or declared same-state material identity",
+            "alpha_V numeric rows or a source uncertainty for the alpha function",
+            "isothermal bulk modulus K_T or an explicitly uncertainty-bounded conversion",
+            "row/state uncertainty and preprocessing",
+            "Ding TTG material-regime mapping"
+          ],
+          "alpha_V_function_present": true,
+          "alpha_V_source_uncertainty_present": false,
+          "K_T_bulk_modulus_parameters_present": true,
+          "K_T_is_direct_same_state_measurement": false,
+          "same_specimen_pair_established": false,
+          "Ding_material_regime_mapping_closed": false,
+          "numeric_cp_cv_correction_emitted": false,
+          "accepted_for_full_topic13": false,
+          "accepted_for_alpha_Phi_K_calibration": false,
+          "accepted_for_Ding_C_src": false
+        },
+        "checks": {
+          "source_is_day_2012_table": true,
+          "publisher_locator_present": true,
+          "table_locator_present": true,
+          "graphite_B0_value_and_uncertainty_present": true,
+          "graphite_dB_dT_value_and_uncertainty_present": true,
+          "graphite_alpha_function_present": true,
+          "alpha_uncertainty_boundary_is_explicit": true,
+          "assessment_is_not_same_specimen_pair": true,
+          "direct_same_state_K_T_is_not_claimed": true,
+          "ding_material_mapping_remains_open": true,
+          "no_cp_cv_correction_emitted": true,
+          "full_topic13_not_accepted": true,
+          "alpha_calibration_not_accepted": true,
+          "ding_csrc_not_accepted": true,
+          "holdout_is_unconsumed": true
+        },
+        "controlling_blocker": "same_grade_alpha_V_and_K_T_missing",
+        "next_controller": "Acquire a permitted same-state alpha_V and isothermal K_T record with row/state uncertainty and Ding-regime mapping, or obtain an independent SI Phi anchor. Do not combine the Day assessment with a different specimen or infer alpha_Phi_K.",
+        "claim_boundary": "This result does not claim that no future alpha_V/K_T source exists. It closes only the screened Day 2012 assessment route under the current source-grade acceptance contract.",
+        "major_result_id": "T13_DAY2012_PREFERRED_THERMODYNAMIC_ASSESSMENT_BOUNDARY",
+        "closure_level": "CLOSED_FOR_LANE",
+        "data_role": "SOURCE_PROVENANCE_BOUNDARY_NOT_CALIBRATION",
+        "audit": {
+          "path": "docs/core/artifacts/t13_day2012_preferred_thermodynamic_table_boundary_audit.json",
+          "sha256": "7880c5ed31264cbc6ff93ad4205e13c8ee6bd4e0fc71844a0c85701a5a137159",
+          "summary": {
+            "status": "PASS_SCOPED_DAY2012_THERMODYNAMIC_ASSESSMENT_BOUNDARY_NO_GO",
+            "major_result_id": "T13_DAY2012_PREFERRED_THERMODYNAMIC_ASSESSMENT_BOUNDARY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        },
+        "open_blockers": [
+          "same_grade_alpha_V_and_K_T_missing",
+          "alpha_V_source_uncertainty_not_reported",
+          "material_regime_mapping_to_TTG_not_closed",
+          "c_v_source_uncertainty_not_closed",
           "alpha_Phi_K_independent_calibration_missing"
         ]
       },
@@ -77825,6 +77908,29 @@
         "data_role": "INTERNAL_SOURCE_COMPARATOR_NOT_DING_TTG_GRADE",
         "row_count": 4,
         "numeric_alpha_Phi_K_emitted": false
+      }
+    },
+    {
+      "path": "docs/core/artifacts/t13_day2012_preferred_thermodynamic_table_boundary_audit.json",
+      "sha256": "7880c5ed31264cbc6ff93ad4205e13c8ee6bd4e0fc71844a0c85701a5a137159",
+      "summary": {
+        "status": "PASS_SCOPED_DAY2012_THERMODYNAMIC_ASSESSMENT_BOUNDARY_NO_GO",
+        "closure_level": "CLOSED_FOR_LANE",
+        "data_role": "SOURCE_PROVENANCE_BOUNDARY_NOT_CALIBRATION",
+        "source_package_sha256": "315ac434db3025808a982eae86ed031c182e19b8957b50f557058c6e407f0367",
+        "accepted_for_full_topic13": false,
+        "controlling_blocker": "same_grade_alpha_V_and_K_T_missing"
+      }
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/day_2012_preferred_thermodynamic_table_source_package.json",
+      "sha256": "315ac434db3025808a982eae86ed031c182e19b8957b50f557058c6e407f0367",
+      "summary": {
+        "status": "SOURCE_SCREENED_THERMODYNAMIC_ASSESSMENT_NO_CLOSURE",
+        "data_role": "SOURCE_PROVENANCE_BOUNDARY_NOT_CALIBRATION",
+        "payload_state": "REMOTE_PRIMARY_TABLE_LOCATOR_SCREENED",
+        "alpha_uncertainty_status": "NOT_REPORTED_IN_TABLE",
+        "accepted_for_full_topic13": false
       }
     },
     {

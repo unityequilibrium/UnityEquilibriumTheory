@@ -158,6 +158,7 @@
         "independent c_v comparator boundary is closed for lane without promoting it to Ding C_src",
         "Perez-Castaneda HOPG specific-heat source boundary is closed for lane; the specimen and below-3-percent method-comparison bound are source-locked, but figure-only rows, source-grade uncertainty, Ding C_src, and alpha remain open",
         "QH-15 macroscopic graphite C_v comparator is closed for lane; its unit conversion and Calorine cross-check do not establish Ding C_src, material equivalence, source-grade uncertainty, or alpha_Phi_K",
+        "Day 2012 Table 2 preferred thermodynamic assessment is closed for lane; its graphite B0 uncertainty and expansion function are source-locked, but alpha uncertainty, same-specimen alpha_V/K_T matching, and Ding material mapping remain open",
         "Ding C_src fixed-volume thermodynamic identity is closed for lane; numeric source rows, material/state equivalence, uncertainty, and alpha remain open",
         "Ding public supplementary payload boundary is closed for lane without promoting PDFs or figures to numeric C_src",
         "Ding 2017 ACS supplementary payload boundary is closed for lane without promoting PDF equations or figures to numeric C_src",
@@ -210,7 +211,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "49502ae676d2a3f029fd2cc3c01bce9dc4e2955f10f2f261c1b1d95764aa2323",
+          "sha256": "0981e9b3e3819b05780d231a187ccce3aedeaaf3dddcdf79d1f07f4071841b5e",
           "summary": {
             "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
             "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
@@ -987,6 +988,29 @@
           }
         },
         {
+          "path": "docs/core/artifacts/t13_day2012_preferred_thermodynamic_table_boundary_audit.json",
+          "sha256": "7880c5ed31264cbc6ff93ad4205e13c8ee6bd4e0fc71844a0c85701a5a137159",
+          "summary": {
+            "status": "PASS_SCOPED_DAY2012_THERMODYNAMIC_ASSESSMENT_BOUNDARY_NO_GO",
+            "closure_level": "CLOSED_FOR_LANE",
+            "data_role": "SOURCE_PROVENANCE_BOUNDARY_NOT_CALIBRATION",
+            "source_package_sha256": "315ac434db3025808a982eae86ed031c182e19b8957b50f557058c6e407f0367",
+            "accepted_for_full_topic13": false,
+            "controlling_blocker": "same_grade_alpha_V_and_K_T_missing"
+          }
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/day_2012_preferred_thermodynamic_table_source_package.json",
+          "sha256": "315ac434db3025808a982eae86ed031c182e19b8957b50f557058c6e407f0367",
+          "summary": {
+            "status": "SOURCE_SCREENED_THERMODYNAMIC_ASSESSMENT_NO_CLOSURE",
+            "data_role": "SOURCE_PROVENANCE_BOUNDARY_NOT_CALIBRATION",
+            "payload_state": "REMOTE_PRIMARY_TABLE_LOCATOR_SCREENED",
+            "alpha_uncertainty_status": "NOT_REPORTED_IN_TABLE",
+            "accepted_for_full_topic13": false
+          }
+        },
+        {
           "path": "docs/core/artifacts/t13_uet_o2_normal_thermodynamic_consistency_audit.json",
           "sha256": "597221f955f967e82cf33b04b81f62fa874587f1be6ec30778df864ee9cf592e",
           "summary": {
@@ -1471,7 +1495,7 @@
       "dependency_unlocked": "Gravity/GR remains blocked until this full bridge and Core curved 3+1 gates pass",
       "claim_boundary": "Full Topic 13 is not Core-ready; current evidence supports normalized/internal controls and constraint exports only. No temperature prediction, external validation, or global UET closure is claimed.",
       "closure_summary": {
-        "closed_lane_count": 181,
+        "closed_lane_count": 182,
         "closed_as_no_go_count": 16,
         "closed_lane_result_ids": [
           "T13_AIST_GRAPHITE_SOURCE_ROUTE_BOUNDARY",
@@ -1507,6 +1531,7 @@
           "T13_COVARIANT_MATTER_COUPLING_NORMALIZATION_IDENTIFIABILITY_NO_GO",
           "T13_COVARIANT_TRANSPORT_IMPLEMENTATION_BOUNDARY",
           "T13_CP_CV_CORRECTION_CONTRACT",
+          "T13_DAY2012_PREFERRED_THERMODYNAMIC_ASSESSMENT_BOUNDARY",
           "T13_DESORBO_1955_CEYLON_GRAPHITE_CP_COMPARATOR",
           "T13_DING_2017_ACS_SUPPLEMENTARY_PAYLOAD_BOUNDARY",
           "T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY_BOUNDARY",
@@ -3226,6 +3251,49 @@
       ],
       "dependency_unlocked": "conditional C_src-to-fixed-volume c_v identity only; no numeric Ding source, alpha, bridge, transport, Core, Gravity, or external-validation unlock",
       "claim_boundary": "This closes a conditional standard-physics identity lane. It does not emit numeric C_src, convert any current comparator into Ding C_src, derive e0 or base Phi, calibrate alpha_Phi_K, or close Topic 13."
+    },
+    {
+      "major_result_id": "T13_DAY2012_PREFERRED_THERMODYNAMIC_ASSESSMENT_BOUNDARY",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "closure_level": "CLOSED_FOR_LANE",
+      "what_is_closed": "The Day 2012 Table 2 route is source-locked as a published thermodynamic assessment with a graphite bulk-modulus value and uncertainty, a temperature-dependent bulk-modulus formula, and an explicit graphite thermal-expansion function. The route is closed as a source-grade boundary because the table does not report uncertainty for the alpha function, does not establish a same-specimen alpha_V/K_T pair, and does not establish Ding TTG material equivalence.",
+      "equation_or_mapping": {
+        "graphite_volume_expansion": "V(T)/V0 = 1 + a0*(T - 298) - 20*a0*(sqrt(T) - sqrt(298))",
+        "bulk_modulus_temperature": "K_T(T) = B(T) = B0 + Bprime*(T - 298)",
+        "cp_cv_correction_contract": "c_p^V - c_v^V = T * alpha_V^2 * K_T",
+        "numeric_correction_emitted": false
+      },
+      "units": {
+        "temperature": "K",
+        "V0": "J bar^-1",
+        "B0_and_K_T": "kbar (converted to Pa only under a declared SI map)",
+        "dB_dT": "kbar K^-1",
+        "alpha_V": "K^-1"
+      },
+      "derivation_class": "published table transcription and source-compatibility boundary; no UET derivation",
+      "observable": "graphite thermal-expansion and bulk-modulus inputs for a Cp-to-Cv correction",
+      "data_role": "SOURCE_PROVENANCE_BOUNDARY_NOT_CALIBRATION",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_day2012_preferred_thermodynamic_table_boundary_audit.json",
+          "sha256": "7880c5ed31264cbc6ff93ad4205e13c8ee6bd4e0fc71844a0c85701a5a137159",
+          "summary": {
+            "status": "PASS_SCOPED_DAY2012_THERMODYNAMIC_ASSESSMENT_BOUNDARY_NO_GO",
+            "major_result_id": "T13_DAY2012_PREFERRED_THERMODYNAMIC_ASSESSMENT_BOUNDARY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_SCOPED_DAY2012_THERMODYNAMIC_ASSESSMENT_BOUNDARY_NO_GO",
+      "open_blockers": [
+        "same_grade_alpha_V_and_K_T_missing",
+        "alpha_V_source_uncertainty_not_reported",
+        "material_regime_mapping_to_TTG_not_closed",
+        "c_v_source_uncertainty_not_closed",
+        "alpha_Phi_K_independent_calibration_missing"
+      ],
+      "dependency_unlocked": "Day 2012 route-level thermodynamic-assessment boundary only; no Cp-to-Cv input closure, Ding C_src, alpha_Phi_K, Full Topic 13, Core, or Gravity unlock",
+      "claim_boundary": "This result does not claim that no future alpha_V/K_T source exists. It closes only the screened Day 2012 assessment route under the current source-grade acceptance contract."
     },
     {
       "major_result_id": "T13_DESORBO_1955_CEYLON_GRAPHITE_CP_COMPARATOR",

@@ -135,6 +135,7 @@ LANE_KEY_BY_ID["T13_NIST_SRM_3600_HEAT_CAPACITY_COMPARATOR_BOUNDARY"] = "nist_sr
 LANE_KEY_BY_ID["T13_PEREZ_CASTANEDA_HOPG_SPECIFIC_HEAT_SOURCE_BOUNDARY"] = "perez_castaneda_hopg_specific_heat_source_boundary"
 LANE_KEY_BY_ID["T13_QH15_GRAPHITE_CV_COMPARATOR_BOUNDARY"] = "qh15_graphite_cv_comparator_boundary"
 LANE_KEY_BY_ID["T13_FORMAL_THERMODYNAMIC_BRIDGE_INTEGRATION"] = "formal_thermodynamic_bridge_integration"
+LANE_KEY_BY_ID["T13_DAY2012_PREFERRED_THERMODYNAMIC_ASSESSMENT_BOUNDARY"] = "day2012_preferred_thermodynamic_assessment_boundary"
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -281,6 +282,12 @@ def main() -> int:
     )
     farooqui_package_path, farooqui_package = load(
         "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/farooqui_2022_ig210_thermophysical_source_package.json"
+    )
+    day2012_boundary_path, day2012_boundary = load(
+        "docs/core/artifacts/t13_day2012_preferred_thermodynamic_table_boundary_audit.json"
+    )
+    day2012_package_path, day2012_package = load(
+        "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/day_2012_preferred_thermodynamic_table_source_package.json"
     )
     phonix_path, phonix = load(
         "docs/core/artifacts/t13_phonix_mp47_graphite_comparator_audit.json"
@@ -916,7 +923,7 @@ def main() -> int:
         artifact["verification_status"]["eos_transport_kms_entropy"].pop(
             "calorine_zenodo_nep_bte_numeric_reproduction", None
         )
-    for lane_key in ("calorine_full_lbte_numerical_stability_boundary", "calorine_isotope_mass_sensitivity", "calorine_state_uncertainty_decomposition", "calorine_csrc_equilibrium_crosscheck", "figshare_dft_force_data_boundary", "huang_2023_nims_mdr_payload_boundary", "calorine_public_model_variant_boundary", "calorine_nep1_backend_compatibility", "calorine_legacy_nep2_backend_probe", "calorine_legacy_nep2_pbte_reproduction", "calorine_model_form_state_spread_comparison", "qh15_graphite_cv_comparator_boundary"):
+    for lane_key in ("calorine_full_lbte_numerical_stability_boundary", "calorine_isotope_mass_sensitivity", "calorine_state_uncertainty_decomposition", "calorine_csrc_equilibrium_crosscheck", "figshare_dft_force_data_boundary", "huang_2023_nims_mdr_payload_boundary", "calorine_public_model_variant_boundary", "calorine_nep1_backend_compatibility", "calorine_legacy_nep2_backend_probe", "calorine_legacy_nep2_pbte_reproduction", "calorine_model_form_state_spread_comparison", "qh15_graphite_cv_comparator_boundary", "day2012_preferred_thermodynamic_assessment_boundary"):
         lane = discovered_lane_integrations.get(lane_key)
         if lane:
             artifact["verification_status"]["source_package"][lane_key] = lane
@@ -1631,6 +1638,8 @@ def main() -> int:
         lane_closures.append("Perez-Castaneda HOPG specific-heat source boundary is closed for lane; the specimen and below-3-percent method-comparison bound are source-locked, but figure-only rows, source-grade uncertainty, Ding C_src, and alpha remain open")
     if discovered_lane_integrations.get("qh15_graphite_cv_comparator_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("QH-15 macroscopic graphite C_v comparator is closed for lane; its unit conversion and Calorine cross-check do not establish Ding C_src, material equivalence, source-grade uncertainty, or alpha_Phi_K")
+    if discovered_lane_integrations.get("day2012_preferred_thermodynamic_assessment_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
+        lane_closures.append("Day 2012 Table 2 preferred thermodynamic assessment is closed for lane; its graphite B0 uncertainty and expansion function are source-locked, but alpha uncertainty, same-specimen alpha_V/K_T matching, and Ding material mapping remain open")
     if discovered_lane_integrations.get("ding_c_src_fixed_volume_identity", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("Ding C_src fixed-volume thermodynamic identity is closed for lane; numeric source rows, material/state equivalence, uncertainty, and alpha remain open")
     if discovered_lane_integrations.get("ding_public_supplementary_payload_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
@@ -2714,6 +2723,43 @@ def main() -> int:
                     "data_role": nist_alpha_v.get("major_result", {}).get("data_role"),
                     "row_count": len(nist_alpha_v.get("rows", [])),
                     "numeric_alpha_Phi_K_emitted": nist_alpha_v.get("numeric_alpha_Phi_K_emitted"),
+                },
+            )
+        )
+    day2012_boundary_rel = rel(day2012_boundary_path)
+    if day2012_boundary_rel not in {
+        item.get("path") for item in artifact.get("evidence_artifacts", [])
+        if isinstance(item, dict)
+    }:
+        artifact["evidence_artifacts"].append(
+            evidence(
+                day2012_boundary_rel,
+                day2012_boundary,
+                {
+                    "status": day2012_boundary.get("status"),
+                    "closure_level": day2012_boundary.get("major_result", {}).get("closure_level"),
+                    "data_role": day2012_boundary.get("major_result", {}).get("data_role"),
+                    "source_package_sha256": day2012_boundary.get("source", {}).get("package_sha256"),
+                    "accepted_for_full_topic13": day2012_boundary.get("acceptance", {}).get("accepted_for_full_topic13"),
+                    "controlling_blocker": day2012_boundary.get("controlling_blocker"),
+                },
+            )
+        )
+    day2012_package_rel = rel(day2012_package_path)
+    if day2012_package_rel not in {
+        item.get("path") for item in artifact.get("evidence_artifacts", [])
+        if isinstance(item, dict)
+    }:
+        artifact["evidence_artifacts"].append(
+            evidence(
+                day2012_package_rel,
+                day2012_package,
+                {
+                    "status": day2012_package.get("status"),
+                    "data_role": "SOURCE_PROVENANCE_BOUNDARY_NOT_CALIBRATION",
+                    "payload_state": day2012_package.get("source", {}).get("payload_state"),
+                    "alpha_uncertainty_status": day2012_package.get("table_transcription", {}).get("graphite", {}).get("thermal_expansion_a0_uncertainty_status"),
+                    "accepted_for_full_topic13": day2012_package.get("acceptance_contract", {}).get("accepted_for_full_topic13"),
                 },
             )
         )

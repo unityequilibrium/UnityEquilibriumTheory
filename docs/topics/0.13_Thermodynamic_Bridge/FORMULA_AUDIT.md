@@ -1404,3 +1404,28 @@ CONTROLLING_BLOCKER: `ding_pbte_numeric_C_src_or_accepted_independent_reproducti
 NEXT_ACTION: Obtain a source-locked Ding-compatible mode or fixed-volume `c_v` record with material/state, volume, uncertainty, and convergence metadata; evaluate it under this identity without fitting alpha or reading the holdout.
 CLAIM_BOUNDARY: Conditional standard-physics identity only; no numeric `C_src`, no temperature prediction, no base-Phi calibration, no external validation, and no Full Topic 13 closure.
 EVIDENCE: `docs/core/artifacts/t13_csrc_fixed_volume_identity_audit.json` (SHA-256 `155b15ac1184f0309e10db8466925d6ad6483d4321a7703d82ecfb09a086cdd5`); full gate `f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50`; closure register `eb044c3083382b61855baa8ee26ea847a85005c148f5e0b85612a74bfb7b3c0b`; dependency gate `985a9727e59db875b6446096942b07b70375da9ba59cb06cc456e9cd25ef93e2`; verifier/test paths are adjacent.
+## T13-162 - Day 2012 preferred thermodynamic assessment boundary
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for `T13_DAY2012_PREFERRED_THERMODYNAMIC_ASSESSMENT_BOUNDARY`; Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+
+WHAT_IS_ACTUALLY_CLOSED: Day 2012 Table 2 is source-locked at its publisher/printed-page locator. The graphite assessment records `B0 = 338 +/- 30 kbar (2 sigma)`, `dB/dT = -0.07 +/- 0.02 kbar K^-1 (2 sigma)`, and the stated volume-expansion function.
+
+WHAT_REMAINS_OPEN: The table reports no uncertainty for the graphite thermal-expansion coefficient/function, does not establish a same-specimen alpha_V/K_T pair, and does not close Ding TTG material-regime mapping. The Cp-to-Cv correction, independent `alpha_Phi_K`, Ding `C_src`, physical Kubo, SI map, and full EOS/transport/KMS/entropy remain open.
+
+DEPENDENCY_UNLOCKED: Day source-compatibility boundary only; no numeric thermodynamic correction, Ding C_src, alpha calibration, Core, Gravity, transport, Galaxy, or external-validation dependency is unlocked.
+
+STATUS: `PASS_SCOPED_DAY2012_THERMODYNAMIC_ASSESSMENT_BOUNDARY_NO_GO`.
+
+WHAT_CHANGED: Added the Day source package, route audit, machine-readable artifact, full-gate projection, closure-register/dependency evidence, and focused regression. No values were combined with another specimen and no correction was emitted.
+
+EQUATION_OR_MAPPING: `V(T)/V0 = 1 + a0*(T - 298) - 20*a0*(sqrt(T) - sqrt(298))`; `K_T(T) = B0 + Bprime*(T - 298)` under the table notation; `c_p^V - c_v^V = T*alpha_V^2*K_T` remains a declared but unevaluated contract.
+
+VERIFICATION: All Day route checks pass; focused integration suite `14 passed`; full gate remains blocked with 9 open blockers; `claim_promotion=false`; Xie 2026 remains unconsumed.
+
+CONTROLLING_BLOCKER: `same_grade_alpha_V_and_K_T_missing` for this route; `alpha_V_source_uncertainty_not_reported` is an explicit route-level sub-blocker.
+
+NEXT_ACTION: Acquire a permitted same-state alpha_V/K_T record with units, uncertainty, row/state identity, and Ding-regime mapping, or retain this no-go while continuing independent Ding/PBTE and Phi/SI acquisition.
+
+CLAIM_BOUNDARY: Source-compatibility evidence only; not a numeric Cp-to-Cv correction, Ding `C_src`, independent `alpha_Phi_K`, TTG prediction, physical transport, external validation, or Full Topic 13 closure.
+
+EVIDENCE: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/day_2012_preferred_thermodynamic_table_source_package.json`; `docs/core/artifacts/t13_day2012_preferred_thermodynamic_table_boundary_audit.json`; `docs/scripts/audit/audit_topic13_day2012_preferred_thermodynamic_table.py`.

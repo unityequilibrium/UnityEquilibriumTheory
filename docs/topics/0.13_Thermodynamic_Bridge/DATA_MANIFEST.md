@@ -1096,3 +1096,29 @@ NEXT_ACTION: Continue with permitted Ding/PBTE source acquisition or a materiall
 CLAIM_BOUNDARY: Scoped comparator/no-go only; not Ding C_src, numeric alpha, physical transport, external validation, or Full Topic 13 closure.
 
 EVIDENCE_PATHS: docs/core/artifacts/t13_calorine_model_form_state_spread_comparison_audit.json; docs/core/artifacts/t13_calorine_full_lbte_stability_boundary_audit.json; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json.
+
+## T13-162 - Day 2012 preferred thermodynamic assessment boundary
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE`; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE` / `PARTIAL`.
+
+WHAT_IS_ACTUALLY_CLOSED: A source package records the publisher locator, Table 2 printed-page locator, graphite `B0` and `dB/dT` values with reported 2-sigma uncertainties, and the stated graphite thermal-expansion expression.
+
+WHAT_REMAINS_OPEN: `alpha_V` uncertainty is not reported in the table; same-specimen/state alpha_V/K_T matching, Ding material mapping, `c_v` source uncertainty, Ding `C_src`, and independent `alpha_Phi_K` remain open.
+
+DEPENDENCY_UNLOCKED: Day route source boundary only; no downstream dependency is unlocked.
+
+STATUS: `PASS_SCOPED_DAY2012_THERMODYNAMIC_ASSESSMENT_BOUNDARY_NO_GO`.
+
+WHAT_CHANGED: Added package, audit, artifact, full-gate projection, closure/dependency evidence, and regression. No cross-source correction or holdout access.
+
+EQUATION_OR_MAPPING: `V(T)/V0 = 1 + a0*(T - 298) - 20*a0*(sqrt(T) - sqrt(298))`; `K_T(T) = B0 + Bprime*(T - 298)`; `c_p^V - c_v^V = T*alpha_V^2*K_T` remains unevaluated.
+
+VERIFICATION: Day audit PASS; focused integration/registry suite 14 passed; full gate remains at 9 open blockers; `claim_promotion=false`.
+
+CONTROLLING_BLOCKER: `same_grade_alpha_V_and_K_T_missing`; route-level `alpha_V_source_uncertainty_not_reported`.
+
+NEXT_ACTION: Seek a permitted same-state source with uncertainty and Ding-regime mapping, or retain the route no-go and continue Ding/PBTE and Phi/SI source acquisition.
+
+CLAIM_BOUNDARY: Source-provenance boundary only; not numeric `C_v`, Ding `C_src`, alpha calibration, temperature prediction, physical transport, external validation, or Full Topic 13 closure.
+
+EVIDENCE_PATHS: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/day_2012_preferred_thermodynamic_table_source_package.json`; `docs/core/artifacts/t13_day2012_preferred_thermodynamic_table_boundary_audit.json`; `docs/scripts/audit/audit_topic13_day2012_preferred_thermodynamic_table.py`.
