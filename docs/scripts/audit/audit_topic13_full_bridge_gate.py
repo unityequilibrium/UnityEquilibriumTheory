@@ -331,6 +331,9 @@ def main() -> int:
     independent_csrc_acceptance_path, independent_csrc_acceptance = load(
         "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json"
     )
+    ding_payload_acceptance_path, ding_payload_acceptance = load(
+        "docs/core/artifacts/t13_ding_pbte_payload_acceptance_audit.json"
+    )
     calorine_candidate_path, calorine_candidate = load(
         "docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json"
     )
@@ -566,6 +569,15 @@ def main() -> int:
             "independent_reproduction_route_ready": independent_reproduction_ready,
             "independent_reproduction_acceptance_status": independent_csrc_acceptance.get("acceptance", {}).get("status"),
             "independent_reproduction_acceptance_artifact": {"path": rel(independent_csrc_acceptance_path), "sha256": sha256(independent_csrc_acceptance_path)},
+            "ding_pbte_payload_acceptance_controller": {
+                "status": ding_payload_acceptance.get("status"),
+                "payload_present": ding_payload_acceptance.get("payload_present"),
+                "numeric_C_src_accepted": ding_payload_acceptance.get("numeric_C_src_accepted", False),
+                "numeric_alpha_Phi_K_emitted": ding_payload_acceptance.get("numeric_alpha_Phi_K_emitted", False),
+                "holdout_accessed": ding_payload_acceptance.get("holdout_accessed", False),
+                "audit": {"path": rel(ding_payload_acceptance_path), "sha256": sha256(ding_payload_acceptance_path)},
+                "controlling_blocker": ding_payload_acceptance.get("controlling_blocker"),
+            },
             "provisional_source_present": bool(source_contract.get("provisional_source_present")),
             "raw_author_numeric_source_present": bool(
                 ding_source_mapping.get("checks", {}).get("raw_author_numeric_source_present", False)
@@ -769,6 +781,14 @@ def main() -> int:
                 "status": independent_csrc_acceptance.get("status"),
                 "accepted_for_full_topic13": independent_reproduction_ready,
                 "controlling_blocker": independent_csrc_acceptance.get("controlling_blocker"),
+            }),
+            evidence(rel(ding_payload_acceptance_path), ding_payload_acceptance, {
+                "status": ding_payload_acceptance.get("status"),
+                "payload_present": ding_payload_acceptance.get("payload_present"),
+                "numeric_C_src_accepted": ding_payload_acceptance.get("numeric_C_src_accepted", False),
+                "numeric_alpha_Phi_K_emitted": ding_payload_acceptance.get("numeric_alpha_Phi_K_emitted", False),
+                "holdout_accessed": ding_payload_acceptance.get("holdout_accessed", False),
+                "controlling_blocker": ding_payload_acceptance.get("controlling_blocker"),
             }),
             evidence(rel(calorine_candidate_path), calorine_candidate, {
                 "status": calorine_candidate.get("status"),
@@ -2946,6 +2966,15 @@ def main() -> int:
             "claim_boundary": author_lane.get("claim_boundary"),
         }
         named_branch["pbte_author_request_package"] = request
+        named_branch["pbte_payload_acceptance_controller"] = {
+            "status": ding_payload_acceptance.get("status"),
+            "payload_present": ding_payload_acceptance.get("payload_present"),
+            "numeric_C_src_accepted": ding_payload_acceptance.get("numeric_C_src_accepted", False),
+            "numeric_alpha_Phi_K_emitted": ding_payload_acceptance.get("numeric_alpha_Phi_K_emitted", False),
+            "holdout_accessed": ding_payload_acceptance.get("holdout_accessed", False),
+            "audit": {"path": rel(ding_payload_acceptance_path), "sha256": sha256(ding_payload_acceptance_path)},
+            "controlling_blocker": ding_payload_acceptance.get("controlling_blocker"),
+        }
         if not availability:
             named_branch["pbte_numeric_input_availability_no_go"] = {
                 "status": "PASS_SCOPED_OA_NUMERIC_INPUT_AVAILABILITY_NO_GO",

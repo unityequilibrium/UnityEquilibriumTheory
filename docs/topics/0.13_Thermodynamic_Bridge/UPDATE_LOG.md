@@ -1,3 +1,18 @@
+## 2026-08-22 - Ding PBTE payload controller full-gate projection
+
+MAJOR_RESULT_CLOSURE: `OPEN` for the evidence-ingestion controller; the canonical Full Topic 13 result remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_IS_ACTUALLY_CLOSED: The canonical full gate now projects the Ding payload controller into `verification_status.source_package`, the named Phi-E branch, and `evidence_artifacts`, so missing, invalid, or accepted payload state cannot drift from the topic-level report.
+WHAT_REMAINS_OPEN: The controller reports `BLOCKED_DING_PBTE_PAYLOAD_NOT_RECEIVED`; no numeric Ding `C_src`, independent `alpha_Phi_K`, base-Phi SI anchor, physical Kubo coefficient, or EOS/transport/KMS/entropy closure was added. The nine full-gate blocker groups are unchanged.
+DEPENDENCY_UNLOCKED: None. Gravity/GR, full constitutive transport, and other downstream dependencies remain blocked.
+STATUS: `BLOCKED_OPEN_T13_FULL_BRIDGE`; `claim_promotion=false`; payload controller `BLOCKED_DING_PBTE_PAYLOAD_NOT_RECEIVED`.
+WHAT_CHANGED: The full-gate verifier loads and exposes `t13_ding_pbte_payload_acceptance_audit.json` without treating it as accepted evidence. A regression now asserts the projection, holdout guard, no-alpha emission, and no dependency unlock.
+EQUATION_OR_MAPPING: The controller remains responsible for checking `C_src(T)=sum_i w_i*c_mu_i(T)` before any `Delta_Tq=Delta_u_ph/C_src` use; `Delta_Tq=alpha_Phi_K*Delta_Phi` remains uncalibrated.
+VERIFICATION: Full-gate regeneration returned the same nine blockers; focused projection/source/major-result/dependency suite passed `20 tests`; `holdout_accessed=false`; `claim_promotion=false`.
+CONTROLLING_BLOCKER: `author_data_or_independent_reproduction_payload_not_received` controls the new ingestion controller; the full source blocker remains `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing` and independent alpha remains open.
+NEXT_ACTION: Obtain an authorized numeric payload or accepted independent reproduction, rerun the payload audit, and integrate only a passing source package; do not use the locked holdout or fit alpha.
+CLAIM_BOUNDARY: This wave closes status synchronization only. It is not numeric Ding `C_src`, `alpha_Phi_K`, a TTG prediction, external validation, or Full Topic 13 closure.
+EVIDENCE_HASHES: full-gate verifier `6c952d06c09fb194feb0aa0806cbaa5941862dfe6de1be8054b19b4a218a7056`; regenerated gate `36809b2c10d38218ae1f1306eb80b3c961fb54b577da205105349c0b87007286`; integration regression `1f2da4bdb8560ee9093f688ad8c7c1b44ff76fe02bc41682c75b536563aabe79`.
+
 ## 2026-08-22 - Ding PBTE numeric payload acceptance contract
 
 MAJOR_RESULT_CLOSURE: `OPEN` for the payload-acceptance controller; this is not a scientific closure and Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.

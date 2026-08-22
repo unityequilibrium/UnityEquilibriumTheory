@@ -627,6 +627,18 @@
         "path": "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json",
         "sha256": "880eb2cc94543f19fefae13ad8c64af820bb619d9c898cd4e1e710494519d281"
       },
+      "ding_pbte_payload_acceptance_controller": {
+        "status": "BLOCKED_DING_PBTE_PAYLOAD_NOT_RECEIVED",
+        "payload_present": false,
+        "numeric_C_src_accepted": false,
+        "numeric_alpha_Phi_K_emitted": false,
+        "holdout_accessed": false,
+        "audit": {
+          "path": "docs/core/artifacts/t13_ding_pbte_payload_acceptance_audit.json",
+          "sha256": "e1c961aaa66030510ee3f34ef94e6b784777a1d9214bd98eb0f1b23a63b8fc5d"
+        },
+        "controlling_blocker": "author_data_or_independent_reproduction_payload_not_received"
+      },
       "provisional_source_present": true,
       "raw_author_numeric_source_present": false,
       "figure_derived_numeric_route_ready": true,
@@ -10271,6 +10283,18 @@
             }
           },
           "claim_boundary": "This result makes the author-request route reproducible and bounded. It does not claim that the request was sent, that authors responded, that the requested data exist, or that Topic 13 is closed."
+        },
+        "pbte_payload_acceptance_controller": {
+          "status": "BLOCKED_DING_PBTE_PAYLOAD_NOT_RECEIVED",
+          "payload_present": false,
+          "numeric_C_src_accepted": false,
+          "numeric_alpha_Phi_K_emitted": false,
+          "holdout_accessed": false,
+          "audit": {
+            "path": "docs/core/artifacts/t13_ding_pbte_payload_acceptance_audit.json",
+            "sha256": "e1c961aaa66030510ee3f34ef94e6b784777a1d9214bd98eb0f1b23a63b8fc5d"
+          },
+          "controlling_blocker": "author_data_or_independent_reproduction_payload_not_received"
         },
         "source_independence_no_go": {
           "status": "PASS_SCOPED_SOURCE_INDEPENDENCE_NO_GO",
@@ -77750,6 +77774,18 @@
         "status": "PASS_SCOPED_INDEPENDENT_C_SRC_ACCEPTANCE_CONTRACT",
         "accepted_for_full_topic13": false,
         "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+      }
+    },
+    {
+      "path": "docs/core/artifacts/t13_ding_pbte_payload_acceptance_audit.json",
+      "sha256": "e1c961aaa66030510ee3f34ef94e6b784777a1d9214bd98eb0f1b23a63b8fc5d",
+      "summary": {
+        "status": "BLOCKED_DING_PBTE_PAYLOAD_NOT_RECEIVED",
+        "payload_present": false,
+        "numeric_C_src_accepted": false,
+        "numeric_alpha_Phi_K_emitted": false,
+        "holdout_accessed": false,
+        "controlling_blocker": "author_data_or_independent_reproduction_payload_not_received"
       }
     },
     {
