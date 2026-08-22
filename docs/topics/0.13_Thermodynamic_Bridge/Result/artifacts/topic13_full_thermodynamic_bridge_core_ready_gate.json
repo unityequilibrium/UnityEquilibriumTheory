@@ -187,6 +187,75 @@
           "material_regime_mapping_to_TTG_not_closed"
         ],
         "claim_boundary": "This resolves only the density-uncertainty gate projection. It does not emit C_v, Ding C_src, alpha_Phi_K, or a UET temperature prediction."
+      },
+      {
+        "blocker": "ding_public_numeric_C_src_route",
+        "status": "CLOSED_AS_NO_GO",
+        "resolution_source": {
+          "major_result_id": "T13_DING_PUBLIC_SUPPLEMENTARY_PAYLOAD_BOUNDARY",
+          "artifact": "docs/core/artifacts/t13_ding_public_supplementary_payload_boundary_audit.json",
+          "artifact_sha256": "56cc07751ed820195ff73a8f2c8cb31bf70f0d6a11ac40751e1058448913e4c5",
+          "source_data_availability": "author_request_only",
+          "numeric_payload_present": false
+        },
+        "what_is_closed": "The captured public Ding OA/supplementary route does not provide an accepted numeric C_src(T) payload. The public availability question is closed for this route as a scoped no-go.",
+        "what_remains_open": [
+          "authorized_Ding_author_payload_or_accepted_independent_PBTE_reproduction",
+          "C_src_uncertainty_or_convergence_contract",
+          "material_regime_mapping_to_TTG_not_closed"
+        ],
+        "claim_boundary": "This is not a proof that no author-held or future permitted source exists. It emits no C_src rows, does not synthesize data, and does not unlock alpha_Phi_K or Full Topic 13."
+      },
+      {
+        "blocker": "current_graphite_alpha_V_K_T_inventory",
+        "status": "CLOSED_AS_NO_GO",
+        "resolution_source": {
+          "major_result_id": "T13_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY",
+          "artifact": "docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json",
+          "artifact_sha256": "173002072c6dd9c0a98f0653c2bac87816d60cd21561c8220c97faa14807e080",
+          "representative_source_artifact": "docs/core/artifacts/t13_natural_graphite_nelson_riley_alpha_v_source_audit.json",
+          "representative_source_sha256": "c20b42f64b9107459b555dfaddc5150028c39b5254e4791782161b2b9861b861"
+        },
+        "what_is_closed": "The current screened graphite alpha_V/K_T inventory does not contain a same-state, same-specimen, uncertainty-bearing pair that can close the c_p-to-c_v correction.",
+        "what_remains_open": [
+          "same_grade_alpha_V_and_K_T_missing",
+          "c_v_source_uncertainty_not_closed",
+          "material_regime_mapping_to_TTG_not_closed"
+        ],
+        "claim_boundary": "Comparator alpha_V or K_T rows remain comparison evidence only. No cross-specimen substitution is promoted to Ding C_src or alpha_Phi_K calibration."
+      },
+      {
+        "blocker": "independent_harmonic_c_v_comparator_uncertainty_lane",
+        "status": "CLOSED_FOR_LANE",
+        "resolution_source": {
+          "major_result_id": "T13_MP48_INDEPENDENT_GRAPHITE_CV_REPRODUCTION",
+          "artifact": "docs/core/artifacts/t13_mp48_independent_graphite_cv_audit.json",
+          "artifact_sha256": "56493e6d4883f3f78d24f630f5cdc6718eec350ce264152146979e3bb0ee39a9",
+          "uncertainty_status": "NON_STATISTICAL_DISPLAY_ONLY"
+        },
+        "what_is_closed": "An independent harmonic graphite c_v comparator with numeric rows and an explicit non-statistical envelope is available for comparison-only use.",
+        "what_remains_open": [
+          "c_v_source_uncertainty_not_closed",
+          "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+          "material_regime_mapping_to_TTG_not_closed"
+        ],
+        "claim_boundary": "The comparator envelope is not a source-grade standard uncertainty for Ding C_src, is not an alpha_Phi_K calibration, and does not unlock Full Topic 13."
+      },
+      {
+        "blocker": "action_beta_to_normalized_beta_identifiability",
+        "status": "CLOSED_AS_NO_GO",
+        "resolution_source": {
+          "major_result_id": "T13_BETA_ACTION_NORMALIZED_CORRESPONDENCE_NO_GO",
+          "artifact": "docs/core/artifacts/t13_beta_action_normalized_correspondence_no_go.json",
+          "artifact_sha256": "0c3dcff4f3520849f48f64043d52d3f735f95cabb96e606b1a7a1f65ce3d48e6"
+        },
+        "what_is_closed": "The current natural-unit action slope cannot identify the named normalized beta without an independent field, free-energy, and natural-to-Kelvin scale map.",
+        "what_remains_open": [
+          "normalized_beta_and_SI_scale_correspondence_missing",
+          "beta_UET_finite_temperature_coefficient_provenance_missing",
+          "independent_alpha_Phi_K_calibration_missing"
+        ],
+        "claim_boundary": "This closes only the present identifiability question as a scoped no-go. It does not produce beta_UET, a Kelvin observable, or a Landauer-derived coefficient."
       }
     ],
     "closure_summary": {

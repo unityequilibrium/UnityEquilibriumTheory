@@ -3607,3 +3607,29 @@ CLAIM_BOUNDARY: This closes only the density-uncertainty gate projection and the
 EVIDENCE_PATHS: `docs/core/artifacts/t13_farooqui_ig210_thermophysical_source_audit.json`; `docs/core/artifacts/t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json`; `docs/scripts/audit/audit_topic13_full_bridge_gate.py`; `docs/scripts/audit/audit_major_result_closure.py`; `docs/core/test/test_topic13_gatech_volumetric_cp_independence.py`; `docs/core/test/test_major_result_closure.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/artifacts/uet_major_result_closure_register.json`; `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`.
 
 EVIDENCE_HASHES: source audit `1bf871b436166ba44243d6600fdfc06e9bbbf65a8fc23e2f99a728ff6402fb7e`; volumetric audit `8714a13530c99cba457b86d529928747f26b8536befe782843387f3f2a362add`; full gate `f2f67384475fc8680476dee1b893dc1b32c9a90d8a1e348580789426536899d4`; register `7093fccfbb6e027df11429e51515dc3ddbabde3ecd27cbdce70a51fddf76bd69`; dependency `41303c1d38bc86c8c1f5008aafb515e05990f32acd74af1605ed371616f1ccd1`.
+
+## 2026-08-22 - Scoped Topic 13 closure projection (T13-158)
+
+MAJOR_RESULT_CLOSURE: PARTIAL for T13_FULL_THERMODYNAMIC_BRIDGE; five sub-results are now explicit as CLOSED_FOR_LANE or CLOSED_AS_NO_GO, while the full result remains BLOCKED_OPEN_T13_FULL_BRIDGE.
+
+WHAT_IS_ACTUALLY_CLOSED: The gate/register now expose: source-locked IG-210 density uncertainty; the public Ding numeric-C_src route boundary; the current graphite alpha_V/K_T inventory no-go; the independent MP48 harmonic c_v comparator with a non-statistical envelope; and the current action-beta to normalized-beta identifiability no-go.
+
+WHAT_REMAINS_OPEN: The nine full-gate blockers remain unchanged: accepted Ding-compatible C_src, independent alpha_Phi_K calibration, normalized beta/SI correspondence, EOS/transport/KMS/entropy completion, dimensional Phi-to-thermal map, physical Kubo provenance, same-grade alpha_V/K_T, Ding material-regime mapping, and source-grade c_v uncertainty.
+
+DEPENDENCY_UNLOCKED: Scoped lane/no-go evidence only. No Core, Gravity, constitutive-transport, Galaxy, external-validation, or global claim dependency is unlocked.
+
+STATUS: BLOCKED_OPEN_T13_FULL_BRIDGE.
+
+WHAT_CHANGED: Added and tested five major_result.resolved_blockers records and synchronized the full gate, closure register, dependency gate, current report, update log, and manifest. No synthetic source, fit, threshold adjustment, Landauer-derived beta, or holdout access was used.
+
+EQUATION_OR_MAPPING: C_src(T)=sum_mu c_mu(T) remains a Ding source contract; C_v^V=C_p^V-T*alpha_V^2*K_T remains conditional; Delta_Tq=alpha_Phi_K*Delta_Phi remains the measurement bridge with open independent calibration.
+
+VERIFICATION: Full gate 180 closed lanes / 16 scoped no-go lanes / 9 open blockers; focused closure regressions 11 passed; holdout_consumed=false; claim_promotion=false.
+
+CONTROLLING_BLOCKER: Authorized Ding numeric data or an accepted same-regime PBTE reproduction, plus an independent base-Phi/SI record for alpha_Phi_K, remain the nearest full-closure controllers.
+
+NEXT_ACTION: Keep the author-request route ready and continue permitted C_src/PBTE and independent base-Phi/SI evidence acquisition without holdout access.
+
+CLAIM_BOUNDARY: These are scoped lane/no-go results only. C, Phi, R_gen, and R_obs ontology is unchanged; no Full Topic 13 closure or external claim is promoted.
+
+EVIDENCE_HASHES: gate 429eab63bcef298bc3ebb7fbac9d98f54bbb7285a318cc42cfe1c778e9cdc7dd; register 9923fbc8a0be490a566b91a505230268e13b656d43a19bfb6607f1506f1d8799; dependency 6dbee8cd034169c0d54dc1bf71914037d7c4a1e8bb63395c97e0f93fe6ab7450; gate code c8b58a56c52f6138fd691ebbb8a7bc15ecfc74c6994aad6793264f3947a75f5e; closure test 43db97a16a4a1cf0f594fccd560a1d427b59d76ebe5eb49a9e20eef4588f4102.

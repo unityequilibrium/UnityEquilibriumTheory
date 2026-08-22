@@ -82,3 +82,25 @@ def test_topic13_full_gate_reports_machine_readable_closure_summary() -> None:
         for item in entry["resolved_blockers"]
         if item["blocker"] == "density_uncertainty_not_source_locked"
     )["status"] == "CLOSED_FOR_LANE"
+
+    resolved_by_blocker = {
+        item["blocker"]: item["status"]
+        for item in gate["major_result"]["resolved_blockers"]
+    }
+    assert resolved_by_blocker == {
+        "density_uncertainty_not_source_locked": "CLOSED_FOR_LANE",
+        "ding_public_numeric_C_src_route": "CLOSED_AS_NO_GO",
+        "current_graphite_alpha_V_K_T_inventory": "CLOSED_AS_NO_GO",
+        "independent_harmonic_c_v_comparator_uncertainty_lane": "CLOSED_FOR_LANE",
+        "action_beta_to_normalized_beta_identifiability": "CLOSED_AS_NO_GO",
+    }
+    assert "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing" in gate[
+        "major_result"
+    ]["what_remains_open"]
+    assert "alpha_Phi_K_independent_calibration_missing" in gate[
+        "major_result"
+    ]["what_remains_open"]
+    assert {
+        item["blocker"]: item["status"]
+        for item in entry["resolved_blockers"]
+    } == resolved_by_blocker

@@ -1020,3 +1020,27 @@ NEXT_ACTION: Obtain a permitted same-state IG-210 `K_T` with locator, units, unc
 CLAIM_BOUNDARY: Comparator/source-gate closure only; not `C_v`, Ding `C_src`, numeric alpha, temperature prediction, physical transport, external validation, or Full Topic 13 closure.
 
 EVIDENCE_PATHS: `docs/core/artifacts/t13_farooqui_ig210_thermophysical_source_audit.json`; `docs/core/artifacts/t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.
+
+## T13-158 - Scoped closure projection
+
+MAJOR_RESULT_CLOSURE: PARTIAL; the full Topic 13 bridge remains BLOCKED_OPEN_T13_FULL_BRIDGE.
+
+WHAT_IS_ACTUALLY_CLOSED: The machine-readable full gate now distinguishes five scoped results from the nine full-result blockers: IG-210 density uncertainty (CLOSED_FOR_LANE), public Ding numeric-C_src availability (CLOSED_AS_NO_GO), current graphite alpha_V/K_T inventory (CLOSED_AS_NO_GO), MP48 harmonic c_v comparator (CLOSED_FOR_LANE), and action-beta identifiability (CLOSED_AS_NO_GO).
+
+WHAT_REMAINS_OPEN: Accepted Ding-compatible C_src, independent alpha_Phi_K, beta/SI correspondence, EOS/transport/KMS/entropy, dimensional Phi map, physical Kubo provenance, same-grade alpha_V/K_T, Ding material mapping, and source-grade c_v uncertainty.
+
+DEPENDENCY_UNLOCKED: Comparison and source-boundary lanes only; no Core, Gravity, transport, Galaxy, external-validation, or global claim unlock.
+
+STATUS: BLOCKED_OPEN_T13_FULL_BRIDGE.
+
+WHAT_CHANGED: The closure projection, register, dependency gate, focused test, report, and update log were synchronized. No numeric substitute, fit, threshold change, or holdout access was introduced.
+
+EQUATION_OR_MAPPING: C_src(T)=sum_mu c_mu(T); C_v^V=C_p^V-T*alpha_V^2*K_T; Delta_Tq=alpha_Phi_K*Delta_Phi.
+
+VERIFICATION: Gate 429eab63bcef298bc3ebb7fbac9d98f54bbb7285a318cc42cfe1c778e9cdc7dd; register 9923fbc8a0be490a566b91a505230268e13b656d43a19bfb6607f1506f1d8799; dependency 6dbee8cd034169c0d54dc1bf71914037d7c4a1e8bb63395c97e0f93fe6ab7450; focused closure tests 11 passed; holdout_consumed=false; claim_promotion=false.
+
+CONTROLLING_BLOCKER: The source-grade Ding/independent PBTE package and independent base-Phi/SI calibration remain open.
+
+NEXT_ACTION: Continue only with permitted source/reproduction evidence and preserve the no-fit/no-holdout contract.
+
+CLAIM_BOUNDARY: This is a machine-readable closure projection, not Full Topic 13 closure or external validation.
