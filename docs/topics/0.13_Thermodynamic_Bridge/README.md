@@ -20,6 +20,8 @@ CONTROLLING_BLOCKER: `dimensional_phi_energy_anchor_or_independent_alpha_calibra
 NEXT_ACTION: Obtain an authorized Ding numeric package or accepted same-regime PBTE reproduction with provenance, units, uncertainty, convergence, and material/state mapping, while separately obtaining a paired base-`Phi`/SI observable anchor. Do not fit `alpha_Phi_K` or read Xie 2026.
 CLAIM_BOUNDARY: This closes a response-mapping lane only. It is not Ding `C_src`, an independent `alpha_Phi_K`, a `Phi`-to-temperature prediction, Core closure, external validation, or global UET closure.
 
+Machine-readable closure matrix: docs/core/artifacts/t13_topic13_closure_matrix.json. It reports nine major requirements separately and keeps full_core_unlock=false; it does not change the canonical readiness gate.
+
 Current hardening result: an action-derived natural-unit Phi-to-thermal bridge and non-Landauer natural beta slope are CLOSED_FOR_LANE. Full Topic 13 remains blocked by the physical Phi/SI anchor, independent alpha_Phi_K, source-backed c_v or Ding C_src, EOS/transport/KMS/entropy, and dimensional TTG gates. The natural fixed-(mu,Phi) C_epsilon_T is not relabeled as source c_v.
 
 Current hardening result T13-130: the covariant-action natural-unit to SI conversion contract is CLOSED_FOR_LANE as symbolic dimensional bookkeeping backed by exact SI defining constants. It does not select E_ref or Phi_scale, does not derive e0 or alpha_Phi_K, and does not unlock Core or external validation. Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.
