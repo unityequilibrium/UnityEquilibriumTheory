@@ -3535,3 +3535,17 @@ VERIFICATION: Source package and input hashes match. Relative spread is `0.04480
 CONTROLLING_BLOCKER: `calorine_model_form_state_spread_is_comparator_only_until_material_mapping_and_source_grade_uncertainty_close`; the primary full-topic blockers remain accepted Ding/independent `C_src` and independent `alpha_Phi_K`.
 NEXT_ACTION: Source-lock an authorized Ding numeric `C_src` package or accepted same-regime independent reproduction with source-grade uncertainty; keep this comparison outside alpha calibration and holdout paths.
 CLAIM_BOUNDARY: This is not a Ding numeric source, not source-grade uncertainty, not a pure model-form error because backend and state differ, not an `alpha_Phi_K` calibration, not a `Phi` prediction, and not Full Topic 13 closure.
+
+## Topic 13 independent alpha candidate search rerun wave (2026-08-22)
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for `T13_ALPHA_PHI_K_PAIRED_RECORD_SEARCH`; this closes the current candidate-search inventory, not `alpha_Phi_K` calibration.
+WHAT_IS_ACTUALLY_CLOSED: The 11 declared calibration candidates were rerun through the paired-record acceptance contract. Eligible records remain `0`; normalized TTG, heat-capacity comparators, Landauer, conditional `Phi_E`, and Calorine candidate rows remain excluded from base-Phi calibration.
+WHAT_REMAINS_OPEN: An independent paired base-Phi amplitude and SI thermal/energy response, the base-Phi to `Phi_E` mapping, and an uncertainty-backed `e0`/`c_v` calibration anchor remain missing.
+DEPENDENCY_UNLOCKED: None; Full Topic 13 and downstream Core/Gravity gates remain blocked.
+STATUS: `PASS_SCOPED_NO_ELIGIBLE_PAIRED_ALPHA_RECORD`; `candidate_count=11`, `eligible_candidate_count=0`, `numeric_alpha_Phi_K_emitted=false`.
+WHAT_CHANGED: Reran `audit_topic13_alpha_phi_k_calibration_candidates.py` after the comparator wave and synchronized the full gate, closure register, and dependency record. No source rows were added, no fit or tuning occurred, and Xie 2026 was not accessed.
+EQUATION_OR_MAPPING: `y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)`; `Delta_Tq = alpha_Phi_K * Delta_Phi`; the required independent anchor remains `Phi_E = s_material * Phi_base` and `alpha_Phi_K = (e0/c_v) * s_material`.
+VERIFICATION: Alpha candidate audit passed with `11` candidates and `0` eligible paired records; holdout access, target fitting, and numeric alpha emission are all false. Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE` / `PARTIAL` with the same 10 blockers.
+CONTROLLING_BLOCKER: `independent_paired_base_Phi_amplitude_and_SI_observable_record_missing`.
+NEXT_ACTION: Obtain a permitted paired base-Phi/SI record or derive a coefficient-provenance-backed action-to-SI map; rerun the acceptance audit before any alpha calibration.
+CLAIM_BOUNDARY: This is a provenance/eligibility search result only. It emits no numeric `alpha_Phi_K`, no temperature prediction, no fit, and no external validation.

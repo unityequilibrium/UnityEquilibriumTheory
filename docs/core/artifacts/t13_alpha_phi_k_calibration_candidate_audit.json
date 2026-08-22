@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-alpha-phi-k-calibration-candidate-audit-v1",
   "artifact": "t13_alpha_phi_k_calibration_candidate_audit",
-  "generated_at": "2026-08-21",
+  "generated_at": "2026-08-22",
   "status": "PASS_SCOPED_NO_ELIGIBLE_PAIRED_ALPHA_RECORD",
   "major_result": {
     "major_result_id": "T13_ALPHA_PHI_K_PAIRED_RECORD_SEARCH",

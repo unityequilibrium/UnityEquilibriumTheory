@@ -208,7 +208,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
             "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
@@ -1551,7 +1551,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -1613,7 +1613,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -2220,7 +2220,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -2275,7 +2275,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -2322,7 +2322,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -2364,7 +2364,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -2418,7 +2418,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -2536,7 +2536,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -2586,7 +2586,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -2638,7 +2638,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -2687,7 +2687,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -2776,7 +2776,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -2987,7 +2987,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -3239,7 +3239,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -3337,7 +3337,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -3399,7 +3399,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -3590,7 +3590,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -3883,7 +3883,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -3934,7 +3934,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -4220,7 +4220,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -4274,7 +4274,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -4322,7 +4322,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -4374,7 +4374,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -4424,7 +4424,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -4470,7 +4470,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -4518,7 +4518,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -4568,7 +4568,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -4622,7 +4622,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -4678,7 +4678,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -4731,7 +4731,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -4840,7 +4840,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -4887,7 +4887,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -4948,7 +4948,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -5163,7 +5163,7 @@
         "docs/core/artifacts/t13_mp48_independent_graphite_cv_audit.json",
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -5215,7 +5215,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -5308,7 +5308,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -5499,7 +5499,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -5608,7 +5608,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -5779,7 +5779,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -5831,7 +5831,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -6217,7 +6217,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -6576,7 +6576,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -6873,7 +6873,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -6941,7 +6941,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -7065,7 +7065,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -7343,7 +7343,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -7416,7 +7416,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -7484,7 +7484,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -7544,7 +7544,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -7620,7 +7620,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -7686,7 +7686,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -7813,7 +7813,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -7933,7 +7933,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -8131,7 +8131,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -8194,7 +8194,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -8258,7 +8258,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -8329,7 +8329,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -8384,7 +8384,7 @@
         "docs/core/artifacts/t13_uet_o2_finite_temperature_all_22_permutation_identity_audit.json",
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -8451,7 +8451,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -8514,7 +8514,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -8574,7 +8574,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -8706,7 +8706,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -8770,7 +8770,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -8827,7 +8827,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -8891,7 +8891,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -8952,7 +8952,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -9011,7 +9011,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -9078,7 +9078,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -9135,7 +9135,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -9208,7 +9208,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -9561,7 +9561,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -9621,7 +9621,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -9789,7 +9789,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -9855,7 +9855,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -10033,7 +10033,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -10099,7 +10099,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -10228,7 +10228,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -10301,7 +10301,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -10631,7 +10631,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -10744,7 +10744,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -10836,7 +10836,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -10954,7 +10954,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -11131,7 +11131,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -11309,7 +11309,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -11384,7 +11384,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -11502,7 +11502,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -11558,7 +11558,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -11618,7 +11618,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -11708,7 +11708,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -11763,7 +11763,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604",
+          "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e",
           "summary": {
             "projection": "Topic 13 full-gate source_package lane",
             "full_core_unlock": false
@@ -11786,7 +11786,7 @@
   "topic13_lane_sync": {
     "full_gate": {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-      "sha256": "381178eb9b120884a4556b9465b717d020a9b4a0c25d5b88e39e94573f0d2604"
+      "sha256": "fc05beb106738e8c5a2513c8faa48811bc72ea94c8713ded386b97166cbae93e"
     },
     "major_result_ids": [
       "T13_GRAPHITE_ELASTIC_BULK_MODULUS_SOURCE",
@@ -11880,8 +11880,8 @@
       "T13_UET_O2_AUXILIARY_FIELD_WARD_PRESERVING_CONDENSED_LANE",
       "T13_UET_O2_CONDENSED_RETARDED_DISSIPATION_NO_GO"
     ],
-    "added_count": 1,
-    "refreshed_count": 89,
+    "added_count": 0,
+    "refreshed_count": 90,
     "full_core_unlock": false
   }
 }

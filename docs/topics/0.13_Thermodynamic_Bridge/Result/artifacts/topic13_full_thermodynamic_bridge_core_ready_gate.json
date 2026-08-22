@@ -9391,7 +9391,7 @@
       "candidate_search_fit_performed": false,
       "candidate_search_artifact": {
         "path": "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json",
-        "sha256": "4da5c96f5601bb10119959206375e0fc4dab759ac3b7fbcdda2ab2ac93699f9e"
+        "sha256": "eba535a96861aebb6d207502ce9c740d5a34db3ee8d3f46e693c7cdd44026357"
       },
       "controlling_blocker": "alpha_Phi_K_independent_calibration_missing",
       "identifiability_status": "NO_GO_FROM_NORMALIZED_PHI",
@@ -15331,7 +15331,7 @@
         "data_role": "CALIBRATION_SEARCH_NOT_EVIDENCE",
         "audit": {
           "path": "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json",
-          "sha256": "4da5c96f5601bb10119959206375e0fc4dab759ac3b7fbcdda2ab2ac93699f9e",
+          "sha256": "eba535a96861aebb6d207502ce9c740d5a34db3ee8d3f46e693c7cdd44026357",
           "summary": {
             "status": "PASS_SCOPED_NO_ELIGIBLE_PAIRED_ALPHA_RECORD",
             "major_result_id": "T13_ALPHA_PHI_K_PAIRED_RECORD_SEARCH",
@@ -76755,7 +76755,7 @@
     },
     {
       "path": "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json",
-      "sha256": "4da5c96f5601bb10119959206375e0fc4dab759ac3b7fbcdda2ab2ac93699f9e",
+      "sha256": "eba535a96861aebb6d207502ce9c740d5a34db3ee8d3f46e693c7cdd44026357",
       "summary": {
         "status": "PASS_SCOPED_NO_ELIGIBLE_PAIRED_ALPHA_RECORD",
         "candidate_count": 11,
