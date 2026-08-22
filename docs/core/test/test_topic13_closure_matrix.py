@@ -44,6 +44,10 @@ def test_topic13_closure_matrix_reports_major_requirements_without_promotion() -
     assert matrix["holdout_policy"]["calibration_path_may_read_holdout"] is False
     assert matrix["major_result"]["open_blockers"] == gate["major_result"]["what_remains_open"]
     assert matrix["closure_summary"]["open_blocker_groups"] == gate["major_result"]["closure_summary"]["open_blocker_groups"]
+    causal = next(item for item in matrix["requirements"] if item["requirement_id"] == "causal_structure")
+    assert causal["closure_level"] == "CLOSED_AS_NO_GO"
+    assert causal["gate_status"] == "BLOCKED"
+    assert causal["gate_lane_closure_level"] == "CLOSED_FOR_LANE"
     alpha = next(item for item in matrix["requirements"] if item["requirement_id"] == "independent_alpha_Phi_K")
     assert alpha["closure_level"] == "OPEN"
     assert alpha["gate_status"] == "BLOCKED"

@@ -30,10 +30,11 @@ REQUIREMENTS: tuple[dict[str, Any], ...] = (
         "requirement_id": "causal_structure",
         "label": "Causal thermal branch",
         "gate_key": "causal_full_candidate_or_formal_no_go_branch",
-        "closure_level": "PARTIAL",
+        "closure_level": "CLOSED_AS_NO_GO",
         "what_is_closed": (
-            "The conserved-C baseline failure is recorded as a scoped structural "
-            "no-go, and a named coupled conserved-flux/Phi branch is retained "
+            "The finite-cone compatibility question is closed as a scoped "
+            "no-go for the declared local conserved-C gradient class. The "
+            "named coupled conserved-flux/Phi branch is retained separately "
             "with its own causal checks."
         ),
         "what_remains_open": (
@@ -225,8 +226,12 @@ def build_requirement(gate: dict[str, Any], spec: dict[str, Any]) -> dict[str, A
     section = gate.get("verification_status", {}).get(spec["gate_key"], {})
     if not isinstance(section, dict):
         section = {"status": str(section)}
+    closure_level = spec["closure_level"]
+    if spec["requirement_id"] == "causal_structure":
+        closure_level = section.get("structural_question_closure", closure_level)
     return {
         **spec,
+        "closure_level": closure_level,
         "gate_status": section.get("status", "OPEN"),
         "gate_controlling_blocker": section.get("controlling_blocker"),
         "gate_lane_status": section.get("lane_status"),

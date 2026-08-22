@@ -1797,7 +1797,7 @@
       },
       "closure_matrix": {
         "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-        "sha256": "a315bb52a2331696fe7ae6556cbcbc315a299f4317a6c4d98bd05d70ad55a93a",
+        "sha256": "cbedb52b1cfbf7c56b3f7295a1afcb8614e8197aa44af6a1ec910c9ba6393cf0",
         "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
         "closure_level": "PARTIAL",
         "full_core_unlock": false
@@ -6435,7 +6435,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-          "sha256": "a315bb52a2331696fe7ae6556cbcbc315a299f4317a6c4d98bd05d70ad55a93a",
+          "sha256": "cbedb52b1cfbf7c56b3f7295a1afcb8614e8197aa44af6a1ec910c9ba6393cf0",
           "summary": {
             "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
             "major_result_id": "T13_TOPIC13_CLOSURE_MATRIX",
