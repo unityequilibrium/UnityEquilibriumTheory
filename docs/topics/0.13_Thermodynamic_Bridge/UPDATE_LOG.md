@@ -3707,7 +3707,7 @@ WHAT_CHANGED: Added the cross-module deterministic witness, machine-readable maj
 
 EQUATION_OR_MAPPING: f_hat(C,Phi,T) EOS with Hessian stability -> S_SK / KMS noise -> J_S^mu=s u^mu+q^mu/T -> q^mu=kappa_natural X_T^mu and conserved dissipative-balance interface. The response remains normalized/natural-unit; SI scale is external.
 
-VERIFICATION: Formal bridge audit returned PASS_FORMAL_T13_THERMODYNAMIC_BRIDGE_INTEGRATION; its focused regression passed 4/4; full gate rerun preserved all 9 open blockers, holdout_consumed=false, and claim_promotion=false. Closure register now includes the new major result.
+VERIFICATION: Formal bridge audit returned PASS_FORMAL_T13_THERMODYNAMIC_BRIDGE_INTEGRATION; its focused regression passed 5/5; full gate rerun preserved all 9 open blockers, holdout_consumed=false, and claim_promotion=false. Closure register now includes the new major result.
 
 CONTROLLING_BLOCKER: physical_Kubo_coefficient_record_missing controls the formal-to-physical transport step; independent alpha_Phi_K and Ding-compatible C_src remain separate full-topic blockers.
 
