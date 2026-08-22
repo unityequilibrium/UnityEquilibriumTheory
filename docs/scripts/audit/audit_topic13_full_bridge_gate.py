@@ -1898,6 +1898,66 @@ def main() -> int:
             },
         ]
     )
+    artifact["major_result"]["resolved_blockers"].extend(
+        [
+            {
+                "blocker": "calorine_model_form_state_uncertainty_lane",
+                "status": "CLOSED_FOR_LANE",
+                "resolution_source": {
+                    "major_result_id": "T13_CALORINE_MODEL_FORM_STATE_SPREAD_COMPARISON",
+                    "artifact": rel(calorine_model_form_state_spread_path),
+                    "artifact_sha256": sha256(calorine_model_form_state_spread_path),
+                    "common_mesh": calorine_model_form_state_spread.get("comparison", {}).get("mesh"),
+                    "relative_spread_rows": calorine_model_form_state_spread.get("comparison", {}).get("rows", []),
+                    "max_absolute_relative_spread": calorine_model_form_state_spread.get("comparison", {}).get("spread_summary", {}).get("max_absolute_relative_spread"),
+                },
+                "what_is_closed": (
+                    "The baseline and C-CX candidate C_src rows are compared on a common "
+                    "10x10x5 mesh with source hashes, units, backend/model identity, and "
+                    "primitive-volume differences recorded; the observed spread is an "
+                    "explicit comparator diagnostic."
+                ),
+                "what_remains_open": [
+                    "calorine_route_source_grade_uncertainty_missing",
+                    "calorine_route_material_regime_mapping_to_ding_missing",
+                    "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+                ],
+                "claim_boundary": (
+                    "This closes the candidate model/state comparison lane only. The "
+                    "spread is not a source-grade statistical uncertainty or pure model-form "
+                    "error, is not Ding C_src acceptance, and cannot calibrate alpha_Phi_K."
+                ),
+            },
+            {
+                "blocker": "calorine_full_lbte_stability_route",
+                "status": "CLOSED_AS_NO_GO",
+                "resolution_source": {
+                    "major_result_id": "T13_CALORINE_FULL_LBTE_NUMERICAL_STABILITY_BOUNDARY",
+                    "artifact": rel(calorine_full_lbte_path),
+                    "artifact_sha256": sha256(calorine_full_lbte_path),
+                    "latest_pair_max_relative_change": calorine_full_lbte.get("mesh_convergence", {}).get("latest_pair", {}).get("max_relative_change"),
+                    "collision_spectrum_positive_semidefinite": calorine_full_lbte.get("checks", {}).get("method1_collision_spectrum_positive_semidefinite"),
+                    "method0_negative_300K": calorine_full_lbte.get("checks", {}).get("method0_negative_in_plane_kappa_at_300K"),
+                },
+                "what_is_closed": (
+                    "The current archived full-LBTE Calorine route does not satisfy the "
+                    "declared numerical admission boundary: the collision spectrum is "
+                    "sign-indefinite and the latest adjacent mesh pair is not converged."
+                ),
+                "what_remains_open": [
+                    "full_lbte_collision_spectrum_positive_semidefinite_missing",
+                    "full_lbte_mesh_convergence_missing",
+                    "physical_Kubo_coefficient_record_missing",
+                    "calorine_route_material_regime_mapping_to_ding_missing",
+                ],
+                "claim_boundary": (
+                    "This is a no-go for the current full-LBTE candidate route only. It "
+                    "does not reject a future corrected solver/source, does not close RTA "
+                    "C_src acceptance, and does not provide physical UET transport."
+                ),
+            },
+        ]
+    )
     closed_lane_records = [
         record
         for _, record in sorted(discovered_lane_integrations.items())

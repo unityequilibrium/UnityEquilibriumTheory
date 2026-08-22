@@ -406,7 +406,7 @@
     },
     "register": {
       "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-      "sha256": "883094e77897784e4e44d5cd59fc1c6590c9b49ccedee0dbb292d60835e11978",
+      "sha256": "b3edbff7f1c8db89f61fceaeb74797ee721cd59515f6218b22e1123cca89bdf1",
       "generated_at": "2026-08-22"
     },
     "required_fields": [

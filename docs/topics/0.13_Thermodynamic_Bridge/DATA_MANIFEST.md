@@ -1070,3 +1070,29 @@ NEXT_ACTION: Continue only with permitted source/reproduction evidence; preserve
 CLAIM_BOUNDARY: Structural identifiability no-go only; not numeric alpha, temperature prediction, physical transport, external validation, or Full Topic 13 closure.
 
 EVIDENCE_PATHS: docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json; docs/core/artifacts/t13_phi_si_anchor_public_source_boundary_audit.json; docs/core/artifacts/t13_alpha_phi_k_identifiability_audit.json; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json.
+
+## T13-160 - Calorine uncertainty and full-LBTE route boundary
+
+MAJOR_RESULT_CLOSURE: PARTIAL; the full Topic 13 bridge remains BLOCKED_OPEN_T13_FULL_BRIDGE.
+
+WHAT_IS_ACTUALLY_CLOSED: The Calorine model/state spread comparison is CLOSED_FOR_LANE with source hashes, common mesh, units, and relative spread rows; the current full-LBTE candidate route is CLOSED_AS_NO_GO for its sign-indefinite collision spectrum and failed mesh admission.
+
+WHAT_REMAINS_OPEN: Accepted Ding-compatible C_src, independent alpha_Phi_K, beta/SI correspondence, EOS/transport/KMS/entropy, dimensional Phi map, physical Kubo provenance, same-grade alpha_V/K_T, Ding material mapping, and source-grade c_v uncertainty.
+
+DEPENDENCY_UNLOCKED: Comparator and numerical-boundary lanes only; no downstream dependency is unlocked.
+
+STATUS: BLOCKED_OPEN_T13_FULL_BRIDGE.
+
+WHAT_CHANGED: Added two resolved-blocker records to the full gate and synchronized the current report and regression test. The Calorine spread is not promoted to source-grade uncertainty, and full-LBTE output is not promoted to physical transport.
+
+EQUATION_OR_MAPPING: C_src(T) = [sum_q w_q sum_mu c_qmu(T)]/[sum_q w_q V_primitive]; relative_spread(T) = [C_src_C-CX(T)-C_src_baseline(T)]/C_src_baseline(T).
+
+VERIFICATION: Gate 203bf8c3d9dd45794fb8d7af1e2520e1457b73d3c683377915c57f4b30952d94; register b3edbff7f1c8db89f61fceaeb74797ee721cd59515f6218b22e1123cca89bdf1; dependency 1a5b61b73e5f5bf2210e030fde5cfc3064eca9ab5f56dc89167e56b752255760; focused closure tests 11 passed; holdout_consumed=false; claim_promotion=false.
+
+CONTROLLING_BLOCKER: Calorine is still not Ding-equivalent and has no source-grade uncertainty; no accepted independent C_src route is available.
+
+NEXT_ACTION: Continue with permitted Ding/PBTE source acquisition or a materially matched reproduction; preserve no-fit/no-holdout policy.
+
+CLAIM_BOUNDARY: Scoped comparator/no-go only; not Ding C_src, numeric alpha, physical transport, external validation, or Full Topic 13 closure.
+
+EVIDENCE_PATHS: docs/core/artifacts/t13_calorine_model_form_state_spread_comparison_audit.json; docs/core/artifacts/t13_calorine_full_lbte_stability_boundary_audit.json; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json.

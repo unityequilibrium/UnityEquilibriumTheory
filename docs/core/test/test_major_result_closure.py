@@ -95,6 +95,8 @@ def test_topic13_full_gate_reports_machine_readable_closure_summary() -> None:
         "action_beta_to_normalized_beta_identifiability": "CLOSED_AS_NO_GO",
         "base_phi_to_SI_anchor_identifiability": "CLOSED_AS_NO_GO",
         "normalized_alpha_Phi_K_scale_identifiability": "CLOSED_AS_NO_GO",
+        "calorine_model_form_state_uncertainty_lane": "CLOSED_FOR_LANE",
+        "calorine_full_lbte_stability_route": "CLOSED_AS_NO_GO",
     }
     assert "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing" in gate[
         "major_result"

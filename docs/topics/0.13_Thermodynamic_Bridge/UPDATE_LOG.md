@@ -3661,3 +3661,31 @@ CLAIM_BOUNDARY: These are structural identifiability no-go results only. UET rem
 EVIDENCE_PATHS: docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json; docs/core/artifacts/t13_phi_si_anchor_public_source_boundary_audit.json; docs/core/artifacts/t13_alpha_phi_k_identifiability_audit.json; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json.
 
 EVIDENCE_HASHES: gate 88ab78b777c88bc6a4998346391699755e01ccf7c219e2b092d411b26dc3ae0b; register 883094e77897784e4e44d5cd59fc1c6590c9b49ccedee0dbb292d60835e11978; dependency 2ddb7e230ceaf05d16737e914cb0eae96a6352f483b59e0f70f4550066e2d19c; gate code 8b35c1e3dea8824640dac6762b260aa0f07ac70c61b4140ca0a5e1fac865eb1d; closure test 4c6025ec1f41ec7cefc0034ce98376fd8ed6aab7a6ed53fd75da7688d6a7f967.
+
+## 2026-08-22 - Calorine uncertainty and full-LBTE route boundary (T13-160)
+
+MAJOR_RESULT_CLOSURE: PARTIAL for T13_FULL_THERMODYNAMIC_BRIDGE; two additional scoped results are explicit as CLOSED_FOR_LANE or CLOSED_AS_NO_GO, while the full result remains BLOCKED_OPEN_T13_FULL_BRIDGE.
+
+WHAT_IS_ACTUALLY_CLOSED: The Calorine baseline/C-CX model-state comparison is closed for lane with common-mesh C_src spread rows and provenance; the current archived full-LBTE route is closed as a route no-go because its collision spectrum is sign-indefinite and the latest adjacent mesh is not converged.
+
+WHAT_REMAINS_OPEN: The nine full-gate blockers remain: accepted Ding-compatible C_src, independent alpha_Phi_K calibration, normalized beta/SI correspondence, EOS/transport/KMS/entropy completion, dimensional Phi map, physical Kubo provenance, same-grade alpha_V/K_T, Ding material mapping, and source-grade c_v uncertainty.
+
+DEPENDENCY_UNLOCKED: Comparator uncertainty and numerical-boundary evidence only. No Core, Gravity, constitutive-transport, Galaxy, external-validation, or global claim dependency is unlocked.
+
+STATUS: BLOCKED_OPEN_T13_FULL_BRIDGE.
+
+WHAT_CHANGED: Added machine-readable resolved_blockers records for calorine_model_form_state_uncertainty_lane and calorine_full_lbte_stability_route, linked to existing model-form/state-spread and full-LBTE boundary audits. No source-grade uncertainty was invented and no RTA C_src result was relabeled as Ding C_src.
+
+EQUATION_OR_MAPPING: C_src(T) = [sum_q w_q sum_mu c_qmu(T)]/[sum_q w_q V_primitive]; relative_spread(T) = [C_src_C-CX(T)-C_src_baseline(T)]/C_src_baseline(T). Full-LBTE kappa remains a rejected candidate route under the current spectrum/convergence boundary.
+
+VERIFICATION: Calorine model/state spread audit PASS; full-LBTE stability audit WARN with latest-pair max relative change 0.1293791352 and non-positive-semidefinite collision spectrum; full gate 180 closed lanes / 16 scoped no-go lanes / 9 open blockers; focused closure regressions 11 passed; holdout_consumed=false; claim_promotion=false.
+
+CONTROLLING_BLOCKER: Authorized Ding numeric C_src or accepted same-regime PBTE reproduction with source-grade uncertainty remains missing; the current Calorine candidate cannot satisfy that contract.
+
+NEXT_ACTION: Continue only with a permitted Ding-compatible source/reproduction or a materially matched graphite PBTE package; keep Calorine model spread as diagnostic evidence and do not use the rejected full-LBTE route for physical transport.
+
+CLAIM_BOUNDARY: These are scoped comparator and numerical-boundary results only. No numeric alpha_Phi_K, Kelvin prediction, physical UET transport coefficient, external validation, Full Topic 13 closure, or downstream unlock is claimed.
+
+EVIDENCE_PATHS: docs/core/artifacts/t13_calorine_model_form_state_spread_comparison_audit.json; docs/core/artifacts/t13_calorine_state_uncertainty_decomposition_audit.json; docs/core/artifacts/t13_calorine_full_lbte_stability_boundary_audit.json; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json.
+
+EVIDENCE_HASHES: gate 203bf8c3d9dd45794fb8d7af1e2520e1457b73d3c683377915c57f4b30952d94; register b3edbff7f1c8db89f61fceaeb74797ee721cd59515f6218b22e1123cca89bdf1; dependency 1a5b61b73e5f5bf2210e030fde5cfc3064eca9ab5f56dc89167e56b752255760; gate code 6775b8e21da388094facc0535d59d7b3818d02a45c8f318aa81f30cbe128eb1a; closure test 09758487eba1083e20bb0865d768bb9814a4294aa8fdc28ff5a285a177789559.
