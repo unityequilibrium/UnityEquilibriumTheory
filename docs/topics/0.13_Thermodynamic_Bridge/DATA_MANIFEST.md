@@ -1174,3 +1174,14 @@ NEXT_ACTION: Obtain an authorized author package or accepted same-regime PBTE re
 CLAIM_BOUNDARY: This is a provenance/content boundary only, not numeric C_src, independent alpha_Phi_K, TTG prediction, physical transport, external validation, or Full Topic 13 closure.
 
 EVIDENCE: docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_supplementary_content_review_package.json; docs/core/artifacts/t13_ding_supplementary_content_review_audit.json.
+
+## NPL IG-11 Graphite c_p Uncertainty Comparator (2026-08-22)
+
+Raw report: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/npl_rsa40_graphite_specific_heat.pdf` (`aabe560c3e4e012e606b2d87facb67600653a781c4b46c8fde986f3fd9fa28f1`).
+Source package: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/npl_rsa40_graphite_specific_heat_source_package.json` (`1bfa0fba5ec396b9c033ac889dfd6f59edfb7de4efff1035768ff224988722ab`).
+Audit: `docs/core/artifacts/t13_npl_rsa40_graphite_specific_heat_audit.json` (`55d3dfef10bd44c3e0257fa8abb4212279445fd357310999a60f49b752865831`).
+
+The lane source-locks the NPL IG-11 mass-specific `c_p` relation and its
+reported uncertainty. The nominal density product is kept as a cross-check
+only because the locked sample description does not provide density uncertainty.
+No `c_v`, Ding `C_src`, `alpha_Phi_K`, target fit, or holdout access is emitted.

@@ -134,6 +134,7 @@ LANE_KEY_BY_ID["T13_THERMAL_BRIDGE_SCALE_DEPENDENCY_NO_GO"] = "thermal_bridge_sc
 LANE_KEY_BY_ID["T13_AIST_GRAPHITE_SOURCE_ROUTE_BOUNDARY"] = "aist_graphite_source_route_boundary"
 LANE_KEY_BY_ID["T13_NIST_SRM_3600_HEAT_CAPACITY_COMPARATOR_BOUNDARY"] = "nist_srm_3600_heat_capacity_comparator_boundary"
 LANE_KEY_BY_ID["T13_PEREZ_CASTANEDA_HOPG_SPECIFIC_HEAT_SOURCE_BOUNDARY"] = "perez_castaneda_hopg_specific_heat_source_boundary"
+LANE_KEY_BY_ID["T13_NPL_GRAPHITE_CP_UNCERTAINTY_COMPARATOR"] = "npl_graphite_cp_uncertainty_comparator"
 LANE_KEY_BY_ID["T13_QH15_GRAPHITE_CV_COMPARATOR_BOUNDARY"] = "qh15_graphite_cv_comparator_boundary"
 LANE_KEY_BY_ID["T13_FORMAL_THERMODYNAMIC_BRIDGE_INTEGRATION"] = "formal_thermodynamic_bridge_integration"
 LANE_KEY_BY_ID["T13_DAY2012_PREFERRED_THERMODYNAMIC_ASSESSMENT_BOUNDARY"] = "day2012_preferred_thermodynamic_assessment_boundary"
@@ -357,6 +358,10 @@ def main() -> int:
     perez_hopg_path, perez_hopg = load(
         "docs/core/artifacts/t13_perez_castaneda_hopg_source_boundary_audit.json"
     )
+    npl_graphite_cp_path, npl_graphite_cp = load(
+        "docs/core/artifacts/t13_npl_rsa40_graphite_specific_heat_audit.json"
+    )
+
     holdout_audit_path, holdout_audit = load(
         "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json"
     )
@@ -974,6 +979,16 @@ def main() -> int:
         artifact["verification_status"]["source_package"]["perez_castaneda_hopg_specific_heat_source_boundary"] = perez_hopg_lane
         artifact["verification_status"]["eos_transport_kms_entropy"].pop(
             "perez_castaneda_hopg_specific_heat_source_boundary", None
+        )
+    npl_graphite_cp_lane = discovered_lane_integrations.get(
+        "npl_graphite_cp_uncertainty_comparator"
+    )
+    if npl_graphite_cp_lane:
+        artifact["verification_status"]["source_package"][
+            "npl_graphite_cp_uncertainty_comparator"
+        ] = npl_graphite_cp_lane
+        artifact["verification_status"]["eos_transport_kms_entropy"].pop(
+            "npl_graphite_cp_uncertainty_comparator", None
         )
     ding_public_supplementary_lane = discovered_lane_integrations.get(
         "ding_public_supplementary_payload_boundary"
@@ -1659,6 +1674,8 @@ def main() -> int:
         lane_closures.append("independent c_v comparator boundary is closed for lane without promoting it to Ding C_src")
     if discovered_lane_integrations.get("perez_castaneda_hopg_specific_heat_source_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("Perez-Castaneda HOPG specific-heat source boundary is closed for lane; the specimen and below-3-percent method-comparison bound are source-locked, but figure-only rows, source-grade uncertainty, Ding C_src, and alpha remain open")
+    if discovered_lane_integrations.get("npl_graphite_cp_uncertainty_comparator", {}).get("closure_level") == "CLOSED_FOR_LANE":
+        lane_closures.append("NPL IG-11 graphite mass-specific c_p and source-reported uncertainty are closed for lane; c_v conversion, density uncertainty, Ding material mapping, and alpha remain open")
     if discovered_lane_integrations.get("qh15_graphite_cv_comparator_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("QH-15 macroscopic graphite C_v comparator is closed for lane; its unit conversion and Calorine cross-check do not establish Ding C_src, material equivalence, source-grade uncertainty, or alpha_Phi_K")
     if discovered_lane_integrations.get("day2012_preferred_thermodynamic_assessment_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
@@ -2440,6 +2457,26 @@ def main() -> int:
                     "data_role": "COMPARISON_ONLY_NOT_CALIBRATION",
                     "raw_sha256": bipm_package.get("source", {}).get("local_raw_sha256"),
                     "material_match_to_Ding_TTG": bipm_package.get("derived_comparator", {}).get("material_match_to_Ding_TTG"),
+                },
+            )
+        )
+    npl_graphite_cp_rel = rel(npl_graphite_cp_path)
+    if npl_graphite_cp_rel not in {
+        item.get("path") for item in artifact.get("evidence_artifacts", [])
+        if isinstance(item, dict)
+    }:
+        artifact["evidence_artifacts"].append(
+            evidence(
+                npl_graphite_cp_rel,
+                npl_graphite_cp,
+                {
+                    "status": npl_graphite_cp.get("status"),
+                    "closure_level": npl_graphite_cp.get("major_result", {}).get("closure_level"),
+                    "data_role": npl_graphite_cp.get("major_result", {}).get("data_role"),
+                    "cp_J_per_kg_K": npl_graphite_cp.get("derived_comparator", {}).get("cp_J_per_kg_K"),
+                    "cp_standard_uncertainty_J_per_kg_K": npl_graphite_cp.get("derived_comparator", {}).get("cp_standard_uncertainty_J_per_kg_K"),
+                    "cv_emitted": npl_graphite_cp.get("cv_emitted"),
+                    "controlling_blocker": npl_graphite_cp.get("controlling_blocker"),
                 },
             )
         )

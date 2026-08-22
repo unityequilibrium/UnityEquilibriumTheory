@@ -122,6 +122,7 @@
       "current alpha_Phi_K paired-record search is closed for lane with no eligible calibration record",
       "independent c_v comparator boundary is closed for lane without promoting it to Ding C_src",
       "Perez-Castaneda HOPG specific-heat source boundary is closed for lane; the specimen and below-3-percent method-comparison bound are source-locked, but figure-only rows, source-grade uncertainty, Ding C_src, and alpha remain open",
+      "NPL IG-11 graphite mass-specific c_p and source-reported uncertainty are closed for lane; c_v conversion, density uncertainty, Ding material mapping, and alpha remain open",
       "QH-15 macroscopic graphite C_v comparator is closed for lane; its unit conversion and Calorine cross-check do not establish Ding C_src, material equivalence, source-grade uncertainty, or alpha_Phi_K",
       "Day 2012 Table 2 preferred thermodynamic assessment is closed for lane; its graphite B0 uncertainty and expansion function are source-locked, but alpha uncertainty, same-specimen alpha_V/K_T matching, and Ding material mapping remain open",
       "Ding C_src fixed-volume thermodynamic identity is closed for lane; numeric source rows, material/state equivalence, uncertainty, and alpha remain open",
@@ -355,7 +356,7 @@
       }
     ],
     "closure_summary": {
-      "closed_lane_count": 184,
+      "closed_lane_count": 185,
       "closed_as_no_go_count": 16,
       "closed_lane_result_ids": [
         "T13_AIST_GRAPHITE_SOURCE_ROUTE_BOUNDARY",
@@ -436,6 +437,7 @@
         "T13_NIST_AXM5Q1_DENSITY_SOURCE_BOUNDARY",
         "T13_NIST_GRAPHITE_ALPHA_V_SOURCE_BOUNDARY",
         "T13_NIST_SRM_3600_HEAT_CAPACITY_COMPARATOR_BOUNDARY",
+        "T13_NPL_GRAPHITE_CP_UNCERTAINTY_COMPARATOR",
         "T13_OXFORD_TGS_COMPARATOR_PROVENANCE",
         "T13_OXFORD_TGS_NUMERIC_ROWS_COMPARATOR",
         "T13_PEREZ_CASTANEDA_HOPG_SPECIFIC_HEAT_SOURCE_BOUNDARY",
@@ -4685,6 +4687,155 @@
           "direct_volumetric_c_v_or_same_state_Cp_source_missing",
           "material_regime_mapping_to_TTG_not_closed",
           "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+        ]
+      },
+      "npl_graphite_cp_uncertainty_comparator": {
+        "status": "PASS_SCOPED_NPL_CP_UNCERTAINTY_COMPARATOR_CV_OPEN",
+        "claim_promotion": false,
+        "source": {
+          "source_id": "npl_rsa_ext_40_1993_graphite_cp",
+          "title": "Measurement of the specific heat capacity of the electron-beam graphite calorimeter",
+          "authors": [
+            "A. J. Williams",
+            "D. T. Burns",
+            "M. R. McEwen"
+          ],
+          "publisher": "National Physical Laboratory",
+          "report": "NPL Report RSA(EXT)40",
+          "year": 1993,
+          "official_url": "https://eprintspublications.npl.co.uk/1107/1/RSA40.pdf",
+          "record_url": "https://eprintspublications.npl.co.uk/1107/",
+          "source_locators": [
+            "PDF p. 5, sample description: Southern Graphite grade IG 11, density 1.77 g cm^-3",
+            "PDF p. 24, section 5.1, Eq. (16): source-reported linear fit for c_p,g(T,H)",
+            "PDF p. 25, section 5.1, Eq. (17): c_p,g(T,H)=710.6+3.0(T-22 deg C) J kg^-1 K^-1 with u_c=0.7 J kg^-1 K^-1",
+            "PDF p. 26, Table 4: relative combined standard uncertainty u_c(y)/y=9.6e-4"
+          ],
+          "retrieved_on": "2026-08-22",
+          "local_raw_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/npl_rsa40_graphite_specific_heat.pdf",
+          "local_raw_size_bytes": 6526111,
+          "local_raw_sha256": "aabe560c3e4e012e606b2d87facb67600653a781c4b46c8fde986f3fd9fa28f1",
+          "material_identity": {
+            "sample_material": "graphite core of an electron-beam primary-standard calorimeter",
+            "supplier": "Southern Graphite",
+            "grade": "IG 11",
+            "nominal_density_g_per_cm3": 1.77,
+            "sample_geometry": "approximately 32.0 mm high by 33.5 mm diameter, approximately 50 g",
+            "report_characterization": "amorphous graphite",
+            "ding_ttg_match": false,
+            "match_boundary": "The source is an IG-11 calorimeter graphite sample, not Ding's natural-graphite TTG/PBTE state."
+          },
+          "temperature_scope": {
+            "min_C": 19.0,
+            "max_C": 25.0,
+            "min_K": 292.15,
+            "max_K": 298.15,
+            "reference_temperature_C": 22.0,
+            "reference_temperature_K": 295.15
+          },
+          "preprocessing": "The report's source-reported equation, uncertainty, material metadata, and uncertainty-budget values were transcribed without refitting, digitizing Figure 7, smoothing, target access, or UET calibration.",
+          "license_or_terms": "NPL report states that extracts may be reproduced provided the source is acknowledged; repository retains the official PDF for research provenance and does not claim unrestricted redistribution beyond that notice.",
+          "local_hash_observed": "aabe560c3e4e012e606b2d87facb67600653a781c4b46c8fde986f3fd9fa28f1",
+          "package_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/npl_rsa40_graphite_specific_heat_source_package.json",
+          "package_sha256": "1bfa0fba5ec396b9c033ac889dfd6f59edfb7de4efff1035768ff224988722ab"
+        },
+        "source_rows": [
+          {
+            "source_row_id": "npl_rsa40_ig11_cp_295_15K",
+            "temperature_K": 295.15,
+            "temperature_C": 22.0,
+            "quantity": "c_p,g",
+            "value_J_per_kg_K": 710.6,
+            "standard_uncertainty_J_per_kg_K": 0.7,
+            "reported_units": "J kg^-1 K^-1",
+            "source_equation": "c_p,g(T,H)=710.6+3.0*(T-22 deg C) J kg^-1 K^-1",
+            "source_locator": "PDF p. 25, Eq. (17), and p. 24, Eq. (16)",
+            "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+          },
+          {
+            "source_row_id": "npl_rsa40_ig11_density_nominal",
+            "temperature_K": 295.15,
+            "quantity": "rho",
+            "value_kg_per_m3": 1770.0,
+            "standard_uncertainty_kg_per_m3": null,
+            "reported_units": "kg m^-3",
+            "source_value": "1.77 g cm^-3",
+            "source_locator": "PDF p. 5, sample description",
+            "data_role": "COMPARISON_ONLY_NOT_CALIBRATION",
+            "uncertainty_status": "NOT_REPORTED_IN_THE_LOCKED_SAMPLE_DESCRIPTION"
+          },
+          {
+            "source_row_id": "npl_rsa40_combined_relative_uncertainty",
+            "temperature_scope_C": {
+              "min": 19.0,
+              "max": 25.0
+            },
+            "quantity": "u_c(y)/y",
+            "value": 0.00096,
+            "reported_units": "relative",
+            "source_locator": "PDF p. 26, Table 4",
+            "data_role": "UNCERTAINTY_CONTEXT_NOT_A_REPLACEMENT_FOR_ROW_VALUE"
+          }
+        ],
+        "derived_comparator": {
+          "reference_temperature_K": 295.15,
+          "cp_J_per_kg_K": 710.6,
+          "cp_standard_uncertainty_J_per_kg_K": 0.7,
+          "relative_standard_uncertainty_from_cp": 0.0009850830284260906,
+          "nominal_volumetric_cp_J_per_m3_K": 1257762.0,
+          "volumetric_cp_emitted": false,
+          "volumetric_cp_blocker": "density_standard_uncertainty_not_reported_for_the_locked_IG11_row",
+          "cv_emitted": false,
+          "alpha_V_emitted": false,
+          "K_T_emitted": false,
+          "alpha_Phi_K_emitted": false,
+          "nominal_volumetric_cp_reconstructed_J_per_m3_K": 1257762.0
+        },
+        "checks": {
+          "raw_pdf_present": true,
+          "raw_pdf_signature_present": true,
+          "raw_pdf_hash_matches": true,
+          "raw_size_matches_package": true,
+          "report_identity_and_locators_present": true,
+          "material_identity_is_explicit": true,
+          "cp_row_units_and_uncertainty_present": true,
+          "cp_row_is_at_reference_temperature": true,
+          "source_equation_is_preserved": true,
+          "uncertainty_budget_is_preserved": true,
+          "nominal_mass_to_volume_crosscheck_is_reproducible": true,
+          "volumetric_cp_not_emitted_without_density_uncertainty": true,
+          "cv_and_alpha_not_emitted": true,
+          "holdout_not_accessed": true,
+          "no_fit_or_target_used": true
+        },
+        "numeric_cp_emitted": true,
+        "nominal_volumetric_cp_emitted": true,
+        "uncertainty_grade_volumetric_cp_emitted": false,
+        "cv_emitted": false,
+        "target_data_used": false,
+        "xie_2026_accessed": false,
+        "numeric_alpha_Phi_K_emitted": false,
+        "controlling_blocker": "c_v_conversion_density_uncertainty_and_Ding_material_mapping_missing",
+        "next_controller": "Acquire same-regime alpha_V and K_T or a direct volumetric c_v source with uncertainty; keep this c_p comparator out of calibration and holdout paths.",
+        "claim_boundary": "This closes a source-traceable NPL IG-11 c_p comparator lane. It is not c_v, not Ding/HOPG TTG validation, not an independent alpha_Phi_K calibration, and not Full Topic 13 closure.",
+        "major_result_id": "T13_NPL_GRAPHITE_CP_UNCERTAINTY_COMPARATOR",
+        "closure_level": "CLOSED_FOR_LANE",
+        "data_role": "EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_DING_TTG_GRADE",
+        "audit": {
+          "path": "docs/core/artifacts/t13_npl_rsa40_graphite_specific_heat_audit.json",
+          "sha256": "55d3dfef10bd44c3e0257fa8abb4212279445fd357310999a60f49b752865831",
+          "summary": {
+            "status": "PASS_SCOPED_NPL_CP_UNCERTAINTY_COMPARATOR_CV_OPEN",
+            "major_result_id": "T13_NPL_GRAPHITE_CP_UNCERTAINTY_COMPARATOR",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        },
+        "open_blockers": [
+          "c_v_source_uncertainty_not_closed",
+          "same_grade_alpha_V_and_K_T_missing",
+          "material_regime_mapping_to_TTG_not_closed",
+          "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+          "alpha_Phi_K_independent_calibration_missing"
         ]
       },
       "ding_experimental_heating_input_boundary": {
@@ -77975,6 +78126,19 @@
         "data_role": "COMPARISON_ONLY_NOT_CALIBRATION",
         "raw_sha256": "2c491c94adb3f70f4b1ba915259f0a1d2f4788e072e99c8d34a87f964f69ce42",
         "material_match_to_Ding_TTG": false
+      }
+    },
+    {
+      "path": "docs/core/artifacts/t13_npl_rsa40_graphite_specific_heat_audit.json",
+      "sha256": "55d3dfef10bd44c3e0257fa8abb4212279445fd357310999a60f49b752865831",
+      "summary": {
+        "status": "PASS_SCOPED_NPL_CP_UNCERTAINTY_COMPARATOR_CV_OPEN",
+        "closure_level": "CLOSED_FOR_LANE",
+        "data_role": "EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_DING_TTG_GRADE",
+        "cp_J_per_kg_K": 710.6,
+        "cp_standard_uncertainty_J_per_kg_K": 0.7,
+        "cv_emitted": false,
+        "controlling_blocker": "c_v_conversion_density_uncertainty_and_Ding_material_mapping_missing"
       }
     },
     {
