@@ -1186,3 +1186,29 @@ The lane source-locks the NPL IG-11 mass-specific `c_p` relation and its
 reported uncertainty. The nominal density product is kept as a cross-check
 only because the locked sample description does not provide density uncertainty.
 No `c_v`, Ding `C_src`, `alpha_Phi_K`, target fit, or holdout access is emitted.
+
+## 2026-08-22 - UTokyo Huang graphite-ribbon thesis source boundary
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE`; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE` / `PARTIAL`.
+
+WHAT_IS_ACTUALLY_CLOSED: The open UTokyo repository record, DOI, 110-page PDF, local byte identity, and page-level content boundary are source-locked. The thesis records natural graphite at 1.1% 13C and an isotope-purified comparator at 0.02% 13C, but its deposited content is transport/model context and figures rather than a machine-readable mode-resolved PBTE payload.
+
+WHAT_REMAINS_OPEN: No `C_src(T)` rows in `J m^-3 K^-1`, force-constant/scattering files, source-grade `C_src` uncertainty, Ding TTG material equivalence, base-`Phi` amplitude, or independent `alpha_Phi_K` record is supplied.
+
+DEPENDENCY_UNLOCKED: UTokyo graphite comparator provenance only. No Ding source, alpha, dimensional map, physical Kubo, Core, Gravity, constitutive transport, Galaxy, or external-validation dependency is unlocked.
+
+STATUS: `PASS_HUANG_2022_UTOKYO_GRAPHITE_RIBBONS_BOUNDARY`.
+
+WHAT_CHANGED: Added the archived thesis PDF, source package, content-boundary verifier, machine-readable artifact, full-gate evidence projection, closure-register entry, dependency hash synchronization, and focused regression. No figure digitization, PBTE rerun, fit, threshold change, or holdout access was performed.
+
+EQUATION_OR_MAPPING: The thesis reports a symbolic volumetric `C_v` model and Callaway/BTE transport context; Topic 13 still requires `C_src(T)=sum_mu c_mu(T)` and `Delta_Tq=Delta_u_ph/C_src(T)`. `Delta_Tq=alpha_Phi_K*Delta_Phi` remains uncalibrated.
+
+VERIFICATION: Raw PDF SHA-256 `812ca326070b8036179a0f5fd40addacb88c9bfdf73c2f4c16f0873175a04e6a`; 110 page markers; focused regression `2 passed`; full gate `BLOCKED_OPEN_T13_FULL_BRIDGE` / `PARTIAL` with 9 open blockers; `holdout_consumed=false`; `claim_promotion=false`.
+
+CONTROLLING_BLOCKER: `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing`; the route also confirms that `alpha_Phi_K` is not supplied by the comparator.
+
+NEXT_ACTION: Continue with an authorized Ding numeric package or accepted same-regime PBTE reproduction carrying mode-resolved `C_src`, SI units, uncertainty, convergence, and material/state mapping; keep the thesis outside calibration and holdout paths.
+
+CLAIM_BOUNDARY: This is a source/comparator boundary only. It is not Ding `C_src`, an independent `alpha_Phi_K` calibration, a `Phi`-to-temperature prediction, physical UET transport, external validation, or Full Topic 13 closure.
+
+EVIDENCE_PATHS: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/huang_2022_utokyo_graphite_ribbons_source_package.json`; `docs/core/artifacts/t13_huang_2022_utokyo_graphite_ribbons_boundary_audit.json`; `docs/scripts/audit/audit_topic13_huang_2022_utokyo_graphite_ribbons_boundary.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.

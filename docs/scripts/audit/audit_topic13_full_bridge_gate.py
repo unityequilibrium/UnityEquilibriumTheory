@@ -62,6 +62,7 @@ LANE_KEY_BY_ID["T13_CALORINE_STATE_UNCERTAINTY_DECOMPOSITION"] = "calorine_state
 LANE_KEY_BY_ID["T13_CALORINE_C_SRC_EQUILIBRIUM_CROSSCHECK"] = "calorine_csrc_equilibrium_crosscheck"
 LANE_KEY_BY_ID["T13_FIGSHARE_DFT_FORCE_DATA_BOUNDARY"] = "figshare_dft_force_data_boundary"
 LANE_KEY_BY_ID["T13_HUANG_2023_NIMS_MDR_PAYLOAD_BOUNDARY"] = "huang_2023_nims_mdr_payload_boundary"
+LANE_KEY_BY_ID["T13_HUANG_2022_UTOKYO_GRAPHITE_RIBBONS_BOUNDARY"] = "huang_2022_utokyo_graphite_ribbons_boundary"
 LANE_KEY_BY_ID["T13_CALORINE_PUBLIC_MODEL_VARIANT_BOUNDARY"] = "calorine_public_model_variant_boundary"
 LANE_KEY_BY_ID["T13_CALORINE_NEP1_BACKEND_COMPATIBILITY_BOUNDARY"] = "calorine_nep1_backend_compatibility"
 LANE_KEY_BY_ID["T13_CALORINE_LEGACY_NEP2_BACKEND_PROBE"] = "calorine_legacy_nep2_backend_probe"
@@ -363,6 +364,9 @@ def main() -> int:
     )
     npl_graphite_cp_path, npl_graphite_cp = load(
         "docs/core/artifacts/t13_npl_rsa40_graphite_specific_heat_audit.json"
+    )
+    utokyo_graphite_boundary_path, utokyo_graphite_boundary = load(
+        "docs/core/artifacts/t13_huang_2022_utokyo_graphite_ribbons_boundary_audit.json"
     )
 
     holdout_audit_path, holdout_audit = load(
@@ -959,7 +963,7 @@ def main() -> int:
         artifact["verification_status"]["eos_transport_kms_entropy"].pop(
             "calorine_zenodo_nep_bte_numeric_reproduction", None
         )
-    for lane_key in ("calorine_full_lbte_numerical_stability_boundary", "calorine_isotope_mass_sensitivity", "calorine_state_uncertainty_decomposition", "calorine_csrc_equilibrium_crosscheck", "figshare_dft_force_data_boundary", "huang_2023_nims_mdr_payload_boundary", "calorine_public_model_variant_boundary", "calorine_nep1_backend_compatibility", "calorine_legacy_nep2_backend_probe", "calorine_legacy_nep2_pbte_reproduction", "calorine_model_form_state_spread_comparison", "qh15_graphite_cv_comparator_boundary", "day2012_preferred_thermodynamic_assessment_boundary"):
+    for lane_key in ("calorine_full_lbte_numerical_stability_boundary", "calorine_isotope_mass_sensitivity", "calorine_state_uncertainty_decomposition", "calorine_csrc_equilibrium_crosscheck", "figshare_dft_force_data_boundary", "huang_2023_nims_mdr_payload_boundary", "huang_2022_utokyo_graphite_ribbons_boundary", "calorine_public_model_variant_boundary", "calorine_nep1_backend_compatibility", "calorine_legacy_nep2_backend_probe", "calorine_legacy_nep2_pbte_reproduction", "calorine_model_form_state_spread_comparison", "qh15_graphite_cv_comparator_boundary", "day2012_preferred_thermodynamic_assessment_boundary"):
         lane = discovered_lane_integrations.get(lane_key)
         if lane:
             artifact["verification_status"]["source_package"][lane_key] = lane
@@ -1009,6 +1013,16 @@ def main() -> int:
         ] = npl_graphite_cp_lane
         artifact["verification_status"]["eos_transport_kms_entropy"].pop(
             "npl_graphite_cp_uncertainty_comparator", None
+        )
+    utokyo_graphite_boundary_lane = discovered_lane_integrations.get(
+        "huang_2022_utokyo_graphite_ribbons_boundary"
+    )
+    if utokyo_graphite_boundary_lane:
+        artifact["verification_status"]["source_package"][
+            "huang_2022_utokyo_graphite_ribbons_boundary"
+        ] = utokyo_graphite_boundary_lane
+        artifact["verification_status"]["eos_transport_kms_entropy"].pop(
+            "huang_2022_utokyo_graphite_ribbons_boundary", None
         )
     ding_public_supplementary_lane = discovered_lane_integrations.get(
         "ding_public_supplementary_payload_boundary"
@@ -1663,6 +1677,8 @@ def main() -> int:
         lane_closures.append("public Figshare DFT energy/force archive provenance and PBTE-capability boundary are closed for lane; C_src, force-constant/scattering derivation, alpha, and Ding mapping remain open")
     if discovered_lane_integrations.get("huang_2023_nims_mdr_payload_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("public NIMS MDR Huang 2023 payload boundary is closed for lane; the downloadable archive contains the article PDF only, so numeric PBTE C_src, Ding mapping, and alpha remain open")
+    if discovered_lane_integrations.get("huang_2022_utokyo_graphite_ribbons_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
+        lane_closures.append("UTokyo Huang graphite-ribbon thesis boundary is closed for lane; natural/isotope-purified transport context is source-locked, but no mode-resolved C_src, Ding mapping, or alpha record is present")
     if discovered_lane_integrations.get("calorine_public_model_variant_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("public Calorine C-CX model-variant provenance is closed for lane; model-form spread still requires a same-workflow rerun and is not source-grade uncertainty")
     if discovered_lane_integrations.get("calorine_nep1_backend_compatibility", {}).get("closure_level") == "CLOSED_FOR_LANE":
@@ -2497,6 +2513,25 @@ def main() -> int:
                     "cp_standard_uncertainty_J_per_kg_K": npl_graphite_cp.get("derived_comparator", {}).get("cp_standard_uncertainty_J_per_kg_K"),
                     "cv_emitted": npl_graphite_cp.get("cv_emitted"),
                     "controlling_blocker": npl_graphite_cp.get("controlling_blocker"),
+                },
+            )
+        )
+    utokyo_graphite_boundary_rel = rel(utokyo_graphite_boundary_path)
+    if utokyo_graphite_boundary_rel not in {
+        item.get("path") for item in artifact.get("evidence_artifacts", [])
+        if isinstance(item, dict)
+    }:
+        artifact["evidence_artifacts"].append(
+            evidence(
+                utokyo_graphite_boundary_rel,
+                utokyo_graphite_boundary,
+                {
+                    "status": utokyo_graphite_boundary.get("status"),
+                    "closure_level": utokyo_graphite_boundary.get("major_result", {}).get("closure_level"),
+                    "data_role": utokyo_graphite_boundary.get("major_result", {}).get("data_role"),
+                    "reviewed_page_count": utokyo_graphite_boundary.get("source", {}).get("reviewed_page_count"),
+                    "mode_resolved_csrc_rows": utokyo_graphite_boundary.get("review_boundary", {}).get("payload_capabilities", {}).get("has_mode_resolved_csrc_rows"),
+                    "controlling_blocker": utokyo_graphite_boundary.get("controlling_blocker"),
                 },
             )
         )

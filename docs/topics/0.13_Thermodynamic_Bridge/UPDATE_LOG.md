@@ -3817,3 +3817,29 @@ VERIFICATION: Raw hash, PDF signature, source locators, material identity, units
 CONTROLLING_BLOCKER: `c_v_conversion_density_uncertainty_and_Ding_material_mapping_missing`; globally the independent dimensional/alpha, Ding `C_src`, physical Kubo, EOS/transport/KMS/entropy, and base-Phi mapping blockers remain controlling.
 NEXT_ACTION: Acquire same-regime `alpha_V` and `K_T` or direct volumetric `c_v`/Ding `C_src` evidence, plus an independent base-Phi/SI record; keep this comparator outside calibration and holdout paths.
 CLAIM_BOUNDARY: Source-traceable NPL IG-11 mass-specific `c_p` comparator only. It is not `c_v`, not Ding/HOPG validation, not UET transport, not an alpha calibration, and not Full Topic 13 closure.
+
+### 2026-08-22 - UTokyo Huang graphite-ribbon thesis source boundary (T13-166)
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for `T13_HUANG_2022_UTOKYO_GRAPHITE_RIBBONS_BOUNDARY`; Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+
+WHAT_IS_ACTUALLY_CLOSED: The public UTokyo Repository record, DOI, 110-page thesis PDF, local byte identity, page-level locators, isotope context, and payload-capability boundary are source-locked. The route records natural graphite at 1.1% 13C and an isotope-purified comparator at 0.02% 13C, but does not deposit a machine-readable mode-resolved PBTE payload.
+
+WHAT_REMAINS_OPEN: No `C_src(T)` rows in `J m^-3 K^-1`, force-constant/scattering files, source-grade `C_src` uncertainty, Ding material/state equivalence, base-`Phi` amplitude, or independent `alpha_Phi_K` record is supplied.
+
+DEPENDENCY_UNLOCKED: UTokyo graphite comparator provenance only. No Ding source, alpha, dimensional map, physical Kubo, Core, Gravity, constitutive transport, Galaxy, or external-validation dependency is unlocked.
+
+STATUS: `PASS_HUANG_2022_UTOKYO_GRAPHITE_RIBBONS_BOUNDARY`; full gate `BLOCKED_OPEN_T13_FULL_BRIDGE` / `PARTIAL`; `holdout_consumed=false`; `claim_promotion=false`.
+
+WHAT_CHANGED: Added the source package, audit script, machine-readable artifact, full-gate evidence projection, closure-register/dependency synchronization, data-manifest boundary, and focused regression. The raw PDF remains in the repository's ignored `raw/` workspace; no figure digitization, PBTE rerun, fit, threshold adjustment, or Xie 2026 access was performed.
+
+EQUATION_OR_MAPPING: The thesis reports symbolic volumetric `C_v` and Callaway/BTE transport context; Topic 13 still requires `C_src(T)=sum_mu c_mu(T)` and `Delta_Tq=Delta_u_ph/C_src(T)`. `Delta_Tq=alpha_Phi_K*Delta_Phi` remains uncalibrated.
+
+VERIFICATION: Raw PDF SHA-256 `812ca326070b8036179a0f5fd40addacb88c9bfdf73c2f4c16f0873175a04e6a`; package `6ba0cf690ec7d95d557033cd3a84fbf67d3f951e8439b89bc9eacfc846400c0f`; lane audit `c889c78039b701ceded3b12a96d501e3ea2a7f0eb26f73fd15a9abc00d664494`; full gate `ae6ae400e6e6ad5b26e85d89a02bc139c8381854240b73ebccf40676c7d409bf`; closure register `074c9128023d5663c5f2dc307f8ddbfe64955135ecad519ad39d96986a205ddd`; dependency `846058dacc76c7b440e23c98440a7054455e64951971ad530c30368e3fbe8db5`; focused regression `2 passed`; open blocker groups `9`.
+
+CONTROLLING_BLOCKER: `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing`; this route also confirms that `alpha_Phi_K` is not supplied by the comparator.
+
+NEXT_ACTION: Continue with an authorized Ding numeric package or accepted same-regime PBTE reproduction carrying mode-resolved `C_src`, SI units, uncertainty, convergence, and material/state mapping; keep the thesis outside calibration and holdout paths.
+
+CLAIM_BOUNDARY: Source/comparator boundary only. It is not Ding `C_src`, an independent `alpha_Phi_K` calibration, a `Phi`-to-temperature prediction, physical UET transport, external validation, or Full Topic 13 closure.
+
+EVIDENCE_PATHS: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/huang_2022_utokyo_graphite_ribbons_source_package.json`; `docs/core/artifacts/t13_huang_2022_utokyo_graphite_ribbons_boundary_audit.json`; `docs/scripts/audit/audit_topic13_huang_2022_utokyo_graphite_ribbons_boundary.py`; `docs/scripts/audit/audit_topic13_full_bridge_gate.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/artifacts/uet_major_result_closure_register.json`; `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`.
