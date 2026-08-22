@@ -93,6 +93,8 @@ def test_topic13_full_gate_reports_machine_readable_closure_summary() -> None:
         "current_graphite_alpha_V_K_T_inventory": "CLOSED_AS_NO_GO",
         "independent_harmonic_c_v_comparator_uncertainty_lane": "CLOSED_FOR_LANE",
         "action_beta_to_normalized_beta_identifiability": "CLOSED_AS_NO_GO",
+        "base_phi_to_SI_anchor_identifiability": "CLOSED_AS_NO_GO",
+        "normalized_alpha_Phi_K_scale_identifiability": "CLOSED_AS_NO_GO",
     }
     assert "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing" in gate[
         "major_result"

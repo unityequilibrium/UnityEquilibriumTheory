@@ -1044,3 +1044,29 @@ CONTROLLING_BLOCKER: The source-grade Ding/independent PBTE package and independ
 NEXT_ACTION: Continue only with permitted source/reproduction evidence and preserve the no-fit/no-holdout contract.
 
 CLAIM_BOUNDARY: This is a machine-readable closure projection, not Full Topic 13 closure or external validation.
+
+## T13-159 - Scale identifiability no-go projection
+
+MAJOR_RESULT_CLOSURE: PARTIAL; the full Topic 13 bridge remains BLOCKED_OPEN_T13_FULL_BRIDGE.
+
+WHAT_IS_ACTUALLY_CLOSED: The base-Phi-to-SI-anchor identifiability question and normalized-alpha scale identifiability question are CLOSED_AS_NO_GO under the current normalized/covariant lane assumptions. The result records why a numeric field/energy scale and absolute alpha_Phi_K cannot be recovered without independent calibration.
+
+WHAT_REMAINS_OPEN: Accepted Ding-compatible C_src, independent alpha_Phi_K, beta/SI correspondence, EOS/transport/KMS/entropy, dimensional Phi map, physical Kubo provenance, same-grade alpha_V/K_T, Ding material mapping, and source-grade c_v uncertainty.
+
+DEPENDENCY_UNLOCKED: No downstream dependency is unlocked.
+
+STATUS: BLOCKED_OPEN_T13_FULL_BRIDGE.
+
+WHAT_CHANGED: Added the two resolved-blocker records to the full gate, closure register, and dependency projection; synchronized the current report and tests.
+
+EQUATION_OR_MAPPING: Phi_normalized = Phi_covariant / Phi_scale; y_TTG_UET = Delta_Phi(t) / Delta_Phi(0); Delta_Tq = alpha_Phi_K * Delta_Phi.
+
+VERIFICATION: Gate 88ab78b777c88bc6a4998346391699755e01ccf7c219e2b092d411b26dc3ae0b; register 883094e77897784e4e44d5cd59fc1c6590c9b49ccedee0dbb292d60835e11978; dependency 2ddb7e230ceaf05d16737e914cb0eae96a6352f483b59e0f70f4550066e2d19c; focused closure tests 11 passed; holdout_consumed=false; claim_promotion=false.
+
+CONTROLLING_BLOCKER: No independent paired base-Phi/SI source or derivation currently satisfies the calibration contract; Ding-compatible C_src is also still open.
+
+NEXT_ACTION: Continue only with permitted source/reproduction evidence; preserve the no-fit/no-holdout contract.
+
+CLAIM_BOUNDARY: Structural identifiability no-go only; not numeric alpha, temperature prediction, physical transport, external validation, or Full Topic 13 closure.
+
+EVIDENCE_PATHS: docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json; docs/core/artifacts/t13_phi_si_anchor_public_source_boundary_audit.json; docs/core/artifacts/t13_alpha_phi_k_identifiability_audit.json; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json.

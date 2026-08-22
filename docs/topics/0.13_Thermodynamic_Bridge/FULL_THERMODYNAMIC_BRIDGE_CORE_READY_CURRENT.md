@@ -4,7 +4,7 @@ Machine-readable authority: docs/topics/0.13_Thermodynamic_Bridge/Result/artifac
 
 MAJOR_RESULT_CLOSURE: PARTIAL
 
-WHAT_IS_ACTUALLY_CLOSED: The current wave makes five scoped results explicit in the full-gate projection: IG-210 density uncertainty is CLOSED_FOR_LANE; the captured public Ding OA/supplementary route is CLOSED_AS_NO_GO for numeric C_src(T) acquisition; the screened graphite alpha_V/K_T inventory is CLOSED_AS_NO_GO for a same-state uncertainty-bearing pair; the MP48 harmonic graphite c_v comparator is CLOSED_FOR_LANE with a non-statistical display envelope; and the current action-to-normalized-beta identification question is CLOSED_AS_NO_GO. These are lane/no-go results, not Full Topic 13 closure.
+WHAT_IS_ACTUALLY_CLOSED: The current wave makes seven scoped results explicit in the full-gate projection: IG-210 density uncertainty is CLOSED_FOR_LANE; the captured public Ding OA/supplementary route is CLOSED_AS_NO_GO for numeric C_src(T) acquisition; the screened graphite alpha_V/K_T inventory is CLOSED_AS_NO_GO for a same-state uncertainty-bearing pair; the MP48 harmonic graphite c_v comparator is CLOSED_FOR_LANE with a non-statistical display envelope; the current action-to-normalized-beta identification question is CLOSED_AS_NO_GO; the current base-Phi-to-SI-anchor identification question is CLOSED_AS_NO_GO; and normalized-alpha scale identifiability is CLOSED_AS_NO_GO. These are lane/no-go results, not Full Topic 13 closure.
 
 WHAT_REMAINS_OPEN: The current full-gate blockers are:
 ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing,
@@ -21,7 +21,7 @@ DEPENDENCY_UNLOCKED: The scoped density, comparator, source-boundary, and beta-i
 
 STATUS: BLOCKED_OPEN_T13_FULL_BRIDGE
 
-WHAT_CHANGED: Added major_result.resolved_blockers records for the five scoped results above and synchronized the full gate, closure register, dependency projection, focused tests, current report, update log, and data manifest. The public Ding route still has no accepted numeric C_src(T) payload; no C_v, Ding C_src, alpha_Phi_K, fit, threshold change, or holdout access was introduced.
+WHAT_CHANGED: Added major_result.resolved_blockers records for the seven scoped results above and synchronized the full gate, closure register, dependency projection, focused tests, current report, update log, and data manifest. The public Ding route still has no accepted numeric C_src(T) payload; no C_v, Ding C_src, alpha_Phi_K, fit, threshold change, or holdout access was introduced.
 
 EQUATION_OR_MAPPING:
 y_TTG = Delta_Tq(t) / Delta_Tq(0)
@@ -31,7 +31,7 @@ C_p^V = rho * C_p
 C_v^V = C_p^V - T*alpha_V^2*K_T
 C_src(T) = sum_mu c_mu(T)
 
-VERIFICATION: The full gate reports 180 closed lanes, 16 scoped no-go lanes, and 9 open blockers. The closure regression suite passes 11 tests. holdout_consumed=false and claim_promotion=false. The Ding public source page states that supporting data are available from the corresponding author on reasonable request; the captured public package therefore remains a source-availability boundary, not numeric C_src evidence. [Ding et al. Nature Communications](https://www.nature.com/articles/s41467-021-27907-z)
+VERIFICATION: The full gate reports 180 closed lanes, 16 scoped no-go lanes, and 9 open blockers. The closure regression suite passes 11 tests and asserts all seven resolved results. holdout_consumed=false and claim_promotion=false. The Ding public source page states that supporting data are available from the corresponding author on reasonable request; the captured public package therefore remains a source-availability boundary, not numeric C_src evidence. [Ding et al. Nature Communications](https://www.nature.com/articles/s41467-021-27907-z)
 
 CONTROLLING_BLOCKER: The nearest actionable controller is an authorized Ding numeric package or an accepted same-regime PBTE reproduction with material/state, units, uncertainty, convergence, permission, and hash. In parallel, an independent base-Phi/SI record is required for alpha_Phi_K; no source or derivation currently satisfies that calibration contract.
 
@@ -39,7 +39,7 @@ NEXT_ACTION: Keep the author-request package ready for an authorized external re
 
 CLAIM_BOUNDARY: UET remains a candidate effective theory. C remains a collective coordinate, Phi an effective response, R_gen a derived history trace, and R_obs an observer record. No numeric alpha_Phi_K, Kelvin prediction, physical transport coefficient, external validation, Full Topic 13 closure, or downstream unlock is claimed.
 
-EVIDENCE: full gate docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json SHA-256 429eab63bcef298bc3ebb7fbac9d98f54bbb7285a318cc42cfe1c778e9cdc7dd; closure register docs/core/artifacts/uet_major_result_closure_register.json SHA-256 9923fbc8a0be490a566b91a505230268e13b656d43a19bfb6607f1506f1d8799; dependency gate docs/core/artifacts/uet_major_result_dependency_unlock_gate.json SHA-256 6dbee8cd034169c0d54dc1bf71914037d7c4a1e8bb63395c97e0f93fe6ab7450; gate code SHA-256 c8b58a56c52f6138fd691ebbb8a7bc15ecfc74c6994aad6793264f3947a75f5e; closure test SHA-256 43db97a16a4a1cf0f594fccd560a1d427b59d76ebe5eb49a9e20eef4588f4102.
+EVIDENCE: full gate docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json SHA-256 88ab78b777c88bc6a4998346391699755e01ccf7c219e2b092d411b26dc3ae0b; closure register docs/core/artifacts/uet_major_result_closure_register.json SHA-256 883094e77897784e4e44d5cd59fc1c6590c9b49ccedee0dbb292d60835e11978; dependency gate docs/core/artifacts/uet_major_result_dependency_unlock_gate.json SHA-256 2ddb7e230ceaf05d16737e914cb0eae96a6352f483b59e0f70f4550066e2d19c; gate code SHA-256 8b35c1e3dea8824640dac6762b260aa0f07ac70c61b4140ca0a5e1fac865eb1d; closure test SHA-256 4c6025ec1f41ec7cefc0034ce98376fd8ed6aab7a6ed53fd75da7688d6a7f967.
 
 ## 2026-08-22 - QH-15 Graphite Comparator Boundary (T13-152)
 

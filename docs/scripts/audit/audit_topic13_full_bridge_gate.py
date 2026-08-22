@@ -1840,6 +1840,64 @@ def main() -> int:
             },
         ]
     )
+    artifact["major_result"]["resolved_blockers"].extend(
+        [
+            {
+                "blocker": "base_phi_to_SI_anchor_identifiability",
+                "status": "CLOSED_AS_NO_GO",
+                "resolution_source": {
+                    "major_result_id": "T13_PHI_ENERGY_ANCHOR_IDENTIFIABILITY_NO_GO",
+                    "artifact": "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
+                    "artifact_sha256": sha256(
+                        ROOT / "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json"
+                    ),
+                    "normalization_boundary_artifact": rel(phi_si_anchor_boundary_path),
+                    "normalization_boundary_sha256": sha256(phi_si_anchor_boundary_path),
+                },
+                "what_is_closed": (
+                    "The current normalized and covariant natural-unit lanes retain "
+                    "field and energy rescaling freedom, so they cannot identify a "
+                    "numeric base-Phi SI anchor or e0 without an independent scale contract."
+                ),
+                "what_remains_open": [
+                    "dimensional_phi_to_thermal_observable_map_missing",
+                    "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
+                    "e0_energy_density_scale_not_source_locked",
+                ],
+                "claim_boundary": (
+                    "This closes the current identifiability question as a scoped "
+                    "no-go. It does not reject a future source-locked action scale, "
+                    "derive e0, or emit a Kelvin observable."
+                ),
+            },
+            {
+                "blocker": "normalized_alpha_Phi_K_scale_identifiability",
+                "status": "CLOSED_AS_NO_GO",
+                "resolution_source": {
+                    "major_result_id": "T13_ALPHA_PHI_K_NORMALIZED_SCALE_NO_GO",
+                    "artifact": "docs/core/artifacts/t13_alpha_phi_k_identifiability_audit.json",
+                    "artifact_sha256": sha256(
+                        ROOT / "docs/core/artifacts/t13_alpha_phi_k_identifiability_audit.json"
+                    ),
+                },
+                "what_is_closed": (
+                    "The normalized TTG operator is invariant under a compensating "
+                    "Phi rescaling, so the absolute K per normalized Phi coefficient "
+                    "cannot be identified from the normalized lane alone."
+                ),
+                "what_remains_open": [
+                    "alpha_Phi_K_independent_calibration_missing",
+                    "dimensional_phi_to_thermal_observable_map_missing",
+                    "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
+                ],
+                "claim_boundary": (
+                    "This is a structural scale no-go only. It does not emit, fit, "
+                    "or predict alpha_Phi_K and does not use Landauer, TTG residuals, "
+                    "or the locked holdout."
+                ),
+            },
+        ]
+    )
     closed_lane_records = [
         record
         for _, record in sorted(discovered_lane_integrations.items())
