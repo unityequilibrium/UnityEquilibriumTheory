@@ -134,6 +134,7 @@ LANE_KEY_BY_ID["T13_AIST_GRAPHITE_SOURCE_ROUTE_BOUNDARY"] = "aist_graphite_sourc
 LANE_KEY_BY_ID["T13_NIST_SRM_3600_HEAT_CAPACITY_COMPARATOR_BOUNDARY"] = "nist_srm_3600_heat_capacity_comparator_boundary"
 LANE_KEY_BY_ID["T13_PEREZ_CASTANEDA_HOPG_SPECIFIC_HEAT_SOURCE_BOUNDARY"] = "perez_castaneda_hopg_specific_heat_source_boundary"
 LANE_KEY_BY_ID["T13_QH15_GRAPHITE_CV_COMPARATOR_BOUNDARY"] = "qh15_graphite_cv_comparator_boundary"
+LANE_KEY_BY_ID["T13_FORMAL_THERMODYNAMIC_BRIDGE_INTEGRATION"] = "formal_thermodynamic_bridge_integration"
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -839,6 +840,29 @@ def main() -> int:
         merged.update(discovered)
         merged_lane_integrations[lane_key] = merged
     artifact["verification_status"]["eos_transport_kms_entropy"].update(merged_lane_integrations)
+    formal_bridge_lane = merged_lane_integrations.get("formal_thermodynamic_bridge_integration")
+    if formal_bridge_lane:
+        formal_bridge_path = ROOT / "docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json"
+        if formal_bridge_path.is_file() and not any(
+            item.get("path") == rel(formal_bridge_path)
+            for item in artifact.get("evidence_artifacts", [])
+            if isinstance(item, dict)
+        ):
+            formal_bridge = json.loads(
+                formal_bridge_path.read_text(encoding="utf-8-sig")
+            )
+            artifact["evidence_artifacts"].append(
+                evidence(
+                    rel(formal_bridge_path),
+                    formal_bridge,
+                    {
+                        "status": formal_bridge.get("status"),
+                        "closure_level": formal_bridge.get("major_result", {}).get("closure_level"),
+                        "full_core_unlock": formal_bridge.get("full_core_unlock"),
+                        "controlling_blocker": formal_bridge.get("controlling_blocker"),
+                    },
+                )
+            )
     beta_correspondence_lane = merged_lane_integrations.get(
         "beta_action_normalized_correspondence_no_go"
     )
@@ -1613,6 +1637,8 @@ def main() -> int:
         lane_closures.append("Ding public supplementary payload boundary is closed for lane without promoting PDFs or figures to numeric C_src")
     if discovered_lane_integrations.get("ding_2017_acs_supplementary_payload_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("Ding 2017 ACS supplementary payload boundary is closed for lane without promoting PDF equations or figures to numeric C_src")
+    if discovered_lane_integrations.get("formal_thermodynamic_bridge_integration", {}).get("closure_level") == "CLOSED_FOR_LANE":
+        lane_closures.append("cross-module formal EOS-to-SK/KMS-to-entropy-to-heat-flux bridge is closed for lane; physical Kubo, SI Phi calibration, source C_src, and full Topic 13 remain open")
     closed_items = list(dict.fromkeys([
         *artifact["major_result"].get("what_is_closed", []),
         *lane_closures,

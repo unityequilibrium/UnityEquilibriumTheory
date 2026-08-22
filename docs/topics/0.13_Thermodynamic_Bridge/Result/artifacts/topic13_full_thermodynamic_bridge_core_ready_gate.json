@@ -125,6 +125,7 @@
       "Ding C_src fixed-volume thermodynamic identity is closed for lane; numeric source rows, material/state equivalence, uncertainty, and alpha remain open",
       "Ding public supplementary payload boundary is closed for lane without promoting PDFs or figures to numeric C_src",
       "Ding 2017 ACS supplementary payload boundary is closed for lane without promoting PDF equations or figures to numeric C_src",
+      "cross-module formal EOS-to-SK/KMS-to-entropy-to-heat-flux bridge is closed for lane; physical Kubo, SI Phi calibration, source C_src, and full Topic 13 remain open",
       "action-derived finite-temperature O(2) 1<->3 sunset channel, thermal retarded sign, channel KMS/FDT, and vacuum phase-space normalization are closed for lane; other thermal cuts, full finite-temperature 1PI, unique physical renormalization, Kubo, entropy, SI, alpha, and external validation remain open",
       "vacuum O(2) three-body sunset cut, retarded i0 discontinuity, and spacelike dispersion match are closed for lane; above-threshold principal value, finite-temperature SK/KMS, unique physical renormalization, Kubo, entropy, SI, alpha, and external validation remain open",
       "independent harmonic graphite c_v comparator is closed for lane without calibration promotion",
@@ -351,7 +352,7 @@
       }
     ],
     "closure_summary": {
-      "closed_lane_count": 180,
+      "closed_lane_count": 181,
       "closed_as_no_go_count": 16,
       "closed_lane_result_ids": [
         "T13_AIST_GRAPHITE_SOURCE_ROUTE_BOUNDARY",
@@ -403,6 +404,7 @@
         "T13_FAROOQUI_IG210_VOLUMETRIC_CP_UNCERTAINTY",
         "T13_FIGSHARE_DFT_FORCE_DATA_BOUNDARY",
         "T13_FORMAL_NONCIRCULAR_BRIDGE_BOUNDARY",
+        "T13_FORMAL_THERMODYNAMIC_BRIDGE_INTEGRATION",
         "T13_GATECH_VOLUMETRIC_CP_INDEPENDENCE_NO_GO",
         "T13_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY",
         "T13_GRAPHITE_ELASTIC_BULK_MODULUS_SOURCE",
@@ -75512,6 +75514,172 @@
           "path": "docs/core/artifacts/t13_uet_o2_regularized_continuum_heat_current_audit.json",
           "sha256": "46baa6fdcae6c479fc503c34a56957d5671327af0717191362ddbb8797f47363"
         }
+      },
+      "formal_thermodynamic_bridge_integration": {
+        "status": "PASS_FORMAL_T13_THERMODYNAMIC_BRIDGE_INTEGRATION",
+        "contract_inputs": {
+          "eos": {
+            "branch_id": "T13-THERMAL-EOS-001",
+            "functional": "f_hat=a_C C^2/2+b_C C^4/4+a_Phi(T) Phi^2/2+b_Phi Phi^4/4-g C^2 Phi/2",
+            "mu_C": "a_C C+b_C C^3-g C Phi",
+            "mu_Phi": "a_Phi(T) Phi+b_Phi Phi^3-g C^2/2",
+            "hessian": "H_CC=a_C+3b_C C^2-g Phi; H_PhiPhi=a_Phi(T)+3b_Phi Phi^2; H_CPhi=H_PhiC=-g C",
+            "stability": "H_CC>0, H_PhiPhi>0, det(H)>0",
+            "reciprocity": "partial_Phi(mu_C)=partial_C(mu_Phi)=-g C",
+            "C": "dimensionless collective system-behaviour coordinate; not mass or charge density",
+            "Phi": "dimensionless effective response coordinate; not a particle, information field, temperature, or heat flux",
+            "coefficient_units": "a_C,b_C,a_Phi,b_Phi,g dimensionless in f_hat; beta_T13 dimensionless; da_Phi/dT K^-1",
+            "energy_units": "f=e0*f_hat in J m^-3 only after external e0 is supplied",
+            "entropy_units": "s=-partial_T f in J m^-3 K^-1 only after external e0 is supplied",
+            "R_gen": "derived history trace only; absent from the functional and has no backreaction",
+            "physical_status": "candidate normalized EOS/stability lane only; source coefficient provenance, SI anchor, physical EOS, transport, SK/KMS, entropy production, and dissipative balance remain open"
+          },
+          "sk_kms": {
+            "contract_id": "T13-SK-KMS-ENTROPY-001",
+            "sk_action": "S_SK = integral [Phi_a D_R Phi_r + i Phi_a N Phi_a / 2]",
+            "kms_relation": "N(omega) = coth(beta_th omega / 2) * 2 Im D_R(omega)",
+            "entropy_current": "J_S^mu = s u^mu + q^mu / T",
+            "entropy_production": "nabla_mu J_S^mu = q_perp^2/(kappa T^2) + X_A L^(AB) X_B >= 0",
+            "dissipative_balance": "nabla_mu T_matter^(mu nu) = Q^nu; nabla_mu T_UET^(mu nu) = -Q^nu",
+            "thermodynamic_inverse_temperature": "beta_th = 1/(k_B T)",
+            "beta_T13_relation": "beta_T13 remains a candidate stiffness-temperature coefficient and is not beta_th",
+            "sk_field_meaning": "Phi_r and Phi_a are response/contour copies of effective Phi; Phi_a is not a new physical field",
+            "C_meaning": "C remains a collective system-behaviour coordinate",
+            "R_gen_meaning": "R_gen remains a derived history trace with no backreaction in this contract",
+            "unit_contract": {
+              "T": "K",
+              "beta_th": "J^-1",
+              "q": "W m^-2",
+              "kappa": "W m^-1 K^-1",
+              "J_S": "W m^-2 K^-1",
+              "nabla_J_S": "W m^-3 K^-1",
+              "q_perp_sq": "(W m^-2)^2",
+              "Phi_r_Phi_a": "dimensionless normalized response copies; SI action scale remains external"
+            },
+            "coefficient_policy": "physical Kubo coefficients require source or microscopic matching; synthetic values are verifier-only",
+            "temperature_scope": "formal interface only; finite-temperature normal component remains open",
+            "curved_scope": "flat/local tensor notation only; curved 3+1 solver remains open",
+            "physical_status": "named formal SK/KMS/entropy interface; not physical transport closure"
+          },
+          "covariant_entropy_heat_flux": {
+            "status": "PASS_ACTION_DERIVED_COVARIANT_ENTROPY_HEAT_FLUX_BALANCE_LANE",
+            "equations": {
+              "landau_enthalpy_subtraction": "h=(epsilon+p)/n",
+              "heat_current_source": "b_i=(E-h*q)*(p_i/E)*sqrt(w)",
+              "conservative_projection": "b_i^perp=P*b_i with P preserving charge and four-momentum null modes",
+              "finite_cutoff_response": "K_ab=(b_a^perp)^T*L_cont^+*b_b^perp",
+              "covariant_thermal_force": "X_T^mu=-Delta^(mu nu)*(nabla_nu T+T*a_nu)/T",
+              "covariant_heat_flux": "q^mu=kappa_natural*X_T^mu",
+              "entropy_current": "J_S^mu=s*u^mu+q^mu/T",
+              "entropy_production": "sigma=X_T_mu*q^mu=kappa_natural*X_T_mu*X_T^mu>=0",
+              "kinetic_entropy_balance": "delta_f=L_cont^+*b_a^perp*X^a; delta_f^T*L_cont*delta_f=X^a*K_ab*X^b",
+              "conserved_dissipative_balance": "I_A^T*L_cont*delta_f=0 for charge, energy, and momentum moments"
+            },
+            "unit_contract": {
+              "unit_lane": "natural",
+              "temperature_chemical_potential_energy": "natural energy",
+              "enthalpy_per_charge": "natural energy per signed O(2) charge",
+              "thermal_force": "formal natural-unit projected gradient input; no SI temperature gradient supplied",
+              "kappa_natural": "finite-cutoff natural moment-response coefficient; not W m^-1 K^-1",
+              "heat_flux": "formal natural-unit moment current; not SI heat flux",
+              "entropy_current": "formal natural-unit entropy-current notation",
+              "Phi": "effective response variable; not temperature",
+              "C": "collective system-behaviour coordinate; not mass or charge",
+              "R_gen": "derived history trace; no backreaction",
+              "R_obs": "separate observer record"
+            },
+            "derivation_class": "action-derived finite-temperature quasiparticle EOS plus finite-cutoff conservative collision operator, Landau moment subtraction, pseudoinverse response, and covariant projector lift",
+            "observable": "local-rest-frame formal heat-current response, covariant entropy-production scalar, and conserved charge/energy/momentum dissipative balance",
+            "data_role": "ACTION_DERIVED_INTERNAL_FORMAL_RESPONSE_NO_SOURCE_ROWS_NO_HOLDOUT",
+            "included": {
+              "landau_energy_current_subtraction": true,
+              "charge_energy_momentum_conservation": true,
+              "positive_semidefinite_response_matrix": true,
+              "covariant_entropy_current_lift": true,
+              "entropy_balance_identity": true,
+              "local_lorentz_covariance_check": true
+            },
+            "excluded": {
+              "physical_Kubo_coefficient": true,
+              "SI_heat_flux": true,
+              "finite_temperature_two_fluid_completion": true,
+              "microscopic_SK_action_match": true,
+              "curved_3p1_solver": true,
+              "alpha_Phi_K": true,
+              "TTG_validation": true
+            },
+            "claim_boundary": "This closes only a finite-cutoff action-derived natural-unit moment response and its covariant entropy-current/balance interface on the declared normal quasiparticle lane. It is not a physical Kubo coefficient, SI heat-flux calibration, complete two-fluid transport theory, curved 3+1 result, alpha_Phi_K calibration, TTG validation, or Full Topic 13 closure."
+          }
+        },
+        "checks": {
+          "eos_local_stability": true,
+          "eos_mixed_reciprocity": true,
+          "beta_symbols_remain_separate": true,
+          "kms_noise_witness_nonnegative": true,
+          "onsager_entropy_witness_nonnegative": true,
+          "heat_flux_entropy_production_nonnegative": true,
+          "heat_flux_orthogonal_to_velocity": true,
+          "thermal_force_orthogonal_to_velocity": true,
+          "formal_balance_equation_present": true,
+          "covariant_balance_equation_present": true,
+          "phi_remains_effective_response": true,
+          "c_remains_collective": true,
+          "r_gen_remains_derived": true,
+          "no_physical_kubo_coefficient": true,
+          "no_si_heat_flux": true,
+          "no_alpha_calibration": true,
+          "no_holdout": true
+        },
+        "witness": {
+          "eos_stability": {
+            "h_cc": 1.04,
+            "h_c_phi": -0.06,
+            "h_phi_c": -0.06,
+            "h_phi_phi": 1.392,
+            "determinant": 1.4440799999999998,
+            "mixed_derivatives_equal": true,
+            "positive_h_cc": true,
+            "positive_h_phi_phi": true,
+            "positive_determinant": true,
+            "locally_stable": true
+          },
+          "kms_noise_value": 140.00466663555585,
+          "onsager_entropy_value": 0.15200000000000002,
+          "heat_flux_entropy_production": 0.75,
+          "heat_flux_orthogonality_residual": 0.0,
+          "thermal_force_orthogonality_residual": 0.0
+        },
+        "physical_coefficient_evidence": "BLOCKED_NOT_PROVIDED",
+        "finite_temperature_two_fluid_completion": "BLOCKED",
+        "full_SK_KMS_completion": "INTERFACE_ONLY_NOT_FULL_MATCH",
+        "numeric_transport_coefficients_emitted": false,
+        "numeric_alpha_Phi_K_emitted": false,
+        "parameter_fitting_performed": false,
+        "source_rows_consumed": false,
+        "target_data_used": false,
+        "xie_2026_accessed": false,
+        "full_core_unlock": false,
+        "controlling_blocker": "physical_Kubo_coefficient_record_missing",
+        "next_controller": "Provide an admissible physical Kubo or microscopic transport match and an independent Phi/SI calibration without reading the locked holdout.",
+        "claim_boundary": "This closes only the cross-module formal thermodynamic bridge on the declared normalized/natural-unit lane. It is not a physical charge EOS, SI transport coefficient, alpha_Phi_K calibration, TTG validation, curved 3+1 result, or Full Topic 13 closure.",
+        "major_result_id": "T13_FORMAL_THERMODYNAMIC_BRIDGE_INTEGRATION",
+        "closure_level": "CLOSED_FOR_LANE",
+        "data_role": "INTERNAL_FORMAL_INTEGRATION_NO_SOURCE_ROWS_NO_HOLDOUT",
+        "audit": {
+          "path": "docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json",
+          "sha256": "42842e5e787a8de7007c026bf7c49dbeeeec7f48cabd403000f817e5c4a90c32",
+          "summary": {
+            "status": "PASS_FORMAL_T13_THERMODYNAMIC_BRIDGE_INTEGRATION",
+            "major_result_id": "T13_FORMAL_THERMODYNAMIC_BRIDGE_INTEGRATION",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        },
+        "open_blockers": [
+          "physical_Kubo_coefficient_record_missing",
+          "eos_transport_kms_entropy_completion_missing",
+          "alpha_Phi_K_independent_calibration_missing",
+          "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+        ]
       }
     },
     "dimensional_observable_map": {
@@ -77244,6 +77412,16 @@
       }
     },
     {
+      "path": "docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json",
+      "sha256": "42842e5e787a8de7007c026bf7c49dbeeeec7f48cabd403000f817e5c4a90c32",
+      "summary": {
+        "status": "PASS_FORMAL_T13_THERMODYNAMIC_BRIDGE_INTEGRATION",
+        "closure_level": "CLOSED_FOR_LANE",
+        "full_core_unlock": false,
+        "controlling_blocker": "physical_Kubo_coefficient_record_missing"
+      }
+    },
+    {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/oxford_tgs_figure1_source_package.json",
       "sha256": "39b727c9023ebc7d008e1cef3d32c47e9e2c812bd0030067f9c87d6705a91307",
       "summary": {
@@ -77933,14 +78111,6 @@
       "summary": {
         "status": "PASS_SCOPED_NO_GO_COVARIANT_MATTER_COUPLING_NORMALIZATION",
         "data_role": "INTERNAL_STRUCTURAL_AUDIT_NO_TARGET_OR_HOLDOUT"
-      }
-    },
-    {
-      "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
-      "sha256": "c4e5b4e87794136f07f70ded43f7aa4d86140ca3c725b6ac237c99808a81262d",
-      "summary": {
-        "status": "NO_GO_FOR_DECLARED_CONSERVED_CATTANEO_LOCAL_GRADIENT_CLASS",
-        "proof_scope": "declared local conserved-C Cattaneo equation with mu_C=a_C*C-kappa_C*Laplacian(C)"
       }
     }
   ],

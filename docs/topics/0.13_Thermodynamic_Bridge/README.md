@@ -27,6 +27,8 @@ Source-route repair: the permitted Ding 2022 figure-derived normalized comparato
 Machine-readable current status: docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json.
 
 Current hardening result T13-160: Calorine model/state spread comparison is CLOSED_FOR_LANE and the current full-LBTE route is CLOSED_AS_NO_GO. The full gate remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL with 9 open blocker groups; no Ding C_src, independent alpha_Phi_K, physical Kubo coefficient, holdout access, or downstream dependency is promoted.
+Current hardening result T13-161: the formal EOS-to-SK/KMS-to-entropy-to-heat-flux integration is CLOSED_FOR_LANE. It proves cross-module internal consistency only; physical Kubo coefficients, independent alpha_Phi_K, Ding-compatible C_src, SI mapping, and Full Topic 13 remain open.
+Machine-readable formal bridge artifact: docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json.
 
 <!--
 {

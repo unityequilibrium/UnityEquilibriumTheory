@@ -3689,3 +3689,32 @@ CLAIM_BOUNDARY: These are scoped comparator and numerical-boundary results only.
 EVIDENCE_PATHS: docs/core/artifacts/t13_calorine_model_form_state_spread_comparison_audit.json; docs/core/artifacts/t13_calorine_state_uncertainty_decomposition_audit.json; docs/core/artifacts/t13_calorine_full_lbte_stability_boundary_audit.json; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json.
 
 EVIDENCE_HASHES: gate 203bf8c3d9dd45794fb8d7af1e2520e1457b73d3c683377915c57f4b30952d94; register b3edbff7f1c8db89f61fceaeb74797ee721cd59515f6218b22e1123cca89bdf1; dependency 1a5b61b73e5f5bf2210e030fde5cfc3064eca9ab5f56dc89167e56b752255760; gate code 6775b8e21da388094facc0535d59d7b3818d02a45c8f318aa81f30cbe128eb1a; closure test 09758487eba1083e20bb0865d768bb9814a4294aa8fdc28ff5a285a177789559.
+
+
+## 2026-08-22 - Formal thermodynamic bridge integration (T13-161)
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for T13_FORMAL_THERMODYNAMIC_BRIDGE_INTEGRATION; the full Topic 13 result remains PARTIAL / BLOCKED_OPEN_T13_FULL_BRIDGE.
+
+WHAT_IS_ACTUALLY_CLOSED: The normalized collective-response EOS derivative/stability contract, formal SK/KMS noise relation, Onsager entropy-positivity interface, covariant finite-cutoff heat-flux map, entropy current, and conserved dissipative-balance notation now compose in one deterministic verifier. The shared C, Phi, R_gen, and beta-symbol boundaries are checked across the composition.
+
+WHAT_REMAINS_OPEN: The full gate still has 9 blockers: accepted Ding-compatible C_src, independent alpha_Phi_K, normalized beta/SI correspondence, physical EOS/transport/KMS/entropy completion, dimensional Phi map, physical Kubo provenance, same-grade alpha_V/K_T, Ding material mapping, and source-grade c_v uncertainty.
+
+DEPENDENCY_UNLOCKED: Formal bridge integration only. No physical transport, SI calibration, TTG, Core, Gravity, constitutive-transport, Galaxy, or external-claim dependency is unlocked.
+
+STATUS: BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL; the new formal lane is PASS_FORMAL_T13_THERMODYNAMIC_BRIDGE_INTEGRATION.
+
+WHAT_CHANGED: Added the cross-module deterministic witness, machine-readable major-result artifact, full-gate projection with evidence hash, closure-register discovery, integration regression, and this update-log entry. No source rows, fit, threshold adjustment, numeric alpha_Phi_K, or Xie 2026 access was used.
+
+EQUATION_OR_MAPPING: f_hat(C,Phi,T) EOS with Hessian stability -> S_SK / KMS noise -> J_S^mu=s u^mu+q^mu/T -> q^mu=kappa_natural X_T^mu and conserved dissipative-balance interface. The response remains normalized/natural-unit; SI scale is external.
+
+VERIFICATION: Formal bridge audit returned PASS_FORMAL_T13_THERMODYNAMIC_BRIDGE_INTEGRATION; its focused regression passed 4/4; full gate rerun preserved all 9 open blockers, holdout_consumed=false, and claim_promotion=false. Closure register now includes the new major result.
+
+CONTROLLING_BLOCKER: physical_Kubo_coefficient_record_missing controls the formal-to-physical transport step; independent alpha_Phi_K and Ding-compatible C_src remain separate full-topic blockers.
+
+NEXT_ACTION: Continue with an admissible physical Kubo/microscopic transport record and independent Phi/SI calibration/source package without reading the locked holdout; do not relabel this formal integration as physical closure.
+
+CLAIM_BOUNDARY: This closes only the formal normalized/natural-unit integration lane. It is not a physical charge EOS, SI transport coefficient, independent alpha_Phi_K calibration, TTG validation, curved 3+1 result, Full Topic 13 closure, or global UET closure.
+
+EVIDENCE_PATHS: docs/core/t13_formal_thermodynamic_bridge_integration.py; docs/scripts/audit/audit_topic13_formal_thermodynamic_bridge_integration.py; docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json; docs/scripts/audit/audit_topic13_full_bridge_gate.py; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json; docs/core/artifacts/uet_major_result_closure_register.json; docs/core/artifacts/uet_major_result_dependency_unlock_gate.json.
+
+EVIDENCE_HASHES: integration artifact 42842e5e787a8de7007c026bf7c49dbeeeec7f48cabd403000f817e5c4a90c32; verifier cc45b7fd41d550767b6bae00bcc189234374075f45ae81bfe8dda118391c5c8e; full-gate code d60df8d65dd743ed4b7e504b3576aa77a24f7594c053749312a6ea61b9c38938; full gate 49502ae676d2a3f029fd2cc3c01bce9dc4e2955f10f2f261c1b1d95764aa2323; register dfac0aac672ac54569fa65d4474f49951d654e724d77f3052e5613cae96d95e9; dependency 5b8cc67e93b35f4c68cd3e6f1972eb5f7d0c80c565f4f6f10c6f0dc0a36c97c3.

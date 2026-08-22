@@ -6,7 +6,7 @@
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "b3edbff7f1c8db89f61fceaeb74797ee721cd59515f6218b22e1123cca89bdf1"
+    "sha256": "dfac0aac672ac54569fa65d4474f49951d654e724d77f3052e5613cae96d95e9"
   },
   "decisions": {
     "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY": {
@@ -163,6 +163,16 @@
         "status": "PASS_NAMED_SK_KMS_ENTROPY_INTERFACE_CONTRACT",
         "full_core_unlock": false,
         "closure_level": "CLOSED_FOR_LANE"
+      }
+    },
+    "formal_thermodynamic_bridge_integration": {
+      "path": "docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json",
+      "sha256": "42842e5e787a8de7007c026bf7c49dbeeeec7f48cabd403000f817e5c4a90c32",
+      "summary": {
+        "status": "PASS_FORMAL_T13_THERMODYNAMIC_BRIDGE_INTEGRATION",
+        "major_result_id": "T13_FORMAL_THERMODYNAMIC_BRIDGE_INTEGRATION",
+        "closure_level": "CLOSED_FOR_LANE",
+        "full_core_unlock": false
       }
     },
     "ding_pbte_author_request_package": {
