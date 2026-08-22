@@ -1359,3 +1359,18 @@ CONTROLLING_BLOCKER: `ding_pbte_C_src_numeric_or_accepted_independent_reproducti
 NEXT_ACTION: Obtain an authorized Ding numeric package or accepted same-regime PBTE reproduction with source-grade uncertainty; do not use QH-15 to calibrate Phi.
 CLAIM_BOUNDARY: Comparator evidence only; not Ding `C_src`, not alpha calibration, not temperature prediction, not external validation, and not Full Topic 13 closure.
 EVIDENCE: `docs/core/artifacts/t13_qh15_graphite_transport_boundary_audit.json`.
+
+## T13-153 - Covariant matter-coupling normalization identifiability
+
+MAJOR_RESULT_CLOSURE: `CLOSED_AS_NO_GO` for the declared natural-unit response-matter coupling chart; Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_IS_ACTUALLY_CLOSED: The implemented reciprocal interaction `V_int = -epsilon_nc * response_coupling * delta_phi * (chi_1^2 + chi_2^2) / 2` is invariant under `delta_phi_prime=s delta_phi` and `response_coupling_prime=response_coupling/s`. The response force transforms covariantly, the matter force remains invariant in the fixed matter chart, and the normalized coordinate remains unchanged after `Phi_scale_prime=s Phi_scale`.
+WHAT_REMAINS_OPEN: A source-locked physical field residue or interaction coefficient, a system-specific SI energy-density contract, the base-Phi-to-Phi_E map, independent `alpha_Phi_K`, and the matter-amplitude-to-density `C` reduction remain open.
+DEPENDENCY_UNLOCKED: None. This is an action-coupling identifiability no-go only; it does not unlock the SI thermal bridge, Core curved 3+1, Gravity, transport, or external validation.
+STATUS: `PASS_SCOPED_NO_GO_COVARIANT_MATTER_COUPLING_NORMALIZATION`; full gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE`; claim promotion remains false.
+WHAT_CHANGED: Added a structural action-coupling witness, machine-readable artifact, focused tests, and gate/register/dependency linkage. No target data, fit, Landauer inference, or Xie 2026 holdout access was used.
+EQUATION_OR_MAPPING: `[delta_phi]=[chi_A]=1`, `[epsilon_nc]=0`, `[response_coupling]=1`, `[V_int]=4` in natural units; `response_coupling_prime=response_coupling/s`; raw `alpha_base_prime=alpha_base/s` preserves a raw-field product, while normalized `Phi` requires an external `Phi_scale` contract.
+VERIFICATION: The action, reciprocal derivatives, natural-unit dimension declaration, prior field-normalization no-go, and deterministic rescaling witness all pass. `numeric_e0_emitted=false`, `numeric_alpha_Phi_K_emitted=false`, `target_data_used=false`, `xie_2026_accessed=false`, and `landauer_used_for_derivation=false`.
+CONTROLLING_BLOCKER: `physical_field_normalization_and_interaction_coefficient_provenance_missing`; the full Topic 13 controller remains the missing independent dimensional/alpha anchor together with Ding/source and EOS/transport/KMS/entropy blockers.
+NEXT_ACTION: Source-lock a physical response residue or interaction coefficient with canonical matter normalization and SI units/uncertainty, or obtain an independent non-TTG alpha calibration; do not infer the scale from normalized TTG or Xie 2026.
+CLAIM_BOUNDARY: This closes only a no-go for the current natural-unit action chart. It does not prove that a future physical normalization is impossible, does not identify `Phi` with `C`, temperature, heat flux, entropy, or `R_gen`, and does not close Topic 13.
+EVIDENCE: `docs/core/artifacts/t13_covariant_matter_coupling_normalization_no_go.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/artifacts/uet_major_result_closure_register.json`; `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`.

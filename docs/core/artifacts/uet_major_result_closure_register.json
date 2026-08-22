@@ -183,7 +183,8 @@
         "the declared heat-current cutoff/order sequence is closed as a scoped continuum no-go without extrapolation",
         "independent base-Phi calibration acceptance contract is machine-readable",
         "named beta_T13 finite-temperature response-functional formula and unit contract, independent of Landauer identity reuse",
-        "a named normal-branch compactified regularized continuum heat-current lane passes the unchanged convergence and conservation contract without replacing the failed finite-cutoff baseline"
+        "a named normal-branch compactified regularized continuum heat-current lane passes the unchanged convergence and conservation contract without replacing the failed finite-cutoff baseline",
+        "the covariant response-matter interaction rescaling no-go is explicit; the natural response coupling cannot supply a physical Phi/SI anchor"
       ],
       "equation_or_mapping": {
         "standard": "y_TTG = Delta_Tq(t) / Delta_Tq(0)",
@@ -205,7 +206,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "f24505fd2b5cf4d3d8d6d44fef8178708c67c51fc8524ff65c8e48126b22ca7a",
+          "sha256": "66ece8b7e817b540534eecc4063d50583839eb6b4a787e773c8aa7557aeee849",
           "summary": {
             "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
             "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
@@ -1227,6 +1228,14 @@
             "status": "PASS_SCOPED_OA_NUMERIC_INPUT_AVAILABILITY_NO_GO",
             "scope": "captured official PMC OA distribution only"
           }
+        },
+        {
+          "path": "docs/core/artifacts/t13_covariant_matter_coupling_normalization_no_go.json",
+          "sha256": "bdda0a764af624ffb7b7c8bb04d1cb1bb44539a0159e4ca8ba9b825473e09675",
+          "summary": {
+            "status": "PASS_SCOPED_NO_GO_COVARIANT_MATTER_COUPLING_NORMALIZATION",
+            "data_role": "INTERNAL_STRUCTURAL_AUDIT_NO_TARGET_OR_HOLDOUT"
+          }
         }
       ],
       "verification_status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
@@ -1245,8 +1254,8 @@
       "dependency_unlocked": "Gravity/GR remains blocked until this full bridge and Core curved 3+1 gates pass",
       "claim_boundary": "Full Topic 13 is not Core-ready; current evidence supports normalized/internal controls and constraint exports only. No temperature prediction, external validation, or global UET closure is claimed.",
       "closure_summary": {
-        "closed_lane_count": 175,
-        "closed_as_no_go_count": 15,
+        "closed_lane_count": 176,
+        "closed_as_no_go_count": 16,
         "closed_lane_result_ids": [
           "T13_AIST_GRAPHITE_SOURCE_ROUTE_BOUNDARY",
           "T13_ALPHA_PHI_K_CONDITIONAL_DERIVATION",
@@ -1277,6 +1286,7 @@
           "T13_COVARIANT_ACTION_SI_ANCHOR_ROUTE",
           "T13_COVARIANT_ACTION_SYMBOLIC_SI_CONVERSION_CONTRACT",
           "T13_COVARIANT_FIELD_NORMALIZATION_IDENTIFIABILITY_NO_GO",
+          "T13_COVARIANT_MATTER_COUPLING_NORMALIZATION_IDENTIFIABILITY_NO_GO",
           "T13_COVARIANT_TRANSPORT_IMPLEMENTATION_BOUNDARY",
           "T13_CP_CV_CORRECTION_CONTRACT",
           "T13_DESORBO_1955_CEYLON_GRAPHITE_CP_COMPARATOR",
@@ -2751,6 +2761,58 @@
       ],
       "dependency_unlocked": "none; this closes a field-coordinate no-go and does not unlock the SI thermal bridge, Core curved 3+1, or Gravity",
       "claim_boundary": "The no-go is limited to the current natural-unit covariant scalar implementation and its undeclared link to normalized Topic 13 Phi. It does not prove that a physical field normalization or independent alpha calibration cannot be supplied in a future, source-locked lane."
+    },
+    {
+      "major_result_id": "T13_COVARIANT_MATTER_COUPLING_NORMALIZATION_IDENTIFIABILITY_NO_GO",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "closure_level": "CLOSED_AS_NO_GO",
+      "what_is_closed": [
+        "the reciprocal covariant interaction has an explicit response-field rescaling redundancy",
+        "response_coupling_prime = response_coupling / s preserves the interaction when delta_phi_prime = s delta_phi",
+        "a nonzero epsilon_nc and a canonical matter-field chart do not identify an absolute Phi amplitude or SI response coefficient",
+        "the interaction and response-force relations remain reciprocal under the coordinate reparameterization",
+        "the result is an action-coupling extension of the prior scalar field-normalization no-go, not an alpha calibration"
+      ],
+      "equation_or_mapping": {
+        "interaction": "V_int = -epsilon_nc * response_coupling * delta_phi * (chi_1^2 + chi_2^2) / 2",
+        "natural_dimensions": "[delta_phi]=[chi_A]=1, [epsilon_nc]=0, [response_coupling]=1, [V_int]=4",
+        "field_rescaling": "delta_phi_prime = s delta_phi; response_coupling_prime = response_coupling / s",
+        "response_coefficients": "Z_prime=Z/s^2; m_Phi_sq_prime=m_Phi_sq/s^2; lambda_prime=lambda/s^4; xi_prime=xi/s^2",
+        "matter_chart": "chi_A and matter kinetic/mass/quartic coefficients held fixed in this witness",
+        "thermal_compensation": "alpha_base_prime = alpha_base / s for raw delta_phi; normalized Phi remains invariant only after an external Phi_scale contract",
+        "consequence": "the action and normalized/dimensional products are invariant while the absolute base-Phi scale is unanchored"
+      },
+      "units": {
+        "delta_phi": "natural mass dimension 1",
+        "chi_A": "natural mass dimension 1",
+        "epsilon_nc": "dimensionless natural action parameter",
+        "response_coupling": "natural mass dimension 1; no SI contract",
+        "interaction_energy_density": "natural mass dimension 4",
+        "alpha_Phi_K": "K per normalized Phi; not emitted"
+      },
+      "derivation_class": "algebraic action-coupling field-redefinition identifiability no-go plus implementation/unit audit",
+      "observable": "conditional reciprocal response-matter action interface and normalized thermal-response product",
+      "data_role": "INTERNAL_STRUCTURAL_AUDIT_NO_TARGET_OR_HOLDOUT",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_covariant_matter_coupling_normalization_no_go.json",
+          "sha256": "bdda0a764af624ffb7b7c8bb04d1cb1bb44539a0159e4ca8ba9b825473e09675",
+          "summary": {
+            "status": "PASS_SCOPED_NO_GO_COVARIANT_MATTER_COUPLING_NORMALIZATION",
+            "major_result_id": "T13_COVARIANT_MATTER_COUPLING_NORMALIZATION_IDENTIFIABILITY_NO_GO",
+            "closure_level": "CLOSED_AS_NO_GO"
+          }
+        }
+      ],
+      "verification_status": "PASS_SCOPED_NO_GO_COVARIANT_MATTER_COUPLING_NORMALIZATION",
+      "open_blockers": [
+        "source_locked_physical_field_residue_or_response_amplitude_missing",
+        "physical_interaction_coefficient_provenance_and_SI_contract_missing",
+        "base_Phi_to_Phi_E_energy_anchor_and_independent_alpha_Phi_K_missing",
+        "matter_amplitude_to_density_C_mapping_not_derived"
+      ],
+      "dependency_unlocked": "none; this closes only an action-coupling identifiability question and does not unlock the SI thermal bridge, Core curved 3+1, Gravity, or transport",
+      "claim_boundary": "The no-go is limited to the current natural-unit covariant response/O(2) action and its undeclared thermal mapping. It does not prove that a future source-locked interaction residue, field normalization, or independent alpha calibration cannot be supplied."
     },
     {
       "major_result_id": "T13_COVARIANT_TRANSPORT_IMPLEMENTATION_BOUNDARY",

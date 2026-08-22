@@ -1,0 +1,138 @@
+{
+  "schema_version": "t13-covariant-matter-coupling-normalization-no-go-v1",
+  "artifact": "t13_covariant_matter_coupling_normalization_no_go",
+  "generated_at": "2026-08-22",
+  "status": "PASS_SCOPED_NO_GO_COVARIANT_MATTER_COUPLING_NORMALIZATION",
+  "major_result": {
+    "major_result_id": "T13_COVARIANT_MATTER_COUPLING_NORMALIZATION_IDENTIFIABILITY_NO_GO",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_AS_NO_GO",
+    "what_is_closed": [
+      "the reciprocal covariant interaction has an explicit response-field rescaling redundancy",
+      "response_coupling_prime = response_coupling / s preserves the interaction when delta_phi_prime = s delta_phi",
+      "a nonzero epsilon_nc and a canonical matter-field chart do not identify an absolute Phi amplitude or SI response coefficient",
+      "the interaction and response-force relations remain reciprocal under the coordinate reparameterization",
+      "the result is an action-coupling extension of the prior scalar field-normalization no-go, not an alpha calibration"
+    ],
+    "equation_or_mapping": {
+      "interaction": "V_int = -epsilon_nc * response_coupling * delta_phi * (chi_1^2 + chi_2^2) / 2",
+      "natural_dimensions": "[delta_phi]=[chi_A]=1, [epsilon_nc]=0, [response_coupling]=1, [V_int]=4",
+      "field_rescaling": "delta_phi_prime = s delta_phi; response_coupling_prime = response_coupling / s",
+      "response_coefficients": "Z_prime=Z/s^2; m_Phi_sq_prime=m_Phi_sq/s^2; lambda_prime=lambda/s^4; xi_prime=xi/s^2",
+      "matter_chart": "chi_A and matter kinetic/mass/quartic coefficients held fixed in this witness",
+      "thermal_compensation": "alpha_base_prime = alpha_base / s for raw delta_phi; normalized Phi remains invariant only after an external Phi_scale contract",
+      "consequence": "the action and normalized/dimensional products are invariant while the absolute base-Phi scale is unanchored"
+    },
+    "units": {
+      "delta_phi": "natural mass dimension 1",
+      "chi_A": "natural mass dimension 1",
+      "epsilon_nc": "dimensionless natural action parameter",
+      "response_coupling": "natural mass dimension 1; no SI contract",
+      "interaction_energy_density": "natural mass dimension 4",
+      "alpha_Phi_K": "K per normalized Phi; not emitted"
+    },
+    "derivation_class": "algebraic action-coupling field-redefinition identifiability no-go plus implementation/unit audit",
+    "observable": "conditional reciprocal response-matter action interface and normalized thermal-response product",
+    "data_role": "INTERNAL_STRUCTURAL_AUDIT_NO_TARGET_OR_HOLDOUT",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_covariant_matter.py",
+        "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+      },
+      {
+        "path": "docs/core/uet_covariant_response.py",
+        "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+      },
+      {
+        "path": "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md",
+        "sha256": "d15cc8e345a3df986f7608d48e3152134c4325dfa24e5dc9364b085fe37dd6c9"
+      },
+      {
+        "path": "docs/core/artifacts/covariant_matter_action_contract.json",
+        "sha256": "7c914c9a8c0c9f641df67c9221d670af32ef2464730a7bdd3bfcaa86e078c652"
+      },
+      {
+        "path": "docs/core/artifacts/covariant_matter_formula_audit.json",
+        "sha256": "6a42d7ea49d14293aa5cc2f5abe0b524e9ac0efa0c0bc9fcdeacbbfd371f0cd9"
+      },
+      {
+        "path": "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json",
+        "sha256": "41cda98a01b282fa5c2789ef93ce2f249041550e40763cdcb083658712c564ac"
+      },
+      {
+        "path": "docs/core/artifacts/t13_covariant_matter_coupling_normalization_no_go.json"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_NO_GO_COVARIANT_MATTER_COUPLING_NORMALIZATION",
+    "open_blockers": [
+      "source_locked_physical_field_residue_or_response_amplitude_missing",
+      "physical_interaction_coefficient_provenance_and_SI_contract_missing",
+      "base_Phi_to_Phi_E_energy_anchor_and_independent_alpha_Phi_K_missing",
+      "matter_amplitude_to_density_C_mapping_not_derived"
+    ],
+    "dependency_unlocked": "none; this closes only an action-coupling identifiability question and does not unlock the SI thermal bridge, Core curved 3+1, Gravity, or transport",
+    "claim_boundary": "The no-go is limited to the current natural-unit covariant response/O(2) action and its undeclared thermal mapping. It does not prove that a future source-locked interaction residue, field normalization, or independent alpha calibration cannot be supplied."
+  },
+  "coupling_rescaling_witness": {
+    "field_transformation": "delta_phi_prime = s * delta_phi",
+    "coefficient_transformation": {
+      "Z_Phi_prime": "Z_Phi / s^2",
+      "m_Phi_sq_prime": "m_Phi_sq / s^2",
+      "lambda_Phi_prime": "lambda_Phi / s^4",
+      "xi_Phi_prime": "xi_Phi / s^2",
+      "response_coupling_prime": "response_coupling / s",
+      "epsilon_nc_prime": "epsilon_nc",
+      "matter_coefficients_prime": "matter coefficients unchanged for fixed matter field chart",
+      "Phi_scale_prime": "s * Phi_scale",
+      "alpha_base_prime": "alpha_base / s for a raw delta_phi map",
+      "normalized_alpha": "unchanged when Phi_scale_prime=s Phi_scale, but its SI origin remains open"
+    },
+    "deterministic_witness": {
+      "s": 3.7,
+      "delta_phi": 0.31,
+      "amplitude_sq": 0.16249999999999998,
+      "response_potential": 0.712362042,
+      "transformed_response_potential": 0.712362042,
+      "matter_potential": 0.08038671874999999,
+      "transformed_matter_potential": 0.08038671874999999,
+      "interaction_energy": -0.007455499999999999,
+      "transformed_interaction_energy": -0.0074554999999999995,
+      "response_force": -0.024049999999999995,
+      "transformed_response_force": -0.006499999999999999,
+      "matter_force": -0.09176,
+      "transformed_matter_force": -0.09176000000000001,
+      "normalized_phi": 0.1631578947368421,
+      "transformed_normalized_phi": 0.1631578947368421,
+      "base_thermal_response": 0.744,
+      "transformed_base_thermal_response": 0.7439999999999999
+    },
+    "checks": {
+      "response_potential_invariant": true,
+      "matter_potential_invariant": true,
+      "interaction_energy_invariant": true,
+      "response_force_covariant": true,
+      "matter_force_invariant": true,
+      "normalized_coordinate_invariant": true,
+      "raw_dimensional_response_invariant_under_alpha_compensation": true
+    }
+  },
+  "checks": {
+    "matter_interaction_implementation_present": true,
+    "response_coefficients_are_natural_unit_only": true,
+    "matter_coupling_dimension_declared": true,
+    "spec_declares_reciprocal_interaction": true,
+    "contract_keeps_physical_map_open": true,
+    "formula_audit_keeps_si_gate_open": true,
+    "prior_field_no_go_passes": true,
+    "prior_field_no_go_did_not_use_target": true,
+    "coupling_rescaling_witness_passes": true
+  },
+  "numeric_e0_emitted": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "landauer_used_for_derivation": false,
+  "controlling_blocker": "physical_field_normalization_and_interaction_coefficient_provenance_missing",
+  "next_controller": "Source-lock a physical response residue or interaction coefficient with canonical matter normalization and an SI energy/observable contract, or provide an independent non-TTG alpha_Phi_K calibration record; then derive base Phi-to-Phi_E without Xie 2026.",
+  "claim_boundary": "No numeric field scale, e0, alpha_Phi_K, Kelvin prediction, TTG fit, holdout access, or external validation is produced by this structural audit."
+}

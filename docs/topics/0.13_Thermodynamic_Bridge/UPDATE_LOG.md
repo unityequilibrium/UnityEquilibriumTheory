@@ -1,5 +1,18 @@
 # UPDATE LOG: 0.13_Thermodynamic_Bridge
 
+## 2026-08-22 - Covariant matter-coupling normalization identifiability no-go (T13-153)
+MAJOR_RESULT_CLOSURE: `CLOSED_AS_NO_GO` for the current natural-unit response-matter coupling chart; Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_IS_ACTUALLY_CLOSED: The reciprocal interaction is invariant under the declared response-field rescaling when `response_coupling_prime=response_coupling/s`; the response force is covariant and the matter force is invariant in the fixed matter chart.
+WHAT_REMAINS_OPEN: Physical field residue/interaction-coefficient provenance, SI energy-density contract, base `Phi` to `Phi_E`, independent `alpha_Phi_K`, and matter-amplitude-to-density `C` mapping.
+DEPENDENCY_UNLOCKED: None; full Core, Gravity, transport, and external-validation dependencies remain blocked.
+STATUS: `PASS_SCOPED_NO_GO_COVARIANT_MATTER_COUPLING_NORMALIZATION`; claim promotion remains false.
+WHAT_CHANGED: Added the coupling rescaling audit, artifact, tests, full-gate discovery, dimensional-lane projection, closure-register entry, dependency evidence, and formula-audit record.
+EQUATION_OR_MAPPING: `V_int=-epsilon_nc*response_coupling*delta_phi*(chi_1^2+chi_2^2)/2`; `[response_coupling]=1` in the natural lane; `response_coupling_prime=response_coupling/s`.
+VERIFICATION: Action/dimension/spec checks and the deterministic witness pass; no target, fit, Landauer inference, or Xie 2026 holdout access.
+CONTROLLING_BLOCKER: `physical_field_normalization_and_interaction_coefficient_provenance_missing`; the global Topic 13 controller remains the independent dimensional/alpha anchor and source/thermodynamic closure.
+NEXT_ACTION: Source-lock a physical interaction residue or independent non-TTG alpha record with units and uncertainty; do not relabel the no-go as a calibration.
+CLAIM_BOUNDARY: Scoped no-go only; no numeric `e0`, `alpha_Phi_K`, temperature prediction, or downstream unlock.
+EVIDENCE: `docs/core/artifacts/t13_covariant_matter_coupling_normalization_no_go.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/artifacts/uet_major_result_closure_register.json`; `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`.
 ## 2026-08-17 - Causal baseline/lane status boundary (T13-106)
 MAJOR_RESULT_CLOSURE: CLOSED_AS_NO_GO for the declared conserved-C local-gradient class; named finite-cone and coupled branches remain CLOSED_FOR_LANE; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE/PARTIAL.
 WHAT_IS_ACTUALLY_CLOSED: The full-gate causal record now distinguishes status_role=full_candidate_readiness_gate from lane_status=PASS and lane_closure_level=CLOSED_FOR_LANE. The original baseline remains BLOCKED; the structural causal question is closed only within the recorded no-go scope.

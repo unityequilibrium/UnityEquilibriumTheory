@@ -20,7 +20,7 @@ WHAT_IS_ACTUALLY_CLOSED: The following results are closed only for their
  legacy NEP2 backend probe, which accepts the hash-locked C-CX model without
  producing fc2/fc3 or PBTE output; and (11) the legacy NEP2 candidate PBTE
  reproduction, which produces archived 4x4x2 fc2/fc3 and 8x8x4/10x10x5
- candidate C_src rows with a 0.2294% latest mesh change. The semantic alpha-calibration admission boundary evaluated 11 candidate packages and accepted zero as a paired base-Phi/SI record.
+ candidate C_src rows with a 0.2294% latest mesh change. The semantic alpha-calibration admission boundary evaluated 11 candidate packages and accepted zero as a paired base-Phi/SI record. The covariant response-matter coupling audit now closes the corresponding action-chart identifiability question as a scoped no-go: the natural `response_coupling` rescales with the response field and does not provide an SI anchor.
 These are evidence-producing sub-results, not Full Topic 13 closure.
 
 WHAT_REMAINS_OPEN: The current full-gate blockers are:
@@ -42,7 +42,7 @@ unlocked.
 
 STATUS: `BLOCKED_OPEN_T13_FULL_BRIDGE`
 
-WHAT_CHANGED: The canonical summary is synchronized to the current full gate and major-result register. The Figshare DFT archive audit closes only the public force-data provenance/capability boundary, the Huang 2023 NIMS MDR audit closes only the article-only public payload boundary, the Calorine equilibrium/unit cross-check remains lane-level evidence, the Calorine C-CX audit locks a public model-form input only, the current Calorine 3.5 compatibility audit records the rejection without rewriting source bytes, and the pinned Calorine 1.0 legacy NEP2 probe records model acceptance without PBTE output; the new legacy PBTE lane now runs the fixed 4x4x2 state through 8x8x4 and 10x10x5 q-meshes and archives candidate fc2/fc3 and C_src outputs, while source-grade uncertainty and Ding mapping remain open. The latest alpha admission wave records substantive paired-record checks, with 11 candidates and zero eligible records. C, Phi, R_gen, and R_obs meanings are unchanged, and no threshold, fit, calibration, or holdout policy changed.
+WHAT_CHANGED: The canonical summary is synchronized to the current full gate and major-result register. The Figshare DFT archive audit closes only the public force-data provenance/capability boundary, the Huang 2023 NIMS MDR audit closes only the article-only public payload boundary, the Calorine equilibrium/unit cross-check remains lane-level evidence, the Calorine C-CX audit locks a public model-form input only, the current Calorine 3.5 compatibility audit records the rejection without rewriting source bytes, and the pinned Calorine 1.0 legacy NEP2 probe records model acceptance without PBTE output; the new legacy PBTE lane now runs the fixed 4x4x2 state through 8x8x4 and 10x10x5 q-meshes and archives candidate fc2/fc3 and C_src outputs, while source-grade uncertainty and Ding mapping remain open. The latest alpha admission wave records substantive paired-record checks, with 11 candidates and zero eligible records. The coupling-normalization no-go records action and reciprocal-force invariance without producing a physical coefficient. C, Phi, R_gen, and R_obs meanings are unchanged, and no threshold, fit, calibration, or holdout policy changed.
 
 EQUATION_OR_MAPPING:
 
@@ -92,7 +92,7 @@ C_v^QH15[J m^-3 K^-1] = SpecificC[pg/(um ns^2 K)] * 1.0e9
 r_T = (C_v^QH15 - C_src^Calorine) / C_src^Calorine
 ```
 
-VERIFICATION: QH-15 natural rows and isopure-control rows match the archived hashes and 20-column schema. At 200 K the relative difference to the Calorine latest mesh is `-0.682889%`; at 300 K it is `+0.014257%`. The comparison is source-separated and non-fitting; it is not a Ding acceptance test. The full gate is `175` closed lanes, `15` scoped no-go lanes, `10` open blockers, and downstream unlock `false`.
+VERIFICATION: QH-15 natural rows and isopure-control rows match the archived hashes and 20-column schema. At 200 K the relative difference to the Calorine latest mesh is `-0.682889%`; at 300 K it is `+0.014257%`. The comparison is source-separated and non-fitting; it is not a Ding acceptance test. The full gate is `176` closed lanes, `16` scoped no-go lanes, `10` open blockers, and downstream unlock `false`; the new coupling no-go remains lane-only.
 
 CONTROLLING_BLOCKER: `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing`; `alpha_Phi_K_independent_calibration_missing` remains independently open.
 
