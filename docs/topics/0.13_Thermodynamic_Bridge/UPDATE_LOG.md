@@ -1,3 +1,18 @@
+## 2026-08-22 - Ding PBTE numeric payload acceptance contract
+
+MAJOR_RESULT_CLOSURE: `OPEN` for the payload-acceptance controller; this is not a scientific closure and Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_IS_ACTUALLY_CLOSED: An executable, deterministic contract now distinguishes a missing Ding PBTE payload (`BLOCKED`) from an invalid payload (`FAIL`) and an accepted source input (`PASS`), including row identity, units, source hashes, uncertainty/convergence, `C_src` recomputation, permission, independence, and holdout policy.
+WHAT_REMAINS_OPEN: No permitted numeric Ding `C_src` payload has been received; therefore no numeric `C_src`, base-`Phi` SI anchor, or independent `alpha_Phi_K` is emitted. EOS/transport/KMS/entropy and physical coefficient blockers remain open.
+DEPENDENCY_UNLOCKED: None. The controller is ready for a permitted payload, but it does not unlock the Ding source, dimensional calibration, Full Topic 13, Core, Gravity, or transport dependencies by itself.
+STATUS: `BLOCKED_DING_PBTE_PAYLOAD_NOT_RECEIVED`; canonical full-gate status is unchanged and `claim_promotion=false`.
+WHAT_CHANGED: Added `audit_topic13_ding_pbte_payload.py`, its focused regression, and the blocked machine-readable artifact. The verifier accepts only a source-locked or independent-reproduction payload, recomputes `C_src(T)`, never emits `alpha_Phi_K`, and rejects any Xie 2026 access or target fitting. No replacement data, threshold change, or external request was fabricated or sent.
+EQUATION_OR_MAPPING: `C_src(T)=sum_i w_i*c_mu_i(T)` is checked against reported rows; accepted source data would feed `Delta_Tq=Delta_u_ph/C_src`. The declared measurement map remains `y_TTG=Delta_Tq(t)/Delta_Tq(0)`, `y_TTG^UET=Delta_Phi(t)/Delta_Phi(0)`, and `Delta_Tq=alpha_Phi_K*Delta_Phi`; `alpha_Phi_K` remains un-emitted.
+VERIFICATION: Focused payload and author-request regression passed `11 tests`; default audit returned `BLOCKED_DING_PBTE_PAYLOAD_NOT_RECEIVED`; `holdout_accessed=false`; no full-gate regeneration or claim promotion occurred.
+CONTROLLING_BLOCKER: `author_data_or_independent_reproduction_payload_not_received` controls the Ding source route; `alpha_Phi_K_independent_calibration_missing` remains independently controlling.
+NEXT_ACTION: If project authorization is granted, send the prepared Ding author-data request; on receipt, hash and audit the payload, then integrate it only if the acceptance contract passes. Otherwise retain the blocker and continue independent base-`Phi`/SI calibration research without using Xie 2026.
+CLAIM_BOUNDARY: This wave closes only the evidence-ingestion contract. It is not numeric Ding `C_src`, independent `alpha_Phi_K`, a TTG prediction, external validation, or Full Topic 13 closure.
+EVIDENCE_HASHES: verifier `9e88fbe24f426f7ed5f2a019ad190f10234d4a318e766ae3d239ce86ac131008`; regression `00d5e3ab4757aaa9b23420728db9ae93293d9fa87960e8499e034b6fb4ca2535`; blocked artifact `e1c961aaa66030510ee3f34ef94e6b784777a1d9214bd98eb0f1b23a63b8fc5d`.
+
 ## 2026-08-22 - Ding C_src fixed-volume thermodynamic identity (T13-155)
 
 MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for T13_DING_C_SRC_FIXED_VOLUME_THERMODYNAMIC_IDENTITY; Full Topic 13 remains PARTIAL / BLOCKED_OPEN_T13_FULL_BRIDGE.
