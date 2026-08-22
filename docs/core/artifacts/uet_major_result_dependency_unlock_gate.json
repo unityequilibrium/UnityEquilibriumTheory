@@ -6,7 +6,7 @@
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "074c9128023d5663c5f2dc307f8ddbfe64955135ecad519ad39d96986a205ddd"
+    "sha256": "82c8932282844fe69aa8b7af693f0da3911db7a266149c9c47317c76755039a2"
   },
   "decisions": {
     "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY": {
@@ -75,7 +75,7 @@
   ],
   "claim_boundary": "Dependency decisions only; no downstream result is promoted by a checkpoint or comparator pass.",
   "topic13_partial_evidence": {
-    "register_sha256": "074c9128023d5663c5f2dc307f8ddbfe64955135ecad519ad39d96986a205ddd",
+    "register_sha256": "82c8932282844fe69aa8b7af693f0da3911db7a266149c9c47317c76755039a2",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",
@@ -531,6 +531,21 @@
           "summary": {
             "status": "PASS_MP48_FORCE_CONSTANT_C_SRC_MESH_CONVERGENCE",
             "major_result_id": "T13_MP48_FORCE_CONSTANT_C_SRC_MESH_CONVERGENCE",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      },
+      "mp48_ding_csrc_response_mapping": {
+        "major_result_id": "T13_MP48_DING_C_SRC_MODE_SUM_RESPONSE_MAPPING",
+        "closure_level": "CLOSED_FOR_LANE",
+        "status": "PASS_T13_DING_C_SRC_MODE_SUM_RESPONSE_MAPPING",
+        "full_core_unlock": false,
+        "audit": {
+          "path": "docs/core/artifacts/t13_mp48_ding_csrc_response_mapping_audit.json",
+          "sha256": "1deefbb6ebbed62345db2063612f9d8c172902dcb93068b800e579455e0d297c",
+          "summary": {
+            "status": "PASS_T13_DING_C_SRC_MODE_SUM_RESPONSE_MAPPING",
+            "major_result_id": "T13_MP48_DING_C_SRC_MODE_SUM_RESPONSE_MAPPING",
             "closure_level": "CLOSED_FOR_LANE"
           }
         }

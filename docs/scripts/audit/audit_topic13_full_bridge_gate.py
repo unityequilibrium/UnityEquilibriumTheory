@@ -23,6 +23,7 @@ LANE_KEY_BY_ID["T13_KIM_2018_GRAPHITE_GREEN_KUBO_EXTERNAL_INPUT"] = "kim_2018_gr
 LANE_KEY_BY_ID["T13_DING_2017_ACS_SUPPLEMENTARY_PAYLOAD_BOUNDARY"] = "ding_2017_acs_supplementary_payload_boundary"
 LANE_KEY_BY_ID["T13_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY"] = "ding_experimental_heating_input_boundary"
 LANE_KEY_BY_ID["T13_DING_C_SRC_FIXED_VOLUME_THERMODYNAMIC_IDENTITY"] = "ding_c_src_fixed_volume_identity"
+LANE_KEY_BY_ID["T13_MP48_DING_C_SRC_MODE_SUM_RESPONSE_MAPPING"] = "mp48_ding_csrc_response_mapping"
 LANE_KEY_BY_ID["T13_HUBERMAN_2019_PUBLIC_PBTE_BOUNDARY"] = "huberman_2019_public_pbte_boundary"
 LANE_KEY_BY_ID["T13_IAEA_GR280_SAME_STATE_CP_COMPARATOR"] = "iaea_gr280_same_state_cp_comparator"
 LANE_KEY_BY_ID["T13_ZENODO_HITRACE_ISOTROPIC_GRAPHITE_CP_COMPARATOR"] = "zenodo_hitrace_isotropic_graphite_cp_comparator"
@@ -1161,6 +1162,16 @@ def main() -> int:
         artifact["verification_status"]["eos_transport_kms_entropy"].pop(
             "mp48_force_constant_csrc_mesh_convergence", None
         )
+    mp48_ding_mapping_lane = discovered_lane_integrations.get(
+        "mp48_ding_csrc_response_mapping"
+    )
+    if mp48_ding_mapping_lane:
+        artifact["verification_status"]["source_package"][
+            "mp48_ding_csrc_response_mapping"
+        ] = mp48_ding_mapping_lane
+        artifact["verification_status"]["eos_transport_kms_entropy"].pop(
+            "mp48_ding_csrc_response_mapping", None
+        )
     huang_supplementary_lane = discovered_lane_integrations.get(
         "huang_2023_supplementary_payload_boundary"
     )
@@ -1498,6 +1509,8 @@ def main() -> int:
         lane_closures.append("MP48 force-constant harmonic reconstruction is closed for lane without Ding-source, transport, or alpha promotion")
     if discovered_lane_integrations.get("mp48_force_constant_csrc_mesh_convergence", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("MP48 force-constant C_src mesh convergence is closed for the independent harmonic lane; the source remains unaccepted for Ding closure")
+    if discovered_lane_integrations.get("mp48_ding_csrc_response_mapping", {}).get("closure_level") == "CLOSED_FOR_LANE":
+        lane_closures.append("MP48 mode-sum to Ding C_src response mapping is closed for lane; material equivalence, source-grade uncertainty, route-wide convergence, and alpha remain open")
     if discovered_lane_integrations.get("huang_2023_supplementary_payload_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("Huang 2023 graphite supplementary boundary is closed for lane without numeric PBTE, Ding C_src, or alpha promotion")
     if discovered_lane_integrations.get("huberman_2019_public_pbte_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
@@ -2157,6 +2170,29 @@ def main() -> int:
                     "numeric_rows_emitted": oxford_numeric.get("numeric_rows_emitted"),
                     "numeric_alpha_Phi_K_emitted": oxford_numeric.get("numeric_alpha_Phi_K_emitted"),
                     "controlling_blocker": oxford_numeric.get("controlling_blocker"),
+                },
+            )
+        )
+    mp48_ding_mapping_path = ROOT / "docs/core/artifacts/t13_mp48_ding_csrc_response_mapping_audit.json"
+    if mp48_ding_mapping_path.is_file() and not any(
+        item.get("path") == rel(mp48_ding_mapping_path)
+        for item in artifact.get("evidence_artifacts", [])
+        if isinstance(item, dict)
+    ):
+        mp48_ding_mapping = json.loads(
+            mp48_ding_mapping_path.read_text(encoding="utf-8-sig")
+        )
+        artifact["evidence_artifacts"].append(
+            evidence(
+                rel(mp48_ding_mapping_path),
+                mp48_ding_mapping,
+                {
+                    "status": mp48_ding_mapping.get("status"),
+                    "closure_level": mp48_ding_mapping.get("major_result", {}).get("closure_level"),
+                    "data_role": mp48_ding_mapping.get("major_result", {}).get("data_role"),
+                    "accepted_for_full_topic13": mp48_ding_mapping.get("mapping_contract", {}).get("accepted_for_full_topic13"),
+                    "numeric_alpha_Phi_K_emitted": mp48_ding_mapping.get("numeric_alpha_Phi_K_emitted"),
+                    "controlling_blocker": mp48_ding_mapping.get("controlling_blocker"),
                 },
             )
         )

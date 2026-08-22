@@ -1,3 +1,18 @@
+## 2026-08-22 - MP48 Ding C_src mode-sum response mapping wave
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for `T13_MP48_DING_C_SRC_MODE_SUM_RESPONSE_MAPPING`; the Full Topic 13 result remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_IS_ACTUALLY_CLOSED: The Ding source text locator for mode-specific heat capacity and the summation over phonon modes is now mapped to the independent MP48 force-constant mode sum. Four explicit rows at 100, 200, 250, and 300 K are converted to `C_src^vol` in `J m^-3 K^-1` using the locked primitive-cell volume anchor.
+WHAT_REMAINS_OPEN: Ding-compatible PBTE numeric `C_src` or an accepted same-regime independent reproduction, material/state equivalence, route-wide convergence, source-grade uncertainty, base-Phi energy anchor, independent `alpha_Phi_K`, beta/SI correspondence, EOS, transport, KMS, entropy current, and dissipative balance.
+DEPENDENCY_UNLOCKED: Only the named response-mapping lane. No Ding-source, alpha, Full Topic 13, Core, Gravity, constitutive-transport, Galaxy, or external-validation dependency is unlocked.
+STATUS: `PASS_T13_DING_C_SRC_MODE_SUM_RESPONSE_MAPPING`; full gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE`; `claim_promotion=false`.
+WHAT_CHANGED: Added the source-locator and unit-conversion verifier, machine-readable mapping artifact, focused regression, full-gate projection, closure-register entry, dependency evidence, manifest record, and update-log record. No target fit, alpha calibration, threshold change, synthetic replacement, Landauer inference, or holdout access was introduced.
+EQUATION_OR_MAPPING: `C_src^mol(T)=N_A/N_q * sum_(q,mu)c_mu(q,T)`; `C_src^vol(T)=C_src^mol(T)/V_mol,cell`; `Delta_Tq=Delta_u_ph/C_src^vol`. This is a standard harmonic response mapping only and is not a Ding PBTE acceptance or a `Phi` map.
+VERIFICATION: Mapping artifact and hash checks passed; four finite positive SI rows were emitted; focused regression `1 passed`; full gate regenerated with 9 open blockers, `claim_promotion=false`, and downstream unlock `false`; holdout/fit guards remain false.
+CONTROLLING_BLOCKER: `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing`; independent `alpha_Phi_K` and the dimensional anchor remain open.
+NEXT_ACTION: Obtain an authorized Ding-compatible numeric package or accepted same-regime PBTE reproduction with source identity, mode-resolved rows, SI units, uncertainty, convergence, and material/state mapping; keep the independent base-Phi/SI calibration separate.
+CLAIM_BOUNDARY: This closes the response-mapping contract for an independent harmonic comparator only. It is not Ding `C_src`, a same-regime material validation, `alpha_Phi_K`, a `Phi`-to-temperature prediction, external validation, or Full Topic 13 closure.
+EVIDENCE_HASHES: artifact `1deefbb6ebbed62345db2063612f9d8c172902dcb93068b800e579455e0d297c`; full gate `2cd42d31f9055f8f6ba14a969b867a6294fed3d94fa287f7c286eb02a2008bb7`; closure register `82c8932282844fe69aa8b7af693f0da3911db7a266149c9c47317c76755039a2`; dependency gate `236c48fad1e99eeb519358952a21092193bcf89d6cd271791b26d5ac703e68a9`.
+
 ## 2026-08-22 - Ding PBTE payload controller full-gate projection
 
 MAJOR_RESULT_CLOSURE: `OPEN` for the evidence-ingestion controller; the canonical Full Topic 13 result remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.

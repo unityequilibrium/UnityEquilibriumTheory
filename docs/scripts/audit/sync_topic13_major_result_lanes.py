@@ -15,6 +15,7 @@ LANES = (
     ("T13_GRAPHITE_ELASTIC_BULK_MODULUS_SOURCE", "graphite_elastic_bulk_modulus_source"),
     ("T13_GRAPHITE_ISOTHERMAL_KT_SOURCE", "graphite_isothermal_kt_source"),
     ("T13_MP48_FORCE_CONSTANT_C_SRC_MESH_CONVERGENCE", "mp48_force_constant_csrc_mesh_convergence"),
+    ("T13_MP48_DING_C_SRC_MODE_SUM_RESPONSE_MAPPING", "mp48_ding_csrc_response_mapping"),
     ("T13_MP48_TEMPERATURE_VOLUME_UNCERTAINTY_BOUNDARY", "mp48_temperature_volume_uncertainty_boundary"),
     ("T13_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY", "graphite_alpha_v_kt_matched_source_boundary"),
     ("T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY_BOUNDARY", "ding_alternate_public_dataset_discovery_boundary"),

@@ -1212,3 +1212,8 @@ NEXT_ACTION: Continue with an authorized Ding numeric package or accepted same-r
 CLAIM_BOUNDARY: This is a source/comparator boundary only. It is not Ding `C_src`, an independent `alpha_Phi_K` calibration, a `Phi`-to-temperature prediction, physical UET transport, external validation, or Full Topic 13 closure.
 
 EVIDENCE_PATHS: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/huang_2022_utokyo_graphite_ribbons_source_package.json`; `docs/core/artifacts/t13_huang_2022_utokyo_graphite_ribbons_boundary_audit.json`; `docs/scripts/audit/audit_topic13_huang_2022_utokyo_graphite_ribbons_boundary.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.
+## MP48 Ding C_src Mode-Sum Response Mapping (2026-08-22)
+
+The source-located Ding 2022 notation identifies mode-specific heat capacity and a sum over all phonon modes. The lane maps that notation to the independent MP48 force-constant mode sum without accepting MP48 as Ding PBTE data. The artifact is `docs/core/artifacts/t13_mp48_ding_csrc_response_mapping_audit.json` with SHA-256 `1deefbb6ebbed62345db2063612f9d8c172902dcb93068b800e579455e0d297c`.
+
+The selected `35x35x14` mesh emits four explicit rows at 100, 200, 250, and 300 K. The conversion is `C_src^vol=C_src^mol/V_mol,cell` in `J m^-3 K^-1`, using the source-package volume anchor. This closes only the standard response-mapping lane. Ding material/state equivalence, route-wide convergence, source-grade uncertainty, numeric Ding PBTE `C_src`, base-Phi energy anchoring, and independent `alpha_Phi_K` remain open. No fit or holdout access occurred.
