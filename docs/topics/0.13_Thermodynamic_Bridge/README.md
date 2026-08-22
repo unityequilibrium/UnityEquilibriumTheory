@@ -306,3 +306,18 @@ NEXT_ACTION: Obtain an authorized author package or accepted same-regime PBTE re
 CLAIM_BOUNDARY: This closes only the page-level public supplementary content boundary. It does not create numeric C_src, calibrate alpha_Phi_K, produce a temperature prediction, validate UET externally, or close Full Topic 13.
 
 EVIDENCE: docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_supplementary_content_review_package.json; docs/core/artifacts/t13_ding_supplementary_content_review_audit.json; docs/scripts/audit/audit_topic13_ding_supplementary_content_review.py; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json.
+
+## Current Major Result: T13-172 flat thermodynamic component closure (2026-08-23)
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for `T13_FLAT_THERMODYNAMIC_BRIDGE_COMPONENTS`; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE` / `PARTIAL`.
+WHAT_IS_ACTUALLY_CLOSED: Formal flat/natural-unit normal EOS, SK/KMS, entropy-current, heat-flux balance, and a source-locked standard-physics Green-Kubo comparator are integrated with explicit ontology and claim boundaries.
+WHAT_REMAINS_OPEN: Physical UET Kubo provenance, independent `alpha_Phi_K`, Phi/SI observable mapping, Ding-compatible `C_src`, material/state mapping, source-grade uncertainty, and Full Topic 13 closure.
+DEPENDENCY_UNLOCKED: Flat component integration only. Curved 3+1 remains a later Core result; Gravity, full constitutive transport, Galaxy, and external validation remain blocked.
+STATUS: `PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT`; `claim_promotion=false`; `full_core_unlock=false`; `xie_2026_accessed=false`.
+WHAT_CHANGED: Added the component gate and projected its lane-level closure into the full gate, closure matrix, register, and dependency evidence. The full gate now retains `physical_Kubo_coefficient_record_missing` as a separate controller instead of hiding it inside the legacy curved transport contract.
+EQUATION_OR_MAPPING: `q^mu=kappa_natural X_T^mu`; `J_S^mu=s u^mu+q^mu/T`; `sigma>=0`; external Kim conductivity remains a comparator; `Delta_Tq=alpha_Phi_K*Delta_Phi` remains uncalibrated.
+VERIFICATION: Component artifact and provenance checks pass; focused integration suite reports 19 passed; full gate reports 8 open blocker groups and downstream unlock remains false.
+CONTROLLING_BLOCKER: `physical_Kubo_coefficient_record_missing`; `alpha_Phi_K_independent_calibration_missing` remains the nearest dimensional controller.
+NEXT_ACTION: Obtain a state-matched UET response-space/Kubo record and an independent Phi/SI anchor without reading Xie 2026; continue authorized Ding `C_src` acquisition separately.
+CLAIM_BOUNDARY: Component closure only. No temperature prediction, alpha calibration, physical UET transport proof, curved 3+1 result, external validation, or global UET closure is claimed.
+Machine-readable artifact: `docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json`.

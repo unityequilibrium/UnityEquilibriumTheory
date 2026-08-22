@@ -52,6 +52,11 @@ def test_topic13_closure_matrix_reports_major_requirements_without_promotion() -
     assert alpha["closure_level"] == "OPEN"
     assert alpha["gate_status"] == "BLOCKED"
     assert "alpha_Phi_K" in alpha["what_remains_open"]
+    transport = next(item for item in matrix["requirements"] if item["requirement_id"] == "covariant_thermal_transport")
+    assert transport["gate_status"] == "BLOCKED"
+    assert transport["component_lane_status"] == "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT"
+    assert transport["component_lane_closure_level"] == "CLOSED_FOR_LANE"
+    assert transport["component_lane_controlling_blocker"] == "physical_Kubo_coefficient_record_missing"
 
 
 def test_topic13_closure_matrix_is_projected_into_register_and_dependency_gate() -> None:

@@ -109,12 +109,13 @@ REQUIREMENTS: tuple[dict[str, Any], ...] = (
         "gate_key": "eos_transport_kms_entropy",
         "closure_level": "PARTIAL",
         "what_is_closed": (
-            "Finite-cutoff natural-unit heat-current, entropy, and conservation "
-            "interfaces are connected."
+            "The Topic 13 flat component gate closes the formal EOS, SK/KMS, "
+            "entropy-current, and heat-flux interfaces, with a source-locked "
+            "standard transport comparator kept separate."
         ),
         "what_remains_open": (
-            "A physical Kubo coefficient, complete finite-temperature normal/two-fluid "
-            "sector, and stable continuum promotion are missing."
+            "A physical UET Kubo coefficient, SI Phi mapping, alpha_Phi_K, Ding source "
+            "acceptance, and curved 3+1/Core transport remain open."
         ),
         "dependency_unlocked": "Formal/natural transport interface only.",
     },
@@ -124,12 +125,12 @@ REQUIREMENTS: tuple[dict[str, Any], ...] = (
         "gate_key": "eos_transport_kms_entropy",
         "closure_level": "PARTIAL",
         "what_is_closed": (
-            "The formal local SK/KMS/FDT interface and finite-cutoff action-matched "
-            "lane are explicit."
+            "The formal local SK/KMS/FDT interface is closed in the flat component "
+            "lane and is linked to the entropy/transport boundary."
         ),
         "what_remains_open": (
-            "Microscopic interacting all-channel matching and physical transport "
-            "provenance remain open."
+            "Microscopic UET matching, physical transport provenance, SI Phi mapping, "
+            "and curved 3+1 remain open."
         ),
         "dependency_unlocked": "Formal SK/KMS interface only.",
     },
@@ -139,12 +140,12 @@ REQUIREMENTS: tuple[dict[str, Any], ...] = (
         "gate_key": "eos_transport_kms_entropy",
         "closure_level": "PARTIAL",
         "what_is_closed": (
-            "The formal entropy-current positivity and conserved matter/UET "
-            "exchange interface are recorded."
+            "The formal entropy-current positivity, heat-flux response, and conserved "
+            "matter/UET exchange interface are closed in the flat component lane."
         ),
         "what_remains_open": (
-            "Physical coefficient matching, SI normalization, and curved 3+1 "
-            "transport closure remain open."
+            "Physical UET coefficient matching, SI normalization, Ding source linkage, "
+            "and curved 3+1 transport closure remain open."
         ),
         "dependency_unlocked": "Formal balance interface only.",
     },
@@ -226,6 +227,9 @@ def build_requirement(gate: dict[str, Any], spec: dict[str, Any]) -> dict[str, A
     section = gate.get("verification_status", {}).get(spec["gate_key"], {})
     if not isinstance(section, dict):
         section = {"status": str(section)}
+    component = section.get("topic13_flat_thermodynamic_bridge_components", {})
+    if not isinstance(component, dict):
+        component = {}
     closure_level = spec["closure_level"]
     if spec["requirement_id"] == "causal_structure":
         closure_level = section.get("structural_question_closure", closure_level)
@@ -236,6 +240,9 @@ def build_requirement(gate: dict[str, Any], spec: dict[str, Any]) -> dict[str, A
         "gate_controlling_blocker": section.get("controlling_blocker"),
         "gate_lane_status": section.get("lane_status"),
         "gate_lane_closure_level": section.get("lane_closure_level"),
+        "component_lane_status": component.get("status"),
+        "component_lane_closure_level": component.get("closure_level"),
+        "component_lane_controlling_blocker": component.get("controlling_blocker"),
         "evidence_artifacts": status_evidence(section),
     }
 

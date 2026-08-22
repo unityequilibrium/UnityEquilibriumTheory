@@ -6,7 +6,7 @@
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "0c323d768a3c932fb19121382534a4d7bd3b8ce6b47865240657aca192ce42db"
+    "sha256": "34001942227afe39285498e6b3e0be11effaff2f7d34202a1750bbad914d819b"
   },
   "decisions": {
     "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY": {
@@ -75,7 +75,7 @@
   ],
   "claim_boundary": "Dependency decisions only; no downstream result is promoted by a checkpoint or comparator pass.",
   "topic13_partial_evidence": {
-    "register_sha256": "0c323d768a3c932fb19121382534a4d7bd3b8ce6b47865240657aca192ce42db",
+    "register_sha256": "34001942227afe39285498e6b3e0be11effaff2f7d34202a1750bbad914d819b",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",
@@ -2172,9 +2172,20 @@
     },
     "closure_matrix": {
       "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-      "sha256": "bad1b418a39858a479046ef3481194182481ac5784100ffb085dbdb52ce4684a",
+      "sha256": "458837e0b1c9c06f3c46b92877e8c4545bdd0e375c05ffe013d525294f62ec14",
       "full_core_unlock": false,
       "status": "BLOCKED_OPEN_T13_FULL_BRIDGE"
+    },
+    "topic13_flat_thermodynamic_bridge_components": {
+      "path": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+      "sha256": "eaafd852fdf978efcefe8bf13900a96bf7d57e89b66c09cf1f4e65d3f10ba105",
+      "summary": {
+        "status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT",
+        "closure_level": "CLOSED_FOR_LANE",
+        "full_core_unlock": false,
+        "controlling_blocker": "physical_Kubo_coefficient_record_missing"
+      },
+      "full_core_unlock": false
     }
   }
 }

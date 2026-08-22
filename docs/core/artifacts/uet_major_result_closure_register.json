@@ -217,7 +217,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "50725cfa5aad415002c17a5d7201cb91dd5fee8be6f5bb18d529ad9000d9cfb5",
+          "sha256": "9e87757f70f9e4b4f24481db8b18d3adbf2c713c90a26a97ffa9a8e8215daafd",
           "summary": {
             "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
             "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
@@ -1396,6 +1396,17 @@
             "max_kappa_relative_change": 0.09081201116807297,
             "controlling_blocker": "ding_C_src_mode_state_and_source_grade_uncertainty_missing"
           }
+        },
+        {
+          "path": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+          "sha256": "eaafd852fdf978efcefe8bf13900a96bf7d57e89b66c09cf1f4e65d3f10ba105",
+          "summary": {
+            "status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT",
+            "major_result_id": "T13_FLAT_THERMODYNAMIC_BRIDGE_COMPONENTS",
+            "closure_level": "CLOSED_FOR_LANE",
+            "physical_coefficient_evidence": "EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_UET_MAPPING",
+            "full_core_unlock": false
+          }
         }
       ],
       "verification_status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
@@ -1403,9 +1414,8 @@
         "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
         "alpha_Phi_K_independent_calibration_missing",
         "normalized_beta_and_SI_scale_correspondence_missing",
-        "eos_transport_kms_entropy_completion_missing",
-        "dimensional_phi_to_thermal_observable_map_missing",
         "physical_Kubo_coefficient_record_missing",
+        "dimensional_phi_to_thermal_observable_map_missing",
         "same_grade_alpha_V_and_K_T_missing",
         "material_regime_mapping_to_TTG_not_closed",
         "c_v_source_uncertainty_not_closed"
@@ -1595,7 +1605,7 @@
       "dependency_unlocked": "Gravity/GR remains blocked until this full bridge and Core curved 3+1 gates pass",
       "claim_boundary": "Full Topic 13 is not Core-ready; current evidence supports normalized/internal controls and constraint exports only. No temperature prediction, external validation, or global UET closure is claimed.",
       "closure_summary": {
-        "closed_lane_count": 188,
+        "closed_lane_count": 189,
         "closed_as_no_go_count": 16,
         "closed_lane_result_ids": [
           "T13_AIST_GRAPHITE_SOURCE_ROUTE_BOUNDARY",
@@ -1697,6 +1707,7 @@
           "T13_STANDARD_O2_FINITE_TEMPERATURE_NORMAL_COMPARATOR",
           "T13_THERMAL_BRIDGE_SCALE_DEPENDENCY_NO_GO",
           "T13_THERMAL_RESPONSE_BETA_CONTRACT",
+          "T13_FLAT_THERMODYNAMIC_BRIDGE_COMPONENTS",
           "T13_TPG_ANISOTROPIC_ALPHA_V_COMPARATOR",
           "T13_TRANSPORT_COEFFICIENT_IDENTIFIABILITY_NO_GO",
           "T13_TRANSPORT_KMS_ENTROPY_STATUS_BOUNDARY",
@@ -1787,7 +1798,7 @@
           "T13_ZENODO_HITRACE_IG210_ALPHA_L_COMPARATOR",
           "T13_ZENODO_HITRACE_ISOTROPIC_GRAPHITE_CP_COMPARATOR"
         ],
-        "open_blocker_count": 9,
+        "open_blocker_count": 8,
         "open_blocker_groups": {
           "source_and_material": [
             "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
@@ -1801,7 +1812,6 @@
             "dimensional_phi_to_thermal_observable_map_missing"
           ],
           "thermodynamic_transport": [
-            "eos_transport_kms_entropy_completion_missing",
             "physical_Kubo_coefficient_record_missing"
           ],
           "unclassified": []
@@ -1811,11 +1821,11 @@
       },
       "closure_matrix": {
         "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-        "sha256": "bad1b418a39858a479046ef3481194182481ac5784100ffb085dbdb52ce4684a",
+        "sha256": "458837e0b1c9c06f3c46b92877e8c4545bdd0e375c05ffe013d525294f62ec14",
         "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
-        "closure_level": "PARTIAL",
         "full_core_unlock": false
-      }
+      },
+      "claim_promotion": false
     },
     {
       "major_result_id": "CORE_O2_TREE_LEVEL_EOS_LANE",
@@ -7113,7 +7123,6 @@
       "major_result_id": "T13_TOPIC13_CLOSURE_MATRIX",
       "topic": "0.13_Thermodynamic_Bridge",
       "closure_level": "PARTIAL",
-      "claim_promotion": false,
       "what_is_closed": [
         "The nine required Topic 13 result areas are reported separately by closure level.",
         "Lane-level formal results are not counted as Full Topic 13 Core-ready closure.",
@@ -7142,11 +7151,16 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-          "sha256": "bad1b418a39858a479046ef3481194182481ac5784100ffb085dbdb52ce4684a",
+          "sha256": "458837e0b1c9c06f3c46b92877e8c4545bdd0e375c05ffe013d525294f62ec14",
           "summary": {
-            "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
-            "major_result_id": "T13_TOPIC13_CLOSURE_MATRIX",
-            "closure_level": "PARTIAL"
+            "role": "compact Topic 13 closure projection"
+          }
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "9e87757f70f9e4b4f24481db8b18d3adbf2c713c90a26a97ffa9a8e8215daafd",
+          "summary": {
+            "role": "canonical readiness gate"
           }
         }
       ],
@@ -7155,15 +7169,38 @@
         "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
         "alpha_Phi_K_independent_calibration_missing",
         "normalized_beta_and_SI_scale_correspondence_missing",
-        "eos_transport_kms_entropy_completion_missing",
-        "dimensional_phi_to_thermal_observable_map_missing",
         "physical_Kubo_coefficient_record_missing",
+        "dimensional_phi_to_thermal_observable_map_missing",
         "same_grade_alpha_V_and_K_T_missing",
         "material_regime_mapping_to_TTG_not_closed",
         "c_v_source_uncertainty_not_closed"
       ],
       "dependency_unlocked": "None for Full Topic 13; formal and source-acceptance lanes remain separately available.",
-      "claim_boundary": "This matrix reports progress and closure boundaries. It does not promote a lane-level PASS, comparator, no-go, or formal interface to Full Topic 13, Core, external validation, or a global UET claim."
+      "claim_boundary": "This matrix reports progress and closure boundaries. It does not promote a lane-level PASS, comparator, no-go, or formal interface to Full Topic 13, Core, external validation, or a global UET claim.",
+      "closure_summary": {
+        "closed_lane_count": 189,
+        "closed_as_no_go_count": 16,
+        "open_blocker_count": 8,
+        "open_blocker_groups": {
+          "source_and_material": [
+            "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+            "same_grade_alpha_V_and_K_T_missing",
+            "material_regime_mapping_to_TTG_not_closed",
+            "c_v_source_uncertainty_not_closed"
+          ],
+          "dimensional_and_calibration": [
+            "alpha_Phi_K_independent_calibration_missing",
+            "normalized_beta_and_SI_scale_correspondence_missing",
+            "dimensional_phi_to_thermal_observable_map_missing"
+          ],
+          "thermodynamic_transport": [
+            "physical_Kubo_coefficient_record_missing"
+          ],
+          "unclassified": []
+        },
+        "downstream_dependency_unlocked": false
+      },
+      "claim_promotion": false
     },
     {
       "major_result_id": "T13_TPG_ANISOTROPIC_ALPHA_V_COMPARATOR",
@@ -12854,6 +12891,63 @@
       ],
       "dependency_unlocked": "IG210 alpha_l source comparator and conditional alpha_V geometry lane only; no Cp-to-Cv, Ding C_src, alpha_Phi_K, transport, Core, or Gravity unlock",
       "claim_boundary": "This lane is a source comparator. It is not a source-reported volumetric alpha_V, not a same-state K_T pair, not Ding C_src, not alpha_Phi_K calibration, and not Full Topic 13 closure."
+    },
+    {
+      "major_result_id": "T13_FLAT_THERMODYNAMIC_BRIDGE_COMPONENTS",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "action-derived finite-temperature normal-sector EOS definitions and stability witnesses on the declared natural-unit O(2) lane",
+        "formal cross-module SK/KMS, Onsager, entropy-current, and dissipative-balance interfaces",
+        "finite-cutoff covariant heat-flux response and nonnegative entropy-production witness on the declared normal quasiparticle lane",
+        "source-locked Kim et al. Green-Kubo directional transport input as a standard-physics external comparator with units, uncertainty, locator, and hash",
+        "explicit boundary that curved 3+1 is a later Core result rather than a hidden Topic 13 prerequisite"
+      ],
+      "equation_or_mapping": {
+        "normal_eos": "p_n(T,mu,Phi)=p_qp(T,mu,Phi); n_n=partial_mu p_n; s_n=partial_T p_n; epsilon_n=-p_n+T*s_n+mu*n_n",
+        "formal_eos": "f_hat=a_C C^2/2+b_C C^4/4+a_Phi(T) Phi^2/2+b_Phi Phi^4/4-g C^2 Phi/2",
+        "sk_kms": "S_SK=integral[Phi_a D_R Phi_r+i Phi_a N Phi_a/2]; N(omega)=coth(beta_th*omega/2)*2 Im D_R(omega)",
+        "heat_flux": "q^mu=kappa_natural*X_T^mu; J_S^mu=s*u^mu+q^mu/T; sigma=X_T_mu*q^mu>=0",
+        "dissipative_balance": "nabla_mu T_matter^(mu nu)=Q^nu; nabla_mu T_UET^(mu nu)=-Q^nu",
+        "external_comparator": "KuboCoefficientRecord_external -> directional lattice transport comparator only",
+        "physical_bridge_still_open": "Delta_Tq=alpha_Phi_K*Delta_Phi requires an independent Phi/SI anchor"
+      },
+      "units": {
+        "normal_eos": "natural energy/density lane; no SI energy anchor",
+        "Phi": "effective response variable; normalized/natural scale only",
+        "q_formal": "formal natural-unit moment current; not W m^-2",
+        "kappa_formal": "finite-cutoff natural response; not W m^-1 K^-1",
+        "kim_external_kappa": "W m^-1 K^-1 with source-reported uncertainty",
+        "curved_scope": "flat/local tensor notation; curved 3+1 deferred to Core"
+      },
+      "derivation_class": "action-derived formal component composition plus source-locked external comparator; no microscopic UET Kubo match",
+      "observable": "finite-temperature formal normal response, entropy production, heat-flux interface, and standard directional transport comparator",
+      "data_role": "INTERNAL_FORMAL_COMPONENTS_PLUS_EXTERNAL_INPUT_COMPARATOR_NOT_CALIBRATION",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+          "sha256": "eaafd852fdf978efcefe8bf13900a96bf7d57e89b66c09cf1f4e65d3f10ba105",
+          "summary": {
+            "status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT",
+            "major_result_id": "T13_FLAT_THERMODYNAMIC_BRIDGE_COMPONENTS",
+            "closure_level": "CLOSED_FOR_LANE",
+            "physical_coefficient_evidence": "EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_UET_MAPPING",
+            "full_core_unlock": false
+          }
+        }
+      ],
+      "verification_status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT",
+      "open_blockers": [
+        "physical_Kubo_coefficient_record_missing",
+        "dimensional_phi_to_thermal_observable_map_missing",
+        "alpha_Phi_K_independent_calibration_missing",
+        "normalized_beta_and_SI_scale_correspondence_missing",
+        "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+        "material_regime_mapping_to_TTG_not_closed"
+      ],
+      "dependency_unlocked": "Topic 13 flat formal-component integration and comparator provenance only; no Full Topic 13 Core, curved 3+1, Gravity, or external validation unlock",
+      "claim_boundary": "This closes a scoped flat/natural-unit component result. It does not provide a physical UET Kubo coefficient, SI Phi-to-temperature map, alpha_Phi_K, Ding TTG C_src validation, curved 3+1 transport, or Full Topic 13 closure."
     }
   ],
   "next_major_result": "T13_FULL_THERMODYNAMIC_BRIDGE",

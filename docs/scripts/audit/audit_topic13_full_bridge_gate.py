@@ -111,6 +111,7 @@ LANE_KEY_BY_ID["T13_UET_O2_FINITE_T_THREE_BODY_SUNSET_SK_KMS_LANE"] = "uet_o2_fi
 LANE_KEY_BY_ID["T13_UET_O2_FINITE_T_SCATTERING_SUNSET_SK_KMS_LANE"] = "uet_o2_finite_t_scattering_sunset_sk_kms_lane"
 
 LANE_KEY_BY_ID["T13_UET_O2_FINITE_T_DECLARED_FULL_SUNSET_SK_KMS_LANE"] = "uet_o2_finite_t_declared_full_sunset_sk_kms_lane"
+LANE_KEY_BY_ID["T13_FLAT_THERMODYNAMIC_BRIDGE_COMPONENTS"] = "topic13_flat_thermodynamic_bridge_components"
 LANE_KEY_BY_ID["T13_UET_O2_FINITE_T_SIGNED_CUT_KINEMATIC_TAXONOMY_LANE"] = "uet_o2_finite_t_signed_cut_kinematic_taxonomy_lane"
 LANE_KEY_BY_ID["T13_UET_O2_FINITE_T_SUNSET_CUT_MULTIPLICITY_LANE"] = "uet_o2_finite_t_sunset_cut_multiplicity_lane"
 LANE_KEY_BY_ID["T13_UET_O2_FINITE_T_ALL_ONSHELL_CUT_SPECTRAL_RESPONSE_LANE"] = "uet_o2_finite_t_all_onshell_cut_spectral_response_lane"
@@ -178,6 +179,9 @@ def main() -> int:
     transport_path, transport = load("docs/core/artifacts/covariant_superfluid_transport_contract.json")
     transport_verification_path, transport_verification = load(
         "docs/core/artifacts/covariant_superfluid_transport_verification.json"
+    )
+    flat_components_path, flat_components = load(
+        "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json"
     )
     entropy_heat_flux_path, entropy_heat_flux = load(
         "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json"
@@ -450,10 +454,27 @@ def main() -> int:
     )
     # A natural-unit lane closure is not physical bridge closure.
     bridge_derived = constraint_gates.get("uet_bridge_derivation_gate", {}).get("status") == "PASS"
+    flat_component_lane_pass = (
+        flat_components.get("status", "").startswith("PASS")
+        and flat_components.get("major_result", {}).get("closure_level") == "CLOSED_FOR_LANE"
+    )
+    physical_topic13_transport_ready = (
+        flat_components.get("uet_physical_kubo_record_present") is True
+        and flat_components.get("physical_coefficient_evidence")
+        not in {"BLOCKED_NOT_PROVIDED", "OPEN", "EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_UET_MAPPING"}
+    )
     eos_transport_entropy_ready = (
-        constraint_gates.get("core_eos_transport_entropy_gate", {}).get("status") == "PASS"
-        and transport.get("status") == "PASS"
-        and transport_verification.get("physical_coefficient_evidence") not in {"BLOCKED_NOT_PROVIDED", "OPEN"}
+        flat_component_lane_pass
+        and physical_topic13_transport_ready
+    )
+    eos_transport_blocker = (
+        None
+        if eos_transport_entropy_ready
+        else (
+            "physical_Kubo_coefficient_record_missing"
+            if flat_component_lane_pass
+            else "eos_transport_kms_entropy_completion_missing"
+        )
     )
     dimensional_map_ready = bool(calibration.get("open_calibration_record", {}).get("physical_mapping_ready"))
     source_fit_forbidden = bool(source_gate.get("policy", {}).get("holdout_may_be_used_for_tuning") is False)
@@ -470,6 +491,11 @@ def main() -> int:
             "physical_coefficient_evidence",
             "finite_temperature_completion",
             "full_SK_KMS_completion",
+            "topic13_flat_component_status",
+            "topic13_flat_component_closure_level",
+            "topic13_flat_component_audit",
+            "topic13_flat_component_physical_kubo_status",
+            "topic13_curved_3p1_scope",
             "controlling_blocker",
         }
     }
@@ -628,12 +654,17 @@ def main() -> int:
         },
         "eos_transport_kms_entropy": {
             "status": "PASS" if eos_transport_entropy_ready else "BLOCKED",
-            "constraint_gate_status": constraint_gates.get("core_eos_transport_entropy_gate", {}).get("status"),
+            "constraint_gate_status": "DEFERRED_LEGACY_CORE_CONSTRAINT_GATE",
             "transport_contract_status": transport.get("status"),
             "physical_coefficient_evidence": transport_verification.get("physical_coefficient_evidence"),
             "finite_temperature_completion": transport_verification.get("finite_temperature_two_fluid_completion"),
             "full_SK_KMS_completion": transport_verification.get("full_SK_KMS_completion"),
-            "controlling_blocker": "eos_transport_kms_entropy_completion_missing" if not eos_transport_entropy_ready else None,
+            "topic13_flat_component_status": flat_components.get("status"),
+            "topic13_flat_component_closure_level": flat_components.get("major_result", {}).get("closure_level"),
+            "topic13_flat_component_audit": {"path": rel(flat_components_path), "sha256": sha256(flat_components_path)},
+            "topic13_flat_component_physical_kubo_status": flat_components.get("physical_coefficient_evidence"),
+            "topic13_curved_3p1_scope": "DEFERRED_TO_CORE_CURVED_3P1",
+            "controlling_blocker": eos_transport_blocker,
         },
         "dimensional_observable_map": {
             "status": "PASS" if dimensional_map_ready else "BLOCKED",
@@ -675,7 +706,10 @@ def main() -> int:
             and causal_lane_pass
         )
     ]
-    if transport_verification.get("physical_coefficient_evidence") in {"BLOCKED_NOT_PROVIDED", "OPEN"}:
+    if (
+        transport_verification.get("physical_coefficient_evidence") in {"BLOCKED_NOT_PROVIDED", "OPEN"}
+        and "physical_Kubo_coefficient_record_missing" not in blockers
+    ):
         blockers.append("physical_Kubo_coefficient_record_missing")
     primary_blocker = (
         "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
@@ -735,6 +769,7 @@ def main() -> int:
             evidence(rel(calibration_path), calibration, {"audit_status": calibration.get("audit_status"), "claim_status": calibration.get("claim_status")}),
             evidence(rel(transport_path), transport, {"status": transport.get("status"), "next_controller": transport.get("next_controller")}),
             evidence(rel(transport_verification_path), transport_verification, {"physical_coefficient_evidence": transport_verification.get("physical_coefficient_evidence"), "full_SK_KMS_completion": transport_verification.get("full_SK_KMS_completion")}),
+            evidence(rel(flat_components_path), flat_components, {"status": flat_components.get("status"), "closure_level": flat_components.get("major_result", {}).get("closure_level"), "physical_coefficient_evidence": flat_components.get("physical_coefficient_evidence"), "full_core_unlock": flat_components.get("full_core_unlock")}),
             evidence(rel(entropy_heat_flux_path), entropy_heat_flux, {"status": entropy_heat_flux.get("status"), "closure_level": entropy_heat_flux.get("major_result", {}).get("closure_level"), "kappa_natural": entropy_heat_flux.get("state", {}).get("kappa_natural"), "full_core_unlock": entropy_heat_flux.get("full_core_unlock")}),
             evidence(rel(on_shell_sunset_width_path), on_shell_sunset_width, {"status": on_shell_sunset_width.get("status"), "closure_level": on_shell_sunset_width.get("major_result", {}).get("closure_level"), "combined_collision_width": on_shell_sunset_width.get("state", {}).get("reference", {}).get("combined_collision_width"), "cut_convergence_bound": on_shell_sunset_width.get("state", {}).get("reference", {}).get("cut_convergence_bound")}),
             evidence(rel(contact_sk_transition_path), contact_sk_transition, {"status": contact_sk_transition.get("status"), "closure_level": contact_sk_transition.get("major_result", {}).get("closure_level"), "cross_section_match_residual": contact_sk_transition.get("state", {}).get("reference", {}).get("cross_section_match_residual"), "max_channel_detailed_balance_residual": contact_sk_transition.get("state", {}).get("reference", {}).get("max_channel_detailed_balance_residual")}),

@@ -1232,3 +1232,11 @@ NEXT_ACTION: Acquire authorized Ding numeric C_src or an accepted same-regime PB
 CLAIM_BOUNDARY: Numerical convergence sub-lane only; not Ding-equivalent, not source-grade uncertainty closure, not calibration, not prediction, and not Full Topic 13 closure.
 EVIDENCE_PATHS: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_pbte_run_m12x12x6_summary.json`; `docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json`; `docs/core/artifacts/t13_csrc_thermodynamic_transport_regime_decomposition_audit.json`.
 EVIDENCE_HASHES: package a82b25ed00f896b759d2b577bdd046faf1c1ef1399b6f5d12b71c8bd6318e5ed; audit a2fb52533d768697950c49722e24e5de0d9d3381c24be6c5bf2e23f88a8957e0; decomposition 72c5b81720f96eaa08e7d1d6f82177b19b60d6cc780a030547cc5d083f64e850; full gate 50725cfa5aad415002c17a5d7201cb91dd5fee8be6f5bb18d529ad9000d9cfb5.
+
+## T13-172 - Flat thermodynamic component contract
+
+Artifact: `docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json` (`eaafd852fdf978efcefe8bf13900a96bf7d57e89b66c09cf1f4e65d3f10ba105`).
+
+The component contract composes the action-derived natural-unit normal EOS, formal SK/KMS/entropy/heat-flux interfaces, and the source-locked Kim 2018 directional Green-Kubo input. The external record carries source identity, locator, state, units `W m^-1 K^-1`, reported uncertainty, preprocessing boundary, and payload hash; it is `EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_CALIBRATION` and is not admitted as a UET Phi response or physical UET Kubo coefficient.
+
+The artifact reports `CLOSED_FOR_LANE` only. `alpha_Phi_K`, the Phi/SI map, Ding-compatible `C_src`, material/state matching, physical UET Kubo provenance, and Full Topic 13 closure remain open. Xie 2026 remains metadata-only and unconsumed.
