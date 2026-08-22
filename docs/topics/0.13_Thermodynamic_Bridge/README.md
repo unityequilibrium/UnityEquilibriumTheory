@@ -6,6 +6,20 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Canonical Current Gate (2026-08-22)
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for the MP48-to-Ding mode-sum response mapping; Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_IS_ACTUALLY_CLOSED: The Ding notation for mode-specific heat capacity and the phonon-mode sum is mapped to four independently reproduced MP48 harmonic `C_src`-like rows in `J m^-3 K^-1`. The original conserved-`C` causal baseline is closed only as a scoped no-go; the named coupled finite-cone branch remains lane-level.
+WHAT_REMAINS_OPEN: Ding-compatible PBTE `C_src` or an accepted same-regime reproduction, independent `alpha_Phi_K`, the base-`Phi` SI energy anchor, beta/SI correspondence, physical EOS/transport/SK/KMS/entropy completion, state-matched thermodynamic inputs, and the dimensional TTG map.
+DEPENDENCY_UNLOCKED: None. `full_core_unlock=false`; Gravity, full constitutive transport, Galaxy, and external-validation dependencies remain blocked.
+STATUS: `BLOCKED_OPEN_T13_FULL_BRIDGE`; `claim_promotion=false`.
+WHAT_CHANGED: The latest source/mapping wave added a machine-readable response mapping, full-gate projection, closure-register entry, dependency evidence, and update-log record without fitting, synthetic replacement, threshold change, Landauer inference, or Xie 2026 access.
+EQUATION_OR_MAPPING: `C_src^mol(T)=N_A/N_q * sum_(q,mu)c_mu(q,T)`; `C_src^vol(T)=C_src^mol(T)/V_mol,cell`; `Delta_Tq=Delta_u_ph/C_src^vol`; `y_TTG^UET=Delta_Phi(t)/Delta_Phi(0)` and `Delta_Tq=alpha_Phi_K*Delta_Phi` remain uncalibrated.
+VERIFICATION: Mapping artifact SHA-256 `1deefbb6ebbed62345db2063612f9d8c172902dcb93068b800e579455e0d297c`; canonical full-gate SHA-256 `2cd42d31f9055f8f6ba14a969b867a6294fed3d94fa287f7c286eb02a2008bb7`; focused Topic 13/registry/closure/dependency suite `9 passed`; `holdout_accessed=false`.
+CONTROLLING_BLOCKER: `dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing` together with `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing`.
+NEXT_ACTION: Obtain an authorized Ding numeric package or accepted same-regime PBTE reproduction with provenance, units, uncertainty, convergence, and material/state mapping, while separately obtaining a paired base-`Phi`/SI observable anchor. Do not fit `alpha_Phi_K` or read Xie 2026.
+CLAIM_BOUNDARY: This closes a response-mapping lane only. It is not Ding `C_src`, an independent `alpha_Phi_K`, a `Phi`-to-temperature prediction, Core closure, external validation, or global UET closure.
+
 Current hardening result: an action-derived natural-unit Phi-to-thermal bridge and non-Landauer natural beta slope are CLOSED_FOR_LANE. Full Topic 13 remains blocked by the physical Phi/SI anchor, independent alpha_Phi_K, source-backed c_v or Ding C_src, EOS/transport/KMS/entropy, and dimensional TTG gates. The natural fixed-(mu,Phi) C_epsilon_T is not relabeled as source c_v.
 
 Current hardening result T13-130: the covariant-action natural-unit to SI conversion contract is CLOSED_FOR_LANE as symbolic dimensional bookkeeping backed by exact SI defining constants. It does not select E_ref or Phi_scale, does not derive e0 or alpha_Phi_K, and does not unlock Core or external validation. Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.
