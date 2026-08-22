@@ -417,7 +417,7 @@
       "no_go_scope": "declared local conserved-C Cattaneo equation with mu_C=a_C*C-kappa_C*Laplacian(C)",
       "no_go_artifact": {
         "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
-        "sha256": "60d3e5fac849c0de1d33c4dd9c7797c5117d1838fb9f8fbc4bc1ce572391b1a1"
+        "sha256": "c4e5b4e87794136f07f70ded43f7aa4d86140ca3c725b6ac237c99808a81262d"
       },
       "baseline_replaced": false,
       "full_core_unlock": false,
@@ -13190,7 +13190,7 @@
         "data_role": "INTERNAL_NUMERICAL_BRANCH_SELECTION_NO_EXTERNAL_TTG_OR_HOLDOUT",
         "audit": {
           "path": "docs/core/artifacts/t13_causal_branch_selection_audit.json",
-          "sha256": "096142f1a414af5fd4e4a7b9fdaddc7c8fe3891fa6b00947fb009e7fce61d851",
+          "sha256": "a5c32c830c6c1b42d71dbbd2bdf58b4882c96bfa8957c24437daee4879e50c26",
           "summary": {
             "status": "PASS_CLOSED_AS_NO_GO_WITH_NAMED_COUPLED_BRANCH",
             "major_result_id": "T13_CAUSAL_THERMAL_BRANCH_SELECTION",
@@ -75897,62 +75897,18 @@
     },
     "causal_branch_selection": {
       "status": "PASS_CLOSED_AS_NO_GO_WITH_NAMED_COUPLED_BRANCH",
-      "baseline_preservation": {
-        "full_candidate_pass": false,
-        "prearrival_leakage_fraction": 0.017639381271029236,
-        "locked_threshold": 1e-06,
-        "baseline_replaced": false
-      },
-      "selected_branch": {
-        "branch_id": "T13-CAUSAL-FLUX-PHI-COUPLED-001",
-        "prearrival_leakage_fraction": 0.0,
-        "C_arrival_target_abs": 1.4032711954504658e-33,
-        "Phi_arrival_target_abs": 4.440892098500626e-16,
-        "max_combined_energy_relative_residual": 9.813156990275662e-07,
-        "closure_level": "CLOSED_FOR_LANE"
-      },
-      "checks": {
-        "baseline_scoped_no_go_recorded": true,
-        "baseline_no_go_scope_is_declared": true,
-        "original_baseline_stays_failed": true,
-        "original_baseline_leakage_exceeds_locked_threshold": true,
-        "threshold_is_unchanged": true,
-        "flux_branch_passes": true,
-        "coupled_branch_passes": true,
-        "coupled_branch_is_lane_only": true,
-        "coupled_leakage_passes_locked_threshold": true,
-        "coupled_arrival_is_nonzero": true,
-        "coupled_energy_ledger_passes": true,
-        "no_clipping_or_padding_or_fit": true,
-        "holdout_not_accessed": true
-      },
-      "parameter_fitting_performed": false,
-      "source_rows_consumed": false,
-      "target_data_used": false,
-      "xie_2026_accessed": false,
-      "controlling_blocker": "selected_causal_branch_is_normalized_and_dimensional_thermal_bridge_remains_open",
-      "next_controller": "Use the selected named causal branch only as a normalized Core input while independently closing the Phi-energy scale, permitted TTG source package, alpha_Phi_K, and thermodynamic bridge; do not rerun or relabel the failed conserved-gradient baseline.",
-      "claim_boundary": "This result selects a named normalized causal branch after a scoped no-go. It does not turn the original conserved-gradient baseline into a pass, prove covariant well-posedness, establish a physical temperature mapping, or close Topic 13.",
-      "major_result_id": "T13_CAUSAL_THERMAL_BRANCH_SELECTION",
       "closure_level": "CLOSED_FOR_LANE",
-      "data_role": "INTERNAL_NUMERICAL_BRANCH_SELECTION_NO_EXTERNAL_TTG_OR_HOLDOUT",
+      "baseline_full_candidate_pass": false,
+      "baseline_replaced": false,
       "audit": {
         "path": "docs/core/artifacts/t13_causal_branch_selection_audit.json",
-        "sha256": "096142f1a414af5fd4e4a7b9fdaddc7c8fe3891fa6b00947fb009e7fce61d851",
+        "sha256": "a5c32c830c6c1b42d71dbbd2bdf58b4882c96bfa8957c24437daee4879e50c26",
         "summary": {
           "status": "PASS_CLOSED_AS_NO_GO_WITH_NAMED_COUPLED_BRANCH",
-          "major_result_id": "T13_CAUSAL_THERMAL_BRANCH_SELECTION",
-          "closure_level": "CLOSED_FOR_LANE"
+          "major_result_id": "T13_CAUSAL_THERMAL_BRANCH_SELECTION"
         }
       },
-      "open_blockers": [
-        "selected branch remains normalized and has no dimensional Phi-to-temperature map",
-        "TTG numeric source and independent alpha_Phi_K remain open",
-        "non-circular bridge, beta, EOS, transport, SK/KMS, entropy current, and dissipative balance remain open",
-        "original kappa_C>0 conserved-gradient baseline remains blocked and is not replaced"
-      ],
-      "baseline_full_candidate_pass": false,
-      "baseline_replaced": false
+      "claim_boundary": "No source data, target curve, fit, threshold change, clipping, cone padding, holdout access, external validation, or global UET closure is claimed."
     },
     "phi_energy_anchor_identifiability": {
       "status": "PASS_SCOPED_NO_GO",
@@ -76910,7 +76866,7 @@
     },
     {
       "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
-      "sha256": "60d3e5fac849c0de1d33c4dd9c7797c5117d1838fb9f8fbc4bc1ce572391b1a1",
+      "sha256": "c4e5b4e87794136f07f70ded43f7aa4d86140ca3c725b6ac237c99808a81262d",
       "summary": {
         "status": "NO_GO_FOR_DECLARED_CONSERVED_CATTANEO_LOCAL_GRADIENT_CLASS",
         "proof_scope": "declared local conserved-C Cattaneo equation with mu_C=a_C*C-kappa_C*Laplacian(C)"
@@ -77622,6 +77578,22 @@
       "summary": {
         "status": "PASS_SCOPED_NO_GO_COVARIANT_MATTER_COUPLING_NORMALIZATION",
         "data_role": "INTERNAL_STRUCTURAL_AUDIT_NO_TARGET_OR_HOLDOUT"
+      }
+    },
+    {
+      "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
+      "sha256": "c4e5b4e87794136f07f70ded43f7aa4d86140ca3c725b6ac237c99808a81262d",
+      "summary": {
+        "status": "NO_GO_FOR_DECLARED_CONSERVED_CATTANEO_LOCAL_GRADIENT_CLASS",
+        "proof_scope": "declared local conserved-C Cattaneo equation with mu_C=a_C*C-kappa_C*Laplacian(C)"
+      }
+    },
+    {
+      "path": "docs/core/artifacts/t13_causal_branch_selection_audit.json",
+      "sha256": "a5c32c830c6c1b42d71dbbd2bdf58b4882c96bfa8957c24437daee4879e50c26",
+      "summary": {
+        "status": "PASS_CLOSED_AS_NO_GO_WITH_NAMED_COUPLED_BRANCH",
+        "data_role": "INTERNAL_NUMERICAL_BRANCH_SELECTION_NO_EXTERNAL_TTG_OR_HOLDOUT"
       }
     }
   ],

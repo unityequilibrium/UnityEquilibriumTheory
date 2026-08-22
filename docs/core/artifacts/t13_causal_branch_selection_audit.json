@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-causal-branch-selection-audit-v1",
   "artifact": "t13_causal_branch_selection_audit",
-  "generated_at": "2026-08-17",
+  "generated_at": "2026-08-22",
   "status": "PASS_CLOSED_AS_NO_GO_WITH_NAMED_COUPLED_BRANCH",
   "major_result": {
     "major_result_id": "T13_CAUSAL_THERMAL_BRANCH_SELECTION",
@@ -31,7 +31,7 @@
     "evidence_artifacts": [
       {
         "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
-        "sha256": "bbef5e01bc4741221ec938a3f2fdea352d7966b6b6c5cc49d7679065dad57372"
+        "sha256": "c4e5b4e87794136f07f70ded43f7aa4d86140ca3c725b6ac237c99808a81262d"
       },
       {
         "path": "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",

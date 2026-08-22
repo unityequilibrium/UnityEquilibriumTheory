@@ -3549,3 +3549,17 @@ VERIFICATION: Alpha candidate audit passed with `11` candidates and `0` eligible
 CONTROLLING_BLOCKER: `independent_paired_base_Phi_amplitude_and_SI_observable_record_missing`.
 NEXT_ACTION: Obtain a permitted paired base-Phi/SI record or derive a coefficient-provenance-backed action-to-SI map; rerun the acceptance audit before any alpha calibration.
 CLAIM_BOUNDARY: This is a provenance/eligibility search result only. It emits no numeric `alpha_Phi_K`, no temperature prediction, no fit, and no external validation.
+### 2026-08-22 - Core anchor boundary and causal synchronization wave (T13-153)
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for the conserved-C causal decision and the Core dimensional-anchor identifiability boundary; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE` / `PARTIAL`.
+WHAT_IS_ACTUALLY_CLOSED: The declared conserved-C local-gradient class remains a scoped high-frequency no-go, the named coupled C/Phi flux branch remains a passing normalized lane, and the Core action/normalization review confirms that no independent SI Phi anchor is available in the current candidate equations. A stale causal artifact hash was repaired and the register/dependency projections were synchronized.
+WHAT_REMAINS_OPEN: Ding numeric or accepted same-regime `C_src`, independent paired base-Phi/SI calibration, normalized beta-to-SI correspondence, dimensional Phi-to-thermal mapping, physical Kubo coefficient, same-grade alpha_V/K_T and material/source uncertainty, and full EOS/transport/SK/KMS/entropy closure remain open.
+DEPENDENCY_UNLOCKED: None; no Full Topic 13, Core curved 3+1, Gravity, constitutive-transport, Galaxy, or external-validation dependency is unlocked.
+STATUS: `PASS_CLOSED_AS_NO_GO_WITH_NAMED_COUPLED_BRANCH` for the causal lane; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE` with `claim_promotion=false`.
+WHAT_CHANGED: Reran the conserved-C no-go, causal branch-selection, full Topic 13 gate, major-result closure, and wave-1 contract checks; repaired the causal register/dependency hash drift; refreshed the Topic 13 lane projections.
+EQUATION_OR_MAPPING: `y_TTG = Delta_Tq(t) / Delta_Tq(0)`; `y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)`; `Delta_Tq = alpha_Phi_K * Delta_Phi`; the selected causal branch remains normalized and does not provide the missing SI scale.
+VERIFICATION: Focused anchor, alpha, field-normalization, causal, holdout, register, and dependency regressions passed `23/23`; full gate reports the same 10 open blockers; threshold remains `1e-6`; Xie 2026 remains unread.
+CONTROLLING_BLOCKER: `dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing`, with Ding `C_src` and physical thermodynamic-transport evidence also required.
+NEXT_ACTION: Obtain a permitted paired base-Phi/SI record or coefficient-provenance-backed action-to-SI map, and separately obtain Ding numeric `C_src` or an accepted same-regime reproduction before attempting alpha calibration.
+CLAIM_BOUNDARY: This closes structural and metadata lanes only. It does not emit numeric `alpha_Phi_K`, derive temperature, validate external data, close the full thermal bridge, or promote any global UET claim.
+EVIDENCE_PATHS: `docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json`; `docs/core/artifacts/t13_causal_branch_selection_audit.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/artifacts/uet_major_result_closure_register.json`; `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`.
