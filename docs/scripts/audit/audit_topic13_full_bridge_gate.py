@@ -129,6 +129,7 @@ LANE_KEY_BY_ID["T13_THERMAL_BRIDGE_SCALE_DEPENDENCY_NO_GO"] = "thermal_bridge_sc
 LANE_KEY_BY_ID["T13_AIST_GRAPHITE_SOURCE_ROUTE_BOUNDARY"] = "aist_graphite_source_route_boundary"
 LANE_KEY_BY_ID["T13_NIST_SRM_3600_HEAT_CAPACITY_COMPARATOR_BOUNDARY"] = "nist_srm_3600_heat_capacity_comparator_boundary"
 LANE_KEY_BY_ID["T13_PEREZ_CASTANEDA_HOPG_SPECIFIC_HEAT_SOURCE_BOUNDARY"] = "perez_castaneda_hopg_specific_heat_source_boundary"
+LANE_KEY_BY_ID["T13_QH15_GRAPHITE_CV_COMPARATOR_BOUNDARY"] = "qh15_graphite_cv_comparator_boundary"
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -867,7 +868,7 @@ def main() -> int:
         artifact["verification_status"]["eos_transport_kms_entropy"].pop(
             "calorine_zenodo_nep_bte_numeric_reproduction", None
         )
-    for lane_key in ("calorine_full_lbte_numerical_stability_boundary", "calorine_isotope_mass_sensitivity", "calorine_state_uncertainty_decomposition", "calorine_csrc_equilibrium_crosscheck", "figshare_dft_force_data_boundary", "huang_2023_nims_mdr_payload_boundary", "calorine_public_model_variant_boundary", "calorine_nep1_backend_compatibility", "calorine_legacy_nep2_backend_probe", "calorine_legacy_nep2_pbte_reproduction"):
+    for lane_key in ("calorine_full_lbte_numerical_stability_boundary", "calorine_isotope_mass_sensitivity", "calorine_state_uncertainty_decomposition", "calorine_csrc_equilibrium_crosscheck", "figshare_dft_force_data_boundary", "huang_2023_nims_mdr_payload_boundary", "calorine_public_model_variant_boundary", "calorine_nep1_backend_compatibility", "calorine_legacy_nep2_backend_probe", "calorine_legacy_nep2_pbte_reproduction", "qh15_graphite_cv_comparator_boundary"):
         lane = discovered_lane_integrations.get(lane_key)
         if lane:
             artifact["verification_status"]["source_package"][lane_key] = lane
@@ -1538,6 +1539,8 @@ def main() -> int:
         lane_closures.append("independent c_v comparator boundary is closed for lane without promoting it to Ding C_src")
     if discovered_lane_integrations.get("perez_castaneda_hopg_specific_heat_source_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("Perez-Castaneda HOPG specific-heat source boundary is closed for lane; the specimen and below-3-percent method-comparison bound are source-locked, but figure-only rows, source-grade uncertainty, Ding C_src, and alpha remain open")
+    if discovered_lane_integrations.get("qh15_graphite_cv_comparator_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
+        lane_closures.append("QH-15 macroscopic graphite C_v comparator is closed for lane; its unit conversion and Calorine cross-check do not establish Ding C_src, material equivalence, source-grade uncertainty, or alpha_Phi_K")
     if discovered_lane_integrations.get("ding_public_supplementary_payload_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("Ding public supplementary payload boundary is closed for lane without promoting PDFs or figures to numeric C_src")
     if discovered_lane_integrations.get("ding_2017_acs_supplementary_payload_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":

@@ -74,10 +74,23 @@ def main() -> int:
         ],
         "claim_boundary": "Dependency decisions only; no downstream result is promoted by a checkpoint or comparator pass.",
     }
-    # Preserve lane-level Topic 13 evidence when this downstream-only verifier reruns.
+    # Preserve lane-level Topic 13 evidence and refresh known artifact hashes.
     previous = json.loads(OUT.read_text(encoding="utf-8-sig")) if OUT.is_file() else {}
     if "topic13_partial_evidence" in previous:
         artifact["topic13_partial_evidence"] = previous["topic13_partial_evidence"]
+    partial_routes = {
+        "covariant_field_normalization_no_go": "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json",
+        "phi_energy_anchor_no_go": "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
+        "thermal_response_beta_contract": "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json",
+    }
+    partial_evidence = artifact.get("topic13_partial_evidence", {})
+    if isinstance(partial_evidence, dict):
+        for key, relative_path in partial_routes.items():
+            route = partial_evidence.get(key)
+            source_path = ROOT / relative_path
+            if isinstance(route, dict) and source_path.is_file():
+                route["path"] = relative_path
+                route["sha256"] = hashlib.sha256(source_path.read_bytes()).hexdigest()
     OUT.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
     print(json.dumps({"status": artifact["status"], "decisions": decisions}, indent=2))
     return 0

@@ -5,3 +5,8 @@ uet_history/** linguist-documentation
 
 # Mark generated/vendored files
 *.lock linguist-generated
+
+# QH-15 public raw entries are byte-hash locked; do not apply autocrlf.
+/docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/qh15_materialscloud/README.txt -text
+/docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/qh15_materialscloud/raw_data/*.csv -text
+/docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/qh15_materialscloud/fig1_temp_inversion/fig1_temp_inversion.nb -text

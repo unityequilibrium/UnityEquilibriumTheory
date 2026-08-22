@@ -195,3 +195,27 @@ A source-locked Zenodo Hi-Trace workbook now closes a high-temperature same-bloc
 ## T13-131 public PBTE source boundary
 
 The Huberman 2019 public arXiv package is now source-locked as a comparator boundary. Its embedded supplementary methods provide BTE method context and reference Ding-derived force constants, but no accepted mode-resolved `C_src(T)` payload, uncertainty/convergence package, or raw force-constant/scattering input is available in the package. Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE` / `PARTIAL`; this lane does not close `alpha_Phi_K` or promote any TTG curve to a prediction.
+
+## Current Major Result: QH-15 Comparator Lane (2026-08-22)
+
+MAJOR_RESULT_CLOSURE: `T13_QH15_GRAPHITE_CV_COMPARATOR_BOUNDARY` is `CLOSED_FOR_LANE`; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE` / `PARTIAL`.
+
+WHAT_IS_ACTUALLY_CLOSED: QH-15 public archive provenance, raw-row hashes, the `SpecificC` to `J m^-3 K^-1` conversion, a separate isotope-control row, and non-fitting equilibrium-scale cross-checks against Calorine.
+
+WHAT_REMAINS_OPEN: Ding mode-resolved `C_src`, source-grade uncertainty, Ding response/material mapping, independent `alpha_Phi_K`, and the remaining bridge/EOS/transport/KMS/entropy blockers.
+
+DEPENDENCY_UNLOCKED: Comparator classification only; no downstream dependency is unlocked.
+
+STATUS: `PASS_SCOPED_QH15_CV_COMPARATOR_BOUNDARY`.
+
+WHAT_CHANGED: A machine-readable source package, verifier, regression, and full-gate lane were added. QH-15 is explicitly not accepted as Ding `C_src` and is not used to fit `Phi` or `alpha_Phi_K`.
+
+EQUATION_OR_MAPPING: `C_v^QH15 = SpecificC * 1.0e9 J m^-3 K^-1`; no Phi-to-temperature map is emitted.
+
+VERIFICATION: The full gate now reports `175` closed lanes, `10` open blockers, and downstream unlock `false`.
+
+CONTROLLING_BLOCKER: `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing`.
+
+NEXT_ACTION: Continue source acquisition and independent Phi/SI calibration without reading the locked Xie 2026 holdout.
+
+CLAIM_BOUNDARY: Candidate effective theory only; QH-15 is comparator evidence, not full Topic 13 closure or external validation.

@@ -71,6 +71,37 @@ history trace. No UET-wide beta, Kelvin prediction, physical entropy-
 production law, external validation, full Topic 13 closure, or downstream
 unlock is claimed.
 
+## 2026-08-22 - QH-15 Graphite Comparator Boundary (T13-152)
+
+MAJOR_RESULT_CLOSURE: `T13_QH15_GRAPHITE_CV_COMPARATOR_BOUNDARY` is `CLOSED_FOR_LANE`; Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+
+WHAT_IS_ACTUALLY_CLOSED: The Materials Cloud QH-15 archive identity, selected raw entries, local hashes, source-notebook unit witness, natural-graphite `SpecificC` rows, explicit SI conversion, and a two-temperature equilibrium-scale cross-check against the independent Calorine candidate are machine-readable. The natural and isopure control rows remain separate.
+
+WHAT_REMAINS_OPEN: QH-15 does not provide Ding mode-resolved `C_src`, a Ding TTG response-contract match, source-grade uncertainty, a material-regime equivalence proof, or an independent `alpha_Phi_K` calibration. The full gate still has 10 open blockers.
+
+DEPENDENCY_UNLOCKED: Comparator/source classification only. No Full Topic 13, Core, curved 3+1, Gravity, constitutive transport, Galaxy, or external-validation dependency is unlocked.
+
+STATUS: `PASS_SCOPED_QH15_CV_COMPARATOR_BOUNDARY`.
+
+WHAT_CHANGED: Added the QH-15 source package, archived selected raw entries, unit-conversion verifier, focused regression, full-gate lane integration, and major-result/dependency synchronization. No fit, calibration, threshold change, synthetic replacement, or Xie 2026 holdout access occurred.
+
+EQUATION_OR_MAPPING:
+
+```text
+C_v^QH15[J m^-3 K^-1] = SpecificC[pg/(um ns^2 K)] * 1.0e9
+r_T = (C_v^QH15 - C_src^Calorine) / C_src^Calorine
+```
+
+VERIFICATION: QH-15 natural rows and isopure-control rows match the archived hashes and 20-column schema. At 200 K the relative difference to the Calorine latest mesh is `-0.682889%`; at 300 K it is `+0.014257%`. The comparison is source-separated and non-fitting; it is not a Ding acceptance test. The full gate is `175` closed lanes, `15` scoped no-go lanes, `10` open blockers, and downstream unlock `false`.
+
+CONTROLLING_BLOCKER: `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing`; `alpha_Phi_K_independent_calibration_missing` remains independently open.
+
+NEXT_ACTION: Keep QH-15 as comparator evidence while obtaining an authorized Ding numeric package or accepted same-regime PBTE reproduction with uncertainty and response mapping; separately obtain an independent base-Phi/SI record for `alpha_Phi_K`.
+
+CLAIM_BOUNDARY: QH-15 is not Ding `C_src`, not a Phi-to-temperature prediction, not an `alpha_Phi_K` calibration, not external validation, and not Full Topic 13 closure. `C`, `Phi`, `R_gen`, and `R_obs` meanings are unchanged.
+
+EVIDENCE: `docs/core/artifacts/t13_qh15_graphite_transport_boundary_audit.json`; `docs/scripts/audit/audit_topic13_qh15_graphite_transport_boundary.py`; `docs/core/test/test_topic13_qh15_graphite_transport_boundary.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.
+
 ## 2026-08-11 Causal Branch Selection Update
 
 MAJOR_RESULT_CLOSURE: `T13_CAUSAL_THERMAL_BRANCH_SELECTION` is `CLOSED_FOR_LANE`.

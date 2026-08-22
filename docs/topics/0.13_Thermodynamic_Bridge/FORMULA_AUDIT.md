@@ -1344,3 +1344,18 @@ CONTROLLING_BLOCKER: `full_lbte_collision_spectrum_positive_semidefinite_missing
 NEXT_ACTION: Supply a declared, source-supported collision/transport stability and uncertainty contract before any physical transport comparison.
 CLAIM_BOUNDARY: Numerical boundary only; no UET dimensional map, `alpha_Phi_K`, TTG prediction, external validation, or Full Topic 13 closure.
 EVIDENCE: `docs/core/artifacts/t13_calorine_full_lbte_stability_boundary_audit.json` (SHA-256 `8b5de32a8c33b0a646c8e26faf263585d98bcb939df8adb78b1b16f9d832859d`).
+
+## T13-152 - QH-15 Graphite Comparator Boundary
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for `T13_QH15_GRAPHITE_CV_COMPARATOR_BOUNDARY`; Full Topic 13 remains `PARTIAL`.
+WHAT_IS_ACTUALLY_CLOSED: QH-15 source identity, selected raw-entry hashes, `SpecificC` column units, the `1.0e9` SI conversion, separate isopure control, and non-fitting 200/300 K comparison with the Calorine candidate.
+WHAT_REMAINS_OPEN: Ding mode-resolved `C_src`, response-contract/material mapping, source-grade uncertainty, independent `alpha_Phi_K`, and full thermodynamic closure.
+DEPENDENCY_UNLOCKED: Comparator lane only; no Core, Gravity, transport, Galaxy, or external claim is unlocked.
+STATUS: `PASS_SCOPED_QH15_CV_COMPARATOR_BOUNDARY`.
+WHAT_CHANGED: Added a source package and verifier that keep macroscopic QH-15 `SpecificC` separate from Ding `C_src` and from the UET `Phi` map.
+EQUATION_OR_MAPPING: `C_v^QH15 = SpecificC * 1.0e9 J m^-3 K^-1`; `r_T = (C_v^QH15-C_src^Calorine)/C_src^Calorine`.
+VERIFICATION: Source hashes, row schema, unit witness, selected rows, cross-check rows, no-fit policy, no-alpha policy, and Xie holdout non-access pass. The cross-checks are `-0.682889%` at 200 K and `+0.014257%` at 300 K.
+CONTROLLING_BLOCKER: `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing`.
+NEXT_ACTION: Obtain an authorized Ding numeric package or accepted same-regime PBTE reproduction with source-grade uncertainty; do not use QH-15 to calibrate Phi.
+CLAIM_BOUNDARY: Comparator evidence only; not Ding `C_src`, not alpha calibration, not temperature prediction, not external validation, and not Full Topic 13 closure.
+EVIDENCE: `docs/core/artifacts/t13_qh15_graphite_transport_boundary_audit.json`.

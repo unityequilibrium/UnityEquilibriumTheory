@@ -6,7 +6,7 @@
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "9158e95279a567780f8bd6fdce0cca7b37f7b01a732ad11bb6774b3fbefea25d"
+    "sha256": "8e63233c4b5754889ce786ceac7e244e34863bafa6cf3633a0b0727fc71527c6"
   },
   "decisions": {
     "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY": {
@@ -83,7 +83,7 @@
     "reason": "Formal beta, Phi_E, EOS, and SK/KMS/entropy interfaces are now composed into a bounded lane result; physical Phi normalization, independent alpha, source-backed beta, Kubo coefficients, and full closure remain open.",
     "phi_energy_anchor_no_go": {
       "path": "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
-      "sha256": "4a79b2eb082e4a4f98de0c2b2c441b2144e05fe3a8232caccfd5ba414842b020",
+      "sha256": "ce0837792cd63918dc371f64fa49801bfb0dd0f715264c8557cf54f5dcbe9059",
       "summary": {
         "status": "PASS_SCOPED_NO_GO_NORMALIZED_PHI_ENERGY_ANCHOR",
         "full_core_unlock": false
@@ -99,7 +99,7 @@
     },
     "covariant_field_normalization_no_go": {
       "path": "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json",
-      "sha256": "5f41afcdb62b7794c35755eecd9e91d3b39ecb432130a74878e2f2b40c1627b9",
+      "sha256": "41cda98a01b282fa5c2789ef93ce2f249041550e40763cdcb083658712c564ac",
       "summary": {
         "status": "PASS_SCOPED_NO_GO_COVARIANT_FIELD_NORMALIZATION",
         "full_core_unlock": false
@@ -124,7 +124,7 @@
     },
     "thermal_response_beta_contract": {
       "path": "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json",
-      "sha256": "988b87eb5c29b276038cf82920a22fe29600121e68c0ab9c46eedb39182274ec",
+      "sha256": "fea0ca9bacd6497f67292a015f651d0183f65b150469eb0be533bdf91adee2c8",
       "summary": {
         "status": "PASS_NAMED_FINITE_TEMPERATURE_BETA_CONTRACT",
         "full_core_unlock": false

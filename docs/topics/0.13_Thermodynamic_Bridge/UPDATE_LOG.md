@@ -3463,3 +3463,19 @@ CONTROLLING_BLOCKER: ding_pbte_C_src_numeric_or_accepted_independent_reproductio
 NEXT_ACTION: Execute an authorized corresponding-author request or build an accepted same-regime PBTE reproduction with units, uncertainty, convergence, material/state mapping, and hash; keep calibration independent and do not read the locked holdout.
 CLAIM_BOUNDARY: This closes source-provenance/availability classification only. It is not numeric C_src, alpha_Phi_K calibration, temperature prediction, external validation, CLOSED_FOR_CORE, or global UET closure.
 EVIDENCE_HASHES: package b87680866ebed7ca25f27008f01e37dd47f0e6da54c3c1e27eb404e20fe600ad; source audit 1828db74760ac53c73345d0e4a8adc8fc00fc16bb25e84809a73aaa3cd9b3d9a; full gate fcd703b29b69e2e32ebc9d9572eca5fc33ffc9a9ad2893336c3f5ca81644c231; closure register 9158e95279a567780f8bd6fdce0cca7b37f7b01a732ad11bb6774b3fbefea25d; dependency gate 5d8bf0ca921d50ca57634c377b5ace7f71b58b6791441063fc1c71cf86490d88.
+
+### 2026-08-22 - QH-15 graphite comparator lane (T13-152)
+
+MAJOR_RESULT_CLOSURE: `T13_QH15_GRAPHITE_CV_COMPARATOR_BOUNDARY` is `CLOSED_FOR_LANE`; Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_IS_ACTUALLY_CLOSED: QH-15 archive identity, selected-entry provenance, raw hashes, the `SpecificC` unit witness, explicit SI conversion, separate isopure control, and a non-fitting 200/300 K equilibrium-scale comparison with Calorine.
+WHAT_REMAINS_OPEN: Ding mode-resolved `C_src`, Ding response/material mapping, source-grade uncertainty, independent `alpha_Phi_K`, and full EOS/transport/KMS/entropy closure.
+DEPENDENCY_UNLOCKED: None beyond comparator classification; Core, Gravity, constitutive transport, Galaxy, and external-claim dependencies remain blocked.
+STATUS: `PASS_SCOPED_QH15_CV_COMPARATOR_BOUNDARY`.
+WHAT_CHANGED: Added the source package, raw selected entries, verifier, regression, full-gate lane integration, and closure/dependency synchronization. No fit, calibration, threshold adjustment, synthetic replacement, or Xie 2026 access.
+EQUATION_OR_MAPPING: `C_v^QH15 = SpecificC * 1.0e9 J m^-3 K^-1`; `r_T = (C_v^QH15-C_src^Calorine)/C_src^Calorine`.
+VERIFICATION: QH-15 verifier passed. Cross-check relative differences are `-0.682889%` at 200 K and `+0.014257%` at 300 K. Full gate is `175/15/10` for closed lanes/scoped no-go/open blockers; downstream unlock is `false`.
+CONTROLLING_BLOCKER: `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing`, with independent `alpha_Phi_K` calibration still open.
+NEXT_ACTION: Keep QH-15 as comparator evidence; obtain an authorized Ding numeric package or accepted same-regime PBTE reproduction with uncertainty and response mapping, and independently establish the base-Phi/SI anchor.
+CLAIM_BOUNDARY: Comparator evidence only; not Ding `C_src`, not alpha calibration, not temperature prediction, not external validation, and not Full Topic 13 closure.
+EVIDENCE_PATHS: `docs/core/artifacts/t13_qh15_graphite_transport_boundary_audit.json`; `docs/scripts/audit/audit_topic13_qh15_graphite_transport_boundary.py`; `docs/core/test/test_topic13_qh15_graphite_transport_boundary.py`; `docs/scripts/audit/audit_topic13_full_bridge_gate.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.
+EVIDENCE_HASHES: package `b30803d03435676fb30e0135601be7dd6be7e38824b688fb60d53cc75568fcbb`; audit `51ddbb46b345233509c78cbb6575945017ddddf3fa14e3fcf233bbad5e9c1e11`; full gate `f24505fd2b5cf4d3d8d6d44fef8178708c67c51fc8524ff65c8e48126b22ca7a`; closure register `8e63233c4b5754889ce786ceac7e244e34863bafa6cf3633a0b0727fc71527c6`; dependency gate `0244fa30db724d01b30a74dac972758fb8017d12902fcd83d2b5f5799bb87643`.

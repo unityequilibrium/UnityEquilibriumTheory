@@ -1,0 +1,128 @@
+{
+  "schema_version": "t13-qh15-graphite-transport-source-package-v1",
+  "artifact": "qh15_graphite_transport_source_package",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "created_on": "2026-08-22",
+  "status": "SOURCE_LOCKED_COMPARATOR_ONLY",
+  "source": {
+    "source_id": "materialscloud_qh15_d2hm0_qsk96",
+    "title": "Viscous heat backflow and temperature resonances in extreme thermal conductors",
+    "authors": [
+      "Jan Dragasevic",
+      "Bogdan Rajkov",
+      "Michele Simoncelli"
+    ],
+    "doi": "10.24435/materialscloud:qh-15",
+    "record_locator": "https://archive.materialscloud.org/record/d2hm0-qsk96",
+    "doi_locator": "https://archive.materialscloud.org/doi/10.24435/materialscloud:qh-15",
+    "record_api_locator": "https://archive.materialscloud.org/api/records/d2hm0-qsk96",
+    "files_api_locator": "https://archive.materialscloud.org/api/records/d2hm0-qsk96/files",
+    "publication_date": "2026-01-08",
+    "license_or_terms": "CC BY 4.0 as reported by the Materials Cloud record",
+    "retrieved_on": "2026-08-22",
+    "archive_file": {
+      "entry_name": "data.zip",
+      "entry_locator": "Materials Cloud record d2hm0-qsk96 file manifest",
+      "bytes": 116822716,
+      "md5": "1e4cdf648fd549fae90824c1256c52c5",
+      "sha256": "c46a9db519bca1f56a2e195a5dcf38f01d6d1063f32f828083a72f40a8e38be4"
+    },
+    "material_label": "Natural graphite transport-coefficient input as labeled by the QH-15 README; exact Ding TTG specimen equivalence is not established",
+    "material_regime_status": "OPEN_NOT_EQUIVALENT_TO_DING_TTG"
+  },
+  "archived_entries": [
+    {
+      "entry_path": "data_for_publication/README.txt",
+      "local_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/qh15_materialscloud/README.txt",
+      "bytes": 5555,
+      "sha256": "e23a3b82de7d75b189b3870ab9f4799a035c699b69c1299a797287480112bc35",
+      "role": "source data layout and material-label contract"
+    },
+    {
+      "entry_path": "data_for_publication/raw_data/graphite_transport_coefficients.csv",
+      "local_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/qh15_materialscloud/raw_data/graphite_transport_coefficients.csv",
+      "bytes": 10500,
+      "sha256": "1fffacb449f0b1801f7428de68cf7ebe1772546ea29ba61901f06115fc87e00f",
+      "role": "natural-graphite raw transport-coefficient rows"
+    },
+    {
+      "entry_path": "data_for_publication/raw_data/graphite_transport_coefficients_isopure_80K.csv",
+      "local_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/qh15_materialscloud/raw_data/graphite_transport_coefficients_isopure_80K.csv",
+      "bytes": 1000,
+      "sha256": "9c43fdaa4b560e845c12df645263efa826c56cf4ee8f8b5815da2e578c16441c",
+      "role": "isopure graphite control rows"
+    },
+    {
+      "entry_path": "data_for_publication/fig1_temp_inversion/fig1_temp_inversion.nb",
+      "local_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/qh15_materialscloud/fig1_temp_inversion/fig1_temp_inversion.nb",
+      "bytes": 6783653,
+      "sha256": "ef79c1064c0e6a67da27a01e22c8491f8152a1fb3f12a5381e985dbc2b2d2526",
+      "role": "source notebook defining column meanings and units"
+    }
+  ],
+  "raw_table_contract": {
+    "header_present": false,
+    "natural_graphite_row_count": 21,
+    "isopure_control_row_count": 2,
+    "column_count": 20,
+    "temperature_column_one_based": 1,
+    "specific_c_column_one_based": 19,
+    "specific_c_source_name": "SpecificC",
+    "specific_c_source_role": "Cv used by the QH-15 viscous-heat equations; macroscopic comparator coefficient, not mode-resolved C_src"
+  },
+  "unit_contract": {
+    "temperature": "K",
+    "specific_c_native": "pg/(micrometer*ns^2*K)",
+    "specific_c_si": "J m^-3 K^-1",
+    "conversion_equation": "C_v_QH15[J m^-3 K^-1] = SpecificC[pg/(um ns^2 K)] * 1.0e9",
+    "conversion_factor": 1000000000.0,
+    "conversion_factor_derivation": "1 pg/(1 um * 1 ns^2 * K) = 1e-15 kg/(1e-6 m * 1e-18 s^2 * K) = 1e9 J m^-3 K^-1"
+  },
+  "source_rows": {
+    "natural_graphite": [
+      {
+        "source_row_id": "qh15_natural_graphite_temperature_200K",
+        "temperature_K": 200.0,
+        "specific_c_native": 0.0009869740000000001,
+        "converted_c_v_J_m^-3_K^-1": 986974.0
+      },
+      {
+        "source_row_id": "qh15_natural_graphite_temperature_300K",
+        "temperature_K": 300.0,
+        "specific_c_native": 0.0016900999999999999,
+        "converted_c_v_J_m^-3_K^-1": 1690100.0
+      }
+    ],
+    "isopure_control": [
+      {
+        "source_row_id": "qh15_isopure_graphite_temperature_80K",
+        "temperature_K": 80.0,
+        "specific_c_native": 0.00023099660000000001,
+        "converted_c_v_J_m^-3_K^-1": 230996.6
+      }
+    ]
+  },
+  "comparator_contract": {
+    "data_role": "COMPARISON_ONLY_NOT_CALIBRATION",
+    "observable": "macroscopic QH-15 volumetric heat-capacity-like coefficient and transport-input scale",
+    "response_contract_match_to_Ding_TTG": false,
+    "mode_resolved_q_mu_payload_present": false,
+    "ding_C_src_acceptance": false,
+    "source_grade_uncertainty_present": false,
+    "source_grade_uncertainty_policy": "No uncertainty is emitted or promoted from this archive; lack of uncertainty remains an open blocker",
+    "calorine_crosscheck_temperatures_K": [
+      200.0,
+      300.0
+    ],
+    "crosscheck_policy": "Compare independent macroscopic equilibrium scale only; do not infer material equivalence or calibrate Phi"
+  },
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "xie_2026_source_data_consumed": false,
+    "calibration_path_may_read_holdout": false,
+    "target_curve_used": false,
+    "fit_performed": false,
+    "alpha_Phi_K_fit_used": false
+  },
+  "claim_boundary": "QH-15 is a source-locked macroscopic graphite C_v comparator with an explicit unit conversion and a bounded cross-check against the independent Calorine candidate. It is not Ding mode-resolved C_src, not an alpha_Phi_K calibration, not a Phi-to-temperature map, not external validation, and not Full Topic 13 closure."
+}

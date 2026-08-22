@@ -119,6 +119,7 @@
       "current alpha_Phi_K paired-record search is closed for lane with no eligible calibration record",
       "independent c_v comparator boundary is closed for lane without promoting it to Ding C_src",
       "Perez-Castaneda HOPG specific-heat source boundary is closed for lane; the specimen and below-3-percent method-comparison bound are source-locked, but figure-only rows, source-grade uncertainty, Ding C_src, and alpha remain open",
+      "QH-15 macroscopic graphite C_v comparator is closed for lane; its unit conversion and Calorine cross-check do not establish Ding C_src, material equivalence, source-grade uncertainty, or alpha_Phi_K",
       "Ding public supplementary payload boundary is closed for lane without promoting PDFs or figures to numeric C_src",
       "Ding 2017 ACS supplementary payload boundary is closed for lane without promoting PDF equations or figures to numeric C_src",
       "action-derived finite-temperature O(2) 1<->3 sunset channel, thermal retarded sign, channel KMS/FDT, and vacuum phase-space normalization are closed for lane; other thermal cuts, full finite-temperature 1PI, unique physical renormalization, Kubo, entropy, SI, alpha, and external validation remain open",
@@ -165,7 +166,7 @@
     ],
     "dependency_unlocked": "Gravity/GR remains blocked until this full bridge and Core curved 3+1 gates pass",
     "closure_summary": {
-      "closed_lane_count": 174,
+      "closed_lane_count": 175,
       "closed_as_no_go_count": 15,
       "closed_lane_result_ids": [
         "T13_AIST_GRAPHITE_SOURCE_ROUTE_BOUNDARY",
@@ -247,6 +248,7 @@
         "T13_PHI_SI_ANCHOR_PUBLIC_SOURCE_BOUNDARY",
         "T13_PHONIX_MP47_GRAPHITE_HARMONIC_COMPARATOR",
         "T13_PHYSICAL_KUBO_COEFFICIENT_PROVENANCE_GATE",
+        "T13_QH15_GRAPHITE_CV_COMPARATOR_BOUNDARY",
         "T13_SK_KMS_ENTROPY_INTERFACE_CONTRACT",
         "T13_SOURCE_CP_95CI_ANCHOR",
         "T13_GATECH_STANDARD_TRANSPORT_COMPARATOR",
@@ -3638,6 +3640,105 @@
           "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
           "calorine_legacy_pbte_source_grade_uncertainty_missing",
           "calorine_route_material_regime_mapping_to_ding_missing",
+          "alpha_Phi_K_independent_calibration_missing"
+        ]
+      },
+      "qh15_graphite_cv_comparator_boundary": {
+        "status": "PASS_SCOPED_QH15_CV_COMPARATOR_BOUNDARY",
+        "claim_promotion": false,
+        "source": {
+          "source_id": "materialscloud_qh15_d2hm0_qsk96",
+          "doi": "10.24435/materialscloud:qh-15",
+          "archive_sha256": "c46a9db519bca1f56a2e195a5dcf38f01d6d1063f32f828083a72f40a8e38be4",
+          "natural_graphite_rows": [
+            {
+              "temperature_K": 200.0,
+              "specific_c_native": 0.000986974,
+              "converted_c_v_J_m^-3_K^-1": 986974.0
+            },
+            {
+              "temperature_K": 300.0,
+              "specific_c_native": 0.0016901,
+              "converted_c_v_J_m^-3_K^-1": 1690100.0
+            }
+          ],
+          "isopure_control_row": {
+            "temperature_K": 80.0,
+            "specific_c_native": 0.0002309966,
+            "converted_c_v_J_m^-3_K^-1": 230996.6
+          },
+          "source_grade_uncertainty_present": false,
+          "material_regime_status": "OPEN_NOT_EQUIVALENT_TO_DING_TTG"
+        },
+        "observations": {
+          "calorine_crosschecks": [
+            {
+              "temperature_K": 200.0,
+              "qh15_c_v_J_m^-3_K^-1": 986974.0,
+              "calorine_c_src_J_m^-3_K^-1": 993760.2797173061,
+              "relative_difference": -0.006828890081254431,
+              "relative_difference_percent": -0.6828890081254431
+            },
+            {
+              "temperature_K": 300.0,
+              "qh15_c_v_J_m^-3_K^-1": 1690100.0,
+              "calorine_c_src_J_m^-3_K^-1": 1689859.0705455516,
+              "relative_difference": 0.00014257369661638042,
+              "relative_difference_percent": 0.014257369661638042
+            }
+          ],
+          "interpretation": "The two macroscopic source lanes are numerically close at the checked temperatures, but this does not establish material identity, response-contract identity, source-grade uncertainty, or Ding acceptance."
+        },
+        "checks": {
+          "package_present": true,
+          "calorine_package_present": true,
+          "all_archived_entries_match_hash_and_size": true,
+          "archive_identity_locked": true,
+          "raw_csv_has_no_header_and_20_columns": true,
+          "row_counts_match_package": true,
+          "source_notebook_defines_specific_c_and_native_units": true,
+          "selected_rows_match_raw_source": true,
+          "declared_conversion_factor_is_si_closed": true,
+          "equilibrium_crosscheck_computed": true,
+          "ding_response_contract_not_claimed": true,
+          "mode_resolved_payload_not_claimed": true,
+          "source_uncertainty_not_promoted": true,
+          "target_curve_unused": true,
+          "fit_unused": true,
+          "alpha_fit_unused": true,
+          "holdout_unconsumed": true
+        },
+        "hash_checks": {
+          "source data layout and material-label contract": true,
+          "natural-graphite raw transport-coefficient rows": true,
+          "isopure graphite control rows": true,
+          "source notebook defining column meanings and units": true
+        },
+        "holdout_policy": {
+          "xie_2026_accessed": false,
+          "xie_2026_source_data_consumed": false,
+          "calibration_path_may_read_holdout": false
+        },
+        "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+        "next_action": "Use QH-15 only as a comparator while obtaining an authorized Ding numeric package or an accepted same-regime PBTE reproduction with source-grade uncertainty and response-contract mapping; keep alpha_Phi_K independent and do not read the locked holdout.",
+        "claim_boundary": "This result is a source-locked QH-15 comparator boundary. It is not Ding mode-resolved C_src, not an accepted same-regime reproduction, not an alpha_Phi_K calibration, not a Phi-to-temperature prediction, and not Full Topic 13 closure.",
+        "major_result_id": "T13_QH15_GRAPHITE_CV_COMPARATOR_BOUNDARY",
+        "closure_level": "CLOSED_FOR_LANE",
+        "data_role": "COMPARISON_ONLY_NOT_CALIBRATION",
+        "audit": {
+          "path": "docs/core/artifacts/t13_qh15_graphite_transport_boundary_audit.json",
+          "sha256": "51ddbb46b345233509c78cbb6575945017ddddf3fa14e3fcf233bbad5e9c1e11",
+          "summary": {
+            "status": "PASS_SCOPED_QH15_CV_COMPARATOR_BOUNDARY",
+            "major_result_id": "T13_QH15_GRAPHITE_CV_COMPARATOR_BOUNDARY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        },
+        "open_blockers": [
+          "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+          "qh15_to_ding_TTG_response_contract_missing",
+          "qh15_source_grade_uncertainty_missing",
+          "material_regime_mapping_to_TTG_not_closed",
           "alpha_Phi_K_independent_calibration_missing"
         ]
       },
