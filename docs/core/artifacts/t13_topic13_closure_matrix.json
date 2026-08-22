@@ -37,7 +37,7 @@
     "evidence_artifacts": [
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-        "sha256": "a291dc1ae47cdc84e33e419add16f691a9628586c60d2d37b9d8e0e0e15c818e",
+        "sha256": "50725cfa5aad415002c17a5d7201cb91dd5fee8be6f5bb18d529ad9000d9cfb5",
         "summary": {
           "role": "canonical full Topic 13 readiness gate",
           "status": "BLOCKED_OPEN_T13_FULL_BRIDGE"
@@ -269,10 +269,10 @@
       },
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_nep_bte_reproduction_source_package.json",
-        "sha256": "fdca0fe6b387ecf7a731831f808b19504b9c58ebefe2d150261de37b4334f914",
+        "sha256": "a82b25ed00f896b759d2b577bdd046faf1c1ef1399b6f5d12b71c8bd6318e5ed",
         "summary": {
           "role": "gate-linked evidence",
-          "reported_sha256": "fdca0fe6b387ecf7a731831f808b19504b9c58ebefe2d150261de37b4334f914"
+          "reported_sha256": "a82b25ed00f896b759d2b577bdd046faf1c1ef1399b6f5d12b71c8bd6318e5ed"
         }
       },
       {
@@ -811,10 +811,10 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_nep_bte_reproduction_source_package.json",
-          "sha256": "fdca0fe6b387ecf7a731831f808b19504b9c58ebefe2d150261de37b4334f914",
+          "sha256": "a82b25ed00f896b759d2b577bdd046faf1c1ef1399b6f5d12b71c8bd6318e5ed",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "fdca0fe6b387ecf7a731831f808b19504b9c58ebefe2d150261de37b4334f914"
+            "reported_sha256": "a82b25ed00f896b759d2b577bdd046faf1c1ef1399b6f5d12b71c8bd6318e5ed"
           }
         },
         {
@@ -870,7 +870,7 @@
   },
   "canonical_gate": {
     "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-    "sha256": "a291dc1ae47cdc84e33e419add16f691a9628586c60d2d37b9d8e0e0e15c818e",
+    "sha256": "50725cfa5aad415002c17a5d7201cb91dd5fee8be6f5bb18d529ad9000d9cfb5",
     "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
     "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
   },

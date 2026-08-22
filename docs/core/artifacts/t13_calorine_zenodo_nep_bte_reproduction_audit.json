@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-calorine-zenodo-nep-bte-reproduction-audit-v1",
   "artifact": "t13_calorine_zenodo_nep_bte_reproduction_audit",
-  "generated_at": "2026-08-14",
+  "generated_at": "2026-08-23",
   "status": "PASS_SCOPED_CALORINE_NUMERIC_C_SRC_REPRODUCTION",
   "major_result": {
     "major_result_id": "T13_CALORINE_ZENODO_NEP_BTE_NUMERIC_REPRODUCTION",
@@ -11,7 +11,7 @@
       "public Calorine/Zenodo structure and NEP inputs are locally hashed and rerun",
       "a fixed 4x4x2 force-constant state is reused across four q-mesh runs",
       "phono3py mode heat capacity is aggregated and converted to volumetric C_src in J m^-3 K^-1",
-      "the latest 8x8x4 to 10x10x5 mesh pair satisfies the declared candidate numerical preflight",
+      "the latest 10x10x5 to 12x12x6 mesh pair satisfies the declared candidate numerical preflight",
       "fit, target-curve tuning, alpha_Phi_K fitting, and holdout access are absent from every run"
     ],
     "equation_or_mapping": {
@@ -42,7 +42,7 @@
   },
   "source_package": {
     "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_nep_bte_reproduction_source_package.json",
-    "sha256": "fdca0fe6b387ecf7a731831f808b19504b9c58ebefe2d150261de37b4334f914",
+    "sha256": "a82b25ed00f896b759d2b577bdd046faf1c1ef1399b6f5d12b71c8bd6318e5ed",
     "role": "source and reproduction manifest"
   },
   "reproduction": {
@@ -367,20 +367,91 @@
         "target_curve_used": false,
         "holdout_accessed": false,
         "alpha_Phi_K_fit_performed": false
+      },
+      {
+        "label": "12x12x6",
+        "summary": {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_pbte_run_m12x12x6_summary.json",
+          "size_bytes": 4869,
+          "sha256": "726370c72df0f8821ad3505d3dd270b1f90f093d28f44a0d55d6515030f740d0",
+          "locator": null
+        },
+        "mesh": [
+          12,
+          12,
+          6
+        ],
+        "temperatures_K": [
+          200.0,
+          250.0,
+          300.0
+        ],
+        "q_weight_sum": 864.0,
+        "primitive_volume_A3": 34.40911529816803,
+        "c_src_rows": [
+          {
+            "temperature_K": 200.0,
+            "C_src_J_m^-3_K^-1": 952157.6570912363
+          },
+          {
+            "temperature_K": 250.0,
+            "C_src_J_m^-3_K^-1": 1316500.6817711967
+          },
+          {
+            "temperature_K": 300.0,
+            "C_src_J_m^-3_K^-1": 1670107.0791804313
+          }
+        ],
+        "force_constants": {
+          "poscar": {
+            "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/mesh_12x12x6/POSCAR",
+            "size_bytes": 503,
+            "sha256": "c673b66e7750fa4abe594e6117879e1ca779dccfe120ae84aa842a15fcab1de7",
+            "locator": null
+          },
+          "fc2": {
+            "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/mesh_12x12x6/fc2.hdf5",
+            "size_bytes": 32706,
+            "sha256": "ea90e4790166ca54657d4f69a077f4d299d595dd27e107b82d96b4f9eeccad9c",
+            "locator": null
+          },
+          "fc3": {
+            "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/mesh_12x12x6/fc3.hdf5",
+            "size_bytes": 9346643,
+            "sha256": "9d42c80e59757b783462aea57227d0d58f3becc2e3d145fbb370cb137a60b7e2",
+            "locator": null
+          }
+        },
+        "archived_kappa": {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/mesh_12x12x6/kappa.hdf5",
+          "size_bytes": 242650,
+          "sha256": "f4d2dace656514abe3abfe53d29679de91f7a9a94edd2b70adb29f8456037909",
+          "locator": null
+        },
+        "raw_kappa_output": {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/mesh_12x12x6/kappa-m12126.hdf5",
+          "size_bytes": 242650,
+          "sha256": "f4d2dace656514abe3abfe53d29679de91f7a9a94edd2b70adb29f8456037909",
+          "locator": null
+        },
+        "fit_performed": false,
+        "target_curve_used": false,
+        "holdout_accessed": false,
+        "alpha_Phi_K_fit_performed": false
       }
     ],
     "c_src_rows_latest_mesh": [
       {
         "temperature_K": 200.0,
-        "C_src_J_m^-3_K^-1": 951144.1727355289
+        "C_src_J_m^-3_K^-1": 952157.6570912363
       },
       {
         "temperature_K": 250.0,
-        "C_src_J_m^-3_K^-1": 1315486.4752052557
+        "C_src_J_m^-3_K^-1": 1316500.6817711967
       },
       {
         "temperature_K": 300.0,
-        "C_src_J_m^-3_K^-1": 1669092.82459056
+        "C_src_J_m^-3_K^-1": 1670107.0791804313
       }
     ],
     "convergence": {
@@ -485,47 +556,80 @@
             }
           ],
           "max_relative_change": 0.0023908135252728663
+        },
+        {
+          "from_mesh": [
+            10,
+            10,
+            5
+          ],
+          "to_mesh": [
+            12,
+            12,
+            6
+          ],
+          "rows": [
+            {
+              "temperature_K": 200.0,
+              "relative_change": 0.0010644081346817414,
+              "previous_C_src_J_m^-3_K^-1": 951144.1727355289,
+              "current_C_src_J_m^-3_K^-1": 952157.6570912363
+            },
+            {
+              "temperature_K": 250.0,
+              "relative_change": 0.000770380585429314,
+              "previous_C_src_J_m^-3_K^-1": 1315486.4752052557,
+              "current_C_src_J_m^-3_K^-1": 1316500.6817711967
+            },
+            {
+              "temperature_K": 300.0,
+              "relative_change": 0.000607299138189986,
+              "previous_C_src_J_m^-3_K^-1": 1669092.82459056,
+              "current_C_src_J_m^-3_K^-1": 1670107.0791804313
+            }
+          ],
+          "max_relative_change": 0.0010644081346817414
         }
       ],
       "latest_pair": {
         "from_mesh": [
-          8,
-          8,
-          4
-        ],
-        "to_mesh": [
           10,
           10,
           5
         ],
+        "to_mesh": [
+          12,
+          12,
+          6
+        ],
         "rows": [
           {
             "temperature_K": 200.0,
-            "relative_change": 0.0023908135252728663,
-            "previous_C_src_J_m^-3_K^-1": 948870.1643828683,
-            "current_C_src_J_m^-3_K^-1": 951144.1727355289
+            "relative_change": 0.0010644081346817414,
+            "previous_C_src_J_m^-3_K^-1": 951144.1727355289,
+            "current_C_src_J_m^-3_K^-1": 952157.6570912363
           },
           {
             "temperature_K": 250.0,
-            "relative_change": 0.0017423016993467185,
-            "previous_C_src_J_m^-3_K^-1": 1313194.500884038,
-            "current_C_src_J_m^-3_K^-1": 1315486.4752052557
+            "relative_change": 0.000770380585429314,
+            "previous_C_src_J_m^-3_K^-1": 1315486.4752052557,
+            "current_C_src_J_m^-3_K^-1": 1316500.6817711967
           },
           {
             "temperature_K": 300.0,
-            "relative_change": 0.0013745356888170226,
-            "previous_C_src_J_m^-3_K^-1": 1666798.596935212,
-            "current_C_src_J_m^-3_K^-1": 1669092.82459056
+            "relative_change": 0.000607299138189986,
+            "previous_C_src_J_m^-3_K^-1": 1669092.82459056,
+            "current_C_src_J_m^-3_K^-1": 1670107.0791804313
           }
         ],
-        "max_relative_change": 0.0023908135252728663
+        "max_relative_change": 0.0010644081346817414
       },
       "latest_pair_pass": true,
       "scope": "q-mesh convergence at fixed 4x4x2 force-constant supercell and fixed RTA solver; not full source acceptance"
     }
   },
   "uncertainty": {
-    "numerical_mesh_envelope_latest_pair": 0.0023908135252728663,
+    "numerical_mesh_envelope_latest_pair": 0.0010644081346817414,
     "numerical_envelope_is_source_uncertainty": false,
     "source_grade_statistical_or_systematic_uncertainty_present": false,
     "status": "OPEN_SOURCE_GRADE_UNCERTAINTY"
@@ -572,6 +676,13 @@
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_pbte_run_m10x10x5_summary.json",
       "sha256": "a630a13d129b1d1aff6d8d2e20106d2eaad5db7d4bc1b303f45981f3f0564816",
+      "summary": {
+        "role": "persistent PBTE run summary"
+      }
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_pbte_run_m12x12x6_summary.json",
+      "sha256": "726370c72df0f8821ad3505d3dd270b1f90f093d28f44a0d55d6515030f740d0",
       "summary": {
         "role": "persistent PBTE run summary"
       }

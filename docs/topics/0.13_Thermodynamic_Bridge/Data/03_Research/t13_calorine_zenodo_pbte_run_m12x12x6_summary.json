@@ -1,0 +1,151 @@
+{
+  "schema_version": "t13-calorine-pbte-csrc-run-v1",
+  "run_id": "mesh_12x12x6",
+  "source": {
+    "structure": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/calorine_zenodo_21198312/graphite-prim.xyz",
+      "size_bytes": 324,
+      "sha256": "87fdd172bd5b77e1aa5bd9b4d85c3f21eb5df6521089cc4b769e12d481a1aed0",
+      "locator": "https://zenodo.org/api/records/21198312/files/graphite-prim.xyz/content"
+    },
+    "potential": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/calorine_zenodo_21198312/nep-C.txt",
+      "size_bytes": 116974,
+      "sha256": "add6b3f64fdd3cecebb3aae511816fe4183e4c4a22b058f108f3f0ea1c531623",
+      "locator": "https://zenodo.org/api/records/21198312/files/nep-C.txt/content",
+      "upstream_model_origin": {
+        "locator": "https://github.com/brucefan1983/GPUMD/blob/master/potentials/nep/C_2024_NEP4.txt",
+        "role": "model-origin locator supplied by the source contract; local bytes remain pinned by hash",
+        "related_record": {
+          "locator": "https://zenodo.org/records/7811021",
+          "role": "related source record, not necessarily the byte source"
+        }
+      }
+    },
+    "software": {
+      "calorine": "3.5",
+      "phono3py": "4.4.0",
+      "phonopy": "4.4.0",
+      "ase": "3.29.0"
+    }
+  },
+  "run": {
+    "dim": [
+      4,
+      4,
+      2
+    ],
+    "mesh": [
+      12,
+      12,
+      6
+    ],
+    "temperatures_K": [
+      200.0,
+      250.0,
+      300.0
+    ],
+    "transport_solver": "RTA",
+    "isotope_scattering": false,
+    "holdout_accessed": false,
+    "target_curve_used": false,
+    "fit_performed": false,
+    "alpha_Phi_K_fit_performed": false
+  },
+  "unit_contract": {
+    "mode_heat_capacity_input": "eV K^-1 per mode per primitive cell",
+    "energy_conversion": "1 eV = 1.602176634e-19 J (exact SI)",
+    "primitive_volume_input": "A^3 from relaxed POSCAR",
+    "volume_conversion": "1 A^3 = 1e-30 m^3",
+    "aggregation": "C_src = sum_q w_q sum_mu c_qmu / (sum_q w_q V_primitive)",
+    "output": "J m^-3 K^-1"
+  },
+  "geometry": {
+    "primitive_atoms": 4,
+    "primitive_formula": "C4",
+    "primitive_volume_A3": 34.40911529816803,
+    "q_point_count": 76,
+    "q_weight_sum": 864.0,
+    "mode_count": 12,
+    "frequency_range_THz": [
+      -0.00045080856262931317,
+      45.76120910268223
+    ]
+  },
+  "c_src_rows": [
+    {
+      "temperature_K": 200.0,
+      "C_src_J_m^-3_K^-1": 952157.6570912363
+    },
+    {
+      "temperature_K": 250.0,
+      "C_src_J_m^-3_K^-1": 1316500.6817711967
+    },
+    {
+      "temperature_K": 300.0,
+      "C_src_J_m^-3_K^-1": 1670107.0791804313
+    }
+  ],
+  "transport_summary": {
+    "kappa_shape": [
+      3,
+      6
+    ],
+    "kappa_W_m^-1_K^-1": [
+      [
+        276.8838854704046,
+        276.8838854775103,
+        1.2440545901065339,
+        4.383892049854986e-15,
+        4.236204861457367e-15,
+        1.321510716230672e-13
+      ],
+      [
+        289.51592968646315,
+        289.5159296938928,
+        1.0660456071901623,
+        4.5523193577066755e-15,
+        4.430420871656228e-15,
+        1.3835585724814316e-13
+      ],
+      [
+        284.32227780723446,
+        284.3222778145308,
+        0.9265983576491251,
+        4.454677914265571e-15,
+        4.351151472310964e-15,
+        1.3596989238072429e-13
+      ]
+    ]
+  },
+  "claim_boundary": "Candidate harmonic/RTA PBTE reproduction only; not accepted Ding C_src, not a UET Phi map, not alpha_Phi_K calibration, and not external validation.",
+  "force_constant_summary": {
+    "poscar": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/mesh_12x12x6/POSCAR",
+      "size_bytes": 503,
+      "sha256": "c673b66e7750fa4abe594e6117879e1ca779dccfe120ae84aa842a15fcab1de7",
+      "locator": null
+    },
+    "fc2": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/mesh_12x12x6/fc2.hdf5",
+      "size_bytes": 32706,
+      "sha256": "ea90e4790166ca54657d4f69a077f4d299d595dd27e107b82d96b4f9eeccad9c",
+      "locator": null
+    },
+    "fc3": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/mesh_12x12x6/fc3.hdf5",
+      "size_bytes": 9346643,
+      "sha256": "9d42c80e59757b783462aea57227d0d58f3becc2e3d145fbb370cb137a60b7e2",
+      "locator": null
+    },
+    "reused": true
+  },
+  "output_artifacts": {
+    "kappa_hdf5": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/mesh_12x12x6/kappa-m12126.hdf5",
+      "size_bytes": 242650,
+      "sha256": "f4d2dace656514abe3abfe53d29679de91f7a9a94edd2b70adb29f8456037909",
+      "locator": null
+    }
+  }
+}

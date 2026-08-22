@@ -1217,3 +1217,18 @@ EVIDENCE_PATHS: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/huang_20
 The source-located Ding 2022 notation identifies mode-specific heat capacity and a sum over all phonon modes. The lane maps that notation to the independent MP48 force-constant mode sum without accepting MP48 as Ding PBTE data. The artifact is `docs/core/artifacts/t13_mp48_ding_csrc_response_mapping_audit.json` with SHA-256 `1deefbb6ebbed62345db2063612f9d8c172902dcb93068b800e579455e0d297c`.
 
 The selected `35x35x14` mesh emits four explicit rows at 100, 200, 250, and 300 K. The conversion is `C_src^vol=C_src^mol/V_mol,cell` in `J m^-3 K^-1`, using the source-package volume anchor. This closes only the standard response-mapping lane. Ding material/state equivalence, route-wide convergence, source-grade uncertainty, numeric Ding PBTE `C_src`, base-Phi energy anchoring, and independent `alpha_Phi_K` remain open. No fit or holdout access occurred.
+## C_src mesh-tail extension (2026-08-23)
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for the numerical mesh-tail sub-lane of T13_C_SRC_THERMODYNAMIC_TRANSPORT_REGIME_DECOMPOSITION.
+WHAT_IS_ACTUALLY_CLOSED: The Calorine candidate now includes a persistent 12x12x6 q-mesh summary using the existing 4x4x2 force-constant state. The 10x10x5 -> 12x12x6 C_src tail is 0.106554%, while the in-plane RTA kappa tail is 12.851119%.
+WHAT_REMAINS_OPEN: Ding-compatible material/state mapping, source-grade uncertainty, accepted Ding C_src, alpha_Phi_K, dimensional Phi mapping, and full physical transport/KMS/entropy closure.
+DEPENDENCY_UNLOCKED: Numerical C_src convergence evidence only; no Full Topic 13, Core, Gravity, transport, Galaxy, alpha, or external-validation unlock.
+STATUS: PASS_SCOPED_C_SRC_THERMODYNAMIC_TRANSPORT_DECOMPOSITION.
+WHAT_CHANGED: Added the 12x12x6 run summary and kappa payload, regenerated the source package and audit, and refreshed full-gate/closure/dependency projections.
+EQUATION_OR_MAPPING: C_src(T,V) = (partial u_ph / partial T)_V = V^-1 sum_mu c_mu(T,V); Delta_Tq = Delta_u_ph / C_src(T). No Phi or alpha mapping is emitted.
+VERIFICATION: Fixed force-constant identity, SI units, candidate mesh preflight, no-fit, and no-holdout checks pass.
+CONTROLLING_BLOCKER: ding_C_src_mode_state_and_source_grade_uncertainty_missing.
+NEXT_ACTION: Acquire authorized Ding numeric C_src or an accepted same-regime PBTE package with material/state mapping and source-grade uncertainty.
+CLAIM_BOUNDARY: Numerical convergence sub-lane only; not Ding-equivalent, not source-grade uncertainty closure, not calibration, not prediction, and not Full Topic 13 closure.
+EVIDENCE_PATHS: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_pbte_run_m12x12x6_summary.json`; `docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json`; `docs/core/artifacts/t13_csrc_thermodynamic_transport_regime_decomposition_audit.json`.
+EVIDENCE_HASHES: package a82b25ed00f896b759d2b577bdd046faf1c1ef1399b6f5d12b71c8bd6318e5ed; audit a2fb52533d768697950c49722e24e5de0d9d3381c24be6c5bf2e23f88a8957e0; decomposition 72c5b81720f96eaa08e7d1d6f82177b19b60d6cc780a030547cc5d083f64e850; full gate 50725cfa5aad415002c17a5d7201cb91dd5fee8be6f5bb18d529ad9000d9cfb5.
