@@ -3872,3 +3872,29 @@ CONTROLLING_BLOCKER: `dimensional_phi_energy_anchor_or_independent_alpha_calibra
 NEXT_ACTION: Obtain an authorized Ding numeric package or accepted same-regime PBTE reproduction and an independent paired base-Phi/SI record; continue microscopic transport/EOS work without reading Xie 2026.
 CLAIM_BOUNDARY: This is a progress/reporting artifact. It does not emit `alpha_Phi_K`, turn a comparator/formal interface into physical evidence, or promote Full Topic 13/Core readiness.
 EVIDENCE_HASHES: matrix `feec710a8ea320c5b69cc551dd50b7f3e449e52b621f79c0c59c24ebebc59149`; full gate `2cd42d31f9055f8f6ba14a969b867a6294fed3d94fa287f7c286eb02a2008bb7`; closure register `1e78c3fe74e8bf1c77ff9e99b2a9dffac79a2abeee2bc02a522f257909650710`; dependency gate `bbf0cb77399ba3e7f6d8833497f60cb96ec9110a1a5aa51c069497833026157e`.
+
+## 2026-08-22 - HOPG/PBTE public-source screening and controller narrowing (T13-167)
+
+MAJOR_RESULT_CLOSURE: `PARTIAL` for the Topic 13 source/calibration controller; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE` / `PARTIAL`.
+
+WHAT_IS_ACTUALLY_CLOSED: The public-source screening boundary is explicit. A primary HOPG thermodynamic route is recorded as high-temperature context only, while the existing Huberman public PBTE route remains a source-availability boundary with no accepted machine-readable `C_src` payload.
+
+WHAT_REMAINS_OPEN: No permitted Ding-compatible `C_src(T)` rows, same-regime PBTE reproduction, paired base-`Phi`/SI anchor, or independent `alpha_Phi_K` record was found. The nine canonical full-gate blocker groups remain unchanged.
+
+DEPENDENCY_UNLOCKED: None for Full Topic 13, physical transport, Core, Gravity, or external validation. Only source-screening and provenance boundaries are strengthened.
+
+STATUS: `BLOCKED_OPEN_T13_FULL_BRIDGE`; `claim_promotion=false`; `full_core_unlock=false`; holdout access `false`.
+
+WHAT_CHANGED: Screened the primary PLOS HOPG thermodynamic route (reported scope 765–1030 K) and compared it with the Topic 13 200–300 K TTG/source contract. The route is not imported as `c_v`, `C_src`, or calibration because its regime, uncertainty contract, and Ding material mapping are insufficient. No numeric holdout, target fit, threshold adjustment, or synthetic replacement was used.
+
+EQUATION_OR_MAPPING: `c_p^V-c_v^V=T*alpha_V^2*K_T` remains a conditional correction; `C_src(T)=sum_mu c_mu(T)` and `Delta_Tq=Delta_u_ph/C_src(T)` remain source-gated; `Delta_Tq=alpha_Phi_K*Delta_Phi` remains independently uncalibrated.
+
+VERIFICATION: PLOS source review records the HOPG thermodynamic context and high-temperature scope at [the primary article](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0105788); the existing Huberman boundary audit remains `PASS_HUBERMAN_PUBLIC_PBTE_BOUNDARY_NO_ACCEPTED_NUMERIC_PAYLOAD`; the canonical full gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE` with 9 open blocker groups; `xie_2026_accessed=false`.
+
+CONTROLLING_BLOCKER: `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing` and `alpha_Phi_K_independent_calibration_missing` remain the nearest source/calibration controllers; the PLOS route is not a substitute.
+
+NEXT_ACTION: Obtain an authorized Ding numeric package or accepted same-regime PBTE reproduction with units, convergence, uncertainty, and material/state mapping; independently derive or source-lock a paired base-`Phi`/SI record without reading Xie 2026.
+
+CLAIM_BOUNDARY: This is a source-screening and blocker-narrowing result only. It does not emit `c_v`, `C_src`, `alpha_Phi_K`, a TTG prediction, a physical Kubo coefficient, external validation, or Full Topic 13 closure.
+
+EVIDENCE_PATHS: `docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json`; `docs/core/artifacts/t13_huberman_2019_public_pbte_boundary_audit.json`; `docs/core/artifacts/t13_ding_pbte_payload_acceptance_audit.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.
