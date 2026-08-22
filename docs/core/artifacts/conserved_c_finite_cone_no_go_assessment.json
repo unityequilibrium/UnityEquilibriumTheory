@@ -1,7 +1,7 @@
 {
   "schema_version": "conserved-c-finite-cone-no-go-assessment-v1",
   "artifact": "conserved_c_finite_cone_no_go_assessment",
-  "generated_at": "2026-08-22",
+  "generated_at": "2026-08-23",
   "status": "NO_GO_FOR_DECLARED_CONSERVED_CATTANEO_LOCAL_GRADIENT_CLASS",
   "proof_scope": "declared local conserved-C Cattaneo equation with mu_C=a_C*C-kappa_C*Laplacian(C)",
   "not_claimed": [

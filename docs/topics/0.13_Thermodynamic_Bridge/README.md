@@ -321,3 +321,16 @@ CONTROLLING_BLOCKER: `physical_Kubo_coefficient_record_missing`; `alpha_Phi_K_in
 NEXT_ACTION: Obtain a state-matched UET response-space/Kubo record and an independent Phi/SI anchor without reading Xie 2026; continue authorized Ding `C_src` acquisition separately.
 CLAIM_BOUNDARY: Component closure only. No temperature prediction, alpha calibration, physical UET transport proof, curved 3+1 result, external validation, or global UET closure is claimed.
 Machine-readable artifact: `docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json`.
+## Current Major Result: T13-173 causal gate semantics alignment (2026-08-23)
+
+MAJOR_RESULT_CLOSURE: CLOSED_AS_NO_GO for the declared local conserved-C gradient finite-cone compatibility question; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.
+WHAT_IS_ACTUALLY_CLOSED: The full gate and closure matrix now agree that formal no-go plus passing named finite-cone/coupled branches closes the causal requirement for lane. The original conserved-C baseline remains BLOCKED with leakage 0.017639381271029236, above the unchanged 1e-6 threshold.
+WHAT_REMAINS_OPEN: The full gate reports 8 blocker groups: Ding-compatible C_src, independent alpha_Phi_K, normalized beta/SI correspondence, physical UET Kubo, dimensional Phi mapping, matched alpha_V/K_T, TTG material mapping, and source-grade c_v uncertainty.
+DEPENDENCY_UNLOCKED: Named normalized causal branch only. Full Topic 13, Core, Gravity, constitutive transport, Galaxy, and external validation remain blocked.
+STATUS: BLOCKED_OPEN_T13_FULL_BRIDGE; causal gate_status=PASS; claim_promotion=false; full_core_unlock=false.
+WHAT_CHANGED: The causal gate status is now explicitly based on either the original full-candidate pass or the formal no-go/named-branch route. This does not replace the baseline or alter any threshold.
+EQUATION_OR_MAPPING: prearrival_leakage_fraction <= 1e-6; original conserved-C baseline and named local flux-relaxation branch remain separate equations.
+VERIFICATION: Focused causal/closure regression passed 10 tests; full gate, closure matrix, register, and dependency projections regenerated; holdout_accessed=false.
+CONTROLLING_BLOCKER: alpha_Phi_K_independent_calibration_missing; Ding-compatible C_src and physical UET Kubo provenance remain open.
+NEXT_ACTION: Obtain an independent paired base-Phi/SI record or declared dimensionful action-to-SI map, while separately pursuing authorized Ding-compatible C_src evidence without reading Xie 2026.
+CLAIM_BOUNDARY: Structural no-go and reporting alignment only. No original baseline pass, alpha calibration, TTG prediction, physical UET transport proof, or Full Topic 13 closure is claimed.

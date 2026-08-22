@@ -592,8 +592,9 @@
   },
   "verification_status": {
     "causal_full_candidate_or_formal_no_go_branch": {
-      "status": "BLOCKED",
-      "status_role": "full_candidate_readiness_gate",
+      "status": "PASS",
+      "status_role": "full_candidate_or_formal_no_go_gate",
+      "status_basis": "FORMAL_NO_GO_AND_NAMED_BRANCH",
       "baseline_status": "BLOCKED",
       "baseline_controlling_blocker": "original_conserved_c_gradient_baseline_blocked",
       "lane_status": "PASS",
@@ -614,7 +615,7 @@
       "no_go_scope": "declared local conserved-C Cattaneo equation with mu_C=a_C*C-kappa_C*Laplacian(C)",
       "no_go_artifact": {
         "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
-        "sha256": "c4e5b4e87794136f07f70ded43f7aa4d86140ca3c725b6ac237c99808a81262d"
+        "sha256": "3b58b2633a30f8a91710a59c46097f76bb2f36e2dda07e8cae03c9268d3f76bc"
       },
       "baseline_replaced": false,
       "full_core_unlock": false,
@@ -80427,7 +80428,7 @@
     },
     {
       "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
-      "sha256": "c4e5b4e87794136f07f70ded43f7aa4d86140ca3c725b6ac237c99808a81262d",
+      "sha256": "3b58b2633a30f8a91710a59c46097f76bb2f36e2dda07e8cae03c9268d3f76bc",
       "summary": {
         "status": "NO_GO_FOR_DECLARED_CONSERVED_CATTANEO_LOCAL_GRADIENT_CLASS",
         "proof_scope": "declared local conserved-C Cattaneo equation with mu_C=a_C*C-kappa_C*Laplacian(C)"
@@ -81258,7 +81259,7 @@
     },
     {
       "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
-      "sha256": "c4e5b4e87794136f07f70ded43f7aa4d86140ca3c725b6ac237c99808a81262d",
+      "sha256": "3b58b2633a30f8a91710a59c46097f76bb2f36e2dda07e8cae03c9268d3f76bc",
       "summary": {
         "status": "NO_GO_FOR_DECLARED_CONSERVED_CATTANEO_LOCAL_GRADIENT_CLASS",
         "proof_scope": "declared local conserved-C Cattaneo equation with mu_C=a_C*C-kappa_C*Laplacian(C)"

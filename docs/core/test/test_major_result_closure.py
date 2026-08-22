@@ -42,8 +42,9 @@ def test_topic13_full_gate_preserves_current_blockers_and_holdout_boundary() -> 
     assert gate["status"] == "BLOCKED_OPEN_T13_FULL_BRIDGE"
     assert gate["major_result"]["closure_level"] == "PARTIAL"
     causal = gate["verification_status"]["causal_full_candidate_or_formal_no_go_branch"]
-    assert causal["status"] == "BLOCKED"
-    assert causal["status_role"] == "full_candidate_readiness_gate"
+    assert causal["status"] == "PASS"
+    assert causal["status_role"] == "full_candidate_or_formal_no_go_gate"
+    assert causal["status_basis"] == "FORMAL_NO_GO_AND_NAMED_BRANCH"
     assert causal["lane_status"] == "PASS"
     assert causal["lane_closure_level"] == "CLOSED_FOR_LANE"
     assert gate["verification_status"]["alpha_Phi_K"]["status"] == "BLOCKED"

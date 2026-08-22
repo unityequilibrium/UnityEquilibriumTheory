@@ -426,6 +426,7 @@ def main() -> int:
         full.get("gate") == "PASS"
         and float(full.get("prearrival_leakage_fraction", 1.0)) <= float(full.get("threshold", 1.0e-6))
     )
+    causal_gate_pass = full_candidate_pass or causal_lane_pass
     branch_pass = (
         float(selected.get("prearrival_leakage_fraction", 1.0)) <= float(selected.get("threshold", 1.0e-6))
         and float(selected.get("arrival_target_abs", 0.0)) > 0.0
@@ -563,8 +564,13 @@ def main() -> int:
         "causal_full_candidate_or_formal_no_go_branch": {
             # The named lane may close without promoting the original
             # full-candidate causal gate.
-            "status": "PASS" if full_candidate_pass else "BLOCKED",
-            "status_role": "full_candidate_readiness_gate",
+            "status": "PASS" if causal_gate_pass else "BLOCKED",
+            "status_role": "full_candidate_or_formal_no_go_gate",
+            "status_basis": (
+                "FULL_CANDIDATE"
+                if full_candidate_pass
+                else ("FORMAL_NO_GO_AND_NAMED_BRANCH" if causal_lane_pass else "OPEN")
+            ),
             "baseline_status": "PASS" if full_candidate_pass else "BLOCKED",
             "baseline_controlling_blocker": (
                 None if full_candidate_pass else "original_conserved_c_gradient_baseline_blocked"
@@ -590,7 +596,11 @@ def main() -> int:
             "no_go_artifact": {"path": rel(no_go_path), "sha256": sha256(no_go_path)},
             "baseline_replaced": False,
             "full_core_unlock": False,
-            "controlling_blocker": "original_conserved_c_gradient_baseline_blocked" if causal_lane_pass else "formal_conserved_C_no_go_or_explicit_regularization_missing",
+            "controlling_blocker": (
+                None
+                if causal_gate_pass
+                else "formal_conserved_C_no_go_or_explicit_regularization_missing"
+            ),
         },
         "source_package": {
             "status": "PASS" if source_ready else "BLOCKED",

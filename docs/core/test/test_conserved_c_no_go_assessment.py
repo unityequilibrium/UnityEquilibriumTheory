@@ -29,7 +29,9 @@ def test_topic13_gate_keeps_original_baseline_blocked_after_no_go() -> None:
     assert causal["named_finite_cone_branch_pass"] is True
     assert causal["named_coupled_branch_pass"] is True
     assert causal["full_candidate_pass"] is False
-    assert causal["status_role"] == "full_candidate_readiness_gate"
+    assert causal["status"] == "PASS"
+    assert causal["status_role"] == "full_candidate_or_formal_no_go_gate"
+    assert causal["status_basis"] == "FORMAL_NO_GO_AND_NAMED_BRANCH"
     assert causal["baseline_status"] == "BLOCKED"
     assert causal["baseline_controlling_blocker"] == "original_conserved_c_gradient_baseline_blocked"
     assert causal["lane_status"] == "PASS"

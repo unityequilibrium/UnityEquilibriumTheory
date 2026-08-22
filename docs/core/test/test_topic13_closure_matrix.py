@@ -46,7 +46,7 @@ def test_topic13_closure_matrix_reports_major_requirements_without_promotion() -
     assert matrix["closure_summary"]["open_blocker_groups"] == gate["major_result"]["closure_summary"]["open_blocker_groups"]
     causal = next(item for item in matrix["requirements"] if item["requirement_id"] == "causal_structure")
     assert causal["closure_level"] == "CLOSED_AS_NO_GO"
-    assert causal["gate_status"] == "BLOCKED"
+    assert causal["gate_status"] == "PASS"
     assert causal["gate_lane_closure_level"] == "CLOSED_FOR_LANE"
     alpha = next(item for item in matrix["requirements"] if item["requirement_id"] == "independent_alpha_Phi_K")
     assert alpha["closure_level"] == "OPEN"

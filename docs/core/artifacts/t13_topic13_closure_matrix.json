@@ -37,7 +37,7 @@
     "evidence_artifacts": [
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-        "sha256": "9e87757f70f9e4b4f24481db8b18d3adbf2c713c90a26a97ffa9a8e8215daafd",
+        "sha256": "4ab2383732085afca789a3125aa058ddfe98e753553d90e724640b8ec904cc50",
         "summary": {
           "role": "canonical full Topic 13 readiness gate",
           "status": "BLOCKED_OPEN_T13_FULL_BRIDGE"
@@ -45,10 +45,10 @@
       },
       {
         "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
-        "sha256": "c4e5b4e87794136f07f70ded43f7aa4d86140ca3c725b6ac237c99808a81262d",
+        "sha256": "3b58b2633a30f8a91710a59c46097f76bb2f36e2dda07e8cae03c9268d3f76bc",
         "summary": {
           "role": "gate-linked evidence",
-          "reported_sha256": "c4e5b4e87794136f07f70ded43f7aa4d86140ca3c725b6ac237c99808a81262d"
+          "reported_sha256": "3b58b2633a30f8a91710a59c46097f76bb2f36e2dda07e8cae03c9268d3f76bc"
         }
       },
       {
@@ -323,7 +323,7 @@
       "what_is_closed": "The finite-cone compatibility question is closed as a scoped no-go for the declared local conserved-C gradient class. The named coupled conserved-flux/Phi branch is retained separately with its own causal checks.",
       "what_remains_open": "The original conserved-C full-candidate baseline remains blocked; the named branch does not replace it.",
       "dependency_unlocked": "Named causal branch only; no Full Topic 13 or downstream unlock.",
-      "gate_status": "BLOCKED",
+      "gate_status": "PASS",
       "gate_controlling_blocker": "original_conserved_c_gradient_baseline_blocked",
       "gate_lane_status": "PASS",
       "gate_lane_closure_level": "CLOSED_FOR_LANE",
@@ -333,10 +333,10 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
-          "sha256": "c4e5b4e87794136f07f70ded43f7aa4d86140ca3c725b6ac237c99808a81262d",
+          "sha256": "3b58b2633a30f8a91710a59c46097f76bb2f36e2dda07e8cae03c9268d3f76bc",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "c4e5b4e87794136f07f70ded43f7aa4d86140ca3c725b6ac237c99808a81262d"
+            "reported_sha256": "3b58b2633a30f8a91710a59c46097f76bb2f36e2dda07e8cae03c9268d3f76bc"
           }
         }
       ]
@@ -895,7 +895,7 @@
   },
   "canonical_gate": {
     "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-    "sha256": "9e87757f70f9e4b4f24481db8b18d3adbf2c713c90a26a97ffa9a8e8215daafd",
+    "sha256": "4ab2383732085afca789a3125aa058ddfe98e753553d90e724640b8ec904cc50",
     "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
     "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
   },
