@@ -1262,3 +1262,9 @@ Source archive: docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nims_
 The nested audit confirms that the raw package has no force-constant data, frequency mesh, or machine-readable thermal-property rows; thermal_properties.png is figure-only. The phonopy/settings payload is therefore not admitted as numeric C_src(T) and is not used for alpha_Phi_K calibration. No figure digitization, fit, or Xie 2026 access occurred.
 
 Artifact: docs/core/artifacts/t13_nims_mp990448_phonon_source_boundary_audit.json (SHA-256 af61412589e0c39fd5ca5f548e7870c718142579a581cc8853e9102de30a4571); source package docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/nims_mdr_mp990448_phonon_source_package.json (SHA-256 79b6a25119b334a449686c9c5dcb356901390375bba71464c62dda338838b47d). This closes only a source-payload boundary; it does not supply Ding C_src, an independent alpha, or Full Topic 13 closure.
+
+## NIMS MP-990448 Legacy Route Alias (2026-08-23)
+
+The phononDB mapping in atztogo/phonondb points material 990448 to https://mdr.nims.go.jp/download_all/wd3761563.zip. The downloaded legacy archive is byte-identical to the current NIMS MP-990448 archive: SHA-256 eea6ca7569c9442754ce5492ddb2f545186f97ad8b82b209d95f1a80b0158767, size 133375 bytes. This closes the route-equivalence question only; it does not add machine-readable force constants, a frequency mesh, thermal-property rows, C_src, or alpha_Phi_K.
+
+Artifact: docs/core/artifacts/t13_nims_mp990448_phonon_source_boundary_audit.json (SHA-256 2e9f93be5cf23c429d9d0b77f755efb074a44790483f0b635a62327d5025eda9). Source package: docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/nims_mdr_mp990448_phonon_source_package.json (SHA-256 bbd4aee185a7c5a08b33f2f267e81a8b5274fa43b26eae1167966b4a5ec9a061). Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL; no fit, target tuning, synthetic replacement, threshold change, or Xie 2026 access occurred.

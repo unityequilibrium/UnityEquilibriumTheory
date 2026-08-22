@@ -23,6 +23,10 @@ ARCHIVE_REL = (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
     "nims_mdr_mp990448_graphite_phonon_dataset.zip"
 )
+LEGACY_ARCHIVE_REL = (
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
+    "nims_mdr_wd3761563_legacy.zip"
+)
 PACKAGE_REL = (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "nims_mdr_mp990448_phonon_source_package.json"
@@ -31,6 +35,8 @@ OUT_REL = "docs/core/artifacts/t13_nims_mp990448_phonon_source_boundary_audit.js
 COLLECTION_URL = "https://mdr.nims.go.jp/collections/d7aab932-8512-4b9a-b93d-b61f6e5e7019?locale=en"
 DATASET_URL = "https://mdr.nims.go.jp/datasets/5383108b-180d-4eb0-a34f-b28ff9e430d7"
 ZIP_URL = f"{DATASET_URL}.zip"
+LEGACY_ZIP_URL = "https://mdr.nims.go.jp/download_all/wd3761563.zip"
+LEGACY_MAPPING_URL = "https://github.com/atztogo/phonondb/blob/main/mdr/phonondb/README.md"
 MATERIALS_PROJECT_URL = "https://www.materialsproject.org/materials/mp-990448/"
 EXPECTED_ARCHIVE_SHA256 = "eea6ca7569c9442754ce5492ddb2f545186f97ad8b82b209d95f1a80b0158767"
 EXPECTED_ARCHIVE_MD5 = "72f4a4e4410f140ba4f8c1ae4725a1a4"
@@ -201,6 +207,32 @@ def inspect_archive(path: Path) -> dict[str, Any]:
     }
 
 
+def inspect_legacy_route(path: Path, current_inventory: dict[str, Any]) -> dict[str, Any]:
+    """Check whether the legacy phononDB locator exposes a distinct payload."""
+    archive_sha256 = digest_path(path) if path.is_file() else None
+    archive_size_bytes = path.stat().st_size if path.is_file() else None
+    same_archive = (
+        path.is_file()
+        and archive_sha256 == current_inventory.get("archive_sha256")
+        and archive_size_bytes == current_inventory.get("archive_size_bytes")
+    )
+    return {
+        "phonondb_mapping_locator": LEGACY_MAPPING_URL,
+        "legacy_zip_locator": LEGACY_ZIP_URL,
+        "archive_path": LEGACY_ARCHIVE_REL,
+        "archive_exists": path.is_file(),
+        "archive_sha256": archive_sha256,
+        "archive_size_bytes": archive_size_bytes,
+        "same_archive_sha256_and_size_as_current_route": same_archive,
+        "route_decision": (
+            "BYTE_IDENTICAL_ALIAS_OF_CURRENT_NIMS_ARCHIVE"
+            if same_archive
+            else "NOT_CONFIRMED_BYTE_IDENTICAL"
+        ),
+        "payload_reinspection": "not_needed_after_byte_identity; current inventory controls payload conclusion",
+    }
+
+
 def make_major_result(inventory: dict[str, Any]) -> dict[str, Any]:
     return {
         "major_result_id": "T13_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY",
@@ -210,6 +242,7 @@ def make_major_result(inventory: dict[str, Any]) -> dict[str, Any]:
             "the public NIMS MDR graphite phonon dataset identity, license, archive hash, and member identity are locked",
             "the raw archive is confirmed to expose structural/displacement inputs and figure outputs but no force-constant data, frequency mesh, or machine-readable thermal-property rows",
             "the route is classified as a source payload boundary and not promoted to numeric C_src evidence",
+            "the phononDB legacy locator wd3761563 resolves to a byte-identical archive, so it does not provide a richer payload",
         ],
         "ontology": {
             "C": "collective system-behaviour coordinate; not elemental carbon, a phonon source label, or heat capacity",
@@ -258,7 +291,12 @@ def make_major_result(inventory: dict[str, Any]) -> dict[str, Any]:
 def main() -> int:
     archive_path = ROOT / ARCHIVE_REL
     inventory = inspect_archive(archive_path)
+    legacy_route = inspect_legacy_route(ROOT / LEGACY_ARCHIVE_REL, inventory)
     checks = inventory["checks"]
+    checks["legacy_route_archive_exists"] = legacy_route["archive_exists"]
+    checks["legacy_route_hash_and_size_match_current"] = legacy_route[
+        "same_archive_sha256_and_size_as_current_route"
+    ]
     required_checks = {
         key: value
         for key, value in checks.items()
@@ -301,6 +339,7 @@ def main() -> int:
         "major_result": major,
         "source": source,
         "inventory": {key: value for key, value in inventory.items() if key != "checks"},
+        "legacy_route": legacy_route,
         "row_identity_contract": {
             "identity_key": "archive_sha256 + zip member path + member CRC32 + member size",
             "machine_readable_numeric_rows": [],
@@ -338,6 +377,7 @@ def main() -> int:
         "major_result": major,
         "source": source,
         "inventory": package["inventory"],
+        "legacy_route": legacy_route,
         "row_identity_contract": package["row_identity_contract"],
         "unit_and_uncertainty_boundary": package["unit_and_uncertainty_boundary"],
         "payload_capabilities": inventory["payload_capabilities"],
@@ -367,6 +407,7 @@ def main() -> int:
                 "artifact": OUT_REL,
                 "source_package": PACKAGE_REL,
                 "archive_sha256": inventory["archive_sha256"],
+                "legacy_route_decision": legacy_route["route_decision"],
                 "member_count": inventory["member_count"],
                 "members": [member["path"] for member in inventory["members"]],
                 "has_force_constants_data": inventory["payload_capabilities"]["has_force_constants_data"],
@@ -384,3 +425,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

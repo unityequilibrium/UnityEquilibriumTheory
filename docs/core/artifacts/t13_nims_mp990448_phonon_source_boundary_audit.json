@@ -10,7 +10,8 @@
     "what_is_closed": [
       "the public NIMS MDR graphite phonon dataset identity, license, archive hash, and member identity are locked",
       "the raw archive is confirmed to expose structural/displacement inputs and figure outputs but no force-constant data, frequency mesh, or machine-readable thermal-property rows",
-      "the route is classified as a source payload boundary and not promoted to numeric C_src evidence"
+      "the route is classified as a source payload boundary and not promoted to numeric C_src evidence",
+      "the phononDB legacy locator wd3761563 resolves to a byte-identical archive, so it does not provide a richer payload"
     ],
     "ontology": {
       "C": "collective system-behaviour coordinate; not elemental carbon, a phonon source label, or heat capacity",
@@ -45,7 +46,7 @@
       },
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/nims_mdr_mp990448_phonon_source_package.json",
-        "sha256": "79b6a25119b334a449686c9c5dcb356901390375bba71464c62dda338838b47d",
+        "sha256": "bbd4aee185a7c5a08b33f2f267e81a8b5274fa43b26eae1167966b4a5ec9a061",
         "role": "machine-readable NIMS source package"
       }
     ],
@@ -173,6 +174,17 @@
       "thermal_properties_figure_only": true
     }
   },
+  "legacy_route": {
+    "phonondb_mapping_locator": "https://github.com/atztogo/phonondb/blob/main/mdr/phonondb/README.md",
+    "legacy_zip_locator": "https://mdr.nims.go.jp/download_all/wd3761563.zip",
+    "archive_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nims_mdr_wd3761563_legacy.zip",
+    "archive_exists": true,
+    "archive_sha256": "eea6ca7569c9442754ce5492ddb2f545186f97ad8b82b209d95f1a80b0158767",
+    "archive_size_bytes": 133375,
+    "same_archive_sha256_and_size_as_current_route": true,
+    "route_decision": "BYTE_IDENTICAL_ALIAS_OF_CURRENT_NIMS_ARCHIVE",
+    "payload_reinspection": "not_needed_after_byte_identity; current inventory controls payload conclusion"
+  },
   "row_identity_contract": {
     "identity_key": "archive_sha256 + zip member path + member CRC32 + member size",
     "machine_readable_numeric_rows": [],
@@ -202,12 +214,14 @@
     "no_machine_readable_thermal_rows": true,
     "thermal_properties_is_figure_only": true,
     "no_holdout_access": true,
-    "claim_promotion": false
+    "claim_promotion": false,
+    "legacy_route_archive_exists": true,
+    "legacy_route_hash_and_size_match_current": true
   },
   "evidence_artifacts": [
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/nims_mdr_mp990448_phonon_source_package.json",
-      "sha256": "79b6a25119b334a449686c9c5dcb356901390375bba71464c62dda338838b47d",
+      "sha256": "bbd4aee185a7c5a08b33f2f267e81a8b5274fa43b26eae1167966b4a5ec9a061",
       "role": "machine-readable NIMS source package"
     },
     {

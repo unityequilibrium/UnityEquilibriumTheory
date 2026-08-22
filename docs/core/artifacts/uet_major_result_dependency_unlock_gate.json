@@ -6,7 +6,7 @@
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "520b5b8f5780d526d72bc61364bf4b60cf21d27969baa62422e175ab309d7bf6"
+    "sha256": "0d2487bfd12523c2d6d738f06b3b391e0f4ab8dedf20998488231b50f26bb996"
   },
   "decisions": {
     "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY": {
@@ -75,7 +75,7 @@
   ],
   "claim_boundary": "Dependency decisions only; no downstream result is promoted by a checkpoint or comparator pass.",
   "topic13_partial_evidence": {
-    "register_sha256": "520b5b8f5780d526d72bc61364bf4b60cf21d27969baa62422e175ab309d7bf6",
+    "register_sha256": "0d2487bfd12523c2d6d738f06b3b391e0f4ab8dedf20998488231b50f26bb996",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",
@@ -1052,7 +1052,7 @@
         "full_core_unlock": false,
         "audit": {
           "path": "docs/core/artifacts/t13_nims_mp990448_phonon_source_boundary_audit.json",
-          "sha256": "af61412589e0c39fd5ca5f548e7870c718142579a581cc8853e9102de30a4571",
+          "sha256": "2e9f93be5cf23c429d9d0b77f755efb074a44790483f0b635a62327d5025eda9",
           "summary": {
             "status": "PASS_SCOPED_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY",
             "major_result_id": "T13_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY",

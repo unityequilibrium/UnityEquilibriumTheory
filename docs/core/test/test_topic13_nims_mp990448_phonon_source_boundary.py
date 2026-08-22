@@ -13,6 +13,10 @@ ARCHIVE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
     "nims_mdr_mp990448_graphite_phonon_dataset.zip"
 )
+LEGACY_ARCHIVE = ROOT / (
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
+    "nims_mdr_wd3761563_legacy.zip"
+)
 
 
 def digest(path: Path) -> str:
@@ -31,6 +35,9 @@ def test_nims_mp990448_is_a_payload_boundary_not_numeric_csrc() -> None:
     assert audit["checks"]["no_frequency_mesh"] is True
     assert audit["checks"]["no_machine_readable_thermal_rows"] is True
     assert audit["checks"]["thermal_properties_is_figure_only"] is True
+    assert audit["checks"]["legacy_route_archive_exists"] is True
+    assert audit["checks"]["legacy_route_hash_and_size_match_current"] is True
+    assert audit["legacy_route"]["route_decision"] == "BYTE_IDENTICAL_ALIAS_OF_CURRENT_NIMS_ARCHIVE"
     assert audit["payload_capabilities"]["has_force_constants_data"] is False
     assert audit["payload_capabilities"]["has_frequency_mesh"] is False
     assert package["source"]["license"] == "CC BY 4.0"
@@ -38,3 +45,5 @@ def test_nims_mp990448_is_a_payload_boundary_not_numeric_csrc() -> None:
     assert package["holdout_policy"]["xie_2026_accessed"] is False
     assert package["claim_promotion"] is False
     assert digest(ARCHIVE) == audit["source"]["archive_sha256"]
+    assert digest(LEGACY_ARCHIVE) == audit["source"]["archive_sha256"]
+

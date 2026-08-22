@@ -10,7 +10,8 @@
     "what_is_closed": [
       "the public NIMS MDR graphite phonon dataset identity, license, archive hash, and member identity are locked",
       "the raw archive is confirmed to expose structural/displacement inputs and figure outputs but no force-constant data, frequency mesh, or machine-readable thermal-property rows",
-      "the route is classified as a source payload boundary and not promoted to numeric C_src evidence"
+      "the route is classified as a source payload boundary and not promoted to numeric C_src evidence",
+      "the phononDB legacy locator wd3761563 resolves to a byte-identical archive, so it does not provide a richer payload"
     ],
     "ontology": {
       "C": "collective system-behaviour coordinate; not elemental carbon, a phonon source label, or heat capacity",
@@ -167,6 +168,17 @@
       "has_machine_readable_thermal_rows": false,
       "thermal_properties_figure_only": true
     }
+  },
+  "legacy_route": {
+    "phonondb_mapping_locator": "https://github.com/atztogo/phonondb/blob/main/mdr/phonondb/README.md",
+    "legacy_zip_locator": "https://mdr.nims.go.jp/download_all/wd3761563.zip",
+    "archive_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nims_mdr_wd3761563_legacy.zip",
+    "archive_exists": true,
+    "archive_sha256": "eea6ca7569c9442754ce5492ddb2f545186f97ad8b82b209d95f1a80b0158767",
+    "archive_size_bytes": 133375,
+    "same_archive_sha256_and_size_as_current_route": true,
+    "route_decision": "BYTE_IDENTICAL_ALIAS_OF_CURRENT_NIMS_ARCHIVE",
+    "payload_reinspection": "not_needed_after_byte_identity; current inventory controls payload conclusion"
   },
   "row_identity_contract": {
     "identity_key": "archive_sha256 + zip member path + member CRC32 + member size",
