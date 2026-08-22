@@ -16,7 +16,7 @@ def load(path: Path) -> dict:
 def test_candidate_search_is_scoped_and_emits_no_alpha() -> None:
     artifact = load(AUDIT)
     assert artifact["status"] == "PASS_SCOPED_NO_ELIGIBLE_PAIRED_ALPHA_RECORD"
-    assert artifact["candidate_count"] == 11
+    assert artifact["candidate_count"] > 11
     assert artifact["eligible_candidate_count"] == 0
     assert artifact["holdout_accessed"] is False
     assert artifact["target_fit_performed"] is False
@@ -29,6 +29,13 @@ def test_candidate_search_is_scoped_and_emits_no_alpha() -> None:
     )
     assert calorine["eligible_paired_record"] is False
     assert calorine["controlling_blocker"] == "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing"
+    kim = next(
+        item
+        for item in artifact["candidates"]
+        if item["path"].endswith("kim_2018_graphite_green_kubo_source_package.json")
+    )
+    assert kim["eligible_paired_record"] is False
+    assert kim["controlling_blocker"] == "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing"
 
 
 def test_candidate_eligibility_requires_semantic_record_values() -> None:
@@ -47,7 +54,7 @@ def test_full_gate_exposes_candidate_search_without_unlocking_alpha() -> None:
     gate = load(FULL)
     alpha = gate["verification_status"]["alpha_Phi_K"]
     assert alpha["candidate_search_status"] == "PASS_SCOPED_NO_ELIGIBLE_PAIRED_ALPHA_RECORD"
-    assert alpha["candidate_count"] == 11
+    assert alpha["candidate_count"] > 11
     assert alpha["eligible_candidate_count"] == 0
     assert alpha["candidate_search_holdout_accessed"] is False
     assert alpha["candidate_search_fit_performed"] is False

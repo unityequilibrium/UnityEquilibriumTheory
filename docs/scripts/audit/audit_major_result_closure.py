@@ -12,6 +12,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[3]
 CONTRACT = ROOT / "docs/core/artifacts/uet_major_result_closure_contract.json"
 T13 = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
+MATRIX = ROOT / "docs/core/artifacts/t13_topic13_closure_matrix.json"
 OUT = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
 
 
@@ -38,6 +39,7 @@ def ref(rel_path: str, summary: dict[str, Any]) -> dict[str, Any]:
 
 def main() -> int:
     t13 = load(T13)
+    matrix = load(MATRIX)
     t13_evidence = [ref(rel(T13), {"status": t13["status"], "controlling_blocker": t13["controlling_blocker"]})]
     for item in t13.get("evidence_artifacts", []):
         if not isinstance(item, dict):
@@ -83,6 +85,13 @@ def main() -> int:
             "dependency_unlocked": t13["major_result"]["dependency_unlocked"],
             "claim_boundary": t13["claim_boundary"],
             "closure_summary": t13["major_result"].get("closure_summary", {}),
+            "closure_matrix": {
+                "path": rel(MATRIX),
+                "sha256": sha256(MATRIX),
+                "status": matrix.get("status"),
+                "closure_level": matrix.get("major_result", {}).get("closure_level"),
+                "full_core_unlock": matrix.get("full_core_unlock", False),
+            },
         },
         {
             "major_result_id": "CORE_O2_TREE_LEVEL_EOS_LANE",
@@ -187,6 +196,7 @@ def main() -> int:
                 "major_result_id": result_id,
                 "topic": major.get("topic", "0.13_Thermodynamic_Bridge"),
                 "closure_level": major.get("closure_level", "OPEN"),
+                "claim_promotion": bool(candidate.get("claim_promotion", False)),
                 "what_is_closed": major.get("what_is_closed", []),
                 "equation_or_mapping": major.get("equation_or_mapping", {}),
                 "units": major.get("units", {}),

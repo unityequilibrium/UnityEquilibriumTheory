@@ -62,7 +62,7 @@ HASH_RE = re.compile(r"^[0-9a-fA-F]{64}$")
 EMPTY_TEXT = {"", "none", "null", "missing", "not available", "not reported", "open"}
 UNCERTAINTY_REJECTS = {"not reported", "not available", "missing", "open", "none"}
 
-CANDIDATES = (
+CURATED_CANDIDATES = (
     ("ding_2022_pbte_energy_temperature_source_package.json", "PBTE formula and conditional Phi_E bridge"),
     ("ding_2022_fig1d_digitized_manifest.json", "permitted figure-derived normalized TTG comparison"),
     ("matter_space_second_sound_source_package.json", "TTG source intake and normalized comparison"),
@@ -76,6 +76,7 @@ CANDIDATES = (
     ("landauer_source_lock.json", "imported Landauer constraint"),
 )
 
+EXCLUDED_PATH_MARKERS = ("xie", "holdout")
 
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
@@ -217,8 +218,28 @@ def exact_field_presence(keys: set[str]) -> dict[str, bool]:
     return result
 
 
-def inspect_candidate(filename: str, description: str) -> dict[str, Any]:
-    path = DATA_DIR / filename
+def discover_candidates() -> tuple[list[tuple[Path, str]], list[str]]:
+    """Discover every local JSON package without opening locked holdout paths."""
+    curated = {
+        relative: description for relative, description in CURATED_CANDIDATES
+    }
+    discovered: list[tuple[Path, str]] = []
+    excluded: list[str] = []
+    for path in sorted(DATA_DIR.rglob("*.json")):
+        relative = path.relative_to(DATA_DIR).as_posix()
+        lowered = relative.lower()
+        if any(marker in lowered for marker in EXCLUDED_PATH_MARKERS):
+            excluded.append(str(path.relative_to(ROOT)).replace("\\", "/"))
+            continue
+        description = curated.get(
+            relative,
+            f"discovered Topic 13 JSON package: {path.stem}",
+        )
+        discovered.append((path, description))
+    return discovered, excluded
+
+
+def inspect_candidate(path: Path, description: str) -> dict[str, Any]:
     if not path.exists():
         return {
             "path": str(path.relative_to(ROOT)).replace("\\", "/"),
@@ -268,7 +289,8 @@ def inspect_candidate(filename: str, description: str) -> dict[str, Any]:
 
 
 def main() -> None:
-    candidates = [inspect_candidate(filename, description) for filename, description in CANDIDATES]
+    candidate_paths, excluded_paths = discover_candidates()
+    candidates = [inspect_candidate(path, description) for path, description in candidate_paths]
     eligible = [item for item in candidates if item.get("eligible_paired_record")]
     artifact = {
         "schema_version": "t13-alpha-phi-k-calibration-candidate-audit-v1",
@@ -321,6 +343,13 @@ def main() -> None:
                 "synthetic replacement data",
                 "Landauer k_B T ln(2) as a UET alpha derivation",
             ],
+        },
+        "discovery": {
+            "root": str(DATA_DIR.relative_to(ROOT)).replace("\\", "/"),
+            "recursive_json_inventory": True,
+            "candidate_package_count": len(candidates),
+            "excluded_locked_paths": excluded_paths,
+            "holdout_paths_opened": False,
         },
         "candidate_count": len(candidates),
         "eligible_candidate_count": len(eligible),
