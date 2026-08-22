@@ -2423,3 +2423,18 @@ CONTROLLING_BLOCKER: ding_pbte_C_src_numeric_or_accepted_independent_reproductio
 NEXT_ACTION: Execute an authorized corresponding-author request or build an accepted same-regime PBTE reproduction with units, uncertainty, convergence, material/state mapping, and hash; keep calibration independent and do not read the locked holdout.
 CLAIM_BOUNDARY: Source-provenance/availability classification only; not numeric C_src, alpha_Phi_K calibration, temperature prediction, external validation, CLOSED_FOR_CORE, or global UET closure.
 EVIDENCE_HASHES: package b87680866ebed7ca25f27008f01e37dd47f0e6da54c3c1e27eb404e20fe600ad; source audit 1828db74760ac53c73345d0e4a8adc8fc00fc16bb25e84809a73aaa3cd9b3d9a; full gate fcd703b29b69e2e32ebc9d9572eca5fc33ffc9a9ad2893336c3f5ca81644c231.
+
+## T13-155 - Ding C_src fixed-volume thermodynamic identity
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE`; Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_IS_ACTUALLY_CLOSED: A conditional fixed-volume standard-phonon identity now connects the Ding denominator to `C_src(T,V)=(partial u_ph/partial T)_V=(1/V) sum_mu c_mu(T,V)`. The source formula, unit contract, Bose kernel, and UET ontology separation are audited without a numeric source row.
+WHAT_REMAINS_OPEN: Numeric Ding `C_src(T)`, accepted PBTE reproduction, material/state/volume match, source-grade uncertainty/convergence, base-Phi-to-energy map, independent `alpha_Phi_K`, and full EOS/transport/KMS/entropy closure.
+DEPENDENCY_UNLOCKED: Conditional identity lane only; no downstream dependency is unlocked.
+STATUS: `PASS_SCOPED_C_SRC_FIXED_VOLUME_IDENTITY`.
+WHAT_CHANGED: Added the verifier, artifact, focused regression, and machine-readable gate/register/dependency projections. Existing comparator lanes remain comparison-only.
+EQUATION_OR_MAPPING: `C_src(T,V)=(partial u_ph/partial T)_V`; `Delta_Tq=Delta_u_ph/C_src`; `C_p^vol-C_v^vol=T*alpha_V^2*K_T` remains separate and is not used to create Ding `C_src`.
+VERIFICATION: Analytic/finite-difference identity relative error `7.995153125698355e-11`; focused regression `19 passed`; full gate remains at `10` blockers; `claim_promotion=false`; Xie 2026 remains unconsumed.
+CONTROLLING_BLOCKER: `ding_pbte_numeric_C_src_or_accepted_independent_reproduction_missing` plus the independent dimensional/alpha and thermodynamic-transport blockers.
+NEXT_ACTION: Acquire the permitted Ding-compatible numeric mode/C_src or fixed-volume c_v source package with material/state, volume, uncertainty, convergence, and hash.
+CLAIM_BOUNDARY: Conditional identity only; no numeric C_src, alpha, temperature prediction, external validation, or Full Topic 13 closure.
+EVIDENCE: `docs/core/artifacts/t13_csrc_fixed_volume_identity_audit.json` (SHA-256 `155b15ac1184f0309e10db8466925d6ad6483d4321a7703d82ecfb09a086cdd5`); full gate `f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50`; closure register `eb044c3083382b61855baa8ee26ea847a85005c148f5e0b85612a74bfb7b3c0b`; dependency gate `985a9727e59db875b6446096942b07b70375da9ba59cb06cc456e9cd25ef93e2`.

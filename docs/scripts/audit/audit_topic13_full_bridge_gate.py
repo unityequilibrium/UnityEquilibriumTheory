@@ -21,6 +21,7 @@ LANE_KEY_BY_ID = {'T13_ALPHA_PHI_K_NORMALIZED_SCALE_NO_GO': 'alpha_phi_k_normali
 
 LANE_KEY_BY_ID["T13_DING_2017_ACS_SUPPLEMENTARY_PAYLOAD_BOUNDARY"] = "ding_2017_acs_supplementary_payload_boundary"
 LANE_KEY_BY_ID["T13_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY"] = "ding_experimental_heating_input_boundary"
+LANE_KEY_BY_ID["T13_DING_C_SRC_FIXED_VOLUME_THERMODYNAMIC_IDENTITY"] = "ding_c_src_fixed_volume_identity"
 LANE_KEY_BY_ID["T13_HUBERMAN_2019_PUBLIC_PBTE_BOUNDARY"] = "huberman_2019_public_pbte_boundary"
 LANE_KEY_BY_ID["T13_IAEA_GR280_SAME_STATE_CP_COMPARATOR"] = "iaea_gr280_same_state_cp_comparator"
 LANE_KEY_BY_ID["T13_ZENODO_HITRACE_ISOTROPIC_GRAPHITE_CP_COMPARATOR"] = "zenodo_hitrace_isotropic_graphite_cp_comparator"
@@ -933,6 +934,14 @@ def main() -> int:
         artifact["verification_status"]["eos_transport_kms_entropy"].pop(
             "ding_experimental_heating_input_boundary", None
         )
+    ding_c_src_fixed_volume_lane = discovered_lane_integrations.get(
+        "ding_c_src_fixed_volume_identity"
+    )
+    if ding_c_src_fixed_volume_lane:
+        artifact["verification_status"]["source_package"]["ding_c_src_fixed_volume_identity"] = ding_c_src_fixed_volume_lane
+        artifact["verification_status"]["eos_transport_kms_entropy"].pop(
+            "ding_c_src_fixed_volume_identity", None
+        )
     if ding_public_supplementary_lane:
         artifact["verification_status"]["source_package"][
             "ding_public_supplementary_payload_boundary"
@@ -1572,6 +1581,8 @@ def main() -> int:
         lane_closures.append("Perez-Castaneda HOPG specific-heat source boundary is closed for lane; the specimen and below-3-percent method-comparison bound are source-locked, but figure-only rows, source-grade uncertainty, Ding C_src, and alpha remain open")
     if discovered_lane_integrations.get("qh15_graphite_cv_comparator_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("QH-15 macroscopic graphite C_v comparator is closed for lane; its unit conversion and Calorine cross-check do not establish Ding C_src, material equivalence, source-grade uncertainty, or alpha_Phi_K")
+    if discovered_lane_integrations.get("ding_c_src_fixed_volume_identity", {}).get("closure_level") == "CLOSED_FOR_LANE":
+        lane_closures.append("Ding C_src fixed-volume thermodynamic identity is closed for lane; numeric source rows, material/state equivalence, uncertainty, and alpha remain open")
     if discovered_lane_integrations.get("ding_public_supplementary_payload_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("Ding public supplementary payload boundary is closed for lane without promoting PDFs or figures to numeric C_src")
     if discovered_lane_integrations.get("ding_2017_acs_supplementary_payload_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":

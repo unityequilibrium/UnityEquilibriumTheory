@@ -120,6 +120,7 @@
       "independent c_v comparator boundary is closed for lane without promoting it to Ding C_src",
       "Perez-Castaneda HOPG specific-heat source boundary is closed for lane; the specimen and below-3-percent method-comparison bound are source-locked, but figure-only rows, source-grade uncertainty, Ding C_src, and alpha remain open",
       "QH-15 macroscopic graphite C_v comparator is closed for lane; its unit conversion and Calorine cross-check do not establish Ding C_src, material equivalence, source-grade uncertainty, or alpha_Phi_K",
+      "Ding C_src fixed-volume thermodynamic identity is closed for lane; numeric source rows, material/state equivalence, uncertainty, and alpha remain open",
       "Ding public supplementary payload boundary is closed for lane without promoting PDFs or figures to numeric C_src",
       "Ding 2017 ACS supplementary payload boundary is closed for lane without promoting PDF equations or figures to numeric C_src",
       "action-derived finite-temperature O(2) 1<->3 sunset channel, thermal retarded sign, channel KMS/FDT, and vacuum phase-space normalization are closed for lane; other thermal cuts, full finite-temperature 1PI, unique physical renormalization, Kubo, entropy, SI, alpha, and external validation remain open",
@@ -167,7 +168,7 @@
     ],
     "dependency_unlocked": "Gravity/GR remains blocked until this full bridge and Core curved 3+1 gates pass",
     "closure_summary": {
-      "closed_lane_count": 177,
+      "closed_lane_count": 178,
       "closed_as_no_go_count": 16,
       "closed_lane_result_ids": [
         "T13_AIST_GRAPHITE_SOURCE_ROUTE_BOUNDARY",
@@ -205,6 +206,7 @@
         "T13_DESORBO_1955_CEYLON_GRAPHITE_CP_COMPARATOR",
         "T13_DING_2017_ACS_SUPPLEMENTARY_PAYLOAD_BOUNDARY",
         "T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY_BOUNDARY",
+        "T13_DING_C_SRC_FIXED_VOLUME_THERMODYNAMIC_IDENTITY",
         "T13_DING_C_SRC_INDEPENDENT_REPRODUCTION_BOUNDARY",
         "T13_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY",
         "T13_DING_FIG1D_NORMALIZED_SOURCE_LANE",
@@ -4450,6 +4452,101 @@
           "base_Phi_to_Delta_u_ph_mapping_not_derived",
           "e0_energy_density_scale_not_source_locked",
           "alpha_Phi_K_independent_calibration_missing"
+        ]
+      },
+      "ding_c_src_fixed_volume_identity": {
+        "status": "PASS_SCOPED_C_SRC_FIXED_VOLUME_IDENTITY",
+        "report": {
+          "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+          "WHAT_IS_ACTUALLY_CLOSED": [
+            "Under a declared fixed-volume mode basis, Ding's C_src is identified conditionally with the temperature derivative of the phonon thermal-energy density.",
+            "The Bose mode kernel and SI unit route are verified independently of any numeric Ding row.",
+            "The identity does not relabel UET C, Phi, or R_gen and does not accept an unmatched graphite comparator as Ding evidence."
+          ],
+          "WHAT_REMAINS_OPEN": [
+            "ding_pbte_numeric_C_src_or_accepted_independent_reproduction_missing",
+            "Ding_material_state_and_volume_contract_not_source_locked",
+            "anharmonic_mode_frequency_temperature_dependence_not_source_locked",
+            "ding_C_src_source_grade_uncertainty_or_convergence_missing",
+            "base_Phi_to_Delta_u_ph_mapping_not_derived",
+            "independent_alpha_Phi_K_missing"
+          ],
+          "DEPENDENCY_UNLOCKED": "conditional C_src-to-fixed-volume c_v identity only; no numeric Ding source, alpha, bridge, transport, Core, Gravity, or external-validation unlock",
+          "STATUS": "PASS_SCOPED_C_SRC_FIXED_VOLUME_IDENTITY",
+          "WHAT_CHANGED": "Added and verified the conditional fixed-volume identity linking the Ding PBTE C_src definition to a standard phonon energy derivative without emitting a numeric source row.",
+          "EQUATION_OR_MAPPING": {
+            "phonon_energy_density": "u_ph(T,V) = (1/V) sum_mu [hbar*omega_mu(V)*n_B(omega_mu(V),T)]",
+            "fixed_volume_identity": "C_src(T,V) = (partial u_ph / partial T)_V = (1/V) sum_mu c_mu(T,V)",
+            "fixed_frequency_mode_kernel": "c_mu/V = k_B*x_mu^2*exp(x_mu)/(V*(exp(x_mu)-1)^2)",
+            "Ding_temperature_response": "Delta_Tq = Delta_u_ph / C_src",
+            "cp_cv_boundary": "C_p^vol - C_v^vol = T*alpha_V^2*K_T; not used to manufacture Ding C_src"
+          },
+          "VERIFICATION": "Analytic Bose-mode derivative agrees with a central finite difference at the declared witness state; source locators, units, ontology separation, no-fit policy, and holdout isolation pass.",
+          "CONTROLLING_BLOCKER": "ding_pbte_numeric_C_src_or_accepted_independent_reproduction_missing",
+          "NEXT_ACTION": "Obtain a source-locked Ding-compatible mode or fixed-volume c_v record with material/state, volume, uncertainty, and convergence metadata; then evaluate it under this identity without fitting alpha.",
+          "CLAIM_BOUNDARY": "This closes a conditional standard-physics identity lane. It does not emit numeric C_src, convert any current comparator into Ding C_src, derive e0 or base Phi, calibrate alpha_Phi_K, or close Topic 13."
+        },
+        "source_locators": {
+          "mode_specific_heat_capacity": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ding_2022_pmc_full_text.txt:94",
+          "mode_sum": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ding_2022_pmc_full_text.txt:94",
+          "temperature_response": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ding_2022_pmc_full_text.txt:136"
+        },
+        "numerical_identity_witness": {
+          "temperature_K": 300.0,
+          "step_K": 0.01,
+          "volume_m3": 1e-28,
+          "frequency_count": 3,
+          "analytic_C_src_J_m^-3_K^-1": 462283.0142770761,
+          "central_difference_J_m^-3_K^-1": 462283.0142401159,
+          "relative_error": 7.995153125698355e-11
+        },
+        "checks": {
+          "ding_source_text_present": true,
+          "ding_source_package_present": true,
+          "source_mode_specific_heat_locator_present": true,
+          "source_mode_sum_locator_present": true,
+          "source_temperature_response_locator_present": true,
+          "source_temperature_mapping_is_locked": true,
+          "source_C_src_unit_is_volumetric": true,
+          "source_C_is_not_uet_C": true,
+          "fixed_volume_derivative_identity_verified": true,
+          "bose_mode_kernel_is_positive_and_finite": true,
+          "zero_point_term_is_temperature_independent": true,
+          "thermal_expansion_correction_is_not_silently_used": true,
+          "numeric_C_src_not_emitted": true,
+          "numeric_alpha_not_emitted": true,
+          "base_phi_identity_not_asserted": true,
+          "landauer_not_used": true,
+          "holdout_not_accessed": true,
+          "holdout_not_consumed": true,
+          "source_role_excludes_fit_and_target": true
+        },
+        "holdout_accessed": false,
+        "target_fit_performed": false,
+        "numeric_C_src_emitted": false,
+        "numeric_alpha_Phi_K_emitted": false,
+        "controlling_blocker": "ding_pbte_numeric_C_src_or_accepted_independent_reproduction_missing",
+        "next_controller": "Source-lock Ding-compatible C_src(T) or a fixed-volume c_v record with state, volume, uncertainty, and convergence; do not use this identity to infer a value from normalized TTG data.",
+        "claim_boundary": "This closes a conditional standard-physics identity lane. It does not emit numeric C_src, convert any current comparator into Ding C_src, derive e0 or base Phi, calibrate alpha_Phi_K, or close Topic 13.",
+        "major_result_id": "T13_DING_C_SRC_FIXED_VOLUME_THERMODYNAMIC_IDENTITY",
+        "closure_level": "CLOSED_FOR_LANE",
+        "data_role": "DERIVED_STANDARD_PHYSICS_IDENTITY_NOT_CALIBRATION",
+        "audit": {
+          "path": "docs/core/artifacts/t13_csrc_fixed_volume_identity_audit.json",
+          "sha256": "155b15ac1184f0309e10db8466925d6ad6483d4321a7703d82ecfb09a086cdd5",
+          "summary": {
+            "status": "PASS_SCOPED_C_SRC_FIXED_VOLUME_IDENTITY",
+            "major_result_id": "T13_DING_C_SRC_FIXED_VOLUME_THERMODYNAMIC_IDENTITY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        },
+        "open_blockers": [
+          "ding_pbte_numeric_C_src_or_accepted_independent_reproduction_missing",
+          "Ding_material_state_and_volume_contract_not_source_locked",
+          "anharmonic_mode_frequency_temperature_dependence_not_source_locked",
+          "ding_C_src_source_grade_uncertainty_or_convergence_missing",
+          "base_Phi_to_Delta_u_ph_mapping_not_derived",
+          "independent_alpha_Phi_K_missing"
         ]
       },
       "ding_public_supplementary_payload_boundary": {

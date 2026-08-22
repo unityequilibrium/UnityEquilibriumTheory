@@ -1,3 +1,17 @@
+## 2026-08-22 - Ding C_src fixed-volume thermodynamic identity (T13-155)
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for T13_DING_C_SRC_FIXED_VOLUME_THERMODYNAMIC_IDENTITY; Full Topic 13 remains PARTIAL / BLOCKED_OPEN_T13_FULL_BRIDGE.
+WHAT_IS_ACTUALLY_CLOSED: The source-defined `C_src` is conditionally linked to `(partial u_ph / partial T)_V` and to the fixed-frequency Bose mode sum with SI units. The identity is kept separate from UET `C`, base `Phi`, `R_gen`, and all comparator lanes.
+WHAT_REMAINS_OPEN: Numeric Ding `C_src(T)`, accepted same-regime PBTE reproduction, material/state/volume identity, anharmonic mode dependence, source-grade uncertainty/convergence, base-Phi energy anchor, and independent `alpha_Phi_K`.
+DEPENDENCY_UNLOCKED: Conditional thermodynamic identity lane only; no source acceptance, alpha, Core, Gravity, transport, or external-validation dependency is unlocked.
+STATUS: PASS_SCOPED_C_SRC_FIXED_VOLUME_IDENTITY.
+WHAT_CHANGED: Added the fixed-volume identity verifier, machine-readable artifact, focused regression, full-gate source projection, closure-register entry, dependency evidence, and formula-audit record. No numeric source row, fit, threshold change, Landauer inference, or Xie 2026 access was introduced.
+EQUATION_OR_MAPPING: `C_src(T,V)=(partial u_ph/partial T)_V=(1/V) sum_mu c_mu(T,V)` under the declared fixed-volume mode basis; `Delta_Tq=Delta_u_ph/C_src` remains the Ding response mapping. `C_p^vol-C_v^vol=T*alpha_V^2*K_T` remains a separate correction contract.
+VERIFICATION: Identity witness relative error `7.995153125698355e-11`; audit checks pass; focused regression passed `19 tests`; full gate remains BLOCKED_OPEN_T13_FULL_BRIDGE with `10` open blockers; downstream dependency remains blocked and holdout access remains false.
+CONTROLLING_BLOCKER: ding_pbte_numeric_C_src_or_accepted_independent_reproduction_missing; independent alpha_Phi_K and SI/EOS/transport/KMS/entropy blockers remain open.
+NEXT_ACTION: Obtain a permitted Ding-compatible numeric mode/C_src or fixed-volume c_v record with source identity, state, volume, uncertainty, and convergence; evaluate it without fitting alpha or reading the holdout.
+CLAIM_BOUNDARY: Conditional standard-physics identity only; not numeric Ding C_src, not alpha calibration, not a temperature prediction, not external validation, and not Full Topic 13 closure.
+EVIDENCE_HASHES: artifact `155b15ac1184f0309e10db8466925d6ad6483d4321a7703d82ecfb09a086cdd5`; full gate `f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50`; closure register `eb044c3083382b61855baa8ee26ea847a85005c148f5e0b85612a74bfb7b3c0b`; dependency gate `985a9727e59db875b6446096942b07b70375da9ba59cb06cc456e9cd25ef93e2`.
 # UPDATE LOG: 0.13_Thermodynamic_Bridge
 
 ## 2026-08-22 - Ding experimental heating input boundary (T13-154)

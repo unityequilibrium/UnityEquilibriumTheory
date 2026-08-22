@@ -6,7 +6,7 @@
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "9a8fe0b9598755e48577d103b38768a0a321e89abbe3597fb499b5e8854c289e"
+    "sha256": "eb044c3083382b61855baa8ee26ea847a85005c148f5e0b85612a74bfb7b3c0b"
   },
   "decisions": {
     "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY": {
@@ -75,7 +75,7 @@
   ],
   "claim_boundary": "Dependency decisions only; no downstream result is promoted by a checkpoint or comparator pass.",
   "topic13_partial_evidence": {
-    "register_sha256": "9a8fe0b9598755e48577d103b38768a0a321e89abbe3597fb499b5e8854c289e",
+    "register_sha256": "eb044c3083382b61855baa8ee26ea847a85005c148f5e0b85612a74bfb7b3c0b",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",
@@ -971,6 +971,21 @@
           "summary": {
             "status": "PASS_SCOPED_INDEPENDENT_C_SRC_ACCEPTANCE_CONTRACT",
             "major_result_id": "T13_INDEPENDENT_C_SRC_ACCEPTANCE_CONTRACT",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      },
+      "ding_c_src_fixed_volume_identity": {
+        "major_result_id": "T13_DING_C_SRC_FIXED_VOLUME_THERMODYNAMIC_IDENTITY",
+        "closure_level": "CLOSED_FOR_LANE",
+        "status": "PASS_SCOPED_C_SRC_FIXED_VOLUME_IDENTITY",
+        "full_core_unlock": false,
+        "audit": {
+          "path": "docs/core/artifacts/t13_csrc_fixed_volume_identity_audit.json",
+          "sha256": "155b15ac1184f0309e10db8466925d6ad6483d4321a7703d82ecfb09a086cdd5",
+          "summary": {
+            "status": "PASS_SCOPED_C_SRC_FIXED_VOLUME_IDENTITY",
+            "major_result_id": "T13_DING_C_SRC_FIXED_VOLUME_THERMODYNAMIC_IDENTITY",
             "closure_level": "CLOSED_FOR_LANE"
           }
         }

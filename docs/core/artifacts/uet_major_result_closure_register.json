@@ -156,6 +156,7 @@
         "independent c_v comparator boundary is closed for lane without promoting it to Ding C_src",
         "Perez-Castaneda HOPG specific-heat source boundary is closed for lane; the specimen and below-3-percent method-comparison bound are source-locked, but figure-only rows, source-grade uncertainty, Ding C_src, and alpha remain open",
         "QH-15 macroscopic graphite C_v comparator is closed for lane; its unit conversion and Calorine cross-check do not establish Ding C_src, material equivalence, source-grade uncertainty, or alpha_Phi_K",
+        "Ding C_src fixed-volume thermodynamic identity is closed for lane; numeric source rows, material/state equivalence, uncertainty, and alpha remain open",
         "Ding public supplementary payload boundary is closed for lane without promoting PDFs or figures to numeric C_src",
         "Ding 2017 ACS supplementary payload boundary is closed for lane without promoting PDF equations or figures to numeric C_src",
         "action-derived finite-temperature O(2) 1<->3 sunset channel, thermal retarded sign, channel KMS/FDT, and vacuum phase-space normalization are closed for lane; other thermal cuts, full finite-temperature 1PI, unique physical renormalization, Kubo, entropy, SI, alpha, and external validation remain open",
@@ -206,7 +207,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "065f734a58d542cc98c1dfdf4ecc2f67768641a05205fce57b5109e6e11c0560",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
             "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
             "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
@@ -1471,6 +1472,68 @@
       }
     },
     {
+      "major_result_id": "T13_DING_C_SRC_FIXED_VOLUME_THERMODYNAMIC_IDENTITY",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "closure_level": "CLOSED_FOR_LANE",
+      "what_is_closed": [
+        "Under a declared fixed-volume mode basis, Ding's C_src is identified conditionally with the temperature derivative of the phonon thermal-energy density.",
+        "The Bose mode kernel and SI unit route are verified independently of any numeric Ding row.",
+        "The identity does not relabel UET C, Phi, or R_gen and does not accept an unmatched graphite comparator as Ding evidence."
+      ],
+      "equation_or_mapping": {
+        "phonon_energy_density": "u_ph(T,V) = (1/V) sum_mu [hbar*omega_mu(V)*n_B(omega_mu(V),T)]",
+        "fixed_volume_identity": "C_src(T,V) = (partial u_ph / partial T)_V = (1/V) sum_mu c_mu(T,V)",
+        "fixed_frequency_mode_kernel": "c_mu/V = k_B*x_mu^2*exp(x_mu)/(V*(exp(x_mu)-1)^2)",
+        "Ding_temperature_response": "Delta_Tq = Delta_u_ph / C_src",
+        "cp_cv_boundary": "C_p^vol - C_v^vol = T*alpha_V^2*K_T; not used to manufacture Ding C_src"
+      },
+      "units": {
+        "u_ph": "J m^-3",
+        "C_src": "J m^-3 K^-1",
+        "Delta_Tq": "K",
+        "temperature": "K",
+        "volume": "m^3"
+      },
+      "derivation_class": "conditional standard phonon thermodynamic identity; no UET derivation and no numeric calibration",
+      "observable": "Ding PBTE temperature-response denominator C_src",
+      "data_role": "DERIVED_STANDARD_PHYSICS_IDENTITY_NOT_CALIBRATION",
+      "verification_status": "PASS_SCOPED_C_SRC_FIXED_VOLUME_IDENTITY",
+      "open_blockers": [
+        "ding_pbte_numeric_C_src_or_accepted_independent_reproduction_missing",
+        "Ding_material_state_and_volume_contract_not_source_locked",
+        "anharmonic_mode_frequency_temperature_dependence_not_source_locked",
+        "ding_C_src_source_grade_uncertainty_or_convergence_missing",
+        "base_Phi_to_Delta_u_ph_mapping_not_derived",
+        "independent_alpha_Phi_K_missing"
+      ],
+      "dependency_unlocked": "conditional C_src-to-fixed-volume c_v identity only; no numeric Ding source, alpha, bridge, transport, Core, Gravity, or external-validation unlock",
+      "claim_boundary": "This closes a conditional standard-physics identity lane. It does not emit numeric C_src, convert any current comparator into Ding C_src, derive e0 or base Phi, calibrate alpha_Phi_K, or close Topic 13.",
+      "evidence_artifacts": [
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_pbte_energy_temperature_source_package.json",
+          "sha256": "9f6b8d31ba2d7a6e56d6a323581bc6aecb91c6d0e61064d62a3972ee0e2c0d6f",
+          "summary": {
+            "role": "Ding source formula and unit contract"
+          }
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ding_2022_pmc_full_text.txt",
+          "sha256": "b1b029f2812586647077a7b8506c2f52aeb7261714395907f8f8d20868fe2874",
+          "summary": {
+            "role": "primary source locators for mode sum and response"
+          }
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
+          "summary": {
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
+          }
+        }
+      ]
+    },
+    {
       "major_result_id": "CORE_O2_TREE_LEVEL_EOS_LANE",
       "topic": "core O(2)",
       "closure_level": "PARTIAL",
@@ -2057,12 +2120,22 @@
       "data_role": "EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_DING_TTG_GRADE",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_bipm_specific_heat_source_audit.json",
-          "sha256": "6d71952c1ab294d3e391ca257abd49cde10c534f2265612561efacd4e2cc8a4d",
+          "path": "docs/core/artifacts/t13_bipm_specific_heat_source_audit.json"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/bipm_2006_01_graphite_specific_heat_source_package.json",
+          "sha256": "ab120653076ac3d44e45235705ca505e923096be78078c1ee261dbe72bdea2c7"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/bipm_2006_01_graphite_specific_heat.pdf",
+          "sha256": "2c491c94adb3f70f4b1ba915259f0a1d2f4788e072e99c8d34a87f964f69ce42"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_BIPM_CP_COMPARATOR_CV_OPEN",
-            "major_result_id": "T13_BIPM_SPECIFIC_HEAT_CP_COMPARATOR",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -2103,12 +2176,21 @@
       "data_role": "COMPARISON_ONLY_NOT_CALIBRATION",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_calorine_csrc_equilibrium_crosscheck_audit.json",
-          "sha256": "c9f9c60af7b5f75189d587d0f5fb60091945233832675641b37c30b156c0a391",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_pbte_run_m884_summary.json",
+          "sha256": "7c7e046239505c9fe1f5a180c234f1d69c053e8344218ea806f418a373baf0d0",
+          "role": "derived Calorine C_src run summary"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_graphite_handbook_constant_volume_source_package.json",
+          "sha256": "568853f10f4ef1fc75b4ebed5851240ac8a94f05a5d72cf10af1a2d94bb62e09",
+          "role": "independent equilibrium c_v comparator"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_CALORINE_C_SRC_EQUILIBRIUM_CROSSCHECK",
-            "major_result_id": "T13_CALORINE_C_SRC_EQUILIBRIUM_CROSSCHECK",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -2151,12 +2233,11 @@
       "data_role": "EXTERNAL_CANDIDATE_REPRODUCTION_NOT_CALIBRATION_NOT_HOLDOUT",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_calorine_full_lbte_stability_boundary_audit.json",
-          "sha256": "8b5de32a8c33b0a646c8e26faf263585d98bcb939df8adb78b1b16f9d832859d",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "WARN_FULL_LBTE_NUMERICAL_STABILITY_OPEN",
-            "major_result_id": "T13_CALORINE_FULL_LBTE_NUMERICAL_STABILITY_BOUNDARY",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -2194,12 +2275,11 @@
       "data_role": "STATE_SENSITIVITY_NOT_CALIBRATION",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_calorine_isotope_mass_sensitivity_audit.json",
-          "sha256": "5db4a9487f728e5275906a1d4514c154b02cee4854fadcc0ea45f3ac6d5a0221",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_CALORINE_ISOTOPE_MASS_SENSITIVITY",
-            "major_result_id": "T13_CALORINE_ISOTOPE_MASS_SENSITIVITY",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -2237,12 +2317,23 @@
       "data_role": "EXTERNAL_MODEL_BACKEND_PROBE_NOT_C_SRC",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_calorine_legacy_nep2_backend_probe_audit.json",
-          "sha256": "bbdecdcb3504b308d1f42c71b233d5c71c1462110f13bf325016edcf2ea9647c",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/calorine_zenodo_7811021_nep_C_CX.txt",
+          "sha256": "cf75256947a8953b8041ccc26a34ac307724f69bf2edbcc97b46d87bc5e72408"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/calorine_zenodo_7811021_nep_C_CX/graphite-prim.xyz",
+          "sha256": "87fdd172bd5b77e1aa5bd9b4d85c3f21eb5df6521089cc4b769e12d481a1aed0"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/calorine_legacy_nep2_backend_probe_receipt.txt",
+          "sha256": "5ecf57f7cf2ae9bb306af28d9b3001f9f8a6d5cdde2173d9c84c270041ece7e1"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_CALORINE_LEGACY_NEP2_BACKEND_PROBE",
-            "major_result_id": "T13_CALORINE_LEGACY_NEP2_BACKEND_PROBE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -2284,12 +2375,83 @@
       "data_role": "EXTERNAL_CANDIDATE_REPRODUCTION_NOT_CALIBRATION",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_calorine_legacy_nep2_pbte_reproduction_audit.json",
-          "sha256": "0c3724c591adc411a4ef062a2bf62b9e5ce6564831bbc662e845ef48a8d56398",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/calorine_zenodo_7811021_nep_C_CX/graphite-prim.xyz",
+          "size_bytes": 324,
+          "sha256": "87fdd172bd5b77e1aa5bd9b4d85c3f21eb5df6521089cc4b769e12d481a1aed0",
+          "locator": "https://zenodo.org/api/records/7811021/files/graphite-prim.xyz/content"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/calorine_zenodo_7811021_nep_C_CX/nep-C.txt",
+          "size_bytes": 44098,
+          "sha256": "cf75256947a8953b8041ccc26a34ac307724f69bf2edbcc97b46d87bc5e72408",
+          "locator": "https://zenodo.org/api/records/7811021/files/nep_C_CX.txt/content"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/calorine_legacy_nep2_backend_probe_receipt.txt",
+          "size_bytes": 828,
+          "sha256": "5ecf57f7cf2ae9bb306af28d9b3001f9f8a6d5cdde2173d9c84c270041ece7e1",
+          "locator": null
+        },
+        {
+          "path": "docs/scripts/audit/run_topic13_calorine_legacy_pbte_reproduction.py",
+          "size_bytes": 4704,
+          "sha256": "decd25d68569f85121640346a99a647eeda739fe04ab1c2bc9db23640b8dc176",
+          "locator": null
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_legacy_nep2_cx/state_4x4x2/run_summary.json",
+          "size_bytes": 4010,
+          "sha256": "3dba56787ae5a8911d08032d7d049f77820c19ba823a7e52f450f0e4d204716f",
+          "locator": null
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_legacy_nep2_cx/state_4x4x2/POSCAR",
+          "size_bytes": 491,
+          "sha256": "52c0ab2d703274b60868f6391caedf888324d55fb3ef7c656616de357083be97",
+          "locator": null
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_legacy_nep2_cx/state_4x4x2/fc2.hdf5",
+          "size_bytes": 30049,
+          "sha256": "885c4421fca05b327c58cd52053d0466f7a97623e3ece7167c4d8f5043aa5111",
+          "locator": null
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_legacy_nep2_cx/state_4x4x2/fc3.hdf5",
+          "size_bytes": 7057980,
+          "sha256": "d2cb6d4b97e3f47bd955e7172dcc9034ab69a6fa2c954b493f380fc7182c231c",
+          "locator": null
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_legacy_nep2_cx/mesh_8x8x4/csrc_summary.json",
+          "size_bytes": 4226,
+          "sha256": "0a9688e5edf0c737ecfa1e1c96f91f05ee8597869c495ecda70d39e2c73a0d0c",
+          "locator": null
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_legacy_nep2_cx/mesh_10x10x5/csrc_summary.json",
+          "size_bytes": 4254,
+          "sha256": "d77cab1f0346c0432ebb2060bb1f6b1f5663706abf52380d2fd50f6d7d98ec1e",
+          "locator": null
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_legacy_nep2_cx/mesh_8x8x4/kappa-m884.hdf5",
+          "size_bytes": 80208,
+          "sha256": "d02babd0190ce4916382ae066fff8c4ad8ed923b089bda8253afcf6e29ac2467",
+          "locator": null
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_legacy_nep2_cx/mesh_10x10x5/kappa-m10105.hdf5",
+          "size_bytes": 107720,
+          "sha256": "84ce8bca4330df3571159f54dcd19a3c04d5cf7b7dd4b3247c2787e708682b67",
+          "locator": null
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION",
-            "major_result_id": "T13_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -2327,12 +2489,19 @@
       "data_role": "EXTERNAL_MODEL_FORMAT_COMPATIBILITY_BOUNDARY_NOT_C_SRC",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_calorine_nep1_backend_compatibility_audit.json",
-          "sha256": "bb3887522ba6bfde25bc74c1deb76e737ca975d5452263fb2dff348bffb3322c",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/calorine_zenodo_7811021_nep_C_CX.txt",
+          "sha256": "cf75256947a8953b8041ccc26a34ac307724f69bf2edbcc97b46d87bc5e72408"
+        },
+        {
+          "path": "docs/core/artifacts/t13_calorine_public_model_variant_boundary_audit.json",
+          "role": "upstream model provenance audit"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_CALORINE_NEP1_BACKEND_COMPATIBILITY_BOUNDARY",
-            "major_result_id": "T13_CALORINE_NEP1_BACKEND_COMPATIBILITY_BOUNDARY",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -2372,12 +2541,19 @@
       "data_role": "EXTERNAL_MODEL_VARIANT_PROVENANCE_NOT_UNCERTAINTY",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_calorine_public_model_variant_boundary_audit.json",
-          "sha256": "062c49c05e8318d42d627d03df886d2d50eea3285d2fb7430064554f98e6edbb",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/calorine_zenodo_7811021_nep_C_CX.txt",
+          "sha256": "cf75256947a8953b8041ccc26a34ac307724f69bf2edbcc97b46d87bc5e72408"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/calorine_zenodo_7811021_nep_cx_model_variant_source_package.json",
+          "role": "machine-readable source package"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_CALORINE_PUBLIC_MODEL_VARIANT_BOUNDARY",
-            "major_result_id": "T13_CALORINE_PUBLIC_MODEL_VARIANT_BOUNDARY",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -2416,12 +2592,17 @@
       "data_role": "STATE_SENSITIVITY_NOT_CALIBRATION",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_calorine_state_uncertainty_decomposition_audit.json",
-          "sha256": "d1b7619f1f0040e1010eb561de5422d2063fb554055c15fd7f14186d4134e481",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/isotope_mass_sensitivity/t13_calorine_isotope_mass_sensitivity_audit.json"
+        },
+        {
+          "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_CALORINE_STATE_UNCERTAINTY_DECOMPOSITION",
-            "major_result_id": "T13_CALORINE_STATE_UNCERTAINTY_DECOMPOSITION",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -2506,12 +2687,11 @@
       "data_role": "EXTERNAL_CANDIDATE_REPRODUCTION_NOT_CALIBRATION",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
-          "sha256": "afc8fb0d9daea81c30a09b24f0aabd824cde1a85e662ea52880fadd42863de89",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_CALORINE_NUMERIC_C_SRC_REPRODUCTION",
-            "major_result_id": "T13_CALORINE_ZENODO_NEP_BTE_NUMERIC_REPRODUCTION",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -2702,12 +2882,27 @@
       "data_role": "FORMULA_CONTRACT_NOT_CALIBRATION",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_covariant_action_symbolic_si_conversion_audit.json",
-          "sha256": "e1e691dd2264604590e4360f827399849134af8206516c4220f4667663723c1a",
+          "path": "docs/data/external/constants/codata/si_2019_exact_constants.json",
+          "sha256": "dcced6d840f4f4fbcea90128061ab7a528be04e1b37917893dbf4a28934b3560"
+        },
+        {
+          "path": "docs/core/thermal_covariant_action_si_conversion.py",
+          "sha256": "24639807ce714cfb2f05adc5063e55392f33280bb9ddd42eaf16813e314ee9fe"
+        },
+        {
+          "path": "docs/core/uet_covariant_response.py",
+          "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+        },
+        {
+          "path": "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md",
+          "sha256": "d15cc8e345a3df986f7608d48e3152134c4325dfa24e5dc9364b085fe37dd6c9"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_SYMBOLIC_ACTION_SI_CONVERSION_CONTRACT",
-            "major_result_id": "T13_COVARIANT_ACTION_SYMBOLIC_SI_CONVERSION_CONTRACT",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -2944,12 +3139,22 @@
       "data_role": "COMPARISON_ONLY_NOT_CALIBRATION",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_desorbo_ceylon_graphite_cp_audit.json",
-          "sha256": "7ef80f4d26f0df2d7762ed64183bbe4c9c324cc47ce99bbedbdca6bb44dcfbdc",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/desorbo_1955_ceylon_graphite_cp_source_package.json",
+          "sha256": "3bf9cebd1b3129f9b0f1cd66b49e16c2d7743059a207ed203048894abb6a746b"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nist_srd69_graphite_desorbo_1955.html",
+          "sha256": "2e9955e1a176adc93ee152aceb390da67f561bf5ba0a4c741e9936a552f1dc1b"
+        },
+        {
+          "path": "docs/core/artifacts/t13_desorbo_ceylon_graphite_cp_audit.json"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_LOCKED_COMPARATOR",
-            "major_result_id": "T13_DESORBO_1955_CEYLON_GRAPHITE_CP_COMPARATOR",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -3036,12 +3241,18 @@
       "data_role": "SOURCE_PROVENANCE_BOUNDARY_NOT_CALIBRATION",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_ding_2017_acs_supplementary_payload_boundary_audit.json",
-          "sha256": "e2676e6e59ba412944d27057333ece6b3ae827600a30125e63725390b176c8cb",
+          "path": "docs/core/artifacts/t13_ding_2017_acs_supplementary_payload_boundary_audit.json"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ding_2017_acs_supplementary_information.pdf",
+          "sha256": "048b3ecfa9ccd02db0a0fc4ec14bb352f04275cf4e0216e689f0689d4ad0a6e5"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_DING_2017_ACS_SUPPLEMENTARY_BOUNDARY_NO_MACHINE_READABLE_C_SRC",
-            "major_result_id": "T13_DING_2017_ACS_SUPPLEMENTARY_PAYLOAD_BOUNDARY",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -3074,12 +3285,36 @@
       "data_role": "SOURCE_DISCOVERY_BOUNDARY_NOT_CALIBRATION",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_ding_alternate_public_dataset_discovery_boundary_audit.json",
-          "sha256": "327957c98bdb9f2cfe4a26dd85c6f01feb182641e15e9a8f5656bd909111b9d1",
+          "role": "candidate_package",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_ding_alternate_public_dataset_discovery_package.json",
+          "sha256": "e20e41acee2789b0705cd351df853b9a2790b1e2e1b03b70618dc6aa0af5b680"
+        },
+        {
+          "role": "ding_numeric_availability",
+          "path": "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
+          "sha256": "5afc8eb41d78e6a23d343954cab18e284e8f53b3c7bbc149a0bf9f5bc55038bf"
+        },
+        {
+          "role": "ding_public_supplementary",
+          "path": "docs/core/artifacts/t13_ding_public_supplementary_payload_boundary_audit.json",
+          "sha256": "56cc07751ed820195ff73a8f2c8cb31bf70f0d6a11ac40751e1058448913e4c5"
+        },
+        {
+          "role": "independent_csrc_acceptance",
+          "path": "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json",
+          "sha256": "880eb2cc94543f19fefae13ad8c64af820bb619d9c898cd4e1e710494519d281"
+        },
+        {
+          "role": "locked_holdout_audit",
+          "path": "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json",
+          "sha256": "c3185da0a233894d7f338138bbe6acee287194e1852a80e40b0b5f6f2134e21b"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_DING_ALTERNATE_PUBLIC_DATASET_BOUNDARY_NO_GO",
-            "major_result_id": "T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY_BOUNDARY",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -3247,12 +3482,30 @@
       "data_role": "SOURCE_PROVENANCE_BOUNDARY_NOT_CALIBRATION",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_ding_material_regime_boundary_audit.json",
-          "sha256": "2147cc4909937a00d9769af6d62d64e8258ab92d2b1ccafebf717fba77cbb0f8",
+          "path": "docs/core/artifacts/t13_ding_material_regime_boundary_audit.json"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_graphite_material_regime_boundary_source_package.json",
+          "sha256": "94d46f1c021360e25d3f0f6c335c7ada12e2a73d0932c36708775e62affa67f6"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ding_2022_supplementary_information.pdf",
+          "sha256": "a50c1a6347775de72f705f4395507d3136cbf4e5cadfb6638caca2876c52b8f7"
+        },
+        {
+          "path": "docs/core/artifacts/t13_huang_2023_supplementary_payload_boundary_audit.json",
+          "sha256": "b7bf5b4c567d588a685be131e092e22af566f9068d73f5274961645a6ab18453"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_nep_bte_reproduction_source_package.json",
+          "sha256": "fdca0fe6b387ecf7a731831f808b19504b9c58ebefe2d150261de37b4334f914"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_DING_MATERIAL_REGIME_BOUNDARY_NO_GO",
-            "major_result_id": "T13_DING_MATERIAL_REGIME_BOUNDARY",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -3533,12 +3786,19 @@
       "data_role": "EXTERNAL_SOURCE_COMPARATOR_NOT_CALIBRATION",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_farooqui_ig210_thermophysical_source_audit.json",
-          "sha256": "1bf871b436166ba44243d6600fdfc06e9bbbf65a8fc23e2f99a728ff6402fb7e",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/farooqui_2022_ig210_thermophysical_source_package.json",
+          "sha256": "e4bd7e50b5d5e9025eae9bd410f74c3bb5699a8f22f32c4fc5c7994978d9d266"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/farooqui_2022_ig210_thermophysical_table.pdf",
+          "sha256": "777eebdc380f0707c3b63e612cce8977fcb6cab4ee5ed086e45f09aa81e2bd45"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_FAROOQUI_IG210_THERMOPHYSICAL_SOURCE",
-            "major_result_id": "T13_FAROOQUI_IG210_THERMOPHYSICAL_SOURCE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -3580,12 +3840,16 @@
       "data_role": "EXTERNAL_SOURCE_INPUT_NOT_CALIBRATION",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_figshare_dft_force_data_boundary_audit.json",
-          "sha256": "5128866124bbee80e1b3a100da54d37ceb41b4695260c182c1b0d952326ad9da",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/figshare_12649811_carbon_energies_forces.zip",
+          "sha256": "f37b15525145c94a474f356cf4dd51b9b9761489b57799f783cc789e57191ee9",
+          "role": "public Figshare archive bytes"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_FIGSHARE_DFT_FORCE_DATA_BOUNDARY",
-            "major_result_id": "T13_FIGSHARE_DFT_FORCE_DATA_BOUNDARY",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -3802,12 +4066,76 @@
       "data_role": "SOURCE_PROVENANCE_BOUNDARY_NOT_CALIBRATION",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json",
-          "sha256": "173002072c6dd9c0a98f0653c2bac87816d60cd21561c8220c97faa14807e080",
+          "role": "nist_alpha_v",
+          "path": "docs/core/artifacts/t13_nist_graphite_alpha_v_source_boundary_audit.json",
+          "sha256": "392bf8c98de925ea806a86392cbf440029a47e4e32173c2839cd04ff2cb553d5"
+        },
+        {
+          "role": "hanfland_kt",
+          "path": "docs/core/artifacts/t13_graphite_isothermal_kt_source_audit.json",
+          "sha256": "63f0518c78febda473f89f8a0c3927d14b9d98a102dc560277bcd2a9daf8c0c4"
+        },
+        {
+          "role": "bosak_elastic_bulk",
+          "path": "docs/core/artifacts/t13_graphite_elastic_bulk_modulus_source_audit.json",
+          "sha256": "65238edbfb66b57c6b3c0a06f95d8b3d28d6dc613df7b83d825332aff4a996af"
+        },
+        {
+          "role": "tpg_alpha_v",
+          "path": "docs/core/artifacts/t13_tpg_anisotropic_alpha_v_source_audit.json",
+          "sha256": "f8ed02677b5ef1aede683cc2b191538722bda56b520d1d6ba5af024638504c68"
+        },
+        {
+          "role": "nelson_riley_alpha_v",
+          "path": "docs/core/artifacts/t13_natural_graphite_nelson_riley_alpha_v_source_audit.json",
+          "sha256": "c20b42f64b9107459b555dfaddc5150028c39b5254e4791782161b2b9861b861"
+        },
+        {
+          "role": "nist_alpha_v",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/nist_axm5q1_density_source_package.json",
+          "sha256": "9fa91225070b4b6091b0eb7c34295c5e0ab1a0316d282f26bd1f77df23269d5f"
+        },
+        {
+          "role": "hanfland_kt",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/hanfland_1989_graphite_isothermal_kt_source_package.json",
+          "sha256": "5a5c380c972b4e83af14b2c3f361a27842e21bfaeced29f74ff75b1088b1bc53"
+        },
+        {
+          "role": "bosak_elastic_bulk",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/bosak_2007_graphite_elastic_bulk_source_package.json",
+          "sha256": "c24c6bbb4aace7de2f2eaffd234336065a2f4e8f829d7c0cb9c1af3ae4f5f24c"
+        },
+        {
+          "role": "tpg_alpha_v",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ihep_2001_32_tpg_anisotropic_alpha_v_source_package.json",
+          "sha256": "601721924bdf89b0299b57f8220c9bb54633f895a024e3b500673dc4905f3ba7"
+        },
+        {
+          "role": "nelson_riley_alpha_v",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/argonne_anl_5524_nelson_riley_alpha_v_source_package.json",
+          "sha256": "1acbb63f2bfa0f3b3bba707ca924cc0196ad9032b814c48d9087d4ff45c420d2"
+        },
+        {
+          "role": "lowitzer_candidate",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/lowitzer_2006_graphite_pvt_candidate_source_package.json",
+          "sha256": "ef5e46d19cee679196093df802e21187ca39d5a50910b9a74727f53bf4062225"
+        },
+        {
+          "role": "tohei_table_comparator",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/tohei_2006_graphite_alpha_v_kt_table_comparator_source_package.json",
+          "sha256": "7a8dfafd8c06145e08194505aeca933b6f90c27e184cf4db45b56d9375b140c9"
+        },
+        {
+          "role": "farooqui_ig210_thermophysical",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/farooqui_2022_ig210_thermophysical_source_package.json",
+          "sha256": "e4bd7e50b5d5e9025eae9bd410f74c3bb5699a8f22f32c4fc5c7994978d9d266"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY_NO_GO",
-            "major_result_id": "T13_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -3849,12 +4177,19 @@
       "data_role": "INTERNAL_SOURCE_COMPARATOR_NOT_DING_TTG_GRADE",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_graphite_elastic_bulk_modulus_source_audit.json",
-          "sha256": "65238edbfb66b57c6b3c0a06f95d8b3d28d6dc613df7b83d825332aff4a996af",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/bosak_2007_graphite_elastic_bulk_source_package.json",
+          "sha256": "c24c6bbb4aace7de2f2eaffd234336065a2f4e8f829d7c0cb9c1af3ae4f5f24c"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/bosak_2007_graphite_elasticity.pdf",
+          "sha256": "5db6247c3dbf48dcbed70d749da96ca61816fe6fed480f32d80a947ead649d7d"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_GRAPHITE_ELASTIC_BULK_COMPARATOR",
-            "major_result_id": "T13_GRAPHITE_ELASTIC_BULK_MODULUS_SOURCE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -3894,12 +4229,15 @@
       "data_role": "EXTERNAL_GREEN_KUBO_COMPARATOR_SOURCE_BOUNDARY_NOT_UET_COEFFICIENT",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_graphite_green_kubo_source_boundary_audit.json",
-          "sha256": "7c4fd4e64bc78c0214ad8f1a99b92ff0e037b04bb1ee715d0724b4624a137b77",
+          "path": "docs/scripts/audit/audit_topic13_graphite_green_kubo_source_boundary.py",
+          "sha256": "1a681e5a3b2f686a5afc359d240b540d0a34f56ab350eed20d5b981836f48f0a"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_GRAPHITE_GREEN_KUBO_SOURCE_BOUNDARY",
-            "major_result_id": "T13_GRAPHITE_GREEN_KUBO_SOURCE_BOUNDARY",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -3939,12 +4277,19 @@
       "data_role": "EXTERNAL_INPUT_STANDARD_THERMODYNAMIC_COMPARATOR_NOT_DING_TTG_GRADE",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_graphite_isothermal_kt_source_audit.json",
-          "sha256": "63f0518c78febda473f89f8a0c3927d14b9d98a102dc560277bcd2a9daf8c0c4",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/hanfland_1989_graphite_isothermal_kt_source_package.json",
+          "sha256": "5a5c380c972b4e83af14b2c3f361a27842e21bfaeced29f74ff75b1088b1bc53"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/hanfland_1989_graphite_equation_of_state.pdf",
+          "sha256": "300a6b03af667f71a27fc7c269e7a928af57d4b846bded25feaefa0e37b1089e"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_ISOTHERMAL_GRAPHITE_K_T_SOURCE",
-            "major_result_id": "T13_GRAPHITE_ISOTHERMAL_KT_SOURCE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -3974,12 +4319,27 @@
       "data_role": "SOURCE_IDENTITY_ONLY; no calibration consumed",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_hong_final_source_package_boundary.json",
-          "sha256": "4c5a81ae8884a4e11b2f358f2e557eecbe4f82c67c6da1e9eb7eed314bf815f7",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/hong_2016_final_source_package.json",
+          "sha256": "0cbd225b5225dff8954b471a31ad5e1b569fc33aee2f2bfb456e21e277950838",
+          "role": "Hong final-source package"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/hong_2016_science_advances_article.pdf",
+          "sha256": "5d7e305edacfb31c66892329375fe0b8fef4ed674c53bb68bfc1139fc26ffe17",
+          "bytes": 213259,
+          "role": "final Science Advances provenance archive; selected legacy row not accepted"
+        },
+        {
+          "doi": "10.1126/sciadv.1501492",
+          "publisher_url": "https://www.science.org/doi/10.1126/sciadv.1501492",
+          "institutional_reprint_url": "https://e3s-center.berkeley.edu/wp-content/uploads/2019/06/2016_Experimental-Test-of-Landauer%E2%80%99s-Principle-in-Single-Bit-Operations-on-Nanomagnetic-Memory-Bits.pdf"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_HONG_FINAL_SOURCE_BOUNDARY",
-            "major_result_id": "T13_HONG_FINAL_SOURCE_BOUNDARY",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -4016,12 +4376,16 @@
       "data_role": "SOURCE_AVAILABILITY_BOUNDARY_NOT_CALIBRATION",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_huang_2023_nims_mdr_payload_boundary_audit.json",
-          "sha256": "5a80347b4cc014e3c585fa9e3cff16d08834651d93db74c0478ce687156cac5c",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/huang_2023_nims_mdr_dataset.zip",
+          "sha256": "8ed58adc28eddcec45de73a1fdd9ee5394c5d75777be60015b4d59334b32608e",
+          "role": "public NIMS MDR archive bytes"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_HUANG_2023_NIMS_MDR_PAYLOAD_BOUNDARY",
-            "major_result_id": "T13_HUANG_2023_NIMS_MDR_PAYLOAD_BOUNDARY",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -4058,12 +4422,18 @@
       "data_role": "EXTERNAL_COMPARATOR_PROVENANCE_BOUNDARY_NOT_CALIBRATION",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_huang_2023_supplementary_payload_boundary_audit.json",
-          "sha256": "b7bf5b4c567d588a685be131e092e22af566f9068d73f5274961645a6ab18453",
+          "path": "docs/core/artifacts/t13_huang_2023_supplementary_payload_boundary_audit.json"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/huang_2023_graphite_poiseuille_supplementary.pdf",
+          "sha256": "aaf2f325ddc797e7c309132e65d69379e4223e049e7411e6c3dc04cba9e09b90"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_HUANG_PUBLIC_SUPPLEMENTARY_BOUNDARY_NO_NUMERIC_PBTE_PAYLOAD",
-            "major_result_id": "T13_HUANG_2023_SUPPLEMENTARY_PAYLOAD_BOUNDARY",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -4102,12 +4472,18 @@
       "data_role": "EXTERNAL_COMPARATOR_PROVENANCE_BOUNDARY_NOT_CALIBRATION",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_huberman_2019_public_pbte_boundary_audit.json",
-          "sha256": "22b065abd8177a9b1f181e79761baadc0c5c6242d44bea74a8fd6022aafec3c4",
+          "path": "docs/core/artifacts/t13_huberman_2019_public_pbte_boundary_audit.json"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/huberman_2019_graphite_second_sound_arxiv.pdf",
+          "sha256": "29dc508df146125e6aef524404c0cfff98b31605783524526e81a8c93ad46027"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_HUBERMAN_PUBLIC_PBTE_BOUNDARY_NO_ACCEPTED_NUMERIC_PAYLOAD",
-            "major_result_id": "T13_HUBERMAN_2019_PUBLIC_PBTE_BOUNDARY",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -4142,12 +4518,26 @@
       "data_role": "EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_DING_TTG_GRADE",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_iaea_cv_uncertainty_boundary_audit.json",
-          "sha256": "a51c4318a72603c521fd9c9aaa48f759a95054a9da00707427c59cd3abe34b3e",
+          "path": "docs/core/artifacts/t13_iaea_cv_uncertainty_boundary_audit.json"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_graphite_cv_uncertainty_boundary_source_package.json",
+          "sha256": "43c28e1bb5f33e7c10261e2d3a84a31c54b55fa8d2413f44c5c9e5461c3e6fd5"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_graphite_handbook_constant_volume_source_package.json",
+          "sha256": "568853f10f4ef1fc75b4ebed5851240ac8a94f05a5d72cf10af1a2d94bb62e09"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/iaea_graphite_handbook_2017.pdf",
+          "sha256": "91e9d84e5d1828ab1028bf0e5fec0743fe1fb49e416b9e6305edf2f71a30a28a"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_IAEA_CV_UNCERTAINTY_BOUNDARY_NO_GO",
-            "major_result_id": "T13_IAEA_CV_UNCERTAINTY_BOUNDARY",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -4188,12 +4578,22 @@
       "data_role": "EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_DING_TTG_GRADE",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_iaea_gr280_same_state_cp_source_audit.json",
-          "sha256": "c0091ce3d6624e5fd1b5e814f2bd3822459a5d84426cd861d31a9a0052710213",
+          "path": "docs/core/artifacts/t13_iaea_gr280_same_state_cp_source_audit.json"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_gr280_same_state_cp_source_package.json",
+          "sha256": "d090b066a8d3e6ea405a553700a1c15b33b28d652636cf6aff1cc054e2ab9d73"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/iaea_thermophysical_properties_web.pdf",
+          "sha256": "bdb8454de8bdadf83ecdb1794621180651bcf00108f1214f8f3a82193c05976b"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_IAEA_GR280_SAME_STATE_CP_COMPARATOR",
-            "major_result_id": "T13_IAEA_GR280_SAME_STATE_CP_COMPARATOR",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -4231,12 +4631,22 @@
       "data_role": "EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_DING_TTG_GRADE",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_iaea_graphite_constant_volume_source_audit.json",
-          "sha256": "1af3c1c9e81a44b6837cad8d47651f92e167f613743a667e8d3c823cdaaf213c",
+          "path": "docs/core/artifacts/t13_iaea_graphite_constant_volume_source_audit.json"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_graphite_handbook_constant_volume_source_package.json",
+          "sha256": "568853f10f4ef1fc75b4ebed5851240ac8a94f05a5d72cf10af1a2d94bb62e09"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/iaea_graphite_handbook_2017.pdf",
+          "sha256": "91e9d84e5d1828ab1028bf0e5fec0743fe1fb49e416b9e6305edf2f71a30a28a"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_IAEA_TABLE_CV_COMPARATOR_UNCERTAINTY_OPEN",
-            "major_result_id": "T13_IAEA_GRAPHITE_TABLE_CV_COMPARATOR",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -4276,12 +4686,76 @@
       "data_role": "SOURCE_ACCEPTANCE_GATE_NOT_CALIBRATION",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json",
-          "sha256": "880eb2cc94543f19fefae13ad8c64af820bb619d9c898cd4e1e710494519d281",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_pbte_numeric_input_availability_package.json",
+          "sha256": "4112477b5b42e8724656452d9a66bb62366e205f9b996ba0276c8475628d60f2",
           "summary": {
-            "status": "PASS_SCOPED_INDEPENDENT_C_SRC_ACCEPTANCE_CONTRACT",
-            "major_result_id": "T13_INDEPENDENT_C_SRC_ACCEPTANCE_CONTRACT",
-            "closure_level": "CLOSED_FOR_LANE"
+            "role": "Ding official OA and author-request availability"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_ding_c_src_independent_reproduction_boundary_audit.json",
+          "sha256": "2144fbc51827b442216547d9d5f3d9e5fd432ad364e9a0a55d187b4a9890fbad",
+          "summary": {
+            "role": "current independent comparator boundary"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_ding_material_regime_boundary_audit.json",
+          "sha256": "64742790afda02aae657ceed146c6a88c235185066ff283f067ed52c376d14e0",
+          "summary": {
+            "role": "material/state equivalence controller"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_mp48_force_constant_csrc_mesh_convergence_audit.json",
+          "sha256": "585ebc548e5354c2c4905af9b3efca5f9c9d1365527046d4103751ce7869b45d",
+          "summary": {
+            "role": "independent force-constant convergence controller"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
+          "sha256": "afc8fb0d9daea81c30a09b24f0aabd824cde1a85e662ea52880fadd42863de89",
+          "summary": {
+            "role": "Calorine candidate reproduction evaluation",
+            "accepted_for_full_topic13": false,
+            "material_state_match_to_ding": false,
+            "source_grade_uncertainty_present": false
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json",
+          "sha256": "5e4e0d42d6e70612eabce988b86ab10b628dea14d4270bf2364ad58f572d014b",
+          "summary": {
+            "role": "Calorine candidate provenance boundary",
+            "upstream_model_origin_recorded": true,
+            "accepted_for_full_topic13": false
+          }
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/isotope_mass_sensitivity/t13_calorine_isotope_mass_sensitivity_audit.json",
+          "sha256": "5db4a9487f728e5275906a1d4514c154b02cee4854fadcc0ea45f3ac6d5a0221",
+          "summary": {
+            "role": "Calorine isotope-mass state sensitivity",
+            "status": "PASS_SCOPED_CALORINE_ISOTOPE_MASS_SENSITIVITY",
+            "source_grade_uncertainty_present": false
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_calorine_state_uncertainty_decomposition_audit.json",
+          "sha256": "d1b7619f1f0040e1010eb561de5422d2063fb554055c15fd7f14186d4134e481",
+          "summary": {
+            "role": "Calorine state uncertainty decomposition",
+            "status": "PASS_SCOPED_CALORINE_STATE_UNCERTAINTY_DECOMPOSITION",
+            "source_grade_uncertainty_present": false
+          }
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
+          "summary": {
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -4308,12 +4782,27 @@
       "data_role": "SOURCE_IDENTITY_ONLY; no calibration consumed",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_jun_final_source_package_boundary.json",
-          "sha256": "0171a53d873a8fe5c386c1221c26679f908434aa425fb80b740f9778e51e72ec",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/jun_2014_final_source_package.json",
+          "sha256": "b835eb1b7b52602517a349db4e003e3c71fa5bf430afc662f5e368e9079e677c",
+          "role": "Jun final-source package"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/jun_2014_prl_reprint.pdf",
+          "sha256": "3283e23a31a546dec28d9e33364456297e13e89f302546cabd8b5c8d0eb92519",
+          "bytes": 1085095,
+          "role": "final PRL provenance archive; not a machine-readable row table"
+        },
+        {
+          "doi": "10.1103/PhysRevLett.113.190601",
+          "publisher_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.113.190601",
+          "institutional_reprint_url": "https://www.sfu.ca/chaos/assets/papers/2014/prl14-reprint.pdf"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_JUN_FINAL_SOURCE_BOUNDARY",
-            "major_result_id": "T13_JUN_FINAL_SOURCE_BOUNDARY",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -4351,12 +4840,30 @@
       "data_role": "INDEPENDENT_REPRODUCTION_NOT_CALIBRATION",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_mp48_force_constant_csrc_mesh_convergence_audit.json",
-          "sha256": "585ebc548e5354c2c4905af9b3efca5f9c9d1365527046d4103751ce7869b45d",
+          "path": "docs/core/artifacts/t13_mp48_force_constant_csrc_mesh_convergence_audit.json"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_FORCE_CONSTANTS.gz",
+          "sha256": "a410f36fd34e8603aec0dde48c1f8cb47fbf0a237ca911437f744fb7cbf02763"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_phonopy.yaml.gz",
+          "sha256": "00be787d0fbe986304ffdfa51a917b9aa0038deb6d31a563979afe42a7a2b5f8"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_summary.json.gz",
+          "sha256": "ca8bb269f1ba6140872141bda607be840479058cba2709419d922fce052d95c5"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_thermal_properties.yaml.gz",
+          "sha256": "5bb7ce9448f310a2133a648f40a92a63b8397d6ea7c3b571935146dade876902"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_MP48_FORCE_CONSTANT_C_SRC_MESH_CONVERGENCE",
-            "major_result_id": "T13_MP48_FORCE_CONSTANT_C_SRC_MESH_CONVERGENCE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -4564,13 +5071,14 @@
       "observable": "temperature-resolved volumetric graphite c_v uncertainty contract",
       "data_role": "INDEPENDENT_REPRODUCTION_NOT_CALIBRATION",
       "evidence_artifacts": [
+        "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/mp48_independent_graphite_cv_source_package.json",
+        "docs/core/artifacts/t13_mp48_independent_graphite_cv_audit.json",
         {
-          "path": "docs/core/artifacts/t13_mp48_temperature_volume_uncertainty_boundary_audit.json",
-          "sha256": "9736291b43cc2723d2e6cdd73af007c9d606bf8322394ab5c2fcf1194e151f69",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_MP48_TEMPERATURE_VOLUME_UNCERTAINTY_BOUNDARY_NO_GO",
-            "major_result_id": "T13_MP48_TEMPERATURE_VOLUME_UNCERTAINTY_BOUNDARY",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -4610,12 +5118,19 @@
       "data_role": "EXTERNAL_INPUT_STANDARD_THERMODYNAMIC_COMPARATOR_NOT_DING_TTG_GRADE",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_natural_graphite_nelson_riley_alpha_v_source_audit.json",
-          "sha256": "c20b42f64b9107459b555dfaddc5150028c39b5254e4791782161b2b9861b861",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/argonne_anl_5524_nelson_riley_alpha_v_source_package.json",
+          "sha256": "1acbb63f2bfa0f3b3bba707ca924cc0196ad9032b814c48d9087d4ff45c420d2"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/argonne_anl_5524_graphite_thermal_expansion_table.pdf",
+          "sha256": "7e334a4c380c130773f6c34a6238f25a9c28e15c3a9c0e1f9aa3769647e98561"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_NATURAL_GRAPHITE_ALPHA_V_COMPARATOR",
-            "major_result_id": "T13_NATURAL_GRAPHITE_NELSON_RILEY_ALPHA_V_COMPARATOR",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -4694,12 +5209,21 @@
       "data_role": "SOURCE_LOCKED_SAME_GRADE_DENSITY_NOT_CV_CALIBRATION",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_nist_axm5q1_density_source_boundary_audit.json",
-          "sha256": "7b33b0b2b51be34baa2ee11418d1c8cd389874cc8ceac3f3e3ef06fb8a655092",
+          "path": "docs/core/artifacts/t13_nist_axm5q1_density_source_boundary_audit.json"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/nist_axm5q1_density_source_package.json"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nist_sp260_89_graphite.pdf",
+          "sha256": "fbcde491cadf6b8105d8b22bd15145e48709926aaf1d4a24335af2a8984c71b2"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_NIST_AXM5Q1_DENSITY_SOURCE_BOUNDARY",
-            "major_result_id": "T13_NIST_AXM5Q1_DENSITY_SOURCE_BOUNDARY",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -4875,12 +5399,22 @@
       "data_role": "TRAINING/COMPARISON",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_oxford_tgs_numeric_rows_audit.json",
-          "sha256": "0f176973797467f5265530b3fa141dc3bb5a392cfc88c72caa7a94d7fc25ad90",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/oxford_tgs_figure1_numeric_rows_manifest.json",
+          "sha256": "c70558388a4ac5e4b5cefa517f777f54fd41fccd73f6883f22e8e2719d49ac00"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/oxford_tgs_figure1_numeric_rows.csv.gz",
+          "sha256": "e5a6ee943166051f6dec99ced97306c381be0b2746113b5ff4cc4418be53e336"
+        },
+        {
+          "path": "docs/core/artifacts/t13_oxford_tgs_numeric_rows_audit.json"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_OXFORD_TGS_NUMERIC_ROWS_SOURCE_LOCKED_COMPARATOR",
-            "major_result_id": "T13_OXFORD_TGS_NUMERIC_ROWS_COMPARATOR",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -4965,12 +5499,31 @@
       "data_role": "SOURCE_IDENTITY_NO_GO; NO_ROW_ADMITTED",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_peterson_source_identity_no_go.json",
-          "sha256": "c6d1a0154b7c138416e7de0662264559727244802b1b2ec20be07bfe7a263b12",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/peterson_source_identity_no_go_package.json",
+          "sha256": "c1fbb8f06a8d4ddf6e1c8227056fdc0fa52ef186c246ebcdb094a647ffdd50c0",
+          "role": "Peterson identity-conflict package"
+        },
+        {
+          "locator": "https://www.nature.com/articles/s41567-018-0250-5",
+          "doi": "10.1038/s41567-018-0250-5",
+          "role": "DOI identity mismatch evidence"
+        },
+        {
+          "locator": "https://doi.org/10.1098/rspa.2015.0813",
+          "doi": "10.1098/rspa.2015.0813",
+          "role": "actual Peterson paper identity candidate; not selected as a row"
+        },
+        {
+          "locator": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.120.210601",
+          "doi": "10.1103/PhysRevLett.120.210601",
+          "role": "separate single-atom identity; not selected as Peterson row"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_PETERSON_SOURCE_IDENTITY_NO_GO",
-            "major_result_id": "T13_PETERSON_SOURCE_IDENTITY_NO_GO",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -5113,12 +5666,35 @@
       "data_role": "SOURCE_AVAILABILITY_BOUNDARY_NOT_CALIBRATION",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_phi_si_anchor_public_source_boundary_audit.json",
-          "sha256": "605245fa937cf5d2701a0afa0cc90a4f543052c4dd977066e1f3496bc12c50c5",
+          "path": "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
+          "sha256": "5afc8eb41d78e6a23d343954cab18e284e8f53b3c7bbc149a0bf9f5bc55038bf"
+        },
+        {
+          "path": "docs/core/artifacts/t13_ding_pbte_author_request_audit.json",
+          "sha256": "66679f962d0725455c73bfbc856f6c5722b039a3c15b16d4620081d89b4b892a"
+        },
+        {
+          "path": "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json",
+          "sha256": "31d4405dc3abaa85f71022cf51ca1b23a299ba99ea03fff8a09a6701dbba1dd2"
+        },
+        {
+          "path": "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json",
+          "sha256": "5f41afcdb62b7794c35755eecd9e91d3b39ecb432130a74878e2f2b40c1627b9"
+        },
+        {
+          "path": "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
+          "sha256": "4a79b2eb082e4a4f98de0c2b2c441b2144e05fe3a8232caccfd5ba414842b020"
+        },
+        {
+          "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
+          "sha256": "a51c9ab63e4e976b04a032037608d59441192cbd8066ccc9bd490f7336527a15"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_PUBLIC_SOURCE_BOUNDARY_NO_PAIRED_BASE_PHI_RECORD",
-            "major_result_id": "T13_PHI_SI_ANCHOR_PUBLIC_SOURCE_BOUNDARY",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -5158,12 +5734,19 @@
       "data_role": "TRAINING/COMPARISON",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_phonix_mp47_graphite_comparator_audit.json",
-          "sha256": "57550435f987dff1a38601f20dfd94c3a43b1aca0af2aea8216320c2b0443130",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/phonix_mp47_graphite_summary_row.json",
+          "sha256": "cea9711b09f455375a5f9182c295588b98d498fb09af4660af6fb7dce4fdaff1"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/phonix_mp47_graphite_source_package.json",
+          "sha256": "f08bc1d0ac5142abb4f1916c0caaf79c89d3ef414979edfeef9365f4690c1b76"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_PHONIX_GRAPHITE_HARMONIC_COMPARATOR",
-            "major_result_id": "T13_PHONIX_MP47_GRAPHITE_HARMONIC_COMPARATOR",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -5537,12 +6120,19 @@
       "data_role": "EXTERNAL_INPUT_STANDARD_THERMODYNAMIC_COMPARATOR_NOT_DING_TTG_GRADE",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_tpg_anisotropic_alpha_v_source_audit.json",
-          "sha256": "f8ed02677b5ef1aede683cc2b191538722bda56b520d1d6ba5af024638504c68",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ihep_2001_32_tpg_anisotropic_alpha_v_source_package.json",
+          "sha256": "601721924bdf89b0299b57f8220c9bb54633f895a024e3b500673dc4905f3ba7"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ihep_2001_32_tpg_thermal_expansion.pdf",
+          "sha256": "e9527b8dba9d3944a1a9298e9d516e501279b500586cf0179ec076b94fdd6f2e"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_TPG_ANISOTROPIC_ALPHA_V_COMPARATOR",
-            "major_result_id": "T13_TPG_ANISOTROPIC_ALPHA_V_COMPARATOR",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -5881,12 +6471,27 @@
       "data_role": "ACTION_DERIVED_EXACT_KINEMATIC_2TO2_TRANSITION_KERNEL_NOT_MICROSCOPIC_VERTEX",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_action_derived_transition_kernel_audit.json",
-          "sha256": "44b950f76b99138395150372501c9a2714d2d132adc26daa6894c1d933f6a9d1",
+          "path": "docs/core/uet_o2_action_derived_transition_kernel.py",
+          "sha256": "2f818500b353e8cf81caddf892bcf2db43a4341fe831b6f67e62423e3c2feb8f"
+        },
+        {
+          "path": "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+          "sha256": "eb69cc8ab6c35d782fbc687bc6fa503a22ae76c78e28d65c466eaf0e7e4719a9"
+        },
+        {
+          "path": "docs/core/uet_o2_kinetic_collision_kubo.py",
+          "sha256": "411314a28d67bbce457f96ad6f147b183a7580fb983e88af7ba9ce0ce7c149be"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+          "sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_EXACT_KINEMATIC_2TO2_TRANSITION_KERNEL_LANE",
-            "major_result_id": "T13_UET_O2_EXACT_KINEMATIC_2TO2_TRANSITION_KERNEL_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -6175,12 +6780,15 @@
       "data_role": "INTERNAL_ACTION_DERIVED_FORMAL_NO_EXTERNAL_CALIBRATION",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_auxiliary_field_condensed_audit.json",
-          "sha256": "523b6b1e9202450f6d5b555657a72f3967b393e079dc8925fb179d795267d50f",
+          "path": "docs/core/uet_o2_auxiliary_field_condensed.py",
+          "sha256": "588e676a0097fa06393b0b9542af846c4156ff869247521856b753b9d4fa9c1d"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_FORMAL_WARD_PRESERVING_AUXILIARY_FIELD_CONDENSED_LANE",
-            "major_result_id": "T13_UET_O2_AUXILIARY_FIELD_WARD_PRESERVING_CONDENSED_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -6232,12 +6840,23 @@
       "data_role": "ACTION_DERIVED_CONSERVING_LADDER_RESPONSE_LANE_NOT_PHYSICAL_KUBO",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_charge_conserving_ladder_response_audit.json",
-          "sha256": "4e9109fde3d4691c5ba4fefa6ee536ee297ce14539ac3c9db70506ede415ec98",
+          "path": "docs/core/uet_o2_charge_conserving_ladder_response.py",
+          "sha256": "d01d7d04bbdb2e86ac660c0e7fb18052e33b0efd75ccb6b8bc61c8649d452eea"
+        },
+        {
+          "path": "docs/core/uet_o2_kinetic_collision_kubo.py",
+          "sha256": "411314a28d67bbce457f96ad6f147b183a7580fb983e88af7ba9ce0ce7c149be"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+          "sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_CONSERVING_LADDER_RESPONSE_LANE",
-            "major_result_id": "T13_UET_O2_CHARGE_CONSERVING_LADDER_RESPONSE_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -6345,12 +6964,23 @@
       "data_role": "INTERNAL_STRUCTURAL_NO_GO_NO_SOURCE_ROWS",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_collisionless_kubo_audit.json",
-          "sha256": "122307d4c4549bc303fff9415d9c40c1f0217a6558922d6f60111cfb13ad82fb",
+          "path": "docs/core/uet_o2_collisionless_kubo.py",
+          "sha256": "ca2013138f968ab01272d4df54404ed1bf103b6ff6bb45a373ac75b34170096c"
+        },
+        {
+          "path": "docs/core/uet_o2_formal_transverse_response.py",
+          "sha256": "bb30501e3486323dc56e814b5855a66383949a71029b4683cd4bc9931c6bbd58"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+          "sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_COLLISIONLESS_KUBO_DC_NO_GO",
-            "major_result_id": "T13_UET_O2_COLLISIONLESS_KUBO_NO_GO",
-            "closure_level": "CLOSED_AS_NO_GO"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -6616,12 +7246,19 @@
       "data_role": "INTERNAL_ACTION_DERIVED_WARD_BOUNDARY_NOT_EXTERNAL_VALIDATION",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_condensed_goldstone_ward_audit.json",
-          "sha256": "968b073d053be004bcf2521ab649fddeee26ccc265dd4d4c9a5aee2b219acd06",
+          "path": "docs/core/uet_o2_finite_temperature_stationarity_scheme.py",
+          "sha256": "cc7d69c74fbb1725ca5710b7a8b50d50e6739f977d92a044646fefb7fefa879f"
+        },
+        {
+          "path": "docs/core/uet_o2_gaussian_offshell_background.py",
+          "sha256": "a2e9162034b192af006134d98096f6f5588092e67f3047f991f91cc73d9fce09"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_CONDENSED_GOLDSTONE_WARD_BOUNDARY",
-            "major_result_id": "T13_UET_O2_CONDENSED_GOLDSTONE_WARD_NO_GO",
-            "closure_level": "CLOSED_AS_NO_GO"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -6678,12 +7315,23 @@
       "data_role": "ACTION_DERIVED_CONDENSED_THERMAL_LOOP_CONTACT_RESPONSE_NOT_PHYSICAL_KUBO",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_condensed_loop_renormalized_vertex_audit.json",
-          "sha256": "6a3b581978b4020648c5f2c9b9d38fef4aed501267190e5a8c5c2178e666737b",
+          "path": "docs/core/uet_o2_condensed_loop_renormalized_vertex.py",
+          "sha256": "6384e8bc5553b696c17a079b93fd97df95b8f545475732b2a23f7133f03fe0dc"
+        },
+        {
+          "path": "docs/core/uet_o2_continuum_relative_flow_kubo.py",
+          "sha256": "70850509063f5adf4493a21ceea420c9f414e1605eea7220a00ce3549d0bca30"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+          "sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_CONDENSED_LOOP_RENORMALIZED_CONTACT_VERTEX_LANE",
-            "major_result_id": "T13_UET_O2_CONDENSED_LOOP_RENORMALIZED_CONTACT_VERTEX_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -6739,12 +7387,19 @@
       "data_role": "ACTION_DERIVED_INTERNAL_NATURAL_RELATIVE_FLOW_LANE",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_condensed_relative_flow_collision_audit.json",
-          "sha256": "87baacfcca4ddf10be4c17d42c14a8ed98780eed340a0984294c3041bd18a369",
+          "path": "docs/core/uet_o2_condensed_relative_flow_collision.py",
+          "sha256": "d311f7106787e92638ac6a8d3d48a5b4d0ea6dbd688d83a52b2be824dff82d21"
+        },
+        {
+          "path": "docs/core/test/test_topic13_uet_o2_condensed_relative_flow_collision.py",
+          "sha256": "ed7bc91a2cdc25802aba8f69cf1b67fc87f5dc756e0b7d90953012d6552da717"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_CONDENSED_RELATIVE_FLOW_COLLISION_LANE",
-            "major_result_id": "T13_UET_O2_CONDENSED_RELATIVE_FLOW_COLLISION_KERNEL_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -6788,12 +7443,23 @@
       "data_role": "DERIVED_ACTION_KUBO_MATCHED_DECLARED_CHANNEL",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json",
-          "sha256": "5e909ff97aa0476619235460c012313f36b6065e642bbe4f7fba63f36bd8c7f6",
+          "path": "docs/core/uet_o2_condensed_relative_flow_kubo_admission.py",
+          "sha256": "92dea65cf85d2fc2054e4f5c0b293712d2ea0b8b0df65ffa5e4b95de9dd2df67"
+        },
+        {
+          "path": "docs/core/uet_o2_condensed_loop_renormalized_vertex.py",
+          "sha256": "6384e8bc5553b696c17a079b93fd97df95b8f545475732b2a23f7133f03fe0dc"
+        },
+        {
+          "path": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+          "sha256": "ae143f9bd06738ae777415b46d39752c8fbb4a96b17f31de94eac3e563a7be44"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_KUBO_MATCHED_DECLARED_CONDENSED_RELATIVE_FLOW_CHANNEL",
-            "major_result_id": "T13_UET_O2_CONDENSED_RELATIVE_FLOW_KUBO_ADMISSION_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -6845,12 +7511,31 @@
       "data_role": "INTERNAL_STRUCTURAL_NO_GO_NOT_PHYSICAL_TRANSPORT_EVIDENCE",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_condensed_retarded_dissipation_no_go_audit.json",
-          "sha256": "f2e1b348596b619b5af1399bd653f070c9e0d6d5810c95c19c26ec6a923c8252",
+          "path": "docs/core/uet_o2_condensed_retarded_dissipation_no_go.py",
+          "sha256": "10c05e45a462c4748df6300d5ee48c81fe2b95da6903317015fe2e13134801e3"
+        },
+        {
+          "path": "docs/core/uet_o2_condensate_fluctuations.py",
+          "sha256": "d7085c664ca116c3b3fb57ed5dd19a9005e04d427d5a65407c846b043bde824d"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_density_eos.py",
+          "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+        },
+        {
+          "path": "docs/core/uet_covariant_matter.py",
+          "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+        },
+        {
+          "path": "docs/core/uet_covariant_response.py",
+          "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_CONDENSED_RETARDED_DISSIPATION_NO_GO",
-            "major_result_id": "T13_UET_O2_CONDENSED_RETARDED_DISSIPATION_NO_GO",
-            "closure_level": "CLOSED_AS_NO_GO"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -6900,12 +7585,23 @@
       "data_role": "DERIVED_ACTION_CONDENSED_SK_KMS_KUBO_CHANNEL_NOT_FULL_1PI",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_condensed_sk_kms_kubo_match_audit.json",
-          "sha256": "d13d59760f9ebe0a3d2471ad984ec95c6729846d08b2b9ce011e2e8eb2fcaf1c",
+          "path": "docs/core/uet_o2_condensed_sk_kms_kubo_match.py",
+          "sha256": "ab6fabaca6d2a19f8185535928638ecf4f1581cd2ad89ada78ed89e5341aff72"
+        },
+        {
+          "path": "docs/core/uet_o2_condensed_loop_renormalized_vertex.py",
+          "sha256": "6384e8bc5553b696c17a079b93fd97df95b8f545475732b2a23f7133f03fe0dc"
+        },
+        {
+          "path": "docs/core/artifacts/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json",
+          "sha256": "5e909ff97aa0476619235460c012313f36b6065e642bbe4f7fba63f36bd8c7f6"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_CONDENSED_SK_KMS_KUBO_MATCH_LANE",
-            "major_result_id": "T13_UET_O2_CONDENSED_SK_KMS_KUBO_MATCH_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -7012,12 +7708,27 @@
       "data_role": "ACTION_DERIVED_CONSERVATIVE_CONTINUUM_COLLOCATION_NOT_MICROSCOPIC",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_continuum_collision_operator_audit.json",
-          "sha256": "c51318e5a912bb12622fbbab53a52796aec257a46593717687f6af2df5e2bf63",
+          "path": "docs/core/uet_o2_continuum_collision_operator.py",
+          "sha256": "010c1322063b806a1d87d3708cf5509e696f7370170dc2b859f61fd8f884e9e2"
+        },
+        {
+          "path": "docs/core/uet_o2_action_derived_transition_kernel.py",
+          "sha256": "d1cae79dbbcd289c33b04c209ad4d0140ab3c22ce16bb568c267f041d2b3ece7"
+        },
+        {
+          "path": "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+          "sha256": "eb69cc8ab6c35d782fbc687bc6fa503a22ae76c78e28d65c466eaf0e7e4719a9"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+          "sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_CONSERVATIVE_CONTINUUM_COLLOCATION_LANE",
-            "major_result_id": "T13_UET_O2_CONSERVATIVE_CONTINUUM_COLLOCATION_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -7121,12 +7832,23 @@
       "data_role": "ACTION_DERIVED_CONTINUUM_THERMAL_CONTACT_RESPONSE_NOT_PHYSICAL_KUBO",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_continuum_relative_flow_kubo_audit.json",
-          "sha256": "76b46ffe55399fa03b7ae0309352b1df5e6afb494397cecfa4b82a87e0d78813",
+          "path": "docs/core/uet_o2_continuum_relative_flow_kubo.py",
+          "sha256": "70850509063f5adf4493a21ceea420c9f414e1605eea7220a00ce3549d0bca30"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+          "sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4"
+        },
+        {
+          "path": "docs/core/uet_o2_condensed_relative_flow_collision.py",
+          "sha256": "d311f7106787e92638ac6a8d3d48a5b4d0ea6dbd688d83a52b2be824dff82d21"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_CONTINUUM_RELATIVE_FLOW_KUBO_LANE",
-            "major_result_id": "T13_UET_O2_CONTINUUM_RELATIVE_FLOW_KUBO_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -7304,12 +8026,27 @@
       "data_role": "ACTION_DERIVED_FINITE_DISCRETE_MOMENT_CONSERVING_BS_INTERFACE_NOT_MICROSCOPIC",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_energy_momentum_conserving_bethe_salpeter_audit.json",
-          "sha256": "a680c01bd50e8596a2ccc43d86e06f69c24b9785a40117f4ebe424ef5c34815b",
+          "path": "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+          "sha256": "eb69cc8ab6c35d782fbc687bc6fa503a22ae76c78e28d65c466eaf0e7e4719a9"
+        },
+        {
+          "path": "docs/core/uet_o2_momentum_ladder_sk_kms.py",
+          "sha256": "c47aae04eca1e703919de6de9050e81d76dd036053bec9ef47c4cc0bbd648dbb"
+        },
+        {
+          "path": "docs/core/uet_o2_kinetic_collision_kubo.py",
+          "sha256": "411314a28d67bbce457f96ad6f147b183a7580fb983e88af7ba9ce0ce7c149be"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+          "sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_FULL_MOMENT_CONSERVING_BS_INTERFACE_LANE",
-            "major_result_id": "T13_UET_O2_ENERGY_MOMENTUM_CONSERVING_BS_INTERFACE_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -7360,12 +8097,19 @@
       "data_role": "ACTION_DERIVED_EQUILIBRIUM_KMS_WITNESS_NOT_TRANSPORT",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_equilibrium_kms_audit.json",
-          "sha256": "60cc26f4ebd8bed8d932c90f9aacc571bd614393795d7c08ecc197f040efb7b3",
+          "path": "docs/core/uet_o2_equilibrium_kms.py",
+          "sha256": "d1a3777c87864271a75d242b2af57096ffe167ddef99a11d891f7aea95c1904d"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+          "sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_EQUILIBRIUM_KMS_FDT_LANE",
-            "major_result_id": "T13_UET_O2_EQUILIBRIUM_KMS_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -7413,12 +8157,23 @@
       "data_role": "ACTION_DERIVED_INTERNAL_FORMAL_ENTROPY_NO_SOURCE_ROWS_NO_HOLDOUT",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_finite_channel_entropy_balance_audit.json",
-          "sha256": "7a21a03c87c0b39d619cb23bc459643a8c41b7ae792beed88425e0129996968d",
+          "path": "docs/core/uet_o2_finite_channel_entropy_balance.py",
+          "sha256": "418247b1b61d23bdf0ee5212b5b4969216d1ced539636b741b04edd35e876f92"
+        },
+        {
+          "path": "docs/core/uet_o2_action_derived_transition_kernel.py",
+          "sha256": "2f818500b353e8cf81caddf892bcf2db43a4341fe831b6f67e62423e3c2feb8f"
+        },
+        {
+          "path": "docs/core/artifacts/t13_uet_o2_two_loop_sunset_cut_audit.json",
+          "sha256": "23f01a422f3b217e3065bf531a29182496083cfabb1bc145ce8cb25fe8f5d73c"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_FINITE_CHANNEL_ENTROPY_BALANCE_LANE",
-            "major_result_id": "T13_UET_O2_FINITE_CHANNEL_ENTROPY_BALANCE_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -7465,12 +8220,31 @@
       "data_role": "ACTION_DERIVED_FINITE_DENSITY_CHARGED_VERTEX_SCHEME_NOT_PHYSICAL",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_finite_density_charged_vertex_audit.json",
-          "sha256": "5a1afa505dde3840923f67e9bded5acdbb05c01fde755396a218525b4701384d",
+          "path": "docs/core/uet_o2_finite_density_charged_vertex.py",
+          "sha256": "188edb08ef56bf0a3908d1cab843632faf0580525fee527112cf41e6fcf4777f"
+        },
+        {
+          "path": "docs/core/uet_o2_renormalized_vertex_scheme.py",
+          "sha256": "410f77c9418d0d946f0b27dbae31586a9436070771d0de13c7debc384dce71d6"
+        },
+        {
+          "path": "docs/core/uet_o2_one_loop_vertex_uv_boundary.py",
+          "sha256": "fb47090eed90d4e37bab34516cc0ad0d60300981de91f9322d1513746e11e8e1"
+        },
+        {
+          "path": "docs/core/uet_o2_renormalized_normal_branch.py",
+          "sha256": "cf536a7e04fe75f284c5c5078f5719276b2ca0459e84bbbb1dd027290c92537c"
+        },
+        {
+          "path": "docs/core/uet_o2_equilibrium_kms.py",
+          "sha256": "d1a3777c87864271a75d242b2af57096ffe167ddef99a11d891f7aea95c1904d"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_FINITE_DENSITY_CHARGED_O2_VERTEX_SCHEME",
-            "major_result_id": "T13_UET_O2_FINITE_DENSITY_CHARGED_VERTEX_SCHEME",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -7517,13 +8291,15 @@
       "observable": "permutation inventory, relabeling maps, aggregate response identity, KMS/FDT, and PV convergence",
       "data_role": "ACTION_DERIVED_FINITE_T_ALL_22_PERMUTATION_IDENTITY_NO_HOLDOUT",
       "evidence_artifacts": [
+        "docs\\core\\uet_o2_finite_temperature_all_22_permutation_identity.py",
+        "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_all_22_permutation_identity.py",
+        "docs/core/artifacts/t13_uet_o2_finite_temperature_all_22_permutation_identity_audit.json",
         {
-          "path": "docs/core/artifacts/t13_uet_o2_finite_temperature_all_22_permutation_identity_audit.json",
-          "sha256": "d8a70695cb21d4530dc1073bfcf5a1cf0bf2d80f9f075e225aeee5f50323f84c",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_O2_FINITE_T_ALL_22_PERMUTATION_IDENTITY_LANE",
-            "major_result_id": "T13_UET_O2_FINITE_T_ALL_22_PERMUTATION_IDENTITY_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -7566,12 +8342,31 @@
       "data_role": "ACTION_DERIVED_FINITE_T_ALL_ONSHELL_CUT_SPECTRAL_RESPONSE_NO_HOLDOUT",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_finite_temperature_all_onshell_cut_response_audit.json",
-          "sha256": "37378c7569a7298c5939f19fea3cef035104146ec82bf10c5f2988f054405ae8",
+          "path": "docs/core/uet_o2_finite_temperature_all_onshell_cut_response.py",
+          "sha256": "acbcce6babc00aa65fce3db26cc22ea8f49376533bd78f4d4c0c02c0aad6d37f"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_declared_retarded_1pi_grid.py",
+          "sha256": "f635e131e00c295cb90bf51607a8c41b392fef4af610682d9c4d3bc99e504885"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_sunset_cut_multiplicity.py",
+          "sha256": "e2f0f8b2efefddfc5c634ef879a238a86111404f7ac797c404a0894597d3cceb"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_signed_cut_coverage.py",
+          "sha256": "1e68712e89ceb0d2040bd6f31d040dcda26bad1b5b737e3ed4fd029eaabf828d"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_sunset_scattering_sk_kms.py",
+          "sha256": "9ee0ab0c2b2e0a95783576bf57affcf996326fd4d697585c87dd6512cea597c0"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_O2_FINITE_T_ALL_ONSHELL_CUT_SPECTRAL_RESPONSE_LANE",
-            "major_result_id": "T13_UET_O2_FINITE_T_ALL_ONSHELL_CUT_SPECTRAL_RESPONSE_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -7618,12 +8413,23 @@
       "data_role": "ACTION_DERIVED_FINITE_T_DECLARED_CHANNEL_RETA_KELDYSH_1PI_NO_HOLDOUT",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi_audit.json",
-          "sha256": "ff5a8ea3972f02189f7f4ff3413855946526faeb7b8c5317adc6c09ba3ebea2f",
+          "path": "docs/core/uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi.py",
+          "sha256": "48ac15b10b64c81aa4c85dd7941ce8004022e61dc08acc655c9ab2ef4f25f013"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_declared_retarded_1pi_grid.py",
+          "sha256": "f635e131e00c295cb90bf51607a8c41b392fef4af610682d9c4d3bc99e504885"
+        },
+        {
+          "path": "docs/core/artifacts/t13_uet_o2_finite_temperature_declared_retarded_1pi_grid_audit.json",
+          "sha256": "f22d74b88c82e62bb0dc984bc96b1171bc2b7579d563d693fa3559ac199e3861"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_O2_FINITE_T_DECLARED_CHANNEL_RETARDED_ADVANCED_KELDYSH_1PI_LANE",
-            "major_result_id": "T13_UET_O2_FINITE_T_DECLARED_CHANNEL_RETARDED_ADVANCED_KELDYSH_1PI_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -7667,12 +8473,23 @@
       "data_role": "ACTION_DERIVED_FINITE_T_DECLARED_RETARDED_1PI_RESPONSE_GRID_NO_HOLDOUT",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_finite_temperature_declared_retarded_1pi_grid_audit.json",
-          "sha256": "f22d74b88c82e62bb0dc984bc96b1171bc2b7579d563d693fa3559ac199e3861",
+          "path": "docs/core/uet_o2_finite_temperature_declared_retarded_1pi_grid.py",
+          "sha256": "f635e131e00c295cb90bf51607a8c41b392fef4af610682d9c4d3bc99e504885"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_sunset_sk_kms.py",
+          "sha256": "e9e2f057cbd16f37b8cc68013f7805ee3c9dba7f31ae4fecaa4741554e053aa2"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_sunset_scattering_sk_kms.py",
+          "sha256": "dbcd9212bf6738a71d6e1b550531adc98cdeaa966cc9875f9045709733dcea3a"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_O2_FINITE_T_DECLARED_RETARDED_1PI_RESPONSE_GRID_LANE",
-            "major_result_id": "T13_UET_O2_FINITE_T_DECLARED_RETARDED_1PI_RESPONSE_GRID_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -7784,12 +8601,27 @@
       "data_role": "ACTION_DERIVED_FORMAL_FINITE_T_1PI_NO_HOLDOUT",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_finite_temperature_offshell_1pi_audit.json",
-          "sha256": "6a5642697c88d27bf8f8ce61c08e98335eddd0410ddc70f8dff17660d124f47c",
+          "path": "docs/core/uet_o2_finite_temperature_offshell_1pi.py",
+          "sha256": "f66f8af3c908d9431ea5f6c33805633e5cc239ea0acf825d1917d2445bdfb96c"
+        },
+        {
+          "path": "docs/core/uet_o2_action_1pi_sunset_tensor.py",
+          "sha256": "ccff2807b70d519b0132dde8a0d79f949eeffd42c51c48ac36f396810ad0e21a"
+        },
+        {
+          "path": "docs/core/uet_o2_action_1pi_sunset_euclidean.py",
+          "sha256": "6bb3af9671e253ba71ede617f98dd724dc089ca1cdb4fef4bdf3375f5e437073"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_full_sunset_sk_kms.py",
+          "sha256": "01caf81cb0a29ed5d01d291b91accf600cbf75e1cbeaaaa1e7ef5d6c50702e43"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_O2_FINITE_T_COMPLETE_OFFSHELL_1PI_FORMAL_LANE",
-            "major_result_id": "T13_UET_O2_FINITE_T_OFFSHELL_1PI_FORMAL_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -7837,12 +8669,23 @@
       "data_role": "ACTION_DERIVED_FINITE_T_OFFSHELL_THRESHOLD_CROSSING_NO_HOLDOUT",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_finite_temperature_offshell_threshold_crossing_1pi_audit.json",
-          "sha256": "b0d449ecdc994e150d0157ba450515ea617d462a46b3a8d8f1607f60a2953920",
+          "path": "docs/core/uet_o2_finite_temperature_offshell_threshold_crossing_1pi.py",
+          "sha256": "1b481136ba677b79d441f9ec253d1a4bb167c576463ee677f799d912ebfe549f"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_sunset_sk_kms.py",
+          "sha256": "e9e2f057cbd16f37b8cc68013f7805ee3c9dba7f31ae4fecaa4741554e053aa2"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_sunset_scattering_sk_kms.py",
+          "sha256": "9ee0ab0c2b2e0a95783576bf57affcf996326fd4d697585c87dd6512cea597c0"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_O2_FINITE_T_OFFSHELL_THRESHOLD_CROSSING_1PI_LANE",
-            "major_result_id": "T13_UET_O2_FINITE_T_OFFSHELL_THRESHOLD_CROSSING_1PI_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -7891,12 +8734,15 @@
       "data_role": "ACTION_DERIVED_APPROXIMATE_EOS_NOT_TRANSPORT",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_finite_temperature_quasiparticle_eos_audit.json",
-          "sha256": "6a8e9124d8574fa534c6377646f01e5324715477ff0595bcf04657ad9919538b",
+          "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+          "sha256": "7a3b97bce24ac89593b6031adc65db8f18d33780565afcad016fd9b97cefe41e"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_TREE_CONDENSATE_THERMAL_QUASIPARTICLE_EOS",
-            "major_result_id": "T13_UET_O2_FINITE_T_QUASIPARTICLE_EOS_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -7940,12 +8786,27 @@
       "data_role": "ACTION_DERIVED_RENORMALIZED_HARTREE_NORMAL_SCHEME_NOT_PHYSICAL",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_finite_temperature_renormalized_hartree_audit.json",
-          "sha256": "2d63daeb2252fbb63b1f051a53d6da2c8fdd941a82aadf94141db111000e8f38",
+          "path": "docs/core/uet_o2_finite_temperature_renormalized_hartree.py",
+          "sha256": "833517333209bd9b2e6f0deb42f0a792454769ee35400626deb18369396ce725"
+        },
+        {
+          "path": "docs/core/uet_o2_renormalized_normal_branch.py",
+          "sha256": "cf536a7e04fe75f284c5c5078f5719276b2ca0459e84bbbb1dd027290c92537c"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_self_energy.py",
+          "sha256": "120c020942b67763de0a71c9659a2feea711a9eb991c13422ce3831f85477d7b"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_hartree_thermodynamics.py",
+          "sha256": "476a91e839f0f32c8d7519fc5333e11aed3c59b4226db95284875cf8a248f471"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_RENORMALIZED_HARTREE_NORMAL_SCHEME",
-            "major_result_id": "T13_UET_O2_RENORMALIZED_HARTREE_NORMAL_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -7990,12 +8851,23 @@
       "data_role": "INTERNAL_STRUCTURAL_NO_GO_NO_SOURCE_ROWS_OR_HOLDOUT",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_finite_temperature_scheme_identifiability_no_go.json",
-          "sha256": "ad00e5e1c0e2998536f82490fa56cf35022fcec65717c2f65410a12f73fb06ca",
+          "path": "docs/core/uet_o2_finite_temperature_scheme_identifiability.py",
+          "sha256": "26d7a8f2dc54ce8f16771ffac86c5414f71963db2ea5cdd1d026716833598358"
+        },
+        {
+          "path": "docs/core/uet_o2_renormalized_normal_branch.py",
+          "sha256": "cf536a7e04fe75f284c5c5078f5719276b2ca0459e84bbbb1dd027290c92537c"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_self_energy.py",
+          "sha256": "120c020942b67763de0a71c9659a2feea711a9eb991c13422ce3831f85477d7b"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_NO_GO_FINITE_TEMPERATURE_SCHEME_IDENTIFIABILITY",
-            "major_result_id": "T13_UET_O2_FINITE_T_SCHEME_IDENTIFIABILITY_NO_GO",
-            "closure_level": "CLOSED_AS_NO_GO"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -8042,12 +8914,19 @@
       "data_role": "ACTION_DERIVED_INTERNAL_NO_EXTERNAL_CALIBRATION",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_finite_temperature_self_energy_audit.json",
-          "sha256": "acb61cb97087f66c97fc5e278f183f9cf6262fa633596c86dd910c190b545b18",
+          "path": "docs/core/uet_o2_finite_temperature_self_energy.py",
+          "sha256": "89aaead673f37904735c7f501d48895ed83d8eb0ea08603af2151e71b7f718cf"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_density_eos.py",
+          "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_HARTREE_THERMAL_SELF_ENERGY",
-            "major_result_id": "T13_UET_O2_FINITE_T_SELF_ENERGY_HARTREE_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -8094,12 +8973,27 @@
       "data_role": "ACTION_DERIVED_FINITE_T_SIGNED_CUT_KINEMATIC_TAXONOMY_NO_HOLDOUT",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_finite_temperature_signed_cut_coverage_audit.json",
-          "sha256": "42810aec29a5fa708145c5e72d7d5cc4c7a7b0491ba19cea5dd66da8198d3f6e",
+          "path": "docs/core/uet_o2_finite_temperature_signed_cut_coverage.py",
+          "sha256": "1e68712e89ceb0d2040bd6f31d040dcda26bad1b5b737e3ed4fd029eaabf828d"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_sunset_scattering_sk_kms.py",
+          "sha256": "dbcd9212bf6738a71d6e1b550531adc98cdeaa966cc9875f9045709733dcea3a"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_sunset_sk_kms.py",
+          "sha256": "e9e2f057cbd16f37b8cc68013f7805ee3c9dba7f31ae4fecaa4741554e053aa2"
+        },
+        {
+          "path": "docs/core/uet_o2_action_1pi_sunset_tensor.py",
+          "sha256": "ccff2807b70d519b0132dde8a0d79f949eeffd42c51c48ac36f396810ad0e21a"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_O2_FINITE_T_SIGNED_CUT_KINEMATIC_TAXONOMY_LANE",
-            "major_result_id": "T13_UET_O2_FINITE_T_SIGNED_CUT_KINEMATIC_TAXONOMY_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -8144,12 +9038,19 @@
       "data_role": "INTERNAL_STRUCTURAL_NO_GO_NO_SOURCE_ROWS_OR_HOLDOUT",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_finite_temperature_stationarity_scheme_dependence_audit.json",
-          "sha256": "884076c8400adc3611bd3a6daa2ef0f35e6721efd0a9506c3acd082049b4ac90",
+          "path": "docs/core/uet_o2_finite_temperature_stationarity_scheme.py",
+          "sha256": "cc7d69c74fbb1725ca5710b7a8b50d50e6739f977d92a044646fefb7fefa879f"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_scheme_identifiability.py",
+          "sha256": "26d7a8f2dc54ce8f16771ffac86c5414f71963db2ea5cdd1d026716833598358"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_RENORMALIZED_CONDENSATE_STATIONARITY_SCHEME_DEPENDENCE",
-            "major_result_id": "T13_UET_O2_RENORMALIZED_CONDENSATE_STATIONARITY_SCHEME_DEPENDENCE",
-            "closure_level": "CLOSED_AS_NO_GO"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -8198,12 +9099,31 @@
       "data_role": "ACTION_DERIVED_FINITE_T_CUT_MULTIPLICITY_NO_HOLDOUT",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_finite_temperature_sunset_cut_multiplicity_audit.json",
-          "sha256": "cb99067a1d234ef98247de36ece91105b162f38abd1f439a75fc6443dd53439b",
+          "path": "docs/core/uet_o2_finite_temperature_sunset_cut_multiplicity.py",
+          "sha256": "e2f0f8b2efefddfc5c634ef879a238a86111404f7ac797c404a0894597d3cceb"
+        },
+        {
+          "path": "docs/core/uet_o2_action_1pi_sunset_tensor.py",
+          "sha256": "ccff2807b70d519b0132dde8a0d79f949eeffd42c51c48ac36f396810ad0e21a"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_sunset_scattering_sk_kms.py",
+          "sha256": "9ee0ab0c2b2e0a95783576bf57affcf996326fd4d697585c87dd6512cea597c0"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_signed_cut_coverage.py",
+          "sha256": "1e68712e89ceb0d2040bd6f31d040dcda26bad1b5b737e3ed4fd029eaabf828d"
+        },
+        {
+          "path": "docs/core/uet_o2_action_sunset_1pi_spectral.py",
+          "sha256": "b0265da3808352deb526bbbe911c4f87cbec3d9d7f40a4fc4d9bdf2c6e627e2b"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_O2_FINITE_T_SUNSET_CUT_MULTIPLICITY_LANE",
-            "major_result_id": "T13_UET_O2_FINITE_T_SUNSET_CUT_MULTIPLICITY_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -8544,12 +9464,19 @@
       "data_role": "ACTION_DERIVED_FORMAL_STATIC_RESPONSE_NOT_KUBO",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_formal_transverse_response_audit.json",
-          "sha256": "84111a21c71ed9d1c033117a552e925cc40db535ada9f1385eee3236df56d675",
+          "path": "docs/core/uet_o2_formal_transverse_response.py",
+          "sha256": "bb30501e3486323dc56e814b5855a66383949a71029b4683cd4bc9931c6bbd58"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+          "sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_FORMAL_STATIC_TRANSVERSE_QUASIPARTICLE_RESPONSE",
-            "major_result_id": "T13_UET_O2_FORMAL_TRANSVERSE_RESPONSE_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -8597,12 +9524,19 @@
       "data_role": "ACTION_DERIVED_FORMAL_TWO_SECTOR_THERMODYNAMICS",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_formal_two_sector_thermodynamics_audit.json",
-          "sha256": "0e1bd35153563af720b6a27badf8ebbbb4ab37fd0301c8b764f7935d36f18efa",
+          "path": "docs/core/uet_o2_formal_two_sector_thermodynamics.py",
+          "sha256": "a260f9c50a8685a6c5506f6e5ff1602cfcd2c2bcf1b5f79d3faf81803a4915c9"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+          "sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_FORMAL_TWO_SECTOR_THERMODYNAMIC_CONSISTENCY",
-            "major_result_id": "T13_UET_O2_FORMAL_TWO_SECTOR_THERMODYNAMIC_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -8754,12 +9688,23 @@
       "data_role": "ACTION_DERIVED_INTERNAL_NO_EXTERNAL_CALIBRATION",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_hartree_normal_stability_audit.json",
-          "sha256": "d2b82c4f8b1429a091d2efeec21c450b5a1af595bf4be660c8ab4f94a1550d85",
+          "path": "docs/core/uet_o2_finite_temperature_normal_stability.py",
+          "sha256": "b3073220c311dd3e68b1925b51d86a1a7aa8aad65d35c931ac34a0340a7991e7"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_self_energy.py",
+          "sha256": "120c020942b67763de0a71c9659a2feea711a9eb991c13422ce3831f85477d7b"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_density_eos.py",
+          "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_HARTREE_NORMAL_ONE_SIDED_STABILITY_BOUNDARY",
-            "major_result_id": "T13_UET_O2_HARTREE_NORMAL_STABILITY_BOUNDARY_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -8809,12 +9754,23 @@
       "data_role": "ACTION_DERIVED_EQUILIBRIUM_INTERNAL_NO_EXTERNAL_CALIBRATION",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_hartree_thermodynamic_consistency_audit.json",
-          "sha256": "c0845d9d7c088b6d5d16623376c215b00aae2810b6524a1ecfe0d1564016b443",
+          "path": "docs/core/uet_o2_finite_temperature_hartree_thermodynamics.py",
+          "sha256": "476a91e839f0f32c8d7519fc5333e11aed3c59b4226db95284875cf8a248f471"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_self_energy.py",
+          "sha256": "120c020942b67763de0a71c9659a2feea711a9eb991c13422ce3831f85477d7b"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_density_eos.py",
+          "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_HARTREE_EQUILIBRIUM_THERMODYNAMICS",
-            "major_result_id": "T13_UET_O2_HARTREE_EQUILIBRIUM_THERMODYNAMIC_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -8972,12 +9928,27 @@
       "data_role": "ACTION_DERIVED_LOCAL_INTERACTING_SK_KMS_INTERFACE_NOT_PHYSICAL_TRANSPORT",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_interacting_sk_kms_action_audit.json",
-          "sha256": "6131d8ffba0e365d172c52c8e97cc58fa5f3eae75432aa8875aee9bb54b6c4e2",
+          "path": "docs/core/uet_o2_interacting_sk_kms_action.py",
+          "sha256": "91b432c04e11aebf4aa1c293a05ae611be4eca3243daa91546d671f63fd68da5"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_density_charged_vertex.py",
+          "sha256": "188edb08ef56bf0a3908d1cab843632faf0580525fee527112cf41e6fcf4777f"
+        },
+        {
+          "path": "docs/core/uet_o2_action_derived_transition_kernel.py",
+          "sha256": "d1cae79dbbcd289c33b04c209ad4d0140ab3c22ce16bb568c267f041d2b3ece7"
+        },
+        {
+          "path": "docs/core/uet_o2_equilibrium_kms.py",
+          "sha256": "d1a3777c87864271a75d242b2af57096ffe167ddef99a11d891f7aea95c1904d"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_INTERACTING_SK_KMS_LOCAL_ACTION_INTERFACE",
-            "major_result_id": "T13_UET_O2_INTERACTING_SK_KMS_ACTION_INTERFACE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -9031,12 +10002,19 @@
       "data_role": "ACTION_DERIVED_DILUTE_KINETIC_COMPARATOR_NOT_PHYSICAL_KUBO",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_kinetic_collision_kubo_audit.json",
-          "sha256": "1f56e114e69e7c238d55921a3a3c2265b3e26e1655e7d69948072680499747a8",
+          "path": "docs/core/uet_o2_kinetic_collision_kubo.py",
+          "sha256": "411314a28d67bbce457f96ad6f147b183a7580fb983e88af7ba9ce0ce7c149be"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+          "sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_DILUTE_KINETIC_COLLISION_LANE",
-            "major_result_id": "T13_UET_O2_KINETIC_COLLISION_KERNEL_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -9149,12 +10127,23 @@
       "data_role": "ACTION_DERIVED_MOMENTUM_LADDER_SK_KMS_INTERFACE_NOT_PHYSICAL_KUBO",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_momentum_ladder_sk_kms_audit.json",
-          "sha256": "ecab85f83097a47104abeea8d25a289cb35f137e2c618757232b0c470b7dbffc",
+          "path": "docs/core/uet_o2_momentum_ladder_sk_kms.py",
+          "sha256": "c47aae04eca1e703919de6de9050e81d76dd036053bec9ef47c4cc0bbd648dbb"
+        },
+        {
+          "path": "docs/core/uet_o2_kinetic_collision_kubo.py",
+          "sha256": "411314a28d67bbce457f96ad6f147b183a7580fb983e88af7ba9ce0ce7c149be"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+          "sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_MOMENTUM_LADDER_SK_KMS_INTERFACE_LANE",
-            "major_result_id": "T13_UET_O2_MOMENTUM_LADDER_SK_KMS_INTERFACE_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -9207,12 +10196,27 @@
       "data_role": "ACTION_DERIVED_FORMAL_NONLOCAL_SK_KMS_MEMORY_CONTROL_NOT_PHYSICAL_TRANSPORT",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_nonlocal_sk_kms_memory_kernel_audit.json",
-          "sha256": "84081e77a4900f970a5306da97d6b24e430ff895e061dab14d6f9c278de7b74f",
+          "path": "docs/core/uet_o2_nonlocal_sk_kms_memory_kernel.py",
+          "sha256": "9a80cbb16f227c102da432e461c8648c86f07a4ad8cea269f848b4f172efcb93"
+        },
+        {
+          "path": "docs/core/uet_o2_kinetic_collision_kubo.py",
+          "sha256": "411314a28d67bbce457f96ad6f147b183a7580fb983e88af7ba9ce0ce7c149be"
+        },
+        {
+          "path": "docs/core/uet_o2_open_system_sk_kms.py",
+          "sha256": "92b2beb2d531d2c907953b42e4a381f1442dc035ab0cdebd7edf8a5ed0a9b063"
+        },
+        {
+          "path": "docs/core/uet_o2_equilibrium_kms.py",
+          "sha256": "d1a3777c87864271a75d242b2af57096ffe167ddef99a11d891f7aea95c1904d"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_NONLOCAL_SK_KMS_MEMORY_KERNEL_LANE",
-            "major_result_id": "T13_UET_O2_NONLOCAL_SK_KMS_MEMORY_KERNEL_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -9526,12 +10530,23 @@
       "data_role": "ACTION_DERIVED_ONE_LOOP_RETARDED_SELF_ENERGY_NO_GO_NOT_TRANSPORT",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_one_loop_retarded_self_energy_no_go_audit.json",
-          "sha256": "f240e594ea1c167cd7aeed88028b636b9ee25cfe1a2925087b4e05ae2bf7189f",
+          "path": "docs/core/uet_o2_one_loop_retarded_self_energy_no_go.py",
+          "sha256": "a0e04de5efe2c23d93ef91a56766c38cc359c4787b5f51f2c7f97fa839a5f84e"
+        },
+        {
+          "path": "docs/core/uet_covariant_matter.py",
+          "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_density_charged_vertex.py",
+          "sha256": "188edb08ef56bf0a3908d1cab843632faf0580525fee527112cf41e6fcf4777f"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_ONE_LOOP_RETARDED_SELF_ENERGY_NO_GO",
-            "major_result_id": "T13_UET_O2_ONE_LOOP_RETARDED_SELF_ENERGY_NO_GO",
-            "closure_level": "CLOSED_AS_NO_GO"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -9624,12 +10639,27 @@
       "data_role": "ACTION_DERIVED_ONE_LOOP_VERTEX_UV_BOUNDARY_NOT_RENORMALIZED",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_one_loop_vertex_uv_boundary_audit.json",
-          "sha256": "951ba2138f42674076ba573d15411ac4f2f662396e9f2d5644e73f932a82e155",
+          "path": "docs/core/uet_o2_one_loop_vertex_uv_boundary.py",
+          "sha256": "fb47090eed90d4e37bab34516cc0ad0d60300981de91f9322d1513746e11e8e1"
+        },
+        {
+          "path": "docs/core/uet_o2_tree_level_bs_sk_match.py",
+          "sha256": "ef3522ec6e925eee3fd937035829c801325f9e1ec39d5a809d42246f6c5e90c5"
+        },
+        {
+          "path": "docs/core/uet_o2_equilibrium_kms.py",
+          "sha256": "d1a3777c87864271a75d242b2af57096ffe167ddef99a11d891f7aea95c1904d"
+        },
+        {
+          "path": "docs/core/artifacts/t13_uet_o2_one_loop_uv_boundary_audit.json",
+          "sha256": "fad6c31402440f3de813fbe0c5488fe2efdb79bd327bd58960c4678a88cbf16c"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_O2_ONE_LOOP_VERTEX_UV_BOUNDARY",
-            "major_result_id": "T13_UET_O2_ONE_LOOP_VERTEX_UV_BOUNDARY",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -9702,12 +10732,26 @@
       "data_role": "INTERNAL_FORMAL_SYNTHETIC_CONTROL_NO_SOURCE",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_open_system_sk_kms_audit.json",
-          "sha256": "4b8aa86cd3f7b7a88c2c1aff356a0af1a531501fcb97f3600167c149cb0eb422",
+          "path": "docs/core/uet_o2_open_system_sk_kms.py",
+          "sha256": "92b2beb2d531d2c907953b42e4a381f1442dc035ab0cdebd7edf8a5ed0a9b063",
+          "summary": {
+            "status": "PASS_FORMAL_OPEN_SYSTEM_SK_KMS_ENTROPY_LANE"
+          }
+        },
+        {
+          "path": "docs/scripts/audit/audit_topic13_open_system_sk_kms.py",
+          "sha256": "ad703a6cc1fbcd0fa3ef7fdfd45a865808f02ab2d51f55d182d5ae26d4898487",
           "summary": {
             "status": "PASS_FORMAL_OPEN_SYSTEM_SK_KMS_ENTROPY_LANE",
-            "major_result_id": "T13_UET_O2_OPEN_SYSTEM_SK_KMS_ENTROPY_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "record_count": 5
+          }
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
+          "summary": {
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -9783,19 +10827,18 @@
       "topic": "0.13_Thermodynamic_Bridge",
       "closure_level": "CLOSED_FOR_LANE",
       "what_is_closed": [
-        "an explicit elastic outgoing-state Bose factor is integrated into the declared 2-to-2 collision kernel",
-        "the factor increases the collision width relative to the classical comparator at the same state point",
-        "the quantum-enhanced comparator remains positive and bounded under quadrature and cutoff refinement",
-        "the lane keeps ladder resummation, condensed scattering, microscopic SK/KMS matching, SI mapping, alpha_Phi_K, and TTG validation outside scope"
+        "the existing action-matched elastic 2-to-2 kernel is exercised with explicit final-state Bose enhancement",
+        "the quantum collision width remains finite and positive on the strict normal branch",
+        "the Bose-enhanced response is nontrivial and convergent on the declared refinement sequence",
+        "the dilute comparator remains unchanged and is retained as a separate baseline"
       ],
       "equation_or_mapping": {
         "normal_dispersion": "E_s(k)=sqrt(k^2+m_eff^2)-s*sqrt(Z)*abs(mu), s in {-1,+1}",
         "constant_amplitude_cross_section": "sigma_22(s)=lambda^2/(16*pi*s)",
-        "collision_kernel": "Gamma_s(k)=sum_r integral[d^3p/(2*pi)^3] f_r(E_p) v_rel sigma_22(s) B_34(s;T,mu)",
+        "quantum_collision_kernel": "Gamma_s(k)=sum_r integral f_r(E_p) v_rel sigma_22(s) (1+f_3)(1+f_4) d^3p/(2*pi)^3",
         "static_weight": "D_s=(1/3) integral[d^3k/(2*pi)^3] k^2[-partial_E f_s]",
-        "kinetic_response": "K_kin=sum_s D_s/Gamma_s(k_ref), k_ref=max(T,m_eff,sqrt(Z)*abs(mu))",
-        "outgoing_state_factor": "B_34=(1+f_3)(1+f_4), averaged over elastic final-state center-of-mass angle",
-        "quantum_kernel_mapping": "Gamma_s^Q(k)=sum_r integral[d^3p] f_r v_rel sigma_22 B_34"
+        "kinetic_response": "K_quantum=sum_s D_s/Gamma_s(k_ref)",
+        "detailed_balance_boundary": "f_1 f_2 (1+f_3)(1+f_4)=f_3 f_4 (1+f_1)(1+f_2) on energy/charge-conserving elastic channels"
       },
       "units": {
         "unit_lane": "natural",
@@ -9803,39 +10846,46 @@
         "lambda": "dimensionless quartic coupling",
         "sigma_22": "inverse energy squared",
         "collision_width": "energy/inverse time",
-        "D": "formal static response weight",
-        "K_kin": "formal kinetic comparator coefficient",
+        "K_quantum": "formal kinetic comparator coefficient",
         "Phi": "effective response variable; not temperature",
         "C": "collective system-behaviour coordinate; not mass or charge",
         "R_gen": "derived history trace; no backreaction",
         "R_obs": "separate observer record"
       },
-      "derivation_class": "action-derived dilute-gas 2-to-2 comparator with explicit elastic final-state Bose enhancement; not full quantum transport",
-      "observable": "finite-temperature normal collision width and quantum-enhanced kinetic comparator",
+      "derivation_class": "action-derived elastic 2-to-2 quantum kinetic comparator with explicit final-state Bose factors; not full microscopic transport",
+      "observable": "finite-temperature normal collision width and quantum kinetic response comparator",
       "data_role": "ACTION_DERIVED_QUANTUM_KINETIC_COMPARATOR_NOT_PHYSICAL_KUBO",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_quantum_collision_enhancement_audit.json",
-          "sha256": "5a74176a196435b7dcc4c8d670e2eb4b6d667b9eb611d2852cf9cd422c887760",
+          "path": "docs/core/uet_o2_kinetic_collision_kubo.py",
+          "sha256": "411314a28d67bbce457f96ad6f147b183a7580fb983e88af7ba9ce0ce7c149be"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+          "sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_QUANTUM_COLLISION_ENHANCEMENT_LANE",
-            "major_result_id": "T13_UET_O2_QUANTUM_COLLISION_ENHANCEMENT_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
-      "verification_status": "PASS_ACTION_DERIVED_QUANTUM_COLLISION_ENHANCEMENT_LANE",
+      "verification_status": "PASS_ACTION_DERIVED_QUANTUM_KINETIC_COLLISION_LANE",
       "open_blockers": [
         "ladder_vertex_resummation_missing",
         "condensed_collision_kernel_missing",
+        "continuum_limit_missing",
         "microscopic_SK_KMS_and_retarded_Kubo_match_missing",
-        "full_heat_flux_entropy_production_and_dissipative_balance_missing",
+        "physical_Kubo_coefficient_missing",
         "dimensional_Phi_to_thermal_observable_map_missing",
         "alpha_Phi_K_independent_calibration_missing",
         "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
       ],
-      "dependency_unlocked": "explicit quantum-enhanced dilute-gas comparator only; no physical Kubo, SI, alpha, Core, Gravity, or external-validation unlock",
-      "claim_boundary": "This closes only a named action-derived quantum-enhanced dilute-gas collision comparator. It does not emit a physical Kubo coefficient, SI observable, alpha_Phi_K, TTG prediction, or Full Topic 13 closure."
+      "dependency_unlocked": "action-derived quantum kinetic collision lane only; no ladder, continuum, physical Kubo, SI, alpha, Core, Gravity, or external-validation unlock",
+      "claim_boundary": "This closes only a named action-derived quantum kinetic comparator with explicit final-state Bose factors. It does not emit a physical Kubo coefficient, SI observable, alpha_Phi_K, TTG prediction, or Full Topic 13 closure."
     },
     {
       "major_result_id": "T13_UET_O2_REGULARIZED_CONTINUUM_HEAT_CURRENT_LANE",
@@ -9976,12 +11026,27 @@
       "data_role": "ACTION_DERIVED_RENORMALIZED_ONE_LOOP_VERTEX_SCHEME_NOT_PHYSICAL",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_renormalized_vertex_scheme_audit.json",
-          "sha256": "5180cb5aad45570ecb331a23d84f3e99a49f3c33b01ddc58e6c2e4fad2d1628c",
+          "path": "docs/core/uet_o2_renormalized_vertex_scheme.py",
+          "sha256": "410f77c9418d0d946f0b27dbae31586a9436070771d0de13c7debc384dce71d6"
+        },
+        {
+          "path": "docs/core/uet_o2_one_loop_vertex_uv_boundary.py",
+          "sha256": "fb47090eed90d4e37bab34516cc0ad0d60300981de91f9322d1513746e11e8e1"
+        },
+        {
+          "path": "docs/core/uet_o2_renormalized_normal_branch.py",
+          "sha256": "cf536a7e04fe75f284c5c5078f5719276b2ca0459e84bbbb1dd027290c92537c"
+        },
+        {
+          "path": "docs/core/uet_o2_equilibrium_kms.py",
+          "sha256": "d1a3777c87864271a75d242b2af57096ffe167ddef99a11d891f7aea95c1904d"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_RENORMALIZED_O2_ONE_LOOP_VERTEX_SCHEME",
-            "major_result_id": "T13_UET_O2_RENORMALIZED_VERTEX_SCHEME",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -10143,12 +11208,23 @@
       "data_role": "ACTION_DERIVED_INTERNAL_NATURAL_THERMODYNAMIC_LANE",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_thermodynamic_normal_component_audit.json",
-          "sha256": "3975ac974a3e265c14094b4b40a0fee86ddcee900fb1c2d534b97d3f38384719",
+          "path": "docs/core/uet_o2_finite_temperature_normal_component.py",
+          "sha256": "0a4010c0e390b7e910473698c4e5cc7dc6738df626e0de9c364b4258167a9335"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_two_fluid_response.py",
+          "sha256": "a68531bc34596aa115797e2353e1871913d4e9a158aeeb7f1ea5125c86aa236b"
+        },
+        {
+          "path": "docs/core/artifacts/t13_uet_o2_finite_temperature_two_fluid_response_audit.json",
+          "sha256": "3ec0f5a942d548b2f3722d4263eb0e311df3c56cb707f596efc11436c6fcfdcf"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_THERMODYNAMIC_NORMAL_COMPONENT_LANE",
-            "major_result_id": "T13_UET_O2_THERMODYNAMIC_NORMAL_COMPONENT_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -10199,12 +11275,31 @@
       "data_role": "ACTION_DERIVED_TREE_LEVEL_VERTEX_FORMAL_SK_MATCH_NOT_FULL_MICROSCOPIC",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_tree_level_bs_sk_match_audit.json",
-          "sha256": "0861c4dc1b453685ea479054919d2f42b59a2c088284c81d40a0a25244302506",
+          "path": "docs/core/uet_o2_tree_level_bs_sk_match.py",
+          "sha256": "ef3522ec6e925eee3fd937035829c801325f9e1ec39d5a809d42246f6c5e90c5"
+        },
+        {
+          "path": "docs/core/uet_o2_continuum_collision_operator.py",
+          "sha256": "010c1322063b806a1d87d3708cf5509e696f7370170dc2b859f61fd8f884e9e2"
+        },
+        {
+          "path": "docs/core/uet_o2_action_derived_transition_kernel.py",
+          "sha256": "d1cae79dbbcd289c33b04c209ad4d0140ab3c22ce16bb568c267f041d2b3ece7"
+        },
+        {
+          "path": "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+          "sha256": "eb69cc8ab6c35d782fbc687bc6fa503a22ae76c78e28d65c466eaf0e7e4719a9"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+          "sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_TREE_LEVEL_BS_SK_MATCH_INTERFACE_LANE",
-            "major_result_id": "T13_UET_O2_TREE_LEVEL_BS_SK_MATCH_INTERFACE_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -10302,12 +11397,27 @@
       "data_role": "ACTION_DERIVED_INTERNAL_NO_SOURCE_ROWS_NO_HOLDOUT",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_two_loop_sunset_cut_audit.json",
-          "sha256": "23f01a422f3b217e3065bf531a29182496083cfabb1bc145ce8cb25fe8f5d73c",
+          "path": "docs/core/uet_o2_two_loop_sunset_cut.py",
+          "sha256": "9c4e4c569a6df5a92017dde3be656060197f34a7eb7ece390269cc006b5e7add"
+        },
+        {
+          "path": "docs/core/uet_o2_action_derived_transition_kernel.py",
+          "sha256": "2f818500b353e8cf81caddf892bcf2db43a4341fe831b6f67e62423e3c2feb8f"
+        },
+        {
+          "path": "docs/core/artifacts/t13_uet_o2_action_derived_transition_kernel_audit.json",
+          "sha256": "44b950f76b99138395150372501c9a2714d2d132adc26daa6894c1d933f6a9d1"
+        },
+        {
+          "path": "docs/core/artifacts/t13_uet_o2_one_loop_retarded_self_energy_no_go_audit.json",
+          "sha256": "f240e594ea1c167cd7aeed88028b636b9ee25cfe1a2925087b4e05ae2bf7189f"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_ACTION_DERIVED_TWO_LOOP_SUNSET_CUT_LANE",
-            "major_result_id": "T13_UET_O2_TWO_LOOP_SUNSET_CUT_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -10351,12 +11461,19 @@
       "data_role": "INTERNAL_STRUCTURAL_NO_GO_NO_SOURCE_ROWS",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_ward_coefficient_state_dependence_audit.json",
-          "sha256": "fec9203a71d10330c63e415b2e8e264a39c392f14002a86ccbe583d79d0a4a8e",
+          "path": "docs/core/uet_o2_finite_temperature_stationarity_scheme.py",
+          "sha256": "cc7d69c74fbb1725ca5710b7a8b50d50e6739f977d92a044646fefb7fefa879f"
+        },
+        {
+          "path": "docs/core/uet_o2_ward_constrained_condensed.py",
+          "sha256": "361da29567144649f248d85ea961d035bd427d8645d0af991d464f97fe50afa3"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_WARD_COEFFICIENT_STATE_DEPENDENCE_NO_GO",
-            "major_result_id": "T13_UET_O2_WARD_CONSTRAINED_COEFFICIENT_STATE_DEPENDENCE_NO_GO",
-            "closure_level": "CLOSED_AS_NO_GO"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -10404,12 +11521,19 @@
       "data_role": "INTERNAL_WARD_CONSTRAINED_FORMAL_WITNESS_NO_SOURCE_ROWS",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_o2_ward_constrained_condensed_audit.json",
-          "sha256": "9e1c3c8994059529da650a2c80285a1ab13a88e2850531fa586883abd5524911",
+          "path": "docs/core/uet_o2_ward_constrained_condensed.py",
+          "sha256": "361da29567144649f248d85ea961d035bd427d8645d0af991d464f97fe50afa3"
+        },
+        {
+          "path": "docs/core/uet_o2_finite_temperature_stationarity_scheme.py",
+          "sha256": "cc7d69c74fbb1725ca5710b7a8b50d50e6739f977d92a044646fefb7fefa879f"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_FORMAL_WARD_CONSTRAINED_CONDENSED_STATIONARITY",
-            "major_result_id": "T13_UET_O2_WARD_CONSTRAINED_CONDENSED_LANE",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -10483,12 +11607,23 @@
       "data_role": "EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_DING_TTG_GRADE",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_zenodo_hitrace_isotropic_graphite_cp_source_audit.json",
-          "sha256": "067238d11f9f426117cd29e757a8391f9089e97acfbeb0ab2b33c50d0eeb026a",
+          "path": "docs/core/artifacts/t13_zenodo_hitrace_isotropic_graphite_cp_source_audit.json"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/zenodo_hitrace_isotropic_graphite_cp_source_package.json",
+          "sha256": "5d3cbbbf1eeab24c7f66f1cc01b16e80005aa80dfc9918edf62d82e6473dc8e3"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/zenodo_6091274_isotropic_graphite_specific_heat.xlsx",
+          "sha256": "c38e74d22c8b409b347b5d65384f0c172d4a43162ffffe7c2eba231f48d57020",
+          "md5": "6b9e617fb0266da9a5724d04eccb18b8"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_ZENODO_HITRACE_ISOTROPIC_GRAPHITE_CP_COMPARATOR",
-            "major_result_id": "T13_ZENODO_HITRACE_ISOTROPIC_GRAPHITE_CP_COMPARATOR",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -10531,12 +11666,19 @@
       "data_role": "EXTERNAL_SOURCE_COMPARATOR_NOT_CALIBRATION",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_zenodo_ig210_alpha_l_source_audit.json",
-          "sha256": "7290318976fc4a66c4ec7ffd0f6fee2a2ae9c9773270527e0d676c1e10faba76",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/zenodo_5799133_ig210_alpha_l_source_package.json",
+          "sha256": "0a3144954606496cedb3119334178e0bbffa3899417743a6cf79449ede5d6d79"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/zenodo_5799133_hitrace_thermal_diffusivity.xlsx",
+          "sha256": "fcd9517fab77025737de2d0da5d92b8b9b90ebd40b9f99c3330c21853c2d79d3"
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+          "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50",
           "summary": {
-            "status": "PASS_SCOPED_IG210_ALPHA_L_SOURCE",
-            "major_result_id": "T13_ZENODO_HITRACE_IG210_ALPHA_L_COMPARATOR",
-            "closure_level": "CLOSED_FOR_LANE"
+            "projection": "Topic 13 full-gate source_package lane",
+            "full_core_unlock": false
           }
         }
       ],
@@ -10552,5 +11694,105 @@
     }
   ],
   "next_major_result": "T13_FULL_THERMODYNAMIC_BRIDGE",
-  "claim_boundary": "This register reports closed or partial research results; it never promotes the global UET claim."
+  "claim_boundary": "This register reports closed or partial research results; it never promotes the global UET claim.",
+  "topic13_lane_sync": {
+    "full_gate": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+      "sha256": "f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50"
+    },
+    "major_result_ids": [
+      "T13_GRAPHITE_ELASTIC_BULK_MODULUS_SOURCE",
+      "T13_GRAPHITE_ISOTHERMAL_KT_SOURCE",
+      "T13_MP48_FORCE_CONSTANT_C_SRC_MESH_CONVERGENCE",
+      "T13_MP48_TEMPERATURE_VOLUME_UNCERTAINTY_BOUNDARY",
+      "T13_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY",
+      "T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY_BOUNDARY",
+      "T13_HUANG_2023_SUPPLEMENTARY_PAYLOAD_BOUNDARY",
+      "T13_HUBERMAN_2019_PUBLIC_PBTE_BOUNDARY",
+      "T13_NIST_AXM5Q1_DENSITY_SOURCE_BOUNDARY",
+      "T13_TPG_ANISOTROPIC_ALPHA_V_COMPARATOR",
+      "T13_NATURAL_GRAPHITE_NELSON_RILEY_ALPHA_V_COMPARATOR",
+      "T13_BIPM_SPECIFIC_HEAT_CP_COMPARATOR",
+      "T13_IAEA_GRAPHITE_TABLE_CV_COMPARATOR",
+      "T13_IAEA_GR280_SAME_STATE_CP_COMPARATOR",
+      "T13_ZENODO_HITRACE_ISOTROPIC_GRAPHITE_CP_COMPARATOR",
+      "T13_ZENODO_HITRACE_IG210_ALPHA_L_COMPARATOR",
+      "T13_FAROOQUI_IG210_THERMOPHYSICAL_SOURCE",
+      "T13_IAEA_CV_UNCERTAINTY_BOUNDARY",
+      "T13_DING_MATERIAL_REGIME_BOUNDARY",
+      "T13_PHONIX_MP47_GRAPHITE_HARMONIC_COMPARATOR",
+      "T13_OXFORD_TGS_NUMERIC_ROWS_COMPARATOR",
+      "T13_DESORBO_1955_CEYLON_GRAPHITE_CP_COMPARATOR",
+      "T13_UET_O2_KINETIC_COLLISION_KERNEL_LANE",
+      "T13_UET_O2_QUANTUM_COLLISION_ENHANCEMENT_LANE",
+      "T13_UET_O2_CHARGE_CONSERVING_LADDER_RESPONSE_LANE",
+      "T13_UET_O2_MOMENTUM_LADDER_SK_KMS_INTERFACE_LANE",
+      "T13_UET_O2_ENERGY_MOMENTUM_CONSERVING_BS_INTERFACE_LANE",
+      "T13_UET_O2_EXACT_KINEMATIC_2TO2_TRANSITION_KERNEL_LANE",
+      "T13_UET_O2_FINITE_T_QUASIPARTICLE_EOS_LANE",
+      "T13_UET_O2_EQUILIBRIUM_KMS_LANE",
+      "T13_GRAPHITE_GREEN_KUBO_SOURCE_BOUNDARY",
+      "T13_UET_O2_OPEN_SYSTEM_SK_KMS_ENTROPY_LANE",
+      "T13_INDEPENDENT_C_SRC_ACCEPTANCE_CONTRACT",
+      "T13_DING_C_SRC_FIXED_VOLUME_THERMODYNAMIC_IDENTITY",
+      "T13_CALORINE_ZENODO_NEP_BTE_NUMERIC_REPRODUCTION",
+      "T13_CALORINE_FULL_LBTE_NUMERICAL_STABILITY_BOUNDARY",
+      "T13_UET_O2_CONSERVATIVE_CONTINUUM_COLLOCATION_LANE",
+      "T13_UET_O2_TREE_LEVEL_BS_SK_MATCH_INTERFACE_LANE",
+      "T13_UET_O2_ONE_LOOP_VERTEX_UV_BOUNDARY",
+      "T13_UET_O2_RENORMALIZED_VERTEX_SCHEME",
+      "T13_UET_O2_FINITE_DENSITY_CHARGED_VERTEX_SCHEME",
+      "T13_UET_O2_INTERACTING_SK_KMS_ACTION_INTERFACE",
+      "T13_UET_O2_NONLOCAL_SK_KMS_MEMORY_KERNEL_LANE",
+      "T13_UET_O2_ONE_LOOP_RETARDED_SELF_ENERGY_NO_GO",
+      "T13_UET_O2_TWO_LOOP_SUNSET_CUT_LANE",
+      "T13_UET_O2_FINITE_CHANNEL_ENTROPY_BALANCE_LANE",
+      "T13_JUN_FINAL_SOURCE_BOUNDARY",
+      "T13_HONG_FINAL_SOURCE_BOUNDARY",
+      "T13_PETERSON_SOURCE_IDENTITY_NO_GO",
+      "T13_CALORINE_ISOTOPE_MASS_SENSITIVITY",
+      "T13_CALORINE_STATE_UNCERTAINTY_DECOMPOSITION",
+      "T13_CALORINE_C_SRC_EQUILIBRIUM_CROSSCHECK",
+      "T13_FIGSHARE_DFT_FORCE_DATA_BOUNDARY",
+      "T13_HUANG_2023_NIMS_MDR_PAYLOAD_BOUNDARY",
+      "T13_CALORINE_PUBLIC_MODEL_VARIANT_BOUNDARY",
+      "T13_CALORINE_NEP1_BACKEND_COMPATIBILITY_BOUNDARY",
+      "T13_CALORINE_LEGACY_NEP2_BACKEND_PROBE",
+      "T13_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION",
+      "T13_DING_2017_ACS_SUPPLEMENTARY_PAYLOAD_BOUNDARY",
+      "T13_PHI_SI_ANCHOR_PUBLIC_SOURCE_BOUNDARY",
+      "T13_COVARIANT_ACTION_SYMBOLIC_SI_CONVERSION_CONTRACT",
+      "T13_UET_O2_FINITE_T_SELF_ENERGY_HARTREE_LANE",
+      "T13_UET_O2_HARTREE_EQUILIBRIUM_THERMODYNAMIC_LANE",
+      "T13_UET_O2_FINITE_T_SCHEME_IDENTIFIABILITY_NO_GO",
+      "T13_UET_O2_FORMAL_TWO_SECTOR_THERMODYNAMIC_LANE",
+      "T13_UET_O2_FORMAL_TRANSVERSE_RESPONSE_LANE",
+      "T13_UET_O2_THERMODYNAMIC_NORMAL_COMPONENT_LANE",
+      "T13_UET_O2_CONDENSED_RELATIVE_FLOW_COLLISION_KERNEL_LANE",
+      "T13_UET_O2_CONTINUUM_RELATIVE_FLOW_KUBO_LANE",
+      "T13_UET_O2_CONDENSED_LOOP_RENORMALIZED_CONTACT_VERTEX_LANE",
+      "T13_UET_O2_CONDENSED_RELATIVE_FLOW_KUBO_ADMISSION_LANE",
+      "T13_UET_O2_CONDENSED_SK_KMS_KUBO_MATCH_LANE",
+      "T13_UET_O2_FINITE_T_DECLARED_RETARDED_1PI_RESPONSE_GRID_LANE",
+      "T13_UET_O2_FINITE_T_SIGNED_CUT_KINEMATIC_TAXONOMY_LANE",
+      "T13_UET_O2_FINITE_T_SUNSET_CUT_MULTIPLICITY_LANE",
+      "T13_UET_O2_FINITE_T_ALL_ONSHELL_CUT_SPECTRAL_RESPONSE_LANE",
+      "T13_UET_O2_FINITE_T_DECLARED_CHANNEL_RETARDED_ADVANCED_KELDYSH_1PI_LANE",
+      "T13_UET_O2_FINITE_T_OFFSHELL_THRESHOLD_CROSSING_1PI_LANE",
+      "T13_UET_O2_FINITE_T_ALL_22_PERMUTATION_IDENTITY_LANE",
+      "T13_UET_O2_COLLISIONLESS_KUBO_NO_GO",
+      "T13_UET_O2_HARTREE_NORMAL_STABILITY_BOUNDARY_LANE",
+      "T13_UET_O2_RENORMALIZED_CONDENSATE_STATIONARITY_SCHEME_DEPENDENCE",
+      "T13_UET_O2_RENORMALIZED_HARTREE_NORMAL_LANE",
+      "T13_UET_O2_CONDENSED_GOLDSTONE_WARD_NO_GO",
+      "T13_UET_O2_WARD_CONSTRAINED_CONDENSED_LANE",
+      "T13_UET_O2_FINITE_T_OFFSHELL_1PI_FORMAL_LANE",
+      "T13_UET_O2_WARD_CONSTRAINED_COEFFICIENT_STATE_DEPENDENCE_NO_GO",
+      "T13_UET_O2_AUXILIARY_FIELD_WARD_PRESERVING_CONDENSED_LANE",
+      "T13_UET_O2_CONDENSED_RETARDED_DISSIPATION_NO_GO"
+    ],
+    "added_count": 0,
+    "refreshed_count": 89,
+    "full_core_unlock": false
+  }
 }

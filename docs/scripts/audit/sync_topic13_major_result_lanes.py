@@ -49,6 +49,7 @@ LANES = (
     ("T13_GRAPHITE_GREEN_KUBO_SOURCE_BOUNDARY", "graphite_green_kubo_source_boundary"),
     ("T13_UET_O2_OPEN_SYSTEM_SK_KMS_ENTROPY_LANE", "uet_o2_open_system_sk_kms_entropy_lane"),
     ("T13_INDEPENDENT_C_SRC_ACCEPTANCE_CONTRACT", "independent_csrc_acceptance_contract"),
+    ("T13_DING_C_SRC_FIXED_VOLUME_THERMODYNAMIC_IDENTITY", "ding_c_src_fixed_volume_identity"),
     ("T13_CALORINE_ZENODO_NEP_BTE_NUMERIC_REPRODUCTION", "calorine_zenodo_nep_bte_numeric_reproduction"),
     ("T13_CALORINE_FULL_LBTE_NUMERICAL_STABILITY_BOUNDARY", "calorine_full_lbte_numerical_stability_boundary"),
     ("T13_UET_O2_CONSERVATIVE_CONTINUUM_COLLOCATION_LANE", "uet_o2_conservative_continuum_collocation_lane"),
