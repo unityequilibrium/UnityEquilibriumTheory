@@ -108,6 +108,7 @@
       "public Calorine C-CX is identified as legacy NEP1; the current Calorine 3.5 backend rejects the model, so a legacy-compatible backend is required before a same-workflow C_src rerun",
       "legacy NEP2 C-CX PBTE candidate rows and q-mesh preflight are closed for lane; source-grade uncertainty, Ding material mapping, alpha_Phi_K, and full bridge remain open",
       "pinned Calorine 1.0 legacy NEP2 engine accepts the hash-locked C-CX model; same-workflow fc2/fc3, PBTE C_src, convergence, and uncertainty remain open",
+      "Calorine baseline versus C-CX legacy model/state C_src spread is closed for lane on the common 10x10x5 mesh; backend and primitive-volume differences make it a comparator diagnostic, not source-grade uncertainty or Ding acceptance",
       "Calorine natural-isotope mass sensitivity is closed for lane; composition bounds do not close defect, morphology, isotope-scattering, or Ding-state uncertainty",
       "Calorine numerical/state uncertainty decomposition is closed for lane; its mesh and mass-only envelopes are not source-grade uncertainty",
       "Phonix mp-47 graphite harmonic comparator is closed for lane; arbitrary-unit DOS and uncertainty prevent volumetric c_v or Ding C_src promotion",
@@ -168,7 +169,7 @@
     ],
     "dependency_unlocked": "Gravity/GR remains blocked until this full bridge and Core curved 3+1 gates pass",
     "closure_summary": {
-      "closed_lane_count": 178,
+      "closed_lane_count": 179,
       "closed_as_no_go_count": 16,
       "closed_lane_result_ids": [
         "T13_AIST_GRAPHITE_SOURCE_ROUTE_BOUNDARY",
@@ -186,6 +187,7 @@
         "T13_CALORINE_ISOTOPE_MASS_SENSITIVITY",
         "T13_CALORINE_LEGACY_NEP2_BACKEND_PROBE",
         "T13_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION",
+        "T13_CALORINE_MODEL_FORM_STATE_SPREAD_COMPARISON",
         "T13_CALORINE_NEP1_BACKEND_COMPATIBILITY_BOUNDARY",
         "T13_CALORINE_PUBLIC_MODEL_VARIANT_BOUNDARY",
         "T13_CALORINE_STATE_UNCERTAINTY_DECOMPOSITION",
@@ -3645,6 +3647,240 @@
           "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
           "calorine_legacy_pbte_source_grade_uncertainty_missing",
           "calorine_route_material_regime_mapping_to_ding_missing",
+          "alpha_Phi_K_independent_calibration_missing"
+        ]
+      },
+      "calorine_model_form_state_spread_comparison": {
+        "status": "PASS_SCOPED_CALORINE_MODEL_FORM_STATE_SPREAD",
+        "claim_promotion": false,
+        "comparison": {
+          "mesh": [
+            10,
+            10,
+            5
+          ],
+          "temperatures_K": [
+            200.0,
+            300.0
+          ],
+          "rows": [
+            {
+              "temperature_K": 200.0,
+              "baseline_C_src_J_m^-3_K^-1": 951144.1727355289,
+              "variant_C_src_J_m^-3_K^-1": 993760.2797173061,
+              "absolute_spread_J_m^-3_K^-1": 42616.10698177724,
+              "relative_spread_to_baseline": 0.044805097064529766
+            },
+            {
+              "temperature_K": 300.0,
+              "baseline_C_src_J_m^-3_K^-1": 1669092.82459056,
+              "variant_C_src_J_m^-3_K^-1": 1689859.0705455516,
+              "absolute_spread_J_m^-3_K^-1": 20766.24595499155,
+              "relative_spread_to_baseline": 0.01244163634822746
+            }
+          ],
+          "baseline": {
+            "audit": {
+              "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
+              "sha256": "afc8fb0d9daea81c30a09b24f0aabd824cde1a85e662ea52880fadd42863de89",
+              "role": "archived baseline audit",
+              "summary": {
+                "status": "PASS_SCOPED_CALORINE_NUMERIC_C_SRC_REPRODUCTION",
+                "mesh": [
+                  10,
+                  10,
+                  5
+                ]
+              }
+            },
+            "source_package": {
+              "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_nep_bte_reproduction_source_package.json",
+              "sha256": "fdca0fe6b387ecf7a731831f808b19504b9c58ebefe2d150261de37b4334f914",
+              "role": "baseline source and reproduction manifest",
+              "summary": {
+                "sha256_recorded_by_audit": "fdca0fe6b387ecf7a731831f808b19504b9c58ebefe2d150261de37b4334f914"
+              }
+            },
+            "model_header": "nep4 1 C",
+            "calorine_backend": "3.5",
+            "primitive_volume_A3": 34.40911529816803,
+            "material_state": {
+              "material": "public Calorine graphite primitive C4 state",
+              "potential": "public nep-C.txt model",
+              "morphology": "periodic primitive crystal; not a TTG specimen morphology contract",
+              "defect_state": "not declared as Ding natural-graphite TTG state",
+              "isotope_state": "not declared as Ding natural-graphite TTG state",
+              "equivalent_to_ding": false
+            },
+            "source_inputs": [
+              {
+                "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/calorine_zenodo_21198312/graphite-prim.xyz",
+                "size_bytes": 324,
+                "sha256": "87fdd172bd5b77e1aa5bd9b4d85c3f21eb5df6521089cc4b769e12d481a1aed0",
+                "locator": "https://zenodo.org/api/records/21198312/files/graphite-prim.xyz/content"
+              },
+              {
+                "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/calorine_zenodo_21198312/nep-C.txt",
+                "size_bytes": 116974,
+                "sha256": "add6b3f64fdd3cecebb3aae511816fe4183e4c4a22b058f108f3f0ea1c531623",
+                "locator": "https://zenodo.org/api/records/21198312/files/nep-C.txt/content"
+              }
+            ]
+          },
+          "variant": {
+            "audit": {
+              "path": "docs/core/artifacts/t13_calorine_legacy_nep2_pbte_reproduction_audit.json",
+              "sha256": "0c3724c591adc411a4ef062a2bf62b9e5ce6564831bbc662e845ef48a8d56398",
+              "role": "archived C-CX legacy audit",
+              "summary": {
+                "status": "PASS_SCOPED_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION",
+                "mesh": [
+                  10,
+                  10,
+                  5
+                ]
+              }
+            },
+            "source_package": {
+              "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/calorine_legacy_nep2_pbte_reproduction_source_package.json",
+              "sha256": "b7da7ab6931bba4d5c9cb5a8112873c4f1f7da46e0b2945d90f0c9cd0555109b",
+              "role": "C-CX source, legacy backend, and reproduction manifest",
+              "summary": {
+                "sha256_recorded_by_audit": "b7da7ab6931bba4d5c9cb5a8112873c4f1f7da46e0b2945d90f0c9cd0555109b"
+              }
+            },
+            "model_header": "nep 1 C",
+            "calorine_backend": {
+              "tag": "1.0",
+              "commit": "eedb2ac9f49cb60a64512e987b98993d3a44e186",
+              "source_locator": "https://gitlab.com/materials-modeling/calorine/-/tree/1.0"
+            },
+            "primitive_volume_A3": 34.327497634699505,
+            "material_state": {
+              "material": "public C-CX graphite primitive C4 state",
+              "primitive_atoms": 4,
+              "supercell_dim": [
+                4,
+                4,
+                2
+              ],
+              "supercell_atoms": 128,
+              "displacement_count": 1220,
+              "force_array_shape": [
+                1220,
+                128,
+                3
+              ],
+              "relaxed": false,
+              "material_state_equivalent_to_ding": false
+            },
+            "source_inputs": [
+              {
+                "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/calorine_zenodo_7811021_nep_C_CX/graphite-prim.xyz",
+                "size_bytes": 324,
+                "sha256": "87fdd172bd5b77e1aa5bd9b4d85c3f21eb5df6521089cc4b769e12d481a1aed0",
+                "locator": "https://zenodo.org/api/records/7811021/files/graphite-prim.xyz/content"
+              },
+              {
+                "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/calorine_zenodo_7811021_nep_C_CX/nep-C.txt",
+                "size_bytes": 44098,
+                "sha256": "cf75256947a8953b8041ccc26a34ac307724f69bf2edbcc97b46d87bc5e72408",
+                "locator": "https://zenodo.org/api/records/7811021/files/nep_C_CX.txt/content"
+              }
+            ]
+          },
+          "primitive_volume_difference_A3": -0.08161766346852772,
+          "primitive_volume_relative_difference": -0.002371977970409286,
+          "spread_summary": {
+            "max_absolute_relative_spread": 0.044805097064529766,
+            "min_absolute_relative_spread": 0.01244163634822746
+          }
+        },
+        "uncertainty": {
+          "status": "OPEN_SOURCE_GRADE_UNCERTAINTY",
+          "model_form_state_spread_is_reported": true,
+          "source_grade_statistical_or_systematic_uncertainty_present": false,
+          "ding_material_state_mapping_closed": false,
+          "density_uncertainty_closed": false,
+          "c_v_source_uncertainty_closed": false
+        },
+        "checks": {
+          "baseline_status_valid": true,
+          "variant_status_valid": true,
+          "baseline_source_package_hash_matches": true,
+          "variant_source_package_hash_matches": true,
+          "source_input_hashes_match": true,
+          "common_mesh_is_10x10x5": true,
+          "common_temperature_set_is_200_300_K": true,
+          "baseline_latest_mesh_preflight_pass": true,
+          "variant_latest_mesh_preflight_pass": true,
+          "c_src_units_are_j_m^-3_K^-1": true,
+          "volume_difference_recorded": true,
+          "model_headers_recorded": true,
+          "baseline_no_fit_target_alpha_or_holdout": true,
+          "variant_no_fit_target_alpha_or_holdout": true,
+          "xie_2026_holdout_accessed": false,
+          "comparison_is_not_source_grade_uncertainty": true,
+          "comparison_is_not_pure_model_form_error": true,
+          "numeric_alpha_Phi_K_emitted": false,
+          "ding_csrc_accepted": false,
+          "claim_promotion": false
+        },
+        "numeric_candidate_rows_compared": true,
+        "numeric_C_src_emitted": false,
+        "numeric_alpha_Phi_K_emitted": false,
+        "holdout_policy": {
+          "xie_2026_accessed": false,
+          "xie_2026_source_data_consumed": false,
+          "calibration_path_may_read_holdout": false
+        },
+        "acceptance_for_full_topic13": false,
+        "controlling_blocker": "calorine_model_form_state_spread_is_comparator_only_until_material_mapping_and_source_grade_uncertainty_close",
+        "next_controller": "Obtain an authorized Ding numeric C_src package or accepted same-regime independent reproduction with source-grade uncertainty; keep this comparison outside alpha_Phi_K calibration and holdout paths.",
+        "claim_boundary": "This is not a Ding numeric source, not source-grade uncertainty, not a pure model-form error because state and backend differ, not an alpha_Phi_K calibration, not a Phi prediction, and not Full Topic 13 closure.",
+        "report": {
+          "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+          "WHAT_IS_ACTUALLY_CLOSED": [
+            "The archived baseline and C-CX legacy candidate rows are compared on the common 10x10x5 q mesh at 200 K and 300 K.",
+            "The comparison derives absolute and baseline-relative C_src spread from source-locked artifact rows rather than hand-entered values.",
+            "The C-CX result is confirmed as a legacy-backend model/state comparison; backend, model-header, and primitive-volume differences are explicit."
+          ],
+          "WHAT_REMAINS_OPEN": [
+            "calorine_route_source_grade_uncertainty_missing",
+            "calorine_route_material_regime_mapping_to_ding_missing",
+            "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+            "alpha_Phi_K_independent_calibration_missing"
+          ],
+          "DEPENDENCY_UNLOCKED": "Calorine comparator spread lane only; no Ding C_src acceptance, alpha calibration, full Topic 13, Core, Gravity, or Galaxy unlock",
+          "STATUS": "PASS_SCOPED_CALORINE_MODEL_FORM_STATE_SPREAD",
+          "WHAT_CHANGED": "Added a hash-backed comparison of archived baseline and C-CX legacy Calorine candidate C_src rows on the common 10x10x5 mesh; no new model run, fit, calibration, synthetic data, threshold change, or holdout access was used.",
+          "EQUATION_OR_MAPPING": {
+            "candidate_observable": "C_src(T) = [sum_q w_q sum_mu c_qmu(T)] / [sum_q w_q V_primitive]",
+            "comparison": "relative_spread(T) = [C_src_C-CX(T) - C_src_baseline(T)] / C_src_baseline(T)",
+            "temperature_response_contract": "Delta_Tq = Delta_u_ph / C_src(T); candidate source response only",
+            "ttg_measurement": "y_TTG = Delta_Tq(t) / Delta_Tq(0)"
+          },
+          "VERIFICATION": "Source package hashes and local input hashes match; both latest mesh preflights pass; model headers, backend identity, primitive-volume difference, and common-temperature rows are recorded.",
+          "CONTROLLING_BLOCKER": "Ding-compatible source-grade C_src and independent alpha_Phi_K remain missing; the comparison is not uncertainty closure.",
+          "NEXT_ACTION": "Source-lock an authorized Ding numeric C_src package or accepted same-regime independent reproduction; do not use this comparator for alpha_Phi_K or holdout prediction.",
+          "CLAIM_BOUNDARY": "This is not a Ding numeric source, not source-grade uncertainty, not a pure model-form error because state and backend differ, not an alpha_Phi_K calibration, not a Phi prediction, and not Full Topic 13 closure."
+        },
+        "major_result_id": "T13_CALORINE_MODEL_FORM_STATE_SPREAD_COMPARISON",
+        "closure_level": "CLOSED_FOR_LANE",
+        "data_role": "EXTERNAL_COMPARATOR_COMPARISON_NOT_UNCERTAINTY",
+        "audit": {
+          "path": "docs/core/artifacts/t13_calorine_model_form_state_spread_comparison_audit.json",
+          "sha256": "d635640f9fa3213bf3ad959089eaca5703f18b7b4a7773dbebe875ff967de99b",
+          "summary": {
+            "status": "PASS_SCOPED_CALORINE_MODEL_FORM_STATE_SPREAD",
+            "major_result_id": "T13_CALORINE_MODEL_FORM_STATE_SPREAD_COMPARISON",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        },
+        "open_blockers": [
+          "calorine_route_source_grade_uncertainty_missing",
+          "calorine_route_material_regime_mapping_to_ding_missing",
+          "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
           "alpha_Phi_K_independent_calibration_missing"
         ]
       },
@@ -76566,6 +76802,17 @@
         "accepted_for_full_topic13": false,
         "latest_pair_max_relative_change": 0.0023908135252728663,
         "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+      }
+    },
+    {
+      "path": "docs/core/artifacts/t13_calorine_model_form_state_spread_comparison_audit.json",
+      "sha256": "d635640f9fa3213bf3ad959089eaca5703f18b7b4a7773dbebe875ff967de99b",
+      "summary": {
+        "status": "PASS_SCOPED_CALORINE_MODEL_FORM_STATE_SPREAD",
+        "closure_level": "CLOSED_FOR_LANE",
+        "max_absolute_relative_spread": 0.044805097064529766,
+        "accepted_for_full_topic13": false,
+        "controlling_blocker": "calorine_model_form_state_spread_is_comparator_only_until_material_mapping_and_source_grade_uncertainty_close"
       }
     },
     {

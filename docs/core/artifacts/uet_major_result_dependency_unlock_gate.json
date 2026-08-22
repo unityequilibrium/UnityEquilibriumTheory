@@ -6,7 +6,7 @@
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "eb044c3083382b61855baa8ee26ea847a85005c148f5e0b85612a74bfb7b3c0b"
+    "sha256": "89ff1aa2d2d2e28588bd4bae7e62e595c1fe89e0b8709b3f38fc6cc6a9a64e9e"
   },
   "decisions": {
     "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY": {
@@ -75,7 +75,7 @@
   ],
   "claim_boundary": "Dependency decisions only; no downstream result is promoted by a checkpoint or comparator pass.",
   "topic13_partial_evidence": {
-    "register_sha256": "eb044c3083382b61855baa8ee26ea847a85005c148f5e0b85612a74bfb7b3c0b",
+    "register_sha256": "89ff1aa2d2d2e28588bd4bae7e62e595c1fe89e0b8709b3f38fc6cc6a9a64e9e",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",
@@ -1346,6 +1346,21 @@
           "summary": {
             "status": "PASS_SCOPED_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION",
             "major_result_id": "T13_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      },
+      "calorine_model_form_state_spread_comparison": {
+        "major_result_id": "T13_CALORINE_MODEL_FORM_STATE_SPREAD_COMPARISON",
+        "closure_level": "CLOSED_FOR_LANE",
+        "status": "PASS_SCOPED_CALORINE_MODEL_FORM_STATE_SPREAD",
+        "full_core_unlock": false,
+        "audit": {
+          "path": "docs/core/artifacts/t13_calorine_model_form_state_spread_comparison_audit.json",
+          "sha256": "d635640f9fa3213bf3ad959089eaca5703f18b7b4a7773dbebe875ff967de99b",
+          "summary": {
+            "status": "PASS_SCOPED_CALORINE_MODEL_FORM_STATE_SPREAD",
+            "major_result_id": "T13_CALORINE_MODEL_FORM_STATE_SPREAD_COMPARISON",
             "closure_level": "CLOSED_FOR_LANE"
           }
         }

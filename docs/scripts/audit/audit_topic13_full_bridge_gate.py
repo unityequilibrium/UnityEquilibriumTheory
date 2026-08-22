@@ -64,6 +64,7 @@ LANE_KEY_BY_ID["T13_CALORINE_PUBLIC_MODEL_VARIANT_BOUNDARY"] = "calorine_public_
 LANE_KEY_BY_ID["T13_CALORINE_NEP1_BACKEND_COMPATIBILITY_BOUNDARY"] = "calorine_nep1_backend_compatibility"
 LANE_KEY_BY_ID["T13_CALORINE_LEGACY_NEP2_BACKEND_PROBE"] = "calorine_legacy_nep2_backend_probe"
 LANE_KEY_BY_ID["T13_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION"] = "calorine_legacy_nep2_pbte_reproduction"
+LANE_KEY_BY_ID["T13_CALORINE_MODEL_FORM_STATE_SPREAD_COMPARISON"] = "calorine_model_form_state_spread_comparison"
 LANE_KEY_BY_ID["T13_UET_O2_FORMAL_TRANSVERSE_RESPONSE_LANE"] = "uet_o2_formal_transverse_response_lane"
 LANE_KEY_BY_ID["T13_UET_O2_KINETIC_COLLISION_KERNEL_LANE"] = "uet_o2_kinetic_collision_kernel_lane"
 LANE_KEY_BY_ID["T13_UET_O2_QUANTUM_COLLISION_ENHANCEMENT_LANE"] = "uet_o2_quantum_collision_enhancement_lane"
@@ -314,6 +315,9 @@ def main() -> int:
     )
     calorine_reproduction_path, calorine_reproduction = load(
         "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json"
+    )
+    calorine_model_form_state_spread_path, calorine_model_form_state_spread = load(
+        "docs/core/artifacts/t13_calorine_model_form_state_spread_comparison_audit.json"
     )
     calorine_full_lbte_path, calorine_full_lbte = load(
         "docs/core/artifacts/t13_calorine_full_lbte_stability_boundary_audit.json"
@@ -753,6 +757,13 @@ def main() -> int:
                 "latest_pair_max_relative_change": calorine_reproduction.get("reproduction", {}).get("convergence", {}).get("latest_pair", {}).get("max_relative_change"),
                 "controlling_blocker": calorine_reproduction.get("controlling_blocker"),
             }),
+            evidence(rel(calorine_model_form_state_spread_path), calorine_model_form_state_spread, {
+                "status": calorine_model_form_state_spread.get("status"),
+                "closure_level": calorine_model_form_state_spread.get("major_result", {}).get("closure_level"),
+                "max_absolute_relative_spread": calorine_model_form_state_spread.get("comparison", {}).get("spread_summary", {}).get("max_absolute_relative_spread"),
+                "accepted_for_full_topic13": calorine_model_form_state_spread.get("acceptance_for_full_topic13"),
+                "controlling_blocker": calorine_model_form_state_spread.get("controlling_blocker"),
+            }),
             evidence(rel(calorine_full_lbte_path), calorine_full_lbte, {
                 "status": calorine_full_lbte.get("status"),
                 "closure_level": calorine_full_lbte.get("major_result", {}).get("closure_level"),
@@ -880,7 +891,7 @@ def main() -> int:
         artifact["verification_status"]["eos_transport_kms_entropy"].pop(
             "calorine_zenodo_nep_bte_numeric_reproduction", None
         )
-    for lane_key in ("calorine_full_lbte_numerical_stability_boundary", "calorine_isotope_mass_sensitivity", "calorine_state_uncertainty_decomposition", "calorine_csrc_equilibrium_crosscheck", "figshare_dft_force_data_boundary", "huang_2023_nims_mdr_payload_boundary", "calorine_public_model_variant_boundary", "calorine_nep1_backend_compatibility", "calorine_legacy_nep2_backend_probe", "calorine_legacy_nep2_pbte_reproduction", "qh15_graphite_cv_comparator_boundary"):
+    for lane_key in ("calorine_full_lbte_numerical_stability_boundary", "calorine_isotope_mass_sensitivity", "calorine_state_uncertainty_decomposition", "calorine_csrc_equilibrium_crosscheck", "figshare_dft_force_data_boundary", "huang_2023_nims_mdr_payload_boundary", "calorine_public_model_variant_boundary", "calorine_nep1_backend_compatibility", "calorine_legacy_nep2_backend_probe", "calorine_legacy_nep2_pbte_reproduction", "calorine_model_form_state_spread_comparison", "qh15_graphite_cv_comparator_boundary"):
         lane = discovered_lane_integrations.get(lane_key)
         if lane:
             artifact["verification_status"]["source_package"][lane_key] = lane
@@ -1557,6 +1568,8 @@ def main() -> int:
     if discovered_lane_integrations.get("calorine_legacy_nep2_backend_probe", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("legacy NEP2 C-CX PBTE candidate rows and q-mesh preflight are closed for lane; source-grade uncertainty, Ding material mapping, alpha_Phi_K, and full bridge remain open")
         lane_closures.append("pinned Calorine 1.0 legacy NEP2 engine accepts the hash-locked C-CX model; same-workflow fc2/fc3, PBTE C_src, convergence, and uncertainty remain open")
+    if discovered_lane_integrations.get("calorine_model_form_state_spread_comparison", {}).get("closure_level") == "CLOSED_FOR_LANE":
+        lane_closures.append("Calorine baseline versus C-CX legacy model/state C_src spread is closed for lane on the common 10x10x5 mesh; backend and primitive-volume differences make it a comparator diagnostic, not source-grade uncertainty or Ding acceptance")
     if discovered_lane_integrations.get("calorine_isotope_mass_sensitivity", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("Calorine natural-isotope mass sensitivity is closed for lane; composition bounds do not close defect, morphology, isotope-scattering, or Ding-state uncertainty")
     if discovered_lane_integrations.get("calorine_state_uncertainty_decomposition", {}).get("closure_level") == "CLOSED_FOR_LANE":

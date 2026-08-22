@@ -74,6 +74,7 @@ LANES = (
     ("T13_CALORINE_NEP1_BACKEND_COMPATIBILITY_BOUNDARY", "calorine_nep1_backend_compatibility"),
     ("T13_CALORINE_LEGACY_NEP2_BACKEND_PROBE", "calorine_legacy_nep2_backend_probe"),
     ("T13_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION", "calorine_legacy_nep2_pbte_reproduction"),
+    ("T13_CALORINE_MODEL_FORM_STATE_SPREAD_COMPARISON", "calorine_model_form_state_spread_comparison"),
     ("T13_DING_2017_ACS_SUPPLEMENTARY_PAYLOAD_BOUNDARY", "ding_2017_acs_supplementary_payload_boundary"),
     ("T13_PHI_SI_ANCHOR_PUBLIC_SOURCE_BOUNDARY", "phi_si_anchor_public_source_boundary"),
     ("T13_COVARIANT_ACTION_SYMBOLIC_SI_CONVERSION_CONTRACT", "covariant_action_symbolic_si_conversion_contract"),
