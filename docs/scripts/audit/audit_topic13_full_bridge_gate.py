@@ -24,6 +24,7 @@ LANE_KEY_BY_ID["T13_DING_2017_ACS_SUPPLEMENTARY_PAYLOAD_BOUNDARY"] = "ding_2017_
 LANE_KEY_BY_ID["T13_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY"] = "ding_experimental_heating_input_boundary"
 LANE_KEY_BY_ID["T13_DING_C_SRC_FIXED_VOLUME_THERMODYNAMIC_IDENTITY"] = "ding_c_src_fixed_volume_identity"
 LANE_KEY_BY_ID["T13_MP48_DING_C_SRC_MODE_SUM_RESPONSE_MAPPING"] = "mp48_ding_csrc_response_mapping"
+LANE_KEY_BY_ID["T13_C_SRC_THERMODYNAMIC_TRANSPORT_REGIME_DECOMPOSITION"] = "csrc_thermodynamic_transport_regime_decomposition"
 LANE_KEY_BY_ID["T13_HUBERMAN_2019_PUBLIC_PBTE_BOUNDARY"] = "huberman_2019_public_pbte_boundary"
 LANE_KEY_BY_ID["T13_IAEA_GR280_SAME_STATE_CP_COMPARATOR"] = "iaea_gr280_same_state_cp_comparator"
 LANE_KEY_BY_ID["T13_ZENODO_HITRACE_ISOTROPIC_GRAPHITE_CP_COMPARATOR"] = "zenodo_hitrace_isotropic_graphite_cp_comparator"
@@ -964,7 +965,7 @@ def main() -> int:
         artifact["verification_status"]["eos_transport_kms_entropy"].pop(
             "calorine_zenodo_nep_bte_numeric_reproduction", None
         )
-    for lane_key in ("calorine_full_lbte_numerical_stability_boundary", "calorine_isotope_mass_sensitivity", "calorine_state_uncertainty_decomposition", "calorine_csrc_equilibrium_crosscheck", "figshare_dft_force_data_boundary", "huang_2023_nims_mdr_payload_boundary", "huang_2022_utokyo_graphite_ribbons_boundary", "calorine_public_model_variant_boundary", "calorine_nep1_backend_compatibility", "calorine_legacy_nep2_backend_probe", "calorine_legacy_nep2_pbte_reproduction", "calorine_model_form_state_spread_comparison", "qh15_graphite_cv_comparator_boundary", "day2012_preferred_thermodynamic_assessment_boundary"):
+    for lane_key in ("calorine_full_lbte_numerical_stability_boundary", "calorine_isotope_mass_sensitivity", "calorine_state_uncertainty_decomposition", "calorine_csrc_equilibrium_crosscheck", "csrc_thermodynamic_transport_regime_decomposition", "figshare_dft_force_data_boundary", "huang_2023_nims_mdr_payload_boundary", "huang_2022_utokyo_graphite_ribbons_boundary", "calorine_public_model_variant_boundary", "calorine_nep1_backend_compatibility", "calorine_legacy_nep2_backend_probe", "calorine_legacy_nep2_pbte_reproduction", "calorine_model_form_state_spread_comparison", "qh15_graphite_cv_comparator_boundary", "day2012_preferred_thermodynamic_assessment_boundary"):
         lane = discovered_lane_integrations.get(lane_key)
         if lane:
             artifact["verification_status"]["source_package"][lane_key] = lane
@@ -1511,6 +1512,8 @@ def main() -> int:
         lane_closures.append("MP48 force-constant C_src mesh convergence is closed for the independent harmonic lane; the source remains unaccepted for Ding closure")
     if discovered_lane_integrations.get("mp48_ding_csrc_response_mapping", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("MP48 mode-sum to Ding C_src response mapping is closed for lane; material equivalence, source-grade uncertainty, route-wide convergence, and alpha remain open")
+    if discovered_lane_integrations.get("csrc_thermodynamic_transport_regime_decomposition", {}).get("closure_level") == "CLOSED_FOR_LANE":
+        lane_closures.append("C_src thermodynamic and RTA transport sensitivity are separated for lane; no Ding source, transport, or alpha promotion")
     if discovered_lane_integrations.get("huang_2023_supplementary_payload_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("Huang 2023 graphite supplementary boundary is closed for lane without numeric PBTE, Ding C_src, or alpha promotion")
     if discovered_lane_integrations.get("huberman_2019_public_pbte_boundary", {}).get("closure_level") == "CLOSED_FOR_LANE":
@@ -3173,6 +3176,27 @@ def main() -> int:
                     "dos_units": phonix.get("major_result", {}).get("units", {}).get("DOS"),
                     "numeric_c_v_emitted": phonix.get("numeric_c_v_emitted"),
                     "controlling_blocker": phonix.get("controlling_blocker"),
+                },
+            )
+        )
+    csrc_decomposition_path = ROOT / "docs/core/artifacts/t13_csrc_thermodynamic_transport_regime_decomposition_audit.json"
+    csrc_decomposition_rel = rel(csrc_decomposition_path)
+    if csrc_decomposition_path.is_file() and csrc_decomposition_rel not in {
+        item.get("path") for item in artifact.get("evidence_artifacts", [])
+        if isinstance(item, dict)
+    }:
+        csrc_decomposition = json.loads(csrc_decomposition_path.read_text(encoding="utf-8-sig"))
+        artifact["evidence_artifacts"].append(
+            evidence(
+                csrc_decomposition_rel,
+                csrc_decomposition,
+                {
+                    "status": csrc_decomposition.get("status"),
+                    "closure_level": csrc_decomposition.get("major_result", {}).get("closure_level"),
+                    "data_role": csrc_decomposition.get("major_result", {}).get("data_role"),
+                    "max_C_src_relative_change": csrc_decomposition.get("latest_mesh_pair", {}).get("max_C_src_relative_change"),
+                    "max_kappa_relative_change": csrc_decomposition.get("latest_mesh_pair", {}).get("max_kappa_relative_change"),
+                    "controlling_blocker": csrc_decomposition.get("controlling_blocker"),
                 },
             )
         )

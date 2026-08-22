@@ -6,7 +6,7 @@
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "f3a657c4b3854786ab83bdaa6b08bba027040afa067864aebb24b3b572255cbd"
+    "sha256": "8d0f41c888adca635c8c8b6474f6fd928875ae2b4847d7b9ee563efd5aafa0c2"
   },
   "decisions": {
     "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY": {
@@ -75,7 +75,7 @@
   ],
   "claim_boundary": "Dependency decisions only; no downstream result is promoted by a checkpoint or comparator pass.",
   "topic13_partial_evidence": {
-    "register_sha256": "f3a657c4b3854786ab83bdaa6b08bba027040afa067864aebb24b3b572255cbd",
+    "register_sha256": "8d0f41c888adca635c8c8b6474f6fd928875ae2b4847d7b9ee563efd5aafa0c2",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",
@@ -1011,6 +1011,21 @@
           "summary": {
             "status": "PASS_SCOPED_C_SRC_FIXED_VOLUME_IDENTITY",
             "major_result_id": "T13_DING_C_SRC_FIXED_VOLUME_THERMODYNAMIC_IDENTITY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      },
+      "csrc_thermodynamic_transport_regime_decomposition": {
+        "major_result_id": "T13_C_SRC_THERMODYNAMIC_TRANSPORT_REGIME_DECOMPOSITION",
+        "closure_level": "CLOSED_FOR_LANE",
+        "status": "PASS_SCOPED_C_SRC_THERMODYNAMIC_TRANSPORT_DECOMPOSITION",
+        "full_core_unlock": false,
+        "audit": {
+          "path": "docs/core/artifacts/t13_csrc_thermodynamic_transport_regime_decomposition_audit.json",
+          "sha256": "6674092bad0f26dc7b6500ec82d0c1ac63601d9fd2fbbab20c055eca7ea7df69",
+          "summary": {
+            "status": "PASS_SCOPED_C_SRC_THERMODYNAMIC_TRANSPORT_DECOMPOSITION",
+            "major_result_id": "T13_C_SRC_THERMODYNAMIC_TRANSPORT_REGIME_DECOMPOSITION",
             "closure_level": "CLOSED_FOR_LANE"
           }
         }
@@ -2157,7 +2172,7 @@
     },
     "closure_matrix": {
       "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-      "sha256": "cbedb52b1cfbf7c56b3f7295a1afcb8614e8197aa44af6a1ec910c9ba6393cf0",
+      "sha256": "c6c859ff96b5bf3bc68f404c92319264bcc3ec7d233750f441bf1b6bf6b90ca2",
       "full_core_unlock": false,
       "status": "BLOCKED_OPEN_T13_FULL_BRIDGE"
     }
