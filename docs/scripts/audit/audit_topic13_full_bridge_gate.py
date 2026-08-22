@@ -1638,15 +1638,26 @@ def main() -> int:
     # Preserve unresolved source-dependency blockers in the major-result
     # projection. A scoped no-go closes the circular route. The independently
     # measured AXM-5Q1 density lane removes only the density-availability
-    # blocker; its precision and c_v uncertainty remain explicit.
+    # blocker; the source-locked IG-210 table also removes the density-
+    # uncertainty blocker, while Cp-to-Cv and material matching remain open.
     density_availability_closed = (
         nist_density_lane.get("closure_level") == "CLOSED_FOR_LANE"
         and str(nist_density_lane.get("status", "")).startswith("PASS_")
     )
+    farooqui_density_uncertainty_closed = (
+        farooqui_source.get("major_result", {}).get("closure_level")
+        == "CLOSED_FOR_LANE"
+        and str(farooqui_source.get("status", "")).startswith("PASS_")
+        and farooqui_source.get("row_summary", {}).get("density_uncertainty_locked")
+        is True
+    )
+    density_uncertainty_closed = farooqui_density_uncertainty_closed
     for blocker in source_independence_lane.get("open_blockers", []):
         if blocker not in source_level_blockers:
             continue
         if blocker == "independent_same_grade_density_or_direct_volumetric_heat_capacity_missing" and density_availability_closed:
+            continue
+        if blocker == "density_uncertainty_not_source_locked" and density_uncertainty_closed:
             continue
         blockers.append(blocker)
     same_state_cp_lane = discovered_lane_integrations.get(
@@ -1665,12 +1676,48 @@ def main() -> int:
                     and same_state_cp_availability_closed
                 ):
                     continue
+                if blocker == "density_uncertainty_not_source_locked" and density_uncertainty_closed:
+                    continue
                 blockers.append(blocker)
     # Keep the major-result projection readable: only the full-gate
     # controllers and explicit source prerequisites belong here. Lane-specific
     # diagnostics remain nested in verification_status and evidence artifacts.
     open_blockers = list(dict.fromkeys(blockers))
     artifact["major_result"]["what_remains_open"] = open_blockers
+    artifact["major_result"]["resolved_blockers"] = [
+        {
+            "blocker": "density_uncertainty_not_source_locked",
+            "status": (
+                "CLOSED_FOR_LANE"
+                if density_uncertainty_closed
+                else "OPEN"
+            ),
+            "resolution_source": {
+                "major_result_id": "T13_FAROOQUI_IG210_THERMOPHYSICAL_SOURCE",
+                "artifact": rel(farooqui_source_path),
+                "artifact_sha256": sha256(farooqui_source_path),
+                "row_count": farooqui_source.get("row_summary", {}).get("count"),
+                "coverage_factor": 2,
+                "source_field": "row_summary.density_uncertainty_locked",
+            },
+            "what_is_closed": (
+                "IG-210 density uncertainty is source-locked for the archived "
+                "500/700/1000 C rows and is no longer a full-gate blocker."
+                if density_uncertainty_closed
+                else "No source-locked density uncertainty record is accepted."
+            ),
+            "what_remains_open": [
+                "same_state_IG210_isothermal_K_T_missing",
+                "C_p_to_C_v_correction_not_closed",
+                "material_regime_mapping_to_TTG_not_closed",
+            ],
+            "claim_boundary": (
+                "This resolves only the density-uncertainty gate projection. "
+                "It does not emit C_v, Ding C_src, alpha_Phi_K, or a UET "
+                "temperature prediction."
+            ),
+        }
+    ]
     closed_lane_records = [
         record
         for _, record in sorted(discovered_lane_integrations.items())

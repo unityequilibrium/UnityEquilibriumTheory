@@ -64,3 +64,21 @@ def test_topic13_full_gate_reports_machine_readable_closure_summary() -> None:
     register = load(REGISTER_PATH)
     entry = next(item for item in register["entries"] if item["major_result_id"] == "T13_FULL_THERMODYNAMIC_BRIDGE")
     assert entry["closure_summary"]["open_blocker_count"] == summary["open_blocker_count"]
+    resolved = next(
+        item
+        for item in gate["major_result"]["resolved_blockers"]
+        if item["blocker"] == "density_uncertainty_not_source_locked"
+    )
+    assert resolved["status"] == "CLOSED_FOR_LANE"
+    assert resolved["resolution_source"]["row_count"] == 3
+    assert resolved["resolution_source"]["coverage_factor"] == 2
+    assert resolved["what_remains_open"] == [
+        "same_state_IG210_isothermal_K_T_missing",
+        "C_p_to_C_v_correction_not_closed",
+        "material_regime_mapping_to_TTG_not_closed",
+    ]
+    assert next(
+        item
+        for item in entry["resolved_blockers"]
+        if item["blocker"] == "density_uncertainty_not_source_locked"
+    )["status"] == "CLOSED_FOR_LANE"

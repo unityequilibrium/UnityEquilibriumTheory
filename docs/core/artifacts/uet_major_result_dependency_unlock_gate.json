@@ -6,7 +6,7 @@
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "9dbbd9ce39e9d8a4e9d73bae868fae51e1c0f3d567d9560aec722f4a3631ee0f"
+    "sha256": "7093fccfbb6e027df11429e51515dc3ddbabde3ecd27cbdce70a51fddf76bd69"
   },
   "decisions": {
     "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY": {

@@ -995,3 +995,28 @@ source-surface scope, hashes, and next acquisition controller.
 | Baseline candidate | `docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json`; `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_nep_bte_reproduction_source_package.json` | Calorine 3.5, public graphite primitive C4, `10x10x5` mesh, archived baseline rows | `C_src` in `J m^-3 K^-1`; temperatures 200 and 300 K | Candidate comparator input only | Hash-locked; no Ding material match, source-grade uncertainty, fit, alpha, or holdout |
 | C-CX legacy candidate | `docs/core/artifacts/t13_calorine_legacy_nep2_pbte_reproduction_audit.json`; `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/calorine_legacy_nep2_pbte_reproduction_source_package.json` | Calorine 1.0 legacy backend commit `eedb2ac9f49cb60a64512e987b98993d3a44e186`, public C-CX graphite primitive C4, `10x10x5` mesh | `C_src` in `J m^-3 K^-1`; temperatures 200 and 300 K | Model/state comparison input only | Hash-locked; NEP1 header preserved; backend/state/volume differ from baseline |
 | Comparison artifact | `docs/core/artifacts/t13_calorine_model_form_state_spread_comparison_audit.json` | Derived from the two archived audit rows; no new model run | Relative spread dimensionless; absolute spread in `J m^-3 K^-1` | `EXTERNAL_COMPARATOR_COMPARISON_NOT_UNCERTAINTY` | `PASS_SCOPED_CALORINE_MODEL_FORM_STATE_SPREAD`; not Ding acceptance, source uncertainty, alpha, prediction, or Full Topic 13 closure |
+## T13-157 - IG-210 density-uncertainty blocker closure
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for the resolved density-uncertainty projection; Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+
+WHAT_IS_ACTUALLY_CLOSED: Three source-locked IG-210 density rows at 500/700/1000 C carry source-expanded relative bounds of 0.003 at k=2; the full gate no longer reports `density_uncertainty_not_source_locked`.
+
+WHAT_REMAINS_OPEN: `K_T`, `C_v`, Ding `C_src`, same-regime material mapping, independent `alpha_Phi_K`, dimensional map, physical Kubo, and full EOS/transport/KMS/entropy.
+
+DEPENDENCY_UNLOCKED: Density uncertainty and volumetric `C_p` comparator lanes only.
+
+STATUS: `PASS_SCOPED_SOURCE_LOCKED_DENSITY_UNCERTAINTY`.
+
+WHAT_CHANGED: Added and synchronized the resolved-blocker record in the full gate and closure register. No synthetic source, fitting, calibration, threshold adjustment, or holdout access.
+
+EQUATION_OR_MAPPING: `C_p^V = rho*C_p`; `C_v^V = C_p^V - T*alpha_V^2*K_T` remains open.
+
+VERIFICATION: Source audit and volumetric uncertainty audit pass; full gate is 180 closed lanes / 16 scoped no-go lanes / 9 open blockers; `holdout_consumed=false`; `claim_promotion=false`.
+
+CONTROLLING_BLOCKER: `same_state_IG210_isothermal_K_T_missing` for the IG-210 correction route.
+
+NEXT_ACTION: Obtain a permitted same-state IG-210 `K_T` with locator, units, uncertainty, material state, and hash, or retain the correction boundary and prioritize Ding-compatible `C_src` and independent base-`Phi`/SI evidence.
+
+CLAIM_BOUNDARY: Comparator/source-gate closure only; not `C_v`, Ding `C_src`, numeric alpha, temperature prediction, physical transport, external validation, or Full Topic 13 closure.
+
+EVIDENCE_PATHS: `docs/core/artifacts/t13_farooqui_ig210_thermophysical_source_audit.json`; `docs/core/artifacts/t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.

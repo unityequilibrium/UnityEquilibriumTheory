@@ -3579,3 +3579,31 @@ NEXT_ACTION: Source-lock a permitted same-state IG-210 isothermal `K_T` record o
 CLAIM_BOUNDARY: Source-traceable IG-210 volumetric `C_p` comparator only; not `C_v`, not Ding `C_src`, not an alpha calibration, not a UET transport coefficient, not external validation, and not Full Topic 13 closure.
 EVIDENCE_PATHS: `docs/scripts/audit/audit_topic13_farooqui_ig210_volumetric_cp_uncertainty.py`; `docs/core/artifacts/t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json`; `docs/core/test/test_topic13_farooqui_ig210_volumetric_cp_uncertainty.py`; `docs/scripts/audit/audit_topic13_full_bridge_gate.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/artifacts/uet_major_result_closure_register.json`; `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`.
 EVIDENCE_HASHES: audit `8714a13530c99cba457b86d529928747f26b8536befe782843387f3f2a362add`; verifier `fe925bee5375db3b5be94dc6e5e1b0d6ae5a7fc4727fc977fac36a2afb05a8ca`; regression `d997c78bba7d21a5784461ab397887303365f8ed6a40192b6b8a57da355bc0ea`; full gate `bc433bbbe0f7eb22b3ccf0fa52f570f747675dfaea2ad1d1ade934ad6566a6ae`; register `9dbbd9ce39e9d8a4e9d73bae868fae51e1c0f3d567d9560aec722f4a3631ee0f`; dependency `323e1d29f4d3c44e8c4b8e963d9999a12cbacf2de0c98fe0b1362dd837491692`.
+
+### 2026-08-22 - IG-210 density-uncertainty blocker closure (T13-157)
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for the resolved blocker projection `density_uncertainty_not_source_locked`; Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+
+WHAT_IS_ACTUALLY_CLOSED: The source-locked IG-210 thermophysical audit exposes three density rows at 500/700/1000 C with source-expanded relative density bounds of 0.003 at coverage factor k=2. The full gate now consumes that field and removes only the density-uncertainty blocker.
+
+WHAT_REMAINS_OPEN: Same-state IG-210 `K_T`, the `C_p`-to-`C_v` correction, Ding material/response mapping, Ding-compatible `C_src`, independent `alpha_Phi_K`, dimensional `Phi` mapping, physical Kubo evidence, and EOS/transport/KMS/entropy closure remain open.
+
+DEPENDENCY_UNLOCKED: Density uncertainty projection and IG-210 volumetric `C_p` comparator only. No `C_v`, Ding `C_src`, alpha calibration, Core, Gravity, constitutive transport, Galaxy, or external-validation dependency is unlocked.
+
+STATUS: `PASS_SCOPED_SOURCE_LOCKED_DENSITY_UNCERTAINTY`; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE` / `PARTIAL` with 9 open blockers.
+
+WHAT_CHANGED: Added the machine-readable `major_result.resolved_blockers` record, propagated it into the major-result register, updated the full-gate regression, and synchronized the current report, update log, and data manifest. No source rows were invented; no fit, threshold change, calibration, or holdout access occurred.
+
+EQUATION_OR_MAPPING: `C_p^V = rho*C_p` with conservative source-expanded interval propagation; `C_v^V = C_p^V - T*alpha_V^2*K_T` remains uninstantiated for IG-210.
+
+VERIFICATION: IG-210 volumetric audit passed 14/14; focused Topic 13/closure regressions passed 11 tests; full gate reports 180 closed lanes, 16 scoped no-go lanes, 9 open blockers, `holdout_consumed=false`, and `claim_promotion=false`.
+
+CONTROLLING_BLOCKER: `same_state_IG210_isothermal_K_T_missing` controls this source route; globally Ding-compatible `C_src`, independent alpha/dimensional mapping, and EOS/transport/KMS/entropy remain controlling.
+
+NEXT_ACTION: Source-lock a permitted same-state IG-210 `K_T` only if it carries material/state, units, uncertainty, locator, and hash; otherwise retain this correction boundary and prioritize Ding-compatible `C_src` plus an independent paired base-`Phi`/SI record.
+
+CLAIM_BOUNDARY: This closes only the density-uncertainty gate projection and the source-traceable IG-210 volumetric `C_p` comparator. It is not `C_v`, Ding `C_src`, numeric `alpha_Phi_K`, a temperature prediction, physical transport, external validation, Full Topic 13 closure, or global UET closure.
+
+EVIDENCE_PATHS: `docs/core/artifacts/t13_farooqui_ig210_thermophysical_source_audit.json`; `docs/core/artifacts/t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json`; `docs/scripts/audit/audit_topic13_full_bridge_gate.py`; `docs/scripts/audit/audit_major_result_closure.py`; `docs/core/test/test_topic13_gatech_volumetric_cp_independence.py`; `docs/core/test/test_major_result_closure.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/artifacts/uet_major_result_closure_register.json`; `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`.
+
+EVIDENCE_HASHES: source audit `1bf871b436166ba44243d6600fdfc06e9bbbf65a8fc23e2f99a728ff6402fb7e`; volumetric audit `8714a13530c99cba457b86d529928747f26b8536befe782843387f3f2a362add`; full gate `f2f67384475fc8680476dee1b893dc1b32c9a90d8a1e348580789426536899d4`; register `7093fccfbb6e027df11429e51515dc3ddbabde3ecd27cbdce70a51fddf76bd69`; dependency `41303c1d38bc86c8c1f5008aafb515e05990f32acd74af1605ed371616f1ccd1`.

@@ -79,6 +79,7 @@ def main() -> int:
             "evidence_artifacts": t13_evidence,
             "verification_status": t13["status"],
             "open_blockers": t13["major_result"]["what_remains_open"],
+            "resolved_blockers": t13["major_result"].get("resolved_blockers", []),
             "dependency_unlocked": t13["major_result"]["dependency_unlocked"],
             "claim_boundary": t13["claim_boundary"],
             "closure_summary": t13["major_result"].get("closure_summary", {}),
