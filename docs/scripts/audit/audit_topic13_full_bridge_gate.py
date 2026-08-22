@@ -26,6 +26,7 @@ LANE_KEY_BY_ID["T13_HUBERMAN_2019_PUBLIC_PBTE_BOUNDARY"] = "huberman_2019_public
 LANE_KEY_BY_ID["T13_IAEA_GR280_SAME_STATE_CP_COMPARATOR"] = "iaea_gr280_same_state_cp_comparator"
 LANE_KEY_BY_ID["T13_ZENODO_HITRACE_ISOTROPIC_GRAPHITE_CP_COMPARATOR"] = "zenodo_hitrace_isotropic_graphite_cp_comparator"
 LANE_KEY_BY_ID["T13_FAROOQUI_IG210_THERMOPHYSICAL_SOURCE"] = "farooqui_ig210_thermophysical_source"
+LANE_KEY_BY_ID["T13_FAROOQUI_IG210_VOLUMETRIC_CP_UNCERTAINTY"] = "farooqui_ig210_volumetric_cp_uncertainty"
 LANE_KEY_BY_ID["T13_ZENODO_HITRACE_IG210_ALPHA_L_COMPARATOR"] = "zenodo_hitrace_ig210_alpha_l_comparator"
 LANE_KEY_BY_ID["T13_PHI_SI_ANCHOR_PUBLIC_SOURCE_BOUNDARY"] = "phi_si_anchor_public_source_boundary"
 LANE_KEY_BY_ID["T13_UET_O2_MICROSCOPIC_FINITE_CUTOFF_KUBO_MATCH"] = "uet_o2_microscopic_finite_cutoff_kubo_match"
@@ -1208,6 +1209,16 @@ def main() -> int:
         artifact["verification_status"]["eos_transport_kms_entropy"].pop(
             "farooqui_ig210_thermophysical_source", None
         )
+    farooqui_volumetric_cp_lane = discovered_lane_integrations.get(
+        "farooqui_ig210_volumetric_cp_uncertainty"
+    )
+    if farooqui_volumetric_cp_lane:
+        artifact["verification_status"]["source_package"][
+            "farooqui_ig210_volumetric_cp_uncertainty"
+        ] = farooqui_volumetric_cp_lane
+        artifact["verification_status"]["eos_transport_kms_entropy"].pop(
+            "farooqui_ig210_volumetric_cp_uncertainty", None
+        )
     cv_uncertainty_lane = discovered_lane_integrations.get(
         "iaea_cv_uncertainty_boundary"
     )
@@ -1416,6 +1427,8 @@ def main() -> int:
         lane_closures.append("Zenodo Hi-Trace IG210 mean alpha_l source comparator is closed for lane; alpha_V is conditional, same-state K_T/Cp-Cv, Ding material-match, and alpha_Phi_K promotion remain open")
     if discovered_lane_integrations.get("farooqui_ig210_thermophysical_source", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("NPL/Hi-Trace published IG210 thermophysical source lane is closed: density, C_p, diffusivity, alpha_l, and source uncertainty are archived; K_T, C_v, Ding material-match, and alpha_Phi_K remain open")
+    if discovered_lane_integrations.get("farooqui_ig210_volumetric_cp_uncertainty", {}).get("closure_level") == "CLOSED_FOR_LANE":
+        lane_closures.append("IG-210 volumetric C_p conversion and conservative source-expanded uncertainty are closed for lane; C_v, same-state K_T, Ding mapping, and alpha_Phi_K remain open")
     if discovered_lane_integrations.get("desorbo_1955_ceylon_graphite_cp_comparator", {}).get("closure_level") == "CLOSED_FOR_LANE":
         lane_closures.append("DeSorbo 1955 Ceylon natural-graphite numeric Cp comparator is closed for lane without standard uncertainty, volumetric c_v conversion, or Ding material-match promotion")
     if discovered_lane_integrations.get("uet_o2_finite_t_quasiparticle_eos_lane", {}).get("closure_level") == "CLOSED_FOR_LANE":

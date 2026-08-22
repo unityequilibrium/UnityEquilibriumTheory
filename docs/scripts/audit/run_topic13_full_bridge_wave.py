@@ -20,6 +20,7 @@ COMMANDS = [
     "docs/scripts/audit/repair_topic13_full_gate_merge_subresult_blockers.py",
     "docs/scripts/audit/repair_topic13_full_gate_compatibility_projection.py",
     "docs/scripts/audit/audit_conserved_c_finite_cone_no_go.py",
+    "docs/scripts/audit/audit_topic13_farooqui_ig210_volumetric_cp_uncertainty.py",
     "docs/scripts/audit/audit_topic13_full_bridge_gate.py",
     "docs/scripts/audit/sync_topic13_no_go_gate.py",
     "docs/scripts/audit/audit_major_result_closure.py",

@@ -1,0 +1,165 @@
+{
+  "schema_version": "t13-farooqui-ig210-volumetric-cp-uncertainty-v1",
+  "artifact": "t13_farooqui_ig210_volumetric_cp_uncertainty_audit",
+  "generated_at": "2026-08-22",
+  "status": "PASS_SCOPED_FAROOQUI_IG210_VOLUMETRIC_CP_UNCERTAINTY",
+  "claim_promotion": false,
+  "full_core_unlock": false,
+  "major_result": {
+    "major_result_id": "T13_FAROOQUI_IG210_VOLUMETRIC_CP_UNCERTAINTY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "source-locked IG-210 density and specific-heat rows are converted to volumetric C_p",
+      "conservative expanded intervals are propagated without assuming covariance",
+      "C_p is kept distinct from C_v, Ding C_src, Phi, and alpha_Phi_K"
+    ],
+    "what_remains_open": [
+      "same_state_IG210_isothermal_K_T_missing",
+      "C_p_to_C_v_correction_not_closed",
+      "Ding_TTG_material_regime_mapping_not_closed",
+      "independent_alpha_Phi_K_calibration_missing"
+    ],
+    "dependency_unlocked": "IG-210 volumetric C_p comparator and uncertainty contract only; no C_v, Ding C_src, alpha_Phi_K, transport, Core, or Gravity unlock",
+    "equation_or_mapping": {
+      "volumetric_heat_capacity": "C_p^V = rho * C_p",
+      "lower_bound": "C_p^V,low = rho*(1-u_rho)*C_p*(1-u_Cp)",
+      "upper_bound": "C_p^V,high = rho*(1+u_rho)*C_p*(1+u_Cp)",
+      "not_emitted": "C_v^V = C_p^V - T*alpha_V^2*K_T"
+    },
+    "units": {
+      "density": "kg m^-3",
+      "specific_heat": "J kg^-1 K^-1",
+      "volumetric_specific_heat": "J m^-3 K^-1",
+      "temperature": "K",
+      "uncertainty": "source-reported expanded interval, k=2"
+    },
+    "derivation_class": "source-backed standard-physics unit conversion plus conservative interval propagation; no UET derivation",
+    "observable": "IG-210 volumetric constant-pressure heat-capacity comparator",
+    "data_role": "EXTERNAL_SOURCE_COMPARATOR_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/farooqui_2022_ig210_thermophysical_source_package.json",
+        "sha256": "e4bd7e50b5d5e9025eae9bd410f74c3bb5699a8f22f32c4fc5c7994978d9d266"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/farooqui_2022_ig210_thermophysical_table.pdf",
+        "sha256": "777eebdc380f0707c3b63e612cce8977fcb6cab4ee5ed086e45f09aa81e2bd45"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_FAROOQUI_IG210_VOLUMETRIC_CP_UNCERTAINTY",
+    "controlling_blocker": "same_state_IG210_isothermal_K_T_missing",
+    "claim_boundary": "This closes only a source-traceable IG-210 volumetric C_p comparator with conservative source-expanded bounds. It is not C_v, not Ding C_src, not alpha_Phi_K calibration, not a UET transport coefficient, and not Full Topic 13 closure."
+  },
+  "source": {
+    "source_id": "farooqui_2022_npl_ig210_thermophysical_table",
+    "official_url": "https://doi.org/10.1007/s10765-021-02928-4",
+    "local_raw_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/farooqui_2022_ig210_thermophysical_table.pdf",
+    "local_raw_sha256": "777eebdc380f0707c3b63e612cce8977fcb6cab4ee5ed086e45f09aa81e2bd45",
+    "local_raw_size_bytes": 4116498
+  },
+  "derived_rows": [
+    {
+      "source_row_id": "farooqui_2022_table1_ig210_500C",
+      "table_locator": "PDF p.7, Table 1, Temperature 500 C",
+      "temperature_K": 773.15,
+      "density_kg_per_m3": 1781.0,
+      "specific_heat_Cp_J_per_kg_K": 1549.0,
+      "volumetric_Cp_J_per_m3_K": 2758769.0,
+      "conservative_expanded_interval_J_per_m3_K": {
+        "lower": 2585463.13142,
+        "upper": 2933068.02542
+      },
+      "relative_interval_fraction": {
+        "lower": 0.06282,
+        "upper": 0.06317999999999994
+      },
+      "uncertainty_contract": {
+        "source_coverage_factor": 2,
+        "density_relative_expanded": 0.003,
+        "specific_heat_relative_expanded": 0.06,
+        "combination": "conservative rectangular product bounds; covariance not assumed",
+        "standard_uncertainty_emitted": false
+      },
+      "data_role": "EXTERNAL_SOURCE_COMPARATOR_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "farooqui_2022_table1_ig210_700C",
+      "table_locator": "PDF p.7, Table 1, Temperature 700 C",
+      "temperature_K": 973.15,
+      "density_kg_per_m3": 1775.0,
+      "specific_heat_Cp_J_per_kg_K": 1807.0,
+      "volumetric_Cp_J_per_m3_K": 3207425.0,
+      "conservative_expanded_interval_J_per_m3_K": {
+        "lower": 3005934.5615,
+        "upper": 3410070.1114999996
+      },
+      "relative_interval_fraction": {
+        "lower": 0.06282000000000006,
+        "upper": 0.06317999999999989
+      },
+      "uncertainty_contract": {
+        "source_coverage_factor": 2,
+        "density_relative_expanded": 0.003,
+        "specific_heat_relative_expanded": 0.06,
+        "combination": "conservative rectangular product bounds; covariance not assumed",
+        "standard_uncertainty_emitted": false
+      },
+      "data_role": "EXTERNAL_SOURCE_COMPARATOR_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "farooqui_2022_table1_ig210_1000C",
+      "table_locator": "PDF p.7, Table 1, Temperature 1000 C",
+      "temperature_K": 1273.15,
+      "density_kg_per_m3": 1765.0,
+      "specific_heat_Cp_J_per_kg_K": 1892.0,
+      "volumetric_Cp_J_per_m3_K": 3339380.0,
+      "conservative_expanded_interval_J_per_m3_K": {
+        "lower": 3129600.1484,
+        "upper": 3550362.0283999997
+      },
+      "relative_interval_fraction": {
+        "lower": 0.06282000000000006,
+        "upper": 0.06317999999999992
+      },
+      "uncertainty_contract": {
+        "source_coverage_factor": 2,
+        "density_relative_expanded": 0.003,
+        "specific_heat_relative_expanded": 0.06,
+        "combination": "conservative rectangular product bounds; covariance not assumed",
+        "standard_uncertainty_emitted": false
+      },
+      "data_role": "EXTERNAL_SOURCE_COMPARATOR_NOT_CALIBRATION"
+    }
+  ],
+  "checks": {
+    "source_package_present": true,
+    "raw_source_present": true,
+    "raw_source_hash_matches": true,
+    "raw_source_size_matches": true,
+    "same_grade_ig210_rows_present": true,
+    "source_row_locators_present": true,
+    "source_expanded_uncertainty_is_preserved": true,
+    "volumetric_cp_unit_conversion_is_closed": true,
+    "interval_propagation_is_conservative": true,
+    "cp_is_not_relabelled_as_cv": true,
+    "kt_remains_open": true,
+    "ding_material_match_remains_open": true,
+    "alpha_is_not_emitted": true,
+    "no_fit_or_holdout_access": true
+  },
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "xie_2026_source_data_consumed": false,
+    "target_curve_used": false,
+    "alpha_Phi_K_fit_used": false
+  },
+  "numeric_alpha_Phi_K_emitted": false,
+  "numeric_C_v_emitted": false,
+  "numeric_Ding_C_src_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "controlling_blocker": "same_state_IG210_isothermal_K_T_missing",
+  "next_controller": "Source-lock a same-state IG-210 isothermal K_T record before applying the C_p-to-C_v correction; do not use this comparator to calibrate Phi or alpha_Phi_K.",
+  "claim_boundary": "This closes only a source-traceable IG-210 volumetric C_p comparator with conservative source-expanded bounds. It is not C_v, not Ding C_src, not alpha_Phi_K calibration, not a UET transport coefficient, and not Full Topic 13 closure."
+}

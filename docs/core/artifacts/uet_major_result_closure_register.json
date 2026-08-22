@@ -69,6 +69,7 @@
         "Zenodo Hi-Trace same-block isotropic-graphite high-temperature Cp comparator is closed for lane; c_v conversion, density/alpha_V/K_T, Ding material-match, and alpha_Phi_K promotion remain open",
         "Zenodo Hi-Trace IG210 mean alpha_l source comparator is closed for lane; alpha_V is conditional, same-state K_T/Cp-Cv, Ding material-match, and alpha_Phi_K promotion remain open",
         "NPL/Hi-Trace published IG210 thermophysical source lane is closed: density, C_p, diffusivity, alpha_l, and source uncertainty are archived; K_T, C_v, Ding material-match, and alpha_Phi_K remain open",
+        "IG-210 volumetric C_p conversion and conservative source-expanded uncertainty are closed for lane; C_v, same-state K_T, Ding mapping, and alpha_Phi_K remain open",
         "DeSorbo 1955 Ceylon natural-graphite numeric Cp comparator is closed for lane without standard uncertainty, volumetric c_v conversion, or Ding material-match promotion",
         "finite-temperature O(2) tree-condensate plus quasiparticle EOS is closed for lane without interacting self-energy, physical Kubo, SI, or alpha promotion",
         "formal O(2) finite-temperature condensate/normal thermodynamic split is closed for lane; transverse normal current, physical Kubo, SI, alpha, and external validation remain open",
@@ -208,7 +209,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "e7180e7643cf0b5c59c0262352a6fd9817626e16c76185f1bea35198654ab72c",
+          "sha256": "bc433bbbe0f7eb22b3ccf0fa52f570f747675dfaea2ad1d1ade934ad6566a6ae",
           "summary": {
             "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
             "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
@@ -1278,7 +1279,7 @@
       "dependency_unlocked": "Gravity/GR remains blocked until this full bridge and Core curved 3+1 gates pass",
       "claim_boundary": "Full Topic 13 is not Core-ready; current evidence supports normalized/internal controls and constraint exports only. No temperature prediction, external validation, or global UET closure is claimed.",
       "closure_summary": {
-        "closed_lane_count": 179,
+        "closed_lane_count": 180,
         "closed_as_no_go_count": 16,
         "closed_lane_result_ids": [
           "T13_AIST_GRAPHITE_SOURCE_ROUTE_BOUNDARY",
@@ -1327,6 +1328,7 @@
           "T13_DING_PBTE_OA_NUMERIC_INPUT_NO_GO",
           "T13_DING_PUBLIC_SUPPLEMENTARY_PAYLOAD_BOUNDARY",
           "T13_FAROOQUI_IG210_THERMOPHYSICAL_SOURCE",
+          "T13_FAROOQUI_IG210_VOLUMETRIC_CP_UNCERTAINTY",
           "T13_FIGSHARE_DFT_FORCE_DATA_BOUNDARY",
           "T13_FORMAL_NONCIRCULAR_BRIDGE_BOUNDARY",
           "T13_GATECH_VOLUMETRIC_CP_INDEPENDENCE_NO_GO",
@@ -3661,6 +3663,52 @@
       ],
       "dependency_unlocked": "IG-210 density/C_p/alpha_l source lane only; no C_v, Ding C_src, alpha_Phi_K, transport, Core, or Gravity unlock",
       "claim_boundary": "This package closes only a source-traceable IG-210 thermophysical comparator with density, C_p, diffusivity, alpha_l, and stated source uncertainty. It is not C_v, not a same-state K_T pair, not Ding C_src, not alpha_Phi_K calibration, and not Full Topic 13 closure."
+    },
+    {
+      "major_result_id": "T13_FAROOQUI_IG210_VOLUMETRIC_CP_UNCERTAINTY",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "closure_level": "CLOSED_FOR_LANE",
+      "what_is_closed": [
+        "source-locked IG-210 density and specific-heat rows are converted to volumetric C_p",
+        "conservative expanded intervals are propagated without assuming covariance",
+        "C_p is kept distinct from C_v, Ding C_src, Phi, and alpha_Phi_K"
+      ],
+      "equation_or_mapping": {
+        "volumetric_heat_capacity": "C_p^V = rho * C_p",
+        "lower_bound": "C_p^V,low = rho*(1-u_rho)*C_p*(1-u_Cp)",
+        "upper_bound": "C_p^V,high = rho*(1+u_rho)*C_p*(1+u_Cp)",
+        "not_emitted": "C_v^V = C_p^V - T*alpha_V^2*K_T"
+      },
+      "units": {
+        "density": "kg m^-3",
+        "specific_heat": "J kg^-1 K^-1",
+        "volumetric_specific_heat": "J m^-3 K^-1",
+        "temperature": "K",
+        "uncertainty": "source-reported expanded interval, k=2"
+      },
+      "derivation_class": "source-backed standard-physics unit conversion plus conservative interval propagation; no UET derivation",
+      "observable": "IG-210 volumetric constant-pressure heat-capacity comparator",
+      "data_role": "EXTERNAL_SOURCE_COMPARATOR_NOT_CALIBRATION",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json",
+          "sha256": "8714a13530c99cba457b86d529928747f26b8536befe782843387f3f2a362add",
+          "summary": {
+            "status": "PASS_SCOPED_FAROOQUI_IG210_VOLUMETRIC_CP_UNCERTAINTY",
+            "major_result_id": "T13_FAROOQUI_IG210_VOLUMETRIC_CP_UNCERTAINTY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_SCOPED_FAROOQUI_IG210_VOLUMETRIC_CP_UNCERTAINTY",
+      "open_blockers": [
+        "same_state_IG210_isothermal_K_T_missing",
+        "C_p_to_C_v_correction_not_closed",
+        "Ding_TTG_material_regime_mapping_not_closed",
+        "independent_alpha_Phi_K_calibration_missing"
+      ],
+      "dependency_unlocked": "IG-210 volumetric C_p comparator and uncertainty contract only; no C_v, Ding C_src, alpha_Phi_K, transport, Core, or Gravity unlock",
+      "claim_boundary": "This closes only a source-traceable IG-210 volumetric C_p comparator with conservative source-expanded bounds. It is not C_v, not Ding C_src, not alpha_Phi_K calibration, not a UET transport coefficient, and not Full Topic 13 closure."
     },
     {
       "major_result_id": "T13_FIGSHARE_DFT_FORCE_DATA_BOUNDARY",

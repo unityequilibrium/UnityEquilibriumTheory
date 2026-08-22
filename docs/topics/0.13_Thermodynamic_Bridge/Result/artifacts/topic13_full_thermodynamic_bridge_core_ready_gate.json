@@ -33,6 +33,7 @@
       "Zenodo Hi-Trace same-block isotropic-graphite high-temperature Cp comparator is closed for lane; c_v conversion, density/alpha_V/K_T, Ding material-match, and alpha_Phi_K promotion remain open",
       "Zenodo Hi-Trace IG210 mean alpha_l source comparator is closed for lane; alpha_V is conditional, same-state K_T/Cp-Cv, Ding material-match, and alpha_Phi_K promotion remain open",
       "NPL/Hi-Trace published IG210 thermophysical source lane is closed: density, C_p, diffusivity, alpha_l, and source uncertainty are archived; K_T, C_v, Ding material-match, and alpha_Phi_K remain open",
+      "IG-210 volumetric C_p conversion and conservative source-expanded uncertainty are closed for lane; C_v, same-state K_T, Ding mapping, and alpha_Phi_K remain open",
       "DeSorbo 1955 Ceylon natural-graphite numeric Cp comparator is closed for lane without standard uncertainty, volumetric c_v conversion, or Ding material-match promotion",
       "finite-temperature O(2) tree-condensate plus quasiparticle EOS is closed for lane without interacting self-energy, physical Kubo, SI, or alpha promotion",
       "formal O(2) finite-temperature condensate/normal thermodynamic split is closed for lane; transverse normal current, physical Kubo, SI, alpha, and external validation remain open",
@@ -169,7 +170,7 @@
     ],
     "dependency_unlocked": "Gravity/GR remains blocked until this full bridge and Core curved 3+1 gates pass",
     "closure_summary": {
-      "closed_lane_count": 179,
+      "closed_lane_count": 180,
       "closed_as_no_go_count": 16,
       "closed_lane_result_ids": [
         "T13_AIST_GRAPHITE_SOURCE_ROUTE_BOUNDARY",
@@ -218,6 +219,7 @@
         "T13_DING_PBTE_OA_NUMERIC_INPUT_NO_GO",
         "T13_DING_PUBLIC_SUPPLEMENTARY_PAYLOAD_BOUNDARY",
         "T13_FAROOQUI_IG210_THERMOPHYSICAL_SOURCE",
+        "T13_FAROOQUI_IG210_VOLUMETRIC_CP_UNCERTAINTY",
         "T13_FIGSHARE_DFT_FORCE_DATA_BOUNDARY",
         "T13_FORMAL_NONCIRCULAR_BRIDGE_BOUNDARY",
         "T13_GATECH_VOLUMETRIC_CP_INDEPENDENCE_NO_GO",
@@ -7922,6 +7924,135 @@
           "Ding_TTG_material_regime_mapping_not_closed",
           "independent_alpha_Phi_K_calibration_missing"
         ]
+      },
+      "farooqui_ig210_volumetric_cp_uncertainty": {
+        "status": "PASS_SCOPED_FAROOQUI_IG210_VOLUMETRIC_CP_UNCERTAINTY",
+        "claim_promotion": false,
+        "full_core_unlock": false,
+        "source": {
+          "source_id": "farooqui_2022_npl_ig210_thermophysical_table",
+          "official_url": "https://doi.org/10.1007/s10765-021-02928-4",
+          "local_raw_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/farooqui_2022_ig210_thermophysical_table.pdf",
+          "local_raw_sha256": "777eebdc380f0707c3b63e612cce8977fcb6cab4ee5ed086e45f09aa81e2bd45",
+          "local_raw_size_bytes": 4116498
+        },
+        "derived_rows": [
+          {
+            "source_row_id": "farooqui_2022_table1_ig210_500C",
+            "table_locator": "PDF p.7, Table 1, Temperature 500 C",
+            "temperature_K": 773.15,
+            "density_kg_per_m3": 1781.0,
+            "specific_heat_Cp_J_per_kg_K": 1549.0,
+            "volumetric_Cp_J_per_m3_K": 2758769.0,
+            "conservative_expanded_interval_J_per_m3_K": {
+              "lower": 2585463.13142,
+              "upper": 2933068.02542
+            },
+            "relative_interval_fraction": {
+              "lower": 0.06282,
+              "upper": 0.06317999999999994
+            },
+            "uncertainty_contract": {
+              "source_coverage_factor": 2,
+              "density_relative_expanded": 0.003,
+              "specific_heat_relative_expanded": 0.06,
+              "combination": "conservative rectangular product bounds; covariance not assumed",
+              "standard_uncertainty_emitted": false
+            },
+            "data_role": "EXTERNAL_SOURCE_COMPARATOR_NOT_CALIBRATION"
+          },
+          {
+            "source_row_id": "farooqui_2022_table1_ig210_700C",
+            "table_locator": "PDF p.7, Table 1, Temperature 700 C",
+            "temperature_K": 973.15,
+            "density_kg_per_m3": 1775.0,
+            "specific_heat_Cp_J_per_kg_K": 1807.0,
+            "volumetric_Cp_J_per_m3_K": 3207425.0,
+            "conservative_expanded_interval_J_per_m3_K": {
+              "lower": 3005934.5615,
+              "upper": 3410070.1114999996
+            },
+            "relative_interval_fraction": {
+              "lower": 0.06282000000000006,
+              "upper": 0.06317999999999989
+            },
+            "uncertainty_contract": {
+              "source_coverage_factor": 2,
+              "density_relative_expanded": 0.003,
+              "specific_heat_relative_expanded": 0.06,
+              "combination": "conservative rectangular product bounds; covariance not assumed",
+              "standard_uncertainty_emitted": false
+            },
+            "data_role": "EXTERNAL_SOURCE_COMPARATOR_NOT_CALIBRATION"
+          },
+          {
+            "source_row_id": "farooqui_2022_table1_ig210_1000C",
+            "table_locator": "PDF p.7, Table 1, Temperature 1000 C",
+            "temperature_K": 1273.15,
+            "density_kg_per_m3": 1765.0,
+            "specific_heat_Cp_J_per_kg_K": 1892.0,
+            "volumetric_Cp_J_per_m3_K": 3339380.0,
+            "conservative_expanded_interval_J_per_m3_K": {
+              "lower": 3129600.1484,
+              "upper": 3550362.0283999997
+            },
+            "relative_interval_fraction": {
+              "lower": 0.06282000000000006,
+              "upper": 0.06317999999999992
+            },
+            "uncertainty_contract": {
+              "source_coverage_factor": 2,
+              "density_relative_expanded": 0.003,
+              "specific_heat_relative_expanded": 0.06,
+              "combination": "conservative rectangular product bounds; covariance not assumed",
+              "standard_uncertainty_emitted": false
+            },
+            "data_role": "EXTERNAL_SOURCE_COMPARATOR_NOT_CALIBRATION"
+          }
+        ],
+        "checks": {
+          "source_package_present": true,
+          "raw_source_present": true,
+          "raw_source_hash_matches": true,
+          "raw_source_size_matches": true,
+          "same_grade_ig210_rows_present": true,
+          "source_row_locators_present": true,
+          "source_expanded_uncertainty_is_preserved": true,
+          "volumetric_cp_unit_conversion_is_closed": true,
+          "interval_propagation_is_conservative": true,
+          "cp_is_not_relabelled_as_cv": true,
+          "kt_remains_open": true,
+          "ding_material_match_remains_open": true,
+          "alpha_is_not_emitted": true,
+          "no_fit_or_holdout_access": true
+        },
+        "holdout_policy": {
+          "xie_2026_accessed": false,
+          "xie_2026_source_data_consumed": false,
+          "target_curve_used": false,
+          "alpha_Phi_K_fit_used": false
+        },
+        "numeric_alpha_Phi_K_emitted": false,
+        "numeric_C_v_emitted": false,
+        "numeric_Ding_C_src_emitted": false,
+        "parameter_fitting_performed": false,
+        "target_data_used": false,
+        "controlling_blocker": "same_state_IG210_isothermal_K_T_missing",
+        "next_controller": "Source-lock a same-state IG-210 isothermal K_T record before applying the C_p-to-C_v correction; do not use this comparator to calibrate Phi or alpha_Phi_K.",
+        "claim_boundary": "This closes only a source-traceable IG-210 volumetric C_p comparator with conservative source-expanded bounds. It is not C_v, not Ding C_src, not alpha_Phi_K calibration, not a UET transport coefficient, and not Full Topic 13 closure.",
+        "major_result_id": "T13_FAROOQUI_IG210_VOLUMETRIC_CP_UNCERTAINTY",
+        "closure_level": "CLOSED_FOR_LANE",
+        "data_role": "EXTERNAL_SOURCE_COMPARATOR_NOT_CALIBRATION",
+        "audit": {
+          "path": "docs/core/artifacts/t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json",
+          "sha256": "8714a13530c99cba457b86d529928747f26b8536befe782843387f3f2a362add",
+          "summary": {
+            "status": "PASS_SCOPED_FAROOQUI_IG210_VOLUMETRIC_CP_UNCERTAINTY",
+            "major_result_id": "T13_FAROOQUI_IG210_VOLUMETRIC_CP_UNCERTAINTY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        },
+        "open_blockers": []
       },
       "iaea_cv_uncertainty_boundary": {
         "status": "PASS_SCOPED_IAEA_CV_UNCERTAINTY_BOUNDARY_NO_GO",
@@ -75897,18 +76028,62 @@
     },
     "causal_branch_selection": {
       "status": "PASS_CLOSED_AS_NO_GO_WITH_NAMED_COUPLED_BRANCH",
+      "baseline_preservation": {
+        "full_candidate_pass": false,
+        "prearrival_leakage_fraction": 0.017639381271029236,
+        "locked_threshold": 1e-06,
+        "baseline_replaced": false
+      },
+      "selected_branch": {
+        "branch_id": "T13-CAUSAL-FLUX-PHI-COUPLED-001",
+        "prearrival_leakage_fraction": 0.0,
+        "C_arrival_target_abs": 1.4032711954504658e-33,
+        "Phi_arrival_target_abs": 4.440892098500626e-16,
+        "max_combined_energy_relative_residual": 9.813156990275662e-07,
+        "closure_level": "CLOSED_FOR_LANE"
+      },
+      "checks": {
+        "baseline_scoped_no_go_recorded": true,
+        "baseline_no_go_scope_is_declared": true,
+        "original_baseline_stays_failed": true,
+        "original_baseline_leakage_exceeds_locked_threshold": true,
+        "threshold_is_unchanged": true,
+        "flux_branch_passes": true,
+        "coupled_branch_passes": true,
+        "coupled_branch_is_lane_only": true,
+        "coupled_leakage_passes_locked_threshold": true,
+        "coupled_arrival_is_nonzero": true,
+        "coupled_energy_ledger_passes": true,
+        "no_clipping_or_padding_or_fit": true,
+        "holdout_not_accessed": true
+      },
+      "parameter_fitting_performed": false,
+      "source_rows_consumed": false,
+      "target_data_used": false,
+      "xie_2026_accessed": false,
+      "controlling_blocker": "selected_causal_branch_is_normalized_and_dimensional_thermal_bridge_remains_open",
+      "next_controller": "Use the selected named causal branch only as a normalized Core input while independently closing the Phi-energy scale, permitted TTG source package, alpha_Phi_K, and thermodynamic bridge; do not rerun or relabel the failed conserved-gradient baseline.",
+      "claim_boundary": "This result selects a named normalized causal branch after a scoped no-go. It does not turn the original conserved-gradient baseline into a pass, prove covariant well-posedness, establish a physical temperature mapping, or close Topic 13.",
+      "major_result_id": "T13_CAUSAL_THERMAL_BRANCH_SELECTION",
       "closure_level": "CLOSED_FOR_LANE",
-      "baseline_full_candidate_pass": false,
-      "baseline_replaced": false,
+      "data_role": "INTERNAL_NUMERICAL_BRANCH_SELECTION_NO_EXTERNAL_TTG_OR_HOLDOUT",
       "audit": {
         "path": "docs/core/artifacts/t13_causal_branch_selection_audit.json",
         "sha256": "a5c32c830c6c1b42d71dbbd2bdf58b4882c96bfa8957c24437daee4879e50c26",
         "summary": {
           "status": "PASS_CLOSED_AS_NO_GO_WITH_NAMED_COUPLED_BRANCH",
-          "major_result_id": "T13_CAUSAL_THERMAL_BRANCH_SELECTION"
+          "major_result_id": "T13_CAUSAL_THERMAL_BRANCH_SELECTION",
+          "closure_level": "CLOSED_FOR_LANE"
         }
       },
-      "claim_boundary": "No source data, target curve, fit, threshold change, clipping, cone padding, holdout access, external validation, or global UET closure is claimed."
+      "open_blockers": [
+        "selected branch remains normalized and has no dimensional Phi-to-temperature map",
+        "TTG numeric source and independent alpha_Phi_K remain open",
+        "non-circular bridge, beta, EOS, transport, SK/KMS, entropy current, and dissipative balance remain open",
+        "original kappa_C>0 conserved-gradient baseline remains blocked and is not replaced"
+      ],
+      "baseline_full_candidate_pass": false,
+      "baseline_replaced": false
     },
     "phi_energy_anchor_identifiability": {
       "status": "PASS_SCOPED_NO_GO",
@@ -77578,22 +77753,6 @@
       "summary": {
         "status": "PASS_SCOPED_NO_GO_COVARIANT_MATTER_COUPLING_NORMALIZATION",
         "data_role": "INTERNAL_STRUCTURAL_AUDIT_NO_TARGET_OR_HOLDOUT"
-      }
-    },
-    {
-      "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
-      "sha256": "c4e5b4e87794136f07f70ded43f7aa4d86140ca3c725b6ac237c99808a81262d",
-      "summary": {
-        "status": "NO_GO_FOR_DECLARED_CONSERVED_CATTANEO_LOCAL_GRADIENT_CLASS",
-        "proof_scope": "declared local conserved-C Cattaneo equation with mu_C=a_C*C-kappa_C*Laplacian(C)"
-      }
-    },
-    {
-      "path": "docs/core/artifacts/t13_causal_branch_selection_audit.json",
-      "sha256": "a5c32c830c6c1b42d71dbbd2bdf58b4882c96bfa8957c24437daee4879e50c26",
-      "summary": {
-        "status": "PASS_CLOSED_AS_NO_GO_WITH_NAMED_COUPLED_BRANCH",
-        "data_role": "INTERNAL_NUMERICAL_BRANCH_SELECTION_NO_EXTERNAL_TTG_OR_HOLDOUT"
       }
     }
   ],
