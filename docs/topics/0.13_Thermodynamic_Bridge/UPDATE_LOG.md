@@ -1,5 +1,20 @@
 # UPDATE LOG: 0.13_Thermodynamic_Bridge
 
+## 2026-08-22 - Ding experimental heating input boundary (T13-154)
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for T13_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY; Full Topic 13 remains PARTIAL / BLOCKED_OPEN_T13_FULL_BRIDGE.
+WHAT_IS_ACTUALLY_CLOSED: Ding 2022 source identity, local transcription hash, method locators, typed pump/probe setup rows, the <3 K surface-temperature upper bound, and the incident-fluence conversion from reported pulse energy and 1/e2 spot diameter.
+WHAT_REMAINS_OPEN: Absorption fraction, penetration depth, thermalized volume, absorbed energy density, numeric Ding C_src(T), base Phi-to-energy mapping, e0, independent alpha_Phi_K, and full EOS/transport/KMS/entropy closure.
+DEPENDENCY_UNLOCKED: Incident-setup source boundary and geometric fluence lane only; no Ding C_src acceptance, SI Phi anchor, alpha calibration, Full Topic 13, Core, Gravity, transport, or Galaxy dependency is unlocked.
+STATUS: PASS_SCOPED_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY
+WHAT_CHANGED: Added the source package, source-hash and phrase-locator verifier, SI unit witness, focused regression, full-gate source-package projection, closure-register entry, dependency evidence, and manifest record. No absorbed-energy value, fit, calibration, threshold change, Landauer inference, or Xie 2026 holdout access was introduced.
+EQUATION_OR_MAPPING: w=d_1e2/2; A_1e2=pi*w^2; F_incident=E_pump/A_1e2=6.189358898018153 J m^-2. Delta_u_abs=eta_abs*F_incident/l_abs remains conditional; Delta_Tq=Delta_u_ph/C_src remains formula-only until numeric C_src is accepted.
+VERIFICATION: Audit passed 21/21 checks; source text is 41581 bytes with SHA-256 b1b029f2812586647077a7b8506c2f52aeb7261714395907f8f8d20868fe2874. Focused regression passed 4 tests. Full gate remains BLOCKED_OPEN_T13_FULL_BRIDGE with the same 10 blocker groups; holdout access remains false.
+CONTROLLING_BLOCKER: ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing together with alpha_Phi_K_independent_calibration_missing.
+NEXT_ACTION: Obtain an authorized Ding numeric C_src package or accepted same-regime PBTE reproduction with uncertainty and state mapping; separately obtain the independent base-Phi/SI anchor. Do not infer absorbed energy, e0, or alpha from incident fluence or the <3 K bound.
+CLAIM_BOUNDARY: This closes only source/setup provenance and geometric incident fluence. It is not absorbed-energy calibration, a temperature prediction, external validation, alpha_Phi_K closure, or Full Topic 13 closure.
+EVIDENCE_HASHES: package 62e6f6ce403c74e0601b2e05f6be2d2a5728d0237fb5392774713f9ee0a8eccd; audit 6e39bbf42037971dc2b5a1068df14835dd0b4689f26a60fff95bc26810b8b008; full gate 065f734a58d542cc98c1dfdf4ecc2f67768641a05205fce57b5109e6e11c0560; closure register 9a8fe0b9598755e48577d103b38768a0a321e89abbe3597fb499b5e8854c289e; dependency gate 78c8424bb973ecaa20b72b8683e45bac7efff05e7fd21adc348e1a98d5a8c9ec.
+
 ## 2026-08-22 - Covariant matter-coupling normalization identifiability no-go (T13-153)
 MAJOR_RESULT_CLOSURE: `CLOSED_AS_NO_GO` for the current natural-unit response-matter coupling chart; Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
 WHAT_IS_ACTUALLY_CLOSED: The reciprocal interaction is invariant under the declared response-field rescaling when `response_coupling_prime=response_coupling/s`; the response force is covariant and the matter force is invariant in the fixed matter chart.

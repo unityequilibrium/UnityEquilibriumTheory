@@ -20,7 +20,7 @@ WHAT_IS_ACTUALLY_CLOSED: The following results are closed only for their
  legacy NEP2 backend probe, which accepts the hash-locked C-CX model without
  producing fc2/fc3 or PBTE output; and (11) the legacy NEP2 candidate PBTE
  reproduction, which produces archived 4x4x2 fc2/fc3 and 8x8x4/10x10x5
- candidate C_src rows with a 0.2294% latest mesh change. The semantic alpha-calibration admission boundary evaluated 11 candidate packages and accepted zero as a paired base-Phi/SI record. The covariant response-matter coupling audit now closes the corresponding action-chart identifiability question as a scoped no-go: the natural `response_coupling` rescales with the response field and does not provide an SI anchor.
+ candidate C_src rows with a 0.2294% latest mesh change. The semantic alpha-calibration admission boundary evaluated 11 candidate packages and accepted zero as a paired base-Phi/SI record. The covariant response-matter coupling audit now closes the corresponding action-chart identifiability question as a scoped no-go: the natural `response_coupling` rescales with the response field and does not provide an SI anchor. The Ding experimental-heating boundary now closes the source identity, method-row, and geometric incident-fluence lane without identifying absorbed energy, C_src, e0, or alpha_Phi_K.
 These are evidence-producing sub-results, not Full Topic 13 closure.
 
 WHAT_REMAINS_OPEN: The current full-gate blockers are:
@@ -42,7 +42,7 @@ unlocked.
 
 STATUS: `BLOCKED_OPEN_T13_FULL_BRIDGE`
 
-WHAT_CHANGED: The canonical summary is synchronized to the current full gate and major-result register. The Figshare DFT archive audit closes only the public force-data provenance/capability boundary, the Huang 2023 NIMS MDR audit closes only the article-only public payload boundary, the Calorine equilibrium/unit cross-check remains lane-level evidence, the Calorine C-CX audit locks a public model-form input only, the current Calorine 3.5 compatibility audit records the rejection without rewriting source bytes, and the pinned Calorine 1.0 legacy NEP2 probe records model acceptance without PBTE output; the new legacy PBTE lane now runs the fixed 4x4x2 state through 8x8x4 and 10x10x5 q-meshes and archives candidate fc2/fc3 and C_src outputs, while source-grade uncertainty and Ding mapping remain open. The latest alpha admission wave records substantive paired-record checks, with 11 candidates and zero eligible records. The coupling-normalization no-go records action and reciprocal-force invariance without producing a physical coefficient. C, Phi, R_gen, and R_obs meanings are unchanged, and no threshold, fit, calibration, or holdout policy changed.
+WHAT_CHANGED: The canonical summary is synchronized to the current full gate and major-result register. The Figshare DFT archive audit closes only the public force-data provenance/capability boundary, the Huang 2023 NIMS MDR audit closes only the article-only public payload boundary, the Calorine equilibrium/unit cross-check remains lane-level evidence, the Calorine C-CX audit locks a public model-form input only, the current Calorine 3.5 compatibility audit records the rejection without rewriting source bytes, and the pinned Calorine 1.0 legacy NEP2 probe records model acceptance without PBTE output; the new legacy PBTE lane now runs the fixed 4x4x2 state through 8x8x4 and 10x10x5 q-meshes and archives candidate fc2/fc3 and C_src outputs, while source-grade uncertainty and Ding mapping remain open. The latest alpha admission wave records substantive paired-record checks, with 11 candidates and zero eligible records. The coupling-normalization no-go records action and reciprocal-force invariance without producing a physical coefficient. The Ding setup boundary records the 70 nJ pump, 120 um 1/e2 diameter, <3 K bound, and incident fluence without treating them as absorbed energy or calibration. C, Phi, R_gen, and R_obs meanings are unchanged, and no threshold, fit, calibration, or holdout policy changed.
 
 EQUATION_OR_MAPPING:
 
@@ -70,6 +70,8 @@ collective coordinate, `Phi` an effective response, and `R_gen` a derived
 history trace. No UET-wide beta, Kelvin prediction, physical entropy-
 production law, external validation, full Topic 13 closure, or downstream
 unlock is claimed.
+
+EVIDENCE: Ding setup package SHA-256 62e6f6ce403c74e0601b2e05f6be2d2a5728d0237fb5392774713f9ee0a8eccd; source-boundary audit SHA-256 6e39bbf42037971dc2b5a1068df14835dd0b4689f26a60fff95bc26810b8b008; full gate SHA-256 065f734a58d542cc98c1dfdf4ecc2f67768641a05205fce57b5109e6e11c0560. The lane is source/setup-only; the current 10 full-gate blockers and claim_promotion=false remain unchanged.
 
 ## 2026-08-22 - QH-15 Graphite Comparator Boundary (T13-152)
 

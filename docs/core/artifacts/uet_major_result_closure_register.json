@@ -206,7 +206,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "66ece8b7e817b540534eecc4063d50583839eb6b4a787e773c8aa7557aeee849",
+          "sha256": "065f734a58d542cc98c1dfdf4ecc2f67768641a05205fce57b5109e6e11c0560",
           "summary": {
             "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
             "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
@@ -374,6 +374,17 @@
             "status": "PASS",
             "raw_author_numeric_source_present": false,
             "permitted_figure_numeric_route_ready": true
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_ding_experimental_heating_input_boundary_audit.json",
+          "sha256": "6e39bbf42037971dc2b5a1068df14835dd0b4689f26a60fff95bc26810b8b008",
+          "summary": {
+            "status": "PASS_SCOPED_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY",
+            "closure_level": "CLOSED_FOR_LANE",
+            "pump_fluence_J_m2": 6.189358898018152,
+            "absorbed_energy_density_status": "OPEN_NOT_IDENTIFIED",
+            "controlling_blocker": "absorbed_energy_density_and_ding_C_src_not_source_locked"
           }
         },
         {
@@ -1254,7 +1265,7 @@
       "dependency_unlocked": "Gravity/GR remains blocked until this full bridge and Core curved 3+1 gates pass",
       "claim_boundary": "Full Topic 13 is not Core-ready; current evidence supports normalized/internal controls and constraint exports only. No temperature prediction, external validation, or global UET closure is claimed.",
       "closure_summary": {
-        "closed_lane_count": 176,
+        "closed_lane_count": 177,
         "closed_as_no_go_count": 16,
         "closed_lane_result_ids": [
           "T13_AIST_GRAPHITE_SOURCE_ROUTE_BOUNDARY",
@@ -1293,6 +1304,7 @@
           "T13_DING_2017_ACS_SUPPLEMENTARY_PAYLOAD_BOUNDARY",
           "T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY_BOUNDARY",
           "T13_DING_C_SRC_INDEPENDENT_REPRODUCTION_BOUNDARY",
+          "T13_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY",
           "T13_DING_FIG1D_NORMALIZED_SOURCE_LANE",
           "T13_DING_MATERIAL_REGIME_BOUNDARY",
           "T13_DING_PBTE_AUTHOR_REQUEST_PACKAGE",
@@ -3122,6 +3134,44 @@
       ],
       "dependency_unlocked": "independent harmonic c_v comparator boundary only; no full-source, alpha, transport, Core, or Gravity unlock",
       "claim_boundary": "MP48 is a source-traceable independent harmonic c_v comparator. It is not Ding's PBTE C_src, not an accepted Ding reproduction, not a base-Phi calibration, and not external validation of UET."
+    },
+    {
+      "major_result_id": "T13_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "closure_level": "CLOSED_FOR_LANE",
+      "what_is_closed": [
+        "Ding source identity, local transcription hash, and method locators are locked.",
+        "Reported pump/probe energies, beam diameters, timing, wavelengths, sample grain context, and the <3 K surface-temperature bound are represented as typed source rows.",
+        "Incident fluence is derived from reported pulse energy and 1/e2 spot diameter with explicit SI units.",
+        "Incident fluence is kept separate from absorbed energy density, source C_src, base Phi, e0, and alpha_Phi_K."
+      ],
+      "equation_or_mapping": "w=d_1e2/2; A_1e2=pi*w^2; F_incident=E_pump/A_1e2; Delta_u_abs=eta_abs*F_incident/l_abs only after absorption inputs are source-locked",
+      "units": "E in J; d,w in m; A in m2; F_incident in J m^-2; Delta_u_abs in J m^-3; Delta_Tq in K",
+      "derivation_class": "source transcription plus geometric SI conversion; no UET derivation",
+      "observable": "incident TTG excitation setup boundary and reported surface-temperature upper bound",
+      "data_role": "EXTERNAL_SETUP_INPUT_AND_SOURCE_BOUNDARY_NOT_CALIBRATION",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_ding_experimental_heating_input_boundary_audit.json",
+          "sha256": "6e39bbf42037971dc2b5a1068df14835dd0b4689f26a60fff95bc26810b8b008",
+          "summary": {
+            "status": "PASS_SCOPED_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY",
+            "major_result_id": "T13_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_SCOPED_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY",
+      "open_blockers": [
+        "absorbed_energy_density_missing_absorption_fraction_and_penetration_depth",
+        "thermalized_volume_and_boundary_contract_missing",
+        "ding_pbte_numeric_C_src_T_not_packaged",
+        "base_Phi_to_Delta_u_ph_mapping_not_derived",
+        "e0_energy_density_scale_not_source_locked",
+        "alpha_Phi_K_independent_calibration_missing"
+      ],
+      "dependency_unlocked": "Incident-setup source boundary and geometric fluence lane only; no Ding C_src acceptance, SI Phi anchor, alpha calibration, or Full Topic 13 dependency is unlocked.",
+      "claim_boundary": "This package does not identify absorbed energy density, predict Delta_Tq, derive e0, calibrate alpha_Phi_K, or access or fit the Xie 2026 holdout. It is not external validation or Full Topic 13 closure."
     },
     {
       "major_result_id": "T13_DING_FIG1D_NORMALIZED_SOURCE_LANE",

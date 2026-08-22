@@ -1,0 +1,271 @@
+{
+  "schema_version": "t13-ding-experimental-heating-input-source-package-v1",
+  "artifact": "ding_2022_experimental_heating_input_source_package",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "created_on": "2026-08-22",
+  "reviewed_on": "2026-08-22",
+  "status": "SOURCE_ROWS_LOCKED_INCIDENT_FLUENCE_DERIVED_ABSORPTION_OPEN",
+  "source": {
+    "source_id": "ding_2022_natural_graphite_ttg_experimental_heating_inputs",
+    "title": "Observation of second sound in graphite over 200 K",
+    "authors": "Zhiwei Ding, Ke Chen, Bai Song, Jungwoo Shin, Alexei A. Maznev, Keith A. Nelson, Gang Chen",
+    "publication": "Nature Communications 13, 285 (2022)",
+    "doi": "10.1038/s41467-021-27907-z",
+    "pmcid": "PMC8755757",
+    "publisher_url": "https://www.nature.com/articles/s41467-021-27907-z",
+    "pmc_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8755757/",
+    "local_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ding_2022_pmc_full_text.txt",
+    "local_bytes": 41581,
+    "local_sha256": "b1b029f2812586647077a7b8506c2f52aeb7261714395907f8f8d20868fe2874",
+    "license_or_terms": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "source_locators": [
+      "Main article, Methods, Thermal transient grating measurements, local text line 126: natural graphite sample and grain-size context",
+      "Main article, Methods, Thermal transient grating measurements, local text lines 128-130: pulse duration, wavelength, repetition rate, spot size, pulse energy, and surface-temperature bound"
+    ],
+    "preprocessing": "UTF-8 local transcription of the PMC full text; source phrases are checked after whitespace and Unicode normalization; no digitization, interpolation, fitting, smoothing, or holdout access"
+  },
+  "source_rows": [
+    {
+      "row_id": "ding_pump_pulse_energy",
+      "source_value": 70.0,
+      "source_unit": "nJ",
+      "value_si": 7.0e-08,
+      "unit_si": "J",
+      "uncertainty": null,
+      "uncertainty_status": "NOT_REPORTED_IN_CAPTURED_METHODS_TEXT",
+      "locator": "Methods, Thermal transient grating measurements: pump pulse energy is set at 70 nJ",
+      "data_role": "EXTERNAL_INPUT_SETUP_NOT_ABSORBED_ENERGY"
+    },
+    {
+      "row_id": "ding_probe_pulse_energy",
+      "source_value": 52.0,
+      "source_unit": "nJ",
+      "value_si": 5.2e-08,
+      "unit_si": "J",
+      "uncertainty": null,
+      "uncertainty_status": "NOT_REPORTED_IN_CAPTURED_METHODS_TEXT",
+      "locator": "Methods, Thermal transient grating measurements: probe pulse energy is set at 52 nJ",
+      "data_role": "EXTERNAL_INPUT_SETUP_NOT_ABSORBED_ENERGY"
+    },
+    {
+      "row_id": "ding_pump_spot_diameter_1e2",
+      "source_value": 120.0,
+      "source_unit": "um",
+      "value_si": 1.2e-04,
+      "unit_si": "m",
+      "beam_definition": "1/e2 diameter",
+      "uncertainty": null,
+      "uncertainty_status": "NOT_REPORTED_IN_CAPTURED_METHODS_TEXT",
+      "locator": "Methods, Thermal transient grating measurements: pump spot size is 120 um (1/e2 diameter)",
+      "data_role": "EXTERNAL_INPUT_SETUP_GEOMETRY"
+    },
+    {
+      "row_id": "ding_probe_reference_spot_diameter_1e2",
+      "source_value": 105.0,
+      "source_unit": "um",
+      "value_si": 1.05e-04,
+      "unit_si": "m",
+      "beam_definition": "1/e2 diameter",
+      "uncertainty": null,
+      "uncertainty_status": "NOT_REPORTED_IN_CAPTURED_METHODS_TEXT",
+      "locator": "Methods, Thermal transient grating measurements: probe/reference spot size is 105 um (1/e2 diameter)",
+      "data_role": "EXTERNAL_INPUT_SETUP_GEOMETRY"
+    },
+    {
+      "row_id": "ding_pulse_duration",
+      "source_value": 290.0,
+      "source_unit": "fs",
+      "value_si": 2.9e-13,
+      "unit_si": "s",
+      "uncertainty": null,
+      "uncertainty_status": "APPROXIMATE_SOURCE_WORDING",
+      "locator": "Methods, Thermal transient grating measurements: pulse duration about 290 fs",
+      "data_role": "EXTERNAL_INPUT_SETUP_TIMING"
+    },
+    {
+      "row_id": "ding_pump_wavelength",
+      "source_value": 515.0,
+      "source_unit": "nm",
+      "value_si": 5.15e-07,
+      "unit_si": "m",
+      "uncertainty": null,
+      "uncertainty_status": "NOT_REPORTED_IN_CAPTURED_METHODS_TEXT",
+      "locator": "Methods, Thermal transient grating measurements: 515 nm pulse is used as pump",
+      "data_role": "EXTERNAL_INPUT_SETUP_OPTICS"
+    },
+    {
+      "row_id": "ding_probe_wavelength",
+      "source_value": 532.0,
+      "source_unit": "nm",
+      "value_si": 5.32e-07,
+      "unit_si": "m",
+      "uncertainty": null,
+      "uncertainty_status": "NOT_REPORTED_IN_CAPTURED_METHODS_TEXT",
+      "locator": "Methods, Thermal transient grating measurements: 532 nm pulse is used as probe",
+      "data_role": "EXTERNAL_INPUT_SETUP_OPTICS"
+    },
+    {
+      "row_id": "ding_laser_repetition_rate",
+      "source_value": 25000.0,
+      "source_unit": "Hz",
+      "value_si": 25000.0,
+      "unit_si": "Hz",
+      "uncertainty": null,
+      "uncertainty_status": "NOT_REPORTED_IN_CAPTURED_METHODS_TEXT",
+      "locator": "Methods, Thermal transient grating measurements: repetition rate is 25 KHz",
+      "data_role": "EXTERNAL_INPUT_SETUP_TIMING"
+    },
+    {
+      "row_id": "ding_pump_chopper_rate",
+      "source_value": 2000.0,
+      "source_unit": "Hz",
+      "value_si": 2000.0,
+      "unit_si": "Hz",
+      "approximate": true,
+      "uncertainty": null,
+      "uncertainty_status": "APPROXIMATE_SOURCE_WORDING",
+      "locator": "Methods, Thermal transient grating measurements: pump chopper frequency around 2 KHz",
+      "data_role": "EXTERNAL_INPUT_SETUP_TIMING"
+    },
+    {
+      "row_id": "ding_surface_temperature_rise_upper_bound",
+      "source_value": "<3 K",
+      "bound_operator": "<",
+      "upper_bound_si": 3.0,
+      "unit_si": "K",
+      "value_si": null,
+      "uncertainty": null,
+      "uncertainty_status": "BOUND_ONLY_NOT_A_POINT_ESTIMATE",
+      "locator": "Methods, Thermal transient grating measurements: surface temperature rise due to pulses is estimated to be <3 K",
+      "data_role": "EXTERNAL_INPUT_BOUND_NOT_CALIBRATION"
+    },
+    {
+      "row_id": "ding_average_grain_area",
+      "source_value": 382.0,
+      "source_unit": "um2",
+      "value_si": 3.82e-10,
+      "unit_si": "m2",
+      "reported_spread": 2.70e-10,
+      "reported_spread_unit_si": "m2",
+      "uncertainty_status": "SOURCE_REPORTED_SPREAD_NOT_TREATED_AS_CALIBRATION_UNCERTAINTY",
+      "locator": "Main article, Methods, Thermal transient grating measurements: average grain area 382 +/- 270 um2",
+      "data_role": "EXTERNAL_SAMPLE_CONTEXT"
+    },
+    {
+      "row_id": "ding_typical_grain_size_lower_bound",
+      "source_value": ">20 um",
+      "bound_operator": ">",
+      "lower_bound_si": 2.0e-05,
+      "unit_si": "m",
+      "uncertainty": null,
+      "uncertainty_status": "BOUND_ONLY_NOT_A_POINT_ESTIMATE",
+      "locator": "Main article, Methods, Thermal transient grating measurements: grain size larger than 20 um",
+      "data_role": "EXTERNAL_SAMPLE_CONTEXT"
+    }
+  ],
+  "derived_records": [
+    {
+      "record_id": "ding_pump_1e2_incident_fluence",
+      "equation": "w = d_1e2 / 2; A_1e2 = pi*w^2; F_incident = E_pump / A_1e2",
+      "inputs": ["ding_pump_pulse_energy", "ding_pump_spot_diameter_1e2"],
+      "radius_si": 6.0e-05,
+      "area_si": 1.1309733552923257e-08,
+      "area_unit": "m2",
+      "value_si": 6.189358898018152,
+      "unit_si": "J m^-2",
+      "alternate_value": 0.6189358898018152,
+      "alternate_unit": "mJ cm^-2",
+      "derivation_class": "GEOMETRIC_CONVERSION_OF_REPORTED_INCIDENT_SETUP",
+      "uncertainty_status": "SOURCE_INPUT_UNCERTAINTIES_NOT_REPORTED; DERIVED VALUE IS NOT AN UNCERTAINTY-BOUNDED ABSORBED FLUENCE",
+      "data_role": "EXTERNAL_SETUP_DERIVED_NOT_CALIBRATION"
+    },
+    {
+      "record_id": "ding_probe_1e2_incident_fluence",
+      "equation": "w = d_1e2 / 2; A_1e2 = pi*w^2; F_incident = E_probe / A_1e2",
+      "inputs": ["ding_probe_pulse_energy", "ding_probe_reference_spot_diameter_1e2"],
+      "radius_si": 5.25e-05,
+      "area_si": 8.659014751456867e-09,
+      "area_unit": "m2",
+      "value_si": 6.0053021611091575,
+      "unit_si": "J m^-2",
+      "derivation_class": "GEOMETRIC_CONVERSION_OF_REPORTED_INCIDENT_SETUP",
+      "uncertainty_status": "SOURCE_INPUT_UNCERTAINTIES_NOT_REPORTED",
+      "data_role": "EXTERNAL_SETUP_DERIVED_NOT_CALIBRATION"
+    }
+  ],
+  "energy_density_contract": {
+    "incident_fluence": "F_incident is geometric incident pulse energy per 1/e2 beam area",
+    "absorbed_energy_density": {
+      "status": "OPEN_NOT_IDENTIFIED",
+      "equation_if_inputs_are_source_locked": "Delta_u_abs = eta_abs * F_incident / l_abs",
+      "units": "J m^-3",
+      "missing_inputs": [
+        "absorption_fraction_eta_abs at the pump wavelength and sample state",
+        "optical_penetration_depth_l_abs or an explicitly declared thermalized depth",
+        "sample thickness and boundary conditions for the thermalized volume",
+        "separation of reflected, transmitted, and absorbed pulse energy"
+      ],
+      "numeric_value": null
+    },
+    "temperature_response": {
+      "equation": "Delta_Tq = Delta_u_ph / C_src",
+      "units": "K",
+      "status": "FORMULA_LOCKED_NUMERIC_C_SRC_OPEN"
+    },
+    "base_phi_map": {
+      "equation": "Delta_u_ph = e0 * Phi_E; Delta_Tq = (e0/C_src) * Phi_E",
+      "status": "OPEN_BASE_PHI_OR_E0_NOT_IDENTIFIED",
+      "numeric_e0": null,
+      "numeric_alpha_Phi_K": null
+    }
+  },
+  "major_result": {
+    "major_result_id": "T13_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "Ding source identity, local transcription hash, and method locators are locked.",
+      "Reported pump/probe energies, beam diameters, timing, wavelengths, sample grain context, and the <3 K surface-temperature bound are represented as typed source rows.",
+      "Incident fluence is derived from reported pulse energy and 1/e2 spot diameter with explicit SI units.",
+      "Incident fluence is kept separate from absorbed energy density, source C_src, base Phi, e0, and alpha_Phi_K."
+    ],
+    "equation_or_mapping": "w=d_1e2/2; A_1e2=pi*w^2; F_incident=E_pump/A_1e2; Delta_u_abs=eta_abs*F_incident/l_abs only after absorption inputs are source-locked",
+    "units": "E in J; d,w in m; A in m2; F_incident in J m^-2; Delta_u_abs in J m^-3; Delta_Tq in K",
+    "derivation_class": "source transcription plus geometric SI conversion; no UET derivation",
+    "observable": "incident TTG excitation setup boundary and reported surface-temperature upper bound",
+    "data_role": "EXTERNAL_SETUP_INPUT_AND_SOURCE_BOUNDARY_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_experimental_heating_input_source_package.json",
+        "sha256": null,
+        "hash_recorded_by_audit": true
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ding_2022_pmc_full_text.txt",
+        "sha256": "b1b029f2812586647077a7b8506c2f52aeb7261714395907f8f8d20868fe2874",
+        "bytes": 41581
+      }
+    ],
+    "verification_status": "OPEN_UNTIL_AUDIT_RUN",
+    "open_blockers": [
+      "absorbed_energy_density_missing_absorption_fraction_and_penetration_depth",
+      "thermalized_volume_and_boundary_contract_missing",
+      "ding_pbte_numeric_C_src_T_not_packaged",
+      "base_Phi_to_Delta_u_ph_mapping_not_derived",
+      "e0_energy_density_scale_not_source_locked",
+      "alpha_Phi_K_independent_calibration_missing"
+    ],
+    "dependency_unlocked": "Incident-setup source boundary and geometric fluence lane only; no Ding C_src acceptance, SI Phi anchor, alpha calibration, or Full Topic 13 dependency is unlocked.",
+    "claim_boundary": "This package does not identify absorbed energy density, predict Delta_Tq, derive e0, calibrate alpha_Phi_K, or access or fit the Xie 2026 holdout. It is not external validation or Full Topic 13 closure."
+  },
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "xie_2026_source_data_consumed": false,
+    "calibration_path_may_read_holdout": false,
+    "target_curve_used": false,
+    "fit_performed": false,
+    "threshold_adjusted": false,
+    "landauer_used_for_derivation": false
+  },
+  "claim_boundary": "The lane closes only the provenance and incident-fluence boundary for the Ding TTG setup. No absorbed energy density, temperature prediction, UET SI anchor, alpha_Phi_K, holdout comparison, or Topic 13 closure is claimed."
+}

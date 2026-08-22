@@ -6,7 +6,7 @@
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "47647357c484ab64c477810653891fbd3f2f1fc6fa2e59f158e5ba57d68d9f62"
+    "sha256": "9a8fe0b9598755e48577d103b38768a0a321e89abbe3597fb499b5e8854c289e"
   },
   "decisions": {
     "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY": {
@@ -75,7 +75,7 @@
   ],
   "claim_boundary": "Dependency decisions only; no downstream result is promoted by a checkpoint or comparator pass.",
   "topic13_partial_evidence": {
-    "register_sha256": "86f963b6750e7354e047a0dd7f6549ce7d3f18fd7a9a73b9344e6d7193106e86",
+    "register_sha256": "9a8fe0b9598755e48577d103b38768a0a321e89abbe3597fb499b5e8854c289e",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",
@@ -2088,6 +2088,15 @@
       "sha256": "bdda0a764af624ffb7b7c8bb04d1cb1bb44539a0159e4ca8ba9b825473e09675",
       "summary": {
         "status": "PASS_SCOPED_NO_GO_COVARIANT_MATTER_COUPLING_NORMALIZATION",
+        "full_core_unlock": false
+      }
+    },
+    "ding_experimental_heating_input_boundary": {
+      "path": "docs/core/artifacts/t13_ding_experimental_heating_input_boundary_audit.json",
+      "sha256": "6e39bbf42037971dc2b5a1068df14835dd0b4689f26a60fff95bc26810b8b008",
+      "summary": {
+        "status": "PASS_SCOPED_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY",
+        "closure_level": "CLOSED_FOR_LANE",
         "full_core_unlock": false
       }
     }

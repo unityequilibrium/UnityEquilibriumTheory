@@ -82,8 +82,11 @@ def main() -> int:
         "covariant_field_normalization_no_go": "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json",
         "phi_energy_anchor_no_go": "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
         "thermal_response_beta_contract": "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json",
+        "ding_experimental_heating_input_boundary": "docs/core/artifacts/t13_ding_experimental_heating_input_boundary_audit.json",
     }
     partial_evidence = artifact.get("topic13_partial_evidence", {})
+    if isinstance(partial_evidence, dict):
+        partial_evidence["register_sha256"] = artifact["register"]["sha256"]
     if isinstance(partial_evidence, dict):
         for key, relative_path in partial_routes.items():
             route = partial_evidence.get(key)
@@ -91,6 +94,17 @@ def main() -> int:
             if isinstance(route, dict) and source_path.is_file():
                 route["path"] = relative_path
                 route["sha256"] = hashlib.sha256(source_path.read_bytes()).hexdigest()
+        ding_path = ROOT / partial_routes["ding_experimental_heating_input_boundary"]
+        if ding_path.is_file():
+            partial_evidence["ding_experimental_heating_input_boundary"] = {
+                "path": partial_routes["ding_experimental_heating_input_boundary"],
+                "sha256": hashlib.sha256(ding_path.read_bytes()).hexdigest(),
+                "summary": {
+                    "status": "PASS_SCOPED_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY",
+                    "closure_level": "CLOSED_FOR_LANE",
+                    "full_core_unlock": False,
+                },
+            }
     OUT.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
     print(json.dumps({"status": artifact["status"], "decisions": decisions}, indent=2))
     return 0
