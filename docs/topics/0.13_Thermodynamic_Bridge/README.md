@@ -20,6 +20,19 @@ CONTROLLING_BLOCKER: `dimensional_phi_energy_anchor_or_independent_alpha_calibra
 NEXT_ACTION: Obtain an authorized Ding numeric package or accepted same-regime PBTE reproduction with provenance, units, uncertainty, convergence, and material/state mapping, while separately obtaining a paired base-`Phi`/SI observable anchor. Do not fit `alpha_Phi_K` or read Xie 2026.
 CLAIM_BOUNDARY: This closes a response-mapping lane only. It is not Ding `C_src`, an independent `alpha_Phi_K`, a `Phi`-to-temperature prediction, Core closure, external validation, or global UET closure.
 
+## Latest Hardening Update (2026-08-23)
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for `T13_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY`; Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_IS_ACTUALLY_CLOSED: The candidate equilibrium `C_src` denominator is separated from transport, with hash-linked SI rows at 200, 250, and 300 K, fixed-volume identity, 10x10x5 to 12x12x6 mesh tail, natural-isotope sensitivity, and a qualified max sensitivity envelope of `0.044805097064529766`.
+WHAT_REMAINS_OPEN: The strict Ding numeric `C_src` or accepted same-regime reproduction, Ding TTG material/state mapping, source-grade uncertainty, `c_v` uncertainty, independent `alpha_Phi_K`, dimensional `Phi` map, and physical transport/KMS/entropy closure remain open.
+DEPENDENCY_UNLOCKED: Candidate equilibrium `C_src` component lane only; `full_core_unlock=false` and no downstream dependency is opened.
+STATUS: `PASS_SCOPED_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY` for the lane; canonical Full Topic 13 gate remains blocked.
+WHAT_CHANGED: Added the machine-readable component audit, full-gate scoped closure, register/dependency projection, wave note, and regression coverage. The strict Ding acceptance contract and holdout policy were not relaxed.
+EQUATION_OR_MAPPING: `C_src(T,V)=(partial u_ph/partial T)_V=V^-1 sum_mu c_mu(T,V)` and `Delta_Tq=Delta_u_ph/C_src(T,V)`; `Delta_Tq=alpha_Phi_K*Delta_Phi` remains open.
+VERIFICATION: Source hashes, units, positivity, fixed-volume identity, convergence, sensitivity separation, no-fit, and holdout isolation pass; the eight Full Topic 13 blockers remain machine-readable.
+CONTROLLING_BLOCKER: `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing`; `alpha_Phi_K` remains independently open.
+NEXT_ACTION: Obtain a permitted Ding-compatible numeric source or accepted same-regime PBTE reproduction with material/state mapping and source-grade uncertainty; do not use this component to calibrate `alpha_Phi_K`.
+CLAIM_BOUNDARY: Candidate equilibrium component only; not Ding validation, source-grade uncertainty closure, `alpha_Phi_K` calibration, prediction, transport validation, or Full Topic 13 closure.
 Machine-readable closure matrix: docs/core/artifacts/t13_topic13_closure_matrix.json. It reports nine major requirements separately and keeps full_core_unlock=false; it does not change the canonical readiness gate.
 
 Current hardening result: an action-derived natural-unit Phi-to-thermal bridge and non-Landauer natural beta slope are CLOSED_FOR_LANE. Full Topic 13 remains blocked by the physical Phi/SI anchor, independent alpha_Phi_K, source-backed c_v or Ding C_src, EOS/transport/KMS/entropy, and dimensional TTG gates. The natural fixed-(mu,Phi) C_epsilon_T is not relabeled as source c_v.

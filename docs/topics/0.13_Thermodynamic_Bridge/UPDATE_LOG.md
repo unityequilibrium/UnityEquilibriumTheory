@@ -3988,3 +3988,17 @@ CONTROLLING_BLOCKER: alpha_Phi_K_independent_calibration_missing; source and phy
 NEXT_ACTION: Obtain an independent paired base-Phi/SI record or declared dimensionful action-to-SI map, and pursue authorized Ding-compatible C_src evidence without reading Xie 2026.
 CLAIM_BOUNDARY: Reporting and structural no-go closure only; no original-baseline pass, alpha calibration, TTG prediction, physical transport proof, or Full Topic 13 closure.
 EVIDENCE_HASHES: full gate 4ab2383732085afca789a3125aa058ddfe98e753553d90e724640b8ec904cc50; matrix 011014e0c340a395144737da29009a68b181ebf774e19063d917e434183624d4; register 53d7b529e0d84ac6711f3a906078d78877838876acdbe35990ed178e3cfa1f47; dependency fc04db8df8f4549adf68bc956316c23cecc254fd3ad1db977824678371f2637f; gate source df123b7aa2df138689b252e23e574fb44a338bb189cc59a7f92b4d55aba29e99.
+### 2026-08-23 - Equilibrium C_src component acceptance
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for T13_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY.
+WHAT_IS_ACTUALLY_CLOSED: The candidate equilibrium C_src denominator, SI rows, fixed-volume identity, q-mesh tail, natural-isotope sensitivity, and qualified cross-model/state sensitivity envelope are now one machine-readable result. The 0.044805097064529766 global envelope is a max sensitivity bound, not a standard uncertainty.
+WHAT_REMAINS_OPEN: Strict Ding C_src acceptance, material/state mapping to the TTG regime, source-grade uncertainty, c_v uncertainty, and independent alpha_Phi_K remain open.
+DEPENDENCY_UNLOCKED: Equilibrium C_src component lane only; no Full Topic 13 or downstream unlock.
+STATUS: PASS_SCOPED_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY.
+WHAT_CHANGED: Added and verified the component audit; full gate, closure matrix, register, and dependency projection now expose the lane without changing the eight Full Topic 13 blockers.
+EQUATION_OR_MAPPING: C_src(T,V) = (partial u_ph / partial T)_V = V^-1 sum_mu c_mu(T,V); Delta_Tq = Delta_u_ph / C_src(T,V). No Phi or alpha calibration is inferred.
+VERIFICATION: Hash-linked source inputs, SI rows, fixed-volume identity, mesh convergence, sensitivity separation, no-fit, and holdout isolation pass.
+CONTROLLING_BLOCKER: ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing.
+NEXT_ACTION: Acquire a permitted Ding-compatible numeric source or accepted same-regime PBTE reproduction with source-grade uncertainty and material/state mapping.
+CLAIM_BOUNDARY: Component comparator only; not Ding validation, not source-grade uncertainty closure, not alpha_Phi_K, not prediction, and not Full Topic 13 closure.
+EVIDENCE_HASHES: component 44f6deeff3d968978f9f2b8faeb8eaaab724fd70018caea05f859fcfc8ad98c3; full gate 3a834ad7c42e6d99656fb9a9355e25fa3ff4b5426773768b49e6196edca4aa81; matrix bdf4ccbd1ebbdc2eca7ec963dacea1342941985d95c82306ee66e8ab9aa03c9d; register 51c6875377e211033f9a1349cdb0ad4b7e4178ef0186d922049d1afa197dd39d; dependency 4c529c60575c470a36dd70abcf6adceeeb1cb75d04412a3c2cbc0dcde2fde1d9.

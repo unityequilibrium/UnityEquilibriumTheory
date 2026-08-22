@@ -1240,3 +1240,17 @@ Artifact: `docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.jso
 The component contract composes the action-derived natural-unit normal EOS, formal SK/KMS/entropy/heat-flux interfaces, and the source-locked Kim 2018 directional Green-Kubo input. The external record carries source identity, locator, state, units `W m^-1 K^-1`, reported uncertainty, preprocessing boundary, and payload hash; it is `EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_CALIBRATION` and is not admitted as a UET Phi response or physical UET Kubo coefficient.
 
 The artifact reports `CLOSED_FOR_LANE` only. `alpha_Phi_K`, the Phi/SI map, Ding-compatible `C_src`, material/state matching, physical UET Kubo provenance, and Full Topic 13 closure remain open. Xie 2026 remains metadata-only and unconsumed.
+## Equilibrium C_src component acceptance (2026-08-23)
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for T13_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY.
+WHAT_IS_ACTUALLY_CLOSED: Candidate equilibrium C_src rows and qualified sensitivity reporting are hash-linked and separated from transport and Phi calibration.
+WHAT_REMAINS_OPEN: Ding source acceptance, material/state equivalence, source-grade uncertainty, alpha_Phi_K, and Full Topic 13 remain open.
+DEPENDENCY_UNLOCKED: Equilibrium C_src component lane only.
+STATUS: PASS_SCOPED_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY.
+WHAT_CHANGED: Added the component acceptance audit and full-gate/register/dependency projections.
+EQUATION_OR_MAPPING: C_src(T,V) = (partial u_ph / partial T)_V; Delta_Tq = Delta_u_ph / C_src(T,V).
+VERIFICATION: Source hashes, units, convergence, qualified sensitivity separation, no-fit, and no-holdout checks pass.
+CONTROLLING_BLOCKER: ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing.
+NEXT_ACTION: Obtain an authorized Ding numeric package or accepted same-regime PBTE reproduction with material/state mapping and source-grade uncertainty.
+CLAIM_BOUNDARY: Candidate component only; no Ding equivalence, alpha calibration, prediction, or Full Topic 13 closure.
+EVIDENCE_HASHES: component 44f6deeff3d968978f9f2b8faeb8eaaab724fd70018caea05f859fcfc8ad98c3; full gate 3a834ad7c42e6d99656fb9a9355e25fa3ff4b5426773768b49e6196edca4aa81; matrix bdf4ccbd1ebbdc2eca7ec963dacea1342941985d95c82306ee66e8ab9aa03c9d.

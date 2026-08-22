@@ -24,6 +24,7 @@ LANE_KEY_BY_ID["T13_DING_2017_ACS_SUPPLEMENTARY_PAYLOAD_BOUNDARY"] = "ding_2017_
 LANE_KEY_BY_ID["T13_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY"] = "ding_experimental_heating_input_boundary"
 LANE_KEY_BY_ID["T13_DING_C_SRC_FIXED_VOLUME_THERMODYNAMIC_IDENTITY"] = "ding_c_src_fixed_volume_identity"
 LANE_KEY_BY_ID["T13_MP48_DING_C_SRC_MODE_SUM_RESPONSE_MAPPING"] = "mp48_ding_csrc_response_mapping"
+LANE_KEY_BY_ID["T13_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY"] = "csrc_equilibrium_component_acceptance"
 LANE_KEY_BY_ID["T13_C_SRC_THERMODYNAMIC_TRANSPORT_REGIME_DECOMPOSITION"] = "csrc_thermodynamic_transport_regime_decomposition"
 LANE_KEY_BY_ID["T13_HUBERMAN_2019_PUBLIC_PBTE_BOUNDARY"] = "huberman_2019_public_pbte_boundary"
 LANE_KEY_BY_ID["T13_IAEA_GR280_SAME_STATE_CP_COMPARATOR"] = "iaea_gr280_same_state_cp_comparator"
@@ -355,6 +356,9 @@ def main() -> int:
     )
     calorine_isotope_path, calorine_isotope = load(
         "docs/core/artifacts/t13_calorine_isotope_mass_sensitivity_audit.json"
+    )
+    csrc_equilibrium_component_path, csrc_equilibrium_component = load(
+        "docs/core/artifacts/t13_csrc_equilibrium_component_acceptance_audit.json"
     )
     calorine_uncertainty_path, calorine_uncertainty = load(
         "docs/core/artifacts/t13_calorine_state_uncertainty_decomposition_audit.json"
@@ -833,6 +837,13 @@ def main() -> int:
                 "accepted_for_full_topic13": independent_reproduction_ready,
                 "controlling_blocker": independent_csrc_acceptance.get("controlling_blocker"),
             }),
+            evidence(rel(csrc_equilibrium_component_path), csrc_equilibrium_component, {
+                "status": csrc_equilibrium_component.get("status"),
+                "closure_level": csrc_equilibrium_component.get("major_result", {}).get("closure_level"),
+                "accepted_as_equilibrium_csrc_component": csrc_equilibrium_component.get("acceptance", {}).get("accepted_as_equilibrium_csrc_component"),
+                "accepted_for_full_topic13": csrc_equilibrium_component.get("acceptance", {}).get("accepted_for_full_topic13"),
+                "qualified_global_relative_sensitivity_bound": csrc_equilibrium_component.get("uncertainty", {}).get("qualified_global_relative_sensitivity_bound"),
+            }),
             evidence(rel(ding_payload_acceptance_path), ding_payload_acceptance, {
                 "status": ding_payload_acceptance.get("status"),
                 "payload_present": ding_payload_acceptance.get("payload_present"),
@@ -989,6 +1000,38 @@ def main() -> int:
         ] = independent_csrc_acceptance_lane
         artifact["verification_status"]["eos_transport_kms_entropy"].pop(
             "independent_csrc_acceptance_contract", None
+        )
+    csrc_equilibrium_component_lane = discovered_lane_integrations.get(
+        "csrc_equilibrium_component_acceptance"
+    )
+    if csrc_equilibrium_component_lane:
+        artifact["verification_status"]["source_package"][
+            "csrc_equilibrium_component_acceptance"
+        ] = csrc_equilibrium_component_lane
+        artifact["verification_status"]["eos_transport_kms_entropy"].pop(
+            "csrc_equilibrium_component_acceptance", None
+        )
+        scoped = artifact["major_result"].setdefault("scoped_lane_closures", [])
+        scoped[:] = [
+            item
+            for item in scoped
+            if item.get("major_result_id")
+            != "T13_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY"
+        ]
+        scoped.append(
+            {
+                "major_result_id": "T13_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY",
+                "closure_level": csrc_equilibrium_component_lane.get("closure_level"),
+                "what_is_closed": "Candidate equilibrium C_src component, SI rows, convergence, and qualified sensitivity envelope.",
+                "what_remains_open": [
+                    "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+                    "material_regime_mapping_to_TTG_not_closed",
+                    "c_v_source_uncertainty_not_closed",
+                    "alpha_Phi_K_independent_calibration_missing",
+                ],
+                "dependency_unlocked": "Equilibrium C_src component lane only; no Full Topic 13 or downstream unlock.",
+                "claim_boundary": csrc_equilibrium_component_lane.get("claim_boundary"),
+            }
         )
     calorine_candidate_lane = discovered_lane_integrations.get(
         "calorine_zenodo_nep_bte_candidate_boundary"

@@ -37,7 +37,7 @@
     "evidence_artifacts": [
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-        "sha256": "4ab2383732085afca789a3125aa058ddfe98e753553d90e724640b8ec904cc50",
+        "sha256": "3a834ad7c42e6d99656fb9a9355e25fa3ff4b5426773768b49e6196edca4aa81",
         "summary": {
           "role": "canonical full Topic 13 readiness gate",
           "status": "BLOCKED_OPEN_T13_FULL_BRIDGE"
@@ -260,11 +260,11 @@
         }
       },
       {
-        "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json",
-        "sha256": "5e4e0d42d6e70612eabce988b86ab10b628dea14d4270bf2364ad58f572d014b",
+        "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
+        "sha256": "a2fb52533d768697950c49722e24e5de0d9d3381c24be6c5bf2e23f88a8957e0",
         "summary": {
           "role": "gate-linked evidence",
-          "reported_sha256": "5e4e0d42d6e70612eabce988b86ab10b628dea14d4270bf2364ad58f572d014b"
+          "reported_sha256": "a2fb52533d768697950c49722e24e5de0d9d3381c24be6c5bf2e23f88a8957e0"
         }
       },
       {
@@ -276,27 +276,19 @@
         }
       },
       {
-        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_pbte_run_m442_summary.json",
-        "sha256": "968a8409739e05ee1453febca6ee9e82f7db5c32e8908e238208147201e0323c",
+        "path": "docs/core/artifacts/t13_csrc_equilibrium_component_acceptance_audit.json",
+        "sha256": "44f6deeff3d968978f9f2b8faeb8eaaab724fd70018caea05f859fcfc8ad98c3",
         "summary": {
           "role": "gate-linked evidence",
-          "reported_sha256": "968a8409739e05ee1453febca6ee9e82f7db5c32e8908e238208147201e0323c"
+          "reported_sha256": "44f6deeff3d968978f9f2b8faeb8eaaab724fd70018caea05f859fcfc8ad98c3"
         }
       },
       {
-        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_pbte_run_m663_summary.json",
-        "sha256": "f2e68303407e90adcd9a2665498c59f828e0b92e56f2f01e18471ffb9f14c40b",
+        "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json",
+        "sha256": "5e4e0d42d6e70612eabce988b86ab10b628dea14d4270bf2364ad58f572d014b",
         "summary": {
           "role": "gate-linked evidence",
-          "reported_sha256": "f2e68303407e90adcd9a2665498c59f828e0b92e56f2f01e18471ffb9f14c40b"
-        }
-      },
-      {
-        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_pbte_run_m884_summary.json",
-        "sha256": "7c7e046239505c9fe1f5a180c234f1d69c053e8344218ea806f418a373baf0d0",
-        "summary": {
-          "role": "gate-linked evidence",
-          "reported_sha256": "7c7e046239505c9fe1f5a180c234f1d69c053e8344218ea806f418a373baf0d0"
+          "reported_sha256": "5e4e0d42d6e70612eabce988b86ab10b628dea14d4270bf2364ad58f572d014b"
         }
       }
     ],
@@ -324,7 +316,7 @@
       "what_remains_open": "The original conserved-C full-candidate baseline remains blocked; the named branch does not replace it.",
       "dependency_unlocked": "Named causal branch only; no Full Topic 13 or downstream unlock.",
       "gate_status": "PASS",
-      "gate_controlling_blocker": "original_conserved_c_gradient_baseline_blocked",
+      "gate_controlling_blocker": null,
       "gate_lane_status": "PASS",
       "gate_lane_closure_level": "CLOSED_FOR_LANE",
       "component_lane_status": null,
@@ -828,11 +820,11 @@
           }
         },
         {
-          "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json",
-          "sha256": "5e4e0d42d6e70612eabce988b86ab10b628dea14d4270bf2364ad58f572d014b",
+          "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
+          "sha256": "a2fb52533d768697950c49722e24e5de0d9d3381c24be6c5bf2e23f88a8957e0",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "5e4e0d42d6e70612eabce988b86ab10b628dea14d4270bf2364ad58f572d014b"
+            "reported_sha256": "a2fb52533d768697950c49722e24e5de0d9d3381c24be6c5bf2e23f88a8957e0"
           }
         },
         {
@@ -844,34 +836,34 @@
           }
         },
         {
-          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_pbte_run_m442_summary.json",
-          "sha256": "968a8409739e05ee1453febca6ee9e82f7db5c32e8908e238208147201e0323c",
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_pbte_energy_temperature_source_package.json",
+          "sha256": "9f6b8d31ba2d7a6e56d6a323581bc6aecb91c6d0e61064d62a3972ee0e2c0d6f",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "968a8409739e05ee1453febca6ee9e82f7db5c32e8908e238208147201e0323c"
+            "reported_sha256": "9f6b8d31ba2d7a6e56d6a323581bc6aecb91c6d0e61064d62a3972ee0e2c0d6f"
           }
         },
         {
-          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_pbte_run_m663_summary.json",
-          "sha256": "f2e68303407e90adcd9a2665498c59f828e0b92e56f2f01e18471ffb9f14c40b",
+          "path": "docs/core/artifacts/t13_csrc_equilibrium_component_acceptance_audit.json",
+          "sha256": "44f6deeff3d968978f9f2b8faeb8eaaab724fd70018caea05f859fcfc8ad98c3",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "f2e68303407e90adcd9a2665498c59f828e0b92e56f2f01e18471ffb9f14c40b"
+            "reported_sha256": "44f6deeff3d968978f9f2b8faeb8eaaab724fd70018caea05f859fcfc8ad98c3"
           }
         },
         {
-          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_pbte_run_m884_summary.json",
-          "sha256": "7c7e046239505c9fe1f5a180c234f1d69c053e8344218ea806f418a373baf0d0",
+          "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json",
+          "sha256": "5e4e0d42d6e70612eabce988b86ab10b628dea14d4270bf2364ad58f572d014b",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "7c7e046239505c9fe1f5a180c234f1d69c053e8344218ea806f418a373baf0d0"
+            "reported_sha256": "5e4e0d42d6e70612eabce988b86ab10b628dea14d4270bf2364ad58f572d014b"
           }
         }
       ]
     }
   ],
   "closure_summary": {
-    "closed_lane_count": 189,
+    "closed_lane_count": 190,
     "closed_as_no_go_count": 16,
     "open_blocker_count": 8,
     "open_blocker_groups": {
@@ -895,7 +887,7 @@
   },
   "canonical_gate": {
     "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-    "sha256": "4ab2383732085afca789a3125aa058ddfe98e753553d90e724640b8ec904cc50",
+    "sha256": "3a834ad7c42e6d99656fb9a9355e25fa3ff4b5426773768b49e6196edca4aa81",
     "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
     "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
   },

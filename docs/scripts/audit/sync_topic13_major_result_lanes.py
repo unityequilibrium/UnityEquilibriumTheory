@@ -52,6 +52,7 @@ LANES = (
     ("T13_INDEPENDENT_C_SRC_ACCEPTANCE_CONTRACT", "independent_csrc_acceptance_contract"),
     ("T13_DING_C_SRC_FIXED_VOLUME_THERMODYNAMIC_IDENTITY", "ding_c_src_fixed_volume_identity"),
     ("T13_C_SRC_THERMODYNAMIC_TRANSPORT_REGIME_DECOMPOSITION", "csrc_thermodynamic_transport_regime_decomposition"),
+    ("T13_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY", "csrc_equilibrium_component_acceptance"),
     ("T13_CALORINE_ZENODO_NEP_BTE_NUMERIC_REPRODUCTION", "calorine_zenodo_nep_bte_numeric_reproduction"),
     ("T13_CALORINE_FULL_LBTE_NUMERICAL_STABILITY_BOUNDARY", "calorine_full_lbte_numerical_stability_boundary"),
     ("T13_UET_O2_CONSERVATIVE_CONTINUUM_COLLOCATION_LANE", "uet_o2_conservative_continuum_collocation_lane"),
