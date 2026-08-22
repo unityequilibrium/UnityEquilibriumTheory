@@ -1122,3 +1122,29 @@ NEXT_ACTION: Seek a permitted same-state source with uncertainty and Ding-regime
 CLAIM_BOUNDARY: Source-provenance boundary only; not numeric `C_v`, Ding `C_src`, alpha calibration, temperature prediction, physical transport, external validation, or Full Topic 13 closure.
 
 EVIDENCE_PATHS: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/day_2012_preferred_thermodynamic_table_source_package.json`; `docs/core/artifacts/t13_day2012_preferred_thermodynamic_table_boundary_audit.json`; `docs/scripts/audit/audit_topic13_day2012_preferred_thermodynamic_table.py`.
+
+## T13-163 - Kim 2018 Green-Kubo external input
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE; source-locked external standard-physics transport input only.
+
+WHAT_IS_ACTUALLY_CLOSED: Two 300 K pristine-graphite directional conductivity rows with source-reported uncertainties, method/convergence metadata, source locators, and canonical transcription hash.
+
+WHAT_REMAINS_OPEN: UET Phi/space-response mapping, Ding TTG material equivalence, raw correlator archive, physical UET Kubo coefficient, and independent alpha_Phi_K.
+
+DEPENDENCY_UNLOCKED: None beyond the external comparator/input lane.
+
+STATUS: PASS_SCOPED_SOURCE_LOCKED_EXTERNAL_GREEN_KUBO_INPUT.
+
+WHAT_CHANGED: Added kim_2018_graphite_green_kubo_source_package.json with locator, units, state, uncertainty, preprocessing boundary, row identity, hash, and holdout policy.
+
+EQUATION_OR_MAPPING: Green-Kubo directional lattice transport relation; no Phi -> kappa mapping.
+
+VERIFICATION: Package hash e3282c72a48883b25fc5dcb248ff840cbe7de08a3be2057bf01754c245ca472f; source transcription hash e33f0750db2f5bf16fc24a2cd8e84437f17cd77a3dfba3a5a9e63a2074f930c8; no target/holdout input.
+
+CONTROLLING_BLOCKER: UET_space_response_and_base_Phi_mapping_missing.
+
+NEXT_ACTION: Obtain the missing UET response-state map; do not relabel this comparator as Ding C_src or UET Phi.
+
+CLAIM_BOUNDARY: External transport-input evidence only; not UET calibration or Full Topic 13 closure.
+
+EVIDENCE: docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/kim_2018_graphite_green_kubo_source_package.json.

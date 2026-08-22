@@ -94,6 +94,7 @@
       "fixed-prescription Ward-preserving auxiliary-field condensed lane is closed for lane; microscopic 2PI/controlled 1/N matching, physical EOS, Kubo/SK-KMS, SI, alpha, and external validation remain open",
       "equilibrium O(2) KMS/FDT identity lane is closed without promoting it to interacting SK, dissipative transport, physical Kubo, SI, or alpha",
       "public graphite/graphene Green-Kubo source boundary is closed as comparator evidence without UET space-response, Ding state, physical Kubo, or alpha promotion",
+      "Kim 2018 pristine-graphite Green-Kubo coefficient is source-locked as an external standard-physics transport input; UET Phi mapping, Ding state matching, and physical UET Kubo promotion remain open",
       "formal open-system SK/KMS, FDT, retardedness, and entropy-positivity lane is closed without promoting formal gamma/noise to physical Kubo, SI, alpha, or TTG evidence",
       "transport/KMS/entropy structural and formal status boundary is closed for lane; physical Kubo, finite-temperature normal sector, dimensional Phi map, and curved 3+1 transport remain open",
       "IAEA Table 4.11 uncertainty-grade volumetric c_v route is closed as a scoped no-go; probable error is not promoted to c_v uncertainty",
@@ -353,7 +354,7 @@
       }
     ],
     "closure_summary": {
-      "closed_lane_count": 182,
+      "closed_lane_count": 183,
       "closed_as_no_go_count": 16,
       "closed_lane_result_ids": [
         "T13_AIST_GRAPHITE_SOURCE_ROUTE_BOUNDARY",
@@ -421,6 +422,7 @@
         "T13_IAEA_GRAPHITE_TABLE_CV_COMPARATOR",
         "T13_INDEPENDENT_C_SRC_ACCEPTANCE_CONTRACT",
         "T13_JUN_FINAL_SOURCE_BOUNDARY",
+        "T13_KIM_2018_GRAPHITE_GREEN_KUBO_EXTERNAL_INPUT",
         "T13_MP48_FORCE_CONSTANT_C_SRC_MESH_CONVERGENCE",
         "T13_MP48_FORCE_CONSTANT_HARMONIC_RECONSTRUCTION",
         "T13_MP48_INDEPENDENT_GRAPHITE_CV_REPRODUCTION",
@@ -75763,6 +75765,90 @@
           "alpha_Phi_K_independent_calibration_missing",
           "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
         ]
+      },
+      "kim_2018_graphite_green_kubo_external_input": {
+        "status": "PASS_SCOPED_SOURCE_LOCKED_EXTERNAL_GREEN_KUBO_INPUT",
+        "source": {
+          "source_id": "kim_2018_pristine_graphite_green_kubo",
+          "doi": "10.1063/1.5031147",
+          "source_payload_sha256": "e33f0750db2f5bf16fc24a2cd8e84437f17cd77a3dfba3a5a9e63a2074f930c8",
+          "payload_hash_matches_declared": true,
+          "payload_state": "LIMITED_NUMERIC_TRANSCRIPTION_FROM_PUBLIC_ARTICLE_LOCATOR",
+          "material_regime_status": "EXTERNAL_STANDARD_TRANSPORT_INPUT_NOT_DING_TTG_EQUIVALENCE"
+        },
+        "coefficient_rows": [
+          {
+            "row_id": "kim2018_pristine_graphite_c_axis_300K",
+            "coefficient_name": "thermal_conductivity_c_axis",
+            "direction": "c_axis",
+            "value": 7.9,
+            "uncertainty": 0.9,
+            "uncertainty_type": "source_reported_plus_minus",
+            "units": "W m^-1 K^-1"
+          },
+          {
+            "row_id": "kim2018_pristine_graphite_basal_plane_300K",
+            "coefficient_name": "thermal_conductivity_basal_plane",
+            "direction": "basal_plane",
+            "value": 1435.0,
+            "uncertainty": 153.0,
+            "uncertainty_type": "source_reported_plus_minus",
+            "units": "W m^-1 K^-1"
+          }
+        ],
+        "checks": {
+          "source_identity_and_doi_present": true,
+          "publisher_and_public_locator_present": true,
+          "method_formula_locator_present": true,
+          "uncertainty_formula_locator_present": true,
+          "state_temperature_present": true,
+          "material_and_geometry_present": true,
+          "trajectory_and_convergence_metadata_present": true,
+          "coefficient_rows_have_identity_units_uncertainty": true,
+          "coefficient_rows_are_directionally_distinct": true,
+          "source_hash_matches_payload": true,
+          "external_input_not_uet_relabelled": true,
+          "no_ding_or_alpha_promotion": true,
+          "holdout_untouched": true,
+          "no_fit_or_threshold_change": true
+        },
+        "acceptance": {
+          "accepted_for_external_transport_input": true,
+          "accepted_for_uet_physical_kubo_coefficient": false,
+          "accepted_for_ding_C_src": false,
+          "accepted_for_alpha_Phi_K_calibration": false,
+          "accepted_for_full_topic13": false,
+          "uet_space_response_state_present": false,
+          "base_Phi_amplitude_present": false,
+          "source_grade_raw_correlator_present": false
+        },
+        "holdout_policy": {
+          "xie_2026_accessed": false,
+          "xie_2026_source_data_consumed": false,
+          "calibration_path_may_read_holdout": false,
+          "target_curve_used": false,
+          "fit_performed": false,
+          "alpha_Phi_K_fit_used": false,
+          "threshold_changed": false
+        },
+        "controlling_blocker": "UET_space_response_and_base_Phi_mapping_missing",
+        "next_controller": "derive or independently source-lock a UET space-response/Phi map; retain Kim 2018 only as an external standard-physics transport input until that mapping exists",
+        "claim_boundary": "This package closes only a source-locked standard-physics Green-Kubo transport-input lane. It does not identify the coefficient with UET Phi response, does not provide Ding mode-resolved C_src, does not calibrate alpha_Phi_K, and does not close Full Topic 13.",
+        "major_result_id": "T13_KIM_2018_GRAPHITE_GREEN_KUBO_EXTERNAL_INPUT",
+        "closure_level": "CLOSED_FOR_LANE",
+        "data_role": "EXTERNAL_INPUT_COMPARATOR_NOT_UET_CALIBRATION",
+        "audit": {
+          "path": "docs/core/artifacts/t13_kim_2018_graphite_green_kubo_external_input_audit.json",
+          "sha256": "13b2b2c677d2d4d0e1035df99b9b6ae40619040caa976f71baf1d406bb25b208",
+          "summary": {
+            "status": "PASS_SCOPED_SOURCE_LOCKED_EXTERNAL_GREEN_KUBO_INPUT",
+            "major_result_id": "T13_KIM_2018_GRAPHITE_GREEN_KUBO_EXTERNAL_INPUT",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        },
+        "open_blockers": [
+          "UET_space_response_and_base_Phi_mapping_missing"
+        ]
       }
     },
     "dimensional_observable_map": {
@@ -77785,6 +77871,28 @@
         "data_role": "EXTERNAL_GREEN_KUBO_COMPARATOR_SOURCE_BOUNDARY_NOT_UET_COEFFICIENT",
         "failed_checks": [],
         "controlling_blocker": "physical_Kubo_coefficient_record_missing"
+      }
+    },
+    {
+      "path": "docs/core/artifacts/t13_kim_2018_graphite_green_kubo_external_input_audit.json",
+      "sha256": "13b2b2c677d2d4d0e1035df99b9b6ae40619040caa976f71baf1d406bb25b208",
+      "summary": {
+        "status": "PASS_SCOPED_SOURCE_LOCKED_EXTERNAL_GREEN_KUBO_INPUT",
+        "closure_level": "CLOSED_FOR_LANE",
+        "data_role": "EXTERNAL_INPUT_COMPARATOR_NOT_UET_CALIBRATION",
+        "source_payload_sha256": "e33f0750db2f5bf16fc24a2cd8e84437f17cd77a3dfba3a5a9e63a2074f930c8",
+        "accepted_for_uet_physical_kubo_coefficient": false,
+        "controlling_blocker": "UET_space_response_and_base_Phi_mapping_missing"
+      }
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/kim_2018_graphite_green_kubo_source_package.json",
+      "sha256": "e3282c72a48883b25fc5dcb248ff840cbe7de08a3be2057bf01754c245ca472f",
+      "summary": {
+        "status": "SOURCE_LOCKED_EXTERNAL_GREEN_KUBO_INPUT_NOT_UET_MAPPING",
+        "source_payload_sha256": "e33f0750db2f5bf16fc24a2cd8e84437f17cd77a3dfba3a5a9e63a2074f930c8",
+        "accepted_for_external_transport_input": true,
+        "accepted_for_uet_physical_kubo_coefficient": false
       }
     },
     {

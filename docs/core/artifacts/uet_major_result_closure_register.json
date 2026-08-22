@@ -130,6 +130,7 @@
         "fixed-prescription Ward-preserving auxiliary-field condensed lane is closed for lane; microscopic 2PI/controlled 1/N matching, physical EOS, Kubo/SK-KMS, SI, alpha, and external validation remain open",
         "equilibrium O(2) KMS/FDT identity lane is closed without promoting it to interacting SK, dissipative transport, physical Kubo, SI, or alpha",
         "public graphite/graphene Green-Kubo source boundary is closed as comparator evidence without UET space-response, Ding state, physical Kubo, or alpha promotion",
+        "Kim 2018 pristine-graphite Green-Kubo coefficient is source-locked as an external standard-physics transport input; UET Phi mapping, Ding state matching, and physical UET Kubo promotion remain open",
         "formal open-system SK/KMS, FDT, retardedness, and entropy-positivity lane is closed without promoting formal gamma/noise to physical Kubo, SI, alpha, or TTG evidence",
         "transport/KMS/entropy structural and formal status boundary is closed for lane; physical Kubo, finite-temperature normal sector, dimensional Phi map, and curved 3+1 transport remain open",
         "IAEA Table 4.11 uncertainty-grade volumetric c_v route is closed as a scoped no-go; probable error is not promoted to c_v uncertainty",
@@ -211,7 +212,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "0981e9b3e3819b05780d231a187ccce3aedeaaf3dddcdf79d1f07f4071841b5e",
+          "sha256": "192bf678aa95ccdfcde21e14a476362066b9b2f8b57994ec964da3ca9dd14e8e",
           "summary": {
             "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
             "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
@@ -865,6 +866,28 @@
           }
         },
         {
+          "path": "docs/core/artifacts/t13_kim_2018_graphite_green_kubo_external_input_audit.json",
+          "sha256": "13b2b2c677d2d4d0e1035df99b9b6ae40619040caa976f71baf1d406bb25b208",
+          "summary": {
+            "status": "PASS_SCOPED_SOURCE_LOCKED_EXTERNAL_GREEN_KUBO_INPUT",
+            "closure_level": "CLOSED_FOR_LANE",
+            "data_role": "EXTERNAL_INPUT_COMPARATOR_NOT_UET_CALIBRATION",
+            "source_payload_sha256": "e33f0750db2f5bf16fc24a2cd8e84437f17cd77a3dfba3a5a9e63a2074f930c8",
+            "accepted_for_uet_physical_kubo_coefficient": false,
+            "controlling_blocker": "UET_space_response_and_base_Phi_mapping_missing"
+          }
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/kim_2018_graphite_green_kubo_source_package.json",
+          "sha256": "e3282c72a48883b25fc5dcb248ff840cbe7de08a3be2057bf01754c245ca472f",
+          "summary": {
+            "status": "SOURCE_LOCKED_EXTERNAL_GREEN_KUBO_INPUT_NOT_UET_MAPPING",
+            "source_payload_sha256": "e33f0750db2f5bf16fc24a2cd8e84437f17cd77a3dfba3a5a9e63a2074f930c8",
+            "accepted_for_external_transport_input": true,
+            "accepted_for_uet_physical_kubo_coefficient": false
+          }
+        },
+        {
           "path": "docs/core/artifacts/t13_iaea_graphite_constant_volume_source_audit.json",
           "sha256": "1af3c1c9e81a44b6837cad8d47651f92e167f613743a667e8d3c823cdaaf213c",
           "summary": {
@@ -1495,7 +1518,7 @@
       "dependency_unlocked": "Gravity/GR remains blocked until this full bridge and Core curved 3+1 gates pass",
       "claim_boundary": "Full Topic 13 is not Core-ready; current evidence supports normalized/internal controls and constraint exports only. No temperature prediction, external validation, or global UET closure is claimed.",
       "closure_summary": {
-        "closed_lane_count": 182,
+        "closed_lane_count": 183,
         "closed_as_no_go_count": 16,
         "closed_lane_result_ids": [
           "T13_AIST_GRAPHITE_SOURCE_ROUTE_BOUNDARY",
@@ -1563,6 +1586,7 @@
           "T13_IAEA_GRAPHITE_TABLE_CV_COMPARATOR",
           "T13_INDEPENDENT_C_SRC_ACCEPTANCE_CONTRACT",
           "T13_JUN_FINAL_SOURCE_BOUNDARY",
+          "T13_KIM_2018_GRAPHITE_GREEN_KUBO_EXTERNAL_INPUT",
           "T13_MP48_FORCE_CONSTANT_C_SRC_MESH_CONVERGENCE",
           "T13_MP48_FORCE_CONSTANT_HARMONIC_RECONSTRUCTION",
           "T13_MP48_INDEPENDENT_GRAPHITE_CV_REPRODUCTION",
@@ -4793,6 +4817,48 @@
       ],
       "dependency_unlocked": "Jun final-source identity lane only; no Landauer dataset, alpha_Phi_K, Full Topic 13, Core, Gravity, or transport dependency is unlocked.",
       "claim_boundary": "The final Jun paper identity and local PDF provenance are closed for lane. This does not close a machine-readable numeric row package, source-grade uncertainty, alpha_Phi_K, the UET bridge, TTG validation, or external validation."
+    },
+    {
+      "major_result_id": "T13_KIM_2018_GRAPHITE_GREEN_KUBO_EXTERNAL_INPUT",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "closure_level": "CLOSED_FOR_LANE",
+      "what_is_closed": [
+        "Kim 2018 pristine-graphite Green-Kubo source identity and method locators are source-locked in a bounded transcription package",
+        "directional 300 K conductivity rows retain source-reported uncertainty and row identity",
+        "integration-time, trajectory-ensemble, and half-timestep convergence disclosures are machine-readable",
+        "the coefficient is admitted only as an external standard-physics transport input, not as a UET Phi coefficient"
+      ],
+      "equation_or_mapping": {
+        "green_kubo": "kappa_i(tau) = V/(k_B*T^2) * integral_0^tau [<J_i(s)J_i(0)>/<J_i(0)J_i(0)>] ds",
+        "external_record": "KuboCoefficientRecord_external -> directional lattice transport comparator only",
+        "uet_mapping": "not emitted: Phi response and base-Phi amplitude remain open"
+      },
+      "units": {
+        "coefficient": "W m^-1 K^-1",
+        "temperature": "K",
+        "space_response": "directional heat-current response; no normalized UET Phi unit",
+        "source_hash": "SHA-256 of canonical local transcription payload"
+      },
+      "derivation_class": "source-locked external Green-Kubo transcription; no UET derivation",
+      "observable": "standard-physics directional graphite thermal conductivity",
+      "data_role": "EXTERNAL_INPUT_COMPARATOR_NOT_UET_CALIBRATION",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_kim_2018_graphite_green_kubo_external_input_audit.json",
+          "sha256": "13b2b2c677d2d4d0e1035df99b9b6ae40619040caa976f71baf1d406bb25b208",
+          "summary": {
+            "status": "PASS_SCOPED_SOURCE_LOCKED_EXTERNAL_GREEN_KUBO_INPUT",
+            "major_result_id": "T13_KIM_2018_GRAPHITE_GREEN_KUBO_EXTERNAL_INPUT",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_SCOPED_SOURCE_LOCKED_EXTERNAL_GREEN_KUBO_INPUT",
+      "open_blockers": [
+        "UET_space_response_and_base_Phi_mapping_missing"
+      ],
+      "dependency_unlocked": "external standard-physics transport-input lane only; no UET physical transport, alpha, Ding C_src, Core, Gravity, or Full Topic 13 dependency unlock",
+      "claim_boundary": "This package closes only a source-locked standard-physics Green-Kubo transport-input lane. It does not identify the coefficient with UET Phi response, does not provide Ding mode-resolved C_src, does not calibrate alpha_Phi_K, and does not close Full Topic 13."
     },
     {
       "major_result_id": "T13_MP48_FORCE_CONSTANT_C_SRC_MESH_CONVERGENCE",

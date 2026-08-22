@@ -1,0 +1,113 @@
+{
+  "schema_version": "t13-kim2018-graphite-green-kubo-external-input-v1",
+  "artifact": "kim_2018_graphite_green_kubo_source_package",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "created_on": "2026-08-22",
+  "status": "SOURCE_LOCKED_EXTERNAL_GREEN_KUBO_INPUT_NOT_UET_MAPPING",
+  "source": {
+    "source_id": "kim_2018_pristine_graphite_green_kubo",
+    "title": "Disorder enhanced thermal conductivity anisotropy in two-dimensional materials and van der Waals heterostructures",
+    "authors": [
+      "Kyunghoon Kim",
+      "Jixiong He",
+      "Banu Ganeshan",
+      "Jun Liu"
+    ],
+    "journal": "Journal of Applied Physics",
+    "volume_issue_article": "124(5), 055104",
+    "publication_year": 2018,
+    "doi": "10.1063/1.5031147",
+    "publisher_locator": "https://doi.org/10.1063/1.5031147",
+    "public_text_locator": "https://www.researchgate.net/publication/326883391_Disorder_enhanced_thermal_conductivity_anisotropy_in_two-dimensional_materials_and_van_der_Waals_heterostructures",
+    "source_locator": "Eq. (2), Eq. (3), Sec. III.A, and Fig. 2 in the author-posted article text",
+    "retrieved_on": "2026-08-22",
+    "license_or_terms": "Published article; this package stores a limited numeric transcription and method locator, not a redistributed full-text copy",
+    "payload_state": "LIMITED_NUMERIC_TRANSCRIPTION_FROM_PUBLIC_ARTICLE_LOCATOR",
+    "material_label": "pristine graphite model at 300 K; Tersoff intralayer and Lennard-Jones interlayer interactions",
+    "material_regime_status": "EXTERNAL_STANDARD_TRANSPORT_INPUT_NOT_DING_TTG_EQUIVALENCE",
+    "source_payload_sha256": "e33f0750db2f5bf16fc24a2cd8e84437f17cd77a3dfba3a5a9e63a2074f930c8"
+  },
+  "source_payload": {
+    "source_id": "kim_2018_pristine_graphite_green_kubo",
+    "doi": "10.1063/1.5031147",
+    "formula_locator": "Eq. (2)",
+    "green_kubo_formula": "kappa_i(tau) = V/(k_B*T^2) * integral_0^tau [<J_i(s)J_i(0)>/<J_i(0)J_i(0)>] ds",
+    "uncertainty_formula_locator": "Eq. (3)",
+    "state": {
+      "temperature_K": 300.0,
+      "chemical_potential": null,
+      "chemical_potential_status": "NOT_APPLICABLE_TO_LATTICE_GRAPHITE_SOURCE",
+      "material": "pristine graphite",
+      "model_cell_conventional_units": [14, 8, 8],
+      "base_timestep_fs": 1.0,
+      "nve_time_ns": 10.0,
+      "minimum_trajectory_count": 10,
+      "heat_flux_response": "lattice heat-current response to a directional temperature gradient"
+    },
+    "coefficient_rows": [
+      {
+        "row_id": "kim2018_pristine_graphite_c_axis_300K",
+        "coefficient_name": "thermal_conductivity_c_axis",
+        "direction": "c_axis",
+        "value": 7.9,
+        "uncertainty": 0.9,
+        "uncertainty_type": "source_reported_plus_minus",
+        "units": "W m^-1 K^-1"
+      },
+      {
+        "row_id": "kim2018_pristine_graphite_basal_plane_300K",
+        "coefficient_name": "thermal_conductivity_basal_plane",
+        "direction": "basal_plane",
+        "value": 1435.0,
+        "uncertainty": 153.0,
+        "uncertainty_type": "source_reported_plus_minus",
+        "units": "W m^-1 K^-1"
+      }
+    ],
+    "convergence_evidence": {
+      "integration_time_convergence_reported": true,
+      "trajectory_ensemble_reported": true,
+      "half_timestep_comparison_reported": true,
+      "half_timestep_relative_difference_bound": 0.04,
+      "raw_correlator_payload_archived": false,
+      "source_grade_uncertainty_is_reproduced": false
+    }
+  },
+  "transport_record_contract": {
+    "coefficient_name": "directional lattice thermal conductivity",
+    "value_units": "W m^-1 K^-1",
+    "hydrodynamic_frame": "material_rest_frame_lattice_transport; Landau-frame identification not asserted",
+    "temperature": "300 K",
+    "chemical_potential": "not applicable to the lattice source",
+    "space_response": "directional heat-current response; c-axis or basal-plane direction",
+    "correlator_formula_id": "KIM2018_EQ2_NORMALIZED_HCACF_GREEN_KUBO",
+    "evidence_status": "SOURCE_LOCKED_EXTERNAL_COMPARATOR",
+    "source_hash_scope": "hash of the canonical local transcription payload, not a hash of a redistributed full-text source"
+  },
+  "acceptance": {
+    "accepted_for_external_transport_input": true,
+    "accepted_for_uet_physical_kubo_coefficient": false,
+    "accepted_for_ding_C_src": false,
+    "accepted_for_alpha_Phi_K_calibration": false,
+    "accepted_for_full_topic13": false,
+    "uet_space_response_state_present": false,
+    "base_Phi_amplitude_present": false,
+    "source_grade_raw_correlator_present": false
+  },
+  "ontology": {
+    "C": "collective system-behaviour coordinate; not mass",
+    "Phi": "effective response variable; not metric, particle, or information field",
+    "R_gen": "derived physical/history trace; not an independent state",
+    "R_obs": "observer record kept separate from physical dynamics"
+  },
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "xie_2026_source_data_consumed": false,
+    "calibration_path_may_read_holdout": false,
+    "target_curve_used": false,
+    "fit_performed": false,
+    "alpha_Phi_K_fit_used": false,
+    "threshold_changed": false
+  },
+  "claim_boundary": "This package closes only a source-locked standard-physics Green-Kubo transport-input lane. It does not identify the coefficient with UET Phi response, does not provide Ding mode-resolved C_src, does not calibrate alpha_Phi_K, and does not close Full Topic 13."
+}

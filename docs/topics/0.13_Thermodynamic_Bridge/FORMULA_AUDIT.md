@@ -1429,3 +1429,29 @@ NEXT_ACTION: Acquire a permitted same-state alpha_V/K_T record with units, uncer
 CLAIM_BOUNDARY: Source-compatibility evidence only; not a numeric Cp-to-Cv correction, Ding `C_src`, independent `alpha_Phi_K`, TTG prediction, physical transport, external validation, or Full Topic 13 closure.
 
 EVIDENCE: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/day_2012_preferred_thermodynamic_table_source_package.json`; `docs/core/artifacts/t13_day2012_preferred_thermodynamic_table_boundary_audit.json`; `docs/scripts/audit/audit_topic13_day2012_preferred_thermodynamic_table.py`.
+
+## T13-163 - Kim 2018 external Green-Kubo input
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for T13_KIM_2018_GRAPHITE_GREEN_KUBO_EXTERNAL_INPUT; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.
+
+WHAT_IS_ACTUALLY_CLOSED: The public source locator, Eq. (2) Green-Kubo relation, Eq. (3) uncertainty locator, 300 K pristine-graphite c-axis and basal-plane rows, convergence metadata, and canonical source-transcription hash are recorded.
+
+WHAT_REMAINS_OPEN: No UET Phi space-response state, base-Phi amplitude, Ding material equivalence, raw correlator payload, or physical UET Kubo promotion is available.
+
+DEPENDENCY_UNLOCKED: External standard-physics transport-input lane only.
+
+STATUS: PASS_SCOPED_SOURCE_LOCKED_EXTERNAL_GREEN_KUBO_INPUT.
+
+WHAT_CHANGED: Added the bounded source package and audit. The record is explicitly external comparator/input evidence, not UET derivation or alpha calibration.
+
+EQUATION_OR_MAPPING: kappa_i(tau) = V/(k_B*T^2) * integral [<J_i(s)J_i(0)>/<J_i(0)J_i(0)>] ds; source rows are 7.9 +/- 0.9 W m^-1 K^-1 for c-axis and 1435 +/- 153 W m^-1 K^-1 for basal plane at 300 K.
+
+VERIFICATION: Audit checks pass; source_payload_sha256=e33f0750db2f5bf16fc24a2cd8e84437f17cd77a3dfba3a5a9e63a2074f930c8; no fit or holdout access.
+
+CONTROLLING_BLOCKER: UET_space_response_and_base_Phi_mapping_missing.
+
+NEXT_ACTION: Find a source-locked UET space-response/Phi map or keep this record as a comparator.
+
+CLAIM_BOUNDARY: Standard-physics external transport input only; not physical UET Kubo, alpha_Phi_K, Ding C_src, or Full Topic 13 closure.
+
+EVIDENCE: package e3282c72a48883b25fc5dcb248ff840cbe7de08a3be2057bf01754c245ca472f; audit 13b2b2c677d2d4d0e1035df99b9b6ae40619040caa976f71baf1d406bb25b208; verifier da42657918ef109ad4130e7fa579c534d3016cfe8b7457d8f14a38d66a78f1f0; full gate 192bf678aa95ccdfcde21e14a476362066b9b2f8b57994ec964da3ca9dd14e8e.

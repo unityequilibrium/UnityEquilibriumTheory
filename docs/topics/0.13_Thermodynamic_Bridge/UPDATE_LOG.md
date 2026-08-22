@@ -3746,3 +3746,31 @@ CLAIM_BOUNDARY: Source-compatibility evidence only; not numeric c_v, Ding C_src,
 EVIDENCE_PATHS: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/day_2012_preferred_thermodynamic_table_source_package.json`; `docs/core/artifacts/t13_day2012_preferred_thermodynamic_table_boundary_audit.json`; `docs/scripts/audit/audit_topic13_day2012_preferred_thermodynamic_table.py`; `docs/scripts/audit/audit_topic13_full_bridge_gate.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/artifacts/uet_major_result_closure_register.json`; `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`.
 
 EVIDENCE_HASHES: package `315ac434db3025808a982eae86ed031c182e19b8957b50f557058c6e407f0367`; route audit `7880c5ed31264cbc6ff93ad4205e13c8ee6bd4e0fc71844a0c85701a5a137159`; route verifier `fada4828ec7b11157ca1099dc55e8419ae625d1f94ef5d30e0937504804b3619`; full-gate code `419d54d7486b950becd047b10cdc426eb21b21460b4c9db71cabf9678d24c941`; full gate `0981e9b3e3819b05780d231a187ccce3aedeaaf3dddcdf79d1f07f4071841b5e`; closure register `d6d789d1e66526ac2b89b360ec15916bb0e2cb3e13c259511438163ffd333c87`; dependency `638035820ec426815c751ddc5b4f1b2be5bda08dd28e10f9ba6582a9e5ad50f9`.
+
+## 2026-08-22 - Kim 2018 external Green-Kubo input (T13-163)
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for T13_KIM_2018_GRAPHITE_GREEN_KUBO_EXTERNAL_INPUT; Full Topic 13 remains PARTIAL / BLOCKED_OPEN_T13_FULL_BRIDGE.
+
+WHAT_IS_ACTUALLY_CLOSED: The Kim 2018 public source identity, Green-Kubo method and uncertainty locators, 300 K pristine-graphite directional rows, convergence metadata, canonical transcription hash, and external-input claim boundary are now machine-readable.
+
+WHAT_REMAINS_OPEN: The source does not provide UET Phi or normalized space-response amplitude, Ding TTG state equivalence, raw correlator payload, or an independent alpha_Phi_K. The full gate remains at 9 open blocker groups.
+
+DEPENDENCY_UNLOCKED: External standard-physics transport-input lane only. No physical UET transport, Ding C_src, alpha, Core, Gravity, or Full Topic 13 unlock.
+
+STATUS: PASS_SCOPED_SOURCE_LOCKED_EXTERNAL_GREEN_KUBO_INPUT; full gate BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL; holdout_consumed=false; claim_promotion=false.
+
+WHAT_CHANGED: Added the source package, audit artifact, focused regression, full-gate lane/evidence projection, and closure/dependency regeneration. The coefficient is not relabelled as UET Phi response and no holdout/fit/threshold operation was used.
+
+EQUATION_OR_MAPPING: Standard Green-Kubo directional lattice transport relation with source rows 7.9 +/- 0.9 W m^-1 K^-1 (c-axis) and 1435 +/- 153 W m^-1 K^-1 (basal plane) at 300 K. No UET Phi mapping is emitted.
+
+VERIFICATION: Kim audit PASS; focused regression 2 passed; full gate rerun preserves the 9 open blocker groups; closure register has 191 entries; downstream dependency gate remains blocked.
+
+CONTROLLING_BLOCKER: UET_space_response_and_base_Phi_mapping_missing for the new lane; the nearest full-topic controllers remain independent alpha_Phi_K, Ding-compatible C_src, and dimensional SI closure.
+
+NEXT_ACTION: Search for an admissible UET response-state/Phi normalization record or derive it from a declared dimensionful action without fitting TTG and without reading Xie 2026.
+
+CLAIM_BOUNDARY: Source-locked external standard-physics transport input only; not physical UET Kubo, Ding C_src, alpha calibration, TTG prediction, external validation, or Full Topic 13 closure.
+
+EVIDENCE_PATHS: docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/kim_2018_graphite_green_kubo_source_package.json; docs/core/artifacts/t13_kim_2018_graphite_green_kubo_external_input_audit.json; docs/scripts/audit/audit_topic13_kim_2018_graphite_green_kubo_external_input.py; docs/scripts/audit/audit_topic13_full_bridge_gate.py; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json; docs/core/artifacts/uet_major_result_closure_register.json; docs/core/artifacts/uet_major_result_dependency_unlock_gate.json.
+
+EVIDENCE_HASHES: package e3282c72a48883b25fc5dcb248ff840cbe7de08a3be2057bf01754c245ca472f; audit 13b2b2c677d2d4d0e1035df99b9b6ae40619040caa976f71baf1d406bb25b208; verifier da42657918ef109ad4130e7fa579c534d3016cfe8b7457d8f14a38d66a78f1f0; full-gate code 3bf7041637875282cf12d9a7b2daae9181160a34f93d0a9805daa416cc3e2a90; full gate 192bf678aa95ccdfcde21e14a476362066b9b2f8b57994ec964da3ca9dd14e8e; closure register 9315fd0d4e5432e76591191589f2d6cffec885c8cee9d733b019768608b11636; dependency 7f0ed93228d18afb41caad7743fedd06c117ff05ba41ede782ffcc1ba149e602.

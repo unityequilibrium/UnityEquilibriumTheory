@@ -240,3 +240,27 @@ CONTROLLING_BLOCKER: `ding_pbte_C_src_numeric_or_accepted_independent_reproducti
 NEXT_ACTION: Continue source acquisition and independent Phi/SI calibration without reading the locked Xie 2026 holdout.
 
 CLAIM_BOUNDARY: Candidate effective theory only; QH-15 is comparator evidence, not full Topic 13 closure or external validation.
+
+## Current Major Result: T13-163 Kim 2018 external Green-Kubo input (2026-08-22)
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for T13_KIM_2018_GRAPHITE_GREEN_KUBO_EXTERNAL_INPUT; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.
+
+WHAT_IS_ACTUALLY_CLOSED: A public primary-source locator, Green-Kubo equation locator, 300 K pristine-graphite directional rows, source-reported uncertainty, trajectory/integration convergence metadata, canonical transcription hash, and explicit external-input classification are machine-readable.
+
+WHAT_REMAINS_OPEN: The record has no UET Phi or normalized space-response amplitude, no Ding TTG state equivalence, no raw heat-current correlator payload, and no independent alpha_Phi_K. It is not accepted as a physical UET Kubo coefficient.
+
+DEPENDENCY_UNLOCKED: External standard-physics transport-input lane only; no UET physical transport, Ding C_src, alpha calibration, Core, Gravity, or Full Topic 13 dependency is unlocked.
+
+STATUS: PASS_SCOPED_SOURCE_LOCKED_EXTERNAL_GREEN_KUBO_INPUT; full gate remains BLOCKED_OPEN_T13_FULL_BRIDGE with 9 open blocker groups and claim_promotion=false.
+
+WHAT_CHANGED: Added a source package, provenance audit, regression, full-gate lane/evidence projection, closure-register/dependency regeneration, and this report. No holdout, fit, threshold change, or UET relabel was used.
+
+EQUATION_OR_MAPPING: kappa_i(tau) = V/(k_B*T^2) * integral [<J_i(s)J_i(0)>/<J_i(0)J_i(0)>] ds; this remains a standard-physics directional transport input. No Phi -> kappa mapping is emitted.
+
+VERIFICATION: Kim audit passed all checks; focused regression passed 2 tests; source payload hash is e33f0750db2f5bf16fc24a2cd8e84437f17cd77a3dfba3a5a9e63a2074f930c8; full gate remains PARTIAL, holdout remains unconsumed, and downstream dependency remains blocked.
+
+CONTROLLING_BLOCKER: UET_space_response_and_base_Phi_mapping_missing for this lane; globally, independent alpha_Phi_K, Ding-compatible C_src, and the remaining SI/EOS/transport/KMS/entropy blockers remain open.
+
+NEXT_ACTION: Derive or independently source-lock the UET space-response and base-Phi mapping; retain Kim 2018 only as an external comparator until that mapping exists.
+
+CLAIM_BOUNDARY: This is source-locked standard-physics transport-input evidence only. It is not a UET Kubo coefficient, Ding C_src, alpha_Phi_K calibration, TTG prediction, external validation, or Full Topic 13 closure.
