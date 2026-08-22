@@ -37,7 +37,7 @@
     "evidence_artifacts": [
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-        "sha256": "3a834ad7c42e6d99656fb9a9355e25fa3ff4b5426773768b49e6196edca4aa81",
+        "sha256": "d5e6fb8bbd4cd96a2f06426b18be96f06079c846f2036fcfe58b124fc49ba27a",
         "summary": {
           "role": "canonical full Topic 13 readiness gate",
           "status": "BLOCKED_OPEN_T13_FULL_BRIDGE"
@@ -863,7 +863,7 @@
     }
   ],
   "closure_summary": {
-    "closed_lane_count": 190,
+    "closed_lane_count": 191,
     "closed_as_no_go_count": 16,
     "open_blocker_count": 8,
     "open_blocker_groups": {
@@ -887,7 +887,7 @@
   },
   "canonical_gate": {
     "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-    "sha256": "3a834ad7c42e6d99656fb9a9355e25fa3ff4b5426773768b49e6196edca4aa81",
+    "sha256": "d5e6fb8bbd4cd96a2f06426b18be96f06079c846f2036fcfe58b124fc49ba27a",
     "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
     "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
   },

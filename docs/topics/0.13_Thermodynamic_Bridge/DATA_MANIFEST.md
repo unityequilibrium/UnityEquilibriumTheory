@@ -1254,3 +1254,11 @@ CONTROLLING_BLOCKER: ding_pbte_C_src_numeric_or_accepted_independent_reproductio
 NEXT_ACTION: Obtain an authorized Ding numeric package or accepted same-regime PBTE reproduction with material/state mapping and source-grade uncertainty.
 CLAIM_BOUNDARY: Candidate component only; no Ding equivalence, alpha calibration, prediction, or Full Topic 13 closure.
 EVIDENCE_HASHES: component 44f6deeff3d968978f9f2b8faeb8eaaab724fd70018caea05f859fcfc8ad98c3; full gate 3a834ad7c42e6d99656fb9a9355e25fa3ff4b5426773768b49e6196edca4aa81; matrix bdf4ccbd1ebbdc2eca7ec963dacea1342941985d95c82306ee66e8ab9aa03c9d.
+
+## NIMS MP-990448 Graphite Phonon Payload Boundary (2026-08-23)
+
+Source archive: docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nims_mdr_mp990448_graphite_phonon_dataset.zip (SHA-256 eea6ca7569c9442754ce5492ddb2f545186f97ad8b82b209d95f1a80b0158767). The public NIMS MDR record is C / P6/mmm (191), materials id 990448, licensed CC BY 4.0. Its six members are four PNG figures, phonopy_params.yaml.xz, and vasp-settings.tar.lzma.
+
+The nested audit confirms that the raw package has no force-constant data, frequency mesh, or machine-readable thermal-property rows; thermal_properties.png is figure-only. The phonopy/settings payload is therefore not admitted as numeric C_src(T) and is not used for alpha_Phi_K calibration. No figure digitization, fit, or Xie 2026 access occurred.
+
+Artifact: docs/core/artifacts/t13_nims_mp990448_phonon_source_boundary_audit.json (SHA-256 af61412589e0c39fd5ca5f548e7870c718142579a581cc8853e9102de30a4571); source package docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/nims_mdr_mp990448_phonon_source_package.json (SHA-256 79b6a25119b334a449686c9c5dcb356901390375bba71464c62dda338838b47d). This closes only a source-payload boundary; it does not supply Ding C_src, an independent alpha, or Full Topic 13 closure.

@@ -6,7 +6,7 @@
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "51c6875377e211033f9a1349cdb0ad4b7e4178ef0186d922049d1afa197dd39d"
+    "sha256": "520b5b8f5780d526d72bc61364bf4b60cf21d27969baa62422e175ab309d7bf6"
   },
   "decisions": {
     "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY": {
@@ -75,7 +75,7 @@
   ],
   "claim_boundary": "Dependency decisions only; no downstream result is promoted by a checkpoint or comparator pass.",
   "topic13_partial_evidence": {
-    "register_sha256": "51c6875377e211033f9a1349cdb0ad4b7e4178ef0186d922049d1afa197dd39d",
+    "register_sha256": "520b5b8f5780d526d72bc61364bf4b60cf21d27969baa62422e175ab309d7bf6",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",
@@ -1041,6 +1041,21 @@
           "summary": {
             "status": "PASS_SCOPED_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY",
             "major_result_id": "T13_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      },
+      "nims_mp990448_phonon_payload_boundary": {
+        "major_result_id": "T13_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY",
+        "closure_level": "CLOSED_FOR_LANE",
+        "status": "PASS_SCOPED_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY",
+        "full_core_unlock": false,
+        "audit": {
+          "path": "docs/core/artifacts/t13_nims_mp990448_phonon_source_boundary_audit.json",
+          "sha256": "af61412589e0c39fd5ca5f548e7870c718142579a581cc8853e9102de30a4571",
+          "summary": {
+            "status": "PASS_SCOPED_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY",
+            "major_result_id": "T13_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY",
             "closure_level": "CLOSED_FOR_LANE"
           }
         }
@@ -2187,7 +2202,7 @@
     },
     "closure_matrix": {
       "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-      "sha256": "bdf4ccbd1ebbdc2eca7ec963dacea1342941985d95c82306ee66e8ab9aa03c9d",
+      "sha256": "74898242e258ad4ebbb8dc0584625ccd47b00336ff80c08fb7012155f7091fc7",
       "full_core_unlock": false,
       "status": "BLOCKED_OPEN_T13_FULL_BRIDGE"
     },

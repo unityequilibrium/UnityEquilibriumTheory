@@ -25,6 +25,7 @@ LANE_KEY_BY_ID["T13_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY"] = "ding_experimen
 LANE_KEY_BY_ID["T13_DING_C_SRC_FIXED_VOLUME_THERMODYNAMIC_IDENTITY"] = "ding_c_src_fixed_volume_identity"
 LANE_KEY_BY_ID["T13_MP48_DING_C_SRC_MODE_SUM_RESPONSE_MAPPING"] = "mp48_ding_csrc_response_mapping"
 LANE_KEY_BY_ID["T13_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY"] = "csrc_equilibrium_component_acceptance"
+LANE_KEY_BY_ID["T13_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY"] = "nims_mp990448_phonon_payload_boundary"
 LANE_KEY_BY_ID["T13_C_SRC_THERMODYNAMIC_TRANSPORT_REGIME_DECOMPOSITION"] = "csrc_thermodynamic_transport_regime_decomposition"
 LANE_KEY_BY_ID["T13_HUBERMAN_2019_PUBLIC_PBTE_BOUNDARY"] = "huberman_2019_public_pbte_boundary"
 LANE_KEY_BY_ID["T13_IAEA_GR280_SAME_STATE_CP_COMPARATOR"] = "iaea_gr280_same_state_cp_comparator"
@@ -365,6 +366,9 @@ def main() -> int:
     )
     nims_graphite_route_path, nims_graphite_route = load(
         "docs/core/artifacts/t13_nims_graphite_ltc_route_no_go.json"
+    )
+    nims_mp990448_path, nims_mp990448 = load(
+        "docs/core/artifacts/t13_nims_mp990448_phonon_source_boundary_audit.json"
     )
     srm3600_path, srm3600 = load(
         "docs/core/artifacts/t13_nist_srm_3600_heat_capacity_boundary_audit.json"
@@ -895,6 +899,15 @@ def main() -> int:
                 "route_closed_as_no_go": nims_graphite_route.get("acceptance", {}).get("route_closed_as_no_go"),
                 "controlling_blocker": nims_graphite_route.get("controlling_blocker"),
             }),
+            evidence(rel(nims_mp990448_path), nims_mp990448, {
+                "status": nims_mp990448.get("status"),
+                "closure_level": nims_mp990448.get("major_result", {}).get("closure_level"),
+                "data_role": nims_mp990448.get("major_result", {}).get("data_role"),
+                "force_constants_present": nims_mp990448.get("payload_capabilities", {}).get("has_force_constants_data"),
+                "frequency_mesh_present": nims_mp990448.get("payload_capabilities", {}).get("has_frequency_mesh"),
+                "thermal_properties_figure_only": nims_mp990448.get("payload_capabilities", {}).get("thermal_properties_figure_only"),
+                "controlling_blocker": nims_mp990448.get("controlling_blocker"),
+            }),
             evidence(rel(srm3600_path), srm3600, {
                 "status": srm3600.get("status"),
                 "closure_level": srm3600.get("major_result", {}).get("closure_level"),
@@ -1067,6 +1080,16 @@ def main() -> int:
         ] = nims_graphite_route_lane
         artifact["verification_status"]["eos_transport_kms_entropy"].pop(
             "nims_graphite_ltc_route_no_go", None
+        )
+    nims_mp990448_lane = discovered_lane_integrations.get(
+        "nims_mp990448_phonon_payload_boundary"
+    )
+    if nims_mp990448_lane:
+        artifact["verification_status"]["source_package"][
+            "nims_mp990448_phonon_payload_boundary"
+        ] = nims_mp990448_lane
+        artifact["verification_status"]["eos_transport_kms_entropy"].pop(
+            "nims_mp990448_phonon_payload_boundary", None
         )
     aist_graphite_route_lane = discovered_lane_integrations.get(
         "aist_graphite_source_route_boundary"

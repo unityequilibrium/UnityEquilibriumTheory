@@ -20,6 +20,19 @@ CONTROLLING_BLOCKER: `dimensional_phi_energy_anchor_or_independent_alpha_calibra
 NEXT_ACTION: Obtain an authorized Ding numeric package or accepted same-regime PBTE reproduction with provenance, units, uncertainty, convergence, and material/state mapping, while separately obtaining a paired base-`Phi`/SI observable anchor. Do not fit `alpha_Phi_K` or read Xie 2026.
 CLAIM_BOUNDARY: This closes a response-mapping lane only. It is not Ding `C_src`, an independent `alpha_Phi_K`, a `Phi`-to-temperature prediction, Core closure, external validation, or global UET closure.
 
+## Latest Hardening Update (2026-08-23) - NIMS MP-990448
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for T13_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY; Full Topic 13 remains PARTIAL / BLOCKED_OPEN_T13_FULL_BRIDGE.
+WHAT_IS_ACTUALLY_CLOSED: The public NIMS MP-990448 graphite phonon archive is hash-locked. It contains structural/displacement inputs, VASP settings, and figure outputs, but no machine-readable force constants, frequency mesh, or thermal-property rows; this route is a payload boundary, not numeric C_src evidence.
+WHAT_REMAINS_OPEN: Ding-compatible numeric C_src, source-grade uncertainty, material/state mapping, the base-Phi SI anchor, independent alpha_Phi_K, and physical transport/KMS/entropy closure remain open.
+DEPENDENCY_UNLOCKED: NIMS payload boundary only; full_core_unlock=false and no downstream dependency is opened.
+STATUS: PASS_SCOPED_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY for the lane; canonical Full Topic 13 gate remains blocked.
+WHAT_CHANGED: Added the NIMS archive/source package, nested payload audit, full-gate projection, closure-register/dependency sync, focused test, and wave note. No figure digitization, fit, threshold change, or holdout access occurred.
+EQUATION_OR_MAPPING: C_src(T)=sum_mu c_mu(T) in J m^-3 K^-1 and Delta_Tq=Delta_u_ph/C_src(T) remain uninstantiated by this route; Delta_Tq=alpha_Phi_K*Delta_Phi remains uncalibrated.
+VERIFICATION: Archive SHA-256 eea6ca7569c9442754ce5492ddb2f545186f97ad8b82b209d95f1a80b0158767; six-member inventory and nested payload checks pass; focused regression 5 passed; holdout_accessed=false.
+CONTROLLING_BLOCKER: nims_mp990448_archive_lacks_machine_readable_force_constants_or_frequency_mesh; globally the Ding-compatible C_src and independent alpha_Phi_K controllers remain open.
+NEXT_ACTION: Obtain an authorized Ding numeric package or permitted same-regime PBTE reproduction with uncertainty and state mapping. Do not digitize the NIMS figure or use it for alpha_Phi_K.
+CLAIM_BOUNDARY: Payload boundary only; not numeric C_src, Ding validation, alpha calibration, TTG prediction, physical transport, or Full Topic 13 closure.
 ## Latest Hardening Update (2026-08-23)
 
 MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for `T13_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY`; Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
