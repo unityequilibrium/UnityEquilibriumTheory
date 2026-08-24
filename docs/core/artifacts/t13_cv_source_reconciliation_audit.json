@@ -41,6 +41,10 @@
         "sha256": "55d3dfef10bd44c3e0257fa8abb4212279445fd357310999a60f49b752865831"
       },
       {
+        "path": "docs/core/artifacts/t13_iaea_gr280_same_state_cp_source_audit.json",
+        "sha256": "c0091ce3d6624e5fd1b5e814f2bd3822459a5d84426cd861d31a9a0052710213"
+      },
+      {
         "path": "docs/core/artifacts/t13_iaea_cv_uncertainty_boundary_audit.json",
         "sha256": "a51c4318a72603c521fd9c9aaa48f759a95054a9da00707427c59cd3abe34b3e"
       },
@@ -66,12 +70,12 @@
     "claim_boundary": "This reconciliation closes a provenance boundary only. It does not turn a comparator, Cp row, harmonic Cv row, or correction term into Ding C_src or UET calibration."
   },
   "summary": {
-    "candidate_count": 7,
+    "candidate_count": 8,
     "direct_or_derived_cv_count": 2,
     "source_grade_cv_uncertainty_count": 0,
     "ding_matched_cv_count": 0,
     "eligible_for_full_topic13_count": 0,
-    "cp_only_or_correction_only_count": 5
+    "cp_only_or_correction_only_count": 6
   },
   "candidates": [
     {
@@ -104,6 +108,22 @@
       "eligible_for_full_topic13_cv_input": false,
       "holdout_clean": true,
       "reason": "NPL closes a mass-specific Cp comparator; density uncertainty, Cv conversion, and Ding state mapping remain open.",
+      "controlling_blocker": "c_v_source_uncertainty_not_closed"
+    },
+    {
+      "candidate_id": "iaea_gr280_same_state_cp",
+      "artifact_path": "docs/core/artifacts/t13_iaea_gr280_same_state_cp_source_audit.json",
+      "artifact_sha256": "c0091ce3d6624e5fd1b5e814f2bd3822459a5d84426cd861d31a9a0052710213",
+      "artifact_status": "PASS_SCOPED_IAEA_GR280_SAME_STATE_CP_COMPARATOR",
+      "closure_level": "CLOSED_FOR_LANE",
+      "quantity_class": "same_state_mass_specific_Cp_and_density_without_density_standard_uncertainty",
+      "direct_or_derived_cv": false,
+      "source_grade_uncertainty_for_required_cv": false,
+      "ding_material_state_match": false,
+      "same_state": true,
+      "eligible_for_full_topic13_cv_input": false,
+      "holdout_clean": true,
+      "reason": "IAEA GR-280 provides same-temperature Cp and density rows with conditional Cp-only propagation, but no source-grade density uncertainty, Cv correction pair, or Ding material match.",
       "controlling_blocker": "c_v_source_uncertainty_not_closed"
     },
     {

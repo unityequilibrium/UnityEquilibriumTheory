@@ -21,6 +21,12 @@ GATE_REL = (
 )
 RECORD_CONTRACT_REL = "docs/core/artifacts/t13_closure_record_contract_audit.json"
 CANDIDATE_COMPATIBILITY_REL = "docs/core/artifacts/t13_candidate_core_compatibility_audit.json"
+RECONCILIATION_RELS = {
+    "cv": "docs/core/artifacts/t13_cv_source_reconciliation_audit.json",
+    "transport": "docs/core/artifacts/t13_physical_transport_reconciliation_audit.json",
+    "base_phi": "docs/core/artifacts/t13_base_phi_si_reconciliation_audit.json",
+    "csrc": "docs/core/artifacts/t13_csrc_reconciliation_audit.json",
+}
 
 EVIDENCE_RELS = [
     RECORD_CONTRACT_REL,
@@ -43,6 +49,7 @@ EVIDENCE_RELS = [
     "docs/core/artifacts/covariant_superfluid_transport_verification.json",
     "docs/core/artifacts/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json",
     "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json",
+    *RECONCILIATION_RELS.values(),
     GATE_REL,
 ]
 
@@ -90,6 +97,15 @@ def main() -> int:
     huberman = load("docs/core/artifacts/t13_huberman_2019_ttg_source_boundary_audit.json")
     public_phonon = load("docs/core/artifacts/t13_public_phonon_route_screening_audit.json")
     candidate_compatibility = load(CANDIDATE_COMPATIBILITY_REL)
+    cv_reconciliation = load(RECONCILIATION_RELS["cv"])
+    transport_reconciliation = load(RECONCILIATION_RELS["transport"])
+    base_phi_reconciliation = load(RECONCILIATION_RELS["base_phi"])
+    csrc_reconciliation = load(RECONCILIATION_RELS["csrc"])
+
+    cv_summary = cv_reconciliation.get("summary", {})
+    transport_summary = transport_reconciliation.get("summary", {})
+    base_phi_summary = base_phi_reconciliation.get("summary", {})
+    csrc_summary = csrc_reconciliation.get("summary", {})
 
     calorine_checks = calorine.get("checks", {})
     alpha_count = int(alpha.get("eligible_candidate_count", 0))
@@ -187,6 +203,18 @@ def main() -> int:
                 "public_phonon_core_payload_present": not public_phonon.get("checks", {}).get("no_core_payload_imported", False),
                 "candidate_compatibility_status": candidate_compatibility.get("status"),
                 "candidate_core_accepted_route_count": candidate_compatibility.get("summary", {}).get("core_accepted_route_count"),
+                "cv_source_reconciliation_status": cv_reconciliation.get("status"),
+                "direct_or_derived_cv_count": cv_summary.get("direct_or_derived_cv_count"),
+                "source_grade_cv_uncertainty_count": cv_summary.get("source_grade_cv_uncertainty_count"),
+                "eligible_cv_input_count": cv_summary.get("eligible_for_full_topic13_count"),
+                "csrc_reconciliation_status": csrc_reconciliation.get("status"),
+                "csrc_route_count": csrc_summary.get("route_count"),
+                "numeric_csrc_candidate_count": csrc_summary.get("numeric_csrc_candidate_count"),
+                "source_grade_uncertainty_count": csrc_summary.get("source_grade_uncertainty_count"),
+                "ding_material_state_match_count": csrc_summary.get("ding_material_state_match_count"),
+                "ding_author_payload_count": csrc_summary.get("ding_author_payload_count"),
+                "accepted_independent_reproduction_count": csrc_summary.get("accepted_independent_reproduction_count"),
+                "eligible_csrc_input_count": csrc_summary.get("accepted_for_full_topic13_count"),
             },
             "missing_acceptance_fields": ding_missing,
             "unlocks_subresults": [
@@ -210,6 +238,12 @@ def main() -> int:
                 "holdout_accessed": alpha.get("holdout_accessed", False),
                 "candidate_compatibility_status": candidate_compatibility.get("status"),
                 "candidate_core_accepted_route_count": candidate_compatibility.get("summary", {}).get("core_accepted_route_count"),
+                "base_phi_reconciliation_status": base_phi_reconciliation.get("status"),
+                "paired_alpha_search_candidate_count": base_phi_summary.get("paired_alpha_search_candidate_count"),
+                "eligible_paired_alpha_record_count": base_phi_summary.get("eligible_paired_alpha_record_count"),
+                "named_phi_e_comparator_count": base_phi_summary.get("named_phi_e_comparator_count"),
+                "independent_base_phi_si_record_count": base_phi_summary.get("independent_base_phi_si_record_count"),
+                "eligible_base_phi_input_count": base_phi_summary.get("accepted_for_full_topic13_count"),
             },
             "missing_acceptance_fields": phi_missing,
             "unlocks_subresults": [
@@ -239,6 +273,12 @@ def main() -> int:
                 "formal_sk_entropy_status": sk_entropy.get("status"),
                 "candidate_compatibility_status": candidate_compatibility.get("status"),
                 "candidate_core_accepted_route_count": candidate_compatibility.get("summary", {}).get("core_accepted_route_count"),
+                "physical_transport_reconciliation_status": transport_reconciliation.get("status"),
+                "formal_lane_count": transport_summary.get("formal_lane_count"),
+                "natural_unit_uet_lane_count": transport_summary.get("natural_unit_uet_lane_count"),
+                "external_physical_comparator_count": transport_summary.get("external_physical_comparator_count"),
+                "physical_uet_coefficient_count": transport_summary.get("physical_uet_coefficient_count"),
+                "eligible_physical_transport_input_count": transport_summary.get("accepted_for_full_topic13_count"),
             },
             "missing_acceptance_fields": transport_missing,
             "unlocks_subresults": [
@@ -279,6 +319,21 @@ def main() -> int:
         and candidate_compatibility.get("summary", {}).get("core_accepted_route_count") == 0
         and candidate_compatibility.get("summary", {}).get("new_core_subresults_closed") == 0
         and candidate_compatibility.get("summary", {}).get("canonical_full_topic13_unlocked") is not True,
+        "cv_source_reconciliation_is_fail_closed": cv_reconciliation.get("status")
+        == "PASS_SCOPED_CV_SOURCE_RECONCILIATION_OPEN"
+        and cv_summary.get("eligible_for_full_topic13_count") == 0,
+        "physical_transport_reconciliation_is_fail_closed": transport_reconciliation.get("status")
+        == "PASS_SCOPED_PHYSICAL_TRANSPORT_RECONCILIATION_OPEN"
+        and transport_summary.get("physical_uet_coefficient_count") == 0
+        and transport_summary.get("accepted_for_full_topic13_count") == 0,
+        "base_phi_reconciliation_is_fail_closed": base_phi_reconciliation.get("status")
+        == "PASS_SCOPED_BASE_PHI_RECONCILIATION_OPEN"
+        and base_phi_summary.get("independent_base_phi_si_record_count") == 0
+        and base_phi_summary.get("accepted_for_full_topic13_count") == 0,
+        "csrc_reconciliation_is_fail_closed": csrc_reconciliation.get("status")
+        == "PASS_SCOPED_CSRC_RECONCILIATION_OPEN"
+        and csrc_summary.get("accepted_for_full_topic13_count") == 0
+        and csrc_summary.get("accepted_ding_csrc_count") == 0,
         "gate_blocker_set_is_nonempty": bool(
             gate.get("major_result", {}).get("what_remains_open")
         ),
@@ -308,6 +363,10 @@ def main() -> int:
                 "Numeric candidates are separated from accepted Core-ready evidence.",
                 "The field-level candidate compatibility diagnostic is linked without accepting any route.",
                 "Holdout and anti-fitting boundaries are rechecked.",
+                "Existing graphite heat-capacity and correction sources are reconciled by quantity, uncertainty, and material-state eligibility.",
+                "Formal, natural-unit, and external-comparator transport evidence is reconciled without physical UET promotion.",
+                "Base-Phi/SI candidate, Phi_E comparator, and natural-unit action evidence are reconciled without alpha promotion.",
+                "C_src routes are reconciled by payload, numeric status, material match, uncertainty, and acceptance without Ding promotion.",
             ],
             "what_remains_open": gate.get("major_result", {}).get(
                 "what_remains_open", []
@@ -352,12 +411,22 @@ def main() -> int:
             ),
             "DEPENDENCY_UNLOCKED": "None.",
             "STATUS": status,
-            "WHAT_CHANGED": "Added a read-only acceptance audit for the three grouped Topic 13 input packages.",
+            "WHAT_CHANGED": "Reconciled the three grouped input packages with c_v, physical transport, base-Phi, and C_src evidence projections without promoting any candidate.",
             "EQUATION_OR_MAPPING": "No equations or numeric values were changed or emitted.",
-            "VERIFICATION": "All evidence hashes, holdout, fit, candidate-compatibility, and canonical-gate checks passed; candidate metadata remains fail-closed where incomplete.",
+            "VERIFICATION": "All evidence hashes, reconciliation fail-closed checks, holdout, fit, candidate-compatibility, and canonical-gate checks passed; candidate metadata remains fail-closed where incomplete.",
             "CONTROLLING_BLOCKER": gate.get("controlling_blocker"),
-            "NEXT_ACTION": "Acquire an authorized Ding-compatible source, independent base-Phi/SI calibration, and physical Kubo/SK/KMS record.",
+            "NEXT_ACTION": "Acquire an authorized Ding-compatible source, independent base-Phi/SI calibration, and physical Kubo/SK/KMS record; rerun only after an input hash changes.",
             "CLAIM_BOUNDARY": "Input-readiness audit only; not Full Topic 13 closure or external validation.",
+        },
+        "wave_controller": {
+            "wave_type": "topic13_input_package_reconciliation_projection",
+            "controlling_blockers": [
+                "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+                "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
+                "physical_Kubo_coefficient_record_missing",
+            ],
+            "composition": list(RECONCILIATION_RELS.values()),
+            "claim_impact": "no_change",
         },
     }
     OUT.write_text(json.dumps(report, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")

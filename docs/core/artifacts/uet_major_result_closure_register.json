@@ -1,7 +1,7 @@
 {
   "schema_version": "uet-major-result-closure-register-v1",
   "artifact": "uet_major_result_closure_register",
-  "generated_at": "2026-08-24",
+  "generated_at": "2026-08-25",
   "contract": {
     "path": "docs/core/artifacts/uet_major_result_closure_contract.json",
     "sha256": "3d69588169703282667cf6d82421277b02556c37f2b457fe6b2a40d267c38a08"
@@ -277,7 +277,6 @@
           "sha256": "eaafd852fdf978efcefe8bf13900a96bf7d57e89b66c09cf1f4e65d3f10ba105",
           "summary": {
             "status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT",
-            "major_result_id": "T13_FLAT_THERMODYNAMIC_BRIDGE_COMPONENTS",
             "closure_level": "CLOSED_FOR_LANE",
             "physical_coefficient_evidence": "EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_UET_MAPPING",
             "full_core_unlock": false
@@ -1855,13 +1854,13 @@
       },
       "closure_matrix": {
         "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-        "sha256": "d75125ca1b85d75f7c0e347bf3190725e308a1d08f7de6b7bd6ea4239a36590a",
+        "sha256": "4549b8564546bb9b150caa71f8db8e0778aed5f4031b207a40e6c21d96392a94",
         "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
+        "closure_level": "PARTIAL",
         "full_core_unlock": false,
         "required_major_result_count": 10,
         "required_subresult_count": 36
-      },
-      "claim_promotion": false
+      }
     },
     {
       "major_result_id": "CORE_O2_TREE_LEVEL_EOS_LANE",
@@ -2226,6 +2225,104 @@
       ],
       "dependency_unlocked": "none; full Topic 13 and downstream Core/Gravity gates remain blocked",
       "claim_boundary": "This protocol closes only the acceptance criteria for a future calibration record. It emits no alpha_Phi_K, no prediction, no fit, and no external validation."
+    },
+    {
+      "major_result_id": "T13_BASE_PHI_REGISTRY_COMPLETENESS_AUDIT",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "The canonical thermal lane explicitly declares Phi as normalized and alpha_Phi_K as open.",
+        "The canonical SI conversion route exposes E_ref and Phi_scale as external inputs rather than hidden constants.",
+        "The canonical bridge code does not assert base Phi equals the named energy-response coordinate Phi_E.",
+        "No eligible non-holdout numeric alpha record or public paired base-Phi SI anchor is present in the audited inputs."
+      ],
+      "equation_or_mapping": {
+        "dimensional_observable": "Delta_Tq = alpha_Phi_K * Delta_Phi",
+        "named_energy_branch": "Phi_E = Delta_u/e0; base Phi to Phi_E map remains open",
+        "normalized_observable": "y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)",
+        "si_conversion": "alpha_Phi_K = (E_ref/k_B) * alpha_Phi_theta"
+      },
+      "units": {
+        "Delta_Tq": "K only after independent mapping",
+        "E_ref": "J; external/provenance input",
+        "Phi": "dimensionless normalized response",
+        "Phi_scale": "explicit field normalization input; not supplied",
+        "alpha_Phi_K": "K per normalized Phi; no numeric value emitted",
+        "e0": "J m^-3; open input"
+      },
+      "derivation_class": "canonical registry completeness and provenance boundary audit",
+      "observable": "normalized TTG response and conditional thermal response operator",
+      "data_role": "INTERNAL_AUDIT_NO_TARGET_OR_HOLDOUT",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_base_phi_registry_completeness_audit.json",
+          "sha256": "10c9bc5bda05b65948ca54e8ef55fca6159e6d6649feea356cb9a231712a575f",
+          "summary": {
+            "status": "PASS_SCOPED_NO_HIDDEN_SI_ANCHOR",
+            "major_result_id": "T13_BASE_PHI_REGISTRY_COMPLETENESS_AUDIT",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_SCOPED_NO_HIDDEN_SI_ANCHOR",
+      "open_blockers": [
+        "base_phi_si_anchor",
+        "independent_alpha_record",
+        "normalized_beta_si_map",
+        "physical_source_backed_eos",
+        "physical_heat_flux_entropy_map"
+      ],
+      "dependency_unlocked": "None; this audit closes only registry completeness, not the physical dimensional lane.",
+      "claim_boundary": "This result rules out a hidden canonical SI anchor in the audited inputs. It does not prove that a future action-derived or independently calibrated anchor is impossible and does not close Full Topic 13."
+    },
+    {
+      "major_result_id": "T13_BASE_PHI_SI_RECONCILIATION",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "the 74-record paired base-Phi/SI candidate search is reconciled with zero eligible records",
+        "the named Phi_E comparator is separated from the base UET Phi lane",
+        "conditional formula, natural-unit action, and field-rescaling no-go boundaries are source-linked",
+        "the independent calibration protocol is separated from received evidence"
+      ],
+      "equation_or_mapping": {
+        "measurement": "Delta_Tq = alpha_Phi_K * Delta_Phi_base",
+        "named_comparator": "Delta_Tq = (e0(T0)/c_v(T0)) Phi_E",
+        "coordinate_map": "Phi_E = s_material * Phi_base",
+        "identifiability": "Delta_Phi_prime = s Delta_Phi; alpha_Phi_K_prime = alpha_Phi_K/s"
+      },
+      "units": {
+        "base_Phi": "dimensionless normalized response; SI scale open",
+        "Phi_E": "dimensionless named energy-response comparator",
+        "e0": "J m^-3; not source-locked",
+        "c_v": "J m^-3 K^-1",
+        "alpha_Phi_K": "K per normalized base Phi; no numeric value emitted"
+      },
+      "derivation_class": "source-search reconciliation, conditional formula audit, and identifiability boundary; no numerical base-Phi calibration",
+      "observable": "paired base-Phi amplitude and SI thermal-response acceptance state",
+      "data_role": "INTERNAL_BASE_PHI_RECONCILIATION_NOT_CALIBRATION",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_base_phi_si_reconciliation_audit.json",
+          "sha256": "d5eaea1921de4e42897d9f4892dc7dda5b7af226801b28c24ad91c2a576a631a",
+          "summary": {
+            "status": "PASS_SCOPED_BASE_PHI_RECONCILIATION_OPEN",
+            "major_result_id": "T13_BASE_PHI_SI_RECONCILIATION",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_SCOPED_BASE_PHI_RECONCILIATION_OPEN",
+      "open_blockers": [
+        "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
+        "base_Phi_to_Phi_E_mapping_missing",
+        "dimensional_free_energy_density_scale_e0_missing",
+        "alpha_Phi_K_independent_calibration_missing"
+      ],
+      "dependency_unlocked": "base-Phi evidence reconciliation only; no SI anchor, alpha, beta, EOS, transport, or Full Topic 13 unlock",
+      "claim_boundary": "This closes the base-Phi evidence boundary for lane only. It does not convert Phi_E into base Phi, emit alpha_Phi_K, or close the dimensional thermal bridge."
     },
     {
       "major_result_id": "T13_BERUT_FIGURE3_DIGITIZATION",
@@ -2695,7 +2792,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_calorine_legacy_nep2_pbte_reproduction_audit.json",
-          "sha256": "0c3724c591adc411a4ef062a2bf62b9e5ce6564831bbc662e845ef48a8d56398",
+          "sha256": "66e05c61250da9711d7d90f44cdd1297aa88e560d716984a1a8db143fa4e7af3",
           "summary": {
             "status": "PASS_SCOPED_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION",
             "major_result_id": "T13_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION",
@@ -2786,7 +2883,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_calorine_nep1_backend_compatibility_audit.json",
-          "sha256": "bb3887522ba6bfde25bc74c1deb76e737ca975d5452263fb2dff348bffb3322c",
+          "sha256": "30513dd236e81360bceeedbf873b968f56520682a243ae16922daa157dc7eba9",
           "summary": {
             "status": "PASS_SCOPED_CALORINE_NEP1_BACKEND_COMPATIBILITY_BOUNDARY",
             "major_result_id": "T13_CALORINE_NEP1_BACKEND_COMPATIBILITY_BOUNDARY",
@@ -2832,7 +2929,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_calorine_public_model_variant_boundary_audit.json",
-          "sha256": "062c49c05e8318d42d627d03df886d2d50eea3285d2fb7430064554f98e6edbb",
+          "sha256": "4cbe1cf6bfd73856471738cadc4771a2375b3db2d925e62b9fc6fcb4c400f7e5",
           "summary": {
             "status": "PASS_SCOPED_CALORINE_PUBLIC_MODEL_VARIANT_BOUNDARY",
             "major_result_id": "T13_CALORINE_PUBLIC_MODEL_VARIANT_BOUNDARY",
@@ -3133,7 +3230,11 @@
         "The fail-closed record contract is linked before any package can be accepted.",
         "Numeric candidates are separated from accepted Core-ready evidence.",
         "The field-level candidate compatibility diagnostic is linked without accepting any route.",
-        "Holdout and anti-fitting boundaries are rechecked."
+        "Holdout and anti-fitting boundaries are rechecked.",
+        "Existing graphite heat-capacity and correction sources are reconciled by quantity, uncertainty, and material-state eligibility.",
+        "Formal, natural-unit, and external-comparator transport evidence is reconciled without physical UET promotion.",
+        "Base-Phi/SI candidate, Phi_E comparator, and natural-unit action evidence are reconciled without alpha promotion.",
+        "C_src routes are reconciled by payload, numeric status, material match, uncertainty, and acceptance without Ding promotion."
       ],
       "equation_or_mapping": {
         "TTG": "C_src(T)=sum_mu c_mu(T); Delta_Tq=Delta_u_ph/C_src(T)",
@@ -3152,7 +3253,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
-          "sha256": "5fd0da61b586a6291da6e76f13783ac8d13df5017d3d184feed66767b4ed20cb",
+          "sha256": "784e8433c40621a4debb40e999d27ca02177473d9648c6d9788c248c7a180951",
           "summary": {
             "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN",
             "major_result_id": "T13_CLOSURE_INPUT_PACKAGE_AUDIT",
@@ -3672,6 +3773,51 @@
       "claim_boundary": "This closes a conditional standard-physics identity lane. It does not emit numeric C_src, convert any current comparator into Ding C_src, derive e0 or base Phi, calibrate alpha_Phi_K, or close Topic 13."
     },
     {
+      "major_result_id": "T13_CSRC_SOURCE_RECONCILIATION",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "Ding official OA, author-request, public phonon, Huberman, Calorine, and MP48 C_src routes are classified by payload and acceptance state",
+        "numeric C_src-like candidates are separated from Ding-compatible accepted C_src",
+        "material-state equivalence and source-grade uncertainty are explicit acceptance fields",
+        "no synthetic route, comparator, or holdout value is promoted"
+      ],
+      "equation_or_mapping": {
+        "mode_sum": "C_src(T) = sum_mu c_mu(T)",
+        "thermal_response": "Delta_Tq = Delta_u_ph / C_src(T)",
+        "acceptance": "numeric rows + units + material/state match + source-grade uncertainty + convergence/provenance"
+      },
+      "units": {
+        "C_src": "J m^-3 K^-1",
+        "Delta_Tq": "K",
+        "source_route_metadata": "not a calibration quantity"
+      },
+      "derivation_class": "source-route reconciliation; external candidate reproduction and standard mapping kept separate from Ding acceptance",
+      "observable": "mode-resolved or equivalent C_src(T) source acceptance state",
+      "data_role": "INTERNAL_CSRC_SOURCE_RECONCILIATION_NOT_CALIBRATION",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_csrc_reconciliation_audit.json",
+          "sha256": "d74b6e79c260bacba1f257cb5e89b11205ee06a2ffb027d74ce3f1cf3266db4f",
+          "summary": {
+            "status": "PASS_SCOPED_CSRC_RECONCILIATION_OPEN",
+            "major_result_id": "T13_CSRC_SOURCE_RECONCILIATION",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_SCOPED_CSRC_RECONCILIATION_OPEN",
+      "open_blockers": [
+        "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+        "material_regime_mapping_to_TTG_not_closed",
+        "c_v_source_uncertainty_not_closed",
+        "author_data_or_independent_reproduction_payload_not_received"
+      ],
+      "dependency_unlocked": "C_src source-route reconciliation only; no Ding C_src, EOS, alpha, transport, or Full Topic 13 unlock",
+      "claim_boundary": "This closes a C_src route boundary only. Numeric Calorine/MP48 candidates are not Ding-equivalent, are not accepted source uncertainty, and cannot calibrate alpha_Phi_K or close Full Topic 13."
+    },
+    {
       "major_result_id": "T13_C_SRC_THERMODYNAMIC_TRANSPORT_REGIME_DECOMPOSITION",
       "topic": "0.13_Thermodynamic_Bridge",
       "closure_level": "CLOSED_FOR_LANE",
@@ -3720,6 +3866,49 @@
       ],
       "dependency_unlocked": "C_src-versus-transport gate separation only; no Ding source acceptance, alpha_Phi_K, physical transport, Core, Gravity, or Galaxy unlock",
       "claim_boundary": "This is a scoped thermodynamic/transport decomposition for an independent Calorine candidate. It is not Ding C_src acceptance, not a material-equivalence result, not an alpha_Phi_K calibration, not a TTG prediction, and not Full Topic 13 closure."
+    },
+    {
+      "major_result_id": "T13_CV_SOURCE_RECONCILIATION",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "candidate heat-capacity source classes are reconciled against the required volumetric c_v input contract",
+        "direct or derived c_v comparators are distinguished from Cp-only and alpha_V/K_T correction sources",
+        "no current candidate satisfies the combined c_v uncertainty, same-state, and Ding-regime acceptance contract"
+      ],
+      "equation_or_mapping": {
+        "required": "C_src(T) = sum_mu c_mu(T); Delta_Tq = Delta_u_ph / C_src(T)",
+        "cp_cv": "c_v^V = rho*c_p - T*alpha_V^2*K_T",
+        "acceptance": "direct_or_derived_c_v AND source_grade_uncertainty AND same_state AND Ding_material_state_match"
+      },
+      "units": {
+        "required_c_v_or_C_src": "J m^-3 K^-1",
+        "temperature": "K",
+        "uncertainty": "source-grade uncertainty for the required c_v/C_src quantity"
+      },
+      "derivation_class": "source provenance reconciliation; no UET derivation and no synthetic replacement",
+      "observable": "availability and acceptance state of thermal capacity inputs",
+      "data_role": "INTERNAL_SOURCE_RECONCILIATION_NOT_CALIBRATION",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_cv_source_reconciliation_audit.json",
+          "sha256": "9524bb279af178298d2f7799c1b3747f6e7f508cc86dafbe9ac8ca2ee780b499",
+          "summary": {
+            "status": "PASS_SCOPED_CV_SOURCE_RECONCILIATION_OPEN",
+            "major_result_id": "T13_CV_SOURCE_RECONCILIATION",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_SCOPED_CV_SOURCE_RECONCILIATION_OPEN",
+      "open_blockers": [
+        "c_v_source_uncertainty_not_closed",
+        "material_regime_mapping_to_TTG_not_closed",
+        "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+      ],
+      "dependency_unlocked": "c_v source reconciliation only; no Ding C_src, alpha_Phi_K, EOS, transport, or Full Topic 13 unlock",
+      "claim_boundary": "This reconciliation closes a provenance boundary only. It does not turn a comparator, Cp row, harmonic Cv row, or correction term into Ding C_src or UET calibration."
     },
     {
       "major_result_id": "T13_DAY2012_PREFERRED_THERMODYNAMIC_ASSESSMENT_BOUNDARY",
@@ -4586,13 +4775,21 @@
           "summary": {
             "status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT",
             "major_result_id": "T13_FLAT_THERMODYNAMIC_BRIDGE_COMPONENTS",
-            "closure_level": "CLOSED_FOR_LANE",
-            "physical_coefficient_evidence": "EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_UET_MAPPING",
-            "full_core_unlock": false
+            "closure_level": "CLOSED_FOR_LANE"
           }
         }
       ],
-      "verification_status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT",
+      "verification_status": {
+        "normal_component_lane_closed": true,
+        "formal_bridge_lane_closed": true,
+        "sk_kms_entropy_interface_closed": true,
+        "entropy_heat_flux_balance_lane_closed": true,
+        "curved_3p1_is_explicitly_deferred": true,
+        "external_transport_input_is_provenance_complete": true,
+        "external_transport_is_not_relabelled_as_uet": true,
+        "holdout_remains_unconsumed": true,
+        "claim_promotion_remains_disabled": true
+      },
       "open_blockers": [
         "physical_Kubo_coefficient_record_missing",
         "dimensional_phi_to_thermal_observable_map_missing",
@@ -6540,6 +6737,67 @@
       "claim_boundary": "The no-go applies only to deriving a numeric dimensional Phi-energy anchor from the current normalized lane and its material c_v comparator. It does not prove that an action-derived or independently measured anchor is impossible."
     },
     {
+      "major_result_id": "T13_PHI_EQUATION_REGISTRY_MAPPING_BOUNDARY",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "The central registry contains the thermal normalized operator and explicitly marks its dimensional status as blocked.",
+        "The covariant parent Phi entry remains natural-only rather than an SI observable map.",
+        "All registry entries that mention Phi use normalized, natural, or conceptual unit lanes; no accepted dimensionful Phi mapping is registered.",
+        "The central registry and active-lane units register agree on the open alpha_Phi_K boundary."
+      ],
+      "equation_or_mapping": {
+        "covariant_parent_lane": "natural_only_v1",
+        "required_next_map": "base Phi -> SI energy/temperature observable with independent provenance",
+        "thermal_entry": "y_TTG^UET = Delta_Phi(t) / Delta_Phi(0); Delta_Tq = alpha_Phi_K * Delta_Phi",
+        "thermal_registry_status": "NORMALIZED_DEFINED_DIMENSIONAL_BLOCKED"
+      },
+      "units": {
+        "Delta_Tq": "K only after independent mapping",
+        "Phi": "normalized or natural action lane only",
+        "Phi_entry_count": 20,
+        "Phi_unit_lanes": [
+          "conceptual_normalized",
+          "natural_3p1",
+          "natural_continuum_3p1",
+          "natural_control",
+          "natural_only_v1",
+          "natural_units",
+          "natural_vacuum_3p1",
+          "normalized",
+          "normalized_only_v1",
+          "normalized_with_open_K_scale"
+        ],
+        "alpha_Phi_K": "open K per normalized Phi",
+        "registry_entry_count": 43
+      },
+      "derivation_class": "central equation-registry consistency and mapping-boundary audit",
+      "observable": "normalized TTG operator and conditional dimensional response operator",
+      "data_role": "INTERNAL_REGISTRY_AUDIT_NO_TARGET_OR_HOLDOUT",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_phi_equation_registry_mapping_boundary_audit.json",
+          "sha256": "12621cbd50ff312809f747032018adebf352bec93710782f7dea6dbd6ac75854",
+          "summary": {
+            "status": "PASS_SCOPED_NO_ACCEPTED_DIMENSIONFUL_PHI_MAPPING",
+            "major_result_id": "T13_PHI_EQUATION_REGISTRY_MAPPING_BOUNDARY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_SCOPED_NO_ACCEPTED_DIMENSIONFUL_PHI_MAPPING",
+      "open_blockers": [
+        "base_phi_si_anchor",
+        "independent_alpha_record",
+        "normalized_beta_si_map",
+        "physical_source_backed_eos",
+        "physical_heat_flux_entropy_map"
+      ],
+      "dependency_unlocked": "None; registry boundary only, with no Full Topic 13 or downstream unlock.",
+      "claim_boundary": "This audit establishes that the current central registry does not contain an accepted dimensionful Phi mapping. It does not rule out a future action-derived or independently calibrated mapping and does not close Full Topic 13."
+    },
+    {
       "major_result_id": "T13_PHI_SI_ANCHOR_PUBLIC_SOURCE_BOUNDARY",
       "topic": "0.13_Thermodynamic_Bridge",
       "closure_level": "CLOSED_FOR_LANE",
@@ -6681,6 +6939,53 @@
       ],
       "dependency_unlocked": "Kubo coefficient acceptance gate only; no physical transport, Full Topic 13, Core curved 3+1, Gravity, or external validation unlock",
       "claim_boundary": "This result closes the acceptance/provenance boundary for a future physical transport coefficient record. It does not supply a coefficient, derive transport from the conservative action, complete finite-temperature two-fluid dynamics, or validate UET externally."
+    },
+    {
+      "major_result_id": "T13_PHYSICAL_TRANSPORT_RECONCILIATION",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "formal SK/KMS/entropy and natural-unit transport evidence is separated from physical SI evidence",
+        "the declared UET natural-unit Kubo channel is retained without SI or Full Topic 13 promotion",
+        "the Kim 2018 graphite Green-Kubo rows are retained as an external comparator only",
+        "the physical UET coefficient acceptance boundary is machine-readable and fail-closed"
+      ],
+      "equation_or_mapping": {
+        "formal_entropy": "nabla_mu J_S^mu = X_A L^(AB) X_B >= 0",
+        "natural_uet_channel": "K_rel^natural = lim_(omega->0) Re G_R^rel(omega)",
+        "external_comparator": "kappa_i = V/(k_B*T^2) * integral <J_i(s)J_i(0)> ds",
+        "admission": "physical UET coefficient requires matched Phi/SI state, correlator, source identity, hash, and uncertainty"
+      },
+      "units": {
+        "formal_lane": "declared natural units with local interface",
+        "natural_uet_channel": "natural-unit relative-flow response; not SI conductivity",
+        "external_comparator": "W m^-1 K^-1",
+        "physical_uet_requirement": "coefficient-specific SI units plus Phi response mapping"
+      },
+      "derivation_class": "transport evidence reconciliation; formal/action-derived/comparator classes kept separate",
+      "observable": "transport coefficient and thermal-response evidence acceptance state",
+      "data_role": "INTERNAL_TRANSPORT_RECONCILIATION_NOT_UET_CALIBRATION",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_physical_transport_reconciliation_audit.json",
+          "sha256": "67150277f66a2f855b2cd8e007926e65e8bf330a8dd925edc000b3a3e668b2fd",
+          "summary": {
+            "status": "PASS_SCOPED_PHYSICAL_TRANSPORT_RECONCILIATION_OPEN",
+            "major_result_id": "T13_PHYSICAL_TRANSPORT_RECONCILIATION",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_SCOPED_PHYSICAL_TRANSPORT_RECONCILIATION_OPEN",
+      "open_blockers": [
+        "physical_Kubo_coefficient_record_missing",
+        "finite_temperature_normal_component_not_derived",
+        "dimensional_Phi_to_thermal_observable_map_missing",
+        "alpha_Phi_K_independent_calibration_missing"
+      ],
+      "dependency_unlocked": "transport evidence reconciliation only; no physical transport, Full Topic 13, Core, Gravity, alpha, or external-validation unlock",
+      "claim_boundary": "This closes a transport evidence boundary only. It does not identify a natural-unit channel or external graphite conductivity with a physical UET Phi coefficient, does not close SI mapping, and does not close Full Topic 13."
     },
     {
       "major_result_id": "T13_PUBLIC_PHONON_ROUTE_SCREENING",
@@ -7026,6 +7331,7 @@
       "major_result_id": "T13_TOPIC13_CLOSURE_MATRIX",
       "topic": "0.13_Thermodynamic_Bridge",
       "closure_level": "PARTIAL",
+      "claim_promotion": false,
       "what_is_closed": [
         "The ten required Topic 13 result areas are reported separately by closure level.",
         "Each result area exposes evidence-producing subresults and an acceptance boundary.",
@@ -7055,27 +7361,14 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-          "sha256": "d75125ca1b85d75f7c0e347bf3190725e308a1d08f7de6b7bd6ea4239a36590a",
+          "sha256": "4549b8564546bb9b150caa71f8db8e0778aed5f4031b207a40e6c21d96392a94",
           "summary": {
-            "role": "compact Topic 13 closure projection"
-          }
-        },
-        {
-          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "08d220bdbaaab26cd6661e95169f71f7b629da15b55ce78a16a78852cd7809a9",
-          "summary": {
-            "role": "canonical readiness gate"
+            "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
+            "major_result_id": "T13_TOPIC13_CLOSURE_MATRIX",
+            "closure_level": "PARTIAL"
           }
         }
       ],
-      "input_package_audit": {
-        "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
-        "sha256": "10416402d76ecd1aa0fbc38c530a04ceaecf23200c207d293621e06a8d73d739",
-        "summary": {
-          "role": "grouped Topic 13 closure-input acceptance audit",
-          "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
-        }
-      },
       "verification_status": "PASS_MACHINE_READABLE_FULL_TOPIC_CLOSURE_CONTRACT_WITH_GATE_BOUNDARY",
       "open_blockers": [
         "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
@@ -7087,153 +7380,7 @@
         "c_v_source_uncertainty_not_closed"
       ],
       "dependency_unlocked": "Gravity/GR remains blocked until Full Topic 13 and Core curved 3+1 gates pass.",
-      "claim_boundary": "This matrix reports progress and closure boundaries. It does not promote a lane-level PASS, comparator, no-go, or formal interface to Full Topic 13, Core, external validation, or a global UET claim.",
-      "required_major_result_count": 10,
-      "required_subresult_count": 36,
-      "current_major_result_counts": {
-        "CLOSED_AS_NO_GO": 1,
-        "OPEN": 3,
-        "PARTIAL": 6
-      },
-      "current_subresult_counts": {
-        "CLOSED_AS_NO_GO": 5,
-        "CLOSED_FOR_LANE": 21,
-        "OPEN": 10
-      },
-      "required_input_package_count": 3,
-      "closure_input_packages": [
-        {
-          "package_id": "T13_INPUT_DING_TTG_SOURCE",
-          "label": "Ding-compatible TTG source package",
-          "status": "OPEN_EXTERNAL_INPUT",
-          "purpose": "Accept the numeric source and same-regime thermodynamic uncertainty needed to connect PBTE energy to Delta_Tq.",
-          "minimum_records": [
-            "mode-resolved C_src(T) rows in J m^-3 K^-1 with temperature/state identity",
-            "material morphology, isotope/defect state, TTG response contract, and PBTE convergence record",
-            "source locator, permission, preprocessing, row identity, uncertainty, and SHA-256",
-            "same-grade alpha_V and K_T or a justified c_v conversion with propagated uncertainty"
-          ],
-          "unlocks_subresults": [
-            "accepted_numeric_csrc",
-            "material_and_uncertainty_closure",
-            "physical_source_backed_eos",
-            "physical_heat_flux_entropy_map"
-          ],
-          "controlling_blockers": [
-            "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
-            "material_regime_mapping_to_TTG_not_closed",
-            "c_v_source_uncertainty_not_closed"
-          ],
-          "claim_boundary": "A comparator or figure-derived normalized curve is not accepted as the Ding numeric source without material/state and uncertainty equivalence."
-        },
-        {
-          "package_id": "T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
-          "label": "Base-Phi SI anchor and independent alpha/beta package",
-          "status": "OPEN_EXTERNAL_OR_DERIVATION_INPUT",
-          "purpose": "Fix the otherwise non-identifiable scale between normalized Phi and a dimensional energy or temperature response.",
-          "minimum_records": [
-            "dimensionful action/free-energy origin with coefficient provenance, or an independent paired base-Phi/SI response record",
-            "Phi amplitude, reference state, field normalization, and e0 in declared units",
-            "paired Delta_Phi with Delta_Tq or Delta_u_ph, uncertainty, locator, preprocessing, row identity, and hash",
-            "beta derivation separate from Landauer and from target/holdout tuning, with limiting-case and uncertainty checks"
-          ],
-          "unlocks_subresults": [
-            "base_phi_si_anchor",
-            "independent_alpha_record",
-            "normalized_beta_si_map",
-            "physical_source_backed_eos",
-            "physical_heat_flux_entropy_map"
-          ],
-          "controlling_blockers": [
-            "dimensional_phi_to_thermal_observable_map_missing",
-            "alpha_Phi_K_independent_calibration_missing",
-            "normalized_beta_and_SI_scale_correspondence_missing"
-          ],
-          "claim_boundary": "Normalized Phi shapes, Phi_E comparators, Landauer, and Xie 2026 cannot supply this scale by themselves."
-        },
-        {
-          "package_id": "T13_INPUT_PHYSICAL_TRANSPORT_MATCH",
-          "label": "Physical Kubo and SK/KMS transport package",
-          "status": "OPEN_MICROSCOPIC_OR_EXTERNAL_INPUT",
-          "purpose": "Connect the declared formal response lanes to one state-matched physical transport coefficient and its entropy/heat-flux consequences.",
-          "minimum_records": [
-            "coefficient_name, value, units, frame, temperature, chemical potential, and space-response state",
-            "retarded-correlator formula identifier, source locator, source hash, evidence status, and uncertainty",
-            "finite-temperature normal/condensed matching, KMS/FDT residuals, and no synthetic substitute",
-            "heat-flux and entropy-production propagation on the same state, including uncertainty"
-          ],
-          "unlocks_subresults": [
-            "physical_uet_kubo_record",
-            "physical_sk_transport_match",
-            "physical_entropy_production_mapping",
-            "physical_heat_flux_entropy_map"
-          ],
-          "controlling_blockers": [
-            "physical_Kubo_coefficient_record_missing"
-          ],
-          "claim_boundary": "The existing natural-unit Kubo and formal SK/KMS lanes remain lane evidence until a state-matched physical record passes this contract."
-        }
-      ],
-      "closure_summary": {
-        "closure_count_unit": "required_subresults",
-        "closed_lane_count": 21,
-        "closed_as_no_go_count": 5,
-        "closed_for_core_count": 0,
-        "open_subresult_count": 10,
-        "reported_subresult_count": 36,
-        "source_gate_projection_counts": {
-          "closed_lane_result_count": 192,
-          "closed_as_no_go_result_count": 16
-        },
-        "open_blocker_count": 7,
-        "open_blocker_groups": {
-          "source_and_material": [
-            "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
-            "material_regime_mapping_to_TTG_not_closed",
-            "c_v_source_uncertainty_not_closed"
-          ],
-          "dimensional_and_calibration": [
-            "alpha_Phi_K_independent_calibration_missing",
-            "normalized_beta_and_SI_scale_correspondence_missing",
-            "dimensional_phi_to_thermal_observable_map_missing"
-          ],
-          "thermodynamic_transport": [
-            "physical_Kubo_coefficient_record_missing"
-          ],
-          "unclassified": []
-        },
-        "downstream_dependency_unlocked": false,
-        "required_major_result_count": 10,
-        "required_subresult_count": 36,
-        "required_input_package_count": 3,
-        "current_major_result_counts": {
-          "CLOSED_AS_NO_GO": 1,
-          "OPEN": 3,
-          "PARTIAL": 6
-        },
-        "current_subresult_counts": {
-          "CLOSED_AS_NO_GO": 5,
-          "CLOSED_FOR_LANE": 21,
-          "OPEN": 10
-        },
-        "full_topic_ready": false
-      },
-      "full_topic_closure_contract": {
-        "required_major_result_count": 10,
-        "required_subresult_count": 36,
-        "current_major_result_counts": {
-          "CLOSED_AS_NO_GO": 1,
-          "OPEN": 3,
-          "PARTIAL": 6
-        },
-        "current_subresult_counts": {
-          "CLOSED_AS_NO_GO": 5,
-          "CLOSED_FOR_LANE": 21,
-          "OPEN": 10
-        },
-        "full_topic_ready": false
-      },
-      "claim_promotion": false
+      "claim_boundary": "This matrix reports progress and closure boundaries. It does not promote a lane-level PASS, comparator, no-go, or formal interface to Full Topic 13, Core, external validation, or a global UET claim."
     },
     {
       "major_result_id": "T13_TPG_ANISOTROPIC_ALPHA_V_COMPARATOR",

@@ -143,29 +143,29 @@
         "role": "input-package acceptance evidence"
       },
       {
-        "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-        "sha256": "08d220bdbaaab26cd6661e95169f71f7b629da15b55ce78a16a78852cd7809a9",
-        "role": "input-package acceptance evidence"
-      },
-      {
         "path": "docs/core/artifacts/t13_cv_source_reconciliation_audit.json",
-        "sha256": "8b17af6fe1e16fd9f7502848f9adec3055203d2754d8a0d6f9cc64f763170f44",
-        "role": "c_v source reconciliation evidence"
+        "sha256": "9524bb279af178298d2f7799c1b3747f6e7f508cc86dafbe9ac8ca2ee780b499",
+        "role": "input-package acceptance evidence"
       },
       {
         "path": "docs/core/artifacts/t13_physical_transport_reconciliation_audit.json",
         "sha256": "67150277f66a2f855b2cd8e007926e65e8bf330a8dd925edc000b3a3e668b2fd",
-        "role": "physical transport evidence reconciliation"
+        "role": "input-package acceptance evidence"
       },
       {
         "path": "docs/core/artifacts/t13_base_phi_si_reconciliation_audit.json",
         "sha256": "d5eaea1921de4e42897d9f4892dc7dda5b7af226801b28c24ad91c2a576a631a",
-        "role": "base-Phi/SI evidence reconciliation"
+        "role": "input-package acceptance evidence"
       },
       {
         "path": "docs/core/artifacts/t13_csrc_reconciliation_audit.json",
         "sha256": "d74b6e79c260bacba1f257cb5e89b11205ee06a2ffb027d74ce3f1cf3266db4f",
-        "role": "C_src source-route reconciliation"
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+        "sha256": "08d220bdbaaab26cd6661e95169f71f7b629da15b55ce78a16a78852cd7809a9",
+        "role": "input-package acceptance evidence"
       }
     ],
     "record_contract_artifact": {
@@ -201,7 +201,6 @@
         "cv_source_reconciliation_status": "PASS_SCOPED_CV_SOURCE_RECONCILIATION_OPEN",
         "direct_or_derived_cv_count": 2,
         "source_grade_cv_uncertainty_count": 0,
-        "ding_matched_cv_count": 0,
         "eligible_cv_input_count": 0,
         "csrc_reconciliation_status": "PASS_SCOPED_CSRC_RECONCILIATION_OPEN",
         "csrc_route_count": 8,
@@ -304,11 +303,11 @@
     "no_physical_transport_value_emitted": true,
     "public_phonon_route_is_scoped_without_core_payload": true,
     "candidate_compatibility_audit_is_scoped_without_core_acceptance": true,
-    "gate_blocker_set_is_nonempty": true,
     "cv_source_reconciliation_is_fail_closed": true,
     "physical_transport_reconciliation_is_fail_closed": true,
     "base_phi_reconciliation_is_fail_closed": true,
-    "csrc_reconciliation_is_fail_closed": true
+    "csrc_reconciliation_is_fail_closed": true,
+    "gate_blocker_set_is_nonempty": true
   },
   "open_blockers": [
     "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
@@ -426,29 +425,29 @@
       "role": "input-package acceptance evidence"
     },
     {
-      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-      "sha256": "08d220bdbaaab26cd6661e95169f71f7b629da15b55ce78a16a78852cd7809a9",
-      "role": "input-package acceptance evidence"
-    },
-    {
       "path": "docs/core/artifacts/t13_cv_source_reconciliation_audit.json",
-      "sha256": "8b17af6fe1e16fd9f7502848f9adec3055203d2754d8a0d6f9cc64f763170f44",
-      "role": "c_v source reconciliation evidence"
+      "sha256": "9524bb279af178298d2f7799c1b3747f6e7f508cc86dafbe9ac8ca2ee780b499",
+      "role": "input-package acceptance evidence"
     },
     {
       "path": "docs/core/artifacts/t13_physical_transport_reconciliation_audit.json",
       "sha256": "67150277f66a2f855b2cd8e007926e65e8bf330a8dd925edc000b3a3e668b2fd",
-      "role": "physical transport evidence reconciliation"
+      "role": "input-package acceptance evidence"
     },
     {
       "path": "docs/core/artifacts/t13_base_phi_si_reconciliation_audit.json",
       "sha256": "d5eaea1921de4e42897d9f4892dc7dda5b7af226801b28c24ad91c2a576a631a",
-      "role": "base-Phi/SI evidence reconciliation"
+      "role": "input-package acceptance evidence"
     },
     {
       "path": "docs/core/artifacts/t13_csrc_reconciliation_audit.json",
       "sha256": "d74b6e79c260bacba1f257cb5e89b11205ee06a2ffb027d74ce3f1cf3266db4f",
-      "role": "C_src source-route reconciliation"
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+      "sha256": "08d220bdbaaab26cd6661e95169f71f7b629da15b55ce78a16a78852cd7809a9",
+      "role": "input-package acceptance evidence"
     }
   ],
   "report": {
@@ -465,32 +464,26 @@
     ],
     "DEPENDENCY_UNLOCKED": "None.",
     "STATUS": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN",
-    "WHAT_CHANGED": "Added a fail-closed reconciliation of Ding OA/request, public phonon, Huberman, Calorine, and MP48 C_src routes; no C_src candidate was promoted to Ding acceptance.",
+    "WHAT_CHANGED": "Reconciled the three grouped input packages with c_v, physical transport, base-Phi, and C_src evidence projections without promoting any candidate.",
     "EQUATION_OR_MAPPING": "No equations or numeric values were changed or emitted.",
-    "VERIFICATION": "The composed c_v, physical transport, base-Phi, and C_src input audit passed; numeric candidate count is 3, source-grade uncertainty and Ding material match counts are zero, and accepted count is zero.",
-    "CONTROLLING_BLOCKER": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
-    "NEXT_ACTION": "Send the prepared Ding author request only with project authorization, or complete an independent same-regime reproduction with source-grade uncertainty and material mapping; do not promote Calorine/MP48 values.",
+    "VERIFICATION": "All evidence hashes, reconciliation fail-closed checks, holdout, fit, candidate-compatibility, and canonical-gate checks passed; candidate metadata remains fail-closed where incomplete.",
+    "CONTROLLING_BLOCKER": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing",
+    "NEXT_ACTION": "Acquire an authorized Ding-compatible source, independent base-Phi/SI calibration, and physical Kubo/SK/KMS record; rerun only after an input hash changes.",
     "CLAIM_BOUNDARY": "Input-readiness audit only; not Full Topic 13 closure or external validation."
   },
   "wave_controller": {
-    "wave_type": "csrc_source_reconciliation_composed_with_all_prior_inputs",
-    "artifact": {
-      "path": "docs/core/artifacts/t13_csrc_reconciliation_audit.json",
-      "sha256": "d74b6e79c260bacba1f257cb5e89b11205ee06a2ffb027d74ce3f1cf3266db4f",
-      "role": "C_src source-route reconciliation"
-    },
-    "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
-    "route_count": 8,
-    "numeric_csrc_candidate_count": 3,
-    "source_grade_uncertainty_count": 0,
-    "ding_material_state_match_count": 0,
-    "accepted_for_full_topic13_count": 0,
-    "claim_impact": "no_change",
+    "wave_type": "topic13_input_package_reconciliation_projection",
+    "controlling_blockers": [
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+      "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
+      "physical_Kubo_coefficient_record_missing"
+    ],
     "composition": [
-      "run_topic13_cv_source_reconciliation_wave.py",
-      "audit_topic13_physical_transport_reconciliation.py",
-      "audit_topic13_base_phi_reconciliation.py",
-      "audit_topic13_csrc_reconciliation.py"
-    ]
+      "docs/core/artifacts/t13_cv_source_reconciliation_audit.json",
+      "docs/core/artifacts/t13_physical_transport_reconciliation_audit.json",
+      "docs/core/artifacts/t13_base_phi_si_reconciliation_audit.json",
+      "docs/core/artifacts/t13_csrc_reconciliation_audit.json"
+    ],
+    "claim_impact": "no_change"
   }
 }

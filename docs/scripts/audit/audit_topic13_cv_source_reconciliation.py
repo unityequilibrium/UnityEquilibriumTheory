@@ -39,6 +39,16 @@ CANDIDATES = [
         "reason": "NPL closes a mass-specific Cp comparator; density uncertainty, Cv conversion, and Ding state mapping remain open.",
     },
     {
+        "candidate_id": "iaea_gr280_same_state_cp",
+        "artifact_path": "docs/core/artifacts/t13_iaea_gr280_same_state_cp_source_audit.json",
+        "quantity_class": "same_state_mass_specific_Cp_and_density_without_density_standard_uncertainty",
+        "direct_or_derived_cv": False,
+        "source_grade_uncertainty_for_required_cv": False,
+        "ding_material_state_match": False,
+        "same_state": True,
+        "reason": "IAEA GR-280 provides same-temperature Cp and density rows with conditional Cp-only propagation, but no source-grade density uncertainty, Cv correction pair, or Ding material match.",
+    },
+    {
         "candidate_id": "iaea_manufactured_graphite",
         "artifact_path": "docs/core/artifacts/t13_iaea_cv_uncertainty_boundary_audit.json",
         "quantity_class": "table_derived_mass_specific_cv_without_standard_uncertainty",
