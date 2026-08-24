@@ -27,9 +27,12 @@ subresults.
 | `OPEN` | 10 | Core-level evidence is still missing |
 
 The causal structural question is already a scoped no-go for the declared
-conserved-C local-gradient class. Its named coupled flux-Phi branch is still
-lane-level; the full-topic causal exception requires that named branch to be
-promoted to `CLOSED_FOR_CORE` without replacing the original baseline silently.
+conserved-C local-gradient class. The named coupled flux-Phi branch has a
+separate bounded Core handoff record,
+`T13_CAUSAL_FLUX_PHI_COUPLED_CORE_COMPATIBILITY`, at `CLOSED_FOR_CORE`.
+That is a causal exception only: it does not convert any of the 36 Full Topic
+13 subresults to `CLOSED_FOR_CORE`, replace the original blocked baseline, or
+unlock SI thermal mapping, physical transport, curved 3+1, or Gravity.
 
 The latest Lowitzer source wave also closed the same-study, same-sample
 `alpha_V`/`K_T` pair as a source-locked lane. This reduced the canonical full
@@ -170,3 +173,21 @@ ready for Core handoff; it is not external-ready and does not close global UET.
 - `docs/core/artifacts/uet_major_result_closure_register.json`
 - `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`
 - `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`
+
+## Latest Source, Calibration, and Transport Triage (2026-08-24)
+
+The source routes were checked against the three Core input packages without
+accepting any new payload. Lowitzer and BIPM are source-locked thermodynamic
+comparators, Kim 2018 is an external Green-Kubo comparator, and the existing
+Calorine full-LBTE run is a numerical-stability boundary. They do not supply
+the missing Ding-equivalent `C_src`, base-Phi/SI response pair, or physical UET
+Kubo record.
+
+The canonical matrix remains 21 `CLOSED_FOR_LANE`, 5 `CLOSED_AS_NO_GO`, 0
+`CLOSED_FOR_CORE`, and 10 `OPEN` subresults. No dependency is unlocked and no
+`alpha_Phi_K` value is emitted.
+
+The next admissible state change requires one of the three missing packages:
+an authorized or accepted same-regime Ding-compatible PBTE source, an
+independent base-Phi/SI anchor, or a state-matched physical Kubo/SK/KMS record.
+Existing comparators must not be rerun as substitutes.
