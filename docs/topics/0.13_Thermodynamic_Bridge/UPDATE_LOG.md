@@ -4155,3 +4155,18 @@ VERIFICATION: Matrix generator and focused Topic 13 matrix regression must repro
 CONTROLLING_BLOCKER: Evidence acquisition remains controlling: Ding-compatible C_src/material uncertainty, independent base-Phi SI alpha/beta scale, and physical Kubo/SK/KMS/entropy provenance.
 NEXT_ACTION: Continue with admissible source or derivation payload acquisition; do not interpret a source-gate aggregate as a subresult closure count.
 CLAIM_BOUNDARY: Reporting-contract repair only; not Full Topic 13 closure, Core-ready status, external validation, prediction, or global UET closure.
+
+### 2026-08-24 - Huberman 2019 TTG source boundary
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for `T13_HUBERMAN_2019_TTG_SOURCE_BOUNDARY`; canonical Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_IS_ACTUALLY_CLOSED: The public Huberman 2019 route is source-identified and its PBTE formula/setup layer is machine-recorded. It is explicitly bounded as formula/setup context only.
+WHAT_REMAINS_OPEN: Numeric mode-resolved `c_mu(T)`, aggregate `C_src(T)`, raw TTG rows, raw force constants, source-grade uncertainty, material mapping, base-Phi amplitude, and `alpha_Phi_K` remain open.
+DEPENDENCY_UNLOCKED: Standard PBTE source-boundary lane only; no Core, alpha, transport, or Full Topic 13 unlock.
+STATUS: `PASS_SCOPED_HUBERMAN_2019_SOURCE_BOUNDARY_NO_CORE_PAYLOAD`; input audit passed with zero accepted packages.
+WHAT_CHANGED: Added `huberman_2019_ttg_source_boundary_package.json` and `t13_huberman_2019_ttg_source_boundary_audit.json`; linked the audit into the three-package input audit; extended the author-request manifest with Huberman 2019 and Ding 2017 force-constant routes.
+EQUATION_OR_MAPPING: `partial_t g_i + v_i dot grad g_i = Q p_i + sum_j W_ij(g_j^0 - g_j)`; `Delta_T_tilde = sum_i(g_i_tilde) / C`; no source-to-UET-Phi identity asserted.
+VERIFICATION: Source package JSON parsed; hash recorded; no numeric `C_src`, raw force constants, raw TTG, or paired base-Phi payload found; closure matrix remains 10 requirements, 36 subresults, 7 blockers, 0 Core-closed.
+CONTROLLING_BLOCKER: `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing`; independent alpha/SI anchor and physical transport blockers remain separate.
+NEXT_ACTION: Send the bounded combined author request; accept any returned payload only through the existing fail-closed record contract.
+CLAIM_BOUNDARY: Source-boundary result only; not numeric C_src, alpha calibration, TTG prediction, external validation, or Full Topic 13 closure.
+EVIDENCE_HASHES: package `F70FF820EA3CB16023D23BB3FD7D36D6ED486357B8CBC6CEB81BF2FD35492844`; audit `FA25C313272A79230263C92BF315510E11842D11070C41D67E41D4CB8F88C3AE`; input audit `BDE78DC8381E522CB477559B2B0BCC6C2DA5C834860AFAC1C735F870EA74A546`; matrix `B55AC2FC63CDFF1B9103A1A010B2D33CF47660D01BD0C99B8F512450E4438D7C`.

@@ -103,6 +103,11 @@
         "role": "input-package acceptance evidence"
       },
       {
+        "path": "docs/core/artifacts/t13_huberman_2019_ttg_source_boundary_audit.json",
+        "sha256": "fa25c313272a79230263c92bf315510e11842d11070c41d67e41d4cb8f88c3ae",
+        "role": "input-package acceptance evidence"
+      },
+      {
         "path": "docs/core/artifacts/covariant_superfluid_transport_verification.json",
         "sha256": "49fc1a047cfa84e8155940a491eb9c3fb3c3536ac707b010ba15b32298632ad1",
         "role": "input-package acceptance evidence"
@@ -146,7 +151,9 @@
         "author_request_executed": false,
         "material_equivalence_audit": "PASS_SCOPED_DING_MATERIAL_REGIME_BOUNDARY_NO_GO",
         "thermodynamic_pair_status": "PASS_SCOPED_SOURCE_LOCKED_LOWITZER_ALPHA_V_K_T_PAIR",
-        "same_grade_alpha_V_and_K_T_correction_pair": true
+        "same_grade_alpha_V_and_K_T_correction_pair": true,
+        "huberman_2019_public_route_status": "PASS_SCOPED_HUBERMAN_2019_SOURCE_BOUNDARY_NO_CORE_PAYLOAD",
+        "huberman_2019_numeric_payload_present": false
       },
       "missing_acceptance_fields": [
         "authorized_numeric_C_src_payload",
@@ -302,6 +309,11 @@
     {
       "path": "docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json",
       "sha256": "d6e05b2dfe754cb17d17651666319dbc0ebf295a99258bd25f67e463eba68724",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/artifacts/t13_huberman_2019_ttg_source_boundary_audit.json",
+      "sha256": "fa25c313272a79230263c92bf315510e11842d11070c41d67e41d4cb8f88c3ae",
       "role": "input-package acceptance evidence"
     },
     {

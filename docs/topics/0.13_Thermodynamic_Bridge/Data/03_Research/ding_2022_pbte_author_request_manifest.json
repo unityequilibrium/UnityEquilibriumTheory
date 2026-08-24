@@ -78,6 +78,11 @@
       "machine-readable PBTE response inputs/outputs needed to regenerate Delta_Tq(t) for the published TTG geometry",
       "a data dictionary for every field and a statement of any post-processing or smoothing",
       "a checksum for each delivered file and permission/terms for research reuse"
+    ],
+    "cross_paper_reproduction_route": [
+      "If the 2022 payload is unavailable, request the 2017/2019 graphite force-constant and full-scattering inputs used for the independent TTG PBTE reproduction.",
+      "Keep the 2019 HOPG specimen state separate from the 2022 natural-graphite specimen until morphology, isotope/defect state, temperature, and response-contract mapping are explicitly accepted.",
+      "Do not treat setup estimates or normalized traces as numeric C_src rows or as a base-Phi calibration."
     ]
   },
   "required_record_fields": [
@@ -119,5 +124,35 @@
     "target_curve_used": false,
     "alpha_fit_used": false
   },
-  "claim_boundary": "The manifest is a request specification and provenance controller only. It contains no Ding numeric C_src rows, no independent base-Phi amplitude, no e0, no alpha_Phi_K, no prediction, and no external validation."
+  "claim_boundary": "The manifest is a request specification and provenance controller only. It contains no Ding numeric C_src rows, no independent base-Phi amplitude, no e0, no alpha_Phi_K, no prediction, and no external validation.",
+  "alternate_reproduction_routes": {
+    "huberman_2019_graphite_ttg": {
+      "status": "PUBLIC_FORMULA_SETUP_ONLY_NUMERIC_PAYLOAD_OPEN",
+      "source_package": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/huberman_2019_ttg_source_boundary_package.json",
+      "source_audit": "docs/core/artifacts/t13_huberman_2019_ttg_source_boundary_audit.json",
+      "source_locator": "https://arxiv.org/abs/1901.09160",
+      "doi": "10.1126/science.aav3548",
+      "request_payload": [
+        "machine-readable raw TTG time series and row identity",
+        "mode-resolved c_mu(T), aggregate C_src(T), and weights",
+        "full scattering matrix or reproducible W_ij construction inputs",
+        "second- and third-order graphite force constants used by the PBTE run",
+        "mesh, smearing, convergence, and source-grade uncertainty",
+        "permission terms and hashes for every delivered file"
+      ],
+      "acceptance_boundary": "Formula/setup context only until the existing Ding-compatible C_src and source-record contracts pass."
+    },
+    "ding_2017_force_constant_route": {
+      "status": "PUBLIC_SUPPLEMENTARY_BOUNDARY_NO_RAW_FORCE_CONSTANTS",
+      "source_locator": "https://arxiv.org/abs/1711.00587",
+      "doi": "10.1021/acs.nanolett.7b04932",
+      "request_payload": [
+        "raw second- and third-order force constants",
+        "QE/D3Q or equivalent input decks",
+        "isotope and boundary-scattering settings",
+        "mode table and numerical convergence envelope"
+      ],
+      "acceptance_boundary": "The public supplementary PDF is method context only; no C_src or force-constant payload is admitted from it."
+    }
+  }
 }

@@ -1,0 +1,67 @@
+{
+  "schema_version": "t13-huberman-2019-ttg-source-boundary-audit-v1",
+  "artifact": "t13_huberman_2019_ttg_source_boundary_audit",
+  "generated_at": "2026-08-24",
+  "status": "PASS_SCOPED_HUBERMAN_2019_SOURCE_BOUNDARY_NO_CORE_PAYLOAD",
+  "major_result": {
+    "major_result_id": "T13_HUBERMAN_2019_TTG_SOURCE_BOUNDARY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "The public Huberman 2019 source identity and open preprint locator are recorded with an observed source hash.",
+      "The source equations define modal heat capacity, the full scattering matrix response, and the temperature-response operator.",
+      "The source setup estimates are separated from row-level numeric response data.",
+      "The route is explicitly rejected as a Core input until mode rows, force constants, uncertainty, and paired base-Phi data arrive."
+    ],
+    "what_remains_open": [
+      "accepted_numeric_csrc",
+      "material_and_uncertainty_closure",
+      "independent_alpha_record",
+      "base_phi_si_anchor",
+      "physical_uet_kubo_record"
+    ],
+    "dependency_unlocked": "standard PBTE formula/source-boundary lane only; no Core, alpha, transport, or Full Topic 13 unlock",
+    "equation_or_mapping": {
+      "source_pbte": "partial_t g_i + v_i dot grad g_i = Q p_i + sum_j W_ij(g_j^0 - g_j)",
+      "source_temperature": "Delta_T_tilde = sum_i(g_i_tilde) / C; C = sum_i c_i",
+      "uet_boundary": "No mapping from g_i or source C to UET Phi or UET C is asserted"
+    },
+    "units": {
+      "Delta_T": "K",
+      "pump_energy": "J",
+      "required_C_src": "J m^-3 K^-1",
+      "required_alpha_Phi_K": "K per normalized base Phi"
+    },
+    "derivation_class": "source identity and public-payload availability boundary; no UET derivation",
+    "observable": "public TTG/PBTE source readiness",
+    "data_role": "SOURCE_PROVENANCE_BOUNDARY_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/huberman_2019_ttg_source_boundary_package.json",
+        "source_hash": "29dc508df146125e6aef524404c0cfff98b31605783524526e81a8c93ad46027"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_HUBERMAN_2019_SOURCE_BOUNDARY_NO_CORE_PAYLOAD",
+    "claim_boundary": "This is a bounded source-availability result, not a numeric C_src result, not an alpha calibration, and not external validation of UET."
+  },
+  "checks": {
+    "source_identity_present": true,
+    "source_locator_present": true,
+    "source_hash_recorded": true,
+    "formula_locators_present": true,
+    "modal_heat_capacity_formula_present": true,
+    "numeric_C_src_rows_present": false,
+    "raw_force_constants_present": false,
+    "raw_TTG_time_series_present": false,
+    "source_grade_uncertainty_present": false,
+    "paired_base_Phi_amplitude_present": false,
+    "Ding_material_equivalence_established": false,
+    "holdout_not_accessed": true,
+    "target_fit_not_performed": true,
+    "alpha_fit_not_performed": true,
+    "no_threshold_change": true,
+    "no_numeric_substitute_emitted": true
+  },
+  "next_controller": "Request the 2018/2019 graphite force-constant and TTG response payload from the corresponding authors, or obtain an independently reproducible same-regime PBTE package; keep this public route as formula context only until the row contract passes.",
+  "claim_boundary": "The source boundary narrows the external acquisition request but leaves the seven canonical Topic 13 blockers unchanged."
+}

@@ -1,7 +1,9 @@
 # Data Manifest
 ## Current Source-Pair Wave (2026-08-24)
 
-The latest thermodynamic source pass closes a same-study/same-sample `alpha_V` and `K_T` pair for a Lowitzer synthetic-graphite comparator. It narrows one input blocker without changing the Ding material-equivalence, `C_src`, `alpha_Phi_K`, holdout, or Full Topic 13 gates.
+The latest thermodynamic source pass closes a same-study/same-sample `alpha_V` and `K_T` pair for a Lowitzer synthetic-graphite comparator.
+
+- Huberman 2019 TTG public source-boundary package: `Data/03_Research/huberman_2019_ttg_source_boundary_package.json`; `docs/core/artifacts/t13_huberman_2019_ttg_source_boundary_audit.json` | Huberman et al., Science 364, 375-379 (2019), DOI `10.1126/science.aav3548`, arXiv `1901.09160` | source PBTE formulas and setup estimates only; no row-level `C_src` payload | package SHA-256 `F70FF820EA3CB16023D23BB3FD7D36D6ED486357B8CBC6CEB81BF2FD35492844`; audit SHA-256 `FA25C313272A79230263C92BF315510E11842D11070C41D67E41D4CB8F88C3AE` | formula/source-boundary context; no calibration consumed | `CLOSED_FOR_LANE`; numeric `C_src`, material equivalence, base-Phi SI anchor, `alpha_Phi_K`, and Full Topic 13 remain open. It narrows one input blocker without changing the Ding material-equivalence, `C_src`, `alpha_Phi_K`, holdout, or Full Topic 13 gates.
 
 - Source package: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/lowitzer_2006_graphite_pvt_full_source_package.json`; package SHA-256 `bbfb9cd598e243b34e7d19580496d9e4b9c997e98be502ae70171ac454770c22`.
 - Archived raw payload: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/lowitzer_2006_graphite_pvt.pdf`; local-only raw input, 518469 bytes, SHA-256 `401831675de0fa4ae36405f469553dcc39b12ae29cfc1799023aef8ecc658a2a`.
