@@ -31,6 +31,11 @@ conserved-C local-gradient class. Its named coupled flux-Phi branch is still
 lane-level; the full-topic causal exception requires that named branch to be
 promoted to `CLOSED_FOR_CORE` without replacing the original baseline silently.
 
+The latest Lowitzer source wave also closed the same-study, same-sample
+`alpha_V`/`K_T` pair as a source-locked lane. This reduced the canonical full
+gate from eight to seven blocker groups. It does not establish Ding TTG
+material equivalence and it does not provide `alpha_Phi_K`.
+
 ## WHAT_REMAINS_OPEN
 
 Every item below must reach `CLOSED_FOR_CORE`.
@@ -48,6 +53,16 @@ Every item below must reach `CLOSED_FOR_CORE`.
 | Material/uncertainty closure | `material_and_uncertainty_closure` | Material, morphology, isotope/defect state, TTG/PBTE response contract, same-state thermodynamic correction, and uncertainty |
 | Heat-flux/entropy map | `physical_heat_flux_entropy_map` | SI Phi anchor, physical coefficient, accepted `C_src`, and one propagated uncertainty chain on the same state |
 
+The canonical gate currently reports these seven blocker groups:
+
+1. `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing`
+2. `alpha_Phi_K_independent_calibration_missing`
+3. `normalized_beta_and_SI_scale_correspondence_missing`
+4. `physical_Kubo_coefficient_record_missing`
+5. `dimensional_phi_to_thermal_observable_map_missing`
+6. `material_regime_mapping_to_TTG_not_closed`
+7. `c_v_source_uncertainty_not_closed`
+
 ## DEPENDENCY_UNLOCKED
 
 No downstream dependency is currently unlocked. The three grouped input
@@ -64,6 +79,8 @@ Required minimum records:
 
 Current state: numeric Calorine candidate rows and mesh preflight exist, but
 the candidate is not Ding-equivalent and has no source-grade uncertainty.
+The Lowitzer pair is source-locked for its own synthetic-graphite lane only;
+it is not a Ding-compatible `C_src` or TTG material closure.
 
 ### Base-Phi SI, alpha, and beta package
 
