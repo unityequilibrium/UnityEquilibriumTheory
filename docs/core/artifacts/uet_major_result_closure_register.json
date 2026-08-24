@@ -1855,7 +1855,7 @@
       },
       "closure_matrix": {
         "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-        "sha256": "5b223eeac3e918f0689549669e8657ed6851a110b60b917382dab6a7dd95f6eb",
+        "sha256": "d75125ca1b85d75f7c0e347bf3190725e308a1d08f7de6b7bd6ea4239a36590a",
         "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
         "full_core_unlock": false,
         "required_major_result_count": 10,
@@ -7055,7 +7055,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-          "sha256": "5b223eeac3e918f0689549669e8657ed6851a110b60b917382dab6a7dd95f6eb",
+          "sha256": "d75125ca1b85d75f7c0e347bf3190725e308a1d08f7de6b7bd6ea4239a36590a",
           "summary": {
             "role": "compact Topic 13 closure projection"
           }
@@ -7070,7 +7070,7 @@
       ],
       "input_package_audit": {
         "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
-        "sha256": "71cb481dc2f83cca63e1dc609960c401774f87230f719453d54f931297bd2379",
+        "sha256": "10416402d76ecd1aa0fbc38c530a04ceaecf23200c207d293621e06a8d73d739",
         "summary": {
           "role": "grouped Topic 13 closure-input acceptance audit",
           "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"

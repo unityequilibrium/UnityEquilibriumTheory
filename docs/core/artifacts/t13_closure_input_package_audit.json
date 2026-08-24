@@ -15,7 +15,8 @@
       "Holdout and anti-fitting boundaries are rechecked.",
       "Existing graphite heat-capacity and correction sources are reconciled by quantity, uncertainty, and material-state eligibility.",
       "Formal, natural-unit, and external-comparator transport evidence is reconciled without physical UET promotion.",
-      "Base-Phi/SI candidate, Phi_E comparator, and natural-unit action evidence are reconciled without alpha promotion."
+      "Base-Phi/SI candidate, Phi_E comparator, and natural-unit action evidence are reconciled without alpha promotion.",
+      "C_src routes are reconciled by payload, numeric status, material match, uncertainty, and acceptance without Ding promotion."
     ],
     "what_remains_open": [
       "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
@@ -160,6 +161,11 @@
         "path": "docs/core/artifacts/t13_base_phi_si_reconciliation_audit.json",
         "sha256": "d5eaea1921de4e42897d9f4892dc7dda5b7af226801b28c24ad91c2a576a631a",
         "role": "base-Phi/SI evidence reconciliation"
+      },
+      {
+        "path": "docs/core/artifacts/t13_csrc_reconciliation_audit.json",
+        "sha256": "d74b6e79c260bacba1f257cb5e89b11205ee06a2ffb027d74ce3f1cf3266db4f",
+        "role": "C_src source-route reconciliation"
       }
     ],
     "record_contract_artifact": {
@@ -196,7 +202,15 @@
         "direct_or_derived_cv_count": 2,
         "source_grade_cv_uncertainty_count": 0,
         "ding_matched_cv_count": 0,
-        "eligible_cv_input_count": 0
+        "eligible_cv_input_count": 0,
+        "csrc_reconciliation_status": "PASS_SCOPED_CSRC_RECONCILIATION_OPEN",
+        "csrc_route_count": 8,
+        "numeric_csrc_candidate_count": 3,
+        "source_grade_uncertainty_count": 0,
+        "ding_material_state_match_count": 0,
+        "ding_author_payload_count": 0,
+        "accepted_independent_reproduction_count": 0,
+        "eligible_csrc_input_count": 0
       },
       "missing_acceptance_fields": [
         "authorized_numeric_C_src_payload",
@@ -293,7 +307,8 @@
     "gate_blocker_set_is_nonempty": true,
     "cv_source_reconciliation_is_fail_closed": true,
     "physical_transport_reconciliation_is_fail_closed": true,
-    "base_phi_reconciliation_is_fail_closed": true
+    "base_phi_reconciliation_is_fail_closed": true,
+    "csrc_reconciliation_is_fail_closed": true
   },
   "open_blockers": [
     "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
@@ -429,6 +444,11 @@
       "path": "docs/core/artifacts/t13_base_phi_si_reconciliation_audit.json",
       "sha256": "d5eaea1921de4e42897d9f4892dc7dda5b7af226801b28c24ad91c2a576a631a",
       "role": "base-Phi/SI evidence reconciliation"
+    },
+    {
+      "path": "docs/core/artifacts/t13_csrc_reconciliation_audit.json",
+      "sha256": "d74b6e79c260bacba1f257cb5e89b11205ee06a2ffb027d74ce3f1cf3266db4f",
+      "role": "C_src source-route reconciliation"
     }
   ],
   "report": {
@@ -445,31 +465,32 @@
     ],
     "DEPENDENCY_UNLOCKED": "None.",
     "STATUS": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN",
-    "WHAT_CHANGED": "Added a fail-closed reconciliation of paired base-Phi search, Phi_E comparator, conditional formula, action route, and calibration boundary; no alpha or SI anchor was promoted.",
+    "WHAT_CHANGED": "Added a fail-closed reconciliation of Ding OA/request, public phonon, Huberman, Calorine, and MP48 C_src routes; no C_src candidate was promoted to Ding acceptance.",
     "EQUATION_OR_MAPPING": "No equations or numeric values were changed or emitted.",
-    "VERIFICATION": "The composed c_v, physical transport, and base-Phi input audit passed; paired alpha search is 74/0, Phi_E remains comparator-only, and accepted base-Phi input count is zero.",
-    "CONTROLLING_BLOCKER": "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
-    "NEXT_ACTION": "Obtain an authorized paired base-Phi/SI record or derive a source-provenance-backed action-to-SI map; do not use Phi_E, TTG residuals, or Xie 2026 as base-Phi calibration.",
+    "VERIFICATION": "The composed c_v, physical transport, base-Phi, and C_src input audit passed; numeric candidate count is 3, source-grade uncertainty and Ding material match counts are zero, and accepted count is zero.",
+    "CONTROLLING_BLOCKER": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+    "NEXT_ACTION": "Send the prepared Ding author request only with project authorization, or complete an independent same-regime reproduction with source-grade uncertainty and material mapping; do not promote Calorine/MP48 values.",
     "CLAIM_BOUNDARY": "Input-readiness audit only; not Full Topic 13 closure or external validation."
   },
   "wave_controller": {
-    "wave_type": "base_phi_evidence_reconciliation_composed_with_cv_and_transport",
+    "wave_type": "csrc_source_reconciliation_composed_with_all_prior_inputs",
     "artifact": {
-      "path": "docs/core/artifacts/t13_base_phi_si_reconciliation_audit.json",
-      "sha256": "d5eaea1921de4e42897d9f4892dc7dda5b7af226801b28c24ad91c2a576a631a",
-      "role": "base-Phi/SI evidence reconciliation"
+      "path": "docs/core/artifacts/t13_csrc_reconciliation_audit.json",
+      "sha256": "d74b6e79c260bacba1f257cb5e89b11205ee06a2ffb027d74ce3f1cf3266db4f",
+      "role": "C_src source-route reconciliation"
     },
-    "controlling_blocker": "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
-    "candidate_count": 10,
-    "paired_alpha_search_candidate_count": 74,
-    "eligible_paired_alpha_record_count": 0,
-    "named_phi_e_comparator_count": 1,
-    "independent_base_phi_si_record_count": 0,
+    "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+    "route_count": 8,
+    "numeric_csrc_candidate_count": 3,
+    "source_grade_uncertainty_count": 0,
+    "ding_material_state_match_count": 0,
+    "accepted_for_full_topic13_count": 0,
     "claim_impact": "no_change",
     "composition": [
       "run_topic13_cv_source_reconciliation_wave.py",
       "audit_topic13_physical_transport_reconciliation.py",
-      "audit_topic13_base_phi_reconciliation.py"
+      "audit_topic13_base_phi_reconciliation.py",
+      "audit_topic13_csrc_reconciliation.py"
     ]
   }
 }

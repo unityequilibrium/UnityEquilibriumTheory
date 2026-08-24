@@ -17,7 +17,7 @@
     "downstream_core_gravity_transport": "LOCKED",
     "full_topic_13": "LOCKED until all required subresults are closed at their declared level"
   },
-  "generated_at": "2026-08-24T16:03:24.888287+00:00",
+  "generated_at": "2026-08-24T16:08:57.079188+00:00",
   "holdout_policy": {
     "calibration_path_may_read_holdout": false,
     "target_fit_performed": false,
@@ -357,8 +357,8 @@
   },
   "schema_version": "t13-full-closure-progress-v1",
   "source_hashes": {
-    "docs/core/artifacts/t13_closure_input_package_audit.json": "71cb481dc2f83cca63e1dc609960c401774f87230f719453d54f931297bd2379",
-    "docs/core/artifacts/t13_topic13_closure_matrix.json": "5b223eeac3e918f0689549669e8657ed6851a110b60b917382dab6a7dd95f6eb",
+    "docs/core/artifacts/t13_closure_input_package_audit.json": "10416402d76ecd1aa0fbc38c530a04ceaecf23200c207d293621e06a8d73d739",
+    "docs/core/artifacts/t13_topic13_closure_matrix.json": "d75125ca1b85d75f7c0e347bf3190725e308a1d08f7de6b7bd6ea4239a36590a",
     "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json": "08d220bdbaaab26cd6661e95169f71f7b629da15b55ce78a16a78852cd7809a9"
   },
   "subresults": [
