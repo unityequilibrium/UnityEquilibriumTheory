@@ -31,6 +31,8 @@ EVIDENCE_RELS = [
     "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
     "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
     "docs/core/artifacts/t13_physical_kubo_coefficient_provenance_audit.json",
+    "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
+    "docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json",
     "docs/core/artifacts/covariant_superfluid_transport_verification.json",
     "docs/core/artifacts/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json",
     "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json",
@@ -75,6 +77,8 @@ def main() -> int:
         "docs/core/artifacts/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json"
     )
     sk_entropy = load("docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json")
+    lowitzer_pair = load("docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json")
+    graphite_pair_boundary = load("docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json")
 
     calorine_checks = calorine.get("checks", {})
     alpha_count = int(alpha.get("eligible_candidate_count", 0))
@@ -164,6 +168,8 @@ def main() -> int:
                     "manifest_not_sent", False
                 ),
                 "material_equivalence_audit": material.get("status"),
+                "thermodynamic_pair_status": lowitzer_pair.get("status"),
+                "same_grade_alpha_V_and_K_T_correction_pair": graphite_pair_boundary.get("same_grade_pair_route_available", False),
             },
             "missing_acceptance_fields": ding_missing,
             "unlocks_subresults": [

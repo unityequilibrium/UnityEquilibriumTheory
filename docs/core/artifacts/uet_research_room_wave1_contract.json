@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_research_room_wave1_contract",
-  "generated_at": "2026-08-23",
+  "generated_at": "2026-08-24",
   "status": "PASS_WITH_BLOCKED_LANES",
   "claim_promotion": false,
   "brief": {
@@ -406,8 +406,8 @@
     },
     "register": {
       "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-      "sha256": "53d7b529e0d84ac6711f3a906078d78877838876acdbe35990ed178e3cfa1f47",
-      "generated_at": "2026-08-23"
+      "sha256": "68d4ba3f64f5d77be48fe1b87d6483dec3e48181fac872e08043de226e58107a",
+      "generated_at": "2026-08-24"
     },
     "required_fields": [
       "major_result_id",

@@ -58,6 +58,7 @@ LANE_KEY_BY_ID["T13_UET_O2_AUXILIARY_FIELD_WARD_PRESERVING_CONDENSED_LANE"] = "u
 
 LANE_KEY_BY_ID["T13_MP48_TEMPERATURE_VOLUME_UNCERTAINTY_BOUNDARY"] = "mp48_temperature_volume_uncertainty_boundary"
 LANE_KEY_BY_ID["T13_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY"] = "graphite_alpha_v_kt_matched_source_boundary"
+LANE_KEY_BY_ID["T13_LOWITZER_GRAPHITE_ALPHA_V_K_T_FULL_SOURCE_PAIR"] = "lowitzer_graphite_alpha_v_kt_full_source_pair"
 LANE_KEY_BY_ID["T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY_BOUNDARY"] = "ding_alternate_public_dataset_discovery_boundary"
 LANE_KEY_BY_ID["T13_CALORINE_ZENODO_NEP_BTE_NUMERIC_REPRODUCTION"] = "calorine_zenodo_nep_bte_numeric_reproduction"
 LANE_KEY_BY_ID["T13_CALORINE_FULL_LBTE_NUMERICAL_STABILITY_BOUNDARY"] = "calorine_full_lbte_numerical_stability_boundary"
@@ -1875,6 +1876,12 @@ def main() -> int:
     source_independence_lane = discovered_lane_integrations.get(
         "gatech_volumetric_cp_independence_no_go", {}
     )
+    graphite_alpha_kt_lane = discovered_lane_integrations.get(
+        "graphite_alpha_v_kt_matched_source_boundary", {}
+    )
+    same_grade_alpha_kt_pair_closed = bool(
+        graphite_alpha_kt_lane.get("same_grade_pair_route_available", False)
+    )
     # Preserve unresolved source-dependency blockers in the major-result
     # projection. A scoped no-go closes the circular route. The independently
     # measured AXM-5Q1 density lane removes only the density-availability
@@ -1899,6 +1906,8 @@ def main() -> int:
             continue
         if blocker == "density_uncertainty_not_source_locked" and density_uncertainty_closed:
             continue
+        if blocker == "same_grade_alpha_V_and_K_T_missing" and same_grade_alpha_kt_pair_closed:
+            continue
         blockers.append(blocker)
     same_state_cp_lane = discovered_lane_integrations.get(
         "iaea_gr280_same_state_cp_comparator", {}
@@ -1918,12 +1927,21 @@ def main() -> int:
                     continue
                 if blocker == "density_uncertainty_not_source_locked" and density_uncertainty_closed:
                     continue
+                if blocker == "same_grade_alpha_V_and_K_T_missing" and same_grade_alpha_kt_pair_closed:
+                    continue
                 blockers.append(blocker)
+    if same_grade_alpha_kt_pair_closed:
+        blockers = [
+            blocker
+            for blocker in blockers
+            if blocker != "same_grade_alpha_V_and_K_T_missing"
+        ]
     # Keep the major-result projection readable: only the full-gate
     # controllers and explicit source prerequisites belong here. Lane-specific
     # diagnostics remain nested in verification_status and evidence artifacts.
     open_blockers = list(dict.fromkeys(blockers))
     artifact["major_result"]["what_remains_open"] = open_blockers
+    lowitzer_full_package_path = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/lowitzer_2006_graphite_pvt_full_source_package.json"
     artifact["major_result"]["resolved_blockers"] = [
         {
             "blocker": "density_uncertainty_not_source_locked",
@@ -1993,7 +2011,7 @@ def main() -> int:
             },
             {
                 "blocker": "current_graphite_alpha_V_K_T_inventory",
-                "status": "CLOSED_AS_NO_GO",
+                "status": "CLOSED_FOR_LANE" if same_grade_alpha_kt_pair_closed else "CLOSED_AS_NO_GO",
                 "resolution_source": {
                     "major_result_id": "T13_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY",
                     "artifact": rel(
@@ -2002,22 +2020,33 @@ def main() -> int:
                     "artifact_sha256": sha256(
                         ROOT / "docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json"
                     ),
-                    "representative_source_artifact": rel(natural_alpha_v_path),
-                    "representative_source_sha256": sha256(natural_alpha_v_path),
+                    "representative_source_artifact": rel(lowitzer_full_package_path) if same_grade_alpha_kt_pair_closed else rel(natural_alpha_v_path),
+                    "representative_source_sha256": sha256(lowitzer_full_package_path) if same_grade_alpha_kt_pair_closed else sha256(natural_alpha_v_path),
                 },
                 "what_is_closed": (
-                    "The current screened graphite alpha_V/K_T inventory does not "
+                    "The source inventory contains a Lowitzer same-study, same-sample "
+                    "alpha_V/K_T pair with source-reported uncertainty; the pair is "
+                    "accepted only as a correction comparator."
+                    if same_grade_alpha_kt_pair_closed
+                    else "The current screened graphite alpha_V/K_T inventory does not "
                     "contain a same-state, same-specimen, uncertainty-bearing pair "
                     "that can close the c_p-to-c_v correction."
                 ),
-                "what_remains_open": [
-                    "same_grade_alpha_V_and_K_T_missing",
-                    "c_v_source_uncertainty_not_closed",
-                    "material_regime_mapping_to_TTG_not_closed",
-                ],
+                "what_remains_open": (
+                    [
+                        "c_v_source_uncertainty_not_closed",
+                        "material_regime_mapping_to_TTG_not_closed",
+                    ]
+                    if same_grade_alpha_kt_pair_closed
+                    else [
+                        "same_grade_alpha_V_and_K_T_missing",
+                        "c_v_source_uncertainty_not_closed",
+                        "material_regime_mapping_to_TTG_not_closed",
+                    ]
+                ),
                 "claim_boundary": (
-                    "Comparator alpha_V or K_T rows remain comparison evidence only. "
-                    "No cross-specimen substitution is promoted to Ding C_src or "
+                    "The Lowitzer pair remains comparison evidence only; no "
+                    "material-regime substitution is promoted to Ding C_src or "
                     "alpha_Phi_K calibration."
                 ),
             },

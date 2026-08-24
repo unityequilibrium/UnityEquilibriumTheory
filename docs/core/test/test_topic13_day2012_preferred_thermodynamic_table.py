@@ -43,6 +43,7 @@ def test_day_route_is_projected_without_promoting_full_topic13() -> None:
     assert lane["audit"]["path"] == AUDIT_REL
     assert lane["audit"]["sha256"] == sha256(AUDIT_REL)
     assert any(item["path"] == AUDIT_REL for item in full["evidence_artifacts"])
-    assert "same_grade_alpha_V_and_K_T_missing" in full["major_result"]["what_remains_open"]
+    assert "same_grade_alpha_V_and_K_T_missing" not in full["major_result"]["what_remains_open"]
+    assert "material_regime_mapping_to_TTG_not_closed" in full["major_result"]["what_remains_open"]
     assert full["status"] == "BLOCKED_OPEN_T13_FULL_BRIDGE"
     assert full["claim_promotion"] is False

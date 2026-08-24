@@ -27,7 +27,8 @@ def test_nist_alpha_v_lane_is_integrated_without_closing_k_t_or_topic13() -> Non
     assert projected["data_role"] == "INTERNAL_SOURCE_COMPARATOR_NOT_DING_TTG_GRADE"
     assert full["status"] == "BLOCKED_OPEN_T13_FULL_BRIDGE"
     assert full["claim_promotion"] is False
-    assert "same_grade_alpha_V_and_K_T_missing" in full["major_result"]["what_remains_open"]
+    assert "same_grade_alpha_V_and_K_T_missing" not in full["major_result"]["what_remains_open"]
+    assert "material_regime_mapping_to_TTG_not_closed" in full["major_result"]["what_remains_open"]
     assert any(
         item["path"] == "docs/core/artifacts/t13_nist_graphite_alpha_v_source_boundary_audit.json"
         for item in full["evidence_artifacts"]

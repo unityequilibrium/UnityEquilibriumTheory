@@ -35,7 +35,6 @@ CLOSURE_INPUT_PACKAGES: tuple[dict[str, Any], ...] = (
         ],
         "controlling_blockers": [
             "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
-            "same_grade_alpha_V_and_K_T_missing",
             "material_regime_mapping_to_TTG_not_closed",
             "c_v_source_uncertainty_not_closed",
         ],
@@ -325,11 +324,13 @@ MAJOR_RESULT_CONTRACTS: dict[str, dict[str, Any]] = {
         "data_role": "DERIVED/CALIBRATION/TRAINING_COMPARISON/HOLDOUT",
         "claim_boundary": "Public-source boundaries, figure-derived rows, and candidate PBTE reruns do not become Ding numeric validation without material/state and uncertainty acceptance.",
         "acceptance_criteria": ["Ding numeric C_src payload or accepted same-regime independent PBTE reproduction", "material/state mapping and mode-resolved row identity", "source-grade uncertainty and convergence package", "data-role separation and hash audit", "Xie 2026 remains locked and unread by calibration/fitting paths"],
-        "blocker_keys": ["ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing", "same_grade_alpha_V_and_K_T_missing", "material_regime_mapping_to_TTG_not_closed", "c_v_source_uncertainty_not_closed"],
+        "blocker_keys": ["ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing", "material_regime_mapping_to_TTG_not_closed", "c_v_source_uncertainty_not_closed"],
         "evidence_paths": [
             "docs/core/artifacts/t13_ding_alternate_public_dataset_discovery_boundary_audit.json",
             "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
             "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json",
+            "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
+            "docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json",
         ],
         "required_subresults": [
             {"subresult_id": "source_identity_and_row_controller", "label": "Source identity and row controller", "evidence_result_ids": ["T13_DING_PBTE_AUTHOR_REQUEST_PACKAGE", "T13_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY"], "required_closure_level": "CLOSED_FOR_LANE", "acceptance": "The requested numeric payload fields, locators, units, uncertainty, preprocessing, row identity, and hash are fixed."},

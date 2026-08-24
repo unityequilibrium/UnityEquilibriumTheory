@@ -91,7 +91,7 @@ def test_topic13_full_gate_reports_machine_readable_closure_summary() -> None:
     assert resolved_by_blocker == {
         "density_uncertainty_not_source_locked": "CLOSED_FOR_LANE",
         "ding_public_numeric_C_src_route": "CLOSED_AS_NO_GO",
-        "current_graphite_alpha_V_K_T_inventory": "CLOSED_AS_NO_GO",
+        "current_graphite_alpha_V_K_T_inventory": "CLOSED_FOR_LANE",
         "independent_harmonic_c_v_comparator_uncertainty_lane": "CLOSED_FOR_LANE",
         "action_beta_to_normalized_beta_identifiability": "CLOSED_AS_NO_GO",
         "base_phi_to_SI_anchor_identifiability": "CLOSED_AS_NO_GO",

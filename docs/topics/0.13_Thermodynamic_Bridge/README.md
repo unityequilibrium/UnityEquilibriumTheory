@@ -6,19 +6,20 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
-## Canonical Current Gate (2026-08-22)
+## Canonical Current Gate (2026-08-24)
 
-MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for the MP48-to-Ding mode-sum response mapping; Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
-WHAT_IS_ACTUALLY_CLOSED: The Ding notation for mode-specific heat capacity and the phonon-mode sum is mapped to four independently reproduced MP48 harmonic `C_src`-like rows in `J m^-3 K^-1`. The original conserved-`C` causal baseline is closed only as a scoped no-go; the named coupled finite-cone branch remains lane-level.
-WHAT_REMAINS_OPEN: Ding-compatible PBTE `C_src` or an accepted same-regime reproduction, independent `alpha_Phi_K`, the base-`Phi` SI energy anchor, beta/SI correspondence, physical EOS/transport/SK/KMS/entropy completion, state-matched thermodynamic inputs, and the dimensional TTG map.
-DEPENDENCY_UNLOCKED: None. `full_core_unlock=false`; Gravity, full constitutive transport, Galaxy, and external-validation dependencies remain blocked.
-STATUS: `BLOCKED_OPEN_T13_FULL_BRIDGE`; `claim_promotion=false`.
-WHAT_CHANGED: The latest source/mapping wave added a machine-readable response mapping, full-gate projection, closure-register entry, dependency evidence, and update-log record without fitting, synthetic replacement, threshold change, Landauer inference, or Xie 2026 access.
-EQUATION_OR_MAPPING: `C_src^mol(T)=N_A/N_q * sum_(q,mu)c_mu(q,T)`; `C_src^vol(T)=C_src^mol(T)/V_mol,cell`; `Delta_Tq=Delta_u_ph/C_src^vol`; `y_TTG^UET=Delta_Phi(t)/Delta_Phi(0)` and `Delta_Tq=alpha_Phi_K*Delta_Phi` remain uncalibrated.
-VERIFICATION: Mapping artifact SHA-256 `1deefbb6ebbed62345db2063612f9d8c172902dcb93068b800e579455e0d297c`; canonical full-gate SHA-256 `2cd42d31f9055f8f6ba14a969b867a6294fed3d94fa287f7c286eb02a2008bb7`; focused Topic 13/registry/closure/dependency suite `9 passed`; `holdout_accessed=false`.
-CONTROLLING_BLOCKER: `dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing` together with `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing`.
-NEXT_ACTION: Obtain an authorized Ding numeric package or accepted same-regime PBTE reproduction with provenance, units, uncertainty, convergence, and material/state mapping, while separately obtaining a paired base-`Phi`/SI observable anchor. Do not fit `alpha_Phi_K` or read Xie 2026.
-CLAIM_BOUNDARY: This closes a response-mapping lane only. It is not Ding `C_src`, an independent `alpha_Phi_K`, a `Phi`-to-temperature prediction, Core closure, external validation, or global UET closure.
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for `T13_LOWITZER_GRAPHITE_ALPHA_V_K_T_FULL_SOURCE_PAIR`; Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_IS_ACTUALLY_CLOSED: A byte-preserved full-text source package supplies source-reported numeric `alpha_V` and `K_T` rows from the same Lowitzer study, sample, and 300 K state. The source identity, locators, units, uncertainty fields, raw hash, and `c_p^V-c_v^V` correction witness are machine-readable.
+WHAT_REMAINS_OPEN: Lowitzer synthetic graphite is not established as Ding natural-graphite TTG material. Ding-compatible PBTE `C_src`, source-grade `c_v`, the base-`Phi` SI energy anchor, independent `alpha_Phi_K`, beta/SI correspondence, and physical EOS/transport/SK/KMS/entropy completion remain open.
+DEPENDENCY_UNLOCKED: Only the source-state thermodynamic correction-input lane. `full_core_unlock=false`; Gravity, full constitutive transport, Galaxy, and external-validation dependencies remain blocked.
+STATUS: `PASS_SCOPED_SOURCE_LOCKED_LOWITZER_ALPHA_V_K_T_PAIR` for the lane; canonical Full Topic 13 gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE`; `claim_promotion=false`.
+WHAT_CHANGED: Added the archived full-text source package, source-pair verifier, matched-source projection, closure-contract evidence, registry/dependency synchronization, and regression coverage. No fit, synthetic replacement, threshold change, Landauer inference, or Xie 2026 access was introduced.
+EQUATION_OR_MAPPING: `c_p^V-c_v^V=T*alpha_V^2*K_T`; the HTV9 300 K correction witness is `11,673.6 J m^-3 K^-1` with first-order alpha/K uncertainty `1,583.27 J m^-3 K^-1`. This is not a `c_v`, Ding `C_src`, or `Phi` calibration row.
+VERIFICATION: Source-pair audit and matched-source audit pass; canonical gate SHA-256 `26a2498870919f02efc2bada07a400536a348f7d77ed4d7c4b20969cb18c2c81`; closure matrix SHA-256 `0c2ea83747eab080f2025f794ed2a8e0f119f5cd13039abcbff599c607b8379d` reports 10 major results, 36 subresults, 192 closed lanes, 16 scoped no-go lanes, and 7 open blocker groups; focused regression `10 passed`; `holdout_accessed=false`.
+CONTROLLING_BLOCKER: `material_regime_mapping_to_TTG_not_closed` for the Lowitzer route; topic-level control remains `dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing`, with Ding `C_src` and physical Kubo evidence also open.
+NEXT_ACTION: Obtain an authorized Ding-compatible numeric package or accepted same-regime PBTE reproduction, a source-grade `c_v`/volume uncertainty record, and an independent paired base-`Phi`/SI observable anchor. Do not use Lowitzer to calibrate `alpha_Phi_K`.
+CLAIM_BOUNDARY: This is a source-pair correction-input lane only. It is not Ding `C_src`, independent `alpha_Phi_K`, a `Phi`-to-temperature prediction, Core closure, external validation, or global UET closure.
+
 
 ## Latest Hardening Update (2026-08-23) - NIMS MP-990448
 

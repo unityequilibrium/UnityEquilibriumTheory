@@ -29,7 +29,8 @@ def test_graphite_isothermal_kt_lane_is_integrated_without_full_bridge_promotion
     assert projected["source_row"]["K_T_uncertainty_GPa"] == 3.0
     assert full["status"] == "BLOCKED_OPEN_T13_FULL_BRIDGE"
     assert full["claim_promotion"] is False
-    assert "same_grade_alpha_V_and_K_T_missing" in full["major_result"]["what_remains_open"]
+    assert "same_grade_alpha_V_and_K_T_missing" not in full["major_result"]["what_remains_open"]
+    assert "material_regime_mapping_to_TTG_not_closed" in full["major_result"]["what_remains_open"]
     assert any(
         item["path"] == "docs/core/artifacts/t13_graphite_isothermal_kt_source_audit.json"
         for item in full["evidence_artifacts"]

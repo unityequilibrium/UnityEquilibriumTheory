@@ -1,3 +1,18 @@
+## 2026-08-24 - Lowitzer full P-V-T thermodynamic pair source wave
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for `T13_LOWITZER_GRAPHITE_ALPHA_V_K_T_FULL_SOURCE_PAIR`; canonical Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_IS_ACTUALLY_CLOSED: Full-text Lowitzer source identity, local raw hash, Table IV numeric `alpha_V`/`K_T` rows, same-study/same-sample/300 K pair identity, source-reported uncertainty, and a reproducible `c_p^V-c_v^V` correction-term witness.
+WHAT_REMAINS_OPEN: Ding natural-graphite material/state mapping, source-grade `c_v`, Ding-compatible numeric `C_src`, base-`Phi` SI anchor, independent `alpha_Phi_K`, beta/SI correspondence, and physical EOS/transport/SK/KMS/entropy closure.
+DEPENDENCY_UNLOCKED: Only the thermodynamic correction-input lane. No Full Topic 13, Core, Gravity, constitutive-transport, Galaxy, or external-validation dependency is unlocked.
+STATUS: `PASS_SCOPED_SOURCE_LOCKED_LOWITZER_ALPHA_V_K_T_PAIR`; `claim_promotion=false`; `holdout_accessed=false`.
+WHAT_CHANGED: Added the full source package and audit, projected it through the matched-source and full-bridge gates, removed only `same_grade_alpha_V_and_K_T_missing` from the topic-level blocker list, and retained material/c_v/Ding/C_src/calibration blockers.
+EQUATION_OR_MAPPING: `c_p^V-c_v^V=T*alpha_V^2*K_T`; HTV9 at 300 K gives `11,673.6 J m^-3 K^-1` with first-order alpha/K uncertainty `1,583.27 J m^-3 K^-1`. The value is a correction term only.
+VERIFICATION: Lowitzer source-pair audit PASS; matched-source audit PASS; full gate `BLOCKED_OPEN_T13_FULL_BRIDGE`; closure matrix reports 10 major results, 36 subresults, 192 closed lanes, 16 no-go lanes, and 7 open blockers; focused regression `10 passed`.
+CONTROLLING_BLOCKER: `material_regime_mapping_to_TTG_not_closed` controls this route; topic-level control remains `dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing`.
+NEXT_ACTION: Acquire permitted Ding-compatible `C_src` or accepted same-regime PBTE evidence, source-grade c_v/volume uncertainty, and an independent paired base-`Phi`/SI record. Do not use Lowitzer for `alpha_Phi_K` calibration.
+CLAIM_BOUNDARY: Source-pair correction-input lane only; not Ding `C_src`, `alpha_Phi_K`, a TTG prediction, external validation, or Full Topic 13 closure.
+EVIDENCE_HASHES: package `bbfb9cd598e243b34e7d19580496d9e4b9c997e98be502ae70171ac454770c22`; source audit `818230a6f8aa68a14a1f642e1e7342d70bfa657f6e05476d3e190d336e77b386`; matched-source audit `d6e05b2dfe754cb17d17651666319dbc0ebf295a99258bd25f67e463eba68724`; full gate `26a2498870919f02efc2bada07a400536a348f7d77ed4d7c4b20969cb18c2c81`; closure matrix `0c2ea83747eab080f2025f794ed2a8e0f119f5cd13039abcbff599c607b8379d`; register `68d4ba3f64f5d77be48fe1b87d6483dec3e48181fac872e08043de226e58107a`; dependency gate `3341b2d3e2bde5fd88fcb41d15b365b1a3966061971813b69bee119e23b1ca44`.
+
 ## 2026-08-22 - MP48 Ding C_src mode-sum response mapping wave
 
 MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for `T13_MP48_DING_C_SRC_MODE_SUM_RESPONSE_MAPPING`; the Full Topic 13 result remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.

@@ -1,13 +1,13 @@
 {
   "schema_version": "t13-graphite-alpha-v-kt-matched-source-boundary-v1",
   "artifact": "t13_graphite_alpha_v_kt_matched_source_boundary_audit",
-  "generated_at": "2026-08-20",
-  "status": "PASS_SCOPED_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY_NO_GO",
+  "generated_at": "2026-08-24",
+  "status": "PASS_SCOPED_GRAPHITE_ALPHA_V_K_T_SOURCE_PAIR_LOCKED_MATERIAL_OPEN",
   "major_result": {
     "major_result_id": "T13_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY",
     "topic": "0.13_Thermodynamic_Bridge",
     "closure_level": "CLOSED_FOR_LANE",
-    "what_is_closed": "The current archived graphite source inventory, including the screened Lowitzer P-V-T candidate, Tohei table comparator, and source-locked IG210 thermophysical comparator, cannot form a same-state, same-grade alpha_V/K_T pair with source-grade uncertainty for the Cp-to-Cv correction. The individual alpha_V and K_T comparator lanes remain separate. Tohei supplies a numeric same-calculation QHA pair and separately sourced experimental table values, but neither closes the source-grade correction contract. The IG210 rows supply same-grade C_p and alpha_l values but no same-state K_T.",
+    "what_is_closed": "The Lowitzer full-text route supplies a same-study, same-sample alpha_V/K_T pair with source-reported uncertainty at 300 K. The pair closes the source-grade thermodynamic correction-input lane, while Ding material equivalence, c_v, and C_src remain separate.",
     "equation_or_mapping": {
       "cp_cv_correction": "c_p^V - c_v^V = T * alpha_V^2 * K_T",
       "volumetric_conversion": "c_p^V = rho * c_p; c_v^V = c_p^V - T * alpha_V^2 * K_T"
@@ -78,6 +78,16 @@
         "sha256": "ef5e46d19cee679196093df802e21187ca39d5a50910b9a74727f53bf4062225"
       },
       {
+        "role": "lowitzer_full",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/lowitzer_2006_graphite_pvt_full_source_package.json",
+        "sha256": "bbfb9cd598e243b34e7d19580496d9e4b9c997e98be502ae70171ac454770c22"
+      },
+      {
+        "role": "lowitzer_full_audit",
+        "path": "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
+        "sha256": "818230a6f8aa68a14a1f642e1e7342d70bfa657f6e05476d3e190d336e77b386"
+      },
+      {
         "role": "tohei_table_comparator",
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/tohei_2006_graphite_alpha_v_kt_table_comparator_source_package.json",
         "sha256": "7a8dfafd8c06145e08194505aeca933b6f90c27e184cf4db45b56d9375b140c9"
@@ -88,9 +98,8 @@
         "sha256": "e4bd7e50b5d5e9025eae9bd410f74c3bb5699a8f22f32c4fc5c7994978d9d266"
       }
     ],
-    "verification_status": "PASS_SCOPED_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY_NO_GO",
+    "verification_status": "PASS_SCOPED_GRAPHITE_ALPHA_V_K_T_SOURCE_PAIR_LOCKED_MATERIAL_OPEN",
     "open_blockers": [
-      "same_grade_alpha_V_and_K_T_missing",
       "same_state_IG210_K_T_missing",
       "density_uncertainty_not_source_locked",
       "material_regime_mapping_to_TTG_not_closed",
@@ -160,6 +169,18 @@
       "same_state_alpha_V_and_K_T_pair_closed": false,
       "local_raw_sha256": null
     },
+    "lowitzer_full_pvt_pair": {
+      "source_id": "lowitzer_winkler_tucker_2006_graphite_pvt",
+      "payload_state": "FULL_TEXT_ARCHIVED",
+      "same_study_pair_present": true,
+      "same_sample_pair_present": true,
+      "same_temperature_point_present": true,
+      "same_grade_alpha_V_and_K_T_pair_closed": true,
+      "source_grade_uncertainty_available": true,
+      "ding_material_regime_mapping_closed": false,
+      "correction_witness_J_m3_K": 11673.6,
+      "source_sha256": "bbfb9cd598e243b34e7d19580496d9e4b9c997e98be502ae70171ac454770c22"
+    },
     "tohei_table_comparator": {
       "source_id": "tohei_kuwabara_oba_tanaka_2006_graphite_qha",
       "payload_state": "REMOTE_PRIMARY_TABLE_LOCATOR_SCREENED",
@@ -206,6 +227,13 @@
     "lowitzer_does_not_close_pair": true,
     "lowitzer_ding_mapping_is_open": true,
     "lowitzer_does_not_emit_correction": true,
+    "lowitzer_full_audit_passes": true,
+    "lowitzer_full_payload_is_archived": true,
+    "lowitzer_full_has_numeric_pair": true,
+    "lowitzer_full_pair_has_uncertainty": true,
+    "lowitzer_full_same_sample_pair": true,
+    "lowitzer_full_ding_mapping_remains_open": true,
+    "lowitzer_full_does_not_emit_ding_values": true,
     "tohei_is_a_primary_table_comparator": true,
     "tohei_has_numeric_graphite_alpha_and_b0": true,
     "tohei_same_calculation_pair_is_explicit": true,
@@ -222,7 +250,8 @@
     "farooqui_does_not_emit_alpha": true,
     "holdout_is_unconsumed": true
   },
-  "controlling_blocker": "same_grade_alpha_V_and_K_T_missing",
-  "next_controller": "Acquire a permitted full Lowitzer P-V-T payload or a permitted same-state IG210 K_T record, then seek a source-grade same-specimen/state-matched alpha_V and isothermal K_T source with uncertainty and Ding-regime mapping. The Tohei table may remain a comparator, and the Farooqui IG210 rows remain a thermophysical comparator; neither may be combined into a source-grade correction by assumption.",
-  "claim_boundary": "No numeric Cp-to-Cv correction, Ding C_src, alpha_Phi_K, TTG prediction, or Full Topic 13 closure is emitted."
+  "same_grade_pair_route_available": true,
+  "controlling_blocker": "material_regime_mapping_to_TTG_not_closed",
+  "next_controller": "Use the source-locked Lowitzer pair only as a thermodynamic correction comparator; obtain a Ding-equivalent material/state and source-grade c_p or c_v before using any correction in C_src.",
+  "claim_boundary": "No Ding C_src, alpha_Phi_K, TTG prediction, or Full Topic 13 closure is emitted; only the source-state correction term is recorded."
 }
