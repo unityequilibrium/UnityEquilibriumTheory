@@ -218,7 +218,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "592b992713ffe0870cafc9e4e7cf64e392316a303dc7f5a3d1ad00e67215a7c4",
+          "sha256": "08d220bdbaaab26cd6661e95169f71f7b629da15b55ce78a16a78852cd7809a9",
           "summary": {
             "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
             "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
@@ -277,6 +277,7 @@
           "sha256": "eaafd852fdf978efcefe8bf13900a96bf7d57e89b66c09cf1f4e65d3f10ba105",
           "summary": {
             "status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT",
+            "major_result_id": "T13_FLAT_THERMODYNAMIC_BRIDGE_COMPONENTS",
             "closure_level": "CLOSED_FOR_LANE",
             "physical_coefficient_evidence": "EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_UET_MAPPING",
             "full_core_unlock": false
@@ -1859,7 +1860,8 @@
         "full_core_unlock": false,
         "required_major_result_count": 10,
         "required_subresult_count": 36
-      }
+      },
+      "claim_promotion": false
     },
     {
       "major_result_id": "CORE_O2_TREE_LEVEL_EOS_LANE",
@@ -4584,21 +4586,13 @@
           "summary": {
             "status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT",
             "major_result_id": "T13_FLAT_THERMODYNAMIC_BRIDGE_COMPONENTS",
-            "closure_level": "CLOSED_FOR_LANE"
+            "closure_level": "CLOSED_FOR_LANE",
+            "physical_coefficient_evidence": "EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_UET_MAPPING",
+            "full_core_unlock": false
           }
         }
       ],
-      "verification_status": {
-        "normal_component_lane_closed": true,
-        "formal_bridge_lane_closed": true,
-        "sk_kms_entropy_interface_closed": true,
-        "entropy_heat_flux_balance_lane_closed": true,
-        "curved_3p1_is_explicitly_deferred": true,
-        "external_transport_input_is_provenance_complete": true,
-        "external_transport_is_not_relabelled_as_uet": true,
-        "holdout_remains_unconsumed": true,
-        "claim_promotion_remains_disabled": true
-      },
+      "verification_status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT",
       "open_blockers": [
         "physical_Kubo_coefficient_record_missing",
         "dimensional_phi_to_thermal_observable_map_missing",
