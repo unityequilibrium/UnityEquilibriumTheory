@@ -318,7 +318,7 @@
         "resolution_source": {
           "major_result_id": "T13_CALORINE_MODEL_FORM_STATE_SPREAD_COMPARISON",
           "artifact": "docs/core/artifacts/t13_calorine_model_form_state_spread_comparison_audit.json",
-          "artifact_sha256": "d635640f9fa3213bf3ad959089eaca5703f18b7b4a7773dbebe875ff967de99b",
+          "artifact_sha256": "ef7ac7e4b1447626836f3a552de702759a6f57f07a1966f7ed5a62e88374ec24",
           "common_mesh": [
             10,
             10,
@@ -638,11 +638,11 @@
       "no_go_scope": "declared local conserved-C Cattaneo equation with mu_C=a_C*C-kappa_C*Laplacian(C)",
       "no_go_artifact": {
         "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
-        "sha256": "3b58b2633a30f8a91710a59c46097f76bb2f36e2dda07e8cae03c9268d3f76bc"
+        "sha256": "1cb84b6c8e9741fef1dc6e0f83fba3dfe68ca6cd89adac8fa1a31835b4debf62"
       },
       "baseline_replaced": false,
       "full_core_unlock": false,
-      "controlling_blocker": null
+      "controlling_blocker": "original_conserved_c_gradient_baseline_blocked"
     },
     "source_package": {
       "status": "BLOCKED",
@@ -996,7 +996,7 @@
         "data_role": "EXTERNAL_CANDIDATE_EQUILIBRIUM_COMPONENT_NOT_CALIBRATION",
         "audit": {
           "path": "docs/core/artifacts/t13_csrc_equilibrium_component_acceptance_audit.json",
-          "sha256": "44f6deeff3d968978f9f2b8faeb8eaaab724fd70018caea05f859fcfc8ad98c3",
+          "sha256": "26f089063785fde068628bd071d8df1d7d50a53e2be46f7a73df627269632de1",
           "summary": {
             "status": "PASS_SCOPED_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY",
             "major_result_id": "T13_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY",
@@ -4503,7 +4503,7 @@
           "baseline": {
             "audit": {
               "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
-              "sha256": "afc8fb0d9daea81c30a09b24f0aabd824cde1a85e662ea52880fadd42863de89",
+              "sha256": "a2fb52533d768697950c49722e24e5de0d9d3381c24be6c5bf2e23f88a8957e0",
               "role": "archived baseline audit",
               "summary": {
                 "status": "PASS_SCOPED_CALORINE_NUMERIC_C_SRC_REPRODUCTION",
@@ -4516,10 +4516,10 @@
             },
             "source_package": {
               "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_nep_bte_reproduction_source_package.json",
-              "sha256": "fdca0fe6b387ecf7a731831f808b19504b9c58ebefe2d150261de37b4334f914",
+              "sha256": "a82b25ed00f896b759d2b577bdd046faf1c1ef1399b6f5d12b71c8bd6318e5ed",
               "role": "baseline source and reproduction manifest",
               "summary": {
-                "sha256_recorded_by_audit": "fdca0fe6b387ecf7a731831f808b19504b9c58ebefe2d150261de37b4334f914"
+                "sha256_recorded_by_audit": "a82b25ed00f896b759d2b577bdd046faf1c1ef1399b6f5d12b71c8bd6318e5ed"
               }
             },
             "model_header": "nep4 1 C",
@@ -4551,7 +4551,7 @@
           "variant": {
             "audit": {
               "path": "docs/core/artifacts/t13_calorine_legacy_nep2_pbte_reproduction_audit.json",
-              "sha256": "0c3724c591adc411a4ef062a2bf62b9e5ce6564831bbc662e845ef48a8d56398",
+              "sha256": "66e05c61250da9711d7d90f44cdd1297aa88e560d716984a1a8db143fa4e7af3",
               "role": "archived C-CX legacy audit",
               "summary": {
                 "status": "PASS_SCOPED_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION",
@@ -4564,10 +4564,10 @@
             },
             "source_package": {
               "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/calorine_legacy_nep2_pbte_reproduction_source_package.json",
-              "sha256": "b7da7ab6931bba4d5c9cb5a8112873c4f1f7da46e0b2945d90f0c9cd0555109b",
+              "sha256": "564606b5634d4cf1e87907da1598401b9f9ebcedacd0a41030b3766a774f84fc",
               "role": "C-CX source, legacy backend, and reproduction manifest",
               "summary": {
-                "sha256_recorded_by_audit": "b7da7ab6931bba4d5c9cb5a8112873c4f1f7da46e0b2945d90f0c9cd0555109b"
+                "sha256_recorded_by_audit": "564606b5634d4cf1e87907da1598401b9f9ebcedacd0a41030b3766a774f84fc"
               }
             },
             "model_header": "nep 1 C",
@@ -4691,7 +4691,7 @@
         "data_role": "EXTERNAL_COMPARATOR_COMPARISON_NOT_UNCERTAINTY",
         "audit": {
           "path": "docs/core/artifacts/t13_calorine_model_form_state_spread_comparison_audit.json",
-          "sha256": "d635640f9fa3213bf3ad959089eaca5703f18b7b4a7773dbebe875ff967de99b",
+          "sha256": "ef7ac7e4b1447626836f3a552de702759a6f57f07a1966f7ed5a62e88374ec24",
           "summary": {
             "status": "PASS_SCOPED_CALORINE_MODEL_FORM_STATE_SPREAD",
             "major_result_id": "T13_CALORINE_MODEL_FORM_STATE_SPREAD_COMPARISON",
@@ -9559,7 +9559,7 @@
         "data_role": "EXTERNAL_SOURCE_COMPARATOR_NOT_CALIBRATION",
         "audit": {
           "path": "docs/core/artifacts/t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json",
-          "sha256": "8714a13530c99cba457b86d529928747f26b8536befe782843387f3f2a362add",
+          "sha256": "7abf9b3292d2d46a2cb476768f452f23f6bad7ef40c2614255cf5c1f55048df0",
           "summary": {
             "status": "PASS_SCOPED_FAROOQUI_IG210_VOLUMETRIC_CP_UNCERTAINTY",
             "major_result_id": "T13_FAROOQUI_IG210_VOLUMETRIC_CP_UNCERTAINTY",
@@ -11403,7 +11403,7 @@
       "topic13_flat_component_closure_level": "CLOSED_FOR_LANE",
       "topic13_flat_component_audit": {
         "path": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
-        "sha256": "eaafd852fdf978efcefe8bf13900a96bf7d57e89b66c09cf1f4e65d3f10ba105"
+        "sha256": "65a85d9abc2d051570af72898bd8b8848c29d1fb20685c9b284ce6915fe8a8fe"
       },
       "topic13_flat_component_physical_kubo_status": "EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_UET_MAPPING",
       "topic13_curved_3p1_scope": "DEFERRED_TO_CORE_CURVED_3P1",
@@ -79100,7 +79100,7 @@
         "data_role": "INTERNAL_FORMAL_COMPONENTS_PLUS_EXTERNAL_INPUT_COMPARATOR_NOT_CALIBRATION",
         "audit": {
           "path": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
-          "sha256": "eaafd852fdf978efcefe8bf13900a96bf7d57e89b66c09cf1f4e65d3f10ba105",
+          "sha256": "65a85d9abc2d051570af72898bd8b8848c29d1fb20685c9b284ce6915fe8a8fe",
           "summary": {
             "status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT",
             "major_result_id": "T13_FLAT_THERMODYNAMIC_BRIDGE_COMPONENTS",
@@ -80622,7 +80622,7 @@
     },
     {
       "path": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
-      "sha256": "eaafd852fdf978efcefe8bf13900a96bf7d57e89b66c09cf1f4e65d3f10ba105",
+      "sha256": "65a85d9abc2d051570af72898bd8b8848c29d1fb20685c9b284ce6915fe8a8fe",
       "summary": {
         "status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT",
         "closure_level": "CLOSED_FOR_LANE",
@@ -80790,7 +80790,7 @@
     },
     {
       "path": "docs/core/artifacts/t13_csrc_equilibrium_component_acceptance_audit.json",
-      "sha256": "44f6deeff3d968978f9f2b8faeb8eaaab724fd70018caea05f859fcfc8ad98c3",
+      "sha256": "26f089063785fde068628bd071d8df1d7d50a53e2be46f7a73df627269632de1",
       "summary": {
         "status": "PASS_SCOPED_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY",
         "closure_level": "CLOSED_FOR_LANE",
@@ -80833,7 +80833,7 @@
     },
     {
       "path": "docs/core/artifacts/t13_calorine_model_form_state_spread_comparison_audit.json",
-      "sha256": "d635640f9fa3213bf3ad959089eaca5703f18b7b4a7773dbebe875ff967de99b",
+      "sha256": "ef7ac7e4b1447626836f3a552de702759a6f57f07a1966f7ed5a62e88374ec24",
       "summary": {
         "status": "PASS_SCOPED_CALORINE_MODEL_FORM_STATE_SPREAD",
         "closure_level": "CLOSED_FOR_LANE",
@@ -80950,7 +80950,7 @@
     },
     {
       "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
-      "sha256": "3b58b2633a30f8a91710a59c46097f76bb2f36e2dda07e8cae03c9268d3f76bc",
+      "sha256": "1cb84b6c8e9741fef1dc6e0f83fba3dfe68ca6cd89adac8fa1a31835b4debf62",
       "summary": {
         "status": "NO_GO_FOR_DECLARED_CONSERVED_CATTANEO_LOCAL_GRADIENT_CLASS",
         "proof_scope": "declared local conserved-C Cattaneo equation with mu_C=a_C*C-kappa_C*Laplacian(C)"
@@ -81786,6 +81786,14 @@
         "max_C_src_relative_change": 0.002396543213200888,
         "max_kappa_relative_change": 0.09081201116807297,
         "controlling_blocker": "ding_C_src_mode_state_and_source_grade_uncertainty_missing"
+      }
+    },
+    {
+      "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
+      "sha256": "1cb84b6c8e9741fef1dc6e0f83fba3dfe68ca6cd89adac8fa1a31835b4debf62",
+      "summary": {
+        "status": "NO_GO_FOR_DECLARED_CONSERVED_CATTANEO_LOCAL_GRADIENT_CLASS",
+        "proof_scope": "declared local conserved-C Cattaneo equation with mu_C=a_C*C-kappa_C*Laplacian(C)"
       }
     }
   ],

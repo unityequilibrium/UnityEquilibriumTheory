@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-farooqui-ig210-volumetric-cp-uncertainty-v1",
   "artifact": "t13_farooqui_ig210_volumetric_cp_uncertainty_audit",
-  "generated_at": "2026-08-22",
+  "generated_at": "2026-08-25",
   "status": "PASS_SCOPED_FAROOQUI_IG210_VOLUMETRIC_CP_UNCERTAINTY",
   "claim_promotion": false,
   "full_core_unlock": false,

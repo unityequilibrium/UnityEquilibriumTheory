@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-csrc-equilibrium-component-qualified-sensitivity-v1",
   "artifact": "t13_csrc_equilibrium_component_acceptance_audit",
-  "generated_at": "2026-08-23",
+  "generated_at": "2026-08-25",
   "status": "PASS_SCOPED_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY",
   "claim_promotion": false,
   "major_result": {
@@ -58,7 +58,7 @@
       },
       {
         "path": "docs/core/artifacts/t13_calorine_model_form_state_spread_comparison_audit.json",
-        "sha256": "d635640f9fa3213bf3ad959089eaca5703f18b7b4a7773dbebe875ff967de99b",
+        "sha256": "ef7ac7e4b1447626836f3a552de702759a6f57f07a1966f7ed5a62e88374ec24",
         "role": "cross-model/state sensitivity comparison"
       },
       {

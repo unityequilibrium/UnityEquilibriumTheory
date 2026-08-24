@@ -4623,3 +4623,18 @@ EVIDENCE_HASH:
 - Claim impact: `no_change`; no C_src, alpha, threshold, equation, or holdout role was promoted.
 - Workflow linkage: `n/a`
 - Notes: The canonical gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE`; this reconciliation is `CLOSED_FOR_LANE` only.
+
+### 2026-08-25 - Topic 13 closure artifact hash synchronization wave
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` evidence remains synchronized; Full Topic 13 remains `PARTIAL` and `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_IS_ACTUALLY_CLOSED: The Calorine model-form/state-spread comparator and the candidate equilibrium `C_src` component remain hash-linked through the full gate, closure matrix, major-result register, and dependency projection.
+WHAT_REMAINS_OPEN: The same `10` required subresults remain open: base-Phi SI anchor, independent `alpha_Phi_K`, normalized beta/SI map, physical source-backed EOS, physical UET Kubo, physical SK/KMS transport match, physical entropy mapping, accepted Ding-compatible `C_src`, material/uncertainty closure, and physical heat-flux/entropy map.
+DEPENDENCY_UNLOCKED: None beyond the bounded causal branch and candidate comparator lanes; downstream Core/Gravity/constitutive transport remain locked.
+STATUS: `PASS_SCOPED_TOPIC13_HASH_SYNCHRONIZATION`; full-core unlock remains `false`.
+WHAT_CHANGED: Regenerated the affected full-gate projections after the model-form artifact rerun and synchronized current SHA-256 references across C_src acceptance, Full Gate, closure matrix, major-result register, dependency gate, and Wave 1 contract. No new physical input, fit, calibration, threshold, equation, or holdout access was introduced.
+EQUATION_OR_MAPPING: `C_src(T,V) = (partial u_ph / partial T)_V`; `Delta_Tq = Delta_u_ph / C_src(T,V)`; `y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)`; `Delta_Tq = alpha_Phi_K * Delta_Phi` remains dimensionally open.
+VERIFICATION: The model-form comparator, C_src component, full gate, and closure register tests passed (`11/11` focused tests). Current matrix counts remain `CLOSED_FOR_LANE=21`, `CLOSED_AS_NO_GO=5`, `CLOSED_FOR_CORE=0`, `OPEN=10` across `36` required subresults; holdout access remains false.
+CONTROLLING_BLOCKER: The three grouped input packages remain blocked: Ding-compatible source/material uncertainty, independent base-Phi/SI/alpha/beta, and physical Kubo/SK/KMS/entropy matching.
+NEXT_ACTION: Do not rerun unchanged numeric gates. Obtain a permitted Ding payload or accepted same-regime reproduction, an independent base-Phi SI anchor/alpha record, and a state-matched physical transport record; then rerun the affected acceptance chain.
+CLAIM_BOUNDARY: This wave repairs evidence traceability only. It does not turn the Calorine comparator into Ding data, does not emit `alpha_Phi_K`, does not consume Xie 2026, and does not close Full Topic 13.
+EVIDENCE_PATHS: `docs/core/artifacts/t13_calorine_model_form_state_spread_comparison_audit.json`; `docs/core/artifacts/t13_csrc_equilibrium_component_acceptance_audit.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/artifacts/t13_topic13_closure_matrix.json`; `docs/core/artifacts/uet_major_result_closure_register.json`; `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`.

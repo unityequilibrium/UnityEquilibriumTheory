@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-flat-thermodynamic-bridge-components-v1",
   "artifact": "t13_flat_thermodynamic_bridge_components_gate",
-  "generated_at": "2026-08-23",
+  "generated_at": "2026-08-25",
   "status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT",
   "claim_promotion": false,
   "major_result": {
