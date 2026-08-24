@@ -4093,3 +4093,19 @@ NEXT_ACTION: Obtain an authorized Ding package or accepted same-regime reproduct
 CLAIM_BOUNDARY: Input acceptance audit only; not Full Topic 13 closure, Core-ready status, external validation, prediction, or global UET closure.
 EVIDENCE_PATHS: docs/scripts/audit/audit_topic13_closure_input_packages.py; docs/core/artifacts/t13_closure_input_package_audit.json; docs/scripts/audit/audit_topic13_closure_matrix.py; docs/core/artifacts/t13_topic13_closure_matrix.json; docs/core/artifacts/uet_major_result_closure_register.json; docs/core/artifacts/uet_major_result_dependency_unlock_gate.json; docs/core/test/test_topic13_closure_input_packages.py; docs/core/test/test_topic13_closure_matrix.py.
 EVIDENCE_HASHES: input-audit-script 746873f535c544793edbdaba07c7c523de55474f1b6f57e8cbcd1adc2500f21a; matrix-generator e0de9edcf8c462cc02ebca0128a380f047f67ed5df96a6f48f96e74fc3e61a3a; input-audit 4cf3dbde680d7e57469de4860925ba40b2bbc944de245dd02f8928a30989d0e8; matrix b39f987fa973d3f42a8e10c0831e3b279a8fb722f2e506f288e7de4208de50d2; register 7e63653d2e3f9146d1b2180ce2c976d8f543b83431bcdeaf78317a681c36d393; dependency 23e1ddbf52dff514eb595263b66e7c440c1715485c19535b434b15e4e3f34886.
+
+
+### 2026-08-24 - Full closure roadmap
+
+MAJOR_RESULT_CLOSURE: PARTIAL; the canonical full Topic 13 gate remains BLOCKED_OPEN_T13_FULL_BRIDGE.
+WHAT_IS_ACTUALLY_CLOSED: Added a durable human-readable roadmap that maps the 10 major results and 36 subresults to the three input packages and the exact Core-level acceptance boundary. The existing 21 CLOSED_FOR_LANE and 5 CLOSED_AS_NO_GO results are unchanged.
+WHAT_REMAINS_OPEN: The same 10 Core-level subresults remain open: base-Phi SI anchor, independent alpha, beta/SI map, physical EOS, physical Kubo, physical SK/KMS transport, physical entropy mapping, accepted Ding C_src, material/uncertainty closure, and physical heat-flux/entropy mapping.
+DEPENDENCY_UNLOCKED: None. The roadmap is a reporting and execution controller only; it does not promote any lane, comparator, candidate source, or no-go result.
+STATUS: BLOCKED_OPEN_T13_FULL_BRIDGE; full_core_unlock=false; claim_promotion=false; holdout_accessed=false.
+WHAT_CHANGED: Added TOPIC13_FULL_CLOSURE_ROADMAP.md with the full-topic closure rule, causal no-go exception, package requirements, equation boundary, verification predicate, and finite next-action sequence.
+EQUATION_OR_MAPPING: y_TTG=Delta_Tq(t)/Delta_Tq(0); y_TTG^UET=Delta_Phi(t)/Delta_Phi(0); Delta_Tq=alpha_Phi_K*Delta_Phi; C_src(T)=sum_mu c_mu(T); Delta_Tq=Delta_u_ph/C_src(T).
+VERIFICATION: Documentation-only wave; canonical matrix and input-package audit remain the controlling artifacts. No fit, tuning, holdout read, numeric alpha emission, or threshold change occurred.
+CONTROLLING_BLOCKER: dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing, with independent Ding-compatible C_src and physical Kubo blockers still open.
+NEXT_ACTION: Obtain the three accepted input/derivation packages, then rerun the linked acceptance gates and promote the named causal branch to Core before regenerating the full gate.
+CLAIM_BOUNDARY: The roadmap is not Full Topic 13 closure, Core-ready status, external validation, prediction, or global UET closure.
+EVIDENCE_PATHS: docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_FULL_CLOSURE_ROADMAP.md; docs/core/artifacts/t13_topic13_closure_matrix.json; docs/core/artifacts/t13_closure_input_package_audit.json.
