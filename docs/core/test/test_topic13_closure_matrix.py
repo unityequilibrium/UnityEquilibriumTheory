@@ -20,7 +20,7 @@ def digest(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def test_topic13_closure_matrix_reports_major_requirements_without_promotion() -> None:
+def test_topic13_closure_matrix_reports_full_topic_contract_without_promotion() -> None:
     matrix = load(MATRIX)
     gate = load(GATE)
     required = {
@@ -33,7 +33,25 @@ def test_topic13_closure_matrix_reports_major_requirements_without_promotion() -
         "sk_kms_matching",
         "entropy_current_and_dissipative_balance",
         "source_and_uncertainty",
+        "heat_flux_entropy_production_mapping",
     }
+    required_record_fields = {
+        "major_result_id",
+        "topic",
+        "closure_level",
+        "what_is_closed",
+        "equation_or_mapping",
+        "units",
+        "derivation_class",
+        "observable",
+        "data_role",
+        "evidence_artifacts",
+        "verification_status",
+        "open_blockers",
+        "dependency_unlocked",
+        "claim_boundary",
+    }
+    assert matrix["schema_version"] == "t13-topic13-closure-matrix-v2"
     assert matrix["major_result"]["major_result_id"] == "T13_TOPIC13_CLOSURE_MATRIX"
     assert {item["requirement_id"] for item in matrix["requirements"]} == required
     assert matrix["status"] == gate["status"] == "BLOCKED_OPEN_T13_FULL_BRIDGE"
@@ -44,6 +62,18 @@ def test_topic13_closure_matrix_reports_major_requirements_without_promotion() -
     assert matrix["holdout_policy"]["calibration_path_may_read_holdout"] is False
     assert matrix["major_result"]["open_blockers"] == gate["major_result"]["what_remains_open"]
     assert matrix["closure_summary"]["open_blocker_groups"] == gate["major_result"]["closure_summary"]["open_blocker_groups"]
+    assert matrix["full_topic_closure_contract"]["required_major_result_count"] == 10
+    assert matrix["full_topic_closure_contract"]["required_subresult_count"] == 36
+    assert matrix["closure_summary"]["current_subresult_counts"] == {
+        "CLOSED_AS_NO_GO": 5,
+        "CLOSED_FOR_LANE": 21,
+        "OPEN": 10,
+    }
+    for item in matrix["requirements"]:
+        assert required_record_fields <= set(item)
+        assert item["subresult_summary"]["required_count"] == len(item["required_subresults"])
+        for subresult in item["required_subresults"]:
+            assert {"subresult_id", "label", "status", "acceptance"} <= set(subresult)
     causal = next(item for item in matrix["requirements"] if item["requirement_id"] == "causal_structure")
     assert causal["closure_level"] == "CLOSED_AS_NO_GO"
     assert causal["gate_status"] == "PASS"
@@ -71,6 +101,9 @@ def test_topic13_closure_matrix_is_projected_into_register_and_dependency_gate()
     assert entry["evidence_artifacts"][0]["path"] == "docs/core/artifacts/t13_topic13_closure_matrix.json"
     assert entry["evidence_artifacts"][0]["sha256"] == digest(MATRIX)
     assert full_entry["closure_matrix"]["sha256"] == digest(MATRIX)
+    assert full_entry["closure_matrix"]["required_major_result_count"] == 10
+    assert full_entry["closure_matrix"]["required_subresult_count"] == 36
     assert projection["path"] == "docs/core/artifacts/t13_topic13_closure_matrix.json"
     assert projection["sha256"] == digest(MATRIX)
     assert projection["full_core_unlock"] is False
+    assert dependency["topic13_partial_evidence"]["full_topic_closure_contract"]["full_topic_ready"] is False

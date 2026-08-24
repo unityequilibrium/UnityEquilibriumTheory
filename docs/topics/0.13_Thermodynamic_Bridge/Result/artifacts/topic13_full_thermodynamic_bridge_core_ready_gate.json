@@ -1,7 +1,7 @@
 {
   "schema_version": "topic13-full-thermodynamic-bridge-core-ready-v1",
   "artifact": "topic13_full_thermodynamic_bridge_core_ready_gate",
-  "generated_at": "2026-08-23",
+  "generated_at": "2026-08-24",
   "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
   "claim_promotion": false,
   "major_result": {
@@ -9987,7 +9987,7 @@
         "data_role": "SOURCE_DISCOVERY_BOUNDARY_NOT_CALIBRATION",
         "audit": {
           "path": "docs/core/artifacts/t13_ding_alternate_public_dataset_discovery_boundary_audit.json",
-          "sha256": "67f059ed8ef9dcbe84878276d3056efb61b834fdfa7eca686d5361f1213d2573",
+          "sha256": "6becdf0eb8270cf5c5dda7683b2839af52f38e407712787c03759015ff537f6f",
           "summary": {
             "status": "PASS_SCOPED_DING_ALTERNATE_PUBLIC_DATASET_BOUNDARY_NO_GO",
             "major_result_id": "T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY_BOUNDARY",
@@ -80940,7 +80940,7 @@
     },
     {
       "path": "docs/core/artifacts/t13_ding_alternate_public_dataset_discovery_boundary_audit.json",
-      "sha256": "67f059ed8ef9dcbe84878276d3056efb61b834fdfa7eca686d5361f1213d2573",
+      "sha256": "6becdf0eb8270cf5c5dda7683b2839af52f38e407712787c03759015ff537f6f",
       "summary": {
         "status": "PASS_SCOPED_DING_ALTERNATE_PUBLIC_DATASET_BOUNDARY_NO_GO",
         "closure_level": "CLOSED_FOR_LANE",

@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-desorbo-ceylon-graphite-cp-audit-v1",
   "artifact": "t13_desorbo_ceylon_graphite_cp_audit",
-  "generated_at": "2026-08-21",
+  "generated_at": "2026-08-24",
   "status": "PASS_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_LOCKED_COMPARATOR",
   "claim_promotion": false,
   "major_result": {

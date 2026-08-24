@@ -14,6 +14,8 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
+from topic13_closure_contract import MAJOR_RESULT_CONTRACTS
+
 
 ROOT = Path(__file__).resolve().parents[3]
 GATE_REL = (
@@ -165,6 +167,23 @@ REQUIREMENTS: tuple[dict[str, Any], ...] = (
         ),
         "dependency_unlocked": "Source acceptance policy only.",
     },
+    {
+        "requirement_id": "heat_flux_entropy_production_mapping",
+        "label": "Heat-flux and entropy-production mapping",
+        "gate_key": "eos_transport_kms_entropy",
+        "closure_level": "PARTIAL",
+        "what_is_closed": (
+            "The normalized heat-current, entropy-production, and covariant "
+            "balance interfaces are separated from the physical SI heat-flux "
+            "coefficient."
+        ),
+        "what_remains_open": (
+            "A state-matched physical heat-flux coefficient, SI Phi normalization, "
+            "and source-linked entropy-production uncertainty are not closed."
+        ),
+        "dependency_unlocked": "Formal heat-flux/entropy interface only.",
+    },
+
 )
 
 
@@ -223,27 +242,115 @@ def status_evidence(section: dict[str, Any]) -> list[dict[str, Any]]:
     return refs[:8]
 
 
+
+def explicit_artifact_refs(paths: list[str]) -> list[dict[str, Any]]:
+    refs: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for path in paths:
+        if path in seen or not (ROOT / path).is_file():
+            continue
+        refs.append(
+            artifact_ref(
+                path,
+                {"role": "declared Topic 13 closure-contract evidence"},
+            )
+        )
+        seen.add(path)
+    return refs
+
+
+def build_subresult(
+    gate: dict[str, Any],
+    subresult: dict[str, Any],
+    closed_result_ids: set[str],
+) -> dict[str, Any]:
+    status = subresult.get("current_status", "OPEN")
+    if set(subresult.get("evidence_result_ids", [])) & closed_result_ids:
+        status = subresult.get("required_closure_level", "CLOSED_FOR_LANE")
+    gate_key = subresult.get("gate_key")
+    if gate_key == "causal_full_candidate_or_formal_no_go_branch":
+        section = gate.get("verification_status", {}).get(gate_key, {})
+        if isinstance(section, dict):
+            status = section.get("structural_question_closure", status)
+    return {
+        **subresult,
+        "status": status,
+        "evidence_result_ids": list(subresult.get("evidence_result_ids", [])),
+    }
+
+
 def build_requirement(gate: dict[str, Any], spec: dict[str, Any]) -> dict[str, Any]:
     section = gate.get("verification_status", {}).get(spec["gate_key"], {})
     if not isinstance(section, dict):
         section = {"status": str(section)}
+    metadata = MAJOR_RESULT_CONTRACTS.get(spec["requirement_id"], {})
+    merged = {**spec, **metadata}
     component = section.get("topic13_flat_thermodynamic_bridge_components", {})
     if not isinstance(component, dict):
         component = {}
     closure_level = spec["closure_level"]
     if spec["requirement_id"] == "causal_structure":
         closure_level = section.get("structural_question_closure", closure_level)
+    if gate.get("status") == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY":
+        closure_level = "CLOSED_FOR_CORE"
+    gate_open_blockers = set(gate.get("major_result", {}).get("what_remains_open", []))
+    open_blockers = [
+        blocker
+        for blocker in merged.get("blocker_keys", [])
+        if blocker in gate_open_blockers
+    ]
+    gate_blocker = section.get("controlling_blocker")
+    if gate_blocker and gate_blocker in gate_open_blockers and gate_blocker not in open_blockers:
+        open_blockers.append(gate_blocker)
+    closed_result_ids = set(
+        gate.get("major_result", {})
+        .get("closure_summary", {})
+        .get("closed_lane_result_ids", [])
+    )
+    subresults = [
+        build_subresult(gate, item, closed_result_ids)
+        for item in merged.get("required_subresults", [])
+    ]
+    evidence = status_evidence(section)
+    existing_paths = {item["path"] for item in evidence}
+    for ref in explicit_artifact_refs(merged.get("evidence_paths", [])):
+        if ref["path"] not in existing_paths:
+            evidence.append(ref)
+            existing_paths.add(ref["path"])
+    substatus_counts: dict[str, int] = {}
+    for item in subresults:
+        substatus_counts[item["status"]] = substatus_counts.get(item["status"], 0) + 1
     return {
-        **spec,
+        **merged,
         "closure_level": closure_level,
         "gate_status": section.get("status", "OPEN"),
-        "gate_controlling_blocker": section.get("controlling_blocker"),
+        "gate_controlling_blocker": gate_blocker,
         "gate_lane_status": section.get("lane_status"),
         "gate_lane_closure_level": section.get("lane_closure_level"),
         "component_lane_status": component.get("status"),
         "component_lane_closure_level": component.get("closure_level"),
         "component_lane_controlling_blocker": component.get("controlling_blocker"),
-        "evidence_artifacts": status_evidence(section),
+        "verification_status": {
+            "gate_status": section.get("status", "OPEN"),
+            "gate_controlling_blocker": gate_blocker,
+            "gate_lane_status": section.get("lane_status"),
+            "gate_lane_closure_level": section.get("lane_closure_level"),
+            "component_lane_status": component.get("status"),
+            "component_lane_closure_level": component.get("closure_level"),
+            "component_lane_controlling_blocker": component.get("controlling_blocker"),
+            "subresult_status_counts": substatus_counts,
+        },
+        "open_blockers": open_blockers,
+        "required_subresults": subresults,
+        "subresult_summary": {
+            "required_count": len(subresults),
+            "status_counts": substatus_counts,
+            "all_required_subresults_closed": all(
+                item["status"] in {"CLOSED_FOR_LANE", "CLOSED_AS_NO_GO", "CLOSED_FOR_CORE"}
+                for item in subresults
+            ),
+        },
+        "evidence_artifacts": evidence,
     }
 
 
@@ -252,6 +359,19 @@ def build_matrix() -> dict[str, Any]:
     summary = gate.get("major_result", {}).get("closure_summary", {})
     requirements = [build_requirement(gate, spec) for spec in REQUIREMENTS]
     open_blockers = list(gate.get("major_result", {}).get("what_remains_open", []))
+    full_core_unlock = gate.get("status") == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+    major_status_counts: dict[str, int] = {}
+    substatus_counts: dict[str, int] = {}
+    required_subresult_count = 0
+    for requirement in requirements:
+        major_status_counts[requirement["closure_level"]] = (
+            major_status_counts.get(requirement["closure_level"], 0) + 1
+        )
+        for subresult in requirement["required_subresults"]:
+            required_subresult_count += 1
+            substatus_counts[subresult["status"]] = (
+                substatus_counts.get(subresult["status"], 0) + 1
+            )
     evidence = [
         artifact_ref(
             GATE_REL,
@@ -269,9 +389,10 @@ def build_matrix() -> dict[str, Any]:
     major_result = {
         "major_result_id": "T13_TOPIC13_CLOSURE_MATRIX",
         "topic": "0.13_Thermodynamic_Bridge",
-        "closure_level": "PARTIAL",
+        "closure_level": "CLOSED_FOR_CORE" if full_core_unlock else "PARTIAL",
         "what_is_closed": [
-            "The nine required Topic 13 result areas are reported separately by closure level.",
+            "The ten required Topic 13 result areas are reported separately by closure level.",
+            "Each result area exposes evidence-producing subresults and an acceptance boundary.",
             "Lane-level formal results are not counted as Full Topic 13 Core-ready closure.",
             "The current full-gate blocker groups and dependency state are projected without changing them.",
             "The normalized measurement operator remains separate from the dimensional thermal operator.",
@@ -296,19 +417,66 @@ def build_matrix() -> dict[str, Any]:
         "observable": "Topic 13 major-result closure state and dependency readiness",
         "data_role": "INTERNAL_CLOSURE_REPORT_NOT_CALIBRATION",
         "evidence_artifacts": evidence,
-        "verification_status": "PASS_MACHINE_READABLE_CLOSURE_MATRIX_WITH_FULL_BRIDGE_BLOCKED",
+        "verification_status": "PASS_MACHINE_READABLE_FULL_TOPIC_CLOSURE_CONTRACT_WITH_GATE_BOUNDARY",
         "open_blockers": open_blockers,
-        "dependency_unlocked": "None for Full Topic 13; formal and source-acceptance lanes remain separately available.",
+        "dependency_unlocked": "Gravity/GR remains blocked until Full Topic 13 and Core curved 3+1 gates pass." if not full_core_unlock else "Full thermal bridge only; Core curved 3+1 remains a separate dependency.",
         "claim_boundary": "This matrix reports progress and closure boundaries. It does not promote a lane-level PASS, comparator, no-go, or formal interface to Full Topic 13, Core, external validation, or a global UET claim.",
+        "required_major_result_count": len(requirements),
+        "required_subresult_count": required_subresult_count,
+        "current_major_result_counts": major_status_counts,
+        "current_subresult_counts": substatus_counts,
+    }
+    full_topic_closure_contract = {
+        "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
+        "topic": "0.13_Thermodynamic_Bridge",
+        "closure_level": "CLOSED_FOR_CORE" if full_core_unlock else "PARTIAL",
+        "what_is_closed": [item["major_result_id"] for item in requirements if item["closure_level"] in {"CLOSED_FOR_CORE", "CLOSED_AS_NO_GO"}],
+        "what_remains_open": open_blockers,
+        "equation_or_mapping": {
+            item["requirement_id"]: item["equation_or_mapping"]
+            for item in requirements
+        },
+        "units": {
+            item["requirement_id"]: item["units"]
+            for item in requirements
+        },
+        "derivation_class": "All ten major results must satisfy their declared derivation and evidence boundary; no lane PASS is sufficient by itself.",
+        "observable": [item["observable"] for item in requirements],
+        "data_role": [item["data_role"] for item in requirements],
+        "evidence_artifacts": evidence,
+        "verification_status": {
+            "canonical_gate_status": gate.get("status"),
+            "full_core_unlock": full_core_unlock,
+            "holdout_consumed": gate.get("verification_status", {}).get("holdout_integrity", {}).get("holdout_consumed", False),
+            "claim_promotion": False,
+            "major_result_status_counts": major_status_counts,
+            "subresult_status_counts": substatus_counts,
+        },
+        "open_blockers": open_blockers,
+        "dependency_unlocked": "None while any major result or required source/calibration blocker is open." if not full_core_unlock else "Topic 13 thermal bridge only; downstream gravity still requires Core curved 3+1.",
+        "claim_boundary": "CLOSED_FOR_CORE means the thermal bridge is internally integrated and ready for Core handoff. It is not external-ready and does not close global UET.",
+        "required_major_result_count": len(requirements),
+        "required_subresult_count": required_subresult_count,
+        "current_major_result_counts": major_status_counts,
+        "current_subresult_counts": substatus_counts,
+        "full_topic_closure_rule": {
+            "required_major_result_level": "CLOSED_FOR_CORE",
+            "causal_exception": "The conserved-C baseline may be CLOSED_AS_NO_GO only when the named causal branch is separately CLOSED_FOR_CORE and the no-go scope remains explicit.",
+            "required_subresult_statuses": ["CLOSED_FOR_LANE", "CLOSED_AS_NO_GO", "CLOSED_FOR_CORE"],
+            "required_gate_status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+            "holdout_requirement": "Xie 2026 must remain unread by calibration, fitting, tuning, and threshold paths.",
+            "claim_promotion": False,
+        },
     }
     matrix = {
-        "schema_version": "t13-topic13-closure-matrix-v1",
+        "schema_version": "t13-topic13-closure-matrix-v2",
         "artifact": "t13_topic13_closure_matrix",
         "generated_at": date.today().isoformat(),
-        "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
+        "status": gate.get("status", "OPEN"),
         "claim_promotion": False,
-        "full_core_unlock": False,
+        "full_core_unlock": full_core_unlock,
         "major_result": major_result,
+        "full_topic_closure_contract": full_topic_closure_contract,
         "requirements": requirements,
         "closure_summary": {
             "closed_lane_count": summary.get("closed_lane_count"),
@@ -316,6 +484,11 @@ def build_matrix() -> dict[str, Any]:
             "open_blocker_count": summary.get("open_blocker_count"),
             "open_blocker_groups": summary.get("open_blocker_groups", {}),
             "downstream_dependency_unlocked": summary.get("downstream_dependency_unlocked", False),
+            "required_major_result_count": len(requirements),
+            "required_subresult_count": required_subresult_count,
+            "current_major_result_counts": major_status_counts,
+            "current_subresult_counts": substatus_counts,
+            "full_topic_ready": full_core_unlock,
         },
         "canonical_gate": {
             "path": GATE_REL,
@@ -331,14 +504,14 @@ def build_matrix() -> dict[str, Any]:
             "calibration_path_may_read_holdout": False,
         },
         "report": {
-            "MAJOR_RESULT_CLOSURE": "PARTIAL",
+            "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_CORE" if full_core_unlock else "PARTIAL",
             "WHAT_IS_ACTUALLY_CLOSED": major_result["what_is_closed"],
             "WHAT_REMAINS_OPEN": open_blockers,
             "DEPENDENCY_UNLOCKED": major_result["dependency_unlocked"],
             "STATUS": matrix_status(gate),
-            "WHAT_CHANGED": "Added a compact projection of the canonical Topic 13 gate into nine major research requirements; no equation, threshold, source role, fit path, or holdout policy changed.",
+            "WHAT_CHANGED": f"Added a ten-result Topic 13 closure contract with {required_subresult_count} evidence-producing subresults; no equation, threshold, source role, fit path, or holdout policy changed.",
             "EQUATION_OR_MAPPING": major_result["equation_or_mapping"],
-            "VERIFICATION": "Canonical gate hash, blocker groups, lane statuses, evidence references, and holdout metadata were read and projected without consuming numeric holdout data.",
+            "VERIFICATION": "Canonical gate hash, blocker groups, major-result records, subresult statuses, evidence references, and holdout metadata were read and projected without consuming numeric holdout data.",
             "CONTROLLING_BLOCKER": gate.get("controlling_blocker"),
             "NEXT_ACTION": gate.get("next_action"),
             "CLAIM_BOUNDARY": major_result["claim_boundary"],
@@ -348,7 +521,8 @@ def build_matrix() -> dict[str, Any]:
 
 
 def matrix_status(gate: dict[str, Any]) -> str:
-    return f"{gate.get('status', 'OPEN')}; full_core_unlock=False"
+    full_core_unlock = gate.get("status") == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+    return f"{gate.get('status', 'OPEN')}; full_core_unlock={full_core_unlock}"
 
 
 def sync_register_and_dependency(matrix: dict[str, Any]) -> None:
@@ -360,6 +534,13 @@ def sync_register_and_dependency(matrix: dict[str, Any]) -> None:
         artifact_ref(GATE_REL, {"role": "canonical readiness gate"}),
     ]
     entry["closure_summary"] = matrix["closure_summary"]
+    entry["full_topic_closure_contract"] = {
+        "required_major_result_count": matrix["full_topic_closure_contract"]["required_major_result_count"],
+        "required_subresult_count": matrix["full_topic_closure_contract"]["required_subresult_count"],
+        "current_major_result_counts": matrix["full_topic_closure_contract"]["current_major_result_counts"],
+        "current_subresult_counts": matrix["full_topic_closure_contract"]["current_subresult_counts"],
+        "full_topic_ready": matrix["full_core_unlock"],
+    }
     entry["claim_promotion"] = False
     entries = register.setdefault("entries", [])
     existing = next((item for item in entries if item.get("major_result_id") == entry["major_result_id"]), None)
@@ -373,7 +554,9 @@ def sync_register_and_dependency(matrix: dict[str, Any]) -> None:
         "path": OUT_REL,
         "sha256": matrix_hash,
         "status": matrix["status"],
-        "full_core_unlock": False,
+        "full_core_unlock": matrix["full_core_unlock"],
+        "required_major_result_count": matrix["full_topic_closure_contract"]["required_major_result_count"],
+        "required_subresult_count": matrix["full_topic_closure_contract"]["required_subresult_count"],
     }
     register["generated_at"] = date.today().isoformat()
     register["claim_promotion"] = False
@@ -385,14 +568,23 @@ def sync_register_and_dependency(matrix: dict[str, Any]) -> None:
     partial["closure_matrix"] = {
         "path": OUT_REL,
         "sha256": matrix_hash,
-        "full_core_unlock": False,
+        "full_core_unlock": matrix["full_core_unlock"],
         "status": matrix["status"],
+        "required_major_result_count": matrix["full_topic_closure_contract"]["required_major_result_count"],
+        "required_subresult_count": matrix["full_topic_closure_contract"]["required_subresult_count"],
+    }
+    partial["full_topic_closure_contract"] = {
+        "required_major_result_count": matrix["full_topic_closure_contract"]["required_major_result_count"],
+        "required_subresult_count": matrix["full_topic_closure_contract"]["required_subresult_count"],
+        "current_major_result_counts": matrix["full_topic_closure_contract"]["current_major_result_counts"],
+        "current_subresult_counts": matrix["full_topic_closure_contract"]["current_subresult_counts"],
+        "full_topic_ready": matrix["full_core_unlock"],
     }
     register_hash = sha256(REGISTER_REL)
     dependency["generated_at"] = date.today().isoformat()
     dependency.setdefault("register", {})["sha256"] = register_hash
     partial["register_sha256"] = register_hash
-    partial["full_core_unlock"] = False
+    partial["full_core_unlock"] = matrix["full_core_unlock"]
     (ROOT / DEPENDENCY_REL).write_text(json.dumps(dependency, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
 
 
@@ -407,6 +599,7 @@ def main() -> int:
                 "artifact": OUT_REL,
                 "major_result_id": matrix["major_result"]["major_result_id"],
                 "requirement_count": len(matrix["requirements"]),
+                "subresult_count": matrix["full_topic_closure_contract"]["required_subresult_count"],
                 "open_blocker_count": matrix["closure_summary"]["open_blocker_count"],
                 "full_core_unlock": matrix["full_core_unlock"],
                 "holdout_accessed": matrix["holdout_policy"]["xie_2026_accessed"],

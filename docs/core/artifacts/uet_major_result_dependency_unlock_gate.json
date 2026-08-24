@@ -1,12 +1,12 @@
 {
   "schema_version": "uet-major-result-dependency-unlock-v1",
   "artifact": "uet_major_result_dependency_unlock_gate",
-  "generated_at": "2026-08-23",
+  "generated_at": "2026-08-24",
   "status": "BLOCKED_DOWNSTREAM_MAJOR_RESULTS",
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "8f7a367573ace41b4080fadf396f246c5c50e7a53461d85c06051d6e3f8962e3"
+    "sha256": "2d5e7a165698df00ea817cc4c2f9c7148ed542f93bfc74e32bc817fa4874ca08"
   },
   "decisions": {
     "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY": {
@@ -75,7 +75,7 @@
   ],
   "claim_boundary": "Dependency decisions only; no downstream result is promoted by a checkpoint or comparator pass.",
   "topic13_partial_evidence": {
-    "register_sha256": "8f7a367573ace41b4080fadf396f246c5c50e7a53461d85c06051d6e3f8962e3",
+    "register_sha256": "2d5e7a165698df00ea817cc4c2f9c7148ed542f93bfc74e32bc817fa4874ca08",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",
@@ -2202,9 +2202,11 @@
     },
     "closure_matrix": {
       "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-      "sha256": "74898242e258ad4ebbb8dc0584625ccd47b00336ff80c08fb7012155f7091fc7",
+      "sha256": "ef00ce12b703648dfb5b62f17ae4cd789656405d046d54463b2c0e50dfd4914b",
       "full_core_unlock": false,
-      "status": "BLOCKED_OPEN_T13_FULL_BRIDGE"
+      "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
+      "required_major_result_count": 10,
+      "required_subresult_count": 36
     },
     "topic13_flat_thermodynamic_bridge_components": {
       "path": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
@@ -2216,6 +2218,21 @@
         "controlling_blocker": "physical_Kubo_coefficient_record_missing"
       },
       "full_core_unlock": false
+    },
+    "full_topic_closure_contract": {
+      "required_major_result_count": 10,
+      "required_subresult_count": 36,
+      "current_major_result_counts": {
+        "CLOSED_AS_NO_GO": 1,
+        "OPEN": 3,
+        "PARTIAL": 6
+      },
+      "current_subresult_counts": {
+        "CLOSED_AS_NO_GO": 5,
+        "CLOSED_FOR_LANE": 21,
+        "OPEN": 10
+      },
+      "full_topic_ready": false
     }
   }
 }
