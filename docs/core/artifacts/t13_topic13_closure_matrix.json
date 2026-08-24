@@ -80,6 +80,14 @@
       "claim_boundary": "The existing natural-unit Kubo and formal SK/KMS lanes remain lane evidence until a state-matched physical record passes this contract."
     }
   ],
+  "input_package_audit": {
+    "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
+    "sha256": "4cf3dbde680d7e57469de4860925ba40b2bbc944de245dd02f8928a30989d0e8",
+    "summary": {
+      "role": "grouped Topic 13 closure-input acceptance audit",
+      "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
+    }
+  },
   "major_result": {
     "major_result_id": "T13_TOPIC13_CLOSURE_MATRIX",
     "topic": "0.13_Thermodynamic_Bridge",
@@ -117,6 +125,14 @@
         "summary": {
           "role": "canonical full Topic 13 readiness gate",
           "status": "BLOCKED_OPEN_T13_FULL_BRIDGE"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
+        "sha256": "4cf3dbde680d7e57469de4860925ba40b2bbc944de245dd02f8928a30989d0e8",
+        "summary": {
+          "role": "grouped Topic 13 closure-input acceptance audit",
+          "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
         }
       },
       {
@@ -403,6 +419,14 @@
         }
       }
     ],
+    "input_package_audit": {
+      "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
+      "sha256": "4cf3dbde680d7e57469de4860925ba40b2bbc944de245dd02f8928a30989d0e8",
+      "summary": {
+        "role": "grouped Topic 13 closure-input acceptance audit",
+        "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
+      }
+    },
     "verification_status": "PASS_MACHINE_READABLE_FULL_TOPIC_CLOSURE_CONTRACT_WITH_GATE_BOUNDARY",
     "open_blockers": [
       "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
@@ -665,6 +689,14 @@
         }
       },
       {
+        "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
+        "sha256": "4cf3dbde680d7e57469de4860925ba40b2bbc944de245dd02f8928a30989d0e8",
+        "summary": {
+          "role": "grouped Topic 13 closure-input acceptance audit",
+          "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
+        }
+      },
+      {
         "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
         "sha256": "3b58b2633a30f8a91710a59c46097f76bb2f36e2dda07e8cae03c9268d3f76bc",
         "summary": {
@@ -948,6 +980,14 @@
         }
       }
     ],
+    "input_package_audit": {
+      "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
+      "sha256": "4cf3dbde680d7e57469de4860925ba40b2bbc944de245dd02f8928a30989d0e8",
+      "summary": {
+        "role": "grouped Topic 13 closure-input acceptance audit",
+        "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
+      }
+    },
     "verification_status": {
       "canonical_gate_status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
       "full_core_unlock": false,
@@ -2848,7 +2888,7 @@
       "formal_entropy_balance": "nabla_mu J_S^mu = q_perp^2/(kappa T^2) + X_A L^(AB) X_B >= 0",
       "source_response": "C_src(T) = sum_mu c_mu(T); Delta_Tq = Delta_u_ph / C_src(T)"
     },
-    "VERIFICATION": "Canonical gate hash, blocker groups, major-result records, subresult statuses, evidence references, and holdout metadata were read and projected without consuming numeric holdout data.",
+    "VERIFICATION": "Canonical gate, grouped input-package audit, blocker groups, major-result records, subresult statuses, evidence references, and holdout metadata were read and projected without consuming numeric holdout data.",
     "CONTROLLING_BLOCKER": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing",
     "NEXT_ACTION": "Acquire an independent base-Phi SI energy/observable anchor or paired Phi/SI record; obtain Ding numeric C_src(T) or an accepted independent reproduction; source-lock beta_T13 and one state-matched physical Kubo coefficient; then complete EOS/transport/KMS/entropy gates. The original conserved-C question is closed only as a scoped no-go and remains blocked as the original baseline.",
     "CLAIM_BOUNDARY": "This matrix reports progress and closure boundaries. It does not promote a lane-level PASS, comparator, no-go, or formal interface to Full Topic 13, Core, external validation, or a global UET claim."

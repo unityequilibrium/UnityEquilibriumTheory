@@ -1,0 +1,314 @@
+{
+  "schema_version": "t13-closure-input-package-audit-v1",
+  "artifact": "t13_closure_input_package_audit",
+  "generated_at": "2026-08-24",
+  "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN",
+  "major_result": {
+    "major_result_id": "T13_CLOSURE_INPUT_PACKAGE_AUDIT",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "PARTIAL",
+    "what_is_closed": [
+      "The three non-derivable input packages are checked against current artifacts.",
+      "Numeric candidates are separated from accepted Core-ready evidence.",
+      "Holdout and anti-fitting boundaries are rechecked."
+    ],
+    "what_remains_open": [
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "normalized_beta_and_SI_scale_correspondence_missing",
+      "physical_Kubo_coefficient_record_missing",
+      "dimensional_phi_to_thermal_observable_map_missing",
+      "same_grade_alpha_V_and_K_T_missing",
+      "material_regime_mapping_to_TTG_not_closed",
+      "c_v_source_uncertainty_not_closed"
+    ],
+    "equation_or_mapping": {
+      "TTG": "C_src(T)=sum_mu c_mu(T); Delta_Tq=Delta_u_ph/C_src(T)",
+      "UET": "y_TTG^UET=Delta_Phi(t)/Delta_Phi(0); Delta_Tq=alpha_Phi_K*Delta_Phi",
+      "transport": "KuboCoefficientRecord -> physical coefficient only after matched provenance"
+    },
+    "units": {
+      "C_src": "J m^-3 K^-1",
+      "Delta_Tq": "K",
+      "alpha_Phi_K": "K per normalized Phi",
+      "transport": "source-specific; no physical value emitted"
+    },
+    "derivation_class": "provenance and acceptance audit; no new physical derivation",
+    "observable": "closure-input acceptance state",
+    "data_role": "INTERNAL_AUDIT_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json",
+        "sha256": "880eb2cc94543f19fefae13ad8c64af820bb619d9c898cd4e1e710494519d281",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
+        "sha256": "a2fb52533d768697950c49722e24e5de0d9d3381c24be6c5bf2e23f88a8957e0",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/artifacts/t13_ding_pbte_author_request_audit.json",
+        "sha256": "66679f962d0725455c73bfbc856f6c5722b039a3c15b16d4620081d89b4b892a",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
+        "sha256": "1828db74760ac53c73345d0e4a8adc8fc00fc16bb25e84809a73aaa3cd9b3d9a",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/artifacts/t13_ding_material_regime_boundary_audit.json",
+        "sha256": "2147cc4909937a00d9769af6d62d64e8258ab92d2b1ccafebf717fba77cbb0f8",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json",
+        "sha256": "4d5f2e0d96d5d30d126243c9754d38a591680c9f3e0bbb62f0a3ece35cb2e3bc",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/artifacts/t13_dimensional_bridge_contract_audit.json",
+        "sha256": "caf37f860838c1e424a2a37cde6a9c852e2f2af0f13e6b17a1e9589161faf500",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
+        "sha256": "ce0837792cd63918dc371f64fa49801bfb0dd0f715264c8557cf54f5dcbe9059",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
+        "sha256": "a51c9ab63e4e976b04a032037608d59441192cbd8066ccc9bd490f7336527a15",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/artifacts/t13_physical_kubo_coefficient_provenance_audit.json",
+        "sha256": "af78a1eb742e6438d679263771ef85b0f500726f4342a5f0a7ccefbe07a54f63",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/artifacts/covariant_superfluid_transport_verification.json",
+        "sha256": "49fc1a047cfa84e8155940a491eb9c3fb3c3536ac707b010ba15b32298632ad1",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json",
+        "sha256": "5e909ff97aa0476619235460c012313f36b6065e642bbe4f7fba63f36bd8c7f6",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json",
+        "sha256": "d9632a317270260f4d18be5d1cb8e7f0889ca9e3e9631ebe47aa32212320f4ba",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+        "sha256": "5b9aeaee6fcf1110bd4040857fd9088defa8d361fb9f540d08278002695ae1d9",
+        "role": "input-package acceptance evidence"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN",
+    "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing",
+    "claim_boundary": "This audit narrows input readiness only. It does not close Full Topic 13, derive alpha_Phi_K, or promote candidate C_src/Kubo values."
+  },
+  "packages": [
+    {
+      "package_id": "T13_INPUT_DING_TTG_SOURCE",
+      "status": "BLOCKED",
+      "accepted_for_core": false,
+      "current_evidence": {
+        "numeric_candidate_rows_present": true,
+        "mesh_convergence_pass": true,
+        "material_state_match_to_ding": false,
+        "source_grade_uncertainty_present": false,
+        "author_payload_received": false,
+        "public_route_is_bounded": true,
+        "author_request_executed": false,
+        "material_equivalence_audit": "PASS_SCOPED_DING_MATERIAL_REGIME_BOUNDARY_NO_GO"
+      },
+      "missing_acceptance_fields": [
+        "authorized_numeric_C_src_payload",
+        "accepted_independent_reproduction",
+        "Ding_material_state_match",
+        "source_grade_uncertainty"
+      ],
+      "unlocks_subresults": [
+        "accepted_numeric_csrc",
+        "material_and_uncertainty_closure",
+        "physical_source_backed_eos",
+        "physical_heat_flux_entropy_map"
+      ]
+    },
+    {
+      "package_id": "T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
+      "status": "BLOCKED",
+      "accepted_for_core": false,
+      "current_evidence": {
+        "eligible_paired_alpha_records": 0,
+        "candidate_search_status": "PASS_SCOPED_NO_ELIGIBLE_PAIRED_ALPHA_RECORD",
+        "normalized_scale_no_go": "PASS_SCOPED_NO_GO_NORMALIZED_PHI_ENERGY_ANCHOR",
+        "dimensional_bridge_status": "PASS_CONDITIONAL_FORMULA_OPEN_INPUTS",
+        "covariant_action_route_status": "PASS_NATURAL_UNIT_ROUTE_IDENTIFIED_SI_MAPPING_BLOCKED",
+        "numeric_alpha_emitted": false,
+        "holdout_accessed": false
+      },
+      "missing_acceptance_fields": [
+        "eligible_paired_alpha_record",
+        "numeric_alpha_emitted",
+        "dimensional_bridge_open_inputs_closed",
+        "dimensionful_action_SI_map"
+      ],
+      "unlocks_subresults": [
+        "base_phi_si_anchor",
+        "independent_alpha_record",
+        "normalized_beta_si_map",
+        "physical_source_backed_eos",
+        "physical_heat_flux_entropy_map"
+      ]
+    },
+    {
+      "package_id": "T13_INPUT_PHYSICAL_TRANSPORT_MATCH",
+      "status": "BLOCKED",
+      "accepted_for_core": false,
+      "current_evidence": {
+        "physical_coefficient_evidence": "BLOCKED_NOT_PROVIDED",
+        "finite_temperature_two_fluid_completion": "BLOCKED",
+        "natural_kubo_lane_status": "PASS_KUBO_MATCHED_DECLARED_CONDENSED_RELATIVE_FLOW_CHANNEL",
+        "natural_kubo_is_SI": false,
+        "formal_sk_entropy_status": "PASS_NAMED_SK_KMS_ENTROPY_INTERFACE_CONTRACT"
+      },
+      "missing_acceptance_fields": [
+        "physical_coefficient_record",
+        "finite_temperature_transport_completion",
+        "physical_anchor_supplied",
+        "physical_heat_flux_entropy_link"
+      ],
+      "unlocks_subresults": [
+        "physical_uet_kubo_record",
+        "physical_sk_transport_match",
+        "physical_entropy_production_mapping",
+        "physical_heat_flux_entropy_map"
+      ]
+    }
+  ],
+  "checks": {
+    "all_evidence_files_present": true,
+    "canonical_gate_is_still_blocked": true,
+    "all_packages_are_explicitly_blocked_until_inputs_arrive": true,
+    "holdout_is_unread": true,
+    "no_target_fit": true,
+    "no_numeric_alpha_emitted": true,
+    "no_physical_transport_value_emitted": true,
+    "gate_blocker_set_is_nonempty": true
+  },
+  "open_blockers": [
+    "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+    "alpha_Phi_K_independent_calibration_missing",
+    "normalized_beta_and_SI_scale_correspondence_missing",
+    "physical_Kubo_coefficient_record_missing",
+    "dimensional_phi_to_thermal_observable_map_missing",
+    "same_grade_alpha_V_and_K_T_missing",
+    "material_regime_mapping_to_TTG_not_closed",
+    "c_v_source_uncertainty_not_closed"
+  ],
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_fit_performed": false,
+    "calibration_path_may_read_holdout": false
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json",
+      "sha256": "880eb2cc94543f19fefae13ad8c64af820bb619d9c898cd4e1e710494519d281",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
+      "sha256": "a2fb52533d768697950c49722e24e5de0d9d3381c24be6c5bf2e23f88a8957e0",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/artifacts/t13_ding_pbte_author_request_audit.json",
+      "sha256": "66679f962d0725455c73bfbc856f6c5722b039a3c15b16d4620081d89b4b892a",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
+      "sha256": "1828db74760ac53c73345d0e4a8adc8fc00fc16bb25e84809a73aaa3cd9b3d9a",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/artifacts/t13_ding_material_regime_boundary_audit.json",
+      "sha256": "2147cc4909937a00d9769af6d62d64e8258ab92d2b1ccafebf717fba77cbb0f8",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json",
+      "sha256": "4d5f2e0d96d5d30d126243c9754d38a591680c9f3e0bbb62f0a3ece35cb2e3bc",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/artifacts/t13_dimensional_bridge_contract_audit.json",
+      "sha256": "caf37f860838c1e424a2a37cde6a9c852e2f2af0f13e6b17a1e9589161faf500",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
+      "sha256": "ce0837792cd63918dc371f64fa49801bfb0dd0f715264c8557cf54f5dcbe9059",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
+      "sha256": "a51c9ab63e4e976b04a032037608d59441192cbd8066ccc9bd490f7336527a15",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/artifacts/t13_physical_kubo_coefficient_provenance_audit.json",
+      "sha256": "af78a1eb742e6438d679263771ef85b0f500726f4342a5f0a7ccefbe07a54f63",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/artifacts/covariant_superfluid_transport_verification.json",
+      "sha256": "49fc1a047cfa84e8155940a491eb9c3fb3c3536ac707b010ba15b32298632ad1",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/artifacts/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json",
+      "sha256": "5e909ff97aa0476619235460c012313f36b6065e642bbe4f7fba63f36bd8c7f6",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json",
+      "sha256": "d9632a317270260f4d18be5d1cb8e7f0889ca9e3e9631ebe47aa32212320f4ba",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+      "sha256": "5b9aeaee6fcf1110bd4040857fd9088defa8d361fb9f540d08278002695ae1d9",
+      "role": "input-package acceptance evidence"
+    }
+  ],
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "PARTIAL",
+    "WHAT_IS_ACTUALLY_CLOSED": "The three package acceptance boundaries are machine-audited; no package is accepted for Core.",
+    "WHAT_REMAINS_OPEN": [
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "normalized_beta_and_SI_scale_correspondence_missing",
+      "physical_Kubo_coefficient_record_missing",
+      "dimensional_phi_to_thermal_observable_map_missing",
+      "same_grade_alpha_V_and_K_T_missing",
+      "material_regime_mapping_to_TTG_not_closed",
+      "c_v_source_uncertainty_not_closed"
+    ],
+    "DEPENDENCY_UNLOCKED": "None.",
+    "STATUS": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN",
+    "WHAT_CHANGED": "Added a read-only acceptance audit for the three grouped Topic 13 input packages.",
+    "EQUATION_OR_MAPPING": "No equations or numeric values were changed or emitted.",
+    "VERIFICATION": "All evidence hashes, holdout, fit, candidate, and canonical-gate checks passed.",
+    "CONTROLLING_BLOCKER": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing",
+    "NEXT_ACTION": "Acquire an authorized Ding-compatible source, independent base-Phi/SI calibration, and physical Kubo/SK/KMS record.",
+    "CLAIM_BOUNDARY": "Input-readiness audit only; not Full Topic 13 closure or external validation."
+  }
+}

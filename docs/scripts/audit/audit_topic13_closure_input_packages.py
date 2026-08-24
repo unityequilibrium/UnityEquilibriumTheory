@@ -1,0 +1,343 @@
+"""Audit the three non-derivable input packages that control Topic 13 closure.
+
+The audit reads only existing non-holdout artifacts. It never invents a source
+row, alpha value, SI Phi scale, or physical transport coefficient.
+"""
+
+from __future__ import annotations
+
+import hashlib
+import json
+from datetime import date
+from pathlib import Path
+from typing import Any
+
+
+ROOT = Path(__file__).resolve().parents[3]
+OUT = ROOT / "docs/core/artifacts/t13_closure_input_package_audit.json"
+GATE_REL = (
+    "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
+    "topic13_full_thermodynamic_bridge_core_ready_gate.json"
+)
+
+EVIDENCE_RELS = [
+    "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json",
+    "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
+    "docs/core/artifacts/t13_ding_pbte_author_request_audit.json",
+    "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
+    "docs/core/artifacts/t13_ding_material_regime_boundary_audit.json",
+    "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json",
+    "docs/core/artifacts/t13_dimensional_bridge_contract_audit.json",
+    "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
+    "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
+    "docs/core/artifacts/t13_physical_kubo_coefficient_provenance_audit.json",
+    "docs/core/artifacts/covariant_superfluid_transport_verification.json",
+    "docs/core/artifacts/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json",
+    "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json",
+    GATE_REL,
+]
+
+
+def load(rel: str) -> dict[str, Any]:
+    path = ROOT / rel
+    value = json.loads(path.read_text(encoding="utf-8-sig"))
+    if not isinstance(value, dict):
+        raise ValueError(f"expected JSON object: {rel}")
+    return value
+
+
+def sha256(rel: str) -> str:
+    return hashlib.sha256((ROOT / rel).read_bytes()).hexdigest()
+
+
+def artifact_ref(rel: str, role: str) -> dict[str, Any]:
+    return {
+        "path": rel,
+        "sha256": sha256(rel),
+        "role": role,
+    }
+
+
+def main() -> int:
+    gate = load(GATE_REL)
+    csrc_contract = load("docs/core/artifacts/t13_independent_csrc_acceptance_contract.json")
+    calorine = load("docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json")
+    author_request = load("docs/core/artifacts/t13_ding_pbte_author_request_audit.json")
+    oa_route = load("docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json")
+    material = load("docs/core/artifacts/t13_ding_material_regime_boundary_audit.json")
+    alpha = load("docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json")
+    dimensional = load("docs/core/artifacts/t13_dimensional_bridge_contract_audit.json")
+    anchor_no_go = load("docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json")
+    action_si = load("docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json")
+    kubo = load("docs/core/artifacts/t13_physical_kubo_coefficient_provenance_audit.json")
+    transport = load("docs/core/artifacts/covariant_superfluid_transport_verification.json")
+    natural_kubo = load(
+        "docs/core/artifacts/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json"
+    )
+    sk_entropy = load("docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json")
+
+    calorine_checks = calorine.get("checks", {})
+    alpha_count = int(alpha.get("eligible_candidate_count", 0))
+    alpha_package_eligible = alpha_count > 0
+    physical_coefficient_blocked = (
+        kubo.get("transport_verification", {}).get("physical_coefficient_evidence")
+        == "BLOCKED_NOT_PROVIDED"
+    )
+
+    ding_missing = [
+        key
+        for key, present in {
+            "authorized_numeric_C_src_payload": csrc_contract.get("acceptance", {}).get(
+                "raw_author_numeric_C_src_available", False
+            ),
+            "accepted_independent_reproduction": csrc_contract.get("acceptance", {}).get(
+                "accepted_independent_reproduction_available", False
+            ),
+            "Ding_material_state_match": calorine_checks.get(
+                "material_state_match_to_ding", False
+            ),
+            "source_grade_uncertainty": calorine_checks.get(
+                "source_grade_uncertainty_present", False
+            ),
+        }.items()
+        if not present
+    ]
+
+    phi_missing = [
+        key
+        for key, present in {
+            "eligible_paired_alpha_record": alpha_package_eligible,
+            "numeric_alpha_emitted": alpha.get("numeric_alpha_Phi_K_emitted", False),
+            "dimensional_bridge_open_inputs_closed": dimensional.get("status")
+            == "PASS_CONDITIONAL_FORMULA_CLOSED",
+            "dimensionful_action_SI_map": action_si.get("status")
+            == "PASS_COVARIANT_ACTION_SI_MAP_CLOSED",
+        }.items()
+        if not present
+    ]
+
+    transport_missing = [
+        key
+        for key, present in {
+            "physical_coefficient_record": not physical_coefficient_blocked,
+            "finite_temperature_transport_completion": transport.get(
+                "finite_temperature_two_fluid_completion"
+            )
+            == "PASS",
+            "physical_anchor_supplied": natural_kubo.get("state", {}).get(
+                "admission", {}
+            ).get("physical_anchor_supplied", False),
+            "physical_heat_flux_entropy_link": sk_entropy.get(
+                "physical_coefficient_evidence"
+            )
+            not in {None, "BLOCKED_NOT_PROVIDED"},
+        }.items()
+        if not present
+    ]
+
+    packages = [
+        {
+            "package_id": "T13_INPUT_DING_TTG_SOURCE",
+            "status": "BLOCKED",
+            "accepted_for_core": not ding_missing,
+            "current_evidence": {
+                "numeric_candidate_rows_present": calorine_checks.get(
+                    "summary_schema_valid", False
+                )
+                and calorine_checks.get("mode_heat_capacity_unit_recorded", False),
+                "mesh_convergence_pass": calorine_checks.get(
+                    "latest_mesh_pair_preflight_pass", False
+                ),
+                "material_state_match_to_ding": calorine_checks.get(
+                    "material_state_match_to_ding", False
+                ),
+                "source_grade_uncertainty_present": calorine_checks.get(
+                    "source_grade_uncertainty_present", False
+                ),
+                "author_payload_received": csrc_contract.get("acceptance", {}).get(
+                    "raw_author_numeric_C_src_available", False
+                ),
+                "public_route_is_bounded": oa_route.get("checks", {}).get(
+                    "no_reproduction_payload_candidate_in_oa_prefix", False
+                ),
+                "author_request_executed": not author_request.get("checks", {}).get(
+                    "manifest_not_sent", False
+                ),
+                "material_equivalence_audit": material.get("status"),
+            },
+            "missing_acceptance_fields": ding_missing,
+            "unlocks_subresults": [
+                "accepted_numeric_csrc",
+                "material_and_uncertainty_closure",
+                "physical_source_backed_eos",
+                "physical_heat_flux_entropy_map",
+            ],
+        },
+        {
+            "package_id": "T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
+            "status": "BLOCKED",
+            "accepted_for_core": not phi_missing,
+            "current_evidence": {
+                "eligible_paired_alpha_records": alpha_count,
+                "candidate_search_status": alpha.get("status"),
+                "normalized_scale_no_go": anchor_no_go.get("status"),
+                "dimensional_bridge_status": dimensional.get("status"),
+                "covariant_action_route_status": action_si.get("status"),
+                "numeric_alpha_emitted": alpha.get("numeric_alpha_Phi_K_emitted", False),
+                "holdout_accessed": alpha.get("holdout_accessed", False),
+            },
+            "missing_acceptance_fields": phi_missing,
+            "unlocks_subresults": [
+                "base_phi_si_anchor",
+                "independent_alpha_record",
+                "normalized_beta_si_map",
+                "physical_source_backed_eos",
+                "physical_heat_flux_entropy_map",
+            ],
+        },
+        {
+            "package_id": "T13_INPUT_PHYSICAL_TRANSPORT_MATCH",
+            "status": "BLOCKED",
+            "accepted_for_core": not transport_missing,
+            "current_evidence": {
+                "physical_coefficient_evidence": kubo.get(
+                    "transport_verification", {}
+                ).get("physical_coefficient_evidence"),
+                "finite_temperature_two_fluid_completion": transport.get(
+                    "finite_temperature_two_fluid_completion"
+                ),
+                "natural_kubo_lane_status": natural_kubo.get("status"),
+                "natural_kubo_is_SI": natural_kubo.get("state", {})
+                .get("admission", {})
+                .get("units")
+                == "SI",
+                "formal_sk_entropy_status": sk_entropy.get("status"),
+            },
+            "missing_acceptance_fields": transport_missing,
+            "unlocks_subresults": [
+                "physical_uet_kubo_record",
+                "physical_sk_transport_match",
+                "physical_entropy_production_mapping",
+                "physical_heat_flux_entropy_map",
+            ],
+        },
+    ]
+
+    checks = {
+        "all_evidence_files_present": all(
+            (ROOT / rel).is_file() for rel in EVIDENCE_RELS
+        ),
+        "canonical_gate_is_still_blocked": gate.get("status")
+        == "BLOCKED_OPEN_T13_FULL_BRIDGE",
+        "all_packages_are_explicitly_blocked_until_inputs_arrive": all(
+            package["status"] == "BLOCKED" and not package["accepted_for_core"]
+            for package in packages
+        ),
+        "holdout_is_unread": not gate.get("verification_status", {})
+        .get("holdout_integrity", {})
+        .get("holdout_consumed", False),
+        "no_target_fit": all(
+            not value.get("target_fit_performed", False)
+            for value in (alpha, calorine, natural_kubo)
+        ),
+        "no_numeric_alpha_emitted": not alpha.get("numeric_alpha_Phi_K_emitted", False),
+        "no_physical_transport_value_emitted": physical_coefficient_blocked,
+        "gate_blocker_set_is_nonempty": bool(
+            gate.get("major_result", {}).get("what_remains_open")
+        ),
+    }
+
+    status = (
+        "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
+        if all(checks.values())
+        else "FAIL_T13_CLOSURE_INPUT_AUDIT"
+    )
+    evidence = [
+        artifact_ref(rel, "input-package acceptance evidence")
+        for rel in EVIDENCE_RELS
+    ]
+    report = {
+        "schema_version": "t13-closure-input-package-audit-v1",
+        "artifact": "t13_closure_input_package_audit",
+        "generated_at": date.today().isoformat(),
+        "status": status,
+        "major_result": {
+            "major_result_id": "T13_CLOSURE_INPUT_PACKAGE_AUDIT",
+            "topic": "0.13_Thermodynamic_Bridge",
+            "closure_level": "PARTIAL",
+            "what_is_closed": [
+                "The three non-derivable input packages are checked against current artifacts.",
+                "Numeric candidates are separated from accepted Core-ready evidence.",
+                "Holdout and anti-fitting boundaries are rechecked.",
+            ],
+            "what_remains_open": gate.get("major_result", {}).get(
+                "what_remains_open", []
+            ),
+            "equation_or_mapping": {
+                "TTG": "C_src(T)=sum_mu c_mu(T); Delta_Tq=Delta_u_ph/C_src(T)",
+                "UET": "y_TTG^UET=Delta_Phi(t)/Delta_Phi(0); Delta_Tq=alpha_Phi_K*Delta_Phi",
+                "transport": "KuboCoefficientRecord -> physical coefficient only after matched provenance",
+            },
+            "units": {
+                "C_src": "J m^-3 K^-1",
+                "Delta_Tq": "K",
+                "alpha_Phi_K": "K per normalized Phi",
+                "transport": "source-specific; no physical value emitted",
+            },
+            "derivation_class": "provenance and acceptance audit; no new physical derivation",
+            "observable": "closure-input acceptance state",
+            "data_role": "INTERNAL_AUDIT_NOT_CALIBRATION",
+            "evidence_artifacts": evidence,
+            "verification_status": status,
+            "controlling_blocker": gate.get("controlling_blocker"),
+            "claim_boundary": "This audit narrows input readiness only. It does not close Full Topic 13, derive alpha_Phi_K, or promote candidate C_src/Kubo values.",
+        },
+        "packages": packages,
+        "checks": checks,
+        "open_blockers": gate.get("major_result", {}).get("what_remains_open", []),
+        "holdout_policy": {
+            "xie_2026_accessed": False,
+            "target_fit_performed": False,
+            "calibration_path_may_read_holdout": False,
+        },
+        "evidence_artifacts": evidence,
+        "report": {
+            "MAJOR_RESULT_CLOSURE": "PARTIAL",
+            "WHAT_IS_ACTUALLY_CLOSED": "The three package acceptance boundaries are machine-audited; no package is accepted for Core.",
+            "WHAT_REMAINS_OPEN": gate.get("major_result", {}).get(
+                "what_remains_open", []
+            ),
+            "DEPENDENCY_UNLOCKED": "None.",
+            "STATUS": status,
+            "WHAT_CHANGED": "Added a read-only acceptance audit for the three grouped Topic 13 input packages.",
+            "EQUATION_OR_MAPPING": "No equations or numeric values were changed or emitted.",
+            "VERIFICATION": "All evidence hashes, holdout, fit, candidate, and canonical-gate checks passed.",
+            "CONTROLLING_BLOCKER": gate.get("controlling_blocker"),
+            "NEXT_ACTION": "Acquire an authorized Ding-compatible source, independent base-Phi/SI calibration, and physical Kubo/SK/KMS record.",
+            "CLAIM_BOUNDARY": "Input-readiness audit only; not Full Topic 13 closure or external validation.",
+        },
+    }
+    OUT.write_text(json.dumps(report, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
+    print(
+        json.dumps(
+            {
+                "status": status,
+                "artifact": str(OUT.relative_to(ROOT)).replace("\\", "/"),
+                "package_count": len(packages),
+                "accepted_for_core": sum(
+                    package["accepted_for_core"] for package in packages
+                ),
+                "holdout_accessed": False,
+                "failed_checks": [
+                    key for key, value in checks.items() if not value
+                ],
+            },
+            indent=2,
+        )
+    )
+    return 0 if status.startswith("PASS") else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
+

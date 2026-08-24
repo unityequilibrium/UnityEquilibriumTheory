@@ -65,6 +65,14 @@ def test_topic13_closure_matrix_reports_full_topic_contract_without_promotion() 
     assert matrix["full_topic_closure_contract"]["required_major_result_count"] == 10
     assert matrix["full_topic_closure_contract"]["required_subresult_count"] == 36
     assert matrix["full_topic_closure_contract"]["required_input_package_count"] == 3
+    assert (
+        matrix["full_topic_closure_contract"]["input_package_audit"]["path"]
+        == "docs/core/artifacts/t13_closure_input_package_audit.json"
+    )
+    assert (
+        matrix["full_topic_closure_contract"]["input_package_audit"]["summary"]["status"]
+        == "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
+    )
     assert {
         item["package_id"] for item in matrix["full_topic_closure_contract"]["closure_input_packages"]
     } == {

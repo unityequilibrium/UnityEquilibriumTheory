@@ -25,6 +25,7 @@ GATE_REL = (
 REGISTER_REL = "docs/core/artifacts/uet_major_result_closure_register.json"
 DEPENDENCY_REL = "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
 OUT_REL = "docs/core/artifacts/t13_topic13_closure_matrix.json"
+INPUT_AUDIT_REL = "docs/core/artifacts/t13_closure_input_package_audit.json"
 
 
 REQUIREMENTS: tuple[dict[str, Any], ...] = (
@@ -381,6 +382,19 @@ def build_matrix() -> dict[str, Any]:
             },
         )
     ]
+    input_audit_ref = (
+        artifact_ref(
+            INPUT_AUDIT_REL,
+            {
+                "role": "grouped Topic 13 closure-input acceptance audit",
+                "status": load_json(INPUT_AUDIT_REL).get("status"),
+            },
+        )
+        if (ROOT / INPUT_AUDIT_REL).is_file()
+        else None
+    )
+    if input_audit_ref is not None:
+        evidence.append(input_audit_ref)
     for requirement in requirements:
         for ref in requirement["evidence_artifacts"]:
             if ref["path"] not in {item["path"] for item in evidence}:
@@ -417,6 +431,7 @@ def build_matrix() -> dict[str, Any]:
         "observable": "Topic 13 major-result closure state and dependency readiness",
         "data_role": "INTERNAL_CLOSURE_REPORT_NOT_CALIBRATION",
         "evidence_artifacts": evidence,
+        "input_package_audit": input_audit_ref,
         "verification_status": "PASS_MACHINE_READABLE_FULL_TOPIC_CLOSURE_CONTRACT_WITH_GATE_BOUNDARY",
         "open_blockers": open_blockers,
         "dependency_unlocked": "Gravity/GR remains blocked until Full Topic 13 and Core curved 3+1 gates pass." if not full_core_unlock else "Full thermal bridge only; Core curved 3+1 remains a separate dependency.",
@@ -446,6 +461,7 @@ def build_matrix() -> dict[str, Any]:
         "observable": [item["observable"] for item in requirements],
         "data_role": [item["data_role"] for item in requirements],
         "evidence_artifacts": evidence,
+        "input_package_audit": input_audit_ref,
         "verification_status": {
             "canonical_gate_status": gate.get("status"),
             "full_core_unlock": full_core_unlock,
@@ -481,6 +497,7 @@ def build_matrix() -> dict[str, Any]:
         "full_core_unlock": full_core_unlock,
         "required_input_package_count": len(CLOSURE_INPUT_PACKAGES),
         "closure_input_packages": list(CLOSURE_INPUT_PACKAGES),
+        "input_package_audit": input_audit_ref,
         "major_result": major_result,
         "full_topic_closure_contract": full_topic_closure_contract,
         "requirements": requirements,
@@ -518,7 +535,7 @@ def build_matrix() -> dict[str, Any]:
             "STATUS": matrix_status(gate),
             "WHAT_CHANGED": f"Added a ten-result Topic 13 closure contract with {required_subresult_count} evidence-producing subresults and {len(CLOSURE_INPUT_PACKAGES)} grouped input packages; no equation, threshold, source role, fit path, or holdout policy changed.",
             "EQUATION_OR_MAPPING": major_result["equation_or_mapping"],
-            "VERIFICATION": "Canonical gate hash, blocker groups, major-result records, subresult statuses, evidence references, and holdout metadata were read and projected without consuming numeric holdout data.",
+            "VERIFICATION": "Canonical gate, grouped input-package audit, blocker groups, major-result records, subresult statuses, evidence references, and holdout metadata were read and projected without consuming numeric holdout data.",
             "CONTROLLING_BLOCKER": gate.get("controlling_blocker"),
             "NEXT_ACTION": gate.get("next_action"),
             "CLAIM_BOUNDARY": major_result["claim_boundary"],

@@ -1823,7 +1823,7 @@
       },
       "closure_matrix": {
         "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-        "sha256": "8ce3f391c1442b3fb9182d43bb55496e09794c3452e980d6741588922c1718e3",
+        "sha256": "b39f987fa973d3f42a8e10c0831e3b279a8fb722f2e506f288e7de4208de50d2",
         "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
         "full_core_unlock": false,
         "required_major_result_count": 10,
@@ -7369,7 +7369,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-          "sha256": "8ce3f391c1442b3fb9182d43bb55496e09794c3452e980d6741588922c1718e3",
+          "sha256": "b39f987fa973d3f42a8e10c0831e3b279a8fb722f2e506f288e7de4208de50d2",
           "summary": {
             "role": "compact Topic 13 closure projection"
           }
@@ -7382,6 +7382,14 @@
           }
         }
       ],
+      "input_package_audit": {
+        "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
+        "sha256": "4cf3dbde680d7e57469de4860925ba40b2bbc944de245dd02f8928a30989d0e8",
+        "summary": {
+          "role": "grouped Topic 13 closure-input acceptance audit",
+          "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
+        }
+      },
       "verification_status": "PASS_MACHINE_READABLE_FULL_TOPIC_CLOSURE_CONTRACT_WITH_GATE_BOUNDARY",
       "open_blockers": [
         "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
