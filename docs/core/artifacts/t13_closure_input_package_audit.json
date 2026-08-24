@@ -140,7 +140,7 @@
       },
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-        "sha256": "26a2498870919f02efc2bada07a400536a348f7d77ed4d7c4b20969cb18c2c81",
+        "sha256": "592b992713ffe0870cafc9e4e7cf64e392316a303dc7f5a3d1ad00e67215a7c4",
         "role": "input-package acceptance evidence"
       }
     ],
@@ -374,7 +374,7 @@
     },
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-      "sha256": "26a2498870919f02efc2bada07a400536a348f7d77ed4d7c4b20969cb18c2c81",
+      "sha256": "592b992713ffe0870cafc9e4e7cf64e392316a303dc7f5a3d1ad00e67215a7c4",
       "role": "input-package acceptance evidence"
     }
   ],
