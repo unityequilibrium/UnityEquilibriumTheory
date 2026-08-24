@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-causal-branch-selection-audit-v1",
   "artifact": "t13_causal_branch_selection_audit",
-  "generated_at": "2026-08-22",
+  "generated_at": "2026-08-24",
   "status": "PASS_CLOSED_AS_NO_GO_WITH_NAMED_COUPLED_BRANCH",
   "major_result": {
     "major_result_id": "T13_CAUSAL_THERMAL_BRANCH_SELECTION",
@@ -31,15 +31,15 @@
     "evidence_artifacts": [
       {
         "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
-        "sha256": "c4e5b4e87794136f07f70ded43f7aa4d86140ca3c725b6ac237c99808a81262d"
+        "sha256": "3b58b2633a30f8a91710a59c46097f76bb2f36e2dda07e8cae03c9268d3f76bc"
       },
       {
         "path": "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
-        "sha256": "ba355af70dff95305f35de260659403e9b021a42cfb86919f5b94a1f4dcd5f8a"
+        "sha256": "70eafbe2b7b845c76336117bb3fe940c7427862a7a0d30d328a67a804356761c"
       },
       {
         "path": "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
-        "sha256": "39c4c17d2663330a6dd52751472eb569a52ee42cd3820fb881ffe5af83ab3d7c"
+        "sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b"
       },
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/thermal_wave1_branch_gate.json",

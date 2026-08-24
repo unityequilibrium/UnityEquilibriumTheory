@@ -1,0 +1,105 @@
+{
+  "schema_version": "t13-causal-named-branch-core-compatibility-v1",
+  "artifact": "t13_causal_named_branch_core_compatibility",
+  "generated_at": "2026-08-24",
+  "status": "PASS_CAUSAL_NAMED_BRANCH_CORE_COMPATIBILITY",
+  "major_result": {
+    "major_result_id": "T13_CAUSAL_FLUX_PHI_COUPLED_CORE_COMPATIBILITY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_CORE",
+    "what_is_closed": [
+      "the named conserved-flux/Phi telegraph branch is admissible as a bounded Core input",
+      "the unchanged finite-cone, arrival, convergence, ledger, and anti-manipulation contract",
+      "the scoped conserved-C local-gradient no-go boundary and baseline preservation"
+    ],
+    "equation_or_mapping": {
+      "selected_branch": "C_t + partial_x J_C = 0; tau_C J_C_t + J_C = -M_C partial_x(mu_C)",
+      "response_branch": "tau_Phi Phi_tt + Phi_t + M_Phi mu_Phi = 0",
+      "measurement": "y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)"
+    },
+    "units": {
+      "lane": "normalized internal candidate",
+      "C": "normalized collective-coordinate density lane",
+      "Phi": "normalized effective response variable",
+      "R_gen": "derived history trace; absent from dynamics"
+    },
+    "derivation_class": "Core compatibility audit of a named normalized causal branch",
+    "observable": "normalized coupled C/Phi response, compact support, arrival, and shared ledger",
+    "data_role": "INTERNAL_VERIFICATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
+        "sha256": "3b58b2633a30f8a91710a59c46097f76bb2f36e2dda07e8cae03c9268d3f76bc",
+        "summary": {
+          "status": "NO_GO_FOR_DECLARED_CONSERVED_CATTANEO_LOCAL_GRADIENT_CLASS",
+          "closure_level": null
+        }
+      },
+      {
+        "path": "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
+        "sha256": "70eafbe2b7b845c76336117bb3fe940c7427862a7a0d30d328a67a804356761c",
+        "summary": {
+          "status": "PASS",
+          "closure_level": null
+        }
+      },
+      {
+        "path": "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
+        "sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b",
+        "summary": {
+          "status": "PASS",
+          "closure_level": "CLOSED_FOR_LANE"
+        }
+      }
+    ],
+    "verification_status": "PASS_CAUSAL_NAMED_BRANCH_CORE_COMPATIBILITY",
+    "open_blockers": [],
+    "dependency_unlocked": "Causal exception only; Full Topic 13 remains blocked until the other Core packages pass.",
+    "claim_boundary": "CLOSED_FOR_CORE for the named normalized causal branch only. It does not pass the original kappa_C>0 baseline, establish SI thermal mapping, external validation, covariant 3+1 well-posedness, or global UET closure."
+  },
+  "baseline_preservation": {
+    "original_conserved_gradient_candidate_pass": false,
+    "baseline_replaced": false,
+    "no_go_scope": "declared local conserved-C Cattaneo equation with mu_C=a_C*C-kappa_C*Laplacian(C)",
+    "locked_threshold": 1e-06
+  },
+  "selected_branch": {
+    "branch_id": "T13-CAUSAL-FLUX-PHI-COUPLED-001",
+    "prearrival_leakage_fraction": 0.0,
+    "C_arrival_target_abs": 1.4032711954504658e-33,
+    "Phi_arrival_target_abs": 4.440892098500626e-16,
+    "max_combined_energy_relative_residual": 9.813156990275662e-07,
+    "closure_level_before_compatibility": "CLOSED_FOR_LANE"
+  },
+  "checks": {
+    "scoped_no_go_is_recorded": true,
+    "no_go_scope_is_not_global": true,
+    "telegraph_lane_passes": true,
+    "coupled_lane_passes": true,
+    "leakage_threshold_unchanged": true,
+    "coupled_leakage_passes": true,
+    "C_arrival_is_nonzero": true,
+    "Phi_arrival_is_nonzero": true,
+    "energy_ledger_passes": true,
+    "temporal_and_spatial_convergence_pass": true,
+    "no_clipping_padding_or_fit": true,
+    "ontology_is_preserved": true,
+    "original_baseline_is_not_promoted": true,
+    "trace_has_no_backreaction": true,
+    "holdout_is_unread": true,
+    "selection_boundary_is_preserved": true
+  },
+  "thresholds": {
+    "prearrival_leakage_fraction_max": 1e-06,
+    "energy_relative_residual_max": 1e-06
+  },
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "used_for_fit": false,
+    "used_for_tuning": false,
+    "used_for_calibration": false,
+    "used_for_threshold_adjustment": false
+  },
+  "next_controller": "Close the independent base-Phi SI/alpha/beta package, accepted Ding-compatible C_src/material uncertainty package, and physical Kubo/SK/KMS/entropy package; do not use this causal result as SI or external thermal evidence.",
+  "claim_boundary": "This is a bounded Core handoff record for one named normalized causal branch, not a global theory closure or external prediction."
+}

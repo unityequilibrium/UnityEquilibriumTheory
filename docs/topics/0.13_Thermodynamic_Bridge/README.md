@@ -6,6 +6,21 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## 2026-08-24 - Causal Core handoff and MP48 mode diagnostic
+
+MAJOR_RESULT_CLOSURE: `T13_CAUSAL_FLUX_PHI_COUPLED_CORE_COMPATIBILITY` is `CLOSED_FOR_CORE` as a bounded named normalized branch; the Full Topic 13 gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_IS_ACTUALLY_CLOSED: The scoped conserved-C local-gradient no-go remains explicit. The named coupled C/Phi branch passes the unchanged `1e-6` leakage threshold, nonzero arrivals, convergence, shared ledger, ontology, no-clipping/no-padding/no-fit, and holdout-preservation checks. MP48 now also has a row-addressable harmonic mode-resolved C_src diagnostic at `35x35x14`.
+WHAT_REMAINS_OPEN: The original conserved-C `kappa_C>0` baseline remains blocked and is not replaced. MP48 is harmonic `DERIVED_COMPARISON`, not Ding PBTE acceptance: third-order PBTE/material-state equivalence and source-grade uncertainty are missing. The independent base-Phi SI anchor/alpha/beta package and physical Kubo/SK/KMS/entropy package remain open.
+DEPENDENCY_UNLOCKED: Named causal branch as a bounded Core input only. No Full Topic 13, curved 3+1, Gravity, constitutive transport, Galaxy, external validation, or claim promotion is unlocked.
+STATUS: Causal `PASS_CAUSAL_NAMED_BRANCH_CORE_COMPATIBILITY`; MP48 `PASS_MP48_MODE_RESOLVED_DERIVED_COMPARISON`; matrix `21 CLOSED_FOR_LANE / 5 CLOSED_AS_NO_GO / 0 required Core subresults / 10 OPEN`; `full_core_unlock=false`; `holdout_accessed=false`.
+WHAT_CHANGED: Added the causal Core compatibility artifact and rerun synchronization, plus a phonopy-derived compressed MP48 mode payload and manifest. The canonical gate still reports exactly 7 open blocker groups.
+EQUATION_OR_MAPPING: `C_src^vol(T)=N_A/(N_q V_mol) * sum_(q,mu)c_mu(q,T)`; the named causal flux/Phi equations remain normalized. No numeric `alpha_Phi_K` or SI Phi scale was inferred.
+VERIFICATION: Causal compatibility checks pass. MP48 aggregate harmonic rows differ from deposited rows by `1.97e-6` to `2.13e-6` under diagnostic tolerance `1e-5`; this is not source uncertainty or Ding acceptance. Xie 2026 remains unread.
+CONTROLLING_BLOCKER: Ding-compatible numeric C_src/material uncertainty, independent alpha_Phi_K/SI scale, normalized beta/SI correspondence, physical Kubo provenance, dimensional Phi map, TTG material mapping, and c_v uncertainty.
+NEXT_ACTION: Obtain one admissible Ding-compatible/permissioned PBTE package with source-grade uncertainty, or an independently fixed base-Phi SI anchor and paired alpha record. Keep MP48 as `DERIVED_COMPARISON` only.
+CLAIM_BOUNDARY: The causal result is Core-ready only for the named normalized branch. The MP48 result is a harmonic comparator. Neither closes Full Topic 13 or establishes an SI/external UET prediction.
+EVIDENCE: `docs/core/artifacts/t13_causal_named_branch_core_compatibility.json` (`6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a`); `docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.json` (`c4f1b4ecb22c97bdb0e6cc61b595eca51f394f5ad05456227f38b6420d7e562b`); `docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.npz` (`fd535acd474382daf8c12bcd8d58b100a7d2fee63ba1c67913ca5556a1e33007`); matrix (`f5201be4da502f8622fffb9a07e8f779da20a04029313282d049b300469b2638`); full gate (`592b992713ffe0870cafc9e4e7cf64e392316a303dc7f5a3d1ad00e67215a7c4`).
+
 ## Canonical Current Gate (2026-08-24)
 
 MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for `T13_LOWITZER_GRAPHITE_ALPHA_V_K_T_FULL_SOURCE_PAIR`; Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.

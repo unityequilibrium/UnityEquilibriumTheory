@@ -286,6 +286,21 @@ def build_requirement(gate: dict[str, Any], spec: dict[str, Any]) -> dict[str, A
         section = {"status": str(section)}
     metadata = MAJOR_RESULT_CONTRACTS.get(spec["requirement_id"], {})
     merged = {**spec, **metadata}
+    if spec["requirement_id"] == "causal_structure":
+        core_pass = bool(section.get("causal_core_exception_pass", False))
+        merged["core_handoff"] = {
+            "status": "PASS" if core_pass else "OPEN",
+            "closure_level": "CLOSED_FOR_CORE" if core_pass else "OPEN",
+            "evidence_result_id": "T13_CAUSAL_FLUX_PHI_COUPLED_CORE_COMPATIBILITY",
+            "artifact": section.get("causal_core_compatibility_artifact"),
+            "claim_boundary": "Named normalized causal branch only; original conserved-C baseline remains blocked.",
+        }
+        if core_pass:
+            merged["what_is_closed"] = (
+                merged["what_is_closed"]
+                + " The named normalized coupled branch is separately CLOSED_FOR_CORE as a bounded Core input."
+            )
+            merged["dependency_unlocked"] = "Named causal branch as a bounded Core input only; no Full Topic 13 or downstream unlock."
     component = section.get("topic13_flat_thermodynamic_bridge_components", {})
     if not isinstance(component, dict):
         component = {}
@@ -482,6 +497,10 @@ def build_matrix() -> dict[str, Any]:
         "full_topic_closure_rule": {
             "required_major_result_level": "CLOSED_FOR_CORE",
             "causal_exception": "The conserved-C baseline may be CLOSED_AS_NO_GO only when the named causal branch is separately CLOSED_FOR_CORE and the no-go scope remains explicit.",
+            "causal_exception_status": next(
+                (item.get("core_handoff") for item in requirements if item["requirement_id"] == "causal_structure"),
+                {"status": "OPEN", "closure_level": "OPEN"},
+            ),
             "required_subresult_statuses": ["CLOSED_FOR_LANE", "CLOSED_AS_NO_GO", "CLOSED_FOR_CORE"],
             "required_gate_status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
             "holdout_requirement": "Xie 2026 must remain unread by calibration, fitting, tuning, and threshold paths.",

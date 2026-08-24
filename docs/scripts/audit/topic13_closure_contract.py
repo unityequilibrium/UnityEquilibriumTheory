@@ -104,6 +104,11 @@ MAJOR_RESULT_CONTRACTS: dict[str, dict[str, Any]] = {
         "observable": ["pre-arrival leakage", "arrival target", "energy ledger", "convergence"],
         "data_role": "INTERNAL_VERIFICATION",
         "claim_boundary": "The conserved-C structural question is a scoped no-go and the named causal branch is retained separately; neither alone closes the full thermal bridge.",
+        "core_handoff_contract": {
+            "required_closure_level": "CLOSED_FOR_CORE",
+            "evidence_result_id": "T13_CAUSAL_FLUX_PHI_COUPLED_CORE_COMPATIBILITY",
+            "acceptance": "The named normalized coupled branch passes the unchanged causal, convergence, ledger, ontology, and holdout-preservation checks without replacing the original baseline.",
+        },
         "acceptance_criteria": [
             "formal no-go or explicit regularization is recorded",
             "pre-arrival leakage <= 1e-6 without clipping or cone padding",
@@ -116,6 +121,7 @@ MAJOR_RESULT_CONTRACTS: dict[str, dict[str, Any]] = {
             "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
             "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
             "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
+            "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json",
         ],
         "required_subresults": [
             {"subresult_id": "conserved_c_local_gradient_no_go", "label": "Conserved-C local-gradient no-go", "required_closure_level": "CLOSED_AS_NO_GO", "gate_key": "causal_full_candidate_or_formal_no_go_branch", "acceptance": "The principal-symbol incompatibility is scoped to the declared baseline and recorded without deleting it."},

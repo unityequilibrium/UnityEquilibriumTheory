@@ -1,7 +1,7 @@
 {
   "schema_version": "matter-space-flux-phi-coupled-verification-v1",
   "artifact": "matter_space_flux_phi_coupled_verification",
-  "generated_at": "2026-08-11",
+  "generated_at": "2026-08-24",
   "status": "PASS",
   "operator_mode": "matter_space_conserved_flux_phi_coupled_v1",
   "branch_id": "T13-CAUSAL-FLUX-PHI-COUPLED-001",
@@ -111,7 +111,7 @@
         "max_mass_drift": 5.421010862427522e-20,
         "max_energy_relative_residual": 2.0156977218166533e-08
       },
-      "C_relative_l2_difference": 0.0789654584123238,
+      "C_relative_l2_difference": 0.07896545841232383,
       "Phi_relative_l2_difference": 0.07248498360555874
     },
     "checks": {

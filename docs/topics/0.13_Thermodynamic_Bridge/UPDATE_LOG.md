@@ -4200,3 +4200,19 @@ CONTROLLING_BLOCKER: No admissible Ding-compatible C_src/material package, indep
 NEXT_ACTION: Acquire one of the three required payloads or a declared derivation, then validate it through the fail-closed contract before promoting any subresult.
 CLAIM_BOUNDARY: Compatibility and evidence-acquisition diagnostic only; not Full Topic 13 closure, Core-ready status, external validation, prediction, or global UET closure.
 EVIDENCE_PATHS: `docs/core/artifacts/t13_candidate_core_compatibility_audit.json`; `docs/scripts/audit/audit_topic13_candidate_core_compatibility.py`; `docs/core/test/test_topic13_candidate_core_compatibility.py`; `docs/core/artifacts/t13_closure_input_package_audit.json`; `docs/core/artifacts/t13_topic13_closure_matrix.json`.
+
+
+### 2026-08-24 - Causal Core handoff and MP48 mode diagnostic
+
+MAJOR_RESULT_CLOSURE: `T13_CAUSAL_FLUX_PHI_COUPLED_CORE_COMPATIBILITY` is `CLOSED_FOR_CORE` as a bounded named normalized branch; the canonical Full Topic 13 gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_IS_ACTUALLY_CLOSED: The scoped conserved-C local-gradient no-go remains explicit. The named coupled C/Phi branch passes the unchanged `1e-6` leakage threshold, nonzero C/Phi arrival, convergence, ledger, ontology, no-clipping/no-padding/no-fit, and holdout-preservation checks. A row-addressable MP48 harmonic mode-resolved C_src diagnostic is also available as `CLOSED_FOR_LANE` derived comparison evidence.
+WHAT_REMAINS_OPEN: The original conserved-C `kappa_C>0` baseline remains blocked and is not replaced. MP48 lacks third-order PBTE/Ding material-state equivalence and source-grade uncertainty. The independent base-Phi SI anchor/alpha/beta package and physical Kubo/SK/KMS/entropy package remain open.
+DEPENDENCY_UNLOCKED: Named causal branch as a bounded Core input only; no Full Topic 13, curved 3+1, Gravity, constitutive transport, Galaxy, external validation, or claim promotion.
+STATUS: Causal compatibility `PASS_CAUSAL_NAMED_BRANCH_CORE_COMPATIBILITY`; MP48 mode diagnostic `PASS_MP48_MODE_RESOLVED_DERIVED_COMPARISON`; `full_core_unlock=false`; `claim_promotion=false`; `holdout_accessed=false`.
+WHAT_CHANGED: Reran both causal verifiers, restored the telegraph major-result sync, added the causal Core compatibility audit, and added the phonopy-derived MP48 mode-resolved payload and manifest.
+EQUATION_OR_MAPPING: `C_src^vol(T)=N_A/(N_q V_mol) * sum_(q,mu)c_mu(q,T)`; causal branch equations remain named normalized flux/Phi equations. No numeric `alpha_Phi_K` or SI Phi scale was inferred.
+VERIFICATION: MP48 aggregate harmonic rows differ from deposited rows by `1.97e-6` to `2.13e-6` under the declared diagnostic tolerance `1e-5`; this is not source uncertainty or Ding acceptance. Causal Core and MP48 regression artifacts pass; Xie 2026 remains unread.
+CONTROLLING_BLOCKER: `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing`, `alpha_Phi_K_independent_calibration_missing`, `normalized_beta_and_SI_scale_correspondence_missing`, `physical_Kubo_coefficient_record_missing`, `dimensional_phi_to_thermal_observable_map_missing`, `material_regime_mapping_to_TTG_not_closed`, and `c_v_source_uncertainty_not_closed`.
+NEXT_ACTION: Obtain one admissible Ding-compatible/permissioned PBTE package with source-grade uncertainty, or an independently fixed base-Phi SI anchor and paired alpha record. Keep MP48 as `DERIVED_COMPARISON` only.
+CLAIM_BOUNDARY: The causal result is Core-ready only for the named normalized branch. The MP48 result is a harmonic comparator. Neither closes Full Topic 13 or establishes an SI/external UET prediction.
+EVIDENCE_PATHS: `docs/core/artifacts/t13_causal_named_branch_core_compatibility.json`; `docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.json`; `docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.npz`; `docs/core/artifacts/t13_topic13_closure_matrix.json`.

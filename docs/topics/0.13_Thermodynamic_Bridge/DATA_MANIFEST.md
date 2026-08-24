@@ -1,6 +1,12 @@
 # Data Manifest
 ## Current Source-Pair Wave (2026-08-24)
 
+### Causal Core handoff and MP48 mode diagnostic (2026-08-24)
+
+- Named causal Core compatibility: `docs/core/artifacts/t13_causal_named_branch_core_compatibility.json`; SHA-256 `6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a`; `CLOSED_FOR_CORE` for the named normalized branch only; original conserved-C baseline remains blocked.
+- MP48 mode-resolved derived payload: `docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.json` and `docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.npz`; JSON SHA-256 `c4f1b4ecb22c97bdb0e6cc61b595eca51f394f5ad05456227f38b6420d7e562b`; payload SHA-256 `fd535acd474382daf8c12bcd8d58b100a7d2fee63ba1c67913ca5556a1e33007`; `DERIVED_COMPARISON` / `CLOSED_FOR_LANE`, not Ding PBTE acceptance or source-grade uncertainty.
+- Canonical gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE`; matrix remains 10 major results, 36 required subresults, 7 open blockers, and `full_core_unlock=false`.
+
 The latest thermodynamic source pass closes a same-study/same-sample `alpha_V` and `K_T` pair for a Lowitzer synthetic-graphite comparator.
 
 - Huberman 2019 TTG public source-boundary package: `Data/03_Research/huberman_2019_ttg_source_boundary_package.json`; `docs/core/artifacts/t13_huberman_2019_ttg_source_boundary_audit.json` | Huberman et al., Science 364, 375-379 (2019), DOI `10.1126/science.aav3548`, arXiv `1901.09160` | source PBTE formulas and setup estimates only; no row-level `C_src` payload | package SHA-256 `F70FF820EA3CB16023D23BB3FD7D36D6ED486357B8CBC6CEB81BF2FD35492844`; audit SHA-256 `FA25C313272A79230263C92BF315510E11842D11070C41D67E41D4CB8F88C3AE` | formula/source-boundary context; no calibration consumed | `CLOSED_FOR_LANE`; numeric `C_src`, material equivalence, base-Phi SI anchor, `alpha_Phi_K`, and Full Topic 13 remain open. It narrows one input blocker without changing the Ding material-equivalence, `C_src`, `alpha_Phi_K`, holdout, or Full Topic 13 gates.

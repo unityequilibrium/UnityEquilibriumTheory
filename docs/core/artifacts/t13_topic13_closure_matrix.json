@@ -120,7 +120,7 @@
     "evidence_artifacts": [
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-        "sha256": "26a2498870919f02efc2bada07a400536a348f7d77ed4d7c4b20969cb18c2c81",
+        "sha256": "592b992713ffe0870cafc9e4e7cf64e392316a303dc7f5a3d1ad00e67215a7c4",
         "summary": {
           "role": "canonical full Topic 13 readiness gate",
           "status": "BLOCKED_OPEN_T13_FULL_BRIDGE"
@@ -135,6 +135,14 @@
         }
       },
       {
+        "path": "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json",
+        "sha256": "6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a"
+        }
+      },
+      {
         "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
         "sha256": "3b58b2633a30f8a91710a59c46097f76bb2f36e2dda07e8cae03c9268d3f76bc",
         "summary": {
@@ -144,14 +152,14 @@
       },
       {
         "path": "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
-        "sha256": "ba355af70dff95305f35de260659403e9b021a42cfb86919f5b94a1f4dcd5f8a",
+        "sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b",
         "summary": {
           "role": "declared Topic 13 closure-contract evidence"
         }
       },
       {
         "path": "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
-        "sha256": "39c4c17d2663330a6dd52751472eb569a52ee42cd3820fb881ffe5af83ab3d7c",
+        "sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b",
         "summary": {
           "role": "declared Topic 13 closure-contract evidence"
         }
@@ -692,7 +700,7 @@
     "evidence_artifacts": [
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-        "sha256": "26a2498870919f02efc2bada07a400536a348f7d77ed4d7c4b20969cb18c2c81",
+        "sha256": "592b992713ffe0870cafc9e4e7cf64e392316a303dc7f5a3d1ad00e67215a7c4",
         "summary": {
           "role": "canonical full Topic 13 readiness gate",
           "status": "BLOCKED_OPEN_T13_FULL_BRIDGE"
@@ -707,6 +715,14 @@
         }
       },
       {
+        "path": "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json",
+        "sha256": "6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a"
+        }
+      },
+      {
         "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
         "sha256": "3b58b2633a30f8a91710a59c46097f76bb2f36e2dda07e8cae03c9268d3f76bc",
         "summary": {
@@ -716,14 +732,14 @@
       },
       {
         "path": "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
-        "sha256": "ba355af70dff95305f35de260659403e9b021a42cfb86919f5b94a1f4dcd5f8a",
+        "sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b",
         "summary": {
           "role": "declared Topic 13 closure-contract evidence"
         }
       },
       {
         "path": "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
-        "sha256": "39c4c17d2663330a6dd52751472eb569a52ee42cd3820fb881ffe5af83ab3d7c",
+        "sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b",
         "summary": {
           "role": "declared Topic 13 closure-contract evidence"
         }
@@ -1128,6 +1144,16 @@
     "full_topic_closure_rule": {
       "required_major_result_level": "CLOSED_FOR_CORE",
       "causal_exception": "The conserved-C baseline may be CLOSED_AS_NO_GO only when the named causal branch is separately CLOSED_FOR_CORE and the no-go scope remains explicit.",
+      "causal_exception_status": {
+        "status": "PASS",
+        "closure_level": "CLOSED_FOR_CORE",
+        "evidence_result_id": "T13_CAUSAL_FLUX_PHI_COUPLED_CORE_COMPATIBILITY",
+        "artifact": {
+          "path": "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json",
+          "sha256": "6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a"
+        },
+        "claim_boundary": "Named normalized causal branch only; original conserved-C baseline remains blocked."
+      },
       "required_subresult_statuses": [
         "CLOSED_FOR_LANE",
         "CLOSED_AS_NO_GO",
@@ -1144,9 +1170,9 @@
       "label": "Causal thermal branch",
       "gate_key": "causal_full_candidate_or_formal_no_go_branch",
       "closure_level": "CLOSED_AS_NO_GO",
-      "what_is_closed": "The finite-cone compatibility question is closed as a scoped no-go for the declared local conserved-C gradient class. The named coupled conserved-flux/Phi branch is retained separately with its own causal checks.",
+      "what_is_closed": "The finite-cone compatibility question is closed as a scoped no-go for the declared local conserved-C gradient class. The named coupled conserved-flux/Phi branch is retained separately with its own causal checks. The named normalized coupled branch is separately CLOSED_FOR_CORE as a bounded Core input.",
       "what_remains_open": "The original conserved-C full-candidate baseline remains blocked; the named branch does not replace it.",
-      "dependency_unlocked": "Named causal branch only; no Full Topic 13 or downstream unlock.",
+      "dependency_unlocked": "Named causal branch as a bounded Core input only; no Full Topic 13 or downstream unlock.",
       "major_result_id": "T13_CAUSAL_THERMAL_BRANCH_CLOSURE",
       "topic": "0.13_Thermodynamic_Bridge",
       "equation_or_mapping": {
@@ -1168,6 +1194,11 @@
       ],
       "data_role": "INTERNAL_VERIFICATION",
       "claim_boundary": "The conserved-C structural question is a scoped no-go and the named causal branch is retained separately; neither alone closes the full thermal bridge.",
+      "core_handoff_contract": {
+        "required_closure_level": "CLOSED_FOR_CORE",
+        "evidence_result_id": "T13_CAUSAL_FLUX_PHI_COUPLED_CORE_COMPATIBILITY",
+        "acceptance": "The named normalized coupled branch passes the unchanged causal, convergence, ledger, ontology, and holdout-preservation checks without replacing the original baseline."
+      },
       "acceptance_criteria": [
         "formal no-go or explicit regularization is recorded",
         "pre-arrival leakage <= 1e-6 without clipping or cone padding",
@@ -1179,7 +1210,8 @@
       "evidence_paths": [
         "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
         "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
-        "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json"
+        "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
+        "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json"
       ],
       "required_subresults": [
         {
@@ -1222,6 +1254,16 @@
           "status": "CLOSED_FOR_LANE"
         }
       ],
+      "core_handoff": {
+        "status": "PASS",
+        "closure_level": "CLOSED_FOR_CORE",
+        "evidence_result_id": "T13_CAUSAL_FLUX_PHI_COUPLED_CORE_COMPATIBILITY",
+        "artifact": {
+          "path": "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json",
+          "sha256": "6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a"
+        },
+        "claim_boundary": "Named normalized causal branch only; original conserved-C baseline remains blocked."
+      },
       "gate_status": "PASS",
       "gate_controlling_blocker": null,
       "gate_lane_status": "PASS",
@@ -1253,6 +1295,14 @@
       },
       "evidence_artifacts": [
         {
+          "path": "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json",
+          "sha256": "6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a"
+          }
+        },
+        {
           "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
           "sha256": "3b58b2633a30f8a91710a59c46097f76bb2f36e2dda07e8cae03c9268d3f76bc",
           "summary": {
@@ -1262,14 +1312,14 @@
         },
         {
           "path": "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
-          "sha256": "ba355af70dff95305f35de260659403e9b021a42cfb86919f5b94a1f4dcd5f8a",
+          "sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b",
           "summary": {
             "role": "declared Topic 13 closure-contract evidence"
           }
         },
         {
           "path": "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
-          "sha256": "39c4c17d2663330a6dd52751472eb569a52ee42cd3820fb881ffe5af83ab3d7c",
+          "sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b",
           "summary": {
             "role": "declared Topic 13 closure-contract evidence"
           }
@@ -2005,18 +2055,18 @@
         },
         {
           "path": "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
-          "sha256": "ba355af70dff95305f35de260659403e9b021a42cfb86919f5b94a1f4dcd5f8a",
+          "sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "ba355af70dff95305f35de260659403e9b021a42cfb86919f5b94a1f4dcd5f8a"
+            "reported_sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b"
           }
         },
         {
           "path": "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
-          "sha256": "39c4c17d2663330a6dd52751472eb569a52ee42cd3820fb881ffe5af83ab3d7c",
+          "sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "39c4c17d2663330a6dd52751472eb569a52ee42cd3820fb881ffe5af83ab3d7c"
+            "reported_sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b"
           }
         },
         {
@@ -2180,18 +2230,18 @@
         },
         {
           "path": "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
-          "sha256": "ba355af70dff95305f35de260659403e9b021a42cfb86919f5b94a1f4dcd5f8a",
+          "sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "ba355af70dff95305f35de260659403e9b021a42cfb86919f5b94a1f4dcd5f8a"
+            "reported_sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b"
           }
         },
         {
           "path": "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
-          "sha256": "39c4c17d2663330a6dd52751472eb569a52ee42cd3820fb881ffe5af83ab3d7c",
+          "sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "39c4c17d2663330a6dd52751472eb569a52ee42cd3820fb881ffe5af83ab3d7c"
+            "reported_sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b"
           }
         },
         {
@@ -2353,18 +2403,18 @@
         },
         {
           "path": "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
-          "sha256": "ba355af70dff95305f35de260659403e9b021a42cfb86919f5b94a1f4dcd5f8a",
+          "sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "ba355af70dff95305f35de260659403e9b021a42cfb86919f5b94a1f4dcd5f8a"
+            "reported_sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b"
           }
         },
         {
           "path": "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
-          "sha256": "39c4c17d2663330a6dd52751472eb569a52ee42cd3820fb881ffe5af83ab3d7c",
+          "sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "39c4c17d2663330a6dd52751472eb569a52ee42cd3820fb881ffe5af83ab3d7c"
+            "reported_sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b"
           }
         },
         {
@@ -2768,18 +2818,18 @@
         },
         {
           "path": "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
-          "sha256": "ba355af70dff95305f35de260659403e9b021a42cfb86919f5b94a1f4dcd5f8a",
+          "sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "ba355af70dff95305f35de260659403e9b021a42cfb86919f5b94a1f4dcd5f8a"
+            "reported_sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b"
           }
         },
         {
           "path": "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
-          "sha256": "39c4c17d2663330a6dd52751472eb569a52ee42cd3820fb881ffe5af83ab3d7c",
+          "sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "39c4c17d2663330a6dd52751472eb569a52ee42cd3820fb881ffe5af83ab3d7c"
+            "reported_sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b"
           }
         },
         {
@@ -2892,7 +2942,7 @@
   },
   "canonical_gate": {
     "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-    "sha256": "26a2498870919f02efc2bada07a400536a348f7d77ed4d7c4b20969cb18c2c81",
+    "sha256": "592b992713ffe0870cafc9e4e7cf64e392316a303dc7f5a3d1ad00e67215a7c4",
     "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
     "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
   },

@@ -393,6 +393,9 @@ def main() -> int:
     no_go_path, no_go = load("docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json")
     telegraph_path, telegraph = load("docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json")
     coupled_path, coupled = load("docs/core/artifacts/matter_space_flux_phi_coupled_verification.json")
+    causal_core_path, causal_core = load(
+        "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json"
+    )
 
     selected = branch.get("selected_causal_branch", {})
     full = branch.get("full_candidate_branch", {})
@@ -430,12 +433,19 @@ def main() -> int:
         coupled.get("status") == "PASS"
         and coupled.get("major_result", {}).get("closure_level") == "CLOSED_FOR_LANE"
     )
+    named_coupled_branch_core_pass = (
+        causal_core.get("status")
+        == "PASS_CAUSAL_NAMED_BRANCH_CORE_COMPATIBILITY"
+        and causal_core.get("major_result", {}).get("closure_level")
+        == "CLOSED_FOR_CORE"
+    )
     causal_lane_pass = formal_no_go_recorded and named_finite_cone_branch_pass and named_coupled_branch_pass
+    causal_core_exception_pass = causal_lane_pass and named_coupled_branch_core_pass
     full_candidate_pass = (
         full.get("gate") == "PASS"
         and float(full.get("prearrival_leakage_fraction", 1.0)) <= float(full.get("threshold", 1.0e-6))
     )
-    causal_gate_pass = full_candidate_pass or causal_lane_pass
+    causal_gate_pass = full_candidate_pass or causal_core_exception_pass
     branch_pass = (
         float(selected.get("prearrival_leakage_fraction", 1.0)) <= float(selected.get("threshold", 1.0e-6))
         and float(selected.get("arrival_target_abs", 0.0)) > 0.0
@@ -587,6 +597,15 @@ def main() -> int:
             "lane_status": "PASS" if causal_lane_pass else "BLOCKED",
             "lane_status_role": "scoped_named_branch_lane",
             "lane_closure_level": "CLOSED_FOR_LANE" if causal_lane_pass else "OPEN",
+            "named_coupled_branch_core_compatibility_pass": named_coupled_branch_core_pass,
+            "named_coupled_branch_core_compatibility_closure_level": causal_core.get(
+                "major_result", {}
+            ).get("closure_level", "OPEN"),
+            "causal_core_exception_pass": causal_core_exception_pass,
+            "causal_core_compatibility_artifact": {
+                "path": rel(causal_core_path),
+                "sha256": sha256(causal_core_path),
+            },
             "structural_question_closure": (
                 "CLOSED_AS_NO_GO" if causal_lane_pass else "OPEN"
             ),
@@ -946,6 +965,7 @@ def main() -> int:
             evidence(rel(no_go_path), no_go, {"status": no_go.get("status"), "proof_scope": no_go.get("proof_scope")}),
             evidence(rel(telegraph_path), telegraph, {"status": telegraph.get("status"), "major_result_id": telegraph.get("major_result", {}).get("major_result_id")}),
             evidence(rel(coupled_path), coupled, {"status": coupled.get("status"), "major_result_id": coupled.get("major_result", {}).get("major_result_id")}),
+            evidence(rel(causal_core_path), causal_core, {"status": causal_core.get("status"), "major_result_id": causal_core.get("major_result", {}).get("major_result_id"), "closure_level": causal_core.get("major_result", {}).get("closure_level")}),
         ],
     }
     artifact["verification_status"]["eos_transport_kms_entropy"].update(preserved_lane_integrations)

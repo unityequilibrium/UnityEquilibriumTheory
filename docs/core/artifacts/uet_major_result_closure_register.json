@@ -195,7 +195,8 @@
         "independent base-Phi calibration acceptance contract is machine-readable",
         "named beta_T13 finite-temperature response-functional formula and unit contract, independent of Landauer identity reuse",
         "a named normal-branch compactified regularized continuum heat-current lane passes the unchanged convergence and conservation contract without replacing the failed finite-cutoff baseline",
-        "the covariant response-matter interaction rescaling no-go is explicit; the natural response coupling cannot supply a physical Phi/SI anchor"
+        "the covariant response-matter interaction rescaling no-go is explicit; the natural response coupling cannot supply a physical Phi/SI anchor",
+        "named conserved flux-telegraph branch with CLOSED_FOR_LANE internal verification"
       ],
       "equation_or_mapping": {
         "standard": "y_TTG = Delta_Tq(t) / Delta_Tq(0)",
@@ -217,7 +218,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "26a2498870919f02efc2bada07a400536a348f7d77ed4d7c4b20969cb18c2c81",
+          "sha256": "592b992713ffe0870cafc9e4e7cf64e392316a303dc7f5a3d1ad00e67215a7c4",
           "summary": {
             "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
             "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
@@ -609,7 +610,7 @@
         },
         {
           "path": "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
-          "sha256": "ba355af70dff95305f35de260659403e9b021a42cfb86919f5b94a1f4dcd5f8a",
+          "sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b",
           "summary": {
             "status": "PASS",
             "major_result_id": "T13_CAUSAL_FLUX_TELEGRAPH_BRANCH"
@@ -617,10 +618,19 @@
         },
         {
           "path": "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
-          "sha256": "39c4c17d2663330a6dd52751472eb569a52ee42cd3820fb881ffe5af83ab3d7c",
+          "sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b",
           "summary": {
             "status": "PASS",
             "major_result_id": "T13_CAUSAL_FLUX_PHI_COUPLED_LANE"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json",
+          "sha256": "6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a",
+          "summary": {
+            "status": "PASS_CAUSAL_NAMED_BRANCH_CORE_COMPATIBILITY",
+            "major_result_id": "T13_CAUSAL_FLUX_PHI_COUPLED_CORE_COMPATIBILITY",
+            "closure_level": "CLOSED_FOR_CORE"
           }
         },
         {
@@ -1384,7 +1394,7 @@
         },
         {
           "path": "docs/core/artifacts/t13_causal_branch_selection_audit.json",
-          "sha256": "a5c32c830c6c1b42d71dbbd2bdf58b4882c96bfa8957c24437daee4879e50c26",
+          "sha256": "5e4a7ed55bdcb2e7779b0ec9bd45ca24f935bdcab2d0c50fa91d525103d1c8eb",
           "summary": {
             "status": "PASS_CLOSED_AS_NO_GO_WITH_NAMED_COUPLED_BRANCH",
             "data_role": "INTERNAL_NUMERICAL_BRANCH_SELECTION_NO_EXTERNAL_TTG_OR_HOLDOUT"
@@ -1844,7 +1854,7 @@
       },
       "closure_matrix": {
         "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-        "sha256": "ffabef46747a7f601f5f321f6a4df28166650561f75eea3331f8183d0b5f6a3c",
+        "sha256": "f5201be4da502f8622fffb9a07e8f779da20a04029313282d049b300469b2638",
         "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
         "closure_level": "PARTIAL",
         "full_core_unlock": false,
@@ -1995,7 +2005,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
-          "sha256": "ba355af70dff95305f35de260659403e9b021a42cfb86919f5b94a1f4dcd5f8a",
+          "sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b",
           "summary": {
             "status": "PASS",
             "major_result_id": "T13_CAUSAL_FLUX_TELEGRAPH_BRANCH",
@@ -2032,7 +2042,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
-          "sha256": "39c4c17d2663330a6dd52751472eb569a52ee42cd3820fb881ffe5af83ab3d7c",
+          "sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b",
           "summary": {
             "status": "PASS",
             "major_result_id": "T13_CAUSAL_FLUX_PHI_COUPLED_LANE",
@@ -3054,7 +3064,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_causal_branch_selection_audit.json",
-          "sha256": "a5c32c830c6c1b42d71dbbd2bdf58b4882c96bfa8957c24437daee4879e50c26",
+          "sha256": "5e4a7ed55bdcb2e7779b0ec9bd45ca24f935bdcab2d0c50fa91d525103d1c8eb",
           "summary": {
             "status": "PASS_CLOSED_AS_NO_GO_WITH_NAMED_COUPLED_BRANCH",
             "major_result_id": "T13_CAUSAL_THERMAL_BRANCH_SELECTION",
@@ -3071,6 +3081,46 @@
       ],
       "dependency_unlocked": "normalized causal branch input only; no SI thermal, Core curved 3+1, Gravity, or external-validation dependency unlock",
       "claim_boundary": "This result selects a named normalized causal branch after a scoped no-go. It does not turn the original conserved-gradient baseline into a pass, prove covariant well-posedness, establish a physical temperature mapping, or close Topic 13."
+    },
+    {
+      "major_result_id": "T13_CAUSAL_FLUX_PHI_COUPLED_CORE_COMPATIBILITY",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "closure_level": "CLOSED_FOR_CORE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "the named conserved-flux/Phi telegraph branch is admissible as a bounded Core input",
+        "the unchanged finite-cone, arrival, convergence, ledger, and anti-manipulation contract",
+        "the scoped conserved-C local-gradient no-go boundary and baseline preservation"
+      ],
+      "equation_or_mapping": {
+        "selected_branch": "C_t + partial_x J_C = 0; tau_C J_C_t + J_C = -M_C partial_x(mu_C)",
+        "response_branch": "tau_Phi Phi_tt + Phi_t + M_Phi mu_Phi = 0",
+        "measurement": "y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)"
+      },
+      "units": {
+        "lane": "normalized internal candidate",
+        "C": "normalized collective-coordinate density lane",
+        "Phi": "normalized effective response variable",
+        "R_gen": "derived history trace; absent from dynamics"
+      },
+      "derivation_class": "Core compatibility audit of a named normalized causal branch",
+      "observable": "normalized coupled C/Phi response, compact support, arrival, and shared ledger",
+      "data_role": "INTERNAL_VERIFICATION",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json",
+          "sha256": "6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a",
+          "summary": {
+            "status": "PASS_CAUSAL_NAMED_BRANCH_CORE_COMPATIBILITY",
+            "major_result_id": "T13_CAUSAL_FLUX_PHI_COUPLED_CORE_COMPATIBILITY",
+            "closure_level": "CLOSED_FOR_CORE"
+          }
+        }
+      ],
+      "verification_status": "PASS_CAUSAL_NAMED_BRANCH_CORE_COMPATIBILITY",
+      "open_blockers": [],
+      "dependency_unlocked": "Causal exception only; Full Topic 13 remains blocked until the other Core packages pass.",
+      "claim_boundary": "CLOSED_FOR_CORE for the named normalized causal branch only. It does not pass the original kappa_C>0 baseline, establish SI thermal mapping, external validation, covariant 3+1 well-posedness, or global UET closure."
     },
     {
       "major_result_id": "T13_CLOSURE_INPUT_PACKAGE_AUDIT",
@@ -5711,6 +5761,50 @@
       "claim_boundary": "The package closes an independent harmonic graphite c_v comparator lane with auditable provenance and explicit non-statistical uncertainty bounds. It does not close Ding-specific PBTE C_src(T), e0, base Phi-to-energy correspondence, alpha_Phi_K, EOS, transport, SK/KMS, entropy, external validation, or global UET closure."
     },
     {
+      "major_result_id": "T13_MP48_MODE_RESOLVED_CSRC_DERIVED_COMPARISON",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "a row-addressable mode-resolved harmonic c_mu(T) array is derived from the local MP48 force constants",
+        "the mode sum is converted to volumetric C_src units using the locked graphite volume anchor",
+        "the aggregate rows reproduce the deposited MP48 harmonic heat-capacity rows within the declared diagnostic tolerance"
+      ],
+      "equation_or_mapping": {
+        "mode_capacity": "c_mu(T) = k_B*x_mu^2*exp(x_mu)/(exp(x_mu)-1)^2",
+        "mode_sum": "C_src^vol(T) = N_A/(N_q V_mol) * sum_(q,mu) c_mu(q,T)",
+        "row_identity": "mesh35x35x14:q_index:mode_index:temperature_K"
+      },
+      "units": {
+        "frequency": "THz",
+        "mode_capacity": "J m^-3 K^-1",
+        "aggregate_capacity": "J m^-3 K^-1",
+        "temperature": "K"
+      },
+      "derivation_class": "derived harmonic lattice-dynamics comparator from source-locked force constants; no UET derivation",
+      "observable": "mode-resolved and aggregate harmonic graphite C_src comparator",
+      "data_role": "DERIVED_COMPARISON",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.json",
+          "sha256": "c4f1b4ecb22c97bdb0e6cc61b595eca51f394f5ad05456227f38b6420d7e562b",
+          "summary": {
+            "status": "PASS_MP48_MODE_RESOLVED_DERIVED_COMPARISON",
+            "major_result_id": "T13_MP48_MODE_RESOLVED_CSRC_DERIVED_COMPARISON",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_MP48_MODE_RESOLVED_DERIVED_COMPARISON",
+      "open_blockers": [
+        "third_order_PBTE_transport_and_Ding_material_state_equivalence_missing",
+        "source_grade_uncertainty_missing",
+        "base_Phi_to_energy_anchor_and_independent_alpha_Phi_K_missing"
+      ],
+      "dependency_unlocked": "Only a row-level harmonic comparator route; no Ding source, alpha, Full Topic 13, or downstream unlock.",
+      "claim_boundary": "This derived diagnostic is not Ding PBTE C_src acceptance, not a source-grade uncertainty package, not a Phi calibration, and not a TTG prediction."
+    },
+    {
       "major_result_id": "T13_MP48_PHI_E_DIMENSIONAL_ANCHOR_COMPARATOR",
       "topic": "0.13_Thermodynamic_Bridge",
       "closure_level": "CLOSED_FOR_LANE",
@@ -6969,7 +7063,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-          "sha256": "ffabef46747a7f601f5f321f6a4df28166650561f75eea3331f8183d0b5f6a3c",
+          "sha256": "f5201be4da502f8622fffb9a07e8f779da20a04029313282d049b300469b2638",
           "summary": {
             "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
             "major_result_id": "T13_TOPIC13_CLOSURE_MATRIX",
