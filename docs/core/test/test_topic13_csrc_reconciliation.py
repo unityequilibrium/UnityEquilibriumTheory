@@ -12,7 +12,7 @@ def test_csrc_reconciliation_is_fail_closed() -> None:
     artifact = json.loads(ARTIFACT.read_text(encoding="utf-8-sig"))
     assert artifact["status"] == "PASS_SCOPED_CSRC_RECONCILIATION_OPEN"
     assert artifact["summary"] == {
-        "route_count": 8,
+        "route_count": 10,
         "numeric_csrc_candidate_count": 3,
         "source_grade_uncertainty_count": 0,
         "ding_material_state_match_count": 0,

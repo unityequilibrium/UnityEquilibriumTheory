@@ -19,6 +19,8 @@ EVIDENCE = {
     "calorine_numeric": ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_nep_bte_reproduction_source_package.json",
     "mp48_spectral": ROOT / "docs/core/artifacts/t13_mp48_spectral_csrc_reproduction_audit.json",
     "mp48_mapping": ROOT / "docs/core/artifacts/t13_mp48_ding_csrc_response_mapping_audit.json",
+    "ding_2017_supplementary": ROOT / "docs/core/artifacts/t13_ding_2017_acs_supplementary_payload_boundary_audit.json",
+    "figshare_force_data": ROOT / "docs/core/artifacts/t13_figshare_dft_force_data_boundary_audit.json",
 }
 
 
@@ -77,6 +79,8 @@ def main() -> int:
     calorine = sources["calorine_numeric"]
     mp48_spectral = sources["mp48_spectral"]
     mp48_mapping = sources["mp48_mapping"]
+    ding_2017 = sources["ding_2017_supplementary"]
+    figshare = sources["figshare_force_data"]
 
     candidates = [
         candidate(
@@ -134,6 +138,20 @@ def main() -> int:
             "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
             mapping_scope=mp48_mapping.get("major_result", {}).get("claim_boundary"),
         ),
+        candidate(
+            "ding_2017_public_supplementary_boundary", "ding_2017_supplementary", "Ding 2017 public supplementary payload boundary",
+            "DING_PUBLIC_SUPPLEMENTARY_NO_NUMERIC_PAYLOAD", False, False, False, False,
+            "The public Ding 2017 supplementary PDF is source-locked, but it contains methods, equations, and figures only; no machine-readable C_src rows, raw force constants, convergence, or uncertainty package is admitted.",
+            "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+            numeric_payload_present=ding_2017.get("source", {}).get("payload_classification", {}).get("machine_readable_C_src_rows") is True,
+        ),
+        candidate(
+            "figshare_dft_force_data_boundary", "figshare_force_data", "public Figshare DFT energy/force archive boundary",
+            "PUBLIC_DFT_FORCE_DATA_NO_PBTE_PAYLOAD", False, False, False, False,
+            "The public Figshare graphite archive contains DFT configuration energy/force records, but no declared units, force constants, mode heat capacities, scattering rates, or source-grade PBTE uncertainty package.",
+            "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+            pbte_payload_present=figshare.get("payload_capabilities", {}).get("has_mode_heat_capacity") is True,
+        ),
     ]
 
     checks = {
@@ -145,6 +163,10 @@ def main() -> int:
         "public_screening_no_core_payload": public.get("checks", {}).get("no_core_payload_imported") is True
         and public.get("checks", {}).get("no_numeric_C_src_emitted") is True,
         "huberman_no_numeric_payload": huberman.get("checks", {}).get("no_machine_readable_mode_resolved_csrc_or_force_constant_payload") is True,
+        "ding_2017_no_numeric_payload": ding_2017.get("checks", {}).get("no_machine_readable_C_src_payload") is True
+        and ding_2017.get("checks", {}).get("no_raw_force_constant_payload") is True,
+        "figshare_no_pbte_payload": figshare.get("payload_capabilities", {}).get("has_mode_heat_capacity") is False
+        and figshare.get("payload_capabilities", {}).get("has_third_order_force_constants") is False,
         "calorine_boundary_not_promoted": calorine_boundary.get("checks", {}).get("deposited_csrc_payload_present") is False
         and calorine_boundary.get("checks", {}).get("material_regime_mapping_present") is False,
         "calorine_numeric_candidate_not_accepted": calorine.get("acceptance_for_full_topic13") is False
@@ -187,7 +209,7 @@ def main() -> int:
             "topic": "0.13_Thermodynamic_Bridge",
             "closure_level": "CLOSED_FOR_LANE" if passed else "OPEN",
             "what_is_closed": [
-                "Ding official OA, author-request, public phonon, Huberman, Calorine, and MP48 C_src routes are classified by payload and acceptance state",
+                "Ding official OA, author-request, public phonon, Huberman, Ding 2017, Figshare, Calorine, and MP48 C_src routes are classified by payload and acceptance state",
                 "numeric C_src-like candidates are separated from Ding-compatible accepted C_src",
                 "material-state equivalence and source-grade uncertainty are explicit acceptance fields",
                 "no synthetic route, comparator, or holdout value is promoted",
@@ -229,11 +251,11 @@ def main() -> int:
         },
         "report": {
             "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE" if passed else "OPEN",
-            "WHAT_IS_ACTUALLY_CLOSED": "Eight C_src routes are reconciled: five have no accepted numeric payload and three have numeric candidate outputs, but zero satisfy Ding/material/uncertainty acceptance.",
+            "WHAT_IS_ACTUALLY_CLOSED": "Ten C_src routes are reconciled: seven have no accepted numeric payload and three have numeric candidate outputs, but zero satisfy Ding/material/uncertainty acceptance.",
             "WHAT_REMAINS_OPEN": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing; material mapping; source-grade uncertainty; author response.",
             "DEPENDENCY_UNLOCKED": "None beyond C_src route visibility.",
             "STATUS": status,
-            "WHAT_CHANGED": "Added a fail-closed reconciliation of eight C_src source routes; no C_src, alpha, source uncertainty, threshold, equation, or holdout role was promoted.",
+            "WHAT_CHANGED": "Added a fail-closed reconciliation of ten C_src source routes, including the reviewed Ding 2017 supplementary and Figshare DFT boundaries; no C_src, alpha, source uncertainty, threshold, equation, or holdout role was promoted.",
             "EQUATION_OR_MAPPING": "C_src(T)=sum_mu c_mu(T) and Delta_Tq=Delta_u_ph/C_src(T) remain standard response mappings until an accepted Ding-compatible source is received.",
             "VERIFICATION": "All route artifacts are present and hashed; numeric candidate count is 3, source-grade uncertainty count is 0, Ding material match count is 0, and accepted count is 0.",
             "CONTROLLING_BLOCKER": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",

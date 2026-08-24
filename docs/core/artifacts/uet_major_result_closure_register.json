@@ -1854,7 +1854,7 @@
       },
       "closure_matrix": {
         "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-        "sha256": "ea7c52f0a8331558ca905332be4e4838f8eda0cfc070fdf363d414d989b747c6",
+        "sha256": "4a8f9078b90cccd17130f70950247e1b599900b2812bd7607cbfd122b686deb7",
         "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
         "closure_level": "PARTIAL",
         "full_core_unlock": false,
@@ -2306,7 +2306,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_base_phi_si_reconciliation_audit.json",
-          "sha256": "d5eaea1921de4e42897d9f4892dc7dda5b7af226801b28c24ad91c2a576a631a",
+          "sha256": "524b19752a335d71e0e53c7ab860d0e08d07a7a75265b6c9d1785d3beb630c2c",
           "summary": {
             "status": "PASS_SCOPED_BASE_PHI_RECONCILIATION_OPEN",
             "major_result_id": "T13_BASE_PHI_SI_RECONCILIATION",
@@ -3234,7 +3234,8 @@
         "Existing graphite heat-capacity and correction sources are reconciled by quantity, uncertainty, and material-state eligibility.",
         "Formal, natural-unit, and external-comparator transport evidence is reconciled without physical UET promotion.",
         "Base-Phi/SI candidate, Phi_E comparator, and natural-unit action evidence are reconciled without alpha promotion.",
-        "C_src routes are reconciled by payload, numeric status, material match, uncertainty, and acceptance without Ding promotion."
+        "C_src routes are reconciled by payload, numeric status, material match, uncertainty, and acceptance without Ding promotion.",
+        "Existing graphite heat-capacity and correction sources are reconciled by quantity, uncertainty, and material-state eligibility."
       ],
       "equation_or_mapping": {
         "TTG": "C_src(T)=sum_mu c_mu(T); Delta_Tq=Delta_u_ph/C_src(T)",
@@ -3253,7 +3254,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
-          "sha256": "e175d29b85cb311b082e1f8c5a89d91aac5d8efdf693e3605be9c586db9f52bd",
+          "sha256": "1ef108fa0d8274ee732735a766889a65726d576ba47553b856f3bb01f3d3e2ae",
           "summary": {
             "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN",
             "major_result_id": "T13_CLOSURE_INPUT_PACKAGE_AUDIT",
@@ -3778,7 +3779,7 @@
       "closure_level": "CLOSED_FOR_LANE",
       "claim_promotion": false,
       "what_is_closed": [
-        "Ding official OA, author-request, public phonon, Huberman, Calorine, and MP48 C_src routes are classified by payload and acceptance state",
+        "Ding official OA, author-request, public phonon, Huberman, Ding 2017, Figshare, Calorine, and MP48 C_src routes are classified by payload and acceptance state",
         "numeric C_src-like candidates are separated from Ding-compatible accepted C_src",
         "material-state equivalence and source-grade uncertainty are explicit acceptance fields",
         "no synthetic route, comparator, or holdout value is promoted"
@@ -3799,7 +3800,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_csrc_reconciliation_audit.json",
-          "sha256": "d74b6e79c260bacba1f257cb5e89b11205ee06a2ffb027d74ce3f1cf3266db4f",
+          "sha256": "a551b12e0c19d3cbb85675de7143cd883e1a103f7a80bb706f84445fdd0a51c3",
           "summary": {
             "status": "PASS_SCOPED_CSRC_RECONCILIATION_OPEN",
             "major_result_id": "T13_CSRC_SOURCE_RECONCILIATION",
@@ -6969,7 +6970,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_physical_transport_reconciliation_audit.json",
-          "sha256": "67150277f66a2f855b2cd8e007926e65e8bf330a8dd925edc000b3a3e668b2fd",
+          "sha256": "2f24d95a7bd66c22cc95bdab5b6c39bf205d32cad4b43af71382ebe53c0471bb",
           "summary": {
             "status": "PASS_SCOPED_PHYSICAL_TRANSPORT_RECONCILIATION_OPEN",
             "major_result_id": "T13_PHYSICAL_TRANSPORT_RECONCILIATION",
@@ -7361,7 +7362,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-          "sha256": "ea7c52f0a8331558ca905332be4e4838f8eda0cfc070fdf363d414d989b747c6",
+          "sha256": "4a8f9078b90cccd17130f70950247e1b599900b2812bd7607cbfd122b686deb7",
           "summary": {
             "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
             "major_result_id": "T13_TOPIC13_CLOSURE_MATRIX",

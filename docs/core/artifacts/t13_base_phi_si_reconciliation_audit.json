@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-base-phi-si-reconciliation-v1",
   "artifact": "t13_base_phi_si_reconciliation_audit",
-  "generated_at": "2026-08-24",
+  "generated_at": "2026-08-25",
   "status": "PASS_SCOPED_BASE_PHI_RECONCILIATION_OPEN",
   "major_result": {
     "major_result_id": "T13_BASE_PHI_SI_RECONCILIATION",
