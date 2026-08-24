@@ -85,6 +85,16 @@ def test_topic13_closure_matrix_reports_full_topic_contract_without_promotion() 
         "CLOSED_FOR_LANE": 21,
         "OPEN": 10,
     }
+    assert matrix["closure_summary"]["closure_count_unit"] == "required_subresults"
+    assert matrix["closure_summary"]["closed_as_no_go_count"] == 5
+    assert matrix["closure_summary"]["closed_lane_count"] == 21
+    assert matrix["closure_summary"]["closed_for_core_count"] == 0
+    assert matrix["closure_summary"]["open_subresult_count"] == 10
+    assert matrix["closure_summary"]["reported_subresult_count"] == 36
+    assert set(matrix["closure_summary"]["source_gate_projection_counts"]) == {
+        "closed_lane_result_count",
+        "closed_as_no_go_result_count",
+    }
     for item in matrix["requirements"]:
         assert required_record_fields <= set(item)
         assert item["subresult_summary"]["required_count"] == len(item["required_subresults"])

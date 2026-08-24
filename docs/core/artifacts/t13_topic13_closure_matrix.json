@@ -2847,8 +2847,16 @@
     }
   ],
   "closure_summary": {
-    "closed_lane_count": 192,
-    "closed_as_no_go_count": 16,
+    "closure_count_unit": "required_subresults",
+    "closed_lane_count": 21,
+    "closed_as_no_go_count": 5,
+    "closed_for_core_count": 0,
+    "open_subresult_count": 10,
+    "reported_subresult_count": 36,
+    "source_gate_projection_counts": {
+      "closed_lane_result_count": 192,
+      "closed_as_no_go_result_count": 16
+    },
     "open_blocker_count": 7,
     "open_blocker_groups": {
       "source_and_material": [

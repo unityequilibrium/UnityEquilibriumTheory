@@ -4140,3 +4140,18 @@ NEXT_ACTION: Acquire one admissible package payload or declared derivation, vali
 CLAIM_BOUNDARY: Schema and provenance hardening only; not Full Topic 13 closure, Core-ready status, external validation, prediction, or global UET closure.
 EVIDENCE_PATHS: docs/core/topic13_closure_record_contract.py; docs/scripts/audit/audit_topic13_closure_record_contract.py; docs/core/artifacts/t13_closure_record_contract_audit.json; docs/scripts/audit/audit_topic13_closure_input_packages.py; docs/core/artifacts/t13_closure_input_package_audit.json; docs/scripts/audit/audit_topic13_closure_matrix.py; docs/core/artifacts/t13_topic13_closure_matrix.json; docs/core/test/test_topic13_closure_record_contract.py; docs/core/test/test_topic13_closure_input_packages.py; docs/core/test/test_topic13_closure_matrix.py.
 EVIDENCE_HASHES: record-contract `E16DE8B34C62B8AE3C6A4F40DCC3D4DDB4BC21EE640BE5FD3158DD1A729AC78D`; contract-audit `9C7A65C4FA7DF2BCC884E4B187B1C1B7B497F192727410554886D8EA3842878F`; input-audit `A15C3023F98F3DC66EE3B92F35686BA0CCB20D9887AB6356B8CFEA371AEB6902`; matrix `9E4DBDC7B9A594AA9EC817C0175FD033497BA146D5E22DDF5B53DDC1655A5939`; full-gate unchanged `26A2498870919F02EFC2BADA07A400536A348F7D77ED4D7C4B20969CB18C2C81`.
+
+### 2026-08-24 - Closure summary count-unit alignment
+
+
+MAJOR_RESULT_CLOSURE: PARTIAL; the canonical full Topic 13 gate remains BLOCKED_OPEN_T13_FULL_BRIDGE.
+WHAT_IS_ACTUALLY_CLOSED: The matrix now reports closure counts in the unit of the 36 required subresults. Current counts are 21 CLOSED_FOR_LANE, 5 CLOSED_AS_NO_GO, 0 CLOSED_FOR_CORE, and 10 OPEN.
+WHAT_REMAINS_OPEN: The seven canonical blocker groups and ten Core-level subresults remain unchanged; no input package was accepted.
+DEPENDENCY_UNLOCKED: None; this reporting repair does not unlock Core curved 3+1, Gravity/GR, or physical transport.
+STATUS: PASS_TOPIC13_CLOSURE_COUNT_UNIT_ALIGNMENT; canonical full gate remains BLOCKED_OPEN_T13_FULL_BRIDGE.
+WHAT_CHANGED: Replaced ambiguous source-gate aggregate counts in the compact matrix with subresult counts and preserved the old aggregate under source_gate_projection_counts.
+EQUATION_OR_MAPPING: The count contract is a projection invariant: CLOSED_AS_NO_GO + CLOSED_FOR_LANE + CLOSED_FOR_CORE + OPEN = required_subresult_count = 36.
+VERIFICATION: Matrix generator and focused Topic 13 matrix regression must reproduce 5/21/0/10 and total 36; holdout policy and canonical blocker set are unchanged.
+CONTROLLING_BLOCKER: Evidence acquisition remains controlling: Ding-compatible C_src/material uncertainty, independent base-Phi SI alpha/beta scale, and physical Kubo/SK/KMS/entropy provenance.
+NEXT_ACTION: Continue with admissible source or derivation payload acquisition; do not interpret a source-gate aggregate as a subresult closure count.
+CLAIM_BOUNDARY: Reporting-contract repair only; not Full Topic 13 closure, Core-ready status, external validation, prediction, or global UET closure.

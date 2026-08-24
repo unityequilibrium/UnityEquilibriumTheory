@@ -502,8 +502,16 @@ def build_matrix() -> dict[str, Any]:
         "full_topic_closure_contract": full_topic_closure_contract,
         "requirements": requirements,
         "closure_summary": {
-            "closed_lane_count": summary.get("closed_lane_count"),
-            "closed_as_no_go_count": summary.get("closed_as_no_go_count"),
+            "closure_count_unit": "required_subresults",
+            "closed_lane_count": substatus_counts.get("CLOSED_FOR_LANE", 0),
+            "closed_as_no_go_count": substatus_counts.get("CLOSED_AS_NO_GO", 0),
+            "closed_for_core_count": substatus_counts.get("CLOSED_FOR_CORE", 0),
+            "open_subresult_count": substatus_counts.get("OPEN", 0),
+            "reported_subresult_count": sum(substatus_counts.values()),
+            "source_gate_projection_counts": {
+                "closed_lane_result_count": summary.get("closed_lane_count"),
+                "closed_as_no_go_result_count": summary.get("closed_as_no_go_count"),
+            },
             "open_blocker_count": summary.get("open_blocker_count"),
             "open_blocker_groups": summary.get("open_blocker_groups", {}),
             "downstream_dependency_unlocked": summary.get("downstream_dependency_unlocked", False),
