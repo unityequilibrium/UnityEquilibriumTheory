@@ -4522,3 +4522,29 @@ EVIDENCE_HASH:
 - Claim impact: `no change`; no alpha, source row, threshold, equation, or holdout role was promoted.
 - Workflow linkage: `n/a`
 - Notes: The canonical gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE`; `36` subresults remain reported as `CLOSED_FOR_LANE=21`, `CLOSED_AS_NO_GO=5`, `OPEN=10`.
+
+### 2026-08-24 - Topic 13 physical transport reconciliation wave
+
+- Scope: `Topic 13 transport/Kubo/SK/KMS/entropy acceptance boundary`
+- Wave type: `transport evidence reconciliation`
+- Added or changed: `t13_physical_transport_reconciliation_audit.json`; projected it into `t13_closure_input_package_audit.json`; preserved the physical coefficient blocker.
+- Files touched: `docs/core/artifacts/t13_physical_transport_reconciliation_audit.json`, `docs/core/artifacts/t13_closure_input_package_audit.json`, `docs/core/artifacts/t13_topic13_closure_matrix.json`, `docs/core/artifacts/t13_full_closure_progress.json`, `docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_FULL_CLOSURE_STATUS.md`
+- Verified with: `audit_topic13_physical_transport_reconciliation.py`, `run_topic13_physical_transport_reconciliation_wave.py`, `audit_topic13_full_bridge_gate.py`, `audit_topic13_closure_matrix.py`, `render_topic13_closure_progress.py`
+- Result: `PASS_SCOPED_PHYSICAL_TRANSPORT_RECONCILIATION_OPEN`; `candidate_count=5`, `formal_lane_count=3`, `external_physical_comparator_count=1`, `physical_uet_coefficient_count=0`, `accepted_for_full_topic13_count=0`.
+- Blocker narrowed: formal SK/KMS/entropy, a natural-unit UET Kubo channel, and an external graphite Green-Kubo comparator are now explicitly separated; none is accepted as a physical UET coefficient.
+- Still open: `physical_Kubo_coefficient_record_missing`, finite-temperature normal transport, dimensional `Phi` to SI mapping, independent `alpha_Phi_K`, Ding `C_src`, and c_v/material uncertainty.
+- Next controller: obtain or microscopically derive one state-matched physical UET transport record with Phi/SI mapping, correlator locator, source identity, uncertainty, and finite-temperature scope; do not relabel Kim or the natural-unit channel.
+- Claim impact: `no_change`; no coefficient, alpha, threshold, equation, or holdout role was promoted.
+- Workflow linkage: `n/a`
+- Notes: The canonical gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE`; the transport reconciliation is `CLOSED_FOR_LANE` only.
+
+### 2026-08-24 - Topic 13 transport wave composition correction
+
+- Scope: `Topic 13 sequential input-package projections`
+- Wave type: `workflow correction`
+- Added or changed: `run_topic13_physical_transport_reconciliation_wave_composed.py` replays the c_v projection before the physical transport projection.
+- Verified with: the composed runner plus the c_v and physical transport integration tests.
+- Result: prior c_v evidence and the new physical transport evidence remain visible in one input audit; no scientific claim or gate threshold changed.
+- Blocker: `physical_Kubo_coefficient_record_missing` remains the transport controller; c_v remains `c_v_source_uncertainty_not_closed`.
+- Next action: use the composed runner when replaying these sequential waves; do not call the base input audit alone after a projection wave.
+- Claim impact: `no_change`.
