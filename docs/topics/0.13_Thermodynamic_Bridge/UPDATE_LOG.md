@@ -4184,3 +4184,19 @@ VERIFICATION: Metadata/source documentation reviewed; no remote payload import, 
 CONTROLLING_BLOCKER: `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing`; material/state and source-grade uncertainty remain open.
 NEXT_ACTION: Obtain an authorized row-complete source or permitted same-regime reproduction and validate it through the fail-closed Topic 13 record contract.
 CLAIM_BOUNDARY: Source-screening lane only; not numeric `C_src`, alpha calibration, physical transport, external validation, or Full Topic 13 closure.
+
+
+## 2026-08-24 - Candidate Core Compatibility Diagnostic
+
+MAJOR_RESULT_CLOSURE: `PARTIAL`; the canonical Full Topic 13 gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_IS_ACTUALLY_CLOSED: Five source packages are compared against the three grouped Core input contracts through ten machine-readable route records. Candidate numeric rows and standard-physics comparator evidence remain separated from accepted UET Core evidence.
+WHAT_REMAINS_OPEN: The matrix remains 10 major result areas and 36 required subresults: 21 `CLOSED_FOR_LANE`, 5 `CLOSED_AS_NO_GO`, 0 `CLOSED_FOR_CORE`, and 10 `OPEN`. The seven canonical blockers are unchanged.
+DEPENDENCY_UNLOCKED: None; curved 3+1, Gravity, full constitutive transport, and Galaxy remain blocked.
+STATUS: `PASS_SCOPED_T13_CANDIDATE_COMPATIBILITY_AUDIT_OPEN`; three input packages inspected, zero routes accepted for Core, and Xie 2026 remains unread.
+WHAT_CHANGED: Added `t13_candidate_core_compatibility_audit.json`, its deterministic generator and regression, linked it into the input-package audit, and repaired register projection of the matrix counts.
+EQUATION_OR_MAPPING: `y_TTG=Delta_Tq(t)/Delta_Tq(0)`; `y_TTG^UET=Delta_Phi(t)/Delta_Phi(0)`; `Delta_Tq=alpha_Phi_K*Delta_Phi`; `C_src(T)=sum_mu c_mu(T)`.
+VERIFICATION: Input audit PASS with 3 packages and 0 accepted; matrix regenerated with 10 major results, 36 subresults, 7 blockers; focused regression `11 passed`; no target fit and no holdout access.
+CONTROLLING_BLOCKER: No admissible Ding-compatible C_src/material package, independent base-Phi/SI alpha-beta package, or state-matched physical Kubo/SK/KMS/entropy package has arrived.
+NEXT_ACTION: Acquire one of the three required payloads or a declared derivation, then validate it through the fail-closed contract before promoting any subresult.
+CLAIM_BOUNDARY: Compatibility and evidence-acquisition diagnostic only; not Full Topic 13 closure, Core-ready status, external validation, prediction, or global UET closure.
+EVIDENCE_PATHS: `docs/core/artifacts/t13_candidate_core_compatibility_audit.json`; `docs/scripts/audit/audit_topic13_candidate_core_compatibility.py`; `docs/core/test/test_topic13_candidate_core_compatibility.py`; `docs/core/artifacts/t13_closure_input_package_audit.json`; `docs/core/artifacts/t13_topic13_closure_matrix.json`.

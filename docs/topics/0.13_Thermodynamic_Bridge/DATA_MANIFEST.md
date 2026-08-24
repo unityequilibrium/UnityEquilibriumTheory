@@ -1302,3 +1302,12 @@ EVIDENCE_HASHES: package edcf733efdad47973138a469e96e6e81f1654bdfe64d34ee7bc7c3a
 - `t13_public_phonon_route_screening_package.json` records three screened public routes: Materials Project Phonon database v1.1, LCBOPII graphitic phonon context, and the Dryad full-scattering-matrix solver.
 - `t13_public_phonon_route_screening_audit.json` bounds them as metadata, formula, or solver context only; no route is accepted as Ding `C_src`, independent `alpha_Phi_K`, or physical UET transport.
 - No remote payload was imported. The source package remains `SCREENED_METADATA_ONLY_NO_CORE_PAYLOAD`.
+
+
+## Candidate Core Compatibility Diagnostic (2026-08-24)
+
+The artifact `docs/core/artifacts/t13_candidate_core_compatibility_audit.json` compares five existing source packages against the three grouped Topic 13 Core input contracts. It evaluates ten route records, accepts zero routes for Core, and keeps Calorine, MP48, QH-15, Gen3 CSP, and Kim 2018 bounded as candidate/comparator evidence. The artifact is linked into `docs/core/artifacts/t13_closure_input_package_audit.json`; no source role, equation, threshold, fit path, or holdout policy changed.
+
+The current matrix remains 10 major results and 36 required subresults: 21 `CLOSED_FOR_LANE`, 5 `CLOSED_AS_NO_GO`, 0 `CLOSED_FOR_CORE`, and 10 `OPEN`. The diagnostic is fail-closed when candidate holdout metadata is incomplete; it never assumes missing metadata is clean.
+
+EVIDENCE_PATHS: `docs/core/artifacts/t13_candidate_core_compatibility_audit.json`; `docs/scripts/audit/audit_topic13_candidate_core_compatibility.py`; `docs/core/test/test_topic13_candidate_core_compatibility.py`.

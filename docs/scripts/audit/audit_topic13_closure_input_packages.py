@@ -20,6 +20,7 @@ GATE_REL = (
     "topic13_full_thermodynamic_bridge_core_ready_gate.json"
 )
 RECORD_CONTRACT_REL = "docs/core/artifacts/t13_closure_record_contract_audit.json"
+CANDIDATE_COMPATIBILITY_REL = "docs/core/artifacts/t13_candidate_core_compatibility_audit.json"
 
 EVIDENCE_RELS = [
     RECORD_CONTRACT_REL,
@@ -38,6 +39,7 @@ EVIDENCE_RELS = [
     "docs/core/artifacts/t13_huberman_2019_ttg_source_boundary_audit.json",
     "docs/core/artifacts/t13_public_phonon_route_screening_audit.json",
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_public_phonon_route_screening_package.json",
+    CANDIDATE_COMPATIBILITY_REL,
     "docs/core/artifacts/covariant_superfluid_transport_verification.json",
     "docs/core/artifacts/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json",
     "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json",
@@ -87,6 +89,7 @@ def main() -> int:
     graphite_pair_boundary = load("docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json")
     huberman = load("docs/core/artifacts/t13_huberman_2019_ttg_source_boundary_audit.json")
     public_phonon = load("docs/core/artifacts/t13_public_phonon_route_screening_audit.json")
+    candidate_compatibility = load(CANDIDATE_COMPATIBILITY_REL)
 
     calorine_checks = calorine.get("checks", {})
     alpha_count = int(alpha.get("eligible_candidate_count", 0))
@@ -182,6 +185,8 @@ def main() -> int:
                 "huberman_2019_numeric_payload_present": huberman.get("checks", {}).get("numeric_C_src_rows_present", False),
                 "public_phonon_route_screening_status": public_phonon.get("status"),
                 "public_phonon_core_payload_present": not public_phonon.get("checks", {}).get("no_core_payload_imported", False),
+                "candidate_compatibility_status": candidate_compatibility.get("status"),
+                "candidate_core_accepted_route_count": candidate_compatibility.get("summary", {}).get("core_accepted_route_count"),
             },
             "missing_acceptance_fields": ding_missing,
             "unlocks_subresults": [
@@ -203,6 +208,8 @@ def main() -> int:
                 "covariant_action_route_status": action_si.get("status"),
                 "numeric_alpha_emitted": alpha.get("numeric_alpha_Phi_K_emitted", False),
                 "holdout_accessed": alpha.get("holdout_accessed", False),
+                "candidate_compatibility_status": candidate_compatibility.get("status"),
+                "candidate_core_accepted_route_count": candidate_compatibility.get("summary", {}).get("core_accepted_route_count"),
             },
             "missing_acceptance_fields": phi_missing,
             "unlocks_subresults": [
@@ -230,6 +237,8 @@ def main() -> int:
                 .get("units")
                 == "SI",
                 "formal_sk_entropy_status": sk_entropy.get("status"),
+                "candidate_compatibility_status": candidate_compatibility.get("status"),
+                "candidate_core_accepted_route_count": candidate_compatibility.get("summary", {}).get("core_accepted_route_count"),
             },
             "missing_acceptance_fields": transport_missing,
             "unlocks_subresults": [
@@ -265,6 +274,11 @@ def main() -> int:
         "public_phonon_route_is_scoped_without_core_payload": public_phonon.get("status")
         == "PASS_SCOPED_PUBLIC_PHONON_ROUTE_SCREENING_NO_CORE_PAYLOAD"
         and public_phonon.get("checks", {}).get("no_core_payload_imported", False),
+        "candidate_compatibility_audit_is_scoped_without_core_acceptance": candidate_compatibility.get("status")
+        == "PASS_SCOPED_T13_CANDIDATE_COMPATIBILITY_AUDIT_OPEN"
+        and candidate_compatibility.get("summary", {}).get("core_accepted_route_count") == 0
+        and candidate_compatibility.get("summary", {}).get("new_core_subresults_closed") == 0
+        and candidate_compatibility.get("summary", {}).get("canonical_full_topic13_unlocked") is not True,
         "gate_blocker_set_is_nonempty": bool(
             gate.get("major_result", {}).get("what_remains_open")
         ),
@@ -292,6 +306,7 @@ def main() -> int:
                 "The three non-derivable input packages are checked against current artifacts.",
                 "The fail-closed record contract is linked before any package can be accepted.",
                 "Numeric candidates are separated from accepted Core-ready evidence.",
+                "The field-level candidate compatibility diagnostic is linked without accepting any route.",
                 "Holdout and anti-fitting boundaries are rechecked.",
             ],
             "what_remains_open": gate.get("major_result", {}).get(
@@ -331,7 +346,7 @@ def main() -> int:
         "evidence_artifacts": evidence,
         "report": {
             "MAJOR_RESULT_CLOSURE": "PARTIAL",
-            "WHAT_IS_ACTUALLY_CLOSED": "The three package acceptance boundaries are machine-audited; no package is accepted for Core.",
+            "WHAT_IS_ACTUALLY_CLOSED": "The three package acceptance boundaries and the linked candidate compatibility diagnostic are machine-audited; no package is accepted for Core.",
             "WHAT_REMAINS_OPEN": gate.get("major_result", {}).get(
                 "what_remains_open", []
             ),
@@ -339,7 +354,7 @@ def main() -> int:
             "STATUS": status,
             "WHAT_CHANGED": "Added a read-only acceptance audit for the three grouped Topic 13 input packages.",
             "EQUATION_OR_MAPPING": "No equations or numeric values were changed or emitted.",
-            "VERIFICATION": "All evidence hashes, holdout, fit, candidate, and canonical-gate checks passed.",
+            "VERIFICATION": "All evidence hashes, holdout, fit, candidate-compatibility, and canonical-gate checks passed; candidate metadata remains fail-closed where incomplete.",
             "CONTROLLING_BLOCKER": gate.get("controlling_blocker"),
             "NEXT_ACTION": "Acquire an authorized Ding-compatible source, independent base-Phi/SI calibration, and physical Kubo/SK/KMS record.",
             "CLAIM_BOUNDARY": "Input-readiness audit only; not Full Topic 13 closure or external validation.",

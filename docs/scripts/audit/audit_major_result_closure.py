@@ -91,6 +91,12 @@ def main() -> int:
                 "status": matrix.get("status"),
                 "closure_level": matrix.get("major_result", {}).get("closure_level"),
                 "full_core_unlock": matrix.get("full_core_unlock", False),
+                "required_major_result_count": matrix.get("closure_summary", {}).get(
+                    "required_major_result_count"
+                ),
+                "required_subresult_count": matrix.get("closure_summary", {}).get(
+                    "required_subresult_count"
+                ),
             },
         },
         {
