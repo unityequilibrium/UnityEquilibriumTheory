@@ -9,6 +9,7 @@
     "closure_level": "PARTIAL",
     "what_is_closed": [
       "The three non-derivable input packages are checked against current artifacts.",
+      "The fail-closed record contract is linked before any package can be accepted.",
       "Numeric candidates are separated from accepted Core-ready evidence.",
       "Holdout and anti-fitting boundaries are rechecked."
     ],
@@ -36,6 +37,11 @@
     "observable": "closure-input acceptance state",
     "data_role": "INTERNAL_AUDIT_NOT_CALIBRATION",
     "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_closure_record_contract_audit.json",
+        "sha256": "9c7a65c4fa7df2bcc884e4b187b1c1b7b497f192727410554886d8ea3842878f",
+        "role": "input-package acceptance evidence"
+      },
       {
         "path": "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json",
         "sha256": "880eb2cc94543f19fefae13ad8c64af820bb619d9c898cd4e1e710494519d281",
@@ -117,6 +123,10 @@
         "role": "input-package acceptance evidence"
       }
     ],
+    "record_contract_artifact": {
+      "path": "docs/core/artifacts/t13_closure_record_contract_audit.json",
+      "status": "PASS_T13_CLOSURE_RECORD_CONTRACT_OPEN"
+    },
     "verification_status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN",
     "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing",
     "claim_boundary": "This audit narrows input readiness only. It does not close Full Topic 13, derive alpha_Phi_K, or promote candidate C_src/Kubo values."
@@ -205,6 +215,7 @@
   ],
   "checks": {
     "all_evidence_files_present": true,
+    "record_contract_schema_is_valid": true,
     "canonical_gate_is_still_blocked": true,
     "all_packages_are_explicitly_blocked_until_inputs_arrive": true,
     "holdout_is_unread": true,
@@ -228,6 +239,11 @@
     "calibration_path_may_read_holdout": false
   },
   "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_closure_record_contract_audit.json",
+      "sha256": "9c7a65c4fa7df2bcc884e4b187b1c1b7b497f192727410554886d8ea3842878f",
+      "role": "input-package acceptance evidence"
+    },
     {
       "path": "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json",
       "sha256": "880eb2cc94543f19fefae13ad8c64af820bb619d9c898cd4e1e710494519d281",

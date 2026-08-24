@@ -19,8 +19,10 @@ GATE_REL = (
     "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
     "topic13_full_thermodynamic_bridge_core_ready_gate.json"
 )
+RECORD_CONTRACT_REL = "docs/core/artifacts/t13_closure_record_contract_audit.json"
 
 EVIDENCE_RELS = [
+    RECORD_CONTRACT_REL,
     "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json",
     "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
     "docs/core/artifacts/t13_ding_pbte_author_request_audit.json",
@@ -62,6 +64,7 @@ def artifact_ref(rel: str, role: str) -> dict[str, Any]:
 
 def main() -> int:
     gate = load(GATE_REL)
+    record_contract = load(RECORD_CONTRACT_REL)
     csrc_contract = load("docs/core/artifacts/t13_independent_csrc_acceptance_contract.json")
     calorine = load("docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json")
     author_request = load("docs/core/artifacts/t13_ding_pbte_author_request_audit.json")
@@ -233,6 +236,8 @@ def main() -> int:
         "all_evidence_files_present": all(
             (ROOT / rel).is_file() for rel in EVIDENCE_RELS
         ),
+        "record_contract_schema_is_valid": record_contract.get("status")
+        == "PASS_T13_CLOSURE_RECORD_CONTRACT_OPEN",
         "canonical_gate_is_still_blocked": gate.get("status")
         == "BLOCKED_OPEN_T13_FULL_BRIDGE",
         "all_packages_are_explicitly_blocked_until_inputs_arrive": all(
@@ -273,6 +278,7 @@ def main() -> int:
             "closure_level": "PARTIAL",
             "what_is_closed": [
                 "The three non-derivable input packages are checked against current artifacts.",
+                "The fail-closed record contract is linked before any package can be accepted.",
                 "Numeric candidates are separated from accepted Core-ready evidence.",
                 "Holdout and anti-fitting boundaries are rechecked.",
             ],
@@ -294,6 +300,10 @@ def main() -> int:
             "observable": "closure-input acceptance state",
             "data_role": "INTERNAL_AUDIT_NOT_CALIBRATION",
             "evidence_artifacts": evidence,
+            "record_contract_artifact": {
+                "path": RECORD_CONTRACT_REL,
+                "status": record_contract.get("status"),
+            },
             "verification_status": status,
             "controlling_blocker": gate.get("controlling_blocker"),
             "claim_boundary": "This audit narrows input readiness only. It does not close Full Topic 13, derive alpha_Phi_K, or promote candidate C_src/Kubo values.",
