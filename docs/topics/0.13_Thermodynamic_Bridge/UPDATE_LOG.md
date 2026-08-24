@@ -1,3 +1,17 @@
+## 2026-08-25 - Ding and base-Phi external route boundary wave
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for the external-route boundary; canonical Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_IS_ACTUALLY_CLOSED: The official Ding article route was rechecked and the public record still exposes the study and methods but directs supporting data to the corresponding author on reasonable request; the repository paired base-Phi/SI reconciliation remains at 74 screened candidates and 0 eligible records. No author payload, paired base-Phi/SI record, or numeric replacement was imported.
+WHAT_REMAINS_OPEN: Accepted Ding-compatible numeric `C_src(T)`, material/state and source-grade uncertainty closure, base-Phi SI anchor, independent `alpha_Phi_K`, beta/SI correspondence, and physical UET Kubo/SK/KMS/entropy closure.
+DEPENDENCY_UNLOCKED: None. The route boundary does not unlock the source, dimensional, transport, Full Topic 13, Core, or downstream dependencies.
+STATUS: `PASS_SCOPED_EXTERNAL_ROUTE_BOUNDARY`; `claim_promotion=false`; `xie_2026_accessed=false`; `target_fit_performed=false`.
+WHAT_CHANGED: Rechecked the primary Ding route and searched for a public data/repository route; no admissible input hash changed, so the scientific gate state was intentionally not rerun or promoted.
+EQUATION_OR_MAPPING: `Delta_Tq = alpha_Phi_K * Delta_Phi`; `C_src(T) = sum_mu c_mu(T)`; `Phi_E = s_material * Phi_base`. The first two require independent scale/source evidence; the third remains a separate conditional comparator.
+VERIFICATION: Primary-source route checked at `https://www.nature.com/articles/s41467-021-27907-z`; local base-Phi reconciliation reports `paired_alpha_search_candidate_count=74`, `eligible_paired_alpha_record_count=0`, and `independent_base_phi_si_record_count=0`; no holdout or target curve was read.
+CONTROLLING_BLOCKER: `dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing` remains the topic controller; source and physical Kubo packages remain independent open controllers.
+NEXT_ACTION: Use the prepared author-request route only with project authorization, or obtain a permitted same-regime reproduction/paired SI record; do not repeat public scans or substitute comparator data.
+CLAIM_BOUNDARY: This is an evidence-boundary result only. It does not emit `alpha_Phi_K`, `C_src`, a SI Phi-to-temperature prediction, or Full Topic 13 closure.
+
 ## 2026-08-24 - Lowitzer full P-V-T thermodynamic pair source wave
 
 MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for `T13_LOWITZER_GRAPHITE_ALPHA_V_K_T_FULL_SOURCE_PAIR`; canonical Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
