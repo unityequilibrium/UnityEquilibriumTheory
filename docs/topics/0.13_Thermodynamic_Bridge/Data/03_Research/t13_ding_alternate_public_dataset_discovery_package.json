@@ -1,7 +1,7 @@
 {
-  "schema_version": "t13-ding-alternate-public-dataset-discovery-v2",
+  "schema_version": "t13-ding-alternate-public-dataset-discovery-v3",
   "package_id": "T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY",
-  "generated_at": "2026-08-14",
+  "generated_at": "2026-08-23",
   "topic": "0.13_Thermodynamic_Bridge",
   "source_role": "SOURCE_DISCOVERY_CANDIDATE_NOT_IMPORTED",
   "target_acceptance_contract": {
@@ -25,6 +25,66 @@
     "local_availability_artifact": "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
     "local_public_supplementary_artifact": "docs/core/artifacts/t13_ding_public_supplementary_payload_boundary_audit.json",
     "target_observable_is_not_relabelled": true
+  },
+  "repository_registry_search": {
+    "search_date": "2026-08-23",
+    "scope": "Exact DOI/title matching against public metadata APIs; no candidate payload was downloaded or imported.",
+    "target_doi": "10.1038/s41467-021-27907-z",
+    "target_title": "Observation of second sound in graphite over 200 K",
+    "queries": [
+      {
+        "registry": "DataCite",
+        "endpoint": "https://api.datacite.org/dois?query=10.1038%2Fs41467-021-27907-z&page%5Bsize%5D=25",
+        "query_kind": "DOI",
+        "returned_records": 0,
+        "exact_target_matches": 0,
+        "result": "NO_EXACT_DATASET_RECORD"
+      },
+      {
+        "registry": "Crossref",
+        "endpoint": "https://api.crossref.org/works/10.1038/s41467-021-27907-z",
+        "query_kind": "article DOI relations and links",
+        "article_record_found": true,
+        "dataset_relation_present": false,
+        "linked_resources": [
+          "https://www.nature.com/articles/s41467-021-27907-z",
+          "https://www.nature.com/articles/s41467-021-27907-z.pdf"
+        ],
+        "result": "ARTICLE_ONLY_NO_DATASET_RELATION"
+      },
+      {
+        "registry": "Zenodo",
+        "endpoint": "https://zenodo.org/api/records?q=s41467-021-27907-z&size=20",
+        "query_kind": "DOI token",
+        "returned_records": 20,
+        "exact_target_matches_in_returned_page": 0,
+        "result": "NO_EXACT_MATCH_IN_RETURNED_PAGE",
+        "scope_note": "The API token query is broad; this is a first-page exact-match check, not an exhaustive claim over all search hits."
+      },
+      {
+        "registry": "Figshare",
+        "endpoint": "https://api.figshare.com/v2/articles/search",
+        "query_kind": "exact DOI token",
+        "returned_records": 100,
+        "exact_target_matches_in_returned_page": 0,
+        "result": "NO_EXACT_MATCH_IN_RETURNED_PAGE"
+      },
+      {
+        "registry": "Dryad",
+        "endpoint": "https://datadryad.org/api/v2/datasets?query=10.1038%2Fs41467-021-27907-z",
+        "query_kind": "DOI",
+        "returned_records": 1,
+        "exact_target_matches_in_returned_page": 0,
+        "result": "NO_EXACT_MATCH_IN_RETURNED_PAGE"
+      }
+    ],
+    "route_conclusion": "No exact public dataset record was located in the checked metadata routes. The publisher article remains the authoritative captured route and states that supporting data are available from the corresponding author on reasonable request.",
+    "not_proven": [
+      "author-held data do not exist",
+      "all third-party repositories are empty",
+      "an independent same-regime reproduction is impossible"
+    ],
+    "xie_2026_consumed": false
   },
   "candidates": [
     {

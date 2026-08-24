@@ -1,0 +1,14 @@
+# Research Wave: Ding Public Repository Registry Boundary (2026-08-23)
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY_BOUNDARY.
+WHAT_IS_ACTUALLY_CLOSED: The source search was extended from the article and known candidate routes to exact DOI/title checks against DataCite, Crossref, Zenodo, Figshare, and Dryad metadata routes. DataCite returned no exact dataset record; Crossref exposed the article links without a dataset relation; the returned Zenodo, Figshare, and Dryad pages contained no exact target record. The result is a bounded metadata-search boundary, not a claim that author-held or every third-party dataset is absent.
+WHAT_REMAINS_OPEN: An authorized Ding numeric package, an accepted same-regime independent PBTE reproduction, source-grade uncertainty/convergence, material/state mapping, independent alpha_Phi_K, normalized beta/SI correspondence, physical Kubo, and full EOS/transport/KMS/entropy closure remain open.
+DEPENDENCY_UNLOCKED: Public metadata route boundary only; no numeric C_src, alpha_Phi_K, TTG prediction, Full Topic 13, Core, Gravity, or constitutive-transport dependency is unlocked.
+STATUS: PASS_SCOPED_DING_ALTERNATE_PUBLIC_DATASET_BOUNDARY_NO_GO.
+WHAT_CHANGED: Added the dated registry-search contract to the alternate-source package, extended its verifier checks, regenerated the source artifact and Full Topic 13 gate, and synchronized the closure register/dependency evidence.
+EQUATION_OR_MAPPING: C_src(T)=sum_mu c_mu(T); Delta_Tq=Delta_u_ph/C_src(T); y_TTG=Delta_Tq(t)/Delta_Tq(0); y_TTG^UET=Delta_Phi(t)/Delta_Phi(0). No numeric C_src, alpha_Phi_K, or holdout-derived value is emitted.
+VERIFICATION: Source verifier PASS with all checks true; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL with 8 open blocker groups; focused regression 7 passed; Xie 2026 remains unconsumed.
+CONTROLLING_BLOCKER: ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing.
+NEXT_ACTION: Use the prepared author-request route if permission is obtained, or build an accepted same-regime PBTE reproduction carrying mode-resolved C_src, SI units, state mapping, uncertainty, convergence, and independence metadata. Do not treat MP48, Calorine, NIMS aliases, or registry absence as Ding numeric payload.
+CLAIM_BOUNDARY: This is a source-discovery and metadata-boundary result only. It is not Ding validation, an independent alpha_Phi_K calibration, a prediction, physical UET transport, external validation, or Full Topic 13 closure.
+EVIDENCE_HASHES: package edcf733efdad47973138a469e96e6e81f1654bdfe64d34ee7bc7c3a61db5eb7f; boundary audit 67f059ed8ef9dcbe84878276d3056efb61b834fdfa7eca686d5361f1213d2573; full gate 4f7be70b0079efe6c50cb24a0fe984021ab600f966e001d4c456590804634f19; closure register 8f7a367573ace41b4080fadf396f246c5c50e7a53461d85c06051d6e3f8962e3; dependency gate afc58ef23a7c510f8c700714a32ebca78d908f0b673ec144ac2d06c2e496b04c.

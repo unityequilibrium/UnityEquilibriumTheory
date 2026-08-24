@@ -35,6 +35,21 @@ def test_public_alternate_routes_are_closed_as_a_scoped_boundary() -> None:
     assert observations["nims_mdr_huang_2023_graphite_poiseuille"]["access_route"]["local_payload_imported"] is False
     assert observations["nims_mdr_huang_2023_graphite_poiseuille"]["compatibility"]["unitful_C_src_present"] is False
     assert audit["major_result"]["data_role"] == "SOURCE_DISCOVERY_BOUNDARY_NOT_CALIBRATION"
+    registry = audit["major_result"]["evidence_artifacts"][-1]["summary"]
+    assert registry["target_doi"] == "10.1038/s41467-021-27907-z"
+    assert registry["xie_2026_consumed"] is False
+    assert all(
+        item["exact_target_matches"] == 0
+        for item in registry["queries"]
+        if "exact_target_matches" in item
+    )
+    assert all(
+        item["exact_target_matches_in_returned_page"] == 0
+        for item in registry["queries"]
+        if "exact_target_matches_in_returned_page" in item
+    )
+    crossref = next(item for item in registry["queries"] if item["registry"] == "Crossref")
+    assert crossref["dataset_relation_present"] is False
 
 
 def test_public_route_boundary_is_projected_without_topic13_promotion() -> None:

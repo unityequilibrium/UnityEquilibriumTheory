@@ -9970,7 +9970,14 @@
           "ding_supplementary_boundary_remains_open": true,
           "acceptance_contract_still_rejects_current_route": true,
           "holdout_is_unconsumed": true,
-          "package_holdout_policy_is_locked": true
+          "package_holdout_policy_is_locked": true,
+          "registry_search_has_target_identity": true,
+          "datacite_exact_match_is_zero": true,
+          "crossref_has_no_dataset_relation": true,
+          "zenodo_exact_page_match_is_zero": "The API token query is broad; this is a first-page exact-match check, not an exhaustive claim over all search hits.",
+          "figshare_exact_page_match_is_zero": true,
+          "dryad_exact_page_match_is_zero": true,
+          "registry_search_does_not_overclaim": true
         },
         "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
         "next_controller": "Obtain an authorized Ding numeric package or a permitted same-regime PBTE reproduction with mode-resolved C_src(T), SI units, uncertainty, convergence, and material-state mapping. Keep current public routes as comparison-only and do not fit alpha_Phi_K.",
@@ -9980,7 +9987,7 @@
         "data_role": "SOURCE_DISCOVERY_BOUNDARY_NOT_CALIBRATION",
         "audit": {
           "path": "docs/core/artifacts/t13_ding_alternate_public_dataset_discovery_boundary_audit.json",
-          "sha256": "327957c98bdb9f2cfe4a26dd85c6f01feb182641e15e9a8f5656bd909111b9d1",
+          "sha256": "67f059ed8ef9dcbe84878276d3056efb61b834fdfa7eca686d5361f1213d2573",
           "summary": {
             "status": "PASS_SCOPED_DING_ALTERNATE_PUBLIC_DATASET_BOUNDARY_NO_GO",
             "major_result_id": "T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY_BOUNDARY",
@@ -80933,7 +80940,7 @@
     },
     {
       "path": "docs/core/artifacts/t13_ding_alternate_public_dataset_discovery_boundary_audit.json",
-      "sha256": "327957c98bdb9f2cfe4a26dd85c6f01feb182641e15e9a8f5656bd909111b9d1",
+      "sha256": "67f059ed8ef9dcbe84878276d3056efb61b834fdfa7eca686d5361f1213d2573",
       "summary": {
         "status": "PASS_SCOPED_DING_ALTERNATE_PUBLIC_DATASET_BOUNDARY_NO_GO",
         "closure_level": "CLOSED_FOR_LANE",

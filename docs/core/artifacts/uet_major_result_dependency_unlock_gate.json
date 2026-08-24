@@ -6,7 +6,7 @@
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "0d2487bfd12523c2d6d738f06b3b391e0f4ab8dedf20998488231b50f26bb996"
+    "sha256": "8f7a367573ace41b4080fadf396f246c5c50e7a53461d85c06051d6e3f8962e3"
   },
   "decisions": {
     "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY": {
@@ -75,7 +75,7 @@
   ],
   "claim_boundary": "Dependency decisions only; no downstream result is promoted by a checkpoint or comparator pass.",
   "topic13_partial_evidence": {
-    "register_sha256": "0d2487bfd12523c2d6d738f06b3b391e0f4ab8dedf20998488231b50f26bb996",
+    "register_sha256": "8f7a367573ace41b4080fadf396f246c5c50e7a53461d85c06051d6e3f8962e3",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",
@@ -587,7 +587,7 @@
         "full_core_unlock": false,
         "audit": {
           "path": "docs/core/artifacts/t13_ding_alternate_public_dataset_discovery_boundary_audit.json",
-          "sha256": "327957c98bdb9f2cfe4a26dd85c6f01feb182641e15e9a8f5656bd909111b9d1",
+          "sha256": "67f059ed8ef9dcbe84878276d3056efb61b834fdfa7eca686d5361f1213d2573",
           "summary": {
             "status": "PASS_SCOPED_DING_ALTERNATE_PUBLIC_DATASET_BOUNDARY_NO_GO",
             "major_result_id": "T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY_BOUNDARY",

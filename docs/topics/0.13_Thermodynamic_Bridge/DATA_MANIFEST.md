@@ -1268,3 +1268,17 @@ Artifact: docs/core/artifacts/t13_nims_mp990448_phonon_source_boundary_audit.jso
 The phononDB mapping in atztogo/phonondb points material 990448 to https://mdr.nims.go.jp/download_all/wd3761563.zip. The downloaded legacy archive is byte-identical to the current NIMS MP-990448 archive: SHA-256 eea6ca7569c9442754ce5492ddb2f545186f97ad8b82b209d95f1a80b0158767, size 133375 bytes. This closes the route-equivalence question only; it does not add machine-readable force constants, a frequency mesh, thermal-property rows, C_src, or alpha_Phi_K.
 
 Artifact: docs/core/artifacts/t13_nims_mp990448_phonon_source_boundary_audit.json (SHA-256 2e9f93be5cf23c429d9d0b77f755efb074a44790483f0b635a62327d5025eda9). Source package: docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/nims_mdr_mp990448_phonon_source_package.json (SHA-256 bbd4aee185a7c5a08b33f2f267e81a8b5274fa43b26eae1167966b4a5ec9a061). Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL; no fit, target tuning, synthetic replacement, threshold change, or Xie 2026 access occurred.
+## Ding Public Repository Registry Boundary (2026-08-23)
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY_BOUNDARY.
+WHAT_IS_ACTUALLY_CLOSED: The alternate source package now records exact DOI/title metadata checks across DataCite, Crossref, Zenodo, Figshare, and Dryad. The checked routes returned no exact Ding dataset record or dataset relation; the package preserves the limited scope and does not claim that author-held or all third-party data are unavailable.
+WHAT_REMAINS_OPEN: Ding numeric C_src or accepted independent reproduction, material/state mapping, source-grade uncertainty/convergence, independent alpha_Phi_K, beta/SI correspondence, physical Kubo, and full EOS/transport/KMS/entropy.
+DEPENDENCY_UNLOCKED: Metadata source-search boundary only; no numeric C_src, calibration, prediction, Full Topic 13, Core, Gravity, or constitutive-transport unlock.
+STATUS: PASS_SCOPED_DING_ALTERNATE_PUBLIC_DATASET_BOUNDARY_NO_GO.
+WHAT_CHANGED: Added repository_registry_search to t13_ding_alternate_public_dataset_discovery_package.json and made the verifier assert exact-match counts and non-overclaim fields.
+EQUATION_OR_MAPPING: C_src(T)=sum_mu c_mu(T); Delta_Tq=Delta_u_ph/C_src(T); no numeric rows or alpha are emitted.
+VERIFICATION: All source-boundary checks pass; full gate remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL with 8 blockers; focused regression 7 passed; Xie 2026 remains unconsumed.
+CONTROLLING_BLOCKER: ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing.
+NEXT_ACTION: Obtain authorized author-held numeric payload or an accepted same-regime PBTE reproduction; keep comparator routes outside Ding acceptance.
+CLAIM_BOUNDARY: Metadata route boundary only; not Ding C_src, alpha calibration, TTG prediction, external validation, or Full Topic 13 closure.
+EVIDENCE_HASHES: package edcf733efdad47973138a469e96e6e81f1654bdfe64d34ee7bc7c3a61db5eb7f; audit 67f059ed8ef9dcbe84878276d3056efb61b834fdfa7eca686d5361f1213d2573; full gate 4f7be70b0079efe6c50cb24a0fe984021ab600f966e001d4c456590804634f19.

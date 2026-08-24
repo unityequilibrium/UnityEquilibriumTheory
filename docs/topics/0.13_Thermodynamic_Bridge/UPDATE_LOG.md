@@ -4034,3 +4034,17 @@ NEXT_ACTION: Continue authorized Ding-compatible C_src acquisition and independe
 CLAIM_BOUNDARY: Legacy-route equivalence only; not Ding validation, alpha calibration, prediction, physical UET transport, external validation, or Full Topic 13 closure.
 EVIDENCE_PATHS: docs/scripts/audit/audit_topic13_nims_mp990448_phonon_source_boundary.py; docs/core/test/test_topic13_nims_mp990448_phonon_source_boundary.py; docs/core/artifacts/t13_nims_mp990448_phonon_source_boundary_audit.json; docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/nims_mdr_mp990448_phonon_source_package.json; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json.
 EVIDENCE_HASHES: audit 2e9f93be5cf23c429d9d0b77f755efb074a44790483f0b635a62327d5025eda9; package bbd4aee185a7c5a08b33f2f267e81a8b5274fa43b26eae1167966b4a5ec9a061; full gate 147e0c822d7a693abfce8c008cc87b48cd07eb2e4743288083c56e8b68660a86; register 0d2487bfd12523c2d6d738f06b3b391e0f4ab8dedf20998488231b50f26bb996; dependency fbf124a50ccf00d3a6d99295e69a890a3ef4671afc738c7ab13d94dc716dce19.
+### 2026-08-23 - Ding public repository registry boundary
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY_BOUNDARY.
+WHAT_IS_ACTUALLY_CLOSED: Exact DOI/title metadata checks were added for DataCite, Crossref, Zenodo, Figshare, and Dryad. No exact target dataset record or Crossref dataset relation was found in the checked routes; the result is explicitly bounded and does not claim author-held data or every third-party repository are empty.
+WHAT_REMAINS_OPEN: Ding numeric C_src or accepted same-regime reproduction, source-grade uncertainty/convergence, material mapping, independent alpha_Phi_K, beta/SI correspondence, physical Kubo, and EOS/transport/KMS/entropy remain open.
+DEPENDENCY_UNLOCKED: Public registry-search boundary only; no numeric C_src, alpha, TTG prediction, Full Topic 13, Core, Gravity, or transport unlock.
+STATUS: PASS_SCOPED_DING_ALTERNATE_PUBLIC_DATASET_BOUNDARY_NO_GO; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.
+WHAT_CHANGED: Extended the existing alternate-route package and verifier with a dated registry-search contract; regenerated source, full-gate, and closure-register artifacts.
+EQUATION_OR_MAPPING: C_src(T)=sum_mu c_mu(T); Delta_Tq=Delta_u_ph/C_src(T). Normalized measurement mappings remain y_TTG=Delta_Tq(t)/Delta_Tq(0) and y_TTG^UET=Delta_Phi(t)/Delta_Phi(0); no numeric alpha is emitted.
+VERIFICATION: Source boundary PASS; full gate has 8 blockers; focused regression 7 passed; Xie 2026 remains unconsumed.
+CONTROLLING_BLOCKER: ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing.
+NEXT_ACTION: Obtain an authorized Ding payload or accepted same-regime PBTE reproduction; keep all existing graphite comparators separate from Ding acceptance.
+CLAIM_BOUNDARY: Source-discovery boundary only; not numeric C_src, alpha calibration, prediction, external validation, or Full Topic 13 closure.
+EVIDENCE_HASHES: package edcf733efdad47973138a469e96e6e81f1654bdfe64d34ee7bc7c3a61db5eb7f; audit 67f059ed8ef9dcbe84878276d3056efb61b834fdfa7eca686d5361f1213d2573; full gate 4f7be70b0079efe6c50cb24a0fe984021ab600f966e001d4c456590804634f19; register 8f7a367573ace41b4080fadf396f246c5c50e7a53461d85c06051d6e3f8962e3.
