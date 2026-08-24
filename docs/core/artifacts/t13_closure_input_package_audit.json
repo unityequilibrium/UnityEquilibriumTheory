@@ -14,7 +14,8 @@
       "The field-level candidate compatibility diagnostic is linked without accepting any route.",
       "Holdout and anti-fitting boundaries are rechecked.",
       "Existing graphite heat-capacity and correction sources are reconciled by quantity, uncertainty, and material-state eligibility.",
-      "Formal, natural-unit, and external-comparator transport evidence is reconciled without physical UET promotion."
+      "Formal, natural-unit, and external-comparator transport evidence is reconciled without physical UET promotion.",
+      "Base-Phi/SI candidate, Phi_E comparator, and natural-unit action evidence are reconciled without alpha promotion."
     ],
     "what_remains_open": [
       "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
@@ -154,6 +155,11 @@
         "path": "docs/core/artifacts/t13_physical_transport_reconciliation_audit.json",
         "sha256": "67150277f66a2f855b2cd8e007926e65e8bf330a8dd925edc000b3a3e668b2fd",
         "role": "physical transport evidence reconciliation"
+      },
+      {
+        "path": "docs/core/artifacts/t13_base_phi_si_reconciliation_audit.json",
+        "sha256": "d5eaea1921de4e42897d9f4892dc7dda5b7af226801b28c24ad91c2a576a631a",
+        "role": "base-Phi/SI evidence reconciliation"
       }
     ],
     "record_contract_artifact": {
@@ -218,7 +224,13 @@
         "numeric_alpha_emitted": false,
         "holdout_accessed": false,
         "candidate_compatibility_status": "PASS_SCOPED_T13_CANDIDATE_COMPATIBILITY_AUDIT_OPEN",
-        "candidate_core_accepted_route_count": 0
+        "candidate_core_accepted_route_count": 0,
+        "base_phi_reconciliation_status": "PASS_SCOPED_BASE_PHI_RECONCILIATION_OPEN",
+        "paired_alpha_search_candidate_count": 74,
+        "eligible_paired_alpha_record_count": 0,
+        "named_phi_e_comparator_count": 1,
+        "independent_base_phi_si_record_count": 0,
+        "eligible_base_phi_input_count": 0
       },
       "missing_acceptance_fields": [
         "eligible_paired_alpha_record",
@@ -280,7 +292,8 @@
     "candidate_compatibility_audit_is_scoped_without_core_acceptance": true,
     "gate_blocker_set_is_nonempty": true,
     "cv_source_reconciliation_is_fail_closed": true,
-    "physical_transport_reconciliation_is_fail_closed": true
+    "physical_transport_reconciliation_is_fail_closed": true,
+    "base_phi_reconciliation_is_fail_closed": true
   },
   "open_blockers": [
     "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
@@ -411,6 +424,11 @@
       "path": "docs/core/artifacts/t13_physical_transport_reconciliation_audit.json",
       "sha256": "67150277f66a2f855b2cd8e007926e65e8bf330a8dd925edc000b3a3e668b2fd",
       "role": "physical transport evidence reconciliation"
+    },
+    {
+      "path": "docs/core/artifacts/t13_base_phi_si_reconciliation_audit.json",
+      "sha256": "d5eaea1921de4e42897d9f4892dc7dda5b7af226801b28c24ad91c2a576a631a",
+      "role": "base-Phi/SI evidence reconciliation"
     }
   ],
   "report": {
@@ -427,29 +445,31 @@
     ],
     "DEPENDENCY_UNLOCKED": "None.",
     "STATUS": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN",
-    "WHAT_CHANGED": "Added a fail-closed reconciliation of formal SK/KMS/entropy, natural-unit UET, external graphite, and physical-coefficient acceptance classes; no physical UET value was promoted.",
+    "WHAT_CHANGED": "Added a fail-closed reconciliation of paired base-Phi search, Phi_E comparator, conditional formula, action route, and calibration boundary; no alpha or SI anchor was promoted.",
     "EQUATION_OR_MAPPING": "No equations or numeric values were changed or emitted.",
-    "VERIFICATION": "The composed c_v plus physical transport input audit passed; formal lanes remain scoped, Kim remains external-only, and accepted physical UET coefficient count is zero.",
-    "CONTROLLING_BLOCKER": "physical_Kubo_coefficient_record_missing",
-    "NEXT_ACTION": "Obtain or microscopically derive one state-matched physical UET transport record with Phi/SI mapping, correlator locator, source identity, uncertainty, and finite-temperature scope; do not relabel Kim or the natural-unit channel.",
+    "VERIFICATION": "The composed c_v, physical transport, and base-Phi input audit passed; paired alpha search is 74/0, Phi_E remains comparator-only, and accepted base-Phi input count is zero.",
+    "CONTROLLING_BLOCKER": "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
+    "NEXT_ACTION": "Obtain an authorized paired base-Phi/SI record or derive a source-provenance-backed action-to-SI map; do not use Phi_E, TTG residuals, or Xie 2026 as base-Phi calibration.",
     "CLAIM_BOUNDARY": "Input-readiness audit only; not Full Topic 13 closure or external validation."
   },
   "wave_controller": {
-    "wave_type": "transport_evidence_reconciliation_composed_with_cv",
+    "wave_type": "base_phi_evidence_reconciliation_composed_with_cv_and_transport",
     "artifact": {
-      "path": "docs/core/artifacts/t13_physical_transport_reconciliation_audit.json",
-      "sha256": "67150277f66a2f855b2cd8e007926e65e8bf330a8dd925edc000b3a3e668b2fd",
-      "role": "physical transport evidence reconciliation"
+      "path": "docs/core/artifacts/t13_base_phi_si_reconciliation_audit.json",
+      "sha256": "d5eaea1921de4e42897d9f4892dc7dda5b7af226801b28c24ad91c2a576a631a",
+      "role": "base-Phi/SI evidence reconciliation"
     },
-    "controlling_blocker": "physical_Kubo_coefficient_record_missing",
-    "candidate_count": 5,
-    "formal_lane_count": 3,
-    "external_physical_comparator_count": 1,
-    "physical_uet_coefficient_count": 0,
+    "controlling_blocker": "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
+    "candidate_count": 10,
+    "paired_alpha_search_candidate_count": 74,
+    "eligible_paired_alpha_record_count": 0,
+    "named_phi_e_comparator_count": 1,
+    "independent_base_phi_si_record_count": 0,
     "claim_impact": "no_change",
     "composition": [
       "run_topic13_cv_source_reconciliation_wave.py",
-      "audit_topic13_physical_transport_reconciliation.py"
+      "audit_topic13_physical_transport_reconciliation.py",
+      "audit_topic13_base_phi_reconciliation.py"
     ]
   }
 }
