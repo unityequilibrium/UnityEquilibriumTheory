@@ -81,7 +81,7 @@
   ],
   "input_package_audit": {
     "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
-    "sha256": "72f0f57efb454be675f97a307c370449bc59bd12d7b392a5ca586ff2be9675f4",
+    "sha256": "422f0bd7eb55afe5c963e46072a59748749626114601cba43d2500df218a17f5",
     "summary": {
       "role": "grouped Topic 13 closure-input acceptance audit",
       "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
@@ -128,7 +128,7 @@
       },
       {
         "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
-        "sha256": "72f0f57efb454be675f97a307c370449bc59bd12d7b392a5ca586ff2be9675f4",
+        "sha256": "422f0bd7eb55afe5c963e46072a59748749626114601cba43d2500df218a17f5",
         "summary": {
           "role": "grouped Topic 13 closure-input acceptance audit",
           "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
@@ -442,7 +442,7 @@
     ],
     "input_package_audit": {
       "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
-      "sha256": "72f0f57efb454be675f97a307c370449bc59bd12d7b392a5ca586ff2be9675f4",
+      "sha256": "422f0bd7eb55afe5c963e46072a59748749626114601cba43d2500df218a17f5",
       "summary": {
         "role": "grouped Topic 13 closure-input acceptance audit",
         "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
@@ -708,7 +708,7 @@
       },
       {
         "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
-        "sha256": "72f0f57efb454be675f97a307c370449bc59bd12d7b392a5ca586ff2be9675f4",
+        "sha256": "422f0bd7eb55afe5c963e46072a59748749626114601cba43d2500df218a17f5",
         "summary": {
           "role": "grouped Topic 13 closure-input acceptance audit",
           "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
@@ -1022,7 +1022,7 @@
     ],
     "input_package_audit": {
       "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
-      "sha256": "72f0f57efb454be675f97a307c370449bc59bd12d7b392a5ca586ff2be9675f4",
+      "sha256": "422f0bd7eb55afe5c963e46072a59748749626114601cba43d2500df218a17f5",
       "summary": {
         "role": "grouped Topic 13 closure-input acceptance audit",
         "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"

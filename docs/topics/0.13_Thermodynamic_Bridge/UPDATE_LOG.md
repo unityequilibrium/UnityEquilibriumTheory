@@ -4507,3 +4507,18 @@ EVIDENCE_PATHS:
 
 EVIDENCE_HASH:
 - `12621cbd50ff312809f747032018adebf352bec93710782f7dea6dbd6ac75854`
+
+### 2026-08-24 - Topic 13 c_v source reconciliation wave
+
+- Scope: `Topic 13 source/c_v acceptance boundary`
+- Wave type: `source pass`
+- Added or changed: `t13_cv_source_reconciliation_audit.json`; projected it into `t13_closure_input_package_audit.json`; regenerated the closure matrix and progress report.
+- Files touched: `docs/core/artifacts/t13_cv_source_reconciliation_audit.json`, `docs/core/artifacts/t13_closure_input_package_audit.json`, `docs/core/artifacts/t13_topic13_closure_matrix.json`, `docs/core/artifacts/t13_full_closure_progress.json`, `docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_FULL_CLOSURE_STATUS.md`
+- Verified with: `audit_topic13_cv_source_reconciliation.py`, `run_topic13_cv_source_reconciliation_wave.py`, `audit_topic13_full_bridge_gate.py`, `audit_topic13_closure_matrix.py`, `render_topic13_closure_progress.py`
+- Result: `PASS_SCOPED_CV_SOURCE_RECONCILIATION_OPEN`; `candidate_count=7`, `direct_or_derived_cv_count=2`, `source_grade_cv_uncertainty_count=0`, `eligible_for_full_topic13_count=0`.
+- Blocker narrowed: the available sources are not all missing; two provide direct/derived c_v comparators, but none combines required c_v uncertainty with Ding material/state equivalence.
+- Still open: `c_v_source_uncertainty_not_closed`, Ding-compatible numeric `C_src`, independent base-Phi/SI/alpha/beta, and physical Kubo/SK/KMS/entropy matching.
+- Next controller: obtain a same-state direct volumetric c_v or Ding-compatible mode-resolved `C_src(T)` package with source-grade uncertainty and explicit material mapping; do not combine unmatched sources.
+- Claim impact: `no change`; no alpha, source row, threshold, equation, or holdout role was promoted.
+- Workflow linkage: `n/a`
+- Notes: The canonical gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE`; `36` subresults remain reported as `CLOSED_FOR_LANE=21`, `CLOSED_AS_NO_GO=5`, `OPEN=10`.

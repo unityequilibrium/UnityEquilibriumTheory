@@ -12,7 +12,8 @@
       "The fail-closed record contract is linked before any package can be accepted.",
       "Numeric candidates are separated from accepted Core-ready evidence.",
       "The field-level candidate compatibility diagnostic is linked without accepting any route.",
-      "Holdout and anti-fitting boundaries are rechecked."
+      "Holdout and anti-fitting boundaries are rechecked.",
+      "Existing graphite heat-capacity and correction sources are reconciled by quantity, uncertainty, and material-state eligibility."
     ],
     "what_remains_open": [
       "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
@@ -142,6 +143,11 @@
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
         "sha256": "08d220bdbaaab26cd6661e95169f71f7b629da15b55ce78a16a78852cd7809a9",
         "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/artifacts/t13_cv_source_reconciliation_audit.json",
+        "sha256": "8b17af6fe1e16fd9f7502848f9adec3055203d2754d8a0d6f9cc64f763170f44",
+        "role": "c_v source reconciliation evidence"
       }
     ],
     "record_contract_artifact": {
@@ -173,7 +179,12 @@
         "public_phonon_route_screening_status": "PASS_SCOPED_PUBLIC_PHONON_ROUTE_SCREENING_NO_CORE_PAYLOAD",
         "public_phonon_core_payload_present": false,
         "candidate_compatibility_status": "PASS_SCOPED_T13_CANDIDATE_COMPATIBILITY_AUDIT_OPEN",
-        "candidate_core_accepted_route_count": 0
+        "candidate_core_accepted_route_count": 0,
+        "cv_source_reconciliation_status": "PASS_SCOPED_CV_SOURCE_RECONCILIATION_OPEN",
+        "direct_or_derived_cv_count": 2,
+        "source_grade_cv_uncertainty_count": 0,
+        "ding_matched_cv_count": 0,
+        "eligible_cv_input_count": 0
       },
       "missing_acceptance_fields": [
         "authorized_numeric_C_src_payload",
@@ -255,7 +266,8 @@
     "no_physical_transport_value_emitted": true,
     "public_phonon_route_is_scoped_without_core_payload": true,
     "candidate_compatibility_audit_is_scoped_without_core_acceptance": true,
-    "gate_blocker_set_is_nonempty": true
+    "gate_blocker_set_is_nonempty": true,
+    "cv_source_reconciliation_is_fail_closed": true
   },
   "open_blockers": [
     "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
@@ -376,6 +388,11 @@
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
       "sha256": "08d220bdbaaab26cd6661e95169f71f7b629da15b55ce78a16a78852cd7809a9",
       "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/artifacts/t13_cv_source_reconciliation_audit.json",
+      "sha256": "8b17af6fe1e16fd9f7502848f9adec3055203d2754d8a0d6f9cc64f763170f44",
+      "role": "c_v source reconciliation evidence"
     }
   ],
   "report": {
@@ -392,11 +409,23 @@
     ],
     "DEPENDENCY_UNLOCKED": "None.",
     "STATUS": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN",
-    "WHAT_CHANGED": "Added a read-only acceptance audit for the three grouped Topic 13 input packages.",
+    "WHAT_CHANGED": "Added a fail-closed reconciliation of seven existing heat-capacity/correction source audits; no source row, threshold, alpha, equation, or holdout role changed.",
     "EQUATION_OR_MAPPING": "No equations or numeric values were changed or emitted.",
-    "VERIFICATION": "All evidence hashes, holdout, fit, candidate-compatibility, and canonical-gate checks passed; candidate metadata remains fail-closed where incomplete.",
-    "CONTROLLING_BLOCKER": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing",
-    "NEXT_ACTION": "Acquire an authorized Ding-compatible source, independent base-Phi/SI calibration, and physical Kubo/SK/KMS record.",
+    "VERIFICATION": "The base input-package audit and the c_v reconciliation both passed; zero candidate has direct/derived c_v plus source-grade uncertainty and Ding-state equivalence.",
+    "CONTROLLING_BLOCKER": "c_v_source_uncertainty_not_closed",
+    "NEXT_ACTION": "Obtain a same-state direct volumetric c_v or Ding-compatible mode-resolved C_src package with source-grade uncertainty and material mapping; do not combine unmatched sources.",
     "CLAIM_BOUNDARY": "Input-readiness audit only; not Full Topic 13 closure or external validation."
+  },
+  "wave_controller": {
+    "wave_type": "source_pass",
+    "artifact": {
+      "path": "docs/core/artifacts/t13_cv_source_reconciliation_audit.json",
+      "sha256": "8b17af6fe1e16fd9f7502848f9adec3055203d2754d8a0d6f9cc64f763170f44",
+      "role": "c_v source reconciliation evidence"
+    },
+    "controlling_blocker": "c_v_source_uncertainty_not_closed",
+    "candidate_count": 7,
+    "eligible_for_full_topic13_count": 0,
+    "claim_impact": "no_change"
   }
 }

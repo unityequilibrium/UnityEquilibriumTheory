@@ -1,0 +1,217 @@
+{
+  "schema_version": "t13-cv-source-reconciliation-v1",
+  "artifact": "t13_cv_source_reconciliation_audit",
+  "generated_at": "2026-08-24",
+  "status": "PASS_SCOPED_CV_SOURCE_RECONCILIATION_OPEN",
+  "major_result": {
+    "major_result_id": "T13_CV_SOURCE_RECONCILIATION",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "candidate heat-capacity source classes are reconciled against the required volumetric c_v input contract",
+      "direct or derived c_v comparators are distinguished from Cp-only and alpha_V/K_T correction sources",
+      "no current candidate satisfies the combined c_v uncertainty, same-state, and Ding-regime acceptance contract"
+    ],
+    "what_remains_open": [
+      "c_v_source_uncertainty_not_closed",
+      "material_regime_mapping_to_TTG_not_closed",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "c_v source reconciliation only; no Ding C_src, alpha_Phi_K, EOS, transport, or Full Topic 13 unlock",
+    "equation_or_mapping": {
+      "required": "C_src(T) = sum_mu c_mu(T); Delta_Tq = Delta_u_ph / C_src(T)",
+      "cp_cv": "c_v^V = rho*c_p - T*alpha_V^2*K_T",
+      "acceptance": "direct_or_derived_c_v AND source_grade_uncertainty AND same_state AND Ding_material_state_match"
+    },
+    "units": {
+      "required_c_v_or_C_src": "J m^-3 K^-1",
+      "temperature": "K",
+      "uncertainty": "source-grade uncertainty for the required c_v/C_src quantity"
+    },
+    "derivation_class": "source provenance reconciliation; no UET derivation and no synthetic replacement",
+    "observable": "availability and acceptance state of thermal capacity inputs",
+    "data_role": "INTERNAL_SOURCE_RECONCILIATION_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_bipm_specific_heat_source_audit.json",
+        "sha256": "6d71952c1ab294d3e391ca257abd49cde10c534f2265612561efacd4e2cc8a4d"
+      },
+      {
+        "path": "docs/core/artifacts/t13_npl_rsa40_graphite_specific_heat_audit.json",
+        "sha256": "55d3dfef10bd44c3e0257fa8abb4212279445fd357310999a60f49b752865831"
+      },
+      {
+        "path": "docs/core/artifacts/t13_iaea_cv_uncertainty_boundary_audit.json",
+        "sha256": "a51c4318a72603c521fd9c9aaa48f759a95054a9da00707427c59cd3abe34b3e"
+      },
+      {
+        "path": "docs/core/artifacts/t13_mp48_independent_graphite_cv_audit.json",
+        "sha256": "56493e6d4883f3f78d24f630f5cdc6718eec350ce264152146979e3bb0ee39a9"
+      },
+      {
+        "path": "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
+        "sha256": "818230a6f8aa68a14a1f642e1e7342d70bfa657f6e05476d3e190d336e77b386"
+      },
+      {
+        "path": "docs/core/artifacts/t13_desorbo_ceylon_graphite_cp_audit.json",
+        "sha256": "33ad2745513d3c2ddfdce02978fbf9f1df7b804529cda33cc0d21ac6b11cd7a8"
+      },
+      {
+        "path": "docs/core/artifacts/t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json",
+        "sha256": "8714a13530c99cba457b86d529928747f26b8536befe782843387f3f2a362add"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_CV_SOURCE_RECONCILIATION_OPEN",
+    "controlling_blocker": "c_v_source_uncertainty_not_closed",
+    "claim_boundary": "This reconciliation closes a provenance boundary only. It does not turn a comparator, Cp row, harmonic Cv row, or correction term into Ding C_src or UET calibration."
+  },
+  "summary": {
+    "candidate_count": 7,
+    "direct_or_derived_cv_count": 2,
+    "source_grade_cv_uncertainty_count": 0,
+    "ding_matched_cv_count": 0,
+    "eligible_for_full_topic13_count": 0,
+    "cp_only_or_correction_only_count": 5
+  },
+  "candidates": [
+    {
+      "candidate_id": "bipm_2006_graphite",
+      "artifact_path": "docs/core/artifacts/t13_bipm_specific_heat_source_audit.json",
+      "artifact_sha256": "6d71952c1ab294d3e391ca257abd49cde10c534f2265612561efacd4e2cc8a4d",
+      "artifact_status": "PASS_SCOPED_BIPM_CP_COMPARATOR_CV_OPEN",
+      "closure_level": "CLOSED_FOR_LANE",
+      "quantity_class": "volumetric_Cp_with_source_uncertainty",
+      "direct_or_derived_cv": false,
+      "source_grade_uncertainty_for_required_cv": false,
+      "ding_material_state_match": false,
+      "same_state": false,
+      "eligible_for_full_topic13_cv_input": false,
+      "holdout_clean": true,
+      "reason": "BIPM closes a volumetric Cp comparator with uncertainty, but does not supply Cv or Ding TTG state equivalence.",
+      "controlling_blocker": "c_v_source_uncertainty_not_closed"
+    },
+    {
+      "candidate_id": "npl_rsa40_ig11",
+      "artifact_path": "docs/core/artifacts/t13_npl_rsa40_graphite_specific_heat_audit.json",
+      "artifact_sha256": "55d3dfef10bd44c3e0257fa8abb4212279445fd357310999a60f49b752865831",
+      "artifact_status": "PASS_SCOPED_NPL_CP_UNCERTAINTY_COMPARATOR_CV_OPEN",
+      "closure_level": "CLOSED_FOR_LANE",
+      "quantity_class": "mass_specific_Cp_with_source_uncertainty",
+      "direct_or_derived_cv": false,
+      "source_grade_uncertainty_for_required_cv": false,
+      "ding_material_state_match": false,
+      "same_state": false,
+      "eligible_for_full_topic13_cv_input": false,
+      "holdout_clean": true,
+      "reason": "NPL closes a mass-specific Cp comparator; density uncertainty, Cv conversion, and Ding state mapping remain open.",
+      "controlling_blocker": "c_v_source_uncertainty_not_closed"
+    },
+    {
+      "candidate_id": "iaea_manufactured_graphite",
+      "artifact_path": "docs/core/artifacts/t13_iaea_cv_uncertainty_boundary_audit.json",
+      "artifact_sha256": "a51c4318a72603c521fd9c9aaa48f759a95054a9da00707427c59cd3abe34b3e",
+      "artifact_status": "PASS_SCOPED_IAEA_CV_UNCERTAINTY_BOUNDARY_NO_GO",
+      "closure_level": "CLOSED_FOR_LANE",
+      "quantity_class": "table_derived_mass_specific_cv_without_standard_uncertainty",
+      "direct_or_derived_cv": true,
+      "source_grade_uncertainty_for_required_cv": false,
+      "ding_material_state_match": false,
+      "same_state": false,
+      "eligible_for_full_topic13_cv_input": false,
+      "holdout_clean": true,
+      "reason": "IAEA supplies a table-derived manufactured-graphite Cv comparator, but not a source-grade Cv uncertainty or Ding material match.",
+      "controlling_blocker": "c_v_source_uncertainty_not_closed"
+    },
+    {
+      "candidate_id": "mp48_harmonic_graphite",
+      "artifact_path": "docs/core/artifacts/t13_mp48_independent_graphite_cv_audit.json",
+      "artifact_sha256": "56493e6d4883f3f78d24f630f5cdc6718eec350ce264152146979e3bb0ee39a9",
+      "artifact_status": "PASS_INDEPENDENT_NUMERIC_CV_WITH_EPISTEMIC_ENVELOPE",
+      "closure_level": "CLOSED_FOR_LANE",
+      "quantity_class": "harmonic_volumetric_cv_with_nonstatistical_envelope",
+      "direct_or_derived_cv": true,
+      "source_grade_uncertainty_for_required_cv": false,
+      "ding_material_state_match": false,
+      "same_state": false,
+      "eligible_for_full_topic13_cv_input": false,
+      "holdout_clean": true,
+      "reason": "MP48 supplies auditable harmonic volumetric Cv rows, but its uncertainty is explicitly non-statistical and its ideal crystal is not Ding's TTG state.",
+      "controlling_blocker": "c_v_source_uncertainty_not_closed"
+    },
+    {
+      "candidate_id": "lowitzer_graphite_pvt",
+      "artifact_path": "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
+      "artifact_sha256": "818230a6f8aa68a14a1f642e1e7342d70bfa657f6e05476d3e190d336e77b386",
+      "artifact_status": "PASS_SCOPED_SOURCE_LOCKED_LOWITZER_ALPHA_V_K_T_PAIR",
+      "closure_level": "CLOSED_FOR_LANE",
+      "quantity_class": "alphaV_KT_correction_pair_without_same_state_cv",
+      "direct_or_derived_cv": false,
+      "source_grade_uncertainty_for_required_cv": false,
+      "ding_material_state_match": false,
+      "same_state": false,
+      "eligible_for_full_topic13_cv_input": false,
+      "holdout_clean": true,
+      "reason": "Lowitzer closes an alpha_V/K_T correction pair, but supplies no same-state Cp/Cv and uses a different graphite morphology.",
+      "controlling_blocker": "c_v_source_uncertainty_not_closed"
+    },
+    {
+      "candidate_id": "desorbo_ceylon_graphite",
+      "artifact_path": "docs/core/artifacts/t13_desorbo_ceylon_graphite_cp_audit.json",
+      "artifact_sha256": "33ad2745513d3c2ddfdce02978fbf9f1df7b804529cda33cc0d21ac6b11cd7a8",
+      "artifact_status": "PASS_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_LOCKED_COMPARATOR",
+      "closure_level": "CLOSED_FOR_LANE",
+      "quantity_class": "natural_graphite_molar_Cp_without_standard_uncertainty",
+      "direct_or_derived_cv": false,
+      "source_grade_uncertainty_for_required_cv": false,
+      "ding_material_state_match": false,
+      "same_state": false,
+      "eligible_for_full_topic13_cv_input": false,
+      "holdout_clean": true,
+      "reason": "DeSorbo provides a Ceylon natural-graphite Cp row and an accuracy boundary, not a standard Cv uncertainty or Ding mapping.",
+      "controlling_blocker": "c_v_source_uncertainty_not_closed"
+    },
+    {
+      "candidate_id": "farooqui_ig210",
+      "artifact_path": "docs/core/artifacts/t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json",
+      "artifact_sha256": "8714a13530c99cba457b86d529928747f26b8536befe782843387f3f2a362add",
+      "artifact_status": "PASS_SCOPED_FAROOQUI_IG210_VOLUMETRIC_CP_UNCERTAINTY",
+      "closure_level": "CLOSED_FOR_LANE",
+      "quantity_class": "volumetric_Cp_with_expanded_uncertainty",
+      "direct_or_derived_cv": false,
+      "source_grade_uncertainty_for_required_cv": false,
+      "ding_material_state_match": false,
+      "same_state": false,
+      "eligible_for_full_topic13_cv_input": false,
+      "holdout_clean": true,
+      "reason": "Farooqui closes an IG-210 volumetric Cp uncertainty comparator, but same-state K_T, Cv, and Ding mapping are absent.",
+      "controlling_blocker": "c_v_source_uncertainty_not_closed"
+    }
+  ],
+  "checks": {
+    "all_candidate_artifacts_present": true,
+    "all_candidate_holdout_policies_clean": true,
+    "no_candidate_is_silently_promoted": true,
+    "direct_or_derived_cv_count_is_reported": true,
+    "source_grade_cv_count_is_reported": true,
+    "ding_matched_cv_count_is_reported": true
+  },
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "xie_2026_source_data_consumed": false,
+    "target_curve_used": false,
+    "alpha_Phi_K_fit_used": false
+  },
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": "The available c_p/c_v/correction sources are reconciled; direct c_v comparators are visible but none is accepted for the Ding TTG input contract.",
+    "WHAT_REMAINS_OPEN": "c_v_source_uncertainty_not_closed; material_regime_mapping_to_TTG_not_closed; Ding numeric C_src remains missing.",
+    "DEPENDENCY_UNLOCKED": "None beyond source-reconciliation visibility.",
+    "STATUS": "PASS_SCOPED_CV_SOURCE_RECONCILIATION_OPEN",
+    "WHAT_CHANGED": "Added a fail-closed reconciliation of seven existing heat-capacity/correction source audits; no source row, threshold, alpha, equation, or holdout role changed.",
+    "EQUATION_OR_MAPPING": "C_src(T)=sum_mu c_mu(T); c_v^V=rho*c_p-T*alpha_V^2*K_T.",
+    "VERIFICATION": "All candidate artifacts are present, hashes are recorded, holdout policies are clean, and zero candidate is silently promoted.",
+    "CONTROLLING_BLOCKER": "c_v_source_uncertainty_not_closed",
+    "NEXT_ACTION": "Obtain a same-state direct volumetric c_v or Ding-compatible mode-resolved C_src package with source-grade uncertainty and material mapping; do not combine unmatched sources as if they were one specimen.",
+    "CLAIM_BOUNDARY": "This is a source reconciliation lane, not Full Topic 13 closure or alpha_Phi_K calibration."
+  }
+}
