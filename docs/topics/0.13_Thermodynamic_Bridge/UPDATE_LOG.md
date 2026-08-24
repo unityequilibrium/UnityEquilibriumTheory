@@ -4372,3 +4372,46 @@ EVIDENCE_PATHS:
 
 EVIDENCE_HASH:
 - `f1d988538d3d758c9f69e7aeee4a74d12c1ee59e53a9be2593f9ffed41182b36`
+
+### 2026-08-24 - Ding PBTE author-request draft prepared
+
+MAJOR_RESULT_CLOSURE:
+- `T13_DING_PBTE_AUTHOR_REQUEST_PACKAGE` remains `CLOSED_FOR_LANE`; no source payload has been received.
+
+WHAT_IS_ACTUALLY_CLOSED:
+- A human-reviewable, bounded request draft now mirrors the existing machine-readable request manifest.
+- The draft asks for material state, force-constant/PBTE inputs, mode-resolved `c_mu(T)`, aggregate `C_src(T)`, uncertainty/convergence, response outputs, hashes, and permission terms.
+
+WHAT_REMAINS_OPEN:
+- `accepted_numeric_csrc`, `material_and_uncertainty_closure`, and every downstream physical SI bridge result remain open.
+
+DEPENDENCY_UNLOCKED:
+- None. The draft is not evidence and has not been sent.
+
+STATUS:
+- `REQUEST_PACKAGE_READY_NOT_SENT`.
+
+WHAT_CHANGED:
+- Added `docs/topics/0.13_Thermodynamic_Bridge/DING_PBTE_AUTHOR_REQUEST_DRAFT.md` for project-authorized external communication. No email was sent and no source data were imported.
+
+EQUATION_OR_MAPPING:
+- The request preserves `C_src(T)=sum_mu c_mu(T)` and keeps `Delta_Tq=alpha_Phi_K*Delta_Phi` uncalibrated.
+
+VERIFICATION:
+- Draft fields match the existing request manifest and acceptance contract; Xie 2026, target fitting, and alpha fitting remain excluded.
+
+CONTROLLING_BLOCKER:
+- `author_data_or_independent_reproduction_payload_not_received`.
+
+NEXT_ACTION:
+- Obtain project authorization, send the draft through an approved channel, and audit any response before changing the manifest response state.
+
+CLAIM_BOUNDARY:
+- Request preparation only; not source receipt, numeric C_src, alpha calibration, external validation, or Full Topic 13 closure.
+
+EVIDENCE_PATHS:
+- `docs/topics/0.13_Thermodynamic_Bridge/DING_PBTE_AUTHOR_REQUEST_DRAFT.md`
+- `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_pbte_author_request_manifest.json`
+
+EVIDENCE_HASH:
+- `1d91069ef17ecbfb092abfbf9bf2364b36716c1f85087320b671e7ffbdc49068`
