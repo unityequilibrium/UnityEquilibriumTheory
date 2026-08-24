@@ -4415,3 +4415,49 @@ EVIDENCE_PATHS:
 
 EVIDENCE_HASH:
 - `1d91069ef17ecbfb092abfbf9bf2364b36716c1f85087320b671e7ffbdc49068`
+
+### 2026-08-24 - Topic 13 base-Phi registry completeness audit
+
+MAJOR_RESULT_CLOSURE:
+- `T13_BASE_PHI_REGISTRY_COMPLETENESS_AUDIT` is `CLOSED_FOR_LANE`; the physical base-Phi SI anchor remains open.
+
+WHAT_IS_ACTUALLY_CLOSED:
+- The audit checked the canonical thermal lane, SI conversion module, named energy branch, alpha candidate audit, calibration requirement, and public-source boundary.
+- These inputs consistently declare normalized Phi, an open alpha_Phi_K scale, and external E_ref/Phi_scale/e0 inputs; no hidden SI anchor was found.
+
+WHAT_REMAINS_OPEN:
+- `base_phi_si_anchor`, `independent_alpha_record`, `normalized_beta_si_map`, and their downstream physical EOS/heat-flux dependencies remain open.
+
+DEPENDENCY_UNLOCKED:
+- None. This is a registry completeness result only; Full Topic 13, Core, Gravity, and constitutive transport remain locked.
+
+STATUS:
+- `PASS_SCOPED_NO_HIDDEN_SI_ANCHOR`; `numeric_alpha_emitted=false`; `holdout_used=false`.
+
+WHAT_CHANGED:
+- Added `docs/core/artifacts/t13_base_phi_registry_completeness_audit.json` and its reproducible audit script. No equation, threshold, source role, or claim status was changed.
+
+EQUATION_OR_MAPPING:
+- `y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)`.
+- `Delta_Tq = alpha_Phi_K * Delta_Phi`.
+- `alpha_Phi_K = (E_ref/k_B) * alpha_Phi_theta` only after external E_ref and Phi normalization are supplied.
+
+VERIFICATION:
+- All `12` registry/provenance checks passed across `7` evidence inputs.
+- The audit emitted no numeric alpha, e0, or SI Phi map and did not access Xie 2026 or fit a target curve.
+
+CONTROLLING_BLOCKER:
+- `dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing`.
+
+NEXT_ACTION:
+- Obtain a declared dimensionful action/free-energy anchor or an independent paired base-Phi/SI response record; then rerun the input-package audit and full gate after the source hash changes.
+
+CLAIM_BOUNDARY:
+- This is a scoped negative registry audit. It rules out a hidden anchor in the audited canonical inputs, not a future derivation or independent calibration, and does not close Full Topic 13.
+
+EVIDENCE_PATHS:
+- `docs/core/artifacts/t13_base_phi_registry_completeness_audit.json`
+- `docs/scripts/audit/audit_topic13_base_phi_registry_completeness.py`
+
+EVIDENCE_HASH:
+- `10c9bc5bda05b65948ca54e8ef55fca6159e6d6649feea356cb9a231712a575f`
