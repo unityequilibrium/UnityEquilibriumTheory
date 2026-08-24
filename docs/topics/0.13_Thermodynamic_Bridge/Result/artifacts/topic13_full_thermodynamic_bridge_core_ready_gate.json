@@ -1,7 +1,7 @@
 {
   "schema_version": "topic13-full-thermodynamic-bridge-core-ready-v1",
   "artifact": "topic13_full_thermodynamic_bridge_core_ready_gate",
-  "generated_at": "2026-08-24",
+  "generated_at": "2026-08-25",
   "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
   "claim_promotion": false,
   "major_result": {

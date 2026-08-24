@@ -39,6 +39,16 @@ CANDIDATES = [
         "reason": "NPL closes a mass-specific Cp comparator; density uncertainty, Cv conversion, and Ding state mapping remain open.",
     },
     {
+        "candidate_id": "gatech_gen3csp_graphite_cp_95ci",
+        "artifact_path": "docs/core/artifacts/t13_gatech_graphite_source_audit.json",
+        "quantity_class": "mass_specific_Cp_with_95pct_confidence_interval_without_density_uncertainty",
+        "direct_or_derived_cv": False,
+        "source_grade_uncertainty_for_required_cv": False,
+        "ding_material_state_match": False,
+        "same_state": False,
+        "reason": "Georgia Tech Gen3 CSP source-locks a graphite mass-specific Cp row with a 95% confidence interval, but supplies no density uncertainty, volumetric Cv conversion, or Ding TTG material-state match.",
+    },
+    {
         "candidate_id": "iaea_gr280_same_state_cp",
         "artifact_path": "docs/core/artifacts/t13_iaea_gr280_same_state_cp_source_audit.json",
         "quantity_class": "same_state_mass_specific_Cp_and_density_without_density_standard_uncertainty",

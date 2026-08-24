@@ -11,7 +11,7 @@ ARTIFACT = ROOT / "docs/core/artifacts/t13_cv_source_reconciliation_audit.json"
 def test_topic13_cv_reconciliation_is_fail_closed() -> None:
     artifact = json.loads(ARTIFACT.read_text(encoding="utf-8-sig"))
     assert artifact["status"] == "PASS_SCOPED_CV_SOURCE_RECONCILIATION_OPEN"
-    assert artifact["summary"]["candidate_count"] == 8
+    assert artifact["summary"]["candidate_count"] == 9
     assert artifact["summary"]["direct_or_derived_cv_count"] == 2
     assert artifact["summary"]["source_grade_cv_uncertainty_count"] == 0
     assert artifact["summary"]["ding_matched_cv_count"] == 0

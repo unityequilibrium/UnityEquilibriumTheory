@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-closure-input-package-audit-v1",
   "artifact": "t13_closure_input_package_audit",
-  "generated_at": "2026-08-24",
+  "generated_at": "2026-08-25",
   "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN",
   "major_result": {
     "major_result_id": "T13_CLOSURE_INPUT_PACKAGE_AUDIT",
@@ -144,7 +144,7 @@
       },
       {
         "path": "docs/core/artifacts/t13_cv_source_reconciliation_audit.json",
-        "sha256": "9524bb279af178298d2f7799c1b3747f6e7f508cc86dafbe9ac8ca2ee780b499",
+        "sha256": "8db38724c1d52ce95d182856854b53f207ba6774743671db9120f08c474774e1",
         "role": "input-package acceptance evidence"
       },
       {
@@ -164,7 +164,7 @@
       },
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-        "sha256": "08d220bdbaaab26cd6661e95169f71f7b629da15b55ce78a16a78852cd7809a9",
+        "sha256": "eea935d25ae9ace5fd93c3ff97a7b8f343e49692d3029045e52b82b8178b1385",
         "role": "input-package acceptance evidence"
       }
     ],
@@ -426,7 +426,7 @@
     },
     {
       "path": "docs/core/artifacts/t13_cv_source_reconciliation_audit.json",
-      "sha256": "9524bb279af178298d2f7799c1b3747f6e7f508cc86dafbe9ac8ca2ee780b499",
+      "sha256": "8db38724c1d52ce95d182856854b53f207ba6774743671db9120f08c474774e1",
       "role": "input-package acceptance evidence"
     },
     {
@@ -446,7 +446,7 @@
     },
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-      "sha256": "08d220bdbaaab26cd6661e95169f71f7b629da15b55ce78a16a78852cd7809a9",
+      "sha256": "eea935d25ae9ace5fd93c3ff97a7b8f343e49692d3029045e52b82b8178b1385",
       "role": "input-package acceptance evidence"
     }
   ],
