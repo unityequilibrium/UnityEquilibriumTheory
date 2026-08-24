@@ -8516,7 +8516,7 @@
         "data_role": "COMPARISON_ONLY_NOT_CALIBRATION",
         "audit": {
           "path": "docs/core/artifacts/t13_desorbo_ceylon_graphite_cp_audit.json",
-          "sha256": "7ef80f4d26f0df2d7762ed64183bbe4c9c324cc47ce99bbedbdca6bb44dcfbdc",
+          "sha256": "33ad2745513d3c2ddfdce02978fbf9f1df7b804529cda33cc0d21ac6b11cd7a8",
           "summary": {
             "status": "PASS_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_LOCKED_COMPARATOR",
             "major_result_id": "T13_DESORBO_1955_CEYLON_GRAPHITE_CP_COMPARATOR",
@@ -10355,7 +10355,7 @@
         "data_role": "TRAINING/COMPARISON",
         "audit": {
           "path": "docs/core/artifacts/t13_oxford_tgs_comparator_provenance_audit.json",
-          "sha256": "09444962ecd67f59240843907ed09211f7802b9655f298ac206aafd646a2aa2c",
+          "sha256": "2b88bba6d7d2ff6e9f0aefaaef12c5c488f81e11cc3b8c20fc4a0f5e1e33acad",
           "summary": {
             "status": "PASS_OXFORD_TGS_PROVENANCE_ARCHIVE_LOCKED_EXTRACTION_PENDING",
             "major_result_id": "T13_OXFORD_TGS_COMPARATOR_PROVENANCE",
@@ -10452,7 +10452,7 @@
         "data_role": "TRAINING/COMPARISON",
         "audit": {
           "path": "docs/core/artifacts/t13_oxford_tgs_numeric_rows_audit.json",
-          "sha256": "0f176973797467f5265530b3fa141dc3bb5a392cfc88c72caa7a94d7fc25ad90",
+          "sha256": "a3250b4e40479ceb8bbbfec29de0c4e0ed6e7068355ab0507a30d5099333d9cc",
           "summary": {
             "status": "PASS_OXFORD_TGS_NUMERIC_ROWS_SOURCE_LOCKED_COMPARATOR",
             "major_result_id": "T13_OXFORD_TGS_NUMERIC_ROWS_COMPARATOR",
@@ -80887,7 +80887,7 @@
     },
     {
       "path": "docs/core/artifacts/t13_oxford_tgs_numeric_rows_audit.json",
-      "sha256": "0f176973797467f5265530b3fa141dc3bb5a392cfc88c72caa7a94d7fc25ad90",
+      "sha256": "a3250b4e40479ceb8bbbfec29de0c4e0ed6e7068355ab0507a30d5099333d9cc",
       "summary": {
         "status": "PASS_OXFORD_TGS_NUMERIC_ROWS_SOURCE_LOCKED_COMPARATOR",
         "closure_level": "CLOSED_FOR_LANE",
@@ -81133,7 +81133,7 @@
     },
     {
       "path": "docs/core/artifacts/t13_desorbo_ceylon_graphite_cp_audit.json",
-      "sha256": "7ef80f4d26f0df2d7762ed64183bbe4c9c324cc47ce99bbedbdca6bb44dcfbdc",
+      "sha256": "33ad2745513d3c2ddfdce02978fbf9f1df7b804529cda33cc0d21ac6b11cd7a8",
       "summary": {
         "status": "PASS_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_LOCKED_COMPARATOR",
         "closure_level": "CLOSED_FOR_LANE",

@@ -12,6 +12,85 @@ from typing import Any
 TOPIC_ID = "0.13_Thermodynamic_Bridge"
 
 
+# Full-topic closure is controlled by three evidence packages. Existing lane
+# artifacts can close the formal pieces, but these packages carry the minimum
+# non-derivable inputs needed for a Core-ready physical bridge.
+CLOSURE_INPUT_PACKAGES: tuple[dict[str, Any], ...] = (
+    {
+        "package_id": "T13_INPUT_DING_TTG_SOURCE",
+        "label": "Ding-compatible TTG source package",
+        "status": "OPEN_EXTERNAL_INPUT",
+        "purpose": "Accept the numeric source and same-regime thermodynamic uncertainty needed to connect PBTE energy to Delta_Tq.",
+        "minimum_records": [
+            "mode-resolved C_src(T) rows in J m^-3 K^-1 with temperature/state identity",
+            "material morphology, isotope/defect state, TTG response contract, and PBTE convergence record",
+            "source locator, permission, preprocessing, row identity, uncertainty, and SHA-256",
+            "same-grade alpha_V and K_T or a justified c_v conversion with propagated uncertainty",
+        ],
+        "unlocks_subresults": [
+            "accepted_numeric_csrc",
+            "material_and_uncertainty_closure",
+            "physical_source_backed_eos",
+            "physical_heat_flux_entropy_map",
+        ],
+        "controlling_blockers": [
+            "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+            "same_grade_alpha_V_and_K_T_missing",
+            "material_regime_mapping_to_TTG_not_closed",
+            "c_v_source_uncertainty_not_closed",
+        ],
+        "claim_boundary": "A comparator or figure-derived normalized curve is not accepted as the Ding numeric source without material/state and uncertainty equivalence.",
+    },
+    {
+        "package_id": "T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
+        "label": "Base-Phi SI anchor and independent alpha/beta package",
+        "status": "OPEN_EXTERNAL_OR_DERIVATION_INPUT",
+        "purpose": "Fix the otherwise non-identifiable scale between normalized Phi and a dimensional energy or temperature response.",
+        "minimum_records": [
+            "dimensionful action/free-energy origin with coefficient provenance, or an independent paired base-Phi/SI response record",
+            "Phi amplitude, reference state, field normalization, and e0 in declared units",
+            "paired Delta_Phi with Delta_Tq or Delta_u_ph, uncertainty, locator, preprocessing, row identity, and hash",
+            "beta derivation separate from Landauer and from target/holdout tuning, with limiting-case and uncertainty checks",
+        ],
+        "unlocks_subresults": [
+            "base_phi_si_anchor",
+            "independent_alpha_record",
+            "normalized_beta_si_map",
+            "physical_source_backed_eos",
+            "physical_heat_flux_entropy_map",
+        ],
+        "controlling_blockers": [
+            "dimensional_phi_to_thermal_observable_map_missing",
+            "alpha_Phi_K_independent_calibration_missing",
+            "normalized_beta_and_SI_scale_correspondence_missing",
+        ],
+        "claim_boundary": "Normalized Phi shapes, Phi_E comparators, Landauer, and Xie 2026 cannot supply this scale by themselves.",
+    },
+    {
+        "package_id": "T13_INPUT_PHYSICAL_TRANSPORT_MATCH",
+        "label": "Physical Kubo and SK/KMS transport package",
+        "status": "OPEN_MICROSCOPIC_OR_EXTERNAL_INPUT",
+        "purpose": "Connect the declared formal response lanes to one state-matched physical transport coefficient and its entropy/heat-flux consequences.",
+        "minimum_records": [
+            "coefficient_name, value, units, frame, temperature, chemical potential, and space-response state",
+            "retarded-correlator formula identifier, source locator, source hash, evidence status, and uncertainty",
+            "finite-temperature normal/condensed matching, KMS/FDT residuals, and no synthetic substitute",
+            "heat-flux and entropy-production propagation on the same state, including uncertainty",
+        ],
+        "unlocks_subresults": [
+            "physical_uet_kubo_record",
+            "physical_sk_transport_match",
+            "physical_entropy_production_mapping",
+            "physical_heat_flux_entropy_map",
+        ],
+        "controlling_blockers": [
+            "physical_Kubo_coefficient_record_missing",
+        ],
+        "claim_boundary": "The existing natural-unit Kubo and formal SK/KMS lanes remain lane evidence until a state-matched physical record passes this contract.",
+    },
+)
+
+
 MAJOR_RESULT_CONTRACTS: dict[str, dict[str, Any]] = {
     "causal_structure": {
         "major_result_id": "T13_CAUSAL_THERMAL_BRANCH_CLOSURE",
@@ -75,7 +154,7 @@ MAJOR_RESULT_CONTRACTS: dict[str, dict[str, Any]] = {
         "required_subresults": [
             {"subresult_id": "normalized_ttg_measurement_operator", "label": "Normalized TTG measurement operator", "current_status": "CLOSED_FOR_LANE", "acceptance": "The TTG and UET normalized curves use the declared ratio operators with no SI claim."},
             {"subresult_id": "phi_e_named_dimensional_comparator", "label": "Named Phi_E dimensional comparator", "evidence_result_ids": ["T13_MP48_PHI_E_DIMENSIONAL_ANCHOR_COMPARATOR", "T13_PHI_E_REFERENCE_NORMALIZATION", "T13_PHI_E_TTG_BRIDGE_CONDITIONAL"], "required_closure_level": "CLOSED_FOR_LANE", "acceptance": "Phi_E is kept as a separate conditional lane and is not relabeled as base Phi."},
-            {"subresult_id": "base_phi_si_anchor", "label": "Base-Phi SI energy/temperature anchor", "current_status": "OPEN", "acceptance": "A declared dimensionful action/free-energy origin or an independent paired base-Phi/SI response record is accepted."},
+            {"subresult_id": "base_phi_si_anchor", "label": "Base-Phi SI energy/temperature anchor", "current_status": "OPEN", "required_closure_level": "CLOSED_FOR_CORE", "acceptance": "A declared dimensionful action/free-energy origin or an independent paired base-Phi/SI response record is accepted."},
         ],
     },
     "independent_alpha_Phi_K": {
@@ -102,7 +181,7 @@ MAJOR_RESULT_CONTRACTS: dict[str, dict[str, Any]] = {
         "required_subresults": [
             {"subresult_id": "alpha_candidate_search_boundary", "label": "Independent alpha candidate search boundary", "evidence_result_ids": ["T13_ALPHA_PHI_K_PAIRED_RECORD_SEARCH"], "required_closure_level": "CLOSED_FOR_LANE", "acceptance": "All screened candidates are recorded and zero eligible paired records is reported without a substitute value."},
             {"subresult_id": "normalized_alpha_scale_no_go", "label": "Normalized-alpha scale identifiability no-go", "evidence_result_ids": ["T13_ALPHA_PHI_K_NORMALIZED_SCALE_NO_GO"], "required_closure_level": "CLOSED_AS_NO_GO", "acceptance": "The transformation Delta_Phi -> s Delta_Phi and alpha -> alpha/s is recorded as the reason normalized data cannot identify alpha."},
-            {"subresult_id": "independent_alpha_record", "label": "Independent numeric alpha record with uncertainty", "current_status": "OPEN", "acceptance": "One eligible non-holdout paired record or a derivation with an independently fixed SI scale is accepted."},
+            {"subresult_id": "independent_alpha_record", "label": "Independent numeric alpha record with uncertainty", "current_status": "OPEN", "required_closure_level": "CLOSED_FOR_CORE", "acceptance": "One eligible non-holdout paired record or a derivation with an independently fixed SI scale is accepted."},
         ],
     },
     "beta_and_si_correspondence": {
@@ -124,7 +203,7 @@ MAJOR_RESULT_CONTRACTS: dict[str, dict[str, Any]] = {
         "required_subresults": [
             {"subresult_id": "natural_beta_action_lane", "label": "Action-origin natural beta/stiffness lane", "evidence_result_ids": ["T13_UET_O2_ACTION_THERMAL_STIFFNESS_BETA_LANE", "T13_THERMAL_RESPONSE_BETA_CONTRACT"], "required_closure_level": "CLOSED_FOR_LANE", "acceptance": "The action-origin coefficient and finite-temperature response functional are recorded with natural-unit limits."},
             {"subresult_id": "beta_noncircularity_no_go", "label": "Beta/Landauer non-circularity boundary", "evidence_result_ids": ["T13_BETA_SYMBOL_SEPARATION_NONCIRCULARITY_NO_GO", "T13_BETA_ACTION_NORMALIZED_CORRESPONDENCE_NO_GO"], "required_closure_level": "CLOSED_AS_NO_GO", "acceptance": "No Landauer identity or target response is used to infer beta_UET or beta_T13."},
-            {"subresult_id": "normalized_beta_si_map", "label": "Normalized beta to SI correspondence", "current_status": "OPEN", "acceptance": "The base-Phi field normalization and dimensionful free-energy scale are independently fixed and propagated."},
+            {"subresult_id": "normalized_beta_si_map", "label": "Normalized beta to SI correspondence", "current_status": "OPEN", "required_closure_level": "CLOSED_FOR_CORE", "acceptance": "The base-Phi field normalization and dimensionful free-energy scale are independently fixed and propagated."},
         ],
     },
     "charge_density_eos": {
@@ -146,7 +225,7 @@ MAJOR_RESULT_CONTRACTS: dict[str, dict[str, Any]] = {
             {"subresult_id": "normalized_charge_eos", "label": "Normalized charge-density EOS", "evidence_result_ids": ["T13_COLLECTIVE_RESPONSE_EOS_STABILITY_CONTRACT"], "required_closure_level": "CLOSED_FOR_LANE", "acceptance": "The candidate EOS and independent-variable contract are machine-checked."},
             {"subresult_id": "eos_stability_reciprocity", "label": "EOS stability and reciprocity", "evidence_result_ids": ["T13_UET_O2_NORMAL_THERMODYNAMIC_CONSISTENCY", "T13_UET_O2_THERMAL_STABILITY_BOUNDARY"], "required_closure_level": "CLOSED_FOR_LANE", "acceptance": "Positivity, Maxwell reciprocity, and declared domain checks pass on the chosen branch."},
             {"subresult_id": "finite_temperature_normal_component", "label": "Finite-temperature normal component", "evidence_result_ids": ["T13_UET_O2_FINITE_T_QUASIPARTICLE_EOS_LANE", "T13_UET_O2_THERMODYNAMIC_NORMAL_COMPONENT_LANE"], "required_closure_level": "CLOSED_FOR_LANE", "acceptance": "The normal component and its thermodynamic derivatives are linked to the same declared state."},
-            {"subresult_id": "physical_source_backed_eos", "label": "Physical source-backed EOS coefficients", "current_status": "OPEN", "acceptance": "Finite-temperature coefficients, material regime, c_v uncertainty, and SI Phi normalization are accepted together."},
+            {"subresult_id": "physical_source_backed_eos", "label": "Physical source-backed EOS coefficients", "current_status": "OPEN", "required_closure_level": "CLOSED_FOR_CORE", "acceptance": "Finite-temperature coefficients, material regime, c_v uncertainty, and SI Phi normalization are accepted together."},
         ],
     },
     "covariant_thermal_transport": {
@@ -168,7 +247,7 @@ MAJOR_RESULT_CONTRACTS: dict[str, dict[str, Any]] = {
             {"subresult_id": "formal_covariant_transport_interface", "label": "Formal covariant transport interface", "evidence_result_ids": ["T13_COVARIANT_TRANSPORT_IMPLEMENTATION_BOUNDARY"], "required_closure_level": "CLOSED_FOR_LANE", "acceptance": "The tensor, frame, and coefficient provenance contract is explicit without a default physical value."},
             {"subresult_id": "microscopic_natural_kubo_lane", "label": "Matched microscopic natural-unit Kubo lane", "evidence_result_ids": ["T13_UET_O2_MICROSCOPIC_FINITE_CUTOFF_KUBO_MATCH", "T13_UET_O2_CONDENSED_RELATIVE_FLOW_KUBO_ADMISSION_LANE"], "required_closure_level": "CLOSED_FOR_LANE", "acceptance": "The selected natural-unit correlator and response match are state-matched and finite-cutoff bounded."},
             {"subresult_id": "standard_fluid_comparator_boundary", "label": "Standard-fluid comparator boundary", "evidence_result_ids": ["T13_GATECH_STANDARD_TRANSPORT_COMPARATOR"], "required_closure_level": "CLOSED_FOR_LANE", "acceptance": "Fourier/Cattaneo behavior is reported only as an internal simplified benchmark."},
-            {"subresult_id": "physical_uet_kubo_record", "label": "Physical UET Kubo coefficient record", "current_status": "OPEN", "acceptance": "One source-backed or fully microscopic state-matched coefficient with uncertainty is admitted."},
+            {"subresult_id": "physical_uet_kubo_record", "label": "Physical UET Kubo coefficient record", "current_status": "OPEN", "required_closure_level": "CLOSED_FOR_CORE", "acceptance": "One source-backed or fully microscopic state-matched coefficient with uncertainty is admitted."},
         ],
     },
     "sk_kms_matching": {
@@ -189,7 +268,7 @@ MAJOR_RESULT_CONTRACTS: dict[str, dict[str, Any]] = {
         "required_subresults": [
             {"subresult_id": "formal_sk_kms_entropy_interface", "label": "Formal SK/KMS/FDT interface", "evidence_result_ids": ["T13_SK_KMS_ENTROPY_INTERFACE_CONTRACT", "T13_UET_O2_OPEN_SYSTEM_SK_KMS_ENTROPY_LANE"], "required_closure_level": "CLOSED_FOR_LANE", "acceptance": "The formal contour, KMS/FDT, retardedness, and positivity interfaces are machine-checked."},
             {"subresult_id": "interacting_finite_temperature_sk_match", "label": "Interacting finite-temperature SK/KMS match", "evidence_result_ids": ["T13_UET_O2_INTERACTING_SK_KMS_ACTION_INTERFACE", "T13_UET_O2_FINITE_T_DECLARED_FULL_SUNSET_SK_KMS_LANE"], "required_closure_level": "CLOSED_FOR_LANE", "acceptance": "The declared interaction channels have state-matched retarded, KMS, and FDT witnesses."},
-            {"subresult_id": "physical_sk_transport_match", "label": "Physical SK/KMS-to-transport match", "current_status": "OPEN", "acceptance": "The microscopic response is connected to a physical coefficient and uncertainty without a synthetic substitute."},
+            {"subresult_id": "physical_sk_transport_match", "label": "Physical SK/KMS-to-transport match", "current_status": "OPEN", "required_closure_level": "CLOSED_FOR_CORE", "acceptance": "The microscopic response is connected to a physical coefficient and uncertainty without a synthetic substitute."},
         ],
     },
     "entropy_current_and_dissipative_balance": {
@@ -210,7 +289,7 @@ MAJOR_RESULT_CONTRACTS: dict[str, dict[str, Any]] = {
         "required_subresults": [
             {"subresult_id": "formal_entropy_current_positivity", "label": "Formal entropy-current positivity", "evidence_result_ids": ["T13_UET_O2_FINITE_CHANNEL_ENTROPY_BALANCE_LANE"], "required_closure_level": "CLOSED_FOR_LANE", "acceptance": "The entropy current, force basis, and nonnegative production witness are explicit."},
             {"subresult_id": "covariant_dissipative_balance", "label": "Covariant dissipative balance", "evidence_result_ids": ["T13_UET_O2_COVARIANT_ENTROPY_HEAT_FLUX_BALANCE_LANE", "T13_TRANSPORT_KMS_ENTROPY_STATUS_BOUNDARY"], "required_closure_level": "CLOSED_FOR_LANE", "acceptance": "Heat exchange, entropy production, and conservation constraints close on the declared formal branch."},
-            {"subresult_id": "physical_entropy_production_mapping", "label": "Physical entropy-production mapping", "current_status": "OPEN", "acceptance": "The physical coefficient, SI heat flux, source uncertainty, and entropy-production uncertainty are linked."},
+            {"subresult_id": "physical_entropy_production_mapping", "label": "Physical entropy-production mapping", "current_status": "OPEN", "required_closure_level": "CLOSED_FOR_CORE", "acceptance": "The physical coefficient, SI heat flux, source uncertainty, and entropy-production uncertainty are linked."},
         ],
     },
     "heat_flux_entropy_production_mapping": {
@@ -233,7 +312,7 @@ MAJOR_RESULT_CONTRACTS: dict[str, dict[str, Any]] = {
             {"subresult_id": "finite_cutoff_heat_current_match", "label": "State-matched finite-cutoff heat-current match", "evidence_result_ids": ["T13_UET_O2_HEAT_CURRENT_KUBO_MATCH"], "required_closure_level": "CLOSED_FOR_LANE", "acceptance": "The natural heat-current response matches the declared covariant moment lane at finite cutoff."},
             {"subresult_id": "heat_current_continuum_boundary", "label": "Heat-current continuum boundary", "evidence_result_ids": ["T13_UET_O2_HEAT_CURRENT_KUBO_CONTINUUM_BOUNDARY"], "required_closure_level": "CLOSED_AS_NO_GO", "acceptance": "The failed extrapolation route is recorded as a no-go and is not relabeled as physical Kubo closure."},
             {"subresult_id": "regularized_heat_current_lane", "label": "Named regularized heat-current lane", "evidence_result_ids": ["T13_UET_O2_REGULARIZED_CONTINUUM_HEAT_CURRENT_LANE"], "required_closure_level": "CLOSED_FOR_LANE", "acceptance": "The named regularized lane passes its declared convergence and conservation checks without replacing the failed baseline."},
-            {"subresult_id": "physical_heat_flux_entropy_map", "label": "Physical SI heat-flux/entropy map", "current_status": "OPEN", "acceptance": "The SI Phi anchor, physical coefficient, source C_src, and uncertainty chain are all accepted on one state."},
+            {"subresult_id": "physical_heat_flux_entropy_map", "label": "Physical SI heat-flux/entropy map", "current_status": "OPEN", "required_closure_level": "CLOSED_FOR_CORE", "acceptance": "The SI Phi anchor, physical coefficient, source C_src, and uncertainty chain are all accepted on one state."},
         ],
     },
     "source_and_uncertainty": {
@@ -256,8 +335,8 @@ MAJOR_RESULT_CONTRACTS: dict[str, dict[str, Any]] = {
             {"subresult_id": "source_identity_and_row_controller", "label": "Source identity and row controller", "evidence_result_ids": ["T13_DING_PBTE_AUTHOR_REQUEST_PACKAGE", "T13_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY"], "required_closure_level": "CLOSED_FOR_LANE", "acceptance": "The requested numeric payload fields, locators, units, uncertainty, preprocessing, row identity, and hash are fixed."},
             {"subresult_id": "public_route_boundary", "label": "Public Ding route boundary", "evidence_result_ids": ["T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY_BOUNDARY", "T13_DING_PBTE_OA_NUMERIC_INPUT_NO_GO"], "required_closure_level": "CLOSED_AS_NO_GO", "acceptance": "The checked public routes are bounded without claiming author-held data are absent."},
             {"subresult_id": "candidate_reproduction_comparator", "label": "Independent PBTE candidate reproduction comparator", "evidence_result_ids": ["T13_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY", "T13_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION"], "required_closure_level": "CLOSED_FOR_LANE", "acceptance": "Candidate numerical stability and sensitivity are recorded separately from Ding acceptance."},
-            {"subresult_id": "accepted_numeric_csrc", "label": "Accepted Ding-compatible numeric C_src(T)", "current_status": "OPEN", "acceptance": "An authorized Ding package or accepted same-regime independent reproduction is admitted with source-grade uncertainty."},
-            {"subresult_id": "material_and_uncertainty_closure", "label": "Material regime and uncertainty closure", "current_status": "OPEN", "acceptance": "The TTG material regime, same-state thermodynamic correction, and c_v uncertainty are closed at the same evidence grade."},
+            {"subresult_id": "accepted_numeric_csrc", "label": "Accepted Ding-compatible numeric C_src(T)", "current_status": "OPEN", "required_closure_level": "CLOSED_FOR_CORE", "acceptance": "An authorized Ding package or accepted same-regime independent reproduction is admitted with source-grade uncertainty."},
+            {"subresult_id": "material_and_uncertainty_closure", "label": "Material regime and uncertainty closure", "current_status": "OPEN", "required_closure_level": "CLOSED_FOR_CORE", "acceptance": "The TTG material regime, same-state thermodynamic correction, and c_v uncertainty are closed at the same evidence grade."},
         ],
     },
 }

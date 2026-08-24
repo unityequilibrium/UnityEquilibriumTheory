@@ -14,7 +14,7 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
-from topic13_closure_contract import MAJOR_RESULT_CONTRACTS
+from topic13_closure_contract import CLOSURE_INPUT_PACKAGES, MAJOR_RESULT_CONTRACTS
 
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -425,6 +425,8 @@ def build_matrix() -> dict[str, Any]:
         "required_subresult_count": required_subresult_count,
         "current_major_result_counts": major_status_counts,
         "current_subresult_counts": substatus_counts,
+        "required_input_package_count": len(CLOSURE_INPUT_PACKAGES),
+        "closure_input_packages": list(CLOSURE_INPUT_PACKAGES),
     }
     full_topic_closure_contract = {
         "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
@@ -459,6 +461,8 @@ def build_matrix() -> dict[str, Any]:
         "required_subresult_count": required_subresult_count,
         "current_major_result_counts": major_status_counts,
         "current_subresult_counts": substatus_counts,
+        "required_input_package_count": len(CLOSURE_INPUT_PACKAGES),
+        "closure_input_packages": list(CLOSURE_INPUT_PACKAGES),
         "full_topic_closure_rule": {
             "required_major_result_level": "CLOSED_FOR_CORE",
             "causal_exception": "The conserved-C baseline may be CLOSED_AS_NO_GO only when the named causal branch is separately CLOSED_FOR_CORE and the no-go scope remains explicit.",
@@ -475,6 +479,8 @@ def build_matrix() -> dict[str, Any]:
         "status": gate.get("status", "OPEN"),
         "claim_promotion": False,
         "full_core_unlock": full_core_unlock,
+        "required_input_package_count": len(CLOSURE_INPUT_PACKAGES),
+        "closure_input_packages": list(CLOSURE_INPUT_PACKAGES),
         "major_result": major_result,
         "full_topic_closure_contract": full_topic_closure_contract,
         "requirements": requirements,
@@ -486,6 +492,7 @@ def build_matrix() -> dict[str, Any]:
             "downstream_dependency_unlocked": summary.get("downstream_dependency_unlocked", False),
             "required_major_result_count": len(requirements),
             "required_subresult_count": required_subresult_count,
+            "required_input_package_count": len(CLOSURE_INPUT_PACKAGES),
             "current_major_result_counts": major_status_counts,
             "current_subresult_counts": substatus_counts,
             "full_topic_ready": full_core_unlock,
@@ -509,7 +516,7 @@ def build_matrix() -> dict[str, Any]:
             "WHAT_REMAINS_OPEN": open_blockers,
             "DEPENDENCY_UNLOCKED": major_result["dependency_unlocked"],
             "STATUS": matrix_status(gate),
-            "WHAT_CHANGED": f"Added a ten-result Topic 13 closure contract with {required_subresult_count} evidence-producing subresults; no equation, threshold, source role, fit path, or holdout policy changed.",
+            "WHAT_CHANGED": f"Added a ten-result Topic 13 closure contract with {required_subresult_count} evidence-producing subresults and {len(CLOSURE_INPUT_PACKAGES)} grouped input packages; no equation, threshold, source role, fit path, or holdout policy changed.",
             "EQUATION_OR_MAPPING": major_result["equation_or_mapping"],
             "VERIFICATION": "Canonical gate hash, blocker groups, major-result records, subresult statuses, evidence references, and holdout metadata were read and projected without consuming numeric holdout data.",
             "CONTROLLING_BLOCKER": gate.get("controlling_blocker"),

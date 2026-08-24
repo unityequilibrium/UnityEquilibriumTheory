@@ -64,6 +64,14 @@ def test_topic13_closure_matrix_reports_full_topic_contract_without_promotion() 
     assert matrix["closure_summary"]["open_blocker_groups"] == gate["major_result"]["closure_summary"]["open_blocker_groups"]
     assert matrix["full_topic_closure_contract"]["required_major_result_count"] == 10
     assert matrix["full_topic_closure_contract"]["required_subresult_count"] == 36
+    assert matrix["full_topic_closure_contract"]["required_input_package_count"] == 3
+    assert {
+        item["package_id"] for item in matrix["full_topic_closure_contract"]["closure_input_packages"]
+    } == {
+        "T13_INPUT_DING_TTG_SOURCE",
+        "T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
+        "T13_INPUT_PHYSICAL_TRANSPORT_MATCH",
+    }
     assert matrix["closure_summary"]["current_subresult_counts"] == {
         "CLOSED_AS_NO_GO": 5,
         "CLOSED_FOR_LANE": 21,
@@ -74,6 +82,8 @@ def test_topic13_closure_matrix_reports_full_topic_contract_without_promotion() 
         assert item["subresult_summary"]["required_count"] == len(item["required_subresults"])
         for subresult in item["required_subresults"]:
             assert {"subresult_id", "label", "status", "acceptance"} <= set(subresult)
+            if subresult["status"] == "OPEN":
+                assert subresult["required_closure_level"] == "CLOSED_FOR_CORE"
     causal = next(item for item in matrix["requirements"] if item["requirement_id"] == "causal_structure")
     assert causal["closure_level"] == "CLOSED_AS_NO_GO"
     assert causal["gate_status"] == "PASS"
