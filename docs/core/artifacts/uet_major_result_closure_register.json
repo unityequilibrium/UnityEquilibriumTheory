@@ -1854,7 +1854,7 @@
       },
       "closure_matrix": {
         "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-        "sha256": "09068ac3de9105a372c3f853e216a2eddcf2fa48aeb99b02c5b01275b1fba4e9",
+        "sha256": "56d68608d5c8b0eeb7c1c0a01c9a4d65e72f45841f535a0d883e1c0b88efaa49",
         "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
         "full_core_unlock": false,
         "required_major_result_count": 10,
@@ -7061,14 +7061,14 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-          "sha256": "09068ac3de9105a372c3f853e216a2eddcf2fa48aeb99b02c5b01275b1fba4e9",
+          "sha256": "56d68608d5c8b0eeb7c1c0a01c9a4d65e72f45841f535a0d883e1c0b88efaa49",
           "summary": {
             "role": "compact Topic 13 closure projection"
           }
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "592b992713ffe0870cafc9e4e7cf64e392316a303dc7f5a3d1ad00e67215a7c4",
+          "sha256": "08d220bdbaaab26cd6661e95169f71f7b629da15b55ce78a16a78852cd7809a9",
           "summary": {
             "role": "canonical readiness gate"
           }
@@ -7076,7 +7076,7 @@
       ],
       "input_package_audit": {
         "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
-        "sha256": "9f7838d8c9cc86f1589ef2a8d881bbd2134de82867a0199f177bcec4783b72b8",
+        "sha256": "72f0f57efb454be675f97a307c370449bc59bd12d7b392a5ca586ff2be9675f4",
         "summary": {
           "role": "grouped Topic 13 closure-input acceptance audit",
           "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"

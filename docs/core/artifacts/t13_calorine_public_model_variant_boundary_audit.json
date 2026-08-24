@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-calorine-public-model-variant-boundary-v1",
   "artifact": "t13_calorine_public_model_variant_boundary_audit",
-  "generated_at": "2026-08-20",
+  "generated_at": "2026-08-24",
   "status": "PASS_SCOPED_CALORINE_PUBLIC_MODEL_VARIANT_BOUNDARY",
   "major_result": {
     "major_result_id": "T13_CALORINE_PUBLIC_MODEL_VARIANT_BOUNDARY",
@@ -74,10 +74,10 @@
     }
   },
   "runtime_preflight": {
-    "status": "BLOCKED_RERUN_RUNTIME_DEPENDENCY",
+    "status": "PASS_RERUN_RUNTIME_PRESENT",
     "modules": {
-      "ase": false,
-      "phono3py": false
+      "ase": true,
+      "phono3py": true
     },
     "required_for_numeric_rerun": [
       "ase",
@@ -95,7 +95,7 @@
   },
   "source_package": {
     "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/calorine_zenodo_7811021_nep_cx_model_variant_source_package.json",
-    "sha256": "23c462554832532b8330fbaa5f4f4aab62bd7be6aea63604c8d7d995a32889fb"
+    "sha256": "2c941400fb70505a2540543903980cc35e3bb602e6bbebc870e779c559d45178"
   },
   "acceptance": {
     "accepted_for_full_topic13": false,
