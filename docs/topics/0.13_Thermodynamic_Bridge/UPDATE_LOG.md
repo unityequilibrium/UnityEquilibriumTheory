@@ -4328,3 +4328,47 @@ EVIDENCE_HASHES:
 - `t13_topic13_closure_matrix.json` SHA-256: `56d68608d5c8b0eeb7c1c0a01c9a4d65e72f45841f535a0d883e1c0b88efaa49`
 - `topic13_full_thermodynamic_bridge_core_ready_gate.json` SHA-256: `08d220bdbaaab26cd6661e95169f71f7b629da15b55ce78a16a78852cd7809a9`
 - snapshot UTC: `2026-08-24T13:47:20.950981+00:00`
+
+### 2026-08-24 - Topic 13 closure progress dashboard
+
+MAJOR_RESULT_CLOSURE:
+- Full Topic 13 remains `PARTIAL`; this wave adds a generated progress handoff only.
+
+WHAT_IS_ACTUALLY_CLOSED:
+- The canonical matrix is rendered as `CLOSED_FOR_LANE=21`, `CLOSED_AS_NO_GO=5`, `CLOSED_FOR_CORE=0`, and `OPEN=10` across `36` required subresults.
+- The bounded named causal branch remains the only causal `CLOSED_FOR_CORE` input; no Full Topic 13 input package is accepted.
+
+WHAT_REMAINS_OPEN:
+- `base_phi_si_anchor, independent_alpha_record, normalized_beta_si_map, physical_source_backed_eos, physical_uet_kubo_record, physical_sk_transport_match, physical_entropy_production_mapping, accepted_numeric_csrc, material_and_uncertainty_closure, physical_heat_flux_entropy_map`.
+
+DEPENDENCY_UNLOCKED:
+- None beyond the bounded causal branch. `full_core_unlock=false` and downstream Core/Gravity/transport remain locked.
+
+STATUS:
+- `BLOCKED_OPEN_T13_FULL_BRIDGE`; `claim_promotion=false`.
+
+WHAT_CHANGED:
+- Added `docs/core/artifacts/t13_full_closure_progress.json` and `docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_FULL_CLOSURE_STATUS.md`, generated from the canonical matrix, full gate, and input audit.
+
+EQUATION_OR_MAPPING:
+- Existing operators remain `y_TTG=Delta_Tq(t)/Delta_Tq(0)`, `y_TTG^UET=Delta_Phi(t)/Delta_Phi(0)`, and `Delta_Tq=alpha_Phi_K*Delta_Phi`; no numeric alpha or SI map was emitted.
+
+VERIFICATION:
+- The renderer completed with `36` required subresults and `10` open subresults.
+- Holdout policy remains `{'calibration_path_may_read_holdout': False, 'target_fit_performed': False, 'xie_2026_accessed': False}`; no target fit or threshold change was introduced.
+
+CONTROLLING_BLOCKER:
+- `dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing`; the three grouped external input packages remain blocked.
+
+NEXT_ACTION:
+- Do not rerun the same gates without an input change. Obtain an authorized Ding-compatible payload, an independent base-Phi/SI anchor with alpha record, and a physical Kubo/SK/KMS/entropy record; rerun acceptance and full integration only after a source hash changes.
+
+CLAIM_BOUNDARY:
+- Progress reporting only. This wave does not close Full Topic 13, consume Xie 2026, or unlock downstream claims.
+
+EVIDENCE_PATHS:
+- `docs/core/artifacts/t13_full_closure_progress.json`
+- `docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_FULL_CLOSURE_STATUS.md`
+
+EVIDENCE_HASH:
+- `f1d988538d3d758c9f69e7aeee4a74d12c1ee59e53a9be2593f9ffed41182b36`
