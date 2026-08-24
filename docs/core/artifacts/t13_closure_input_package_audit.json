@@ -108,6 +108,16 @@
         "role": "input-package acceptance evidence"
       },
       {
+        "path": "docs/core/artifacts/t13_public_phonon_route_screening_audit.json",
+        "sha256": "ec5ed446dbc6469414dced797e574c0db002e392dffa3bcf3d3dbffef3e57e3a",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_public_phonon_route_screening_package.json",
+        "sha256": "3c61777993e49b4b4487ca30c59498cb8f8d28654baf8b6d98adbd58d58a72d0",
+        "role": "input-package acceptance evidence"
+      },
+      {
         "path": "docs/core/artifacts/covariant_superfluid_transport_verification.json",
         "sha256": "49fc1a047cfa84e8155940a491eb9c3fb3c3536ac707b010ba15b32298632ad1",
         "role": "input-package acceptance evidence"
@@ -153,7 +163,9 @@
         "thermodynamic_pair_status": "PASS_SCOPED_SOURCE_LOCKED_LOWITZER_ALPHA_V_K_T_PAIR",
         "same_grade_alpha_V_and_K_T_correction_pair": true,
         "huberman_2019_public_route_status": "PASS_SCOPED_HUBERMAN_2019_SOURCE_BOUNDARY_NO_CORE_PAYLOAD",
-        "huberman_2019_numeric_payload_present": false
+        "huberman_2019_numeric_payload_present": false,
+        "public_phonon_route_screening_status": "PASS_SCOPED_PUBLIC_PHONON_ROUTE_SCREENING_NO_CORE_PAYLOAD",
+        "public_phonon_core_payload_present": false
       },
       "missing_acceptance_fields": [
         "authorized_numeric_C_src_payload",
@@ -229,6 +241,7 @@
     "no_target_fit": true,
     "no_numeric_alpha_emitted": true,
     "no_physical_transport_value_emitted": true,
+    "public_phonon_route_is_scoped_without_core_payload": true,
     "gate_blocker_set_is_nonempty": true
   },
   "open_blockers": [
@@ -314,6 +327,16 @@
     {
       "path": "docs/core/artifacts/t13_huberman_2019_ttg_source_boundary_audit.json",
       "sha256": "fa25c313272a79230263c92bf315510e11842d11070c41d67e41d4cb8f88c3ae",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/artifacts/t13_public_phonon_route_screening_audit.json",
+      "sha256": "ec5ed446dbc6469414dced797e574c0db002e392dffa3bcf3d3dbffef3e57e3a",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_public_phonon_route_screening_package.json",
+      "sha256": "3c61777993e49b4b4487ca30c59498cb8f8d28654baf8b6d98adbd58d58a72d0",
       "role": "input-package acceptance evidence"
     },
     {

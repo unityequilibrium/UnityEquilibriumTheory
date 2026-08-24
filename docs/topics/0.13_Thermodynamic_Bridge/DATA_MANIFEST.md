@@ -1296,3 +1296,9 @@ CONTROLLING_BLOCKER: ding_pbte_C_src_numeric_or_accepted_independent_reproductio
 NEXT_ACTION: Obtain authorized author-held numeric payload or an accepted same-regime PBTE reproduction; keep comparator routes outside Ding acceptance.
 CLAIM_BOUNDARY: Metadata route boundary only; not Ding C_src, alpha calibration, TTG prediction, external validation, or Full Topic 13 closure.
 EVIDENCE_HASHES: package edcf733efdad47973138a469e96e6e81f1654bdfe64d34ee7bc7c3a61db5eb7f; audit 67f059ed8ef9dcbe84878276d3056efb61b834fdfa7eca686d5361f1213d2573; full gate 4f7be70b0079efe6c50cb24a0fe984021ab600f966e001d4c456590804634f19.
+
+## Public Phonon Route Screening (2026-08-24)
+
+- `t13_public_phonon_route_screening_package.json` records three screened public routes: Materials Project Phonon database v1.1, LCBOPII graphitic phonon context, and the Dryad full-scattering-matrix solver.
+- `t13_public_phonon_route_screening_audit.json` bounds them as metadata, formula, or solver context only; no route is accepted as Ding `C_src`, independent `alpha_Phi_K`, or physical UET transport.
+- No remote payload was imported. The source package remains `SCREENED_METADATA_ONLY_NO_CORE_PAYLOAD`.

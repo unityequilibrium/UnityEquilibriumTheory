@@ -1,0 +1,133 @@
+{
+  "schema_version": "t13-public-phonon-route-screening-v1",
+  "artifact": "t13_public_phonon_route_screening_package",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "created_on": "2026-08-24",
+  "status": "PUBLIC_ROUTE_SCREENING_NO_CORE_PAYLOAD",
+  "screening_scope": {
+    "purpose": "Bound public phonon and full-scattering routes that might support a permitted same-regime PBTE reproduction without importing unverified rows.",
+    "screening_mode": "metadata and public documentation review only",
+    "not_exhaustive": true,
+    "no_remote_payload_downloaded": true,
+    "no_numeric_substitute_created": true
+  },
+  "routes": [
+    {
+      "route_id": "materials_project_phonon_database_v1_1",
+      "route_class": "BROAD_PHONON_DATABASE",
+      "source_identity": {
+        "title": "Materials Project Phonon database v1.1",
+        "doi": "10.5281/zenodo.20196565",
+        "source_locator": "https://zenodo.org/records/20196565",
+        "manifest_locator": "https://zenodo.org/records/20196565/files/manifest.tsv?download=1",
+        "publisher": "Zenodo",
+        "published_on": "2026-06-08",
+        "reported_compound_count": 26413,
+        "metadata_observed_on": "2026-08-24"
+      },
+      "observed_payload": {
+        "metadata_record_present": true,
+        "manifest_record_present": true,
+        "local_payload_imported": false,
+        "graphite_record_verified_in_this_screening": false,
+        "ding_material_state_equivalence": false,
+        "mode_resolved_c_mu_rows": false,
+        "numeric_C_src_rows": false,
+        "TTG_response_rows": false,
+        "source_grade_uncertainty_rows": false,
+        "force_constants_imported": false
+      },
+      "decision": "RETAINED_AS_METADATA_ONLY_ROUTE",
+      "route_boundary": "The dataset is a broad phonon archive. A specific graphite record, Ding material/state equivalence, volumetric C_src(T), TTG response contract, and source-grade uncertainty were not established in this metadata-only screening.",
+      "required_follow_up": [
+        "identify a specific graphite material record without treating the archive as Ding-equivalent",
+        "obtain the complete mode table, unit-cell volume, state metadata, convergence, and uncertainty",
+        "regenerate C_src(T) and the declared TTG response from the delivered payload"
+      ]
+    },
+    {
+      "route_id": "lcbopii_graphitic_phonon_route",
+      "route_class": "EMPIRICAL_FORCE_CONSTANT_AND_DISPERSION_CONTEXT",
+      "source_identity": {
+        "title": "Phonons of graphene and graphitic materials derived from the empirical potential LCBOPII",
+        "doi": "10.1016/j.susc.2010.10.036",
+        "source_locator": "https://arxiv.org/abs/1010.5594",
+        "publication_locator": "https://www.sciencedirect.com/science/article/pii/S0039602810004437",
+        "authors": "L. J. Karssemeijer; Annalisa Fasolino",
+        "published_on": "2010-10-27",
+        "metadata_observed_on": "2026-08-24"
+      },
+      "observed_payload": {
+        "public_formula_and_method_context": true,
+        "graphite_phonon_dispersion_context": true,
+        "machine_readable_mode_c_mu_rows": false,
+        "numeric_C_src_rows": false,
+        "TTG_response_rows": false,
+        "source_grade_uncertainty_rows": false,
+        "raw_force_constants_imported": false,
+        "Ding_material_state_equivalence": false,
+        "local_payload_imported": false
+      },
+      "decision": "RETAINED_AS_FORMULA_CONTEXT_ONLY",
+      "route_boundary": "The public paper supplies force-constant and phonon-dispersion context, but this screening did not admit a row-complete C_src(T), TTG response, uncertainty package, or Ding-equivalent material state.",
+      "required_follow_up": [
+        "obtain machine-readable force constants and mode weights under permitted terms",
+        "derive modal heat capacities and volumetric C_src with a declared state and uncertainty",
+        "demonstrate the response-regime mapping before any independent-reproduction claim"
+      ]
+    },
+    {
+      "route_id": "dryad_full_scattering_matrix_bte_solver_2026",
+      "route_class": "FULL_SCATTERING_SOLVER_CONTEXT",
+      "source_identity": {
+        "title": "Code from: Full-scattering-matrix phonon BTE solver",
+        "doi": "10.5061/dryad.dr7sqvbdq",
+        "source_locator": "https://datadryad.org/dataset/doi%3A10.5061/dryad.dr7sqvbdq",
+        "published_on": "2026-07-22",
+        "reported_model_material": "silicon with Stillinger-Weber potential",
+        "metadata_observed_on": "2026-08-24"
+      },
+      "observed_payload": {
+        "full_scattering_solver_code_public": true,
+        "energy_conservation_contract_described": true,
+        "detailed_balance_contract_described": true,
+        "graphite_material_payload": false,
+        "Ding_mode_c_mu_rows": false,
+        "numeric_C_src_rows": false,
+        "TTG_response_rows": false,
+        "physical_UET_transport_record": false,
+        "local_payload_imported": false
+      },
+      "decision": "RETAINED_AS_SOLVER_METHOD_CONTEXT_ONLY",
+      "route_boundary": "The public solver is useful for full-scattering numerical method context, but its declared material example is silicon and it does not supply the graphite C_src, TTG, Phi anchor, or physical UET transport records required here.",
+      "required_follow_up": [
+        "keep solver constraints separate from a physical graphite source package",
+        "do not relabel a silicon solver result as graphite or UET transport evidence",
+        "obtain a state-matched physical coefficient independently"
+      ]
+    }
+  ],
+  "acceptance_boundary": {
+    "accepted_for_formula_or_method_lane": true,
+    "accepted_for_independent_C_src": false,
+    "accepted_for_Ding_C_src": false,
+    "accepted_for_base_Phi_alpha_calibration": false,
+    "accepted_for_physical_UET_transport": false,
+    "acceptance_reason": "All three routes are bounded as metadata, formula, or solver context only. None supplies a row-complete, state-matched, source-grade C_src and TTG package, an independent base-Phi/SI response, or a physical UET transport coefficient."
+  },
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "xie_2026_source_data_consumed": false,
+    "target_curve_used": false,
+    "fit_performed": false,
+    "alpha_Phi_K_fit_used": false,
+    "threshold_changed": false
+  },
+  "ontology": {
+    "C": "collective system-behaviour coordinate; not heat capacity or mass",
+    "Phi": "effective response variable; no identity with phonon energy or temperature is asserted",
+    "R_gen": "derived physical/history trace; no independent state or backreaction",
+    "R_obs": "observer record separate from PBTE and transport dynamics"
+  },
+  "claim_boundary": "This package closes only a scoped public-route screening lane. It does not provide numeric C_src, Ding-equivalent reproduction, alpha_Phi_K, a base-Phi SI anchor, physical UET transport, Full Topic 13 closure, or downstream dependency unlock."
+}

@@ -4170,3 +4170,17 @@ CONTROLLING_BLOCKER: `ding_pbte_C_src_numeric_or_accepted_independent_reproducti
 NEXT_ACTION: Send the bounded combined author request; accept any returned payload only through the existing fail-closed record contract.
 CLAIM_BOUNDARY: Source-boundary result only; not numeric C_src, alpha calibration, TTG prediction, external validation, or Full Topic 13 closure.
 EVIDENCE_HASHES: package `F70FF820EA3CB16023D23BB3FD7D36D6ED486357B8CBC6CEB81BF2FD35492844`; audit `FA25C313272A79230263C92BF315510E11842D11070C41D67E41D4CB8F88C3AE`; input audit `BDE78DC8381E522CB477559B2B0BCC6C2DA5C834860AFAC1C735F870EA74A546`; matrix `B55AC2FC63CDFF1B9103A1A010B2D33CF47660D01BD0C99B8F512450E4438D7C`.
+
+### 2026-08-24 - Public phonon route screening
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for `T13_PUBLIC_PHONON_ROUTE_SCREENING`; canonical Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_IS_ACTUALLY_CLOSED: Three public routes are now bounded as metadata, formula, or solver context only: Materials Project Phonon database v1.1, LCBOPII graphitic phonons, and the Dryad full-scattering BTE solver.
+WHAT_REMAINS_OPEN: No accepted `C_src(T)`, Ding-equivalent material state, source-grade uncertainty, independent base-Phi/SI response, physical Kubo record, or new Core subresult was obtained.
+DEPENDENCY_UNLOCKED: None; public-route screening only.
+STATUS: `PASS_SCOPED_PUBLIC_PHONON_ROUTE_SCREENING_NO_CORE_PAYLOAD`; input audit remains open with zero Core-accepted packages.
+WHAT_CHANGED: Added the route-screening package/audit, linked the package into the input audit, and added the screened routes to the bounded author-request manifest.
+EQUATION_OR_MAPPING: `C_src(T)=sum_mu c_mu(T)`; `Delta_Tq=Delta_u_ph/C_src(T)`; no public-route-to-`Phi` mapping asserted.
+VERIFICATION: Metadata/source documentation reviewed; no remote payload import, numeric substitute, alpha fit, target fit, threshold change, or holdout access.
+CONTROLLING_BLOCKER: `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing`; material/state and source-grade uncertainty remain open.
+NEXT_ACTION: Obtain an authorized row-complete source or permitted same-regime reproduction and validate it through the fail-closed Topic 13 record contract.
+CLAIM_BOUNDARY: Source-screening lane only; not numeric `C_src`, alpha calibration, physical transport, external validation, or Full Topic 13 closure.

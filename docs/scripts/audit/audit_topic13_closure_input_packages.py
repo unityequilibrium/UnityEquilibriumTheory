@@ -36,6 +36,8 @@ EVIDENCE_RELS = [
     "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
     "docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json",
     "docs/core/artifacts/t13_huberman_2019_ttg_source_boundary_audit.json",
+    "docs/core/artifacts/t13_public_phonon_route_screening_audit.json",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_public_phonon_route_screening_package.json",
     "docs/core/artifacts/covariant_superfluid_transport_verification.json",
     "docs/core/artifacts/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json",
     "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json",
@@ -84,6 +86,7 @@ def main() -> int:
     lowitzer_pair = load("docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json")
     graphite_pair_boundary = load("docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json")
     huberman = load("docs/core/artifacts/t13_huberman_2019_ttg_source_boundary_audit.json")
+    public_phonon = load("docs/core/artifacts/t13_public_phonon_route_screening_audit.json")
 
     calorine_checks = calorine.get("checks", {})
     alpha_count = int(alpha.get("eligible_candidate_count", 0))
@@ -177,6 +180,8 @@ def main() -> int:
                 "same_grade_alpha_V_and_K_T_correction_pair": graphite_pair_boundary.get("same_grade_pair_route_available", False),
                 "huberman_2019_public_route_status": huberman.get("status"),
                 "huberman_2019_numeric_payload_present": huberman.get("checks", {}).get("numeric_C_src_rows_present", False),
+                "public_phonon_route_screening_status": public_phonon.get("status"),
+                "public_phonon_core_payload_present": not public_phonon.get("checks", {}).get("no_core_payload_imported", False),
             },
             "missing_acceptance_fields": ding_missing,
             "unlocks_subresults": [
@@ -257,6 +262,9 @@ def main() -> int:
         ),
         "no_numeric_alpha_emitted": not alpha.get("numeric_alpha_Phi_K_emitted", False),
         "no_physical_transport_value_emitted": physical_coefficient_blocked,
+        "public_phonon_route_is_scoped_without_core_payload": public_phonon.get("status")
+        == "PASS_SCOPED_PUBLIC_PHONON_ROUTE_SCREENING_NO_CORE_PAYLOAD"
+        and public_phonon.get("checks", {}).get("no_core_payload_imported", False),
         "gate_blocker_set_is_nonempty": bool(
             gate.get("major_result", {}).get("what_remains_open")
         ),

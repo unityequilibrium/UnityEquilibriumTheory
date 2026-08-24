@@ -153,6 +153,23 @@
         "mode table and numerical convergence envelope"
       ],
       "acceptance_boundary": "The public supplementary PDF is method context only; no C_src or force-constant payload is admitted from it."
+    },
+    "public_phonon_route_screening": {
+      "status": "SCREENED_METADATA_ONLY_NO_CORE_PAYLOAD",
+      "source_package": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_public_phonon_route_screening_package.json",
+      "source_audit": "docs/core/artifacts/t13_public_phonon_route_screening_audit.json",
+      "screened_routes": [
+        "Materials Project Phonon database v1.1",
+        "LCBOPII graphitic phonon route",
+        "Dryad full-scattering-matrix BTE solver"
+      ],
+      "request_payload": [
+        "identify a specific graphite record and deliver stable row identity",
+        "mode-resolved c_mu(T), aggregate C_src(T), unit-cell volume, material state, and convergence",
+        "TTG response inputs or a permitted full-scattering reproduction",
+        "source-grade uncertainty, preprocessing, permission terms, and hashes"
+      ],
+      "acceptance_boundary": "The screened routes remain metadata, formula, or solver context until the existing Ding-compatible C_src and source-record contracts pass."
     }
   }
 }
