@@ -4708,3 +4708,16 @@ CONTROLLING_BLOCKER: holdout_numeric_access_requires_accepted_root_inputs_and_se
 NEXT_ACTION: Do not read Xie numeric data. Obtain an accepted Ding-compatible source, independent base-Phi/SI calibration, and physical transport record; rerun the full chain only after an input hash changes.
 CLAIM_BOUNDARY: This wave closes protocol and reporting lanes only. It is not a thermal prediction, external validation, or Full Topic 13 closure.
 EVIDENCE_PATHS: docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_xie_2026_holdout_comparison_preregistration.json; docs/core/artifacts/t13_xie_2026_holdout_preregistration_audit.json; docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_SUBRESULT_CLOSURE_MAP.md.
+
+### 2026-08-26 - Topic 13 C_src route-count regression repair
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for the C_src route inventory projection; Full Topic 13 remains PARTIAL and BLOCKED_OPEN_T13_FULL_BRIDGE.
+WHAT_IS_ACTUALLY_CLOSED: The integration test now checks the canonical reconciliation count of 10 routes and preserves the fail-closed zero-acceptance assertions.
+WHAT_REMAINS_OPEN: The same 10 Core-level subresults remain open; no Ding-compatible C_src, independent alpha_Phi_K, SI Phi anchor, or physical Kubo record was added.
+DEPENDENCY_UNLOCKED: None. This is a regression-contract repair only; Core, Gravity, and constitutive transport remain locked.
+STATUS: PASS_FOCUSED_TOPIC13_REGRESSION_REPAIR.
+WHAT_CHANGED: Updated docs/core/test/test_topic13_csrc_reconciliation_integration.py from the stale route count 8 to the current canonical route count 10.
+EQUATION_OR_MAPPING: C_src(T)=sum_mu c_mu(T); Delta_Tq=Delta_u_ph/C_src(T); no UET Phi-to-temperature mapping was changed.
+VERIFICATION: Focused Topic 13 regression suite passed 18 tests; source-grade uncertainty, Ding material match, accepted independent reproduction, and eligible C_src input remain zero.
+CONTROLLING_BLOCKER: Three root input packages remain blocked, with dimensional Phi/SI/alpha calibration still the nearest controller.
+NEXT_ACTION: Do not rerun unchanged numeric gates. Obtain an accepted Ding-compatible source, independent base-Phi/SI calibration, or physical transport record before the next evidence-producing wave.
+CLAIM_BOUNDARY: This repairs test/artifact alignment only. It is not a C_src acceptance, alpha calibration, thermal prediction, external validation, or Full Topic 13 closure.

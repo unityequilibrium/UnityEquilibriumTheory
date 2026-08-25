@@ -22,7 +22,7 @@ def test_csrc_reconciliation_is_projected_with_all_prior_waves() -> None:
     assert "docs/core/artifacts/t13_physical_transport_reconciliation_audit.json" in evidence_paths
     assert "docs/core/artifacts/t13_base_phi_si_reconciliation_audit.json" in evidence_paths
     assert current["csrc_reconciliation_status"] == "PASS_SCOPED_CSRC_RECONCILIATION_OPEN"
-    assert current["csrc_route_count"] == 8
+    assert current["csrc_route_count"] == 10
     assert current["numeric_csrc_candidate_count"] == 3
     assert current["source_grade_uncertainty_count"] == 0
     assert current["ding_material_state_match_count"] == 0
