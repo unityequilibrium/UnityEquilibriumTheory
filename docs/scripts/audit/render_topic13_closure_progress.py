@@ -41,6 +41,12 @@ PACKAGE_BY_SUBRESULT = {
     ),
 }
 
+PACKAGE_IDS = (
+    "T13_INPUT_DING_TTG_SOURCE",
+    "T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
+    "T13_INPUT_PHYSICAL_TRANSPORT_MATCH",
+)
+
 
 def load(relative: str) -> dict[str, Any]:
     value = json.loads((ROOT / relative).read_text(encoding="utf-8-sig"))
@@ -55,6 +61,12 @@ def digest(relative: str) -> str:
 
 def subresult_record(major: dict[str, Any], subresult: dict[str, Any]) -> dict[str, Any]:
     subresult_id = subresult.get("subresult_id")
+    package_label = PACKAGE_BY_SUBRESULT.get(subresult_id)
+    package_ids = (
+        [item.strip() for item in package_label.split("+")]
+        if package_label
+        else []
+    )
     return {
         "major_result_id": major.get("major_result_id"),
         "label": subresult.get("label"),
@@ -63,7 +75,8 @@ def subresult_record(major: dict[str, Any], subresult: dict[str, Any]) -> dict[s
         "required_closure_level": subresult.get("required_closure_level"),
         "acceptance": subresult.get("acceptance"),
         "evidence_result_ids": subresult.get("evidence_result_ids", []),
-        "controlling_input_package": PACKAGE_BY_SUBRESULT.get(subresult_id),
+        "controlling_input_package": package_label,
+        "controlling_input_packages": package_ids,
     }
 
 
@@ -94,13 +107,21 @@ def build_payload() -> dict[str, Any]:
 
     input_packages = []
     for package in input_audit.get("packages", []):
+        package_id = package.get("package_id")
+        open_for_package = [
+            item["subresult_id"]
+            for item in subresults
+            if item["status"] == "OPEN"
+            and package_id in item.get("controlling_input_packages", [])
+        ]
         input_packages.append(
             {
-                "package_id": package.get("package_id"),
+                "package_id": package_id,
                 "status": package.get("status"),
                 "accepted_for_core": package.get("accepted_for_core", False),
                 "missing_acceptance_fields": package.get("missing_acceptance_fields", []),
                 "unlocks_subresults": package.get("unlocks_subresults", []),
+                "open_subresults": open_for_package,
             }
         )
 
@@ -110,6 +131,19 @@ def build_payload() -> dict[str, Any]:
     }
     counts = dict(Counter(item["status"] for item in subresults))
     open_subresults = [item for item in subresults if item["status"] == "OPEN"]
+    closure_arithmetic = {
+        "required_subresults": len(subresults),
+        "closed_for_lane": counts.get("CLOSED_FOR_LANE", 0),
+        "closed_as_no_go": counts.get("CLOSED_AS_NO_GO", 0),
+        "closed_for_core": counts.get("CLOSED_FOR_CORE", 0),
+        "open": counts.get("OPEN", 0),
+        "root_input_packages": len(PACKAGE_IDS),
+        "full_topic_core_ready_rule": (
+            "all required subresults must be CLOSED_FOR_CORE or an explicitly "
+            "accepted closure level in the canonical full gate; no OPEN "
+            "subresult and all required input packages accepted"
+        ),
+    }
     return {
         "schema_version": "t13-full-closure-progress-v1",
         "artifact": "t13_full_closure_progress",
@@ -122,6 +156,7 @@ def build_payload() -> dict[str, Any]:
             "controlling_blocker": gate.get("controlling_blocker"),
         },
         "closure_counts": counts,
+        "closure_arithmetic": closure_arithmetic,
         "required_major_result_count": len(major_results),
         "required_subresult_count": len(subresults),
         "major_results": major_results,
@@ -153,6 +188,7 @@ def md_cell(value: Any) -> str:
 
 def render_markdown(payload: dict[str, Any]) -> str:
     counts = payload["closure_counts"]
+    arithmetic = payload["closure_arithmetic"]
     status = payload["canonical_status"]
     open_rows = payload["open_subresults"]
     lines = [
@@ -180,6 +216,22 @@ def render_markdown(payload: dict[str, Any]) -> str:
     lines.extend(
         [
             "",
+            "CLOSURE_ARITHMETIC:",
+            f"- Core-ready requires all `{arithmetic['required_subresults']}` required subresults to leave `OPEN`; current counts are `CLOSED_FOR_LANE={arithmetic['closed_for_lane']}`, `CLOSED_AS_NO_GO={arithmetic['closed_as_no_go']}`, `CLOSED_FOR_CORE={arithmetic['closed_for_core']}`, `OPEN={arithmetic['open']}`.",
+            f"- The `{arithmetic['open']}` open subresults are controlled by `{arithmetic['root_input_packages']}` root input packages, so the next work is evidence acquisition/derivation, not indefinite reruns.",
+            "",
+            "ROOT_INPUT_PACKAGES:",
+            "| Package | Status | Open subresults | Missing acceptance fields |",
+            "| --- | --- | --- | --- |",
+        ]
+    )
+    for package in payload["input_packages"]:
+        lines.append(
+            f"| `{md_cell(package['package_id'])}` | `{md_cell(package['status'])}` | {md_cell(', '.join(package['open_subresults']))} | {md_cell(', '.join(package['missing_acceptance_fields']))} |"
+        )
+    lines.extend(
+        [
+            "",
             "DEPENDENCY_UNLOCKED:",
             "- Causal named branch only. Full Topic 13, curved 3+1, Gravity, and constitutive transport remain locked.",
             "",
@@ -187,7 +239,7 @@ def render_markdown(payload: dict[str, Any]) -> str:
             f"- `{status['full_topic_status']}`; `claim_promotion={str(status['claim_promotion']).lower()}`; `full_core_unlock={str(status['full_core_unlock']).lower()}`.",
             "",
             "WHAT_CHANGED:",
-            "- Generated this progress dashboard from current canonical artifacts; no equation, threshold, source role, or claim status was changed.",
+            "- Added package-level closure arithmetic and blocker ownership to the generated dashboard; no equation, threshold, source role, or claim status was changed.",
             "",
             "EQUATION_OR_MAPPING:",
             "- `y_TTG = Delta_Tq(t) / Delta_Tq(0)`",

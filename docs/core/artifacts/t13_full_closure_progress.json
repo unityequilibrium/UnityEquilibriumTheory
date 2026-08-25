@@ -7,6 +7,15 @@
     "full_topic_closure_level": "PARTIAL",
     "full_topic_status": "BLOCKED_OPEN_T13_FULL_BRIDGE"
   },
+  "closure_arithmetic": {
+    "closed_as_no_go": 5,
+    "closed_for_core": 0,
+    "closed_for_lane": 21,
+    "full_topic_core_ready_rule": "all required subresults must be CLOSED_FOR_CORE or an explicitly accepted closure level in the canonical full gate; no OPEN subresult and all required input packages accepted",
+    "open": 10,
+    "required_subresults": 36,
+    "root_input_packages": 3
+  },
   "closure_counts": {
     "CLOSED_AS_NO_GO": 5,
     "CLOSED_FOR_LANE": 21,
@@ -17,7 +26,7 @@
     "downstream_core_gravity_transport": "LOCKED",
     "full_topic_13": "LOCKED until all required subresults are closed at their declared level"
   },
-  "generated_at": "2026-08-24T17:25:38.621332+00:00",
+  "generated_at": "2026-08-25T05:06:17.770899+00:00",
   "holdout_policy": {
     "calibration_path_may_read_holdout": false,
     "target_fit_performed": false,
@@ -31,6 +40,12 @@
         "accepted_independent_reproduction",
         "Ding_material_state_match",
         "source_grade_uncertainty"
+      ],
+      "open_subresults": [
+        "physical_source_backed_eos",
+        "accepted_numeric_csrc",
+        "material_and_uncertainty_closure",
+        "physical_heat_flux_entropy_map"
       ],
       "package_id": "T13_INPUT_DING_TTG_SOURCE",
       "status": "BLOCKED",
@@ -49,6 +64,13 @@
         "dimensional_bridge_open_inputs_closed",
         "dimensionful_action_SI_map"
       ],
+      "open_subresults": [
+        "base_phi_si_anchor",
+        "independent_alpha_record",
+        "normalized_beta_si_map",
+        "physical_source_backed_eos",
+        "physical_heat_flux_entropy_map"
+      ],
       "package_id": "T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
       "status": "BLOCKED",
       "unlocks_subresults": [
@@ -66,6 +88,12 @@
         "finite_temperature_transport_completion",
         "physical_anchor_supplied",
         "physical_heat_flux_entropy_link"
+      ],
+      "open_subresults": [
+        "physical_uet_kubo_record",
+        "physical_sk_transport_match",
+        "physical_entropy_production_mapping",
+        "physical_heat_flux_entropy_map"
       ],
       "package_id": "T13_INPUT_PHYSICAL_TRANSPORT_MATCH",
       "status": "BLOCKED",
@@ -246,6 +274,9 @@
     {
       "acceptance": "A declared dimensionful action/free-energy origin or an independent paired base-Phi/SI response record is accepted.",
       "controlling_input_package": "T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
+      "controlling_input_packages": [
+        "T13_INPUT_BASE_PHI_SI_ALPHA_BETA"
+      ],
       "evidence_result_ids": [],
       "label": "Base-Phi SI energy/temperature anchor",
       "major_result_id": "T13_DIMENSIONAL_PHI_THERMAL_OBSERVABLE_MAP",
@@ -256,6 +287,9 @@
     {
       "acceptance": "One eligible non-holdout paired record or a derivation with an independently fixed SI scale is accepted.",
       "controlling_input_package": "T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
+      "controlling_input_packages": [
+        "T13_INPUT_BASE_PHI_SI_ALPHA_BETA"
+      ],
       "evidence_result_ids": [],
       "label": "Independent numeric alpha record with uncertainty",
       "major_result_id": "T13_ALPHA_PHI_K_INDEPENDENT_CALIBRATION",
@@ -266,6 +300,9 @@
     {
       "acceptance": "The base-Phi field normalization and dimensionful free-energy scale are independently fixed and propagated.",
       "controlling_input_package": "T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
+      "controlling_input_packages": [
+        "T13_INPUT_BASE_PHI_SI_ALPHA_BETA"
+      ],
       "evidence_result_ids": [],
       "label": "Normalized beta to SI correspondence",
       "major_result_id": "T13_UET_BRIDGE_BETA_SI_CORRESPONDENCE",
@@ -276,6 +313,10 @@
     {
       "acceptance": "Finite-temperature coefficients, material regime, c_v uncertainty, and SI Phi normalization are accepted together.",
       "controlling_input_package": "T13_INPUT_DING_TTG_SOURCE + T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
+      "controlling_input_packages": [
+        "T13_INPUT_DING_TTG_SOURCE",
+        "T13_INPUT_BASE_PHI_SI_ALPHA_BETA"
+      ],
       "evidence_result_ids": [],
       "label": "Physical source-backed EOS coefficients",
       "major_result_id": "T13_CHARGE_DENSITY_EOS",
@@ -286,6 +327,9 @@
     {
       "acceptance": "One source-backed or fully microscopic state-matched coefficient with uncertainty is admitted.",
       "controlling_input_package": "T13_INPUT_PHYSICAL_TRANSPORT_MATCH",
+      "controlling_input_packages": [
+        "T13_INPUT_PHYSICAL_TRANSPORT_MATCH"
+      ],
       "evidence_result_ids": [],
       "label": "Physical UET Kubo coefficient record",
       "major_result_id": "T13_COVARIANT_THERMAL_TRANSPORT",
@@ -296,6 +340,9 @@
     {
       "acceptance": "The microscopic response is connected to a physical coefficient and uncertainty without a synthetic substitute.",
       "controlling_input_package": "T13_INPUT_PHYSICAL_TRANSPORT_MATCH",
+      "controlling_input_packages": [
+        "T13_INPUT_PHYSICAL_TRANSPORT_MATCH"
+      ],
       "evidence_result_ids": [],
       "label": "Physical SK/KMS-to-transport match",
       "major_result_id": "T13_SK_KMS_MATCHING",
@@ -306,6 +353,9 @@
     {
       "acceptance": "The physical coefficient, SI heat flux, source uncertainty, and entropy-production uncertainty are linked.",
       "controlling_input_package": "T13_INPUT_PHYSICAL_TRANSPORT_MATCH",
+      "controlling_input_packages": [
+        "T13_INPUT_PHYSICAL_TRANSPORT_MATCH"
+      ],
       "evidence_result_ids": [],
       "label": "Physical entropy-production mapping",
       "major_result_id": "T13_ENTROPY_CURRENT_DISSIPATIVE_BALANCE",
@@ -316,6 +366,9 @@
     {
       "acceptance": "An authorized Ding package or accepted same-regime independent reproduction is admitted with source-grade uncertainty.",
       "controlling_input_package": "T13_INPUT_DING_TTG_SOURCE",
+      "controlling_input_packages": [
+        "T13_INPUT_DING_TTG_SOURCE"
+      ],
       "evidence_result_ids": [],
       "label": "Accepted Ding-compatible numeric C_src(T)",
       "major_result_id": "T13_TTG_SOURCE_UNCERTAINTY_PACKAGE",
@@ -326,6 +379,9 @@
     {
       "acceptance": "The TTG material regime, same-state thermodynamic correction, and c_v uncertainty are closed at the same evidence grade.",
       "controlling_input_package": "T13_INPUT_DING_TTG_SOURCE",
+      "controlling_input_packages": [
+        "T13_INPUT_DING_TTG_SOURCE"
+      ],
       "evidence_result_ids": [],
       "label": "Material regime and uncertainty closure",
       "major_result_id": "T13_TTG_SOURCE_UNCERTAINTY_PACKAGE",
@@ -336,6 +392,11 @@
     {
       "acceptance": "The SI Phi anchor, physical coefficient, source C_src, and uncertainty chain are all accepted on one state.",
       "controlling_input_package": "T13_INPUT_DING_TTG_SOURCE + T13_INPUT_BASE_PHI_SI_ALPHA_BETA + T13_INPUT_PHYSICAL_TRANSPORT_MATCH",
+      "controlling_input_packages": [
+        "T13_INPUT_DING_TTG_SOURCE",
+        "T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
+        "T13_INPUT_PHYSICAL_TRANSPORT_MATCH"
+      ],
       "evidence_result_ids": [],
       "label": "Physical SI heat-flux/entropy map",
       "major_result_id": "T13_HEAT_FLUX_ENTROPY_PRODUCTION_MAPPING",
@@ -358,13 +419,14 @@
   "schema_version": "t13-full-closure-progress-v1",
   "source_hashes": {
     "docs/core/artifacts/t13_closure_input_package_audit.json": "1ef108fa0d8274ee732735a766889a65726d576ba47553b856f3bb01f3d3e2ae",
-    "docs/core/artifacts/t13_topic13_closure_matrix.json": "4a8f9078b90cccd17130f70950247e1b599900b2812bd7607cbfd122b686deb7",
-    "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json": "eea935d25ae9ace5fd93c3ff97a7b8f343e49692d3029045e52b82b8178b1385"
+    "docs/core/artifacts/t13_topic13_closure_matrix.json": "1c41e8063de7460dd2fb8ae7c4e7c2c7d56bc6c0b1b36cd3e2afb5eca23260b1",
+    "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json": "ca88e26cee62e42dae948359dd4e2834ba6b8af5ab971c363050cd38cdfc080f"
   },
   "subresults": [
     {
       "acceptance": "The principal-symbol incompatibility is scoped to the declared baseline and recorded without deleting it.",
       "controlling_input_package": null,
+      "controlling_input_packages": [],
       "evidence_result_ids": [],
       "label": "Conserved-C local-gradient no-go",
       "major_result_id": "T13_CAUSAL_THERMAL_BRANCH_CLOSURE",
@@ -375,6 +437,7 @@
     {
       "acceptance": "The branch has explicit equations, domain-of-dependence checks, and the unchanged leakage threshold.",
       "controlling_input_package": null,
+      "controlling_input_packages": [],
       "evidence_result_ids": [
         "T13_CAUSAL_FLUX_TELEGRAPH_BRANCH"
       ],
@@ -387,6 +450,7 @@
     {
       "acceptance": "The named coupled branch passes arrival, ledger, convergence, and anti-manipulation checks.",
       "controlling_input_package": null,
+      "controlling_input_packages": [],
       "evidence_result_ids": [
         "T13_CAUSAL_FLUX_PHI_COUPLED_LANE"
       ],
@@ -399,6 +463,7 @@
     {
       "acceptance": "The named branch is not silently promoted as the original conserved-C baseline.",
       "controlling_input_package": null,
+      "controlling_input_packages": [],
       "evidence_result_ids": [
         "T13_CAUSAL_THERMAL_BRANCH_SELECTION"
       ],
@@ -411,6 +476,7 @@
     {
       "acceptance": "The TTG and UET normalized curves use the declared ratio operators with no SI claim.",
       "controlling_input_package": null,
+      "controlling_input_packages": [],
       "evidence_result_ids": [],
       "label": "Normalized TTG measurement operator",
       "major_result_id": "T13_DIMENSIONAL_PHI_THERMAL_OBSERVABLE_MAP",
@@ -421,6 +487,7 @@
     {
       "acceptance": "Phi_E is kept as a separate conditional lane and is not relabeled as base Phi.",
       "controlling_input_package": null,
+      "controlling_input_packages": [],
       "evidence_result_ids": [
         "T13_MP48_PHI_E_DIMENSIONAL_ANCHOR_COMPARATOR",
         "T13_PHI_E_REFERENCE_NORMALIZATION",
@@ -435,6 +502,9 @@
     {
       "acceptance": "A declared dimensionful action/free-energy origin or an independent paired base-Phi/SI response record is accepted.",
       "controlling_input_package": "T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
+      "controlling_input_packages": [
+        "T13_INPUT_BASE_PHI_SI_ALPHA_BETA"
+      ],
       "evidence_result_ids": [],
       "label": "Base-Phi SI energy/temperature anchor",
       "major_result_id": "T13_DIMENSIONAL_PHI_THERMAL_OBSERVABLE_MAP",
@@ -445,6 +515,7 @@
     {
       "acceptance": "All screened candidates are recorded and zero eligible paired records is reported without a substitute value.",
       "controlling_input_package": null,
+      "controlling_input_packages": [],
       "evidence_result_ids": [
         "T13_ALPHA_PHI_K_PAIRED_RECORD_SEARCH"
       ],
@@ -457,6 +528,7 @@
     {
       "acceptance": "The transformation Delta_Phi -> s Delta_Phi and alpha -> alpha/s is recorded as the reason normalized data cannot identify alpha.",
       "controlling_input_package": null,
+      "controlling_input_packages": [],
       "evidence_result_ids": [
         "T13_ALPHA_PHI_K_NORMALIZED_SCALE_NO_GO"
       ],
@@ -469,6 +541,9 @@
     {
       "acceptance": "One eligible non-holdout paired record or a derivation with an independently fixed SI scale is accepted.",
       "controlling_input_package": "T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
+      "controlling_input_packages": [
+        "T13_INPUT_BASE_PHI_SI_ALPHA_BETA"
+      ],
       "evidence_result_ids": [],
       "label": "Independent numeric alpha record with uncertainty",
       "major_result_id": "T13_ALPHA_PHI_K_INDEPENDENT_CALIBRATION",
@@ -479,6 +554,7 @@
     {
       "acceptance": "The action-origin coefficient and finite-temperature response functional are recorded with natural-unit limits.",
       "controlling_input_package": null,
+      "controlling_input_packages": [],
       "evidence_result_ids": [
         "T13_UET_O2_ACTION_THERMAL_STIFFNESS_BETA_LANE",
         "T13_THERMAL_RESPONSE_BETA_CONTRACT"
@@ -492,6 +568,7 @@
     {
       "acceptance": "No Landauer identity or target response is used to infer beta_UET or beta_T13.",
       "controlling_input_package": null,
+      "controlling_input_packages": [],
       "evidence_result_ids": [
         "T13_BETA_SYMBOL_SEPARATION_NONCIRCULARITY_NO_GO",
         "T13_BETA_ACTION_NORMALIZED_CORRESPONDENCE_NO_GO"
@@ -505,6 +582,9 @@
     {
       "acceptance": "The base-Phi field normalization and dimensionful free-energy scale are independently fixed and propagated.",
       "controlling_input_package": "T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
+      "controlling_input_packages": [
+        "T13_INPUT_BASE_PHI_SI_ALPHA_BETA"
+      ],
       "evidence_result_ids": [],
       "label": "Normalized beta to SI correspondence",
       "major_result_id": "T13_UET_BRIDGE_BETA_SI_CORRESPONDENCE",
@@ -515,6 +595,7 @@
     {
       "acceptance": "The candidate EOS and independent-variable contract are machine-checked.",
       "controlling_input_package": null,
+      "controlling_input_packages": [],
       "evidence_result_ids": [
         "T13_COLLECTIVE_RESPONSE_EOS_STABILITY_CONTRACT"
       ],
@@ -527,6 +608,7 @@
     {
       "acceptance": "Positivity, Maxwell reciprocity, and declared domain checks pass on the chosen branch.",
       "controlling_input_package": null,
+      "controlling_input_packages": [],
       "evidence_result_ids": [
         "T13_UET_O2_NORMAL_THERMODYNAMIC_CONSISTENCY",
         "T13_UET_O2_THERMAL_STABILITY_BOUNDARY"
@@ -540,6 +622,7 @@
     {
       "acceptance": "The normal component and its thermodynamic derivatives are linked to the same declared state.",
       "controlling_input_package": null,
+      "controlling_input_packages": [],
       "evidence_result_ids": [
         "T13_UET_O2_FINITE_T_QUASIPARTICLE_EOS_LANE",
         "T13_UET_O2_THERMODYNAMIC_NORMAL_COMPONENT_LANE"
@@ -553,6 +636,10 @@
     {
       "acceptance": "Finite-temperature coefficients, material regime, c_v uncertainty, and SI Phi normalization are accepted together.",
       "controlling_input_package": "T13_INPUT_DING_TTG_SOURCE + T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
+      "controlling_input_packages": [
+        "T13_INPUT_DING_TTG_SOURCE",
+        "T13_INPUT_BASE_PHI_SI_ALPHA_BETA"
+      ],
       "evidence_result_ids": [],
       "label": "Physical source-backed EOS coefficients",
       "major_result_id": "T13_CHARGE_DENSITY_EOS",
@@ -563,6 +650,7 @@
     {
       "acceptance": "The tensor, frame, and coefficient provenance contract is explicit without a default physical value.",
       "controlling_input_package": null,
+      "controlling_input_packages": [],
       "evidence_result_ids": [
         "T13_COVARIANT_TRANSPORT_IMPLEMENTATION_BOUNDARY"
       ],
@@ -575,6 +663,7 @@
     {
       "acceptance": "The selected natural-unit correlator and response match are state-matched and finite-cutoff bounded.",
       "controlling_input_package": null,
+      "controlling_input_packages": [],
       "evidence_result_ids": [
         "T13_UET_O2_MICROSCOPIC_FINITE_CUTOFF_KUBO_MATCH",
         "T13_UET_O2_CONDENSED_RELATIVE_FLOW_KUBO_ADMISSION_LANE"
@@ -588,6 +677,7 @@
     {
       "acceptance": "Fourier/Cattaneo behavior is reported only as an internal simplified benchmark.",
       "controlling_input_package": null,
+      "controlling_input_packages": [],
       "evidence_result_ids": [
         "T13_GATECH_STANDARD_TRANSPORT_COMPARATOR"
       ],
@@ -600,6 +690,9 @@
     {
       "acceptance": "One source-backed or fully microscopic state-matched coefficient with uncertainty is admitted.",
       "controlling_input_package": "T13_INPUT_PHYSICAL_TRANSPORT_MATCH",
+      "controlling_input_packages": [
+        "T13_INPUT_PHYSICAL_TRANSPORT_MATCH"
+      ],
       "evidence_result_ids": [],
       "label": "Physical UET Kubo coefficient record",
       "major_result_id": "T13_COVARIANT_THERMAL_TRANSPORT",
@@ -610,6 +703,7 @@
     {
       "acceptance": "The formal contour, KMS/FDT, retardedness, and positivity interfaces are machine-checked.",
       "controlling_input_package": null,
+      "controlling_input_packages": [],
       "evidence_result_ids": [
         "T13_SK_KMS_ENTROPY_INTERFACE_CONTRACT",
         "T13_UET_O2_OPEN_SYSTEM_SK_KMS_ENTROPY_LANE"
@@ -623,6 +717,7 @@
     {
       "acceptance": "The declared interaction channels have state-matched retarded, KMS, and FDT witnesses.",
       "controlling_input_package": null,
+      "controlling_input_packages": [],
       "evidence_result_ids": [
         "T13_UET_O2_INTERACTING_SK_KMS_ACTION_INTERFACE",
         "T13_UET_O2_FINITE_T_DECLARED_FULL_SUNSET_SK_KMS_LANE"
@@ -636,6 +731,9 @@
     {
       "acceptance": "The microscopic response is connected to a physical coefficient and uncertainty without a synthetic substitute.",
       "controlling_input_package": "T13_INPUT_PHYSICAL_TRANSPORT_MATCH",
+      "controlling_input_packages": [
+        "T13_INPUT_PHYSICAL_TRANSPORT_MATCH"
+      ],
       "evidence_result_ids": [],
       "label": "Physical SK/KMS-to-transport match",
       "major_result_id": "T13_SK_KMS_MATCHING",
@@ -646,6 +744,7 @@
     {
       "acceptance": "The entropy current, force basis, and nonnegative production witness are explicit.",
       "controlling_input_package": null,
+      "controlling_input_packages": [],
       "evidence_result_ids": [
         "T13_UET_O2_FINITE_CHANNEL_ENTROPY_BALANCE_LANE"
       ],
@@ -658,6 +757,7 @@
     {
       "acceptance": "Heat exchange, entropy production, and conservation constraints close on the declared formal branch.",
       "controlling_input_package": null,
+      "controlling_input_packages": [],
       "evidence_result_ids": [
         "T13_UET_O2_COVARIANT_ENTROPY_HEAT_FLUX_BALANCE_LANE",
         "T13_TRANSPORT_KMS_ENTROPY_STATUS_BOUNDARY"
@@ -671,6 +771,9 @@
     {
       "acceptance": "The physical coefficient, SI heat flux, source uncertainty, and entropy-production uncertainty are linked.",
       "controlling_input_package": "T13_INPUT_PHYSICAL_TRANSPORT_MATCH",
+      "controlling_input_packages": [
+        "T13_INPUT_PHYSICAL_TRANSPORT_MATCH"
+      ],
       "evidence_result_ids": [],
       "label": "Physical entropy-production mapping",
       "major_result_id": "T13_ENTROPY_CURRENT_DISSIPATIVE_BALANCE",
@@ -681,6 +784,7 @@
     {
       "acceptance": "The requested numeric payload fields, locators, units, uncertainty, preprocessing, row identity, and hash are fixed.",
       "controlling_input_package": null,
+      "controlling_input_packages": [],
       "evidence_result_ids": [
         "T13_DING_PBTE_AUTHOR_REQUEST_PACKAGE",
         "T13_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY"
@@ -694,6 +798,7 @@
     {
       "acceptance": "The checked public routes are bounded without claiming author-held data are absent.",
       "controlling_input_package": null,
+      "controlling_input_packages": [],
       "evidence_result_ids": [
         "T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY_BOUNDARY",
         "T13_DING_PBTE_OA_NUMERIC_INPUT_NO_GO"
@@ -707,6 +812,7 @@
     {
       "acceptance": "Candidate numerical stability and sensitivity are recorded separately from Ding acceptance.",
       "controlling_input_package": null,
+      "controlling_input_packages": [],
       "evidence_result_ids": [
         "T13_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY",
         "T13_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION"
@@ -720,6 +826,9 @@
     {
       "acceptance": "An authorized Ding package or accepted same-regime independent reproduction is admitted with source-grade uncertainty.",
       "controlling_input_package": "T13_INPUT_DING_TTG_SOURCE",
+      "controlling_input_packages": [
+        "T13_INPUT_DING_TTG_SOURCE"
+      ],
       "evidence_result_ids": [],
       "label": "Accepted Ding-compatible numeric C_src(T)",
       "major_result_id": "T13_TTG_SOURCE_UNCERTAINTY_PACKAGE",
@@ -730,6 +839,9 @@
     {
       "acceptance": "The TTG material regime, same-state thermodynamic correction, and c_v uncertainty are closed at the same evidence grade.",
       "controlling_input_package": "T13_INPUT_DING_TTG_SOURCE",
+      "controlling_input_packages": [
+        "T13_INPUT_DING_TTG_SOURCE"
+      ],
       "evidence_result_ids": [],
       "label": "Material regime and uncertainty closure",
       "major_result_id": "T13_TTG_SOURCE_UNCERTAINTY_PACKAGE",
@@ -740,6 +852,7 @@
     {
       "acceptance": "The natural heat-current response matches the declared covariant moment lane at finite cutoff.",
       "controlling_input_package": null,
+      "controlling_input_packages": [],
       "evidence_result_ids": [
         "T13_UET_O2_HEAT_CURRENT_KUBO_MATCH"
       ],
@@ -752,6 +865,7 @@
     {
       "acceptance": "The failed extrapolation route is recorded as a no-go and is not relabeled as physical Kubo closure.",
       "controlling_input_package": null,
+      "controlling_input_packages": [],
       "evidence_result_ids": [
         "T13_UET_O2_HEAT_CURRENT_KUBO_CONTINUUM_BOUNDARY"
       ],
@@ -764,6 +878,7 @@
     {
       "acceptance": "The named regularized lane passes its declared convergence and conservation checks without replacing the failed baseline.",
       "controlling_input_package": null,
+      "controlling_input_packages": [],
       "evidence_result_ids": [
         "T13_UET_O2_REGULARIZED_CONTINUUM_HEAT_CURRENT_LANE"
       ],
@@ -776,6 +891,11 @@
     {
       "acceptance": "The SI Phi anchor, physical coefficient, source C_src, and uncertainty chain are all accepted on one state.",
       "controlling_input_package": "T13_INPUT_DING_TTG_SOURCE + T13_INPUT_BASE_PHI_SI_ALPHA_BETA + T13_INPUT_PHYSICAL_TRANSPORT_MATCH",
+      "controlling_input_packages": [
+        "T13_INPUT_DING_TTG_SOURCE",
+        "T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
+        "T13_INPUT_PHYSICAL_TRANSPORT_MATCH"
+      ],
       "evidence_result_ids": [],
       "label": "Physical SI heat-flux/entropy map",
       "major_result_id": "T13_HEAT_FLUX_ENTROPY_PRODUCTION_MAPPING",

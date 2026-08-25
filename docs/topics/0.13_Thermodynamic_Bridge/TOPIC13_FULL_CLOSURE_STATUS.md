@@ -25,6 +25,17 @@ WHAT_REMAINS_OPEN:
 | `T13_TTG_SOURCE_UNCERTAINTY_PACKAGE` | `material_and_uncertainty_closure` | The TTG material regime, same-state thermodynamic correction, and c_v uncertainty are closed at the same evidence grade. |
 | `T13_HEAT_FLUX_ENTROPY_PRODUCTION_MAPPING` | `physical_heat_flux_entropy_map` | The SI Phi anchor, physical coefficient, source C_src, and uncertainty chain are all accepted on one state. |
 
+CLOSURE_ARITHMETIC:
+- Core-ready requires all `36` required subresults to leave `OPEN`; current counts are `CLOSED_FOR_LANE=21`, `CLOSED_AS_NO_GO=5`, `CLOSED_FOR_CORE=0`, `OPEN=10`.
+- The `10` open subresults are controlled by `3` root input packages, so the next work is evidence acquisition/derivation, not indefinite reruns.
+
+ROOT_INPUT_PACKAGES:
+| Package | Status | Open subresults | Missing acceptance fields |
+| --- | --- | --- | --- |
+| `T13_INPUT_DING_TTG_SOURCE` | `BLOCKED` | physical_source_backed_eos, accepted_numeric_csrc, material_and_uncertainty_closure, physical_heat_flux_entropy_map | authorized_numeric_C_src_payload, accepted_independent_reproduction, Ding_material_state_match, source_grade_uncertainty |
+| `T13_INPUT_BASE_PHI_SI_ALPHA_BETA` | `BLOCKED` | base_phi_si_anchor, independent_alpha_record, normalized_beta_si_map, physical_source_backed_eos, physical_heat_flux_entropy_map | eligible_paired_alpha_record, numeric_alpha_emitted, dimensional_bridge_open_inputs_closed, dimensionful_action_SI_map |
+| `T13_INPUT_PHYSICAL_TRANSPORT_MATCH` | `BLOCKED` | physical_uet_kubo_record, physical_sk_transport_match, physical_entropy_production_mapping, physical_heat_flux_entropy_map | physical_coefficient_record, finite_temperature_transport_completion, physical_anchor_supplied, physical_heat_flux_entropy_link |
+
 DEPENDENCY_UNLOCKED:
 - Causal named branch only. Full Topic 13, curved 3+1, Gravity, and constitutive transport remain locked.
 
@@ -32,7 +43,7 @@ STATUS:
 - `BLOCKED_OPEN_T13_FULL_BRIDGE`; `claim_promotion=false`; `full_core_unlock=false`.
 
 WHAT_CHANGED:
-- Generated this progress dashboard from current canonical artifacts; no equation, threshold, source role, or claim status was changed.
+- Added package-level closure arithmetic and blocker ownership to the generated dashboard; no equation, threshold, source role, or claim status was changed.
 
 EQUATION_OR_MAPPING:
 - `y_TTG = Delta_Tq(t) / Delta_Tq(0)`
@@ -61,4 +72,4 @@ CLAIM_BOUNDARY:
 RERUN_POLICY:
 - Do not rerun the same numeric gates as a substitute for missing evidence. Rerun when an accepted source, calibration record, physical transport record, or its hash changes.
 
-Generated UTC: `2026-08-24T17:25:38.621332+00:00`.
+Generated UTC: `2026-08-25T05:06:17.770899+00:00`.

@@ -1,3 +1,16 @@
+## 2026-08-25 - Topic 13 closure arithmetic and package ownership wave
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for the closure-progress reporting contract; canonical Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_IS_ACTUALLY_CLOSED: The generated progress artifact now reports the 36-result closure arithmetic and assigns each open result to one or more of the three root input packages. This makes the major-result boundary visible without counting a lane PASS as Core closure.
+WHAT_REMAINS_OPEN: `OPEN=10`; no result is `CLOSED_FOR_CORE`. The unresolved groups remain Ding-compatible `C_src`/material uncertainty, base-Phi SI/alpha/beta, and physical Kubo/SK/KMS/entropy linkage.
+DEPENDENCY_UNLOCKED: None beyond reporting visibility. Full Topic 13, curved 3+1, Gravity, and constitutive transport remain locked.
+STATUS: `PASS_T13_CLOSURE_PROGRESS_RENDERED`; `claim_promotion=false`; `full_core_unlock=false`; `xie_2026_accessed=false`.
+WHAT_CHANGED: Extended the renderer and generated progress dashboard with closure arithmetic, package ownership, open-subresult lists, and missing acceptance fields. No equation, threshold, source role, calibration value, or holdout role changed.
+EQUATION_OR_MAPPING: `y_TTG = Delta_Tq(t) / Delta_Tq(0)`; `y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)`; `Delta_Tq = alpha_Phi_K * Delta_Phi`; no new dimensional value was emitted.
+VERIFICATION: Renderer returned `36` required subresults, `21` lane-closed, `5` no-go, `0` Core-closed, and `10` open; closure-matrix test and renderer syntax check passed; no holdout or target fit was used.
+CONTROLLING_BLOCKER: `dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing`, with the three root input packages still blocked.
+NEXT_ACTION: Obtain an accepted external/derived input package; do not repeat numeric reruns without an input hash change.
+CLAIM_BOUNDARY: Reporting hardening only. It does not close Full Topic 13, produce an SI temperature prediction, or unlock downstream claims.
 ## 2026-08-25 - Ding and base-Phi external route boundary wave
 
 MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for the external-route boundary; canonical Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
