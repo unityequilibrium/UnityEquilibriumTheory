@@ -4736,3 +4736,66 @@ CONTROLLING_BLOCKER: `dimensional_phi_energy_anchor_or_independent_alpha_calibra
 NEXT_ACTION: Obtain a declared coefficient-provenance-backed SI/action normalization or an independent paired base-Phi/SI response record. Do not assign Planck or Newton coupling by convention, fit `alpha_Phi_K`, or read Xie 2026.
 CLAIM_BOUNDARY: This closes the action-route provenance/no-hidden-anchor boundary and metadata synchronization only. It does not derive an SI thermal observable, validate TTG, close Topic 13, or unlock downstream Core/Gravity work.
 EVIDENCE_PATHS: `docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json`; `docs/scripts/audit/sync_topic13_covariant_action_si_anchor_into_gates.py`; `docs/core/test/test_topic13_covariant_action_si_anchor_integration.py`; `docs/scripts/audit/audit_major_result_dependency_unlock.py`; `docs/core/artifacts/t13_closure_input_package_audit.json`; `docs/core/artifacts/t13_topic13_closure_matrix.json`.
+
+### 2026-08-26 - Topic 13 Ding heating back-calculation identifiability boundary wave
+
+MAJOR_RESULT_CLOSURE:
+- T13_DING_C_SRC_HEATING_BACKCALCULATION_IDENTIFIABILITY is CLOSED_AS_NO_GO for the captured incident-heating/normalized-TTG route only; Full Topic 13 remains PARTIAL and BLOCKED_OPEN_T13_FULL_BRIDGE.
+
+WHAT_IS_ACTUALLY_CLOSED:
+- The verifier closes the route that would infer C_src from Ding incident fluence, the reported <3 K surface-temperature bound, and normalized Fig. 1d TTG rows.
+- The scale witness is explicit: Delta_Tq = eta_abs * F_incident / (l_th * C_src), while (C_src, eta_abs/l_th) -> (s*C_src, s*eta_abs/l_th) leaves the response unchanged.
+- The result is hash-linked to the Ding setup boundary and normalized source lane; it emits no C_src, alpha_Phi_K, e0, or holdout value.
+
+WHAT_REMAINS_OPEN:
+- accepted_numeric_csrc and material_and_uncertainty_closure remain open.
+- base_phi_si_anchor, independent_alpha_record, normalized_beta_si_map, physical_source_backed_eos, physical_uet_kubo_record, physical_sk_transport_match, physical_entropy_production_mapping, and physical_heat_flux_entropy_map remain open.
+
+DEPENDENCY_UNLOCKED:
+- None. This no-go does not accept a Ding package and does not unlock Core, Gravity, constitutive transport, or Galaxy.
+
+STATUS:
+- PASS_SCOPED_NO_GO_DING_C_SRC_HEATING_BACKCALCULATION; 15/15 audit checks passed; full_core_unlock=false; claim_promotion=false.
+
+WHAT_CHANGED:
+- Added docs/scripts/audit/audit_topic13_ding_csrc_heating_backcalculation_identifiability.py, docs/core/artifacts/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json, and docs/core/test/test_topic13_ding_csrc_heating_backcalculation_identifiability.py.
+- Added the no-go to the source-and-uncertainty closure contract and regenerated the full gate projections, closure matrix, progress dashboard, and 37-row subresult map.
+- Updated the minimal input contract and regression count assertions from 36 to 37; no equation, threshold, source role, fit path, or holdout policy was relaxed.
+- Repaired the legacy register next_major_result compatibility field while preserving the detailed controller; downstream decisions remain blocked.
+
+EQUATION_OR_MAPPING:
+- F_incident = E_pump/A_1e2.
+- Delta_u_abs = eta_abs*F_incident/l_th.
+- Delta_Tq = Delta_u_abs/C_src.
+- y_TTG = Delta_Tq(t)/Delta_Tq(0).
+- The normalized operator cannot recover the missing absolute amplitude.
+
+VERIFICATION:
+- New no-go audit: 15/15 checks passed.
+- Focused regression: 7 passed.
+- Full gate: BLOCKED_OPEN_T13_FULL_BRIDGE with the same 7 blocker classes.
+- Input-package audit: 3 packages, 0 accepted_for_core, holdout_accessed=false.
+- Dependency gate: downstream Core curved 3+1, GR, constitutive transport, and Galaxy all remain BLOCKED_DEPENDENCY.
+- Current matrix: 21 CLOSED_FOR_LANE, 6 CLOSED_AS_NO_GO, 0 CLOSED_FOR_CORE, 10 OPEN across 37 required subresults.
+- Artifact hashes: no-go 0a3b785b0a75e72a41ef9ef4521879ef74cc191d5d46271eaa2a08f6b87e657b; matrix 10d8a400e8e58d74e24f61f94e304227613fa8d1140726b84d620a5df16b49f6; progress 870d17180a03e31d19c1cfffc7ebcace39893d8484f5036d403a630e6620e239; input 6272345abe85851154967534934b0cae3174edda9039316ffbe0821a203e4210.
+
+CONTROLLING_BLOCKER:
+- ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing remains the nearest controller; the three root input packages remain blocked.
+
+NEXT_ACTION:
+- Obtain the authorized Ding numeric payload or accepted same-regime PBTE reproduction with material/state mapping, source-grade uncertainty, convergence, permission, and row identity. Do not infer C_src from incident fluence, the <3 K bound, or normalized TTG rows.
+
+CLAIM_BOUNDARY:
+- Scoped route no-go only. It is not numeric C_src, independent alpha calibration, TTG prediction, external validation, Core closure, or global UET closure.
+
+EVIDENCE_PATHS:
+- docs/core/artifacts/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json
+- docs/scripts/audit/audit_topic13_ding_csrc_heating_backcalculation_identifiability.py
+- docs/core/test/test_topic13_ding_csrc_heating_backcalculation_identifiability.py
+- docs/core/artifacts/t13_topic13_closure_matrix.json
+- docs/core/artifacts/t13_full_closure_progress.json
+
+EVIDENCE_HASH:
+- no-go artifact: 0a3b785b0a75e72a41ef9ef4521879ef74cc191d5d46271eaa2a08f6b87e657b
+- matrix: 10d8a400e8e58d74e24f61f94e304227613fa8d1140726b84d620a5df16b49f6
+- progress: 870d17180a03e31d19c1cfffc7ebcace39893d8484f5036d403a630e6620e239

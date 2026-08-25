@@ -6,7 +6,7 @@
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "2ac3efb773ed3b48ebe86ff1293c3089072f5ee921db257d8eb08c1b15a956c7"
+    "sha256": "d96dcdd7a4ee45389138881292da920f94577752626657612864eab7fba9439b"
   },
   "decisions": {
     "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY": {
@@ -75,7 +75,7 @@
   ],
   "claim_boundary": "Dependency decisions only; no downstream result is promoted by a checkpoint or comparator pass.",
   "topic13_partial_evidence": {
-    "register_sha256": "2ac3efb773ed3b48ebe86ff1293c3089072f5ee921db257d8eb08c1b15a956c7",
+    "register_sha256": "d96dcdd7a4ee45389138881292da920f94577752626657612864eab7fba9439b",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",
@@ -151,8 +151,7 @@
       "sha256": "0c4aaa38c138f9818c1a1e81a93dc7512f859c0d9095e238d2c12e7a3cf31c05",
       "summary": {
         "status": "PASS_OPEN_CALIBRATION_REQUIREMENT",
-        "full_core_unlock": false,
-        "closure_level": "OPEN"
+        "full_core_unlock": false
       }
     },
     "base_phi_calibration_controller": "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
@@ -2217,11 +2216,11 @@
     },
     "closure_matrix": {
       "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-      "sha256": "fa4679dddfefeb8e5b1d371d86adb426f624c1c26a3c902ab80f72626b9bb040",
+      "sha256": "10d8a400e8e58d74e24f61f94e304227613fa8d1140726b84d620a5df16b49f6",
       "full_core_unlock": false,
       "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
       "required_major_result_count": 10,
-      "required_subresult_count": 36
+      "required_subresult_count": 37
     },
     "topic13_flat_thermodynamic_bridge_components": {
       "path": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
@@ -2236,14 +2235,14 @@
     },
     "full_topic_closure_contract": {
       "required_major_result_count": 10,
-      "required_subresult_count": 36,
+      "required_subresult_count": 37,
       "current_major_result_counts": {
         "CLOSED_AS_NO_GO": 1,
         "OPEN": 3,
         "PARTIAL": 6
       },
       "current_subresult_counts": {
-        "CLOSED_AS_NO_GO": 5,
+        "CLOSED_AS_NO_GO": 6,
         "CLOSED_FOR_LANE": 21,
         "OPEN": 10
       },

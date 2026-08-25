@@ -1,4 +1,12 @@
 # Data Manifest
+## Current Closure Projection (2026-08-26)
+
+- Heating/back-calculation no-go artifact: docs/core/artifacts/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json; SHA-256 0a3b785b0a75e72a41ef9ef4521879ef74cc191d5d46271eaa2a08f6b87e657b.
+- Source package and raw article hashes are checked against the Ding experimental-heating boundary and the normalized Fig. 1d lane. The result is CLOSED_AS_NO_GO only for the route that attempts to infer absolute C_src from incident fluence, the <3 K upper bound, and normalized TTG rows.
+- Equation boundary: Delta_u_abs = eta_abs * F_incident / l_th; Delta_Tq = Delta_u_abs / C_src; y_TTG = Delta_Tq(t) / Delta_Tq(0). Missing absorption/thermalized-volume inputs and missing absolute Delta_Tq leave C_src non-identifiable.
+- No numeric C_src, alpha_Phi_K, e0, or holdout-derived value was emitted. The authorized Ding payload or accepted same-regime PBTE reproduction route remains the only path to accepted_numeric_csrc.
+- Canonical projection after regeneration: 10 major results, 37 required subresults, 21 CLOSED_FOR_LANE, 6 CLOSED_AS_NO_GO, 0 CLOSED_FOR_CORE, 10 OPEN, 7 blocker groups, and 0 accepted root input packages. Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE.
+
 ## Current Source-Pair Wave (2026-08-24)
 
 ### Causal Core handoff and MP48 mode diagnostic (2026-08-24)

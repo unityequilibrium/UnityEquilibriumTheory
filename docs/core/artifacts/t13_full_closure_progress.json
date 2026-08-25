@@ -18,20 +18,20 @@
     ]
   },
   "closure_arithmetic": {
-    "closed_as_no_go": 5,
+    "closed_as_no_go": 6,
     "closed_for_core": 0,
     "closed_for_lane": 21,
     "core_handoff_ready": 1,
     "full_topic_core_ready_rule": "all required subresults must be CLOSED_FOR_CORE or an explicitly accepted closure level in the canonical full gate; no OPEN subresult and all required input packages accepted",
-    "non_open": 26,
-    "non_open_fraction": 0.7222222222222222,
+    "non_open": 27,
+    "non_open_fraction": 0.7297297297297297,
     "open": 10,
     "open_gap": 10,
-    "required_subresults": 36,
+    "required_subresults": 37,
     "root_input_packages": 3
   },
   "closure_counts": {
-    "CLOSED_AS_NO_GO": 5,
+    "CLOSED_AS_NO_GO": 6,
     "CLOSED_FOR_LANE": 21,
     "OPEN": 10
   },
@@ -47,7 +47,7 @@
     "downstream_core_gravity_transport": "LOCKED",
     "full_topic_13": "LOCKED until all required subresults are closed at their declared level"
   },
-  "generated_at": "2026-08-25T19:24:15.963531+00:00",
+  "generated_at": "2026-08-25T20:19:33.977726+00:00",
   "holdout_policy": {
     "calibration_path_may_read_holdout": false,
     "target_fit_performed": false,
@@ -266,9 +266,9 @@
         "accepted_numeric_csrc",
         "material_and_uncertainty_closure"
       ],
-      "required_subresult_count": 5,
+      "required_subresult_count": 6,
       "subresult_status_counts": {
-        "CLOSED_AS_NO_GO": 1,
+        "CLOSED_AS_NO_GO": 2,
         "CLOSED_FOR_LANE": 2,
         "OPEN": 2
       }
@@ -293,7 +293,7 @@
   ],
   "minimal_input_contract": {
     "path": "docs/core/artifacts/t13_full_closure_minimal_input_contract.json",
-    "sha256": "97b910b7fec3dc0342e903f4ef97aff7df960e0b45ce9fe2688befe7ea38f489",
+    "sha256": "6fbf0218e66700d0804dce1c07d2b6a08e3013c7568e07df46ad5b6443337aa7",
     "status": "PASS_SCOPED_MINIMAL_INPUT_CONTRACT_OPEN",
     "target_result": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
   },
@@ -433,7 +433,7 @@
     }
   ],
   "required_major_result_count": 10,
-  "required_subresult_count": 36,
+  "required_subresult_count": 37,
   "rerun_policy": {
     "required_external_state_change": [
       "authorized Ding-compatible C_src payload or accepted same-regime reproduction",
@@ -446,9 +446,9 @@
   "schema_version": "t13-full-closure-progress-v1",
   "source_hashes": {
     "docs/core/artifacts/t13_closure_input_package_audit.json": "6272345abe85851154967534934b0cae3174edda9039316ffbe0821a203e4210",
-    "docs/core/artifacts/t13_full_closure_minimal_input_contract.json": "97b910b7fec3dc0342e903f4ef97aff7df960e0b45ce9fe2688befe7ea38f489",
-    "docs/core/artifacts/t13_topic13_closure_matrix.json": "fa4679dddfefeb8e5b1d371d86adb426f624c1c26a3c902ab80f72626b9bb040",
-    "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json": "9c76b746ffb4c50390e3e62c4546da3dc17bea31f0234a21923cf8a276b4fe35"
+    "docs/core/artifacts/t13_full_closure_minimal_input_contract.json": "6fbf0218e66700d0804dce1c07d2b6a08e3013c7568e07df46ad5b6443337aa7",
+    "docs/core/artifacts/t13_topic13_closure_matrix.json": "10d8a400e8e58d74e24f61f94e304227613fa8d1140726b84d620a5df16b49f6",
+    "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json": "d787dea150faf58ecc6f7bbd5dd2f7770ea7351bb875253a5004cffe70ed0a70"
   },
   "subresults": [
     {
@@ -836,6 +836,19 @@
       "required_closure_level": "CLOSED_AS_NO_GO",
       "status": "CLOSED_AS_NO_GO",
       "subresult_id": "public_route_boundary"
+    },
+    {
+      "acceptance": "Incident fluence, a temperature upper bound, and normalized TTG rows are shown not to identify absolute C_src without absorbed-energy and absolute-response inputs.",
+      "controlling_input_package": null,
+      "controlling_input_packages": [],
+      "evidence_result_ids": [
+        "T13_DING_C_SRC_HEATING_BACKCALCULATION_IDENTIFIABILITY"
+      ],
+      "label": "Incident-heating C_src back-calculation no-go",
+      "major_result_id": "T13_TTG_SOURCE_UNCERTAINTY_PACKAGE",
+      "required_closure_level": "CLOSED_AS_NO_GO",
+      "status": "CLOSED_AS_NO_GO",
+      "subresult_id": "heating_backcalculation_no_go"
     },
     {
       "acceptance": "Candidate numerical stability and sensitivity are recorded separately from Ding acceptance.",

@@ -28,7 +28,7 @@ def test_minimal_input_contract_covers_current_open_subresults() -> None:
     assert progress["minimal_input_contract"]["sha256"] == digest(CONTRACT)
     assert progress["minimal_input_contract"]["status"] == contract["status"]
     assert contract["status"] == "PASS_SCOPED_MINIMAL_INPUT_CONTRACT_OPEN"
-    assert contract["full_closure_rule"]["required_subresult_count"] == 36
+    assert contract["full_closure_rule"]["required_subresult_count"] == 37
     assert contract["full_closure_rule"]["current_open_subresult_count"] == 10
     assert contract["full_closure_rule"]["required_root_input_package_count"] == 3
     assert contract["full_closure_rule"]["target_result"] == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"

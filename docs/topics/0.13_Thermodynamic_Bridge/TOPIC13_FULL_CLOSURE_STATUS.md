@@ -4,8 +4,8 @@ This file is generated from the canonical closure matrix and full gate. It is a 
 
 MAJOR_RESULT_CLOSURE:
 - Full Topic 13: `PARTIAL`.
-- Required subresults: `36`; `CLOSED_FOR_LANE=21`, `CLOSED_AS_NO_GO=5`, `CLOSED_FOR_CORE=0`, `OPEN=10`.
-- Progress arithmetic: `non_open=26/36`; `open_gap=10`; `non_open_fraction=0.7222`. Non-open is not the same as Core closure.
+- Required subresults: `37`; `CLOSED_FOR_LANE=21`, `CLOSED_AS_NO_GO=6`, `CLOSED_FOR_CORE=0`, `OPEN=10`.
+- Progress arithmetic: `non_open=27/37`; `open_gap=10`; `non_open_fraction=0.7297`. Non-open is not the same as Core closure.
 
 WHAT_IS_ACTUALLY_CLOSED:
 - The named causal flux-Phi branch is `CLOSED_FOR_CORE` only as a bounded normalized branch; the original conserved-C baseline remains blocked/no-go.
@@ -37,13 +37,13 @@ MAJOR_RESULT_BREAKDOWN:
 | `T13_COVARIANT_THERMAL_TRANSPORT` | `PARTIAL` | 3 | 0 | 0 | 1 |
 | `T13_SK_KMS_MATCHING` | `PARTIAL` | 2 | 0 | 0 | 1 |
 | `T13_ENTROPY_CURRENT_DISSIPATIVE_BALANCE` | `PARTIAL` | 2 | 0 | 0 | 1 |
-| `T13_TTG_SOURCE_UNCERTAINTY_PACKAGE` | `OPEN` | 2 | 1 | 0 | 2 |
+| `T13_TTG_SOURCE_UNCERTAINTY_PACKAGE` | `OPEN` | 2 | 2 | 0 | 2 |
 | `T13_HEAT_FLUX_ENTROPY_PRODUCTION_MAPPING` | `PARTIAL` | 2 | 1 | 0 | 1 |
 - The full gate currently compresses the `10` open subresults into `7` blocker classes; the subresult count is the evidence checklist, while the blocker count is the current decision controller.
 
 CLOSURE_ARITHMETIC:
-- Core-ready requires all `36` required subresults to leave `OPEN`; current counts are `CLOSED_FOR_LANE=21`, `CLOSED_AS_NO_GO=5`, `CLOSED_FOR_CORE=0`, `OPEN=10`.
-- The visible progress count is `non_open=26` of `36` (`72.2%`), while the remaining closure gap is `open_gap=10`. This is a reporting metric only and does not promote lane evidence to Core.
+- Core-ready requires all `37` required subresults to leave `OPEN`; current counts are `CLOSED_FOR_LANE=21`, `CLOSED_AS_NO_GO=6`, `CLOSED_FOR_CORE=0`, `OPEN=10`.
+- The visible progress count is `non_open=27` of `37` (`73.0%`), while the remaining closure gap is `open_gap=10`. This is a reporting metric only and does not promote lane evidence to Core.
 - The `10` open subresults are controlled by `3` root input packages, so the next work is evidence acquisition/derivation, not indefinite reruns.
 - Named core handoff count: 1; this does not promote Full Topic 13 while any subresult or root input package remains open.
 
@@ -55,7 +55,7 @@ ROOT_INPUT_PACKAGES:
 | `T13_INPUT_PHYSICAL_TRANSPORT_MATCH` | `BLOCKED` | physical_uet_kubo_record, physical_sk_transport_match, physical_entropy_production_mapping, physical_heat_flux_entropy_map | physical_coefficient_record, finite_temperature_transport_completion, physical_anchor_supplied, physical_heat_flux_entropy_link |
 
 MINIMAL_INPUT_CONTRACT:
-- docs/core/artifacts/t13_full_closure_minimal_input_contract.json; SHA-256 97b910b7fec3dc0342e903f4ef97aff7df960e0b45ce9fe2688befe7ea38f489.
+- docs/core/artifacts/t13_full_closure_minimal_input_contract.json; SHA-256 6fbf0218e66700d0804dce1c07d2b6a08e3013c7568e07df46ad5b6443337aa7.
 - This is a field-level evidence admission contract; it does not create a source value or promote a comparator.
 
 DEPENDENCY_UNLOCKED:
@@ -94,4 +94,4 @@ CLAIM_BOUNDARY:
 RERUN_POLICY:
 - Do not rerun the same numeric gates as a substitute for missing evidence. Rerun when an accepted source, calibration record, physical transport record, or its hash changes.
 
-Generated UTC: `2026-08-25T19:24:15.963531+00:00`.
+Generated UTC: `2026-08-25T20:19:33.977726+00:00`.

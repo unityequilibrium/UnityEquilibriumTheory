@@ -6,6 +6,20 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Canonical Current Gate (2026-08-26)
+
+MAJOR_RESULT_CLOSURE: T13_DING_C_SRC_HEATING_BACKCALCULATION_IDENTIFIABILITY is CLOSED_AS_NO_GO for the captured incident-heating/normalized-TTG route only; Full Topic 13 remains PARTIAL and BLOCKED_OPEN_T13_FULL_BRIDGE.
+WHAT_IS_ACTUALLY_CLOSED: Ding reports incident pump energy/fluence and a surface-temperature upper bound, while the figure-derived TTG lane is normalized. The audit proves that these inputs do not identify absorbed energy density, absolute Delta_Tq, C_src, or alpha_Phi_K without independent absorption, thermalized-volume, and absolute-response records.
+WHAT_REMAINS_OPEN: accepted_numeric_csrc, material_and_uncertainty_closure, base_phi_si_anchor, independent_alpha_record, normalized_beta_si_map, physical_source_backed_eos, physical_uet_kubo_record, physical_sk_transport_match, physical_entropy_production_mapping, and physical_heat_flux_entropy_map remain open.
+DEPENDENCY_UNLOCKED: None from this no-go. The bounded causal branch remains the only named Core handoff; curved 3+1, Gravity, constitutive transport, and Galaxy remain locked.
+STATUS: PASS_SCOPED_NO_GO_DING_C_SRC_HEATING_BACKCALCULATION; 15/15 checks passed; matrix is 21 CLOSED_FOR_LANE, 6 CLOSED_AS_NO_GO, 0 CLOSED_FOR_CORE, 10 OPEN across 37 required subresults; full_core_unlock=false; claim_promotion=false.
+WHAT_CHANGED: Added a hash-linked source-boundary no-go artifact, reproducible audit, regression test, closure-contract subresult, and regenerated matrix/progress/map projections.
+EQUATION_OR_MAPPING: Delta_u_abs = eta_abs * F_incident / l_th; Delta_Tq = Delta_u_abs / C_src; y_TTG = Delta_Tq(t) / Delta_Tq(0). The scale transformation (C_src, eta_abs/l_th) -> (s*C_src, s*eta_abs/l_th) leaves the back-calculated response unchanged, while normalization removes the overall amplitude.
+VERIFICATION: Incident fluence is 6.189358898018153 J m^-2; the captured temperature statement is <3 K as a bound, not a point estimate; no numeric C_src or alpha was emitted; no fit, Landauer inference, or Xie 2026 holdout access occurred.
+CONTROLLING_BLOCKER: ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing remains the source controller; independent base-Phi/SI/alpha/beta and physical transport packages are also blocked.
+NEXT_ACTION: Obtain an authorized Ding mode-resolved C_src package or accepted same-regime PBTE reproduction with material mapping, convergence, uncertainty, and permission. Do not infer C_src from incident fluence, the <3 K bound, or normalized TTG rows.
+CLAIM_BOUNDARY: Scoped route no-go only. This does not prove that an authorized raw Ding payload or accepted same-regime reproduction cannot supply C_src; it is not numeric C_src, alpha calibration, TTG prediction, external validation, Core closure, or global UET closure.
+EVIDENCE: docs/core/artifacts/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json (0a3b785b0a75e72a41ef9ef4521879ef74cc191d5d46271eaa2a08f6b87e657b); docs/core/artifacts/t13_topic13_closure_matrix.json (10d8a400e8e58d74e24f61f94e304227613fa8d1140726b84d620a5df16b49f6); docs/core/artifacts/t13_full_closure_progress.json (870d17180a03e31d19c1cfffc7ebcace39893d8484f5036d403a630e6620e239).
 ## 2026-08-24 - Causal Core handoff and MP48 mode diagnostic
 
 MAJOR_RESULT_CLOSURE: `T13_CAUSAL_FLUX_PHI_COUPLED_CORE_COMPATIBILITY` is `CLOSED_FOR_CORE` as a bounded named normalized branch; the Full Topic 13 gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.

@@ -22,7 +22,7 @@
   },
   "full_closure_rule": {
     "required_major_result_count": 10,
-    "required_subresult_count": 36,
+    "required_subresult_count": 37,
     "current_open_subresult_count": 10,
     "required_root_input_package_count": 3,
     "target_result": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
@@ -215,7 +215,7 @@
     "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json": "880eb2cc94543f19fefae13ad8c64af820bb619d9c898cd4e1e710494519d281",
     "docs/core/artifacts/t13_base_phi_si_reconciliation_audit.json": "524b19752a335d71e0e53c7ab860d0e08d07a7a75265b6c9d1785d3beb630c2c",
     "docs/core/artifacts/t13_physical_kubo_coefficient_provenance_audit.json": "af78a1eb742e6438d679263771ef85b0f500726f4342a5f0a7ccefbe07a54f63",
-    "docs/core/artifacts/t13_topic13_closure_matrix.json": "0ab1f9633f7813b60d0ed83d341576fea56b00749898822b28baebbf84b4981d"
+    "docs/core/artifacts/t13_topic13_closure_matrix.json": "10d8a400e8e58d74e24f61f94e304227613fa8d1140726b84d620a5df16b49f6"
   },
   "report": {
     "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",

@@ -4,7 +4,7 @@ This file is generated from the canonical Topic 13 closure progress artifact. It
 
 MAJOR_RESULT_CLOSURE:
 - Full Topic 13: PARTIAL; status BLOCKED_OPEN_T13_FULL_BRIDGE.
-- Required subresults: 36; CLOSED_FOR_LANE=21, CLOSED_AS_NO_GO=5, CLOSED_FOR_CORE=0, OPEN=10.
+- Required subresults: 37; CLOSED_FOR_LANE=21, CLOSED_AS_NO_GO=6, CLOSED_FOR_CORE=0, OPEN=10.
 
 WHAT_IS_ACTUALLY_CLOSED:
 - The causal conserved-C question has a scoped no-go, and the named finite-cone Phi branch is a bounded Core handoff only.
@@ -43,6 +43,7 @@ WHAT_REMAINS_OPEN:
 | physical_entropy_production_mapping | T13_ENTROPY_CURRENT_DISSIPATIVE_BALANCE | OPEN | CLOSED_FOR_CORE | T13_INPUT_PHYSICAL_TRANSPORT_MATCH | none | The physical coefficient, SI heat flux, source uncertainty, and entropy-production uncertainty are linked. |
 | source_identity_and_row_controller | T13_TTG_SOURCE_UNCERTAINTY_PACKAGE | CLOSED_FOR_LANE | CLOSED_FOR_LANE |  | T13_DING_PBTE_AUTHOR_REQUEST_PACKAGE, T13_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY | The requested numeric payload fields, locators, units, uncertainty, preprocessing, row identity, and hash are fixed. |
 | public_route_boundary | T13_TTG_SOURCE_UNCERTAINTY_PACKAGE | CLOSED_AS_NO_GO | CLOSED_AS_NO_GO |  | T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY_BOUNDARY, T13_DING_PBTE_OA_NUMERIC_INPUT_NO_GO | The checked public routes are bounded without claiming author-held data are absent. |
+| heating_backcalculation_no_go | T13_TTG_SOURCE_UNCERTAINTY_PACKAGE | CLOSED_AS_NO_GO | CLOSED_AS_NO_GO |  | T13_DING_C_SRC_HEATING_BACKCALCULATION_IDENTIFIABILITY | Incident fluence, a temperature upper bound, and normalized TTG rows are shown not to identify absolute C_src without absorbed-energy and absolute-response inputs. |
 | candidate_reproduction_comparator | T13_TTG_SOURCE_UNCERTAINTY_PACKAGE | CLOSED_FOR_LANE | CLOSED_FOR_LANE |  | T13_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY, T13_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION | Candidate numerical stability and sensitivity are recorded separately from Ding acceptance. |
 | accepted_numeric_csrc | T13_TTG_SOURCE_UNCERTAINTY_PACKAGE | OPEN | CLOSED_FOR_CORE | T13_INPUT_DING_TTG_SOURCE | none | An authorized Ding package or accepted same-regime independent reproduction is admitted with source-grade uncertainty. |
 | material_and_uncertainty_closure | T13_TTG_SOURCE_UNCERTAINTY_PACKAGE | OPEN | CLOSED_FOR_CORE | T13_INPUT_DING_TTG_SOURCE | none | The TTG material regime, same-state thermodynamic correction, and c_v uncertainty are closed at the same evidence grade. |
@@ -62,7 +63,7 @@ MAJOR_RESULT_BREAKDOWN:
 | T13_COVARIANT_THERMAL_TRANSPORT | PARTIAL | 3 | 0 | 0 | 1 | Formal/natural transport interface only. | A standard-fluid comparator or formal Kubo interface is not physical UET transport validation. |
 | T13_SK_KMS_MATCHING | PARTIAL | 2 | 0 | 0 | 1 | Formal SK/KMS interface only. | An algebraic KMS identity or synthetic noise kernel is not physical transport evidence. |
 | T13_ENTROPY_CURRENT_DISSIPATIVE_BALANCE | PARTIAL | 2 | 0 | 0 | 1 | Formal balance interface only. | Formal positivity is not a measurement of physical entropy production or a proof of full transport closure. |
-| T13_TTG_SOURCE_UNCERTAINTY_PACKAGE | OPEN | 2 | 1 | 0 | 2 | Source acceptance policy only. | Public-source boundaries, figure-derived rows, and candidate PBTE reruns do not become Ding numeric validation without material/state and uncertainty acceptance. |
+| T13_TTG_SOURCE_UNCERTAINTY_PACKAGE | OPEN | 2 | 2 | 0 | 2 | Source acceptance policy only. | Public-source boundaries, figure-derived rows, and candidate PBTE reruns do not become Ding numeric validation without material/state and uncertainty acceptance. |
 | T13_HEAT_FLUX_ENTROPY_PRODUCTION_MAPPING | PARTIAL | 2 | 1 | 0 | 1 | Formal heat-flux/entropy interface only. | The Cattaneo/Fourier controls and finite-cutoff Kubo matches are not a physical UET heat-flux prediction. |
 
 ROOT_INPUT_PACKAGES:

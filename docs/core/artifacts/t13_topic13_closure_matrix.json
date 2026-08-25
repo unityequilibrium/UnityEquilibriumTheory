@@ -120,7 +120,7 @@
     "evidence_artifacts": [
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-        "sha256": "9c76b746ffb4c50390e3e62c4546da3dc17bea31f0234a21923cf8a276b4fe35",
+        "sha256": "d787dea150faf58ecc6f7bbd5dd2f7770ea7351bb875253a5004cffe70ed0a70",
         "summary": {
           "role": "canonical full Topic 13 readiness gate",
           "status": "BLOCKED_OPEN_T13_FULL_BRIDGE"
@@ -412,6 +412,13 @@
         }
       },
       {
+        "path": "docs/core/artifacts/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json",
+        "sha256": "0a3b785b0a75e72a41ef9ef4521879ef74cc191d5d46271eaa2a08f6b87e657b",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
         "path": "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
         "sha256": "818230a6f8aa68a14a1f642e1e7342d70bfa657f6e05476d3e190d336e77b386",
         "summary": {
@@ -461,14 +468,14 @@
     "dependency_unlocked": "Gravity/GR remains blocked until Full Topic 13 and Core curved 3+1 gates pass.",
     "claim_boundary": "This matrix reports progress and closure boundaries. It does not promote a lane-level PASS, comparator, no-go, or formal interface to Full Topic 13, Core, external validation, or a global UET claim.",
     "required_major_result_count": 10,
-    "required_subresult_count": 36,
+    "required_subresult_count": 37,
     "current_major_result_counts": {
       "CLOSED_AS_NO_GO": 1,
       "OPEN": 3,
       "PARTIAL": 6
     },
     "current_subresult_counts": {
-      "CLOSED_AS_NO_GO": 5,
+      "CLOSED_AS_NO_GO": 6,
       "CLOSED_FOR_LANE": 21,
       "OPEN": 10
     },
@@ -700,7 +707,7 @@
     "evidence_artifacts": [
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-        "sha256": "9c76b746ffb4c50390e3e62c4546da3dc17bea31f0234a21923cf8a276b4fe35",
+        "sha256": "d787dea150faf58ecc6f7bbd5dd2f7770ea7351bb875253a5004cffe70ed0a70",
         "summary": {
           "role": "canonical full Topic 13 readiness gate",
           "status": "BLOCKED_OPEN_T13_FULL_BRIDGE"
@@ -992,6 +999,13 @@
         }
       },
       {
+        "path": "docs/core/artifacts/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json",
+        "sha256": "0a3b785b0a75e72a41ef9ef4521879ef74cc191d5d46271eaa2a08f6b87e657b",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
         "path": "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
         "sha256": "818230a6f8aa68a14a1f642e1e7342d70bfa657f6e05476d3e190d336e77b386",
         "summary": {
@@ -1039,7 +1053,7 @@
         "PARTIAL": 6
       },
       "subresult_status_counts": {
-        "CLOSED_AS_NO_GO": 5,
+        "CLOSED_AS_NO_GO": 6,
         "CLOSED_FOR_LANE": 21,
         "OPEN": 10
       }
@@ -1056,14 +1070,14 @@
     "dependency_unlocked": "None while any major result or required source/calibration blocker is open.",
     "claim_boundary": "CLOSED_FOR_CORE means the thermal bridge is internally integrated and ready for Core handoff. It is not external-ready and does not close global UET.",
     "required_major_result_count": 10,
-    "required_subresult_count": 36,
+    "required_subresult_count": 37,
     "current_major_result_counts": {
       "CLOSED_AS_NO_GO": 1,
       "OPEN": 3,
       "PARTIAL": 6
     },
     "current_subresult_counts": {
-      "CLOSED_AS_NO_GO": 5,
+      "CLOSED_AS_NO_GO": 6,
       "CLOSED_FOR_LANE": 21,
       "OPEN": 10
     },
@@ -2506,6 +2520,7 @@
         "docs/core/artifacts/t13_ding_alternate_public_dataset_discovery_boundary_audit.json",
         "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
         "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json",
+        "docs/core/artifacts/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json",
         "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
         "docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json"
       ],
@@ -2530,6 +2545,17 @@
           ],
           "required_closure_level": "CLOSED_AS_NO_GO",
           "acceptance": "The checked public routes are bounded without claiming author-held data are absent.",
+          "status": "CLOSED_AS_NO_GO"
+        },
+        {
+          "subresult_id": "heating_backcalculation_no_go",
+          "label": "Incident-heating C_src back-calculation no-go",
+          "current_status": "CLOSED_AS_NO_GO",
+          "evidence_result_ids": [
+            "T13_DING_C_SRC_HEATING_BACKCALCULATION_IDENTIFIABILITY"
+          ],
+          "required_closure_level": "CLOSED_AS_NO_GO",
+          "acceptance": "Incident fluence, a temperature upper bound, and normalized TTG rows are shown not to identify absolute C_src without absorbed-energy and absolute-response inputs.",
           "status": "CLOSED_AS_NO_GO"
         },
         {
@@ -2579,7 +2605,7 @@
         "component_lane_controlling_blocker": null,
         "subresult_status_counts": {
           "CLOSED_FOR_LANE": 2,
-          "CLOSED_AS_NO_GO": 1,
+          "CLOSED_AS_NO_GO": 2,
           "OPEN": 2
         }
       },
@@ -2589,10 +2615,10 @@
         "c_v_source_uncertainty_not_closed"
       ],
       "subresult_summary": {
-        "required_count": 5,
+        "required_count": 6,
         "status_counts": {
           "CLOSED_FOR_LANE": 2,
-          "CLOSED_AS_NO_GO": 1,
+          "CLOSED_AS_NO_GO": 2,
           "OPEN": 2
         },
         "all_required_subresults_closed": false
@@ -2672,6 +2698,13 @@
         {
           "path": "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
           "sha256": "1828db74760ac53c73345d0e4a8adc8fc00fc16bb25e84809a73aaa3cd9b3d9a",
+          "summary": {
+            "role": "declared Topic 13 closure-contract evidence"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json",
+          "sha256": "0a3b785b0a75e72a41ef9ef4521879ef74cc191d5d46271eaa2a08f6b87e657b",
           "summary": {
             "role": "declared Topic 13 closure-contract evidence"
           }
@@ -2899,10 +2932,10 @@
   "closure_summary": {
     "closure_count_unit": "required_subresults",
     "closed_lane_count": 21,
-    "closed_as_no_go_count": 5,
+    "closed_as_no_go_count": 6,
     "closed_for_core_count": 0,
     "open_subresult_count": 10,
-    "reported_subresult_count": 36,
+    "reported_subresult_count": 37,
     "source_gate_projection_counts": {
       "closed_lane_result_count": 192,
       "closed_as_no_go_result_count": 16
@@ -2926,7 +2959,7 @@
     },
     "downstream_dependency_unlocked": false,
     "required_major_result_count": 10,
-    "required_subresult_count": 36,
+    "required_subresult_count": 37,
     "required_input_package_count": 3,
     "current_major_result_counts": {
       "CLOSED_AS_NO_GO": 1,
@@ -2934,7 +2967,7 @@
       "PARTIAL": 6
     },
     "current_subresult_counts": {
-      "CLOSED_AS_NO_GO": 5,
+      "CLOSED_AS_NO_GO": 6,
       "CLOSED_FOR_LANE": 21,
       "OPEN": 10
     },
@@ -2942,7 +2975,7 @@
   },
   "canonical_gate": {
     "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-    "sha256": "9c76b746ffb4c50390e3e62c4546da3dc17bea31f0234a21923cf8a276b4fe35",
+    "sha256": "d787dea150faf58ecc6f7bbd5dd2f7770ea7351bb875253a5004cffe70ed0a70",
     "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
     "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
   },
@@ -2971,7 +3004,7 @@
     ],
     "DEPENDENCY_UNLOCKED": "Gravity/GR remains blocked until Full Topic 13 and Core curved 3+1 gates pass.",
     "STATUS": "BLOCKED_OPEN_T13_FULL_BRIDGE; full_core_unlock=False",
-    "WHAT_CHANGED": "Added a ten-result Topic 13 closure contract with 36 evidence-producing subresults and 3 grouped input packages; no equation, threshold, source role, fit path, or holdout policy changed.",
+    "WHAT_CHANGED": "Added a ten-result Topic 13 closure contract with 37 evidence-producing subresults and 3 grouped input packages; no equation, threshold, source role, fit path, or holdout policy changed.",
     "EQUATION_OR_MAPPING": {
       "standard": "y_TTG = Delta_Tq(t) / Delta_Tq(0)",
       "uet_normalized": "y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)",

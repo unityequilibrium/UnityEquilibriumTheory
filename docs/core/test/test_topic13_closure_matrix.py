@@ -63,7 +63,7 @@ def test_topic13_closure_matrix_reports_full_topic_contract_without_promotion() 
     assert matrix["major_result"]["open_blockers"] == gate["major_result"]["what_remains_open"]
     assert matrix["closure_summary"]["open_blocker_groups"] == gate["major_result"]["closure_summary"]["open_blocker_groups"]
     assert matrix["full_topic_closure_contract"]["required_major_result_count"] == 10
-    assert matrix["full_topic_closure_contract"]["required_subresult_count"] == 36
+    assert matrix["full_topic_closure_contract"]["required_subresult_count"] == 37
     assert matrix["full_topic_closure_contract"]["required_input_package_count"] == 3
     assert (
         matrix["full_topic_closure_contract"]["input_package_audit"]["path"]
@@ -81,16 +81,16 @@ def test_topic13_closure_matrix_reports_full_topic_contract_without_promotion() 
         "T13_INPUT_PHYSICAL_TRANSPORT_MATCH",
     }
     assert matrix["closure_summary"]["current_subresult_counts"] == {
-        "CLOSED_AS_NO_GO": 5,
+        "CLOSED_AS_NO_GO": 6,
         "CLOSED_FOR_LANE": 21,
         "OPEN": 10,
     }
     assert matrix["closure_summary"]["closure_count_unit"] == "required_subresults"
-    assert matrix["closure_summary"]["closed_as_no_go_count"] == 5
+    assert matrix["closure_summary"]["closed_as_no_go_count"] == 6
     assert matrix["closure_summary"]["closed_lane_count"] == 21
     assert matrix["closure_summary"]["closed_for_core_count"] == 0
     assert matrix["closure_summary"]["open_subresult_count"] == 10
-    assert matrix["closure_summary"]["reported_subresult_count"] == 36
+    assert matrix["closure_summary"]["reported_subresult_count"] == 37
     assert set(matrix["closure_summary"]["source_gate_projection_counts"]) == {
         "closed_lane_result_count",
         "closed_as_no_go_result_count",
@@ -130,7 +130,7 @@ def test_topic13_closure_matrix_is_projected_into_register_and_dependency_gate()
     assert entry["evidence_artifacts"][0]["sha256"] == digest(MATRIX)
     assert full_entry["closure_matrix"]["sha256"] == digest(MATRIX)
     assert full_entry["closure_matrix"]["required_major_result_count"] == 10
-    assert full_entry["closure_matrix"]["required_subresult_count"] == 36
+    assert full_entry["closure_matrix"]["required_subresult_count"] == 37
     assert projection["path"] == "docs/core/artifacts/t13_topic13_closure_matrix.json"
     assert projection["sha256"] == digest(MATRIX)
     assert projection["full_core_unlock"] is False
