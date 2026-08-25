@@ -34,7 +34,7 @@
     "downstream_core_gravity_transport": "LOCKED",
     "full_topic_13": "LOCKED until all required subresults are closed at their declared level"
   },
-  "generated_at": "2026-08-25T05:39:49.476499+00:00",
+  "generated_at": "2026-08-25T05:51:27.615345+00:00",
   "holdout_policy": {
     "calibration_path_may_read_holdout": false,
     "target_fit_performed": false,
@@ -280,7 +280,7 @@
   ],
   "minimal_input_contract": {
     "path": "docs/core/artifacts/t13_full_closure_minimal_input_contract.json",
-    "sha256": "60aa1afa2a1f36b192a90ce3ad1bce6b5cecf89f850baf58748f887134bb18cd",
+    "sha256": "97b910b7fec3dc0342e903f4ef97aff7df960e0b45ce9fe2688befe7ea38f489",
     "status": "PASS_SCOPED_MINIMAL_INPUT_CONTRACT_OPEN",
     "target_result": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
   },
@@ -432,10 +432,10 @@
   },
   "schema_version": "t13-full-closure-progress-v1",
   "source_hashes": {
-    "docs/core/artifacts/t13_closure_input_package_audit.json": "1ef108fa0d8274ee732735a766889a65726d576ba47553b856f3bb01f3d3e2ae",
-    "docs/core/artifacts/t13_full_closure_minimal_input_contract.json": "60aa1afa2a1f36b192a90ce3ad1bce6b5cecf89f850baf58748f887134bb18cd",
-    "docs/core/artifacts/t13_topic13_closure_matrix.json": "1c41e8063de7460dd2fb8ae7c4e7c2c7d56bc6c0b1b36cd3e2afb5eca23260b1",
-    "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json": "ca88e26cee62e42dae948359dd4e2834ba6b8af5ab971c363050cd38cdfc080f"
+    "docs/core/artifacts/t13_closure_input_package_audit.json": "03bcf24d763e1eb7f87d7864a94c5bcaa1391b5426754d23729fcb4702076b69",
+    "docs/core/artifacts/t13_full_closure_minimal_input_contract.json": "97b910b7fec3dc0342e903f4ef97aff7df960e0b45ce9fe2688befe7ea38f489",
+    "docs/core/artifacts/t13_topic13_closure_matrix.json": "0ab1f9633f7813b60d0ed83d341576fea56b00749898822b28baebbf84b4981d",
+    "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json": "a34ab878bc8c099f3e0789d5f1d745904f9c2b0a7023ba129f61832b7294a6e9"
   },
   "subresults": [
     {
