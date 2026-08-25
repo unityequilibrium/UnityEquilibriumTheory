@@ -160,7 +160,8 @@
       "named beta_T13 finite-temperature response-functional formula and unit contract, independent of Landauer identity reuse",
       "a named normal-branch compactified regularized continuum heat-current lane passes the unchanged convergence and conservation contract without replacing the failed finite-cutoff baseline",
       "the covariant response-matter interaction rescaling no-go is explicit; the natural response coupling cannot supply a physical Phi/SI anchor",
-      "named conserved flux-telegraph branch with CLOSED_FOR_LANE internal verification"
+      "named conserved flux-telegraph branch with CLOSED_FOR_LANE internal verification",
+      "covariant natural-unit action route identified with explicit SI-anchor and covariant-Phi-to-normalized-Phi blockers"
     ],
     "what_remains_open": [
       "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
@@ -12090,6 +12091,9 @@
           "response_contract_is_natural_units": true,
           "response_claim_boundary_says_natural_only": true,
           "response_defaults_not_measured": true,
+          "response_gravitational_coefficient_default_is_control": true,
+          "spec_declares_kappa_dimension_only": true,
+          "candidate_route_has_no_newton_coupling_match": true,
           "spec_action_is_natural_units": true,
           "spec_requires_later_si_map": true,
           "formula_unit_lane_is_natural": true,
@@ -12106,7 +12110,7 @@
         "data_role": "FORMULA_AND_DEPENDENCY_AUDIT_NOT_CALIBRATION",
         "audit": {
           "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
-          "sha256": "a51c9ab63e4e976b04a032037608d59441192cbd8066ccc9bd490f7336527a15",
+          "sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52",
           "summary": {
             "status": "PASS_NATURAL_UNIT_ROUTE_IDENTIFIED_SI_MAPPING_BLOCKED",
             "major_result_id": "T13_COVARIANT_ACTION_SI_ANCHOR_ROUTE",
@@ -79784,6 +79788,9 @@
         "response_contract_is_natural_units": true,
         "response_claim_boundary_says_natural_only": true,
         "response_defaults_not_measured": true,
+        "response_gravitational_coefficient_default_is_control": true,
+        "spec_declares_kappa_dimension_only": true,
+        "candidate_route_has_no_newton_coupling_match": true,
         "spec_action_is_natural_units": true,
         "spec_requires_later_si_map": true,
         "formula_unit_lane_is_natural": true,
@@ -79800,7 +79807,7 @@
       "data_role": "FORMULA_AND_DEPENDENCY_AUDIT_NOT_CALIBRATION",
       "audit": {
         "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
-        "sha256": "a51c9ab63e4e976b04a032037608d59441192cbd8066ccc9bd490f7336527a15",
+        "sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52",
         "summary": {
           "status": "PASS_NATURAL_UNIT_ROUTE_IDENTIFIED_SI_MAPPING_BLOCKED",
           "major_result_id": "T13_COVARIANT_ACTION_SI_ANCHOR_ROUTE",
@@ -81786,6 +81793,14 @@
         "max_C_src_relative_change": 0.002396543213200888,
         "max_kappa_relative_change": 0.09081201116807297,
         "controlling_blocker": "ding_C_src_mode_state_and_source_grade_uncertainty_missing"
+      }
+    },
+    {
+      "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
+      "sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52",
+      "summary": {
+        "status": "PASS_NATURAL_UNIT_ROUTE_IDENTIFIED_SI_MAPPING_BLOCKED",
+        "data_role": "FORMULA_AND_DEPENDENCY_AUDIT_NOT_CALIBRATION"
       }
     }
   ],

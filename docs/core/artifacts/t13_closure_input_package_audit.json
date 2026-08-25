@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-closure-input-package-audit-v1",
   "artifact": "t13_closure_input_package_audit",
-  "generated_at": "2026-08-25",
+  "generated_at": "2026-08-26",
   "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN",
   "major_result": {
     "major_result_id": "T13_CLOSURE_INPUT_PACKAGE_AUDIT",
@@ -44,7 +44,7 @@
     "evidence_artifacts": [
       {
         "path": "docs/core/artifacts/t13_closure_record_contract_audit.json",
-        "sha256": "9c7a65c4fa7df2bcc884e4b187b1c1b7b497f192727410554886d8ea3842878f",
+        "sha256": "c05fb3e4af2e343c4ce73cfd9821291ec2236b05a6d128bb4551a679c6fad2a9",
         "role": "input-package acceptance evidence"
       },
       {
@@ -89,7 +89,7 @@
       },
       {
         "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
-        "sha256": "a51c9ab63e4e976b04a032037608d59441192cbd8066ccc9bd490f7336527a15",
+        "sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52",
         "role": "input-package acceptance evidence"
       },
       {
@@ -164,7 +164,7 @@
       },
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-        "sha256": "597b991c996967d05de824af0d0ae235f630b76731c4d9a1041a77bcffd3ecb5",
+        "sha256": "9c76b746ffb4c50390e3e62c4546da3dc17bea31f0234a21923cf8a276b4fe35",
         "role": "input-package acceptance evidence"
       }
     ],
@@ -326,7 +326,7 @@
   "evidence_artifacts": [
     {
       "path": "docs/core/artifacts/t13_closure_record_contract_audit.json",
-      "sha256": "9c7a65c4fa7df2bcc884e4b187b1c1b7b497f192727410554886d8ea3842878f",
+      "sha256": "c05fb3e4af2e343c4ce73cfd9821291ec2236b05a6d128bb4551a679c6fad2a9",
       "role": "input-package acceptance evidence"
     },
     {
@@ -371,7 +371,7 @@
     },
     {
       "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
-      "sha256": "a51c9ab63e4e976b04a032037608d59441192cbd8066ccc9bd490f7336527a15",
+      "sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52",
       "role": "input-package acceptance evidence"
     },
     {
@@ -446,7 +446,7 @@
     },
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-      "sha256": "597b991c996967d05de824af0d0ae235f630b76731c4d9a1041a77bcffd3ecb5",
+      "sha256": "9c76b746ffb4c50390e3e62c4546da3dc17bea31f0234a21923cf8a276b4fe35",
       "role": "input-package acceptance evidence"
     }
   ],

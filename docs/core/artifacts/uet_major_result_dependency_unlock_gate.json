@@ -6,7 +6,7 @@
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "a5549940ba1e7f065d5910d686efd5cdb571ca2341710331dc0b20f0bdd4644e"
+    "sha256": "2ac3efb773ed3b48ebe86ff1293c3089072f5ee921db257d8eb08c1b15a956c7"
   },
   "decisions": {
     "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY": {
@@ -75,7 +75,7 @@
   ],
   "claim_boundary": "Dependency decisions only; no downstream result is promoted by a checkpoint or comparator pass.",
   "topic13_partial_evidence": {
-    "register_sha256": "a5549940ba1e7f065d5910d686efd5cdb571ca2341710331dc0b20f0bdd4644e",
+    "register_sha256": "2ac3efb773ed3b48ebe86ff1293c3089072f5ee921db257d8eb08c1b15a956c7",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",
@@ -91,7 +91,7 @@
     },
     "covariant_action_si_anchor_route": {
       "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
-      "sha256": "a51c9ab63e4e976b04a032037608d59441192cbd8066ccc9bd490f7336527a15",
+      "sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52",
       "summary": {
         "status": "PASS_NATURAL_UNIT_ROUTE_IDENTIFIED_SI_MAPPING_BLOCKED",
         "full_core_unlock": false
@@ -568,13 +568,13 @@
       "graphite_alpha_v_kt_matched_source_boundary": {
         "major_result_id": "T13_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY",
         "closure_level": "CLOSED_FOR_LANE",
-        "status": "PASS_SCOPED_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY_NO_GO",
+        "status": "PASS_SCOPED_GRAPHITE_ALPHA_V_K_T_SOURCE_PAIR_LOCKED_MATERIAL_OPEN",
         "full_core_unlock": false,
         "audit": {
           "path": "docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json",
-          "sha256": "173002072c6dd9c0a98f0653c2bac87816d60cd21561c8220c97faa14807e080",
+          "sha256": "d6e05b2dfe754cb17d17651666319dbc0ebf295a99258bd25f67e463eba68724",
           "summary": {
-            "status": "PASS_SCOPED_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY_NO_GO",
+            "status": "PASS_SCOPED_GRAPHITE_ALPHA_V_K_T_SOURCE_PAIR_LOCKED_MATERIAL_OPEN",
             "major_result_id": "T13_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY",
             "closure_level": "CLOSED_FOR_LANE"
           }
@@ -587,7 +587,7 @@
         "full_core_unlock": false,
         "audit": {
           "path": "docs/core/artifacts/t13_ding_alternate_public_dataset_discovery_boundary_audit.json",
-          "sha256": "67f059ed8ef9dcbe84878276d3056efb61b834fdfa7eca686d5361f1213d2573",
+          "sha256": "6becdf0eb8270cf5c5dda7683b2839af52f38e407712787c03759015ff537f6f",
           "summary": {
             "status": "PASS_SCOPED_DING_ALTERNATE_PUBLIC_DATASET_BOUNDARY_NO_GO",
             "major_result_id": "T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY_BOUNDARY",
@@ -812,7 +812,7 @@
         "full_core_unlock": false,
         "audit": {
           "path": "docs/core/artifacts/t13_oxford_tgs_numeric_rows_audit.json",
-          "sha256": "0f176973797467f5265530b3fa141dc3bb5a392cfc88c72caa7a94d7fc25ad90",
+          "sha256": "a3250b4e40479ceb8bbbfec29de0c4e0ed6e7068355ab0507a30d5099333d9cc",
           "summary": {
             "status": "PASS_OXFORD_TGS_NUMERIC_ROWS_SOURCE_LOCKED_COMPARATOR",
             "major_result_id": "T13_OXFORD_TGS_NUMERIC_ROWS_COMPARATOR",
@@ -827,7 +827,7 @@
         "full_core_unlock": false,
         "audit": {
           "path": "docs/core/artifacts/t13_desorbo_ceylon_graphite_cp_audit.json",
-          "sha256": "7ef80f4d26f0df2d7762ed64183bbe4c9c324cc47ce99bbedbdca6bb44dcfbdc",
+          "sha256": "33ad2745513d3c2ddfdce02978fbf9f1df7b804529cda33cc0d21ac6b11cd7a8",
           "summary": {
             "status": "PASS_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_LOCKED_COMPARATOR",
             "major_result_id": "T13_DESORBO_1955_CEYLON_GRAPHITE_CP_COMPARATOR",
@@ -1037,7 +1037,7 @@
         "full_core_unlock": false,
         "audit": {
           "path": "docs/core/artifacts/t13_csrc_equilibrium_component_acceptance_audit.json",
-          "sha256": "44f6deeff3d968978f9f2b8faeb8eaaab724fd70018caea05f859fcfc8ad98c3",
+          "sha256": "26f089063785fde068628bd071d8df1d7d50a53e2be46f7a73df627269632de1",
           "summary": {
             "status": "PASS_SCOPED_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY",
             "major_result_id": "T13_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY",
@@ -1367,7 +1367,7 @@
         "full_core_unlock": false,
         "audit": {
           "path": "docs/core/artifacts/t13_calorine_public_model_variant_boundary_audit.json",
-          "sha256": "062c49c05e8318d42d627d03df886d2d50eea3285d2fb7430064554f98e6edbb",
+          "sha256": "4cbe1cf6bfd73856471738cadc4771a2375b3db2d925e62b9fc6fcb4c400f7e5",
           "summary": {
             "status": "PASS_SCOPED_CALORINE_PUBLIC_MODEL_VARIANT_BOUNDARY",
             "major_result_id": "T13_CALORINE_PUBLIC_MODEL_VARIANT_BOUNDARY",
@@ -1382,7 +1382,7 @@
         "full_core_unlock": false,
         "audit": {
           "path": "docs/core/artifacts/t13_calorine_nep1_backend_compatibility_audit.json",
-          "sha256": "bb3887522ba6bfde25bc74c1deb76e737ca975d5452263fb2dff348bffb3322c",
+          "sha256": "30513dd236e81360bceeedbf873b968f56520682a243ae16922daa157dc7eba9",
           "summary": {
             "status": "PASS_SCOPED_CALORINE_NEP1_BACKEND_COMPATIBILITY_BOUNDARY",
             "major_result_id": "T13_CALORINE_NEP1_BACKEND_COMPATIBILITY_BOUNDARY",
@@ -1412,7 +1412,7 @@
         "full_core_unlock": false,
         "audit": {
           "path": "docs/core/artifacts/t13_calorine_legacy_nep2_pbte_reproduction_audit.json",
-          "sha256": "0c3724c591adc411a4ef062a2bf62b9e5ce6564831bbc662e845ef48a8d56398",
+          "sha256": "66e05c61250da9711d7d90f44cdd1297aa88e560d716984a1a8db143fa4e7af3",
           "summary": {
             "status": "PASS_SCOPED_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION",
             "major_result_id": "T13_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION",
@@ -1427,7 +1427,7 @@
         "full_core_unlock": false,
         "audit": {
           "path": "docs/core/artifacts/t13_calorine_model_form_state_spread_comparison_audit.json",
-          "sha256": "d635640f9fa3213bf3ad959089eaca5703f18b7b4a7773dbebe875ff967de99b",
+          "sha256": "ef7ac7e4b1447626836f3a552de702759a6f57f07a1966f7ed5a62e88374ec24",
           "summary": {
             "status": "PASS_SCOPED_CALORINE_MODEL_FORM_STATE_SPREAD",
             "major_result_id": "T13_CALORINE_MODEL_FORM_STATE_SPREAD_COMPARISON",
@@ -1461,6 +1461,21 @@
           "summary": {
             "status": "PASS_PUBLIC_SOURCE_BOUNDARY_NO_PAIRED_BASE_PHI_RECORD",
             "major_result_id": "T13_PHI_SI_ANCHOR_PUBLIC_SOURCE_BOUNDARY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      },
+      "covariant_action_si_anchor_route": {
+        "major_result_id": "T13_COVARIANT_ACTION_SI_ANCHOR_ROUTE",
+        "closure_level": "CLOSED_FOR_LANE",
+        "status": "PASS_NATURAL_UNIT_ROUTE_IDENTIFIED_SI_MAPPING_BLOCKED",
+        "full_core_unlock": false,
+        "audit": {
+          "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
+          "sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52",
+          "summary": {
+            "status": "PASS_NATURAL_UNIT_ROUTE_IDENTIFIED_SI_MAPPING_BLOCKED",
+            "major_result_id": "T13_COVARIANT_ACTION_SI_ANCHOR_ROUTE",
             "closure_level": "CLOSED_FOR_LANE"
           }
         }
@@ -2202,7 +2217,7 @@
     },
     "closure_matrix": {
       "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-      "sha256": "6f9cd4f67e865f5758a38897dbbc5ff09ae889a11d14bc935c1d902b324c3bab",
+      "sha256": "fa4679dddfefeb8e5b1d371d86adb426f624c1c26a3c902ab80f72626b9bb040",
       "full_core_unlock": false,
       "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
       "required_major_result_count": 10,

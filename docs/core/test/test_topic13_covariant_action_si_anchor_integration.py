@@ -31,6 +31,10 @@ def test_action_route_is_exposed_as_lane_only() -> None:
     assert route["numeric_alpha_Phi_K_emitted"] is False
     assert full["major_result"]["closure_level"] == "PARTIAL"
     assert full["claim_promotion"] is False
+    assert "system_specific_SI_contract_missing" not in full["major_result"]["what_remains_open"]
+    assert "covariant_Phi_to_normalized_Phi_map_missing" not in full["major_result"]["what_remains_open"]
+    assert "Ding numeric C_src(T)" in full["next_action"]
+    assert "system_specific_SI_contract_missing" in route["open_blockers"]
 
 
 def test_action_route_register_and_dependency_hashes_match() -> None:

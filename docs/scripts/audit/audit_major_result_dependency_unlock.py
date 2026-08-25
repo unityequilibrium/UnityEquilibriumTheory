@@ -79,6 +79,7 @@ def main() -> int:
     if "topic13_partial_evidence" in previous:
         artifact["topic13_partial_evidence"] = previous["topic13_partial_evidence"]
     partial_routes = {
+        "covariant_action_si_anchor_route": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
         "covariant_field_normalization_no_go": "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json",
         "phi_energy_anchor_no_go": "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
         "thermal_response_beta_contract": "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json",

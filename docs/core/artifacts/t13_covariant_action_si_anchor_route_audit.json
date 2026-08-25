@@ -1,7 +1,7 @@
 {
-  "schema_version": "t13-covariant-action-si-anchor-route-audit-v1",
+  "schema_version": "t13-covariant-action-si-anchor-route-audit-v2",
   "artifact": "t13_covariant_action_si_anchor_route_audit",
-  "generated_at": "2026-08-11",
+  "generated_at": "2026-08-26",
   "status": "PASS_NATURAL_UNIT_ROUTE_IDENTIFIED_SI_MAPPING_BLOCKED",
   "major_result": {
     "major_result_id": "T13_COVARIANT_ACTION_SI_ANCHOR_ROUTE",
@@ -11,6 +11,7 @@
       "the covariant response action route is identified as the only current first-principles candidate source for an energy anchor",
       "the implemented parent is explicitly natural-unit only",
       "default response coefficients are research controls and cannot be treated as physical constants",
+      "the action gravitational coupling slot is dimension-declared but has no source-backed SI or Newton-coupling match",
       "the system-specific natural-unit-to-SI and covariant-Phi-to-normalized-Phi maps are explicit blockers",
       "the route is separated from the normalized-Phi structural no-go and from material c_v data"
     ],
@@ -19,6 +20,23 @@
       "natural_unit_policy": "c = hbar = 1; action and coefficients remain in natural units",
       "required_bridge": "Phi_normalized = Phi_covariant / Phi_scale; e0 and Phi_scale require a declared SI contract",
       "thermal_bridge": "Delta_Tq = (e0/C_src) * Phi_E only after base Phi-to-Phi_E is derived"
+    },
+    "coefficient_provenance": {
+      "kappa_E": {
+        "natural_unit_dimension": "mass^-2",
+        "numeric_value": null,
+        "status": "DIMENSION_DECLARED_ONLY",
+        "source_locator": "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md",
+        "si_or_newton_match": "NOT_DECLARED"
+      },
+      "einstein_coupling_config": {
+        "default_natural_value": 1.0,
+        "status": "RESEARCH_CONTROL_NOT_MEASURED_CONSTANT",
+        "source_locator": "docs/core/uet_covariant_response.py"
+      },
+      "energy_reference_J": null,
+      "phi_scale": null,
+      "e0_J_per_m3": null
     },
     "units": {
       "covariant_parent": "natural units; phi mass dimension 1",
@@ -45,7 +63,7 @@
       },
       {
         "path": "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
-        "sha256": "4a79b2eb082e4a4f98de0c2b2c441b2144e05fe3a8232caccfd5ba414842b020"
+        "sha256": "ce0837792cd63918dc371f64fa49801bfb0dd0f715264c8557cf54f5dcbe9059"
       },
       {
         "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json"
@@ -66,6 +84,9 @@
     "response_contract_is_natural_units": true,
     "response_claim_boundary_says_natural_only": true,
     "response_defaults_not_measured": true,
+    "response_gravitational_coefficient_default_is_control": true,
+    "spec_declares_kappa_dimension_only": true,
+    "candidate_route_has_no_newton_coupling_match": true,
     "spec_action_is_natural_units": true,
     "spec_requires_later_si_map": true,
     "formula_unit_lane_is_natural": true,
