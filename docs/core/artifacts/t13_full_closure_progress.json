@@ -13,7 +13,10 @@
     "closed_for_lane": 21,
     "core_handoff_ready": 1,
     "full_topic_core_ready_rule": "all required subresults must be CLOSED_FOR_CORE or an explicitly accepted closure level in the canonical full gate; no OPEN subresult and all required input packages accepted",
+    "non_open": 26,
+    "non_open_fraction": 0.7222222222222222,
     "open": 10,
+    "open_gap": 10,
     "required_subresults": 36,
     "root_input_packages": 3
   },
@@ -34,7 +37,7 @@
     "downstream_core_gravity_transport": "LOCKED",
     "full_topic_13": "LOCKED until all required subresults are closed at their declared level"
   },
-  "generated_at": "2026-08-25T05:51:27.615345+00:00",
+  "generated_at": "2026-08-25T06:14:52.163211+00:00",
   "holdout_policy": {
     "calibration_path_may_read_holdout": false,
     "target_fit_performed": false,

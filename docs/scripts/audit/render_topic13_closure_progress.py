@@ -148,6 +148,13 @@ def build_payload() -> dict[str, Any]:
         "closed_as_no_go": counts.get("CLOSED_AS_NO_GO", 0),
         "closed_for_core": counts.get("CLOSED_FOR_CORE", 0),
         "open": counts.get("OPEN", 0),
+        "non_open": len(subresults) - counts.get("OPEN", 0),
+        "open_gap": counts.get("OPEN", 0),
+        "non_open_fraction": (
+            (len(subresults) - counts.get("OPEN", 0)) / len(subresults)
+            if subresults
+            else 0.0
+        ),
         "core_handoff_ready": len(core_handoff_results),
         "root_input_packages": len(PACKAGE_IDS),
         "full_topic_core_ready_rule": (
@@ -218,6 +225,7 @@ def render_markdown(payload: dict[str, Any]) -> str:
         "MAJOR_RESULT_CLOSURE:",
         f"- Full Topic 13: `{status['full_topic_closure_level']}`.",
         f"- Required subresults: `{payload['required_subresult_count']}`; `CLOSED_FOR_LANE={counts.get('CLOSED_FOR_LANE', 0)}`, `CLOSED_AS_NO_GO={counts.get('CLOSED_AS_NO_GO', 0)}`, `CLOSED_FOR_CORE={counts.get('CLOSED_FOR_CORE', 0)}`, `OPEN={counts.get('OPEN', 0)}`.",
+        f"- Progress arithmetic: `non_open={arithmetic['non_open']}/{arithmetic['required_subresults']}`; `open_gap={arithmetic['open_gap']}`; `non_open_fraction={arithmetic['non_open_fraction']:.4f}`. Non-open is not the same as Core closure.",
         "",
         "WHAT_IS_ACTUALLY_CLOSED:",
         "- The named causal flux-Phi branch is `CLOSED_FOR_CORE` only as a bounded normalized branch; the original conserved-C baseline remains blocked/no-go.",
@@ -237,6 +245,7 @@ def render_markdown(payload: dict[str, Any]) -> str:
             "",
             "CLOSURE_ARITHMETIC:",
             f"- Core-ready requires all `{arithmetic['required_subresults']}` required subresults to leave `OPEN`; current counts are `CLOSED_FOR_LANE={arithmetic['closed_for_lane']}`, `CLOSED_AS_NO_GO={arithmetic['closed_as_no_go']}`, `CLOSED_FOR_CORE={arithmetic['closed_for_core']}`, `OPEN={arithmetic['open']}`.",
+            f"- The visible progress count is `non_open={arithmetic['non_open']}` of `{arithmetic['required_subresults']}` (`{arithmetic['non_open_fraction']:.1%}`), while the remaining closure gap is `open_gap={arithmetic['open_gap']}`. This is a reporting metric only and does not promote lane evidence to Core.",
             f"- The `{arithmetic['open']}` open subresults are controlled by `{arithmetic['root_input_packages']}` root input packages, so the next work is evidence acquisition/derivation, not indefinite reruns.",
             f"- Named core handoff count: {arithmetic['core_handoff_ready']}; this does not promote Full Topic 13 while any subresult or root input package remains open.",
             "",

@@ -5,6 +5,7 @@ This file is generated from the canonical closure matrix and full gate. It is a 
 MAJOR_RESULT_CLOSURE:
 - Full Topic 13: `PARTIAL`.
 - Required subresults: `36`; `CLOSED_FOR_LANE=21`, `CLOSED_AS_NO_GO=5`, `CLOSED_FOR_CORE=0`, `OPEN=10`.
+- Progress arithmetic: `non_open=26/36`; `open_gap=10`; `non_open_fraction=0.7222`. Non-open is not the same as Core closure.
 
 WHAT_IS_ACTUALLY_CLOSED:
 - The named causal flux-Phi branch is `CLOSED_FOR_CORE` only as a bounded normalized branch; the original conserved-C baseline remains blocked/no-go.
@@ -27,6 +28,7 @@ WHAT_REMAINS_OPEN:
 
 CLOSURE_ARITHMETIC:
 - Core-ready requires all `36` required subresults to leave `OPEN`; current counts are `CLOSED_FOR_LANE=21`, `CLOSED_AS_NO_GO=5`, `CLOSED_FOR_CORE=0`, `OPEN=10`.
+- The visible progress count is `non_open=26` of `36` (`72.2%`), while the remaining closure gap is `open_gap=10`. This is a reporting metric only and does not promote lane evidence to Core.
 - The `10` open subresults are controlled by `3` root input packages, so the next work is evidence acquisition/derivation, not indefinite reruns.
 - Named core handoff count: 1; this does not promote Full Topic 13 while any subresult or root input package remains open.
 
@@ -77,4 +79,4 @@ CLAIM_BOUNDARY:
 RERUN_POLICY:
 - Do not rerun the same numeric gates as a substitute for missing evidence. Rerun when an accepted source, calibration record, physical transport record, or its hash changes.
 
-Generated UTC: `2026-08-25T05:51:27.615345+00:00`.
+Generated UTC: `2026-08-25T06:14:52.163211+00:00`.
