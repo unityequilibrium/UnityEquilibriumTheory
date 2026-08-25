@@ -211,11 +211,11 @@
     "threshold_adjustment_allowed": false
   },
   "source_hashes": {
-    "docs/core/artifacts/t13_closure_input_package_audit.json": "1ef108fa0d8274ee732735a766889a65726d576ba47553b856f3bb01f3d3e2ae",
+    "docs/core/artifacts/t13_closure_input_package_audit.json": "03bcf24d763e1eb7f87d7864a94c5bcaa1391b5426754d23729fcb4702076b69",
     "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json": "880eb2cc94543f19fefae13ad8c64af820bb619d9c898cd4e1e710494519d281",
     "docs/core/artifacts/t13_base_phi_si_reconciliation_audit.json": "524b19752a335d71e0e53c7ab860d0e08d07a7a75265b6c9d1785d3beb630c2c",
     "docs/core/artifacts/t13_physical_kubo_coefficient_provenance_audit.json": "af78a1eb742e6438d679263771ef85b0f500726f4342a5f0a7ccefbe07a54f63",
-    "docs/core/artifacts/t13_topic13_closure_matrix.json": "1c41e8063de7460dd2fb8ae7c4e7c2c7d56bc6c0b1b36cd3e2afb5eca23260b1"
+    "docs/core/artifacts/t13_topic13_closure_matrix.json": "0ab1f9633f7813b60d0ed83d341576fea56b00749898822b28baebbf84b4981d"
   },
   "report": {
     "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",

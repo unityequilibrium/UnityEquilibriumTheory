@@ -50,7 +50,9 @@ def main() -> int:
             "named_finite_cone_branch_or_explicit_regularization_missing",
         }
     ]
-    gate["evidence_artifacts"].append({"path": no_go_path, "sha256": no_go_hash, "summary": {"status": no_go["status"], "proof_scope": no_go["proof_scope"]}})
+    evidence = gate.setdefault("evidence_artifacts", [])
+    evidence[:] = [item for item in evidence if item.get("path") != no_go_path]
+    evidence.append({"path": no_go_path, "sha256": no_go_hash, "summary": {"status": no_go["status"], "proof_scope": no_go["proof_scope"]}})
     GATE.write_text(json.dumps(gate, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
     print(json.dumps({"status": gate["status"], "controlling_blocker": gate["controlling_blocker"], "no_go_status": no_go["status"]}, indent=2))
     return 0

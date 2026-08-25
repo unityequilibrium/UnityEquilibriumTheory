@@ -625,9 +625,13 @@ def main() -> int:
             "baseline_replaced": False,
             "full_core_unlock": False,
             "controlling_blocker": (
-                None
-                if causal_gate_pass
-                else "formal_conserved_C_no_go_or_explicit_regularization_missing"
+                "original_conserved_c_gradient_baseline_blocked"
+                if (not full_candidate_pass and causal_lane_pass)
+                else (
+                    None
+                    if causal_gate_pass
+                    else "formal_conserved_C_no_go_or_explicit_regularization_missing"
+                )
             ),
         },
         "source_package": {

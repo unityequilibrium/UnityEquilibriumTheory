@@ -218,7 +218,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "ca88e26cee62e42dae948359dd4e2834ba6b8af5ab971c363050cd38cdfc080f",
+          "sha256": "a34ab878bc8c099f3e0789d5f1d745904f9c2b0a7023ba129f61832b7294a6e9",
           "summary": {
             "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
             "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
@@ -1855,7 +1855,7 @@
       },
       "closure_matrix": {
         "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-        "sha256": "1c41e8063de7460dd2fb8ae7c4e7c2c7d56bc6c0b1b36cd3e2afb5eca23260b1",
+        "sha256": "0ab1f9633f7813b60d0ed83d341576fea56b00749898822b28baebbf84b4981d",
         "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
         "full_core_unlock": false,
         "required_major_result_count": 10,
@@ -7354,14 +7354,14 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-          "sha256": "1c41e8063de7460dd2fb8ae7c4e7c2c7d56bc6c0b1b36cd3e2afb5eca23260b1",
+          "sha256": "0ab1f9633f7813b60d0ed83d341576fea56b00749898822b28baebbf84b4981d",
           "summary": {
             "role": "compact Topic 13 closure projection"
           }
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "ca88e26cee62e42dae948359dd4e2834ba6b8af5ab971c363050cd38cdfc080f",
+          "sha256": "a34ab878bc8c099f3e0789d5f1d745904f9c2b0a7023ba129f61832b7294a6e9",
           "summary": {
             "role": "canonical readiness gate"
           }
@@ -7369,7 +7369,7 @@
       ],
       "input_package_audit": {
         "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
-        "sha256": "1ef108fa0d8274ee732735a766889a65726d576ba47553b856f3bb01f3d3e2ae",
+        "sha256": "03bcf24d763e1eb7f87d7864a94c5bcaa1391b5426754d23729fcb4702076b69",
         "summary": {
           "role": "grouped Topic 13 closure-input acceptance audit",
           "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
