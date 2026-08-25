@@ -26,6 +26,21 @@ WHAT_REMAINS_OPEN:
 | `T13_TTG_SOURCE_UNCERTAINTY_PACKAGE` | `material_and_uncertainty_closure` | The TTG material regime, same-state thermodynamic correction, and c_v uncertainty are closed at the same evidence grade. |
 | `T13_HEAT_FLUX_ENTROPY_PRODUCTION_MAPPING` | `physical_heat_flux_entropy_map` | The SI Phi anchor, physical coefficient, source C_src, and uncertainty chain are all accepted on one state. |
 
+MAJOR_RESULT_BREAKDOWN:
+| Major result | Level | Lane | No-go | Core | Open |
+| --- | --- | ---: | ---: | ---: | ---: |
+| `T13_CAUSAL_THERMAL_BRANCH_CLOSURE` | `CLOSED_AS_NO_GO` | 3 | 1 | 0 | 0 |
+| `T13_DIMENSIONAL_PHI_THERMAL_OBSERVABLE_MAP` | `OPEN` | 2 | 0 | 0 | 1 |
+| `T13_ALPHA_PHI_K_INDEPENDENT_CALIBRATION` | `OPEN` | 1 | 1 | 0 | 1 |
+| `T13_UET_BRIDGE_BETA_SI_CORRESPONDENCE` | `PARTIAL` | 1 | 1 | 0 | 1 |
+| `T13_CHARGE_DENSITY_EOS` | `PARTIAL` | 3 | 0 | 0 | 1 |
+| `T13_COVARIANT_THERMAL_TRANSPORT` | `PARTIAL` | 3 | 0 | 0 | 1 |
+| `T13_SK_KMS_MATCHING` | `PARTIAL` | 2 | 0 | 0 | 1 |
+| `T13_ENTROPY_CURRENT_DISSIPATIVE_BALANCE` | `PARTIAL` | 2 | 0 | 0 | 1 |
+| `T13_TTG_SOURCE_UNCERTAINTY_PACKAGE` | `OPEN` | 2 | 1 | 0 | 2 |
+| `T13_HEAT_FLUX_ENTROPY_PRODUCTION_MAPPING` | `PARTIAL` | 2 | 1 | 0 | 1 |
+- The full gate currently compresses the `10` open subresults into `7` blocker classes; the subresult count is the evidence checklist, while the blocker count is the current decision controller.
+
 CLOSURE_ARITHMETIC:
 - Core-ready requires all `36` required subresults to leave `OPEN`; current counts are `CLOSED_FOR_LANE=21`, `CLOSED_AS_NO_GO=5`, `CLOSED_FOR_CORE=0`, `OPEN=10`.
 - The visible progress count is `non_open=26` of `36` (`72.2%`), while the remaining closure gap is `open_gap=10`. This is a reporting metric only and does not promote lane evidence to Core.
@@ -79,4 +94,4 @@ CLAIM_BOUNDARY:
 RERUN_POLICY:
 - Do not rerun the same numeric gates as a substitute for missing evidence. Rerun when an accepted source, calibration record, physical transport record, or its hash changes.
 
-Generated UTC: `2026-08-25T06:14:52.163211+00:00`.
+Generated UTC: `2026-08-25T06:26:00.318724+00:00`.

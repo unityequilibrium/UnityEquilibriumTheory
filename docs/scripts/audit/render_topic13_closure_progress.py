@@ -133,6 +133,7 @@ def build_payload() -> dict[str, Any]:
     }
     counts = dict(Counter(item["status"] for item in subresults))
     open_subresults = [item for item in subresults if item["status"] == "OPEN"]
+    gate_blockers = gate.get("major_result", {}).get("what_remains_open", [])
     core_handoff_results = [
         {
             "major_result_id": item.get("major_result_id"),
@@ -173,6 +174,8 @@ def build_payload() -> dict[str, Any]:
             "claim_promotion": gate.get("claim_promotion", False),
             "full_core_unlock": matrix.get("full_core_unlock", False),
             "controlling_blocker": gate.get("controlling_blocker"),
+            "gate_blocker_count": len(gate_blockers),
+            "gate_blockers": gate_blockers,
         },
         "closure_counts": counts,
         "closure_arithmetic": closure_arithmetic,
@@ -240,6 +243,26 @@ def render_markdown(payload: dict[str, Any]) -> str:
         lines.append(
             f"| `{md_cell(row['major_result_id'])}` | `{md_cell(row['subresult_id'])}` | {md_cell(row['acceptance'])} |"
         )
+    lines.extend(
+        [
+            "",
+            "MAJOR_RESULT_BREAKDOWN:",
+            "| Major result | Level | Lane | No-go | Core | Open |",
+            "| --- | --- | ---: | ---: | ---: | ---: |",
+        ]
+    )
+    for major in payload["major_results"]:
+        major_counts = major["subresult_status_counts"]
+        lines.append(
+            f"| `{md_cell(major['major_result_id'])}` | `{md_cell(major['closure_level'])}` | "
+            f"{major_counts.get('CLOSED_FOR_LANE', 0)} | {major_counts.get('CLOSED_AS_NO_GO', 0)} | "
+            f"{major_counts.get('CLOSED_FOR_CORE', 0)} | {major_counts.get('OPEN', 0)} |"
+        )
+    lines.extend(
+        [
+            f"- The full gate currently compresses the `{arithmetic['open_gap']}` open subresults into `{status['gate_blocker_count']}` blocker classes; the subresult count is the evidence checklist, while the blocker count is the current decision controller.",
+        ]
+    )
     lines.extend(
         [
             "",

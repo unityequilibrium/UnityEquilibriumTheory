@@ -5,7 +5,17 @@
     "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing",
     "full_core_unlock": false,
     "full_topic_closure_level": "PARTIAL",
-    "full_topic_status": "BLOCKED_OPEN_T13_FULL_BRIDGE"
+    "full_topic_status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
+    "gate_blocker_count": 7,
+    "gate_blockers": [
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "normalized_beta_and_SI_scale_correspondence_missing",
+      "physical_Kubo_coefficient_record_missing",
+      "dimensional_phi_to_thermal_observable_map_missing",
+      "material_regime_mapping_to_TTG_not_closed",
+      "c_v_source_uncertainty_not_closed"
+    ]
   },
   "closure_arithmetic": {
     "closed_as_no_go": 5,
@@ -37,7 +47,7 @@
     "downstream_core_gravity_transport": "LOCKED",
     "full_topic_13": "LOCKED until all required subresults are closed at their declared level"
   },
-  "generated_at": "2026-08-25T06:14:52.163211+00:00",
+  "generated_at": "2026-08-25T06:26:00.318724+00:00",
   "holdout_policy": {
     "calibration_path_may_read_holdout": false,
     "target_fit_performed": false,
