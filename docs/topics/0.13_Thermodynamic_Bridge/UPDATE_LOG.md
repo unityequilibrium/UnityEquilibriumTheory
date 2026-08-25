@@ -1,3 +1,17 @@
+## 2026-08-25 - Topic 13 minimal closure input contract wave
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for T13_FULL_CLOSURE_MINIMAL_INPUT_CONTRACT; canonical Full Topic 13 remains PARTIAL / BLOCKED_OPEN_T13_FULL_BRIDGE.
+WHAT_IS_ACTUALLY_CLOSED: A machine-readable contract now defines the minimum accepted fields for the Ding source, base-Phi/SI/alpha/beta, and physical transport packages and maps them to the 10 open subresults.
+WHAT_REMAINS_OPEN: All three root packages remain BLOCKED; no C_src, alpha_Phi_K, beta, physical Kubo coefficient, or prediction was emitted.
+DEPENDENCY_UNLOCKED: Evidence-ingestion readiness only. Full Topic 13, curved 3+1, Gravity, and constitutive transport remain locked.
+STATUS: PASS_SCOPED_MINIMAL_INPUT_CONTRACT_OPEN; claim_promotion=false; full_core_unlock=false; xie_2026_accessed=false.
+WHAT_CHANGED: Added t13_full_closure_minimal_input_contract.json, its focused regression, and a one-way hash link from the progress dashboard. No equation, threshold, source role, calibration value, or holdout role changed.
+EQUATION_OR_MAPPING: C_src(T)=sum_mu c_mu(T); Delta_Tq=Delta_u_ph/C_src(T); Delta_Tq=alpha_Phi_K*Delta_Phi; beta_T13 requires an independently fixed field/free-energy/temperature scale.
+VERIFICATION: Contract parse passed; focused contract and closure-matrix regression passed 4 tests; renderer passed; contract hash is linked from the progress artifact without a circular progress hash.
+CONTROLLING_BLOCKER: No accepted Ding-compatible source, base-Phi SI anchor, or physical transport match is present.
+NEXT_ACTION: Admit the first new external or derived package only through this contract, rerun its verifier, and regenerate the full gate after its input hash changes.
+CLAIM_BOUNDARY: Contract/readiness result only; not Full Topic 13 closure, external validation, or global UET closure.
+
 ## 2026-08-25 - Topic 13 core-handoff visibility wave
 
 MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for the reporting distinction between subresult arithmetic and named Core handoff; canonical Full Topic 13 remains PARTIAL / BLOCKED_OPEN_T13_FULL_BRIDGE.

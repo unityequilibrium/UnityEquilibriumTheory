@@ -1,0 +1,234 @@
+{
+  "schema_version": "t13-full-closure-minimal-input-contract-v1",
+  "artifact": "t13_full_closure_minimal_input_contract",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "created_on": "2026-08-25",
+  "status": "PASS_SCOPED_MINIMAL_INPUT_CONTRACT_OPEN",
+  "major_result": {
+    "major_result_id": "T13_FULL_CLOSURE_MINIMAL_INPUT_CONTRACT",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "The minimum evidence fields needed to move each of the three blocked Topic 13 root input packages into acceptance are explicit.",
+      "Each required field is mapped to the open subresults that it can unlock.",
+      "The contract separates external evidence acquisition from numeric reruns and preserves the locked holdout policy."
+    ],
+    "what_remains_open": [
+      "No Ding-compatible numeric C_src package has been accepted.",
+      "No independent base-Phi SI anchor or alpha_Phi_K record has been accepted.",
+      "No physical UET Kubo/SK/KMS/entropy package has been accepted."
+    ],
+    "dependency_unlocked": "None; this is an evidence-ingestion contract only.",
+    "claim_boundary": "This contract does not create data, derive a missing coefficient, promote a comparator, or close Full Topic 13."
+  },
+  "full_closure_rule": {
+    "required_major_result_count": 10,
+    "required_subresult_count": 36,
+    "current_open_subresult_count": 10,
+    "required_root_input_package_count": 3,
+    "target_result": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+    "transition_condition": [
+      "Every required subresult leaves OPEN at its declared accepted closure level.",
+      "All three root input packages are accepted_for_core=true.",
+      "No Xie 2026 holdout access, target fitting, threshold adjustment, clipping, or synthetic replacement occurs.",
+      "The full gate, closure register, dependency gate, and source hashes agree after regeneration."
+    ],
+    "claim_promotion_remains_false_until_transition": true
+  },
+  "packages": [
+    {
+      "package_id": "T13_INPUT_DING_TTG_SOURCE",
+      "current_status": "BLOCKED",
+      "acceptance_transition": "Accept one authorized Ding numeric package OR one independent same-regime PBTE reproduction, but only when every required field below is present and the payload passes the existing verifier.",
+      "required_fields": [
+        "authorized_numeric_C_src_payload_or_accepted_independent_reproduction",
+        "source_identity_locator_permission_and_terms",
+        "raw_mode_resolved_numeric_payload",
+        "source_hash_for_each_input_file",
+        "Ding_material_state_match_including_morphology_isotope_and_defect_state",
+        "temperature_geometry_boundary_and_scattering_state",
+        "mode_resolved_c_mu_rows_weights_and_index_convention",
+        "C_src_rows_in_J_m^-3_K^-1",
+        "same_state_thermodynamic_correction_if_Cp_to_Cv_is_used",
+        "source_grade_uncertainty_and_uncertainty_components",
+        "mesh_supercell_and_numerical_convergence",
+        "preprocessing_row_identity_and_data_dictionary",
+        "independence_statement_and_holdout_fit_audit"
+      ],
+      "unlocks_subresults": [
+        "accepted_numeric_csrc",
+        "material_and_uncertainty_closure",
+        "physical_source_backed_eos",
+        "physical_heat_flux_entropy_map"
+      ],
+      "current_missing_acceptance_fields": [
+        "authorized_numeric_C_src_payload",
+        "accepted_independent_reproduction",
+        "Ding_material_state_match",
+        "source_grade_uncertainty"
+      ],
+      "explicit_rejections": [
+        "figure-derived normalized TTG rows",
+        "MP48 harmonic c_v or DOS comparator without a Ding response contract",
+        "Calorine generic graphite candidate without Ding material/state mapping and source-grade uncertainty",
+        "any synthetic replacement for missing author-held data"
+      ]
+    },
+    {
+      "package_id": "T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
+      "current_status": "BLOCKED",
+      "acceptance_transition": "Accept a dimensionful action/free-energy origin with independently fixed SI coefficients OR an independent paired base-Phi/SI response record; then derive and uncertainty-propagate alpha_Phi_K and beta without target data.",
+      "required_fields": [
+        "base_Phi_definition_and_units",
+        "dimensionful_action_or_free_energy_origin",
+        "dimensionful_action_to_SI_observable_map",
+        "e0_in_J_m^-3_with_independent_provenance_and_uncertainty",
+        "paired_base_Phi_amplitude_and_SI_thermal_or_energy_response_if_calibrated_externally",
+        "numeric_alpha_Phi_K_in_K_per_normalized_Phi_with_uncertainty",
+        "independence_statement_not_selected_from_target_curve",
+        "beta_derivation_origin_separate_from_Landauer_identity",
+        "normalized_beta_to_SI_correspondence_and_unit_propagation",
+        "uncertainty_propagation_to_alpha_and_beta",
+        "source_hashes_and_row_or_equation_locators",
+        "holdout_fit_and_no_Landauer_inference_audit"
+      ],
+      "unlocks_subresults": [
+        "base_phi_si_anchor",
+        "independent_alpha_record",
+        "normalized_beta_si_map",
+        "physical_source_backed_eos",
+        "physical_heat_flux_entropy_map"
+      ],
+      "current_missing_acceptance_fields": [
+        "eligible_paired_alpha_record",
+        "numeric_alpha_emitted",
+        "dimensional_bridge_open_inputs_closed",
+        "dimensionful_action_SI_map"
+      ],
+      "explicit_rejections": [
+        "alpha inferred from normalized Phi shapes",
+        "Phi_E relabeled as base Phi",
+        "Landauer k_B T ln(2) used to infer beta or alpha",
+        "Xie 2026 holdout used for calibration or tuning"
+      ]
+    },
+    {
+      "package_id": "T13_INPUT_PHYSICAL_TRANSPORT_MATCH",
+      "current_status": "BLOCKED",
+      "acceptance_transition": "Accept one state-matched physical coefficient record or a fully microscopic UET match, with the SI anchor and finite-temperature normal sector completed.",
+      "required_fields": [
+        "physical_coefficient_record_and_coefficient_specific_units",
+        "temperature_chemical_potential_phase_and_space_response_state",
+        "correlator_locator_or_microscopic_response_payload",
+        "source_identity_permission_and_hash",
+        "source_grade_uncertainty_and_preprocessing",
+        "finite_temperature_normal_component_completion",
+        "physical_Phi_anchor_supplied_without_relabeling_C_or_R_gen",
+        "SK_KMS_FDT_matching_record",
+        "entropy_current_positivity_and_Onsager_or_reciprocity_conditions",
+        "physical_heat_flux_to_entropy_production_link",
+        "uncertainty_propagation_to_transport_and_entropy",
+        "holdout_fit_and_synthetic_control_separation_audit"
+      ],
+      "unlocks_subresults": [
+        "physical_uet_kubo_record",
+        "physical_sk_transport_match",
+        "physical_entropy_production_mapping",
+        "physical_heat_flux_entropy_map"
+      ],
+      "current_missing_acceptance_fields": [
+        "physical_coefficient_record",
+        "finite_temperature_transport_completion",
+        "physical_anchor_supplied",
+        "physical_heat_flux_entropy_link"
+      ],
+      "explicit_rejections": [
+        "Kim 2018 or another standard-physics conductivity comparator relabeled as a UET Kubo coefficient",
+        "natural-unit Kubo value treated as SI without a Phi anchor",
+        "Cattaneo or Fourier synthetic control treated as physical transport validation",
+        "entropy positivity shown only for an uncalibrated normalized lane"
+      ]
+    }
+  ],
+  "dependency_order": [
+    {
+      "stage": "base_and_source",
+      "requires": [
+        "T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
+        "T13_INPUT_DING_TTG_SOURCE"
+      ],
+      "can_close": [
+        "base_phi_si_anchor",
+        "independent_alpha_record",
+        "normalized_beta_si_map",
+        "accepted_numeric_csrc",
+        "material_and_uncertainty_closure",
+        "physical_source_backed_eos"
+      ]
+    },
+    {
+      "stage": "physical_transport",
+      "requires": [
+        "T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
+        "T13_INPUT_DING_TTG_SOURCE",
+        "T13_INPUT_PHYSICAL_TRANSPORT_MATCH"
+      ],
+      "can_close": [
+        "physical_uet_kubo_record",
+        "physical_sk_transport_match",
+        "physical_entropy_production_mapping",
+        "physical_heat_flux_entropy_map"
+      ]
+    },
+    {
+      "stage": "full_gate",
+      "requires": [
+        "no OPEN subresult",
+        "all three packages accepted_for_core",
+        "registry and dependency gate synchronized"
+      ],
+      "unlocks": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY only; not global UET closure or external validation."
+    }
+  ],
+  "current_evidence": {
+    "T13_INPUT_DING_TTG_SOURCE": {
+      "status": "BLOCKED",
+      "accepted_for_core": false
+    },
+    "T13_INPUT_BASE_PHI_SI_ALPHA_BETA": {
+      "status": "BLOCKED",
+      "accepted_for_core": false
+    },
+    "T13_INPUT_PHYSICAL_TRANSPORT_MATCH": {
+      "status": "BLOCKED",
+      "accepted_for_core": false
+    }
+  },
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "calibration_path_may_read_holdout": false,
+    "target_fit_performed": false,
+    "alpha_fit_performed": false,
+    "threshold_adjustment_allowed": false
+  },
+  "source_hashes": {
+    "docs/core/artifacts/t13_closure_input_package_audit.json": "1ef108fa0d8274ee732735a766889a65726d576ba47553b856f3bb01f3d3e2ae",
+    "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json": "880eb2cc94543f19fefae13ad8c64af820bb619d9c898cd4e1e710494519d281",
+    "docs/core/artifacts/t13_base_phi_si_reconciliation_audit.json": "524b19752a335d71e0e53c7ab860d0e08d07a7a75265b6c9d1785d3beb630c2c",
+    "docs/core/artifacts/t13_physical_kubo_coefficient_provenance_audit.json": "af78a1eb742e6438d679263771ef85b0f500726f4342a5f0a7ccefbe07a54f63",
+    "docs/core/artifacts/t13_topic13_closure_matrix.json": "1c41e8063de7460dd2fb8ae7c4e7c2c7d56bc6c0b1b36cd3e2afb5eca23260b1"
+  },
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": "The minimum input contract and dependency order for Full Topic 13 are machine-readable.",
+    "WHAT_REMAINS_OPEN": "All three root packages remain blocked; no scientific input was promoted.",
+    "DEPENDENCY_UNLOCKED": "None beyond evidence-ingestion readiness.",
+    "STATUS": "PASS_SCOPED_MINIMAL_INPUT_CONTRACT_OPEN",
+    "WHAT_CHANGED": "Added a field-level acceptance contract for the three minimal external/derived input packages; no equation or numeric value changed.",
+    "EQUATION_OR_MAPPING": "C_src(T)=sum_mu c_mu(T); Delta_Tq=Delta_u_ph/C_src(T); Delta_Tq=alpha_Phi_K*Delta_Phi; beta_T13 requires an independently fixed field/free-energy/temperature scale.",
+    "VERIFICATION": "The contract references the current canonical closure/input audits, preserves no-fit and locked-holdout rules, and emits no C_src, alpha, beta, transport coefficient, or prediction.",
+    "CONTROLLING_BLOCKER": "No accepted Ding-compatible source, base-Phi SI anchor, or physical transport match is present.",
+    "NEXT_ACTION": "Admit the first new package only through these fields, rerun its verifier, then regenerate the full gate and dependency projection.",
+    "CLAIM_BOUNDARY": "Contract/readiness result only; not Full Topic 13 closure, external validation, or global UET closure."
+  },
+  "claim_boundary": "The contract makes the shortest valid path to Full Topic 13 explicit but does not satisfy any missing input by itself."
+}

@@ -21,6 +21,7 @@ GATE_REL = (
     "topic13_full_thermodynamic_bridge_core_ready_gate.json"
 )
 INPUT_REL = "docs/core/artifacts/t13_closure_input_package_audit.json"
+MINIMAL_INPUT_REL = "docs/core/artifacts/t13_full_closure_minimal_input_contract.json"
 OUT_JSON_REL = "docs/core/artifacts/t13_full_closure_progress.json"
 OUT_MD_REL = "docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_FULL_CLOSURE_STATUS.md"
 
@@ -84,6 +85,7 @@ def build_payload() -> dict[str, Any]:
     matrix = load(MATRIX_REL)
     gate = load(GATE_REL)
     input_audit = load(INPUT_REL)
+    minimal_input_contract = load(MINIMAL_INPUT_REL)
 
     major_results: list[dict[str, Any]] = []
     subresults: list[dict[str, Any]] = []
@@ -127,7 +129,7 @@ def build_payload() -> dict[str, Any]:
 
     source_hashes = {
         relative: digest(relative)
-        for relative in (MATRIX_REL, GATE_REL, INPUT_REL)
+        for relative in (MATRIX_REL, GATE_REL, INPUT_REL, MINIMAL_INPUT_REL)
     }
     counts = dict(Counter(item["status"] for item in subresults))
     open_subresults = [item for item in subresults if item["status"] == "OPEN"]
@@ -168,6 +170,12 @@ def build_payload() -> dict[str, Any]:
         "closure_counts": counts,
         "closure_arithmetic": closure_arithmetic,
         "core_handoff_results": core_handoff_results,
+        "minimal_input_contract": {
+            "path": MINIMAL_INPUT_REL,
+            "sha256": source_hashes[MINIMAL_INPUT_REL],
+            "status": minimal_input_contract.get("status"),
+            "target_result": minimal_input_contract.get("full_closure_rule", {}).get("target_result"),
+        },
         "required_major_result_count": len(major_results),
         "required_subresult_count": len(subresults),
         "major_results": major_results,
@@ -243,6 +251,10 @@ def render_markdown(payload: dict[str, Any]) -> str:
         )
     lines.extend(
         [
+            "",
+            "MINIMAL_INPUT_CONTRACT:",
+            f"- {payload['minimal_input_contract']['path']}; SHA-256 {payload['minimal_input_contract']['sha256']}.",
+            "- This is a field-level evidence admission contract; it does not create a source value or promote a comparator.",
             "",
             "DEPENDENCY_UNLOCKED:",
             "- Causal named branch only. Full Topic 13, curved 3+1, Gravity, and constitutive transport remain locked.",
