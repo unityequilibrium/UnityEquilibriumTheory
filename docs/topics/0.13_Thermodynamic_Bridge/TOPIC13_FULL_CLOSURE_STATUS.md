@@ -28,6 +28,7 @@ WHAT_REMAINS_OPEN:
 CLOSURE_ARITHMETIC:
 - Core-ready requires all `36` required subresults to leave `OPEN`; current counts are `CLOSED_FOR_LANE=21`, `CLOSED_AS_NO_GO=5`, `CLOSED_FOR_CORE=0`, `OPEN=10`.
 - The `10` open subresults are controlled by `3` root input packages, so the next work is evidence acquisition/derivation, not indefinite reruns.
+- Named core handoff count: 1; this does not promote Full Topic 13 while any subresult or root input package remains open.
 
 ROOT_INPUT_PACKAGES:
 | Package | Status | Open subresults | Missing acceptance fields |
@@ -72,4 +73,4 @@ CLAIM_BOUNDARY:
 RERUN_POLICY:
 - Do not rerun the same numeric gates as a substitute for missing evidence. Rerun when an accepted source, calibration record, physical transport record, or its hash changes.
 
-Generated UTC: `2026-08-25T05:06:17.770899+00:00`.
+Generated UTC: `2026-08-25T05:26:25.857087+00:00`.

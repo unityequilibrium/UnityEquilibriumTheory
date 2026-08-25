@@ -131,12 +131,22 @@ def build_payload() -> dict[str, Any]:
     }
     counts = dict(Counter(item["status"] for item in subresults))
     open_subresults = [item for item in subresults if item["status"] == "OPEN"]
+    core_handoff_results = [
+        {
+            "major_result_id": item.get("major_result_id"),
+            "evidence_result_id": item.get("core_handoff", {}).get("evidence_result_id"),
+            "closure_level": item.get("core_handoff", {}).get("closure_level"),
+        }
+        for item in matrix.get("requirements", [])
+        if item.get("core_handoff", {}).get("closure_level") == "CLOSED_FOR_CORE"
+    ]
     closure_arithmetic = {
         "required_subresults": len(subresults),
         "closed_for_lane": counts.get("CLOSED_FOR_LANE", 0),
         "closed_as_no_go": counts.get("CLOSED_AS_NO_GO", 0),
         "closed_for_core": counts.get("CLOSED_FOR_CORE", 0),
         "open": counts.get("OPEN", 0),
+        "core_handoff_ready": len(core_handoff_results),
         "root_input_packages": len(PACKAGE_IDS),
         "full_topic_core_ready_rule": (
             "all required subresults must be CLOSED_FOR_CORE or an explicitly "
@@ -157,6 +167,7 @@ def build_payload() -> dict[str, Any]:
         },
         "closure_counts": counts,
         "closure_arithmetic": closure_arithmetic,
+        "core_handoff_results": core_handoff_results,
         "required_major_result_count": len(major_results),
         "required_subresult_count": len(subresults),
         "major_results": major_results,
@@ -219,6 +230,7 @@ def render_markdown(payload: dict[str, Any]) -> str:
             "CLOSURE_ARITHMETIC:",
             f"- Core-ready requires all `{arithmetic['required_subresults']}` required subresults to leave `OPEN`; current counts are `CLOSED_FOR_LANE={arithmetic['closed_for_lane']}`, `CLOSED_AS_NO_GO={arithmetic['closed_as_no_go']}`, `CLOSED_FOR_CORE={arithmetic['closed_for_core']}`, `OPEN={arithmetic['open']}`.",
             f"- The `{arithmetic['open']}` open subresults are controlled by `{arithmetic['root_input_packages']}` root input packages, so the next work is evidence acquisition/derivation, not indefinite reruns.",
+            f"- Named core handoff count: {arithmetic['core_handoff_ready']}; this does not promote Full Topic 13 while any subresult or root input package remains open.",
             "",
             "ROOT_INPUT_PACKAGES:",
             "| Package | Status | Open subresults | Missing acceptance fields |",

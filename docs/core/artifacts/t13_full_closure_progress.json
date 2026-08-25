@@ -11,6 +11,7 @@
     "closed_as_no_go": 5,
     "closed_for_core": 0,
     "closed_for_lane": 21,
+    "core_handoff_ready": 1,
     "full_topic_core_ready_rule": "all required subresults must be CLOSED_FOR_CORE or an explicitly accepted closure level in the canonical full gate; no OPEN subresult and all required input packages accepted",
     "open": 10,
     "required_subresults": 36,
@@ -21,12 +22,19 @@
     "CLOSED_FOR_LANE": 21,
     "OPEN": 10
   },
+  "core_handoff_results": [
+    {
+      "closure_level": "CLOSED_FOR_CORE",
+      "evidence_result_id": "T13_CAUSAL_FLUX_PHI_COUPLED_CORE_COMPATIBILITY",
+      "major_result_id": "T13_CAUSAL_THERMAL_BRANCH_CLOSURE"
+    }
+  ],
   "dependency_unlock": {
     "causal_named_branch": "CLOSED_FOR_CORE as a bounded normalized branch",
     "downstream_core_gravity_transport": "LOCKED",
     "full_topic_13": "LOCKED until all required subresults are closed at their declared level"
   },
-  "generated_at": "2026-08-25T05:06:17.770899+00:00",
+  "generated_at": "2026-08-25T05:26:25.857087+00:00",
   "holdout_policy": {
     "calibration_path_may_read_holdout": false,
     "target_fit_performed": false,

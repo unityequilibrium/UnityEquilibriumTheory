@@ -1,3 +1,17 @@
+## 2026-08-25 - Topic 13 core-handoff visibility wave
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for the reporting distinction between subresult arithmetic and named Core handoff; canonical Full Topic 13 remains PARTIAL / BLOCKED_OPEN_T13_FULL_BRIDGE.
+WHAT_IS_ACTUALLY_CLOSED: The progress artifact now records one named CLOSED_FOR_CORE handoff, T13_CAUSAL_FLUX_PHI_COUPLED_CORE_COMPATIBILITY, separately from the subresult count. This makes the bounded normalized causal branch visible without treating it as Full Topic 13 closure.
+WHAT_REMAINS_OPEN: The subresult arithmetic remains 21 lane-closed, 5 no-go, 0 Core-closed, and 10 open across 36; all three root input packages remain blocked.
+DEPENDENCY_UNLOCKED: Only the bounded causal branch handoff. Full Topic 13, curved 3+1, Gravity, and constitutive transport remain locked.
+STATUS: PASS_T13_CLOSURE_PROGRESS_RENDERED; claim_promotion=false; full_core_unlock=false; xie_2026_accessed=false.
+WHAT_CHANGED: Added core_handoff_results and closure_arithmetic.core_handoff_ready to the machine-readable progress artifact and rendered the count in the dashboard. No equation, threshold, source role, calibration value, or holdout role changed.
+EQUATION_OR_MAPPING: y_TTG = Delta_Tq(t) / Delta_Tq(0); y_TTG^UET = Delta_Phi(t) / Delta_Phi(0); Delta_Tq = alpha_Phi_K * Delta_Phi; no new dimensional value was emitted.
+VERIFICATION: Renderer returned 36 required subresults, 21 lane-closed, 5 no-go, 0 subresult Core-closed, 10 open, and 1 named Core handoff; syntax and closure-matrix tests passed; no holdout or target fit was used.
+CONTROLLING_BLOCKER: dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing, with Ding source/material uncertainty and physical transport packages also blocked.
+NEXT_ACTION: Acquire an accepted external/derived input package; do not repeat numeric reruns without an input hash change.
+CLAIM_BOUNDARY: Reporting hardening only. The named causal handoff is normalized and bounded; it does not close Full Topic 13, the original conserved-C baseline, or downstream claims.
+
 ## 2026-08-25 - Topic 13 closure arithmetic and package ownership wave
 
 MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for the closure-progress reporting contract; canonical Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
