@@ -1,0 +1,158 @@
+{
+  "schema_version": "t13-xie-2026-holdout-comparison-preregistration-v1",
+  "artifact": "t13_xie_2026_holdout_comparison_preregistration",
+  "generated_on": "2026-08-26",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "status": "LOCKED_PREREGISTRATION_NO_NUMERIC_PAYLOAD",
+  "closure_level": "CLOSED_FOR_LANE",
+  "major_result": {
+    "major_result_id": "T13_XIE_2026_HOLDOUT_COMPARISON_PREREGISTRATION",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "The future Xie 2026 comparison has a fixed data role, observable equations, access gate, and no-fit policy.",
+      "The numeric payload is not archived, read, digitized, fitted, or used for calibration in this preregistration.",
+      "The comparison cannot unlock Full Topic 13 until the independent SI/Phi, source, and physical transport inputs are accepted."
+    ],
+    "equation_or_mapping": {
+      "measurement": "y_TTG = Delta_Tq(t) / Delta_Tq(0)",
+      "uet": "y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)",
+      "bridge": "Delta_Tq = alpha_Phi_K * Delta_Phi",
+      "source_heat_capacity": "C_src(T) = sum_mu c_mu(T)"
+    },
+    "units": {
+      "time": "s",
+      "temperature": "K",
+      "normalized_curve": "dimensionless",
+      "alpha_Phi_K": "K per normalized base Phi",
+      "C_src": "J m^-3 K^-1"
+    },
+    "derivation_class": "metadata-only holdout preregistration and access-control contract",
+    "observable": "predeclared normalized thermal response comparison",
+    "data_role": "HOLDOUT",
+    "evidence_artifacts": [
+      "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json",
+      "docs/core/artifacts/t13_full_closure_progress.json"
+    ],
+    "verification_status": "LOCKED_NO_NUMERIC_HOLDOUT_ACCESS",
+    "open_blockers": [
+      "T13_INPUT_DING_TTG_SOURCE is not accepted_for_core",
+      "T13_INPUT_BASE_PHI_SI_ALPHA_BETA is not accepted_for_core",
+      "T13_INPUT_PHYSICAL_TRANSPORT_MATCH is not accepted_for_core",
+      "Xie numeric source payload is not authorized for access"
+    ],
+    "dependency_unlocked": "Future comparison protocol readiness only; no Full Topic 13, Core, Gravity, or transport unlock.",
+    "claim_boundary": "This is a preregistration and access-control result only. It is not an Xie comparison, prediction, calibration, or external validation."
+  },
+  "source_metadata": {
+    "identity": "Xie 2026 room-temperature second sound in isotopically pure graphite",
+    "publication_year": 2026,
+    "doi": "10.1038/s41467-026-70807-3",
+    "publisher_locator": "https://www.nature.com/articles/s41467-026-70807-3",
+    "data_statement": "Publisher metadata states that source data are provided; this preregistration does not retrieve or archive that payload.",
+    "data_role": "HOLDOUT",
+    "metadata_only_observed": true,
+    "numeric_payload_archived": false,
+    "numeric_rows_consumed": false,
+    "source_curves_digitized": false,
+    "source_payload_sha256": null
+  },
+  "required_preconditions": [
+    {
+      "package_id": "T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
+      "condition": "accepted_for_core=true with independent base-Phi SI anchor and alpha_Phi_K uncertainty",
+      "current_status": "BLOCKED"
+    },
+    {
+      "package_id": "T13_INPUT_DING_TTG_SOURCE",
+      "condition": "accepted_for_core=true with authorized numeric source or accepted same-regime reproduction and source-grade uncertainty",
+      "current_status": "BLOCKED"
+    },
+    {
+      "package_id": "T13_INPUT_PHYSICAL_TRANSPORT_MATCH",
+      "condition": "accepted_for_core=true with state-matched physical coefficient and SK/KMS/entropy linkage",
+      "current_status": "BLOCKED"
+    },
+    {
+      "package_id": "T13_XIE_2026_HOLDOUT_ACCESS_CONTROL",
+      "condition": "numeric source access audit explicitly authorizes a preregistered final comparison",
+      "current_status": "LOCKED"
+    }
+  ],
+  "comparison_protocol": {
+    "baseline_lanes": [
+      "Fourier comparator",
+      "Cattaneo finite-cone comparator",
+      "trace-only response comparator",
+      "Phi-response branch"
+    ],
+    "baseline_selection": "fixed before numeric holdout access; no target-curve selection",
+    "calibration_source": "training/calibration source only; never Xie 2026",
+    "fit_allowed": false,
+    "tuning_allowed": false,
+    "threshold_adjustment_allowed": false,
+    "synthetic_result_as_external_validation": false,
+    "required_row_identity": [
+      "source row identifier",
+      "temperature_K",
+      "time_s",
+      "grating_or_spatial_scale_m",
+      "normalized signal",
+      "uncertainty",
+      "sample/material state",
+      "preprocessing record"
+    ]
+  },
+  "acceptance_metrics": {
+    "pre_arrival_leakage": {
+      "threshold": 1.0e-6,
+      "unit": "normalized amplitude",
+      "source": "existing locked Topic 13 causal gate",
+      "policy": "inherited without relaxation, clipping, padding, or Xie-specific adjustment"
+    },
+    "arrival_response": "nonzero at the declared arrival target",
+    "convergence": "declared temporal/spatial convergence before comparison",
+    "ledger": "energy/ledger closure from the admitted branch",
+    "curve_residual": "predeclared normalized residual only after numeric source access is authorized",
+    "uncertainty": "propagate source, calibration, and model uncertainty without replacing missing terms"
+  },
+  "access_gate": {
+    "allow_numeric_source_read": false,
+    "allow_source_archiving": false,
+    "allow_curve_digitization": false,
+    "allow_calibration": false,
+    "allow_fit": false,
+    "allow_tuning": false,
+    "allow_threshold_adjustment": false,
+    "allow_claim_promotion": false,
+    "required_before_unlock": [
+      "all three Topic 13 root input packages accepted_for_core=true",
+      "this preregistration hash is recorded before numeric access",
+      "a separate access audit records permitted payload scope and source hash",
+      "holdout comparison is run once with no post-access parameter changes"
+    ]
+  },
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "xie_2026_source_data_consumed": false,
+    "numeric_payload_consumed": false,
+    "numeric_rows_consumed": false,
+    "calibration_path_may_read_holdout": false,
+    "target_fit_performed": false,
+    "threshold_adjustment_performed": false,
+    "locked_until_separate_authorization": true
+  },
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": "A metadata-only, no-fit holdout comparison contract is fixed.",
+    "WHAT_REMAINS_OPEN": "All numeric holdout access and all three physical Topic 13 root input packages remain blocked.",
+    "DEPENDENCY_UNLOCKED": "Future comparison protocol readiness only.",
+    "STATUS": "LOCKED_PREREGISTRATION_NO_NUMERIC_PAYLOAD",
+    "WHAT_CHANGED": "Added a machine-readable Xie 2026 comparison contract without reading or archiving holdout data.",
+    "EQUATION_OR_MAPPING": "y_TTG = Delta_Tq(t)/Delta_Tq(0); y_TTG^UET = Delta_Phi(t)/Delta_Phi(0); Delta_Tq = alpha_Phi_K*Delta_Phi.",
+    "VERIFICATION": "The access gate is fail-closed; no fit, tuning, calibration, threshold adjustment, digitization, or numeric payload consumption is allowed.",
+    "CONTROLLING_BLOCKER": "holdout_numeric_access_requires_accepted_root_inputs_and_separate_authorization",
+    "NEXT_ACTION": "Do not read Xie numeric data. Obtain the missing accepted source, independent Phi/SI calibration, and physical transport inputs first.",
+    "CLAIM_BOUNDARY": "Preregistration only; not a thermal prediction, external validation, or Full Topic 13 closure."
+  }
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": "topic13-full-thermodynamic-bridge-core-ready-v1",
   "artifact": "topic13_full_thermodynamic_bridge_core_ready_gate",
-  "generated_at": "2026-08-25",
+  "generated_at": "2026-08-26",
   "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
   "claim_promotion": false,
   "major_result": {
@@ -80949,6 +80949,14 @@
       }
     },
     {
+      "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
+      "sha256": "1cb84b6c8e9741fef1dc6e0f83fba3dfe68ca6cd89adac8fa1a31835b4debf62",
+      "summary": {
+        "status": "NO_GO_FOR_DECLARED_CONSERVED_CATTANEO_LOCAL_GRADIENT_CLASS",
+        "proof_scope": "declared local conserved-C Cattaneo equation with mu_C=a_C*C-kappa_C*Laplacian(C)"
+      }
+    },
+    {
       "path": "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
       "sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b",
       "summary": {
@@ -81778,14 +81786,6 @@
         "max_C_src_relative_change": 0.002396543213200888,
         "max_kappa_relative_change": 0.09081201116807297,
         "controlling_blocker": "ding_C_src_mode_state_and_source_grade_uncertainty_missing"
-      }
-    },
-    {
-      "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
-      "sha256": "1cb84b6c8e9741fef1dc6e0f83fba3dfe68ca6cd89adac8fa1a31835b4debf62",
-      "summary": {
-        "status": "NO_GO_FOR_DECLARED_CONSERVED_CATTANEO_LOCAL_GRADIENT_CLASS",
-        "proof_scope": "declared local conserved-C Cattaneo equation with mu_C=a_C*C-kappa_C*Laplacian(C)"
       }
     }
   ],

@@ -4693,3 +4693,18 @@ CONTROLLING_BLOCKER: The three grouped input packages remain blocked: Ding-compa
 NEXT_ACTION: Do not rerun unchanged numeric gates. Obtain a permitted Ding payload or accepted same-regime reproduction, an independent base-Phi SI anchor/alpha record, and a state-matched physical transport record; then rerun the affected acceptance chain.
 CLAIM_BOUNDARY: This wave repairs evidence traceability only. It does not turn the Calorine comparator into Ding data, does not emit `alpha_Phi_K`, does not consume Xie 2026, and does not close Full Topic 13.
 EVIDENCE_PATHS: `docs/core/artifacts/t13_calorine_model_form_state_spread_comparison_audit.json`; `docs/core/artifacts/t13_csrc_equilibrium_component_acceptance_audit.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/artifacts/t13_topic13_closure_matrix.json`; `docs/core/artifacts/uet_major_result_closure_register.json`; `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`.
+
+### 2026-08-26 - Topic 13 holdout protocol and full subresult map wave
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for T13_XIE_2026_HOLDOUT_COMPARISON_PREREGISTRATION; Full Topic 13 remains PARTIAL and BLOCKED_OPEN_T13_FULL_BRIDGE.
+WHAT_IS_ACTUALLY_CLOSED: Xie 2026 now has a metadata-only, no-fit comparison contract with fixed observables, baseline lanes, inherited leakage threshold, and a fail-closed access gate. The generated TOPIC13_SUBRESULT_CLOSURE_MAP.md exposes all 36 required rows and their owning input packages.
+WHAT_REMAINS_OPEN: No Xie numeric payload was read or archived. The same 10 Topic 13 subresults remain open: base-Phi SI anchor, independent alpha_Phi_K, normalized beta/SI map, physical source-backed EOS, physical UET Kubo, physical SK/KMS transport match, physical entropy mapping, accepted Ding-compatible C_src, material/uncertainty closure, and physical heat-flux/entropy map.
+DEPENDENCY_UNLOCKED: Future holdout comparison protocol readiness only; no Full Topic 13, Core, Gravity, or constitutive transport unlock.
+STATUS: PASS_SCOPED_XIE_2026_HOLDOUT_PREREGISTRATION_LOCKED.
+WHAT_CHANGED: Added t13_xie_2026_holdout_comparison_preregistration.json, its focused audit, and a generated 36-row closure map. No source payload, alpha, threshold, equation, fit, calibration, or claim promotion was added.
+EQUATION_OR_MAPPING: y_TTG = Delta_Tq(t)/Delta_Tq(0); y_TTG^UET = Delta_Phi(t)/Delta_Phi(0); Delta_Tq = alpha_Phi_K*Delta_Phi; C_src(T)=sum_mu c_mu(T).
+VERIFICATION: Focused holdout preregistration audit passed; the existing holdout access audit remains clean; generated closure counts remain CLOSED_FOR_LANE=21, CLOSED_AS_NO_GO=5, CLOSED_FOR_CORE=0, OPEN=10 across 36 rows; full_core_unlock=false.
+CONTROLLING_BLOCKER: holdout_numeric_access_requires_accepted_root_inputs_and_separate_authorization; Full Topic 13 remains controlled by the three blocked root packages, with dimensional Phi/SI/alpha as the central blocker.
+NEXT_ACTION: Do not read Xie numeric data. Obtain an accepted Ding-compatible source, independent base-Phi/SI calibration, and physical transport record; rerun the full chain only after an input hash changes.
+CLAIM_BOUNDARY: This wave closes protocol and reporting lanes only. It is not a thermal prediction, external validation, or Full Topic 13 closure.
+EVIDENCE_PATHS: docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_xie_2026_holdout_comparison_preregistration.json; docs/core/artifacts/t13_xie_2026_holdout_preregistration_audit.json; docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_SUBRESULT_CLOSURE_MAP.md.
