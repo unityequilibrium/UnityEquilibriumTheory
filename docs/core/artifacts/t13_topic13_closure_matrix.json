@@ -81,7 +81,7 @@
   ],
   "input_package_audit": {
     "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
-    "sha256": "6272345abe85851154967534934b0cae3174edda9039316ffbe0821a203e4210",
+    "sha256": "a8ab343d42008fdc5e40ca93990df84baf22f754ddb949ea0e12b9a594e91384",
     "summary": {
       "role": "grouped Topic 13 closure-input acceptance audit",
       "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
@@ -128,7 +128,7 @@
       },
       {
         "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
-        "sha256": "6272345abe85851154967534934b0cae3174edda9039316ffbe0821a203e4210",
+        "sha256": "a8ab343d42008fdc5e40ca93990df84baf22f754ddb949ea0e12b9a594e91384",
         "summary": {
           "role": "grouped Topic 13 closure-input acceptance audit",
           "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
@@ -419,6 +419,13 @@
         }
       },
       {
+        "path": "docs/core/artifacts/t13_csrc_source_route_priority_audit.json",
+        "sha256": "cbe5867d1946e143ed4a29b4697e15fea9b423c488d713f6ab1765c99c38ad88",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
         "path": "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
         "sha256": "818230a6f8aa68a14a1f642e1e7342d70bfa657f6e05476d3e190d336e77b386",
         "summary": {
@@ -449,7 +456,7 @@
     ],
     "input_package_audit": {
       "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
-      "sha256": "6272345abe85851154967534934b0cae3174edda9039316ffbe0821a203e4210",
+      "sha256": "a8ab343d42008fdc5e40ca93990df84baf22f754ddb949ea0e12b9a594e91384",
       "summary": {
         "role": "grouped Topic 13 closure-input acceptance audit",
         "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
@@ -715,7 +722,7 @@
       },
       {
         "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
-        "sha256": "6272345abe85851154967534934b0cae3174edda9039316ffbe0821a203e4210",
+        "sha256": "a8ab343d42008fdc5e40ca93990df84baf22f754ddb949ea0e12b9a594e91384",
         "summary": {
           "role": "grouped Topic 13 closure-input acceptance audit",
           "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
@@ -1006,6 +1013,13 @@
         }
       },
       {
+        "path": "docs/core/artifacts/t13_csrc_source_route_priority_audit.json",
+        "sha256": "cbe5867d1946e143ed4a29b4697e15fea9b423c488d713f6ab1765c99c38ad88",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
         "path": "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
         "sha256": "818230a6f8aa68a14a1f642e1e7342d70bfa657f6e05476d3e190d336e77b386",
         "summary": {
@@ -1036,7 +1050,7 @@
     ],
     "input_package_audit": {
       "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
-      "sha256": "6272345abe85851154967534934b0cae3174edda9039316ffbe0821a203e4210",
+      "sha256": "a8ab343d42008fdc5e40ca93990df84baf22f754ddb949ea0e12b9a594e91384",
       "summary": {
         "role": "grouped Topic 13 closure-input acceptance audit",
         "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
@@ -2521,6 +2535,7 @@
         "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
         "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json",
         "docs/core/artifacts/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json",
+        "docs/core/artifacts/t13_csrc_source_route_priority_audit.json",
         "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
         "docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json"
       ],
@@ -2705,6 +2720,13 @@
         {
           "path": "docs/core/artifacts/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json",
           "sha256": "0a3b785b0a75e72a41ef9ef4521879ef74cc191d5d46271eaa2a08f6b87e657b",
+          "summary": {
+            "role": "declared Topic 13 closure-contract evidence"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_csrc_source_route_priority_audit.json",
+          "sha256": "cbe5867d1946e143ed4a29b4697e15fea9b423c488d713f6ab1765c99c38ad88",
           "summary": {
             "role": "declared Topic 13 closure-contract evidence"
           }

@@ -4799,3 +4799,19 @@ EVIDENCE_HASH:
 - no-go artifact: 0a3b785b0a75e72a41ef9ef4521879ef74cc191d5d46271eaa2a08f6b87e657b
 - matrix: 10d8a400e8e58d74e24f61f94e304227613fa8d1140726b84d620a5df16b49f6
 - progress: 870d17180a03e31d19c1cfffc7ebcace39893d8484f5036d403a630e6620e239
+
+### 2026-08-26 - Topic 13 C_src source-route priority wave
+
+MAJOR_RESULT_CLOSURE: `T13_C_SRC_SOURCE_ROUTE_PRIORITY` is `CLOSED_FOR_LANE`; Full Topic 13 remains `PARTIAL` and `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_IS_ACTUALLY_CLOSED: The eight currently captured source routes are ranked against all 11 fields of the independent C_src acceptance contract. The direct Ding author route is priority 1, two Calorine routes are numeric candidates, and public OA/NIMS/Huang/Huberman routes are bounded as non-productive for accepted numeric C_src under their captured payloads.
+WHAT_REMAINS_OPEN: No route is accepted for Full Topic 13. Ding-compatible numeric C_src, material/state equivalence, source-grade uncertainty, independent alpha_Phi_K, SI Phi anchor, physical Kubo, EOS/transport/KMS/entropy closure remain open.
+DEPENDENCY_UNLOCKED: Source-route decision and acquisition priority only; no numeric Ding C_src, alpha_Phi_K, physical transport, Core, Gravity, or Galaxy unlock.
+STATUS: `PASS_SCOPED_C_SRC_SOURCE_ROUTE_PRIORITY_NO_ACCEPTED_ROUTE`; 8 routes, 11 required fields, 2 numeric C_src candidates, 0 accepted routes; `full_core_unlock=false`; `claim_promotion=false`.
+WHAT_CHANGED: Added `audit_topic13_csrc_source_route_priority.py`, `t13_csrc_source_route_priority_audit.json`, and its focused regression; projected the new major result into the source-and-uncertainty evidence list and regenerated closure projections.
+EQUATION_OR_MAPPING: `C_src(T)=sum_mu c_mu(T)`; `Delta_Tq=Delta_u_ph/C_src(T)`; acceptance requires every field plus material/state equivalence, source-grade uncertainty, convergence, and holdout/fit audit.
+VERIFICATION: Route audit passed; focused integration suite passed 9 tests; grouped input audit remains 3 packages / 0 accepted; full gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE`; Xie 2026 was not accessed.
+CONTROLLING_BLOCKER: `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing` remains the nearest controller; material-regime and source-grade uncertainty blockers remain explicit.
+NEXT_ACTION: Obtain authorization to send the prepared Ding request, or obtain a genuinely same-regime PBTE reproduction with all 11 required fields. Do not rerun unchanged numeric gates or infer C_src from normalized TTG, incident fluence, or comparator c_v.
+CLAIM_BOUNDARY: This closes source-route prioritization only. It is not numeric Ding C_src, independent alpha calibration, TTG prediction, external validation, Core closure, or global UET closure.
+EVIDENCE_PATHS: `docs/scripts/audit/audit_topic13_csrc_source_route_priority.py`; `docs/core/test/test_topic13_csrc_source_route_priority.py`; `docs/core/artifacts/t13_csrc_source_route_priority_audit.json`; `docs/core/artifacts/t13_topic13_closure_matrix.json`; `docs/core/artifacts/t13_full_closure_progress.json`.
+EVIDENCE_HASHES: route-priority `cbe5867d1946e143ed4a29b4697e15fea9b423c488d713f6ab1765c99c38ad88`; matrix `f5d534d2f4cdeea650c23d79948942238531f4f1b5edfa31e735b99546312a6c`; progress `01c27f58dcedc490ca51b3898e75db219694c44795e56b6ed80857deea879850`; register `6f5d8ba55cb595d5bfce997878c139b2b2e6396c4be2a6502e8f317a51570406`; dependency `df8ea80e2e8fcfb6dcbff3d4978c860509803a74672b7d743896b23d14283446`.

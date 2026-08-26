@@ -336,6 +336,7 @@ MAJOR_RESULT_CONTRACTS: dict[str, dict[str, Any]] = {
             "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
             "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json",
             "docs/core/artifacts/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json",
+            "docs/core/artifacts/t13_csrc_source_route_priority_audit.json",
             "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
             "docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json",
         ],

@@ -1,0 +1,927 @@
+{
+  "schema_version": "t13-csrc-source-route-priority-v1",
+  "artifact": "t13_csrc_source_route_priority_audit",
+  "generated_at": "2026-08-26",
+  "status": "PASS_SCOPED_C_SRC_SOURCE_ROUTE_PRIORITY_NO_ACCEPTED_ROUTE",
+  "major_result": {
+    "major_result_id": "T13_C_SRC_SOURCE_ROUTE_PRIORITY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "The current C_src source routes are ranked against the exact independent acceptance contract.",
+      "The direct Ding author route is selected as priority 1 and is explicitly not sent or treated as received.",
+      "Numeric Calorine candidates are separated from Ding acceptance because material/state equivalence and source-grade uncertainty are missing.",
+      "Public OA, NIMS, Huang, and Huberman routes are bounded as non-productive for accepted numeric C_src under their captured payloads.",
+      "The next action is an external input change or a genuinely qualifying same-regime reproduction, not another unchanged gate rerun."
+    ],
+    "equation_or_mapping": {
+      "source_response": "C_src(T) = sum_mu c_mu(T)",
+      "temperature_response": "Delta_Tq = Delta_u_ph / C_src(T)",
+      "acceptance_rule": "accepted_C_src_route := every required field present + material/state equivalence + source-grade uncertainty + holdout/fit audit"
+    },
+    "units": {
+      "C_src": "J m^-3 K^-1",
+      "Delta_u_ph": "J m^-3",
+      "Delta_Tq": "K",
+      "temperature": "K"
+    },
+    "derivation_class": "source provenance route-priority and acceptance-coverage audit; no UET derivation",
+    "observable": "eligibility of source routes for Ding-compatible mode-resolved C_src(T)",
+    "data_role": "SOURCE_ACQUISITION_DECISION_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json",
+        "role": "independent C_src acceptance contract",
+        "sha256": "880eb2cc94543f19fefae13ad8c64af820bb619d9c898cd4e1e710494519d281"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_pbte_author_request_manifest.json",
+        "role": "source package or request manifest",
+        "sha256": "512127dd84d1f65905931d111cea5377b8f44ed8d2dd85a142c9dae9680358c5"
+      },
+      {
+        "path": "docs/core/artifacts/t13_ding_pbte_author_request_audit.json",
+        "role": "route qualification audit",
+        "sha256": "66679f962d0725455c73bfbc856f6c5722b039a3c15b16d4620081d89b4b892a"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_pbte_numeric_input_availability_package.json",
+        "role": "source package or request manifest",
+        "sha256": "b87680866ebed7ca25f27008f01e37dd47f0e6da54c3c1e27eb404e20fe600ad"
+      },
+      {
+        "path": "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
+        "role": "route qualification audit",
+        "sha256": "1828db74760ac53c73345d0e4a8adc8fc00fc16bb25e84809a73aaa3cd9b3d9a"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_nep_bte_reproduction_source_package.json",
+        "role": "source package or request manifest",
+        "sha256": "a82b25ed00f896b759d2b577bdd046faf1c1ef1399b6f5d12b71c8bd6318e5ed"
+      },
+      {
+        "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
+        "role": "route qualification audit",
+        "sha256": "a2fb52533d768697950c49722e24e5de0d9d3381c24be6c5bf2e23f88a8957e0"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/calorine_legacy_nep2_pbte_reproduction_source_package.json",
+        "role": "source package or request manifest",
+        "sha256": "564606b5634d4cf1e87907da1598401b9f9ebcedacd0a41030b3766a774f84fc"
+      },
+      {
+        "path": "docs/core/artifacts/t13_calorine_legacy_nep2_pbte_reproduction_audit.json",
+        "role": "route qualification audit",
+        "sha256": "66e05c61250da9711d7d90f44cdd1297aa88e560d716984a1a8db143fa4e7af3"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/mp48_independent_graphite_cv_source_package.json",
+        "role": "source package or request manifest",
+        "sha256": "86f5d5015b5bd0172bc2bfae64271955c56470650bdb6b8459bb1280e5dbc3cf"
+      },
+      {
+        "path": "docs/core/artifacts/t13_mp48_independent_graphite_cv_audit.json",
+        "role": "route qualification audit",
+        "sha256": "56493e6d4883f3f78d24f630f5cdc6718eec350ce264152146979e3bb0ee39a9"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/nims_mdr_mp990448_phonon_source_package.json",
+        "role": "source package or request manifest",
+        "sha256": "bbd4aee185a7c5a08b33f2f267e81a8b5274fa43b26eae1167966b4a5ec9a061"
+      },
+      {
+        "path": "docs/core/artifacts/t13_nims_mp990448_phonon_source_boundary_audit.json",
+        "role": "route qualification audit",
+        "sha256": "2e9f93be5cf23c429d9d0b77f755efb074a44790483f0b635a62327d5025eda9"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/huang_2023_nims_mdr_payload_source_package.json",
+        "role": "source package or request manifest",
+        "sha256": "e7224f04f632e430782d8bbde4477e87d7f3d973bc62e176ceb48cccb31c6f36"
+      },
+      {
+        "path": "docs/core/artifacts/t13_huang_2023_nims_mdr_payload_boundary_audit.json",
+        "role": "route qualification audit",
+        "sha256": "5a80347b4cc014e3c585fa9e3cff16d08834651d93db74c0478ce687156cac5c"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/huberman_2019_ttg_source_boundary_package.json",
+        "role": "source package or request manifest",
+        "sha256": "f70ff820ea3cb16023d23bb3fd7d36d6ed486357b8cbc6ceb81bf2fd35492844"
+      },
+      {
+        "path": "docs/core/artifacts/t13_huberman_2019_public_pbte_boundary_audit.json",
+        "role": "route qualification audit",
+        "sha256": "22b065abd8177a9b1f181e79761baadc0c5c6242d44bea74a8fd6022aafec3c4"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_C_SRC_SOURCE_ROUTE_PRIORITY_NO_ACCEPTED_ROUTE",
+    "open_blockers": [
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+      "material_regime_mapping_to_TTG_not_closed",
+      "c_v_source_uncertainty_not_closed"
+    ],
+    "dependency_unlocked": "Source-route decision and acquisition priority only; no numeric Ding C_src, alpha_Phi_K, physical transport, Core, Gravity, or Galaxy unlock.",
+    "claim_boundary": "This closes a source-acquisition decision lane only. It does not accept a C_src route, create data, calibrate alpha_Phi_K, validate TTG, or close Full Topic 13."
+  },
+  "acceptance_contract": {
+    "path": "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json",
+    "sha256": "880eb2cc94543f19fefae13ad8c64af820bb619d9c898cd4e1e710494519d281",
+    "required_fields": [
+      "source_identity_and_locator",
+      "raw_numeric_or_reproduction_payload",
+      "source_hash",
+      "material_identity_morphology_isotope_defect_state",
+      "temperature_and_state",
+      "PBTE_mode_resolved_response_contract",
+      "C_src_rows_with_J_m^-3_K^-1_units",
+      "uncertainty_and_preprocessing",
+      "mesh_or_numerical_convergence",
+      "independence_statement",
+      "holdout_and_fit_audit"
+    ]
+  },
+  "routes": [
+    {
+      "route_id": "ding_author_payload",
+      "priority": 1,
+      "route_class": "DIRECT_AUTHOR_PAYLOAD",
+      "label": "Ding corresponding-author numeric payload",
+      "current_state": "REQUEST_PACKAGE_READY_NOT_SENT",
+      "source_package": {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_pbte_author_request_manifest.json",
+        "role": "source package or request manifest",
+        "sha256": "512127dd84d1f65905931d111cea5377b8f44ed8d2dd85a142c9dae9680358c5"
+      },
+      "audit_artifact": {
+        "path": "docs/core/artifacts/t13_ding_pbte_author_request_audit.json",
+        "role": "route qualification audit",
+        "sha256": "66679f962d0725455c73bfbc856f6c5722b039a3c15b16d4620081d89b4b892a"
+      },
+      "package_status": "REQUEST_PACKAGE_READY_NOT_SENT",
+      "audit_status": "PASS_REQUEST_SCHEMA_OPEN_EXTERNAL_RESPONSE",
+      "field_coverage": {
+        "source_identity_and_locator": {
+          "status": "PRESENT",
+          "basis": "The request manifest locks the Ding DOI/PMCID and corresponding-author route."
+        },
+        "raw_numeric_or_reproduction_payload": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "source_hash": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "material_identity_morphology_isotope_defect_state": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "temperature_and_state": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "PBTE_mode_resolved_response_contract": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "C_src_rows_with_J_m^-3_K^-1_units": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "uncertainty_and_preprocessing": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "mesh_or_numerical_convergence": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "independence_statement": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "holdout_and_fit_audit": {
+          "status": "PRESENT",
+          "basis": "The request audit excludes target fitting, alpha fitting, and Xie 2026 access."
+        }
+      },
+      "field_coverage_count": 2,
+      "required_field_count": 11,
+      "acceptance_decision": "BLOCKED_EXTERNAL_INPUT_NOT_RECEIVED",
+      "accepted_for_full_topic13": false,
+      "rejection_reasons": [
+        "request has not been sent or answered",
+        "numeric mode rows, C_src rows, and payload hash are not present",
+        "material/state, uncertainty, convergence, and independence records are not delivered"
+      ],
+      "next_action": "Obtain project authorization, send the bounded request, then transition to REQUEST_PAYLOAD_RECEIVED_PENDING_AUDIT only after a response is archived and hashed.",
+      "holdout_policy": {
+        "xie_2026_accessed": false,
+        "target_curve_used": false,
+        "fit_or_tuning_used": false
+      },
+      "verification": {
+        "source_audit_checks_pass": true,
+        "claim_promotion": false
+      }
+    },
+    {
+      "route_id": "ding_public_oa",
+      "priority": 2,
+      "route_class": "PUBLIC_SOURCE_BOUNDARY",
+      "label": "Ding official PMC OA distribution",
+      "current_state": "PUBLIC_OA_ROUTE_CLOSED_NO_NUMERIC_REPRODUCTION_PAYLOAD",
+      "source_package": {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_pbte_numeric_input_availability_package.json",
+        "role": "source package or request manifest",
+        "sha256": "b87680866ebed7ca25f27008f01e37dd47f0e6da54c3c1e27eb404e20fe600ad"
+      },
+      "audit_artifact": {
+        "path": "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
+        "role": "route qualification audit",
+        "sha256": "1828db74760ac53c73345d0e4a8adc8fc00fc16bb25e84809a73aaa3cd9b3d9a"
+      },
+      "package_status": "OFFICIAL_OA_INVENTORY_LOCKED_REPRODUCTION_INPUTS_ABSENT",
+      "audit_status": "PASS_SCOPED_OA_NUMERIC_INPUT_AVAILABILITY_NO_GO",
+      "field_coverage": {
+        "source_identity_and_locator": {
+          "status": "PRESENT",
+          "basis": "The official OA package records article identity, OA locator, and data-availability statement."
+        },
+        "raw_numeric_or_reproduction_payload": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "source_hash": {
+          "status": "PRESENT",
+          "basis": "Captured OA objects are archived with size/hash identity."
+        },
+        "material_identity_morphology_isotope_defect_state": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "temperature_and_state": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "PBTE_mode_resolved_response_contract": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "C_src_rows_with_J_m^-3_K^-1_units": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "uncertainty_and_preprocessing": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "mesh_or_numerical_convergence": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "independence_statement": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "holdout_and_fit_audit": {
+          "status": "PRESENT",
+          "basis": "The OA audit records no Xie access, no holdout consumption, and no executed author request."
+        }
+      },
+      "field_coverage_count": 3,
+      "required_field_count": 11,
+      "acceptance_decision": "CLOSED_PUBLIC_ROUTE_NO_PAYLOAD",
+      "accepted_for_full_topic13": false,
+      "rejection_reasons": [
+        "captured OA distribution contains figures/PDFs but no mode-resolved numeric C_src or reproducible PBTE payload",
+        "the publisher routes supporting data to the corresponding author on reasonable request"
+      ],
+      "next_action": "Stop searching the same OA prefix; use the authorized author route or a separately accepted same-regime reproduction.",
+      "holdout_policy": {
+        "xie_2026_accessed": false,
+        "target_curve_used": false,
+        "fit_or_tuning_used": false
+      },
+      "verification": {
+        "source_audit_checks_pass": true,
+        "claim_promotion": false
+      }
+    },
+    {
+      "route_id": "calorine_zenodo_pbte",
+      "priority": 3,
+      "route_class": "INDEPENDENT_PBTE_REPRODUCTION_CANDIDATE",
+      "label": "Calorine/Zenodo NEP-RTA PBTE candidate",
+      "current_state": "NUMERIC_C_SRC_CANDIDATE_NOT_DING_ACCEPTED",
+      "source_package": {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_nep_bte_reproduction_source_package.json",
+        "role": "source package or request manifest",
+        "sha256": "a82b25ed00f896b759d2b577bdd046faf1c1ef1399b6f5d12b71c8bd6318e5ed"
+      },
+      "audit_artifact": {
+        "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
+        "role": "route qualification audit",
+        "sha256": "a2fb52533d768697950c49722e24e5de0d9d3381c24be6c5bf2e23f88a8957e0"
+      },
+      "package_status": "PASS_SCOPED_CALORINE_NUMERIC_C_SRC_REPRODUCTION",
+      "audit_status": "PASS_SCOPED_CALORINE_NUMERIC_C_SRC_REPRODUCTION",
+      "field_coverage": {
+        "source_identity_and_locator": {
+          "status": "PRESENT",
+          "basis": "Zenodo input locators and local source hashes are recorded."
+        },
+        "raw_numeric_or_reproduction_payload": {
+          "status": "PRESENT",
+          "basis": "Force constants, kappa payloads, and candidate C_src summaries are archived."
+        },
+        "source_hash": {
+          "status": "PRESENT",
+          "basis": "The audit checks source hashes and archived payload identity."
+        },
+        "material_identity_morphology_isotope_defect_state": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "temperature_and_state": {
+          "status": "PRESENT",
+          "basis": "Temperatures and a periodic primitive-crystal state are declared; equivalence to Ding remains separate."
+        },
+        "PBTE_mode_resolved_response_contract": {
+          "status": "PRESENT",
+          "basis": "The candidate records mode heat capacity and RTA PBTE response inputs."
+        },
+        "C_src_rows_with_J_m^-3_K^-1_units": {
+          "status": "PRESENT",
+          "basis": "Candidate rows are emitted in J m^-3 K^-1."
+        },
+        "uncertainty_and_preprocessing": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "mesh_or_numerical_convergence": {
+          "status": "PRESENT",
+          "basis": "The latest adjacent q-mesh preflight passes at the declared tolerance."
+        },
+        "independence_statement": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "holdout_and_fit_audit": {
+          "status": "PRESENT",
+          "basis": "Target-curve use, fit, alpha fit, and holdout access are false in the audit."
+        }
+      },
+      "field_coverage_count": 8,
+      "required_field_count": 11,
+      "acceptance_decision": "CANDIDATE_REJECTED_DING_MATERIAL_AND_SOURCE_GRADE_UNCERTAINTY",
+      "accepted_for_full_topic13": false,
+      "rejection_reasons": [
+        "material/state equivalence to the Ding natural-graphite TTG regime is not established",
+        "source-grade statistical/systematic uncertainty is absent",
+        "an explicit independent acceptance statement for Ding equivalence is not present"
+      ],
+      "next_action": "Do not rerun unchanged meshes. Either obtain Ding state evidence and source-grade uncertainty, or replace this route with a qualifying same-regime PBTE reproduction.",
+      "holdout_policy": {
+        "xie_2026_accessed": false,
+        "target_curve_used": false,
+        "fit_or_tuning_used": false
+      },
+      "verification": {
+        "source_audit_checks_pass": true,
+        "claim_promotion": false
+      }
+    },
+    {
+      "route_id": "calorine_legacy_nep2_pbte",
+      "priority": 4,
+      "route_class": "INDEPENDENT_PBTE_REPRODUCTION_CANDIDATE",
+      "label": "Calorine legacy NEP2-compatible PBTE candidate",
+      "current_state": "NUMERIC_C_SRC_CANDIDATE_NOT_DING_ACCEPTED",
+      "source_package": {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/calorine_legacy_nep2_pbte_reproduction_source_package.json",
+        "role": "source package or request manifest",
+        "sha256": "564606b5634d4cf1e87907da1598401b9f9ebcedacd0a41030b3766a774f84fc"
+      },
+      "audit_artifact": {
+        "path": "docs/core/artifacts/t13_calorine_legacy_nep2_pbte_reproduction_audit.json",
+        "role": "route qualification audit",
+        "sha256": "66e05c61250da9711d7d90f44cdd1297aa88e560d716984a1a8db143fa4e7af3"
+      },
+      "package_status": "PASS_SCOPED_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION",
+      "audit_status": "PASS_SCOPED_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION",
+      "field_coverage": {
+        "source_identity_and_locator": {
+          "status": "PRESENT",
+          "basis": "The source package records public structure/potential locators and local hashes."
+        },
+        "raw_numeric_or_reproduction_payload": {
+          "status": "PRESENT",
+          "basis": "Archived force constants, q-mesh summaries, and candidate C_src rows are present."
+        },
+        "source_hash": {
+          "status": "PRESENT",
+          "basis": "The audit checks source, wrapper, force-constant, and reproduction hashes."
+        },
+        "material_identity_morphology_isotope_defect_state": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "temperature_and_state": {
+          "status": "PRESENT",
+          "basis": "A fixed C-CX primitive-crystal state and temperature grid are declared; Ding equivalence remains open."
+        },
+        "PBTE_mode_resolved_response_contract": {
+          "status": "PRESENT",
+          "basis": "The reproduction uses the declared mode response and RTA PBTE route."
+        },
+        "C_src_rows_with_J_m^-3_K^-1_units": {
+          "status": "PRESENT",
+          "basis": "Candidate C_src rows are explicitly stored in J m^-3 K^-1."
+        },
+        "uncertainty_and_preprocessing": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "mesh_or_numerical_convergence": {
+          "status": "PRESENT",
+          "basis": "The latest adjacent q-mesh preflight passes at the declared tolerance."
+        },
+        "independence_statement": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "holdout_and_fit_audit": {
+          "status": "PRESENT",
+          "basis": "The audit records no fit, target tuning, alpha fit, or holdout access."
+        }
+      },
+      "field_coverage_count": 8,
+      "required_field_count": 11,
+      "acceptance_decision": "CANDIDATE_REJECTED_DING_MATERIAL_AND_SOURCE_GRADE_UNCERTAINTY",
+      "accepted_for_full_topic13": false,
+      "rejection_reasons": [
+        "material/state equivalence to the Ding natural-graphite TTG regime is not established",
+        "source-grade uncertainty remains open for model form, material state, density, and c_v",
+        "the candidate is not a substitute for an authorized Ding source without acceptance evidence"
+      ],
+      "next_action": "Keep as a bounded comparator; do not rerun unchanged meshes. Obtain a source-grade uncertainty package and same-regime mapping or use the authorized Ding route.",
+      "holdout_policy": {
+        "xie_2026_accessed": false,
+        "target_curve_used": false,
+        "fit_or_tuning_used": false
+      },
+      "verification": {
+        "source_audit_checks_pass": true,
+        "claim_promotion": false
+      }
+    },
+    {
+      "route_id": "mp48_harmonic_comparator",
+      "priority": 5,
+      "route_class": "HARMONIC_COMPARATOR",
+      "label": "Materials Project MP48 harmonic graphite comparator",
+      "current_state": "HARMONIC_CV_COMPARATOR_NOT_PBTE_ACCEPTED",
+      "source_package": {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/mp48_independent_graphite_cv_source_package.json",
+        "role": "source package or request manifest",
+        "sha256": "86f5d5015b5bd0172bc2bfae64271955c56470650bdb6b8459bb1280e5dbc3cf"
+      },
+      "audit_artifact": {
+        "path": "docs/core/artifacts/t13_mp48_independent_graphite_cv_audit.json",
+        "role": "route qualification audit",
+        "sha256": "56493e6d4883f3f78d24f630f5cdc6718eec350ce264152146979e3bb0ee39a9"
+      },
+      "package_status": "SOURCE_LOCKED_INDEPENDENT_HARMONIC_CV_COMPARATOR",
+      "audit_status": "PASS_INDEPENDENT_NUMERIC_CV_WITH_EPISTEMIC_ENVELOPE",
+      "field_coverage": {
+        "source_identity_and_locator": {
+          "status": "PRESENT",
+          "basis": "The Materials Project/Zenodo identity and local archive route are recorded."
+        },
+        "raw_numeric_or_reproduction_payload": {
+          "status": "PRESENT",
+          "basis": "Second-order force constants and harmonic c_v rows are archived."
+        },
+        "source_hash": {
+          "status": "PRESENT",
+          "basis": "The source and extracted input hashes are checked."
+        },
+        "material_identity_morphology_isotope_defect_state": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "temperature_and_state": {
+          "status": "PRESENT",
+          "basis": "The MP48 harmonic crystal state and temperature grid are declared, but not Ding-equivalent."
+        },
+        "PBTE_mode_resolved_response_contract": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "C_src_rows_with_J_m^-3_K^-1_units": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "uncertainty_and_preprocessing": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "mesh_or_numerical_convergence": {
+          "status": "PRESENT",
+          "basis": "The independent harmonic mesh-tail diagnostic is source-traceable."
+        },
+        "independence_statement": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "holdout_and_fit_audit": {
+          "status": "PRESENT",
+          "basis": "The audit excludes holdout access, target fitting, and alpha fitting."
+        }
+      },
+      "field_coverage_count": 6,
+      "required_field_count": 11,
+      "acceptance_decision": "COMPARATOR_REJECTED_HARMONIC_NOT_DING_PBTE",
+      "accepted_for_full_topic13": false,
+      "rejection_reasons": [
+        "harmonic c_v is not a Ding PBTE mode-resolved response contract",
+        "Ding material/state equivalence and source-grade uncertainty are not established",
+        "the route cannot supply an independent alpha_Phi_K calibration"
+      ],
+      "next_action": "Keep as a standard harmonic comparator only; do not promote it to Ding C_src or use it for alpha calibration.",
+      "holdout_policy": {
+        "xie_2026_accessed": false,
+        "target_curve_used": false,
+        "fit_or_tuning_used": false
+      },
+      "verification": {
+        "source_audit_checks_pass": true,
+        "claim_promotion": false
+      }
+    },
+    {
+      "route_id": "nims_mp990448",
+      "priority": 6,
+      "route_class": "PUBLIC_SOURCE_BOUNDARY",
+      "label": "NIMS MP-990448 graphite phonon archive",
+      "current_state": "ARCHIVE_BOUNDARY_NO_MACHINE_READABLE_C_SRC",
+      "source_package": {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/nims_mdr_mp990448_phonon_source_package.json",
+        "role": "source package or request manifest",
+        "sha256": "bbd4aee185a7c5a08b33f2f267e81a8b5274fa43b26eae1167966b4a5ec9a061"
+      },
+      "audit_artifact": {
+        "path": "docs/core/artifacts/t13_nims_mp990448_phonon_source_boundary_audit.json",
+        "role": "route qualification audit",
+        "sha256": "2e9f93be5cf23c429d9d0b77f755efb074a44790483f0b635a62327d5025eda9"
+      },
+      "package_status": "PASS_SCOPED_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY",
+      "audit_status": "PASS_SCOPED_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY",
+      "field_coverage": {
+        "source_identity_and_locator": {
+          "status": "PRESENT",
+          "basis": "The NIMS collection, dataset, and material identity are source-locked."
+        },
+        "raw_numeric_or_reproduction_payload": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "source_hash": {
+          "status": "PRESENT",
+          "basis": "The downloaded archive and members have SHA-256 identity."
+        },
+        "material_identity_morphology_isotope_defect_state": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "temperature_and_state": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "PBTE_mode_resolved_response_contract": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "C_src_rows_with_J_m^-3_K^-1_units": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "uncertainty_and_preprocessing": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "mesh_or_numerical_convergence": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "independence_statement": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "holdout_and_fit_audit": {
+          "status": "PRESENT",
+          "basis": "The boundary audit records no holdout access and no claim promotion."
+        }
+      },
+      "field_coverage_count": 3,
+      "required_field_count": 11,
+      "acceptance_decision": "CLOSED_PUBLIC_ROUTE_NO_MACHINE_READABLE_PAYLOAD",
+      "accepted_for_full_topic13": false,
+      "rejection_reasons": [
+        "archive contains figures and setup files but no force-constant data, frequency mesh, or machine-readable thermal rows",
+        "no Ding PBTE response, C_src uncertainty, or material/state acceptance package is available from this archive"
+      ],
+      "next_action": "Do not digitize the thermal figure for C_src acceptance; obtain a permitted raw force-constant package or use the author/same-regime route.",
+      "holdout_policy": {
+        "xie_2026_accessed": false,
+        "target_curve_used": false,
+        "fit_or_tuning_used": false
+      },
+      "verification": {
+        "source_audit_checks_pass": true,
+        "claim_promotion": false
+      }
+    },
+    {
+      "route_id": "huang_2023_nims",
+      "priority": 7,
+      "route_class": "PUBLIC_SOURCE_BOUNDARY",
+      "label": "Huang 2023 NIMS graphite-ribbon archive",
+      "current_state": "ARTICLE_ONLY_PUBLIC_ARCHIVE",
+      "source_package": {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/huang_2023_nims_mdr_payload_source_package.json",
+        "role": "source package or request manifest",
+        "sha256": "e7224f04f632e430782d8bbde4477e87d7f3d973bc62e176ceb48cccb31c6f36"
+      },
+      "audit_artifact": {
+        "path": "docs/core/artifacts/t13_huang_2023_nims_mdr_payload_boundary_audit.json",
+        "role": "route qualification audit",
+        "sha256": "5a80347b4cc014e3c585fa9e3cff16d08834651d93db74c0478ce687156cac5c"
+      },
+      "package_status": "PASS_SCOPED_HUANG_2023_NIMS_MDR_PAYLOAD_BOUNDARY",
+      "audit_status": "PASS_SCOPED_HUANG_2023_NIMS_MDR_PAYLOAD_BOUNDARY",
+      "field_coverage": {
+        "source_identity_and_locator": {
+          "status": "PRESENT",
+          "basis": "The article, DOI, NIMS dataset, and license are recorded."
+        },
+        "raw_numeric_or_reproduction_payload": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "source_hash": {
+          "status": "PRESENT",
+          "basis": "The public NIMS archive and PDF member are hash-locked."
+        },
+        "material_identity_morphology_isotope_defect_state": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "temperature_and_state": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "PBTE_mode_resolved_response_contract": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "C_src_rows_with_J_m^-3_K^-1_units": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "uncertainty_and_preprocessing": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "mesh_or_numerical_convergence": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "independence_statement": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "holdout_and_fit_audit": {
+          "status": "PRESENT",
+          "basis": "The boundary audit records no holdout access and no claim promotion."
+        }
+      },
+      "field_coverage_count": 3,
+      "required_field_count": 11,
+      "acceptance_decision": "CLOSED_PUBLIC_ROUTE_ARTICLE_ONLY",
+      "accepted_for_full_topic13": false,
+      "rejection_reasons": [
+        "the public NIMS ZIP contains only the article PDF",
+        "no force constants, ShengBTE payload, numeric C_src rows, or uncertainty package are present"
+      ],
+      "next_action": "Keep as a provenance boundary; do not use the PDF or figure as C_src data. Obtain an authorized numeric package or accepted same-regime reproduction.",
+      "holdout_policy": {
+        "xie_2026_accessed": false,
+        "target_curve_used": false,
+        "fit_or_tuning_used": false
+      },
+      "verification": {
+        "source_audit_checks_pass": true,
+        "claim_promotion": false
+      }
+    },
+    {
+      "route_id": "huberman_2019_public_pbte",
+      "priority": 8,
+      "route_class": "PUBLIC_SOURCE_BOUNDARY",
+      "label": "Huberman 2019 public PBTE source",
+      "current_state": "PUBLIC_FORMULA_AND_SETUP_ONLY",
+      "source_package": {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/huberman_2019_ttg_source_boundary_package.json",
+        "role": "source package or request manifest",
+        "sha256": "f70ff820ea3cb16023d23bb3fd7d36d6ed486357b8cbc6ceb81bf2fd35492844"
+      },
+      "audit_artifact": {
+        "path": "docs/core/artifacts/t13_huberman_2019_public_pbte_boundary_audit.json",
+        "role": "route qualification audit",
+        "sha256": "22b065abd8177a9b1f181e79761baadc0c5c6242d44bea74a8fd6022aafec3c4"
+      },
+      "package_status": "PUBLIC_FORMULA_AND_SETUP_ONLY_NUMERIC_PAYLOAD_OPEN",
+      "audit_status": "PASS_HUBERMAN_PUBLIC_PBTE_BOUNDARY_NO_ACCEPTED_NUMERIC_PAYLOAD",
+      "field_coverage": {
+        "source_identity_and_locator": {
+          "status": "PRESENT",
+          "basis": "The public arXiv/PDF identity and source locators are locked."
+        },
+        "raw_numeric_or_reproduction_payload": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "source_hash": {
+          "status": "PRESENT",
+          "basis": "The public PDF is locally hash-locked."
+        },
+        "material_identity_morphology_isotope_defect_state": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "temperature_and_state": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "PBTE_mode_resolved_response_contract": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "C_src_rows_with_J_m^-3_K^-1_units": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "uncertainty_and_preprocessing": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "mesh_or_numerical_convergence": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "independence_statement": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "holdout_and_fit_audit": {
+          "status": "PRESENT",
+          "basis": "The source boundary audit excludes digitization, fit, alpha fitting, and holdout access."
+        }
+      },
+      "field_coverage_count": 3,
+      "required_field_count": 11,
+      "acceptance_decision": "CLOSED_PUBLIC_ROUTE_NO_MACHINE_READABLE_PAYLOAD",
+      "accepted_for_full_topic13": false,
+      "rejection_reasons": [
+        "the public package contains formula/setup context but no machine-readable mode-resolved C_src or force-constant payload",
+        "printed values and figures cannot satisfy the independent C_src acceptance contract"
+      ],
+      "next_action": "Keep as a method/comparator boundary; obtain an authorized Ding payload or accepted same-regime PBTE reproduction.",
+      "holdout_policy": {
+        "xie_2026_accessed": false,
+        "target_curve_used": false,
+        "fit_or_tuning_used": false
+      },
+      "verification": {
+        "source_audit_checks_pass": true,
+        "claim_promotion": false
+      }
+    }
+  ],
+  "priority_decision": {
+    "selected_route_id": "ding_author_payload",
+    "selected_route_priority": 1,
+    "selection_reason": "Only the direct author route can supply the missing Ding-specific numeric payload without silently substituting a different material/model state.",
+    "fallback_route_id": "same_regime_pbte_reproduction_not_yet_identified",
+    "fallback_acceptance": "A fallback must satisfy all 11 required fields and pass the existing material, uncertainty, holdout, and fit gates.",
+    "rerun_policy": "Do not rerun unchanged numeric gates; rerun after an accepted source, permissioned payload, or independent derivation changes the input hash."
+  },
+  "checks": {
+    "acceptance_required_fields_match": true,
+    "route_priorities_are_unique_and_ordered": true,
+    "all_route_checks_pass": true,
+    "all_routes_fail_closed_for_full_topic13": true,
+    "numeric_csrc_candidates_are_explicit": true,
+    "numeric_candidates_retain_material_and_uncertainty_gaps": true,
+    "public_routes_have_no_numeric_csrc": true,
+    "holdout_is_unconsumed_for_every_route": true,
+    "no_synthetic_replacement_is_declared": true
+  },
+  "route_checks": {
+    "ding_author_payload": {
+      "package_present": true,
+      "audit_present": true,
+      "package_status_matches": true,
+      "audit_status_matches": true,
+      "coverage_keys_exact": true,
+      "policy_checks_pass": true,
+      "accepted_for_full_topic13_is_false": true,
+      "claim_promotion_is_false": true
+    },
+    "ding_public_oa": {
+      "package_present": true,
+      "audit_present": true,
+      "package_status_matches": true,
+      "audit_status_matches": true,
+      "coverage_keys_exact": true,
+      "policy_checks_pass": true,
+      "accepted_for_full_topic13_is_false": true,
+      "claim_promotion_is_false": true
+    },
+    "calorine_zenodo_pbte": {
+      "package_present": true,
+      "audit_present": true,
+      "package_status_matches": true,
+      "audit_status_matches": true,
+      "coverage_keys_exact": true,
+      "policy_checks_pass": true,
+      "accepted_for_full_topic13_is_false": true,
+      "claim_promotion_is_false": true
+    },
+    "calorine_legacy_nep2_pbte": {
+      "package_present": true,
+      "audit_present": true,
+      "package_status_matches": true,
+      "audit_status_matches": true,
+      "coverage_keys_exact": true,
+      "policy_checks_pass": true,
+      "accepted_for_full_topic13_is_false": true,
+      "claim_promotion_is_false": true
+    },
+    "mp48_harmonic_comparator": {
+      "package_present": true,
+      "audit_present": true,
+      "package_status_matches": true,
+      "audit_status_matches": true,
+      "coverage_keys_exact": true,
+      "policy_checks_pass": true,
+      "accepted_for_full_topic13_is_false": true,
+      "claim_promotion_is_false": true
+    },
+    "nims_mp990448": {
+      "package_present": true,
+      "audit_present": true,
+      "package_status_matches": true,
+      "audit_status_matches": true,
+      "coverage_keys_exact": true,
+      "policy_checks_pass": true,
+      "accepted_for_full_topic13_is_false": true,
+      "claim_promotion_is_false": true
+    },
+    "huang_2023_nims": {
+      "package_present": true,
+      "audit_present": true,
+      "package_status_matches": true,
+      "audit_status_matches": true,
+      "coverage_keys_exact": true,
+      "policy_checks_pass": true,
+      "accepted_for_full_topic13_is_false": true,
+      "claim_promotion_is_false": true
+    },
+    "huberman_2019_public_pbte": {
+      "package_present": true,
+      "audit_present": true,
+      "package_status_matches": true,
+      "audit_status_matches": true,
+      "coverage_keys_exact": true,
+      "policy_checks_pass": true,
+      "accepted_for_full_topic13_is_false": true,
+      "claim_promotion_is_false": true
+    }
+  },
+  "what_changed": "Ranked and field-audited all currently captured C_src source routes without importing or synthesizing a numeric replacement.",
+  "verification": "Every route package and audit is hash-referenced; expected statuses, field coverage, policy checks, fail-closed acceptance, and holdout exclusion are machine-checked.",
+  "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+  "next_action": "Obtain authorization to send the prepared Ding request, or obtain a genuinely same-regime PBTE reproduction. Do not infer C_src from normalized TTG rows, incident fluence, comparator c_v, or an unchanged rerun.",
+  "claim_boundary": "C_src source-route prioritization only; no numeric Ding C_src, no alpha_Phi_K calibration, no prediction, no external validation, no Core closure, and no global UET closure.",
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "calibration_path_may_read_holdout": false,
+    "target_curve_used": false,
+    "fit_or_tuning_used": false
+  },
+  "claim_promotion": false
+}

@@ -3365,6 +3365,7 @@ def main() -> int:
             )
         )
     artifact["source_acquisition_controller"] = "ding_pbte_author_data_or_independent_reproduction_package_missing"
+    artifact["source_acquisition_controller_detail"] = "Ding-specific C_src(T), mode-resolved c_mu, uncertainty/convergence, and the Phi energy anchor remain open; the independent mp-48 c_v route is comparator-only and closed for lane."
     artifact["claim_promotion"] = False
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
