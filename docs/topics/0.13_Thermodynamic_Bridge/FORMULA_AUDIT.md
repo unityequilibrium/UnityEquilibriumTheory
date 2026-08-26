@@ -1481,3 +1481,13 @@ NEXT_ACTION: Acquire an authorized numeric package or accepted same-regime PBTE 
 CLAIM_BOUNDARY: Source-content boundary only; not numeric C_src, alpha calibration, SI prediction, physical transport, external validation, or Full Topic 13 closure.
 
 EVIDENCE: docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_supplementary_content_review_package.json; docs/core/artifacts/t13_ding_supplementary_content_review_audit.json; docs/scripts/audit/audit_topic13_ding_supplementary_content_review.py.
+
+## Dynamical-Stability Diagnostic Addendum
+
+These formulas diagnose the declared normalized evolution and do not alter the thermal bridge.
+
+| formula_id | relation | units | derivation_class | observable | verification_status | controlling_blocker | claim_boundary |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| `T13-CHAOS-TANGENT` | `delta_dot_X=D F[X]delta_X`, `X=(C,Phi,Pi)` | normalized tangent state per normalized time | exact discrete Jacobian action | perturbation growth | tangent JVP and method controls pass | state-dependent sources require an explicit JVP | `R_gen` and `R_obs` are excluded; no new physical law |
+| `T13-CHAOS-LAMBDA` | `lambda_i=lim_T log(s_i)/T` | inverse normalized time | standard diagnostic | Lyapunov spectrum and conditional `1/lambda_max` | Fourier/Cattaneo and matter-space pilot pass | SI time/state metric remains open | no physical predictability claim |
+| `T13-CHAOS-RESOLUTION` | `lambda_res=max(delta_dt,delta_dx,2 SE_block,delta_method)` | inverse normalized time | preregistered gate | sign-resolved regime class | tangent/shadow and ledger gates pass | accepted open/KMS input missing | chaos candidate is not external validation |

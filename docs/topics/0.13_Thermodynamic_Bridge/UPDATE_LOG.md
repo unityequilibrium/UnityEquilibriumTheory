@@ -4998,3 +4998,26 @@ EVIDENCE_PATHS:
 - `docs/core/artifacts/t13_closure_critical_path_audit.json`
 - `docs/core/artifacts/t13_closure_input_package_audit.json`
 - `docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_CLOSURE_CRITICAL_PATH.md`
+## 2026-08-26 Thermal dynamical-regime pilot
+
+MAJOR_RESULT_CLOSURE: `T13_THERMAL_DYNAMICAL_REGIME_CLASSIFIED` is `CLOSED_FOR_LANE`; Full Topic 13 remains `PARTIAL`.
+
+WHAT_IS_ACTUALLY_CLOSED: Branch-separated Fourier, Cattaneo, trace-only, closed matter-space, driven matter-space, and blocked open/KMS classifications are machine-readable.
+
+WHAT_REMAINS_OPEN: Physical stochastic input, SI state metric, independent `alpha_Phi_K`, Ding numeric `C_src`, physical transport, and external TTG validation.
+
+DEPENDENCY_UNLOCKED: Topic 0.11 and Core O(2) diagnostic rollout only; no physical downstream result.
+
+STATUS: `PASS_SCOPED_THERMAL_DYNAMICAL_REGIME_PILOT`; no chaos candidate was found in the declared normalized pilot range.
+
+WHAT_CHANGED: Added exact tangent evolution, QR/shadow diagnostics, unchanged-threshold ledger refinement, artifact contract, registry entries, and dependency routing.
+
+EQUATION_OR_MAPPING: `(C,Phi,Pi) -> delta_dot_X=D F[X]delta_X -> lambda_max`; the TTG and `alpha_Phi_K` mappings are unchanged.
+
+VERIFICATION: Closed/driven `lambda_max approximately -0.48` with resolution approximately `0.02`; Fourier/Cattaneo are negative analytic controls; ledger, method agreement, ontology, and holdout checks pass.
+
+CONTROLLING_BLOCKER: External physical source/calibration/transport packages remain unchanged; chaos is not the current Topic 13 controller.
+
+NEXT_ACTION: Apply the method to Topic 0.11/Core O(2), while continuing the existing independent source/calibration/transport work for Full Topic 13.
+
+CLAIM_BOUNDARY: Internal normalized diagnostic only; not physical chaos evidence, prediction, external validation, or Full Topic 13 closure.

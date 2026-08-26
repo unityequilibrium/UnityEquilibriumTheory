@@ -390,3 +390,24 @@ VERIFICATION: Focused causal/closure regression passed 10 tests; full gate, clos
 CONTROLLING_BLOCKER: alpha_Phi_K_independent_calibration_missing; Ding-compatible C_src and physical UET Kubo provenance remain open.
 NEXT_ACTION: Obtain an independent paired base-Phi/SI record or declared dimensionful action-to-SI map, while separately pursuing authorized Ding-compatible C_src evidence without reading Xie 2026.
 CLAIM_BOUNDARY: Structural no-go and reporting alignment only. No original baseline pass, alpha calibration, TTG prediction, physical UET transport proof, or Full Topic 13 closure is claimed.
+## Chaos Diagnostic Pilot (2026-08-26)
+
+MAJOR_RESULT_CLOSURE: `T13_THERMAL_DYNAMICAL_REGIME_CLASSIFIED` is `CLOSED_FOR_LANE`; Full Topic 13 remains `PARTIAL`.
+
+WHAT_IS_ACTUALLY_CLOSED: Fourier, Cattaneo, closed normalized matter-space, and periodically driven normalized matter-space have branch-separated Lyapunov classifications. `R_gen` is not a state.
+
+WHAT_REMAINS_OPEN: Open/KMS common-noise input, SI state metric, independent `alpha_Phi_K`, Ding-compatible numeric `C_src`, physical transport, and external TTG validation.
+
+DEPENDENCY_UNLOCKED: Topic 0.11 and Core O(2) diagnostic-method rollout only.
+
+STATUS: `PASS_SCOPED_THERMAL_DYNAMICAL_REGIME_PILOT`; `full_core_unlock=false`.
+
+EQUATION_OR_MAPPING: `(C,Phi,Pi) -> (delta_C,delta_Phi,delta_Pi) -> lambda_max`; `Delta_Tq=alpha_Phi_K*Delta_Phi` remains unchanged and uncalibrated.
+
+VERIFICATION: Fourier `-0.20`, Cattaneo `-0.23`, and closed/driven matter-space approximately `-0.48`; ledger and tangent/shadow agreement pass; Xie 2026 remains unconsumed.
+
+CONTROLLING_BLOCKER: Physical source, dimensional calibration, and transport closure remain the Topic 13 controllers; chaos is not controlling in this preregistered normalized range.
+
+NEXT_ACTION: Roll the method to Topic 0.11/Core O(2); reopen Topic 13 chaos validity only for a newly accepted overlapping physical or open-system regime.
+
+CLAIM_BOUNDARY: Normalized diagnostic lane only; not physical chaos evidence, TTG prediction, Full Topic 13 closure, or global UET closure.

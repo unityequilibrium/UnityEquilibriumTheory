@@ -144,3 +144,16 @@ Acceptance requires retarded/advanced conjugacy, the declared spectral discontin
 - Integration: `.\.venv\Scripts\python.exe docs/scripts/audit/audit_topic13_full_bridge_gate.py` followed by `.\.venv\Scripts\python.exe docs/scripts/audit/sync_topic13_major_result_lanes.py`.
 - Acceptance: source file, exact size/hash, 22-page inventory, no accepted machine-readable mode-resolved `C_src` or force-constant payload, no digitization, no fit, no alpha calibration, and no holdout access.
 - Current result: source boundary `PASS_HUBERMAN_PUBLIC_PBTE_BOUNDARY_NO_ACCEPTED_NUMERIC_PAYLOAD`; full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE` / `PARTIAL` with 10 blockers.
+
+## Thermal Dynamical-Regime Diagnostic
+
+- Command: `python docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_Thermal_Dynamical_Regime_Audit.py`
+- Artifact: `Result/artifacts/t13_thermal_dynamical_regime_audit.json`
+- Dependency: Topic 0.10 `chaos_method_validation.json` must pass first.
+- Acceptance: tangent/shadow agreement, time-step resolution, perturbation-amplitude robustness,
+  bounded finite states, unchanged ledger threshold, ontology separation, and no holdout access.
+- Fourier and Cattaneo are analytic controls; trace-only is not a dynamical state.
+- Open/KMS evaluation remains blocked until accepted common-noise transport inputs exist.
+- Regression must preserve the 37-row closure matrix (`21` lane, `6` no-go, `10` open),
+  `full_core_unlock=false`, blocked `alpha_Phi_K`, and the Topic 0.10 speed-comparator `FAIL`.
+- A passing pilot is diagnostic `CLOSED_FOR_LANE`, not Full Topic 13 or external validation.
