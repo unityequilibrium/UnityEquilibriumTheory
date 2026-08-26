@@ -9,7 +9,7 @@
     "closure_level": "CLOSED_FOR_LANE",
     "what_is_closed": [
       "current 37-subresult closure state is reconstructed from canonical progress",
-      "all open subresults are assigned to three root input packages",
+      "all open subresults are mapped to their complete required root input package sets, including multi-package dependencies",
       "current input hashes are recorded and rerunning existing gates without new input is explicitly non-progress",
       "normalized/action scale routes are structurally bounded by no-go evidence, not merely missing scripts"
     ],
@@ -101,7 +101,8 @@
     "claim_promotion": false,
     "input_state": "BLOCKED_NO_ACCEPTED_CORE_PACKAGE",
     "rerun_existing_gates_without_new_input": false,
-    "external_state_change_required": true
+    "external_state_change_required": true,
+    "open_input_package_link_count": 13
   },
   "input_packages": [
     {
@@ -144,10 +145,23 @@
         "Ding_material_state_match",
         "source_grade_uncertainty"
       ],
-      "unlocks_subresults": [],
+      "unlocks_subresults": [
+        "accepted_numeric_csrc",
+        "material_and_uncertainty_closure",
+        "physical_source_backed_eos",
+        "physical_heat_flux_entropy_map"
+      ],
       "open_subresults": [
         "accepted_numeric_csrc",
-        "material_and_uncertainty_closure"
+        "material_and_uncertainty_closure",
+        "physical_heat_flux_entropy_map",
+        "physical_source_backed_eos"
+      ],
+      "required_by_open_subresults": [
+        "accepted_numeric_csrc",
+        "material_and_uncertainty_closure",
+        "physical_heat_flux_entropy_map",
+        "physical_source_backed_eos"
       ]
     },
     {
@@ -177,11 +191,26 @@
         "dimensional_bridge_open_inputs_closed",
         "dimensionful_action_SI_map"
       ],
-      "unlocks_subresults": [],
+      "unlocks_subresults": [
+        "base_phi_si_anchor",
+        "independent_alpha_record",
+        "normalized_beta_si_map",
+        "physical_source_backed_eos",
+        "physical_heat_flux_entropy_map"
+      ],
       "open_subresults": [
         "base_phi_si_anchor",
         "independent_alpha_record",
-        "normalized_beta_si_map"
+        "normalized_beta_si_map",
+        "physical_heat_flux_entropy_map",
+        "physical_source_backed_eos"
+      ],
+      "required_by_open_subresults": [
+        "base_phi_si_anchor",
+        "independent_alpha_record",
+        "normalized_beta_si_map",
+        "physical_heat_flux_entropy_map",
+        "physical_source_backed_eos"
       ]
     },
     {
@@ -209,12 +238,22 @@
         "physical_anchor_supplied",
         "physical_heat_flux_entropy_link"
       ],
-      "unlocks_subresults": [],
+      "unlocks_subresults": [
+        "physical_uet_kubo_record",
+        "physical_sk_transport_match",
+        "physical_entropy_production_mapping",
+        "physical_heat_flux_entropy_map"
+      ],
       "open_subresults": [
         "physical_entropy_production_mapping",
         "physical_heat_flux_entropy_map",
         "physical_sk_transport_match",
-        "physical_source_backed_eos",
+        "physical_uet_kubo_record"
+      ],
+      "required_by_open_subresults": [
+        "physical_entropy_production_mapping",
+        "physical_heat_flux_entropy_map",
+        "physical_sk_transport_match",
         "physical_uet_kubo_record"
       ]
     }
@@ -233,7 +272,10 @@
       "status": "OPEN",
       "subresult_id": "accepted_numeric_csrc",
       "closure_level": "OPEN",
-      "root_input_package_id": "T13_INPUT_DING_TTG_SOURCE"
+      "required_input_packages": [
+        "T13_INPUT_DING_TTG_SOURCE"
+      ],
+      "primary_controller": "T13_INPUT_DING_TTG_SOURCE"
     },
     {
       "acceptance": "A declared dimensionful action/free-energy origin or an independent paired base-Phi/SI response record is accepted.",
@@ -248,7 +290,10 @@
       "status": "OPEN",
       "subresult_id": "base_phi_si_anchor",
       "closure_level": "OPEN",
-      "root_input_package_id": "T13_INPUT_BASE_PHI_SI_ALPHA_BETA"
+      "required_input_packages": [
+        "T13_INPUT_BASE_PHI_SI_ALPHA_BETA"
+      ],
+      "primary_controller": "T13_INPUT_BASE_PHI_SI_ALPHA_BETA"
     },
     {
       "acceptance": "One eligible non-holdout paired record or a derivation with an independently fixed SI scale is accepted.",
@@ -263,7 +308,10 @@
       "status": "OPEN",
       "subresult_id": "independent_alpha_record",
       "closure_level": "OPEN",
-      "root_input_package_id": "T13_INPUT_BASE_PHI_SI_ALPHA_BETA"
+      "required_input_packages": [
+        "T13_INPUT_BASE_PHI_SI_ALPHA_BETA"
+      ],
+      "primary_controller": "T13_INPUT_BASE_PHI_SI_ALPHA_BETA"
     },
     {
       "acceptance": "The TTG material regime, same-state thermodynamic correction, and c_v uncertainty are closed at the same evidence grade.",
@@ -278,7 +326,10 @@
       "status": "OPEN",
       "subresult_id": "material_and_uncertainty_closure",
       "closure_level": "OPEN",
-      "root_input_package_id": "T13_INPUT_DING_TTG_SOURCE"
+      "required_input_packages": [
+        "T13_INPUT_DING_TTG_SOURCE"
+      ],
+      "primary_controller": "T13_INPUT_DING_TTG_SOURCE"
     },
     {
       "acceptance": "The base-Phi field normalization and dimensionful free-energy scale are independently fixed and propagated.",
@@ -293,7 +344,10 @@
       "status": "OPEN",
       "subresult_id": "normalized_beta_si_map",
       "closure_level": "OPEN",
-      "root_input_package_id": "T13_INPUT_BASE_PHI_SI_ALPHA_BETA"
+      "required_input_packages": [
+        "T13_INPUT_BASE_PHI_SI_ALPHA_BETA"
+      ],
+      "primary_controller": "T13_INPUT_BASE_PHI_SI_ALPHA_BETA"
     },
     {
       "acceptance": "The physical coefficient, SI heat flux, source uncertainty, and entropy-production uncertainty are linked.",
@@ -308,7 +362,10 @@
       "status": "OPEN",
       "subresult_id": "physical_entropy_production_mapping",
       "closure_level": "OPEN",
-      "root_input_package_id": "T13_INPUT_PHYSICAL_TRANSPORT_MATCH"
+      "required_input_packages": [
+        "T13_INPUT_PHYSICAL_TRANSPORT_MATCH"
+      ],
+      "primary_controller": "T13_INPUT_PHYSICAL_TRANSPORT_MATCH"
     },
     {
       "acceptance": "The SI Phi anchor, physical coefficient, source C_src, and uncertainty chain are all accepted on one state.",
@@ -325,7 +382,12 @@
       "status": "OPEN",
       "subresult_id": "physical_heat_flux_entropy_map",
       "closure_level": "OPEN",
-      "root_input_package_id": "T13_INPUT_PHYSICAL_TRANSPORT_MATCH"
+      "required_input_packages": [
+        "T13_INPUT_DING_TTG_SOURCE",
+        "T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
+        "T13_INPUT_PHYSICAL_TRANSPORT_MATCH"
+      ],
+      "primary_controller": "MULTI_PACKAGE_DEPENDENCY"
     },
     {
       "acceptance": "The microscopic response is connected to a physical coefficient and uncertainty without a synthetic substitute.",
@@ -340,7 +402,10 @@
       "status": "OPEN",
       "subresult_id": "physical_sk_transport_match",
       "closure_level": "OPEN",
-      "root_input_package_id": "T13_INPUT_PHYSICAL_TRANSPORT_MATCH"
+      "required_input_packages": [
+        "T13_INPUT_PHYSICAL_TRANSPORT_MATCH"
+      ],
+      "primary_controller": "T13_INPUT_PHYSICAL_TRANSPORT_MATCH"
     },
     {
       "acceptance": "Finite-temperature coefficients, material regime, c_v uncertainty, and SI Phi normalization are accepted together.",
@@ -356,7 +421,11 @@
       "status": "OPEN",
       "subresult_id": "physical_source_backed_eos",
       "closure_level": "OPEN",
-      "root_input_package_id": "T13_INPUT_PHYSICAL_TRANSPORT_MATCH"
+      "required_input_packages": [
+        "T13_INPUT_DING_TTG_SOURCE",
+        "T13_INPUT_BASE_PHI_SI_ALPHA_BETA"
+      ],
+      "primary_controller": "MULTI_PACKAGE_DEPENDENCY"
     },
     {
       "acceptance": "One source-backed or fully microscopic state-matched coefficient with uncertainty is admitted.",
@@ -371,7 +440,10 @@
       "status": "OPEN",
       "subresult_id": "physical_uet_kubo_record",
       "closure_level": "OPEN",
-      "root_input_package_id": "T13_INPUT_PHYSICAL_TRANSPORT_MATCH"
+      "required_input_packages": [
+        "T13_INPUT_PHYSICAL_TRANSPORT_MATCH"
+      ],
+      "primary_controller": "T13_INPUT_PHYSICAL_TRANSPORT_MATCH"
     }
   ],
   "unblock_routes": [
@@ -438,6 +510,9 @@
     "canonical_progress_is_blocked": true,
     "open_subresults_are_exactly_projected": true,
     "all_open_subresults_have_input_packages": true,
+    "input_package_unlock_lists_match_canonical": true,
+    "multi_package_dependencies_preserved": true,
+    "no_fallback_package_assignment_used": true,
     "package_count_is_three": true,
     "no_package_accepted_for_core": true,
     "replay_without_hash_change_is_forbidden": true,

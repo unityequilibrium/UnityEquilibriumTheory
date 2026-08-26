@@ -3238,7 +3238,7 @@
       "claim_promotion": false,
       "what_is_closed": [
         "current 37-subresult closure state is reconstructed from canonical progress",
-        "all open subresults are assigned to three root input packages",
+        "all open subresults are mapped to their complete required root input package sets, including multi-package dependencies",
         "current input hashes are recorded and rerunning existing gates without new input is explicitly non-progress",
         "normalized/action scale routes are structurally bounded by no-go evidence, not merely missing scripts"
       ],
@@ -3261,7 +3261,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_closure_critical_path_audit.json",
-          "sha256": "268e947c1a5eb409e460e76689ac64ce89bf977e68a3e95eb71393337a7fc4ba",
+          "sha256": "f8e379bd9aa45b3af2378ffe218fd00b997c31a071623c57c459c5abfd76cfda",
           "summary": {
             "status": "PASS_T13_CLOSURE_CRITICAL_PATH_WITH_EXTERNAL_INPUTS",
             "major_result_id": "T13_CLOSURE_CRITICAL_PATH",

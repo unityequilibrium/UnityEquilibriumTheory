@@ -25,7 +25,7 @@ class Topic13ClosureCriticalPathTest(unittest.TestCase):
         self.assertFalse(payload["critical_path"]["full_core_unlock"])
         self.assertFalse(payload["critical_path"]["claim_promotion"])
 
-    def test_all_open_rows_have_one_root_package(self):
+    def test_open_rows_preserve_complete_package_dependencies(self):
         payload = self.payload
         package_ids = {item["package_id"] for item in payload["input_packages"]}
         self.assertEqual(package_ids, {
@@ -34,7 +34,15 @@ class Topic13ClosureCriticalPathTest(unittest.TestCase):
             "T13_INPUT_PHYSICAL_TRANSPORT_MATCH",
         })
         self.assertEqual(len(payload["open_subresults"]), 10)
-        self.assertTrue(all(item["root_input_package_id"] in package_ids for item in payload["open_subresults"]))
+        self.assertTrue(all(
+            item["required_input_packages"]
+            and set(item["required_input_packages"]).issubset(package_ids)
+            for item in payload["open_subresults"]
+        ))
+        heat_flux = next(item for item in payload["open_subresults"] if item["subresult_id"] == "physical_heat_flux_entropy_map")
+        self.assertEqual(set(heat_flux["required_input_packages"]), package_ids)
+        eos = next(item for item in payload["open_subresults"] if item["subresult_id"] == "physical_source_backed_eos")
+        self.assertEqual(len(eos["required_input_packages"]), 2)
         self.assertTrue(all(not item["accepted_for_core"] for item in payload["input_packages"]))
 
     def test_replay_and_holdout_guards_are_explicit(self):

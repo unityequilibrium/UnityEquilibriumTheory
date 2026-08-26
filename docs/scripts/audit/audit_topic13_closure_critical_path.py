@@ -244,7 +244,7 @@ def package_output(
     record.setdefault("status", "BLOCKED")
     record["accepted_for_core"] = bool(record.get("accepted_for_core", False))
     record["open_subresults"] = [row_id(row) for row in open_rows]
-    record["unlocks_subresults"] = []
+    record["required_by_open_subresults"] = [row_id(row) for row in open_rows]
     return record
 
 
@@ -310,7 +310,7 @@ def markdown(payload: dict[str, Any]) -> str:
         f"- Claim promotion: `{payload['canonical_status']['claim_promotion']}`",
         "",
         "WHAT_CHANGED:",
-        "- Reconstructed the canonical 37-subresult state and assigned every open row to one root input package.",
+        "- Reconstructed the canonical 37-subresult state and preserved each open row's complete required root input package set.",
         "- Recorded the current evidence hashes and replay rule so an unchanged rerun is not counted as progress.",
         "",
         "EQUATION_OR_MAPPING:",
@@ -320,26 +320,27 @@ def markdown(payload: dict[str, Any]) -> str:
         f"- `{major['equation_or_mapping']['scale']}`",
         "",
         "CRITICAL_PATH:",
-        "| Root input package | Status | Open subresults | Accepted for Core |",
+        "| Root input package | Status | Canonical unlocks | Required by open rows | Accepted for Core |",
         "|---|---|---:|---|",
     ]
     for package in payload["input_packages"]:
         lines.append(
             f"| `{package['package_id']}` | `{package.get('status', 'UNKNOWN')}` | "
-            f"{len(package.get('open_subresults', []))} | `{package.get('accepted_for_core', False)}` |"
+            f"{len(package.get('unlocks_subresults', []))} | {len(package.get('required_by_open_subresults', []))} | "
+            f"`{package.get('accepted_for_core', False)}` |"
         )
     lines.extend(
         [
             "",
             "OPEN_SUBRESULTS:",
-            "| Subresult | Root input package | Closure level | Status |",
-            "|---|---|---|---|",
+            "| Subresult | Required input packages | Primary controller | Closure level | Status |",
+            "|---|---|---|---|---|",
         ]
     )
     for row in payload["open_subresults"]:
         lines.append(
-            f"| `{row['subresult_id']}` | `{row['root_input_package_id']}` | "
-            f"`{row['closure_level']}` | `{row['status']}` |"
+            f"| `{row['subresult_id']}` | {', '.join(f"`{item}`" for item in row['required_input_packages'])} | "
+            f"`{row['primary_controller']}` | `{row['closure_level']}` | `{row['status']}` |"
         )
     lines.extend(
         [
@@ -381,17 +382,6 @@ def build_payload() -> dict[str, Any]:
     if not open_rows:
         raise ValueError("canonical progress contains no open Topic 13 subresults")
 
-    assigned_rows: list[dict[str, Any]] = []
-    for row in open_rows:
-        package_id = package_hint(row)
-        if package_id is None:
-            raise ValueError(f"open subresult cannot be assigned to a root package: {row_id(row)}")
-        row["subresult_id"] = row_id(row)
-        row["closure_level"] = row_closure_level(row)
-        row["status"] = row_status(row)
-        row["root_input_package_id"] = package_id
-        assigned_rows.append(row)
-
     package_records = find_package_records(input_audit)
     for package_id in PACKAGE_IDS:
         package_records.setdefault(
@@ -401,17 +391,63 @@ def build_payload() -> dict[str, Any]:
                 "status": "BLOCKED",
                 "accepted_for_core": False,
                 "missing_acceptance_fields": [],
+                "unlocks_subresults": [],
             },
         )
+
+    canonical_unlocks = {
+        package_id: {
+            str(value)
+            for value in package_records[package_id].get("unlocks_subresults", [])
+            if isinstance(value, str)
+        }
+        for package_id in PACKAGE_IDS
+    }
+    fallback_package_assignment_used = False
+    assigned_rows: list[dict[str, Any]] = []
+    for row in open_rows:
+        row["subresult_id"] = row_id(row)
+        row["closure_level"] = row_closure_level(row)
+        row["status"] = row_status(row)
+        required_packages = [
+            package_id
+            for package_id in PACKAGE_IDS
+            if row["subresult_id"] in canonical_unlocks[package_id]
+        ]
+        if not required_packages:
+            package_id = package_hint(row)
+            if package_id is None:
+                raise ValueError(f"open subresult has no canonical root package dependency: {row_id(row)}")
+            required_packages = [package_id]
+            fallback_package_assignment_used = True
+        row["required_input_packages"] = required_packages
+        row["primary_controller"] = (
+            required_packages[0] if len(required_packages) == 1 else "MULTI_PACKAGE_DEPENDENCY"
+        )
+        assigned_rows.append(row)
 
     packages = [
         package_output(
             package_id,
             package_records[package_id],
-            [row for row in assigned_rows if row["root_input_package_id"] == package_id],
+            [row for row in assigned_rows if package_id in row["required_input_packages"]],
         )
         for package_id in PACKAGE_IDS
     ]
+
+    open_row_ids = {row["subresult_id"] for row in assigned_rows}
+    projected_by_package = {
+        package_id: sorted(
+            row["subresult_id"]
+            for row in assigned_rows
+            if package_id in row["required_input_packages"]
+        )
+        for package_id in PACKAGE_IDS
+    }
+    canonical_by_package = {
+        package_id: sorted(canonical_unlocks[package_id] & open_row_ids)
+        for package_id in PACKAGE_IDS
+    }
 
     closure_counts = Counter(row_closure_level(row) for row in rows)
     canonical_status = {
@@ -446,7 +482,7 @@ def build_payload() -> dict[str, Any]:
         "closure_level": "CLOSED_FOR_LANE",
         "what_is_closed": [
             "current 37-subresult closure state is reconstructed from canonical progress",
-            "all open subresults are assigned to three root input packages",
+            "all open subresults are mapped to their complete required root input package sets, including multi-package dependencies",
             "current input hashes are recorded and rerunning existing gates without new input is explicitly non-progress",
             "normalized/action scale routes are structurally bounded by no-go evidence, not merely missing scripts",
         ],
@@ -481,8 +517,18 @@ def build_payload() -> dict[str, Any]:
     checks = {
         "canonical_progress_is_blocked": ("BLOCKED" in canonical_status["full_topic_status"])
         or not canonical_status["full_core_unlock"],
-        "open_subresults_are_exactly_projected": len(assigned_rows) == len(open_rows),
-        "all_open_subresults_have_input_packages": all(row["root_input_package_id"] in PACKAGE_IDS for row in assigned_rows),
+        "open_subresults_are_exactly_projected": {row["subresult_id"] for row in assigned_rows}
+        == {row_id(row) for row in open_rows},
+        "all_open_subresults_have_input_packages": all(
+            row["required_input_packages"]
+            and set(row["required_input_packages"]).issubset(PACKAGE_IDS)
+            for row in assigned_rows
+        ),
+        "input_package_unlock_lists_match_canonical": projected_by_package == canonical_by_package,
+        "multi_package_dependencies_preserved": any(
+            len(row["required_input_packages"]) > 1 for row in assigned_rows
+        ),
+        "no_fallback_package_assignment_used": not fallback_package_assignment_used,
         "package_count_is_three": len(packages) == 3,
         "no_package_accepted_for_core": all(not package["accepted_for_core"] for package in packages),
         "replay_without_hash_change_is_forbidden": input_hashes_unchanged_required,
@@ -514,6 +560,9 @@ def build_payload() -> dict[str, Any]:
             "input_state": "BLOCKED_NO_ACCEPTED_CORE_PACKAGE",
             "rerun_existing_gates_without_new_input": False,
             "external_state_change_required": True,
+            "open_input_package_link_count": sum(
+                len(row["required_input_packages"]) for row in assigned_rows
+            ),
         },
         "input_packages": packages,
         "open_subresults": assigned_rows,

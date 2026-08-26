@@ -4948,3 +4948,53 @@ EVIDENCE_PATHS:
 - `docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_CLOSURE_CRITICAL_PATH.md`
 - `docs/core/artifacts/uet_major_result_closure_register.json`
 - `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`
+### 2026-08-26 - Topic 13 canonical dependency-edge preservation wave
+
+MAJOR_RESULT_CLOSURE:
+- `T13_CLOSURE_CRITICAL_PATH` remains `CLOSED_FOR_LANE`; this wave corrects dependency fidelity. Full Topic 13 remains `PARTIAL` and `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+
+WHAT_IS_ACTUALLY_CLOSED:
+- The critical-path artifact now preserves the complete multi-package unlock relation from the canonical input-package audit rather than assigning each open row to one package.
+- The current graph contains 13 package-to-subresult edges across 10 open subresults. `physical_source_backed_eos` requires Ding plus the base Phi-SI-alpha-beta package; `physical_heat_flux_entropy_map` requires all three packages.
+- The primary-controller label is retained only as a routing convenience; it is not treated as a substitute for the complete required package set.
+
+WHAT_REMAINS_OPEN:
+- All 10 open subresults remain open: `accepted_numeric_csrc`, `material_and_uncertainty_closure`, `base_phi_si_anchor`, `independent_alpha_record`, `normalized_beta_si_map`, `physical_source_backed_eos`, `physical_uet_kubo_record`, `physical_sk_transport_match`, `physical_entropy_production_mapping`, and `physical_heat_flux_entropy_map`.
+- No Ding numeric payload, independent `alpha_Phi_K`, SI Phi/beta anchor, physical Kubo record, or full physical entropy/heat-flux match was created.
+
+DEPENDENCY_UNLOCKED:
+- Dependency-fidelity reporting only. No Full Topic 13, Core curved 3+1, Gravity, constitutive transport, or Galaxy dependency is unlocked.
+
+STATUS:
+- `PASS_T13_CLOSURE_CRITICAL_PATH_WITH_EXTERNAL_INPUTS`; 15/15 control checks passed; `full_core_unlock=false`; `claim_promotion=false`.
+
+WHAT_CHANGED:
+- Reworked the critical-path generator to derive `required_input_packages` and package unlock lists from `t13_closure_input_package_audit.json`.
+- Added explicit checks for canonical unlock-list equality, multi-package preservation, and no fallback assignment.
+- Updated the regression to assert the three-package heat-flux dependency and the two-package EOS dependency.
+
+EQUATION_OR_MAPPING:
+- `Delta_Tq = alpha_Phi_K * Delta_Phi`; `C_src(T)=sum_mu c_mu(T)`; `Delta_Tq=Delta_u_ph/C_src(T)`.
+- The package graph is a research dependency mapping; it supplies no numeric coefficient and does not change the ontology of `C`, `Phi`, `R_gen`, or `R_obs`.
+
+VERIFICATION:
+- Critical-path audit: `PASS_T13_CLOSURE_CRITICAL_PATH_WITH_EXTERNAL_INPUTS`; 15/15 checks passed and 10 open rows projected.
+- Focused regression: three tests passed.
+- Existing closure/register suite remains green at 17 tests from the prior wave; full-bridge state remains blocked with seven canonical blockers.
+- Xie 2026 remains unaccessed and target fitting remains false.
+
+CONTROLLING_BLOCKER:
+- `external_input_package_state_unchanged`; the physical source/calibration/transport packages remain unaccepted for Core.
+
+NEXT_ACTION:
+- Change one canonical input package through an authorized Ding payload or accepted same-regime reproduction, an independent Phi-SI-alpha/beta derivation or calibration, or a physical Kubo/SK/KMS/entropy match. Then rerun only the dependent gates.
+
+CLAIM_BOUNDARY:
+- This wave closes dependency-edge fidelity and routing semantics only. It is not numeric `C_src`, independent alpha calibration, TTG prediction, external validation, Full Topic 13 Core closure, or global UET closure.
+
+EVIDENCE_PATHS:
+- `docs/scripts/audit/audit_topic13_closure_critical_path.py`
+- `docs/core/test/test_topic13_closure_critical_path.py`
+- `docs/core/artifacts/t13_closure_critical_path_audit.json`
+- `docs/core/artifacts/t13_closure_input_package_audit.json`
+- `docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_CLOSURE_CRITICAL_PATH.md`
