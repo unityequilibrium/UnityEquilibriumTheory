@@ -152,3 +152,16 @@ Wave 1 is complete when every room has a current artifact, measurable blocker,
 next action, and synchronized update record; Core's integration note cites the
 Topic 0.13 and 0.11 artifact hashes; the registry and dependency contract
 parse; the holdout remains untouched; and no claim ceiling is raised.
+
+## Cross-Cutting Chaos Diagnostic Lane
+
+Chaos is not a new fundamental UET equation or state variable. Core owns the
+tangent-state, Lyapunov-spectrum, resolution, and classification contracts.
+Topic 0.10 owns standard method controls; Topic 0.13 is the first normalized
+thermal consumer. Topic 0.11 and Core O(2) may consume the method only after
+the dependency gate reports diagnostic rollout `UNLOCKED`.
+
+`R_gen` and `R_obs` are excluded from the tangent state. Stochastic comparisons
+must use common noise and identical source histories. A diagnostic pass cannot
+unlock curved 3+1, Gravity, constitutive transport, Galaxy, external validation,
+or Full Topic 13, and it cannot replace source, SI, calibration, or transport evidence.
