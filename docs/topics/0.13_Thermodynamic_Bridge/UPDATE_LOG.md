@@ -4815,3 +4815,69 @@ NEXT_ACTION: Obtain authorization to send the prepared Ding request, or obtain a
 CLAIM_BOUNDARY: This closes source-route prioritization only. It is not numeric Ding C_src, independent alpha calibration, TTG prediction, external validation, Core closure, or global UET closure.
 EVIDENCE_PATHS: `docs/scripts/audit/audit_topic13_csrc_source_route_priority.py`; `docs/core/test/test_topic13_csrc_source_route_priority.py`; `docs/core/artifacts/t13_csrc_source_route_priority_audit.json`; `docs/core/artifacts/t13_topic13_closure_matrix.json`; `docs/core/artifacts/t13_full_closure_progress.json`.
 EVIDENCE_HASHES: route-priority `cbe5867d1946e143ed4a29b4697e15fea9b423c488d713f6ab1765c99c38ad88`; matrix `f5d534d2f4cdeea650c23d79948942238531f4f1b5edfa31e735b99546312a6c`; progress `01c27f58dcedc490ca51b3898e75db219694c44795e56b6ed80857deea879850`; register `6f5d8ba55cb595d5bfce997878c139b2b2e6396c4be2a6502e8f317a51570406`; dependency `df8ea80e2e8fcfb6dcbff3d4978c860509803a74672b7d743896b23d14283446`.
+
+### 2026-08-26 - Topic 13 QH-15 comparator route synchronization and register integrity wave
+
+MAJOR_RESULT_CLOSURE:
+- `T13_C_SRC_SOURCE_ROUTE_PRIORITY` remains `CLOSED_FOR_LANE`; this wave closes the route inventory's explicit QH-15 comparator boundary and register regeneration integrity only. Full Topic 13 remains `PARTIAL` and `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+
+WHAT_IS_ACTUALLY_CLOSED:
+- The already source-locked Materials Cloud QH-15 natural-graphite `SpecificC` rows are now visible in the nine-route C_src acquisition inventory as a numeric `C_v` comparator.
+- The comparator's native-unit conversion, row identity, archive hash, and 200/300 K values remain auditable, while the route is explicitly rejected for Ding mode-resolved `C_src` acceptance.
+- The repo-wide register generator now preserves the Topic 13 matrix's 37-subresult and three-input-package contract when regenerated after the matrix audit, preventing metadata loss.
+
+WHAT_REMAINS_OPEN:
+- No route is accepted for full Topic 13. Ding-compatible mode-resolved `C_src`, source-grade uncertainty, exact material/state response equivalence, independent `alpha_Phi_K`, SI Phi anchor, and physical Kubo/SK/KMS/entropy closure remain open.
+
+DEPENDENCY_UNLOCKED:
+- Comparator and route-priority visibility only. No Full Topic 13, Core curved 3+1, Gravity, constitutive transport, or Galaxy dependency is unlocked.
+
+STATUS:
+- `PASS_SCOPED_C_SRC_SOURCE_ROUTE_PRIORITY_NO_ACCEPTED_ROUTE`; nine routes, 11 required fields, two numeric C_src candidates, and zero accepted routes; `full_core_unlock=false`; `claim_promotion=false`.
+
+WHAT_CHANGED:
+- Added QH-15 to `audit_topic13_csrc_source_route_priority.py` and its regression while preserving the strict Ding acceptance contract.
+- Repaired `audit_major_result_closure.py` so a repo-wide rebuild retains the detailed Topic 13 matrix projection instead of dropping input-package and subresult fields.
+- Regenerated route, matrix, register, dependency, and grouped input projections without changing thresholds, equations, source roles, fit paths, or holdout policy.
+
+EQUATION_OR_MAPPING:
+- `C_v^QH15 = SpecificC * 1e9 J m^-3 K^-1` for the archived native units.
+- Ding acceptance remains `C_src(T) = sum_mu c_mu(T)` with `Delta_Tq = Delta_u_ph / C_src(T)`; QH-15 `SpecificC` is not relabeled as this response.
+
+VERIFICATION:
+- Route audit: `PASS_SCOPED_C_SRC_SOURCE_ROUTE_PRIORITY_NO_ACCEPTED_ROUTE`.
+- Full gate: `BLOCKED_OPEN_T13_FULL_BRIDGE` with the same seven blocker classes.
+- Input-package audit: three packages, zero accepted for Core, `holdout_accessed=false`.
+- Dependency gate: all downstream major results remain `BLOCKED_DEPENDENCY`.
+- Focused regression: 30 tests passed.
+
+CONTROLLING_BLOCKER:
+- `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing` remains the nearest controller; `alpha_Phi_K_independent_calibration_missing` and the five remaining source/scale/transport blockers remain explicit.
+
+NEXT_ACTION:
+- Obtain an authorized Ding numeric payload or an accepted same-regime PBTE reproduction containing all 11 required fields and source-grade uncertainty. Do not relabel QH-15, infer C_src from normalized TTG, or rerun unchanged gates as if they were new evidence.
+
+CLAIM_BOUNDARY:
+- This wave closes comparator provenance and route-decision bookkeeping only. It is not Ding numeric C_src, independent alpha calibration, TTG prediction, external validation, Full Topic 13 Core closure, or global UET closure.
+
+EVIDENCE_PATHS:
+- `docs/scripts/audit/audit_topic13_csrc_source_route_priority.py`
+- `docs/core/test/test_topic13_csrc_source_route_priority.py`
+- `docs/scripts/audit/audit_major_result_closure.py`
+- `docs/core/test/test_topic13_closure_matrix.py`
+- `docs/core/artifacts/t13_csrc_source_route_priority_audit.json`
+- `docs/core/artifacts/t13_qh15_graphite_transport_boundary_audit.json`
+- `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/qh15_graphite_transport_source_package.json`
+- `docs/core/artifacts/t13_topic13_closure_matrix.json`
+- `docs/core/artifacts/t13_full_closure_progress.json`
+- `docs/core/artifacts/uet_major_result_closure_register.json`
+- `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`
+
+EVIDENCE_HASHES:
+- route-priority `d3684267068eae98795019ec62d9d50cd664b27d394457f323af2654b6fe34c4`
+- matrix `63e34ba16865960049b025af9679cd097d04c9aa9e678e592644cb6a990bf2da`
+- progress `01c27f58dcedc490ca51b3898e75db219694c44795e56b6ed80857deea879850`
+- input package audit `a8ab343d42008fdc5e40ca93990df84baf22f754ddb949ea0e12b9a594e91384`
+- full gate `d787dea150faf58ecc6f7bbd5dd2f7770ea7351bb875253a5004cffe70ed0a70`
+- register `bf2be4cd9bd408394a141bf869786e98322efc3155c83bf6c69d301050ce3662`
+- dependency `5a1bd7fd689d96142aa23a0210cb66e68ab9e491637c35696362e4664cdfea47`

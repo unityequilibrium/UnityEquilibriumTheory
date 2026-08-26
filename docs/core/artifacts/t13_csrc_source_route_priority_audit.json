@@ -11,6 +11,7 @@
       "The current C_src source routes are ranked against the exact independent acceptance contract.",
       "The direct Ding author route is selected as priority 1 and is explicitly not sent or treated as received.",
       "Numeric Calorine candidates are separated from Ding acceptance because material/state equivalence and source-grade uncertainty are missing.",
+      "QH-15 natural-graphite C_v rows are recorded as a numeric comparator but are not relabeled as mode-resolved Ding C_src.",
       "Public OA, NIMS, Huang, and Huberman routes are bounded as non-productive for accepted numeric C_src under their captured payloads.",
       "The next action is an external input change or a genuinely qualifying same-regime reproduction, not another unchanged gate rerun."
     ],
@@ -113,6 +114,16 @@
         "path": "docs/core/artifacts/t13_huberman_2019_public_pbte_boundary_audit.json",
         "role": "route qualification audit",
         "sha256": "22b065abd8177a9b1f181e79761baadc0c5c6242d44bea74a8fd6022aafec3c4"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/qh15_graphite_transport_source_package.json",
+        "role": "source package or request manifest",
+        "sha256": "b30803d03435676fb30e0135601be7dd6be7e38824b688fb60d53cc75568fcbb"
+      },
+      {
+        "path": "docs/core/artifacts/t13_qh15_graphite_transport_boundary_audit.json",
+        "role": "route qualification audit",
+        "sha256": "51ddbb46b345233509c78cbb6575945017ddddf3fa14e3fcf233bbad5e9c1e11"
       }
     ],
     "verification_status": "PASS_SCOPED_C_SRC_SOURCE_ROUTE_PRIORITY_NO_ACCEPTED_ROUTE",
@@ -809,6 +820,90 @@
         "source_audit_checks_pass": true,
         "claim_promotion": false
       }
+    },
+    {
+      "route_id": "qh15_natural_graphite_cv",
+      "priority": 9,
+      "route_class": "INDEPENDENT_CV_COMPARATOR",
+      "label": "Materials Cloud QH-15 natural-graphite C_v comparator",
+      "current_state": "NUMERIC_NATURAL_GRAPHITE_CV_COMPARATOR_NO_SOURCE_GRADE_UNCERTAINTY",
+      "source_package": {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/qh15_graphite_transport_source_package.json",
+        "role": "source package or request manifest",
+        "sha256": "b30803d03435676fb30e0135601be7dd6be7e38824b688fb60d53cc75568fcbb"
+      },
+      "audit_artifact": {
+        "path": "docs/core/artifacts/t13_qh15_graphite_transport_boundary_audit.json",
+        "role": "route qualification audit",
+        "sha256": "51ddbb46b345233509c78cbb6575945017ddddf3fa14e3fcf233bbad5e9c1e11"
+      },
+      "package_status": "SOURCE_LOCKED_COMPARATOR_ONLY",
+      "audit_status": "PASS_SCOPED_QH15_CV_COMPARATOR_BOUNDARY",
+      "field_coverage": {
+        "source_identity_and_locator": {
+          "status": "PRESENT",
+          "basis": "The Materials Cloud record, DOI, archive identity, and selected raw-entry locators are locked."
+        },
+        "raw_numeric_or_reproduction_payload": {
+          "status": "PRESENT",
+          "basis": "The natural-graphite SpecificC rows are archived and re-read from the raw CSV."
+        },
+        "source_hash": {
+          "status": "PRESENT",
+          "basis": "The archive members, source notebook, and package inputs are hash-verified."
+        },
+        "material_identity_morphology_isotope_defect_state": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "temperature_and_state": {
+          "status": "PRESENT",
+          "basis": "Natural-graphite rows at 200 K and 300 K are present; exact Ding specimen equivalence remains open."
+        },
+        "PBTE_mode_resolved_response_contract": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "C_src_rows_with_J_m^-3_K^-1_units": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "uncertainty_and_preprocessing": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "mesh_or_numerical_convergence": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "independence_statement": {
+          "status": "MISSING",
+          "basis": "The required field is not present for this route under the current acceptance contract."
+        },
+        "holdout_and_fit_audit": {
+          "status": "PRESENT",
+          "basis": "The audit excludes target fitting, alpha fitting, and Xie 2026 access."
+        }
+      },
+      "field_coverage_count": 5,
+      "required_field_count": 11,
+      "acceptance_decision": "COMPARATOR_REJECTED_CV_NO_DING_RESPONSE_OR_SOURCE_GRADE",
+      "accepted_for_full_topic13": false,
+      "rejection_reasons": [
+        "SpecificC is a macroscopic C_v comparator, not a Ding mode-resolved C_src response contract",
+        "source-grade uncertainty is explicitly absent from the QH-15 archive",
+        "exact Ding TTG specimen, morphology, isotope/defect state, and response equivalence are not established"
+      ],
+      "next_action": "Keep QH-15 as a natural-graphite C_v comparator; obtain the authorized Ding payload or a same-regime PBTE reproduction with source-grade uncertainty before acceptance.",
+      "holdout_policy": {
+        "xie_2026_accessed": false,
+        "target_curve_used": false,
+        "fit_or_tuning_used": false
+      },
+      "verification": {
+        "source_audit_checks_pass": true,
+        "claim_promotion": false
+      }
     }
   ],
   "priority_decision": {
@@ -902,6 +997,16 @@
       "claim_promotion_is_false": true
     },
     "huberman_2019_public_pbte": {
+      "package_present": true,
+      "audit_present": true,
+      "package_status_matches": true,
+      "audit_status_matches": true,
+      "coverage_keys_exact": true,
+      "policy_checks_pass": true,
+      "accepted_for_full_topic13_is_false": true,
+      "claim_promotion_is_false": true
+    },
+    "qh15_natural_graphite_cv": {
       "package_present": true,
       "audit_present": true,
       "package_status_matches": true,

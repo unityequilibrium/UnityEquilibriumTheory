@@ -215,7 +215,71 @@ def main() -> int:
                 "dependency_unlocked": major.get("dependency_unlocked", "none"),
                 "claim_boundary": major.get("claim_boundary", "artifact-reported boundary"),
             })
+
     entries.extend(discovered_entries)
+
+    # Preserve the detailed closure projection when this repo-wide generator
+    # runs after the Topic 13 matrix generator. The matrix is a first-class
+    # result, not a generic discovered artifact, so dropping its input-package
+    # and subresult contract would create metadata drift on the next rebuild.
+    matrix_entry = next(
+        (item for item in entries if item.get("major_result_id") == "T13_TOPIC13_CLOSURE_MATRIX"),
+        None,
+    )
+    if matrix_entry is not None:
+        matrix_major = matrix.get("major_result", {})
+        for field in (
+            "closure_level",
+            "what_is_closed",
+            "equation_or_mapping",
+            "units",
+            "derivation_class",
+            "observable",
+            "data_role",
+            "verification_status",
+            "open_blockers",
+            "dependency_unlocked",
+            "claim_boundary",
+        ):
+            if field in matrix_major:
+                matrix_entry[field] = matrix_major[field]
+        matrix_entry["claim_promotion"] = False
+        matrix_entry["evidence_artifacts"] = [
+            ref(
+                rel(MATRIX),
+                {
+                    "role": "compact Topic 13 closure projection",
+                },
+            ),
+            ref(
+                rel(T13),
+                {
+                    "role": "canonical readiness gate",
+                },
+            ),
+        ]
+        matrix_entry["closure_summary"] = matrix.get("closure_summary", {})
+        full_contract = matrix.get("full_topic_closure_contract", {})
+        matrix_entry["full_topic_closure_contract"] = {
+            "required_major_result_count": full_contract.get("required_major_result_count"),
+            "required_subresult_count": full_contract.get("required_subresult_count"),
+            "current_major_result_counts": full_contract.get("current_major_result_counts", {}),
+            "current_subresult_counts": full_contract.get("current_subresult_counts", {}),
+            "full_topic_ready": full_contract.get("full_topic_ready", False),
+        }
+        matrix_entry["required_major_result_count"] = full_contract.get("required_major_result_count")
+        matrix_entry["required_subresult_count"] = full_contract.get("required_subresult_count")
+        matrix_entry["required_input_package_count"] = full_contract.get("required_input_package_count")
+        matrix_entry["current_major_result_counts"] = matrix_entry["closure_summary"].get(
+            "current_major_result_counts", {}
+        )
+        matrix_entry["current_subresult_counts"] = matrix_entry["closure_summary"].get(
+            "current_subresult_counts", {}
+        )
+        if "closure_input_packages" in full_contract:
+            matrix_entry["closure_input_packages"] = full_contract["closure_input_packages"]
+        if isinstance(matrix.get("input_package_audit"), dict):
+            matrix_entry["input_package_audit"] = matrix["input_package_audit"]
     artifact = {
         "schema_version": "uet-major-result-closure-register-v1",
         "artifact": "uet_major_result_closure_register",

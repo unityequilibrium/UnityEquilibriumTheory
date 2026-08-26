@@ -33,7 +33,7 @@ def test_route_matrix_has_all_eleven_acceptance_fields_and_no_accepted_route() -
     audit = load(AUDIT)
     required = audit["acceptance_contract"]["required_fields"]
     assert len(required) == 11
-    assert len(audit["routes"]) == 8
+    assert len(audit["routes"]) == 9
     assert all(set(route["field_coverage"]) == set(required) for route in audit["routes"])
     assert all(route["accepted_for_full_topic13"] is False for route in audit["routes"])
     assert audit["priority_decision"]["selected_route_id"] == "ding_author_payload"
@@ -52,6 +52,18 @@ def test_numeric_candidates_are_visible_but_material_and_uncertainty_gates_remai
         assert route["field_coverage"]["material_identity_morphology_isotope_defect_state"]["status"] == "MISSING"
         assert route["field_coverage"]["uncertainty_and_preprocessing"]["status"] == "MISSING"
         assert "material/state" in " ".join(route["rejection_reasons"])
+
+
+def test_qh15_natural_graphite_cv_comparator_is_visible_without_ding_acceptance() -> None:
+    audit = load(AUDIT)
+    route = next(item for item in audit["routes"] if item["route_id"] == "qh15_natural_graphite_cv")
+    assert route["route_class"] == "INDEPENDENT_CV_COMPARATOR"
+    assert route["field_coverage"]["raw_numeric_or_reproduction_payload"]["status"] == "PRESENT"
+    assert route["field_coverage"]["temperature_and_state"]["status"] == "PRESENT"
+    assert route["field_coverage"]["C_src_rows_with_J_m^-3_K^-1_units"]["status"] == "MISSING"
+    assert route["field_coverage"]["uncertainty_and_preprocessing"]["status"] == "MISSING"
+    assert route["accepted_for_full_topic13"] is False
+    assert "SpecificC" in " ".join(route["rejection_reasons"])
 
 
 def test_route_priority_is_projected_into_matrix_and_major_result_register() -> None:

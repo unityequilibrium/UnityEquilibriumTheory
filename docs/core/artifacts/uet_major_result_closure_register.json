@@ -1863,7 +1863,7 @@
       },
       "closure_matrix": {
         "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-        "sha256": "f5d534d2f4cdeea650c23d79948942238531f4f1b5edfa31e735b99546312a6c",
+        "sha256": "63e34ba16865960049b025af9679cd097d04c9aa9e678e592644cb6a990bf2da",
         "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
         "full_core_unlock": false,
         "required_major_result_count": 10,
@@ -3835,6 +3835,7 @@
         "The current C_src source routes are ranked against the exact independent acceptance contract.",
         "The direct Ding author route is selected as priority 1 and is explicitly not sent or treated as received.",
         "Numeric Calorine candidates are separated from Ding acceptance because material/state equivalence and source-grade uncertainty are missing.",
+        "QH-15 natural-graphite C_v rows are recorded as a numeric comparator but are not relabeled as mode-resolved Ding C_src.",
         "Public OA, NIMS, Huang, and Huberman routes are bounded as non-productive for accepted numeric C_src under their captured payloads.",
         "The next action is an external input change or a genuinely qualifying same-regime reproduction, not another unchanged gate rerun."
       ],
@@ -3855,7 +3856,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_csrc_source_route_priority_audit.json",
-          "sha256": "cbe5867d1946e143ed4a29b4697e15fea9b423c488d713f6ab1765c99c38ad88",
+          "sha256": "d3684267068eae98795019ec62d9d50cd664b27d394457f323af2654b6fe34c4",
           "summary": {
             "status": "PASS_SCOPED_C_SRC_SOURCE_ROUTE_PRIORITY_NO_ACCEPTED_ROUTE",
             "major_result_id": "T13_C_SRC_SOURCE_ROUTE_PRIORITY",
@@ -7499,7 +7500,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-          "sha256": "f5d534d2f4cdeea650c23d79948942238531f4f1b5edfa31e735b99546312a6c",
+          "sha256": "63e34ba16865960049b025af9679cd097d04c9aa9e678e592644cb6a990bf2da",
           "summary": {
             "role": "compact Topic 13 closure projection"
           }

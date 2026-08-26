@@ -128,6 +128,10 @@ def test_topic13_closure_matrix_is_projected_into_register_and_dependency_gate()
     assert entry["claim_promotion"] is False
     assert entry["evidence_artifacts"][0]["path"] == "docs/core/artifacts/t13_topic13_closure_matrix.json"
     assert entry["evidence_artifacts"][0]["sha256"] == digest(MATRIX)
+    assert entry["closure_summary"]["reported_subresult_count"] == 37
+    assert entry["full_topic_closure_contract"]["full_topic_ready"] is False
+    assert entry["input_package_audit"]["path"] == "docs/core/artifacts/t13_closure_input_package_audit.json"
+    assert len(entry["closure_input_packages"]) == 3
     assert full_entry["closure_matrix"]["sha256"] == digest(MATRIX)
     assert full_entry["closure_matrix"]["required_major_result_count"] == 10
     assert full_entry["closure_matrix"]["required_subresult_count"] == 37
