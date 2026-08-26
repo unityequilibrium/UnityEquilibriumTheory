@@ -17,6 +17,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / "docs/core/artifacts/t13_csrc_source_route_priority_audit.json"
 ACCEPTANCE = ROOT / "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json"
+RECONCILIATION = ROOT / "docs/core/artifacts/t13_csrc_reconciliation_audit.json"
 
 REQUIRED_FIELDS = (
     "source_identity_and_locator",
@@ -343,6 +344,63 @@ ROUTE_SPECS: tuple[dict[str, Any], ...] = (
 )
 
 
+
+# The priority inventory is intentionally narrower than the historical
+# reconciliation inventory. Keep the relationship explicit so a route-count
+# difference cannot be mistaken for a missing or silently dropped route.
+RECONCILIATION_TO_PRIORITY: dict[str, tuple[str, ...]] = {
+    "ding_official_oa_inventory": ("ding_public_oa",),
+    "ding_author_request_not_received": ("ding_author_payload",),
+    "public_phonon_route_screening": (),
+    "huberman_public_pbte": ("huberman_2019_public_pbte",),
+    "calorine_candidate_route_boundary": ("calorine_zenodo_pbte",),
+    "calorine_numeric_reproduction": ("calorine_zenodo_pbte",),
+    "mp48_spectral_csrc": ("mp48_harmonic_comparator",),
+    "mp48_ding_mode_sum_mapping": ("mp48_harmonic_comparator",),
+    "ding_2017_public_supplementary_boundary": (),
+    "figshare_dft_force_data_boundary": (),
+}
+
+
+def build_inventory_coverage(routes: list[dict[str, Any]], reconciliation: dict[str, Any]) -> dict[str, Any]:
+    priority_ids = {route["route_id"] for route in routes}
+    reconciliation_ids = [item.get("candidate_id") for item in reconciliation.get("candidates", [])]
+    reconciliation_id_set = set(reconciliation_ids)
+    mapping = {
+        candidate_id: list(priority_ids_for_candidate)
+        for candidate_id, priority_ids_for_candidate in RECONCILIATION_TO_PRIORITY.items()
+    }
+    mapped_reconciliation_ids = {
+        candidate_id
+        for candidate_id, priority_ids_for_candidate in mapping.items()
+        if priority_ids_for_candidate
+    }
+    return {
+        "priority_inventory_scope": "currently actionable or comparator routes ranked for the next source-acquisition decision",
+        "reconciliation_inventory_scope": "broader source-route history including closed public boundaries and mapping-only candidates",
+        "priority_route_count": len(routes),
+        "reconciliation_candidate_count": len(reconciliation_ids),
+        "reconciliation_to_priority": mapping,
+        "reconciliation_only_boundary_routes": sorted(reconciliation_id_set - mapped_reconciliation_ids),
+        "priority_only_routes": sorted(priority_ids - {route_id for ids in mapping.values() for route_id in ids}),
+        "coverage_checks": {
+            "reconciliation_file_present": RECONCILIATION.is_file(),
+            "mapping_keys_match_reconciliation_candidates": set(mapping) == reconciliation_id_set,
+            "mapped_priority_ids_exist": all(
+                route_id in priority_ids
+                for route_ids in mapping.values()
+                for route_id in route_ids
+            ),
+            "all_reconciliation_routes_accounted_for": (
+                mapped_reconciliation_ids | (reconciliation_id_set - mapped_reconciliation_ids)
+            ) == reconciliation_id_set,
+        },
+        "interpretation": (
+            "The two counts are compatible: priority inventory ranks nine active routes, while reconciliation "
+            "retains ten broader candidates. Reconciliation-only entries are explicit boundary routes; priority-only "
+            "entries are active comparators not included in that historical reconciliation pass."
+        ),
+    }
 def load(path: Path) -> dict[str, Any]:
     value = json.loads(path.read_text(encoding="utf-8-sig"))
     if not isinstance(value, dict):
@@ -429,12 +487,15 @@ def build_route(route: dict[str, Any]) -> tuple[dict[str, Any], dict[str, bool]]
 
 def main() -> int:
     acceptance = load(ACCEPTANCE)
+    reconciliation = load(RECONCILIATION) if RECONCILIATION.is_file() else {}
     routes: list[dict[str, Any]] = []
     route_checks: dict[str, dict[str, bool]] = {}
     for route_spec in ROUTE_SPECS:
         route, checks = build_route(route_spec)
         routes.append(route)
         route_checks[route_spec["route_id"]] = checks
+
+    inventory_coverage = build_inventory_coverage(routes, reconciliation)
 
     global_checks = {
         "acceptance_required_fields_match": acceptance.get("acceptance_contract", {}).get("required_fields") == list(REQUIRED_FIELDS),
@@ -458,12 +519,14 @@ def main() -> int:
             for route in routes
         ),
         "no_synthetic_replacement_is_declared": all("synthetic" not in route["current_state"].lower() for route in routes),
+        "inventory_coverage_is_explicit": all(inventory_coverage["coverage_checks"].values()),
     }
     passed = all(global_checks.values())
     status = "PASS_SCOPED_C_SRC_SOURCE_ROUTE_PRIORITY_NO_ACCEPTED_ROUTE" if passed else "FAIL_T13_C_SRC_SOURCE_ROUTE_PRIORITY_AUDIT"
     source_refs = []
     for route in routes:
         source_refs.extend([route["source_package"], route["audit_artifact"]])
+    source_refs.append(reference(RECONCILIATION, "broader C_src reconciliation inventory"))
     report = {
         "schema_version": "t13-csrc-source-route-priority-v1",
         "artifact": "t13_csrc_source_route_priority_audit",
@@ -480,6 +543,7 @@ def main() -> int:
                 "QH-15 natural-graphite C_v rows are recorded as a numeric comparator but are not relabeled as mode-resolved Ding C_src.",
                 "Public OA, NIMS, Huang, and Huberman routes are bounded as non-productive for accepted numeric C_src under their captured payloads.",
                 "The next action is an external input change or a genuinely qualifying same-regime reproduction, not another unchanged gate rerun.",
+                "The nine-route priority inventory is explicitly related to the ten-candidate reconciliation inventory; the count difference is scope, not silent route loss.",
             ],
             "equation_or_mapping": {
                 "source_response": "C_src(T) = sum_mu c_mu(T)",
@@ -501,6 +565,7 @@ def main() -> int:
             "claim_boundary": "This closes a source-acquisition decision lane only. It does not accept a C_src route, create data, calibrate alpha_Phi_K, validate TTG, or close Full Topic 13.",
         },
         "acceptance_contract": {"path": relative(ACCEPTANCE), "sha256": digest(ACCEPTANCE), "required_fields": list(REQUIRED_FIELDS)},
+        "inventory_coverage": inventory_coverage,
         "routes": routes,
         "priority_decision": {
             "selected_route_id": "ding_author_payload",
@@ -512,8 +577,8 @@ def main() -> int:
         },
         "checks": global_checks,
         "route_checks": route_checks,
-        "what_changed": "Ranked and field-audited all currently captured C_src source routes without importing or synthesizing a numeric replacement.",
-        "verification": "Every route package and audit is hash-referenced; expected statuses, field coverage, policy checks, fail-closed acceptance, and holdout exclusion are machine-checked.",
+        "what_changed": "Ranked and field-audited all currently captured C_src source routes without importing or synthesizing a numeric replacement; made the relationship to the broader reconciliation inventory explicit.",
+        "verification": "Every route package and audit is hash-referenced; expected statuses, field coverage, policy checks, fail-closed acceptance, holdout exclusion, and cross-inventory coverage are machine-checked.",
         "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
         "next_action": "Obtain authorization to send the prepared Ding request, or obtain a genuinely same-regime PBTE reproduction. Do not infer C_src from normalized TTG rows, incident fluence, comparator c_v, or an unchanged rerun.",
         "claim_boundary": "C_src source-route prioritization only; no numeric Ding C_src, no alpha_Phi_K calibration, no prediction, no external validation, no Core closure, and no global UET closure.",
@@ -522,7 +587,7 @@ def main() -> int:
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(report, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
-    print(json.dumps({"status": status, "artifact": relative(OUT), "route_count": len(routes), "required_field_count": len(REQUIRED_FIELDS), "numeric_csrc_candidate_count": 2, "accepted_route_count": 0}, indent=2, sort_keys=True))
+    print(json.dumps({"status": status, "artifact": relative(OUT), "route_count": len(routes), "reconciliation_candidate_count": len(reconciliation.get("candidates", [])), "required_field_count": len(REQUIRED_FIELDS), "numeric_csrc_candidate_count": 2, "accepted_route_count": 0}, indent=2, sort_keys=True))
     return 0 if passed else 1
 
 

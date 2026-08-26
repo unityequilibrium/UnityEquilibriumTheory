@@ -420,7 +420,7 @@
       },
       {
         "path": "docs/core/artifacts/t13_csrc_source_route_priority_audit.json",
-        "sha256": "d3684267068eae98795019ec62d9d50cd664b27d394457f323af2654b6fe34c4",
+        "sha256": "3944af5e35e7565b58d1a9861871e9d5e3c5ebe2fda1f58c8bdcc293ce01c2b6",
         "summary": {
           "role": "declared Topic 13 closure-contract evidence"
         }
@@ -1014,7 +1014,7 @@
       },
       {
         "path": "docs/core/artifacts/t13_csrc_source_route_priority_audit.json",
-        "sha256": "d3684267068eae98795019ec62d9d50cd664b27d394457f323af2654b6fe34c4",
+        "sha256": "3944af5e35e7565b58d1a9861871e9d5e3c5ebe2fda1f58c8bdcc293ce01c2b6",
         "summary": {
           "role": "declared Topic 13 closure-contract evidence"
         }
@@ -2726,7 +2726,7 @@
         },
         {
           "path": "docs/core/artifacts/t13_csrc_source_route_priority_audit.json",
-          "sha256": "d3684267068eae98795019ec62d9d50cd664b27d394457f323af2654b6fe34c4",
+          "sha256": "3944af5e35e7565b58d1a9861871e9d5e3c5ebe2fda1f58c8bdcc293ce01c2b6",
           "summary": {
             "role": "declared Topic 13 closure-contract evidence"
           }

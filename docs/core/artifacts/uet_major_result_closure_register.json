@@ -278,6 +278,7 @@
           "sha256": "65a85d9abc2d051570af72898bd8b8848c29d1fb20685c9b284ce6915fe8a8fe",
           "summary": {
             "status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT",
+            "major_result_id": "T13_FLAT_THERMODYNAMIC_BRIDGE_COMPONENTS",
             "closure_level": "CLOSED_FOR_LANE",
             "physical_coefficient_evidence": "EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_UET_MAPPING",
             "full_core_unlock": false
@@ -1863,12 +1864,14 @@
       },
       "closure_matrix": {
         "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-        "sha256": "63e34ba16865960049b025af9679cd097d04c9aa9e678e592644cb6a990bf2da",
+        "sha256": "d597f0e0d334845e2d2e515ec372b560890b8fced4f0082169229f38bb3ab81a",
         "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
+        "closure_level": "PARTIAL",
         "full_core_unlock": false,
         "required_major_result_count": 10,
         "required_subresult_count": 37
-      }
+      },
+      "claim_promotion": false
     },
     {
       "major_result_id": "CORE_O2_TREE_LEVEL_EOS_LANE",
@@ -3837,7 +3840,8 @@
         "Numeric Calorine candidates are separated from Ding acceptance because material/state equivalence and source-grade uncertainty are missing.",
         "QH-15 natural-graphite C_v rows are recorded as a numeric comparator but are not relabeled as mode-resolved Ding C_src.",
         "Public OA, NIMS, Huang, and Huberman routes are bounded as non-productive for accepted numeric C_src under their captured payloads.",
-        "The next action is an external input change or a genuinely qualifying same-regime reproduction, not another unchanged gate rerun."
+        "The next action is an external input change or a genuinely qualifying same-regime reproduction, not another unchanged gate rerun.",
+        "The nine-route priority inventory is explicitly related to the ten-candidate reconciliation inventory; the count difference is scope, not silent route loss."
       ],
       "equation_or_mapping": {
         "source_response": "C_src(T) = sum_mu c_mu(T)",
@@ -3856,7 +3860,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_csrc_source_route_priority_audit.json",
-          "sha256": "d3684267068eae98795019ec62d9d50cd664b27d394457f323af2654b6fe34c4",
+          "sha256": "3944af5e35e7565b58d1a9861871e9d5e3c5ebe2fda1f58c8bdcc293ce01c2b6",
           "summary": {
             "status": "PASS_SCOPED_C_SRC_SOURCE_ROUTE_PRIORITY_NO_ACCEPTED_ROUTE",
             "major_result_id": "T13_C_SRC_SOURCE_ROUTE_PRIORITY",
@@ -4880,21 +4884,13 @@
           "summary": {
             "status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT",
             "major_result_id": "T13_FLAT_THERMODYNAMIC_BRIDGE_COMPONENTS",
-            "closure_level": "CLOSED_FOR_LANE"
+            "closure_level": "CLOSED_FOR_LANE",
+            "physical_coefficient_evidence": "EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_UET_MAPPING",
+            "full_core_unlock": false
           }
         }
       ],
-      "verification_status": {
-        "normal_component_lane_closed": true,
-        "formal_bridge_lane_closed": true,
-        "sk_kms_entropy_interface_closed": true,
-        "entropy_heat_flux_balance_lane_closed": true,
-        "curved_3p1_is_explicitly_deferred": true,
-        "external_transport_input_is_provenance_complete": true,
-        "external_transport_is_not_relabelled_as_uet": true,
-        "holdout_remains_unconsumed": true,
-        "claim_promotion_remains_disabled": true
-      },
+      "verification_status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT",
       "open_blockers": [
         "physical_Kubo_coefficient_record_missing",
         "dimensional_phi_to_thermal_observable_map_missing",
@@ -7471,6 +7467,7 @@
       "major_result_id": "T13_TOPIC13_CLOSURE_MATRIX",
       "topic": "0.13_Thermodynamic_Bridge",
       "closure_level": "PARTIAL",
+      "claim_promotion": false,
       "what_is_closed": [
         "The ten required Topic 13 result areas are reported separately by closure level.",
         "Each result area exposes evidence-producing subresults and an acceptance boundary.",
@@ -7500,7 +7497,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-          "sha256": "63e34ba16865960049b025af9679cd097d04c9aa9e678e592644cb6a990bf2da",
+          "sha256": "d597f0e0d334845e2d2e515ec372b560890b8fced4f0082169229f38bb3ab81a",
           "summary": {
             "role": "compact Topic 13 closure projection"
           }
@@ -7513,14 +7510,6 @@
           }
         }
       ],
-      "input_package_audit": {
-        "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
-        "sha256": "a8ab343d42008fdc5e40ca93990df84baf22f754ddb949ea0e12b9a594e91384",
-        "summary": {
-          "role": "grouped Topic 13 closure-input acceptance audit",
-          "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
-        }
-      },
       "verification_status": "PASS_MACHINE_READABLE_FULL_TOPIC_CLOSURE_CONTRACT_WITH_GATE_BOUNDARY",
       "open_blockers": [
         "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
@@ -7533,8 +7522,68 @@
       ],
       "dependency_unlocked": "Gravity/GR remains blocked until Full Topic 13 and Core curved 3+1 gates pass.",
       "claim_boundary": "This matrix reports progress and closure boundaries. It does not promote a lane-level PASS, comparator, no-go, or formal interface to Full Topic 13, Core, external validation, or a global UET claim.",
+      "closure_summary": {
+        "closure_count_unit": "required_subresults",
+        "closed_lane_count": 21,
+        "closed_as_no_go_count": 6,
+        "closed_for_core_count": 0,
+        "open_subresult_count": 10,
+        "reported_subresult_count": 37,
+        "source_gate_projection_counts": {
+          "closed_lane_result_count": 192,
+          "closed_as_no_go_result_count": 16
+        },
+        "open_blocker_count": 7,
+        "open_blocker_groups": {
+          "source_and_material": [
+            "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+            "material_regime_mapping_to_TTG_not_closed",
+            "c_v_source_uncertainty_not_closed"
+          ],
+          "dimensional_and_calibration": [
+            "alpha_Phi_K_independent_calibration_missing",
+            "normalized_beta_and_SI_scale_correspondence_missing",
+            "dimensional_phi_to_thermal_observable_map_missing"
+          ],
+          "thermodynamic_transport": [
+            "physical_Kubo_coefficient_record_missing"
+          ],
+          "unclassified": []
+        },
+        "downstream_dependency_unlocked": false,
+        "required_major_result_count": 10,
+        "required_subresult_count": 37,
+        "required_input_package_count": 3,
+        "current_major_result_counts": {
+          "CLOSED_AS_NO_GO": 1,
+          "OPEN": 3,
+          "PARTIAL": 6
+        },
+        "current_subresult_counts": {
+          "CLOSED_AS_NO_GO": 6,
+          "CLOSED_FOR_LANE": 21,
+          "OPEN": 10
+        },
+        "full_topic_ready": false
+      },
+      "full_topic_closure_contract": {
+        "required_major_result_count": 10,
+        "required_subresult_count": 37,
+        "current_major_result_counts": {
+          "CLOSED_AS_NO_GO": 1,
+          "OPEN": 3,
+          "PARTIAL": 6
+        },
+        "current_subresult_counts": {
+          "CLOSED_AS_NO_GO": 6,
+          "CLOSED_FOR_LANE": 21,
+          "OPEN": 10
+        },
+        "full_topic_ready": false
+      },
       "required_major_result_count": 10,
       "required_subresult_count": 37,
+      "required_input_package_count": 3,
       "current_major_result_counts": {
         "CLOSED_AS_NO_GO": 1,
         "OPEN": 3,
@@ -7545,7 +7594,6 @@
         "CLOSED_FOR_LANE": 21,
         "OPEN": 10
       },
-      "required_input_package_count": 3,
       "closure_input_packages": [
         {
           "package_id": "T13_INPUT_DING_TTG_SOURCE",
@@ -7619,66 +7667,14 @@
           "claim_boundary": "The existing natural-unit Kubo and formal SK/KMS lanes remain lane evidence until a state-matched physical record passes this contract."
         }
       ],
-      "closure_summary": {
-        "closure_count_unit": "required_subresults",
-        "closed_lane_count": 21,
-        "closed_as_no_go_count": 6,
-        "closed_for_core_count": 0,
-        "open_subresult_count": 10,
-        "reported_subresult_count": 37,
-        "source_gate_projection_counts": {
-          "closed_lane_result_count": 192,
-          "closed_as_no_go_result_count": 16
-        },
-        "open_blocker_count": 7,
-        "open_blocker_groups": {
-          "source_and_material": [
-            "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
-            "material_regime_mapping_to_TTG_not_closed",
-            "c_v_source_uncertainty_not_closed"
-          ],
-          "dimensional_and_calibration": [
-            "alpha_Phi_K_independent_calibration_missing",
-            "normalized_beta_and_SI_scale_correspondence_missing",
-            "dimensional_phi_to_thermal_observable_map_missing"
-          ],
-          "thermodynamic_transport": [
-            "physical_Kubo_coefficient_record_missing"
-          ],
-          "unclassified": []
-        },
-        "downstream_dependency_unlocked": false,
-        "required_major_result_count": 10,
-        "required_subresult_count": 37,
-        "required_input_package_count": 3,
-        "current_major_result_counts": {
-          "CLOSED_AS_NO_GO": 1,
-          "OPEN": 3,
-          "PARTIAL": 6
-        },
-        "current_subresult_counts": {
-          "CLOSED_AS_NO_GO": 6,
-          "CLOSED_FOR_LANE": 21,
-          "OPEN": 10
-        },
-        "full_topic_ready": false
-      },
-      "full_topic_closure_contract": {
-        "required_major_result_count": 10,
-        "required_subresult_count": 37,
-        "current_major_result_counts": {
-          "CLOSED_AS_NO_GO": 1,
-          "OPEN": 3,
-          "PARTIAL": 6
-        },
-        "current_subresult_counts": {
-          "CLOSED_AS_NO_GO": 6,
-          "CLOSED_FOR_LANE": 21,
-          "OPEN": 10
-        },
-        "full_topic_ready": false
-      },
-      "claim_promotion": false
+      "input_package_audit": {
+        "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
+        "sha256": "a8ab343d42008fdc5e40ca93990df84baf22f754ddb949ea0e12b9a594e91384",
+        "summary": {
+          "role": "grouped Topic 13 closure-input acceptance audit",
+          "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
+        }
+      }
     },
     {
       "major_result_id": "T13_TPG_ANISOTROPIC_ALPHA_V_COMPARATOR",

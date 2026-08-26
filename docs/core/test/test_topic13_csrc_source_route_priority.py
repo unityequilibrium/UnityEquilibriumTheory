@@ -66,6 +66,28 @@ def test_qh15_natural_graphite_cv_comparator_is_visible_without_ding_acceptance(
     assert "SpecificC" in " ".join(route["rejection_reasons"])
 
 
+
+def test_priority_and_reconciliation_inventory_scopes_are_explicit() -> None:
+    audit = load(AUDIT)
+    coverage = audit["inventory_coverage"]
+    assert coverage["priority_route_count"] == 9
+    assert coverage["reconciliation_candidate_count"] == 10
+    assert all(coverage["coverage_checks"].values())
+    assert set(coverage["reconciliation_only_boundary_routes"]) == {
+        "ding_2017_public_supplementary_boundary",
+        "figshare_dft_force_data_boundary",
+        "public_phonon_route_screening",
+    }
+    assert set(coverage["priority_only_routes"]) == {
+        "calorine_legacy_nep2_pbte",
+        "huang_2023_nims",
+        "nims_mp990448",
+        "qh15_natural_graphite_cv",
+    }
+    assert coverage["reconciliation_to_priority"]["calorine_numeric_reproduction"] == [
+        "calorine_zenodo_pbte"
+    ]
+
 def test_route_priority_is_projected_into_matrix_and_major_result_register() -> None:
     audit = load(AUDIT)
     matrix = load(MATRIX)

@@ -13,7 +13,8 @@
       "Numeric Calorine candidates are separated from Ding acceptance because material/state equivalence and source-grade uncertainty are missing.",
       "QH-15 natural-graphite C_v rows are recorded as a numeric comparator but are not relabeled as mode-resolved Ding C_src.",
       "Public OA, NIMS, Huang, and Huberman routes are bounded as non-productive for accepted numeric C_src under their captured payloads.",
-      "The next action is an external input change or a genuinely qualifying same-regime reproduction, not another unchanged gate rerun."
+      "The next action is an external input change or a genuinely qualifying same-regime reproduction, not another unchanged gate rerun.",
+      "The nine-route priority inventory is explicitly related to the ten-candidate reconciliation inventory; the count difference is scope, not silent route loss."
     ],
     "equation_or_mapping": {
       "source_response": "C_src(T) = sum_mu c_mu(T)",
@@ -124,6 +125,11 @@
         "path": "docs/core/artifacts/t13_qh15_graphite_transport_boundary_audit.json",
         "role": "route qualification audit",
         "sha256": "51ddbb46b345233509c78cbb6575945017ddddf3fa14e3fcf233bbad5e9c1e11"
+      },
+      {
+        "path": "docs/core/artifacts/t13_csrc_reconciliation_audit.json",
+        "role": "broader C_src reconciliation inventory",
+        "sha256": "a551b12e0c19d3cbb85675de7143cd883e1a103f7a80bb706f84445fdd0a51c3"
       }
     ],
     "verification_status": "PASS_SCOPED_C_SRC_SOURCE_ROUTE_PRIORITY_NO_ACCEPTED_ROUTE",
@@ -151,6 +157,56 @@
       "independence_statement",
       "holdout_and_fit_audit"
     ]
+  },
+  "inventory_coverage": {
+    "priority_inventory_scope": "currently actionable or comparator routes ranked for the next source-acquisition decision",
+    "reconciliation_inventory_scope": "broader source-route history including closed public boundaries and mapping-only candidates",
+    "priority_route_count": 9,
+    "reconciliation_candidate_count": 10,
+    "reconciliation_to_priority": {
+      "ding_official_oa_inventory": [
+        "ding_public_oa"
+      ],
+      "ding_author_request_not_received": [
+        "ding_author_payload"
+      ],
+      "public_phonon_route_screening": [],
+      "huberman_public_pbte": [
+        "huberman_2019_public_pbte"
+      ],
+      "calorine_candidate_route_boundary": [
+        "calorine_zenodo_pbte"
+      ],
+      "calorine_numeric_reproduction": [
+        "calorine_zenodo_pbte"
+      ],
+      "mp48_spectral_csrc": [
+        "mp48_harmonic_comparator"
+      ],
+      "mp48_ding_mode_sum_mapping": [
+        "mp48_harmonic_comparator"
+      ],
+      "ding_2017_public_supplementary_boundary": [],
+      "figshare_dft_force_data_boundary": []
+    },
+    "reconciliation_only_boundary_routes": [
+      "ding_2017_public_supplementary_boundary",
+      "figshare_dft_force_data_boundary",
+      "public_phonon_route_screening"
+    ],
+    "priority_only_routes": [
+      "calorine_legacy_nep2_pbte",
+      "huang_2023_nims",
+      "nims_mp990448",
+      "qh15_natural_graphite_cv"
+    ],
+    "coverage_checks": {
+      "reconciliation_file_present": true,
+      "mapping_keys_match_reconciliation_candidates": true,
+      "mapped_priority_ids_exist": true,
+      "all_reconciliation_routes_accounted_for": true
+    },
+    "interpretation": "The two counts are compatible: priority inventory ranks nine active routes, while reconciliation retains ten broader candidates. Reconciliation-only entries are explicit boundary routes; priority-only entries are active comparators not included in that historical reconciliation pass."
   },
   "routes": [
     {
@@ -923,7 +979,8 @@
     "numeric_candidates_retain_material_and_uncertainty_gaps": true,
     "public_routes_have_no_numeric_csrc": true,
     "holdout_is_unconsumed_for_every_route": true,
-    "no_synthetic_replacement_is_declared": true
+    "no_synthetic_replacement_is_declared": true,
+    "inventory_coverage_is_explicit": true
   },
   "route_checks": {
     "ding_author_payload": {
@@ -1017,8 +1074,8 @@
       "claim_promotion_is_false": true
     }
   },
-  "what_changed": "Ranked and field-audited all currently captured C_src source routes without importing or synthesizing a numeric replacement.",
-  "verification": "Every route package and audit is hash-referenced; expected statuses, field coverage, policy checks, fail-closed acceptance, and holdout exclusion are machine-checked.",
+  "what_changed": "Ranked and field-audited all currently captured C_src source routes without importing or synthesizing a numeric replacement; made the relationship to the broader reconciliation inventory explicit.",
+  "verification": "Every route package and audit is hash-referenced; expected statuses, field coverage, policy checks, fail-closed acceptance, holdout exclusion, and cross-inventory coverage are machine-checked.",
   "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
   "next_action": "Obtain authorization to send the prepared Ding request, or obtain a genuinely same-regime PBTE reproduction. Do not infer C_src from normalized TTG rows, incident fluence, comparator c_v, or an unchanged rerun.",
   "claim_boundary": "C_src source-route prioritization only; no numeric Ding C_src, no alpha_Phi_K calibration, no prediction, no external validation, no Core closure, and no global UET closure.",

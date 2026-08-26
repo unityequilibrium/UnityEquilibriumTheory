@@ -4881,3 +4881,18 @@ EVIDENCE_HASHES:
 - full gate `d787dea150faf58ecc6f7bbd5dd2f7770ea7351bb875253a5004cffe70ed0a70`
 - register `bf2be4cd9bd408394a141bf869786e98322efc3155c83bf6c69d301050ce3662`
 - dependency `5a1bd7fd689d96142aa23a0210cb66e68ab9e491637c35696362e4664cdfea47`
+### 2026-08-26 - Topic 13 C_src inventory scope coverage hardening wave
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for C_src inventory coverage; Full Topic 13 remains PARTIAL and BLOCKED_OPEN_T13_FULL_BRIDGE.
+WHAT_IS_ACTUALLY_CLOSED: The nine-route actionable priority inventory is now explicitly mapped to the ten-candidate reconciliation inventory. Three reconciliation-only entries are declared closed public boundaries, and four priority-only entries are active comparators outside that historical reconciliation scope; no route is silently dropped.
+WHAT_REMAINS_OPEN: Ding-compatible numeric C_src, material/state response equivalence, source-grade c_v uncertainty, independent alpha_Phi_K, the SI Phi anchor, normalized beta correspondence, physical UET Kubo, and the physical EOS/transport/SK/KMS/entropy map remain open.
+DEPENDENCY_UNLOCKED: C_src inventory coverage and acquisition priority only; no numeric C_src, alpha_Phi_K, physical transport, Core, Gravity, or Galaxy dependency is unlocked.
+STATUS: PASS_SCOPED_C_SRC_SOURCE_ROUTE_PRIORITY_NO_ACCEPTED_ROUTE; priority_route_count=9; reconciliation_candidate_count=10; accepted_route_count=0; full_core_unlock=false; claim_promotion=false.
+WHAT_CHANGED: Added a machine-checked inventory_coverage relation to the route-priority artifact and a regression that distinguishes active priority routes from broader reconciliation boundaries. No equation, threshold, source role, fit path, or holdout policy changed.
+EQUATION_OR_MAPPING: C_src(T)=sum_mu c_mu(T); Delta_Tq=Delta_u_ph/C_src(T); route coverage is metadata only and cannot supply C_src or alpha_Phi_K.
+VERIFICATION: Route audit passed; focused route regression passed 6 tests; matrix remains 10 requirements and 37 subresults with 10 OPEN; grouped input audit remains 3 packages and 0 accepted; Xie 2026 remains unconsumed.
+CONTROLLING_BLOCKER: ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing remains the nearest source controller; alpha_Phi_K_independent_calibration_missing and physical_Kubo_coefficient_record_missing remain separate root blockers.
+NEXT_ACTION: Obtain project authorization to send the prepared Ding request or obtain a qualifying same-regime PBTE package; do not rerun unchanged gates or relabel comparator data.
+CLAIM_BOUNDARY: This closes inventory coverage and source-acquisition bookkeeping only. It is not Ding numeric C_src, independent alpha calibration, TTG prediction, external validation, Full Topic 13 Core closure, or global UET closure.
+EVIDENCE_PATHS: docs/scripts/audit/audit_topic13_csrc_source_route_priority.py; docs/core/test/test_topic13_csrc_source_route_priority.py; docs/core/artifacts/t13_csrc_source_route_priority_audit.json; docs/core/artifacts/t13_csrc_reconciliation_audit.json; docs/core/artifacts/t13_topic13_closure_matrix.json; docs/core/artifacts/t13_full_closure_progress.json; docs/core/artifacts/uet_major_result_closure_register.json; docs/core/artifacts/uet_major_result_dependency_unlock_gate.json.
+EVIDENCE_HASHES: route-priority 3944af5e35e7565b58d1a9861871e9d5e3c5ebe2fda1f58c8bdcc293ce01c2b6; reconciliation source is hash-referenced inside route artifact; matrix d597f0e0d334845e2d2e515ec372b560890b8fced4f0082169229f38bb3ab81a; progress 1895bceaeab1cbddb5044ba180d6ec9bad91a493fdd1a9ddeef89147505fd200; register cdab45bc0ab43f434e0330adec3c0f892210d22585d72d3bb873bf49fde29233; dependency 5ae2e3c617feb7d8f95eb8f8ef925f4d68a256885b90e4cd29ff38ed0d68db3f.
