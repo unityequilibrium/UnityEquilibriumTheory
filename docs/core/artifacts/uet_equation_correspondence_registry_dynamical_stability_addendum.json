@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0",
+  "artifact": "uet_equation_correspondence_registry_dynamical_stability_addendum",
+  "status": "CANDIDATE_ENTRY_MERGED_INTO_CENTRAL_REGISTRY",
+  "claim_promotion": false,
+  "equation_entries": [
+    {
+      "equation_id": "uet.dynamics.tangent_map",
+      "version": "dynamical-stability-v1",
+      "classification": "diagnostic_mapping",
+      "relation_or_code_path": "delta_dot_X = D F[X] delta_X for X=(C,Phi,Pi)",
+      "variables": {
+        "C": "lane-specific collective coordinate",
+        "Phi": "effective response variable",
+        "Pi": "time derivative of Phi",
+        "delta_X": "infinitesimal tangent state"
+      },
+      "mathematical_role": "exact discrete Jacobian action for the declared matter-space evolution",
+      "standard_physics_counterpart": "tangent linear model / variational equation",
+      "observable_mapping": {
+        "status": "INTERNAL_DIAGNOSTIC",
+        "proxy": "perturbation growth rates"
+      },
+      "unit_lane": "normalized",
+      "parameter_dimensions": "inherited from the normalized matter-space lane",
+      "source_or_origin": "analytic differentiation of docs/core/uet_matter_space.py",
+      "assumptions": [
+        "prescribed source histories",
+        "state-dependent sources require an explicit JVP"
+      ],
+      "symmetry_and_conservation": "inherits the selected conserved or nonconserved C lane",
+      "limiting_cases": [
+        "g=0 decoupled tangent sectors",
+        "zero source closed branch"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_dynamical_stability.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_dynamical_stability.py",
+        "docs/core/test/test_uet_dynamical_stability.py"
+      ],
+      "evidence_class": "INTERNAL_DIAGNOSTIC",
+      "proof_status": "exact discrete Jacobian checked against central finite difference",
+      "downstream_dependencies": [
+        "uet.matter_space.omega",
+        "uet.matter_space.dynamics"
+      ],
+      "claim_boundary": "diagnostic mapping; not a new physical law or an SI observable",
+      "failure_mode": "R_gen or R_obs is added to the tangent state, or a state-dependent source is admitted without a JVP",
+      "next_hardening_step": "add accepted physical state metrics lane by lane"
+    },
+    {
+      "equation_id": "uet.dynamics.lyapunov_spectrum",
+      "version": "dynamical-stability-v1",
+      "classification": "diagnostic_observable",
+      "relation_or_code_path": "lambda_i = lim_(T->infinity) log(s_i(T))/T with Benettin/QR and shadow cross-check",
+      "variables": {
+        "lambda_i": "Lyapunov exponent",
+        "s_i": "QR tangent stretch",
+        "T": "declared normalized observation time"
+      },
+      "mathematical_role": "dynamical sensitivity diagnostic distinct from the free-energy Lyapunov function",
+      "standard_physics_counterpart": "Lyapunov spectrum of a deterministic dynamical system",
+      "observable_mapping": {
+        "status": "INTERNAL_DIAGNOSTIC",
+        "proxy": "inverse predictability horizon when lambda_max is resolved positive"
+      },
+      "unit_lane": "inverse normalized time",
+      "parameter_dimensions": "SI conversion blocked until a dimensional state/time contract exists",
+      "source_or_origin": "standard Benettin/QR method with independent shadow-trajectory check",
+      "assumptions": [
+        "bounded trajectory",
+        "same forcing history",
+        "common noise for stochastic comparisons"
+      ],
+      "symmetry_and_conservation": "does not alter the base evolution or its conservation laws",
+      "limiting_cases": [
+        "stable linear control",
+        "logistic r=4",
+        "Lorenz-63"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_dynamical_stability.py"
+      ],
+      "verifier_paths": [
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Chaos_Method_Validation.py"
+      ],
+      "evidence_class": "INTERNAL_METHOD_VALIDATION",
+      "proof_status": "numerical diagnostic validated on standard controls",
+      "downstream_dependencies": [
+        "uet.dynamics.tangent_map"
+      ],
+      "claim_boundary": "positive finite-time growth alone is not proof of physical chaos",
+      "failure_mode": "different-noise divergence or numerical instability is labelled deterministic chaos",
+      "next_hardening_step": "apply only to preregistered bounded topic lanes"
+    },
+    {
+      "equation_id": "uet.dynamics.regime_classifier",
+      "version": "dynamical-stability-v1",
+      "classification": "verification_gate",
+      "relation_or_code_path": "lambda_resolution=max(dt,dx,2*block_SE,method_disagreement) error terms",
+      "variables": {
+        "lambda_resolution": "sign-resolution envelope",
+        "block_SE": "block standard error"
+      },
+      "mathematical_role": "separates stable, transient, unresolved, chaos-candidate, and numerical-instability outcomes",
+      "standard_physics_counterpart": "convergence-aware Lyapunov classification",
+      "observable_mapping": {
+        "status": "INTERNAL_GATE",
+        "proxy": "machine-readable regime class"
+      },
+      "unit_lane": "same inverse-time lane as lambda",
+      "parameter_dimensions": "inherited from the diagnostic time lane",
+      "source_or_origin": "preregistered UET diagnostic acceptance contract",
+      "assumptions": [
+        "no clipping",
+        "no fitting",
+        "ledger and convergence gates are reported"
+      ],
+      "symmetry_and_conservation": "classification requires the declared conservation gate to pass or be explicitly not applicable",
+      "limiting_cases": [
+        "lambda below negative resolution",
+        "sign unresolved",
+        "resolved positive lambda"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_dynamical_stability.py"
+      ],
+      "verifier_paths": [
+        "docs/core/test/test_uet_dynamical_stability.py"
+      ],
+      "evidence_class": "INTERNAL_GATE",
+      "proof_status": "checked implementation contract",
+      "downstream_dependencies": [
+        "uet.dynamics.lyapunov_spectrum"
+      ],
+      "claim_boundary": "CHAOS_CANDIDATE_DIAGNOSTIC is not external physical validation",
+      "failure_mode": "an arbitrary epsilon or a single unconverged run controls the sign",
+      "next_hardening_step": "add topic-specific spatial and statistical resolution budgets"
+    },
+    {
+      "equation_id": "uet.dynamics.closed_gradient_no_sustained_chaos_boundary",
+      "version": "dynamical-stability-v1",
+      "classification": "conditional_structural_boundary",
+      "relation_or_code_path": "dot(E_ext)<0 outside the invariant set plus LaSalle assumptions excludes a sustained recurrent chaotic attractor",
+      "variables": {
+        "E_ext": "matter-space extended energy",
+        "invariant_set": "zero-dissipation limiting set"
+      },
+      "mathematical_role": "conditional boundary for the closed finite-dimensional discretized branch",
+      "standard_physics_counterpart": "LaSalle invariance / gradient-like dynamical-system boundary",
+      "observable_mapping": {
+        "status": "CONDITIONAL",
+        "proxy": "closed-branch energy descent and long-window Lyapunov result"
+      },
+      "unit_lane": "normalized",
+      "parameter_dimensions": "inherits normalized energy and time lanes",
+      "source_or_origin": "matter-space energy ledger plus standard invariance principle",
+      "assumptions": [
+        "finite-dimensional discretization",
+        "autonomous closed system",
+        "bounded forward orbit",
+        "strict descent outside invariant set"
+      ],
+      "symmetry_and_conservation": "inherits the declared closed branch",
+      "limiting_cases": [
+        "does not cover driven, stochastic, memory, or continuum branches"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_matter_space.py",
+        "docs/core/uet_dynamical_stability.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_dynamical_stability.py",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_Thermal_Dynamical_Regime_Audit.py"
+      ],
+      "evidence_class": "CONDITIONAL_INTERNAL_DERIVATION",
+      "proof_status": "conditional finite-dimensional boundary; continuum proof open",
+      "downstream_dependencies": [
+        "uet.matter_space.omega",
+        "uet.dynamics.lyapunov_spectrum"
+      ],
+      "claim_boundary": "not a continuum PDE theorem and not a no-go for driven or open-system chaos",
+      "failure_mode": "the conditional finite-dimensional result is promoted to a universal no-chaos theorem",
+      "next_hardening_step": "state compactness and invariant-set assumptions for each admitted lane"
+    }
+  ],
+  "merge_metadata": {
+    "merged_into": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+    "merged_on": "2026-08-26",
+    "equation_ids": [
+      "uet.dynamics.tangent_map",
+      "uet.dynamics.lyapunov_spectrum",
+      "uet.dynamics.regime_classifier",
+      "uet.dynamics.closed_gradient_no_sustained_chaos_boundary"
+    ],
+    "claim_promotion": false
+  }
+}

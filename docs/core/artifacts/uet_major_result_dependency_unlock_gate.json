@@ -6,9 +6,25 @@
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "4df41abe702411a5b76afa8a7ceb5984d5d3a4baa88c7c85aaa13be5bc0d7a1f"
+    "sha256": "def1689168c1e8a72da857a4a19240974dd020d33b07ea43c193ab65184268b1"
   },
   "decisions": {
+    "TOPIC_0_11_CHAOS_DIAGNOSTIC_ROLLOUT": {
+      "status": "UNLOCKED",
+      "depends_on": [
+        "T13_THERMAL_DYNAMICAL_REGIME_CLASSIFIED"
+      ],
+      "unmet_dependencies": [],
+      "claim_boundary": "diagnostic method rollout only; no universality or exponent promotion"
+    },
+    "CORE_O2_CHAOS_DIAGNOSTIC_ROLLOUT": {
+      "status": "UNLOCKED",
+      "depends_on": [
+        "T13_THERMAL_DYNAMICAL_REGIME_CLASSIFIED"
+      ],
+      "unmet_dependencies": [],
+      "claim_boundary": "diagnostic method rollout only; C is not relabelled as a signed O(2) charge"
+    },
     "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY": {
       "status": "BLOCKED_DEPENDENCY",
       "depends_on": [
@@ -66,6 +82,11 @@
       "claim_boundary": "galaxy comparison track; not dark-matter elimination"
     }
   },
+  "diagnostic_unlock_order": [
+    "CORE_DYNAMICAL_STABILITY_DIAGNOSTIC_READY",
+    "T010_CHAOS_METHOD_VALIDATED",
+    "T13_THERMAL_DYNAMICAL_REGIME_CLASSIFIED"
+  ],
   "unlock_order": [
     "T13_FULL_THERMODYNAMIC_BRIDGE",
     "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
@@ -75,7 +96,7 @@
   ],
   "claim_boundary": "Dependency decisions only; no downstream result is promoted by a checkpoint or comparator pass.",
   "topic13_partial_evidence": {
-    "register_sha256": "4df41abe702411a5b76afa8a7ceb5984d5d3a4baa88c7c85aaa13be5bc0d7a1f",
+    "register_sha256": "def1689168c1e8a72da857a4a19240974dd020d33b07ea43c193ab65184268b1",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",

@@ -166,7 +166,11 @@ def main() -> int:
     ]
     discovered_entries: list[dict[str, Any]] = []
     discovered_ids: set[str] = set()
-    for artifact_root in (ROOT / "docs/core/artifacts", ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts"):
+    for artifact_root in (
+        ROOT / "docs/core/artifacts",
+        ROOT / "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts",
+        ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts",
+    ):
         for artifact_path in sorted(artifact_root.rglob("*.json")):
             if artifact_path.resolve() == T13.resolve():
                 continue

@@ -18,6 +18,16 @@ def main() -> int:
     levels = {entry["major_result_id"]: entry["closure_level"] for entry in register["entries"]}
 
     nodes = {
+        "TOPIC_0_11_CHAOS_DIAGNOSTIC_ROLLOUT": {
+            "depends_on": ["T13_THERMAL_DYNAMICAL_REGIME_CLASSIFIED"],
+            "required_level": "CLOSED_FOR_LANE",
+            "claim_boundary": "diagnostic method rollout only; no universality or exponent promotion",
+        },
+        "CORE_O2_CHAOS_DIAGNOSTIC_ROLLOUT": {
+            "depends_on": ["T13_THERMAL_DYNAMICAL_REGIME_CLASSIFIED"],
+            "required_level": "CLOSED_FOR_LANE",
+            "claim_boundary": "diagnostic method rollout only; C is not relabelled as a signed O(2) charge",
+        },
         "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY": {
             "depends_on": ["T13_FULL_THERMODYNAMIC_BRIDGE"],
             "required_level": "CLOSED_FOR_CORE",
@@ -65,6 +75,11 @@ def main() -> int:
             "sha256": hashlib.sha256(REGISTER.read_bytes()).hexdigest(),
         },
         "decisions": decisions,
+        "diagnostic_unlock_order": [
+            "CORE_DYNAMICAL_STABILITY_DIAGNOSTIC_READY",
+            "T010_CHAOS_METHOD_VALIDATED",
+            "T13_THERMAL_DYNAMICAL_REGIME_CLASSIFIED",
+        ],
         "unlock_order": [
             "T13_FULL_THERMODYNAMIC_BRIDGE",
             "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
