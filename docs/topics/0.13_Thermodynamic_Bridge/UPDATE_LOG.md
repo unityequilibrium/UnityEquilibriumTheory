@@ -4896,3 +4896,55 @@ NEXT_ACTION: Obtain project authorization to send the prepared Ding request or o
 CLAIM_BOUNDARY: This closes inventory coverage and source-acquisition bookkeeping only. It is not Ding numeric C_src, independent alpha calibration, TTG prediction, external validation, Full Topic 13 Core closure, or global UET closure.
 EVIDENCE_PATHS: docs/scripts/audit/audit_topic13_csrc_source_route_priority.py; docs/core/test/test_topic13_csrc_source_route_priority.py; docs/core/artifacts/t13_csrc_source_route_priority_audit.json; docs/core/artifacts/t13_csrc_reconciliation_audit.json; docs/core/artifacts/t13_topic13_closure_matrix.json; docs/core/artifacts/t13_full_closure_progress.json; docs/core/artifacts/uet_major_result_closure_register.json; docs/core/artifacts/uet_major_result_dependency_unlock_gate.json.
 EVIDENCE_HASHES: route-priority 3944af5e35e7565b58d1a9861871e9d5e3c5ebe2fda1f58c8bdcc293ce01c2b6; reconciliation source is hash-referenced inside route artifact; matrix d597f0e0d334845e2d2e515ec372b560890b8fced4f0082169229f38bb3ab81a; progress 1895bceaeab1cbddb5044ba180d6ec9bad91a493fdd1a9ddeef89147505fd200; register cdab45bc0ab43f434e0330adec3c0f892210d22585d72d3bb873bf49fde29233; dependency 5ae2e3c617feb7d8f95eb8f8ef925f4d68a256885b90e4cd29ff38ed0d68db3f.
+
+### 2026-08-26 - Topic 13 closure critical-path hardening wave
+
+MAJOR_RESULT_CLOSURE:
+- `T13_CLOSURE_CRITICAL_PATH` is `CLOSED_FOR_LANE`; this closes the research-control boundary only. Full Topic 13 remains `PARTIAL` and `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+
+WHAT_IS_ACTUALLY_CLOSED:
+- The canonical 37-subresult state is now projected into a machine-readable critical path: 21 `CLOSED_FOR_LANE`, six `CLOSED_AS_NO_GO`, zero `CLOSED_FOR_CORE`, and 10 `OPEN`.
+- Every open row is assigned to one of three root input packages: Ding/source (2), base Phi-SI-alpha-beta (3), or physical transport/KMS/entropy (5).
+- The replay boundary is explicit: rerunning unchanged numeric gates is not progress; a root input hash or derivation state must change first.
+
+WHAT_REMAINS_OPEN:
+- `accepted_numeric_csrc`, `material_and_uncertainty_closure`, `base_phi_si_anchor`, `independent_alpha_record`, `normalized_beta_si_map`, `physical_source_backed_eos`, `physical_uet_kubo_record`, `physical_sk_transport_match`, `physical_entropy_production_mapping`, and `physical_heat_flux_entropy_map` remain open.
+- The seven canonical full-bridge blockers remain unchanged, including Ding-compatible numeric `C_src`, independent `alpha_Phi_K`, SI/beta correspondence, physical Kubo record, dimensional observable map, TTG material mapping, and source-grade `c_v` uncertainty.
+
+DEPENDENCY_UNLOCKED:
+- Critical-path reporting, package assignment, and replay guard only. No Full Topic 13, Core curved 3+1, Gravity, constitutive transport, or Galaxy dependency is unlocked.
+
+STATUS:
+- `PASS_T13_CLOSURE_CRITICAL_PATH_WITH_EXTERNAL_INPUTS`; 12/12 control checks passed; `full_core_unlock=false`; `claim_promotion=false`.
+
+WHAT_CHANGED:
+- Added `audit_topic13_closure_critical_path.py`, its machine-readable artifact, a readable critical-path report, and a three-test regression.
+- Registered `T13_CLOSURE_CRITICAL_PATH` in the repo-wide major-result register without adding it to the physical readiness gate.
+
+EQUATION_OR_MAPPING:
+- `y_TTG = Delta_Tq(t)/Delta_Tq(0)`; `y_TTG^UET = Delta_Phi(t)/Delta_Phi(0)`; `Delta_Tq = alpha_Phi_K * Delta_Phi`.
+- `C_src(T)=sum_mu c_mu(T)`; `Delta_Tq=Delta_u_ph/C_src(T)`; `Phi_normalized=Phi_covariant/Phi_scale`; `u_SI=u_nat*E_ref^4/(hbar*c)^3`.
+- No numeric `alpha_Phi_K`, `E_ref`, `Phi_scale`, or physical transport coefficient was created.
+
+VERIFICATION:
+- Critical-path audit: `PASS_T13_CLOSURE_CRITICAL_PATH_WITH_EXTERNAL_INPUTS`; 12/12 checks passed.
+- Regression: three tests passed.
+- Full bridge gate: `BLOCKED_OPEN_T13_FULL_BRIDGE` with the same seven blockers; matrix remains 10 requirements and 37 subresults.
+- Xie 2026 holdout was not accessed; target fitting remains false.
+
+CONTROLLING_BLOCKER:
+- `external_input_package_state_unchanged`; the nearest physical controller remains `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing`.
+
+NEXT_ACTION:
+- Change one root package through an authorized Ding numeric payload or accepted same-regime reproduction, an independent Phi-SI-alpha/beta derivation or calibration, or a physical Kubo/SK/KMS/entropy match. Then rerun only dependent gates.
+
+CLAIM_BOUNDARY:
+- This wave closes critical-path bookkeeping and replay control only. It is not Ding numeric `C_src`, independent alpha calibration, TTG prediction, external validation, Full Topic 13 Core closure, or global UET closure.
+
+EVIDENCE_PATHS:
+- `docs/scripts/audit/audit_topic13_closure_critical_path.py`
+- `docs/core/test/test_topic13_closure_critical_path.py`
+- `docs/core/artifacts/t13_closure_critical_path_audit.json`
+- `docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_CLOSURE_CRITICAL_PATH.md`
+- `docs/core/artifacts/uet_major_result_closure_register.json`
+- `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`
