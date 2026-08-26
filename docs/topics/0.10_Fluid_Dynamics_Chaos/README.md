@@ -95,3 +95,9 @@ Supporting standard files:
 ## Current readiness status
 
 `Structured`
+
+The latest embedded speed comparator remains `FAIL` at approximately `1.914x`
+against the unchanged `2.0x` threshold. The separate chaos-method artifact is
+`PASS_CHAOS_METHOD_VALIDATION`; it validates the diagnostic implementation on
+standard controls and does not change the fluid comparator or external-CFD
+status.
