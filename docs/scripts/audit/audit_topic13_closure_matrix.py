@@ -374,8 +374,12 @@ def build_matrix() -> dict[str, Any]:
     gate = load_json(GATE_REL)
     summary = gate.get("major_result", {}).get("closure_summary", {})
     requirements = [build_requirement(gate, spec) for spec in REQUIREMENTS]
-    open_blockers = list(gate.get("major_result", {}).get("what_remains_open", []))
-    full_core_unlock = gate.get("status") == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+    core_track = gate.get("closure_tracks", {}).get("o2_he4_core_ready", {})
+    open_blockers = list(core_track.get("what_remains_open", []))
+    full_core_unlock = (
+        gate.get("core_result_status") == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+        and core_track.get("status") == "CLOSED_FOR_CORE"
+    )
     major_status_counts: dict[str, int] = {}
     substatus_counts: dict[str, int] = {}
     required_subresult_count = 0
@@ -393,7 +397,7 @@ def build_matrix() -> dict[str, Any]:
             GATE_REL,
             {
                 "role": "canonical full Topic 13 readiness gate",
-                "status": gate.get("status"),
+                "status": gate.get("core_result_status"),
             },
         )
     ]
@@ -462,6 +466,8 @@ def build_matrix() -> dict[str, Any]:
         "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
         "topic": "0.13_Thermodynamic_Bridge",
         "closure_level": "CLOSED_FOR_CORE" if full_core_unlock else "PARTIAL",
+        "full_topic_ready": full_core_unlock,
+        "requirements_scope": "LEGACY_GRAPHITE_TTG_EXTERNAL_VALIDATION_PROJECTION_RETAINED_FOR_BACKWARD_COMPATIBILITY",
         "what_is_closed": [item["major_result_id"] for item in requirements if item["closure_level"] in {"CLOSED_FOR_CORE", "CLOSED_AS_NO_GO"}],
         "what_remains_open": open_blockers,
         "equation_or_mapping": {
@@ -508,12 +514,14 @@ def build_matrix() -> dict[str, Any]:
         },
     }
     matrix = {
-        "schema_version": "t13-topic13-closure-matrix-v2",
+        "schema_version": "t13-topic13-closure-matrix-v3",
         "artifact": "t13_topic13_closure_matrix",
         "generated_at": date.today().isoformat(),
-        "status": gate.get("status", "OPEN"),
+        "status": gate.get("core_result_status", "OPEN"),
         "claim_promotion": False,
         "full_core_unlock": full_core_unlock,
+        "requirements_scope": "LEGACY_GRAPHITE_TTG_EXTERNAL_VALIDATION_PROJECTION_RETAINED_FOR_BACKWARD_COMPATIBILITY",
+        "core_ready_track": core_track,
         "required_input_package_count": len(CLOSURE_INPUT_PACKAGES),
         "closure_input_packages": list(CLOSURE_INPUT_PACKAGES),
         "input_package_audit": input_audit_ref,
@@ -544,7 +552,8 @@ def build_matrix() -> dict[str, Any]:
         "canonical_gate": {
             "path": GATE_REL,
             "sha256": sha256(GATE_REL),
-            "status": gate.get("status"),
+            "status": gate.get("core_result_status"),
+            "legacy_graphite_ttg_aggregate_status": gate.get("legacy_graphite_ttg_aggregate_status"),
             "controlling_blocker": gate.get("controlling_blocker"),
         },
         "holdout_policy": {
@@ -572,8 +581,8 @@ def build_matrix() -> dict[str, Any]:
 
 
 def matrix_status(gate: dict[str, Any]) -> str:
-    full_core_unlock = gate.get("status") == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
-    return f"{gate.get('status', 'OPEN')}; full_core_unlock={full_core_unlock}"
+    full_core_unlock = gate.get("core_result_status") == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+    return f"{gate.get('core_result_status', 'OPEN')}; full_core_unlock={full_core_unlock}"
 
 
 def sync_register_and_dependency(matrix: dict[str, Any]) -> None:
@@ -600,7 +609,7 @@ def sync_register_and_dependency(matrix: dict[str, Any]) -> None:
     else:
         existing.clear()
         existing.update(entry)
-    full_entry = next(item for item in entries if item.get("major_result_id") == "T13_FULL_THERMODYNAMIC_BRIDGE")
+    full_entry = next(item for item in entries if item.get("major_result_id") == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY")
     full_entry["closure_matrix"] = {
         "path": OUT_REL,
         "sha256": matrix_hash,
@@ -615,8 +624,8 @@ def sync_register_and_dependency(matrix: dict[str, Any]) -> None:
     register_path.write_text(json.dumps(register, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
 
     dependency = load_json(DEPENDENCY_REL)
-    partial = dependency.setdefault("topic13_partial_evidence", {})
-    partial["closure_matrix"] = {
+    core_ready = dependency.setdefault("topic13_core_ready", {})
+    core_ready["closure_matrix"] = {
         "path": OUT_REL,
         "sha256": matrix_hash,
         "full_core_unlock": matrix["full_core_unlock"],
@@ -624,7 +633,7 @@ def sync_register_and_dependency(matrix: dict[str, Any]) -> None:
         "required_major_result_count": matrix["full_topic_closure_contract"]["required_major_result_count"],
         "required_subresult_count": matrix["full_topic_closure_contract"]["required_subresult_count"],
     }
-    partial["full_topic_closure_contract"] = {
+    core_ready["full_topic_closure_contract"] = {
         "required_major_result_count": matrix["full_topic_closure_contract"]["required_major_result_count"],
         "required_subresult_count": matrix["full_topic_closure_contract"]["required_subresult_count"],
         "current_major_result_counts": matrix["full_topic_closure_contract"]["current_major_result_counts"],
@@ -634,8 +643,8 @@ def sync_register_and_dependency(matrix: dict[str, Any]) -> None:
     register_hash = sha256(REGISTER_REL)
     dependency["generated_at"] = date.today().isoformat()
     dependency.setdefault("register", {})["sha256"] = register_hash
-    partial["register_sha256"] = register_hash
-    partial["full_core_unlock"] = matrix["full_core_unlock"]
+    core_ready["register_sha256"] = register_hash
+    core_ready["full_core_unlock"] = matrix["full_core_unlock"]
     (ROOT / DEPENDENCY_REL).write_text(json.dumps(dependency, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
 
 

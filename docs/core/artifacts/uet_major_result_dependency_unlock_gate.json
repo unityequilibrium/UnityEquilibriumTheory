@@ -1,12 +1,12 @@
 {
   "schema_version": "uet-major-result-dependency-unlock-v1",
   "artifact": "uet_major_result_dependency_unlock_gate",
-  "generated_at": "2026-08-27",
+  "generated_at": "2026-08-28",
   "status": "BLOCKED_DOWNSTREAM_MAJOR_RESULTS",
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "4ec004765090b8dcd60cb9c035871b8c98fcc415b83ed3e5349386f1e76d7cba"
+    "sha256": "9a2a5fb828c9a8d5f9be40983f6d2a33d9d0701407261d6160323b29a0a8448c"
   },
   "decisions": {
     "TOPIC_0_11_CHAOS_DIAGNOSTIC_ROLLOUT": {
@@ -90,7 +90,7 @@
   ],
   "claim_boundary": "Dependency decisions only; no downstream result is promoted by a checkpoint or comparator pass.",
   "topic13_partial_evidence": {
-    "register_sha256": "4ec004765090b8dcd60cb9c035871b8c98fcc415b83ed3e5349386f1e76d7cba",
+    "register_sha256": "9a2a5fb828c9a8d5f9be40983f6d2a33d9d0701407261d6160323b29a0a8448c",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",
@@ -2280,6 +2280,30 @@
         }
       }
     ],
-    "claim_boundary": "CLOSED_FOR_CORE is an internal, lane-bounded composition result. It is not a prediction of the imported He-4 coefficients, not graphite TTG validation, not a complete two-fluid transport tensor, not curved 3+1, and not global UET closure."
+    "claim_boundary": "CLOSED_FOR_CORE is an internal, lane-bounded composition result. It is not a prediction of the imported He-4 coefficients, not graphite TTG validation, not a complete two-fluid transport tensor, not curved 3+1, and not global UET closure.",
+    "closure_matrix": {
+      "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
+      "sha256": "aa5ae8cecdb8114cf078b5dad068d31e0096b353d2f0defd92c930e00e3ce6c2",
+      "full_core_unlock": true,
+      "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+      "required_major_result_count": 10,
+      "required_subresult_count": 37
+    },
+    "full_topic_closure_contract": {
+      "required_major_result_count": 10,
+      "required_subresult_count": 37,
+      "current_major_result_counts": {
+        "CLOSED_AS_NO_GO": 1,
+        "OPEN": 3,
+        "PARTIAL": 6
+      },
+      "current_subresult_counts": {
+        "CLOSED_AS_NO_GO": 6,
+        "CLOSED_FOR_LANE": 21,
+        "OPEN": 10
+      },
+      "full_topic_ready": true
+    },
+    "register_sha256": "a7bfe6a7c50ff70135e45fb929c62588acab10e372258bc602e84a34fbffa267"
   }
 }

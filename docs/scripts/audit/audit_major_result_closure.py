@@ -284,6 +284,23 @@ def main() -> int:
             matrix_entry["closure_input_packages"] = full_contract["closure_input_packages"]
         if isinstance(matrix.get("input_package_audit"), dict):
             matrix_entry["input_package_audit"] = matrix["input_package_audit"]
+    topic13_core_entry = next(
+        (
+            item
+            for item in entries
+            if item.get("major_result_id") == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+        ),
+        None,
+    )
+    if topic13_core_entry is not None:
+        topic13_core_entry["closure_matrix"] = {
+            "path": rel(MATRIX),
+            "sha256": sha256(MATRIX),
+            "status": matrix.get("status"),
+            "full_core_unlock": matrix.get("full_core_unlock", False),
+            "required_major_result_count": matrix.get("full_topic_closure_contract", {}).get("required_major_result_count"),
+            "required_subresult_count": matrix.get("full_topic_closure_contract", {}).get("required_subresult_count"),
+        }
     topic13_core_ready = any(
         entry.get("major_result_id") == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
         and entry.get("closure_level") == "CLOSED_FOR_CORE"

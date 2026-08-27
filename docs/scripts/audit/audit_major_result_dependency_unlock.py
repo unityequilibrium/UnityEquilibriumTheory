@@ -93,6 +93,8 @@ def main() -> int:
     previous = json.loads(OUT.read_text(encoding="utf-8-sig")) if OUT.is_file() else {}
     if "topic13_partial_evidence" in previous:
         artifact["topic13_partial_evidence"] = previous["topic13_partial_evidence"]
+    if "topic13_core_ready" in previous:
+        artifact["topic13_core_ready"] = previous["topic13_core_ready"]
     topic13_core_entry = next(
         (
             entry
@@ -102,14 +104,15 @@ def main() -> int:
         None,
     )
     if topic13_core_entry is not None:
-        artifact["topic13_core_ready"] = {
+        core_ready = artifact.setdefault("topic13_core_ready", {})
+        core_ready.update({
             "major_result_id": topic13_core_entry["major_result_id"],
             "closure_level": topic13_core_entry["closure_level"],
             "full_core_unlock": topic13_core_entry["closure_level"] == "CLOSED_FOR_CORE",
             "verification_status": topic13_core_entry.get("verification_status"),
             "evidence_artifacts": topic13_core_entry.get("evidence_artifacts", []),
             "claim_boundary": topic13_core_entry.get("claim_boundary"),
-        }
+        })
     partial_routes = {
         "covariant_action_si_anchor_route": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
         "covariant_field_normalization_no_go": "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json",

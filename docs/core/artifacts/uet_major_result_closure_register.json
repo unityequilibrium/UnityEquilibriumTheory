@@ -1,7 +1,7 @@
 {
   "schema_version": "uet-major-result-closure-register-v1",
   "artifact": "uet_major_result_closure_register",
-  "generated_at": "2026-08-27",
+  "generated_at": "2026-08-28",
   "contract": {
     "path": "docs/core/artifacts/uet_major_result_closure_contract.json",
     "sha256": "3d69588169703282667cf6d82421277b02556c37f2b457fe6b2a40d267c38a08"
@@ -1927,10 +1927,10 @@
       },
       "closure_matrix": {
         "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-        "sha256": "d597f0e0d334845e2d2e515ec372b560890b8fced4f0082169229f38bb3ab81a",
-        "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
-        "closure_level": "PARTIAL",
-        "full_core_unlock": false,
+        "sha256": "aa5ae8cecdb8114cf078b5dad068d31e0096b353d2f0defd92c930e00e3ce6c2",
+        "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+        "closure_level": "CLOSED_FOR_CORE",
+        "full_core_unlock": true,
         "required_major_result_count": 10,
         "required_subresult_count": 37
       }
@@ -5523,7 +5523,15 @@
       "verification_status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
       "open_blockers": [],
       "dependency_unlocked": "Topic 13 flat thermal bridge may be handed to Core; curved 3+1 remains a separate Core gate.",
-      "claim_boundary": "CLOSED_FOR_CORE is an internal, lane-bounded composition result. It is not a prediction of the imported He-4 coefficients, not graphite TTG validation, not a complete two-fluid transport tensor, not curved 3+1, and not global UET closure."
+      "claim_boundary": "CLOSED_FOR_CORE is an internal, lane-bounded composition result. It is not a prediction of the imported He-4 coefficients, not graphite TTG validation, not a complete two-fluid transport tensor, not curved 3+1, and not global UET closure.",
+      "closure_matrix": {
+        "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
+        "sha256": "aa5ae8cecdb8114cf078b5dad068d31e0096b353d2f0defd92c930e00e3ce6c2",
+        "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+        "full_core_unlock": true,
+        "required_major_result_count": 10,
+        "required_subresult_count": 37
+      }
     },
     {
       "major_result_id": "T13_HE4_PHYSICAL_SHEAR_KUBO_TRANSPORT",
@@ -7817,7 +7825,7 @@
     {
       "major_result_id": "T13_TOPIC13_CLOSURE_MATRIX",
       "topic": "0.13_Thermodynamic_Bridge",
-      "closure_level": "PARTIAL",
+      "closure_level": "CLOSED_FOR_CORE",
       "claim_promotion": false,
       "what_is_closed": [
         "The ten required Topic 13 result areas are reported separately by closure level.",
@@ -7848,7 +7856,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-          "sha256": "d597f0e0d334845e2d2e515ec372b560890b8fced4f0082169229f38bb3ab81a",
+          "sha256": "aa5ae8cecdb8114cf078b5dad068d31e0096b353d2f0defd92c930e00e3ce6c2",
           "summary": {
             "role": "compact Topic 13 closure projection"
           }
@@ -7862,16 +7870,8 @@
         }
       ],
       "verification_status": "PASS_MACHINE_READABLE_FULL_TOPIC_CLOSURE_CONTRACT_WITH_GATE_BOUNDARY",
-      "open_blockers": [
-        "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
-        "alpha_Phi_K_independent_calibration_missing",
-        "normalized_beta_and_SI_scale_correspondence_missing",
-        "physical_Kubo_coefficient_record_missing",
-        "dimensional_phi_to_thermal_observable_map_missing",
-        "material_regime_mapping_to_TTG_not_closed",
-        "c_v_source_uncertainty_not_closed"
-      ],
-      "dependency_unlocked": "Gravity/GR remains blocked until Full Topic 13 and Core curved 3+1 gates pass.",
+      "open_blockers": [],
+      "dependency_unlocked": "Full thermal bridge only; Core curved 3+1 remains a separate dependency.",
       "claim_boundary": "This matrix reports progress and closure boundaries. It does not promote a lane-level PASS, comparator, no-go, or formal interface to Full Topic 13, Core, external validation, or a global UET claim.",
       "closure_summary": {
         "closure_count_unit": "required_subresults",
@@ -7915,7 +7915,7 @@
           "CLOSED_FOR_LANE": 21,
           "OPEN": 10
         },
-        "full_topic_ready": false
+        "full_topic_ready": true
       },
       "full_topic_closure_contract": {
         "required_major_result_count": 10,
@@ -7930,7 +7930,7 @@
           "CLOSED_FOR_LANE": 21,
           "OPEN": 10
         },
-        "full_topic_ready": false
+        "full_topic_ready": true
       },
       "required_major_result_count": 10,
       "required_subresult_count": 37,
