@@ -41,17 +41,17 @@
     "evidence_artifacts": [
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-        "sha256": "e3e88b502311a6f4802b19bc246250b57d4855199245cc339ab18bfa29bff5e1",
+        "sha256": "77c4fa3cfafb1fa6ee4e1e3df65f953ea3011bd33500f6786e92eca6869390c9",
         "status": "BLOCKED_OPEN_T13_FULL_BRIDGE"
       },
       {
         "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-        "sha256": "aa5ae8cecdb8114cf078b5dad068d31e0096b353d2f0defd92c930e00e3ce6c2",
+        "sha256": "ba42d8a9c1745398ec0ee04300a792d18416fccae9205bc376a96f68d423036d",
         "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
       },
       {
         "path": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
-        "sha256": "010b30f224ce3e303213885e12f75e67df8c8f6e9dec16c57ae8e47db0722e60",
+        "sha256": "13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418",
         "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
       },
       {
@@ -71,12 +71,12 @@
       },
       {
         "path": "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json",
-        "sha256": "9d532a794098baa5d0c6343997687cd6226d06b5109646fc5f859abf728bdc5a",
+        "sha256": "1c44ffce6310488bf3a9b2e9cce74d1281fb27a949c1b9d26c6f80d970b7fbd0",
         "status": "PASS_HE4_LOCAL_ALPHA_AND_FIELD_NORMALIZATION"
       },
       {
         "path": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
-        "sha256": "bc5293b4b143dc9666e1e747405970e2f2e102abdb1338836fc27f6be5e47a97",
+        "sha256": "1a8289aadbed1c069add276bb3f734d6c642174cf2101a664fba4ee5a8bfd021",
         "status": "PASS_HE4_SI_SCALE_AND_NORMALIZED_BETA"
       },
       {
@@ -101,12 +101,12 @@
       },
       {
         "path": "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json",
-        "sha256": "88cd54c34047d0060069a70678925c813ac26db7797873c2dcf822334b4eb68e",
+        "sha256": "46e292d9b0f88125ecf134faa51322421a06d058015ba318f25c3be3cd2dd26f",
         "status": "PASS_HE4_PHYSICAL_SHEAR_KUBO_TRANSPORT"
       },
       {
         "path": "docs/core/artifacts/t13_landauer_core_disposition_audit.json",
-        "sha256": "2897310476a148a809cd228a26f02ec6c9f7acf1b28e82e125fc36d03558da83",
+        "sha256": "82f77043c8921819175146841afd8cc5178385939e8ccf455678ead65731aa43",
         "status": "PASS_LANDAUER_CORE_ROLE_DISPOSITION"
       },
       {
@@ -121,12 +121,12 @@
       },
       {
         "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-        "sha256": "9a2a5fb828c9a8d5f9be40983f6d2a33d9d0701407261d6160323b29a0a8448c",
+        "sha256": "94a9356f24e2dae0d396bd96931d068919e4f1773e95fd255f2cf4470bac1e55",
         "status": null
       },
       {
         "path": "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json",
-        "sha256": "b993d464371bc276a7b015277435bb7ae9a7684c27d4eb839b1455c9087450e0",
+        "sha256": "800cf61860945108ea3cb4a1604da32765d8ca0e4ddc55118ccf8702bee4d6fc",
         "status": "BLOCKED_DOWNSTREAM_MAJOR_RESULTS"
       }
     ],

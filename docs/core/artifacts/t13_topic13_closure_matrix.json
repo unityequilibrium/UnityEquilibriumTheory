@@ -155,7 +155,7 @@
     "evidence_artifacts": [
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-        "sha256": "e3e88b502311a6f4802b19bc246250b57d4855199245cc339ab18bfa29bff5e1",
+        "sha256": "77c4fa3cfafb1fa6ee4e1e3df65f953ea3011bd33500f6786e92eca6869390c9",
         "summary": {
           "role": "canonical full Topic 13 readiness gate",
           "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
@@ -735,7 +735,7 @@
     "evidence_artifacts": [
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-        "sha256": "e3e88b502311a6f4802b19bc246250b57d4855199245cc339ab18bfa29bff5e1",
+        "sha256": "77c4fa3cfafb1fa6ee4e1e3df65f953ea3011bd33500f6786e92eca6869390c9",
         "summary": {
           "role": "canonical full Topic 13 readiness gate",
           "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
@@ -3010,7 +3010,7 @@
   },
   "canonical_gate": {
     "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-    "sha256": "e3e88b502311a6f4802b19bc246250b57d4855199245cc339ab18bfa29bff5e1",
+    "sha256": "77c4fa3cfafb1fa6ee4e1e3df65f953ea3011bd33500f6786e92eca6869390c9",
     "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
     "legacy_graphite_ttg_aggregate_status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
     "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
@@ -3043,7 +3043,7 @@
     },
     "VERIFICATION": "Canonical gate, grouped input-package audit, blocker groups, major-result records, subresult statuses, evidence references, and holdout metadata were read and projected without consuming numeric holdout data.",
     "CONTROLLING_BLOCKER": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing",
-    "NEXT_ACTION": "Hand the bounded O(2)/He-4 thermal bridge to Core integration. Keep graphite TTG numeric validation, raw Landauer row parity, the original conserved-C baseline, curved 3+1, and external claims on their separate open tracks.",
+    "NEXT_ACTION": "Hand the bounded O(2)/He-4 thermal bridge to Core integration. Keep Ding numeric C_src(T) acquisition, graphite TTG numeric validation, raw Landauer row parity, the original conserved-C baseline, curved 3+1, and external claims on their separate open tracks.",
     "CLAIM_BOUNDARY": "This matrix reports progress and closure boundaries. It does not promote a lane-level PASS, comparator, no-go, or formal interface to Full Topic 13, Core, external validation, or a global UET claim."
   }
 }

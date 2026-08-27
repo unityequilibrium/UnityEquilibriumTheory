@@ -92,4 +92,4 @@ def test_major_result_register_contains_ding_mapping_without_unlocking_core() ->
         "dependency_unlocked"
     ]
     assert register["claim_promotion"] is False
-    assert register["next_major_result"] == "T13_FULL_THERMODYNAMIC_BRIDGE"
+    assert register["next_major_result"] == "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"

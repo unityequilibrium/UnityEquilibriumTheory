@@ -1,7 +1,7 @@
 {
   "schema_version": "topic13-full-thermodynamic-bridge-core-ready-v1",
   "artifact": "topic13_full_thermodynamic_bridge_core_ready_gate",
-  "generated_at": "2026-08-27",
+  "generated_at": "2026-08-28",
   "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
   "core_result_status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
   "legacy_graphite_ttg_aggregate_status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
@@ -8579,7 +8579,7 @@
         "data_role": "COMPARISON_ONLY_NOT_CALIBRATION",
         "audit": {
           "path": "docs/core/artifacts/t13_desorbo_ceylon_graphite_cp_audit.json",
-          "sha256": "33ad2745513d3c2ddfdce02978fbf9f1df7b804529cda33cc0d21ac6b11cd7a8",
+          "sha256": "f0091fdc45f8037ddd259f59745ebc0abcd1adecbc5f1de9756085395595daa8",
           "summary": {
             "status": "PASS_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_LOCKED_COMPARATOR",
             "major_result_id": "T13_DESORBO_1955_CEYLON_GRAPHITE_CP_COMPARATOR",
@@ -10437,7 +10437,7 @@
         "data_role": "TRAINING/COMPARISON",
         "audit": {
           "path": "docs/core/artifacts/t13_oxford_tgs_comparator_provenance_audit.json",
-          "sha256": "2b88bba6d7d2ff6e9f0aefaaef12c5c488f81e11cc3b8c20fc4a0f5e1e33acad",
+          "sha256": "74e030ef01ddc92657e0089d035c6fcf7c97df74e7dbc5c0d988e61a096ebd28",
           "summary": {
             "status": "PASS_OXFORD_TGS_PROVENANCE_ARCHIVE_LOCKED_EXTRACTION_PENDING",
             "major_result_id": "T13_OXFORD_TGS_COMPARATOR_PROVENANCE",
@@ -10534,7 +10534,7 @@
         "data_role": "TRAINING/COMPARISON",
         "audit": {
           "path": "docs/core/artifacts/t13_oxford_tgs_numeric_rows_audit.json",
-          "sha256": "a3250b4e40479ceb8bbbfec29de0c4e0ed6e7068355ab0507a30d5099333d9cc",
+          "sha256": "cbe2f8ccdc6e9482c461945908c798a4db85daee07fea73f4f13803eb0c7f672",
           "summary": {
             "status": "PASS_OXFORD_TGS_NUMERIC_ROWS_SOURCE_LOCKED_COMPARATOR",
             "major_result_id": "T13_OXFORD_TGS_NUMERIC_ROWS_COMPARATOR",
@@ -80631,7 +80631,7 @@
     }
   },
   "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing",
-  "next_action": "Hand the bounded O(2)/He-4 thermal bridge to Core integration. Keep graphite TTG numeric validation, raw Landauer row parity, the original conserved-C baseline, curved 3+1, and external claims on their separate open tracks.",
+  "next_action": "Hand the bounded O(2)/He-4 thermal bridge to Core integration. Keep Ding numeric C_src(T) acquisition, graphite TTG numeric validation, raw Landauer row parity, the original conserved-C baseline, curved 3+1, and external claims on their separate open tracks.",
   "claim_boundary": "The O(2)/He-4 Topic 13 track is Core-ready when core_result_status passes. The legacy graphite/TTG aggregate remains blocked, Xie 2026 remains locked, and no external validation or global UET closure is claimed.",
   "evidence_artifacts": [
     {
@@ -80779,7 +80779,7 @@
     },
     {
       "path": "docs/core/artifacts/t13_he4_svp_physical_anchor_audit.json",
-      "sha256": "a328ae2f5db8ece999d817ae4550357f491dfc91e021348219b30a3438e1784a",
+      "sha256": "a27c4a1138edbeb890e9fcea3b7929da9fc68f82a116ca4cfe2784e320c4f0de",
       "summary": {
         "status": "PASS_HE4_EQUILIBRIUM_SOURCE_ANCHOR_UNCERTAINTY_OPEN",
         "closure_level": "CLOSED_FOR_LANE",
@@ -80788,7 +80788,7 @@
     },
     {
       "path": "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json",
-      "sha256": "9d532a794098baa5d0c6343997687cd6226d06b5109646fc5f859abf728bdc5a",
+      "sha256": "1c44ffce6310488bf3a9b2e9cce74d1281fb27a949c1b9d26c6f80d970b7fbd0",
       "summary": {
         "status": "PASS_HE4_LOCAL_ALPHA_AND_FIELD_NORMALIZATION",
         "closure_level": "CLOSED_FOR_LANE",
@@ -80800,7 +80800,7 @@
     },
     {
       "path": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
-      "sha256": "bc5293b4b143dc9666e1e747405970e2f2e102abdb1338836fc27f6be5e47a97",
+      "sha256": "1a8289aadbed1c069add276bb3f734d6c642174cf2101a664fba4ee5a8bfd021",
       "summary": {
         "status": "PASS_HE4_SI_SCALE_AND_NORMALIZED_BETA",
         "closure_level": "CLOSED_FOR_LANE",
@@ -80813,7 +80813,7 @@
     },
     {
       "path": "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json",
-      "sha256": "88cd54c34047d0060069a70678925c813ac26db7797873c2dcf822334b4eb68e",
+      "sha256": "46e292d9b0f88125ecf134faa51322421a06d058015ba318f25c3be3cd2dd26f",
       "summary": {
         "status": "PASS_HE4_PHYSICAL_SHEAR_KUBO_TRANSPORT",
         "closure_level": "CLOSED_FOR_LANE",
@@ -80825,7 +80825,7 @@
     },
     {
       "path": "docs/core/artifacts/t13_landauer_core_disposition_audit.json",
-      "sha256": "2897310476a148a809cd228a26f02ec6c9f7acf1b28e82e125fc36d03558da83",
+      "sha256": "82f77043c8921819175146841afd8cc5178385939e8ccf455678ead65731aa43",
       "summary": {
         "status": "PASS_LANDAUER_CORE_ROLE_DISPOSITION",
         "closure_level": "CLOSED_FOR_CORE",
@@ -80834,7 +80834,7 @@
     },
     {
       "path": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
-      "sha256": "010b30f224ce3e303213885e12f75e67df8c8f6e9dec16c57ae8e47db0722e60",
+      "sha256": "13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418",
       "summary": {
         "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
         "closure_level": "CLOSED_FOR_CORE",
@@ -81128,7 +81128,7 @@
     },
     {
       "path": "docs/core/artifacts/t13_oxford_tgs_numeric_rows_audit.json",
-      "sha256": "a3250b4e40479ceb8bbbfec29de0c4e0ed6e7068355ab0507a30d5099333d9cc",
+      "sha256": "cbe2f8ccdc6e9482c461945908c798a4db85daee07fea73f4f13803eb0c7f672",
       "summary": {
         "status": "PASS_OXFORD_TGS_NUMERIC_ROWS_SOURCE_LOCKED_COMPARATOR",
         "closure_level": "CLOSED_FOR_LANE",
@@ -81374,7 +81374,7 @@
     },
     {
       "path": "docs/core/artifacts/t13_desorbo_ceylon_graphite_cp_audit.json",
-      "sha256": "33ad2745513d3c2ddfdce02978fbf9f1df7b804529cda33cc0d21ac6b11cd7a8",
+      "sha256": "f0091fdc45f8037ddd259f59745ebc0abcd1adecbc5f1de9756085395595daa8",
       "summary": {
         "status": "PASS_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_LOCKED_COMPARATOR",
         "closure_level": "CLOSED_FOR_LANE",

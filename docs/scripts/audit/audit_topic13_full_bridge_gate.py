@@ -943,7 +943,7 @@ def main() -> int:
         },
         "verification_status": gates,
         "controlling_blocker": primary_blocker,
-        "next_action": "Hand the bounded O(2)/He-4 thermal bridge to Core integration. Keep graphite TTG numeric validation, raw Landauer row parity, the original conserved-C baseline, curved 3+1, and external claims on their separate open tracks.",
+        "next_action": "Hand the bounded O(2)/He-4 thermal bridge to Core integration. Keep Ding numeric C_src(T) acquisition, graphite TTG numeric validation, raw Landauer row parity, the original conserved-C baseline, curved 3+1, and external claims on their separate open tracks.",
         "claim_boundary": "The O(2)/He-4 Topic 13 track is Core-ready when core_result_status passes. The legacy graphite/TTG aggregate remains blocked, Xie 2026 remains locked, and no external validation or global UET closure is claimed.",
         "evidence_artifacts": [
             evidence(rel(branch_path), branch, {"status": branch.get("status"), "controlling_blocker": branch.get("controlling_blocker")}),
@@ -3550,7 +3550,18 @@ def main() -> int:
     artifact["claim_promotion"] = False
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
-    print(json.dumps({"status": artifact["status"], "closure_level": artifact["major_result"]["closure_level"], "blockers": blockers, "artifact": rel(OUT)}, indent=2))
+    print(
+        json.dumps(
+            {
+                "core_result_status": artifact["core_result_status"],
+                "core_closure_level": artifact["closure_tracks"]["o2_he4_core_ready"]["status"],
+                "legacy_graphite_ttg_aggregate_status": artifact["status"],
+                "legacy_graphite_ttg_blockers": blockers,
+                "artifact": rel(OUT),
+            },
+            indent=2,
+        )
+    )
     return 0
 
 

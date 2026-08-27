@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-oxford-tgs-comparator-provenance-audit-v1",
   "artifact": "t13_oxford_tgs_comparator_provenance_audit",
-  "generated_at": "2026-08-24",
+  "generated_at": "2026-08-28",
   "status": "PASS_OXFORD_TGS_PROVENANCE_ARCHIVE_LOCKED_EXTRACTION_PENDING",
   "claim_promotion": false,
   "major_result": {

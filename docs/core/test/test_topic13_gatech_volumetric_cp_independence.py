@@ -80,4 +80,4 @@ def test_major_result_register_contains_scoped_no_go_only() -> None:
     result = entries["T13_GATECH_VOLUMETRIC_CP_INDEPENDENCE_NO_GO"]
     assert result["closure_level"] == "CLOSED_FOR_LANE"
     assert register["claim_promotion"] is False
-    assert register["next_major_result"] == "T13_FULL_THERMODYNAMIC_BRIDGE"
+    assert register["next_major_result"] == "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"

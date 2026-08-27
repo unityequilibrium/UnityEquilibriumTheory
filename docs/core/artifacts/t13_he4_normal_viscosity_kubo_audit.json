@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-he4-normal-viscosity-kubo-audit-v1",
   "artifact": "t13_he4_normal_viscosity_kubo_audit",
-  "generated_at": "2026-08-27",
+  "generated_at": "2026-08-28",
   "status": "PASS_HE4_PHYSICAL_SHEAR_KUBO_TRANSPORT",
   "major_result": {
     "major_result_id": "T13_HE4_PHYSICAL_SHEAR_KUBO_TRANSPORT",
@@ -32,11 +32,11 @@
       },
       {
         "path": "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json",
-        "sha256": "9d532a794098baa5d0c6343997687cd6226d06b5109646fc5f859abf728bdc5a"
+        "sha256": "1c44ffce6310488bf3a9b2e9cce74d1281fb27a949c1b9d26c6f80d970b7fbd0"
       },
       {
         "path": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
-        "sha256": "bc5293b4b143dc9666e1e747405970e2f2e102abdb1338836fc27f6be5e47a97"
+        "sha256": "1a8289aadbed1c069add276bb3f734d6c642174cf2101a664fba4ee5a8bfd021"
       },
       {
         "path": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
