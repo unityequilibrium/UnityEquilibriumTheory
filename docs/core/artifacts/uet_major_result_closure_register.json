@@ -5170,6 +5170,56 @@
       "claim_boundary": "This contract does not create data, derive a missing coefficient, promote a comparator, or close Full Topic 13."
     },
     {
+      "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY_ACCEPTED",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "closure_level": "CLOSED_FOR_CORE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "causal_branch_passes_locked_threshold",
+        "conserved_c_no_go_or_regularization_is_recorded",
+        "alpha_is_independent_not_fitted",
+        "ttg_numeric_source_provenance_is_complete_for_comparison",
+        "landauer_controllers_are_dispositioned",
+        "dimensional_map_and_uncertainty_pass",
+        "finite_temperature_normal_component_passes",
+        "eos_transport_kms_entropy_and_balance_pass",
+        "heat_flux_mapping_preserves_ontology",
+        "xie_holdout_access_audit_passes",
+        "chaos_is_nonblocking_and_does_not_relabel_state",
+        "registry_matrix_and_dependency_are_consistent",
+        "global_claim_promotion_remains_false"
+      ],
+      "equation_or_mapping": {
+        "measurement": "y_TTG = Delta_Tq(t)/Delta_Tq(0); y_TTG^UET = Delta_Phi(t)/Delta_Phi(0)",
+        "dimensional": "Delta_Tq = alpha_Phi_K Delta_Phi_norm",
+        "field_and_energy": "Delta_Phi_norm=Z_Phi Delta_Phi_natural; f_SI=e0 f_natural",
+        "entropy": "J_S^mu=s u^mu+q^mu/T; nabla_mu J_S^mu>=0"
+      },
+      "units": {
+        "alpha_Phi_K": "K per normalized base Phi",
+        "beta_SI": "J m^-3 per normalized Phi squared",
+        "eta": "Pa s"
+      },
+      "derivation_class": "REQUIREMENT_BY_REQUIREMENT_ACCEPTANCE_AUDIT_OF_HASHED_CORE_EVIDENCE",
+      "observable": "bounded O(2)/He-4 thermal bridge Core handoff",
+      "data_role": "INTERNAL_CORE_ACCEPTANCE_NOT_EXTERNAL_VALIDATION",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_full_core_ready_acceptance_audit.json",
+          "sha256": "283381a7bc8f4a157193c5d9d4297fb451019925d68cc3df66143c5aa2005802",
+          "summary": {
+            "status": "PASS_T13_FULL_CORE_READY_ACCEPTANCE",
+            "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY_ACCEPTED",
+            "closure_level": "CLOSED_FOR_CORE"
+          }
+        }
+      ],
+      "verification_status": "PASS_T13_FULL_CORE_READY_ACCEPTANCE",
+      "open_blockers": [],
+      "dependency_unlocked": "Core curved 3+1 research may start; Gravity remains blocked until that separate result closes.",
+      "claim_boundary": "Acceptance is limited to the bounded internal O(2)/He-4 Core bridge. Ding figure-derived TTG rows remain comparison-only, raw-author/graphite external validation remains open, the original conserved-gradient baseline remains blocked, and global UET closure remains false."
+    },
+    {
       "major_result_id": "T13_SOURCE_CP_95CI_ANCHOR",
       "topic": "0.13_Thermodynamic_Bridge",
       "closure_level": "CLOSED_FOR_LANE",
