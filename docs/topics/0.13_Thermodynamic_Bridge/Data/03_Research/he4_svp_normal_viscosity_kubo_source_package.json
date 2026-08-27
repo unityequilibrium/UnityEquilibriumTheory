@@ -1,0 +1,81 @@
+{
+  "schema_version": "t13-he4-normal-viscosity-kubo-source-v1",
+  "package_id": "T13_HE4_SVP_NORMAL_VISCOSITY_KUBO",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "data_role": "EXTERNAL_INPUT",
+  "material_state": {
+    "material": "liquid helium-4",
+    "phase": "He II",
+    "pressure_path": "saturated vapour pressure",
+    "temperature_scale": "ITS-90",
+    "temperature_K": 1.7,
+    "temperature_standard_uncertainty_K": 0.0002,
+    "hydrodynamic_frame": "Landau two-fluid local rest frame; normal-component shear channel",
+    "chemical_potential_coordinate": "delta_mu_SVP_gauge",
+    "chemical_potential_reference": 0.0,
+    "space_response_coordinate": "rho_s/rho",
+    "space_response": 0.7714130767785583
+  },
+  "coefficient": {
+    "coefficient_name": "normal_component_shear_viscosity_eta",
+    "recommended_value_Pa_s": 1.29e-6,
+    "uncertainty_bound_Pa_s": 5e-8,
+    "uncertainty_class": "CONSERVATIVE_LOCAL_ADOPTED_DATABASE_ENVELOPE",
+    "recommended_row_locator": "Donnelly and Barenghi (1998), Table 12.3, T90=1.70 K",
+    "envelope_rows": [
+      {
+        "row_id": "tough-1.7039K",
+        "temperature_K": 1.7039,
+        "viscosity_Pa_s": 1.34e-6,
+        "source_key": 2
+      },
+      {
+        "row_id": "goodwin-1.7039K",
+        "temperature_K": 1.7039,
+        "viscosity_Pa_s": 1.24e-6,
+        "source_key": 3
+      }
+    ],
+    "uncertainty_derivation": "max(abs(1.34e-6-1.29e-6), abs(1.24e-6-1.29e-6)) Pa s",
+    "source_caution": "The review states that absolute viscosity accuracy is hard to evaluate; this package therefore uses the local adopted-database envelope as a conservative bound, not as a one-standard-deviation estimate."
+  },
+  "primary_source": {
+    "title": "The Observed Properties of Liquid Helium at the Saturated Vapor Pressure",
+    "authors": [
+      "Russell J. Donnelly",
+      "Carlo F. Barenghi"
+    ],
+    "doi": "10.1063/1.556028",
+    "official_pdf": "https://www.nist.gov/system/files/documents/srd/jpcrd551.pdf",
+    "public_table_locator": "https://pages.uoregon.edu/rjd/vapor13.htm",
+    "interactive_locator": "https://www.mas.ncl.ac.uk/helium/",
+    "interactive_snapshot_sha256": "12665f1450f4a1370206e23a11eff4b13606041e870ccbf59805f842e423a25a",
+    "table_locators": [
+      "Chapter 12 comments, item 6",
+      "Table 12.1 adopted database",
+      "Figure 12.2 fractional deviation",
+      "Table 12.3 recommended viscosity"
+    ]
+  },
+  "correlator_contract": {
+    "formula_id": "standard.green_kubo.shear_viscosity",
+    "formula": "eta = V/(k_B T) integral_0^infinity dt <delta_Pi_xy(t) delta_Pi_xy(0)>",
+    "retarded_form": "eta = -lim_(omega->0+) Im G_R^(xy,xy)(omega,0)/omega",
+    "kms_fdt": "G_K^(xy,xy)=coth(hbar omega/(2 k_B T)) (G_R-G_A); low-frequency shear-noise amplitude is 2 k_B T eta",
+    "entropy_mapping": "nabla_mu J_S^mu contains 2 eta sigma_mu_nu sigma^mu_nu/T >= 0",
+    "primary_linear_response_source": {
+      "title": "Statistical-Mechanical Theory of Irreversible Processes. I",
+      "author": "Ryogo Kubo",
+      "doi": "10.1143/JPSJ.12.570",
+      "locator": "general fluctuation-dissipation/linear-response relation"
+    }
+  },
+  "preprocessing": "Direct transcription of the 1.70 K recommended viscosity row and the two nearest 1.7039 K adopted-database rows. No fit, interpolation, target-curve use, or UET parameter tuning.",
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_curve_used": false,
+    "fit_or_tuning_used": false,
+    "threshold_adjustment_used": false
+  },
+  "claim_boundary": "This source-locks one physical SI shear-viscosity coefficient for the normal component of He II at the declared SVP state and connects it to a standard stress Kubo/FDT/entropy channel. It is an external transport input, not a UET prediction, not a bulk Fourier heat conductivity, and not a complete two-fluid transport tensor."
+}
