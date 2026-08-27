@@ -1,7 +1,7 @@
 {
   "schema_version": "topic13-full-thermodynamic-bridge-core-ready-v1",
   "artifact": "topic13_full_thermodynamic_bridge_core_ready_gate",
-  "generated_at": "2026-08-26",
+  "generated_at": "2026-08-27",
   "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
   "claim_promotion": false,
   "major_result": {
@@ -606,6 +606,54 @@
     "source_package": "FIGURE_DERIVED_NORMALIZED_COMPARISON_READY_RAW_AUTHOR_C_SRC_OPEN",
     "calibration": "OPEN",
     "holdout": "Xie 2026 metadata-only locked holdout"
+  },
+  "closure_tracks": {
+    "o2_he4_core_ready": {
+      "major_result_id": "T13_O2_HE4_THERMODYNAMIC_BRIDGE_CORE_READY",
+      "status": "PARTIAL",
+      "requirements": {
+        "causal_structure": "PASS",
+        "he4_equilibrium_source_anchor": "PASS",
+        "he4_uncertainty_and_field_normalization": "BLOCKED",
+        "independent_alpha_and_SI_map": "BLOCKED",
+        "non_circular_bridge": "BLOCKED",
+        "eos_transport_kms_entropy": "BLOCKED",
+        "dimensional_observable_map": "BLOCKED",
+        "holdout_integrity": "PASS"
+      },
+      "what_is_closed": [
+        "formal O(2) thermodynamic lane components already accepted by their individual artifacts",
+        "He-4 SVP equilibrium density and superfluid-fraction source anchor",
+        "causal structural no-go and named finite-cone branch contract",
+        "Xie 2026 holdout isolation"
+      ],
+      "what_remains_open": [
+        "he4_uncertainty_and_field_normalization",
+        "independent_alpha_and_SI_map",
+        "non_circular_bridge",
+        "eos_transport_kms_entropy",
+        "dimensional_observable_map"
+      ],
+      "dependency_unlocked": "No Core dependency unlock",
+      "claim_boundary": "This is the physical O(2)/He-4 Core track. It does not include graphite TTG external validation and does not close global UET."
+    },
+    "graphite_ttg_external_validation": {
+      "major_result_id": "T13_GRAPHITE_TTG_EXTERNAL_VALIDATION_READY",
+      "status": "OPEN",
+      "requirements": {
+        "ding_or_accepted_independent_C_src": "BLOCKED",
+        "graphite_independent_alpha": "BLOCKED",
+        "graphite_dimensional_observable_map": "BLOCKED",
+        "xie_2026_holdout_integrity": "PASS"
+      },
+      "what_remains_open": [
+        "ding_or_accepted_independent_C_src",
+        "graphite_independent_alpha",
+        "graphite_dimensional_observable_map"
+      ],
+      "dependency_unlocked": "None; this is an external validation track, not a Core physical-unlock dependency.",
+      "claim_boundary": "Ding/graphite inputs and Xie 2026 remain isolated from the O(2)/He-4 Core closure decision. Xie stays locked until preregistered validation is authorized."
+    }
   },
   "verification_status": {
     "causal_full_candidate_or_formal_no_go_branch": {
@@ -80720,6 +80768,15 @@
       "sha256": "3754d54cdee639be211a308d893b994ca78f7dd11aaeb191278b9085e7923b96",
       "summary": {
         "status": "FIGURE_DERIVED_NORMALIZED_COMPARISON_READY_RAW_AUTHOR_C_SRC_OPEN"
+      }
+    },
+    {
+      "path": "docs/core/artifacts/t13_he4_svp_physical_anchor_audit.json",
+      "sha256": "a328ae2f5db8ece999d817ae4550357f491dfc91e021348219b30a3438e1784a",
+      "summary": {
+        "status": "PASS_HE4_EQUILIBRIUM_SOURCE_ANCHOR_UNCERTAINTY_OPEN",
+        "closure_level": "CLOSED_FOR_LANE",
+        "holdout_accessed": false
       }
     },
     {

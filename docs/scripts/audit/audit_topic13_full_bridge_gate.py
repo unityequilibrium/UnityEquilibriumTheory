@@ -212,6 +212,9 @@ def main() -> int:
     source_package_path, source_package = load(
         "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_second_sound_source_package.json"
     )
+    he4_anchor_path, he4_anchor = load(
+        "docs/core/artifacts/t13_he4_svp_physical_anchor_audit.json"
+    )
     ding_source_mapping_path, ding_source_mapping = load(
         "docs/core/artifacts/ding_2022_source_mapping_audit.json"
     )
@@ -732,6 +735,43 @@ def main() -> int:
         },
     }
 
+    he4_anchor_lane_closed = (
+        he4_anchor.get("status")
+        == "PASS_HE4_EQUILIBRIUM_SOURCE_ANCHOR_UNCERTAINTY_OPEN"
+        and he4_anchor.get("major_result", {}).get("closure_level")
+        == "CLOSED_FOR_LANE"
+        and all(he4_anchor.get("checks", {}).values())
+    )
+    he4_uncertainty_closed = not bool(
+        set(he4_anchor.get("major_result", {}).get("open_blockers", []))
+        & {
+            "property_level_source_uncertainty_not_yet_extracted",
+            "independent_Z_Phi_field_normalization_missing",
+        }
+    )
+    o2_he4_core_requirements = {
+        "causal_structure": gates["causal_full_candidate_or_formal_no_go_branch"]["status"],
+        "he4_equilibrium_source_anchor": "PASS" if he4_anchor_lane_closed else "BLOCKED",
+        "he4_uncertainty_and_field_normalization": "PASS" if he4_uncertainty_closed else "BLOCKED",
+        "independent_alpha_and_SI_map": gates["alpha_Phi_K"]["status"],
+        "non_circular_bridge": gates["non_circular_bridge"]["status"],
+        "eos_transport_kms_entropy": gates["eos_transport_kms_entropy"]["status"],
+        "dimensional_observable_map": gates["dimensional_observable_map"]["status"],
+        "holdout_integrity": gates["holdout_integrity"]["status"],
+    }
+    graphite_validation_requirements = {
+        "ding_or_accepted_independent_C_src": gates["source_package"]["status"],
+        "graphite_independent_alpha": gates["alpha_Phi_K"]["status"],
+        "graphite_dimensional_observable_map": gates["dimensional_observable_map"]["status"],
+        "xie_2026_holdout_integrity": gates["holdout_integrity"]["status"],
+    }
+    o2_he4_core_ready = all(
+        status == "PASS" for status in o2_he4_core_requirements.values()
+    )
+    graphite_validation_ready = all(
+        status == "PASS" for status in graphite_validation_requirements.values()
+    )
+
     all_core_ready = all(item.get("status") == "PASS" for item in gates.values())
     raw_blockers = [
         item["controlling_blocker"]
@@ -800,6 +840,42 @@ def main() -> int:
             "calibration": source_policy.get("alpha_Phi_K_status"),
             "holdout": "Xie 2026 metadata-only locked holdout",
         },
+        "closure_tracks": {
+            "o2_he4_core_ready": {
+                "major_result_id": "T13_O2_HE4_THERMODYNAMIC_BRIDGE_CORE_READY",
+                "status": "CLOSED_FOR_CORE" if o2_he4_core_ready else "PARTIAL",
+                "requirements": o2_he4_core_requirements,
+                "what_is_closed": [
+                    "formal O(2) thermodynamic lane components already accepted by their individual artifacts",
+                    "He-4 SVP equilibrium density and superfluid-fraction source anchor",
+                    "causal structural no-go and named finite-cone branch contract",
+                    "Xie 2026 holdout isolation",
+                ],
+                "what_remains_open": [
+                    name
+                    for name, status in o2_he4_core_requirements.items()
+                    if status != "PASS"
+                ],
+                "dependency_unlocked": (
+                    "Topic 13 thermal bridge may be integrated into Core"
+                    if o2_he4_core_ready
+                    else "No Core dependency unlock"
+                ),
+                "claim_boundary": "This is the physical O(2)/He-4 Core track. It does not include graphite TTG external validation and does not close global UET.",
+            },
+            "graphite_ttg_external_validation": {
+                "major_result_id": "T13_GRAPHITE_TTG_EXTERNAL_VALIDATION_READY",
+                "status": "CLOSED_FOR_EXTERNAL_CLAIM" if graphite_validation_ready else "OPEN",
+                "requirements": graphite_validation_requirements,
+                "what_remains_open": [
+                    name
+                    for name, status in graphite_validation_requirements.items()
+                    if status != "PASS"
+                ],
+                "dependency_unlocked": "None; this is an external validation track, not a Core physical-unlock dependency.",
+                "claim_boundary": "Ding/graphite inputs and Xie 2026 remain isolated from the O(2)/He-4 Core closure decision. Xie stays locked until preregistered validation is authorized.",
+            },
+        },
         "verification_status": gates,
         "controlling_blocker": primary_blocker,
         "next_action": "Acquire an independent base-Phi SI energy/observable anchor or paired Phi/SI record; obtain Ding numeric C_src(T) or an accepted independent reproduction; source-lock beta_T13 and one state-matched physical Kubo coefficient; then complete EOS/transport/KMS/entropy gates. The original conserved-C question is closed only as a scoped no-go and remains blocked as the original baseline.",
@@ -821,6 +897,11 @@ def main() -> int:
             evidence(rel(eos_path), eos, {"audit_status": eos.get("audit_status"), "evidence_status": eos.get("evidence_status")}),
             evidence(rel(causal_path), causal, {"audit_status": causal.get("audit_status"), "structural_blocker": causal.get("structural_blocker")}),
             evidence(rel(source_package_path), source_package, {"status": source_package.get("status")}),
+            evidence(rel(he4_anchor_path), he4_anchor, {
+                "status": he4_anchor.get("status"),
+                "closure_level": he4_anchor.get("major_result", {}).get("closure_level"),
+                "holdout_accessed": he4_anchor.get("checks", {}).get("holdout_not_accessed") is not True,
+            }),
             evidence(rel(farooqui_source_path), farooqui_source, {
                 "status": farooqui_source.get("status"),
                 "closure_level": farooqui_source.get("major_result", {}).get("closure_level"),
