@@ -1,0 +1,171 @@
+{
+  "schema_version": "t13-he4-core-thermodynamic-bridge-composition-v1",
+  "artifact": "t13_he4_core_thermodynamic_bridge_composition_audit",
+  "generated_at": "2026-08-27",
+  "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+  "claim_promotion": false,
+  "major_result": {
+    "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_CORE",
+    "what_is_closed": [
+      "named finite-cone causal branch plus scoped conserved-gradient no-go",
+      "He-4 SVP physical response anchor, independent alpha_Phi_K, field normalization, and uncertainty",
+      "non-Landauer action beta origin, normalized beta_T13, and SI energy-density scale",
+      "declared finite-temperature normal EOS and formal SK/KMS/Onsager interface",
+      "covariant heat-flux/entropy-current and dissipative conservation balance",
+      "one source-locked physical He II normal-component shear Kubo/FDT/entropy channel",
+      "Landauer imported-constraint role and Xie 2026 holdout isolation"
+    ],
+    "what_remains_open": [],
+    "equation_or_mapping": {
+      "measurement": "y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)",
+      "dimensional_response": "Delta_Tq = alpha_Phi_K Delta_Phi_norm",
+      "field_map": "Delta_Phi_norm = Z_Phi Delta_Phi_natural",
+      "energy_scale": "f_SI = e0 f_natural",
+      "beta": "beta_T13 = beta_natural/Z_Phi^2; beta_SI = e0 beta_T13",
+      "kubo": "eta=V/(k_B T) integral_0^infinity dt <delta_Pi_xy(t) delta_Pi_xy(0)>; equivalently eta=-lim_(omega->0+) Im G_R^(xy,xy)/omega",
+      "entropy": "nabla_mu J_S^mu contains 2 eta sigma_mu_nu sigma^mu_nu/T"
+    },
+    "units": {
+      "alpha_Phi_K": "K per normalized base Phi",
+      "beta_SI": "J m^-3 per normalized Phi squared",
+      "eta": "Pa s",
+      "natural_action_lane": "natural units; connected by theta_T, Z_Phi, and e0"
+    },
+    "derivation_class": "COMPOSITION_OF_ACTION_DERIVATIONS_EXTERNAL_CALIBRATION_EXTERNAL_TRANSPORT_AND_SCOPED_NO_GO",
+    "observable": "bounded local He-4/O(2) thermal-response and dissipative-interface lane at 1.7 K SVP",
+    "data_role": "CORE_INTEGRATION_WITH_EXTERNAL_INPUTS_NOT_EXTERNAL_VALIDATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json",
+        "sha256": "6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a",
+        "status": "PASS_CAUSAL_NAMED_BRANCH_CORE_COMPATIBILITY"
+      },
+      {
+        "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
+        "sha256": "1cb84b6c8e9741fef1dc6e0f83fba3dfe68ca6cd89adac8fa1a31835b4debf62",
+        "status": "NO_GO_FOR_DECLARED_CONSERVED_CATTANEO_LOCAL_GRADIENT_CLASS"
+      },
+      {
+        "path": "docs/core/artifacts/t13_he4_svp_physical_anchor_audit.json",
+        "sha256": "a328ae2f5db8ece999d817ae4550357f491dfc91e021348219b30a3438e1784a",
+        "status": "PASS_HE4_EQUILIBRIUM_SOURCE_ANCHOR_UNCERTAINTY_OPEN"
+      },
+      {
+        "path": "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json",
+        "sha256": "9d532a794098baa5d0c6343997687cd6226d06b5109646fc5f859abf728bdc5a",
+        "status": "PASS_HE4_LOCAL_ALPHA_AND_FIELD_NORMALIZATION"
+      },
+      {
+        "path": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
+        "sha256": "bc5293b4b143dc9666e1e747405970e2f2e102abdb1338836fc27f6be5e47a97",
+        "status": "PASS_HE4_SI_SCALE_AND_NORMALIZED_BETA"
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_action_thermal_observable_bridge_audit.json",
+        "sha256": "7ba49d3f629c91f3f88dda6ad717d8928e58439de7517a5979f0a465b9f52585",
+        "status": "PASS_ACTION_DERIVED_NATURAL_PHI_THERMAL_BRIDGE_LANE"
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_action_thermal_stiffness_beta_audit.json",
+        "sha256": "c8079bbdbfa3a340e66b26dfa4d2f0cb93a5b32a1ef6827e604415958b4c649e",
+        "status": "PASS_ACTION_DERIVED_THERMAL_STIFFNESS_BETA_LANE"
+      },
+      {
+        "path": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+        "sha256": "65a85d9abc2d051570af72898bd8b8848c29d1fb20685c9b284ce6915fe8a8fe",
+        "status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT"
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+        "sha256": "9ea6f37eb43e353b8c89e42b1c3dd01c957b2063e41a09230483989accb2b3f4",
+        "status": "PASS_ACTION_DERIVED_COVARIANT_ENTROPY_HEAT_FLUX_BALANCE_LANE"
+      },
+      {
+        "path": "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json",
+        "sha256": "88cd54c34047d0060069a70678925c813ac26db7797873c2dcf822334b4eb68e",
+        "status": "PASS_HE4_PHYSICAL_SHEAR_KUBO_TRANSPORT"
+      },
+      {
+        "path": "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json",
+        "sha256": "c3185da0a233894d7f338138bbe6acee287194e1852a80e40b0b5f6f2134e21b",
+        "status": "PASS_HOLDOUT_DATA_UNCONSUMED_METADATA_ONLY"
+      },
+      {
+        "path": "docs/core/artifacts/t13_landauer_core_disposition_audit.json",
+        "sha256": "2897310476a148a809cd228a26f02ec6c9f7acf1b28e82e125fc36d03558da83",
+        "status": "PASS_LANDAUER_CORE_ROLE_DISPOSITION"
+      }
+    ],
+    "verification_status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+    "open_blockers": [],
+    "dependency_unlocked": "Topic 13 flat thermal bridge may be handed to Core; curved 3+1 remains a separate Core gate.",
+    "claim_boundary": "CLOSED_FOR_CORE is an internal, lane-bounded composition result. It is not a prediction of the imported He-4 coefficients, not graphite TTG validation, not a complete two-fluid transport tensor, not curved 3+1, and not global UET closure."
+  },
+  "state_interface": {
+    "natural_action_state": {
+      "temperature": 0.22,
+      "chemical_potential": 0.35,
+      "space_response": 0.15,
+      "branch": "normal"
+    },
+    "physical_he4_state": {
+      "temperature_K": 1.7,
+      "pressure_path": "saturated vapour pressure",
+      "phase": "He II",
+      "superfluid_fraction": 0.7714130767785583
+    },
+    "connection_contract": [
+      "T_K = theta_T * T_natural",
+      "Delta_Phi_norm = Z_Phi Delta_Phi_natural",
+      "e0 = (rho / m_He4) k_B T0"
+    ],
+    "forbidden_identification": "The natural action state and physical He-4 state are not asserted to be numerically identical; only the declared theta_T, Z_Phi, and e0 maps connect their coordinates.",
+    "natural_state_checks": {
+      "bridge_and_beta_temperature_match": true,
+      "bridge_and_beta_chemical_potential_match": true,
+      "bridge_and_beta_response_match": true,
+      "entropy_temperature_matches_action_state": true,
+      "entropy_chemical_potential_matches_action_state": true,
+      "entropy_response_matches_action_state": true
+    },
+    "physical_state_checks": {
+      "beta_and_alpha_temperature_match": true,
+      "transport_and_alpha_temperature_match": true,
+      "transport_and_alpha_response_match": true,
+      "same_physical_phase_path": true
+    },
+    "mapping_checks": {
+      "alpha_is_finite_and_uncertain": true,
+      "action_field_map_is_finite": true,
+      "normalized_beta_uses_same_field_map": true,
+      "action_beta_is_the_declared_origin": true,
+      "si_energy_scale_is_positive_with_uncertainty": true,
+      "landauer_not_used_for_beta": true
+    }
+  },
+  "checks": {
+    "causal_named_branch_core_closed": true,
+    "conserved_gradient_class_no_go_recorded": true,
+    "he4_anchor_closed": true,
+    "alpha_and_field_normalization_closed": true,
+    "si_beta_closed": true,
+    "action_bridge_closed": true,
+    "action_beta_origin_closed": true,
+    "eos_sk_kms_interface_closed": true,
+    "entropy_current_and_dissipative_balance_closed": true,
+    "physical_transport_input_closed": true,
+    "landauer_core_role_closed": true,
+    "holdout_unread": true,
+    "natural_state_interface_explicit": true,
+    "physical_state_interface_explicit": true,
+    "natural_and_physical_states_not_silently_identified": true,
+    "declared_maps_connect_the_two_unit_lanes": true,
+    "R_gen_absent_from_physical_state_vectors": true,
+    "claim_promotion_disabled_in_inputs": true
+  },
+  "controlling_blocker": null,
+  "next_action": "Integrate this bounded Core-ready result into the Topic 13 gate, closure matrix, registry, and dependency graph while retaining graphite TTG and curved 3+1 as separate open tracks.",
+  "claim_boundary": "Core-ready internal composition only; external validation and global theory closure remain false."
+}
