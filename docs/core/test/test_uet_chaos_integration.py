@@ -82,6 +82,6 @@ def test_only_diagnostic_rollout_is_unlocked() -> None:
     decisions = dependency["decisions"]
     assert decisions["TOPIC_0_11_CHAOS_DIAGNOSTIC_ROLLOUT"]["status"] == "UNLOCKED"
     assert decisions["CORE_O2_CHAOS_DIAGNOSTIC_ROLLOUT"]["status"] == "UNLOCKED"
-    assert decisions["CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"]["status"] == "BLOCKED_DEPENDENCY"
+    assert decisions["CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"]["status"] == "UNLOCKED"
     assert decisions["GR_CLASSICAL_COMPATIBILITY_LANE"]["status"] == "BLOCKED_DEPENDENCY"
     assert dependency["claim_promotion"] is False

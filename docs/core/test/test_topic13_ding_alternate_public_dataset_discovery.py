@@ -66,4 +66,4 @@ def test_public_route_boundary_is_projected_without_topic13_promotion() -> None:
     assert full["status"] == "BLOCKED_OPEN_T13_FULL_BRIDGE"
     assert full["claim_promotion"] is False
     assert any(item.get("major_result_id") == "T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY_BOUNDARY" for item in register["entries"])
-    assert dependency["decisions"]["CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"]["status"] == "BLOCKED_DEPENDENCY"
+    assert dependency["decisions"]["CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"]["status"] == "UNLOCKED"

@@ -1,7 +1,7 @@
 {
   "schema_version": "uet-major-result-closure-register-v1",
   "artifact": "uet_major_result_closure_register",
-  "generated_at": "2026-08-26",
+  "generated_at": "2026-08-27",
   "contract": {
     "path": "docs/core/artifacts/uet_major_result_closure_contract.json",
     "sha256": "3d69588169703282667cf6d82421277b02556c37f2b457fe6b2a40d267c38a08"
@@ -26,7 +26,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/UET_RESEARCH_ROOM_BRIEF.md",
-          "sha256": "dd072d118c74ef451e9842c928df39c9f39bda0c9e68acf561ac4b8e238058fb",
+          "sha256": "ee25b5291c79df9dca7c3a737e36921e9a7d70919fbdc1b52ce177f6645c40a1",
           "summary": {
             "required_report_headings": true
           }
@@ -219,7 +219,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "d787dea150faf58ecc6f7bbd5dd2f7770ea7351bb875253a5004cffe70ed0a70",
+          "sha256": "e3e88b502311a6f4802b19bc246250b57d4855199245cc339ab18bfa29bff5e1",
           "summary": {
             "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
             "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
@@ -366,6 +366,70 @@
           "sha256": "3754d54cdee639be211a308d893b994ca78f7dd11aaeb191278b9085e7923b96",
           "summary": {
             "status": "FIGURE_DERIVED_NORMALIZED_COMPARISON_READY_RAW_AUTHOR_C_SRC_OPEN"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_he4_svp_physical_anchor_audit.json",
+          "sha256": "a328ae2f5db8ece999d817ae4550357f491dfc91e021348219b30a3438e1784a",
+          "summary": {
+            "status": "PASS_HE4_EQUILIBRIUM_SOURCE_ANCHOR_UNCERTAINTY_OPEN",
+            "closure_level": "CLOSED_FOR_LANE",
+            "holdout_accessed": false
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json",
+          "sha256": "9d532a794098baa5d0c6343997687cd6226d06b5109646fc5f859abf728bdc5a",
+          "summary": {
+            "status": "PASS_HE4_LOCAL_ALPHA_AND_FIELD_NORMALIZATION",
+            "closure_level": "CLOSED_FOR_LANE",
+            "alpha_Phi_K": -1.02237987858849,
+            "alpha_uncertainty_bound": 0.056753979576408715,
+            "Z_Phi": -0.017488421860832278,
+            "holdout_accessed": false
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
+          "sha256": "bc5293b4b143dc9666e1e747405970e2f2e102abdb1338836fc27f6be5e47a97",
+          "summary": {
+            "status": "PASS_HE4_SI_SCALE_AND_NORMALIZED_BETA",
+            "closure_level": "CLOSED_FOR_LANE",
+            "temperature_standard_uncertainty_K": 0.0002,
+            "energy_density_scale_J_m3": 512994.17164886114,
+            "beta_T13": -0.007936042649802305,
+            "beta_SI": -4071.143625305366,
+            "holdout_accessed": false
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json",
+          "sha256": "88cd54c34047d0060069a70678925c813ac26db7797873c2dcf822334b4eb68e",
+          "summary": {
+            "status": "PASS_HE4_PHYSICAL_SHEAR_KUBO_TRANSPORT",
+            "closure_level": "CLOSED_FOR_LANE",
+            "coefficient_name": "normal_component_shear_viscosity_eta",
+            "value": 1.29e-06,
+            "units": "Pa s",
+            "holdout_accessed": false
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_landauer_core_disposition_audit.json",
+          "sha256": "2897310476a148a809cd228a26f02ec6c9f7acf1b28e82e125fc36d03558da83",
+          "summary": {
+            "status": "PASS_LANDAUER_CORE_ROLE_DISPOSITION",
+            "closure_level": "CLOSED_FOR_CORE",
+            "external_dataset_gaps_remain_visible": true
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+          "sha256": "010b30f224ce3e303213885e12f75e67df8c8f6e9dec16c57ae8e47db0722e60",
+          "summary": {
+            "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+            "closure_level": "CLOSED_FOR_CORE",
+            "failed_checks": []
           }
         },
         {
@@ -1643,7 +1707,7 @@
         }
       ],
       "dependency_unlocked": "Gravity/GR remains blocked until this full bridge and Core curved 3+1 gates pass",
-      "claim_boundary": "Full Topic 13 is not Core-ready; current evidence supports normalized/internal controls and constraint exports only. No temperature prediction, external validation, or global UET closure is claimed.",
+      "claim_boundary": "The O(2)/He-4 Topic 13 track is Core-ready when core_result_status passes. The legacy graphite/TTG aggregate remains blocked, Xie 2026 remains locked, and no external validation or global UET closure is claimed.",
       "closure_summary": {
         "closed_lane_count": 192,
         "closed_as_no_go_count": 16,
@@ -5414,6 +5478,206 @@
       "claim_boundary": "This is a source-traceable 300 K natural-graphite isothermal bulk-modulus input. It is not a Ding TTG material match, not a full Cp-to-Cv closure, not UET transport, and not an alpha_Phi_K calibration."
     },
     {
+      "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "closure_level": "CLOSED_FOR_CORE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "named finite-cone causal branch plus scoped conserved-gradient no-go",
+        "He-4 SVP physical response anchor, independent alpha_Phi_K, field normalization, and uncertainty",
+        "non-Landauer action beta origin, normalized beta_T13, and SI energy-density scale",
+        "declared finite-temperature normal EOS and formal SK/KMS/Onsager interface",
+        "covariant heat-flux/entropy-current and dissipative conservation balance",
+        "one source-locked physical He II normal-component shear Kubo/FDT/entropy channel",
+        "Landauer imported-constraint role and Xie 2026 holdout isolation"
+      ],
+      "equation_or_mapping": {
+        "measurement": "y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)",
+        "dimensional_response": "Delta_Tq = alpha_Phi_K Delta_Phi_norm",
+        "field_map": "Delta_Phi_norm = Z_Phi Delta_Phi_natural",
+        "energy_scale": "f_SI = e0 f_natural",
+        "beta": "beta_T13 = beta_natural/Z_Phi^2; beta_SI = e0 beta_T13",
+        "kubo": "eta=V/(k_B T) integral_0^infinity dt <delta_Pi_xy(t) delta_Pi_xy(0)>; equivalently eta=-lim_(omega->0+) Im G_R^(xy,xy)/omega",
+        "entropy": "nabla_mu J_S^mu contains 2 eta sigma_mu_nu sigma^mu_nu/T"
+      },
+      "units": {
+        "alpha_Phi_K": "K per normalized base Phi",
+        "beta_SI": "J m^-3 per normalized Phi squared",
+        "eta": "Pa s",
+        "natural_action_lane": "natural units; connected by theta_T, Z_Phi, and e0"
+      },
+      "derivation_class": "COMPOSITION_OF_ACTION_DERIVATIONS_EXTERNAL_CALIBRATION_EXTERNAL_TRANSPORT_AND_SCOPED_NO_GO",
+      "observable": "bounded local He-4/O(2) thermal-response and dissipative-interface lane at 1.7 K SVP",
+      "data_role": "CORE_INTEGRATION_WITH_EXTERNAL_INPUTS_NOT_EXTERNAL_VALIDATION",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+          "sha256": "010b30f224ce3e303213885e12f75e67df8c8f6e9dec16c57ae8e47db0722e60",
+          "summary": {
+            "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+            "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+            "closure_level": "CLOSED_FOR_CORE"
+          }
+        }
+      ],
+      "verification_status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+      "open_blockers": [],
+      "dependency_unlocked": "Topic 13 flat thermal bridge may be handed to Core; curved 3+1 remains a separate Core gate.",
+      "claim_boundary": "CLOSED_FOR_CORE is an internal, lane-bounded composition result. It is not a prediction of the imported He-4 coefficients, not graphite TTG validation, not a complete two-fluid transport tensor, not curved 3+1, and not global UET closure."
+    },
+    {
+      "major_result_id": "T13_HE4_PHYSICAL_SHEAR_KUBO_TRANSPORT",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": "One source-locked SI shear-viscosity coefficient for the He II normal component at the calibrated 1.7 K SVP state, with a conservative local source envelope, stress Kubo relation, KMS/FDT noise interface, and nonnegative viscous entropy-production map.",
+      "equation_or_mapping": {
+        "kubo": "eta=V/(k_B T) integral_0^infinity dt <delta_Pi_xy(t) delta_Pi_xy(0)>; equivalently eta=-lim_(omega->0+) Im G_R^(xy,xy)/omega",
+        "kms_fdt": "G_K=coth(hbar omega/(2 k_B T)) (G_R-G_A)",
+        "entropy": "nabla_mu J_S^mu contains 2 eta sigma_mu_nu sigma^mu_nu/T"
+      },
+      "units": {
+        "eta": "Pa s",
+        "temperature": "K",
+        "space_response": "rho_s/rho"
+      },
+      "derivation_class": "SOURCE_LOCKED_EXTERNAL_INPUT_PLUS_STANDARD_GREEN_KUBO_KMS_ENTROPY_MAPPING",
+      "observable": "normal-component shear viscosity of He II at 1.7 K and SVP",
+      "data_role": "EXTERNAL_INPUT_NOT_UET_PREDICTION",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json",
+          "sha256": "88cd54c34047d0060069a70678925c813ac26db7797873c2dcf822334b4eb68e",
+          "summary": {
+            "status": "PASS_HE4_PHYSICAL_SHEAR_KUBO_TRANSPORT",
+            "major_result_id": "T13_HE4_PHYSICAL_SHEAR_KUBO_TRANSPORT",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_HE4_PHYSICAL_SHEAR_KUBO_TRANSPORT",
+      "open_blockers": [],
+      "dependency_unlocked": "Physical dissipative-coefficient input for the flat Topic 13 Core composition; no external validation or global UET unlock by itself.",
+      "claim_boundary": "This source-locks one physical SI shear-viscosity coefficient for the normal component of He II at the declared SVP state and connects it to a standard stress Kubo/FDT/entropy channel. It is an external transport input, not a UET prediction, not a bulk Fourier heat conductivity, and not a complete two-fluid transport tensor."
+    },
+    {
+      "major_result_id": "T13_HE4_LOCAL_ALPHA_AND_FIELD_NORMALIZATION",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": "A local He-4 normalized response coordinate, independent alpha_Phi_K calibration, conservative property-uncertainty bound, natural-to-kelvin temperature scale, and signed action-field normalization Z_Phi.",
+      "equation_or_mapping": {
+        "observable_coordinate": "Delta_Phi_norm = Delta(rho_s/rho) / (rho_s/rho)|T0",
+        "measurement": "Delta_Tq = alpha_Phi_K Delta_Phi_norm",
+        "action_field_map": "Delta_Phi_norm = Z_Phi Delta_Phi_natural",
+        "temperature_map": "T_K = theta_T * T_natural"
+      },
+      "units": {
+        "alpha_Phi_K": "K per normalized base Phi",
+        "Phi_norm": "normalized base Phi",
+        "Z_Phi": "normalized base Phi per natural action Phi"
+      },
+      "derivation_class": "INDEPENDENT_EQUILIBRIUM_SOURCE_CALIBRATION_PLUS_ACTION_DERIVED_NATURAL_BRIDGE",
+      "observable": "local He-4 superfluid-fraction response around 1.7 K at SVP",
+      "data_role": "CALIBRATION_NOT_HOLDOUT",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json",
+          "sha256": "9d532a794098baa5d0c6343997687cd6226d06b5109646fc5f859abf728bdc5a",
+          "summary": {
+            "status": "PASS_HE4_LOCAL_ALPHA_AND_FIELD_NORMALIZATION",
+            "major_result_id": "T13_HE4_LOCAL_ALPHA_AND_FIELD_NORMALIZATION",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_HE4_LOCAL_ALPHA_AND_FIELD_NORMALIZATION",
+      "open_blockers": [
+        "absolute_temperature_scale_uncertainty_not_included",
+        "SI_energy_density_scale_not_closed",
+        "normalized_beta_SI_map_not_closed",
+        "physical_transport_coefficient_not_closed"
+      ],
+      "dependency_unlocked": "Independent local alpha_Phi_K and action-field normalization lanes; no SI energy-density, beta, transport, TTG, or Full Topic 13 unlock.",
+      "claim_boundary": "The package calibrates one local He-4 response coordinate and its action-field orientation. It is lane-specific, conditional on the source temperature grid, and does not identify Phi universally with superfluid density or close the SI energy-density and transport maps."
+    },
+    {
+      "major_result_id": "T13_HE4_O2_SI_SCALE_AND_NORMALIZED_BETA",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": "A state-matched ITS-90 uncertainty contract, external He-4 thermal-cell SI free-energy-density scale, normalized beta_T13, and beta_SI with conservative uncertainty propagation.",
+      "equation_or_mapping": {
+        "energy_density_scale": "e0 = (rho / m_He4) k_B T0",
+        "free_energy": "f_SI = e0 f_natural",
+        "field": "Delta_Phi_norm = Z_Phi Delta_Phi_natural",
+        "beta": "beta_T13 = beta_natural / Z_Phi^2; beta_SI = e0 beta_T13"
+      },
+      "units": {
+        "e0": "J m^-3",
+        "beta_T13": "natural free-energy scale per normalized Phi squared",
+        "beta_SI": "J m^-3 per normalized Phi squared"
+      },
+      "derivation_class": "EXTERNAL_STATE_MATCHED_SCALE_CONVENTION_PLUS_ACTION_DERIVED_BETA",
+      "observable": "local He-4 O(2) response around 1.7 K on the SVP/ITS-90 state path",
+      "data_role": "CALIBRATION_NOT_HOLDOUT",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
+          "sha256": "bc5293b4b143dc9666e1e747405970e2f2e102abdb1338836fc27f6be5e47a97",
+          "summary": {
+            "status": "PASS_HE4_SI_SCALE_AND_NORMALIZED_BETA",
+            "major_result_id": "T13_HE4_O2_SI_SCALE_AND_NORMALIZED_BETA",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_HE4_SI_SCALE_AND_NORMALIZED_BETA",
+      "open_blockers": [
+        "physical_transport_coefficient_not_closed"
+      ],
+      "dependency_unlocked": "SI dimensional observable and normalized-beta lanes only; physical transport and Full Topic 13 remain locked.",
+      "claim_boundary": "This package fixes a lane-specific SI normalization convention for the He-4 O(2) bridge. It is not a universal Phi identity, a first-principles prediction of the absolute free-energy density, a transport validation, or an external TTG validation."
+    },
+    {
+      "major_result_id": "T13_HE4_SVP_O2_PHYSICAL_ANCHOR",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": "A source-locked He-4 SVP equilibrium grid for total density, superfluid density, normal density, and superfluid fraction, with deterministic row identity and no holdout access.",
+      "equation_or_mapping": "rho_n = rho - rho_s; candidate only: Delta(rho_s/rho) = Z_Phi Delta_Phi",
+      "units": {
+        "temperature": "K",
+        "total_density": "kg m^-3",
+        "superfluid_density": "kg m^-3",
+        "normal_density": "kg m^-3",
+        "superfluid_fraction": "dimensionless"
+      },
+      "derivation_class": "SOURCE_TRANSCRIPTION_AND_EQUILIBRIUM_IDENTITY",
+      "observable": "rho, rho_s, rho_n, and rho_s/rho at He-4 SVP",
+      "data_role": "CALIBRATION_REFERENCE_CANDIDATE_NOT_TARGET_DATA",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_he4_svp_physical_anchor_audit.json",
+          "sha256": "a328ae2f5db8ece999d817ae4550357f491dfc91e021348219b30a3438e1784a",
+          "summary": {
+            "status": "PASS_HE4_EQUILIBRIUM_SOURCE_ANCHOR_UNCERTAINTY_OPEN",
+            "major_result_id": "T13_HE4_SVP_O2_PHYSICAL_ANCHOR",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_HE4_EQUILIBRIUM_SOURCE_ANCHOR_UNCERTAINTY_OPEN",
+      "open_blockers": [
+        "property_level_source_uncertainty_not_yet_extracted",
+        "independent_Z_Phi_field_normalization_missing",
+        "SI_energy_and_length_scale_mapping_missing",
+        "physical_transport_coefficient_not_closed"
+      ],
+      "dependency_unlocked": "He-4/O(2) physical calibration lane may proceed to field-normalization and SI-scale design; no Core-ready promotion yet.",
+      "claim_boundary": "This package source-locks an equilibrium He-4 O(2)-compatible physical anchor candidate. It does not calibrate alpha_Phi_K, prove that Phi equals the superfluid fraction, validate TTG, or close Topic 13."
+    },
+    {
       "major_result_id": "T13_HONG_FINAL_SOURCE_BOUNDARY",
       "topic": "0.13_Thermodynamic_Bridge",
       "closure_level": "CLOSED_FOR_LANE",
@@ -5925,6 +6189,36 @@
       ],
       "dependency_unlocked": "external standard-physics transport-input lane only; no UET physical transport, alpha, Ding C_src, Core, Gravity, or Full Topic 13 dependency unlock",
       "claim_boundary": "This package closes only a source-locked standard-physics Green-Kubo transport-input lane. It does not identify the coefficient with UET Phi response, does not provide Ding mode-resolved C_src, does not calibrate alpha_Phi_K, and does not close Full Topic 13."
+    },
+    {
+      "major_result_id": "T13_LANDAUER_CONSTRAINT_SOURCE_DISPOSITION",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "closure_level": "CLOSED_FOR_CORE",
+      "claim_promotion": false,
+      "what_is_closed": "The Core dependency role of Berut, Jun, Hong, and Peterson is dispositioned as imported Landauer constraint/source-boundary evidence only; none supplies alpha, beta, EOS, or transport.",
+      "equation_or_mapping": "E_min = k_B T ln(2) remains an imported constraint and is not an inverse map to Phi or a coefficient-identification equation.",
+      "units": {
+        "landauer_energy": "J when evaluated",
+        "alpha_Phi_K": "not emitted by these controllers"
+      },
+      "derivation_class": "SOURCE_ROLE_AND_DEPENDENCY_DISPOSITION",
+      "observable": "Landauer erasure-work/heat comparison only",
+      "data_role": "IMPORTED_CONSTRAINT_AND_EXTERNAL_COMPARISON",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_landauer_core_disposition_audit.json",
+          "sha256": "2897310476a148a809cd228a26f02ec6c9f7acf1b28e82e125fc36d03558da83",
+          "summary": {
+            "status": "PASS_LANDAUER_CORE_ROLE_DISPOSITION",
+            "major_result_id": "T13_LANDAUER_CONSTRAINT_SOURCE_DISPOSITION",
+            "closure_level": "CLOSED_FOR_CORE"
+          }
+        }
+      ],
+      "verification_status": "PASS_LANDAUER_CORE_ROLE_DISPOSITION",
+      "open_blockers": [],
+      "dependency_unlocked": "Landauer source rows no longer block the O(2)/He-4 Core bridge; external Landauer validation remains open.",
+      "claim_boundary": "This closes only the controllers' Core dependency role. It does not claim raw numeric closure for Berut, Jun, or Hong, does not rehabilitate the Peterson legacy label, and does not validate Landauer experiments externally."
     },
     {
       "major_result_id": "T13_LOWITZER_GRAPHITE_ALPHA_V_K_T_FULL_SOURCE_PAIR",
@@ -7561,7 +7855,7 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-          "sha256": "d787dea150faf58ecc6f7bbd5dd2f7770ea7351bb875253a5004cffe70ed0a70",
+          "sha256": "e3e88b502311a6f4802b19bc246250b57d4855199245cc339ab18bfa29bff5e1",
           "summary": {
             "role": "canonical readiness gate"
           }
@@ -13022,6 +13316,6 @@
       "claim_boundary": "This closes a normalized diagnostic lane, not the thermodynamic bridge, physical transport, TTG validation, or UET theory."
     }
   ],
-  "next_major_result": "T13_FULL_THERMODYNAMIC_BRIDGE",
+  "next_major_result": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
   "claim_boundary": "This register reports closed or partial research results; it never promotes the global UET claim."
 }

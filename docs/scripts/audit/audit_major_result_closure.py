@@ -284,6 +284,11 @@ def main() -> int:
             matrix_entry["closure_input_packages"] = full_contract["closure_input_packages"]
         if isinstance(matrix.get("input_package_audit"), dict):
             matrix_entry["input_package_audit"] = matrix["input_package_audit"]
+    topic13_core_ready = any(
+        entry.get("major_result_id") == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+        and entry.get("closure_level") == "CLOSED_FOR_CORE"
+        for entry in entries
+    )
     artifact = {
         "schema_version": "uet-major-result-closure-register-v1",
         "artifact": "uet_major_result_closure_register",
@@ -292,7 +297,11 @@ def main() -> int:
         "claim_promotion": False,
         "closure_levels_are_progress_labels_not_readiness_labels": True,
         "entries": entries,
-        "next_major_result": "T13_FULL_THERMODYNAMIC_BRIDGE",
+        "next_major_result": (
+            "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"
+            if topic13_core_ready
+            else "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+        ),
         "claim_boundary": "This register reports closed or partial research results; it never promotes the global UET claim.",
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)

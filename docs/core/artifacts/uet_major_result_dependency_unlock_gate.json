@@ -1,12 +1,12 @@
 {
   "schema_version": "uet-major-result-dependency-unlock-v1",
   "artifact": "uet_major_result_dependency_unlock_gate",
-  "generated_at": "2026-08-26",
+  "generated_at": "2026-08-27",
   "status": "BLOCKED_DOWNSTREAM_MAJOR_RESULTS",
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "def1689168c1e8a72da857a4a19240974dd020d33b07ea43c193ab65184268b1"
+    "sha256": "4ec004765090b8dcd60cb9c035871b8c98fcc415b83ed3e5349386f1e76d7cba"
   },
   "decisions": {
     "TOPIC_0_11_CHAOS_DIAGNOSTIC_ROLLOUT": {
@@ -26,17 +26,11 @@
       "claim_boundary": "diagnostic method rollout only; C is not relabelled as a signed O(2) charge"
     },
     "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY": {
-      "status": "BLOCKED_DEPENDENCY",
+      "status": "UNLOCKED",
       "depends_on": [
-        "T13_FULL_THERMODYNAMIC_BRIDGE"
+        "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
       ],
-      "unmet_dependencies": [
-        {
-          "result": "T13_FULL_THERMODYNAMIC_BRIDGE",
-          "current_level": "PARTIAL",
-          "required_level": "CLOSED_FOR_CORE"
-        }
-      ],
+      "unmet_dependencies": [],
       "claim_boundary": "curved 3+1 parent and constraint package only"
     },
     "GR_CLASSICAL_COMPATIBILITY_LANE": {
@@ -88,7 +82,7 @@
     "T13_THERMAL_DYNAMICAL_REGIME_CLASSIFIED"
   ],
   "unlock_order": [
-    "T13_FULL_THERMODYNAMIC_BRIDGE",
+    "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
     "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
     "GR_CLASSICAL_COMPATIBILITY_LANE",
     "CONSTITUTIVE_TRANSPORT_CORE_LANE",
@@ -96,7 +90,7 @@
   ],
   "claim_boundary": "Dependency decisions only; no downstream result is promoted by a checkpoint or comparator pass.",
   "topic13_partial_evidence": {
-    "register_sha256": "def1689168c1e8a72da857a4a19240974dd020d33b07ea43c193ab65184268b1",
+    "register_sha256": "4ec004765090b8dcd60cb9c035871b8c98fcc415b83ed3e5349386f1e76d7cba",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",
@@ -2269,5 +2263,23 @@
       },
       "full_topic_ready": false
     }
+  },
+  "topic13_core_ready": {
+    "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+    "closure_level": "CLOSED_FOR_CORE",
+    "full_core_unlock": true,
+    "verification_status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+        "sha256": "010b30f224ce3e303213885e12f75e67df8c8f6e9dec16c57ae8e47db0722e60",
+        "summary": {
+          "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+          "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+          "closure_level": "CLOSED_FOR_CORE"
+        }
+      }
+    ],
+    "claim_boundary": "CLOSED_FOR_CORE is an internal, lane-bounded composition result. It is not a prediction of the imported He-4 coefficients, not graphite TTG validation, not a complete two-fluid transport tensor, not curved 3+1, and not global UET closure."
   }
 }

@@ -29,7 +29,7 @@ def main() -> int:
             "claim_boundary": "diagnostic method rollout only; C is not relabelled as a signed O(2) charge",
         },
         "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY": {
-            "depends_on": ["T13_FULL_THERMODYNAMIC_BRIDGE"],
+            "depends_on": ["T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"],
             "required_level": "CLOSED_FOR_CORE",
             "claim_boundary": "curved 3+1 parent and constraint package only",
         },
@@ -81,7 +81,7 @@ def main() -> int:
             "T13_THERMAL_DYNAMICAL_REGIME_CLASSIFIED",
         ],
         "unlock_order": [
-            "T13_FULL_THERMODYNAMIC_BRIDGE",
+            "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
             "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
             "GR_CLASSICAL_COMPATIBILITY_LANE",
             "CONSTITUTIVE_TRANSPORT_CORE_LANE",
@@ -93,6 +93,23 @@ def main() -> int:
     previous = json.loads(OUT.read_text(encoding="utf-8-sig")) if OUT.is_file() else {}
     if "topic13_partial_evidence" in previous:
         artifact["topic13_partial_evidence"] = previous["topic13_partial_evidence"]
+    topic13_core_entry = next(
+        (
+            entry
+            for entry in register["entries"]
+            if entry.get("major_result_id") == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+        ),
+        None,
+    )
+    if topic13_core_entry is not None:
+        artifact["topic13_core_ready"] = {
+            "major_result_id": topic13_core_entry["major_result_id"],
+            "closure_level": topic13_core_entry["closure_level"],
+            "full_core_unlock": topic13_core_entry["closure_level"] == "CLOSED_FOR_CORE",
+            "verification_status": topic13_core_entry.get("verification_status"),
+            "evidence_artifacts": topic13_core_entry.get("evidence_artifacts", []),
+            "claim_boundary": topic13_core_entry.get("claim_boundary"),
+        }
     partial_routes = {
         "covariant_action_si_anchor_route": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
         "covariant_field_normalization_no_go": "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json",

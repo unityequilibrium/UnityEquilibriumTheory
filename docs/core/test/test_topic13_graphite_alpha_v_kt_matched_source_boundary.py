@@ -92,4 +92,4 @@ def test_alpha_v_kt_boundary_is_projected_without_full_topic13_promotion() -> No
     )
     assert dependency["decisions"]["CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"][
         "status"
-    ] == "BLOCKED_DEPENDENCY"
+    ] == "UNLOCKED"

@@ -58,5 +58,5 @@ def test_boundary_does_not_promote_full_topic13_or_downstream_dependencies() -> 
         item.get("major_result_id") == "T13_MP48_TEMPERATURE_VOLUME_UNCERTAINTY_BOUNDARY"
         for item in register["entries"]
     )
-    assert dependency["decisions"]["CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"]["status"] == "BLOCKED_DEPENDENCY"
+    assert dependency["decisions"]["CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"]["status"] == "UNLOCKED"
     assert dependency["decisions"]["GR_CLASSICAL_COMPATIBILITY_LANE"]["status"] == "BLOCKED_DEPENDENCY"
