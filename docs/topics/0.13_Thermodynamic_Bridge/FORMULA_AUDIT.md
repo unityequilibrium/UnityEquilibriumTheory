@@ -1,5 +1,14 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## T13 Core-Ready Composition (2026-08-28)
+
+MAJOR_RESULT_CLOSURE: `T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY` is `CLOSED_FOR_CORE` with final acceptance `13/13`.
+EQUATION_OR_MAPPING: `Delta_Tq=alpha_Phi_K*Delta_Phi_norm`; `Delta_Phi_norm=Z_Phi*Delta_Phi_natural`; `T_K=theta_T*T_natural`; `f_SI=e0*f_natural`; `beta_T13=beta_natural/Z_Phi^2`; `beta_SI=e0*beta_T13`; `eta=-lim_(omega->0+) Im G_R^(xy,xy)/omega`; `nabla_mu J_S^mu` contains `2 eta sigma_mu_nu sigma^mu_nu/T >= 0`.
+UNITS: `alpha_Phi_K` is K per normalized base Phi; `Z_Phi` is normalized base Phi per natural action Phi; `e0` is J m^-3; `beta_SI` is J m^-3 per normalized Phi squared; `eta` is Pa s.
+DERIVATION_CLASS: Natural bridge and beta origin are action-derived; `alpha`, `Z_Phi`, `theta_T`, and `e0` are lane-specific external calibration/scale inputs; `eta` is a source-locked external transport input; Landauer is an imported constraint only.
+VERIFICATION: `alpha_Phi_K=-1.02237987858849 +/- 0.056753979576408715`; `Z_Phi=-0.017488421860832278`; `e0=512994.17164886114 J m^-3`; `beta_T13=-0.007936042649802305 +/- 0.0008831273413443808`; `beta_SI=-4071.143625305366 +/- 453.5201739147111 J m^-3` per normalized Phi squared; `eta=(1.29e-6 +/- 5e-8) Pa s`.
+CLAIM_BOUNDARY: These are bounded O(2)/He-4 Core mappings, not universal identities for `Phi`, not graphite TTG external validation, and not global UET closure. `R_gen` remains absent from the state vector and has no backreaction.
+
 ## T13-094 - Condensed Dissipative Transport Identifiability Boundary
 
 MAJOR_RESULT_CLOSURE: CLOSED_AS_NO_GO for T13_UET_O2_CONDENSED_DISSIPATIVE_TRANSPORT_IDENTIFIABILITY_NO_GO; Full Topic 13 remains PARTIAL.

@@ -1,3 +1,18 @@
+## 2026-08-28 - Full Topic 13 Core-ready closure wave
+
+MAJOR_RESULT_CLOSURE: `T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY` is `CLOSED_FOR_CORE`; final acceptance is `PASS_T13_FULL_CORE_READY_ACCEPTANCE`.
+WHAT_IS_ACTUALLY_CLOSED: Causal named branch/no-go, independent He-4 `alpha` and field normalization, SI scale and non-Landauer beta, finite-temperature normal EOS, SK/KMS/Onsager interface, entropy current and dissipative balance, one physical He II shear-Kubo channel, Landauer Core-role disposition, state-interface composition, and holdout isolation.
+WHAT_REMAINS_OPEN: Graphite TTG external validation, raw-author Ding `C_src`, external Landauer row parity, the original conserved-gradient baseline, complete physical two-fluid transport, curved 3+1, Gravity, and global UET closure.
+DEPENDENCY_UNLOCKED: Curved 3+1 parent research only. Gravity remains blocked until `CORE_CURVED_3P1_OBSERVABLE_PARENT_READY` closes.
+STATUS: Acceptance `13/13`; `full_core_unlock=true`; `claim_promotion=false`; Xie 2026 unread.
+WHAT_CHANGED: Added He-4 physical source/calibration/SI/transport packages, Landauer disposition, Core composition, closure-track split, matrix v3, register/dependency integration, and final acceptance audit.
+EQUATION_OR_MAPPING: `Delta_Tq=alpha_Phi_K*Delta_Phi_norm`; `Delta_Phi_norm=Z_Phi*Delta_Phi_natural`; `f_SI=e0*f_natural`; `beta_T13=beta_natural/Z_Phi^2`; standard shear Kubo/KMS/FDT and positive entropy-production mappings.
+VERIFICATION: Ran the causal/source/calibration/transport composition chain, matrix/register/dependency regeneration, and final acceptance audit. Quantitative witnesses: leakage `0.0 <= 1e-6`; `alpha=-1.02237987858849 +/- 0.056753979576408715`; `beta_T13=-0.007936042649802305 +/- 0.0008831273413443808`; `eta=(1.29e-6 +/- 5e-8) Pa s`; TTG comparison rows `432`.
+CONTROLLING_BLOCKER: None for the bounded Topic 13 Core handoff. Next Core controller: curved 3+1. Separate external controller: raw/accepted graphite `C_src` and graphite-specific dimensional mapping.
+NEXT_ACTION: Start `CORE_CURVED_3P1_OBSERVABLE_PARENT_READY`; retain graphite TTG and raw Landauer work as external comparison tracks.
+CLAIM_BOUNDARY: Core-ready internal integration only; not external validation, full two-fluid transport, Gravity, or global UET closure.
+EVIDENCE_HASHES: acceptance `846d2bfbc819c1b6f700f109645a451b5d3647a570527af5dc0e21240dacae41`; composition `13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418`; matrix `ba42d8a9c1745398ec0ee04300a792d18416fccae9205bc376a96f68d423036d`; gate `77c4fa3cfafb1fa6ee4e1e3df65f953ea3011bd33500f6786e92eca6869390c9`; register `94a9356f24e2dae0d396bd96931d068919e4f1773e95fd255f2cf4470bac1e55`; dependency `800cf61860945108ea3cb4a1604da32765d8ca0e4ddc55118ccf8702bee4d6fc`.
+
 ## 2026-08-25 - Topic 13 minimal closure input contract wave
 
 MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for T13_FULL_CLOSURE_MINIMAL_INPUT_CONTRACT; canonical Full Topic 13 remains PARTIAL / BLOCKED_OPEN_T13_FULL_BRIDGE.

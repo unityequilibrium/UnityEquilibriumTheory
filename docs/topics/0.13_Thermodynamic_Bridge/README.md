@@ -6,6 +6,21 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Canonical Current Gate (2026-08-28)
+
+MAJOR_RESULT_CLOSURE: `T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY` is `CLOSED_FOR_CORE`; this is a bounded O(2)/He-4 thermal-bridge result, not external-ready or global UET closure.
+WHAT_IS_ACTUALLY_CLOSED: The named causal flux/Phi branch and scoped conserved-gradient no-go; He-4 SVP response anchor; independent `alpha_Phi_K`; signed `Z_Phi`; ITS-90/SI energy scale; non-Landauer `beta_T13` and `beta_SI`; finite-temperature normal EOS; formal SK/KMS/Onsager interface; entropy current and dissipative balance; one source-locked He II normal-component shear Kubo/FDT/entropy channel; Landauer controller disposition; and Xie 2026 holdout isolation.
+WHAT_REMAINS_OPEN: Graphite TTG external validation, raw-author Ding `C_src`, raw Landauer numeric parity, the original conserved-`C` local-gradient baseline, a complete physical two-fluid transport tensor, curved 3+1, Gravity, and global UET closure. The permitted Ding Fig. 1d package is comparison-only.
+DEPENDENCY_UNLOCKED: `CORE_CURVED_3P1_OBSERVABLE_PARENT_READY` research may start. Gravity remains blocked until that separate Core result is `CLOSED_FOR_CORE`.
+STATUS: `PASS_T13_FULL_CORE_READY_ACCEPTANCE`; `13/13` acceptance criteria pass; `full_core_unlock=true`; `claim_promotion=false`; `holdout_accessed=false`.
+WHAT_CHANGED: Added independent He-4 calibration and SI-scale packages, a physical shear-Kubo input, Landauer Core-role disposition, state-interface composition, closure-matrix v3, registry/dependency integration, and a requirement-by-requirement final acceptance audit.
+EQUATION_OR_MAPPING: `y_TTG=Delta_Tq(t)/Delta_Tq(0)`; `y_TTG^UET=Delta_Phi(t)/Delta_Phi(0)`; `Delta_Tq=alpha_Phi_K*Delta_Phi_norm`; `Delta_Phi_norm=Z_Phi*Delta_Phi_natural`; `f_SI=e0*f_natural`; `beta_T13=beta_natural/Z_Phi^2`; `beta_SI=e0*beta_T13`.
+VERIFICATION: Named causal leakage is `0.0 <= 1e-6`; `alpha_Phi_K=-1.02237987858849 K` per normalized base Phi with uncertainty bound `0.056753979576408715`; `beta_T13=-0.007936042649802305`; `beta_SI=-4071.143625305366 J m^-3` per normalized Phi squared; physical `eta=(1.29e-6 +/- 5e-8) Pa s`; the permitted TTG comparison package has `432` rows with hashes, units, uncertainty, preprocessing, and license; Xie 2026 numeric data remain unread.
+CONTROLLING_BLOCKER: None for the bounded Topic 13 Core handoff. The next Core controller is `CORE_CURVED_3P1_OBSERVABLE_PARENT_READY`; the separate graphite external track remains controlled by missing raw/accepted `C_src`, graphite-specific alpha, and dimensional mapping.
+NEXT_ACTION: Start the curved 3+1 parent and constraint package. Keep graphite TTG/raw Landauer acquisition in external comparison tracks and do not use Xie 2026 until preregistered validation is authorized.
+CLAIM_BOUNDARY: `CLOSED_FOR_CORE` means internally integrated and ready for Core handoff only. It is not a prediction of imported He-4 coefficients, graphite validation, a complete external transport validation, curved 3+1, Gravity, or global UET closure.
+EVIDENCE: `docs/core/artifacts/t13_full_core_ready_acceptance_audit.json` (`846d2bfbc819c1b6f700f109645a451b5d3647a570527af5dc0e21240dacae41`); `docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json` (`13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418`); `docs/core/artifacts/t13_topic13_closure_matrix.json` (`ba42d8a9c1745398ec0ee04300a792d18416fccae9205bc376a96f68d423036d`).
+
 ## Canonical Current Gate (2026-08-26)
 
 MAJOR_RESULT_CLOSURE: T13_DING_C_SRC_HEATING_BACKCALCULATION_IDENTIFIABILITY is CLOSED_AS_NO_GO for the captured incident-heating/normalized-TTG route only; Full Topic 13 remains PARTIAL and BLOCKED_OPEN_T13_FULL_BRIDGE.

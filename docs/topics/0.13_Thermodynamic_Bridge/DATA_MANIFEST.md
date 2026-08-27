@@ -1,4 +1,15 @@
 # Data Manifest
+## Current Core-Ready Data Projection (2026-08-28)
+
+- He-4 SVP equilibrium anchor: source-locked density/superfluid-fraction grid with row identity and hashes; calibration role only, not holdout.
+- Independent He-4 response calibration: `alpha_Phi_K=-1.02237987858849 K` per normalized base Phi with uncertainty bound `0.056753979576408715`; no target curve, fit, or Xie access.
+- SI/beta package: ITS-90 uncertainty, CODATA/NIST mass inputs, `e0=512994.17164886114 J m^-3`, `beta_T13=-0.007936042649802305`, and `beta_SI=-4071.143625305366 J m^-3` per normalized Phi squared, with conservative uncertainty propagation.
+- Physical transport package: He II normal-component shear viscosity `eta=(1.29e-6 +/- 5e-8) Pa s` at 1.7 K SVP; external input with Kubo/KMS/FDT/entropy mapping, not a UET prediction or bulk thermal conductivity.
+- Ding Fig. 1d comparison package: permitted CC BY figure-derived route, 432 rows, row IDs, units, uncertainty declaration, preprocessing, license, and hash lock. It is comparison-only; raw-author PBTE/`C_src` and graphite external validation remain open.
+- Landauer controllers: Berut/Jun/Hong/Peterson have a machine-readable Core-role disposition. External numeric gaps remain visible and no controller supplies `alpha`, `beta`, EOS, or transport.
+- Xie 2026: locked metadata-only holdout; numeric payload, rows, curves, fitting, tuning, calibration, and threshold adjustment remain unconsumed.
+- Final acceptance artifact: `docs/core/artifacts/t13_full_core_ready_acceptance_audit.json`, SHA-256 `846d2bfbc819c1b6f700f109645a451b5d3647a570527af5dc0e21240dacae41`.
+
 ## Current Closure Projection (2026-08-26)
 
 - Heating/back-calculation no-go artifact: docs/core/artifacts/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json; SHA-256 0a3b785b0a75e72a41ef9ef4521879ef74cc191d5d46271eaa2a08f6b87e657b.

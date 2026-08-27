@@ -1,5 +1,36 @@
 # Verification Spec
 
+## Canonical Core-Ready Acceptance (2026-08-28)
+
+Run in this order:
+
+```powershell
+.venv\Scripts\python.exe docs\scripts\audit\audit_topic13_landauer_core_disposition.py
+.venv\Scripts\python.exe docs\scripts\audit\audit_topic13_he4_core_composition.py
+.venv\Scripts\python.exe docs\scripts\audit\audit_topic13_full_bridge_gate.py
+.venv\Scripts\python.exe docs\scripts\audit\audit_topic13_closure_matrix.py
+.venv\Scripts\python.exe docs\scripts\audit\audit_major_result_closure.py
+.venv\Scripts\python.exe docs\scripts\audit\audit_major_result_dependency_unlock.py
+.venv\Scripts\python.exe docs\scripts\audit\audit_topic13_core_ready_acceptance.py
+```
+
+Acceptance requires:
+
+- `t13_full_core_ready_acceptance_audit.json` reports `PASS_T13_FULL_CORE_READY_ACCEPTANCE` with all 13 criteria true.
+- The named causal branch uses the unchanged `1e-6` threshold, has nonzero arrivals, and passes convergence, ledger, conservation, and anti-manipulation checks.
+- `alpha_Phi_K` is an independent He-4 calibration with uncertainty and no target fit; `beta` does not use Landauer.
+- The permitted TTG comparison package has row identity, units, uncertainty, preprocessing, license, and hashes; it remains outside calibration and external validation.
+- EOS, finite-temperature normal component, SK/KMS, Onsager, entropy-current, dissipative-balance, and physical shear-Kubo records pass their declared contracts.
+- Xie 2026 numeric data remain unread and global `claim_promotion` remains false.
+- Matrix, register, and dependency gate agree that Topic 13 is Core-ready, curved 3+1 work is unlocked, and Gravity remains blocked.
+
+Canonical artifacts:
+
+- `docs/core/artifacts/t13_full_core_ready_acceptance_audit.json`
+- `docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json`
+- `docs/core/artifacts/t13_topic13_closure_matrix.json`
+- `Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`
+
 - Primary command:
   - `.venv\Scripts\python.exe docs\topics\0.13_Thermodynamic_Bridge\Code\03_Research\Research_Landauer.py`
 - Inputs:

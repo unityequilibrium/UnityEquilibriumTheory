@@ -1,5 +1,18 @@
 # Limitations
 
+## Core-Ready Claim Boundary (2026-08-28)
+
+The bounded O(2)/He-4 bridge is now `CLOSED_FOR_CORE`, but the following limits remain controlling for stronger claims:
+
+- `CLOSED_FOR_CORE` is an internal integration result, not external replication or proof of UET.
+- The physical transport admission is one source-locked He II normal-component shear-viscosity channel. It is not bulk Fourier conductivity and not a complete two-fluid transport tensor.
+- The permitted Ding Fig. 1d package is a 432-row normalized comparison source, not raw-author PBTE data and not a He-4 calibration source.
+- Xie 2026 remains a locked, unread holdout and cannot be used for fitting, tuning, calibration, or threshold changes.
+- Berut, Jun, and Hong retain external numeric-row/uncertainty gaps; Peterson remains a scoped source-identity no-go. Their Core dependency role is closed only because Landauer is an imported constraint, not a route to `alpha`, `beta`, EOS, or transport.
+- The original conserved-`C` local-gradient candidate remains blocked. The finite-cone flux/Phi branch is a separately named branch and does not replace that baseline.
+- The natural action state and the 1.7 K He-4 physical state are connected only through declared `theta_T`, `Z_Phi`, and `e0` mappings; they are not silently identified.
+- Curved 3+1, Gravity, graphite TTG external validation, and global UET closure remain open.
+
 - The root baseline comparison is present, but numeric acceptance boundaries are still provisional until a saved artifact is generated and reviewed.
 - Current data posture is source-referenced but still below a fully normalized archival dataset package.
 - Berut 2012 and exact SI/CODATA source records are now pinned under `docs/data/external/...`, but the Berut numeric rows used by the verifier remain topic-derived summaries rather than raw archived tables.
