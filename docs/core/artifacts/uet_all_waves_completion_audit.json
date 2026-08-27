@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_all_waves_completion_audit",
-  "generated_at": "2026-08-21",
+  "generated_at": "2026-08-28",
   "audit_status": "PASS_WITH_FOUNDATION_PHYSICS_BLOCKED",
   "status": "PROGRAM_CONTROL_CLOSED_FOUNDATION_PHYSICS_NOT_CLOSED",
   "objective": "close every planned research wave as a bounded project-control lane without promoting blocked physics",

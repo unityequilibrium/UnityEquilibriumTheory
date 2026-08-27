@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "hyperbolic_phase_field_causal_feasibility",
-  "generated_at": "2026-07-23T03:34:48+00:00",
+  "generated_at": "2026-08-27T20:36:22+00:00",
   "topic": "docs/core UET GR non-closed response",
   "version": "wave8_v1",
   "benchmark_role": "analytic_gate",
@@ -321,9 +321,9 @@
         512.0
       ],
       "relative_chemical_errors": [
-        0.04390706701977322,
-        0.012188348089927728,
-        0.003133783574217406,
+        0.043907067019773226,
+        0.012188348089927727,
+        0.003133783574217407,
         0.0007890620983941193
       ],
       "minimum_causal_tau_values": [

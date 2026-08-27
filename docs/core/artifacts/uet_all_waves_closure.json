@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_all_waves_closure",
-  "generated_at": "2026-08-21",
+  "generated_at": "2026-08-28",
   "audit_status": "PASS",
   "program_status": "ALL_WAVE_STATUS_ACCOUNTING_CLOSED_FOUNDATION_PHYSICS_NOT_CLOSED",
   "foundation_gate": {
     "path": "docs/core/artifacts/uet_foundation_dependency_gate.json",
     "status": "BLOCKED",
-    "sha256": "5dd899ec7614b4d28263f34cd744d14ed0ffea1ab1cc6e75c733e6af0d15dde9",
+    "sha256": "99d9f68f801b640887ea41627397139b5b6e3f11ce115613abcf6c58256f8aec",
     "controller": "foundation_coverage_units_observable_and_external_claim_gates_incomplete"
   },
   "wave_count": 12,
@@ -40,7 +40,7 @@
         {
           "path": "docs/core/artifacts/uet_foundation_dependency_gate.json",
           "exists": true,
-          "sha256": "5dd899ec7614b4d28263f34cd744d14ed0ffea1ab1cc6e75c733e6af0d15dde9",
+          "sha256": "99d9f68f801b640887ea41627397139b5b6e3f11ce115613abcf6c58256f8aec",
           "status": "BLOCKED",
           "controller": "foundation_coverage_units_observable_and_external_claim_gates_incomplete"
         },
@@ -65,7 +65,7 @@
         {
           "path": "docs/core/artifacts/uet_equation_correspondence_registry.json",
           "exists": true,
-          "sha256": "ae143f9bd06738ae777415b46d39752c8fbb4a96b17f31de94eac3e563a7be44",
+          "sha256": "b0633c9764f64280a28355b4ebe73f0d5ec0fa915563cc18ae3d46665526c5d9",
           "status": "CENTRAL_REGISTRY_WITH_CANDIDATE_ADDENDA_BLOCKED",
           "controller": "not_declared"
         },
@@ -111,7 +111,7 @@
         {
           "path": "docs/core/artifacts/o2_eos_formula_audit.json",
           "exists": true,
-          "sha256": "e1437f821e9b7afdeb36dbf0df7154da05cfda1eedbd4b763e0d44519d96d1e3",
+          "sha256": "bbf0a11278335cc4c02fbbdfba2465bb74505263df71071b209745aae7550d44",
           "status": "WARN",
           "controller": "not_declared"
         }
@@ -263,7 +263,7 @@
         {
           "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_noether_phase_field_dependency_gate.json",
           "exists": true,
-          "sha256": "9965277b1a06a30542487e8d286ff1b4a28edd808008441626f3c594bac23dad",
+          "sha256": "b6beb5d89f7fbb392cab9f02c18503c49706543e9a220f26e2d19abbe778011b",
           "status": "BLOCKED",
           "controller": "topic_0_11_signed_noether_charge_eos_transport_matching_missing"
         }
@@ -327,17 +327,17 @@
         {
           "path": "docs/core/artifacts/o2_finite_density_eos_verification.json",
           "exists": true,
-          "sha256": "8ab261c44f6f4f5840b52c681a0c7df5a181a33ea6ea8600c91228f393b2b239"
+          "sha256": "f9f468303ee9a39f196eb43346d2602e92c154cd73915875e99a62210975a617"
         },
         {
           "path": "docs/core/artifacts/o2_eos_formula_audit.json",
           "exists": true,
-          "sha256": "e1437f821e9b7afdeb36dbf0df7154da05cfda1eedbd4b763e0d44519d96d1e3"
+          "sha256": "bbf0a11278335cc4c02fbbdfba2465bb74505263df71071b209745aae7550d44"
         },
         {
           "path": "docs/core/artifacts/covariant_superfluid_transport_verification.json",
           "exists": true,
-          "sha256": "49fc1a047cfa84e8155940a491eb9c3fb3c3536ac707b010ba15b32298632ad1"
+          "sha256": "8cb0443b69949b8e7a8bd76060768717f4737c34f22638b9ccb6c3b4e83cf80c"
         }
       ]
     },
@@ -394,7 +394,7 @@
         {
           "path": "docs/core/artifacts/uet_gr_research_program_gate.json",
           "exists": true,
-          "sha256": "1bb25ef10fed0e4cd489606790f3aa4ef33924c358ad605b13d597566fee3133"
+          "sha256": "fd3347b22d0bc941f7b2dec99955addf6ee371cc5ed81cfdb8fcfdb53295e620"
         }
       ]
     },

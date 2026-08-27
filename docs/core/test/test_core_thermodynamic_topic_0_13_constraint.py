@@ -35,6 +35,7 @@ def _artifact() -> dict:
 def _stable(payload: dict) -> dict:
     value = json.loads(json.dumps(payload))
     value.pop("generated_at", None)
+    value.pop("environment", None)
     return value
 
 

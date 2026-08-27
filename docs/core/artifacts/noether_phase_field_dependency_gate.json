@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "noether_phase_field_dependency_gate",
-  "generated_at": "2026-07-23T03:34:58+00:00",
+  "generated_at": "2026-08-27T20:39:58+00:00",
   "topic": "docs/core UET GR non-closed response",
   "version": "wave9_v1",
   "benchmark_role": "dependency_gate",

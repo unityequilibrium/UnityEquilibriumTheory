@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "artifact": "matter_space_report_alignment_gate",
-  "generated_at": "2026-08-14T12:26:12.501682+00:00",
-  "source_snapshot_at": "2026-08-14T12:26:08.803093+00:00",
+  "generated_at": "2026-08-27T20:44:24.693731+00:00",
+  "source_snapshot_at": "2026-08-27T20:44:03+00:00",
   "status": "WARN",
   "alignment_status": "PASS_WITH_HISTORICAL_BASE_REPORT_WARN",
   "evidence_status": "POST_WAVE10_ADDENDUM_ALIGNED_BASE_SNAPSHOT_RETAINED",
@@ -20,21 +20,21 @@
     },
     "gr_program": {
       "path": "docs/core/artifacts/uet_gr_research_program_gate.json",
-      "sha256": "1bb25ef10fed0e4cd489606790f3aa4ef33924c358ad605b13d597566fee3133",
+      "sha256": "fd3347b22d0bc941f7b2dec99955addf6ee371cc5ed81cfdb8fcfdb53295e620",
       "status": "BLOCKED",
       "program_stage": "O2_FINITE_DENSITY_EOS_AND_T0_SUPERFLUID_CONSTITUTIVE_VERIFIED",
       "controlling_blocker": "physical_kubo_coefficient_evidence_and_curved_3p1_solver_missing"
     },
     "noether_dependency": {
       "path": "docs/core/artifacts/noether_phase_field_dependency_gate.json",
-      "sha256": "a3d86c48ee3f9666bba3aff7b7af3f2b9e1daa43d8197d96314e93bd5b72e57a",
+      "sha256": "32dd9fd950b5f1a686372d04ab585e4679dc3b94c4b4446c1d6e5f7672c4e05c",
       "status": "BLOCKED",
       "evidence_status": "PARTIAL_HYDRODYNAMIC_STATE_COORDINATE_MAP",
       "controlling_blocker": "noether_charge_equation_of_state_and_covariant_transport_matching_missing"
     },
     "topic_0_11_dependency": {
       "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_noether_phase_field_dependency_gate.json",
-      "sha256": "9965277b1a06a30542487e8d286ff1b4a28edd808008441626f3c594bac23dad",
+      "sha256": "b6beb5d89f7fbb392cab9f02c18503c49706543e9a220f26e2d19abbe778011b",
       "status": "BLOCKED",
       "evidence_status": "CONDITIONAL_HYDRODYNAMIC_COORDINATE_COMPATIBILITY",
       "controlling_blocker": "topic_0_11_signed_noether_charge_eos_transport_matching_missing",
@@ -50,7 +50,7 @@
     },
     "topic_0_13_constraint": {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/0_13_core_thermodynamic_constraint_gate.json",
-      "sha256": "6322df4d28f1d770c72e9aba380a43ac1e791889276ec9cb3ab6cfd472dab7ed",
+      "sha256": "b0562f0236baed8a6ef04de3ebb31d12b805746ba2336d279443d902d6c3c5e2",
       "status": "BLOCKED",
       "evidence_status": "THERMODYNAMIC_CONSTRAINT_EXPORTS_AVAILABLE_CORE_CLOSURE_NOT_DERIVED",
       "controlling_blocker": "topic_0_13_constraint_only_eos_transport_entropy_bridge_missing",
