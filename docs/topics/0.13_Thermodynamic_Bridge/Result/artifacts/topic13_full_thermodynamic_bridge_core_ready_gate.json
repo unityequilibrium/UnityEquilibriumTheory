@@ -3,6 +3,8 @@
   "artifact": "topic13_full_thermodynamic_bridge_core_ready_gate",
   "generated_at": "2026-08-27",
   "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
+  "core_result_status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+  "legacy_graphite_ttg_aggregate_status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
   "claim_promotion": false,
   "major_result": {
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
@@ -609,8 +611,8 @@
   },
   "closure_tracks": {
     "o2_he4_core_ready": {
-      "major_result_id": "T13_O2_HE4_THERMODYNAMIC_BRIDGE_CORE_READY",
-      "status": "PARTIAL",
+      "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+      "status": "CLOSED_FOR_CORE",
       "requirements": {
         "causal_structure": "PASS",
         "he4_equilibrium_source_anchor": "PASS",
@@ -619,9 +621,11 @@
         "absolute_temperature_scale_uncertainty": "PASS",
         "non_circular_natural_bridge": "PASS",
         "formal_eos_and_entropy_interface": "PASS",
-        "physical_transport_coefficient": "BLOCKED",
+        "physical_transport_coefficient": "PASS",
         "normalized_beta_and_SI_energy_scale": "PASS",
         "dimensional_observable_map": "PASS",
+        "landauer_constraint_source_disposition": "PASS",
+        "state_interface_and_core_composition": "PASS",
         "holdout_integrity": "PASS"
       },
       "what_is_closed": [
@@ -630,13 +634,14 @@
         "independent local He-4 alpha_Phi_K calibration and signed action-field normalization Z_Phi",
         "source-reported property uncertainty bounds conditional on the recommended temperature grid",
         "ITS-90 scale uncertainty, state-matched SI energy-density convention, normalized beta_T13, and beta_SI",
+        "one source-locked He II normal-component physical shear Kubo/FDT/entropy channel",
+        "Landauer source-controller Core-role disposition with external numeric gaps retained",
+        "explicit natural-action to physical-He-4 state-interface composition",
         "causal structural no-go and named finite-cone branch contract",
         "Xie 2026 holdout isolation"
       ],
-      "what_remains_open": [
-        "physical_transport_coefficient"
-      ],
-      "dependency_unlocked": "No Core dependency unlock",
+      "what_remains_open": [],
+      "dependency_unlocked": "Topic 13 thermal bridge may be integrated into Core",
       "claim_boundary": "This is the physical O(2)/He-4 Core track. It does not include graphite TTG external validation and does not close global UET."
     },
     "graphite_ttg_external_validation": {
@@ -80626,8 +80631,8 @@
     }
   },
   "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing",
-  "next_action": "Acquire an independent base-Phi SI energy/observable anchor or paired Phi/SI record; obtain Ding numeric C_src(T) or an accepted independent reproduction; source-lock beta_T13 and one state-matched physical Kubo coefficient; then complete EOS/transport/KMS/entropy gates. The original conserved-C question is closed only as a scoped no-go and remains blocked as the original baseline.",
-  "claim_boundary": "Full Topic 13 is not Core-ready; current evidence supports normalized/internal controls and constraint exports only. No temperature prediction, external validation, or global UET closure is claimed.",
+  "next_action": "Hand the bounded O(2)/He-4 thermal bridge to Core integration. Keep graphite TTG numeric validation, raw Landauer row parity, the original conserved-C baseline, curved 3+1, and external claims on their separate open tracks.",
+  "claim_boundary": "The O(2)/He-4 Topic 13 track is Core-ready when core_result_status passes. The legacy graphite/TTG aggregate remains blocked, Xie 2026 remains locked, and no external validation or global UET closure is claimed.",
   "evidence_artifacts": [
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/thermal_wave1_branch_gate.json",
@@ -80804,6 +80809,36 @@
         "beta_T13": -0.007936042649802305,
         "beta_SI": -4071.143625305366,
         "holdout_accessed": false
+      }
+    },
+    {
+      "path": "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json",
+      "sha256": "88cd54c34047d0060069a70678925c813ac26db7797873c2dcf822334b4eb68e",
+      "summary": {
+        "status": "PASS_HE4_PHYSICAL_SHEAR_KUBO_TRANSPORT",
+        "closure_level": "CLOSED_FOR_LANE",
+        "coefficient_name": "normal_component_shear_viscosity_eta",
+        "value": 1.29e-06,
+        "units": "Pa s",
+        "holdout_accessed": false
+      }
+    },
+    {
+      "path": "docs/core/artifacts/t13_landauer_core_disposition_audit.json",
+      "sha256": "2897310476a148a809cd228a26f02ec6c9f7acf1b28e82e125fc36d03558da83",
+      "summary": {
+        "status": "PASS_LANDAUER_CORE_ROLE_DISPOSITION",
+        "closure_level": "CLOSED_FOR_CORE",
+        "external_dataset_gaps_remain_visible": true
+      }
+    },
+    {
+      "path": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+      "sha256": "010b30f224ce3e303213885e12f75e67df8c8f6e9dec16c57ae8e47db0722e60",
+      "summary": {
+        "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+        "closure_level": "CLOSED_FOR_CORE",
+        "failed_checks": []
       }
     },
     {

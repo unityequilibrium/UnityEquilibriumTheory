@@ -11,7 +11,7 @@ GATE = ROOT / (
 )
 
 
-def test_core_track_accepts_local_alpha_and_si_beta_but_keeps_transport_open() -> None:
+def test_core_track_accepts_local_alpha_si_beta_and_physical_transport() -> None:
     gate = json.loads(GATE.read_text(encoding="utf-8-sig"))
     core = gate["closure_tracks"]["o2_he4_core_ready"]
     requirements = core["requirements"]
@@ -22,6 +22,8 @@ def test_core_track_accepts_local_alpha_and_si_beta_but_keeps_transport_open() -
     assert requirements["absolute_temperature_scale_uncertainty"] == "PASS"
     assert requirements["normalized_beta_and_SI_energy_scale"] == "PASS"
     assert requirements["dimensional_observable_map"] == "PASS"
-    assert requirements["physical_transport_coefficient"] == "BLOCKED"
-    assert core["status"] == "PARTIAL"
+    assert requirements["physical_transport_coefficient"] == "PASS"
+    assert requirements["landauer_constraint_source_disposition"] == "PASS"
+    assert requirements["state_interface_and_core_composition"] == "PASS"
+    assert core["status"] == "CLOSED_FOR_CORE"
     assert gate["claim_promotion"] is False

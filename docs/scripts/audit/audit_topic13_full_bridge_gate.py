@@ -221,6 +221,15 @@ def main() -> int:
     he4_si_beta_path, he4_si_beta = load(
         "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json"
     )
+    he4_transport_path, he4_transport = load(
+        "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json"
+    )
+    landauer_disposition_path, landauer_disposition = load(
+        "docs/core/artifacts/t13_landauer_core_disposition_audit.json"
+    )
+    he4_core_composition_path, he4_core_composition = load(
+        "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json"
+    )
     ding_source_mapping_path, ding_source_mapping = load(
         "docs/core/artifacts/ding_2022_source_mapping_audit.json"
     )
@@ -772,6 +781,26 @@ def main() -> int:
         and entropy_heat_flux.get("status")
         == "PASS_ACTION_DERIVED_COVARIANT_ENTROPY_HEAT_FLUX_BALANCE_LANE"
     )
+    physical_transport_lane_closed = (
+        he4_transport.get("status") == "PASS_HE4_PHYSICAL_SHEAR_KUBO_TRANSPORT"
+        and he4_transport.get("major_result", {}).get("closure_level") == "CLOSED_FOR_LANE"
+        and he4_transport.get("record_validation", {}).get("status")
+        == "PASS_PHYSICAL_TRANSPORT_RECORD"
+        and all(he4_transport.get("checks", {}).values())
+    )
+    landauer_core_role_closed = (
+        landauer_disposition.get("status") == "PASS_LANDAUER_CORE_ROLE_DISPOSITION"
+        and landauer_disposition.get("major_result", {}).get("closure_level")
+        == "CLOSED_FOR_CORE"
+        and all(landauer_disposition.get("checks", {}).values())
+    )
+    he4_core_composition_closed = (
+        he4_core_composition.get("status")
+        == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+        and he4_core_composition.get("major_result", {}).get("closure_level")
+        == "CLOSED_FOR_CORE"
+        and all(he4_core_composition.get("checks", {}).values())
+    )
     o2_he4_core_requirements = {
         "causal_structure": gates["causal_full_candidate_or_formal_no_go_branch"]["status"],
         "he4_equilibrium_source_anchor": "PASS" if he4_anchor_lane_closed else "BLOCKED",
@@ -780,9 +809,11 @@ def main() -> int:
         "absolute_temperature_scale_uncertainty": "PASS" if absolute_temperature_scale_uncertainty_closed else "BLOCKED",
         "non_circular_natural_bridge": "PASS" if action_natural_bridge_pass else "BLOCKED",
         "formal_eos_and_entropy_interface": "PASS" if formal_eos_entropy_interface_closed else "BLOCKED",
-        "physical_transport_coefficient": gates["eos_transport_kms_entropy"]["status"],
+        "physical_transport_coefficient": "PASS" if physical_transport_lane_closed else "BLOCKED",
         "normalized_beta_and_SI_energy_scale": "PASS" if he4_si_beta_lane_closed else "BLOCKED",
         "dimensional_observable_map": "PASS" if he4_alpha_lane_closed and he4_si_beta_lane_closed else "BLOCKED",
+        "landauer_constraint_source_disposition": "PASS" if landauer_core_role_closed else "BLOCKED",
+        "state_interface_and_core_composition": "PASS" if he4_core_composition_closed else "BLOCKED",
         "holdout_integrity": gates["holdout_integrity"]["status"],
     }
     graphite_validation_requirements = {
@@ -829,6 +860,8 @@ def main() -> int:
         "artifact": "topic13_full_thermodynamic_bridge_core_ready_gate",
         "generated_at": date.today().isoformat(),
         "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY" if all_core_ready else "BLOCKED_OPEN_T13_FULL_BRIDGE",
+        "core_result_status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY" if o2_he4_core_ready else "BLOCKED_T13_O2_HE4_CORE_TRACK",
+        "legacy_graphite_ttg_aggregate_status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY" if all_core_ready else "BLOCKED_OPEN_T13_FULL_BRIDGE",
         "claim_promotion": False,
         "major_result": {
             "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
@@ -868,7 +901,7 @@ def main() -> int:
         },
         "closure_tracks": {
             "o2_he4_core_ready": {
-                "major_result_id": "T13_O2_HE4_THERMODYNAMIC_BRIDGE_CORE_READY",
+                "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
                 "status": "CLOSED_FOR_CORE" if o2_he4_core_ready else "PARTIAL",
                 "requirements": o2_he4_core_requirements,
                 "what_is_closed": [
@@ -877,6 +910,9 @@ def main() -> int:
                     "independent local He-4 alpha_Phi_K calibration and signed action-field normalization Z_Phi",
                     "source-reported property uncertainty bounds conditional on the recommended temperature grid",
                     "ITS-90 scale uncertainty, state-matched SI energy-density convention, normalized beta_T13, and beta_SI",
+                    "one source-locked He II normal-component physical shear Kubo/FDT/entropy channel",
+                    "Landauer source-controller Core-role disposition with external numeric gaps retained",
+                    "explicit natural-action to physical-He-4 state-interface composition",
                     "causal structural no-go and named finite-cone branch contract",
                     "Xie 2026 holdout isolation",
                 ],
@@ -907,8 +943,8 @@ def main() -> int:
         },
         "verification_status": gates,
         "controlling_blocker": primary_blocker,
-        "next_action": "Acquire an independent base-Phi SI energy/observable anchor or paired Phi/SI record; obtain Ding numeric C_src(T) or an accepted independent reproduction; source-lock beta_T13 and one state-matched physical Kubo coefficient; then complete EOS/transport/KMS/entropy gates. The original conserved-C question is closed only as a scoped no-go and remains blocked as the original baseline.",
-        "claim_boundary": "Full Topic 13 is not Core-ready; current evidence supports normalized/internal controls and constraint exports only. No temperature prediction, external validation, or global UET closure is claimed.",
+        "next_action": "Hand the bounded O(2)/He-4 thermal bridge to Core integration. Keep graphite TTG numeric validation, raw Landauer row parity, the original conserved-C baseline, curved 3+1, and external claims on their separate open tracks.",
+        "claim_boundary": "The O(2)/He-4 Topic 13 track is Core-ready when core_result_status passes. The legacy graphite/TTG aggregate remains blocked, Xie 2026 remains locked, and no external validation or global UET closure is claimed.",
         "evidence_artifacts": [
             evidence(rel(branch_path), branch, {"status": branch.get("status"), "controlling_blocker": branch.get("controlling_blocker")}),
             evidence(rel(source_path), source_gate, {"alpha_Phi_K_status": source_policy.get("alpha_Phi_K_status"), "holdout_consumed": source_policy.get("2026_graphite_holdout_consumed")}),
@@ -947,6 +983,24 @@ def main() -> int:
                 "beta_T13": he4_si_beta.get("record", {}).get("beta_T13"),
                 "beta_SI": he4_si_beta.get("record", {}).get("beta_SI_J_m3_per_normalized_Phi2"),
                 "holdout_accessed": he4_si_beta.get("record", {}).get("holdout_policy", {}).get("xie_2026_accessed"),
+            }),
+            evidence(rel(he4_transport_path), he4_transport, {
+                "status": he4_transport.get("status"),
+                "closure_level": he4_transport.get("major_result", {}).get("closure_level"),
+                "coefficient_name": he4_transport.get("record", {}).get("coefficient_name"),
+                "value": he4_transport.get("record", {}).get("value"),
+                "units": he4_transport.get("record", {}).get("units"),
+                "holdout_accessed": he4_transport.get("record", {}).get("holdout_policy", {}).get("xie_2026_accessed"),
+            }),
+            evidence(rel(landauer_disposition_path), landauer_disposition, {
+                "status": landauer_disposition.get("status"),
+                "closure_level": landauer_disposition.get("major_result", {}).get("closure_level"),
+                "external_dataset_gaps_remain_visible": landauer_disposition.get("checks", {}).get("external_dataset_gaps_remain_visible"),
+            }),
+            evidence(rel(he4_core_composition_path), he4_core_composition, {
+                "status": he4_core_composition.get("status"),
+                "closure_level": he4_core_composition.get("major_result", {}).get("closure_level"),
+                "failed_checks": [name for name, passed in he4_core_composition.get("checks", {}).items() if not passed],
             }),
             evidence(rel(farooqui_source_path), farooqui_source, {
                 "status": farooqui_source.get("status"),
