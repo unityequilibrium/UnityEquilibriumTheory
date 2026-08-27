@@ -614,24 +614,28 @@
       "requirements": {
         "causal_structure": "PASS",
         "he4_equilibrium_source_anchor": "PASS",
-        "he4_uncertainty_and_field_normalization": "BLOCKED",
-        "independent_alpha_and_SI_map": "BLOCKED",
-        "non_circular_bridge": "BLOCKED",
-        "eos_transport_kms_entropy": "BLOCKED",
+        "he4_property_uncertainty_bound": "PASS",
+        "independent_alpha_and_field_normalization": "PASS",
+        "absolute_temperature_scale_uncertainty": "BLOCKED",
+        "non_circular_natural_bridge": "PASS",
+        "formal_eos_and_entropy_interface": "PASS",
+        "physical_transport_coefficient": "BLOCKED",
+        "normalized_beta_and_SI_energy_scale": "BLOCKED",
         "dimensional_observable_map": "BLOCKED",
         "holdout_integrity": "PASS"
       },
       "what_is_closed": [
         "formal O(2) thermodynamic lane components already accepted by their individual artifacts",
         "He-4 SVP equilibrium density and superfluid-fraction source anchor",
+        "independent local He-4 alpha_Phi_K calibration and signed action-field normalization Z_Phi",
+        "source-reported property uncertainty bounds conditional on the recommended temperature grid",
         "causal structural no-go and named finite-cone branch contract",
         "Xie 2026 holdout isolation"
       ],
       "what_remains_open": [
-        "he4_uncertainty_and_field_normalization",
-        "independent_alpha_and_SI_map",
-        "non_circular_bridge",
-        "eos_transport_kms_entropy",
+        "absolute_temperature_scale_uncertainty",
+        "physical_transport_coefficient",
+        "normalized_beta_and_SI_energy_scale",
         "dimensional_observable_map"
       ],
       "dependency_unlocked": "No Core dependency unlock",
@@ -80776,6 +80780,18 @@
       "summary": {
         "status": "PASS_HE4_EQUILIBRIUM_SOURCE_ANCHOR_UNCERTAINTY_OPEN",
         "closure_level": "CLOSED_FOR_LANE",
+        "holdout_accessed": false
+      }
+    },
+    {
+      "path": "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json",
+      "sha256": "9d532a794098baa5d0c6343997687cd6226d06b5109646fc5f859abf728bdc5a",
+      "summary": {
+        "status": "PASS_HE4_LOCAL_ALPHA_AND_FIELD_NORMALIZATION",
+        "closure_level": "CLOSED_FOR_LANE",
+        "alpha_Phi_K": -1.02237987858849,
+        "alpha_uncertainty_bound": 0.056753979576408715,
+        "Z_Phi": -0.017488421860832278,
         "holdout_accessed": false
       }
     },

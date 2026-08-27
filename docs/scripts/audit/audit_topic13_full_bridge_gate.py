@@ -215,6 +215,9 @@ def main() -> int:
     he4_anchor_path, he4_anchor = load(
         "docs/core/artifacts/t13_he4_svp_physical_anchor_audit.json"
     )
+    he4_alpha_path, he4_alpha = load(
+        "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json"
+    )
     ding_source_mapping_path, ding_source_mapping = load(
         "docs/core/artifacts/ding_2022_source_mapping_audit.json"
     )
@@ -742,20 +745,33 @@ def main() -> int:
         == "CLOSED_FOR_LANE"
         and all(he4_anchor.get("checks", {}).values())
     )
-    he4_uncertainty_closed = not bool(
-        set(he4_anchor.get("major_result", {}).get("open_blockers", []))
-        & {
-            "property_level_source_uncertainty_not_yet_extracted",
-            "independent_Z_Phi_field_normalization_missing",
-        }
+    he4_alpha_lane_closed = (
+        he4_alpha.get("status")
+        == "PASS_HE4_LOCAL_ALPHA_AND_FIELD_NORMALIZATION"
+        and he4_alpha.get("major_result", {}).get("closure_level")
+        == "CLOSED_FOR_LANE"
+        and all(he4_alpha.get("checks", {}).values())
+    )
+    absolute_temperature_scale_uncertainty_closed = (
+        "absolute_temperature_scale_uncertainty_not_included"
+        not in he4_alpha.get("major_result", {}).get("open_blockers", [])
+    )
+    formal_eos_entropy_interface_closed = (
+        flat_components.get("status")
+        == "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT"
+        and entropy_heat_flux.get("status")
+        == "PASS_ACTION_DERIVED_COVARIANT_ENTROPY_HEAT_FLUX_BALANCE_LANE"
     )
     o2_he4_core_requirements = {
         "causal_structure": gates["causal_full_candidate_or_formal_no_go_branch"]["status"],
         "he4_equilibrium_source_anchor": "PASS" if he4_anchor_lane_closed else "BLOCKED",
-        "he4_uncertainty_and_field_normalization": "PASS" if he4_uncertainty_closed else "BLOCKED",
-        "independent_alpha_and_SI_map": gates["alpha_Phi_K"]["status"],
-        "non_circular_bridge": gates["non_circular_bridge"]["status"],
-        "eos_transport_kms_entropy": gates["eos_transport_kms_entropy"]["status"],
+        "he4_property_uncertainty_bound": "PASS" if he4_alpha_lane_closed else "BLOCKED",
+        "independent_alpha_and_field_normalization": "PASS" if he4_alpha_lane_closed else "BLOCKED",
+        "absolute_temperature_scale_uncertainty": "PASS" if absolute_temperature_scale_uncertainty_closed else "BLOCKED",
+        "non_circular_natural_bridge": "PASS" if action_natural_bridge_pass else "BLOCKED",
+        "formal_eos_and_entropy_interface": "PASS" if formal_eos_entropy_interface_closed else "BLOCKED",
+        "physical_transport_coefficient": gates["eos_transport_kms_entropy"]["status"],
+        "normalized_beta_and_SI_energy_scale": gates["non_circular_bridge"]["status"],
         "dimensional_observable_map": gates["dimensional_observable_map"]["status"],
         "holdout_integrity": gates["holdout_integrity"]["status"],
     }
@@ -848,6 +864,8 @@ def main() -> int:
                 "what_is_closed": [
                     "formal O(2) thermodynamic lane components already accepted by their individual artifacts",
                     "He-4 SVP equilibrium density and superfluid-fraction source anchor",
+                    "independent local He-4 alpha_Phi_K calibration and signed action-field normalization Z_Phi",
+                    "source-reported property uncertainty bounds conditional on the recommended temperature grid",
                     "causal structural no-go and named finite-cone branch contract",
                     "Xie 2026 holdout isolation",
                 ],
@@ -901,6 +919,14 @@ def main() -> int:
                 "status": he4_anchor.get("status"),
                 "closure_level": he4_anchor.get("major_result", {}).get("closure_level"),
                 "holdout_accessed": he4_anchor.get("checks", {}).get("holdout_not_accessed") is not True,
+            }),
+            evidence(rel(he4_alpha_path), he4_alpha, {
+                "status": he4_alpha.get("status"),
+                "closure_level": he4_alpha.get("major_result", {}).get("closure_level"),
+                "alpha_Phi_K": he4_alpha.get("record", {}).get("alpha_Phi_K"),
+                "alpha_uncertainty_bound": he4_alpha.get("record", {}).get("alpha_uncertainty_K_per_normalized_base_Phi"),
+                "Z_Phi": he4_alpha.get("record", {}).get("Z_Phi_normalized_per_natural_Phi"),
+                "holdout_accessed": he4_alpha.get("record", {}).get("holdout_policy", {}).get("xie_2026_accessed"),
             }),
             evidence(rel(farooqui_source_path), farooqui_source, {
                 "status": farooqui_source.get("status"),
