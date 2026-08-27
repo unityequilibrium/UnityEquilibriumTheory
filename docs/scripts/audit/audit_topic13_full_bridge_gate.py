@@ -218,6 +218,9 @@ def main() -> int:
     he4_alpha_path, he4_alpha = load(
         "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json"
     )
+    he4_si_beta_path, he4_si_beta = load(
+        "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json"
+    )
     ding_source_mapping_path, ding_source_mapping = load(
         "docs/core/artifacts/ding_2022_source_mapping_audit.json"
     )
@@ -752,9 +755,16 @@ def main() -> int:
         == "CLOSED_FOR_LANE"
         and all(he4_alpha.get("checks", {}).values())
     )
+    he4_si_beta_lane_closed = (
+        he4_si_beta.get("status")
+        == "PASS_HE4_SI_SCALE_AND_NORMALIZED_BETA"
+        and he4_si_beta.get("major_result", {}).get("closure_level")
+        == "CLOSED_FOR_LANE"
+        and all(he4_si_beta.get("checks", {}).values())
+    )
     absolute_temperature_scale_uncertainty_closed = (
-        "absolute_temperature_scale_uncertainty_not_included"
-        not in he4_alpha.get("major_result", {}).get("open_blockers", [])
+        he4_si_beta_lane_closed
+        and he4_si_beta.get("record", {}).get("temperature_standard_uncertainty_K", 0.0) > 0.0
     )
     formal_eos_entropy_interface_closed = (
         flat_components.get("status")
@@ -771,8 +781,8 @@ def main() -> int:
         "non_circular_natural_bridge": "PASS" if action_natural_bridge_pass else "BLOCKED",
         "formal_eos_and_entropy_interface": "PASS" if formal_eos_entropy_interface_closed else "BLOCKED",
         "physical_transport_coefficient": gates["eos_transport_kms_entropy"]["status"],
-        "normalized_beta_and_SI_energy_scale": gates["non_circular_bridge"]["status"],
-        "dimensional_observable_map": gates["dimensional_observable_map"]["status"],
+        "normalized_beta_and_SI_energy_scale": "PASS" if he4_si_beta_lane_closed else "BLOCKED",
+        "dimensional_observable_map": "PASS" if he4_alpha_lane_closed and he4_si_beta_lane_closed else "BLOCKED",
         "holdout_integrity": gates["holdout_integrity"]["status"],
     }
     graphite_validation_requirements = {
@@ -866,6 +876,7 @@ def main() -> int:
                     "He-4 SVP equilibrium density and superfluid-fraction source anchor",
                     "independent local He-4 alpha_Phi_K calibration and signed action-field normalization Z_Phi",
                     "source-reported property uncertainty bounds conditional on the recommended temperature grid",
+                    "ITS-90 scale uncertainty, state-matched SI energy-density convention, normalized beta_T13, and beta_SI",
                     "causal structural no-go and named finite-cone branch contract",
                     "Xie 2026 holdout isolation",
                 ],
@@ -927,6 +938,15 @@ def main() -> int:
                 "alpha_uncertainty_bound": he4_alpha.get("record", {}).get("alpha_uncertainty_K_per_normalized_base_Phi"),
                 "Z_Phi": he4_alpha.get("record", {}).get("Z_Phi_normalized_per_natural_Phi"),
                 "holdout_accessed": he4_alpha.get("record", {}).get("holdout_policy", {}).get("xie_2026_accessed"),
+            }),
+            evidence(rel(he4_si_beta_path), he4_si_beta, {
+                "status": he4_si_beta.get("status"),
+                "closure_level": he4_si_beta.get("major_result", {}).get("closure_level"),
+                "temperature_standard_uncertainty_K": he4_si_beta.get("record", {}).get("temperature_standard_uncertainty_K"),
+                "energy_density_scale_J_m3": he4_si_beta.get("record", {}).get("energy_density_scale_J_m3"),
+                "beta_T13": he4_si_beta.get("record", {}).get("beta_T13"),
+                "beta_SI": he4_si_beta.get("record", {}).get("beta_SI_J_m3_per_normalized_Phi2"),
+                "holdout_accessed": he4_si_beta.get("record", {}).get("holdout_policy", {}).get("xie_2026_accessed"),
             }),
             evidence(rel(farooqui_source_path), farooqui_source, {
                 "status": farooqui_source.get("status"),

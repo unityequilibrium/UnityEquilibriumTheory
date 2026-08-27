@@ -616,12 +616,12 @@
         "he4_equilibrium_source_anchor": "PASS",
         "he4_property_uncertainty_bound": "PASS",
         "independent_alpha_and_field_normalization": "PASS",
-        "absolute_temperature_scale_uncertainty": "BLOCKED",
+        "absolute_temperature_scale_uncertainty": "PASS",
         "non_circular_natural_bridge": "PASS",
         "formal_eos_and_entropy_interface": "PASS",
         "physical_transport_coefficient": "BLOCKED",
-        "normalized_beta_and_SI_energy_scale": "BLOCKED",
-        "dimensional_observable_map": "BLOCKED",
+        "normalized_beta_and_SI_energy_scale": "PASS",
+        "dimensional_observable_map": "PASS",
         "holdout_integrity": "PASS"
       },
       "what_is_closed": [
@@ -629,14 +629,12 @@
         "He-4 SVP equilibrium density and superfluid-fraction source anchor",
         "independent local He-4 alpha_Phi_K calibration and signed action-field normalization Z_Phi",
         "source-reported property uncertainty bounds conditional on the recommended temperature grid",
+        "ITS-90 scale uncertainty, state-matched SI energy-density convention, normalized beta_T13, and beta_SI",
         "causal structural no-go and named finite-cone branch contract",
         "Xie 2026 holdout isolation"
       ],
       "what_remains_open": [
-        "absolute_temperature_scale_uncertainty",
-        "physical_transport_coefficient",
-        "normalized_beta_and_SI_energy_scale",
-        "dimensional_observable_map"
+        "physical_transport_coefficient"
       ],
       "dependency_unlocked": "No Core dependency unlock",
       "claim_boundary": "This is the physical O(2)/He-4 Core track. It does not include graphite TTG external validation and does not close global UET."
@@ -80792,6 +80790,19 @@
         "alpha_Phi_K": -1.02237987858849,
         "alpha_uncertainty_bound": 0.056753979576408715,
         "Z_Phi": -0.017488421860832278,
+        "holdout_accessed": false
+      }
+    },
+    {
+      "path": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
+      "sha256": "bc5293b4b143dc9666e1e747405970e2f2e102abdb1338836fc27f6be5e47a97",
+      "summary": {
+        "status": "PASS_HE4_SI_SCALE_AND_NORMALIZED_BETA",
+        "closure_level": "CLOSED_FOR_LANE",
+        "temperature_standard_uncertainty_K": 0.0002,
+        "energy_density_scale_J_m3": 512994.17164886114,
+        "beta_T13": -0.007936042649802305,
+        "beta_SI": -4071.143625305366,
         "holdout_accessed": false
       }
     },
