@@ -667,7 +667,7 @@
     "docs/core/artifacts/matter_space_dependency_gate.json": "5af4debf7c189ac255d074eaaf1dbab7515721d480f200d6cb56c13b3a52ede5",
     "docs/core/artifacts/spacetime_trace_verification.json": "1ba232f1d8d0e13e1492b7465e2afabd44639d7af5c88100a1d759ed53a75e27",
     "docs/core/artifacts/gr_closed_limit_verification.json": "daecc68f691d897d58471e7bad65b4f4221648fcd00c9543695d3def092e32a4",
-    "docs/core/artifacts/o2_finite_density_eos_verification.json": "c563c8b931feea5ed70486c43ed969ce568bd2015d4e22da9578e564152505dc",
-    "docs/core/artifacts/o2_eos_formula_audit.json": "c21aa5ed0570398c481d5f5ee97abe3d24bc5e08e4da7ceae2be159e5ca92e25"
+    "docs/core/artifacts/o2_finite_density_eos_verification.json": "b1eb981c917ab62782f47452108417b46e5b8cc2e1b7e6645fffd4bd7dd630da",
+    "docs/core/artifacts/o2_eos_formula_audit.json": "752867e1338d0a8a757ec23ac309ac405973c848faf67d720d0e924cdf6cab14"
   }
 }

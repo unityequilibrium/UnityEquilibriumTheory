@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "source_id": "gundlach_martin_garcia_2006_well_posedness",
+  "title": "Well-posedness of formulations of the Einstein equations with dynamical lapse and shift conditions",
+  "authors": [
+    "Carsten Gundlach",
+    "Jose M. Martin-Garcia"
+  ],
+  "year": 2006,
+  "arxiv_id": "gr-qc/0604035",
+  "doi": "10.1103/PhysRevD.74.024016",
+  "url": "https://arxiv.org/abs/gr-qc/0604035",
+  "source_role": "formulation hyperbolicity and gauge-condition boundary reference",
+  "used_scope": [
+    "ADM/BSSN/NOR hyperbolicity depends on formulation and gauge",
+    "fixed or non-hyperbolic gauge choices do not establish a well-posed hyperbolic evolution system",
+    "strong-hyperbolicity must be checked at the principal-symbol level"
+  ],
+  "not_used_for": [
+    "claim that the local numerical no-go is a continuum theorem for every ADM variant",
+    "UET coefficient fitting",
+    "physical validation",
+    "claim that UET derives Einstein equations"
+  ],
+  "local_payload": "metadata-only source record; no redistributed PDF",
+  "accessed_on": "2026-08-28"
+}

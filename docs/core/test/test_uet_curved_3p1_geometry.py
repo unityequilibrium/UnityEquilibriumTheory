@@ -141,7 +141,11 @@ def test_parent_and_dependency_gates_remain_partial_and_block_gravity() -> None:
     dependency = json.loads(DEPENDENCY.read_text(encoding="utf-8"))
     levels = {entry["major_result_id"]: entry["closure_level"] for entry in register["entries"]}
     assert gate["requirements"]["metric_to_ricci_operator"] == "PASS"
-    assert gate["requirements"]["metric_and_extrinsic_curvature_evolution"] == "OPEN"
+    assert (
+        gate["requirements"]["metric_and_extrinsic_curvature_evolution"]
+        == "PARTIAL_RHS_OPERATOR_ONLY"
+    )
+    assert gate["requirements"]["strong_hyperbolicity"] == "OPEN_GENERALIZED_HARMONIC"
     assert gate["major_result"]["closure_level"] == "PARTIAL"
     assert levels["CORE_CURVED_3P1_GEOMETRY_OPERATOR_READY"] == "CLOSED_FOR_LANE"
     assert dependency["curved_3p1_progress"]["geometry_operator"]["closure_level"] == "CLOSED_FOR_LANE"

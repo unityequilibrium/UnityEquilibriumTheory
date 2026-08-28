@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_main_theory_wave5_gate",
-  "generated_at": "2026-08-28T05:57:05.607869+00:00",
+  "generated_at": "2026-08-28T06:23:45.261970+00:00",
   "audit_status": "PASS",
   "theory_spine_status": "PASS_MINKOWSKI_1P1_CONTROL_CURVED_BLOCKED",
   "upstream_gate": "uet_main_theory_wave4_gate.json",
@@ -15,16 +15,16 @@
     "fixed_background_disclosed": true,
     "curved_claim_blocked": true
   },
-  "controlling_blocker": "curved_3p1_gauge_evolution_hyperbolicity_and_constraint_propagation_missing",
+  "controlling_blocker": "curved_3p1_generalized_harmonic_evolution_constraint_damping_and_propagation_missing",
   "claim_promotion": false,
   "curved_3p1_companion_progress": {
     "parent_gate": "core_curved_3p1_parent_gate.json",
-    "parent_status": "PARTIAL_CURVED_3P1_PARENT_GEOMETRY_OPERATOR_READY",
+    "parent_status": "PARTIAL_CURVED_3P1_ADM_EVOLUTION_NOGO_READY",
     "parent_closure_level": "PARTIAL",
     "adm_constraint_interface": "PASS",
     "metric_to_ricci_operator": "PASS",
     "spatial_geometry_convergence": "PASS",
-    "metric_and_extrinsic_curvature_evolution": "OPEN",
+    "metric_and_extrinsic_curvature_evolution": "PARTIAL_RHS_OPERATOR_ONLY",
     "constraint_propagation": "OPEN",
     "claim_boundary": "partial parent construction; not CLOSED_FOR_CORE and not Gravity/GR compatibility"
   },

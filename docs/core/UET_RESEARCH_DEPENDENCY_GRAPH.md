@@ -25,6 +25,19 @@ artifacts may remain useful as diagnostics, but they cannot promote a claim
 while the upstream ontology, units, correspondence, or numerical gate is
 blocked.
 
+## Latest plan update - 2026-08-28 ADM evolution and formulation selection
+
+`CORE_CURVED_3P1_ADM_EVOLUTION_RHS_READY` is closed for the nonlinear periodic
+right-hand-side operator lane. The fixed-geodesic ADM strong-hyperbolicity
+question is also closed as a branch-local no-go: the principal symbol has an
+incomplete zero-speed eigenspace in every preregistered direction.
+
+The next edge is no longer an open-ended ADM rerun. It is the source-locked
+first-order generalized-harmonic branch with explicit characteristic-field,
+constraint-damping/propagation, convergence, and boundary gates.
+`CORE_CURVED_3P1_OBSERVABLE_PARENT_READY` remains `PARTIAL`, and Gravity
+remains blocked.
+
 ## Latest plan update - 2026-08-28 curved 3+1 geometry operator
 
 The second curved-parent subresult,

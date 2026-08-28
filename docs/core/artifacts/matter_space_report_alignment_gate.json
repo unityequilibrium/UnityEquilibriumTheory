@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "artifact": "matter_space_report_alignment_gate",
-  "generated_at": "2026-08-28T05:51:44.261788+00:00",
-  "source_snapshot_at": "2026-08-28T05:51:43.274211+00:00",
+  "generated_at": "2026-08-28T06:28:23.622252+00:00",
+  "source_snapshot_at": "2026-08-28T06:28:23+00:00",
   "status": "WARN",
   "alignment_status": "PASS_WITH_HISTORICAL_BASE_REPORT_WARN",
   "evidence_status": "POST_WAVE10_ADDENDUM_ALIGNED_BASE_SNAPSHOT_RETAINED",
@@ -20,21 +20,21 @@
     },
     "gr_program": {
       "path": "docs/core/artifacts/uet_gr_research_program_gate.json",
-      "sha256": "ae3c9d590b941729aa2d895e78652c42dd854c3f8ef9ba655b3e5a862c6c60e9",
+      "sha256": "0e82a757dfa7b341492c7c424c7d236acdeff0e732b417b53bd17794af0f34d6",
       "status": "BLOCKED",
       "program_stage": "O2_FINITE_DENSITY_EOS_AND_T0_SUPERFLUID_CONSTITUTIVE_VERIFIED",
       "controlling_blocker": "physical_kubo_coefficient_evidence_and_curved_3p1_solver_missing"
     },
     "noether_dependency": {
       "path": "docs/core/artifacts/noether_phase_field_dependency_gate.json",
-      "sha256": "107976ea5385d632d342e4ba6db02b0f8b9a9bf92c0d6557c05e9cac65a88200",
+      "sha256": "40d09de98d5b25fb79ef5402791d07a9b6d91089d45ae6bcfe3c9852279ebdc0",
       "status": "BLOCKED",
       "evidence_status": "PARTIAL_HYDRODYNAMIC_STATE_COORDINATE_MAP",
       "controlling_blocker": "noether_charge_equation_of_state_and_covariant_transport_matching_missing"
     },
     "topic_0_11_dependency": {
       "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_noether_phase_field_dependency_gate.json",
-      "sha256": "00dd107b017089173ebbf720ad4df16174776f177a158aa130fab9a8d3f049fe",
+      "sha256": "eddbdfac7d526058554c81543aee17439bb0a112dcb1cfa588c11d2a880813b5",
       "status": "BLOCKED",
       "evidence_status": "CONDITIONAL_HYDRODYNAMIC_COORDINATE_COMPATIBILITY",
       "controlling_blocker": "topic_0_11_signed_noether_charge_eos_transport_matching_missing",

@@ -55,6 +55,10 @@ Current foundation artifacts:
 - [Curved 3+1 parent dependency gate](./artifacts/core_curved_3p1_parent_gate.json)
 - [Curved 3+1 periodic geometry operator](./uet_curved_3p1_geometry.py)
 - [Curved 3+1 geometry verification](./artifacts/curved_3p1_geometry_operator_verification.json)
+- [Curved 3+1 ADM evolution RHS](./uet_curved_3p1_adm_evolution.py)
+- [Curved 3+1 ADM evolution verification](./artifacts/curved_3p1_adm_evolution_operator_verification.json)
+- [Fixed-gauge ADM hyperbolicity no-go](./artifacts/curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json)
+- [Curved 3+1 evolution branch specification](./CORE_CURVED_3P1_EVOLUTION_BRANCH_SPEC.md)
 
 > **Historical engine layer for candidate UET equation families**
 > **Version 0.9.0** | Last Updated: 2026-01-13

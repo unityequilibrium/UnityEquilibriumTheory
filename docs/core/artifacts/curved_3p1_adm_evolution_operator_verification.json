@@ -1,0 +1,400 @@
+{
+  "schema_version": "1.0",
+  "artifact": "curved_3p1_adm_evolution_operator_verification",
+  "generated_at": "2026-08-28T06:21:42.614903+00:00",
+  "topic": "docs/core curved 3+1 parent",
+  "version": "adm-evolution-rhs-v1",
+  "benchmark_role": "internal analytic operator and gauge-derivative gate",
+  "method_label": "nonlinear periodic ADM RHS with declared lapse and shift",
+  "status": "PASS_ADM_EVOLUTION_RHS_OPERATOR_ONLY",
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_ADM_EVOLUTION_RHS_READY",
+    "topic": "core",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "nonlinear periodic ADM metric right-hand side",
+      "nonlinear periodic ADM extrinsic-curvature right-hand side",
+      "declared lapse-Hessian and shift-Lie derivative terms",
+      "Minkowski and dust-FLRW analytic controls",
+      "second-order lapse/shift derivative convergence controls"
+    ],
+    "equation_or_mapping": {
+      "metric_evolution": "d_t gamma_ij = -2 alpha K_ij + L_beta gamma_ij",
+      "curvature_evolution": "d_t K_ij = -D_i D_j alpha + alpha[R_ij + K K_ij - 2 K_ik K^k_j - 8 pi G(S_ij - gamma_ij(S-rho)/2) - Lambda gamma_ij] + L_beta K_ij"
+    },
+    "units": {
+      "gamma_ij": "dimensionless chart component",
+      "K_ij": "L^-1",
+      "R_ij": "L^-2",
+      "rho_and_S_ij_with_G": "L^-2",
+      "d_t_gamma_ij": "L^-1",
+      "d_t_K_ij": "L^-2"
+    },
+    "derivation_class": "standard ADM evolution transcription plus second-order numerical derivatives",
+    "observable": "metric/K right-hand-side diagnostics; no detector observable",
+    "data_role": "analytic controls only; no fit, calibration, or holdout",
+    "verification_status": "PASS_ADM_EVOLUTION_RHS_OPERATOR_ONLY",
+    "open_blockers": [
+      "strongly-hyperbolic generalized-harmonic evolution",
+      "time integration and CFL policy",
+      "constraint damping and propagation verification",
+      "non-periodic constraint-preserving boundaries",
+      "Topic 13 stress-energy evolution/projection wiring",
+      "SI detector-observable mapping"
+    ],
+    "dependency_unlocked": "formulation-selection and generalized-harmonic implementation wave only",
+    "claim_boundary": "standard ADM RHS operator and fixed-gauge formulation no-go only; not a well-posed numerical-relativity evolution system or GR validation"
+  },
+  "sources": {
+    "adm_equations": {
+      "schema_version": "1.0",
+      "source_id": "gourgoulhon_2007_3p1_formalism",
+      "title": "3+1 Formalism and Bases of Numerical Relativity",
+      "author": "Eric Gourgoulhon",
+      "year": 2007,
+      "arxiv_id": "gr-qc/0703035",
+      "url": "https://arxiv.org/abs/gr-qc/0703035",
+      "source_role": "standard-physics formula and sign-convention reference",
+      "used_scope": [
+        "3+1 decomposition terminology",
+        "Hamiltonian constraint structure",
+        "momentum constraint structure",
+        "initial-data and gauge separation",
+        "spatial Levi-Civita connection",
+        "spatial Ricci tensor and scalar",
+        "covariant divergence in the momentum constraint"
+      ],
+      "not_used_for": [
+        "UET coefficient fitting",
+        "physical validation",
+        "claim that UET derives Einstein equations"
+      ],
+      "local_payload": "metadata-only source record; no redistributed PDF",
+      "accessed_on": "2026-08-28"
+    },
+    "hyperbolicity_boundary": {
+      "schema_version": "1.0",
+      "source_id": "gundlach_martin_garcia_2006_well_posedness",
+      "title": "Well-posedness of formulations of the Einstein equations with dynamical lapse and shift conditions",
+      "authors": [
+        "Carsten Gundlach",
+        "Jose M. Martin-Garcia"
+      ],
+      "year": 2006,
+      "arxiv_id": "gr-qc/0604035",
+      "doi": "10.1103/PhysRevD.74.024016",
+      "url": "https://arxiv.org/abs/gr-qc/0604035",
+      "source_role": "formulation hyperbolicity and gauge-condition boundary reference",
+      "used_scope": [
+        "ADM/BSSN/NOR hyperbolicity depends on formulation and gauge",
+        "fixed or non-hyperbolic gauge choices do not establish a well-posed hyperbolic evolution system",
+        "strong-hyperbolicity must be checked at the principal-symbol level"
+      ],
+      "not_used_for": [
+        "claim that the local numerical no-go is a continuum theorem for every ADM variant",
+        "UET coefficient fitting",
+        "physical validation",
+        "claim that UET derives Einstein equations"
+      ],
+      "local_payload": "metadata-only source record; no redistributed PDF",
+      "accessed_on": "2026-08-28"
+    },
+    "next_generalized_harmonic_branch": {
+      "schema_version": "1.0",
+      "source_id": "lindblom_et_al_2006_generalized_harmonic",
+      "title": "A New Generalized Harmonic Evolution System",
+      "authors": [
+        "Lee Lindblom",
+        "Mark A. Scheel",
+        "Lawrence E. Kidder",
+        "Robert Owen",
+        "Oliver Rinne"
+      ],
+      "year": 2006,
+      "arxiv_id": "gr-qc/0512093",
+      "doi": "10.1088/0264-9381/23/16/S09",
+      "url": "https://arxiv.org/abs/gr-qc/0512093",
+      "source_role": "preregistered next-branch formulation and constraint-damping reference",
+      "used_scope": [
+        "first-order generalized-harmonic variables and gauge-source concept",
+        "symmetric-hyperbolic formulation target",
+        "constraint-damping and constraint-preserving boundary target"
+      ],
+      "not_used_for": [
+        "claim that a generalized-harmonic UET branch is already implemented",
+        "claim that periodic ADM controls validate black-hole evolution",
+        "UET coefficient fitting",
+        "external physical validation"
+      ],
+      "local_payload": "metadata-only source record; no redistributed PDF",
+      "accessed_on": "2026-08-28"
+    }
+  },
+  "source_hashes": {
+    "docs/core/uet_curved_3p1_adm_evolution.py": "257fdbc032fac4a4402307c68d2bf4ddec81162b5d3a051e234e445e6c539c20",
+    "docs/scripts/audit/audit_uet_curved_3p1_adm_evolution.py": "c673d75b1ffec3d2dc7985afd585f477ef3381b6e1aecec6a45a49737ad0228c",
+    "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json": "d989b9dd637828dd64f975eaf1f744163ac71e362bde71e46e86e599eced1754",
+    "docs/data/external/gr_3p1/gundlach_martin_garcia_2006/source_record.json": "d9153620dad37fb08328b8dd308394023ac53b904b8ee2f4bf3a2239c0e200fc",
+    "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "b8995dc5d47a642dadcef5afe0074babd0c67300133c29bf15e3a14f3a847452"
+  },
+  "input_identity": {
+    "module": "docs/core/uet_curved_3p1_adm_evolution.py",
+    "analytic_controls": [
+      "Minkowski vacuum",
+      "spatially-flat dust FLRW",
+      "sinusoidal lapse Hessian",
+      "sinusoidal shift Lie derivative"
+    ],
+    "negative_controls": [
+      "non-positive lapse",
+      "invalid stress shape"
+    ]
+  },
+  "config": {
+    "signature": "(-,+,+,+)",
+    "extrinsic_curvature_convention": "K_ij=-(1/2)L_n gamma_ij",
+    "boundary_condition": "periodic_all_axes",
+    "resolutions": [
+      12,
+      24,
+      48
+    ],
+    "gauge_amplitude": 0.05,
+    "time_integrator": null,
+    "parameter_fitting": false,
+    "field_clipping": false
+  },
+  "thresholds": {
+    "analytic_rhs_max_abs": 1e-12,
+    "minimum_gauge_spatial_order": 1.8,
+    "maximum_characteristic_polynomial_residual": 1e-12,
+    "expected_zero_algebraic_multiplicity": 6,
+    "expected_zero_geometric_multiplicity": 3,
+    "expected_eigenvector_rank": 9
+  },
+  "metrics": {
+    "minkowski_metric_rhs_max_abs": 0.0,
+    "minkowski_curvature_rhs_max_abs": 0.0,
+    "flrw_metric_rhs_max_abs_error": 0.0,
+    "flrw_curvature_rhs_max_abs_error": 1.734723475976807e-17,
+    "lapse_hessian_l2_errors": [
+      0.0010383786150741107,
+      0.0002667977997294831,
+      6.715798198214879e-05
+    ],
+    "lapse_hessian_observed_orders": [
+      1.9605139032831735,
+      1.9901159839637979
+    ],
+    "shift_lie_l2_errors": [
+      0.0010623181356239281,
+      0.00026832511575144264,
+      6.725393123734638e-05
+    ],
+    "shift_lie_observed_orders": [
+      1.9851618740077863,
+      1.9962915939448822
+    ],
+    "principal_symbols": [
+      {
+        "direction": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "eigenvalues_real_sorted": [
+          -1.0,
+          -1.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "maximum_eigenvalue_imaginary_part": 0.0,
+        "characteristic_polynomial_residual": 0.0,
+        "zero_algebraic_multiplicity": 6,
+        "zero_geometric_multiplicity": 3,
+        "eigenvector_rank": 9,
+        "complete_eigenbasis": false,
+        "classification": "DEFECTIVE_ZERO_SPEED_JORDAN_BLOCK"
+      },
+      {
+        "direction": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "eigenvalues_real_sorted": [
+          -1.0,
+          -1.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "maximum_eigenvalue_imaginary_part": 0.0,
+        "characteristic_polynomial_residual": 0.0,
+        "zero_algebraic_multiplicity": 6,
+        "zero_geometric_multiplicity": 3,
+        "eigenvector_rank": 9,
+        "complete_eigenbasis": false,
+        "classification": "DEFECTIVE_ZERO_SPEED_JORDAN_BLOCK"
+      },
+      {
+        "direction": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "eigenvalues_real_sorted": [
+          -1.0,
+          -1.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "maximum_eigenvalue_imaginary_part": 0.0,
+        "characteristic_polynomial_residual": 0.0,
+        "zero_algebraic_multiplicity": 6,
+        "zero_geometric_multiplicity": 3,
+        "eigenvector_rank": 9,
+        "complete_eigenbasis": false,
+        "classification": "DEFECTIVE_ZERO_SPEED_JORDAN_BLOCK"
+      },
+      {
+        "direction": [
+          0.5773502691896258,
+          0.5773502691896258,
+          0.5773502691896258
+        ],
+        "eigenvalues_real_sorted": [
+          -1.0,
+          -0.9999999999999999,
+          -0.9999999999999998,
+          -3.4858530363779314e-09,
+          -3.4858530363779314e-09,
+          9.39812274149313e-17,
+          9.39812274149313e-17,
+          3.485853177137532e-09,
+          3.485853177137532e-09,
+          0.9999999999999998,
+          0.9999999999999998,
+          1.0000000000000002
+        ],
+        "maximum_eigenvalue_imaginary_part": 1.7722796030307372e-08,
+        "characteristic_polynomial_residual": 1.942890293094024e-16,
+        "zero_algebraic_multiplicity": 6,
+        "zero_geometric_multiplicity": 3,
+        "eigenvector_rank": 9,
+        "complete_eigenbasis": false,
+        "classification": "DEFECTIVE_ZERO_SPEED_JORDAN_BLOCK"
+      },
+      {
+        "direction": [
+          0.25400025400038106,
+          -0.38100038100057154,
+          0.8890008890013336
+        ],
+        "eigenvalues_real_sorted": [
+          -1.0000000000000007,
+          -1.0,
+          -0.9999999999999999,
+          -2.53264933809206e-09,
+          -2.53264933809206e-09,
+          -1.7546530579767635e-16,
+          -1.7546530579767635e-16,
+          2.5326495471543765e-09,
+          2.5326495471543765e-09,
+          0.9999999999999993,
+          0.9999999999999998,
+          1.0000000000000002
+        ],
+        "maximum_eigenvalue_imaginary_part": 1.619945176405199e-08,
+        "characteristic_polynomial_residual": 1.8041124150158794e-16,
+        "zero_algebraic_multiplicity": 6,
+        "zero_geometric_multiplicity": 3,
+        "eigenvector_rank": 9,
+        "complete_eigenbasis": false,
+        "classification": "DEFECTIVE_ZERO_SPEED_JORDAN_BLOCK"
+      }
+    ]
+  },
+  "checks": {
+    "source_identities_locked": true,
+    "minkowski_fixed_point": true,
+    "dust_flrw_rhs": true,
+    "lapse_hessian_spatial_convergence": true,
+    "shift_lie_spatial_convergence": true,
+    "fixed_gauge_characteristic_polynomial": true,
+    "fixed_gauge_zero_jordan_defect": true,
+    "invalid_lapse_rejected": true,
+    "invalid_stress_rejected": true,
+    "no_time_integration_clipping_or_fitting": true,
+    "ontology_preserved": true,
+    "generalized_harmonic_not_claimed_implemented": true
+  },
+  "contract": {
+    "status": "ADM_RHS_READY_FIXED_GAUGE_STRONG_HYPERBOLICITY_REJECTED",
+    "signature": "(-,+,+,+)",
+    "extrinsic_curvature_convention": "K_ij = -(1/2) L_n gamma_ij",
+    "unit_lane": "geometric periodic Cartesian chart",
+    "relations": {
+      "metric_evolution": "d_t gamma_ij = -2 alpha K_ij + L_beta gamma_ij",
+      "curvature_evolution": "d_t K_ij = -D_i D_j alpha + alpha[R_ij + K K_ij - 2 K_ik K^k_j - 8 pi G(S_ij - gamma_ij(S-rho)/2) - Lambda gamma_ij] + L_beta K_ij"
+    },
+    "branch_decision": {
+      "fixed_geodesic_adm": "REJECTED_FOR_STRONG_HYPERBOLIC_PARENT",
+      "reason": "linearized pseudo-differential principal symbol has a defective zero-speed eigenspace",
+      "next_branch": "FIRST_ORDER_GENERALIZED_HARMONIC",
+      "next_branch_status": "PREREGISTERED_NOT_IMPLEMENTED"
+    },
+    "ontology": {
+      "gamma_ij": "standard spatial metric; not Phi",
+      "K_ij": "standard extrinsic curvature; not Pi",
+      "matter_projection": "external stress-energy projection; not universal C",
+      "R_gen": "excluded derived history trace",
+      "R_obs": "excluded observer record"
+    },
+    "implemented": [
+      "nonlinear periodic ADM metric RHS",
+      "nonlinear periodic ADM extrinsic-curvature RHS",
+      "declared lapse/shift and their derivative terms",
+      "Eulerian matter-stress source term",
+      "fixed-gauge linearized principal-symbol audit"
+    ],
+    "not_implemented": [
+      "strongly-hyperbolic generalized-harmonic evolution",
+      "time integration and CFL policy",
+      "constraint damping and propagation verification",
+      "non-periodic constraint-preserving boundaries",
+      "Topic 13 stress-energy evolution/projection wiring",
+      "SI detector-observable mapping"
+    ],
+    "claim_boundary": "standard ADM RHS operator and fixed-gauge formulation no-go only; not a well-posed numerical-relativity evolution system or GR validation"
+  },
+  "notes": [
+    "RHS verification is not a well-posed time-evolution proof.",
+    "FLRW is an instantaneous equation control with externally declared dust stress, not a cosmology validation.",
+    "The fixed-gauge ADM hyperbolicity failure is preserved and selects a separate generalized-harmonic branch."
+  ],
+  "claim_promotion": false
+}

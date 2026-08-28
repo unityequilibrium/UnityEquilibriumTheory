@@ -6,6 +6,14 @@
 
 ## Entries
 
+### 2026-08-28 - Select generalized harmonic after fixed-gauge ADM no-go
+
+- Scope: curved 3+1 companion branch after Topic 13 Core closure
+- Result: ADM nonlinear RHS is closed operator-only; fixed-geodesic ADM is closed as a strong-hyperbolicity no-go; the parent remains `PARTIAL`
+- Verified with: analytic RHS controls, second-order spatial derivative convergence, principal-symbol defect audit, major-result register, dependency gate, and theory-spine audit
+- Next controller: `curved_3p1_generalized_harmonic_evolution_constraint_damping_and_propagation_missing`
+- Claim impact: no global theory, Gravity, or external-validation promotion
+
 ### 2026-08-28 - Synchronize Wave 5 with curved 3+1 companion progress
 
 - Scope: fixed-Minkowski Wave 5 gate and the separate curved 3+1 parent dependency

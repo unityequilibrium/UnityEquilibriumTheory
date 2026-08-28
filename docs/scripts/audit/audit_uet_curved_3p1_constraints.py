@@ -32,6 +32,10 @@ GATE = ARTIFACTS / "core_curved_3p1_parent_gate.json"
 ADDENDUM = ARTIFACTS / "uet_equation_correspondence_registry_curved_3p1_addendum.json"
 GEOMETRY_VERIFY = ARTIFACTS / "curved_3p1_geometry_operator_verification.json"
 GEOMETRY_FORMULA = ARTIFACTS / "curved_3p1_geometry_operator_formula_audit.json"
+EVOLUTION_VERIFY = ARTIFACTS / "curved_3p1_adm_evolution_operator_verification.json"
+HYPERBOLICITY_NO_GO = ARTIFACTS / "curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json"
+EVOLUTION_FORMULA = ARTIFACTS / "curved_3p1_adm_evolution_formula_audit.json"
+FORMULATION_SELECTION = ARTIFACTS / "curved_3p1_formulation_selection_gate.json"
 
 
 def _sha256(path: Path) -> str:
@@ -43,12 +47,26 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
     source = json.loads(SOURCE.read_text(encoding="utf-8"))
     geometry_verification = json.loads(GEOMETRY_VERIFY.read_text(encoding="utf-8"))
     geometry_formula = json.loads(GEOMETRY_FORMULA.read_text(encoding="utf-8"))
+    evolution_verification = json.loads(EVOLUTION_VERIFY.read_text(encoding="utf-8"))
+    hyperbolicity_no_go = json.loads(HYPERBOLICITY_NO_GO.read_text(encoding="utf-8"))
+    evolution_formula = json.loads(EVOLUTION_FORMULA.read_text(encoding="utf-8"))
+    formulation_selection = json.loads(FORMULATION_SELECTION.read_text(encoding="utf-8"))
     geometry_passed = (
         geometry_verification.get("status") == "PASS_CURVED_3P1_GEOMETRY_OPERATOR"
         and geometry_verification.get("major_result", {}).get("closure_level")
         == "CLOSED_FOR_LANE"
         and geometry_formula.get("status") == "PASS_NUMERICAL_GEOMETRY_FORMULAS"
         and all(geometry_verification.get("checks", {}).values())
+    )
+    evolution_passed = (
+        evolution_verification.get("status") == "PASS_ADM_EVOLUTION_RHS_OPERATOR_ONLY"
+        and evolution_verification.get("major_result", {}).get("closure_level")
+        == "CLOSED_FOR_LANE"
+        and hyperbolicity_no_go.get("status", "").startswith("CLOSED_AS_NO_GO")
+        and evolution_formula.get("status")
+        == "PASS_RHS_FORMULAS_WITH_HYPERBOLICITY_NO_GO"
+        and formulation_selection.get("status")
+        == "PASS_SELECT_GENERALIZED_HARMONIC_NEXT_BRANCH"
     )
     threshold = 1e-12
 
@@ -238,9 +256,12 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
         "adm_constraint_interface": "PASS" if passed else "FAIL",
         "metric_to_ricci_operator": "PASS" if geometry_passed else "OPEN",
         "spatial_geometry_convergence": "PASS" if geometry_passed else "OPEN",
-        "lapse_shift_gauge": "OPEN",
-        "metric_and_extrinsic_curvature_evolution": "OPEN",
-        "strong_hyperbolicity": "OPEN",
+        "adm_metric_k_evolution_rhs_operator": "PASS" if evolution_passed else "OPEN",
+        "fixed_gauge_adm_hyperbolicity": "CLOSED_AS_NO_GO" if evolution_passed else "OPEN",
+        "formulation_selection": "PASS" if evolution_passed else "OPEN",
+        "lapse_shift_gauge": "OPEN_GENERALIZED_HARMONIC",
+        "metric_and_extrinsic_curvature_evolution": "PARTIAL_RHS_OPERATOR_ONLY" if evolution_passed else "OPEN",
+        "strong_hyperbolicity": "OPEN_GENERALIZED_HARMONIC",
         "constraint_propagation": "OPEN",
         "temporal_spatial_convergence": "OPEN",
         "topic13_stress_energy_projection": "OPEN",
@@ -250,7 +271,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
         "schema_version": "1.0",
         "artifact": "core_curved_3p1_parent_gate",
         "generated_at": now,
-        "status": "PARTIAL_CURVED_3P1_PARENT_GEOMETRY_OPERATOR_READY" if passed and geometry_passed else ("PARTIAL_CURVED_3P1_PARENT_CONSTRAINT_INTERFACE_READY" if passed else "BLOCKED"),
+        "status": "PARTIAL_CURVED_3P1_ADM_EVOLUTION_NOGO_READY" if passed and geometry_passed and evolution_passed else ("PARTIAL_CURVED_3P1_PARENT_GEOMETRY_OPERATOR_READY" if passed and geometry_passed else ("PARTIAL_CURVED_3P1_PARENT_CONSTRAINT_INTERFACE_READY" if passed else "BLOCKED")),
         "major_result": {
             "major_result_id": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
             "topic": "core",
@@ -260,24 +281,37 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "periodic-grid metric-to-Ricci operator",
                 "periodic-grid covariant momentum-tensor divergence",
                 "second-order spatial geometry convergence",
-            ] if passed and geometry_passed else (["ADM constraint evaluation interface"] if passed else [])),
+                "nonlinear periodic ADM metric/K right-hand-side operator",
+                "second-order lapse-Hessian and shift-Lie convergence controls",
+                "fixed-gauge ADM strong-hyperbolicity branch closed as no-go",
+                "first-order generalized-harmonic next branch selected",
+            ] if passed and geometry_passed and evolution_passed else ([
+                "ADM constraint evaluation interface",
+                "periodic-grid metric-to-Ricci operator",
+                "periodic-grid covariant momentum-tensor divergence",
+                "second-order spatial geometry convergence",
+            ] if passed and geometry_passed else (["ADM constraint evaluation interface"] if passed else []))),
             "equation_or_mapping": contract["equations"],
             "units": "geometric constraint lane; SI observable mapping open",
             "derivation_class": "incremental curved 3+1 parent construction",
             "observable": "constraint residual diagnostics only",
             "data_role": "internal analytic controls",
-            "verification_status": "PARTIAL_CURVED_3P1_PARENT_GEOMETRY_OPERATOR_READY" if passed and geometry_passed else ("PARTIAL_CURVED_3P1_PARENT_CONSTRAINT_INTERFACE_READY" if passed else "BLOCKED"),
-            "open_blockers": [key for key, value in parent_requirements.items() if value != "PASS"],
-            "dependency_unlocked": "gauge-declared metric/K evolution research wave only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
+            "verification_status": "PARTIAL_CURVED_3P1_ADM_EVOLUTION_NOGO_READY" if passed and geometry_passed and evolution_passed else ("PARTIAL_CURVED_3P1_PARENT_GEOMETRY_OPERATOR_READY" if passed and geometry_passed else ("PARTIAL_CURVED_3P1_PARENT_CONSTRAINT_INTERFACE_READY" if passed else "BLOCKED")),
+            "open_blockers": [key for key, value in parent_requirements.items() if value not in {"PASS", "CLOSED_AS_NO_GO"}],
+            "dependency_unlocked": "first-order generalized-harmonic implementation wave only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
             "claim_boundary": "partial parent construction; not CLOSED_FOR_CORE and not Gravity/GR compatibility",
         },
         "requirements": parent_requirements,
-        "controlling_blocker": "curved_3p1_gauge_evolution_hyperbolicity_and_constraint_propagation_missing",
+        "controlling_blocker": "curved_3p1_generalized_harmonic_evolution_constraint_damping_and_propagation_missing",
         "evidence_artifacts": [
             {"path": VERIFY.relative_to(ROOT).as_posix(), "sha256": None},
             {"path": FORMULA.relative_to(ROOT).as_posix(), "sha256": None},
             {"path": GEOMETRY_VERIFY.relative_to(ROOT).as_posix(), "sha256": None},
             {"path": GEOMETRY_FORMULA.relative_to(ROOT).as_posix(), "sha256": None},
+            {"path": EVOLUTION_VERIFY.relative_to(ROOT).as_posix(), "sha256": None},
+            {"path": HYPERBOLICITY_NO_GO.relative_to(ROOT).as_posix(), "sha256": None},
+            {"path": EVOLUTION_FORMULA.relative_to(ROOT).as_posix(), "sha256": None},
+            {"path": FORMULATION_SELECTION.relative_to(ROOT).as_posix(), "sha256": None},
         ],
         "claim_promotion": False,
     }
@@ -347,6 +381,54 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "claim_boundary": geometry_verification["major_result"]["claim_boundary"],
                 "failure_mode": "connection/index/stencil error yields wrong Ricci or momentum-constraint input",
                 "next_hardening_step": "implement a gauge-declared strongly-hyperbolic metric/K evolution branch and test constraint propagation",
+            },
+            {
+                "equation_id": "uet.main_theory.curved_3p1.adm_evolution_rhs",
+                "version": "adm-evolution-rhs-v1",
+                "classification": "standard_physics_evolution_operator",
+                "relation_or_code_path": "docs/core/uet_curved_3p1_adm_evolution.py",
+                "variables": {"gamma_ij": "spatial metric; not Phi", "K_ij": "extrinsic curvature; not Pi", "alpha": "positive lapse", "beta_i": "shift", "rho_Sij": "Eulerian stress-energy projection; not universal C"},
+                "mathematical_role": "evaluate nonlinear ADM metric and extrinsic-curvature right-hand sides",
+                "standard_physics_counterpart": "ADM 3+1 evolution equations",
+                "observable_mapping": {"status": "OPEN", "reason": "RHS fields are evolution diagnostics, not detector observables"},
+                "unit_lane": "geometric periodic Cartesian chart",
+                "parameter_dimensions": evolution_verification["major_result"]["units"],
+                "source_or_origin": evolution_verification["sources"],
+                "assumptions": ["(-,+,+,+) signature", "positive lapse", "periodic grid", "declared Eulerian stress projection"],
+                "symmetry_and_conservation": "symmetric gamma_ij/K_ij; constraint propagation remains open",
+                "limiting_cases": ["Minkowski vacuum", "spatially flat dust FLRW instantaneous control"],
+                "implementation_paths": ["docs/core/uet_curved_3p1_adm_evolution.py"],
+                "verifier_paths": ["docs/scripts/audit/audit_uet_curved_3p1_adm_evolution.py", EVOLUTION_VERIFY.relative_to(ROOT).as_posix(), "docs/core/test/test_uet_curved_3p1_adm_evolution.py"],
+                "evidence_class": "INTERNAL_FORMAL_NUMERICAL_AND_CONVERGENCE_CONTROL",
+                "proof_status": "RHS operator controls pass; well-posed time evolution remains open",
+                "downstream_dependencies": ["CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"],
+                "claim_boundary": evolution_verification["major_result"]["claim_boundary"],
+                "failure_mode": "RHS execution is mistaken for a strongly-hyperbolic time evolution",
+                "next_hardening_step": "implement first-order generalized-harmonic evolution and constraint damping"
+            },
+            {
+                "equation_id": "uet.main_theory.curved_3p1.fixed_gauge_adm_hyperbolicity_no_go",
+                "version": "fixed-geodesic-adm-symbol-v1",
+                "classification": "formulation_no_go",
+                "relation_or_code_path": "docs/core/uet_curved_3p1_adm_evolution.py",
+                "variables": {"P_n": "dimensionless principal symbol", "h_ij": "linear metric perturbation", "K_ij": "linear extrinsic-curvature perturbation"},
+                "mathematical_role": "reject the fixed-geodesic ADM branch from the strong-hyperbolicity parent gate",
+                "standard_physics_counterpart": "principal-symbol strong-hyperbolicity test",
+                "observable_mapping": {"status": "NOT_APPLICABLE", "reason": "formulation diagnostic"},
+                "unit_lane": "dimensionless principal-symbol lane",
+                "parameter_dimensions": "dimensionless after |k| scaling",
+                "source_or_origin": hyperbolicity_no_go["sources"],
+                "assumptions": ["linearization about flat space", "fixed geodesic gauge", "preregistered propagation directions"],
+                "symmetry_and_conservation": "not a conservation relation; tests completeness of characteristic fields",
+                "limiting_cases": ["axis directions", "diagonal direction", "fixed oblique direction"],
+                "implementation_paths": ["docs/core/uet_curved_3p1_adm_evolution.py"],
+                "verifier_paths": ["docs/scripts/audit/audit_uet_curved_3p1_adm_evolution.py", HYPERBOLICITY_NO_GO.relative_to(ROOT).as_posix()],
+                "evidence_class": "INTERNAL_FORMAL_PRINCIPAL_SYMBOL_NO_GO",
+                "proof_status": "CLOSED_AS_NO_GO for the declared fixed-gauge branch",
+                "downstream_dependencies": ["CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"],
+                "claim_boundary": hyperbolicity_no_go["major_result"]["claim_boundary"],
+                "failure_mode": "branch-local no-go is overgeneralized to every ADM/BSSN/NOR gauge",
+                "next_hardening_step": "verify first-order generalized-harmonic characteristic fields"
             }
         ],
     }
@@ -362,6 +444,10 @@ def main() -> int:
     gate["evidence_artifacts"][1]["sha256"] = _sha256(FORMULA)
     gate["evidence_artifacts"][2]["sha256"] = _sha256(GEOMETRY_VERIFY)
     gate["evidence_artifacts"][3]["sha256"] = _sha256(GEOMETRY_FORMULA)
+    gate["evidence_artifacts"][4]["sha256"] = _sha256(EVOLUTION_VERIFY)
+    gate["evidence_artifacts"][5]["sha256"] = _sha256(HYPERBOLICITY_NO_GO)
+    gate["evidence_artifacts"][6]["sha256"] = _sha256(EVOLUTION_FORMULA)
+    gate["evidence_artifacts"][7]["sha256"] = _sha256(FORMULATION_SELECTION)
     GATE.write_text(json.dumps(gate, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
     ADDENDUM.write_text(json.dumps(addendum, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
     print(json.dumps({"status": verification["status"], "parent_status": gate["status"], "controlling_blocker": gate["controlling_blocker"]}, indent=2))

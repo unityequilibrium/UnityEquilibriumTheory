@@ -94,7 +94,11 @@ def test_generated_artifacts_are_hash_linked_and_partial() -> None:
     assert hashlib.sha256(source.read_bytes()).hexdigest() == audit["source"]["sha256"]
     assert gate["major_result"]["closure_level"] == "PARTIAL"
     assert gate["requirements"]["adm_constraint_interface"] == "PASS"
-    assert gate["requirements"]["metric_and_extrinsic_curvature_evolution"] == "OPEN"
+    assert (
+        gate["requirements"]["metric_and_extrinsic_curvature_evolution"]
+        == "PARTIAL_RHS_OPERATOR_ONLY"
+    )
+    assert gate["requirements"]["fixed_gauge_adm_hyperbolicity"] == "CLOSED_AS_NO_GO"
     assert gate["claim_promotion"] is False
 
 

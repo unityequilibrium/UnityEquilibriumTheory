@@ -1,13 +1,26 @@
 # UET GR Closed-Limit and Non-Closed Response Research Specification
 
-> **Status:** `CURVED 3+1 PERIODIC SPATIAL GEOMETRY OPERATOR VERIFIED / PROGRAM BLOCKED`
+> **Status:** `ADM EVOLUTION RHS VERIFIED / FIXED-GAUGE NO-GO CLOSED / GH BRANCH OPEN`
 > **Current claim class:** `B`
-> **Current controlling blocker:** `curved_3p1_gauge_evolution_hyperbolicity_and_constraint_propagation_missing`
+> **Current controlling blocker:** `curved_3p1_generalized_harmonic_evolution_constraint_damping_and_propagation_missing`
 > **Program rule:** General relativity is the null/closed-response model. A
 > non-zero UET response is an empirical alternative, not a conclusion assumed
 > from the existence of the model.
 
-## Current curved 3+1 boundary (2026-08-28, geometry-operator wave)
+## Current curved 3+1 boundary (2026-08-28, ADM evolution/no-go wave)
+
+The parent now also evaluates the nonlinear periodic ADM metric and
+extrinsic-curvature right-hand sides under declared lapse and shift. Minkowski
+and dust-FLRW instantaneous controls pass, and the lapse-Hessian and shift-Lie
+operators show second-order convergence. This closes
+`CORE_CURVED_3P1_ADM_EVOLUTION_RHS_READY` for its operator lane only.
+
+The fixed-geodesic ADM principal symbol has a defective zero-speed sector:
+algebraic multiplicity 6, geometric multiplicity 3, and eigenvector rank 9 of
+12 in every preregistered direction. That branch is therefore
+`CLOSED_AS_NO_GO`; it is not repaired with dissipation or looser thresholds.
+The source-locked next branch is first-order generalized harmonic, specified in
+`CORE_CURVED_3P1_EVOLUTION_BRANCH_SPEC.md` but not yet implemented.
 
 The curved parent now evaluates the standard ADM Hamiltonian and momentum
 constraints and computes their spatial differential-geometry inputs on a
@@ -23,13 +36,12 @@ nontrivial operators show second-order spatial convergence over three locked
 resolutions. Invalid spacing/metrics are rejected; no clipping, fitting, or
 holdout data are used.
 
-This closes `CORE_CURVED_3P1_ADM_CONSTRAINT_INTERFACE_READY` and
-`CORE_CURVED_3P1_GEOMETRY_OPERATOR_READY` for their individual lanes only.
-The parent result remains `PARTIAL`: lapse/shift gauge, metric and
-extrinsic-curvature evolution, strong hyperbolicity, constraint propagation,
-temporal convergence, non-periodic boundary treatment, Topic 13 stress-energy
-projection, and dimensional observable mapping remain open. Gravity is not
-unlocked.
+This closes the ADM constraint, periodic geometry, ADM RHS operator, and
+fixed-gauge no-go subresults for their individual lanes only. The parent
+result remains `PARTIAL`: generalized-harmonic evolution, strong
+hyperbolicity, constraint damping/propagation, temporal convergence,
+non-periodic boundary treatment, Topic 13 stress-energy projection, and
+dimensional observable mapping remain open. Gravity is not unlocked.
 
 ## 1. Research question
 

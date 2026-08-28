@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "artifact": "curved_3p1_formulation_selection_gate",
+  "generated_at": "2026-08-28T06:21:42.614903+00:00",
+  "status": "PASS_SELECT_GENERALIZED_HARMONIC_NEXT_BRANCH",
+  "evaluated_branch": "fixed_geodesic_gauge_adm",
+  "evaluated_branch_result": "REJECTED_STRONG_HYPERBOLICITY",
+  "selected_next_branch": "first_order_generalized_harmonic",
+  "selected_next_branch_status": "PREREGISTERED_NOT_IMPLEMENTED",
+  "selection_basis": [
+    "fixed-gauge ADM principal symbol is defective",
+    "generalized harmonic has a source-backed symmetric-hyperbolic target formulation",
+    "constraint damping and characteristic boundary structure are explicit next acceptance requirements"
+  ],
+  "required_next_artifacts": [
+    "generalized_harmonic_equation_and_gauge_contract",
+    "generalized_harmonic_principal_symbol_verification",
+    "generalized_harmonic_constraint_damping_verification",
+    "temporal_spatial_convergence_artifact",
+    "constraint_propagation_artifact"
+  ],
+  "forbidden_shortcuts": [
+    "calling ADM RHS execution strong hyperbolicity",
+    "adding numerical dissipation to hide a Jordan defect",
+    "using clipping or fitted damping",
+    "promoting periodic controls to black-hole or external GR validation"
+  ],
+  "evidence": [
+    "docs/core/artifacts/curved_3p1_adm_evolution_operator_verification.json",
+    "docs/core/artifacts/curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json",
+    "docs/core/artifacts/curved_3p1_adm_evolution_formula_audit.json"
+  ],
+  "claim_promotion": false
+}

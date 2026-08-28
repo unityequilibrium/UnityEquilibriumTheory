@@ -6,6 +6,18 @@
 > program without upgrading claims ahead of generated evidence.
 
 ## Entries
+### 2026-08-28 - Close ADM RHS operator and fixed-gauge hyperbolicity no-go
+
+- Scope: nonlinear periodic ADM metric/K right-hand sides and formulation selection
+- Wave type: source/formula pass, analytic and convergence controls, principal-symbol no-go, registry/dependency sync, and claim-boundary pass
+- Added or changed: ADM evolution module, verifier, four artifacts, two source records, focused tests, Core exports, GH branch specification, parent gate, and dependency reporting
+- Verified with: Minkowski and dust-FLRW controls; lapse/shift second-order convergence; five-direction principal-symbol audit; invalid-input controls; focused curved 3+1 tests
+- Result: `CORE_CURVED_3P1_ADM_EVOLUTION_RHS_READY` is `CLOSED_FOR_LANE`; fixed-geodesic ADM is `CLOSED_AS_NO_GO`; GH is selected but not implemented; Gravity remains blocked
+- Blocker narrowed: open-ended gauge/evolution work is reduced to `curved_3p1_generalized_harmonic_evolution_constraint_damping_and_propagation_missing`
+- Still open: GH characteristic fields, time integration/CFL, constraint damping/propagation, temporal convergence, constraint-preserving boundaries, Topic 13 stress-energy projection, and SI observables
+- Next controller: `curved_3p1_generalized_harmonic_evolution_constraint_damping_and_propagation_missing`
+- Claim impact: no promotion to a well-posed numerical-relativity solver or Gravity compatibility
+
 ### 2026-08-28 - Close the periodic spatial geometry operator lane
 
 - Scope: Core curved 3+1 periodic single-chart differential geometry and ADM-input integration

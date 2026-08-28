@@ -259,7 +259,7 @@
         },
         {
           "path": "docs/core/artifacts/covariant_superfluid_transport_contract.json",
-          "sha256": "fe9935edb860aa5e2f8f7f35850dcb59745ef0187e501659b63b78767cd0bbe4",
+          "sha256": "7dfed14e2421712d730194a14d08624019c9a79f570087b7cc3a4a7e31fc4f7f",
           "summary": {
             "status": "BLOCKED",
             "next_controller": "physical_kubo_coefficient_evidence_and_curved_3p1_solver_missing"
@@ -267,7 +267,7 @@
         },
         {
           "path": "docs/core/artifacts/covariant_superfluid_transport_verification.json",
-          "sha256": "e97f61637906de4b9c300ef33136a892bdbc03fe5bff3d02779dae8efffed23f",
+          "sha256": "8658dfe9d61e6ee7e948595773fccc78bc592f680e92957a72400752bd86b7ce",
           "summary": {
             "physical_coefficient_evidence": "BLOCKED_NOT_PROVIDED",
             "full_SK_KMS_completion": "BLOCKED"
@@ -347,7 +347,7 @@
         },
         {
           "path": "docs/core/artifacts/o2_finite_density_eos_verification.json",
-          "sha256": "b1eb981c917ab62782f47452108417b46e5b8cc2e1b7e6645fffd4bd7dd630da",
+          "sha256": "8681e4730caa604083988da02adf514d04bf330f34ea428845ade6e7a946aa23",
           "summary": {
             "audit_status": "PASS",
             "evidence_status": "TREE_LEVEL_MEAN_FIELD_DERIVATION"
@@ -1951,7 +1951,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/o2_finite_density_eos_verification.json",
-          "sha256": "b1eb981c917ab62782f47452108417b46e5b8cc2e1b7e6645fffd4bd7dd630da",
+          "sha256": "8681e4730caa604083988da02adf514d04bf330f34ea428845ade6e7a946aa23",
           "summary": {
             "audit_status": "PASS"
           }
@@ -2057,7 +2057,11 @@
         "ADM constraint evaluation interface",
         "periodic-grid metric-to-Ricci operator",
         "periodic-grid covariant momentum-tensor divergence",
-        "second-order spatial geometry convergence"
+        "second-order spatial geometry convergence",
+        "nonlinear periodic ADM metric/K right-hand-side operator",
+        "second-order lapse-Hessian and shift-Lie convergence controls",
+        "fixed-gauge ADM strong-hyperbolicity branch closed as no-go",
+        "first-order generalized-harmonic next branch selected"
       ],
       "equation_or_mapping": {
         "hamiltonian": "R3 + K^2 - K_ij K^ij - 16*pi*G*rho = 0",
@@ -2070,15 +2074,15 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/core_curved_3p1_parent_gate.json",
-          "sha256": "77c39e03c5b97905bdcf64234f502733a54221a07861d092aff0b5f4dbce6545",
+          "sha256": "024e23475de094e2202c49229b963184810a68aa1cfa23eb4bd05b2aa1206e34",
           "summary": {
-            "status": "PARTIAL_CURVED_3P1_PARENT_GEOMETRY_OPERATOR_READY",
+            "status": "PARTIAL_CURVED_3P1_ADM_EVOLUTION_NOGO_READY",
             "major_result_id": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
             "closure_level": "PARTIAL"
           }
         }
       ],
-      "verification_status": "PARTIAL_CURVED_3P1_PARENT_GEOMETRY_OPERATOR_READY",
+      "verification_status": "PARTIAL_CURVED_3P1_ADM_EVOLUTION_NOGO_READY",
       "open_blockers": [
         "lapse_shift_gauge",
         "metric_and_extrinsic_curvature_evolution",
@@ -2088,7 +2092,7 @@
         "topic13_stress_energy_projection",
         "dimensional_observable_mapping"
       ],
-      "dependency_unlocked": "gauge-declared metric/K evolution research wave only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
+      "dependency_unlocked": "first-order generalized-harmonic implementation wave only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
       "claim_boundary": "partial parent construction; not CLOSED_FOR_CORE and not Gravity/GR compatibility"
     },
     {
@@ -2120,7 +2124,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/curved_3p1_adm_constraint_interface_audit.json",
-          "sha256": "66cf555d96f9bc86118bb71836fe102baa03e122bc33c8ff9b422dbcc764fa6f",
+          "sha256": "c56190d0c622a741f8886a898ec1f0c2b707a7a8d6f57e3b1466c89c0887fed5",
           "summary": {
             "status": "PASS_CURVED_3P1_ADM_CONSTRAINT_INTERFACE",
             "major_result_id": "CORE_CURVED_3P1_ADM_CONSTRAINT_INTERFACE_READY",
@@ -2140,6 +2144,92 @@
       ],
       "dependency_unlocked": "curved 3+1 differential-geometry and evolution wave only; Gravity remains blocked",
       "claim_boundary": "curved 3+1 ADM constraint evaluation interface only; not a metric evolution solver, Einstein-equation derivation, or GR validation"
+    },
+    {
+      "major_result_id": "CORE_CURVED_3P1_ADM_EVOLUTION_RHS_READY",
+      "topic": "core",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "nonlinear periodic ADM metric right-hand side",
+        "nonlinear periodic ADM extrinsic-curvature right-hand side",
+        "declared lapse-Hessian and shift-Lie derivative terms",
+        "Minkowski and dust-FLRW analytic controls",
+        "second-order lapse/shift derivative convergence controls"
+      ],
+      "equation_or_mapping": {
+        "metric_evolution": "d_t gamma_ij = -2 alpha K_ij + L_beta gamma_ij",
+        "curvature_evolution": "d_t K_ij = -D_i D_j alpha + alpha[R_ij + K K_ij - 2 K_ik K^k_j - 8 pi G(S_ij - gamma_ij(S-rho)/2) - Lambda gamma_ij] + L_beta K_ij"
+      },
+      "units": {
+        "gamma_ij": "dimensionless chart component",
+        "K_ij": "L^-1",
+        "R_ij": "L^-2",
+        "rho_and_S_ij_with_G": "L^-2",
+        "d_t_gamma_ij": "L^-1",
+        "d_t_K_ij": "L^-2"
+      },
+      "derivation_class": "standard ADM evolution transcription plus second-order numerical derivatives",
+      "observable": "metric/K right-hand-side diagnostics; no detector observable",
+      "data_role": "analytic controls only; no fit, calibration, or holdout",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/curved_3p1_adm_evolution_operator_verification.json",
+          "sha256": "55d2ad9ba5a4b64d4defee15013b940e1e185caa5ed21e843ba997d56196bd68",
+          "summary": {
+            "status": "PASS_ADM_EVOLUTION_RHS_OPERATOR_ONLY",
+            "major_result_id": "CORE_CURVED_3P1_ADM_EVOLUTION_RHS_READY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_ADM_EVOLUTION_RHS_OPERATOR_ONLY",
+      "open_blockers": [
+        "strongly-hyperbolic generalized-harmonic evolution",
+        "time integration and CFL policy",
+        "constraint damping and propagation verification",
+        "non-periodic constraint-preserving boundaries",
+        "Topic 13 stress-energy evolution/projection wiring",
+        "SI detector-observable mapping"
+      ],
+      "dependency_unlocked": "formulation-selection and generalized-harmonic implementation wave only",
+      "claim_boundary": "standard ADM RHS operator and fixed-gauge formulation no-go only; not a well-posed numerical-relativity evolution system or GR validation"
+    },
+    {
+      "major_result_id": "CORE_CURVED_3P1_FIXED_GAUGE_ADM_HYPERBOLICITY_NO_GO",
+      "topic": "core",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "fixed-geodesic-gauge linearized ADM principal symbol is defective in every preregistered direction",
+        "zero-speed algebraic multiplicity 6 exceeds geometric multiplicity 3",
+        "this branch cannot satisfy the parent strong-hyperbolicity gate"
+      ],
+      "equation_or_mapping": "P(n) on (i|k| h_ij, K_ij) has speeds {-1 x3, 0 x6, +1 x3} and zero eigenspace dimension 3",
+      "units": "dimensionless principal symbol after division by |k|",
+      "derivation_class": "linearized pseudo-differential principal-symbol analysis",
+      "observable": "formulation diagnostic only",
+      "data_role": "analytic matrix controls; no empirical data",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json",
+          "sha256": "d411ed6b778f357b61bd322cc9c705e9e9d80805148724be8efcfb6bbe42cb10",
+          "summary": {
+            "status": "CLOSED_AS_NO_GO_FIXED_GAUGE_ADM_NOT_STRONGLY_HYPERBOLIC",
+            "major_result_id": "CORE_CURVED_3P1_FIXED_GAUGE_ADM_HYPERBOLICITY_NO_GO",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "CLOSED_AS_NO_GO",
+      "open_blockers": [
+        "generalized-harmonic nonlinear implementation",
+        "generalized-harmonic characteristic fields",
+        "constraint damping and propagation",
+        "time integration and convergence"
+      ],
+      "dependency_unlocked": "FIRST_ORDER_GENERALIZED_HARMONIC branch implementation",
+      "claim_boundary": "no-go for the declared fixed-geodesic ADM principal symbol only; not every gauge-modified ADM/BSSN/NOR formulation"
     },
     {
       "major_result_id": "CORE_CURVED_3P1_GEOMETRY_OPERATOR_READY",

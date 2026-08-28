@@ -855,3 +855,23 @@ __all__ += [
     "adm_geometry_from_periodic_grid",
     "curved_3p1_geometry_operator_contract",
 ]
+
+from .uet_curved_3p1_adm_evolution import (
+    ADM_EVOLUTION_OPERATOR_STATUS,
+    ADMStressProjection,
+    ADMEvolutionRHS,
+    ADMPrincipalSymbolResult,
+    compute_adm_evolution_rhs,
+    fixed_gauge_adm_principal_symbol,
+    adm_evolution_contract,
+)
+
+__all__ += [
+    "ADM_EVOLUTION_OPERATOR_STATUS",
+    "ADMStressProjection",
+    "ADMEvolutionRHS",
+    "ADMPrincipalSymbolResult",
+    "compute_adm_evolution_rhs",
+    "fixed_gauge_adm_principal_symbol",
+    "adm_evolution_contract",
+]

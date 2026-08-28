@@ -2,8 +2,8 @@
   "schema_version": "1.0",
   "artifact": "uet_all_waves_completion_audit",
   "generated_at": "2026-08-28",
-  "audit_status": "PASS_WITH_FOUNDATION_PHYSICS_BLOCKED",
-  "status": "PROGRAM_CONTROL_CLOSED_FOUNDATION_PHYSICS_NOT_CLOSED",
+  "audit_status": "FAIL",
+  "status": "BLOCKED_INCOMPLETE_CLOSURE_PACKET",
   "objective": "close every planned research wave as a bounded project-control lane without promoting blocked physics",
   "wave_count": 12,
   "waves": [
@@ -603,12 +603,12 @@
   },
   "failed_evidence_paths": [],
   "core_regression": {
-    "command": "not_run_in_build(run_tests=False)",
+    "command": "C:\\Users\\santa\\Desktop\\uet_harness\\.venv\\Scripts\\python.exe -m pytest -q docs/core/test",
     "exit_code": null,
     "passed_count": null,
     "failed_count": null,
-    "status": "NOT_RUN",
-    "tail": ""
+    "status": "FAIL_TIMEOUT",
+    "tail": "Command '['C:\\\\Users\\\\santa\\\\Desktop\\\\uet_harness\\\\.venv\\\\Scripts\\\\python.exe', '-m', 'pytest', '-q', 'docs/core/test']' timed out after 180 seconds"
   },
   "checks": {
     "closure_artifact_passes": true,
@@ -624,7 +624,7 @@
     "physical_promotion_remains_disabled": true,
     "physical_data_claims_remain_blocked": true,
     "closure_checks_pass": true,
-    "core_regression_passes": true
+    "core_regression_passes": false
   },
   "foundation_boundary": {
     "status": "BLOCKED",
