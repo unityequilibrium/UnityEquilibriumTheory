@@ -30,6 +30,8 @@ VERIFY = ARTIFACTS / "curved_3p1_adm_constraint_interface_audit.json"
 FORMULA = ARTIFACTS / "curved_3p1_adm_constraint_formula_audit.json"
 GATE = ARTIFACTS / "core_curved_3p1_parent_gate.json"
 ADDENDUM = ARTIFACTS / "uet_equation_correspondence_registry_curved_3p1_addendum.json"
+GEOMETRY_VERIFY = ARTIFACTS / "curved_3p1_geometry_operator_verification.json"
+GEOMETRY_FORMULA = ARTIFACTS / "curved_3p1_geometry_operator_formula_audit.json"
 
 
 def _sha256(path: Path) -> str:
@@ -39,6 +41,15 @@ def _sha256(path: Path) -> str:
 def build_artifacts() -> tuple[dict, dict, dict, dict]:
     now = datetime.now(timezone.utc).isoformat()
     source = json.loads(SOURCE.read_text(encoding="utf-8"))
+    geometry_verification = json.loads(GEOMETRY_VERIFY.read_text(encoding="utf-8"))
+    geometry_formula = json.loads(GEOMETRY_FORMULA.read_text(encoding="utf-8"))
+    geometry_passed = (
+        geometry_verification.get("status") == "PASS_CURVED_3P1_GEOMETRY_OPERATOR"
+        and geometry_verification.get("major_result", {}).get("closure_level")
+        == "CLOSED_FOR_LANE"
+        and geometry_formula.get("status") == "PASS_NUMERICAL_GEOMETRY_FORMULAS"
+        and all(geometry_verification.get("checks", {}).values())
+    )
     threshold = 1e-12
 
     minkowski_geometry, minkowski_matter = minkowski_adm_control((2, 2, 2))
@@ -225,7 +236,8 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
 
     parent_requirements = {
         "adm_constraint_interface": "PASS" if passed else "FAIL",
-        "metric_to_ricci_operator": "OPEN",
+        "metric_to_ricci_operator": "PASS" if geometry_passed else "OPEN",
+        "spatial_geometry_convergence": "PASS" if geometry_passed else "OPEN",
         "lapse_shift_gauge": "OPEN",
         "metric_and_extrinsic_curvature_evolution": "OPEN",
         "strong_hyperbolicity": "OPEN",
@@ -238,27 +250,34 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
         "schema_version": "1.0",
         "artifact": "core_curved_3p1_parent_gate",
         "generated_at": now,
-        "status": "PARTIAL_CURVED_3P1_PARENT_CONSTRAINT_INTERFACE_READY" if passed else "BLOCKED",
+        "status": "PARTIAL_CURVED_3P1_PARENT_GEOMETRY_OPERATOR_READY" if passed and geometry_passed else ("PARTIAL_CURVED_3P1_PARENT_CONSTRAINT_INTERFACE_READY" if passed else "BLOCKED"),
         "major_result": {
             "major_result_id": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
             "topic": "core",
             "closure_level": "PARTIAL",
-            "what_is_closed": ["ADM constraint evaluation interface"] if passed else [],
+            "what_is_closed": ([
+                "ADM constraint evaluation interface",
+                "periodic-grid metric-to-Ricci operator",
+                "periodic-grid covariant momentum-tensor divergence",
+                "second-order spatial geometry convergence",
+            ] if passed and geometry_passed else (["ADM constraint evaluation interface"] if passed else [])),
             "equation_or_mapping": contract["equations"],
             "units": "geometric constraint lane; SI observable mapping open",
             "derivation_class": "incremental curved 3+1 parent construction",
             "observable": "constraint residual diagnostics only",
             "data_role": "internal analytic controls",
-            "verification_status": "PARTIAL_CURVED_3P1_PARENT_CONSTRAINT_INTERFACE_READY" if passed else "BLOCKED",
+            "verification_status": "PARTIAL_CURVED_3P1_PARENT_GEOMETRY_OPERATOR_READY" if passed and geometry_passed else ("PARTIAL_CURVED_3P1_PARENT_CONSTRAINT_INTERFACE_READY" if passed else "BLOCKED"),
             "open_blockers": [key for key, value in parent_requirements.items() if value != "PASS"],
-            "dependency_unlocked": "next curved 3+1 Core wave only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
+            "dependency_unlocked": "gauge-declared metric/K evolution research wave only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
             "claim_boundary": "partial parent construction; not CLOSED_FOR_CORE and not Gravity/GR compatibility",
         },
         "requirements": parent_requirements,
-        "controlling_blocker": "curved_3p1_differential_geometry_evolution_gauge_and_constraint_propagation_missing",
+        "controlling_blocker": "curved_3p1_gauge_evolution_hyperbolicity_and_constraint_propagation_missing",
         "evidence_artifacts": [
             {"path": VERIFY.relative_to(ROOT).as_posix(), "sha256": None},
             {"path": FORMULA.relative_to(ROOT).as_posix(), "sha256": None},
+            {"path": GEOMETRY_VERIFY.relative_to(ROOT).as_posix(), "sha256": None},
+            {"path": GEOMETRY_FORMULA.relative_to(ROOT).as_posix(), "sha256": None},
         ],
         "claim_promotion": False,
     }
@@ -298,6 +317,36 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "claim_boundary": contract["claim_boundary"],
                 "failure_mode": "invalid metric, nonzero analytic residual, hidden geometry operator, or constraint violation not detected",
                 "next_hardening_step": "implement metric-to-Ricci and covariant-divergence operators, then a gauge-declared evolution/constraint-propagation system",
+            },
+            {
+                "equation_id": "uet.main_theory.curved_3p1.periodic_spatial_geometry",
+                "version": "periodic-geometry-operator-v1",
+                "classification": "numerical_implementation",
+                "relation_or_code_path": "docs/core/uet_curved_3p1_geometry.py",
+                "variables": {
+                    "gamma_ij": "positive-definite spatial metric on a uniform periodic Cartesian chart",
+                    "Gamma^k_ij": "Levi-Civita connection",
+                    "R_ij": "spatial Ricci tensor",
+                    "R3": "spatial Ricci scalar",
+                    "K_ij": "extrinsic curvature",
+                },
+                "mathematical_role": "compute Ricci curvature and ADM momentum-tensor divergence from grid fields",
+                "standard_physics_counterpart": "ADM spatial differential geometry",
+                "observable_mapping": {"status": "OPEN", "reason": "curvature and constraint inputs are diagnostics; no detector map is declared"},
+                "unit_lane": "geometric periodic Cartesian chart",
+                "parameter_dimensions": geometry_verification["major_result"]["units"],
+                "source_or_origin": geometry_verification["source"],
+                "assumptions": ["uniform three-dimensional grid", "periodic boundaries", "positive-definite gamma_ij", "second-order centered derivatives"],
+                "symmetry_and_conservation": "Levi-Civita metric compatibility and Ricci symmetry checked; evolution conservation/constraint propagation open",
+                "limiting_cases": ["Cartesian flat metric", "conformally flat analytic Ricci control", "manufactured off-diagonal K divergence control"],
+                "implementation_paths": ["docs/core/uet_curved_3p1_geometry.py"],
+                "verifier_paths": ["docs/scripts/audit/audit_uet_curved_3p1_geometry.py", GEOMETRY_VERIFY.relative_to(ROOT).as_posix(), "docs/core/test/test_uet_curved_3p1_geometry.py"],
+                "evidence_class": "INTERNAL_FORMAL_NUMERICAL_AND_CONVERGENCE_CONTROL",
+                "proof_status": "standard identities implemented with verified second-order periodic-grid convergence; no continuum or evolution proof",
+                "downstream_dependencies": ["CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"],
+                "claim_boundary": geometry_verification["major_result"]["claim_boundary"],
+                "failure_mode": "connection/index/stencil error yields wrong Ricci or momentum-constraint input",
+                "next_hardening_step": "implement a gauge-declared strongly-hyperbolic metric/K evolution branch and test constraint propagation",
             }
         ],
     }
@@ -311,6 +360,8 @@ def main() -> int:
     FORMULA.write_text(json.dumps(formula, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
     gate["evidence_artifacts"][0]["sha256"] = _sha256(VERIFY)
     gate["evidence_artifacts"][1]["sha256"] = _sha256(FORMULA)
+    gate["evidence_artifacts"][2]["sha256"] = _sha256(GEOMETRY_VERIFY)
+    gate["evidence_artifacts"][3]["sha256"] = _sha256(GEOMETRY_FORMULA)
     GATE.write_text(json.dumps(gate, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
     ADDENDUM.write_text(json.dumps(addendum, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
     print(json.dumps({"status": verification["status"], "parent_status": gate["status"], "controlling_blocker": gate["controlling_blocker"]}, indent=2))

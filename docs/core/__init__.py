@@ -835,3 +835,23 @@ __all__ += [
     "flat_flrw_adm_control",
     "adm_constraint_contract",
 ]
+
+from .uet_curved_3p1_geometry import (
+    CURVED_3P1_GEOMETRY_OPERATOR_STATUS,
+    SpatialGeometryResult,
+    periodic_central_derivative,
+    compute_periodic_spatial_geometry,
+    compute_periodic_momentum_tensor_divergence,
+    adm_geometry_from_periodic_grid,
+    curved_3p1_geometry_operator_contract,
+)
+
+__all__ += [
+    "CURVED_3P1_GEOMETRY_OPERATOR_STATUS",
+    "SpatialGeometryResult",
+    "periodic_central_derivative",
+    "compute_periodic_spatial_geometry",
+    "compute_periodic_momentum_tensor_divergence",
+    "adm_geometry_from_periodic_grid",
+    "curved_3p1_geometry_operator_contract",
+]

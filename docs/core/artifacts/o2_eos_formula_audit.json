@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "o2_eos_formula_audit",
-  "generated_at": "2026-08-28T05:32:25.609128+00:00",
+  "generated_at": "2026-08-28T05:51:43.274211+00:00",
   "topic": "docs/core UET GR non-closed response",
   "version": "wave10_v1",
   "benchmark_role": "formula_audit",

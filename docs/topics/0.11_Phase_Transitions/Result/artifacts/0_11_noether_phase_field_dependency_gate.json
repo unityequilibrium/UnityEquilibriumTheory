@@ -141,7 +141,7 @@
       "topic_controller": "ch_finite_k_replicate_temporal_acquisition_plan_defined_execution_open"
     }
   },
-  "generated_at": "2026-08-28T05:32:26+00:00",
+  "generated_at": "2026-08-28T05:51:43+00:00",
   "global_universe_closure": "UNRESOLVED",
   "limitations": [
     "No simulation, parameter fit, estimator rerun, or external-data comparison is performed.",
@@ -163,14 +163,14 @@
       "hash_scope": "canonical_json_without_generated_at_timestamp_utc_or_environment",
       "path": "docs/core/artifacts/noether_phase_field_state_map_verification.json",
       "role": "Core Wave 9 state-coordinate verification",
-      "scientific_payload_sha256": "541cec2020ec9d34a5c8d4f0fa261b91e9037091371fc8888ea75019719cf41e"
+      "scientific_payload_sha256": "c3aee3fca588fd5b219d01eb8c058209893ae8c51ae95c210a9c629ab675d450"
     },
     {
       "exists": true,
       "hash_scope": "canonical_json_without_generated_at_timestamp_utc_or_environment",
       "path": "docs/core/artifacts/noether_phase_field_map_formula_audit.json",
       "role": "Core Wave 9 formula audit",
-      "scientific_payload_sha256": "c160f167667456082f021c6f1a383a3cb794a304e9db8de2e63a409f85f4b20b"
+      "scientific_payload_sha256": "215f828052db85ab22b3e8b1dc5c8531e26540ae60178985418f468e914decda"
     },
     {
       "exists": true,

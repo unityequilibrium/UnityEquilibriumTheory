@@ -11,7 +11,10 @@
     "3+1 decomposition terminology",
     "Hamiltonian constraint structure",
     "momentum constraint structure",
-    "initial-data and gauge separation"
+    "initial-data and gauge separation",
+    "spatial Levi-Civita connection",
+    "spatial Ricci tensor and scalar",
+    "covariant divergence in the momentum constraint"
   ],
   "not_used_for": [
     "UET coefficient fitting",

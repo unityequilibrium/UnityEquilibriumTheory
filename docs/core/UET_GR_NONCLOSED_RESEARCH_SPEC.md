@@ -1,26 +1,35 @@
 # UET GR Closed-Limit and Non-Closed Response Research Specification
 
-> **Status:** `CURVED 3+1 ADM CONSTRAINT INTERFACE VERIFIED / PROGRAM BLOCKED`
+> **Status:** `CURVED 3+1 PERIODIC SPATIAL GEOMETRY OPERATOR VERIFIED / PROGRAM BLOCKED`
 > **Current claim class:** `B`
-> **Current controlling blocker:** `curved_3p1_differential_geometry_evolution_gauge_and_constraint_propagation_missing`
+> **Current controlling blocker:** `curved_3p1_gauge_evolution_hyperbolicity_and_constraint_propagation_missing`
 > **Program rule:** General relativity is the null/closed-response model. A
 > non-zero UET response is an empirical alternative, not a conclusion assumed
 > from the existence of the model.
 
-## Current curved 3+1 boundary (2026-08-28)
+## Current curved 3+1 boundary (2026-08-28, geometry-operator wave)
 
-The first curved-parent wave now evaluates the standard ADM Hamiltonian and
-momentum constraints from declared spatial geometry and Eulerian matter
-projections. Minkowski vacuum and spatially flat FLRW analytic controls pass,
-while invalid metrics and perturbed matter projections are rejected or produce
-non-zero residuals. The implementation is source-linked to Gourgoulhon's
+The curved parent now evaluates the standard ADM Hamiltonian and momentum
+constraints and computes their spatial differential-geometry inputs on a
+uniform periodic Cartesian chart. The implementation constructs the
+Levi-Civita connection, spatial Ricci tensor/scalar, and
+`D_j(K^j_i-delta^j_i K)` directly from declared `gamma_ij`, `K_ij`, and grid
+spacing. It is source-linked to Gourgoulhon's
 [3+1 formalism notes](https://arxiv.org/abs/gr-qc/0703035).
 
-This closes `CORE_CURVED_3P1_ADM_CONSTRAINT_INTERFACE_READY` for its lane only.
-The parent result remains `PARTIAL`: the metric-to-Ricci differential operator,
-lapse/shift gauge, metric and extrinsic-curvature evolution, constraint
-propagation, well-posedness/convergence, Topic 13 stress-energy projection, and
-dimensional observable mapping remain open. Gravity is not unlocked.
+Cartesian-flat exact-zero controls, a conformally-flat analytic Ricci control,
+and a manufactured off-diagonal-`K` divergence control pass. The two
+nontrivial operators show second-order spatial convergence over three locked
+resolutions. Invalid spacing/metrics are rejected; no clipping, fitting, or
+holdout data are used.
+
+This closes `CORE_CURVED_3P1_ADM_CONSTRAINT_INTERFACE_READY` and
+`CORE_CURVED_3P1_GEOMETRY_OPERATOR_READY` for their individual lanes only.
+The parent result remains `PARTIAL`: lapse/shift gauge, metric and
+extrinsic-curvature evolution, strong hyperbolicity, constraint propagation,
+temporal convergence, non-periodic boundary treatment, Topic 13 stress-energy
+projection, and dimensional observable mapping remain open. Gravity is not
+unlocked.
 
 ## 1. Research question
 

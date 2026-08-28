@@ -53,6 +53,8 @@ Current foundation artifacts:
 - [Curved 3+1 ADM constraint interface](./uet_curved_3p1_constraints.py)
 - [Curved 3+1 ADM constraint verification](./artifacts/curved_3p1_adm_constraint_interface_audit.json)
 - [Curved 3+1 parent dependency gate](./artifacts/core_curved_3p1_parent_gate.json)
+- [Curved 3+1 periodic geometry operator](./uet_curved_3p1_geometry.py)
+- [Curved 3+1 geometry verification](./artifacts/curved_3p1_geometry_operator_verification.json)
 
 > **Historical engine layer for candidate UET equation families**
 > **Version 0.9.0** | Last Updated: 2026-01-13

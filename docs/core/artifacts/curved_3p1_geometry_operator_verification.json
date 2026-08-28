@@ -1,0 +1,217 @@
+{
+  "schema_version": "1.0",
+  "artifact": "curved_3p1_geometry_operator_verification",
+  "generated_at": "2026-08-28T05:53:27.123424+00:00",
+  "topic": "docs/core curved 3+1 parent",
+  "version": "periodic-geometry-operator-v1",
+  "benchmark_role": "internal analytic and convergence gate",
+  "method_label": "second-order periodic Levi-Civita/Ricci/divergence operators",
+  "status": "PASS_CURVED_3P1_GEOMETRY_OPERATOR",
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GEOMETRY_OPERATOR_READY",
+    "topic": "core",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "periodic-grid metric-to-Levi-Civita connection",
+      "periodic-grid metric-to-spatial-Ricci tensor and scalar",
+      "periodic-grid covariant ADM momentum-tensor divergence",
+      "second-order spatial convergence on independent analytic controls",
+      "adapter into the existing ADM constraint evaluator"
+    ],
+    "equation_or_mapping": {
+      "christoffel": "Gamma^k_ij = 1/2 gamma^kl (d_i gamma_lj + d_j gamma_li - d_l gamma_ij)",
+      "ricci_tensor": "R_ij = d_k Gamma^k_ij - d_j Gamma^k_ik + Gamma^k_ij Gamma^l_kl - Gamma^l_ik Gamma^k_jl",
+      "ricci_scalar": "R3 = gamma^ij R_ij",
+      "momentum_divergence": "D_j B^j_i = d_j B^j_i + Gamma^j_jm B^m_i - Gamma^m_ji B^j_m",
+      "momentum_tensor": "B^j_i = K^j_i - delta^j_i K"
+    },
+    "units": {
+      "coordinates_and_spacing": "L",
+      "gamma_ij": "dimensionless in the declared geometric chart lane",
+      "Gamma^k_ij": "L^-1",
+      "R_ij_and_R3": "L^-2",
+      "K_ij": "L^-1",
+      "D_j_B^j_i": "L^-2"
+    },
+    "derivation_class": "standard differential geometry with second-order numerical approximation",
+    "observable": "spatial curvature and constraint-input diagnostics; no detector observable",
+    "data_role": "analytic manufactured controls; no fitted or holdout data",
+    "verification_status": "PASS_CURVED_3P1_GEOMETRY_OPERATOR",
+    "open_blockers": [
+      "non-periodic boundary conditions or multiple charts",
+      "lapse and shift gauge evolution",
+      "spatial-metric and extrinsic-curvature evolution",
+      "strong-hyperbolicity proof",
+      "constraint propagation or damping",
+      "temporal convergence",
+      "Topic 13 stress-energy projection wiring",
+      "SI detector-observable mapping"
+    ],
+    "dependency_unlocked": "lapse/shift and metric/K evolution research wave only; Gravity remains blocked",
+    "claim_boundary": "periodic-grid spatial differential-geometry operator with internal analytic controls only; not a spacetime evolution solver or GR validation"
+  },
+  "source": {
+    "path": "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json",
+    "sha256": "d989b9dd637828dd64f975eaf1f744163ac71e362bde71e46e86e599eced1754",
+    "identity": {
+      "schema_version": "1.0",
+      "source_id": "gourgoulhon_2007_3p1_formalism",
+      "title": "3+1 Formalism and Bases of Numerical Relativity",
+      "author": "Eric Gourgoulhon",
+      "year": 2007,
+      "arxiv_id": "gr-qc/0703035",
+      "url": "https://arxiv.org/abs/gr-qc/0703035",
+      "source_role": "standard-physics formula and sign-convention reference",
+      "used_scope": [
+        "3+1 decomposition terminology",
+        "Hamiltonian constraint structure",
+        "momentum constraint structure",
+        "initial-data and gauge separation",
+        "spatial Levi-Civita connection",
+        "spatial Ricci tensor and scalar",
+        "covariant divergence in the momentum constraint"
+      ],
+      "not_used_for": [
+        "UET coefficient fitting",
+        "physical validation",
+        "claim that UET derives Einstein equations"
+      ],
+      "local_payload": "metadata-only source record; no redistributed PDF",
+      "accessed_on": "2026-08-28"
+    }
+  },
+  "source_hashes": {
+    "docs/core/uet_curved_3p1_geometry.py": "02f643a7d6efc3fb24508546477d647e12015ebdc7f1a70b4adeaeb1952266d3",
+    "docs/scripts/audit/audit_uet_curved_3p1_geometry.py": "6f7afec670c7f36591533cc90b9f67510dbb5bdbddebe55222bb758f3c813d9a",
+    "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json": "d989b9dd637828dd64f975eaf1f744163ac71e362bde71e46e86e599eced1754"
+  },
+  "input_identity": {
+    "module": "docs/core/uet_curved_3p1_geometry.py",
+    "source_record": "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json",
+    "analytic_controls": [
+      "periodic Cartesian flat metric",
+      "gamma_ij = psi^4 delta_ij with psi = 1 + 0.05 cos(x)",
+      "flat-metric K_xy = 0.1 sin(x) momentum-divergence control"
+    ],
+    "negative_controls": [
+      "10 percent ADM matter-density mismatch",
+      "non-positive grid spacing"
+    ]
+  },
+  "config": {
+    "domain": "[0, 2*pi)^3",
+    "resolutions": [
+      12,
+      24,
+      48
+    ],
+    "boundary_condition": "periodic_all_axes",
+    "spatial_stencil": "second_order_centered",
+    "conformal_amplitude": 0.05,
+    "momentum_amplitude": 0.1,
+    "parameter_fitting": false,
+    "field_clipping": false
+  },
+  "thresholds": {
+    "flat_max_abs_ricci_scalar": 1e-14,
+    "metric_compatibility_max_abs": 1e-12,
+    "ricci_antisymmetry_max_abs": 1e-12,
+    "minimum_observed_spatial_order": 1.8,
+    "finest_ricci_l2_error": 0.002,
+    "finest_momentum_divergence_l2_error": 0.00015,
+    "matched_adm_constraint_max_abs": 1e-12,
+    "negative_control_min_abs": 0.0001
+  },
+  "metrics": {
+    "flat_max_abs_christoffel": 0.0,
+    "flat_max_abs_ricci_scalar": 0.0,
+    "ricci_l2_errors": [
+      0.025326008204864178,
+      0.0064824312434219634,
+      0.0016303327306680204
+    ],
+    "ricci_observed_orders": [
+      1.9660127983411686,
+      1.9913685684143443
+    ],
+    "momentum_divergence_l2_errors": [
+      0.0018399889847024965,
+      0.00046475273342829967,
+      0.00011648722591182725
+    ],
+    "momentum_divergence_observed_orders": [
+      1.9851618740077892,
+      1.9962915939448886
+    ],
+    "max_metric_compatibility_residual": 2.7755575615628914e-17,
+    "max_ricci_antisymmetry": 0.0,
+    "matched_adm_hamiltonian_residual": 5.551115123125783e-17,
+    "matched_adm_momentum_residual": 0.0,
+    "mismatched_density_hamiltonian_residual": 0.049440727456161015
+  },
+  "checks": {
+    "source_identity_locked": true,
+    "flat_connection_exact_zero": true,
+    "flat_ricci_exact_zero": true,
+    "metric_compatibility": true,
+    "ricci_symmetry": true,
+    "ricci_spatial_convergence": true,
+    "momentum_divergence_spatial_convergence": true,
+    "ricci_finest_error": true,
+    "momentum_divergence_finest_error": true,
+    "adm_adapter_constraint_match": true,
+    "matter_negative_control_detected": true,
+    "invalid_spacing_rejected": true,
+    "no_clipping_or_fitting": true,
+    "metric_is_not_phi": true,
+    "trace_and_observer_excluded": true,
+    "metric_evolution_not_claimed": true
+  },
+  "contract": {
+    "status": "CURVED_3P1_PERIODIC_GEOMETRY_OPERATOR_ONLY",
+    "classification": "numerical_implementation_of_standard_spatial_geometry",
+    "chart": "uniform Cartesian chart",
+    "boundary_condition": "periodic on x, y, and z",
+    "spatial_order": 2,
+    "unit_lane": "geometric; coordinates and spacing carry length L",
+    "relations": {
+      "christoffel": "Gamma^k_ij = 1/2 gamma^kl (d_i gamma_lj + d_j gamma_li - d_l gamma_ij)",
+      "ricci_tensor": "R_ij = d_k Gamma^k_ij - d_j Gamma^k_ik + Gamma^k_ij Gamma^l_kl - Gamma^l_ik Gamma^k_jl",
+      "ricci_scalar": "R3 = gamma^ij R_ij",
+      "momentum_divergence": "D_j B^j_i = d_j B^j_i + Gamma^j_jm B^m_i - Gamma^m_ji B^j_m",
+      "momentum_tensor": "B^j_i = K^j_i - delta^j_i K"
+    },
+    "ontology": {
+      "gamma_ij": "standard spatial metric; not Phi",
+      "K_ij": "standard extrinsic curvature; not Pi",
+      "C": "not used or relabelled by the geometry operator",
+      "R_gen": "excluded derived history trace",
+      "R_obs": "excluded observer record"
+    },
+    "implemented": [
+      "periodic second-order central derivative",
+      "Levi-Civita connection",
+      "spatial Ricci tensor and scalar",
+      "covariant momentum-tensor divergence",
+      "ADM geometry-state adapter"
+    ],
+    "not_implemented": [
+      "non-periodic boundary conditions or multiple charts",
+      "lapse and shift gauge evolution",
+      "spatial-metric and extrinsic-curvature evolution",
+      "strong-hyperbolicity proof",
+      "constraint propagation or damping",
+      "temporal convergence",
+      "Topic 13 stress-energy projection wiring",
+      "SI detector-observable mapping"
+    ],
+    "claim_boundary": "periodic-grid spatial differential-geometry operator with internal analytic controls only; not a spacetime evolution solver or GR validation"
+  },
+  "notes": [
+    "Analytic controls are independent of the finite-difference implementation.",
+    "The ADM adapter match is a wiring check, not independent physical validation.",
+    "Periodic single-chart geometry does not establish boundary treatment, evolution well-posedness, or Gravity compatibility.",
+    "No C-to-mass, Phi-to-metric, Pi-to-K, R_gen-to-state, fitting, clipping, or holdout use is introduced."
+  ],
+  "claim_promotion": false
+}

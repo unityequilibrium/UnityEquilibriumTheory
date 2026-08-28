@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_main_theory_closure_gate",
-  "generated_at": "2026-08-09T04:15:14.245913+00:00",
+  "generated_at": "2026-08-28T05:57:31.160346+00:00",
   "overall_status": "BLOCKED",
   "categories": {
     "methodological_closure": {
@@ -79,7 +79,7 @@
     },
     "wave5": {
       "path": "docs/core/artifacts/uet_main_theory_wave5_gate.json",
-      "sha256": "c3044950760d853aa55387d845703f2f6cbe9f3dda4988a57b89807e06cf793b"
+      "sha256": "0e237d43c17492994ef895cf0a333cd4248846d75f1caafc6041fb55636237cb"
     },
     "wave6": {
       "path": "docs/core/artifacts/uet_main_theory_wave6_gate.json",
@@ -91,7 +91,7 @@
     },
     "wave8": {
       "path": "docs/core/artifacts/uet_main_theory_wave8_gate.json",
-      "sha256": "0d4b471f5695681c6781796da448f63ab652e582f7835e628522f97689d63a0d"
+      "sha256": "95233b7d53a1b6897bd0a85165598b06bef40009599229d4af918a06da039f9e"
     },
     "wave9": {
       "path": "docs/core/artifacts/uet_main_theory_wave9_gate.json",
@@ -107,11 +107,11 @@
     },
     "foundation": {
       "path": "docs/core/artifacts/uet_foundation_dependency_gate.json",
-      "sha256": "cfd60ce816d801b1f00272bfb81816b14376b1d7cd51c4568e5814765d690c37"
+      "sha256": "99d9f68f801b640887ea41627397139b5b6e3f11ce115613abcf6c58256f8aec"
     },
     "registry": {
       "path": "docs/core/artifacts/uet_equation_correspondence_registry.json",
-      "sha256": "855eb965b0205e262e80fe195eec8a76439b32d664b6395fa6dbfcf9b8930b66"
+      "sha256": "b0633c9764f64280a28355b4ebe73f0d5ec0fa915563cc18ae3d46665526c5d9"
     }
   },
   "downstream_unlock": "BLOCKED_EXCEPT_PHASE_INTERNAL_DIAGNOSTIC",

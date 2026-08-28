@@ -6,6 +6,20 @@
 
 ## Entries
 
+### 2026-08-28 - Synchronize Wave 5 with curved 3+1 companion progress
+
+- Scope: fixed-Minkowski Wave 5 gate and the separate curved 3+1 parent dependency
+- Wave type: gate synchronization and claim-boundary pass
+- Added or changed: Wave 5 generator now reads the curved-parent gate and records ADM/geometry companion progress without changing the fixed-background spine result
+- Files touched: `audit_uet_covariant_theory_spine.py`, regenerated Wave 5 artifacts, this update log, and downstream closure accounting as required
+- Verified with: Wave 5 verifier, curved 3+1 focused tests, equation-foundation audit, and dependency-gate checks
+- Result: Wave 5 remains `PASS_MINKOWSKI_1P1_CONTROL_CURVED_BLOCKED`; ADM constraints and periodic spatial geometry are recorded as companion lane passes, while the parent remains `PARTIAL`
+- Blocker narrowed: obsolete all-or-nothing curved wording is replaced by `curved_3p1_gauge_evolution_hyperbolicity_and_constraint_propagation_missing`
+- Still open: gauge-declared metric/`K` evolution, strong hyperbolicity, constraint propagation/damping, temporal convergence, non-periodic boundaries, Topic 13 stress-energy projection, and dimensional observables
+- Next controller: `curved_3p1_gauge_evolution_hyperbolicity_and_constraint_propagation_missing`
+- Claim impact: no promotion; fixed-Minkowski success and curved companion progress remain separate
+- Workflow linkage: companion integration for the post-Topic-13 curved-parent hardening sequence
+
 ### 2026-08-09 - Wave 0 foundation reconstruction and schema repair
 
 - Scope: equation inventory, O(2)/GR program gate, and main-theory dependency graph

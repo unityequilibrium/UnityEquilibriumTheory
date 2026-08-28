@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "hyperbolic_phase_field_covariant_mapping_gate",
-  "generated_at": "2026-08-28T05:24:44+00:00",
+  "generated_at": "2026-08-28T05:51:37+00:00",
   "topic": "docs/core UET GR non-closed response",
   "version": "wave8_v1",
   "benchmark_role": "dependency_gate",

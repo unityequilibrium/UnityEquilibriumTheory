@@ -1,14 +1,17 @@
 {
   "schema_version": "1.0",
   "artifact": "core_curved_3p1_parent_gate",
-  "generated_at": "2026-08-28T05:20:16.070912+00:00",
-  "status": "PARTIAL_CURVED_3P1_PARENT_CONSTRAINT_INTERFACE_READY",
+  "generated_at": "2026-08-28T05:53:32.549525+00:00",
+  "status": "PARTIAL_CURVED_3P1_PARENT_GEOMETRY_OPERATOR_READY",
   "major_result": {
     "major_result_id": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
     "topic": "core",
     "closure_level": "PARTIAL",
     "what_is_closed": [
-      "ADM constraint evaluation interface"
+      "ADM constraint evaluation interface",
+      "periodic-grid metric-to-Ricci operator",
+      "periodic-grid covariant momentum-tensor divergence",
+      "second-order spatial geometry convergence"
     ],
     "equation_or_mapping": {
       "hamiltonian": "R3 + K^2 - K_ij K^ij - 16*pi*G*rho = 0",
@@ -18,9 +21,8 @@
     "derivation_class": "incremental curved 3+1 parent construction",
     "observable": "constraint residual diagnostics only",
     "data_role": "internal analytic controls",
-    "verification_status": "PARTIAL_CURVED_3P1_PARENT_CONSTRAINT_INTERFACE_READY",
+    "verification_status": "PARTIAL_CURVED_3P1_PARENT_GEOMETRY_OPERATOR_READY",
     "open_blockers": [
-      "metric_to_ricci_operator",
       "lapse_shift_gauge",
       "metric_and_extrinsic_curvature_evolution",
       "strong_hyperbolicity",
@@ -29,12 +31,13 @@
       "topic13_stress_energy_projection",
       "dimensional_observable_mapping"
     ],
-    "dependency_unlocked": "next curved 3+1 Core wave only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
+    "dependency_unlocked": "gauge-declared metric/K evolution research wave only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
     "claim_boundary": "partial parent construction; not CLOSED_FOR_CORE and not Gravity/GR compatibility"
   },
   "requirements": {
     "adm_constraint_interface": "PASS",
-    "metric_to_ricci_operator": "OPEN",
+    "metric_to_ricci_operator": "PASS",
+    "spatial_geometry_convergence": "PASS",
     "lapse_shift_gauge": "OPEN",
     "metric_and_extrinsic_curvature_evolution": "OPEN",
     "strong_hyperbolicity": "OPEN",
@@ -43,15 +46,23 @@
     "topic13_stress_energy_projection": "OPEN",
     "dimensional_observable_mapping": "OPEN"
   },
-  "controlling_blocker": "curved_3p1_differential_geometry_evolution_gauge_and_constraint_propagation_missing",
+  "controlling_blocker": "curved_3p1_gauge_evolution_hyperbolicity_and_constraint_propagation_missing",
   "evidence_artifacts": [
     {
       "path": "docs/core/artifacts/curved_3p1_adm_constraint_interface_audit.json",
-      "sha256": "3a17e44e2daad91f96918c2a58153ccf4c405af9ab30a715b1b2dabc7a1be12c"
+      "sha256": "66cf555d96f9bc86118bb71836fe102baa03e122bc33c8ff9b422dbcc764fa6f"
     },
     {
       "path": "docs/core/artifacts/curved_3p1_adm_constraint_formula_audit.json",
-      "sha256": "42f15c6ec459a89acd4afc6b14474a5aaf573c782ca34d8af2d48ee3bee2beb3"
+      "sha256": "16de5029fd5e6519267c530324a1981c1562a8bf28c5ed1258100a8381704c88"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_geometry_operator_verification.json",
+      "sha256": "c35cb35e1b8fb96bdf77b42f708cf0eff7b437332144e1d032bfd2d08338af70"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_geometry_operator_formula_audit.json",
+      "sha256": "4dcd31c7867dbd85cbf2d827e27bc3138ab1e301c67f937eaea880a789ca9192"
     }
   ],
   "claim_promotion": false

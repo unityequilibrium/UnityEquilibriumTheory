@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_main_theory_falsification_register",
-  "generated_at": "2026-08-09T04:15:14.245913+00:00",
+  "generated_at": "2026-08-28T05:57:31.160346+00:00",
   "criteria": [
     {
       "branch": "conservative_parent",

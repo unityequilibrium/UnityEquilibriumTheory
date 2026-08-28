@@ -25,6 +25,21 @@ artifacts may remain useful as diagnostics, but they cannot promote a claim
 while the upstream ontology, units, correspondence, or numerical gate is
 blocked.
 
+## Latest plan update - 2026-08-28 curved 3+1 geometry operator
+
+The second curved-parent subresult,
+`CORE_CURVED_3P1_GEOMETRY_OPERATOR_READY`, is closed for its periodic-grid
+lane. The standard Levi-Civita connection, spatial Ricci tensor/scalar, and ADM
+momentum-tensor divergence are now computed from grid `gamma_ij` and `K_ij`;
+independent analytic controls show second-order spatial convergence.
+
+This removes `metric_to_ricci_operator` from the parent blocker but does not
+close `CORE_CURVED_3P1_OBSERVABLE_PARENT_READY`. The next edge is a declared
+lapse/shift and metric/`K` evolution formulation with a strong-hyperbolicity
+boundary and constraint-propagation/convergence tests. Gravity remains blocked,
+and periodic single-chart success is not promoted to a general curved-spacetime
+solver claim.
+
 ## Latest plan update - 2026-08-28 curved 3+1 constraint interface
 
 Topic 13 now unlocks construction of the Core curved 3+1 parent. The first

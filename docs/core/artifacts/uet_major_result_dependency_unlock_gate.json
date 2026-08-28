@@ -6,7 +6,7 @@
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "9fd4c095b71806b157d635e43926ddeb76dc1eebf0821bbedcad0a1cc87739c8"
+    "sha256": "06a941309c6acf5eef358cb1920f73803c1417b16afd2c3059f85fc51251060b"
   },
   "decisions": {
     "TOPIC_0_11_CHAOS_DIAGNOSTIC_ROLLOUT": {
@@ -96,7 +96,10 @@
       "closure_level": "PARTIAL",
       "claim_promotion": false,
       "what_is_closed": [
-        "ADM constraint evaluation interface"
+        "ADM constraint evaluation interface",
+        "periodic-grid metric-to-Ricci operator",
+        "periodic-grid covariant momentum-tensor divergence",
+        "second-order spatial geometry convergence"
       ],
       "equation_or_mapping": {
         "hamiltonian": "R3 + K^2 - K_ij K^ij - 16*pi*G*rho = 0",
@@ -109,17 +112,16 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/core_curved_3p1_parent_gate.json",
-          "sha256": "48e20b52e3c0a647460d4a5dc5201f5216efc16f0cce0d5fdfc274a603838fd4",
+          "sha256": "77c39e03c5b97905bdcf64234f502733a54221a07861d092aff0b5f4dbce6545",
           "summary": {
-            "status": "PARTIAL_CURVED_3P1_PARENT_CONSTRAINT_INTERFACE_READY",
+            "status": "PARTIAL_CURVED_3P1_PARENT_GEOMETRY_OPERATOR_READY",
             "major_result_id": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
             "closure_level": "PARTIAL"
           }
         }
       ],
-      "verification_status": "PARTIAL_CURVED_3P1_PARENT_CONSTRAINT_INTERFACE_READY",
+      "verification_status": "PARTIAL_CURVED_3P1_PARENT_GEOMETRY_OPERATOR_READY",
       "open_blockers": [
-        "metric_to_ricci_operator",
         "lapse_shift_gauge",
         "metric_and_extrinsic_curvature_evolution",
         "strong_hyperbolicity",
@@ -128,7 +130,7 @@
         "topic13_stress_energy_projection",
         "dimensional_observable_mapping"
       ],
-      "dependency_unlocked": "next curved 3+1 Core wave only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
+      "dependency_unlocked": "gauge-declared metric/K evolution research wave only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
       "claim_boundary": "partial parent construction; not CLOSED_FOR_CORE and not Gravity/GR compatibility"
     },
     "adm_constraint_interface": {
@@ -160,7 +162,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/curved_3p1_adm_constraint_interface_audit.json",
-          "sha256": "3a17e44e2daad91f96918c2a58153ccf4c405af9ab30a715b1b2dabc7a1be12c",
+          "sha256": "66cf555d96f9bc86118bb71836fe102baa03e122bc33c8ff9b422dbcc764fa6f",
           "summary": {
             "status": "PASS_CURVED_3P1_ADM_CONSTRAINT_INTERFACE",
             "major_result_id": "CORE_CURVED_3P1_ADM_CONSTRAINT_INTERFACE_READY",
@@ -181,12 +183,67 @@
       "dependency_unlocked": "curved 3+1 differential-geometry and evolution wave only; Gravity remains blocked",
       "claim_boundary": "curved 3+1 ADM constraint evaluation interface only; not a metric evolution solver, Einstein-equation derivation, or GR validation"
     },
+    "geometry_operator": {
+      "major_result_id": "CORE_CURVED_3P1_GEOMETRY_OPERATOR_READY",
+      "topic": "core",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "periodic-grid metric-to-Levi-Civita connection",
+        "periodic-grid metric-to-spatial-Ricci tensor and scalar",
+        "periodic-grid covariant ADM momentum-tensor divergence",
+        "second-order spatial convergence on independent analytic controls",
+        "adapter into the existing ADM constraint evaluator"
+      ],
+      "equation_or_mapping": {
+        "christoffel": "Gamma^k_ij = 1/2 gamma^kl (d_i gamma_lj + d_j gamma_li - d_l gamma_ij)",
+        "ricci_tensor": "R_ij = d_k Gamma^k_ij - d_j Gamma^k_ik + Gamma^k_ij Gamma^l_kl - Gamma^l_ik Gamma^k_jl",
+        "ricci_scalar": "R3 = gamma^ij R_ij",
+        "momentum_divergence": "D_j B^j_i = d_j B^j_i + Gamma^j_jm B^m_i - Gamma^m_ji B^j_m",
+        "momentum_tensor": "B^j_i = K^j_i - delta^j_i K"
+      },
+      "units": {
+        "coordinates_and_spacing": "L",
+        "gamma_ij": "dimensionless in the declared geometric chart lane",
+        "Gamma^k_ij": "L^-1",
+        "R_ij_and_R3": "L^-2",
+        "K_ij": "L^-1",
+        "D_j_B^j_i": "L^-2"
+      },
+      "derivation_class": "standard differential geometry with second-order numerical approximation",
+      "observable": "spatial curvature and constraint-input diagnostics; no detector observable",
+      "data_role": "analytic manufactured controls; no fitted or holdout data",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/curved_3p1_geometry_operator_verification.json",
+          "sha256": "c35cb35e1b8fb96bdf77b42f708cf0eff7b437332144e1d032bfd2d08338af70",
+          "summary": {
+            "status": "PASS_CURVED_3P1_GEOMETRY_OPERATOR",
+            "major_result_id": "CORE_CURVED_3P1_GEOMETRY_OPERATOR_READY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_CURVED_3P1_GEOMETRY_OPERATOR",
+      "open_blockers": [
+        "non-periodic boundary conditions or multiple charts",
+        "lapse and shift gauge evolution",
+        "spatial-metric and extrinsic-curvature evolution",
+        "strong-hyperbolicity proof",
+        "constraint propagation or damping",
+        "temporal convergence",
+        "Topic 13 stress-energy projection wiring",
+        "SI detector-observable mapping"
+      ],
+      "dependency_unlocked": "lapse/shift and metric/K evolution research wave only; Gravity remains blocked",
+      "claim_boundary": "periodic-grid spatial differential-geometry operator with internal analytic controls only; not a spacetime evolution solver or GR validation"
+    },
     "gravity_unlock_status": "BLOCKED_DEPENDENCY",
-    "controlling_blocker": "curved_3p1_differential_geometry_evolution_gauge_and_constraint_propagation_missing",
-    "claim_boundary": "ADM constraint-interface progress only; the parent is not CLOSED_FOR_CORE and Gravity remains blocked"
+    "controlling_blocker": "curved_3p1_gauge_evolution_hyperbolicity_and_constraint_propagation_missing",
+    "claim_boundary": "ADM constraint and periodic spatial-geometry progress only; the parent is not CLOSED_FOR_CORE and Gravity remains blocked"
   },
   "topic13_partial_evidence": {
-    "register_sha256": "9fd4c095b71806b157d635e43926ddeb76dc1eebf0821bbedcad0a1cc87739c8",
+    "register_sha256": "06a941309c6acf5eef358cb1920f73803c1417b16afd2c3059f85fc51251060b",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",

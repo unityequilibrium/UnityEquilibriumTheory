@@ -107,18 +107,28 @@ def main() -> int:
         ),
         None,
     )
-    if curved_parent is not None or adm_interface is not None:
+    geometry_operator = next(
+        (
+            entry
+            for entry in register["entries"]
+            if entry.get("major_result_id")
+            == "CORE_CURVED_3P1_GEOMETRY_OPERATOR_READY"
+        ),
+        None,
+    )
+    if curved_parent is not None or adm_interface is not None or geometry_operator is not None:
         artifact["curved_3p1_progress"] = {
             "parent": curved_parent,
             "adm_constraint_interface": adm_interface,
+            "geometry_operator": geometry_operator,
             "gravity_unlock_status": decisions["GR_CLASSICAL_COMPATIBILITY_LANE"]["status"],
             "controlling_blocker": (
-                "curved_3p1_differential_geometry_evolution_gauge_and_"
+                "curved_3p1_gauge_evolution_hyperbolicity_and_"
                 "constraint_propagation_missing"
             ),
             "claim_boundary": (
-                "ADM constraint-interface progress only; the parent is not "
-                "CLOSED_FOR_CORE and Gravity remains blocked"
+                "ADM constraint and periodic spatial-geometry progress only; "
+                "the parent is not CLOSED_FOR_CORE and Gravity remains blocked"
             ),
         }
     # Preserve lane-level Topic 13 evidence and refresh known artifact hashes.

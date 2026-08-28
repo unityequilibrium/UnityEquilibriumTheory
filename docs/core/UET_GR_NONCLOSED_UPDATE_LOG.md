@@ -6,6 +6,19 @@
 > program without upgrading claims ahead of generated evidence.
 
 ## Entries
+### 2026-08-28 - Close the periodic spatial geometry operator lane
+
+- Scope: Core curved 3+1 periodic single-chart differential geometry and ADM-input integration
+- Wave type: formula pass, numerical implementation, analytic-control/convergence gate, negative-control gate, registry/dependency sync, and claim-boundary pass
+- Added or changed: periodic-grid Levi-Civita/Ricci/divergence module, verifier, formula and verification artifacts, focused tests, Core exports, parent gate, registry addendum, source scope, and dependency reporting
+- Verified with: flat exact-zero control; conformally-flat analytic Ricci control; manufactured off-diagonal-`K` divergence control; three-resolution spatial convergence; ADM adapter and negative matter/spacing controls; focused curved 3+1 tests
+- Result: `CORE_CURVED_3P1_GEOMETRY_OPERATOR_READY` is `CLOSED_FOR_LANE`; Ricci observed orders are `1.9660, 1.9914`, divergence orders are `1.9852, 1.9963`; parent remains `PARTIAL` and Gravity remains `BLOCKED_DEPENDENCY`
+- Blocker narrowed: `metric_to_ricci_operator` and periodic covariant momentum-divergence implementation are now `PASS` with second-order spatial convergence
+- Still open: lapse/shift gauge, metric/extrinsic-curvature evolution, strong hyperbolicity, constraint propagation/damping, temporal convergence, non-periodic boundaries/multiple charts, Topic 13 stress-energy projection, and dimensional observables
+- Next controller: `curved_3p1_gauge_evolution_hyperbolicity_and_constraint_propagation_missing`
+- Claim impact: Class B retained; no continuum proof, numerical-GR validation, Einstein-equation derivation, Gravity unlock, or global promotion
+- Workflow linkage: second post-Topic-13 Core hardening wave under the F0-F8 and major-result contracts
+
 ### 2026-08-28 - Add the curved 3+1 ADM constraint interface
 
 - Scope: Core curved 3+1 parent, standard ADM initial-value constraints, analytic controls, and dependency reporting
