@@ -1,9 +1,13 @@
-# 0.3 reformation_of_the_mind (Section 3, Book 3)
+# เล่มที่ 3.3: การสร้างวาทกรรมใหม่และสถาปัตยกรรมจารีตใหม่
+*(Book 3.3: Reformation of the Mind: No States, No Rulers)*
 
-> Section parent: `../`
-> Book identity follows `book_blueprint.md`; the previous Book 5 header was stale metadata.
+- **Book ID**: `03_3_reformation_of_the_mind`
+- **Section ID**: `section_03_history_hegemony`
+- **Volume Number**: 3
+- **Status**: `IN_PROGRESS` (Gate: `W04_BOOK_BLUEPRINTS_DRAFT` ➔ `W05`)
+- **Parent Section**: [`../SECTION_BLUEPRINT.md`](../SECTION_BLUEPRINT.md)
 
-นี่คือ Workspace หลักสำหรับรวบรวมข้อมูล, โครงร่าง และต้นฉบับของ **หนังสือเล่มที่ 5** ในซีรีส์ UET
+---
 
 ## โครงสร้างโฟลเดอร์ทำงาน (Standard Book Structure)
 

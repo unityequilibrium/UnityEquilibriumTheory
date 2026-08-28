@@ -31,6 +31,9 @@ Section Blueprint: `section-03-v1`
 | **พรมแดนความคิด (Epistemic Horizon)** | ขอบเขตความรู้และข้อมูลที่ได้รับจากสื่อ ซึ่งกลายเป็นกรอบขังไม่ให้สมองมนุษย์คิดออกนอกขอบเขตที่มี | Books 1, 2 | Wittgenstein (*Tractatus*), Walter Lippmann | `PASS` |
 | **กลุ่มอาการโลกโหดร้าย (Mean World Syndrome)** | ภาวะทางจิตของปัจเจกที่เสพสื่ออาชญากรรม/ข่าวสารมากเกินไปจนมองโลกอันตรายเกินจริง กระตุ้นความกลัวใน Amygdala | Books 1, 2 | George Gerbner (*Cultivation Theory*) | `PASS` |
 | **เกลียวแห่งความเงียบ (Spiral of Silence)** | สภาวะที่ปัจเจกไม่กล้าแสดงความเห็นต่างเพราะกลัวการถูกกีดกันทางสังคม (Social Isolation) ทำให้กระแสหลักครอบงำ | Book 2 | Elisabeth Noelle-Neumann | `PASS` |
+| **ความยินยอมในจารีตธรรมชาติ (Pre-Existing Consent)** | ฉันทามติหรือการยินยอมตั้งต้นของมนุษย์ที่ถูกหล่อหลอมมาจากข้อจำกัดทางกายภาพ สิ่งแวดล้อม และสมอง (Sec 0.3) | Books 1, 2, 3 | UET Environmental-Physical Matrix & Cultural Anthropology | `PASS` |
+| **การหยิบยกวาทกรรมสวมทับ (Discursive Co-optation)** | กลยุทธ์ของชนชั้นนำในการเลือกใช้วาทกรรมที่เข้าล็อกกับความยินยอมในจารีตเดิม เพื่อสร้างความชอบธรรมให้อำนาจตน | Books 1, 2 | Hegemony Theory (Gramsci) & Critical Discourse Analysis | `PASS` |
+| **สภาวะมวลชนถูกปั่นให้รบกันเอง (Controlled Mass Agitation)** | กลไกการสร้างวาทกรรมปลุกปั่นให้มวลชนแตกแยกและทะเลาะกันเอง เบนความสนใจจากการตรวจสอบเครือข่ายอำนาจ | Book 2 | Social Identity Theory, Thai Political Anatomy (ทฤษฎีหมาเห่า) | `PASS` |
 
 ---
 
