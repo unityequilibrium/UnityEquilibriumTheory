@@ -875,3 +875,33 @@ __all__ += [
     "fixed_gauge_adm_principal_symbol",
     "adm_evolution_contract",
 ]
+
+from .uet_curved_3p1_generalized_harmonic import (
+    GH_PRINCIPAL_SYSTEM_STATUS,
+    GHParameters,
+    GHPrincipalSymbolResult,
+    GHLinearRHS,
+    gh_principal_symbol,
+    gh_characteristic_fields,
+    reconstruct_gh_state,
+    gh_reduction_constraint,
+    gh_curl_constraint,
+    gh_gauge_constraint,
+    compute_linear_gh_reduction_damped_rhs,
+    generalized_harmonic_contract,
+)
+
+__all__ += [
+    "GH_PRINCIPAL_SYSTEM_STATUS",
+    "GHParameters",
+    "GHPrincipalSymbolResult",
+    "GHLinearRHS",
+    "gh_principal_symbol",
+    "gh_characteristic_fields",
+    "reconstruct_gh_state",
+    "gh_reduction_constraint",
+    "gh_curl_constraint",
+    "gh_gauge_constraint",
+    "compute_linear_gh_reduction_damped_rhs",
+    "generalized_harmonic_contract",
+]

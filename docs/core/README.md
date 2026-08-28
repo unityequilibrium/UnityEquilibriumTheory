@@ -59,6 +59,9 @@ Current foundation artifacts:
 - [Curved 3+1 ADM evolution verification](./artifacts/curved_3p1_adm_evolution_operator_verification.json)
 - [Fixed-gauge ADM hyperbolicity no-go](./artifacts/curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json)
 - [Curved 3+1 evolution branch specification](./CORE_CURVED_3P1_EVOLUTION_BRANCH_SPEC.md)
+- [Curved 3+1 generalized-harmonic principal system](./uet_curved_3p1_generalized_harmonic.py)
+- [Generalized-harmonic principal-system verification](./artifacts/curved_3p1_gh_principal_system_verification.json)
+- [Generalized-harmonic branch gate](./artifacts/curved_3p1_gh_branch_gate.json)
 
 > **Historical engine layer for candidate UET equation families**
 > **Version 0.9.0** | Last Updated: 2026-01-13

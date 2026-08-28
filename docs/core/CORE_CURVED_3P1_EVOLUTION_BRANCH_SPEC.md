@@ -1,16 +1,16 @@
 # Core Curved 3+1 Evolution Branch Specification
 
-MAJOR_RESULT_CLOSURE: `PARTIAL`
+MAJOR_RESULT_CLOSURE: `GH_PRINCIPAL_SYSTEM_CLOSED_FOR_LANE / PARENT_PARTIAL`
 
 WHAT_IS_ACTUALLY_CLOSED: The nonlinear periodic ADM metric/extrinsic-curvature right-hand-side operator, its analytic controls, and the fixed-geodesic ADM strong-hyperbolicity question are closed for their declared lanes. The fixed-gauge branch is closed as a no-go because its zero-speed principal-symbol sector has algebraic multiplicity 6 but geometric multiplicity 3.
 
-WHAT_REMAINS_OPEN: A well-posed time-evolution parent, constraint damping and propagation, temporal convergence, constraint-preserving non-periodic boundaries, Topic 13 stress-energy wiring, and SI observable mapping.
+WHAT_REMAINS_OPEN: Complete nonlinear GH algebraic right-hand sides, gamma0 gauge-constraint damping, a time integrator/CFL policy, full constraint propagation, temporal convergence, constraint-preserving non-periodic boundaries, Topic 13 stress-energy wiring, and SI observable mapping.
 
 DEPENDENCY_UNLOCKED: Implementation and verification of the first-order generalized-harmonic branch only. Gravity/GR remains blocked.
 
-STATUS: `PREREGISTERED_GENERALIZED_HARMONIC_NEXT_BRANCH`
+STATUS: `PARTIAL_GH_PRINCIPAL_SYSTEM_READY`
 
-WHAT_CHANGED: Fixed-gauge ADM is no longer an ambiguous repeated-run target. It is retained as a failed baseline, while first-order generalized harmonic (GH) is the named next branch.
+WHAT_CHANGED: Fixed-gauge ADM remains a failed baseline. The source-locked first-order GH principal system now has a complete characteristic basis, positive analytic symmetrizer, source-matched causal normal-frame speeds, and a verified reduction-constraint damping operator. This does not include the complete nonlinear RHS or time evolution.
 
 EQUATION_OR_MAPPING:
 
@@ -28,9 +28,9 @@ VERIFICATION:
 - Verify constraint damping and propagation separately from solution accuracy.
 - Add constraint-preserving boundary tests before any non-periodic or black-hole claim.
 
-CONTROLLING_BLOCKER: `curved_3p1_generalized_harmonic_evolution_constraint_damping_and_propagation_missing`
+CONTROLLING_BLOCKER: `curved_3p1_generalized_harmonic_nonlinear_rhs_and_gamma0_constraint_damping_missing`
 
-NEXT_ACTION: Implement the first-order GH equation/gauge contract and principal-symbol verifier before adding a time integrator.
+NEXT_ACTION: Transcribe and independently verify the complete nonlinear GH algebraic right-hand sides and gamma0 gauge-constraint damping before adding a time integrator.
 
 CLAIM_BOUNDARY: This specification selects and preregisters a standard numerical-relativity formulation target. It does not establish a GH implementation, a curved UET solution, Einstein-equation derivation, Gravity compatibility, or external validation.
 

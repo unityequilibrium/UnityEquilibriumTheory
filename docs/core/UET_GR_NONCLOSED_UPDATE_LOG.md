@@ -6,6 +6,17 @@
 > program without upgrading claims ahead of generated evidence.
 
 ## Entries
+### 2026-08-28 - Close the generalized-harmonic principal-system lane
+
+- Scope: source-locked first-order GH principal equations, characteristic fields, symmetrizer, gauge/reduction constraints, and reduction damping
+- Wave type: formula/source pass, formal hyperbolicity gate, manufactured convergence gate, negative-control gate, registry/dependency sync, and claim-boundary pass
+- Added or changed: GH module, verifier, formula/verification/branch artifacts, source equation locators, focused tests, Core exports, parent gate, registry addendum, dependency reporting, and branch specification
+- Verified with: 15 direction/parameter principal symbols; complete rank-5 transforms; analytic symmetrizer positivity and symmetry; characteristic roundtrip; Minkowski gauge constraint; reduction/curl controls; three-resolution manufactured convergence
+- Result: `CORE_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY` is `CLOSED_FOR_LANE`; parent remains `PARTIAL`; Gravity remains blocked
+- Blocker narrowed: GH formulation/hyperbolicity is no longer open at principal level; controller is now `curved_3p1_generalized_harmonic_nonlinear_rhs_and_gamma0_constraint_damping_missing`
+- Still open: complete nonlinear GH RHS, gamma0 gauge damping, time integration/CFL, full constraint propagation, temporal convergence, constraint-preserving boundaries, matter wiring, and SI observables
+- Claim impact: no promotion to a complete Einstein evolution, numerical-relativity solver, or Gravity compatibility
+
 ### 2026-08-28 - Close ADM RHS operator and fixed-gauge hyperbolicity no-go
 
 - Scope: nonlinear periodic ADM metric/K right-hand sides and formulation selection

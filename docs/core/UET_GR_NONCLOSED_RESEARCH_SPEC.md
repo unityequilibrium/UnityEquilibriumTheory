@@ -1,13 +1,27 @@
 # UET GR Closed-Limit and Non-Closed Response Research Specification
 
-> **Status:** `ADM EVOLUTION RHS VERIFIED / FIXED-GAUGE NO-GO CLOSED / GH BRANCH OPEN`
+> **Status:** `GH PRINCIPAL SYSTEM VERIFIED / NONLINEAR EVOLUTION OPEN`
 > **Current claim class:** `B`
-> **Current controlling blocker:** `curved_3p1_generalized_harmonic_evolution_constraint_damping_and_propagation_missing`
+> **Current controlling blocker:** `curved_3p1_generalized_harmonic_nonlinear_rhs_and_gamma0_constraint_damping_missing`
 > **Program rule:** General relativity is the null/closed-response model. A
 > non-zero UET response is an empirical alternative, not a conclusion assumed
 > from the existence of the model.
 
 ## Current curved 3+1 boundary (2026-08-28, ADM evolution/no-go wave)
+
+The selected first-order GH branch has now passed its principal-system gate.
+The implementation source-locks Eqs. (27)-(34) of Lindblom et al., enforces
+`gamma3=gamma1*gamma2`, locks the linearly-degenerate `gamma1=-1` branch, and
+checks the positive symmetrizer condition `Lambda^2>gamma2^2`. Fifteen
+direction/parameter cases have a complete rank-5 characteristic transform,
+source-matched speeds, normal-frame wave speeds `+1/-1`, and algebraic
+residuals at roundoff. The reduction-constraint damping identity and
+second-order spatial operator convergence also pass.
+
+This closes `CORE_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY` for its declared lane.
+It does not close the parent: complete nonlinear algebraic source terms,
+`gamma0` gauge-constraint damping, time integration, full constraint
+propagation, boundaries, matter wiring, and observables remain open.
 
 The parent now also evaluates the nonlinear periodic ADM metric and
 extrinsic-curvature right-hand sides under declared lapse and shift. Minkowski

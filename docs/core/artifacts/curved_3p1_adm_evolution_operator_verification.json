@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_adm_evolution_operator_verification",
-  "generated_at": "2026-08-28T06:21:42.614903+00:00",
+  "generated_at": "2026-08-28T15:32:03.440968+00:00",
   "topic": "docs/core curved 3+1 parent",
   "version": "adm-evolution-rhs-v1",
   "benchmark_role": "internal analytic operator and gauge-derivative gate",
@@ -114,11 +114,24 @@
       "arxiv_id": "gr-qc/0512093",
       "doi": "10.1088/0264-9381/23/16/S09",
       "url": "https://arxiv.org/abs/gr-qc/0512093",
+      "version": "v3",
+      "journal_reference": "Class. Quantum Grav. 23 (2006) S447-S462",
+      "formula_locators": {
+        "gh_gauge": "Section 2, Eqs. (6), (11), and (12)",
+        "constraint_damping": "Section 2.2, Eqs. (17)-(21)",
+        "first_order_variables": "Section 3, Eqs. (22)-(26)",
+        "modified_principal_system": "Section 3, Eqs. (27)-(29)",
+        "symmetrizer": "Section 3, Eq. (30), with gamma3=gamma1*gamma2 and Lambda^2>gamma2^2",
+        "characteristic_fields": "Section 3, Eqs. (31)-(34)",
+        "complete_rhs": "Section 3, Eqs. (35)-(39)",
+        "first_order_gauge_constraint": "Section 4.1, Eq. (40)"
+      },
       "source_role": "preregistered next-branch formulation and constraint-damping reference",
       "used_scope": [
         "first-order generalized-harmonic variables and gauge-source concept",
         "symmetric-hyperbolic formulation target",
-        "constraint-damping and constraint-preserving boundary target"
+        "constraint-damping and constraint-preserving boundary target",
+        "principal equations, symmetrizer, characteristic fields, and reduction-constraint damping"
       ],
       "not_used_for": [
         "claim that a generalized-harmonic UET branch is already implemented",
@@ -135,7 +148,7 @@
     "docs/scripts/audit/audit_uet_curved_3p1_adm_evolution.py": "c673d75b1ffec3d2dc7985afd585f477ef3381b6e1aecec6a45a49737ad0228c",
     "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json": "d989b9dd637828dd64f975eaf1f744163ac71e362bde71e46e86e599eced1754",
     "docs/data/external/gr_3p1/gundlach_martin_garcia_2006/source_record.json": "d9153620dad37fb08328b8dd308394023ac53b904b8ee2f4bf3a2239c0e200fc",
-    "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "b8995dc5d47a642dadcef5afe0074babd0c67300133c29bf15e3a14f3a847452"
+    "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a"
   },
   "input_identity": {
     "module": "docs/core/uet_curved_3p1_adm_evolution.py",

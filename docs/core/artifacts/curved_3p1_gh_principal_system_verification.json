@@ -1,0 +1,633 @@
+{
+  "schema_version": "1.0",
+  "artifact": "curved_3p1_gh_principal_system_verification",
+  "generated_at": "2026-08-28T15:30:47.962718+00:00",
+  "topic": "docs/core curved 3+1 parent",
+  "status": "PASS_GH_PRINCIPAL_CHARACTERISTIC_SYSTEM",
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY",
+    "topic": "core",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "source-locked first-order GH principal equation contract",
+      "complete characteristic basis and source-matched speeds",
+      "positive analytic symmetrizer and symmetric-hyperbolic identity",
+      "linearly-degenerate gamma1=-1 parameter branch",
+      "reduction-constraint damping operator and second-order spatial convergence"
+    ],
+    "equation_or_mapping": {
+      "gauge_constraint": "C_a = H_a + Gamma_a",
+      "reduction_constraint": "C_iab = partial_i psi_ab - Phi_iab",
+      "gamma3": "gamma3 = gamma1 gamma2",
+      "characteristic_0": "u0_ab = psi_ab",
+      "characteristic_pm": "u1pm_ab = Pi_ab +/- n^i Phi_iab - gamma2 psi_ab",
+      "characteristic_2": "u2_iab = P_i^k Phi_kab",
+      "speeds": "{-(1+gamma1) beta_n, -beta_n +/- alpha, -beta_n}",
+      "symmetrizer_condition": "Lambda^2 > gamma2^2"
+    },
+    "units": "geometric c=1 local-orthonormal principal-symbol lane",
+    "derivation_class": "source-locked standard GH equations plus numerical operator verification",
+    "observable": "formulation and constraint diagnostics only",
+    "data_role": "analytic/manufactured controls; no fit, calibration, or holdout",
+    "verification_status": "PASS_GH_PRINCIPAL_CHARACTERISTIC_SYSTEM",
+    "open_blockers": [
+      "complete nonlinear GH algebraic right-hand sides",
+      "gamma0 gauge-constraint damping in the nonlinear RHS",
+      "time integration and CFL policy",
+      "constraint propagation convergence",
+      "constraint-preserving boundaries",
+      "matter stress-energy wiring and detector observable map"
+    ],
+    "dependency_unlocked": "complete nonlinear GH RHS and gamma0 gauge-constraint damping wave only",
+    "claim_boundary": "source-locked GH principal/characteristic and reduction-damping operator only; not a complete nonlinear Einstein evolution, numerical-relativity solver, or UET validation"
+  },
+  "source": {
+    "schema_version": "1.0",
+    "source_id": "lindblom_et_al_2006_generalized_harmonic",
+    "title": "A New Generalized Harmonic Evolution System",
+    "authors": [
+      "Lee Lindblom",
+      "Mark A. Scheel",
+      "Lawrence E. Kidder",
+      "Robert Owen",
+      "Oliver Rinne"
+    ],
+    "year": 2006,
+    "arxiv_id": "gr-qc/0512093",
+    "doi": "10.1088/0264-9381/23/16/S09",
+    "url": "https://arxiv.org/abs/gr-qc/0512093",
+    "version": "v3",
+    "journal_reference": "Class. Quantum Grav. 23 (2006) S447-S462",
+    "formula_locators": {
+      "gh_gauge": "Section 2, Eqs. (6), (11), and (12)",
+      "constraint_damping": "Section 2.2, Eqs. (17)-(21)",
+      "first_order_variables": "Section 3, Eqs. (22)-(26)",
+      "modified_principal_system": "Section 3, Eqs. (27)-(29)",
+      "symmetrizer": "Section 3, Eq. (30), with gamma3=gamma1*gamma2 and Lambda^2>gamma2^2",
+      "characteristic_fields": "Section 3, Eqs. (31)-(34)",
+      "complete_rhs": "Section 3, Eqs. (35)-(39)",
+      "first_order_gauge_constraint": "Section 4.1, Eq. (40)"
+    },
+    "source_role": "preregistered next-branch formulation and constraint-damping reference",
+    "used_scope": [
+      "first-order generalized-harmonic variables and gauge-source concept",
+      "symmetric-hyperbolic formulation target",
+      "constraint-damping and constraint-preserving boundary target",
+      "principal equations, symmetrizer, characteristic fields, and reduction-constraint damping"
+    ],
+    "not_used_for": [
+      "claim that a generalized-harmonic UET branch is already implemented",
+      "claim that periodic ADM controls validate black-hole evolution",
+      "UET coefficient fitting",
+      "external physical validation"
+    ],
+    "local_payload": "metadata-only source record; no redistributed PDF",
+    "accessed_on": "2026-08-28"
+  },
+  "source_hashes": {
+    "docs/core/uet_curved_3p1_generalized_harmonic.py": "8106e269e773b286d66006243e0af8e55bf9e53f28e1f399c32b641808dc546e",
+    "docs/scripts/audit/audit_uet_curved_3p1_generalized_harmonic.py": "b8014a15ebf620c5668d45c4aae277eb96a2b2ee2bfabfd8d7ffbb60515c9eee",
+    "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a"
+  },
+  "parameters": [
+    {
+      "lapse": 1.0,
+      "shift": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "gamma0": 1.0,
+      "gamma1": -1.0,
+      "gamma2": 0.5,
+      "symmetrizer_lambda": 1.0,
+      "gamma3": -0.5
+    },
+    {
+      "lapse": 0.8,
+      "shift": [
+        0.1,
+        -0.05,
+        0.03
+      ],
+      "gamma0": 1.0,
+      "gamma1": -1.0,
+      "gamma2": 0.7,
+      "symmetrizer_lambda": 1.2,
+      "gamma3": -0.7
+    },
+    {
+      "lapse": 1.3,
+      "shift": [
+        -0.2,
+        0.1,
+        0.04
+      ],
+      "gamma0": 1.0,
+      "gamma1": -1.0,
+      "gamma2": 1.0,
+      "symmetrizer_lambda": 1.5,
+      "gamma3": -1.0
+    }
+  ],
+  "thresholds": {
+    "maximum_algebraic_residual": 1e-12,
+    "minimum_eigenvector_rank": 5,
+    "maximum_transform_condition_number": 20.0,
+    "minimum_symmetrizer_eigenvalue": 1e-06,
+    "minimum_spatial_order": 1.8,
+    "maximum_constraint_identity_residual": 1e-12
+  },
+  "metrics": {
+    "principal_symbol_records": [
+      {
+        "case": 0,
+        "direction": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "characteristic_speeds": [
+          -0.0,
+          1.0,
+          -1.0,
+          -0.0,
+          -0.0
+        ],
+        "speed_error": 0.0,
+        "wave_normal_speeds": [
+          1.0,
+          -1.0
+        ],
+        "eigenvector_rank": 5,
+        "transform_condition_number": 1.9663058539321208,
+        "characteristic_residual": 0.0,
+        "symmetrizer_residual": 0.0,
+        "minimum_symmetrizer_eigenvalue": 0.5,
+        "roundtrip_residual": 0.0
+      },
+      {
+        "case": 0,
+        "direction": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "characteristic_speeds": [
+          -0.0,
+          1.0,
+          -1.0,
+          -0.0,
+          -0.0
+        ],
+        "speed_error": 0.0,
+        "wave_normal_speeds": [
+          1.0,
+          -1.0
+        ],
+        "eigenvector_rank": 5,
+        "transform_condition_number": 1.9663058539321208,
+        "characteristic_residual": 0.0,
+        "symmetrizer_residual": 0.0,
+        "minimum_symmetrizer_eigenvalue": 0.5,
+        "roundtrip_residual": 2.7755575615628914e-17
+      },
+      {
+        "case": 0,
+        "direction": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "characteristic_speeds": [
+          -0.0,
+          1.0,
+          -1.0,
+          -0.0,
+          -0.0
+        ],
+        "speed_error": 0.0,
+        "wave_normal_speeds": [
+          1.0,
+          -1.0
+        ],
+        "eigenvector_rank": 5,
+        "transform_condition_number": 1.9663058539321208,
+        "characteristic_residual": 0.0,
+        "symmetrizer_residual": 0.0,
+        "minimum_symmetrizer_eigenvalue": 0.5,
+        "roundtrip_residual": 5.551115123125783e-17
+      },
+      {
+        "case": 0,
+        "direction": [
+          0.5773502691896258,
+          0.5773502691896258,
+          0.5773502691896258
+        ],
+        "characteristic_speeds": [
+          -0.0,
+          1.0,
+          -1.0,
+          -0.0,
+          -0.0
+        ],
+        "speed_error": 0.0,
+        "wave_normal_speeds": [
+          1.0,
+          -1.0
+        ],
+        "eigenvector_rank": 5,
+        "transform_condition_number": 1.9663058539321208,
+        "characteristic_residual": 2.7755575615628914e-16,
+        "symmetrizer_residual": 0.0,
+        "minimum_symmetrizer_eigenvalue": 0.5,
+        "roundtrip_residual": 1.1102230246251565e-16
+      },
+      {
+        "case": 0,
+        "direction": [
+          0.254000254000381,
+          -0.3810003810005715,
+          0.8890008890013334
+        ],
+        "characteristic_speeds": [
+          -0.0,
+          1.0,
+          -1.0,
+          -0.0,
+          -0.0
+        ],
+        "speed_error": 0.0,
+        "wave_normal_speeds": [
+          1.0,
+          -1.0
+        ],
+        "eigenvector_rank": 5,
+        "transform_condition_number": 1.9663058539321208,
+        "characteristic_residual": 2.220446049250313e-16,
+        "symmetrizer_residual": 0.0,
+        "minimum_symmetrizer_eigenvalue": 0.5,
+        "roundtrip_residual": 5.551115123125783e-17
+      },
+      {
+        "case": 1,
+        "direction": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "characteristic_speeds": [
+          -0.0,
+          0.7000000000000001,
+          -0.9,
+          -0.1,
+          -0.1
+        ],
+        "speed_error": 0.0,
+        "wave_normal_speeds": [
+          1.0,
+          -1.0
+        ],
+        "eigenvector_rank": 5,
+        "transform_condition_number": 2.3971172417139024,
+        "characteristic_residual": 1.1102230246251565e-16,
+        "symmetrizer_residual": 0.0,
+        "minimum_symmetrizer_eigenvalue": 0.4862425468862344,
+        "roundtrip_residual": 1.1102230246251565e-16
+      },
+      {
+        "case": 1,
+        "direction": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "characteristic_speeds": [
+          0.0,
+          0.8500000000000001,
+          -0.75,
+          0.05,
+          0.05
+        ],
+        "speed_error": 0.0,
+        "wave_normal_speeds": [
+          1.0,
+          -1.0
+        ],
+        "eigenvector_rank": 5,
+        "transform_condition_number": 2.3971172417139024,
+        "characteristic_residual": 0.0,
+        "symmetrizer_residual": 0.0,
+        "minimum_symmetrizer_eigenvalue": 0.4862425468862344,
+        "roundtrip_residual": 2.7755575615628914e-17
+      },
+      {
+        "case": 1,
+        "direction": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "characteristic_speeds": [
+          -0.0,
+          0.77,
+          -0.8300000000000001,
+          -0.03,
+          -0.03
+        ],
+        "speed_error": 0.0,
+        "wave_normal_speeds": [
+          1.0,
+          -1.0
+        ],
+        "eigenvector_rank": 5,
+        "transform_condition_number": 2.3971172417139024,
+        "characteristic_residual": 0.0,
+        "symmetrizer_residual": 0.0,
+        "minimum_symmetrizer_eigenvalue": 0.4862425468862344,
+        "roundtrip_residual": 0.0
+      },
+      {
+        "case": 1,
+        "direction": [
+          0.5773502691896258,
+          0.5773502691896258,
+          0.5773502691896258
+        ],
+        "characteristic_speeds": [
+          -0.0,
+          0.75381197846483,
+          -0.8461880215351701,
+          -0.04618802153517007,
+          -0.04618802153517007
+        ],
+        "speed_error": 0.0,
+        "wave_normal_speeds": [
+          1.0,
+          -1.0
+        ],
+        "eigenvector_rank": 5,
+        "transform_condition_number": 2.3971172417139024,
+        "characteristic_residual": 3.3306690738754696e-16,
+        "symmetrizer_residual": 5.551115123125783e-17,
+        "minimum_symmetrizer_eigenvalue": 0.4862425468862344,
+        "roundtrip_residual": 1.1102230246251565e-16
+      },
+      {
+        "case": 1,
+        "direction": [
+          0.254000254000381,
+          -0.3810003810005715,
+          0.8890008890013334
+        ],
+        "characteristic_speeds": [
+          -0.0,
+          0.7288799288798934,
+          -0.8711200711201067,
+          -0.07112007112010668,
+          -0.07112007112010668
+        ],
+        "speed_error": 0.0,
+        "wave_normal_speeds": [
+          1.0,
+          -1.0
+        ],
+        "eigenvector_rank": 5,
+        "transform_condition_number": 2.3971172417139024,
+        "characteristic_residual": 1.1102230246251565e-16,
+        "symmetrizer_residual": 2.7755575615628914e-17,
+        "minimum_symmetrizer_eigenvalue": 0.4862425468862344,
+        "roundtrip_residual": 1.1102230246251565e-16
+      },
+      {
+        "case": 2,
+        "direction": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "characteristic_speeds": [
+          0.0,
+          1.5,
+          -1.1,
+          0.2,
+          0.2
+        ],
+        "speed_error": 0.0,
+        "wave_normal_speeds": [
+          1.0,
+          -1.0
+        ],
+        "eigenvector_rank": 5,
+        "transform_condition_number": 3.2255049266776945,
+        "characteristic_residual": 0.0,
+        "symmetrizer_residual": 0.0,
+        "minimum_symmetrizer_eigenvalue": 0.4457523584929245,
+        "roundtrip_residual": 1.6653345369377348e-16
+      },
+      {
+        "case": 2,
+        "direction": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "characteristic_speeds": [
+          -0.0,
+          1.2,
+          -1.4000000000000001,
+          -0.1,
+          -0.1
+        ],
+        "speed_error": 0.0,
+        "wave_normal_speeds": [
+          1.0,
+          -1.0
+        ],
+        "eigenvector_rank": 5,
+        "transform_condition_number": 3.2255049266776945,
+        "characteristic_residual": 0.0,
+        "symmetrizer_residual": 0.0,
+        "minimum_symmetrizer_eigenvalue": 0.4457523584929245,
+        "roundtrip_residual": 5.551115123125783e-17
+      },
+      {
+        "case": 2,
+        "direction": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "characteristic_speeds": [
+          -0.0,
+          1.26,
+          -1.34,
+          -0.04,
+          -0.04
+        ],
+        "speed_error": 0.0,
+        "wave_normal_speeds": [
+          1.0,
+          -1.0
+        ],
+        "eigenvector_rank": 5,
+        "transform_condition_number": 3.2255049266776945,
+        "characteristic_residual": 0.0,
+        "symmetrizer_residual": 0.0,
+        "minimum_symmetrizer_eigenvalue": 0.4457523584929245,
+        "roundtrip_residual": 1.1102230246251565e-16
+      },
+      {
+        "case": 2,
+        "direction": [
+          0.5773502691896258,
+          0.5773502691896258,
+          0.5773502691896258
+        ],
+        "characteristic_speeds": [
+          0.0,
+          1.3346410161513775,
+          -1.2653589838486226,
+          0.03464101615137755,
+          0.03464101615137755
+        ],
+        "speed_error": 0.0,
+        "wave_normal_speeds": [
+          1.0,
+          -1.0
+        ],
+        "eigenvector_rank": 5,
+        "transform_condition_number": 3.2255049266776945,
+        "characteristic_residual": 4.440892098500626e-16,
+        "symmetrizer_residual": 0.0,
+        "minimum_symmetrizer_eigenvalue": 0.4457523584929245,
+        "roundtrip_residual": 1.1102230246251565e-16
+      },
+      {
+        "case": 2,
+        "direction": [
+          0.254000254000381,
+          -0.3810003810005715,
+          0.8890008890013334
+        ],
+        "characteristic_speeds": [
+          0.0,
+          1.3533400533400801,
+          -1.24665994665992,
+          0.05334005334008002,
+          0.05334005334008002
+        ],
+        "speed_error": 0.0,
+        "wave_normal_speeds": [
+          1.0,
+          -1.0
+        ],
+        "eigenvector_rank": 5,
+        "transform_condition_number": 3.2255049266776945,
+        "characteristic_residual": 2.220446049250313e-16,
+        "symmetrizer_residual": 0.0,
+        "minimum_symmetrizer_eigenvalue": 0.4457523584929245,
+        "roundtrip_residual": 1.1102230246251565e-16
+      }
+    ],
+    "minkowski_gauge_constraint_max_abs": 0.0,
+    "reduction_constraint_damping_residual": 0.0,
+    "curl_constraint_residual": 0.0,
+    "spatial_convergence": [
+      {
+        "metric_rhs_l2_error": 7.390269260918169e-18,
+        "pi_rhs_l2_error": 0.17860777869177988,
+        "phi_rhs_l2_error": 0.03380850446819919
+      },
+      {
+        "metric_rhs_l2_error": 9.030946911147142e-18,
+        "pi_rhs_l2_error": 0.0464919244068539,
+        "phi_rhs_l2_error": 0.008765838835852817
+      },
+      {
+        "metric_rhs_l2_error": 8.340925840435826e-18,
+        "pi_rhs_l2_error": 0.011740859961784722,
+        "phi_rhs_l2_error": 0.0022115790983401632
+      }
+    ],
+    "observed_orders": {
+      "metric_rhs_l2_error": [
+        -0.28925033559490976,
+        0.1146697335218452
+      ],
+      "pi_rhs_l2_error": [
+        1.9417428651599158,
+        1.985442060709878
+      ],
+      "phi_rhs_l2_error": [
+        1.9474221399102725,
+        1.9868153125275951
+      ]
+    }
+  },
+  "checks": {
+    "source_locator_locked": true,
+    "gamma3_relation_locked": true,
+    "complete_characteristic_basis": true,
+    "characteristic_relation": true,
+    "characteristic_speeds": true,
+    "normal_frame_causality": true,
+    "positive_analytic_symmetrizer": true,
+    "symmetric_hyperbolic_identity": true,
+    "characteristic_roundtrip": true,
+    "condition_number_bounded": true,
+    "minkowski_gauge_constraint": true,
+    "reduction_constraint_damping_identity": true,
+    "curl_constraint_control": true,
+    "algebraic_metric_rhs_exact": true,
+    "spatial_operator_convergence": true,
+    "invalid_parameter_domain_rejected": true,
+    "no_time_integration_clipping_or_fitting": true,
+    "ontology_preserved": true,
+    "nonlinear_gh_not_claimed_implemented": true
+  },
+  "contract": {
+    "status": "GH_PRINCIPAL_CHARACTERISTIC_SYSTEM_READY_EVOLUTION_OPEN",
+    "source": "Lindblom et al. 2006, arXiv:gr-qc/0512093v3, Eqs. 6, 12, 26-40",
+    "state": [
+      "psi_ab",
+      "Pi_ab",
+      "Phi_iab"
+    ],
+    "excluded_state": [
+      "UET Phi",
+      "UET Pi",
+      "C",
+      "R_gen",
+      "R_obs"
+    ],
+    "relations": {
+      "gauge_constraint": "C_a = H_a + Gamma_a",
+      "reduction_constraint": "C_iab = partial_i psi_ab - Phi_iab",
+      "gamma3": "gamma3 = gamma1 gamma2",
+      "characteristic_0": "u0_ab = psi_ab",
+      "characteristic_pm": "u1pm_ab = Pi_ab +/- n^i Phi_iab - gamma2 psi_ab",
+      "characteristic_2": "u2_iab = P_i^k Phi_kab",
+      "speeds": "{-(1+gamma1) beta_n, -beta_n +/- alpha, -beta_n}",
+      "symmetrizer_condition": "Lambda^2 > gamma2^2"
+    },
+    "implemented": [
+      "source-locked first-order principal matrix",
+      "complete characteristic transform",
+      "analytic positive symmetrizer",
+      "gauge/reduction/curl constraint evaluators",
+      "constant-coefficient reduction-damped periodic operator"
+    ],
+    "not_implemented": [
+      "complete nonlinear GH algebraic right-hand sides",
+      "gamma0 gauge-constraint damping in the nonlinear RHS",
+      "time integration and CFL policy",
+      "constraint propagation convergence",
+      "constraint-preserving boundaries",
+      "matter stress-energy wiring and detector observable map"
+    ],
+    "claim_boundary": "source-locked GH principal/characteristic and reduction-damping operator only; not a complete nonlinear Einstein evolution, numerical-relativity solver, or UET validation"
+  },
+  "claim_promotion": false
+}

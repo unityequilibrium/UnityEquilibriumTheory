@@ -6,6 +6,14 @@
 
 ## Entries
 
+### 2026-08-28 - Close the GH principal-system companion lane
+
+- Scope: curved 3+1 generalized-harmonic formulation after the fixed-gauge ADM no-go
+- Result: GH principal equations, complete characteristics, positive symmetrizer, causal normal-frame speeds, and reduction damping are `CLOSED_FOR_LANE`; the curved parent remains `PARTIAL`
+- Verified with: source/formula locators, 15 principal-symbol cases, analytic symmetrizer identity, manufactured spatial convergence, focused tests, and parent/dependency gates
+- Next controller: `curved_3p1_generalized_harmonic_nonlinear_rhs_and_gamma0_constraint_damping_missing`
+- Claim impact: no global theory, time-evolution, Gravity, or external-validation promotion
+
 ### 2026-08-28 - Select generalized harmonic after fixed-gauge ADM no-go
 
 - Scope: curved 3+1 companion branch after Topic 13 Core closure

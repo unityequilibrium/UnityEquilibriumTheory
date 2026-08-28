@@ -25,6 +25,18 @@ artifacts may remain useful as diagnostics, but they cannot promote a claim
 while the upstream ontology, units, correspondence, or numerical gate is
 blocked.
 
+## Latest plan update - 2026-08-28 generalized-harmonic principal system
+
+`CORE_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY` is `CLOSED_FOR_LANE`. The
+source-locked GH principal matrix has a complete characteristic basis, a
+positive analytic symmetrizer, causal normal-frame wave speeds, and a verified
+reduction-constraint damping operator with second-order spatial convergence.
+
+The parent remains `PARTIAL`. The next edge is the complete nonlinear GH RHS
+and `gamma0` gauge-constraint damping, followed by time integration and full
+constraint propagation. Gravity remains blocked; principal-system
+hyperbolicity is not a numerical-relativity evolution result.
+
 ## Latest plan update - 2026-08-28 ADM evolution and formulation selection
 
 `CORE_CURVED_3P1_ADM_EVOLUTION_RHS_READY` is closed for the nonlinear periodic

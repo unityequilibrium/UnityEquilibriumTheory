@@ -134,21 +134,31 @@ def main() -> int:
         ),
         None,
     )
-    if any((curved_parent, adm_interface, geometry_operator, adm_evolution_rhs, fixed_gauge_no_go)):
+    gh_principal_system = next(
+        (
+            entry
+            for entry in register["entries"]
+            if entry.get("major_result_id")
+            == "CORE_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY"
+        ),
+        None,
+    )
+    if any((curved_parent, adm_interface, geometry_operator, adm_evolution_rhs, fixed_gauge_no_go, gh_principal_system)):
         artifact["curved_3p1_progress"] = {
             "parent": curved_parent,
             "adm_constraint_interface": adm_interface,
             "geometry_operator": geometry_operator,
             "adm_evolution_rhs": adm_evolution_rhs,
             "fixed_gauge_adm_hyperbolicity_no_go": fixed_gauge_no_go,
+            "generalized_harmonic_principal_system": gh_principal_system,
             "gravity_unlock_status": decisions["GR_CLASSICAL_COMPATIBILITY_LANE"]["status"],
             "controlling_blocker": (
-                "curved_3p1_generalized_harmonic_evolution_constraint_"
-                "damping_and_propagation_missing"
+                "curved_3p1_generalized_harmonic_nonlinear_rhs_and_"
+                "gamma0_constraint_damping_missing"
             ),
             "claim_boundary": (
                 "ADM constraint, periodic spatial geometry, RHS operator, and "
-                "fixed-gauge no-go progress only; "
+                "fixed-gauge no-go, and GH principal-system progress only; "
                 "the parent is not CLOSED_FOR_CORE and Gravity remains blocked"
             ),
         }

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "hyperbolic_phase_field_causal_feasibility",
-  "generated_at": "2026-08-28T06:28:15+00:00",
+  "generated_at": "2026-08-28T15:35:30+00:00",
   "topic": "docs/core UET GR non-closed response",
   "version": "wave8_v1",
   "benchmark_role": "analytic_gate",
@@ -362,7 +362,7 @@
     "docs\\core\\uet_hyperbolic_phase_field_bridge.py": "568c7b0d42d371ad5720f00577c316abd1618eacfe1f0c00009c7a2d3a1ad31f",
     "docs\\core\\uet_hyperbolic_phase_field.py": "666dc95867b8010caa28d709e0bbb490cc2b6e5fe763ed4f15621ecb750d92be",
     "docs\\core\\uet_covariant_diffusion.py": "a267b89e39db4a8dfac56e71a070539a9da05a55b8bb8b22216e7fd1b839bc53",
-    "docs\\core\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "4f05baaf209996aac1917a905e7be17261037ada64a0b2596d2152f7fdd1f91e",
+    "docs\\core\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "66ef7d15c3ec3a01839f894c25ea40d31c5fe1b513f7f7c9558c5066d963dc4e",
     "docs\\data\\external\\relativistic_transport\\jain_kovtun_2024\\source_record.json": "90c8c7dfe8256da2b1dbe6631d189470800ea8ed7eec228fc9bedf49dd39dbc7",
     "docs\\data\\external\\relativistic_transport\\crossley_glorioso_liu_2017\\source_record.json": "080912a9861ce6c5df645f35d67ddfc9d7415c42dfd97e12ae0f0fd8007ff6b5"
   },

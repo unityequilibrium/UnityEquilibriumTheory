@@ -6,7 +6,7 @@
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "57cf14d0c1808316420526e642954aefa72d83ed007c6a7c7a5afb6867aeabfb"
+    "sha256": "56cd352f4a4274241e541ea2653ffcf92c41f70d73e5536bf7e3309e665b952e"
   },
   "decisions": {
     "TOPIC_0_11_CHAOS_DIAGNOSTIC_ROLLOUT": {
@@ -103,7 +103,11 @@
         "nonlinear periodic ADM metric/K right-hand-side operator",
         "second-order lapse-Hessian and shift-Lie convergence controls",
         "fixed-gauge ADM strong-hyperbolicity branch closed as no-go",
-        "first-order generalized-harmonic next branch selected"
+        "first-order generalized-harmonic next branch selected",
+        "first-order GH principal equation and algebraic gauge-source contract",
+        "complete GH characteristic basis with source-matched speeds",
+        "positive GH symmetrizer and principal-system symmetric hyperbolicity",
+        "reduction-constraint damping identity and spatial convergence"
       ],
       "equation_or_mapping": {
         "hamiltonian": "R3 + K^2 - K_ij K^ij - 16*pi*G*rho = 0",
@@ -116,25 +120,27 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/core_curved_3p1_parent_gate.json",
-          "sha256": "024e23475de094e2202c49229b963184810a68aa1cfa23eb4bd05b2aa1206e34",
+          "sha256": "b4e0342372f1d7104f2060cfc5289aa3f9cb3d6cc1ae99fe984dc23b897d9236",
           "summary": {
-            "status": "PARTIAL_CURVED_3P1_ADM_EVOLUTION_NOGO_READY",
+            "status": "PARTIAL_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY",
             "major_result_id": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
             "closure_level": "PARTIAL"
           }
         }
       ],
-      "verification_status": "PARTIAL_CURVED_3P1_ADM_EVOLUTION_NOGO_READY",
+      "verification_status": "PARTIAL_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY",
       "open_blockers": [
         "lapse_shift_gauge",
         "metric_and_extrinsic_curvature_evolution",
-        "strong_hyperbolicity",
+        "complete_nonlinear_gh_rhs",
+        "gamma0_gauge_constraint_damping",
         "constraint_propagation",
         "temporal_spatial_convergence",
+        "constraint_preserving_boundaries",
         "topic13_stress_energy_projection",
         "dimensional_observable_mapping"
       ],
-      "dependency_unlocked": "first-order generalized-harmonic implementation wave only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
+      "dependency_unlocked": "complete nonlinear GH RHS and gamma0 gauge-constraint damping wave only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
       "claim_boundary": "partial parent construction; not CLOSED_FOR_CORE and not Gravity/GR compatibility"
     },
     "adm_constraint_interface": {
@@ -166,7 +172,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/curved_3p1_adm_constraint_interface_audit.json",
-          "sha256": "c56190d0c622a741f8886a898ec1f0c2b707a7a8d6f57e3b1466c89c0887fed5",
+          "sha256": "83e9498280a19950ca1622b3a792b95c9eeba3fbc91099167704bccefa2b752b",
           "summary": {
             "status": "PASS_CURVED_3P1_ADM_CONSTRAINT_INTERFACE",
             "major_result_id": "CORE_CURVED_3P1_ADM_CONSTRAINT_INTERFACE_READY",
@@ -272,7 +278,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/curved_3p1_adm_evolution_operator_verification.json",
-          "sha256": "55d2ad9ba5a4b64d4defee15013b940e1e185caa5ed21e843ba997d56196bd68",
+          "sha256": "c0ba6a81c3cf1867499352c95250248c412d87ff69ed33889c77a75870925436",
           "summary": {
             "status": "PASS_ADM_EVOLUTION_RHS_OPERATOR_ONLY",
             "major_result_id": "CORE_CURVED_3P1_ADM_EVOLUTION_RHS_READY",
@@ -310,7 +316,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json",
-          "sha256": "d411ed6b778f357b61bd322cc9c705e9e9d80805148724be8efcfb6bbe42cb10",
+          "sha256": "fd2e6fce761796aef39e664c2df3237e585007ebf4a196eae1bec3222d7cf333",
           "summary": {
             "status": "CLOSED_AS_NO_GO_FIXED_GAUGE_ADM_NOT_STRONGLY_HYPERBOLIC",
             "major_result_id": "CORE_CURVED_3P1_FIXED_GAUGE_ADM_HYPERBOLICITY_NO_GO",
@@ -328,12 +334,61 @@
       "dependency_unlocked": "FIRST_ORDER_GENERALIZED_HARMONIC branch implementation",
       "claim_boundary": "no-go for the declared fixed-geodesic ADM principal symbol only; not every gauge-modified ADM/BSSN/NOR formulation"
     },
+    "generalized_harmonic_principal_system": {
+      "major_result_id": "CORE_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY",
+      "topic": "core",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "source-locked first-order GH principal equation contract",
+        "complete characteristic basis and source-matched speeds",
+        "positive analytic symmetrizer and symmetric-hyperbolic identity",
+        "linearly-degenerate gamma1=-1 parameter branch",
+        "reduction-constraint damping operator and second-order spatial convergence"
+      ],
+      "equation_or_mapping": {
+        "gauge_constraint": "C_a = H_a + Gamma_a",
+        "reduction_constraint": "C_iab = partial_i psi_ab - Phi_iab",
+        "gamma3": "gamma3 = gamma1 gamma2",
+        "characteristic_0": "u0_ab = psi_ab",
+        "characteristic_pm": "u1pm_ab = Pi_ab +/- n^i Phi_iab - gamma2 psi_ab",
+        "characteristic_2": "u2_iab = P_i^k Phi_kab",
+        "speeds": "{-(1+gamma1) beta_n, -beta_n +/- alpha, -beta_n}",
+        "symmetrizer_condition": "Lambda^2 > gamma2^2"
+      },
+      "units": "geometric c=1 local-orthonormal principal-symbol lane",
+      "derivation_class": "source-locked standard GH equations plus numerical operator verification",
+      "observable": "formulation and constraint diagnostics only",
+      "data_role": "analytic/manufactured controls; no fit, calibration, or holdout",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/curved_3p1_gh_principal_system_verification.json",
+          "sha256": "d44fc85fc599b269b33cb537204fd6ac4739168a7364fb694c16ab3732622966",
+          "summary": {
+            "status": "PASS_GH_PRINCIPAL_CHARACTERISTIC_SYSTEM",
+            "major_result_id": "CORE_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_GH_PRINCIPAL_CHARACTERISTIC_SYSTEM",
+      "open_blockers": [
+        "complete nonlinear GH algebraic right-hand sides",
+        "gamma0 gauge-constraint damping in the nonlinear RHS",
+        "time integration and CFL policy",
+        "constraint propagation convergence",
+        "constraint-preserving boundaries",
+        "matter stress-energy wiring and detector observable map"
+      ],
+      "dependency_unlocked": "complete nonlinear GH RHS and gamma0 gauge-constraint damping wave only",
+      "claim_boundary": "source-locked GH principal/characteristic and reduction-damping operator only; not a complete nonlinear Einstein evolution, numerical-relativity solver, or UET validation"
+    },
     "gravity_unlock_status": "BLOCKED_DEPENDENCY",
-    "controlling_blocker": "curved_3p1_generalized_harmonic_evolution_constraint_damping_and_propagation_missing",
-    "claim_boundary": "ADM constraint, periodic spatial geometry, RHS operator, and fixed-gauge no-go progress only; the parent is not CLOSED_FOR_CORE and Gravity remains blocked"
+    "controlling_blocker": "curved_3p1_generalized_harmonic_nonlinear_rhs_and_gamma0_constraint_damping_missing",
+    "claim_boundary": "ADM constraint, periodic spatial geometry, RHS operator, and fixed-gauge no-go, and GH principal-system progress only; the parent is not CLOSED_FOR_CORE and Gravity remains blocked"
   },
   "topic13_partial_evidence": {
-    "register_sha256": "57cf14d0c1808316420526e642954aefa72d83ed007c6a7c7a5afb6867aeabfb",
+    "register_sha256": "56cd352f4a4274241e541ea2653ffcf92c41f70d73e5536bf7e3309e665b952e",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",

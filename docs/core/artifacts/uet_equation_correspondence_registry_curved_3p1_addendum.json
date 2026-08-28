@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_equation_correspondence_registry_curved_3p1_addendum",
-  "generated_at": "2026-08-28T06:21:48.792485+00:00",
+  "generated_at": "2026-08-28T15:32:09.632390+00:00",
   "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
   "status": "CANDIDATE_ENTRY_PENDING_MERGE",
   "equation_entries": [
@@ -270,11 +270,24 @@
           "arxiv_id": "gr-qc/0512093",
           "doi": "10.1088/0264-9381/23/16/S09",
           "url": "https://arxiv.org/abs/gr-qc/0512093",
+          "version": "v3",
+          "journal_reference": "Class. Quantum Grav. 23 (2006) S447-S462",
+          "formula_locators": {
+            "gh_gauge": "Section 2, Eqs. (6), (11), and (12)",
+            "constraint_damping": "Section 2.2, Eqs. (17)-(21)",
+            "first_order_variables": "Section 3, Eqs. (22)-(26)",
+            "modified_principal_system": "Section 3, Eqs. (27)-(29)",
+            "symmetrizer": "Section 3, Eq. (30), with gamma3=gamma1*gamma2 and Lambda^2>gamma2^2",
+            "characteristic_fields": "Section 3, Eqs. (31)-(34)",
+            "complete_rhs": "Section 3, Eqs. (35)-(39)",
+            "first_order_gauge_constraint": "Section 4.1, Eq. (40)"
+          },
           "source_role": "preregistered next-branch formulation and constraint-damping reference",
           "used_scope": [
             "first-order generalized-harmonic variables and gauge-source concept",
             "symmetric-hyperbolic formulation target",
-            "constraint-damping and constraint-preserving boundary target"
+            "constraint-damping and constraint-preserving boundary target",
+            "principal equations, symmetrizer, characteristic fields, and reduction-constraint damping"
           ],
           "not_used_for": [
             "claim that a generalized-harmonic UET branch is already implemented",
@@ -375,11 +388,24 @@
           "arxiv_id": "gr-qc/0512093",
           "doi": "10.1088/0264-9381/23/16/S09",
           "url": "https://arxiv.org/abs/gr-qc/0512093",
+          "version": "v3",
+          "journal_reference": "Class. Quantum Grav. 23 (2006) S447-S462",
+          "formula_locators": {
+            "gh_gauge": "Section 2, Eqs. (6), (11), and (12)",
+            "constraint_damping": "Section 2.2, Eqs. (17)-(21)",
+            "first_order_variables": "Section 3, Eqs. (22)-(26)",
+            "modified_principal_system": "Section 3, Eqs. (27)-(29)",
+            "symmetrizer": "Section 3, Eq. (30), with gamma3=gamma1*gamma2 and Lambda^2>gamma2^2",
+            "characteristic_fields": "Section 3, Eqs. (31)-(34)",
+            "complete_rhs": "Section 3, Eqs. (35)-(39)",
+            "first_order_gauge_constraint": "Section 4.1, Eq. (40)"
+          },
           "source_role": "preregistered next-branch formulation and constraint-damping reference",
           "used_scope": [
             "first-order generalized-harmonic variables and gauge-source concept",
             "symmetric-hyperbolic formulation target",
-            "constraint-damping and constraint-preserving boundary target"
+            "constraint-damping and constraint-preserving boundary target",
+            "principal equations, symmetrizer, characteristic fields, and reduction-constraint damping"
           ],
           "not_used_for": [
             "claim that a generalized-harmonic UET branch is already implemented",
@@ -417,6 +443,101 @@
       "claim_boundary": "no-go for the declared fixed-geodesic ADM principal symbol only; not every gauge-modified ADM/BSSN/NOR formulation",
       "failure_mode": "branch-local no-go is overgeneralized to every ADM/BSSN/NOR gauge",
       "next_hardening_step": "verify first-order generalized-harmonic characteristic fields"
+    },
+    {
+      "equation_id": "uet.main_theory.curved_3p1.generalized_harmonic_principal_system",
+      "version": "gh-principal-system-v1",
+      "classification": "standard_physics_hyperbolic_formulation",
+      "relation_or_code_path": "docs/core/uet_curved_3p1_generalized_harmonic.py",
+      "variables": {
+        "psi_ab": "spacetime metric; not UET Phi",
+        "Pi_ab": "minus normal metric derivative; not UET Pi",
+        "Phi_iab": "spatial metric derivative",
+        "H_a": "declared algebraic gauge source",
+        "C_iab": "first-order reduction constraint"
+      },
+      "mathematical_role": "provide a complete symmetric-hyperbolic first-order principal system for the curved parent",
+      "standard_physics_counterpart": "Lindblom et al. first-order generalized harmonic Einstein formulation",
+      "observable_mapping": {
+        "status": "OPEN",
+        "reason": "characteristic and constraint fields are formulation diagnostics"
+      },
+      "unit_lane": "geometric c=1 local-orthonormal principal frame",
+      "parameter_dimensions": "geometric c=1 local-orthonormal principal-symbol lane",
+      "source_or_origin": {
+        "schema_version": "1.0",
+        "source_id": "lindblom_et_al_2006_generalized_harmonic",
+        "title": "A New Generalized Harmonic Evolution System",
+        "authors": [
+          "Lee Lindblom",
+          "Mark A. Scheel",
+          "Lawrence E. Kidder",
+          "Robert Owen",
+          "Oliver Rinne"
+        ],
+        "year": 2006,
+        "arxiv_id": "gr-qc/0512093",
+        "doi": "10.1088/0264-9381/23/16/S09",
+        "url": "https://arxiv.org/abs/gr-qc/0512093",
+        "version": "v3",
+        "journal_reference": "Class. Quantum Grav. 23 (2006) S447-S462",
+        "formula_locators": {
+          "gh_gauge": "Section 2, Eqs. (6), (11), and (12)",
+          "constraint_damping": "Section 2.2, Eqs. (17)-(21)",
+          "first_order_variables": "Section 3, Eqs. (22)-(26)",
+          "modified_principal_system": "Section 3, Eqs. (27)-(29)",
+          "symmetrizer": "Section 3, Eq. (30), with gamma3=gamma1*gamma2 and Lambda^2>gamma2^2",
+          "characteristic_fields": "Section 3, Eqs. (31)-(34)",
+          "complete_rhs": "Section 3, Eqs. (35)-(39)",
+          "first_order_gauge_constraint": "Section 4.1, Eq. (40)"
+        },
+        "source_role": "preregistered next-branch formulation and constraint-damping reference",
+        "used_scope": [
+          "first-order generalized-harmonic variables and gauge-source concept",
+          "symmetric-hyperbolic formulation target",
+          "constraint-damping and constraint-preserving boundary target",
+          "principal equations, symmetrizer, characteristic fields, and reduction-constraint damping"
+        ],
+        "not_used_for": [
+          "claim that a generalized-harmonic UET branch is already implemented",
+          "claim that periodic ADM controls validate black-hole evolution",
+          "UET coefficient fitting",
+          "external physical validation"
+        ],
+        "local_payload": "metadata-only source record; no redistributed PDF",
+        "accessed_on": "2026-08-28"
+      },
+      "assumptions": [
+        "gamma1=-1",
+        "gamma3=gamma1*gamma2",
+        "gamma0>0",
+        "gamma2>0",
+        "Lambda^2>gamma2^2",
+        "algebraic H_a(x,psi)"
+      ],
+      "symmetry_and_conservation": "positive analytic symmetrizer and complete characteristic basis pass; full Einstein/constraint propagation remains open",
+      "limiting_cases": [
+        "Minkowski harmonic gauge",
+        "constant-coefficient local orthonormal frame",
+        "zero shift",
+        "sub/super-coordinate shift cases with normal-frame causal waves"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_curved_3p1_generalized_harmonic.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_curved_3p1_generalized_harmonic.py",
+        "docs/core/artifacts/curved_3p1_gh_principal_system_verification.json",
+        "docs/core/test/test_uet_curved_3p1_generalized_harmonic.py"
+      ],
+      "evidence_class": "INTERNAL_FORMAL_ANALYTIC_AND_MANUFACTURED_CONVERGENCE_CONTROL",
+      "proof_status": "principal/characteristic and reduction-damping lane passes; complete nonlinear RHS/time evolution open",
+      "downstream_dependencies": [
+        "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"
+      ],
+      "claim_boundary": "source-locked GH principal/characteristic and reduction-damping operator only; not a complete nonlinear Einstein evolution, numerical-relativity solver, or UET validation",
+      "failure_mode": "principal-system closure is overread as a complete numerical-relativity solver",
+      "next_hardening_step": "implement complete nonlinear GH algebraic RHS and gamma0 gauge-constraint damping"
     }
   ]
 }

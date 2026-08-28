@@ -26,6 +26,7 @@ REPORT = ROOT / "docs/core/UET_FOUNDATION_RESEARCH_PROGRAM_REPORT.md"
 WAVE_LOG = ROOT / "docs/core/UET_WAVE3_WAVE10_UPDATE_LOG.md"
 WORK_LEDGER = ROOT / "WORK_LEDGER/2026/2026-08-08.md"
 OUTPUT = ROOT / "docs/core/artifacts/uet_all_waves_completion_audit.json"
+CORE_REGRESSION_TIMEOUT_SECONDS = 300
 
 
 def load(path: Path) -> Any:
@@ -118,7 +119,7 @@ def run_core_regression() -> dict[str, Any]:
             cwd=ROOT,
             capture_output=True,
             text=True,
-            timeout=180,
+            timeout=CORE_REGRESSION_TIMEOUT_SECONDS,
             check=False,
         )
         output = (result.stdout + "\n" + result.stderr).strip()

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "covariant_superfluid_transport_verification",
-  "generated_at": "2026-08-28T06:28:22.409327+00:00",
+  "generated_at": "2026-08-28T15:35:36.035989+00:00",
   "topic": "docs/core UET GR non-closed response",
   "version": "wave10_v1",
   "benchmark_role": "internal_covariant_and_synthetic_transport_control",
