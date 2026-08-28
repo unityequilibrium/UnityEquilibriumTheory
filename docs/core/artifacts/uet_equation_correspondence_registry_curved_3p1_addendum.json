@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "artifact": "uet_equation_correspondence_registry_curved_3p1_addendum",
+  "generated_at": "2026-08-28T05:20:16.070912+00:00",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "status": "CANDIDATE_ENTRY_PENDING_MERGE",
+  "equation_entries": [
+    {
+      "equation_id": "uet.main_theory.curved_3p1.adm_constraints",
+      "version": "adm-constraint-interface-v1",
+      "classification": "standard_physics_constraint_interface",
+      "relation_or_code_path": "docs/core/uet_curved_3p1_constraints.py",
+      "variables": {
+        "gamma_ij": "positive-definite spatial metric",
+        "K_ij": "extrinsic curvature",
+        "rho": "Eulerian energy density",
+        "S_i": "Eulerian covariant momentum density"
+      },
+      "mathematical_role": "evaluate ADM Hamiltonian and momentum constraints",
+      "standard_physics_counterpart": "ADM 3+1 initial-value constraints",
+      "observable_mapping": {
+        "status": "OPEN",
+        "reason": "constraint residuals are diagnostics, not detector observables"
+      },
+      "unit_lane": "geometric",
+      "parameter_dimensions": {
+        "K_ij": "L^-1",
+        "R3": "L^-2",
+        "G_rho": "L^-2",
+        "G_S_i": "L^-2",
+        "constraint_residuals": "L^-2"
+      },
+      "source_or_origin": {
+        "path": "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json",
+        "sha256": "2fa2cd2e4676d6d0d79ec18834105ee0d49f870a9f6a07030744094026273616",
+        "identity": {
+          "schema_version": "1.0",
+          "source_id": "gourgoulhon_2007_3p1_formalism",
+          "title": "3+1 Formalism and Bases of Numerical Relativity",
+          "author": "Eric Gourgoulhon",
+          "year": 2007,
+          "arxiv_id": "gr-qc/0703035",
+          "url": "https://arxiv.org/abs/gr-qc/0703035",
+          "source_role": "standard-physics formula and sign-convention reference",
+          "used_scope": [
+            "3+1 decomposition terminology",
+            "Hamiltonian constraint structure",
+            "momentum constraint structure",
+            "initial-data and gauge separation"
+          ],
+          "not_used_for": [
+            "UET coefficient fitting",
+            "physical validation",
+            "claim that UET derives Einstein equations"
+          ],
+          "local_payload": "metadata-only source record; no redistributed PDF",
+          "accessed_on": "2026-08-28"
+        }
+      },
+      "assumptions": [
+        "(-,+,+,+) signature",
+        "positive lapse",
+        "positive-definite spatial metric",
+        "declared Ricci scalar and momentum divergence"
+      ],
+      "symmetry_and_conservation": "symmetric gamma_ij and K_ij; ADM constraints evaluated but not propagated",
+      "limiting_cases": [
+        "Minkowski vacuum",
+        "spatially flat FLRW Friedmann control"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_curved_3p1_constraints.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_curved_3p1_constraints.py",
+        "docs/core/artifacts/curved_3p1_adm_constraint_interface_audit.json",
+        "docs/core/test/test_uet_curved_3p1_constraints.py"
+      ],
+      "evidence_class": "INTERNAL_FORMAL_AND_ANALYTIC_CONTROL",
+      "proof_status": "constraint algebra and analytic controls pass; differential geometry and evolution open",
+      "downstream_dependencies": [
+        "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"
+      ],
+      "claim_boundary": "curved 3+1 ADM constraint evaluation interface only; not a metric evolution solver, Einstein-equation derivation, or GR validation",
+      "failure_mode": "invalid metric, nonzero analytic residual, hidden geometry operator, or constraint violation not detected",
+      "next_hardening_step": "implement metric-to-Ricci and covariant-divergence operators, then a gauge-declared evolution/constraint-propagation system"
+    }
+  ]
+}

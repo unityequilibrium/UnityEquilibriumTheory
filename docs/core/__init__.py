@@ -813,3 +813,25 @@ __all__ += [
     "newtonian_poisson_residual",
     "gr_correspondence_contract",
 ]
+
+from .uet_curved_3p1_constraints import (
+    ADM_CONSTRAINT_INTERFACE_STATUS,
+    ADMGeometryState,
+    ADMMatterProjection,
+    ADMConstraintResult,
+    evaluate_adm_constraints,
+    minkowski_adm_control,
+    flat_flrw_adm_control,
+    adm_constraint_contract,
+)
+
+__all__ += [
+    "ADM_CONSTRAINT_INTERFACE_STATUS",
+    "ADMGeometryState",
+    "ADMMatterProjection",
+    "ADMConstraintResult",
+    "evaluate_adm_constraints",
+    "minkowski_adm_control",
+    "flat_flrw_adm_control",
+    "adm_constraint_contract",
+]

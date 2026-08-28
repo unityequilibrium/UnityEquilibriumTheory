@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0",
+  "artifact": "curved_3p1_adm_constraint_interface_audit",
+  "generated_at": "2026-08-28T05:20:16.070912+00:00",
+  "topic": "docs/core curved 3+1 parent",
+  "version": "adm-constraint-interface-v1",
+  "benchmark_role": "internal analytic constraint gate",
+  "method_label": "standard ADM constraints from declared geometric inputs",
+  "status": "PASS_CURVED_3P1_ADM_CONSTRAINT_INTERFACE",
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_ADM_CONSTRAINT_INTERFACE_READY",
+    "topic": "core",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "standard ADM Hamiltonian residual from declared 3+1 inputs",
+      "standard ADM momentum residual from declared covariant divergence",
+      "Minkowski and flat-FLRW analytic controls",
+      "invalid-metric and matter-density negative controls",
+      "geometric-unit and ontology boundary"
+    ],
+    "equation_or_mapping": {
+      "hamiltonian": "R3 + K^2 - K_ij K^ij - 16*pi*G*rho = 0",
+      "momentum": "D_j(K^j_i - delta^j_i*K) - 8*pi*G*S_i = 0"
+    },
+    "units": {
+      "K_ij": "L^-1",
+      "R3": "L^-2",
+      "G_rho": "L^-2",
+      "G_S_i": "L^-2",
+      "constraint_residuals": "L^-2"
+    },
+    "derivation_class": "standard-physics ADM constraint transcription and internal algebraic verification",
+    "observable": "Hamiltonian and momentum constraint residuals; no detector observable",
+    "data_role": "analytic controls and metadata-only primary-source record",
+    "verification_status": "PASS_CURVED_3P1_ADM_CONSTRAINT_INTERFACE",
+    "open_blockers": [
+      "metric-to-Ricci differential operator",
+      "lapse and shift gauge evolution",
+      "spatial-metric and extrinsic-curvature evolution",
+      "constraint propagation or damping",
+      "well-posedness and convergence",
+      "Topic 13 stress-energy projection wiring",
+      "physical observable validation"
+    ],
+    "dependency_unlocked": "curved 3+1 differential-geometry and evolution wave only; Gravity remains blocked",
+    "claim_boundary": "curved 3+1 ADM constraint evaluation interface only; not a metric evolution solver, Einstein-equation derivation, or GR validation"
+  },
+  "source": {
+    "path": "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json",
+    "sha256": "2fa2cd2e4676d6d0d79ec18834105ee0d49f870a9f6a07030744094026273616",
+    "identity": {
+      "schema_version": "1.0",
+      "source_id": "gourgoulhon_2007_3p1_formalism",
+      "title": "3+1 Formalism and Bases of Numerical Relativity",
+      "author": "Eric Gourgoulhon",
+      "year": 2007,
+      "arxiv_id": "gr-qc/0703035",
+      "url": "https://arxiv.org/abs/gr-qc/0703035",
+      "source_role": "standard-physics formula and sign-convention reference",
+      "used_scope": [
+        "3+1 decomposition terminology",
+        "Hamiltonian constraint structure",
+        "momentum constraint structure",
+        "initial-data and gauge separation"
+      ],
+      "not_used_for": [
+        "UET coefficient fitting",
+        "physical validation",
+        "claim that UET derives Einstein equations"
+      ],
+      "local_payload": "metadata-only source record; no redistributed PDF",
+      "accessed_on": "2026-08-28"
+    }
+  },
+  "input_identity": {
+    "module": "docs/core/uet_curved_3p1_constraints.py",
+    "source_record": "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json",
+    "analytic_controls": [
+      "Minkowski vacuum",
+      "spatially flat FLRW"
+    ],
+    "negative_controls": [
+      "10 percent FLRW density perturbation",
+      "non-positive spatial metric"
+    ]
+  },
+  "config": {
+    "signature": "(-,+,+,+)",
+    "unit_lane": "geometric",
+    "gravitational_constant": 1.0,
+    "flrw_scale_factor": 1.7,
+    "flrw_hubble_rate": 0.12,
+    "control_shape": [
+      2,
+      2,
+      2
+    ],
+    "parameter_fitting": false
+  },
+  "thresholds": {
+    "analytic_constraint_max_abs": 1e-12,
+    "negative_control_min_abs": 0.0001
+  },
+  "metrics": {
+    "minkowski_max_abs_hamiltonian_residual": 0.0,
+    "minkowski_max_abs_momentum_residual": 0.0,
+    "flat_flrw_max_abs_hamiltonian_residual": 1.3877787807814457e-17,
+    "flat_flrw_max_abs_momentum_residual": 0.0,
+    "flat_flrw_trace_K": 0.36,
+    "negative_control_max_abs_hamiltonian_residual": 0.008640000000000023
+  },
+  "checks": {
+    "source_identity_locked": true,
+    "minkowski_hamiltonian_constraint": true,
+    "minkowski_momentum_constraint": true,
+    "flat_flrw_hamiltonian_constraint": true,
+    "flat_flrw_momentum_constraint": true,
+    "density_negative_control_detected": true,
+    "invalid_spatial_metric_rejected": true,
+    "no_clipping_or_fitting": true,
+    "metric_is_not_phi": true,
+    "generated_trace_excluded": true,
+    "metric_evolution_not_claimed": true
+  },
+  "contract": {
+    "status": "CURVED_3P1_ADM_CONSTRAINT_INTERFACE_ONLY",
+    "signature": "(-,+,+,+)",
+    "unit_lane": "geometric units with explicitly supplied positive G",
+    "equations": {
+      "hamiltonian": "R3 + K^2 - K_ij K^ij - 16*pi*G*rho = 0",
+      "momentum": "D_j(K^j_i - delta^j_i*K) - 8*pi*G*S_i = 0"
+    },
+    "ontology": {
+      "spatial_metric": "standard 3-metric; not Phi",
+      "matter_projection": "external stress-energy projection; not universal C",
+      "R_gen": "excluded derived history trace",
+      "R_obs": "excluded observer record"
+    },
+    "implemented": [
+      "metric validation and index contraction",
+      "Hamiltonian residual",
+      "momentum residual from declared covariant divergence",
+      "Minkowski and flat-FLRW analytic controls"
+    ],
+    "not_implemented": [
+      "metric-to-Ricci differential operator",
+      "lapse and shift gauge evolution",
+      "spatial-metric and extrinsic-curvature evolution",
+      "constraint propagation or damping",
+      "well-posedness and convergence",
+      "Topic 13 stress-energy projection wiring",
+      "physical observable validation"
+    ],
+    "claim_boundary": "curved 3+1 ADM constraint evaluation interface only; not a metric evolution solver, Einstein-equation derivation, or GR validation"
+  },
+  "notes": [
+    "R3 and the covariant momentum-tensor divergence are declared inputs in v1.",
+    "Constraint residuals are diagnostics and are not physical detector observables.",
+    "No C-to-mass, Phi-to-metric, R_gen-to-state, fitting, clipping, or Gravity unlock is introduced."
+  ],
+  "claim_promotion": false
+}

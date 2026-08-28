@@ -50,6 +50,9 @@ Current foundation artifacts:
 - [Persistence-energy diagnostic artifact](./artifacts/persistence_energy_diagnostic_verification.json)
 - [Thermal observable bridge specification](./THERMAL_OBSERVABLE_BRIDGE_SPEC.md)
 - [Thermal observable bridge artifact](./artifacts/thermal_observable_bridge_verification.json)
+- [Curved 3+1 ADM constraint interface](./uet_curved_3p1_constraints.py)
+- [Curved 3+1 ADM constraint verification](./artifacts/curved_3p1_adm_constraint_interface_audit.json)
+- [Curved 3+1 parent dependency gate](./artifacts/core_curved_3p1_parent_gate.json)
 
 > **Historical engine layer for candidate UET equation families**
 > **Version 0.9.0** | Last Updated: 2026-01-13

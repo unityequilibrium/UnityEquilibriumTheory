@@ -25,6 +25,19 @@ artifacts may remain useful as diagnostics, but they cannot promote a claim
 while the upstream ontology, units, correspondence, or numerical gate is
 blocked.
 
+## Latest plan update - 2026-08-28 curved 3+1 constraint interface
+
+Topic 13 now unlocks construction of the Core curved 3+1 parent. The first
+subresult, `CORE_CURVED_3P1_ADM_CONSTRAINT_INTERFACE_READY`, is closed for its
+lane using source-linked Hamiltonian/momentum constraint formulas, Minkowski
+and flat-FLRW analytic controls, and explicit negative controls.
+
+`CORE_CURVED_3P1_OBSERVABLE_PARENT_READY` remains `PARTIAL`, not Core-closed.
+The next edge is the differential-geometry/evolution/gauge/constraint-
+propagation package. `GR_CLASSICAL_COMPATIBILITY_LANE` remains blocked until
+the parent reaches `CLOSED_FOR_CORE`; no application edge is promoted by this
+constraint-interface result.
+
 ## Two-arm C decision
 
 The conserved-C branch and the finite-cone-C branch are deliberately separate:

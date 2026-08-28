@@ -259,7 +259,7 @@
         },
         {
           "path": "docs/core/artifacts/covariant_superfluid_transport_contract.json",
-          "sha256": "a24d96ce15bbda1bdc8b473b7dc2c9690a9482af29b98310bc20566506ef748c",
+          "sha256": "cad67b19cc332162372834898c57d911563bd23cc41703af7c6649276ca70bf0",
           "summary": {
             "status": "BLOCKED",
             "next_controller": "physical_kubo_coefficient_evidence_and_curved_3p1_solver_missing"
@@ -267,7 +267,7 @@
         },
         {
           "path": "docs/core/artifacts/covariant_superfluid_transport_verification.json",
-          "sha256": "49fc1a047cfa84e8155940a491eb9c3fb3c3536ac707b010ba15b32298632ad1",
+          "sha256": "8cb0443b69949b8e7a8bd76060768717f4737c34f22638b9ccb6c3b4e83cf80c",
           "summary": {
             "physical_coefficient_evidence": "BLOCKED_NOT_PROVIDED",
             "full_SK_KMS_completion": "BLOCKED"
@@ -347,7 +347,7 @@
         },
         {
           "path": "docs/core/artifacts/o2_finite_density_eos_verification.json",
-          "sha256": "8ab261c44f6f4f5840b52c681a0c7df5a181a33ea6ea8600c91228f393b2b239",
+          "sha256": "f9f468303ee9a39f196eb43346d2602e92c154cd73915875e99a62210975a617",
           "summary": {
             "audit_status": "PASS",
             "evidence_status": "TREE_LEVEL_MEAN_FIELD_DERIVATION"
@@ -1951,7 +1951,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/o2_finite_density_eos_verification.json",
-          "sha256": "8ab261c44f6f4f5840b52c681a0c7df5a181a33ea6ea8600c91228f393b2b239",
+          "sha256": "f9f468303ee9a39f196eb43346d2602e92c154cd73915875e99a62210975a617",
           "summary": {
             "audit_status": "PASS"
           }
@@ -2047,6 +2047,97 @@
       ],
       "dependency_unlocked": "none",
       "claim_boundary": "not a dark-matter or universal galaxy claim"
+    },
+    {
+      "major_result_id": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
+      "topic": "core",
+      "closure_level": "PARTIAL",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "ADM constraint evaluation interface"
+      ],
+      "equation_or_mapping": {
+        "hamiltonian": "R3 + K^2 - K_ij K^ij - 16*pi*G*rho = 0",
+        "momentum": "D_j(K^j_i - delta^j_i*K) - 8*pi*G*S_i = 0"
+      },
+      "units": "geometric constraint lane; SI observable mapping open",
+      "derivation_class": "incremental curved 3+1 parent construction",
+      "observable": "constraint residual diagnostics only",
+      "data_role": "internal analytic controls",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/core_curved_3p1_parent_gate.json",
+          "sha256": "48e20b52e3c0a647460d4a5dc5201f5216efc16f0cce0d5fdfc274a603838fd4",
+          "summary": {
+            "status": "PARTIAL_CURVED_3P1_PARENT_CONSTRAINT_INTERFACE_READY",
+            "major_result_id": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
+            "closure_level": "PARTIAL"
+          }
+        }
+      ],
+      "verification_status": "PARTIAL_CURVED_3P1_PARENT_CONSTRAINT_INTERFACE_READY",
+      "open_blockers": [
+        "metric_to_ricci_operator",
+        "lapse_shift_gauge",
+        "metric_and_extrinsic_curvature_evolution",
+        "strong_hyperbolicity",
+        "constraint_propagation",
+        "temporal_spatial_convergence",
+        "topic13_stress_energy_projection",
+        "dimensional_observable_mapping"
+      ],
+      "dependency_unlocked": "next curved 3+1 Core wave only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
+      "claim_boundary": "partial parent construction; not CLOSED_FOR_CORE and not Gravity/GR compatibility"
+    },
+    {
+      "major_result_id": "CORE_CURVED_3P1_ADM_CONSTRAINT_INTERFACE_READY",
+      "topic": "core",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "standard ADM Hamiltonian residual from declared 3+1 inputs",
+        "standard ADM momentum residual from declared covariant divergence",
+        "Minkowski and flat-FLRW analytic controls",
+        "invalid-metric and matter-density negative controls",
+        "geometric-unit and ontology boundary"
+      ],
+      "equation_or_mapping": {
+        "hamiltonian": "R3 + K^2 - K_ij K^ij - 16*pi*G*rho = 0",
+        "momentum": "D_j(K^j_i - delta^j_i*K) - 8*pi*G*S_i = 0"
+      },
+      "units": {
+        "K_ij": "L^-1",
+        "R3": "L^-2",
+        "G_rho": "L^-2",
+        "G_S_i": "L^-2",
+        "constraint_residuals": "L^-2"
+      },
+      "derivation_class": "standard-physics ADM constraint transcription and internal algebraic verification",
+      "observable": "Hamiltonian and momentum constraint residuals; no detector observable",
+      "data_role": "analytic controls and metadata-only primary-source record",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/curved_3p1_adm_constraint_interface_audit.json",
+          "sha256": "3a17e44e2daad91f96918c2a58153ccf4c405af9ab30a715b1b2dabc7a1be12c",
+          "summary": {
+            "status": "PASS_CURVED_3P1_ADM_CONSTRAINT_INTERFACE",
+            "major_result_id": "CORE_CURVED_3P1_ADM_CONSTRAINT_INTERFACE_READY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_CURVED_3P1_ADM_CONSTRAINT_INTERFACE",
+      "open_blockers": [
+        "metric-to-Ricci differential operator",
+        "lapse and shift gauge evolution",
+        "spatial-metric and extrinsic-curvature evolution",
+        "constraint propagation or damping",
+        "well-posedness and convergence",
+        "Topic 13 stress-energy projection wiring",
+        "physical observable validation"
+      ],
+      "dependency_unlocked": "curved 3+1 differential-geometry and evolution wave only; Gravity remains blocked",
+      "claim_boundary": "curved 3+1 ADM constraint evaluation interface only; not a metric evolution solver, Einstein-equation derivation, or GR validation"
     },
     {
       "major_result_id": "T13_CAUSAL_FLUX_TELEGRAPH_BRANCH",
@@ -5206,7 +5297,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_full_core_ready_acceptance_audit.json",
-          "sha256": "62af10b37cf6f0277619cfd432ce240383a0d14be52c93e3aee6370e40a117a7",
+          "sha256": "846d2bfbc819c1b6f700f109645a451b5d3647a570527af5dc0e21240dacae41",
           "summary": {
             "status": "PASS_T13_FULL_CORE_READY_ACCEPTANCE",
             "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY_ACCEPTED",

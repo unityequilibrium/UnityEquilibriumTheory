@@ -1,11 +1,26 @@
 # UET GR Closed-Limit and Non-Closed Response Research Specification
 
-> **Status:** `EXTERNAL HYPERBOLIC PHASE-FIELD COMPARATOR VERIFIED / PROGRAM BLOCKED`
+> **Status:** `CURVED 3+1 ADM CONSTRAINT INTERFACE VERIFIED / PROGRAM BLOCKED`
 > **Current claim class:** `B`
-> **Current controlling blocker:** `noether_density_to_phase_field_order_parameter_map_missing`
+> **Current controlling blocker:** `curved_3p1_differential_geometry_evolution_gauge_and_constraint_propagation_missing`
 > **Program rule:** General relativity is the null/closed-response model. A
 > non-zero UET response is an empirical alternative, not a conclusion assumed
 > from the existence of the model.
+
+## Current curved 3+1 boundary (2026-08-28)
+
+The first curved-parent wave now evaluates the standard ADM Hamiltonian and
+momentum constraints from declared spatial geometry and Eulerian matter
+projections. Minkowski vacuum and spatially flat FLRW analytic controls pass,
+while invalid metrics and perturbed matter projections are rejected or produce
+non-zero residuals. The implementation is source-linked to Gourgoulhon's
+[3+1 formalism notes](https://arxiv.org/abs/gr-qc/0703035).
+
+This closes `CORE_CURVED_3P1_ADM_CONSTRAINT_INTERFACE_READY` for its lane only.
+The parent result remains `PARTIAL`: the metric-to-Ricci differential operator,
+lapse/shift gauge, metric and extrinsic-curvature evolution, constraint
+propagation, well-posedness/convergence, Topic 13 stress-energy projection, and
+dimensional observable mapping remain open. Gravity is not unlocked.
 
 ## 1. Research question
 

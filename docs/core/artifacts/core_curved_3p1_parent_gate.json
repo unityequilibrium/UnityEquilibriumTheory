@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "artifact": "core_curved_3p1_parent_gate",
+  "generated_at": "2026-08-28T05:20:16.070912+00:00",
+  "status": "PARTIAL_CURVED_3P1_PARENT_CONSTRAINT_INTERFACE_READY",
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
+    "topic": "core",
+    "closure_level": "PARTIAL",
+    "what_is_closed": [
+      "ADM constraint evaluation interface"
+    ],
+    "equation_or_mapping": {
+      "hamiltonian": "R3 + K^2 - K_ij K^ij - 16*pi*G*rho = 0",
+      "momentum": "D_j(K^j_i - delta^j_i*K) - 8*pi*G*S_i = 0"
+    },
+    "units": "geometric constraint lane; SI observable mapping open",
+    "derivation_class": "incremental curved 3+1 parent construction",
+    "observable": "constraint residual diagnostics only",
+    "data_role": "internal analytic controls",
+    "verification_status": "PARTIAL_CURVED_3P1_PARENT_CONSTRAINT_INTERFACE_READY",
+    "open_blockers": [
+      "metric_to_ricci_operator",
+      "lapse_shift_gauge",
+      "metric_and_extrinsic_curvature_evolution",
+      "strong_hyperbolicity",
+      "constraint_propagation",
+      "temporal_spatial_convergence",
+      "topic13_stress_energy_projection",
+      "dimensional_observable_mapping"
+    ],
+    "dependency_unlocked": "next curved 3+1 Core wave only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
+    "claim_boundary": "partial parent construction; not CLOSED_FOR_CORE and not Gravity/GR compatibility"
+  },
+  "requirements": {
+    "adm_constraint_interface": "PASS",
+    "metric_to_ricci_operator": "OPEN",
+    "lapse_shift_gauge": "OPEN",
+    "metric_and_extrinsic_curvature_evolution": "OPEN",
+    "strong_hyperbolicity": "OPEN",
+    "constraint_propagation": "OPEN",
+    "temporal_spatial_convergence": "OPEN",
+    "topic13_stress_energy_projection": "OPEN",
+    "dimensional_observable_mapping": "OPEN"
+  },
+  "controlling_blocker": "curved_3p1_differential_geometry_evolution_gauge_and_constraint_propagation_missing",
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/curved_3p1_adm_constraint_interface_audit.json",
+      "sha256": "3a17e44e2daad91f96918c2a58153ccf4c405af9ab30a715b1b2dabc7a1be12c"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_adm_constraint_formula_audit.json",
+      "sha256": "42f15c6ec459a89acd4afc6b14474a5aaf573c782ca34d8af2d48ee3bee2beb3"
+    }
+  ],
+  "claim_promotion": false
+}

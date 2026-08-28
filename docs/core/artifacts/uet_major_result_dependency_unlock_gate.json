@@ -6,7 +6,7 @@
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "94a9356f24e2dae0d396bd96931d068919e4f1773e95fd255f2cf4470bac1e55"
+    "sha256": "9fd4c095b71806b157d635e43926ddeb76dc1eebf0821bbedcad0a1cc87739c8"
   },
   "decisions": {
     "TOPIC_0_11_CHAOS_DIAGNOSTIC_ROLLOUT": {
@@ -41,7 +41,7 @@
       "unmet_dependencies": [
         {
           "result": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
-          "current_level": "OPEN",
+          "current_level": "PARTIAL",
           "required_level": "CLOSED_FOR_CORE"
         }
       ],
@@ -89,8 +89,104 @@
     "GALAXY_COMPATIBILITY_TRACK"
   ],
   "claim_boundary": "Dependency decisions only; no downstream result is promoted by a checkpoint or comparator pass.",
+  "curved_3p1_progress": {
+    "parent": {
+      "major_result_id": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
+      "topic": "core",
+      "closure_level": "PARTIAL",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "ADM constraint evaluation interface"
+      ],
+      "equation_or_mapping": {
+        "hamiltonian": "R3 + K^2 - K_ij K^ij - 16*pi*G*rho = 0",
+        "momentum": "D_j(K^j_i - delta^j_i*K) - 8*pi*G*S_i = 0"
+      },
+      "units": "geometric constraint lane; SI observable mapping open",
+      "derivation_class": "incremental curved 3+1 parent construction",
+      "observable": "constraint residual diagnostics only",
+      "data_role": "internal analytic controls",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/core_curved_3p1_parent_gate.json",
+          "sha256": "48e20b52e3c0a647460d4a5dc5201f5216efc16f0cce0d5fdfc274a603838fd4",
+          "summary": {
+            "status": "PARTIAL_CURVED_3P1_PARENT_CONSTRAINT_INTERFACE_READY",
+            "major_result_id": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
+            "closure_level": "PARTIAL"
+          }
+        }
+      ],
+      "verification_status": "PARTIAL_CURVED_3P1_PARENT_CONSTRAINT_INTERFACE_READY",
+      "open_blockers": [
+        "metric_to_ricci_operator",
+        "lapse_shift_gauge",
+        "metric_and_extrinsic_curvature_evolution",
+        "strong_hyperbolicity",
+        "constraint_propagation",
+        "temporal_spatial_convergence",
+        "topic13_stress_energy_projection",
+        "dimensional_observable_mapping"
+      ],
+      "dependency_unlocked": "next curved 3+1 Core wave only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
+      "claim_boundary": "partial parent construction; not CLOSED_FOR_CORE and not Gravity/GR compatibility"
+    },
+    "adm_constraint_interface": {
+      "major_result_id": "CORE_CURVED_3P1_ADM_CONSTRAINT_INTERFACE_READY",
+      "topic": "core",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "standard ADM Hamiltonian residual from declared 3+1 inputs",
+        "standard ADM momentum residual from declared covariant divergence",
+        "Minkowski and flat-FLRW analytic controls",
+        "invalid-metric and matter-density negative controls",
+        "geometric-unit and ontology boundary"
+      ],
+      "equation_or_mapping": {
+        "hamiltonian": "R3 + K^2 - K_ij K^ij - 16*pi*G*rho = 0",
+        "momentum": "D_j(K^j_i - delta^j_i*K) - 8*pi*G*S_i = 0"
+      },
+      "units": {
+        "K_ij": "L^-1",
+        "R3": "L^-2",
+        "G_rho": "L^-2",
+        "G_S_i": "L^-2",
+        "constraint_residuals": "L^-2"
+      },
+      "derivation_class": "standard-physics ADM constraint transcription and internal algebraic verification",
+      "observable": "Hamiltonian and momentum constraint residuals; no detector observable",
+      "data_role": "analytic controls and metadata-only primary-source record",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/curved_3p1_adm_constraint_interface_audit.json",
+          "sha256": "3a17e44e2daad91f96918c2a58153ccf4c405af9ab30a715b1b2dabc7a1be12c",
+          "summary": {
+            "status": "PASS_CURVED_3P1_ADM_CONSTRAINT_INTERFACE",
+            "major_result_id": "CORE_CURVED_3P1_ADM_CONSTRAINT_INTERFACE_READY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_CURVED_3P1_ADM_CONSTRAINT_INTERFACE",
+      "open_blockers": [
+        "metric-to-Ricci differential operator",
+        "lapse and shift gauge evolution",
+        "spatial-metric and extrinsic-curvature evolution",
+        "constraint propagation or damping",
+        "well-posedness and convergence",
+        "Topic 13 stress-energy projection wiring",
+        "physical observable validation"
+      ],
+      "dependency_unlocked": "curved 3+1 differential-geometry and evolution wave only; Gravity remains blocked",
+      "claim_boundary": "curved 3+1 ADM constraint evaluation interface only; not a metric evolution solver, Einstein-equation derivation, or GR validation"
+    },
+    "gravity_unlock_status": "BLOCKED_DEPENDENCY",
+    "controlling_blocker": "curved_3p1_differential_geometry_evolution_gauge_and_constraint_propagation_missing",
+    "claim_boundary": "ADM constraint-interface progress only; the parent is not CLOSED_FOR_CORE and Gravity remains blocked"
+  },
   "topic13_partial_evidence": {
-    "register_sha256": "94a9356f24e2dae0d396bd96931d068919e4f1773e95fd255f2cf4470bac1e55",
+    "register_sha256": "9fd4c095b71806b157d635e43926ddeb76dc1eebf0821bbedcad0a1cc87739c8",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",

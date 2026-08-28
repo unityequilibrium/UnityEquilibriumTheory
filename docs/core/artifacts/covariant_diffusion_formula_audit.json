@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "covariant_diffusion_formula_audit",
-  "generated_at": "2026-07-23T03:32:55.810289+00:00",
+  "generated_at": "2026-08-28T05:24:34.004469+00:00",
   "status": "WARN",
   "implementation_status": "PRESENT",
   "derivation_status": "constitutive current reduction with exact discrete identities; microscopic and full hyperbolic phase-field derivations remain open",
@@ -52,7 +52,7 @@
   "epsilon_denominator_lines": [],
   "source_hashes": {
     "docs\\core\\uet_covariant_diffusion.py": "a267b89e39db4a8dfac56e71a070539a9da05a55b8bb8b22216e7fd1b839bc53",
-    "docs\\core\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "d15cc8e345a3df986f7608d48e3152134c4325dfa24e5dc9364b085fe37dd6c9",
+    "docs\\core\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "81e5d46c21f4e406215d532ac65afb989b383a7d828a5a2d3dcba0938db7ac42",
     "docs\\core\\artifacts\\covariant_matter_action_verification.json": "b02aaa543ae9945496a434fa308edefa85dd1c0ac004ae95f6219abb1c35fc9a"
   },
   "downstream_hyperbolic_phase_field": {

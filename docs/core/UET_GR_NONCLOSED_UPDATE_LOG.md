@@ -6,6 +6,19 @@
 > program without upgrading claims ahead of generated evidence.
 
 ## Entries
+### 2026-08-28 - Add the curved 3+1 ADM constraint interface
+
+- Scope: Core curved 3+1 parent, standard ADM initial-value constraints, analytic controls, and dependency reporting
+- Wave type: formula/source pass, artifact pass, negative-control gate, unit/ontology audit, and dependency-boundary pass
+- Added or changed: ADM constraint module, Gourgoulhon source record, strict verifier, verification/formula/parent-gate/register-addendum artifacts, focused tests, Core exports, and major-result/dependency integration
+- Verified with: `audit_uet_curved_3p1_constraints.py`, focused ADM tests, major-result register regeneration, dependency-gate regeneration, and Core regression
+- Result: `CORE_CURVED_3P1_ADM_CONSTRAINT_INTERFACE_READY` is `CLOSED_FOR_LANE`; `CORE_CURVED_3P1_OBSERVABLE_PARENT_READY` is `PARTIAL`; Gravity remains `BLOCKED_DEPENDENCY`
+- Blocker narrowed: `curved_3p1_dynamical_metric_and_gr_constraints_not_implemented` is split into a passing algebraic ADM constraint interface and named open differential-geometry/evolution/gauge/propagation requirements
+- Still open: metric-to-Ricci and covariant-divergence grid operators, gauge choice, metric/extrinsic-curvature evolution, strong hyperbolicity, constraint propagation/damping, convergence, Topic 13 stress-energy projection, and dimensional observables
+- Next controller: `curved_3p1_differential_geometry_evolution_gauge_and_constraint_propagation_missing`
+- Claim impact: Class B retained; no Einstein-equation derivation, numerical-GR validation, Gravity unlock, or global claim promotion
+- Workflow linkage: first post-Topic-13 Core hardening wave under the major-result closure/dependency contract
+
 ### 2026-07-23 - Derive finite-density O(2) EOS and lock the T=0 Kubo boundary
 
 - Scope: homogeneous signed-charge EOS, canonical Legendre transform, response reciprocity, covariant T=0 pure-superfluid current/stress, and longitudinal Kubo/entropy/causal interface

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "hyperbolic_phase_field_bridge_formula_audit",
-  "generated_at": "2026-08-27T20:36:22+00:00",
+  "generated_at": "2026-08-28T05:24:44+00:00",
   "status": "WARN",
   "topic": "docs/core UET GR non-closed response",
   "version": "wave8_v1",
@@ -64,7 +64,7 @@
     "docs\\core\\uet_hyperbolic_phase_field_bridge.py": "568c7b0d42d371ad5720f00577c316abd1618eacfe1f0c00009c7a2d3a1ad31f",
     "docs\\core\\uet_hyperbolic_phase_field.py": "666dc95867b8010caa28d709e0bbb490cc2b6e5fe763ed4f15621ecb750d92be",
     "docs\\core\\uet_covariant_diffusion.py": "a267b89e39db4a8dfac56e71a070539a9da05a55b8bb8b22216e7fd1b839bc53",
-    "docs\\core\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "d15cc8e345a3df986f7608d48e3152134c4325dfa24e5dc9364b085fe37dd6c9",
+    "docs\\core\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "81e5d46c21f4e406215d532ac65afb989b383a7d828a5a2d3dcba0938db7ac42",
     "docs\\data\\external\\relativistic_transport\\jain_kovtun_2024\\source_record.json": "90c8c7dfe8256da2b1dbe6631d189470800ea8ed7eec228fc9bedf49dd39dbc7",
     "docs\\data\\external\\relativistic_transport\\crossley_glorioso_liu_2017\\source_record.json": "080912a9861ce6c5df645f35d67ddfc9d7415c42dfd97e12ae0f0fd8007ff6b5"
   },
