@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "artifact": "core_curved_3p1_parent_gate",
-  "generated_at": "2026-08-28T15:32:09.632390+00:00",
-  "status": "PARTIAL_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY",
+  "generated_at": "2026-08-29T04:27:20.656920+00:00",
+  "status": "PARTIAL_CURVED_3P1_GH_NONLINEAR_VACUUM_RHS_READY",
   "major_result": {
     "major_result_id": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
     "topic": "core",
@@ -19,7 +19,11 @@
       "first-order GH principal equation and algebraic gauge-source contract",
       "complete GH characteristic basis with source-matched speeds",
       "positive GH symmetrizer and principal-system symmetric hyperbolicity",
-      "reduction-constraint damping identity and spatial convergence"
+      "reduction-constraint damping identity and spatial convergence",
+      "complete nonlinear vacuum GH Eqs. 35-40 right-hand-side operator",
+      "metric-derived lapse, shift, normal, Christoffel, and gauge constraint",
+      "gamma0 algebraic gauge-constraint damping term",
+      "independent constant-grid and variable-grid explicit-index controls"
     ],
     "equation_or_mapping": {
       "hamiltonian": "R3 + K^2 - K_ij K^ij - 16*pi*G*rho = 0",
@@ -29,19 +33,17 @@
     "derivation_class": "incremental curved 3+1 parent construction",
     "observable": "constraint residual diagnostics only",
     "data_role": "internal analytic controls",
-    "verification_status": "PARTIAL_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY",
+    "verification_status": "PARTIAL_CURVED_3P1_GH_NONLINEAR_VACUUM_RHS_READY",
     "open_blockers": [
       "lapse_shift_gauge",
       "metric_and_extrinsic_curvature_evolution",
-      "complete_nonlinear_gh_rhs",
-      "gamma0_gauge_constraint_damping",
       "constraint_propagation",
       "temporal_spatial_convergence",
       "constraint_preserving_boundaries",
       "topic13_stress_energy_projection",
       "dimensional_observable_mapping"
     ],
-    "dependency_unlocked": "complete nonlinear GH RHS and gamma0 gauge-constraint damping wave only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
+    "dependency_unlocked": "GH time integration and constraint-propagation wave only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
     "claim_boundary": "partial parent construction; not CLOSED_FOR_CORE and not Gravity/GR compatibility"
   },
   "requirements": {
@@ -55,26 +57,26 @@
     "gh_characteristic_basis": "PASS",
     "gh_symmetric_hyperbolicity": "PASS",
     "gh_reduction_constraint_damping": "PASS",
-    "lapse_shift_gauge": "PARTIAL_GH_ALGEBRAIC_SOURCE_CONTRACT",
-    "metric_and_extrinsic_curvature_evolution": "PARTIAL_GH_PRINCIPAL_RHS_ONLY",
+    "lapse_shift_gauge": "PARTIAL_GH_DECLARED_SOURCE_AND_METRIC_RECONSTRUCTION",
+    "metric_and_extrinsic_curvature_evolution": "PARTIAL_GH_NONLINEAR_VACUUM_RHS_OPERATOR_ONLY",
     "strong_hyperbolicity": "PASS",
-    "complete_nonlinear_gh_rhs": "OPEN",
-    "gamma0_gauge_constraint_damping": "OPEN",
-    "constraint_propagation": "PARTIAL_REDUCTION_CONSTRAINT_DAMPING_ONLY",
+    "complete_nonlinear_gh_rhs": "PASS",
+    "gamma0_gauge_constraint_damping": "PASS",
+    "constraint_propagation": "PARTIAL_REDUCTION_AND_ALGEBRAIC_GAUGE_DAMPING_ONLY",
     "temporal_spatial_convergence": "PARTIAL_SPATIAL_OPERATOR_CONVERGENCE_ONLY",
     "constraint_preserving_boundaries": "OPEN",
     "topic13_stress_energy_projection": "OPEN",
     "dimensional_observable_mapping": "OPEN"
   },
-  "controlling_blocker": "curved_3p1_generalized_harmonic_nonlinear_rhs_and_gamma0_constraint_damping_missing",
+  "controlling_blocker": "curved_3p1_generalized_harmonic_time_integration_and_constraint_propagation_missing",
   "evidence_artifacts": [
     {
       "path": "docs/core/artifacts/curved_3p1_adm_constraint_interface_audit.json",
-      "sha256": "83e9498280a19950ca1622b3a792b95c9eeba3fbc91099167704bccefa2b752b"
+      "sha256": "eabc9325d7e9f0696b219d2253399cb777e9bde79d1ee6e4840b3716877d0b29"
     },
     {
       "path": "docs/core/artifacts/curved_3p1_adm_constraint_formula_audit.json",
-      "sha256": "370b7fcf8f17d553000c298af3e5799cedd725167ed6910ae2c098acd199e12f"
+      "sha256": "a8702d9fad8a7d7361450ae4ec493f1d6b7ee6f8b6e25fd239377a2b0ff6fbb1"
     },
     {
       "path": "docs/core/artifacts/curved_3p1_geometry_operator_verification.json",
@@ -102,15 +104,27 @@
     },
     {
       "path": "docs/core/artifacts/curved_3p1_gh_principal_system_verification.json",
-      "sha256": "d44fc85fc599b269b33cb537204fd6ac4739168a7364fb694c16ab3732622966"
+      "sha256": "2689b6af0177025c25319a84e4e846d65576ff1d50fd895876809f0f2f9ef245"
     },
     {
       "path": "docs/core/artifacts/curved_3p1_gh_principal_system_formula_audit.json",
-      "sha256": "79dd9919f1b0485fd08c5b14a17b989c9ffbec845e88fb5acde882b76270f80c"
+      "sha256": "7dbc678f01a4d7e6ab78be962d4dfa6a9f9e730b7cc8b525b8e911678c7d1e1f"
     },
     {
       "path": "docs/core/artifacts/curved_3p1_gh_branch_gate.json",
-      "sha256": "75f29021fad3d97dcfe105b2dce6bcef96a0f589ecfc42802ad36306527e4cc1"
+      "sha256": "f083924ea28ce0ee95439de43748dcee26f4c131de1a44dbd19d2ee7032753e4"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json",
+      "sha256": "03e3763986e5140d48a3607c5859d11c94d38d22aeb9f8b2d682d6c2fde8265e"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_formula_audit.json",
+      "sha256": "410a3be8ea68f4730427fba991fc55a3410e4b06161feabd5b6c46df933628a3"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_gate.json",
+      "sha256": "992cc2b673535ac118b89b8add33aad335f43e51bdf161ba230074fac6092637"
     }
   ],
   "claim_promotion": false

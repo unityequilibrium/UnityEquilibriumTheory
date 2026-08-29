@@ -1,7 +1,7 @@
 {
   "schema_version": "topic13-full-thermodynamic-bridge-core-ready-v1",
   "artifact": "topic13_full_thermodynamic_bridge_core_ready_gate",
-  "generated_at": "2026-08-28",
+  "generated_at": "2026-08-29",
   "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
   "core_result_status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
   "legacy_graphite_ttg_aggregate_status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
@@ -80668,7 +80668,7 @@
     },
     {
       "path": "docs/core/artifacts/covariant_superfluid_transport_contract.json",
-      "sha256": "a24d96ce15bbda1bdc8b473b7dc2c9690a9482af29b98310bc20566506ef748c",
+      "sha256": "611f7ec885629d6ae4cec797fe30331db915d54a0e58f4265f0418106cc5fcf5",
       "summary": {
         "status": "BLOCKED",
         "next_controller": "physical_kubo_coefficient_evidence_and_curved_3p1_solver_missing"
@@ -80676,7 +80676,7 @@
     },
     {
       "path": "docs/core/artifacts/covariant_superfluid_transport_verification.json",
-      "sha256": "49fc1a047cfa84e8155940a491eb9c3fb3c3536ac707b010ba15b32298632ad1",
+      "sha256": "e9755040496a87eef258ad5a18ef30b12c7a7e2747cd3aa0626b89416ff86b1b",
       "summary": {
         "physical_coefficient_evidence": "BLOCKED_NOT_PROVIDED",
         "full_SK_KMS_completion": "BLOCKED"
@@ -80756,7 +80756,7 @@
     },
     {
       "path": "docs/core/artifacts/o2_finite_density_eos_verification.json",
-      "sha256": "8ab261c44f6f4f5840b52c681a0c7df5a181a33ea6ea8600c91228f393b2b239",
+      "sha256": "34889f81a18c9abff89ecc0bb73b4e6b16929aea2b7892ebdcc1d4647168a069",
       "summary": {
         "audit_status": "PASS",
         "evidence_status": "TREE_LEVEL_MEAN_FIELD_DERIVATION"

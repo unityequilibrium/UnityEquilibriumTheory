@@ -1,3 +1,18 @@
+## 2026-08-29 - Stabilize Core-ready and external-track provenance
+
+MAJOR_RESULT_CLOSURE: `T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY` remains `CLOSED_FOR_CORE`; acceptance remains `PASS_T13_FULL_CORE_READY_ACCEPTANCE` at 13/13 criteria.
+WHAT_IS_ACTUALLY_CLOSED: The O(2)/He-4 dimensional lane is now reported independently from the legacy graphite/TTG external-validation lane, and both derived-artifact hash cycles are explicitly removed.
+WHAT_REMAINS_OPEN: Ten external graphite/TTG subresults remain open, including accepted Ding-compatible `C_src`, graphite-specific `alpha_Phi_K`, physical transport matching, material-regime mapping, and source-grade uncertainty.
+DEPENDENCY_UNLOCKED: Core curved 3+1 research remains unlocked. Gravity remains blocked until the curved parent closes.
+STATUS: `full_core_unlock=true`; legacy graphite/TTG `BLOCKED`; Xie 2026 unread; global claim promotion false.
+WHAT_CHANGED: Wave 8 now reads the upstream He-4 composition rather than downstream acceptance/matrix artifacts. Acceptance treats register/dependency as non-hashed derived consistency inputs because the register discovers the acceptance artifact.
+EQUATION_OR_MAPPING: `Delta_Tq=alpha_Phi_K*Delta_Phi_norm`; no equation, threshold, calibration value, or holdout role changed.
+VERIFICATION: Source reconciliation, full bridge gate, closure matrix, progress renderer, register, dependency, and 13/13 acceptance passed. Full Core regression passed 1260 tests with 0 failures; all completion-audit evidence hashes are current.
+CONTROLLING_BLOCKER: None for the bounded Topic 13 Core handoff. The external controller is accepted graphite source/calibration/transport evidence; the Core controller is GH time integration and constraint propagation.
+NEXT_ACTION: Continue Core curved 3+1 time evolution while keeping graphite acquisition as a separate external comparison track.
+CLAIM_BOUNDARY: Core-ready internal O(2)/He-4 integration only; not graphite TTG validation, external-ready Topic 13, Gravity, or global UET closure.
+EVIDENCE_HASHES: acceptance `3454d965ac02f8d6a2a0d0f9dda5ff8aa13a122f912d62a71c6d4aa85c99faf4`; composition `13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418`; matrix `9545138da34726bba60c3e8af29714d577f6579b2cb0489bbba94834f4cb45e5`; gate `dc0d658a353172074425d2a8259dce3a4fa7b6b75bea68310c7a1492421d5d58`.
+
 ## 2026-08-28 - Full Topic 13 Core-ready closure wave
 
 MAJOR_RESULT_CLOSURE: `T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY` is `CLOSED_FOR_CORE`; final acceptance is `PASS_T13_FULL_CORE_READY_ACCEPTANCE`.

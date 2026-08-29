@@ -1,12 +1,12 @@
 {
   "schema_version": "uet-major-result-dependency-unlock-v1",
   "artifact": "uet_major_result_dependency_unlock_gate",
-  "generated_at": "2026-08-28",
+  "generated_at": "2026-08-29",
   "status": "BLOCKED_DOWNSTREAM_MAJOR_RESULTS",
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "56cd352f4a4274241e541ea2653ffcf92c41f70d73e5536bf7e3309e665b952e"
+    "sha256": "b6bcc3a5b65d7a86bfd8ed53c7398f1a7acabd90f0724ea62cec4532ec8d3fbe"
   },
   "decisions": {
     "TOPIC_0_11_CHAOS_DIAGNOSTIC_ROLLOUT": {
@@ -107,7 +107,11 @@
         "first-order GH principal equation and algebraic gauge-source contract",
         "complete GH characteristic basis with source-matched speeds",
         "positive GH symmetrizer and principal-system symmetric hyperbolicity",
-        "reduction-constraint damping identity and spatial convergence"
+        "reduction-constraint damping identity and spatial convergence",
+        "complete nonlinear vacuum GH Eqs. 35-40 right-hand-side operator",
+        "metric-derived lapse, shift, normal, Christoffel, and gauge constraint",
+        "gamma0 algebraic gauge-constraint damping term",
+        "independent constant-grid and variable-grid explicit-index controls"
       ],
       "equation_or_mapping": {
         "hamiltonian": "R3 + K^2 - K_ij K^ij - 16*pi*G*rho = 0",
@@ -120,27 +124,25 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/core_curved_3p1_parent_gate.json",
-          "sha256": "b4e0342372f1d7104f2060cfc5289aa3f9cb3d6cc1ae99fe984dc23b897d9236",
+          "sha256": "21eb02716ac272d3f58ee009cfbab4fede339af4ce50772961f9ae53a2783dd7",
           "summary": {
-            "status": "PARTIAL_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY",
+            "status": "PARTIAL_CURVED_3P1_GH_NONLINEAR_VACUUM_RHS_READY",
             "major_result_id": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
             "closure_level": "PARTIAL"
           }
         }
       ],
-      "verification_status": "PARTIAL_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY",
+      "verification_status": "PARTIAL_CURVED_3P1_GH_NONLINEAR_VACUUM_RHS_READY",
       "open_blockers": [
         "lapse_shift_gauge",
         "metric_and_extrinsic_curvature_evolution",
-        "complete_nonlinear_gh_rhs",
-        "gamma0_gauge_constraint_damping",
         "constraint_propagation",
         "temporal_spatial_convergence",
         "constraint_preserving_boundaries",
         "topic13_stress_energy_projection",
         "dimensional_observable_mapping"
       ],
-      "dependency_unlocked": "complete nonlinear GH RHS and gamma0 gauge-constraint damping wave only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
+      "dependency_unlocked": "GH time integration and constraint-propagation wave only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
       "claim_boundary": "partial parent construction; not CLOSED_FOR_CORE and not Gravity/GR compatibility"
     },
     "adm_constraint_interface": {
@@ -172,7 +174,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/curved_3p1_adm_constraint_interface_audit.json",
-          "sha256": "83e9498280a19950ca1622b3a792b95c9eeba3fbc91099167704bccefa2b752b",
+          "sha256": "eabc9325d7e9f0696b219d2253399cb777e9bde79d1ee6e4840b3716877d0b29",
           "summary": {
             "status": "PASS_CURVED_3P1_ADM_CONSTRAINT_INTERFACE",
             "major_result_id": "CORE_CURVED_3P1_ADM_CONSTRAINT_INTERFACE_READY",
@@ -363,7 +365,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/curved_3p1_gh_principal_system_verification.json",
-          "sha256": "d44fc85fc599b269b33cb537204fd6ac4739168a7364fb694c16ab3732622966",
+          "sha256": "2689b6af0177025c25319a84e4e846d65576ff1d50fd895876809f0f2f9ef245",
           "summary": {
             "status": "PASS_GH_PRINCIPAL_CHARACTERISTIC_SYSTEM",
             "major_result_id": "CORE_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY",
@@ -373,22 +375,66 @@
       ],
       "verification_status": "PASS_GH_PRINCIPAL_CHARACTERISTIC_SYSTEM",
       "open_blockers": [
-        "complete nonlinear GH algebraic right-hand sides",
-        "gamma0 gauge-constraint damping in the nonlinear RHS",
         "time integration and CFL policy",
         "constraint propagation convergence",
         "constraint-preserving boundaries",
         "matter stress-energy wiring and detector observable map"
       ],
       "dependency_unlocked": "complete nonlinear GH RHS and gamma0 gauge-constraint damping wave only",
-      "claim_boundary": "source-locked GH principal/characteristic and reduction-damping operator only; not a complete nonlinear Einstein evolution, numerical-relativity solver, or UET validation"
+      "claim_boundary": "source-locked vacuum GH RHS and principal/constraint operators only; not a time-integrated numerical-relativity solver, matter-coupled system, or UET validation"
+    },
+    "generalized_harmonic_nonlinear_vacuum_rhs": {
+      "major_result_id": "CORE_CURVED_3P1_GH_NONLINEAR_VACUUM_RHS_READY",
+      "topic": "core",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "source-locked complete vacuum GH Eqs. 35-40 transcription",
+        "metric-derived lapse, shift, normal, and spatial inverse",
+        "first-order Christoffel and gauge-constraint reconstruction",
+        "gamma0 gauge-constraint damping term",
+        "independent explicit-index constant-grid reference controls",
+        "independent explicit-index variable-grid derivative controls"
+      ],
+      "equation_or_mapping": {
+        "metric_rhs": "Lindblom et al. Eq. 35",
+        "pi_rhs": "Lindblom et al. Eq. 36",
+        "phi_rhs": "Lindblom et al. Eq. 37",
+        "metric_derivatives": "Lindblom et al. Eqs. 38-39",
+        "gauge_constraint": "Lindblom et al. Eq. 40"
+      },
+      "units": "geometric c=1 vacuum GH lane",
+      "derivation_class": "source-locked standard GH transcription plus independent index controls",
+      "observable": "vacuum metric-state RHS and constraint diagnostics only",
+      "data_role": "analytic/internal controls; no fit, calibration, or holdout",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json",
+          "sha256": "03e3763986e5140d48a3607c5859d11c94d38d22aeb9f8b2d682d6c2fde8265e",
+          "summary": {
+            "status": "PASS_GH_NONLINEAR_VACUUM_RHS",
+            "major_result_id": "CORE_CURVED_3P1_GH_NONLINEAR_VACUUM_RHS_READY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_GH_NONLINEAR_VACUUM_RHS",
+      "open_blockers": [
+        "time integration and CFL policy",
+        "full gauge/reduction constraint propagation convergence",
+        "constraint-preserving non-periodic boundaries",
+        "matter stress-energy source wiring",
+        "SI detector-observable mapping"
+      ],
+      "dependency_unlocked": "time integration and constraint-propagation wave only",
+      "claim_boundary": "complete vacuum RHS operator only; not a time-integrated solver, matter-coupled UET parent, Gravity validation, or external claim"
     },
     "gravity_unlock_status": "BLOCKED_DEPENDENCY",
-    "controlling_blocker": "curved_3p1_generalized_harmonic_nonlinear_rhs_and_gamma0_constraint_damping_missing",
-    "claim_boundary": "ADM constraint, periodic spatial geometry, RHS operator, and fixed-gauge no-go, and GH principal-system progress only; the parent is not CLOSED_FOR_CORE and Gravity remains blocked"
+    "controlling_blocker": "curved_3p1_generalized_harmonic_time_integration_and_constraint_propagation_missing",
+    "claim_boundary": "ADM constraint, periodic spatial geometry, RHS operator, and fixed-gauge no-go, GH principal-system, and nonlinear vacuum-RHS progress only; the parent is not CLOSED_FOR_CORE and Gravity remains blocked"
   },
   "topic13_partial_evidence": {
-    "register_sha256": "56cd352f4a4274241e541ea2653ffcf92c41f70d73e5536bf7e3309e665b952e",
+    "register_sha256": "b6bcc3a5b65d7a86bfd8ed53c7398f1a7acabd90f0724ea62cec4532ec8d3fbe",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",
@@ -2581,7 +2627,7 @@
     "claim_boundary": "CLOSED_FOR_CORE is an internal, lane-bounded composition result. It is not a prediction of the imported He-4 coefficients, not graphite TTG validation, not a complete two-fluid transport tensor, not curved 3+1, and not global UET closure.",
     "closure_matrix": {
       "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-      "sha256": "ba42d8a9c1745398ec0ee04300a792d18416fccae9205bc376a96f68d423036d",
+      "sha256": "9545138da34726bba60c3e8af29714d577f6579b2cb0489bbba94834f4cb45e5",
       "full_core_unlock": true,
       "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
       "required_major_result_count": 10,
@@ -2602,6 +2648,6 @@
       },
       "full_topic_ready": true
     },
-    "register_sha256": "e63df0e6fb73137d03310dd9f691e881ff194bad9a342e134612d735b450bd2d"
+    "register_sha256": "1f456c5e96a5082ae8267a2d85cb24022f30f89c647f28f32bc3596b553030ee"
   }
 }

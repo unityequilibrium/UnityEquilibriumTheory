@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_foundation_compatibility_gate",
-  "generated_at": "2026-08-28",
+  "generated_at": "2026-08-29",
   "audit_status": "PASS",
   "compatibility_status": "BLOCKED",
   "controlling_blockers": [
@@ -659,7 +659,7 @@
     "docs/core/uet_master_equation.py": "dc06b67609725cfbec432a65c811e3da51f9cbbe2b91ea34f98d0a3a58486e8c",
     "docs/core/uet_parameters.py": "eff2fc6fe0fe35f18c49a032729e385c97b633a90e9a0bd3789be5051d316651",
     "docs/core/MATTER_SPACE_RESEARCH_SPEC.md": "3fca7d82e7f0c0c5e7904811eec7d81d772fe802492dbf2147b1ee95232fb2a4",
-    "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md": "66ef7d15c3ec3a01839f894c25ea40d31c5fe1b513f7f7c9558c5066d963dc4e",
+    "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md": "8febf45f9cbfe8b4b74095867696f66d8930ccb7afd6d720d01cb8cd569893b7",
     "docs/core/artifacts/uet_equation_correspondence_registry.json": "b0633c9764f64280a28355b4ebe73f0d5ec0fa915563cc18ae3d46665526c5d9",
     "docs/core/artifacts/master_equation_alignment_gate_v2.json": "b2184ce72accffcb1baf609bfb3db789247fc387b30413996f49a74a794a3515",
     "docs/core/artifacts/matter_space_formula_audit.json": "b601c8a92201660aee06c4f577521e4fe0b421d7f9b047616e23ca9dd846d0da",
@@ -667,7 +667,7 @@
     "docs/core/artifacts/matter_space_dependency_gate.json": "5af4debf7c189ac255d074eaaf1dbab7515721d480f200d6cb56c13b3a52ede5",
     "docs/core/artifacts/spacetime_trace_verification.json": "1ba232f1d8d0e13e1492b7465e2afabd44639d7af5c88100a1d759ed53a75e27",
     "docs/core/artifacts/gr_closed_limit_verification.json": "daecc68f691d897d58471e7bad65b4f4221648fcd00c9543695d3def092e32a4",
-    "docs/core/artifacts/o2_finite_density_eos_verification.json": "8681e4730caa604083988da02adf514d04bf330f34ea428845ade6e7a946aa23",
-    "docs/core/artifacts/o2_eos_formula_audit.json": "1081c7e53dcca767359233c48ffddbc02d3ed148fdc04f8c9c7add68d48aa23d"
+    "docs/core/artifacts/o2_finite_density_eos_verification.json": "34889f81a18c9abff89ecc0bb73b4e6b16929aea2b7892ebdcc1d4647168a069",
+    "docs/core/artifacts/o2_eos_formula_audit.json": "b20ee53c6d090e5214c8cdbaf1de12a3674e97476cda75e0aa629f6b2677f50b"
   }
 }

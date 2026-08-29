@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-base-phi-si-reconciliation-v1",
   "artifact": "t13_base_phi_si_reconciliation_audit",
-  "generated_at": "2026-08-25",
+  "generated_at": "2026-08-29",
   "status": "PASS_SCOPED_BASE_PHI_RECONCILIATION_OPEN",
   "major_result": {
     "major_result_id": "T13_BASE_PHI_SI_RECONCILIATION",
@@ -64,7 +64,7 @@
       },
       {
         "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
-        "sha256": "a51c9ab63e4e976b04a032037608d59441192cbd8066ccc9bd490f7336527a15",
+        "sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52",
         "role": "covariant action natural-unit route and SI boundary"
       },
       {
@@ -79,7 +79,7 @@
       },
       {
         "path": "docs/core/artifacts/uet_dimensional_observable_closure_audit.json",
-        "sha256": "df3a8b17828cd8277b71854f7fdf28d31f2f5e7c44efcd6f7624d21731dbbfad",
+        "sha256": "fb30f8c552be7c26a8ec5bb43fa9651085d2e3188ba0b1f3c337e97529e280cd",
         "role": "normalized TTG operator and observable audit"
       },
       {
@@ -195,7 +195,7 @@
       "candidate_id": "covariant_natural_unit_si_route",
       "artifact": {
         "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
-        "sha256": "a51c9ab63e4e976b04a032037608d59441192cbd8066ccc9bd490f7336527a15",
+        "sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52",
         "role": "covariant action natural-unit route and SI boundary"
       },
       "candidate_class": "NATURAL_UNIT_ACTION_ROUTE",
@@ -245,7 +245,7 @@
       "candidate_id": "normalized_observable_closure",
       "artifact": {
         "path": "docs/core/artifacts/uet_dimensional_observable_closure_audit.json",
-        "sha256": "df3a8b17828cd8277b71854f7fdf28d31f2f5e7c44efcd6f7624d21731dbbfad",
+        "sha256": "fb30f8c552be7c26a8ec5bb43fa9651085d2e3188ba0b1f3c337e97529e280cd",
         "role": "normalized TTG operator and observable audit"
       },
       "candidate_class": "NORMALIZED_OBSERVABLE_ONLY",

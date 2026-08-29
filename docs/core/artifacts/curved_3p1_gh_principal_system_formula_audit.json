@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_gh_principal_system_formula_audit",
-  "generated_at": "2026-08-28T15:30:47.962718+00:00",
+  "generated_at": "2026-08-28T16:04:27.394343+00:00",
   "status": "PASS_SOURCE_LOCKED_GH_PRINCIPAL_FORMULAS",
   "relations": [
     {
@@ -158,17 +158,15 @@
     "accessed_on": "2026-08-28"
   },
   "source_hashes": {
-    "docs/core/uet_curved_3p1_generalized_harmonic.py": "8106e269e773b286d66006243e0af8e55bf9e53f28e1f399c32b641808dc546e",
+    "docs/core/uet_curved_3p1_generalized_harmonic.py": "e0f445b40136923bd4f830f6dfb23f27492042a7e662f2d6c098a9b1d8eb99bd",
     "docs/scripts/audit/audit_uet_curved_3p1_generalized_harmonic.py": "b8014a15ebf620c5668d45c4aae277eb96a2b2ee2bfabfd8d7ffbb60515c9eee",
     "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a"
   },
   "open_items": [
-    "complete nonlinear GH algebraic right-hand sides",
-    "gamma0 gauge-constraint damping in the nonlinear RHS",
     "time integration and CFL policy",
     "constraint propagation convergence",
     "constraint-preserving boundaries",
     "matter stress-energy wiring and detector observable map"
   ],
-  "claim_ceiling": "source-locked GH principal/characteristic and reduction-damping operator only; not a complete nonlinear Einstein evolution, numerical-relativity solver, or UET validation"
+  "claim_ceiling": "source-locked vacuum GH RHS and principal/constraint operators only; not a time-integrated numerical-relativity solver, matter-coupled system, or UET validation"
 }

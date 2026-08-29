@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-full-core-ready-acceptance-v1",
   "artifact": "t13_full_core_ready_acceptance_audit",
-  "generated_at": "2026-08-28",
+  "generated_at": "2026-08-29",
   "status": "PASS_T13_FULL_CORE_READY_ACCEPTANCE",
   "claim_promotion": false,
   "major_result": {
@@ -41,93 +41,95 @@
     "evidence_artifacts": [
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-        "sha256": "77c4fa3cfafb1fa6ee4e1e3df65f953ea3011bd33500f6786e92eca6869390c9",
-        "status": "BLOCKED_OPEN_T13_FULL_BRIDGE"
+        "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
+        "sha256": "dc0d658a353172074425d2a8259dce3a4fa7b6b75bea68310c7a1492421d5d58"
       },
       {
         "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-        "sha256": "ba42d8a9c1745398ec0ee04300a792d18416fccae9205bc376a96f68d423036d",
-        "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+        "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+        "sha256": "9545138da34726bba60c3e8af29714d577f6579b2cb0489bbba94834f4cb45e5"
       },
       {
         "path": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
-        "sha256": "13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418",
-        "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+        "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+        "sha256": "13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418"
       },
       {
         "path": "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json",
-        "sha256": "6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a",
-        "status": "PASS_CAUSAL_NAMED_BRANCH_CORE_COMPATIBILITY"
+        "status": "PASS_CAUSAL_NAMED_BRANCH_CORE_COMPATIBILITY",
+        "sha256": "6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a"
       },
       {
         "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
-        "sha256": "1cb84b6c8e9741fef1dc6e0f83fba3dfe68ca6cd89adac8fa1a31835b4debf62",
-        "status": "NO_GO_FOR_DECLARED_CONSERVED_CATTANEO_LOCAL_GRADIENT_CLASS"
+        "status": "NO_GO_FOR_DECLARED_CONSERVED_CATTANEO_LOCAL_GRADIENT_CLASS",
+        "sha256": "1cb84b6c8e9741fef1dc6e0f83fba3dfe68ca6cd89adac8fa1a31835b4debf62"
       },
       {
         "path": "docs/core/artifacts/ding_2022_source_mapping_audit.json",
-        "sha256": "45aa63abf5951afe55f7aad86ef2a971e7a856f2158caf3a1c5ee20500eb1b23",
-        "status": "PASS"
+        "status": "PASS",
+        "sha256": "45aa63abf5951afe55f7aad86ef2a971e7a856f2158caf3a1c5ee20500eb1b23"
       },
       {
         "path": "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json",
-        "sha256": "1c44ffce6310488bf3a9b2e9cce74d1281fb27a949c1b9d26c6f80d970b7fbd0",
-        "status": "PASS_HE4_LOCAL_ALPHA_AND_FIELD_NORMALIZATION"
+        "status": "PASS_HE4_LOCAL_ALPHA_AND_FIELD_NORMALIZATION",
+        "sha256": "1c44ffce6310488bf3a9b2e9cce74d1281fb27a949c1b9d26c6f80d970b7fbd0"
       },
       {
         "path": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
-        "sha256": "1a8289aadbed1c069add276bb3f734d6c642174cf2101a664fba4ee5a8bfd021",
-        "status": "PASS_HE4_SI_SCALE_AND_NORMALIZED_BETA"
+        "status": "PASS_HE4_SI_SCALE_AND_NORMALIZED_BETA",
+        "sha256": "1a8289aadbed1c069add276bb3f734d6c642174cf2101a664fba4ee5a8bfd021"
       },
       {
         "path": "docs/core/artifacts/t13_uet_o2_thermodynamic_normal_component_audit.json",
-        "sha256": "3975ac974a3e265c14094b4b40a0fee86ddcee900fb1c2d534b97d3f38384719",
-        "status": "PASS_ACTION_DERIVED_THERMODYNAMIC_NORMAL_COMPONENT_LANE"
+        "status": "PASS_ACTION_DERIVED_THERMODYNAMIC_NORMAL_COMPONENT_LANE",
+        "sha256": "3975ac974a3e265c14094b4b40a0fee86ddcee900fb1c2d534b97d3f38384719"
       },
       {
         "path": "docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json",
-        "sha256": "42842e5e787a8de7007c026bf7c49dbeeeec7f48cabd403000f817e5c4a90c32",
-        "status": "PASS_FORMAL_T13_THERMODYNAMIC_BRIDGE_INTEGRATION"
+        "status": "PASS_FORMAL_T13_THERMODYNAMIC_BRIDGE_INTEGRATION",
+        "sha256": "42842e5e787a8de7007c026bf7c49dbeeeec7f48cabd403000f817e5c4a90c32"
       },
       {
         "path": "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json",
-        "sha256": "d9632a317270260f4d18be5d1cb8e7f0889ca9e3e9631ebe47aa32212320f4ba",
-        "status": "PASS_NAMED_SK_KMS_ENTROPY_INTERFACE_CONTRACT"
+        "status": "PASS_NAMED_SK_KMS_ENTROPY_INTERFACE_CONTRACT",
+        "sha256": "d9632a317270260f4d18be5d1cb8e7f0889ca9e3e9631ebe47aa32212320f4ba"
       },
       {
         "path": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
-        "sha256": "9ea6f37eb43e353b8c89e42b1c3dd01c957b2063e41a09230483989accb2b3f4",
-        "status": "PASS_ACTION_DERIVED_COVARIANT_ENTROPY_HEAT_FLUX_BALANCE_LANE"
+        "status": "PASS_ACTION_DERIVED_COVARIANT_ENTROPY_HEAT_FLUX_BALANCE_LANE",
+        "sha256": "9ea6f37eb43e353b8c89e42b1c3dd01c957b2063e41a09230483989accb2b3f4"
       },
       {
         "path": "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json",
-        "sha256": "46e292d9b0f88125ecf134faa51322421a06d058015ba318f25c3be3cd2dd26f",
-        "status": "PASS_HE4_PHYSICAL_SHEAR_KUBO_TRANSPORT"
+        "status": "PASS_HE4_PHYSICAL_SHEAR_KUBO_TRANSPORT",
+        "sha256": "46e292d9b0f88125ecf134faa51322421a06d058015ba318f25c3be3cd2dd26f"
       },
       {
         "path": "docs/core/artifacts/t13_landauer_core_disposition_audit.json",
-        "sha256": "82f77043c8921819175146841afd8cc5178385939e8ccf455678ead65731aa43",
-        "status": "PASS_LANDAUER_CORE_ROLE_DISPOSITION"
+        "status": "PASS_LANDAUER_CORE_ROLE_DISPOSITION",
+        "sha256": "82f77043c8921819175146841afd8cc5178385939e8ccf455678ead65731aa43"
       },
       {
         "path": "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json",
-        "sha256": "c3185da0a233894d7f338138bbe6acee287194e1852a80e40b0b5f6f2134e21b",
-        "status": "PASS_HOLDOUT_DATA_UNCONSUMED_METADATA_ONLY"
+        "status": "PASS_HOLDOUT_DATA_UNCONSUMED_METADATA_ONLY",
+        "sha256": "c3185da0a233894d7f338138bbe6acee287194e1852a80e40b0b5f6f2134e21b"
       },
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_thermal_dynamical_regime_audit.json",
-        "sha256": "6c40fc0950fde8827d09d05e892e03b11563d3b987ca6cf06c17091b8ff2eddc",
-        "status": "PASS_SCOPED_THERMAL_DYNAMICAL_REGIME_PILOT"
+        "status": "PASS_SCOPED_THERMAL_DYNAMICAL_REGIME_PILOT",
+        "sha256": "6c40fc0950fde8827d09d05e892e03b11563d3b987ca6cf06c17091b8ff2eddc"
       },
       {
         "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-        "sha256": "94a9356f24e2dae0d396bd96931d068919e4f1773e95fd255f2cf4470bac1e55",
-        "status": null
+        "status": null,
+        "identity_mode": "NON_HASHED_DERIVED_CONSISTENCY_INPUT",
+        "reason": "The register discovers this acceptance artifact, so hashing the register here would create an unsatisfiable provenance cycle."
       },
       {
         "path": "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json",
-        "sha256": "800cf61860945108ea3cb4a1604da32765d8ca0e4ddc55118ccf8702bee4d6fc",
-        "status": "BLOCKED_DOWNSTREAM_MAJOR_RESULTS"
+        "status": "BLOCKED_DOWNSTREAM_MAJOR_RESULTS",
+        "identity_mode": "NON_HASHED_DERIVED_CONSISTENCY_INPUT",
+        "reason": "The register discovers this acceptance artifact, so hashing the register here would create an unsatisfiable provenance cycle."
       }
     ],
     "verification_status": "PASS_T13_FULL_CORE_READY_ACCEPTANCE",
@@ -149,6 +151,15 @@
     "chaos_is_nonblocking_and_does_not_relabel_state": true,
     "registry_matrix_and_dependency_are_consistent": true,
     "global_claim_promotion_remains_false": true
+  },
+  "derived_consistency_inputs": {
+    "paths": [
+      "docs/core/artifacts/uet_major_result_closure_register.json",
+      "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+    ],
+    "identity_mode": "NON_HASHED_DERIVED_CONSISTENCY_INPUT",
+    "values_are_verified": true,
+    "hash_cycle_forbidden": true
   },
   "quantitative_witnesses": {
     "causal_prearrival_leakage_fraction": 0.0,

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_adm_constraint_interface_audit",
-  "generated_at": "2026-08-28T15:32:09.632390+00:00",
+  "generated_at": "2026-08-29T04:27:20.656920+00:00",
   "topic": "docs/core curved 3+1 parent",
   "version": "adm-constraint-interface-v1",
   "benchmark_role": "internal analytic constraint gate",

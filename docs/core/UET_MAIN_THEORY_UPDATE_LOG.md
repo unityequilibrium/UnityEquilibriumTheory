@@ -6,6 +6,22 @@
 
 ## Entries
 
+### 2026-08-29 - Stabilize Topic 13 handoff and curved-parent evidence chain
+
+- Scope: Wave 8 track separation, Topic 13 provenance-cycle repair, nonlinear GH parent integration, and all-wave completion
+- Result: Topic 13 remains `CLOSED_FOR_CORE`; the nonlinear vacuum GH RHS remains `CLOSED_FOR_LANE`; all evidence hashes are current
+- Verified with: 13/13 Topic 13 acceptance, Core/downstream artifact regeneration, and 1260 Core tests with 0 failures
+- Next controller: `curved_3p1_generalized_harmonic_time_integration_and_constraint_propagation_missing`
+- Claim impact: graphite/TTG external validation and Gravity remain blocked; no global theory promotion
+
+### 2026-08-28 - Close the nonlinear GH vacuum-RHS companion lane
+
+- Scope: curved 3+1 generalized-harmonic nonlinear vacuum operator after the principal-system pass
+- Result: complete vacuum Eqs. (35)-(40), metric-derived kinematics, first-order connection/gauge constraint, and algebraic `gamma0` damping are `CLOSED_FOR_LANE`; the curved parent remains `PARTIAL`
+- Verified with: source locators, independent constant/variable-grid index references, Minkowski and gauge-source controls, focused tests, parent registry, and dependency gates
+- Next controller: `curved_3p1_generalized_harmonic_time_integration_and_constraint_propagation_missing`
+- Claim impact: no global theory, time-evolution, matter-coupling, Gravity, or external-validation promotion
+
 ### 2026-08-28 - Close the GH principal-system companion lane
 
 - Scope: curved 3+1 generalized-harmonic formulation after the fixed-gauge ADM no-go

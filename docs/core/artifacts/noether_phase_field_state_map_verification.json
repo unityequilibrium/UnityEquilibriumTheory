@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "noether_phase_field_state_map_verification",
-  "generated_at": "2026-08-28T15:35:33+00:00",
+  "generated_at": "2026-08-29T04:28:44+00:00",
   "topic": "docs/core UET GR non-closed response",
   "version": "wave9_v1",
   "benchmark_role": "analytic_state_map_gate",
@@ -165,12 +165,12 @@
     "docs\\core\\uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
     "docs\\core\\uet_covariant_diffusion.py": "a267b89e39db4a8dfac56e71a070539a9da05a55b8bb8b22216e7fd1b839bc53",
     "docs\\core\\uet_hyperbolic_phase_field_bridge.py": "568c7b0d42d371ad5720f00577c316abd1618eacfe1f0c00009c7a2d3a1ad31f",
-    "docs\\core\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "66ef7d15c3ec3a01839f894c25ea40d31c5fe1b513f7f7c9558c5066d963dc4e",
+    "docs\\core\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "8febf45f9cbfe8b4b74095867696f66d8930ccb7afd6d720d01cb8cd569893b7",
     "docs\\data\\external\\condensed_matter\\phase_transitions\\cahn_hilliard_1958\\source_record.json": "6e72e3beac4697e9b3b77d2397a6868d81434229edd32964102ff84724c10727",
     "docs\\data\\external\\condensed_matter\\phase_transitions\\hohenberg_halperin_1977\\source_record.json": "06cb9de42e6ccfc959ed38abb205513ed2cf3b768afd3c638887bf4abae829da",
     "docs\\data\\external\\condensed_matter\\phase_transitions\\hyperbolic_cahn_hilliard\\dhaouadi_dumbser_gavrilyuk_2025\\source_record.json": "8751305c6296e3fa70f12dc9723e174e56710296d42298dcf0e2f3ccfe09e574",
     "docs\\data\\external\\relativistic_transport\\jain_kovtun_2024\\source_record.json": "90c8c7dfe8256da2b1dbe6631d189470800ea8ed7eec228fc9bedf49dd39dbc7",
-    "docs\\core\\artifacts\\hyperbolic_phase_field_causal_feasibility.json": "333eed58a3db98bf56c80e12bfa6603e9ecef072a0b62851680402741eff1815"
+    "docs\\core\\artifacts\\hyperbolic_phase_field_causal_feasibility.json": "8caa9713e4d7af1c22f3bd5df44ab17555bf14a75c35c2281fcc8c90db1a15c5"
   },
   "input_identity": {
     "upstream_feasibility_artifact": "docs\\core\\artifacts\\hyperbolic_phase_field_causal_feasibility.json",

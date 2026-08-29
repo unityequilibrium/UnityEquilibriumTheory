@@ -88,6 +88,25 @@ class GHParameters:
 
 
 @dataclass(frozen=True)
+class GHNonlinearParameters:
+    gamma0: float = 1.0
+    gamma1: float = -1.0
+    gamma2: float = 1.0
+
+    def __post_init__(self) -> None:
+        if any(not isfinite(float(value)) for value in (self.gamma0, self.gamma1, self.gamma2)):
+            raise ValueError("nonlinear GH parameters must be finite")
+        if self.gamma0 <= 0.0 or self.gamma2 <= 0.0:
+            raise ValueError("gamma0 and gamma2 must be positive")
+        if self.gamma1 != -1.0:
+            raise ValueError("the preregistered linearly-degenerate branch requires gamma1=-1")
+
+    @property
+    def gamma3(self) -> float:
+        return self.gamma1 * self.gamma2
+
+
+@dataclass(frozen=True)
 class GHPrincipalSymbolResult:
     matrix: np.ndarray
     characteristic_transform: np.ndarray
@@ -106,6 +125,27 @@ class GHLinearRHS:
     metric_rhs: np.ndarray
     normal_derivative_rhs: np.ndarray
     spatial_derivative_rhs: np.ndarray
+    diagnostics: dict[str, Any]
+
+
+@dataclass(frozen=True)
+class GHKinematics:
+    inverse_metric: np.ndarray
+    lapse: np.ndarray
+    shift: np.ndarray
+    unit_normal: np.ndarray
+    unit_normal_covector: np.ndarray
+    spatial_inverse_metric: np.ndarray
+
+
+@dataclass(frozen=True)
+class GHNonlinearVacuumRHS:
+    metric_rhs: np.ndarray
+    normal_derivative_rhs: np.ndarray
+    spatial_derivative_rhs: np.ndarray
+    gauge_constraint: np.ndarray
+    lowered_christoffel: np.ndarray
+    kinematics: GHKinematics
     diagnostics: dict[str, Any]
 
 
@@ -270,6 +310,297 @@ def gh_gauge_constraint(
     return constraint
 
 
+def derive_gh_kinematics(spacetime_metric: Any) -> GHKinematics:
+    """Derive lapse, shift, normal, and spatial inverse metric from psi_ab."""
+
+    psi = _finite_array(spacetime_metric, "spacetime_metric")
+    if psi.ndim < 2 or psi.shape[-2:] != (4, 4):
+        raise ValueError("spacetime_metric must end with shape (4,4)")
+    if not np.allclose(psi, np.swapaxes(psi, -1, -2), atol=1e-12, rtol=0.0):
+        raise ValueError("spacetime_metric must be symmetric")
+    eigenvalues = np.linalg.eigvalsh(psi)
+    if not np.all(np.sum(eigenvalues < 0.0, axis=-1) == 1):
+        raise ValueError("spacetime_metric must have Lorentzian (-,+,+,+) signature")
+    inverse = np.linalg.inv(psi)
+    if np.any(inverse[..., 0, 0] >= 0.0):
+        raise ValueError("t=constant slices require inverse_metric[0,0] < 0")
+    lapse = 1.0 / np.sqrt(-inverse[..., 0, 0])
+    shift = lapse[..., None] ** 2 * inverse[..., 0, 1:]
+    normal = np.concatenate(
+        ((1.0 / lapse)[..., None], -shift / lapse[..., None]), axis=-1
+    )
+    normal_covector = np.einsum("...ab,...b->...a", psi, normal)
+    spatial_inverse = inverse[..., 1:, 1:] + np.einsum(
+        "...i,...j->...ij", normal[..., 1:], normal[..., 1:]
+    )
+    if np.any(np.linalg.eigvalsh(spatial_inverse) <= 0.0):
+        raise ValueError("derived spatial inverse metric must be positive definite")
+    return GHKinematics(
+        inverse_metric=inverse,
+        lapse=lapse,
+        shift=shift,
+        unit_normal=normal,
+        unit_normal_covector=normal_covector,
+        spatial_inverse_metric=spatial_inverse,
+    )
+
+
+def reconstruct_metric_derivatives(
+    normal_derivative: Any,
+    spatial_derivative: Any,
+    kinematics: GHKinematics,
+) -> np.ndarray:
+    """Reconstruct partial_c psi_ab from Eqs. (38)-(39)."""
+
+    pi = _finite_array(normal_derivative, "normal_derivative")
+    phi = _finite_array(spatial_derivative, "spatial_derivative")
+    if pi.shape[-2:] != (4, 4) or phi.shape != pi.shape[:-2] + (3, 4, 4):
+        raise ValueError("normal/spatial derivative shapes are inconsistent")
+    time_derivative = (
+        -kinematics.lapse[..., None, None] * pi
+        + np.einsum("...i,...iab->...ab", kinematics.shift, phi)
+    )
+    return np.concatenate((time_derivative[..., None, :, :], phi), axis=-3)
+
+
+def lowered_christoffel_from_gh_state(
+    normal_derivative: Any,
+    spatial_derivative: Any,
+    kinematics: GHKinematics,
+) -> np.ndarray:
+    """Compute Gamma_abc from first-order GH metric derivatives."""
+
+    derivative = reconstruct_metric_derivatives(
+        normal_derivative, spatial_derivative, kinematics
+    )
+    connection = np.empty(derivative.shape[:-3] + (4, 4, 4), dtype=float)
+    for a in range(4):
+        for b in range(4):
+            for c in range(4):
+                connection[..., a, b, c] = 0.5 * (
+                    derivative[..., b, a, c]
+                    + derivative[..., c, a, b]
+                    - derivative[..., a, b, c]
+                )
+    return connection
+
+
+def gh_gauge_constraint_grid(
+    spacetime_metric: Any,
+    normal_derivative: Any,
+    spatial_derivative: Any,
+    gauge_source: Any,
+    kinematics: GHKinematics | None = None,
+) -> np.ndarray:
+    """Vectorized first-order GH gauge constraint from Eq. (40)."""
+
+    psi = _finite_array(spacetime_metric, "spacetime_metric")
+    pi = _finite_array(normal_derivative, "normal_derivative")
+    phi = _finite_array(spatial_derivative, "spatial_derivative")
+    source = _finite_array(gauge_source, "gauge_source")
+    if pi.shape != psi.shape or phi.shape != psi.shape[:-2] + (3, 4, 4):
+        raise ValueError("GH state shapes are inconsistent")
+    if source.shape != psi.shape[:-2] + (4,):
+        raise ValueError("gauge_source must have shape grid+(4,)")
+    kin = derive_gh_kinematics(psi) if kinematics is None else kinematics
+    projector_a_i = (
+        np.eye(4)[:, 1:]
+        + kin.unit_normal_covector[..., :, None] * kin.unit_normal[..., None, 1:]
+    )
+    constraint = source.copy()
+    constraint += np.einsum(
+        "...ij,...ija->...a", kin.spatial_inverse_metric, phi[..., :, 1:, :]
+    )
+    constraint += np.einsum("...b,...ba->...a", kin.unit_normal, pi)
+    constraint -= 0.5 * np.einsum(
+        "...ai,...bc,...ibc->...a",
+        projector_a_i,
+        kin.inverse_metric,
+        phi,
+    )
+    pi_trace = np.einsum("...bc,...bc->...", kin.inverse_metric, pi)
+    constraint -= 0.5 * kin.unit_normal_covector * pi_trace[..., None]
+    return constraint
+
+
+def gh_gamma0_damping_term(
+    spacetime_metric: Any,
+    gauge_constraint: Any,
+    kinematics: GHKinematics,
+    gamma0: float,
+) -> np.ndarray:
+    """Return the algebraic gamma0 term in Eq. (36)."""
+
+    psi = _finite_array(spacetime_metric, "spacetime_metric")
+    constraint = _finite_array(gauge_constraint, "gauge_constraint")
+    rate = float(gamma0)
+    if not isfinite(rate) or rate <= 0.0:
+        raise ValueError("gamma0 must be finite and positive")
+    if constraint.shape != psi.shape[:-2] + (4,):
+        raise ValueError("gauge_constraint must have shape grid+(4,)")
+    normal_contraction = np.einsum(
+        "...c,...c->...", kinematics.unit_normal, constraint
+    )
+    bracket = (
+        np.einsum(
+            "...a,...b->...ab", constraint, kinematics.unit_normal_covector
+        )
+        + np.einsum(
+            "...a,...b->...ab", kinematics.unit_normal_covector, constraint
+        )
+        - psi * normal_contraction[..., None, None]
+    )
+    return kinematics.lapse[..., None, None] * rate * bracket
+
+
+def compute_nonlinear_vacuum_gh_rhs(
+    spacetime_metric: Any,
+    normal_derivative: Any,
+    spatial_derivative: Any,
+    gauge_source: Any,
+    gauge_source_covariant_derivative: Any,
+    spacing: Any,
+    parameters: GHNonlinearParameters = GHNonlinearParameters(),
+) -> GHNonlinearVacuumRHS:
+    """Evaluate source-locked vacuum Eqs. (35)-(37) on a periodic grid."""
+
+    psi = _finite_array(spacetime_metric, "spacetime_metric")
+    pi = _finite_array(normal_derivative, "normal_derivative")
+    phi = _finite_array(spatial_derivative, "spatial_derivative")
+    source = _finite_array(gauge_source, "gauge_source")
+    source_covariant_derivative = _finite_array(
+        gauge_source_covariant_derivative, "gauge_source_covariant_derivative"
+    )
+    if psi.ndim != 5 or psi.shape[-2:] != (4, 4) or pi.shape != psi.shape:
+        raise ValueError("spacetime_metric and normal_derivative must have shape (nx,ny,nz,4,4)")
+    if phi.shape != psi.shape[:3] + (3, 4, 4):
+        raise ValueError("spatial_derivative must have shape (nx,ny,nz,3,4,4)")
+    if source.shape != psi.shape[:3] + (4,):
+        raise ValueError("gauge_source must have shape (nx,ny,nz,4)")
+    if source_covariant_derivative.shape != psi.shape[:3] + (4, 4):
+        raise ValueError("gauge_source_covariant_derivative must have shape (nx,ny,nz,4,4)")
+    if any(size < 5 for size in psi.shape[:3]):
+        raise ValueError("each periodic grid axis must contain at least five points")
+    steps = _spacing_tuple(spacing)
+    kin = derive_gh_kinematics(psi)
+    connection = lowered_christoffel_from_gh_state(pi, phi, kin)
+    constraint = gh_gauge_constraint_grid(psi, pi, phi, source, kin)
+
+    d_psi = [periodic_central_derivative(psi, axis=k, spacing=steps[k]) for k in range(3)]
+    d_pi = [periodic_central_derivative(pi, axis=k, spacing=steps[k]) for k in range(3)]
+    d_phi = [periodic_central_derivative(phi, axis=k, spacing=steps[k]) for k in range(3)]
+    adv_psi = sum(kin.shift[..., k, None, None] * d_psi[k] for k in range(3))
+    adv_pi = sum(kin.shift[..., k, None, None] * d_pi[k] for k in range(3))
+    adv_phi = sum(kin.shift[..., k, None, None, None] * d_phi[k] for k in range(3))
+    shift_phi = np.einsum("...i,...iab->...ab", kin.shift, phi)
+    divergence_phi = np.zeros_like(pi)
+    for k in range(3):
+        for i in range(3):
+            divergence_phi += (
+                kin.spatial_inverse_metric[..., k, i, None, None]
+                * d_phi[k][..., i, :, :]
+            )
+    gradient_pi = np.stack(d_pi, axis=3)
+    gradient_psi = np.stack(d_psi, axis=3)
+
+    metric_rhs = (
+        (1.0 + parameters.gamma1) * adv_psi
+        - kin.lapse[..., None, None] * pi
+        - parameters.gamma1 * shift_phi
+    )
+    pi_rhs = (
+        adv_pi
+        - kin.lapse[..., None, None] * divergence_phi
+        + parameters.gamma3 * adv_psi
+    )
+
+    quadratic_phi = np.einsum(
+        "...cd,...ij,...ica,...jdb->...ab",
+        kin.inverse_metric,
+        kin.spatial_inverse_metric,
+        phi,
+        phi,
+    )
+    quadratic_pi = np.einsum(
+        "...cd,...ca,...db->...ab", kin.inverse_metric, pi, pi
+    )
+    quadratic_connection = np.einsum(
+        "...cd,...ef,...ace,...bdf->...ab",
+        kin.inverse_metric,
+        kin.inverse_metric,
+        connection,
+        connection,
+    )
+    pi_rhs += 2.0 * kin.lapse[..., None, None] * (
+        quadratic_phi - quadratic_pi - quadratic_connection
+    )
+    pi_rhs -= kin.lapse[..., None, None] * (
+        source_covariant_derivative
+        + np.swapaxes(source_covariant_derivative, -1, -2)
+    )
+    normal_pi_scalar = np.einsum(
+        "...c,...d,...cd->...", kin.unit_normal, kin.unit_normal, pi
+    )
+    pi_rhs -= (
+        0.5
+        * kin.lapse[..., None, None]
+        * normal_pi_scalar[..., None, None]
+        * pi
+    )
+    mixed_phi = np.einsum(
+        "...c,...ci,...ij,...jab->...ab",
+        kin.unit_normal,
+        pi[..., :, 1:],
+        kin.spatial_inverse_metric,
+        phi,
+    )
+    pi_rhs -= kin.lapse[..., None, None] * mixed_phi
+    pi_rhs += gh_gamma0_damping_term(psi, constraint, kin, parameters.gamma0)
+    pi_rhs -= parameters.gamma1 * parameters.gamma2 * shift_phi
+
+    phi_rhs = (
+        adv_phi
+        - kin.lapse[..., None, None, None] * gradient_pi
+        + parameters.gamma2 * kin.lapse[..., None, None, None] * gradient_psi
+    )
+    normal_phi_scalar = np.einsum(
+        "...c,...d,...icd->...i", kin.unit_normal, kin.unit_normal, phi
+    )
+    phi_rhs += (
+        0.5
+        * kin.lapse[..., None, None, None]
+        * normal_phi_scalar[..., :, None, None]
+        * pi[..., None, :, :]
+    )
+    phi_rhs += kin.lapse[..., None, None, None] * np.einsum(
+        "...jk,...c,...ijc,...kab->...iab",
+        kin.spatial_inverse_metric,
+        kin.unit_normal,
+        phi[..., :, 1:, :],
+        phi,
+    )
+    phi_rhs -= parameters.gamma2 * kin.lapse[..., None, None, None] * phi
+
+    return GHNonlinearVacuumRHS(
+        metric_rhs=metric_rhs,
+        normal_derivative_rhs=pi_rhs,
+        spatial_derivative_rhs=phi_rhs,
+        gauge_constraint=constraint,
+        lowered_christoffel=connection,
+        kinematics=kin,
+        diagnostics={
+            "equations": "Lindblom et al. Eqs. 35-40",
+            "matter_source": "VACUUM_ONLY",
+            "gauge_source_role": "DECLARED_ALGEBRAIC_INPUT",
+            "gauge_source_covariant_derivative_role": "DECLARED_INPUT_NOT_NUMERICALLY_INFERRED",
+            "time_integrator": None,
+            "constraint_preserving_boundaries": "NOT_IMPLEMENTED",
+            "field_clipping": False,
+            "parameter_fitting": False,
+        },
+    )
+
+
 def compute_linear_gh_reduction_damped_rhs(
     metric: Any,
     normal_derivative: Any,
@@ -352,18 +683,18 @@ def generalized_harmonic_contract() -> dict[str, Any]:
             "analytic positive symmetrizer",
             "gauge/reduction/curl constraint evaluators",
             "constant-coefficient reduction-damped periodic operator",
+            "complete nonlinear vacuum GH algebraic right-hand sides for declared H_a and nabla_a H_b",
+            "gamma0 gauge-constraint damping term in the nonlinear vacuum RHS",
         ],
         "not_implemented": [
-            "complete nonlinear GH algebraic right-hand sides",
-            "gamma0 gauge-constraint damping in the nonlinear RHS",
             "time integration and CFL policy",
             "constraint propagation convergence",
             "constraint-preserving boundaries",
             "matter stress-energy wiring and detector observable map",
         ],
         "claim_boundary": (
-            "source-locked GH principal/characteristic and reduction-damping operator only; "
-            "not a complete nonlinear Einstein evolution, numerical-relativity solver, or UET validation"
+            "source-locked vacuum GH RHS and principal/constraint operators only; "
+            "not a time-integrated numerical-relativity solver, matter-coupled system, or UET validation"
         ),
     }
 
@@ -371,14 +702,23 @@ def generalized_harmonic_contract() -> dict[str, Any]:
 __all__ = [
     "GH_PRINCIPAL_SYSTEM_STATUS",
     "GHParameters",
+    "GHNonlinearParameters",
     "GHPrincipalSymbolResult",
     "GHLinearRHS",
+    "GHKinematics",
+    "GHNonlinearVacuumRHS",
     "gh_principal_symbol",
     "gh_characteristic_fields",
     "reconstruct_gh_state",
     "gh_reduction_constraint",
     "gh_curl_constraint",
     "gh_gauge_constraint",
+    "derive_gh_kinematics",
+    "reconstruct_metric_derivatives",
+    "lowered_christoffel_from_gh_state",
+    "gh_gauge_constraint_grid",
+    "gh_gamma0_damping_term",
     "compute_linear_gh_reduction_damped_rhs",
+    "compute_nonlinear_vacuum_gh_rhs",
     "generalized_harmonic_contract",
 ]

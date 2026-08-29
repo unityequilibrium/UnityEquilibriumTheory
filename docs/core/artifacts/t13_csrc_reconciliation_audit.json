@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-csrc-reconciliation-v1",
   "artifact": "t13_csrc_reconciliation_audit",
-  "generated_at": "2026-08-25",
+  "generated_at": "2026-08-29",
   "status": "PASS_SCOPED_CSRC_RECONCILIATION_OPEN",
   "major_result": {
     "major_result_id": "T13_CSRC_SOURCE_RECONCILIATION",

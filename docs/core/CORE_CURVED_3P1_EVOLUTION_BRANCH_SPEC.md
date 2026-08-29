@@ -1,16 +1,16 @@
 # Core Curved 3+1 Evolution Branch Specification
 
-MAJOR_RESULT_CLOSURE: `GH_PRINCIPAL_SYSTEM_CLOSED_FOR_LANE / PARENT_PARTIAL`
+MAJOR_RESULT_CLOSURE: `GH_NONLINEAR_VACUUM_RHS_CLOSED_FOR_LANE / PARENT_PARTIAL`
 
-WHAT_IS_ACTUALLY_CLOSED: The nonlinear periodic ADM metric/extrinsic-curvature right-hand-side operator, its analytic controls, and the fixed-geodesic ADM strong-hyperbolicity question are closed for their declared lanes. The fixed-gauge branch is closed as a no-go because its zero-speed principal-symbol sector has algebraic multiplicity 6 but geometric multiplicity 3.
+WHAT_IS_ACTUALLY_CLOSED: The fixed-geodesic ADM branch remains closed as a branch-local hyperbolicity no-go. The selected generalized-harmonic branch now closes its principal/characteristic system and the complete nonlinear vacuum Eqs. (35)-(40) right-hand-side operator, including metric-derived kinematics, Christoffel/gauge-constraint reconstruction, and the algebraic `gamma0` damping term.
 
-WHAT_REMAINS_OPEN: Complete nonlinear GH algebraic right-hand sides, gamma0 gauge-constraint damping, a time integrator/CFL policy, full constraint propagation, temporal convergence, constraint-preserving non-periodic boundaries, Topic 13 stress-energy wiring, and SI observable mapping.
+WHAT_REMAINS_OPEN: A time integrator/CFL policy, gauge/reduction constraint propagation over time, temporal convergence, constraint-preserving non-periodic boundaries, Topic 13 stress-energy wiring, and SI observable mapping.
 
-DEPENDENCY_UNLOCKED: Implementation and verification of the first-order generalized-harmonic branch only. Gravity/GR remains blocked.
+DEPENDENCY_UNLOCKED: The GH time-integration and constraint-propagation wave only. Gravity/GR remains blocked.
 
-STATUS: `PARTIAL_GH_PRINCIPAL_SYSTEM_READY`
+STATUS: `PARTIAL_GH_NONLINEAR_VACUUM_RHS_READY`
 
-WHAT_CHANGED: Fixed-gauge ADM remains a failed baseline. The source-locked first-order GH principal system now has a complete characteristic basis, positive analytic symmetrizer, source-matched causal normal-frame speeds, and a verified reduction-constraint damping operator. This does not include the complete nonlinear RHS or time evolution.
+WHAT_CHANGED: The source-locked first-order GH implementation now evaluates the complete vacuum RHS for declared `H_a` and `nabla_a H_b`. Independent explicit-index controls cover constant and spatially varying periodic states; Minkowski, gauge-derivative injection, `gamma0` isolation/scaling, tensor symmetry, metric-signature rejection, and ontology boundaries pass. No time stepper or matter source was added.
 
 EQUATION_OR_MAPPING:
 
@@ -27,12 +27,13 @@ VERIFICATION:
 - Pass temporal and spatial convergence without clipping, fitted damping, or hidden filtering.
 - Verify constraint damping and propagation separately from solution accuracy.
 - Add constraint-preserving boundary tests before any non-periodic or black-hole claim.
+- Keep the current RHS result operator-only until temporal convergence and propagated-constraint gates pass.
 
-CONTROLLING_BLOCKER: `curved_3p1_generalized_harmonic_nonlinear_rhs_and_gamma0_constraint_damping_missing`
+CONTROLLING_BLOCKER: `curved_3p1_generalized_harmonic_time_integration_and_constraint_propagation_missing`
 
-NEXT_ACTION: Transcribe and independently verify the complete nonlinear GH algebraic right-hand sides and gamma0 gauge-constraint damping before adding a time integrator.
+NEXT_ACTION: Add a preregistered explicit time integrator and CFL policy, then verify Minkowski/gauge-wave evolution, reduction/gauge-constraint propagation, and temporal-spatial convergence on the periodic branch.
 
-CLAIM_BOUNDARY: This specification selects and preregisters a standard numerical-relativity formulation target. It does not establish a GH implementation, a curved UET solution, Einstein-equation derivation, Gravity compatibility, or external validation.
+CLAIM_BOUNDARY: This closes a standard vacuum RHS operator lane only. It does not establish a time-integrated numerical-relativity solver, matter-coupled curved UET solution, Einstein-equation derivation, Gravity compatibility, or external validation.
 
 ## Stop Rules
 

@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-topic13-closure-matrix-v3",
   "artifact": "t13_topic13_closure_matrix",
-  "generated_at": "2026-08-28",
+  "generated_at": "2026-08-29",
   "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
   "claim_promotion": false,
   "full_core_unlock": true,
@@ -116,7 +116,7 @@
   ],
   "input_package_audit": {
     "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
-    "sha256": "a8ab343d42008fdc5e40ca93990df84baf22f754ddb949ea0e12b9a594e91384",
+    "sha256": "f75326e8b7e2e0e8af2e11e75a2e37c2386325b0bf3748ee2d55644be8609d2b",
     "summary": {
       "role": "grouped Topic 13 closure-input acceptance audit",
       "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
@@ -155,7 +155,7 @@
     "evidence_artifacts": [
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-        "sha256": "77c4fa3cfafb1fa6ee4e1e3df65f953ea3011bd33500f6786e92eca6869390c9",
+        "sha256": "dc0d658a353172074425d2a8259dce3a4fa7b6b75bea68310c7a1492421d5d58",
         "summary": {
           "role": "canonical full Topic 13 readiness gate",
           "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
@@ -163,7 +163,7 @@
       },
       {
         "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
-        "sha256": "a8ab343d42008fdc5e40ca93990df84baf22f754ddb949ea0e12b9a594e91384",
+        "sha256": "f75326e8b7e2e0e8af2e11e75a2e37c2386325b0bf3748ee2d55644be8609d2b",
         "summary": {
           "role": "grouped Topic 13 closure-input acceptance audit",
           "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
@@ -491,7 +491,7 @@
     ],
     "input_package_audit": {
       "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
-      "sha256": "a8ab343d42008fdc5e40ca93990df84baf22f754ddb949ea0e12b9a594e91384",
+      "sha256": "f75326e8b7e2e0e8af2e11e75a2e37c2386325b0bf3748ee2d55644be8609d2b",
       "summary": {
         "role": "grouped Topic 13 closure-input acceptance audit",
         "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
@@ -735,7 +735,7 @@
     "evidence_artifacts": [
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-        "sha256": "77c4fa3cfafb1fa6ee4e1e3df65f953ea3011bd33500f6786e92eca6869390c9",
+        "sha256": "dc0d658a353172074425d2a8259dce3a4fa7b6b75bea68310c7a1492421d5d58",
         "summary": {
           "role": "canonical full Topic 13 readiness gate",
           "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
@@ -743,7 +743,7 @@
       },
       {
         "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
-        "sha256": "a8ab343d42008fdc5e40ca93990df84baf22f754ddb949ea0e12b9a594e91384",
+        "sha256": "f75326e8b7e2e0e8af2e11e75a2e37c2386325b0bf3748ee2d55644be8609d2b",
         "summary": {
           "role": "grouped Topic 13 closure-input acceptance audit",
           "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
@@ -1071,7 +1071,7 @@
     ],
     "input_package_audit": {
       "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
-      "sha256": "a8ab343d42008fdc5e40ca93990df84baf22f754ddb949ea0e12b9a594e91384",
+      "sha256": "f75326e8b7e2e0e8af2e11e75a2e37c2386325b0bf3748ee2d55644be8609d2b",
       "summary": {
         "role": "grouped Topic 13 closure-input acceptance audit",
         "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
@@ -3010,7 +3010,7 @@
   },
   "canonical_gate": {
     "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-    "sha256": "77c4fa3cfafb1fa6ee4e1e3df65f953ea3011bd33500f6786e92eca6869390c9",
+    "sha256": "dc0d658a353172074425d2a8259dce3a4fa7b6b75bea68310c7a1492421d5d58",
     "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
     "legacy_graphite_ttg_aggregate_status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
     "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"

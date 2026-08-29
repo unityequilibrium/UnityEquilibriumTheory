@@ -19,3 +19,9 @@ def test_curved_parent_work_unlocks_after_topic13_core_ready() -> None:
     assert artifact["decisions"]["GR_CLASSICAL_COMPATIBILITY_LANE"]["status"] == "BLOCKED_DEPENDENCY"
     assert artifact["decisions"]["CONSTITUTIVE_TRANSPORT_CORE_LANE"]["status"] == "BLOCKED_DEPENDENCY"
     assert artifact["decisions"]["GALAXY_COMPATIBILITY_TRACK"]["status"] == "BLOCKED_DEPENDENCY"
+    progress = artifact["curved_3p1_progress"]
+    assert progress["generalized_harmonic_nonlinear_vacuum_rhs"]["closure_level"] == "CLOSED_FOR_LANE"
+    assert progress["controlling_blocker"] == (
+        "curved_3p1_generalized_harmonic_time_integration_and_"
+        "constraint_propagation_missing"
+    )

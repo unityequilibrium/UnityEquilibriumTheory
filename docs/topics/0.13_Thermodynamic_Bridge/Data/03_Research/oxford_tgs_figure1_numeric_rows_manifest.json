@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-oxford-tgs-numeric-rows-manifest-v1",
   "artifact": "oxford_tgs_figure1_numeric_rows_manifest",
-  "generated_at": "2026-08-28",
+  "generated_at": "2026-08-29",
   "status": "NUMERIC_ROWS_SOURCE_LOCKED_COMPARATOR",
   "topic": "0.13_Thermodynamic_Bridge",
   "source": {

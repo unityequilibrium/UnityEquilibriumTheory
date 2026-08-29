@@ -6,6 +6,17 @@
 > program without upgrading claims ahead of generated evidence.
 
 ## Entries
+### 2026-08-28 - Close the generalized-harmonic nonlinear vacuum-RHS lane
+
+- Scope: source-locked GH Eqs. (35)-(40), metric-state reconstruction, nonlinear vacuum RHS, and algebraic `gamma0` gauge-constraint damping
+- Wave type: formula/source pass, independent-index operator verification, negative-control gate, registry/dependency sync, and claim-boundary pass
+- Added or changed: nonlinear GH module path, verifier, three artifacts, focused tests, Core exports, parent gate, equation-registry addendum, dependency reporting, and branch/research specifications
+- Verified with: Minkowski exact fixed point; constant-grid and spatially varying explicit-index references; gauge-source derivative injection; `gamma0` isolation and linear scaling; kinematics, tensor-symmetry, invalid-metric, and no-fit/no-clipping controls
+- Result: `CORE_CURVED_3P1_GH_NONLINEAR_VACUUM_RHS_READY` is `CLOSED_FOR_LANE`; parent is `PARTIAL_CURVED_3P1_GH_NONLINEAR_VACUUM_RHS_READY`; Gravity remains blocked
+- Blocker narrowed: nonlinear RHS transcription and algebraic gauge damping are no longer open; controller is now `curved_3p1_generalized_harmonic_time_integration_and_constraint_propagation_missing`
+- Still open: time integrator/CFL, propagated gauge/reduction constraints, temporal convergence, constraint-preserving boundaries, matter wiring, and SI observables
+- Claim impact: no promotion to a time-integrated numerical-relativity solver, matter-coupled curved UET parent, or Gravity compatibility
+
 ### 2026-08-28 - Close the generalized-harmonic principal-system lane
 
 - Scope: source-locked first-order GH principal equations, characteristic fields, symmetrizer, gauge/reduction constraints, and reduction damping

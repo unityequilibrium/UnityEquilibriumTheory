@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "covariant_theory_spine_verification",
-  "generated_at": "2026-08-28T15:34:23.061482+00:00",
+  "generated_at": "2026-08-29T04:27:35.898262+00:00",
   "audit_status": "PASS",
   "research_status": "INTERNAL_MINKOWSKI_1P1_HYPERBOLIC_CONTROL_ONLY",
   "operator_mode": "covariant_theory_spine_v1",

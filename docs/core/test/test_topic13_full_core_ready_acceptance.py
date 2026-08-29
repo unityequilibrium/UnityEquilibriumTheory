@@ -26,3 +26,17 @@ def test_acceptance_preserves_external_and_global_claim_boundaries() -> None:
     assert external["gravity_ready"] is False
     assert audit["quantitative_witnesses"]["causal_prearrival_leakage_fraction"] <= audit["quantitative_witnesses"]["causal_locked_threshold"]
     assert "not external-ready" in audit["claim_boundary"]
+
+
+def test_acceptance_breaks_the_derived_register_hash_cycle_explicitly() -> None:
+    audit = json.loads(AUDIT.read_text(encoding="utf-8-sig"))
+    derived = audit["derived_consistency_inputs"]
+    assert derived["hash_cycle_forbidden"] is True
+    assert derived["values_are_verified"] is True
+    records = {
+        item["path"]: item
+        for item in audit["major_result"]["evidence_artifacts"]
+    }
+    for path in derived["paths"]:
+        assert records[path]["identity_mode"] == "NON_HASHED_DERIVED_CONSISTENCY_INPUT"
+        assert "sha256" not in records[path]

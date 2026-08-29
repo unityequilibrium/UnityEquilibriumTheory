@@ -44,7 +44,16 @@ def sha256(path: Path) -> str:
 
 def evidence(name: str, docs: dict[str, dict]) -> dict:
     path = ROOT / PATHS[name]
-    return {"path": PATHS[name], "sha256": sha256(path), "status": docs[name].get("status")}
+    record = {"path": PATHS[name], "status": docs[name].get("status")}
+    if name in {"register", "dependency"}:
+        record["identity_mode"] = "NON_HASHED_DERIVED_CONSISTENCY_INPUT"
+        record["reason"] = (
+            "The register discovers this acceptance artifact, so hashing the "
+            "register here would create an unsatisfiable provenance cycle."
+        )
+    else:
+        record["sha256"] = sha256(path)
+    return record
 
 
 def main() -> int:
@@ -205,6 +214,12 @@ def main() -> int:
             "claim_boundary": "Acceptance is limited to the bounded internal O(2)/He-4 Core bridge. Ding figure-derived TTG rows remain comparison-only, raw-author/graphite external validation remains open, the original conserved-gradient baseline remains blocked, and global UET closure remains false.",
         },
         "criteria": criteria,
+        "derived_consistency_inputs": {
+            "paths": [PATHS["register"], PATHS["dependency"]],
+            "identity_mode": "NON_HASHED_DERIVED_CONSISTENCY_INPUT",
+            "values_are_verified": True,
+            "hash_cycle_forbidden": True,
+        },
         "quantitative_witnesses": {
             "causal_prearrival_leakage_fraction": causal["selected_branch"]["prearrival_leakage_fraction"],
             "causal_locked_threshold": causal["baseline_preservation"]["locked_threshold"],

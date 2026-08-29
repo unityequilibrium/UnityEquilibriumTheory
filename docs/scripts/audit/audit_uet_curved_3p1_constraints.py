@@ -39,6 +39,9 @@ FORMULATION_SELECTION = ARTIFACTS / "curved_3p1_formulation_selection_gate.json"
 GH_VERIFY = ARTIFACTS / "curved_3p1_gh_principal_system_verification.json"
 GH_FORMULA = ARTIFACTS / "curved_3p1_gh_principal_system_formula_audit.json"
 GH_GATE = ARTIFACTS / "curved_3p1_gh_branch_gate.json"
+GH_NONLINEAR_VERIFY = ARTIFACTS / "curved_3p1_gh_nonlinear_vacuum_rhs_verification.json"
+GH_NONLINEAR_FORMULA = ARTIFACTS / "curved_3p1_gh_nonlinear_vacuum_formula_audit.json"
+GH_NONLINEAR_GATE = ARTIFACTS / "curved_3p1_gh_nonlinear_vacuum_gate.json"
 
 
 def _sha256(path: Path) -> str:
@@ -57,6 +60,13 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
     gh_verification = json.loads(GH_VERIFY.read_text(encoding="utf-8"))
     gh_formula = json.loads(GH_FORMULA.read_text(encoding="utf-8"))
     gh_gate = json.loads(GH_GATE.read_text(encoding="utf-8"))
+    gh_nonlinear_verification = json.loads(
+        GH_NONLINEAR_VERIFY.read_text(encoding="utf-8")
+    )
+    gh_nonlinear_formula = json.loads(
+        GH_NONLINEAR_FORMULA.read_text(encoding="utf-8")
+    )
+    gh_nonlinear_gate = json.loads(GH_NONLINEAR_GATE.read_text(encoding="utf-8"))
     geometry_passed = (
         geometry_verification.get("status") == "PASS_CURVED_3P1_GEOMETRY_OPERATOR"
         and geometry_verification.get("major_result", {}).get("closure_level")
@@ -80,6 +90,17 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
         and gh_formula.get("status") == "PASS_SOURCE_LOCKED_GH_PRINCIPAL_FORMULAS"
         and gh_gate.get("status") == "PARTIAL_GH_PRINCIPAL_SYSTEM_READY"
         and all(gh_verification.get("checks", {}).values())
+    )
+    gh_nonlinear_passed = (
+        gh_nonlinear_verification.get("status")
+        == "PASS_GH_NONLINEAR_VACUUM_RHS"
+        and gh_nonlinear_verification.get("major_result", {}).get("closure_level")
+        == "CLOSED_FOR_LANE"
+        and gh_nonlinear_formula.get("status")
+        == "PASS_SOURCE_LOCKED_GH_NONLINEAR_VACUUM_FORMULAS"
+        and gh_nonlinear_gate.get("status")
+        == "PARTIAL_GH_NONLINEAR_VACUUM_RHS_READY"
+        and all(gh_nonlinear_verification.get("checks", {}).values())
     )
     threshold = 1e-12
 
@@ -276,66 +297,102 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
         "gh_characteristic_basis": "PASS" if gh_principal_passed else "OPEN",
         "gh_symmetric_hyperbolicity": "PASS" if gh_principal_passed else "OPEN",
         "gh_reduction_constraint_damping": "PASS" if gh_principal_passed else "OPEN",
-        "lapse_shift_gauge": "PARTIAL_GH_ALGEBRAIC_SOURCE_CONTRACT" if gh_principal_passed else "OPEN_GENERALIZED_HARMONIC",
-        "metric_and_extrinsic_curvature_evolution": "PARTIAL_GH_PRINCIPAL_RHS_ONLY" if gh_principal_passed else ("PARTIAL_RHS_OPERATOR_ONLY" if evolution_passed else "OPEN"),
+        "lapse_shift_gauge": "PARTIAL_GH_DECLARED_SOURCE_AND_METRIC_RECONSTRUCTION" if gh_nonlinear_passed else ("PARTIAL_GH_ALGEBRAIC_SOURCE_CONTRACT" if gh_principal_passed else "OPEN_GENERALIZED_HARMONIC"),
+        "metric_and_extrinsic_curvature_evolution": "PARTIAL_GH_NONLINEAR_VACUUM_RHS_OPERATOR_ONLY" if gh_nonlinear_passed else ("PARTIAL_GH_PRINCIPAL_RHS_ONLY" if gh_principal_passed else ("PARTIAL_RHS_OPERATOR_ONLY" if evolution_passed else "OPEN")),
         "strong_hyperbolicity": "PASS" if gh_principal_passed else "OPEN_GENERALIZED_HARMONIC",
-        "complete_nonlinear_gh_rhs": "OPEN",
-        "gamma0_gauge_constraint_damping": "OPEN",
-        "constraint_propagation": "PARTIAL_REDUCTION_CONSTRAINT_DAMPING_ONLY" if gh_principal_passed else "OPEN",
+        "complete_nonlinear_gh_rhs": "PASS" if gh_nonlinear_passed else "OPEN",
+        "gamma0_gauge_constraint_damping": "PASS" if gh_nonlinear_passed else "OPEN",
+        "constraint_propagation": "PARTIAL_REDUCTION_AND_ALGEBRAIC_GAUGE_DAMPING_ONLY" if gh_nonlinear_passed else ("PARTIAL_REDUCTION_CONSTRAINT_DAMPING_ONLY" if gh_principal_passed else "OPEN"),
         "temporal_spatial_convergence": "PARTIAL_SPATIAL_OPERATOR_CONVERGENCE_ONLY" if gh_principal_passed else "OPEN",
         "constraint_preserving_boundaries": "OPEN",
         "topic13_stress_energy_projection": "OPEN",
         "dimensional_observable_mapping": "OPEN",
     }
-    gate = {
-        "schema_version": "1.0",
-        "artifact": "core_curved_3p1_parent_gate",
-        "generated_at": now,
-        "status": "PARTIAL_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY" if passed and geometry_passed and evolution_passed and gh_principal_passed else ("PARTIAL_CURVED_3P1_ADM_EVOLUTION_NOGO_READY" if passed and geometry_passed and evolution_passed else ("PARTIAL_CURVED_3P1_PARENT_GEOMETRY_OPERATOR_READY" if passed and geometry_passed else ("PARTIAL_CURVED_3P1_PARENT_CONSTRAINT_INTERFACE_READY" if passed else "BLOCKED"))),
-        "major_result": {
-            "major_result_id": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
-            "topic": "core",
-            "closure_level": "PARTIAL",
-            "what_is_closed": ([
-                "ADM constraint evaluation interface",
+    parent_status = (
+        "PARTIAL_CURVED_3P1_GH_NONLINEAR_VACUUM_RHS_READY"
+        if passed
+        and geometry_passed
+        and evolution_passed
+        and gh_principal_passed
+        and gh_nonlinear_passed
+        else (
+            "PARTIAL_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY"
+            if passed and geometry_passed and evolution_passed and gh_principal_passed
+            else (
+                "PARTIAL_CURVED_3P1_ADM_EVOLUTION_NOGO_READY"
+                if passed and geometry_passed and evolution_passed
+                else (
+                    "PARTIAL_CURVED_3P1_PARENT_GEOMETRY_OPERATOR_READY"
+                    if passed and geometry_passed
+                    else (
+                        "PARTIAL_CURVED_3P1_PARENT_CONSTRAINT_INTERFACE_READY"
+                        if passed
+                        else "BLOCKED"
+                    )
+                )
+            )
+        )
+    )
+    closed_components = []
+    if passed:
+        closed_components.append("ADM constraint evaluation interface")
+    if geometry_passed:
+        closed_components.extend(
+            [
                 "periodic-grid metric-to-Ricci operator",
                 "periodic-grid covariant momentum-tensor divergence",
                 "second-order spatial geometry convergence",
+            ]
+        )
+    if evolution_passed:
+        closed_components.extend(
+            [
                 "nonlinear periodic ADM metric/K right-hand-side operator",
                 "second-order lapse-Hessian and shift-Lie convergence controls",
                 "fixed-gauge ADM strong-hyperbolicity branch closed as no-go",
                 "first-order generalized-harmonic next branch selected",
+            ]
+        )
+    if gh_principal_passed:
+        closed_components.extend(
+            [
                 "first-order GH principal equation and algebraic gauge-source contract",
                 "complete GH characteristic basis with source-matched speeds",
                 "positive GH symmetrizer and principal-system symmetric hyperbolicity",
                 "reduction-constraint damping identity and spatial convergence",
-            ] if passed and geometry_passed and evolution_passed and gh_principal_passed else ([
-                "ADM constraint evaluation interface",
-                "periodic-grid metric-to-Ricci operator",
-                "periodic-grid covariant momentum-tensor divergence",
-                "second-order spatial geometry convergence",
-                "nonlinear periodic ADM metric/K right-hand-side operator",
-                "second-order lapse-Hessian and shift-Lie convergence controls",
-                "fixed-gauge ADM strong-hyperbolicity branch closed as no-go",
-                "first-order generalized-harmonic next branch selected",
-            ] if passed and geometry_passed and evolution_passed else ([
-                "ADM constraint evaluation interface",
-                "periodic-grid metric-to-Ricci operator",
-                "periodic-grid covariant momentum-tensor divergence",
-                "second-order spatial geometry convergence",
-            ] if passed and geometry_passed else (["ADM constraint evaluation interface"] if passed else [])))),
+            ]
+        )
+    if gh_nonlinear_passed:
+        closed_components.extend(
+            [
+                "complete nonlinear vacuum GH Eqs. 35-40 right-hand-side operator",
+                "metric-derived lapse, shift, normal, Christoffel, and gauge constraint",
+                "gamma0 algebraic gauge-constraint damping term",
+                "independent constant-grid and variable-grid explicit-index controls",
+            ]
+        )
+    gate = {
+        "schema_version": "1.0",
+        "artifact": "core_curved_3p1_parent_gate",
+        "generated_at": now,
+        "status": parent_status,
+        "major_result": {
+            "major_result_id": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
+            "topic": "core",
+            "closure_level": "PARTIAL",
+            "what_is_closed": closed_components,
             "equation_or_mapping": contract["equations"],
             "units": "geometric constraint lane; SI observable mapping open",
             "derivation_class": "incremental curved 3+1 parent construction",
             "observable": "constraint residual diagnostics only",
             "data_role": "internal analytic controls",
-            "verification_status": "PARTIAL_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY" if passed and geometry_passed and evolution_passed and gh_principal_passed else ("PARTIAL_CURVED_3P1_ADM_EVOLUTION_NOGO_READY" if passed and geometry_passed and evolution_passed else ("PARTIAL_CURVED_3P1_PARENT_GEOMETRY_OPERATOR_READY" if passed and geometry_passed else ("PARTIAL_CURVED_3P1_PARENT_CONSTRAINT_INTERFACE_READY" if passed else "BLOCKED"))),
+            "verification_status": parent_status,
             "open_blockers": [key for key, value in parent_requirements.items() if value not in {"PASS", "CLOSED_AS_NO_GO"}],
-            "dependency_unlocked": "complete nonlinear GH RHS and gamma0 gauge-constraint damping wave only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
+            "dependency_unlocked": "GH time integration and constraint-propagation wave only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
             "claim_boundary": "partial parent construction; not CLOSED_FOR_CORE and not Gravity/GR compatibility",
         },
         "requirements": parent_requirements,
-        "controlling_blocker": "curved_3p1_generalized_harmonic_nonlinear_rhs_and_gamma0_constraint_damping_missing",
+        "controlling_blocker": "curved_3p1_generalized_harmonic_time_integration_and_constraint_propagation_missing",
         "evidence_artifacts": [
             {"path": VERIFY.relative_to(ROOT).as_posix(), "sha256": None},
             {"path": FORMULA.relative_to(ROOT).as_posix(), "sha256": None},
@@ -348,6 +405,9 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
             {"path": GH_VERIFY.relative_to(ROOT).as_posix(), "sha256": None},
             {"path": GH_FORMULA.relative_to(ROOT).as_posix(), "sha256": None},
             {"path": GH_GATE.relative_to(ROOT).as_posix(), "sha256": None},
+            {"path": GH_NONLINEAR_VERIFY.relative_to(ROOT).as_posix(), "sha256": None},
+            {"path": GH_NONLINEAR_FORMULA.relative_to(ROOT).as_posix(), "sha256": None},
+            {"path": GH_NONLINEAR_GATE.relative_to(ROOT).as_posix(), "sha256": None},
         ],
         "claim_promotion": False,
     }
@@ -484,11 +544,65 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "implementation_paths": ["docs/core/uet_curved_3p1_generalized_harmonic.py"],
                 "verifier_paths": ["docs/scripts/audit/audit_uet_curved_3p1_generalized_harmonic.py", GH_VERIFY.relative_to(ROOT).as_posix(), "docs/core/test/test_uet_curved_3p1_generalized_harmonic.py"],
                 "evidence_class": "INTERNAL_FORMAL_ANALYTIC_AND_MANUFACTURED_CONVERGENCE_CONTROL",
-                "proof_status": "principal/characteristic and reduction-damping lane passes; complete nonlinear RHS/time evolution open",
+                "proof_status": "principal/characteristic and reduction-damping lane passes; nonlinear vacuum RHS is tracked separately",
                 "downstream_dependencies": ["CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"],
                 "claim_boundary": gh_verification["major_result"]["claim_boundary"],
                 "failure_mode": "principal-system closure is overread as a complete numerical-relativity solver",
-                "next_hardening_step": "implement complete nonlinear GH algebraic RHS and gamma0 gauge-constraint damping"
+                "next_hardening_step": "integrate the separately verified nonlinear vacuum RHS, then add time evolution"
+            },
+            {
+                "equation_id": "uet.main_theory.curved_3p1.generalized_harmonic_nonlinear_vacuum_rhs",
+                "version": "gh-nonlinear-vacuum-rhs-v1",
+                "classification": "standard_physics_vacuum_evolution_operator",
+                "relation_or_code_path": "docs/core/uet_curved_3p1_generalized_harmonic.py",
+                "formula_ids": [
+                    "UET-CURVED3P1-GH-PSI-RHS-014",
+                    "UET-CURVED3P1-GH-PI-RHS-015",
+                    "UET-CURVED3P1-GH-PHI-RHS-016",
+                    "UET-CURVED3P1-GH-STATE-RECONSTRUCTION-017"
+                ],
+                "variables": {
+                    "psi_ab": "spacetime metric; not UET Phi",
+                    "Pi_ab": "minus normal metric derivative; not UET Pi",
+                    "Phi_iab": "spatial metric derivative",
+                    "H_a": "declared gauge source",
+                    "nabla_a_H_b": "declared covariant gauge-source derivative",
+                    "C_a": "GH gauge constraint"
+                },
+                "mathematical_role": "evaluate complete nonlinear vacuum GH Eqs. 35-40 right-hand sides",
+                "standard_physics_counterpart": "Lindblom et al. first-order generalized harmonic vacuum Einstein system",
+                "observable_mapping": {
+                    "status": "OPEN",
+                    "reason": "metric-state RHS and constraints are formulation diagnostics, not detector observables"
+                },
+                "unit_lane": "geometric c=1 vacuum",
+                "parameter_dimensions": gh_nonlinear_verification["major_result"]["units"],
+                "source_or_origin": gh_nonlinear_verification["source"],
+                "assumptions": [
+                    "vacuum matter source",
+                    "gamma1=-1",
+                    "gamma0>0 and gamma2>0",
+                    "uniform periodic Cartesian grid",
+                    "declared H_a and nabla_a H_b"
+                ],
+                "symmetry_and_conservation": "symmetric metric derivative fields and algebraic gamma0 damping pass; propagated constraints remain open",
+                "limiting_cases": [
+                    "Minkowski harmonic gauge",
+                    "constant nontrivial state",
+                    "manufactured periodic variable state"
+                ],
+                "implementation_paths": ["docs/core/uet_curved_3p1_generalized_harmonic.py"],
+                "verifier_paths": [
+                    "docs/scripts/audit/audit_uet_curved_3p1_gh_nonlinear_vacuum.py",
+                    GH_NONLINEAR_VERIFY.relative_to(ROOT).as_posix(),
+                    "docs/core/test/test_uet_curved_3p1_gh_nonlinear_vacuum.py"
+                ],
+                "evidence_class": "INTERNAL_FORMAL_NUMERICAL_OPERATOR_CONTROL",
+                "proof_status": "complete vacuum RHS transcription passes independent constant-grid and variable-grid controls; no time evolution",
+                "downstream_dependencies": ["CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"],
+                "claim_boundary": gh_nonlinear_verification["major_result"]["claim_boundary"],
+                "failure_mode": "operator-only closure is overread as time-evolved constraint propagation or a matter-coupled solver",
+                "next_hardening_step": "add a fixed CFL time integrator and verify gauge/reduction constraint propagation"
             }
         ],
     }
@@ -511,6 +625,9 @@ def main() -> int:
     gate["evidence_artifacts"][8]["sha256"] = _sha256(GH_VERIFY)
     gate["evidence_artifacts"][9]["sha256"] = _sha256(GH_FORMULA)
     gate["evidence_artifacts"][10]["sha256"] = _sha256(GH_GATE)
+    gate["evidence_artifacts"][11]["sha256"] = _sha256(GH_NONLINEAR_VERIFY)
+    gate["evidence_artifacts"][12]["sha256"] = _sha256(GH_NONLINEAR_FORMULA)
+    gate["evidence_artifacts"][13]["sha256"] = _sha256(GH_NONLINEAR_GATE)
     GATE.write_text(json.dumps(gate, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
     ADDENDUM.write_text(json.dumps(addendum, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
     print(json.dumps({"status": verification["status"], "parent_status": gate["status"], "controlling_blocker": gate["controlling_blocker"]}, indent=2))

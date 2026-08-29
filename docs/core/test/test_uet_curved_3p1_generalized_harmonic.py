@@ -131,8 +131,9 @@ def test_contract_preserves_uet_ontology_and_open_evolution_boundary() -> None:
     contract = generalized_harmonic_contract()
     assert "UET Phi" in contract["excluded_state"]
     assert "R_gen" in contract["excluded_state"]
-    assert "complete nonlinear GH algebraic right-hand sides" in contract["not_implemented"]
-    assert "not a complete nonlinear Einstein evolution" in contract["claim_boundary"]
+    assert "complete nonlinear vacuum GH algebraic right-hand sides for declared H_a and nabla_a H_b" in contract["implemented"]
+    assert "time integration and CFL policy" in contract["not_implemented"]
+    assert "not a time-integrated numerical-relativity solver" in contract["claim_boundary"]
 
 
 def test_generated_artifacts_are_hash_linked_and_keep_parent_work_partial() -> None:

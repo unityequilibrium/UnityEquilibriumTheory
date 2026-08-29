@@ -1,13 +1,27 @@
 # UET GR Closed-Limit and Non-Closed Response Research Specification
 
-> **Status:** `GH PRINCIPAL SYSTEM VERIFIED / NONLINEAR EVOLUTION OPEN`
+> **Status:** `GH NONLINEAR VACUUM RHS VERIFIED / TIME EVOLUTION OPEN`
 > **Current claim class:** `B`
-> **Current controlling blocker:** `curved_3p1_generalized_harmonic_nonlinear_rhs_and_gamma0_constraint_damping_missing`
+> **Current controlling blocker:** `curved_3p1_generalized_harmonic_time_integration_and_constraint_propagation_missing`
 > **Program rule:** General relativity is the null/closed-response model. A
 > non-zero UET response is an empirical alternative, not a conclusion assumed
 > from the existence of the model.
 
-## Current curved 3+1 boundary (2026-08-28, ADM evolution/no-go wave)
+## Current curved 3+1 boundary (2026-08-28, nonlinear GH vacuum-RHS wave)
+
+The selected first-order GH branch now evaluates the complete nonlinear vacuum
+right-hand sides in Lindblom et al. Eqs. (35)-(39) and reconstructs the
+first-order gauge constraint in Eq. (40). Lapse, shift, unit normal, spatial
+inverse metric, lowered Christoffel symbols, and the `gamma0` algebraic
+gauge-constraint damping term are derived or evaluated from the declared GH
+state. Constant-grid and spatially varying periodic states agree with an
+independent explicit-index reference at the locked algebraic threshold.
+
+This closes `CORE_CURVED_3P1_GH_NONLINEAR_VACUUM_RHS_READY` for its operator
+lane. It does not time-integrate the equations, demonstrate propagated
+constraint decay, implement constraint-preserving boundaries, wire matter
+stress energy, or map the metric state to a detector observable. The parent
+therefore remains `PARTIAL`, and Gravity remains blocked.
 
 The selected first-order GH branch has now passed its principal-system gate.
 The implementation source-locks Eqs. (27)-(34) of Lindblom et al., enforces
@@ -19,8 +33,8 @@ residuals at roundoff. The reduction-constraint damping identity and
 second-order spatial operator convergence also pass.
 
 This closes `CORE_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY` for its declared lane.
-It does not close the parent: complete nonlinear algebraic source terms,
-`gamma0` gauge-constraint damping, time integration, full constraint
+Together with the nonlinear vacuum-RHS result it removes the formulation and
+RHS-transcription blockers, while time integration, full constraint
 propagation, boundaries, matter wiring, and observables remain open.
 
 The parent now also evaluates the nonlinear periodic ADM metric and
@@ -33,8 +47,10 @@ The fixed-geodesic ADM principal symbol has a defective zero-speed sector:
 algebraic multiplicity 6, geometric multiplicity 3, and eigenvector rank 9 of
 12 in every preregistered direction. That branch is therefore
 `CLOSED_AS_NO_GO`; it is not repaired with dissipation or looser thresholds.
-The source-locked next branch is first-order generalized harmonic, specified in
-`CORE_CURVED_3P1_EVOLUTION_BRANCH_SPEC.md` but not yet implemented.
+The source-locked next branch is first-order generalized harmonic. Its
+principal and nonlinear vacuum-RHS operators are implemented; its
+time-evolution and propagated-constraint gates remain open in
+`CORE_CURVED_3P1_EVOLUTION_BRANCH_SPEC.md`.
 
 The curved parent now evaluates the standard ADM Hamiltonian and momentum
 constraints and computes their spatial differential-geometry inputs on a
@@ -50,10 +66,10 @@ nontrivial operators show second-order spatial convergence over three locked
 resolutions. Invalid spacing/metrics are rejected; no clipping, fitting, or
 holdout data are used.
 
-This closes the ADM constraint, periodic geometry, ADM RHS operator, and
-fixed-gauge no-go subresults for their individual lanes only. The parent
-result remains `PARTIAL`: generalized-harmonic evolution, strong
-hyperbolicity, constraint damping/propagation, temporal convergence,
+This closes the ADM constraint, periodic geometry, ADM RHS operator,
+fixed-gauge no-go, GH principal system, and GH nonlinear vacuum-RHS
+subresults for their individual lanes only. The parent result remains
+`PARTIAL`: time integration, constraint propagation, temporal convergence,
 non-periodic boundary treatment, Topic 13 stress-energy projection, and
 dimensional observable mapping remain open. Gravity is not unlocked.
 

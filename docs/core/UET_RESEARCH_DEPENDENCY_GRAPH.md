@@ -25,6 +25,19 @@ artifacts may remain useful as diagnostics, but they cannot promote a claim
 while the upstream ontology, units, correspondence, or numerical gate is
 blocked.
 
+## Latest plan update - 2026-08-28 generalized-harmonic nonlinear vacuum RHS
+
+`CORE_CURVED_3P1_GH_NONLINEAR_VACUUM_RHS_READY` is `CLOSED_FOR_LANE`.
+The complete source-locked vacuum Eqs. (35)-(40) operator, metric-derived
+kinematics, first-order Christoffel/gauge reconstruction, and algebraic
+`gamma0` damping pass independent constant-grid and variable-grid controls.
+
+The parent advances to
+`PARTIAL_CURVED_3P1_GH_NONLINEAR_VACUUM_RHS_READY`. The next physical edge
+is time integration with a fixed CFL contract and propagated gauge/reduction
+constraint convergence. Matter wiring, non-periodic boundaries, and detector
+observables remain open; Gravity is not unlocked.
+
 ## Latest plan update - 2026-08-28 generalized-harmonic principal system
 
 `CORE_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY` is `CLOSED_FOR_LANE`. The

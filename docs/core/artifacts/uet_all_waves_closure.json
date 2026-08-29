@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_all_waves_closure",
-  "generated_at": "2026-08-28",
+  "generated_at": "2026-08-29",
   "audit_status": "PASS",
   "program_status": "ALL_WAVE_STATUS_ACCOUNTING_CLOSED_FOUNDATION_PHYSICS_NOT_CLOSED",
   "foundation_gate": {
@@ -111,7 +111,7 @@
         {
           "path": "docs/core/artifacts/o2_eos_formula_audit.json",
           "exists": true,
-          "sha256": "31091e27b5091cc7900328b2233d9f73723fe57570efff4b1760e912d99a7220",
+          "sha256": "c23e8c7f1baa55a6433260a147ab4a4da05254d68c3820232427606b1432b658",
           "status": "WARN",
           "controller": "not_declared"
         }
@@ -263,7 +263,7 @@
         {
           "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_noether_phase_field_dependency_gate.json",
           "exists": true,
-          "sha256": "3d42824b622ed5142fa958db057a4f19454e56d7b6b9da09558d34c4eb486abc",
+          "sha256": "8575dd02fa77e6f039c8c8b1697568958273d21143c17051e110e682ec1987eb",
           "status": "BLOCKED",
           "controller": "topic_0_11_signed_noether_charge_eos_transport_matching_missing"
         }
@@ -327,17 +327,17 @@
         {
           "path": "docs/core/artifacts/o2_finite_density_eos_verification.json",
           "exists": true,
-          "sha256": "8266af5f06800f1cdcbf37b7a1eb46c6ff9b25a711a766afc1dc223fca5ff4ab"
+          "sha256": "969bd3fb46a930b596ac66b74c8da5d67212b93711c103aec79006b0de198c82"
         },
         {
           "path": "docs/core/artifacts/o2_eos_formula_audit.json",
           "exists": true,
-          "sha256": "31091e27b5091cc7900328b2233d9f73723fe57570efff4b1760e912d99a7220"
+          "sha256": "c23e8c7f1baa55a6433260a147ab4a4da05254d68c3820232427606b1432b658"
         },
         {
           "path": "docs/core/artifacts/covariant_superfluid_transport_verification.json",
           "exists": true,
-          "sha256": "feb47cd9c6c99146fafe323a4a60daa7d3de36cdbf5339eccc45040175074c44"
+          "sha256": "db58b4516e1e303efc02f4aaad1a7d7dc68e01a383457f797354b6c916e38162"
         }
       ]
     },
@@ -394,7 +394,7 @@
         {
           "path": "docs/core/artifacts/uet_gr_research_program_gate.json",
           "exists": true,
-          "sha256": "2e8af79c4023feffa3095f519857b0b9012ea184720430eb9fa07281ba73dc7d"
+          "sha256": "a69fc337c21d8986f79bc2ae7eb77e9b8c82089bb09a7e712330ba13548c7f01"
         }
       ]
     },

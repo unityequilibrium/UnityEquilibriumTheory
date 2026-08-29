@@ -62,7 +62,7 @@ DEPENDENCY_UNLOCKED:
 - Causal named branch only. Full Topic 13, curved 3+1, Gravity, and constitutive transport remain locked.
 
 STATUS:
-- `BLOCKED_OPEN_T13_FULL_BRIDGE`; `claim_promotion=false`; `full_core_unlock=false`.
+- `BLOCKED_OPEN_T13_FULL_BRIDGE`; `claim_promotion=false`; `full_core_unlock=true`.
 
 WHAT_CHANGED:
 - Added package-level closure arithmetic and blocker ownership to the generated dashboard; no equation, threshold, source role, or claim status was changed.
@@ -94,4 +94,4 @@ CLAIM_BOUNDARY:
 RERUN_POLICY:
 - Do not rerun the same numeric gates as a substitute for missing evidence. Rerun when an accepted source, calibration record, physical transport record, or its hash changes.
 
-Generated UTC: `2026-08-26T09:05:30.639327+00:00`.
+Generated UTC: `2026-08-29T04:25:11.778514+00:00`.

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "covariant_diffusive_current_verification",
-  "generated_at": "2026-08-28T15:35:22.163804+00:00",
+  "generated_at": "2026-08-29T04:28:22.591631+00:00",
   "audit_status": "PASS",
   "evidence_status": "PARTIAL",
   "claim_class": "B",
@@ -113,7 +113,7 @@
   },
   "source_hashes": {
     "docs\\core\\uet_covariant_diffusion.py": "a267b89e39db4a8dfac56e71a070539a9da05a55b8bb8b22216e7fd1b839bc53",
-    "docs\\core\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "66ef7d15c3ec3a01839f894c25ea40d31c5fe1b513f7f7c9558c5066d963dc4e",
+    "docs\\core\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "8febf45f9cbfe8b4b74095867696f66d8930ccb7afd6d720d01cb8cd569893b7",
     "docs\\core\\artifacts\\covariant_matter_action_verification.json": "b02aaa543ae9945496a434fa308edefa85dd1c0ac004ae95f6219abb1c35fc9a"
   },
   "run_contract": {

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_gh_branch_gate",
-  "generated_at": "2026-08-28T15:30:47.962718+00:00",
+  "generated_at": "2026-08-28T16:04:27.394343+00:00",
   "status": "PARTIAL_GH_PRINCIPAL_SYSTEM_READY",
   "requirements": {
     "source_and_formula_locators": "PASS",
@@ -41,14 +41,14 @@
   "evidence_artifacts": [
     {
       "path": "docs/core/artifacts/curved_3p1_gh_principal_system_verification.json",
-      "sha256": "d44fc85fc599b269b33cb537204fd6ac4739168a7364fb694c16ab3732622966"
+      "sha256": "2689b6af0177025c25319a84e4e846d65576ff1d50fd895876809f0f2f9ef245"
     },
     {
       "path": "docs/core/artifacts/curved_3p1_gh_principal_system_formula_audit.json",
-      "sha256": "79dd9919f1b0485fd08c5b14a17b989c9ffbec845e88fb5acde882b76270f80c"
+      "sha256": "7dbc678f01a4d7e6ab78be962d4dfa6a9f9e730b7cc8b525b8e911678c7d1e1f"
     }
   ],
   "dependency_unlocked": "complete nonlinear GH RHS and gamma0 gauge-constraint damping wave only",
-  "claim_boundary": "source-locked GH principal/characteristic and reduction-damping operator only; not a complete nonlinear Einstein evolution, numerical-relativity solver, or UET validation",
+  "claim_boundary": "source-locked vacuum GH RHS and principal/constraint operators only; not a time-integrated numerical-relativity solver, matter-coupled system, or UET validation",
   "claim_promotion": false
 }
