@@ -1,3 +1,17 @@
+## 2026-08-29 - Repair Core-ready status semantics
+
+MAJOR_RESULT_CLOSURE: `T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY` remains `CLOSED_FOR_CORE`; the separate graphite/TTG external-validation track remains `OPEN`.
+WHAT_IS_ACTUALLY_CLOSED: The human-readable Core-ready decision now follows the 13/13 acceptance audit and the O(2)/He-4 closure track instead of presenting the legacy graphite aggregate as the controlling Topic 13 status.
+WHAT_REMAINS_OPEN: Accepted Ding-equivalent `C_src`, graphite-specific `alpha_Phi_K`, graphite dimensional mapping, raw Landauer parity, curved 3+1, Gravity, and external/global claims.
+DEPENDENCY_UNLOCKED: No new dependency was unlocked in this reporting repair; Core curved 3+1 was already unlocked by the accepted Topic 13 handoff.
+STATUS: `PASS_T13_FULL_CORE_READY_ACCEPTANCE`; focused Core-ready regressions `11 passed`; legacy aggregate remains backward-compatible and blocked.
+WHAT_CHANGED: Replaced the stale Core-ready companion note with the current scoped decision and an explicit explanation of the legacy aggregate status.
+EQUATION_OR_MAPPING: No equation, coefficient, unit, threshold, source role, or holdout role changed.
+VERIFICATION: Core-ready acceptance, closure-track split, He-4 composition, closure matrix, and main-theory dimensional-observable tests passed.
+CONTROLLING_BLOCKER: None for the bounded Topic 13 Core handoff. Graphite external validation and the next Core curved 3+1 result retain separate controllers.
+NEXT_ACTION: Continue the curved 3+1 parent; only resume graphite validation when an admissible source or independent material-matched package changes the evidence state.
+CLAIM_BOUNDARY: Reporting alignment only; not new physical evidence, external validation, Gravity closure, or global UET closure.
+
 ## 2026-08-29 - Stabilize Core-ready and external-track provenance
 
 MAJOR_RESULT_CLOSURE: `T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY` remains `CLOSED_FOR_CORE`; acceptance remains `PASS_T13_FULL_CORE_READY_ACCEPTANCE` at 13/13 criteria.
