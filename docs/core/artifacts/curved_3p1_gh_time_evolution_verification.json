@@ -1,0 +1,312 @@
+{
+  "schema_version": "1.0",
+  "artifact": "curved_3p1_gh_time_evolution_verification",
+  "generated_at": "2026-08-29T04:51:43.940855+00:00",
+  "status": "PASS_GH_PERIODIC_VACUUM_TIME_EVOLUTION",
+  "thresholds": {
+    "maximum_cfl": 0.2,
+    "spatial_order_min": 1.8,
+    "temporal_order_min": 3.5,
+    "gauge_constraint_linf_max": 1e-12,
+    "curl_constraint_linf_max": 1e-12,
+    "reduction_damping_relative_error_max": 1e-08,
+    "gauge_wave_metric_l2_error_max_finest": 2e-06,
+    "minimum_lapse": 0.9,
+    "minimum_spatial_inverse_eigenvalue": 0.9
+  },
+  "controls": {
+    "minkowski": {
+      "metric_linf": 0.0,
+      "normal_derivative_linf": 0.0,
+      "spatial_derivative_linf": 0.0,
+      "final_gauge_linf": 0.0,
+      "final_reduction_linf": 0.0,
+      "maximum_observed_courant": 0.08,
+      "step_count": 4
+    },
+    "harmonic_gauge_wave_spatial": {
+      "grid_sizes": [
+        12,
+        24,
+        48
+      ],
+      "rows": [
+        {
+          "n": 12,
+          "cfl": 0.08,
+          "step_count": 8,
+          "metric_l2_error": 2.815258315635339e-05,
+          "normal_derivative_l2_error": 0.001137924358700455,
+          "spatial_derivative_l2_error": 0.0006208681727603901,
+          "gauge_linf": 5.551115123125783e-17,
+          "reduction_l2": 0.0019447462082016966,
+          "reduction_linf": 0.013850908367961823,
+          "curl_linf": 0.0,
+          "minimum_lapse": 0.9746794344808966,
+          "minimum_spatial_inverse_eigenvalue": 0.9523809523809523,
+          "metric_symmetry_linf": 6.514165460238291e-21,
+          "maximum_observed_courant": 0.08,
+          "run_contract": {
+            "integrator": "CLASSICAL_RK4",
+            "cfl_coefficient": 0.08,
+            "maximum_cfl": 0.2,
+            "boundary": "PERIODIC",
+            "gauge_source": "PRESCRIBED_TIME_INDEPENDENT_ARRAY",
+            "constraint_projection": false,
+            "numerical_filtering": false,
+            "artificial_dissipation": false,
+            "field_clipping": false,
+            "parameter_fitting": false,
+            "matter_source": "VACUUM_ONLY"
+          }
+        },
+        {
+          "n": 24,
+          "cfl": 0.08,
+          "step_count": 16,
+          "metric_l2_error": 7.11414506699843e-06,
+          "normal_derivative_l2_error": 0.00028765938098687964,
+          "spatial_derivative_l2_error": 0.00015671412631671806,
+          "gauge_linf": 5.551115123125783e-17,
+          "reduction_l2": 0.000491224579354231,
+          "reduction_linf": 0.0035011196499588615,
+          "curl_linf": 0.0,
+          "minimum_lapse": 0.97466918335789,
+          "minimum_spatial_inverse_eigenvalue": 0.9523630179879636,
+          "metric_symmetry_linf": 3.288901823507991e-21,
+          "maximum_observed_courant": 0.08,
+          "run_contract": {
+            "integrator": "CLASSICAL_RK4",
+            "cfl_coefficient": 0.08,
+            "maximum_cfl": 0.2,
+            "boundary": "PERIODIC",
+            "gauge_source": "PRESCRIBED_TIME_INDEPENDENT_ARRAY",
+            "constraint_projection": false,
+            "numerical_filtering": false,
+            "artificial_dissipation": false,
+            "field_clipping": false,
+            "parameter_fitting": false,
+            "matter_source": "VACUUM_ONLY"
+          }
+        },
+        {
+          "n": 48,
+          "cfl": 0.08,
+          "step_count": 31,
+          "metric_l2_error": 1.7833201949777896e-06,
+          "normal_derivative_l2_error": 7.211514145797764e-05,
+          "spatial_derivative_l2_error": 3.927236650034741e-05,
+          "gauge_linf": 5.551115123125783e-17,
+          "reduction_l2": 0.0001231229852635493,
+          "reduction_linf": 0.0008776970206188506,
+          "curl_linf": 0.0,
+          "minimum_lapse": 0.9746770111392895,
+          "minimum_spatial_inverse_eigenvalue": 0.9523767174467723,
+          "metric_symmetry_linf": 3.2549583694297505e-21,
+          "maximum_observed_courant": 0.08000000000000002,
+          "run_contract": {
+            "integrator": "CLASSICAL_RK4",
+            "cfl_coefficient": 0.08,
+            "maximum_cfl": 0.2,
+            "boundary": "PERIODIC",
+            "gauge_source": "PRESCRIBED_TIME_INDEPENDENT_ARRAY",
+            "constraint_projection": false,
+            "numerical_filtering": false,
+            "artificial_dissipation": false,
+            "field_clipping": false,
+            "parameter_fitting": false,
+            "matter_source": "VACUUM_ONLY"
+          }
+        }
+      ],
+      "metric_orders": [
+        1.9845050053796829,
+        1.9961246312112844
+      ],
+      "reduction_constraint_orders": [
+        1.9851272383870515,
+        1.9962826334350667
+      ],
+      "minimum_metric_order": 1.9845050053796829,
+      "minimum_reduction_constraint_order": 1.9851272383870515
+    },
+    "harmonic_gauge_wave_temporal": {
+      "grid_size": 24,
+      "cfl_values": [
+        0.16,
+        0.08,
+        0.04
+      ],
+      "rows": [
+        {
+          "n": 24,
+          "cfl": 0.16,
+          "step_count": 8,
+          "metric_l2_error": 7.114150492676862e-06,
+          "normal_derivative_l2_error": 0.0002876598550380221,
+          "spatial_derivative_l2_error": 0.00015671440309230367,
+          "gauge_linf": 5.551115123125783e-17,
+          "reduction_l2": 0.0004912245793571965,
+          "reduction_linf": 0.0035011196524358246,
+          "curl_linf": 0.0,
+          "minimum_lapse": 0.9746740475573543,
+          "minimum_spatial_inverse_eigenvalue": 0.9523715816169241,
+          "metric_symmetry_linf": 4.051754228429452e-21,
+          "maximum_observed_courant": 0.16,
+          "run_contract": {
+            "integrator": "CLASSICAL_RK4",
+            "cfl_coefficient": 0.16,
+            "maximum_cfl": 0.2,
+            "boundary": "PERIODIC",
+            "gauge_source": "PRESCRIBED_TIME_INDEPENDENT_ARRAY",
+            "constraint_projection": false,
+            "numerical_filtering": false,
+            "artificial_dissipation": false,
+            "field_clipping": false,
+            "parameter_fitting": false,
+            "matter_source": "VACUUM_ONLY"
+          }
+        },
+        {
+          "n": 24,
+          "cfl": 0.08,
+          "step_count": 16,
+          "metric_l2_error": 7.11414506699843e-06,
+          "normal_derivative_l2_error": 0.00028765938098687964,
+          "spatial_derivative_l2_error": 0.00015671412631671806,
+          "gauge_linf": 5.551115123125783e-17,
+          "reduction_l2": 0.000491224579354231,
+          "reduction_linf": 0.0035011196499588615,
+          "curl_linf": 0.0,
+          "minimum_lapse": 0.97466918335789,
+          "minimum_spatial_inverse_eigenvalue": 0.9523630179879636,
+          "metric_symmetry_linf": 3.288901823507991e-21,
+          "maximum_observed_courant": 0.08,
+          "run_contract": {
+            "integrator": "CLASSICAL_RK4",
+            "cfl_coefficient": 0.08,
+            "maximum_cfl": 0.2,
+            "boundary": "PERIODIC",
+            "gauge_source": "PRESCRIBED_TIME_INDEPENDENT_ARRAY",
+            "constraint_projection": false,
+            "numerical_filtering": false,
+            "artificial_dissipation": false,
+            "field_clipping": false,
+            "parameter_fitting": false,
+            "matter_source": "VACUUM_ONLY"
+          }
+        },
+        {
+          "n": 24,
+          "cfl": 0.04,
+          "step_count": 31,
+          "metric_l2_error": 7.114144624883202e-06,
+          "normal_derivative_l2_error": 0.0002876593497996537,
+          "spatial_derivative_l2_error": 0.000156714108151686,
+          "gauge_linf": 5.551115123125783e-17,
+          "reduction_l2": 0.000491224579353502,
+          "reduction_linf": 0.003501119649795603,
+          "curl_linf": 0.0,
+          "minimum_lapse": 0.9746691833582122,
+          "minimum_spatial_inverse_eigenvalue": 0.9523630179905815,
+          "metric_symmetry_linf": 3.529748794117732e-21,
+          "maximum_observed_courant": 0.04,
+          "run_contract": {
+            "integrator": "CLASSICAL_RK4",
+            "cfl_coefficient": 0.04,
+            "maximum_cfl": 0.2,
+            "boundary": "PERIODIC",
+            "gauge_source": "PRESCRIBED_TIME_INDEPENDENT_ARRAY",
+            "constraint_projection": false,
+            "numerical_filtering": false,
+            "artificial_dissipation": false,
+            "field_clipping": false,
+            "parameter_fitting": false,
+            "matter_source": "VACUUM_ONLY"
+          }
+        }
+      ],
+      "successive_metric_differences": [
+        7.706821916295294e-11,
+        5.0681021948145815e-12
+      ],
+      "rk4_self_convergence_order": 3.92661853374091
+    },
+    "reduction_constraint_damping": {
+      "initial_reduction_l2": 2.041241452319315e-07,
+      "final_reduction_l2": 1.6712271516494395e-07,
+      "observed_ratio": 0.8187307531652098,
+      "expected_exp_minus_gamma2_t": 0.8187307530779818,
+      "relative_error": 1.0654055415670882e-10,
+      "final_gauge_linf": 6.703200318062359e-14,
+      "perturbation_component": "Phi_x_yz=Phi_x_zy=1e-6"
+    },
+    "negative_controls": {
+      "cfl_above_preregistered_maximum_rejected": true,
+      "constraint_projection_available": false,
+      "filtering_available": false,
+      "matter_source_available": false
+    }
+  },
+  "checks": {
+    "nonlinear_rhs_dependency_passes": true,
+    "minkowski_is_exact_fixed_point": true,
+    "spatial_metric_convergence_passes": true,
+    "spatial_constraint_convergence_passes": true,
+    "rk4_temporal_convergence_passes": true,
+    "finest_gauge_wave_error_passes": true,
+    "gauge_constraint_passes": true,
+    "curl_constraint_passes": true,
+    "reduction_damping_matches_gamma2": true,
+    "lorentzian_slicing_remains_bounded": true,
+    "metric_symmetry_preserved": true,
+    "cfl_contract_passes": true,
+    "negative_controls_pass": true,
+    "no_projection_filtering_clipping_or_fit": true
+  },
+  "source_hashes": {
+    "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a",
+    "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json": "a5e0dfd38c6d5f410ce41ba941eee7dc82c3dcc9744e1f3fdbb6b46b03666c17",
+    "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_formula_audit.json": "7e5f54ea15d36e331a345f0a04f645557a0671ada35ce12962530e419ce70aa3",
+    "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_gate.json": "89050d1ffe351ae4eb19e49ebcb8dfbd87ca36a12d7d27631b8a20f9b93543fc",
+    "docs/core/uet_curved_3p1_gh_evolution.py": "c18f231375609cebb76d342ba7ad94471eb280089458ace85882ed2450f3581e"
+  },
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY",
+    "topic": "core",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "classical RK4 integration of the verified nonlinear vacuum GH RHS",
+      "fixed conservative characteristic CFL policy on a periodic grid",
+      "exact Minkowski and exact harmonic gauge-wave evolution controls",
+      "second-order spatial and fourth-order temporal convergence",
+      "gauge, reduction, and curl constraint diagnostics over time",
+      "gamma2 reduction-constraint damping rate"
+    ],
+    "what_remains_open": [
+      "constraint-preserving non-periodic boundaries",
+      "Topic 13 stress-energy wiring",
+      "dimensional detector observable mapping"
+    ],
+    "equation_or_mapping": {
+      "time_step": "dt <= cfl min(dx_i)/max(alpha+||beta||_2)",
+      "integrator": "classical RK4 applied to GH Eqs. 35-37",
+      "gauge_constraint": "C_a=H_a+Gamma_a",
+      "reduction_constraint": "C_iab=partial_i psi_ab-Phi_iab"
+    },
+    "units": "geometric c=1 periodic-coordinate lane",
+    "derivation_class": "STANDARD_NUMERICAL_METHOD_APPLIED_TO_SOURCE_LOCKED_VACUUM_GH_SYSTEM",
+    "observable": "solution-error and propagated-constraint diagnostics",
+    "data_role": "INTERNAL_ANALYTIC_AND_CONVERGENCE_CONTROL",
+    "evidence_artifacts": [],
+    "verification_status": "PASS_GH_PERIODIC_VACUUM_TIME_EVOLUTION",
+    "open_blockers": [
+      "constraint_preserving_boundaries_missing",
+      "topic13_stress_energy_projection_missing",
+      "dimensional_observable_mapping_missing"
+    ],
+    "dependency_unlocked": "constraint-preserving boundary and Topic 13 matter-wiring waves only",
+    "claim_boundary": "periodic vacuum evolution control only; not a production numerical-relativity solver, matter-coupled UET parent, Gravity validation, or external claim"
+  },
+  "claim_promotion": false
+}

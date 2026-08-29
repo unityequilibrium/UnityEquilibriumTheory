@@ -685,16 +685,16 @@ def generalized_harmonic_contract() -> dict[str, Any]:
             "constant-coefficient reduction-damped periodic operator",
             "complete nonlinear vacuum GH algebraic right-hand sides for declared H_a and nabla_a H_b",
             "gamma0 gauge-constraint damping term in the nonlinear vacuum RHS",
+            "periodic vacuum RK4 time integration with a fixed characteristic CFL contract in the companion evolution module",
+            "periodic gauge, reduction, and curl constraint propagation convergence",
         ],
         "not_implemented": [
-            "time integration and CFL policy",
-            "constraint propagation convergence",
             "constraint-preserving boundaries",
             "matter stress-energy wiring and detector observable map",
         ],
         "claim_boundary": (
-            "source-locked vacuum GH RHS and principal/constraint operators only; "
-            "not a time-integrated numerical-relativity solver, matter-coupled system, or UET validation"
+            "source-locked vacuum GH system with bounded periodic time-evolution controls; "
+            "not a production numerical-relativity solver, matter-coupled system, or UET validation"
         ),
     }
 

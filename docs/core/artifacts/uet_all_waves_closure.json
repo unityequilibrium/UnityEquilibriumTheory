@@ -111,7 +111,7 @@
         {
           "path": "docs/core/artifacts/o2_eos_formula_audit.json",
           "exists": true,
-          "sha256": "c23e8c7f1baa55a6433260a147ab4a4da05254d68c3820232427606b1432b658",
+          "sha256": "be054f5c935c5b3a637248480e7ba0903312b94b36c25726a8f6652a1d8ba6c3",
           "status": "WARN",
           "controller": "not_declared"
         }
@@ -263,7 +263,7 @@
         {
           "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_noether_phase_field_dependency_gate.json",
           "exists": true,
-          "sha256": "8575dd02fa77e6f039c8c8b1697568958273d21143c17051e110e682ec1987eb",
+          "sha256": "c8d2f9224a9969522296f53eef436698fd80b12b50c63df02ce8f12a6313ae62",
           "status": "BLOCKED",
           "controller": "topic_0_11_signed_noether_charge_eos_transport_matching_missing"
         }
@@ -327,17 +327,17 @@
         {
           "path": "docs/core/artifacts/o2_finite_density_eos_verification.json",
           "exists": true,
-          "sha256": "969bd3fb46a930b596ac66b74c8da5d67212b93711c103aec79006b0de198c82"
+          "sha256": "e5f97fcae82197b00bdeee8c207a8ebbe73001afe22182a13004d935739d69b0"
         },
         {
           "path": "docs/core/artifacts/o2_eos_formula_audit.json",
           "exists": true,
-          "sha256": "c23e8c7f1baa55a6433260a147ab4a4da05254d68c3820232427606b1432b658"
+          "sha256": "be054f5c935c5b3a637248480e7ba0903312b94b36c25726a8f6652a1d8ba6c3"
         },
         {
           "path": "docs/core/artifacts/covariant_superfluid_transport_verification.json",
           "exists": true,
-          "sha256": "db58b4516e1e303efc02f4aaad1a7d7dc68e01a383457f797354b6c916e38162"
+          "sha256": "02beca5ba09a86edc19e05edd82c7fce422a8054f5f2c40d441b0e2707c3ac6e"
         }
       ]
     },
@@ -394,7 +394,7 @@
         {
           "path": "docs/core/artifacts/uet_gr_research_program_gate.json",
           "exists": true,
-          "sha256": "a69fc337c21d8986f79bc2ae7eb77e9b8c82089bb09a7e712330ba13548c7f01"
+          "sha256": "b41239832f820fa2984118f240b319da8591189ecee8c34eeec87609ac2ea197"
         }
       ]
     },

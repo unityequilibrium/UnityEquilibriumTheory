@@ -25,6 +25,20 @@ artifacts may remain useful as diagnostics, but they cannot promote a claim
 while the upstream ontology, units, correspondence, or numerical gate is
 blocked.
 
+## Latest plan update - 2026-08-29 periodic GH vacuum evolution
+
+`CORE_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY` is
+`CLOSED_FOR_LANE`. Classical RK4, the fixed characteristic CFL contract,
+exact harmonic gauge wave, second-order spatial convergence, fourth-order
+temporal convergence, and periodic gauge/reduction/curl constraint controls
+pass without projection, filtering, clipping, or fitting.
+
+The parent advances to
+`PARTIAL_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY`. The next edge is no
+longer more periodic runtime; it is constraint-preserving non-periodic
+boundaries plus Topic 13 stress-energy wiring. Detector observables remain
+open and Gravity is not unlocked.
+
 ## Latest plan update - 2026-08-28 generalized-harmonic nonlinear vacuum RHS
 
 `CORE_CURVED_3P1_GH_NONLINEAR_VACUUM_RHS_READY` is `CLOSED_FOR_LANE`.

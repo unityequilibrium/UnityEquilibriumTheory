@@ -923,3 +923,31 @@ __all__ += [
     "compute_nonlinear_vacuum_gh_rhs",
     "generalized_harmonic_contract",
 ]
+
+from .uet_curved_3p1_gh_evolution import (
+    GH_TIME_EVOLUTION_STATUS,
+    GHEvolutionState,
+    GHTimeIntegrationParameters,
+    GHConstraintNorms,
+    GHTimeEvolutionResult,
+    gh_constraint_norms,
+    gh_cfl_timestep,
+    rk4_periodic_vacuum_gh_step,
+    evolve_periodic_vacuum_gh,
+    harmonic_gauge_wave_state,
+    generalized_harmonic_time_evolution_contract,
+)
+
+__all__ += [
+    "GH_TIME_EVOLUTION_STATUS",
+    "GHEvolutionState",
+    "GHTimeIntegrationParameters",
+    "GHConstraintNorms",
+    "GHTimeEvolutionResult",
+    "gh_constraint_norms",
+    "gh_cfl_timestep",
+    "rk4_periodic_vacuum_gh_step",
+    "evolve_periodic_vacuum_gh",
+    "harmonic_gauge_wave_state",
+    "generalized_harmonic_time_evolution_contract",
+]

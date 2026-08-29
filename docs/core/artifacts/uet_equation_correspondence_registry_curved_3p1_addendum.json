@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_equation_correspondence_registry_curved_3p1_addendum",
-  "generated_at": "2026-08-29T04:27:20.656920+00:00",
+  "generated_at": "2026-08-29T04:52:16.157506+00:00",
   "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
   "status": "CANDIDATE_ENTRY_PENDING_MERGE",
   "equation_entries": [
@@ -535,7 +535,7 @@
       "downstream_dependencies": [
         "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"
       ],
-      "claim_boundary": "source-locked vacuum GH RHS and principal/constraint operators only; not a time-integrated numerical-relativity solver, matter-coupled system, or UET validation",
+      "claim_boundary": "source-locked vacuum GH system with bounded periodic time-evolution controls; not a production numerical-relativity solver, matter-coupled system, or UET validation",
       "failure_mode": "principal-system closure is overread as a complete numerical-relativity solver",
       "next_hardening_step": "integrate the separately verified nonlinear vacuum RHS, then add time evolution"
     },
@@ -638,6 +638,68 @@
       "claim_boundary": "complete vacuum RHS operator only; not a time-integrated solver, matter-coupled UET parent, Gravity validation, or external claim",
       "failure_mode": "operator-only closure is overread as time-evolved constraint propagation or a matter-coupled solver",
       "next_hardening_step": "add a fixed CFL time integrator and verify gauge/reduction constraint propagation"
+    },
+    {
+      "equation_id": "uet.main_theory.curved_3p1.generalized_harmonic_periodic_vacuum_evolution",
+      "version": "gh-periodic-vacuum-evolution-v1",
+      "classification": "standard_physics_numerical_evolution_control",
+      "relation_or_code_path": "docs/core/uet_curved_3p1_gh_evolution.py",
+      "formula_ids": [
+        "UET-CURVED3P1-GH-RK4-018",
+        "UET-CURVED3P1-GH-CFL-019",
+        "UET-CURVED3P1-GH-GAUGE-WAVE-020"
+      ],
+      "variables": {
+        "psi_ab": "spacetime metric; not UET Phi",
+        "Pi_ab": "normal metric derivative; not UET Pi",
+        "Phi_iab": "spatial metric derivative",
+        "dt": "coordinate-time step",
+        "cfl": "fixed numerical Courant coefficient"
+      },
+      "mathematical_role": "advance the verified nonlinear vacuum GH system and monitor propagated constraints",
+      "standard_physics_counterpart": "classical RK4 method-of-lines evolution of the first-order GH system",
+      "observable_mapping": {
+        "status": "OPEN",
+        "reason": "gauge-wave error and constraint norms are numerical diagnostics"
+      },
+      "unit_lane": "geometric c=1 periodic coordinates",
+      "parameter_dimensions": "geometric c=1 periodic-coordinate lane",
+      "source_or_origin": {
+        "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a",
+        "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json": "a5e0dfd38c6d5f410ce41ba941eee7dc82c3dcc9744e1f3fdbb6b46b03666c17",
+        "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_formula_audit.json": "7e5f54ea15d36e331a345f0a04f645557a0671ada35ce12962530e419ce70aa3",
+        "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_gate.json": "89050d1ffe351ae4eb19e49ebcb8dfbd87ca36a12d7d27631b8a20f9b93543fc",
+        "docs/core/uet_curved_3p1_gh_evolution.py": "c18f231375609cebb76d342ba7ad94471eb280089458ace85882ed2450f3581e"
+      },
+      "assumptions": [
+        "vacuum",
+        "periodic grid",
+        "prescribed time-independent H_a and nabla_a H_b",
+        "fixed CFL coefficient",
+        "no filtering or projection"
+      ],
+      "symmetry_and_conservation": "metric symmetry and gauge/reduction/curl constraint convergence pass on the declared periodic controls",
+      "limiting_cases": [
+        "Minkowski fixed point",
+        "exact harmonic gauge wave",
+        "constant off-diagonal reduction violation"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_curved_3p1_gh_evolution.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_curved_3p1_gh_time_evolution.py",
+        "docs/core/artifacts/curved_3p1_gh_time_evolution_verification.json",
+        "docs/core/test/test_uet_curved_3p1_gh_time_evolution.py"
+      ],
+      "evidence_class": "INTERNAL_ANALYTIC_AND_NUMERICAL_CONVERGENCE_CONTROL",
+      "proof_status": "periodic vacuum evolution and propagated-constraint controls pass; non-periodic boundaries and matter remain open",
+      "downstream_dependencies": [
+        "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"
+      ],
+      "claim_boundary": "periodic vacuum evolution control only; not a production numerical-relativity solver, matter-coupled UET parent, Gravity validation, or external claim",
+      "failure_mode": "periodic gauge-wave convergence is overread as a production numerical-relativity or matter-coupled solver",
+      "next_hardening_step": "add constraint-preserving non-periodic boundaries and Topic 13 stress-energy wiring"
     }
   ]
 }

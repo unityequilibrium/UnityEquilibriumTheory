@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_gh_nonlinear_vacuum_rhs_verification",
-  "generated_at": "2026-08-28T16:10:40.946878+00:00",
+  "generated_at": "2026-08-29T04:51:37.128904+00:00",
   "topic": "docs/core curved 3+1 parent",
   "status": "PASS_GH_NONLINEAR_VACUUM_RHS",
   "major_result": {
@@ -82,10 +82,10 @@
     "accessed_on": "2026-08-28"
   },
   "source_hashes": {
-    "docs/core/uet_curved_3p1_generalized_harmonic.py": "e0f445b40136923bd4f830f6dfb23f27492042a7e662f2d6c098a9b1d8eb99bd",
+    "docs/core/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92",
     "docs/scripts/audit/audit_uet_curved_3p1_gh_nonlinear_vacuum.py": "e2b052a08728024f5f6ce1aed221e402f3ee8ad250f34bb23eae63d3b777c4a1",
     "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a",
-    "docs/core/artifacts/curved_3p1_gh_principal_system_verification.json": "2689b6af0177025c25319a84e4e846d65576ff1d50fd895876809f0f2f9ef245"
+    "docs/core/artifacts/curved_3p1_gh_principal_system_verification.json": "93c01c20d16b906a3f4653222bfe4f1648d4ab6e6dbaf7596e254f2e0f41d973"
   },
   "parameters": {
     "gamma0": 0.4,
@@ -177,15 +177,15 @@
       "gauge/reduction/curl constraint evaluators",
       "constant-coefficient reduction-damped periodic operator",
       "complete nonlinear vacuum GH algebraic right-hand sides for declared H_a and nabla_a H_b",
-      "gamma0 gauge-constraint damping term in the nonlinear vacuum RHS"
+      "gamma0 gauge-constraint damping term in the nonlinear vacuum RHS",
+      "periodic vacuum RK4 time integration with a fixed characteristic CFL contract in the companion evolution module",
+      "periodic gauge, reduction, and curl constraint propagation convergence"
     ],
     "not_implemented": [
-      "time integration and CFL policy",
-      "constraint propagation convergence",
       "constraint-preserving boundaries",
       "matter stress-energy wiring and detector observable map"
     ],
-    "claim_boundary": "source-locked vacuum GH RHS and principal/constraint operators only; not a time-integrated numerical-relativity solver, matter-coupled system, or UET validation"
+    "claim_boundary": "source-locked vacuum GH system with bounded periodic time-evolution controls; not a production numerical-relativity solver, matter-coupled system, or UET validation"
   },
   "claim_promotion": false
 }

@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "artifact": "curved_3p1_gh_time_evolution_formula_audit",
+  "generated_at": "2026-08-29T04:51:43.940855+00:00",
+  "status": "PASS_GH_TIME_EVOLUTION_NUMERICAL_CONTRACT",
+  "formulas": [
+    {
+      "formula_id": "UET-CURVED3P1-GH-RK4-018",
+      "relation": "u_(n+1)=u_n+dt*(k1+2k2+2k3+k4)/6",
+      "classification": "STANDARD_NUMERICAL_INTEGRATOR",
+      "units": "each stage derivative carries state unit per coordinate time",
+      "proof_status": "implemented and fourth-order self-convergence verified"
+    },
+    {
+      "formula_id": "UET-CURVED3P1-GH-CFL-019",
+      "relation": "dt<=cfl*min(dx_i)/max(alpha+||beta||_2)",
+      "classification": "CONSERVATIVE_NUMERICAL_STABILITY_CONTRACT",
+      "units": "coordinate time in geometric c=1 units",
+      "proof_status": "runtime-enforced for the declared periodic controls; not a universal stability proof"
+    },
+    {
+      "formula_id": "UET-CURVED3P1-GH-GAUGE-WAVE-020",
+      "relation": "ds^2=H(-dt^2+dx^2)+dy^2+dz^2; H=1-A sin(2pi(x-t)/L)",
+      "classification": "EXACT_VACUUM_HARMONIC_COORDINATE_CONTROL",
+      "units": "dimensionless metric; coordinate length/time",
+      "proof_status": "analytic control used for error and constraint convergence"
+    }
+  ],
+  "checks": {
+    "nonlinear_rhs_dependency_passes": true,
+    "minkowski_is_exact_fixed_point": true,
+    "spatial_metric_convergence_passes": true,
+    "spatial_constraint_convergence_passes": true,
+    "rk4_temporal_convergence_passes": true,
+    "finest_gauge_wave_error_passes": true,
+    "gauge_constraint_passes": true,
+    "curl_constraint_passes": true,
+    "reduction_damping_matches_gamma2": true,
+    "lorentzian_slicing_remains_bounded": true,
+    "metric_symmetry_preserved": true,
+    "cfl_contract_passes": true,
+    "negative_controls_pass": true,
+    "no_projection_filtering_clipping_or_fit": true
+  },
+  "claim_boundary": "periodic vacuum evolution control only; not a production numerical-relativity solver, matter-coupled UET parent, Gravity validation, or external claim",
+  "claim_promotion": false
+}

@@ -94,9 +94,9 @@ def test_invalid_metric_shape_and_grid_are_rejected() -> None:
 def test_contract_keeps_time_matter_and_external_claims_open() -> None:
     contract = generalized_harmonic_contract()
     assert "complete nonlinear vacuum GH algebraic right-hand sides for declared H_a and nabla_a H_b" in contract["implemented"]
-    assert "time integration and CFL policy" in contract["not_implemented"]
+    assert "periodic vacuum RK4 time integration" in " ".join(contract["implemented"])
     assert "matter stress-energy wiring and detector observable map" in contract["not_implemented"]
-    assert "not a time-integrated numerical-relativity solver" in contract["claim_boundary"]
+    assert "not a production numerical-relativity solver" in contract["claim_boundary"]
 
 
 def test_generated_artifacts_are_hash_linked_and_parent_remains_partial() -> None:
@@ -114,4 +114,3 @@ def test_generated_artifacts_are_hash_linked_and_parent_remains_partial() -> Non
         assert hashlib.sha256((ROOT / relative_path).read_bytes()).hexdigest() == expected_hash
     for evidence in gate["evidence_artifacts"]:
         assert hashlib.sha256((ROOT / evidence["path"]).read_bytes()).hexdigest() == evidence["sha256"]
-

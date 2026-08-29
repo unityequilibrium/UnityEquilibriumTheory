@@ -96,18 +96,19 @@ def test_generated_artifacts_are_hash_linked_and_partial() -> None:
     assert gate["requirements"]["adm_constraint_interface"] == "PASS"
     assert (
         gate["requirements"]["metric_and_extrinsic_curvature_evolution"]
-        == "PARTIAL_GH_NONLINEAR_VACUUM_RHS_OPERATOR_ONLY"
+        == "PASS_PERIODIC_GH_VACUUM_TIME_INTEGRATION"
     )
     assert gate["requirements"]["fixed_gauge_adm_hyperbolicity"] == "CLOSED_AS_NO_GO"
     assert gate["requirements"]["gh_symmetric_hyperbolicity"] == "PASS"
     assert gate["requirements"]["complete_nonlinear_gh_rhs"] == "PASS"
     assert gate["requirements"]["gamma0_gauge_constraint_damping"] == "PASS"
-    assert gate["requirements"]["constraint_propagation"] == (
-        "PARTIAL_REDUCTION_AND_ALGEBRAIC_GAUGE_DAMPING_ONLY"
-    )
+    assert gate["requirements"]["periodic_gh_time_integration"] == "PASS"
+    assert gate["requirements"]["characteristic_cfl_policy"] == "PASS"
+    assert gate["requirements"]["constraint_propagation"] == "PASS_PERIODIC_GAUGE_REDUCTION_CURL_CONVERGENCE"
+    assert gate["requirements"]["temporal_spatial_convergence"] == "PASS_RK4_TEMPORAL_AND_SECOND_ORDER_SPATIAL"
     assert gate["controlling_blocker"] == (
-        "curved_3p1_generalized_harmonic_time_integration_and_"
-        "constraint_propagation_missing"
+        "curved_3p1_constraint_preserving_boundaries_and_"
+        "topic13_stress_energy_wiring_missing"
     )
     assert gate["claim_promotion"] is False
 
@@ -121,6 +122,7 @@ def test_register_and_dependency_gate_keep_gravity_blocked() -> None:
     }
     assert levels["CORE_CURVED_3P1_ADM_CONSTRAINT_INTERFACE_READY"] == "CLOSED_FOR_LANE"
     assert levels["CORE_CURVED_3P1_GH_NONLINEAR_VACUUM_RHS_READY"] == "CLOSED_FOR_LANE"
+    assert levels["CORE_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY"] == "CLOSED_FOR_LANE"
     assert levels["CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"] == "PARTIAL"
     gravity = dependency["decisions"]["GR_CLASSICAL_COMPATIBILITY_LANE"]
     assert gravity["status"] == "BLOCKED_DEPENDENCY"

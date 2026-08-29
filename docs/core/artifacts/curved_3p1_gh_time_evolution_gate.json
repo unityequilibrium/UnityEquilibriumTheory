@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "artifact": "curved_3p1_gh_time_evolution_gate",
+  "generated_at": "2026-08-29T04:51:43.940855+00:00",
+  "status": "PARTIAL_GH_PERIODIC_VACUUM_EVOLUTION_READY",
+  "requirements": {
+    "nonlinear_vacuum_rhs": "PASS",
+    "rk4_time_integration": "PASS",
+    "characteristic_cfl_contract": "PASS",
+    "periodic_gauge_wave_convergence": "PASS",
+    "constraint_propagation_convergence": "PASS",
+    "constraint_damping": "PASS",
+    "constraint_preserving_boundaries": "OPEN",
+    "matter_stress_energy_wiring": "OPEN",
+    "dimensional_observable_mapping": "OPEN"
+  },
+  "closed_requirements": [
+    "nonlinear_vacuum_rhs",
+    "rk4_time_integration",
+    "characteristic_cfl_contract",
+    "periodic_gauge_wave_convergence",
+    "constraint_propagation_convergence",
+    "constraint_damping"
+  ],
+  "open_requirements": [
+    "constraint_preserving_boundaries",
+    "matter_stress_energy_wiring",
+    "dimensional_observable_mapping"
+  ],
+  "controlling_blocker": "curved_3p1_constraint_preserving_boundaries_and_topic13_stress_energy_wiring_missing",
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/curved_3p1_gh_time_evolution_verification.json",
+      "sha256": "9615a6f74fe274af74889abf5fc1c0a6bd79364aa5a35fe2d96b3464ade448e6"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_gh_time_evolution_formula_audit.json",
+      "sha256": "0f967b2049fcfe452a155db107d42a5f57bee0cf865aa715d33693ce0dfcc359"
+    }
+  ],
+  "dependency_unlocked": "constraint-preserving boundary and Topic 13 matter-wiring waves only",
+  "claim_boundary": "periodic vacuum evolution control only; not a production numerical-relativity solver, matter-coupled UET parent, Gravity validation, or external claim",
+  "claim_promotion": false
+}

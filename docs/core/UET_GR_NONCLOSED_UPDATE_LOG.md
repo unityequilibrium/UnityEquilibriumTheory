@@ -6,6 +6,18 @@
 > program without upgrading claims ahead of generated evidence.
 
 ## Entries
+### 2026-08-29 - Close the periodic generalized-harmonic time-evolution lane
+
+- Scope: periodic vacuum RK4 evolution, characteristic CFL policy, exact harmonic gauge wave, and propagated gauge/reduction/curl constraints
+- Wave type: numerical integration, analytic-control, convergence, constraint-damping, gate, registry, and claim-boundary pass
+- Added or changed: GH evolution module, verifier, three artifacts, focused tests, Core exports, parent gate, equation-registry addendum, dependency reporting, and branch/research specifications
+- Verified with: Minkowski exact fixed point; spatial orders `1.9845, 1.9961`; temporal order `3.9266`; `gamma2` damping relative error below `1e-8`; CFL and no-projection/filtering controls
+- Result: `CORE_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY` is `CLOSED_FOR_LANE`; parent is `PARTIAL_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY`; Gravity remains blocked
+- Blocker narrowed: time integration, CFL, periodic constraint propagation, and temporal convergence are no longer open
+- Still open: constraint-preserving non-periodic boundaries, Topic 13 stress-energy wiring, strong-field/multi-chart controls, and dimensional detector observables
+- Next controller: `curved_3p1_constraint_preserving_boundaries_and_topic13_stress_energy_wiring_missing`
+- Claim impact: no promotion to production numerical relativity, matter-coupled UET, Gravity compatibility, or external validation
+
 ### 2026-08-28 - Close the generalized-harmonic nonlinear vacuum-RHS lane
 
 - Scope: source-locked GH Eqs. (35)-(40), metric-state reconstruction, nonlinear vacuum RHS, and algebraic `gamma0` gauge-constraint damping

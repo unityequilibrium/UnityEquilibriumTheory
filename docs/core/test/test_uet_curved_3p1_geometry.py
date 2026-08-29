@@ -143,7 +143,7 @@ def test_parent_and_dependency_gates_remain_partial_and_block_gravity() -> None:
     assert gate["requirements"]["metric_to_ricci_operator"] == "PASS"
     assert (
         gate["requirements"]["metric_and_extrinsic_curvature_evolution"]
-        == "PARTIAL_GH_NONLINEAR_VACUUM_RHS_OPERATOR_ONLY"
+        == "PASS_PERIODIC_GH_VACUUM_TIME_INTEGRATION"
     )
     assert gate["requirements"]["strong_hyperbolicity"] == "PASS"
     assert gate["requirements"]["complete_nonlinear_gh_rhs"] == "PASS"

@@ -6,6 +6,14 @@
 
 ## Entries
 
+### 2026-08-29 - Close the periodic GH vacuum time-evolution lane
+
+- Scope: classical RK4 method-of-lines evolution, characteristic CFL, exact gauge wave, and propagated GH constraints
+- Result: `CORE_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY` is `CLOSED_FOR_LANE`; the curved parent remains `PARTIAL`
+- Verified with: exact Minkowski, harmonic gauge-wave spatial order `1.9845`, RK4 temporal order `3.9266`, analytic `gamma2` damping, CFL/ontology/negative controls, and integrated Core tests
+- Next controller: `curved_3p1_constraint_preserving_boundaries_and_topic13_stress_energy_wiring_missing`
+- Claim impact: no matter-coupled parent, production numerical relativity, Gravity, or global theory promotion
+
 ### 2026-08-29 - Stabilize Topic 13 handoff and curved-parent evidence chain
 
 - Scope: Wave 8 track separation, Topic 13 provenance-cycle repair, nonlinear GH parent integration, and all-wave completion

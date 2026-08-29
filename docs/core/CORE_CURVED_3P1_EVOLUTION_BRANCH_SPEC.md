@@ -1,16 +1,16 @@
 # Core Curved 3+1 Evolution Branch Specification
 
-MAJOR_RESULT_CLOSURE: `GH_NONLINEAR_VACUUM_RHS_CLOSED_FOR_LANE / PARENT_PARTIAL`
+MAJOR_RESULT_CLOSURE: `GH_PERIODIC_VACUUM_EVOLUTION_CLOSED_FOR_LANE / PARENT_PARTIAL`
 
-WHAT_IS_ACTUALLY_CLOSED: The fixed-geodesic ADM branch remains closed as a branch-local hyperbolicity no-go. The selected generalized-harmonic branch now closes its principal/characteristic system and the complete nonlinear vacuum Eqs. (35)-(40) right-hand-side operator, including metric-derived kinematics, Christoffel/gauge-constraint reconstruction, and the algebraic `gamma0` damping term.
+WHAT_IS_ACTUALLY_CLOSED: The fixed-geodesic ADM branch remains closed as a branch-local hyperbolicity no-go. The selected generalized-harmonic branch closes its principal/characteristic system, complete nonlinear vacuum Eqs. (35)-(40) RHS, and periodic RK4 evolution with a fixed characteristic CFL contract. Minkowski, exact harmonic gauge-wave, gauge/reduction/curl propagation, and `gamma2` damping controls pass.
 
-WHAT_REMAINS_OPEN: A time integrator/CFL policy, gauge/reduction constraint propagation over time, temporal convergence, constraint-preserving non-periodic boundaries, Topic 13 stress-energy wiring, and SI observable mapping.
+WHAT_REMAINS_OPEN: Constraint-preserving non-periodic boundaries, Topic 13 stress-energy wiring, multi-chart/strong-field controls, and SI detector-observable mapping.
 
-DEPENDENCY_UNLOCKED: The GH time-integration and constraint-propagation wave only. Gravity/GR remains blocked.
+DEPENDENCY_UNLOCKED: Constraint-preserving boundary and Topic 13 stress-energy wiring waves only. Gravity/GR remains blocked.
 
-STATUS: `PARTIAL_GH_NONLINEAR_VACUUM_RHS_READY`
+STATUS: `PARTIAL_GH_PERIODIC_VACUUM_EVOLUTION_READY`
 
-WHAT_CHANGED: The source-locked first-order GH implementation now evaluates the complete vacuum RHS for declared `H_a` and `nabla_a H_b`. Independent explicit-index controls cover constant and spatially varying periodic states; Minkowski, gauge-derivative injection, `gamma0` isolation/scaling, tensor symmetry, metric-signature rejection, and ontology boundaries pass. No time stepper or matter source was added.
+WHAT_CHANGED: Added a separate periodic vacuum evolution module using classical RK4 and `dt <= cfl min(dx_i)/max(alpha+||beta||_2)`. The stepper evaluates the verified nonlinear RHS at all stages and records unprojected gauge, reduction, and curl constraints without filtering, artificial dissipation, clipping, or fitting.
 
 EQUATION_OR_MAPPING:
 
@@ -27,13 +27,15 @@ VERIFICATION:
 - Pass temporal and spatial convergence without clipping, fitted damping, or hidden filtering.
 - Verify constraint damping and propagation separately from solution accuracy.
 - Add constraint-preserving boundary tests before any non-periodic or black-hole claim.
-- Keep the current RHS result operator-only until temporal convergence and propagated-constraint gates pass.
+- Periodic gauge-wave spatial order is at least `1.9845`; RK4 temporal self-convergence order is `3.9266`.
+- The constant off-diagonal reduction violation follows `exp(-gamma2 t)` within the locked relative-error threshold.
+- Keep the parent partial until non-periodic boundary, matter, and observable gates pass.
 
-CONTROLLING_BLOCKER: `curved_3p1_generalized_harmonic_time_integration_and_constraint_propagation_missing`
+CONTROLLING_BLOCKER: `curved_3p1_constraint_preserving_boundaries_and_topic13_stress_energy_wiring_missing`
 
-NEXT_ACTION: Add a preregistered explicit time integrator and CFL policy, then verify Minkowski/gauge-wave evolution, reduction/gauge-constraint propagation, and temporal-spatial convergence on the periodic branch.
+NEXT_ACTION: Add a named constraint-preserving non-periodic boundary interface and wire the bounded Topic 13 stress-energy projection without relabelling `C`, `Phi`, or `R_gen`.
 
-CLAIM_BOUNDARY: This closes a standard vacuum RHS operator lane only. It does not establish a time-integrated numerical-relativity solver, matter-coupled curved UET solution, Einstein-equation derivation, Gravity compatibility, or external validation.
+CLAIM_BOUNDARY: This closes a bounded periodic vacuum evolution lane only. It does not establish a production numerical-relativity solver, matter-coupled curved UET solution, Einstein-equation derivation, Gravity compatibility, or external validation.
 
 ## Stop Rules
 
