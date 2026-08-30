@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "hyperbolic_phase_field_source_contract",
-  "generated_at": "2026-08-29T04:54:43.307758+00:00",
+  "generated_at": "2026-08-30T10:26:17.651175+00:00",
   "provenance_status": "PASS",
   "status": "EXTERNAL_FORMULA_COMPARATOR_NOT_UET_DERIVATION",
   "source_doi": "10.1098/rspa.2024.0606",

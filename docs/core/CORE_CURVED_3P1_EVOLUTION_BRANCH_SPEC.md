@@ -1,14 +1,14 @@
 # Core Curved 3+1 Evolution Branch Specification
 
-MAJOR_RESULT_CLOSURE: `GH_PERIODIC_VACUUM_EVOLUTION_CLOSED_FOR_LANE / PARENT_PARTIAL`
+MAJOR_RESULT_CLOSURE: `GH_PERIODIC_PRESCRIBED_TOPIC13_MATTER_READY / PARENT_PARTIAL`
 
-WHAT_IS_ACTUALLY_CLOSED: The fixed-geodesic ADM branch remains closed as a branch-local hyperbolicity no-go. The selected generalized-harmonic branch closes its principal/characteristic system, complete nonlinear vacuum Eqs. (35)-(40) RHS, and periodic RK4 evolution with a fixed characteristic CFL contract. Minkowski, exact harmonic gauge-wave, gauge/reduction/curl propagation, and `gamma2` damping controls pass.
+WHAT_IS_ACTUALLY_CLOSED: The fixed-geodesic ADM branch remains closed as a branch-local hyperbolicity no-go. The selected generalized-harmonic branch closes its principal/characteristic system, complete nonlinear vacuum Eqs. (35)-(40) RHS, and periodic RK4 evolution with a fixed characteristic CFL contract. The prescribed Topic 13 He-4/O(2) stress tensor, Eulerian projections, trace-reversed GH source, vacuum-null control, and natural-to-SI multiplicative scaling also pass.
 
-WHAT_REMAINS_OPEN: Constraint-preserving non-periodic boundaries, Topic 13 stress-energy wiring, multi-chart/strong-field controls, and SI detector-observable mapping.
+WHAT_REMAINS_OPEN: Constraint-preserving non-periodic boundaries, self-consistent matter evolution/conservation, multi-chart/strong-field controls, physical SI Einstein-coupling provenance, and detector-observable mapping.
 
-DEPENDENCY_UNLOCKED: Constraint-preserving boundary and Topic 13 stress-energy wiring waves only. Gravity/GR remains blocked.
+DEPENDENCY_UNLOCKED: Constraint-preserving boundary and dimensional-observable waves only. Gravity/GR remains blocked.
 
-STATUS: `PARTIAL_GH_PERIODIC_VACUUM_EVOLUTION_READY`
+STATUS: `PARTIAL_CURVED_3P1_GH_PERIODIC_PRESCRIBED_MATTER_READY`
 
 WHAT_CHANGED: Added a separate periodic vacuum evolution module using classical RK4 and `dt <= cfl min(dx_i)/max(alpha+||beta||_2)`. The stepper evaluates the verified nonlinear RHS at all stages and records unprojected gauge, reduction, and curl constraints without filtering, artificial dissipation, clipping, or fitting.
 
@@ -29,13 +29,13 @@ VERIFICATION:
 - Add constraint-preserving boundary tests before any non-periodic or black-hole claim.
 - Periodic gauge-wave spatial order is at least `1.9845`; RK4 temporal self-convergence order is `3.9266`.
 - The constant off-diagonal reduction violation follows `exp(-gamma2 t)` within the locked relative-error threshold.
-- Keep the parent partial until non-periodic boundary, matter, and observable gates pass.
+- Keep the parent partial until non-periodic boundary, self-consistent matter, and observable gates pass.
 
-CONTROLLING_BLOCKER: `curved_3p1_constraint_preserving_boundaries_and_topic13_stress_energy_wiring_missing`
+CONTROLLING_BLOCKER: `curved_3p1_constraint_preserving_boundaries_and_dimensional_observable_mapping_missing`
 
-NEXT_ACTION: Add a named constraint-preserving non-periodic boundary interface and wire the bounded Topic 13 stress-energy projection without relabelling `C`, `Phi`, or `R_gen`.
+NEXT_ACTION: Add a named constraint-preserving non-periodic boundary interface and a dimensional gravitational-observable contract. Treat self-consistent matter evolution as a separate conservation-compatible wave.
 
-CLAIM_BOUNDARY: This closes a bounded periodic vacuum evolution lane only. It does not establish a production numerical-relativity solver, matter-coupled curved UET solution, Einstein-equation derivation, Gravity compatibility, or external validation.
+CLAIM_BOUNDARY: This closes bounded periodic vacuum evolution plus a prescribed Topic 13 matter-source lane only. It does not establish a production numerical-relativity solver, self-consistent matter-coupled curved UET solution, Einstein-equation derivation, Gravity compatibility, or external validation.
 
 ## Stop Rules
 

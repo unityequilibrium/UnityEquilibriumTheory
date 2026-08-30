@@ -6,6 +6,16 @@
 > program without upgrading claims ahead of generated evidence.
 
 ## Entries
+
+### 2026-08-30 - Close prescribed Topic 13 stress-energy wiring
+
+- Scope: bounded He-4/O(2) stress-energy construction, 3+1 projection, GH source, unit scaling, parent gate, and registry sync
+- Wave type: formula/source composition, algebraic reconstruction, negative-control, ontology, dependency, and claim-boundary pass
+- Result: `CORE_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING_READY` is `CLOSED_FOR_LANE`; parent is `PARTIAL_CURVED_3P1_GH_PERIODIC_PRESCRIBED_MATTER_READY`; Gravity remains blocked
+- Verified with: 23/23 audit checks, rest/boost/nonzero-shift reconstruction, vacuum-null source, natural/SI scaling, and seven focused tests
+- Still open: constraint-preserving non-periodic boundaries, self-consistent matter evolution/conservation, physical SI Einstein coupling, and dimensional detector observables
+- Next controller: `curved_3p1_constraint_preserving_boundaries_and_dimensional_observable_mapping_missing`
+- Claim impact: prescribed source interface only; no matter-coupled spacetime solution, Einstein-equation derivation, or external validation
 ### 2026-08-29 - Close the periodic generalized-harmonic time-evolution lane
 
 - Scope: periodic vacuum RK4 evolution, characteristic CFL policy, exact harmonic gauge wave, and propagated gauge/reduction/curl constraints

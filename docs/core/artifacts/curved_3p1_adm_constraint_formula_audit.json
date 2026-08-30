@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_adm_constraint_formula_audit",
-  "generated_at": "2026-08-29T04:52:16.157506+00:00",
+  "generated_at": "2026-08-30T10:40:45.491982+00:00",
   "status": "PASS_FORMULA_INTERFACE_ONLY",
   "relations": [
     {

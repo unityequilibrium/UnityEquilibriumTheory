@@ -1,0 +1,158 @@
+{
+  "schema_version": "curved-3p1-topic13-matter-wiring-v1",
+  "artifact": "curved_3p1_topic13_matter_wiring_verification",
+  "generated_at": "2026-08-30T10:40:22.286819+00:00",
+  "status": "PASS_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING",
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING_READY",
+    "topic": "core",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "lane-bounded relativistic-fluid stress-energy construction",
+      "Eulerian rho, S_i, and S_ij projection and reconstruction",
+      "trace-reversed prescribed GH matter source",
+      "vacuum null-source and natural-to-SI scaling controls"
+    ],
+    "equation_or_mapping": {
+      "fluid_stress_energy": "T_ab=(epsilon+p)u_a*u_b+p*psi_ab+u_a*q_b+u_b*q_a+pi_ab",
+      "adm_energy": "rho=n^a*n^b*T_ab",
+      "adm_momentum": "S_a=-gamma_a^c*n^d*T_cd",
+      "adm_stress": "S_ab=gamma_a^c*gamma_b^d*T_cd",
+      "gh_matter_source": "d_t Pi_ab|matter=-2*alpha*kappa_E*(T_ab-psi_ab*T/2)"
+    },
+    "units": {
+      "natural": "epsilon, p, q, and pi share one natural energy-density lane",
+      "SI_projection": "epsilon, p, q, and pi are in J m^-3",
+      "GH_source": "kappa_E*T_ab has inverse-coordinate-length squared units"
+    },
+    "derivation_class": "STANDARD_PHYSICS_TRANSCRIPTION_WITH_TOPIC13_EXTERNAL_INPUT_COMPOSITION",
+    "observable": "prescribed He-4/O(2) stress-energy source; no detector observable",
+    "data_role": "CORE_INTEGRATION_INPUT_NOT_EXTERNAL_VALIDATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json",
+        "sha256": "d989b9dd637828dd64f975eaf1f744163ac71e362bde71e46e86e599eced1754"
+      },
+      {
+        "path": "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json",
+        "sha256": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a"
+      },
+      {
+        "path": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+        "sha256": "13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418"
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+        "sha256": "9ea6f37eb43e353b8c89e42b1c3dd01c957b2063e41a09230483989accb2b3f4"
+      },
+      {
+        "path": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
+        "sha256": "1a8289aadbed1c069add276bb3f734d6c642174cf2101a664fba4ee5a8bfd021"
+      },
+      {
+        "path": "docs/core/uet_curved_3p1_matter_wiring.py",
+        "sha256": "d45348efdbbd302c07f425f2f800cd677d14225f1ad49fb36b21de6a257614b1"
+      }
+    ],
+    "verification_status": "PASS_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING",
+    "open_blockers": [
+      "matter-state time evolution",
+      "stress-energy conservation propagation",
+      "self-consistent two-fluid curved transport",
+      "numerical SI Einstein coupling provenance",
+      "constraint-preserving non-periodic boundaries",
+      "detector observable mapping"
+    ],
+    "dependency_unlocked": "constraint-preserving boundary and dimensional-observable waves only",
+    "claim_boundary": "prescribed lane-specific stress-energy construction and projection only; not a self-consistent matter-coupled spacetime solution, Einstein-equation derivation, Gravity validation, or global UET closure"
+  },
+  "input_identity": {
+    "topic13_result": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+    "natural_eos": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+    "si_scale": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
+    "einstein_coupling_witness": 0.25,
+    "einstein_coupling_role": "dimensionless internal operator witness; not a physical SI calibration"
+  },
+  "thresholds": {
+    "algebraic_max_abs": 1e-12
+  },
+  "metrics": {
+    "topic13_natural_energy_density": 0.0007325968938388499,
+    "topic13_natural_pressure": 0.00011423395970049235,
+    "he4_e0_J_m3": 512994.17164886114,
+    "rest_reconstruction_max_abs": 0.0,
+    "boost_reconstruction_max_abs": 0.0,
+    "nonzero_shift_reconstruction_max_abs": 0.0,
+    "nonzero_shift_momentum_max_abs": 0.0,
+    "natural_to_si_scaling_max_abs": 5.684341886080802e-14,
+    "gh_matter_source_max_abs_residual": 0.0,
+    "vacuum_null_source_max_abs_residual": 0.0
+  },
+  "checks": {
+    "gourgoulhon_source_locked": true,
+    "lindblom_source_locked": true,
+    "topic13_core_handoff_closed": true,
+    "topic13_claim_promotion_false": true,
+    "rest_energy_projection_exact": true,
+    "rest_pressure_projection_exact": true,
+    "rest_reconstruction_exact": true,
+    "boost_energy_projection_exact": true,
+    "boost_momentum_projection_exact": true,
+    "boost_reconstruction_exact": true,
+    "nonzero_shift_energy_projection_exact": true,
+    "nonzero_shift_momentum_projection_exact": true,
+    "nonzero_shift_reconstruction_exact": true,
+    "natural_to_si_scale_multiplicative": true,
+    "gh_trace_reversed_source_exact": true,
+    "vacuum_source_is_null": true,
+    "matter_state_not_evolved": true,
+    "stress_conservation_not_claimed": true,
+    "no_clipping": true,
+    "no_fitting": true,
+    "phi_excluded_from_stress_state": true,
+    "r_gen_excluded_from_stress_state": true,
+    "numeric_einstein_coupling_is_witness_only": true
+  },
+  "contract": {
+    "status": "CURVED_3P1_PRESCRIBED_STRESS_ENERGY_WIRING",
+    "equations": {
+      "fluid_stress_energy": "T_ab=(epsilon+p)u_a*u_b+p*psi_ab+u_a*q_b+u_b*q_a+pi_ab",
+      "adm_energy": "rho=n^a*n^b*T_ab",
+      "adm_momentum": "S_a=-gamma_a^c*n^d*T_cd",
+      "adm_stress": "S_ab=gamma_a^c*gamma_b^d*T_cd",
+      "gh_matter_source": "d_t Pi_ab|matter=-2*alpha*kappa_E*(T_ab-psi_ab*T/2)"
+    },
+    "ontology": {
+      "C": "excluded collective coordinate; not stress-energy",
+      "Phi": "excluded effective response variable; not metric or energy density",
+      "R_gen": "excluded derived history trace; no backreaction",
+      "R_obs": "excluded observer record",
+      "psi_ab": "standard Lorentz metric",
+      "T_ab": "independently declared lane-specific stress-energy tensor"
+    },
+    "unit_lanes": {
+      "natural": "epsilon, p, q, and pi share one natural energy-density lane",
+      "SI_projection": "epsilon, p, q, and pi are in J m^-3",
+      "GH_source": "kappa_E*T_ab has inverse-coordinate-length squared units"
+    },
+    "included": [
+      "relativistic fluid stress-energy construction",
+      "ADM Eulerian energy, momentum, and spatial-stress projections",
+      "trace-reversed prescribed GH matter source",
+      "vacuum null source",
+      "natural-to-SI multiplicative scale compatibility"
+    ],
+    "not_implemented": [
+      "matter-state time evolution",
+      "stress-energy conservation propagation",
+      "self-consistent two-fluid curved transport",
+      "numerical SI Einstein coupling provenance",
+      "constraint-preserving non-periodic boundaries",
+      "detector observable mapping"
+    ],
+    "claim_boundary": "prescribed lane-specific stress-energy construction and projection only; not a self-consistent matter-coupled spacetime solution, Einstein-equation derivation, Gravity validation, or global UET closure"
+  },
+  "claim_promotion": false,
+  "controlling_blocker": null,
+  "next_action": "Integrate the passed prescribed source into the curved 3+1 parent; retain self-consistent matter evolution and boundaries as open."
+}

@@ -25,6 +25,21 @@ artifacts may remain useful as diagnostics, but they cannot promote a claim
 while the upstream ontology, units, correspondence, or numerical gate is
 blocked.
 
+## Latest plan update - 2026-08-30 Topic 13 prescribed matter wiring
+
+`CORE_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING_READY` is
+`CLOSED_FOR_LANE`. The He-4/O(2) stress tensor, Eulerian 3+1 projections,
+trace-reversed GH source, vacuum-null control, and natural-to-SI multiplicative
+scale pass 23/23 verifier checks, including a nonzero-shift Eulerian control,
+without fitting, clipping, or ontology drift.
+
+The parent advances to
+`PARTIAL_CURVED_3P1_GH_PERIODIC_PRESCRIBED_MATTER_READY`. Its machine-readable
+open list now contains only `constraint_preserving_boundaries` and
+`dimensional_observable_mapping`. Self-consistent matter evolution and
+stress-energy conservation are explicitly outside the prescribed-source lane;
+Gravity remains blocked.
+
 ## Latest plan update - 2026-08-29 periodic GH vacuum evolution
 
 `CORE_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY` is

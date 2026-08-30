@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "noether_phase_field_map_formula_audit",
-  "generated_at": "2026-08-29T04:54:54+00:00",
+  "generated_at": "2026-08-30T10:27:09+00:00",
   "topic": "docs/core UET GR non-closed response",
   "version": "wave9_v1",
   "benchmark_role": "formula_audit",
@@ -72,12 +72,12 @@
     "docs\\core\\uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
     "docs\\core\\uet_covariant_diffusion.py": "a267b89e39db4a8dfac56e71a070539a9da05a55b8bb8b22216e7fd1b839bc53",
     "docs\\core\\uet_hyperbolic_phase_field_bridge.py": "568c7b0d42d371ad5720f00577c316abd1618eacfe1f0c00009c7a2d3a1ad31f",
-    "docs\\core\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "b4ba3bc631f8d4d64a03e9c268a6ba7de1658e57188d26c780845e5bacca9e2e",
+    "docs\\core\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "1609cfdada2ad9e67ebcb8e9ae53f2f3f035fdc70469424e486eb3f7e53c1f86",
     "docs\\data\\external\\condensed_matter\\phase_transitions\\cahn_hilliard_1958\\source_record.json": "6e72e3beac4697e9b3b77d2397a6868d81434229edd32964102ff84724c10727",
     "docs\\data\\external\\condensed_matter\\phase_transitions\\hohenberg_halperin_1977\\source_record.json": "06cb9de42e6ccfc959ed38abb205513ed2cf3b768afd3c638887bf4abae829da",
     "docs\\data\\external\\condensed_matter\\phase_transitions\\hyperbolic_cahn_hilliard\\dhaouadi_dumbser_gavrilyuk_2025\\source_record.json": "8751305c6296e3fa70f12dc9723e174e56710296d42298dcf0e2f3ccfe09e574",
     "docs\\data\\external\\relativistic_transport\\jain_kovtun_2024\\source_record.json": "90c8c7dfe8256da2b1dbe6631d189470800ea8ed7eec228fc9bedf49dd39dbc7",
-    "docs\\core\\artifacts\\hyperbolic_phase_field_causal_feasibility.json": "fe682d35f5a0f1f4022fdd265559f93a8b82d562b097e312af79237d9abe85e7"
+    "docs\\core\\artifacts\\hyperbolic_phase_field_causal_feasibility.json": "fb9dd229b1e62e8582323934111c539c150a553f7df6ce03532b4b5f1361fa7e"
   },
   "notes": [
     "The affine coordinate map is exact after coarse graining; the full microscopic map is intentionally not invertible.",

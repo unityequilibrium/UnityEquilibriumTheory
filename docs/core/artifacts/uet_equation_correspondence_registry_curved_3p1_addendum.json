@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_equation_correspondence_registry_curved_3p1_addendum",
-  "generated_at": "2026-08-29T04:52:16.157506+00:00",
+  "generated_at": "2026-08-30T10:40:45.491982+00:00",
   "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
   "status": "CANDIDATE_ENTRY_PENDING_MERGE",
   "equation_entries": [
@@ -700,6 +700,96 @@
       "claim_boundary": "periodic vacuum evolution control only; not a production numerical-relativity solver, matter-coupled UET parent, Gravity validation, or external claim",
       "failure_mode": "periodic gauge-wave convergence is overread as a production numerical-relativity or matter-coupled solver",
       "next_hardening_step": "add constraint-preserving non-periodic boundaries and Topic 13 stress-energy wiring"
+    },
+    {
+      "equation_id": "uet.main_theory.curved_3p1.topic13_prescribed_matter_source",
+      "version": "topic13-prescribed-matter-wiring-v1",
+      "classification": "standard_physics_matter_source_interface",
+      "relation_or_code_path": "docs/core/uet_curved_3p1_matter_wiring.py",
+      "formula_ids": [
+        "UET-CURVED3P1-MATTER-TAB-021",
+        "UET-CURVED3P1-MATTER-ADM-022",
+        "UET-CURVED3P1-MATTER-GH-023"
+      ],
+      "variables": {
+        "T_ab": "declared lane-specific stress-energy tensor",
+        "rho": "Eulerian energy density",
+        "S_i": "Eulerian momentum density",
+        "S_ij": "Eulerian spatial stress",
+        "psi_ab": "spacetime metric; not UET Phi",
+        "kappa_E": "declared Einstein coupling; numeric SI provenance open"
+      },
+      "mathematical_role": "construct and project a prescribed Topic 13 stress-energy source into the GH metric RHS",
+      "standard_physics_counterpart": "relativistic-fluid stress tensor, 3+1 matter projections, and trace-reversed Einstein source",
+      "observable_mapping": {
+        "status": "PARTIAL",
+        "reason": "He-4/O(2) natural and SI stress scales are connected; detector and gravitational observables remain open"
+      },
+      "unit_lane": {
+        "natural": "epsilon, p, q, and pi share one natural energy-density lane",
+        "SI_projection": "epsilon, p, q, and pi are in J m^-3",
+        "GH_source": "kappa_E*T_ab has inverse-coordinate-length squared units"
+      },
+      "parameter_dimensions": {
+        "natural": "epsilon, p, q, and pi share one natural energy-density lane",
+        "SI_projection": "epsilon, p, q, and pi are in J m^-3",
+        "GH_source": "kappa_E*T_ab has inverse-coordinate-length squared units"
+      },
+      "source_or_origin": [
+        {
+          "path": "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json",
+          "sha256": "d989b9dd637828dd64f975eaf1f744163ac71e362bde71e46e86e599eced1754"
+        },
+        {
+          "path": "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json",
+          "sha256": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a"
+        },
+        {
+          "path": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+          "sha256": "13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418"
+        },
+        {
+          "path": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+          "sha256": "9ea6f37eb43e353b8c89e42b1c3dd01c957b2063e41a09230483989accb2b3f4"
+        },
+        {
+          "path": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
+          "sha256": "1a8289aadbed1c069add276bb3f734d6c642174cf2101a664fba4ee5a8bfd021"
+        },
+        {
+          "path": "docs/core/uet_curved_3p1_matter_wiring.py",
+          "sha256": "d45348efdbbd302c07f425f2f800cd677d14225f1ad49fb36b21de6a257614b1"
+        }
+      ],
+      "assumptions": [
+        "(-,+,+,+) signature",
+        "prescribed matter state",
+        "future-normalized four velocity",
+        "heat flux orthogonal to four velocity",
+        "anisotropic stress symmetric, orthogonal, and trace free"
+      ],
+      "symmetry_and_conservation": "stress symmetry and projection reconstruction pass; stress-energy conservation evolution remains open",
+      "limiting_cases": [
+        "rest perfect fluid",
+        "boosted perfect fluid",
+        "vacuum null source"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_curved_3p1_matter_wiring.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_curved_3p1_matter_wiring.py",
+        "docs/core/artifacts/curved_3p1_topic13_matter_wiring_verification.json",
+        "docs/core/test/test_uet_curved_3p1_matter_wiring.py"
+      ],
+      "evidence_class": "INTERNAL_FORMAL_ALGEBRAIC_AND_SOURCE_COMPOSITION_CONTROL",
+      "proof_status": "prescribed stress-energy construction/projection and GH source pass; self-consistent matter evolution remains open",
+      "downstream_dependencies": [
+        "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"
+      ],
+      "claim_boundary": "prescribed lane-specific stress-energy construction and projection only; not a self-consistent matter-coupled spacetime solution, Einstein-equation derivation, Gravity validation, or global UET closure",
+      "failure_mode": "prescribed source wiring is overread as a self-consistent matter-coupled spacetime solution",
+      "next_hardening_step": "add constraint-preserving boundaries and a conservation-compatible matter evolution contract"
     }
   ]
 }

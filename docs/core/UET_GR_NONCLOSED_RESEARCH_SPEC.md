@@ -1,13 +1,29 @@
 # UET GR Closed-Limit and Non-Closed Response Research Specification
 
-> **Status:** `GH PERIODIC VACUUM EVOLUTION VERIFIED / PARENT PARTIAL`
+> **Status:** `GH PERIODIC PRESCRIBED TOPIC 13 MATTER SOURCE VERIFIED / PARENT PARTIAL`
 > **Current claim class:** `B`
-> **Current controlling blocker:** `curved_3p1_constraint_preserving_boundaries_and_topic13_stress_energy_wiring_missing`
+> **Current controlling blocker:** `curved_3p1_constraint_preserving_boundaries_and_dimensional_observable_mapping_missing`
 > **Program rule:** General relativity is the null/closed-response model. A
 > non-zero UET response is an empirical alternative, not a conclusion assumed
 > from the existence of the model.
 
-## Current curved 3+1 boundary (2026-08-29, periodic GH evolution wave)
+## Current curved 3+1 boundary (2026-08-30, prescribed Topic 13 matter-source wave)
+
+The bounded He-4/O(2) Topic 13 handoff now constructs a covariant relativistic-fluid
+stress tensor, projects it to Eulerian `rho`, `S_i`, and `S_ij`, and supplies the
+trace-reversed prescribed matter term to the nonlinear GH `Pi_ab` right-hand side.
+Rest and boosted perfect-fluid reconstruction, vacuum-null behavior, ontology guards,
+and natural-to-SI multiplicative scaling pass. This closes
+`CORE_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING_READY` for its declared lane.
+
+The parent advances to
+`PARTIAL_CURVED_3P1_GH_PERIODIC_PRESCRIBED_MATTER_READY`. This does not evolve the
+matter state, prove stress-energy conservation in time, fix a physical SI Einstein
+coupling, or supply a detector observable. Constraint-preserving non-periodic
+boundaries and dimensional observable mapping remain the parent blockers, so Gravity
+remains blocked.
+
+## Previous curved 3+1 boundary (2026-08-29, periodic GH evolution wave)
 
 The verified nonlinear vacuum GH RHS now advances with classical RK4 under a
 fixed conservative characteristic CFL contract. Exact Minkowski and harmonic
@@ -19,9 +35,10 @@ violation follows the analytic `exp(-gamma2 t)` damping rate.
 This closes `CORE_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY` for its
 periodic control lane. The parent advances to
 `PARTIAL_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY`, not
-`CLOSED_FOR_CORE`. Constraint-preserving non-periodic boundaries, Topic 13
-stress-energy wiring, dimensional detector observables, and strong-field or
-multi-chart validation remain open. Gravity remains blocked.
+`CLOSED_FOR_CORE`. That historical wave left constraint-preserving non-periodic
+boundaries, Topic 13 stress-energy wiring, dimensional detector observables, and
+strong-field or multi-chart validation open; the prescribed matter-wiring item is
+closed by the 2026-08-30 wave above.
 
 The selected first-order GH branch now evaluates the complete nonlinear vacuum
 right-hand sides in Lindblom et al. Eqs. (35)-(39) and reconstructs the
@@ -47,8 +64,8 @@ second-order spatial operator convergence also pass.
 This closes `CORE_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY` for its declared lane.
 Together with the nonlinear vacuum-RHS and periodic evolution results it
 removes the formulation, RHS-transcription, time-integration, CFL, and
-periodic constraint-propagation blockers. Boundaries, matter wiring, and
-observables remain open.
+periodic constraint-propagation blockers. The later prescribed-matter wave
+closes construction/projection only; boundaries and observables remain open.
 
 The parent now also evaluates the nonlinear periodic ADM metric and
 extrinsic-curvature right-hand sides under declared lapse and shift. Minkowski
@@ -81,9 +98,10 @@ holdout data are used.
 This closes the ADM constraint, periodic geometry, ADM RHS operator,
 fixed-gauge no-go, GH principal system, nonlinear vacuum-RHS, and periodic GH
 time-evolution subresults for their individual lanes only. The parent result
-remains `PARTIAL`: non-periodic boundary treatment, Topic 13 stress-energy
-projection, and dimensional observable mapping remain open. Gravity is not
-unlocked.
+remains `PARTIAL`: non-periodic boundary treatment and dimensional observable
+mapping remain open. The Topic 13 prescribed projection now passes, while
+self-consistent matter evolution/conservation remains outside that result.
+Gravity is not unlocked.
 
 ## 1. Research question
 

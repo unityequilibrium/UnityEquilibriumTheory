@@ -951,3 +951,27 @@ __all__ += [
     "harmonic_gauge_wave_state",
     "generalized_harmonic_time_evolution_contract",
 ]
+
+from .uet_curved_3p1_matter_wiring import (
+    CURVED_3P1_MATTER_WIRING_STATUS,
+    RelativisticFluidState,
+    CurvedMatterProjection,
+    GHNonlinearMatterRHS,
+    relativistic_fluid_stress_energy,
+    project_stress_energy_3p1,
+    trace_reversed_stress_energy,
+    compute_nonlinear_prescribed_matter_gh_rhs,
+    curved_3p1_matter_wiring_contract,
+)
+
+__all__ += [
+    "CURVED_3P1_MATTER_WIRING_STATUS",
+    "RelativisticFluidState",
+    "CurvedMatterProjection",
+    "GHNonlinearMatterRHS",
+    "relativistic_fluid_stress_energy",
+    "project_stress_energy_3p1",
+    "trace_reversed_stress_energy",
+    "compute_nonlinear_prescribed_matter_gh_rhs",
+    "curved_3p1_matter_wiring_contract",
+]

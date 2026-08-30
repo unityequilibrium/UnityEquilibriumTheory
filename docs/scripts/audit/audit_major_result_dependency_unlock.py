@@ -161,7 +161,16 @@ def main() -> int:
         ),
         None,
     )
-    if any((curved_parent, adm_interface, geometry_operator, adm_evolution_rhs, fixed_gauge_no_go, gh_principal_system, gh_nonlinear_vacuum_rhs, gh_periodic_vacuum_evolution)):
+    topic13_prescribed_matter = next(
+        (
+            entry
+            for entry in register["entries"]
+            if entry.get("major_result_id")
+            == "CORE_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING_READY"
+        ),
+        None,
+    )
+    if any((curved_parent, adm_interface, geometry_operator, adm_evolution_rhs, fixed_gauge_no_go, gh_principal_system, gh_nonlinear_vacuum_rhs, gh_periodic_vacuum_evolution, topic13_prescribed_matter)):
         artifact["curved_3p1_progress"] = {
             "parent": curved_parent,
             "adm_constraint_interface": adm_interface,
@@ -171,14 +180,13 @@ def main() -> int:
             "generalized_harmonic_principal_system": gh_principal_system,
             "generalized_harmonic_nonlinear_vacuum_rhs": gh_nonlinear_vacuum_rhs,
             "generalized_harmonic_periodic_vacuum_evolution": gh_periodic_vacuum_evolution,
+            "topic13_prescribed_matter_wiring": topic13_prescribed_matter,
             "gravity_unlock_status": decisions["GR_CLASSICAL_COMPATIBILITY_LANE"]["status"],
-            "controlling_blocker": (
-                "curved_3p1_constraint_preserving_boundaries_and_"
-                "topic13_stress_energy_wiring_missing"
-            ),
+            "controlling_blocker": "curved_3p1_constraint_preserving_boundaries_and_dimensional_observable_mapping_missing",
             "claim_boundary": (
                 "ADM constraint, periodic spatial geometry, RHS operator, and "
-                "fixed-gauge no-go, GH principal/nonlinear RHS, and periodic vacuum-evolution progress only; "
+                "fixed-gauge no-go, GH principal/nonlinear RHS, periodic vacuum evolution, "
+                "and prescribed Topic 13 matter-source progress only; "
                 "the parent is not CLOSED_FOR_CORE and Gravity remains blocked"
             ),
         }

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_all_waves_completion_audit",
-  "generated_at": "2026-08-29",
+  "generated_at": "2026-08-30",
   "audit_status": "PASS_WITH_FOUNDATION_PHYSICS_BLOCKED",
   "status": "PROGRAM_CONTROL_CLOSED_FOUNDATION_PHYSICS_NOT_CLOSED",
   "objective": "close every planned research wave as a bounded project-control lane without promoting blocked physics",
@@ -605,10 +605,10 @@
   "core_regression": {
     "command": "C:\\Users\\santa\\Desktop\\uet_harness\\.venv\\Scripts\\python.exe -m pytest -q docs/core/test",
     "exit_code": 0,
-    "passed_count": 1265,
+    "passed_count": 1271,
     "failed_count": 0,
     "status": "PASS",
-    "tail": "  Did you mean to use `assert` instead of `return`?\n  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.\n    warnings.warn(\n\ndocs/core/test/test_parameter_engine.py::test_engine\n  C:\\Users\\santa\\Desktop\\uet_harness\\.venv\\Lib\\site-packages\\_pytest\\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but docs/core/test/test_parameter_engine.py::test_engine returned <class 'bool'>.\n  Did you mean to use `assert` instead of `return`?\n  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.\n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n1265 passed, 6 warnings in <elapsed> (0:02:55)"
+    "tail": "  Did you mean to use `assert` instead of `return`?\n  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.\n    warnings.warn(\n\ndocs/core/test/test_parameter_engine.py::test_engine\n  C:\\Users\\santa\\Desktop\\uet_harness\\.venv\\Lib\\site-packages\\_pytest\\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but docs/core/test/test_parameter_engine.py::test_engine returned <class 'bool'>.\n  Did you mean to use `assert` instead of `return`?\n  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.\n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n1271 passed, 6 warnings in <elapsed> (0:02:54)"
   },
   "checks": {
     "closure_artifact_passes": true,

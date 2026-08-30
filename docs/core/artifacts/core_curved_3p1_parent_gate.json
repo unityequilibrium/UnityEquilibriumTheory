@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "artifact": "core_curved_3p1_parent_gate",
-  "generated_at": "2026-08-29T04:52:16.157506+00:00",
-  "status": "PARTIAL_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY",
+  "generated_at": "2026-08-30T10:40:45.491982+00:00",
+  "status": "PARTIAL_CURVED_3P1_GH_PERIODIC_PRESCRIBED_MATTER_READY",
   "major_result": {
     "major_result_id": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
     "topic": "core",
@@ -29,27 +29,31 @@
       "exact Minkowski and harmonic gauge-wave evolution controls",
       "second-order spatial and fourth-order temporal convergence",
       "periodic gauge, reduction, and curl constraint propagation",
-      "gamma2 reduction-constraint damping over time"
+      "gamma2 reduction-constraint damping over time",
+      "Topic 13 He-4/O(2) prescribed relativistic stress-energy tensor",
+      "Eulerian energy, momentum, and spatial-stress projections",
+      "trace-reversed GH prescribed matter source",
+      "natural-to-SI multiplicative stress-energy scaling control"
     ],
     "equation_or_mapping": {
       "hamiltonian": "R3 + K^2 - K_ij K^ij - 16*pi*G*rho = 0",
-      "momentum": "D_j(K^j_i - delta^j_i*K) - 8*pi*G*S_i = 0"
+      "momentum": "D_j(K^j_i - delta^j_i*K) - 8*pi*G*S_i = 0",
+      "fluid_stress_energy": "T_ab=(epsilon+p)u_a*u_b+p*psi_ab+u_a*q_b+u_b*q_a+pi_ab",
+      "adm_energy": "rho=n^a*n^b*T_ab",
+      "adm_momentum": "S_a=-gamma_a^c*n^d*T_cd",
+      "adm_stress": "S_ab=gamma_a^c*gamma_b^d*T_cd",
+      "gh_matter_source": "d_t Pi_ab|matter=-2*alpha*kappa_E*(T_ab-psi_ab*T/2)"
     },
     "units": "geometric constraint lane; SI observable mapping open",
     "derivation_class": "incremental curved 3+1 parent construction",
     "observable": "constraint residual diagnostics only",
     "data_role": "internal analytic controls",
-    "verification_status": "PARTIAL_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY",
+    "verification_status": "PARTIAL_CURVED_3P1_GH_PERIODIC_PRESCRIBED_MATTER_READY",
     "open_blockers": [
-      "lapse_shift_gauge",
-      "metric_and_extrinsic_curvature_evolution",
-      "constraint_propagation",
-      "temporal_spatial_convergence",
       "constraint_preserving_boundaries",
-      "topic13_stress_energy_projection",
       "dimensional_observable_mapping"
     ],
-    "dependency_unlocked": "constraint-preserving boundary and Topic 13 stress-energy wiring waves only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
+    "dependency_unlocked": "constraint-preserving boundary and dimensional-observable waves only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
     "claim_boundary": "partial parent construction; not CLOSED_FOR_CORE and not Gravity/GR compatibility"
   },
   "requirements": {
@@ -73,18 +77,18 @@
     "constraint_propagation": "PASS_PERIODIC_GAUGE_REDUCTION_CURL_CONVERGENCE",
     "temporal_spatial_convergence": "PASS_RK4_TEMPORAL_AND_SECOND_ORDER_SPATIAL",
     "constraint_preserving_boundaries": "OPEN",
-    "topic13_stress_energy_projection": "OPEN",
+    "topic13_stress_energy_projection": "PASS_PRESCRIBED_TOPIC13_HE4_SOURCE",
     "dimensional_observable_mapping": "OPEN"
   },
-  "controlling_blocker": "curved_3p1_constraint_preserving_boundaries_and_topic13_stress_energy_wiring_missing",
+  "controlling_blocker": "curved_3p1_constraint_preserving_boundaries_and_dimensional_observable_mapping_missing",
   "evidence_artifacts": [
     {
       "path": "docs/core/artifacts/curved_3p1_adm_constraint_interface_audit.json",
-      "sha256": "17a51e146824f937f6d05d49cb0c31ff16cc797e3863757807bb07cdc4455cf7"
+      "sha256": "ce5ed05764b8d765819af1ff7485b5c2a1d30a0ddcc3e76e20686d7cfd80b3f0"
     },
     {
       "path": "docs/core/artifacts/curved_3p1_adm_constraint_formula_audit.json",
-      "sha256": "d648f8d3da6ec1e9ee53f38a9c387a52ffafc743ea6969f799473458c5c51902"
+      "sha256": "72ecf1679800c48caf38b2cb9e1ed309b727436fe45d3226a19fa5aab8514b25"
     },
     {
       "path": "docs/core/artifacts/curved_3p1_geometry_operator_verification.json",
@@ -145,6 +149,18 @@
     {
       "path": "docs/core/artifacts/curved_3p1_gh_time_evolution_gate.json",
       "sha256": "bed3535a5a922b4df50b8169eaa7b673a5185380e9c6c8c7fcb6e48006f08339"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_topic13_matter_wiring_verification.json",
+      "sha256": "5dc24a2f74b0675441e51ffa3e63182b40409e59d242c02c27d1370c235f3166"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_topic13_matter_wiring_formula_audit.json",
+      "sha256": "e46ad0f266231c8d068d53ee79086b101b98f661b78680d37844e22ae09bdadf"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_topic13_matter_wiring_gate.json",
+      "sha256": "6cd4b52a6d4b18d3338563374ebe6d36644b381a74c25bdb589a2a819d71852e"
     }
   ],
   "claim_promotion": false

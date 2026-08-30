@@ -106,9 +106,13 @@ def test_generated_artifacts_are_hash_linked_and_partial() -> None:
     assert gate["requirements"]["characteristic_cfl_policy"] == "PASS"
     assert gate["requirements"]["constraint_propagation"] == "PASS_PERIODIC_GAUGE_REDUCTION_CURL_CONVERGENCE"
     assert gate["requirements"]["temporal_spatial_convergence"] == "PASS_RK4_TEMPORAL_AND_SECOND_ORDER_SPATIAL"
+    assert (
+        gate["requirements"]["topic13_stress_energy_projection"]
+        == "PASS_PRESCRIBED_TOPIC13_HE4_SOURCE"
+    )
     assert gate["controlling_blocker"] == (
         "curved_3p1_constraint_preserving_boundaries_and_"
-        "topic13_stress_energy_wiring_missing"
+        "dimensional_observable_mapping_missing"
     )
     assert gate["claim_promotion"] is False
 

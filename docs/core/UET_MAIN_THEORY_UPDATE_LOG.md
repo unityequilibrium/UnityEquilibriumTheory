@@ -6,6 +6,14 @@
 
 ## Entries
 
+### 2026-08-30 - Close the prescribed Topic 13 curved-matter wiring lane
+
+- Scope: He-4/O(2) relativistic stress tensor, Eulerian 3+1 projection, trace-reversed GH source, and natural/SI scaling control
+- Result: `CORE_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING_READY` is `CLOSED_FOR_LANE`; the curved parent remains `PARTIAL`
+- Verified with: 23/23 source/unit/ontology/algebra checks plus seven focused module tests, including a nonzero-shift Eulerian projection
+- Next controller: `curved_3p1_constraint_preserving_boundaries_and_dimensional_observable_mapping_missing`
+- Claim impact: no self-consistent matter evolution, physical SI Einstein coupling, Gravity, or global theory promotion
+
 ### 2026-08-29 - Close the periodic GH vacuum time-evolution lane
 
 - Scope: classical RK4 method-of-lines evolution, characteristic CFL, exact gauge wave, and propagated GH constraints

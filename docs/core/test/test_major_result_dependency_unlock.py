@@ -22,7 +22,8 @@ def test_curved_parent_work_unlocks_after_topic13_core_ready() -> None:
     progress = artifact["curved_3p1_progress"]
     assert progress["generalized_harmonic_nonlinear_vacuum_rhs"]["closure_level"] == "CLOSED_FOR_LANE"
     assert progress["generalized_harmonic_periodic_vacuum_evolution"]["closure_level"] == "CLOSED_FOR_LANE"
+    assert progress["topic13_prescribed_matter_wiring"]["closure_level"] == "CLOSED_FOR_LANE"
     assert progress["controlling_blocker"] == (
         "curved_3p1_constraint_preserving_boundaries_and_"
-        "topic13_stress_energy_wiring_missing"
+        "dimensional_observable_mapping_missing"
     )

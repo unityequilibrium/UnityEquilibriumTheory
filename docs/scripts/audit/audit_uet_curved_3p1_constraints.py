@@ -45,6 +45,9 @@ GH_NONLINEAR_GATE = ARTIFACTS / "curved_3p1_gh_nonlinear_vacuum_gate.json"
 GH_TIME_VERIFY = ARTIFACTS / "curved_3p1_gh_time_evolution_verification.json"
 GH_TIME_FORMULA = ARTIFACTS / "curved_3p1_gh_time_evolution_formula_audit.json"
 GH_TIME_GATE = ARTIFACTS / "curved_3p1_gh_time_evolution_gate.json"
+MATTER_VERIFY = ARTIFACTS / "curved_3p1_topic13_matter_wiring_verification.json"
+MATTER_FORMULA = ARTIFACTS / "curved_3p1_topic13_matter_wiring_formula_audit.json"
+MATTER_GATE = ARTIFACTS / "curved_3p1_topic13_matter_wiring_gate.json"
 
 
 def _sha256(path: Path) -> str:
@@ -73,6 +76,9 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
     gh_time_verification = json.loads(GH_TIME_VERIFY.read_text(encoding="utf-8"))
     gh_time_formula = json.loads(GH_TIME_FORMULA.read_text(encoding="utf-8"))
     gh_time_gate = json.loads(GH_TIME_GATE.read_text(encoding="utf-8"))
+    matter_verification = json.loads(MATTER_VERIFY.read_text(encoding="utf-8"))
+    matter_formula = json.loads(MATTER_FORMULA.read_text(encoding="utf-8"))
+    matter_gate = json.loads(MATTER_GATE.read_text(encoding="utf-8"))
     geometry_passed = (
         geometry_verification.get("status") == "PASS_CURVED_3P1_GEOMETRY_OPERATOR"
         and geometry_verification.get("major_result", {}).get("closure_level")
@@ -118,6 +124,17 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
         and gh_time_gate.get("status")
         == "PARTIAL_GH_PERIODIC_VACUUM_EVOLUTION_READY"
         and all(gh_time_verification.get("checks", {}).values())
+    )
+    matter_passed = (
+        matter_verification.get("status")
+        == "PASS_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING"
+        and matter_verification.get("major_result", {}).get("closure_level")
+        == "CLOSED_FOR_LANE"
+        and matter_formula.get("status")
+        == "PASS_SOURCE_LOCKED_TOPIC13_MATTER_FORMULAS"
+        and matter_gate.get("status")
+        == "PARTIAL_CURVED_3P1_PRESCRIBED_MATTER_SOURCE_READY"
+        and all(matter_verification.get("checks", {}).values())
     )
     threshold = 1e-12
 
@@ -324,33 +341,40 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
         "constraint_propagation": "PASS_PERIODIC_GAUGE_REDUCTION_CURL_CONVERGENCE" if gh_time_passed else ("PARTIAL_REDUCTION_AND_ALGEBRAIC_GAUGE_DAMPING_ONLY" if gh_nonlinear_passed else ("PARTIAL_REDUCTION_CONSTRAINT_DAMPING_ONLY" if gh_principal_passed else "OPEN")),
         "temporal_spatial_convergence": "PASS_RK4_TEMPORAL_AND_SECOND_ORDER_SPATIAL" if gh_time_passed else ("PARTIAL_SPATIAL_OPERATOR_CONVERGENCE_ONLY" if gh_principal_passed else "OPEN"),
         "constraint_preserving_boundaries": "OPEN",
-        "topic13_stress_energy_projection": "OPEN",
+        "topic13_stress_energy_projection": "PASS_PRESCRIBED_TOPIC13_HE4_SOURCE"
+        if matter_passed
+        else "OPEN",
         "dimensional_observable_mapping": "OPEN",
     }
     parent_status = (
-        "PARTIAL_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY"
+        "PARTIAL_CURVED_3P1_GH_PERIODIC_PRESCRIBED_MATTER_READY"
         if passed
         and geometry_passed
         and evolution_passed
         and gh_principal_passed
         and gh_nonlinear_passed
         and gh_time_passed
+        and matter_passed
         else (
-            "PARTIAL_CURVED_3P1_GH_NONLINEAR_VACUUM_RHS_READY"
-            if passed and geometry_passed and evolution_passed and gh_principal_passed and gh_nonlinear_passed
+            "PARTIAL_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY"
+            if passed and geometry_passed and evolution_passed and gh_principal_passed and gh_nonlinear_passed and gh_time_passed
             else (
-                "PARTIAL_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY"
-                if passed and geometry_passed and evolution_passed and gh_principal_passed
+                "PARTIAL_CURVED_3P1_GH_NONLINEAR_VACUUM_RHS_READY"
+                if passed and geometry_passed and evolution_passed and gh_principal_passed and gh_nonlinear_passed
                 else (
-                    "PARTIAL_CURVED_3P1_ADM_EVOLUTION_NOGO_READY"
-                    if passed and geometry_passed and evolution_passed
+                    "PARTIAL_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY"
+                    if passed and geometry_passed and evolution_passed and gh_principal_passed
                     else (
-                        "PARTIAL_CURVED_3P1_PARENT_GEOMETRY_OPERATOR_READY"
-                        if passed and geometry_passed
+                        "PARTIAL_CURVED_3P1_ADM_EVOLUTION_NOGO_READY"
+                        if passed and geometry_passed and evolution_passed
                         else (
-                            "PARTIAL_CURVED_3P1_PARENT_CONSTRAINT_INTERFACE_READY"
-                            if passed
-                            else "BLOCKED"
+                            "PARTIAL_CURVED_3P1_PARENT_GEOMETRY_OPERATOR_READY"
+                            if passed and geometry_passed
+                            else (
+                                "PARTIAL_CURVED_3P1_PARENT_CONSTRAINT_INTERFACE_READY"
+                                if passed
+                                else "BLOCKED"
+                            )
                         )
                     )
                 )
@@ -406,6 +430,20 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "gamma2 reduction-constraint damping over time",
             ]
         )
+    if matter_passed:
+        closed_components.extend(
+            [
+                "Topic 13 He-4/O(2) prescribed relativistic stress-energy tensor",
+                "Eulerian energy, momentum, and spatial-stress projections",
+                "trace-reversed GH prescribed matter source",
+                "natural-to-SI multiplicative stress-energy scaling control",
+            ]
+        )
+    open_parent_requirements = [
+        key
+        for key, value in parent_requirements.items()
+        if not (value == "CLOSED_AS_NO_GO" or value.startswith("PASS"))
+    ]
     gate = {
         "schema_version": "1.0",
         "artifact": "core_curved_3p1_parent_gate",
@@ -416,18 +454,23 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
             "topic": "core",
             "closure_level": "PARTIAL",
             "what_is_closed": closed_components,
-            "equation_or_mapping": contract["equations"],
+            "equation_or_mapping": {
+                **contract["equations"],
+                **matter_verification["major_result"]["equation_or_mapping"],
+            },
             "units": "geometric constraint lane; SI observable mapping open",
             "derivation_class": "incremental curved 3+1 parent construction",
             "observable": "constraint residual diagnostics only",
             "data_role": "internal analytic controls",
             "verification_status": parent_status,
-            "open_blockers": [key for key, value in parent_requirements.items() if value not in {"PASS", "CLOSED_AS_NO_GO"}],
-            "dependency_unlocked": "constraint-preserving boundary and Topic 13 stress-energy wiring waves only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
+            "open_blockers": open_parent_requirements,
+            "dependency_unlocked": "constraint-preserving boundary and dimensional-observable waves only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
             "claim_boundary": "partial parent construction; not CLOSED_FOR_CORE and not Gravity/GR compatibility",
         },
         "requirements": parent_requirements,
-        "controlling_blocker": "curved_3p1_constraint_preserving_boundaries_and_topic13_stress_energy_wiring_missing",
+        "controlling_blocker": "curved_3p1_constraint_preserving_boundaries_and_dimensional_observable_mapping_missing"
+        if matter_passed
+        else "curved_3p1_constraint_preserving_boundaries_and_topic13_stress_energy_wiring_missing",
         "evidence_artifacts": [
             {"path": VERIFY.relative_to(ROOT).as_posix(), "sha256": None},
             {"path": FORMULA.relative_to(ROOT).as_posix(), "sha256": None},
@@ -446,6 +489,9 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
             {"path": GH_TIME_VERIFY.relative_to(ROOT).as_posix(), "sha256": None},
             {"path": GH_TIME_FORMULA.relative_to(ROOT).as_posix(), "sha256": None},
             {"path": GH_TIME_GATE.relative_to(ROOT).as_posix(), "sha256": None},
+            {"path": MATTER_VERIFY.relative_to(ROOT).as_posix(), "sha256": None},
+            {"path": MATTER_FORMULA.relative_to(ROOT).as_posix(), "sha256": None},
+            {"path": MATTER_GATE.relative_to(ROOT).as_posix(), "sha256": None},
         ],
         "claim_promotion": False,
     }
@@ -676,6 +722,55 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "claim_boundary": gh_time_verification["major_result"]["claim_boundary"],
                 "failure_mode": "periodic gauge-wave convergence is overread as a production numerical-relativity or matter-coupled solver",
                 "next_hardening_step": "add constraint-preserving non-periodic boundaries and Topic 13 stress-energy wiring"
+            },
+            {
+                "equation_id": "uet.main_theory.curved_3p1.topic13_prescribed_matter_source",
+                "version": "topic13-prescribed-matter-wiring-v1",
+                "classification": "standard_physics_matter_source_interface",
+                "relation_or_code_path": "docs/core/uet_curved_3p1_matter_wiring.py",
+                "formula_ids": [
+                    "UET-CURVED3P1-MATTER-TAB-021",
+                    "UET-CURVED3P1-MATTER-ADM-022",
+                    "UET-CURVED3P1-MATTER-GH-023"
+                ],
+                "variables": {
+                    "T_ab": "declared lane-specific stress-energy tensor",
+                    "rho": "Eulerian energy density",
+                    "S_i": "Eulerian momentum density",
+                    "S_ij": "Eulerian spatial stress",
+                    "psi_ab": "spacetime metric; not UET Phi",
+                    "kappa_E": "declared Einstein coupling; numeric SI provenance open"
+                },
+                "mathematical_role": "construct and project a prescribed Topic 13 stress-energy source into the GH metric RHS",
+                "standard_physics_counterpart": "relativistic-fluid stress tensor, 3+1 matter projections, and trace-reversed Einstein source",
+                "observable_mapping": {
+                    "status": "PARTIAL",
+                    "reason": "He-4/O(2) natural and SI stress scales are connected; detector and gravitational observables remain open"
+                },
+                "unit_lane": matter_verification["major_result"]["units"],
+                "parameter_dimensions": matter_verification["major_result"]["units"],
+                "source_or_origin": matter_verification["major_result"]["evidence_artifacts"],
+                "assumptions": [
+                    "(-,+,+,+) signature",
+                    "prescribed matter state",
+                    "future-normalized four velocity",
+                    "heat flux orthogonal to four velocity",
+                    "anisotropic stress symmetric, orthogonal, and trace free"
+                ],
+                "symmetry_and_conservation": "stress symmetry and projection reconstruction pass; stress-energy conservation evolution remains open",
+                "limiting_cases": ["rest perfect fluid", "boosted perfect fluid", "vacuum null source"],
+                "implementation_paths": ["docs/core/uet_curved_3p1_matter_wiring.py"],
+                "verifier_paths": [
+                    "docs/scripts/audit/audit_uet_curved_3p1_matter_wiring.py",
+                    MATTER_VERIFY.relative_to(ROOT).as_posix(),
+                    "docs/core/test/test_uet_curved_3p1_matter_wiring.py"
+                ],
+                "evidence_class": "INTERNAL_FORMAL_ALGEBRAIC_AND_SOURCE_COMPOSITION_CONTROL",
+                "proof_status": "prescribed stress-energy construction/projection and GH source pass; self-consistent matter evolution remains open",
+                "downstream_dependencies": ["CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"],
+                "claim_boundary": matter_verification["major_result"]["claim_boundary"],
+                "failure_mode": "prescribed source wiring is overread as a self-consistent matter-coupled spacetime solution",
+                "next_hardening_step": "add constraint-preserving boundaries and a conservation-compatible matter evolution contract"
             }
         ],
     }
@@ -704,6 +799,9 @@ def main() -> int:
     gate["evidence_artifacts"][14]["sha256"] = _sha256(GH_TIME_VERIFY)
     gate["evidence_artifacts"][15]["sha256"] = _sha256(GH_TIME_FORMULA)
     gate["evidence_artifacts"][16]["sha256"] = _sha256(GH_TIME_GATE)
+    gate["evidence_artifacts"][17]["sha256"] = _sha256(MATTER_VERIFY)
+    gate["evidence_artifacts"][18]["sha256"] = _sha256(MATTER_FORMULA)
+    gate["evidence_artifacts"][19]["sha256"] = _sha256(MATTER_GATE)
     GATE.write_text(json.dumps(gate, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
     ADDENDUM.write_text(json.dumps(addendum, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
     print(json.dumps({"status": verification["status"], "parent_status": gate["status"], "controlling_blocker": gate["controlling_blocker"]}, indent=2))

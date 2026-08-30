@@ -1,12 +1,12 @@
 {
   "schema_version": "uet-major-result-dependency-unlock-v1",
   "artifact": "uet_major_result_dependency_unlock_gate",
-  "generated_at": "2026-08-29",
+  "generated_at": "2026-08-30",
   "status": "BLOCKED_DOWNSTREAM_MAJOR_RESULTS",
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "eb76acdab6f375055147751646a9411431f0fbf96853d990a8d1698787bca5d5"
+    "sha256": "8368165bccd2c769d28e8ef17be088078c185d01f484ef052661ff3e3815714f"
   },
   "decisions": {
     "TOPIC_0_11_CHAOS_DIAGNOSTIC_ROLLOUT": {
@@ -117,11 +117,20 @@
         "exact Minkowski and harmonic gauge-wave evolution controls",
         "second-order spatial and fourth-order temporal convergence",
         "periodic gauge, reduction, and curl constraint propagation",
-        "gamma2 reduction-constraint damping over time"
+        "gamma2 reduction-constraint damping over time",
+        "Topic 13 He-4/O(2) prescribed relativistic stress-energy tensor",
+        "Eulerian energy, momentum, and spatial-stress projections",
+        "trace-reversed GH prescribed matter source",
+        "natural-to-SI multiplicative stress-energy scaling control"
       ],
       "equation_or_mapping": {
         "hamiltonian": "R3 + K^2 - K_ij K^ij - 16*pi*G*rho = 0",
-        "momentum": "D_j(K^j_i - delta^j_i*K) - 8*pi*G*S_i = 0"
+        "momentum": "D_j(K^j_i - delta^j_i*K) - 8*pi*G*S_i = 0",
+        "fluid_stress_energy": "T_ab=(epsilon+p)u_a*u_b+p*psi_ab+u_a*q_b+u_b*q_a+pi_ab",
+        "adm_energy": "rho=n^a*n^b*T_ab",
+        "adm_momentum": "S_a=-gamma_a^c*n^d*T_cd",
+        "adm_stress": "S_ab=gamma_a^c*gamma_b^d*T_cd",
+        "gh_matter_source": "d_t Pi_ab|matter=-2*alpha*kappa_E*(T_ab-psi_ab*T/2)"
       },
       "units": "geometric constraint lane; SI observable mapping open",
       "derivation_class": "incremental curved 3+1 parent construction",
@@ -130,25 +139,20 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/core_curved_3p1_parent_gate.json",
-          "sha256": "9bf9dafa5cc959ebc41e6046debf81bcf8b4e3e05236e208946b667b9a356a82",
+          "sha256": "4a05d892ee784a9ce92f8fe703720cfd3cea29f2a9ed8bbd00db558bdae356ef",
           "summary": {
-            "status": "PARTIAL_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY",
+            "status": "PARTIAL_CURVED_3P1_GH_PERIODIC_PRESCRIBED_MATTER_READY",
             "major_result_id": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
             "closure_level": "PARTIAL"
           }
         }
       ],
-      "verification_status": "PARTIAL_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY",
+      "verification_status": "PARTIAL_CURVED_3P1_GH_PERIODIC_PRESCRIBED_MATTER_READY",
       "open_blockers": [
-        "lapse_shift_gauge",
-        "metric_and_extrinsic_curvature_evolution",
-        "constraint_propagation",
-        "temporal_spatial_convergence",
         "constraint_preserving_boundaries",
-        "topic13_stress_energy_projection",
         "dimensional_observable_mapping"
       ],
-      "dependency_unlocked": "constraint-preserving boundary and Topic 13 stress-energy wiring waves only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
+      "dependency_unlocked": "constraint-preserving boundary and dimensional-observable waves only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
       "claim_boundary": "partial parent construction; not CLOSED_FOR_CORE and not Gravity/GR compatibility"
     },
     "adm_constraint_interface": {
@@ -180,7 +184,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/curved_3p1_adm_constraint_interface_audit.json",
-          "sha256": "17a51e146824f937f6d05d49cb0c31ff16cc797e3863757807bb07cdc4455cf7",
+          "sha256": "ce5ed05764b8d765819af1ff7485b5c2a1d30a0ddcc3e76e20686d7cfd80b3f0",
           "summary": {
             "status": "PASS_CURVED_3P1_ADM_CONSTRAINT_INTERFACE",
             "major_result_id": "CORE_CURVED_3P1_ADM_CONSTRAINT_INTERFACE_READY",
@@ -476,12 +480,61 @@
       "dependency_unlocked": "constraint-preserving boundary and Topic 13 matter-wiring waves only",
       "claim_boundary": "periodic vacuum evolution control only; not a production numerical-relativity solver, matter-coupled UET parent, Gravity validation, or external claim"
     },
+    "topic13_prescribed_matter_wiring": {
+      "major_result_id": "CORE_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING_READY",
+      "topic": "core",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "lane-bounded relativistic-fluid stress-energy construction",
+        "Eulerian rho, S_i, and S_ij projection and reconstruction",
+        "trace-reversed prescribed GH matter source",
+        "vacuum null-source and natural-to-SI scaling controls"
+      ],
+      "equation_or_mapping": {
+        "fluid_stress_energy": "T_ab=(epsilon+p)u_a*u_b+p*psi_ab+u_a*q_b+u_b*q_a+pi_ab",
+        "adm_energy": "rho=n^a*n^b*T_ab",
+        "adm_momentum": "S_a=-gamma_a^c*n^d*T_cd",
+        "adm_stress": "S_ab=gamma_a^c*gamma_b^d*T_cd",
+        "gh_matter_source": "d_t Pi_ab|matter=-2*alpha*kappa_E*(T_ab-psi_ab*T/2)"
+      },
+      "units": {
+        "natural": "epsilon, p, q, and pi share one natural energy-density lane",
+        "SI_projection": "epsilon, p, q, and pi are in J m^-3",
+        "GH_source": "kappa_E*T_ab has inverse-coordinate-length squared units"
+      },
+      "derivation_class": "STANDARD_PHYSICS_TRANSCRIPTION_WITH_TOPIC13_EXTERNAL_INPUT_COMPOSITION",
+      "observable": "prescribed He-4/O(2) stress-energy source; no detector observable",
+      "data_role": "CORE_INTEGRATION_INPUT_NOT_EXTERNAL_VALIDATION",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/curved_3p1_topic13_matter_wiring_verification.json",
+          "sha256": "5dc24a2f74b0675441e51ffa3e63182b40409e59d242c02c27d1370c235f3166",
+          "summary": {
+            "status": "PASS_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING",
+            "major_result_id": "CORE_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING_READY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING",
+      "open_blockers": [
+        "matter-state time evolution",
+        "stress-energy conservation propagation",
+        "self-consistent two-fluid curved transport",
+        "numerical SI Einstein coupling provenance",
+        "constraint-preserving non-periodic boundaries",
+        "detector observable mapping"
+      ],
+      "dependency_unlocked": "constraint-preserving boundary and dimensional-observable waves only",
+      "claim_boundary": "prescribed lane-specific stress-energy construction and projection only; not a self-consistent matter-coupled spacetime solution, Einstein-equation derivation, Gravity validation, or global UET closure"
+    },
     "gravity_unlock_status": "BLOCKED_DEPENDENCY",
-    "controlling_blocker": "curved_3p1_constraint_preserving_boundaries_and_topic13_stress_energy_wiring_missing",
-    "claim_boundary": "ADM constraint, periodic spatial geometry, RHS operator, and fixed-gauge no-go, GH principal/nonlinear RHS, and periodic vacuum-evolution progress only; the parent is not CLOSED_FOR_CORE and Gravity remains blocked"
+    "controlling_blocker": "curved_3p1_constraint_preserving_boundaries_and_dimensional_observable_mapping_missing",
+    "claim_boundary": "ADM constraint, periodic spatial geometry, RHS operator, and fixed-gauge no-go, GH principal/nonlinear RHS, periodic vacuum evolution, and prescribed Topic 13 matter-source progress only; the parent is not CLOSED_FOR_CORE and Gravity remains blocked"
   },
   "topic13_partial_evidence": {
-    "register_sha256": "eb76acdab6f375055147751646a9411431f0fbf96853d990a8d1698787bca5d5",
+    "register_sha256": "8368165bccd2c769d28e8ef17be088078c185d01f484ef052661ff3e3815714f",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",

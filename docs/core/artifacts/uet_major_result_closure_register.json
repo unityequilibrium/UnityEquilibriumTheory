@@ -1,7 +1,7 @@
 {
   "schema_version": "uet-major-result-closure-register-v1",
   "artifact": "uet_major_result_closure_register",
-  "generated_at": "2026-08-29",
+  "generated_at": "2026-08-30",
   "contract": {
     "path": "docs/core/artifacts/uet_major_result_closure_contract.json",
     "sha256": "3d69588169703282667cf6d82421277b02556c37f2b457fe6b2a40d267c38a08"
@@ -259,7 +259,7 @@
         },
         {
           "path": "docs/core/artifacts/covariant_superfluid_transport_contract.json",
-          "sha256": "5b78591b3fcaf30469fcc7ae0b3be87d91f7b15fdee71c9e21e21394a8c6e218",
+          "sha256": "62c634d26595d458f7cde2af15d03f61a61c2e26eef91abdedd69fdc21c5925e",
           "summary": {
             "status": "BLOCKED",
             "next_controller": "physical_kubo_coefficient_evidence_and_curved_3p1_solver_missing"
@@ -267,7 +267,7 @@
         },
         {
           "path": "docs/core/artifacts/covariant_superfluid_transport_verification.json",
-          "sha256": "db58b4516e1e303efc02f4aaad1a7d7dc68e01a383457f797354b6c916e38162",
+          "sha256": "2a36d0dee2590abeddebe21cfbe5e36be2410346f43af16abbe2601fbef4a5bd",
           "summary": {
             "physical_coefficient_evidence": "BLOCKED_NOT_PROVIDED",
             "full_SK_KMS_completion": "BLOCKED"
@@ -347,7 +347,7 @@
         },
         {
           "path": "docs/core/artifacts/o2_finite_density_eos_verification.json",
-          "sha256": "969bd3fb46a930b596ac66b74c8da5d67212b93711c103aec79006b0de198c82",
+          "sha256": "5e0a714f995e33ab2c2f714427c34fe160cb77cd4bd3538e5dca220bfa91bab5",
           "summary": {
             "audit_status": "PASS",
             "evidence_status": "TREE_LEVEL_MEAN_FIELD_DERIVATION"
@@ -719,7 +719,7 @@
         },
         {
           "path": "docs/core/artifacts/t13_oxford_tgs_numeric_rows_audit.json",
-          "sha256": "43d1be7d31546858d987c98757ed080b32782327bf6a3ed1bf400c628409827c",
+          "sha256": "82f66c417108f965c5cdf6ceebad1dbc9c507fa62d05d6efd711c310c19b7af4",
           "summary": {
             "status": "PASS_OXFORD_TGS_NUMERIC_ROWS_SOURCE_LOCKED_COMPARATOR",
             "closure_level": "CLOSED_FOR_LANE",
@@ -965,7 +965,7 @@
         },
         {
           "path": "docs/core/artifacts/t13_desorbo_ceylon_graphite_cp_audit.json",
-          "sha256": "88e8ca35b98b54fc2bdafc880017b3dfb27cd021dd2781621cee990ef9f1dc01",
+          "sha256": "bf2d17e12134ed90571cb9cf143c12942cbcb7449bc4ab5175f1a8901cca0a71",
           "summary": {
             "status": "PASS_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_LOCKED_COMPARATOR",
             "closure_level": "CLOSED_FOR_LANE",
@@ -1951,7 +1951,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/o2_finite_density_eos_verification.json",
-          "sha256": "969bd3fb46a930b596ac66b74c8da5d67212b93711c103aec79006b0de198c82",
+          "sha256": "5e0a714f995e33ab2c2f714427c34fe160cb77cd4bd3538e5dca220bfa91bab5",
           "summary": {
             "audit_status": "PASS"
           }
@@ -2075,11 +2075,20 @@
         "exact Minkowski and harmonic gauge-wave evolution controls",
         "second-order spatial and fourth-order temporal convergence",
         "periodic gauge, reduction, and curl constraint propagation",
-        "gamma2 reduction-constraint damping over time"
+        "gamma2 reduction-constraint damping over time",
+        "Topic 13 He-4/O(2) prescribed relativistic stress-energy tensor",
+        "Eulerian energy, momentum, and spatial-stress projections",
+        "trace-reversed GH prescribed matter source",
+        "natural-to-SI multiplicative stress-energy scaling control"
       ],
       "equation_or_mapping": {
         "hamiltonian": "R3 + K^2 - K_ij K^ij - 16*pi*G*rho = 0",
-        "momentum": "D_j(K^j_i - delta^j_i*K) - 8*pi*G*S_i = 0"
+        "momentum": "D_j(K^j_i - delta^j_i*K) - 8*pi*G*S_i = 0",
+        "fluid_stress_energy": "T_ab=(epsilon+p)u_a*u_b+p*psi_ab+u_a*q_b+u_b*q_a+pi_ab",
+        "adm_energy": "rho=n^a*n^b*T_ab",
+        "adm_momentum": "S_a=-gamma_a^c*n^d*T_cd",
+        "adm_stress": "S_ab=gamma_a^c*gamma_b^d*T_cd",
+        "gh_matter_source": "d_t Pi_ab|matter=-2*alpha*kappa_E*(T_ab-psi_ab*T/2)"
       },
       "units": "geometric constraint lane; SI observable mapping open",
       "derivation_class": "incremental curved 3+1 parent construction",
@@ -2088,25 +2097,20 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/core_curved_3p1_parent_gate.json",
-          "sha256": "9bf9dafa5cc959ebc41e6046debf81bcf8b4e3e05236e208946b667b9a356a82",
+          "sha256": "4a05d892ee784a9ce92f8fe703720cfd3cea29f2a9ed8bbd00db558bdae356ef",
           "summary": {
-            "status": "PARTIAL_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY",
+            "status": "PARTIAL_CURVED_3P1_GH_PERIODIC_PRESCRIBED_MATTER_READY",
             "major_result_id": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
             "closure_level": "PARTIAL"
           }
         }
       ],
-      "verification_status": "PARTIAL_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY",
+      "verification_status": "PARTIAL_CURVED_3P1_GH_PERIODIC_PRESCRIBED_MATTER_READY",
       "open_blockers": [
-        "lapse_shift_gauge",
-        "metric_and_extrinsic_curvature_evolution",
-        "constraint_propagation",
-        "temporal_spatial_convergence",
         "constraint_preserving_boundaries",
-        "topic13_stress_energy_projection",
         "dimensional_observable_mapping"
       ],
-      "dependency_unlocked": "constraint-preserving boundary and Topic 13 stress-energy wiring waves only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
+      "dependency_unlocked": "constraint-preserving boundary and dimensional-observable waves only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
       "claim_boundary": "partial parent construction; not CLOSED_FOR_CORE and not Gravity/GR compatibility"
     },
     {
@@ -2138,7 +2142,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/curved_3p1_adm_constraint_interface_audit.json",
-          "sha256": "17a51e146824f937f6d05d49cb0c31ff16cc797e3863757807bb07cdc4455cf7",
+          "sha256": "ce5ed05764b8d765819af1ff7485b5c2a1d30a0ddcc3e76e20686d7cfd80b3f0",
           "summary": {
             "status": "PASS_CURVED_3P1_ADM_CONSTRAINT_INTERFACE",
             "major_result_id": "CORE_CURVED_3P1_ADM_CONSTRAINT_INTERFACE_READY",
@@ -2433,6 +2437,55 @@
       ],
       "dependency_unlocked": "constraint-preserving boundary and Topic 13 matter-wiring waves only",
       "claim_boundary": "periodic vacuum evolution control only; not a production numerical-relativity solver, matter-coupled UET parent, Gravity validation, or external claim"
+    },
+    {
+      "major_result_id": "CORE_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING_READY",
+      "topic": "core",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "lane-bounded relativistic-fluid stress-energy construction",
+        "Eulerian rho, S_i, and S_ij projection and reconstruction",
+        "trace-reversed prescribed GH matter source",
+        "vacuum null-source and natural-to-SI scaling controls"
+      ],
+      "equation_or_mapping": {
+        "fluid_stress_energy": "T_ab=(epsilon+p)u_a*u_b+p*psi_ab+u_a*q_b+u_b*q_a+pi_ab",
+        "adm_energy": "rho=n^a*n^b*T_ab",
+        "adm_momentum": "S_a=-gamma_a^c*n^d*T_cd",
+        "adm_stress": "S_ab=gamma_a^c*gamma_b^d*T_cd",
+        "gh_matter_source": "d_t Pi_ab|matter=-2*alpha*kappa_E*(T_ab-psi_ab*T/2)"
+      },
+      "units": {
+        "natural": "epsilon, p, q, and pi share one natural energy-density lane",
+        "SI_projection": "epsilon, p, q, and pi are in J m^-3",
+        "GH_source": "kappa_E*T_ab has inverse-coordinate-length squared units"
+      },
+      "derivation_class": "STANDARD_PHYSICS_TRANSCRIPTION_WITH_TOPIC13_EXTERNAL_INPUT_COMPOSITION",
+      "observable": "prescribed He-4/O(2) stress-energy source; no detector observable",
+      "data_role": "CORE_INTEGRATION_INPUT_NOT_EXTERNAL_VALIDATION",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/curved_3p1_topic13_matter_wiring_verification.json",
+          "sha256": "5dc24a2f74b0675441e51ffa3e63182b40409e59d242c02c27d1370c235f3166",
+          "summary": {
+            "status": "PASS_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING",
+            "major_result_id": "CORE_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING_READY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING",
+      "open_blockers": [
+        "matter-state time evolution",
+        "stress-energy conservation propagation",
+        "self-consistent two-fluid curved transport",
+        "numerical SI Einstein coupling provenance",
+        "constraint-preserving non-periodic boundaries",
+        "detector observable mapping"
+      ],
+      "dependency_unlocked": "constraint-preserving boundary and dimensional-observable waves only",
+      "claim_boundary": "prescribed lane-specific stress-energy construction and projection only; not a self-consistent matter-coupled spacetime solution, Einstein-equation derivation, Gravity validation, or global UET closure"
     },
     {
       "major_result_id": "T13_CAUSAL_FLUX_TELEGRAPH_BRANCH",
@@ -4537,7 +4590,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_desorbo_ceylon_graphite_cp_audit.json",
-          "sha256": "88e8ca35b98b54fc2bdafc880017b3dfb27cd021dd2781621cee990ef9f1dc01",
+          "sha256": "bf2d17e12134ed90571cb9cf143c12942cbcb7449bc4ab5175f1a8901cca0a71",
           "summary": {
             "status": "PASS_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_LOCKED_COMPARATOR",
             "major_result_id": "T13_DESORBO_1955_CEYLON_GRAPHITE_CP_COMPARATOR",
@@ -7408,7 +7461,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_oxford_tgs_comparator_provenance_audit.json",
-          "sha256": "905d26159771b9e0b46edaf3b4a561f1884c7d67529be03c7911963b7744872a",
+          "sha256": "85939d89bac8192c0986afbba48666ebd2e22efde69d1d61d978da531ba3ac34",
           "summary": {
             "status": "PASS_OXFORD_TGS_PROVENANCE_ARCHIVE_LOCKED_EXTRACTION_PENDING",
             "major_result_id": "T13_OXFORD_TGS_COMPARATOR_PROVENANCE",
@@ -7456,7 +7509,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_oxford_tgs_numeric_rows_audit.json",
-          "sha256": "43d1be7d31546858d987c98757ed080b32782327bf6a3ed1bf400c628409827c",
+          "sha256": "82f66c417108f965c5cdf6ceebad1dbc9c507fa62d05d6efd711c310c19b7af4",
           "summary": {
             "status": "PASS_OXFORD_TGS_NUMERIC_ROWS_SOURCE_LOCKED_COMPARATOR",
             "major_result_id": "T13_OXFORD_TGS_NUMERIC_ROWS_COMPARATOR",
