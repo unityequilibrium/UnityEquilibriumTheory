@@ -1,5 +1,25 @@
 # Limitations
 
+## Charged Two-Point Matching (2026-09-01)
+
+The new result closes only the declared normal k=0 charged two-point
+calculation at strict one-loop order, including the mean-shift insertion.
+The zero-mu integrated determinant witness and nonzero-mu fixed-momentum
+Euclidean determinant do not establish a full finite-temperature phase diagram.
+
+The evaluated real pole domain lies strictly between the Landau and pair
+cuts. Cut-supported spectral functions are handled separately, not by adding
+an arbitrary width. Positive-frequency cut routing currently declares m>=M0;
+reversed mass ordering is rejected rather than guessed. Zero on-shell width
+does not remove higher-order scattering or finite-k damping.
+
+Temporal Ward reconstruction fixes only a longitudinal vertex requirement.
+It does not close transverse/current vertices, physical Kubo coefficients,
+collision resummation, full two-fluid transport or entropy-current balance.
+Partial Dyson reuse is not the full next loop, and refinement differences
+are not source or truncation uncertainty. The old collision artifact, causal
+baseline, He-4/graphite distinction and Xie holdout remain unchanged.
+
 ## One-Loop Response Match (2026-09-01)
 
 The new axis scheme includes vacuum subtraction missing from the thermal-only

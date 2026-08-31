@@ -6,6 +6,34 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Charged One-Loop Propagator Match (2026-09-01)
+
+The [charged mixed-bubble result](../../core/artifacts/t13_charged_one_loop_match_audit.json)
+extends the response-axis calculation to the normal charged two-point sector.
+At strict one-loop order it includes the response mean shift, O(2) quartic
+tadpole and mixed charged/response bubble using canonical action coefficients.
+Independent three-field determinant derivatives, complex Matsubara sums and
+signed pair/Landau spectral dispersion agree.
+
+At T=0.25, mu=0.2 in natural units, the Landau contribution is about 21.94%
+of the mixed thermal bubble at physical frequency Omega=m=1. Omitting it
+would change that self-energy correction, not just a reporting label.
+The strict charged energies are 1.00002485755 and 1.00002825580 for q=+1
+and -1; their grand-canonical excitations subtract q*mu. These are internal
+model quantities, not material predictions.
+
+Charged KMS uses Omega-q*mu. Spectral sign follows this grand frequency:
+negative spectral weight at positive physical Omega below q*mu is not by
+itself an instability. The real poles lie between the Landau and pair cuts,
+so their width vanishes at this order only, not in the full collision problem.
+The temporal Ward-required vertex is identified, not a completed microscopic
+or transverse current vertex.
+
+This narrows the previous charged-propagator blocker. Full finite-temperature
+vertices/counterterms, collision-resummed finite-k current response and
+physical heat/entropy/material matching remain open. The old collision
+artifact is preserved; Full Topic 13 stays PARTIAL and full_core_unlock=false.
+
 ## Response-Axis One-Loop Match (2026-09-01)
 
 The [one-loop response artifact](../../core/artifacts/t13_response_one_loop_match_audit.json)

@@ -1,0 +1,107 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "CANDIDATE_DIAGNOSTIC_NOT_MERGED",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "equation_entries": [
+    {
+      "ontology": {
+        "C": "collective lane coordinate, not universal charge or mass",
+        "Phi": "effective response, not particle or metric",
+        "R_gen": "derived trace, not state or self-energy source",
+        "R_obs": "excluded"
+      },
+      "unit_lane": "natural_units",
+      "units": {
+        "Omega": 1,
+        "mu": 1,
+        "T": 1,
+        "G": 1,
+        "Sigma": 2,
+        "curvature": 2,
+        "Gamma0": 1,
+        "lambda_chi": 0
+      },
+      "derivation_class": "numerical_approximation",
+      "derivation_origin": "Canonical action tadpoles and mixed charged/neutral bubble with fixed zero-field vacuum subtractions.",
+      "constant_origin": "synthetic canonical action inputs, no calibration or fit",
+      "observable": "Internal normal charged pole, static curvature and charged spectral kernels, not heat conductivity",
+      "data_role": "DERIVED_SYNTHETIC_DIAGNOSTIC",
+      "verification_status": "PASS_SCOPED_CHARGED_ONE_LOOP_MATCH",
+      "controlling_blocker": "finite_temperature_vertex_and_collision_current_matching",
+      "claim_boundary": "Internal normal k=0 charged one-loop result only; no physical Phi particles, full microscopic current, collision-resummed transport, SI alpha or Full Topic 13 closure.",
+      "equation_id": "uet.o2.thermal.charged_mixed_one_loop_match",
+      "version": "1",
+      "classification": "numerical_implementation",
+      "relation_or_code_path": {
+        "frequency": "Omega=omega+q*mu; D_R^-1=Omega^2-m^2-Sigma_q",
+        "self_energy": "Sigma_q=-G*x1+4*lambda_chi*I_chi-G^2 integral B_T(E,W,Omega,q*mu)+Sigma_vac_sub",
+        "mean": "x1=G*I_chi/M0^2, with I_chi=integral(n_plus+n_minus)/(2E)",
+        "vacuum": "Sigma_vac_sub=-G^2/(16*pi^2) integral[-log(1-a)-a]; a=z(1-z)*Omega^2/[z*m^2+(1-z)*M0^2]",
+        "strict_pole": "E_q=m+Sigma_q(Omega=m)/(2m); grand excitation=E_q-q*mu",
+        "KMS": "greater/lesser=exp((Omega-q*mu)/T); rho=noise*tanh((Omega-q*mu)/(2T))",
+        "Ward_required": "Gamma_q^0(Omega,Omega)=q*(2*Omega-partial_Omega Sigma_q); transverse vertices not fixed"
+      },
+      "standard_physics_counterpart": "Normal O(2) charged/neutral one-loop thermal bubble and charged KMS",
+      "variables": {
+        "Omega": "physical energy",
+        "omega": "grand-canonical frequency",
+        "Sigma_q": "self-energy, not core Pi",
+        "q": "lane charge sign, not universal C"
+      },
+      "mathematical_role": "One-loop inverse propagator",
+      "observable_mapping": "Internal normal charged pole, static curvature and charged spectral kernels, not heat conductivity",
+      "parameter_dimensions": {
+        "Omega": 1,
+        "mu": 1,
+        "T": 1,
+        "G": 1,
+        "Sigma": 2,
+        "curvature": 2,
+        "Gamma0": 1,
+        "lambda_chi": 0
+      },
+      "source_or_origin": "Canonical action tadpoles and mixed charged/neutral bubble with fixed zero-field vacuum subtractions.",
+      "assumptions": {
+        "loop_order": 1,
+        "internal_background": "zero-field canonical propagators; mean shift inserted separately once",
+        "vacuum_reference": "Sigma_vac(0)=Sigma_vac_s'(0)=0; not full quartic/cubic vertex counterterm closure",
+        "real_dynamic_domain": "abs(m-M)<Omega<m+M",
+        "cut_routing": "positive physical frequency with m>=M",
+        "partial_Dyson": "partial reuse only; not full next-order matching"
+      },
+      "symmetry_and_conservation": "Charge conjugation/KMS; full current/energy ledger open",
+      "limiting_cases": [
+        "T=0",
+        "G=0",
+        "mu=0",
+        "static grand frequency zero"
+      ],
+      "implementation_paths": [
+        "docs/scripts/audit/audit_topic13_charged_one_loop_match.py"
+      ],
+      "verifier_paths": [
+        "docs/core/test/test_topic13_charged_one_loop_match.py"
+      ],
+      "evidence_class": "INTERNAL_SYNTHETIC_DIAGNOSTIC",
+      "proof_status": "CHECKED_SCOPED_ONE_LOOP_ONLY",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_charged_one_loop_match_audit.json",
+          "sha256": "3acb0993c6d5ee8ef8e470a6d892a286247b8beb5b7d97003ed9fa4543d5fbee"
+        }
+      ],
+      "downstream_dependencies": [],
+      "dependency_role": "diagnostic_only",
+      "physical_dependency_unlock": false,
+      "failure_mode": [
+        "full_vertex_and_counterterm_matching",
+        "finite_k_and_collision_resummed_current_response",
+        "number_changing_and_complete_heat_entropy_tensor",
+        "material_SI_calibration_and_full_T13_acceptance"
+      ],
+      "next_hardening_step": "Derive finite-temperature vertices/current matching and collision-resummed finite-k response before transport handoff."
+    }
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}

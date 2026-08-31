@@ -1,5 +1,33 @@
 # Verification Spec
 
+## Charged One-Loop Diagnostic (2026-09-01)
+
+Run docs.scripts.audit.audit_topic13_charged_one_loop_match as a module and
+docs/core/test/test_topic13_charged_one_loop_match.py with pytest.
+Use T=0.1,0.25,0.5,1, mu=0.2 and q=-1,+1. Pole quadratures are
+(96,48),(160,64),(256,80), with individual kernel refinement below 1e-6.
+Require positive grand excitations, static normal curvature and residues.
+
+Independent mixed complex Matsubara witnesses use E=1.2,W=0.8, mu=-0.2,0,0.2,
+cutoff 8192 and external indices 0,1,2,4; relative error must be below 1e-9.
+The static three-field thermal Hessian witness uses mu=0 and field step
+0.003*m; require relative error below 2e-5. Tests separately check the
+nonzero-mu Euclidean fluctuation determinant and coincident Bose limits.
+
+Reconstruct the real thermal kernel by integrating both signed pair and
+Landau cuts, absolute tolerance 1e-12. Independently check unequal-mass
+vacuum dispersion and the self-energy derivative. Spectral samples are
+Omega=0.1,0.2,0.25,1,2,3 for both charges and every declared temperature.
+KMS log and cross-multiplied FDT errors must be below 1e-10. Spectral sign
+uses grand frequency Omega-q*mu; transition weights must be nonnegative.
+Test cold/decoupled/charge-conjugate/equal-mass limits, covariance and invalid
+domains. Do not treat the required temporal Ward vertex as a full current match.
+
+Regenerate under the pre-import experimental-Data guard; verify current
+source/evidence hashes and strict JSON. Run previous response, background,
+collision, elastic, normalization, fixed-Phi and projected-current regressions.
+Candidate registry stays separate and full_core_unlock must remain false.
+
 ## Response One-Loop Match (2026-09-01)
 
 Run docs.scripts.audit.audit_topic13_response_one_loop_match as a module and

@@ -1,3 +1,29 @@
+## 2026-09-01 - Charged mixed one-loop propagator and Landau contribution
+
+MAJOR_RESULT_CLOSURE: T13_CHARGED_MIXED_ONE_LOOP_NORMAL_MATCH is PARTIAL; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: The normal charged two-point kernel at declared one-loop order includes the response mean shift, action-normalized O(2) tadpole and charged/neutral mixed bubble. Independent three-field determinant, Matsubara and signed spectral witnesses agree. Physical/grand frequency and charged KMS are explicit; the longitudinal temporal Ward requirement is identified, not a full microscopic vertex.
+
+WHAT_REMAINS_OPEN: Full thermal vertex/counterterm matching, transverse and finite-k current response, collision/ladder resummation, number-changing channels and complete heat/entropy/material mapping. This normal two-point result is not a replacement definition of Full Topic 13.
+
+DEPENDENCY_UNLOCKED: Only diagnostic handoff. Candidate registry not centrally merged; full_core_unlock=false and physical transport/Gravity remain unpromoted.
+
+STATUS: PASS_SCOPED_CHARGED_ONE_LOOP_MATCH; nine artifact checks pass. Foundation and compatibility remain physically BLOCKED.
+
+WHAT_CHANGED: Added charged mean/tadpole/bubble evaluator, static divided-Bose limit, pair/Landau cut weights, required temporal Ward derivative, 76 tests, result/registry candidate and synchronized local docs. Existing response and collision artifacts, source/acceptance edits and user ledgers are preserved.
+
+EQUATION_OR_MAPPING: Omega=omega+q*mu; Sigma_q=-G*x1+4*lambda_chi*I_chi-G^2*integral B_T+Sigma_vac_sub; x1=G*I_chi/M0^2. E_q(strict)=m+Sigma_q(m)/(2m). Charged KMS is greater/lesser=exp((Omega-q*mu)/T); Gamma_q^0(required)=q*(2*Omega-partial_Omega Sigma_q).
+
+VERIFICATION: 317 focused/regression tests pass, including 76 new tests. Independent complex Matsubara maximum relative error is 1.964e-12; integrated three-field thermal Hessian maximum relative error is 6.99e-7; signed pair/Landau dispersion maximum absolute error is 2.96e-17. Individual kernel refinement maximum relative change is 4.13e-13, not physical uncertainty. At T=.25, mu=.2, Omega=m=1, the mixed thermal correction is -8.87616586e-6, of which -1.94740327e-6 (21.94%) is Landau dispersion. Strict energies q=+1/-1 are 1.00002485755/1.00002825580; grand excitation subtracts q*mu. Same-order on-shell widths vanish in the cut gap, not in the full collision problem. Regeneration with a pre-import experimental-Data guard recorded zero attempts; strict JSON and current code/evidence hashes pass. F0 finds 344 rows; foundation/compatibility audits run successfully while preserving physical BLOCKED.
+
+CONTROLLING_BLOCKER: finite_temperature_vertex_and_collision_current_matching. A longitudinal Ward-required derivative does not determine transverse current vertices or physical transport.
+
+NEXT_ACTION: Derive and match the finite-temperature interaction/current vertices at the same order, then integrate finite-k collision-resummed response with the preserved gain/loss operator. Keep material matching separate and do not infer a damping coefficient from zero one-loop pole width.
+
+CLAIM_BOUNDARY: Internal natural-unit normal k=0 charged two-point result only. Integrated static Hessian verification is mu=0; finite-mu Euclidean action coefficients and mixed Matsubara sums are separately checked. No full phase diagram, microscopic transverse vertex, physical Kubo/heat tensor, SI alpha, TTG prediction, external validation or Full Topic 13 closure. Spectral sign follows grand frequency; negative rho at negative grand frequency is not a negative transition rate. No fit, holdout access, width regulator or causal-threshold change.
+
+EVIDENCE_HASHES: charged artifact 3acb0993c6d5ee8ef8e470a6d892a286247b8beb5b7d97003ed9fa4543d5fbee; candidate registry 70159db74729e2fbe7e56f8eb7c3a88b55d7dfcf26cf87bc016ae357ebe747b0; preserved response artifact 1f8c7be92931845d5e6073acaa94defc06846c7928f69d8cf73b8e726bb9c8a7.
+
 ## 2026-09-01 - Response-axis one-loop vacuum and real-time matching
 
 MAJOR_RESULT_CLOSURE: T13_RESPONSE_AXIS_ONE_LOOP_RENORMALIZED_MATCH is PARTIAL; Full Topic 13 remains open.

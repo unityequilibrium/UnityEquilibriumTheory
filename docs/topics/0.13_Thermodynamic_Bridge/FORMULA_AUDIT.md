@@ -1,5 +1,72 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Charged Mixed One-Loop Match (2026-09-01)
+
+Candidate ID: uet.o2.thermal.charged_mixed_one_loop_match.
+The action is unchanged. Let Omega=omega+q*mu, where omega is grand-canonical
+frequency, E=sqrt(p^2+m^2), W=sqrt(p^2+M0^2), S=E+W and D=E-W.
+For the positive-charge orientation write n_plus=n(E-mu),
+n_minus=n(E+mu), n0=n(W). The thermal part of the mixed bubble is
+
+B_T=[(n_plus+n0)/(S-Omega)+(n_minus+n0)/(S+Omega)
+-(n_plus-n0)/(D-Omega)+(n0-n_minus)/(D+Omega)]/(4*E*W).
+
+Charge q=-1 replaces mu by -mu. The full Matsubara witness includes an
+additional 1 in both pair numerators. Its complex continuation is
+Omega=mu+i*nu_n. At n=0 apparent Landau poles are removable: use
+[n(a)-n(b)]/(a-b), with exact limit -n(a)*(1+n(a))/T, not a regulator.
+Independent direct Matsubara sums verify both static and nonzero components.
+
+With I_chi=integral_p(n_plus+n_minus)/(2E), the same-order inverse propagator is
+
+Sigma_q=-G*x1+4*lambda_chi*I_chi-G^2*integral_p B_T+Sigma_vac_sub,
+x1=G*I_chi/M0^2, D_R^-1=Omega^2-m^2-Sigma_q.
+
+The factor 4*lambda_chi follows the O(2) potential lambda_chi*(chi^2)^2/4.
+At a real charged displacement r the zero-mu fluctuation mass matrix has
+diagonals (m^2+3*lambda_chi*r^2, m^2+lambda_chi*r^2, M0^2) and mixed
+entries -G*r. Differentiating its Gaussian thermal determinant reproduces
+the quartic tadpole plus static mixed bubble. At nonzero mu a separate
+Euclidean three-field determinant derivative checks the action coefficients.
+
+The vacuum subtraction uses Sigma_vac(0)=partial_s Sigma_vac(0)=0 with
+s=Omega^2, denominator Delta(z)=z*m^2+(1-z)*M0^2 and
+a=z*(1-z)*s/Delta. Sigma_vac_sub=-G^2/(16*pi^2)*integral[-log(1-a)-a].
+This fixes the charged two-point reference; it does not fix all cubic,
+quartic or current counterterms. It is compatible with the response-axis
+scheme without claiming a full coupled renormalized action.
+
+Strict charged energy is E_q=m+Sigma_q(m)/(2m), not an unlabelled square-root
+resummation. Its grand excitation is E_q-q*mu. A partial Dyson root is
+reported separately. The strict response mean is inserted once; shifted
+internal masses would add selected higher-order corrections and are not
+silently used. Static grand curvature is m^2-mu^2+Sigma_q(Omega=q*mu).
+
+For m>M0 the positive-frequency spectral supports are Omega>m+M0 (pair)
+and 0<Omega<m-M0 (Landau). With phase=G^2*p/(4*pi*Omega),
+
+- Pair: greater=phase*(1+n_chi)*(1+n0), lesser=phase*n_chi*n0.
+- Landau: greater=phase*n0*(1+n_chi), lesser=phase*n_chi*(1+n0).
+- rho=greater-lesser, Im Sigma_R=-rho/2; rho=noise*tanh((Omega-q*mu)/(2T)).
+
+Both cuts obey charged KMS. The cross-multiplied FDT is finite at grand
+frequency zero; a negative rho there on the negative-frequency side is not
+a negative transition probability. Integrating both signed cuts reconstructs
+the real thermal bubble; unequal-mass vacuum dispersion is checked separately.
+[Brandt et al.](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.74.085006)
+is primary abstract-level context for finite-temperature/chemical-potential
+cutting methods, not numerical input or an external UET validation.
+
+The zero-spatial-transfer Ward identity requires
+Gamma_q^0=q*(2*Omega-partial_Omega Sigma_q).
+An inverse-propagator derivative verifies this longitudinal requirement.
+It is not a diagram-derived full current vertex: transverse parts, spatial
+momentum dependence and collision/ladder resummation remain open.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-CHARGED-ONE-LOOP-MATCH-20260901 | Sigma_q=-G*x1+4*lambda_chi*I_chi-G^2*B_T+Sigma_vac; charged KMS | docs/scripts/audit/audit_topic13_charged_one_loop_match.py | Omega,omega,mu,T,G energy; Sigma energy^2; Gamma0 energy | canonical O(2)/response action and fixed vacuum reference, no fit | checked scoped one-loop numerical approximation | three-field determinant, mixed Matsubara, pair/Landau dispersion | missing Landau term or using Omega instead of Omega-q*mu in KMS | finite-temperature vertices and collision-resummed current matching |
+
 ## Response-Axis Renormalization and Real-Time Match (2026-09-01)
 
 Candidate ID: uet.o2.thermal.response_axis_one_loop_match.
