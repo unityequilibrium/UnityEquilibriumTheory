@@ -1,5 +1,38 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Normal Thermal Response Stationarity (2026-09-01)
+
+Candidate ID: uet.o2.thermal.normal_response_stationarity. This extends the
+normal-background question, not the existing fixed-Phi Hartree calculation.
+Let x=sqrt(epsilon*K)*Delta_Phi_natural, m_chi^2(x)=m0^2-G*x and
+M_response^2(x)=M0^2+3*lambda_response*x^2. At chi=0 the two charged and one
+neutral thermal determinants add to V_tree(x). The field-dependent vacuum
+determinant and counterterms are omitted explicitly; this is not a complete
+renormalization prescription. Matter quartic effects enter interacting
+self-energies/higher loops and are not supplied by this Gaussian determinant.
+
+For I_i=integral f_i/(2E_i) and J_i=partial I_i/partial m_i^2,
+Omega_x=M0^2*x+lambda_response*x^3-G*I_chi+6*lambda_response*x*I_response.
+Solving Omega_x=0 with positive Omega_xx gives a local stationary response
+inside the strict normal-mode gap. No global or condensed-phase minimum is
+claimed. The stationary pressure obeys the envelope relation, with
+chi_stationary=chi_fixed+Omega_xmu^2/Omega_xx. The small-displacement estimate
+is x_star approximately G*I_chi(0)/(M0^2+6*lambda_response*I_response(0)+G^2*J_chi(0)).
+
+The shifted tree response vertex is H_cubic=6*lambda_response*x_star.
+Consequently mixed scattering contains
+M=G^2*(1/(s-m_chi^2)+1/(u-m_chi^2))-G*H_cubic/(t-M_response^2).
+The last term is absent in a mass-only update. Shifted-tree sensitivity is not
+a full thermal loop amplitude: other terms at the same perturbative order
+must be matched. The static Hessian Omega_xx is not a pole-mass prescription.
+
+[Floerchinger's thermal determinant and stationary-pressure derivation](https://www.tpi.uni-jena.de/~floerchinger/qft2/lecture22/)
+provides method context only, not numerical coefficients or evidence for UET.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-NORMAL-THERMAL-BACKGROUND-20260901 | Omega_x=0; p=-Omega(x_star); H_cubic=6*lambda_response*x_star | docs/scripts/audit/audit_topic13_normal_thermal_background.py | x,T,mu,H_cubic natural energy; Omega energy^4; force energy^3; curvature energy^2 | declared tree action plus thermal Bose determinant, no fit | checked local numerical approximation; full renormalized matching open | diagnostic-only stationary response and shifted-vertex handoff | mass-only update drops exchange term; static Hessian mistaken for pole mass | consistent thermal background, propagator, vertices and current matching |
+
 ## Coupled Bose Collision Form (2026-09-01)
 
 Candidate registry ID: uet.o2.thermal.normal_coupled_gain_loss. The named

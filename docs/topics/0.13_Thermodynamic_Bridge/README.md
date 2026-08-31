@@ -6,6 +6,28 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Thermal Stationary Background and Vertex Handoff (2026-09-01)
+
+The [thermal-background diagnostic](../../core/artifacts/t13_normal_thermal_background_audit.json)
+now solves the normal response displacement using the tree polynomial plus
+the thermal part of the one-loop Bose determinant. The old zero-displacement
+background has a nonzero thermal force in this approximation; it remains a
+valid fixed-background control, not an autonomous thermal stationary point.
+
+At T=0.25 and mu=0.2 in natural units, the canonical displacement is about
+8.539e-5. The matter tree mass squared changes by only -0.00171%, but a response
+cubic vertex is induced. At the predeclared mixed-scattering kinematic points,
+including that vertex changes the squared amplitude by up to about 22% relative
+to a mass-only update. These are pointwise sensitivities, not transport rates.
+
+Force/Hessian, stationary-pressure derivatives, independent Bose-series
+integrals and unit/charge symmetries are checked. Full Topic 13 remains open:
+the field-dependent vacuum determinant, interacting thermal self-energies,
+complete phase stability and physical current/heat mapping are not closed.
+Static effective curvature must not be substituted for a quasiparticle pole
+mass. The old collision artifact is preserved; no thermal transport rerun or
+physical dependency unlock is claimed.
+
 ## Coupled Gain/Loss and Relative Momentum (2026-09-01)
 
 The [coupled collision diagnostic](../../core/artifacts/t13_coupled_gain_loss_operator_audit.json)

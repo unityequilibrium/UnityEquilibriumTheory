@@ -1,5 +1,29 @@
 # Limitations
 
+## Thermal-Only Stationary Background (2026-09-01)
+
+The local normal-response minimum uses a fixed zero-temperature polynomial
+plus the thermal one-loop determinant only. It does not supply vacuum
+counterterms, a complete interacting gap equation, the charged/condensed phase
+diagram or a renormalized finite-temperature effective action. A positive
+response curvature and positive tree Bose gap are not full phase stability.
+
+The next matching requirement is consistency at a declared approximation
+order with disclosed truncation error, not an exact all-orders solution.
+
+The previous zero-response collision result remains a fixed-background
+control. Maintaining that background under the new thermal functional would
+require an explicit holding-source contract; it is not automatically a
+source-free thermal equilibrium. No earlier collision rate was overwritten.
+
+Shifting the background induces a tree cubic vertex. Inserting only shifted
+masses is inconsistent even with that shifted tree action. Including the
+induced vertex alone still omits other thermal-loop corrections. Static
+curvature is not a pole mass. Large pointwise squared-amplitude ratios near
+comparator cancellations are not integrated rate enhancements or reliable
+high-temperature predictions. No SI mapping, alpha calibration, holdout access
+or physical dependency unlock follows from this diagnostic.
+
 ## Coupled Collision Scope (2026-09-01)
 
 The new gain/loss operator covers seven reversible 2-to-2 reaction classes

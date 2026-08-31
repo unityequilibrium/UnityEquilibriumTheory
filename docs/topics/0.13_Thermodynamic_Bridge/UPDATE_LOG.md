@@ -1,3 +1,29 @@
+## 2026-09-01 - Normal thermal response stationarity and shifted-vertex handoff
+
+MAJOR_RESULT_CLOSURE: T13_NORMAL_THERMAL_BACKGROUND_STATIONARITY is PARTIAL; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: Solved and independently checked a local normal-response stationary point for the tree polynomial plus thermal Bose determinant. The zero-displacement collision control has a nonzero force in this thermal functional. Stationary pressure/charge/entropy/susceptibility identities agree, and the shifted tree action has a response cubic vertex missing from a mass-only update.
+
+WHAT_REMAINS_OPEN: A declared renormalization and interacting self-energy approximation, full phase stability, consistent background/propagator/vertex/current matching, number-changing collisions and physical heat/KMS/material mapping. This is not an all-orders requirement; closure needs consistency at the chosen approximation order and an explicit truncation boundary.
+
+DEPENDENCY_UNLOCKED: Diagnostic handoff only; candidate equation entry is not merged centrally and full_core_unlock=false. The prior collision result is preserved, not rerun with partially modified masses.
+
+STATUS: PASS_THERMAL_ONLY_STATIONARITY_FULL_MATCH_OPEN; 10 artifact checks pass. No Full Topic 13, Gravity, SI or external claim is promoted.
+
+WHAT_CHANGED: Added standalone stationary-background and shifted-tree-vertex evaluator, 38 tests, evidence artifact, candidate registry addendum, discoverable formula row and local scope/verification documentation. Existing Hartree modules, collision results, source/acceptance edits and user ledgers were not overwritten.
+
+EQUATION_OR_MAPPING: x=sqrt(epsilon*K)*Delta_Phi_natural; Omega_x=M0^2*x+lambda_response*x^3-G*I_chi+6*lambda_response*x*I_response=0. The pressure envelope gives chi_stationary=chi_fixed+Omega_xmu^2/Omega_xx. H_cubic=6*lambda_response*x_star adds -G*H_cubic/(t-M_response^2) to mixed tree scattering. Static Omega_xx is not a quasiparticle pole mass.
+
+VERIFICATION: 172 focused/regression tests passed, including 38 thermal-background tests. Production potential derivatives, independent modified-Bessel-series thermal integrals, zero-T/G limits, signed charge symmetry, field and energy scaling, direct minimization, envelope derivatives and shifted-vertex zero-background recovery pass. At T=0.25, mu=0.2 in natural units, x_star=8.53901424e-5; the old force is -4.28093508e-5; static curvature is 0.5013383374 while shifted tree response mass squared is 0.5000000219. Matter tree mass squared changes by -1.70780285e-5 relatively, but sampled mixed squared-amplitude ratios to mass-only insertion range from 0.77849 to 0.99887. These are not rate ratios. Displacement refinement changes are below 2e-14 on the declared quadratures, not physical uncertainty. The maximum thermodynamic envelope error is 9.47e-6; local independent-minimum relative error is below 1.63e-5. Full artifact generation under a pre-import experimental-Data guard recorded zero attempts. Strict JSON/current source/evidence hashes pass. Read-only F0 rebuild discovers 342 rows and remains BLOCKED; foundation and compatibility audits run successfully but retain physical BLOCKED. git diff --check passed.
+
+CONTROLLING_BLOCKER: consistent_thermal_background_propagator_vertex_current_matching. A small background-induced mass shift does not justify ignoring the induced vertex; the thermal-only determinant also does not specify the required real-time self-energy or full renormalization scheme.
+
+NEXT_ACTION: Declare the approximation order and renormalization conditions, then derive a matched propagator/vertex/current package on the stationary background before coupling it to the collision operator. Do not identify the static Hessian with a pole mass or use pointwise amplitude ratios as transport predictions.
+
+CLAIM_BOUNDARY: Thermal-only local normal-background and shifted-tree sensitivity result. Not complete finite-T EOS, a phase diagram, all-orders QFT, SI alpha, physical conductivity, full SK/KMS or Full Topic 13 closure. Old fixed-background results remain controls; no holdout, fitting, regulator or causal-threshold change.
+
+EVIDENCE_HASHES: thermal artifact ac402fe1bb4dd547dec069676ee0925f5805a2d12d4354fdc14b0a9f29e50914; candidate registry 39b2edecbf3a9d02b18b95de0fe27027b40e13df1bf6a37ae76cf0c2b47f08d8. Preserved coupled collision artifact b3a9ebf6b2ac7a155c3a2b8bd12dd60fa71684924e40220d04cbcfa60becfaab.
+
 ## 2026-09-01 - Coupled Bose gain/loss and missing relative-momentum mode
 
 MAJOR_RESULT_CLOSURE: T13_NORMAL_COUPLED_2TO2_GAIN_LOSS_DIAGNOSTIC is PARTIAL; Full Topic 13 remains open.

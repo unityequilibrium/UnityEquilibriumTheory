@@ -1,5 +1,32 @@
 # Verification Spec
 
+## Thermal Stationary-Background Diagnostic (2026-09-01)
+
+Run docs.scripts.audit.audit_topic13_normal_thermal_background as a module and
+docs/core/test/test_topic13_normal_thermal_background.py with pytest. Require
+canonical production-potential first/second/third derivatives, independent
+modified-Bessel-series thermal integrals, force/Hessian finite differences,
+and stationary pressure/charge/entropy/susceptibility envelope identities.
+Check zero-temperature and zero-coupling limits, signed charge conjugation,
+canonical field covariance, energy dimensions and normal-gap rejection.
+
+Declared natural-unit temperatures are 0.1, 0.25, 0.5 and 1.0 at mu=0.2.
+The quadrature (order, cutoff factor) pairs are (96,48), (160,64), (256,80).
+Stationarity uses residual 1e-10, thermodynamic derivative agreement 1e-4,
+independent minimizer agreement 1e-3 and displacement refinement 1e-5.
+These diagnostic tolerances do not alter the causal leakage threshold.
+
+The mixed-scattering sensitivity grid uses s=4,8,16 and cos(theta)=-0.8,0,0.8.
+Require the tensor-contracted shifted vertex to match the analytic exchange
+formula, the zero-shift limit to recover the previous collision amplitude, and
+pole inputs to raise rather than receive a regulator. Do not interpret the
+pointwise comparison as a complete thermal collision or transport calculation.
+
+Regenerate under the pre-import experimental-Data access guard; verify strict
+JSON, current code hashes and the hash link to the preserved collision artifact.
+The standalone registry addendum stays candidate-only and full_core_unlock
+must remain false. Full thermal background/propagator/current matching is open.
+
 ## Coupled Gain/Loss Diagnostic (2026-09-01)
 
 Run docs.scripts.audit.audit_topic13_coupled_gain_loss_operator as a module and

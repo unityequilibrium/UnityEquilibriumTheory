@@ -1,0 +1,67 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "status": "CANDIDATE_DIAGNOSTIC_NOT_MERGED",
+  "equation_entries": [
+    {
+      "ontology": {
+        "C": "not charge or particle count",
+        "Phi": "effective response; x is its canonical natural-unit displacement",
+        "R_gen": "derived, not a state or source",
+        "R_obs": "excluded"
+      },
+      "variable_meanings": {
+        "x": "canonical natural-unit response displacement, not a temperature",
+        "I_chi": "sum of the two charged thermal integrals f/(2E)",
+        "I_response": "one neutral thermal integral f/(2E)",
+        "J_i": "partial I_i / partial mass_squared at fixed T and mu",
+        "H_cubic": "third derivative of shifted tree response potential, not the effective static Hessian",
+        "static_response_curvature": "Omega_xx at zero external frequency/momentum; not identified with a pole mass"
+      },
+      "unit_lane": "natural_units",
+      "units": {
+        "x": 1,
+        "T": 1,
+        "mu": 1,
+        "potential_pressure_energy": 4,
+        "force_entropy_charge": 3,
+        "curvature_susceptibility": 2,
+        "cubic_vertex": 1,
+        "I_i": 2,
+        "J_i": 0,
+        "G": 1,
+        "quartic": 0
+      },
+      "derivation_class": "numerical_approximation",
+      "derivation_origin": "Tree polynomial plus thermal part of one-loop Bose determinant; independent action Hessian and thermal integral checks.",
+      "constant_origin": "Declared synthetic action coefficients, no fit or experimental calibration.",
+      "observable": "Stationary natural-unit response and thermodynamic derivatives; not SI temperature or heat conductivity.",
+      "data_role": "DERIVED_SYNTHETIC_DIAGNOSTIC",
+      "verification_status": "PASS_THERMAL_ONLY_STATIONARITY_FULL_MATCH_OPEN",
+      "controlling_blocker": "consistent_thermal_background_propagator_vertex_current_matching",
+      "claim_boundary": "Thermal-only local normal stationary-background diagnostic; not full finite-T EOS, renormalized action, physical transport, SI alpha, or Full Topic 13 closure.",
+      "equation_id": "uet.o2.thermal.normal_response_stationarity",
+      "relation_or_code_path": {
+        "canonical": "x=sqrt(epsilon*K)*Delta_Phi_natural; m_chi^2(x)=m_chi0^2-G*x; M_response^2(x)=M0^2+3*lambda_response*x^2",
+        "potential": "Omega_T(x)=V_tree(x)+sum_species T integral log(1-exp(-(E_i(x)-q_i*mu)/T))",
+        "force": "Omega_x=M0^2*x+lambda_response*x^3-G*I_chi+6*lambda_response*x*I_response",
+        "tadpole": "I_i=integral f_i/(2*E_i); J_i=partial I_i/partial m_i^2",
+        "curvature": "Omega_xx=M0^2+3*lambda_response*x^2+G^2*J_chi+(6*lambda_response*x)^2*J_response+6*lambda_response*I_response",
+        "envelope": "p=-Omega_T(x_star); n=partial_mu p; s=partial_T p; chi_stationary=chi_fixed+Omega_xmu^2/Omega_xx",
+        "shifted_tree_vertex": "V_response_cubic=6*lambda_response*x_star, not a dressed thermal vertex",
+        "weak_source_response": "x_star approx G*I_chi(0)/[M0^2+6*lambda_response*I_response(0)+G^2*J_chi(0)] when the small-displacement expansion is controlled"
+      },
+      "standard_physics_counterpart": "Gaussian thermal effective potential on a normal scalar background",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_normal_thermal_background_audit.json",
+          "sha256": "ac402fe1bb4dd547dec069676ee0925f5805a2d12d4354fdc14b0a9f29e50914"
+        }
+      ],
+      "dependency_role": "diagnostic_only",
+      "physical_dependency_unlock": false
+    }
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}
