@@ -1,5 +1,27 @@
 # Verification Spec
 
+## Fixed-Phi Repair Verification (2026-08-31)
+
+Before reusing fixed-Phi results, run these modules from the repository root:
+
+```text
+python -B -m docs.scripts.audit.audit_topic13_finite_temperature_quasiparticle_eos
+python -B -m docs.scripts.audit.audit_topic13_formal_transverse_response
+python -B -m docs.scripts.audit.audit_topic13_fixed_phi_spectrum_repair
+```
+
+Require independent action-spectrum, small-k sound, canonical-rescaling and
+normal enthalpy checks, strict JSON, and current source hashes. The focused
+regression is docs/core/test/test_topic13_fixed_phi_spectrum_regression.py.
+Its mutation test must reject a corrupted spectrum. Import reachability is
+only a review inventory, not proof of numerical dependence.
+
+Do not rerun the older aggregate sequence below as evidence of Full Topic 13
+completion until acceptance scope and downstream freshness are repaired.
+Bounded He-4 composition does not close the requested full two-fluid/SK/KMS
+scope. This wave must retain full_core_unlock=false and not read source or
+holdout payloads.
+
 ## Canonical Core-Ready Acceptance (2026-08-28)
 
 Run in this order:

@@ -6,6 +6,25 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Active Implementation Review (2026-08-31)
+
+Full Topic 13 remains open under the requested full thermodynamic-bridge scope.
+The older bounded O(2)/He-4 handoff below is not evidence of complete two-fluid
+transport or full interacting SK/KMS closure. Its calibration/source records
+are not discarded by this implementation review.
+
+The fixed-Phi EOS spectrum and static transverse response now use canonical
+field normalization. Independent action eigenvalues, small-momentum EOS sound,
+field-rescaling covariance and normal-gas enthalpy checks pass. This repairs
+two implementations; it does not close the full topic.
+
+See [the repair artifact](../../core/artifacts/t13_fixed_phi_spectrum_repair_audit.json).
+Its source-only import inventory identifies downstream review candidates, not
+automatic numerical failures. Condensed spectrum-dependent outputs and
+general-Z normal outputs require review before reuse. A copied normalization
+in the kinetic collision setup remains open. The acceptance artifact containing
+pre-existing work was not regenerated; no physical dependency is unlocked.
+
 ## Canonical Current Gate (2026-08-28)
 
 MAJOR_RESULT_CLOSURE: `T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY` is `CLOSED_FOR_CORE`; this is a bounded O(2)/He-4 thermal-bridge result, not external-ready or global UET closure.

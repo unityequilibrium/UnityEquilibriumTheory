@@ -1,0 +1,1536 @@
+{
+  "schema_version": "t13-fixed-phi-spectrum-repair-v1",
+  "major_result_id": "T13_FIXED_PHI_EOS_STATIC_RESPONSE_REPAIR",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_SCOPED_IMPLEMENTATION_REPAIR",
+  "what_is_closed": [
+    "Fixed-Phi action spectrum and small-k EOS sound agreement on the declared grid.",
+    "Canonical field covariance of pressure and static momentum response.",
+    "Normal ideal-gas static response matches independent integral and enthalpy."
+  ],
+  "equation_or_mapping": {
+    "tree_grand_potential": "Omega_0=(m_eff^2-Z*mu^2)A^2/2+lambda*A^4/4",
+    "condensate": "A_*^2=(Z*mu^2-m_eff^2)/lambda for q>0",
+    "quasiparticles": "E_+/-^2=k^2+B +/- sqrt(B^2+4*mu^2*k^2); B=2*mu^2+lambda*A_*^2/Z",
+    "normal_quasiparticles": "E_+/-=sqrt(k^2+m_eff^2/Z) +/- mu",
+    "canonical_field_map": "chi_c=sqrt(Z)*chi; m_c^2=m_eff^2/Z; lambda_c=lambda/Z^2",
+    "determinant": "(E^2-k^2)*(E^2-k^2-2*q/Z)-4*mu^2*E^2=0",
+    "pressure": "p_2f=-Omega_0(A_*)+p_qp(T,mu,Phi)",
+    "thermodynamic_derivatives": "n=partial_mu p; s=partial_T p; epsilon=-p+T*s+mu*n"
+  },
+  "units": {
+    "unit_lane": "natural",
+    "T_mu_m_eff": "natural energy",
+    "effective_mass_field": "sqrt(m_eff^2) is retained as the mass parameter; the normal canonical gap is sqrt(m_eff^2/Z)",
+    "p_epsilon": "natural energy density",
+    "n": "natural charge density",
+    "s": "natural entropy density",
+    "Phi": "action response input; not temperature",
+    "C": "not relabeled as charge density"
+  },
+  "derivation_class": "EXISTING_ACTION_IMPLEMENTATION_REPAIR_NOT_NEW_EQUATION",
+  "observable": "natural-unit mode energies, pressure and static momentum susceptibility",
+  "data_role": "SYNTHETIC_REGRESSION_NOT_MATERIAL_CALIBRATION",
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_uet_o2_finite_temperature_quasiparticle_eos_audit.json",
+      "sha256": "62210fc648805ebca5c089884737c144861dcbab611042aa2aa23806f86d564e"
+    }
+  ],
+  "source_hashes": {
+    "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
+    "docs/core/uet_o2_formal_transverse_response.py": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba",
+    "docs/scripts/audit/audit_topic13_fixed_phi_spectrum_repair.py": "f1b425a33a29ec717b3f2cb7b0d12741be6b0c19c7e87c54663e2c6b82ce551a",
+    "docs/core/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+    "docs/core/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d",
+    "docs/core/test/test_topic13_fixed_phi_spectrum_regression.py": "aa4a0da1da86aa29268e971fa9485adb1f388d7cff242b66d2a8deedb0a11e6e"
+  },
+  "baseline": {
+    "git_revision": "5946ce9c3",
+    "eos_git_blob": "dee3df6f34b36e784cf5b998eae4693268384fd2",
+    "eos_sha256": "7a3b97bce24ac89593b6031adc65db8f18d33780565afcad016fd9b97cefe41e",
+    "primary_artifact_sha256": "6a8e9124d8574fa534c6377646f01e5324715477ff0595bcf04657ad9919538b",
+    "disposition": "SUPERSEDED_FOR_FIXED_PHI_SPECTRUM; preserved in git, not deleted"
+  },
+  "witnesses": {
+    "checks": {
+      "independent_action_spectrum": true,
+      "small_momentum_sound_without_clipping": true,
+      "normal_integral_and_enthalpy": true,
+      "canonical_field_covariance": true,
+      "corrected_gap_squared": true
+    },
+    "spectrum_rows": [
+      {
+        "Z": 0.25,
+        "k": 0.0,
+        "max_squared_frequency_error": 3.552713678800501e-15,
+        "pass": true
+      },
+      {
+        "Z": 0.25,
+        "k": 1e-08,
+        "max_squared_frequency_error": 1.0658141036401503e-14,
+        "pass": true
+      },
+      {
+        "Z": 0.25,
+        "k": 0.0001,
+        "max_squared_frequency_error": 1.298259971401977e-21,
+        "pass": true
+      },
+      {
+        "Z": 0.25,
+        "k": 0.1,
+        "max_squared_frequency_error": 7.105427357601002e-15,
+        "pass": true
+      },
+      {
+        "Z": 0.25,
+        "k": 1.0,
+        "max_squared_frequency_error": 3.907985046680551e-14,
+        "pass": true
+      },
+      {
+        "Z": 0.25,
+        "k": 5.0,
+        "max_squared_frequency_error": 2.842170943040401e-14,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 0.0,
+        "max_squared_frequency_error": 3.552713678800501e-15,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 1e-08,
+        "max_squared_frequency_error": 1.0658141036401503e-14,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 0.0001,
+        "max_squared_frequency_error": 1.298259971401977e-21,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 0.1,
+        "max_squared_frequency_error": 7.105427357601002e-15,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 1.0,
+        "max_squared_frequency_error": 3.907985046680551e-14,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 5.0,
+        "max_squared_frequency_error": 2.842170943040401e-14,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 0.0,
+        "max_squared_frequency_error": 3.552713678800501e-15,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 1e-08,
+        "max_squared_frequency_error": 1.0658141036401503e-14,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 0.0001,
+        "max_squared_frequency_error": 1.298259971401977e-21,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 0.1,
+        "max_squared_frequency_error": 7.105427357601002e-15,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 1.0,
+        "max_squared_frequency_error": 3.907985046680551e-14,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 5.0,
+        "max_squared_frequency_error": 2.842170943040401e-14,
+        "pass": true
+      }
+    ],
+    "sound_rows": [
+      {
+        "Z": 0.25,
+        "k": 1e-05,
+        "mode_c_squared": 0.25000000000351563,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      },
+      {
+        "Z": 0.25,
+        "k": 1e-08,
+        "mode_c_squared": 0.25,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      },
+      {
+        "Z": 0.25,
+        "k": 1e-10,
+        "mode_c_squared": 0.25,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 1e-05,
+        "mode_c_squared": 0.25000000000351563,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 1e-08,
+        "mode_c_squared": 0.25,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 1e-10,
+        "mode_c_squared": 0.25,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 1e-05,
+        "mode_c_squared": 0.25000000000351563,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 1e-08,
+        "mode_c_squared": 0.25,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 1e-10,
+        "mode_c_squared": 0.25,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      }
+    ],
+    "normal_response_rows": [
+      {
+        "Z": 0.25,
+        "static_chi": 0.001020678295567319,
+        "independent_integral": 0.001020678295567327,
+        "quadrature_error_estimate": 5.4326096445384625e-12,
+        "eos_enthalpy": 0.0010206787170648707,
+        "enthalpy_relative_error": 4.129581078204936e-07,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "static_chi": 0.001020678295567319,
+        "independent_integral": 0.001020678295567327,
+        "quadrature_error_estimate": 5.4326096445384625e-12,
+        "eos_enthalpy": 0.0010206787170648707,
+        "enthalpy_relative_error": 4.129581078204936e-07,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "static_chi": 0.001020678295567319,
+        "independent_integral": 0.001020678295567327,
+        "quadrature_error_estimate": 5.4326096445384625e-12,
+        "eos_enthalpy": 0.0010206787170648707,
+        "enthalpy_relative_error": 4.129581078204936e-07,
+        "pass": true
+      }
+    ],
+    "rescaling_rows": [
+      {
+        "T": 0.25,
+        "mu": 0.2,
+        "pressure_pair": [
+          0.00014814619679940017,
+          0.00014814619679940017
+        ],
+        "chi_pair": [
+          0.001020678295567319,
+          0.001020678295567319
+        ],
+        "pass": true
+      },
+      {
+        "T": 0.15,
+        "mu": 1.7320508075688772,
+        "pressure_pair": [
+          16.00036399400911,
+          16.00036399400911
+        ],
+        "chi_pair": [
+          0.004134726033466564,
+          0.004134726033466564
+        ],
+        "pass": true
+      }
+    ],
+    "gap_witness": {
+      "Z": 1.0,
+      "m_eff_squared": 1.0,
+      "mu_squared": 3.0,
+      "old_gap_squared": 20.0,
+      "corrected_gap_squared": 15.999999999999996,
+      "old_sound_squared": 0.4,
+      "corrected_sound_squared": 0.25,
+      "old_formula_role": "DEFECT_WITNESS_ONLY_NOT_AN_ACCEPTED_BASELINE"
+    }
+  },
+  "primary_artifact_fresh": true,
+  "downstream_review": {
+    "method": "STATIC_PYTHON_IMPORT_REACHABILITY",
+    "scope": [
+      "docs/core/*.py",
+      "docs/scripts/audit/*.py"
+    ],
+    "does_not_cover": "dynamic imports, copied formulas, non-Python artifact dependency edges",
+    "experimental_payloads_read": false,
+    "parse_errors": [],
+    "scanned_python_file_count": 892,
+    "review_required": [
+      {
+        "path": "docs/core/t13_formal_thermodynamic_bridge_integration.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_covariant_entropy_heat_flux_balance"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_action_1pi_sunset_euclidean.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_action_1pi_sunset_tensor"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_action_1pi_sunset_retarded.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_action_1pi_sunset_tensor"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_action_1pi_sunset_tensor.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_action_sunset_1pi_spectral"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_action_derived_transition_kernel.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_kinetic_collision_kubo"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_action_sunset_1pi_spectral.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_action_sunset_zero_eta.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_action_sunset_1pi_spectral",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_action_thermal_observable_bridge.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_action_thermal_stiffness_beta",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_action_thermal_stiffness_beta.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_charge_conserving_ladder_response.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_kinetic_collision_kubo"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_charged_current_correlator.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_contact_sk_transition_vertex_match",
+          "docs.core.uet_o2_continuum_collision_operator",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_collisionless_kubo.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_formal_transverse_response"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_condensed_loop_renormalized_vertex.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_continuum_relative_flow_kubo",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_condensed_relative_flow_collision.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_condensed_relative_flow_kubo_admission.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_condensed_loop_renormalized_vertex",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_condensed_sk_kms_kubo_match.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_condensed_loop_renormalized_vertex",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_contact_sk_transition_vertex_match.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_action_derived_transition_kernel",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_interacting_sk_kms_action"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_continuum_collision_operator.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_action_derived_transition_kernel",
+          "docs.core.uet_o2_energy_momentum_conserving_bethe_salpeter",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_continuum_relative_flow_kubo.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_continuum_sunset_cut.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_continuum_collision_operator",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_kinetic_collision_kubo"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_channel_entropy_balance.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_action_derived_transition_kernel",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_density_charged_vertex.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_one_loop_vertex_uv_boundary"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_all_22_permutation_identity.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_sunset_cut_multiplicity",
+          "docs.core.uet_o2_finite_temperature_sunset_scattering_sk_kms"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_all_onshell_cut_response.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_declared_retarded_1pi_grid",
+          "docs.core.uet_o2_finite_temperature_sunset_cut_multiplicity"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_declared_retarded_1pi_grid"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_declared_retarded_1pi_grid.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_sunset_scattering_sk_kms",
+          "docs.core.uet_o2_finite_temperature_sunset_sk_kms"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_full_sunset_sk_kms.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_sunset_scattering_sk_kms",
+          "docs.core.uet_o2_finite_temperature_sunset_sk_kms"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_normal_component.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_finite_temperature_two_fluid_response"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_offshell_threshold_crossing_1pi.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_action_1pi_sunset_tensor",
+          "docs.core.uet_o2_finite_temperature_sunset_scattering_sk_kms",
+          "docs.core.uet_o2_finite_temperature_sunset_sk_kms"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_sunset_cut_multiplicity.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_action_1pi_sunset_tensor",
+          "docs.core.uet_o2_action_sunset_1pi_spectral",
+          "docs.core.uet_o2_finite_temperature_sunset_scattering_sk_kms"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_sunset_renormalization_identifiability_no_go.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_sunset_scattering_sk_kms",
+          "docs.core.uet_o2_finite_temperature_sunset_sk_kms"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_sunset_scattering_sk_kms.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_action_1pi_sunset_tensor"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_sunset_sk_kms.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_action_1pi_sunset_retarded",
+          "docs.core.uet_o2_action_1pi_sunset_tensor"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_sunset_vacuum_match.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_action_1pi_sunset_retarded",
+          "docs.core.uet_o2_finite_temperature_full_sunset_sk_kms"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_two_fluid_response.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_covariant_entropy_heat_flux_balance",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_formal_transverse_response",
+          "docs.core.uet_o2_formal_two_sector_thermodynamics"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_formal_two_sector_thermodynamics.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_heat_current_kubo_continuum_boundary.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_continuum_collision_operator",
+          "docs.core.uet_o2_covariant_entropy_heat_flux_balance",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_heat_current_kubo_match.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_continuum_collision_operator",
+          "docs.core.uet_o2_covariant_entropy_heat_flux_balance",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_interacting_sk_kms_action.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_action_derived_transition_kernel",
+          "docs.core.uet_o2_finite_density_charged_vertex",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_kinetic_collision_kubo.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_microscopic_kubo_match.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_action_derived_transition_kernel",
+          "docs.core.uet_o2_contact_sk_transition_vertex_match",
+          "docs.core.uet_o2_continuum_collision_operator",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_momentum_ladder_sk_kms.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_kinetic_collision_kubo"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_nonlocal_sk_kms_memory_kernel.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_kinetic_collision_kubo"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_on_shell_sunset_width.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_sunset_scattering_sk_kms",
+          "docs.core.uet_o2_finite_temperature_sunset_sk_kms"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_one_loop_retarded_self_energy_no_go.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_one_loop_vertex_uv_boundary.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_regularized_continuum_heat_current.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_kinetic_collision_kubo"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_renormalized_vertex_scheme.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_one_loop_vertex_uv_boundary"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_sunset_dispersion_interface.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_sunset_dispersion_interface_verified.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_sunset_dispersion_interface"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_tree_level_bs_sk_match.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_action_derived_transition_kernel",
+          "docs.core.uet_o2_continuum_collision_operator",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_kinetic_collision_kubo"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_tree_level_charged_ward_vertex.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_density_charged_vertex",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/core/uet_o2_two_loop_sunset_cut.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_action_derived_transition_kernel",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_equilibrium_kms.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_finite_temperature_quasiparticle_eos.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.scripts.audit.audit_topic13_fixed_phi_spectrum_repair"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_finite_temperature_quasiparticle_eos_v2.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_fixed_phi_spectrum_repair.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_formal_transverse_response"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_formal_thermodynamic_bridge_integration.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.t13_formal_thermodynamic_bridge_integration",
+          "docs.core.uet_o2_covariant_entropy_heat_flux_balance"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_formal_transverse_response.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_formal_transverse_response",
+          "docs.scripts.audit.audit_topic13_fixed_phi_spectrum_repair"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_formal_two_sector_thermodynamics.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_formal_two_sector_thermodynamics"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_heat_current_kubo_continuum_boundary.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_heat_current_kubo_continuum_boundary"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_heat_current_kubo_match.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_heat_current_kubo_match"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_microscopic_kubo_match.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_microscopic_kubo_match"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_regularized_continuum_heat_current.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_regularized_continuum_heat_current"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_action_1pi_sunset_euclidean.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_action_1pi_sunset_euclidean"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_action_1pi_sunset_retarded.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_action_1pi_sunset_euclidean",
+          "docs.core.uet_o2_action_1pi_sunset_retarded"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_action_1pi_sunset_tensor.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_action_1pi_sunset_tensor"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_action_derived_transition_kernel.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_action_derived_transition_kernel",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_action_sunset_1pi_spectral.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_action_sunset_1pi_spectral",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_sunset_dispersion_interface"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_action_sunset_zero_eta.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_action_sunset_zero_eta",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_action_thermal_observable_bridge.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_action_thermal_observable_bridge"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_action_thermal_stiffness_beta.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_action_thermal_stiffness_beta"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_charge_conserving_ladder_response.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_charge_conserving_ladder_response",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_charged_current_correlator.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_charged_current_correlator"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_collisionless_kubo.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_collisionless_kubo",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_condensed_loop_renormalized_vertex.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_condensed_loop_renormalized_vertex",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_condensed_relative_flow_collision.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_condensed_relative_flow_collision"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_condensed_relative_flow_kubo_admission.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_condensed_relative_flow_kubo_admission",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_condensed_sk_kms_kubo_match.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_condensed_sk_kms_kubo_match",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_contact_sk_transition_vertex_match.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_contact_sk_transition_vertex_match"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_continuum_collision_operator.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_continuum_collision_operator",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_continuum_limit_boundary.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_continuum_collision_operator",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_continuum_relative_flow_kubo.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_continuum_relative_flow_kubo"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_continuum_sunset_cut.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_continuum_sunset_cut",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_covariant_entropy_heat_flux_balance.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_covariant_entropy_heat_flux_balance"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_energy_momentum_conserving_bethe_salpeter",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_finite_channel_entropy_balance.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_channel_entropy_balance",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_finite_density_charged_vertex.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_density_charged_vertex",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_renormalized_vertex_scheme"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_all_22_permutation_identity.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_all_22_permutation_identity"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_all_onshell_cut_response.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_all_onshell_cut_response"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_declared_retarded_1pi_grid.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_declared_retarded_1pi_grid"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_full_sunset_sk_kms.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_full_sunset_sk_kms"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_offshell_threshold_crossing_1pi.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_offshell_threshold_crossing_1pi"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_sunset_cut_multiplicity.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_sunset_cut_multiplicity"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_sunset_renormalization_identifiability_no_go.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_sunset_renormalization_identifiability_no_go"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_sunset_scattering_sk_kms.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_sunset_scattering_sk_kms"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_sunset_sk_kms.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_sunset_sk_kms"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_sunset_vacuum_match.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_sunset_vacuum_match"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_two_fluid_response.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_finite_temperature_two_fluid_response"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_interacting_sk_kms_action.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_density_charged_vertex",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_interacting_sk_kms_action"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_kinetic_collision_kubo.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_kinetic_collision_kubo"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_momentum_ladder_sk_kms.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_momentum_ladder_sk_kms"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_nonlocal_sk_kms_memory_kernel.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_nonlocal_sk_kms_memory_kernel"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_on_shell_sunset_width.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_on_shell_sunset_width"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_one_loop_retarded_self_energy_no_go.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_one_loop_retarded_self_energy_no_go"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_one_loop_vertex_uv_boundary.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_one_loop_vertex_uv_boundary"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_quantum_collision_enhancement.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_kinetic_collision_kubo"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_quantum_kinetic_collision_kubo.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_kinetic_collision_kubo"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_renormalized_vertex_scheme.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_renormalized_vertex_scheme"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_sunset_dispersion_interface.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_sunset_dispersion_interface",
+          "docs.core.uet_o2_sunset_dispersion_interface_verified"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_thermodynamic_normal_component.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_normal_component",
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_tree_level_bs_sk_match.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_tree_level_bs_sk_match"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_tree_level_charged_ward_vertex.py",
+        "relationship": "TRANSITIVE",
+        "affected_imports": [
+          "docs.core.uet_o2_tree_level_charged_ward_vertex"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_uet_o2_two_loop_sunset_cut.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_two_loop_sunset_cut"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      }
+    ],
+    "source_snapshot_sha256": {
+      "docs/core/t13_formal_thermodynamic_bridge_integration.py": "cc45b7fd41d550767b6bae00bcc189234374075f45ae81bfe8dda118391c5c8e",
+      "docs/core/uet_o2_action_1pi_sunset_euclidean.py": "6bb3af9671e253ba71ede617f98dd724dc089ca1cdb4fef4bdf3375f5e437073",
+      "docs/core/uet_o2_action_1pi_sunset_retarded.py": "faa8ebe67b6e816b66ad19f96f22242f88dc91aeba48c0cb2046fbcdb5b41932",
+      "docs/core/uet_o2_action_1pi_sunset_tensor.py": "ccff2807b70d519b0132dde8a0d79f949eeffd42c51c48ac36f396810ad0e21a",
+      "docs/core/uet_o2_action_derived_transition_kernel.py": "2f818500b353e8cf81caddf892bcf2db43a4341fe831b6f67e62423e3c2feb8f",
+      "docs/core/uet_o2_action_sunset_1pi_spectral.py": "b0265da3808352deb526bbbe911c4f87cbec3d9d7f40a4fc4d9bdf2c6e627e2b",
+      "docs/core/uet_o2_action_sunset_zero_eta.py": "89e1d55e1f3d05b7129fc7b3f0ff35c7a8f83e28cb954874727309e1e0371e44",
+      "docs/core/uet_o2_action_thermal_observable_bridge.py": "a1be58b8230240775654e7c0d6265870010f546238e96e59e36045e6a893e5d2",
+      "docs/core/uet_o2_action_thermal_stiffness_beta.py": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6",
+      "docs/core/uet_o2_charge_conserving_ladder_response.py": "d01d7d04bbdb2e86ac660c0e7fb18052e33b0efd75ccb6b8bc61c8649d452eea",
+      "docs/core/uet_o2_charged_current_correlator.py": "991e38719578b9caf5b19be98bc3987db6a6a1ffae62d9b17e43203075077c59",
+      "docs/core/uet_o2_collisionless_kubo.py": "ca2013138f968ab01272d4df54404ed1bf103b6ff6bb45a373ac75b34170096c",
+      "docs/core/uet_o2_condensed_loop_renormalized_vertex.py": "6384e8bc5553b696c17a079b93fd97df95b8f545475732b2a23f7133f03fe0dc",
+      "docs/core/uet_o2_condensed_relative_flow_collision.py": "d311f7106787e92638ac6a8d3d48a5b4d0ea6dbd688d83a52b2be824dff82d21",
+      "docs/core/uet_o2_condensed_relative_flow_kubo_admission.py": "92dea65cf85d2fc2054e4f5c0b293712d2ea0b8b0df65ffa5e4b95de9dd2df67",
+      "docs/core/uet_o2_condensed_sk_kms_kubo_match.py": "ab6fabaca6d2a19f8185535928638ecf4f1581cd2ad89ada78ed89e5341aff72",
+      "docs/core/uet_o2_contact_sk_transition_vertex_match.py": "f13f7f9950f85d5cdd4b9cecf4d48ce85d4c3436dbe5f85bdc516bab59ac71fa",
+      "docs/core/uet_o2_continuum_collision_operator.py": "010c1322063b806a1d87d3708cf5509e696f7370170dc2b859f61fd8f884e9e2",
+      "docs/core/uet_o2_continuum_relative_flow_kubo.py": "70850509063f5adf4493a21ceea420c9f414e1605eea7220a00ce3549d0bca30",
+      "docs/core/uet_o2_continuum_sunset_cut.py": "d5f597c2669775cd49e8a1f20014c1acc458b79c4224906bc362c75ada6f2972",
+      "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py": "89171426c2209521a16ca99e79ef4312cc9d3a987991692cc40ac9235a2fc251",
+      "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py": "eb69cc8ab6c35d782fbc687bc6fa503a22ae76c78e28d65c466eaf0e7e4719a9",
+      "docs/core/uet_o2_finite_channel_entropy_balance.py": "418247b1b61d23bdf0ee5212b5b4969216d1ced539636b741b04edd35e876f92",
+      "docs/core/uet_o2_finite_density_charged_vertex.py": "188edb08ef56bf0a3908d1cab843632faf0580525fee527112cf41e6fcf4777f",
+      "docs/core/uet_o2_finite_temperature_all_22_permutation_identity.py": "4e4609b56b9fc230ff70cca5c87bf2ccc809ed09b4f14e8b7906551c7b10d250",
+      "docs/core/uet_o2_finite_temperature_all_onshell_cut_response.py": "acbcce6babc00aa65fce3db26cc22ea8f49376533bd78f4d4c0c02c0aad6d37f",
+      "docs/core/uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi.py": "48ac15b10b64c81aa4c85dd7941ce8004022e61dc08acc655c9ab2ef4f25f013",
+      "docs/core/uet_o2_finite_temperature_declared_retarded_1pi_grid.py": "f635e131e00c295cb90bf51607a8c41b392fef4af610682d9c4d3bc99e504885",
+      "docs/core/uet_o2_finite_temperature_full_sunset_sk_kms.py": "c10b0c42897365a6d29ee8ada0b9657a78456e02fc8a1bba34d96abc43f783db",
+      "docs/core/uet_o2_finite_temperature_normal_component.py": "0a4010c0e390b7e910473698c4e5cc7dc6738df626e0de9c364b4258167a9335",
+      "docs/core/uet_o2_finite_temperature_offshell_threshold_crossing_1pi.py": "1b481136ba677b79d441f9ec253d1a4bb167c576463ee677f799d912ebfe549f",
+      "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
+      "docs/core/uet_o2_finite_temperature_sunset_cut_multiplicity.py": "e2f0f8b2efefddfc5c634ef879a238a86111404f7ac797c404a0894597d3cceb",
+      "docs/core/uet_o2_finite_temperature_sunset_renormalization_identifiability_no_go.py": "dc43fe6e2ebd1fc3bde7bb180f885cd30029ca587b496d4851a63c50c04974f3",
+      "docs/core/uet_o2_finite_temperature_sunset_scattering_sk_kms.py": "9ee0ab0c2b2e0a95783576bf57affcf996326fd4d697585c87dd6512cea597c0",
+      "docs/core/uet_o2_finite_temperature_sunset_sk_kms.py": "e9e2f057cbd16f37b8cc68013f7805ee3c9dba7f31ae4fecaa4741554e053aa2",
+      "docs/core/uet_o2_finite_temperature_sunset_vacuum_match.py": "5a428e64c5f50075d2cf2ae733366b99a1ffecae1ec83014eb82c9e0edb83ee5",
+      "docs/core/uet_o2_finite_temperature_two_fluid_response.py": "a68531bc34596aa115797e2353e1871913d4e9a158aeeb7f1ea5125c86aa236b",
+      "docs/core/uet_o2_formal_transverse_response.py": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba",
+      "docs/core/uet_o2_formal_two_sector_thermodynamics.py": "531ed369c6e96dd071d40dadadd59e02cd6a459dcf2ddc48662c8f294cfcf49c",
+      "docs/core/uet_o2_heat_current_kubo_continuum_boundary.py": "df3b1e51508fafd68e7041c992f4bbdbe47d43f50065f46ff7ad24b705409457",
+      "docs/core/uet_o2_heat_current_kubo_match.py": "0ebaae4f54459dbf2acbedbab8dfce2c874c7221cd789d813f4f4c02c5bc501e",
+      "docs/core/uet_o2_interacting_sk_kms_action.py": "91b432c04e11aebf4aa1c293a05ae611be4eca3243daa91546d671f63fd68da5",
+      "docs/core/uet_o2_kinetic_collision_kubo.py": "411314a28d67bbce457f96ad6f147b183a7580fb983e88af7ba9ce0ce7c149be",
+      "docs/core/uet_o2_microscopic_kubo_match.py": "34e5ff202d7e7579af278eff5fc509d03d6d48163b5e13cc7e657b76f943f667",
+      "docs/core/uet_o2_momentum_ladder_sk_kms.py": "c47aae04eca1e703919de6de9050e81d76dd036053bec9ef47c4cc0bbd648dbb",
+      "docs/core/uet_o2_nonlocal_sk_kms_memory_kernel.py": "9a80cbb16f227c102da432e461c8648c86f07a4ad8cea269f848b4f172efcb93",
+      "docs/core/uet_o2_on_shell_sunset_width.py": "a51b6da9513d9d1f1cf51dc0c11e08fb6cb818371ba3c88445de2b08c6cf6435",
+      "docs/core/uet_o2_one_loop_retarded_self_energy_no_go.py": "a0e04de5efe2c23d93ef91a56766c38cc359c4787b5f51f2c7f97fa839a5f84e",
+      "docs/core/uet_o2_one_loop_vertex_uv_boundary.py": "fb47090eed90d4e37bab34516cc0ad0d60300981de91f9322d1513746e11e8e1",
+      "docs/core/uet_o2_regularized_continuum_heat_current.py": "eeb4cf5807e2974ff5af3ad74523b2919ac5f8ef105d1e294b908eb2b789e898",
+      "docs/core/uet_o2_renormalized_vertex_scheme.py": "410f77c9418d0d946f0b27dbae31586a9436070771d0de13c7debc384dce71d6",
+      "docs/core/uet_o2_sunset_dispersion_interface.py": "325ddfded4a6ee8cd9d692082ed451df0d2acc739315b0a1902112e744bbd65e",
+      "docs/core/uet_o2_sunset_dispersion_interface_verified.py": "91540303f7dfb5baaba8e2eff3be6b48bd35060b71c3016cbdea43b57c183bdf",
+      "docs/core/uet_o2_tree_level_bs_sk_match.py": "ef3522ec6e925eee3fd937035829c801325f9e1ec39d5a809d42246f6c5e90c5",
+      "docs/core/uet_o2_tree_level_charged_ward_vertex.py": "ae592064486a75214c6fb4c1bd90627ef8951990c39eff2ad06e08406bff50b3",
+      "docs/core/uet_o2_two_loop_sunset_cut.py": "9c4e4c569a6df5a92017dde3be656060197f34a7eb7ece390269cc006b5e7add",
+      "docs/scripts/audit/audit_topic13_equilibrium_kms.py": "25130bf5d4b2502001d7a572cf72efeee57432a694f14bc172894b88692a7aeb",
+      "docs/scripts/audit/audit_topic13_finite_temperature_quasiparticle_eos.py": "fed8513deb08e22596020a6531abaece831106280f31bf52377e426baf57ae4d",
+      "docs/scripts/audit/audit_topic13_finite_temperature_quasiparticle_eos_v2.py": "a9db8f8615186f0773d76bf31a6c3ff304850f2131251cd4be7e6226fb9e0055",
+      "docs/scripts/audit/audit_topic13_fixed_phi_spectrum_repair.py": "f1b425a33a29ec717b3f2cb7b0d12741be6b0c19c7e87c54663e2c6b82ce551a",
+      "docs/scripts/audit/audit_topic13_formal_thermodynamic_bridge_integration.py": "6d84202c2a5dd0216debf01b37e196cb17afa5af48fa9925bfa32487500a15b2",
+      "docs/scripts/audit/audit_topic13_formal_transverse_response.py": "1b3faa9c7eae05906ebd33a9a47aaaa30606206747fd8a37588b1748013eb4fe",
+      "docs/scripts/audit/audit_topic13_formal_two_sector_thermodynamics.py": "6c458a03b2bcf8263536c5a4518fcfeb2fbf0a1866ef7f8a57241ef5d514738f",
+      "docs/scripts/audit/audit_topic13_heat_current_kubo_continuum_boundary.py": "932bc9a4ecb9b335d4ece4e9778313fe418a2bcfc360bab6285e7d5a37ee6c30",
+      "docs/scripts/audit/audit_topic13_heat_current_kubo_match.py": "f96849a717923f4b357e1dcaaa7998fdafc2b5527f51dfaed86b82f2ed9e39c5",
+      "docs/scripts/audit/audit_topic13_microscopic_kubo_match.py": "23f6f10cc7d965a77387b1e766e09b4509f02e3978d11693c4a3738c3a55cc56",
+      "docs/scripts/audit/audit_topic13_regularized_continuum_heat_current.py": "f2756bd2a83b52bc84f5712176ac6f3f511db2ae85db8149a006ab859ab6dd53",
+      "docs/scripts/audit/audit_topic13_uet_o2_action_1pi_sunset_euclidean.py": "6e0e6b53006ad73a8dec9acb677763a7df3d3d36ba033bea4cc4ddb58ae96bf5",
+      "docs/scripts/audit/audit_topic13_uet_o2_action_1pi_sunset_retarded.py": "51d0ddc2dd3ac661f3089d22daf12ad5ea388b177df493c84393e2a2f64f939b",
+      "docs/scripts/audit/audit_topic13_uet_o2_action_1pi_sunset_tensor.py": "674f7d9abdbb2204f0a3ed9e2cbc8d77b52bdef4b6d2c7f223816fc2687e2ae0",
+      "docs/scripts/audit/audit_topic13_uet_o2_action_derived_transition_kernel.py": "c13264532ac27ffd0d1f60491f520c5dcf46ecc6d75743c36b86f988737bd201",
+      "docs/scripts/audit/audit_topic13_uet_o2_action_sunset_1pi_spectral.py": "5efb9bf9e35b131fb1089a675d3afd4cf7f066b840400cdc20c25aaa9a6228c6",
+      "docs/scripts/audit/audit_topic13_uet_o2_action_sunset_zero_eta.py": "b6b5f08baccbb2d98d2fb703d1672768685044f54e038118f76c412e3cb621e8",
+      "docs/scripts/audit/audit_topic13_uet_o2_action_thermal_observable_bridge.py": "c9d0a865fef150bf463330d5ae60218eb1d86d1269eaf6ddcdcf7e50b5de9479",
+      "docs/scripts/audit/audit_topic13_uet_o2_action_thermal_stiffness_beta.py": "38f5b155fda78b0107ae1faaec6039e3d9065ee6b57c564d468cb8a8ef792830",
+      "docs/scripts/audit/audit_topic13_uet_o2_charge_conserving_ladder_response.py": "5b9f59bd7cee55daebd21584c25c2d9f4f1f14d16b338d1fc04b703577c3c345",
+      "docs/scripts/audit/audit_topic13_uet_o2_charged_current_correlator.py": "f3832cd10ef2cf33e9b5740b2876b60f11ceba47997afa0e34c6143eb168ad25",
+      "docs/scripts/audit/audit_topic13_uet_o2_collisionless_kubo.py": "b13c60c53490c3b73b609037016856b4f0823e036773b58b297c77cf46565e69",
+      "docs/scripts/audit/audit_topic13_uet_o2_condensed_loop_renormalized_vertex.py": "10dfb3742543e6a6b6ba0cf8f2529ab2783b7f59247ed7871f08ae8f38bd11b2",
+      "docs/scripts/audit/audit_topic13_uet_o2_condensed_relative_flow_collision.py": "a378853abc77105eb5d99d6fe6c01acd03d0edec3b8db8eb4c48d00340f3d11f",
+      "docs/scripts/audit/audit_topic13_uet_o2_condensed_relative_flow_kubo_admission.py": "d2564cf3b8d457c17f212c117f6b3c303984fba85b9e5b395a9e76742ca52bdf",
+      "docs/scripts/audit/audit_topic13_uet_o2_condensed_sk_kms_kubo_match.py": "8241285a59db35b74632b5c54a4b04c1180ba2bd7cdfec1e7215ede651925b19",
+      "docs/scripts/audit/audit_topic13_uet_o2_contact_sk_transition_vertex_match.py": "9a9756b24b8d5d5f6dae3974248f9f49eb8260e9e712a29a6c452f00d5c59f36",
+      "docs/scripts/audit/audit_topic13_uet_o2_continuum_collision_operator.py": "adf50437fbd42ddcb772c3ca2ff5f4ddc7e7d5adec551a0067b5258f929070b5",
+      "docs/scripts/audit/audit_topic13_uet_o2_continuum_limit_boundary.py": "dd011ffc5b378731baf4c3e63727f7a13bf38462f7dbbce532a56152291495bd",
+      "docs/scripts/audit/audit_topic13_uet_o2_continuum_relative_flow_kubo.py": "236731a29f37016a87c3310c3c5616e54cce152a80eb1b00a950c6f2ef6e043f",
+      "docs/scripts/audit/audit_topic13_uet_o2_continuum_sunset_cut.py": "598eaa97ba5dd19e55b5e6722c0f78ddd045b0c168ea9b4927043c4e996f7d8e",
+      "docs/scripts/audit/audit_topic13_uet_o2_covariant_entropy_heat_flux_balance.py": "219aa07d291d57a314ca95c4e923732cdfd1998e821a79c5052160fd0a3fed0d",
+      "docs/scripts/audit/audit_topic13_uet_o2_energy_momentum_conserving_bethe_salpeter.py": "7eda9d921a5741d909040ff97dacc3be2f60b0665967bc59e051798ee27e5abc",
+      "docs/scripts/audit/audit_topic13_uet_o2_finite_channel_entropy_balance.py": "821ae8f6b24f0f5b3dddbfa10aef92623461e1464c054033f666ddb8305aaeeb",
+      "docs/scripts/audit/audit_topic13_uet_o2_finite_density_charged_vertex.py": "96b5303ec171a126cb1a702eaff98c5162580a1358564cc1491268afc99cfa04",
+      "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_all_22_permutation_identity.py": "a3ab76cb78c6c1b12e6ddba533b9d66506b3e9d9d59a8cd6a17c4e7a756b9bb3",
+      "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_all_onshell_cut_response.py": "d8c90084a6b74f274f4d23326833885ec8169a32c14ef3338bac8f351fcda8f2",
+      "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi.py": "6fb21ef9accc84f9af43197c22225d62b88d4a9670f482804be98d7be23bc5e4",
+      "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_declared_retarded_1pi_grid.py": "c2c379f776a48d0c4daad099696042e3c205ded0f51dcc7893a959ebe9d2c281",
+      "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_full_sunset_sk_kms.py": "4e098085c346e8cf0a8a274b51cf67338bdc2683cbbea537045076b713300cc7",
+      "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_offshell_threshold_crossing_1pi.py": "0ebe3a880d6fe66759349233abb5dba21c1cfe0e63c240eee2df0b0ed8782123",
+      "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_sunset_cut_multiplicity.py": "bbe946586dc96678653f9c7e2329b82b55fb8699235bc32ac0831b1ad4a02896",
+      "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_sunset_renormalization_identifiability_no_go.py": "55147b3266779b0bcc56fa2389f71f10627a44cc329f8b17130cccce908a80a7",
+      "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_sunset_scattering_sk_kms.py": "d687ca962d6b93c7dddc3e8fb09a49fd4824c3351fd6008ea00c197f82764051",
+      "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_sunset_sk_kms.py": "b86e20cc746426380ea3481db32c35828816bb2b31af67e905d25ef224810a99",
+      "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_sunset_vacuum_match.py": "5d43586b1ab10d597c9d90a5af24c70b439b13cca4cd60f4a386703e4bd9b46d",
+      "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_two_fluid_response.py": "c5d19749b6877074935a7ce5c598f2c2a6241f57267e4c31f7ecd43ff82e7eae",
+      "docs/scripts/audit/audit_topic13_uet_o2_interacting_sk_kms_action.py": "2b3c09d45b386dda36fd38592fc18cdeb44d91987e7d52c9242c03bdecbc1c55",
+      "docs/scripts/audit/audit_topic13_uet_o2_kinetic_collision_kubo.py": "9547fe1d29b2df7538af18142d22756af52295b523d741e8fab056fb5ca1e3eb",
+      "docs/scripts/audit/audit_topic13_uet_o2_momentum_ladder_sk_kms.py": "e0fbe5e38c139f662e665f23e339143e8844c5ff7ef8c6e2467e0cbe47f4d047",
+      "docs/scripts/audit/audit_topic13_uet_o2_nonlocal_sk_kms_memory_kernel.py": "45650c47511442673c364d03ad08a465228b49c6b1b466b116639f204c06705d",
+      "docs/scripts/audit/audit_topic13_uet_o2_on_shell_sunset_width.py": "10257a496ae0eeb7b921fb53bea213c16f63b112ee0ed47b329038339c6e77a0",
+      "docs/scripts/audit/audit_topic13_uet_o2_one_loop_retarded_self_energy_no_go.py": "a288483701b491f7fff758041cbb5a1d00c95b798ad4f8ab7ec90df618cd2c9d",
+      "docs/scripts/audit/audit_topic13_uet_o2_one_loop_vertex_uv_boundary.py": "2bccbbdb21d89569c54133c1382f1284a888010be59cdf056ed0ed84222b7a69",
+      "docs/scripts/audit/audit_topic13_uet_o2_quantum_collision_enhancement.py": "ced57134341ecfc74b2323154e8022417f48b386f2c24c7a47a0d16486a30d82",
+      "docs/scripts/audit/audit_topic13_uet_o2_quantum_kinetic_collision_kubo.py": "3eb2da46d493ed6057edad53b757140feb09d88593a46f35e0be2a93ea789fdb",
+      "docs/scripts/audit/audit_topic13_uet_o2_renormalized_vertex_scheme.py": "97d3f1d66662937e591c87d789d9640a306cdcae7000254c00baa5814cefb06e",
+      "docs/scripts/audit/audit_topic13_uet_o2_sunset_dispersion_interface.py": "6eaad98bf1bed31bbae77b2522ae7f5dfb135a199bb2638b71105ae4008a0233",
+      "docs/scripts/audit/audit_topic13_uet_o2_thermodynamic_normal_component.py": "6b852cc2c717506ad7289547443dccd500e5231d5e41e3f80fa279c7c4e3833e",
+      "docs/scripts/audit/audit_topic13_uet_o2_tree_level_bs_sk_match.py": "24d5c3910f6dad9c79eb7c59bdbb3d0948b95523e5ff92688534d23d37ca2046",
+      "docs/scripts/audit/audit_topic13_uet_o2_tree_level_charged_ward_vertex.py": "34bca8ddc9d8503efb1b5fe534dc1a5abe3cba18c4f28192a2f8283793a9aa3f",
+      "docs/scripts/audit/audit_topic13_uet_o2_two_loop_sunset_cut.py": "7a24a05a45286627be600e73666c446dd2a694e5cd3d02feebc23791ed256dc0"
+    }
+  },
+  "impact_boundary": {
+    "condensed": "Recompute spectrum-dependent values; old positivity-only PASS is insufficient.",
+    "normal_Z_not_one": "Recompute EOS and static response with canonical mass and unscaled mu.",
+    "normal_Z_one": "Dispersion unchanged; thermal-log precision changed. Do not discard physical anchors by association.",
+    "live_Phi": "Separate three-mode calculation; not replaced by this two-mode repair.",
+    "global_acceptance": "Not regenerated; bounded He4 composition is not evidence of full thermodynamic closure."
+  },
+  "known_unrepaired_copied_formula": {
+    "path": "docs/core/uet_o2_kinetic_collision_kubo.py",
+    "symbol": "_normal_state_inputs",
+    "source_sha256": "411314a28d67bbce457f96ad6f147b183a7580fb983e88af7ba9ce0ce7c149be",
+    "finding": "Normal kinetic setup still uses sqrt(Z)*abs(mu); audit its mass and vertex normalization before general-Z transport use.",
+    "disposition": "OPEN_GENERAL_Z_KINETIC_NORMALIZATION_REVIEW"
+  },
+  "open_blockers": [
+    "downstream_spectrum_dependent_artifact_refresh_and_formula_review",
+    "full_current_condensate_material_matching",
+    "full_thermal_transport_SK_KMS_and_physical_mapping",
+    "full_acceptance_scope_repair"
+  ],
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "parameter_fitting_performed": false,
+  "xie_2026_accessed": false,
+  "input_access_boundary": "Synthetic points, Python code, import-time package/release metadata and the named EOS audit JSON; no experimental payload.",
+  "controlling_blocker": "downstream_spectrum_and_copied_kinetic_normalization_review",
+  "next_action": "Audit general-Z kinetic mass, chemical potential and vertex normalization; refresh only impacted results and repair full-acceptance scope.",
+  "claim_boundary": "Fixed-Phi implementation repair only; not live-Phi closure, SI conductivity, full two-fluid transport, Full Topic 13 or external validation.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "Fixed-Phi action spectrum and small-k EOS sound agreement on the declared grid.",
+      "Canonical field covariance of pressure and static momentum response.",
+      "Normal ideal-gas static response matches independent integral and enthalpy."
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "downstream_spectrum_dependent_artifact_refresh_and_formula_review",
+      "full_current_condensate_material_matching",
+      "full_thermal_transport_SK_KMS_and_physical_mapping",
+      "full_acceptance_scope_repair"
+    ],
+    "DEPENDENCY_UNLOCKED": [],
+    "STATUS": "PASS_SCOPED_IMPLEMENTATION_REPAIR",
+    "WHAT_CHANGED": "Corrected fixed-Phi spectrum and static response; preserved old EOS identity and inventoried downstream importers.",
+    "EQUATION_OR_MAPPING": {
+      "tree_grand_potential": "Omega_0=(m_eff^2-Z*mu^2)A^2/2+lambda*A^4/4",
+      "condensate": "A_*^2=(Z*mu^2-m_eff^2)/lambda for q>0",
+      "quasiparticles": "E_+/-^2=k^2+B +/- sqrt(B^2+4*mu^2*k^2); B=2*mu^2+lambda*A_*^2/Z",
+      "normal_quasiparticles": "E_+/-=sqrt(k^2+m_eff^2/Z) +/- mu",
+      "canonical_field_map": "chi_c=sqrt(Z)*chi; m_c^2=m_eff^2/Z; lambda_c=lambda/Z^2",
+      "determinant": "(E^2-k^2)*(E^2-k^2-2*q/Z)-4*mu^2*E^2=0",
+      "pressure": "p_2f=-Omega_0(A_*)+p_qp(T,mu,Phi)",
+      "thermodynamic_derivatives": "n=partial_mu p; s=partial_T p; epsilon=-p+T*s+mu*n"
+    },
+    "VERIFICATION": {
+      "independent_action_spectrum": true,
+      "small_momentum_sound_without_clipping": true,
+      "normal_integral_and_enthalpy": true,
+      "canonical_field_covariance": true,
+      "corrected_gap_squared": true
+    },
+    "CONTROLLING_BLOCKER": "downstream_spectrum_and_copied_kinetic_normalization_review",
+    "NEXT_ACTION": "Audit general-Z kinetic mass, chemical potential and vertex normalization; refresh only impacted results and repair full-acceptance scope.",
+    "CLAIM_BOUNDARY": "Fixed-Phi implementation repair only; not live-Phi closure, SI conductivity, full two-fluid transport, Full Topic 13 or external validation."
+  }
+}

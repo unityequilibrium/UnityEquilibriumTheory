@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-uet-o2-formal-transverse-response-v1",
   "artifact": "t13_uet_o2_formal_transverse_response_audit",
-  "generated_at": "2026-08-14",
+  "generated_at": "2026-08-31",
   "status": "PASS_FORMAL_STATIC_TRANSVERSE_QUASIPARTICLE_RESPONSE",
   "major_result": {
     "major_result_id": "T13_UET_O2_FORMAL_TRANSVERSE_RESPONSE_LANE",
@@ -15,6 +15,8 @@
       "explicit boundary separating the static witness from retarded Kubo and Landau density claims"
     ],
     "equation_or_mapping": {
+      "normal_quasiparticles": "E_+/-=sqrt(k^2+m_eff^2/Z) +/- mu",
+      "normal_enthalpy_check": "chi_perp=epsilon+p for the ideal relativistic normal gas only",
       "doppler_shift": "E_a(k;v)=E_a(k)+k.v+O(v^2)",
       "normal_momentum_susceptibility": "chi_perp_qp=(1/3) sum_a integral[d^3k/(2*pi)^3] k^2[-partial_E n_B(E_a)]",
       "tree_condensate_phase_stiffness": "f_s_tree=Z*(Z*mu^2-m_eff^2)/lambda for condensed q>0"
@@ -34,11 +36,11 @@
     "evidence_artifacts": [
       {
         "path": "docs/core/uet_o2_formal_transverse_response.py",
-        "sha256": "bb30501e3486323dc56e814b5855a66383949a71029b4683cd4bc9931c6bbd58"
+        "sha256": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba"
       },
       {
         "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
-        "sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4"
+        "sha256": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f"
       }
     ],
     "verification_status": "PASS_FORMAL_STATIC_TRANSVERSE_QUASIPARTICLE_RESPONSE",
@@ -56,7 +58,11 @@
   },
   "contract": {
     "status": "PASS_FORMAL_STATIC_TRANSVERSE_QUASIPARTICLE_RESPONSE",
+    "response_policy": "FIXED_PHI_BACKGROUND",
+    "spectrum_revision": "FIXED_PHI_CANONICAL_V2",
     "equations": {
+      "normal_quasiparticles": "E_+/-=sqrt(k^2+m_eff^2/Z) +/- mu",
+      "normal_enthalpy_check": "chi_perp=epsilon+p for the ideal relativistic normal gas only",
       "doppler_shift": "E_a(k;v)=E_a(k)+k.v+O(v^2)",
       "normal_momentum_susceptibility": "chi_perp_qp=(1/3) sum_a integral[d^3k/(2*pi)^3] k^2[-partial_E n_B(E_a)]",
       "tree_condensate_phase_stiffness": "f_s_tree=Z*(Z*mu^2-m_eff^2)/lambda for condensed q>0"
@@ -75,6 +81,263 @@
     "data_role": "ACTION_DERIVED_FORMAL_STATIC_RESPONSE_NOT_KUBO",
     "excluded_scope": "retarded Kubo coefficient, interacting self-energy, full SK/KMS matching, heat flux, SI map, alpha_Phi_K, TTG validation, and external validation",
     "claim_boundary": "This closes a formal static response witness only. It is not a physical Kubo match, Landau normal density, complete two-fluid transport theory, SI calibration, or external validation."
+  },
+  "independent_action_witnesses": {
+    "checks": {
+      "independent_action_spectrum": true,
+      "small_momentum_sound_without_clipping": true,
+      "normal_integral_and_enthalpy": true,
+      "canonical_field_covariance": true,
+      "corrected_gap_squared": true
+    },
+    "spectrum_rows": [
+      {
+        "Z": 0.25,
+        "k": 0.0,
+        "max_squared_frequency_error": 3.552713678800501e-15,
+        "pass": true
+      },
+      {
+        "Z": 0.25,
+        "k": 1e-08,
+        "max_squared_frequency_error": 1.0658141036401503e-14,
+        "pass": true
+      },
+      {
+        "Z": 0.25,
+        "k": 0.0001,
+        "max_squared_frequency_error": 1.298259971401977e-21,
+        "pass": true
+      },
+      {
+        "Z": 0.25,
+        "k": 0.1,
+        "max_squared_frequency_error": 7.105427357601002e-15,
+        "pass": true
+      },
+      {
+        "Z": 0.25,
+        "k": 1.0,
+        "max_squared_frequency_error": 3.907985046680551e-14,
+        "pass": true
+      },
+      {
+        "Z": 0.25,
+        "k": 5.0,
+        "max_squared_frequency_error": 2.842170943040401e-14,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 0.0,
+        "max_squared_frequency_error": 3.552713678800501e-15,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 1e-08,
+        "max_squared_frequency_error": 1.0658141036401503e-14,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 0.0001,
+        "max_squared_frequency_error": 1.298259971401977e-21,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 0.1,
+        "max_squared_frequency_error": 7.105427357601002e-15,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 1.0,
+        "max_squared_frequency_error": 3.907985046680551e-14,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 5.0,
+        "max_squared_frequency_error": 2.842170943040401e-14,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 0.0,
+        "max_squared_frequency_error": 3.552713678800501e-15,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 1e-08,
+        "max_squared_frequency_error": 1.0658141036401503e-14,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 0.0001,
+        "max_squared_frequency_error": 1.298259971401977e-21,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 0.1,
+        "max_squared_frequency_error": 7.105427357601002e-15,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 1.0,
+        "max_squared_frequency_error": 3.907985046680551e-14,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 5.0,
+        "max_squared_frequency_error": 2.842170943040401e-14,
+        "pass": true
+      }
+    ],
+    "sound_rows": [
+      {
+        "Z": 0.25,
+        "k": 1e-05,
+        "mode_c_squared": 0.25000000000351563,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      },
+      {
+        "Z": 0.25,
+        "k": 1e-08,
+        "mode_c_squared": 0.25,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      },
+      {
+        "Z": 0.25,
+        "k": 1e-10,
+        "mode_c_squared": 0.25,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 1e-05,
+        "mode_c_squared": 0.25000000000351563,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 1e-08,
+        "mode_c_squared": 0.25,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 1e-10,
+        "mode_c_squared": 0.25,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 1e-05,
+        "mode_c_squared": 0.25000000000351563,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 1e-08,
+        "mode_c_squared": 0.25,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 1e-10,
+        "mode_c_squared": 0.25,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      }
+    ],
+    "normal_response_rows": [
+      {
+        "Z": 0.25,
+        "static_chi": 0.001020678295567319,
+        "independent_integral": 0.001020678295567327,
+        "quadrature_error_estimate": 5.4326096445384625e-12,
+        "eos_enthalpy": 0.0010206787170648707,
+        "enthalpy_relative_error": 4.129581078204936e-07,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "static_chi": 0.001020678295567319,
+        "independent_integral": 0.001020678295567327,
+        "quadrature_error_estimate": 5.4326096445384625e-12,
+        "eos_enthalpy": 0.0010206787170648707,
+        "enthalpy_relative_error": 4.129581078204936e-07,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "static_chi": 0.001020678295567319,
+        "independent_integral": 0.001020678295567327,
+        "quadrature_error_estimate": 5.4326096445384625e-12,
+        "eos_enthalpy": 0.0010206787170648707,
+        "enthalpy_relative_error": 4.129581078204936e-07,
+        "pass": true
+      }
+    ],
+    "rescaling_rows": [
+      {
+        "T": 0.25,
+        "mu": 0.2,
+        "pressure_pair": [
+          0.00014814619679940017,
+          0.00014814619679940017
+        ],
+        "chi_pair": [
+          0.001020678295567319,
+          0.001020678295567319
+        ],
+        "pass": true
+      },
+      {
+        "T": 0.15,
+        "mu": 1.7320508075688772,
+        "pressure_pair": [
+          16.00036399400911,
+          16.00036399400911
+        ],
+        "chi_pair": [
+          0.004134726033466564,
+          0.004134726033466564
+        ],
+        "pass": true
+      }
+    ],
+    "gap_witness": {
+      "Z": 1.0,
+      "m_eff_squared": 1.0,
+      "mu_squared": 3.0,
+      "old_gap_squared": 20.0,
+      "corrected_gap_squared": 15.999999999999996,
+      "old_sound_squared": 0.4,
+      "corrected_sound_squared": 0.25,
+      "old_formula_role": "DEFECT_WITNESS_ONLY_NOT_AN_ACCEPTED_BASELINE"
+    }
+  },
+  "source_hashes": {
+    "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
+    "docs/core/uet_o2_formal_transverse_response.py": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba",
+    "docs/scripts/audit/audit_topic13_fixed_phi_spectrum_repair.py": "f1b425a33a29ec717b3f2cb7b0d12741be6b0c19c7e87c54663e2c6b82ce551a",
+    "docs/scripts/audit/audit_topic13_formal_transverse_response.py": "1b3faa9c7eae05906ebd33a9a47aaaa30606206747fd8a37588b1748013eb4fe"
   },
   "state_grid": {
     "normal_high_temperature": {
@@ -104,7 +367,7 @@
       "temperature": 0.2,
       "chemical_potential": 1.28,
       "space_response": 0.15,
-      "normal_momentum_susceptibility": 0.007504229800875244,
+      "normal_momentum_susceptibility": 0.012269821127450047,
       "condensate_phase_stiffness": 0.6384000000000001,
       "quadrature_order": 160,
       "cutoff_factor": 65.0,
@@ -115,7 +378,7 @@
       "temperature": 0.04,
       "chemical_potential": 1.28,
       "space_response": 0.15,
-      "normal_momentum_susceptibility": 2.4516198190538478e-05,
+      "normal_momentum_susceptibility": 7.528724032861442e-05,
       "condensate_phase_stiffness": 0.6384000000000001,
       "quadrature_order": 160,
       "cutoff_factor": 65.0,
@@ -123,6 +386,11 @@
     }
   },
   "checks": {
+    "independent_action_spectrum": true,
+    "small_momentum_sound_without_clipping": true,
+    "normal_integral_and_enthalpy": true,
+    "canonical_field_covariance": true,
+    "corrected_gap_squared": true,
     "all_states_finite_and_nonnegative": true,
     "normal_branch_classification_pass": true,
     "condensed_branch_classification_pass": true,
@@ -147,5 +415,6 @@
   "xie_2026_accessed": false,
   "controlling_blocker": "retarded_physical_Kubo_match_missing",
   "next_controller": "match the formal transverse response to a state-matched retarded microscopic Kubo record; retain the present result as a natural-unit static witness until that match exists",
-  "claim_promotion": false
+  "claim_promotion": false,
+  "full_core_unlock": false
 }

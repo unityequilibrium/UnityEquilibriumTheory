@@ -5094,3 +5094,33 @@ EVIDENCE_PATHS:
 - `docs/scripts/audit/audit_topic13_goldstone_projected_current.py`
 - `docs/core/test/test_topic13_goldstone_projected_current.py`
 - `docs/core/artifacts/t13_goldstone_projected_current_research_candidate.json`
+
+## 2026-08-31 - Fixed-Phi EOS and static response implementation repair
+
+MAJOR_RESULT_CLOSURE: T13_FIXED_PHI_EOS_STATIC_RESPONSE_REPAIR is CLOSED_FOR_LANE; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: Corrected the fixed-Phi spectrum and canonical field normalization in the EOS and static momentum response. Independent action eigenvalues, small-k sound, pressure/response rescaling covariance and normal-gas enthalpy agree on the declared grid.
+
+WHAT_REMAINS_OPEN: Downstream spectrum-dependent artifacts, copied general-Z kinetic normalization, full condensate/current/material matching, full thermal transport/SK/KMS and full-acceptance scope. Existing He-4 calibration records are not discarded or promoted to graphite calibration.
+
+DEPENDENCY_UNLOCKED: Implementation-level continuation only; no physical downstream unlock and full_core_unlock=false.
+
+STATUS: PASS_SCOPED_IMPLEMENTATION_REPAIR. The refreshed EOS and static-response artifacts pass their declared internal checks.
+
+WHAT_CHANGED: Repaired EOS/static formulas, added independent regressions and a source-only import inventory, regenerated both primary artifacts with strict JSON and hashes, and added scope warnings before older bounded Core-ready prose. The old EOS identity is preserved in git and in the repair record. Existing user-dirty source/acceptance artifacts and ledgers were untouched.
+
+EQUATION_OR_MAPPING: q=Z*mu^2-m_eff^2; a=q/Z; B=2*mu^2+a; E_plus^2=k^2+B+sqrt(B^2+4*mu^2*k^2); E_minus^2=k^2*(k^2+2*a)/E_plus^2. Normal energies are sqrt(k^2+m_eff^2/Z) +/- mu. For the ideal relativistic normal gas only, chi_perp=epsilon+p. Phi is fixed, not the live-Phi three-mode problem.
+
+VERIFICATION: 75 focused and consumer tests passed. Before the static-response repair, the five new static tests yielded three failures and two passes; all passed after repair. The independent-audit mutation test rejects a corrupted upper mode. Three audits regenerated successfully under a runtime guard rejecting experimental Data access; zero such access attempts occurred. Strict JSON, evidence/source hashes and the 117-entry downstream source snapshot were verified. Import-time package/release metadata were read, not experimental payloads. Repair artifact SHA256: 0e038c270379fc12fd559fb7433b0de80dfab5ff1f4fc97568ed2487dff69bb8. git diff --check passed.
+
+CONTROLLING_BLOCKER: General-Z kinetic mass/mu/vertex normalization and downstream freshness now control reuse of the repaired pair; full thermal closure additionally requires physical current/condensate/material matching.
+
+NEXT_ACTION: Audit uet_o2_kinetic_collision_kubo._normal_state_inputs and canonical vertex normalization before general-Z transport use. Refresh only genuinely affected outputs; repair full acceptance scope without overwriting pre-existing user work.
+
+CLAIM_BOUNDARY: Natural-unit fixed-Phi implementation repair, not physical conductivity, full two-fluid transport, Full Topic 13 closure or external validation. No threshold, fit, source calibration or ontology change.
+
+EVIDENCE_PATHS:
+- docs/core/artifacts/t13_fixed_phi_spectrum_repair_audit.json
+- docs/core/artifacts/t13_uet_o2_finite_temperature_quasiparticle_eos_audit.json
+- docs/core/artifacts/t13_uet_o2_formal_transverse_response_audit.json
+- docs/core/test/test_topic13_fixed_phi_spectrum_regression.py

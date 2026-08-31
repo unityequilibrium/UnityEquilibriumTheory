@@ -11,7 +11,7 @@ transport calculation or an SI observable map.
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from math import exp, expm1, isfinite, log, pi, sqrt
+from math import exp, expm1, isfinite, log, log1p, pi, sqrt
 
 import numpy as np
 
@@ -54,6 +54,8 @@ def _thermal_log(argument: float) -> float:
     x = _positive(argument, "thermal argument")
     if x > 50.0:
         return exp(-x)
+    if x > log(2.0):
+        return -log1p(-exp(-x))
     return -log(-expm1(-x))
 
 
@@ -102,7 +104,8 @@ def _effective_chemical_potential(
     chemical_potential: float,
     config: FiniteTemperatureO2QuasiparticleConfig,
 ) -> float:
-    return sqrt(config.eos.matter.matter_kinetic) * abs(
+    # Canonical field normalization rescales mass, not time or chemical potential.
+    return abs(
         _finite(chemical_potential, "chemical_potential")
     )
 
@@ -129,11 +132,11 @@ def condensed_quasiparticle_energies(
 
     With ``A`` fixed by the tree stationary condition, the branches are
 
-    ``E_+/-^2 = S +/- sqrt(4 Z mu^2 B + 4 lambda^2 A^4)``,
+    ``E_+/-^2 = k^2+B +/- sqrt(B^2+4 mu^2 k^2)``,
 
-    where ``S=k^2+m_eff^2+3 lambda A^2+Z mu^2`` and
-    ``B=k^2+m_eff^2+3 lambda A^2``.  The lower branch is gapless at ``k=0``
-    in the ideal tree condensate limit.
+    where ``B=2 mu^2+lambda A^2/Z``. Phi is held fixed; this is not
+    the three-mode live-Phi spectrum. The lower root is rationalized
+    to retain its small-momentum limit without clipping.
     """
 
     k = _finite(momentum, "momentum")
@@ -146,18 +149,15 @@ def condensed_quasiparticle_energies(
     z = _positive(config.eos.matter.matter_kinetic, "matter_kinetic")
     lam = _positive(config.eos.matter.matter_quartic, "matter_quartic")
     amplitude_sq = _condensed_amplitude_sq(mu, space_response, config)
-    b_value = k * k + mass_sq + 3.0 * lam * amplitude_sq
-    common = b_value + z * mu * mu
-    discriminant = 4.0 * z * mu * mu * b_value + 4.0 * lam * lam * amplitude_sq * amplitude_sq
-    if discriminant < 0.0:
-        raise FloatingPointError("quasiparticle discriminant must be non-negative")
-    root = sqrt(discriminant)
-    upper_sq = common + root
-    lower_sq = common - root
-    scale = max(1.0, abs(common), abs(root))
-    if lower_sq < -1.0e-10 * scale:
-        raise FloatingPointError("lower quasiparticle energy squared is negative")
-    return sqrt(max(0.0, upper_sq)), sqrt(max(0.0, lower_sq))
+    radial_control = lam * amplitude_sq / z
+    b_value = 2.0 * mu * mu + radial_control
+    upper_sq = k * k + b_value + sqrt(
+        b_value * b_value + 4.0 * mu * mu * k * k
+    )
+    lower_sq = k * k * (k * k + 2.0 * radial_control) / upper_sq
+    if not all(isfinite(value) for value in (upper_sq, lower_sq)):
+        raise FloatingPointError("quasiparticle energies must be finite")
+    return sqrt(upper_sq), sqrt(lower_sq)
 
 
 def _thermal_pressure_normal(
@@ -171,7 +171,8 @@ def _thermal_pressure_normal(
     mass_sq = effective_mass_sq(space_response, config.eos)
     if mass_sq <= 0.0:
         raise ValueError("effective mass squared must be positive")
-    mass = sqrt(mass_sq)
+    z = _positive(config.eos.matter.matter_kinetic, "matter_kinetic")
+    mass = sqrt(mass_sq / z)
     mu_eff = _effective_chemical_potential(mu, config)
     if mu_eff >= mass:
         raise ValueError("normal branch requires effective chemical potential below mass")
@@ -182,7 +183,7 @@ def _thermal_pressure_normal(
         1.0,
     )
     momenta, weights = _quadrature(config.quadrature_order, cutoff)
-    energy = np.sqrt(momenta * momenta + mass_sq)
+    energy = np.sqrt(momenta * momenta + mass_sq / z)
     measure = momenta * momenta / (2.0 * pi**2)
     values = np.array(
         [
@@ -206,7 +207,8 @@ def _thermal_pressure_condensed(
     mass_sq = effective_mass_sq(space_response, config.eos)
     if mass_sq <= 0.0:
         raise ValueError("effective mass squared must be positive")
-    mass = sqrt(mass_sq)
+    z = _positive(config.eos.matter.matter_kinetic, "matter_kinetic")
+    mass = sqrt(mass_sq / z)
     mu_eff = _effective_chemical_potential(mu, config)
     amplitude_sq = _condensed_amplitude_sq(mu, space_response, config)
     lam = _positive(config.eos.matter.matter_quartic, "matter_quartic")
@@ -216,7 +218,7 @@ def _thermal_pressure_condensed(
         config.cutoff_factor * t,
         config.cutoff_factor * mass,
         config.cutoff_factor * mu_eff,
-        config.cutoff_factor * sqrt(lam * amplitude_sq),
+        config.cutoff_factor * sqrt(lam * amplitude_sq / z),
         1.0,
     )
     momenta, weights = _quadrature(config.quadrature_order, cutoff)
@@ -326,23 +328,29 @@ def finite_temperature_o2_quasiparticle_contract() -> dict[str, object]:
 
     return {
         "status": FINITE_T_QUASIPARTICLE_EOS_STATUS,
+        "response_policy": "FIXED_PHI_BACKGROUND",
+        "spectrum_revision": "FIXED_PHI_CANONICAL_V2",
         "equations": {
             "tree_grand_potential": "Omega_0=(m_eff^2-Z*mu^2)A^2/2+lambda*A^4/4",
             "condensate": "A_*^2=(Z*mu^2-m_eff^2)/lambda for q>0",
-            "quasiparticles": "E_+/-^2=S +/- sqrt(4*Z*mu^2*B+4*lambda^2*A_*^4)",
+            "quasiparticles": "E_+/-^2=k^2+B +/- sqrt(B^2+4*mu^2*k^2); B=2*mu^2+lambda*A_*^2/Z",
+            "normal_quasiparticles": "E_+/-=sqrt(k^2+m_eff^2/Z) +/- mu",
+            "canonical_field_map": "chi_c=sqrt(Z)*chi; m_c^2=m_eff^2/Z; lambda_c=lambda/Z^2",
+            "determinant": "(E^2-k^2)*(E^2-k^2-2*q/Z)-4*mu^2*E^2=0",
             "pressure": "p_2f=-Omega_0(A_*)+p_qp(T,mu,Phi)",
             "thermodynamic_derivatives": "n=partial_mu p; s=partial_T p; epsilon=-p+T*s+mu*n",
         },
         "unit_contract": {
             "unit_lane": "natural",
             "T_mu_m_eff": "natural energy",
+            "effective_mass_field": "sqrt(m_eff^2) is retained as the mass parameter; the normal canonical gap is sqrt(m_eff^2/Z)",
             "p_epsilon": "natural energy density",
             "n": "natural charge density",
             "s": "natural entropy density",
             "Phi": "action response input; not temperature",
             "C": "not relabeled as charge density",
         },
-        "closed_scope": "tree condensate plus thermal quasiparticle thermodynamic lane with normal and condensed branches",
+        "closed_scope": "fixed-Phi tree condensate plus thermal quasiparticle thermodynamic lane with normal and condensed branches",
         "excluded_scope": "vacuum counterterm completion, interacting thermal self-energy, physical Kubo/transport/SK-KMS matching, heat flux, SI Phi map, alpha_Phi_K, and TTG validation",
         "R_gen": "derived history trace only; not a state or feedback term",
         "data_role": "ACTION_DERIVED_APPROXIMATE_EOS_NOT_TRANSPORT",

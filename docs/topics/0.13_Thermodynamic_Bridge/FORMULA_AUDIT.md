@@ -1,5 +1,29 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Fixed-Phi Implementation Correction (2026-08-31)
+
+This corrects implementations of the existing fixed-background quadratic
+action, not a new core equation. With q=Z*mu^2-m_eff^2>0, a=q/Z and
+B=2*mu^2+a, the roots obey
+(E^2-k^2)*(E^2-k^2-2*a)-4*mu^2*E^2=0.
+Evaluate E_plus^2=k^2+B+sqrt(B^2+4*mu^2*k^2) and the rationalized
+E_minus^2=k^2*(k^2+2*a)/E_plus^2 without clipping.
+The normal energies are sqrt(k^2+m_eff^2/Z) +/- mu.
+
+Canonical chi_c=sqrt(Z)*chi changes m_c^2=m_eff^2/Z and
+lambda_c=lambda/Z^2, not chemical potential or time. Pressure and static
+momentum response must be invariant under this field redefinition. For the
+ideal relativistic normal branch only, integration by parts gives
+chi_perp=epsilon+p; this is not a full condensed two-fluid identity.
+
+The regression and independent repair audit verify these relations for the
+declared synthetic grid. At Z=m_eff^2=lambda=1 and mu^2=3, the old gap squared
+20 and sound squared 0.4 become 16 and 0.25. Phi is held fixed; this is not
+the live-Phi three-mode spectrum. The repair artifact preserves the old git
+identity and marks downstream review. It supplies no SI or full-core unlock.
+The older bounded Core-ready composition below must not be read as full
+thermal-bridge completion.
+
 ## T13 Core-Ready Composition (2026-08-28)
 
 MAJOR_RESULT_CLOSURE: `T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY` is `CLOSED_FOR_CORE` with final acceptance `13/13`.

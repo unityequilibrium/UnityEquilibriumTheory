@@ -1,5 +1,20 @@
 # Limitations
 
+## Full-Scope Review Supersedes Bounded Handoff (2026-08-31)
+
+The 2026-08-28 Core-ready language below describes a bounded O(2)/He-4
+composition, not the requested Full Topic 13 completion. Complete thermal
+transport, condensate/current/material matching and interacting SK/KMS
+remain open. Retain independent He-4 source/calibration evidence within its
+declared lane; do not equate it with graphite calibration or discard it merely
+because a different branch's spectrum was repaired.
+
+The fixed-Phi EOS/static-response repair is independently tested, but dependent
+artifacts are not all refreshed. General-Z kinetic collision normalization
+still requires review. The new repair artifact has full_core_unlock=false.
+The existing full-acceptance artifact has pre-existing local edits and was not
+overwritten in this wave; its scope/freshness logic requires a separate repair.
+
 ## Core-Ready Claim Boundary (2026-08-28)
 
 The bounded O(2)/He-4 bridge is now `CLOSED_FOR_CORE`, but the following limits remain controlling for stronger claims:
