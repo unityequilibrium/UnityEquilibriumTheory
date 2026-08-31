@@ -1,0 +1,110 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "CANDIDATE_DIAGNOSTIC_NOT_MERGED",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "equation_entries": [
+    {
+      "ontology": {
+        "C": "collective system-behaviour coordinate, not universal mass, charge or quasiparticle count",
+        "Phi": "effective response, not a particle or metric",
+        "R_gen": "derived trace, not a state or self-energy source",
+        "R_obs": "excluded"
+      },
+      "unit_lane": "natural_units",
+      "units": {
+        "x": 1,
+        "T": 1,
+        "mu": 1,
+        "s": 2,
+        "self_energy": 2,
+        "potential": 4,
+        "force": 3,
+        "curvature": 2,
+        "spectral_self_energy": 2,
+        "pole_residue": 0
+      },
+      "derivation_class": "numerical_approximation",
+      "derivation_origin": "Declared one-loop scalar determinant, bubble analytic continuation, and two-particle cut of the same canonical cubic vertex.",
+      "constant_origin": "Zero-temperature zero-field subtraction conditions fixed from synthetic action inputs, not fitted to a thermal curve or holdout.",
+      "observable": "Internal response-sector stationary displacement, spectral pole and pair-cut kernels; no SI transport coefficient.",
+      "data_role": "DERIVED_SYNTHETIC_DIAGNOSTIC",
+      "verification_status": "PASS_SCOPED_RESPONSE_ONE_LOOP_MATCH",
+      "controlling_blocker": "coupled_sector_and_collision_resummed_current_matching",
+      "claim_boundary": "Response-axis and k=0 one-loop scheme only. Not full interacting SK/KMS, finite-width transport, physical Phi particles, SI alpha, or Full Topic 13 closure.",
+      "equation_id": "uet.o2.thermal.response_axis_one_loop_match",
+      "relation_or_code_path": {
+        "vacuum_axis": "V_CW_ren(x)=V_CW(x)-Taylor_x=0_through_degree_4[V_CW(x)], charged degeneracy 2 and neutral degeneracy 1",
+        "reference_conditions": "d_x^n V_CW_ren(0)=0 for n=0..4; Pi_vac_ren(0)=Pi_vac_ren_s'(0)=0",
+        "retarded_convention": "D_R^-1(omega,k=0)=(omega+i0)^2-M0^2-Pi_R; s=omega^2",
+        "thermal_kernel": "Pi_T(s)=6*lambda_response*I_response-G^2 integral (n_plus+n_minus)/(E*(4E^2-s))",
+        "vacuum_kernel": "Pi_vac_ren(s)=-G^2/(16*pi^2) integral_0^1 [-log(1-z(1-z)*s/m^2)-z(1-z)*s/m^2] dz",
+        "static_dynamic": "M_dynamic0^2-M_static^2=G^2 integral [n_plus(1+n_plus)+n_minus(1+n_minus)]/(4*T*E^2)",
+        "pole": "M_pole^2(strict 1-loop)=M0^2+Pi_R(M0^2); partial Dyson root separately labelled",
+        "pair_cut": "rho_Pi=G^2/(8*pi)*sqrt(1-4*m^2/omega^2)*(1+n_plus+n_minus); Pi_greater/Pi_lesser=exp(omega/T)"
+      },
+      "version": "1",
+      "classification": "numerical_implementation",
+      "variables": {
+        "x": "canonical response displacement",
+        "s": "squared external frequency, k=0",
+        "Pi_R": "retarded self-energy; NOT the core state Pi=d_t Phi",
+        "rho_Pi": "self-energy spectral density, not matter density"
+      },
+      "mathematical_role": "Response-axis one-loop determinant and two-point kernel",
+      "observable_mapping": "Internal response-sector stationary displacement, spectral pole and pair-cut kernels; no SI transport coefficient.",
+      "parameter_dimensions": {
+        "canonical_mass": 1,
+        "G": 1,
+        "lambda_response": 0,
+        "T": 1,
+        "mu": 1
+      },
+      "source_or_origin": "Declared one-loop scalar determinant, bubble analytic continuation, and two-particle cut of the same canonical cubic vertex.",
+      "assumptions": {
+        "self_energy_loop_order": 1,
+        "self_energy_background_x": 0.0,
+        "mean_shift": "x1=-Omega1_prime(0)/M0^2; stationary one-loop functional minimum is separately reported",
+        "excluded_at_strict_order": [
+          "tree response mass shift proportional to x1^2 (order two)",
+          "bubble from induced response cubic squared (order three)",
+          "full next-order vertices and collision/ladder widths"
+        ],
+        "renormalization_scope": "response axis and response two-point kinetic condition, NOT complete charged-sector or full-action matching"
+      },
+      "symmetry_and_conservation": "Charge conjugation and neutral pair KMS; no full transport ledger claim",
+      "limiting_cases": [
+        "zero temperature",
+        "G=0",
+        "s=0 reference",
+        "positive pair threshold"
+      ],
+      "implementation_paths": [
+        "docs/scripts/audit/audit_topic13_response_one_loop_match.py"
+      ],
+      "verifier_paths": [
+        "docs/core/test/test_topic13_response_one_loop_match.py"
+      ],
+      "evidence_class": "INTERNAL_SYNTHETIC_DIAGNOSTIC",
+      "proof_status": "CHECKED_SCOPED_ONE_LOOP_ONLY",
+      "downstream_dependencies": [],
+      "failure_mode": [
+        "charged_sector_and_full_vertex_counterterm_matching",
+        "finite_k_and_collision_resummed_hydrodynamic_limit",
+        "leading_collision_width_current_entropy_transport_matching",
+        "material_SI_calibration_and_full_T13_acceptance"
+      ],
+      "next_hardening_step": "Match charged-sector propagators/vertices and collision-resummed response in the declared approximation before a physical transport handoff.",
+      "standard_physics_counterpart": "One-loop scalar-response effective potential and collisionless retarded bubble",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_response_one_loop_match_audit.json",
+          "sha256": "1f8c7be92931845d5e6073acaa94defc06846c7928f69d8cf73b8e726bb9c8a7"
+        }
+      ],
+      "dependency_role": "diagnostic_only",
+      "physical_dependency_unlock": false
+    }
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}

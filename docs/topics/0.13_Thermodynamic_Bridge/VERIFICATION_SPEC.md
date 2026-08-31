@@ -1,5 +1,30 @@
 # Verification Spec
 
+## Response One-Loop Match (2026-09-01)
+
+Run docs.scripts.audit.audit_topic13_response_one_loop_match as a module and
+docs/core/test/test_topic13_response_one_loop_match.py with pytest.
+The fixed grid is T=0.1,0.25,0.5,1 at mu=0.2 in natural units. Pole quadrature
+pairs are (96,48),(160,64),(256,80), with component and pole refinement 1e-6.
+Require force residual below 1e-10, positive local curvature/subthreshold pole,
+and static/dynamic occupation matching within 1e-12.
+
+Independent witnesses are 100-digit logarithmic-remainder derivatives,
+90-digit direct vacuum Taylor subtraction, radial/dispersion integrals,
+and complex Matsubara sums. Matsubara relative error must be below 1e-9;
+vacuum and thermal spectral dispersion absolute errors below 1e-12.
+Pair-cut KMS log and FDT relative errors must be below 1e-10 on the declared
+grid. Zero support must retain undefined KMS ratio. Test cold underflow in
+log space, threshold rejection, charge symmetry and energy/field covariance.
+Numerical symmetry tests use 1e-14 relative precision, not exact bit equality.
+
+Require explicit strict versus partially resummed outputs and retain their
+differences. Preserve experimental-Data guard, source/evidence hashes,
+candidate-only registry, and full_core_unlock=false. Run with the existing
+thermal-background, collision, elastic, normalization, fixed-Phi and projected
+current regression modules. No collision rerun or physical transport claim
+is authorized by this response-only result.
+
 ## Thermal Stationary-Background Diagnostic (2026-09-01)
 
 Run docs.scripts.audit.audit_topic13_normal_thermal_background as a module and

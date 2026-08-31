@@ -1,3 +1,29 @@
+## 2026-09-01 - Response-axis one-loop vacuum and real-time matching
+
+MAJOR_RESULT_CLOSURE: T13_RESPONSE_AXIS_ONE_LOOP_RENORMALIZED_MATCH is PARTIAL; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: A declared response-axis vacuum subtraction and response kinetic reference scheme; strict one-loop mean/pole distinguished from partial reuse; independent Matsubara and spectral-dispersion agreement; an explicit static occupation term and action-derived pair-cut KMS/FDT relation.
+
+WHAT_REMAINS_OPEN: Charged-sector self-energies and full vertex/counterterm matching, finite-k and collision-resummed currents, leading collision widths, complete heat/entropy/material mapping. No exact all-orders requirement is imposed; the full coupled approximation must instead be internally consistent.
+
+DEPENDENCY_UNLOCKED: Diagnostic handoff only. Candidate registry addendum is not centrally merged; full_core_unlock=false and no new Gravity or physical transport unlock.
+
+STATUS: PASS_SCOPED_RESPONSE_ONE_LOOP_MATCH; all 11 internal artifact checks pass. Physical foundation and compatibility remain BLOCKED.
+
+WHAT_CHANGED: Completed the formerly untested response script, added 69 independent tests, generated a source/evidence-hashed artifact and candidate registry, and synchronized formula/README/limitations/verification. Initial tests found cold expm1 overflow and missing Matsubara-domain validation; stable log weights and explicit rejection fix these. Three newly written exact floating-point equality checks were corrected to 1e-14 relative comparisons for charge/field covariance, not by altering a pre-existing physical threshold.
+
+EQUATION_OR_MAPPING: V_CW_ren=V_CW-Taylor_x=0_degree4(V_CW); Sigma_vac(0)=Sigma_vac'(0)=0; D_R^-1=(omega+i0)^2-M0^2-Sigma_R. M_dynamic0^2-M_static^2=G^2 integral[n_plus(1+n_plus)+n_minus(1+n_minus)]/(4*T*E^2). Pair-cut noise=coth(omega/(2*T))*rho. Code alias Pi_R means self-energy, not core Pi=partial_t Phi.
+
+VERIFICATION: 241 focused/regression tests passed, including 69 new tests. Independent high-precision vacuum subtraction, radial and spectral dispersion, complex Matsubara sums, thermal envelope, optical phase space, charge/field/energy covariance and cold/decoupled/domain controls passed. Matsubara relative error maximum 2.36e-11; spectral dispersion absolute error maximum 5.40e-18. At T=.25, mu=.2, strict pole squared is .501349977596514 and the static/dynamic gap is 1.3023380036e-5 natural energy squared. Mean-shift partial-reuse differences are .267% at T=.25 and 21.1% at T=1, not certified truncation error. Kernel-component refinement changes are at most 4.22e-14, not physical uncertainty. Regeneration with pre-import experimental-Data guard recorded zero attempts; strict JSON and all current source/evidence hashes passed. Read-only F0 finds 343 rows; equation-foundation and compatibility audits run successfully while retaining physical BLOCKED. Whitespace checks passed.
+
+CONTROLLING_BLOCKER: coupled_sector_and_collision_resummed_current_matching. Response-only pair-cut KMS is not the full interacting current/transport match.
+
+NEXT_ACTION: Derive charged-sector mean-shift/self-energy/vertex terms at the same declared order, then connect finite-k collision-resummed response and heat current to the preserved collision operator. Do not insert static curvature as a pole mass or invent a collision width.
+
+CLAIM_BOUNDARY: Internal natural-unit response-axis/k=0 one-loop result only. No complete thermal EOS, two-fluid transport, physical Phi particle, SI alpha, TTG prediction, external validation or Full Topic 13 closure. Zero on-shell width is a pair-threshold statement, not absence of collision damping. He-4 calibration, graphite source boundaries, Xie holdout and original causal thresholds are unchanged.
+
+EVIDENCE_HASHES: response artifact 1f8c7be92931845d5e6073acaa94defc06846c7928f69d8cf73b8e726bb9c8a7; candidate registry e8d47b0bcdb25f22f7463678450689fe38c89f43f52e81a08708fee80e77e776; preserved thermal artifact ac402fe1bb4dd547dec069676ee0925f5805a2d12d4354fdc14b0a9f29e50914.
+
 ## 2026-09-01 - Normal thermal response stationarity and shifted-vertex handoff
 
 MAJOR_RESULT_CLOSURE: T13_NORMAL_THERMAL_BACKGROUND_STATIONARITY is PARTIAL; Full Topic 13 remains open.

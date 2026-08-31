@@ -6,6 +6,28 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Response-Axis One-Loop Match (2026-09-01)
+
+The [one-loop response artifact](../../core/artifacts/t13_response_one_loop_match_audit.json)
+now fixes response-axis vacuum and kinetic subtraction conditions and links
+the thermal determinant to a collisionless k=0 retarded kernel. Independent
+Matsubara sums and spectral dispersion integrals agree. The pair cut of the
+declared cubic interaction obeys KMS/FDT without an inserted damping rate.
+
+The static curvature and collisionless zero-frequency kernel differ by an
+explicit positive occupation-redistribution term, not a numerical error to
+remove. At T=0.25, mu=0.2 in natural units, that difference is 1.302338e-5
+in energy squared; the strict one-loop pole squared is 0.5013499776.
+The one-loop stationary mean differs from its strict first-order expansion
+by 0.267% there and 21.1% at T=1. These are approximation-sensitivity witnesses,
+not certified physical uncertainties.
+
+This closes a response-sector matching calculation at a declared order,
+not the full interacting thermal bridge. Charged-sector propagators and
+vertices, finite-k/collision-resummed current response, physical heat/entropy
+and material mapping remain open. The old collision artifact is not rerun.
+Full Topic 13 remains PARTIAL and this result has full_core_unlock=false.
+
 ## Thermal Stationary Background and Vertex Handoff (2026-09-01)
 
 The [thermal-background diagnostic](../../core/artifacts/t13_normal_thermal_background_audit.json)

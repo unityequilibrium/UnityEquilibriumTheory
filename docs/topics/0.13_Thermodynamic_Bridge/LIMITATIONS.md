@@ -1,5 +1,25 @@
 # Limitations
 
+## One-Loop Response Match (2026-09-01)
+
+The new axis scheme includes vacuum subtraction missing from the thermal-only
+result below, but it does not supply a complete charged-sector renormalized
+action. Zero-field response self-energy and mean-shift loop orders are kept
+separate. Neither the stationary one-loop functional nor a partial Dyson
+root is an all-orders solution or an omitted-order uncertainty estimate.
+
+The k=0 pair-cut KMS/FDT witness is not a full interacting SK/KMS or current
+matching result. A zero on-shell one-loop width below the pair threshold
+does not imply absence of higher-order collision damping. Finite-k transport,
+collision resummation and full two-fluid/heat-current tensors remain open.
+Static curvature cannot be substituted for a quasiparticle pole.
+
+The 21.1% difference between stationary and strict mean at T=1 in the declared
+natural-unit grid cautions against an unqualified high-T extrapolation.
+Agreement of quadratures to displayed precision is not zero physical error.
+The previous collision result, He-4 calibration, graphite source boundary,
+Xie holdout and all causal thresholds are unchanged.
+
 ## Thermal-Only Stationary Background (2026-09-01)
 
 The local normal-response minimum uses a fixed zero-temperature polynomial

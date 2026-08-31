@@ -1,5 +1,66 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Response-Axis Renormalization and Real-Time Match (2026-09-01)
+
+Candidate ID: uet.o2.thermal.response_axis_one_loop_match.
+Use canonical displacement x and the same action as the preceding thermal
+background: m_chi^2=m0^2-G*x and M_r^2=M0^2+3*lambda_r*x^2.
+The vacuum determinant is sum_i d_i m_i^4[log(m_i^2/Q^2)-3/2]/(64*pi^2),
+with charged degeneracy 2 and response degeneracy 1. Subtract its Taylor
+polynomial in x through degree four at x=0. Thus the vacuum correction and
+its first four field derivatives vanish at the reference point. Linear and
+cubic counterterms are allowed because G*x*chi^2 already breaks x reflection.
+This fixes only the response axis, not every charged/full-action counterterm.
+
+For r=delta(m^2)/m_ref^2, the charged subtraction removes through r^4 and
+the response subtraction through r^2 (since its r is proportional to x^2).
+The surviving logarithmic remainder is independent of Q in this axis scheme.
+High-precision direct Coleman-Weinberg subtraction checks both derivatives
+and multiplicities; a convergent series avoids subtractive cancellation.
+
+Define Sigma_R as the retarded self-energy. The implementation uses the
+conventional alias Pi_R; it is NOT the core state Pi=partial_t Phi.
+D_R^-1=(omega+i0)^2-M0^2-Sigma_R at k=0, with s=omega^2.
+Fix Sigma_vac(0)=partial_s Sigma_vac(0)=0. Then
+
+- Sigma_vac(s)=-G^2/(16*pi^2) integral_0^1[-log(1-z(1-z)s/m^2)-z(1-z)s/m^2] dz.
+- Sigma_T(s)=6*lambda_r*I_r-G^2 integral_p(n_plus+n_minus)/(E*(4E^2-s)).
+- M_pole^2(strict)=M0^2+Sigma_R(M0^2).
+- M_dynamic0^2-M_static^2=G^2 integral_p[n_plus(1+n_plus)+n_minus(1+n_minus)]/(4*T*E^2).
+
+Here integral_p means d^3p/(2*pi)^3 and I_r=integral_p n_r/(2E_r).
+The zero Matsubara component includes the last occupation term; nonzero
+components analytically continue to the collisionless pair response.
+Independent complex Matsubara sums and vacuum/thermal dispersion integrals
+check this distinction. It is an order-of-limits result, not a failure of KMS
+or a statement about the exact collision-resummed hydrodynamic response.
+[Evans](https://arxiv.org/abs/hep-ph/9307335) provides context for thermal
+zero-momentum limit dependence; [Quiros](https://arxiv.org/abs/hep-ph/9901312)
+provides effective-potential/renormalization context. Neither supplies UET
+numeric data or validates the material interpretation.
+
+At omega>2m, let phase=G^2*sqrt(1-4m^2/omega^2)/(8*pi).
+The same cubic interaction gives greater=phase*(1+n_plus)*(1+n_minus),
+lesser=phase*n_plus*n_minus and rho=greater-lesser.
+Im Sigma_R=-rho/2 and noise=greater+lesser=coth(omega/(2T))*rho.
+The charged chemical potentials cancel in log(greater/lesser)=omega/T.
+Below threshold support is exactly zero; the KMS ratio is undefined, not 0/0.
+The positive logarithmic lesser weight is retained when its floating-point
+value underflows. No noise amplitude or width is fitted.
+
+Loop counting is explicit: the strict mean shift x1=-Omega1_prime(0)/M0^2
+is first order. The response tree mass shift proportional to x1^2 is second
+order, and a bubble built from the induced response cubic squared is third
+order. Neither belongs in the strict first-loop zero-field response kernel.
+Minimizing a one-loop functional or solving a Dyson root repeatedly reuses
+selected higher-order terms, not a complete higher-loop calculation.
+Charged-sector matching, leading collision widths and current/vertex
+resummation remain required before a transport handoff.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-RESPONSE-ONE-LOOP-MATCH-20260901 | vacuum Taylor subtraction; Sigma_R; static occupation gap; pair-cut KMS | docs/scripts/audit/audit_topic13_response_one_loop_match.py | x,T,mu,G energy; Sigma_R,s energy^2; Omega energy^4; lambda dimensionless | declared canonical action and fixed zero-field reference, no fit | checked scoped one-loop numerical approximation | independent vacuum derivatives, Matsubara and spectral dispersion | static curvature relabelled pole; partial resummation relabelled full transport | charged-sector and collision-resummed current matching |
+
 ## Normal Thermal Response Stationarity (2026-09-01)
 
 Candidate ID: uet.o2.thermal.normal_response_stationarity. This extends the
