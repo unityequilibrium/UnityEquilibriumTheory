@@ -5153,3 +5153,33 @@ EVIDENCE_PATHS:
 - docs/core/artifacts/t13_kinetic_canonical_action_match_audit.json
 - docs/core/test/test_topic13_kinetic_canonical_normalization.py
 - docs/scripts/audit/audit_topic13_kinetic_canonical_action_match.py
+
+## 2026-09-01 - Named action-normalized elastic contact/Phi-exchange branch
+
+MAJOR_RESULT_CLOSURE: T13_NORMAL_TREE_ELASTIC_CONTACT_PLUS_PHI_EXCHANGE_V1 is PARTIAL. The named nonresonant tree elastic amplitude and finite-grid tagged loss calculation are established internally; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: Charge-resolved contact plus s/t/u Phi-exchange amplitudes follow the declared canonical action, with independent production quartic/cubic derivative checks. Full-solid-angle final-state counting is explicit. Tagged elastic loss includes Bose final factors and contact/exchange interference.
+
+WHAT_REMAINS_OPEN: Full gain/loss linearized collision operator, response/external inelastic channels, finite-temperature stationary background and self-energy, pole-region resummation, current/entropy/SK-KMS matching, physical material/SI mapping and Full Topic 13 acceptance.
+
+DEPENDENCY_UNLOCKED: Diagnostic continuation only. Candidate equation uet.o2.thermal.normal_tree_elastic_scattering is recorded in a standalone registry addendum, not merged into the central registry or used for a physical unlock.
+
+STATUS: PASS_SCOPED_TREE_ELASTIC_DIAGNOSTIC; full_core_unlock=false.
+
+WHAT_CHANGED: Added an independently named research evaluator, 17 new tests, its result and candidate registry addendum. Old unit-channel comparators, old tensor helpers, physical acceptance files and user source work were not overwritten.
+
+EQUATION_OR_MAPPING: phi_c=sqrt(epsilon*K)*deltaPhi; G=sqrt(epsilon)*h/(Z*sqrt(K)); lambda_c=lambda/Z^2; M_Phi^2=U''/K. The canonical contact tensor plus G^2 propagator terms is contracted with fixed charge polarizations before squaring. d_sigma/d_Omega=|M|^2/(64*pi^2*s*S_final), with S_final=2 for identical final charges. Tagged incoming legs have no incoming pair factor; this is not a transport relaxation rate.
+
+VERIFICATION: 91 focused/regression tests passed, including explicit Lorentz-boost geometry, charge conjugation, forbidden charge channels, contact phase space, production potential derivatives, crossing and low-energy exchange interference. Contact-only cross-section ratios to the old unit-channel convention are 8 (like charges) and 16 (unlike); the charge-symmetric dilute integrated ratio is 12. The last adjacent loss-rate grid change is 1.55e-6 under the predeclared diagnostic tolerance 2e-3, not a certified error bound or source uncertainty. Refined loss rates are [1.9830033273128408e-7, 1.1023992599422992e-7] in natural energy units for species [-1,+1]. On the same middle grid, exchange/contact ratios are [0.8549930358766507, 0.7414589720171013]. Artifact/registry strict JSON and hashes were checked; an experimental-Data runtime guard recorded zero access attempts. Artifact SHA256: 711d64978d58d264e26094c66e22db1285c21b31863530161ef608f3900a8d81.
+
+CONTROLLING_BLOCKER: Complete coupled-species/response collision operator and current mapping, not merely a tagged elastic loss rate.
+
+NEXT_ACTION: Assemble gain/loss linearization with the permitted matter and response channels; enforce collision invariants and detailed balance before matching current and entropy production. Keep resonant domains blocked until a justified resummed treatment exists.
+
+CLAIM_BOUNDARY: A natural-unit tree quasiparticle diagnostic, not full damping, physical conductivity, a physical Phi-particle identity, full SK/KMS, or Full Topic 13 closure. No fit, ad hoc width, holdout or threshold change.
+
+EVIDENCE_PATHS:
+- docs/scripts/audit/audit_topic13_action_normalized_elastic_scattering.py
+- docs/core/test/test_topic13_action_normalized_elastic_scattering.py
+- docs/core/artifacts/t13_action_normalized_elastic_scattering_audit.json
+- docs/core/artifacts/uet_equation_correspondence_registry_topic13_elastic_scattering_addendum.json

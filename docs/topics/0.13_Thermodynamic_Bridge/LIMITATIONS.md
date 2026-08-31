@@ -1,5 +1,17 @@
 # Limitations
 
+## Named Elastic Diagnostic Boundary (2026-09-01)
+
+The new tree elastic branch includes contact/Phi-exchange interference,
+not all collision channels. Phi remains an effective response; using its
+internal propagator does not establish a physical particle identity.
+The normal background is tree-level, not a self-consistent finite-temperature
+solution. A response pole in the thermal integration domain is rejected rather
+than regularized with an invented width. Response/inelastic channels, the full
+gain/loss operator and current/entropy matching remain open. Grid refinement
+is not material uncertainty or a continuum proof. No physical dependency is
+unlocked by this diagnostic.
+
 ## Full-Scope Review Supersedes Bounded Handoff (2026-08-31)
 
 The 2026-08-28 Core-ready language below describes a bounded O(2)/He-4

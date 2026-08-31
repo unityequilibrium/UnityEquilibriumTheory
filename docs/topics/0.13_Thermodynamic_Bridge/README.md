@@ -6,6 +6,21 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Normal Elastic Action Diagnostic (2026-09-01)
+
+A named research branch now computes charge-resolved elastic contact plus
+nonresonant Phi exchange from the declared action. It does not overwrite the
+older comparator or repair every legacy vertex consumer.
+The [elastic artifact](../../core/artifacts/t13_action_normalized_elastic_scattering_audit.json)
+reports Bose factors, final-state counting, interference and tagged loss-rate
+refinement. At the declared synthetic state, exchange lowers the two tagged
+rates relative to contact-only; this is not an SI transport result.
+
+The candidate registry addendum is not merged into central acceptance.
+Full Topic 13 still needs the coupled gain/loss collision operator, response
+inelastic channels, finite-temperature self-consistency, current/entropy/KMS
+and material mapping. Tagged loss is not the transport relaxation rate.
+
 ## Active Implementation Review (2026-08-31)
 
 Full Topic 13 remains open under the requested full thermodynamic-bridge scope.

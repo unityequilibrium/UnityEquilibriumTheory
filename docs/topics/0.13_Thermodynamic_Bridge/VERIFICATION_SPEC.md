@@ -1,5 +1,19 @@
 # Verification Spec
 
+## Named Elastic Diagnostic (2026-09-01)
+
+Run docs.scripts.audit.audit_topic13_action_normalized_elastic_scattering as
+a module, then the matching test_topic13_action_normalized_elastic_scattering.py.
+Require production quartic/cubic derivative matching, contact phase-space
+normalization, charge crossing/conjugation, explicit-boost agreement,
+detailed balance and reported resolution convergence. The diagnostic's
+last-relative-change tolerance is 2e-3; it does not change any causal gate.
+
+The pole region must raise an error, not receive an arbitrary width.
+The standalone registry addendum remains CANDIDATE_DIAGNOSTIC_NOT_MERGED,
+with no physical unlock. A passing tagged elastic rate is not a completed
+collision operator, Kubo coefficient or Full Topic 13 result.
+
 ## Kinetic Canonical/Action Verification (2026-08-31)
 
 Run docs.scripts.audit.audit_topic13_kinetic_canonical_action_match as a module

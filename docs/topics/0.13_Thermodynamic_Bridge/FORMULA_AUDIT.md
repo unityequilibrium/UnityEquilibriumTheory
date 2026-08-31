@@ -1,5 +1,27 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Named Elastic Contact/Phi Exchange (2026-09-01)
+
+Candidate ID: uet.o2.thermal.normal_tree_elastic_scattering, stored in a
+diagnostic-only registry addendum. For chi=0 and Phi=Phi_equilibrium in flat
+space, canonical normalization gives phi_c=sqrt(epsilon*K)*deltaPhi,
+G=sqrt(epsilon)*h/(Z*sqrt(K)), lambda_c=lambda/Z^2 and M_Phi^2=U''/K.
+The contact tensor and s/t/u response exchange are contracted with charge
+polarizations before taking the squared amplitude. The relative sign agrees
+with eliminating the massive response at low energy; interference is retained.
+
+The full-solid-angle cross section uses
+d_sigma/d_Omega=|M|^2/(64*pi^2*s*S_final).
+S_final is 2 for identical outgoing charges, otherwise 1. Each unlike final
+ordering is represented once. The tagged incoming particle introduces no
+incoming pair-counting factor. Contact-only ratios to the old unit-channel
+convention are therefore 8 and 16 for like and unlike charges, not one global
+multiplier. Full gain/loss operator and physical transport remain open.
+
+Phase-space and scalar-exchange conventions were checked against
+[Tong, Interacting Fields, sections 3.5 and 3.6.3](https://www.damtp.cam.ac.uk/user/tong/qft/qfthtml/S3.html).
+This is method context, not numeric calibration or evidence of UET validity.
+
 ## Kinetic Normalization and Action-Tensor Boundary (2026-08-31)
 
 The normal kinetic setup now uses m_c^2=m_eff^2/Z,
