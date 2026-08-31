@@ -1,5 +1,44 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Coupled Bose Collision Form (2026-09-01)
+
+Candidate registry ID: uet.o2.thermal.normal_coupled_gain_loss. The named
+normal-state diagnostic adds response-mode quartic self-scattering, mixed
+matter/response scattering and charge-pair conversion to the preceding elastic
+action calculation. The response label is a kinetic-lane assumption, not a
+physical-particle interpretation of Phi. C is not charge or population count.
+
+For dimensionless population affinity psi, delta f=f*(1+f)*psi,
+F=f1*f2*(1+f3)*(1+f4), R=f3*f4*(1+f1)*(1+f2), and
+delta(F-R)=F_eq*(psi1+psi2-psi3-psi4). The scalar collision form is
+the invariant four-leg phase-space integral of
+abs(M)^2*F_eq*Delta_psi_a*Delta_psi_b/(S_in*S_out*S_reverse).
+The vector form additionally uses the isotropic component average 1/3.
+Each identical pair gives a factor 2; S_reverse=2 for an elastic species
+multiset, otherwise 1 for a conversion orientation listed once. Full ordered
+species enumeration with prefactor 1/8 independently reproduces these weights.
+
+The projected-current response is S_perp^T*L_active^-1*S_perp. L has natural
+energy dimension 4, the susceptibility has dimension 3, its generalized rates
+dimension 1, and this response dimension 2. It is not SI conductivity.
+Nested trial bases use the same collision nodes, so their variational response
+is compared without a simultaneous quadrature change. The smallest basis omits
+neutral*p/T, a relative sector-momentum direction whose relaxation form scales
+as G^4. At G=0 this is an additional conserved momentum and the current inverse
+is rejected rather than given an artificial regulator. At mu=0 the charge
+source has no overlap with this charge-even slow mode.
+
+The entropy witness checks (F-R)*log(F/R)>=0 for reversible Bose events; it is
+not a complete interacting SK/KMS construction or a spacetime entropy current.
+The thermal background is not self-consistently renormalized and number-changing
+higher-order channels are missing. The derivation-to-transport distinction is
+consistent with [Jeon's linearized Boltzmann framework](https://arxiv.org/abs/hep-ph/9409250);
+the paper supplies method context, not these action coefficients or numerical inputs.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-NORMAL-GAINLOSS-20260901 | L_ab=integral abs(M)^2 F_eq Delta_psi_a Delta_psi_b / reaction_factors | docs/scripts/audit/audit_topic13_coupled_gain_loss_operator.py | q=species label, not C; psi dimensionless; L energy^4; response energy^2 | declared synthetic action, invariant phase space; no fit | checked local tree-level and finite-basis approximation; physical mapping open | diagnostic-only candidate addendum | missing relative-momentum trial direction; extra truncation invariants; incomplete thermal background | independent basis/completeness and physical current/entropy matching |
+
 ## Named Elastic Contact/Phi Exchange (2026-09-01)
 
 Candidate ID: uet.o2.thermal.normal_tree_elastic_scattering, stored in a

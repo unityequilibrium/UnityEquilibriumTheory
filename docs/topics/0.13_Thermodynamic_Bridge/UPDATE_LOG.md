@@ -1,3 +1,29 @@
+## 2026-09-01 - Coupled Bose gain/loss and missing relative-momentum mode
+
+MAJOR_RESULT_CLOSURE: T13_NORMAL_COUPLED_2TO2_GAIN_LOSS_DIAGNOSTIC is PARTIAL; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: A finite collision-form diagnostic now covers seven representative reversible matter/response 2-to-2 channels, explicit counting, Bose gain/loss, charge/energy/momentum invariants and nonnegative event entropy. Nested current bases expose a relative sector-momentum direction missing from the smallest basis. Its form scales as G^4, becomes a separate null at G=0 and has no charge-current overlap at mu=0.
+
+WHAT_REMAINS_OPEN: Certified basis/continuum completeness, number-changing channels, self-consistent finite-temperature background/self-energy, interacting SK/KMS and full current/entropy/material heat-frame mapping. Total quasiparticle count is a truncation invariant, not a new conserved C. Existing full-acceptance scope and legacy action-tensor consumer issues are not silently repaired by this standalone branch.
+
+DEPENDENCY_UNLOCKED: Diagnostic continuation only. The candidate registry addendum is not centrally merged; full_core_unlock=false and no physical downstream dependency is unlocked.
+
+STATUS: PASS_STRUCTURAL_GAIN_LOSS_REFINEMENT_OPEN. All 16 structural checks pass and the declared finite-grid refinement test passes. This is not Full Topic 13 or physical transport acceptance.
+
+WHAT_CHANGED: Added the coupled evaluator, independent tests, artifact and candidate registry entry; preserved the initial near-null finite-difference failure. Added one discoverable formula row and synchronized topic scope/verification docs. User source/acceptance artifacts and August 25/26 ledgers were untouched.
+
+EQUATION_OR_MAPPING: delta f=f*(1+f)*psi; delta(F-R)=F_eq*Delta_psi; L_ab=integral abs(M)^2*F_eq*Delta_psi_a*Delta_psi_b/(S_in*S_out*S_reverse). The isotropic vector form includes 1/3. The diagnostic response is S_perp^T*L_active^-1*S_perp, in natural energy squared, after projecting total momentum. This is not a heat-conductivity coefficient.
+
+VERIFICATION: 134 focused/regression tests passed, including 43 new collision tests. The full run under a pre-import experimental-Data guard recorded zero access attempts. Independent quadrature relative changes were radial 1.03e-4, angular 8.91e-7, azimuth 5.09e-7 and cutoff 3.42e-4. On common nodes the 3/5/8/11-active-function responses were 773.4221, 10636.7977, 10638.6806 and 10638.8421; the final basis increment was 1.52e-5. The larger-grid 11-function response was 10638.2695, a 5.38e-5 change, not a certified error bound. The slowest mode contributes about 95.56% in that reference basis. The retained near-null probe fails relatively because of subtractive cancellation; the fixed non-null multi-step probe has maximum final relative error 3.79e-10 under the unchanged 1e-4 criterion. Strict JSON/current evidence hashes and git diff --check pass. F0 rebuilt in memory: 341 rows, inventory_gate_status=BLOCKED. Equation-foundation audit PASS with foundation BLOCKED; compatibility audit PASS with compatibility BLOCKED. Shared Core gate artifacts were not rewritten.
+
+CONTROLLING_BLOCKER: basis_completeness_and_physical_collision_current_matching. Finite-grid stability alone was insufficient: the omitted relative-momentum trial direction changed the result by a factor about 13.75. The now-visible slow mode still requires physical background and current matching before transport use.
+
+NEXT_ACTION: Independently verify current-basis completeness and the finite-temperature stationary background; determine the allowed number-changing channels and couple the charge/energy response to a declared heat frame. Do not substitute the present charge-response quadratic form for SI thermal conductivity or repeat only the smallest-basis quadrature.
+
+CLAIM_BOUNDARY: Named normal-state tree kinetic diagnostic only; not complete damping, physical heat conduction, a Phi-particle identity, full two-fluid/SK-KMS closure or external validation. No fitting, width regulator, causal threshold change, holdout access or global promotion. Historical failure-artifact source hashes describe the earlier probe and are not current-source attestations.
+
+EVIDENCE_HASHES: coupled artifact b3a9ebf6b2ac7a155c3a2b8bd12dd60fa71684924e40220d04cbcfa60becfaab; registry addendum f2375211b0fd75f48f7f081c161cf4df633a48ea38a1294815bbd3a2edb731c8; initial failed probe 08163447de6036bd4afef56195985ae2538a11b4b35fd515e7ccbc8bc1cc4244.
+
 ## 2026-08-29 - Repair Core-ready status semantics
 
 MAJOR_RESULT_CLOSURE: `T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY` remains `CLOSED_FOR_CORE`; the separate graphite/TTG external-validation track remains `OPEN`.

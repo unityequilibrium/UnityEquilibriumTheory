@@ -1,5 +1,25 @@
 # Limitations
 
+## Coupled Collision Scope (2026-09-01)
+
+The new gain/loss operator covers seven reversible 2-to-2 reaction classes
+only. Total quasiparticle count remains conserved in this truncation, not in
+the full interacting action. On-shell collision energy/momentum balance is
+not a full open-system ledger or a causal domain-of-dependence test.
+
+Stable quadrature did not make the initial current basis adequate: adding
+relative sector-momentum directions increased its projected charge response
+by about 13.75 times at the reference state. The small changes under later
+nested basis extensions are not a certified infinite-basis error bound.
+The cutoff changes the incoming domain, not an invariant four-leg regulator;
+the full reverse-paired integral is recovered only in the cutoff limit.
+
+The normal tree background, finite-temperature self-energy, number-changing
+channels, full Kubo/SK-KMS/current matching, physical heat frame and material/SI
+calibration remain open. He-4 calibration is neither discarded nor transferred
+to graphite. No holdout is used. Central acceptance and its existing local edits
+are untouched; this candidate registry addendum does not unlock Full Topic 13.
+
 ## Named Elastic Diagnostic Boundary (2026-09-01)
 
 The new tree elastic branch includes contact/Phi-exchange interference,

@@ -1,5 +1,39 @@
 # Verification Spec
 
+## Coupled Gain/Loss Diagnostic (2026-09-01)
+
+Run docs.scripts.audit.audit_topic13_coupled_gain_loss_operator as a module and
+docs/core/test/test_topic13_coupled_gain_loss_operator.py with pytest. Require
+independent mixed/contact vertices, production response fourth derivatives,
+ordered-species counting, unequal-mass on-shell kinematics, Bose gain/loss
+finite differences and nonlinear entropy. Include invalid-input, natural-unit
+rescaling, state-mismatch, charge-conjugation and zero-coupling controls.
+
+The initial near-null first-cell finite-difference failure is preserved in
+t13_coupled_gain_loss_initial_probe_failure.json as historical evidence, not
+a current source-hash snapshot. The corrected probe uses fixed non-null event
+momenta and steps 1e-3, 1e-4, 1e-5; the relative acceptance remains 1e-4. The
+near-null residual is still reported for every collision grid, not clipped.
+
+Independent refinement axes are (radial, angular, azimuth, cutoff): reference
+(18,8,12,10), radial (24,8,12,10), angular (18,12,12,10), azimuth (18,8,16,10),
+cutoff (18,8,12,12). The diagnostic tolerance 2e-3 was set before these runs;
+it is not a causal leakage threshold. Nested active bases have 3, 5, 8 and 11
+functions on the same reference nodes. The largest basis also uses
+(24,12,16,12) for a separate resolution check. Neither test certifies the
+continuum or infinite-basis limit.
+
+Require the response decomposition over generalized relaxation modes to
+reconstruct the matrix inverse. Check that neutral sector momentum relaxes
+as G^4, becomes an extra null direction at G=0, and has zero charge-current
+overlap at mu=0. Never add a width or invert that unprojected decoupled null.
+
+Run with an experimental-Data access guard installed before module import,
+then verify strict JSON and all current source/evidence hashes. Retain
+full_core_unlock=false, candidate-only registration and physical claim limits.
+Run the equation inventory/foundation/compatibility audits in no-write mode
+so this diagnostic does not overwrite shared Core artifacts.
+
 ## Named Elastic Diagnostic (2026-09-01)
 
 Run docs.scripts.audit.audit_topic13_action_normalized_elastic_scattering as

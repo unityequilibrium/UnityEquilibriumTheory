@@ -6,6 +6,27 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Coupled Gain/Loss and Relative Momentum (2026-09-01)
+
+The [coupled collision diagnostic](../../core/artifacts/t13_coupled_gain_loss_operator_audit.json)
+now assembles seven representative reversible normal-state 2-to-2 channels,
+including matter/response scattering and pair conversion. Independent tests
+cover action vertices, reaction counting, Bose gain/loss, charge/energy/momentum
+invariants, nonlinear event entropy and natural-unit covariance.
+
+An important limitation is now measured, not just listed: on the same collision
+grid, extending the trial-current basis changes the projected charge response
+from about 773 to 10637 natural energy squared. A slow relative sector-momentum
+mode was missing from the smallest basis. Its collision form scales as G^4;
+its charge-current overlap vanishes at zero charge chemical potential.
+Further basis and quadrature changes are reported separately in the artifact.
+
+This remains PARTIAL. It is a finite-basis tree kinetic diagnostic, not physical
+heat conductivity or complete two-fluid/SK-KMS closure. Total quasiparticle
+number is a spurious invariant of the 2-to-2 truncation. No additional physical
+dependency is unlocked; the original conserved-C causal baseline, He-4/graphite
+source distinctions and Xie holdout policy are unchanged.
+
 ## Normal Elastic Action Diagnostic (2026-09-01)
 
 A named research branch now computes charge-resolved elastic contact plus
