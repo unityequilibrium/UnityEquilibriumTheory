@@ -1,5 +1,20 @@
 # Verification Spec
 
+## Kinetic Canonical/Action Verification (2026-08-31)
+
+Run docs.scripts.audit.audit_topic13_kinetic_canonical_action_match as a module
+and docs/core/test/test_topic13_kinetic_canonical_normalization.py with pytest.
+Require field covariance for both dilute and outgoing-Bose branches, signed-mu
+species exchange, lambda_c-squared width scaling and canonical transition
+consumer agreement. Polynomial-derivative checks use the production potential
+and must fail when that potential is mutated.
+
+The audit may pass the repair while action_matching_status is BLOCKED.
+That mismatch is an actual open action-channel result, not an allowed physical
+unlock. Keep both diluted/quantum artifacts comparator-only and preserve
+full_core_unlock=false. Regenerate fixed-Phi audits when their code inventory
+changes; do not treat historical source snapshots as current after edits.
+
 ## Fixed-Phi Repair Verification (2026-08-31)
 
 Before reusing fixed-Phi results, run these modules from the repository root:

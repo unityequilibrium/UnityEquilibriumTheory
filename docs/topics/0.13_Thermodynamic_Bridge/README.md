@@ -21,9 +21,18 @@ two implementations; it does not close the full topic.
 See [the repair artifact](../../core/artifacts/t13_fixed_phi_spectrum_repair_audit.json).
 Its source-only import inventory identifies downstream review candidates, not
 automatic numerical failures. Condensed spectrum-dependent outputs and
-general-Z normal outputs require review before reuse. A copied normalization
-in the kinetic collision setup remains open. The acceptance artifact containing
+general-Z normal outputs require review before reuse. The kinetic input
+normalization is now repaired, including signed chemical potential; full
+action/channel matching remains open. The acceptance artifact containing
 pre-existing work was not regenerated; no physical dependency is unlocked.
+
+The [kinetic/action audit](../../core/artifacts/t13_kinetic_canonical_action_match_audit.json)
+distinguishes a repaired comparator from the unresolved physical derivation.
+Fourth differences of the production potential give V1111=6*lambda_c and
+V1122=2*lambda_c, whereas the legacy tensor called with lambda_c gives
+3*lambda_c and lambda_c. Formal self-consistency of that legacy tensor is
+not a match to the declared action. Do not rescale all historic rates by one
+guessed factor; species/channel and phase-space matching remain necessary.
 
 ## Canonical Current Gate (2026-08-28)
 

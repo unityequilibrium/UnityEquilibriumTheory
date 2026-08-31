@@ -336,7 +336,7 @@
   "source_hashes": {
     "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
     "docs/core/uet_o2_formal_transverse_response.py": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba",
-    "docs/scripts/audit/audit_topic13_fixed_phi_spectrum_repair.py": "f1b425a33a29ec717b3f2cb7b0d12741be6b0c19c7e87c54663e2c6b82ce551a",
+    "docs/scripts/audit/audit_topic13_fixed_phi_spectrum_repair.py": "b1c1e62ae8ee232bd261439ea88f92cfcbafe17d69ff8413732fc73ed137bddb",
     "docs/scripts/audit/audit_topic13_formal_transverse_response.py": "1b3faa9c7eae05906ebd33a9a47aaaa30606206747fd8a37588b1748013eb4fe"
   },
   "state_grid": {

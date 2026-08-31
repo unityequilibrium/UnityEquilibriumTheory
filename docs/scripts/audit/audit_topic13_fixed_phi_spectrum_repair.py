@@ -31,6 +31,7 @@ from docs.core.uet_o2_finite_temperature_quasiparticle_eos import (
 from docs.core.uet_o2_formal_transverse_response import (
     formal_transverse_quasiparticle_response,
 )
+from docs.core.uet_o2_kinetic_collision_kubo import _normal_state_inputs
 
 ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / "docs/core/artifacts/t13_fixed_phi_spectrum_repair_audit.json"
@@ -238,6 +239,10 @@ def main() -> int:
     )
     passed = passed and fresh
     contract = finite_temperature_o2_quasiparticle_contract()
+    copied_inputs = _normal_state_inputs(.25, -.2, 0., config(4., 4., 1.))
+    copied_repaired = bool(np.allclose(
+        copied_inputs, (.25, -.2, 1., -.2, 1./16), rtol=1e-12, atol=0.
+    ))
     source_paths = [
         EOS_PATH, STATIC_PATH, AUDIT_PATH,
         "docs/core/uet_covariant_matter.py",
@@ -283,8 +288,10 @@ def main() -> int:
             "path": "docs/core/uet_o2_kinetic_collision_kubo.py",
             "symbol": "_normal_state_inputs",
             "source_sha256": digest(ROOT / "docs/core/uet_o2_kinetic_collision_kubo.py"),
-            "finding": "Normal kinetic setup still uses sqrt(Z)*abs(mu); audit its mass and vertex normalization before general-Z transport use.",
-            "disposition": "OPEN_GENERAL_Z_KINETIC_NORMALIZATION_REVIEW",
+            "finding": "Probe canonical mass, signed chemical potential and coupling independently; full action tensor/channel matching is separate.",
+            "canonical_inputs": list(copied_inputs),
+            "input_normalization_repaired": copied_repaired,
+            "disposition": "INPUTS_REPAIRED_FULL_ACTION_MATCH_OPEN" if copied_repaired else "OPEN_GENERAL_Z_KINETIC_NORMALIZATION_REVIEW",
         },
         "open_blockers": [
             "downstream_spectrum_dependent_artifact_refresh_and_formula_review",
@@ -299,7 +306,7 @@ def main() -> int:
         "xie_2026_accessed": False,
         "input_access_boundary": "Synthetic points, Python code, import-time package/release metadata and the named EOS audit JSON; no experimental payload.",
         "controlling_blocker": "downstream_spectrum_and_copied_kinetic_normalization_review",
-        "next_action": "Audit general-Z kinetic mass, chemical potential and vertex normalization; refresh only impacted results and repair full-acceptance scope.",
+        "next_action": "Review remaining charged/vertex consumers and full action-channel normalization; refresh impacted results and repair full-acceptance scope.",
         "claim_boundary": "Fixed-Phi implementation repair only; not live-Phi closure, SI conductivity, full two-fluid transport, Full Topic 13 or external validation.",
     }
     artifact["report"] = {

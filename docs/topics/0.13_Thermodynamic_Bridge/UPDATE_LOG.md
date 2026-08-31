@@ -5124,3 +5124,32 @@ EVIDENCE_PATHS:
 - docs/core/artifacts/t13_uet_o2_finite_temperature_quasiparticle_eos_audit.json
 - docs/core/artifacts/t13_uet_o2_formal_transverse_response_audit.json
 - docs/core/test/test_topic13_fixed_phi_spectrum_regression.py
+
+## 2026-08-31 - Canonical kinetic inputs and action-vertex mismatch
+
+MAJOR_RESULT_CLOSURE: T13_KINETIC_CANONICAL_REPAIR_AND_ACTION_MATCH_BOUNDARY is PARTIAL. The normal comparator input repair is closed for its lane; action-to-transport matching is explicitly blocked.
+
+WHAT_IS_ACTUALLY_CLOSED: Canonical m_c^2=m_eff^2/Z and lambda_c=lambda_action/Z^2, signed chemical potential, fixed charge-species labels, field covariance of dilute/Bose-enhanced kinetic outputs, and a direct fourth-derivative witness from the production matter potential.
+
+WHAT_REMAINS_OPEN: The legacy tensor called with lambda_c is not the derivative of the declared potential. Full channel/species/symmetry/phase-space normalization, other charged SK/vertex consumers, full current/condensate/material matching and acceptance scope remain open.
+
+DEPENDENCY_UNLOCKED: Comparator-level continuation only; full_core_unlock=false. No Core/Gravity/physical transport unlock.
+
+STATUS: PASS_REPAIR_WITH_OPEN_ACTION_MATCH; action_matching_status=BLOCKED_LEGACY_TENSOR_NOT_POTENTIAL_DERIVATIVE.
+
+WHAT_CHANGED: Repaired the shared kinetic normal inputs and declared unit-channel comparator convention. Added a 22-case regression module and independent kinetic/action audit, refreshed six related artifacts, and replaced the prior fixed-Phi audit's static copied-formula blocker with an evaluated input probe. Preserved pre-existing dirty source/acceptance artifacts and ledgers.
+
+EQUATION_OR_MAPPING: E_s=sqrt(k^2+m_eff^2/Z)-s*mu; lambda_c=lambda_action/Z^2. For V_c=m_c^2*r^2/2+lambda_c*r^4/4, V_abcd=2*lambda_c*(delta_ab*delta_cd+delta_ac*delta_bd+delta_ad*delta_bc). The legacy helper called with lambda_c has half that tensor coefficient. Charged all-incoming contact contraction has magnitude 4*lambda_c, not the unit-channel comparator amplitude lambda_c. This alone does not fix cross sections or full rates.
+
+VERIFICATION: New pre-repair regression: 11 failed, 6 passed. After repair and added action/consumer tests, 90 tests passed across normalization, dilute/quantum, transition, contact, ladder, memory and fixed-Phi suites. Nine independent potential-derivative rows (three Z and three stencil steps) confirm the mismatch; a mutated-potential test is rejected. Six audits regenerated under an experimental-Data access guard with zero attempted accesses. Strict JSON and source/evidence hashes pass. Default Z=1, positive-mu dilute and quantum numeric state records are exactly unchanged from HEAD before this wave. git diff --check passed. New artifact SHA256: e45275dfb3d8c402e4961965f06e920b61aece8b2d95bc563687d73db76ed29d.
+
+CONTROLLING_BLOCKER: Full action tensor/channel normalization, not canonical input scaling. A self-consistent comparator vertex is not sufficient evidence of correspondence to the production action.
+
+NEXT_ACTION: Derive a separately named action-normalized, species-resolved collision operator from the verified potential tensor, including final-state counting and the applicable exchange channels. Reconcile charged SK/vertex consumers and replace circular action-match checks before physical use.
+
+CLAIM_BOUNDARY: No global multiplier was applied to historical rates, no fitted coefficient or SI calibration was introduced, and no full transport or Full Topic 13 claim was promoted. Existing Z=1 comparator results remain comparisons.
+
+EVIDENCE_PATHS:
+- docs/core/artifacts/t13_kinetic_canonical_action_match_audit.json
+- docs/core/test/test_topic13_kinetic_canonical_normalization.py
+- docs/scripts/audit/audit_topic13_kinetic_canonical_action_match.py

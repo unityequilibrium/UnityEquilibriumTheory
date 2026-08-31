@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-uet-o2-quantum-kinetic-collision-kubo-v1",
   "artifact": "t13_uet_o2_quantum_kinetic_collision_kubo_audit",
-  "generated_at": "2026-08-16",
+  "generated_at": "2026-08-31",
   "status": "PASS_ACTION_DERIVED_QUANTUM_KINETIC_COLLISION_LANE",
   "major_result": {
     "major_result_id": "T13_UET_O2_QUANTUM_COLLISION_ENHANCEMENT_LANE",
@@ -39,11 +39,11 @@
     "evidence_artifacts": [
       {
         "path": "docs/core/uet_o2_kinetic_collision_kubo.py",
-        "sha256": "411314a28d67bbce457f96ad6f147b183a7580fb983e88af7ba9ce0ce7c149be"
+        "sha256": "fa4d5cf2f8fc549e47392df39bc468ed3addec37ade25a7969f82652911dce6f"
       },
       {
         "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
-        "sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4"
+        "sha256": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f"
       }
     ],
     "verification_status": "PASS_ACTION_DERIVED_QUANTUM_KINETIC_COLLISION_LANE",
@@ -252,5 +252,11 @@
   "xie_2026_accessed": false,
   "controlling_blocker": "ladder_vertex_resummation_missing",
   "next_controller": "derive or match the ladder/retarded response and continuum limit without relabeling this finite-grid quantum kinetic comparator as physical Kubo",
-  "claim_promotion": false
+  "claim_promotion": false,
+  "full_core_unlock": false,
+  "action_matching_boundary": "Canonical comparator only; full action tensor/channel normalization remains open.",
+  "source_hashes": {
+    "docs/core/uet_o2_kinetic_collision_kubo.py": "fa4d5cf2f8fc549e47392df39bc468ed3addec37ade25a7969f82652911dce6f",
+    "docs/scripts/audit/audit_topic13_uet_o2_quantum_kinetic_collision_kubo.py": "f623354d0107e2a53211b7619302d62acca82b8c467b5bf295d9034ec869a126"
+  }
 }

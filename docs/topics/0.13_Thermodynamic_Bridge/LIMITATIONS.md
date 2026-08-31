@@ -10,8 +10,11 @@ declared lane; do not equate it with graphite calibration or discard it merely
 because a different branch's spectrum was repaired.
 
 The fixed-Phi EOS/static-response repair is independently tested, but dependent
-artifacts are not all refreshed. General-Z kinetic collision normalization
-still requires review. The new repair artifact has full_core_unlock=false.
+artifacts are not all refreshed. General-Z kinetic inputs and charge-sign
+handling are now repaired. Other charged SK/vertex consumers still require
+review, and the legacy quartic tensor does not match the fourth derivative of
+the production potential at the same coupling. The repair artifacts retain
+full_core_unlock=false.
 The existing full-acceptance artifact has pre-existing local edits and was not
 overwritten in this wave; its scope/freshness logic requires a separate repair.
 

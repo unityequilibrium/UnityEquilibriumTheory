@@ -35,13 +35,13 @@
   "evidence_artifacts": [
     {
       "path": "docs/core/artifacts/t13_uet_o2_finite_temperature_quasiparticle_eos_audit.json",
-      "sha256": "62210fc648805ebca5c089884737c144861dcbab611042aa2aa23806f86d564e"
+      "sha256": "4d8afc801e4d9a2bf7d9b2877760b8d0af93afe6e7d5cc31f2c50004187e5e26"
     }
   ],
   "source_hashes": {
     "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
     "docs/core/uet_o2_formal_transverse_response.py": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba",
-    "docs/scripts/audit/audit_topic13_fixed_phi_spectrum_repair.py": "f1b425a33a29ec717b3f2cb7b0d12741be6b0c19c7e87c54663e2c6b82ce551a",
+    "docs/scripts/audit/audit_topic13_fixed_phi_spectrum_repair.py": "b1c1e62ae8ee232bd261439ea88f92cfcbafe17d69ff8413732fc73ed137bddb",
     "docs/core/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
     "docs/core/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d",
     "docs/core/test/test_topic13_fixed_phi_spectrum_regression.py": "aa4a0da1da86aa29268e971fa9485adb1f388d7cff242b66d2a8deedb0a11e6e"
@@ -314,7 +314,7 @@
     "does_not_cover": "dynamic imports, copied formulas, non-Python artifact dependency edges",
     "experimental_payloads_read": false,
     "parse_errors": [],
-    "scanned_python_file_count": 892,
+    "scanned_python_file_count": 893,
     "review_required": [
       {
         "path": "docs/core/t13_formal_thermodynamic_bridge_integration.py",
@@ -839,7 +839,8 @@
         "relationship": "DIRECT",
         "affected_imports": [
           "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
-          "docs.core.uet_o2_formal_transverse_response"
+          "docs.core.uet_o2_formal_transverse_response",
+          "docs.core.uet_o2_kinetic_collision_kubo"
         ],
         "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
       },
@@ -884,6 +885,16 @@
         "relationship": "TRANSITIVE",
         "affected_imports": [
           "docs.core.uet_o2_heat_current_kubo_match"
+        ],
+        "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_kinetic_canonical_action_match.py",
+        "relationship": "DIRECT",
+        "affected_imports": [
+          "docs.core.uet_o2_finite_temperature_quasiparticle_eos",
+          "docs.core.uet_o2_kinetic_collision_kubo",
+          "docs.core.uet_o2_one_loop_vertex_uv_boundary"
         ],
         "disposition": "REVIEW_REQUIRED_NOT_AUTOMATIC_NUMERIC_FAILURE"
       },
@@ -1389,7 +1400,7 @@
       "docs/core/uet_o2_heat_current_kubo_continuum_boundary.py": "df3b1e51508fafd68e7041c992f4bbdbe47d43f50065f46ff7ad24b705409457",
       "docs/core/uet_o2_heat_current_kubo_match.py": "0ebaae4f54459dbf2acbedbab8dfce2c874c7221cd789d813f4f4c02c5bc501e",
       "docs/core/uet_o2_interacting_sk_kms_action.py": "91b432c04e11aebf4aa1c293a05ae611be4eca3243daa91546d671f63fd68da5",
-      "docs/core/uet_o2_kinetic_collision_kubo.py": "411314a28d67bbce457f96ad6f147b183a7580fb983e88af7ba9ce0ce7c149be",
+      "docs/core/uet_o2_kinetic_collision_kubo.py": "fa4d5cf2f8fc549e47392df39bc468ed3addec37ade25a7969f82652911dce6f",
       "docs/core/uet_o2_microscopic_kubo_match.py": "34e5ff202d7e7579af278eff5fc509d03d6d48163b5e13cc7e657b76f943f667",
       "docs/core/uet_o2_momentum_ladder_sk_kms.py": "c47aae04eca1e703919de6de9050e81d76dd036053bec9ef47c4cc0bbd648dbb",
       "docs/core/uet_o2_nonlocal_sk_kms_memory_kernel.py": "9a80cbb16f227c102da432e461c8648c86f07a4ad8cea269f848b4f172efcb93",
@@ -1406,12 +1417,13 @@
       "docs/scripts/audit/audit_topic13_equilibrium_kms.py": "25130bf5d4b2502001d7a572cf72efeee57432a694f14bc172894b88692a7aeb",
       "docs/scripts/audit/audit_topic13_finite_temperature_quasiparticle_eos.py": "fed8513deb08e22596020a6531abaece831106280f31bf52377e426baf57ae4d",
       "docs/scripts/audit/audit_topic13_finite_temperature_quasiparticle_eos_v2.py": "a9db8f8615186f0773d76bf31a6c3ff304850f2131251cd4be7e6226fb9e0055",
-      "docs/scripts/audit/audit_topic13_fixed_phi_spectrum_repair.py": "f1b425a33a29ec717b3f2cb7b0d12741be6b0c19c7e87c54663e2c6b82ce551a",
+      "docs/scripts/audit/audit_topic13_fixed_phi_spectrum_repair.py": "b1c1e62ae8ee232bd261439ea88f92cfcbafe17d69ff8413732fc73ed137bddb",
       "docs/scripts/audit/audit_topic13_formal_thermodynamic_bridge_integration.py": "6d84202c2a5dd0216debf01b37e196cb17afa5af48fa9925bfa32487500a15b2",
       "docs/scripts/audit/audit_topic13_formal_transverse_response.py": "1b3faa9c7eae05906ebd33a9a47aaaa30606206747fd8a37588b1748013eb4fe",
       "docs/scripts/audit/audit_topic13_formal_two_sector_thermodynamics.py": "6c458a03b2bcf8263536c5a4518fcfeb2fbf0a1866ef7f8a57241ef5d514738f",
       "docs/scripts/audit/audit_topic13_heat_current_kubo_continuum_boundary.py": "932bc9a4ecb9b335d4ece4e9778313fe418a2bcfc360bab6285e7d5a37ee6c30",
       "docs/scripts/audit/audit_topic13_heat_current_kubo_match.py": "f96849a717923f4b357e1dcaaa7998fdafc2b5527f51dfaed86b82f2ed9e39c5",
+      "docs/scripts/audit/audit_topic13_kinetic_canonical_action_match.py": "3f97fe3cbc179d427d4332981932502c7ad7612863a745c3d5c52b28568eabba",
       "docs/scripts/audit/audit_topic13_microscopic_kubo_match.py": "23f6f10cc7d965a77387b1e766e09b4509f02e3978d11693c4a3738c3a55cc56",
       "docs/scripts/audit/audit_topic13_regularized_continuum_heat_current.py": "f2756bd2a83b52bc84f5712176ac6f3f511db2ae85db8149a006ab859ab6dd53",
       "docs/scripts/audit/audit_topic13_uet_o2_action_1pi_sunset_euclidean.py": "6e0e6b53006ad73a8dec9acb677763a7df3d3d36ba033bea4cc4ddb58ae96bf5",
@@ -1451,14 +1463,14 @@
       "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_sunset_vacuum_match.py": "5d43586b1ab10d597c9d90a5af24c70b439b13cca4cd60f4a386703e4bd9b46d",
       "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_two_fluid_response.py": "c5d19749b6877074935a7ce5c598f2c2a6241f57267e4c31f7ecd43ff82e7eae",
       "docs/scripts/audit/audit_topic13_uet_o2_interacting_sk_kms_action.py": "2b3c09d45b386dda36fd38592fc18cdeb44d91987e7d52c9242c03bdecbc1c55",
-      "docs/scripts/audit/audit_topic13_uet_o2_kinetic_collision_kubo.py": "9547fe1d29b2df7538af18142d22756af52295b523d741e8fab056fb5ca1e3eb",
+      "docs/scripts/audit/audit_topic13_uet_o2_kinetic_collision_kubo.py": "5adfd15d021721fe597649f1159fb87505eaddcfdbb1e70fb90adea5a75f684b",
       "docs/scripts/audit/audit_topic13_uet_o2_momentum_ladder_sk_kms.py": "e0fbe5e38c139f662e665f23e339143e8844c5ff7ef8c6e2467e0cbe47f4d047",
       "docs/scripts/audit/audit_topic13_uet_o2_nonlocal_sk_kms_memory_kernel.py": "45650c47511442673c364d03ad08a465228b49c6b1b466b116639f204c06705d",
       "docs/scripts/audit/audit_topic13_uet_o2_on_shell_sunset_width.py": "10257a496ae0eeb7b921fb53bea213c16f63b112ee0ed47b329038339c6e77a0",
       "docs/scripts/audit/audit_topic13_uet_o2_one_loop_retarded_self_energy_no_go.py": "a288483701b491f7fff758041cbb5a1d00c95b798ad4f8ab7ec90df618cd2c9d",
       "docs/scripts/audit/audit_topic13_uet_o2_one_loop_vertex_uv_boundary.py": "2bccbbdb21d89569c54133c1382f1284a888010be59cdf056ed0ed84222b7a69",
       "docs/scripts/audit/audit_topic13_uet_o2_quantum_collision_enhancement.py": "ced57134341ecfc74b2323154e8022417f48b386f2c24c7a47a0d16486a30d82",
-      "docs/scripts/audit/audit_topic13_uet_o2_quantum_kinetic_collision_kubo.py": "3eb2da46d493ed6057edad53b757140feb09d88593a46f35e0be2a93ea789fdb",
+      "docs/scripts/audit/audit_topic13_uet_o2_quantum_kinetic_collision_kubo.py": "f623354d0107e2a53211b7619302d62acca82b8c467b5bf295d9034ec869a126",
       "docs/scripts/audit/audit_topic13_uet_o2_renormalized_vertex_scheme.py": "97d3f1d66662937e591c87d789d9640a306cdcae7000254c00baa5814cefb06e",
       "docs/scripts/audit/audit_topic13_uet_o2_sunset_dispersion_interface.py": "6eaad98bf1bed31bbae77b2522ae7f5dfb135a199bb2638b71105ae4008a0233",
       "docs/scripts/audit/audit_topic13_uet_o2_thermodynamic_normal_component.py": "6b852cc2c717506ad7289547443dccd500e5231d5e41e3f80fa279c7c4e3833e",
@@ -1477,9 +1489,17 @@
   "known_unrepaired_copied_formula": {
     "path": "docs/core/uet_o2_kinetic_collision_kubo.py",
     "symbol": "_normal_state_inputs",
-    "source_sha256": "411314a28d67bbce457f96ad6f147b183a7580fb983e88af7ba9ce0ce7c149be",
-    "finding": "Normal kinetic setup still uses sqrt(Z)*abs(mu); audit its mass and vertex normalization before general-Z transport use.",
-    "disposition": "OPEN_GENERAL_Z_KINETIC_NORMALIZATION_REVIEW"
+    "source_sha256": "fa4d5cf2f8fc549e47392df39bc468ed3addec37ade25a7969f82652911dce6f",
+    "finding": "Probe canonical mass, signed chemical potential and coupling independently; full action tensor/channel matching is separate.",
+    "canonical_inputs": [
+      0.25,
+      -0.2,
+      1.0,
+      -0.2,
+      0.0625
+    ],
+    "input_normalization_repaired": true,
+    "disposition": "INPUTS_REPAIRED_FULL_ACTION_MATCH_OPEN"
   },
   "open_blockers": [
     "downstream_spectrum_dependent_artifact_refresh_and_formula_review",
@@ -1494,7 +1514,7 @@
   "xie_2026_accessed": false,
   "input_access_boundary": "Synthetic points, Python code, import-time package/release metadata and the named EOS audit JSON; no experimental payload.",
   "controlling_blocker": "downstream_spectrum_and_copied_kinetic_normalization_review",
-  "next_action": "Audit general-Z kinetic mass, chemical potential and vertex normalization; refresh only impacted results and repair full-acceptance scope.",
+  "next_action": "Review remaining charged/vertex consumers and full action-channel normalization; refresh impacted results and repair full-acceptance scope.",
   "claim_boundary": "Fixed-Phi implementation repair only; not live-Phi closure, SI conductivity, full two-fluid transport, Full Topic 13 or external validation.",
   "report": {
     "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
@@ -1530,7 +1550,7 @@
       "corrected_gap_squared": true
     },
     "CONTROLLING_BLOCKER": "downstream_spectrum_and_copied_kinetic_normalization_review",
-    "NEXT_ACTION": "Audit general-Z kinetic mass, chemical potential and vertex normalization; refresh only impacted results and repair full-acceptance scope.",
+    "NEXT_ACTION": "Review remaining charged/vertex consumers and full action-channel normalization; refresh impacted results and repair full-acceptance scope.",
     "CLAIM_BOUNDARY": "Fixed-Phi implementation repair only; not live-Phi closure, SI conductivity, full two-fluid transport, Full Topic 13 or external validation."
   }
 }

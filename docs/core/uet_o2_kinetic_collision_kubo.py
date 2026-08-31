@@ -30,7 +30,7 @@ KINETIC_COLLISION_KUBO_STATUS = "PASS_ACTION_DERIVED_DILUTE_KINETIC_COLLISION_LA
 
 @dataclass(frozen=True)
 class KineticCollisionState:
-    """Normal-branch collision and kinetic-response quantities."""
+    """Normal-branch comparator; mass and quartic are canonical-field values."""
 
     temperature: float
     chemical_potential: float
@@ -88,14 +88,15 @@ def _normal_state_inputs(
     mu = _finite(chemical_potential, "chemical_potential")
     phi = _finite(space_response, "space_response")
     mass_sq = effective_mass_sq(phi, config.eos)
-    mass = sqrt(_positive(mass_sq, "effective mass squared"))
     z = _positive(config.eos.matter.matter_kinetic, "matter kinetic coefficient")
-    mu_eff = sqrt(z) * abs(mu)
+    mass = sqrt(_positive(mass_sq, "effective mass squared") / z)
+    # Field normalization does not rescale time or erase the charge sign.
+    mu_eff = mu
     if condensate_control(mu, phi, config.eos) >= -config.phase_tolerance:
         raise ValueError("kinetic collision lane requires a strict normal branch")
-    if mu_eff >= mass:
+    if abs(mu_eff) >= mass:
         raise ValueError("normal branch requires chemical potential below the mass")
-    quartic = _positive(config.eos.matter.matter_quartic, "quartic coupling")
+    quartic = _positive(config.eos.matter.matter_quartic, "quartic coupling") / z**2
     return t, mu, mass, mu_eff, quartic
 
 
@@ -250,11 +251,11 @@ def kinetic_collision_state(
         raise ValueError("angular order must be an integer")
     if int(angular_order) < 24:
         raise ValueError("angular order must be >= 24")
-    cutoff = max(cutoff_factor * t, cutoff_factor * mass, cutoff_factor * mu_eff, 1.0)
+    cutoff = max(cutoff_factor * t, cutoff_factor * mass, cutoff_factor * abs(mu_eff), 1.0)
     momentum_nodes, momentum_weights = _quadrature(quadrature_order, cutoff)
     angle_nodes, angle_weights = _quadrature(angular_order, 2.0)
     angle_nodes = angle_nodes - 1.0
-    reference_momentum = max(t, mass, mu_eff)
+    reference_momentum = max(t, mass, abs(mu_eff))
     drude = tuple(
         _drude_weight(
             momentum_nodes,
@@ -311,17 +312,21 @@ def kinetic_collision_contract() -> dict[str, object]:
 
     return {
         "status": KINETIC_COLLISION_KUBO_STATUS,
+        "normalization_revision": "CANONICAL_NORMAL_KINETIC_V2",
+        "amplitude_convention": "UNIT_CHANNEL_COMPARATOR_NOT_FULL_ACTION_TENSOR",
+        "species_order": [-1, 1],
         "equations": {
-            "normal_dispersion": "E_s(k)=sqrt(k^2+m_eff^2)-s*sqrt(Z)*abs(mu), s in {-1,+1}",
-            "constant_amplitude_cross_section": "sigma_22(s)=lambda^2/(16*pi*s)",
+            "canonical_field_map": "chi_c=sqrt(Z)*chi; m_c^2=m_eff^2/Z; lambda_c=lambda/Z^2; mu_c=mu",
+            "normal_dispersion": "E_s(k)=sqrt(k^2+m_c^2)-s*mu, s in {-1,+1}",
+            "constant_amplitude_cross_section": "sigma_comparator(s)=lambda_c^2/(16*pi*s); channel normalization is not the full action tensor",
             "collision_kernel": "Gamma_s(k)=sum_r integral[d^3p/(2*pi)^3] f_r(E_p) v_rel sigma_22(s) B_34(s;T,mu)",
             "static_weight": "D_s=(1/3) integral[d^3k/(2*pi)^3] k^2[-partial_E f_s]",
-            "kinetic_response": "K_kin=sum_s D_s/Gamma_s(k_ref), k_ref=max(T,m_eff,sqrt(Z)*abs(mu))",
+            "kinetic_response": "K_kin=sum_s D_s/Gamma_s(k_ref), k_ref=max(T,m_c,abs(mu))",
         },
         "unit_contract": {
             "unit_lane": "natural",
             "mass_temperature_mu": "energy",
-            "lambda": "dimensionless quartic coupling",
+            "lambda": "dimensionless canonical lambda_c=lambda_action/Z^2 in returned state",
             "sigma_22": "inverse energy squared",
             "collision_width": "energy/inverse time",
             "D": "formal static response weight",
@@ -345,6 +350,7 @@ def kinetic_collision_contract() -> dict[str, object]:
             "ladder_vertex_resummation": True,
             "condensed_scattering": True,
             "microscopic_SK_KMS_match": True,
+            "full_action_tensor_and_channel_symmetry_matching": True,
             "SI_map": True,
             "alpha_Phi_K": True,
             "TTG_validation": True,

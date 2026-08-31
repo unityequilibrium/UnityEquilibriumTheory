@@ -1,5 +1,30 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Kinetic Normalization and Action-Tensor Boundary (2026-08-31)
+
+The normal kinetic setup now uses m_c^2=m_eff^2/Z,
+lambda_c=lambda_action/Z^2 and signed mu. Occupations are
+n_s=[exp((sqrt(k^2+m_c^2)-s*mu)/T)-1]^-1 with fixed species order (-1,+1).
+Changing mu to -mu swaps these species rather than silently replacing mu by
+its magnitude. The existing unit-channel comparator cross section remains
+lambda_c^2/(16*pi*s); its overall action/channel convention is not repaired
+by changing the input scale.
+
+Independent fourth differences of the production matter_potential, at three
+field normalizations and three step sizes, give
+V_abcd=2*lambda_c*(delta_ab*delta_cd+delta_ac*delta_bd+delta_ad*delta_bc).
+The legacy _tree_vertex_tensor(lambda_c) instead has coefficient lambda_c.
+Contracting the action derivative with unit charge polarizations
+e_plus,e_plus,e_minus,e_minus gives magnitude 4*lambda_c. The unit-channel
+comparator amplitude lambda_c must not be equated to this derivative.
+
+This is a local quartic/contact normalization finding, not a completed
+scattering cross section, symmetry-factor prescription, exchange-channel sum,
+or retarded Kubo result. Preserve previous comparator outputs as such; audit
+the channel-resolved action mapping rather than globally multiplying rates.
+See t13_kinetic_canonical_action_match_audit.json: canonical covariance passes,
+but legacy action matching is BLOCKED and Full Topic 13 remains open.
+
 ## Fixed-Phi Implementation Correction (2026-08-31)
 
 This corrects implementations of the existing fixed-background quadratic
