@@ -5065,3 +5065,32 @@ CONTROLLING_BLOCKER: External physical source/calibration/transport packages rem
 NEXT_ACTION: Apply the method to Topic 0.11/Core O(2), while continuing the existing independent source/calibration/transport work for Full Topic 13.
 
 CLAIM_BOUNDARY: Internal normalized diagnostic only; not physical chaos evidence, prediction, external validation, or Full Topic 13 closure.
+
+## 2026-08-31 - Cubic Goldstone projected-current research candidate
+
+MAJOR_RESULT_CLOSURE: `T13_GOLDSTONE_PROJECTED_CURRENT_COLLISION_CANDIDATE` is `PARTIAL`; this wave does not accept Full Topic 13.
+
+WHAT_IS_ACTUALLY_CLOSED: Persisted a reproducible cubic collision quadratic form, exact momentum-null projection, and a canonical chemical-work-subtracted current check. This is a finite-basis internal calculation, not complete transport.
+
+WHAT_REMAINS_OPEN: Infinite-basis error certification, additional scattering/higher-loop channels, coupled condensate/charge and material heat-frame mapping, SI/source/alpha and full SK/KMS. The known fixed-Phi EOS and acceptance-scope repairs remain unimplemented.
+
+DEPENDENCY_UNLOCKED: Diagnostic continuation only; no physical downstream unlock.
+
+STATUS: `INTERNAL_NUMERICAL_CANDIDATE_NOT_FULL_TRANSPORT`; `full_core_unlock=false`.
+
+WHAT_CHANGED: Added the standalone projected-current audit, its generated artifact and regression suite. The original positive-power basis converged poorly despite stable quadrature; the endpoint-informed basis includes `1/x` without modifying the collision kernel. Existing topic/controller artifacts and user changes were not rewritten.
+
+EQUATION_OR_MAPPING: `J_K^i=T^{0i}-mu*N^i=E_a*v_a^i` per tree mode on the declared flat rotating background. Project momentum before evaluating `R_N=S_N^T*C_N^-1*S_N`. Here angular `pi` is not response-rate `Pi`; `N^mu` is not `C`.
+
+VERIFICATION: Focused pytest suite: 11 passed. Full artifact regeneration completed; five internal checks pass; all recorded code hashes verified. Twelve canonical-current checks have maximum relative error about `1.9e-12`. At `T=0.01` in natural units, basis 9 to 10 changes the response by about `1.01e-5` relatively, not a certified continuum error bound. The initial report serialization test caught a NumPy boolean; it was fixed and rerun. Artifact SHA256: `20cdde849b5871d09b14403e178730b020f48241014a866da67272840de51594`.
+
+CONTROLLING_BLOCKER: Full current/condensate/material matching and collision completeness remain open. Small finite-basis variation does not remove these blockers.
+
+NEXT_ACTION: Repair the fixed-Phi EOS and acceptance scope using independent regression tests; retain this collision/current candidate as diagnostic evidence while checking missing physical mappings.
+
+CLAIM_BOUNDARY: Not physical conductivity, complete constitutive transport, external validation or global UET closure. No holdout/source payload was used; no fitted coefficient, cone padding or existing threshold adjustment was introduced.
+
+EVIDENCE_PATHS:
+- `docs/scripts/audit/audit_topic13_goldstone_projected_current.py`
+- `docs/core/test/test_topic13_goldstone_projected_current.py`
+- `docs/core/artifacts/t13_goldstone_projected_current_research_candidate.json`
