@@ -1,5 +1,14 @@
 # Verification Spec
 
+## Transition-Operator Rate Dimension (2026-09-01)
+
+Run `docs.scripts.audit.audit_topic13_transition_kernel_rate_dimension_no_go`
+and its focused test. Scale every energy-bearing action/state input together
+by `1.5,2,3`; require the collision-operator trace to scale as the square,
+while recording that a physical rate should scale linearly. Use trace rather
+than threshold-selected mean eigenvalues. Preserve any absolute-cutoff mode
+drift as an additional blocker; do not tune the cutoff to restore covariance.
+
 ## Dressed RA Pair and Rung Boundary (2026-09-01)
 
 Run `docs.scripts.audit.audit_topic13_dressed_ra_pair_microscopic_rung_boundary`

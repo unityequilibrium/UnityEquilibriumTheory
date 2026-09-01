@@ -1,3 +1,29 @@
+## 2026-09-01 - Transition-kernel rate-dimension no-go
+
+MAJOR_RESULT_CLOSURE: T13_TRANSITION_KERNEL_RATE_DIMENSION_NO_GO is CLOSED_FOR_LANE/CLOSED_AS_NO_GO; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: Symbolic powers and whole-action energy rescaling independently prove that the current finite-channel collision operator has dimension E^2 rather than rate dimension E. A fixed absolute eigenvalue cutoff adds a separate scale-covariance failure.
+
+WHAT_REMAINS_OPEN: Lorentz-invariant linearized collision phase space, normalized single-particle Hilbert-space weight, charge-resolved production rung, self-consistent width and continuum ladder.
+
+DEPENDENCY_UNLOCKED: None. Existing algebraic ladder/KMS artifacts are blocked from microscopic rate reuse.
+
+STATUS: PASS_TRANSITION_RATE_DIMENSION_NO_GO; four artifact checks pass.
+
+WHAT_CHANGED: Added symbolic dimension accounting and independent energy-rescaling witnesses for scales 1.5, 2 and 3. The first positive-mode-rate witness exposed fixed-threshold mode drift, so operator trace is used as the threshold-independent dimension witness without changing the old cutoff.
+
+EQUATION_OR_MAPPING: Current W_c scales E^4 and v_c scales E^-1, so L=sum W_c v_c v_c^T scales E^2. A valid resolvent requires L_rate and omega both scale E. Repair requires invariant dPi=d^3p/[(2pi)^3 2E], delta^4, symmetry factors and a declared weighted inner product.
+
+VERIFICATION: 6 tests pass. Operator-trace ratios are 2.25, 4 and 9 exactly within 1e-10 exponent tolerance, while required rate ratios are 1.5, 2 and 3. At scale 3 the reported threshold-selected rate exponent falls to 1.631 and DC response changes by 1.72e19, exposing noncovariant mode selection. No threshold, fit, holdout or data access changed.
+
+CONTROLLING_BLOCKER: collision_operator_energy_dimension_and_invariant_measure_repair_missing.
+
+NEXT_ACTION: Re-derive the single-particle linearized collision operator from invariant phase space and a declared weighted inner product before inserting the charge-resolved production rung.
+
+CLAIM_BOUNDARY: Dimensional rejection of the current operator only; not a repaired kernel, width, ladder, Kubo/SI coefficient or Full Topic 13 closure.
+
+EVIDENCE_HASHES: no-go artifact da6911cf051831970c4ba9a564e41bf6d0d8d3b8c842032d9ee17a80b4744888; candidate registry d831b44564f25a3975d9acaa65fdf39ff515a3e10143cd8465f7644ab8914a64.
+
 ## 2026-09-01 - Dressed RA-pair normalization and microscopic rung no-go
 
 MAJOR_RESULT_CLOSURE: T13_DRESSED_RA_PAIR_MICROSCOPIC_RUNG_BOUNDARY is CLOSED_FOR_LANE/CLOSED_AS_NO_GO; Full Topic 13 remains open.

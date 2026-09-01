@@ -1,5 +1,16 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Transition-Operator Rate-Dimension No-Go (2026-09-01)
+
+The current formula has two radial measures with dimension `E^6`, cross
+section `E^-2`, state weight `E^2`, and transition vector `E^-1`. Hence
+`L=sum W_c v_c v_c^T` has dimension `E^2`, while a collision rate in
+`(L-i*omega I)^-1` must have dimension `E`.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-TRANSITION-RATE-DIMENSION-NOGO-20260901 | current `L~E^2`; required `L_rate~E` | docs/scripts/audit/audit_topic13_transition_kernel_rate_dimension_no_go.py | natural-energy powers | code formula and whole-action rescaling | dimensional no-go verified | operator trace scales as scale^2 | resolvent combines unlike dimensions; absolute mode cutoff is noncovariant | derive invariant single-particle collision measure and weighted inner product |
+
 ## Dressed RA Pair and Microscopic Rung Boundary (2026-09-01)
 
 In the positive-energy pole approximation,

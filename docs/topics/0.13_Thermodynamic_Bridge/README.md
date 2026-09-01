@@ -6,6 +6,20 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Transition-Operator Rate-Dimension No-Go (2026-09-01)
+
+The [dimension artifact](../../core/artifacts/t13_transition_kernel_rate_dimension_no_go.json)
+finds that the existing finite-channel collision operator scales as `E^2`,
+not as a rate `E`. Whole-action energy rescaling by `1.5,2,3` changes the
+operator trace by `2.25,4,9`. It is therefore dimensionally invalid to use
+this operator directly in `L-i*omega*I` with `omega` carrying energy units.
+
+At scale `3`, the fixed absolute positive-eigenvalue cutoff also changes the
+counted mode set, causing an additional covariance failure. Existing algebraic
+BS/KMS identities remain diagnostics, but cannot support microscopic or
+physical transport. Invariant phase space and the weighted single-particle
+inner product must be re-derived before building the replacement rung.
+
 ## Dressed RA Pair and Microscopic Rung Boundary (2026-09-01)
 
 The [RA-pair/rung artifact](../../core/artifacts/t13_dressed_ra_pair_microscopic_rung_boundary_audit.json)

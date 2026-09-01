@@ -1,5 +1,13 @@
 # Limitations
 
+## Transition-Rate Dimension Boundary (2026-09-01)
+
+Conservation, PSD and algebraic resolvent checks do not repair a dimensional
+mismatch. The current finite-channel operator cannot be interpreted as a
+frequency, width or physical relaxation rate. Its absolute `1e-14` eigenmode
+cutoff is also not energy-scale covariant. Historical response numbers remain
+diagnostics and must not be globally rescaled into physical rates.
+
 ## Dressed Pair/Rung Boundary (2026-09-01)
 
 The RA-pair calculation assumes a narrow positive-energy quasiparticle pole
