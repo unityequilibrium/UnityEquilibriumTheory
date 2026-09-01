@@ -472,3 +472,14 @@ Acceptance requires retarded/advanced conjugacy, the declared spectral discontin
 - Require charge conjugation, positive momentum-resolved widths, exact `-Im Sigma_R=2E Gamma`, eventwise energy/momentum and detailed balance.
 - Prohibit clipping, fitted damping, absolute mode cutoffs, source/holdout access, and relabeling the tree width as dressed or resonant.
 - A pass closes only the tree tagged/spectral-width lane; vector heat-current modes, dressed self-consistency, Kubo/SI and Full Topic 13 remain open.
+
+## Vector current and heat-rank boundary
+
+- Run `python -m docs.scripts.audit.audit_topic13_vector_current_heat_rank_boundary`.
+- Run `python -m pytest docs/core/test/test_topic13_invariant_vector_current_galerkin.py -q`.
+- Require vector operator dimension `E`, charge response form `E`, and formal grand-heat response form `E^3` under whole-action scales 1.5, 2, and 3.
+- Require radial 12/16/24 last-refinement differences `<=1e-2` and angular 4/6/8 differences `<=1e-3`.
+- Require eventwise five invariants, one vector momentum null mode, full dissipative complement, PSD, symmetry, detailed balance and charge conjugation.
+- Require `J_Q_perp=-mu J_charge_perp` within `1e-10`, projected source rank one, and vanishing projected heat source at `mu=0`.
+- Use Landau projection only on sources; prohibit posterior projection of the collision operator, clipping, fitting and holdout access.
+- A pass closes the vector charge-current lane and rejects an independent heat channel only in the declared elastic equal-mass lane. It is not heat conductivity or Full Topic 13 closure.

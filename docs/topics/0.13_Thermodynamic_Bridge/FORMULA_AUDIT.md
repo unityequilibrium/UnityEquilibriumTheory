@@ -35,6 +35,17 @@ f_r(1+f3)(1+f4)/S_final`. It is independently equal to the
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | T13-SAME-KERNEL-TREE-TAGGED-WIDTH-20260901 | `-Im Sigma_R=2E Gamma` with invariant tagged cut | docs/core/uet_o2_same_kernel_tagged_width.py | `Gamma~E`, `Im Sigma_R~E^2` | same production contact-plus-Phi amplitude and event kernel | tree elastic width verified | independent cross-section match, scaling, conjugation and refinement | dressed/resonant self-consistency and nonelastic channels open | insert tree width into dressed RA pair and build vector heat-current basis |
 
+## Vector Current and Landau Heat-Rank Boundary (2026-09-01)
+
+For `F_qk^i=(p^i/m)y(E)^k`, the invariant vector block is
+`L_vector=G_vector^(-1/2)Q_vectorG_vector^(-1/2)`. In the equal-mass
+elastic lane, `J_Q^i=(E-mu*q)p^i/E=P^i-mu*J_charge^i`; projecting out the
+conserved momentum gives `J_Q_perp=-mu*J_charge_perp`.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-VECTOR-CURRENT-HEAT-RANK-BOUNDARY-20260901 | `P_perp J_Q=-mu P_perp J_charge` | docs/core/uet_o2_invariant_vector_current_galerkin.py | `L_vector~E`; charge/heat response forms `E/E^3` | same invariant elastic kernel and Landau decomposition | vector lane verified; independent heat source closed as no-go | momentum null, PSD, scaling, refinement, conjugation and rank | equal-mass elastic lane has no second projected heat source | use charge lane in dressed RA ladder and add a genuine normal/response carrier before heat transport |
+
 ## Dressed RA Pair and Microscopic Rung Boundary (2026-09-01)
 
 In the positive-energy pole approximation,

@@ -102,6 +102,32 @@ CLAIM_BOUNDARY: Tree elastic same-kernel tagged/spectral width only; not a dress
 
 EVIDENCE_HASHES: width artifact e9d1c2f91ae2ed9a60d28f6b8da2f952729e2e0528110419131172aa8adc79dc; candidate registry 48de3d5eb9cdb44f79233e964a8b0654e52c77203d6235821827dc5a650763b5.
 
+## 2026-09-01 - Vector current and Landau heat-rank boundary
+
+MAJOR_RESULT_CLOSURE: T13_VECTOR_CURRENT_GALERKIN_AND_HEAT_RANK_BOUNDARY is CLOSED_FOR_LANE; the independent heat-current source is CLOSED_AS_NO_GO in the declared elastic equal-mass Landau lane.
+
+WHAT_IS_ACTUALLY_CLOSED: An invariant vector collision block preserves momentum eventwise and has one momentum null mode plus a full dissipative complement. Landau-projected charge and grand-heat sources obey J_Q_perp=-mu J_charge_perp, so their rank is one; at mu=0 the projected heat source vanishes.
+
+WHAT_REMAINS_OPEN: Additional normal/response carrier for independent heat transport, same-width dressed RA charge-current ladder, tensor shear channel, number-changing/response cuts, physical Kubo/SI frame normalization, alpha_Phi_K, and source closure.
+
+DEPENDENCY_UNLOCKED: Charge-current dressed RA ladder and multicomponent heat-channel design.
+
+STATUS: PASS_VECTOR_CURRENT_HEAT_RANK_BOUNDARY; fourteen artifact checks, four focused tests, and thirty-nine linked collision/width/RA regression tests pass.
+
+WHAT_CHANGED: Added the invariant vector Galerkin block, explicit Landau source projection, heat/charge rank diagnostic, audit, artifact, candidate registry and tests, and synchronized topic docs.
+
+EQUATION_OR_MAPPING: F_qk^i=(p^i/m)y^k; J_charge^i=q p^i/E; J_Q^i=(E-mu q)p^i/E=P^i-mu J_charge^i; P_perp J_Q=-mu P_perp J_charge.
+
+VERIFICATION: Source-rank residual is 5.922e-14 and projected rank is one. At mu=0 the projected heat source is below 1e-10. Charge-conjugation operator/source residuals are 1.533e-14 and 2.752e-17. Radial and angular last-refinement maxima are 0.005847 and 1.264e-5 below 0.01 and 0.001 gates. Scaling, PSD, momentum null, detailed balance and eventwise invariants pass. The linked regression passes 39 tests; F0 parses 355 rows with no duplicate formula IDs; foundation and compatibility remain BLOCKED. No collision-operator projector, clipping, fit, holdout, experimental data or threshold change.
+
+CONTROLLING_BLOCKER: additional_heat_carrier_channel_and_dressed_RA_ladder_missing.
+
+NEXT_ACTION: Insert the same-kernel width into the vector charge-current dressed RA ladder. Add a physically independent normal/response carrier before reopening heat conductivity.
+
+CLAIM_BOUNDARY: Finite vector charge-current lane and structural heat-rank no-go only; not heat conductivity, complete normal component, dressed ladder, Kubo/SI coefficient, external validation or Full Topic 13 closure.
+
+EVIDENCE_HASHES: vector/rank artifact c62cac6d34b967115ef2a51283c23c9689a96fa095673ca2ac0cf3a9ca6d8253; candidate registry 2c64566bbc3d645e2a1b8abb0a6c882bc20f944dd52a33d34dd0e64e3cac1e4d.
+
 ## 2026-09-01 - Dressed RA-pair normalization and microscopic rung no-go
 
 MAJOR_RESULT_CLOSURE: T13_DRESSED_RA_PAIR_MICROSCOPIC_RUNG_BOUNDARY is CLOSED_FOR_LANE/CLOSED_AS_NO_GO; Full Topic 13 remains open.

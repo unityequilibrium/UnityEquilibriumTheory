@@ -705,6 +705,28 @@ CONTROLLING_BLOCKER: `vector_heat_current_basis_and_dressed_ladder_missing`.
 NEXT_ACTION: Insert this tree width into the dressed RA pair and build vector heat/current Galerkin modes; keep resonant/dressed self-consistency as a separate gate.
 
 CLAIM_BOUNDARY: Tree elastic tagged/spectral width only; not complete damping, transport, Kubo/SI, external validation, or Full Topic 13 closure.
+
+## Current Major Result: vector current and heat-rank boundary (2026-09-01)
+
+MAJOR_RESULT_CLOSURE: `T13_VECTOR_CURRENT_GALERKIN_AND_HEAT_RANK_BOUNDARY` is `CLOSED_FOR_LANE`; the independent heat channel is `CLOSED_AS_NO_GO` in the declared elastic equal-mass Landau lane.
+
+WHAT_IS_ACTUALLY_CLOSED: The invariant vector collision block preserves momentum eventwise and has a full-rank dissipative complement. Charge and grand-heat sources are projected to the Landau frame without altering the operator. The projected source identity `J_Q_perp=-mu J_charge_perp` is verified, so the source rank is one; at `mu=0` the projected heat source vanishes.
+
+WHAT_REMAINS_OPEN: A genuinely independent normal/response heat carrier, same-width dressed RA charge-current ladder, tensor shear channel, number-changing/response cuts, Kubo/SI frame normalization, independent `alpha_Phi_K`, and source closure.
+
+DEPENDENCY_UNLOCKED: Charge-current dressed RA ladder and multicomponent heat-channel design.
+
+STATUS: `PASS_VECTOR_CURRENT_HEAT_RANK_BOUNDARY`; `full_core_unlock=false`; `claim_promotion=false`.
+
+EQUATION_OR_MAPPING: `J_charge^i=q p^i/E`; `J_Q^i=(E-mu q)p^i/E=P^i-mu J_charge^i`; `P_perp J_Q=-mu P_perp J_charge`.
+
+VERIFICATION: Fourteen artifact checks and four focused tests pass. Source-rank residual is `5.92e-14`; operator charge-conjugation residual is `1.53e-14`; radial last refinement is `0.585%`; angular maximum is `0.00126%`.
+
+CONTROLLING_BLOCKER: `additional_heat_carrier_channel_and_dressed_RA_ladder_missing`.
+
+NEXT_ACTION: Use the verified charge-current vector lane in the same-width dressed RA ladder. Reopen heat conductivity only after adding a physically independent normal/response carrier.
+
+CLAIM_BOUNDARY: Vector charge-current lane and scoped heat-rank no-go only; not heat conductivity, complete normal component, Kubo/SI, external validation, or Full Topic 13 closure.
 ## Current Major Result: T13-173 causal gate semantics alignment (2026-08-23)
 
 MAJOR_RESULT_CLOSURE: CLOSED_AS_NO_GO for the declared local conserved-C gradient finite-cone compatibility question; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.

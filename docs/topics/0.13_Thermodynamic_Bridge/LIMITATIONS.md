@@ -337,3 +337,9 @@ The older continuum-collocation total can appear dimensionally acceptable becaus
 The momentum-resolved `Gamma_q(p)` is an elastic tree width on the declared nonresonant normal background. It is derived rather than fitted and is suitable as a controlled input to the next dressed-RA diagnostic, but it is not yet a self-consistent dressed width.
 
 Response-sector resonances, number-changing cuts, finite-temperature self-energy feedback, pole-mass iteration, and off-shell spectral normalization remain absent. The relation `-Im Sigma_R=2E Gamma` is an on-shell interface, not an independent loop calculation or physical conductivity.
+
+## Vector heat-rank no-go boundary
+
+The current elastic equal-mass two-charge lane has one independent Landau-projected vector source, not two. Since `J_Q=P-mu J_charge`, removing conserved momentum forces `J_Q_perp=-mu J_charge_perp`; at zero chemical potential the projected heat source is zero.
+
+This no-go must not be hidden by reporting the formal heat response form as an independent thermal conductivity. A second heat channel requires additional normal-component structure, response-sector carriers, unequal species, number-changing processes, or another declared physical extension. Which extension is physically admissible remains open.
