@@ -74,7 +74,33 @@ NEXT_ACTION: Derive tagged and spectral widths from the same kernel, then add ve
 
 CLAIM_BOUNDARY: Finite-cutoff scalar collision lane only; not a complete transport basis, self-consistent physical width, continuum proof, Kubo/SI coefficient, external validation or Full Topic 13 closure.
 
-EVIDENCE_HASHES: Galerkin artifact 75b4c6b24aa008a211e809c5e301efb29bc3df64a495b6d68a253c8eb07b5d92; candidate registry 1f163dae9b38332d70a305ba27e84ffba122bed5a61715b822f6aa8f3e3bd2a8.
+EVIDENCE_HASHES: Galerkin artifact 0758838ca31bcf8e061613e6cf7eeb429cd2eab0850594604d260e675f61f854; candidate registry 463d3acbd95cfc86f70d29ff1830c46b1fa63bc592ac658e6e840f55a3429523. Hashes changed only because exact center-of-mass event kinematics were extracted into the shared width/Galerkin helper; verified numerical outputs and gates are unchanged.
+
+## 2026-09-01 - Same-kernel tree tagged and spectral width
+
+MAJOR_RESULT_CLOSURE: T13_SAME_KERNEL_TREE_TAGGED_SPECTRAL_WIDTH is CLOSED_FOR_LANE; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: Charge- and momentum-resolved tagged elastic widths are derived from the same production contact-plus-Phi amplitude and exact center-of-mass event kernel as the Galerkin operator. Invariant-cut normalization matches an independent v_Moller cross-section implementation in all four tag/target channels. The on-shell spectral map -Im Sigma_R=2E Gamma is explicit.
+
+WHAT_REMAINS_OPEN: Dressed/resonant width self-consistency, vector/tensor heat-current basis, microscopic retarded ladder, number-changing/response channels, physical Kubo/SI normalization, alpha_Phi_K, and source closure.
+
+DEPENDENCY_UNLOCKED: Tree-width insertion into the dressed RA pair and vector heat-current Galerkin extension.
+
+STATUS: PASS_SCOPED_SAME_KERNEL_TREE_TAGGED_SPECTRAL_WIDTH; twelve artifact checks, nine focused tests and fifty-two upstream/downstream regressions pass.
+
+WHAT_CHANGED: Extracted a shared exact center-of-mass event helper, added the tagged/spectral-width implementation, audit, artifact, candidate registry and tests, and synchronized topic docs. No phenomenological width was fitted.
+
+EQUATION_OR_MAPPING: Gamma_q(p)=1/(2E_p) sum_r integral dPi2 dPhi2 |M_qr|^2 f_r(1+f3)(1+f4)/S_final; -Im Sigma_R,q(E_p,p)=2E_p Gamma_q(p).
+
+VERIFICATION: Independent invariant-cut/cross-section residual is 2.940e-14; charge-conjugation residual is zero. Radial and angular last-refinement differences are 1.292e-4 and 1.310e-4 below the unchanged 5e-4 gate. Whole-action exponents agree with one within 2.49e-14. Eventwise conservation, detailed balance, positivity and spectral mapping pass. F0 inventories 354 rows and remains BLOCKED; foundation and compatibility audits pass operationally while retaining BLOCKED physical status. No clipping, fit, holdout, experimental data or threshold change.
+
+CONTROLLING_BLOCKER: vector_heat_current_basis_and_dressed_ladder_missing.
+
+NEXT_ACTION: Insert the tree width into the dressed RA pair and build vector heat/current Galerkin modes; retain dressed/resonant self-consistency as a separate gate.
+
+CLAIM_BOUNDARY: Tree elastic same-kernel tagged/spectral width only; not a dressed self-consistent width, complete damping rate, vector heat-current ladder, Kubo/SI coefficient, external validation or Full Topic 13 closure.
+
+EVIDENCE_HASHES: width artifact e9d1c2f91ae2ed9a60d28f6b8da2f952729e2e0528110419131172aa8adc79dc; candidate registry 48de3d5eb9cdb44f79233e964a8b0654e52c77203d6235821827dc5a650763b5.
 
 ## 2026-09-01 - Dressed RA-pair normalization and microscopic rung no-go
 

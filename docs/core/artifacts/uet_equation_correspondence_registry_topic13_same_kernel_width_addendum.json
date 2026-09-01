@@ -1,0 +1,96 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "CANDIDATE_DIAGNOSTIC_NOT_MERGED",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "equation_entries": [
+    {
+      "ontology": {
+        "C": "unchanged",
+        "Phi": "effective response variable; internal exchange line only",
+        "R_gen": "excluded",
+        "R_obs": "excluded"
+      },
+      "unit_lane": "natural_units",
+      "units": {
+        "dPi2": 2,
+        "dPhi2": 0,
+        "external_1_over_2E": -1,
+        "Gamma": 1,
+        "Im_Sigma_R": 2
+      },
+      "derivation_class": "same_action_tree_elastic_cut_width_with_independent_cross_section_match",
+      "observable": "Tagged elastic quasiparticle loss and on-shell spectral width, not conductivity",
+      "data_role": "DERIVED_SYNTHETIC_STRUCTURAL_CANDIDATE",
+      "verification_status": "PASS_SCOPED_SAME_KERNEL_TREE_TAGGED_SPECTRAL_WIDTH",
+      "controlling_blocker": "vector_heat_current_basis_and_dressed_ladder_missing",
+      "claim_boundary": "Tree elastic same-kernel tagged and spectral width only; not a dressed self-consistent/resonant width, complete damping rate, vector heat-current ladder, Kubo/SI coefficient, external validation, or Full Topic 13 closure.",
+      "equation_id": "uet.o2.thermal.same_kernel_tree_tagged_spectral_width",
+      "version": "1",
+      "classification": "candidate_same_kernel_tree_tagged_spectral_width",
+      "relation_or_code_path": {
+        "tagged_width": "Gamma_q(p)=1/(2E_p)*sum_r integral dPi2 dPhi2 |M_qr|^2 f_r(1+f3)(1+f4)/S_final",
+        "spectral_interface": "-Im Sigma_R,q(E_p,p)=2E_p Gamma_q(p)",
+        "cross_section_equivalence": "Gamma_q=sum_r integral d^3p2/(2pi)^3 f_r v_Moller integral dOmega (dSigma_qr/dOmega)(1+f3)(1+f4)"
+      },
+      "standard_physics_counterpart": "Relativistic tagged 2-to-2 loss rate and on-shell retarded self-energy width",
+      "variables": {
+        "Gamma_q": "tagged elastic loss width",
+        "Sigma_R": "retarded on-shell self-energy"
+      },
+      "mathematical_role": "same-kernel damping input precursor for dressed RA ladder",
+      "observable_mapping": "Tagged elastic quasiparticle loss and on-shell spectral width, not conductivity",
+      "parameter_dimensions": {
+        "dPi2": 2,
+        "dPhi2": 0,
+        "external_1_over_2E": -1,
+        "Gamma": 1,
+        "Im_Sigma_R": 2
+      },
+      "source_or_origin": "Declared O(2)-Phi tree action and invariant two-body cut",
+      "assumptions": {
+        "natural_units": true,
+        "normal_response_background": true,
+        "elastic_tree_channels_only": true,
+        "nonresonant_response_exchange": true
+      },
+      "symmetry_and_conservation": "Charge conjugation and eventwise four-momentum conservation",
+      "limiting_cases": [
+        "energy scales 1.5, 2, 3",
+        "radial orders 12, 16, 24",
+        "angular orders 4, 6, 8"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_o2_same_kernel_tagged_width.py",
+        "docs/core/uet_o2_invariant_galerkin_collision_operator.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_topic13_same_kernel_tagged_width.py",
+        "docs/core/test/test_topic13_same_kernel_tagged_width.py"
+      ],
+      "evidence_class": "INTERNAL_STRUCTURAL_CANDIDATE",
+      "proof_status": "TREE_TAGGED_WIDTH_AND_INDEPENDENT_NORMALIZATION_VERIFIED",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_same_kernel_tagged_spectral_width_audit.json",
+          "sha256": "e9d1c2f91ae2ed9a60d28f6b8da2f952729e2e0528110419131172aa8adc79dc"
+        }
+      ],
+      "downstream_dependencies": [
+        "tree_width_dressed_RA_pair_insertion",
+        "vector_heat_current_Galerkin_extension"
+      ],
+      "dependency_role": "tree_width_precursor_not_physical_unlock",
+      "physical_dependency_unlock": false,
+      "failure_mode": [
+        "dressed_self_consistent_width_and_resonant_resummation",
+        "vector_tensor_heat_current_Galerkin_basis",
+        "microscopic_retarded_ladder_solution",
+        "number_changing_and_response_channels",
+        "physical_Kubo_and_SI_normalization"
+      ],
+      "next_hardening_step": "Insert the same-kernel tree width into the dressed RA pair and build the vector heat/current Galerkin basis; retain dressed/resonant self-consistency as a separate gate."
+    }
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}

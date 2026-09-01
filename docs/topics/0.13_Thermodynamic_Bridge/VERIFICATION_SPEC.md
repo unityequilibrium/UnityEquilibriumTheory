@@ -461,3 +461,14 @@ Acceptance requires retarded/advanced conjugacy, the declared spectral discontin
 - Require no posterior conservation projector, clipping, cone padding, absolute mode-admission cutoff, fitting, or holdout access.
 - Retain the mapped legacy continuum vertex as blocked when its independent scaling remains `E^2`.
 - A pass is finite scalar `CLOSED_FOR_LANE`, not vector/tensor transport, self-consistent width, Kubo/SI closure, or Full Topic 13.
+
+## Same-kernel tree tagged/spectral width
+
+- Run `python -m docs.scripts.audit.audit_topic13_same_kernel_tagged_width`.
+- Run `python -m pytest docs/core/test/test_topic13_same_kernel_tagged_width.py -q`.
+- Require invariant-cut and independent `v_Moller dSigma/dOmega` channel rates to agree within `1e-10`.
+- Require whole-action `Gamma~E` scaling at factors 1.5, 2, and 3.
+- Require radial 12/16/24 and angular 4/6/8 last-refinement differences `<=5e-4`.
+- Require charge conjugation, positive momentum-resolved widths, exact `-Im Sigma_R=2E Gamma`, eventwise energy/momentum and detailed balance.
+- Prohibit clipping, fitted damping, absolute mode cutoffs, source/holdout access, and relabeling the tree width as dressed or resonant.
+- A pass closes only the tree tagged/spectral-width lane; vector heat-current modes, dressed self-consistency, Kubo/SI and Full Topic 13 remain open.

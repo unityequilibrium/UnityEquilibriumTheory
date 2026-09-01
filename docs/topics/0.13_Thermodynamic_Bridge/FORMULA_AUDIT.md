@@ -23,6 +23,18 @@ event; no posterior conservation projector is used.
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | T13-INVARIANT-SCALAR-GALERKIN-COLLISION-20260901 | `L_rate=G^(-1/2) Q G^(-1/2)` | docs/core/uet_o2_invariant_galerkin_collision_operator.py | `Q~E^3`, `G~E^2`, `L~E` | invariant phase space and production O(2)-Phi action | finite scalar lane verified | whole-action scaling, radial/angular convergence, eventwise invariants, PSD | vector/tensor basis, same-kernel width and continuum limit remain open | derive tagged/spectral width and vector heat-current basis from the same kernel |
 
+## Same-Kernel Tree Tagged and Spectral Width (2026-09-01)
+
+The tagged cut uses
+`Gamma_q(p)=1/(2E_p) sum_r integral dPi2 dPhi2 |M_qr|^2
+f_r(1+f3)(1+f4)/S_final`. It is independently equal to the
+`v_Moller dSigma/dOmega` form and maps on shell to
+`-Im Sigma_R,q(E_p,p)=2E_p Gamma_q(p)`.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-SAME-KERNEL-TREE-TAGGED-WIDTH-20260901 | `-Im Sigma_R=2E Gamma` with invariant tagged cut | docs/core/uet_o2_same_kernel_tagged_width.py | `Gamma~E`, `Im Sigma_R~E^2` | same production contact-plus-Phi amplitude and event kernel | tree elastic width verified | independent cross-section match, scaling, conjugation and refinement | dressed/resonant self-consistency and nonelastic channels open | insert tree width into dressed RA pair and build vector heat-current basis |
+
 ## Dressed RA Pair and Microscopic Rung Boundary (2026-09-01)
 
 In the positive-energy pole approximation,

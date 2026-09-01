@@ -683,6 +683,28 @@ CONTROLLING_BLOCKER: `self_consistent_width_and_vector_heat_current_basis_missin
 NEXT_ACTION: Derive tagged and spectral widths from this same kernel, then extend the basis to vector heat/current modes before solving the retarded ladder.
 
 CLAIM_BOUNDARY: Finite-cutoff scalar collision lane only; not complete transport, physical width, Kubo/SI coefficient, external validation, or Full Topic 13 closure.
+
+## Current Major Result: same-kernel tree tagged/spectral width (2026-09-01)
+
+MAJOR_RESULT_CLOSURE: `T13_SAME_KERNEL_TREE_TAGGED_SPECTRAL_WIDTH` is `CLOSED_FOR_LANE`; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: Momentum- and charge-resolved tagged elastic widths now come from the same production contact-plus-`Phi` kernel as the Galerkin operator. The invariant-cut normalization matches an independently implemented `v_Moller dSigma/dOmega` formula in every tag/target channel, and the on-shell spectral map is explicit.
+
+WHAT_REMAINS_OPEN: Dressed/resonant self-consistency, vector/tensor heat-current basis, retarded ladder, number-changing/response channels, physical Kubo/SI normalization, independent `alpha_Phi_K`, and source closure.
+
+DEPENDENCY_UNLOCKED: Insertion of the tree width into the dressed RA pair and vector heat-current Galerkin extension.
+
+STATUS: `PASS_SCOPED_SAME_KERNEL_TREE_TAGGED_SPECTRAL_WIDTH`; `full_core_unlock=false`; `claim_promotion=false`.
+
+EQUATION_OR_MAPPING: `Gamma_q(p)=1/(2E_p) sum_r integral dPi2 dPhi2 |M_qr|^2 f_r(1+f3)(1+f4)/S_final`; `-Im Sigma_R=2E Gamma`.
+
+VERIFICATION: Twelve artifact checks and nine focused tests pass. Independent formula residual is `2.94e-14`; charge-conjugation residual is zero; radial and angular last-refinement differences are `1.292e-4` and `1.310e-4`; whole-action scaling is `E^1`.
+
+CONTROLLING_BLOCKER: `vector_heat_current_basis_and_dressed_ladder_missing`.
+
+NEXT_ACTION: Insert this tree width into the dressed RA pair and build vector heat/current Galerkin modes; keep resonant/dressed self-consistency as a separate gate.
+
+CLAIM_BOUNDARY: Tree elastic tagged/spectral width only; not complete damping, transport, Kubo/SI, external validation, or Full Topic 13 closure.
 ## Current Major Result: T13-173 causal gate semantics alignment (2026-08-23)
 
 MAJOR_RESULT_CLOSURE: CLOSED_AS_NO_GO for the declared local conserved-C gradient finite-cone compatibility question; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.

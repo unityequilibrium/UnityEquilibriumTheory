@@ -92,6 +92,58 @@ def _boost(
     return float(boosted_energy), np.asarray(momentum, dtype=float) + factor * beta
 
 
+def _center_of_mass_frame(
+    energy_one: float,
+    momentum_one: np.ndarray,
+    energy_two: float,
+    momentum_two: np.ndarray,
+    mass: float,
+) -> tuple[float, float, float, np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
+    total_energy = energy_one + energy_two
+    total_momentum = momentum_one + momentum_two
+    invariant_s = total_energy**2 - float(np.dot(total_momentum, total_momentum))
+    p_star_sq = invariant_s / 4.0 - mass * mass
+    if p_star_sq <= 0.0:
+        raise FloatingPointError("quadrature event must have open elastic phase space")
+    p_star = sqrt(p_star_sq)
+    root_s = sqrt(invariant_s)
+    boost = total_momentum / total_energy
+    energy_star, momentum_star = _boost(
+        energy_one, np.asarray(momentum_one, dtype=float), -boost
+    )
+    if abs(energy_star - root_s / 2.0) > 1.0e-10 * max(root_s, 1.0):
+        raise FloatingPointError("incoming center-of-mass energy reconstruction failed")
+    ez = momentum_star / np.linalg.norm(momentum_star)
+    ey = np.array((0.0, 1.0, 0.0))
+    ex = np.cross(ey, ez)
+    ex /= np.linalg.norm(ex)
+    return invariant_s, p_star, root_s, boost, ex, ey, ez
+
+
+def _outgoing_center_of_mass_event(
+    root_s: float,
+    p_star: float,
+    boost: np.ndarray,
+    ex: np.ndarray,
+    ey: np.ndarray,
+    ez: np.ndarray,
+    cosine_out: float,
+    azimuth: float,
+) -> tuple[float, np.ndarray, float, np.ndarray]:
+    sine_out = sqrt(1.0 - cosine_out**2)
+    direction = (
+        cosine_out * ez
+        + sine_out * (cos(azimuth) * ex + sin(azimuth) * ey)
+    )
+    energy_three, momentum_three = _boost(
+        root_s / 2.0, p_star * direction, boost
+    )
+    energy_four, momentum_four = _boost(
+        root_s / 2.0, -p_star * direction, boost
+    )
+    return energy_three, momentum_three, energy_four, momentum_four
+
+
 def _feature_vector(
     sign: int,
     energy: float,
@@ -222,22 +274,9 @@ def invariant_galerkin_collision_state(
                 p2 = np.array(
                     (float(p2_mag) * sine_in, 0.0, float(p2_mag) * float(cosine_in))
                 )
-                total_energy = float(e1 + e2)
-                total_momentum = p1 + p2
-                invariant_s = total_energy**2 - float(np.dot(total_momentum, total_momentum))
-                p_star_sq = invariant_s / 4.0 - mass * mass
-                if p_star_sq <= 0.0:
-                    raise FloatingPointError("quadrature event must have open elastic phase space")
-                p_star = sqrt(p_star_sq)
-                root_s = sqrt(invariant_s)
-                boost = total_momentum / total_energy
-                e1_star, p1_star = _boost(float(e1), p1, -boost)
-                if abs(e1_star - root_s / 2.0) > 1.0e-10 * max(root_s, 1.0):
-                    raise FloatingPointError("incoming center-of-mass energy reconstruction failed")
-                ez = p1_star / np.linalg.norm(p1_star)
-                ey = np.array((0.0, 1.0, 0.0))
-                ex = np.cross(ey, ez)
-                ex /= np.linalg.norm(ex)
+                invariant_s, p_star, root_s, boost, ex, ey, ez = (
+                    _center_of_mass_frame(float(e1), p1, float(e2), p2, mass)
+                )
                 d_pi_two = (
                     2.0
                     * pi
@@ -248,7 +287,6 @@ def invariant_galerkin_collision_state(
                     / ((2.0 * pi) ** 3 * 2.0 * e2)
                 )
                 for cosine_out, weight_out in zip(outgoing_cos, outgoing_w):
-                    sine_out = sqrt(1.0 - float(cosine_out) ** 2)
                     d_phi_two = (
                         p_star
                         / (16.0 * pi * pi * root_s)
@@ -256,12 +294,16 @@ def invariant_galerkin_collision_state(
                         * azimuth_weight
                     )
                     for azimuth in azimuths:
-                        direction = (
-                            float(cosine_out) * ez
-                            + sine_out * (cos(azimuth) * ex + sin(azimuth) * ey)
+                        e3, p3, e4, p4 = _outgoing_center_of_mass_event(
+                            root_s,
+                            p_star,
+                            boost,
+                            ex,
+                            ey,
+                            ez,
+                            float(cosine_out),
+                            float(azimuth),
                         )
-                        e3, p3 = _boost(root_s / 2.0, p_star * direction, boost)
-                        e4, p4 = _boost(root_s / 2.0, -p_star * direction, boost)
                         momentum_residual = p1 + p2 - p3 - p4
                         event_energy_residual = float(e1 + e2 - e3 - e4)
                         max_energy = max(max_energy, abs(event_energy_residual))
@@ -415,4 +457,6 @@ __all__ = [
     "InvariantGalerkinCollisionState",
     "invariant_galerkin_collision_state",
     "invariant_galerkin_collision_contract",
+    "_center_of_mass_frame",
+    "_outgoing_center_of_mass_event",
 ]

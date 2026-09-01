@@ -434,7 +434,7 @@
   ],
   "controlling_blocker": "self_consistent_width_and_vector_heat_current_basis_missing",
   "source_hashes": {
-    "docs/core/uet_o2_invariant_galerkin_collision_operator.py": "8f798898a2f5e7f7654942b324db24e276f755bd708898cf2ef0c45d443a535c",
+    "docs/core/uet_o2_invariant_galerkin_collision_operator.py": "278b168e5c3b444ac4df4b96b5a7d00410cd9485c511ab2a17aa4f11c6f6d94e",
     "docs/core/test/test_topic13_invariant_galerkin_collision_operator.py": "52dbc16f7cd8ab7143d63596f810689340d046984d04d4587c7f133137ccde66",
     "docs/scripts/audit/audit_topic13_invariant_galerkin_collision_operator.py": "4af816473dddce4b8fa060e24a0d266021990866da816fed8e3db673490dc8fe",
     "docs/core/uet_o2_continuum_collision_operator.py": "010c1322063b806a1d87d3708cf5509e696f7370170dc2b859f61fd8f884e9e2"

@@ -71,7 +71,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_invariant_galerkin_collision_operator_audit.json",
-          "sha256": "75b4c6b24aa008a211e809c5e301efb29bc3df64a495b6d68a253c8eb07b5d92"
+          "sha256": "0758838ca31bcf8e061613e6cf7eeb429cd2eab0850594604d260e675f61f854"
         }
       ],
       "downstream_dependencies": [

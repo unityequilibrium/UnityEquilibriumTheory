@@ -331,3 +331,9 @@ The multi-shell/angular Galerkin result removes the disconnected representative-
 The result cannot be called a self-consistent quasiparticle width or conductivity. A tagged/spectral width must be derived from the same collision kernel, and heat/current response requires vector and tensor basis functions. The cutoff and feature-basis limits also remain open.
 
 The older continuum-collocation total can appear dimensionally acceptable because its diagonal width term scales as `E`, but its mapped legacy transition vertex scales as `E^2`. That vertex remains blocked from microscopic reuse.
+
+## Same-kernel tree-width boundary
+
+The momentum-resolved `Gamma_q(p)` is an elastic tree width on the declared nonresonant normal background. It is derived rather than fitted and is suitable as a controlled input to the next dressed-RA diagnostic, but it is not yet a self-consistent dressed width.
+
+Response-sector resonances, number-changing cuts, finite-temperature self-energy feedback, pole-mass iteration, and off-shell spectral normalization remain absent. The relation `-Im Sigma_R=2E Gamma` is an on-shell interface, not an independent loop calculation or physical conductivity.
