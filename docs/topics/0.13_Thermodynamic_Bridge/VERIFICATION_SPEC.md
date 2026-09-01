@@ -439,3 +439,13 @@ Acceptance requires retarded/advanced conjugacy, the declared spectral discontin
 - Regression must preserve the 37-row closure matrix (`21` lane, `6` no-go, `10` open),
   `full_core_unlock=false`, blocked `alpha_Phi_K`, and the Topic 0.10 speed-comparator `FAIL`.
 - A passing pilot is diagnostic `CLOSED_FOR_LANE`, not Full Topic 13 or external validation.
+
+## Invariant-rate collision repair
+
+- Run `python -m docs.scripts.audit.audit_topic13_invariant_rate_collision_repair`.
+- Run `python -m pytest docs/core/test/test_topic13_invariant_rate_collision_repair.py -q`.
+- Require collision-operator dimension `E^1` symbolically and under whole-action scale factors 1.5, 2, and 3.
+- Require symmetry, positive semidefiniteness, charge/energy/momentum conservation, and detailed balance.
+- Require charge-resolved contact-plus-`Phi` amplitudes to match the production evaluator.
+- Prohibit clipping, fitting, absolute eigenvalue admission thresholds, holdout access, and overwriting the legacy operator.
+- A pass closes only the finite representative rate repair. Continuum/angular completion, self-consistent width, Kubo/SI output, and Full Topic 13 remain open.

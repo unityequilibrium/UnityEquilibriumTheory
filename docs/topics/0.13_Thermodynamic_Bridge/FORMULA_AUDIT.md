@@ -1902,3 +1902,10 @@ These formulas diagnose the declared normalized evolution and do not alter the t
 | `T13-CHAOS-TANGENT` | `delta_dot_X=D F[X]delta_X`, `X=(C,Phi,Pi)` | normalized tangent state per normalized time | exact discrete Jacobian action | perturbation growth | tangent JVP and method controls pass | state-dependent sources require an explicit JVP | `R_gen` and `R_obs` are excluded; no new physical law |
 | `T13-CHAOS-LAMBDA` | `lambda_i=lim_T log(s_i)/T` | inverse normalized time | standard diagnostic | Lyapunov spectrum and conditional `1/lambda_max` | Fourier/Cattaneo and matter-space pilot pass | SI time/state metric remains open | no physical predictability claim |
 | `T13-CHAOS-RESOLUTION` | `lambda_res=max(delta_dt,delta_dx,2 SE_block,delta_method)` | inverse normalized time | preregistered gate | sign-resolved regime class | tangent/shadow and ledger gates pass | accepted open/KMS input missing | chaos candidate is not external validation |
+
+## Invariant-rate collision-operator addendum
+
+| formula_id | relation | units | derivation_class | observable | verification_status | controlling_blocker | claim_boundary |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| `T13-INVARIANT-RATE-WEIGHT` | `W_c=beta*dPi1*dPi2*dPhi2_cell*|M_contact+M_Phi|^2*f1*f2*(1+f3)*(1+f4)/S_final` | `E^3` | invariant finite representative phase-space candidate | channel quadratic-form weight | symbolic and whole-action scaling pass | connected angular/multi-shell measure missing | not a continuum collision integral |
+| `T13-INVARIANT-RATE-OPERATOR` | `L_rate=sum_c W_c*v_c*v_c^T`, `v_c~E^-1` | `E` | weighted finite collision quadratic form | finite collision rate operator | PSD, symmetry and five invariant checks pass | self-consistent width and continuum ladder missing | not a Kubo/SI coefficient |

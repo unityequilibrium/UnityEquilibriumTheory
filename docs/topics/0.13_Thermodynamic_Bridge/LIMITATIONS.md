@@ -317,3 +317,9 @@ CLAIM_BOUNDARY: Conditional dimensional bookkeeping only, not SI calibration, pr
 The Huberman 2019 arXiv package is a useful graphite transport comparator and method record, but it is not an accepted Ding `C_src` input. Its embedded supplementary methods refer to Ding-derived force constants without depositing the raw force constants, scattering matrix, mode-resolved heat capacities, source-grade uncertainty, or convergence payload. The lane therefore closes only the public-source boundary and leaves the full Topic 13 source blocker unchanged.
 
 `alpha_Phi_K` remains open; no PDF-derived curve, printed value, or normalized TTG trace is permitted to calibrate it.
+
+## Invariant-rate finite-operator boundary
+
+The repaired operator closes the missing energy dimension only in a finite representative channel basis. Each existing exact elastic channel receives one declared solid-angle cell; those cells are not a converged angular quadrature for a connected multi-shell collision integral. The resulting rate must not be reused as a physical damping width or Kubo coefficient.
+
+The legacy `E^2` operator remains preserved and rejected as a rate. The new `E^1` candidate does not repair `alpha_Phi_K`, TTG source provenance, SI normalization, number-changing channels, or the response-sector width.

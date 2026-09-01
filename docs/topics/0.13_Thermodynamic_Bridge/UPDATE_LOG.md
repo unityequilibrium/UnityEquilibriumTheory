@@ -24,6 +24,32 @@ CLAIM_BOUNDARY: Dimensional rejection of the current operator only; not a repair
 
 EVIDENCE_HASHES: no-go artifact da6911cf051831970c4ba9a564e41bf6d0d8d3b8c842032d9ee17a80b4744888; candidate registry d831b44564f25a3975d9acaa65fdf39ff515a3e10143cd8465f7644ab8914a64.
 
+## 2026-09-01 - Invariant-rate finite collision repair
+
+MAJOR_RESULT_CLOSURE: T13_INVARIANT_RATE_DIMENSION_COLLISION_OPERATOR_REPAIR is CLOSED_FOR_LANE; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: A new operator built from beta, invariant incoming dPi cells, a two-body phase-space angular cell, and the production contact-plus-Phi amplitude has rate dimension E. The finite operator is symmetric, PSD, and preserves charge, energy, and momentum.
+
+WHAT_REMAINS_OPEN: Connected multi-shell/angular continuum construction, self-consistent width from the same kernel, number-changing/response channels, Kubo/SI normalization, alpha_Phi_K, and source closure.
+
+DEPENDENCY_UNLOCKED: Dimensionally admissible finite precursor for continuum construction only.
+
+STATUS: PASS_SCOPED_INVARIANT_RATE_OPERATOR_REPAIR; ten artifact checks and nine tests pass.
+
+WHAT_CHANGED: Added a separate candidate module, verifier, artifact, registry addendum, tests and synchronized topic docs. The rejected legacy E^2 operator remains unchanged.
+
+EQUATION_OR_MAPPING: W_c=beta*dPi1*dPi2*dPhi2_cell*|M_contact+M_Phi|^2*f1*f2*(1+f3)*(1+f4)/S_final; L_rate=sum_c W_c*v_c*v_c^T.
+
+VERIFICATION: Whole-action rescaling gives exponents 1.000000000000004, 1.0 and 1.0000000000000013 for scales 1.5, 2 and 3. Production-amplitude cross-checks pass for unlike- and like-charge channels. F0 inventories 352 rows and remains BLOCKED; foundation and compatibility audits pass operationally while retaining BLOCKED physical status. No clipping, fit, holdout, experimental source access, threshold change or baseline overwrite.
+
+CONTROLLING_BLOCKER: connected_charge_resolved_multi_shell_invariant_collision_operator_missing.
+
+NEXT_ACTION: Replace representative angular cells with a connected charge-resolved multi-shell angular basis, then derive the damping width from that same operator before solving the ladder.
+
+CLAIM_BOUNDARY: Finite representative natural-unit structural repair only; not a continuum rung, self-consistent width, microscopic ladder, Kubo/SI coefficient, external validation or Full Topic 13 closure.
+
+EVIDENCE_HASHES: repair artifact 57ef2875445a41b2954892069b00dbadca8677aa7e848be34e3bd55133792569; candidate registry 8f23dfc69bfbd0c7b395bdc4349ce940f152bae75c6fc52701fa09d30c1a489b.
+
 ## 2026-09-01 - Dressed RA-pair normalization and microscopic rung no-go
 
 MAJOR_RESULT_CLOSURE: T13_DRESSED_RA_PAIR_MICROSCOPIC_RUNG_BOUNDARY is CLOSED_FOR_LANE/CLOSED_AS_NO_GO; Full Topic 13 remains open.

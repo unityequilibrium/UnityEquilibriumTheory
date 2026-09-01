@@ -639,6 +639,28 @@ CONTROLLING_BLOCKER: `physical_Kubo_coefficient_record_missing`; `alpha_Phi_K_in
 NEXT_ACTION: Obtain a state-matched UET response-space/Kubo record and an independent Phi/SI anchor without reading Xie 2026; continue authorized Ding `C_src` acquisition separately.
 CLAIM_BOUNDARY: Component closure only. No temperature prediction, alpha calibration, physical UET transport proof, curved 3+1 result, external validation, or global UET closure is claimed.
 Machine-readable artifact: `docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json`.
+
+## Current Major Result: invariant-rate collision repair (2026-09-01)
+
+MAJOR_RESULT_CLOSURE: `T13_INVARIANT_RATE_DIMENSION_COLLISION_OPERATOR_REPAIR` is `CLOSED_FOR_LANE`; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: A separate finite representative operator now uses invariant `dPi` cells and the charge-resolved contact-plus-`Phi` action amplitude. Its operator has rate dimension `E`, is positive semidefinite, and preserves charge, energy, and momentum within the declared numerical gates.
+
+WHAT_REMAINS_OPEN: Connected multi-shell/angular continuum construction, a width derived from the same kernel, number-changing/response channels, physical Kubo/SI normalization, independent `alpha_Phi_K`, and source closure.
+
+DEPENDENCY_UNLOCKED: A dimensionally admissible finite precursor for continuum construction only.
+
+STATUS: `PASS_SCOPED_INVARIANT_RATE_OPERATOR_REPAIR`; `full_core_unlock=false`; `claim_promotion=false`.
+
+EQUATION_OR_MAPPING: `W_c=beta*dPi1*dPi2*dPhi2_cell*|M_contact+M_Phi|^2*f1*f2*(1+f3)*(1+f4)/S_final`; `L_rate=sum_c W_c v_c v_c^T`.
+
+VERIFICATION: Nine focused tests pass. Whole-action scale factors 1.5, 2, and 3 produce operator-rate ratios 1.5, 2, and 3. No clipping, fitting, holdout access, or legacy-operator overwrite occurred.
+
+CONTROLLING_BLOCKER: `connected_charge_resolved_multi_shell_invariant_collision_operator_missing`.
+
+NEXT_ACTION: Replace representative angular cells with a connected multi-shell angular basis and derive the width from that same kernel.
+
+CLAIM_BOUNDARY: Finite natural-unit structural repair only; not a continuum rung, physical width, Kubo/SI coefficient, external validation, or Full Topic 13 closure.
 ## Current Major Result: T13-173 causal gate semantics alignment (2026-08-23)
 
 MAJOR_RESULT_CLOSURE: CLOSED_AS_NO_GO for the declared local conserved-C gradient finite-cone compatibility question; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.
