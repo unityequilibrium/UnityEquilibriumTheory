@@ -11,6 +11,18 @@ section `E^-2`, state weight `E^2`, and transition vector `E^-1`. Hence
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | T13-TRANSITION-RATE-DIMENSION-NOGO-20260901 | current `L~E^2`; required `L_rate~E` | docs/scripts/audit/audit_topic13_transition_kernel_rate_dimension_no_go.py | natural-energy powers | code formula and whole-action rescaling | dimensional no-go verified | operator trace scales as scale^2 | resolvent combines unlike dimensions; absolute mode cutoff is noncovariant | derive invariant single-particle collision measure and weighted inner product |
 
+## Charge-Resolved Invariant Scalar Galerkin Collision (2026-09-01)
+
+The repaired connected scalar lane uses `Q_ab=(beta/4) integral dPi1 dPi2
+dPhi2 |M_contact+M_Phi|^2 f1 f2(1+f3)(1+f4) DeltaF_a DeltaF_b/S_final`
+and `L_rate=G^(-1/2) Q G^(-1/2)`. Here `Q~E^3`, `G~E^2`, and
+`L_rate~E`. Charge, energy, and three-momentum close at each quadrature
+event; no posterior conservation projector is used.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-INVARIANT-SCALAR-GALERKIN-COLLISION-20260901 | `L_rate=G^(-1/2) Q G^(-1/2)` | docs/core/uet_o2_invariant_galerkin_collision_operator.py | `Q~E^3`, `G~E^2`, `L~E` | invariant phase space and production O(2)-Phi action | finite scalar lane verified | whole-action scaling, radial/angular convergence, eventwise invariants, PSD | vector/tensor basis, same-kernel width and continuum limit remain open | derive tagged/spectral width and vector heat-current basis from the same kernel |
+
 ## Dressed RA Pair and Microscopic Rung Boundary (2026-09-01)
 
 In the positive-energy pole approximation,

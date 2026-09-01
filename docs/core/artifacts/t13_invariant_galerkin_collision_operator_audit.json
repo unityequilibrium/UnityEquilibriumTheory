@@ -1,0 +1,504 @@
+{
+  "schema_version": "t13-invariant-galerkin-collision-v1",
+  "major_result_id": "T13_CHARGE_RESOLVED_INVARIANT_SCALAR_COLLISION_OPERATOR",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_SCOPED_INVARIANT_SCALAR_GALERKIN_COLLISION",
+  "what_is_closed": [
+    "A charge-resolved scalar Galerkin collision quadratic form now integrates multiple incoming radial shells and incoming/outgoing angles with the production contact-plus-Phi amplitude.",
+    "Charge, energy and three-momentum close at every event before operator assembly; no posterior conservation projector is used.",
+    "The finite scalar dissipative subspace has full rank after the two species-number and energy null modes, and radial/angular quadratures pass their declared refinement gates.",
+    "The old continuum mapped transition vertex independently retains E^2 scaling and is blocked from microscopic reuse even though its separate diagonal-width term scales E."
+  ],
+  "equation_registry_ids": [
+    "uet.o2.thermal.invariant_charge_resolved_scalar_galerkin_collision"
+  ],
+  "registration_status": "CANDIDATE_DIAGNOSTIC_NOT_CENTRAL_ACCEPTANCE",
+  "equation_or_mapping": {
+    "quadratic_form": "Q_ab=(beta/4)*sum_q integral dPi1 dPi2 dPhi2 |M|^2 f1 f2 (1+f3)(1+f4) DeltaF_a DeltaF_b / S_final",
+    "hilbert_gram": "G_ab=beta*sum_q integral d^3p/(2pi)^3 f_q(1+f_q) F_a F_b",
+    "normalized_operator": "L_rate=G^(-1/2) Q G^(-1/2)",
+    "event_invariants": "Delta(q)=Delta(E)=Delta(p_x)=Delta(p_y)=Delta(p_z)=0"
+  },
+  "ontology": {
+    "C": "unchanged",
+    "Phi": "effective response variable and internal exchange response only",
+    "R_gen": "excluded",
+    "R_obs": "excluded"
+  },
+  "unit_lane": "natural_units",
+  "units": {
+    "quadratic_form": 3,
+    "hilbert_gram": 2,
+    "inverse_sqrt_gram_each": -1,
+    "collision_operator": 1
+  },
+  "derivation_class": "charge_resolved_invariant_finite_scalar_galerkin_quadratic_form",
+  "observable": "Finite scalar collision-rate spectrum, not a physical transport coefficient",
+  "data_role": "DERIVED_SYNTHETIC_STRUCTURAL_CANDIDATE",
+  "reference_state": {
+    "temperature": 0.25,
+    "chemical_potential": 0.1,
+    "effective_mass": 1.0,
+    "momentum_cutoff": 12.0,
+    "radial_order": 12,
+    "incoming_angular_order": 6,
+    "outgoing_angular_order": 6,
+    "outgoing_azimuth_order": 8,
+    "feature_order": 4,
+    "basis_dimension": 8,
+    "collision_event_count": 165888,
+    "raw_gram_matrix": [
+      [
+        0.0005941079356157934,
+        2.504638010340686e-05,
+        1.728276903970101e-06,
+        1.6022858788498683e-07,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        2.504638010340686e-05,
+        1.728276903970101e-06,
+        1.6022858788498683e-07,
+        1.8870419172086176e-08,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.728276903970101e-06,
+        1.6022858788498683e-07,
+        1.8870419172086176e-08,
+        2.7093326506103098e-09,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.6022858788498683e-07,
+        1.8870419172086176e-08,
+        2.7093326506103098e-09,
+        4.5337674270041217e-10,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0013345753284019443,
+        5.596070296635386e-05,
+        3.852907049339503e-06,
+        3.569142898969468e-07
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        5.596070296635386e-05,
+        3.852907049339503e-06,
+        3.569142898969468e-07,
+        4.20164058310794e-08
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.852907049339503e-06,
+        3.569142898969468e-07,
+        4.20164058310794e-08,
+        6.031046139423665e-09
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.569142898969468e-07,
+        4.20164058310794e-08,
+        6.031046139423665e-09,
+        1.0091058016422494e-09
+      ]
+    ],
+    "raw_collision_quadratic_form": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        3.9538073179077075e-14,
+        4.874932402889503e-15,
+        6.321680483762209e-16,
+        0.0,
+        -3.953807317907706e-14,
+        -4.868891129716635e-15,
+        -6.308544764918707e-16
+      ],
+      [
+        0.0,
+        4.874932402889503e-15,
+        7.775341732120673e-16,
+        1.236472434224395e-16,
+        0.0,
+        -4.874932402889501e-15,
+        -6.783250577249965e-16,
+        -9.833918753317622e-17
+      ],
+      [
+        0.0,
+        6.321680483762209e-16,
+        1.236472434224395e-16,
+        2.295501811948217e-17,
+        0.0,
+        -6.32168048376221e-16,
+        -9.842041956640038e-17,
+        -1.572035258732574e-17
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -3.953807317907706e-14,
+        -4.874932402889501e-15,
+        -6.32168048376221e-16,
+        0.0,
+        3.953807317907706e-14,
+        4.868891129716634e-15,
+        6.308544764918705e-16
+      ],
+      [
+        0.0,
+        -4.868891129716635e-15,
+        -6.783250577249965e-16,
+        -9.842041956640038e-17,
+        0.0,
+        4.868891129716634e-15,
+        8.40061485921304e-16,
+        1.398456456797839e-16
+      ],
+      [
+        0.0,
+        -6.308544764918707e-16,
+        -9.833918753317622e-17,
+        -1.572035258732574e-17,
+        0.0,
+        6.308544764918705e-16,
+        1.398456456797839e-16,
+        2.7665645919782523e-17
+      ]
+    ],
+    "collision_operator": [
+      [
+        9.931571511079339e-11,
+        -2.4422347229940196e-09,
+        9.130661642208403e-11,
+        1.6628173242486965e-10,
+        -6.585217150545013e-11,
+        1.623697278597826e-09,
+        3.840565785892092e-12,
+        -1.1353442434763603e-10
+      ],
+      [
+        -2.4422347229940204e-09,
+        6.038721450601446e-08,
+        -7.213567416660621e-09,
+        -3.7499079989471125e-09,
+        1.6151715903158628e-09,
+        -3.991939253738298e-08,
+        1.3085893283018442e-09,
+        2.9038937346373328e-09
+      ],
+      [
+        9.130661642208115e-11,
+        -7.2135674166605635e-09,
+        7.525972519060827e-08,
+        -1.2015249770383925e-08,
+        1.9840881206560186e-12,
+        1.3505618895541805e-09,
+        -2.0847459980331024e-08,
+        -7.286951961946002e-10
+      ],
+      [
+        1.6628173242487484e-10,
+        -3.749907998947142e-09,
+        -1.2015249770383955e-08,
+        7.930242604219909e-08,
+        -1.1346859052310558e-10,
+        2.919130180679368e-09,
+        -7.624406406132151e-10,
+        -1.181031838191241e-08
+      ],
+      [
+        -6.585217150545014e-11,
+        1.6151715903158628e-09,
+        1.984088120656038e-12,
+        -1.1346859052310628e-10,
+        4.391087940539421e-11,
+        -1.0873013821500874e-09,
+        6.64915398875639e-11,
+        7.289375829223759e-11
+      ],
+      [
+        1.623697278597826e-09,
+        -3.9919392537382975e-08,
+        1.3505618895541723e-09,
+        2.919130180679403e-09,
+        -1.0873013821500874e-09,
+        2.7125331200945808e-08,
+        -4.691434084848271e-09,
+        -1.5221077313706609e-09
+      ],
+      [
+        3.84056578588979e-12,
+        1.308589328301865e-09,
+        -2.0847459980331054e-08,
+        -7.62440640613134e-10,
+        6.649153988756393e-11,
+        -4.6914340848482844e-09,
+        4.641814114098785e-08,
+        -8.945168474116216e-09
+      ],
+      [
+        -1.1353442434763479e-10,
+        2.9038937346373592e-09,
+        -7.28695196194536e-10,
+        -1.1810318381912692e-08,
+        7.28937582922384e-11,
+        -1.5221077313706493e-09,
+        -8.94516847411616e-09,
+        5.380921534399406e-08
+      ]
+    ],
+    "collision_operator_eigenvalues": [
+      -1.5296708167008184e-23,
+      -1.4490017843970062e-24,
+      1.6462450503000391e-25,
+      3.0509075266577315e-08,
+      5.440871468798636e-08,
+      6.938061251996269e-08,
+      9.142282493399162e-08,
+      9.672405261074774e-08
+    ],
+    "relative_eigenvalue_tolerance": 9.672405261074772e-19,
+    "null_mode_count": 3,
+    "positive_mode_count": 5,
+    "positive_mode_rate": 6.848905600385314e-08,
+    "operator_trace": 3.4244528001926574e-07,
+    "gram_identity_residual": 3.1586039110410784e-14,
+    "operator_symmetry_residual": 4.509937631694953e-22,
+    "positive_semidefinite_min_eigenvalue": -1.5296708167008184e-23,
+    "collision_invariant_residual": 1.462826877005357e-17,
+    "maximum_event_charge_residual": 0.0,
+    "maximum_event_energy_residual": 6.039613253960852e-14,
+    "maximum_event_momentum_residual": 5.851581036709975e-14,
+    "maximum_detailed_balance_residual": 2.417435476991583e-13,
+    "minimum_channel_weight": 2.4928110611374915e-50,
+    "maximum_channel_weight": 3.4709185545364124e-14,
+    "dissipative_subspace_full_rank": true,
+    "posterior_conservation_projection_used": false,
+    "scalar_isotropic_basis_only": true,
+    "continuum_limit_completed": false,
+    "vector_tensor_transport_basis_completed": false,
+    "self_consistent_width_completed": false,
+    "physical_kubo_coefficient_emitted": false,
+    "xie_2026_accessed": false,
+    "parameter_fitting_performed": false
+  },
+  "whole_action_scale_witnesses": [
+    {
+      "scale": 1.5,
+      "operator_trace_ratio": 1.499999999999681,
+      "positive_mode_rate_ratio": 1.4999999999996814,
+      "trace_energy_exponent": 0.9999999999994754,
+      "rate_energy_exponent": 0.9999999999994761
+    },
+    {
+      "scale": 2.0,
+      "operator_trace_ratio": 2.0,
+      "positive_mode_rate_ratio": 2.0,
+      "trace_energy_exponent": 1.0,
+      "rate_energy_exponent": 1.0
+    },
+    {
+      "scale": 3.0,
+      "operator_trace_ratio": 2.999999999999362,
+      "positive_mode_rate_ratio": 2.9999999999993627,
+      "trace_energy_exponent": 0.9999999999998064,
+      "rate_energy_exponent": 0.9999999999998066
+    }
+  ],
+  "convergence": {
+    "radial_rows": [
+      {
+        "radial_order": 8,
+        "operator_trace": 5.136261141789479e-07,
+        "positive_mode_rate": 1.0272522283578956e-07
+      },
+      {
+        "radial_order": 12,
+        "operator_trace": 3.1580136845110793e-07,
+        "positive_mode_rate": 6.316027369022158e-08
+      },
+      {
+        "radial_order": 16,
+        "operator_trace": 3.1730575744782186e-07,
+        "positive_mode_rate": 6.346115148956438e-08
+      }
+    ],
+    "angular_rows": [
+      {
+        "angular_order": 4,
+        "azimuth_order": 8,
+        "operator_trace": 3.421459279986831e-07,
+        "positive_mode_rate": 6.842918559973663e-08
+      },
+      {
+        "angular_order": 6,
+        "azimuth_order": 12,
+        "operator_trace": 3.424754731571123e-07,
+        "positive_mode_rate": 6.849509463142242e-08
+      },
+      {
+        "angular_order": 8,
+        "azimuth_order": 16,
+        "operator_trace": 3.4247972856750387e-07,
+        "positive_mode_rate": 6.849594571350076e-08
+      }
+    ],
+    "radial_last_trace_relative_difference": 0.004741133627117725,
+    "radial_last_rate_relative_difference": 0.004741133627117891,
+    "angular_last_trace_relative_difference": 1.2425291299336304e-05,
+    "angular_last_rate_relative_difference": 1.2425291299761394e-05
+  },
+  "legacy_continuum_decomposition_witness": {
+    "scale": 2.0,
+    "action_width_trace_ratio": 2.0,
+    "mapped_legacy_vertex_trace_ratio": 4.0,
+    "action_width_energy_exponent": 1.0,
+    "mapped_legacy_vertex_energy_exponent": 2.0,
+    "base_transition_vertex_trace_ratio": 8.643764785917995e-07
+  },
+  "thresholds": {
+    "radial_last_refinement_relative": 0.01,
+    "angular_last_refinement_relative": 0.001,
+    "event_energy_momentum_absolute": 1e-12,
+    "operator_invariant_relative": 1e-09
+  },
+  "checks": {
+    "symbolic_operator_dimension_E1": true,
+    "whole_action_operator_scales_E1": true,
+    "legacy_mapped_vertex_retains_E2_no_go": true,
+    "radial_quadrature_converged": true,
+    "angular_quadrature_converged": true,
+    "eventwise_five_invariants": true,
+    "operator_invariant_nullspace": true,
+    "dissipative_scalar_subspace_full_rank": true,
+    "operator_symmetric_positive_semidefinite": true,
+    "detailed_balance": true,
+    "gram_whitening": true,
+    "no_posterior_projection": true,
+    "no_clipping_padding_or_absolute_mode_cutoff": true
+  },
+  "open_blockers": [
+    "vector_tensor_heat_current_Galerkin_basis",
+    "self_consistent_quasiparticle_width_from_same_kernel",
+    "microscopic_retarded_ladder_solution",
+    "number_changing_and_response_channels",
+    "continuum_and_cutoff_limit",
+    "physical_Kubo_and_SI_normalization"
+  ],
+  "controlling_blocker": "self_consistent_width_and_vector_heat_current_basis_missing",
+  "source_hashes": {
+    "docs/core/uet_o2_invariant_galerkin_collision_operator.py": "8f798898a2f5e7f7654942b324db24e276f755bd708898cf2ef0c45d443a535c",
+    "docs/core/test/test_topic13_invariant_galerkin_collision_operator.py": "52dbc16f7cd8ab7143d63596f810689340d046984d04d4587c7f133137ccde66",
+    "docs/scripts/audit/audit_topic13_invariant_galerkin_collision_operator.py": "4af816473dddce4b8fa060e24a0d266021990866da816fed8e3db673490dc8fe",
+    "docs/core/uet_o2_continuum_collision_operator.py": "010c1322063b806a1d87d3708cf5509e696f7370170dc2b859f61fd8f884e9e2"
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_invariant_rate_collision_operator_repair.json",
+      "sha256": "57ef2875445a41b2954892069b00dbadca8677aa7e848be34e3bd55133792569"
+    }
+  ],
+  "dependency_unlocked": [
+    "same_kernel_width_derivation",
+    "vector_heat_current_Galerkin_extension"
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "xie_2026_accessed": false,
+  "parameter_fitting_performed": false,
+  "claim_boundary": "Finite-cutoff scalar isotropic collision operator only; not a complete vector/tensor transport basis, continuum proof, self-consistent width, ladder, Kubo/SI coefficient, external validation, or Full Topic 13 closure.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "A charge-resolved scalar Galerkin collision quadratic form now integrates multiple incoming radial shells and incoming/outgoing angles with the production contact-plus-Phi amplitude.",
+      "Charge, energy and three-momentum close at every event before operator assembly; no posterior conservation projector is used.",
+      "The finite scalar dissipative subspace has full rank after the two species-number and energy null modes, and radial/angular quadratures pass their declared refinement gates.",
+      "The old continuum mapped transition vertex independently retains E^2 scaling and is blocked from microscopic reuse even though its separate diagonal-width term scales E."
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "vector_tensor_heat_current_Galerkin_basis",
+      "self_consistent_quasiparticle_width_from_same_kernel",
+      "microscopic_retarded_ladder_solution",
+      "number_changing_and_response_channels",
+      "continuum_and_cutoff_limit",
+      "physical_Kubo_and_SI_normalization"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "same_kernel_width_derivation",
+      "vector_heat_current_Galerkin_extension"
+    ],
+    "STATUS": "PASS_SCOPED_INVARIANT_SCALAR_GALERKIN_COLLISION",
+    "WHAT_CHANGED": "Replaced representative disconnected channels with a multi-shell/angular invariant scalar Galerkin quadratic form; preserved and dimensionally blocked the old mapped vertex.",
+    "EQUATION_OR_MAPPING": {
+      "quadratic_form": "Q_ab=(beta/4)*sum_q integral dPi1 dPi2 dPhi2 |M|^2 f1 f2 (1+f3)(1+f4) DeltaF_a DeltaF_b / S_final",
+      "hilbert_gram": "G_ab=beta*sum_q integral d^3p/(2pi)^3 f_q(1+f_q) F_a F_b",
+      "normalized_operator": "L_rate=G^(-1/2) Q G^(-1/2)",
+      "event_invariants": "Delta(q)=Delta(E)=Delta(p_x)=Delta(p_y)=Delta(p_z)=0"
+    },
+    "VERIFICATION": {
+      "symbolic_operator_dimension_E1": true,
+      "whole_action_operator_scales_E1": true,
+      "legacy_mapped_vertex_retains_E2_no_go": true,
+      "radial_quadrature_converged": true,
+      "angular_quadrature_converged": true,
+      "eventwise_five_invariants": true,
+      "operator_invariant_nullspace": true,
+      "dissipative_scalar_subspace_full_rank": true,
+      "operator_symmetric_positive_semidefinite": true,
+      "detailed_balance": true,
+      "gram_whitening": true,
+      "no_posterior_projection": true,
+      "no_clipping_padding_or_absolute_mode_cutoff": true
+    },
+    "CONTROLLING_BLOCKER": "self_consistent_width_and_vector_heat_current_basis_missing",
+    "NEXT_ACTION": "Derive tagged and spectral widths from the same collision kernel, then extend the Galerkin basis to vector heat/current modes before solving the retarded ladder.",
+    "CLAIM_BOUNDARY": "Finite-cutoff scalar isotropic collision operator only; not a complete vector/tensor transport basis, continuum proof, self-consistent width, ladder, Kubo/SI coefficient, external validation, or Full Topic 13 closure."
+  }
+}

@@ -50,6 +50,32 @@ CLAIM_BOUNDARY: Finite representative natural-unit structural repair only; not a
 
 EVIDENCE_HASHES: repair artifact 57ef2875445a41b2954892069b00dbadca8677aa7e848be34e3bd55133792569; candidate registry 8f23dfc69bfbd0c7b395bdc4349ce940f152bae75c6fc52701fa09d30c1a489b.
 
+## 2026-09-01 - Charge-resolved invariant scalar Galerkin collision
+
+MAJOR_RESULT_CLOSURE: T13_CHARGE_RESOLVED_INVARIANT_SCALAR_COLLISION_OPERATOR is CLOSED_FOR_LANE; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: A finite scalar collision quadratic form now integrates production contact-plus-Phi amplitudes over multiple incoming radial shells and incoming/outgoing angles. Charge, energy and three-momentum close at every event before assembly; no posterior projector is used. The dissipative scalar subspace has full rank after two species-number and one energy null modes.
+
+WHAT_REMAINS_OPEN: Same-kernel tagged/spectral width, vector/tensor heat-current basis, microscopic retarded ladder, number-changing/response channels, continuum/cutoff limit, physical Kubo/SI normalization, alpha_Phi_K, and source closure.
+
+DEPENDENCY_UNLOCKED: Same-kernel width derivation and vector heat-current Galerkin extension only.
+
+STATUS: PASS_SCOPED_INVARIANT_SCALAR_GALERKIN_COLLISION; thirteen artifact checks, ten focused tests and twenty-eight focused/adjacent collision regressions pass.
+
+WHAT_CHANGED: Added a charge-resolved invariant scalar Galerkin operator, audit, artifact, candidate registry, tests and synchronized topic docs. The older continuum mapped vertex is preserved and separately blocked as E^2.
+
+EQUATION_OR_MAPPING: Q_ab=(beta/4) integral dPi1 dPi2 dPhi2 |M|^2 f1f2(1+f3)(1+f4) DeltaF_a DeltaF_b/S_final; G_ab=beta integral d3p f(1+f) F_aF_b; L_rate=G^(-1/2)QG^(-1/2).
+
+VERIFICATION: Whole-action rate exponents differ from one by at most 5.25e-13. Radial 12-to-16 refinement is 0.004741 and angular 6-to-8 refinement is 1.243e-5, below fixed 0.01 and 0.001 gates. Eventwise residuals, PSD, detailed balance, Gram whitening and scalar nullspace pass. The old mapped vertex gives exponent 2 while its diagonal width gives exponent 1. F0 inventories 353 rows and remains BLOCKED; foundation and compatibility audits pass operationally while retaining BLOCKED physical status. No clipping, fit, holdout, experimental data, threshold change or baseline overwrite.
+
+CONTROLLING_BLOCKER: self_consistent_width_and_vector_heat_current_basis_missing.
+
+NEXT_ACTION: Derive tagged and spectral widths from the same kernel, then add vector heat/current basis functions before solving the retarded ladder.
+
+CLAIM_BOUNDARY: Finite-cutoff scalar collision lane only; not a complete transport basis, self-consistent physical width, continuum proof, Kubo/SI coefficient, external validation or Full Topic 13 closure.
+
+EVIDENCE_HASHES: Galerkin artifact 75b4c6b24aa008a211e809c5e301efb29bc3df64a495b6d68a253c8eb07b5d92; candidate registry 1f163dae9b38332d70a305ba27e84ffba122bed5a61715b822f6aa8f3e3bd2a8.
+
 ## 2026-09-01 - Dressed RA-pair normalization and microscopic rung no-go
 
 MAJOR_RESULT_CLOSURE: T13_DRESSED_RA_PAIR_MICROSCOPIC_RUNG_BOUNDARY is CLOSED_FOR_LANE/CLOSED_AS_NO_GO; Full Topic 13 remains open.

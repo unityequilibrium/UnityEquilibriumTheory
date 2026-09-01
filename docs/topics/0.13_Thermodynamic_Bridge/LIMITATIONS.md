@@ -323,3 +323,11 @@ The Huberman 2019 arXiv package is a useful graphite transport comparator and me
 The repaired operator closes the missing energy dimension only in a finite representative channel basis. Each existing exact elastic channel receives one declared solid-angle cell; those cells are not a converged angular quadrature for a connected multi-shell collision integral. The resulting rate must not be reused as a physical damping width or Kubo coefficient.
 
 The legacy `E^2` operator remains preserved and rejected as a rate. The new `E^1` candidate does not repair `alpha_Phi_K`, TTG source provenance, SI normalization, number-changing channels, or the response-sector width.
+
+## Invariant scalar Galerkin boundary
+
+The multi-shell/angular Galerkin result removes the disconnected representative-cell blocker only for a finite scalar isotropic basis. Its three null modes are the two elastic species numbers and total energy represented in that scalar basis; momentum conservation is checked eventwise but vector momentum modes are not yet basis variables.
+
+The result cannot be called a self-consistent quasiparticle width or conductivity. A tagged/spectral width must be derived from the same collision kernel, and heat/current response requires vector and tensor basis functions. The cutoff and feature-basis limits also remain open.
+
+The older continuum-collocation total can appear dimensionally acceptable because its diagonal width term scales as `E`, but its mapped legacy transition vertex scales as `E^2`. That vertex remains blocked from microscopic reuse.

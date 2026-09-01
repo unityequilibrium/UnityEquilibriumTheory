@@ -661,6 +661,28 @@ CONTROLLING_BLOCKER: `connected_charge_resolved_multi_shell_invariant_collision_
 NEXT_ACTION: Replace representative angular cells with a connected multi-shell angular basis and derive the width from that same kernel.
 
 CLAIM_BOUNDARY: Finite natural-unit structural repair only; not a continuum rung, physical width, Kubo/SI coefficient, external validation, or Full Topic 13 closure.
+
+## Current Major Result: invariant scalar Galerkin collision operator (2026-09-01)
+
+MAJOR_RESULT_CLOSURE: `T13_CHARGE_RESOLVED_INVARIANT_SCALAR_COLLISION_OPERATOR` is `CLOSED_FOR_LANE`; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: The production contact-plus-`Phi` amplitude is integrated over multiple incoming radial shells and incoming/outgoing angles in a scalar isotropic Galerkin quadratic form. Charge and four-momentum close at each event without a posterior projector; the normalized operator has rate dimension `E`.
+
+WHAT_REMAINS_OPEN: Same-kernel tagged/spectral width, vector/tensor heat-current basis, microscopic retarded ladder, number-changing/response channels, continuum/cutoff limit, Kubo/SI normalization, independent `alpha_Phi_K`, and source closure.
+
+DEPENDENCY_UNLOCKED: Same-kernel width derivation and vector heat-current Galerkin extension.
+
+STATUS: `PASS_SCOPED_INVARIANT_SCALAR_GALERKIN_COLLISION`; `full_core_unlock=false`; `claim_promotion=false`.
+
+EQUATION_OR_MAPPING: `Q=(beta/4) integral dPi1 dPi2 dPhi2 |M|^2 f1f2(1+f3)(1+f4) DeltaF DeltaF^T/S_final`; `L_rate=G^(-1/2)QG^(-1/2)`.
+
+VERIFICATION: Thirteen artifact checks and ten focused tests pass. Energy scales 1.5, 2, and 3 give rate ratios 1.5, 2, and 3. Radial last-refinement difference is 0.474%; angular difference is 0.00124%. The old mapped continuum vertex independently remains `E^2` and blocked.
+
+CONTROLLING_BLOCKER: `self_consistent_width_and_vector_heat_current_basis_missing`.
+
+NEXT_ACTION: Derive tagged and spectral widths from this same kernel, then extend the basis to vector heat/current modes before solving the retarded ladder.
+
+CLAIM_BOUNDARY: Finite-cutoff scalar collision lane only; not complete transport, physical width, Kubo/SI coefficient, external validation, or Full Topic 13 closure.
 ## Current Major Result: T13-173 causal gate semantics alignment (2026-08-23)
 
 MAJOR_RESULT_CLOSURE: CLOSED_AS_NO_GO for the declared local conserved-C gradient finite-cone compatibility question; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.

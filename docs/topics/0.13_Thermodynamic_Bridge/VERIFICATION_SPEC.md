@@ -449,3 +449,15 @@ Acceptance requires retarded/advanced conjugacy, the declared spectral discontin
 - Require charge-resolved contact-plus-`Phi` amplitudes to match the production evaluator.
 - Prohibit clipping, fitting, absolute eigenvalue admission thresholds, holdout access, and overwriting the legacy operator.
 - A pass closes only the finite representative rate repair. Continuum/angular completion, self-consistent width, Kubo/SI output, and Full Topic 13 remain open.
+
+## Invariant scalar Galerkin collision operator
+
+- Run `python -m docs.scripts.audit.audit_topic13_invariant_galerkin_collision_operator`.
+- Run `python -m pytest docs/core/test/test_topic13_invariant_galerkin_collision_operator.py -q`.
+- Require `L_rate~E` symbolically and under whole-action scale factors 1.5, 2, and 3.
+- Require radial orders 8/12/16 with last-refinement relative difference `<=1e-2`.
+- Require angular orders 4/6/8 with last-refinement relative difference `<=1e-3`.
+- Require eventwise charge, energy and three-momentum residuals, detailed balance, Gram whitening, PSD, symmetry, three scalar null modes and full dissipative scalar rank.
+- Require no posterior conservation projector, clipping, cone padding, absolute mode-admission cutoff, fitting, or holdout access.
+- Retain the mapped legacy continuum vertex as blocked when its independent scaling remains `E^2`.
+- A pass is finite scalar `CLOSED_FOR_LANE`, not vector/tensor transport, self-consistent width, Kubo/SI closure, or Full Topic 13.
