@@ -1,12 +1,25 @@
 # Limitations
 
+## Static Confluent Vertex Scope (2026-09-01)
+
+The static result uses the thermodynamic Euclidean `P=Q=0` order of limits.
+It closes the coincident-pole density-source derivative at strict one loop,
+not the collisionless retarded `omega,k -> 0` ordering. Spatial current is
+zero by isotropy only at this declared point; no finite-k transverse form is
+inferred from it.
+
+The agreement with the static inverse-propagator derivative does not produce
+a Kubo coefficient, collision ladder, heat current, entropy production,
+material SI scale, or `alpha_Phi_K`. `R_gen` and `R_obs` remain excluded, and
+the O(2) sign `q` is not core `C`. Full Topic 13 stays open.
+
 ## Explicit Current-Vertex Scope (2026-09-01)
 
 The current result covers generic nonzero bosonic Matsubara transfer with
-collinear external spatial momenta and full internal polar angle. It is not
-the static Q->0 confluent limit. It has not been analytically continued to a
-retarded transverse vertex, and it does not supply a collision ladder,
-conductivity or heat-current Kubo coefficient.
+collinear external spatial momenta and full internal polar angle. Its static
+confluent companion is now closed separately above. It has not been
+analytically continued to a retarded transverse vertex, and it does not supply
+a collision ladder, conductivity or heat-current Kubo coefficient.
 
 Ward agreement alone would not verify the transverse bath insertion. That
 piece is separately calculated and its continuum-shift transversality is

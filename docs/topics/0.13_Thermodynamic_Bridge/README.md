@@ -6,6 +6,25 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Static Confluent Charged Vertex (2026-09-01)
+
+The [static-vertex artifact](../../core/artifacts/t13_charged_static_confluent_vertex_audit.json)
+closes the thermodynamic Euclidean `P=Q=0` density-current vertex in the
+declared normal one-loop lane. Coincident Landau terms are differentiated as
+confluent Bose divided differences, so the result uses no pole splitting,
+epsilon regulator, Ward projection, fit, or experimental input.
+
+The bare, bath/response-mean, mixed thermal and vacuum-subtraction pieces are
+derived separately. Their sum agrees with `-i partial_mu D_static^-1`; the
+maximum nonzero relative discrepancy is `6.41e-11`, while the largest
+symmetry-zero residual is `1.37e-21`. Charge conjugation, zero-density,
+spatial isotropy, field covariance and quadrature refinement also pass.
+
+`T13_CHARGED_STATIC_CONFLUENT_VERTEX_MATCH` is therefore `CLOSED_FOR_LANE`.
+It unlocks only an internal static-density-response handoff. The real-time
+finite-k transverse vertex, collision/heat-current ladder, material SI map,
+and Full Topic 13 remain open with `full_core_unlock=false`.
+
 ## Explicit One-Loop Charged Current Vertex (2026-09-01)
 
 The [current-vertex artifact](../../core/artifacts/t13_charged_one_loop_current_vertex_audit.json)

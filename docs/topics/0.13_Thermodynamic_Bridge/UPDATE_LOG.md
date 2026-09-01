@@ -1,3 +1,29 @@
+## 2026-09-01 - Static confluent charged density-current vertex
+
+MAJOR_RESULT_CLOSURE: T13_CHARGED_STATIC_CONFLUENT_VERTEX_MATCH is CLOSED_FOR_LANE; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: The thermodynamic Euclidean P=Q=0 temporal vertex is derived from bare, bath/response-mean, mixed thermal and vacuum-subtraction diagrams. Coincident Landau terms use the analytic confluent Bose divided-difference derivative, not artificial pole splitting. The sum matches the independently differentiated full static inverse propagator.
+
+WHAT_REMAINS_OPEN: Real-time finite-k transverse/current continuation, collision and heat-current Bethe-Salpeter ladders, complete entropy/transport matching, material SI calibration and Full Topic 13 acceptance.
+
+DEPENDENCY_UNLOCKED: Internal static-density-response handoff only. No physical Kubo, transport, Gravity, full_core_unlock or claim promotion.
+
+STATUS: PASS_SCOPED_STATIC_CONFLUENT_VERTEX; six artifact checks pass.
+
+WHAT_CHANGED: Added a standalone static verifier, 22 regression tests, source/evidence-hashed artifact and candidate equation-registry addendum. The earlier generic nonzero-transfer vertex and charged propagator are preserved.
+
+EQUATION_OR_MAPPING: Gamma_static^0=-i*partial_mu[m^2-mu^2+Sigma_mean+Sigma_quartic+Sigma_mix+Sigma_vac]. The confluent identity is partial_a[(n(a)-n(W))/(a-W)]=integral_0^1 t*n''(W+t*(a-W))dt. Gamma_bath^0=i*(-4*lambda_chi+G^2/M0^2)*partial_mu I_chi; Gamma_mix^0=i*G^2*q*partial_r B_T; Gamma_vac^0=-2*i*mu*partial_s Sigma_vac.
+
+VERIFICATION: 22 new tests and 101 adjacent charged-sector tests pass (123 total). Maximum nonzero explicit/full-derivative relative error is 6.41e-11; maximum symmetry-zero absolute residual is 1.37e-21. Quadrature changes are at most 1.13e-13 under the unchanged 1e-6 gate. Component derivatives, high-precision confluent limits, charge symmetry, zero-density, cold/decoupled, energy/field covariance and invalid-domain checks pass. No experimental Data, holdout, fit, pole regulator or threshold change was used.
+
+CONTROLLING_BLOCKER: real_time_finite_k_transverse_vertex_and_collision_heat_ladder_matching.
+
+NEXT_ACTION: Derive the retarded finite-k transverse/current vertex with a declared order of limits, then insert it into collision and heat-current ladder equations before any physical Kubo claim.
+
+CLAIM_BOUNDARY: Static natural-unit Euclidean one-loop density-source lane only; not retarded transport, Kubo/heat conductivity, SI alpha, TTG prediction, external validation or Full Topic 13 closure. O(2) q is not core C; R_gen/R_obs remain excluded.
+
+EVIDENCE_HASHES: static artifact 74337e8dba766503a1f868014cfeadd4c85bca122f550014f5c4f53278566fc2; candidate registry 68e878eb52f83966b684dac6f67082e6aa2d4b9d18b2db24d3009a44bd2e319b.
+
 ## 2026-09-01 - Explicit charged one-loop current vertex and routing repair
 
 MAJOR_RESULT_CLOSURE: T13_CHARGED_ONE_LOOP_CURRENT_VERTEX_MATCH is PARTIAL; Full Topic 13 remains open.

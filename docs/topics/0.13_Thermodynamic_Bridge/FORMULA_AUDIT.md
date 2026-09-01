@@ -1,5 +1,25 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Static Confluent Charged Vertex (2026-09-01)
+
+At the thermodynamic Euclidean point `P=Q=0`, use
+
+`Gamma_static^0=-i partial_mu[m^2-mu^2+Sigma_mean+Sigma_quartic+Sigma_mix+Sigma_vac]`.
+
+The removable Landau coincidence is evaluated without root splitting:
+
+`partial_a[(n(a)-n(W))/(a-W)]=integral_0^1 t*n''(W+t*(a-W)) dt`.
+
+This gives `Gamma_bath^0=i*(-4*lambda_chi+G^2/M0^2)*partial_mu I_chi`,
+`Gamma_mix^0=i*G^2*q*partial_r B_T|r=q*mu`, and
+`Gamma_vac^0=-2*i*mu*partial_s Sigma_vac|s=mu^2`. The spatial vertex is zero
+at this point by isotropy. This thermodynamic order of limits is not the
+collisionless retarded finite-k limit.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-CHARGED-STATIC-CONFLUENT-VERTEX-20260901 | `Gamma0=-i partial_mu D_static^-1`; analytic confluent Bose derivative | docs/scripts/audit/audit_topic13_charged_static_confluent_vertex.py | `mu,T,Gamma0` natural energy | canonical action and fixed one-loop subtraction; no fit | checked static Euclidean one-loop lane | diagram-component derivatives, full inverse finite difference, symmetry and refinement | static limit does not determine real-time transverse/current transport | derive real-time finite-k transverse vertex, then collision/heat-current ladder |
+
 ## Explicit Charged Current Insertion (2026-09-01)
 
 Candidate ID: uet.o2.thermal.charged_one_loop_current_vertex.

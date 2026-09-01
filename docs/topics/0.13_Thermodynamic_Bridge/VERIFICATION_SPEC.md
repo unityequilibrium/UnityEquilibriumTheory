@@ -1,5 +1,21 @@
 # Verification Spec
 
+## Static Confluent Charged Vertex (2026-09-01)
+
+Run `docs.scripts.audit.audit_topic13_charged_static_confluent_vertex` as a
+module and `docs/core/test/test_topic13_charged_static_confluent_vertex.py`.
+Use `T=0.1,0.25,0.5,1`, `mu=0,0.2`, both charge signs, finite-difference steps
+`1e-4,5e-5,2.5e-5`, and quadrature orders `80,112,160`.
+
+For nonzero vertices require explicit diagram/full-inverse derivative relative
+error below `2e-7`; for symmetry-zero limits require absolute error below
+`1e-14`. Require quadrature change below the existing `1e-6` numerical gate,
+charge-even total response, zero temporal response at `mu=0`, zero spatial
+vertex by static isotropy, and high-precision confluent divided-difference
+agreement. Check each self-energy component independently, cold/decoupled
+limits, energy/field covariance and invalid domains. Do not split coincident
+poles or infer the retarded finite-k order of limits.
+
 ## Explicit Charged Current Vertex (2026-09-01)
 
 Run docs.scripts.audit.audit_topic13_charged_one_loop_current_vertex as a
