@@ -1,3 +1,29 @@
+## 2026-09-01 - Dressed RA-pair normalization and microscopic rung no-go
+
+MAJOR_RESULT_CLOSURE: T13_DRESSED_RA_PAIR_MICROSCOPIC_RUNG_BOUNDARY is CLOSED_FOR_LANE/CLOSED_AS_NO_GO; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: The dressed narrow-pole RA energy integral and tree current reproduce the weighted kinetic current source divided by the same width. The legacy constant-amplitude transition/SK rung is proven incompatible with the charge-resolved production action.
+
+WHAT_REMAINS_OPEN: Charge-resolved contact-plus-Phi SK cuts, a width derived self-consistently from that kernel, number-changing/response channels, continuum ladder and heat-current match.
+
+DEPENDENCY_UNLOCKED: Dressed RA-pair-to-kinetic-source normalization only. The legacy rung is blocked from microscopic reuse.
+
+STATUS: PASS_RA_PAIR_MATCH_LEGACY_RUNG_BLOCKED; five artifact checks pass.
+
+WHAT_CHANGED: Added the RA-pair integral/source match and compared the legacy M=lambda rung directly with production-action charged amplitudes at the same synthetic coefficients.
+
+EQUATION_OR_MAPPING: integral dp0/(2pi) G_R G_A=1/(4E^2 Gamma); multiplying by (2q p_i)^2 and n(1+n)/T gives the kinetic source squared/Gamma. The replacement rung requires sigma_channel=abs(M_contact+M_Phi(s,t,u))^2/(16*pi*s*S_final).
+
+VERIFICATION: 16 tests pass. Pair and kinetic-source residuals satisfy 1e-10 and 1e-13 gates. Contact-only production/legacy ratios are 16 unlike and 8 like; with Phi exchange they become 13.28198 and 5.09417 at the declared point. No fit, global correction, holdout, experimental Data or threshold change.
+
+CONTROLLING_BLOCKER: charge_resolved_contact_plus_Phi_SK_rung_and_self_consistent_width_missing.
+
+NEXT_ACTION: Derive charge-resolved contact-plus-Phi SK cut rungs and compute Gamma from the same kernel before solving the ladder; keep number-changing channels separately visible.
+
+CLAIM_BOUNDARY: Pole-pair normalization and legacy-rung incompatibility only; not a completed microscopic rung, self-consistent width, ladder, Kubo/SI coefficient or Full Topic 13 closure.
+
+EVIDENCE_HASHES: boundary artifact 750da3a5b6546482d25784330f875c7e0a01a787a7a5c74db31349093307826f; candidate registry 838ce6d1beb5087ebfa75417031c608d50f24d7ec2aeb13155f025b28320096a.
+
 ## 2026-09-01 - Retarded/advanced mixed proper current vertex
 
 MAJOR_RESULT_CLOSURE: T13_RETARDED_RA_MIXED_CURRENT_VERTEX is PARTIAL; Full Topic 13 remains open.

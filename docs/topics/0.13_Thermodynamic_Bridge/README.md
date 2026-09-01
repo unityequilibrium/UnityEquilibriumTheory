@@ -6,6 +6,21 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Dressed RA Pair and Microscopic Rung Boundary (2026-09-01)
+
+The [RA-pair/rung artifact](../../core/artifacts/t13_dressed_ra_pair_microscopic_rung_boundary_audit.json)
+shows that the dressed narrow-pole `G_R G_A` energy integral reproduces the
+kinetic `1/Gamma` source normalization exactly. The propagator-to-Boltzmann
+handoff is therefore closed for this pole approximation.
+
+The four-point handoff fails for a concrete reason: the legacy transition/SK
+rung uses `M=lambda`, whereas the charge-resolved production action gives
+contact cross sections larger by factors `16` (unlike) and `8` (like), before
+`Phi` exchange changes them to kinematic ratios about `13.28` and `5.09` at
+the declared point. No constant multiplier repairs both channels. A new
+charge-resolved contact-plus-`Phi` SK rung and a width derived from that same
+kernel now control the microscopic ladder.
+
 ## Retarded/Advanced Mixed Current Vertex (2026-09-01)
 
 The [RA vertex artifact](../../core/artifacts/t13_retarded_ra_mixed_current_vertex_audit.json)

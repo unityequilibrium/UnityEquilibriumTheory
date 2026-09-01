@@ -1,5 +1,14 @@
 # Limitations
 
+## Dressed Pair/Rung Boundary (2026-09-01)
+
+The RA-pair calculation assumes a narrow positive-energy quasiparticle pole
+with a positive width. It proves normalization, not the physical value of the
+width. The width must be obtained from the same charge-resolved four-point
+kernel used in the ladder. Legacy finite-channel results cannot be repaired
+by a universal factor because `Phi` exchange is channel and kinematics
+dependent. Number-changing and response channels also remain open.
+
 ## Retarded/Advanced Proper-Vertex Scope (2026-09-01)
 
 The declared RA result is the proper bare+mixed+vacuum three-point function.

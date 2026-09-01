@@ -1,5 +1,16 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Dressed RA Pair and Microscopic Rung Boundary (2026-09-01)
+
+In the positive-energy pole approximation,
+`integral dp0/(2pi) G_R G_A=1/(4E^2 Gamma)`. Combined with
+`Gamma_tree^i=2q p_i` and `-dn/dE=n(1+n)/T`, this gives exactly the kinetic
+weighted source squared divided by `Gamma`.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-DRESSED-RA-PAIR-RUNG-BOUNDARY-20260901 | RA pair `1/(4E^2 Gamma)`; required `sigma_channel=abs(M_contact+M_Phi)^2/(16*pi*s*S_final)` | docs/scripts/audit/audit_topic13_dressed_ra_pair_microscopic_rung_boundary.py | E,Gamma energy; cross section energy^-2 | production action; no fit | RA source match closed, legacy rung rejected | independent energy integral and channel ratios | legacy `M=lambda` omits charge normalization, final-state counting and Phi exchange | derive charge-resolved SK cuts and self-consistent width |
+
 ## Retarded/Advanced Mixed Current Vertex (2026-09-01)
 
 For the latest-time current leg, the declared continuation has

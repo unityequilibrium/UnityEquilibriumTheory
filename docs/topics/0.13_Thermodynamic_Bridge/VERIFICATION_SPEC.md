@@ -1,5 +1,15 @@
 # Verification Spec
 
+## Dressed RA Pair and Rung Boundary (2026-09-01)
+
+Run `docs.scripts.audit.audit_topic13_dressed_ra_pair_microscopic_rung_boundary`
+and its focused test. Check the full energy integral against
+`1/(4E^2 Gamma)` below `1e-10` and the dressed-current/kinetic source below
+`1e-13`. Require production contact-to-legacy cross-section ratios `8` and
+`16`, and require nonzero `Phi` exchange to change both ratios. Do not apply a
+global correction to historical rates or call the legacy algebraic rung a
+microscopic Bethe-Salpeter match.
+
 ## Retarded/Advanced Mixed Current Vertex (2026-09-01)
 
 Run `docs.scripts.audit.audit_topic13_retarded_ra_mixed_current_vertex` and
