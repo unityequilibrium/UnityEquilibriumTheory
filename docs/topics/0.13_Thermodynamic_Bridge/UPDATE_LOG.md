@@ -1,3 +1,29 @@
+## 2026-09-01 - Microscopic current-to-ladder matching boundary
+
+MAJOR_RESULT_CLOSURE: T13_MICROSCOPIC_CURRENT_LADDER_MATCHING_BOUNDARY is CLOSED_FOR_LANE/CLOSED_AS_NO_GO; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: The tree spatial 1PI vertex divided by the on-shell external-leg factor 2E exactly reproduces the unweighted kinetic current source q*p/E. A transverse counterfamily proves that Ward contraction plus the static point cannot uniquely identify the finite-k transverse vertex. The default one-loop/kinetic action mismatch is exposed and an explicit zero-residual configuration bridge is constructed.
+
+WHAT_REMAINS_OPEN: State-matched retarded finite-k three-point spectral continuation, on-shell residue/LSZ matching at one loop, microscopic retarded four-point kernel, collision-ladder continuum limit, heat-current matching and physical units.
+
+DEPENDENCY_UNLOCKED: Explicit-action-configured tree current-source handoff only. No microscopic ladder, Kubo, SI, Full Topic 13 or Core unlock.
+
+STATUS: PASS_SCOPED_TREE_SOURCE_MATCH_AND_TRANSVERSE_NO_GO; eight artifact checks pass.
+
+WHAT_CHANGED: Added a standalone boundary verifier, 21 tests, result and candidate registry. It reads the existing one-loop/current and finite-cutoff contracts without rewriting or promoting their artifacts.
+
+EQUATION_OR_MAPPING: Gamma_tree^i/(2E)=q*p^i/E. Gamma_F^mu=Gamma^mu+F(P,Q)*(Qz,-Q0), so Q_mu*(Gamma_F-Gamma)^mu=0 and a bounded addition vanishes at Q=0. The required next handoff is a same-action Gamma_R,on-shell with residue/LSZ plus a microscopic retarded K_4,R entering the Bethe-Salpeter equation.
+
+VERIFICATION: 21 new tests and 123 adjacent charged-sector tests pass (144 total). Tree-source residual is exactly zero. Nonzero transverse additions change the finite-transfer vertex while their Ward-contraction residual stays below 1e-14 and their static additions vanish. The default kinetic action differs from the one-loop lane by +0.9 in matter quartic, -0.2 in response coupling, -1 in epsilon_nc and +0.5 in response mass-squared; the explicit bridged configuration has zero residual for all eight coefficients. Existing contracts explicitly retain their microscopic vertex/ladder and continuum exclusions. No experimental Data, fit, holdout or threshold change.
+
+CONTROLLING_BLOCKER: state_matched_retarded_three_and_four_point_spectral_kernel_missing.
+
+NEXT_ACTION: Use the explicit bridged action to derive the retarded finite-k three-point spectral kernel and external-leg residue, then derive the matching microscopic four-point collision kernel before solving a physical ladder.
+
+CLAIM_BOUNDARY: Exact tree source handoff and structural transverse non-uniqueness no-go only; not a retarded microscopic vertex, Bethe-Salpeter solution, continuum/physical Kubo coefficient, SI transport, external validation or Full Topic 13 closure.
+
+EVIDENCE_HASHES: boundary artifact 35c6b34b5427546cde2dbdf84370734a07c973a551209b505ffce58e14f6c79b; candidate registry 2cc54b2e0b242409e434c9cf1cc096343a208246d11793077408f657a91822a0.
+
 ## 2026-09-01 - Static confluent charged density-current vertex
 
 MAJOR_RESULT_CLOSURE: T13_CHARGED_STATIC_CONFLUENT_VERTEX_MATCH is CLOSED_FOR_LANE; Full Topic 13 remains open.

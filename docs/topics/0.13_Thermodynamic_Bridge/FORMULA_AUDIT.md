@@ -1,5 +1,23 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Microscopic Current-to-Ladder Boundary (2026-09-01)
+
+For a canonical charged scalar on shell,
+`Gamma_tree^i=2*q*p^i` and external-leg normalization gives
+`Gamma_tree^i/(2E)=q*p^i/E`. Multiplying by `sqrt(w)` reproduces the kinetic
+source used by the finite-cutoff current correlator.
+
+This longitudinal/tree match does not identify a transverse correction. For
+any bounded scalar function `F`,
+`Gamma_F^mu=Gamma^mu+F(P,Q)*(Qz,-Q0)` has the same Ward contraction because
+`Q_mu*(Gamma_F-Gamma)^mu=0`; its addition also vanishes at `Q=0`. A retarded
+finite-k three-point spectral kernel and a same-action four-point kernel are
+therefore independent required inputs to microscopic ladder matching.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-MICROSCOPIC-CURRENT-LADDER-BOUNDARY-20260901 | `Gamma_i/(2E)=q*p_i/E`; `deltaGamma_T=F*(Qz,-Q0)` | docs/scripts/audit/audit_topic13_microscopic_current_ladder_matching_boundary.py | `Gamma,p,E,Q` natural energy; normalized velocity source dimensionless | canonical action and declared kinetic contracts; no fit | tree handoff exact; transverse non-uniqueness closed as no-go | source normalization, action-parameter bridge, Ward-preserving counterfamily | default actions differ and Ward/static evidence underdetermines retarded transverse vertex | derive same-state retarded 3-point spectral kernel and microscopic 4-point ladder kernel |
+
 ## Static Confluent Charged Vertex (2026-09-01)
 
 At the thermodynamic Euclidean point `P=Q=0`, use

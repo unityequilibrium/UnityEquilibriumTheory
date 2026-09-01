@@ -1,5 +1,19 @@
 # Limitations
 
+## Microscopic Current/Ladder Matching Boundary (2026-09-01)
+
+The exact tree source match does not license inserting the new one-loop vertex
+into older kinetic artifacts without an explicit action/state configuration.
+Their defaults differ in matter quartic, response coupling, `epsilon_nc`, and
+response mass. The audit supplies a zero-residual configuration bridge but
+does not rerun or promote those older finite-cutoff results.
+
+Ward and static checks constrain only the longitudinal/static information.
+They do not select a transverse analytic continuation, external-leg residue,
+or microscopic four-point Bethe-Salpeter kernel. Existing resolvent identities
+and Gram projections remain formal finite-cutoff interfaces, not substitutes
+for those microscopic inputs.
+
 ## Static Confluent Vertex Scope (2026-09-01)
 
 The static result uses the thermodynamic Euclidean `P=Q=0` order of limits.

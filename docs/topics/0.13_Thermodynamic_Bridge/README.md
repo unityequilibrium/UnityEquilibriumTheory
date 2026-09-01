@@ -6,6 +6,26 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Microscopic Current-to-Ladder Boundary (2026-09-01)
+
+The [matching-boundary artifact](../../core/artifacts/t13_microscopic_current_ladder_matching_boundary_audit.json)
+closes the tree on-shell current-source handoff and a structural transverse
+non-uniqueness result. The canonical spatial vertex satisfies
+`Gamma_tree^i/(2E)=q*p^i/E`, exactly the unweighted source used by the kinetic
+current lane. This establishes the normalization bridge at tree level only.
+
+The audit also finds that the default older kinetic configuration is not the
+same action state as the new one-loop lane: matter quartic, response coupling,
+`epsilon_nc`, and response mass-squared differ. An explicit configuration
+bridge removes every coefficient residual, but must be passed deliberately.
+
+Finally, adding `F(P,Q)*(Qz,-Q0)` changes the finite-transfer vertex while
+leaving its Ward contraction unchanged and vanishing at the static point.
+Therefore the generic Ward match plus static closure cannot identify the
+retarded transverse vertex. The next required evidence is a state-matched
+retarded three-point spectral continuation and microscopic four-point kernel,
+not another algebraic projection of the existing finite-cutoff operator.
+
 ## Static Confluent Charged Vertex (2026-09-01)
 
 The [static-vertex artifact](../../core/artifacts/t13_charged_static_confluent_vertex_audit.json)

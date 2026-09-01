@@ -1,5 +1,20 @@
 # Verification Spec
 
+## Microscopic Current-to-Ladder Boundary (2026-09-01)
+
+Run `docs.scripts.audit.audit_topic13_microscopic_current_ladder_matching_boundary`
+and `docs/core/test/test_topic13_microscopic_current_ladder_matching_boundary.py`.
+Require exact `Gamma_tree^i/(2E)=q*p^i/E` agreement for both charges and the
+declared momentum grid, plus energy-scaling covariance.
+
+For at least two nonzero transverse coefficients require the vertex to change
+at finite `Q` while `Q*deltaGamma_T` remains below `1e-14`; require the same
+bounded addition to vanish at `Q=0`. Confirm that legacy current, continuum,
+Bethe-Salpeter and heat-current contracts retain their microscopic/continuum
+exclusions. Default action mismatch must be visible, and the explicit bridged
+configuration must match all canonical coefficients exactly. No physical
+ladder, Kubo or retarded claim may be emitted by this boundary audit.
+
 ## Static Confluent Charged Vertex (2026-09-01)
 
 Run `docs.scripts.audit.audit_topic13_charged_static_confluent_vertex` as a
