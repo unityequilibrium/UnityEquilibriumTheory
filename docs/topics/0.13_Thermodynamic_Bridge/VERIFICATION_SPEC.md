@@ -1,5 +1,31 @@
 # Verification Spec
 
+## Explicit Charged Current Vertex (2026-09-01)
+
+Run docs.scripts.audit.audit_topic13_charged_one_loop_current_vertex as a
+module and docs/core/test/test_topic13_charged_one_loop_current_vertex.py.
+Require direct finite Matsubara sums to match independent pole residues below
+1e-9 and explicit full-vertex Ward residual below 2e-8. Require bath
+transversality below 2e-8 without longitudinal projection.
+
+The declared samples use (T,nP,nQ,pz,Qz)=(.25,1,1,.3,.4),
+(.25,2,1,-.2,.5),(.5,1,2,.4,-.3) and both charge signs at mu=.2.
+The refinement grids are (64,32),(88,40),(112,56); every mixed-thermal and
+response-relaxed bath correction change must remain below 1e-6. Radial
+integration maps the full half-line and does not use a fitted cutoff.
+
+Independently contract the mixed thermal triangle against separately integrated
+self-energy differences. Do the same for the Feynman-parameter vacuum triangle
+plus kinetic counterterm. Check response-relaxed bath decomposition, G=0,
+charge conjugation with reversed four-momenta, natural-energy covariance,
+legacy plus-i-mu propagator identity and invalid/static-domain rejection.
+
+Also rerun the corrected charged-propagator Matsubara witness: with response
+loop K and charged P-K, require D_q^-1(R)=(R0+i*q*mu)^2+E^2 and
+Omega=q*mu-i*nu_n. Pole/cut values must remain unchanged. Regenerate artifacts
+under the experimental-Data guard, verify strict JSON/current hashes, and
+retain candidate-only/full_core_unlock=false.
+
 ## Charged One-Loop Diagnostic (2026-09-01)
 
 Run docs.scripts.audit.audit_topic13_charged_one_loop_match as a module and

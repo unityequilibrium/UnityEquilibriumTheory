@@ -1,5 +1,29 @@
 # Limitations
 
+## Explicit Current-Vertex Scope (2026-09-01)
+
+The current result covers generic nonzero bosonic Matsubara transfer with
+collinear external spatial momenta and full internal polar angle. It is not
+the static Q->0 confluent limit. It has not been analytically continued to a
+retarded transverse vertex, and it does not supply a collision ladder,
+conductivity or heat-current Kubo coefficient.
+
+Ward agreement alone would not verify the transverse bath insertion. That
+piece is separately calculated and its continuum-shift transversality is
+checked without projection. Its response-relaxed component results from
+allowing the mean response displacement to follow the external source; it is
+not silently relabeled as a proper multi-field 1PI triangle.
+
+Off-shell vacuum/current components depend on the declared response-axis and
+charged kinetic subtraction. Their relative sizes are not physical rates or
+uncertainties. The full cubic/quartic/current counterterm match and static
+renormalization remain open.
+
+The Matsubara routing correction changes the representation of the earlier
+independent witness, not its real pole, cuts, KMS relation, thresholds or
+material boundary. No source, calibration, holdout, causal threshold or
+collision artifact is changed.
+
 ## Charged Two-Point Matching (2026-09-01)
 
 The new result closes only the declared normal k=0 charged two-point

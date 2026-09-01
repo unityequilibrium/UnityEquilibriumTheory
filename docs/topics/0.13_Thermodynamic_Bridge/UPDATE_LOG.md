@@ -1,3 +1,29 @@
+## 2026-09-01 - Explicit charged one-loop current vertex and routing repair
+
+MAJOR_RESULT_CLOSURE: T13_CHARGED_ONE_LOOP_CURRENT_VERTEX_MATCH is PARTIAL; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: At generic nonzero Euclidean Matsubara transfer, the mixed response triangle is evaluated as an explicit diagram and matches the independently integrated charged self-energy Ward difference. The action-derived bath-current insertion, including response-mean relaxation, is explicitly transverse. The legacy plus-i-mu propagator is reconciled with P-K loop routing.
+
+WHAT_REMAINS_OPEN: Static/confluent Q->0 limit, retarded finite-k transverse continuation, collision/Bethe-Salpeter ladder and heat-current vertex, complete cubic/quartic/current counterterm matching and material/SI closure.
+
+DEPENDENCY_UNLOCKED: Diagnostic handoff only. Candidate registry is not centrally merged; no physical Kubo, transport, Full Topic 13, Gravity or claim promotion is unlocked.
+
+STATUS: PASS_SCOPED_CHARGED_ONE_LOOP_VERTEX; six artifact checks pass. Foundation and compatibility remain physically BLOCKED.
+
+WHAT_CHANGED: Replaced the earlier Ward-required temporal placeholder with explicit mixed and response-relaxed bath diagrams. Corrected the charged Matsubara witness to write the existing D_q^-1=(R0+i*q*mu)^2 convention with charged P-K routing and Omega=q*mu-i*nu_n. This supersedes only the wave-time charged artifact/registry hashes recorded below; pole/cut/KMS values, threshold, source role and claims are unchanged. Added 25 tests and replaced long finite radial interval quadrature by a fixed full-half-line map.
+
+EQUATION_OR_MAPPING: deltaGamma_mix=G^2 sum/integral D_response(K)D_q(P-K)D_q(P+Q-K)gamma_q. deltaGamma_bath=[-4*lambda_chi+G^2*D_response(Q)]*sum/integral D_+(K)gamma_+D_+(K+Q). Their sum with bare/vacuum-counterterm terms obeys Q.Gamma_q=q*[D_q,full^-1(P+Q)-D_q,full^-1(P)]. R_gen and R_obs do not enter.
+
+VERIFICATION: 342 focused/regression tests pass, including 25 new current-vertex tests. Direct Matsubara/residue relative errors are below 1e-9. Maximum explicit Ward residual is 2.27e-16; maximum bath transversality residual is 5.45e-14. Mixed and bath correction refinement changes are at most 1.67e-14 on the unchanged 1e-6 criterion. The initial long-interval bath probe changed 1.85e-6 and failed that criterion; full-half-line quadrature repaired sampling rather than changing the threshold or projecting the current. At the reference point, bare/mixed-thermal/bath/vacuum vertex norms are 4.834/1.28e-6/6.08e-6/1.69e-4 natural energy. Response relaxation changes the bath coefficient from -0.4 to -0.3872098274 (3.20%); these are off-shell diagnostics, not rates. Guarded regeneration recorded zero experimental-Data attempts; strict JSON/current source/evidence hashes pass. F0 finds 345 rows; foundation/compatibility audits run successfully while retaining physical BLOCKED.
+
+CONTROLLING_BLOCKER: static_and_real_time_transverse_vertex_collision_ladder_matching. Generic Euclidean Ward closure does not establish the static retarded heat-current vertex.
+
+NEXT_ACTION: Derive the confluent Q->0 limit without pole splitting, continue the independently transverse part to real time, then insert the matched vertex into the collision/Bethe-Salpeter and heat-current equations. Do not use a Ward projection or infer conductivity from off-shell component norms.
+
+CLAIM_BOUNDARY: Internal natural-unit generic Euclidean one-loop three-point result. The bath term is response-relaxed, not silently labeled a proper multi-field 1PI triangle. Not a static vertex, retarded current, physical Kubo coefficient, heat conductivity, SI alpha, TTG prediction, external validation or Full Topic 13 closure. No fit, holdout access, width regulator, causal-threshold change or collision rerun.
+
+EVIDENCE_HASHES: current artifact 7fdf5d1ab04d88657750d567d0cd52a9b770d395210c30180944f547b3772c63; current candidate registry 3d4f8330d75b21a087d7e91b29fe0de675d66d8b663331e89ee32fa7b8ad5c9d; corrected charged artifact 4f29335b1b2423fb50941793e7ecccde8b3945afdb843fb6420976596693c6c9; corrected charged registry 3f7866ba16d3aba7cd2826a8abeb736fdfc408557ff4d22118330b6facb3418c.
+
 ## 2026-09-01 - Charged mixed one-loop propagator and Landau contribution
 
 MAJOR_RESULT_CLOSURE: T13_CHARGED_MIXED_ONE_LOOP_NORMAL_MATCH is PARTIAL; Full Topic 13 remains open.

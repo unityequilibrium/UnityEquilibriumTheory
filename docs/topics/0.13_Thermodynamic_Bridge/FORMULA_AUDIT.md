@@ -1,5 +1,64 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Explicit Charged Current Insertion (2026-09-01)
+
+Candidate ID: uet.o2.thermal.charged_one_loop_current_vertex.
+Keep the existing Euclidean charged inverse propagator
+D_q,E^-1(R)=(R0+i*q*mu)^2+r^2+m^2. Choose response-loop momentum K.
+The two charged lines in the mixed triangle are P-K and P+Q-K:
+
+delta Gamma_mix^mu =
+G^2*T*sum_l*integral_k D_response(K) D_q(P-K) D_q(P+Q-K)
+gamma_q^mu(P-K+Q,P-K),
+
+where gamma_q^0=q*[2*(P0-K0+i*q*mu)+Q0] and
+gamma_q^z=q*[2*(p_z-k_z)+Q_z]. Contracting the numerator gives
+Q_mu*gamma_q^mu=q*[D_q^-1(P+Q-K)-D_q^-1(P-K)], hence the explicit
+triangle, not a reconstructed placeholder, satisfies
+
+Q_mu*delta Gamma_mix^mu=q*[Sigma_mix(P+Q)-Sigma_mix(P)].
+
+The vacuum triangle is evaluated independently with two Feynman parameters.
+The same zero-field kinetic subtraction as the charged propagator adds the
+local delta-Z vertex. Its contraction matches the difference of the
+renormalized vacuum self-energies.
+
+The one-loop thermal background also responds to the current source. For one
+complex O(2) field the finite-Q bath insertion is
+
+L_bath^mu=T*sum_l*integral_k D_+(K) gamma_+^mu(K+Q,K) D_+(K+Q).
+
+The action-normalized quartic tadpole supplies -4*lambda_chi*L_bath.
+Allowing the strict response mean to relax supplies
+G^2*D_response(Q)*L_bath. Thus
+
+delta Gamma_bath^mu =
+[-4*lambda_chi+G^2/(Q0^2+q^2+M0^2)]*L_bath^mu.
+
+A continuum shift gives Q_mu*L_bath^mu=0. This term is transverse and cannot
+be inferred from the longitudinal Ward equation alone. It is labeled
+response-relaxed because integrating out the response displacement at this
+order is not the same object as the proper mixed triangle of the full
+multi-field action.
+
+For bosonic P0=2*pi*nP*T and Q0=2*pi*nQ*T, the contour poles of the P-K
+charged line are -q*mu+i*P0 plus/minus E. This explains why its P=0
+denominator may be written (K0-i*q*mu)^2+E^2 while the field propagator
+itself retains plus i*q*mu. The direct Matsubara sum verifies this routing.
+The corresponding analytic continuation of the charged bubble in this
+routing is Omega=q*mu-i*nu_n, not q*mu+i*nu_n.
+
+Thermal radial integrals use the fixed half-line map
+k=s*(1+u)/(1-u), dk=2*s*du/(1-u)^2. The initial long-interval quadrature gave
+a 1.85e-6 bath refinement change, above the pre-existing 1e-6 criterion.
+The full half-line map reduces both declared correction refinements to about
+1e-14 on the same grid sequence without changing the criterion or projecting
+the result onto a transverse subspace.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-CHARGED-CURRENT-VERTEX-20260901 | explicit mixed triangle; response-relaxed bath insertion; Q.Gamma=q*(D_full^-1(P+Q)-D_full^-1(P)) | docs/scripts/audit/audit_topic13_charged_one_loop_current_vertex.py | P,Q,mu,G,Gamma natural energy; lambda dimensionless | canonical action and fixed charged two-point subtraction; no fit | checked generic nonzero Euclidean one-loop transfer only | direct Matsubara residues, Feynman-parameter vacuum Ward, bath shift/transversality | Ward-reconstructed vertex misses transverse bath term; P-K routing can be mistaken for convention reversal | static/confluent and retarded transverse limits, then collision/heat-current ladder |
+
 ## Charged Mixed One-Loop Match (2026-09-01)
 
 Candidate ID: uet.o2.thermal.charged_mixed_one_loop_match.
@@ -12,8 +71,9 @@ B_T=[(n_plus+n0)/(S-Omega)+(n_minus+n0)/(S+Omega)
 -(n_plus-n0)/(D-Omega)+(n0-n_minus)/(D+Omega)]/(4*E*W).
 
 Charge q=-1 replaces mu by -mu. The full Matsubara witness includes an
-additional 1 in both pair numerators. Its complex continuation is
-Omega=mu+i*nu_n. At n=0 apparent Landau poles are removable: use
+additional 1 in both pair numerators. With the declared legacy convention
+D_q^-1(R)=(R0+i*q*mu)^2+E^2 and response-loop routing K, the charged line is
+P-K and its complex continuation is Omega=q*mu-i*nu_n. At n=0 apparent Landau poles are removable: use
 [n(a)-n(b)]/(a-b), with exact limit -n(a)*(1+n(a))/T, not a regulator.
 Independent direct Matsubara sums verify both static and nonzero components.
 

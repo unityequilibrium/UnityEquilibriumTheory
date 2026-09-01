@@ -6,6 +6,34 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Explicit One-Loop Charged Current Vertex (2026-09-01)
+
+The [current-vertex artifact](../../core/artifacts/t13_charged_one_loop_current_vertex_audit.json)
+now evaluates the mixed response triangle and thermal-bath current insertion
+as diagrams, instead of merely reconstructing a temporal vertex from the Ward
+identity. At generic nonzero Euclidean Matsubara transfer, contraction of the
+explicit vertex agrees with the independently evaluated self-energy difference.
+The bath term is transverse and therefore invisible to that longitudinal check;
+it is retained rather than dropped.
+
+A routing audit also reconciles the legacy D_q,E^-1(R)=(R0+i*q*mu)^2+r^2+m^2
+convention with the preceding charged bubble. The response loop carries K and
+the charged line carries P-K, so the apparent minus sign at P=0 is a momentum
+routing consequence, not a different charge convention. The earlier Matsubara
+witness and documentation are corrected; its pole, pair/Landau cuts, thresholds
+and physical/grand-frequency results are unchanged.
+
+At the reference Euclidean point, norms of the bare, mixed thermal, relaxed
+bath and vacuum/subtraction vertex pieces are approximately 4.834, 1.28e-6,
+6.08e-6 and 1.69e-4 in natural-energy units. These are scheme-dependent
+off-shell components, not physical current or rate ratios. Response relaxation
+changes the bath coefficient from -0.4 to -0.38721 in the declared synthetic
+configuration.
+
+The static/confluent limit, real-time transverse continuation, collision ladder
+and heat-current matching remain open. This result is PARTIAL, candidate-only,
+and does not unlock physical Kubo, SI mapping or Full Topic 13.
+
 ## Charged One-Loop Propagator Match (2026-09-01)
 
 The [charged mixed-bubble result](../../core/artifacts/t13_charged_one_loop_match_audit.json)

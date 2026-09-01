@@ -196,11 +196,14 @@ def matsubara_witness(E=1.2,W=.8,T=.25,mu=.2,cutoff=8192):
     rows=[]
     for n in (0,1,2,4):
         nu=2*pi*T*n
-        numeric=T*np.sum(1/(((frequencies-1j*mu)**2+E*E)*((nu-frequencies)**2+W*W)))
-        analytic=complex(mixed_bubble(E,W,mu+1j*nu,T,mu,thermal_only=False))
+        # Legacy convention is D_q(R)=[(R0+i*mu)^2+E^2]^-1.  With
+        # response loop K, the charged line carries P-K.
+        numeric=T*np.sum(1/((frequencies**2+W*W)*((nu-frequencies+1j*mu)**2+E*E)))
+        analytic=complex(mixed_bubble(E,W,mu-1j*nu,T,mu,thermal_only=False))
         rows.append({"n":n,"numeric":[float(numeric.real),float(numeric.imag)],
             "analytic":[analytic.real,analytic.imag],"relative_error":float(abs(numeric-analytic)/abs(analytic))})
-    return {"E":E,"W":W,"T":T,"mu":mu,"cutoff":cutoff,"rows":rows}
+    return {"E":E,"W":W,"T":T,"mu":mu,"cutoff":cutoff,
+        "routing":"response K, charged P-K; D_q^-1(R)=(R0+i*mu)^2+E^2", "rows":rows}
 
 
 def static_thermal_hessian_witness(T=.25,cfg=CFG):
