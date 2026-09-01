@@ -1,5 +1,15 @@
 # Verification Spec
 
+## Retarded/Advanced Mixed Current Vertex (2026-09-01)
+
+Run `docs.scripts.audit.audit_topic13_retarded_ra_mixed_current_vertex` and
+its focused test. Require frozen-weight reduction to the Matsubara triangle
+below `1e-13`, continued Ward residual below `2e-8`, and last finite-transfer
+eta refinement below `0.02`. Require a finite nonzero transverse component.
+The proper zero-transfer scan must not be mislabeled as a current-current
+pinch; record the failed inverse-eta hypothesis and keep dressed RA pair,
+four-point rung and physical Kubo completion open.
+
 ## Microscopic Current-to-Ladder Boundary (2026-09-01)
 
 Run `docs.scripts.audit.audit_topic13_microscopic_current_ladder_matching_boundary`

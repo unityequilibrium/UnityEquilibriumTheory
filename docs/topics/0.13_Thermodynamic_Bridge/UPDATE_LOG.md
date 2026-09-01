@@ -1,3 +1,29 @@
+## 2026-09-01 - Retarded/advanced mixed proper current vertex
+
+MAJOR_RESULT_CLOSURE: T13_RETARDED_RA_MIXED_CURRENT_VERTEX is PARTIAL; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: Thermal weights are frozen before analytic continuation; the declared latest-time-current RA proper bare+mixed+vacuum vertex reduces to the Matsubara triangle and satisfies the continued Ward identity at finite transfer. The proper zero-transfer 1PI triangle is shown to have a finite eta limit.
+
+WHAT_REMAINS_OPEN: Response-relaxed bath RA continuation, same-state on-shell residue/LSZ, dressed current-current RA pinch pair, microscopic retarded four-point rung, continuum heat-current matching and SI calibration.
+
+DEPENDENCY_UNLOCKED: Proper mixed RA vertex handoff to a future current-current kernel only; no Kubo, transport, Full Topic 13 or Core unlock.
+
+STATUS: PASS_SCOPED_RETARDED_RA_MIXED_VERTEX; six artifact checks pass.
+
+WHAT_CHANGED: Added an explicit RA continuation with current leg latest in time and thermal weights fixed before continuation. The failed first hypothesis expecting inverse-eta growth in the proper triangle is retained and corrected: the transport pinch belongs to the dressed current-current RA pair.
+
+EQUATION_OR_MAPPING: Im z_current=+2 eta and Im z_in=Im z_out=-eta. The continued proper vertex obeys Q.Gamma_RA=q*(D_RA^-1(P+Q)-D_RA^-1(P)).
+
+VERIFICATION: 14 focused tests pass. Matsubara reduction residual is below 1e-13; maximum continued Ward residual is 1.84e-15; finite-transfer eta refinement changes are 2.03e-6 and 1.97e-6. The proper zero-transfer integrand norm converges from 0.04373 to 0.04428 instead of growing as 1/eta. No fit, physical width, experimental Data, holdout or threshold change.
+
+CONTROLLING_BLOCKER: same_action_current_current_RA_pinch_and_four_point_ladder_kernel_missing.
+
+NEXT_ACTION: Construct the dressed same-action RA propagator pair and microscopic four-point rung, then test ladder/kinetic equivalence with an explicit width and conservation ledger.
+
+CLAIM_BOUNDARY: Proper mixed RA one-loop vertex only; not a complete bath vertex, dressed correlator, ladder, Kubo/heat transport, SI observable, external validation or Full Topic 13 closure.
+
+EVIDENCE_HASHES: RA artifact 1c9de62464ed8ce7015e1ee42d107de95d3b5ed1b724aec63e8d78d213a2e640; candidate registry 8c404dd4f0649c8da4f535ad2e98356801ff650b980f7b95ea46e4f077c6fd94.
+
 ## 2026-09-01 - Microscopic current-to-ladder matching boundary
 
 MAJOR_RESULT_CLOSURE: T13_MICROSCOPIC_CURRENT_LADDER_MATCHING_BOUNDARY is CLOSED_FOR_LANE/CLOSED_AS_NO_GO; Full Topic 13 remains open.

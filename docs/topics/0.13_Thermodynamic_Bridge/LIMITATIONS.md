@@ -1,5 +1,14 @@
 # Limitations
 
+## Retarded/Advanced Proper-Vertex Scope (2026-09-01)
+
+The declared RA result is the proper bare+mixed+vacuum three-point function.
+It excludes the response-relaxed bath insertion and does not yet attach
+dressed external propagators. Its finite zero-transfer limit therefore does
+not contradict transport pinch resummation: the pinch pair belongs to the
+current-current correlator and ladder equation. `eta` is an analytic
+continuation control, not a collision width or fitted damping rate.
+
 ## Microscopic Current/Ladder Matching Boundary (2026-09-01)
 
 The exact tree source match does not license inserting the new one-loop vertex

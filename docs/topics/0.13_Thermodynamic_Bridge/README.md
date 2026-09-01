@@ -6,6 +6,21 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Retarded/Advanced Mixed Current Vertex (2026-09-01)
+
+The [RA vertex artifact](../../core/artifacts/t13_retarded_ra_mixed_current_vertex_audit.json)
+fixes thermal residue weights before analytic continuation and declares the
+current insertion as the latest-time leg. The proper bare, mixed thermal and
+vacuum vertex satisfies the continued Ward identity at finite transfer with
+maximum residual `1.84e-15`; its last eta-refinement change is `1.97e-6`.
+
+An initial hypothesis that the proper zero-transfer triangle itself would
+grow as `1/eta` failed: its norm converges to about `0.04429`. This correctly
+relocates the transport pinch problem to the dressed current-current RA
+propagator pair and its four-point ladder. The response-relaxed bath,
+same-state LSZ residue, microscopic rung, continuum heat transport and SI map
+remain open, so this result is `PARTIAL` and does not emit a Kubo coefficient.
+
 ## Microscopic Current-to-Ladder Boundary (2026-09-01)
 
 The [matching-boundary artifact](../../core/artifacts/t13_microscopic_current_ladder_matching_boundary_audit.json)

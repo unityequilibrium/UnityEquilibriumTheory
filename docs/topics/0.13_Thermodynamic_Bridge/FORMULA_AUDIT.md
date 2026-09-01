@@ -1,5 +1,16 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Retarded/Advanced Mixed Current Vertex (2026-09-01)
+
+For the latest-time current leg, the declared continuation has
+`Im z_current=+2*eta` and `Im z_in=Im z_out=-eta`, preserving energy sum.
+Thermal Bose weights are evaluated before continuation. The resulting proper
+vertex obeys `Q_mu Gamma_RA^mu=q*(D_RA^-1(P+Q)-D_RA^-1(P))`.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-RETARDED-RA-MIXED-CURRENT-20260901 | latest-time RA continuation of bare+mixed+vacuum vertex; continued Ward identity | docs/scripts/audit/audit_topic13_retarded_ra_mixed_current_vertex.py | energies, eta, Gamma in natural energy | canonical one-loop action; eta is continuation control, not fitted width | checked finite-transfer proper vertex only | Matsubara reduction, Ward, eta refinement, zero-transfer 1PI probe | response bath, dressed RA pair and microscopic rung absent | build same-action current-current RA pair and four-point ladder kernel |
+
 ## Microscopic Current-to-Ladder Boundary (2026-09-01)
 
 For a canonical charged scalar on shell,
