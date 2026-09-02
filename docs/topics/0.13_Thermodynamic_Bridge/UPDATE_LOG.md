@@ -5629,3 +5629,32 @@ EVIDENCE_PATHS:
 - `docs/core/test/test_topic13_lattice_momentum_relaxing_heat_parent.py`
 - `docs/core/artifacts/t13_lattice_momentum_relaxing_heat_parent_audit.json`
 - `docs/core/artifacts/uet_equation_correspondence_registry_topic13_lattice_heat_parent_addendum.json`
+## 2026-09-02 - Continuum-action direct Umklapp no-go
+
+MAJOR_RESULT_CLOSURE: `T13_CONTINUUM_ACTION_UMKLAPP_DIRECT_ROUTE_NO_GO` is `CLOSED_FOR_LANE/CLOSED_AS_NO_GO`; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: The current homogeneous continuum action/config/vertex surfaces and eventwise collision rule cannot represent the nonzero reciprocal-lattice transfer required by Umklapp.
+
+WHAT_REMAINS_OPEN: An external material-lattice interface or a separately derived periodic background; physical collision provenance, UET-to-phonon/current mapping, SI/Kubo, `alpha_Phi_K`, TTG source/material and uncertainty closure.
+
+DEPENDENCY_UNLOCKED: Near-term external material-lattice interface design and a separate long-term periodic-background/Bloch track.
+
+STATUS: `PASS_SCOPED_CONTINUUM_ACTION_UMKLAPP_DIRECT_ROUTE_NO_GO`; `full_core_unlock=false`; `claim_promotion=false`.
+
+WHAT_CHANGED: Tested the direct action-to-Umklapp route after closing the standard lattice parent. Added a selection-rule/config-surface witness, artifact, focused tests and registry addendum.
+
+EQUATION_OR_MAPPING: Current `p1+p2-p3-p4=0`; required Umklapp `p1+p2-p3-p4=G!=0`; `G~E`, `a~E^-1` in natural units.
+
+VERIFICATION: Audit reports 8/8 checks and focused regression reports 3 passed. Current eventwise momentum residual is `2.82302e-14`; no lattice fields or reciprocal-vector amplitude inputs are declared. No fit, holdout or physical coefficient was used.
+
+CONTROLLING_BLOCKER: `explicit_material_lattice_interface_or_periodic_background_missing`.
+
+NEXT_ACTION: Specify the external material lattice state, displacement/strain ontology, phonon energy/current observable and source-backed normal/Umklapp kernel; do not identify `Phi` with those variables.
+
+CLAIM_BOUNDARY: Scoped current-action route no-go only; not a general impossibility theorem, UET transport proof, TTG prediction, external validation or Full Topic 13 closure.
+
+EVIDENCE_PATHS:
+- `docs/scripts/audit/audit_topic13_continuum_action_umklapp_no_go.py`
+- `docs/core/test/test_topic13_continuum_action_umklapp_no_go.py`
+- `docs/core/artifacts/t13_continuum_action_umklapp_direct_route_no_go.json`
+- `docs/core/artifacts/uet_equation_correspondence_registry_topic13_umklapp_no_go_addendum.json`

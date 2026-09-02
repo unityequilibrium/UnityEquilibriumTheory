@@ -1,0 +1,205 @@
+{
+  "schema_version": "t13-continuum-action-umklapp-direct-route-no-go-v1",
+  "major_result_id": "T13_CONTINUUM_ACTION_UMKLAPP_DIRECT_ROUTE_NO_GO",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "CLOSED_FOR_LANE",
+  "closure_disposition": "CLOSED_AS_NO_GO",
+  "verification_status": "PASS_SCOPED_CONTINUUM_ACTION_UMKLAPP_DIRECT_ROUTE_NO_GO",
+  "what_is_closed": [
+    "The currently declared flat continuum O(2)/Phi action and its action-normalized elastic collision lane cannot directly represent an Umklapp event with nonzero reciprocal-lattice momentum.",
+    "The existing collision event generator enforces exact continuum four-momentum conservation and exposes no lattice spacing, unit cell, reciprocal vector, Bloch label or Brillouin-zone input.",
+    "The synthetic lattice heat parent is therefore a standard comparator and cannot be promoted by reusing current continuum coefficients as physical Umklapp rates."
+  ],
+  "equation_registry_ids": [
+    "uet.o2.thermal.continuum_action_umklapp_direct_route_no_go"
+  ],
+  "registration_status": "STRUCTURAL_BOUNDARY_NOT_NEW_CORE_EQUATION",
+  "equation_or_mapping": {
+    "current_vertex_conservation": "p1+p2-p3-p4=0",
+    "umklapp_requirement": "p1+p2-p3-p4=G, G!=0, G in reciprocal lattice",
+    "reciprocal_lattice": "G_n=2*pi*n/a for a declared lattice spacing a",
+    "direct_route_no_go": "exact continuum translation invariance plus no reciprocal-lattice structure cannot emit a nonzero G channel"
+  },
+  "ontology": {
+    "C": "unchanged; not crystal momentum or lattice mass",
+    "Phi": "unchanged effective response; not temperature, strain or phonon displacement",
+    "R_gen": "excluded derived history trace",
+    "R_obs": "excluded",
+    "material_lattice": "new sector required if selected; not silently contained in Phi"
+  },
+  "unit_lane": "natural_flat_3p1_structural_boundary",
+  "units": {
+    "four_momentum_and_G": "E",
+    "lattice_spacing": "E^-1",
+    "selection_rule": "E"
+  },
+  "derivation_class": "translation_symmetry_and_selection_rule_no_go",
+  "observable": "Availability of a nonzero reciprocal-lattice momentum-transfer channel, not conductivity",
+  "data_role": "DERIVED_IMPLEMENTATION_STRUCTURAL_NO_GO",
+  "witness": {
+    "config_surfaces": {
+      "ActionInputs": [
+        "z",
+        "mass_squared",
+        "quartic",
+        "epsilon",
+        "response_kinetic",
+        "response_mass_squared",
+        "response_coupling"
+      ],
+      "CovariantMatterConfig": [
+        "matter_kinetic",
+        "matter_mass_sq",
+        "matter_quartic",
+        "response_coupling",
+        "unit_lane"
+      ],
+      "CovariantResponseConfig": [
+        "epsilon_nc",
+        "einstein_coupling",
+        "cosmological_constant",
+        "phi_equilibrium",
+        "response_kinetic",
+        "response_mass_sq",
+        "response_quartic",
+        "curvature_coupling",
+        "equilibrium_density",
+        "unit_lane"
+      ],
+      "O2FiniteDensityEOSConfig": [
+        "matter",
+        "response",
+        "branch_tolerance",
+        "inversion_tolerance",
+        "inversion_max_iterations",
+        "phase_convention",
+        "metric_signature",
+        "unit_lane"
+      ]
+    },
+    "lattice_fields": {
+      "ActionInputs": [],
+      "CovariantMatterConfig": [],
+      "CovariantResponseConfig": [],
+      "O2FiniteDensityEOSConfig": []
+    },
+    "amplitude_parameters": [
+      "s",
+      "cosine",
+      "charges",
+      "cfg"
+    ],
+    "amplitude_absolute_position_or_reciprocal_input": false,
+    "collision_event_count": 4096,
+    "maximum_event_energy_residual": 2.842170943040401e-14,
+    "maximum_event_momentum_residual": 2.823024494225169e-14,
+    "event_contract": "p1+p2-p3-p4=0",
+    "required_umklapp_contract": "p1+p2-p3-p4=G with reciprocal G!=0",
+    "reciprocal_vector_unit": "E in natural units",
+    "lattice_spacing_unit": "E^-1 in natural units"
+  },
+  "admissible_routes": {
+    "recommended_near_term": {
+      "id": "external_material_lattice_sector_interface",
+      "requirements": [
+        "declare displacement or strain field and lattice rest frame",
+        "source-lock phonon dispersion and normal/Umklapp collision inputs",
+        "derive an interaction mapping from UET variables to material energy/current without identifying Phi with temperature",
+        "close units, ledger, detailed balance, entropy and uncertainty"
+      ],
+      "reason": "TTG is a material/lattice experiment and does not require UET to generate the crystal itself"
+    },
+    "fundamental_long_term": {
+      "id": "uet_periodic_background_bloch_derivation",
+      "requirements": [
+        "derive a stable periodic solution from an explicit action",
+        "derive lattice spacing and reciprocal vectors rather than insert them",
+        "construct Bloch quasiparticles, phonon heat current and collision selection rules",
+        "prove the homogeneous continuum limit and avoid ontology relabeling"
+      ],
+      "reason": "This is required only if UET is claimed to generate the lattice sector internally"
+    }
+  },
+  "checks": {
+    "declared_action_configs_have_no_lattice_fields": true,
+    "elastic_amplitude_has_no_reciprocal_or_position_input": true,
+    "current_events_enforce_exact_energy_conservation": true,
+    "current_events_enforce_exact_continuum_momentum_conservation": true,
+    "nonzero_reciprocal_transfer_absent": true,
+    "standard_lattice_parent_keeps_rates_external": true,
+    "standard_lattice_parent_claims_no_uet_mapping": true,
+    "no_fit_holdout_or_physical_transport_promotion": true
+  },
+  "open_blockers": [
+    "explicit_material_lattice_sector_or_periodic_background_missing",
+    "uet_to_phonon_energy_and_heat_current_mapping_missing",
+    "source_backed_normal_and_umklapp_collision_kernel_missing",
+    "material_frame_SI_uncertainty_and_TTG_mapping_missing",
+    "independent_alpha_Phi_K_missing"
+  ],
+  "controlling_blocker": "explicit_material_lattice_interface_or_periodic_background_missing",
+  "source_hashes": {
+    "docs/core/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+    "docs/core/uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
+    "docs/core/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d",
+    "docs/scripts/audit/audit_topic13_action_normalized_elastic_scattering.py": "c09fbdd4d921c2c9ea1ba578c27935887900545725c978015104e9d4594a258b",
+    "docs/core/uet_o2_invariant_galerkin_collision_operator.py": "278b168e5c3b444ac4df4b96b5a7d00410cd9485c511ab2a17aa4f11c6f6d94e",
+    "docs/scripts/audit/audit_topic13_continuum_action_umklapp_no_go.py": "d709df7c040fef150f592378146146f1729a2835ad81a76974c74a50d2d76964",
+    "docs/core/test/test_topic13_continuum_action_umklapp_no_go.py": "43aa24498e280139c023c690d3f6dcfa0282a9b04c77c07a783c2616c7087886"
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_lattice_momentum_relaxing_heat_parent_audit.json",
+      "sha256": "6974fb64948fc38cc831ac6e53474b6ab22f10b30a32fa53ea67d854b0116f21"
+    }
+  ],
+  "dependency_unlocked": [
+    "external_material_lattice_sector_interface_design",
+    "periodic_background_bloch_derivation_research_track"
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "xie_2026_accessed": false,
+  "parameter_fitting_performed": false,
+  "claim_boundary": "No-go only for direct Umklapp generation by the currently declared homogeneous continuum O(2)/Phi action and collision implementation; not a theorem against coupling UET to a material lattice or deriving a future periodic branch.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE/CLOSED_AS_NO_GO",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "The currently declared flat continuum O(2)/Phi action and its action-normalized elastic collision lane cannot directly represent an Umklapp event with nonzero reciprocal-lattice momentum.",
+      "The existing collision event generator enforces exact continuum four-momentum conservation and exposes no lattice spacing, unit cell, reciprocal vector, Bloch label or Brillouin-zone input.",
+      "The synthetic lattice heat parent is therefore a standard comparator and cannot be promoted by reusing current continuum coefficients as physical Umklapp rates."
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "explicit_material_lattice_sector_or_periodic_background_missing",
+      "uet_to_phonon_energy_and_heat_current_mapping_missing",
+      "source_backed_normal_and_umklapp_collision_kernel_missing",
+      "material_frame_SI_uncertainty_and_TTG_mapping_missing",
+      "independent_alpha_Phi_K_missing"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "external_material_lattice_sector_interface_design",
+      "periodic_background_bloch_derivation_research_track"
+    ],
+    "STATUS": "PASS_SCOPED_CONTINUUM_ACTION_UMKLAPP_DIRECT_ROUTE_NO_GO",
+    "WHAT_CHANGED": "Tested whether the current action can supply the reciprocal-lattice transfer required by the new heat parent instead of assuming an Umklapp coefficient.",
+    "EQUATION_OR_MAPPING": {
+      "current_vertex_conservation": "p1+p2-p3-p4=0",
+      "umklapp_requirement": "p1+p2-p3-p4=G, G!=0, G in reciprocal lattice",
+      "reciprocal_lattice": "G_n=2*pi*n/a for a declared lattice spacing a",
+      "direct_route_no_go": "exact continuum translation invariance plus no reciprocal-lattice structure cannot emit a nonzero G channel"
+    },
+    "VERIFICATION": {
+      "declared_action_configs_have_no_lattice_fields": true,
+      "elastic_amplitude_has_no_reciprocal_or_position_input": true,
+      "current_events_enforce_exact_energy_conservation": true,
+      "current_events_enforce_exact_continuum_momentum_conservation": true,
+      "nonzero_reciprocal_transfer_absent": true,
+      "standard_lattice_parent_keeps_rates_external": true,
+      "standard_lattice_parent_claims_no_uet_mapping": true,
+      "no_fit_holdout_or_physical_transport_promotion": true
+    },
+    "CONTROLLING_BLOCKER": "explicit_material_lattice_interface_or_periodic_background_missing",
+    "NEXT_ACTION": "Build the external material-lattice interface first for TTG; keep periodic-background derivation as a separate fundamental track.",
+    "CLAIM_BOUNDARY": "No-go only for direct Umklapp generation by the currently declared homogeneous continuum O(2)/Phi action and collision implementation; not a theorem against coupling UET to a material lattice or deriving a future periodic branch."
+  }
+}

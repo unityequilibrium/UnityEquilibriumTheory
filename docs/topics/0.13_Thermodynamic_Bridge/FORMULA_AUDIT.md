@@ -82,6 +82,20 @@ source overlaps momentum, no finite steady conductivity exists.
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | T13-LATTICE-MOMENTUM-RELAXING-HEAT-PARENT-20260902 | `(C_N+C_R)chi=S_T`; `kappa_natural=S_T^T(C_N+C_R)^(-1)S_T`; `sigma=chi^T(C_N+C_R)chi>=0` | docs/core/uet_lattice_momentum_relaxing_heat_parent.py | `T,p,gamma~E`; `S_T~E^(3/2)`; `kappa_natural~E^2` | standard Debye PBTE; `gamma_N` and `gamma_R` are synthetic controls | standard comparator parent verified; no UET correspondence claimed | momentum null, singular limit, Onsager/entropy, inverse-rate, quadrature and energy scaling | physical lattice collision kernel and UET-to-lattice map absent | derive a source-backed collision kernel and explicit UET quasiparticle/current correspondence |
 
+## Continuum-Action Direct Umklapp No-Go (2026-09-02)
+
+The current homogeneous continuum O(2)/`Phi` action and elastic collision
+events enforce `p1+p2-p3-p4=0`. Umklapp instead requires
+`p1+p2-p3-p4=G` with a nonzero reciprocal-lattice vector. Because the owning
+config and amplitude surfaces contain no lattice spacing, unit cell, Bloch
+label or reciprocal vector, the current coefficients cannot be reused as an
+Umklapp kernel without adding a declared material sector or deriving a new
+periodic background.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-CONTINUUM-ACTION-UMKLAPP-DIRECT-NOGO-20260902 | current `p1+p2-p3-p4=0`; required Umklapp `p1+p2-p3-p4=G!=0` | docs/scripts/audit/audit_topic13_continuum_action_umklapp_no_go.py | `p_i,G~E`; lattice spacing `a~E^-1` | translation symmetry and current action/config surfaces | direct current-action route closed as scoped no-go | config-field inventory, amplitude interface and eventwise four-momentum residual | explicit material lattice sector or periodic background absent | build external material-lattice interface for TTG; keep periodic/Bloch derivation separate |
+
 ## Dressed RA Pair and Microscopic Rung Boundary (2026-09-01)
 
 In the positive-energy pole approximation,

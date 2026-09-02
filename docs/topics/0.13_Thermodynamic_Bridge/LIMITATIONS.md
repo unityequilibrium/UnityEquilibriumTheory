@@ -373,3 +373,18 @@ not yet bridge UET to lattice quasiparticles. Its finite natural-unit response
 cannot be converted to SI conductivity or used with TTG until physical
 dispersion, collision channels, material frame, uncertainty and an explicit
 UET current/observable map are supplied. Xie 2026 remains unread.
+
+## Continuum-action direct Umklapp boundary
+
+The current flat homogeneous O(2)/`Phi` action cannot directly supply the
+nonzero reciprocal-lattice vector required by Umklapp. Its collision events
+preserve exact continuum momentum and its declared configuration has no unit
+cell, lattice spacing, Bloch label or Brillouin zone. This blocks only reuse of
+the existing action coefficients as Umklapp rates.
+
+It does not block coupling UET to a separately declared material lattice. For
+the TTG lane, that external material-sector interface is the preferred next
+route. A claim that UET generates the lattice itself would require a separate
+periodic-background solution, stability proof, Bloch reduction and derived
+phonon current. Neither route permits identifying `Phi` with temperature,
+strain or phonon displacement without an explicit mapping.

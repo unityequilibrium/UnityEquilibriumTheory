@@ -89,3 +89,18 @@ when `S_T` overlaps the momentum null. A positive finite result is admissible
 only after symmetry, positivity, inverse-rate scaling, quadrature convergence
 and `E^2` unit scaling pass. No physical rate or UET correspondence is inferred
 from this parent.
+
+## Umklapp correspondence decision method (2026-09-02)
+
+Before adding a resistive kernel, compare the selection rule of the owning UET
+collision lane with the standard lattice requirement. The current continuum
+events use `p1+p2-p3-p4=0`; an Umklapp event requires
+`p1+p2-p3-p4=G!=0`, with `G` derived from a reciprocal lattice. Inventory the
+owning action/config fields and vertex arguments, then verify eventwise energy
+and momentum residuals. If no reciprocal structure exists, close direct reuse
+as a scoped no-go rather than inserting `gamma_U` into the UET action.
+
+For TTG, proceed through a declared external material-lattice sector and derive
+the interface to UET variables. Treat a UET-generated periodic background and
+Bloch spectrum as a separate fundamental track with its own stability, units,
+observable and homogeneous-limit gates.

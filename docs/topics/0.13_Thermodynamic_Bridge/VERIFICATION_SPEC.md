@@ -519,3 +519,13 @@ Acceptance requires retarded/advanced conjugacy, the declared spectral discontin
 - Require inverse-`gamma_R` response scaling, radial quadrature change `<=1e-8`, and uniform natural-energy scaling exponent `2` within `1e-10`.
 - Keep the rate origins as synthetic external controls; prohibit fitting, Xie 2026 access, physical Kubo/SI emission, or a UET correspondence claim.
 - A pass closes only the standard lattice parent. Physical phonon dispersion/collision provenance and the UET-to-lattice quasiparticle/current map remain required before a UET thermal branch exists.
+
+## Continuum-action direct Umklapp no-go
+
+- Run `python -m docs.scripts.audit.audit_topic13_continuum_action_umklapp_no_go`.
+- Run `python -m pytest docs/core/test/test_topic13_continuum_action_umklapp_no_go.py -q`.
+- Inventory the owning action/config fields and amplitude parameters; require no undeclared lattice spacing, unit cell, reciprocal vector, Bloch or Brillouin-zone input.
+- Require the current event generator to satisfy exact continuum energy and momentum conservation within `1e-12`.
+- Keep `p1+p2-p3-p4=0` separate from the Umklapp requirement `p1+p2-p3-p4=G!=0`.
+- Prohibit promotion of the synthetic resistive rate to a UET or material coefficient, and prohibit fit or holdout access.
+- A pass rejects only direct Umklapp generation from the current homogeneous action. It leaves an external material-sector interface and a future periodic-background/Bloch derivation as separate admissible routes.
