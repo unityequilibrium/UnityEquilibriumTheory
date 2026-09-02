@@ -57,6 +57,18 @@ kinetic Galerkin equation.
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | T13-DRESSED-RA-CHARGE-LADDER-20260902 | `L_vector=D_RA-K_gain`; `(D_RA-K_gain)chi=J_charge` | docs/core/uet_o2_dressed_ra_charge_current_ladder.py | `D_RA,K_gain,L~E`; response form `~E` | KMS retarded width and same production collision events | finite-basis charge ladder verified | independent event/width loss match, direct ladder/kinetic equality, scaling and refinement | no independent heat carrier, continuum/cutoff and physical Kubo/SI still open | harden continuum and add a genuine normal/response carrier before heat transport |
 
+## Coupled Response Heat-Carrier Route No-Go (2026-09-02)
+
+For the declared relativistic quasiparticles, `J_E=P`. Therefore
+`J_H=J_E-mu J_charge=P-mu J_charge` and Landau projection gives
+`P_perp J_H=-mu P_perp J_charge`. The neutral response trial is linearly
+independent, but its number is relaxed by conversion channels; the
+`E*p/T^2` direction is a trial basis function rather than the heat observable.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-COUPLED-RESPONSE-HEAT-CARRIER-NOGO-20260902 | `P_perp J_H=-mu P_perp J_charge`; source rank `<=1` | docs/scripts/audit/audit_topic13_coupled_response_heat_carrier_no_go.py | source rank dimensionless | relativistic current identity and coupled collision metric | current neutral-response carrier route closed as no-go | source rank, zero-mu null, neutral-count relaxation, metric refinement | no admissible second conserved diffusion charge or lattice frame | derive a momentum-relaxing lattice/open-bath branch or an independently conserved charge from an explicit action |
+
 ## Dressed RA Pair and Microscopic Rung Boundary (2026-09-01)
 
 In the positive-energy pole approximation,

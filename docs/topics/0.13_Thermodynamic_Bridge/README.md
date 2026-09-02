@@ -751,6 +751,30 @@ CONTROLLING_BLOCKER: `independent_heat_carrier_and_continuum_physical_Kubo_mappi
 NEXT_ACTION: Harden the charge ladder toward continuum/cutoff independence, then introduce an additional normal or response carrier before constructing heat conductivity.
 
 CLAIM_BOUNDARY: Finite-basis tree-elastic charge-current ladder only; not an independent heat channel, self-consistent dressed width, physical Kubo/SI coefficient, external validation, or Full Topic 13 closure.
+
+## Current Major Result: coupled response heat-carrier route no-go (2026-09-02)
+
+MAJOR_RESULT_CLOSURE: `T13_COUPLED_RESPONSE_HEAT_CARRIER_ROUTE_NO_GO` is `CLOSED_FOR_LANE/CLOSED_AS_NO_GO`; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: The existing neutral response excitation and normal-component records were tested as a possible second heat carrier. The physical relativistic source still obeys `J_H=P-mu J_charge`, so Landau projection leaves rank one. The neutral trial direction is independent but its count is relaxed by conversion channels; the independent `E*p/T^2` trial direction is not the declared heat observable.
+
+WHAT_REMAINS_OPEN: An admissible second conserved diffusion charge or a declared lattice/open-bath momentum-relaxing frame, followed by continuum, Kubo/SI, material observable and uncertainty closure.
+
+DEPENDENCY_UNLOCKED: Lattice/Umklapp or open-bath heat-branch design, and separately an explicit-action second-conserved-charge design.
+
+STATUS: `PASS_COUPLED_RESPONSE_HEAT_CARRIER_ROUTE_NO_GO`; `full_core_unlock=false`; `claim_promotion=false`.
+
+WHAT_CHANGED: Tested the most immediate existing multicomponent route instead of assuming that a neutral response mode automatically supplies heat conductivity.
+
+EQUATION_OR_MAPPING: `J_E=P`; `J_H=P-mu J_charge`; `P_perp J_H=-mu P_perp J_charge`.
+
+VERIFICATION: All thirteen checks and five focused tests pass. Heat/charge identity residual is `8.21e-15`; physical source rank is one; neutral-trial rank is two but neutral-count relaxation is nonzero (`9.67e-6` relative); metric refinement changes the charge source by `3.67e-15`.
+
+CONTROLLING_BLOCKER: `admissible_preferred_frame_or_independent_conserved_diffusion_charge_missing`.
+
+NEXT_ACTION: Choose one explicit physical extension: derive a lattice/momentum-relaxing heat branch appropriate to TTG, or derive a genuinely conserved second diffusion charge from the action. Do not relabel the current neutral or energy-moment trial modes.
+
+CLAIM_BOUNDARY: Structural no-go for the current relativistic coupled response-mode route only; not a theorem against lattice, open-bath or multicharge heat transport, and not Full Topic 13 closure.
 ## Current Major Result: T13-173 causal gate semantics alignment (2026-08-23)
 
 MAJOR_RESULT_CLOSURE: CLOSED_AS_NO_GO for the declared local conserved-C gradient finite-cone compatibility question; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.

@@ -351,3 +351,11 @@ The finite-basis direct Bethe-Salpeter charge-current ladder now matches the kin
 The coarse radial grid has a deflated rung radius above one and its Neumann series correctly fails; the accepted refined grids have radius below one and converge. This is why direct resummation plus refinement is required. The current radial convergence closes only the declared 8/12/16 finite-cutoff sequence; it is not an infinite-basis or cutoff-removal proof.
 
 The ladder does not repair the heat-rank no-go. An independent normal/response carrier, tensor channel, number-changing cuts, self-consistent dressed width and physical Kubo/SI mapping remain open.
+
+## Coupled response-carrier no-go boundary
+
+The existing neutral response excitation does not solve the heat-rank obstruction. In the declared relativistic quasiparticle lane, energy current equals total momentum, so adding a neutral species still gives `J_H_perp=-mu J_charge_perp` after Landau projection.
+
+The coupled collision basis contains independent neutral and energy-weighted trial directions, but neither is presently an admissible physical heat source. Neutral count is relaxed by the action-derived conversion channels, while `E*p/T^2` is a variational basis function rather than `J_H`. Relabeling either one would change the observable contract without a derivation.
+
+This no-go is scoped. A lattice rest frame with Umklapp or other momentum relaxation, a declared open bath, or a genuinely conserved second charge can evade it. None of those extensions is currently closed, and choosing one requires a new action/ledger/KMS contract rather than another basis enlargement.

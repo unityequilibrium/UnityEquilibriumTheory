@@ -496,3 +496,15 @@ Acceptance requires retarded/advanced conjugacy, the declared spectral discontin
 - Record the deflated rung spectral radius and fail closed on nonfinite Neumann iteration; direct inversion may close the finite-basis ladder even when a coarse-grid Neumann series does not converge.
 - Prohibit clipping, fitted relaxation time, absolute eigenvalue admission cutoffs, holdout access and physical Kubo/SI emission.
 - A pass closes only the finite-basis tree-elastic charge-current ladder. Independent heat transport, dressed self-consistency, continuum/cutoff proof, external validation and Full Topic 13 remain open.
+
+## Coupled response heat-carrier route no-go
+
+- Run `python -m docs.scripts.audit.audit_topic13_coupled_response_heat_carrier_no_go`.
+- Run `python -m pytest docs/core/test/test_topic13_coupled_response_heat_carrier_no_go.py -q`.
+- Require `J_E=P`, `J_H=P-mu J_charge`, and `P_perp J_H=-mu P_perp J_charge` with relative residual `<=1e-10` and physical charge/heat source rank one.
+- Require the projected physical heat source to vanish at `mu=0`.
+- Verify that the neutral trial source is linearly independent while neutral count has nonzero collision relaxation; preserve total-count null only as a truncation invariant, not a new conserved `C`.
+- Verify that the independent `E*p/T^2` trial direction is not relabeled as the physical heat observable.
+- Require a positive active collision spectrum, solve residual `<=1e-8`, and metric refinement `<=1e-3`.
+- Prohibit a new state variable, observable relabeling, fit, holdout access or physical Kubo/SI emission.
+- A pass closes only the existing neutral response-carrier route as a no-go. Lattice/open-bath momentum relaxation and independently conserved multicharge branches remain admissible research routes.

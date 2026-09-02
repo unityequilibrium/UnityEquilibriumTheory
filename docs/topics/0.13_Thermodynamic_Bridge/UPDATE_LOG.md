@@ -1,3 +1,29 @@
+## 2026-09-02 - Coupled response heat-carrier route no-go
+
+MAJOR_RESULT_CLOSURE: T13_COUPLED_RESPONSE_HEAT_CARRIER_ROUTE_NO_GO is CLOSED_FOR_LANE/CLOSED_AS_NO_GO; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: The existing neutral response excitation and normal-component records do not create an independent physical heat source. In the declared relativistic lane J_E=P and J_H=P-mu J_charge, hence P_perp J_H=-mu P_perp J_charge and the physical source rank is one. The neutral trial direction is independent but neutral count is collision-relaxed; E*p/T^2 is a trial basis direction, not J_H.
+
+WHAT_REMAINS_OPEN: A derived lattice/open-bath momentum-relaxing frame or a genuinely conserved second diffusion charge, followed by continuum, self-consistent width, Kubo/SI, material observable and uncertainty closure.
+
+DEPENDENCY_UNLOCKED: Lattice/Umklapp or open-bath heat-branch design and explicit-action second-conserved-charge design.
+
+STATUS: PASS_COUPLED_RESPONSE_HEAT_CARRIER_ROUTE_NO_GO; full_core_unlock=false; claim_promotion=false.
+
+WHAT_CHANGED: Audited the nearest existing multicomponent carrier route against the physical heat observable, collision invariants and source rank instead of relabeling neutral or energy-weighted trial modes.
+
+EQUATION_OR_MAPPING: J_E=P; J_H=P-mu J_charge; P_perp J_H=-mu P_perp J_charge.
+
+VERIFICATION: Thirteen artifact checks, five focused tests and 68 linked coupled-collision/width/vector/ladder tests pass. Heat/charge identity residual is 8.213e-15; source rank is one; the neutral trial raises rank to two but neutral-count relaxation is 9.673e-6 relative; total truncation-count null and positive active spectrum pass; metric refinement changes the charge source by 3.669e-15. F0 parses 357 rows without duplicate IDs; foundation and compatibility remain BLOCKED. No new state, relabeling, fit, holdout or physical Kubo/SI output.
+
+CONTROLLING_BLOCKER: admissible_preferred_frame_or_independent_conserved_diffusion_charge_missing.
+
+NEXT_ACTION: Choose and derive either a lattice/momentum-relaxing heat branch appropriate to TTG or a genuinely conserved second diffusion charge from an explicit action.
+
+CLAIM_BOUNDARY: Structural no-go for the current relativistic coupled response-mode route only; not a theorem against lattice, open-bath or multicharge heat transport, and not Full Topic 13 closure.
+
+EVIDENCE_HASHES: no-go artifact 299fe0f67b8d6aa618e00bac4c2c98a2ef165b17af11c1245824593e78905f0b; candidate registry c7909f1353ad4f0ac5094d66935ce2098099cd3e42a9d2e90cb329e5e07f20c4.
+
 ## 2026-09-02 - KMS retarded-width repair and dressed RA charge ladder
 
 MAJOR_RESULT_CLOSURE: T13_SAME_KERNEL_DRESSED_RA_CHARGE_CURRENT_LADDER is CLOSED_FOR_LANE; the earlier direct identification of tagged Gamma_out as the retarded width is superseded. Full Topic 13 remains open.
