@@ -5658,3 +5658,32 @@ EVIDENCE_PATHS:
 - `docs/core/test/test_topic13_continuum_action_umklapp_no_go.py`
 - `docs/core/artifacts/t13_continuum_action_umklapp_direct_route_no_go.json`
 - `docs/core/artifacts/uet_equation_correspondence_registry_topic13_umklapp_no_go_addendum.json`
+## 2026-09-02 - Calorine lattice-interface input boundary
+
+MAJOR_RESULT_CLOSURE: `T13_CALORINE_LATTICE_INTERFACE_INPUT_BOUNDARY` is `CLOSED_FOR_LANE`; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: Source hash/schema/range admission for the 12x12x6 mode frequency, q/weight, group velocity, heat capacity, total RTA gamma and mode-kappa arrays.
+
+WHAT_REMAINS_OPEN: Normal/Umklapp decomposition, collision matrix/eigenvectors, positive converged full-LBTE operator, Ding mapping, source uncertainty, UET coupling, Kubo/SI and alpha.
+
+DEPENDENCY_UNLOCKED: Material-mode comparator interface and collision-decomposition acquisition gate only.
+
+STATUS: `PASS_SCOPED_CALORINE_LATTICE_INTERFACE_INPUT_BOUNDARY`; `full_core_unlock=false`; `claim_promotion=false`.
+
+WHAT_CHANGED: Added a read-only binary-schema audit over 29 local HDF5 files, source-boundary artifact, tests and registry addendum. Total RTA gamma is explicitly barred from resistive-only interpretation.
+
+EQUATION_OR_MAPPING: Admitted comparator `S_T[omega,v,c,w]`; prohibited `gamma_total=gamma_U`; required physical `C_ph=C_N+C_R` remains open.
+
+VERIFICATION: Audit 10/10; focused tests 3 passed; source binary hash `f4d2dace656514abe3abfe53d29679de91f7a9a94edd2b70adb29f8456037909`; no fit or holdout access.
+
+CONTROLLING_BLOCKER: `normal_umklapp_split_or_admissible_full_collision_operator_missing`.
+
+NEXT_ACTION: Target a source/reproduction that emits process-resolved rates or a complete stable collision operator and eigenvectors; retain current arrays as comparator mode inputs.
+
+CLAIM_BOUNDARY: Source-interface boundary only; not physical UET transport, external validation or Full Topic 13 closure.
+
+EVIDENCE_PATHS:
+- `docs/scripts/audit/audit_topic13_calorine_lattice_interface_inputs.py`
+- `docs/core/test/test_topic13_calorine_lattice_interface_inputs.py`
+- `docs/core/artifacts/t13_calorine_lattice_interface_input_boundary.json`
+- `docs/core/artifacts/uet_equation_correspondence_registry_topic13_calorine_lattice_inputs_addendum.json`

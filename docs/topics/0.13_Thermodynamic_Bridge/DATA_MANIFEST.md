@@ -1336,3 +1336,22 @@ The artifact `docs/core/artifacts/t13_candidate_core_compatibility_audit.json` c
 The current matrix remains 10 major results and 36 required subresults: 21 `CLOSED_FOR_LANE`, 5 `CLOSED_AS_NO_GO`, 0 `CLOSED_FOR_CORE`, and 10 `OPEN`. The diagnostic is fail-closed when candidate holdout metadata is incomplete; it never assumes missing metadata is clean.
 
 EVIDENCE_PATHS: `docs/core/artifacts/t13_candidate_core_compatibility_audit.json`; `docs/scripts/audit/audit_topic13_candidate_core_compatibility.py`; `docs/core/test/test_topic13_candidate_core_compatibility.py`.
+## Calorine lattice-interface field boundary (2026-09-02)
+
+MAJOR_RESULT_CLOSURE: `T13_CALORINE_LATTICE_INTERFACE_INPUT_BOUNDARY` is `CLOSED_FOR_LANE` as a source-interface boundary; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: The hash-locked Calorine 12x12x6 HDF5 supplies finite mode frequency, q point, weight, group velocity, heat capacity, total RTA gamma and mode-kappa arrays. Twenty-nine local HDF5 files were scanned for collision structure.
+
+WHAT_REMAINS_OPEN: No Normal/Umklapp-resolved rates, collision matrix or collision eigenvectors are archived. The full-LBTE spectrum remains sign-indefinite; Ding material equivalence, source-grade uncertainty, UET coupling and independent alpha remain open.
+
+DEPENDENCY_UNLOCKED: Source-backed material-mode comparator interface and a targeted Normal/Umklapp/full-operator acquisition gate only.
+
+STATUS: `PASS_SCOPED_CALORINE_LATTICE_INTERFACE_INPUT_BOUNDARY`; no fit or holdout access.
+
+EQUATION_OR_MAPPING: `gamma_total` is admitted only as an RTA comparator field and is not identified with `gamma_U` or the resistive operator `C_R`.
+
+CONTROLLING_BLOCKER: `normal_umklapp_split_or_admissible_full_collision_operator_missing`.
+
+CLAIM_BOUNDARY: Calorine comparator source boundary only; not physical UET transport, Ding acceptance, TTG prediction, external validation or Full Topic 13 closure.
+
+EVIDENCE: `docs/core/artifacts/t13_calorine_lattice_interface_input_boundary.json`; source binary `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/mesh_12x12x6/kappa-m12126.hdf5`.

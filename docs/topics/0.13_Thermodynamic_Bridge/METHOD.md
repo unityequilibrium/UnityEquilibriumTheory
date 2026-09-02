@@ -104,3 +104,17 @@ For TTG, proceed through a declared external material-lattice sector and derive
 the interface to UET variables. Treat a UET-generated periodic background and
 Bloch spectrum as a separate fundamental track with its own stability, units,
 observable and homogeneous-limit gates.
+
+## Material PBTE input-admission method (2026-09-02)
+
+Inspect the archived binary schema rather than inferring transport content from
+a PBTE filename. Admit mode arrays only when the source summary hash and size
+match and the arrays are finite. Keep total RTA linewidth distinct from a
+resistive-only rate. A physical momentum-relaxing parent requires either a
+Normal/Umklapp-resolved decomposition or a complete admissible collision
+operator whose null modes, positivity, entropy and convergence can be checked.
+
+Collision eigenvalues alone cannot reconstruct that operator or its conserved
+subspace. Source-backed frequency, velocity and heat-capacity arrays may enter
+the material comparator interface while the collision split, Ding material
+mapping, uncertainty and UET coupling remain blocked.

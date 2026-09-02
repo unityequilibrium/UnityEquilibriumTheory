@@ -388,3 +388,17 @@ route. A claim that UET generates the lattice itself would require a separate
 periodic-background solution, stability proof, Bloch reduction and derived
 phonon current. Neither route permits identifying `Phi` with temperature,
 strain or phonon displacement without an explicit mapping.
+
+## Calorine lattice-interface input boundary
+
+The archived Calorine/Phono3py payload is sufficient to source mode frequency,
+q weights, group velocity, heat capacity, total linewidth and mode-RTA response
+for a comparator interface. It is not sufficient to instantiate the physical
+`C_N+C_R` parent: no Normal/Umklapp decomposition, collision matrix or
+collision eigenvectors are archived in the scanned local package.
+
+The collision-eigenvalue files from the full-LBTE route do not repair this
+absence, and their sign-indefinite spectrum remains a separate numerical
+blocker. Total RTA `gamma` must not be treated as an Umklapp-only relaxation
+rate. Calorine also remains non-equivalent to the Ding TTG specimen and lacks
+source-grade transport uncertainty and a UET-to-phonon coupling.

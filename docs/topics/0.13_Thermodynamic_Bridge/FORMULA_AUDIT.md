@@ -96,6 +96,19 @@ periodic background.
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | T13-CONTINUUM-ACTION-UMKLAPP-DIRECT-NOGO-20260902 | current `p1+p2-p3-p4=0`; required Umklapp `p1+p2-p3-p4=G!=0` | docs/scripts/audit/audit_topic13_continuum_action_umklapp_no_go.py | `p_i,G~E`; lattice spacing `a~E^-1` | translation symmetry and current action/config surfaces | direct current-action route closed as scoped no-go | config-field inventory, amplitude interface and eventwise four-momentum residual | explicit material lattice sector or periodic background absent | build external material-lattice interface for TTG; keep periodic/Bloch derivation separate |
 
+## Calorine Lattice-Interface Input Boundary (2026-09-02)
+
+The hash-locked 12x12x6 Calorine/Phono3py output supplies mode frequency,
+q point, weight, group velocity, heat capacity, total RTA `gamma` and
+`mode_kappa`. It does not supply a Normal/Umklapp split, collision matrix or
+collision eigenvectors. Therefore the arrays can populate a source-backed
+comparator interface, but `gamma_total` cannot be relabeled as a resistive-only
+Umklapp rate.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-CALORINE-LATTICE-INTERFACE-INPUT-BOUNDARY-20260902 | admitted `S_T[omega,v,c,w]`; prohibited `gamma_total=gamma_U`; required `C_ph=C_N+C_R` with `C_N|P>=0` | docs/scripts/audit/audit_topic13_calorine_lattice_interface_inputs.py | source mode/SI conventions; total `gamma` not promoted to SI resistive rate | hash-locked Calorine/Phono3py 12x12x6 candidate reproduction | mode inputs admitted for comparator; physical collision split blocked | binary hash/schema/range scan across 29 HDF5 and retained full-LBTE warning | no Normal/Umklapp split, collision matrix/eigenvectors, Ding mapping or source-grade uncertainty | acquire resolved rates or an admissible positive full collision operator |
+
 ## Dressed RA Pair and Microscopic Rung Boundary (2026-09-01)
 
 In the positive-energy pole approximation,

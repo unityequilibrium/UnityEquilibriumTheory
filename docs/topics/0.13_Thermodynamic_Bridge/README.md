@@ -827,6 +827,32 @@ NEXT_ACTION: Build the external material-lattice interface first for TTG, keepin
 CLAIM_BOUNDARY: No-go only for direct Umklapp generation by the current homogeneous continuum lane; not a theorem against UET-material coupling or a future periodic UET branch, and not Full Topic 13 closure.
 
 Machine-readable artifact: `docs/core/artifacts/t13_continuum_action_umklapp_direct_route_no_go.json`.
+
+## Current Major Result: Calorine lattice-interface input boundary (2026-09-02)
+
+MAJOR_RESULT_CLOSURE: `T13_CALORINE_LATTICE_INTERFACE_INPUT_BOUNDARY` is `CLOSED_FOR_LANE`; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: The source-locked 12x12x6 Calorine/Phono3py binary provides finite frequency, q/weight, group velocity, heat capacity, total gamma and mode-kappa arrays for a material comparator interface.
+
+WHAT_REMAINS_OPEN: Normal/Umklapp-resolved rates or a complete positive collision operator/eigenbasis, Ding material equivalence, source-grade uncertainty, UET-to-phonon/current coupling, Kubo/SI, independent `alpha_Phi_K`, and TTG closure.
+
+DEPENDENCY_UNLOCKED: Source-backed material-mode comparator interface and targeted collision-decomposition acquisition only.
+
+STATUS: `PASS_SCOPED_CALORINE_LATTICE_INTERFACE_INPUT_BOUNDARY`; `full_core_unlock=false`; `claim_promotion=false`.
+
+WHAT_CHANGED: Inspected the actual local PBTE binary schemas instead of assuming that the archived `gamma` array was an Umklapp rate.
+
+EQUATION_OR_MAPPING: Mode fields may construct comparator `S_T`; `gamma_total` remains total RTA linewidth and cannot substitute for `gamma_U` or `C_R`. A physical parent still requires `C_ph=C_N+C_R` with a verified momentum null and entropy positivity.
+
+VERIFICATION: All 10 artifact checks and 3 focused tests pass. Twenty-nine HDF5 files were scanned; the source hash/size and required finite arrays match. Collision eigenvalue files exist, but no collision matrix/eigenvectors or Normal/Umklapp fields were found. The full-LBTE stability warning remains unchanged.
+
+CONTROLLING_BLOCKER: `normal_umklapp_split_or_admissible_full_collision_operator_missing`.
+
+NEXT_ACTION: Acquire or reproduce Normal/Umklapp-resolved rates or a positive full collision matrix with eigenvectors; meanwhile use existing mode arrays only as comparator inputs.
+
+CLAIM_BOUNDARY: Source-backed Calorine comparator input boundary only; not physical UET transport, Ding equivalence, TTG prediction, external validation or Full Topic 13 closure.
+
+Machine-readable artifact: `docs/core/artifacts/t13_calorine_lattice_interface_input_boundary.json`.
 ## Current Major Result: T13-173 causal gate semantics alignment (2026-08-23)
 
 MAJOR_RESULT_CLOSURE: CLOSED_AS_NO_GO for the declared local conserved-C gradient finite-cone compatibility question; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.

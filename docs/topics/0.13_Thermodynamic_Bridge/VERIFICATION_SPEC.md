@@ -529,3 +529,14 @@ Acceptance requires retarded/advanced conjugacy, the declared spectral discontin
 - Keep `p1+p2-p3-p4=0` separate from the Umklapp requirement `p1+p2-p3-p4=G!=0`.
 - Prohibit promotion of the synthetic resistive rate to a UET or material coefficient, and prohibit fit or holdout access.
 - A pass rejects only direct Umklapp generation from the current homogeneous action. It leaves an external material-sector interface and a future periodic-background/Bloch derivation as separate admissible routes.
+
+## Calorine lattice-interface input boundary
+
+- Run `python -m docs.scripts.audit.audit_topic13_calorine_lattice_interface_inputs`.
+- Run `python -m pytest docs/core/test/test_topic13_calorine_lattice_interface_inputs.py -q`.
+- Require the archived 12x12x6 HDF5 size and SHA-256 to match its source summary.
+- Require finite `frequency`, `qpoint`, `weight`, `group_velocity`, `heat_capacity`, total `gamma` and `mode_kappa` arrays; total `gamma` must be nonnegative on the recorded grid.
+- Scan all local reproduction HDF5 files for collision matrix/eigenvectors and Normal/Umklapp-resolved fields; absence must remain explicit.
+- Preserve the existing full-LBTE sign/stability warning and prohibit `gamma_total=gamma_U` or `gamma_total=gamma_R` without a derived decomposition.
+- Prohibit Ding-equivalence, UET coupling, source-grade uncertainty, fit, holdout or physical transport promotion.
+- A pass closes only source-interface availability for a Calorine comparator.
