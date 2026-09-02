@@ -508,3 +508,14 @@ Acceptance requires retarded/advanced conjugacy, the declared spectral discontin
 - Require a positive active collision spectrum, solve residual `<=1e-8`, and metric refinement `<=1e-3`.
 - Prohibit a new state variable, observable relabeling, fit, holdout access or physical Kubo/SI emission.
 - A pass closes only the existing neutral response-carrier route as a no-go. Lattice/open-bath momentum relaxation and independently conserved multicharge branches remain admissible research routes.
+
+## Lattice momentum-relaxing heat parent
+
+- Run `python -m docs.scripts.audit.audit_topic13_lattice_momentum_relaxing_heat_parent`.
+- Run `python -m pytest docs/core/test/test_topic13_lattice_momentum_relaxing_heat_parent.py -q`.
+- Require symmetric positive-semidefinite `C_N` and `C_N|P>=0` within `1e-12`.
+- Require the linear Debye heat source to overlap the crystal-momentum null mode and prohibit a finite steady conductivity when `gamma_R=0`.
+- For `gamma_R>0`, require a positive-definite total operator, nonnegative entropy production, Onsager symmetry, and agreement with `kappa=||S_T||^2/gamma_R` within `1e-11`.
+- Require inverse-`gamma_R` response scaling, radial quadrature change `<=1e-8`, and uniform natural-energy scaling exponent `2` within `1e-10`.
+- Keep the rate origins as synthetic external controls; prohibit fitting, Xie 2026 access, physical Kubo/SI emission, or a UET correspondence claim.
+- A pass closes only the standard lattice parent. Physical phonon dispersion/collision provenance and the UET-to-lattice quasiparticle/current map remain required before a UET thermal branch exists.

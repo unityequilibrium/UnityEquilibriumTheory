@@ -69,6 +69,19 @@ independent, but its number is relaxed by conversion channels; the
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | T13-COUPLED-RESPONSE-HEAT-CARRIER-NOGO-20260902 | `P_perp J_H=-mu P_perp J_charge`; source rank `<=1` | docs/scripts/audit/audit_topic13_coupled_response_heat_carrier_no_go.py | source rank dimensionless | relativistic current identity and coupled collision metric | current neutral-response carrier route closed as no-go | source rank, zero-mu null, neutral-count relaxation, metric refinement | no admissible second conserved diffusion charge or lattice frame | derive a momentum-relaxing lattice/open-bath branch or an independently conserved charge from an explicit action |
 
+## Lattice Momentum-Relaxing Heat Parent (2026-09-02)
+
+The standard comparator declares a lattice rest frame and splits its linearized
+collision operator into `C_N=gamma_N(I-|P><P|)` and `C_R=gamma_R I`.
+Normal collisions preserve crystal momentum. A positive resistive rate removes
+that null mode and permits a finite response
+`kappa_natural=S_T^T(C_N+C_R)^(-1)S_T`; when `gamma_R=0` and the Debye heat
+source overlaps momentum, no finite steady conductivity exists.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-LATTICE-MOMENTUM-RELAXING-HEAT-PARENT-20260902 | `(C_N+C_R)chi=S_T`; `kappa_natural=S_T^T(C_N+C_R)^(-1)S_T`; `sigma=chi^T(C_N+C_R)chi>=0` | docs/core/uet_lattice_momentum_relaxing_heat_parent.py | `T,p,gamma~E`; `S_T~E^(3/2)`; `kappa_natural~E^2` | standard Debye PBTE; `gamma_N` and `gamma_R` are synthetic controls | standard comparator parent verified; no UET correspondence claimed | momentum null, singular limit, Onsager/entropy, inverse-rate, quadrature and energy scaling | physical lattice collision kernel and UET-to-lattice map absent | derive a source-backed collision kernel and explicit UET quasiparticle/current correspondence |
+
 ## Dressed RA Pair and Microscopic Rung Boundary (2026-09-01)
 
 In the positive-energy pole approximation,

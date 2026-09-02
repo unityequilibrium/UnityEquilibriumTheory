@@ -5599,3 +5599,33 @@ EVIDENCE_PATHS:
 - docs/core/test/test_topic13_action_normalized_elastic_scattering.py
 - docs/core/artifacts/t13_action_normalized_elastic_scattering_audit.json
 - docs/core/artifacts/uet_equation_correspondence_registry_topic13_elastic_scattering_addendum.json
+## 2026-09-02 - Lattice momentum-relaxing heat parent
+
+MAJOR_RESULT_CLOSURE: `T13_LATTICE_MOMENTUM_RELAXING_HEAT_PARENT` is `CLOSED_FOR_LANE` as `STANDARD_COMPARATOR_PARENT_READY`; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: Constructed a finite Debye/PBTE parent in a declared lattice rest frame. Its normal collision block preserves crystal momentum, its resistive block removes that null, and the resulting heat response satisfies symmetry, positivity, entropy, analytic, convergence and unit-scaling gates.
+
+WHAT_REMAINS_OPEN: The rates and dispersion are not physical material inputs and are not derived from UET. Physical collision provenance, UET-to-lattice mapping, Kubo/SI normalization, `alpha_Phi_K`, TTG source/material matching and uncertainty remain open.
+
+DEPENDENCY_UNLOCKED: Physical lattice-kernel provenance audit and UET-to-lattice quasiparticle/current mapping design only.
+
+STATUS: `PASS_SCOPED_LATTICE_HEAT_PARENT`; `full_core_unlock=false`; `claim_promotion=false`.
+
+WHAT_CHANGED: Advanced the explicit preferred-frame route unlocked by the prior no-go. Added the parent module, 14-test regression, 16-check audit artifact and standalone equation-registry addendum.
+
+EQUATION_OR_MAPPING: `C_N=gamma_N(I-|P><P|)`; `C_R=gamma_R I`; `(C_N+C_R)chi=S_T`; `kappa_natural=S_T^T(C_N+C_R)^(-1)S_T`; `sigma>=0`.
+
+VERIFICATION: Focused regression reports 14 passed. Audit reports 16/16 checks; zero resistive rate emits no finite steady response; inverse-rate residual is `2.44695e-15`; final quadrature change is `5.75033e-15`; energy-scaling exponent is `1.9999999999999978`. Strict JSON, source hashes and artifact-registry linkage pass. No fit or holdout access occurred.
+
+CONTROLLING_BLOCKER: `physical_lattice_collision_kernel_and_uet_to_lattice_mapping_missing`.
+
+NEXT_ACTION: Source-lock or independently reproduce a material PBTE collision kernel with normal/Umklapp classification and uncertainty, then audit whether any declared UET action variables map to its quasiparticle energy and heat current without relabeling `Phi`.
+
+CLAIM_BOUNDARY: Standard synthetic comparator only; not physical UET heat transport, material conductivity, TTG prediction, external validation or Full Topic 13 closure.
+
+EVIDENCE_PATHS:
+- `docs/core/uet_lattice_momentum_relaxing_heat_parent.py`
+- `docs/scripts/audit/audit_topic13_lattice_momentum_relaxing_heat_parent.py`
+- `docs/core/test/test_topic13_lattice_momentum_relaxing_heat_parent.py`
+- `docs/core/artifacts/t13_lattice_momentum_relaxing_heat_parent_audit.json`
+- `docs/core/artifacts/uet_equation_correspondence_registry_topic13_lattice_heat_parent_addendum.json`

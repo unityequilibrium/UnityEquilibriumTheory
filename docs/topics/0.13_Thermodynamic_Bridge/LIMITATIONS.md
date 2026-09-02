@@ -359,3 +359,17 @@ The existing neutral response excitation does not solve the heat-rank obstructio
 The coupled collision basis contains independent neutral and energy-weighted trial directions, but neither is presently an admissible physical heat source. Neutral count is relaxed by the action-derived conversion channels, while `E*p/T^2` is a variational basis function rather than `J_H`. Relabeling either one would change the observable contract without a derivation.
 
 This no-go is scoped. A lattice rest frame with Umklapp or other momentum relaxation, a declared open bath, or a genuinely conserved second charge can evade it. None of those extensions is currently closed, and choosing one requires a new action/ledger/KMS contract rather than another basis enlargement.
+
+## Lattice momentum-relaxing parent boundary
+
+The synthetic Debye/PBTE parent confirms that an explicit lattice rest frame
+and positive momentum-relaxing operator evade the preceding relativistic
+heat-rank obstruction. It does not derive Umklapp, boundary or bath rates from
+the UET action. The declared `gamma_N` and `gamma_R` values are scale controls,
+not graphite coefficients, fits or Kubo outputs.
+
+The parent contains no `C`, `Phi`, `R_gen` or `R_obs` state and therefore does
+not yet bridge UET to lattice quasiparticles. Its finite natural-unit response
+cannot be converted to SI conductivity or used with TTG until physical
+dispersion, collision channels, material frame, uncertainty and an explicit
+UET current/observable map are supplied. Xie 2026 remains unread.

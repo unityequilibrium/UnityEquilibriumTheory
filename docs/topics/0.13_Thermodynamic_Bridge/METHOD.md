@@ -73,3 +73,19 @@ flowchart LR
 | `0.0_Grand_Unification` | receives this topic as a bridge constraint | Integration-only until this topic's external data and formula audit are source-locked. |
 | `0.23_Unity_Scale_Link` | depends on this topic for information-energy scale logic | Must inherit `0.13` limitations where scale links rely on Landauer/Bekenstein bridge claims. |
 | `0.26_Cosmic_Dynamic_Frame` | may reference thermodynamic frame language | Cannot use synthetic/vacuum-sink sections as empirical support. |
+## Lattice momentum-relaxing heat-parent method (2026-09-02)
+
+The preferred-frame escape route is first tested as a standard-physics parent,
+not inserted into the UET action. In natural units, isotropic acoustic modes use
+`E(p)=c_s p` and the whitened temperature-gradient source
+`S_T=sqrt[d^3p n_B(1+n_B)/3] beta E v`. The collision split is
+`C_N=gamma_N(I-|P><P|)` and `C_R=gamma_R I`, where `C_N` preserves crystal
+momentum and `C_R` is a declared synthetic resistive control.
+
+The steady linearized PBTE is `(C_N+C_R)chi=S_T`, with
+`kappa_natural=S_T^T chi` and entropy quadratic form
+`sigma=chi^T(C_N+C_R)chi`. The diagnostic must fail closed at `gamma_R=0`
+when `S_T` overlaps the momentum null. A positive finite result is admissible
+only after symmetry, positivity, inverse-rate scaling, quadrature convergence
+and `E^2` unit scaling pass. No physical rate or UET correspondence is inferred
+from this parent.

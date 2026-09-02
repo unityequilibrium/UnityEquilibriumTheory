@@ -1,0 +1,104 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "STANDARD_COMPARATOR_NOT_MERGED_AS_UET_EQUATION",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "equation_entries": [
+    {
+      "equation_id": "standard.lattice.thermal.momentum_relaxing_heat_parent",
+      "version": "1",
+      "classification": "standard_physics_lattice_heat_parent",
+      "relation_or_code_path": {
+        "normal_collision": "C_N=gamma_N*(I-|P><P|)",
+        "resistive_collision": "C_R=gamma_R*I",
+        "linearized_pbte": "(C_N+C_R) chi=S_T",
+        "heat_source": "S_T(p)=sqrt[dPi_3*n_B*(1+n_B)/3]*beta*E(p)*v(p)",
+        "conductivity": "kappa_natural=S_T^T*(C_N+C_R)^(-1)*S_T",
+        "entropy_production": "sigma[chi]=chi^T*(C_N+C_R)*chi>=0",
+        "singular_limit": "gamma_R=0 and <P|S_T>!=0 implies no finite steady conductivity"
+      },
+      "ontology": {
+        "state": "linearized acoustic quasiparticle distribution in a declared lattice rest frame",
+        "C": "unchanged and absent from the comparator state",
+        "Phi": "unchanged and absent from the comparator state",
+        "R_gen": "excluded",
+        "R_obs": "excluded"
+      },
+      "standard_physics_counterpart": "Linearized phonon Boltzmann equation with normal and resistive collisions",
+      "variables": {
+        "C_N": "normal collision operator preserving crystal momentum",
+        "C_R": "resistive Umklapp/boundary/open-bath control operator",
+        "S_T": "temperature-gradient heat source",
+        "chi": "linearized distribution response",
+        "kappa_natural": "natural-unit heat-response form"
+      },
+      "mathematical_role": "preferred-frame escape parent for the relativistic heat-rank no-go",
+      "observable_mapping": "Natural-unit heat-response form in a synthetic lattice rest frame, not material conductivity",
+      "unit_lane": "natural_3p1_hbar_c_kB_1",
+      "units": {
+        "T_E_gamma_p": "E",
+        "sound_speed": "1",
+        "heat_source": "E^(3/2)",
+        "collision_operator": "E",
+        "kappa_natural": "E^2"
+      },
+      "parameter_dimensions": {
+        "T_E_gamma_p": "E",
+        "sound_speed": "1",
+        "heat_source": "E^(3/2)",
+        "collision_operator": "E",
+        "kappa_natural": "E^2"
+      },
+      "derivation_class": "standard_physics_synthetic_pbte_parent",
+      "source_or_origin": "Synthetic Debye PBTE comparator; rates are declared controls",
+      "assumptions": {
+        "linear_isotropic_dispersion": "E=c_s*p",
+        "lattice_rest_frame": true,
+        "normal_operator_preserves_momentum": true,
+        "resistive_rate_external_control": true
+      },
+      "symmetry_and_conservation": "C_N and C_R symmetric positive semidefinite; C_N preserves crystal momentum; C_R relaxes it",
+      "limiting_cases": [
+        "gamma_R=0",
+        "gamma_R>0",
+        "uniform energy rescaling",
+        "radial quadrature refinement"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_lattice_momentum_relaxing_heat_parent.py"
+      ],
+      "verifier_paths": [
+        "docs/core/test/test_topic13_lattice_momentum_relaxing_heat_parent.py",
+        "docs/scripts/audit/audit_topic13_lattice_momentum_relaxing_heat_parent.py"
+      ],
+      "observable": "Natural-unit heat-response form in a synthetic lattice rest frame, not material conductivity",
+      "data_role": "SYNTHETIC_STANDARD_COMPARATOR",
+      "evidence_class": "INTERNAL_SYNTHETIC_STANDARD_COMPARATOR",
+      "proof_status": "STANDARD_PARENT_STRUCTURAL_LIMIT_VERIFIED",
+      "verification_status": "PASS_SCOPED_LATTICE_HEAT_PARENT",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_lattice_momentum_relaxing_heat_parent_audit.json",
+          "sha256": "6974fb64948fc38cc831ac6e53474b6ab22f10b30a32fa53ea67d854b0116f21"
+        }
+      ],
+      "downstream_dependencies": [
+        "physical_lattice_pbte_collision_source_provenance_audit",
+        "uet_to_lattice_quasiparticle_observable_mapping_design"
+      ],
+      "dependency_role": "nonphysical_design_parent",
+      "physical_dependency_unlock": false,
+      "controlling_blocker": "physical_lattice_collision_kernel_and_uet_to_lattice_mapping_missing",
+      "failure_mode": [
+        "physical_lattice_collision_kernel_and_rate_provenance_missing",
+        "uet_action_to_lattice_quasiparticle_and_current_mapping_missing",
+        "material_specific_dispersion_boundary_and_Umklapp_channels_missing",
+        "physical_Kubo_and_SI_frame_normalization_missing",
+        "independent_alpha_Phi_K_and_TTG_source_closure_missing"
+      ],
+      "next_hardening_step": "Replace synthetic rates with a source-backed lattice collision kernel and derive, rather than assume, the UET-to-lattice quasiparticle/current mapping.",
+      "claim_boundary": "Standard-physics synthetic lattice parent only; not a UET transport derivation, physical Umklapp rate, material Kubo/SI coefficient, TTG prediction, external validation, or Full Topic 13 closure."
+    }
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}

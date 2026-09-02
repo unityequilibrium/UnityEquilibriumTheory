@@ -775,6 +775,32 @@ CONTROLLING_BLOCKER: `admissible_preferred_frame_or_independent_conserved_diffus
 NEXT_ACTION: Choose one explicit physical extension: derive a lattice/momentum-relaxing heat branch appropriate to TTG, or derive a genuinely conserved second diffusion charge from the action. Do not relabel the current neutral or energy-moment trial modes.
 
 CLAIM_BOUNDARY: Structural no-go for the current relativistic coupled response-mode route only; not a theorem against lattice, open-bath or multicharge heat transport, and not Full Topic 13 closure.
+
+## Current Major Result: lattice momentum-relaxing heat parent (2026-09-02)
+
+MAJOR_RESULT_CLOSURE: `T13_LATTICE_MOMENTUM_RELAXING_HEAT_PARENT` is `CLOSED_FOR_LANE` as a standard comparator parent; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: A declared lattice rest frame with symmetric normal and resistive collision blocks evades the current relativistic heat-rank no-go. Normal collisions preserve crystal momentum; a positive resistive rate removes the null and yields a finite positive response with nonnegative entropy production.
+
+WHAT_REMAINS_OPEN: Physical lattice dispersion and collision-rate provenance, a UET-action-to-lattice quasiparticle/current map, material/TTG state mapping, physical Kubo/SI normalization, independent `alpha_Phi_K`, and source uncertainty.
+
+DEPENDENCY_UNLOCKED: Physical lattice PBTE source/kernel audit and UET-to-lattice correspondence design only. No physical transport, Core, Gravity, Galaxy or external-validation dependency is unlocked.
+
+STATUS: `PASS_SCOPED_LATTICE_HEAT_PARENT`; `full_core_unlock=false`; `claim_promotion=false`.
+
+WHAT_CHANGED: Implemented the first explicit preferred-frame escape parent permitted by the coupled-response no-go instead of adding another inadmissible trial basis to the relativistic lane.
+
+EQUATION_OR_MAPPING: `C_N=gamma_N(I-|P><P|)`; `C_R=gamma_R I`; `(C_N+C_R)chi=S_T`; `kappa_natural=S_T^T chi`; `sigma=chi^T(C_N+C_R)chi>=0`.
+
+VERIFICATION: All 16 artifact checks and 14 focused tests pass. At `gamma_R=0` no finite steady response is emitted. At positive `gamma_R`, the analytic null-mode response agrees within the declared tolerance; inverse-rate residual is `2.45e-15`, final quadrature change is `5.75e-15`, and the natural-energy scaling exponent is `2.000000000000`.
+
+CONTROLLING_BLOCKER: `physical_lattice_collision_kernel_and_uet_to_lattice_mapping_missing`.
+
+NEXT_ACTION: Replace synthetic rates with a source-backed material collision kernel, then derive rather than assume the UET-to-lattice quasiparticle and heat-current correspondence.
+
+CLAIM_BOUNDARY: Synthetic standard-physics parent only; not a UET transport derivation, physical Umklapp rate, material conductivity, TTG prediction, external validation or Full Topic 13 closure.
+
+Machine-readable artifact: `docs/core/artifacts/t13_lattice_momentum_relaxing_heat_parent_audit.json`.
 ## Current Major Result: T13-173 causal gate semantics alignment (2026-08-23)
 
 MAJOR_RESULT_CLOSURE: CLOSED_AS_NO_GO for the declared local conserved-C gradient finite-cone compatibility question; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.
