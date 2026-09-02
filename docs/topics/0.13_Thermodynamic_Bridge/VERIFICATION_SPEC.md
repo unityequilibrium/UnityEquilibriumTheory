@@ -551,3 +551,17 @@ Acceptance requires retarded/advanced conjugacy, the declared spectral discontin
 - Require `Z_Phi -> s Z_Phi`, `g -> g/s` to preserve the interaction and conditional-alpha product over all registered scale witnesses.
 - Keep `Z_Phi`, `g_Phi_theta`, `chi_u_theta`, collision split and SI conversion as independent required inputs; prohibit fitting them to TTG or reading Xie 2026.
 - A pass closes conditional interface architecture and identifiability only, not an accepted action term or physical transport.
+
+## Material-interface factor resolution
+
+- Run `python -m docs.scripts.audit.audit_topic13_material_interface_factor_resolution`.
+- Run `python -m pytest docs/core/test/test_topic13_material_interface_factor_resolution.py -q`.
+- Require the implemented `interaction_energy_density` interface to have no displacement, strain or `theta` argument.
+- Require `response_coupling h` to have natural mass dimension one and the conditional strain coefficient `g_Phi_theta` to have dimension three.
+- Require both complete operators to close to energy-density dimension four while preserving their distinct field support.
+- Preserve the field- and matter-coupling normalization no-go artifacts and prohibit extracting a physical residue from a canonical coordinate choice.
+- Preserve `alpha_Phi_T^nat` as a different natural-unit lane and require `numeric_alpha_phi_k_emitted=false`.
+- Admit Calorine heat capacity only as comparator evidence; require the Normal/Umklapp split to remain open.
+- Require uncertainty propagation algebra to pass with synthetic factors, but prohibit interpreting the witness as calibration.
+- Prohibit a new action term, direct `h -> g_Phi_theta` relabeling, fitting, Xie 2026 access or dependency promotion.
+- A pass closes the factor taxonomy and direct-coupling substitution no-go only. Physical `Z_Phi`, strain coupling/microscopic match, material response, accepted `C_src`, collision decomposition and SI alpha remain open.

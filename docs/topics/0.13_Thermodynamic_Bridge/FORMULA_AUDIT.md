@@ -122,6 +122,20 @@ silently identified with `Phi`.
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | T13-UET-MATERIAL-LATTICE-INTERFACE-20260902 | `L_int=-g_Phi_theta Phi_E theta`; `alpha_Phi_K=chi_u_theta*g_Phi_theta*Z_Phi/C_src`; UET/lattice exchange sources `-Q_ex/+Q_ex` | docs/core/uet_material_lattice_interface_contract.py | natural exponents: `Phi_E~E`, `g~E^3`, `theta~1`, energy density `E^4`, `Q_ex~E^5`, `alpha~E` | conditional interface constrained by current no-go and PBTE source boundary | ontology/units/ledger/identifiability closed; physical coefficients open | exact unit sums, exchange cancellation and field-rescaling invariance | physical `Z_Phi`, coupling, material response, collision split and SI uncertainty absent | derive or source-lock every factor independently before evaluating alpha |
 
+## Material-Interface Factor Resolution (2026-09-02)
+
+The implemented interaction and the required material interaction are not the
+same operator. The current action has
+`V_int=-epsilon_nc*h*delta_phi*(chi_1^2+chi_2^2)/2`, where `h~E`. The
+conditional material route needs `L_int=-g_Phi_theta*Phi_E*theta`, where
+`g_Phi_theta~E^3`. The coefficients differ by mass dimension two, and the
+operators act on different state variables. Directly relabeling `h` as
+`g_Phi_theta` is therefore closed as a scoped no-go.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-MATERIAL-INTERFACE-FACTOR-RESOLUTION-20260902 | implemented `h*delta_phi*chi^2`; required `g_Phi_theta*Phi_E*theta`; `alpha_Phi_K=chi_u_theta*g_Phi_theta*Z_Phi/C_src` | docs/core/uet_material_interface_factor_resolution.py | `h~E`, `g~E^3`, `Phi_E~E`, `theta~1`, `C_src~E^3`, `alpha~E` | current covariant action, normalization no-go, natural action bridge and conditional material interface | factor gate closed; direct coupling substitution closed as no-go; physical factors open | operator signature, unit gap, prior artifact identities, uncertainty algebra and holdout policy | physical residue, new strain operator/microscopic match, material response, accepted `C_src` and collision split missing | design a separate `Phi_E*theta` candidate through F0-F4 or source-lock a microscopic match; never reuse `h` |
+
 ## Dressed RA Pair and Microscopic Rung Boundary (2026-09-01)
 
 In the positive-energy pole approximation,

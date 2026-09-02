@@ -879,6 +879,32 @@ NEXT_ACTION: Derive or source-lock `Z_Phi`, `g_Phi_theta` and `chi_u_theta` inde
 CLAIM_BOUNDARY: Conditional interface and identifiability result only; not an accepted UET action term, physical coupling, alpha calibration, TTG prediction, external validation or Full Topic 13 closure.
 
 Machine-readable artifact: `docs/core/artifacts/t13_uet_material_lattice_interface_contract_audit.json`.
+
+## Current Major Result: material-interface factor resolution (2026-09-02)
+
+MAJOR_RESULT_CLOSURE: `T13_MATERIAL_INTERFACE_FACTOR_RESOLUTION` is `CLOSED_FOR_LANE`; direct reuse of the existing matter coupling is `CLOSED_AS_NO_GO`. Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: Every factor in `alpha_Phi_K=chi_u_theta*g_Phi_theta*Z_Phi/C_src` now has a unit role, current evidence class, admissible acquisition route and explicit blocker. The current `Phi*chi^2` coupling cannot substitute for `Phi_E*div(u)`.
+
+WHAT_REMAINS_OPEN: Physical `Z_Phi`, a separately declared strain coupling or microscopic match, source-backed `chi_u_theta`, accepted Ding-equivalent `C_src`, Normal/Umklapp collision decomposition, SI conversion and independent alpha evidence.
+
+DEPENDENCY_UNLOCKED: Candidate `Phi_E*div(u)` F0-F4 design, material-response source specification and conditional-alpha uncertainty gate only.
+
+STATUS: `PASS_FACTOR_RESOLUTION_WITH_COUPLING_SUBSTITUTION_NO_GO`; `full_core_unlock=false`; `claim_promotion=false`.
+
+WHAT_CHANGED: Replaced the broad request to derive or source every factor with a verified factor matrix and rejected the tempting but invalid shortcut of reusing `response_coupling h`.
+
+EQUATION_OR_MAPPING: Current action: `V_int=-epsilon_nc*h*delta_phi*chi^2/2`, `h~E`. Required material candidate: `L_int=-g_Phi_theta*Phi_E*theta`, `g~E^3`. Conditional uncertainty: `Var(alpha)=grad(alpha)^T Sigma grad(alpha)`.
+
+VERIFICATION: Audit passes `15/15`; linked normalization/interface/natural-bridge/foundation regression passes `32` tests. The coefficient-dimension gap is two. Xie 2026 was not read and no fit or physical coefficient was emitted.
+
+CONTROLLING_BLOCKER: `new_Phi_strain_operator_or_independent_microscopic_match_missing`.
+
+NEXT_ACTION: Design the distinct `Phi_E*theta` action candidate through ontology, symmetry, units, variation and observable gates, or source-lock an equivalent microscopic response. Do not modify the accepted action or reuse `h` without that evidence.
+
+CLAIM_BOUNDARY: Factor-resolution and current-operator substitution no-go only; not a physical coupling, alpha calibration, material transport result, TTG prediction, external validation or Full Topic 13 closure.
+
+Machine-readable artifact: `docs/core/artifacts/t13_material_interface_factor_resolution_audit.json`.
 ## Current Major Result: T13-173 causal gate semantics alignment (2026-08-23)
 
 MAJOR_RESULT_CLOSURE: CLOSED_AS_NO_GO for the declared local conserved-C gradient finite-cone compatibility question; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.

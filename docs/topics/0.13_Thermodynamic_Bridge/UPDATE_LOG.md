@@ -5717,3 +5717,34 @@ EVIDENCE_PATHS:
 - `docs/core/test/test_topic13_material_lattice_interface_contract.py`
 - `docs/core/artifacts/t13_uet_material_lattice_interface_contract_audit.json`
 - `docs/core/artifacts/uet_equation_correspondence_registry_topic13_material_lattice_interface_addendum.json`
+
+## 2026-09-02 - Material-interface factor resolution
+
+MAJOR_RESULT_CLOSURE: `T13_MATERIAL_INTERFACE_FACTOR_RESOLUTION` is `CLOSED_FOR_LANE`; direct substitution of the existing matter coupling for the required strain coupling is `CLOSED_AS_NO_GO`. Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: The complete conditional-alpha factor matrix, the action/operator distinction, the coefficient-dimension gap and the symbolic uncertainty contract. Existing natural `alpha_Phi_T^nat` remains a separate action lane.
+
+WHAT_REMAINS_OPEN: Physical response residue, a new `Phi_E*theta` operator or microscopic match, source-backed material response, accepted Ding-equivalent `C_src`, Normal/Umklapp decomposition, SI conversion and independent alpha evidence.
+
+DEPENDENCY_UNLOCKED: F0-F4 design for a separate strain operator, material-response source requirements and conditional-alpha uncertainty gate only.
+
+STATUS: `PASS_FACTOR_RESOLUTION_WITH_COUPLING_SUBSTITUTION_NO_GO`; `full_core_unlock=false`; `claim_promotion=false`.
+
+WHAT_CHANGED: Added a pure factor-resolution module, 7 tests, a 15-check audit artifact and standalone registry addendum. No current action file or physical gate was modified.
+
+EQUATION_OR_MAPPING: Implemented `h*delta_phi*chi^2` uses `h~E`; required `g_Phi_theta*Phi_E*theta` uses `g~E^3`. `alpha_Phi_K=chi_u_theta*g_Phi_theta*Z_Phi/C_src`; correlated uncertainty is `Var(alpha)=grad(alpha)^T Sigma grad(alpha)`.
+
+VERIFICATION: Audit passes `15/15`; focused and linked regression passes `32` tests including foundation compatibility checks. Both complete operators close to `E^4`, but coefficient dimensions differ by two and their state supports are distinct. No fit, threshold change, physical coefficient or Xie 2026 access occurred.
+
+CONTROLLING_BLOCKER: `new_Phi_strain_operator_or_independent_microscopic_match_missing`.
+
+NEXT_ACTION: Build a candidate `Phi_E*theta` extension through F0-F4 without merging it into the accepted action, or source-lock an equivalent microscopic response; do not reuse `response_coupling h`.
+
+CLAIM_BOUNDARY: Structural factor gate and current-operator substitution no-go only; not a physical strain coupling, alpha calibration, TTG prediction, external validation or Full Topic 13 closure.
+
+EVIDENCE_PATHS:
+- `docs/core/uet_material_interface_factor_resolution.py`
+- `docs/scripts/audit/audit_topic13_material_interface_factor_resolution.py`
+- `docs/core/test/test_topic13_material_interface_factor_resolution.py`
+- `docs/core/artifacts/t13_material_interface_factor_resolution_audit.json`
+- `docs/core/artifacts/uet_equation_correspondence_registry_topic13_material_interface_factor_resolution_addendum.json`

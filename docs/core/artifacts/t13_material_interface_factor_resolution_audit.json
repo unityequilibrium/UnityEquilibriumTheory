@@ -1,0 +1,248 @@
+{
+  "schema_version": "t13-material-interface-factor-resolution-v1",
+  "major_result_id": "T13_MATERIAL_INTERFACE_FACTOR_RESOLUTION",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "CLOSED_FOR_LANE",
+  "closure_disposition": "CLOSED_AS_NO_GO_EXISTING_MATTER_COUPLING_SUBSTITUTION",
+  "verification_status": "PASS_FACTOR_RESOLUTION_WITH_COUPLING_SUBSTITUTION_NO_GO",
+  "what_is_closed": [
+    "Every factor in alpha_Phi_K=chi_u_theta*g_Phi_theta*Z_Phi/C_src now has a machine-readable evidence class, unit role, admissible route and blocker.",
+    "The implemented response_coupling h multiplies delta_phi*chi^2, while the required g_Phi_theta multiplies Phi_E*theta; their field support and coefficient dimensions differ.",
+    "Directly relabeling h as g_Phi_theta is closed as a scoped no-go for the current action.",
+    "The existing alpha_Phi_T^nat is retained as a homogeneous natural-action bridge and is explicitly barred from substitution for SI material alpha_Phi_K.",
+    "The independent-factor and covariance-form uncertainty propagation contracts are fixed without emitting a numeric physical coefficient."
+  ],
+  "equation_registry_ids": [
+    "uet.o2.thermal.material_interface_factor_resolution"
+  ],
+  "registration_status": "DIAGNOSTIC_FACTOR_GATE_NOT_NEW_ACTION_TERM",
+  "equation_or_mapping": {
+    "required_material_bridge": "alpha_Phi_K=chi_u_theta*g_Phi_theta*Z_Phi/C_src",
+    "implemented_matter_operator": "V_int=-epsilon_nc*h*delta_phi*(chi_1^2+chi_2^2)/2",
+    "required_strain_operator": "L_int=-g_Phi_theta*Phi_E*theta",
+    "response_map": "Phi_E=Z_Phi*DeltaPhi",
+    "action_natural_bridge": "alpha_Phi_T^nat=(partial_Phi epsilon)/(partial_T epsilon)",
+    "independent_uncertainty": "(sigma_alpha/|alpha|)^2=(sigma_chi/chi)^2+(sigma_g/g)^2+(sigma_Z/Z)^2+(sigma_C/C_src)^2",
+    "correlated_uncertainty": "Var(alpha)=grad(alpha)^T Sigma grad(alpha)"
+  },
+  "ontology": {
+    "Phi": "effective response variable; not temperature or strain",
+    "chi_A": "O(2) matter scalar components; not material displacement",
+    "u_i": "external material displacement",
+    "theta": "volumetric strain div(u)",
+    "C": "collective coordinate; not heat capacity or lattice mass",
+    "R_gen": "derived history trace; excluded from state and backreaction"
+  },
+  "unit_lane": "natural_factor_audit_open_SI",
+  "units": {
+    "response_coupling_h": 1,
+    "g_Phi_theta": 3,
+    "Phi_E": 1,
+    "theta": 0,
+    "C_src_natural": 3,
+    "alpha_per_normalized_Phi_natural": 1
+  },
+  "derivation_class": "action_operator_and_unit_substitution_no_go_plus_factor_evidence_resolution",
+  "observable": "Conditional material thermal coefficient factor gate; no numeric alpha",
+  "data_role": "INTERNAL_STRUCTURAL_AUDIT_NO_CALIBRATION_NO_HOLDOUT",
+  "factor_matrix": {
+    "Z_Phi": {
+      "required_role": "normalized Phi to energy-dimension response residue",
+      "required_mass_dimension": 1,
+      "current_evidence": "the action declares phi mass dimension one and a dimensionless kinetic coefficient, but field rescaling leaves the physical amplitude unidentified",
+      "resolution_status": "OPEN_PHYSICAL_RESIDUE_NONIDENTIFIABLE",
+      "admissible_route": "source-locked pole residue or independent observable-amplitude/SI map"
+    },
+    "response_coupling_h": {
+      "required_role": "implemented Phi--O(2)-amplitude interaction",
+      "required_mass_dimension": 1,
+      "current_evidence": "present in the current natural-unit action",
+      "resolution_status": "ACTION_SLOT_PRESENT_NOT_STRAIN_COUPLING",
+      "admissible_route": "retain only in its declared O(2)-matter operator"
+    },
+    "g_Phi_theta": {
+      "required_role": "Phi_E--volumetric-strain coupling",
+      "required_mass_dimension": 3,
+      "current_evidence": "no displacement or strain operator in current action",
+      "resolution_status": "ABSENT_FROM_CURRENT_ACTION",
+      "admissible_route": "new F0--F4 action extension or independent microscopic matching"
+    },
+    "chi_u_theta": {
+      "required_role": "dimensionless material response kernel in declared lane",
+      "required_mass_dimension": 0,
+      "current_evidence": "no source-backed strain-to-energy response kernel",
+      "resolution_status": "OPEN_SOURCE_OR_MICROSCOPIC_MATCH",
+      "admissible_route": "same-material/state deformation-potential, Gruneisen or response kernel"
+    },
+    "C_src": {
+      "required_role": "volumetric heat-capacity denominator",
+      "required_mass_dimension": 3,
+      "current_evidence": "hash-locked Calorine mode heat capacities exist as a comparator; Ding-equivalent accepted calibration input remains open",
+      "resolution_status": "COMPARATOR_AVAILABLE_ACCEPTED_INPUT_OPEN",
+      "admissible_route": "authorized Ding payload or accepted same-regime PBTE reproduction"
+    },
+    "C_N_C_R": {
+      "required_role": "normal/resistive collision decomposition",
+      "required_mass_dimension": 1,
+      "current_evidence": "total RTA gamma is available but cannot be relabeled as resistive-only",
+      "resolution_status": "OPEN_COLLISION_DECOMPOSITION",
+      "admissible_route": "process-resolved rates or stable full collision operator/eigenvectors"
+    },
+    "alpha_Phi_T_natural": {
+      "required_role": "local homogeneous action response",
+      "required_mass_dimension": 1,
+      "current_evidence": "derived on one natural-unit O(2) quasiparticle branch",
+      "resolution_status": "DERIVED_DIFFERENT_LANE_NOT_SI_ALPHA",
+      "admissible_route": "retain as internal action bridge; do not substitute for material alpha"
+    },
+    "alpha_Phi_K": {
+      "required_role": "kelvin per normalized base Phi",
+      "required_mass_dimension": 1,
+      "current_evidence": "no admissible complete factor product",
+      "resolution_status": "OPEN_COMPOSITE_COEFFICIENT",
+      "admissible_route": "resolve Z_Phi, g_Phi_theta, chi_u_theta and accepted C_src independently"
+    }
+  },
+  "operator_substitution_no_go": {
+    "implemented_operator_fields": [
+      "delta_phi",
+      "chi_1",
+      "chi_2"
+    ],
+    "required_operator_fields": [
+      "Phi_E",
+      "theta",
+      "u_i"
+    ],
+    "implemented_coefficient": "response_coupling_h",
+    "implemented_coefficient_mass_dimension": 1,
+    "required_coefficient": "g_Phi_theta",
+    "required_coefficient_mass_dimension": 3,
+    "missing_mass_dimension": 2,
+    "implemented_operator_mass_dimension_without_coefficient": 3,
+    "required_operator_mass_dimension_without_coefficient": 1,
+    "conclusion": "response_coupling_h cannot be relabeled as g_Phi_theta; the operators have different state support and the coefficients differ by natural mass dimension two"
+  },
+  "uncertainty_witness": {
+    "alpha_natural": 0.6,
+    "relative_standard_uncertainty": 0.2,
+    "standard_uncertainty_natural": 0.12
+  },
+  "checks": {
+    "implemented_operator_has_no_displacement_or_strain_argument": true,
+    "implemented_and_required_operators_have_different_state_support": true,
+    "implemented_coupling_has_mass_dimension_one": true,
+    "required_strain_coupling_has_mass_dimension_three": true,
+    "direct_coefficient_substitution_is_dimensionally_invalid": true,
+    "both_declared_operator_terms_close_to_energy_density": true,
+    "field_residue_remains_nonidentifiable": true,
+    "matter_coupling_rescaling_no_go_is_preserved": true,
+    "natural_action_bridge_is_derived_but_not_si_alpha": true,
+    "calorine_heat_capacity_is_comparator_only": true,
+    "normal_umklapp_split_remains_absent": true,
+    "prior_interface_did_not_promote_physical_coupling": true,
+    "factor_matrix_keeps_alpha_open": true,
+    "independent_uncertainty_algebra_closes": true,
+    "no_fit_holdout_or_physical_promotion": true
+  },
+  "open_blockers": [
+    "physical_Phi_energy_residue_Z_Phi_missing",
+    "new_Phi_strain_operator_or_independent_microscopic_match_missing",
+    "source_backed_material_response_chi_u_theta_missing",
+    "accepted_Ding_equivalent_C_src_and_material_state_mapping_missing",
+    "normal_umklapp_split_or_admissible_full_collision_operator_missing",
+    "SI_conversion_and_independent_alpha_record_missing"
+  ],
+  "controlling_blocker": "new_Phi_strain_operator_or_independent_microscopic_match_missing",
+  "source_hashes": {
+    "docs/core/uet_material_interface_factor_resolution.py": "7ebcbed3f6c2056a06e393afd9cba2c81614237bf924da0dc4f54b42ee9b3ce1",
+    "docs/core/test/test_topic13_material_interface_factor_resolution.py": "6cddf428adaa75764aa92600a1beb7c5272f014e1150a7b547199635c7b808ed",
+    "docs/scripts/audit/audit_topic13_material_interface_factor_resolution.py": "3d291c4a0aadde8a97475584bc3546172758dbad7d0f2cffb7d03e202a5bd94f"
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_uet_material_lattice_interface_contract_audit.json",
+      "sha256": "e6cfea6a55f8d54040fcaa570c3b244a98bd454fd1462144f8948c5caa16487c"
+    },
+    {
+      "path": "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json",
+      "sha256": "41cda98a01b282fa5c2789ef93ce2f249041550e40763cdcb083658712c564ac"
+    },
+    {
+      "path": "docs/core/artifacts/t13_covariant_matter_coupling_normalization_no_go.json",
+      "sha256": "bdda0a764af624ffb7b7c8bb04d1cb1bb44539a0159e4ca8ba9b825473e09675"
+    },
+    {
+      "path": "docs/core/artifacts/t13_uet_o2_action_thermal_observable_bridge_audit.json",
+      "sha256": "7ba49d3f629c91f3f88dda6ad717d8928e58439de7517a5979f0a465b9f52585"
+    },
+    {
+      "path": "docs/core/artifacts/t13_calorine_lattice_interface_input_boundary.json",
+      "sha256": "5a2bf941484887b2140f6400055ccb80c4443435f32f1488f2cb4f8dec4d9fb0"
+    }
+  ],
+  "dependency_unlocked": [
+    "candidate_Phi_strain_action_extension_F0_F4_design",
+    "material_response_kernel_source_requirement",
+    "conditional_alpha_uncertainty_gate"
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "xie_2026_accessed": false,
+  "parameter_fitting_performed": false,
+  "claim_boundary": "Factor-resolution and current-operator substitution no-go only; no new action term, physical residue/coupling, numeric alpha, TTG prediction or Full Topic 13 closure.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "Every factor in alpha_Phi_K=chi_u_theta*g_Phi_theta*Z_Phi/C_src now has a machine-readable evidence class, unit role, admissible route and blocker.",
+      "The implemented response_coupling h multiplies delta_phi*chi^2, while the required g_Phi_theta multiplies Phi_E*theta; their field support and coefficient dimensions differ.",
+      "Directly relabeling h as g_Phi_theta is closed as a scoped no-go for the current action.",
+      "The existing alpha_Phi_T^nat is retained as a homogeneous natural-action bridge and is explicitly barred from substitution for SI material alpha_Phi_K.",
+      "The independent-factor and covariance-form uncertainty propagation contracts are fixed without emitting a numeric physical coefficient."
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "physical_Phi_energy_residue_Z_Phi_missing",
+      "new_Phi_strain_operator_or_independent_microscopic_match_missing",
+      "source_backed_material_response_chi_u_theta_missing",
+      "accepted_Ding_equivalent_C_src_and_material_state_mapping_missing",
+      "normal_umklapp_split_or_admissible_full_collision_operator_missing",
+      "SI_conversion_and_independent_alpha_record_missing"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "candidate_Phi_strain_action_extension_F0_F4_design",
+      "material_response_kernel_source_requirement",
+      "conditional_alpha_uncertainty_gate"
+    ],
+    "STATUS": "PASS_FACTOR_RESOLUTION_WITH_COUPLING_SUBSTITUTION_NO_GO",
+    "WHAT_CHANGED": "Resolved the material alpha product factor by factor and closed direct substitution of the existing Phi--O(2) coupling for a Phi--strain coupling.",
+    "EQUATION_OR_MAPPING": {
+      "required_material_bridge": "alpha_Phi_K=chi_u_theta*g_Phi_theta*Z_Phi/C_src",
+      "implemented_matter_operator": "V_int=-epsilon_nc*h*delta_phi*(chi_1^2+chi_2^2)/2",
+      "required_strain_operator": "L_int=-g_Phi_theta*Phi_E*theta",
+      "response_map": "Phi_E=Z_Phi*DeltaPhi",
+      "action_natural_bridge": "alpha_Phi_T^nat=(partial_Phi epsilon)/(partial_T epsilon)",
+      "independent_uncertainty": "(sigma_alpha/|alpha|)^2=(sigma_chi/chi)^2+(sigma_g/g)^2+(sigma_Z/Z)^2+(sigma_C/C_src)^2",
+      "correlated_uncertainty": "Var(alpha)=grad(alpha)^T Sigma grad(alpha)"
+    },
+    "VERIFICATION": {
+      "implemented_operator_has_no_displacement_or_strain_argument": true,
+      "implemented_and_required_operators_have_different_state_support": true,
+      "implemented_coupling_has_mass_dimension_one": true,
+      "required_strain_coupling_has_mass_dimension_three": true,
+      "direct_coefficient_substitution_is_dimensionally_invalid": true,
+      "both_declared_operator_terms_close_to_energy_density": true,
+      "field_residue_remains_nonidentifiable": true,
+      "matter_coupling_rescaling_no_go_is_preserved": true,
+      "natural_action_bridge_is_derived_but_not_si_alpha": true,
+      "calorine_heat_capacity_is_comparator_only": true,
+      "normal_umklapp_split_remains_absent": true,
+      "prior_interface_did_not_promote_physical_coupling": true,
+      "factor_matrix_keeps_alpha_open": true,
+      "independent_uncertainty_algebra_closes": true,
+      "no_fit_holdout_or_physical_promotion": true
+    },
+    "CONTROLLING_BLOCKER": "new_Phi_strain_operator_or_independent_microscopic_match_missing",
+    "NEXT_ACTION": "Design an explicitly separate Phi_E*theta action candidate through F0--F4 or source-lock a microscopic response match; do not reuse response_coupling h.",
+    "CLAIM_BOUNDARY": "Factor-resolution and current-operator substitution no-go only; no new action term, physical residue/coupling, numeric alpha, TTG prediction or Full Topic 13 closure."
+  }
+}

@@ -134,3 +134,21 @@ uncertainty still required. Test the coordinate degeneracy
 `Z_Phi -> s Z_Phi`, `g -> g/s`; invariance means neither factor can be inferred
 from normalized dynamics alone. Do not evaluate the formula until each factor
 has a derivation or independent source role.
+
+## Material-interface factor-resolution method (2026-09-02)
+
+Resolve the conditional coefficient factor by factor before attempting a
+number. Compare the field support and mass dimension of every existing action
+operator with the proposed material operator. The current `h` coefficient
+multiplies `delta_phi*chi^2` and has natural mass dimension one; the required
+`g_Phi_theta` multiplies `Phi_E*div(u)` and has mass dimension three. A direct
+substitution is inadmissible even though both complete terms have energy-density
+dimension four.
+
+Keep the action-derived `alpha_Phi_T^nat=(partial_Phi epsilon)/(partial_T
+epsilon)` in the homogeneous O(2) lane. It is not the material-lattice product
+and is not kelvin per normalized base `Phi`. Classify `Z_Phi`, `g_Phi_theta`,
+`chi_u_theta`, `C_src` and `C_N+C_R` independently. Propagate uncertainty only
+after all factors share one unit and material/state contract, using
+`Var(alpha)=grad(alpha)^T Sigma grad(alpha)`; the independent-factor sum is a
+special case, not a license to assume independence in physical data.

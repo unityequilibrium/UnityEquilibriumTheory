@@ -417,3 +417,20 @@ not a numerical calibration. Field-coordinate rescaling leaves the product
 `g_Phi_theta*Z_Phi` invariant, so normalized `Phi` dynamics cannot identify
 the two factors. PBTE mode data and `C_src` alone therefore cannot close
 `alpha_Phi_K` or establish a physical UET-material coupling.
+
+## Material-interface factor boundary
+
+The existing response--matter coupling does not supply the missing
+response--strain coupling. It multiplies `delta_phi*chi^2`, has coefficient
+dimension `E`, and acts only on the covariant O(2) matter fields. The material
+candidate multiplies `Phi_E*div(u)`, requires coefficient dimension `E^3`, and
+introduces an external displacement/strain sector. Equating the coefficients
+would hide an additional `E^2` scale and silently change ontology.
+
+The natural action coefficient `alpha_Phi_T^nat` also cannot be reused as
+`alpha_Phi_K`: it uses a normalization-dependent natural `Phi` and a fixed-mu
+thermal susceptibility, not a source-backed volumetric `C_src` in SI. The
+factor audit narrows the next task to a new strain operator or independent
+microscopic match. It does not prove that such a coupling exists in nature and
+does not close the physical residue, material response, collision or Ding
+source gates.
