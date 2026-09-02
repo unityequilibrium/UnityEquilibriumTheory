@@ -23,17 +23,17 @@ event; no posterior conservation projector is used.
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | T13-INVARIANT-SCALAR-GALERKIN-COLLISION-20260901 | `L_rate=G^(-1/2) Q G^(-1/2)` | docs/core/uet_o2_invariant_galerkin_collision_operator.py | `Q~E^3`, `G~E^2`, `L~E` | invariant phase space and production O(2)-Phi action | finite scalar lane verified | whole-action scaling, radial/angular convergence, eventwise invariants, PSD | vector/tensor basis, same-kernel width and continuum limit remain open | derive tagged/spectral width and vector heat-current basis from the same kernel |
 
-## Same-Kernel Tree Tagged and Spectral Width (2026-09-01)
+## Same-Kernel Tree Loss/Gain and Retarded Width (repaired 2026-09-02)
 
-The tagged cut uses
-`Gamma_q(p)=1/(2E_p) sum_r integral dPi2 dPhi2 |M_qr|^2
-f_r(1+f3)(1+f4)/S_final`. It is independently equal to the
-`v_Moller dSigma/dOmega` form and maps on shell to
-`-Im Sigma_R,q(E_p,p)=2E_p Gamma_q(p)`.
+The tagged cut is the out-scattering rate `Gamma_out`. The inverse cut gives
+`Gamma_in`, and equilibrium KMS requires
+`Gamma_R=Gamma_out-Gamma_in=Gamma_out/(1+f_q)`. Only `Gamma_R` enters the
+retarded pole map `-Im Sigma_R,q(E_p,p)=2E_p Gamma_R,q(p)`. The earlier direct
+identification of `Gamma_out` as the retarded width is superseded.
 
 | formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| T13-SAME-KERNEL-TREE-TAGGED-WIDTH-20260901 | `-Im Sigma_R=2E Gamma` with invariant tagged cut | docs/core/uet_o2_same_kernel_tagged_width.py | `Gamma~E`, `Im Sigma_R~E^2` | same production contact-plus-Phi amplitude and event kernel | tree elastic width verified | independent cross-section match, scaling, conjugation and refinement | dressed/resonant self-consistency and nonelastic channels open | insert tree width into dressed RA pair and build vector heat-current basis |
+| T13-SAME-KERNEL-TREE-TAGGED-WIDTH-20260901 | `Gamma_R=Gamma_out-Gamma_in=Gamma_out/(1+f)`; `-Im Sigma_R=2E Gamma_R` | docs/core/uet_o2_same_kernel_tagged_width.py | all widths `~E`, `Im Sigma_R~E^2` | same production contact-plus-Phi amplitude, inverse cut and KMS | loss/gain/retarded distinction verified; old out-rate spectral label superseded | independent cross-section match, KMS residual, scaling, conjugation and refinement | dressed/resonant self-consistency and nonelastic channels open | use `Gamma_R`, never `Gamma_out`, in the RA pair |
 
 ## Vector Current and Landau Heat-Rank Boundary (2026-09-01)
 
@@ -45,6 +45,17 @@ conserved momentum gives `J_Q_perp=-mu*J_charge_perp`.
 | formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | T13-VECTOR-CURRENT-HEAT-RANK-BOUNDARY-20260901 | `P_perp J_Q=-mu P_perp J_charge` | docs/core/uet_o2_invariant_vector_current_galerkin.py | `L_vector~E`; charge/heat response forms `E/E^3` | same invariant elastic kernel and Landau decomposition | vector lane verified; independent heat source closed as no-go | momentum null, PSD, scaling, refinement, conjugation and rank | equal-mass elastic lane has no second projected heat source | use charge lane in dressed RA ladder and add a genuine normal/response carrier before heat transport |
+
+## Same-Kernel Dressed RA Charge-Current Ladder (2026-09-02)
+
+The event collision form and the independently integrated retarded width give
+`L_vector=D_RA-K_gain`. In the momentum-deflated subspace the direct
+Bethe-Salpeter equation `(D_RA-K_gain)chi=J_charge` is equivalent to the
+kinetic Galerkin equation.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-DRESSED-RA-CHARGE-LADDER-20260902 | `L_vector=D_RA-K_gain`; `(D_RA-K_gain)chi=J_charge` | docs/core/uet_o2_dressed_ra_charge_current_ladder.py | `D_RA,K_gain,L~E`; response form `~E` | KMS retarded width and same production collision events | finite-basis charge ladder verified | independent event/width loss match, direct ladder/kinetic equality, scaling and refinement | no independent heat carrier, continuum/cutoff and physical Kubo/SI still open | harden continuum and add a genuine normal/response carrier before heat transport |
 
 ## Dressed RA Pair and Microscopic Rung Boundary (2026-09-01)
 

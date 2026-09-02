@@ -684,27 +684,27 @@ NEXT_ACTION: Derive tagged and spectral widths from this same kernel, then exten
 
 CLAIM_BOUNDARY: Finite-cutoff scalar collision lane only; not complete transport, physical width, Kubo/SI coefficient, external validation, or Full Topic 13 closure.
 
-## Current Major Result: same-kernel tree tagged/spectral width (2026-09-01)
+## Major Result: same-kernel tree loss/gain and retarded width (repaired 2026-09-02)
 
 MAJOR_RESULT_CLOSURE: `T13_SAME_KERNEL_TREE_TAGGED_SPECTRAL_WIDTH` is `CLOSED_FOR_LANE`; Full Topic 13 remains open.
 
-WHAT_IS_ACTUALLY_CLOSED: Momentum- and charge-resolved tagged elastic widths now come from the same production contact-plus-`Phi` kernel as the Galerkin operator. The invariant-cut normalization matches an independently implemented `v_Moller dSigma/dOmega` formula in every tag/target channel, and the on-shell spectral map is explicit.
+WHAT_IS_ACTUALLY_CLOSED: Momentum- and charge-resolved tagged loss and inverse gain cuts come from the same production contact-plus-`Phi` kernel as the Galerkin operator. The loss cut matches an independent `v_Moller dSigma/dOmega` formula, while KMS closes `Gamma_R=Gamma_out-Gamma_in=Gamma_out/(1+f)`. The earlier use of `Gamma_out` itself as the retarded width is superseded.
 
-WHAT_REMAINS_OPEN: Dressed/resonant self-consistency, vector/tensor heat-current basis, retarded ladder, number-changing/response channels, physical Kubo/SI normalization, independent `alpha_Phi_K`, and source closure.
+WHAT_REMAINS_OPEN: Dressed/resonant self-consistency, tensor and independent heat-current channels, number-changing/response channels, physical Kubo/SI normalization, independent `alpha_Phi_K`, and source closure.
 
-DEPENDENCY_UNLOCKED: Insertion of the tree width into the dressed RA pair and vector heat-current Galerkin extension.
+DEPENDENCY_UNLOCKED: Use of the KMS retarded width in the charge-current RA ladder and vector Galerkin extension.
 
-STATUS: `PASS_SCOPED_SAME_KERNEL_TREE_TAGGED_SPECTRAL_WIDTH`; `full_core_unlock=false`; `claim_promotion=false`.
+STATUS: `PASS_SCOPED_SAME_KERNEL_TREE_LOSS_GAIN_RETARDED_WIDTH`; `full_core_unlock=false`; `claim_promotion=false`.
 
-EQUATION_OR_MAPPING: `Gamma_q(p)=1/(2E_p) sum_r integral dPi2 dPhi2 |M_qr|^2 f_r(1+f3)(1+f4)/S_final`; `-Im Sigma_R=2E Gamma`.
+EQUATION_OR_MAPPING: `Gamma_R=Gamma_out-Gamma_in=Gamma_out/(1+f_q)`; `-Im Sigma_R=2E Gamma_R`.
 
-VERIFICATION: Twelve artifact checks and nine focused tests pass. Independent formula residual is `2.94e-14`; charge-conjugation residual is zero; radial and angular last-refinement differences are `1.292e-4` and `1.310e-4`; whole-action scaling is `E^1`.
+VERIFICATION: Thirteen artifact checks and nine focused tests pass. KMS residual is `2.13e-16`; independent loss-form residual is `2.94e-14`; charge-conjugation residual is zero; radial and angular last-refinement differences are `1.292e-4` and `1.310e-4`; whole-action scaling is `E^1`.
 
-CONTROLLING_BLOCKER: `vector_heat_current_basis_and_dressed_ladder_missing`.
+CONTROLLING_BLOCKER: `dressed_self_consistency_and_independent_heat_carrier_missing`.
 
-NEXT_ACTION: Insert this tree width into the dressed RA pair and build vector heat/current Galerkin modes; keep resonant/dressed self-consistency as a separate gate.
+NEXT_ACTION: Use only `Gamma_R` in the RA pair; retain resonant/dressed self-consistency as a separate gate and add an independent heat carrier before heat transport.
 
-CLAIM_BOUNDARY: Tree elastic tagged/spectral width only; not complete damping, transport, Kubo/SI, external validation, or Full Topic 13 closure.
+CLAIM_BOUNDARY: Tree elastic loss/gain and KMS retarded width only; not complete damping, transport, Kubo/SI, external validation, or Full Topic 13 closure.
 
 ## Current Major Result: vector current and heat-rank boundary (2026-09-01)
 
@@ -727,6 +727,30 @@ CONTROLLING_BLOCKER: `additional_heat_carrier_channel_and_dressed_RA_ladder_miss
 NEXT_ACTION: Use the verified charge-current vector lane in the same-width dressed RA ladder. Reopen heat conductivity only after adding a physically independent normal/response carrier.
 
 CLAIM_BOUNDARY: Vector charge-current lane and scoped heat-rank no-go only; not heat conductivity, complete normal component, Kubo/SI, external validation, or Full Topic 13 closure.
+
+## Current Major Result: dressed RA charge-current ladder (2026-09-02)
+
+MAJOR_RESULT_CLOSURE: `T13_SAME_KERNEL_DRESSED_RA_CHARGE_CURRENT_LADDER` is `CLOSED_FOR_LANE`; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: The corrected KMS retarded width forms the RA diagonal `D_RA`; the event-expanded collision form supplies `K_gain` through `L_vector=D_RA-K_gain`. The direct momentum-deflated Bethe-Salpeter solution matches the kinetic Galerkin charge-current solution without a fitted relaxation time.
+
+WHAT_REMAINS_OPEN: Self-consistent dressed/resonant width, continuum and cutoff closure, a genuinely independent normal/response heat carrier, tensor shear, number-changing/response cuts, physical Kubo/SI normalization, independent `alpha_Phi_K`, and external source closure.
+
+DEPENDENCY_UNLOCKED: Charge-current continuum-ladder hardening and multicomponent heat-carrier ladder design.
+
+STATUS: `PASS_SCOPED_SAME_KERNEL_DRESSED_RA_CHARGE_CURRENT_LADDER`; `full_core_unlock=false`; `claim_promotion=false`.
+
+WHAT_CHANGED: Repaired the loss-versus-retarded-width semantics and completed a same-kernel finite-basis charge-current ladder rather than inserting a fitted damping time.
+
+EQUATION_OR_MAPPING: `Gamma_R=Gamma_out-Gamma_in`; `L_vector=D_RA-K_gain`; `(D_RA-K_gain)chi=J_charge`.
+
+VERIFICATION: All fourteen ladder checks pass. Event/width loss residual is `8.71e-4`; direct ladder/kinetic response residual is `1.22e-15`; radial and angular final changes are `0.785%` and `0.0154%`; the accepted reference rung radius is `0.636` and Neumann resummation converges in `46` iterations. The dressed response is `1.2507` times the free RA response.
+
+CONTROLLING_BLOCKER: `independent_heat_carrier_and_continuum_physical_Kubo_mapping_missing`.
+
+NEXT_ACTION: Harden the charge ladder toward continuum/cutoff independence, then introduce an additional normal or response carrier before constructing heat conductivity.
+
+CLAIM_BOUNDARY: Finite-basis tree-elastic charge-current ladder only; not an independent heat channel, self-consistent dressed width, physical Kubo/SI coefficient, external validation, or Full Topic 13 closure.
 ## Current Major Result: T13-173 causal gate semantics alignment (2026-08-23)
 
 MAJOR_RESULT_CLOSURE: CLOSED_AS_NO_GO for the declared local conserved-C gradient finite-cone compatibility question; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.

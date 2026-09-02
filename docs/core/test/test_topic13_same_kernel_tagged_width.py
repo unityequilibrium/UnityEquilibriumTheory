@@ -10,15 +10,32 @@ from docs.scripts.audit.audit_topic13_invariant_rate_collision_repair import con
 from docs.scripts.audit import audit_topic13_same_kernel_tagged_width as audit
 
 
-def test_tagged_width_is_positive_resolved_and_spectral():
+def test_tagged_loss_gain_and_retarded_width_are_separated():
     state = same_kernel_tagged_width_state(0.25, 0.1, 0.0, config())
     contract = same_kernel_tagged_width_contract()
-    widths = np.asarray(state.total_widths_by_tag_momentum)
-    spectral = np.asarray(state.retarded_self_energy_imaginary_by_tag_momentum)
+    loss = np.asarray(state.total_widths_by_tag_momentum)
+    gain = np.asarray(state.total_gain_widths_by_tag_momentum)
+    retarded = np.asarray(state.retarded_spectral_widths_by_tag_momentum)
+    self_energy = np.asarray(state.retarded_self_energy_imaginary_by_tag_momentum)
     energies = np.asarray(state.tagged_energies)
+    occupations = np.asarray([
+        [
+            1.0 / np.expm1(
+                (energy - sign * state.chemical_potential) / state.temperature
+            )
+            for energy in energies
+        ]
+        for sign in state.species_signs
+    ])
     assert contract["unit_contract"]["Gamma"] == 1
-    assert np.all(widths > 0.0)
-    assert np.allclose(spectral, -2.0 * energies[None, :] * widths, rtol=1.0e-14)
+    assert np.all(loss > gain)
+    assert np.all(gain > 0.0)
+    assert np.allclose(retarded, loss - gain, rtol=1.0e-13)
+    assert np.allclose(retarded, loss / (1.0 + occupations), rtol=1.0e-12)
+    assert np.allclose(
+        self_energy, -2.0 * energies[None, :] * retarded, rtol=1.0e-14
+    )
+    assert state.maximum_kms_gain_loss_residual <= 1.0e-12
     assert state.maximum_event_energy_residual <= 1.0e-12
     assert state.maximum_event_momentum_residual <= 1.0e-12
     assert state.maximum_detailed_balance_residual <= 1.0e-10
@@ -35,6 +52,12 @@ def test_charge_conjugation_swaps_tagged_widths():
     )
     assert np.asarray(positive_mu.total_widths_by_tag_momentum)[:, 0] == pytest.approx(
         np.asarray(negative_mu.total_widths_by_tag_momentum)[::-1, 0], rel=1.0e-12
+    )
+    assert np.asarray(
+        positive_mu.retarded_spectral_widths_by_tag_momentum
+    )[:, 0] == pytest.approx(
+        np.asarray(negative_mu.retarded_spectral_widths_by_tag_momentum)[::-1, 0],
+        rel=1.0e-12,
     )
 
 

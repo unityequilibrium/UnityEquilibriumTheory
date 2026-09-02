@@ -76,7 +76,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_vector_current_heat_rank_boundary_audit.json",
-          "sha256": "c62cac6d34b967115ef2a51283c23c9689a96fa095673ca2ac0cf3a9ca6d8253"
+          "sha256": "c7c957d022b0ad7d44c8c996b734c92705178fd225533900303f573aeb308af7"
         }
       ],
       "downstream_dependencies": [

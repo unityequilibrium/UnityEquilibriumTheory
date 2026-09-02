@@ -1,9 +1,10 @@
-"""Same-kernel tagged elastic and spectral width for Topic 13.
+"""Same-kernel tagged elastic loss, gain, and retarded width for Topic 13.
 
 The width is derived from the same charge-resolved contact-plus-Phi amplitude
 and exact center-of-mass event kernel as the invariant Galerkin collision
-operator.  It is a tree elastic normal-state width, not a dressed or resonant
-self-consistent self-energy.
+operator. Detailed balance separates the tagged out-scattering rate from the
+retarded pole width. This remains a tree elastic normal-state result, not a
+dressed or resonant self-consistent self-energy.
 """
 from __future__ import annotations
 
@@ -24,7 +25,7 @@ from docs.core.uet_o2_kinetic_collision_kubo import _bose, _normal_state_inputs
 
 
 SAME_KERNEL_TAGGED_WIDTH_STATUS = (
-    "PASS_SCOPED_SAME_KERNEL_TREE_TAGGED_SPECTRAL_WIDTH"
+    "PASS_SCOPED_SAME_KERNEL_TREE_LOSS_GAIN_RETARDED_WIDTH"
 )
 
 
@@ -45,6 +46,18 @@ class SameKernelTaggedWidthState:
         tuple[float, ...],
         tuple[float, ...],
     ]
+    gain_widths_by_tag_momentum_target: tuple[
+        tuple[tuple[float, float], ...],
+        tuple[tuple[float, float], ...],
+    ]
+    total_gain_widths_by_tag_momentum: tuple[
+        tuple[float, ...],
+        tuple[float, ...],
+    ]
+    retarded_spectral_widths_by_tag_momentum: tuple[
+        tuple[float, ...],
+        tuple[float, ...],
+    ]
     retarded_self_energy_imaginary_by_tag_momentum: tuple[
         tuple[float, ...],
         tuple[float, ...],
@@ -57,8 +70,11 @@ class SameKernelTaggedWidthState:
     maximum_event_energy_residual: float
     maximum_event_momentum_residual: float
     maximum_detailed_balance_residual: float
+    maximum_kms_gain_loss_residual: float
     minimum_width: float
     maximum_width: float
+    minimum_tagged_loss_width: float
+    maximum_tagged_loss_width: float
     width_energy_dimension: int = 1
     same_kernel_amplitude_used: bool = True
     same_center_of_mass_event_kernel_used: bool = True
@@ -126,7 +142,8 @@ def same_kernel_tagged_width_state(
     ) / int(outgoing_azimuth_order)
     azimuth_weight = 2.0 * pi / int(outgoing_azimuth_order)
     signs = (-1, 1)
-    widths = np.zeros((2, len(momenta), 2), dtype=float)
+    loss_widths = np.zeros((2, len(momenta), 2), dtype=float)
+    gain_widths = np.zeros((2, len(momenta), 2), dtype=float)
     energies_one = tuple(sqrt(momentum * momentum + mass * mass) for momentum in momenta)
     max_energy_residual = 0.0
     max_momentum_residual = 0.0
@@ -200,22 +217,49 @@ def same_kernel_tagged_width_state(
                                     config,
                                 )
                                 final_symmetry = 2.0 if q1 == q2 else 1.0
-                                widths[tag_index, momentum_index, target_index] += (
+                                common = (
                                     external_normalization
                                     * d_pi_two
                                     * d_phi_two
                                     * amplitude
                                     * amplitude
-                                    * f2
-                                    * (1.0 + f3)
-                                    * (1.0 + f4)
                                     / final_symmetry
                                 )
+                                loss_widths[tag_index, momentum_index, target_index] += (
+                                    common * f2 * (1.0 + f3) * (1.0 + f4)
+                                )
+                                gain_widths[tag_index, momentum_index, target_index] += (
+                                    common * (1.0 + f2) * f3 * f4
+                                )
                                 event_count += 1
-    total_widths = np.sum(widths, axis=2)
-    if np.any(~np.isfinite(total_widths)) or np.any(total_widths <= 0.0):
-        raise FloatingPointError("tagged widths must be positive and finite")
-    self_energy_imaginary = -2.0 * np.asarray(energies_one)[None, :] * total_widths
+    total_loss_widths = np.sum(loss_widths, axis=2)
+    total_gain_widths = np.sum(gain_widths, axis=2)
+    retarded_widths = total_loss_widths - total_gain_widths
+    occupations = np.asarray([
+        [float(_bose(energy - sign * mu_eff, t)) for energy in energies_one]
+        for sign in signs
+    ])
+    kms_expected = total_loss_widths / (1.0 + occupations)
+    kms_scale = np.maximum(
+        np.maximum(np.abs(kms_expected), np.abs(retarded_widths)), 1.0e-300
+    )
+    kms_residual = float(
+        np.max(np.abs(retarded_widths - kms_expected) / kms_scale)
+    )
+    if (
+        np.any(~np.isfinite(total_loss_widths))
+        or np.any(~np.isfinite(total_gain_widths))
+        or np.any(~np.isfinite(retarded_widths))
+        or np.any(total_loss_widths <= 0.0)
+        or np.any(total_gain_widths <= 0.0)
+        or np.any(retarded_widths <= 0.0)
+    ):
+        raise FloatingPointError(
+            "loss, gain, and retarded widths must be positive and finite"
+        )
+    self_energy_imaginary = (
+        -2.0 * np.asarray(energies_one)[None, :] * retarded_widths
+    )
     return SameKernelTaggedWidthState(
         temperature=t,
         chemical_potential=mu,
@@ -226,13 +270,29 @@ def same_kernel_tagged_width_state(
         species_signs=signs,
         widths_by_tag_momentum_target=tuple(
             tuple(
-                tuple(float(value) for value in widths[tag, momentum])
+                tuple(float(value) for value in loss_widths[tag, momentum])
                 for momentum in range(len(momenta))
             )
             for tag in range(2)
         ),
         total_widths_by_tag_momentum=tuple(
-            tuple(float(value) for value in total_widths[tag]) for tag in range(2)
+            tuple(float(value) for value in total_loss_widths[tag])
+            for tag in range(2)
+        ),
+        gain_widths_by_tag_momentum_target=tuple(
+            tuple(
+                tuple(float(value) for value in gain_widths[tag, momentum])
+                for momentum in range(len(momenta))
+            )
+            for tag in range(2)
+        ),
+        total_gain_widths_by_tag_momentum=tuple(
+            tuple(float(value) for value in total_gain_widths[tag])
+            for tag in range(2)
+        ),
+        retarded_spectral_widths_by_tag_momentum=tuple(
+            tuple(float(value) for value in retarded_widths[tag])
+            for tag in range(2)
         ),
         retarded_self_energy_imaginary_by_tag_momentum=tuple(
             tuple(float(value) for value in self_energy_imaginary[tag])
@@ -246,8 +306,11 @@ def same_kernel_tagged_width_state(
         maximum_event_energy_residual=max_energy_residual,
         maximum_event_momentum_residual=max_momentum_residual,
         maximum_detailed_balance_residual=max_balance,
-        minimum_width=float(np.min(total_widths)),
-        maximum_width=float(np.max(total_widths)),
+        maximum_kms_gain_loss_residual=kms_residual,
+        minimum_width=float(np.min(retarded_widths)),
+        maximum_width=float(np.max(retarded_widths)),
+        minimum_tagged_loss_width=float(np.min(total_loss_widths)),
+        maximum_tagged_loss_width=float(np.max(total_loss_widths)),
     )
 
 
@@ -255,15 +318,20 @@ def same_kernel_tagged_width_contract() -> dict[str, object]:
     return {
         "status": SAME_KERNEL_TAGGED_WIDTH_STATUS,
         "equations": {
-            "tagged_width": "Gamma_q(p)=1/(2E_p)*sum_r integral dPi2 dPhi2 |M_qr|^2 f_r(1+f3)(1+f4)/S_final",
-            "spectral_interface": "-Im Sigma_R,q(E_p,p)=2E_p Gamma_q(p)",
-            "cross_section_equivalence": "Gamma_q=sum_r integral d^3p2/(2pi)^3 f_r v_Moller integral dOmega (dSigma_qr/dOmega)(1+f3)(1+f4)",
+            "tagged_loss_width": "Gamma_out,q(p)=1/(2E_p)*sum_r integral dPi2 dPhi2 |M_qr|^2 f_r(1+f3)(1+f4)/S_final",
+            "tagged_gain_width": "Gamma_in,q(p)=1/(2E_p)*sum_r integral dPi2 dPhi2 |M_qr|^2 (1+f_r)f3 f4/S_final",
+            "kms_retarded_width": "Gamma_R,q=Gamma_out,q-Gamma_in,q=Gamma_out,q/(1+f_q)",
+            "spectral_interface": "-Im Sigma_R,q(E_p,p)=2E_p Gamma_R,q(p)",
+            "cross_section_equivalence": "Gamma_out,q=sum_r integral d^3p2/(2pi)^3 f_r v_Moller integral dOmega (dSigma_qr/dOmega)(1+f3)(1+f4)",
         },
         "unit_contract": {
             "dPi2": 2,
             "dPhi2": 0,
             "external_1_over_2E": -1,
             "Gamma": 1,
+            "Gamma_out": 1,
+            "Gamma_in": 1,
+            "Gamma_R": 1,
             "Im_Sigma_R": 2,
         },
         "included": {
@@ -271,6 +339,7 @@ def same_kernel_tagged_width_contract() -> dict[str, object]:
             "same_center_of_mass_event_kernel": True,
             "charge_resolved_tag_and_target": True,
             "momentum_resolved_width": True,
+            "kms_gain_loss_separation": True,
             "independent_cross_section_form_available": True,
         },
         "excluded": {
@@ -282,7 +351,7 @@ def same_kernel_tagged_width_contract() -> dict[str, object]:
             "external_validation": True,
         },
         "claim_boundary": (
-            "Tree elastic same-kernel tagged and spectral width only; not a "
+            "Tree elastic same-kernel tagged loss/gain and retarded width only; not a "
             "dressed self-consistent width, full damping rate or transport coefficient."
         ),
     }

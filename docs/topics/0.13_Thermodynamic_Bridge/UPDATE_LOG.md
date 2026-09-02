@@ -1,3 +1,29 @@
+## 2026-09-02 - KMS retarded-width repair and dressed RA charge ladder
+
+MAJOR_RESULT_CLOSURE: T13_SAME_KERNEL_DRESSED_RA_CHARGE_CURRENT_LADDER is CLOSED_FOR_LANE; the earlier direct identification of tagged Gamma_out as the retarded width is superseded. Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: Same-action loss and inverse-gain cuts obey Gamma_R=Gamma_out-Gamma_in=Gamma_out/(1+f). The RA diagonal built from Gamma_R independently matches the event-expanded collision loss block. With L_vector=D_RA-K_gain, the directly resummed momentum-deflated Bethe-Salpeter charge-current solution matches the kinetic Galerkin solution without a fitted relaxation time.
+
+WHAT_REMAINS_OPEN: Self-consistent dressed/resonant width, infinite-basis and cutoff removal, a genuinely independent normal/response heat carrier, tensor shear, number-changing/response cuts, physical Kubo/SI normalization, alpha_Phi_K and external source closure.
+
+DEPENDENCY_UNLOCKED: Charge-current continuum-ladder hardening and multicomponent heat-carrier ladder design.
+
+STATUS: PASS_SCOPED_SAME_KERNEL_TREE_LOSS_GAIN_RETARDED_WIDTH and PASS_SCOPED_SAME_KERNEL_DRESSED_RA_CHARGE_CURRENT_LADDER; full_core_unlock=false; claim_promotion=false.
+
+WHAT_CHANGED: Split tagged out-scattering, inverse gain and retarded pole widths; repaired the self-energy interface; exposed the event loss block; added the finite-basis D-K ladder, tests, audit, artifact and candidate registry; synchronized Topic 13 docs.
+
+EQUATION_OR_MAPPING: Gamma_R=Gamma_out-Gamma_in=Gamma_out/(1+f); -Im Sigma_R=2E Gamma_R; L_vector=D_RA-K_gain; (D_RA-K_gain)chi=J_charge.
+
+VERIFICATION: KMS residual 2.128e-16; invariant-cut/cross-section loss residual 2.940e-14; event/width loss residual 8.712e-4; ladder/kinetic response residual 1.219e-15. Radial and angular last-refinement maxima are 0.007853 and 0.0001544 below 0.01 and 0.001. The accepted reference rung radius is 0.6361 and Neumann resummation converges in 46 iterations; the coarse radial-8 series fails closed. All 13 width and 14 ladder artifact checks and 46 linked regression tests pass. F0 parses 356 rows without duplicate IDs; foundation and compatibility remain BLOCKED. No clipping, fit, holdout, experimental data, physical Kubo/SI emission or threshold change.
+
+CONTROLLING_BLOCKER: independent_heat_carrier_and_continuum_physical_Kubo_mapping_missing.
+
+NEXT_ACTION: Harden the charge ladder toward continuum/cutoff independence, and separately introduce a physically independent normal or response carrier before reopening heat conductivity.
+
+CLAIM_BOUNDARY: Finite-basis tree-elastic charge-current ladder and corrected KMS width only; not independent heat transport, self-consistent damping, physical Kubo/SI, external validation or Full Topic 13 closure.
+
+EVIDENCE_HASHES: width artifact aa2cee30973fee3f0f109140db77ac6620cde4ff0fec53596442c7c337961293; width registry f1432c9849e63fb6775a32f5af70e76ff631be0ccad3e36ab69d229f31931a27; vector artifact c7c957d022b0ad7d44c8c996b734c92705178fd225533900303f573aeb308af7; ladder artifact e32e634e1ce16d35b67cbdef2f269f674277295f47c251b798caed33713d32f0; ladder registry c1aa901fd725a5ec7e8dea1ddd0251f94e0d19a8058e6abebe2f12c92fe36ac9.
+
 ## 2026-09-01 - Transition-kernel rate-dimension no-go
 
 MAJOR_RESULT_CLOSURE: T13_TRANSITION_KERNEL_RATE_DIMENSION_NO_GO is CLOSED_FOR_LANE/CLOSED_AS_NO_GO; Full Topic 13 remains open.
@@ -100,7 +126,7 @@ NEXT_ACTION: Insert the tree width into the dressed RA pair and build vector hea
 
 CLAIM_BOUNDARY: Tree elastic same-kernel tagged/spectral width only; not a dressed self-consistent width, complete damping rate, vector heat-current ladder, Kubo/SI coefficient, external validation or Full Topic 13 closure.
 
-EVIDENCE_HASHES: width artifact e9d1c2f91ae2ed9a60d28f6b8da2f952729e2e0528110419131172aa8adc79dc; candidate registry 48de3d5eb9cdb44f79233e964a8b0654e52c77203d6235821827dc5a650763b5.
+EVIDENCE_HASHES: current v2 width artifact aa2cee30973fee3f0f109140db77ac6620cde4ff0fec53596442c7c337961293; candidate registry f1432c9849e63fb6775a32f5af70e76ff631be0ccad3e36ab69d229f31931a27. The original Gamma_out-as-spectral interpretation in this historical entry is superseded by the 2026-09-02 KMS repair above.
 
 ## 2026-09-01 - Vector current and Landau heat-rank boundary
 
@@ -126,7 +152,7 @@ NEXT_ACTION: Insert the same-kernel width into the vector charge-current dressed
 
 CLAIM_BOUNDARY: Finite vector charge-current lane and structural heat-rank no-go only; not heat conductivity, complete normal component, dressed ladder, Kubo/SI coefficient, external validation or Full Topic 13 closure.
 
-EVIDENCE_HASHES: vector/rank artifact c62cac6d34b967115ef2a51283c23c9689a96fa095673ca2ac0cf3a9ca6d8253; candidate registry 2c64566bbc3d645e2a1b8abb0a6c882bc20f944dd52a33d34dd0e64e3cac1e4d.
+EVIDENCE_HASHES: vector/rank artifact c7c957d022b0ad7d44c8c996b734c92705178fd225533900303f573aeb308af7; candidate registry 2c7a55dc7fced1fbe1e6fb145e488c80feb17db3260c47b6ca0d1594e32b162e. Hashes changed because the independently auditable event-loss block and corrected KMS-width source were added; vector/rank conclusions are unchanged.
 
 ## 2026-09-01 - Dressed RA-pair normalization and microscopic rung no-go
 

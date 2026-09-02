@@ -1,22 +1,25 @@
 {
-  "schema_version": "t13-same-kernel-tagged-width-v1",
+  "schema_version": "t13-same-kernel-tagged-width-v2",
   "major_result_id": "T13_SAME_KERNEL_TREE_TAGGED_SPECTRAL_WIDTH",
   "topic": "0.13_Thermodynamic_Bridge",
   "closure_level": "CLOSED_FOR_LANE",
-  "verification_status": "PASS_SCOPED_SAME_KERNEL_TREE_TAGGED_SPECTRAL_WIDTH",
+  "verification_status": "PASS_SCOPED_SAME_KERNEL_TREE_LOSS_GAIN_RETARDED_WIDTH",
   "what_is_closed": [
-    "Charge- and momentum-resolved tagged elastic loss widths are derived from the same production contact-plus-Phi amplitude and center-of-mass event kernel as the invariant Galerkin operator.",
+    "Charge- and momentum-resolved tagged elastic out-scattering and inverse gain cuts are derived from the same production contact-plus-Phi amplitude and center-of-mass event kernel as the invariant Galerkin operator.",
     "The invariant-cut normalization agrees with an independent v_Moller cross-section implementation for every tag/target charge channel.",
-    "The on-shell spectral interface -Im Sigma_R=2E Gamma is explicit, dimensionally covariant and uses no fitted damping input."
+    "KMS detailed balance gives Gamma_R=Gamma_out-Gamma_in=Gamma_out/(1+f), and the corrected on-shell interface -Im Sigma_R=2E Gamma_R uses no fitted damping input.",
+    "The earlier identification of the tagged out-scattering rate itself as the retarded width is superseded and must not be reused in an RA pair."
   ],
   "equation_registry_ids": [
     "uet.o2.thermal.same_kernel_tree_tagged_spectral_width"
   ],
   "registration_status": "CANDIDATE_DIAGNOSTIC_NOT_CENTRAL_ACCEPTANCE",
   "equation_or_mapping": {
-    "tagged_width": "Gamma_q(p)=1/(2E_p)*sum_r integral dPi2 dPhi2 |M_qr|^2 f_r(1+f3)(1+f4)/S_final",
-    "spectral_interface": "-Im Sigma_R,q(E_p,p)=2E_p Gamma_q(p)",
-    "cross_section_equivalence": "Gamma_q=sum_r integral d^3p2/(2pi)^3 f_r v_Moller integral dOmega (dSigma_qr/dOmega)(1+f3)(1+f4)"
+    "tagged_loss_width": "Gamma_out,q(p)=1/(2E_p)*sum_r integral dPi2 dPhi2 |M_qr|^2 f_r(1+f3)(1+f4)/S_final",
+    "tagged_gain_width": "Gamma_in,q(p)=1/(2E_p)*sum_r integral dPi2 dPhi2 |M_qr|^2 (1+f_r)f3 f4/S_final",
+    "kms_retarded_width": "Gamma_R,q=Gamma_out,q-Gamma_in,q=Gamma_out,q/(1+f_q)",
+    "spectral_interface": "-Im Sigma_R,q(E_p,p)=2E_p Gamma_R,q(p)",
+    "cross_section_equivalence": "Gamma_out,q=sum_r integral d^3p2/(2pi)^3 f_r v_Moller integral dOmega (dSigma_qr/dOmega)(1+f3)(1+f4)"
   },
   "ontology": {
     "C": "unchanged",
@@ -30,10 +33,13 @@
     "dPhi2": 0,
     "external_1_over_2E": -1,
     "Gamma": 1,
+    "Gamma_out": 1,
+    "Gamma_in": 1,
+    "Gamma_R": 1,
     "Im_Sigma_R": 2
   },
-  "derivation_class": "same_action_tree_elastic_cut_width_with_independent_cross_section_match",
-  "observable": "Tagged elastic quasiparticle loss and on-shell spectral width, not conductivity",
+  "derivation_class": "same_action_tree_elastic_loss_gain_cuts_with_kms_retarded_width",
+  "observable": "Tagged elastic loss/gain and on-shell retarded width, not conductivity",
   "data_role": "DERIVED_SYNTHETIC_STRUCTURAL_CANDIDATE",
   "reference_state": {
     "temperature": 0.25,
@@ -96,16 +102,70 @@
         9.150258628635654e-08
       ]
     ],
-    "retarded_self_energy_imaginary_by_tag_momentum": [
+    "gain_widths_by_tag_momentum_target": [
       [
-        -3.1571264860799414e-07,
-        -4.074014500327952e-07,
-        -5.562271670204725e-07
+        [
+          1.5338195192450427e-10,
+          9.277164345406684e-10
+        ],
+        [
+          5.059340074297056e-11,
+          2.8670881856501245e-10
+        ],
+        [
+          1.745921454427089e-12,
+          9.13264003662799e-12
+        ]
       ],
       [
-        -2.2252258859362856e-07,
-        -2.9264376724887354e-07,
-        -4.092120061066665e-07
+        [
+          9.236987580883958e-10,
+          7.721336338969234e-10
+        ],
+        [
+          2.8541067301916884e-10,
+          2.5381615658667706e-10
+        ],
+        [
+          9.089419515426494e-12,
+          8.722192522602018e-12
+        ]
+      ]
+    ],
+    "total_gain_widths_by_tag_momentum": [
+      [
+        1.0810983864651727e-09,
+        3.37302219307983e-10,
+        1.0878561491055078e-11
+      ],
+      [
+        1.6958323919853191e-09,
+        5.392268296058459e-10,
+        1.7811612038028512e-11
+      ]
+    ],
+    "retarded_spectral_widths_by_tag_momentum": [
+      [
+        1.4010989034233067e-07,
+        1.4370086177240294e-07,
+        1.243652970774995e-07
+      ],
+      [
+        9.781929453292923e-08,
+        1.0292596931722224e-07,
+        9.148477467431851e-08
+      ]
+    ],
+    "retarded_self_energy_imaginary_by_tag_momentum": [
+      [
+        -3.1329523912549266e-07,
+        -4.0644741528646737e-07,
+        -5.561785166144896e-07
+      ],
+      [
+        -2.1873059208670333e-07,
+        -2.9111860345762553e-07,
+        -4.0913235015605477e-07
       ]
     ],
     "radial_order": 16,
@@ -116,8 +176,11 @@
     "maximum_event_energy_residual": 3.019806626980426e-14,
     "maximum_event_momentum_residual": 3.013289278945897e-14,
     "maximum_detailed_balance_residual": 1.2426910538330813e-13,
-    "minimum_width": 9.150258628635654e-08,
-    "maximum_width": 1.4403816399171093e-07,
+    "maximum_kms_gain_loss_residual": 2.128389528567762e-16,
+    "minimum_width": 9.148477467431851e-08,
+    "maximum_width": 1.4370086177240294e-07,
+    "minimum_tagged_loss_width": 9.150258628635654e-08,
+    "maximum_tagged_loss_width": 1.4403816399171093e-07,
     "width_energy_dimension": 1,
     "same_kernel_amplitude_used": true,
     "same_center_of_mass_event_kernel_used": true,
@@ -166,23 +229,23 @@
     "radial_rows": [
       {
         "radial_order": 12,
-        "widths_by_tag": [
-          1.4363003426032037e-07,
-          1.0311672468982431e-07
+        "retarded_widths_by_tag": [
+          1.4329368778121588e-07,
+          1.0257931397970566e-07
         ]
       },
       {
         "radial_order": 16,
-        "widths_by_tag": [
-          1.4405703020898453e-07,
-          1.034774136809461e-07
+        "retarded_widths_by_tag": [
+          1.4371968380960109e-07,
+          1.0293812317754044e-07
         ]
       },
       {
         "radial_order": 24,
-        "widths_by_tag": [
-          1.4404327881177085e-07,
-          1.0346404091039204e-07
+        "retarded_widths_by_tag": [
+          1.4370596461480286e-07,
+          1.0292482010150141e-07
         ]
       }
     ],
@@ -190,30 +253,30 @@
       {
         "angular_order": 4,
         "azimuth_order": 8,
-        "widths_by_tag": [
-          1.4416812204468723e-07,
-          1.0355455499462522e-07
+        "retarded_widths_by_tag": [
+          1.4383051549534288e-07,
+          1.0301486245587283e-07
         ]
       },
       {
         "angular_order": 6,
         "azimuth_order": 12,
-        "widths_by_tag": [
-          1.4405704126868896e-07,
-          1.0347742465217174e-07
+        "retarded_widths_by_tag": [
+          1.4371969484340637e-07,
+          1.0293813409158764e-07
         ]
       },
       {
         "angular_order": 8,
         "azimuth_order": 16,
-        "widths_by_tag": [
-          1.4403816400393012e-07,
-          1.0346519616020535e-07
+        "retarded_widths_by_tag": [
+          1.4370086178459354e-07,
+          1.029259693305298e-07
         ]
       }
     ],
-    "radial_last_relative_difference": 0.00012923371466644896,
-    "angular_last_relative_difference": 0.00013104020874359865
+    "radial_last_relative_difference": 0.00012923371466642256,
+    "angular_last_relative_difference": 0.00013104020874349107
   },
   "independent_cross_section_witness": {
     "invariant_cut_channels": [
@@ -259,7 +322,8 @@
         4.8706178525850425e-08
       ]
     ],
-    "maximum_relative_residual": 0.0
+    "maximum_relative_residual": 0.0,
+    "retarded_maximum_relative_residual": 0.0
   },
   "thresholds": {
     "last_refinement_relative": 0.0005,
@@ -273,7 +337,8 @@
     "charge_conjugation": true,
     "radial_quadrature_converged": true,
     "angular_quadrature_converged": true,
-    "positive_momentum_resolved_widths": true,
+    "positive_loss_gain_and_retarded_widths": true,
+    "kms_gain_loss_identity": true,
     "spectral_interface_exact": true,
     "eventwise_energy_momentum": true,
     "detailed_balance": true,
@@ -289,10 +354,10 @@
   ],
   "controlling_blocker": "vector_heat_current_basis_and_dressed_ladder_missing",
   "source_hashes": {
-    "docs/core/uet_o2_same_kernel_tagged_width.py": "e0412658dcbba721fa29a04c0be978fb6a0d81b15fd3485f3d022f002c927aaa",
+    "docs/core/uet_o2_same_kernel_tagged_width.py": "30f4d4d78a2bc4f0403f504d72dac684e98251915b890a1c99af5bae2f5be92e",
     "docs/core/uet_o2_invariant_galerkin_collision_operator.py": "278b168e5c3b444ac4df4b96b5a7d00410cd9485c511ab2a17aa4f11c6f6d94e",
-    "docs/core/test/test_topic13_same_kernel_tagged_width.py": "f9846f09b43856ca7aa724f7c9a0a2111bf632733afe4e90a63fa3696d2a2b0c",
-    "docs/scripts/audit/audit_topic13_same_kernel_tagged_width.py": "712e870044dfc601e17acdd9d5e01f3c495ef8896c31f81411187639958de700",
+    "docs/core/test/test_topic13_same_kernel_tagged_width.py": "7a1650e334dcc34a7bc0af4513b6779df45493f021b8e3906f39e7ee34bc33cc",
+    "docs/scripts/audit/audit_topic13_same_kernel_tagged_width.py": "eb17271ca3676e751c5da02afa74616e2e3ff0b971175a738f4ef17c1c535db0",
     "docs/scripts/audit/audit_topic13_action_normalized_elastic_scattering.py": "c09fbdd4d921c2c9ea1ba578c27935887900545725c978015104e9d4594a258b"
   },
   "evidence_artifacts": [
@@ -309,13 +374,14 @@
   "claim_promotion": false,
   "xie_2026_accessed": false,
   "parameter_fitting_performed": false,
-  "claim_boundary": "Tree elastic same-kernel tagged and spectral width only; not a dressed self-consistent/resonant width, complete damping rate, vector heat-current ladder, Kubo/SI coefficient, external validation, or Full Topic 13 closure.",
+  "claim_boundary": "Tree elastic same-kernel tagged loss/gain and KMS retarded width only; not a dressed self-consistent/resonant width, complete damping rate, vector heat-current ladder, Kubo/SI coefficient, external validation, or Full Topic 13 closure.",
   "report": {
     "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
     "WHAT_IS_ACTUALLY_CLOSED": [
-      "Charge- and momentum-resolved tagged elastic loss widths are derived from the same production contact-plus-Phi amplitude and center-of-mass event kernel as the invariant Galerkin operator.",
+      "Charge- and momentum-resolved tagged elastic out-scattering and inverse gain cuts are derived from the same production contact-plus-Phi amplitude and center-of-mass event kernel as the invariant Galerkin operator.",
       "The invariant-cut normalization agrees with an independent v_Moller cross-section implementation for every tag/target charge channel.",
-      "The on-shell spectral interface -Im Sigma_R=2E Gamma is explicit, dimensionally covariant and uses no fitted damping input."
+      "KMS detailed balance gives Gamma_R=Gamma_out-Gamma_in=Gamma_out/(1+f), and the corrected on-shell interface -Im Sigma_R=2E Gamma_R uses no fitted damping input.",
+      "The earlier identification of the tagged out-scattering rate itself as the retarded width is superseded and must not be reused in an RA pair."
     ],
     "WHAT_REMAINS_OPEN": [
       "dressed_self_consistent_width_and_resonant_resummation",
@@ -328,12 +394,14 @@
       "tree_width_dressed_RA_pair_insertion",
       "vector_heat_current_Galerkin_extension"
     ],
-    "STATUS": "PASS_SCOPED_SAME_KERNEL_TREE_TAGGED_SPECTRAL_WIDTH",
-    "WHAT_CHANGED": "Derived tagged and spectral widths from the same invariant production kernel and matched an independent cross-section form.",
+    "STATUS": "PASS_SCOPED_SAME_KERNEL_TREE_LOSS_GAIN_RETARDED_WIDTH",
+    "WHAT_CHANGED": "Separated tagged loss, inverse gain, and retarded spectral widths; repaired the RA self-energy mapping through the KMS gain/loss identity.",
     "EQUATION_OR_MAPPING": {
-      "tagged_width": "Gamma_q(p)=1/(2E_p)*sum_r integral dPi2 dPhi2 |M_qr|^2 f_r(1+f3)(1+f4)/S_final",
-      "spectral_interface": "-Im Sigma_R,q(E_p,p)=2E_p Gamma_q(p)",
-      "cross_section_equivalence": "Gamma_q=sum_r integral d^3p2/(2pi)^3 f_r v_Moller integral dOmega (dSigma_qr/dOmega)(1+f3)(1+f4)"
+      "tagged_loss_width": "Gamma_out,q(p)=1/(2E_p)*sum_r integral dPi2 dPhi2 |M_qr|^2 f_r(1+f3)(1+f4)/S_final",
+      "tagged_gain_width": "Gamma_in,q(p)=1/(2E_p)*sum_r integral dPi2 dPhi2 |M_qr|^2 (1+f_r)f3 f4/S_final",
+      "kms_retarded_width": "Gamma_R,q=Gamma_out,q-Gamma_in,q=Gamma_out,q/(1+f_q)",
+      "spectral_interface": "-Im Sigma_R,q(E_p,p)=2E_p Gamma_R,q(p)",
+      "cross_section_equivalence": "Gamma_out,q=sum_r integral d^3p2/(2pi)^3 f_r v_Moller integral dOmega (dSigma_qr/dOmega)(1+f3)(1+f4)"
     },
     "VERIFICATION": {
       "symbolic_width_dimension_E1": true,
@@ -342,7 +410,8 @@
       "charge_conjugation": true,
       "radial_quadrature_converged": true,
       "angular_quadrature_converged": true,
-      "positive_momentum_resolved_widths": true,
+      "positive_loss_gain_and_retarded_widths": true,
+      "kms_gain_loss_identity": true,
       "spectral_interface_exact": true,
       "eventwise_energy_momentum": true,
       "detailed_balance": true,
@@ -351,6 +420,6 @@
     },
     "CONTROLLING_BLOCKER": "vector_heat_current_basis_and_dressed_ladder_missing",
     "NEXT_ACTION": "Insert the same-kernel tree width into the dressed RA pair and build the vector heat/current Galerkin basis; retain dressed/resonant self-consistency as a separate gate.",
-    "CLAIM_BOUNDARY": "Tree elastic same-kernel tagged and spectral width only; not a dressed self-consistent/resonant width, complete damping rate, vector heat-current ladder, Kubo/SI coefficient, external validation, or Full Topic 13 closure."
+    "CLAIM_BOUNDARY": "Tree elastic same-kernel tagged loss/gain and KMS retarded width only; not a dressed self-consistent/resonant width, complete damping rate, vector heat-current ladder, Kubo/SI coefficient, external validation, or Full Topic 13 closure."
   }
 }

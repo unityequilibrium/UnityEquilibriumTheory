@@ -43,6 +43,7 @@ class InvariantVectorCurrentState:
     collision_event_count: int
     raw_gram_matrix: tuple[tuple[float, ...], ...]
     raw_collision_quadratic_form: tuple[tuple[float, ...], ...]
+    raw_collision_loss_quadratic_form: tuple[tuple[float, ...], ...]
     collision_operator: tuple[tuple[float, ...], ...]
     collision_operator_eigenvalues: tuple[float, ...]
     relative_eigenvalue_tolerance: float
@@ -206,6 +207,7 @@ def invariant_vector_current_state(
         np.linalg.norm(inverse_sqrt_gram @ gram @ inverse_sqrt_gram - np.eye(dimension))
     )
     raw_form = np.zeros((dimension, dimension), dtype=float)
+    raw_loss_form = np.zeros((dimension, dimension), dtype=float)
     max_charge = 0.0
     max_energy = 0.0
     max_momentum = 0.0
@@ -291,21 +293,28 @@ def invariant_vector_current_state(
                                 * forward
                                 / final_symmetry
                             )
+                            feature_one = _vector_features(
+                                q1, p1, float(e1), mass, energy_span, int(feature_order)
+                            )
+                            feature_two = _vector_features(
+                                q2, p2, float(e2), mass, energy_span, int(feature_order)
+                            )
+                            feature_three = _vector_features(
+                                q3, p3, e3, mass, energy_span, int(feature_order)
+                            )
+                            feature_four = _vector_features(
+                                q4, p4, e4, mass, energy_span, int(feature_order)
+                            )
                             delta = (
-                                _vector_features(
-                                    q1, p1, float(e1), mass, energy_span, int(feature_order)
-                                )
-                                + _vector_features(
-                                    q2, p2, float(e2), mass, energy_span, int(feature_order)
-                                )
-                                - _vector_features(
-                                    q3, p3, e3, mass, energy_span, int(feature_order)
-                                )
-                                - _vector_features(
-                                    q4, p4, e4, mass, energy_span, int(feature_order)
-                                )
+                                feature_one + feature_two - feature_three - feature_four
                             )
                             raw_form += weight * (delta @ delta.T) / 3.0
+                            raw_loss_form += weight * (
+                                feature_one @ feature_one.T
+                                + feature_two @ feature_two.T
+                                + feature_three @ feature_three.T
+                                + feature_four @ feature_four.T
+                            ) / 3.0
                             event_count += 1
     operator = inverse_sqrt_gram @ raw_form @ inverse_sqrt_gram
     eigenvalues, eigenvectors = np.linalg.eigh(operator)
@@ -362,6 +371,7 @@ def invariant_vector_current_state(
         collision_event_count=event_count,
         raw_gram_matrix=_matrix_tuple(gram),
         raw_collision_quadratic_form=_matrix_tuple(raw_form),
+        raw_collision_loss_quadratic_form=_matrix_tuple(raw_loss_form),
         collision_operator=_matrix_tuple(operator),
         collision_operator_eigenvalues=tuple(float(value) for value in eigenvalues),
         relative_eigenvalue_tolerance=relative_tolerance,

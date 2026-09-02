@@ -462,16 +462,16 @@ Acceptance requires retarded/advanced conjugacy, the declared spectral discontin
 - Retain the mapped legacy continuum vertex as blocked when its independent scaling remains `E^2`.
 - A pass is finite scalar `CLOSED_FOR_LANE`, not vector/tensor transport, self-consistent width, Kubo/SI closure, or Full Topic 13.
 
-## Same-kernel tree tagged/spectral width
+## Same-kernel tree loss/gain and retarded width
 
 - Run `python -m docs.scripts.audit.audit_topic13_same_kernel_tagged_width`.
 - Run `python -m pytest docs/core/test/test_topic13_same_kernel_tagged_width.py -q`.
 - Require invariant-cut and independent `v_Moller dSigma/dOmega` channel rates to agree within `1e-10`.
-- Require whole-action `Gamma~E` scaling at factors 1.5, 2, and 3.
+- Require whole-action `Gamma_R~E` scaling at factors 1.5, 2, and 3.
 - Require radial 12/16/24 and angular 4/6/8 last-refinement differences `<=5e-4`.
-- Require charge conjugation, positive momentum-resolved widths, exact `-Im Sigma_R=2E Gamma`, eventwise energy/momentum and detailed balance.
+- Require positive loss, gain and retarded widths; `Gamma_R=Gamma_out-Gamma_in=Gamma_out/(1+f)` within `1e-12`; charge conjugation; exact `-Im Sigma_R=2E Gamma_R`; eventwise energy/momentum and detailed balance.
 - Prohibit clipping, fitted damping, absolute mode cutoffs, source/holdout access, and relabeling the tree width as dressed or resonant.
-- A pass closes only the tree tagged/spectral-width lane; vector heat-current modes, dressed self-consistency, Kubo/SI and Full Topic 13 remain open.
+- The invariant-cut/cross-section comparison applies to `Gamma_out`, not directly to `Gamma_R`. A pass closes only the tree loss/gain/KMS-retarded-width lane; dressed self-consistency, independent heat transport, Kubo/SI and Full Topic 13 remain open.
 
 ## Vector current and heat-rank boundary
 
@@ -483,3 +483,16 @@ Acceptance requires retarded/advanced conjugacy, the declared spectral discontin
 - Require `J_Q_perp=-mu J_charge_perp` within `1e-10`, projected source rank one, and vanishing projected heat source at `mu=0`.
 - Use Landau projection only on sources; prohibit posterior projection of the collision operator, clipping, fitting and holdout access.
 - A pass closes the vector charge-current lane and rejects an independent heat channel only in the declared elastic equal-mass lane. It is not heat conductivity or Full Topic 13 closure.
+
+## Same-kernel dressed RA charge-current ladder
+
+- Run `python -m docs.scripts.audit.audit_topic13_dressed_ra_charge_current_ladder`.
+- Run `python -m pytest docs/core/test/test_topic13_dressed_ra_charge_current_ladder.py -q`.
+- Require the RA diagonal to use `Gamma_R`, never the tagged `Gamma_out`, and require the KMS gain/loss residual `<=1e-12`.
+- Require the independently assembled width-loss matrix to match the event-expanded loss matrix within `5e-3`.
+- Require `L_vector=D_RA-K_gain`, rung symmetry, one momentum null mode, ladder equation residual, and ladder/kinetic solution and response residuals within `1e-10`.
+- Require whole-action `D_RA`, `K_gain`, `L_vector`, and charge-response scaling as `E^1` at factors 1.5, 2, and 3; the enhancement ratio must be dimensionless.
+- Require radial 8/12/16 final response changes `<=1e-2` and angular 4/6/8 final changes `<=1e-3`.
+- Record the deflated rung spectral radius and fail closed on nonfinite Neumann iteration; direct inversion may close the finite-basis ladder even when a coarse-grid Neumann series does not converge.
+- Prohibit clipping, fitted relaxation time, absolute eigenvalue admission cutoffs, holdout access and physical Kubo/SI emission.
+- A pass closes only the finite-basis tree-elastic charge-current ladder. Independent heat transport, dressed self-consistency, continuum/cutoff proof, external validation and Full Topic 13 remain open.

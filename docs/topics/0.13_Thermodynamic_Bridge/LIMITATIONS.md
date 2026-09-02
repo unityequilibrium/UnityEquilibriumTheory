@@ -334,12 +334,20 @@ The older continuum-collocation total can appear dimensionally acceptable becaus
 
 ## Same-kernel tree-width boundary
 
-The momentum-resolved `Gamma_q(p)` is an elastic tree width on the declared nonresonant normal background. It is derived rather than fitted and is suitable as a controlled input to the next dressed-RA diagnostic, but it is not yet a self-consistent dressed width.
+The momentum-resolved tagged cut is `Gamma_out`, not the retarded pole width. The inverse cut is `Gamma_in`, and only `Gamma_R=Gamma_out-Gamma_in=Gamma_out/(1+f)` is admissible in the equilibrium RA pair. The earlier direct spectral label on `Gamma_out` is superseded. All three quantities are tree-level on the declared nonresonant normal background and are not self-consistent dressed widths.
 
-Response-sector resonances, number-changing cuts, finite-temperature self-energy feedback, pole-mass iteration, and off-shell spectral normalization remain absent. The relation `-Im Sigma_R=2E Gamma` is an on-shell interface, not an independent loop calculation or physical conductivity.
+Response-sector resonances, number-changing cuts, finite-temperature self-energy feedback, pole-mass iteration, and off-shell spectral normalization remain absent. The corrected relation `-Im Sigma_R=2E Gamma_R` is an on-shell interface, not an independent loop calculation or physical conductivity.
 
 ## Vector heat-rank no-go boundary
 
 The current elastic equal-mass two-charge lane has one independent Landau-projected vector source, not two. Since `J_Q=P-mu J_charge`, removing conserved momentum forces `J_Q_perp=-mu J_charge_perp`; at zero chemical potential the projected heat source is zero.
 
 This no-go must not be hidden by reporting the formal heat response form as an independent thermal conductivity. A second heat channel requires additional normal-component structure, response-sector carriers, unequal species, number-changing processes, or another declared physical extension. Which extension is physically admissible remains open.
+
+## Dressed charge-ladder boundary
+
+The finite-basis direct Bethe-Salpeter charge-current ladder now matches the kinetic Galerkin solution and uses no fitted relaxation time. This closes a microscopic-to-kinetic charge-current interface, not a physical electrical or thermal conductivity. The response remains in natural units and has no material frame, SI normalization, uncertainty, or external calibration.
+
+The coarse radial grid has a deflated rung radius above one and its Neumann series correctly fails; the accepted refined grids have radius below one and converge. This is why direct resummation plus refinement is required. The current radial convergence closes only the declared 8/12/16 finite-cutoff sequence; it is not an infinite-basis or cutoff-removal proof.
+
+The ladder does not repair the heat-rank no-go. An independent normal/response carrier, tensor channel, number-changing cuts, self-consistent dressed width and physical Kubo/SI mapping remain open.

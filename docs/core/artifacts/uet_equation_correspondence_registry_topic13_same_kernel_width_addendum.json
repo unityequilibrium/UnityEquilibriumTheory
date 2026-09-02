@@ -16,34 +16,44 @@
         "dPhi2": 0,
         "external_1_over_2E": -1,
         "Gamma": 1,
+        "Gamma_out": 1,
+        "Gamma_in": 1,
+        "Gamma_R": 1,
         "Im_Sigma_R": 2
       },
-      "derivation_class": "same_action_tree_elastic_cut_width_with_independent_cross_section_match",
-      "observable": "Tagged elastic quasiparticle loss and on-shell spectral width, not conductivity",
+      "derivation_class": "same_action_tree_elastic_loss_gain_cuts_with_kms_retarded_width",
+      "observable": "Tagged elastic loss/gain and on-shell retarded width, not conductivity",
       "data_role": "DERIVED_SYNTHETIC_STRUCTURAL_CANDIDATE",
-      "verification_status": "PASS_SCOPED_SAME_KERNEL_TREE_TAGGED_SPECTRAL_WIDTH",
+      "verification_status": "PASS_SCOPED_SAME_KERNEL_TREE_LOSS_GAIN_RETARDED_WIDTH",
       "controlling_blocker": "vector_heat_current_basis_and_dressed_ladder_missing",
-      "claim_boundary": "Tree elastic same-kernel tagged and spectral width only; not a dressed self-consistent/resonant width, complete damping rate, vector heat-current ladder, Kubo/SI coefficient, external validation, or Full Topic 13 closure.",
+      "claim_boundary": "Tree elastic same-kernel tagged loss/gain and KMS retarded width only; not a dressed self-consistent/resonant width, complete damping rate, vector heat-current ladder, Kubo/SI coefficient, external validation, or Full Topic 13 closure.",
       "equation_id": "uet.o2.thermal.same_kernel_tree_tagged_spectral_width",
       "version": "1",
-      "classification": "candidate_same_kernel_tree_tagged_spectral_width",
+      "classification": "candidate_same_kernel_tree_loss_gain_retarded_width",
       "relation_or_code_path": {
-        "tagged_width": "Gamma_q(p)=1/(2E_p)*sum_r integral dPi2 dPhi2 |M_qr|^2 f_r(1+f3)(1+f4)/S_final",
-        "spectral_interface": "-Im Sigma_R,q(E_p,p)=2E_p Gamma_q(p)",
-        "cross_section_equivalence": "Gamma_q=sum_r integral d^3p2/(2pi)^3 f_r v_Moller integral dOmega (dSigma_qr/dOmega)(1+f3)(1+f4)"
+        "tagged_loss_width": "Gamma_out,q(p)=1/(2E_p)*sum_r integral dPi2 dPhi2 |M_qr|^2 f_r(1+f3)(1+f4)/S_final",
+        "tagged_gain_width": "Gamma_in,q(p)=1/(2E_p)*sum_r integral dPi2 dPhi2 |M_qr|^2 (1+f_r)f3 f4/S_final",
+        "kms_retarded_width": "Gamma_R,q=Gamma_out,q-Gamma_in,q=Gamma_out,q/(1+f_q)",
+        "spectral_interface": "-Im Sigma_R,q(E_p,p)=2E_p Gamma_R,q(p)",
+        "cross_section_equivalence": "Gamma_out,q=sum_r integral d^3p2/(2pi)^3 f_r v_Moller integral dOmega (dSigma_qr/dOmega)(1+f3)(1+f4)"
       },
-      "standard_physics_counterpart": "Relativistic tagged 2-to-2 loss rate and on-shell retarded self-energy width",
+      "standard_physics_counterpart": "Relativistic 2-to-2 greater/lesser cuts and on-shell retarded self-energy width",
       "variables": {
-        "Gamma_q": "tagged elastic loss width",
+        "Gamma_out": "tagged elastic loss rate",
+        "Gamma_in": "inverse gain rate",
+        "Gamma_R": "retarded pole width",
         "Sigma_R": "retarded on-shell self-energy"
       },
       "mathematical_role": "same-kernel damping input precursor for dressed RA ladder",
-      "observable_mapping": "Tagged elastic quasiparticle loss and on-shell spectral width, not conductivity",
+      "observable_mapping": "Tagged elastic loss/gain and on-shell retarded width, not conductivity",
       "parameter_dimensions": {
         "dPi2": 2,
         "dPhi2": 0,
         "external_1_over_2E": -1,
         "Gamma": 1,
+        "Gamma_out": 1,
+        "Gamma_in": 1,
+        "Gamma_R": 1,
         "Im_Sigma_R": 2
       },
       "source_or_origin": "Declared O(2)-Phi tree action and invariant two-body cut",
@@ -68,11 +78,11 @@
         "docs/core/test/test_topic13_same_kernel_tagged_width.py"
       ],
       "evidence_class": "INTERNAL_STRUCTURAL_CANDIDATE",
-      "proof_status": "TREE_TAGGED_WIDTH_AND_INDEPENDENT_NORMALIZATION_VERIFIED",
+      "proof_status": "TREE_LOSS_GAIN_KMS_RETARDED_WIDTH_VERIFIED",
       "evidence_artifacts": [
         {
           "path": "docs/core/artifacts/t13_same_kernel_tagged_spectral_width_audit.json",
-          "sha256": "e9d1c2f91ae2ed9a60d28f6b8da2f952729e2e0528110419131172aa8adc79dc"
+          "sha256": "aa2cee30973fee3f0f109140db77ac6620cde4ff0fec53596442c7c337961293"
         }
       ],
       "downstream_dependencies": [
