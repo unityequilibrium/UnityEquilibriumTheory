@@ -1355,3 +1355,27 @@ CONTROLLING_BLOCKER: `normal_umklapp_split_or_admissible_full_collision_operator
 CLAIM_BOUNDARY: Calorine comparator source boundary only; not physical UET transport, Ding acceptance, TTG prediction, external validation or Full Topic 13 closure.
 
 EVIDENCE: `docs/core/artifacts/t13_calorine_lattice_interface_input_boundary.json`; source binary `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/mesh_12x12x6/kappa-m12126.hdf5`.
+
+## Scalar Thermoelastic Source-Combination Boundary (2026-09-02)
+
+MAJOR_RESULT_CLOSURE: `T13_SCALAR_THERMOELASTIC_RESPONSE_BRIDGE_CANDIDATE` is `CLOSED_FOR_LANE` for the conditional formula; no physical source combination is admitted.
+
+WHAT_IS_ACTUALLY_CLOSED: Lowitzer remains the source-locked same-study alpha_V/K_T comparator and MP48 remains the independent harmonic volumetric Cv comparator. Their roles and hashes are inherited without relabeling.
+
+WHAT_REMAINS_OPEN: One same-material/state alpha_V/K_T/Cv package with uncertainty and Ding mapping, plus physical `g_Phi_theta`, `Z_Phi` and `a_Phi`.
+
+DEPENDENCY_UNLOCKED: A dedicated same-state thermoelastic input-acceptance gate only.
+
+STATUS: `source_combination_admitted=false`; `parameter_fitting_performed=false`; `xie_2026_accessed=false`.
+
+WHAT_CHANGED: The scalar derivation identifies exactly which source fields can instantiate `chi_u_theta`, while prohibiting the current Lowitzer/MP48 cross-package combination from becoming calibration evidence.
+
+EQUATION_OR_MAPPING: `C_p^V=C_v^V+T*alpha_V^2*K_T`; `chi_u_theta=T*alpha_V*C_v^V/C_p^V`; no numeric physical alpha is emitted.
+
+VERIFICATION: Source statuses and data roles are checked by `t13_scalar_thermoelastic_response_bridge_audit.json`; the Lowitzer material-to-TTG blocker and MP48 non-calibration role remain intact.
+
+CONTROLLING_BLOCKER: `same_material_state_alpha_V_K_T_C_v_input_package_missing`.
+
+NEXT_ACTION: Acquire one permissioned same-state thermoelastic package or a documented material-state mapping with covariance; do not combine current comparator central values by assumption.
+
+CLAIM_BOUNDARY: Source-role and no-combination boundary only; not Ding acceptance, UET calibration, TTG prediction, external validation or Full Topic 13 closure.

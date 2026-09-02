@@ -1,0 +1,255 @@
+{
+  "schema_version": "t13-scalar-thermoelastic-response-bridge-v1",
+  "major_result_id": "T13_SCALAR_THERMOELASTIC_RESPONSE_BRIDGE_CANDIDATE",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "CLOSED_FOR_LANE",
+  "closure_disposition": "CONDITIONAL_STANDARD_THERMOELASTIC_MAP_DERIVED",
+  "verification_status": "PASS_CONDITIONAL_SCALAR_THERMOELASTIC_RESPONSE_BRIDGE",
+  "what_is_closed": [
+    "The scalar zero-stress, adiabatic thermoelastic equations derive chi_u_theta instead of treating it as an unconstrained free factor.",
+    "The conditional response reduces to DeltaT=T*alpha_V*g_Phi_theta*Phi_E/C_p^V with C_p^V=C_v^V+T*alpha_V^2*K_T.",
+    "The static coupled Phi_E--theta Hessian supplies the necessary bound g_Phi_theta^2<a_Phi*K_T.",
+    "The Lowitzer alpha_V/K_T pair and MP48 c_v record are independently admissible comparators but are not combined as a physical calibration because material/state equivalence is open."
+  ],
+  "equation_registry_ids": [
+    "uet.o2.thermal.scalar_thermoelastic_response_bridge"
+  ],
+  "registration_status": "CONDITIONAL_INTERFACE_NOT_ACCEPTED_UET_ACTION",
+  "equation_or_mapping": {
+    "free_energy_increment": "delta_f=K_T*theta^2/2-K_T*alpha_V*theta*DeltaT-C_v^V*DeltaT^2/(2*T)+g_Phi_theta*Phi_E*theta+a_Phi*Phi_E^2/2",
+    "zero_stress": "K_T*theta-K_T*alpha_V*DeltaT+g_Phi_theta*Phi_E=0",
+    "adiabatic_entropy": "K_T*alpha_V*theta+(C_v^V/T)*DeltaT=0",
+    "cp_cv_identity": "C_p^V-C_v^V=T*alpha_V^2*K_T",
+    "temperature_response": "DeltaT=T*alpha_V*g_Phi_theta*Phi_E/(C_v^V+T*alpha_V^2*K_T)",
+    "material_response_factor": "chi_u_theta=T*alpha_V*C_v^V/(C_v^V+T*alpha_V^2*K_T)=T*alpha_V*C_v^V/C_p^V",
+    "conditional_alpha": "alpha_Phi_T^nat=T*alpha_V*g_Phi_theta*Z_Phi/C_p^V",
+    "static_stability": "a_Phi*K_T-g_Phi_theta^2>0"
+  },
+  "ontology": {
+    "Phi_E": "energy-dimension UET response amplitude; not temperature",
+    "theta": "external material volumetric strain div(u)",
+    "DeltaT": "small material temperature perturbation",
+    "C_v_vol": "heat capacity per volume at fixed strain/volume",
+    "C_p_vol": "stress-free heat capacity per volume in scalar model",
+    "C": "unchanged collective coordinate; not C_v or C_p",
+    "R_gen": "derived history trace; absent from state and response"
+  },
+  "unit_lane": "conditional_natural_scalar_thermoelastic_open_SI",
+  "units": {
+    "temperature": 1,
+    "alpha_v": -1,
+    "bulk_modulus": 4,
+    "c_v_vol": 3,
+    "c_p_vol": 3,
+    "theta": 0,
+    "Phi_E": 1,
+    "g_Phi_theta": 3,
+    "a_Phi": 2,
+    "free_energy_density": 4,
+    "chi_u_theta": 0,
+    "alpha_per_normalized_Phi": 1
+  },
+  "derivation_class": "standard_linear_thermoelastic_stationarity_and_conditional_UET_interface",
+  "observable": "Conditional local adiabatic DeltaPhi-to-DeltaT response",
+  "data_role": "DERIVED_CONDITIONAL_MAP_WITH_UNCOMBINED_EXTERNAL_COMPARATORS",
+  "contract": {
+    "status": "PASS_CONDITIONAL_SCALAR_THERMOELASTIC_RESPONSE_BRIDGE",
+    "equations": {
+      "free_energy_increment": "delta_f=K_T*theta^2/2-K_T*alpha_V*theta*DeltaT-C_v^V*DeltaT^2/(2*T)+g_Phi_theta*Phi_E*theta+a_Phi*Phi_E^2/2",
+      "zero_stress": "K_T*theta-K_T*alpha_V*DeltaT+g_Phi_theta*Phi_E=0",
+      "adiabatic_entropy": "K_T*alpha_V*theta+(C_v^V/T)*DeltaT=0",
+      "cp_cv_identity": "C_p^V-C_v^V=T*alpha_V^2*K_T",
+      "temperature_response": "DeltaT=T*alpha_V*g_Phi_theta*Phi_E/(C_v^V+T*alpha_V^2*K_T)",
+      "material_response_factor": "chi_u_theta=T*alpha_V*C_v^V/(C_v^V+T*alpha_V^2*K_T)=T*alpha_V*C_v^V/C_p^V",
+      "conditional_alpha": "alpha_Phi_T^nat=T*alpha_V*g_Phi_theta*Z_Phi/C_p^V",
+      "static_stability": "a_Phi*K_T-g_Phi_theta^2>0"
+    },
+    "ontology": {
+      "Phi_E": "energy-dimension UET response amplitude; not temperature",
+      "theta": "external material volumetric strain div(u)",
+      "DeltaT": "small material temperature perturbation",
+      "C_v_vol": "heat capacity per volume at fixed strain/volume",
+      "C_p_vol": "stress-free heat capacity per volume in scalar model",
+      "C": "unchanged collective coordinate; not C_v or C_p",
+      "R_gen": "derived history trace; absent from state and response"
+    },
+    "natural_unit_exponents": {
+      "temperature": 1,
+      "alpha_v": -1,
+      "bulk_modulus": 4,
+      "c_v_vol": 3,
+      "c_p_vol": 3,
+      "theta": 0,
+      "Phi_E": 1,
+      "g_Phi_theta": 3,
+      "a_Phi": 2,
+      "free_energy_density": 4,
+      "chi_u_theta": 0,
+      "alpha_per_normalized_Phi": 1
+    },
+    "f0_ontology": "CLOSED_FOR_CONDITIONAL_SCALAR_MATERIAL_LANE",
+    "f1_standard_correspondence": "linear isotropic scalar thermoelasticity at zero external stress and fixed entropy, plus a proposed Phi_E--volumetric-strain interaction",
+    "f2_units": "CLOSED_NATURAL_UNITS_SI_COEFFICIENTS_OPEN",
+    "f3_derivation": "linear stationarity/entropy solve and positive static Phi_E--theta Hessian",
+    "f4_observable": "conditional local adiabatic DeltaPhi-to-DeltaT map; no TTG dynamics",
+    "source_roles": {
+      "temperature": "SOURCE_MATCHED_MATERIAL_STATE_REQUIRED",
+      "alpha_V": "SOURCE_MATCHED_INPUT_REQUIRED",
+      "K_T": "SOURCE_MATCHED_ISOTHERMAL_INPUT_REQUIRED",
+      "C_v_vol": "SOURCE_MATCHED_INPUT_REQUIRED",
+      "g_Phi_theta": "UET_DERIVATION_OR_MICROSCOPIC_MATCH_REQUIRED",
+      "Z_Phi": "PHYSICAL_RESPONSE_RESIDUE_REQUIRED",
+      "a_Phi": "UET_RESPONSE_CURVATURE_REQUIRED_FOR_STABILITY"
+    },
+    "excluded": {
+      "accepted_UET_action_term": true,
+      "anisotropic_graphite_tensor": true,
+      "finite_frequency_transport": true,
+      "KMS_or_noise": true,
+      "numeric_physical_alpha": true,
+      "TTG_holdout": true
+    },
+    "claim_boundary": "Conditional static scalar thermoelastic derivation only; not an accepted UET action extension, anisotropic graphite model, dynamic transport, physical alpha calibration, TTG prediction or Full Topic 13 closure."
+  },
+  "reference_witness": {
+    "temperature": 0.8,
+    "alpha_v": 0.12,
+    "bulk_modulus": 5.0,
+    "c_v_vol": 2.4,
+    "c_p_vol": 2.4576,
+    "coupling": 0.7,
+    "response_residue": 1.3,
+    "response_curvature": 0.8,
+    "delta_phi": 0.02,
+    "phi_energy_amplitude": 0.026000000000000002,
+    "delta_temperature": 0.0007109375000000002,
+    "delta_temperature_closed_form": 0.0007109375000000001,
+    "volumetric_strain": -0.0035546874999999997,
+    "stress_residual": 0.0,
+    "entropy_residual": 8.673617379884035e-19,
+    "cp_cv_identity_residual": -1.3183898417423734e-16,
+    "temperature_map_relative_residual": 1.5250316272323574e-16,
+    "chi_u_theta": 0.09375,
+    "alpha_phi_temperature_natural": 0.035546875,
+    "stability_margin": 3.5100000000000002
+  },
+  "checks": {
+    "free_energy_terms_close_to_energy_density": true,
+    "thermoelastic_cross_term_closes": true,
+    "cp_cv_identity_closes": true,
+    "stress_stationarity_closes": true,
+    "adiabatic_entropy_closes": true,
+    "closed_form_matches_linear_solve": true,
+    "material_factor_matches_alpha_product": true,
+    "zero_expansion_has_zero_temperature_response": true,
+    "zero_coupling_has_zero_temperature_response": true,
+    "positive_static_hessian_margin_is_exposed": true,
+    "unstable_coupling_is_not_silently_admitted": true,
+    "lowitzer_pair_is_source_locked_comparator": true,
+    "lowitzer_ding_mapping_remains_open": true,
+    "mp48_cv_is_independent_comparator_only": true,
+    "source_combination_is_not_admitted": true,
+    "factor_gate_keeps_physical_g_and_Z_open": true,
+    "accepted_action_and_anisotropic_promotion_are_excluded": true,
+    "no_fit_holdout_or_action_promotion": true
+  },
+  "source_combination_admitted": false,
+  "source_combination_blocker": "Lowitzer_alpha_K_and_MP48_Cv_are_not_same_material_state_or_Ding_mapped",
+  "open_blockers": [
+    "physical_Phi_strain_coupling_g_Phi_theta_missing",
+    "physical_response_residue_Z_Phi_missing",
+    "same_material_state_alpha_V_K_T_C_v_input_package_missing",
+    "anisotropic_graphite_thermoelastic_tensor_mapping_missing",
+    "Ding_TTG_material_regime_mapping_missing",
+    "finite_frequency_transport_SK_KMS_and_entropy_closure_missing",
+    "independent_SI_alpha_record_missing"
+  ],
+  "controlling_blocker": "physical_g_Phi_theta_Z_Phi_and_same_state_thermoelastic_inputs_missing",
+  "source_hashes": {
+    "docs/core/uet_scalar_thermoelastic_response_bridge.py": "f379f657c597b8e453388fa4e96d1dd88d8dae8d6fa8d8629a133350f086306b",
+    "docs/core/test/test_topic13_scalar_thermoelastic_response_bridge.py": "646d7b1129d1becb0c5d9046b86b04b350b0f0f184dcba4385cb9521f4f871dc",
+    "docs/scripts/audit/audit_topic13_scalar_thermoelastic_response_bridge.py": "4fe4fdd078262ff0a709cfd40573dcea30585dee7a09708e830d345649ac1905"
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_material_interface_factor_resolution_audit.json",
+      "sha256": "3bb802c32d27275601584f4ce2a25b3fe28d187aefdb7eced2607938df0eb7be"
+    },
+    {
+      "path": "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
+      "sha256": "818230a6f8aa68a14a1f642e1e7342d70bfa657f6e05476d3e190d336e77b386"
+    },
+    {
+      "path": "docs/core/artifacts/t13_mp48_independent_graphite_cv_audit.json",
+      "sha256": "56493e6d4883f3f78d24f630f5cdc6718eec350ce264152146979e3bb0ee39a9"
+    }
+  ],
+  "dependency_unlocked": [
+    "same_state_thermoelastic_input_acceptance_gate",
+    "Phi_strain_coupling_stability_gate",
+    "anisotropic_thermoelastic_extension_design"
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "xie_2026_accessed": false,
+  "parameter_fitting_performed": false,
+  "claim_boundary": "Conditional static scalar thermoelastic derivation only; not an accepted UET action extension, anisotropic graphite model, dynamic transport, physical alpha calibration, TTG prediction or Full Topic 13 closure.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "The scalar zero-stress, adiabatic thermoelastic equations derive chi_u_theta instead of treating it as an unconstrained free factor.",
+      "The conditional response reduces to DeltaT=T*alpha_V*g_Phi_theta*Phi_E/C_p^V with C_p^V=C_v^V+T*alpha_V^2*K_T.",
+      "The static coupled Phi_E--theta Hessian supplies the necessary bound g_Phi_theta^2<a_Phi*K_T.",
+      "The Lowitzer alpha_V/K_T pair and MP48 c_v record are independently admissible comparators but are not combined as a physical calibration because material/state equivalence is open."
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "physical_Phi_strain_coupling_g_Phi_theta_missing",
+      "physical_response_residue_Z_Phi_missing",
+      "same_material_state_alpha_V_K_T_C_v_input_package_missing",
+      "anisotropic_graphite_thermoelastic_tensor_mapping_missing",
+      "Ding_TTG_material_regime_mapping_missing",
+      "finite_frequency_transport_SK_KMS_and_entropy_closure_missing",
+      "independent_SI_alpha_record_missing"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "same_state_thermoelastic_input_acceptance_gate",
+      "Phi_strain_coupling_stability_gate",
+      "anisotropic_thermoelastic_extension_design"
+    ],
+    "STATUS": "PASS_CONDITIONAL_SCALAR_THERMOELASTIC_RESPONSE_BRIDGE",
+    "WHAT_CHANGED": "Derived the material response factor and coupling stability bound from a declared scalar thermoelastic free-energy increment.",
+    "EQUATION_OR_MAPPING": {
+      "free_energy_increment": "delta_f=K_T*theta^2/2-K_T*alpha_V*theta*DeltaT-C_v^V*DeltaT^2/(2*T)+g_Phi_theta*Phi_E*theta+a_Phi*Phi_E^2/2",
+      "zero_stress": "K_T*theta-K_T*alpha_V*DeltaT+g_Phi_theta*Phi_E=0",
+      "adiabatic_entropy": "K_T*alpha_V*theta+(C_v^V/T)*DeltaT=0",
+      "cp_cv_identity": "C_p^V-C_v^V=T*alpha_V^2*K_T",
+      "temperature_response": "DeltaT=T*alpha_V*g_Phi_theta*Phi_E/(C_v^V+T*alpha_V^2*K_T)",
+      "material_response_factor": "chi_u_theta=T*alpha_V*C_v^V/(C_v^V+T*alpha_V^2*K_T)=T*alpha_V*C_v^V/C_p^V",
+      "conditional_alpha": "alpha_Phi_T^nat=T*alpha_V*g_Phi_theta*Z_Phi/C_p^V",
+      "static_stability": "a_Phi*K_T-g_Phi_theta^2>0"
+    },
+    "VERIFICATION": {
+      "free_energy_terms_close_to_energy_density": true,
+      "thermoelastic_cross_term_closes": true,
+      "cp_cv_identity_closes": true,
+      "stress_stationarity_closes": true,
+      "adiabatic_entropy_closes": true,
+      "closed_form_matches_linear_solve": true,
+      "material_factor_matches_alpha_product": true,
+      "zero_expansion_has_zero_temperature_response": true,
+      "zero_coupling_has_zero_temperature_response": true,
+      "positive_static_hessian_margin_is_exposed": true,
+      "unstable_coupling_is_not_silently_admitted": true,
+      "lowitzer_pair_is_source_locked_comparator": true,
+      "lowitzer_ding_mapping_remains_open": true,
+      "mp48_cv_is_independent_comparator_only": true,
+      "source_combination_is_not_admitted": true,
+      "factor_gate_keeps_physical_g_and_Z_open": true,
+      "accepted_action_and_anisotropic_promotion_are_excluded": true,
+      "no_fit_holdout_or_action_promotion": true
+    },
+    "CONTROLLING_BLOCKER": "physical_g_Phi_theta_Z_Phi_and_same_state_thermoelastic_inputs_missing",
+    "NEXT_ACTION": "Build a same-material/state alpha_V, K_T and C_v package and derive or microscopically match g_Phi_theta and Z_Phi before any numeric alpha.",
+    "CLAIM_BOUNDARY": "Conditional static scalar thermoelastic derivation only; not an accepted UET action extension, anisotropic graphite model, dynamic transport, physical alpha calibration, TTG prediction or Full Topic 13 closure."
+  }
+}

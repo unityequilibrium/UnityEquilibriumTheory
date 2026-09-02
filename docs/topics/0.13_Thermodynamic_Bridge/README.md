@@ -905,6 +905,32 @@ NEXT_ACTION: Design the distinct `Phi_E*theta` action candidate through ontology
 CLAIM_BOUNDARY: Factor-resolution and current-operator substitution no-go only; not a physical coupling, alpha calibration, material transport result, TTG prediction, external validation or Full Topic 13 closure.
 
 Machine-readable artifact: `docs/core/artifacts/t13_material_interface_factor_resolution_audit.json`.
+
+## Current Major Result: scalar thermoelastic response bridge (2026-09-02)
+
+MAJOR_RESULT_CLOSURE: `T13_SCALAR_THERMOELASTIC_RESPONSE_BRIDGE_CANDIDATE` is `CLOSED_FOR_LANE` as a conditional standard-physics map. Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: The scalar zero-stress/adiabatic equations derive `chi_u_theta=T*alpha_V*C_v^V/C_p^V`, reduce the conditional temperature map to `DeltaT=T*alpha_V*g_Phi_theta*Phi_E/C_p^V`, and impose `g_Phi_theta^2<a_Phi*K_T` for static stability.
+
+WHAT_REMAINS_OPEN: Physical `g_Phi_theta`, `Z_Phi` and `a_Phi`; one same-material/state alpha/K/Cv package; graphite anisotropic tensor response; Ding mapping; dynamic transport/KMS/entropy; SI conversion and independent alpha evidence.
+
+DEPENDENCY_UNLOCKED: Same-state thermoelastic input gate, Phi-strain stability gate and anisotropic extension design only.
+
+STATUS: `PASS_CONDITIONAL_SCALAR_THERMOELASTIC_RESPONSE_BRIDGE`; `source_combination_admitted=false`; `full_core_unlock=false`.
+
+WHAT_CHANGED: Replaced the free material-response factor with a derived scalar formula and added a coupling-strength stability ceiling. Lowitzer and MP48 remain separate comparator records rather than an invented calibration.
+
+EQUATION_OR_MAPPING: `C_p^V=C_v^V+T*alpha_V^2*K_T`; `chi_u_theta=T*alpha_V*C_v^V/C_p^V`; `alpha_Phi_T^nat=T*alpha_V*g_Phi_theta*Z_Phi/C_p^V`; `a_Phi*K_T-g_Phi_theta^2>0`.
+
+VERIFICATION: Audit passes `18/18`; linked thermoelastic/factor/interface/source/foundation regression passes `40` tests. Stress, entropy and closed-form response residuals are below `2e-16` in the synthetic witness. No physical source rows were combined and Xie 2026 was not read.
+
+CONTROLLING_BLOCKER: `physical_g_Phi_theta_Z_Phi_and_same_state_thermoelastic_inputs_missing`.
+
+NEXT_ACTION: Build a single accepted material/state package for `alpha_V`, `K_T` and `C_v^V`, while separately deriving or microscopically matching `g_Phi_theta`, `Z_Phi` and `a_Phi`; then extend the scalar map to the graphite thermoelastic tensor.
+
+CLAIM_BOUNDARY: Conditional static scalar derivation only; not an accepted UET action term, anisotropic graphite model, dynamic transport, physical alpha calibration, TTG prediction, external validation or Full Topic 13 closure.
+
+Machine-readable artifact: `docs/core/artifacts/t13_scalar_thermoelastic_response_bridge_audit.json`.
 ## Current Major Result: T13-173 causal gate semantics alignment (2026-08-23)
 
 MAJOR_RESULT_CLOSURE: CLOSED_AS_NO_GO for the declared local conserved-C gradient finite-cone compatibility question; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.

@@ -136,6 +136,19 @@ operators act on different state variables. Directly relabeling `h` as
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | T13-MATERIAL-INTERFACE-FACTOR-RESOLUTION-20260902 | implemented `h*delta_phi*chi^2`; required `g_Phi_theta*Phi_E*theta`; `alpha_Phi_K=chi_u_theta*g_Phi_theta*Z_Phi/C_src` | docs/core/uet_material_interface_factor_resolution.py | `h~E`, `g~E^3`, `Phi_E~E`, `theta~1`, `C_src~E^3`, `alpha~E` | current covariant action, normalization no-go, natural action bridge and conditional material interface | factor gate closed; direct coupling substitution closed as no-go; physical factors open | operator signature, unit gap, prior artifact identities, uncertainty algebra and holdout policy | physical residue, new strain operator/microscopic match, material response, accepted `C_src` and collision split missing | design a separate `Phi_E*theta` candidate through F0-F4 or source-lock a microscopic match; never reuse `h` |
 
+## Scalar Thermoelastic Response Bridge (2026-09-02)
+
+For a scalar isotropic material pilot, zero external stress and fixed entropy
+close the two linear equations
+`K_T*theta-K_T*alpha_V*DeltaT+g_Phi_theta*Phi_E=0` and
+`K_T*alpha_V*theta+(C_v^V/T)*DeltaT=0`. Their solution derives the
+material factor rather than leaving it arbitrary. The coupled static Hessian
+also requires `a_Phi*K_T-g_Phi_theta^2>0`.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-SCALAR-THERMOELASTIC-RESPONSE-BRIDGE-20260902 | `C_p^V=C_v^V+T*alpha_V^2*K_T`; `chi_u_theta=T*alpha_V*C_v^V/C_p^V`; `DeltaT=T*alpha_V*g_Phi_theta*Phi_E/C_p^V`; stability `g^2<a_Phi*K_T` | docs/core/uet_scalar_thermoelastic_response_bridge.py | `T~E`, `alpha_V~E^-1`, `K_T~E^4`, `C_v^V,C_p^V~E^3`, `g~E^3`, `Phi_E~E`, `DeltaT~E` | standard linear scalar thermoelasticity plus conditional Phi-strain interaction | conditional static map and stability bound derived; physical inputs open | unit sums, independent 2x2 solve, stress/entropy residuals, limiting cases, source-role audit | scalar/isotropic/static approximation; physical `g`, `Z`, same-state inputs, anisotropic tensor and dynamic KMS transport missing | acquire one same-material/state alpha/K/Cv package and derive or match `g`, `Z`, and `a_Phi` before numeric alpha |
+
 ## Dressed RA Pair and Microscopic Rung Boundary (2026-09-01)
 
 In the positive-energy pole approximation,

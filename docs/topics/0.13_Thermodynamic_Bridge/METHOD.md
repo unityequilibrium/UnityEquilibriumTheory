@@ -152,3 +152,21 @@ and is not kelvin per normalized base `Phi`. Classify `Z_Phi`, `g_Phi_theta`,
 after all factors share one unit and material/state contract, using
 `Var(alpha)=grad(alpha)^T Sigma grad(alpha)`; the independent-factor sum is a
 special case, not a license to assume independence in physical data.
+
+## Scalar thermoelastic response method (2026-09-02)
+
+Use the quadratic free-energy increment
+`delta_f=K_T*theta^2/2-K_T*alpha_V*theta*DeltaT-C_v^V*DeltaT^2/(2T)
++g_Phi_theta*Phi_E*theta+a_Phi*Phi_E^2/2`. Solve the zero-stress condition
+and the fixed-entropy condition as one linear system; do not insert the target
+temperature response. The result is
+`DeltaT=T*alpha_V*g_Phi_theta*Phi_E/C_p^V`, where
+`C_p^V=C_v^V+T*alpha_V^2*K_T`.
+
+The earlier factorization is recovered with
+`chi_u_theta=T*alpha_V*C_v^V/C_p^V`. Require `C_v^V>0`, `K_T>0` and the
+isothermal coupled-field stability margin
+`a_Phi*K_T-g_Phi_theta^2>0`. Treat this as a scalar, isotropic, local and
+adiabatic candidate only. Lowitzer alpha/K and MP48 Cv remain separate
+comparators until one material/state mapping and uncertainty contract admits
+their combination.

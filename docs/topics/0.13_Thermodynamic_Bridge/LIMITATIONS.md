@@ -434,3 +434,18 @@ factor audit narrows the next task to a new strain operator or independent
 microscopic match. It does not prove that such a coupling exists in nature and
 does not close the physical residue, material response, collision or Ding
 source gates.
+
+## Scalar thermoelastic bridge boundary
+
+The scalar thermoelastic derivation removes one arbitrary symbol by expressing
+`chi_u_theta` through `T`, `alpha_V`, `K_T` and `C_v^V`. It assumes a local
+isotropic material, constant coefficients, zero external stress and an
+adiabatic perturbation. Graphite is anisotropic, and TTG is dynamical; the
+scalar result is therefore a controlled parent, not the final material model.
+
+Lowitzer supplies a same-study alpha/K pair and MP48 supplies an independent
+harmonic Cv comparator, but they are not one same-material/state Ding package.
+Their numerical rows are not combined. Physical `g_Phi_theta`, `Z_Phi` and
+`a_Phi` also remain unidentified. The stability inequality `g^2<a_Phi*K_T`
+is necessary in this candidate lane; satisfying it would not by itself prove
+the coupling or validate UET.

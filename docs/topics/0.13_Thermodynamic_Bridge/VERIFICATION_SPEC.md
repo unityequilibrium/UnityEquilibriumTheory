@@ -565,3 +565,16 @@ Acceptance requires retarded/advanced conjugacy, the declared spectral discontin
 - Require uncertainty propagation algebra to pass with synthetic factors, but prohibit interpreting the witness as calibration.
 - Prohibit a new action term, direct `h -> g_Phi_theta` relabeling, fitting, Xie 2026 access or dependency promotion.
 - A pass closes the factor taxonomy and direct-coupling substitution no-go only. Physical `Z_Phi`, strain coupling/microscopic match, material response, accepted `C_src`, collision decomposition and SI alpha remain open.
+
+## Scalar thermoelastic response bridge
+
+- Run `python -m docs.scripts.audit.audit_topic13_scalar_thermoelastic_response_bridge`.
+- Run `python -m pytest docs/core/test/test_topic13_scalar_thermoelastic_response_bridge.py -q`.
+- Require every free-energy term to have natural energy-density dimension four.
+- Solve the zero-stress and adiabatic-entropy equations independently and require stress, entropy and closed-form response residuals `<=1e-14`.
+- Require `C_p^V-C_v^V=T*alpha_V^2*K_T` and the recovered factor `chi_u_theta=T*alpha_V*C_v^V/C_p^V`.
+- Require zero response when `alpha_V`, `g_Phi_theta`, `Z_Phi` or `DeltaPhi` is zero.
+- Expose the static stability margin `a_Phi*K_T-g_Phi_theta^2`; a negative margin must not be silently admitted.
+- Verify Lowitzer alpha/K and MP48 Cv provenance independently and require `source_combination_admitted=false` while their material/state mapping is open.
+- Prohibit anisotropic-graphite, finite-frequency, KMS, SI alpha, fit, holdout or accepted-action promotion.
+- A pass closes the conditional scalar thermoelastic form and stability bound only.

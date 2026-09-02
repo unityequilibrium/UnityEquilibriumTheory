@@ -5748,3 +5748,34 @@ EVIDENCE_PATHS:
 - `docs/core/test/test_topic13_material_interface_factor_resolution.py`
 - `docs/core/artifacts/t13_material_interface_factor_resolution_audit.json`
 - `docs/core/artifacts/uet_equation_correspondence_registry_topic13_material_interface_factor_resolution_addendum.json`
+
+## 2026-09-02 - Scalar thermoelastic response bridge
+
+MAJOR_RESULT_CLOSURE: `T13_SCALAR_THERMOELASTIC_RESPONSE_BRIDGE_CANDIDATE` is `CLOSED_FOR_LANE` as a conditional standard-physics derivation. Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: The scalar material-response factor, adiabatic temperature map, Cp-Cv identity and static coupling stability bound.
+
+WHAT_REMAINS_OPEN: Physical `g_Phi_theta`, `Z_Phi`, `a_Phi`; one same-state alpha/K/Cv package; anisotropic graphite response; Ding mapping; dynamic transport/KMS/entropy and SI alpha.
+
+DEPENDENCY_UNLOCKED: Same-state thermoelastic input gate, coupling stability gate and anisotropic extension design only.
+
+STATUS: `PASS_CONDITIONAL_SCALAR_THERMOELASTIC_RESPONSE_BRIDGE`; `source_combination_admitted=false`; `full_core_unlock=false`.
+
+WHAT_CHANGED: Added a scalar thermoelastic bridge module, 13 test cases, an 18-check audit artifact, registry addendum and source no-combination boundary. No accepted UET action was changed.
+
+EQUATION_OR_MAPPING: `C_p^V=C_v^V+T*alpha_V^2*K_T`; `chi_u_theta=T*alpha_V*C_v^V/C_p^V`; `DeltaT=T*alpha_V*g_Phi_theta*Phi_E/C_p^V`; stability `g_Phi_theta^2<a_Phi*K_T`.
+
+VERIFICATION: Audit passes `18/18`; linked thermoelastic/factor/interface/Lowitzer/MP48/foundation regression passes `40` tests. Synthetic stress, entropy and map residuals are `<=1.53e-16`. No current external records were combined, fitted or read from Xie 2026.
+
+CONTROLLING_BLOCKER: `physical_g_Phi_theta_Z_Phi_and_same_state_thermoelastic_inputs_missing`.
+
+NEXT_ACTION: Build a same-material/state alpha_V/K_T/Cv acceptance package, derive or match `g_Phi_theta`, `Z_Phi`, `a_Phi`, then generalize to the anisotropic tensor before dynamic TTG use.
+
+CLAIM_BOUNDARY: Conditional static scalar derivation only; not accepted UET action, physical alpha, anisotropic graphite transport, TTG prediction, external validation or Full Topic 13 closure.
+
+EVIDENCE_PATHS:
+- `docs/core/uet_scalar_thermoelastic_response_bridge.py`
+- `docs/scripts/audit/audit_topic13_scalar_thermoelastic_response_bridge.py`
+- `docs/core/test/test_topic13_scalar_thermoelastic_response_bridge.py`
+- `docs/core/artifacts/t13_scalar_thermoelastic_response_bridge_audit.json`
+- `docs/core/artifacts/uet_equation_correspondence_registry_topic13_scalar_thermoelastic_bridge_addendum.json`
