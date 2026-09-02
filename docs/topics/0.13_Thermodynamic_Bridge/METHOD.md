@@ -118,3 +118,19 @@ Collision eigenvalues alone cannot reconstruct that operator or its conserved
 subspace. Source-backed frequency, velocity and heat-capacity arrays may enter
 the material comparator interface while the collision split, Ding material
 mapping, uncertainty and UET coupling remain blocked.
+
+## Conditional UET-material interface method (2026-09-02)
+
+Assign state ownership before coupling equations: UET owns `(C,Phi,Pi)` and
+the material sector owns displacement, strain and phonon occupations. Introduce
+a canonical response amplitude only through `Phi_E=Z_Phi DeltaPhi`. The
+minimal scalar-strain candidate is
+`L_int=-g_Phi_theta Phi_E div(u)`, which preserves uniform displacement shift
+symmetry and gives equal-and-opposite energy exchange between subsystems.
+
+Expose the observable dependency as
+`alpha_Phi_K=chi_u_theta*g_Phi_theta*Z_Phi/C_src`, with SI conversion and
+uncertainty still required. Test the coordinate degeneracy
+`Z_Phi -> s Z_Phi`, `g -> g/s`; invariance means neither factor can be inferred
+from normalized dynamics alone. Do not evaluate the formula until each factor
+has a derivation or independent source role.

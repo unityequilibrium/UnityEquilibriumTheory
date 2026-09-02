@@ -109,6 +109,19 @@ Umklapp rate.
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | T13-CALORINE-LATTICE-INTERFACE-INPUT-BOUNDARY-20260902 | admitted `S_T[omega,v,c,w]`; prohibited `gamma_total=gamma_U`; required `C_ph=C_N+C_R` with `C_N|P>=0` | docs/scripts/audit/audit_topic13_calorine_lattice_interface_inputs.py | source mode/SI conventions; total `gamma` not promoted to SI resistive rate | hash-locked Calorine/Phono3py 12x12x6 candidate reproduction | mode inputs admitted for comparator; physical collision split blocked | binary hash/schema/range scan across 29 HDF5 and retained full-LBTE warning | no Normal/Umklapp split, collision matrix/eigenvectors, Ding mapping or source-grade uncertainty | acquire resolved rates or an admissible positive full collision operator |
 
+## Conditional UET-Material Lattice Interface (2026-09-02)
+
+The external material sector owns displacement `u_i`, strain and phonon
+distribution perturbations. UET retains `(C,Phi,Pi)`. A conditional scalar
+interface uses `Phi_E=Z_Phi DeltaPhi` and
+`L_int=-g_Phi_theta Phi_E theta`. The observable route is
+`DeltaT=(chi_u_theta g_Phi_theta Z_Phi/C_src)DeltaPhi`; no factor is fitted or
+silently identified with `Phi`.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-UET-MATERIAL-LATTICE-INTERFACE-20260902 | `L_int=-g_Phi_theta Phi_E theta`; `alpha_Phi_K=chi_u_theta*g_Phi_theta*Z_Phi/C_src`; UET/lattice exchange sources `-Q_ex/+Q_ex` | docs/core/uet_material_lattice_interface_contract.py | natural exponents: `Phi_E~E`, `g~E^3`, `theta~1`, energy density `E^4`, `Q_ex~E^5`, `alpha~E` | conditional interface constrained by current no-go and PBTE source boundary | ontology/units/ledger/identifiability closed; physical coefficients open | exact unit sums, exchange cancellation and field-rescaling invariance | physical `Z_Phi`, coupling, material response, collision split and SI uncertainty absent | derive or source-lock every factor independently before evaluating alpha |
+
 ## Dressed RA Pair and Microscopic Rung Boundary (2026-09-01)
 
 In the positive-energy pole approximation,

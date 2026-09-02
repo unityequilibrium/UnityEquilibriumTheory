@@ -402,3 +402,18 @@ absence, and their sign-indefinite spectrum remains a separate numerical
 blocker. Total RTA `gamma` must not be treated as an Umklapp-only relaxation
 rate. Calorine also remains non-equivalent to the Ding TTG specimen and lacks
 source-grade transport uncertainty and a UET-to-phonon coupling.
+
+## Conditional material-lattice interface boundary
+
+The interface contract separates UET state from an external material lattice
+and closes natural-unit bookkeeping and equal-and-opposite energy exchange. Its
+scalar strain term is a conditional candidate, not an accepted addition to the
+UET action. No physical `Z_Phi`, `g_Phi_theta` or material response kernel
+`chi_u_theta` has been derived or source-locked.
+
+The conditional identity
+`alpha_Phi_K=chi_u_theta*g_Phi_theta*Z_Phi/C_src` is a dependency equation,
+not a numerical calibration. Field-coordinate rescaling leaves the product
+`g_Phi_theta*Z_Phi` invariant, so normalized `Phi` dynamics cannot identify
+the two factors. PBTE mode data and `C_src` alone therefore cannot close
+`alpha_Phi_K` or establish a physical UET-material coupling.

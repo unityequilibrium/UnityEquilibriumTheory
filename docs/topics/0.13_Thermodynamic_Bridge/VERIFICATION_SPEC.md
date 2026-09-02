@@ -540,3 +540,14 @@ Acceptance requires retarded/advanced conjugacy, the declared spectral discontin
 - Preserve the existing full-LBTE sign/stability warning and prohibit `gamma_total=gamma_U` or `gamma_total=gamma_R` without a derived decomposition.
 - Prohibit Ding-equivalence, UET coupling, source-grade uncertainty, fit, holdout or physical transport promotion.
 - A pass closes only source-interface availability for a Calorine comparator.
+
+## Conditional UET-material lattice interface
+
+- Run `python -m docs.scripts.audit.audit_topic13_material_lattice_interface_contract`.
+- Run `python -m pytest docs/core/test/test_topic13_material_lattice_interface_contract.py -q`.
+- Keep UET `(C,Phi,Pi)` separate from material `u_i`, strain and `delta_n_qnu`; exclude `R_gen` and `R_obs` from the state.
+- Require natural-unit closure for strain, interaction energy density, exchange-rate density and conditional `alpha`.
+- Require equal-and-opposite UET/lattice exchange sources to cancel exactly.
+- Require `Z_Phi -> s Z_Phi`, `g -> g/s` to preserve the interaction and conditional-alpha product over all registered scale witnesses.
+- Keep `Z_Phi`, `g_Phi_theta`, `chi_u_theta`, collision split and SI conversion as independent required inputs; prohibit fitting them to TTG or reading Xie 2026.
+- A pass closes conditional interface architecture and identifiability only, not an accepted action term or physical transport.

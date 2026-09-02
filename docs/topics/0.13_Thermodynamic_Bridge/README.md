@@ -853,6 +853,32 @@ NEXT_ACTION: Acquire or reproduce Normal/Umklapp-resolved rates or a positive fu
 CLAIM_BOUNDARY: Source-backed Calorine comparator input boundary only; not physical UET transport, Ding equivalence, TTG prediction, external validation or Full Topic 13 closure.
 
 Machine-readable artifact: `docs/core/artifacts/t13_calorine_lattice_interface_input_boundary.json`.
+
+## Current Major Result: conditional UET-material lattice interface (2026-09-02)
+
+MAJOR_RESULT_CLOSURE: `T13_UET_MATERIAL_LATTICE_INTERFACE_CONTRACT` is `CLOSED_FOR_LANE` as conditional architecture; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: UET and material-lattice state ownership, natural-unit interface dimensions, phonon heat-current/PBTE placeholders, equal-and-opposite energy exchange, and the coefficient dependency for a future temperature map.
+
+WHAT_REMAINS_OPEN: Physical `Z_Phi`, scalar-strain coupling `g_Phi_theta`, material response `chi_u_theta`, admissible collision split, Ding state mapping, SI conversion, source uncertainty and independent alpha evidence.
+
+DEPENDENCY_UNLOCKED: Independent physical-residue/coupling and material-response source gates, plus conditional alpha uncertainty design.
+
+STATUS: `PASS_CONDITIONAL_MATERIAL_LATTICE_INTERFACE_CONTRACT`; `full_core_unlock=false`; `claim_promotion=false`.
+
+WHAT_CHANGED: Added the first ontology-safe material interface instead of identifying `Phi` with temperature, strain or phonon displacement.
+
+EQUATION_OR_MAPPING: `Phi_E=Z_Phi DeltaPhi`; `L_int=-g_Phi_theta Phi_E theta`; `alpha_Phi_K=chi_u_theta*g_Phi_theta*Z_Phi/C_src`; subsystem exchange sources are `-Q_ex` and `+Q_ex`.
+
+VERIFICATION: All 13 artifact checks and 11 focused tests pass. Unit sums close, exchange-ledger residual is zero, and four field-rescaling witnesses have zero interaction/alpha-product residual.
+
+CONTROLLING_BLOCKER: `physical_Phi_residue_strain_coupling_and_material_response_missing`.
+
+NEXT_ACTION: Derive or source-lock `Z_Phi`, `g_Phi_theta` and `chi_u_theta` independently, and obtain an admissible material collision operator before evaluating alpha or transport.
+
+CLAIM_BOUNDARY: Conditional interface and identifiability result only; not an accepted UET action term, physical coupling, alpha calibration, TTG prediction, external validation or Full Topic 13 closure.
+
+Machine-readable artifact: `docs/core/artifacts/t13_uet_material_lattice_interface_contract_audit.json`.
 ## Current Major Result: T13-173 causal gate semantics alignment (2026-08-23)
 
 MAJOR_RESULT_CLOSURE: CLOSED_AS_NO_GO for the declared local conserved-C gradient finite-cone compatibility question; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.

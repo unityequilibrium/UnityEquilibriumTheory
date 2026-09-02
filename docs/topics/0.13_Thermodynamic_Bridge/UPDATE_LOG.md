@@ -5687,3 +5687,33 @@ EVIDENCE_PATHS:
 - `docs/core/test/test_topic13_calorine_lattice_interface_inputs.py`
 - `docs/core/artifacts/t13_calorine_lattice_interface_input_boundary.json`
 - `docs/core/artifacts/uet_equation_correspondence_registry_topic13_calorine_lattice_inputs_addendum.json`
+## 2026-09-02 - Conditional UET-material lattice interface
+
+MAJOR_RESULT_CLOSURE: `T13_UET_MATERIAL_LATTICE_INTERFACE_CONTRACT` is `CLOSED_FOR_LANE` as conditional architecture; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: Separate state ownership, natural-unit interface/observable bookkeeping, exact subsystem exchange ledger and field-rescaling identifiability boundary.
+
+WHAT_REMAINS_OPEN: Physical response residue, Phi-strain coupling, material response kernel, collision split, Ding mapping, SI/uncertainty and independent alpha.
+
+DEPENDENCY_UNLOCKED: Physical coupling/residue gate, material-response source gate and conditional alpha uncertainty design.
+
+STATUS: `PASS_CONDITIONAL_MATERIAL_LATTICE_INTERFACE_CONTRACT`; `full_core_unlock=false`; `claim_promotion=false`.
+
+WHAT_CHANGED: Added an executable interface contract, 11 tests, 13-check audit, artifact and registry addendum. No new physical action term was accepted.
+
+EQUATION_OR_MAPPING: `Phi_E=Z_Phi DeltaPhi`; `L_int=-g_Phi_theta Phi_E theta`; `alpha_Phi_K=chi_u_theta*g_Phi_theta*Z_Phi/C_src`; energy exchange cancels as `-Q_ex/+Q_ex`.
+
+VERIFICATION: Audit 13/13; focused tests 11 passed; exchange-ledger and maximum rescaling residuals are both zero. No fit or holdout access.
+
+CONTROLLING_BLOCKER: `physical_Phi_residue_strain_coupling_and_material_response_missing`.
+
+NEXT_ACTION: Audit current action/source records for an independent `Z_Phi` or strain-coupling route; separately seek a source-backed material response kernel and collision decomposition.
+
+CLAIM_BOUNDARY: Conditional architecture only; not physical UET-material transport, alpha calibration, external validation or Full Topic 13 closure.
+
+EVIDENCE_PATHS:
+- `docs/core/uet_material_lattice_interface_contract.py`
+- `docs/scripts/audit/audit_topic13_material_lattice_interface_contract.py`
+- `docs/core/test/test_topic13_material_lattice_interface_contract.py`
+- `docs/core/artifacts/t13_uet_material_lattice_interface_contract_audit.json`
+- `docs/core/artifacts/uet_equation_correspondence_registry_topic13_material_lattice_interface_addendum.json`
