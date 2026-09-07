@@ -405,3 +405,4 @@ docs/topics/**/Result/_Logs/
 /docs/topics/**/raw/
 /tmp/
 **/output.txt
+.playwright-cli/
