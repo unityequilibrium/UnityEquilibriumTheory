@@ -48,4 +48,3 @@ def test_topic13_input_package_audit_preserves_candidate_vs_acceptance_boundary(
     transport = packages["T13_INPUT_PHYSICAL_TRANSPORT_MATCH"]
     assert transport["current_evidence"]["physical_coefficient_evidence"] == "BLOCKED_NOT_PROVIDED"
     assert transport["current_evidence"]["natural_kubo_is_SI"] is False
-

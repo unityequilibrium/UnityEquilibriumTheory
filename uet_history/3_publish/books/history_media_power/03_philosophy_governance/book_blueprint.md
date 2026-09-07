@@ -1,14 +1,14 @@
 # 📖 พิมพ์เขียวแม่บท เล่มที่ 3.3: การสร้างวาทกรรมใหม่และสถาปัตยกรรมจารีตใหม่
 *(Book 3.3 Master Blueprint: Applied Emancipatory Framework, Leaderless Governance & Moral-Legal Technology)*
 
-> **ชื่อโครงการ:** `03_3_reformation_of_the_mind` (Section 3: History & Hegemony - Book 3)  
-> **รูปแบบการวิเคราะห์:** การประยุกต์ทฤษฎี สถาปัตยกรรมทางปัญญา และนวัตกรรมทางสถาบัน (Applied Philosophy, Institutional Design & Emancipatory Architecture)  
+> **ชื่อโครงการ:** `03_3_reformation_of_the_mind` (Section 3: History & Hegemony - Book 3)
+> **รูปแบบการวิเคราะห์:** การประยุกต์ทฤษฎี สถาปัตยกรรมทางปัญญา และนวัตกรรมทางสถาบัน (Applied Philosophy, Institutional Design & Emancipatory Architecture)
 > **แก่นเรื่องหลัก:** **เล่มที่ 3 ทำหน้าที่เสนอการประยุกต์วิธีคิดใหม่และสถาปนาจารีตใหม่ที่ดีล้วนๆ (Pure Forward-Looking Application)** โดยปราศจากเนื้อหาการเล่าประวัติศาสตร์ย้อนหลังหรือเกร็ดความรู้ปรัชญาในอดีต (ซึ่งถูกรวบจัดเต็มไว้ในเล่ม 1 และ เล่ม 2 เรียบร้อยแล้ว) เล่มนี้มุ่งเน้นการเสนอโซลูชันเชิงโครงสร้าง:
 > 1. การสลายอคติและการตื่นรู้จากการสมยอมเทียม (Unlearning & Pluralistic Ignorance Dissolution)
 > 2. การเลือกพูดเชิงจริยธรรม (Ethical Selective Framing)
 > 3. การปกครองแบบไร้ตัวตนและการบริหารทรัพยากรร่วม (Leaderless Governance & Ostrom Commons)
 > 4. การสถาปนาเทคโนโลยีทางศีลธรรม-กฎหมายและนิติรัฐที่ยั่งยืน (Moral-Legal Technology & Sustainable Rule of Law)
-> 
+>
 > 📌 **ชุดเอกสารกำกับมาตรฐานประจำเซกชัน:**
 > - แผนที่ข้ออ้างและขอบเขตหลักฐาน: [`../SECTION_CLAIM_MAP.md`](../SECTION_CLAIM_MAP.md) (`CLM-SEC3-018` ถึง `CLM-SEC3-020`)
 > - ทะเบียนข้อมูลวิทยาศาสตร์และหลักฐาน: [`../SCIENTIFIC_DATA_REGISTER.md`](../SCIENTIFIC_DATA_REGISTER.md)

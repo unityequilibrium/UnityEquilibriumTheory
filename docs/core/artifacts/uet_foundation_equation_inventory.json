@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_foundation_equation_inventory",
-  "generated_at": "2026-09-02",
+  "generated_at": "2026-09-07",
   "audit_status": "PASS_WITH_DISCLOSED_GAPS",
   "inventory_gate_status": "BLOCKED",
   "controlling_blocker": "topic_formula_audits_not_code_complete_or_correspondence_incomplete",

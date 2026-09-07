@@ -46,4 +46,3 @@ def test_nims_mp990448_is_a_payload_boundary_not_numeric_csrc() -> None:
     assert package["claim_promotion"] is False
     assert digest(ARCHIVE) == audit["source"]["archive_sha256"]
     assert digest(LEGACY_ARCHIVE) == audit["source"]["archive_sha256"]
-
