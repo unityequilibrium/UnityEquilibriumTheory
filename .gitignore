@@ -24,6 +24,7 @@ research_uet/zip/
 /research_uet/data_vault/
 *.zip
 *.npy
+*.npz
 *.fits
 
 # IDE
@@ -176,6 +177,7 @@ research_uet/zip/
 /research_uet/data_vault/
 *.zip
 *.npy
+*.npz
 *.fits
 
 # IDE
