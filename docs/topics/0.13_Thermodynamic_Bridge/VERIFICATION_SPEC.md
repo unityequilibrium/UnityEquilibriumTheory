@@ -1,5 +1,17 @@
 # Verification Spec
 
+## Dynamic Material Response (2026-09-08)
+
+Run `docs.scripts.audit.audit_topic13_dynamic_thermoelastic_response` and
+`pytest docs/core/test/test_topic13_dynamic_thermoelastic_response.py`.
+Verify Fourier exponential and decoupled Cattaneo telegraph solutions,
+independent time integration, Laplace elimination, initial-entropy preparation,
+source superposition, exact metric/dissipation identity, rotations and units.
+Distinguish conducting DC gain from the zero-conduction isentropic limit.
+Reject singular elimination points rather than adding a regulator. The
+reported test count excludes unrelated UET transport/causal validation.
+Preserve full-topic gate hashes; no experimental input or fitting is allowed.
+
 ## Finite-q Spatial Compatibility (2026-09-07)
 
 Run `docs.scripts.audit.audit_topic13_thermoelastic_spatial_compatibility` and

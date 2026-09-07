@@ -1,3 +1,29 @@
+## 2026-09-08 - Dynamic material response and initial entropy
+
+MAJOR_RESULT_CLOSURE: T13_DYNAMIC_MATERIAL_RESPONSE_AND_INITIAL_ENTROPY is CLOSED_FOR_LANE in the declared standard-material comparator; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: Compatible bulk thermoelastic time evolution with separate initial entropy, heat source and prescribed Phi ports. Positive modal availability has an explicit source/dissipation balance. Independent Laplace and time-domain solutions agree. The conducting DC Phi-to-temperature gain and the earlier locally isentropic gain are distinct limits.
+
+WHAT_REMAINS_OPEN: Physical pump-to-Phi/entropy initialization, reciprocal UET/material coupling, independent G/Z and same-state transport inputs, microscopic KMS, finite geometry/detector mapping and uncertainty.
+
+DEPENDENCY_UNLOCKED: Conditional material/pump initialization design only; no Core, Gravity or full-topic physical unlock.
+
+STATUS: PASS_CONDITIONAL_DYNAMIC_MATERIAL_RESPONSE; full_core_unlock=false; claim_promotion=false.
+
+WHAT_CHANGED: Added standard-material Fourier/Cattaneo dynamic module, independent tests, derivation note, generated audit and candidate registry; synchronized topic docs. C and Phi ontology, traces, original causal gate and full-topic closure files are unchanged.
+
+EQUATION_OR_MAPPING: vdot=w; wdot=-q^2*(A*v-b*theta+h*phi_r)/rho; c*thetadot=-T*b^T*w-q*J+Q; tau*Jdot+J=k*q*theta. Fourier eliminates J directly at tau=0. theta0=T*(ds0-b^T*v0)/c; ds0 is not inferred from Phi.
+
+VERIFICATION: 41 linked pytest cases pass, including 12 new tests. Ten artifact checks pass. The declared synthetic Fourier/Cattaneo normalized curves differ by at most 0.0212994 over t=0..12; this is not a data residual. Conducting DC Phi gain is zero while the no-conduction low-frequency gain is 0.0153508772. Independent Laplace errors are below 1e-11; availability, initial entropy, rotations, natural-unit scaling and unregularized singularity rejection pass. JSON/evidence hashes and protected gate hashes match. F0 has 366 rows, no duplicates and inventory_gate_status=BLOCKED. Foundation/compatibility audits run successfully and retain physical BLOCKED status. No fitting or experimental/holdout input.
+
+CONTROLLING_BLOCKER: physical_pump_to_Phi_entropy_initialization_and_material_coefficients_missing.
+
+NEXT_ACTION: Derive physical preparation and reciprocal Phi/material matching before applying the dynamic comparator to permitted source data; independently identify G/Z and source-state transport inputs.
+
+CLAIM_BOUNDARY: Standard bulk material comparator with prescribed Phi, not self-consistent UET dynamics, physical alpha/Kubo/KMS, graphite validation or UET finite-cone proof. The independent-entropy counterexample does not reject a future model that explicitly constrains its coupled initial state. Modal availability is not total SI energy.
+
+EVIDENCE_HASHES: dynamic artifact f9487355e178403f273e6bf3c9a85e160680eb04bb7797efce216745687eabde; candidate dynamic-material registry 0940a8dca87d7474d0fd84f0fcba94ee580e77e41311c616aa4ef61ba03913cc.
+
 ## 2026-09-07 - Finite-q thermoelastic compatibility
 
 MAJOR_RESULT_CLOSURE: T13_THERMOELASTIC_FINITE_Q_COMPATIBILITY is CLOSED_FOR_LANE under a conditional material ansatz; Full Topic 13 is not unlocked.

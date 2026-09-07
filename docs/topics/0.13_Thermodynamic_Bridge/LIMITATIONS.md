@@ -1,5 +1,16 @@
 # Limitations
 
+## Dynamic Material Comparator Boundary (2026-09-08)
+
+The dynamic extension closes conditional bulk time evolution, not physical
+Phi--material identification. The Phi port is prescribed and lacks reciprocal
+UET dynamics. Conduction and flux relaxation are external synthetic inputs,
+not Kubo or KMS outputs. Initial entropy is independent unless an additional
+pump/coupled-state equation fixes it. Availability is a linearized natural-unit
+quadratic quantity, not total SI energy. Fourier is parabolic; Cattaneo's modal
+principal check does not replace the locked UET leakage gate. Finite geometry,
+optical detector response, source-state matching and uncertainty remain open.
+
 ## Finite-q Material Response Boundary (2026-09-07)
 
 Spatial compatibility is mechanically quasistatic, bulk, linear and locally

@@ -1,5 +1,16 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Dynamic Material Response (2026-09-08)
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-DYNAMIC-MATERIAL-20260908 | `vdot=w; wdot=-q^2*(A*v-b*theta+h*phi_r)/rho; c*thetadot=-T*b^T*w-q*J+Q; tau*Jdot+J=k*q*theta` | docs/core/uet_dynamic_thermoelastic_response.py | natural: rho,A E^4; theta,phi_r,q,w E; b,h,c E^3; k E^2; tau E^-1; J E^4; Q E^5 | standard material conservation plus conditional external Phi port; all physical matching open | derived within linear bulk comparator | availability ledger, Laplace/time agreement and analytic controls | missing pump-to-Phi/entropy preparation, reciprocal coupling and physical coefficients | derive material/initialization interface before alpha or TTG admission |
+
+For tau=0 eliminate J exactly as Fourier, not through a numerical small-tau
+substitution. The [derivation](../../core/T13_DYNAMIC_THERMOELASTIC_RESPONSE.md)
+and [artifact](../../core/artifacts/t13_dynamic_thermoelastic_response_audit.json)
+separate internal comparison from an accepted UET action or physical calibration.
+
 ## Finite-q Spatial Compatibility (2026-09-07)
 
 | formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |

@@ -1,5 +1,17 @@
 ﻿# Method
 
+## Dynamic Material Comparator (2026-09-08)
+
+Evolve compatible strain v, its rate w, temperature theta and (for tau>0)
+longitudinal flux J. Inputs are independently declared initial entropy ds0,
+prescribed phi_r and heat source Q. Initialize theta0=T*(ds0-b^T*v0)/c,
+not theta0=alpha*phi_r. Compare a full state-space solution with independent
+Laplace elimination and analytic heat controls. The positive quadratic
+availability includes elastic, inertial, thermal and flux-storage terms;
+its change equals explicit source power minus nonnegative dissipation.
+This standard-material model has no reciprocal Phi equation or microscopic
+transport calibration. [Full equations](../../core/T13_DYNAMIC_THERMOELASTIC_RESPONSE.md).
+
 ## Finite-q Thermoelastic Compatibility (2026-09-07)
 
 For a nonzero bulk grating wavevector use `eps=B(n)*v`, not independently

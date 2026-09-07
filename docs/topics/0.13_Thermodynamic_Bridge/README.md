@@ -6,6 +6,20 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Dynamic Material Response and Initial Entropy (2026-09-08)
+
+The [dynamic result](../../core/artifacts/t13_dynamic_thermoelastic_response_audit.json)
+extends compatible bulk strain to elastic inertia and separate Fourier/Cattaneo
+heat controls. It separates initial entropy, deposited heat and prescribed Phi
+drive; an explicit availability ledger accounts for all three. A temperature
+trace can exist with zero Phi drive in this comparator, so a sole proportional
+readout requires a further physical initialization/coupling equation. This is
+not a rejection of a fully coupled UET model that supplies that equation.
+The conducting DC Phi gain is zero; the earlier isentropic gain is a different
+limit. See [derivation](../../core/T13_DYNAMIC_THERMOELASTIC_RESPONSE.md).
+Physical pump mapping, G/Z, transport provenance and detector/geometry remain
+open. No TTG data, calibration or physical Core unlock is supplied.
+
 ## Finite-q Material Compatibility (2026-09-07)
 
 The [spatial compatibility result](../../core/artifacts/t13_thermoelastic_spatial_compatibility_audit.json)
