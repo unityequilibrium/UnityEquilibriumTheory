@@ -83,7 +83,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m pip install --upgrade pytest
+      - run: python -m pip install --upgrade pytest numpy scipy mpmath
       - run: python -m compileall -q docs services_and_experiments
       - name: Run changed Python tests
         env:
