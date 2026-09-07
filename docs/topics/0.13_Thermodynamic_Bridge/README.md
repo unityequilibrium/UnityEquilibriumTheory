@@ -6,6 +6,19 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Finite-q Material Compatibility (2026-09-07)
+
+The [spatial compatibility result](../../core/artifacts/t13_thermoelastic_spatial_compatibility_audit.json)
+derives a nonzero-wavevector, locally isentropic, quasistatic response with
+compatible strain. Bulk equilibrium is `sigma*n=0`, not zero stress in every
+component. A synthetic isotropic witness gives absolute temperature gain
+0.5614 times the homogeneous value. Full rotations including shear and an
+independent fixed-entropy solve agree. Constant gain cancels in normalized
+TTG; this is not a measured discrepancy or a dynamic TTG prediction.
+See [derivation and limits](../../core/T13_THERMOELASTIC_SPATIAL_COMPATIBILITY.md).
+Initial entropy, acoustic/thermal dynamics, physical G/Z and material
+calibration remain open; `full_core_unlock=false`.
+
 ## Transition-Operator Rate-Dimension No-Go (2026-09-01)
 
 The [dimension artifact](../../core/artifacts/t13_transition_kernel_rate_dimension_no_go.json)

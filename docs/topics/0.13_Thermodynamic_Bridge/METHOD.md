@@ -1,5 +1,16 @@
 ﻿# Method
 
+## Finite-q Thermoelastic Compatibility (2026-09-07)
+
+For a nonzero bulk grating wavevector use `eps=B(n)*v`, not independently
+stress-free strain at each point. With `beta=K_el*alpha` and
+`R_n=B*(B^T*K_el*B)^-1*B^T`, fixed local entropy gives
+`dT=T*(beta^T*R_n*G)*phi_r/(c_eps+T*beta^T*R_n*beta)`.
+This uses full Mandel stiffness including shear; K_el is not UET C.
+The [derivation](../../core/T13_THERMOELASTIC_SPATIAL_COMPATIBILITY.md)
+declares the conditional interaction, natural units and independent
+elimination. No data or dynamics is an input. This is not TTG calibration.
+
 ## Problem target
 
 This topic studies whether UET can connect entropy, information cost, and dissipation benchmarks under one bridge model.

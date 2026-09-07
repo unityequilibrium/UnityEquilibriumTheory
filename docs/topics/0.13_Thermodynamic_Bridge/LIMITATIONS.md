@@ -1,5 +1,16 @@
 # Limitations
 
+## Finite-q Material Response Boundary (2026-09-07)
+
+Spatial compatibility is mechanically quasistatic, bulk, linear and locally
+isentropic. It includes shear, not inertia, surfaces, diffusion, initial
+laser-deposited entropy or coupled Phi dynamics. Uniform free expansion and
+nonzero-q bulk equilibrium are different boundary problems. This is not a
+causal-cone proof or a TTG time trace. Constant gain cancels under TTG
+normalization; the synthetic difference cannot identify alpha_Phi_K.
+Physical G/Z and same-state inputs/uncertainty remain open. Existing full
+closure gates are unchanged. See [scope](../../core/T13_THERMOELASTIC_SPATIAL_COMPATIBILITY.md).
+
 ## Transition-Rate Dimension Boundary (2026-09-01)
 
 Conservation, PSD and algebraic resolvent checks do not repair a dimensional

@@ -1,3 +1,29 @@
+## 2026-09-07 - Finite-q thermoelastic compatibility
+
+MAJOR_RESULT_CLOSURE: T13_THERMOELASTIC_FINITE_Q_COMPATIBILITY is CLOSED_FOR_LANE under a conditional material ansatz; Full Topic 13 is not unlocked.
+
+WHAT_IS_ACTUALLY_CLOSED: Compatible nonzero-q bulk strain and fixed-local-entropy temperature response are derived. Mechanical equilibrium sigma*n=0 does not require zero transverse stress. The homogeneous free-strain formula is not the general grating formula. Full Mandel shear/rotation checks and an independent fixed-entropy elastic elimination agree.
+
+WHAT_REMAINS_OPEN: Initial entropy deposition, finite-frequency acoustic/thermal response, physical Phi--strain G and normalization Z, same-state material inputs and uncertainty.
+
+DEPENDENCY_UNLOCKED: Conditional finite-frequency material-interface design only; no physical downstream unlock.
+
+STATUS: PASS_CONDITIONAL_FINITE_Q_COMPATIBILITY; full_core_unlock=false; claim_promotion=false.
+
+WHAT_CHANGED: Added spatial_response, focused tests, derivation note, generated audit and candidate registry addendum; synchronized topic documentation. Earlier homogeneous results and full-closure gates are unchanged.
+
+EQUATION_OR_MAPPING: eps=B(n)*v; R_n=B*(B^T*K_el*B)^-1*B^T; beta=K_el*alpha; dT=T*(beta^T*R_n*G)*phi_r/(c_eps+T*beta^T*R_n*beta). K_el is material stiffness, not UET C.
+
+VERIFICATION: 29 linked pytest tests pass, including 8 new focused tests. Nine generated artifact checks pass. The synthetic isotropic grating/uniform gain is 0.5614035088. JSON/evidence hashes and protected full-closure hashes match. F0 parses 365 rows with no duplicate IDs and inventory_gate_status=BLOCKED. Foundation/compatibility audits run successfully while physical statuses remain BLOCKED. An initial unittest invocation collected only the 8 new cases; pytest was then used to collect all 29. No data input, fit, holdout, clipping or threshold change.
+
+CONTROLLING_BLOCKER: finite_frequency_initial_entropy_material_response_missing.
+
+NEXT_ACTION: Derive the dynamic thermoelastic/heat response with explicit initial entropy and acoustic scales before TTG use; independently identify G/Z and material-state coefficients.
+
+CLAIM_BOUNDARY: Quasistatic locally isentropic bulk candidate, not a TTG time trace, causal-cone proof, physical alpha, accepted UET action or Full Topic 13 closure. Constant gain cancels in normalized TTG; the synthetic amplitude ratio is not an experimental discrepancy.
+
+EVIDENCE_HASHES: t13_thermoelastic_spatial_compatibility_audit.json 703936e97d60863dcf9938055882c8fffc3a008e3dfb4fec6564490ffc8b0177; spatial-compatibility registry addendum 56db6312a226f0ab46fdb0aae7ffaeda2b711589fe96e9b2566b070504292b13.
+
 ## 2026-09-02 - Coupled response heat-carrier route no-go
 
 MAJOR_RESULT_CLOSURE: T13_COUPLED_RESPONSE_HEAT_CARRIER_ROUTE_NO_GO is CLOSED_FOR_LANE/CLOSED_AS_NO_GO; Full Topic 13 remains open.

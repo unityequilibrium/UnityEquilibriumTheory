@@ -1,5 +1,16 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Finite-q Spatial Compatibility (2026-09-07)
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-SPATIAL-COMPATIBILITY-20260907 | `R_n=B*(B^T*K_el*B)^-1*B^T; dT=T*(beta^T*R_n*G)*phi_r/(c_eps+T*beta^T*R_n*beta)` | docs/core/uet_thermoelastic_spatial_compatibility.py | natural: K_el E^4; beta and G E^3; R_n E^-4; c_eps E^3; T and phi_r E; eps dimensionless | standard elasticity plus conditional coupling; physical G/Z open | derived under quasistatic fixed-entropy ansatz | independent solve, full rotations, longitudinal analytic witness | zero stress is not general grating equilibrium; initial entropy and dynamics absent | derive frequency-dependent response and identify physical coefficients |
+
+See [full derivation](../../core/T13_THERMOELASTIC_SPATIAL_COMPATIBILITY.md)
+and [artifact](../../core/artifacts/t13_thermoelastic_spatial_compatibility_audit.json).
+The 0.5614 synthetic gain ratio is not a data comparison. Constant gain
+cancels in normalized TTG. No SI map or accepted UET action is promoted.
+
 ## Transition-Operator Rate-Dimension No-Go (2026-09-01)
 
 The current formula has two radial measures with dimension `E^6`, cross

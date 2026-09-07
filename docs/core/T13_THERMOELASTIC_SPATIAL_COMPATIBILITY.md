@@ -81,6 +81,12 @@ For positive shear modulus these differ even in an isotropic solid.
 The shear-free limit recovers the uniform expression as mu tends to zero
 from above; exactly zero shear makes the full stiffness singular.
 
+The synthetic example K=5, mu=3, T=0.8, alpha_V=0.12, g=0.7,
+c_eps=2.4 gives grating/uniform gain 0.5614035088. This is an absolute
+amplitude difference, not an experimental error estimate. A constant gain
+cancels in dT(t)/dT(0). This result alone neither changes a normalized TTG
+trace nor identifies physical alpha_Phi_K.
+
 ## Scope and verification design
 
 This is a mechanically quasistatic, locally isentropic, infinite/periodic

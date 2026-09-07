@@ -1,5 +1,17 @@
 # Verification Spec
 
+## Finite-q Spatial Compatibility (2026-09-07)
+
+Run `docs.scripts.audit.audit_topic13_thermoelastic_spatial_compatibility` and
+`docs.core.test.test_topic13_thermoelastic_spatial_compatibility` with the
+repository environment. Compare the block solve with independent fixed-entropy
+elasticity and isotropic longitudinal elasticity. Test full rotations including
+shear, direct `sigma*n=0`, periodic displacement-gradient convergence, unit
+rescaling, small positive shear and invalid-input rejection. Preserve the
+zero-stress incompatibility witness. The runner hashes full-closure inputs
+before and after, with no experimental inputs or threshold changes. This
+runner's no-data policy is not a repository-wide holdout-access audit.
+
 ## Transition-Operator Rate Dimension (2026-09-01)
 
 Run `docs.scripts.audit.audit_topic13_transition_kernel_rate_dimension_no_go`
