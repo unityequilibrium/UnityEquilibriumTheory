@@ -1,0 +1,390 @@
+{
+  "schema_version": "t13-matter-strain-susceptibility-matching-v1",
+  "major_result_id": "T13_THERMAL_MATTER_STRAIN_AND_ENTROPY_MATCHING",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_CONDITIONAL_THERMAL_SOURCE_MATCHING",
+  "what_is_closed": [
+    "Canonical mass-source normalization matches the existing O(2) action plus a declared external strain deformation.",
+    "Finite thermal matter determinant derives G, direct entropy coefficient r and all companion Hessian increments.",
+    "Independent derivatives and reciprocity show that keeping G alone is not the complete matching of this route."
+  ],
+  "equation_registry_ids": [
+    "uet.o2.thermal.matter_strain_susceptibility_matching"
+  ],
+  "equation_or_mapping": {
+    "mass_source": "x=(m_raw^2-epsilon_nc*h*delta_phi+D_raw:eps)/A_chi=x0-eta*delta_phi+D:eps",
+    "thermal_free_energy": "F_th=2*T*integral dp*p^2/(2*pi^2)*log(1-exp(-sqrt(p^2+x)/T))",
+    "coupling": "G=-eta*D*F_xx; r=eta*F_xT",
+    "companion_terms": "delta_K=D*D^T*F_xx; delta_a=eta^2*F_xx; delta_beta=-D*F_xT; delta_c=-T*F_TT",
+    "entropy": "ds=beta:eps+c*dT/T+r*delta_phi",
+    "isentropic_map": "dT/delta_phi=T*(b^T*A^-1*h-r)/(c+T*b^T*A^-1*b)"
+  },
+  "ontology": {
+    "Phi": "original response displacement; not temperature",
+    "chi": "canonical O(2) matter doublet, not identified with graphite phonons",
+    "strain": "external material mass-source probe",
+    "C": "unchanged collective coordinate",
+    "R_gen_R_obs": "excluded from state"
+  },
+  "units": {
+    "T_phi_eta": "E",
+    "x_D": "E^2",
+    "F": "E^4",
+    "F_x": "E^2",
+    "F_xx": "1",
+    "F_xT": "E",
+    "G": "E^3",
+    "r": "E^2",
+    "c": "E^3"
+  },
+  "unit_lane": "natural_thermal_increment_not_SI",
+  "derivation_class": "Gaussian_thermal_source_matching_with_external_deformation_ansatz",
+  "observable": "thermal increments to mixed response/strain/entropy coefficients",
+  "data_role": "SYNTHETIC_INTERNAL_MATCHING_NO_CALIBRATION",
+  "synthetic_inputs": {
+    "matter": {
+      "matter_kinetic": 1.2,
+      "matter_mass_sq": 2.7,
+      "matter_quartic": 0.2,
+      "response_coupling": 0.84,
+      "unit_lane": "natural"
+    },
+    "response": {
+      "epsilon_nc": 0.5,
+      "einstein_coupling": 1.0,
+      "cosmological_constant": 0.0,
+      "phi_equilibrium": 0.1,
+      "response_kinetic": 1.0,
+      "response_mass_sq": 1.0,
+      "response_quartic": 1.0,
+      "curvature_coupling": 0.0,
+      "equilibrium_density": 0.0,
+      "unit_lane": "natural"
+    },
+    "D_raw": [
+      0.48,
+      -0.24,
+      0.36,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "canonical_sources": {
+      "mass_squared": 2.2500000000000004,
+      "eta": 0.35,
+      "deformation": [
+        0.4,
+        -0.2,
+        0.3,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "temperature": 0.8,
+    "orders": [
+      128,
+      160,
+      256
+    ],
+    "bare_material_K": [
+      [
+        9.0,
+        3.0,
+        3.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        3.0,
+        9.0,
+        3.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        3.0,
+        3.0,
+        9.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        6.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        6.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        6.0
+      ]
+    ],
+    "bare_c": 2.4,
+    "bare_phi_curvature": 0.8,
+    "bare_expansion": [
+      0.04,
+      0.04,
+      0.04,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "direction": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "delta_phi": 0.026
+  },
+  "thermal_matching": {
+    "moments": {
+      "free_energy": -0.04599050401860146,
+      "mass_derivative": 0.010587137178490106,
+      "mass_second_derivative": -0.003795371957513759,
+      "mass_temperature_derivative": 0.04781681020724013,
+      "heat_capacity": 1.0836911460985874,
+      "entropy": 0.2895051667220053
+    },
+    "G": [
+      0.0005313520740519262,
+      -0.0002656760370259631,
+      0.0003985140555389447,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "entropy_phi_coefficient": 0.016735883572534044,
+    "delta_stiffness": [
+      [
+        -0.0006072595132022015,
+        0.00030362975660110076,
+        -0.00045544463490165105,
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      [
+        0.00030362975660110076,
+        -0.00015181487830055038,
+        0.00022772231745082553,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        -0.00045544463490165105,
+        0.00022772231745082553,
+        -0.00034158347617623826,
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      [
+        -0.0,
+        0.0,
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      [
+        -0.0,
+        0.0,
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      [
+        -0.0,
+        0.0,
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0
+      ]
+    ],
+    "delta_phi_curvature": -0.0004649330647954354,
+    "delta_thermal_stress": [
+      -0.019126724082896052,
+      0.009563362041448026,
+      -0.014345043062172038,
+      -0.0,
+      -0.0,
+      -0.0
+    ],
+    "delta_heat_capacity": 1.0836911460985874,
+    "phi_strain_hessian": [
+      [
+        -0.0004649330647954354,
+        0.0005313520740519262,
+        -0.0002656760370259631,
+        0.0003985140555389447,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0005313520740519262,
+        -0.0006072595132022015,
+        0.00030362975660110076,
+        -0.00045544463490165105,
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      [
+        -0.0002656760370259631,
+        0.00030362975660110076,
+        -0.00015181487830055038,
+        0.00022772231745082553,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0003985140555389447,
+        -0.00045544463490165105,
+        0.00022772231745082553,
+        -0.00034158347617623826,
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      [
+        0.0,
+        -0.0,
+        0.0,
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      [
+        0.0,
+        -0.0,
+        0.0,
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      [
+        0.0,
+        -0.0,
+        0.0,
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0
+      ]
+    ]
+  },
+  "synthetic_complete_response": {
+    "delta_temperature": -9.886855537077566e-05,
+    "gain": -0.0038026367450298333,
+    "strain_only_gain": 7.808680820516388e-06,
+    "direct_entropy_gain": -0.0038104454258503498,
+    "strain": [
+      -7.916673671573788e-06,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "entropy_residual": 5.421010862427522e-20,
+    "mechanical_residual": 5.082197683525802e-21
+  },
+  "total_fixed_T_schur_margin": 0.7995349963407307,
+  "max_relative_quadrature_change": 1.4227669583136642e-13,
+  "pump_source_context_not_computational_input": {
+    "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_experimental_heating_input_source_package.json",
+    "status": "SOURCE_ROWS_LOCKED_INCIDENT_FLUENCE_DERIVED_ABSORPTION_OPEN",
+    "absorbed_energy_status": "OPEN_NOT_IDENTIFIED",
+    "role": "incident setup does not identify material D, Z or pump-to-Phi initialization"
+  },
+  "checks": {
+    "action_and_independent_derivative_suite": true,
+    "semi_infinite_quadrature_refinement": true,
+    "thermal_mass_susceptibility_is_negative": true,
+    "mixed_phi_strain_hessian_is_reciprocal": true,
+    "loop_static_hessian_is_rank_one_softening": true,
+    "zero_D_removes_G_but_not_direct_entropy": true,
+    "declared_total_synthetic_schur_positive": true,
+    "complete_isentropic_entropy_and_force_balance": true,
+    "block_solution_matches_complete_gain": true,
+    "full_topic_closure_files_unchanged": true
+  },
+  "test_count": 12,
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/T13_MATTER_STRAIN_SUSCEPTIBILITY_MATCH.md",
+      "sha256": "c34bf2d2c5603c63b3577272e4fa180b8547c715e02d8d31bcfcb59fa0d55d45"
+    },
+    {
+      "path": "docs/core/uet_matter_strain_susceptibility.py",
+      "sha256": "827e7745ce840baf5ef6c23b2f5cd8ba353711aedfefa36ec5e98a3358a2f421"
+    },
+    {
+      "path": "docs/core/test/test_topic13_matter_strain_susceptibility.py",
+      "sha256": "0d351a7b9c8b2660d9323238818da4e4c120285587d5fd4f26248ddd69b59ca7"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_matter_strain_susceptibility.py",
+      "sha256": "5dbe479ebe9ee190d528b44b0c07c837cf5ac67ba2b170c5e6dc60c31af5e135"
+    },
+    {
+      "path": "docs/core/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "path": "docs/core/uet_covariant_response.py",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    },
+    {
+      "path": "docs/core/uet_thermoelastic_spatial_compatibility.py",
+      "sha256": "a3a4e96938984e4c7c4ac4c72ea78a541c5fa2dd0994f0f8cb431faaea823ca7"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_experimental_heating_input_source_package.json",
+      "sha256": "62e6f6ce403c74e0601b2e05f6be2d2a5728d0237fb5392774713f9ee0a8eccd"
+    }
+  ],
+  "protected_full_closure_hashes": {
+    "docs/core/artifacts/t13_topic13_closure_matrix.json": "9545138da34726bba60c3e8af29714d577f6579b2cb0489bbba94834f4cb45e5",
+    "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json": "dc0d658a353172074425d2a8259dce3a4fa7b6b75bea68310c7a1492421d5d58"
+  },
+  "input_policy": "No experimental curve or holdout is a computational input. Ding setup metadata is context only. No fit, Landauer substitution or threshold change.",
+  "open_blockers": [
+    "physical_UET_matter_to_material_excitation_identification_missing",
+    "independent_deformation_potential_D_and_Phi_Z_missing",
+    "vacuum_subtraction_and_no_double_counting_material_match_missing",
+    "complete_G_r_reciprocal_dynamic_and_pump_initialization_missing"
+  ],
+  "controlling_blocker": "physical_material_mass_source_and_vacuum_matching_missing",
+  "dependency_unlocked": "conditional joint G/r dynamic matching design only",
+  "physical_dependency_unlock": false,
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "claim_boundary": "Thermal Gaussian increment under an external mass-source ansatz only. Not physical graphite G or alpha, accepted UET action extension, pump calibration, vacuum/interaction closure, transport or Full Topic 13."
+}

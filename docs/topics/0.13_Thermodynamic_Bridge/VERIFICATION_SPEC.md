@@ -1,5 +1,17 @@
 # Verification Spec
 
+## Thermal Matter-Strain Susceptibility Matching (2026-09-08)
+
+Run `docs.scripts.audit.audit_topic13_matter_strain_susceptibility` and
+`pytest docs/core/test/test_topic13_matter_strain_susceptibility.py`.
+Check canonical mass normalization against the actual matter potential;
+compare F_x, F_xx, F_xT and heat capacity with independent free-energy finite
+differences. Check Phi/strain/temperature mixed derivatives, rank-one thermal
+softening, total Schur stability, quadrature refinement, field reparameterization,
+natural-unit scaling, zero sources and unstable-mass rejection. At D=0 the
+derived G vanishes but r need not. Do not fit D/Z or a target curve. Preserve
+full-topic gate hashes and distinguish thermal increments from total coefficients.
+
 ## Dynamic Material Response (2026-09-08)
 
 Run `docs.scripts.audit.audit_topic13_dynamic_thermoelastic_response` and

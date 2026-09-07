@@ -1,3 +1,29 @@
+## 2026-09-08 - Thermal matter-strain and entropy matching
+
+MAJOR_RESULT_CLOSURE: T13_THERMAL_MATTER_STRAIN_AND_ENTROPY_MATCHING is CLOSED_FOR_LANE for the declared Gaussian thermal source extension.
+
+WHAT_IS_ACTUALLY_CLOSED: A strain-dependent mass source supplies an explicit conditional derivation of G, direct Phi-entropy coefficient r and the companion thermal Hessian. Keeping G alone is not complete matching of this source.
+
+WHAT_REMAINS_OPEN: Physical matter/material identity, independent deformation potential D and field normalization Z, vacuum subtraction without material double counting, and joint G/r reciprocal dynamics with physical pump initialization.
+
+DEPENDENCY_UNLOCKED: Conditional joint G/r dynamic design only; this result grants no physical dependency unlock.
+
+STATUS: PASS_CONDITIONAL_THERMAL_SOURCE_MATCHING; local full_core_unlock=false; claim_promotion=false.
+
+WHAT_CHANGED: Added matching derivation, implementation, tests, generated audit and candidate registry; synchronized topic docs. Existing whole-topic records are unchanged. Scope clarification: the older aggregate separately labels the O(2)/He-4 track Core-ready; graphite/TTG remains blocked. Local false unlock fields do not revoke or verify that separate He-4 claim.
+
+EQUATION_OR_MAPPING: x=x0-eta*delta_phi+D:eps; G=-eta*D*F_xx; r=eta*F_xT; ds=beta:eps+c*dT/T+r*delta_phi. The full thermal Hessian, not just its mixed strain block, is retained.
+
+VERIFICATION: 60 linked pytest cases passed in the completed implementation run, including 12 focused matching cases; 10 artifact checks passed. This closeout independently rechecked every current evidence hash and protected aggregate hash. Quadrature relative change is 1.423e-13. The complete synthetic gain is -0.00380264 versus strain-only 7.809e-6, not a physical prediction. F0 has 367 rows and no duplicate IDs; foundation and compatibility remain BLOCKED. No experimental curve or holdout is a computational input; Ding setup metadata is context only.
+
+CONTROLLING_BLOCKER: physical_material_mass_source_and_vacuum_matching_missing.
+
+NEXT_ACTION: Carry both G and r into a reciprocal dynamic energy/entropy contract; independently identify material D/Z and source preparation before any physical alpha claim.
+
+CLAIM_BOUNDARY: Thermal Gaussian increment with an external deformation ansatz, not physical graphite G/alpha, an accepted core action extension, vacuum closure, physical transport or global UET closure.
+
+EVIDENCE_HASHES: matching artifact 459dc674eea69bb28d38898fb7ae13b551ad0fa8a1e2b250c1d3503f617e3100; registry ffe6fdf450617f3ccdeec9b916324512f5fad96dffd5c2b5fb2f50842d21b50f.
+
 ## 2026-09-08 - Dynamic material response and initial entropy
 
 MAJOR_RESULT_CLOSURE: T13_DYNAMIC_MATERIAL_RESPONSE_AND_INITIAL_ENTROPY is CLOSED_FOR_LANE in the declared standard-material comparator; Full Topic 13 remains open.

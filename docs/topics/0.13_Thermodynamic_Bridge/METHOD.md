@@ -1,5 +1,17 @@
 ﻿# Method
 
+## Thermal Mass-Source Matching (2026-09-08)
+
+Canonicalize the actual matter kinetic coefficient before introducing the
+external strain-mass source: `x=x0-eta*delta_phi+D:eps` with
+`eta=epsilon_nc*h/A_chi` and `D=D_raw/A_chi`. Differentiate the finite thermal
+Gaussian determinant at mu=0 and positive mass squared. Match all of G, r,
+delta_K, delta_a, delta_beta and delta_c from the same free energy, rather
+than adding G alone. The complete local entropy perturbation contains
+`r*delta_phi`; the fixed-entropy temperature numerator becomes
+`T*(b^T*A^-1*h-r)`. Use explicitly declared total coefficients without adding
+loop terms twice to measured material data. [Method](../../core/T13_MATTER_STRAIN_SUSCEPTIBILITY_MATCH.md).
+
 ## Dynamic Material Comparator (2026-09-08)
 
 Evolve compatible strain v, its rate w, temperature theta and (for tau>0)

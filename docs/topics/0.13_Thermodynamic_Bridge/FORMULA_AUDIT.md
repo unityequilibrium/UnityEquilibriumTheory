@@ -1,5 +1,15 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Thermal Matter-to-Strain Matching (2026-09-08)
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-MATTER-STRAIN-MATCH-20260908 | `x=x0-eta*delta_phi+D:eps; G=-eta*D*F_xx; r=eta*F_xT` | docs/core/uet_matter_strain_susceptibility.py | natural: eta E; D,x E^2; F_xx 1; F_xT E; G E^3; r E^2 | existing O(2) coupling plus conditional external mass source; physical D/Z open | thermal Gaussian source derivatives, not full material matching | independent derivatives, full Hessian and entropy/strain response | omitting r, double counting material modes, or relabeling h as G | identify material source and subtraction, then carry G/r together into dynamics |
+
+[Full derivation](../../core/T13_MATTER_STRAIN_SUSCEPTIBILITY_MATCH.md)
+keeps the existing h-to-G substitution no-go and physical alpha blocker intact.
+The finite thermal determinant is not a vacuum-renormalized full effective action.
+
 ## Dynamic Material Response (2026-09-08)
 
 | formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |

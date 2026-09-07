@@ -1,5 +1,18 @@
 # Limitations
 
+## Thermal Source-Matching Boundary (2026-09-08)
+
+The added strain-mass probe is an explicit candidate source extension, not an
+operator already present in the accepted action. Thermal Gaussian increments
+do not determine vacuum counterterms, interaction corrections, material
+excitation identity, D or Z_Phi. Fixed-measure mass deformation is not a full
+volume/metric/phonon-dispersion deformation. At nonzero chemical potential,
+ensemble conversion is also required. A measured material heat capacity or
+stiffness may already include these modes; an independent subtraction/state
+prescription is needed before combining them. The numerical full-versus-G-only
+difference is synthetic, not a graphite prediction. The older dynamic model
+remains an r=0 comparator until a separate complete interface is registered.
+
 ## Dynamic Material Comparator Boundary (2026-09-08)
 
 The dynamic extension closes conditional bulk time evolution, not physical

@@ -6,6 +6,19 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Thermal Matter-to-Strain Matching (2026-09-08)
+
+The [thermal matching result](../../core/artifacts/t13_matter_strain_susceptibility_matching_audit.json)
+derives a conditional coupling contribution from the existing Phi--matter
+interaction plus an explicitly declared external strain-dependent mass source:
+`G=-eta*D*F_xx`. It does not relabel the existing h as G. The same calculation
+also produces direct entropy coupling `r=eta*F_xT`, stiffness/curvature
+softening and caloric terms. Keeping only G is not the complete matching of
+this route. [Derivation and boundaries](../../core/T13_MATTER_STRAIN_SUSCEPTIBILITY_MATCH.md).
+Physical identification of the matter mode, D, Z_Phi and vacuum/subtraction
+matching remain open. The prescribed-Phi dynamic comparator is unchanged;
+the next handoff must carry G and r together. No physical alpha is emitted.
+
 ## Dynamic Material Response and Initial Entropy (2026-09-08)
 
 The [dynamic result](../../core/artifacts/t13_dynamic_thermoelastic_response_audit.json)
