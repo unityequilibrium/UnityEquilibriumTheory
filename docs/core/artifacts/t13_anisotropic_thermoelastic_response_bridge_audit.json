@@ -1,0 +1,250 @@
+{
+  "schema_version": "t13-anisotropic-thermoelastic-response-bridge-v1",
+  "major_result_id": "T13_ANISOTROPIC_THERMOELASTIC_RESPONSE_BRIDGE_CANDIDATE",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "CLOSED_FOR_LANE",
+  "closure_disposition": "CONDITIONAL_ANISOTROPIC_MAP_DERIVED",
+  "verification_status": "PASS_CONDITIONAL_ANISOTROPIC_THERMOELASTIC_RESPONSE_BRIDGE",
+  "what_is_closed": [
+    "The scalar thermoelastic bridge is generalized to an arbitrary symmetric positive normal-stiffness block and diagonal thermal-expansion/coupling vectors.",
+    "The adiabatic response is DeltaT=T*(alpha:G)*Phi_E/(C_epsilon+T*alpha:C:alpha), with the scalar parent recovered exactly.",
+    "The anisotropic static stability condition is the Schur-complement bound a_Phi-G:S:G>0.",
+    "The hexagonal graphite contractions and basal-axis covariance are explicit and numerically verified.",
+    "Bosak stiffness and TPG expansion remain separate comparators and are not combined into a physical graphite tensor package."
+  ],
+  "equation_registry_ids": [
+    "uet.o2.thermal.anisotropic_thermoelastic_response_bridge"
+  ],
+  "registration_status": "CONDITIONAL_INTERFACE_NOT_ACCEPTED_UET_ACTION",
+  "equation_or_mapping": {
+    "free_energy_increment": "delta_f=epsilon:C:epsilon/2-DeltaT*(C:alpha):epsilon-C_epsilon*DeltaT^2/(2*T)+Phi_E*G:epsilon+a_Phi*Phi_E^2/2",
+    "zero_stress": "C:epsilon-(C:alpha)*DeltaT+G*Phi_E=0",
+    "adiabatic_entropy": "(C:alpha):epsilon+(C_epsilon/T)*DeltaT=0",
+    "heat_capacity_identity": "C_sigma=C_epsilon+T*alpha:C:alpha",
+    "temperature_response": "DeltaT=T*(alpha:G)*Phi_E/(C_epsilon+T*alpha:C:alpha)",
+    "hexagonal_numerator": "alpha:G=2*alpha_a*g_a+alpha_c*g_c",
+    "hexagonal_denominator": "alpha:C:alpha=2*(C11+C12)*alpha_a^2+4*C13*alpha_a*alpha_c+C33*alpha_c^2",
+    "static_stability": "a_Phi-G:S:G>0; S=C^-1"
+  },
+  "ontology": {
+    "epsilon": "external material normal-strain tensor block",
+    "alpha": "material thermal-expansion tensor",
+    "C_tensor": "material stiffness tensor, not UET C",
+    "G": "candidate Phi_E--strain coupling tensor",
+    "Phi_E": "energy-dimension UET response amplitude; not temperature",
+    "R_gen": "derived history trace; excluded from state"
+  },
+  "unit_lane": "conditional_natural_anisotropic_thermoelastic_open_SI",
+  "units": {
+    "temperature": 1,
+    "alpha_tensor": -1,
+    "stiffness": 4,
+    "compliance": -4,
+    "c_strain_vol": 3,
+    "c_stress_vol": 3,
+    "strain": 0,
+    "Phi_E": 1,
+    "coupling_tensor": 3,
+    "response_curvature": 2,
+    "free_energy_density": 4,
+    "alpha_per_normalized_Phi": 1
+  },
+  "derivation_class": "standard_anisotropic_thermoelastic_block_solve_and_conditional_UET_interface",
+  "observable": "Conditional local adiabatic tensor DeltaPhi-to-DeltaT response",
+  "data_role": "DERIVED_CONDITIONAL_TENSOR_MAP_WITH_UNCOMBINED_COMPARATORS",
+  "contract": {
+    "status": "PASS_CONDITIONAL_ANISOTROPIC_THERMOELASTIC_RESPONSE_BRIDGE",
+    "equations": {
+      "free_energy_increment": "delta_f=epsilon:C:epsilon/2-DeltaT*(C:alpha):epsilon-C_epsilon*DeltaT^2/(2*T)+Phi_E*G:epsilon+a_Phi*Phi_E^2/2",
+      "zero_stress": "C:epsilon-(C:alpha)*DeltaT+G*Phi_E=0",
+      "adiabatic_entropy": "(C:alpha):epsilon+(C_epsilon/T)*DeltaT=0",
+      "heat_capacity_identity": "C_sigma=C_epsilon+T*alpha:C:alpha",
+      "temperature_response": "DeltaT=T*(alpha:G)*Phi_E/(C_epsilon+T*alpha:C:alpha)",
+      "hexagonal_numerator": "alpha:G=2*alpha_a*g_a+alpha_c*g_c",
+      "hexagonal_denominator": "alpha:C:alpha=2*(C11+C12)*alpha_a^2+4*C13*alpha_a*alpha_c+C33*alpha_c^2",
+      "static_stability": "a_Phi-G:S:G>0; S=C^-1"
+    },
+    "ontology": {
+      "epsilon": "external material normal-strain tensor block",
+      "alpha": "material thermal-expansion tensor",
+      "C_tensor": "material stiffness tensor, not UET C",
+      "G": "candidate Phi_E--strain coupling tensor",
+      "Phi_E": "energy-dimension UET response amplitude; not temperature",
+      "R_gen": "derived history trace; excluded from state"
+    },
+    "natural_unit_exponents": {
+      "temperature": 1,
+      "alpha_tensor": -1,
+      "stiffness": 4,
+      "compliance": -4,
+      "c_strain_vol": 3,
+      "c_stress_vol": 3,
+      "strain": 0,
+      "Phi_E": 1,
+      "coupling_tensor": 3,
+      "response_curvature": 2,
+      "free_energy_density": 4,
+      "alpha_per_normalized_Phi": 1
+    },
+    "f0_ontology": "CLOSED_FOR_CONDITIONAL_ANISOTROPIC_MATERIAL_LANE",
+    "f1_standard_correspondence": "linear anisotropic thermoelasticity in the normal-strain block",
+    "f2_units": "CLOSED_NATURAL_UNITS_SOURCE_SI_MAP_OPEN",
+    "f3_derivation": "block linear solve, compliance elimination and Schur-complement stability",
+    "f4_observable": "conditional local adiabatic tensor DeltaPhi-to-DeltaT map",
+    "excluded": {
+      "accepted_UET_action_term": true,
+      "physical_graphite_tensor_input": true,
+      "finite_frequency_transport": true,
+      "SK_KMS_noise": true,
+      "numeric_physical_alpha": true,
+      "TTG_holdout": true
+    },
+    "claim_boundary": "Conditional static anisotropic derivation only; not an accepted UET action, source-matched graphite tensor, dynamic transport, physical alpha calibration, TTG prediction or Full Topic 13 closure."
+  },
+  "reference_witness": {
+    "temperature": 0.8,
+    "c_strain_vol": 2.4,
+    "c_stress_vol": 2.5008,
+    "response_residue": 1.3,
+    "response_curvature": 0.8,
+    "delta_phi": 0.02,
+    "phi_energy_amplitude": 0.026000000000000002,
+    "strain": [
+      -0.0002247257298717042,
+      -0.0002247257298717043,
+      -0.0030305929891908277
+    ],
+    "delta_temperature": 0.0006487523992322457,
+    "delta_temperature_closed_form": 0.0006487523992322457,
+    "thermal_stress": [
+      -0.12,
+      -0.12,
+      0.6599999999999999
+    ],
+    "thermoelastic_contraction": 0.12599999999999997,
+    "coupling_contraction": 0.078,
+    "stress_residual_norm": 0.0,
+    "entropy_residual": 0.0,
+    "heat_capacity_identity_residual": 1.3877787807814457e-17,
+    "temperature_map_relative_residual": 0.0,
+    "stability_margin": 0.7363157894736843
+  },
+  "checks": {
+    "tensor_free_energy_units_close": true,
+    "hexagonal_stiffness_is_symmetric_positive": true,
+    "stress_stationarity_closes": true,
+    "adiabatic_entropy_closes": true,
+    "heat_capacity_identity_closes": true,
+    "closed_form_matches_block_solve": true,
+    "hexagonal_coupling_contraction_matches": true,
+    "hexagonal_thermoelastic_contraction_matches": true,
+    "basal_axis_permutation_is_covariant": true,
+    "scalar_parent_is_recovered": true,
+    "positive_schur_stability_margin_is_exposed": true,
+    "unstable_tensor_coupling_is_not_silently_admitted": true,
+    "bosak_tensor_is_dynamic_comparator_not_K_T": true,
+    "tpg_expansion_is_mixed_comparator_not_same_specimen": true,
+    "scalar_parent_remains_conditional": true,
+    "source_combination_is_not_admitted": true,
+    "accepted_action_physical_tensor_and_dynamic_promotion_are_excluded": true,
+    "no_fit_holdout_or_claim_promotion": true
+  },
+  "source_combination_admitted": false,
+  "source_combination_blocker": "Bosak_dynamic_stiffness_and_TPG_mixed_expansion_are_not_a_same_state_Ding_tensor_package",
+  "open_blockers": [
+    "same_specimen_state_isothermal_stiffness_alpha_tensor_and_C_epsilon_missing",
+    "physical_Phi_strain_coupling_tensor_G_missing",
+    "physical_response_residue_Z_Phi_and_curvature_a_Phi_missing",
+    "Ding_TTG_orientation_geometry_and_material_mapping_missing",
+    "finite_frequency_anisotropic_transport_SK_KMS_entropy_missing",
+    "independent_SI_alpha_record_missing"
+  ],
+  "controlling_blocker": "same_state_thermoelastic_tensor_and_physical_Phi_strain_coupling_missing",
+  "source_hashes": {
+    "docs/core/uet_anisotropic_thermoelastic_response_bridge.py": "e762938d8f8f9b1a0129de3a1058d8260e11d09d7020bae98e26a071b8fed840",
+    "docs/core/test/test_topic13_anisotropic_thermoelastic_response_bridge.py": "71c0ef256fb7705f111e0b250a34699fa6a60919a90418260b7c6be8321a8219",
+    "docs/scripts/audit/audit_topic13_anisotropic_thermoelastic_response_bridge.py": "fa00568eeddb1ec2573e1fc591a76ea825a750aee618519d01eedbfae387f8da"
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_scalar_thermoelastic_response_bridge_audit.json",
+      "sha256": "980cbbfe4d9056fbcce1066f53b88d538184322dc220961932d837282811ba77"
+    },
+    {
+      "path": "docs/core/artifacts/t13_graphite_elastic_bulk_modulus_source_audit.json",
+      "sha256": "65238edbfb66b57c6b3c0a06f95d8b3d28d6dc613df7b83d825332aff4a996af"
+    },
+    {
+      "path": "docs/core/artifacts/t13_tpg_anisotropic_alpha_v_source_audit.json",
+      "sha256": "f8ed02677b5ef1aede683cc2b191538722bda56b520d1d6ba5af024638504c68"
+    }
+  ],
+  "dependency_unlocked": [
+    "same_state_anisotropic_thermoelastic_tensor_acceptance_gate",
+    "Phi_strain_coupling_tensor_stability_gate",
+    "orientation_resolved_TTG_mapping_design"
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "xie_2026_accessed": false,
+  "parameter_fitting_performed": false,
+  "claim_boundary": "Conditional static anisotropic derivation only; not an accepted UET action, source-matched graphite tensor, dynamic transport, physical alpha calibration, TTG prediction or Full Topic 13 closure.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "The scalar thermoelastic bridge is generalized to an arbitrary symmetric positive normal-stiffness block and diagonal thermal-expansion/coupling vectors.",
+      "The adiabatic response is DeltaT=T*(alpha:G)*Phi_E/(C_epsilon+T*alpha:C:alpha), with the scalar parent recovered exactly.",
+      "The anisotropic static stability condition is the Schur-complement bound a_Phi-G:S:G>0.",
+      "The hexagonal graphite contractions and basal-axis covariance are explicit and numerically verified.",
+      "Bosak stiffness and TPG expansion remain separate comparators and are not combined into a physical graphite tensor package."
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "same_specimen_state_isothermal_stiffness_alpha_tensor_and_C_epsilon_missing",
+      "physical_Phi_strain_coupling_tensor_G_missing",
+      "physical_response_residue_Z_Phi_and_curvature_a_Phi_missing",
+      "Ding_TTG_orientation_geometry_and_material_mapping_missing",
+      "finite_frequency_anisotropic_transport_SK_KMS_entropy_missing",
+      "independent_SI_alpha_record_missing"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "same_state_anisotropic_thermoelastic_tensor_acceptance_gate",
+      "Phi_strain_coupling_tensor_stability_gate",
+      "orientation_resolved_TTG_mapping_design"
+    ],
+    "STATUS": "PASS_CONDITIONAL_ANISOTROPIC_THERMOELASTIC_RESPONSE_BRIDGE",
+    "WHAT_CHANGED": "Generalized the scalar thermoelastic map and stability bound to the anisotropic normal-strain tensor lane without combining source records.",
+    "EQUATION_OR_MAPPING": {
+      "free_energy_increment": "delta_f=epsilon:C:epsilon/2-DeltaT*(C:alpha):epsilon-C_epsilon*DeltaT^2/(2*T)+Phi_E*G:epsilon+a_Phi*Phi_E^2/2",
+      "zero_stress": "C:epsilon-(C:alpha)*DeltaT+G*Phi_E=0",
+      "adiabatic_entropy": "(C:alpha):epsilon+(C_epsilon/T)*DeltaT=0",
+      "heat_capacity_identity": "C_sigma=C_epsilon+T*alpha:C:alpha",
+      "temperature_response": "DeltaT=T*(alpha:G)*Phi_E/(C_epsilon+T*alpha:C:alpha)",
+      "hexagonal_numerator": "alpha:G=2*alpha_a*g_a+alpha_c*g_c",
+      "hexagonal_denominator": "alpha:C:alpha=2*(C11+C12)*alpha_a^2+4*C13*alpha_a*alpha_c+C33*alpha_c^2",
+      "static_stability": "a_Phi-G:S:G>0; S=C^-1"
+    },
+    "VERIFICATION": {
+      "tensor_free_energy_units_close": true,
+      "hexagonal_stiffness_is_symmetric_positive": true,
+      "stress_stationarity_closes": true,
+      "adiabatic_entropy_closes": true,
+      "heat_capacity_identity_closes": true,
+      "closed_form_matches_block_solve": true,
+      "hexagonal_coupling_contraction_matches": true,
+      "hexagonal_thermoelastic_contraction_matches": true,
+      "basal_axis_permutation_is_covariant": true,
+      "scalar_parent_is_recovered": true,
+      "positive_schur_stability_margin_is_exposed": true,
+      "unstable_tensor_coupling_is_not_silently_admitted": true,
+      "bosak_tensor_is_dynamic_comparator_not_K_T": true,
+      "tpg_expansion_is_mixed_comparator_not_same_specimen": true,
+      "scalar_parent_remains_conditional": true,
+      "source_combination_is_not_admitted": true,
+      "accepted_action_physical_tensor_and_dynamic_promotion_are_excluded": true,
+      "no_fit_holdout_or_claim_promotion": true
+    },
+    "CONTROLLING_BLOCKER": "same_state_thermoelastic_tensor_and_physical_Phi_strain_coupling_missing",
+    "NEXT_ACTION": "Acquire one same-state isothermal stiffness/alpha/C_epsilon tensor package and derive or match G, Z_Phi and a_Phi before orientation-resolved TTG use.",
+    "CLAIM_BOUNDARY": "Conditional static anisotropic derivation only; not an accepted UET action, source-matched graphite tensor, dynamic transport, physical alpha calibration, TTG prediction or Full Topic 13 closure."
+  }
+}

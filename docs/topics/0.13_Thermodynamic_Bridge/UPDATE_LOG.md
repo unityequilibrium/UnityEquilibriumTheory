@@ -5779,3 +5779,34 @@ EVIDENCE_PATHS:
 - `docs/core/test/test_topic13_scalar_thermoelastic_response_bridge.py`
 - `docs/core/artifacts/t13_scalar_thermoelastic_response_bridge_audit.json`
 - `docs/core/artifacts/uet_equation_correspondence_registry_topic13_scalar_thermoelastic_bridge_addendum.json`
+
+## 2026-09-02 - Anisotropic thermoelastic response bridge
+
+MAJOR_RESULT_CLOSURE: `T13_ANISOTROPIC_THERMOELASTIC_RESPONSE_BRIDGE_CANDIDATE` is `CLOSED_FOR_LANE` as a conditional tensor derivation. Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: Generic normal-strain tensor response, hexagonal contractions, basal-axis covariance, scalar limiting case and Schur stability bound.
+
+WHAT_REMAINS_OPEN: Same-state isothermal stiffness/alpha/Ce tensor, physical `G`, `Z_Phi`, `a_Phi`, Ding orientation mapping and finite-frequency transport/KMS/entropy.
+
+DEPENDENCY_UNLOCKED: Tensor source-acceptance, coupling stability and orientation-resolved observable design only.
+
+STATUS: `PASS_CONDITIONAL_ANISOTROPIC_THERMOELASTIC_RESPONSE_BRIDGE`; `source_combination_admitted=false`; `full_core_unlock=false`.
+
+WHAT_CHANGED: Added anisotropic bridge module, 10 test functions, 18-check audit, registry addendum and tensor source no-combination boundary. No accepted action or source role changed.
+
+EQUATION_OR_MAPPING: `C_sigma=C_epsilon+T*alpha:C:alpha`; `DeltaT=T*(alpha:G)*Phi_E/C_sigma`; `a_Phi-G:S:G>0`; hexagonal numerator `2*alpha_a*g_a+alpha_c*g_c`.
+
+VERIFICATION: Audit passes `18/18`; linked anisotropic/scalar/factor/Bosak/TPG regression passes `30` tests. Synthetic stress and map residuals are zero; scalar reduction and basal permutation pass. No fit or holdout access.
+
+CONTROLLING_BLOCKER: `same_state_thermoelastic_tensor_and_physical_Phi_strain_coupling_missing`.
+
+NEXT_ACTION: Source-lock one same-state tensor package and derive or match `G`, `Z_Phi`, `a_Phi`; only then build the orientation-resolved dynamic TTG response.
+
+CLAIM_BOUNDARY: Conditional static tensor derivation only; not accepted UET action, physical graphite tensor, transport validation, TTG prediction or Full Topic 13 closure.
+
+EVIDENCE_PATHS:
+- `docs/core/uet_anisotropic_thermoelastic_response_bridge.py`
+- `docs/scripts/audit/audit_topic13_anisotropic_thermoelastic_response_bridge.py`
+- `docs/core/test/test_topic13_anisotropic_thermoelastic_response_bridge.py`
+- `docs/core/artifacts/t13_anisotropic_thermoelastic_response_bridge_audit.json`
+- `docs/core/artifacts/uet_equation_correspondence_registry_topic13_anisotropic_thermoelastic_bridge_addendum.json`

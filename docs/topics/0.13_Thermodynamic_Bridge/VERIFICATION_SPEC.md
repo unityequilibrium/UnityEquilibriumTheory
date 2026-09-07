@@ -578,3 +578,17 @@ Acceptance requires retarded/advanced conjugacy, the declared spectral discontin
 - Verify Lowitzer alpha/K and MP48 Cv provenance independently and require `source_combination_admitted=false` while their material/state mapping is open.
 - Prohibit anisotropic-graphite, finite-frequency, KMS, SI alpha, fit, holdout or accepted-action promotion.
 - A pass closes the conditional scalar thermoelastic form and stability bound only.
+
+## Anisotropic thermoelastic response bridge
+
+- Run `python -m docs.scripts.audit.audit_topic13_anisotropic_thermoelastic_response_bridge`.
+- Run `python -m pytest docs/core/test/test_topic13_anisotropic_thermoelastic_response_bridge.py -q`.
+- Require a symmetric positive-definite 3x3 normal-stiffness block and natural-unit closure for every free-energy term.
+- Require zero-stress, adiabatic-entropy, heat-capacity and closed-form map residuals `<=1e-14`.
+- Require `C_sigma=C_epsilon+T*alpha:C:alpha` and `DeltaT=T*(alpha:G)*Phi_E/C_sigma`.
+- For the hexagonal lane, verify `alpha:G=2*alpha_a*g_a+alpha_c*g_c` and the explicit `alpha:C:alpha` contraction.
+- Require basal-axis permutation covariance and exact recovery of the scalar one-axis parent.
+- Expose `a_Phi-G:S:G`; negative Schur margin must remain inadmissible.
+- Keep Bosak stiffness dynamic/elastic rather than isothermal and preserve the TPG mixed-specimen boundary; require `source_combination_admitted=false`.
+- Prohibit accepted-action, physical tensor, dynamic transport, fit, holdout or claim promotion.
+- A pass closes the conditional anisotropic map and stability form only.

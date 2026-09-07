@@ -449,3 +449,18 @@ Their numerical rows are not combined. Physical `g_Phi_theta`, `Z_Phi` and
 `a_Phi` also remain unidentified. The stability inequality `g^2<a_Phi*K_T`
 is necessary in this candidate lane; satisfying it would not by itself prove
 the coupling or validate UET.
+
+## Anisotropic thermoelastic bridge boundary
+
+The tensor bridge fixes the correct anisotropic contractions and recovers the
+scalar result, but it only covers the normal-strain block in a local static
+adiabatic limit. Shear-coupled channels, finite frequency, thermal diffusion,
+boundary conditions, phonon polarization and SK/KMS noise are outside this
+result.
+
+The available Bosak tensor is an elastic/dynamic comparator, not a same-state
+isothermal stiffness record. The available TPG expansion rows mix specimens
+and are not mapped to Ding. Consequently no physical graphite tensor is
+assembled. The coupling tensor `G`, response residue `Z_Phi` and curvature
+`a_Phi` remain UET-side blockers, and the Schur inequality is only a necessary
+stability condition.

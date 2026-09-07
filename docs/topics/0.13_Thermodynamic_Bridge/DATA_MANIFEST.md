@@ -1379,3 +1379,27 @@ CONTROLLING_BLOCKER: `same_material_state_alpha_V_K_T_C_v_input_package_missing`
 NEXT_ACTION: Acquire one permissioned same-state thermoelastic package or a documented material-state mapping with covariance; do not combine current comparator central values by assumption.
 
 CLAIM_BOUNDARY: Source-role and no-combination boundary only; not Ding acceptance, UET calibration, TTG prediction, external validation or Full Topic 13 closure.
+
+## Anisotropic Thermoelastic Tensor Source Boundary (2026-09-02)
+
+MAJOR_RESULT_CLOSURE: `T13_ANISOTROPIC_THERMOELASTIC_RESPONSE_BRIDGE_CANDIDATE` is `CLOSED_FOR_LANE` for tensor algebra; no physical graphite tensor source combination is admitted.
+
+WHAT_IS_ACTUALLY_CLOSED: Bosak remains a source-locked elastic/dynamic stiffness comparator and TPG remains a source-locked anisotropic expansion comparator with a mixed-specimen boundary.
+
+WHAT_REMAINS_OPEN: One same-specimen/state isothermal stiffness, expansion and fixed-strain heat-capacity package with covariance and Ding orientation mapping.
+
+DEPENDENCY_UNLOCKED: Same-state anisotropic thermoelastic input-acceptance gate only.
+
+STATUS: `source_combination_admitted=false`; `parameter_fitting_performed=false`; `xie_2026_accessed=false`.
+
+WHAT_CHANGED: The tensor derivation names every required source surface and explicitly rejects combining the current Bosak and TPG central values as physical UET input.
+
+EQUATION_OR_MAPPING: `C_sigma=C_epsilon+T*alpha:C:alpha`; `DeltaT=T*(alpha:G)*Phi_E/C_sigma`; no numeric physical tensor or alpha is emitted.
+
+VERIFICATION: Existing source artifacts retain `dynamic_elastic_not_relabelled_as_K_T=true` and `mixed_row_boundary_is_explicit=true` in the anisotropic audit.
+
+CONTROLLING_BLOCKER: `same_specimen_state_isothermal_stiffness_alpha_tensor_and_C_epsilon_missing`.
+
+NEXT_ACTION: Acquire one permissioned tensor package or a documented conversion/material map with covariance; do not combine current comparator rows by assumption.
+
+CLAIM_BOUNDARY: Tensor source-role boundary only; not a graphite material model, Ding acceptance, UET calibration, TTG prediction or Full Topic 13 closure.

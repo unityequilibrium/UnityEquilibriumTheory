@@ -149,6 +149,17 @@ also requires `a_Phi*K_T-g_Phi_theta^2>0`.
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | T13-SCALAR-THERMOELASTIC-RESPONSE-BRIDGE-20260902 | `C_p^V=C_v^V+T*alpha_V^2*K_T`; `chi_u_theta=T*alpha_V*C_v^V/C_p^V`; `DeltaT=T*alpha_V*g_Phi_theta*Phi_E/C_p^V`; stability `g^2<a_Phi*K_T` | docs/core/uet_scalar_thermoelastic_response_bridge.py | `T~E`, `alpha_V~E^-1`, `K_T~E^4`, `C_v^V,C_p^V~E^3`, `g~E^3`, `Phi_E~E`, `DeltaT~E` | standard linear scalar thermoelasticity plus conditional Phi-strain interaction | conditional static map and stability bound derived; physical inputs open | unit sums, independent 2x2 solve, stress/entropy residuals, limiting cases, source-role audit | scalar/isotropic/static approximation; physical `g`, `Z`, same-state inputs, anisotropic tensor and dynamic KMS transport missing | acquire one same-material/state alpha/K/Cv package and derive or match `g`, `Z`, and `a_Phi` before numeric alpha |
 
+## Anisotropic Thermoelastic Response Bridge (2026-09-02)
+
+The scalar result extends to the symmetric normal-strain block with stiffness
+`C`, compliance `S=C^-1`, thermal expansion tensor `alpha` and coupling tensor
+`G`. Zero stress and fixed entropy give a closed block solve. For hexagonal
+graphite, the two basal axes are explicit and permutation covariant.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-ANISOTROPIC-THERMOELASTIC-RESPONSE-BRIDGE-20260902 | `C_sigma=C_epsilon+T*alpha:C:alpha`; `DeltaT=T*(alpha:G)*Phi_E/C_sigma`; hexagonal `alpha:G=2*alpha_a*g_a+alpha_c*g_c`; stability `a_Phi-G:S:G>0` | docs/core/uet_anisotropic_thermoelastic_response_bridge.py | `C~E^4`, `S~E^-4`, `alpha~E^-1`, `G~E^3`, `C_epsilon,C_sigma~E^3`, `Phi_E,DeltaT~E` | standard anisotropic thermoelasticity plus conditional Phi-strain tensor interface | tensor map, hexagonal reduction, scalar limit and Schur stability derived; physical tensor inputs open | block solve, unit sums, basal permutation, scalar reduction, source-role guards | Bosak is dynamic stiffness; TPG alpha rows are mixed-specimen; physical `G`, `Z`, same-state tensor and dynamic transport missing | acquire one same-state isothermal stiffness/alpha/Ce tensor package and derive or match `G`, `Z`, `a_Phi` |
+
 ## Dressed RA Pair and Microscopic Rung Boundary (2026-09-01)
 
 In the positive-energy pole approximation,

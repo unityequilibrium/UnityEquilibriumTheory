@@ -1,0 +1,121 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "CONDITIONAL_INTERFACE_NOT_ACCEPTED_UET_ACTION",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "equation_entries": [
+    {
+      "equation_id": "uet.o2.thermal.anisotropic_thermoelastic_response_bridge",
+      "version": "1",
+      "classification": "conditional_anisotropic_thermoelastic_response_bridge",
+      "relation_or_code_path": {
+        "free_energy_increment": "delta_f=epsilon:C:epsilon/2-DeltaT*(C:alpha):epsilon-C_epsilon*DeltaT^2/(2*T)+Phi_E*G:epsilon+a_Phi*Phi_E^2/2",
+        "zero_stress": "C:epsilon-(C:alpha)*DeltaT+G*Phi_E=0",
+        "adiabatic_entropy": "(C:alpha):epsilon+(C_epsilon/T)*DeltaT=0",
+        "heat_capacity_identity": "C_sigma=C_epsilon+T*alpha:C:alpha",
+        "temperature_response": "DeltaT=T*(alpha:G)*Phi_E/(C_epsilon+T*alpha:C:alpha)",
+        "hexagonal_numerator": "alpha:G=2*alpha_a*g_a+alpha_c*g_c",
+        "hexagonal_denominator": "alpha:C:alpha=2*(C11+C12)*alpha_a^2+4*C13*alpha_a*alpha_c+C33*alpha_c^2",
+        "static_stability": "a_Phi-G:S:G>0; S=C^-1"
+      },
+      "ontology": {
+        "epsilon": "external material normal-strain tensor block",
+        "alpha": "material thermal-expansion tensor",
+        "C_tensor": "material stiffness tensor, not UET C",
+        "G": "candidate Phi_E--strain coupling tensor",
+        "Phi_E": "energy-dimension UET response amplitude; not temperature",
+        "R_gen": "derived history trace; excluded from state"
+      },
+      "standard_physics_counterpart": "Linear anisotropic thermoelasticity in normal-strain Voigt form",
+      "variables": {
+        "epsilon": "normal-strain vector",
+        "alpha": "thermal-expansion vector",
+        "C_tensor": "normal stiffness block",
+        "G": "Phi_E--strain coupling vector",
+        "C_epsilon": "fixed-strain volumetric heat capacity"
+      },
+      "mathematical_role": "conditional anisotropic response and Schur-complement stability gate",
+      "observable_mapping": "Conditional local adiabatic tensor DeltaPhi-to-DeltaT response",
+      "unit_lane": "conditional_natural_anisotropic_thermoelastic_open_SI",
+      "units": {
+        "temperature": 1,
+        "alpha_tensor": -1,
+        "stiffness": 4,
+        "compliance": -4,
+        "c_strain_vol": 3,
+        "c_stress_vol": 3,
+        "strain": 0,
+        "Phi_E": 1,
+        "coupling_tensor": 3,
+        "response_curvature": 2,
+        "free_energy_density": 4,
+        "alpha_per_normalized_Phi": 1
+      },
+      "parameter_dimensions": {
+        "temperature": 1,
+        "alpha_tensor": -1,
+        "stiffness": 4,
+        "compliance": -4,
+        "c_strain_vol": 3,
+        "c_stress_vol": 3,
+        "strain": 0,
+        "Phi_E": 1,
+        "coupling_tensor": 3,
+        "response_curvature": 2,
+        "free_energy_density": 4,
+        "alpha_per_normalized_Phi": 1
+      },
+      "derivation_class": "standard_anisotropic_thermoelastic_block_solve_and_conditional_UET_interface",
+      "source_or_origin": "Standard anisotropic thermoelasticity plus conditional Phi_E--strain tensor interface",
+      "assumptions": {
+        "linear_normal_strain_block": true,
+        "zero_external_stress": true,
+        "adiabatic_local_response": true,
+        "physical_tensor_inputs_supplied": false
+      },
+      "symmetry_and_conservation": "Symmetric positive stiffness; basal-axis permutation covariance; fixed entropy",
+      "limiting_cases": [
+        "scalar one-axis parent",
+        "hexagonal basal-axis permutation",
+        "positive versus negative Schur stability margin"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_anisotropic_thermoelastic_response_bridge.py"
+      ],
+      "verifier_paths": [
+        "docs/core/test/test_topic13_anisotropic_thermoelastic_response_bridge.py",
+        "docs/scripts/audit/audit_topic13_anisotropic_thermoelastic_response_bridge.py"
+      ],
+      "observable": "Conditional local adiabatic tensor DeltaPhi-to-DeltaT response",
+      "data_role": "DERIVED_CONDITIONAL_TENSOR_MAP_WITH_UNCOMBINED_COMPARATORS",
+      "evidence_class": "INTERNAL_CONDITIONAL_DERIVATION",
+      "proof_status": "ANISOTROPIC_MAP_HEXAGONAL_REDUCTION_AND_STABILITY_BOUND_VERIFIED",
+      "verification_status": "PASS_CONDITIONAL_ANISOTROPIC_THERMOELASTIC_RESPONSE_BRIDGE",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_anisotropic_thermoelastic_response_bridge_audit.json",
+          "sha256": "9f091208770210f39e7d7ea2b552f2bddeb821999d58d20f3810df0435135312"
+        }
+      ],
+      "downstream_dependencies": [
+        "same_state_anisotropic_thermoelastic_tensor_acceptance_gate",
+        "Phi_strain_coupling_tensor_stability_gate",
+        "orientation_resolved_TTG_mapping_design"
+      ],
+      "dependency_role": "anisotropic_material_response_controller",
+      "physical_dependency_unlock": false,
+      "controlling_blocker": "same_state_thermoelastic_tensor_and_physical_Phi_strain_coupling_missing",
+      "failure_mode": [
+        "same_specimen_state_isothermal_stiffness_alpha_tensor_and_C_epsilon_missing",
+        "physical_Phi_strain_coupling_tensor_G_missing",
+        "physical_response_residue_Z_Phi_and_curvature_a_Phi_missing",
+        "Ding_TTG_orientation_geometry_and_material_mapping_missing",
+        "finite_frequency_anisotropic_transport_SK_KMS_entropy_missing",
+        "independent_SI_alpha_record_missing"
+      ],
+      "next_hardening_step": "Acquire one same-state isothermal stiffness/alpha/C_epsilon tensor package and derive or match G, Z_Phi and a_Phi before orientation-resolved TTG use.",
+      "claim_boundary": "Conditional static anisotropic derivation only; not an accepted UET action, source-matched graphite tensor, dynamic transport, physical alpha calibration, TTG prediction or Full Topic 13 closure."
+    }
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}

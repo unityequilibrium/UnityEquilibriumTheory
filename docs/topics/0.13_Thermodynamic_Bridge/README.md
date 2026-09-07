@@ -931,6 +931,32 @@ NEXT_ACTION: Build a single accepted material/state package for `alpha_V`, `K_T`
 CLAIM_BOUNDARY: Conditional static scalar derivation only; not an accepted UET action term, anisotropic graphite model, dynamic transport, physical alpha calibration, TTG prediction, external validation or Full Topic 13 closure.
 
 Machine-readable artifact: `docs/core/artifacts/t13_scalar_thermoelastic_response_bridge_audit.json`.
+
+## Current Major Result: anisotropic thermoelastic response bridge (2026-09-02)
+
+MAJOR_RESULT_CLOSURE: `T13_ANISOTROPIC_THERMOELASTIC_RESPONSE_BRIDGE_CANDIDATE` is `CLOSED_FOR_LANE` as a conditional tensor derivation. Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: The scalar bridge now has a general anisotropic parent, exact hexagonal contractions, basal-axis covariance, scalar limiting-case recovery and Schur-complement stability gate.
+
+WHAT_REMAINS_OPEN: A same-specimen/state isothermal stiffness, expansion tensor and fixed-strain heat capacity; physical coupling tensor `G`, `Z_Phi`, `a_Phi`; Ding orientation/material mapping; finite-frequency transport/KMS/entropy and SI alpha.
+
+DEPENDENCY_UNLOCKED: Same-state tensor-input acceptance, coupling-tensor stability and orientation-resolved TTG mapping design only.
+
+STATUS: `PASS_CONDITIONAL_ANISOTROPIC_THERMOELASTIC_RESPONSE_BRIDGE`; `source_combination_admitted=false`; `full_core_unlock=false`.
+
+WHAT_CHANGED: Generalized the material response without collapsing graphite anisotropy into one volumetric number and retained Bosak/TPG source incompatibilities instead of manufacturing a tensor package.
+
+EQUATION_OR_MAPPING: `C_sigma=C_epsilon+T*alpha:C:alpha`; `DeltaT=T*(alpha:G)*Phi_E/C_sigma`; hexagonal `alpha:G=2*alpha_a*g_a+alpha_c*g_c`; stability `a_Phi-G:S:G>0`.
+
+VERIFICATION: Audit passes `18/18`; linked anisotropic/scalar/factor/Bosak/TPG regression passes `30` tests. Stress and response-map residuals are zero in the synthetic hexagonal witness. No source combination, fit or Xie 2026 access occurred.
+
+CONTROLLING_BLOCKER: `same_state_thermoelastic_tensor_and_physical_Phi_strain_coupling_missing`.
+
+NEXT_ACTION: Acquire one same-state isothermal `C_ij`, `alpha_i` and `C_epsilon` package with covariance, then derive or microscopically match `G`, `Z_Phi`, `a_Phi` before orientation-resolved dynamic TTG use.
+
+CLAIM_BOUNDARY: Conditional static tensor derivation only; not accepted UET action, source-matched graphite tensor, dynamic transport, physical alpha calibration, TTG prediction, external validation or Full Topic 13 closure.
+
+Machine-readable artifact: `docs/core/artifacts/t13_anisotropic_thermoelastic_response_bridge_audit.json`.
 ## Current Major Result: T13-173 causal gate semantics alignment (2026-08-23)
 
 MAJOR_RESULT_CLOSURE: CLOSED_AS_NO_GO for the declared local conserved-C gradient finite-cone compatibility question; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.

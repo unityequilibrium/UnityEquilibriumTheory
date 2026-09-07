@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-full-core-ready-acceptance-v1",
   "artifact": "t13_full_core_ready_acceptance_audit",
-  "generated_at": "2026-08-29",
+  "generated_at": "2026-08-30",
   "status": "PASS_T13_FULL_CORE_READY_ACCEPTANCE",
   "claim_promotion": false,
   "major_result": {

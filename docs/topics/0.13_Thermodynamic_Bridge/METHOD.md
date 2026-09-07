@@ -170,3 +170,19 @@ isothermal coupled-field stability margin
 adiabatic candidate only. Lowitzer alpha/K and MP48 Cv remain separate
 comparators until one material/state mapping and uncertainty contract admits
 their combination.
+
+## Anisotropic thermoelastic response method (2026-09-02)
+
+Represent normal strains in a symmetric three-component Voigt block. Define
+thermal stress `beta=C*alpha` and solve
+`C*epsilon-beta*DeltaT+G*Phi_E=0` together with
+`beta:epsilon+(C_epsilon/T)*DeltaT=0`. Compliance elimination gives
+`C_sigma=C_epsilon+T*alpha:C:alpha` and
+`DeltaT=T*(alpha:G)*Phi_E/C_sigma`.
+
+Require `C` to be symmetric positive definite and require the coupled
+Phi-strain Schur margin `a_Phi-G:S:G>0`. Verify the scalar one-axis limit and
+basal-axis permutation before using the hexagonal formulas. Bosak elastic
+stiffness and TPG expansion remain independent comparator surfaces; they are
+not a same-state isothermal tensor package and must not be combined into a
+numeric UET coefficient.
