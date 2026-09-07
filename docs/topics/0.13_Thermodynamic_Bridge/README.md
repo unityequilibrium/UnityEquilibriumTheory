@@ -6,6 +6,22 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Reciprocal Material/Response Dynamics (2026-09-08)
+
+The [reciprocal result](../../core/artifacts/t13_reciprocal_thermal_dynamics_audit.json)
+carries the conditional G and direct entropy coefficient r into a joint
+material/Phi dynamic lane. The term -T*r*Pi in heat balance and +r*theta in
+the response force cancel in an explicit quadratic availability ledger.
+Omitting either partner fails that balance. Independent state-space and
+reduced frequency-domain solutions agree; supplied heat can generate a Phi
+response without a separately imposed response force in this synthetic lane.
+This closes a conditional reciprocal interface, not physical pump calibration,
+microscopic SK/KMS, total nonlinear energy or a continuum finite-cone proof.
+[Derivation](../../core/T13_RECIPROCAL_THERMAL_DYNAMICS.md).
+The older prescribed-Phi comparator is unchanged. Local unlock=false does not
+alter or independently verify the separately recorded O(2)/He-4 Core-ready
+claim; the graphite/TTG physical matching remains blocked.
+
 ## Thermal Matter-to-Strain Matching (2026-09-08)
 
 The [thermal matching result](../../core/artifacts/t13_matter_strain_susceptibility_matching_audit.json)

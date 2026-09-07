@@ -1,3 +1,29 @@
+## 2026-09-08 - Reciprocal material/response energy and entropy
+
+MAJOR_RESULT_CLOSURE: T13_RECIPROCAL_MATERIAL_RESPONSE_ENERGY_ENTROPY is CLOSED_FOR_LANE within the declared local quadratic material extension.
+
+WHAT_IS_ACTUALLY_CLOSED: Joint G/r feedback, positive modal availability and linear entropy balance. Heat and Phi act reciprocally rather than treating Phi solely as an imposed port. The source-matched G/r and all companion thermal increments are carried into a synthetic bare-plus-thermal witness. The previous complete isentropic map is recovered as a stationary coupled limit.
+
+WHAT_REMAINS_OPEN: Physical material D/Z and mode identity, vacuum subtraction/double counting, pump preparation, physical damping/transport with microscopic KMS/noise, continuum causal/geometry closure, and nonlinear mean heating/full entropy current.
+
+DEPENDENCY_UNLOCKED: Conditional reciprocal material/pump design only. No new physical dependency unlock; independently recorded O(2)/He-4 Core-ready status is unchanged and not revalidated.
+
+STATUS: PASS_CONDITIONAL_RECIPROCAL_THERMAL_DYNAMICS; local full_core_unlock=false; claim_promotion=false. Graphite/TTG remains blocked.
+
+WHAT_CHANGED: Added a separate reciprocal model, derivation, tests, generated audit and candidate registry, then synchronized topic docs. Preserved the old prescribed-Phi comparator, conserved-C causal gate and whole-topic artifacts.
+
+EQUATION_OR_MAPPING: c*theta_dot=-T*b.w-T*r*Pi-q*J+Q; z*Pi_dot=-a_q*phi-h.v+r*theta-gamma*Pi+f. Availability obeys W_dot=theta*Q/T+Pi*f-gamma*Pi^2-J^2/(T*k), with exact Fourier elimination at tau=0. Initial entropy includes r*phi.
+
+VERIFICATION: 74 linked pytest tests pass, including 14 reciprocal cases; 13 artifact checks pass. Availability matrix residual 2.220e-16, conservative residual zero, independent Laplace absolute error 9.930e-16. Omitting the thermal r partner gives balance defect 0.0236681 in the synthetic matching witness. Independent free-energy derivatives, direct time integration, stationary prior map, normalization, units, rotations and Schur rejection pass. Initial independent tests caught and corrected a reduced-transfer sign and an audit's six-to-three-component projection assumption; no thresholds changed. Evidence/registry/protected hashes verified. F0 parses 368 rows without duplicates and remains BLOCKED; foundation and compatibility reruns retain physical BLOCKED status.
+
+CONTROLLING_BLOCKER: physical_material_and_preparation_match_missing.
+
+NEXT_ACTION: Derive physical preparation and material coefficient identity independently; extend the local reciprocal energy contract toward the continuum/bath interface without mistaking constitutive damping for microscopic KMS.
+
+CLAIM_BOUNDARY: Conditional natural-unit quadratic dynamics, not an accepted core action, graphite alpha, physical Kubo/SK/KMS, total nonlinear SI energy, causal-cone proof or global UET closure. No experimental curve, setup metadata or holdout is a computational input of this generator/model; no fit, clipping or threshold change.
+
+EVIDENCE_HASHES: reciprocal artifact 223c2870143d7a7a293774efaae8729b01c749e41eda094506a2510607bdb039; reciprocal registry 3696530ca6fbcc2b55d5770b0aa62ad515cb919a78bcd1d64ec08e812481f06c.
+
 ## 2026-09-08 - Thermal matter-strain and entropy matching
 
 MAJOR_RESULT_CLOSURE: T13_THERMAL_MATTER_STRAIN_AND_ENTROPY_MATCHING is CLOSED_FOR_LANE for the declared Gaussian thermal source extension.

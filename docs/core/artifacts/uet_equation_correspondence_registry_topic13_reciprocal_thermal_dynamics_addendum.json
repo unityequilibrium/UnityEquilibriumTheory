@@ -1,0 +1,115 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "CANDIDATE_RECIPROCAL_MATERIAL_EXTENSION",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "equation_entries": [
+    {
+      "ontology": {
+        "Phi": "existing response displacement",
+        "Pi": "response time derivative",
+        "material": "v,w,theta and optional Cattaneo J",
+        "C": "unchanged",
+        "R_gen_R_obs": "excluded"
+      },
+      "units": {
+        "v": "1",
+        "w_theta_phi": "E",
+        "Pi": "E^2",
+        "J_rho_A": "E^4",
+        "b_h_c": "E^3",
+        "r_a_k": "E^2",
+        "z_kappa_phi": "1",
+        "gamma_q_T": "E",
+        "tau": "E^-1",
+        "f": "E^3",
+        "Q": "E^5"
+      },
+      "unit_lane": "natural_units_not_SI",
+      "derivation_class": "constitutive_ansatz",
+      "observable": "conditional material temperature and response transfer, not detector-calibrated TTG",
+      "data_role": "SYNTHETIC_INTERNAL_NO_CALIBRATION",
+      "verification_status": "PASS_CONDITIONAL_RECIPROCAL_THERMAL_DYNAMICS",
+      "controlling_blocker": "physical_material_and_preparation_match_missing",
+      "claim_boundary": "Local quadratic natural-unit extension with external damping/transport; not accepted core action, physical alpha, Kubo/KMS, nonlinear total-energy closure or finite-cone proof. Separate He-4 Core-ready record is unchanged and not revalidated.",
+      "physical_dependency_unlock": false,
+      "equation_id": "uet.thermal.reciprocal_material_response",
+      "version": "1",
+      "classification": "constitutive_lane",
+      "relation_or_code_path": {
+        "response": "z*Pi_dot=-a_q*phi-h.v+r*theta-gamma*Pi+f",
+        "heat": "c*theta_dot=-T*b.w-T*r*Pi-q*J+Q",
+        "entropy": "ds=b.v+c*theta/T+r*phi",
+        "availability_rate": "W_dot=theta*Q/T+Pi*f-gamma*Pi^2-J^2/(T*k)",
+        "Fourier_loss": "k*q^2*theta^2/T replaces J^2/(T*k) at tau=0"
+      },
+      "standard_physics_counterpart": "linear reciprocal thermoelastic/free-energy response and quadratic availability",
+      "variables": {
+        "Phi": "existing response displacement",
+        "Pi": "response time derivative",
+        "material": "v,w,theta and optional Cattaneo J",
+        "C": "unchanged",
+        "R_gen_R_obs": "excluded"
+      },
+      "mathematical_role": "reciprocal material-response feedback",
+      "observable_mapping": "conditional material temperature and response transfer, not detector-calibrated TTG",
+      "parameter_dimensions": {
+        "v": "1",
+        "w_theta_phi": "E",
+        "Pi": "E^2",
+        "J_rho_A": "E^4",
+        "b_h_c": "E^3",
+        "r_a_k": "E^2",
+        "z_kappa_phi": "1",
+        "gamma_q_T": "E",
+        "tau": "E^-1",
+        "f": "E^3",
+        "Q": "E^5"
+      },
+      "source_or_origin": "Same synthetic bare-plus-thermal increments as preceding susceptibility wave; not measured material coefficients.",
+      "assumptions": [
+        "constant reference T",
+        "linear bulk q>0 mode",
+        "positive joint Schur domain",
+        "external local material coefficients and dissipation",
+        "no microscopic noise match"
+      ],
+      "symmetry_and_conservation": "rotation and Phi normalization covariance; exact quadratic availability and linear entropy balances",
+      "limiting_cases": [
+        "G=r=0 old comparator",
+        "k=gamma=0 conservation",
+        "Fourier tau=0",
+        "conducting DC"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_reciprocal_thermal_dynamics.py"
+      ],
+      "verifier_paths": [
+        "docs/core/test/test_topic13_reciprocal_thermal_dynamics.py",
+        "docs/scripts/audit/audit_topic13_reciprocal_thermal_dynamics.py"
+      ],
+      "evidence_class": "INTERNAL_CONDITIONAL_DERIVATION",
+      "proof_status": "quadratic identities with independent numerical checks",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_reciprocal_thermal_dynamics_audit.json",
+          "sha256": "223c2870143d7a7a293774efaae8729b01c749e41eda094506a2510607bdb039"
+        }
+      ],
+      "downstream_dependencies": [
+        "physical_pump_material_matching"
+      ],
+      "dependency_role": "conditional_diagnostic_only",
+      "failure_mode": [
+        "physical_D_Z_and_material_mode_identity_missing",
+        "vacuum_subtraction_and_material_double_counting_match_missing",
+        "physical_pump_initial_entropy_and_response_force_map_missing",
+        "microscopic_dissipation_SK_KMS_and_noise_match_missing",
+        "continuum_causal_boundary_and_detector_geometry_missing",
+        "nonlinear_mean_heating_and_full_entropy_current_missing"
+      ],
+      "next_hardening_step": "identify physical D/Z and pump ports; derive bath/noise and continuum contract"
+    }
+  ]
+}

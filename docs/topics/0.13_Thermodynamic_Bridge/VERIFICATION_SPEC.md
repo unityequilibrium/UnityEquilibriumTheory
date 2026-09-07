@@ -1,5 +1,18 @@
 # Verification Spec
 
+## Reciprocal G/r Thermal Dynamics (2026-09-08)
+
+Run docs.scripts.audit.audit_topic13_reciprocal_thermal_dynamics and pytest
+docs/core/test/test_topic13_reciprocal_thermal_dynamics.py. Check both Fourier
+and Cattaneo modes against independent direct integration and 2x2 Laplace
+elimination; audit the full matrix availability identity, initial entropy,
+Phi normalization, natural units and full Mandel rotations. Removing either
+r partner must fail energy balance. Verify zero-coupling recovery, conservative
+energy, dissipative decay, Schur-domain rejection and unregularized poles.
+The generator must carry source-derived G/r together through the correct
+strain projection, use synthetic bare-plus-thermal totals only and preserve
+whole-topic hashes. This is not an external source or repository-wide access audit.
+
 ## Thermal Matter-Strain Susceptibility Matching (2026-09-08)
 
 Run `docs.scripts.audit.audit_topic13_matter_strain_susceptibility` and

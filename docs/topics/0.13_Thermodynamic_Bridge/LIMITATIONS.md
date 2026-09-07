@@ -1,5 +1,16 @@
 # Limitations
 
+## Reciprocal Quadratic Lane Boundary (2026-09-08)
+
+The new reciprocal G/r system is a declared local material extension, not an
+accepted full UET action or physical graphite model. D/Z, vacuum subtraction,
+material identity, physical transport/damping and pump preparation remain
+external or missing. The proof is a modal quadratic availability and linear
+entropy identity; second-order mean heating, generated harmonics and the full
+nonlinear entropy current are not evolved. No SK/KMS noise is manufactured.
+Positive modal energy does not prove a continuum causal cone. No physical
+alpha or downstream unlock is emitted; separate He-4 status is unchanged.
+
 ## Thermal Source-Matching Boundary (2026-09-08)
 
 The added strain-mass probe is an explicit candidate source extension, not an

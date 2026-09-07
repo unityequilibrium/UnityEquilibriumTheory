@@ -1,5 +1,18 @@
 ﻿# Method
 
+## Joint G/r Reciprocal Dynamics (2026-09-08)
+
+Use the same declared quadratic free energy for stress, entropy and Phi force.
+Append phi,Pi to the old material mode in a separate candidate module. The
+reciprocal pair is c*theta_dot=-T*b.w-T*r*Pi-q*J+Q and
+z*Pi_dot=-a_q*phi-h.v+r*theta-gamma*Pi+f. Initialize entropy with r*phi included.
+Check a_q-h.A^-1.h>0 and the full availability identity before time evolution.
+Compare direct equation integration, a state exponential and an independently
+eliminated 2x2 transfer system. Thermal matching contributes G/r and all
+companion Hessian terms together, applied only to declared synthetic bare
+coefficients. Do not add them automatically to measured material totals.
+[Equations and scope](../../core/T13_RECIPROCAL_THERMAL_DYNAMICS.md).
+
 ## Thermal Mass-Source Matching (2026-09-08)
 
 Canonicalize the actual matter kinetic coefficient before introducing the

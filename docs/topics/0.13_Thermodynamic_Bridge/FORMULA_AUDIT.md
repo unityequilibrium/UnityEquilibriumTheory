@@ -1,5 +1,15 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Reciprocal Thermal Dynamics (2026-09-08)
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-RECIPROCAL-THERMAL-20260908 | `c*theta_dot=-T*b.w-T*r*Pi-q*J+Q; z*Pi_dot=-a_q*phi-h.v+r*theta-gamma*Pi+f` | docs/core/uet_reciprocal_thermal_dynamics.py | natural: theta,phi E; Pi E^2; h,c E^3; r,a E^2; z 1; gamma E; Q E^5; f E^3 | declared quadratic free-energy ansatz with external material/damping coefficients; conditional G/r matching | reciprocal quadratic availability and linear entropy identities, not nonlinear physical closure | independent equations/resolvent, energy, units, rotations and limits | one-sided r, nonpositive Schur block, unidentified physical coefficients/preparation | physical pump/material and microscopic dissipation matching |
+
+[Derivation](../../core/T13_RECIPROCAL_THERMAL_DYNAMICS.md) records the
+Legendre-transform cancellation and the independent transfer signs. This
+candidate does not replace the old comparator or the conserved-C causal gate.
+
 ## Thermal Matter-to-Strain Matching (2026-09-08)
 
 | formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
