@@ -8,11 +8,22 @@ ROOT = Path(__file__).resolve().parents[3]
 GATE = ROOT / "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
 
 
-def test_downstream_major_results_remain_blocked_until_topic13_core_ready() -> None:
+def test_curved_parent_work_unlocks_after_topic13_core_ready() -> None:
     artifact = json.loads(GATE.read_text(encoding="utf-8-sig"))
     assert artifact["claim_promotion"] is False
     assert artifact["status"] == "BLOCKED_DOWNSTREAM_MAJOR_RESULTS"
-    assert artifact["decisions"]["CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"]["status"] == "BLOCKED_DEPENDENCY"
+    curved = artifact["decisions"]["CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"]
+    assert curved["status"] == "UNLOCKED"
+    assert curved["depends_on"] == ["T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"]
+    assert artifact["topic13_core_ready"]["full_core_unlock"] is True
     assert artifact["decisions"]["GR_CLASSICAL_COMPATIBILITY_LANE"]["status"] == "BLOCKED_DEPENDENCY"
     assert artifact["decisions"]["CONSTITUTIVE_TRANSPORT_CORE_LANE"]["status"] == "BLOCKED_DEPENDENCY"
     assert artifact["decisions"]["GALAXY_COMPATIBILITY_TRACK"]["status"] == "BLOCKED_DEPENDENCY"
+    progress = artifact["curved_3p1_progress"]
+    assert progress["generalized_harmonic_nonlinear_vacuum_rhs"]["closure_level"] == "CLOSED_FOR_LANE"
+    assert progress["generalized_harmonic_periodic_vacuum_evolution"]["closure_level"] == "CLOSED_FOR_LANE"
+    assert progress["topic13_prescribed_matter_wiring"]["closure_level"] == "CLOSED_FOR_LANE"
+    assert progress["controlling_blocker"] == (
+        "curved_3p1_constraint_preserving_boundaries_and_"
+        "dimensional_observable_mapping_missing"
+    )

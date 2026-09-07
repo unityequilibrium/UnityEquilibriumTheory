@@ -1,0 +1,217 @@
+{
+  "schema_version": "t13-full-core-ready-acceptance-v1",
+  "artifact": "t13_full_core_ready_acceptance_audit",
+  "generated_at": "2026-08-30",
+  "status": "PASS_T13_FULL_CORE_READY_ACCEPTANCE",
+  "claim_promotion": false,
+  "major_result": {
+    "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY_ACCEPTED",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_CORE",
+    "what_is_closed": [
+      "causal_branch_passes_locked_threshold",
+      "conserved_c_no_go_or_regularization_is_recorded",
+      "alpha_is_independent_not_fitted",
+      "ttg_numeric_source_provenance_is_complete_for_comparison",
+      "landauer_controllers_are_dispositioned",
+      "dimensional_map_and_uncertainty_pass",
+      "finite_temperature_normal_component_passes",
+      "eos_transport_kms_entropy_and_balance_pass",
+      "heat_flux_mapping_preserves_ontology",
+      "xie_holdout_access_audit_passes",
+      "chaos_is_nonblocking_and_does_not_relabel_state",
+      "registry_matrix_and_dependency_are_consistent",
+      "global_claim_promotion_remains_false"
+    ],
+    "what_remains_open": [],
+    "equation_or_mapping": {
+      "measurement": "y_TTG = Delta_Tq(t)/Delta_Tq(0); y_TTG^UET = Delta_Phi(t)/Delta_Phi(0)",
+      "dimensional": "Delta_Tq = alpha_Phi_K Delta_Phi_norm",
+      "field_and_energy": "Delta_Phi_norm=Z_Phi Delta_Phi_natural; f_SI=e0 f_natural",
+      "entropy": "J_S^mu=s u^mu+q^mu/T; nabla_mu J_S^mu>=0"
+    },
+    "units": {
+      "alpha_Phi_K": "K per normalized base Phi",
+      "beta_SI": "J m^-3 per normalized Phi squared",
+      "eta": "Pa s"
+    },
+    "derivation_class": "REQUIREMENT_BY_REQUIREMENT_ACCEPTANCE_AUDIT_OF_HASHED_CORE_EVIDENCE",
+    "observable": "bounded O(2)/He-4 thermal bridge Core handoff",
+    "data_role": "INTERNAL_CORE_ACCEPTANCE_NOT_EXTERNAL_VALIDATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+        "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
+        "sha256": "dc0d658a353172074425d2a8259dce3a4fa7b6b75bea68310c7a1492421d5d58"
+      },
+      {
+        "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
+        "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+        "sha256": "9545138da34726bba60c3e8af29714d577f6579b2cb0489bbba94834f4cb45e5"
+      },
+      {
+        "path": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+        "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+        "sha256": "13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418"
+      },
+      {
+        "path": "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json",
+        "status": "PASS_CAUSAL_NAMED_BRANCH_CORE_COMPATIBILITY",
+        "sha256": "6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a"
+      },
+      {
+        "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
+        "status": "NO_GO_FOR_DECLARED_CONSERVED_CATTANEO_LOCAL_GRADIENT_CLASS",
+        "sha256": "1cb84b6c8e9741fef1dc6e0f83fba3dfe68ca6cd89adac8fa1a31835b4debf62"
+      },
+      {
+        "path": "docs/core/artifacts/ding_2022_source_mapping_audit.json",
+        "status": "PASS",
+        "sha256": "45aa63abf5951afe55f7aad86ef2a971e7a856f2158caf3a1c5ee20500eb1b23"
+      },
+      {
+        "path": "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json",
+        "status": "PASS_HE4_LOCAL_ALPHA_AND_FIELD_NORMALIZATION",
+        "sha256": "1c44ffce6310488bf3a9b2e9cce74d1281fb27a949c1b9d26c6f80d970b7fbd0"
+      },
+      {
+        "path": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
+        "status": "PASS_HE4_SI_SCALE_AND_NORMALIZED_BETA",
+        "sha256": "1a8289aadbed1c069add276bb3f734d6c642174cf2101a664fba4ee5a8bfd021"
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_thermodynamic_normal_component_audit.json",
+        "status": "PASS_ACTION_DERIVED_THERMODYNAMIC_NORMAL_COMPONENT_LANE",
+        "sha256": "3975ac974a3e265c14094b4b40a0fee86ddcee900fb1c2d534b97d3f38384719"
+      },
+      {
+        "path": "docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json",
+        "status": "PASS_FORMAL_T13_THERMODYNAMIC_BRIDGE_INTEGRATION",
+        "sha256": "42842e5e787a8de7007c026bf7c49dbeeeec7f48cabd403000f817e5c4a90c32"
+      },
+      {
+        "path": "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json",
+        "status": "PASS_NAMED_SK_KMS_ENTROPY_INTERFACE_CONTRACT",
+        "sha256": "d9632a317270260f4d18be5d1cb8e7f0889ca9e3e9631ebe47aa32212320f4ba"
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+        "status": "PASS_ACTION_DERIVED_COVARIANT_ENTROPY_HEAT_FLUX_BALANCE_LANE",
+        "sha256": "9ea6f37eb43e353b8c89e42b1c3dd01c957b2063e41a09230483989accb2b3f4"
+      },
+      {
+        "path": "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json",
+        "status": "PASS_HE4_PHYSICAL_SHEAR_KUBO_TRANSPORT",
+        "sha256": "46e292d9b0f88125ecf134faa51322421a06d058015ba318f25c3be3cd2dd26f"
+      },
+      {
+        "path": "docs/core/artifacts/t13_landauer_core_disposition_audit.json",
+        "status": "PASS_LANDAUER_CORE_ROLE_DISPOSITION",
+        "sha256": "82f77043c8921819175146841afd8cc5178385939e8ccf455678ead65731aa43"
+      },
+      {
+        "path": "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json",
+        "status": "PASS_HOLDOUT_DATA_UNCONSUMED_METADATA_ONLY",
+        "sha256": "c3185da0a233894d7f338138bbe6acee287194e1852a80e40b0b5f6f2134e21b"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_thermal_dynamical_regime_audit.json",
+        "status": "PASS_SCOPED_THERMAL_DYNAMICAL_REGIME_PILOT",
+        "sha256": "6c40fc0950fde8827d09d05e892e03b11563d3b987ca6cf06c17091b8ff2eddc"
+      },
+      {
+        "path": "docs/core/artifacts/uet_major_result_closure_register.json",
+        "status": null,
+        "identity_mode": "NON_HASHED_DERIVED_CONSISTENCY_INPUT",
+        "reason": "The register discovers this acceptance artifact, so hashing the register here would create an unsatisfiable provenance cycle."
+      },
+      {
+        "path": "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json",
+        "status": "BLOCKED_DOWNSTREAM_MAJOR_RESULTS",
+        "identity_mode": "NON_HASHED_DERIVED_CONSISTENCY_INPUT",
+        "reason": "The register discovers this acceptance artifact, so hashing the register here would create an unsatisfiable provenance cycle."
+      }
+    ],
+    "verification_status": "PASS_T13_FULL_CORE_READY_ACCEPTANCE",
+    "open_blockers": [],
+    "dependency_unlocked": "Core curved 3+1 research may start; Gravity remains blocked until that separate result closes.",
+    "claim_boundary": "Acceptance is limited to the bounded internal O(2)/He-4 Core bridge. Ding figure-derived TTG rows remain comparison-only, raw-author/graphite external validation remains open, the original conserved-gradient baseline remains blocked, and global UET closure remains false."
+  },
+  "criteria": {
+    "causal_branch_passes_locked_threshold": true,
+    "conserved_c_no_go_or_regularization_is_recorded": true,
+    "alpha_is_independent_not_fitted": true,
+    "ttg_numeric_source_provenance_is_complete_for_comparison": true,
+    "landauer_controllers_are_dispositioned": true,
+    "dimensional_map_and_uncertainty_pass": true,
+    "finite_temperature_normal_component_passes": true,
+    "eos_transport_kms_entropy_and_balance_pass": true,
+    "heat_flux_mapping_preserves_ontology": true,
+    "xie_holdout_access_audit_passes": true,
+    "chaos_is_nonblocking_and_does_not_relabel_state": true,
+    "registry_matrix_and_dependency_are_consistent": true,
+    "global_claim_promotion_remains_false": true
+  },
+  "derived_consistency_inputs": {
+    "paths": [
+      "docs/core/artifacts/uet_major_result_closure_register.json",
+      "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+    ],
+    "identity_mode": "NON_HASHED_DERIVED_CONSISTENCY_INPUT",
+    "values_are_verified": true,
+    "hash_cycle_forbidden": true
+  },
+  "quantitative_witnesses": {
+    "causal_prearrival_leakage_fraction": 0.0,
+    "causal_locked_threshold": 1e-06,
+    "alpha_Phi_K": -1.02237987858849,
+    "alpha_uncertainty": 0.056753979576408715,
+    "beta_T13": -0.007936042649802305,
+    "beta_T13_uncertainty": 0.0008831273413443808,
+    "beta_SI": -4071.143625305366,
+    "beta_SI_uncertainty": 453.5201739147111,
+    "physical_eta_Pa_s": 1.29e-06,
+    "physical_eta_uncertainty_Pa_s": 5e-08,
+    "ttg_comparison_row_count": 432
+  },
+  "external_tracks_still_open": {
+    "graphite_ttg": {
+      "major_result_id": "T13_GRAPHITE_TTG_EXTERNAL_VALIDATION_READY",
+      "status": "OPEN",
+      "requirements": {
+        "ding_or_accepted_independent_C_src": "BLOCKED",
+        "graphite_independent_alpha": "BLOCKED",
+        "graphite_dimensional_observable_map": "BLOCKED",
+        "xie_2026_holdout_integrity": "PASS"
+      },
+      "what_remains_open": [
+        "ding_or_accepted_independent_C_src",
+        "graphite_independent_alpha",
+        "graphite_dimensional_observable_map"
+      ],
+      "dependency_unlocked": "None; this is an external validation track, not a Core physical-unlock dependency.",
+      "claim_boundary": "Ding/graphite inputs and Xie 2026 remain isolated from the O(2)/He-4 Core closure decision. Xie stays locked until preregistered validation is authorized."
+    },
+    "raw_author_ding_source": false,
+    "landauer_numeric_gaps": {
+      "berut": [
+        "berut_permissioned_raw_numeric_package_missing",
+        "berut_measurement_error_bars_and_source_grade_uncertainty_not_closed"
+      ],
+      "jun": [
+        "jun_machine_readable_numeric_row_parity_and_uncertainty_not_closed"
+      ],
+      "hong": [
+        "hong_machine_readable_numeric_row_parity_and_legacy_row_policy_not_closed"
+      ],
+      "peterson": [
+        "peterson_legacy_label_demoted_no_admissible_row_until_exact_source_selected"
+      ]
+    },
+    "curved_3p1_result_ready": false,
+    "gravity_ready": false
+  },
+  "controlling_blocker": null,
+  "next_action": "Start CORE_CURVED_3P1_OBSERVABLE_PARENT_READY as the next major result; keep graphite TTG and raw Landauer acquisition on external comparison tracks.",
+  "claim_boundary": "Core-ready is not external-ready and not global UET closure."
+}

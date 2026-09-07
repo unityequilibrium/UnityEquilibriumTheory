@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "covariant_diffusion_contract",
-  "generated_at": "2026-07-23T03:32:55.810289+00:00",
+  "generated_at": "2026-08-30T10:26:12.196258+00:00",
   "status": "PARTIAL_CONSTITUTIVE_NOETHER_CURRENT_TO_MODEL_B_BRIDGE",
   "covariant_input": "on_shell_global_O2_Noether_current",
   "frame_decomposition": "N^mu=n*u^mu+j^mu_with_u_mu*j^mu=0",

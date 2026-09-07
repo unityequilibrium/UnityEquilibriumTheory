@@ -1,0 +1,106 @@
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[3]
+AUDIT = ROOT / "docs/core/artifacts/t13_csrc_source_route_priority_audit.json"
+MATRIX = ROOT / "docs/core/artifacts/t13_topic13_closure_matrix.json"
+REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
+
+
+def load(path: Path) -> dict:
+    return json.loads(path.read_text(encoding="utf-8-sig"))
+
+
+def test_csrc_route_priority_is_a_closed_lane_without_an_accepted_route() -> None:
+    audit = load(AUDIT)
+    assert audit["status"] == "PASS_SCOPED_C_SRC_SOURCE_ROUTE_PRIORITY_NO_ACCEPTED_ROUTE"
+    assert all(audit["checks"].values())
+    assert audit["major_result"]["closure_level"] == "CLOSED_FOR_LANE"
+    assert audit["major_result"]["major_result_id"] == "T13_C_SRC_SOURCE_ROUTE_PRIORITY"
+    assert audit["claim_promotion"] is False
+    assert audit["holdout_policy"] == {
+        "xie_2026_accessed": False,
+        "calibration_path_may_read_holdout": False,
+        "target_curve_used": False,
+        "fit_or_tuning_used": False,
+    }
+
+
+def test_route_matrix_has_all_eleven_acceptance_fields_and_no_accepted_route() -> None:
+    audit = load(AUDIT)
+    required = audit["acceptance_contract"]["required_fields"]
+    assert len(required) == 11
+    assert len(audit["routes"]) == 9
+    assert all(set(route["field_coverage"]) == set(required) for route in audit["routes"])
+    assert all(route["accepted_for_full_topic13"] is False for route in audit["routes"])
+    assert audit["priority_decision"]["selected_route_id"] == "ding_author_payload"
+    assert audit["priority_decision"]["selected_route_priority"] == 1
+
+
+def test_numeric_candidates_are_visible_but_material_and_uncertainty_gates_remain_missing() -> None:
+    audit = load(AUDIT)
+    candidates = {
+        route["route_id"]: route
+        for route in audit["routes"]
+        if route["field_coverage"]["C_src_rows_with_J_m^-3_K^-1_units"]["status"] == "PRESENT"
+    }
+    assert set(candidates) == {"calorine_zenodo_pbte", "calorine_legacy_nep2_pbte"}
+    for route in candidates.values():
+        assert route["field_coverage"]["material_identity_morphology_isotope_defect_state"]["status"] == "MISSING"
+        assert route["field_coverage"]["uncertainty_and_preprocessing"]["status"] == "MISSING"
+        assert "material/state" in " ".join(route["rejection_reasons"])
+
+
+def test_qh15_natural_graphite_cv_comparator_is_visible_without_ding_acceptance() -> None:
+    audit = load(AUDIT)
+    route = next(item for item in audit["routes"] if item["route_id"] == "qh15_natural_graphite_cv")
+    assert route["route_class"] == "INDEPENDENT_CV_COMPARATOR"
+    assert route["field_coverage"]["raw_numeric_or_reproduction_payload"]["status"] == "PRESENT"
+    assert route["field_coverage"]["temperature_and_state"]["status"] == "PRESENT"
+    assert route["field_coverage"]["C_src_rows_with_J_m^-3_K^-1_units"]["status"] == "MISSING"
+    assert route["field_coverage"]["uncertainty_and_preprocessing"]["status"] == "MISSING"
+    assert route["accepted_for_full_topic13"] is False
+    assert "SpecificC" in " ".join(route["rejection_reasons"])
+
+
+
+def test_priority_and_reconciliation_inventory_scopes_are_explicit() -> None:
+    audit = load(AUDIT)
+    coverage = audit["inventory_coverage"]
+    assert coverage["priority_route_count"] == 9
+    assert coverage["reconciliation_candidate_count"] == 10
+    assert all(coverage["coverage_checks"].values())
+    assert set(coverage["reconciliation_only_boundary_routes"]) == {
+        "ding_2017_public_supplementary_boundary",
+        "figshare_dft_force_data_boundary",
+        "public_phonon_route_screening",
+    }
+    assert set(coverage["priority_only_routes"]) == {
+        "calorine_legacy_nep2_pbte",
+        "huang_2023_nims",
+        "nims_mp990448",
+        "qh15_natural_graphite_cv",
+    }
+    assert coverage["reconciliation_to_priority"]["calorine_numeric_reproduction"] == [
+        "calorine_zenodo_pbte"
+    ]
+
+def test_route_priority_is_projected_into_matrix_and_major_result_register() -> None:
+    audit = load(AUDIT)
+    matrix = load(MATRIX)
+    register = load(REGISTER)
+    source_requirement = next(
+        item for item in matrix["requirements"] if item["requirement_id"] == "source_and_uncertainty"
+    )
+    assert "docs/core/artifacts/t13_csrc_source_route_priority_audit.json" in {
+        ref["path"] for ref in source_requirement["evidence_artifacts"]
+    }
+    entry = next(
+        item for item in register["entries"] if item.get("major_result_id") == "T13_C_SRC_SOURCE_ROUTE_PRIORITY"
+    )
+    assert entry["closure_level"] == "CLOSED_FOR_LANE"
+    assert entry["claim_promotion"] is False
+    assert audit["major_result"]["dependency_unlocked"].startswith("Source-route decision")

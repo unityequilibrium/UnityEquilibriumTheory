@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-ding-pbte-numeric-input-availability-audit-v1",
   "artifact": "t13_ding_pbte_numeric_input_availability_audit",
-  "generated_at": "2026-08-20",
+  "generated_at": "2026-08-22",
   "status": "PASS_SCOPED_OA_NUMERIC_INPUT_AVAILABILITY_NO_GO",
   "major_result": {
     "major_result_id": "T13_DING_PBTE_OA_NUMERIC_INPUT_NO_GO",
@@ -24,7 +24,7 @@
       },
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_pbte_numeric_input_availability_package.json",
-        "sha256": "7d660de4a984e313b60df545642fa1743da8921cdedeaf5908297f6c13d8e961"
+        "sha256": "b87680866ebed7ca25f27008f01e37dd47f0e6da54c3c1e27eb404e20fe600ad"
       },
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ding_2022_pmc_oa_record.xml",
@@ -71,7 +71,7 @@
       "e0_energy_density_scale_not_source_locked"
     ],
     "dependency_unlocked": "Select either a documented corresponding-author request or an independently sourced graphite phonon reproduction package; no Core dependency is unlocked.",
-    "claim_boundary": "The no-go applies only to the captured official PMC OA distribution. It does not prove that author-held or third-party data are unavailable and does not close numeric C_src or Topic 13."
+    "claim_boundary": "The no-go applies only to the captured official PMC OA distribution and the publisher's stated author-request route. It does not prove that author-held or third-party data are unavailable and does not close numeric C_src or Topic 13."
   },
   "inventory_witness": {
     "object_count": 11,
@@ -149,6 +149,8 @@
     "oa_record_identity_matches": true,
     "oa_record_license_is_cc_by": true,
     "oa_record_not_retracted": true,
+    "publisher_source_identity_is_locked": true,
+    "publisher_data_availability_statement_is_locked": true,
     "s3_prefix_is_complete_not_truncated": true,
     "s3_object_count_is_11": true,
     "s3_object_names_match_package": true,
@@ -165,8 +167,8 @@
     "xie_holdout_not_accessed": true,
     "xie_holdout_not_consumed": true
   },
-  "what_changed": "The Ding numeric-input source search now verifies the complete official OA inventory and all three locally archived supplementary PDFs with role-specific hashes before applying the scoped no-go.",
-  "verification": "The PMC OA API identity, complete S3 prefix, object metadata, full-text availability statement, published computational details, archived hashes, and holdout non-access are checked.",
+  "what_changed": "The Ding numeric-input source search now records the primary Nature Communications locator and publisher-level data-availability statement, then verifies the complete official OA inventory and all three locally archived supplementary PDFs with role-specific hashes before applying the scoped no-go.",
+  "verification": "The publisher identity and data-availability statement, PMC OA API identity, complete S3 prefix, object metadata, full-text availability statement, published computational details, archived hashes, and holdout non-access are checked.",
   "controlling_blocker": "ding_pbte_author_data_or_independent_reproduction_package_missing",
   "next_action": "Prepare a source-specific author request for relaxed structure, force constants, ShengBTE inputs/outputs, and c_mu(T), or source-lock an independent open graphite phonon package and label it independent reproduction; do not infer C_src from normalized TTG data.",
   "claim_boundary": "This is a scoped source-availability no-go, not a physics no-go, numeric calibration, or Topic 13 closure."

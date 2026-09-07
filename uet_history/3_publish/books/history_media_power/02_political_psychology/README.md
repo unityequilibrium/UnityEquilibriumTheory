@@ -1,18 +1,23 @@
-# 0.2 global_discourse_and_authoritarianism (Section 3, Book 2)
+# เล่มที่ 3.2: มหาจักรวรรดินิยม สงครามโลก สู่ จารีตโลกปัจจุบัน
+*(Book 3.2: Global Political Branding & Authoritarian Networks)*
 
-> Section parent: `../`
-> Book identity follows `book_blueprint.md`; the previous Thai Politics header was stale metadata.
+- **Book ID**: `03_2_global_discourse_and_authoritarianism`
+- **Section ID**: `section_03_history_hegemony`
+- **Volume Number**: 2
+- **Status**: `IN_PROGRESS` (Gate: `W04_BOOK_BLUEPRINTS_DRAFT` ➔ `W05`)
+- **Parent Section**: [`../SECTION_BLUEPRINT.md`](../SECTION_BLUEPRINT.md)
+- **Master Blueprint**: [`book_blueprint.md`](./book_blueprint.md)
 
-หนังสือเกี่ยวกับการเมืองไทย (รวบรวมเนื้อหาและวิเคราะห์เพื่อเสนอสำนักพิมพ์มติชน)
+---
 
-## โครงสร้างโฟลเดอร์
-- `1_raw/`: สำหรับใส่ไฟล์ทรานสคริปต์ ข้อมูลดิบ หรือบันทึกการสนทนาที่ยังไม่ได้จัดระเบียบ
-- `2_digest/`: สำหรับข้อมูลที่สกัดประเด็นและสรุปย่อมาแล้ว
-- `ch_drafts/`: สำหรับร่างเนื้อหาหนังสือแยกตามบท
-- `book_blueprint.md`: โครงร่างหนังสือ สารบัญ และทิศทางของเรื่อง
+## โครงสร้างโฟลเดอร์ทำงาน (Standard Book Structure)
 
-## สถานะปัจจุบัน
-- [ ] รวบรวมข้อมูลดิบลงใน `1_raw/`
-- [ ] สกัดประเด็นและจัดโครงสร้างใน `2_digest/`
-- [ ] ร่างโครงเรื่อง (Blueprint) ใน `book_blueprint.md`
-- [ ] ทยอยเขียนร่างแต่ละบทลงใน `ch_drafts/`
+*   **`1_raw/`**: สำหรับใส่ข้อมูลดิบทั้งหมด (Local Only)
+*   **`2_digest/`**: สำหรับสรุปแก่นประเด็นและโน้ตวิเคราะห์ (Local Only)
+*   **`ch_drafts/`**: สำหรับใช้เขียนและเก็บต้นฉบับแยกรายบท (Local Only)
+*   **`book_blueprint.md`**: โครงร่างและพิมพ์เขียวหลักของหนังสือ (แหล่งอ้างอิงโครงสร้างแบบ Master File)
+
+---
+
+## แก่นประเด็นของเล่มนี้
+*   **มหาจักรวรรดินิยม สู่ จารีตโลกปัจจุบัน (ค.ศ. 1800 — ปัจจุบัน):** ศตวรรษที่ 19 ยุควิคตอเรียล่าอาณานิคม ขนาน สนธิสัญญาเบาว์ริง (1855) และ ร.5 ปฏิรูป ➔ สงครามโลก 1-2, Goebbels, Lippmann, นิวเคลียร์ 1945 ขนาน 2475 ➔ สองเส้นทางหลังสงครามโลก (ยุโรปสร้างจารีตใหม่ vs อเมริกาส่งออกสื่อผูกขาด) ขนาน สงครามเย็นไทย ➔ กายวิภาคการเมืองไทยและสภาวะมวลชนถูกปั่นให้รบกันเอง (Controlled Mass Agitation) ➔ จารีตยุคอัลกอริทึมดิจิทัล

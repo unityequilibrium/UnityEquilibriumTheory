@@ -65,6 +65,9 @@ def main() -> int:
     nims_access = nims.get("access_route", {})
     nims_compat = nims.get("compatibility", {})
     import_policy = package.get("import_policy", {})
+    registry_search = package.get("repository_registry_search", {})
+    registry_queries = registry_search.get("queries", [])
+    registry_by_name = {item.get("registry"): item for item in registry_queries}
 
     checks = {
         "candidate_count_is_three": len(candidates) == 3,
@@ -134,6 +137,33 @@ def main() -> int:
                 "used_for_threshold_adjustment",
             )
         ),
+        "registry_search_has_target_identity": (
+            registry_search.get("target_doi") == "10.1038/s41467-021-27907-z"
+            and registry_search.get("target_title") == "Observation of second sound in graphite over 200 K"
+            and registry_search.get("xie_2026_consumed") is False
+        ),
+        "datacite_exact_match_is_zero": (
+            registry_by_name.get("DataCite", {}).get("exact_target_matches") == 0
+            and registry_by_name.get("DataCite", {}).get("result") == "NO_EXACT_DATASET_RECORD"
+        ),
+        "crossref_has_no_dataset_relation": (
+            registry_by_name.get("Crossref", {}).get("article_record_found") is True
+            and registry_by_name.get("Crossref", {}).get("dataset_relation_present") is False
+        ),
+        "zenodo_exact_page_match_is_zero": (
+            registry_by_name.get("Zenodo", {}).get("exact_target_matches_in_returned_page") == 0
+            and registry_by_name.get("Zenodo", {}).get("scope_note")
+        ),
+        "figshare_exact_page_match_is_zero": (
+            registry_by_name.get("Figshare", {}).get("exact_target_matches_in_returned_page") == 0
+        ),
+        "dryad_exact_page_match_is_zero": (
+            registry_by_name.get("Dryad", {}).get("exact_target_matches_in_returned_page") == 0
+        ),
+        "registry_search_does_not_overclaim": (
+            "author-held data do not exist" in registry_search.get("not_proven", [])
+            and "all third-party repositories are empty" in registry_search.get("not_proven", [])
+        ),
     }
     status = (
         "PASS_SCOPED_DING_ALTERNATE_PUBLIC_DATASET_BOUNDARY_NO_GO"
@@ -146,9 +176,15 @@ def main() -> int:
         {"role": "ding_public_supplementary", "path": DING_SUPPLEMENTARY.relative_to(ROOT).as_posix(), "sha256": sha256(DING_SUPPLEMENTARY)},
         {"role": "independent_csrc_acceptance", "path": ACCEPTANCE.relative_to(ROOT).as_posix(), "sha256": sha256(ACCEPTANCE)},
         {"role": "locked_holdout_audit", "path": HOLDOUT.relative_to(ROOT).as_posix(), "sha256": sha256(HOLDOUT)},
+        {
+            "role": "repository_registry_search_boundary",
+            "path": PACKAGE.relative_to(ROOT).as_posix(),
+            "sha256": sha256(PACKAGE),
+            "summary": package.get("repository_registry_search"),
+        },
     ]
     report = {
-        "schema_version": "t13-ding-alternate-public-dataset-discovery-boundary-v2",
+        "schema_version": "t13-ding-alternate-public-dataset-discovery-boundary-v3",
         "artifact": "t13_ding_alternate_public_dataset_discovery_boundary_audit",
         "generated_at": date.today().isoformat(),
         "status": status,

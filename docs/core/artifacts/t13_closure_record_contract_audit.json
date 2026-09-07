@@ -1,0 +1,95 @@
+{
+  "schema_version": "t13-closure-record-contract-audit-v1",
+  "artifact": "t13_closure_record_contract_audit",
+  "generated_at": "2026-08-25",
+  "status": "PASS_T13_CLOSURE_RECORD_CONTRACT_OPEN",
+  "major_result": {
+    "major_result_id": "T13_CLOSURE_RECORD_CONTRACT",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "PARTIAL",
+    "what_is_closed": [
+      "The three non-derivable Core input packages have explicit fail-closed record schemas.",
+      "The schemas require provenance, units, uncertainty, state identity, and anti-holdout fields.",
+      "The schema layer does not emit any physical value or promote a package."
+    ],
+    "what_remains_open": [
+      "No Ding numeric C_src payload has been received or accepted.",
+      "No independent base-Phi/SI alpha record has been received or accepted.",
+      "No physical state-matched Kubo/KMS/entropy record has been received or accepted."
+    ],
+    "dependency_unlocked": "None; schema readiness only.",
+    "equation_or_mapping": {
+      "TTG": "C_src(T)=sum_mu c_mu(T); Delta_Tq=Delta_u_ph/C_src(T)",
+      "Phi": "Delta_Tq=alpha_Phi_K*Delta_Phi",
+      "transport": "KuboCoefficientRecord -> physical coefficient only after matched provenance"
+    },
+    "units": {
+      "C_src": "J m^-3 K^-1",
+      "alpha_Phi_K": "K per normalized base Phi",
+      "transport": "SI units declared per coefficient"
+    },
+    "derivation_class": "machine-readable acceptance schema; no physical derivation",
+    "observable": "Topic 13 closure-input readiness",
+    "data_role": "INTERNAL_CONTRACT_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      "docs/core/topic13_closure_record_contract.py",
+      "docs/core/artifacts/t13_closure_record_contract_audit.json"
+    ],
+    "verification_status": "PASS_T13_CLOSURE_RECORD_CONTRACT_OPEN",
+    "controlling_blocker": "three_core_input_packages_not_accepted",
+    "claim_boundary": "This closes record-format ambiguity only; it does not close Full Topic 13 or emit alpha, C_src, or transport values."
+  },
+  "schema": {
+    "schema_version": "t13-closure-record-contract-v1",
+    "status": "SCHEMA_ONLY_NO_EVIDENCE",
+    "packages": {
+      "T13_INPUT_BASE_PHI_SI_ALPHA_BETA": {
+        "validator": "validate_base_phi_alpha_record",
+        "required_closure_fields": [
+          "paired base-Phi and SI response amplitudes",
+          "alpha_Phi_K and uncertainty",
+          "source locator, SHA-256, preprocessing, row identity",
+          "independence statement and clean holdout policy"
+        ]
+      },
+      "T13_INPUT_DING_TTG_SOURCE": {
+        "validator": "validate_ding_csrc_payload",
+        "required_closure_fields": [
+          "mode-resolved c_mu rows and aggregate C_src rows",
+          "mode-sum recomputation residual <= 1e-8",
+          "material/morphology/isotope/defect/temperature state",
+          "source-grade uncertainty, convergence, provenance, and permission"
+        ]
+      },
+      "T13_INPUT_PHYSICAL_TRANSPORT_MATCH": {
+        "validator": "validate_physical_transport_record",
+        "required_closure_fields": [
+          "SI coefficient value and uncertainty tied to one state",
+          "retarded-correlator and source provenance",
+          "KMS/FDT and entropy mapping status PASS",
+          "non-synthetic evidence status and clean holdout policy"
+        ]
+      }
+    },
+    "forbidden_shortcuts": [
+      "normalized curve as alpha_Phi_K",
+      "Landauer identity as beta derivation",
+      "comparator as Ding C_src",
+      "SYNTHETIC_CONTROL as physical transport",
+      "Xie 2026 holdout in calibration, fitting, tuning, or threshold selection"
+    ]
+  },
+  "checks": {
+    "schema_version_is_declared": true,
+    "all_three_packages_are_present": true,
+    "all_packages_have_validator": true,
+    "all_packages_have_required_fields": true,
+    "forbidden_shortcuts_are_declared": true,
+    "schema_has_no_scientific_values": true
+  },
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_fit_performed": false,
+    "calibration_path_may_read_holdout": false
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "schema_version": "t13-huberman-2019-ttg-source-boundary-v1",
+  "artifact": "huberman_2019_ttg_source_boundary_package",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "created_on": "2026-08-24",
+  "status": "PUBLIC_FORMULA_AND_SETUP_ONLY_NUMERIC_PAYLOAD_OPEN",
+  "source": {
+    "source_id": "huberman_2019_graphite_ttg_second_sound",
+    "title": "Observation of second sound in graphite at temperatures above 100 K",
+    "authors": "Samuel Huberman, Ryan A. Duncan, Ke Chen, Bai Song, Vazrik Chiloyan, Zhiwei Ding, Alexei A. Maznev, Gang Chen, Keith A. Nelson",
+    "publication": "Science 364, 375-379 (2019)",
+    "doi": "10.1126/science.aav3548",
+    "open_preprint_locator": "https://arxiv.org/abs/1901.09160",
+    "source_pdf_locator": "https://arxiv.org/pdf/1901.09160",
+    "source_hash": "29dc508df146125e6aef524404c0cfff98b31605783524526e81a8c93ad46027",
+    "source_hash_scope": "Observed arXiv PDF bytes",
+    "retrieved_on": "2026-08-24",
+    "raw_payload_archived_in_repo": false,
+    "license_or_terms": "Open arXiv preprint; redistribution terms for a local raw copy were not assumed",
+    "source_locators": [
+      "Supplementary Materials pp. 3-5, Eqs. S1-S7: linearized PBTE, modal heat capacity, and TTG response",
+      "Supplementary Materials p. 2: room-temperature and low-temperature pump/probe energy ranges",
+      "Supplementary Materials p. 3: estimated temperature amplitudes and thermal diffusion correction",
+      "Supplementary Materials p. 6: HOPG Grade 1 sample and grain-size characterization"
+    ]
+  },
+  "source_state": {
+    "material": "SPI HOPG Grade 1",
+    "mosaic_spread_deg": 0.4,
+    "mosaic_spread_uncertainty_deg": 0.1,
+    "grain_size_statement": "approximately 10 micrometers",
+    "response_regime": "one-dimensional TTG Green-function solution of the linearized PBTE with a full scattering matrix",
+    "isotope_and_defect_state": "isotope scattering included in the method; a complete specimen-state payload is not public in this route",
+    "equivalent_to_ding_2022_natural_graphite_ttg": false
+  },
+  "numeric_setup_observations": {
+    "room_temperature_pump_energy_nJ": {
+      "lower": 85.0,
+      "upper": 170.0,
+      "units": "nJ",
+      "status": "SOURCE_REPORTED_RANGE_NOT_ROW_LEVEL_RESPONSE"
+    },
+    "low_temperature_pump_energy_nJ": {
+      "lower": 8.0,
+      "upper": 10.0,
+      "units": "nJ",
+      "status": "SOURCE_REPORTED_RANGE_NOT_ROW_LEVEL_RESPONSE"
+    },
+    "estimated_85K_grating_amplitude_K": {
+      "value": 0.2,
+      "units": "K",
+      "status": "SOURCE_ESTIMATE_NOT_A_RAW_ROW"
+    },
+    "estimated_85K_probe_heating_K": {
+      "value": 0.9,
+      "units": "K",
+      "status": "SOURCE_ESTIMATE_NOT_A_RAW_ROW"
+    }
+  },
+  "formula_records": [
+    {
+      "formula_id": "HUBERMAN_2019_S1_LINEARIZED_PBTE",
+      "locator": "Supplementary Materials p. 4, Eq. S1",
+      "canonical_notation": "partial_t g_i + v_i dot grad g_i = Q p_i + sum_j W_ij(g_j^0 - g_j)",
+      "units": "g_i is deviational energy density; source-specific SI units",
+      "status": "SOURCE_LOCKED_FORMULA"
+    },
+    {
+      "formula_id": "HUBERMAN_2019_S2_SCATTERING_MATRIX",
+      "locator": "Supplementary Materials p. 4, Eq. S2",
+      "canonical_notation": "W_ij = W_ij^(3-phonon) + W_ij^(isotope)",
+      "units": "source-defined scattering-rate units",
+      "status": "SOURCE_LOCKED_FORMULA"
+    },
+    {
+      "formula_id": "HUBERMAN_2019_S5_TEMPERATURE_RESPONSE",
+      "locator": "Supplementary Materials p. 5, Eq. S5",
+      "canonical_notation": "Delta_T_tilde = sum_i(g_i_tilde) / C; C = sum_i c_i",
+      "units": "Delta_T in K; C in source-defined heat-capacity units",
+      "status": "SOURCE_LOCKED_FORMULA"
+    },
+    {
+      "formula_id": "HUBERMAN_2019_S7_EFFECTIVE_CONDUCTIVITY",
+      "locator": "Supplementary Materials p. 5, Eq. S7",
+      "canonical_notation": "k_q = q^(-2) * sum(i A^(-1) D c) / sum(A^(-1) p)",
+      "units": "thermal conductivity units after source SI conversion",
+      "status": "SOURCE_LOCKED_FORMULA"
+    }
+  ],
+  "payload_inventory": {
+    "machine_readable_mode_resolved_c_mu": false,
+    "numeric_C_src_rows": false,
+    "raw_second_order_force_constants": false,
+    "raw_third_order_force_constants": false,
+    "full_scattering_matrix": false,
+    "raw_TTG_time_series": false,
+    "source_grade_uncertainty_rows": false,
+    "paired_base_Phi_amplitude": false,
+    "paired_SI_temperature_response": false,
+    "numeric_alpha_Phi_K": false
+  },
+  "acceptance_boundary": {
+    "accepted_for_standard_formula_lane": true,
+    "accepted_for_independent_C_src": false,
+    "accepted_for_Ding_C_src": false,
+    "accepted_for_base_Phi_alpha_calibration": false,
+    "accepted_for_physical_UET_transport": false,
+    "acceptance_reason": "The public route contains equations and setup estimates but not row-complete mode data, force constants, response traces, or a paired base-Phi amplitude."
+  },
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "xie_2026_source_data_consumed": false,
+    "target_curve_used": false,
+    "fit_performed": false,
+    "alpha_Phi_K_fit_used": false,
+    "threshold_changed": false
+  },
+  "ontology": {
+    "C": "collective system-behaviour coordinate; not heat capacity or mass",
+    "Phi": "effective response variable; no identity with g_i or temperature is asserted",
+    "R_gen": "derived physical/history trace; no independent state or backreaction",
+    "R_obs": "observer record separate from PBTE dynamics"
+  },
+  "claim_boundary": "This package closes only a public formula/setup source boundary. It does not provide C_src, a Ding-equivalent reproduction, an independent alpha_Phi_K, a base-Phi SI anchor, or Full Topic 13 closure."
+}

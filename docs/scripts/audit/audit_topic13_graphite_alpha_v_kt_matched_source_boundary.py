@@ -31,6 +31,13 @@ LOWITZER_CANDIDATE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "lowitzer_2006_graphite_pvt_candidate_source_package.json"
 )
+LOWITZER_FULL = ROOT / (
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
+    "lowitzer_2006_graphite_pvt_full_source_package.json"
+)
+LOWITZER_FULL_AUDIT = ROOT / (
+    "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json"
+)
 TOHEI_TABLE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "tohei_2006_graphite_alpha_v_kt_table_comparator_source_package.json"
@@ -79,6 +86,8 @@ def main() -> int:
     audits = {key: load_json(path) for key, path in AUDIT_PATHS.items()}
     packages = {key: load_json(path) for key, path in PACKAGE_PATHS.items()}
     lowitzer = load_json(LOWITZER_CANDIDATE)
+    lowitzer_full = load_json(LOWITZER_FULL)
+    lowitzer_full_audit = load_json(LOWITZER_FULL_AUDIT)
     tohei = load_json(TOHEI_TABLE)
     farooqui = load_json(FAROOQUI_IG210)
     nist = audits["nist_alpha_v"]
@@ -142,6 +151,13 @@ def main() -> int:
         "lowitzer_does_not_close_pair": lowitzer["pair_contract"]["same_state_alpha_V_and_K_T_pair_closed"] is False,
         "lowitzer_ding_mapping_is_open": lowitzer["pair_contract"]["Ding_material_regime_mapping_closed"] is False,
         "lowitzer_does_not_emit_correction": lowitzer["pair_contract"]["numeric_cp_cv_correction_emitted"] is False,
+        "lowitzer_full_audit_passes": lowitzer_full_audit["status"] == "PASS_SCOPED_SOURCE_LOCKED_LOWITZER_ALPHA_V_K_T_PAIR",
+        "lowitzer_full_payload_is_archived": lowitzer_full["source"]["payload_state"] == "FULL_TEXT_ARCHIVED",
+        "lowitzer_full_has_numeric_pair": lowitzer_full["pair_contract"]["numeric_alpha_V_rows_available"] and lowitzer_full["pair_contract"]["numeric_K_T_rows_available"],
+        "lowitzer_full_pair_has_uncertainty": lowitzer_full["pair_contract"]["source_grade_uncertainty_available"] is True,
+        "lowitzer_full_same_sample_pair": lowitzer_full["pair_contract"]["same_sample_pair_present"] is True and lowitzer_full["pair_contract"]["same_temperature_point_present"] is True,
+        "lowitzer_full_ding_mapping_remains_open": lowitzer_full["pair_contract"]["Ding_material_regime_mapping_closed"] is False,
+        "lowitzer_full_does_not_emit_ding_values": lowitzer_full["pair_contract"]["numeric_Ding_C_src_emitted"] is False and lowitzer_full["derived_correction_witness"]["accepted_for_alpha_Phi_K"] is False,
         "tohei_is_a_primary_table_comparator": tohei["source"]["payload_state"]
         == "REMOTE_PRIMARY_TABLE_LOCATOR_SCREENED",
         "tohei_has_numeric_graphite_alpha_and_b0": tohei["pair_contract"][
@@ -198,11 +214,11 @@ def main() -> int:
         is False,
         "holdout_is_unconsumed": all_holdout_locked(audits, packages)
         and all_holdout_locked(
-            {"lowitzer": lowitzer, "tohei": tohei, "farooqui": farooqui}, {}
+            {"lowitzer": lowitzer, "lowitzer_full": lowitzer_full, "tohei": tohei, "farooqui": farooqui}, {}
         ),
     }
     status = (
-        "PASS_SCOPED_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY_NO_GO"
+        "PASS_SCOPED_GRAPHITE_ALPHA_V_K_T_SOURCE_PAIR_LOCKED_MATERIAL_OPEN"
         if all(checks.values())
         else "FAIL_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY_AUDIT"
     )
@@ -212,6 +228,8 @@ def main() -> int:
         *AUDIT_PATHS.items(),
         *PACKAGE_PATHS.items(),
         ("lowitzer_candidate", LOWITZER_CANDIDATE),
+        ("lowitzer_full", LOWITZER_FULL),
+        ("lowitzer_full_audit", LOWITZER_FULL_AUDIT),
         ("tohei_table_comparator", TOHEI_TABLE),
         ("farooqui_ig210_thermophysical", FAROOQUI_IG210),
     ]
@@ -234,16 +252,10 @@ def main() -> int:
             "topic": "0.13_Thermodynamic_Bridge",
             "closure_level": "CLOSED_FOR_LANE" if status.startswith("PASS") else "OPEN",
             "what_is_closed": (
-                "The current archived graphite source inventory, including the "
-                "screened Lowitzer P-V-T candidate, Tohei table comparator, and "
-                "source-locked IG210 thermophysical comparator, cannot form a "
-                "same-state, same-grade alpha_V/K_T pair with source-grade "
-                "uncertainty for the Cp-to-Cv correction. The individual alpha_V "
-                "and K_T comparator lanes remain separate. Tohei supplies a "
-                "numeric same-calculation QHA pair and separately sourced "
-                "experimental table values, but neither closes the source-grade "
-                "correction contract. The IG210 rows supply same-grade C_p and "
-                "alpha_l values but no same-state K_T."
+                "The Lowitzer full-text route supplies a same-study, same-sample "
+                "alpha_V/K_T pair with source-reported uncertainty at 300 K. The "
+                "pair closes the source-grade thermodynamic correction-input lane, "
+                "while Ding material equivalence, c_v, and C_src remain separate."
             ),
             "equation_or_mapping": {
                 "cp_cv_correction": "c_p^V - c_v^V = T * alpha_V^2 * K_T",
@@ -261,7 +273,6 @@ def main() -> int:
             "evidence_artifacts": evidence,
             "verification_status": status,
             "open_blockers": [
-                "same_grade_alpha_V_and_K_T_missing",
                 "same_state_IG210_K_T_missing",
                 "density_uncertainty_not_source_locked",
                 "material_regime_mapping_to_TTG_not_closed",
@@ -337,6 +348,18 @@ def main() -> int:
                 "same_state_alpha_V_and_K_T_pair_closed": lowitzer["pair_contract"]["same_state_alpha_V_and_K_T_pair_closed"],
                 "local_raw_sha256": lowitzer["source"]["local_raw_sha256"],
             },
+            "lowitzer_full_pvt_pair": {
+                "source_id": lowitzer_full["source"]["source_id"],
+                "payload_state": lowitzer_full["source"]["payload_state"],
+                "same_study_pair_present": lowitzer_full["pair_contract"]["same_study_pair_present"],
+                "same_sample_pair_present": lowitzer_full["pair_contract"]["same_sample_pair_present"],
+                "same_temperature_point_present": lowitzer_full["pair_contract"]["same_temperature_point_present"],
+                "same_grade_alpha_V_and_K_T_pair_closed": lowitzer_full["pair_contract"]["same_grade_alpha_V_and_K_T_pair_closed"],
+                "source_grade_uncertainty_available": lowitzer_full["pair_contract"]["source_grade_uncertainty_available"],
+                "ding_material_regime_mapping_closed": lowitzer_full["pair_contract"]["Ding_material_regime_mapping_closed"],
+                "correction_witness_J_m3_K": lowitzer_full["derived_correction_witness"]["delta_c_p_minus_c_v_J_m3_K"],
+                "source_sha256": sha256(LOWITZER_FULL),
+            },
             "tohei_table_comparator": {
                 "source_id": tohei["source"]["source_id"],
                 "payload_state": tohei["source"]["payload_state"],
@@ -374,19 +397,16 @@ def main() -> int:
             },
         },
         "checks": checks,
-        "controlling_blocker": "same_grade_alpha_V_and_K_T_missing",
+        "same_grade_pair_route_available": lowitzer_full["pair_contract"]["same_grade_alpha_V_and_K_T_pair_closed"],
+        "controlling_blocker": "material_regime_mapping_to_TTG_not_closed",
         "next_controller": (
-            "Acquire a permitted full Lowitzer P-V-T payload or a permitted "
-            "same-state IG210 K_T record, then seek a source-grade "
-            "same-specimen/state-matched alpha_V and isothermal K_T source "
-            "with uncertainty and Ding-regime mapping. The Tohei table may "
-            "remain a comparator, and the Farooqui IG210 rows remain a "
-            "thermophysical comparator; neither may be combined into a "
-            "source-grade correction by assumption."
+            "Use the source-locked Lowitzer pair only as a thermodynamic "
+            "correction comparator; obtain a Ding-equivalent material/state and "
+            "source-grade c_p or c_v before using any correction in C_src."
             ),
         "claim_boundary": (
-            "No numeric Cp-to-Cv correction, Ding C_src, alpha_Phi_K, TTG "
-            "prediction, or Full Topic 13 closure is emitted."
+            "No Ding C_src, alpha_Phi_K, TTG prediction, or Full Topic 13 "
+            "closure is emitted; only the source-state correction term is recorded."
         ),
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)

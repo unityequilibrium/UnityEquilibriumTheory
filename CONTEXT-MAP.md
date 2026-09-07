@@ -60,3 +60,25 @@ Every completed work section follows:
 8. push the branch or open a draft PR the same day
 
 At ten ledger entries for unpushed work, stop expanding scope and checkpoint.
+
+## Repository and branch routing
+
+main is the only public canonical branch. Normal work uses one short-lived
+branch per coherent unit with the area prefix codex/research/, codex/book/,
+codex/history/, codex/policy/, codex/services/, or codex/repo/, then enters
+main through a PR and required CI checks.
+
+CONTRIBUTING.md is the human contribution contract, AGENTS.md is the
+agent-facing operating summary, and .github/workflows/ is the executable
+validation layer. Do not create a second branch policy or semantic path to
+avoid an existing canonical workspace.
+
+Before cleanup, inspect worktrees, local branches, remote heads, PRs, and
+unique commits. git fetch --prune origin removes stale tracking refs, but a
+branch is deletable only after its work is merged or explicitly superseded and
+its unique commits are accounted for. A local branch tracking origin/main does
+not become main merely because its upstream points there.
+
+GitHub Actions may validate files and publish Pages, but it must not silently
+commit or push source changes. A completed section is visible only when its
+ledger entry, coherent commit, and pushed branch or PR are all present.

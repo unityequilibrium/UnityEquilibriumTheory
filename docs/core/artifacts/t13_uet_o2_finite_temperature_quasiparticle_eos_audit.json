@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-uet-o2-finite-temperature-quasiparticle-eos-v1",
   "artifact": "t13_uet_o2_finite_temperature_quasiparticle_eos_audit",
-  "generated_at": "2026-08-20",
+  "generated_at": "2026-08-31",
   "status": "PASS_ACTION_DERIVED_TREE_CONDENSATE_THERMAL_QUASIPARTICLE_EOS",
   "major_result": {
     "major_result_id": "T13_UET_O2_FINITE_T_QUASIPARTICLE_EOS_LANE",
@@ -17,13 +17,17 @@
     "equation_or_mapping": {
       "tree_grand_potential": "Omega_0=(m_eff^2-Z*mu^2)A^2/2+lambda*A^4/4",
       "condensate": "A_*^2=(Z*mu^2-m_eff^2)/lambda for q>0",
-      "quasiparticles": "E_+/-^2=S +/- sqrt(4*Z*mu^2*B+4*lambda^2*A_*^4)",
+      "quasiparticles": "E_+/-^2=k^2+B +/- sqrt(B^2+4*mu^2*k^2); B=2*mu^2+lambda*A_*^2/Z",
+      "normal_quasiparticles": "E_+/-=sqrt(k^2+m_eff^2/Z) +/- mu",
+      "canonical_field_map": "chi_c=sqrt(Z)*chi; m_c^2=m_eff^2/Z; lambda_c=lambda/Z^2",
+      "determinant": "(E^2-k^2)*(E^2-k^2-2*q/Z)-4*mu^2*E^2=0",
       "pressure": "p_2f=-Omega_0(A_*)+p_qp(T,mu,Phi)",
       "thermodynamic_derivatives": "n=partial_mu p; s=partial_T p; epsilon=-p+T*s+mu*n"
     },
     "units": {
       "unit_lane": "natural",
       "T_mu_m_eff": "natural energy",
+      "effective_mass_field": "sqrt(m_eff^2) is retained as the mass parameter; the normal canonical gap is sqrt(m_eff^2/Z)",
       "p_epsilon": "natural energy density",
       "n": "natural charge density",
       "s": "natural entropy density",
@@ -36,7 +40,7 @@
     "evidence_artifacts": [
       {
         "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
-        "sha256": "7a3b97bce24ac89593b6031adc65db8f18d33780565afcad016fd9b97cefe41e"
+        "sha256": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f"
       }
     ],
     "verification_status": "PASS_ACTION_DERIVED_TREE_CONDENSATE_THERMAL_QUASIPARTICLE_EOS",
@@ -52,27 +56,292 @@
   },
   "contract": {
     "status": "PASS_ACTION_DERIVED_TREE_CONDENSATE_THERMAL_QUASIPARTICLE_EOS",
+    "response_policy": "FIXED_PHI_BACKGROUND",
+    "spectrum_revision": "FIXED_PHI_CANONICAL_V2",
     "equations": {
       "tree_grand_potential": "Omega_0=(m_eff^2-Z*mu^2)A^2/2+lambda*A^4/4",
       "condensate": "A_*^2=(Z*mu^2-m_eff^2)/lambda for q>0",
-      "quasiparticles": "E_+/-^2=S +/- sqrt(4*Z*mu^2*B+4*lambda^2*A_*^4)",
+      "quasiparticles": "E_+/-^2=k^2+B +/- sqrt(B^2+4*mu^2*k^2); B=2*mu^2+lambda*A_*^2/Z",
+      "normal_quasiparticles": "E_+/-=sqrt(k^2+m_eff^2/Z) +/- mu",
+      "canonical_field_map": "chi_c=sqrt(Z)*chi; m_c^2=m_eff^2/Z; lambda_c=lambda/Z^2",
+      "determinant": "(E^2-k^2)*(E^2-k^2-2*q/Z)-4*mu^2*E^2=0",
       "pressure": "p_2f=-Omega_0(A_*)+p_qp(T,mu,Phi)",
       "thermodynamic_derivatives": "n=partial_mu p; s=partial_T p; epsilon=-p+T*s+mu*n"
     },
     "unit_contract": {
       "unit_lane": "natural",
       "T_mu_m_eff": "natural energy",
+      "effective_mass_field": "sqrt(m_eff^2) is retained as the mass parameter; the normal canonical gap is sqrt(m_eff^2/Z)",
       "p_epsilon": "natural energy density",
       "n": "natural charge density",
       "s": "natural entropy density",
       "Phi": "action response input; not temperature",
       "C": "not relabeled as charge density"
     },
-    "closed_scope": "tree condensate plus thermal quasiparticle thermodynamic lane with normal and condensed branches",
+    "closed_scope": "fixed-Phi tree condensate plus thermal quasiparticle thermodynamic lane with normal and condensed branches",
     "excluded_scope": "vacuum counterterm completion, interacting thermal self-energy, physical Kubo/transport/SK-KMS matching, heat flux, SI Phi map, alpha_Phi_K, and TTG validation",
     "R_gen": "derived history trace only; not a state or feedback term",
     "data_role": "ACTION_DERIVED_APPROXIMATE_EOS_NOT_TRANSPORT",
     "claim_boundary": "This is an action-derived approximate finite-temperature EOS lane. It is not a complete interacting two-fluid theory, physical transport closure, SI calibration, or external validation."
+  },
+  "source_hashes": {
+    "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
+    "docs/core/uet_o2_formal_transverse_response.py": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba",
+    "docs/core/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+    "docs/core/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d",
+    "docs/scripts/audit/audit_topic13_fixed_phi_spectrum_repair.py": "b1c1e62ae8ee232bd261439ea88f92cfcbafe17d69ff8413732fc73ed137bddb",
+    "docs/scripts/audit/audit_topic13_finite_temperature_quasiparticle_eos.py": "fed8513deb08e22596020a6531abaece831106280f31bf52377e426baf57ae4d"
+  },
+  "independent_action_witnesses": {
+    "checks": {
+      "independent_action_spectrum": true,
+      "small_momentum_sound_without_clipping": true,
+      "normal_integral_and_enthalpy": true,
+      "canonical_field_covariance": true,
+      "corrected_gap_squared": true
+    },
+    "spectrum_rows": [
+      {
+        "Z": 0.25,
+        "k": 0.0,
+        "max_squared_frequency_error": 3.552713678800501e-15,
+        "pass": true
+      },
+      {
+        "Z": 0.25,
+        "k": 1e-08,
+        "max_squared_frequency_error": 1.0658141036401503e-14,
+        "pass": true
+      },
+      {
+        "Z": 0.25,
+        "k": 0.0001,
+        "max_squared_frequency_error": 1.298259971401977e-21,
+        "pass": true
+      },
+      {
+        "Z": 0.25,
+        "k": 0.1,
+        "max_squared_frequency_error": 7.105427357601002e-15,
+        "pass": true
+      },
+      {
+        "Z": 0.25,
+        "k": 1.0,
+        "max_squared_frequency_error": 3.907985046680551e-14,
+        "pass": true
+      },
+      {
+        "Z": 0.25,
+        "k": 5.0,
+        "max_squared_frequency_error": 2.842170943040401e-14,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 0.0,
+        "max_squared_frequency_error": 3.552713678800501e-15,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 1e-08,
+        "max_squared_frequency_error": 1.0658141036401503e-14,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 0.0001,
+        "max_squared_frequency_error": 1.298259971401977e-21,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 0.1,
+        "max_squared_frequency_error": 7.105427357601002e-15,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 1.0,
+        "max_squared_frequency_error": 3.907985046680551e-14,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 5.0,
+        "max_squared_frequency_error": 2.842170943040401e-14,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 0.0,
+        "max_squared_frequency_error": 3.552713678800501e-15,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 1e-08,
+        "max_squared_frequency_error": 1.0658141036401503e-14,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 0.0001,
+        "max_squared_frequency_error": 1.298259971401977e-21,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 0.1,
+        "max_squared_frequency_error": 7.105427357601002e-15,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 1.0,
+        "max_squared_frequency_error": 3.907985046680551e-14,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 5.0,
+        "max_squared_frequency_error": 2.842170943040401e-14,
+        "pass": true
+      }
+    ],
+    "sound_rows": [
+      {
+        "Z": 0.25,
+        "k": 1e-05,
+        "mode_c_squared": 0.25000000000351563,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      },
+      {
+        "Z": 0.25,
+        "k": 1e-08,
+        "mode_c_squared": 0.25,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      },
+      {
+        "Z": 0.25,
+        "k": 1e-10,
+        "mode_c_squared": 0.25,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 1e-05,
+        "mode_c_squared": 0.25000000000351563,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 1e-08,
+        "mode_c_squared": 0.25,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "k": 1e-10,
+        "mode_c_squared": 0.25,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 1e-05,
+        "mode_c_squared": 0.25000000000351563,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 1e-08,
+        "mode_c_squared": 0.25,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "k": 1e-10,
+        "mode_c_squared": 0.25,
+        "eos_c_squared": 0.24999999999999994,
+        "pass": true
+      }
+    ],
+    "normal_response_rows": [
+      {
+        "Z": 0.25,
+        "static_chi": 0.001020678295567319,
+        "independent_integral": 0.001020678295567327,
+        "quadrature_error_estimate": 5.4326096445384625e-12,
+        "eos_enthalpy": 0.0010206787170648707,
+        "enthalpy_relative_error": 4.129581078204936e-07,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "static_chi": 0.001020678295567319,
+        "independent_integral": 0.001020678295567327,
+        "quadrature_error_estimate": 5.4326096445384625e-12,
+        "eos_enthalpy": 0.0010206787170648707,
+        "enthalpy_relative_error": 4.129581078204936e-07,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "static_chi": 0.001020678295567319,
+        "independent_integral": 0.001020678295567327,
+        "quadrature_error_estimate": 5.4326096445384625e-12,
+        "eos_enthalpy": 0.0010206787170648707,
+        "enthalpy_relative_error": 4.129581078204936e-07,
+        "pass": true
+      }
+    ],
+    "rescaling_rows": [
+      {
+        "T": 0.25,
+        "mu": 0.2,
+        "pressure_pair": [
+          0.00014814619679940017,
+          0.00014814619679940017
+        ],
+        "chi_pair": [
+          0.001020678295567319,
+          0.001020678295567319
+        ],
+        "pass": true
+      },
+      {
+        "T": 0.15,
+        "mu": 1.7320508075688772,
+        "pressure_pair": [
+          16.00036399400911,
+          16.00036399400911
+        ],
+        "chi_pair": [
+          0.004134726033466564,
+          0.004134726033466564
+        ],
+        "pass": true
+      }
+    ],
+    "gap_witness": {
+      "Z": 1.0,
+      "m_eff_squared": 1.0,
+      "mu_squared": 3.0,
+      "old_gap_squared": 20.0,
+      "corrected_gap_squared": 15.999999999999996,
+      "old_sound_squared": 0.4,
+      "corrected_sound_squared": 0.25,
+      "old_formula_role": "DEFECT_WITNESS_ONLY_NOT_AN_ACCEPTED_BASELINE"
+    }
   },
   "state_grid": {
     "normal": [
@@ -83,13 +352,14 @@
         "space_response": 0.15,
         "effective_mass": 0.9969954864491614,
         "condensate_amplitude": 0.0,
-        "pressure": 0.00011541104065116314,
-        "charge_density": 0.0004871367150300818,
-        "entropy_density": 0.0031073474100652295,
-        "energy_density": 0.0007387032398237161,
-        "susceptibility": 0.0024406628211108604,
-        "goldstone_energy_at_zero_momentum": NaN,
-        "data_role": "ACTION_DERIVED_APPROXIMATE_EOS_NOT_TRANSPORT"
+        "pressure": 0.00011541104065114373,
+        "charge_density": 0.0004871367149648264,
+        "entropy_density": 0.003107347410033449,
+        "energy_density": 0.0007387032397939042,
+        "susceptibility": 0.002440663778258091,
+        "goldstone_energy_at_zero_momentum": null,
+        "data_role": "ACTION_DERIVED_APPROXIMATE_EOS_NOT_TRANSPORT",
+        "goldstone_evaluation": "NOT_APPLICABLE_NORMAL_BRANCH"
       },
       {
         "branch": "normal",
@@ -98,13 +368,14 @@
         "space_response": 0.2,
         "effective_mass": 0.9959919678390986,
         "condensate_amplitude": 0.0,
-        "pressure": 0.0014127050857428854,
-        "charge_density": 0.004479557549653956,
-        "entropy_density": 0.020588218343287664,
-        "energy_density": 0.007433399252985967,
-        "susceptibility": 0.016442126886352312,
-        "goldstone_energy_at_zero_momentum": NaN,
-        "data_role": "ACTION_DERIVED_APPROXIMATE_EOS_NOT_TRANSPORT"
+        "pressure": 0.0014127050857431164,
+        "charge_density": 0.004479557549844776,
+        "entropy_density": 0.020588218343344043,
+        "energy_density": 0.007433399253108163,
+        "susceptibility": 0.016442122820594166,
+        "goldstone_energy_at_zero_momentum": null,
+        "data_role": "ACTION_DERIVED_APPROXIMATE_EOS_NOT_TRANSPORT",
+        "goldstone_evaluation": "NOT_APPLICABLE_NORMAL_BRANCH"
       }
     ],
     "condensed": [
@@ -115,13 +386,14 @@
         "space_response": 0.15,
         "effective_mass": 0.9969954864491614,
         "condensate_amplitude": 0.6311893535223799,
-        "pressure": 0.039840303584510905,
-        "charge_density": 0.4696635004236525,
-        "entropy_density": 0.004847217032720452,
-        "energy_density": 0.5149442929593255,
-        "susceptibility": 3.1868982858060346,
+        "pressure": 0.039934046588142307,
+        "charge_density": 0.46961700940578444,
+        "entropy_density": 0.007141892652065551,
+        "energy_density": 0.5150710516289312,
+        "susceptibility": 3.186429587832476,
         "goldstone_energy_at_zero_momentum": 0.0,
-        "data_role": "ACTION_DERIVED_APPROXIMATE_EOS_NOT_TRANSPORT"
+        "data_role": "ACTION_DERIVED_APPROXIMATE_EOS_NOT_TRANSPORT",
+        "goldstone_evaluation": "EVALUATED"
       },
       {
         "branch": "condensed",
@@ -130,13 +402,14 @@
         "space_response": 0.2,
         "effective_mass": 0.9959919678390986,
         "condensate_amplitude": 0.8039900496896712,
-        "pressure": 0.10530797105947856,
-        "charge_density": 0.8263430789671402,
-        "entropy_density": 0.015509612636133152,
-        "energy_density": 0.9555130925456875,
-        "susceptibility": 3.9285657846429247,
+        "pressure": 0.10572108953670623,
+        "charge_density": 0.8264571856021967,
+        "entropy_density": 0.02147340351525695,
+        "energy_density": 0.9564387887371569,
+        "susceptibility": 3.927265247374335,
         "goldstone_energy_at_zero_momentum": 0.0,
-        "data_role": "ACTION_DERIVED_APPROXIMATE_EOS_NOT_TRANSPORT"
+        "data_role": "ACTION_DERIVED_APPROXIMATE_EOS_NOT_TRANSPORT",
+        "goldstone_evaluation": "EVALUATED"
       }
     ]
   },
@@ -149,6 +422,11 @@
     "condensed_gibbs_duhem_energy_identity": true
   },
   "checks": {
+    "independent_action_spectrum": true,
+    "small_momentum_sound_without_clipping": true,
+    "normal_integral_and_enthalpy": true,
+    "canonical_field_covariance": true,
+    "corrected_gap_squared": true,
     "normal_branch_points_pass": true,
     "condensed_branch_points_pass": true,
     "normal_positivity_pass": true,
@@ -177,5 +455,6 @@
   "xie_2026_accessed": false,
   "controlling_blocker": "interacting_finite_temperature_self_energy_and_full_two_fluid_transport_missing",
   "next_controller": "Match the approximate EOS to a declared interacting finite-temperature action and state-specific Kubo/SK-KMS records without using TTG holdout data.",
-  "claim_promotion": false
+  "claim_promotion": false,
+  "full_core_unlock": false
 }

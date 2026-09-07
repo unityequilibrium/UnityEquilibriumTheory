@@ -1,0 +1,158 @@
+{
+  "schema_version": "t13-lowitzer-graphite-pvt-full-source-package-v1",
+  "artifact": "lowitzer_2006_graphite_pvt_full_source_package",
+  "created_on": "2026-08-24",
+  "status": "SOURCE_LOCKED_THERMODYNAMIC_PAIR_COMPARATOR_MATERIAL_MAPPING_OPEN",
+  "major_result": {
+    "major_result_id": "T13_LOWITZER_GRAPHITE_ALPHA_V_K_T_FULL_SOURCE_PAIR",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "The full APS payload is archived with a byte hash and page/table locators.",
+      "A same-study graphite thermodynamic pair is recorded at the 300 K fit point.",
+      "The source-reported alpha_V and K_T uncertainties are retained without inventing a distribution.",
+      "The Cp-to-Cv correction term can be evaluated for this source state without emitting c_v or Ding C_src."
+    ],
+    "what_remains_open": [
+      "Ding natural-graphite TTG material and morphology equivalence",
+      "a same-state source-grade c_p or c_v value for this sample",
+      "Ding mode-resolved C_src(T) and PBTE response acceptance",
+      "base-Phi SI anchor and independent alpha_Phi_K"
+    ],
+    "equation_or_mapping": {
+      "cp_cv_correction": "c_p^V - c_v^V = T * alpha_V^2 * K_T",
+      "source_pair": "alpha_V = 3.2e-5 +/- 0.2e-5 K^-1; K_T = 38 +/- 2 GPa at the 300 K fit point",
+      "conditional_correction": "Delta_c_v = T * alpha_V^2 * K_T; emitted only as a source-state correction term"
+    },
+    "units": {
+      "temperature": "K",
+      "alpha_V": "K^-1",
+      "K_T": "Pa",
+      "correction_term": "J m^-3 K^-1"
+    },
+    "derivation_class": "primary-paper full-text transcription plus standard thermodynamic correction identity; no UET derivation",
+    "observable": "graphite volumetric Cp-to-Cv correction input",
+    "data_role": "EXTERNAL_INPUT_THERMODYNAMIC_CORRECTION_COMPARATOR_NOT_DING_CALIBRATION",
+    "claim_boundary": "This source closes a same-study thermodynamic pair lane only. It is not Ding C_src, not a Phi SI anchor, not alpha_Phi_K, and not Full Topic 13 closure."
+  },
+  "source": {
+    "source_id": "lowitzer_winkler_tucker_2006_graphite_pvt",
+    "title": "Thermoelastic behavior of graphite from in situ high-pressure high-temperature neutron diffraction",
+    "authors": ["S. Lowitzer", "B. Winkler", "M. Tucker"],
+    "publisher": "American Physical Society",
+    "journal": "Physical Review B 73, 214115 (2006)",
+    "doi": "10.1103/PhysRevB.73.214115",
+    "source_locator": "https://harvest.aps.org/v2/journals/articles/10.1103/PhysRevB.73.214115/fulltext",
+    "official_locator": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.73.214115",
+    "local_raw_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/lowitzer_2006_graphite_pvt.pdf",
+    "local_raw_sha256": "401831675de0fa4ae36405f469553dcc39b12ae29cfc1799023aef8ecc658a2a",
+    "local_raw_size_bytes": 518469,
+    "payload_state": "FULL_TEXT_ARCHIVED",
+    "source_locators": [
+      "PDF p. 1, experimental details: synthetic graphite from Aldrich and grain size below 20 micrometers",
+      "PDF p. 2, PVT scope: 0-6 GPa and 298-1250 K; about 20 percent disoriented layers",
+      "PDF p. 6, Table IV: graphite thermoelastic fit rows and source-reported uncertainties",
+      "PDF p. 5-6, Eqs. (19): C_V = C_P - alpha_V^2 V T B_0"
+    ],
+    "measurement_method": "in situ neutron powder diffraction with Rietveld-refined P-V-T equation-of-state fits",
+    "source_uncertainty_boundary": "Table IV fit uncertainties are retained as source-reported plus/minus values; no probability distribution or additional uncertainty is inferred."
+  },
+  "material_state": {
+    "material": "synthetic graphite from Aldrich",
+    "grain_size_statement": "below 20 micrometers",
+    "stacking_state": "about 20 percent disoriented layers reported for the sample",
+    "ding_material_equivalence": false,
+    "ding_difference": "Ding uses natural graphite TTG grains larger than 20 micrometers; morphology, isotope/defect state, and PBTE response contract are not equivalent."
+  },
+  "source_rows": [
+    {
+      "row_id": "lowitzer_table_iv_htv9_300K",
+      "eos_model": "HTV9",
+      "temperature_K": 300.0,
+      "volume_A3": 35.28,
+      "volume_uncertainty_A3": 0.05,
+      "alpha_V_K_inv": 3.2e-5,
+      "alpha_V_uncertainty_K_inv": 0.2e-5,
+      "K_T_GPa": 38.0,
+      "K_T_uncertainty_GPa": 2.0,
+      "dK_dT_GPa_per_K": -0.002,
+      "dK_dT_uncertainty_GPa_per_K": 0.002,
+      "source_locator": "PDF p. 6, Table IV, HTV9 row"
+    },
+    {
+      "row_id": "lowitzer_table_iv_htbm9_300K",
+      "eos_model": "HTBM9",
+      "temperature_K": 300.0,
+      "volume_A3": 35.28,
+      "volume_uncertainty_A3": 0.05,
+      "alpha_V_K_inv": 3.2e-5,
+      "alpha_V_uncertainty_K_inv": 0.2e-5,
+      "K_T_GPa": 39.0,
+      "K_T_uncertainty_GPa": 1.0,
+      "dK_dT_GPa_per_K": -0.002,
+      "dK_dT_uncertainty_GPa_per_K": 0.002,
+      "source_locator": "PDF p. 6, Table IV, HTBM9 row"
+    },
+    {
+      "row_id": "lowitzer_table_iv_htv14_300K",
+      "eos_model": "HTV14",
+      "temperature_K": 300.0,
+      "volume_A3": 35.37,
+      "volume_uncertainty_A3": 0.07,
+      "alpha_V_K_inv": 3.1e-5,
+      "alpha_V_uncertainty_K_inv": 0.3e-5,
+      "K_T_GPa": 30.0,
+      "K_T_uncertainty_GPa": 1.0,
+      "dK_dT_GPa_per_K": -0.002,
+      "dK_dT_uncertainty_GPa_per_K": 0.002,
+      "source_locator": "PDF p. 6, Table IV, HTV14 row"
+    },
+    {
+      "row_id": "lowitzer_table_iv_htbmag14_300K",
+      "eos_model": "HTBMAG14",
+      "temperature_K": 300.0,
+      "volume_A3": 35.34,
+      "volume_uncertainty_A3": 0.06,
+      "alpha_V_K_inv": 3.1e-5,
+      "alpha_V_uncertainty_K_inv": 0.3e-5,
+      "K_T_GPa": 32.0,
+      "K_T_uncertainty_GPa": 1.0,
+      "dK_dT_GPa_per_K": null,
+      "dK_dT_uncertainty_GPa_per_K": null,
+      "source_locator": "PDF p. 6, Table IV, HTBMAG14 row"
+    }
+  ],
+  "pair_contract": {
+    "same_study_pair_present": true,
+    "same_sample_pair_present": true,
+    "same_temperature_point_present": true,
+    "numeric_alpha_V_rows_available": true,
+    "numeric_K_T_rows_available": true,
+    "source_grade_uncertainty_available": true,
+    "same_grade_alpha_V_and_K_T_pair_closed": true,
+    "Ding_material_regime_mapping_closed": false,
+    "same_state_c_p_or_c_v_present": false,
+    "numeric_c_p_to_c_v_correction_emitted": false,
+    "numeric_Ding_C_src_emitted": false
+  },
+  "derived_correction_witness": {
+    "row_id": "lowitzer_table_iv_htv9_300K",
+    "temperature_K": 300.0,
+    "alpha_V_K_inv": 3.2e-5,
+    "K_T_Pa": 38000000000.0,
+    "delta_c_p_minus_c_v_J_m3_K": 11673.6,
+    "uncertainty_method": "first-order independent-error propagation from source-reported alpha_V and K_T uncertainties only; this is a correction-term witness, not a c_v value",
+    "delta_c_p_minus_c_v_uncertainty_J_m3_K": 1583.27,
+    "accepted_for_Ding_C_src": false,
+    "accepted_for_alpha_Phi_K": false
+  },
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "xie_2026_source_data_consumed": false,
+    "calibration_path_may_read_holdout": false,
+    "target_curve_used": false,
+    "alpha_fit_used": false,
+    "used_for_calibration": false
+  },
+  "claim_boundary": "The source-pair blocker is narrowed to a material/response and c_v-source boundary. No Lowitzer value is substituted for Ding C_src, Delta_Tq, Phi, alpha_Phi_K, or physical UET transport."
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "covariant_superfluid_transport_verification",
-  "generated_at": "2026-08-10T06:47:19.281491+00:00",
+  "generated_at": "2026-08-30T10:31:04.073440+00:00",
   "topic": "docs/core UET GR non-closed response",
   "version": "wave10_v1",
   "benchmark_role": "internal_covariant_and_synthetic_transport_control",
@@ -38,7 +38,7 @@
     "josephson_max_abs": 0.0,
     "ideal_constitutive_max_abs": 0.0,
     "action_noether_current_max_abs": 4.440892098500626e-16,
-    "lorentz_covariance_max_abs": 6.217248937900877e-15,
+    "lorentz_covariance_max_abs": 1.7763568394002505e-15,
     "entropy_production_minimum": 0.0005343921951153048,
     "goldstone_sound_max_abs": 0.0,
     "diffusion_coefficient": 0.009888499477337867,

@@ -1,5 +1,16 @@
 ﻿# Method
 
+## Finite-q Thermoelastic Compatibility (2026-09-07)
+
+For a nonzero bulk grating wavevector use `eps=B(n)*v`, not independently
+stress-free strain at each point. With `beta=K_el*alpha` and
+`R_n=B*(B^T*K_el*B)^-1*B^T`, fixed local entropy gives
+`dT=T*(beta^T*R_n*G)*phi_r/(c_eps+T*beta^T*R_n*beta)`.
+This uses full Mandel stiffness including shear; K_el is not UET C.
+The [derivation](../../core/T13_THERMOELASTIC_SPATIAL_COMPATIBILITY.md)
+declares the conditional interaction, natural units and independent
+elimination. No data or dynamics is an input. This is not TTG calibration.
+
 ## Problem target
 
 This topic studies whether UET can connect entropy, information cost, and dissipation benchmarks under one bridge model.
@@ -73,3 +84,116 @@ flowchart LR
 | `0.0_Grand_Unification` | receives this topic as a bridge constraint | Integration-only until this topic's external data and formula audit are source-locked. |
 | `0.23_Unity_Scale_Link` | depends on this topic for information-energy scale logic | Must inherit `0.13` limitations where scale links rely on Landauer/Bekenstein bridge claims. |
 | `0.26_Cosmic_Dynamic_Frame` | may reference thermodynamic frame language | Cannot use synthetic/vacuum-sink sections as empirical support. |
+## Lattice momentum-relaxing heat-parent method (2026-09-02)
+
+The preferred-frame escape route is first tested as a standard-physics parent,
+not inserted into the UET action. In natural units, isotropic acoustic modes use
+`E(p)=c_s p` and the whitened temperature-gradient source
+`S_T=sqrt[d^3p n_B(1+n_B)/3] beta E v`. The collision split is
+`C_N=gamma_N(I-|P><P|)` and `C_R=gamma_R I`, where `C_N` preserves crystal
+momentum and `C_R` is a declared synthetic resistive control.
+
+The steady linearized PBTE is `(C_N+C_R)chi=S_T`, with
+`kappa_natural=S_T^T chi` and entropy quadratic form
+`sigma=chi^T(C_N+C_R)chi`. The diagnostic must fail closed at `gamma_R=0`
+when `S_T` overlaps the momentum null. A positive finite result is admissible
+only after symmetry, positivity, inverse-rate scaling, quadrature convergence
+and `E^2` unit scaling pass. No physical rate or UET correspondence is inferred
+from this parent.
+
+## Umklapp correspondence decision method (2026-09-02)
+
+Before adding a resistive kernel, compare the selection rule of the owning UET
+collision lane with the standard lattice requirement. The current continuum
+events use `p1+p2-p3-p4=0`; an Umklapp event requires
+`p1+p2-p3-p4=G!=0`, with `G` derived from a reciprocal lattice. Inventory the
+owning action/config fields and vertex arguments, then verify eventwise energy
+and momentum residuals. If no reciprocal structure exists, close direct reuse
+as a scoped no-go rather than inserting `gamma_U` into the UET action.
+
+For TTG, proceed through a declared external material-lattice sector and derive
+the interface to UET variables. Treat a UET-generated periodic background and
+Bloch spectrum as a separate fundamental track with its own stability, units,
+observable and homogeneous-limit gates.
+
+## Material PBTE input-admission method (2026-09-02)
+
+Inspect the archived binary schema rather than inferring transport content from
+a PBTE filename. Admit mode arrays only when the source summary hash and size
+match and the arrays are finite. Keep total RTA linewidth distinct from a
+resistive-only rate. A physical momentum-relaxing parent requires either a
+Normal/Umklapp-resolved decomposition or a complete admissible collision
+operator whose null modes, positivity, entropy and convergence can be checked.
+
+Collision eigenvalues alone cannot reconstruct that operator or its conserved
+subspace. Source-backed frequency, velocity and heat-capacity arrays may enter
+the material comparator interface while the collision split, Ding material
+mapping, uncertainty and UET coupling remain blocked.
+
+## Conditional UET-material interface method (2026-09-02)
+
+Assign state ownership before coupling equations: UET owns `(C,Phi,Pi)` and
+the material sector owns displacement, strain and phonon occupations. Introduce
+a canonical response amplitude only through `Phi_E=Z_Phi DeltaPhi`. The
+minimal scalar-strain candidate is
+`L_int=-g_Phi_theta Phi_E div(u)`, which preserves uniform displacement shift
+symmetry and gives equal-and-opposite energy exchange between subsystems.
+
+Expose the observable dependency as
+`alpha_Phi_K=chi_u_theta*g_Phi_theta*Z_Phi/C_src`, with SI conversion and
+uncertainty still required. Test the coordinate degeneracy
+`Z_Phi -> s Z_Phi`, `g -> g/s`; invariance means neither factor can be inferred
+from normalized dynamics alone. Do not evaluate the formula until each factor
+has a derivation or independent source role.
+
+## Material-interface factor-resolution method (2026-09-02)
+
+Resolve the conditional coefficient factor by factor before attempting a
+number. Compare the field support and mass dimension of every existing action
+operator with the proposed material operator. The current `h` coefficient
+multiplies `delta_phi*chi^2` and has natural mass dimension one; the required
+`g_Phi_theta` multiplies `Phi_E*div(u)` and has mass dimension three. A direct
+substitution is inadmissible even though both complete terms have energy-density
+dimension four.
+
+Keep the action-derived `alpha_Phi_T^nat=(partial_Phi epsilon)/(partial_T
+epsilon)` in the homogeneous O(2) lane. It is not the material-lattice product
+and is not kelvin per normalized base `Phi`. Classify `Z_Phi`, `g_Phi_theta`,
+`chi_u_theta`, `C_src` and `C_N+C_R` independently. Propagate uncertainty only
+after all factors share one unit and material/state contract, using
+`Var(alpha)=grad(alpha)^T Sigma grad(alpha)`; the independent-factor sum is a
+special case, not a license to assume independence in physical data.
+
+## Scalar thermoelastic response method (2026-09-02)
+
+Use the quadratic free-energy increment
+`delta_f=K_T*theta^2/2-K_T*alpha_V*theta*DeltaT-C_v^V*DeltaT^2/(2T)
++g_Phi_theta*Phi_E*theta+a_Phi*Phi_E^2/2`. Solve the zero-stress condition
+and the fixed-entropy condition as one linear system; do not insert the target
+temperature response. The result is
+`DeltaT=T*alpha_V*g_Phi_theta*Phi_E/C_p^V`, where
+`C_p^V=C_v^V+T*alpha_V^2*K_T`.
+
+The earlier factorization is recovered with
+`chi_u_theta=T*alpha_V*C_v^V/C_p^V`. Require `C_v^V>0`, `K_T>0` and the
+isothermal coupled-field stability margin
+`a_Phi*K_T-g_Phi_theta^2>0`. Treat this as a scalar, isotropic, local and
+adiabatic candidate only. Lowitzer alpha/K and MP48 Cv remain separate
+comparators until one material/state mapping and uncertainty contract admits
+their combination.
+
+## Anisotropic thermoelastic response method (2026-09-02)
+
+Represent normal strains in a symmetric three-component Voigt block. Define
+thermal stress `beta=C*alpha` and solve
+`C*epsilon-beta*DeltaT+G*Phi_E=0` together with
+`beta:epsilon+(C_epsilon/T)*DeltaT=0`. Compliance elimination gives
+`C_sigma=C_epsilon+T*alpha:C:alpha` and
+`DeltaT=T*(alpha:G)*Phi_E/C_sigma`.
+
+Require `C` to be symmetric positive definite and require the coupled
+Phi-strain Schur margin `a_Phi-G:S:G>0`. Verify the scalar one-axis limit and
+basal-axis permutation before using the hexagonal formulas. Bosak elastic
+stiffness and TPG expansion remain independent comparator surfaces; they are
+not a same-state isothermal tensor package and must not be combined into a
+numeric UET coefficient.

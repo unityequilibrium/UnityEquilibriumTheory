@@ -20,6 +20,9 @@ from docs.core.uet_o2_finite_temperature_quasiparticle_eos import (
     finite_temperature_o2_state,
     quasiparticle_pressure,
 )
+from docs.scripts.audit.audit_topic13_fixed_phi_spectrum_repair import (
+    fixed_phi_witnesses,
+)
 
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -39,6 +42,17 @@ def check(condition: bool, message: str, failures: list[str]) -> None:
 def central(function, value: float, step: float = 2.0e-4) -> float:
     h = step * max(1.0, abs(float(value)))
     return (function(value + h) - function(value - h)) / (2.0 * h)
+
+
+def state_record(state) -> dict:
+    record = dict(state.__dict__)
+    # Goldstone is inapplicable on the normal branch, not a failed numeric value.
+    if state.branch == "normal":
+        record["goldstone_energy_at_zero_momentum"] = None
+        record["goldstone_evaluation"] = "NOT_APPLICABLE_NORMAL_BRANCH"
+    else:
+        record["goldstone_evaluation"] = "EVALUATED"
+    return record
 
 
 def main() -> int:
@@ -165,7 +179,9 @@ def main() -> int:
         key: bool(value) for key, value in representative_checks.items()
     }
     contract = finite_temperature_o2_quasiparticle_contract()
+    independent = fixed_phi_witnesses()
     checks = {
+        **independent["checks"],
         "normal_branch_points_pass": all(state.branch == "normal" for state in normal_states),
         "condensed_branch_points_pass": all(state.branch == "condensed" for state in condensed_states),
         "normal_positivity_pass": all(
@@ -245,9 +261,21 @@ def main() -> int:
             "claim_boundary": contract["claim_boundary"],
         },
         "contract": contract,
+        "source_hashes": {
+            path: sha256(ROOT / path)
+            for path in (
+                "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+                "docs/core/uet_o2_formal_transverse_response.py",
+                "docs/core/uet_covariant_matter.py",
+                "docs/core/uet_o2_finite_density_eos.py",
+                "docs/scripts/audit/audit_topic13_fixed_phi_spectrum_repair.py",
+                "docs/scripts/audit/audit_topic13_finite_temperature_quasiparticle_eos.py",
+            )
+        },
+        "independent_action_witnesses": independent,
         "state_grid": {
-            "normal": [state.__dict__ for state in normal_states],
-            "condensed": [state.__dict__ for state in condensed_states],
+            "normal": [state_record(state) for state in normal_states],
+            "condensed": [state_record(state) for state in condensed_states],
         },
         "representative_checks": representative_checks,
         "checks": checks,
@@ -262,8 +290,9 @@ def main() -> int:
         "controlling_blocker": "interacting_finite_temperature_self_energy_and_full_two_fluid_transport_missing",
         "next_controller": "Match the approximate EOS to a declared interacting finite-temperature action and state-specific Kubo/SK-KMS records without using TTG holdout data.",
         "claim_promotion": False,
+        "full_core_unlock": False,
     }
-    OUT.write_text(json.dumps(artifact, indent=2) + "\n", encoding="utf-8")
+    OUT.write_text(json.dumps(artifact, indent=2, allow_nan=False) + "\n", encoding="utf-8")
     print(json.dumps({"status": artifact["status"], "closure_level": artifact["major_result"]["closure_level"], "failed_checks": failures}, indent=2))
     return 0 if not failures else 1
 

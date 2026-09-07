@@ -1,5 +1,299 @@
 # Verification Spec
 
+## Finite-q Spatial Compatibility (2026-09-07)
+
+Run `docs.scripts.audit.audit_topic13_thermoelastic_spatial_compatibility` and
+`docs.core.test.test_topic13_thermoelastic_spatial_compatibility` with the
+repository environment. Compare the block solve with independent fixed-entropy
+elasticity and isotropic longitudinal elasticity. Test full rotations including
+shear, direct `sigma*n=0`, periodic displacement-gradient convergence, unit
+rescaling, small positive shear and invalid-input rejection. Preserve the
+zero-stress incompatibility witness. The runner hashes full-closure inputs
+before and after, with no experimental inputs or threshold changes. This
+runner's no-data policy is not a repository-wide holdout-access audit.
+
+## Transition-Operator Rate Dimension (2026-09-01)
+
+Run `docs.scripts.audit.audit_topic13_transition_kernel_rate_dimension_no_go`
+and its focused test. Scale every energy-bearing action/state input together
+by `1.5,2,3`; require the collision-operator trace to scale as the square,
+while recording that a physical rate should scale linearly. Use trace rather
+than threshold-selected mean eigenvalues. Preserve any absolute-cutoff mode
+drift as an additional blocker; do not tune the cutoff to restore covariance.
+
+## Dressed RA Pair and Rung Boundary (2026-09-01)
+
+Run `docs.scripts.audit.audit_topic13_dressed_ra_pair_microscopic_rung_boundary`
+and its focused test. Check the full energy integral against
+`1/(4E^2 Gamma)` below `1e-10` and the dressed-current/kinetic source below
+`1e-13`. Require production contact-to-legacy cross-section ratios `8` and
+`16`, and require nonzero `Phi` exchange to change both ratios. Do not apply a
+global correction to historical rates or call the legacy algebraic rung a
+microscopic Bethe-Salpeter match.
+
+## Retarded/Advanced Mixed Current Vertex (2026-09-01)
+
+Run `docs.scripts.audit.audit_topic13_retarded_ra_mixed_current_vertex` and
+its focused test. Require frozen-weight reduction to the Matsubara triangle
+below `1e-13`, continued Ward residual below `2e-8`, and last finite-transfer
+eta refinement below `0.02`. Require a finite nonzero transverse component.
+The proper zero-transfer scan must not be mislabeled as a current-current
+pinch; record the failed inverse-eta hypothesis and keep dressed RA pair,
+four-point rung and physical Kubo completion open.
+
+## Microscopic Current-to-Ladder Boundary (2026-09-01)
+
+Run `docs.scripts.audit.audit_topic13_microscopic_current_ladder_matching_boundary`
+and `docs/core/test/test_topic13_microscopic_current_ladder_matching_boundary.py`.
+Require exact `Gamma_tree^i/(2E)=q*p^i/E` agreement for both charges and the
+declared momentum grid, plus energy-scaling covariance.
+
+For at least two nonzero transverse coefficients require the vertex to change
+at finite `Q` while `Q*deltaGamma_T` remains below `1e-14`; require the same
+bounded addition to vanish at `Q=0`. Confirm that legacy current, continuum,
+Bethe-Salpeter and heat-current contracts retain their microscopic/continuum
+exclusions. Default action mismatch must be visible, and the explicit bridged
+configuration must match all canonical coefficients exactly. No physical
+ladder, Kubo or retarded claim may be emitted by this boundary audit.
+
+## Static Confluent Charged Vertex (2026-09-01)
+
+Run `docs.scripts.audit.audit_topic13_charged_static_confluent_vertex` as a
+module and `docs/core/test/test_topic13_charged_static_confluent_vertex.py`.
+Use `T=0.1,0.25,0.5,1`, `mu=0,0.2`, both charge signs, finite-difference steps
+`1e-4,5e-5,2.5e-5`, and quadrature orders `80,112,160`.
+
+For nonzero vertices require explicit diagram/full-inverse derivative relative
+error below `2e-7`; for symmetry-zero limits require absolute error below
+`1e-14`. Require quadrature change below the existing `1e-6` numerical gate,
+charge-even total response, zero temporal response at `mu=0`, zero spatial
+vertex by static isotropy, and high-precision confluent divided-difference
+agreement. Check each self-energy component independently, cold/decoupled
+limits, energy/field covariance and invalid domains. Do not split coincident
+poles or infer the retarded finite-k order of limits.
+
+## Explicit Charged Current Vertex (2026-09-01)
+
+Run docs.scripts.audit.audit_topic13_charged_one_loop_current_vertex as a
+module and docs/core/test/test_topic13_charged_one_loop_current_vertex.py.
+Require direct finite Matsubara sums to match independent pole residues below
+1e-9 and explicit full-vertex Ward residual below 2e-8. Require bath
+transversality below 2e-8 without longitudinal projection.
+
+The declared samples use (T,nP,nQ,pz,Qz)=(.25,1,1,.3,.4),
+(.25,2,1,-.2,.5),(.5,1,2,.4,-.3) and both charge signs at mu=.2.
+The refinement grids are (64,32),(88,40),(112,56); every mixed-thermal and
+response-relaxed bath correction change must remain below 1e-6. Radial
+integration maps the full half-line and does not use a fitted cutoff.
+
+Independently contract the mixed thermal triangle against separately integrated
+self-energy differences. Do the same for the Feynman-parameter vacuum triangle
+plus kinetic counterterm. Check response-relaxed bath decomposition, G=0,
+charge conjugation with reversed four-momenta, natural-energy covariance,
+legacy plus-i-mu propagator identity and invalid/static-domain rejection.
+
+Also rerun the corrected charged-propagator Matsubara witness: with response
+loop K and charged P-K, require D_q^-1(R)=(R0+i*q*mu)^2+E^2 and
+Omega=q*mu-i*nu_n. Pole/cut values must remain unchanged. Regenerate artifacts
+under the experimental-Data guard, verify strict JSON/current hashes, and
+retain candidate-only/full_core_unlock=false.
+
+## Charged One-Loop Diagnostic (2026-09-01)
+
+Run docs.scripts.audit.audit_topic13_charged_one_loop_match as a module and
+docs/core/test/test_topic13_charged_one_loop_match.py with pytest.
+Use T=0.1,0.25,0.5,1, mu=0.2 and q=-1,+1. Pole quadratures are
+(96,48),(160,64),(256,80), with individual kernel refinement below 1e-6.
+Require positive grand excitations, static normal curvature and residues.
+
+Independent mixed complex Matsubara witnesses use E=1.2,W=0.8, mu=-0.2,0,0.2,
+cutoff 8192 and external indices 0,1,2,4; relative error must be below 1e-9.
+The static three-field thermal Hessian witness uses mu=0 and field step
+0.003*m; require relative error below 2e-5. Tests separately check the
+nonzero-mu Euclidean fluctuation determinant and coincident Bose limits.
+
+Reconstruct the real thermal kernel by integrating both signed pair and
+Landau cuts, absolute tolerance 1e-12. Independently check unequal-mass
+vacuum dispersion and the self-energy derivative. Spectral samples are
+Omega=0.1,0.2,0.25,1,2,3 for both charges and every declared temperature.
+KMS log and cross-multiplied FDT errors must be below 1e-10. Spectral sign
+uses grand frequency Omega-q*mu; transition weights must be nonnegative.
+Test cold/decoupled/charge-conjugate/equal-mass limits, covariance and invalid
+domains. Do not treat the required temporal Ward vertex as a full current match.
+
+Regenerate under the pre-import experimental-Data guard; verify current
+source/evidence hashes and strict JSON. Run previous response, background,
+collision, elastic, normalization, fixed-Phi and projected-current regressions.
+Candidate registry stays separate and full_core_unlock must remain false.
+
+## Response One-Loop Match (2026-09-01)
+
+Run docs.scripts.audit.audit_topic13_response_one_loop_match as a module and
+docs/core/test/test_topic13_response_one_loop_match.py with pytest.
+The fixed grid is T=0.1,0.25,0.5,1 at mu=0.2 in natural units. Pole quadrature
+pairs are (96,48),(160,64),(256,80), with component and pole refinement 1e-6.
+Require force residual below 1e-10, positive local curvature/subthreshold pole,
+and static/dynamic occupation matching within 1e-12.
+
+Independent witnesses are 100-digit logarithmic-remainder derivatives,
+90-digit direct vacuum Taylor subtraction, radial/dispersion integrals,
+and complex Matsubara sums. Matsubara relative error must be below 1e-9;
+vacuum and thermal spectral dispersion absolute errors below 1e-12.
+Pair-cut KMS log and FDT relative errors must be below 1e-10 on the declared
+grid. Zero support must retain undefined KMS ratio. Test cold underflow in
+log space, threshold rejection, charge symmetry and energy/field covariance.
+Numerical symmetry tests use 1e-14 relative precision, not exact bit equality.
+
+Require explicit strict versus partially resummed outputs and retain their
+differences. Preserve experimental-Data guard, source/evidence hashes,
+candidate-only registry, and full_core_unlock=false. Run with the existing
+thermal-background, collision, elastic, normalization, fixed-Phi and projected
+current regression modules. No collision rerun or physical transport claim
+is authorized by this response-only result.
+
+## Thermal Stationary-Background Diagnostic (2026-09-01)
+
+Run docs.scripts.audit.audit_topic13_normal_thermal_background as a module and
+docs/core/test/test_topic13_normal_thermal_background.py with pytest. Require
+canonical production-potential first/second/third derivatives, independent
+modified-Bessel-series thermal integrals, force/Hessian finite differences,
+and stationary pressure/charge/entropy/susceptibility envelope identities.
+Check zero-temperature and zero-coupling limits, signed charge conjugation,
+canonical field covariance, energy dimensions and normal-gap rejection.
+
+Declared natural-unit temperatures are 0.1, 0.25, 0.5 and 1.0 at mu=0.2.
+The quadrature (order, cutoff factor) pairs are (96,48), (160,64), (256,80).
+Stationarity uses residual 1e-10, thermodynamic derivative agreement 1e-4,
+independent minimizer agreement 1e-3 and displacement refinement 1e-5.
+These diagnostic tolerances do not alter the causal leakage threshold.
+
+The mixed-scattering sensitivity grid uses s=4,8,16 and cos(theta)=-0.8,0,0.8.
+Require the tensor-contracted shifted vertex to match the analytic exchange
+formula, the zero-shift limit to recover the previous collision amplitude, and
+pole inputs to raise rather than receive a regulator. Do not interpret the
+pointwise comparison as a complete thermal collision or transport calculation.
+
+Regenerate under the pre-import experimental-Data access guard; verify strict
+JSON, current code hashes and the hash link to the preserved collision artifact.
+The standalone registry addendum stays candidate-only and full_core_unlock
+must remain false. Full thermal background/propagator/current matching is open.
+
+## Coupled Gain/Loss Diagnostic (2026-09-01)
+
+Run docs.scripts.audit.audit_topic13_coupled_gain_loss_operator as a module and
+docs/core/test/test_topic13_coupled_gain_loss_operator.py with pytest. Require
+independent mixed/contact vertices, production response fourth derivatives,
+ordered-species counting, unequal-mass on-shell kinematics, Bose gain/loss
+finite differences and nonlinear entropy. Include invalid-input, natural-unit
+rescaling, state-mismatch, charge-conjugation and zero-coupling controls.
+
+The initial near-null first-cell finite-difference failure is preserved in
+t13_coupled_gain_loss_initial_probe_failure.json as historical evidence, not
+a current source-hash snapshot. The corrected probe uses fixed non-null event
+momenta and steps 1e-3, 1e-4, 1e-5; the relative acceptance remains 1e-4. The
+near-null residual is still reported for every collision grid, not clipped.
+
+Independent refinement axes are (radial, angular, azimuth, cutoff): reference
+(18,8,12,10), radial (24,8,12,10), angular (18,12,12,10), azimuth (18,8,16,10),
+cutoff (18,8,12,12). The diagnostic tolerance 2e-3 was set before these runs;
+it is not a causal leakage threshold. Nested active bases have 3, 5, 8 and 11
+functions on the same reference nodes. The largest basis also uses
+(24,12,16,12) for a separate resolution check. Neither test certifies the
+continuum or infinite-basis limit.
+
+Require the response decomposition over generalized relaxation modes to
+reconstruct the matrix inverse. Check that neutral sector momentum relaxes
+as G^4, becomes an extra null direction at G=0, and has zero charge-current
+overlap at mu=0. Never add a width or invert that unprojected decoupled null.
+
+Run with an experimental-Data access guard installed before module import,
+then verify strict JSON and all current source/evidence hashes. Retain
+full_core_unlock=false, candidate-only registration and physical claim limits.
+Run the equation inventory/foundation/compatibility audits in no-write mode
+so this diagnostic does not overwrite shared Core artifacts.
+
+## Named Elastic Diagnostic (2026-09-01)
+
+Run docs.scripts.audit.audit_topic13_action_normalized_elastic_scattering as
+a module, then the matching test_topic13_action_normalized_elastic_scattering.py.
+Require production quartic/cubic derivative matching, contact phase-space
+normalization, charge crossing/conjugation, explicit-boost agreement,
+detailed balance and reported resolution convergence. The diagnostic's
+last-relative-change tolerance is 2e-3; it does not change any causal gate.
+
+The pole region must raise an error, not receive an arbitrary width.
+The standalone registry addendum remains CANDIDATE_DIAGNOSTIC_NOT_MERGED,
+with no physical unlock. A passing tagged elastic rate is not a completed
+collision operator, Kubo coefficient or Full Topic 13 result.
+
+## Kinetic Canonical/Action Verification (2026-08-31)
+
+Run docs.scripts.audit.audit_topic13_kinetic_canonical_action_match as a module
+and docs/core/test/test_topic13_kinetic_canonical_normalization.py with pytest.
+Require field covariance for both dilute and outgoing-Bose branches, signed-mu
+species exchange, lambda_c-squared width scaling and canonical transition
+consumer agreement. Polynomial-derivative checks use the production potential
+and must fail when that potential is mutated.
+
+The audit may pass the repair while action_matching_status is BLOCKED.
+That mismatch is an actual open action-channel result, not an allowed physical
+unlock. Keep both diluted/quantum artifacts comparator-only and preserve
+full_core_unlock=false. Regenerate fixed-Phi audits when their code inventory
+changes; do not treat historical source snapshots as current after edits.
+
+## Fixed-Phi Repair Verification (2026-08-31)
+
+Before reusing fixed-Phi results, run these modules from the repository root:
+
+```text
+python -B -m docs.scripts.audit.audit_topic13_finite_temperature_quasiparticle_eos
+python -B -m docs.scripts.audit.audit_topic13_formal_transverse_response
+python -B -m docs.scripts.audit.audit_topic13_fixed_phi_spectrum_repair
+```
+
+Require independent action-spectrum, small-k sound, canonical-rescaling and
+normal enthalpy checks, strict JSON, and current source hashes. The focused
+regression is docs/core/test/test_topic13_fixed_phi_spectrum_regression.py.
+Its mutation test must reject a corrupted spectrum. Import reachability is
+only a review inventory, not proof of numerical dependence.
+
+Do not rerun the older aggregate sequence below as evidence of Full Topic 13
+completion until acceptance scope and downstream freshness are repaired.
+Bounded He-4 composition does not close the requested full two-fluid/SK/KMS
+scope. This wave must retain full_core_unlock=false and not read source or
+holdout payloads.
+
+## Canonical Core-Ready Acceptance (2026-08-28)
+
+Run in this order:
+
+```powershell
+.venv\Scripts\python.exe docs\scripts\audit\audit_topic13_landauer_core_disposition.py
+.venv\Scripts\python.exe docs\scripts\audit\audit_topic13_he4_core_composition.py
+.venv\Scripts\python.exe docs\scripts\audit\audit_topic13_full_bridge_gate.py
+.venv\Scripts\python.exe docs\scripts\audit\audit_topic13_closure_matrix.py
+.venv\Scripts\python.exe docs\scripts\audit\audit_major_result_closure.py
+.venv\Scripts\python.exe docs\scripts\audit\audit_major_result_dependency_unlock.py
+.venv\Scripts\python.exe docs\scripts\audit\audit_topic13_core_ready_acceptance.py
+```
+
+Acceptance requires:
+
+- `t13_full_core_ready_acceptance_audit.json` reports `PASS_T13_FULL_CORE_READY_ACCEPTANCE` with all 13 criteria true.
+- The named causal branch uses the unchanged `1e-6` threshold, has nonzero arrivals, and passes convergence, ledger, conservation, and anti-manipulation checks.
+- `alpha_Phi_K` is an independent He-4 calibration with uncertainty and no target fit; `beta` does not use Landauer.
+- The permitted TTG comparison package has row identity, units, uncertainty, preprocessing, license, and hashes; it remains outside calibration and external validation.
+- EOS, finite-temperature normal component, SK/KMS, Onsager, entropy-current, dissipative-balance, and physical shear-Kubo records pass their declared contracts.
+- Xie 2026 numeric data remain unread and global `claim_promotion` remains false.
+- Matrix, register, and dependency gate agree that Topic 13 is Core-ready, curved 3+1 work is unlocked, and Gravity remains blocked.
+
+Canonical artifacts:
+
+- `docs/core/artifacts/t13_full_core_ready_acceptance_audit.json`
+- `docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json`
+- `docs/core/artifacts/t13_topic13_closure_matrix.json`
+- `Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`
+
 - Primary command:
   - `.venv\Scripts\python.exe docs\topics\0.13_Thermodynamic_Bridge\Code\03_Research\Research_Landauer.py`
 - Inputs:
@@ -144,3 +438,169 @@ Acceptance requires retarded/advanced conjugacy, the declared spectral discontin
 - Integration: `.\.venv\Scripts\python.exe docs/scripts/audit/audit_topic13_full_bridge_gate.py` followed by `.\.venv\Scripts\python.exe docs/scripts/audit/sync_topic13_major_result_lanes.py`.
 - Acceptance: source file, exact size/hash, 22-page inventory, no accepted machine-readable mode-resolved `C_src` or force-constant payload, no digitization, no fit, no alpha calibration, and no holdout access.
 - Current result: source boundary `PASS_HUBERMAN_PUBLIC_PBTE_BOUNDARY_NO_ACCEPTED_NUMERIC_PAYLOAD`; full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE` / `PARTIAL` with 10 blockers.
+
+## Thermal Dynamical-Regime Diagnostic
+
+- Command: `python docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_Thermal_Dynamical_Regime_Audit.py`
+- Artifact: `Result/artifacts/t13_thermal_dynamical_regime_audit.json`
+- Dependency: Topic 0.10 `chaos_method_validation.json` must pass first.
+- Acceptance: tangent/shadow agreement, time-step resolution, perturbation-amplitude robustness,
+  bounded finite states, unchanged ledger threshold, ontology separation, and no holdout access.
+- Fourier and Cattaneo are analytic controls; trace-only is not a dynamical state.
+- Open/KMS evaluation remains blocked until accepted common-noise transport inputs exist.
+- Regression must preserve the 37-row closure matrix (`21` lane, `6` no-go, `10` open),
+  `full_core_unlock=false`, blocked `alpha_Phi_K`, and the Topic 0.10 speed-comparator `FAIL`.
+- A passing pilot is diagnostic `CLOSED_FOR_LANE`, not Full Topic 13 or external validation.
+
+## Invariant-rate collision repair
+
+- Run `python -m docs.scripts.audit.audit_topic13_invariant_rate_collision_repair`.
+- Run `python -m pytest docs/core/test/test_topic13_invariant_rate_collision_repair.py -q`.
+- Require collision-operator dimension `E^1` symbolically and under whole-action scale factors 1.5, 2, and 3.
+- Require symmetry, positive semidefiniteness, charge/energy/momentum conservation, and detailed balance.
+- Require charge-resolved contact-plus-`Phi` amplitudes to match the production evaluator.
+- Prohibit clipping, fitting, absolute eigenvalue admission thresholds, holdout access, and overwriting the legacy operator.
+- A pass closes only the finite representative rate repair. Continuum/angular completion, self-consistent width, Kubo/SI output, and Full Topic 13 remain open.
+
+## Invariant scalar Galerkin collision operator
+
+- Run `python -m docs.scripts.audit.audit_topic13_invariant_galerkin_collision_operator`.
+- Run `python -m pytest docs/core/test/test_topic13_invariant_galerkin_collision_operator.py -q`.
+- Require `L_rate~E` symbolically and under whole-action scale factors 1.5, 2, and 3.
+- Require radial orders 8/12/16 with last-refinement relative difference `<=1e-2`.
+- Require angular orders 4/6/8 with last-refinement relative difference `<=1e-3`.
+- Require eventwise charge, energy and three-momentum residuals, detailed balance, Gram whitening, PSD, symmetry, three scalar null modes and full dissipative scalar rank.
+- Require no posterior conservation projector, clipping, cone padding, absolute mode-admission cutoff, fitting, or holdout access.
+- Retain the mapped legacy continuum vertex as blocked when its independent scaling remains `E^2`.
+- A pass is finite scalar `CLOSED_FOR_LANE`, not vector/tensor transport, self-consistent width, Kubo/SI closure, or Full Topic 13.
+
+## Same-kernel tree loss/gain and retarded width
+
+- Run `python -m docs.scripts.audit.audit_topic13_same_kernel_tagged_width`.
+- Run `python -m pytest docs/core/test/test_topic13_same_kernel_tagged_width.py -q`.
+- Require invariant-cut and independent `v_Moller dSigma/dOmega` channel rates to agree within `1e-10`.
+- Require whole-action `Gamma_R~E` scaling at factors 1.5, 2, and 3.
+- Require radial 12/16/24 and angular 4/6/8 last-refinement differences `<=5e-4`.
+- Require positive loss, gain and retarded widths; `Gamma_R=Gamma_out-Gamma_in=Gamma_out/(1+f)` within `1e-12`; charge conjugation; exact `-Im Sigma_R=2E Gamma_R`; eventwise energy/momentum and detailed balance.
+- Prohibit clipping, fitted damping, absolute mode cutoffs, source/holdout access, and relabeling the tree width as dressed or resonant.
+- The invariant-cut/cross-section comparison applies to `Gamma_out`, not directly to `Gamma_R`. A pass closes only the tree loss/gain/KMS-retarded-width lane; dressed self-consistency, independent heat transport, Kubo/SI and Full Topic 13 remain open.
+
+## Vector current and heat-rank boundary
+
+- Run `python -m docs.scripts.audit.audit_topic13_vector_current_heat_rank_boundary`.
+- Run `python -m pytest docs/core/test/test_topic13_invariant_vector_current_galerkin.py -q`.
+- Require vector operator dimension `E`, charge response form `E`, and formal grand-heat response form `E^3` under whole-action scales 1.5, 2, and 3.
+- Require radial 12/16/24 last-refinement differences `<=1e-2` and angular 4/6/8 differences `<=1e-3`.
+- Require eventwise five invariants, one vector momentum null mode, full dissipative complement, PSD, symmetry, detailed balance and charge conjugation.
+- Require `J_Q_perp=-mu J_charge_perp` within `1e-10`, projected source rank one, and vanishing projected heat source at `mu=0`.
+- Use Landau projection only on sources; prohibit posterior projection of the collision operator, clipping, fitting and holdout access.
+- A pass closes the vector charge-current lane and rejects an independent heat channel only in the declared elastic equal-mass lane. It is not heat conductivity or Full Topic 13 closure.
+
+## Same-kernel dressed RA charge-current ladder
+
+- Run `python -m docs.scripts.audit.audit_topic13_dressed_ra_charge_current_ladder`.
+- Run `python -m pytest docs/core/test/test_topic13_dressed_ra_charge_current_ladder.py -q`.
+- Require the RA diagonal to use `Gamma_R`, never the tagged `Gamma_out`, and require the KMS gain/loss residual `<=1e-12`.
+- Require the independently assembled width-loss matrix to match the event-expanded loss matrix within `5e-3`.
+- Require `L_vector=D_RA-K_gain`, rung symmetry, one momentum null mode, ladder equation residual, and ladder/kinetic solution and response residuals within `1e-10`.
+- Require whole-action `D_RA`, `K_gain`, `L_vector`, and charge-response scaling as `E^1` at factors 1.5, 2, and 3; the enhancement ratio must be dimensionless.
+- Require radial 8/12/16 final response changes `<=1e-2` and angular 4/6/8 final changes `<=1e-3`.
+- Record the deflated rung spectral radius and fail closed on nonfinite Neumann iteration; direct inversion may close the finite-basis ladder even when a coarse-grid Neumann series does not converge.
+- Prohibit clipping, fitted relaxation time, absolute eigenvalue admission cutoffs, holdout access and physical Kubo/SI emission.
+- A pass closes only the finite-basis tree-elastic charge-current ladder. Independent heat transport, dressed self-consistency, continuum/cutoff proof, external validation and Full Topic 13 remain open.
+
+## Coupled response heat-carrier route no-go
+
+- Run `python -m docs.scripts.audit.audit_topic13_coupled_response_heat_carrier_no_go`.
+- Run `python -m pytest docs/core/test/test_topic13_coupled_response_heat_carrier_no_go.py -q`.
+- Require `J_E=P`, `J_H=P-mu J_charge`, and `P_perp J_H=-mu P_perp J_charge` with relative residual `<=1e-10` and physical charge/heat source rank one.
+- Require the projected physical heat source to vanish at `mu=0`.
+- Verify that the neutral trial source is linearly independent while neutral count has nonzero collision relaxation; preserve total-count null only as a truncation invariant, not a new conserved `C`.
+- Verify that the independent `E*p/T^2` trial direction is not relabeled as the physical heat observable.
+- Require a positive active collision spectrum, solve residual `<=1e-8`, and metric refinement `<=1e-3`.
+- Prohibit a new state variable, observable relabeling, fit, holdout access or physical Kubo/SI emission.
+- A pass closes only the existing neutral response-carrier route as a no-go. Lattice/open-bath momentum relaxation and independently conserved multicharge branches remain admissible research routes.
+
+## Lattice momentum-relaxing heat parent
+
+- Run `python -m docs.scripts.audit.audit_topic13_lattice_momentum_relaxing_heat_parent`.
+- Run `python -m pytest docs/core/test/test_topic13_lattice_momentum_relaxing_heat_parent.py -q`.
+- Require symmetric positive-semidefinite `C_N` and `C_N|P>=0` within `1e-12`.
+- Require the linear Debye heat source to overlap the crystal-momentum null mode and prohibit a finite steady conductivity when `gamma_R=0`.
+- For `gamma_R>0`, require a positive-definite total operator, nonnegative entropy production, Onsager symmetry, and agreement with `kappa=||S_T||^2/gamma_R` within `1e-11`.
+- Require inverse-`gamma_R` response scaling, radial quadrature change `<=1e-8`, and uniform natural-energy scaling exponent `2` within `1e-10`.
+- Keep the rate origins as synthetic external controls; prohibit fitting, Xie 2026 access, physical Kubo/SI emission, or a UET correspondence claim.
+- A pass closes only the standard lattice parent. Physical phonon dispersion/collision provenance and the UET-to-lattice quasiparticle/current map remain required before a UET thermal branch exists.
+
+## Continuum-action direct Umklapp no-go
+
+- Run `python -m docs.scripts.audit.audit_topic13_continuum_action_umklapp_no_go`.
+- Run `python -m pytest docs/core/test/test_topic13_continuum_action_umklapp_no_go.py -q`.
+- Inventory the owning action/config fields and amplitude parameters; require no undeclared lattice spacing, unit cell, reciprocal vector, Bloch or Brillouin-zone input.
+- Require the current event generator to satisfy exact continuum energy and momentum conservation within `1e-12`.
+- Keep `p1+p2-p3-p4=0` separate from the Umklapp requirement `p1+p2-p3-p4=G!=0`.
+- Prohibit promotion of the synthetic resistive rate to a UET or material coefficient, and prohibit fit or holdout access.
+- A pass rejects only direct Umklapp generation from the current homogeneous action. It leaves an external material-sector interface and a future periodic-background/Bloch derivation as separate admissible routes.
+
+## Calorine lattice-interface input boundary
+
+- Run `python -m docs.scripts.audit.audit_topic13_calorine_lattice_interface_inputs`.
+- Run `python -m pytest docs/core/test/test_topic13_calorine_lattice_interface_inputs.py -q`.
+- Require the archived 12x12x6 HDF5 size and SHA-256 to match its source summary.
+- Require finite `frequency`, `qpoint`, `weight`, `group_velocity`, `heat_capacity`, total `gamma` and `mode_kappa` arrays; total `gamma` must be nonnegative on the recorded grid.
+- Scan all local reproduction HDF5 files for collision matrix/eigenvectors and Normal/Umklapp-resolved fields; absence must remain explicit.
+- Preserve the existing full-LBTE sign/stability warning and prohibit `gamma_total=gamma_U` or `gamma_total=gamma_R` without a derived decomposition.
+- Prohibit Ding-equivalence, UET coupling, source-grade uncertainty, fit, holdout or physical transport promotion.
+- A pass closes only source-interface availability for a Calorine comparator.
+
+## Conditional UET-material lattice interface
+
+- Run `python -m docs.scripts.audit.audit_topic13_material_lattice_interface_contract`.
+- Run `python -m pytest docs/core/test/test_topic13_material_lattice_interface_contract.py -q`.
+- Keep UET `(C,Phi,Pi)` separate from material `u_i`, strain and `delta_n_qnu`; exclude `R_gen` and `R_obs` from the state.
+- Require natural-unit closure for strain, interaction energy density, exchange-rate density and conditional `alpha`.
+- Require equal-and-opposite UET/lattice exchange sources to cancel exactly.
+- Require `Z_Phi -> s Z_Phi`, `g -> g/s` to preserve the interaction and conditional-alpha product over all registered scale witnesses.
+- Keep `Z_Phi`, `g_Phi_theta`, `chi_u_theta`, collision split and SI conversion as independent required inputs; prohibit fitting them to TTG or reading Xie 2026.
+- A pass closes conditional interface architecture and identifiability only, not an accepted action term or physical transport.
+
+## Material-interface factor resolution
+
+- Run `python -m docs.scripts.audit.audit_topic13_material_interface_factor_resolution`.
+- Run `python -m pytest docs/core/test/test_topic13_material_interface_factor_resolution.py -q`.
+- Require the implemented `interaction_energy_density` interface to have no displacement, strain or `theta` argument.
+- Require `response_coupling h` to have natural mass dimension one and the conditional strain coefficient `g_Phi_theta` to have dimension three.
+- Require both complete operators to close to energy-density dimension four while preserving their distinct field support.
+- Preserve the field- and matter-coupling normalization no-go artifacts and prohibit extracting a physical residue from a canonical coordinate choice.
+- Preserve `alpha_Phi_T^nat` as a different natural-unit lane and require `numeric_alpha_phi_k_emitted=false`.
+- Admit Calorine heat capacity only as comparator evidence; require the Normal/Umklapp split to remain open.
+- Require uncertainty propagation algebra to pass with synthetic factors, but prohibit interpreting the witness as calibration.
+- Prohibit a new action term, direct `h -> g_Phi_theta` relabeling, fitting, Xie 2026 access or dependency promotion.
+- A pass closes the factor taxonomy and direct-coupling substitution no-go only. Physical `Z_Phi`, strain coupling/microscopic match, material response, accepted `C_src`, collision decomposition and SI alpha remain open.
+
+## Scalar thermoelastic response bridge
+
+- Run `python -m docs.scripts.audit.audit_topic13_scalar_thermoelastic_response_bridge`.
+- Run `python -m pytest docs/core/test/test_topic13_scalar_thermoelastic_response_bridge.py -q`.
+- Require every free-energy term to have natural energy-density dimension four.
+- Solve the zero-stress and adiabatic-entropy equations independently and require stress, entropy and closed-form response residuals `<=1e-14`.
+- Require `C_p^V-C_v^V=T*alpha_V^2*K_T` and the recovered factor `chi_u_theta=T*alpha_V*C_v^V/C_p^V`.
+- Require zero response when `alpha_V`, `g_Phi_theta`, `Z_Phi` or `DeltaPhi` is zero.
+- Expose the static stability margin `a_Phi*K_T-g_Phi_theta^2`; a negative margin must not be silently admitted.
+- Verify Lowitzer alpha/K and MP48 Cv provenance independently and require `source_combination_admitted=false` while their material/state mapping is open.
+- Prohibit anisotropic-graphite, finite-frequency, KMS, SI alpha, fit, holdout or accepted-action promotion.
+- A pass closes the conditional scalar thermoelastic form and stability bound only.
+
+## Anisotropic thermoelastic response bridge
+
+- Run `python -m docs.scripts.audit.audit_topic13_anisotropic_thermoelastic_response_bridge`.
+- Run `python -m pytest docs/core/test/test_topic13_anisotropic_thermoelastic_response_bridge.py -q`.
+- Require a symmetric positive-definite 3x3 normal-stiffness block and natural-unit closure for every free-energy term.
+- Require zero-stress, adiabatic-entropy, heat-capacity and closed-form map residuals `<=1e-14`.
+- Require `C_sigma=C_epsilon+T*alpha:C:alpha` and `DeltaT=T*(alpha:G)*Phi_E/C_sigma`.
+- For the hexagonal lane, verify `alpha:G=2*alpha_a*g_a+alpha_c*g_c` and the explicit `alpha:C:alpha` contraction.
+- Require basal-axis permutation covariance and exact recovery of the scalar one-axis parent.
+- Expose `a_Phi-G:S:G`; negative Schur margin must remain inadmissible.
+- Keep Bosak stiffness dynamic/elastic rather than isothermal and preserve the TPG mixed-specimen boundary; require `source_combination_admitted=false`.
+- Prohibit accepted-action, physical tensor, dynamic transport, fit, holdout or claim promotion.
+- A pass closes the conditional anisotropic map and stability form only.

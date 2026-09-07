@@ -1,11 +1,107 @@
 # UET GR Closed-Limit and Non-Closed Response Research Specification
 
-> **Status:** `EXTERNAL HYPERBOLIC PHASE-FIELD COMPARATOR VERIFIED / PROGRAM BLOCKED`
+> **Status:** `GH PERIODIC PRESCRIBED TOPIC 13 MATTER SOURCE VERIFIED / PARENT PARTIAL`
 > **Current claim class:** `B`
-> **Current controlling blocker:** `noether_density_to_phase_field_order_parameter_map_missing`
+> **Current controlling blocker:** `curved_3p1_constraint_preserving_boundaries_and_dimensional_observable_mapping_missing`
 > **Program rule:** General relativity is the null/closed-response model. A
 > non-zero UET response is an empirical alternative, not a conclusion assumed
 > from the existence of the model.
+
+## Current curved 3+1 boundary (2026-08-30, prescribed Topic 13 matter-source wave)
+
+The bounded He-4/O(2) Topic 13 handoff now constructs a covariant relativistic-fluid
+stress tensor, projects it to Eulerian `rho`, `S_i`, and `S_ij`, and supplies the
+trace-reversed prescribed matter term to the nonlinear GH `Pi_ab` right-hand side.
+Rest and boosted perfect-fluid reconstruction, vacuum-null behavior, ontology guards,
+and natural-to-SI multiplicative scaling pass. This closes
+`CORE_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING_READY` for its declared lane.
+
+The parent advances to
+`PARTIAL_CURVED_3P1_GH_PERIODIC_PRESCRIBED_MATTER_READY`. This does not evolve the
+matter state, prove stress-energy conservation in time, fix a physical SI Einstein
+coupling, or supply a detector observable. Constraint-preserving non-periodic
+boundaries and dimensional observable mapping remain the parent blockers, so Gravity
+remains blocked.
+
+## Previous curved 3+1 boundary (2026-08-29, periodic GH evolution wave)
+
+The verified nonlinear vacuum GH RHS now advances with classical RK4 under a
+fixed conservative characteristic CFL contract. Exact Minkowski and harmonic
+gauge-wave controls pass; the gauge wave shows second-order spatial and
+fourth-order temporal convergence. Gauge, reduction, and curl constraints are
+recorded without projection or filtering, and the declared reduction
+violation follows the analytic `exp(-gamma2 t)` damping rate.
+
+This closes `CORE_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY` for its
+periodic control lane. The parent advances to
+`PARTIAL_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY`, not
+`CLOSED_FOR_CORE`. That historical wave left constraint-preserving non-periodic
+boundaries, Topic 13 stress-energy wiring, dimensional detector observables, and
+strong-field or multi-chart validation open; the prescribed matter-wiring item is
+closed by the 2026-08-30 wave above.
+
+The selected first-order GH branch now evaluates the complete nonlinear vacuum
+right-hand sides in Lindblom et al. Eqs. (35)-(39) and reconstructs the
+first-order gauge constraint in Eq. (40). Lapse, shift, unit normal, spatial
+inverse metric, lowered Christoffel symbols, and the `gamma0` algebraic
+gauge-constraint damping term are derived or evaluated from the declared GH
+state. Constant-grid and spatially varying periodic states agree with an
+independent explicit-index reference at the locked algebraic threshold.
+
+This also preserves `CORE_CURVED_3P1_GH_NONLINEAR_VACUUM_RHS_READY` as the
+operator-level dependency. That result is not relabelled as matter-coupled or
+externally validated by the time-evolution control.
+
+The selected first-order GH branch has now passed its principal-system gate.
+The implementation source-locks Eqs. (27)-(34) of Lindblom et al., enforces
+`gamma3=gamma1*gamma2`, locks the linearly-degenerate `gamma1=-1` branch, and
+checks the positive symmetrizer condition `Lambda^2>gamma2^2`. Fifteen
+direction/parameter cases have a complete rank-5 characteristic transform,
+source-matched speeds, normal-frame wave speeds `+1/-1`, and algebraic
+residuals at roundoff. The reduction-constraint damping identity and
+second-order spatial operator convergence also pass.
+
+This closes `CORE_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY` for its declared lane.
+Together with the nonlinear vacuum-RHS and periodic evolution results it
+removes the formulation, RHS-transcription, time-integration, CFL, and
+periodic constraint-propagation blockers. The later prescribed-matter wave
+closes construction/projection only; boundaries and observables remain open.
+
+The parent now also evaluates the nonlinear periodic ADM metric and
+extrinsic-curvature right-hand sides under declared lapse and shift. Minkowski
+and dust-FLRW instantaneous controls pass, and the lapse-Hessian and shift-Lie
+operators show second-order convergence. This closes
+`CORE_CURVED_3P1_ADM_EVOLUTION_RHS_READY` for its operator lane only.
+
+The fixed-geodesic ADM principal symbol has a defective zero-speed sector:
+algebraic multiplicity 6, geometric multiplicity 3, and eigenvector rank 9 of
+12 in every preregistered direction. That branch is therefore
+`CLOSED_AS_NO_GO`; it is not repaired with dissipation or looser thresholds.
+The source-locked next branch is first-order generalized harmonic. Its
+principal, nonlinear vacuum-RHS, and periodic evolution gates are implemented
+in `CORE_CURVED_3P1_EVOLUTION_BRANCH_SPEC.md`.
+
+The curved parent now evaluates the standard ADM Hamiltonian and momentum
+constraints and computes their spatial differential-geometry inputs on a
+uniform periodic Cartesian chart. The implementation constructs the
+Levi-Civita connection, spatial Ricci tensor/scalar, and
+`D_j(K^j_i-delta^j_i K)` directly from declared `gamma_ij`, `K_ij`, and grid
+spacing. It is source-linked to Gourgoulhon's
+[3+1 formalism notes](https://arxiv.org/abs/gr-qc/0703035).
+
+Cartesian-flat exact-zero controls, a conformally-flat analytic Ricci control,
+and a manufactured off-diagonal-`K` divergence control pass. The two
+nontrivial operators show second-order spatial convergence over three locked
+resolutions. Invalid spacing/metrics are rejected; no clipping, fitting, or
+holdout data are used.
+
+This closes the ADM constraint, periodic geometry, ADM RHS operator,
+fixed-gauge no-go, GH principal system, nonlinear vacuum-RHS, and periodic GH
+time-evolution subresults for their individual lanes only. The parent result
+remains `PARTIAL`: non-periodic boundary treatment and dimensional observable
+mapping remain open. The Topic 13 prescribed projection now passes, while
+self-consistent matter evolution/conservation remains outside that result.
+Gravity is not unlocked.
 
 ## 1. Research question
 

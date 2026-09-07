@@ -1,0 +1,122 @@
+{
+  "schema_version": "t13-he4-o2-response-calibration-audit-v1",
+  "artifact": "t13_he4_o2_response_calibration_audit",
+  "generated_at": "2026-08-28",
+  "status": "PASS_HE4_LOCAL_ALPHA_AND_FIELD_NORMALIZATION",
+  "major_result": {
+    "major_result_id": "T13_HE4_LOCAL_ALPHA_AND_FIELD_NORMALIZATION",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": "A local He-4 normalized response coordinate, independent alpha_Phi_K calibration, conservative property-uncertainty bound, natural-to-kelvin temperature scale, and signed action-field normalization Z_Phi.",
+    "equation_or_mapping": {
+      "observable_coordinate": "Delta_Phi_norm = Delta(rho_s/rho) / (rho_s/rho)|T0",
+      "measurement": "Delta_Tq = alpha_Phi_K Delta_Phi_norm",
+      "action_field_map": "Delta_Phi_norm = Z_Phi Delta_Phi_natural",
+      "temperature_map": "T_K = theta_T * T_natural"
+    },
+    "units": {
+      "alpha_Phi_K": "K per normalized base Phi",
+      "Phi_norm": "normalized base Phi",
+      "Z_Phi": "normalized base Phi per natural action Phi"
+    },
+    "derivation_class": "INDEPENDENT_EQUILIBRIUM_SOURCE_CALIBRATION_PLUS_ACTION_DERIVED_NATURAL_BRIDGE",
+    "observable": "local He-4 superfluid-fraction response around 1.7 K at SVP",
+    "data_role": "CALIBRATION_NOT_HOLDOUT",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_o2_local_response_calibration_source_package.json",
+        "sha256": "f10e9468c4417730dff0eed5c45d661fdf7aa1a96c7a3375792de98e4dbfac17"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_o2_physical_anchor_source_package.json",
+        "sha256": "4d02b1faac1cefe3ce79ced525183e2d38066604808d91f9c2769d515ab8b770"
+      },
+      {
+        "path": "docs/core/he4_o2_response_calibration.py",
+        "sha256": "314a4a100fe7b71cb3dd81051c261a3a1f1ec80d7d4d3a08456a997629f253e3"
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_action_thermal_observable_bridge_audit.json",
+        "sha256": "7ba49d3f629c91f3f88dda6ad717d8928e58439de7517a5979f0a465b9f52585"
+      }
+    ],
+    "verification_status": "PASS_HE4_LOCAL_ALPHA_AND_FIELD_NORMALIZATION",
+    "open_blockers": [
+      "absolute_temperature_scale_uncertainty_not_included",
+      "SI_energy_density_scale_not_closed",
+      "normalized_beta_SI_map_not_closed",
+      "physical_transport_coefficient_not_closed"
+    ],
+    "dependency_unlocked": "Independent local alpha_Phi_K and action-field normalization lanes; no SI energy-density, beta, transport, TTG, or Full Topic 13 unlock.",
+    "claim_boundary": "The package calibrates one local He-4 response coordinate and its action-field orientation. It is lane-specific, conditional on the source temperature grid, and does not identify Phi universally with superfluid density or close the SI energy-density and transport maps."
+  },
+  "record": {
+    "record_id": "T13_HE4_LOCAL_SUPERFLUID_RESPONSE_ALPHA",
+    "record_kind": "EXTERNAL_INPUT",
+    "data_role": "CALIBRATION",
+    "temperature_K": 1.7,
+    "temperature_step_K": 0.1,
+    "superfluid_fraction_lower": 0.837616642011803,
+    "superfluid_fraction_reference": 0.7714130767785583,
+    "superfluid_fraction_upper": 0.6867112705478066,
+    "d_superfluid_fraction_dT_per_K": -0.754526857319982,
+    "d_superfluid_fraction_dT_uncertainty_bound_per_K": 0.038112008633771635,
+    "alpha_Phi_K": -1.02237987858849,
+    "alpha_uncertainty_K_per_normalized_base_Phi": 0.056753979576408715,
+    "alpha_units": "K per normalized base Phi",
+    "phi_units": "normalized base Phi",
+    "phi_mapping": "Delta_Phi_norm = Delta(rho_s/rho) / (rho_s/rho)|T0",
+    "temperature_mapping": "T_K = theta_T * T_natural",
+    "theta_T_K_per_natural_temperature": 7.727272727272727,
+    "Z_Phi_normalized_per_natural_Phi": -0.017488421860832278,
+    "Z_Phi_uncertainty_bound": 0.0009712263618290997,
+    "action_mapping": "Delta_Phi_norm = Z_Phi Delta_Phi_natural",
+    "uncertainty_class": "CONSERVATIVE_SOURCE_AND_NUMERICAL_BOUND_CONDITIONAL_ON_RECOMMENDED_T_GRID",
+    "holdout_policy": {
+      "xie_2026_accessed": false,
+      "target_curve_used": false,
+      "fit_or_tuning_used": false
+    }
+  },
+  "source_identity": {
+    "primary_source": "R. J. Donnelly and C. F. Barenghi, The Observed Properties of Liquid Helium at the Saturated Vapor Pressure, J. Phys. Chem. Ref. Data 27, 1217-1274 (1998)",
+    "doi": "10.1063/1.556028",
+    "section_locator": "Section 2, adopted superfluid-density database and comments; Section 1, density fit",
+    "official_pdf_locator": "https://srd.nist.gov/jpcrdreprint/1.556028.pdf",
+    "interactive_locator": "https://www.mas.ncl.ac.uk/helium/",
+    "interactive_snapshot_sha256": "12665f1450f4a1370206e23a11eff4b13606041e870ccbf59805f842e423a25a",
+    "interactive_snapshot_bytes": 98593,
+    "source_row_package": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_o2_physical_anchor_source_package.json",
+    "permission_or_terms": "Public reference-data evaluation used for internal research calibration; remote source is not redistributed."
+  },
+  "uncertainty_source": {
+    "superfluid_density_relative_uncertainty_bound": 0.005,
+    "superfluid_density_locator": "Section 2 adopted database: Maynard, 1.2-2.15 K, uncertainty <0.5%; Tam and Ahlers, 1.553-2.15917 K, uncertainty <0.5%",
+    "total_density_fit_relative_deviation": 5e-07,
+    "total_density_locator": "Section 1 density representation: mean fractional deviation from the fit is 0.5e-6",
+    "interpretation": "Conservative upper bounds, not one-standard-deviation estimates; covariance is unavailable, so absolute contributions are added rather than combined as independent statistical errors.",
+    "excluded_uncertainty": "Absolute ITS-90 temperature-scale uncertainty is not supplied by this package; the result is conditional on the recommended source temperature grid."
+  },
+  "checks": {
+    "source_package_is_calibration": true,
+    "source_rows_are_non_holdout": true,
+    "source_hash_is_locked": true,
+    "superfluid_uncertainty_bound_is_source_locked": true,
+    "density_fit_deviation_is_source_locked": true,
+    "temperature_grid_condition_is_explicit": true,
+    "alpha_is_finite_nonzero": true,
+    "alpha_uncertainty_bound_is_positive": true,
+    "alpha_sign_matches_source_slope": true,
+    "field_normalization_is_finite_nonzero": true,
+    "field_normalization_uncertainty_is_positive": true,
+    "natural_bridge_is_action_derived": true,
+    "natural_bridge_did_not_use_landauer": true,
+    "no_target_data": true,
+    "no_fit_or_tuning": true,
+    "xie_holdout_unread": true,
+    "no_threshold_adjustment": true
+  },
+  "controlling_blocker": "SI_energy_density_scale_and_normalized_beta_map_missing",
+  "next_controller": "Fix one state-matched SI free-energy or pressure scale with uncertainty, then propagate Z_Phi into normalized beta without identifying the SVP heat capacity with the fixed-mu action susceptibility.",
+  "claim_boundary": "The package calibrates one local He-4 response coordinate and its action-field orientation. It is lane-specific, conditional on the source temperature grid, and does not identify Phi universally with superfluid density or close the SI energy-density and transport maps."
+}

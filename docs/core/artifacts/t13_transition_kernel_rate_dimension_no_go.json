@@ -1,0 +1,143 @@
+{
+  "schema_version": "t13-transition-rate-dimension-no-go-v1",
+  "major_result_id": "T13_TRANSITION_KERNEL_RATE_DIMENSION_NO_GO",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "CLOSED_FOR_LANE",
+  "closure_disposition": "CLOSED_AS_DIMENSIONAL_NO_GO",
+  "verification_status": "PASS_TRANSITION_RATE_DIMENSION_NO_GO",
+  "what_is_closed": [
+    "The current finite-channel transition operator scales as energy squared, both symbolically and under independent whole-action energy rescaling.",
+    "The operator is therefore dimensionally incompatible with L-i*omega*I when omega is an energy/inverse time; the absolute positive-eigenvalue cutoff adds a separate scale-covariance failure.",
+    "Algebraic BS/KMS identities using this operator cannot establish a physical rate until invariant phase-space and state normalization are repaired."
+  ],
+  "equation_registry_ids": [
+    "uet.o2.thermal.transition_kernel_rate_dimension_no_go"
+  ],
+  "registration_status": "CANDIDATE_DIAGNOSTIC_NOT_CENTRAL_ACCEPTANCE",
+  "equation_or_mapping": {
+    "current": "W_c~(dp1*p1^2)(dp2*p2^2)*sigma gives E^4; v_c~1/sqrt(w) gives E^-1; L=sum W_c v_c v_c^T gives E^2",
+    "required": "L_rate must have E^1 so (L_rate-i*omega I)^-1 is dimensionally defined",
+    "repair": "derive the linearized single-particle operator from Lorentz-invariant dPi=d^3p/[(2pi)^3 2E], delta^4, symmetry factors and a declared Hilbert-space weight"
+  },
+  "ontology": {
+    "C": "unchanged",
+    "Phi": "unchanged",
+    "R_gen": "excluded",
+    "R_obs": "excluded"
+  },
+  "unit_lane": "natural_units",
+  "units": {
+    "quadrature_weight_dp": 1,
+    "p_squared_each": 2,
+    "two_radial_measures": 6,
+    "cross_section": -2,
+    "channel_rate": 4,
+    "state_weight_dp_p2_over_T": 2,
+    "transition_vector": -1,
+    "collision_operator": 2,
+    "required_frequency_rate": 1
+  },
+  "derivation_class": "dimensional_no_go_with_energy_covariance_witness",
+  "observable": "Collision-operator rate dimension, not a transport coefficient",
+  "data_role": "DERIVED_SYNTHETIC_DIAGNOSTIC",
+  "scale_witnesses": [
+    {
+      "scale": 1.5,
+      "base_rate": 3.5253187346034286e-12,
+      "scaled_rate": 7.931967152857731e-12,
+      "operator_trace_ratio": 2.2500000000000053,
+      "measured_energy_exponent": 2.0000000000000058,
+      "reported_positive_mode_rate_ratio": 2.250000000000005,
+      "reported_positive_mode_rate_exponent": 2.0000000000000053,
+      "expected_rate_ratio": 1.5,
+      "current_formula_ratio": 2.25,
+      "dc_response_ratio": 0.9999999999999504
+    },
+    {
+      "scale": 2.0,
+      "base_rate": 3.5253187346034286e-12,
+      "scaled_rate": 1.4101274938413714e-11,
+      "operator_trace_ratio": 4.0,
+      "measured_energy_exponent": 2.0,
+      "reported_positive_mode_rate_ratio": 4.0,
+      "reported_positive_mode_rate_exponent": 2.0,
+      "expected_rate_ratio": 2.0,
+      "current_formula_ratio": 4.0,
+      "dc_response_ratio": 1.0
+    },
+    {
+      "scale": 3.0,
+      "base_rate": 3.5253187346034286e-12,
+      "scaled_rate": 2.115892049649278e-11,
+      "operator_trace_ratio": 9.000000000000021,
+      "measured_energy_exponent": 2.000000000000002,
+      "reported_positive_mode_rate_ratio": 6.001987930567361,
+      "reported_positive_mode_rate_exponent": 1.6312312856858435,
+      "expected_rate_ratio": 3.0,
+      "current_formula_ratio": 9.0,
+      "dc_response_ratio": 1.7164847489115441e+19
+    }
+  ],
+  "checks": {
+    "numeric_operator_scales_E2": true,
+    "symbolic_operator_dimension_E2": true,
+    "required_rate_dimension_E1": true,
+    "dimension_mismatch_is_nonzero": true
+  },
+  "open_blockers": [
+    "lorentz_invariant_linearized_collision_measure",
+    "Hilbert_space_state_weight_normalization",
+    "charge_resolved_contact_plus_Phi_rung",
+    "self_consistent_width_and_ladder"
+  ],
+  "controlling_blocker": "collision_operator_energy_dimension_and_invariant_measure_repair_missing",
+  "source_hashes": {
+    "docs/scripts/audit/audit_topic13_transition_kernel_rate_dimension_no_go.py": "658f3686e47a49a985bab129215574549ca316081665cfcfa64b278246177d0a",
+    "docs/core/test/test_topic13_transition_kernel_rate_dimension_no_go.py": "52fc45f8780728b5dd0e2c6809bafe063f5a890f1008ac78c664cf55c2be92b0",
+    "docs/core/uet_o2_action_derived_transition_kernel.py": "2f818500b353e8cf81caddf892bcf2db43a4341fe831b6f67e62423e3c2feb8f",
+    "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py": "eb69cc8ab6c35d782fbc687bc6fa503a22ae76c78e28d65c466eaf0e7e4719a9"
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_dressed_ra_pair_microscopic_rung_boundary_audit.json",
+      "sha256": "750da3a5b6546482d25784330f875c7e0a01a787a7a5c74db31349093307826f"
+    }
+  ],
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "xie_2026_accessed": false,
+  "parameter_fitting_performed": false,
+  "claim_boundary": "Dimensional rejection of the current finite-channel rate operator only; not a repaired collision kernel, width, ladder, Kubo coefficient, SI transport or Full Topic 13 closure.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE/CLOSED_AS_NO_GO",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "The current finite-channel transition operator scales as energy squared, both symbolically and under independent whole-action energy rescaling.",
+      "The operator is therefore dimensionally incompatible with L-i*omega*I when omega is an energy/inverse time; the absolute positive-eigenvalue cutoff adds a separate scale-covariance failure.",
+      "Algebraic BS/KMS identities using this operator cannot establish a physical rate until invariant phase-space and state normalization are repaired."
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "lorentz_invariant_linearized_collision_measure",
+      "Hilbert_space_state_weight_normalization",
+      "charge_resolved_contact_plus_Phi_rung",
+      "self_consistent_width_and_ladder"
+    ],
+    "DEPENDENCY_UNLOCKED": [],
+    "STATUS": "PASS_TRANSITION_RATE_DIMENSION_NO_GO",
+    "WHAT_CHANGED": "Added symbolic and whole-action energy-rescaling evidence that the existing transition operator has E^2 rather than rate dimension E.",
+    "EQUATION_OR_MAPPING": {
+      "current": "W_c~(dp1*p1^2)(dp2*p2^2)*sigma gives E^4; v_c~1/sqrt(w) gives E^-1; L=sum W_c v_c v_c^T gives E^2",
+      "required": "L_rate must have E^1 so (L_rate-i*omega I)^-1 is dimensionally defined",
+      "repair": "derive the linearized single-particle operator from Lorentz-invariant dPi=d^3p/[(2pi)^3 2E], delta^4, symmetry factors and a declared Hilbert-space weight"
+    },
+    "VERIFICATION": {
+      "numeric_operator_scales_E2": true,
+      "symbolic_operator_dimension_E2": true,
+      "required_rate_dimension_E1": true,
+      "dimension_mismatch_is_nonzero": true
+    },
+    "CONTROLLING_BLOCKER": "collision_operator_energy_dimension_and_invariant_measure_repair_missing",
+    "NEXT_ACTION": "Re-derive the single-particle linearized collision operator with invariant phase space and a declared weighted inner product before inserting the production rung.",
+    "CLAIM_BOUNDARY": "Dimensional rejection of the current finite-channel rate operator only; not a repaired collision kernel, width, ladder, Kubo coefficient, SI transport or Full Topic 13 closure."
+  }
+}

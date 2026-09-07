@@ -1,0 +1,308 @@
+{
+  "schema_version": "t13-csrc-reconciliation-v1",
+  "artifact": "t13_csrc_reconciliation_audit",
+  "generated_at": "2026-08-29",
+  "status": "PASS_SCOPED_CSRC_RECONCILIATION_OPEN",
+  "major_result": {
+    "major_result_id": "T13_CSRC_SOURCE_RECONCILIATION",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "Ding official OA, author-request, public phonon, Huberman, Ding 2017, Figshare, Calorine, and MP48 C_src routes are classified by payload and acceptance state",
+      "numeric C_src-like candidates are separated from Ding-compatible accepted C_src",
+      "material-state equivalence and source-grade uncertainty are explicit acceptance fields",
+      "no synthetic route, comparator, or holdout value is promoted"
+    ],
+    "what_remains_open": [
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+      "material_regime_mapping_to_TTG_not_closed",
+      "c_v_source_uncertainty_not_closed",
+      "author_data_or_independent_reproduction_payload_not_received"
+    ],
+    "dependency_unlocked": "C_src source-route reconciliation only; no Ding C_src, EOS, alpha, transport, or Full Topic 13 unlock",
+    "equation_or_mapping": {
+      "mode_sum": "C_src(T) = sum_mu c_mu(T)",
+      "thermal_response": "Delta_Tq = Delta_u_ph / C_src(T)",
+      "acceptance": "numeric rows + units + material/state match + source-grade uncertainty + convergence/provenance"
+    },
+    "units": {
+      "C_src": "J m^-3 K^-1",
+      "Delta_Tq": "K",
+      "source_route_metadata": "not a calibration quantity"
+    },
+    "derivation_class": "source-route reconciliation; external candidate reproduction and standard mapping kept separate from Ding acceptance",
+    "observable": "mode-resolved or equivalent C_src(T) source acceptance state",
+    "data_role": "INTERNAL_CSRC_SOURCE_RECONCILIATION_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
+        "sha256": "1828db74760ac53c73345d0e4a8adc8fc00fc16bb25e84809a73aaa3cd9b3d9a",
+        "role": "official Ding OA payload availability boundary"
+      },
+      {
+        "path": "docs/core/artifacts/t13_ding_pbte_author_request_audit.json",
+        "sha256": "66679f962d0725455c73bfbc856f6c5722b039a3c15b16d4620081d89b4b892a",
+        "role": "bounded corresponding-author acquisition package"
+      },
+      {
+        "path": "docs/core/artifacts/t13_public_phonon_route_screening_audit.json",
+        "sha256": "ec5ed446dbc6469414dced797e574c0db002e392dffa3bcf3d3dbffef3e57e3a",
+        "role": "public phonon route screening boundary"
+      },
+      {
+        "path": "docs/core/artifacts/t13_huberman_2019_public_pbte_boundary_audit.json",
+        "sha256": "22b065abd8177a9b1f181e79761baadc0c5c6242d44bea74a8fd6022aafec3c4",
+        "role": "Huberman public PBTE formula/setup boundary"
+      },
+      {
+        "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json",
+        "sha256": "5e4e0d42d6e70612eabce988b86ab10b628dea14d4270bf2364ad58f572d014b",
+        "role": "Calorine public candidate-route boundary"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_nep_bte_reproduction_source_package.json",
+        "sha256": "a82b25ed00f896b759d2b577bdd046faf1c1ef1399b6f5d12b71c8bd6318e5ed",
+        "role": "Calorine/Zenodo numeric PBTE candidate reproduction"
+      },
+      {
+        "path": "docs/core/artifacts/t13_mp48_spectral_csrc_reproduction_audit.json",
+        "sha256": "5b2c6332fb70c6ae98749d96051cc4dbbffa04d37eed8f90e09168d35c61c091",
+        "role": "MP48 harmonic spectral C_src-like reproduction"
+      },
+      {
+        "path": "docs/core/artifacts/t13_mp48_ding_csrc_response_mapping_audit.json",
+        "sha256": "1deefbb6ebbed62345db2063612f9d8c172902dcb93068b800e579455e0d297c",
+        "role": "MP48-to-Ding standard mode-sum response mapping"
+      },
+      {
+        "path": "docs/core/artifacts/t13_ding_2017_acs_supplementary_payload_boundary_audit.json",
+        "sha256": "e2676e6e59ba412944d27057333ece6b3ae827600a30125e63725390b176c8cb",
+        "role": "Ding 2017 public supplementary payload boundary"
+      },
+      {
+        "path": "docs/core/artifacts/t13_figshare_dft_force_data_boundary_audit.json",
+        "sha256": "5128866124bbee80e1b3a100da54d37ceb41b4695260c182c1b0d952326ad9da",
+        "role": "public Figshare DFT energy/force archive boundary"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_CSRC_RECONCILIATION_OPEN",
+    "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+    "claim_boundary": "This closes a C_src route boundary only. Numeric Calorine/MP48 candidates are not Ding-equivalent, are not accepted source uncertainty, and cannot calibrate alpha_Phi_K or close Full Topic 13."
+  },
+  "summary": {
+    "route_count": 10,
+    "numeric_csrc_candidate_count": 3,
+    "source_grade_uncertainty_count": 0,
+    "ding_material_state_match_count": 0,
+    "ding_author_payload_count": 0,
+    "accepted_independent_reproduction_count": 0,
+    "accepted_ding_csrc_count": 0,
+    "accepted_for_full_topic13_count": 0
+  },
+  "candidates": [
+    {
+      "candidate_id": "ding_official_oa_inventory",
+      "artifact": {
+        "path": "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
+        "sha256": "1828db74760ac53c73345d0e4a8adc8fc00fc16bb25e84809a73aaa3cd9b3d9a",
+        "role": "official Ding OA payload availability boundary"
+      },
+      "candidate_class": "DING_PUBLIC_NO_PAYLOAD",
+      "numeric_csrc_present": false,
+      "source_grade_uncertainty_present": false,
+      "ding_material_state_match": false,
+      "accepted_for_independent_csrc": false,
+      "eligible_for_full_topic13": false,
+      "reason": "The captured official OA distribution contains article/supplementary objects but no mode-resolved C_src payload.",
+      "controlling_blocker": "ding_pbte_author_data_or_independent_reproduction_package_missing",
+      "author_request_route": true
+    },
+    {
+      "candidate_id": "ding_author_request_not_received",
+      "artifact": {
+        "path": "docs/core/artifacts/t13_ding_pbte_author_request_audit.json",
+        "sha256": "66679f962d0725455c73bfbc856f6c5722b039a3c15b16d4620081d89b4b892a",
+        "role": "bounded corresponding-author acquisition package"
+      },
+      "candidate_class": "DING_REQUEST_SPECIFICATION",
+      "numeric_csrc_present": false,
+      "source_grade_uncertainty_present": false,
+      "ding_material_state_match": false,
+      "accepted_for_independent_csrc": false,
+      "eligible_for_full_topic13": false,
+      "reason": "The request schema is complete, but no permissioned response or numeric payload has been received.",
+      "controlling_blocker": "author_data_or_independent_reproduction_payload_not_received",
+      "request_executed": false
+    },
+    {
+      "candidate_id": "public_phonon_route_screening",
+      "artifact": {
+        "path": "docs/core/artifacts/t13_public_phonon_route_screening_audit.json",
+        "sha256": "ec5ed446dbc6469414dced797e574c0db002e392dffa3bcf3d3dbffef3e57e3a",
+        "role": "public phonon route screening boundary"
+      },
+      "candidate_class": "PUBLIC_ROUTE_NO_CORE_PAYLOAD",
+      "numeric_csrc_present": false,
+      "source_grade_uncertainty_present": false,
+      "ding_material_state_match": false,
+      "accepted_for_independent_csrc": false,
+      "eligible_for_full_topic13": false,
+      "reason": "Materials Project, LCBOPII, and Dryad routes provide metadata or method context only; no accepted C_src payload was imported.",
+      "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+      "route_count": 3
+    },
+    {
+      "candidate_id": "huberman_public_pbte",
+      "artifact": {
+        "path": "docs/core/artifacts/t13_huberman_2019_public_pbte_boundary_audit.json",
+        "sha256": "22b065abd8177a9b1f181e79761baadc0c5c6242d44bea74a8fd6022aafec3c4",
+        "role": "Huberman public PBTE formula/setup boundary"
+      },
+      "candidate_class": "PUBLIC_FORMULA_ONLY",
+      "numeric_csrc_present": false,
+      "source_grade_uncertainty_present": false,
+      "ding_material_state_match": false,
+      "accepted_for_independent_csrc": false,
+      "eligible_for_full_topic13": false,
+      "reason": "The public route provides PBTE equations and setup, but no machine-readable mode C_src, force constants, or uncertainty rows.",
+      "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    },
+    {
+      "candidate_id": "calorine_candidate_route_boundary",
+      "artifact": {
+        "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json",
+        "sha256": "5e4e0d42d6e70612eabce988b86ab10b628dea14d4270bf2364ad58f572d014b",
+        "role": "Calorine public candidate-route boundary"
+      },
+      "candidate_class": "CANDIDATE_ROUTE_NO_DEPOSITED_ROWS",
+      "numeric_csrc_present": false,
+      "source_grade_uncertainty_present": false,
+      "ding_material_state_match": false,
+      "accepted_for_independent_csrc": false,
+      "eligible_for_full_topic13": false,
+      "reason": "The tutorial route identifies inputs and an RTA workflow but does not deposit accepted mode-resolved C_src rows or source-grade uncertainty.",
+      "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    },
+    {
+      "candidate_id": "calorine_numeric_reproduction",
+      "artifact": {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_nep_bte_reproduction_source_package.json",
+        "sha256": "a82b25ed00f896b759d2b577bdd046faf1c1ef1399b6f5d12b71c8bd6318e5ed",
+        "role": "Calorine/Zenodo numeric PBTE candidate reproduction"
+      },
+      "candidate_class": "NUMERIC_INDEPENDENT_CANDIDATE",
+      "numeric_csrc_present": true,
+      "source_grade_uncertainty_present": false,
+      "ding_material_state_match": false,
+      "accepted_for_independent_csrc": false,
+      "eligible_for_full_topic13": false,
+      "reason": "Numeric volumetric C_src rows and mesh convergence exist, but the periodic NEP/RTA graphite state is not Ding-equivalent and has no source-grade uncertainty.",
+      "controlling_blocker": "calorine_route_material_regime_mapping_to_ding_missing",
+      "latest_mesh_pair_pass": true,
+      "acceptance_for_full_topic13": false
+    },
+    {
+      "candidate_id": "mp48_spectral_csrc",
+      "artifact": {
+        "path": "docs/core/artifacts/t13_mp48_spectral_csrc_reproduction_audit.json",
+        "sha256": "5b2c6332fb70c6ae98749d96051cc4dbbffa04d37eed8f90e09168d35c61c091",
+        "role": "MP48 harmonic spectral C_src-like reproduction"
+      },
+      "candidate_class": "NUMERIC_HARMONIC_COMPARATOR",
+      "numeric_csrc_present": true,
+      "source_grade_uncertainty_present": false,
+      "ding_material_state_match": false,
+      "accepted_for_independent_csrc": false,
+      "eligible_for_full_topic13": false,
+      "reason": "The DOS integration reproduces harmonic heat capacity in volumetric units, but it is not Ding PBTE and lacks source-grade uncertainty/material equivalence.",
+      "controlling_blocker": "Ding_material_regime_and_mode_resolved_C_src_acceptance_missing",
+      "cross_file_reproduction": true
+    },
+    {
+      "candidate_id": "mp48_ding_mode_sum_mapping",
+      "artifact": {
+        "path": "docs/core/artifacts/t13_mp48_ding_csrc_response_mapping_audit.json",
+        "sha256": "1deefbb6ebbed62345db2063612f9d8c172902dcb93068b800e579455e0d297c",
+        "role": "MP48-to-Ding standard mode-sum response mapping"
+      },
+      "candidate_class": "NUMERIC_STANDARD_MAPPING_COMPARATOR",
+      "numeric_csrc_present": true,
+      "source_grade_uncertainty_present": false,
+      "ding_material_state_match": false,
+      "accepted_for_independent_csrc": false,
+      "eligible_for_full_topic13": false,
+      "reason": "The mode-sum identity and unit conversion are explicit, but the route remains a standard harmonic comparator rather than Ding PBTE acceptance.",
+      "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+      "mapping_scope": "This closes a standard response-mapping contract for an independent harmonic comparator. It is not Ding PBTE C_src acceptance, same-regime material validation, a Phi-to-temperature prediction, alpha_Phi_K calibration, or Full Topic 13 closure."
+    },
+    {
+      "candidate_id": "ding_2017_public_supplementary_boundary",
+      "artifact": {
+        "path": "docs/core/artifacts/t13_ding_2017_acs_supplementary_payload_boundary_audit.json",
+        "sha256": "e2676e6e59ba412944d27057333ece6b3ae827600a30125e63725390b176c8cb",
+        "role": "Ding 2017 public supplementary payload boundary"
+      },
+      "candidate_class": "DING_PUBLIC_SUPPLEMENTARY_NO_NUMERIC_PAYLOAD",
+      "numeric_csrc_present": false,
+      "source_grade_uncertainty_present": false,
+      "ding_material_state_match": false,
+      "accepted_for_independent_csrc": false,
+      "eligible_for_full_topic13": false,
+      "reason": "The public Ding 2017 supplementary PDF is source-locked, but it contains methods, equations, and figures only; no machine-readable C_src rows, raw force constants, convergence, or uncertainty package is admitted.",
+      "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+      "numeric_payload_present": false
+    },
+    {
+      "candidate_id": "figshare_dft_force_data_boundary",
+      "artifact": {
+        "path": "docs/core/artifacts/t13_figshare_dft_force_data_boundary_audit.json",
+        "sha256": "5128866124bbee80e1b3a100da54d37ceb41b4695260c182c1b0d952326ad9da",
+        "role": "public Figshare DFT energy/force archive boundary"
+      },
+      "candidate_class": "PUBLIC_DFT_FORCE_DATA_NO_PBTE_PAYLOAD",
+      "numeric_csrc_present": false,
+      "source_grade_uncertainty_present": false,
+      "ding_material_state_match": false,
+      "accepted_for_independent_csrc": false,
+      "eligible_for_full_topic13": false,
+      "reason": "The public Figshare graphite archive contains DFT configuration energy/force records, but no declared units, force constants, mode heat capacities, scattering rates, or source-grade PBTE uncertainty package.",
+      "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+      "pbte_payload_present": false
+    }
+  ],
+  "checks": {
+    "all_evidence_files_present": true,
+    "ding_oa_no_payload": true,
+    "ding_request_not_received": true,
+    "public_screening_no_core_payload": true,
+    "huberman_no_numeric_payload": true,
+    "ding_2017_no_numeric_payload": true,
+    "figshare_no_pbte_payload": true,
+    "calorine_boundary_not_promoted": true,
+    "calorine_numeric_candidate_not_accepted": true,
+    "mp48_spectral_not_ding_promoted": true,
+    "mp48_mapping_not_ding_promoted": true,
+    "no_accepted_csrc_candidate": true,
+    "holdout_is_clean": true
+  },
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "xie_2026_source_data_consumed": false,
+    "target_curve_used": false,
+    "alpha_Phi_K_fit_used": false,
+    "fit_performed": false
+  },
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": "Ten C_src routes are reconciled: seven have no accepted numeric payload and three have numeric candidate outputs, but zero satisfy Ding/material/uncertainty acceptance.",
+    "WHAT_REMAINS_OPEN": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing; material mapping; source-grade uncertainty; author response.",
+    "DEPENDENCY_UNLOCKED": "None beyond C_src route visibility.",
+    "STATUS": "PASS_SCOPED_CSRC_RECONCILIATION_OPEN",
+    "WHAT_CHANGED": "Added a fail-closed reconciliation of ten C_src source routes, including the reviewed Ding 2017 supplementary and Figshare DFT boundaries; no C_src, alpha, source uncertainty, threshold, equation, or holdout role was promoted.",
+    "EQUATION_OR_MAPPING": "C_src(T)=sum_mu c_mu(T) and Delta_Tq=Delta_u_ph/C_src(T) remain standard response mappings until an accepted Ding-compatible source is received.",
+    "VERIFICATION": "All route artifacts are present and hashed; numeric candidate count is 3, source-grade uncertainty count is 0, Ding material match count is 0, and accepted count is 0.",
+    "CONTROLLING_BLOCKER": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+    "NEXT_ACTION": "Send the prepared Ding author request only with project authorization, or complete an independent same-regime reproduction with source-grade uncertainty and material mapping; do not promote Calorine/MP48 values.",
+    "CLAIM_BOUNDARY": "C_src reconciliation is closed for lane only. Full Topic 13 and global claim promotion remain blocked."
+  }
+}

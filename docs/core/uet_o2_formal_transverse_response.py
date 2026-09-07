@@ -84,11 +84,11 @@ def _branch_energies(
         if mass_sq <= 0.0:
             raise ValueError("effective mass squared must be positive")
         z = _positive(config.eos.matter.matter_kinetic, "matter_kinetic")
-        mass = sqrt(mass_sq)
-        mu_eff = sqrt(z) * abs(float(chemical_potential))
+        mass = sqrt(mass_sq / z)
+        mu_eff = abs(float(chemical_potential))
         if mu_eff >= mass:
             raise ValueError("normal branch requires effective chemical potential below mass")
-        energy = sqrt(momentum * momentum + mass_sq)
+        energy = sqrt(momentum * momentum + mass_sq / z)
         return (energy - mu_eff, energy + mu_eff)
     raise ValueError("the critical phase boundary is not evaluated")
 
@@ -120,9 +120,9 @@ def formal_transverse_quasiparticle_response(
     q = condensate_control(mu, phi, config.eos)
     branch = "condensed" if q > config.phase_tolerance else "normal"
     mass_sq = effective_mass_sq(phi, config.eos)
-    mass = sqrt(_positive(mass_sq, "effective_mass_squared"))
     z = _positive(config.eos.matter.matter_kinetic, "matter_kinetic")
-    mu_eff = sqrt(z) * abs(mu)
+    mass = sqrt(_positive(mass_sq, "effective_mass_squared") / z)
+    mu_eff = abs(mu)
     cutoff = max(
         config.cutoff_factor * t,
         config.cutoff_factor * mass,
@@ -167,7 +167,11 @@ def formal_transverse_response_contract() -> dict[str, object]:
 
     return {
         "status": FORMAL_TRANSVERSE_RESPONSE_STATUS,
+        "response_policy": "FIXED_PHI_BACKGROUND",
+        "spectrum_revision": "FIXED_PHI_CANONICAL_V2",
         "equations": {
+            "normal_quasiparticles": "E_+/-=sqrt(k^2+m_eff^2/Z) +/- mu",
+            "normal_enthalpy_check": "chi_perp=epsilon+p for the ideal relativistic normal gas only",
             "doppler_shift": "E_a(k;v)=E_a(k)+k.v+O(v^2)",
             "normal_momentum_susceptibility": "chi_perp_qp=(1/3) sum_a integral[d^3k/(2*pi)^3] k^2[-partial_E n_B(E_a)]",
             "tree_condensate_phase_stiffness": "f_s_tree=Z*(Z*mu^2-m_eff^2)/lambda for condensed q>0",

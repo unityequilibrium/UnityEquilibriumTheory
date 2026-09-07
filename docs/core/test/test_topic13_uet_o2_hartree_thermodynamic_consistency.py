@@ -48,6 +48,10 @@ def test_full_gate_exposes_equilibrium_lane_without_unlocking_topic() -> None:
     assert full["status"] == "BLOCKED_OPEN_T13_FULL_BRIDGE"
     assert full["major_result"]["closure_level"] == "PARTIAL"
     assert full["claim_promotion"] is False
-    assert "eos_transport_kms_entropy_completion_missing" in full["major_result"][
+    component = full["verification_status"]["eos_transport_kms_entropy"][
+        "topic13_flat_thermodynamic_bridge_components"
+    ]
+    assert component["closure_level"] == "CLOSED_FOR_LANE"
+    assert "physical_Kubo_coefficient_record_missing" in full["major_result"][
         "what_remains_open"
     ]

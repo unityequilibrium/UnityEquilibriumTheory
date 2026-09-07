@@ -20,9 +20,14 @@ COMMANDS = [
     "docs/scripts/audit/repair_topic13_full_gate_merge_subresult_blockers.py",
     "docs/scripts/audit/repair_topic13_full_gate_compatibility_projection.py",
     "docs/scripts/audit/audit_conserved_c_finite_cone_no_go.py",
+    "docs/scripts/audit/audit_topic13_farooqui_ig210_volumetric_cp_uncertainty.py",
+    "docs/scripts/audit/audit_topic13_flat_thermodynamic_bridge_components.py",
     "docs/scripts/audit/audit_topic13_full_bridge_gate.py",
     "docs/scripts/audit/sync_topic13_no_go_gate.py",
-    "docs/scripts/audit/audit_major_result_closure.py",
+    "docs/scripts/audit/audit_topic13_closure_matrix.py",
+    # Keep Topic 13 registry synchronization scoped; the legacy repo-wide
+    # generator rewrites unrelated historical lane records.
+    "docs/scripts/audit/sync_topic13_register_full_gate_hash_only.py",
     "docs/scripts/audit/sync_major_result_wave1_contract.py",
 ]
 

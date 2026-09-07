@@ -51,25 +51,42 @@ def main() -> int:
         full["major_result"]["what_is_closed"],
         "covariant natural-unit action route identified with explicit SI-anchor and covariant-Phi-to-normalized-Phi blockers",
     )
-    full.setdefault("verification_status", {})["covariant_action_si_anchor_route"] = {
-        "status": "PASS_ROUTE_IDENTIFIED_SI_BLOCKED",
-        "closure_level": "CLOSED_FOR_LANE",
-        "numeric_e0_emitted": False,
-        "numeric_alpha_Phi_K_emitted": False,
-        "audit": evidence(ACTION_REL, {"status": action["status"], "major_result_id": "T13_COVARIANT_ACTION_SI_ANCHOR_ROUTE"}),
-        "claim_boundary": action["claim_boundary"],
-    }
+    route_projection = full.setdefault("verification_status", {}).setdefault(
+        "covariant_action_si_anchor_route", {}
+    )
+    route_projection.update(
+        {
+            "status": "PASS_ROUTE_IDENTIFIED_SI_BLOCKED",
+            "closure_level": "CLOSED_FOR_LANE",
+            "numeric_e0_emitted": False,
+            "numeric_alpha_Phi_K_emitted": False,
+            "audit": evidence(
+                ACTION_REL,
+                {"status": action["status"], "major_result_id": "T13_COVARIANT_ACTION_SI_ANCHOR_ROUTE"},
+            ),
+            "claim_boundary": action["claim_boundary"],
+            "major_result_id": action["major_result"]["major_result_id"],
+            "data_role": action["major_result"]["data_role"],
+            "checks": action.get("checks", route_projection.get("checks", {})),
+            "controlling_blocker": action.get(
+                "controlling_blocker", route_projection.get("controlling_blocker")
+            ),
+            "next_controller": action.get("next_controller", route_projection.get("next_controller")),
+            "open_blockers": action["major_result"].get(
+                "open_blockers", route_projection.get("open_blockers", [])
+            ),
+            "coefficient_provenance": action["major_result"].get(
+                "coefficient_provenance", route_projection.get("coefficient_provenance", {})
+            ),
+        }
+    )
     append_unique(full.setdefault("evidence_artifacts", []), evidence(ACTION_REL, {"status": action["status"], "data_role": "FORMULA_AND_DEPENDENCY_AUDIT_NOT_CALIBRATION"}))
-    append_unique(full["major_result"]["what_remains_open"], "system_specific_SI_contract_and_covariant_Phi_to_normalized_Phi_map_missing")
-    full["controlling_blocker"] = "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
-    full["next_action"] = "Declare dimensionful covariant field normalization and coefficient provenance, derive the SI action-to-observable map, then revisit e0 and alpha_Phi_K without TTG fitting or Xie 2026 access."
     (ROOT / FULL_REL).write_text(json.dumps(full, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
 
     register = load(REGISTER_REL)
     register["generated_at"] = today
     full_entry = next(item for item in register["entries"] if item.get("major_result_id") == "T13_FULL_THERMODYNAMIC_BRIDGE")
     append_unique(full_entry["what_is_closed"], "covariant natural-unit action route identified with explicit SI-anchor and covariant-Phi-to-normalized-Phi blockers")
-    append_unique(full_entry["open_blockers"], "system_specific_SI_contract_and_covariant_Phi_to_normalized_Phi_map_missing")
     append_unique(full_entry["evidence_artifacts"], evidence(ACTION_REL, {"status": action["status"], "major_result_id": "T13_COVARIANT_ACTION_SI_ANCHOR_ROUTE"}))
     for item in full_entry["evidence_artifacts"]:
         if item.get("path") == FULL_REL:
@@ -81,6 +98,7 @@ def main() -> int:
             "closure_level": "CLOSED_FOR_LANE",
             "what_is_closed": action["major_result"]["what_is_closed"],
             "equation_or_mapping": action["major_result"]["equation_or_mapping"],
+            "coefficient_provenance": action["major_result"].get("coefficient_provenance", {}),
             "units": action["major_result"]["units"],
             "derivation_class": action["major_result"]["derivation_class"],
             "observable": action["major_result"]["observable"],
@@ -91,6 +109,29 @@ def main() -> int:
             "dependency_unlocked": action["major_result"]["dependency_unlocked"],
             "claim_boundary": action["major_result"]["claim_boundary"],
         })
+    else:
+        route_entry = next(
+            item
+            for item in register["entries"]
+            if item.get("major_result_id") == "T13_COVARIANT_ACTION_SI_ANCHOR_ROUTE"
+        )
+        route_entry.update({
+            "closure_level": action["major_result"]["closure_level"],
+            "what_is_closed": action["major_result"]["what_is_closed"],
+            "equation_or_mapping": action["major_result"]["equation_or_mapping"],
+            "coefficient_provenance": action["major_result"].get("coefficient_provenance", {}),
+            "units": action["major_result"]["units"],
+            "derivation_class": action["major_result"]["derivation_class"],
+            "observable": action["major_result"]["observable"],
+            "data_role": action["major_result"]["data_role"],
+            "verification_status": action["status"],
+            "open_blockers": action["major_result"]["open_blockers"],
+            "dependency_unlocked": action["major_result"]["dependency_unlocked"],
+            "claim_boundary": action["major_result"]["claim_boundary"],
+        })
+        for item in route_entry.get("evidence_artifacts", []):
+            if item.get("path") == ACTION_REL:
+                item["sha256"] = digest(ACTION_REL)
     register["next_major_result"] = {
         "major_result_id": "T13_DIMENSIONAL_PHI_ENERGY_ANCHOR",
         "topic": "0.13_Thermodynamic_Bridge",

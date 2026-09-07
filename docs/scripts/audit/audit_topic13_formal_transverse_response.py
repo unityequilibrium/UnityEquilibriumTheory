@@ -17,6 +17,7 @@ from docs.core.uet_o2_formal_transverse_response import (
     formal_transverse_quasiparticle_response,
     formal_transverse_response_contract,
 )
+from docs.scripts.audit.audit_topic13_fixed_phi_spectrum_repair import fixed_phi_witnesses
 
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -51,7 +52,9 @@ def main() -> int:
         for label, point in points.items()
     }
     contract = formal_transverse_response_contract()
+    independent = fixed_phi_witnesses()
     checks = {
+        **independent["checks"],
         "all_states_finite_and_nonnegative": all(
             np.isfinite(state.normal_momentum_susceptibility)
             and state.normal_momentum_susceptibility >= 0.0
@@ -136,6 +139,16 @@ def main() -> int:
             "claim_boundary": contract["claim_boundary"],
         },
         "contract": contract,
+        "independent_action_witnesses": independent,
+        "source_hashes": {
+            path: sha256(ROOT / path)
+            for path in (
+                "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+                "docs/core/uet_o2_formal_transverse_response.py",
+                "docs/scripts/audit/audit_topic13_fixed_phi_spectrum_repair.py",
+                "docs/scripts/audit/audit_topic13_formal_transverse_response.py",
+            )
+        },
         "state_grid": {label: state.__dict__ for label, state in states.items()},
         "checks": checks,
         "failed_checks": failed,
@@ -147,8 +160,9 @@ def main() -> int:
         "controlling_blocker": "retarded_physical_Kubo_match_missing",
         "next_controller": "match the formal transverse response to a state-matched retarded microscopic Kubo record; retain the present result as a natural-unit static witness until that match exists",
         "claim_promotion": False,
+        "full_core_unlock": False,
     }
-    OUT.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
+    OUT.write_text(json.dumps(artifact, indent=2, ensure_ascii=True, allow_nan=False) + "\n", encoding="utf-8")
     print(json.dumps({"status": artifact["status"], "closure_level": artifact["major_result"]["closure_level"], "failed_checks": failed}, indent=2))
     return 0 if not failed else 1
 

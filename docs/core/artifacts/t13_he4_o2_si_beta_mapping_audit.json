@@ -1,0 +1,116 @@
+{
+  "schema_version": "t13-he4-o2-si-beta-audit-v1",
+  "artifact": "t13_he4_o2_si_beta_mapping_audit",
+  "generated_at": "2026-08-28",
+  "status": "PASS_HE4_SI_SCALE_AND_NORMALIZED_BETA",
+  "major_result": {
+    "major_result_id": "T13_HE4_O2_SI_SCALE_AND_NORMALIZED_BETA",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": "A state-matched ITS-90 uncertainty contract, external He-4 thermal-cell SI free-energy-density scale, normalized beta_T13, and beta_SI with conservative uncertainty propagation.",
+    "equation_or_mapping": {
+      "energy_density_scale": "e0 = (rho / m_He4) k_B T0",
+      "free_energy": "f_SI = e0 f_natural",
+      "field": "Delta_Phi_norm = Z_Phi Delta_Phi_natural",
+      "beta": "beta_T13 = beta_natural / Z_Phi^2; beta_SI = e0 beta_T13"
+    },
+    "units": {
+      "e0": "J m^-3",
+      "beta_T13": "natural free-energy scale per normalized Phi squared",
+      "beta_SI": "J m^-3 per normalized Phi squared"
+    },
+    "derivation_class": "EXTERNAL_STATE_MATCHED_SCALE_CONVENTION_PLUS_ACTION_DERIVED_BETA",
+    "observable": "local He-4 O(2) response around 1.7 K on the SVP/ITS-90 state path",
+    "data_role": "CALIBRATION_NOT_HOLDOUT",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_o2_si_beta_mapping_source_package.json",
+        "sha256": "5b0e63acc6932e4d050300f05a42d3dfb0411138883cdf6d6816ec0e16d9fe2e"
+      },
+      {
+        "path": "docs/data/external/constants/codata/si_2019_exact_constants.json",
+        "sha256": "dcced6d840f4f4fbcea90128061ab7a528be04e1b37917893dbf4a28934b3560"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_o2_physical_anchor_source_package.json",
+        "sha256": "4d02b1faac1cefe3ce79ced525183e2d38066604808d91f9c2769d515ab8b770"
+      },
+      {
+        "path": "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json",
+        "sha256": "1c44ffce6310488bf3a9b2e9cce74d1281fb27a949c1b9d26c6f80d970b7fbd0"
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_action_thermal_stiffness_beta_audit.json",
+        "sha256": "c8079bbdbfa3a340e66b26dfa4d2f0cb93a5b32a1ef6827e604415958b4c649e"
+      },
+      {
+        "path": "docs/core/he4_o2_si_beta_mapping.py",
+        "sha256": "e39a863866ca6db30100ad004c01d62e9598c151824d16849b32fabfed35dd23"
+      }
+    ],
+    "verification_status": "PASS_HE4_SI_SCALE_AND_NORMALIZED_BETA",
+    "open_blockers": [
+      "physical_transport_coefficient_not_closed"
+    ],
+    "dependency_unlocked": "SI dimensional observable and normalized-beta lanes only; physical transport and Full Topic 13 remain locked.",
+    "claim_boundary": "This package fixes a lane-specific SI normalization convention for the He-4 O(2) bridge. It is not a universal Phi identity, a first-principles prediction of the absolute free-energy density, a transport validation, or an external TTG validation."
+  },
+  "record": {
+    "record_id": "T13_HE4_O2_SI_SCALE_AND_NORMALIZED_BETA",
+    "record_kind": "EXTERNAL_SCALE_CONVENTION_PLUS_ACTION_DERIVATION",
+    "data_role": "CALIBRATION",
+    "temperature_scale": "ITS-90",
+    "temperature_K": 1.7,
+    "temperature_standard_uncertainty_K": 0.0002,
+    "total_density_kg_m3": 145.26863945323475,
+    "he4_atom_mass_kg": 6.646479080869192e-27,
+    "he4_atom_mass_relative_uncertainty_bound": 3.281415633369573e-10,
+    "number_density_m3": 2.185648035384131e+28,
+    "energy_density_scale_J_m3": 512994.17164886114,
+    "energy_density_scale_uncertainty_J_m3": 60.608920908635206,
+    "energy_density_scale_relative_uncertainty_bound": 0.00011814738696509275,
+    "energy_scale_mapping": "e0 = (rho / m_He4) k_B T0",
+    "free_energy_mapping": "f_SI = e0 f_natural",
+    "phi_mapping": "Delta_Phi_norm = Z_Phi Delta_Phi_natural",
+    "Z_Phi_normalized_per_natural_Phi": -0.017488421860832278,
+    "Z_Phi_uncertainty_bound": 0.0009712263618290997,
+    "beta_action_natural": -2.4271981641363002e-06,
+    "beta_action_natural_uncertainty_bound": 5.091901292969547e-10,
+    "beta_T13": -0.007936042649802305,
+    "beta_T13_uncertainty_bound": 0.0008831273413443808,
+    "beta_T13_units": "natural free-energy scale per normalized Phi squared",
+    "beta_SI_J_m3_per_normalized_Phi2": -4071.143625305366,
+    "beta_SI_uncertainty_J_m3_per_normalized_Phi2": 453.5201739147111,
+    "beta_mapping": "beta_T13 = beta_natural / Z_Phi^2; beta_SI = e0 beta_T13",
+    "uncertainty_policy": "Conservative absolute-bound addition; no independence assumption.",
+    "holdout_policy": {
+      "xie_2026_accessed": false,
+      "target_curve_used": false,
+      "fit_or_tuning_used": false,
+      "landauer_identity_used": false
+    }
+  },
+  "checks": {
+    "source_package_is_calibration": true,
+    "state_is_matched_to_response_calibration": true,
+    "its90_uncertainty_is_numeric_positive": true,
+    "he4_mass_uncertainty_is_numeric_positive": true,
+    "atomic_mass_constant_uncertainty_is_numeric_positive": true,
+    "boltzmann_constant_matches_exact_local_record": true,
+    "energy_density_scale_is_finite_positive": true,
+    "energy_density_uncertainty_is_finite_positive": true,
+    "action_beta_is_source_derived": true,
+    "normalized_beta_is_finite_nonzero": true,
+    "normalized_beta_uncertainty_is_positive": true,
+    "si_beta_is_finite_nonzero": true,
+    "si_beta_uncertainty_is_positive": true,
+    "ensemble_mismatch_is_forbidden": true,
+    "landauer_is_not_used": true,
+    "xie_holdout_is_unread": true,
+    "no_target_curve": true,
+    "no_fit_or_tuning": true
+  },
+  "controlling_blocker": "physical_transport_coefficient_not_closed",
+  "next_controller": "Source-lock one state-matched He-4 physical transport coefficient with uncertainty and connect it to the declared Kubo/SK-KMS/entropy interface.",
+  "claim_boundary": "This package fixes a lane-specific SI normalization convention for the He-4 O(2) bridge. It is not a universal Phi identity, a first-principles prediction of the absolute free-energy density, a transport validation, or an external TTG validation."
+}

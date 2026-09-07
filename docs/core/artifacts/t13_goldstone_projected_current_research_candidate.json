@@ -1,0 +1,447 @@
+{
+  "schema_version": "t13-projected-current-research-v1",
+  "major_result_id": "T13_GOLDSTONE_PROJECTED_CURRENT_COLLISION_CANDIDATE",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "PARTIAL",
+  "verification_status": "INTERNAL_NUMERICAL_CANDIDATE_NOT_FULL_TRANSPORT",
+  "what_is_closed": [
+    "Cubic Goldstone collision form assembled with exact momentum null direction.",
+    "Chemical-work-subtracted current checked against canonical modules.",
+    "Quadrature and basis refinement are reported separately."
+  ],
+  "what_remains_open": [
+    "Certified infinite-basis error bound",
+    "Remaining scattering and higher-loop channels",
+    "Condensate/charge and material heat-frame closure",
+    "SI alpha, source provenance, full SK/KMS",
+    "Existing fixed-Phi EOS repair and acceptance-scope repair"
+  ],
+  "equation_or_mapping": {
+    "current": "J_K^i=T^{0i}-mu*N^i; tree mode contribution E_a*v_a^i",
+    "projection": "J_perp=J_K-<J_K,P>/<P,P>*P with Bose occupation covariance",
+    "collision": "C_ij=integral dGamma*X_eq*Delta(h_i)*Delta(h_j)",
+    "equilibrium_flux": "X_eq=n_p*(1+n_q)*(1+n_r)",
+    "basis": "h_i=k_z*F_i; F includes x^-1,x,x^2,..., x=k/(T/c)",
+    "null_direction": "Constant F is momentum; projected before inversion",
+    "response": "R_N=S_N^T*C_N^-1*S_N; finite variational response only"
+  },
+  "ontology": {
+    "C": "not a phonon count or signed charge",
+    "Phi": "effective response",
+    "R_gen": "derived trace, excluded from state",
+    "R_obs": "excluded from dynamics"
+  },
+  "variable_definitions": {
+    "sigma": "radial Cartesian O(2) perturbation",
+    "pi": "angular Cartesian perturbation pi=-A*delta(theta), not response-rate Pi",
+    "deltaPhi": "effective-response perturbation",
+    "N^mu": "Noether charge current, not C"
+  },
+  "units": {
+    "lane": "natural",
+    "temperature_momentum_mode_energy": "energy; temperature is not kelvin",
+    "sigma_pi_deltaPhi": "energy",
+    "R": "energy^4",
+    "R_over_T2": "energy^2; not an SI conductivity",
+    "projected_rate": "energy = inverse natural time"
+  },
+  "physical_correspondence": "Canonical flat rotating scalar action -> quasiparticle kinetic current; material heat-frame and SI correspondence remain open.",
+  "derivation_class": "TREE_ACTION_CUBIC_KINETIC_APPROXIMATION",
+  "derivation_boundary": "Leading Golden Rule, single Goldstone channel, finite Galerkin basis.",
+  "equation_registry_status": "DIAGNOSTIC_ONLY_NOT_A_PHYSICAL_GATE_INPUT",
+  "observable": "momentum-projected chemical-work-subtracted energy current",
+  "data_role": "INTERNAL_DERIVED_NUMERICAL_COMPARISON",
+  "state_variables": [
+    "sigma",
+    "pi",
+    "deltaPhi"
+  ],
+  "excluded_variables": [
+    "R_gen",
+    "R_obs"
+  ],
+  "source_hashes": {
+    "docs/core/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+    "docs/core/uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
+    "docs/scripts/audit/audit_topic13_goldstone_projected_current.py": "d3ddaecfe31a813c85dbddf3a62dd2eec593f49e2902daff4353c4d409473bb0"
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/scripts/audit/audit_topic13_goldstone_projected_current.py",
+      "role": "standalone reproducer"
+    }
+  ],
+  "checks": {
+    "positive_projected_rates": true,
+    "variational_sequence_nondecreasing": true,
+    "event_energy_conservation": true,
+    "canonical_current_mapping": true,
+    "current_has_nonzero_momentum_overlap": true
+  },
+  "config": {
+    "A": 2,
+    "Phi": 1,
+    "mu_squared": 5,
+    "T": 0.01,
+    "quick": false
+  },
+  "galerkin_rows": [
+    {
+      "T": 0.01,
+      "order": 40,
+      "split_order": 40,
+      "cutoff": 0.8,
+      "current_momentum_coefficient": 0.25980695426144923,
+      "projected_current_fraction": 4.201100218838076e-06,
+      "results": [
+        {
+          "basis_size": 1,
+          "response": 1.3530991685944764e-07,
+          "response_over_T2": 0.0013530991685944765,
+          "min_rate": 6.597634931328075e-10,
+          "max_rate": 6.597634931328075e-10,
+          "condition": 1.0
+        },
+        {
+          "basis_size": 2,
+          "response": 1.4983765737977638e-07,
+          "response_over_T2": 0.0014983765737977637,
+          "min_rate": 3.4934798102690465e-10,
+          "max_rate": 1.0320108196986909e-08,
+          "condition": 29.54105578813154
+        },
+        {
+          "basis_size": 3,
+          "response": 1.520514509972437e-07,
+          "response_over_T2": 0.001520514509972437,
+          "min_rate": 2.166117241631788e-10,
+          "max_rate": 5.1886288841831256e-08,
+          "condition": 239.53592097694616
+        },
+        {
+          "basis_size": 4,
+          "response": 1.5207194704131327e-07,
+          "response_over_T2": 0.0015207194704131327,
+          "min_rate": 1.5246707347987012e-10,
+          "max_rate": 1.674169509980061e-07,
+          "condition": 1098.05315453969
+        },
+        {
+          "basis_size": 5,
+          "response": 1.522071176906287e-07,
+          "response_over_T2": 0.0015220711769062868,
+          "min_rate": 1.167512900762929e-10,
+          "max_rate": 4.228582626422818e-07,
+          "condition": 3621.8722925113602
+        },
+        {
+          "basis_size": 6,
+          "response": 1.5237404493751196e-07,
+          "response_over_T2": 0.0015237404493751196,
+          "min_rate": 9.433122227727754e-11,
+          "max_rate": 9.090721019618606e-07,
+          "condition": 9637.022398477258
+        },
+        {
+          "basis_size": 7,
+          "response": 1.5244715914066444e-07,
+          "response_over_T2": 0.0015244715914066443,
+          "min_rate": 7.886850355334966e-11,
+          "max_rate": 1.7361757531363507e-06,
+          "condition": 22013.550085452494
+        }
+      ],
+      "max_energy_residual": 2.220446049250313e-16,
+      "momentum_null_construction": "F=constant -> dx=dz=0 exactly; projected out before inversion",
+      "claim": "Projected quasiparticle energy-current moment only; not the complete Noether heat current or physical conductivity"
+    },
+    {
+      "T": 0.01,
+      "order": 80,
+      "split_order": 64,
+      "cutoff": 1.2,
+      "current_momentum_coefficient": 0.2598069542614511,
+      "projected_current_fraction": 4.201100220337206e-06,
+      "results": [
+        {
+          "basis_size": 1,
+          "response": 1.3530991685907257e-07,
+          "response_over_T2": 0.0013530991685907255,
+          "min_rate": 6.597634931435836e-10,
+          "max_rate": 6.597634931435836e-10,
+          "condition": 1.0
+        },
+        {
+          "basis_size": 2,
+          "response": 1.4983765715657626e-07,
+          "response_over_T2": 0.0014983765715657624,
+          "min_rate": 3.4934798395626206e-10,
+          "max_rate": 1.0320108299172739e-08,
+          "condition": 29.541055832927903
+        },
+        {
+          "basis_size": 3,
+          "response": 1.5205144982011266e-07,
+          "response_over_T2": 0.0015205144982011266,
+          "min_rate": 2.1661179848345132e-10,
+          "max_rate": 5.18863059000014e-08,
+          "condition": 239.53591754128482
+        },
+        {
+          "basis_size": 4,
+          "response": 1.5207194693844125e-07,
+          "response_over_T2": 0.0015207194693844124,
+          "min_rate": 1.5246800713821566e-10,
+          "max_rate": 1.6741799179645615e-07,
+          "condition": 1098.0532568034944
+        },
+        {
+          "basis_size": 5,
+          "response": 1.5220706515255448e-07,
+          "response_over_T2": 0.0015220706515255446,
+          "min_rate": 1.167587166068474e-10,
+          "max_rate": 4.228918372122729e-07,
+          "condition": 3621.9294756060385
+        },
+        {
+          "basis_size": 6,
+          "response": 1.5237371209327611e-07,
+          "response_over_T2": 0.001523737120932761,
+          "min_rate": 9.437123117454699e-11,
+          "max_rate": 9.097230992526401e-07,
+          "condition": 9639.835021014358
+        },
+        {
+          "basis_size": 7,
+          "response": 1.5244663546149874e-07,
+          "response_over_T2": 0.0015244663546149873,
+          "min_rate": 7.901725513689484e-11,
+          "max_rate": 1.7442058216713202e-06,
+          "condition": 22073.733371901366
+        },
+        {
+          "basis_size": 8,
+          "response": 1.5246014028078516e-07,
+          "response_over_T2": 0.0015246014028078515,
+          "min_rate": 6.779138937052945e-11,
+          "max_rate": 3.0648371076997266e-06,
+          "condition": 45209.828802123426
+        },
+        {
+          "basis_size": 9,
+          "response": 1.52460252969034e-07,
+          "response_over_T2": 0.0015246025296903399,
+          "min_rate": 5.920586110154548e-11,
+          "max_rate": 5.02818986840313e-06,
+          "condition": 84927.23144046757
+        },
+        {
+          "basis_size": 10,
+          "response": 1.5246179459808062e-07,
+          "response_over_T2": 0.001524617945980806,
+          "min_rate": 5.242256696579934e-11,
+          "max_rate": 7.803901534555464e-06,
+          "condition": 148865.30718052696
+        }
+      ],
+      "max_energy_residual": 3.3306690738754696e-16,
+      "momentum_null_construction": "F=constant -> dx=dz=0 exactly; projected out before inversion",
+      "claim": "Projected quasiparticle energy-current moment only; not the complete Noether heat current or physical conductivity"
+    },
+    {
+      "T": 0.01,
+      "order": 96,
+      "split_order": 80,
+      "cutoff": 1.6,
+      "current_momentum_coefficient": 0.25980695426145106,
+      "projected_current_fraction": 4.201100220787051e-06,
+      "results": [
+        {
+          "basis_size": 1,
+          "response": 1.3530991685925918e-07,
+          "response_over_T2": 0.0013530991685925917,
+          "min_rate": 6.597634931433728e-10,
+          "max_rate": 6.597634931433728e-10,
+          "condition": 1.0
+        },
+        {
+          "basis_size": 2,
+          "response": 1.498376571567725e-07,
+          "response_over_T2": 0.001498376571567725,
+          "min_rate": 3.49347983956055e-10,
+          "max_rate": 1.0320108299171187e-08,
+          "condition": 29.54105583294097
+        },
+        {
+          "basis_size": 3,
+          "response": 1.52051449820275e-07,
+          "response_over_T2": 0.0015205144982027498,
+          "min_rate": 2.1661179848321576e-10,
+          "max_rate": 5.188630589999637e-08,
+          "condition": 239.53591754152208
+        },
+        {
+          "basis_size": 4,
+          "response": 1.5207194693859576e-07,
+          "response_over_T2": 0.0015207194693859574,
+          "min_rate": 1.5246800713785253e-10,
+          "max_rate": 1.6741799179655827e-07,
+          "condition": 1098.0532568067795
+        },
+        {
+          "basis_size": 5,
+          "response": 1.5220706515273355e-07,
+          "response_over_T2": 0.0015220706515273353,
+          "min_rate": 1.1675871660633127e-10,
+          "max_rate": 4.2289183721712243e-07,
+          "condition": 3621.929475663584
+        },
+        {
+          "basis_size": 6,
+          "response": 1.5237371209325605e-07,
+          "response_over_T2": 0.0015237371209325605,
+          "min_rate": 9.437123119916989e-11,
+          "max_rate": 9.097230994869014e-07,
+          "condition": 9639.835020981516
+        },
+        {
+          "basis_size": 7,
+          "response": 1.5244663545898308e-07,
+          "response_over_T2": 0.0015244663545898307,
+          "min_rate": 7.901725575565256e-11,
+          "max_rate": 1.7442058306858637e-06,
+          "condition": 22073.73331313256
+        },
+        {
+          "basis_size": 8,
+          "response": 1.5246014027286934e-07,
+          "response_over_T2": 0.0015246014027286933,
+          "min_rate": 6.779139730036778e-11,
+          "max_rate": 3.0648373596310213e-06,
+          "condition": 45209.82723001631
+        },
+        {
+          "basis_size": 9,
+          "response": 1.5246025296350812e-07,
+          "response_over_T2": 0.0015246025296350811,
+          "min_rate": 5.920592667381362e-11,
+          "max_rate": 5.028195022934868e-06,
+          "condition": 84927.22444219093
+        },
+        {
+          "basis_size": 10,
+          "response": 1.5246179446838513e-07,
+          "response_over_T2": 0.0015246179446838511,
+          "min_rate": 5.2422905224488115e-11,
+          "max_rate": 7.803980545374922e-06,
+          "condition": 148865.85380867973
+        }
+      ],
+      "max_energy_residual": 6.661338147750939e-16,
+      "momentum_null_construction": "F=constant -> dx=dz=0 exactly; projected out before inversion",
+      "claim": "Projected quasiparticle energy-current moment only; not the complete Noether heat current or physical conductivity"
+    }
+  ],
+  "canonical_current_checks": [
+    {
+      "k": 0.001,
+      "mode": 0,
+      "canonical_current_average": 0.00025925931006500077,
+      "E_v_from_implicit_dispersion": 0.00025925931006451466,
+      "relative_error": 1.8749646595638677e-12
+    },
+    {
+      "k": 0.001,
+      "mode": 1,
+      "canonical_current_average": 0.0010354835286115706,
+      "E_v_from_implicit_dispersion": 0.0010354835286115727,
+      "relative_error": 2.094098346381726e-15
+    },
+    {
+      "k": 0.001,
+      "mode": 2,
+      "canonical_current_average": 0.0017052571613239214,
+      "E_v_from_implicit_dispersion": 0.001705257161323914,
+      "relative_error": 4.323438681340924e-15
+    },
+    {
+      "k": 0.01,
+      "mode": 0,
+      "canonical_current_average": 0.0025926433970492446,
+      "E_v_from_implicit_dispersion": 0.002592643397051098,
+      "relative_error": 7.149274891369439e-13
+    },
+    {
+      "k": 0.01,
+      "mode": 1,
+      "canonical_current_average": 0.010354819677915052,
+      "E_v_from_implicit_dispersion": 0.010354819677915031,
+      "relative_error": 2.0103374427774853e-15
+    },
+    {
+      "k": 0.01,
+      "mode": 2,
+      "canonical_current_average": 0.017052536925033904,
+      "E_v_from_implicit_dispersion": 0.017052536925033862,
+      "relative_error": 2.4414762217769363e-15
+    },
+    {
+      "k": 0.1,
+      "mode": 0,
+      "canonical_current_average": 0.025976650888844283,
+      "E_v_from_implicit_dispersion": 0.02597665088884106,
+      "relative_error": 1.2407743523817692e-13
+    },
+    {
+      "k": 0.1,
+      "mode": 1,
+      "canonical_current_average": 0.10353264225638277,
+      "E_v_from_implicit_dispersion": 0.10353264225638292,
+      "relative_error": 1.4744689458222304e-15
+    },
+    {
+      "k": 0.1,
+      "mode": 2,
+      "canonical_current_average": 0.1704907068547765,
+      "E_v_from_implicit_dispersion": 0.17049070685477608,
+      "relative_error": 2.441972597304477e-15
+    },
+    {
+      "k": 0.5,
+      "mode": 0,
+      "canonical_current_average": 0.13574290390045518,
+      "E_v_from_implicit_dispersion": 0.13574290390044363,
+      "relative_error": 8.506020664306631e-14
+    },
+    {
+      "k": 0.5,
+      "mode": 1,
+      "canonical_current_average": 0.5159284591461454,
+      "E_v_from_implicit_dispersion": 0.5159284591461463,
+      "relative_error": 1.7215146866874664e-15
+    },
+    {
+      "k": 0.5,
+      "mode": 2,
+      "canonical_current_average": 0.8483286369534035,
+      "E_v_from_implicit_dispersion": 0.848328636953409,
+      "relative_error": 6.412718590050429e-15
+    }
+  ],
+  "basis_last_relative_change": 1.011086395985572e-05,
+  "open_blockers": [
+    "Physical transport closure unproven",
+    "No certified infinite-basis/continuum bound",
+    "Material source and calibration unresolved"
+  ],
+  "controlling_blocker": "Current/condensate/material matching and collision completeness.",
+  "next_action": "Repair fixed-Phi EOS; validate full current/transport mapping.",
+  "dependency_unlocked": "Diagnostic work only; no physical downstream unlock",
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "holdout_access": false,
+  "parameter_fitting": false,
+  "thresholds_changed": false,
+  "reproducibility_status": "Standalone script and numerical configuration persisted.",
+  "claim_boundary": "Not physical conductivity, full constitutive transport, external validation or Full Topic 13 closure."
+}

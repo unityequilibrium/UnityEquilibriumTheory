@@ -1,0 +1,262 @@
+{
+  "schema_version": "uet-chaos-diagnostic-v1",
+  "artifact": "chaos_method_validation",
+  "generated_at": "2026-08-26",
+  "status": "PASS_CHAOS_METHOD_VALIDATION",
+  "claim_promotion": false,
+  "preregistration": {
+    "perturbation_amplitudes": [
+      1e-08,
+      1e-07,
+      1e-06
+    ],
+    "resolution_formula": "max(dt_difference, dx_difference, 2*block_standard_error, method_disagreement)",
+    "primary_estimator": "BENETTIN_QR_TANGENT",
+    "cross_check": "SHADOW_PERIODIC_RENORMALIZATION"
+  },
+  "controls": {
+    "stable_linear": {
+      "diagnostic_id": "t010.chaos.control.stable_linear",
+      "owner_topic": "0.10_Fluid_Dynamics_Chaos",
+      "equation_registry_ids": [
+        "uet.dynamics.tangent_map",
+        "uet.dynamics.lyapunov_spectrum",
+        "uet.dynamics.regime_classifier"
+      ],
+      "state_variables": [
+        "benchmark_state"
+      ],
+      "excluded_variables": [
+        "R_gen",
+        "R_obs"
+      ],
+      "unit_lane": "normalized",
+      "forcing_class": "autonomous_control",
+      "noise_coupling": "none",
+      "state_metric": "normalized_l2",
+      "estimator": [
+        "BENETTIN_QR_TANGENT",
+        "SHADOW_PERIODIC_RENORMALIZATION"
+      ],
+      "transient_window": 0.0,
+      "renormalization_interval": 1,
+      "perturbation_amplitudes": [
+        1e-08,
+        1e-07,
+        1e-06
+      ],
+      "resolution_grid": {
+        "dt": [
+          0.05,
+          0.025
+        ],
+        "transient_window": 0.0
+      },
+      "lambda_max": -0.40000000000000097,
+      "lambda_spectrum": [
+        -0.40000000000000097
+      ],
+      "confidence_or_block_error": 2.2681241508433115e-18,
+      "lambda_resolution": 5.422127191678783e-10,
+      "boundedness": true,
+      "stationarity": true,
+      "ledger_status": "NOT_APPLICABLE_STANDARD_CONTROL",
+      "conservation_status": "NOT_APPLICABLE_STANDARD_CONTROL",
+      "causal_status": "NOT_APPLICABLE_STANDARD_CONTROL",
+      "method_agreement": true,
+      "classification": "NONCHAOTIC_STABLE_DIAGNOSTIC",
+      "controlling_blocker": "none_for_standard_method_control",
+      "evidence_hashes": {
+        "generator": "bfc041583e50036cb9cf09140bd5610f08914867a22d9f0a42458ef713e1138b",
+        "core_diagnostic": "9ae6d3ee13001c243924e58238ea0d604c4d848824c9b98d29c441d26d0969b5"
+      },
+      "claim_boundary": "Numerical method control only; not evidence that a UET fluid lane is chaotic.",
+      "cross_check": {
+        "lambda_max": -0.4000000005422137,
+        "block_standard_error": 1.5673513689444288e-10,
+        "samples": 600,
+        "elapsed_time": 30.0,
+        "estimator": "SHADOW_PERIODIC_RENORMALIZATION"
+      },
+      "expected_control": "lambda=-0.4"
+    },
+    "logistic_r4": {
+      "diagnostic_id": "t010.chaos.control.logistic_r4",
+      "owner_topic": "0.10_Fluid_Dynamics_Chaos",
+      "equation_registry_ids": [
+        "uet.dynamics.tangent_map",
+        "uet.dynamics.lyapunov_spectrum",
+        "uet.dynamics.regime_classifier"
+      ],
+      "state_variables": [
+        "benchmark_state"
+      ],
+      "excluded_variables": [
+        "R_gen",
+        "R_obs"
+      ],
+      "unit_lane": "normalized",
+      "forcing_class": "autonomous_control",
+      "noise_coupling": "none",
+      "state_metric": "normalized_l2",
+      "estimator": [
+        "BENETTIN_QR_TANGENT",
+        "SHADOW_PERIODIC_RENORMALIZATION"
+      ],
+      "transient_window": 1000,
+      "renormalization_interval": 1,
+      "perturbation_amplitudes": [
+        1e-08,
+        1e-07,
+        1e-06
+      ],
+      "resolution_grid": {
+        "map_parameter_r": 4.0,
+        "transient_window": 1000
+      },
+      "lambda_max": 0.6932009918065145,
+      "lambda_spectrum": [
+        0.6932009918065145
+      ],
+      "confidence_or_block_error": 0.004625020187848851,
+      "lambda_resolution": 0.009250040375697701,
+      "boundedness": true,
+      "stationarity": true,
+      "ledger_status": "NOT_APPLICABLE_STANDARD_CONTROL",
+      "conservation_status": "NOT_APPLICABLE_STANDARD_CONTROL",
+      "causal_status": "NOT_APPLICABLE_STANDARD_CONTROL",
+      "method_agreement": true,
+      "classification": "CHAOS_CANDIDATE_DIAGNOSTIC",
+      "controlling_blocker": "none_for_standard_method_control",
+      "evidence_hashes": {
+        "generator": "bfc041583e50036cb9cf09140bd5610f08914867a22d9f0a42458ef713e1138b",
+        "core_diagnostic": "9ae6d3ee13001c243924e58238ea0d604c4d848824c9b98d29c441d26d0969b5"
+      },
+      "claim_boundary": "Numerical method control only; not evidence that a UET fluid lane is chaotic.",
+      "cross_check": {
+        "lambda_max": 0.6932009856629228,
+        "block_standard_error": 0.004625020575697974,
+        "samples": 39000,
+        "elapsed_time": 39000.0,
+        "estimator": "SHADOW_PERIODIC_RENORMALIZATION"
+      },
+      "expected_control": "lambda=ln(2)"
+    },
+    "lorenz63": {
+      "diagnostic_id": "t010.chaos.control.lorenz63",
+      "owner_topic": "0.10_Fluid_Dynamics_Chaos",
+      "equation_registry_ids": [
+        "uet.dynamics.tangent_map",
+        "uet.dynamics.lyapunov_spectrum",
+        "uet.dynamics.regime_classifier"
+      ],
+      "state_variables": [
+        "benchmark_state"
+      ],
+      "excluded_variables": [
+        "R_gen",
+        "R_obs"
+      ],
+      "unit_lane": "normalized",
+      "forcing_class": "autonomous_control",
+      "noise_coupling": "none",
+      "state_metric": "normalized_l2",
+      "estimator": [
+        "BENETTIN_QR_TANGENT",
+        "SHADOW_PERIODIC_RENORMALIZATION"
+      ],
+      "transient_window": 20.0,
+      "renormalization_interval": 0.1,
+      "perturbation_amplitudes": [
+        1e-08,
+        1e-07,
+        1e-06
+      ],
+      "resolution_grid": {
+        "dt": [
+          0.01,
+          0.005
+        ],
+        "transient_window": 20.0,
+        "renormalization_interval": 0.1
+      },
+      "lambda_max": 0.9441594369971863,
+      "lambda_spectrum": [
+        0.9441594369971863,
+        -0.020996347794517874,
+        -14.58972620619061
+      ],
+      "confidence_or_block_error": 0.14751048997075966,
+      "lambda_resolution": 0.2950209799415193,
+      "boundedness": true,
+      "stationarity": true,
+      "ledger_status": "NOT_APPLICABLE_STANDARD_CONTROL",
+      "conservation_status": "NOT_APPLICABLE_STANDARD_CONTROL",
+      "causal_status": "NOT_APPLICABLE_STANDARD_CONTROL",
+      "method_agreement": true,
+      "classification": "CHAOS_CANDIDATE_DIAGNOSTIC",
+      "controlling_blocker": "none_for_standard_method_control",
+      "evidence_hashes": {
+        "generator": "bfc041583e50036cb9cf09140bd5610f08914867a22d9f0a42458ef713e1138b",
+        "core_diagnostic": "9ae6d3ee13001c243924e58238ea0d604c4d848824c9b98d29c441d26d0969b5"
+      },
+      "claim_boundary": "Numerical method control only; not evidence that a UET fluid lane is chaotic.",
+      "cross_check": {
+        "lambda_max": 0.9441311027634147,
+        "block_standard_error": 0.14750988378393,
+        "samples": 800,
+        "elapsed_time": 80.0,
+        "estimator": "SHADOW_PERIODIC_RENORMALIZATION"
+      },
+      "expected_control": "resolved positive largest exponent"
+    }
+  },
+  "checks": {
+    "stable_linear_exact": true,
+    "logistic_ln2": true,
+    "lorenz_positive_resolved": true,
+    "lorenz_method_agreement": true,
+    "ontology_exclusion": true
+  },
+  "major_result": {
+    "major_result_id": "T010_CHAOS_METHOD_VALIDATED",
+    "topic": "0.10_Fluid_Dynamics_Chaos",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "tangent/QR and shadow estimators reproduce preregistered standard controls",
+      "Lyapunov-function language is separated from Lyapunov-exponent evidence",
+      "numerical instability and unresolved signs are excluded from chaos-candidate classification"
+    ],
+    "equation_or_mapping": "delta_x[n+1] = D F(x[n]) delta_x[n]; lambda_i = lim_T log(s_i)/T",
+    "units": "inverse normalized time; logistic-map exponent per iteration",
+    "derivation_class": "standard dynamical-systems diagnostic and numerical method validation",
+    "observable": "Lyapunov spectrum, largest exponent, method disagreement, and sign resolution",
+    "data_role": "INTERNAL_STANDARD_METHOD_CONTROLS",
+    "verification_status": "PASS_CHAOS_METHOD_VALIDATION",
+    "open_blockers": [
+      "no UET physical-fluid chaos claim is evaluated by this method-control artifact",
+      "external CFD validation and full constitutive transport remain open"
+    ],
+    "dependency_unlocked": "Topic 13 normalized thermal diagnostic pilot only; no physical Core, Gravity, Galaxy, or external-claim unlock",
+    "claim_boundary": "Method validation only; this does not establish chaos in UET or validate a physical fluid model."
+  },
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": "standard chaos-estimator controls",
+    "WHAT_REMAINS_OPEN": "UET physical-lane diagnosis and external validation",
+    "DEPENDENCY_UNLOCKED": "Topic 13 diagnostic pilot only",
+    "STATUS": "PASS",
+    "WHAT_CHANGED": "Added an independent chaos-method artifact separate from the speed comparator.",
+    "EQUATION_OR_MAPPING": "tangent map -> QR growth rates; shadow trajectory cross-check",
+    "VERIFICATION": {
+      "stable_linear_exact": true,
+      "logistic_ln2": true,
+      "lorenz_positive_resolved": true,
+      "lorenz_method_agreement": true,
+      "ontology_exclusion": true
+    },
+    "CONTROLLING_BLOCKER": "physical UET lane not tested by this artifact",
+    "NEXT_ACTION": "run the Topic 13 normalized thermal regime pilot",
+    "CLAIM_BOUNDARY": "internal method validation only"
+  }
+}

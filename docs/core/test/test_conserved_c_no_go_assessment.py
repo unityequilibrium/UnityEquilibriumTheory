@@ -29,9 +29,12 @@ def test_topic13_gate_keeps_original_baseline_blocked_after_no_go() -> None:
     assert causal["named_finite_cone_branch_pass"] is True
     assert causal["named_coupled_branch_pass"] is True
     assert causal["full_candidate_pass"] is False
-    assert causal["status_role"] == "full_candidate_readiness_gate"
+    assert causal["status"] == "PASS"
+    assert causal["status_role"] == "full_candidate_or_formal_no_go_gate"
+    assert causal["status_basis"] == "FORMAL_NO_GO_AND_NAMED_BRANCH"
     assert causal["baseline_status"] == "BLOCKED"
     assert causal["baseline_controlling_blocker"] == "original_conserved_c_gradient_baseline_blocked"
+    assert causal["controlling_blocker"] == "original_conserved_c_gradient_baseline_blocked"
     assert causal["lane_status"] == "PASS"
     assert causal["lane_status_role"] == "scoped_named_branch_lane"
     assert causal["lane_closure_level"] == "CLOSED_FOR_LANE"
@@ -44,3 +47,9 @@ def test_topic13_gate_keeps_original_baseline_blocked_after_no_go() -> None:
         "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
     )
     assert "original_conserved_c_gradient_baseline_blocked" not in gate["major_result"]["what_remains_open"]
+    no_go_paths = [
+        item["path"]
+        for item in gate["evidence_artifacts"]
+        if item.get("path") == "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json"
+    ]
+    assert len(no_go_paths) == 1

@@ -50,6 +50,18 @@ Current foundation artifacts:
 - [Persistence-energy diagnostic artifact](./artifacts/persistence_energy_diagnostic_verification.json)
 - [Thermal observable bridge specification](./THERMAL_OBSERVABLE_BRIDGE_SPEC.md)
 - [Thermal observable bridge artifact](./artifacts/thermal_observable_bridge_verification.json)
+- [Curved 3+1 ADM constraint interface](./uet_curved_3p1_constraints.py)
+- [Curved 3+1 ADM constraint verification](./artifacts/curved_3p1_adm_constraint_interface_audit.json)
+- [Curved 3+1 parent dependency gate](./artifacts/core_curved_3p1_parent_gate.json)
+- [Curved 3+1 periodic geometry operator](./uet_curved_3p1_geometry.py)
+- [Curved 3+1 geometry verification](./artifacts/curved_3p1_geometry_operator_verification.json)
+- [Curved 3+1 ADM evolution RHS](./uet_curved_3p1_adm_evolution.py)
+- [Curved 3+1 ADM evolution verification](./artifacts/curved_3p1_adm_evolution_operator_verification.json)
+- [Fixed-gauge ADM hyperbolicity no-go](./artifacts/curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json)
+- [Curved 3+1 evolution branch specification](./CORE_CURVED_3P1_EVOLUTION_BRANCH_SPEC.md)
+- [Curved 3+1 generalized-harmonic principal system](./uet_curved_3p1_generalized_harmonic.py)
+- [Generalized-harmonic principal-system verification](./artifacts/curved_3p1_gh_principal_system_verification.json)
+- [Generalized-harmonic branch gate](./artifacts/curved_3p1_gh_branch_gate.json)
 
 > **Historical engine layer for candidate UET equation families**
 > **Version 0.9.0** | Last Updated: 2026-01-13

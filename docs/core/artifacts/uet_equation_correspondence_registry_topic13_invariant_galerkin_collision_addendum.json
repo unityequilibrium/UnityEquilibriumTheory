@@ -1,0 +1,96 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "CANDIDATE_DIAGNOSTIC_NOT_MERGED",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "equation_entries": [
+    {
+      "ontology": {
+        "C": "unchanged",
+        "Phi": "effective response variable and internal exchange response only",
+        "R_gen": "excluded",
+        "R_obs": "excluded"
+      },
+      "unit_lane": "natural_units",
+      "units": {
+        "quadratic_form": 3,
+        "hilbert_gram": 2,
+        "inverse_sqrt_gram_each": -1,
+        "collision_operator": 1
+      },
+      "derivation_class": "charge_resolved_invariant_finite_scalar_galerkin_quadratic_form",
+      "observable": "Finite scalar collision-rate spectrum, not a physical transport coefficient",
+      "data_role": "DERIVED_SYNTHETIC_STRUCTURAL_CANDIDATE",
+      "verification_status": "PASS_SCOPED_INVARIANT_SCALAR_GALERKIN_COLLISION",
+      "controlling_blocker": "self_consistent_width_and_vector_heat_current_basis_missing",
+      "claim_boundary": "Finite-cutoff scalar isotropic collision operator only; not a complete vector/tensor transport basis, continuum proof, self-consistent width, ladder, Kubo/SI coefficient, external validation, or Full Topic 13 closure.",
+      "equation_id": "uet.o2.thermal.invariant_charge_resolved_scalar_galerkin_collision",
+      "version": "1",
+      "classification": "candidate_invariant_scalar_galerkin_collision",
+      "relation_or_code_path": {
+        "quadratic_form": "Q_ab=(beta/4)*sum_q integral dPi1 dPi2 dPhi2 |M|^2 f1 f2 (1+f3)(1+f4) DeltaF_a DeltaF_b / S_final",
+        "hilbert_gram": "G_ab=beta*sum_q integral d^3p/(2pi)^3 f_q(1+f_q) F_a F_b",
+        "normalized_operator": "L_rate=G^(-1/2) Q G^(-1/2)",
+        "event_invariants": "Delta(q)=Delta(E)=Delta(p_x)=Delta(p_y)=Delta(p_z)=0"
+      },
+      "standard_physics_counterpart": "Linearized relativistic 2-to-2 Boltzmann collision quadratic form",
+      "variables": {
+        "G": "thermal Hilbert Gram matrix",
+        "Q": "collision quadratic form",
+        "L_rate": "normalized rate operator"
+      },
+      "mathematical_role": "finite scalar precursor to the microscopic transport ladder",
+      "observable_mapping": "Finite scalar collision-rate spectrum, not a physical transport coefficient",
+      "parameter_dimensions": {
+        "quadratic_form": 3,
+        "hilbert_gram": 2,
+        "inverse_sqrt_gram_each": -1,
+        "collision_operator": 1
+      },
+      "source_or_origin": "Declared O(2)-Phi action and Lorentz-invariant two-body phase space",
+      "assumptions": {
+        "natural_units": true,
+        "normal_response_background": true,
+        "elastic_equal_mass_2to2": true,
+        "scalar_isotropic_basis": true
+      },
+      "symmetry_and_conservation": "Eventwise charge and four-momentum conservation; PSD detailed-balance quadratic form",
+      "limiting_cases": [
+        "energy scales 1.5, 2, 3",
+        "radial orders 8, 12, 16",
+        "angular orders 4, 6, 8"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_o2_invariant_galerkin_collision_operator.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_topic13_invariant_galerkin_collision_operator.py",
+        "docs/core/test/test_topic13_invariant_galerkin_collision_operator.py"
+      ],
+      "evidence_class": "INTERNAL_STRUCTURAL_CANDIDATE",
+      "proof_status": "FINITE_SCALAR_GALERKIN_RATE_AND_CONVERGENCE_VERIFIED",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_invariant_galerkin_collision_operator_audit.json",
+          "sha256": "0758838ca31bcf8e061613e6cf7eeb429cd2eab0850594604d260e675f61f854"
+        }
+      ],
+      "downstream_dependencies": [
+        "same_kernel_width_derivation",
+        "vector_heat_current_Galerkin_extension"
+      ],
+      "dependency_role": "precursor_only_not_physical_unlock",
+      "physical_dependency_unlock": false,
+      "failure_mode": [
+        "vector_tensor_heat_current_Galerkin_basis",
+        "self_consistent_quasiparticle_width_from_same_kernel",
+        "microscopic_retarded_ladder_solution",
+        "number_changing_and_response_channels",
+        "continuum_and_cutoff_limit",
+        "physical_Kubo_and_SI_normalization"
+      ],
+      "next_hardening_step": "Derive tagged and spectral widths from the same collision kernel, then extend the Galerkin basis to vector heat/current modes before solving the retarded ladder."
+    }
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}

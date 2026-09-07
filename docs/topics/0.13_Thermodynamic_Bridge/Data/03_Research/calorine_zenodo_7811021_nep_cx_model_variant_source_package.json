@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-calorine-public-model-variant-source-package-v1",
   "artifact": "t13_calorine_public_model_variant_source_package",
-  "generated_at": "2026-08-20",
+  "generated_at": "2026-08-24",
   "status": "PASS_SCOPED_CALORINE_PUBLIC_MODEL_VARIANT_BOUNDARY",
   "major_result": {
     "major_result_id": "T13_CALORINE_PUBLIC_MODEL_VARIANT_BOUNDARY",
@@ -100,10 +100,10 @@
       "no-fit/no-holdout audit"
     ],
     "runtime_preflight": {
-      "status": "BLOCKED_RERUN_RUNTIME_DEPENDENCY",
+      "status": "PASS_RERUN_RUNTIME_PRESENT",
       "modules": {
-        "ase": false,
-        "phono3py": false
+        "ase": true,
+        "phono3py": true
       },
       "required_for_numeric_rerun": [
         "ase",

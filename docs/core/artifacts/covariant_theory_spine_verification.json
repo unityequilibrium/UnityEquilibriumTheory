@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "covariant_theory_spine_verification",
-  "generated_at": "2026-08-09T03:51:07.282346+00:00",
+  "generated_at": "2026-08-29T04:54:26.860863+00:00",
   "audit_status": "PASS",
   "research_status": "INTERNAL_MINKOWSKI_1P1_HYPERBOLIC_CONTROL_ONLY",
   "operator_mode": "covariant_theory_spine_v1",
@@ -12,15 +12,15 @@
     "matter_gradient_constraint_max_abs": 1.0824674490095276e-15,
     "response_gradient_constraint_max_abs": 0.0,
     "temporal_errors": [
-      2.614514794825591e-08,
+      2.6145147948255916e-08,
       6.800863023211205e-09,
-      1.7332842256581309e-09
+      1.7332842256581288e-09
     ],
     "temporal_orders": [
-      1.9427534942697005,
-      1.9722095861891074
+      1.9427534942697007,
+      1.9722095861891091
     ],
-    "minimum_temporal_order": 1.9427534942697005,
+    "minimum_temporal_order": 1.9427534942697007,
     "generated_trace": 1.6615677588998802e-09,
     "one_step_balance_residual": 2.9713515999704475e-07
   },

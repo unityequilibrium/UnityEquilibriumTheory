@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0",
+  "artifact": "curved_3p1_adm_constraint_formula_audit",
+  "generated_at": "2026-08-30T10:40:45.491982+00:00",
+  "status": "PASS_FORMULA_INTERFACE_ONLY",
+  "relations": [
+    {
+      "formula_id": "UET-CURVED3P1-HAMILTONIAN-001",
+      "relation": "R3 + K^2 - K_ij K^ij - 16*pi*G*rho = 0",
+      "variables": {
+        "R3": "spatial Ricci scalar",
+        "K": "trace gamma^ij K_ij",
+        "K_ij": "extrinsic curvature",
+        "rho": "Eulerian energy density",
+        "G": "declared positive gravitational constant"
+      },
+      "units": {
+        "R3": "L^-2",
+        "K": "L^-1",
+        "G_rho": "L^-2"
+      },
+      "conversion_steps": "none in geometric lane; SI conversion remains open",
+      "constant_origin": {
+        "16*pi": "standard ADM convention",
+        "G": "declared input"
+      },
+      "derivation_class": "imported standard ADM identity",
+      "unit_lane": "geometric",
+      "unit_closure": "L^-2 on every term",
+      "proof_status": "Minkowski and flat-FLRW algebraic controls pass",
+      "verification_role": "analytic gate and violation diagnostic",
+      "failure_mode": "vacuum/FLRW control does not cancel or a density violation is missed",
+      "next_hardening_step": "compute R3 from the grid metric and test spatial convergence",
+      "code_path": "docs/core/uet_curved_3p1_constraints.py"
+    },
+    {
+      "formula_id": "UET-CURVED3P1-MOMENTUM-002",
+      "relation": "D_j(K^j_i - delta^j_i*K) - 8*pi*G*S_i = 0",
+      "variables": {
+        "D_j": "spatial covariant derivative",
+        "K^j_i": "mixed extrinsic curvature",
+        "K": "trace gamma^ij K_ij",
+        "S_i": "Eulerian covariant momentum density",
+        "G": "declared positive gravitational constant"
+      },
+      "units": {
+        "D_K": "L^-2",
+        "G_S_i": "L^-2"
+      },
+      "conversion_steps": "none in geometric lane; SI conversion remains open",
+      "constant_origin": {
+        "8*pi": "standard ADM convention",
+        "G": "declared input"
+      },
+      "derivation_class": "imported standard ADM identity",
+      "unit_lane": "geometric",
+      "unit_closure": "L^-2 on every term",
+      "proof_status": "declared-divergence interface and analytic controls pass",
+      "verification_role": "analytic gate and momentum-source negative control",
+      "failure_mode": "momentum source is ignored or covariant-divergence sign/index placement drifts",
+      "next_hardening_step": "compute the covariant divergence from grid gamma_ij and K_ij",
+      "code_path": "docs/core/uet_curved_3p1_constraints.py"
+    }
+  ],
+  "source": {
+    "path": "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json",
+    "sha256": "d989b9dd637828dd64f975eaf1f744163ac71e362bde71e46e86e599eced1754",
+    "identity": {
+      "schema_version": "1.0",
+      "source_id": "gourgoulhon_2007_3p1_formalism",
+      "title": "3+1 Formalism and Bases of Numerical Relativity",
+      "author": "Eric Gourgoulhon",
+      "year": 2007,
+      "arxiv_id": "gr-qc/0703035",
+      "url": "https://arxiv.org/abs/gr-qc/0703035",
+      "source_role": "standard-physics formula and sign-convention reference",
+      "used_scope": [
+        "3+1 decomposition terminology",
+        "Hamiltonian constraint structure",
+        "momentum constraint structure",
+        "initial-data and gauge separation",
+        "spatial Levi-Civita connection",
+        "spatial Ricci tensor and scalar",
+        "covariant divergence in the momentum constraint"
+      ],
+      "not_used_for": [
+        "UET coefficient fitting",
+        "physical validation",
+        "claim that UET derives Einstein equations"
+      ],
+      "local_payload": "metadata-only source record; no redistributed PDF",
+      "accessed_on": "2026-08-28"
+    }
+  },
+  "open_items": [
+    "metric-to-Ricci differential operator",
+    "lapse and shift gauge evolution",
+    "spatial-metric and extrinsic-curvature evolution",
+    "constraint propagation or damping",
+    "well-posedness and convergence",
+    "Topic 13 stress-energy projection wiring",
+    "physical observable validation"
+  ],
+  "claim_ceiling": "curved 3+1 ADM constraint interface; no dynamical solver"
+}

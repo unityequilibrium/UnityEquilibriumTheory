@@ -1,0 +1,200 @@
+{
+  "schema_version": "t13-physical-transport-reconciliation-v1",
+  "artifact": "t13_physical_transport_reconciliation_audit",
+  "generated_at": "2026-08-29",
+  "status": "PASS_SCOPED_PHYSICAL_TRANSPORT_RECONCILIATION_OPEN",
+  "major_result": {
+    "major_result_id": "T13_PHYSICAL_TRANSPORT_RECONCILIATION",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "formal SK/KMS/entropy and natural-unit transport evidence is separated from physical SI evidence",
+      "the declared UET natural-unit Kubo channel is retained without SI or Full Topic 13 promotion",
+      "the Kim 2018 graphite Green-Kubo rows are retained as an external comparator only",
+      "the physical UET coefficient acceptance boundary is machine-readable and fail-closed"
+    ],
+    "what_remains_open": [
+      "physical_Kubo_coefficient_record_missing",
+      "finite_temperature_normal_component_not_derived",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing"
+    ],
+    "dependency_unlocked": "transport evidence reconciliation only; no physical transport, Full Topic 13, Core, Gravity, alpha, or external-validation unlock",
+    "equation_or_mapping": {
+      "formal_entropy": "nabla_mu J_S^mu = X_A L^(AB) X_B >= 0",
+      "natural_uet_channel": "K_rel^natural = lim_(omega->0) Re G_R^rel(omega)",
+      "external_comparator": "kappa_i = V/(k_B*T^2) * integral <J_i(s)J_i(0)> ds",
+      "admission": "physical UET coefficient requires matched Phi/SI state, correlator, source identity, hash, and uncertainty"
+    },
+    "units": {
+      "formal_lane": "declared natural units with local interface",
+      "natural_uet_channel": "natural-unit relative-flow response; not SI conductivity",
+      "external_comparator": "W m^-1 K^-1",
+      "physical_uet_requirement": "coefficient-specific SI units plus Phi response mapping"
+    },
+    "derivation_class": "transport evidence reconciliation; formal/action-derived/comparator classes kept separate",
+    "observable": "transport coefficient and thermal-response evidence acceptance state",
+    "data_role": "INTERNAL_TRANSPORT_RECONCILIATION_NOT_UET_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_physical_kubo_coefficient_provenance_audit.json",
+        "sha256": "af78a1eb742e6438d679263771ef85b0f500726f4342a5f0a7ccefbe07a54f63",
+        "role": "physical coefficient acceptance schema and fail-closed gate"
+      },
+      {
+        "path": "docs/core/artifacts/t13_transport_kms_entropy_status_boundary_audit.json",
+        "sha256": "ea7f6c0b9696e14e2e3164548207754508f105a7fd675820eb79c0338fdecf13",
+        "role": "formal SK/KMS, entropy, and heat-flux status boundary"
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json",
+        "sha256": "5e909ff97aa0476619235460c012313f36b6065e642bbe4f7fba63f36bd8c7f6",
+        "role": "declared action-derived UET natural-unit Kubo channel"
+      },
+      {
+        "path": "docs/core/artifacts/t13_kim_2018_graphite_green_kubo_external_input_audit.json",
+        "sha256": "13b2b2c677d2d4d0e1035df99b9b6ae40619040caa976f71baf1d406bb25b208",
+        "role": "source-locked external standard-physics comparator"
+      },
+      {
+        "path": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+        "sha256": "65a85d9abc2d051570af72898bd8b8848c29d1fb20685c9b284ce6915fe8a8fe",
+        "role": "formal flat thermodynamic bridge component gate"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_PHYSICAL_TRANSPORT_RECONCILIATION_OPEN",
+    "controlling_blocker": "physical_Kubo_coefficient_record_missing",
+    "claim_boundary": "This closes a transport evidence boundary only. It does not identify a natural-unit channel or external graphite conductivity with a physical UET Phi coefficient, does not close SI mapping, and does not close Full Topic 13."
+  },
+  "summary": {
+    "candidate_count": 5,
+    "formal_lane_count": 3,
+    "natural_unit_uet_lane_count": 3,
+    "external_physical_comparator_count": 1,
+    "physical_uet_coefficient_count": 0,
+    "accepted_for_full_topic13_count": 0
+  },
+  "candidates": [
+    {
+      "candidate_id": "physical_kubo_provenance_gate",
+      "artifact": {
+        "path": "docs/core/artifacts/t13_physical_kubo_coefficient_provenance_audit.json",
+        "sha256": "af78a1eb742e6438d679263771ef85b0f500726f4342a5f0a7ccefbe07a54f63",
+        "role": "physical coefficient acceptance schema and fail-closed gate"
+      },
+      "candidate_class": "PROVENANCE_GATE_NO_COEFFICIENT",
+      "closure_level": "CLOSED_FOR_LANE",
+      "formal_lane": true,
+      "natural_unit_uet_lane": false,
+      "external_physical_comparator": false,
+      "physical_uet_coefficient": false,
+      "full_topic13_eligible": false,
+      "reason": "The acceptance schema is closed, but the verifier still reports no physical coefficient value.",
+      "controlling_blocker": "physical_Kubo_coefficient_record_missing"
+    },
+    {
+      "candidate_id": "formal_sk_kms_entropy_boundary",
+      "artifact": {
+        "path": "docs/core/artifacts/t13_transport_kms_entropy_status_boundary_audit.json",
+        "sha256": "ea7f6c0b9696e14e2e3164548207754508f105a7fd675820eb79c0338fdecf13",
+        "role": "formal SK/KMS, entropy, and heat-flux status boundary"
+      },
+      "candidate_class": "FORMAL_SK_KMS_ENTROPY_INTERFACE",
+      "closure_level": "CLOSED_FOR_LANE",
+      "formal_lane": true,
+      "natural_unit_uet_lane": true,
+      "external_physical_comparator": false,
+      "physical_uet_coefficient": false,
+      "full_topic13_eligible": false,
+      "reason": "Formal KMS/entropy and natural-unit balance are verified, while physical coefficient and finite-temperature normal sector remain blocked.",
+      "controlling_blocker": "physical_Kubo_coefficient_record_missing"
+    },
+    {
+      "candidate_id": "uet_condensed_relative_flow_natural_kubo",
+      "artifact": {
+        "path": "docs/core/artifacts/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json",
+        "sha256": "5e909ff97aa0476619235460c012313f36b6065e642bbe4f7fba63f36bd8c7f6",
+        "role": "declared action-derived UET natural-unit Kubo channel"
+      },
+      "candidate_class": "UET_NATURAL_UNIT_KUBO_CHANNEL",
+      "closure_level": "CLOSED_FOR_LANE",
+      "formal_lane": false,
+      "natural_unit_uet_lane": true,
+      "external_physical_comparator": false,
+      "physical_uet_coefficient": false,
+      "full_topic13_eligible": false,
+      "numeric_coefficient_present": true,
+      "si_units": false,
+      "physical_anchor_supplied": false,
+      "reason": "A state-matched action-derived coefficient exists only in a declared natural-unit channel and has no physical Phi/SI anchor.",
+      "controlling_blocker": "independent_physical_condensed_vertex_anchor_missing"
+    },
+    {
+      "candidate_id": "kim_2018_external_graphite_green_kubo",
+      "artifact": {
+        "path": "docs/core/artifacts/t13_kim_2018_graphite_green_kubo_external_input_audit.json",
+        "sha256": "13b2b2c677d2d4d0e1035df99b9b6ae40619040caa976f71baf1d406bb25b208",
+        "role": "source-locked external standard-physics comparator"
+      },
+      "candidate_class": "EXTERNAL_STANDARD_PHYSICS_COMPARATOR",
+      "closure_level": "CLOSED_FOR_LANE",
+      "formal_lane": false,
+      "natural_unit_uet_lane": false,
+      "external_physical_comparator": true,
+      "physical_uet_coefficient": false,
+      "full_topic13_eligible": false,
+      "external_input_accepted": true,
+      "uet_mapping_present": false,
+      "reason": "Kim 2018 supplies source-locked SI graphite conductivity rows, but not a UET Phi response or Ding TTG state match.",
+      "controlling_blocker": "UET_space_response_and_base_Phi_mapping_missing"
+    },
+    {
+      "candidate_id": "flat_formal_bridge_with_external_inputs",
+      "artifact": {
+        "path": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+        "sha256": "65a85d9abc2d051570af72898bd8b8848c29d1fb20685c9b284ce6915fe8a8fe",
+        "role": "formal flat thermodynamic bridge component gate"
+      },
+      "candidate_class": "FORMAL_BRIDGE_WITH_EXTERNAL_INPUTS",
+      "closure_level": "CLOSED_FOR_LANE",
+      "formal_lane": true,
+      "natural_unit_uet_lane": true,
+      "external_physical_comparator": false,
+      "physical_uet_coefficient": false,
+      "full_topic13_eligible": false,
+      "reason": "Flat bridge components pass with declared external inputs, not with a physical UET transport coefficient or SI Phi calibration.",
+      "controlling_blocker": "physical_Kubo_coefficient_record_missing"
+    }
+  ],
+  "checks": {
+    "all_evidence_files_present": true,
+    "physical_kubo_gate_reports_no_value": true,
+    "formal_sk_kms_entropy_lane_passes": true,
+    "natural_kubo_is_explicitly_not_si": true,
+    "kim_external_comparator_not_uet_relabelled": true,
+    "flat_components_remain_lane_scoped": true,
+    "no_physical_uet_candidate_is_accepted": true,
+    "holdout_is_clean": true,
+    "no_alpha_fit_or_tuning": true
+  },
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "xie_2026_source_data_consumed": false,
+    "target_curve_used": false,
+    "alpha_Phi_K_fit_used": false,
+    "fit_performed": false
+  },
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": "Formal SK/KMS/entropy, one declared natural-unit UET Kubo channel, and one external graphite comparator are separated and source-linked; no physical UET coefficient is admitted.",
+    "WHAT_REMAINS_OPEN": "physical_Kubo_coefficient_record_missing; finite-temperature normal transport; Phi-to-SI mapping; independent alpha_Phi_K calibration.",
+    "DEPENDENCY_UNLOCKED": "None beyond transport evidence reconciliation visibility.",
+    "STATUS": "PASS_SCOPED_PHYSICAL_TRANSPORT_RECONCILIATION_OPEN",
+    "WHAT_CHANGED": "Added a fail-closed reconciliation of five transport evidence classes; no coefficient, alpha, threshold, equation, or holdout role was promoted.",
+    "EQUATION_OR_MAPPING": "Formal entropy and KMS lanes, natural-unit K_rel, and external Green-Kubo kappa remain distinct; physical admission requires a matched Phi/SI record.",
+    "VERIFICATION": "All source artifacts are present and hashed; formal lanes pass their scoped checks; Kim is external-only; natural Kubo is non-SI; accepted physical UET coefficient count is zero.",
+    "CONTROLLING_BLOCKER": "physical_Kubo_coefficient_record_missing",
+    "NEXT_ACTION": "Obtain or microscopically derive one state-matched physical UET transport record with Phi/SI mapping, correlator locator, source identity, uncertainty, and finite-temperature scope; do not relabel Kim or the natural-unit channel.",
+    "CLAIM_BOUNDARY": "Transport reconciliation is closed for lane only. Full Topic 13 remains blocked and global claim promotion remains false."
+  }
+}

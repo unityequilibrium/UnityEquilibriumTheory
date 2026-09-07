@@ -1,0 +1,94 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "CANDIDATE_DIAGNOSTIC_NOT_MERGED",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "equation_entries": [
+    {
+      "ontology": {
+        "C": "unchanged",
+        "Phi": "unchanged",
+        "R_gen": "excluded",
+        "R_obs": "excluded"
+      },
+      "unit_lane": "natural_units",
+      "units": {
+        "quadrature_weight_dp": 1,
+        "p_squared_each": 2,
+        "two_radial_measures": 6,
+        "cross_section": -2,
+        "channel_rate": 4,
+        "state_weight_dp_p2_over_T": 2,
+        "transition_vector": -1,
+        "collision_operator": 2,
+        "required_frequency_rate": 1
+      },
+      "derivation_class": "dimensional_no_go_with_energy_covariance_witness",
+      "observable": "Collision-operator rate dimension, not a transport coefficient",
+      "data_role": "DERIVED_SYNTHETIC_DIAGNOSTIC",
+      "verification_status": "PASS_TRANSITION_RATE_DIMENSION_NO_GO",
+      "controlling_blocker": "collision_operator_energy_dimension_and_invariant_measure_repair_missing",
+      "claim_boundary": "Dimensional rejection of the current finite-channel rate operator only; not a repaired collision kernel, width, ladder, Kubo coefficient, SI transport or Full Topic 13 closure.",
+      "equation_id": "uet.o2.thermal.transition_kernel_rate_dimension_no_go",
+      "version": "1",
+      "classification": "dimensional_no_go",
+      "relation_or_code_path": {
+        "current": "W_c~(dp1*p1^2)(dp2*p2^2)*sigma gives E^4; v_c~1/sqrt(w) gives E^-1; L=sum W_c v_c v_c^T gives E^2",
+        "required": "L_rate must have E^1 so (L_rate-i*omega I)^-1 is dimensionally defined",
+        "repair": "derive the linearized single-particle operator from Lorentz-invariant dPi=d^3p/[(2pi)^3 2E], delta^4, symmetry factors and a declared Hilbert-space weight"
+      },
+      "standard_physics_counterpart": "Lorentz-invariant linearized Boltzmann collision rate",
+      "variables": {
+        "L": "collision operator",
+        "omega": "real frequency"
+      },
+      "mathematical_role": "Dimensional compatibility gate",
+      "observable_mapping": "Collision-operator rate dimension, not a transport coefficient",
+      "parameter_dimensions": {
+        "quadrature_weight_dp": 1,
+        "p_squared_each": 2,
+        "two_radial_measures": 6,
+        "cross_section": -2,
+        "channel_rate": 4,
+        "state_weight_dp_p2_over_T": 2,
+        "transition_vector": -1,
+        "collision_operator": 2,
+        "required_frequency_rate": 1
+      },
+      "source_or_origin": "Code formula audit and whole-action energy covariance",
+      "assumptions": {
+        "natural_units": true,
+        "all_energy_inputs_scaled_together": true
+      },
+      "symmetry_and_conservation": "Dimension gate precedes conservation claims",
+      "limiting_cases": [
+        "energy scale 1.5,2,3"
+      ],
+      "implementation_paths": [
+        "docs/scripts/audit/audit_topic13_transition_kernel_rate_dimension_no_go.py"
+      ],
+      "verifier_paths": [
+        "docs/core/test/test_topic13_transition_kernel_rate_dimension_no_go.py"
+      ],
+      "evidence_class": "INTERNAL_STRUCTURAL_DIAGNOSTIC",
+      "proof_status": "CURRENT_OPERATOR_REJECTED_AS_RATE",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_transition_kernel_rate_dimension_no_go.json",
+          "sha256": "da6911cf051831970c4ba9a564e41bf6d0d8d3b8c842032d9ee17a80b4744888"
+        }
+      ],
+      "downstream_dependencies": [],
+      "dependency_role": "blocks_microscopic_ladder_reuse",
+      "physical_dependency_unlock": false,
+      "failure_mode": [
+        "lorentz_invariant_linearized_collision_measure",
+        "Hilbert_space_state_weight_normalization",
+        "charge_resolved_contact_plus_Phi_rung",
+        "self_consistent_width_and_ladder"
+      ],
+      "next_hardening_step": "Re-derive the single-particle linearized collision operator with invariant phase space and a declared weighted inner product before inserting the production rung."
+    }
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}

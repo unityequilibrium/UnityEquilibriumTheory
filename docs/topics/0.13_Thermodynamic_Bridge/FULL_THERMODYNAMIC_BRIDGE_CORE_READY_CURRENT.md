@@ -1,75 +1,107 @@
 # Topic 0.13 Current Full-Bridge State
 
-Machine-readable authority: `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.
+Machine-readable authority: docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json.
 
-MAJOR_RESULT_CLOSURE: `PARTIAL`
+## 2026-08-24 - Causal Core handoff and MP48 mode diagnostic
 
-WHAT_IS_ACTUALLY_CLOSED: The following results are closed only for their
- declared lanes: (1) the conserved-C baseline no-go and named normalized
- finite-cone C/Phi branch; (2) the Ding PBTE formula and normalized TTG
- observable mapping; (3) action-derived finite-temperature O(2), SK/KMS,
- entropy, retarded-response, and declared-channel Kubo interfaces in natural
- units; (4) the symbolic natural-unit-to-SI conversion contract; (5)
- source-provenance/comparator boundaries for the available graphite packages,
- including the public Figshare DFT energy/force capability boundary; (6) the
- Huang 2023 NIMS MDR article-only payload boundary; (7) the Calorine C_src
- equilibrium/unit cross-check against the independent IAEA c_v comparator; (8)
- the public Calorine C-CX model-form provenance boundary; no numeric rerun or
- uncertainty estimate; (9) the NEP1/backend compatibility boundary, which records
- the current backend rejection without numeric rerun; (10) the pinned Calorine 1.0
- legacy NEP2 backend probe, which accepts the hash-locked C-CX model without
- producing fc2/fc3 or PBTE output; and (11) the legacy NEP2 candidate PBTE
- reproduction, which produces archived 4x4x2 fc2/fc3 and 8x8x4/10x10x5
- candidate C_src rows with a 0.2294% latest mesh change.
-These are evidence-producing sub-results, not Full Topic 13 closure.
+MAJOR_RESULT_CLOSURE: `T13_CAUSAL_FLUX_PHI_COUPLED_CORE_COMPATIBILITY` is `CLOSED_FOR_CORE` as a bounded named normalized branch; the Full Topic 13 gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_IS_ACTUALLY_CLOSED: The scoped conserved-C local-gradient no-go remains explicit. The named coupled C/Phi branch passes the unchanged `1e-6` leakage threshold, nonzero arrivals, convergence, shared ledger, ontology, no-clipping/no-padding/no-fit, and holdout-preservation checks. MP48 now also has a row-addressable harmonic mode-resolved C_src diagnostic at `35x35x14`.
+WHAT_REMAINS_OPEN: The original conserved-C `kappa_C>0` baseline remains blocked and is not replaced. MP48 is harmonic `DERIVED_COMPARISON`, not Ding PBTE acceptance: third-order PBTE/material-state equivalence and source-grade uncertainty are missing. The independent base-Phi SI anchor/alpha/beta package and physical Kubo/SK/KMS/entropy package remain open.
+DEPENDENCY_UNLOCKED: Named causal branch as a bounded Core input only. No Full Topic 13, curved 3+1, Gravity, constitutive transport, Galaxy, external validation, or claim promotion is unlocked.
+STATUS: Causal `PASS_CAUSAL_NAMED_BRANCH_CORE_COMPATIBILITY`; MP48 `PASS_MP48_MODE_RESOLVED_DERIVED_COMPARISON`; matrix `21 CLOSED_FOR_LANE / 5 CLOSED_AS_NO_GO / 0 required Core subresults / 10 OPEN`; `full_core_unlock=false`; `holdout_accessed=false`.
+WHAT_CHANGED: Added the causal Core compatibility artifact and rerun synchronization, plus a phonopy-derived compressed MP48 mode payload and manifest. The canonical gate still reports exactly 7 open blocker groups.
+EQUATION_OR_MAPPING: `C_src^vol(T)=N_A/(N_q V_mol) * sum_(q,mu)c_mu(q,T)`; the named causal flux/Phi equations remain normalized. No numeric `alpha_Phi_K` or SI Phi scale was inferred.
+VERIFICATION: Causal compatibility checks pass. MP48 aggregate harmonic rows differ from deposited rows by `1.97e-6` to `2.13e-6` under diagnostic tolerance `1e-5`; this is not source uncertainty or Ding acceptance. Xie 2026 remains unread.
+CONTROLLING_BLOCKER: Ding-compatible numeric C_src/material uncertainty, independent alpha_Phi_K/SI scale, normalized beta/SI correspondence, physical Kubo provenance, dimensional Phi map, TTG material mapping, and c_v uncertainty.
+NEXT_ACTION: Obtain one admissible Ding-compatible/permissioned PBTE package with source-grade uncertainty, or an independently fixed base-Phi SI anchor and paired alpha record. Keep MP48 as `DERIVED_COMPARISON` only.
+CLAIM_BOUNDARY: The causal result is Core-ready only for the named normalized branch. The MP48 result is a harmonic comparator. Neither closes Full Topic 13 or establishes an SI/external UET prediction.
+EVIDENCE: `docs/core/artifacts/t13_causal_named_branch_core_compatibility.json` (`6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a`); `docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.json` (`c4f1b4ecb22c97bdb0e6cc61b595eca51f394f5ad05456227f38b6420d7e562b`); `docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.npz` (`fd535acd474382daf8c12bcd8d58b100a7d2fee63ba1c67913ca5556a1e33007`); matrix (`f5201be4da502f8622fffb9a07e8f779da20a04029313282d049b300469b2638`); full gate (`592b992713ffe0870cafc9e4e7cf64e392316a303dc7f5a3d1ad00e67215a7c4`).
+
+## 2026-08-22 - MP48 Ding C_src mode-sum response mapping wave
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for `T13_MP48_DING_C_SRC_MODE_SUM_RESPONSE_MAPPING`; the Full Topic 13 result remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_IS_ACTUALLY_CLOSED: The Ding source text locator for mode-specific heat capacity and the summation over phonon modes is now mapped to the independent MP48 force-constant mode sum. Four explicit rows at 100, 200, 250, and 300 K are converted to `C_src^vol` in `J m^-3 K^-1` using the locked primitive-cell volume anchor.
+WHAT_REMAINS_OPEN: Ding-compatible PBTE numeric `C_src` or an accepted same-regime independent reproduction, material/state equivalence, route-wide convergence, source-grade uncertainty, base-Phi energy anchor, independent `alpha_Phi_K`, beta/SI correspondence, EOS, transport, KMS, entropy current, and dissipative balance.
+DEPENDENCY_UNLOCKED: Only the named response-mapping lane. No Ding-source, alpha, Full Topic 13, Core, Gravity, constitutive-transport, Galaxy, or external-validation dependency is unlocked.
+STATUS: `PASS_T13_DING_C_SRC_MODE_SUM_RESPONSE_MAPPING`; full gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE`; `claim_promotion=false`.
+WHAT_CHANGED: Added the source-locator and unit-conversion verifier, machine-readable mapping artifact, focused regression, full-gate projection, closure-register entry, dependency evidence, manifest record, and update-log record. No target fit, alpha calibration, threshold change, synthetic replacement, Landauer inference, or holdout access was introduced.
+EQUATION_OR_MAPPING: `C_src^mol(T)=N_A/N_q * sum_(q,mu)c_mu(q,T)`; `C_src^vol(T)=C_src^mol(T)/V_mol,cell`; `Delta_Tq=Delta_u_ph/C_src^vol`. This is a standard harmonic response mapping only and is not a Ding PBTE acceptance or a `Phi` map.
+VERIFICATION: Mapping artifact and hash checks passed; four finite positive SI rows were emitted; focused regression `1 passed`; full gate regenerated with 9 open blockers, `claim_promotion=false`, and downstream unlock `false`; holdout/fit guards remain false.
+CONTROLLING_BLOCKER: `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing`; independent `alpha_Phi_K` and the dimensional anchor remain open.
+NEXT_ACTION: Obtain an authorized Ding-compatible numeric package or accepted same-regime PBTE reproduction with source identity, mode-resolved rows, SI units, uncertainty, convergence, and material/state mapping; keep the independent base-Phi/SI calibration separate.
+CLAIM_BOUNDARY: This closes the response-mapping contract for an independent harmonic comparator only. It is not Ding `C_src`, a same-regime material validation, `alpha_Phi_K`, a `Phi`-to-temperature prediction, external validation, or Full Topic 13 closure.
+EVIDENCE_HASHES: artifact `1deefbb6ebbed62345db2063612f9d8c172902dcb93068b800e579455e0d297c`; full gate `2cd42d31f9055f8f6ba14a969b867a6294fed3d94fa287f7c286eb02a2008bb7`; closure register `82c8932282844fe69aa8b7af693f0da3911db7a266149c9c47317c76755039a2`; dependency gate `236c48fad1e99eeb519358952a21092193bcf89d6cd271791b26d5ac703e68a9`.
+
+
+MAJOR_RESULT_CLOSURE: PARTIAL
+
+WHAT_IS_ACTUALLY_CLOSED: The current wave makes nine scoped results explicit in the full-gate projection: IG-210 density uncertainty is CLOSED_FOR_LANE; the captured public Ding OA/supplementary route is CLOSED_AS_NO_GO for numeric C_src(T) acquisition; the screened graphite alpha_V/K_T inventory is CLOSED_AS_NO_GO for a same-state uncertainty-bearing pair; the MP48 harmonic graphite c_v comparator is CLOSED_FOR_LANE with a non-statistical display envelope; the current action-to-normalized-beta identification question is CLOSED_AS_NO_GO; the current base-Phi-to-SI-anchor identification question is CLOSED_AS_NO_GO; normalized-alpha scale identifiability is CLOSED_AS_NO_GO; the Calorine model/state spread is CLOSED_FOR_LANE as a comparator uncertainty lane; and the current Calorine full-LBTE route is CLOSED_AS_NO_GO because its numerical admission boundary fails. These are lane/no-go results, not Full Topic 13 closure.
 
 WHAT_REMAINS_OPEN: The current full-gate blockers are:
-`ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing`,
-`alpha_Phi_K_independent_calibration_missing`,
-`normalized_beta_and_SI_scale_correspondence_missing`,
-`eos_transport_kms_entropy_completion_missing`,
-`dimensional_phi_to_thermal_observable_map_missing`,
-`physical_Kubo_coefficient_record_missing`,
-`same_grade_alpha_V_and_K_T_missing`,
-`material_regime_mapping_to_TTG_not_closed`,
-`density_uncertainty_not_source_locked`, and
-`c_v_source_uncertainty_not_closed`.
+ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing,
+alpha_Phi_K_independent_calibration_missing,
+normalized_beta_and_SI_scale_correspondence_missing,
+eos_transport_kms_entropy_completion_missing,
+dimensional_phi_to_thermal_observable_map_missing,
+physical_Kubo_coefficient_record_missing,
+same_grade_alpha_V_and_K_T_missing,
+material_regime_mapping_to_TTG_not_closed, and
+c_v_source_uncertainty_not_closed.
 
-DEPENDENCY_UNLOCKED: Lane-level formula, causal, formal-response, and source
-boundary interfaces only. No Core-ready, curved 3+1, Gravity/GR, full
-constitutive transport, Galaxy, external-validation, or global UET claim is
-unlocked.
+DEPENDENCY_UNLOCKED: The scoped density, comparator, source-boundary, beta-identifiability, Calorine uncertainty, and Calorine stability results are recorded for Core integration only. No Core-ready, curved 3+1, Gravity/GR, full constitutive transport, Galaxy, external-validation, or global UET dependency is unlocked.
 
-STATUS: `BLOCKED_OPEN_T13_FULL_BRIDGE`
+STATUS: BLOCKED_OPEN_T13_FULL_BRIDGE
 
-WHAT_CHANGED: The canonical summary is synchronized to the current full gate and major-result register. The Figshare DFT archive audit closes only the public force-data provenance/capability boundary, the Huang 2023 NIMS MDR audit closes only the article-only public payload boundary, the Calorine equilibrium/unit cross-check remains lane-level evidence, the Calorine C-CX audit locks a public model-form input only, the current Calorine 3.5 compatibility audit records the rejection without rewriting source bytes, and the pinned Calorine 1.0 legacy NEP2 probe records model acceptance without PBTE output; the new legacy PBTE lane now runs the fixed 4x4x2 state through 8x8x4 and 10x10x5 q-meshes and archives candidate fc2/fc3 and C_src outputs, while source-grade uncertainty and Ding mapping remain open. C, Phi, R_gen, and R_obs meanings are unchanged, and no threshold, fit, calibration, or holdout policy changed.
+WHAT_CHANGED: Added major_result.resolved_blockers records for the nine scoped results above and synchronized the full gate, closure register, dependency projection, focused tests, current report, update log, and data manifest. The Calorine spread remains a comparator envelope and the full-LBTE route remains rejected for its current numerical boundary. The public Ding route still has no accepted numeric C_src(T) payload; no C_v, Ding C_src, alpha_Phi_K, fit, threshold change, or holdout access was introduced.
+
+EQUATION_OR_MAPPING:
+y_TTG = Delta_Tq(t) / Delta_Tq(0)
+y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)
+Delta_Tq = alpha_Phi_K * Delta_Phi
+C_p^V = rho * C_p
+C_v^V = C_p^V - T*alpha_V^2*K_T
+C_src(T) = sum_mu c_mu(T)
+
+VERIFICATION: The full gate reports 180 closed lanes, 16 scoped no-go lanes, and 9 open blockers. The closure regression suite passes 11 tests and asserts all nine resolved results. holdout_consumed=false and claim_promotion=false. The Ding public source page states that supporting data are available from the corresponding author on reasonable request; the captured public package therefore remains a source-availability boundary, not numeric C_src evidence. [Ding et al. Nature Communications](https://www.nature.com/articles/s41467-021-27907-z)
+
+CONTROLLING_BLOCKER: The nearest actionable controller is an authorized Ding numeric package or an accepted same-regime PBTE reproduction with material/state, units, uncertainty, convergence, permission, and hash. In parallel, an independent base-Phi/SI record is required for alpha_Phi_K; no source or derivation currently satisfies that calibration contract.
+
+NEXT_ACTION: Keep the author-request package ready for an authorized external response; otherwise continue the permitted PBTE/source search without synthesizing C_src. Separately derive or source the finite-temperature scale map for beta and the base-Phi observable anchor, then proceed to EOS, covariant transport, SK/KMS, entropy production, and dissipative-balance closure.
+
+CLAIM_BOUNDARY: UET remains a candidate effective theory. C remains a collective coordinate, Phi an effective response, R_gen a derived history trace, and R_obs an observer record. No numeric alpha_Phi_K, Kelvin prediction, physical transport coefficient, external validation, Full Topic 13 closure, or downstream unlock is claimed.
+
+EVIDENCE: full gate docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json SHA-256 203bf8c3d9dd45794fb8d7af1e2520e1457b73d3c683377915c57f4b30952d94; closure register docs/core/artifacts/uet_major_result_closure_register.json SHA-256 b3edbff7f1c8db89f61fceaeb74797ee721cd59515f6218b22e1123cca89bdf1; dependency gate docs/core/artifacts/uet_major_result_dependency_unlock_gate.json SHA-256 1a5b61b73e5f5bf2210e030fde5cfc3064eca9ab5f56dc89167e56b752255760; gate code SHA-256 6775b8e21da388094facc0535d59d7b3818d02a45c8f318aa81f30cbe128eb1a; closure test SHA-256 09758487eba1083e20bb0865d768bb9814a4294aa8fdc28ff5a285a177789559.
+
+## 2026-08-22 - QH-15 Graphite Comparator Boundary (T13-152)
+
+MAJOR_RESULT_CLOSURE: `T13_QH15_GRAPHITE_CV_COMPARATOR_BOUNDARY` is `CLOSED_FOR_LANE`; Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+
+WHAT_IS_ACTUALLY_CLOSED: The Materials Cloud QH-15 archive identity, selected raw entries, local hashes, source-notebook unit witness, natural-graphite `SpecificC` rows, explicit SI conversion, and a two-temperature equilibrium-scale cross-check against the independent Calorine candidate are machine-readable. The natural and isopure control rows remain separate.
+
+WHAT_REMAINS_OPEN: QH-15 does not provide Ding mode-resolved `C_src`, a Ding TTG response-contract match, source-grade uncertainty, a material-regime equivalence proof, or an independent `alpha_Phi_K` calibration. The full gate still has 10 open blockers.
+
+DEPENDENCY_UNLOCKED: Comparator/source classification only. No Full Topic 13, Core, curved 3+1, Gravity, constitutive transport, Galaxy, or external-validation dependency is unlocked.
+
+STATUS: `PASS_SCOPED_QH15_CV_COMPARATOR_BOUNDARY`.
+
+WHAT_CHANGED: Added the QH-15 source package, archived selected raw entries, unit-conversion verifier, focused regression, full-gate lane integration, and major-result/dependency synchronization. No fit, calibration, threshold change, synthetic replacement, or Xie 2026 holdout access occurred.
 
 EQUATION_OR_MAPPING:
 
 ```text
-f_hat_T13(C, Phi, T) = a_Phi(T) Phi^2 / 2 + b_Phi Phi^4 / 4 - g C^2 Phi / 2
-beta_T13 = T0 * (da_Phi / dT)|T0
-a_Phi(T) = a_Phi(T0) + beta_T13 * (T - T0) / T0
-s = -partial_T(e0 f_hat_T13) = -e0 Phi^2 beta_T13 / (2 T0)
-
-y_TTG = Delta_Tq(t) / Delta_Tq(0)
-y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)
-Delta_Tq = alpha_Phi_K * Delta_Phi
-rho_model = N_C M_C / (N_A V_primitive)
-c_v,implied = C_src / rho_model
+C_v^QH15[J m^-3 K^-1] = SpecificC[pg/(um ns^2 K)] * 1.0e9
+r_T = (C_v^QH15 - C_src^Calorine) / C_src^Calorine
 ```
 
-VERIFICATION: Analytic and finite-difference entropy derivatives agree on a synthetic unit witness. `T0` is K, `da_Phi/dT` is K^-1, and `e0` is an external J m^-3 input. The Figshare audit is source-hash locked with 4,788 configuration records, 742 graphite records, and no direct PBTE payload fields. The NIMS MDR archive is hash-locked and contains one article PDF member only, with no deposited ShengBTE/force-constant/C_src rows. No Landauer term, fit, source row, target, or Xie 2026 holdout was used. The public C-CX model input is SHA-256 cf75256947a8953b8041ccc26a34ac307724f69bf2edbcc97b46d87bc5e72408; the current Calorine 3.5 NEPY backend rejects the legacy NEP1 model, while the pinned Calorine 1.0 legacy NEP2 backend generates 1,220 force-displacement evaluations for a 128-atom 4x4x2 state. The archived 8x8x4 and 10x10x5 runs share the same POSCAR/fc2/fc3 hashes and emit `C_src(200 K)=993760.2797173061` and `C_src(300 K)=1689859.0705455516 J m^-3 K^-1` at 10x10x5; the latest relative mesh change is `0.0022937348623178356`, below the declared 0.01 candidate preflight. This is not source-grade uncertainty or Ding acceptance.
+VERIFICATION: QH-15 natural rows and isopure-control rows match the archived hashes and 20-column schema. At 200 K the relative difference to the Calorine latest mesh is `-0.682889%`; at 300 K it is `+0.014257%`. The comparison is source-separated and non-fitting; it is not a Ding acceptance test. The full gate is `176` closed lanes, `16` scoped no-go lanes, `10` open blockers, and downstream unlock `false`; the new coupling no-go remains lane-only.
 
-CONTROLLING_BLOCKER: Full Topic 13 remains controlled by `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing` together with `alpha_Phi_K_independent_calibration_missing` and the remaining dimensional/thermodynamic closure blockers. The legacy PBTE lane is now controlled by `calorine_legacy_pbte_source_grade_uncertainty_and_ding_mapping_missing`; the backend-availability blocker has narrowed but has not become Ding acceptance or source-grade uncertainty.
+CONTROLLING_BLOCKER: `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing`; `alpha_Phi_K_independent_calibration_missing` remains independently open.
 
-NEXT_ACTION: Keep the legacy PBTE package as candidate evidence only. Source-lock an authorized Ding numeric package or accepted same-regime mapping with material state, mode-resolved C_src, and source-grade uncertainty; separately establish the independent base-Phi/SI anchor and alpha_Phi_K without target fitting or Xie 2026 access. Then continue EOS, covariant transport, SK/KMS, entropy production, and dissipative-balance closure under the named lane.
+NEXT_ACTION: Keep QH-15 as comparator evidence while obtaining an authorized Ding numeric package or accepted same-regime PBTE reproduction with uncertainty and response mapping; separately obtain an independent base-Phi/SI record for `alpha_Phi_K`.
 
-CLAIM_BOUNDARY: UET remains a candidate effective theory. `C` remains a
-collective coordinate, `Phi` an effective response, and `R_gen` a derived
-history trace. No UET-wide beta, Kelvin prediction, physical entropy-
-production law, external validation, full Topic 13 closure, or downstream
-unlock is claimed.
+CLAIM_BOUNDARY: QH-15 is not Ding `C_src`, not a Phi-to-temperature prediction, not an `alpha_Phi_K` calibration, not external validation, and not Full Topic 13 closure. `C`, `Phi`, `R_gen`, and `R_obs` meanings are unchanged.
+
+EVIDENCE: `docs/core/artifacts/t13_qh15_graphite_transport_boundary_audit.json`; `docs/scripts/audit/audit_topic13_qh15_graphite_transport_boundary.py`; `docs/core/test/test_topic13_qh15_graphite_transport_boundary.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.
 
 ## 2026-08-11 Causal Branch Selection Update
 
@@ -2257,3 +2289,191 @@ NEXT_ACTION: Obtain a permissioned raw numeric table or numeric measurement unce
 CLAIM_BOUNDARY: This is a provenance and acquisition boundary, not a closed
 Berut numeric row, uncertainty result, `alpha_Phi_K`, UET bridge, or external
 validation.
+
+## T13-145 - Semantic alpha-calibration admission gate
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for the calibration-admission contract; the numeric alpha_Phi_K result remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: Candidate eligibility is evaluated from substantive values within one paired record rather than from field-name presence across an arbitrary JSON tree. The gate requires source identity and locator, matched material/state/geometry, finite base-Phi and SI response amplitudes, units, numeric uncertainty, preprocessing, row identity, a valid source hash, and an independence statement.
+
+WHAT_REMAINS_OPEN: All 11 current candidate packages remain ineligible. No independent paired base-Phi/SI record, numeric alpha_Phi_K, or base-Phi to Phi_E scale was produced.
+
+DEPENDENCY_UNLOCKED: Calibration-admission contract only; no alpha, dimensional map, Full Topic 13, Core, Gravity, or transport dependency is unlocked.
+
+STATUS: PASS_SCOPED_NO_ELIGIBLE_PAIRED_ALPHA_RECORD; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.
+
+WHAT_CHANGED: The candidate audit now validates semantic paired records and keeps key-presence diagnostics separate. The full gate, closure register, and dependency projection consume the regenerated candidate artifact.
+
+EQUATION_OR_MAPPING: y_TTG^UET = Delta_Phi(t) / Delta_Phi(0); Delta_Tq = alpha_Phi_K * Delta_Phi; no coefficient is emitted from normalized data, Landauer, or a comparator package.
+
+VERIFICATION: Candidate count is 11 and eligible count is 0; numeric_alpha_Phi_K_emitted=false, holdout_accessed=false, and target_fit_performed=false. The focused regression passed with 10 tests.
+
+CONTROLLING_BLOCKER: independent_paired_base_Phi_amplitude_and_SI_observable_record_missing.
+
+NEXT_ACTION: Obtain a permitted paired base-Phi/SI record or derive a coefficient-provenance-backed dimensional map without reading Xie 2026, then rerun the semantic admission gate before any calibration or prediction.
+
+CLAIM_BOUNDARY: This closes the admission and provenance boundary only. It is not a numeric calibration, temperature prediction, external validation, or Full Topic 13 closure.
+## T13-147 - Joint thermal-bridge scale-dependency no-go
+
+MAJOR_RESULT_CLOSURE: `CLOSED_AS_NO_GO` for the current normalized/action scale question; Full Topic 13 remains `PARTIAL` / `BLOCKED`.
+
+WHAT_IS_ACTUALLY_CLOSED: The declared scalar action and normalized TTG lane admit an explicit continuous field-rescaling family. A field-only alpha compensation preserves the dimensional response form while changing the unanchored Phi amplitude, and a joint field/energy-density rescaling changes the absolute Kelvin response and normalized beta correspondence.
+
+WHAT_REMAINS_OPEN: An independent field-energy-temperature scale map, an independent paired base-Phi/SI observable record, physical beta provenance, and the base-Phi-to-Delta_u_ph map remain open. No numeric alpha_Phi_K or e0 was emitted.
+
+DEPENDENCY_UNLOCKED: None. This closes a structural no-go lane only; it does not unlock Full Topic 13, Core, Gravity, constitutive transport, or Galaxy.
+
+STATUS: `PASS_SCOPED_THERMAL_BRIDGE_SCALE_DEPENDENCY_NO_GO`; canonical full gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE` / `PARTIAL` with 10 blockers.
+
+WHAT_CHANGED: Added `docs/core/t13_thermal_bridge_scale_dependency.py` and its verifier/artifact. The full gate now registers `T13_THERMAL_BRIDGE_SCALE_DEPENDENCY_NO_GO` under the dimensional observable map and records the no-go in lane closures.
+
+EQUATION_OR_MAPPING: `y_TTG = Delta_Tq(t) / Delta_Tq(0)`; `y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)`; `Delta_Tq = alpha_Phi_K * Delta_Phi`; `delta_phi_prime = s_phi delta_phi`; `beta_T13 = (Phi_scale^2 / e0_scale) beta_Phi^nat`.
+
+VERIFICATION: The structural witness passed action-term, normalized-response, field-compensation, absolute-scale, beta-scale, ontology, no-fit, no-Landauer, no-target, and no-holdout checks. Full closure summary is `closed_lane_count=170`, `closed_as_no_go_count=15`, `open_blocker_count=10`, `downstream_dependency_unlocked=false`. Xie 2026 remained unconsumed.
+
+CONTROLLING_BLOCKER: `independent_field_energy_and_temperature_scale_map_missing`, together with the existing independent alpha, Ding C_src, physical Kubo, EOS/transport/KMS/entropy, material-regime, and uncertainty blockers.
+
+NEXT_ACTION: Obtain a permitted source-locked field residue or paired base-Phi/SI observable anchor, or derive the map from a declared dimensionful action/free-energy origin. Do not infer it from normalized TTG, Landauer, or Xie 2026.
+
+CLAIM_BOUNDARY: Scoped structural no-go only. It is not numeric calibration, Kelvin prediction, external validation, `CLOSED_FOR_CORE`, or global UET closure.
+
+## T13-148 - AIST graphite source-route public-reproducibility boundary
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for the screened AIST public source route; Full Topic 13 remains `PARTIAL` / `BLOCKED`.
+WHAT_IS_ACTUALLY_CLOSED: The public AIST TPDS graphite search surface was source-located. It exposes graphite material names and property categories relevant to density, c_v, volumetric heat capacity, and volumetric thermal expansion, but the displayed terms restrict publishing or providing the contents to third parties. The audit therefore closes this route as a public-reproducibility boundary without opening a material detail record or consuming numeric rows.
+WHAT_REMAINS_OPEN: A permitted redistributable numeric c_v or volumetric-heat-capacity row with material identity, units, preprocessing, row-level uncertainty, and hash remains open. Ding-compatible C_src, material-regime mapping, density uncertainty, and independent alpha_Phi_K remain open.
+DEPENDENCY_UNLOCKED: AIST route boundary only. No c_v source closure, Ding C_src, alpha_Phi_K, Full Topic 13, Core, Gravity, constitutive transport, or Galaxy dependency is unlocked.
+STATUS: `PASS_SCOPED_AIST_GRAPHITE_SOURCE_ROUTE_BOUNDARY`; canonical full gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE` / `PARTIAL` with 10 blockers.
+WHAT_CHANGED: Added the machine-readable AIST route-boundary artifact and verifier, recorded source metadata and terms without numeric payload, integrated the lane into the full-gate source-package section, and added focused regression coverage.
+EQUATION_OR_MAPPING: Candidate source quantity `c_v(T, material)` has units `J kg^-1 K^-1`; candidate volumetric map `c_v^V = rho c_v` has units `J m^-3 K^-1`. `numeric_mapping_emitted=false`; no `Delta_Tq = alpha_Phi_K * Delta_Phi` coefficient is emitted.
+VERIFICATION: Artifact records `numeric_payload_accessed=false`, `numeric_payload_stored=false`, `material_state_verified=false`, `accepted_for_full_topic13=false`, and `holdout_accessed=false`. Focused regression passed (`6 passed`). Full gate remains blocked; downstream dependency audit remains blocked; Xie 2026 was not accessed.
+CONTROLLING_BLOCKER: `aist_numeric_payload_not_publicly_redistributable` for this route; globally the Ding-compatible `C_src`, independent alpha/dimensional map, physical Kubo, EOS/transport/KMS/entropy, material-regime, and uncertainty blockers remain controlling.
+NEXT_ACTION: Acquire a permitted redistributable numeric graphite c_v or volumetric-heat-capacity source with provenance and uncertainty, or obtain a permissioned private source package without treating it as publicly reproducible. Do not substitute AIST metadata for Ding or calibration.
+CLAIM_BOUNDARY: This closes only a source-route boundary. It is not numeric c_v or C_src evidence, independent alpha_Phi_K calibration, TTG prediction, external validation, `CLOSED_FOR_CORE`, or global UET closure.
+EVIDENCE_PATHS: `docs/scripts/audit/audit_topic13_aist_graphite_source_route_boundary.py`; `docs/core/test/test_topic13_aist_graphite_source_route_boundary.py`; `docs/core/artifacts/t13_aist_graphite_source_route_boundary_audit.json`; `docs/scripts/audit/audit_topic13_full_bridge_gate.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/artifacts/uet_major_result_closure_register.json`; `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`.
+EVIDENCE_HASHES: verifier `96024a0bbabb09218681870804109eff417dfe0597a873c5a898cacefd5669ac`; regression `feaa4ef9b94d3dd32bf1b87a9c5da9f2781fa543e0b6403b6fcd4982e962e261`; AIST artifact `3a37c2cd5a37dccaa7f0a5aa7f4704c54ed73a11e04d5e7168d00682de2ff3de`; full-gate builder `7b87f0476f4d49f37993cc405e2c14b13ecfdc8044daaf2279a1729a030a3857`; full gate `7b156617b44d30367464e0d69ff5e13f82509d848c4c5bf320acfd43749ed663`; register `11f33ef3d80d5fe222b0b60d96b65c7bfb1b6d87c38f6218bca55f42680eaf0a`; dependency `6078156e584cd84b7ab75cf1598f1ca90c9cea2098e5c02d6046d9f514f94d78`.
+## T13-149 - NIST SRM 3600 heat-capacity comparator boundary
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for the NIST SRM 3600 heat-capacity comparator boundary; Full Topic 13 remains `PARTIAL` / `BLOCKED`.
+WHAT_IS_ACTUALLY_CLOSED: The official NIST SRM 3600 paper is archived locally with a source hash and page locators. Its 20-295 K heat-capacity range, approximately +/-2 percent uncertainty boundary at 90 percent confidence, and separate systematic-discrepancy warning are recorded without relabeling them as row-level standard uncertainty. The material boundary between low-hydrogen glassy carbon/graphite powder and Ding's HOPG PBTE state is explicit.
+WHAT_REMAINS_OPEN: No machine-readable numeric rows were emitted from Figure 3; this is not Ding `C_src`, not a same-state HOPG source, and it does not close `c_v` uncertainty, material-regime mapping, `alpha_Phi_K`, dimensional mapping, physical Kubo, EOS/transport/KMS/entropy, or Full Topic 13.
+DEPENDENCY_UNLOCKED: NIST SRM 3600 comparator boundary only. No Core, Gravity, constitutive transport, Galaxy, calibration, or external-validation dependency is unlocked.
+STATUS: `PASS_SCOPED_NIST_SRM_3600_HEAT_CAPACITY_COMPARATOR_BOUNDARY`; canonical full gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE` / `PARTIAL` with 10 blockers.
+WHAT_CHANGED: Added the hash-locked source-boundary verifier and artifact, integrated the lane under the full-gate source-package section, synchronized the major-result register/dependency gate, and added focused regression coverage. The raw PDF remains ignored and local-only under the repository raw-source policy.
+EQUATION_OR_MAPPING: Candidate `c_v^V(T, material) = rho(T, material) * c_v^m(T, material)` is recorded as a mapping contract only; `numeric_rows_emitted=false`, no `C_src`, `alpha_Phi_K`, or TTG temperature mapping is emitted.
+VERIFICATION: SRM 3600 boundary verifier passed; focused Topic 13/register/dependency regressions passed (`10 passed` after synchronization). Raw PDF SHA-256 is `5bbbd0e3949a1e38cbb7ec00bbfc1a75a9d4708f6a0656e5e49c8d44d32ba5da`; source artifact records zero numeric rows, no fit, no calibration, and no holdout access. Full closure summary is `closed_lane_count=172`, `closed_as_no_go_count=15`, `open_blocker_count=10`, `downstream_dependency_unlocked=false`.
+CONTROLLING_BLOCKER: `figure_only_numeric_payload_and_Ding_material_mapping_missing` for this comparator; globally `dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing` remains primary, with Ding `C_src` and physical thermodynamic/transport evidence also open.
+NEXT_ACTION: Obtain a permitted same-state machine-readable heat-capacity/PBTE source with row locators, units, uncertainty, preprocessing, convergence, material identity, and hash, or obtain a permissioned Ding-compatible `C_src` package. Do not digitize Figure 3 into calibration without a declared digitization uncertainty contract.
+CLAIM_BOUNDARY: Comparator source boundary only; not numeric `C_src`, not independent `alpha_Phi_K`, not a Kelvin prediction, not external validation, not `CLOSED_FOR_CORE`, and not global UET closure.
+EVIDENCE_PATHS: `docs/core/artifacts/t13_nist_srm_3600_heat_capacity_boundary_audit.json`; `docs/scripts/audit/audit_topic13_nist_srm_3600_heat_capacity_boundary.py`; `docs/core/test/test_topic13_nist_srm_3600_heat_capacity_boundary.py`; `docs/scripts/audit/audit_topic13_full_bridge_gate.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/artifacts/uet_major_result_closure_register.json`; `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`.
+EVIDENCE_HASHES: source `5bbbd0e3949a1e38cbb7ec00bbfc1a75a9d4708f6a0656e5e49c8d44d32ba5da`; source artifact `7317cadd672abd7eaacdda3eb5b4e5fdfc6bbe9fe6085a916ab93418ce6678b3`; full gate `17f9a8f09f17dacaaea987a086b1ad905bb206cc16dd8c6949538ff5167fe55c`; register `8037569bca69757892be6c7b216218fc7c437ad0413a1877dcdf723f75a40253`; dependency `3fcfbdbe603db366b0dc848df5da7602ac1ce649d07d86379e5fc3bf346b6016`.
+## T13-150 - Perez-Castaneda HOPG specific-heat source boundary
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for a source-traceable HOPG specific-heat comparator boundary; not CLOSED_FOR_CORE.
+
+WHAT_IS_ACTUALLY_CLOSED: The author-posted paper is archived with a reproducible PDF hash, DOI/arXiv locators, specimen details, and page-level source locators. Its below-3-percent method-comparison statement is preserved as a method/error boundary, not row-level standard uncertainty. The figure-only route is explicitly rejected for silent C_src or alpha promotion.
+
+WHAT_REMAINS_OPEN: Numeric rows, source-grade c_v uncertainty, Ding natural-graphite TTG/PBTE material and response mapping, Ding C_src, independent alpha_Phi_K, dimensional Phi map, physical Kubo coefficient, and EOS/transport/KMS/entropy closure remain open.
+
+DEPENDENCY_UNLOCKED: HOPG comparator/source-boundary lane only; no downstream dependency is unlocked.
+
+STATUS: PASS_SCOPED_HOPG_SPECIFIC_HEAT_SOURCE_BOUNDARY; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL with 10 blockers.
+
+WHAT_CHANGED: Added the HOPG source-boundary verifier, artifact, focused test, full-gate projection, closure-register/dependency sync, manifest, formula-audit entry, and update-log entry. The local raw PDF remains ignored and is not included in the public commit.
+
+EQUATION_OR_MAPPING: Candidate c_p^m(T, material) and c_v^V(T, material) = rho(T, material) * c_p^m(T, material) - Cp-to-Cv correction are recorded as standard-physics mapping contracts only. No numeric mapping is evaluated. The UET measurement equations remain y_TTG = Delta_Tq(t) / Delta_Tq(0), y_TTG^UET = Delta_Phi(t) / Delta_Phi(0), and Delta_Tq = alpha_Phi_K * Delta_Phi.
+
+VERIFICATION: Source hash f5056e3804275336deca634da84a47fec1e91876ff65ab62a84596a5ad3ebd4a; 1141942 bytes; 21 pages; zero numeric rows; figure-only payload; 3 percent method-comparison boundary; no Ding match; focused regression 13 passed; full gate remains blocked; claim promotion=false; Xie 2026 remains untouched.
+
+CONTROLLING_BLOCKER: figure_only_numeric_payload_and_Ding_PBTE_response_mapping_missing for this source route; globally the missing independent Phi/SI dimensional anchor and alpha_Phi_K remain controlling.
+
+NEXT_ACTION: Acquire a permitted machine-readable same-state heat-capacity or Ding PBTE C_src package with provenance, row uncertainty, convergence, material identity, and hash; keep this HOPG route outside calibration and holdout paths.
+
+CLAIM_BOUNDARY: Source comparator boundary only; not numeric C_src, not alpha calibration, not prediction, not external validation, and not Full Topic 13 closure.
+
+EVIDENCE_PATHS: docs/core/artifacts/t13_perez_castaneda_hopg_source_boundary_audit.json; docs/scripts/audit/audit_topic13_perez_castaneda_hopg_boundary.py; docs/core/test/test_topic13_perez_castaneda_hopg_boundary.py; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json; docs/core/artifacts/uet_major_result_closure_register.json; docs/core/artifacts/uet_major_result_dependency_unlock_gate.json.
+## T13-151 - Calorine full-LBTE numerical stability boundary
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for the source-locked full-LBTE numerical-stability boundary; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE` / `PARTIAL`.
+WHAT_IS_ACTUALLY_CLOSED: A fixed Calorine 4x4x2 force-constant state was rerun with explicit natural-isotope control. The archived `pinv_method=0` and `pinv_method=1` outputs show that the high-mesh collision spectrum is sign-indefinite; the positive method-1 response is therefore recorded as a numerical boundary, not physical transport closure.
+WHAT_REMAINS_OPEN: Collision-spectrum positivity, full-LBTE mesh convergence, source-grade uncertainty, Calorine-to-Ding material/state mapping, independent `alpha_Phi_K`, dimensional `Phi` mapping, physical Kubo provenance, and EOS/transport/KMS/entropy closure remain open.
+DEPENDENCY_UNLOCKED: Full-LBTE numerical-boundary evidence lane only. No physical transport, dimensional calibration, Full Topic 13, Core, Gravity, constitutive transport, or Galaxy dependency is unlocked.
+STATUS: `WARN_FULL_LBTE_NUMERICAL_STABILITY_OPEN`; canonical full gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE` with 10 blockers.
+WHAT_CHANGED: Added the archived full-LBTE stability audit, method-sensitivity control, collision-eigenvalue diagnostics, focused regression, full-gate source-package projection, and major-result register/dependency synchronization. No source, ontology, thermal leakage threshold, fit, calibration, or holdout policy changed.
+EQUATION_OR_MAPPING: `C_src(T) = [sum_q w_q sum_mu c_qmu(T)] / [sum_q w_q V_primitive]`; candidate `Delta_Tq = Delta_u_ph / C_src(T)`; full-LBTE observable `kappa` is in `W m^-1 K^-1`. `pinv_method=1` treats eigenvalue `< 1e-8` as zero and ignores negative eigenvalues; it is not a proof of positive entropy/transport response.
+VERIFICATION: Latest method-1 mesh pair `0.129379135193` relative change (8x8x4 to 10x10x5), method-0 in-plane `kappa` at 300 K is negative (`True`), and the high-mesh method-1 collision spectrum has negative-mode counts `[280, 296, 285]`. Fit, target-curve use, `alpha_Phi_K` fit, and holdout access are false.
+CONTROLLING_BLOCKER: `full_lbte_numerical_well_posedness_not_closed`, alongside the existing independent dimensional/`alpha_Phi_K`, Ding `C_src`, material, uncertainty, and thermodynamic-transport blockers.
+NEXT_ACTION: Resolve the sign-indefinite collision spectrum and obtain a declared source-supported convergence/uncertainty contract before treating full-LBTE output as a physical comparator; do not use it for `alpha_Phi_K` or holdout prediction.
+CLAIM_BOUNDARY: This is a numerical-stability boundary for one external candidate route, not a physical UET transport coefficient, Ding TTG validation, `Phi`-to-temperature prediction, Core closure, or global UET closure.
+EVIDENCE_PATHS: `docs/core/artifacts/t13_calorine_full_lbte_stability_boundary_audit.json`; `docs/scripts/audit/audit_topic13_calorine_full_lbte_stability.py`; `docs/core/test/test_topic13_calorine_full_lbte_stability.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/artifacts/uet_major_result_closure_register.json`; `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`.
+EVIDENCE_HASHES: artifact `8b5de32a8c33b0a646c8e26faf263585d98bcb939df8adb78b1b16f9d832859d`; full gate `6505ad8b6b1aac6da67d8ba7a3c10ae77f2c6047def0502a47377f44bdd8f14a`; register `a0207ee94c1cdc4e5d5a86f33763a7bbe3267716d3ce5bd7290a7f806b424344`; dependency `62195d85fbf71e31b98448215aa25e991a55b01f6d6dbca80b93cac1f561b91d`.
+
+### 2026-08-22 - Ding publisher provenance locator wave (T13-151)
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE
+WHAT_IS_ACTUALLY_CLOSED: The Ding 2022 source package records the primary Nature Communications locator and publisher-level data-availability statement; the captured official PMC OA inventory remains a verified no-go for machine-readable PBTE reproduction inputs.
+WHAT_REMAINS_OPEN: Numeric Ding C_src(T), uncertainty/convergence, accepted same-regime independent reproduction, independent alpha_Phi_K calibration, dimensional Phi anchor, and full beta/EOS/transport/KMS/entropy closure.
+DEPENDENCY_UNLOCKED: Source-provenance lane only; no Full Topic 13, Core, Gravity, constitutive-transport, or Galaxy dependency is unlocked.
+STATUS: PASS_SCOPED_OA_NUMERIC_INPUT_AVAILABILITY_NO_GO
+WHAT_CHANGED: Added publisher locator fields and verifier checks distinguishing the publisher route from the archived PMC OA inventory.
+EQUATION_OR_MAPPING: C_src(T) = sum_mu c_mu(T); no numeric c_mu or C_src value was emitted.
+VERIFICATION: Source audit passed; archived records and supplementary hashes match; no reproduction payload candidate was found; focused regressions passed 8 tests; Xie 2026 remained unread and unconsumed.
+CONTROLLING_BLOCKER: ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing and independent_alpha_Phi_K_calibration_missing.
+NEXT_ACTION: Execute an authorized corresponding-author request or build an accepted same-regime PBTE reproduction with units, uncertainty, convergence, material/state mapping, and hash; keep calibration independent and do not read the locked holdout.
+CLAIM_BOUNDARY: Source-provenance/availability classification only; not numeric C_src, alpha_Phi_K calibration, temperature prediction, external validation, CLOSED_FOR_CORE, or global UET closure.
+EVIDENCE_HASHES: package b87680866ebed7ca25f27008f01e37dd47f0e6da54c3c1e27eb404e20fe600ad; source audit 1828db74760ac53c73345d0e4a8adc8fc00fc16bb25e84809a73aaa3cd9b3d9a; full gate fcd703b29b69e2e32ebc9d9572eca5fc33ffc9a9ad2893336c3f5ca81644c231.
+
+## T13-155 - Ding C_src fixed-volume thermodynamic identity
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE`; Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_IS_ACTUALLY_CLOSED: A conditional fixed-volume standard-phonon identity now connects the Ding denominator to `C_src(T,V)=(partial u_ph/partial T)_V=(1/V) sum_mu c_mu(T,V)`. The source formula, unit contract, Bose kernel, and UET ontology separation are audited without a numeric source row.
+WHAT_REMAINS_OPEN: Numeric Ding `C_src(T)`, accepted PBTE reproduction, material/state/volume match, source-grade uncertainty/convergence, base-Phi-to-energy map, independent `alpha_Phi_K`, and full EOS/transport/KMS/entropy closure.
+DEPENDENCY_UNLOCKED: Conditional identity lane only; no downstream dependency is unlocked.
+STATUS: `PASS_SCOPED_C_SRC_FIXED_VOLUME_IDENTITY`.
+WHAT_CHANGED: Added the verifier, artifact, focused regression, and machine-readable gate/register/dependency projections. Existing comparator lanes remain comparison-only.
+EQUATION_OR_MAPPING: `C_src(T,V)=(partial u_ph/partial T)_V`; `Delta_Tq=Delta_u_ph/C_src`; `C_p^vol-C_v^vol=T*alpha_V^2*K_T` remains separate and is not used to create Ding `C_src`.
+VERIFICATION: Analytic/finite-difference identity relative error `7.995153125698355e-11`; focused regression `19 passed`; full gate remains at `10` blockers; `claim_promotion=false`; Xie 2026 remains unconsumed.
+CONTROLLING_BLOCKER: `ding_pbte_numeric_C_src_or_accepted_independent_reproduction_missing` plus the independent dimensional/alpha and thermodynamic-transport blockers.
+NEXT_ACTION: Acquire the permitted Ding-compatible numeric mode/C_src or fixed-volume c_v source package with material/state, volume, uncertainty, convergence, and hash.
+CLAIM_BOUNDARY: Conditional identity only; no numeric C_src, alpha, temperature prediction, external validation, or Full Topic 13 closure.
+EVIDENCE: `docs/core/artifacts/t13_csrc_fixed_volume_identity_audit.json` (SHA-256 `155b15ac1184f0309e10db8466925d6ad6483d4321a7703d82ecfb09a086cdd5`); full gate `f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50`; closure register `eb044c3083382b61855baa8ee26ea847a85005c148f5e0b85612a74bfb7b3c0b`; dependency gate `985a9727e59db875b6446096942b07b70375da9ba59cb06cc456e9cd25ef93e2`.
+## 2026-08-22 - IG-210 density-uncertainty blocker closure (T13-157)
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for the resolved blocker projection `density_uncertainty_not_source_locked`; Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+
+WHAT_IS_ACTUALLY_CLOSED: The source-locked IG-210 thermophysical audit exposes three density rows at 500/700/1000 C with source-expanded relative density bounds of 0.003 at coverage factor k=2. The full gate now consumes that field and removes only the density-uncertainty blocker.
+
+WHAT_REMAINS_OPEN: Same-state IG-210 `K_T`, the `C_p`-to-`C_v` correction, Ding material/response mapping, Ding-compatible `C_src`, independent `alpha_Phi_K`, dimensional `Phi` mapping, physical Kubo evidence, and EOS/transport/KMS/entropy closure remain open.
+
+DEPENDENCY_UNLOCKED: Density uncertainty projection and IG-210 volumetric `C_p` comparator only. No `C_v`, Ding `C_src`, alpha calibration, Core, Gravity, constitutive transport, Galaxy, or external-validation dependency is unlocked.
+
+STATUS: `PASS_SCOPED_SOURCE_LOCKED_DENSITY_UNCERTAINTY`; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE` / `PARTIAL` with 9 open blockers.
+
+WHAT_CHANGED: Added the machine-readable `major_result.resolved_blockers` record, propagated it into the major-result register, updated the full-gate regression, and synchronized the current report, update log, and data manifest. No source rows were invented; no fit, threshold change, calibration, or holdout access occurred.
+
+EQUATION_OR_MAPPING: `C_p^V = rho*C_p` with conservative source-expanded interval propagation; `C_v^V = C_p^V - T*alpha_V^2*K_T` remains uninstantiated for IG-210.
+
+VERIFICATION: IG-210 volumetric audit passed 14/14; focused Topic 13/closure regressions passed 11 tests; full gate reports 180 closed lanes, 16 scoped no-go lanes, 9 open blockers, `holdout_consumed=false`, and `claim_promotion=false`.
+
+CONTROLLING_BLOCKER: `same_state_IG210_isothermal_K_T_missing` controls this source route; globally Ding-compatible `C_src`, independent alpha/dimensional mapping, and EOS/transport/KMS/entropy remain controlling.
+
+NEXT_ACTION: Source-lock a permitted same-state IG-210 `K_T` only if it carries material/state, units, uncertainty, locator, and hash; otherwise retain this correction boundary and prioritize Ding-compatible `C_src` plus an independent paired base-`Phi`/SI record.
+
+CLAIM_BOUNDARY: This closes only the density-uncertainty gate projection and the source-traceable IG-210 volumetric `C_p` comparator. It is not `C_v`, Ding `C_src`, numeric `alpha_Phi_K`, a temperature prediction, physical transport, external validation, Full Topic 13 closure, or global UET closure.
+
+EVIDENCE_PATHS: `docs/core/artifacts/t13_farooqui_ig210_thermophysical_source_audit.json`; `docs/core/artifacts/t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json`; `docs/scripts/audit/audit_topic13_full_bridge_gate.py`; `docs/scripts/audit/audit_major_result_closure.py`; `docs/core/test/test_topic13_gatech_volumetric_cp_independence.py`; `docs/core/test/test_major_result_closure.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/artifacts/uet_major_result_closure_register.json`; `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`.
+
+EVIDENCE_HASHES: source audit `1bf871b436166ba44243d6600fdfc06e9bbbf65a8fc23e2f99a728ff6402fb7e`; volumetric audit `8714a13530c99cba457b86d529928747f26b8536befe782843387f3f2a362add`; full gate `f2f67384475fc8680476dee1b893dc1b32c9a90d8a1e348580789426536899d4`; register `7093fccfbb6e027df11429e51515dc3ddbabde3ecd27cbdce70a51fddf76bd69`; dependency `41303c1d38bc86c8c1f5008aafb515e05990f32acd74af1605ed371616f1ccd1`.
+### 2026-08-22 - NPL IG-11 graphite c_p uncertainty comparator lane
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for `T13_NPL_GRAPHITE_CP_UNCERTAINTY_COMPARATOR`.
+WHAT_IS_ACTUALLY_CLOSED: NPL RSA(EXT)40 is archived with raw PDF SHA-256 `aabe560c3e4e012e606b2d87facb67600653a781c4b46c8fde986f3fd9fa28f1`. The source reports Southern Graphite IG-11 graphite, `c_p=710.6 +/- 0.7 J kg^-1 K^-1` at 22 deg C, a 19-25 deg C scope, and a combined relative uncertainty budget of `9.6e-4`.
+WHAT_REMAINS_OPEN: This is mass-specific `c_p`, not source-grade volumetric `c_v` or Ding `C_src`; density uncertainty, `alpha_V/K_T`, Ding material mapping, independent `alpha_Phi_K`, and the full thermodynamic bridge remain open.
+DEPENDENCY_UNLOCKED: Source-locked IG-11 `c_p` uncertainty comparator only; no `c_v`, Ding, alpha calibration, transport, Core, Gravity, or Galaxy unlock.
+STATUS: `PASS_SCOPED_NPL_CP_UNCERTAINTY_COMPARATOR_CV_OPEN`; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_CHANGED: Added the NPL source package `1bfa0fba5ec396b9c033ac889dfd6f59edfb7de4efff1035768ff224988722ab`, audit artifact `55d3dfef10bd44c3e0257fa8abb4212279445fd357310999a60f49b752865831`, full-gate projection `8c49a812b4690c635f00126dd78f526571d0f4511eb6bda8a9ce2812ca7cae9c`, and register/dependency synchronization `6a452de3072a24ffdfac19194934c4fc29bb51b4bc476f2f1d530739f82e5c06` / `95572c1522c7093b2a7e5bdc98c7444ea084d3e594547c3f325a69975ab231e5`.
+EQUATION_OR_MAPPING: `c_p,g(T,H)=710.6+3.0(T-22 deg C) J kg^-1 K^-1`; nominal `rho*c_p` is a cross-check only; `c_v^V=c_p^V-T*alpha_V^2*K_T` remains open.
+VERIFICATION: Raw hash, PDF signature, source locators, material identity, units, source-reported uncertainty, no volumetric uncertainty promotion, no target fit, no alpha fit, and no Xie 2026 access pass.
+CONTROLLING_BLOCKER: `c_v_conversion_density_uncertainty_and_Ding_material_mapping_missing`; globally the independent dimensional/alpha, Ding `C_src`, physical Kubo, EOS/transport/KMS/entropy, and base-Phi mapping blockers remain controlling.
+NEXT_ACTION: Acquire same-regime `alpha_V` and `K_T` or direct volumetric `c_v`/Ding `C_src` evidence, plus an independent base-Phi/SI record; keep this comparator outside calibration and holdout paths.
+CLAIM_BOUNDARY: Source-traceable NPL IG-11 mass-specific `c_p` comparator only. It is not `c_v`, not Ding/HOPG validation, not UET transport, not an alpha calibration, and not Full Topic 13 closure.

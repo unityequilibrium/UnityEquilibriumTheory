@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_research_room_wave1_integrity",
-  "generated_at": "2026-08-20",
+  "generated_at": "2026-08-21",
   "status": "PASS_WITH_BLOCKED_LANES",
   "checks": {
     "contract_status": true,

@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-calorine-nep1-backend-compatibility-source-package-v1",
   "artifact": "t13_calorine_nep1_backend_compatibility_source_package",
-  "generated_at": "2026-08-20",
+  "generated_at": "2026-08-24",
   "status": "PASS_SCOPED_CALORINE_NEP1_BACKEND_COMPATIBILITY_BOUNDARY",
   "major_result": {
     "major_result_id": "T13_CALORINE_NEP1_BACKEND_COMPATIBILITY_BOUNDARY",

@@ -1,0 +1,795 @@
+{
+  "schema_version": "1.0",
+  "artifact": "uet_equation_correspondence_registry_curved_3p1_addendum",
+  "generated_at": "2026-08-30T10:40:45.491982+00:00",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "status": "CANDIDATE_ENTRY_PENDING_MERGE",
+  "equation_entries": [
+    {
+      "equation_id": "uet.main_theory.curved_3p1.adm_constraints",
+      "version": "adm-constraint-interface-v1",
+      "classification": "standard_physics_constraint_interface",
+      "relation_or_code_path": "docs/core/uet_curved_3p1_constraints.py",
+      "variables": {
+        "gamma_ij": "positive-definite spatial metric",
+        "K_ij": "extrinsic curvature",
+        "rho": "Eulerian energy density",
+        "S_i": "Eulerian covariant momentum density"
+      },
+      "mathematical_role": "evaluate ADM Hamiltonian and momentum constraints",
+      "standard_physics_counterpart": "ADM 3+1 initial-value constraints",
+      "observable_mapping": {
+        "status": "OPEN",
+        "reason": "constraint residuals are diagnostics, not detector observables"
+      },
+      "unit_lane": "geometric",
+      "parameter_dimensions": {
+        "K_ij": "L^-1",
+        "R3": "L^-2",
+        "G_rho": "L^-2",
+        "G_S_i": "L^-2",
+        "constraint_residuals": "L^-2"
+      },
+      "source_or_origin": {
+        "path": "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json",
+        "sha256": "d989b9dd637828dd64f975eaf1f744163ac71e362bde71e46e86e599eced1754",
+        "identity": {
+          "schema_version": "1.0",
+          "source_id": "gourgoulhon_2007_3p1_formalism",
+          "title": "3+1 Formalism and Bases of Numerical Relativity",
+          "author": "Eric Gourgoulhon",
+          "year": 2007,
+          "arxiv_id": "gr-qc/0703035",
+          "url": "https://arxiv.org/abs/gr-qc/0703035",
+          "source_role": "standard-physics formula and sign-convention reference",
+          "used_scope": [
+            "3+1 decomposition terminology",
+            "Hamiltonian constraint structure",
+            "momentum constraint structure",
+            "initial-data and gauge separation",
+            "spatial Levi-Civita connection",
+            "spatial Ricci tensor and scalar",
+            "covariant divergence in the momentum constraint"
+          ],
+          "not_used_for": [
+            "UET coefficient fitting",
+            "physical validation",
+            "claim that UET derives Einstein equations"
+          ],
+          "local_payload": "metadata-only source record; no redistributed PDF",
+          "accessed_on": "2026-08-28"
+        }
+      },
+      "assumptions": [
+        "(-,+,+,+) signature",
+        "positive lapse",
+        "positive-definite spatial metric",
+        "declared Ricci scalar and momentum divergence"
+      ],
+      "symmetry_and_conservation": "symmetric gamma_ij and K_ij; ADM constraints evaluated but not propagated",
+      "limiting_cases": [
+        "Minkowski vacuum",
+        "spatially flat FLRW Friedmann control"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_curved_3p1_constraints.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_curved_3p1_constraints.py",
+        "docs/core/artifacts/curved_3p1_adm_constraint_interface_audit.json",
+        "docs/core/test/test_uet_curved_3p1_constraints.py"
+      ],
+      "evidence_class": "INTERNAL_FORMAL_AND_ANALYTIC_CONTROL",
+      "proof_status": "constraint algebra and analytic controls pass; differential geometry and evolution open",
+      "downstream_dependencies": [
+        "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"
+      ],
+      "claim_boundary": "curved 3+1 ADM constraint evaluation interface only; not a metric evolution solver, Einstein-equation derivation, or GR validation",
+      "failure_mode": "invalid metric, nonzero analytic residual, hidden geometry operator, or constraint violation not detected",
+      "next_hardening_step": "implement metric-to-Ricci and covariant-divergence operators, then a gauge-declared evolution/constraint-propagation system"
+    },
+    {
+      "equation_id": "uet.main_theory.curved_3p1.periodic_spatial_geometry",
+      "version": "periodic-geometry-operator-v1",
+      "classification": "numerical_implementation",
+      "relation_or_code_path": "docs/core/uet_curved_3p1_geometry.py",
+      "variables": {
+        "gamma_ij": "positive-definite spatial metric on a uniform periodic Cartesian chart",
+        "Gamma^k_ij": "Levi-Civita connection",
+        "R_ij": "spatial Ricci tensor",
+        "R3": "spatial Ricci scalar",
+        "K_ij": "extrinsic curvature"
+      },
+      "mathematical_role": "compute Ricci curvature and ADM momentum-tensor divergence from grid fields",
+      "standard_physics_counterpart": "ADM spatial differential geometry",
+      "observable_mapping": {
+        "status": "OPEN",
+        "reason": "curvature and constraint inputs are diagnostics; no detector map is declared"
+      },
+      "unit_lane": "geometric periodic Cartesian chart",
+      "parameter_dimensions": {
+        "coordinates_and_spacing": "L",
+        "gamma_ij": "dimensionless in the declared geometric chart lane",
+        "Gamma^k_ij": "L^-1",
+        "R_ij_and_R3": "L^-2",
+        "K_ij": "L^-1",
+        "D_j_B^j_i": "L^-2"
+      },
+      "source_or_origin": {
+        "path": "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json",
+        "sha256": "d989b9dd637828dd64f975eaf1f744163ac71e362bde71e46e86e599eced1754",
+        "identity": {
+          "schema_version": "1.0",
+          "source_id": "gourgoulhon_2007_3p1_formalism",
+          "title": "3+1 Formalism and Bases of Numerical Relativity",
+          "author": "Eric Gourgoulhon",
+          "year": 2007,
+          "arxiv_id": "gr-qc/0703035",
+          "url": "https://arxiv.org/abs/gr-qc/0703035",
+          "source_role": "standard-physics formula and sign-convention reference",
+          "used_scope": [
+            "3+1 decomposition terminology",
+            "Hamiltonian constraint structure",
+            "momentum constraint structure",
+            "initial-data and gauge separation",
+            "spatial Levi-Civita connection",
+            "spatial Ricci tensor and scalar",
+            "covariant divergence in the momentum constraint"
+          ],
+          "not_used_for": [
+            "UET coefficient fitting",
+            "physical validation",
+            "claim that UET derives Einstein equations"
+          ],
+          "local_payload": "metadata-only source record; no redistributed PDF",
+          "accessed_on": "2026-08-28"
+        }
+      },
+      "assumptions": [
+        "uniform three-dimensional grid",
+        "periodic boundaries",
+        "positive-definite gamma_ij",
+        "second-order centered derivatives"
+      ],
+      "symmetry_and_conservation": "Levi-Civita metric compatibility and Ricci symmetry checked; evolution conservation/constraint propagation open",
+      "limiting_cases": [
+        "Cartesian flat metric",
+        "conformally flat analytic Ricci control",
+        "manufactured off-diagonal K divergence control"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_curved_3p1_geometry.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_curved_3p1_geometry.py",
+        "docs/core/artifacts/curved_3p1_geometry_operator_verification.json",
+        "docs/core/test/test_uet_curved_3p1_geometry.py"
+      ],
+      "evidence_class": "INTERNAL_FORMAL_NUMERICAL_AND_CONVERGENCE_CONTROL",
+      "proof_status": "standard identities implemented with verified second-order periodic-grid convergence; no continuum or evolution proof",
+      "downstream_dependencies": [
+        "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"
+      ],
+      "claim_boundary": "periodic-grid spatial differential-geometry operator with internal analytic controls only; not a spacetime evolution solver or GR validation",
+      "failure_mode": "connection/index/stencil error yields wrong Ricci or momentum-constraint input",
+      "next_hardening_step": "implement a gauge-declared strongly-hyperbolic metric/K evolution branch and test constraint propagation"
+    },
+    {
+      "equation_id": "uet.main_theory.curved_3p1.adm_evolution_rhs",
+      "version": "adm-evolution-rhs-v1",
+      "classification": "standard_physics_evolution_operator",
+      "relation_or_code_path": "docs/core/uet_curved_3p1_adm_evolution.py",
+      "variables": {
+        "gamma_ij": "spatial metric; not Phi",
+        "K_ij": "extrinsic curvature; not Pi",
+        "alpha": "positive lapse",
+        "beta_i": "shift",
+        "rho_Sij": "Eulerian stress-energy projection; not universal C"
+      },
+      "mathematical_role": "evaluate nonlinear ADM metric and extrinsic-curvature right-hand sides",
+      "standard_physics_counterpart": "ADM 3+1 evolution equations",
+      "observable_mapping": {
+        "status": "OPEN",
+        "reason": "RHS fields are evolution diagnostics, not detector observables"
+      },
+      "unit_lane": "geometric periodic Cartesian chart",
+      "parameter_dimensions": {
+        "gamma_ij": "dimensionless chart component",
+        "K_ij": "L^-1",
+        "R_ij": "L^-2",
+        "rho_and_S_ij_with_G": "L^-2",
+        "d_t_gamma_ij": "L^-1",
+        "d_t_K_ij": "L^-2"
+      },
+      "source_or_origin": {
+        "adm_equations": {
+          "schema_version": "1.0",
+          "source_id": "gourgoulhon_2007_3p1_formalism",
+          "title": "3+1 Formalism and Bases of Numerical Relativity",
+          "author": "Eric Gourgoulhon",
+          "year": 2007,
+          "arxiv_id": "gr-qc/0703035",
+          "url": "https://arxiv.org/abs/gr-qc/0703035",
+          "source_role": "standard-physics formula and sign-convention reference",
+          "used_scope": [
+            "3+1 decomposition terminology",
+            "Hamiltonian constraint structure",
+            "momentum constraint structure",
+            "initial-data and gauge separation",
+            "spatial Levi-Civita connection",
+            "spatial Ricci tensor and scalar",
+            "covariant divergence in the momentum constraint"
+          ],
+          "not_used_for": [
+            "UET coefficient fitting",
+            "physical validation",
+            "claim that UET derives Einstein equations"
+          ],
+          "local_payload": "metadata-only source record; no redistributed PDF",
+          "accessed_on": "2026-08-28"
+        },
+        "hyperbolicity_boundary": {
+          "schema_version": "1.0",
+          "source_id": "gundlach_martin_garcia_2006_well_posedness",
+          "title": "Well-posedness of formulations of the Einstein equations with dynamical lapse and shift conditions",
+          "authors": [
+            "Carsten Gundlach",
+            "Jose M. Martin-Garcia"
+          ],
+          "year": 2006,
+          "arxiv_id": "gr-qc/0604035",
+          "doi": "10.1103/PhysRevD.74.024016",
+          "url": "https://arxiv.org/abs/gr-qc/0604035",
+          "source_role": "formulation hyperbolicity and gauge-condition boundary reference",
+          "used_scope": [
+            "ADM/BSSN/NOR hyperbolicity depends on formulation and gauge",
+            "fixed or non-hyperbolic gauge choices do not establish a well-posed hyperbolic evolution system",
+            "strong-hyperbolicity must be checked at the principal-symbol level"
+          ],
+          "not_used_for": [
+            "claim that the local numerical no-go is a continuum theorem for every ADM variant",
+            "UET coefficient fitting",
+            "physical validation",
+            "claim that UET derives Einstein equations"
+          ],
+          "local_payload": "metadata-only source record; no redistributed PDF",
+          "accessed_on": "2026-08-28"
+        },
+        "next_generalized_harmonic_branch": {
+          "schema_version": "1.0",
+          "source_id": "lindblom_et_al_2006_generalized_harmonic",
+          "title": "A New Generalized Harmonic Evolution System",
+          "authors": [
+            "Lee Lindblom",
+            "Mark A. Scheel",
+            "Lawrence E. Kidder",
+            "Robert Owen",
+            "Oliver Rinne"
+          ],
+          "year": 2006,
+          "arxiv_id": "gr-qc/0512093",
+          "doi": "10.1088/0264-9381/23/16/S09",
+          "url": "https://arxiv.org/abs/gr-qc/0512093",
+          "version": "v3",
+          "journal_reference": "Class. Quantum Grav. 23 (2006) S447-S462",
+          "formula_locators": {
+            "gh_gauge": "Section 2, Eqs. (6), (11), and (12)",
+            "constraint_damping": "Section 2.2, Eqs. (17)-(21)",
+            "first_order_variables": "Section 3, Eqs. (22)-(26)",
+            "modified_principal_system": "Section 3, Eqs. (27)-(29)",
+            "symmetrizer": "Section 3, Eq. (30), with gamma3=gamma1*gamma2 and Lambda^2>gamma2^2",
+            "characteristic_fields": "Section 3, Eqs. (31)-(34)",
+            "complete_rhs": "Section 3, Eqs. (35)-(39)",
+            "first_order_gauge_constraint": "Section 4.1, Eq. (40)"
+          },
+          "source_role": "preregistered next-branch formulation and constraint-damping reference",
+          "used_scope": [
+            "first-order generalized-harmonic variables and gauge-source concept",
+            "symmetric-hyperbolic formulation target",
+            "constraint-damping and constraint-preserving boundary target",
+            "principal equations, symmetrizer, characteristic fields, and reduction-constraint damping"
+          ],
+          "not_used_for": [
+            "claim that a generalized-harmonic UET branch is already implemented",
+            "claim that periodic ADM controls validate black-hole evolution",
+            "UET coefficient fitting",
+            "external physical validation"
+          ],
+          "local_payload": "metadata-only source record; no redistributed PDF",
+          "accessed_on": "2026-08-28"
+        }
+      },
+      "assumptions": [
+        "(-,+,+,+) signature",
+        "positive lapse",
+        "periodic grid",
+        "declared Eulerian stress projection"
+      ],
+      "symmetry_and_conservation": "symmetric gamma_ij/K_ij; constraint propagation remains open",
+      "limiting_cases": [
+        "Minkowski vacuum",
+        "spatially flat dust FLRW instantaneous control"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_curved_3p1_adm_evolution.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_curved_3p1_adm_evolution.py",
+        "docs/core/artifacts/curved_3p1_adm_evolution_operator_verification.json",
+        "docs/core/test/test_uet_curved_3p1_adm_evolution.py"
+      ],
+      "evidence_class": "INTERNAL_FORMAL_NUMERICAL_AND_CONVERGENCE_CONTROL",
+      "proof_status": "RHS operator controls pass; well-posed time evolution remains open",
+      "downstream_dependencies": [
+        "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"
+      ],
+      "claim_boundary": "standard ADM RHS operator and fixed-gauge formulation no-go only; not a well-posed numerical-relativity evolution system or GR validation",
+      "failure_mode": "RHS execution is mistaken for a strongly-hyperbolic time evolution",
+      "next_hardening_step": "implement first-order generalized-harmonic evolution and constraint damping"
+    },
+    {
+      "equation_id": "uet.main_theory.curved_3p1.fixed_gauge_adm_hyperbolicity_no_go",
+      "version": "fixed-geodesic-adm-symbol-v1",
+      "classification": "formulation_no_go",
+      "relation_or_code_path": "docs/core/uet_curved_3p1_adm_evolution.py",
+      "variables": {
+        "P_n": "dimensionless principal symbol",
+        "h_ij": "linear metric perturbation",
+        "K_ij": "linear extrinsic-curvature perturbation"
+      },
+      "mathematical_role": "reject the fixed-geodesic ADM branch from the strong-hyperbolicity parent gate",
+      "standard_physics_counterpart": "principal-symbol strong-hyperbolicity test",
+      "observable_mapping": {
+        "status": "NOT_APPLICABLE",
+        "reason": "formulation diagnostic"
+      },
+      "unit_lane": "dimensionless principal-symbol lane",
+      "parameter_dimensions": "dimensionless after |k| scaling",
+      "source_or_origin": {
+        "hyperbolicity_boundary": {
+          "schema_version": "1.0",
+          "source_id": "gundlach_martin_garcia_2006_well_posedness",
+          "title": "Well-posedness of formulations of the Einstein equations with dynamical lapse and shift conditions",
+          "authors": [
+            "Carsten Gundlach",
+            "Jose M. Martin-Garcia"
+          ],
+          "year": 2006,
+          "arxiv_id": "gr-qc/0604035",
+          "doi": "10.1103/PhysRevD.74.024016",
+          "url": "https://arxiv.org/abs/gr-qc/0604035",
+          "source_role": "formulation hyperbolicity and gauge-condition boundary reference",
+          "used_scope": [
+            "ADM/BSSN/NOR hyperbolicity depends on formulation and gauge",
+            "fixed or non-hyperbolic gauge choices do not establish a well-posed hyperbolic evolution system",
+            "strong-hyperbolicity must be checked at the principal-symbol level"
+          ],
+          "not_used_for": [
+            "claim that the local numerical no-go is a continuum theorem for every ADM variant",
+            "UET coefficient fitting",
+            "physical validation",
+            "claim that UET derives Einstein equations"
+          ],
+          "local_payload": "metadata-only source record; no redistributed PDF",
+          "accessed_on": "2026-08-28"
+        },
+        "next_branch": {
+          "schema_version": "1.0",
+          "source_id": "lindblom_et_al_2006_generalized_harmonic",
+          "title": "A New Generalized Harmonic Evolution System",
+          "authors": [
+            "Lee Lindblom",
+            "Mark A. Scheel",
+            "Lawrence E. Kidder",
+            "Robert Owen",
+            "Oliver Rinne"
+          ],
+          "year": 2006,
+          "arxiv_id": "gr-qc/0512093",
+          "doi": "10.1088/0264-9381/23/16/S09",
+          "url": "https://arxiv.org/abs/gr-qc/0512093",
+          "version": "v3",
+          "journal_reference": "Class. Quantum Grav. 23 (2006) S447-S462",
+          "formula_locators": {
+            "gh_gauge": "Section 2, Eqs. (6), (11), and (12)",
+            "constraint_damping": "Section 2.2, Eqs. (17)-(21)",
+            "first_order_variables": "Section 3, Eqs. (22)-(26)",
+            "modified_principal_system": "Section 3, Eqs. (27)-(29)",
+            "symmetrizer": "Section 3, Eq. (30), with gamma3=gamma1*gamma2 and Lambda^2>gamma2^2",
+            "characteristic_fields": "Section 3, Eqs. (31)-(34)",
+            "complete_rhs": "Section 3, Eqs. (35)-(39)",
+            "first_order_gauge_constraint": "Section 4.1, Eq. (40)"
+          },
+          "source_role": "preregistered next-branch formulation and constraint-damping reference",
+          "used_scope": [
+            "first-order generalized-harmonic variables and gauge-source concept",
+            "symmetric-hyperbolic formulation target",
+            "constraint-damping and constraint-preserving boundary target",
+            "principal equations, symmetrizer, characteristic fields, and reduction-constraint damping"
+          ],
+          "not_used_for": [
+            "claim that a generalized-harmonic UET branch is already implemented",
+            "claim that periodic ADM controls validate black-hole evolution",
+            "UET coefficient fitting",
+            "external physical validation"
+          ],
+          "local_payload": "metadata-only source record; no redistributed PDF",
+          "accessed_on": "2026-08-28"
+        }
+      },
+      "assumptions": [
+        "linearization about flat space",
+        "fixed geodesic gauge",
+        "preregistered propagation directions"
+      ],
+      "symmetry_and_conservation": "not a conservation relation; tests completeness of characteristic fields",
+      "limiting_cases": [
+        "axis directions",
+        "diagonal direction",
+        "fixed oblique direction"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_curved_3p1_adm_evolution.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_curved_3p1_adm_evolution.py",
+        "docs/core/artifacts/curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json"
+      ],
+      "evidence_class": "INTERNAL_FORMAL_PRINCIPAL_SYMBOL_NO_GO",
+      "proof_status": "CLOSED_AS_NO_GO for the declared fixed-gauge branch",
+      "downstream_dependencies": [
+        "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"
+      ],
+      "claim_boundary": "no-go for the declared fixed-geodesic ADM principal symbol only; not every gauge-modified ADM/BSSN/NOR formulation",
+      "failure_mode": "branch-local no-go is overgeneralized to every ADM/BSSN/NOR gauge",
+      "next_hardening_step": "verify first-order generalized-harmonic characteristic fields"
+    },
+    {
+      "equation_id": "uet.main_theory.curved_3p1.generalized_harmonic_principal_system",
+      "version": "gh-principal-system-v1",
+      "classification": "standard_physics_hyperbolic_formulation",
+      "relation_or_code_path": "docs/core/uet_curved_3p1_generalized_harmonic.py",
+      "variables": {
+        "psi_ab": "spacetime metric; not UET Phi",
+        "Pi_ab": "minus normal metric derivative; not UET Pi",
+        "Phi_iab": "spatial metric derivative",
+        "H_a": "declared algebraic gauge source",
+        "C_iab": "first-order reduction constraint"
+      },
+      "mathematical_role": "provide a complete symmetric-hyperbolic first-order principal system for the curved parent",
+      "standard_physics_counterpart": "Lindblom et al. first-order generalized harmonic Einstein formulation",
+      "observable_mapping": {
+        "status": "OPEN",
+        "reason": "characteristic and constraint fields are formulation diagnostics"
+      },
+      "unit_lane": "geometric c=1 local-orthonormal principal frame",
+      "parameter_dimensions": "geometric c=1 local-orthonormal principal-symbol lane",
+      "source_or_origin": {
+        "schema_version": "1.0",
+        "source_id": "lindblom_et_al_2006_generalized_harmonic",
+        "title": "A New Generalized Harmonic Evolution System",
+        "authors": [
+          "Lee Lindblom",
+          "Mark A. Scheel",
+          "Lawrence E. Kidder",
+          "Robert Owen",
+          "Oliver Rinne"
+        ],
+        "year": 2006,
+        "arxiv_id": "gr-qc/0512093",
+        "doi": "10.1088/0264-9381/23/16/S09",
+        "url": "https://arxiv.org/abs/gr-qc/0512093",
+        "version": "v3",
+        "journal_reference": "Class. Quantum Grav. 23 (2006) S447-S462",
+        "formula_locators": {
+          "gh_gauge": "Section 2, Eqs. (6), (11), and (12)",
+          "constraint_damping": "Section 2.2, Eqs. (17)-(21)",
+          "first_order_variables": "Section 3, Eqs. (22)-(26)",
+          "modified_principal_system": "Section 3, Eqs. (27)-(29)",
+          "symmetrizer": "Section 3, Eq. (30), with gamma3=gamma1*gamma2 and Lambda^2>gamma2^2",
+          "characteristic_fields": "Section 3, Eqs. (31)-(34)",
+          "complete_rhs": "Section 3, Eqs. (35)-(39)",
+          "first_order_gauge_constraint": "Section 4.1, Eq. (40)"
+        },
+        "source_role": "preregistered next-branch formulation and constraint-damping reference",
+        "used_scope": [
+          "first-order generalized-harmonic variables and gauge-source concept",
+          "symmetric-hyperbolic formulation target",
+          "constraint-damping and constraint-preserving boundary target",
+          "principal equations, symmetrizer, characteristic fields, and reduction-constraint damping"
+        ],
+        "not_used_for": [
+          "claim that a generalized-harmonic UET branch is already implemented",
+          "claim that periodic ADM controls validate black-hole evolution",
+          "UET coefficient fitting",
+          "external physical validation"
+        ],
+        "local_payload": "metadata-only source record; no redistributed PDF",
+        "accessed_on": "2026-08-28"
+      },
+      "assumptions": [
+        "gamma1=-1",
+        "gamma3=gamma1*gamma2",
+        "gamma0>0",
+        "gamma2>0",
+        "Lambda^2>gamma2^2",
+        "algebraic H_a(x,psi)"
+      ],
+      "symmetry_and_conservation": "positive analytic symmetrizer and complete characteristic basis pass; full Einstein/constraint propagation remains open",
+      "limiting_cases": [
+        "Minkowski harmonic gauge",
+        "constant-coefficient local orthonormal frame",
+        "zero shift",
+        "sub/super-coordinate shift cases with normal-frame causal waves"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_curved_3p1_generalized_harmonic.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_curved_3p1_generalized_harmonic.py",
+        "docs/core/artifacts/curved_3p1_gh_principal_system_verification.json",
+        "docs/core/test/test_uet_curved_3p1_generalized_harmonic.py"
+      ],
+      "evidence_class": "INTERNAL_FORMAL_ANALYTIC_AND_MANUFACTURED_CONVERGENCE_CONTROL",
+      "proof_status": "principal/characteristic and reduction-damping lane passes; nonlinear vacuum RHS is tracked separately",
+      "downstream_dependencies": [
+        "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"
+      ],
+      "claim_boundary": "source-locked vacuum GH system with bounded periodic time-evolution controls; not a production numerical-relativity solver, matter-coupled system, or UET validation",
+      "failure_mode": "principal-system closure is overread as a complete numerical-relativity solver",
+      "next_hardening_step": "integrate the separately verified nonlinear vacuum RHS, then add time evolution"
+    },
+    {
+      "equation_id": "uet.main_theory.curved_3p1.generalized_harmonic_nonlinear_vacuum_rhs",
+      "version": "gh-nonlinear-vacuum-rhs-v1",
+      "classification": "standard_physics_vacuum_evolution_operator",
+      "relation_or_code_path": "docs/core/uet_curved_3p1_generalized_harmonic.py",
+      "formula_ids": [
+        "UET-CURVED3P1-GH-PSI-RHS-014",
+        "UET-CURVED3P1-GH-PI-RHS-015",
+        "UET-CURVED3P1-GH-PHI-RHS-016",
+        "UET-CURVED3P1-GH-STATE-RECONSTRUCTION-017"
+      ],
+      "variables": {
+        "psi_ab": "spacetime metric; not UET Phi",
+        "Pi_ab": "minus normal metric derivative; not UET Pi",
+        "Phi_iab": "spatial metric derivative",
+        "H_a": "declared gauge source",
+        "nabla_a_H_b": "declared covariant gauge-source derivative",
+        "C_a": "GH gauge constraint"
+      },
+      "mathematical_role": "evaluate complete nonlinear vacuum GH Eqs. 35-40 right-hand sides",
+      "standard_physics_counterpart": "Lindblom et al. first-order generalized harmonic vacuum Einstein system",
+      "observable_mapping": {
+        "status": "OPEN",
+        "reason": "metric-state RHS and constraints are formulation diagnostics, not detector observables"
+      },
+      "unit_lane": "geometric c=1 vacuum",
+      "parameter_dimensions": "geometric c=1 vacuum GH lane",
+      "source_or_origin": {
+        "schema_version": "1.0",
+        "source_id": "lindblom_et_al_2006_generalized_harmonic",
+        "title": "A New Generalized Harmonic Evolution System",
+        "authors": [
+          "Lee Lindblom",
+          "Mark A. Scheel",
+          "Lawrence E. Kidder",
+          "Robert Owen",
+          "Oliver Rinne"
+        ],
+        "year": 2006,
+        "arxiv_id": "gr-qc/0512093",
+        "doi": "10.1088/0264-9381/23/16/S09",
+        "url": "https://arxiv.org/abs/gr-qc/0512093",
+        "version": "v3",
+        "journal_reference": "Class. Quantum Grav. 23 (2006) S447-S462",
+        "formula_locators": {
+          "gh_gauge": "Section 2, Eqs. (6), (11), and (12)",
+          "constraint_damping": "Section 2.2, Eqs. (17)-(21)",
+          "first_order_variables": "Section 3, Eqs. (22)-(26)",
+          "modified_principal_system": "Section 3, Eqs. (27)-(29)",
+          "symmetrizer": "Section 3, Eq. (30), with gamma3=gamma1*gamma2 and Lambda^2>gamma2^2",
+          "characteristic_fields": "Section 3, Eqs. (31)-(34)",
+          "complete_rhs": "Section 3, Eqs. (35)-(39)",
+          "first_order_gauge_constraint": "Section 4.1, Eq. (40)"
+        },
+        "source_role": "preregistered next-branch formulation and constraint-damping reference",
+        "used_scope": [
+          "first-order generalized-harmonic variables and gauge-source concept",
+          "symmetric-hyperbolic formulation target",
+          "constraint-damping and constraint-preserving boundary target",
+          "principal equations, symmetrizer, characteristic fields, and reduction-constraint damping"
+        ],
+        "not_used_for": [
+          "claim that a generalized-harmonic UET branch is already implemented",
+          "claim that periodic ADM controls validate black-hole evolution",
+          "UET coefficient fitting",
+          "external physical validation"
+        ],
+        "local_payload": "metadata-only source record; no redistributed PDF",
+        "accessed_on": "2026-08-28"
+      },
+      "assumptions": [
+        "vacuum matter source",
+        "gamma1=-1",
+        "gamma0>0 and gamma2>0",
+        "uniform periodic Cartesian grid",
+        "declared H_a and nabla_a H_b"
+      ],
+      "symmetry_and_conservation": "symmetric metric derivative fields and algebraic gamma0 damping pass; propagated constraints remain open",
+      "limiting_cases": [
+        "Minkowski harmonic gauge",
+        "constant nontrivial state",
+        "manufactured periodic variable state"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_curved_3p1_generalized_harmonic.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_curved_3p1_gh_nonlinear_vacuum.py",
+        "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json",
+        "docs/core/test/test_uet_curved_3p1_gh_nonlinear_vacuum.py"
+      ],
+      "evidence_class": "INTERNAL_FORMAL_NUMERICAL_OPERATOR_CONTROL",
+      "proof_status": "complete vacuum RHS transcription passes independent constant-grid and variable-grid controls; no time evolution",
+      "downstream_dependencies": [
+        "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"
+      ],
+      "claim_boundary": "complete vacuum RHS operator only; not a time-integrated solver, matter-coupled UET parent, Gravity validation, or external claim",
+      "failure_mode": "operator-only closure is overread as time-evolved constraint propagation or a matter-coupled solver",
+      "next_hardening_step": "add a fixed CFL time integrator and verify gauge/reduction constraint propagation"
+    },
+    {
+      "equation_id": "uet.main_theory.curved_3p1.generalized_harmonic_periodic_vacuum_evolution",
+      "version": "gh-periodic-vacuum-evolution-v1",
+      "classification": "standard_physics_numerical_evolution_control",
+      "relation_or_code_path": "docs/core/uet_curved_3p1_gh_evolution.py",
+      "formula_ids": [
+        "UET-CURVED3P1-GH-RK4-018",
+        "UET-CURVED3P1-GH-CFL-019",
+        "UET-CURVED3P1-GH-GAUGE-WAVE-020"
+      ],
+      "variables": {
+        "psi_ab": "spacetime metric; not UET Phi",
+        "Pi_ab": "normal metric derivative; not UET Pi",
+        "Phi_iab": "spatial metric derivative",
+        "dt": "coordinate-time step",
+        "cfl": "fixed numerical Courant coefficient"
+      },
+      "mathematical_role": "advance the verified nonlinear vacuum GH system and monitor propagated constraints",
+      "standard_physics_counterpart": "classical RK4 method-of-lines evolution of the first-order GH system",
+      "observable_mapping": {
+        "status": "OPEN",
+        "reason": "gauge-wave error and constraint norms are numerical diagnostics"
+      },
+      "unit_lane": "geometric c=1 periodic coordinates",
+      "parameter_dimensions": "geometric c=1 periodic-coordinate lane",
+      "source_or_origin": {
+        "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a",
+        "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json": "a5e0dfd38c6d5f410ce41ba941eee7dc82c3dcc9744e1f3fdbb6b46b03666c17",
+        "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_formula_audit.json": "7e5f54ea15d36e331a345f0a04f645557a0671ada35ce12962530e419ce70aa3",
+        "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_gate.json": "89050d1ffe351ae4eb19e49ebcb8dfbd87ca36a12d7d27631b8a20f9b93543fc",
+        "docs/core/uet_curved_3p1_gh_evolution.py": "c18f231375609cebb76d342ba7ad94471eb280089458ace85882ed2450f3581e"
+      },
+      "assumptions": [
+        "vacuum",
+        "periodic grid",
+        "prescribed time-independent H_a and nabla_a H_b",
+        "fixed CFL coefficient",
+        "no filtering or projection"
+      ],
+      "symmetry_and_conservation": "metric symmetry and gauge/reduction/curl constraint convergence pass on the declared periodic controls",
+      "limiting_cases": [
+        "Minkowski fixed point",
+        "exact harmonic gauge wave",
+        "constant off-diagonal reduction violation"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_curved_3p1_gh_evolution.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_curved_3p1_gh_time_evolution.py",
+        "docs/core/artifacts/curved_3p1_gh_time_evolution_verification.json",
+        "docs/core/test/test_uet_curved_3p1_gh_time_evolution.py"
+      ],
+      "evidence_class": "INTERNAL_ANALYTIC_AND_NUMERICAL_CONVERGENCE_CONTROL",
+      "proof_status": "periodic vacuum evolution and propagated-constraint controls pass; non-periodic boundaries and matter remain open",
+      "downstream_dependencies": [
+        "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"
+      ],
+      "claim_boundary": "periodic vacuum evolution control only; not a production numerical-relativity solver, matter-coupled UET parent, Gravity validation, or external claim",
+      "failure_mode": "periodic gauge-wave convergence is overread as a production numerical-relativity or matter-coupled solver",
+      "next_hardening_step": "add constraint-preserving non-periodic boundaries and Topic 13 stress-energy wiring"
+    },
+    {
+      "equation_id": "uet.main_theory.curved_3p1.topic13_prescribed_matter_source",
+      "version": "topic13-prescribed-matter-wiring-v1",
+      "classification": "standard_physics_matter_source_interface",
+      "relation_or_code_path": "docs/core/uet_curved_3p1_matter_wiring.py",
+      "formula_ids": [
+        "UET-CURVED3P1-MATTER-TAB-021",
+        "UET-CURVED3P1-MATTER-ADM-022",
+        "UET-CURVED3P1-MATTER-GH-023"
+      ],
+      "variables": {
+        "T_ab": "declared lane-specific stress-energy tensor",
+        "rho": "Eulerian energy density",
+        "S_i": "Eulerian momentum density",
+        "S_ij": "Eulerian spatial stress",
+        "psi_ab": "spacetime metric; not UET Phi",
+        "kappa_E": "declared Einstein coupling; numeric SI provenance open"
+      },
+      "mathematical_role": "construct and project a prescribed Topic 13 stress-energy source into the GH metric RHS",
+      "standard_physics_counterpart": "relativistic-fluid stress tensor, 3+1 matter projections, and trace-reversed Einstein source",
+      "observable_mapping": {
+        "status": "PARTIAL",
+        "reason": "He-4/O(2) natural and SI stress scales are connected; detector and gravitational observables remain open"
+      },
+      "unit_lane": {
+        "natural": "epsilon, p, q, and pi share one natural energy-density lane",
+        "SI_projection": "epsilon, p, q, and pi are in J m^-3",
+        "GH_source": "kappa_E*T_ab has inverse-coordinate-length squared units"
+      },
+      "parameter_dimensions": {
+        "natural": "epsilon, p, q, and pi share one natural energy-density lane",
+        "SI_projection": "epsilon, p, q, and pi are in J m^-3",
+        "GH_source": "kappa_E*T_ab has inverse-coordinate-length squared units"
+      },
+      "source_or_origin": [
+        {
+          "path": "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json",
+          "sha256": "d989b9dd637828dd64f975eaf1f744163ac71e362bde71e46e86e599eced1754"
+        },
+        {
+          "path": "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json",
+          "sha256": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a"
+        },
+        {
+          "path": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+          "sha256": "13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418"
+        },
+        {
+          "path": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+          "sha256": "9ea6f37eb43e353b8c89e42b1c3dd01c957b2063e41a09230483989accb2b3f4"
+        },
+        {
+          "path": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
+          "sha256": "1a8289aadbed1c069add276bb3f734d6c642174cf2101a664fba4ee5a8bfd021"
+        },
+        {
+          "path": "docs/core/uet_curved_3p1_matter_wiring.py",
+          "sha256": "d45348efdbbd302c07f425f2f800cd677d14225f1ad49fb36b21de6a257614b1"
+        }
+      ],
+      "assumptions": [
+        "(-,+,+,+) signature",
+        "prescribed matter state",
+        "future-normalized four velocity",
+        "heat flux orthogonal to four velocity",
+        "anisotropic stress symmetric, orthogonal, and trace free"
+      ],
+      "symmetry_and_conservation": "stress symmetry and projection reconstruction pass; stress-energy conservation evolution remains open",
+      "limiting_cases": [
+        "rest perfect fluid",
+        "boosted perfect fluid",
+        "vacuum null source"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_curved_3p1_matter_wiring.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_curved_3p1_matter_wiring.py",
+        "docs/core/artifacts/curved_3p1_topic13_matter_wiring_verification.json",
+        "docs/core/test/test_uet_curved_3p1_matter_wiring.py"
+      ],
+      "evidence_class": "INTERNAL_FORMAL_ALGEBRAIC_AND_SOURCE_COMPOSITION_CONTROL",
+      "proof_status": "prescribed stress-energy construction/projection and GH source pass; self-consistent matter evolution remains open",
+      "downstream_dependencies": [
+        "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"
+      ],
+      "claim_boundary": "prescribed lane-specific stress-energy construction and projection only; not a self-consistent matter-coupled spacetime solution, Einstein-equation derivation, Gravity validation, or global UET closure",
+      "failure_mode": "prescribed source wiring is overread as a self-consistent matter-coupled spacetime solution",
+      "next_hardening_step": "add constraint-preserving boundaries and a conservation-compatible matter evolution contract"
+    }
+  ]
+}

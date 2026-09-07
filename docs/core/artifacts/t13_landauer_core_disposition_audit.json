@@ -1,0 +1,177 @@
+{
+  "schema_version": "t13-landauer-core-disposition-v1",
+  "artifact": "t13_landauer_core_disposition_audit",
+  "generated_at": "2026-08-28",
+  "status": "PASS_LANDAUER_CORE_ROLE_DISPOSITION",
+  "major_result": {
+    "major_result_id": "T13_LANDAUER_CONSTRAINT_SOURCE_DISPOSITION",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_CORE",
+    "what_is_closed": "The Core dependency role of Berut, Jun, Hong, and Peterson is dispositioned as imported Landauer constraint/source-boundary evidence only; none supplies alpha, beta, EOS, or transport.",
+    "equation_or_mapping": "E_min = k_B T ln(2) remains an imported constraint and is not an inverse map to Phi or a coefficient-identification equation.",
+    "units": {
+      "landauer_energy": "J when evaluated",
+      "alpha_Phi_K": "not emitted by these controllers"
+    },
+    "derivation_class": "SOURCE_ROLE_AND_DEPENDENCY_DISPOSITION",
+    "observable": "Landauer erasure-work/heat comparison only",
+    "data_role": "IMPORTED_CONSTRAINT_AND_EXTERNAL_COMPARISON",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_berut_source_package_availability_boundary.json",
+        "sha256": "6631d275f11f0d71239a6ea0fee35b6542e386862c1a683de96ffdfcfb8b370d"
+      },
+      {
+        "path": "docs/core/artifacts/t13_jun_final_source_package_boundary.json",
+        "sha256": "0171a53d873a8fe5c386c1221c26679f908434aa425fb80b740f9778e51e72ec"
+      },
+      {
+        "path": "docs/core/artifacts/t13_hong_final_source_package_boundary.json",
+        "sha256": "4c5a81ae8884a4e11b2f358f2e557eecbe4f82c67c6da1e9eb7eed314bf815f7"
+      },
+      {
+        "path": "docs/core/artifacts/t13_peterson_source_identity_no_go.json",
+        "sha256": "c6d1a0154b7c138416e7de0662264559727244802b1b2ec20be07bfe7a263b12"
+      },
+      {
+        "path": "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json",
+        "sha256": "1c44ffce6310488bf3a9b2e9cce74d1281fb27a949c1b9d26c6f80d970b7fbd0"
+      },
+      {
+        "path": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
+        "sha256": "1a8289aadbed1c069add276bb3f734d6c642174cf2101a664fba4ee5a8bfd021"
+      },
+      {
+        "path": "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json",
+        "sha256": "46e292d9b0f88125ecf134faa51322421a06d058015ba318f25c3be3cd2dd26f"
+      }
+    ],
+    "verification_status": "PASS_LANDAUER_CORE_ROLE_DISPOSITION",
+    "open_blockers": [],
+    "dependency_unlocked": "Landauer source rows no longer block the O(2)/He-4 Core bridge; external Landauer validation remains open.",
+    "claim_boundary": "This closes only the controllers' Core dependency role. It does not claim raw numeric closure for Berut, Jun, or Hong, does not rehabilitate the Peterson legacy label, and does not validate Landauer experiments externally."
+  },
+  "controllers": {
+    "berut": {
+      "core_disposition": "CONSTRAINT_COMPARISON_ONLY_EXTERNAL_ROWS_OPEN",
+      "core_dependency_required": false,
+      "external_numeric_dataset_closed": false,
+      "external_open_blockers": [
+        "berut_permissioned_raw_numeric_package_missing",
+        "berut_measurement_error_bars_and_source_grade_uncertainty_not_closed"
+      ],
+      "source_status": "PASS_SCOPED_BERUT_SOURCE_PACKAGE_BOUNDARY",
+      "checks": {
+        "expected_status": true,
+        "lane_boundary_closed": true,
+        "no_alpha_emitted": true,
+        "no_parameter_fit": true,
+        "holdout_unread": true,
+        "not_calibration_eligible": true
+      },
+      "claim_boundary": "Summary values remain lower-bound consistency inputs only; they are not raw data, calibration, prediction, or UET proof."
+    },
+    "jun": {
+      "core_disposition": "SOURCE_IDENTITY_ONLY_EXTERNAL_ROWS_OPEN",
+      "core_dependency_required": false,
+      "external_numeric_dataset_closed": false,
+      "external_open_blockers": [
+        "jun_machine_readable_numeric_row_parity_and_uncertainty_not_closed"
+      ],
+      "source_status": "PASS_SCOPED_JUN_FINAL_SOURCE_BOUNDARY",
+      "checks": {
+        "expected_status": true,
+        "lane_boundary_closed": true,
+        "no_alpha_emitted": true,
+        "no_parameter_fit": true,
+        "holdout_unread": true,
+        "not_calibration_eligible": true
+      },
+      "claim_boundary": "The final Jun paper identity and local PDF provenance are closed for lane. This does not close a machine-readable numeric row package, source-grade uncertainty, alpha_Phi_K, the UET bridge, TTG validation, or external validation."
+    },
+    "hong": {
+      "core_disposition": "SOURCE_IDENTITY_ONLY_LEGACY_ROW_REJECTED",
+      "core_dependency_required": false,
+      "external_numeric_dataset_closed": false,
+      "external_open_blockers": [
+        "hong_machine_readable_numeric_row_parity_and_legacy_row_policy_not_closed"
+      ],
+      "source_status": "PASS_SCOPED_HONG_FINAL_SOURCE_BOUNDARY",
+      "checks": {
+        "expected_status": true,
+        "lane_boundary_closed": true,
+        "no_alpha_emitted": true,
+        "no_parameter_fit": true,
+        "holdout_unread": true,
+        "not_calibration_eligible": true
+      },
+      "claim_boundary": "The final Hong article identity and local PDF provenance are closed for lane. This does not close a selected machine-readable legacy row, source-grade uncertainty mapping, alpha_Phi_K, the UET bridge, TTG validation, or external validation."
+    },
+    "peterson": {
+      "core_disposition": "CLOSED_AS_SOURCE_IDENTITY_NO_GO",
+      "core_dependency_required": false,
+      "external_numeric_dataset_closed": false,
+      "external_open_blockers": [
+        "peterson_legacy_label_demoted_no_admissible_row_until_exact_source_selected"
+      ],
+      "source_status": "PASS_SCOPED_PETERSON_SOURCE_IDENTITY_NO_GO",
+      "checks": {
+        "expected_status": true,
+        "lane_boundary_closed": true,
+        "no_alpha_emitted": true,
+        "no_parameter_fit": true,
+        "holdout_unread": true,
+        "not_calibration_eligible": true
+      },
+      "claim_boundary": "This no-go closes only the current Peterson legacy-label admission question. It does not reject the underlying experiments, choose a replacement source row, validate quantum Landauer physics, derive alpha_Phi_K, or close Topic 13."
+    }
+  },
+  "controller_checks": {
+    "berut": {
+      "expected_status": true,
+      "lane_boundary_closed": true,
+      "no_alpha_emitted": true,
+      "no_parameter_fit": true,
+      "holdout_unread": true,
+      "not_calibration_eligible": true
+    },
+    "jun": {
+      "expected_status": true,
+      "lane_boundary_closed": true,
+      "no_alpha_emitted": true,
+      "no_parameter_fit": true,
+      "holdout_unread": true,
+      "not_calibration_eligible": true
+    },
+    "hong": {
+      "expected_status": true,
+      "lane_boundary_closed": true,
+      "no_alpha_emitted": true,
+      "no_parameter_fit": true,
+      "holdout_unread": true,
+      "not_calibration_eligible": true
+    },
+    "peterson": {
+      "expected_status": true,
+      "lane_boundary_closed": true,
+      "no_alpha_emitted": true,
+      "no_parameter_fit": true,
+      "holdout_unread": true,
+      "not_calibration_eligible": true
+    }
+  },
+  "physical_bridge_checks": {
+    "alpha_is_independent_he4_calibration": true,
+    "beta_does_not_use_landauer": true,
+    "transport_is_independent_external_input": true
+  },
+  "checks": {
+    "all_source_controllers_have_closed_core_dispositions": true,
+    "landauer_not_used_to_derive_alpha_beta_or_transport": true,
+    "external_dataset_gaps_remain_visible": true,
+    "no_controller_unlocks_external_validation": true
+  },
+  "controlling_blocker": null,
+  "next_action": "Keep numeric row acquisition and parity work in the external Landauer comparison track; do not feed those rows into alpha, beta, EOS, or transport calibration.",
+  "claim_boundary": "Core-role closure is not dataset closure or external validation."
+}

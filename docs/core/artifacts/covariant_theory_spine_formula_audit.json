@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "covariant_theory_spine_formula_audit",
-  "generated_at": "2026-08-09T03:51:07.282346+00:00",
+  "generated_at": "2026-08-29T04:54:26.860863+00:00",
   "status": "WARN",
   "relations": [
     {
@@ -22,11 +22,12 @@
     }
   ],
   "open_items": [
-    "3+1 tensor variables",
-    "dynamical lapse/shift/spatial metric",
-    "Hamiltonian and momentum constraints",
-    "constraint damping",
-    "curved boundary conditions",
+    "gauge-declared lapse/shift evolution",
+    "dynamical spatial metric and extrinsic curvature",
+    "strong-hyperbolicity proof for the curved evolution system",
+    "constraint propagation/damping",
+    "temporal convergence",
+    "non-periodic curved boundary conditions",
     "parent-action coefficient matching"
   ],
   "claim_ceiling": "Minkowski 1+1 strongly-hyperbolic numerical control"

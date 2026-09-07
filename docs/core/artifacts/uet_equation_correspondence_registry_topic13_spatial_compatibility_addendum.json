@@ -1,0 +1,113 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "CONDITIONAL_INTERFACE_NOT_ACCEPTED_UET_ACTION",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "equation_entries": [
+    {
+      "equation_id": "uet.o2.thermal.thermoelastic_spatial_compatibility",
+      "version": "1",
+      "classification": "conditional_material_interface",
+      "relation_or_code_path": {
+        "compatibility": "eps=B(n)*v; B*v=Mandel(sym(n tensor v))",
+        "equilibrium": "B^T*sigma=0; sigma=K_el*eps-beta*dT+G*phi_r; beta=K_el*alpha",
+        "entropy": "ds=beta^T*eps+c_eps*dT/T=0",
+        "compliance": "R_n=B*(B^T*K_el*B)^-1*B^T",
+        "temperature": "dT=T*(beta^T*R_n*G)*phi_r/(c_eps+T*beta^T*R_n*beta)",
+        "fixed_T_stability": "a_phi-G^T*R_n*G>0"
+      },
+      "ontology": {
+        "K_el": "material isothermal stiffness, not UET C",
+        "phi_r": "candidate energy-dimension response, not temperature or a new UET state",
+        "eps": "external material strain from sym grad u",
+        "G": "conditional material coupling, not yet action-derived or independently calibrated",
+        "R_gen_and_R_obs": "excluded from state and dynamics"
+      },
+      "standard_physics_counterpart": "linear anisotropic thermoelastic compatibility and plane-wave equilibrium",
+      "variables": {
+        "K_el": "material isothermal stiffness, not UET C",
+        "phi_r": "candidate energy-dimension response, not temperature or a new UET state",
+        "eps": "external material strain from sym grad u",
+        "G": "conditional material coupling, not yet action-derived or independently calibrated",
+        "R_gen_and_R_obs": "excluded from state and dynamics"
+      },
+      "mathematical_role": "constrained thermoelastic response",
+      "observable_mapping": "conditional bulk grating temperature amplitude, not a TTG time trace",
+      "unit_lane": "conditional_natural_material_response_SI_open",
+      "units": {
+        "T": "E",
+        "phi_r": "E",
+        "K_el": "E^4",
+        "alpha": "E^-1",
+        "beta": "E^3",
+        "G": "E^3",
+        "c_eps": "E^3",
+        "a_phi": "E^2",
+        "R_n": "E^-4",
+        "eps": "1",
+        "n": "1"
+      },
+      "parameter_dimensions": {
+        "T": "E",
+        "phi_r": "E",
+        "K_el": "E^4",
+        "alpha": "E^-1",
+        "beta": "E^3",
+        "G": "E^3",
+        "c_eps": "E^3",
+        "a_phi": "E^2",
+        "R_n": "E^-4",
+        "eps": "1",
+        "n": "1"
+      },
+      "derivation_class": "derived_relation_with_conditional_Phi_strain_constitutive_ansatz",
+      "source_or_origin": "derivation note and conditional material interaction; no physical constants fitted",
+      "assumptions": [
+        "linear homogeneous bulk",
+        "nonzero grating wavevector",
+        "positive isothermal stiffness",
+        "mechanically quasistatic",
+        "ds=0 locally",
+        "constant coefficients at reference T"
+      ],
+      "symmetry_and_conservation": "Mandel rotation covariance, mechanical equilibrium, fixed entropy",
+      "limiting_cases": [
+        "isotropic longitudinal elasticity",
+        "homogeneous free strain is a distinct boundary problem",
+        "small positive shear"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_thermoelastic_spatial_compatibility.py"
+      ],
+      "verifier_paths": [
+        "docs/core/test/test_topic13_thermoelastic_spatial_compatibility.py",
+        "docs/scripts/audit/audit_topic13_thermoelastic_spatial_compatibility.py"
+      ],
+      "observable": "conditional bulk grating temperature amplitude, not a TTG time trace",
+      "data_role": "SYNTHETIC_INTERNAL_VERIFICATION_NO_CALIBRATION",
+      "evidence_class": "INTERNAL_CONDITIONAL_DERIVATION",
+      "proof_status": "derived within declared quasistatic ansatz; physical interpretation open",
+      "verification_status": "PASS_CONDITIONAL_FINITE_Q_COMPATIBILITY",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_thermoelastic_spatial_compatibility_audit.json",
+          "sha256": "3567d90fcc507eb6361a5038c8c8d0272f0272f71bd8b47ed62e1bebff98e80b"
+        }
+      ],
+      "downstream_dependencies": [
+        "finite_frequency_material_response"
+      ],
+      "dependency_role": "diagnostic_material_mapping",
+      "physical_dependency_unlock": false,
+      "controlling_blocker": "finite_frequency_initial_entropy_material_response_missing",
+      "failure_mode": [
+        "initial_entropy_and_finite_frequency_acoustic_heat_response_missing",
+        "physical_G_and_Z_Phi_not_identified",
+        "same_state_material_tensor_and_uncertainty_missing"
+      ],
+      "next_hardening_step": "derive acoustic and initial-entropy response before TTG use",
+      "claim_boundary": "Quasistatic locally isentropic bulk candidate only. No TTG dynamics, causal-cone proof, physical alpha, accepted UET action, external validation or Full Topic 13 closure."
+    }
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}

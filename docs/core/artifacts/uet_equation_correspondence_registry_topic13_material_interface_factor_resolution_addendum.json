@@ -1,0 +1,106 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "DIAGNOSTIC_FACTOR_GATE_NOT_NEW_ACTION_TERM",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "equation_entries": [
+    {
+      "equation_id": "uet.o2.thermal.material_interface_factor_resolution",
+      "version": "1",
+      "classification": "diagnostic_material_interface_factor_gate",
+      "relation_or_code_path": {
+        "required_material_bridge": "alpha_Phi_K=chi_u_theta*g_Phi_theta*Z_Phi/C_src",
+        "implemented_matter_operator": "V_int=-epsilon_nc*h*delta_phi*(chi_1^2+chi_2^2)/2",
+        "required_strain_operator": "L_int=-g_Phi_theta*Phi_E*theta",
+        "response_map": "Phi_E=Z_Phi*DeltaPhi",
+        "action_natural_bridge": "alpha_Phi_T^nat=(partial_Phi epsilon)/(partial_T epsilon)",
+        "independent_uncertainty": "(sigma_alpha/|alpha|)^2=(sigma_chi/chi)^2+(sigma_g/g)^2+(sigma_Z/Z)^2+(sigma_C/C_src)^2",
+        "correlated_uncertainty": "Var(alpha)=grad(alpha)^T Sigma grad(alpha)"
+      },
+      "ontology": {
+        "Phi": "effective response variable; not temperature or strain",
+        "chi_A": "O(2) matter scalar components; not material displacement",
+        "u_i": "external material displacement",
+        "theta": "volumetric strain div(u)",
+        "C": "collective coordinate; not heat capacity or lattice mass",
+        "R_gen": "derived history trace; excluded from state and backreaction"
+      },
+      "standard_physics_counterpart": "Scalar deformation-potential/strain coupling and linear-response coefficient factorization",
+      "variables": {
+        "h": "current O(2)-matter response coupling",
+        "g_Phi_theta": "required response-strain coupling",
+        "Z_Phi": "physical response residue",
+        "chi_u_theta": "material response kernel",
+        "C_src": "volumetric heat capacity"
+      },
+      "mathematical_role": "factor admission gate and current-operator substitution no-go",
+      "observable_mapping": "Conditional material thermal coefficient factor gate; no numeric alpha",
+      "unit_lane": "natural_factor_audit_open_SI",
+      "units": {
+        "response_coupling_h": 1,
+        "g_Phi_theta": 3,
+        "Phi_E": 1,
+        "theta": 0,
+        "C_src_natural": 3,
+        "alpha_per_normalized_Phi_natural": 1
+      },
+      "parameter_dimensions": {
+        "response_coupling_h": 1,
+        "g_Phi_theta": 3,
+        "Phi_E": 1,
+        "theta": 0,
+        "C_src_natural": 3,
+        "alpha_per_normalized_Phi_natural": 1
+      },
+      "derivation_class": "action_operator_and_unit_substitution_no_go_plus_factor_evidence_resolution",
+      "source_or_origin": "Current covariant response/O(2) action plus conditional material-lattice interface",
+      "assumptions": {
+        "current_action_only": true,
+        "direct_coefficient_relabeling_prohibited": true,
+        "physical_coefficients_supplied": false
+      },
+      "symmetry_and_conservation": "No action change; prior ontology and exchange-ledger contracts retained",
+      "limiting_cases": [
+        "zero strain coupling",
+        "field-coordinate rescaling"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_material_interface_factor_resolution.py"
+      ],
+      "verifier_paths": [
+        "docs/core/test/test_topic13_material_interface_factor_resolution.py",
+        "docs/scripts/audit/audit_topic13_material_interface_factor_resolution.py"
+      ],
+      "observable": "Conditional material thermal coefficient factor gate; no numeric alpha",
+      "data_role": "INTERNAL_STRUCTURAL_AUDIT_NO_CALIBRATION_NO_HOLDOUT",
+      "evidence_class": "INTERNAL_STRUCTURAL_NO_GO",
+      "proof_status": "FACTOR_GATE_AND_CURRENT_OPERATOR_SUBSTITUTION_NO_GO_VERIFIED",
+      "verification_status": "PASS_FACTOR_RESOLUTION_WITH_COUPLING_SUBSTITUTION_NO_GO",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_material_interface_factor_resolution_audit.json",
+          "sha256": "3bb802c32d27275601584f4ce2a25b3fe28d187aefdb7eced2607938df0eb7be"
+        }
+      ],
+      "downstream_dependencies": [
+        "candidate_Phi_strain_action_extension_F0_F4_design",
+        "material_response_kernel_source_requirement",
+        "conditional_alpha_uncertainty_gate"
+      ],
+      "dependency_role": "physical_strain_coupling_design_controller",
+      "physical_dependency_unlock": false,
+      "controlling_blocker": "new_Phi_strain_operator_or_independent_microscopic_match_missing",
+      "failure_mode": [
+        "physical_Phi_energy_residue_Z_Phi_missing",
+        "new_Phi_strain_operator_or_independent_microscopic_match_missing",
+        "source_backed_material_response_chi_u_theta_missing",
+        "accepted_Ding_equivalent_C_src_and_material_state_mapping_missing",
+        "normal_umklapp_split_or_admissible_full_collision_operator_missing",
+        "SI_conversion_and_independent_alpha_record_missing"
+      ],
+      "next_hardening_step": "Design an explicitly separate Phi_E*theta action candidate through F0--F4 or source-lock a microscopic response match; do not reuse response_coupling h.",
+      "claim_boundary": "Factor-resolution and current-operator substitution no-go only; no new action term, physical residue/coupling, numeric alpha, TTG prediction or Full Topic 13 closure."
+    }
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}

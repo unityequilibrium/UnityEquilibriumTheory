@@ -1,0 +1,290 @@
+{
+  "schema_version": "t13-uet-material-lattice-interface-contract-v1",
+  "major_result_id": "T13_UET_MATERIAL_LATTICE_INTERFACE_CONTRACT",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "CLOSED_FOR_LANE",
+  "closure_disposition": "CONDITIONAL_INTERFACE_ARCHITECTURE_READY",
+  "verification_status": "PASS_CONDITIONAL_MATERIAL_LATTICE_INTERFACE_CONTRACT",
+  "what_is_closed": [
+    "UET state, external material displacement/strain and phonon-distribution variables have separate owners; Phi, C and R_gen are not relabeled.",
+    "A scalar strain interface, phonon heat current, PBTE collision split and equal-and-opposite energy-exchange ledger are declared with a closed natural-unit contract.",
+    "The conditional map alpha_Phi_K=chi_u_theta*g_Phi_theta*Z_Phi/C_src exposes every required factor instead of fitting the product to TTG.",
+    "Field rescaling Z_Phi to s*Z_Phi and g to g/s leaves both the interaction and alpha product invariant, so normalized Phi dynamics alone cannot identify either physical factor."
+  ],
+  "equation_registry_ids": [
+    "uet.o2.thermal.material_lattice_interface_contract"
+  ],
+  "registration_status": "CONDITIONAL_INTERFACE_NOT_MERGED_INTO_UET_ACTION",
+  "equation_or_mapping": {
+    "strain": "strain_ij=(partial_i u_j+partial_j u_i)/2",
+    "volumetric_strain": "theta=strain_i^i=div(u)",
+    "canonical_response_map": "Phi_E=Z_Phi*DeltaPhi",
+    "conditional_interaction": "L_int=-g_Phi_theta*Phi_E*theta",
+    "phonon_heat_current": "J_Q^i=sum_qnu hbar*omega_qnu*v_qnu^i*delta_n_qnu/V",
+    "pbte": "partial_t delta_n+v.grad(delta_n)=-C_ph[delta_n]+S_Phi",
+    "collision_split": "C_ph=C_N+C_R; C_N preserves crystal momentum; C_R relaxes it",
+    "exchange_ledger": "partial_mu T_UET^(mu0)=-Q_ex; partial_mu T_lat^(mu0)=+Q_ex",
+    "conditional_temperature_map": "DeltaT=(chi_u_theta*g_Phi_theta*Z_Phi/C_src)*DeltaPhi",
+    "conditional_alpha": "alpha_Phi_K=chi_u_theta*g_Phi_theta*Z_Phi/C_src with SI conversion and uncertainty"
+  },
+  "ontology": {
+    "u_i": "external material displacement field",
+    "strain_ij": "symmetric gradient of u_i",
+    "delta_n_qnu": "phonon distribution perturbation",
+    "Phi": "UET effective response variable; not temperature, displacement or strain",
+    "C": "unchanged collective coordinate; not lattice mass or heat capacity",
+    "R_gen": "derived history trace with no interface backreaction"
+  },
+  "unit_lane": "conditional_natural_3p1_open_SI",
+  "units": {
+    "coordinate_x": -1,
+    "derivative": 1,
+    "displacement_u": -1,
+    "strain_theta": 0,
+    "Phi_E": 1,
+    "g_Phi_theta": 3,
+    "interaction_energy_density": 4,
+    "phonon_energy_density": 4,
+    "heat_current": 4,
+    "exchange_rate_density": 5,
+    "C_src_natural": 3,
+    "alpha_per_normalized_Phi_natural": 1
+  },
+  "derivation_class": "conditional_interface_and_identifiability_contract",
+  "observable": "Conditional phonon energy/current response to normalized Phi; no numeric physical coefficient",
+  "data_role": "DERIVED_CONDITIONAL_INTERFACE_NO_CALIBRATION",
+  "contract": {
+    "status": "PASS_CONDITIONAL_MATERIAL_LATTICE_INTERFACE_CONTRACT",
+    "state_ownership": {
+      "UET": [
+        "C",
+        "Phi",
+        "Pi"
+      ],
+      "material_lattice": [
+        "u_i",
+        "strain_ij",
+        "delta_n_qnu"
+      ],
+      "excluded_from_state": [
+        "R_gen",
+        "R_obs"
+      ]
+    },
+    "ontology": {
+      "u_i": "external material displacement field",
+      "strain_ij": "symmetric gradient of u_i",
+      "delta_n_qnu": "phonon distribution perturbation",
+      "Phi": "UET effective response variable; not temperature, displacement or strain",
+      "C": "unchanged collective coordinate; not lattice mass or heat capacity",
+      "R_gen": "derived history trace with no interface backreaction"
+    },
+    "equations": {
+      "strain": "strain_ij=(partial_i u_j+partial_j u_i)/2",
+      "volumetric_strain": "theta=strain_i^i=div(u)",
+      "canonical_response_map": "Phi_E=Z_Phi*DeltaPhi",
+      "conditional_interaction": "L_int=-g_Phi_theta*Phi_E*theta",
+      "phonon_heat_current": "J_Q^i=sum_qnu hbar*omega_qnu*v_qnu^i*delta_n_qnu/V",
+      "pbte": "partial_t delta_n+v.grad(delta_n)=-C_ph[delta_n]+S_Phi",
+      "collision_split": "C_ph=C_N+C_R; C_N preserves crystal momentum; C_R relaxes it",
+      "exchange_ledger": "partial_mu T_UET^(mu0)=-Q_ex; partial_mu T_lat^(mu0)=+Q_ex",
+      "conditional_temperature_map": "DeltaT=(chi_u_theta*g_Phi_theta*Z_Phi/C_src)*DeltaPhi",
+      "conditional_alpha": "alpha_Phi_K=chi_u_theta*g_Phi_theta*Z_Phi/C_src with SI conversion and uncertainty"
+    },
+    "natural_unit_exponents": {
+      "coordinate_x": -1,
+      "derivative": 1,
+      "displacement_u": -1,
+      "strain_theta": 0,
+      "Phi_E": 1,
+      "g_Phi_theta": 3,
+      "interaction_energy_density": 4,
+      "phonon_energy_density": 4,
+      "heat_current": 4,
+      "exchange_rate_density": 5,
+      "C_src_natural": 3,
+      "alpha_per_normalized_Phi_natural": 1
+    },
+    "input_roles": {
+      "Z_Phi": "DERIVED_OR_INDEPENDENT_CALIBRATION_REQUIRED",
+      "g_Phi_theta": "DERIVED_FROM_ACTION_OR_EXTERNAL_MATCH_REQUIRED",
+      "chi_u_theta": "SOURCE_BACKED_MATERIAL_RESPONSE_REQUIRED",
+      "C_src": "SOURCE_BACKED_MATERIAL_INPUT_REQUIRED",
+      "C_N_C_R": "SOURCE_BACKED_OR_MICROSCOPIC_MATCH_REQUIRED"
+    },
+    "admitted_current_evidence": {
+      "calorine_mode_source_fields": true,
+      "normal_umklapp_collision_split": false,
+      "physical_Z_Phi": false,
+      "physical_g_Phi_theta": false,
+      "physical_alpha_Phi_K": false
+    },
+    "claim_boundary": "Conditional interface architecture only; no physical coupling, alpha calibration, material transport coefficient or UET validation."
+  },
+  "rescaling_witnesses": [
+    {
+      "phi_energy_amplitude": 0.3,
+      "volumetric_strain": 0.02,
+      "coupling": 0.5,
+      "scale": 0.25,
+      "interaction_energy_density": 0.003,
+      "rescaled_phi_energy_amplitude": 0.075,
+      "rescaled_coupling": 2.0,
+      "rescaled_interaction_energy_density": 0.003,
+      "interaction_relative_residual": 0.0,
+      "alpha_product": 0.15,
+      "rescaled_alpha_product": 0.15,
+      "alpha_product_relative_residual": 0.0
+    },
+    {
+      "phi_energy_amplitude": 0.3,
+      "volumetric_strain": 0.02,
+      "coupling": 0.5,
+      "scale": 0.5,
+      "interaction_energy_density": 0.003,
+      "rescaled_phi_energy_amplitude": 0.15,
+      "rescaled_coupling": 1.0,
+      "rescaled_interaction_energy_density": 0.003,
+      "interaction_relative_residual": 0.0,
+      "alpha_product": 0.15,
+      "rescaled_alpha_product": 0.15,
+      "alpha_product_relative_residual": 0.0
+    },
+    {
+      "phi_energy_amplitude": 0.3,
+      "volumetric_strain": 0.02,
+      "coupling": 0.5,
+      "scale": 2.0,
+      "interaction_energy_density": 0.003,
+      "rescaled_phi_energy_amplitude": 0.6,
+      "rescaled_coupling": 0.25,
+      "rescaled_interaction_energy_density": 0.003,
+      "interaction_relative_residual": 0.0,
+      "alpha_product": 0.15,
+      "rescaled_alpha_product": 0.15,
+      "alpha_product_relative_residual": 0.0
+    },
+    {
+      "phi_energy_amplitude": 0.3,
+      "volumetric_strain": 0.02,
+      "coupling": 0.5,
+      "scale": 4.0,
+      "interaction_energy_density": 0.003,
+      "rescaled_phi_energy_amplitude": 1.2,
+      "rescaled_coupling": 0.125,
+      "rescaled_interaction_energy_density": 0.003,
+      "interaction_relative_residual": 0.0,
+      "alpha_product": 0.15,
+      "rescaled_alpha_product": 0.15,
+      "alpha_product_relative_residual": 0.0
+    }
+  ],
+  "exchange_ledger_witness": {
+    "uet_energy_source": -0.7,
+    "lattice_energy_source": 0.7,
+    "total_energy_source": 0.0
+  },
+  "checks": {
+    "uet_and_material_state_ownership_separate": true,
+    "history_and_observer_excluded_from_state": true,
+    "Phi_not_relabelled_as_material_variable": true,
+    "strain_unit_closure": true,
+    "interaction_unit_closure": true,
+    "exchange_rate_unit_closure": true,
+    "conditional_alpha_unit_closure": true,
+    "equal_and_opposite_exchange_ledger": true,
+    "field_rescaling_leaves_interaction_invariant": true,
+    "field_rescaling_leaves_alpha_product_invariant": true,
+    "calorine_mode_fields_admitted_only_as_comparator": true,
+    "physical_coupling_and_alpha_remain_open": true,
+    "no_fit_holdout_or_physical_promotion": true
+  },
+  "open_blockers": [
+    "physical_Phi_energy_residue_Z_Phi_missing",
+    "physical_Phi_strain_coupling_g_missing",
+    "source_backed_material_response_chi_u_theta_missing",
+    "normal_umklapp_split_or_admissible_full_collision_operator_missing",
+    "Ding_material_state_and_source_uncertainty_missing",
+    "SI_conversion_and_independent_alpha_record_missing"
+  ],
+  "controlling_blocker": "physical_Phi_residue_strain_coupling_and_material_response_missing",
+  "source_hashes": {
+    "docs/core/uet_material_lattice_interface_contract.py": "85be68b8054556b78378fb06b8a6e99c8f936063cab55c4359d86ff9f93b9ca3",
+    "docs/core/test/test_topic13_material_lattice_interface_contract.py": "c9a638afe131cabdef4ef72d51dde4ec62ca0afdce9ae5396c5ddd5c45ad4c02",
+    "docs/scripts/audit/audit_topic13_material_lattice_interface_contract.py": "73a370cba6051890e1d701299dc42e95ab683531a8bf3b00f4079b691a416d51"
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_calorine_lattice_interface_input_boundary.json",
+      "sha256": "5a2bf941484887b2140f6400055ccb80c4443435f32f1488f2cb4f8dec4d9fb0"
+    },
+    {
+      "path": "docs/core/artifacts/t13_continuum_action_umklapp_direct_route_no_go.json",
+      "sha256": "167389b86edc90ea3f603f81f09d2e3219d5b513c5c1f3e4c481710d58495f9e"
+    }
+  ],
+  "dependency_unlocked": [
+    "physical_Phi_strain_coupling_derivation_or_source_gate",
+    "material_response_kernel_chi_u_theta_source_gate",
+    "conditional_alpha_uncertainty_propagation_design"
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "xie_2026_accessed": false,
+  "parameter_fitting_performed": false,
+  "claim_boundary": "Conditional interface architecture and identifiability result only; not a new accepted UET action term, physical Phi residue/coupling, material transport coefficient, alpha calibration, TTG prediction, external validation or Full Topic 13 closure.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "UET state, external material displacement/strain and phonon-distribution variables have separate owners; Phi, C and R_gen are not relabeled.",
+      "A scalar strain interface, phonon heat current, PBTE collision split and equal-and-opposite energy-exchange ledger are declared with a closed natural-unit contract.",
+      "The conditional map alpha_Phi_K=chi_u_theta*g_Phi_theta*Z_Phi/C_src exposes every required factor instead of fitting the product to TTG.",
+      "Field rescaling Z_Phi to s*Z_Phi and g to g/s leaves both the interaction and alpha product invariant, so normalized Phi dynamics alone cannot identify either physical factor."
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "physical_Phi_energy_residue_Z_Phi_missing",
+      "physical_Phi_strain_coupling_g_missing",
+      "source_backed_material_response_chi_u_theta_missing",
+      "normal_umklapp_split_or_admissible_full_collision_operator_missing",
+      "Ding_material_state_and_source_uncertainty_missing",
+      "SI_conversion_and_independent_alpha_record_missing"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "physical_Phi_strain_coupling_derivation_or_source_gate",
+      "material_response_kernel_chi_u_theta_source_gate",
+      "conditional_alpha_uncertainty_propagation_design"
+    ],
+    "STATUS": "PASS_CONDITIONAL_MATERIAL_LATTICE_INTERFACE_CONTRACT",
+    "WHAT_CHANGED": "Defined the first ontology- and unit-safe UET/material-lattice interface and exposed the coefficient product required for alpha without fitting it.",
+    "EQUATION_OR_MAPPING": {
+      "strain": "strain_ij=(partial_i u_j+partial_j u_i)/2",
+      "volumetric_strain": "theta=strain_i^i=div(u)",
+      "canonical_response_map": "Phi_E=Z_Phi*DeltaPhi",
+      "conditional_interaction": "L_int=-g_Phi_theta*Phi_E*theta",
+      "phonon_heat_current": "J_Q^i=sum_qnu hbar*omega_qnu*v_qnu^i*delta_n_qnu/V",
+      "pbte": "partial_t delta_n+v.grad(delta_n)=-C_ph[delta_n]+S_Phi",
+      "collision_split": "C_ph=C_N+C_R; C_N preserves crystal momentum; C_R relaxes it",
+      "exchange_ledger": "partial_mu T_UET^(mu0)=-Q_ex; partial_mu T_lat^(mu0)=+Q_ex",
+      "conditional_temperature_map": "DeltaT=(chi_u_theta*g_Phi_theta*Z_Phi/C_src)*DeltaPhi",
+      "conditional_alpha": "alpha_Phi_K=chi_u_theta*g_Phi_theta*Z_Phi/C_src with SI conversion and uncertainty"
+    },
+    "VERIFICATION": {
+      "uet_and_material_state_ownership_separate": true,
+      "history_and_observer_excluded_from_state": true,
+      "Phi_not_relabelled_as_material_variable": true,
+      "strain_unit_closure": true,
+      "interaction_unit_closure": true,
+      "exchange_rate_unit_closure": true,
+      "conditional_alpha_unit_closure": true,
+      "equal_and_opposite_exchange_ledger": true,
+      "field_rescaling_leaves_interaction_invariant": true,
+      "field_rescaling_leaves_alpha_product_invariant": true,
+      "calorine_mode_fields_admitted_only_as_comparator": true,
+      "physical_coupling_and_alpha_remain_open": true,
+      "no_fit_holdout_or_physical_promotion": true
+    },
+    "CONTROLLING_BLOCKER": "physical_Phi_residue_strain_coupling_and_material_response_missing",
+    "NEXT_ACTION": "Derive or source-lock Z_Phi, g_Phi_theta and chi_u_theta independently, and acquire an admissible material collision operator before evaluating alpha or transport.",
+    "CLAIM_BOUNDARY": "Conditional interface architecture and identifiability result only; not a new accepted UET action term, physical Phi residue/coupling, material transport coefficient, alpha calibration, TTG prediction, external validation or Full Topic 13 closure."
+  }
+}

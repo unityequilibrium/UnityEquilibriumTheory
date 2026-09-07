@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "source_id": "lindblom_et_al_2006_generalized_harmonic",
+  "title": "A New Generalized Harmonic Evolution System",
+  "authors": [
+    "Lee Lindblom",
+    "Mark A. Scheel",
+    "Lawrence E. Kidder",
+    "Robert Owen",
+    "Oliver Rinne"
+  ],
+  "year": 2006,
+  "arxiv_id": "gr-qc/0512093",
+  "doi": "10.1088/0264-9381/23/16/S09",
+  "url": "https://arxiv.org/abs/gr-qc/0512093",
+  "version": "v3",
+  "journal_reference": "Class. Quantum Grav. 23 (2006) S447-S462",
+  "formula_locators": {
+    "gh_gauge": "Section 2, Eqs. (6), (11), and (12)",
+    "constraint_damping": "Section 2.2, Eqs. (17)-(21)",
+    "first_order_variables": "Section 3, Eqs. (22)-(26)",
+    "modified_principal_system": "Section 3, Eqs. (27)-(29)",
+    "symmetrizer": "Section 3, Eq. (30), with gamma3=gamma1*gamma2 and Lambda^2>gamma2^2",
+    "characteristic_fields": "Section 3, Eqs. (31)-(34)",
+    "complete_rhs": "Section 3, Eqs. (35)-(39)",
+    "first_order_gauge_constraint": "Section 4.1, Eq. (40)"
+  },
+  "source_role": "preregistered next-branch formulation and constraint-damping reference",
+  "used_scope": [
+    "first-order generalized-harmonic variables and gauge-source concept",
+    "symmetric-hyperbolic formulation target",
+    "constraint-damping and constraint-preserving boundary target"
+    ,"principal equations, symmetrizer, characteristic fields, and reduction-constraint damping"
+  ],
+  "not_used_for": [
+    "claim that a generalized-harmonic UET branch is already implemented",
+    "claim that periodic ADM controls validate black-hole evolution",
+    "UET coefficient fitting",
+    "external physical validation"
+  ],
+  "local_payload": "metadata-only source record; no redistributed PDF",
+  "accessed_on": "2026-08-28"
+}

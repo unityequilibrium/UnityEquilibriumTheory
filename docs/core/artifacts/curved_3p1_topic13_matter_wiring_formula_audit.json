@@ -1,0 +1,53 @@
+{
+  "schema_version": "curved-3p1-topic13-matter-formula-audit-v1",
+  "artifact": "curved_3p1_topic13_matter_wiring_formula_audit",
+  "generated_at": "2026-08-30T10:40:22.286819+00:00",
+  "status": "PASS_SOURCE_LOCKED_TOPIC13_MATTER_FORMULAS",
+  "relations": [
+    {
+      "formula_id": "UET-CURVED3P1-MATTER-TAB-021",
+      "relation": "T_ab=(epsilon+p)u_a*u_b+p*psi_ab+u_a*q_b+u_b*q_a+pi_ab",
+      "unit_contract": "epsilon, p, q_a, and pi_ab share one declared energy-density lane",
+      "derivation_status": "standard relativistic dissipative-fluid decomposition"
+    },
+    {
+      "formula_id": "UET-CURVED3P1-MATTER-ADM-022",
+      "relation": "rho=n^a*n^b*T_ab; S_a=-gamma_a^c*n^d*T_cd; S_ab=gamma_a^c*gamma_b^d*T_cd",
+      "unit_contract": "rho, S_i, and S_ij inherit the T_ab energy-density lane",
+      "derivation_status": "standard 3+1 projection"
+    },
+    {
+      "formula_id": "UET-CURVED3P1-MATTER-GH-023",
+      "relation": "d_t Pi_ab|matter=-2*alpha*kappa_E*(T_ab-psi_ab*T/2)",
+      "unit_contract": "kappa_E*T_ab has inverse-coordinate-length squared units",
+      "derivation_status": "standard trace-reversed Einstein source transcription"
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json",
+      "sha256": "d989b9dd637828dd64f975eaf1f744163ac71e362bde71e46e86e599eced1754"
+    },
+    {
+      "path": "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json",
+      "sha256": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a"
+    }
+  ],
+  "ontology": {
+    "C": "excluded collective coordinate; not stress-energy",
+    "Phi": "excluded effective response variable; not metric or energy density",
+    "R_gen": "excluded derived history trace; no backreaction",
+    "R_obs": "excluded observer record",
+    "psi_ab": "standard Lorentz metric",
+    "T_ab": "independently declared lane-specific stress-energy tensor"
+  },
+  "open_items": [
+    "matter-state time evolution",
+    "stress-energy conservation propagation",
+    "self-consistent two-fluid curved transport",
+    "numerical SI Einstein coupling provenance",
+    "constraint-preserving non-periodic boundaries",
+    "detector observable mapping"
+  ],
+  "claim_boundary": "prescribed lane-specific stress-energy construction and projection only; not a self-consistent matter-coupled spacetime solution, Einstein-equation derivation, Gravity validation, or global UET closure"
+}

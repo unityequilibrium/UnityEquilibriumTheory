@@ -12,6 +12,7 @@ ARTIFACTS = ROOT / "docs/core/artifacts"
 READINESS = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_observable_map_readiness.json"
 PILOT = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json"
 SOURCE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_second_sound_source_package.json"
+T13_HE4_COMPOSITION = ARTIFACTS / "t13_he4_core_thermodynamic_bridge_composition_audit.json"
 
 
 def _read(path: Path) -> dict:
@@ -25,6 +26,8 @@ def _sha(path: Path) -> str:
 def build_artifacts() -> tuple[dict, dict]:
     now = datetime.now(timezone.utc).isoformat()
     readiness, pilot, source = _read(READINESS), _read(PILOT), _read(SOURCE)
+    he4_composition = _read(T13_HE4_COMPOSITION)
+    core_track = he4_composition["major_result"]
     expected_source_hash = readiness["input_identity"]["source_package_sha256"]
     source_hash = _sha(SOURCE)
     gates = readiness["gates"]
@@ -37,6 +40,10 @@ def build_artifacts() -> tuple[dict, dict]:
         "holdout_consumed": not bool(gates["holdout_data_not_consumed"]),
         "pilot_prearrival_leakage": float(pilot["metrics"]["core_prearrival_leakage_fraction"]),
         "pilot_prearrival_threshold": float(pilot["thresholds"]["prearrival_leakage_fraction_max"]),
+        "o2_he4_core_closure_level": core_track["closure_level"],
+        "o2_he4_full_core_unlock": (
+            he4_composition.get("status") == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+        ),
     }
     checks = {
         "source_identity_locked": metrics["source_package_hash_matches_readiness"],
@@ -48,6 +55,11 @@ def build_artifacts() -> tuple[dict, dict]:
         "causal_pilot": metrics["pilot_prearrival_leakage"] <= metrics["pilot_prearrival_threshold"],
         "holdout_preserved": not metrics["holdout_consumed"],
         "no_parameter_fitting": bool(gates["no_parameter_fitting"] and not pilot["run_integrity"]["parameter_fitting"]),
+        "o2_he4_core_ready": (
+            he4_composition.get("status") == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+            and core_track.get("closure_level") == "CLOSED_FOR_CORE"
+            and all(he4_composition.get("checks", {}).values())
+        ),
     }
     dimensional_closed = all(checks[name] for name in ("numeric_source_package", "independent_dimensional_calibration", "causal_pilot"))
     audit = {
@@ -60,28 +72,66 @@ def build_artifacts() -> tuple[dict, dict]:
             "readiness_path": READINESS.relative_to(ROOT).as_posix(), "readiness_sha256": _sha(READINESS),
             "pilot_path": PILOT.relative_to(ROOT).as_posix(), "pilot_sha256": _sha(PILOT),
             "source_path": SOURCE.relative_to(ROOT).as_posix(), "source_sha256": source_hash,
+            "t13_he4_composition_path": T13_HE4_COMPOSITION.relative_to(ROOT).as_posix(),
+            "t13_he4_composition_sha256": _sha(T13_HE4_COMPOSITION),
+        },
+        "tracks": {
+            "o2_he4_core_ready": {
+                "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+                "status": core_track["closure_level"],
+                "full_core_unlock": checks["o2_he4_core_ready"],
+                "what_is_closed": core_track["what_is_closed"],
+                "claim_boundary": core_track["claim_boundary"],
+            },
+            "legacy_graphite_ttg_external_validation": {
+                "status": "BLOCKED",
+                "checks": {
+                    name: checks[name]
+                    for name in (
+                        "numeric_source_package",
+                        "independent_dimensional_calibration",
+                        "causal_pilot",
+                        "holdout_preserved",
+                    )
+                },
+                "claim_boundary": (
+                    "Historical graphite pilot remains blocked and is not a "
+                    "Core physical-unlock dependency."
+                ),
+            },
         },
         "provenance_gaps": [
-            "no local numeric TTG rows with locator, preprocessing, uncertainty, and hash",
-            "alpha_Phi_K has no independent derivation or calibration",
-            "heat flux and entropy production are not direct closed TTG observables",
+            "legacy graphite pilot has no accepted local numeric TTG package with complete locator, preprocessing, uncertainty, and hash",
+            "legacy graphite pilot has no independent graphite-specific alpha_Phi_K derivation or calibration",
+            "legacy graphite heat flux and entropy production are not direct closed TTG observables",
         ],
-        "causal_gap": "pre-arrival leakage exceeds the locked threshold",
-        "claim_boundary": "normalized TTG definition is source-backed; dimensional UET mapping and external validation remain blocked",
+        "causal_gap": "legacy graphite pilot pre-arrival leakage exceeds the locked threshold",
+        "claim_boundary": (
+            "The bounded O(2)/He-4 dimensional thermal bridge is CLOSED_FOR_CORE. "
+            "The historical graphite TTG external-validation track remains blocked."
+        ),
     }
     gate = {
         "schema_version": "1.0", "artifact": "uet_main_theory_wave8_gate",
         "generated_at": now, "audit_status": audit["audit_status"],
         "dimensional_observable_status": audit["closure_status"],
         "upstream_gate": "uet_main_theory_wave7_gate.json", "checks": checks,
+        "track_status": {
+            "o2_he4_core_ready": "CLOSED_FOR_CORE",
+            "legacy_graphite_ttg_external_validation": "BLOCKED",
+        },
         "controlling_blockers": [
-            "thermal_numeric_source_package_missing",
-            "alpha_phi_k_independent_calibration_missing",
-            "thermal_prearrival_leakage_gate_failed",
+            "legacy_graphite_ttg_numeric_source_package_missing",
+            "legacy_graphite_alpha_phi_k_independent_calibration_missing",
+            "legacy_graphite_thermal_prearrival_leakage_gate_failed",
         ],
         "holdout_status": "LOCKED_UNCONSUMED" if checks["holdout_preserved"] else "INVALID_CONSUMED",
         "claim_promotion": False,
-        "next_controller": "obtain a permitted calibration package without consuming the locked holdout and independently close alpha_Phi_K after causal repair",
+        "next_controller": (
+            "Keep graphite acquisition/calibration on the external track; "
+            "the Core path proceeds through curved 3+1 time integration and "
+            "constraint propagation."
+        ),
     }
     return audit, gate
 

@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-uet-o2-kinetic-collision-kubo-v1",
   "artifact": "t13_uet_o2_kinetic_collision_kubo_audit",
-  "generated_at": "2026-08-14",
+  "generated_at": "2026-08-31",
   "status": "PASS_ACTION_DERIVED_DILUTE_KINETIC_COLLISION_LANE",
   "major_result": {
     "major_result_id": "T13_UET_O2_KINETIC_COLLISION_KERNEL_LANE",
@@ -14,16 +14,17 @@
       "the lane explicitly excludes final-state Bose enhancement, ladder resummation, condensed scattering, and microscopic SK matching"
     ],
     "equation_or_mapping": {
-      "normal_dispersion": "E_s(k)=sqrt(k^2+m_eff^2)-s*sqrt(Z)*abs(mu), s in {-1,+1}",
-      "constant_amplitude_cross_section": "sigma_22(s)=lambda^2/(16*pi*s)",
+      "canonical_field_map": "chi_c=sqrt(Z)*chi; m_c^2=m_eff^2/Z; lambda_c=lambda/Z^2; mu_c=mu",
+      "normal_dispersion": "E_s(k)=sqrt(k^2+m_c^2)-s*mu, s in {-1,+1}",
+      "constant_amplitude_cross_section": "sigma_comparator(s)=lambda_c^2/(16*pi*s); channel normalization is not the full action tensor",
       "collision_kernel": "Gamma_s(k)=sum_r integral[d^3p/(2*pi)^3] f_r(E_p) v_rel sigma_22(s) B_34(s;T,mu)",
       "static_weight": "D_s=(1/3) integral[d^3k/(2*pi)^3] k^2[-partial_E f_s]",
-      "kinetic_response": "K_kin=sum_s D_s/Gamma_s(k_ref), k_ref=max(T,m_eff,sqrt(Z)*abs(mu))"
+      "kinetic_response": "K_kin=sum_s D_s/Gamma_s(k_ref), k_ref=max(T,m_c,abs(mu))"
     },
     "units": {
       "unit_lane": "natural",
       "mass_temperature_mu": "energy",
-      "lambda": "dimensionless quartic coupling",
+      "lambda": "dimensionless canonical lambda_c=lambda_action/Z^2 in returned state",
       "sigma_22": "inverse energy squared",
       "collision_width": "energy/inverse time",
       "D": "formal static response weight",
@@ -39,11 +40,11 @@
     "evidence_artifacts": [
       {
         "path": "docs/core/uet_o2_kinetic_collision_kubo.py",
-        "sha256": "411314a28d67bbce457f96ad6f147b183a7580fb983e88af7ba9ce0ce7c149be"
+        "sha256": "fa4d5cf2f8fc549e47392df39bc468ed3addec37ade25a7969f82652911dce6f"
       },
       {
         "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
-        "sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4"
+        "sha256": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f"
       }
     ],
     "verification_status": "PASS_ACTION_DERIVED_DILUTE_KINETIC_COLLISION_LANE",
@@ -61,17 +62,24 @@
   },
   "contract": {
     "status": "PASS_ACTION_DERIVED_DILUTE_KINETIC_COLLISION_LANE",
+    "normalization_revision": "CANONICAL_NORMAL_KINETIC_V2",
+    "amplitude_convention": "UNIT_CHANNEL_COMPARATOR_NOT_FULL_ACTION_TENSOR",
+    "species_order": [
+      -1,
+      1
+    ],
     "equations": {
-      "normal_dispersion": "E_s(k)=sqrt(k^2+m_eff^2)-s*sqrt(Z)*abs(mu), s in {-1,+1}",
-      "constant_amplitude_cross_section": "sigma_22(s)=lambda^2/(16*pi*s)",
+      "canonical_field_map": "chi_c=sqrt(Z)*chi; m_c^2=m_eff^2/Z; lambda_c=lambda/Z^2; mu_c=mu",
+      "normal_dispersion": "E_s(k)=sqrt(k^2+m_c^2)-s*mu, s in {-1,+1}",
+      "constant_amplitude_cross_section": "sigma_comparator(s)=lambda_c^2/(16*pi*s); channel normalization is not the full action tensor",
       "collision_kernel": "Gamma_s(k)=sum_r integral[d^3p/(2*pi)^3] f_r(E_p) v_rel sigma_22(s) B_34(s;T,mu)",
       "static_weight": "D_s=(1/3) integral[d^3k/(2*pi)^3] k^2[-partial_E f_s]",
-      "kinetic_response": "K_kin=sum_s D_s/Gamma_s(k_ref), k_ref=max(T,m_eff,sqrt(Z)*abs(mu))"
+      "kinetic_response": "K_kin=sum_s D_s/Gamma_s(k_ref), k_ref=max(T,m_c,abs(mu))"
     },
     "unit_contract": {
       "unit_lane": "natural",
       "mass_temperature_mu": "energy",
-      "lambda": "dimensionless quartic coupling",
+      "lambda": "dimensionless canonical lambda_c=lambda_action/Z^2 in returned state",
       "sigma_22": "inverse energy squared",
       "collision_width": "energy/inverse time",
       "D": "formal static response weight",
@@ -95,6 +103,7 @@
       "ladder_vertex_resummation": true,
       "condensed_scattering": true,
       "microscopic_SK_KMS_match": true,
+      "full_action_tensor_and_channel_symmetry_matching": true,
       "SI_map": true,
       "alpha_Phi_K": true,
       "TTG_validation": true
@@ -220,6 +229,12 @@
   "controlling_blocker": "final_state_bose_enhancement_and_ladder_vertex_matching_missing",
   "next_controller": "extend the declared kernel with quantum final-state factors and a matched retarded/ladder response, while keeping the present lane as a natural-unit comparator",
   "claim_promotion": false,
+  "full_core_unlock": false,
+  "action_matching_boundary": "Canonical comparator only; full action tensor/channel normalization remains open.",
+  "source_hashes": {
+    "docs/core/uet_o2_kinetic_collision_kubo.py": "fa4d5cf2f8fc549e47392df39bc468ed3addec37ade25a7969f82652911dce6f",
+    "docs/scripts/audit/audit_topic13_uet_o2_kinetic_collision_kubo.py": "5adfd15d021721fe597649f1159fb87505eaddcfdbb1e70fb90adea5a75f684b"
+  },
   "primary_literature_context": [
     {
       "locator": "https://arxiv.org/abs/hep-ph/9409250",

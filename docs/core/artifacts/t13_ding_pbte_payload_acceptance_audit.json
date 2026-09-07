@@ -1,0 +1,15 @@
+{
+  "schema_version": "t13-ding-pbte-payload-acceptance-audit-v1",
+  "artifact": "t13_ding_pbte_payload_acceptance_audit",
+  "generated_at": "2026-08-22",
+  "status": "BLOCKED_DING_PBTE_PAYLOAD_NOT_RECEIVED",
+  "payload_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/received/ding_2022_pbte_numeric_payload.json",
+  "payload_present": false,
+  "checks": {
+    "payload_present": false,
+    "holdout_accessed": false
+  },
+  "controlling_blocker": "author_data_or_independent_reproduction_payload_not_received",
+  "next_controller": "Receive a permitted payload, hash every source file, then rerun this verifier before full-gate integration.",
+  "claim_boundary": "No Ding C_src, alpha_Phi_K, prediction, or external validation is emitted."
+}

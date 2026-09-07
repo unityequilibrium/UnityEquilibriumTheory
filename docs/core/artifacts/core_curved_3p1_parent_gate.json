@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0",
+  "artifact": "core_curved_3p1_parent_gate",
+  "generated_at": "2026-08-30T10:40:45.491982+00:00",
+  "status": "PARTIAL_CURVED_3P1_GH_PERIODIC_PRESCRIBED_MATTER_READY",
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
+    "topic": "core",
+    "closure_level": "PARTIAL",
+    "what_is_closed": [
+      "ADM constraint evaluation interface",
+      "periodic-grid metric-to-Ricci operator",
+      "periodic-grid covariant momentum-tensor divergence",
+      "second-order spatial geometry convergence",
+      "nonlinear periodic ADM metric/K right-hand-side operator",
+      "second-order lapse-Hessian and shift-Lie convergence controls",
+      "fixed-gauge ADM strong-hyperbolicity branch closed as no-go",
+      "first-order generalized-harmonic next branch selected",
+      "first-order GH principal equation and algebraic gauge-source contract",
+      "complete GH characteristic basis with source-matched speeds",
+      "positive GH symmetrizer and principal-system symmetric hyperbolicity",
+      "reduction-constraint damping identity and spatial convergence",
+      "complete nonlinear vacuum GH Eqs. 35-40 right-hand-side operator",
+      "metric-derived lapse, shift, normal, Christoffel, and gauge constraint",
+      "gamma0 algebraic gauge-constraint damping term",
+      "independent constant-grid and variable-grid explicit-index controls",
+      "classical RK4 integration of the nonlinear vacuum GH system",
+      "fixed characteristic CFL policy on the periodic branch",
+      "exact Minkowski and harmonic gauge-wave evolution controls",
+      "second-order spatial and fourth-order temporal convergence",
+      "periodic gauge, reduction, and curl constraint propagation",
+      "gamma2 reduction-constraint damping over time",
+      "Topic 13 He-4/O(2) prescribed relativistic stress-energy tensor",
+      "Eulerian energy, momentum, and spatial-stress projections",
+      "trace-reversed GH prescribed matter source",
+      "natural-to-SI multiplicative stress-energy scaling control"
+    ],
+    "equation_or_mapping": {
+      "hamiltonian": "R3 + K^2 - K_ij K^ij - 16*pi*G*rho = 0",
+      "momentum": "D_j(K^j_i - delta^j_i*K) - 8*pi*G*S_i = 0",
+      "fluid_stress_energy": "T_ab=(epsilon+p)u_a*u_b+p*psi_ab+u_a*q_b+u_b*q_a+pi_ab",
+      "adm_energy": "rho=n^a*n^b*T_ab",
+      "adm_momentum": "S_a=-gamma_a^c*n^d*T_cd",
+      "adm_stress": "S_ab=gamma_a^c*gamma_b^d*T_cd",
+      "gh_matter_source": "d_t Pi_ab|matter=-2*alpha*kappa_E*(T_ab-psi_ab*T/2)"
+    },
+    "units": "geometric constraint lane; SI observable mapping open",
+    "derivation_class": "incremental curved 3+1 parent construction",
+    "observable": "constraint residual diagnostics only",
+    "data_role": "internal analytic controls",
+    "verification_status": "PARTIAL_CURVED_3P1_GH_PERIODIC_PRESCRIBED_MATTER_READY",
+    "open_blockers": [
+      "constraint_preserving_boundaries",
+      "dimensional_observable_mapping"
+    ],
+    "dependency_unlocked": "constraint-preserving boundary and dimensional-observable waves only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
+    "claim_boundary": "partial parent construction; not CLOSED_FOR_CORE and not Gravity/GR compatibility"
+  },
+  "requirements": {
+    "adm_constraint_interface": "PASS",
+    "metric_to_ricci_operator": "PASS",
+    "spatial_geometry_convergence": "PASS",
+    "adm_metric_k_evolution_rhs_operator": "PASS",
+    "fixed_gauge_adm_hyperbolicity": "CLOSED_AS_NO_GO",
+    "formulation_selection": "PASS",
+    "first_order_gh_principal_system": "PASS",
+    "gh_characteristic_basis": "PASS",
+    "gh_symmetric_hyperbolicity": "PASS",
+    "gh_reduction_constraint_damping": "PASS",
+    "lapse_shift_gauge": "PASS_GH_METRIC_DERIVED_PERIODIC_HARMONIC_GAUGE",
+    "metric_and_extrinsic_curvature_evolution": "PASS_PERIODIC_GH_VACUUM_TIME_INTEGRATION",
+    "strong_hyperbolicity": "PASS",
+    "complete_nonlinear_gh_rhs": "PASS",
+    "gamma0_gauge_constraint_damping": "PASS",
+    "periodic_gh_time_integration": "PASS",
+    "characteristic_cfl_policy": "PASS",
+    "constraint_propagation": "PASS_PERIODIC_GAUGE_REDUCTION_CURL_CONVERGENCE",
+    "temporal_spatial_convergence": "PASS_RK4_TEMPORAL_AND_SECOND_ORDER_SPATIAL",
+    "constraint_preserving_boundaries": "OPEN",
+    "topic13_stress_energy_projection": "PASS_PRESCRIBED_TOPIC13_HE4_SOURCE",
+    "dimensional_observable_mapping": "OPEN"
+  },
+  "controlling_blocker": "curved_3p1_constraint_preserving_boundaries_and_dimensional_observable_mapping_missing",
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/curved_3p1_adm_constraint_interface_audit.json",
+      "sha256": "ce5ed05764b8d765819af1ff7485b5c2a1d30a0ddcc3e76e20686d7cfd80b3f0"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_adm_constraint_formula_audit.json",
+      "sha256": "72ecf1679800c48caf38b2cb9e1ed309b727436fe45d3226a19fa5aab8514b25"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_geometry_operator_verification.json",
+      "sha256": "c35cb35e1b8fb96bdf77b42f708cf0eff7b437332144e1d032bfd2d08338af70"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_geometry_operator_formula_audit.json",
+      "sha256": "4dcd31c7867dbd85cbf2d827e27bc3138ab1e301c67f937eaea880a789ca9192"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_adm_evolution_operator_verification.json",
+      "sha256": "c0ba6a81c3cf1867499352c95250248c412d87ff69ed33889c77a75870925436"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json",
+      "sha256": "fd2e6fce761796aef39e664c2df3237e585007ebf4a196eae1bec3222d7cf333"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_adm_evolution_formula_audit.json",
+      "sha256": "2f250d4184bb8925d211517b6028aa2b2a39f1eaa9c324f0c04229316e0602b2"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_formulation_selection_gate.json",
+      "sha256": "d7cb57c4cb667a3c0f68d700b0bb7e161664676e86945d2d9210fcd4d9828f82"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_gh_principal_system_verification.json",
+      "sha256": "93c01c20d16b906a3f4653222bfe4f1648d4ab6e6dbaf7596e254f2e0f41d973"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_gh_principal_system_formula_audit.json",
+      "sha256": "81e03e3df175c28419392dd4c0e5da6eadd9226cbd5117cf6e85bd5b5615c500"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_gh_branch_gate.json",
+      "sha256": "330944d6edc433a5f8395fb3d20fda094e6d9f1568f7d41c5877d162e0cc9376"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json",
+      "sha256": "a5e0dfd38c6d5f410ce41ba941eee7dc82c3dcc9744e1f3fdbb6b46b03666c17"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_formula_audit.json",
+      "sha256": "7e5f54ea15d36e331a345f0a04f645557a0671ada35ce12962530e419ce70aa3"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_gate.json",
+      "sha256": "89050d1ffe351ae4eb19e49ebcb8dfbd87ca36a12d7d27631b8a20f9b93543fc"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_gh_time_evolution_verification.json",
+      "sha256": "9615a6f74fe274af74889abf5fc1c0a6bd79364aa5a35fe2d96b3464ade448e6"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_gh_time_evolution_formula_audit.json",
+      "sha256": "0f967b2049fcfe452a155db107d42a5f57bee0cf865aa715d33693ce0dfcc359"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_gh_time_evolution_gate.json",
+      "sha256": "bed3535a5a922b4df50b8169eaa7b673a5185380e9c6c8c7fcb6e48006f08339"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_topic13_matter_wiring_verification.json",
+      "sha256": "5dc24a2f74b0675441e51ffa3e63182b40409e59d242c02c27d1370c235f3166"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_topic13_matter_wiring_formula_audit.json",
+      "sha256": "e46ad0f266231c8d068d53ee79086b101b98f661b78680d37844e22ae09bdadf"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_topic13_matter_wiring_gate.json",
+      "sha256": "6cd4b52a6d4b18d3338563374ebe6d36644b381a74c25bdb589a2a819d71852e"
+    }
+  ],
+  "claim_promotion": false
+}

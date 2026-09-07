@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-calorine-nep1-backend-compatibility-boundary-v1",
   "artifact": "t13_calorine_nep1_backend_compatibility_audit",
-  "generated_at": "2026-08-20",
+  "generated_at": "2026-08-24",
   "status": "PASS_SCOPED_CALORINE_NEP1_BACKEND_COMPATIBILITY_BOUNDARY",
   "major_result": {
     "major_result_id": "T13_CALORINE_NEP1_BACKEND_COMPATIBILITY_BOUNDARY",
@@ -157,7 +157,7 @@
   },
   "source_package": {
     "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/calorine_nep1_backend_compatibility_source_package.json",
-    "sha256": "aeb6bc72160b99e1289d203e109d7430abc5d87a505042fde11d939f7dde3a26"
+    "sha256": "eb9f53ed4871b6d669596e1466a2654bfd6b624e4785fd953f8cc8c6f3ada2ce"
   },
   "acceptance": {
     "accepted_for_full_topic13": false,

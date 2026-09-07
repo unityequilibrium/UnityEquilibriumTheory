@@ -12,6 +12,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[3]
 CONTRACT = ROOT / "docs/core/artifacts/uet_major_result_closure_contract.json"
 T13 = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
+MATRIX = ROOT / "docs/core/artifacts/t13_topic13_closure_matrix.json"
 OUT = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
 
 
@@ -38,6 +39,7 @@ def ref(rel_path: str, summary: dict[str, Any]) -> dict[str, Any]:
 
 def main() -> int:
     t13 = load(T13)
+    matrix = load(MATRIX)
     t13_evidence = [ref(rel(T13), {"status": t13["status"], "controlling_blocker": t13["controlling_blocker"]})]
     for item in t13.get("evidence_artifacts", []):
         if not isinstance(item, dict):
@@ -79,9 +81,23 @@ def main() -> int:
             "evidence_artifacts": t13_evidence,
             "verification_status": t13["status"],
             "open_blockers": t13["major_result"]["what_remains_open"],
+            "resolved_blockers": t13["major_result"].get("resolved_blockers", []),
             "dependency_unlocked": t13["major_result"]["dependency_unlocked"],
             "claim_boundary": t13["claim_boundary"],
             "closure_summary": t13["major_result"].get("closure_summary", {}),
+            "closure_matrix": {
+                "path": rel(MATRIX),
+                "sha256": sha256(MATRIX),
+                "status": matrix.get("status"),
+                "closure_level": matrix.get("major_result", {}).get("closure_level"),
+                "full_core_unlock": matrix.get("full_core_unlock", False),
+                "required_major_result_count": matrix.get("closure_summary", {}).get(
+                    "required_major_result_count"
+                ),
+                "required_subresult_count": matrix.get("closure_summary", {}).get(
+                    "required_subresult_count"
+                ),
+            },
         },
         {
             "major_result_id": "CORE_O2_TREE_LEVEL_EOS_LANE",
@@ -150,7 +166,11 @@ def main() -> int:
     ]
     discovered_entries: list[dict[str, Any]] = []
     discovered_ids: set[str] = set()
-    for artifact_root in (ROOT / "docs/core/artifacts", ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts"):
+    for artifact_root in (
+        ROOT / "docs/core/artifacts",
+        ROOT / "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts",
+        ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts",
+    ):
         for artifact_path in sorted(artifact_root.rglob("*.json")):
             if artifact_path.resolve() == T13.resolve():
                 continue
@@ -186,6 +206,7 @@ def main() -> int:
                 "major_result_id": result_id,
                 "topic": major.get("topic", "0.13_Thermodynamic_Bridge"),
                 "closure_level": major.get("closure_level", "OPEN"),
+                "claim_promotion": bool(candidate.get("claim_promotion", False)),
                 "what_is_closed": major.get("what_is_closed", []),
                 "equation_or_mapping": major.get("equation_or_mapping", {}),
                 "units": major.get("units", {}),
@@ -198,7 +219,93 @@ def main() -> int:
                 "dependency_unlocked": major.get("dependency_unlocked", "none"),
                 "claim_boundary": major.get("claim_boundary", "artifact-reported boundary"),
             })
+
     entries.extend(discovered_entries)
+
+    # Preserve the detailed closure projection when this repo-wide generator
+    # runs after the Topic 13 matrix generator. The matrix is a first-class
+    # result, not a generic discovered artifact, so dropping its input-package
+    # and subresult contract would create metadata drift on the next rebuild.
+    matrix_entry = next(
+        (item for item in entries if item.get("major_result_id") == "T13_TOPIC13_CLOSURE_MATRIX"),
+        None,
+    )
+    if matrix_entry is not None:
+        matrix_major = matrix.get("major_result", {})
+        for field in (
+            "closure_level",
+            "what_is_closed",
+            "equation_or_mapping",
+            "units",
+            "derivation_class",
+            "observable",
+            "data_role",
+            "verification_status",
+            "open_blockers",
+            "dependency_unlocked",
+            "claim_boundary",
+        ):
+            if field in matrix_major:
+                matrix_entry[field] = matrix_major[field]
+        matrix_entry["claim_promotion"] = False
+        matrix_entry["evidence_artifacts"] = [
+            ref(
+                rel(MATRIX),
+                {
+                    "role": "compact Topic 13 closure projection",
+                },
+            ),
+            ref(
+                rel(T13),
+                {
+                    "role": "canonical readiness gate",
+                },
+            ),
+        ]
+        matrix_entry["closure_summary"] = matrix.get("closure_summary", {})
+        full_contract = matrix.get("full_topic_closure_contract", {})
+        matrix_entry["full_topic_closure_contract"] = {
+            "required_major_result_count": full_contract.get("required_major_result_count"),
+            "required_subresult_count": full_contract.get("required_subresult_count"),
+            "current_major_result_counts": full_contract.get("current_major_result_counts", {}),
+            "current_subresult_counts": full_contract.get("current_subresult_counts", {}),
+            "full_topic_ready": full_contract.get("full_topic_ready", False),
+        }
+        matrix_entry["required_major_result_count"] = full_contract.get("required_major_result_count")
+        matrix_entry["required_subresult_count"] = full_contract.get("required_subresult_count")
+        matrix_entry["required_input_package_count"] = full_contract.get("required_input_package_count")
+        matrix_entry["current_major_result_counts"] = matrix_entry["closure_summary"].get(
+            "current_major_result_counts", {}
+        )
+        matrix_entry["current_subresult_counts"] = matrix_entry["closure_summary"].get(
+            "current_subresult_counts", {}
+        )
+        if "closure_input_packages" in full_contract:
+            matrix_entry["closure_input_packages"] = full_contract["closure_input_packages"]
+        if isinstance(matrix.get("input_package_audit"), dict):
+            matrix_entry["input_package_audit"] = matrix["input_package_audit"]
+    topic13_core_entry = next(
+        (
+            item
+            for item in entries
+            if item.get("major_result_id") == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+        ),
+        None,
+    )
+    if topic13_core_entry is not None:
+        topic13_core_entry["closure_matrix"] = {
+            "path": rel(MATRIX),
+            "sha256": sha256(MATRIX),
+            "status": matrix.get("status"),
+            "full_core_unlock": matrix.get("full_core_unlock", False),
+            "required_major_result_count": matrix.get("full_topic_closure_contract", {}).get("required_major_result_count"),
+            "required_subresult_count": matrix.get("full_topic_closure_contract", {}).get("required_subresult_count"),
+        }
+    topic13_core_ready = any(
+        entry.get("major_result_id") == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+        and entry.get("closure_level") == "CLOSED_FOR_CORE"
+        for entry in entries
+    )
     artifact = {
         "schema_version": "uet-major-result-closure-register-v1",
         "artifact": "uet_major_result_closure_register",
@@ -207,7 +314,11 @@ def main() -> int:
         "claim_promotion": False,
         "closure_levels_are_progress_labels_not_readiness_labels": True,
         "entries": entries,
-        "next_major_result": "T13_FULL_THERMODYNAMIC_BRIDGE",
+        "next_major_result": (
+            "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"
+            if topic13_core_ready
+            else "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+        ),
         "claim_boundary": "This register reports closed or partial research results; it never promotes the global UET claim.",
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)

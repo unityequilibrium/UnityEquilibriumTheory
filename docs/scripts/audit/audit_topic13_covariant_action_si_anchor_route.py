@@ -38,10 +38,23 @@ def main() -> int:
     spec = text(SPEC_REL)
     formula = load(FORMULA_REL)
     no_go = load(NO_GO_REL)
+    candidate_route_text = response + "\n" + spec
+    forbidden_physical_match_markers = (
+        "G_N",
+        "G_N_SI",
+        "Newtonian constant of gravitation",
+        "8*pi*G/c^4",
+        "8πG/c^4",
+    )
     checks = {
         "response_contract_is_natural_units": '"unit_lane": "natural"' in response,
         "response_claim_boundary_says_natural_only": '"natural_units_only"' in response,
         "response_defaults_not_measured": "Defaults are deterministic research controls, not measured constants." in response,
+        "response_gravitational_coefficient_default_is_control": "einstein_coupling: float = 1.0" in response,
+        "spec_declares_kappa_dimension_only": "`kappa_E` has mass dimension `-2`;" in spec,
+        "candidate_route_has_no_newton_coupling_match": not any(
+            marker in candidate_route_text for marker in forbidden_physical_match_markers
+        ),
         "spec_action_is_natural_units": "In natural units (`c = hbar = 1`)" in spec,
         "spec_requires_later_si_map": "normalized coefficients require an explicit natural-unit and later SI map" in spec,
         "formula_unit_lane_is_natural": formula.get("unit_lane") == "natural",
@@ -52,7 +65,7 @@ def main() -> int:
     }
     status = "PASS_NATURAL_UNIT_ROUTE_IDENTIFIED_SI_MAPPING_BLOCKED" if all(checks.values()) else "FAIL_COVARIANT_ACTION_SI_ANCHOR_AUDIT"
     report = {
-        "schema_version": "t13-covariant-action-si-anchor-route-audit-v1",
+        "schema_version": "t13-covariant-action-si-anchor-route-audit-v2",
         "artifact": "t13_covariant_action_si_anchor_route_audit",
         "generated_at": date.today().isoformat(),
         "status": status,
@@ -64,6 +77,7 @@ def main() -> int:
                 "the covariant response action route is identified as the only current first-principles candidate source for an energy anchor",
                 "the implemented parent is explicitly natural-unit only",
                 "default response coefficients are research controls and cannot be treated as physical constants",
+                "the action gravitational coupling slot is dimension-declared but has no source-backed SI or Newton-coupling match",
                 "the system-specific natural-unit-to-SI and covariant-Phi-to-normalized-Phi maps are explicit blockers",
                 "the route is separated from the normalized-Phi structural no-go and from material c_v data"
             ],
@@ -71,7 +85,24 @@ def main() -> int:
                 "candidate_action": "S = integral sqrt(-g)[F_epsilon(Phi)(R-2 Lambda)/(2 kappa_E) - epsilon_nc Z_Phi (nabla Phi)^2/2 - epsilon_nc U(Phi)] d^4x + S_m",
                 "natural_unit_policy": "c = hbar = 1; action and coefficients remain in natural units",
                 "required_bridge": "Phi_normalized = Phi_covariant / Phi_scale; e0 and Phi_scale require a declared SI contract",
-                "thermal_bridge": "Delta_Tq = (e0/C_src) * Phi_E only after base Phi-to-Phi_E is derived"
+                "thermal_bridge": "Delta_Tq = (e0/C_src) * Phi_E only after base Phi-to-Phi_E is derived",
+            },
+            "coefficient_provenance": {
+                "kappa_E": {
+                    "natural_unit_dimension": "mass^-2",
+                    "numeric_value": None,
+                    "status": "DIMENSION_DECLARED_ONLY",
+                    "source_locator": SPEC_REL,
+                    "si_or_newton_match": "NOT_DECLARED",
+                },
+                "einstein_coupling_config": {
+                    "default_natural_value": 1.0,
+                    "status": "RESEARCH_CONTROL_NOT_MEASURED_CONSTANT",
+                    "source_locator": RESPONSE_REL,
+                },
+                "energy_reference_J": None,
+                "phi_scale": None,
+                "e0_J_per_m3": None,
             },
             "units": {
                 "covariant_parent": "natural units; phi mass dimension 1",

@@ -1,0 +1,96 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "STRUCTURAL_NO_GO_NOT_MERGED_AS_CORE_EQUATION",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "equation_entries": [
+    {
+      "equation_id": "uet.o2.thermal.continuum_action_umklapp_direct_route_no_go",
+      "version": "1",
+      "classification": "structural_umklapp_direct_route_no_go",
+      "relation_or_code_path": {
+        "current_vertex_conservation": "p1+p2-p3-p4=0",
+        "umklapp_requirement": "p1+p2-p3-p4=G, G!=0, G in reciprocal lattice",
+        "reciprocal_lattice": "G_n=2*pi*n/a for a declared lattice spacing a",
+        "direct_route_no_go": "exact continuum translation invariance plus no reciprocal-lattice structure cannot emit a nonzero G channel"
+      },
+      "ontology": {
+        "C": "unchanged; not crystal momentum or lattice mass",
+        "Phi": "unchanged effective response; not temperature, strain or phonon displacement",
+        "R_gen": "excluded derived history trace",
+        "R_obs": "excluded",
+        "material_lattice": "new sector required if selected; not silently contained in Phi"
+      },
+      "standard_physics_counterpart": "Crystal-momentum conservation modulo a reciprocal-lattice vector",
+      "variables": {
+        "p_i": "continuum quasiparticle momenta",
+        "G": "reciprocal-lattice vector",
+        "a": "lattice spacing"
+      },
+      "mathematical_role": "selection-rule obstruction for direct continuum-action Umklapp",
+      "observable_mapping": "Availability of a nonzero reciprocal-lattice momentum-transfer channel, not conductivity",
+      "unit_lane": "natural_flat_3p1_structural_boundary",
+      "units": {
+        "four_momentum_and_G": "E",
+        "lattice_spacing": "E^-1",
+        "selection_rule": "E"
+      },
+      "parameter_dimensions": {
+        "four_momentum_and_G": "E",
+        "lattice_spacing": "E^-1",
+        "selection_rule": "E"
+      },
+      "derivation_class": "translation_symmetry_and_selection_rule_no_go",
+      "source_or_origin": "Declared UET continuum action/config surfaces and eventwise collision conservation",
+      "assumptions": {
+        "scope": "current flat homogeneous O2/Phi lane only",
+        "translation_invariance": true,
+        "nonzero_reciprocal_vector_absent": true
+      },
+      "symmetry_and_conservation": "Current lane preserves exact continuum four-momentum; Umklapp requires crystal momentum modulo G",
+      "limiting_cases": [
+        "G=0 normal process",
+        "G!=0 Umklapp requirement"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_covariant_matter.py",
+        "docs/core/uet_covariant_response.py",
+        "docs/core/uet_o2_finite_density_eos.py",
+        "docs/scripts/audit/audit_topic13_action_normalized_elastic_scattering.py",
+        "docs/core/uet_o2_invariant_galerkin_collision_operator.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_topic13_continuum_action_umklapp_no_go.py",
+        "docs/core/test/test_topic13_continuum_action_umklapp_no_go.py"
+      ],
+      "observable": "Availability of a nonzero reciprocal-lattice momentum-transfer channel, not conductivity",
+      "data_role": "DERIVED_IMPLEMENTATION_STRUCTURAL_NO_GO",
+      "evidence_class": "INTERNAL_STRUCTURAL_NO_GO",
+      "proof_status": "DIRECT_CURRENT_ACTION_ROUTE_REJECTED",
+      "verification_status": "PASS_SCOPED_CONTINUUM_ACTION_UMKLAPP_DIRECT_ROUTE_NO_GO",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_continuum_action_umklapp_direct_route_no_go.json",
+          "sha256": "167389b86edc90ea3f603f81f09d2e3219d5b513c5c1f3e4c481710d58495f9e"
+        }
+      ],
+      "downstream_dependencies": [
+        "external_material_lattice_sector_interface_design",
+        "periodic_background_bloch_derivation_research_track"
+      ],
+      "dependency_role": "material_interface_design_controller",
+      "physical_dependency_unlock": false,
+      "controlling_blocker": "explicit_material_lattice_interface_or_periodic_background_missing",
+      "failure_mode": [
+        "explicit_material_lattice_sector_or_periodic_background_missing",
+        "uet_to_phonon_energy_and_heat_current_mapping_missing",
+        "source_backed_normal_and_umklapp_collision_kernel_missing",
+        "material_frame_SI_uncertainty_and_TTG_mapping_missing",
+        "independent_alpha_Phi_K_missing"
+      ],
+      "next_hardening_step": "Build the external material-lattice interface first for TTG; keep periodic-background derivation as a separate fundamental track.",
+      "claim_boundary": "No-go only for direct Umklapp generation by the currently declared homogeneous continuum O(2)/Phi action and collision implementation; not a theorem against coupling UET to a material lattice or deriving a future periodic branch."
+    }
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}

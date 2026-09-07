@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_main_theory_wave8_gate",
-  "generated_at": "2026-08-14T08:23:41.737224+00:00",
+  "generated_at": "2026-08-29T04:24:54.221661+00:00",
   "audit_status": "PASS_ACCOUNTING",
   "dimensional_observable_status": "BLOCKED",
   "upstream_gate": "uet_main_theory_wave7_gate.json",
@@ -14,14 +14,19 @@
     "entropy_observable": false,
     "causal_pilot": false,
     "holdout_preserved": true,
-    "no_parameter_fitting": true
+    "no_parameter_fitting": true,
+    "o2_he4_core_ready": true
+  },
+  "track_status": {
+    "o2_he4_core_ready": "CLOSED_FOR_CORE",
+    "legacy_graphite_ttg_external_validation": "BLOCKED"
   },
   "controlling_blockers": [
-    "thermal_numeric_source_package_missing",
-    "alpha_phi_k_independent_calibration_missing",
-    "thermal_prearrival_leakage_gate_failed"
+    "legacy_graphite_ttg_numeric_source_package_missing",
+    "legacy_graphite_alpha_phi_k_independent_calibration_missing",
+    "legacy_graphite_thermal_prearrival_leakage_gate_failed"
   ],
   "holdout_status": "LOCKED_UNCONSUMED",
   "claim_promotion": false,
-  "next_controller": "obtain a permitted calibration package without consuming the locked holdout and independently close alpha_Phi_K after causal repair"
+  "next_controller": "Keep graphite acquisition/calibration on the external track; the Core path proceeds through curved 3+1 time integration and constraint propagation."
 }

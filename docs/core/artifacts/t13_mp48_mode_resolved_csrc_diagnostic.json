@@ -1,0 +1,138 @@
+{
+  "schema_version": "t13-mp48-mode-resolved-csrc-diagnostic-v1",
+  "artifact": "t13_mp48_mode_resolved_csrc_diagnostic",
+  "generated_at": "2026-08-24",
+  "status": "PASS_MP48_MODE_RESOLVED_DERIVED_COMPARISON",
+  "major_result": {
+    "major_result_id": "T13_MP48_MODE_RESOLVED_CSRC_DERIVED_COMPARISON",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "a row-addressable mode-resolved harmonic c_mu(T) array is derived from the local MP48 force constants",
+      "the mode sum is converted to volumetric C_src units using the locked graphite volume anchor",
+      "the aggregate rows reproduce the deposited MP48 harmonic heat-capacity rows within the declared diagnostic tolerance"
+    ],
+    "equation_or_mapping": {
+      "mode_capacity": "c_mu(T) = k_B*x_mu^2*exp(x_mu)/(exp(x_mu)-1)^2",
+      "mode_sum": "C_src^vol(T) = N_A/(N_q V_mol) * sum_(q,mu) c_mu(q,T)",
+      "row_identity": "mesh35x35x14:q_index:mode_index:temperature_K"
+    },
+    "units": {
+      "frequency": "THz",
+      "mode_capacity": "J m^-3 K^-1",
+      "aggregate_capacity": "J m^-3 K^-1",
+      "temperature": "K"
+    },
+    "derivation_class": "derived harmonic lattice-dynamics comparator from source-locked force constants; no UET derivation",
+    "observable": "mode-resolved and aggregate harmonic graphite C_src comparator",
+    "data_role": "DERIVED_COMPARISON",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.npz",
+        "sha256": "fd535acd474382daf8c12bcd8d58b100a7d2fee63ba1c67913ca5556a1e33007"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/mp48_independent_graphite_cv_source_package.json",
+        "sha256": "86f5d5015b5bd0172bc2bfae64271955c56470650bdb6b8459bb1280e5dbc3cf"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_FORCE_CONSTANTS.gz",
+        "sha256": "a410f36fd34e8603aec0dde48c1f8cb47fbf0a237ca911437f744fb7cbf02763"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_phonopy.yaml.gz",
+        "sha256": "00be787d0fbe986304ffdfa51a917b9aa0038deb6d31a563979afe42a7a2b5f8"
+      }
+    ],
+    "verification_status": "PASS_MP48_MODE_RESOLVED_DERIVED_COMPARISON",
+    "open_blockers": [
+      "third_order_PBTE_transport_and_Ding_material_state_equivalence_missing",
+      "source_grade_uncertainty_missing",
+      "base_Phi_to_energy_anchor_and_independent_alpha_Phi_K_missing"
+    ],
+    "dependency_unlocked": "Only a row-level harmonic comparator route; no Ding source, alpha, Full Topic 13, or downstream unlock.",
+    "claim_boundary": "This derived diagnostic is not Ding PBTE C_src acceptance, not a source-grade uncertainty package, not a Phi calibration, and not a TTG prediction."
+  },
+  "source": {
+    "source_id": "materials_project_phonon_database_v1_1_mp48",
+    "force_constants_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_FORCE_CONSTANTS.gz",
+    "force_constants_sha256": "a410f36fd34e8603aec0dde48c1f8cb47fbf0a237ca911437f744fb7cbf02763",
+    "phonopy_metadata_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_phonopy.yaml.gz",
+    "phonopy_metadata_sha256": "00be787d0fbe986304ffdfa51a917b9aa0038deb6d31a563979afe42a7a2b5f8",
+    "source_package_sha256": "86f5d5015b5bd0172bc2bfae64271955c56470650bdb6b8459bb1280e5dbc3cf",
+    "mesh": [
+      35,
+      35,
+      14
+    ],
+    "q_point_count": 17150,
+    "mode_count": 12
+  },
+  "derived_payload": {
+    "path": "docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.npz",
+    "sha256": "fd535acd474382daf8c12bcd8d58b100a7d2fee63ba1c67913ca5556a1e33007",
+    "format": "NumPy compressed archive",
+    "arrays": [
+      "qpoints[n_q,3]",
+      "weights[n_q]",
+      "frequencies_THz[n_q,12]",
+      "c_mu_J_per_m3_K_{100,200,250,300}[n_q,12]"
+    ],
+    "row_identity": "mesh35x35x14:q_index:mode_index:temperature_K",
+    "uncertainty_status": "NOT_SOURCE_GRADE",
+    "material_mapping_status": "OPEN"
+  },
+  "aggregate_rows": [
+    {
+      "temperature_K": 100.0,
+      "C_src_harmonic_J_per_mol_cell_K": 7.330423493354728,
+      "C_src_harmonic_J_per_m3_K": 345141.6181707074,
+      "deposited_C_v_J_per_mol_cell_K": 7.33043875459715,
+      "relative_difference_to_deposited": 2.0819002699153156e-06
+    },
+    {
+      "temperature_K": 200.0,
+      "C_src_harmonic_J_per_mol_cell_K": 20.562655106229816,
+      "C_src_harmonic_J_per_m3_K": 968160.7159100712,
+      "deposited_C_v_J_per_mol_cell_K": 20.562698832644053,
+      "relative_difference_to_deposited": 2.1264919839988332e-06
+    },
+    {
+      "temperature_K": 250.0,
+      "C_src_harmonic_J_per_mol_cell_K": 27.78822462693268,
+      "C_src_harmonic_J_per_m3_K": 1308365.4474431241,
+      "deposited_C_v_J_per_mol_cell_K": 27.78828145778704,
+      "relative_difference_to_deposited": 2.0451374240185334e-06
+    },
+    {
+      "temperature_K": 300.0,
+      "C_src_harmonic_J_per_mol_cell_K": 34.79116782469481,
+      "C_src_harmonic_J_per_m3_K": 1638088.163930687,
+      "deposited_C_v_J_per_mol_cell_K": 34.791236430507276,
+      "relative_difference_to_deposited": 1.9719279768265733e-06
+    }
+  ],
+  "checks": {
+    "source_force_constants_hash_matches_package": true,
+    "source_phonopy_hash_matches_package": true,
+    "mesh_shape_is_declared": true,
+    "mode_count_is_12": true,
+    "weights_are_positive": true,
+    "frequencies_are_finite": true,
+    "no_negative_modes_beyond_roundoff": true,
+    "mode_rows_are_finite": true,
+    "aggregate_rows_are_finite": true,
+    "deposited_comparison_is_within_declared_diagnostic_tolerance": true,
+    "holdout_not_accessed": true,
+    "target_fit_not_performed": true,
+    "alpha_fit_not_performed": true
+  },
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_curve_used": false,
+    "alpha_fit_used": false
+  },
+  "controlling_blocker": "third_order_PBTE_transport_and_Ding_material_state_equivalence_missing",
+  "next_controller": "Use this row-level diagnostic to support an independently accepted same-regime PBTE package only if third-order transport, material state, convergence, permission, and source-grade uncertainty are separately supplied.",
+  "claim_boundary": "Derived harmonic comparison only; it does not promote MP48 to Ding C_src or close Topic 13."
+}

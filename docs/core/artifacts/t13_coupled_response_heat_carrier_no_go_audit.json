@@ -1,0 +1,284 @@
+{
+  "schema_version": "t13-coupled-response-heat-carrier-no-go-v1",
+  "major_result_id": "T13_COUPLED_RESPONSE_HEAT_CARRIER_ROUTE_NO_GO",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "CLOSED_FOR_LANE",
+  "closure_disposition": "CLOSED_AS_NO_GO",
+  "verification_status": "PASS_COUPLED_RESPONSE_HEAT_CARRIER_ROUTE_NO_GO",
+  "what_is_closed": [
+    "For every current state in the declared relativistic mixture, J_E=P and J_H=P-mu*J_charge, so Landau projection gives J_H_perp=-mu*J_charge_perp.",
+    "Adding the neutral response excitation does not create an independent physical heat source: its neutral-count trial direction is independent but neutral count is relaxed by the declared conversion channels.",
+    "The E*p/T^2 basis direction is an independent variational trial mode, not the declared heat observable, and cannot be relabeled as heat current.",
+    "At mu=0 the projected physical heat source vanishes while the charge source remains a separate diagnostic direction."
+  ],
+  "equation_registry_ids": [
+    "uet.o2.thermal.coupled_response_heat_carrier_no_go"
+  ],
+  "registration_status": "CANDIDATE_DIAGNOSTIC_NOT_CENTRAL_ACCEPTANCE",
+  "equation_or_mapping": {
+    "energy_current": "J_E^i=sum_a integral E_a v_a^i delta f_a=P^i",
+    "grand_heat_current": "J_H^i=J_E^i-mu J_charge^i=P^i-mu J_charge^i",
+    "landau_no_go": "P_perp J_H=-mu P_perp J_charge; rank(J_charge,J_H)<=1",
+    "required_escape": "independent heat requires an admissible extra conserved diffusion current or a declared preferred/lattice momentum-relaxing frame"
+  },
+  "ontology": {
+    "C": "unchanged; not quasiparticle number",
+    "Phi": "effective response variable; neutral excitation is lane-specific and not a new substance",
+    "R_gen": "excluded",
+    "R_obs": "excluded"
+  },
+  "unit_lane": "natural_units",
+  "units": {
+    "current_source": "declared vector-source units",
+    "source_rank": "dimensionless"
+  },
+  "derivation_class": "relativistic_current_identity_and_source_rank_no_go",
+  "observable": "Physical grand-heat source rank, not conductivity",
+  "data_role": "DERIVED_SYNTHETIC_STRUCTURAL_NO_GO",
+  "reference_witness": {
+    "state": {
+      "config": {
+        "z": 1.0,
+        "mass_squared": 1.0,
+        "quartic": 0.1,
+        "epsilon": 1.0,
+        "response_kinetic": 1.0,
+        "response_mass_squared": 0.5,
+        "response_coupling": 0.2,
+        "response_quartic": 1.0
+      },
+      "T": 0.25,
+      "mu": 0.2
+    },
+    "grid": {
+      "radial": 8,
+      "angular": 6,
+      "azimuth": 8,
+      "cutoff": 8.0
+    },
+    "basis_order": 1,
+    "vector_basis": [
+      "p/T",
+      "charge*p/E",
+      "neutral*p/E",
+      "E*p/T^2",
+      "charge*p/E*(E/T)^1",
+      "neutral*p/E*(E/T)^1"
+    ],
+    "projected_momentum_source_norm": 1.0842021724855044e-19,
+    "projected_charge_source": [
+      6.947206110818199e-05,
+      -2.8402083506703068e-05,
+      -2.7648756101530687e-05,
+      0.00044049490846835907,
+      -0.00016417525171715257
+    ],
+    "projected_grand_heat_source": [
+      -1.3894412221636396e-05,
+      5.6804167013406286e-06,
+      5.529751220305357e-06,
+      -8.809898169367188e-05,
+      3.2835050343430535e-05
+    ],
+    "projected_neutral_trial_source": [
+      -2.8402083506703068e-05,
+      5.83333691692671e-05,
+      -0.0005658208289736882,
+      -0.000194487241321718,
+      0.0002919667953419182
+    ],
+    "projected_energy_moment_trial_source": [
+      -2.7648756101530687e-05,
+      -0.0005658208289736882,
+      0.029752024907276076,
+      0.0010637561547664452,
+      -0.0016204829567049717
+    ],
+    "heat_charge_identity_relative_residual": 8.212705582146174e-15,
+    "charge_heat_source_rank": 1,
+    "charge_neutral_trial_rank": 2,
+    "charge_energy_moment_trial_rank": 2,
+    "neutral_count_relaxation_relative": 9.672550825800153e-06,
+    "total_count_null_relative": 0.0,
+    "minimum_active_collision_rate": 1.6491769602134219e-09,
+    "collision_solve_relative_residual": 5.6841781237103e-17,
+    "physical_heat_observable": "J_H=J_E-mu*J_charge=P-mu*J_charge",
+    "neutral_trial_admissibility": "REJECTED_AS_HEAT_SOURCE_NEUTRAL_COUNT_NOT_CONSERVED",
+    "energy_moment_trial_admissibility": "REJECTED_AS_OBSERVABLE_RELABELING_E_P_OVER_T2_IS_NOT_J_H"
+  },
+  "zero_mu_witness": {
+    "state": {
+      "config": {
+        "z": 1.0,
+        "mass_squared": 1.0,
+        "quartic": 0.1,
+        "epsilon": 1.0,
+        "response_kinetic": 1.0,
+        "response_mass_squared": 0.5,
+        "response_coupling": 0.2,
+        "response_quartic": 1.0
+      },
+      "T": 0.25,
+      "mu": 0.0
+    },
+    "grid": {
+      "radial": 6,
+      "angular": 4,
+      "azimuth": 4,
+      "cutoff": 6.0
+    },
+    "basis_order": 1,
+    "vector_basis": [
+      "p/T",
+      "charge*p/E",
+      "neutral*p/E",
+      "E*p/T^2",
+      "charge*p/E*(E/T)^1",
+      "neutral*p/E*(E/T)^1"
+    ],
+    "projected_momentum_source_norm": 0.0,
+    "projected_charge_source": [
+      6.846008863312938e-05,
+      0.0,
+      0.0,
+      0.0004431523341637758,
+      0.0
+    ],
+    "projected_grand_heat_source": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "projected_neutral_trial_source": [
+      0.0,
+      5.206569002743036e-05,
+      -0.0005328916191046085,
+      0.0,
+      0.00025573713632586246
+    ],
+    "projected_energy_moment_trial_source": [
+      0.0,
+      -0.0005328916191046085,
+      0.025478425872070054,
+      0.0,
+      -0.0014301391279563681
+    ],
+    "heat_charge_identity_relative_residual": 0.0,
+    "charge_heat_source_rank": 1,
+    "charge_neutral_trial_rank": 2,
+    "charge_energy_moment_trial_rank": 2,
+    "neutral_count_relaxation_relative": 1.0414738411498014e-05,
+    "total_count_null_relative": 0.0,
+    "minimum_active_collision_rate": 1.746138244267818e-09,
+    "collision_solve_relative_residual": 1.0122443701303055e-32,
+    "physical_heat_observable": "J_H=J_E-mu*J_charge=P-mu*J_charge",
+    "neutral_trial_admissibility": "REJECTED_AS_HEAT_SOURCE_NEUTRAL_COUNT_NOT_CONSERVED",
+    "energy_moment_trial_admissibility": "REJECTED_AS_OBSERVABLE_RELABELING_E_P_OVER_T2_IS_NOT_J_H"
+  },
+  "metric_refinement_witness": {
+    "metric_order": 192,
+    "metric_cutoff": 32.0,
+    "charge_source_relative_change": 3.66882766022949e-15
+  },
+  "thresholds": {
+    "rank_relative": 1e-10,
+    "metric_refinement_relative": 0.001
+  },
+  "checks": {
+    "projected_total_momentum_vanishes": true,
+    "grand_heat_charge_identity": true,
+    "charge_heat_rank_one": true,
+    "zero_mu_projected_heat_vanishes": true,
+    "neutral_trial_is_linearly_independent": true,
+    "neutral_count_is_not_conserved": true,
+    "truncation_total_count_is_null": true,
+    "energy_moment_trial_is_not_heat_observable": true,
+    "active_collision_spectrum_positive": true,
+    "collision_solve": true,
+    "metric_refinement": true,
+    "no_new_state_or_observable_relabeling": true,
+    "no_fit_holdout_or_physical_kubo": true
+  },
+  "open_blockers": [
+    "admissible_second_conserved_diffusion_charge_or_lattice_frame",
+    "momentum_relaxing_Umklapp_boundary_or_open_bath_contract",
+    "self_consistent_dressed_width_and_continuum_limit",
+    "physical_Kubo_and_SI_frame_normalization",
+    "material_heat_observable_and_uncertainty_mapping"
+  ],
+  "controlling_blocker": "admissible_preferred_frame_or_independent_conserved_diffusion_charge_missing",
+  "source_hashes": {
+    "docs/scripts/audit/audit_topic13_coupled_response_heat_carrier_no_go.py": "45f13d966de646bcc5b2e23c549f4bad5bd280d615bb85917724ff3bafd4b328",
+    "docs/core/test/test_topic13_coupled_response_heat_carrier_no_go.py": "76f82100ca77db7c1ac654b09470f9b7244d9ecb94d366496ff02c070231877c",
+    "docs/scripts/audit/audit_topic13_coupled_gain_loss_operator.py": "ecc057e1d343c8c6c295a21eefb9e4bccc24cc11c668f88dd4083f3072b2a81d",
+    "docs/core/uet_o2_finite_temperature_normal_component.py": "0a4010c0e390b7e910473698c4e5cc7dc6738df626e0de9c364b4258167a9335",
+    "docs/core/uet_o2_finite_temperature_two_fluid_response.py": "a68531bc34596aa115797e2353e1871913d4e9a158aeeb7f1ea5125c86aa236b"
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_coupled_gain_loss_operator_audit.json",
+      "sha256": "b3a9ebf6b2ac7a155c3a2b8bd12dd60fa71684924e40220d04cbcfa60becfaab"
+    },
+    {
+      "path": "docs/core/artifacts/t13_dressed_ra_charge_current_ladder_audit.json",
+      "sha256": "e32e634e1ce16d35b67cbdef2f269f674277295f47c251b798caed33713d32f0"
+    }
+  ],
+  "dependency_unlocked": [
+    "lattice_or_momentum_relaxing_heat_branch_design",
+    "second_conserved_charge_diffusion_branch_design"
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "xie_2026_accessed": false,
+  "parameter_fitting_performed": false,
+  "claim_boundary": "Structural no-go for the current relativistic coupled response-mode route only; not a theorem against heat transport in a lattice, open bath, multicharge theory, or external material, and not Full Topic 13 closure.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE/CLOSED_AS_NO_GO",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "For every current state in the declared relativistic mixture, J_E=P and J_H=P-mu*J_charge, so Landau projection gives J_H_perp=-mu*J_charge_perp.",
+      "Adding the neutral response excitation does not create an independent physical heat source: its neutral-count trial direction is independent but neutral count is relaxed by the declared conversion channels.",
+      "The E*p/T^2 basis direction is an independent variational trial mode, not the declared heat observable, and cannot be relabeled as heat current.",
+      "At mu=0 the projected physical heat source vanishes while the charge source remains a separate diagnostic direction."
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "admissible_second_conserved_diffusion_charge_or_lattice_frame",
+      "momentum_relaxing_Umklapp_boundary_or_open_bath_contract",
+      "self_consistent_dressed_width_and_continuum_limit",
+      "physical_Kubo_and_SI_frame_normalization",
+      "material_heat_observable_and_uncertainty_mapping"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "lattice_or_momentum_relaxing_heat_branch_design",
+      "second_conserved_charge_diffusion_branch_design"
+    ],
+    "STATUS": "PASS_COUPLED_RESPONSE_HEAT_CARRIER_ROUTE_NO_GO",
+    "WHAT_CHANGED": "Tested and rejected the existing neutral response excitation as an independent physical heat carrier under the current relativistic observable and conservation contract.",
+    "EQUATION_OR_MAPPING": {
+      "energy_current": "J_E^i=sum_a integral E_a v_a^i delta f_a=P^i",
+      "grand_heat_current": "J_H^i=J_E^i-mu J_charge^i=P^i-mu J_charge^i",
+      "landau_no_go": "P_perp J_H=-mu P_perp J_charge; rank(J_charge,J_H)<=1",
+      "required_escape": "independent heat requires an admissible extra conserved diffusion current or a declared preferred/lattice momentum-relaxing frame"
+    },
+    "VERIFICATION": {
+      "projected_total_momentum_vanishes": true,
+      "grand_heat_charge_identity": true,
+      "charge_heat_rank_one": true,
+      "zero_mu_projected_heat_vanishes": true,
+      "neutral_trial_is_linearly_independent": true,
+      "neutral_count_is_not_conserved": true,
+      "truncation_total_count_is_null": true,
+      "energy_moment_trial_is_not_heat_observable": true,
+      "active_collision_spectrum_positive": true,
+      "collision_solve": true,
+      "metric_refinement": true,
+      "no_new_state_or_observable_relabeling": true,
+      "no_fit_holdout_or_physical_kubo": true
+    },
+    "CONTROLLING_BLOCKER": "admissible_preferred_frame_or_independent_conserved_diffusion_charge_missing",
+    "NEXT_ACTION": "Choose and derive either a lattice/momentum-relaxing frame or an independently conserved diffusion charge from an explicit action before reopening heat conductivity.",
+    "CLAIM_BOUNDARY": "Structural no-go for the current relativistic coupled response-mode route only; not a theorem against heat transport in a lattice, open bath, multicharge theory, or external material, and not Full Topic 13 closure."
+  }
+}

@@ -64,7 +64,7 @@ These topics determine the current scientific credibility of the repo.
 | [0.10](./0.10_Fluid_Dynamics_Chaos/) | `Structured` | `B` | structured package exists and latest run passed, but repeated-run speed-threshold stability is not yet demonstrated |
 | [0.11](./0.11_Phase_Transitions/) | `Structured` | `B` | Wave 55 replicate/temporal acquisition remains controlling; core Wave 9 adds only conditional charge-coordinate compatibility, with Topic C identity, EOS, transport, estimator acceptance, and exponent rerun blocked |
 | [0.12](./0.12_Vacuum_Energy_Casimir/) | `Draft` | `B` | topic has research assets, yet audit-grade verification remains absent |
-| [0.13](./0.13_Thermodynamic_Bridge/) | `Draft` | `B` | foundation remains WARN; only class-C lower-bound/standard-identity constraints export, while source rows, UET bridge, EOS/transport/entropy closure, and external heat-transport validation remain blocked |
+| [0.13](./0.13_Thermodynamic_Bridge/) | `Draft` | `B` | bounded O(2)/He-4 thermal bridge is `CLOSED_FOR_CORE` with 13/13 acceptance; graphite external validation, complete two-fluid transport, curved 3+1, Gravity, and global UET closure remain open |
 | [0.14](./0.14_Complex_Systems/) | `Draft` | `B` | substantial local material exists, but standards migration has not happened |
 | [0.15](./0.15_Cluster_Dynamics/) | `Draft` | `B` | real-source references are visible, but verification specs are missing |
 | [0.16](./0.16_Heavy_Nuclei/) | `Draft` | `B` | technically active topic, not yet packaged for auditability |

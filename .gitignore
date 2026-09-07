@@ -24,6 +24,7 @@ research_uet/zip/
 /research_uet/data_vault/
 *.zip
 *.npy
+*.npz
 *.fits
 
 # IDE
@@ -150,22 +151,180 @@ thailand_proposals/**/*.webp
 # Explicit raw and draft guardrails: these inputs remain local-only.
 /uet_history/1_raw/
 /uet_history/**/1_raw/
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# Large data files (not for GitHub)
+runs_*/
+*.h5
+*.hdf5
+*.fit
+*.fit.gz
+*.csv
+!docs/topics/**/*.csv
+!docs/core/**/*.csv
+timeseries*.csv
+research_uet/zip/
+/research_uet/lab/outputs/
+/research_uet/data_vault/
+*.zip
+*.npy
+*.npz
+*.fits
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+*.out
+
+# Local configs
+.env
+*.local
+
+# Rust build artifacts
+target/
+uet_core/target/
+
+# Compiled binaries (distribute via GitHub Releases)
+uet_miner/uet_miner.exe
+uet_miner/uet_miner_linux
+
+# API keys / local config (NEVER commit these)
+research_uet/knowledge_base/config.toml
+research_uet/knowledge_base/cost_log.jsonl
+
+# ML model cache
+uet_api/.fastembed_cache/
+
+# Node
+node_modules/
+.next/
+.obsidian/
+/uet_history/
+/uet_knowledge_state.json
+docs/knowledge_base/personal_index.sqlite3
+docs/knowledge_base/personal_index.sqlite3-*
+docs/knowledge_base/vectors/vectors.db
+docs/knowledge_base/vectors/vectors.db-*
+# Local Cache and States
+uet_knowledge_state.json
+uet_miner/target/
+uet_miner/*.exe
+uet_miner/*_linux
+uet_web/.next/
+uet_web/node_modules/
+uet_web/.env
+
+# Archived non-research platform/prototype material, if temporarily restored locally.
+_archive_non_research/
+
+# Local service experiment artifacts
+services_and_experiments/**/.env
+services_and_experiments/**/target/
+services_and_experiments/**/target_*/
+services_and_experiments/**/debug/
+services_and_experiments/**/.rustc_info.json
+services_and_experiments/**/CACHEDIR.TAG
+services_and_experiments/**/*.exe
+services_and_experiments/**/*_linux
+
+
+# Local recovery scratch files
+/output.txt
+/transcript.th.vtt
+
+# Thailand proposal raw assets are tracked through LOCAL_RECOVERY_MANIFEST.md first.
+thailand_proposals/**/*.pdf
+thailand_proposals/**/*.png
+thailand_proposals/**/*.jpg
+thailand_proposals/**/*.jpeg
+thailand_proposals/**/*.m4a
+thailand_proposals/**/*.mp3
+thailand_proposals/**/*.wav
+thailand_proposals/**/*.webp
+# Curated public history exceptions. Raw and draft history remains ignored.
+!/uet_history/3_publish/
+!/uet_history/3_publish/books/
+!/uet_history/3_publish/books/README.md
+!/uet_history/3_publish/books/BOOK_REGISTRY.json
+!/uet_history/3_publish/books/00_uet_core_theory/
+/uet_history/3_publish/books/00_uet_core_theory/*
+!/uet_history/3_publish/books/00_uet_core_theory/README.md
+
+
+# Re-open only curated history files while keeping the rest of uet_history local-only.
+!/uet_history/
+/uet_history/*
+!/uet_history/README.md
+!/uet_history/BOOK_WORKFLOW.md
+!/uet_history/PUBLIC_MANIFEST.md
+!/uet_history/3_publish/
+/uet_history/3_publish/*
+!/uet_history/3_publish/books/
+/uet_history/3_publish/books/*
+!/uet_history/3_publish/books/README.md
+!/uet_history/3_publish/books/BOOK_REGISTRY.json
+!/uet_history/3_publish/books/โครงสร้างหนังสือ.md
+!/uet_history/3_publish/books/00_uet_core_theory/
+/uet_history/3_publish/books/00_uet_core_theory/*
+!/uet_history/3_publish/books/00_uet_core_theory/README.md
+
+
+
+# Explicit raw and draft guardrails: these inputs remain local-only.
+/uet_history/1_raw/
+/uet_history/**/1_raw/
 /uet_history/**/ch_drafts/
 /uet_history/**/raw/
 /uet_history/**/Raw/
 # Local-only path drift and generated outputs.
 /docs/topics/For_Work/
 docs/topics/**/Result/_Logs/
-/thailand_proposals/**/raw/
-/thailand_proposals/**/Raw/
-/.playwright-cli/
-
 # Section 3 parent and book-control metadata. Raw, digest, and draft material remains local-only.
 !/uet_history/3_publish/books/SECTION_REGISTRY.json
 !/uet_history/3_publish/books/history_media_power/
 /uet_history/3_publish/books/history_media_power/*
 !/uet_history/3_publish/books/history_media_power/SECTION_MANIFEST.json
 !/uet_history/3_publish/books/history_media_power/SECTION_BLUEPRINT.md
+!/uet_history/3_publish/books/history_media_power/SECTION_RESEARCH_DESIGN.md
+!/uet_history/3_publish/books/history_media_power/SECTION_LITERATURE_REVIEW.md
+!/uet_history/3_publish/books/history_media_power/SECTION_CLAIM_MAP.md
+!/uet_history/3_publish/books/history_media_power/READERS_CONCEPTUAL_TOOLKIT.md
+!/uet_history/3_publish/books/history_media_power/SCIENTIFIC_DATA_REGISTER.md
+!/uet_history/3_publish/books/history_media_power/LITERATURE_DIFFERENTIATION.md
+!/uet_history/3_publish/books/history_media_power/THEORY_AND_CITATION_REGISTER.md
+!/uet_history/3_publish/books/history_media_power/PARALLEL_TIMELINE.md
 !/uet_history/3_publish/books/history_media_power/VOLUME_MATRIX.md
 !/uet_history/3_publish/books/history_media_power/DEPENDENCY_MAP.md
 !/uet_history/3_publish/books/history_media_power/SHARED_TERMS.md
@@ -184,7 +343,8 @@ docs/topics/**/Result/_Logs/
 /uet_history/3_publish/books/history_media_power/03_philosophy_governance/*
 !/uet_history/3_publish/books/history_media_power/03_philosophy_governance/README.md
 !/uet_history/3_publish/books/history_media_power/03_philosophy_governance/book_blueprint.md
-!/uet_history/3_publish/books/history_media_power/03_philosophy_governance/BOOK_MANIFEST.json
+/thailand_proposals/**/raw/
+/thailand_proposals/**/Raw/
 # Section parent packages for the Bio/Psychology and Economics/AI/Energy trilogies.
 !/uet_history/3_publish/books/biology_psychology_economics/
 /uet_history/3_publish/books/biology_psychology_economics/*
@@ -199,16 +359,19 @@ docs/topics/**/Result/_Logs/
 !/uet_history/3_publish/books/biology_psychology_economics/01_biology/README.md
 !/uet_history/3_publish/books/biology_psychology_economics/01_biology/book_blueprint.md
 !/uet_history/3_publish/books/biology_psychology_economics/01_biology/BOOK_MANIFEST.json
+!/uet_history/3_publish/books/biology_psychology_economics/01_biology/UPDATE_LOG.md
 !/uet_history/3_publish/books/biology_psychology_economics/02_biology_psychology/
 /uet_history/3_publish/books/biology_psychology_economics/02_biology_psychology/*
 !/uet_history/3_publish/books/biology_psychology_economics/02_biology_psychology/README.md
 !/uet_history/3_publish/books/biology_psychology_economics/02_biology_psychology/book_blueprint.md
 !/uet_history/3_publish/books/biology_psychology_economics/02_biology_psychology/BOOK_MANIFEST.json
+!/uet_history/3_publish/books/biology_psychology_economics/02_biology_psychology/UPDATE_LOG.md
 !/uet_history/3_publish/books/biology_psychology_economics/03_psychology_economics/
 /uet_history/3_publish/books/biology_psychology_economics/03_psychology_economics/*
 !/uet_history/3_publish/books/biology_psychology_economics/03_psychology_economics/README.md
 !/uet_history/3_publish/books/biology_psychology_economics/03_psychology_economics/book_blueprint.md
 !/uet_history/3_publish/books/biology_psychology_economics/03_psychology_economics/BOOK_MANIFEST.json
+!/uet_history/3_publish/books/biology_psychology_economics/03_psychology_economics/UPDATE_LOG.md
 !/uet_history/3_publish/books/economics_ai_energy/
 /uet_history/3_publish/books/economics_ai_energy/*
 !/uet_history/3_publish/books/economics_ai_energy/SECTION_MANIFEST.json
@@ -246,3 +409,4 @@ docs/topics/**/Result/_Logs/
 /docs/topics/**/raw/
 /tmp/
 **/output.txt
+.playwright-cli/

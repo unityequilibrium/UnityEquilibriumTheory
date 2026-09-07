@@ -239,9 +239,17 @@ def main() -> int:
         "controlling_blocker": "ladder_vertex_resummation_missing" if not failed else "quantum_kinetic_lane_verification_failed",
         "next_controller": "derive or match the ladder/retarded response and continuum limit without relabeling this finite-grid quantum kinetic comparator as physical Kubo",
         "claim_promotion": False,
+        "full_core_unlock": False,
+        "action_matching_boundary": "Canonical comparator only; full action tensor/channel normalization remains open.",
+        "source_hashes": {
+            path: sha256(ROOT / path) for path in (
+                "docs/core/uet_o2_kinetic_collision_kubo.py",
+                "docs/scripts/audit/audit_topic13_uet_o2_quantum_kinetic_collision_kubo.py",
+            )
+        },
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
+    OUT.write_text(json.dumps(artifact, indent=2, ensure_ascii=True, allow_nan=False) + "\n", encoding="utf-8")
     print(json.dumps({
         "status": status,
         "artifact": OUT.relative_to(ROOT).as_posix(),

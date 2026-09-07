@@ -19,6 +19,7 @@ from docs.core.uet_covariant_theory_spine import (
 )
 
 ARTIFACTS = ROOT / "docs/core/artifacts"
+CURVED_PARENT_GATE = ARTIFACTS / "core_curved_3p1_parent_gate.json"
 
 
 def _config(damping: bool = True) -> TheorySpineConfig:
@@ -55,6 +56,8 @@ def _temporal_error(dt: float, final_time: float = 0.1) -> float:
 
 def build_artifacts() -> tuple[dict, dict, dict, dict]:
     now = datetime.now(timezone.utc).isoformat()
+    curved_parent = json.loads(CURVED_PARENT_GATE.read_text(encoding="utf-8"))
+    curved_requirements = curved_parent.get("requirements", {})
     config = _config()
     characteristic = characteristic_analysis(config)
     _, dx, state = _wave_state(128, config)
@@ -100,7 +103,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
             {"formula_id": "UET-SPINE-FIRST-ORDER-001", "relation": "d_t phi=pi; d_t pi=c^2 d_x psi-gamma pi+J; d_t psi=d_x pi", "derivation_class": "first-order reduction of damped wave control", "unit_lane": "natural", "proof_status": "linear characteristic and convergence gates pass", "code_path": "docs/core/uet_covariant_theory_spine.py"},
             {"formula_id": "UET-SPINE-CONSTRAINT-002", "relation": "C_psi=psi-d_x phi", "derivation_class": "first-order auxiliary constraint", "unit_lane": "natural", "proof_status": "periodic one-step preservation gate", "code_path": "docs/core/uet_covariant_theory_spine.py"},
         ],
-        "open_items": ["3+1 tensor variables", "dynamical lapse/shift/spatial metric", "Hamiltonian and momentum constraints", "constraint damping", "curved boundary conditions", "parent-action coefficient matching"],
+        "open_items": ["gauge-declared lapse/shift evolution", "dynamical spatial metric and extrinsic curvature", "strong-hyperbolicity proof for the curved evolution system", "constraint propagation/damping", "temporal convergence", "non-periodic curved boundary conditions", "parent-action coefficient matching"],
         "claim_ceiling": "Minkowski 1+1 strongly-hyperbolic numerical control",
     }
     gate = {
@@ -108,9 +111,20 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
         "generated_at": now, "audit_status": "PASS" if passed else "FAIL",
         "theory_spine_status": "PASS_MINKOWSKI_1P1_CONTROL_CURVED_BLOCKED" if passed else "BLOCKED",
         "upstream_gate": "uet_main_theory_wave4_gate.json", "checks": checks,
-        "controlling_blocker": "curved_3p1_dynamical_metric_and_gr_constraints_not_implemented" if passed else "linear_hyperbolic_control_failure",
+        "controlling_blocker": curved_parent.get("controlling_blocker") if passed else "linear_hyperbolic_control_failure",
         "claim_promotion": False,
-        "parallel_next_controller": "implement the operational quantum measurement spine while curved 3+1 remains an explicit independent blocker",
+        "curved_3p1_companion_progress": {
+            "parent_gate": "core_curved_3p1_parent_gate.json",
+            "parent_status": curved_parent.get("status"),
+            "parent_closure_level": curved_parent.get("major_result", {}).get("closure_level"),
+            "adm_constraint_interface": curved_requirements.get("adm_constraint_interface"),
+            "metric_to_ricci_operator": curved_requirements.get("metric_to_ricci_operator"),
+            "spatial_geometry_convergence": curved_requirements.get("spatial_geometry_convergence"),
+            "metric_and_extrinsic_curvature_evolution": curved_requirements.get("metric_and_extrinsic_curvature_evolution"),
+            "constraint_propagation": curved_requirements.get("constraint_propagation"),
+            "claim_boundary": curved_parent.get("major_result", {}).get("claim_boundary"),
+        },
+        "parallel_next_controller": "implement a gauge-declared curved metric/K evolution branch while preserving the fixed-Minkowski spine as a baseline",
     }
     addendum = {
         "schema_version": "1.0", "artifact": "uet_equation_correspondence_registry_theory_spine_addendum",

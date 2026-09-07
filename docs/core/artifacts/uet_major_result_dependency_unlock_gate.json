@@ -1,26 +1,36 @@
 {
   "schema_version": "uet-major-result-dependency-unlock-v1",
   "artifact": "uet_major_result_dependency_unlock_gate",
-  "generated_at": "2026-08-20",
+  "generated_at": "2026-08-30",
   "status": "BLOCKED_DOWNSTREAM_MAJOR_RESULTS",
   "claim_promotion": false,
   "register": {
     "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "ace527f744720fd85ae0ac309dabb71a6a79d053481ef7d86d9e514f14dfa3f3"
+    "sha256": "8368165bccd2c769d28e8ef17be088078c185d01f484ef052661ff3e3815714f"
   },
   "decisions": {
-    "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY": {
-      "status": "BLOCKED_DEPENDENCY",
+    "TOPIC_0_11_CHAOS_DIAGNOSTIC_ROLLOUT": {
+      "status": "UNLOCKED",
       "depends_on": [
-        "T13_FULL_THERMODYNAMIC_BRIDGE"
+        "T13_THERMAL_DYNAMICAL_REGIME_CLASSIFIED"
       ],
-      "unmet_dependencies": [
-        {
-          "result": "T13_FULL_THERMODYNAMIC_BRIDGE",
-          "current_level": "PARTIAL",
-          "required_level": "CLOSED_FOR_CORE"
-        }
+      "unmet_dependencies": [],
+      "claim_boundary": "diagnostic method rollout only; no universality or exponent promotion"
+    },
+    "CORE_O2_CHAOS_DIAGNOSTIC_ROLLOUT": {
+      "status": "UNLOCKED",
+      "depends_on": [
+        "T13_THERMAL_DYNAMICAL_REGIME_CLASSIFIED"
       ],
+      "unmet_dependencies": [],
+      "claim_boundary": "diagnostic method rollout only; C is not relabelled as a signed O(2) charge"
+    },
+    "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY": {
+      "status": "UNLOCKED",
+      "depends_on": [
+        "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+      ],
+      "unmet_dependencies": [],
       "claim_boundary": "curved 3+1 parent and constraint package only"
     },
     "GR_CLASSICAL_COMPATIBILITY_LANE": {
@@ -31,7 +41,7 @@
       "unmet_dependencies": [
         {
           "result": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
-          "current_level": "OPEN",
+          "current_level": "PARTIAL",
           "required_level": "CLOSED_FOR_CORE"
         }
       ],
@@ -66,24 +76,473 @@
       "claim_boundary": "galaxy comparison track; not dark-matter elimination"
     }
   },
+  "diagnostic_unlock_order": [
+    "CORE_DYNAMICAL_STABILITY_DIAGNOSTIC_READY",
+    "T010_CHAOS_METHOD_VALIDATED",
+    "T13_THERMAL_DYNAMICAL_REGIME_CLASSIFIED"
+  ],
   "unlock_order": [
-    "T13_FULL_THERMODYNAMIC_BRIDGE",
+    "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
     "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
     "GR_CLASSICAL_COMPATIBILITY_LANE",
     "CONSTITUTIVE_TRANSPORT_CORE_LANE",
     "GALAXY_COMPATIBILITY_TRACK"
   ],
   "claim_boundary": "Dependency decisions only; no downstream result is promoted by a checkpoint or comparator pass.",
+  "curved_3p1_progress": {
+    "parent": {
+      "major_result_id": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
+      "topic": "core",
+      "closure_level": "PARTIAL",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "ADM constraint evaluation interface",
+        "periodic-grid metric-to-Ricci operator",
+        "periodic-grid covariant momentum-tensor divergence",
+        "second-order spatial geometry convergence",
+        "nonlinear periodic ADM metric/K right-hand-side operator",
+        "second-order lapse-Hessian and shift-Lie convergence controls",
+        "fixed-gauge ADM strong-hyperbolicity branch closed as no-go",
+        "first-order generalized-harmonic next branch selected",
+        "first-order GH principal equation and algebraic gauge-source contract",
+        "complete GH characteristic basis with source-matched speeds",
+        "positive GH symmetrizer and principal-system symmetric hyperbolicity",
+        "reduction-constraint damping identity and spatial convergence",
+        "complete nonlinear vacuum GH Eqs. 35-40 right-hand-side operator",
+        "metric-derived lapse, shift, normal, Christoffel, and gauge constraint",
+        "gamma0 algebraic gauge-constraint damping term",
+        "independent constant-grid and variable-grid explicit-index controls",
+        "classical RK4 integration of the nonlinear vacuum GH system",
+        "fixed characteristic CFL policy on the periodic branch",
+        "exact Minkowski and harmonic gauge-wave evolution controls",
+        "second-order spatial and fourth-order temporal convergence",
+        "periodic gauge, reduction, and curl constraint propagation",
+        "gamma2 reduction-constraint damping over time",
+        "Topic 13 He-4/O(2) prescribed relativistic stress-energy tensor",
+        "Eulerian energy, momentum, and spatial-stress projections",
+        "trace-reversed GH prescribed matter source",
+        "natural-to-SI multiplicative stress-energy scaling control"
+      ],
+      "equation_or_mapping": {
+        "hamiltonian": "R3 + K^2 - K_ij K^ij - 16*pi*G*rho = 0",
+        "momentum": "D_j(K^j_i - delta^j_i*K) - 8*pi*G*S_i = 0",
+        "fluid_stress_energy": "T_ab=(epsilon+p)u_a*u_b+p*psi_ab+u_a*q_b+u_b*q_a+pi_ab",
+        "adm_energy": "rho=n^a*n^b*T_ab",
+        "adm_momentum": "S_a=-gamma_a^c*n^d*T_cd",
+        "adm_stress": "S_ab=gamma_a^c*gamma_b^d*T_cd",
+        "gh_matter_source": "d_t Pi_ab|matter=-2*alpha*kappa_E*(T_ab-psi_ab*T/2)"
+      },
+      "units": "geometric constraint lane; SI observable mapping open",
+      "derivation_class": "incremental curved 3+1 parent construction",
+      "observable": "constraint residual diagnostics only",
+      "data_role": "internal analytic controls",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/core_curved_3p1_parent_gate.json",
+          "sha256": "4a05d892ee784a9ce92f8fe703720cfd3cea29f2a9ed8bbd00db558bdae356ef",
+          "summary": {
+            "status": "PARTIAL_CURVED_3P1_GH_PERIODIC_PRESCRIBED_MATTER_READY",
+            "major_result_id": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
+            "closure_level": "PARTIAL"
+          }
+        }
+      ],
+      "verification_status": "PARTIAL_CURVED_3P1_GH_PERIODIC_PRESCRIBED_MATTER_READY",
+      "open_blockers": [
+        "constraint_preserving_boundaries",
+        "dimensional_observable_mapping"
+      ],
+      "dependency_unlocked": "constraint-preserving boundary and dimensional-observable waves only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
+      "claim_boundary": "partial parent construction; not CLOSED_FOR_CORE and not Gravity/GR compatibility"
+    },
+    "adm_constraint_interface": {
+      "major_result_id": "CORE_CURVED_3P1_ADM_CONSTRAINT_INTERFACE_READY",
+      "topic": "core",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "standard ADM Hamiltonian residual from declared 3+1 inputs",
+        "standard ADM momentum residual from declared covariant divergence",
+        "Minkowski and flat-FLRW analytic controls",
+        "invalid-metric and matter-density negative controls",
+        "geometric-unit and ontology boundary"
+      ],
+      "equation_or_mapping": {
+        "hamiltonian": "R3 + K^2 - K_ij K^ij - 16*pi*G*rho = 0",
+        "momentum": "D_j(K^j_i - delta^j_i*K) - 8*pi*G*S_i = 0"
+      },
+      "units": {
+        "K_ij": "L^-1",
+        "R3": "L^-2",
+        "G_rho": "L^-2",
+        "G_S_i": "L^-2",
+        "constraint_residuals": "L^-2"
+      },
+      "derivation_class": "standard-physics ADM constraint transcription and internal algebraic verification",
+      "observable": "Hamiltonian and momentum constraint residuals; no detector observable",
+      "data_role": "analytic controls and metadata-only primary-source record",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/curved_3p1_adm_constraint_interface_audit.json",
+          "sha256": "ce5ed05764b8d765819af1ff7485b5c2a1d30a0ddcc3e76e20686d7cfd80b3f0",
+          "summary": {
+            "status": "PASS_CURVED_3P1_ADM_CONSTRAINT_INTERFACE",
+            "major_result_id": "CORE_CURVED_3P1_ADM_CONSTRAINT_INTERFACE_READY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_CURVED_3P1_ADM_CONSTRAINT_INTERFACE",
+      "open_blockers": [
+        "metric-to-Ricci differential operator",
+        "lapse and shift gauge evolution",
+        "spatial-metric and extrinsic-curvature evolution",
+        "constraint propagation or damping",
+        "well-posedness and convergence",
+        "Topic 13 stress-energy projection wiring",
+        "physical observable validation"
+      ],
+      "dependency_unlocked": "curved 3+1 differential-geometry and evolution wave only; Gravity remains blocked",
+      "claim_boundary": "curved 3+1 ADM constraint evaluation interface only; not a metric evolution solver, Einstein-equation derivation, or GR validation"
+    },
+    "geometry_operator": {
+      "major_result_id": "CORE_CURVED_3P1_GEOMETRY_OPERATOR_READY",
+      "topic": "core",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "periodic-grid metric-to-Levi-Civita connection",
+        "periodic-grid metric-to-spatial-Ricci tensor and scalar",
+        "periodic-grid covariant ADM momentum-tensor divergence",
+        "second-order spatial convergence on independent analytic controls",
+        "adapter into the existing ADM constraint evaluator"
+      ],
+      "equation_or_mapping": {
+        "christoffel": "Gamma^k_ij = 1/2 gamma^kl (d_i gamma_lj + d_j gamma_li - d_l gamma_ij)",
+        "ricci_tensor": "R_ij = d_k Gamma^k_ij - d_j Gamma^k_ik + Gamma^k_ij Gamma^l_kl - Gamma^l_ik Gamma^k_jl",
+        "ricci_scalar": "R3 = gamma^ij R_ij",
+        "momentum_divergence": "D_j B^j_i = d_j B^j_i + Gamma^j_jm B^m_i - Gamma^m_ji B^j_m",
+        "momentum_tensor": "B^j_i = K^j_i - delta^j_i K"
+      },
+      "units": {
+        "coordinates_and_spacing": "L",
+        "gamma_ij": "dimensionless in the declared geometric chart lane",
+        "Gamma^k_ij": "L^-1",
+        "R_ij_and_R3": "L^-2",
+        "K_ij": "L^-1",
+        "D_j_B^j_i": "L^-2"
+      },
+      "derivation_class": "standard differential geometry with second-order numerical approximation",
+      "observable": "spatial curvature and constraint-input diagnostics; no detector observable",
+      "data_role": "analytic manufactured controls; no fitted or holdout data",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/curved_3p1_geometry_operator_verification.json",
+          "sha256": "c35cb35e1b8fb96bdf77b42f708cf0eff7b437332144e1d032bfd2d08338af70",
+          "summary": {
+            "status": "PASS_CURVED_3P1_GEOMETRY_OPERATOR",
+            "major_result_id": "CORE_CURVED_3P1_GEOMETRY_OPERATOR_READY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_CURVED_3P1_GEOMETRY_OPERATOR",
+      "open_blockers": [
+        "non-periodic boundary conditions or multiple charts",
+        "lapse and shift gauge evolution",
+        "spatial-metric and extrinsic-curvature evolution",
+        "strong-hyperbolicity proof",
+        "constraint propagation or damping",
+        "temporal convergence",
+        "Topic 13 stress-energy projection wiring",
+        "SI detector-observable mapping"
+      ],
+      "dependency_unlocked": "lapse/shift and metric/K evolution research wave only; Gravity remains blocked",
+      "claim_boundary": "periodic-grid spatial differential-geometry operator with internal analytic controls only; not a spacetime evolution solver or GR validation"
+    },
+    "adm_evolution_rhs": {
+      "major_result_id": "CORE_CURVED_3P1_ADM_EVOLUTION_RHS_READY",
+      "topic": "core",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "nonlinear periodic ADM metric right-hand side",
+        "nonlinear periodic ADM extrinsic-curvature right-hand side",
+        "declared lapse-Hessian and shift-Lie derivative terms",
+        "Minkowski and dust-FLRW analytic controls",
+        "second-order lapse/shift derivative convergence controls"
+      ],
+      "equation_or_mapping": {
+        "metric_evolution": "d_t gamma_ij = -2 alpha K_ij + L_beta gamma_ij",
+        "curvature_evolution": "d_t K_ij = -D_i D_j alpha + alpha[R_ij + K K_ij - 2 K_ik K^k_j - 8 pi G(S_ij - gamma_ij(S-rho)/2) - Lambda gamma_ij] + L_beta K_ij"
+      },
+      "units": {
+        "gamma_ij": "dimensionless chart component",
+        "K_ij": "L^-1",
+        "R_ij": "L^-2",
+        "rho_and_S_ij_with_G": "L^-2",
+        "d_t_gamma_ij": "L^-1",
+        "d_t_K_ij": "L^-2"
+      },
+      "derivation_class": "standard ADM evolution transcription plus second-order numerical derivatives",
+      "observable": "metric/K right-hand-side diagnostics; no detector observable",
+      "data_role": "analytic controls only; no fit, calibration, or holdout",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/curved_3p1_adm_evolution_operator_verification.json",
+          "sha256": "c0ba6a81c3cf1867499352c95250248c412d87ff69ed33889c77a75870925436",
+          "summary": {
+            "status": "PASS_ADM_EVOLUTION_RHS_OPERATOR_ONLY",
+            "major_result_id": "CORE_CURVED_3P1_ADM_EVOLUTION_RHS_READY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_ADM_EVOLUTION_RHS_OPERATOR_ONLY",
+      "open_blockers": [
+        "strongly-hyperbolic generalized-harmonic evolution",
+        "time integration and CFL policy",
+        "constraint damping and propagation verification",
+        "non-periodic constraint-preserving boundaries",
+        "Topic 13 stress-energy evolution/projection wiring",
+        "SI detector-observable mapping"
+      ],
+      "dependency_unlocked": "formulation-selection and generalized-harmonic implementation wave only",
+      "claim_boundary": "standard ADM RHS operator and fixed-gauge formulation no-go only; not a well-posed numerical-relativity evolution system or GR validation"
+    },
+    "fixed_gauge_adm_hyperbolicity_no_go": {
+      "major_result_id": "CORE_CURVED_3P1_FIXED_GAUGE_ADM_HYPERBOLICITY_NO_GO",
+      "topic": "core",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "fixed-geodesic-gauge linearized ADM principal symbol is defective in every preregistered direction",
+        "zero-speed algebraic multiplicity 6 exceeds geometric multiplicity 3",
+        "this branch cannot satisfy the parent strong-hyperbolicity gate"
+      ],
+      "equation_or_mapping": "P(n) on (i|k| h_ij, K_ij) has speeds {-1 x3, 0 x6, +1 x3} and zero eigenspace dimension 3",
+      "units": "dimensionless principal symbol after division by |k|",
+      "derivation_class": "linearized pseudo-differential principal-symbol analysis",
+      "observable": "formulation diagnostic only",
+      "data_role": "analytic matrix controls; no empirical data",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json",
+          "sha256": "fd2e6fce761796aef39e664c2df3237e585007ebf4a196eae1bec3222d7cf333",
+          "summary": {
+            "status": "CLOSED_AS_NO_GO_FIXED_GAUGE_ADM_NOT_STRONGLY_HYPERBOLIC",
+            "major_result_id": "CORE_CURVED_3P1_FIXED_GAUGE_ADM_HYPERBOLICITY_NO_GO",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "CLOSED_AS_NO_GO",
+      "open_blockers": [
+        "generalized-harmonic nonlinear implementation",
+        "generalized-harmonic characteristic fields",
+        "constraint damping and propagation",
+        "time integration and convergence"
+      ],
+      "dependency_unlocked": "FIRST_ORDER_GENERALIZED_HARMONIC branch implementation",
+      "claim_boundary": "no-go for the declared fixed-geodesic ADM principal symbol only; not every gauge-modified ADM/BSSN/NOR formulation"
+    },
+    "generalized_harmonic_principal_system": {
+      "major_result_id": "CORE_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY",
+      "topic": "core",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "source-locked first-order GH principal equation contract",
+        "complete characteristic basis and source-matched speeds",
+        "positive analytic symmetrizer and symmetric-hyperbolic identity",
+        "linearly-degenerate gamma1=-1 parameter branch",
+        "reduction-constraint damping operator and second-order spatial convergence"
+      ],
+      "equation_or_mapping": {
+        "gauge_constraint": "C_a = H_a + Gamma_a",
+        "reduction_constraint": "C_iab = partial_i psi_ab - Phi_iab",
+        "gamma3": "gamma3 = gamma1 gamma2",
+        "characteristic_0": "u0_ab = psi_ab",
+        "characteristic_pm": "u1pm_ab = Pi_ab +/- n^i Phi_iab - gamma2 psi_ab",
+        "characteristic_2": "u2_iab = P_i^k Phi_kab",
+        "speeds": "{-(1+gamma1) beta_n, -beta_n +/- alpha, -beta_n}",
+        "symmetrizer_condition": "Lambda^2 > gamma2^2"
+      },
+      "units": "geometric c=1 local-orthonormal principal-symbol lane",
+      "derivation_class": "source-locked standard GH equations plus numerical operator verification",
+      "observable": "formulation and constraint diagnostics only",
+      "data_role": "analytic/manufactured controls; no fit, calibration, or holdout",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/curved_3p1_gh_principal_system_verification.json",
+          "sha256": "93c01c20d16b906a3f4653222bfe4f1648d4ab6e6dbaf7596e254f2e0f41d973",
+          "summary": {
+            "status": "PASS_GH_PRINCIPAL_CHARACTERISTIC_SYSTEM",
+            "major_result_id": "CORE_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_GH_PRINCIPAL_CHARACTERISTIC_SYSTEM",
+      "open_blockers": [
+        "constraint-preserving boundaries",
+        "matter stress-energy wiring and detector observable map"
+      ],
+      "dependency_unlocked": "complete nonlinear GH RHS and gamma0 gauge-constraint damping wave only",
+      "claim_boundary": "source-locked vacuum GH system with bounded periodic time-evolution controls; not a production numerical-relativity solver, matter-coupled system, or UET validation"
+    },
+    "generalized_harmonic_nonlinear_vacuum_rhs": {
+      "major_result_id": "CORE_CURVED_3P1_GH_NONLINEAR_VACUUM_RHS_READY",
+      "topic": "core",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "source-locked complete vacuum GH Eqs. 35-40 transcription",
+        "metric-derived lapse, shift, normal, and spatial inverse",
+        "first-order Christoffel and gauge-constraint reconstruction",
+        "gamma0 gauge-constraint damping term",
+        "independent explicit-index constant-grid reference controls",
+        "independent explicit-index variable-grid derivative controls"
+      ],
+      "equation_or_mapping": {
+        "metric_rhs": "Lindblom et al. Eq. 35",
+        "pi_rhs": "Lindblom et al. Eq. 36",
+        "phi_rhs": "Lindblom et al. Eq. 37",
+        "metric_derivatives": "Lindblom et al. Eqs. 38-39",
+        "gauge_constraint": "Lindblom et al. Eq. 40"
+      },
+      "units": "geometric c=1 vacuum GH lane",
+      "derivation_class": "source-locked standard GH transcription plus independent index controls",
+      "observable": "vacuum metric-state RHS and constraint diagnostics only",
+      "data_role": "analytic/internal controls; no fit, calibration, or holdout",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json",
+          "sha256": "a5e0dfd38c6d5f410ce41ba941eee7dc82c3dcc9744e1f3fdbb6b46b03666c17",
+          "summary": {
+            "status": "PASS_GH_NONLINEAR_VACUUM_RHS",
+            "major_result_id": "CORE_CURVED_3P1_GH_NONLINEAR_VACUUM_RHS_READY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_GH_NONLINEAR_VACUUM_RHS",
+      "open_blockers": [
+        "time integration and CFL policy",
+        "full gauge/reduction constraint propagation convergence",
+        "constraint-preserving non-periodic boundaries",
+        "matter stress-energy source wiring",
+        "SI detector-observable mapping"
+      ],
+      "dependency_unlocked": "time integration and constraint-propagation wave only",
+      "claim_boundary": "complete vacuum RHS operator only; not a time-integrated solver, matter-coupled UET parent, Gravity validation, or external claim"
+    },
+    "generalized_harmonic_periodic_vacuum_evolution": {
+      "major_result_id": "CORE_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY",
+      "topic": "core",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "classical RK4 integration of the verified nonlinear vacuum GH RHS",
+        "fixed conservative characteristic CFL policy on a periodic grid",
+        "exact Minkowski and exact harmonic gauge-wave evolution controls",
+        "second-order spatial and fourth-order temporal convergence",
+        "gauge, reduction, and curl constraint diagnostics over time",
+        "gamma2 reduction-constraint damping rate"
+      ],
+      "equation_or_mapping": {
+        "time_step": "dt <= cfl min(dx_i)/max(alpha+||beta||_2)",
+        "integrator": "classical RK4 applied to GH Eqs. 35-37",
+        "gauge_constraint": "C_a=H_a+Gamma_a",
+        "reduction_constraint": "C_iab=partial_i psi_ab-Phi_iab"
+      },
+      "units": "geometric c=1 periodic-coordinate lane",
+      "derivation_class": "STANDARD_NUMERICAL_METHOD_APPLIED_TO_SOURCE_LOCKED_VACUUM_GH_SYSTEM",
+      "observable": "solution-error and propagated-constraint diagnostics",
+      "data_role": "INTERNAL_ANALYTIC_AND_CONVERGENCE_CONTROL",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/curved_3p1_gh_time_evolution_verification.json",
+          "sha256": "9615a6f74fe274af74889abf5fc1c0a6bd79364aa5a35fe2d96b3464ade448e6",
+          "summary": {
+            "status": "PASS_GH_PERIODIC_VACUUM_TIME_EVOLUTION",
+            "major_result_id": "CORE_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_GH_PERIODIC_VACUUM_TIME_EVOLUTION",
+      "open_blockers": [
+        "constraint_preserving_boundaries_missing",
+        "topic13_stress_energy_projection_missing",
+        "dimensional_observable_mapping_missing"
+      ],
+      "dependency_unlocked": "constraint-preserving boundary and Topic 13 matter-wiring waves only",
+      "claim_boundary": "periodic vacuum evolution control only; not a production numerical-relativity solver, matter-coupled UET parent, Gravity validation, or external claim"
+    },
+    "topic13_prescribed_matter_wiring": {
+      "major_result_id": "CORE_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING_READY",
+      "topic": "core",
+      "closure_level": "CLOSED_FOR_LANE",
+      "claim_promotion": false,
+      "what_is_closed": [
+        "lane-bounded relativistic-fluid stress-energy construction",
+        "Eulerian rho, S_i, and S_ij projection and reconstruction",
+        "trace-reversed prescribed GH matter source",
+        "vacuum null-source and natural-to-SI scaling controls"
+      ],
+      "equation_or_mapping": {
+        "fluid_stress_energy": "T_ab=(epsilon+p)u_a*u_b+p*psi_ab+u_a*q_b+u_b*q_a+pi_ab",
+        "adm_energy": "rho=n^a*n^b*T_ab",
+        "adm_momentum": "S_a=-gamma_a^c*n^d*T_cd",
+        "adm_stress": "S_ab=gamma_a^c*gamma_b^d*T_cd",
+        "gh_matter_source": "d_t Pi_ab|matter=-2*alpha*kappa_E*(T_ab-psi_ab*T/2)"
+      },
+      "units": {
+        "natural": "epsilon, p, q, and pi share one natural energy-density lane",
+        "SI_projection": "epsilon, p, q, and pi are in J m^-3",
+        "GH_source": "kappa_E*T_ab has inverse-coordinate-length squared units"
+      },
+      "derivation_class": "STANDARD_PHYSICS_TRANSCRIPTION_WITH_TOPIC13_EXTERNAL_INPUT_COMPOSITION",
+      "observable": "prescribed He-4/O(2) stress-energy source; no detector observable",
+      "data_role": "CORE_INTEGRATION_INPUT_NOT_EXTERNAL_VALIDATION",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/curved_3p1_topic13_matter_wiring_verification.json",
+          "sha256": "5dc24a2f74b0675441e51ffa3e63182b40409e59d242c02c27d1370c235f3166",
+          "summary": {
+            "status": "PASS_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING",
+            "major_result_id": "CORE_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING_READY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      ],
+      "verification_status": "PASS_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING",
+      "open_blockers": [
+        "matter-state time evolution",
+        "stress-energy conservation propagation",
+        "self-consistent two-fluid curved transport",
+        "numerical SI Einstein coupling provenance",
+        "constraint-preserving non-periodic boundaries",
+        "detector observable mapping"
+      ],
+      "dependency_unlocked": "constraint-preserving boundary and dimensional-observable waves only",
+      "claim_boundary": "prescribed lane-specific stress-energy construction and projection only; not a self-consistent matter-coupled spacetime solution, Einstein-equation derivation, Gravity validation, or global UET closure"
+    },
+    "gravity_unlock_status": "BLOCKED_DEPENDENCY",
+    "controlling_blocker": "curved_3p1_constraint_preserving_boundaries_and_dimensional_observable_mapping_missing",
+    "claim_boundary": "ADM constraint, periodic spatial geometry, RHS operator, and fixed-gauge no-go, GH principal/nonlinear RHS, periodic vacuum evolution, and prescribed Topic 13 matter-source progress only; the parent is not CLOSED_FOR_CORE and Gravity remains blocked"
+  },
   "topic13_partial_evidence": {
-    "register_sha256": "4496b453a49fec67455d6c62f63b31bef50d43c9a1e984c1f35b20fc46bffdff",
+    "register_sha256": "8368165bccd2c769d28e8ef17be088078c185d01f484ef052661ff3e3815714f",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",
     "full_core_unlock": false,
-    "reason": "Formal beta, Phi_E, EOS, and SK/KMS/entropy interfaces are now composed into a bounded lane result; physical Phi normalization, independent alpha, source-backed beta, Kubo coefficients, and full closure remain open.",
+    "reason": "The covariant matter-coupling no-go makes the missing physical response normalization explicit; it does not supply e0, alpha_Phi_K, Ding C_src, physical Kubo coefficients, or full closure.",
     "phi_energy_anchor_no_go": {
       "path": "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
-      "sha256": "4a79b2eb082e4a4f98de0c2b2c441b2144e05fe3a8232caccfd5ba414842b020",
+      "sha256": "ce0837792cd63918dc371f64fa49801bfb0dd0f715264c8557cf54f5dcbe9059",
       "summary": {
         "status": "PASS_SCOPED_NO_GO_NORMALIZED_PHI_ENERGY_ANCHOR",
         "full_core_unlock": false
@@ -91,7 +550,7 @@
     },
     "covariant_action_si_anchor_route": {
       "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
-      "sha256": "a51c9ab63e4e976b04a032037608d59441192cbd8066ccc9bd490f7336527a15",
+      "sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52",
       "summary": {
         "status": "PASS_NATURAL_UNIT_ROUTE_IDENTIFIED_SI_MAPPING_BLOCKED",
         "full_core_unlock": false
@@ -99,7 +558,7 @@
     },
     "covariant_field_normalization_no_go": {
       "path": "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json",
-      "sha256": "5f41afcdb62b7794c35755eecd9e91d3b39ecb432130a74878e2f2b40c1627b9",
+      "sha256": "41cda98a01b282fa5c2789ef93ce2f249041550e40763cdcb083658712c564ac",
       "summary": {
         "status": "PASS_SCOPED_NO_GO_COVARIANT_FIELD_NORMALIZATION",
         "full_core_unlock": false
@@ -107,7 +566,7 @@
     },
     "causal_branch_selection": {
       "path": "docs/core/artifacts/t13_causal_branch_selection_audit.json",
-      "sha256": "096142f1a414af5fd4e4a7b9fdaddc7c8fe3891fa6b00947fb009e7fce61d851",
+      "sha256": "5e4a7ed55bdcb2e7779b0ec9bd45ca24f935bdcab2d0c50fa91d525103d1c8eb",
       "summary": {
         "status": "PASS_CLOSED_AS_NO_GO_WITH_NAMED_COUPLED_BRANCH",
         "full_core_unlock": false,
@@ -124,7 +583,7 @@
     },
     "thermal_response_beta_contract": {
       "path": "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json",
-      "sha256": "988b87eb5c29b276038cf82920a22fe29600121e68c0ab9c46eedb39182274ec",
+      "sha256": "fea0ca9bacd6497f67292a015f651d0183f65b150469eb0be533bdf91adee2c8",
       "summary": {
         "status": "PASS_NAMED_FINITE_TEMPERATURE_BETA_CONTRACT",
         "full_core_unlock": false
@@ -151,8 +610,7 @@
       "sha256": "0c4aaa38c138f9818c1a1e81a93dc7512f859c0d9095e238d2c12e7a3cf31c05",
       "summary": {
         "status": "PASS_OPEN_CALIBRATION_REQUIREMENT",
-        "full_core_unlock": false,
-        "closure_level": "OPEN"
+        "full_core_unlock": false
       }
     },
     "base_phi_calibration_controller": "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
@@ -163,6 +621,16 @@
         "status": "PASS_NAMED_SK_KMS_ENTROPY_INTERFACE_CONTRACT",
         "full_core_unlock": false,
         "closure_level": "CLOSED_FOR_LANE"
+      }
+    },
+    "formal_thermodynamic_bridge_integration": {
+      "path": "docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json",
+      "sha256": "42842e5e787a8de7007c026bf7c49dbeeeec7f48cabd403000f817e5c4a90c32",
+      "summary": {
+        "status": "PASS_FORMAL_T13_THERMODYNAMIC_BRIDGE_INTEGRATION",
+        "major_result_id": "T13_FORMAL_THERMODYNAMIC_BRIDGE_INTEGRATION",
+        "closure_level": "CLOSED_FOR_LANE",
+        "full_core_unlock": false
       }
     },
     "ding_pbte_author_request_package": {
@@ -525,6 +993,21 @@
           }
         }
       },
+      "mp48_ding_csrc_response_mapping": {
+        "major_result_id": "T13_MP48_DING_C_SRC_MODE_SUM_RESPONSE_MAPPING",
+        "closure_level": "CLOSED_FOR_LANE",
+        "status": "PASS_T13_DING_C_SRC_MODE_SUM_RESPONSE_MAPPING",
+        "full_core_unlock": false,
+        "audit": {
+          "path": "docs/core/artifacts/t13_mp48_ding_csrc_response_mapping_audit.json",
+          "sha256": "1deefbb6ebbed62345db2063612f9d8c172902dcb93068b800e579455e0d297c",
+          "summary": {
+            "status": "PASS_T13_DING_C_SRC_MODE_SUM_RESPONSE_MAPPING",
+            "major_result_id": "T13_MP48_DING_C_SRC_MODE_SUM_RESPONSE_MAPPING",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      },
       "mp48_temperature_volume_uncertainty_boundary": {
         "major_result_id": "T13_MP48_TEMPERATURE_VOLUME_UNCERTAINTY_BOUNDARY",
         "closure_level": "CLOSED_FOR_LANE",
@@ -543,13 +1026,13 @@
       "graphite_alpha_v_kt_matched_source_boundary": {
         "major_result_id": "T13_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY",
         "closure_level": "CLOSED_FOR_LANE",
-        "status": "PASS_SCOPED_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY_NO_GO",
+        "status": "PASS_SCOPED_GRAPHITE_ALPHA_V_K_T_SOURCE_PAIR_LOCKED_MATERIAL_OPEN",
         "full_core_unlock": false,
         "audit": {
           "path": "docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json",
-          "sha256": "173002072c6dd9c0a98f0653c2bac87816d60cd21561c8220c97faa14807e080",
+          "sha256": "d6e05b2dfe754cb17d17651666319dbc0ebf295a99258bd25f67e463eba68724",
           "summary": {
-            "status": "PASS_SCOPED_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY_NO_GO",
+            "status": "PASS_SCOPED_GRAPHITE_ALPHA_V_K_T_SOURCE_PAIR_LOCKED_MATERIAL_OPEN",
             "major_result_id": "T13_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY",
             "closure_level": "CLOSED_FOR_LANE"
           }
@@ -562,7 +1045,7 @@
         "full_core_unlock": false,
         "audit": {
           "path": "docs/core/artifacts/t13_ding_alternate_public_dataset_discovery_boundary_audit.json",
-          "sha256": "327957c98bdb9f2cfe4a26dd85c6f01feb182641e15e9a8f5656bd909111b9d1",
+          "sha256": "6becdf0eb8270cf5c5dda7683b2839af52f38e407712787c03759015ff537f6f",
           "summary": {
             "status": "PASS_SCOPED_DING_ALTERNATE_PUBLIC_DATASET_BOUNDARY_NO_GO",
             "major_result_id": "T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY_BOUNDARY",
@@ -787,7 +1270,7 @@
         "full_core_unlock": false,
         "audit": {
           "path": "docs/core/artifacts/t13_oxford_tgs_numeric_rows_audit.json",
-          "sha256": "d754d72e136873fc31aa8b76bfe1f85cb07bbfb9b1c6cd8584fce89534bb8fd2",
+          "sha256": "a3250b4e40479ceb8bbbfec29de0c4e0ed6e7068355ab0507a30d5099333d9cc",
           "summary": {
             "status": "PASS_OXFORD_TGS_NUMERIC_ROWS_SOURCE_LOCKED_COMPARATOR",
             "major_result_id": "T13_OXFORD_TGS_NUMERIC_ROWS_COMPARATOR",
@@ -802,7 +1285,7 @@
         "full_core_unlock": false,
         "audit": {
           "path": "docs/core/artifacts/t13_desorbo_ceylon_graphite_cp_audit.json",
-          "sha256": "a8e865fc89d1edea8db9734a93bf533e675bdad13508d36ca58e6533c96da7c9",
+          "sha256": "33ad2745513d3c2ddfdce02978fbf9f1df7b804529cda33cc0d21ac6b11cd7a8",
           "summary": {
             "status": "PASS_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_LOCKED_COMPARATOR",
             "major_result_id": "T13_DESORBO_1955_CEYLON_GRAPHITE_CP_COMPARATOR",
@@ -975,6 +1458,66 @@
           }
         }
       },
+      "ding_c_src_fixed_volume_identity": {
+        "major_result_id": "T13_DING_C_SRC_FIXED_VOLUME_THERMODYNAMIC_IDENTITY",
+        "closure_level": "CLOSED_FOR_LANE",
+        "status": "PASS_SCOPED_C_SRC_FIXED_VOLUME_IDENTITY",
+        "full_core_unlock": false,
+        "audit": {
+          "path": "docs/core/artifacts/t13_csrc_fixed_volume_identity_audit.json",
+          "sha256": "155b15ac1184f0309e10db8466925d6ad6483d4321a7703d82ecfb09a086cdd5",
+          "summary": {
+            "status": "PASS_SCOPED_C_SRC_FIXED_VOLUME_IDENTITY",
+            "major_result_id": "T13_DING_C_SRC_FIXED_VOLUME_THERMODYNAMIC_IDENTITY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      },
+      "csrc_thermodynamic_transport_regime_decomposition": {
+        "major_result_id": "T13_C_SRC_THERMODYNAMIC_TRANSPORT_REGIME_DECOMPOSITION",
+        "closure_level": "CLOSED_FOR_LANE",
+        "status": "PASS_SCOPED_C_SRC_THERMODYNAMIC_TRANSPORT_DECOMPOSITION",
+        "full_core_unlock": false,
+        "audit": {
+          "path": "docs/core/artifacts/t13_csrc_thermodynamic_transport_regime_decomposition_audit.json",
+          "sha256": "72c5b81720f96eaa08e7d1d6f82177b19b60d6cc780a030547cc5d083f64e850",
+          "summary": {
+            "status": "PASS_SCOPED_C_SRC_THERMODYNAMIC_TRANSPORT_DECOMPOSITION",
+            "major_result_id": "T13_C_SRC_THERMODYNAMIC_TRANSPORT_REGIME_DECOMPOSITION",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      },
+      "csrc_equilibrium_component_acceptance": {
+        "major_result_id": "T13_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY",
+        "closure_level": "CLOSED_FOR_LANE",
+        "status": "PASS_SCOPED_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY",
+        "full_core_unlock": false,
+        "audit": {
+          "path": "docs/core/artifacts/t13_csrc_equilibrium_component_acceptance_audit.json",
+          "sha256": "26f089063785fde068628bd071d8df1d7d50a53e2be46f7a73df627269632de1",
+          "summary": {
+            "status": "PASS_SCOPED_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY",
+            "major_result_id": "T13_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      },
+      "nims_mp990448_phonon_payload_boundary": {
+        "major_result_id": "T13_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY",
+        "closure_level": "CLOSED_FOR_LANE",
+        "status": "PASS_SCOPED_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY",
+        "full_core_unlock": false,
+        "audit": {
+          "path": "docs/core/artifacts/t13_nims_mp990448_phonon_source_boundary_audit.json",
+          "sha256": "2e9f93be5cf23c429d9d0b77f755efb074a44790483f0b635a62327d5025eda9",
+          "summary": {
+            "status": "PASS_SCOPED_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY",
+            "major_result_id": "T13_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      },
       "calorine_zenodo_nep_bte_numeric_reproduction": {
         "major_result_id": "T13_CALORINE_ZENODO_NEP_BTE_NUMERIC_REPRODUCTION",
         "closure_level": "CLOSED_FOR_LANE",
@@ -982,10 +1525,25 @@
         "full_core_unlock": false,
         "audit": {
           "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
-          "sha256": "afc8fb0d9daea81c30a09b24f0aabd824cde1a85e662ea52880fadd42863de89",
+          "sha256": "a2fb52533d768697950c49722e24e5de0d9d3381c24be6c5bf2e23f88a8957e0",
           "summary": {
             "status": "PASS_SCOPED_CALORINE_NUMERIC_C_SRC_REPRODUCTION",
             "major_result_id": "T13_CALORINE_ZENODO_NEP_BTE_NUMERIC_REPRODUCTION",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      },
+      "calorine_full_lbte_numerical_stability_boundary": {
+        "major_result_id": "T13_CALORINE_FULL_LBTE_NUMERICAL_STABILITY_BOUNDARY",
+        "closure_level": "CLOSED_FOR_LANE",
+        "status": "WARN_FULL_LBTE_NUMERICAL_STABILITY_OPEN",
+        "full_core_unlock": false,
+        "audit": {
+          "path": "docs/core/artifacts/t13_calorine_full_lbte_stability_boundary_audit.json",
+          "sha256": "8b5de32a8c33b0a646c8e26faf263585d98bcb939df8adb78b1b16f9d832859d",
+          "summary": {
+            "status": "WARN_FULL_LBTE_NUMERICAL_STABILITY_OPEN",
+            "major_result_id": "T13_CALORINE_FULL_LBTE_NUMERICAL_STABILITY_BOUNDARY",
             "closure_level": "CLOSED_FOR_LANE"
           }
         }
@@ -1267,7 +1825,7 @@
         "full_core_unlock": false,
         "audit": {
           "path": "docs/core/artifacts/t13_calorine_public_model_variant_boundary_audit.json",
-          "sha256": "062c49c05e8318d42d627d03df886d2d50eea3285d2fb7430064554f98e6edbb",
+          "sha256": "4cbe1cf6bfd73856471738cadc4771a2375b3db2d925e62b9fc6fcb4c400f7e5",
           "summary": {
             "status": "PASS_SCOPED_CALORINE_PUBLIC_MODEL_VARIANT_BOUNDARY",
             "major_result_id": "T13_CALORINE_PUBLIC_MODEL_VARIANT_BOUNDARY",
@@ -1282,7 +1840,7 @@
         "full_core_unlock": false,
         "audit": {
           "path": "docs/core/artifacts/t13_calorine_nep1_backend_compatibility_audit.json",
-          "sha256": "bb3887522ba6bfde25bc74c1deb76e737ca975d5452263fb2dff348bffb3322c",
+          "sha256": "30513dd236e81360bceeedbf873b968f56520682a243ae16922daa157dc7eba9",
           "summary": {
             "status": "PASS_SCOPED_CALORINE_NEP1_BACKEND_COMPATIBILITY_BOUNDARY",
             "major_result_id": "T13_CALORINE_NEP1_BACKEND_COMPATIBILITY_BOUNDARY",
@@ -1312,10 +1870,25 @@
         "full_core_unlock": false,
         "audit": {
           "path": "docs/core/artifacts/t13_calorine_legacy_nep2_pbte_reproduction_audit.json",
-          "sha256": "0c3724c591adc411a4ef062a2bf62b9e5ce6564831bbc662e845ef48a8d56398",
+          "sha256": "66e05c61250da9711d7d90f44cdd1297aa88e560d716984a1a8db143fa4e7af3",
           "summary": {
             "status": "PASS_SCOPED_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION",
             "major_result_id": "T13_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      },
+      "calorine_model_form_state_spread_comparison": {
+        "major_result_id": "T13_CALORINE_MODEL_FORM_STATE_SPREAD_COMPARISON",
+        "closure_level": "CLOSED_FOR_LANE",
+        "status": "PASS_SCOPED_CALORINE_MODEL_FORM_STATE_SPREAD",
+        "full_core_unlock": false,
+        "audit": {
+          "path": "docs/core/artifacts/t13_calorine_model_form_state_spread_comparison_audit.json",
+          "sha256": "ef7ac7e4b1447626836f3a552de702759a6f57f07a1966f7ed5a62e88374ec24",
+          "summary": {
+            "status": "PASS_SCOPED_CALORINE_MODEL_FORM_STATE_SPREAD",
+            "major_result_id": "T13_CALORINE_MODEL_FORM_STATE_SPREAD_COMPARISON",
             "closure_level": "CLOSED_FOR_LANE"
           }
         }
@@ -1346,6 +1919,21 @@
           "summary": {
             "status": "PASS_PUBLIC_SOURCE_BOUNDARY_NO_PAIRED_BASE_PHI_RECORD",
             "major_result_id": "T13_PHI_SI_ANCHOR_PUBLIC_SOURCE_BOUNDARY",
+            "closure_level": "CLOSED_FOR_LANE"
+          }
+        }
+      },
+      "covariant_action_si_anchor_route": {
+        "major_result_id": "T13_COVARIANT_ACTION_SI_ANCHOR_ROUTE",
+        "closure_level": "CLOSED_FOR_LANE",
+        "status": "PASS_NATURAL_UNIT_ROUTE_IDENTIFIED_SI_MAPPING_BLOCKED",
+        "full_core_unlock": false,
+        "audit": {
+          "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
+          "sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52",
+          "summary": {
+            "status": "PASS_NATURAL_UNIT_ROUTE_IDENTIFIED_SI_MAPPING_BLOCKED",
+            "major_result_id": "T13_COVARIANT_ACTION_SI_ANCHOR_ROUTE",
             "closure_level": "CLOSED_FOR_LANE"
           }
         }
@@ -2067,6 +2655,99 @@
         "full_core_unlock": false,
         "closure_level": "CLOSED_FOR_LANE"
       }
+    },
+    "covariant_matter_coupling_normalization_no_go": {
+      "path": "docs/core/artifacts/t13_covariant_matter_coupling_normalization_no_go.json",
+      "sha256": "bdda0a764af624ffb7b7c8bb04d1cb1bb44539a0159e4ca8ba9b825473e09675",
+      "summary": {
+        "status": "PASS_SCOPED_NO_GO_COVARIANT_MATTER_COUPLING_NORMALIZATION",
+        "full_core_unlock": false
+      }
+    },
+    "ding_experimental_heating_input_boundary": {
+      "path": "docs/core/artifacts/t13_ding_experimental_heating_input_boundary_audit.json",
+      "sha256": "6e39bbf42037971dc2b5a1068df14835dd0b4689f26a60fff95bc26810b8b008",
+      "summary": {
+        "status": "PASS_SCOPED_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY",
+        "closure_level": "CLOSED_FOR_LANE",
+        "full_core_unlock": false
+      }
+    },
+    "closure_matrix": {
+      "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
+      "sha256": "d597f0e0d334845e2d2e515ec372b560890b8fced4f0082169229f38bb3ab81a",
+      "full_core_unlock": false,
+      "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
+      "required_major_result_count": 10,
+      "required_subresult_count": 37
+    },
+    "topic13_flat_thermodynamic_bridge_components": {
+      "path": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+      "sha256": "65a85d9abc2d051570af72898bd8b8848c29d1fb20685c9b284ce6915fe8a8fe",
+      "summary": {
+        "status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT",
+        "closure_level": "CLOSED_FOR_LANE",
+        "full_core_unlock": false,
+        "controlling_blocker": "physical_Kubo_coefficient_record_missing"
+      },
+      "full_core_unlock": false
+    },
+    "full_topic_closure_contract": {
+      "required_major_result_count": 10,
+      "required_subresult_count": 37,
+      "current_major_result_counts": {
+        "CLOSED_AS_NO_GO": 1,
+        "OPEN": 3,
+        "PARTIAL": 6
+      },
+      "current_subresult_counts": {
+        "CLOSED_AS_NO_GO": 6,
+        "CLOSED_FOR_LANE": 21,
+        "OPEN": 10
+      },
+      "full_topic_ready": false
     }
+  },
+  "topic13_core_ready": {
+    "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+    "closure_level": "CLOSED_FOR_CORE",
+    "full_core_unlock": true,
+    "verification_status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+        "sha256": "13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418",
+        "summary": {
+          "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+          "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+          "closure_level": "CLOSED_FOR_CORE"
+        }
+      }
+    ],
+    "claim_boundary": "CLOSED_FOR_CORE is an internal, lane-bounded composition result. It is not a prediction of the imported He-4 coefficients, not graphite TTG validation, not a complete two-fluid transport tensor, not curved 3+1, and not global UET closure.",
+    "closure_matrix": {
+      "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
+      "sha256": "9545138da34726bba60c3e8af29714d577f6579b2cb0489bbba94834f4cb45e5",
+      "full_core_unlock": true,
+      "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+      "required_major_result_count": 10,
+      "required_subresult_count": 37
+    },
+    "full_topic_closure_contract": {
+      "required_major_result_count": 10,
+      "required_subresult_count": 37,
+      "current_major_result_counts": {
+        "CLOSED_AS_NO_GO": 1,
+        "OPEN": 3,
+        "PARTIAL": 6
+      },
+      "current_subresult_counts": {
+        "CLOSED_AS_NO_GO": 6,
+        "CLOSED_FOR_LANE": 21,
+        "OPEN": 10
+      },
+      "full_topic_ready": true
+    },
+    "register_sha256": "1f456c5e96a5082ae8267a2d85cb24022f30f89c647f28f32bc3596b553030ee"
   }
 }

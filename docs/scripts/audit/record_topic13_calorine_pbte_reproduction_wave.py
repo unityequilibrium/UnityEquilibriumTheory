@@ -24,6 +24,7 @@ SUMMARY_RELS = (
     ("6x6x3", f"{DATA}/t13_calorine_zenodo_pbte_run_m663_summary.json"),
     ("8x8x4", f"{DATA}/t13_calorine_zenodo_pbte_run_m884_summary.json"),
     ("10x10x5", f"{DATA}/t13_calorine_zenodo_pbte_run_m10x10x5_summary.json"),
+    ("12x12x6", f"{DATA}/t13_calorine_zenodo_pbte_run_m12x12x6_summary.json"),
 )
 
 INPUTS = (
@@ -96,6 +97,7 @@ def build_run_records() -> list[dict]:
             "6x6x3": "mesh_6x6x3",
             "8x8x4": "mesh_8x8x4",
             "10x10x5": "mesh_10x10x5",
+            "12x12x6": "mesh_12x12x6",
         }[label]
         archive_kappa = ARCHIVE / archive_name / "kappa.hdf5"
         if not archive_kappa.is_file():
@@ -219,7 +221,7 @@ def build_payload() -> tuple[dict, dict]:
             "public Calorine/Zenodo structure and NEP inputs are locally hashed and rerun",
             "a fixed 4x4x2 force-constant state is reused across four q-mesh runs",
             "phono3py mode heat capacity is aggregated and converted to volumetric C_src in J m^-3 K^-1",
-            "the latest 8x8x4 to 10x10x5 mesh pair satisfies the declared candidate numerical preflight",
+            "the latest 10x10x5 to 12x12x6 mesh pair satisfies the declared candidate numerical preflight",
             "fit, target-curve tuning, alpha_Phi_K fitting, and holdout access are absent from every run",
         ],
         "equation_or_mapping": {

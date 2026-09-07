@@ -1,0 +1,71 @@
+{
+  "schema_version": "t13-he4-o2-si-beta-source-v1",
+  "package_id": "T13_HE4_O2_SI_SCALE_AND_BETA_SOURCE",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "data_role": "CALIBRATION",
+  "state": {
+    "material": "liquid helium-4",
+    "phase": "He II",
+    "pressure_path": "saturated vapour pressure",
+    "temperature_scale": "ITS-90",
+    "temperature_K": 1.7
+  },
+  "sources": {
+    "temperature_scale": {
+      "title": "Guide to the Realization of the ITS-90, Part 3: Vapour Pressure Scales and Pressure Measurements",
+      "publisher": "BIPM Consultative Committee for Thermometry",
+      "locator": "Section 5, uncertainty of scale realization",
+      "url": "https://www.bipm.org/documents/20126/41773843/Guide_ITS-90_3_VPS_p_2018.pdf/dcd65f47-8699-d2f2-cace-44885f4f49fb",
+      "temperature_standard_uncertainty_K": 0.0002,
+      "interpretation": "State-of-the-art standard uncertainty of order 0.2 mK for helium vapour-pressure-scale realization; used conservatively at 1.7 K."
+    },
+    "he4_relative_atomic_mass": {
+      "title": "NIST Atomic Weights and Isotopic Compositions for Helium",
+      "locator": "He-4 isotope row",
+      "url": "https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ascii=ascii&ele=He",
+      "value": 4.00260325413,
+      "standard_uncertainty": 0.00000000006,
+      "units": "relative atomic mass"
+    },
+    "atomic_mass_constant": {
+      "title": "2022 CODATA recommended values",
+      "locator": "atomic mass constant m_u row",
+      "url": "https://physics.nist.gov/cuu/pdf/all.pdf",
+      "value_kg": 1.66053906892e-27,
+      "standard_uncertainty_kg": 5.2e-37
+    },
+    "boltzmann_constant": {
+      "local_source_record": "docs/data/external/constants/codata/si_2019_exact_constants.json",
+      "value_J_K": 1.380649e-23,
+      "status": "exact SI defining constant"
+    },
+    "density_and_response": {
+      "local_source_record": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_o2_physical_anchor_source_package.json",
+      "row_id": "he4-svp-1.700K",
+      "density_relative_uncertainty_bound": 5e-7,
+      "response_calibration_record": "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json"
+    },
+    "action_beta": {
+      "local_source_record": "docs/core/artifacts/t13_uet_o2_action_thermal_stiffness_beta_audit.json",
+      "derivation_class": "ACTION_DERIVED",
+      "landauer_identity_used": false
+    }
+  },
+  "mapping_contract": {
+    "energy_density_scale": "e0 = (rho / m_He4) k_B T0",
+    "free_energy": "f_SI = e0 f_natural",
+    "field": "Delta_Phi_norm = Z_Phi Delta_Phi_natural",
+    "normalized_beta": "beta_T13 = beta_natural / Z_Phi^2",
+    "si_beta": "beta_SI = e0 beta_T13",
+    "derivation_class": "EXTERNAL_STATE_MATCHED_SCALE_CONVENTION_PLUS_ACTION_DERIVED_BETA",
+    "ensemble_boundary": "The scale uses particle number density and k_B T only. It does not identify the SVP heat capacity with the fixed-mu action susceptibility."
+  },
+  "uncertainty_policy": "Propagate source standard uncertainties and conservative source bounds by absolute addition. No covariance or statistical independence is assumed.",
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_curve_used": false,
+    "fit_or_tuning_used": false,
+    "threshold_adjustment_used": false
+  },
+  "claim_boundary": "This package fixes a lane-specific SI normalization convention for the He-4 O(2) bridge. It is not a universal Phi identity, a first-principles prediction of the absolute free-energy density, a transport validation, or an external TTG validation."
+}

@@ -42,8 +42,9 @@ def test_topic13_full_gate_preserves_current_blockers_and_holdout_boundary() -> 
     assert gate["status"] == "BLOCKED_OPEN_T13_FULL_BRIDGE"
     assert gate["major_result"]["closure_level"] == "PARTIAL"
     causal = gate["verification_status"]["causal_full_candidate_or_formal_no_go_branch"]
-    assert causal["status"] == "BLOCKED"
-    assert causal["status_role"] == "full_candidate_readiness_gate"
+    assert causal["status"] == "PASS"
+    assert causal["status_role"] == "full_candidate_or_formal_no_go_gate"
+    assert causal["status_basis"] == "FORMAL_NO_GO_AND_NAMED_BRANCH"
     assert causal["lane_status"] == "PASS"
     assert causal["lane_closure_level"] == "CLOSED_FOR_LANE"
     assert gate["verification_status"]["alpha_Phi_K"]["status"] == "BLOCKED"
@@ -64,3 +65,47 @@ def test_topic13_full_gate_reports_machine_readable_closure_summary() -> None:
     register = load(REGISTER_PATH)
     entry = next(item for item in register["entries"] if item["major_result_id"] == "T13_FULL_THERMODYNAMIC_BRIDGE")
     assert entry["closure_summary"]["open_blocker_count"] == summary["open_blocker_count"]
+    resolved = next(
+        item
+        for item in gate["major_result"]["resolved_blockers"]
+        if item["blocker"] == "density_uncertainty_not_source_locked"
+    )
+    assert resolved["status"] == "CLOSED_FOR_LANE"
+    assert resolved["resolution_source"]["row_count"] == 3
+    assert resolved["resolution_source"]["coverage_factor"] == 2
+    assert resolved["what_remains_open"] == [
+        "same_state_IG210_isothermal_K_T_missing",
+        "C_p_to_C_v_correction_not_closed",
+        "material_regime_mapping_to_TTG_not_closed",
+    ]
+    assert next(
+        item
+        for item in entry["resolved_blockers"]
+        if item["blocker"] == "density_uncertainty_not_source_locked"
+    )["status"] == "CLOSED_FOR_LANE"
+
+    resolved_by_blocker = {
+        item["blocker"]: item["status"]
+        for item in gate["major_result"]["resolved_blockers"]
+    }
+    assert resolved_by_blocker == {
+        "density_uncertainty_not_source_locked": "CLOSED_FOR_LANE",
+        "ding_public_numeric_C_src_route": "CLOSED_AS_NO_GO",
+        "current_graphite_alpha_V_K_T_inventory": "CLOSED_FOR_LANE",
+        "independent_harmonic_c_v_comparator_uncertainty_lane": "CLOSED_FOR_LANE",
+        "action_beta_to_normalized_beta_identifiability": "CLOSED_AS_NO_GO",
+        "base_phi_to_SI_anchor_identifiability": "CLOSED_AS_NO_GO",
+        "normalized_alpha_Phi_K_scale_identifiability": "CLOSED_AS_NO_GO",
+        "calorine_model_form_state_uncertainty_lane": "CLOSED_FOR_LANE",
+        "calorine_full_lbte_stability_route": "CLOSED_AS_NO_GO",
+    }
+    assert "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing" in gate[
+        "major_result"
+    ]["what_remains_open"]
+    assert "alpha_Phi_K_independent_calibration_missing" in gate[
+        "major_result"
+    ]["what_remains_open"]
+    assert {
+        item["blocker"]: item["status"]
+        for item in entry["resolved_blockers"]
+    } == resolved_by_blocker

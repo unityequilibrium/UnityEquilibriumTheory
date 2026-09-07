@@ -1,0 +1,3049 @@
+{
+  "schema_version": "t13-topic13-closure-matrix-v3",
+  "artifact": "t13_topic13_closure_matrix",
+  "generated_at": "2026-08-29",
+  "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+  "claim_promotion": false,
+  "full_core_unlock": true,
+  "requirements_scope": "LEGACY_GRAPHITE_TTG_EXTERNAL_VALIDATION_PROJECTION_RETAINED_FOR_BACKWARD_COMPATIBILITY",
+  "core_ready_track": {
+    "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+    "status": "CLOSED_FOR_CORE",
+    "requirements": {
+      "causal_structure": "PASS",
+      "he4_equilibrium_source_anchor": "PASS",
+      "he4_property_uncertainty_bound": "PASS",
+      "independent_alpha_and_field_normalization": "PASS",
+      "absolute_temperature_scale_uncertainty": "PASS",
+      "non_circular_natural_bridge": "PASS",
+      "formal_eos_and_entropy_interface": "PASS",
+      "physical_transport_coefficient": "PASS",
+      "normalized_beta_and_SI_energy_scale": "PASS",
+      "dimensional_observable_map": "PASS",
+      "landauer_constraint_source_disposition": "PASS",
+      "state_interface_and_core_composition": "PASS",
+      "holdout_integrity": "PASS"
+    },
+    "what_is_closed": [
+      "formal O(2) thermodynamic lane components already accepted by their individual artifacts",
+      "He-4 SVP equilibrium density and superfluid-fraction source anchor",
+      "independent local He-4 alpha_Phi_K calibration and signed action-field normalization Z_Phi",
+      "source-reported property uncertainty bounds conditional on the recommended temperature grid",
+      "ITS-90 scale uncertainty, state-matched SI energy-density convention, normalized beta_T13, and beta_SI",
+      "one source-locked He II normal-component physical shear Kubo/FDT/entropy channel",
+      "Landauer source-controller Core-role disposition with external numeric gaps retained",
+      "explicit natural-action to physical-He-4 state-interface composition",
+      "causal structural no-go and named finite-cone branch contract",
+      "Xie 2026 holdout isolation"
+    ],
+    "what_remains_open": [],
+    "dependency_unlocked": "Topic 13 thermal bridge may be integrated into Core",
+    "claim_boundary": "This is the physical O(2)/He-4 Core track. It does not include graphite TTG external validation and does not close global UET."
+  },
+  "required_input_package_count": 3,
+  "closure_input_packages": [
+    {
+      "package_id": "T13_INPUT_DING_TTG_SOURCE",
+      "label": "Ding-compatible TTG source package",
+      "status": "OPEN_EXTERNAL_INPUT",
+      "purpose": "Accept the numeric source and same-regime thermodynamic uncertainty needed to connect PBTE energy to Delta_Tq.",
+      "minimum_records": [
+        "mode-resolved C_src(T) rows in J m^-3 K^-1 with temperature/state identity",
+        "material morphology, isotope/defect state, TTG response contract, and PBTE convergence record",
+        "source locator, permission, preprocessing, row identity, uncertainty, and SHA-256",
+        "same-grade alpha_V and K_T or a justified c_v conversion with propagated uncertainty"
+      ],
+      "unlocks_subresults": [
+        "accepted_numeric_csrc",
+        "material_and_uncertainty_closure",
+        "physical_source_backed_eos",
+        "physical_heat_flux_entropy_map"
+      ],
+      "controlling_blockers": [
+        "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+        "material_regime_mapping_to_TTG_not_closed",
+        "c_v_source_uncertainty_not_closed"
+      ],
+      "claim_boundary": "A comparator or figure-derived normalized curve is not accepted as the Ding numeric source without material/state and uncertainty equivalence."
+    },
+    {
+      "package_id": "T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
+      "label": "Base-Phi SI anchor and independent alpha/beta package",
+      "status": "OPEN_EXTERNAL_OR_DERIVATION_INPUT",
+      "purpose": "Fix the otherwise non-identifiable scale between normalized Phi and a dimensional energy or temperature response.",
+      "minimum_records": [
+        "dimensionful action/free-energy origin with coefficient provenance, or an independent paired base-Phi/SI response record",
+        "Phi amplitude, reference state, field normalization, and e0 in declared units",
+        "paired Delta_Phi with Delta_Tq or Delta_u_ph, uncertainty, locator, preprocessing, row identity, and hash",
+        "beta derivation separate from Landauer and from target/holdout tuning, with limiting-case and uncertainty checks"
+      ],
+      "unlocks_subresults": [
+        "base_phi_si_anchor",
+        "independent_alpha_record",
+        "normalized_beta_si_map",
+        "physical_source_backed_eos",
+        "physical_heat_flux_entropy_map"
+      ],
+      "controlling_blockers": [
+        "dimensional_phi_to_thermal_observable_map_missing",
+        "alpha_Phi_K_independent_calibration_missing",
+        "normalized_beta_and_SI_scale_correspondence_missing"
+      ],
+      "claim_boundary": "Normalized Phi shapes, Phi_E comparators, Landauer, and Xie 2026 cannot supply this scale by themselves."
+    },
+    {
+      "package_id": "T13_INPUT_PHYSICAL_TRANSPORT_MATCH",
+      "label": "Physical Kubo and SK/KMS transport package",
+      "status": "OPEN_MICROSCOPIC_OR_EXTERNAL_INPUT",
+      "purpose": "Connect the declared formal response lanes to one state-matched physical transport coefficient and its entropy/heat-flux consequences.",
+      "minimum_records": [
+        "coefficient_name, value, units, frame, temperature, chemical potential, and space-response state",
+        "retarded-correlator formula identifier, source locator, source hash, evidence status, and uncertainty",
+        "finite-temperature normal/condensed matching, KMS/FDT residuals, and no synthetic substitute",
+        "heat-flux and entropy-production propagation on the same state, including uncertainty"
+      ],
+      "unlocks_subresults": [
+        "physical_uet_kubo_record",
+        "physical_sk_transport_match",
+        "physical_entropy_production_mapping",
+        "physical_heat_flux_entropy_map"
+      ],
+      "controlling_blockers": [
+        "physical_Kubo_coefficient_record_missing"
+      ],
+      "claim_boundary": "The existing natural-unit Kubo and formal SK/KMS lanes remain lane evidence until a state-matched physical record passes this contract."
+    }
+  ],
+  "input_package_audit": {
+    "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
+    "sha256": "f75326e8b7e2e0e8af2e11e75a2e37c2386325b0bf3748ee2d55644be8609d2b",
+    "summary": {
+      "role": "grouped Topic 13 closure-input acceptance audit",
+      "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
+    }
+  },
+  "major_result": {
+    "major_result_id": "T13_TOPIC13_CLOSURE_MATRIX",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_CORE",
+    "what_is_closed": [
+      "The ten required Topic 13 result areas are reported separately by closure level.",
+      "Each result area exposes evidence-producing subresults and an acceptance boundary.",
+      "Lane-level formal results are not counted as Full Topic 13 Core-ready closure.",
+      "The current full-gate blocker groups and dependency state are projected without changing them.",
+      "The normalized measurement operator remains separate from the dimensional thermal operator."
+    ],
+    "equation_or_mapping": {
+      "standard": "y_TTG = Delta_Tq(t) / Delta_Tq(0)",
+      "uet_normalized": "y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)",
+      "dimensional": "Delta_Tq = alpha_Phi_K * Delta_Phi",
+      "formal_action_bridge": "Delta_Tq^nat = Delta_epsilon^nat / C_epsilon_T^nat",
+      "formal_entropy_balance": "nabla_mu J_S^mu = q_perp^2/(kappa T^2) + X_A L^(AB) X_B >= 0",
+      "source_response": "C_src(T) = sum_mu c_mu(T); Delta_Tq = Delta_u_ph / C_src(T)"
+    },
+    "units": {
+      "y_TTG": "dimensionless",
+      "y_TTG_UET": "dimensionless",
+      "Delta_Tq": "K only after a physical source/scale map",
+      "alpha_Phi_K": "K per normalized Phi; open",
+      "C_src": "J m^-3 K^-1 when a qualifying source package exists",
+      "formal_transport": "natural-unit or conditional interface; not SI physical transport"
+    },
+    "derivation_class": "machine-readable status reconstruction from canonical gate and lane evidence; no new physical derivation",
+    "observable": "Topic 13 major-result closure state and dependency readiness",
+    "data_role": "INTERNAL_CLOSURE_REPORT_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+        "sha256": "dc0d658a353172074425d2a8259dce3a4fa7b6b75bea68310c7a1492421d5d58",
+        "summary": {
+          "role": "canonical full Topic 13 readiness gate",
+          "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
+        "sha256": "f75326e8b7e2e0e8af2e11e75a2e37c2386325b0bf3748ee2d55644be8609d2b",
+        "summary": {
+          "role": "grouped Topic 13 closure-input acceptance audit",
+          "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json",
+        "sha256": "6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
+        "sha256": "1cb84b6c8e9741fef1dc6e0f83fba3dfe68ca6cd89adac8fa1a31835b4debf62",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "1cb84b6c8e9741fef1dc6e0f83fba3dfe68ca6cd89adac8fa1a31835b4debf62"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
+        "sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
+        "sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_mp48_phi_e_dimensional_comparator_audit.json",
+        "sha256": "46fad518feb670e7e3fe4faac47582f7a5e93b88985c53225d4da4e6fc7cde44",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "46fad518feb670e7e3fe4faac47582f7a5e93b88985c53225d4da4e6fc7cde44"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_covariant_matter_coupling_normalization_no_go.json",
+        "sha256": "bdda0a764af624ffb7b7c8bb04d1cb1bb44539a0159e4ca8ba9b825473e09675",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "bdda0a764af624ffb7b7c8bb04d1cb1bb44539a0159e4ca8ba9b825473e09675"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_thermal_bridge_scale_dependency_no_go.json",
+        "sha256": "a54b9e179e0905ea4c7cc8ecbd55922593d3b1bd96c2ae356b5fb22cd68d38e8",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "a54b9e179e0905ea4c7cc8ecbd55922593d3b1bd96c2ae356b5fb22cd68d38e8"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_phi_si_anchor_public_source_boundary_audit.json",
+        "sha256": "605245fa937cf5d2701a0afa0cc90a4f543052c4dd977066e1f3496bc12c50c5",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "605245fa937cf5d2701a0afa0cc90a4f543052c4dd977066e1f3496bc12c50c5"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_dimensional_bridge_contract_audit.json",
+        "sha256": "caf37f860838c1e424a2a37cde6a9c852e2f2af0f13e6b17a1e9589161faf500",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
+        "sha256": "ce0837792cd63918dc371f64fa49801bfb0dd0f715264c8557cf54f5dcbe9059",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json",
+        "sha256": "4d5f2e0d96d5d30d126243c9754d38a591680c9f3e0bbb62f0a3ece35cb2e3bc",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "4d5f2e0d96d5d30d126243c9754d38a591680c9f3e0bbb62f0a3ece35cb2e3bc"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_energy_response_bridge_audit.json",
+        "sha256": "9e2e6b43ffdd744588bd0ff206c0a178915ca17ec1c43493cee7bab1c3ee07e8",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "9e2e6b43ffdd744588bd0ff206c0a178915ca17ec1c43493cee7bab1c3ee07e8"
+        }
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_pbte_energy_temperature_source_package.json",
+        "sha256": "9f6b8d31ba2d7a6e56d6a323581bc6aecb91c6d0e61064d62a3972ee0e2c0d6f",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "9f6b8d31ba2d7a6e56d6a323581bc6aecb91c6d0e61064d62a3972ee0e2c0d6f"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_ding_pbte_energy_temperature_mapping_audit.json",
+        "sha256": "32d132bb695d62f52be337ce0cced4c57c43df13ea96b082c6f9ee416d0aed73",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "32d132bb695d62f52be337ce0cced4c57c43df13ea96b082c6f9ee416d0aed73"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_gatech_graphite_source_audit.json",
+        "sha256": "56866720546cdf201c5b45ef7262f82679a5676482835d6d476933f114b3d394",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "56866720546cdf201c5b45ef7262f82679a5676482835d6d476933f114b3d394"
+        }
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/gatech_gen3csp_graphite_source_package.json",
+        "sha256": "2635be1d91f35c9be6fd36d14a9e4d04384f158dd90340b59c5d7fa3f277bd51",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "2635be1d91f35c9be6fd36d14a9e4d04384f158dd90340b59c5d7fa3f277bd51"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
+        "sha256": "1828db74760ac53c73345d0e4a8adc8fc00fc16bb25e84809a73aaa3cd9b3d9a",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "5afc8eb41d78e6a23d343954cab18e284e8f53b3c7bbc149a0bf9f5bc55038bf"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_alpha_phi_k_identifiability_audit.json",
+        "sha256": "31c38eef3132d72e5b090725f4d7524bde3d7da5eb5d69ad383ff442e097988e",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_base_phi_independent_calibration_requirement.json",
+        "sha256": "0c4aaa38c138f9818c1a1e81a93dc7512f859c0d9095e238d2c12e7a3cf31c05",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_formal_bridge_boundary_audit.json",
+        "sha256": "69d5480c900b21476378cb787b0e49198b8451bb7c7a8df2dbbda42284dfcab9",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "69d5480c900b21476378cb787b0e49198b8451bb7c7a8df2dbbda42284dfcab9"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_action_thermal_observable_bridge_audit.json",
+        "sha256": "7ba49d3f629c91f3f88dda6ad717d8928e58439de7517a5979f0a465b9f52585",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "7ba49d3f629c91f3f88dda6ad717d8928e58439de7517a5979f0a465b9f52585"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_beta_action_normalized_correspondence_no_go.json",
+        "sha256": "0c3dcff4f3520849f48f64043d52d3f735f95cabb96e606b1a7a1f65ce3d48e6",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "0c3dcff4f3520849f48f64043d52d3f735f95cabb96e606b1a7a1f65ce3d48e6"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_beta_symbol_separation_noncircularity_audit.json",
+        "sha256": "a3da7d05516f0d6f6deb8552be00a49d3817cfe684f2a677a907ebfa2b170576",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_action_thermal_stiffness_beta_audit.json",
+        "sha256": "c8079bbdbfa3a340e66b26dfa4d2f0cb93a5b32a1ef6827e604415958b4c649e",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_collective_response_eos_stability_audit.json",
+        "sha256": "5bcdbfdd4f14b6d28ce6bdd737020030b85add2f5f0a38db22e9e36d9c77772d",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "5bcdbfdd4f14b6d28ce6bdd737020030b85add2f5f0a38db22e9e36d9c77772d"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+        "sha256": "65a85d9abc2d051570af72898bd8b8848c29d1fb20685c9b284ce6915fe8a8fe",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
+        "sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_transport_kms_entropy_status_boundary_audit.json",
+        "sha256": "ea7f6c0b9696e14e2e3164548207754508f105a7fd675820eb79c0338fdecf13",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json",
+        "sha256": "880eb2cc94543f19fefae13ad8c64af820bb619d9c898cd4e1e710494519d281",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "880eb2cc94543f19fefae13ad8c64af820bb619d9c898cd4e1e710494519d281"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_ding_pbte_payload_acceptance_audit.json",
+        "sha256": "e1c961aaa66030510ee3f34ef94e6b784777a1d9214bd98eb0f1b23a63b8fc5d",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "e1c961aaa66030510ee3f34ef94e6b784777a1d9214bd98eb0f1b23a63b8fc5d"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_ding_c_src_independent_reproduction_boundary_audit.json",
+        "sha256": "2144fbc51827b442216547d9d5f3d9e5fd432ad364e9a0a55d187b4a9890fbad",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "2144fbc51827b442216547d9d5f3d9e5fd432ad364e9a0a55d187b4a9890fbad"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
+        "sha256": "a2fb52533d768697950c49722e24e5de0d9d3381c24be6c5bf2e23f88a8957e0",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "a2fb52533d768697950c49722e24e5de0d9d3381c24be6c5bf2e23f88a8957e0"
+        }
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_nep_bte_reproduction_source_package.json",
+        "sha256": "a82b25ed00f896b759d2b577bdd046faf1c1ef1399b6f5d12b71c8bd6318e5ed",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "a82b25ed00f896b759d2b577bdd046faf1c1ef1399b6f5d12b71c8bd6318e5ed"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_csrc_equilibrium_component_acceptance_audit.json",
+        "sha256": "26f089063785fde068628bd071d8df1d7d50a53e2be46f7a73df627269632de1",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "26f089063785fde068628bd071d8df1d7d50a53e2be46f7a73df627269632de1"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json",
+        "sha256": "5e4e0d42d6e70612eabce988b86ab10b628dea14d4270bf2364ad58f572d014b",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "5e4e0d42d6e70612eabce988b86ab10b628dea14d4270bf2364ad58f572d014b"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_ding_alternate_public_dataset_discovery_boundary_audit.json",
+        "sha256": "6becdf0eb8270cf5c5dda7683b2839af52f38e407712787c03759015ff537f6f",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json",
+        "sha256": "0a3b785b0a75e72a41ef9ef4521879ef74cc191d5d46271eaa2a08f6b87e657b",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_csrc_source_route_priority_audit.json",
+        "sha256": "3944af5e35e7565b58d1a9861871e9d5e3c5ebe2fda1f58c8bdcc293ce01c2b6",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
+        "sha256": "818230a6f8aa68a14a1f642e1e7342d70bfa657f6e05476d3e190d336e77b386",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json",
+        "sha256": "d6e05b2dfe754cb17d17651666319dbc0ebf295a99258bd25f67e463eba68724",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+        "sha256": "9ea6f37eb43e353b8c89e42b1c3dd01c957b2063e41a09230483989accb2b3f4",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_heat_current_kubo_match_audit.json",
+        "sha256": "378b4e60dc39707037fd25b4a35031c4c2775ac38d015622fd23a9c4611e7770",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      }
+    ],
+    "input_package_audit": {
+      "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
+      "sha256": "f75326e8b7e2e0e8af2e11e75a2e37c2386325b0bf3748ee2d55644be8609d2b",
+      "summary": {
+        "role": "grouped Topic 13 closure-input acceptance audit",
+        "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
+      }
+    },
+    "verification_status": "PASS_MACHINE_READABLE_FULL_TOPIC_CLOSURE_CONTRACT_WITH_GATE_BOUNDARY",
+    "open_blockers": [],
+    "dependency_unlocked": "Full thermal bridge only; Core curved 3+1 remains a separate dependency.",
+    "claim_boundary": "This matrix reports progress and closure boundaries. It does not promote a lane-level PASS, comparator, no-go, or formal interface to Full Topic 13, Core, external validation, or a global UET claim.",
+    "required_major_result_count": 10,
+    "required_subresult_count": 37,
+    "current_major_result_counts": {
+      "CLOSED_AS_NO_GO": 1,
+      "OPEN": 3,
+      "PARTIAL": 6
+    },
+    "current_subresult_counts": {
+      "CLOSED_AS_NO_GO": 6,
+      "CLOSED_FOR_LANE": 21,
+      "OPEN": 10
+    },
+    "required_input_package_count": 3,
+    "closure_input_packages": [
+      {
+        "package_id": "T13_INPUT_DING_TTG_SOURCE",
+        "label": "Ding-compatible TTG source package",
+        "status": "OPEN_EXTERNAL_INPUT",
+        "purpose": "Accept the numeric source and same-regime thermodynamic uncertainty needed to connect PBTE energy to Delta_Tq.",
+        "minimum_records": [
+          "mode-resolved C_src(T) rows in J m^-3 K^-1 with temperature/state identity",
+          "material morphology, isotope/defect state, TTG response contract, and PBTE convergence record",
+          "source locator, permission, preprocessing, row identity, uncertainty, and SHA-256",
+          "same-grade alpha_V and K_T or a justified c_v conversion with propagated uncertainty"
+        ],
+        "unlocks_subresults": [
+          "accepted_numeric_csrc",
+          "material_and_uncertainty_closure",
+          "physical_source_backed_eos",
+          "physical_heat_flux_entropy_map"
+        ],
+        "controlling_blockers": [
+          "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+          "material_regime_mapping_to_TTG_not_closed",
+          "c_v_source_uncertainty_not_closed"
+        ],
+        "claim_boundary": "A comparator or figure-derived normalized curve is not accepted as the Ding numeric source without material/state and uncertainty equivalence."
+      },
+      {
+        "package_id": "T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
+        "label": "Base-Phi SI anchor and independent alpha/beta package",
+        "status": "OPEN_EXTERNAL_OR_DERIVATION_INPUT",
+        "purpose": "Fix the otherwise non-identifiable scale between normalized Phi and a dimensional energy or temperature response.",
+        "minimum_records": [
+          "dimensionful action/free-energy origin with coefficient provenance, or an independent paired base-Phi/SI response record",
+          "Phi amplitude, reference state, field normalization, and e0 in declared units",
+          "paired Delta_Phi with Delta_Tq or Delta_u_ph, uncertainty, locator, preprocessing, row identity, and hash",
+          "beta derivation separate from Landauer and from target/holdout tuning, with limiting-case and uncertainty checks"
+        ],
+        "unlocks_subresults": [
+          "base_phi_si_anchor",
+          "independent_alpha_record",
+          "normalized_beta_si_map",
+          "physical_source_backed_eos",
+          "physical_heat_flux_entropy_map"
+        ],
+        "controlling_blockers": [
+          "dimensional_phi_to_thermal_observable_map_missing",
+          "alpha_Phi_K_independent_calibration_missing",
+          "normalized_beta_and_SI_scale_correspondence_missing"
+        ],
+        "claim_boundary": "Normalized Phi shapes, Phi_E comparators, Landauer, and Xie 2026 cannot supply this scale by themselves."
+      },
+      {
+        "package_id": "T13_INPUT_PHYSICAL_TRANSPORT_MATCH",
+        "label": "Physical Kubo and SK/KMS transport package",
+        "status": "OPEN_MICROSCOPIC_OR_EXTERNAL_INPUT",
+        "purpose": "Connect the declared formal response lanes to one state-matched physical transport coefficient and its entropy/heat-flux consequences.",
+        "minimum_records": [
+          "coefficient_name, value, units, frame, temperature, chemical potential, and space-response state",
+          "retarded-correlator formula identifier, source locator, source hash, evidence status, and uncertainty",
+          "finite-temperature normal/condensed matching, KMS/FDT residuals, and no synthetic substitute",
+          "heat-flux and entropy-production propagation on the same state, including uncertainty"
+        ],
+        "unlocks_subresults": [
+          "physical_uet_kubo_record",
+          "physical_sk_transport_match",
+          "physical_entropy_production_mapping",
+          "physical_heat_flux_entropy_map"
+        ],
+        "controlling_blockers": [
+          "physical_Kubo_coefficient_record_missing"
+        ],
+        "claim_boundary": "The existing natural-unit Kubo and formal SK/KMS lanes remain lane evidence until a state-matched physical record passes this contract."
+      }
+    ]
+  },
+  "full_topic_closure_contract": {
+    "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_CORE",
+    "full_topic_ready": true,
+    "requirements_scope": "LEGACY_GRAPHITE_TTG_EXTERNAL_VALIDATION_PROJECTION_RETAINED_FOR_BACKWARD_COMPATIBILITY",
+    "what_is_closed": [
+      "T13_CAUSAL_THERMAL_BRANCH_CLOSURE"
+    ],
+    "what_remains_open": [],
+    "equation_or_mapping": {
+      "causal_structure": {
+        "baseline": "conserved-C local-gradient finite-cone candidate",
+        "named_branch": "coupled conserved-flux/Phi telegraph branch",
+        "gate": "pre_arrival_leakage <= 1e-6; arrival_target > 0"
+      },
+      "dimensional_phi_to_thermal_observable_map": {
+        "measurement": "y_TTG = Delta_Tq(t) / Delta_Tq(0)",
+        "uet_measurement": "y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)",
+        "dimensional": "Delta_Tq = alpha_Phi_K * Delta_Phi",
+        "conditional_energy": "Phi_E = s_material * Phi_base; e0 = c_v(T_ref) * T_ref"
+      },
+      "independent_alpha_Phi_K": "alpha_Phi_K = (e0 / c_v) * s_material; Delta_Tq = alpha_Phi_K * Delta_Phi",
+      "beta_and_si_correspondence": {
+        "normalized": "beta_T13 = T0 * (d a_Phi / dT)|T0",
+        "natural": "beta_phi_natural = T * partial_T(partial_Phi^2 Omega_T)",
+        "rule": "Landauer k_B T ln(2) is an imported constraint, not a beta derivation"
+      },
+      "charge_density_eos": {
+        "eos": "n_q = partial_mu p(T, mu, Phi)",
+        "stability": "partial_mu n_q >= 0",
+        "reciprocity": "mixed thermodynamic derivatives commute on the declared lane"
+      },
+      "covariant_thermal_transport": {
+        "constitutive": "q^mu = constitutive_response(Phi, T, gradients, state)",
+        "coefficient": "KuboCoefficientRecord -> physical coefficient only after provenance gate",
+        "comparator": "Fourier/Cattaneo/standard-fluid controls remain separate"
+      },
+      "sk_kms_matching": {
+        "kms": "G^K(omega) = coth(beta omega / 2) * (G^R(omega) - G^A(omega))",
+        "retarded": "Im G^R has the declared sign and analytic half-plane",
+        "fdt": "noise/dissipation relation is state matched"
+      },
+      "entropy_current_and_dissipative_balance": {
+        "entropy": "nabla_mu J_S^mu = q_perp^2/(kappa T^2) + X_A L^(AB) X_B >= 0",
+        "balance": "matter/UET energy exchange is explicit and does not silently backreact R_gen"
+      },
+      "source_and_uncertainty": {
+        "source": "C_src(T) = sum_mu c_mu(T)",
+        "observable": "Delta_Tq = Delta_u_ph / C_src(T)",
+        "record": "source identity + locator + units + uncertainty + preprocessing + row identity + hash"
+      },
+      "heat_flux_entropy_production_mapping": {
+        "source_response": "C_src(T) = sum_mu c_mu(T); Delta_Tq = Delta_u_ph / C_src(T)",
+        "heat_flux": "q^mu = thermal_response(Phi, T, gradients, state)",
+        "entropy": "nabla_mu J_S^mu >= 0"
+      }
+    },
+    "units": {
+      "causal_structure": {
+        "C": "lane-specific collective coordinate units",
+        "Phi": "normalized effective response variable",
+        "leakage": "dimensionless"
+      },
+      "dimensional_phi_to_thermal_observable_map": {
+        "y_TTG": "dimensionless",
+        "Delta_Tq": "K",
+        "Delta_Phi": "normalized Phi until an SI anchor exists",
+        "alpha_Phi_K": "K per normalized Phi",
+        "e0": "J m^-3"
+      },
+      "independent_alpha_Phi_K": {
+        "alpha_Phi_K": "K per normalized Phi",
+        "e0": "J m^-3",
+        "c_v": "J m^-3 K^-1",
+        "s_material": "dimensionless scale map only when independently derived"
+      },
+      "beta_and_si_correspondence": {
+        "beta_T13": "normalized local temperature slope",
+        "beta_phi_natural": "action-defined natural-unit coefficient",
+        "SI_map": "requires declared field and energy normalization"
+      },
+      "charge_density_eos": {
+        "p": "J m^-3 when dimensionful; natural-unit pressure in formal lane",
+        "n_q": "declared charge-density units",
+        "susceptibility": "charge-density per chemical-potential unit"
+      },
+      "covariant_thermal_transport": {
+        "q": "W m^-2 when SI heat flux is established",
+        "conductivity": "source-specific SI units",
+        "formal_transport": "natural-unit or conditional interface"
+      },
+      "sk_kms_matching": {
+        "correlators": "operator-dependent",
+        "beta": "inverse temperature in the declared unit system",
+        "noise": "coefficient-specific units"
+      },
+      "entropy_current_and_dissipative_balance": {
+        "J_S": "entropy current units in the declared SI or natural system",
+        "entropy_production": "entropy per volume per time",
+        "L": "Onsager coefficient-specific units"
+      },
+      "source_and_uncertainty": {
+        "C_src": "J m^-3 K^-1",
+        "Delta_u_ph": "J m^-3",
+        "Delta_Tq": "K"
+      },
+      "heat_flux_entropy_production_mapping": {
+        "C_src": "J m^-3 K^-1",
+        "Delta_u_ph": "J m^-3",
+        "Delta_Tq": "K",
+        "q": "W m^-2 when SI map is closed"
+      }
+    },
+    "derivation_class": "All ten major results must satisfy their declared derivation and evidence boundary; no lane PASS is sufficient by itself.",
+    "observable": [
+      [
+        "pre-arrival leakage",
+        "arrival target",
+        "energy ledger",
+        "convergence"
+      ],
+      "TTG thermal response amplitude Delta_Tq",
+      "TTG thermal amplitude per base-Phi amplitude",
+      "temperature-dependent Phi response coefficient",
+      "charge density, susceptibility, and thermal response",
+      "heat flux and thermal transport coefficient",
+      "retarded response, spectral density, and fluctuation-dissipation relation",
+      "entropy production, heat flux, and energy-exchange balance",
+      "TTG source C_src(T) and thermal response",
+      "TTG Delta_Tq, heat flux, and entropy production"
+    ],
+    "data_role": [
+      "INTERNAL_VERIFICATION",
+      "DERIVED_OR_CALIBRATION",
+      "CALIBRATION_ONLY",
+      "DERIVED_WITH_EXTERNAL_SCALE_INPUT",
+      "DERIVED_PLUS_EXTERNAL_INPUT",
+      "SYNTHETIC_CONTROL_PLUS_EXTERNAL_OR_MICROSCOPIC_INPUT",
+      "DERIVED_FORMAL_PLUS_MICROSCOPIC_MATCH",
+      "DERIVED_FORMAL_PLUS_EXTERNAL_OR_MICROSCOPIC_INPUT",
+      "DERIVED/CALIBRATION/TRAINING_COMPARISON/HOLDOUT",
+      "DERIVED_PLUS_EXTERNAL_VALIDATION_INPUT"
+    ],
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+        "sha256": "dc0d658a353172074425d2a8259dce3a4fa7b6b75bea68310c7a1492421d5d58",
+        "summary": {
+          "role": "canonical full Topic 13 readiness gate",
+          "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
+        "sha256": "f75326e8b7e2e0e8af2e11e75a2e37c2386325b0bf3748ee2d55644be8609d2b",
+        "summary": {
+          "role": "grouped Topic 13 closure-input acceptance audit",
+          "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json",
+        "sha256": "6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
+        "sha256": "1cb84b6c8e9741fef1dc6e0f83fba3dfe68ca6cd89adac8fa1a31835b4debf62",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "1cb84b6c8e9741fef1dc6e0f83fba3dfe68ca6cd89adac8fa1a31835b4debf62"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
+        "sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
+        "sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_mp48_phi_e_dimensional_comparator_audit.json",
+        "sha256": "46fad518feb670e7e3fe4faac47582f7a5e93b88985c53225d4da4e6fc7cde44",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "46fad518feb670e7e3fe4faac47582f7a5e93b88985c53225d4da4e6fc7cde44"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_covariant_matter_coupling_normalization_no_go.json",
+        "sha256": "bdda0a764af624ffb7b7c8bb04d1cb1bb44539a0159e4ca8ba9b825473e09675",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "bdda0a764af624ffb7b7c8bb04d1cb1bb44539a0159e4ca8ba9b825473e09675"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_thermal_bridge_scale_dependency_no_go.json",
+        "sha256": "a54b9e179e0905ea4c7cc8ecbd55922593d3b1bd96c2ae356b5fb22cd68d38e8",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "a54b9e179e0905ea4c7cc8ecbd55922593d3b1bd96c2ae356b5fb22cd68d38e8"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_phi_si_anchor_public_source_boundary_audit.json",
+        "sha256": "605245fa937cf5d2701a0afa0cc90a4f543052c4dd977066e1f3496bc12c50c5",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "605245fa937cf5d2701a0afa0cc90a4f543052c4dd977066e1f3496bc12c50c5"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_dimensional_bridge_contract_audit.json",
+        "sha256": "caf37f860838c1e424a2a37cde6a9c852e2f2af0f13e6b17a1e9589161faf500",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
+        "sha256": "ce0837792cd63918dc371f64fa49801bfb0dd0f715264c8557cf54f5dcbe9059",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json",
+        "sha256": "4d5f2e0d96d5d30d126243c9754d38a591680c9f3e0bbb62f0a3ece35cb2e3bc",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "4d5f2e0d96d5d30d126243c9754d38a591680c9f3e0bbb62f0a3ece35cb2e3bc"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_energy_response_bridge_audit.json",
+        "sha256": "9e2e6b43ffdd744588bd0ff206c0a178915ca17ec1c43493cee7bab1c3ee07e8",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "9e2e6b43ffdd744588bd0ff206c0a178915ca17ec1c43493cee7bab1c3ee07e8"
+        }
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_pbte_energy_temperature_source_package.json",
+        "sha256": "9f6b8d31ba2d7a6e56d6a323581bc6aecb91c6d0e61064d62a3972ee0e2c0d6f",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "9f6b8d31ba2d7a6e56d6a323581bc6aecb91c6d0e61064d62a3972ee0e2c0d6f"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_ding_pbte_energy_temperature_mapping_audit.json",
+        "sha256": "32d132bb695d62f52be337ce0cced4c57c43df13ea96b082c6f9ee416d0aed73",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "32d132bb695d62f52be337ce0cced4c57c43df13ea96b082c6f9ee416d0aed73"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_gatech_graphite_source_audit.json",
+        "sha256": "56866720546cdf201c5b45ef7262f82679a5676482835d6d476933f114b3d394",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "56866720546cdf201c5b45ef7262f82679a5676482835d6d476933f114b3d394"
+        }
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/gatech_gen3csp_graphite_source_package.json",
+        "sha256": "2635be1d91f35c9be6fd36d14a9e4d04384f158dd90340b59c5d7fa3f277bd51",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "2635be1d91f35c9be6fd36d14a9e4d04384f158dd90340b59c5d7fa3f277bd51"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
+        "sha256": "1828db74760ac53c73345d0e4a8adc8fc00fc16bb25e84809a73aaa3cd9b3d9a",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "5afc8eb41d78e6a23d343954cab18e284e8f53b3c7bbc149a0bf9f5bc55038bf"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_alpha_phi_k_identifiability_audit.json",
+        "sha256": "31c38eef3132d72e5b090725f4d7524bde3d7da5eb5d69ad383ff442e097988e",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_base_phi_independent_calibration_requirement.json",
+        "sha256": "0c4aaa38c138f9818c1a1e81a93dc7512f859c0d9095e238d2c12e7a3cf31c05",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_formal_bridge_boundary_audit.json",
+        "sha256": "69d5480c900b21476378cb787b0e49198b8451bb7c7a8df2dbbda42284dfcab9",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "69d5480c900b21476378cb787b0e49198b8451bb7c7a8df2dbbda42284dfcab9"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_action_thermal_observable_bridge_audit.json",
+        "sha256": "7ba49d3f629c91f3f88dda6ad717d8928e58439de7517a5979f0a465b9f52585",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "7ba49d3f629c91f3f88dda6ad717d8928e58439de7517a5979f0a465b9f52585"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_beta_action_normalized_correspondence_no_go.json",
+        "sha256": "0c3dcff4f3520849f48f64043d52d3f735f95cabb96e606b1a7a1f65ce3d48e6",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "0c3dcff4f3520849f48f64043d52d3f735f95cabb96e606b1a7a1f65ce3d48e6"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_beta_symbol_separation_noncircularity_audit.json",
+        "sha256": "a3da7d05516f0d6f6deb8552be00a49d3817cfe684f2a677a907ebfa2b170576",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_action_thermal_stiffness_beta_audit.json",
+        "sha256": "c8079bbdbfa3a340e66b26dfa4d2f0cb93a5b32a1ef6827e604415958b4c649e",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_collective_response_eos_stability_audit.json",
+        "sha256": "5bcdbfdd4f14b6d28ce6bdd737020030b85add2f5f0a38db22e9e36d9c77772d",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "5bcdbfdd4f14b6d28ce6bdd737020030b85add2f5f0a38db22e9e36d9c77772d"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+        "sha256": "65a85d9abc2d051570af72898bd8b8848c29d1fb20685c9b284ce6915fe8a8fe",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
+        "sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_transport_kms_entropy_status_boundary_audit.json",
+        "sha256": "ea7f6c0b9696e14e2e3164548207754508f105a7fd675820eb79c0338fdecf13",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json",
+        "sha256": "880eb2cc94543f19fefae13ad8c64af820bb619d9c898cd4e1e710494519d281",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "880eb2cc94543f19fefae13ad8c64af820bb619d9c898cd4e1e710494519d281"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_ding_pbte_payload_acceptance_audit.json",
+        "sha256": "e1c961aaa66030510ee3f34ef94e6b784777a1d9214bd98eb0f1b23a63b8fc5d",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "e1c961aaa66030510ee3f34ef94e6b784777a1d9214bd98eb0f1b23a63b8fc5d"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_ding_c_src_independent_reproduction_boundary_audit.json",
+        "sha256": "2144fbc51827b442216547d9d5f3d9e5fd432ad364e9a0a55d187b4a9890fbad",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "2144fbc51827b442216547d9d5f3d9e5fd432ad364e9a0a55d187b4a9890fbad"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
+        "sha256": "a2fb52533d768697950c49722e24e5de0d9d3381c24be6c5bf2e23f88a8957e0",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "a2fb52533d768697950c49722e24e5de0d9d3381c24be6c5bf2e23f88a8957e0"
+        }
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_nep_bte_reproduction_source_package.json",
+        "sha256": "a82b25ed00f896b759d2b577bdd046faf1c1ef1399b6f5d12b71c8bd6318e5ed",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "a82b25ed00f896b759d2b577bdd046faf1c1ef1399b6f5d12b71c8bd6318e5ed"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_csrc_equilibrium_component_acceptance_audit.json",
+        "sha256": "26f089063785fde068628bd071d8df1d7d50a53e2be46f7a73df627269632de1",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "26f089063785fde068628bd071d8df1d7d50a53e2be46f7a73df627269632de1"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json",
+        "sha256": "5e4e0d42d6e70612eabce988b86ab10b628dea14d4270bf2364ad58f572d014b",
+        "summary": {
+          "role": "gate-linked evidence",
+          "reported_sha256": "5e4e0d42d6e70612eabce988b86ab10b628dea14d4270bf2364ad58f572d014b"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_ding_alternate_public_dataset_discovery_boundary_audit.json",
+        "sha256": "6becdf0eb8270cf5c5dda7683b2839af52f38e407712787c03759015ff537f6f",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json",
+        "sha256": "0a3b785b0a75e72a41ef9ef4521879ef74cc191d5d46271eaa2a08f6b87e657b",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_csrc_source_route_priority_audit.json",
+        "sha256": "3944af5e35e7565b58d1a9861871e9d5e3c5ebe2fda1f58c8bdcc293ce01c2b6",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
+        "sha256": "818230a6f8aa68a14a1f642e1e7342d70bfa657f6e05476d3e190d336e77b386",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json",
+        "sha256": "d6e05b2dfe754cb17d17651666319dbc0ebf295a99258bd25f67e463eba68724",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+        "sha256": "9ea6f37eb43e353b8c89e42b1c3dd01c957b2063e41a09230483989accb2b3f4",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_heat_current_kubo_match_audit.json",
+        "sha256": "378b4e60dc39707037fd25b4a35031c4c2775ac38d015622fd23a9c4611e7770",
+        "summary": {
+          "role": "declared Topic 13 closure-contract evidence"
+        }
+      }
+    ],
+    "input_package_audit": {
+      "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
+      "sha256": "f75326e8b7e2e0e8af2e11e75a2e37c2386325b0bf3748ee2d55644be8609d2b",
+      "summary": {
+        "role": "grouped Topic 13 closure-input acceptance audit",
+        "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
+      }
+    },
+    "verification_status": {
+      "canonical_gate_status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
+      "full_core_unlock": true,
+      "holdout_consumed": false,
+      "claim_promotion": false,
+      "major_result_status_counts": {
+        "CLOSED_AS_NO_GO": 1,
+        "OPEN": 3,
+        "PARTIAL": 6
+      },
+      "subresult_status_counts": {
+        "CLOSED_AS_NO_GO": 6,
+        "CLOSED_FOR_LANE": 21,
+        "OPEN": 10
+      }
+    },
+    "open_blockers": [],
+    "dependency_unlocked": "Topic 13 thermal bridge only; downstream gravity still requires Core curved 3+1.",
+    "claim_boundary": "CLOSED_FOR_CORE means the thermal bridge is internally integrated and ready for Core handoff. It is not external-ready and does not close global UET.",
+    "required_major_result_count": 10,
+    "required_subresult_count": 37,
+    "current_major_result_counts": {
+      "CLOSED_AS_NO_GO": 1,
+      "OPEN": 3,
+      "PARTIAL": 6
+    },
+    "current_subresult_counts": {
+      "CLOSED_AS_NO_GO": 6,
+      "CLOSED_FOR_LANE": 21,
+      "OPEN": 10
+    },
+    "required_input_package_count": 3,
+    "closure_input_packages": [
+      {
+        "package_id": "T13_INPUT_DING_TTG_SOURCE",
+        "label": "Ding-compatible TTG source package",
+        "status": "OPEN_EXTERNAL_INPUT",
+        "purpose": "Accept the numeric source and same-regime thermodynamic uncertainty needed to connect PBTE energy to Delta_Tq.",
+        "minimum_records": [
+          "mode-resolved C_src(T) rows in J m^-3 K^-1 with temperature/state identity",
+          "material morphology, isotope/defect state, TTG response contract, and PBTE convergence record",
+          "source locator, permission, preprocessing, row identity, uncertainty, and SHA-256",
+          "same-grade alpha_V and K_T or a justified c_v conversion with propagated uncertainty"
+        ],
+        "unlocks_subresults": [
+          "accepted_numeric_csrc",
+          "material_and_uncertainty_closure",
+          "physical_source_backed_eos",
+          "physical_heat_flux_entropy_map"
+        ],
+        "controlling_blockers": [
+          "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+          "material_regime_mapping_to_TTG_not_closed",
+          "c_v_source_uncertainty_not_closed"
+        ],
+        "claim_boundary": "A comparator or figure-derived normalized curve is not accepted as the Ding numeric source without material/state and uncertainty equivalence."
+      },
+      {
+        "package_id": "T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
+        "label": "Base-Phi SI anchor and independent alpha/beta package",
+        "status": "OPEN_EXTERNAL_OR_DERIVATION_INPUT",
+        "purpose": "Fix the otherwise non-identifiable scale between normalized Phi and a dimensional energy or temperature response.",
+        "minimum_records": [
+          "dimensionful action/free-energy origin with coefficient provenance, or an independent paired base-Phi/SI response record",
+          "Phi amplitude, reference state, field normalization, and e0 in declared units",
+          "paired Delta_Phi with Delta_Tq or Delta_u_ph, uncertainty, locator, preprocessing, row identity, and hash",
+          "beta derivation separate from Landauer and from target/holdout tuning, with limiting-case and uncertainty checks"
+        ],
+        "unlocks_subresults": [
+          "base_phi_si_anchor",
+          "independent_alpha_record",
+          "normalized_beta_si_map",
+          "physical_source_backed_eos",
+          "physical_heat_flux_entropy_map"
+        ],
+        "controlling_blockers": [
+          "dimensional_phi_to_thermal_observable_map_missing",
+          "alpha_Phi_K_independent_calibration_missing",
+          "normalized_beta_and_SI_scale_correspondence_missing"
+        ],
+        "claim_boundary": "Normalized Phi shapes, Phi_E comparators, Landauer, and Xie 2026 cannot supply this scale by themselves."
+      },
+      {
+        "package_id": "T13_INPUT_PHYSICAL_TRANSPORT_MATCH",
+        "label": "Physical Kubo and SK/KMS transport package",
+        "status": "OPEN_MICROSCOPIC_OR_EXTERNAL_INPUT",
+        "purpose": "Connect the declared formal response lanes to one state-matched physical transport coefficient and its entropy/heat-flux consequences.",
+        "minimum_records": [
+          "coefficient_name, value, units, frame, temperature, chemical potential, and space-response state",
+          "retarded-correlator formula identifier, source locator, source hash, evidence status, and uncertainty",
+          "finite-temperature normal/condensed matching, KMS/FDT residuals, and no synthetic substitute",
+          "heat-flux and entropy-production propagation on the same state, including uncertainty"
+        ],
+        "unlocks_subresults": [
+          "physical_uet_kubo_record",
+          "physical_sk_transport_match",
+          "physical_entropy_production_mapping",
+          "physical_heat_flux_entropy_map"
+        ],
+        "controlling_blockers": [
+          "physical_Kubo_coefficient_record_missing"
+        ],
+        "claim_boundary": "The existing natural-unit Kubo and formal SK/KMS lanes remain lane evidence until a state-matched physical record passes this contract."
+      }
+    ],
+    "full_topic_closure_rule": {
+      "required_major_result_level": "CLOSED_FOR_CORE",
+      "causal_exception": "The conserved-C baseline may be CLOSED_AS_NO_GO only when the named causal branch is separately CLOSED_FOR_CORE and the no-go scope remains explicit.",
+      "causal_exception_status": {
+        "status": "PASS",
+        "closure_level": "CLOSED_FOR_CORE",
+        "evidence_result_id": "T13_CAUSAL_FLUX_PHI_COUPLED_CORE_COMPATIBILITY",
+        "artifact": {
+          "path": "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json",
+          "sha256": "6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a"
+        },
+        "claim_boundary": "Named normalized causal branch only; original conserved-C baseline remains blocked."
+      },
+      "required_subresult_statuses": [
+        "CLOSED_FOR_LANE",
+        "CLOSED_AS_NO_GO",
+        "CLOSED_FOR_CORE"
+      ],
+      "required_gate_status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+      "holdout_requirement": "Xie 2026 must remain unread by calibration, fitting, tuning, and threshold paths.",
+      "claim_promotion": false
+    }
+  },
+  "requirements": [
+    {
+      "requirement_id": "causal_structure",
+      "label": "Causal thermal branch",
+      "gate_key": "causal_full_candidate_or_formal_no_go_branch",
+      "closure_level": "CLOSED_AS_NO_GO",
+      "what_is_closed": "The finite-cone compatibility question is closed as a scoped no-go for the declared local conserved-C gradient class. The named coupled conserved-flux/Phi branch is retained separately with its own causal checks. The named normalized coupled branch is separately CLOSED_FOR_CORE as a bounded Core input.",
+      "what_remains_open": "The original conserved-C full-candidate baseline remains blocked; the named branch does not replace it.",
+      "dependency_unlocked": "Named causal branch as a bounded Core input only; no Full Topic 13 or downstream unlock.",
+      "major_result_id": "T13_CAUSAL_THERMAL_BRANCH_CLOSURE",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "equation_or_mapping": {
+        "baseline": "conserved-C local-gradient finite-cone candidate",
+        "named_branch": "coupled conserved-flux/Phi telegraph branch",
+        "gate": "pre_arrival_leakage <= 1e-6; arrival_target > 0"
+      },
+      "units": {
+        "C": "lane-specific collective coordinate units",
+        "Phi": "normalized effective response variable",
+        "leakage": "dimensionless"
+      },
+      "derivation_class": "structural no-go plus explicit finite-cone verification",
+      "observable": [
+        "pre-arrival leakage",
+        "arrival target",
+        "energy ledger",
+        "convergence"
+      ],
+      "data_role": "INTERNAL_VERIFICATION",
+      "claim_boundary": "The conserved-C structural question is a scoped no-go and the named causal branch is retained separately; neither alone closes the full thermal bridge.",
+      "core_handoff_contract": {
+        "required_closure_level": "CLOSED_FOR_CORE",
+        "evidence_result_id": "T13_CAUSAL_FLUX_PHI_COUPLED_CORE_COMPATIBILITY",
+        "acceptance": "The named normalized coupled branch passes the unchanged causal, convergence, ledger, ontology, and holdout-preservation checks without replacing the original baseline."
+      },
+      "acceptance_criteria": [
+        "formal no-go or explicit regularization is recorded",
+        "pre-arrival leakage <= 1e-6 without clipping or cone padding",
+        "arrival target is nonzero",
+        "temporal/spatial convergence and energy-ledger closure pass",
+        "C, Phi, R_gen, and R_obs retain their declared meanings"
+      ],
+      "blocker_keys": [],
+      "evidence_paths": [
+        "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
+        "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
+        "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
+        "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json"
+      ],
+      "required_subresults": [
+        {
+          "subresult_id": "conserved_c_local_gradient_no_go",
+          "label": "Conserved-C local-gradient no-go",
+          "required_closure_level": "CLOSED_AS_NO_GO",
+          "gate_key": "causal_full_candidate_or_formal_no_go_branch",
+          "acceptance": "The principal-symbol incompatibility is scoped to the declared baseline and recorded without deleting it.",
+          "status": "CLOSED_AS_NO_GO",
+          "evidence_result_ids": []
+        },
+        {
+          "subresult_id": "finite_cone_telegraph_branch",
+          "label": "Named finite-cone telegraph branch",
+          "evidence_result_ids": [
+            "T13_CAUSAL_FLUX_TELEGRAPH_BRANCH"
+          ],
+          "required_closure_level": "CLOSED_FOR_LANE",
+          "acceptance": "The branch has explicit equations, domain-of-dependence checks, and the unchanged leakage threshold.",
+          "status": "CLOSED_FOR_LANE"
+        },
+        {
+          "subresult_id": "coupled_flux_phi_causal_branch",
+          "label": "Coupled flux-Phi causal branch",
+          "evidence_result_ids": [
+            "T13_CAUSAL_FLUX_PHI_COUPLED_LANE"
+          ],
+          "required_closure_level": "CLOSED_FOR_LANE",
+          "acceptance": "The named coupled branch passes arrival, ledger, convergence, and anti-manipulation checks.",
+          "status": "CLOSED_FOR_LANE"
+        },
+        {
+          "subresult_id": "causal_branch_selection_boundary",
+          "label": "Baseline versus named-branch selection boundary",
+          "evidence_result_ids": [
+            "T13_CAUSAL_THERMAL_BRANCH_SELECTION"
+          ],
+          "required_closure_level": "CLOSED_FOR_LANE",
+          "acceptance": "The named branch is not silently promoted as the original conserved-C baseline.",
+          "status": "CLOSED_FOR_LANE"
+        }
+      ],
+      "core_handoff": {
+        "status": "PASS",
+        "closure_level": "CLOSED_FOR_CORE",
+        "evidence_result_id": "T13_CAUSAL_FLUX_PHI_COUPLED_CORE_COMPATIBILITY",
+        "artifact": {
+          "path": "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json",
+          "sha256": "6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a"
+        },
+        "claim_boundary": "Named normalized causal branch only; original conserved-C baseline remains blocked."
+      },
+      "gate_status": "PASS",
+      "gate_controlling_blocker": "original_conserved_c_gradient_baseline_blocked",
+      "gate_lane_status": "PASS",
+      "gate_lane_closure_level": "CLOSED_FOR_LANE",
+      "component_lane_status": null,
+      "component_lane_closure_level": null,
+      "component_lane_controlling_blocker": null,
+      "verification_status": {
+        "gate_status": "PASS",
+        "gate_controlling_blocker": "original_conserved_c_gradient_baseline_blocked",
+        "gate_lane_status": "PASS",
+        "gate_lane_closure_level": "CLOSED_FOR_LANE",
+        "component_lane_status": null,
+        "component_lane_closure_level": null,
+        "component_lane_controlling_blocker": null,
+        "subresult_status_counts": {
+          "CLOSED_AS_NO_GO": 1,
+          "CLOSED_FOR_LANE": 3
+        }
+      },
+      "open_blockers": [],
+      "subresult_summary": {
+        "required_count": 4,
+        "status_counts": {
+          "CLOSED_AS_NO_GO": 1,
+          "CLOSED_FOR_LANE": 3
+        },
+        "all_required_subresults_closed": true
+      },
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json",
+          "sha256": "6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
+          "sha256": "1cb84b6c8e9741fef1dc6e0f83fba3dfe68ca6cd89adac8fa1a31835b4debf62",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "1cb84b6c8e9741fef1dc6e0f83fba3dfe68ca6cd89adac8fa1a31835b4debf62"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
+          "sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b",
+          "summary": {
+            "role": "declared Topic 13 closure-contract evidence"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
+          "sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b",
+          "summary": {
+            "role": "declared Topic 13 closure-contract evidence"
+          }
+        }
+      ]
+    },
+    {
+      "requirement_id": "dimensional_phi_to_thermal_observable_map",
+      "label": "Dimensional Phi-to-thermal observable map",
+      "gate_key": "dimensional_observable_map",
+      "closure_level": "OPEN",
+      "what_is_closed": "The normalized measurement operator and the conditional dimensional operator are explicitly separated.",
+      "what_remains_open": "A physical base-Phi-to-energy/temperature map with a declared SI anchor is not identified.",
+      "dependency_unlocked": "None.",
+      "major_result_id": "T13_DIMENSIONAL_PHI_THERMAL_OBSERVABLE_MAP",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "equation_or_mapping": {
+        "measurement": "y_TTG = Delta_Tq(t) / Delta_Tq(0)",
+        "uet_measurement": "y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)",
+        "dimensional": "Delta_Tq = alpha_Phi_K * Delta_Phi",
+        "conditional_energy": "Phi_E = s_material * Phi_base; e0 = c_v(T_ref) * T_ref"
+      },
+      "units": {
+        "y_TTG": "dimensionless",
+        "Delta_Tq": "K",
+        "Delta_Phi": "normalized Phi until an SI anchor exists",
+        "alpha_Phi_K": "K per normalized Phi",
+        "e0": "J m^-3"
+      },
+      "derivation_class": "conditional dimensional derivation plus independent calibration requirement",
+      "observable": "TTG thermal response amplitude Delta_Tq",
+      "data_role": "DERIVED_OR_CALIBRATION",
+      "claim_boundary": "The normalized operator is usable now; no absolute SI Phi map is promoted until its scale is derived or independently calibrated.",
+      "acceptance_criteria": [
+        "normalized and dimensional operators remain separate",
+        "Phi-to-energy or Phi-to-temperature map has an explicit SI anchor",
+        "all coefficients have units and uncertainty propagation",
+        "the map is not selected from the target curve or Xie holdout"
+      ],
+      "blocker_keys": [
+        "dimensional_phi_to_thermal_observable_map_missing"
+      ],
+      "evidence_paths": [
+        "docs/core/artifacts/t13_dimensional_bridge_contract_audit.json",
+        "docs/core/artifacts/t13_mp48_phi_e_dimensional_comparator_audit.json",
+        "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json"
+      ],
+      "required_subresults": [
+        {
+          "subresult_id": "normalized_ttg_measurement_operator",
+          "label": "Normalized TTG measurement operator",
+          "current_status": "CLOSED_FOR_LANE",
+          "acceptance": "The TTG and UET normalized curves use the declared ratio operators with no SI claim.",
+          "status": "CLOSED_FOR_LANE",
+          "evidence_result_ids": []
+        },
+        {
+          "subresult_id": "phi_e_named_dimensional_comparator",
+          "label": "Named Phi_E dimensional comparator",
+          "evidence_result_ids": [
+            "T13_MP48_PHI_E_DIMENSIONAL_ANCHOR_COMPARATOR",
+            "T13_PHI_E_REFERENCE_NORMALIZATION",
+            "T13_PHI_E_TTG_BRIDGE_CONDITIONAL"
+          ],
+          "required_closure_level": "CLOSED_FOR_LANE",
+          "acceptance": "Phi_E is kept as a separate conditional lane and is not relabeled as base Phi.",
+          "status": "CLOSED_FOR_LANE"
+        },
+        {
+          "subresult_id": "base_phi_si_anchor",
+          "label": "Base-Phi SI energy/temperature anchor",
+          "current_status": "OPEN",
+          "required_closure_level": "CLOSED_FOR_CORE",
+          "acceptance": "A declared dimensionful action/free-energy origin or an independent paired base-Phi/SI response record is accepted.",
+          "status": "OPEN",
+          "evidence_result_ids": []
+        }
+      ],
+      "gate_status": "BLOCKED",
+      "gate_controlling_blocker": "dimensional_phi_to_thermal_observable_map_missing",
+      "gate_lane_status": null,
+      "gate_lane_closure_level": null,
+      "component_lane_status": null,
+      "component_lane_closure_level": null,
+      "component_lane_controlling_blocker": null,
+      "verification_status": {
+        "gate_status": "BLOCKED",
+        "gate_controlling_blocker": "dimensional_phi_to_thermal_observable_map_missing",
+        "gate_lane_status": null,
+        "gate_lane_closure_level": null,
+        "component_lane_status": null,
+        "component_lane_closure_level": null,
+        "component_lane_controlling_blocker": null,
+        "subresult_status_counts": {
+          "CLOSED_FOR_LANE": 2,
+          "OPEN": 1
+        }
+      },
+      "open_blockers": [
+        "dimensional_phi_to_thermal_observable_map_missing"
+      ],
+      "subresult_summary": {
+        "required_count": 3,
+        "status_counts": {
+          "CLOSED_FOR_LANE": 2,
+          "OPEN": 1
+        },
+        "all_required_subresults_closed": false
+      },
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_mp48_phi_e_dimensional_comparator_audit.json",
+          "sha256": "46fad518feb670e7e3fe4faac47582f7a5e93b88985c53225d4da4e6fc7cde44",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "46fad518feb670e7e3fe4faac47582f7a5e93b88985c53225d4da4e6fc7cde44"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_covariant_matter_coupling_normalization_no_go.json",
+          "sha256": "bdda0a764af624ffb7b7c8bb04d1cb1bb44539a0159e4ca8ba9b825473e09675",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "bdda0a764af624ffb7b7c8bb04d1cb1bb44539a0159e4ca8ba9b825473e09675"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_thermal_bridge_scale_dependency_no_go.json",
+          "sha256": "a54b9e179e0905ea4c7cc8ecbd55922593d3b1bd96c2ae356b5fb22cd68d38e8",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "a54b9e179e0905ea4c7cc8ecbd55922593d3b1bd96c2ae356b5fb22cd68d38e8"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_phi_si_anchor_public_source_boundary_audit.json",
+          "sha256": "605245fa937cf5d2701a0afa0cc90a4f543052c4dd977066e1f3496bc12c50c5",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "605245fa937cf5d2701a0afa0cc90a4f543052c4dd977066e1f3496bc12c50c5"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_dimensional_bridge_contract_audit.json",
+          "sha256": "caf37f860838c1e424a2a37cde6a9c852e2f2af0f13e6b17a1e9589161faf500",
+          "summary": {
+            "role": "declared Topic 13 closure-contract evidence"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
+          "sha256": "ce0837792cd63918dc371f64fa49801bfb0dd0f715264c8557cf54f5dcbe9059",
+          "summary": {
+            "role": "declared Topic 13 closure-contract evidence"
+          }
+        }
+      ]
+    },
+    {
+      "requirement_id": "independent_alpha_Phi_K",
+      "label": "Independent alpha_Phi_K",
+      "gate_key": "alpha_Phi_K",
+      "closure_level": "OPEN",
+      "what_is_closed": "The candidate search and anti-fitting acceptance contract are closed; no eligible paired record was found.",
+      "what_remains_open": "An independent base-Phi amplitude paired with an SI thermal/energy response and uncertainty required for alpha_Phi_K is missing.",
+      "dependency_unlocked": "None; the Xie 2026 holdout remains locked.",
+      "major_result_id": "T13_ALPHA_PHI_K_INDEPENDENT_CALIBRATION",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "equation_or_mapping": "alpha_Phi_K = (e0 / c_v) * s_material; Delta_Tq = alpha_Phi_K * Delta_Phi",
+      "units": {
+        "alpha_Phi_K": "K per normalized Phi",
+        "e0": "J m^-3",
+        "c_v": "J m^-3 K^-1",
+        "s_material": "dimensionless scale map only when independently derived"
+      },
+      "derivation_class": "derived only from a declared scale origin or external independent calibration",
+      "observable": "TTG thermal amplitude per base-Phi amplitude",
+      "data_role": "CALIBRATION_ONLY",
+      "claim_boundary": "No numeric alpha is emitted from normalized shapes, Landauer, Phi_E convention, or Xie 2026.",
+      "acceptance_criteria": [
+        "paired base-Phi amplitude and SI thermal/energy response",
+        "source identity, locator, preprocessing, row identity, units, uncertainty, and hash",
+        "independence statement proving the record was not selected from the target curve",
+        "calibration path audit proves Xie 2026 was not read"
+      ],
+      "blocker_keys": [
+        "alpha_Phi_K_independent_calibration_missing"
+      ],
+      "evidence_paths": [
+        "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json",
+        "docs/core/artifacts/t13_alpha_phi_k_identifiability_audit.json",
+        "docs/core/artifacts/t13_base_phi_independent_calibration_requirement.json"
+      ],
+      "required_subresults": [
+        {
+          "subresult_id": "alpha_candidate_search_boundary",
+          "label": "Independent alpha candidate search boundary",
+          "evidence_result_ids": [
+            "T13_ALPHA_PHI_K_PAIRED_RECORD_SEARCH"
+          ],
+          "required_closure_level": "CLOSED_FOR_LANE",
+          "acceptance": "All screened candidates are recorded and zero eligible paired records is reported without a substitute value.",
+          "status": "CLOSED_FOR_LANE"
+        },
+        {
+          "subresult_id": "normalized_alpha_scale_no_go",
+          "label": "Normalized-alpha scale identifiability no-go",
+          "evidence_result_ids": [
+            "T13_ALPHA_PHI_K_NORMALIZED_SCALE_NO_GO"
+          ],
+          "required_closure_level": "CLOSED_AS_NO_GO",
+          "acceptance": "The transformation Delta_Phi -> s Delta_Phi and alpha -> alpha/s is recorded as the reason normalized data cannot identify alpha.",
+          "status": "CLOSED_AS_NO_GO"
+        },
+        {
+          "subresult_id": "independent_alpha_record",
+          "label": "Independent numeric alpha record with uncertainty",
+          "current_status": "OPEN",
+          "required_closure_level": "CLOSED_FOR_CORE",
+          "acceptance": "One eligible non-holdout paired record or a derivation with an independently fixed SI scale is accepted.",
+          "status": "OPEN",
+          "evidence_result_ids": []
+        }
+      ],
+      "gate_status": "BLOCKED",
+      "gate_controlling_blocker": "alpha_Phi_K_independent_calibration_missing",
+      "gate_lane_status": null,
+      "gate_lane_closure_level": null,
+      "component_lane_status": null,
+      "component_lane_closure_level": null,
+      "component_lane_controlling_blocker": null,
+      "verification_status": {
+        "gate_status": "BLOCKED",
+        "gate_controlling_blocker": "alpha_Phi_K_independent_calibration_missing",
+        "gate_lane_status": null,
+        "gate_lane_closure_level": null,
+        "component_lane_status": null,
+        "component_lane_closure_level": null,
+        "component_lane_controlling_blocker": null,
+        "subresult_status_counts": {
+          "CLOSED_FOR_LANE": 1,
+          "CLOSED_AS_NO_GO": 1,
+          "OPEN": 1
+        }
+      },
+      "open_blockers": [
+        "alpha_Phi_K_independent_calibration_missing"
+      ],
+      "subresult_summary": {
+        "required_count": 3,
+        "status_counts": {
+          "CLOSED_FOR_LANE": 1,
+          "CLOSED_AS_NO_GO": 1,
+          "OPEN": 1
+        },
+        "all_required_subresults_closed": false
+      },
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json",
+          "sha256": "4d5f2e0d96d5d30d126243c9754d38a591680c9f3e0bbb62f0a3ece35cb2e3bc",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "4d5f2e0d96d5d30d126243c9754d38a591680c9f3e0bbb62f0a3ece35cb2e3bc"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_dimensional_bridge_contract_audit.json",
+          "sha256": "caf37f860838c1e424a2a37cde6a9c852e2f2af0f13e6b17a1e9589161faf500",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "caf37f860838c1e424a2a37cde6a9c852e2f2af0f13e6b17a1e9589161faf500"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_energy_response_bridge_audit.json",
+          "sha256": "9e2e6b43ffdd744588bd0ff206c0a178915ca17ec1c43493cee7bab1c3ee07e8",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "9e2e6b43ffdd744588bd0ff206c0a178915ca17ec1c43493cee7bab1c3ee07e8"
+          }
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_pbte_energy_temperature_source_package.json",
+          "sha256": "9f6b8d31ba2d7a6e56d6a323581bc6aecb91c6d0e61064d62a3972ee0e2c0d6f",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "9f6b8d31ba2d7a6e56d6a323581bc6aecb91c6d0e61064d62a3972ee0e2c0d6f"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_ding_pbte_energy_temperature_mapping_audit.json",
+          "sha256": "32d132bb695d62f52be337ce0cced4c57c43df13ea96b082c6f9ee416d0aed73",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "32d132bb695d62f52be337ce0cced4c57c43df13ea96b082c6f9ee416d0aed73"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_gatech_graphite_source_audit.json",
+          "sha256": "56866720546cdf201c5b45ef7262f82679a5676482835d6d476933f114b3d394",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "56866720546cdf201c5b45ef7262f82679a5676482835d6d476933f114b3d394"
+          }
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/gatech_gen3csp_graphite_source_package.json",
+          "sha256": "2635be1d91f35c9be6fd36d14a9e4d04384f158dd90340b59c5d7fa3f277bd51",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "2635be1d91f35c9be6fd36d14a9e4d04384f158dd90340b59c5d7fa3f277bd51"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
+          "sha256": "1828db74760ac53c73345d0e4a8adc8fc00fc16bb25e84809a73aaa3cd9b3d9a",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "5afc8eb41d78e6a23d343954cab18e284e8f53b3c7bbc149a0bf9f5bc55038bf"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_alpha_phi_k_identifiability_audit.json",
+          "sha256": "31c38eef3132d72e5b090725f4d7524bde3d7da5eb5d69ad383ff442e097988e",
+          "summary": {
+            "role": "declared Topic 13 closure-contract evidence"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_base_phi_independent_calibration_requirement.json",
+          "sha256": "0c4aaa38c138f9818c1a1e81a93dc7512f859c0d9095e238d2c12e7a3cf31c05",
+          "summary": {
+            "role": "declared Topic 13 closure-contract evidence"
+          }
+        }
+      ]
+    },
+    {
+      "requirement_id": "beta_and_si_correspondence",
+      "label": "Beta and SI correspondence",
+      "gate_key": "non_circular_bridge",
+      "closure_level": "PARTIAL",
+      "what_is_closed": "A non-Landauer action-origin natural-unit stiffness slope and a formal finite-temperature beta contract are recorded.",
+      "what_remains_open": "The normalized beta_T13, energy reference, field normalization, and SI coefficient provenance are not identified.",
+      "dependency_unlocked": "Natural-unit/formal beta lanes only; no SI unlock.",
+      "major_result_id": "T13_UET_BRIDGE_BETA_SI_CORRESPONDENCE",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "equation_or_mapping": {
+        "normalized": "beta_T13 = T0 * (d a_Phi / dT)|T0",
+        "natural": "beta_phi_natural = T * partial_T(partial_Phi^2 Omega_T)",
+        "rule": "Landauer k_B T ln(2) is an imported constraint, not a beta derivation"
+      },
+      "units": {
+        "beta_T13": "normalized local temperature slope",
+        "beta_phi_natural": "action-defined natural-unit coefficient",
+        "SI_map": "requires declared field and energy normalization"
+      },
+      "derivation_class": "non-circular action-origin formal derivation plus SI correspondence gate",
+      "observable": "temperature-dependent Phi response coefficient",
+      "data_role": "DERIVED_WITH_EXTERNAL_SCALE_INPUT",
+      "claim_boundary": "The natural-unit beta lane does not become normalized beta_T13 or an SI coefficient without an independent scale map.",
+      "acceptance_criteria": [
+        "beta origin is separate from Landauer identity",
+        "field normalization, energy reference, and Kelvin scale are declared",
+        "normalized beta and uncertainty are derived without holdout fitting",
+        "limiting cases and unit closure pass"
+      ],
+      "blocker_keys": [
+        "normalized_beta_and_SI_scale_correspondence_missing"
+      ],
+      "evidence_paths": [
+        "docs/core/artifacts/t13_beta_action_normalized_correspondence_no_go.json",
+        "docs/core/artifacts/t13_beta_symbol_separation_noncircularity_audit.json",
+        "docs/core/artifacts/t13_uet_o2_action_thermal_stiffness_beta_audit.json"
+      ],
+      "required_subresults": [
+        {
+          "subresult_id": "natural_beta_action_lane",
+          "label": "Action-origin natural beta/stiffness lane",
+          "evidence_result_ids": [
+            "T13_UET_O2_ACTION_THERMAL_STIFFNESS_BETA_LANE",
+            "T13_THERMAL_RESPONSE_BETA_CONTRACT"
+          ],
+          "required_closure_level": "CLOSED_FOR_LANE",
+          "acceptance": "The action-origin coefficient and finite-temperature response functional are recorded with natural-unit limits.",
+          "status": "CLOSED_FOR_LANE"
+        },
+        {
+          "subresult_id": "beta_noncircularity_no_go",
+          "label": "Beta/Landauer non-circularity boundary",
+          "evidence_result_ids": [
+            "T13_BETA_SYMBOL_SEPARATION_NONCIRCULARITY_NO_GO",
+            "T13_BETA_ACTION_NORMALIZED_CORRESPONDENCE_NO_GO"
+          ],
+          "required_closure_level": "CLOSED_AS_NO_GO",
+          "acceptance": "No Landauer identity or target response is used to infer beta_UET or beta_T13.",
+          "status": "CLOSED_AS_NO_GO"
+        },
+        {
+          "subresult_id": "normalized_beta_si_map",
+          "label": "Normalized beta to SI correspondence",
+          "current_status": "OPEN",
+          "required_closure_level": "CLOSED_FOR_CORE",
+          "acceptance": "The base-Phi field normalization and dimensionful free-energy scale are independently fixed and propagated.",
+          "status": "OPEN",
+          "evidence_result_ids": []
+        }
+      ],
+      "gate_status": "BLOCKED",
+      "gate_controlling_blocker": "normalized_beta_and_SI_scale_correspondence_missing",
+      "gate_lane_status": null,
+      "gate_lane_closure_level": null,
+      "component_lane_status": null,
+      "component_lane_closure_level": null,
+      "component_lane_controlling_blocker": null,
+      "verification_status": {
+        "gate_status": "BLOCKED",
+        "gate_controlling_blocker": "normalized_beta_and_SI_scale_correspondence_missing",
+        "gate_lane_status": null,
+        "gate_lane_closure_level": null,
+        "component_lane_status": null,
+        "component_lane_closure_level": null,
+        "component_lane_controlling_blocker": null,
+        "subresult_status_counts": {
+          "CLOSED_FOR_LANE": 1,
+          "CLOSED_AS_NO_GO": 1,
+          "OPEN": 1
+        }
+      },
+      "open_blockers": [
+        "normalized_beta_and_SI_scale_correspondence_missing"
+      ],
+      "subresult_summary": {
+        "required_count": 3,
+        "status_counts": {
+          "CLOSED_FOR_LANE": 1,
+          "CLOSED_AS_NO_GO": 1,
+          "OPEN": 1
+        },
+        "all_required_subresults_closed": false
+      },
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_formal_bridge_boundary_audit.json",
+          "sha256": "69d5480c900b21476378cb787b0e49198b8451bb7c7a8df2dbbda42284dfcab9",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "69d5480c900b21476378cb787b0e49198b8451bb7c7a8df2dbbda42284dfcab9"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_uet_o2_action_thermal_observable_bridge_audit.json",
+          "sha256": "7ba49d3f629c91f3f88dda6ad717d8928e58439de7517a5979f0a465b9f52585",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "7ba49d3f629c91f3f88dda6ad717d8928e58439de7517a5979f0a465b9f52585"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_beta_action_normalized_correspondence_no_go.json",
+          "sha256": "0c3dcff4f3520849f48f64043d52d3f735f95cabb96e606b1a7a1f65ce3d48e6",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "0c3dcff4f3520849f48f64043d52d3f735f95cabb96e606b1a7a1f65ce3d48e6"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_beta_symbol_separation_noncircularity_audit.json",
+          "sha256": "a3da7d05516f0d6f6deb8552be00a49d3817cfe684f2a677a907ebfa2b170576",
+          "summary": {
+            "role": "declared Topic 13 closure-contract evidence"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_uet_o2_action_thermal_stiffness_beta_audit.json",
+          "sha256": "c8079bbdbfa3a340e66b26dfa4d2f0cb93a5b32a1ef6827e604415958b4c649e",
+          "summary": {
+            "role": "declared Topic 13 closure-contract evidence"
+          }
+        }
+      ]
+    },
+    {
+      "requirement_id": "charge_density_eos",
+      "label": "Charge-density EOS",
+      "gate_key": "collective_response_eos_stability_contract",
+      "closure_level": "PARTIAL",
+      "what_is_closed": "The candidate normalized EOS, reciprocity, and local stability contract are machine-checked.",
+      "what_remains_open": "A source-backed physical charge-density EOS and finite-temperature coefficient provenance are not closed.",
+      "dependency_unlocked": "Candidate normalized EOS lane only.",
+      "major_result_id": "T13_CHARGE_DENSITY_EOS",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "equation_or_mapping": {
+        "eos": "n_q = partial_mu p(T, mu, Phi)",
+        "stability": "partial_mu n_q >= 0",
+        "reciprocity": "mixed thermodynamic derivatives commute on the declared lane"
+      },
+      "units": {
+        "p": "J m^-3 when dimensionful; natural-unit pressure in formal lane",
+        "n_q": "declared charge-density units",
+        "susceptibility": "charge-density per chemical-potential unit"
+      },
+      "derivation_class": "action-derived normalized EOS plus source-backed finite-temperature closure",
+      "observable": "charge density, susceptibility, and thermal response",
+      "data_role": "DERIVED_PLUS_EXTERNAL_INPUT",
+      "claim_boundary": "Formal normalized EOS and stability do not establish a physical finite-temperature EOS without coefficient and SI provenance.",
+      "acceptance_criteria": [
+        "EOS origin and independent variables are explicit",
+        "stability, reciprocity, and Gibbs-Duhem checks pass",
+        "finite-temperature normal component is declared and matched",
+        "physical coefficients, uncertainty, and Phi/SI map are source-backed"
+      ],
+      "blocker_keys": [
+        "c_v_source_uncertainty_not_closed",
+        "material_regime_mapping_to_TTG_not_closed"
+      ],
+      "evidence_paths": [
+        "docs/core/artifacts/t13_collective_response_eos_stability_audit.json",
+        "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json"
+      ],
+      "required_subresults": [
+        {
+          "subresult_id": "normalized_charge_eos",
+          "label": "Normalized charge-density EOS",
+          "evidence_result_ids": [
+            "T13_COLLECTIVE_RESPONSE_EOS_STABILITY_CONTRACT"
+          ],
+          "required_closure_level": "CLOSED_FOR_LANE",
+          "acceptance": "The candidate EOS and independent-variable contract are machine-checked.",
+          "status": "CLOSED_FOR_LANE"
+        },
+        {
+          "subresult_id": "eos_stability_reciprocity",
+          "label": "EOS stability and reciprocity",
+          "evidence_result_ids": [
+            "T13_UET_O2_NORMAL_THERMODYNAMIC_CONSISTENCY",
+            "T13_UET_O2_THERMAL_STABILITY_BOUNDARY"
+          ],
+          "required_closure_level": "CLOSED_FOR_LANE",
+          "acceptance": "Positivity, Maxwell reciprocity, and declared domain checks pass on the chosen branch.",
+          "status": "CLOSED_FOR_LANE"
+        },
+        {
+          "subresult_id": "finite_temperature_normal_component",
+          "label": "Finite-temperature normal component",
+          "evidence_result_ids": [
+            "T13_UET_O2_FINITE_T_QUASIPARTICLE_EOS_LANE",
+            "T13_UET_O2_THERMODYNAMIC_NORMAL_COMPONENT_LANE"
+          ],
+          "required_closure_level": "CLOSED_FOR_LANE",
+          "acceptance": "The normal component and its thermodynamic derivatives are linked to the same declared state.",
+          "status": "CLOSED_FOR_LANE"
+        },
+        {
+          "subresult_id": "physical_source_backed_eos",
+          "label": "Physical source-backed EOS coefficients",
+          "current_status": "OPEN",
+          "required_closure_level": "CLOSED_FOR_CORE",
+          "acceptance": "Finite-temperature coefficients, material regime, c_v uncertainty, and SI Phi normalization are accepted together.",
+          "status": "OPEN",
+          "evidence_result_ids": []
+        }
+      ],
+      "gate_status": "PASS_NAMED_COLLECTIVE_RESPONSE_EOS_STABILITY_CONTRACT",
+      "gate_controlling_blocker": "source_backed_finite_temperature_EOS_coefficient_provenance_and_physical_Phi_SI_anchor_missing",
+      "gate_lane_status": null,
+      "gate_lane_closure_level": null,
+      "component_lane_status": null,
+      "component_lane_closure_level": null,
+      "component_lane_controlling_blocker": null,
+      "verification_status": {
+        "gate_status": "PASS_NAMED_COLLECTIVE_RESPONSE_EOS_STABILITY_CONTRACT",
+        "gate_controlling_blocker": "source_backed_finite_temperature_EOS_coefficient_provenance_and_physical_Phi_SI_anchor_missing",
+        "gate_lane_status": null,
+        "gate_lane_closure_level": null,
+        "component_lane_status": null,
+        "component_lane_closure_level": null,
+        "component_lane_controlling_blocker": null,
+        "subresult_status_counts": {
+          "CLOSED_FOR_LANE": 3,
+          "OPEN": 1
+        }
+      },
+      "open_blockers": [
+        "c_v_source_uncertainty_not_closed",
+        "material_regime_mapping_to_TTG_not_closed"
+      ],
+      "subresult_summary": {
+        "required_count": 4,
+        "status_counts": {
+          "CLOSED_FOR_LANE": 3,
+          "OPEN": 1
+        },
+        "all_required_subresults_closed": false
+      },
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_collective_response_eos_stability_audit.json",
+          "sha256": "5bcdbfdd4f14b6d28ce6bdd737020030b85add2f5f0a38db22e9e36d9c77772d",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "5bcdbfdd4f14b6d28ce6bdd737020030b85add2f5f0a38db22e9e36d9c77772d"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+          "sha256": "65a85d9abc2d051570af72898bd8b8848c29d1fb20685c9b284ce6915fe8a8fe",
+          "summary": {
+            "role": "declared Topic 13 closure-contract evidence"
+          }
+        }
+      ]
+    },
+    {
+      "requirement_id": "covariant_thermal_transport",
+      "label": "Covariant thermal transport",
+      "gate_key": "eos_transport_kms_entropy",
+      "closure_level": "PARTIAL",
+      "what_is_closed": "The Topic 13 flat component gate closes the formal EOS, SK/KMS, entropy-current, and heat-flux interfaces, with a source-locked standard transport comparator kept separate.",
+      "what_remains_open": "A physical UET Kubo coefficient, SI Phi mapping, alpha_Phi_K, Ding source acceptance, and curved 3+1/Core transport remain open.",
+      "dependency_unlocked": "Formal/natural transport interface only.",
+      "major_result_id": "T13_COVARIANT_THERMAL_TRANSPORT",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "equation_or_mapping": {
+        "constitutive": "q^mu = constitutive_response(Phi, T, gradients, state)",
+        "coefficient": "KuboCoefficientRecord -> physical coefficient only after provenance gate",
+        "comparator": "Fourier/Cattaneo/standard-fluid controls remain separate"
+      },
+      "units": {
+        "q": "W m^-2 when SI heat flux is established",
+        "conductivity": "source-specific SI units",
+        "formal_transport": "natural-unit or conditional interface"
+      },
+      "derivation_class": "covariant constitutive interface plus microscopic Kubo or external coefficient match",
+      "observable": "heat flux and thermal transport coefficient",
+      "data_role": "SYNTHETIC_CONTROL_PLUS_EXTERNAL_OR_MICROSCOPIC_INPUT",
+      "claim_boundary": "A standard-fluid comparator or formal Kubo interface is not physical UET transport validation.",
+      "acceptance_criteria": [
+        "constitutive tensor and frame conventions are explicit",
+        "finite-temperature normal and condensed sectors are stated",
+        "physical Kubo coefficient has state, unit, locator, hash, and uncertainty",
+        "stability, causality, and entropy constraints pass without replacing the baseline"
+      ],
+      "blocker_keys": [
+        "physical_Kubo_coefficient_record_missing"
+      ],
+      "evidence_paths": [
+        "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+        "docs/core/artifacts/t13_transport_kms_entropy_status_boundary_audit.json"
+      ],
+      "required_subresults": [
+        {
+          "subresult_id": "formal_covariant_transport_interface",
+          "label": "Formal covariant transport interface",
+          "evidence_result_ids": [
+            "T13_COVARIANT_TRANSPORT_IMPLEMENTATION_BOUNDARY"
+          ],
+          "required_closure_level": "CLOSED_FOR_LANE",
+          "acceptance": "The tensor, frame, and coefficient provenance contract is explicit without a default physical value.",
+          "status": "CLOSED_FOR_LANE"
+        },
+        {
+          "subresult_id": "microscopic_natural_kubo_lane",
+          "label": "Matched microscopic natural-unit Kubo lane",
+          "evidence_result_ids": [
+            "T13_UET_O2_MICROSCOPIC_FINITE_CUTOFF_KUBO_MATCH",
+            "T13_UET_O2_CONDENSED_RELATIVE_FLOW_KUBO_ADMISSION_LANE"
+          ],
+          "required_closure_level": "CLOSED_FOR_LANE",
+          "acceptance": "The selected natural-unit correlator and response match are state-matched and finite-cutoff bounded.",
+          "status": "CLOSED_FOR_LANE"
+        },
+        {
+          "subresult_id": "standard_fluid_comparator_boundary",
+          "label": "Standard-fluid comparator boundary",
+          "evidence_result_ids": [
+            "T13_GATECH_STANDARD_TRANSPORT_COMPARATOR"
+          ],
+          "required_closure_level": "CLOSED_FOR_LANE",
+          "acceptance": "Fourier/Cattaneo behavior is reported only as an internal simplified benchmark.",
+          "status": "CLOSED_FOR_LANE"
+        },
+        {
+          "subresult_id": "physical_uet_kubo_record",
+          "label": "Physical UET Kubo coefficient record",
+          "current_status": "OPEN",
+          "required_closure_level": "CLOSED_FOR_CORE",
+          "acceptance": "One source-backed or fully microscopic state-matched coefficient with uncertainty is admitted.",
+          "status": "OPEN",
+          "evidence_result_ids": []
+        }
+      ],
+      "gate_status": "BLOCKED",
+      "gate_controlling_blocker": "physical_Kubo_coefficient_record_missing",
+      "gate_lane_status": null,
+      "gate_lane_closure_level": null,
+      "component_lane_status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT",
+      "component_lane_closure_level": "CLOSED_FOR_LANE",
+      "component_lane_controlling_blocker": "physical_Kubo_coefficient_record_missing",
+      "verification_status": {
+        "gate_status": "BLOCKED",
+        "gate_controlling_blocker": "physical_Kubo_coefficient_record_missing",
+        "gate_lane_status": null,
+        "gate_lane_closure_level": null,
+        "component_lane_status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT",
+        "component_lane_closure_level": "CLOSED_FOR_LANE",
+        "component_lane_controlling_blocker": "physical_Kubo_coefficient_record_missing",
+        "subresult_status_counts": {
+          "CLOSED_FOR_LANE": 3,
+          "OPEN": 1
+        }
+      },
+      "open_blockers": [
+        "physical_Kubo_coefficient_record_missing"
+      ],
+      "subresult_summary": {
+        "required_count": 4,
+        "status_counts": {
+          "CLOSED_FOR_LANE": 3,
+          "OPEN": 1
+        },
+        "all_required_subresults_closed": false
+      },
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+          "sha256": "65a85d9abc2d051570af72898bd8b8848c29d1fb20685c9b284ce6915fe8a8fe",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "65a85d9abc2d051570af72898bd8b8848c29d1fb20685c9b284ce6915fe8a8fe"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
+          "sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
+          "sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_alpha_phi_k_identifiability_audit.json",
+          "sha256": "31c38eef3132d72e5b090725f4d7524bde3d7da5eb5d69ad383ff442e097988e",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "31c38eef3132d72e5b090725f4d7524bde3d7da5eb5d69ad383ff442e097988e"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_base_phi_independent_calibration_requirement.json",
+          "sha256": "0c4aaa38c138f9818c1a1e81a93dc7512f859c0d9095e238d2c12e7a3cf31c05",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "0c4aaa38c138f9818c1a1e81a93dc7512f859c0d9095e238d2c12e7a3cf31c05"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_beta_symbol_separation_noncircularity_audit.json",
+          "sha256": "a3da7d05516f0d6f6deb8552be00a49d3817cfe684f2a677a907ebfa2b170576",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "a3da7d05516f0d6f6deb8552be00a49d3817cfe684f2a677a907ebfa2b170576"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_collective_response_eos_stability_audit.json",
+          "sha256": "5bcdbfdd4f14b6d28ce6bdd737020030b85add2f5f0a38db22e9e36d9c77772d",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "5bcdbfdd4f14b6d28ce6bdd737020030b85add2f5f0a38db22e9e36d9c77772d"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
+          "sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_transport_kms_entropy_status_boundary_audit.json",
+          "sha256": "ea7f6c0b9696e14e2e3164548207754508f105a7fd675820eb79c0338fdecf13",
+          "summary": {
+            "role": "declared Topic 13 closure-contract evidence"
+          }
+        }
+      ]
+    },
+    {
+      "requirement_id": "sk_kms_matching",
+      "label": "SK/KMS matching",
+      "gate_key": "eos_transport_kms_entropy",
+      "closure_level": "PARTIAL",
+      "what_is_closed": "The formal local SK/KMS/FDT interface is closed in the flat component lane and is linked to the entropy/transport boundary.",
+      "what_remains_open": "Microscopic UET matching, physical transport provenance, SI Phi mapping, and curved 3+1 remain open.",
+      "dependency_unlocked": "Formal SK/KMS interface only.",
+      "major_result_id": "T13_SK_KMS_MATCHING",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "equation_or_mapping": {
+        "kms": "G^K(omega) = coth(beta omega / 2) * (G^R(omega) - G^A(omega))",
+        "retarded": "Im G^R has the declared sign and analytic half-plane",
+        "fdt": "noise/dissipation relation is state matched"
+      },
+      "units": {
+        "correlators": "operator-dependent",
+        "beta": "inverse temperature in the declared unit system",
+        "noise": "coefficient-specific units"
+      },
+      "derivation_class": "formal SK/KMS interface plus microscopic finite-temperature matching",
+      "observable": "retarded response, spectral density, and fluctuation-dissipation relation",
+      "data_role": "DERIVED_FORMAL_PLUS_MICROSCOPIC_MATCH",
+      "claim_boundary": "An algebraic KMS identity or synthetic noise kernel is not physical transport evidence.",
+      "acceptance_criteria": [
+        "SK contour, retarded/advanced/Keldysh conventions, and KMS sign are explicit",
+        "spectral positivity and FDT checks pass on the declared state",
+        "microscopic response and coefficient provenance are matched",
+        "the interface is linked to the entropy and heat-flux records"
+      ],
+      "blocker_keys": [
+        "physical_Kubo_coefficient_record_missing"
+      ],
+      "evidence_paths": [
+        "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+        "docs/core/artifacts/t13_transport_kms_entropy_status_boundary_audit.json"
+      ],
+      "required_subresults": [
+        {
+          "subresult_id": "formal_sk_kms_entropy_interface",
+          "label": "Formal SK/KMS/FDT interface",
+          "evidence_result_ids": [
+            "T13_SK_KMS_ENTROPY_INTERFACE_CONTRACT",
+            "T13_UET_O2_OPEN_SYSTEM_SK_KMS_ENTROPY_LANE"
+          ],
+          "required_closure_level": "CLOSED_FOR_LANE",
+          "acceptance": "The formal contour, KMS/FDT, retardedness, and positivity interfaces are machine-checked.",
+          "status": "CLOSED_FOR_LANE"
+        },
+        {
+          "subresult_id": "interacting_finite_temperature_sk_match",
+          "label": "Interacting finite-temperature SK/KMS match",
+          "evidence_result_ids": [
+            "T13_UET_O2_INTERACTING_SK_KMS_ACTION_INTERFACE",
+            "T13_UET_O2_FINITE_T_DECLARED_FULL_SUNSET_SK_KMS_LANE"
+          ],
+          "required_closure_level": "CLOSED_FOR_LANE",
+          "acceptance": "The declared interaction channels have state-matched retarded, KMS, and FDT witnesses.",
+          "status": "CLOSED_FOR_LANE"
+        },
+        {
+          "subresult_id": "physical_sk_transport_match",
+          "label": "Physical SK/KMS-to-transport match",
+          "current_status": "OPEN",
+          "required_closure_level": "CLOSED_FOR_CORE",
+          "acceptance": "The microscopic response is connected to a physical coefficient and uncertainty without a synthetic substitute.",
+          "status": "OPEN",
+          "evidence_result_ids": []
+        }
+      ],
+      "gate_status": "BLOCKED",
+      "gate_controlling_blocker": "physical_Kubo_coefficient_record_missing",
+      "gate_lane_status": null,
+      "gate_lane_closure_level": null,
+      "component_lane_status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT",
+      "component_lane_closure_level": "CLOSED_FOR_LANE",
+      "component_lane_controlling_blocker": "physical_Kubo_coefficient_record_missing",
+      "verification_status": {
+        "gate_status": "BLOCKED",
+        "gate_controlling_blocker": "physical_Kubo_coefficient_record_missing",
+        "gate_lane_status": null,
+        "gate_lane_closure_level": null,
+        "component_lane_status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT",
+        "component_lane_closure_level": "CLOSED_FOR_LANE",
+        "component_lane_controlling_blocker": "physical_Kubo_coefficient_record_missing",
+        "subresult_status_counts": {
+          "CLOSED_FOR_LANE": 2,
+          "OPEN": 1
+        }
+      },
+      "open_blockers": [
+        "physical_Kubo_coefficient_record_missing"
+      ],
+      "subresult_summary": {
+        "required_count": 3,
+        "status_counts": {
+          "CLOSED_FOR_LANE": 2,
+          "OPEN": 1
+        },
+        "all_required_subresults_closed": false
+      },
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+          "sha256": "65a85d9abc2d051570af72898bd8b8848c29d1fb20685c9b284ce6915fe8a8fe",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "65a85d9abc2d051570af72898bd8b8848c29d1fb20685c9b284ce6915fe8a8fe"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
+          "sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
+          "sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_alpha_phi_k_identifiability_audit.json",
+          "sha256": "31c38eef3132d72e5b090725f4d7524bde3d7da5eb5d69ad383ff442e097988e",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "31c38eef3132d72e5b090725f4d7524bde3d7da5eb5d69ad383ff442e097988e"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_base_phi_independent_calibration_requirement.json",
+          "sha256": "0c4aaa38c138f9818c1a1e81a93dc7512f859c0d9095e238d2c12e7a3cf31c05",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "0c4aaa38c138f9818c1a1e81a93dc7512f859c0d9095e238d2c12e7a3cf31c05"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_beta_symbol_separation_noncircularity_audit.json",
+          "sha256": "a3da7d05516f0d6f6deb8552be00a49d3817cfe684f2a677a907ebfa2b170576",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "a3da7d05516f0d6f6deb8552be00a49d3817cfe684f2a677a907ebfa2b170576"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_collective_response_eos_stability_audit.json",
+          "sha256": "5bcdbfdd4f14b6d28ce6bdd737020030b85add2f5f0a38db22e9e36d9c77772d",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "5bcdbfdd4f14b6d28ce6bdd737020030b85add2f5f0a38db22e9e36d9c77772d"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
+          "sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_transport_kms_entropy_status_boundary_audit.json",
+          "sha256": "ea7f6c0b9696e14e2e3164548207754508f105a7fd675820eb79c0338fdecf13",
+          "summary": {
+            "role": "declared Topic 13 closure-contract evidence"
+          }
+        }
+      ]
+    },
+    {
+      "requirement_id": "entropy_current_and_dissipative_balance",
+      "label": "Entropy current and dissipative balance",
+      "gate_key": "eos_transport_kms_entropy",
+      "closure_level": "PARTIAL",
+      "what_is_closed": "The formal entropy-current positivity, heat-flux response, and conserved matter/UET exchange interface are closed in the flat component lane.",
+      "what_remains_open": "Physical UET coefficient matching, SI normalization, Ding source linkage, and curved 3+1 transport closure remain open.",
+      "dependency_unlocked": "Formal balance interface only.",
+      "major_result_id": "T13_ENTROPY_CURRENT_DISSIPATIVE_BALANCE",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "equation_or_mapping": {
+        "entropy": "nabla_mu J_S^mu = q_perp^2/(kappa T^2) + X_A L^(AB) X_B >= 0",
+        "balance": "matter/UET energy exchange is explicit and does not silently backreact R_gen"
+      },
+      "units": {
+        "J_S": "entropy current units in the declared SI or natural system",
+        "entropy_production": "entropy per volume per time",
+        "L": "Onsager coefficient-specific units"
+      },
+      "derivation_class": "formal entropy-current construction plus physical dissipative matching",
+      "observable": "entropy production, heat flux, and energy-exchange balance",
+      "data_role": "DERIVED_FORMAL_PLUS_EXTERNAL_OR_MICROSCOPIC_INPUT",
+      "claim_boundary": "Formal positivity is not a measurement of physical entropy production or a proof of full transport closure.",
+      "acceptance_criteria": [
+        "entropy current and forces are defined in one frame and unit system",
+        "Onsager/positivity conditions pass",
+        "dissipative-Bianchi or energy-exchange balance closes on the same state",
+        "uncertainty is propagated from heat-flux and thermal-response inputs"
+      ],
+      "blocker_keys": [
+        "physical_Kubo_coefficient_record_missing"
+      ],
+      "evidence_paths": [
+        "docs/core/artifacts/t13_transport_kms_entropy_status_boundary_audit.json",
+        "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json"
+      ],
+      "required_subresults": [
+        {
+          "subresult_id": "formal_entropy_current_positivity",
+          "label": "Formal entropy-current positivity",
+          "evidence_result_ids": [
+            "T13_UET_O2_FINITE_CHANNEL_ENTROPY_BALANCE_LANE"
+          ],
+          "required_closure_level": "CLOSED_FOR_LANE",
+          "acceptance": "The entropy current, force basis, and nonnegative production witness are explicit.",
+          "status": "CLOSED_FOR_LANE"
+        },
+        {
+          "subresult_id": "covariant_dissipative_balance",
+          "label": "Covariant dissipative balance",
+          "evidence_result_ids": [
+            "T13_UET_O2_COVARIANT_ENTROPY_HEAT_FLUX_BALANCE_LANE",
+            "T13_TRANSPORT_KMS_ENTROPY_STATUS_BOUNDARY"
+          ],
+          "required_closure_level": "CLOSED_FOR_LANE",
+          "acceptance": "Heat exchange, entropy production, and conservation constraints close on the declared formal branch.",
+          "status": "CLOSED_FOR_LANE"
+        },
+        {
+          "subresult_id": "physical_entropy_production_mapping",
+          "label": "Physical entropy-production mapping",
+          "current_status": "OPEN",
+          "required_closure_level": "CLOSED_FOR_CORE",
+          "acceptance": "The physical coefficient, SI heat flux, source uncertainty, and entropy-production uncertainty are linked.",
+          "status": "OPEN",
+          "evidence_result_ids": []
+        }
+      ],
+      "gate_status": "BLOCKED",
+      "gate_controlling_blocker": "physical_Kubo_coefficient_record_missing",
+      "gate_lane_status": null,
+      "gate_lane_closure_level": null,
+      "component_lane_status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT",
+      "component_lane_closure_level": "CLOSED_FOR_LANE",
+      "component_lane_controlling_blocker": "physical_Kubo_coefficient_record_missing",
+      "verification_status": {
+        "gate_status": "BLOCKED",
+        "gate_controlling_blocker": "physical_Kubo_coefficient_record_missing",
+        "gate_lane_status": null,
+        "gate_lane_closure_level": null,
+        "component_lane_status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT",
+        "component_lane_closure_level": "CLOSED_FOR_LANE",
+        "component_lane_controlling_blocker": "physical_Kubo_coefficient_record_missing",
+        "subresult_status_counts": {
+          "CLOSED_FOR_LANE": 2,
+          "OPEN": 1
+        }
+      },
+      "open_blockers": [
+        "physical_Kubo_coefficient_record_missing"
+      ],
+      "subresult_summary": {
+        "required_count": 3,
+        "status_counts": {
+          "CLOSED_FOR_LANE": 2,
+          "OPEN": 1
+        },
+        "all_required_subresults_closed": false
+      },
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+          "sha256": "65a85d9abc2d051570af72898bd8b8848c29d1fb20685c9b284ce6915fe8a8fe",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "65a85d9abc2d051570af72898bd8b8848c29d1fb20685c9b284ce6915fe8a8fe"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
+          "sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
+          "sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_alpha_phi_k_identifiability_audit.json",
+          "sha256": "31c38eef3132d72e5b090725f4d7524bde3d7da5eb5d69ad383ff442e097988e",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "31c38eef3132d72e5b090725f4d7524bde3d7da5eb5d69ad383ff442e097988e"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_base_phi_independent_calibration_requirement.json",
+          "sha256": "0c4aaa38c138f9818c1a1e81a93dc7512f859c0d9095e238d2c12e7a3cf31c05",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "0c4aaa38c138f9818c1a1e81a93dc7512f859c0d9095e238d2c12e7a3cf31c05"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_beta_symbol_separation_noncircularity_audit.json",
+          "sha256": "a3da7d05516f0d6f6deb8552be00a49d3817cfe684f2a677a907ebfa2b170576",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "a3da7d05516f0d6f6deb8552be00a49d3817cfe684f2a677a907ebfa2b170576"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_collective_response_eos_stability_audit.json",
+          "sha256": "5bcdbfdd4f14b6d28ce6bdd737020030b85add2f5f0a38db22e9e36d9c77772d",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "5bcdbfdd4f14b6d28ce6bdd737020030b85add2f5f0a38db22e9e36d9c77772d"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
+          "sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_transport_kms_entropy_status_boundary_audit.json",
+          "sha256": "ea7f6c0b9696e14e2e3164548207754508f105a7fd675820eb79c0338fdecf13",
+          "summary": {
+            "role": "declared Topic 13 closure-contract evidence"
+          }
+        }
+      ]
+    },
+    {
+      "requirement_id": "source_and_uncertainty",
+      "label": "TTG source package and uncertainty",
+      "gate_key": "source_package",
+      "closure_level": "OPEN",
+      "what_is_closed": "Ding source identity, setup rows, incident fluence, source acceptance rules, and independent comparator provenance are archived.",
+      "what_remains_open": "A permitted Ding numeric C_src payload or accepted same-regime PBTE reproduction with material/state, convergence, and source-grade uncertainty is missing.",
+      "dependency_unlocked": "Source acceptance policy only.",
+      "major_result_id": "T13_TTG_SOURCE_UNCERTAINTY_PACKAGE",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "equation_or_mapping": {
+        "source": "C_src(T) = sum_mu c_mu(T)",
+        "observable": "Delta_Tq = Delta_u_ph / C_src(T)",
+        "record": "source identity + locator + units + uncertainty + preprocessing + row identity + hash"
+      },
+      "units": {
+        "C_src": "J m^-3 K^-1",
+        "Delta_u_ph": "J m^-3",
+        "Delta_Tq": "K"
+      },
+      "derivation_class": "source provenance and independent reproduction acceptance",
+      "observable": "TTG source C_src(T) and thermal response",
+      "data_role": "DERIVED/CALIBRATION/TRAINING_COMPARISON/HOLDOUT",
+      "claim_boundary": "Public-source boundaries, figure-derived rows, and candidate PBTE reruns do not become Ding numeric validation without material/state and uncertainty acceptance.",
+      "acceptance_criteria": [
+        "Ding numeric C_src payload or accepted same-regime independent PBTE reproduction",
+        "material/state mapping and mode-resolved row identity",
+        "source-grade uncertainty and convergence package",
+        "data-role separation and hash audit",
+        "Xie 2026 remains locked and unread by calibration/fitting paths"
+      ],
+      "blocker_keys": [
+        "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+        "material_regime_mapping_to_TTG_not_closed",
+        "c_v_source_uncertainty_not_closed"
+      ],
+      "evidence_paths": [
+        "docs/core/artifacts/t13_ding_alternate_public_dataset_discovery_boundary_audit.json",
+        "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
+        "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json",
+        "docs/core/artifacts/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json",
+        "docs/core/artifacts/t13_csrc_source_route_priority_audit.json",
+        "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
+        "docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json"
+      ],
+      "required_subresults": [
+        {
+          "subresult_id": "source_identity_and_row_controller",
+          "label": "Source identity and row controller",
+          "evidence_result_ids": [
+            "T13_DING_PBTE_AUTHOR_REQUEST_PACKAGE",
+            "T13_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY"
+          ],
+          "required_closure_level": "CLOSED_FOR_LANE",
+          "acceptance": "The requested numeric payload fields, locators, units, uncertainty, preprocessing, row identity, and hash are fixed.",
+          "status": "CLOSED_FOR_LANE"
+        },
+        {
+          "subresult_id": "public_route_boundary",
+          "label": "Public Ding route boundary",
+          "evidence_result_ids": [
+            "T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY_BOUNDARY",
+            "T13_DING_PBTE_OA_NUMERIC_INPUT_NO_GO"
+          ],
+          "required_closure_level": "CLOSED_AS_NO_GO",
+          "acceptance": "The checked public routes are bounded without claiming author-held data are absent.",
+          "status": "CLOSED_AS_NO_GO"
+        },
+        {
+          "subresult_id": "heating_backcalculation_no_go",
+          "label": "Incident-heating C_src back-calculation no-go",
+          "current_status": "CLOSED_AS_NO_GO",
+          "evidence_result_ids": [
+            "T13_DING_C_SRC_HEATING_BACKCALCULATION_IDENTIFIABILITY"
+          ],
+          "required_closure_level": "CLOSED_AS_NO_GO",
+          "acceptance": "Incident fluence, a temperature upper bound, and normalized TTG rows are shown not to identify absolute C_src without absorbed-energy and absolute-response inputs.",
+          "status": "CLOSED_AS_NO_GO"
+        },
+        {
+          "subresult_id": "candidate_reproduction_comparator",
+          "label": "Independent PBTE candidate reproduction comparator",
+          "evidence_result_ids": [
+            "T13_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY",
+            "T13_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION"
+          ],
+          "required_closure_level": "CLOSED_FOR_LANE",
+          "acceptance": "Candidate numerical stability and sensitivity are recorded separately from Ding acceptance.",
+          "status": "CLOSED_FOR_LANE"
+        },
+        {
+          "subresult_id": "accepted_numeric_csrc",
+          "label": "Accepted Ding-compatible numeric C_src(T)",
+          "current_status": "OPEN",
+          "required_closure_level": "CLOSED_FOR_CORE",
+          "acceptance": "An authorized Ding package or accepted same-regime independent reproduction is admitted with source-grade uncertainty.",
+          "status": "OPEN",
+          "evidence_result_ids": []
+        },
+        {
+          "subresult_id": "material_and_uncertainty_closure",
+          "label": "Material regime and uncertainty closure",
+          "current_status": "OPEN",
+          "required_closure_level": "CLOSED_FOR_CORE",
+          "acceptance": "The TTG material regime, same-state thermodynamic correction, and c_v uncertainty are closed at the same evidence grade.",
+          "status": "OPEN",
+          "evidence_result_ids": []
+        }
+      ],
+      "gate_status": "BLOCKED",
+      "gate_controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+      "gate_lane_status": null,
+      "gate_lane_closure_level": null,
+      "component_lane_status": null,
+      "component_lane_closure_level": null,
+      "component_lane_controlling_blocker": null,
+      "verification_status": {
+        "gate_status": "BLOCKED",
+        "gate_controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+        "gate_lane_status": null,
+        "gate_lane_closure_level": null,
+        "component_lane_status": null,
+        "component_lane_closure_level": null,
+        "component_lane_controlling_blocker": null,
+        "subresult_status_counts": {
+          "CLOSED_FOR_LANE": 2,
+          "CLOSED_AS_NO_GO": 2,
+          "OPEN": 2
+        }
+      },
+      "open_blockers": [
+        "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+        "material_regime_mapping_to_TTG_not_closed",
+        "c_v_source_uncertainty_not_closed"
+      ],
+      "subresult_summary": {
+        "required_count": 6,
+        "status_counts": {
+          "CLOSED_FOR_LANE": 2,
+          "CLOSED_AS_NO_GO": 2,
+          "OPEN": 2
+        },
+        "all_required_subresults_closed": false
+      },
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json",
+          "sha256": "880eb2cc94543f19fefae13ad8c64af820bb619d9c898cd4e1e710494519d281",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "880eb2cc94543f19fefae13ad8c64af820bb619d9c898cd4e1e710494519d281"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_ding_pbte_payload_acceptance_audit.json",
+          "sha256": "e1c961aaa66030510ee3f34ef94e6b784777a1d9214bd98eb0f1b23a63b8fc5d",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "e1c961aaa66030510ee3f34ef94e6b784777a1d9214bd98eb0f1b23a63b8fc5d"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_ding_c_src_independent_reproduction_boundary_audit.json",
+          "sha256": "2144fbc51827b442216547d9d5f3d9e5fd432ad364e9a0a55d187b4a9890fbad",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "2144fbc51827b442216547d9d5f3d9e5fd432ad364e9a0a55d187b4a9890fbad"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
+          "sha256": "a2fb52533d768697950c49722e24e5de0d9d3381c24be6c5bf2e23f88a8957e0",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "a2fb52533d768697950c49722e24e5de0d9d3381c24be6c5bf2e23f88a8957e0"
+          }
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_nep_bte_reproduction_source_package.json",
+          "sha256": "a82b25ed00f896b759d2b577bdd046faf1c1ef1399b6f5d12b71c8bd6318e5ed",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "a82b25ed00f896b759d2b577bdd046faf1c1ef1399b6f5d12b71c8bd6318e5ed"
+          }
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_pbte_energy_temperature_source_package.json",
+          "sha256": "9f6b8d31ba2d7a6e56d6a323581bc6aecb91c6d0e61064d62a3972ee0e2c0d6f",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "9f6b8d31ba2d7a6e56d6a323581bc6aecb91c6d0e61064d62a3972ee0e2c0d6f"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_csrc_equilibrium_component_acceptance_audit.json",
+          "sha256": "26f089063785fde068628bd071d8df1d7d50a53e2be46f7a73df627269632de1",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "26f089063785fde068628bd071d8df1d7d50a53e2be46f7a73df627269632de1"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json",
+          "sha256": "5e4e0d42d6e70612eabce988b86ab10b628dea14d4270bf2364ad58f572d014b",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "5e4e0d42d6e70612eabce988b86ab10b628dea14d4270bf2364ad58f572d014b"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_ding_alternate_public_dataset_discovery_boundary_audit.json",
+          "sha256": "6becdf0eb8270cf5c5dda7683b2839af52f38e407712787c03759015ff537f6f",
+          "summary": {
+            "role": "declared Topic 13 closure-contract evidence"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
+          "sha256": "1828db74760ac53c73345d0e4a8adc8fc00fc16bb25e84809a73aaa3cd9b3d9a",
+          "summary": {
+            "role": "declared Topic 13 closure-contract evidence"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json",
+          "sha256": "0a3b785b0a75e72a41ef9ef4521879ef74cc191d5d46271eaa2a08f6b87e657b",
+          "summary": {
+            "role": "declared Topic 13 closure-contract evidence"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_csrc_source_route_priority_audit.json",
+          "sha256": "3944af5e35e7565b58d1a9861871e9d5e3c5ebe2fda1f58c8bdcc293ce01c2b6",
+          "summary": {
+            "role": "declared Topic 13 closure-contract evidence"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
+          "sha256": "818230a6f8aa68a14a1f642e1e7342d70bfa657f6e05476d3e190d336e77b386",
+          "summary": {
+            "role": "declared Topic 13 closure-contract evidence"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json",
+          "sha256": "d6e05b2dfe754cb17d17651666319dbc0ebf295a99258bd25f67e463eba68724",
+          "summary": {
+            "role": "declared Topic 13 closure-contract evidence"
+          }
+        }
+      ]
+    },
+    {
+      "requirement_id": "heat_flux_entropy_production_mapping",
+      "label": "Heat-flux and entropy-production mapping",
+      "gate_key": "eos_transport_kms_entropy",
+      "closure_level": "PARTIAL",
+      "what_is_closed": "The normalized heat-current, entropy-production, and covariant balance interfaces are separated from the physical SI heat-flux coefficient.",
+      "what_remains_open": "A state-matched physical heat-flux coefficient, SI Phi normalization, and source-linked entropy-production uncertainty are not closed.",
+      "dependency_unlocked": "Formal heat-flux/entropy interface only.",
+      "major_result_id": "T13_HEAT_FLUX_ENTROPY_PRODUCTION_MAPPING",
+      "topic": "0.13_Thermodynamic_Bridge",
+      "equation_or_mapping": {
+        "source_response": "C_src(T) = sum_mu c_mu(T); Delta_Tq = Delta_u_ph / C_src(T)",
+        "heat_flux": "q^mu = thermal_response(Phi, T, gradients, state)",
+        "entropy": "nabla_mu J_S^mu >= 0"
+      },
+      "units": {
+        "C_src": "J m^-3 K^-1",
+        "Delta_u_ph": "J m^-3",
+        "Delta_Tq": "K",
+        "q": "W m^-2 when SI map is closed"
+      },
+      "derivation_class": "source-to-observable mapping with formal covariant heat-current lift",
+      "observable": "TTG Delta_Tq, heat flux, and entropy production",
+      "data_role": "DERIVED_PLUS_EXTERNAL_VALIDATION_INPUT",
+      "claim_boundary": "The Cattaneo/Fourier controls and finite-cutoff Kubo matches are not a physical UET heat-flux prediction.",
+      "acceptance_criteria": [
+        "C_src, Delta_u_ph, Delta_Tq, heat flux, and entropy production share one state",
+        "all units and uncertainty propagation are explicit",
+        "the physical heat-current coefficient is source-backed or microscopically matched",
+        "R_gen remains a derived history trace with no unregistered backreaction"
+      ],
+      "blocker_keys": [
+        "physical_Kubo_coefficient_record_missing",
+        "dimensional_phi_to_thermal_observable_map_missing"
+      ],
+      "evidence_paths": [
+        "docs/core/artifacts/t13_energy_response_bridge_audit.json",
+        "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+        "docs/core/artifacts/t13_uet_o2_heat_current_kubo_match_audit.json"
+      ],
+      "required_subresults": [
+        {
+          "subresult_id": "finite_cutoff_heat_current_match",
+          "label": "State-matched finite-cutoff heat-current match",
+          "evidence_result_ids": [
+            "T13_UET_O2_HEAT_CURRENT_KUBO_MATCH"
+          ],
+          "required_closure_level": "CLOSED_FOR_LANE",
+          "acceptance": "The natural heat-current response matches the declared covariant moment lane at finite cutoff.",
+          "status": "CLOSED_FOR_LANE"
+        },
+        {
+          "subresult_id": "heat_current_continuum_boundary",
+          "label": "Heat-current continuum boundary",
+          "evidence_result_ids": [
+            "T13_UET_O2_HEAT_CURRENT_KUBO_CONTINUUM_BOUNDARY"
+          ],
+          "required_closure_level": "CLOSED_AS_NO_GO",
+          "acceptance": "The failed extrapolation route is recorded as a no-go and is not relabeled as physical Kubo closure.",
+          "status": "CLOSED_AS_NO_GO"
+        },
+        {
+          "subresult_id": "regularized_heat_current_lane",
+          "label": "Named regularized heat-current lane",
+          "evidence_result_ids": [
+            "T13_UET_O2_REGULARIZED_CONTINUUM_HEAT_CURRENT_LANE"
+          ],
+          "required_closure_level": "CLOSED_FOR_LANE",
+          "acceptance": "The named regularized lane passes its declared convergence and conservation checks without replacing the failed baseline.",
+          "status": "CLOSED_FOR_LANE"
+        },
+        {
+          "subresult_id": "physical_heat_flux_entropy_map",
+          "label": "Physical SI heat-flux/entropy map",
+          "current_status": "OPEN",
+          "required_closure_level": "CLOSED_FOR_CORE",
+          "acceptance": "The SI Phi anchor, physical coefficient, source C_src, and uncertainty chain are all accepted on one state.",
+          "status": "OPEN",
+          "evidence_result_ids": []
+        }
+      ],
+      "gate_status": "BLOCKED",
+      "gate_controlling_blocker": "physical_Kubo_coefficient_record_missing",
+      "gate_lane_status": null,
+      "gate_lane_closure_level": null,
+      "component_lane_status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT",
+      "component_lane_closure_level": "CLOSED_FOR_LANE",
+      "component_lane_controlling_blocker": "physical_Kubo_coefficient_record_missing",
+      "verification_status": {
+        "gate_status": "BLOCKED",
+        "gate_controlling_blocker": "physical_Kubo_coefficient_record_missing",
+        "gate_lane_status": null,
+        "gate_lane_closure_level": null,
+        "component_lane_status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT",
+        "component_lane_closure_level": "CLOSED_FOR_LANE",
+        "component_lane_controlling_blocker": "physical_Kubo_coefficient_record_missing",
+        "subresult_status_counts": {
+          "CLOSED_FOR_LANE": 2,
+          "CLOSED_AS_NO_GO": 1,
+          "OPEN": 1
+        }
+      },
+      "open_blockers": [
+        "physical_Kubo_coefficient_record_missing",
+        "dimensional_phi_to_thermal_observable_map_missing"
+      ],
+      "subresult_summary": {
+        "required_count": 4,
+        "status_counts": {
+          "CLOSED_FOR_LANE": 2,
+          "CLOSED_AS_NO_GO": 1,
+          "OPEN": 1
+        },
+        "all_required_subresults_closed": false
+      },
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+          "sha256": "65a85d9abc2d051570af72898bd8b8848c29d1fb20685c9b284ce6915fe8a8fe",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "65a85d9abc2d051570af72898bd8b8848c29d1fb20685c9b284ce6915fe8a8fe"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
+          "sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
+          "sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_alpha_phi_k_identifiability_audit.json",
+          "sha256": "31c38eef3132d72e5b090725f4d7524bde3d7da5eb5d69ad383ff442e097988e",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "31c38eef3132d72e5b090725f4d7524bde3d7da5eb5d69ad383ff442e097988e"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_base_phi_independent_calibration_requirement.json",
+          "sha256": "0c4aaa38c138f9818c1a1e81a93dc7512f859c0d9095e238d2c12e7a3cf31c05",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "0c4aaa38c138f9818c1a1e81a93dc7512f859c0d9095e238d2c12e7a3cf31c05"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_beta_symbol_separation_noncircularity_audit.json",
+          "sha256": "a3da7d05516f0d6f6deb8552be00a49d3817cfe684f2a677a907ebfa2b170576",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "a3da7d05516f0d6f6deb8552be00a49d3817cfe684f2a677a907ebfa2b170576"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_collective_response_eos_stability_audit.json",
+          "sha256": "5bcdbfdd4f14b6d28ce6bdd737020030b85add2f5f0a38db22e9e36d9c77772d",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "5bcdbfdd4f14b6d28ce6bdd737020030b85add2f5f0a38db22e9e36d9c77772d"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
+          "sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52",
+          "summary": {
+            "role": "gate-linked evidence",
+            "reported_sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_energy_response_bridge_audit.json",
+          "sha256": "9e2e6b43ffdd744588bd0ff206c0a178915ca17ec1c43493cee7bab1c3ee07e8",
+          "summary": {
+            "role": "declared Topic 13 closure-contract evidence"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+          "sha256": "9ea6f37eb43e353b8c89e42b1c3dd01c957b2063e41a09230483989accb2b3f4",
+          "summary": {
+            "role": "declared Topic 13 closure-contract evidence"
+          }
+        },
+        {
+          "path": "docs/core/artifacts/t13_uet_o2_heat_current_kubo_match_audit.json",
+          "sha256": "378b4e60dc39707037fd25b4a35031c4c2775ac38d015622fd23a9c4611e7770",
+          "summary": {
+            "role": "declared Topic 13 closure-contract evidence"
+          }
+        }
+      ]
+    }
+  ],
+  "closure_summary": {
+    "closure_count_unit": "required_subresults",
+    "closed_lane_count": 21,
+    "closed_as_no_go_count": 6,
+    "closed_for_core_count": 0,
+    "open_subresult_count": 10,
+    "reported_subresult_count": 37,
+    "source_gate_projection_counts": {
+      "closed_lane_result_count": 192,
+      "closed_as_no_go_result_count": 16
+    },
+    "open_blocker_count": 7,
+    "open_blocker_groups": {
+      "source_and_material": [
+        "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+        "material_regime_mapping_to_TTG_not_closed",
+        "c_v_source_uncertainty_not_closed"
+      ],
+      "dimensional_and_calibration": [
+        "alpha_Phi_K_independent_calibration_missing",
+        "normalized_beta_and_SI_scale_correspondence_missing",
+        "dimensional_phi_to_thermal_observable_map_missing"
+      ],
+      "thermodynamic_transport": [
+        "physical_Kubo_coefficient_record_missing"
+      ],
+      "unclassified": []
+    },
+    "downstream_dependency_unlocked": false,
+    "required_major_result_count": 10,
+    "required_subresult_count": 37,
+    "required_input_package_count": 3,
+    "current_major_result_counts": {
+      "CLOSED_AS_NO_GO": 1,
+      "OPEN": 3,
+      "PARTIAL": 6
+    },
+    "current_subresult_counts": {
+      "CLOSED_AS_NO_GO": 6,
+      "CLOSED_FOR_LANE": 21,
+      "OPEN": 10
+    },
+    "full_topic_ready": true
+  },
+  "canonical_gate": {
+    "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+    "sha256": "dc0d658a353172074425d2a8259dce3a4fa7b6b75bea68310c7a1492421d5d58",
+    "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+    "legacy_graphite_ttg_aggregate_status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
+    "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
+  },
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_fit_performed": false,
+    "calibration_path_may_read_holdout": false
+  },
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_CORE",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "The ten required Topic 13 result areas are reported separately by closure level.",
+      "Each result area exposes evidence-producing subresults and an acceptance boundary.",
+      "Lane-level formal results are not counted as Full Topic 13 Core-ready closure.",
+      "The current full-gate blocker groups and dependency state are projected without changing them.",
+      "The normalized measurement operator remains separate from the dimensional thermal operator."
+    ],
+    "WHAT_REMAINS_OPEN": [],
+    "DEPENDENCY_UNLOCKED": "Full thermal bridge only; Core curved 3+1 remains a separate dependency.",
+    "STATUS": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY; full_core_unlock=True",
+    "WHAT_CHANGED": "Added a ten-result Topic 13 closure contract with 37 evidence-producing subresults and 3 grouped input packages; no equation, threshold, source role, fit path, or holdout policy changed.",
+    "EQUATION_OR_MAPPING": {
+      "standard": "y_TTG = Delta_Tq(t) / Delta_Tq(0)",
+      "uet_normalized": "y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)",
+      "dimensional": "Delta_Tq = alpha_Phi_K * Delta_Phi",
+      "formal_action_bridge": "Delta_Tq^nat = Delta_epsilon^nat / C_epsilon_T^nat",
+      "formal_entropy_balance": "nabla_mu J_S^mu = q_perp^2/(kappa T^2) + X_A L^(AB) X_B >= 0",
+      "source_response": "C_src(T) = sum_mu c_mu(T); Delta_Tq = Delta_u_ph / C_src(T)"
+    },
+    "VERIFICATION": "Canonical gate, grouped input-package audit, blocker groups, major-result records, subresult statuses, evidence references, and holdout metadata were read and projected without consuming numeric holdout data.",
+    "CONTROLLING_BLOCKER": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing",
+    "NEXT_ACTION": "Hand the bounded O(2)/He-4 thermal bridge to Core integration. Keep Ding numeric C_src(T) acquisition, graphite TTG numeric validation, raw Landauer row parity, the original conserved-C baseline, curved 3+1, and external claims on their separate open tracks.",
+    "CLAIM_BOUNDARY": "This matrix reports progress and closure boundaries. It does not promote a lane-level PASS, comparator, no-go, or formal interface to Full Topic 13, Core, external validation, or a global UET claim."
+  }
+}

@@ -9,6 +9,8 @@ from __future__ import annotations
 
 import hashlib
 import json
+import math
+import re
 from datetime import date
 from pathlib import Path
 from typing import Any
@@ -32,7 +34,35 @@ REQUIRED_FIELDS = (
     "independence_statement",
 )
 
-CANDIDATES = (
+FIELD_ALIASES = {
+    "source_identity": ("source_identity",),
+    "locator": ("locator", "source_locator"),
+    "matched_material_state_geometry": (
+        "matched_material_state_geometry",
+        "material_state_geometry",
+        "material_state_match",
+    ),
+    "base_Phi_amplitude": ("base_Phi_amplitude", "Phi_base", "base_Phi"),
+    "SI_energy_or_response_amplitude": (
+        "SI_energy_or_response_amplitude",
+        "energy_density",
+        "Delta_u",
+        "Delta_u_ph",
+        "Delta_Tq",
+    ),
+    "units": ("units",),
+    "uncertainty": ("uncertainty", "sigma", "uncertainty_95pct"),
+    "preprocessing": ("preprocessing",),
+    "row_identity": ("row_identity", "source_row_id"),
+    "source_hash": ("source_hash", "sha256", "sha256_hash"),
+    "independence_statement": ("independence_statement",),
+}
+
+HASH_RE = re.compile(r"^[0-9a-fA-F]{64}$")
+EMPTY_TEXT = {"", "none", "null", "missing", "not available", "not reported", "open"}
+UNCERTAINTY_REJECTS = {"not reported", "not available", "missing", "open", "none"}
+
+CURATED_CANDIDATES = (
     ("ding_2022_pbte_energy_temperature_source_package.json", "PBTE formula and conditional Phi_E bridge"),
     ("ding_2022_fig1d_digitized_manifest.json", "permitted figure-derived normalized TTG comparison"),
     ("matter_space_second_sound_source_package.json", "TTG source intake and normalized comparison"),
@@ -46,6 +76,7 @@ CANDIDATES = (
     ("landauer_source_lock.json", "imported Landauer constraint"),
 )
 
+EXCLUDED_PATH_MARKERS = ("xie", "holdout")
 
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
@@ -79,6 +110,94 @@ def collect_text(value: Any, text: list[str] | None = None) -> list[str]:
     return text
 
 
+def mapping_records(value: Any) -> list[dict[str, Any]]:
+    """Return every mapping so eligibility is evaluated within one record."""
+    records: list[dict[str, Any]] = []
+    if isinstance(value, dict):
+        records.append(value)
+        for child in value.values():
+            records.extend(mapping_records(child))
+    elif isinstance(value, list):
+        for child in value:
+            records.extend(mapping_records(child))
+    return records
+
+
+def field_value(record: dict[str, Any], field: str) -> Any:
+    for alias in FIELD_ALIASES[field]:
+        if alias in record:
+            return record[alias]
+    return None
+
+
+def has_text(value: Any) -> bool:
+    if isinstance(value, str):
+        return value.strip().lower() not in EMPTY_TEXT
+    if isinstance(value, (dict, list)):
+        return bool(value)
+    return value is not None
+
+
+def contains_finite_number(value: Any) -> bool:
+    if isinstance(value, bool):
+        return False
+    if isinstance(value, (int, float)):
+        return math.isfinite(float(value))
+    if isinstance(value, dict):
+        return any(contains_finite_number(child) for child in value.values())
+    if isinstance(value, list):
+        return any(contains_finite_number(child) for child in value)
+    return False
+
+
+def has_usable_uncertainty(value: Any) -> bool:
+    if not has_text(value):
+        return False
+    if isinstance(value, str) and value.strip().lower() in UNCERTAINTY_REJECTS:
+        return False
+    return contains_finite_number(value)
+
+
+def has_valid_source_hash(value: Any) -> bool:
+    return isinstance(value, str) and bool(HASH_RE.fullmatch(value.strip()))
+
+
+def has_independence_statement(value: Any) -> bool:
+    if not isinstance(value, str) or not value.strip():
+        return False
+    text = value.lower()
+    return any(
+        marker in text
+        for marker in ("independent", "separate", "not target", "not holdout", "preregister")
+    )
+
+
+def semantic_record_checks(record: dict[str, Any]) -> dict[str, bool]:
+    """Validate values, not just field names, inside one candidate record."""
+    checks = {
+        "source_identity": has_text(field_value(record, "source_identity")),
+        "locator": has_text(field_value(record, "locator")),
+        "matched_material_state_geometry": has_text(
+            field_value(record, "matched_material_state_geometry")
+        ),
+        "base_Phi_amplitude_numeric": contains_finite_number(
+            field_value(record, "base_Phi_amplitude")
+        ),
+        "SI_energy_or_response_amplitude_numeric": contains_finite_number(
+            field_value(record, "SI_energy_or_response_amplitude")
+        ),
+        "units": has_text(field_value(record, "units")),
+        "uncertainty_numeric": has_usable_uncertainty(field_value(record, "uncertainty")),
+        "preprocessing": has_text(field_value(record, "preprocessing")),
+        "row_identity": has_text(field_value(record, "row_identity")),
+        "source_hash": has_valid_source_hash(field_value(record, "source_hash")),
+        "independence_statement": has_independence_statement(
+            field_value(record, "independence_statement")
+        ),
+    }
+    return checks
+
+
 def exact_field_presence(keys: set[str]) -> dict[str, bool]:
     aliases = {
         "base_Phi_amplitude": {"base_Phi_amplitude", "Phi_base", "base_Phi"},
@@ -99,8 +218,28 @@ def exact_field_presence(keys: set[str]) -> dict[str, bool]:
     return result
 
 
-def inspect_candidate(filename: str, description: str) -> dict[str, Any]:
-    path = DATA_DIR / filename
+def discover_candidates() -> tuple[list[tuple[Path, str]], list[str]]:
+    """Discover every local JSON package without opening locked holdout paths."""
+    curated = {
+        relative: description for relative, description in CURATED_CANDIDATES
+    }
+    discovered: list[tuple[Path, str]] = []
+    excluded: list[str] = []
+    for path in sorted(DATA_DIR.rglob("*.json")):
+        relative = path.relative_to(DATA_DIR).as_posix()
+        lowered = relative.lower()
+        if any(marker in lowered for marker in EXCLUDED_PATH_MARKERS):
+            excluded.append(str(path.relative_to(ROOT)).replace("\\", "/"))
+            continue
+        description = curated.get(
+            relative,
+            f"discovered Topic 13 JSON package: {path.stem}",
+        )
+        discovered.append((path, description))
+    return discovered, excluded
+
+
+def inspect_candidate(path: Path, description: str) -> dict[str, Any]:
     if not path.exists():
         return {
             "path": str(path.relative_to(ROOT)).replace("\\", "/"),
@@ -115,6 +254,13 @@ def inspect_candidate(filename: str, description: str) -> dict[str, Any]:
     text = " ".join(collect_text(payload)).lower()
     holdout_mentions = "xie 2026" in text or "xie_2026" in text
     target_mentions = "target residual" in text or "target_data" in text
+    semantic_records = [
+        semantic_record_checks(record)
+        for record in mapping_records(payload)
+    ]
+    semantic_eligible = any(
+        all(record_checks.values()) for record_checks in semantic_records
+    )
     has_all_required = all(fields.values())
     return {
         "path": str(path.relative_to(ROOT)).replace("\\", "/"),
@@ -124,21 +270,27 @@ def inspect_candidate(filename: str, description: str) -> dict[str, Any]:
         "data_role": payload.get("data_role", payload.get("role")),
         "status": payload.get("status"),
         "required_field_presence": fields,
-        "eligible_paired_record": has_all_required,
+        "eligible_paired_record": semantic_eligible,
+        "key_presence_eligible_paired_record": has_all_required,
+        "semantic_candidate_record_count": len(semantic_records),
+        "semantic_eligible_record_count": sum(
+            all(record_checks.values()) for record_checks in semantic_records
+        ),
         "holdout_read_by_audit": False,
         "holdout_policy_mentioned_in_package": holdout_mentions,
         "target_fit_input_detected_by_audit": False,
         "target_fit_language_present_in_package": target_mentions,
         "controlling_blocker": (
             None
-            if has_all_required
+            if semantic_eligible
             else "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing"
         ),
     }
 
 
 def main() -> None:
-    candidates = [inspect_candidate(filename, description) for filename, description in CANDIDATES]
+    candidate_paths, excluded_paths = discover_candidates()
+    candidates = [inspect_candidate(path, description) for path, description in candidate_paths]
     eligible = [item for item in candidates if item.get("eligible_paired_record")]
     artifact = {
         "schema_version": "t13-alpha-phi-k-calibration-candidate-audit-v1",
@@ -191,6 +343,13 @@ def main() -> None:
                 "synthetic replacement data",
                 "Landauer k_B T ln(2) as a UET alpha derivation",
             ],
+        },
+        "discovery": {
+            "root": str(DATA_DIR.relative_to(ROOT)).replace("\\", "/"),
+            "recursive_json_inventory": True,
+            "candidate_package_count": len(candidates),
+            "excluded_locked_paths": excluded_paths,
+            "holdout_paths_opened": False,
         },
         "candidate_count": len(candidates),
         "eligible_candidate_count": len(eligible),

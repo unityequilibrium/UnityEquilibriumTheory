@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "artifact": "uet_equation_correspondence_registry_theory_spine_addendum",
   "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
-  "status": "CANDIDATE_ENTRY_MERGED_INTO_CENTRAL_REGISTRY",
+  "status": "CANDIDATE_ENTRY_PENDING_MERGE",
   "equation_entries": [
     {
       "equation_id": "uet.main_theory.hyperbolic_spine_control",
@@ -54,13 +54,5 @@
       "failure_mode": "complex/incomplete characteristics, superluminal speed, constraint growth, or hidden stabilization",
       "next_hardening_step": "derive a 3+1 formulation with dynamical metric and GR constraint propagation"
     }
-  ],
-  "merge_metadata": {
-    "merged_into": "docs/core/artifacts/uet_equation_correspondence_registry.json",
-    "merged_on": "2026-08-09",
-    "equation_ids": [
-      "uet.main_theory.hyperbolic_spine_control"
-    ],
-    "claim_promotion": false
-  }
+  ]
 }

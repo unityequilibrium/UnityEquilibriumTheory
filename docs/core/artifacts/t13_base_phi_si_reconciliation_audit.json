@@ -1,0 +1,314 @@
+{
+  "schema_version": "t13-base-phi-si-reconciliation-v1",
+  "artifact": "t13_base_phi_si_reconciliation_audit",
+  "generated_at": "2026-08-29",
+  "status": "PASS_SCOPED_BASE_PHI_RECONCILIATION_OPEN",
+  "major_result": {
+    "major_result_id": "T13_BASE_PHI_SI_RECONCILIATION",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the 74-record paired base-Phi/SI candidate search is reconciled with zero eligible records",
+      "the named Phi_E comparator is separated from the base UET Phi lane",
+      "conditional formula, natural-unit action, and field-rescaling no-go boundaries are source-linked",
+      "the independent calibration protocol is separated from received evidence"
+    ],
+    "what_remains_open": [
+      "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
+      "base_Phi_to_Phi_E_mapping_missing",
+      "dimensional_free_energy_density_scale_e0_missing",
+      "alpha_Phi_K_independent_calibration_missing"
+    ],
+    "dependency_unlocked": "base-Phi evidence reconciliation only; no SI anchor, alpha, beta, EOS, transport, or Full Topic 13 unlock",
+    "equation_or_mapping": {
+      "measurement": "Delta_Tq = alpha_Phi_K * Delta_Phi_base",
+      "named_comparator": "Delta_Tq = (e0(T0)/c_v(T0)) Phi_E",
+      "coordinate_map": "Phi_E = s_material * Phi_base",
+      "identifiability": "Delta_Phi_prime = s Delta_Phi; alpha_Phi_K_prime = alpha_Phi_K/s"
+    },
+    "units": {
+      "base_Phi": "dimensionless normalized response; SI scale open",
+      "Phi_E": "dimensionless named energy-response comparator",
+      "e0": "J m^-3; not source-locked",
+      "c_v": "J m^-3 K^-1",
+      "alpha_Phi_K": "K per normalized base Phi; no numeric value emitted"
+    },
+    "derivation_class": "source-search reconciliation, conditional formula audit, and identifiability boundary; no numerical base-Phi calibration",
+    "observable": "paired base-Phi amplitude and SI thermal-response acceptance state",
+    "data_role": "INTERNAL_BASE_PHI_RECONCILIATION_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json",
+        "sha256": "4d5f2e0d96d5d30d126243c9754d38a591680c9f3e0bbb62f0a3ece35cb2e3bc",
+        "role": "74-record paired base-Phi/SI search"
+      },
+      {
+        "path": "docs/core/artifacts/t13_mp48_phi_e_dimensional_comparator_audit.json",
+        "sha256": "46fad518feb670e7e3fe4faac47582f7a5e93b88985c53225d4da4e6fc7cde44",
+        "role": "named Phi_E harmonic dimensional comparator"
+      },
+      {
+        "path": "docs/core/artifacts/t13_dimensional_bridge_contract_audit.json",
+        "sha256": "caf37f860838c1e424a2a37cde6a9c852e2f2af0f13e6b17a1e9589161faf500",
+        "role": "conditional alpha formula and SI unit contract"
+      },
+      {
+        "path": "docs/core/artifacts/t13_alpha_phi_k_identifiability_audit.json",
+        "sha256": "31c38eef3132d72e5b090725f4d7524bde3d7da5eb5d69ad383ff442e097988e",
+        "role": "normalized Phi scale identifiability no-go"
+      },
+      {
+        "path": "docs/core/artifacts/t13_phi_si_anchor_public_source_boundary_audit.json",
+        "sha256": "605245fa937cf5d2701a0afa0cc90a4f543052c4dd977066e1f3496bc12c50c5",
+        "role": "official public source and author-request boundary"
+      },
+      {
+        "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
+        "sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52",
+        "role": "covariant action natural-unit route and SI boundary"
+      },
+      {
+        "path": "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json",
+        "sha256": "41cda98a01b282fa5c2789ef93ce2f249041550e40763cdcb083658712c564ac",
+        "role": "covariant field normalization identifiability no-go"
+      },
+      {
+        "path": "docs/core/artifacts/thermal_dimensional_calibration_contract.json",
+        "sha256": "2e4117e7ac400cb4de4877b5750c1f16013f35c824122b16eb414f83719214b1",
+        "role": "anti-fitting dimensional calibration contract"
+      },
+      {
+        "path": "docs/core/artifacts/uet_dimensional_observable_closure_audit.json",
+        "sha256": "fb30f8c552be7c26a8ec5bb43fa9651085d2e3188ba0b1f3c337e97529e280cd",
+        "role": "normalized TTG operator and observable audit"
+      },
+      {
+        "path": "docs/core/artifacts/t13_base_phi_independent_calibration_requirement.json",
+        "sha256": "0c4aaa38c138f9818c1a1e81a93dc7512f859c0d9095e238d2c12e7a3cf31c05",
+        "role": "independent base-Phi calibration acceptance protocol"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_BASE_PHI_RECONCILIATION_OPEN",
+    "controlling_blocker": "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
+    "claim_boundary": "This closes the base-Phi evidence boundary for lane only. It does not convert Phi_E into base Phi, emit alpha_Phi_K, or close the dimensional thermal bridge."
+  },
+  "summary": {
+    "candidate_count": 10,
+    "paired_alpha_search_candidate_count": 74,
+    "eligible_paired_alpha_record_count": 0,
+    "formal_or_structural_lane_count": 7,
+    "source_boundary_count": 2,
+    "named_phi_e_comparator_count": 1,
+    "independent_base_phi_si_record_count": 0,
+    "accepted_for_full_topic13_count": 0
+  },
+  "candidates": [
+    {
+      "candidate_id": "paired_base_phi_si_search",
+      "artifact": {
+        "path": "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json",
+        "sha256": "4d5f2e0d96d5d30d126243c9754d38a591680c9f3e0bbb62f0a3ece35cb2e3bc",
+        "role": "74-record paired base-Phi/SI search"
+      },
+      "candidate_class": "SOURCE_SEARCH_BOUNDARY",
+      "formal_or_structural_lane": false,
+      "source_boundary": true,
+      "named_phi_e_comparator": false,
+      "independent_base_phi_si_record": false,
+      "eligible_for_full_topic13": false,
+      "reason": "The repository-wide search found candidates but no paired base-Phi amplitude and independent SI response record.",
+      "controlling_blocker": "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
+      "candidate_count": 74,
+      "eligible_candidate_count": 0
+    },
+    {
+      "candidate_id": "mp48_named_phi_e_comparator",
+      "artifact": {
+        "path": "docs/core/artifacts/t13_mp48_phi_e_dimensional_comparator_audit.json",
+        "sha256": "46fad518feb670e7e3fe4faac47582f7a5e93b88985c53225d4da4e6fc7cde44",
+        "role": "named Phi_E harmonic dimensional comparator"
+      },
+      "candidate_class": "NAMED_PHI_E_COMPARATOR",
+      "formal_or_structural_lane": false,
+      "source_boundary": false,
+      "named_phi_e_comparator": true,
+      "independent_base_phi_si_record": false,
+      "eligible_for_full_topic13": false,
+      "reason": "MP48 supplies conditional alpha_Phi_E, but the base-Phi-to-Phi_E map remains open.",
+      "controlling_blocker": "base_Phi_to_Phi_E_mapping_missing",
+      "numeric_named_alpha_present": true,
+      "base_phi_mapping_present": false
+    },
+    {
+      "candidate_id": "conditional_dimensional_alpha_formula",
+      "artifact": {
+        "path": "docs/core/artifacts/t13_dimensional_bridge_contract_audit.json",
+        "sha256": "caf37f860838c1e424a2a37cde6a9c852e2f2af0f13e6b17a1e9589161faf500",
+        "role": "conditional alpha formula and SI unit contract"
+      },
+      "candidate_class": "CONDITIONAL_FORMULA_LANE",
+      "formal_or_structural_lane": true,
+      "source_boundary": false,
+      "named_phi_e_comparator": false,
+      "independent_base_phi_si_record": false,
+      "eligible_for_full_topic13": false,
+      "reason": "The formula and units are implemented, but a_Phi(T), e0, and the equilibrium branch are not source-locked.",
+      "controlling_blocker": "conditional_alpha_inputs_a_Phi_T_e0_and_equilibrium_reference_not_source_locked",
+      "numeric_alpha_witness_present": true,
+      "source_locked_e0": false
+    },
+    {
+      "candidate_id": "normalized_phi_scale_no_go",
+      "artifact": {
+        "path": "docs/core/artifacts/t13_alpha_phi_k_identifiability_audit.json",
+        "sha256": "31c38eef3132d72e5b090725f4d7524bde3d7da5eb5d69ad383ff442e097988e",
+        "role": "normalized Phi scale identifiability no-go"
+      },
+      "candidate_class": "NORMALIZED_SCALE_NO_GO",
+      "formal_or_structural_lane": true,
+      "source_boundary": false,
+      "named_phi_e_comparator": false,
+      "independent_base_phi_si_record": false,
+      "eligible_for_full_topic13": false,
+      "reason": "Normalized dynamics cannot identify an absolute K per Phi scale under compensating field rescaling.",
+      "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
+    },
+    {
+      "candidate_id": "public_ding_paired_record_boundary",
+      "artifact": {
+        "path": "docs/core/artifacts/t13_phi_si_anchor_public_source_boundary_audit.json",
+        "sha256": "605245fa937cf5d2701a0afa0cc90a4f543052c4dd977066e1f3496bc12c50c5",
+        "role": "official public source and author-request boundary"
+      },
+      "candidate_class": "PUBLIC_SOURCE_BOUNDARY",
+      "formal_or_structural_lane": false,
+      "source_boundary": true,
+      "named_phi_e_comparator": false,
+      "independent_base_phi_si_record": false,
+      "eligible_for_full_topic13": false,
+      "reason": "The captured public Ding route has no paired base-Phi/SI record and the author request has not been received.",
+      "controlling_blocker": "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
+      "public_paired_record_present": false,
+      "author_route_executed": false
+    },
+    {
+      "candidate_id": "covariant_natural_unit_si_route",
+      "artifact": {
+        "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
+        "sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52",
+        "role": "covariant action natural-unit route and SI boundary"
+      },
+      "candidate_class": "NATURAL_UNIT_ACTION_ROUTE",
+      "formal_or_structural_lane": true,
+      "source_boundary": false,
+      "named_phi_e_comparator": false,
+      "independent_base_phi_si_record": false,
+      "eligible_for_full_topic13": false,
+      "reason": "The action route is identified, but its implementation is natural-unit only and does not supply Phi normalization or e0.",
+      "controlling_blocker": "system_specific_SI_contract_and_covariant_Phi_to_normalized_Phi_map_missing",
+      "si_mapping_present": false
+    },
+    {
+      "candidate_id": "covariant_field_rescaling_no_go",
+      "artifact": {
+        "path": "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json",
+        "sha256": "41cda98a01b282fa5c2789ef93ce2f249041550e40763cdcb083658712c564ac",
+        "role": "covariant field normalization identifiability no-go"
+      },
+      "candidate_class": "COVARIANT_FIELD_SCALE_NO_GO",
+      "formal_or_structural_lane": true,
+      "source_boundary": false,
+      "named_phi_e_comparator": false,
+      "independent_base_phi_si_record": false,
+      "eligible_for_full_topic13": false,
+      "reason": "The natural-unit covariant scalar has a field-rescaling redundancy; canonicalization does not provide physical SI amplitude.",
+      "controlling_blocker": "physical_field_normalization_observable_and_SI_coefficient_provenance_missing"
+    },
+    {
+      "candidate_id": "thermal_calibration_contract",
+      "artifact": {
+        "path": "docs/core/artifacts/thermal_dimensional_calibration_contract.json",
+        "sha256": "2e4117e7ac400cb4de4877b5750c1f16013f35c824122b16eb414f83719214b1",
+        "role": "anti-fitting dimensional calibration contract"
+      },
+      "candidate_class": "ANTI_FITTING_CALIBRATION_CONTRACT",
+      "formal_or_structural_lane": true,
+      "source_boundary": false,
+      "named_phi_e_comparator": false,
+      "independent_base_phi_si_record": false,
+      "eligible_for_full_topic13": false,
+      "reason": "The scale-degeneracy contract is explicit, but the open record has no value, uncertainty, or source locator.",
+      "controlling_blocker": "normalized_phi_has_no_absolute_kelvin_scale",
+      "numeric_alpha_present": false
+    },
+    {
+      "candidate_id": "normalized_observable_closure",
+      "artifact": {
+        "path": "docs/core/artifacts/uet_dimensional_observable_closure_audit.json",
+        "sha256": "fb30f8c552be7c26a8ec5bb43fa9651085d2e3188ba0b1f3c337e97529e280cd",
+        "role": "normalized TTG operator and observable audit"
+      },
+      "candidate_class": "NORMALIZED_OBSERVABLE_ONLY",
+      "formal_or_structural_lane": true,
+      "source_boundary": false,
+      "named_phi_e_comparator": false,
+      "independent_base_phi_si_record": false,
+      "eligible_for_full_topic13": false,
+      "reason": "The normalized TTG operator is defined, but Kelvin, heat-flux, and entropy observables remain downstream of alpha/SI closure.",
+      "controlling_blocker": "dimensional_phi_to_thermal_observable_map_missing",
+      "alpha_open": true
+    },
+    {
+      "candidate_id": "independent_calibration_protocol",
+      "artifact": {
+        "path": "docs/core/artifacts/t13_base_phi_independent_calibration_requirement.json",
+        "sha256": "0c4aaa38c138f9818c1a1e81a93dc7512f859c0d9095e238d2c12e7a3cf31c05",
+        "role": "independent base-Phi calibration acceptance protocol"
+      },
+      "candidate_class": "PROTOCOL_NOT_EVIDENCE",
+      "formal_or_structural_lane": true,
+      "source_boundary": false,
+      "named_phi_e_comparator": false,
+      "independent_base_phi_si_record": false,
+      "eligible_for_full_topic13": false,
+      "reason": "The acceptance protocol is complete, but no permitted paired source row has been received and no numeric alpha is emitted.",
+      "controlling_blocker": "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
+      "record_received": false
+    }
+  ],
+  "checks": {
+    "all_evidence_files_present": true,
+    "alpha_search_is_zero_eligible": true,
+    "named_phi_e_is_not_base_phi": true,
+    "conditional_formula_inputs_remain_open": true,
+    "public_paired_record_is_absent": true,
+    "natural_action_route_remains_non_si": true,
+    "field_rescaling_no_go_is_preserved": true,
+    "normalized_no_go_is_preserved": true,
+    "calibration_contract_is_open": true,
+    "normalized_observable_is_not_kelvin": true,
+    "protocol_has_no_received_rows": true,
+    "holdout_is_clean": true,
+    "no_target_fit_or_calibration": true
+  },
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "xie_2026_source_data_consumed": false,
+    "target_curve_used": false,
+    "alpha_Phi_K_fit_used": false,
+    "fit_performed": false
+  },
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": "The 74-record search, Phi_E comparator, conditional formula, natural-unit action route, no-go boundaries, and calibration protocol are reconciled; no base-Phi/SI pair is accepted.",
+    "WHAT_REMAINS_OPEN": "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing; base-Phi to Phi_E map; e0; independent alpha_Phi_K.",
+    "DEPENDENCY_UNLOCKED": "None beyond base-Phi evidence visibility.",
+    "STATUS": "PASS_SCOPED_BASE_PHI_RECONCILIATION_OPEN",
+    "WHAT_CHANGED": "Added a fail-closed reconciliation of ten base-Phi/SI evidence classes; no alpha, e0, source row, threshold, equation, or holdout role was promoted.",
+    "EQUATION_OR_MAPPING": "Delta_Tq=alpha_Phi_K*Delta_Phi_base remains distinct from the conditional Phi_E comparator; the scale transformation remains non-identifiable.",
+    "VERIFICATION": "All evidence artifacts are present and hashed; candidate search is 74/0; Phi_E is not relabelled as base Phi; no numeric alpha or holdout access occurred.",
+    "CONTROLLING_BLOCKER": "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
+    "NEXT_ACTION": "Obtain an authorized paired base-Phi/SI record or derive a source-provenance-backed action-to-SI map; do not use Phi_E, TTG residuals, or Xie 2026 as base-Phi calibration.",
+    "CLAIM_BOUNDARY": "Base-Phi reconciliation is closed for lane only. Full Topic 13 and global claim promotion remain blocked."
+  }
+}

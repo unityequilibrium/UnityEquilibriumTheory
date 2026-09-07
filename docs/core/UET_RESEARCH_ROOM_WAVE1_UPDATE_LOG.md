@@ -18,3 +18,27 @@ CLAIM_BOUNDARY: Internal/provisional evidence only; no proof, prediction, extern
 
 This log is the Core coordination record. Topic-local logs remain authoritative
 for topic-specific hardening history.
+
+## 2026-08-26 Chaos diagnostic integration
+
+MAJOR_RESULT_CLOSURE: Core diagnostic is `CLOSED_FOR_CORE`; Topic 0.10 and Topic 13 diagnostic results are `CLOSED_FOR_LANE`.
+
+WHAT_IS_ACTUALLY_CLOSED: Shared tangent/Lyapunov/classification contract, standard method controls, and the normalized Topic 13 branch pilot.
+
+WHAT_REMAINS_OPEN: Full Topic 13 physical source/calibration/transport closure and all physical downstream dependencies.
+
+DEPENDENCY_UNLOCKED: Topic 0.11 and Core O(2) diagnostic rollout only.
+
+STATUS: `PASS_SCOPED_CHAOS_DIAGNOSTIC_INTEGRATION`; global claim promotion remains false.
+
+WHAT_CHANGED: Added four equation-registry IDs, three evidence artifacts, major-result discovery for Topic 0.10, and separate diagnostic/physical dependency orders.
+
+EQUATION_OR_MAPPING: `(C,Phi,Pi) -> tangent map -> Lyapunov spectrum -> regime classification`; no `R_gen` backreaction and no `R_obs` dynamics.
+
+VERIFICATION: Core JVP, Topic 0.10 controls, Topic 13 ledger/method/holdout checks, and dependency regressions pass.
+
+CONTROLLING_BLOCKER: `T13_FULL_THERMODYNAMIC_BRIDGE` remains `PARTIAL`; diagnostic closure does not satisfy physical inputs.
+
+NEXT_ACTION: Roll diagnostics to Topic 0.11/Core O(2) without changing claim tiers or physical dependency gates.
+
+CLAIM_BOUNDARY: Diagnostic readiness and lane classification only; no physical chaos proof or UET closure.

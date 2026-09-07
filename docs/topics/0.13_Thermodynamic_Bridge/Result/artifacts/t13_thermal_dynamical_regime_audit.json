@@ -1,0 +1,423 @@
+{
+  "schema_version": "uet-chaos-diagnostic-v1",
+  "artifact": "t13_thermal_dynamical_regime_audit",
+  "generated_at": "2026-08-26",
+  "status": "PASS_SCOPED_THERMAL_DYNAMICAL_REGIME_PILOT",
+  "claim_promotion": false,
+  "full_core_unlock": false,
+  "holdout_access": {
+    "policy": "Xie 2026 numeric payload must not be read, fit, tuned, or used to change thresholds",
+    "audit_path": "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json",
+    "audit_sha256": "c3185da0a233894d7f338138bbe6acee287194e1852a80e40b0b5f6f2134e21b",
+    "holdout_consumed": false,
+    "inherited_audit_pass": true
+  },
+  "measurement_contract_unchanged": {
+    "measurement": "y_TTG = Delta_Tq(t) / Delta_Tq(0)",
+    "uet": "y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)",
+    "bridge": "Delta_Tq = alpha_Phi_K * Delta_Phi",
+    "alpha_Phi_K_status": "BLOCKED_OPEN_CALIBRATION"
+  },
+  "branches": {
+    "fourier": {
+      "diagnostic_id": "t13.thermal.fourier_mode",
+      "owner_topic": "0.13_Thermodynamic_Bridge",
+      "equation_registry_ids": [
+        "uet.dynamics.lyapunov_spectrum",
+        "uet.dynamics.regime_classifier"
+      ],
+      "state_variables": [
+        "thermal_mode_amplitude"
+      ],
+      "excluded_variables": [
+        "R_gen",
+        "R_obs"
+      ],
+      "unit_lane": "normalized_control",
+      "forcing_class": "closed_linear_diffusion_control",
+      "noise_coupling": "none",
+      "state_metric": "single_mode_absolute_amplitude",
+      "estimator": "ANALYTIC_LINEAR_MODE",
+      "transient_window": 0.0,
+      "renormalization_interval": "not_applicable",
+      "perturbation_amplitudes": [
+        1e-08,
+        1e-07,
+        1e-06
+      ],
+      "resolution_grid": {
+        "analytic": true
+      },
+      "lambda_max": -0.2,
+      "lambda_spectrum": [
+        -0.2
+      ],
+      "confidence_or_block_error": 0.0,
+      "lambda_resolution": 0.0,
+      "boundedness": true,
+      "stationarity": true,
+      "ledger_status": "PASS_ANALYTIC_CONTROL",
+      "conservation_status": "NOT_APPLICABLE_LINEAR_MODE_CONTROL",
+      "causal_status": "PASS_DECLARED_CONTROL",
+      "method_agreement": true,
+      "classification": "NONCHAOTIC_STABLE_DIAGNOSTIC",
+      "controlling_blocker": "none_for_analytic_control",
+      "evidence_hashes": {
+        "generator": "37e7522e5e4d32a2986d4ce53c7e90a2723401630b88f421baa06825a54405e1"
+      },
+      "claim_boundary": "Analytic thermal control only; not physical transport validation.",
+      "equation": "dot(T_k)=-D*k^2*T_k"
+    },
+    "cattaneo": {
+      "diagnostic_id": "t13.thermal.cattaneo_mode",
+      "owner_topic": "0.13_Thermodynamic_Bridge",
+      "equation_registry_ids": [
+        "uet.dynamics.lyapunov_spectrum",
+        "uet.dynamics.regime_classifier"
+      ],
+      "state_variables": [
+        "thermal_mode_amplitude"
+      ],
+      "excluded_variables": [
+        "R_gen",
+        "R_obs"
+      ],
+      "unit_lane": "normalized_control",
+      "forcing_class": "closed_linear_finite_speed_control",
+      "noise_coupling": "none",
+      "state_metric": "single_mode_absolute_amplitude",
+      "estimator": "ANALYTIC_LINEAR_MODE",
+      "transient_window": 0.0,
+      "renormalization_interval": "not_applicable",
+      "perturbation_amplitudes": [
+        1e-08,
+        1e-07,
+        1e-06
+      ],
+      "resolution_grid": {
+        "analytic": true
+      },
+      "lambda_max": -0.2254033307585166,
+      "lambda_spectrum": [
+        -0.2254033307585166
+      ],
+      "confidence_or_block_error": 0.0,
+      "lambda_resolution": 0.0,
+      "boundedness": true,
+      "stationarity": true,
+      "ledger_status": "PASS_ANALYTIC_CONTROL",
+      "conservation_status": "NOT_APPLICABLE_LINEAR_MODE_CONTROL",
+      "causal_status": "PASS_DECLARED_CONTROL",
+      "method_agreement": true,
+      "classification": "NONCHAOTIC_STABLE_DIAGNOSTIC",
+      "controlling_blocker": "none_for_analytic_control",
+      "evidence_hashes": {
+        "generator": "37e7522e5e4d32a2986d4ce53c7e90a2723401630b88f421baa06825a54405e1"
+      },
+      "claim_boundary": "Analytic thermal control only; not physical transport validation.",
+      "equation": "tau*ddot(T_k)+dot(T_k)+D*k^2*T_k=0"
+    },
+    "trace_only": {
+      "diagnostic_id": "t13.thermal.trace_only",
+      "classification": "NOT_APPLICABLE_AS_DYNAMICAL_STATE",
+      "state_variables": [],
+      "excluded_variables": [
+        "R_gen",
+        "R_obs"
+      ],
+      "reason": "R_gen is a derived history trace with no backreaction."
+    },
+    "closed_matter_space": {
+      "diagnostic_id": "t13.thermal.closed_matter_space",
+      "owner_topic": "0.13_Thermodynamic_Bridge",
+      "equation_registry_ids": [
+        "uet.dynamics.tangent_map",
+        "uet.dynamics.lyapunov_spectrum",
+        "uet.dynamics.regime_classifier",
+        "uet.dynamics.closed_gradient_no_sustained_chaos_boundary"
+      ],
+      "state_variables": [
+        "C",
+        "Phi",
+        "Pi"
+      ],
+      "excluded_variables": [
+        "R_gen",
+        "R_obs"
+      ],
+      "unit_lane": "normalized",
+      "forcing_class": "closed_autonomous",
+      "noise_coupling": "none",
+      "state_metric": "normalized_block_l2_reported_with_flat_l2_estimator",
+      "estimator": [
+        "BENETTIN_QR_TANGENT",
+        "SHADOW_PERIODIC_RENORMALIZATION"
+      ],
+      "transient_window": 2.0,
+      "renormalization_interval": 0.1,
+      "perturbation_amplitudes": [
+        1e-08,
+        1e-07,
+        1e-06
+      ],
+      "resolution_grid": {
+        "dt": [
+          0.004,
+          0.002
+        ],
+        "dx": [
+          0.5
+        ],
+        "duration": 8.0
+      },
+      "lambda_max": -0.47715969519600143,
+      "lambda_spectrum": [
+        -0.47715969519600143
+      ],
+      "confidence_or_block_error": 0.007705129676586841,
+      "lambda_resolution": 0.020755914687409005,
+      "boundedness": true,
+      "stationarity": true,
+      "ledger_status": "PASS",
+      "conservation_status": "NOT_APPLICABLE_NONCONSERVED_C_CONTROL",
+      "causal_status": "DIAGNOSTIC_TIME_EVOLUTION_ONLY_FULL_FINITE_CONE_GATE_SEPARATE",
+      "method_agreement": true,
+      "classification": "NONCHAOTIC_STABLE_DIAGNOSTIC",
+      "controlling_blocker": "full_candidate_finite_cone_and_physical_transport_mapping_remain_external_to_this_diagnostic",
+      "evidence_hashes": {
+        "core_diagnostic": "9ae6d3ee13001c243924e58238ea0d604c4d848824c9b98d29c441d26d0969b5",
+        "topic_0_10_method_validation": "e1e70f5e08da828b8f141826e1a384bd31df6e41aacef59ec0c85950e159e3b6"
+      },
+      "claim_boundary": "Normalized internal dynamical-regime diagnostic only; no SI, TTG, transport, or external-validation claim.",
+      "dt_estimates": {
+        "0.004": {
+          "lambda_spectrum": [
+            -0.477159706129319
+          ],
+          "lambda_max": -0.477159706129319,
+          "block_standard_error": 0.0077051442864196785,
+          "samples": 70,
+          "elapsed_time": 7.000000000000001,
+          "estimator": "BENETTIN_QR_TANGENT"
+        },
+        "0.002": {
+          "lambda_spectrum": [
+            -0.47715969519600143
+          ],
+          "lambda_max": -0.47715969519600143,
+          "block_standard_error": 0.007705129676586841,
+          "samples": 70,
+          "elapsed_time": 7.000000000000001,
+          "estimator": "BENETTIN_QR_TANGENT"
+        }
+      },
+      "shadow_amplitude_estimates": {
+        "1e-08": {
+          "lambda_max": -0.4979156124105978,
+          "block_standard_error": 0.011178229579569113,
+          "samples": 70,
+          "elapsed_time": 7.000000000000001,
+          "estimator": "SHADOW_PERIODIC_RENORMALIZATION"
+        },
+        "1e-07": {
+          "lambda_max": -0.49791560988341044,
+          "block_standard_error": 0.011178229573088541,
+          "samples": 70,
+          "elapsed_time": 7.000000000000001,
+          "estimator": "SHADOW_PERIODIC_RENORMALIZATION"
+        },
+        "1e-06": {
+          "lambda_max": -0.4979155988157912,
+          "block_standard_error": 0.011178228713162644,
+          "samples": 70,
+          "elapsed_time": 7.000000000000001,
+          "estimator": "SHADOW_PERIODIC_RENORMALIZATION"
+        }
+      },
+      "perturbation_amplitude_spread": 1.3594806558270278e-08,
+      "ledger": {
+        "initial_energy": 0.018996158727095012,
+        "final_energy": 0.00733951111884062,
+        "energy_descent": true,
+        "max_closure_relative": 3.91714292542336e-08,
+        "all_step_ledger_gates_pass": true,
+        "all_finite": true,
+        "maximum_state_norm": 0.2912043955712207
+      }
+    },
+    "periodically_driven_matter_space": {
+      "diagnostic_id": "t13.thermal.periodically_driven_matter_space",
+      "owner_topic": "0.13_Thermodynamic_Bridge",
+      "equation_registry_ids": [
+        "uet.dynamics.tangent_map",
+        "uet.dynamics.lyapunov_spectrum",
+        "uet.dynamics.regime_classifier",
+        "uet.dynamics.closed_gradient_no_sustained_chaos_boundary"
+      ],
+      "state_variables": [
+        "C",
+        "Phi",
+        "Pi"
+      ],
+      "excluded_variables": [
+        "R_gen",
+        "R_obs"
+      ],
+      "unit_lane": "normalized",
+      "forcing_class": "periodically_driven",
+      "noise_coupling": "none",
+      "state_metric": "normalized_block_l2_reported_with_flat_l2_estimator",
+      "estimator": [
+        "BENETTIN_QR_TANGENT",
+        "SHADOW_PERIODIC_RENORMALIZATION"
+      ],
+      "transient_window": 2.0,
+      "renormalization_interval": 0.1,
+      "perturbation_amplitudes": [
+        1e-08,
+        1e-07,
+        1e-06
+      ],
+      "resolution_grid": {
+        "dt": [
+          0.004,
+          0.002
+        ],
+        "dx": [
+          0.5
+        ],
+        "duration": 8.0
+      },
+      "lambda_max": -0.47714544622636484,
+      "lambda_spectrum": [
+        -0.47714544622636484
+      ],
+      "confidence_or_block_error": 0.0077036243429103495,
+      "lambda_resolution": 0.020759319614934102,
+      "boundedness": true,
+      "stationarity": true,
+      "ledger_status": "PASS",
+      "conservation_status": "NOT_APPLICABLE_NONCONSERVED_C_CONTROL",
+      "causal_status": "DIAGNOSTIC_TIME_EVOLUTION_ONLY_FULL_FINITE_CONE_GATE_SEPARATE",
+      "method_agreement": true,
+      "classification": "NONCHAOTIC_STABLE_DIAGNOSTIC",
+      "controlling_blocker": "full_candidate_finite_cone_and_physical_transport_mapping_remain_external_to_this_diagnostic",
+      "evidence_hashes": {
+        "core_diagnostic": "9ae6d3ee13001c243924e58238ea0d604c4d848824c9b98d29c441d26d0969b5",
+        "topic_0_10_method_validation": "e1e70f5e08da828b8f141826e1a384bd31df6e41aacef59ec0c85950e159e3b6"
+      },
+      "claim_boundary": "Normalized internal dynamical-regime diagnostic only; no SI, TTG, transport, or external-validation claim.",
+      "dt_estimates": {
+        "0.004": {
+          "lambda_spectrum": [
+            -0.4771454430922559
+          ],
+          "lambda_max": -0.4771454430922559,
+          "block_standard_error": 0.007703641129113028,
+          "samples": 70,
+          "elapsed_time": 7.000000000000001,
+          "estimator": "BENETTIN_QR_TANGENT"
+        },
+        "0.002": {
+          "lambda_spectrum": [
+            -0.47714544622636484
+          ],
+          "lambda_max": -0.47714544622636484,
+          "block_standard_error": 0.0077036243429103495,
+          "samples": 70,
+          "elapsed_time": 7.000000000000001,
+          "estimator": "BENETTIN_QR_TANGENT"
+        }
+      },
+      "shadow_amplitude_estimates": {
+        "1e-08": {
+          "lambda_max": -0.49790476693150254,
+          "block_standard_error": 0.011289133843015636,
+          "samples": 70,
+          "elapsed_time": 7.000000000000001,
+          "estimator": "SHADOW_PERIODIC_RENORMALIZATION"
+        },
+        "1e-07": {
+          "lambda_max": -0.49790476584129895,
+          "block_standard_error": 0.011289132656059202,
+          "samples": 70,
+          "elapsed_time": 7.000000000000001,
+          "estimator": "SHADOW_PERIODIC_RENORMALIZATION"
+        },
+        "1e-06": {
+          "lambda_max": -0.49790475501033576,
+          "block_standard_error": 0.011289131678827575,
+          "samples": 70,
+          "elapsed_time": 7.000000000000001,
+          "estimator": "SHADOW_PERIODIC_RENORMALIZATION"
+        }
+      },
+      "perturbation_amplitude_spread": 1.192116677595223e-08,
+      "ledger": {
+        "initial_energy": 0.018996158727095012,
+        "final_energy": 0.025652954874255625,
+        "energy_descent": false,
+        "max_closure_relative": 2.5437982196899443e-07,
+        "all_step_ledger_gates_pass": true,
+        "all_finite": true,
+        "maximum_state_norm": 0.3243523353828588
+      }
+    },
+    "open_kms": {
+      "diagnostic_id": "t13.thermal.open_kms",
+      "classification": "BLOCKED_INPUT_NOT_EVALUATED",
+      "noise_coupling": "COMMON_NOISE_REQUIRED",
+      "controlling_blocker": "accepted_physical_noise_and_transport_input_missing",
+      "claim_boundary": "Different-noise divergence will not be classified as deterministic chaos."
+    }
+  },
+  "chaos_candidate_branches": [],
+  "predictability_horizon": {},
+  "major_result": {
+    "major_result_id": "T13_THERMAL_DYNAMICAL_REGIME_CLASSIFIED",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "Fourier and Cattaneo linear controls are non-chaotic under the declared normalized parameters",
+      "R_gen trace-only output is excluded from the dynamical state",
+      "closed and periodically driven normalized matter-space branches have reproducible tangent/shadow classifications",
+      "open KMS chaos evaluation is explicitly blocked until common-noise physical inputs are accepted"
+    ],
+    "equation_or_mapping": {
+      "tangent_state": "(delta_C, delta_Phi, delta_Pi)",
+      "predictability_horizon": "t_predict=1/lambda_max only when lambda_max is resolved positive",
+      "thermal_mapping_unchanged": "Delta_Tq=alpha_Phi_K*Delta_Phi"
+    },
+    "units": "normalized inverse time; no SI Lyapunov or temperature-scale claim",
+    "derivation_class": "analytic linear controls plus tangent/QR and shadow diagnostics of declared normalized UET branches",
+    "observable": "branch-level Lyapunov classification and conditional predictability horizon",
+    "data_role": "INTERNAL_SYNTHETIC_DIAGNOSTIC_NO_HOLDOUT",
+    "verification_status": "PASS_SCOPED_THERMAL_DYNAMICAL_REGIME_PILOT",
+    "open_blockers": [
+      "full_candidate_finite_cone_physical_compatibility_remains_separate",
+      "accepted_open_system_noise_and_transport_input_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "TTG_numeric_source_and_external_validation_remain_open"
+    ],
+    "dependency_unlocked": "Topic 0.11 and Core O(2) diagnostic-method rollout only; no Full Topic 13, Core physics, Gravity, Galaxy, or external-validation unlock",
+    "claim_boundary": "This closes a normalized diagnostic lane, not the thermodynamic bridge, physical transport, TTG validation, or UET theory."
+  },
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": "normalized thermal dynamical-regime classification",
+    "WHAT_REMAINS_OPEN": "SI mapping, alpha_Phi_K, TTG source, physical transport/noise, and external validation",
+    "DEPENDENCY_UNLOCKED": "diagnostic rollout to Topic 0.11 and Core O(2) only",
+    "STATUS": "PASS_SCOPED",
+    "WHAT_CHANGED": "Added branch-separated chaos diagnostics without changing thermal equations or holdout policy.",
+    "EQUATION_OR_MAPPING": "(C,Phi,Pi) tangent map -> lambda_max; R_gen excluded",
+    "VERIFICATION": {
+      "method_artifact_pass": true,
+      "holdout_unconsumed": true,
+      "no_numerical_instability": true
+    },
+    "CONTROLLING_BLOCKER": "physical source/calibration/transport closure remains unchanged",
+    "NEXT_ACTION": "roll the validated diagnostic method to Topic 0.11 and Core O(2) without promoting physical claims",
+    "CLAIM_BOUNDARY": "normalized internal diagnostic only"
+  }
+}

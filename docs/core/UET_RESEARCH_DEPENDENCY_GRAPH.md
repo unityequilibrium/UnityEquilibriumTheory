@@ -25,6 +25,101 @@ artifacts may remain useful as diagnostics, but they cannot promote a claim
 while the upstream ontology, units, correspondence, or numerical gate is
 blocked.
 
+## Latest plan update - 2026-08-30 Topic 13 prescribed matter wiring
+
+`CORE_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING_READY` is
+`CLOSED_FOR_LANE`. The He-4/O(2) stress tensor, Eulerian 3+1 projections,
+trace-reversed GH source, vacuum-null control, and natural-to-SI multiplicative
+scale pass 23/23 verifier checks, including a nonzero-shift Eulerian control,
+without fitting, clipping, or ontology drift.
+
+The parent advances to
+`PARTIAL_CURVED_3P1_GH_PERIODIC_PRESCRIBED_MATTER_READY`. Its machine-readable
+open list now contains only `constraint_preserving_boundaries` and
+`dimensional_observable_mapping`. Self-consistent matter evolution and
+stress-energy conservation are explicitly outside the prescribed-source lane;
+Gravity remains blocked.
+
+## Latest plan update - 2026-08-29 periodic GH vacuum evolution
+
+`CORE_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY` is
+`CLOSED_FOR_LANE`. Classical RK4, the fixed characteristic CFL contract,
+exact harmonic gauge wave, second-order spatial convergence, fourth-order
+temporal convergence, and periodic gauge/reduction/curl constraint controls
+pass without projection, filtering, clipping, or fitting.
+
+The parent advances to
+`PARTIAL_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY`. The next edge is no
+longer more periodic runtime; it is constraint-preserving non-periodic
+boundaries plus Topic 13 stress-energy wiring. Detector observables remain
+open and Gravity is not unlocked.
+
+## Latest plan update - 2026-08-28 generalized-harmonic nonlinear vacuum RHS
+
+`CORE_CURVED_3P1_GH_NONLINEAR_VACUUM_RHS_READY` is `CLOSED_FOR_LANE`.
+The complete source-locked vacuum Eqs. (35)-(40) operator, metric-derived
+kinematics, first-order Christoffel/gauge reconstruction, and algebraic
+`gamma0` damping pass independent constant-grid and variable-grid controls.
+
+The parent advances to
+`PARTIAL_CURVED_3P1_GH_NONLINEAR_VACUUM_RHS_READY`. The next physical edge
+is time integration with a fixed CFL contract and propagated gauge/reduction
+constraint convergence. Matter wiring, non-periodic boundaries, and detector
+observables remain open; Gravity is not unlocked.
+
+## Latest plan update - 2026-08-28 generalized-harmonic principal system
+
+`CORE_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY` is `CLOSED_FOR_LANE`. The
+source-locked GH principal matrix has a complete characteristic basis, a
+positive analytic symmetrizer, causal normal-frame wave speeds, and a verified
+reduction-constraint damping operator with second-order spatial convergence.
+
+The parent remains `PARTIAL`. The next edge is the complete nonlinear GH RHS
+and `gamma0` gauge-constraint damping, followed by time integration and full
+constraint propagation. Gravity remains blocked; principal-system
+hyperbolicity is not a numerical-relativity evolution result.
+
+## Latest plan update - 2026-08-28 ADM evolution and formulation selection
+
+`CORE_CURVED_3P1_ADM_EVOLUTION_RHS_READY` is closed for the nonlinear periodic
+right-hand-side operator lane. The fixed-geodesic ADM strong-hyperbolicity
+question is also closed as a branch-local no-go: the principal symbol has an
+incomplete zero-speed eigenspace in every preregistered direction.
+
+The next edge is no longer an open-ended ADM rerun. It is the source-locked
+first-order generalized-harmonic branch with explicit characteristic-field,
+constraint-damping/propagation, convergence, and boundary gates.
+`CORE_CURVED_3P1_OBSERVABLE_PARENT_READY` remains `PARTIAL`, and Gravity
+remains blocked.
+
+## Latest plan update - 2026-08-28 curved 3+1 geometry operator
+
+The second curved-parent subresult,
+`CORE_CURVED_3P1_GEOMETRY_OPERATOR_READY`, is closed for its periodic-grid
+lane. The standard Levi-Civita connection, spatial Ricci tensor/scalar, and ADM
+momentum-tensor divergence are now computed from grid `gamma_ij` and `K_ij`;
+independent analytic controls show second-order spatial convergence.
+
+This removes `metric_to_ricci_operator` from the parent blocker but does not
+close `CORE_CURVED_3P1_OBSERVABLE_PARENT_READY`. The next edge is a declared
+lapse/shift and metric/`K` evolution formulation with a strong-hyperbolicity
+boundary and constraint-propagation/convergence tests. Gravity remains blocked,
+and periodic single-chart success is not promoted to a general curved-spacetime
+solver claim.
+
+## Latest plan update - 2026-08-28 curved 3+1 constraint interface
+
+Topic 13 now unlocks construction of the Core curved 3+1 parent. The first
+subresult, `CORE_CURVED_3P1_ADM_CONSTRAINT_INTERFACE_READY`, is closed for its
+lane using source-linked Hamiltonian/momentum constraint formulas, Minkowski
+and flat-FLRW analytic controls, and explicit negative controls.
+
+`CORE_CURVED_3P1_OBSERVABLE_PARENT_READY` remains `PARTIAL`, not Core-closed.
+The next edge is the differential-geometry/evolution/gauge/constraint-
+propagation package. `GR_CLASSICAL_COMPATIBILITY_LANE` remains blocked until
+the parent reaches `CLOSED_FOR_CORE`; no application edge is promoted by this
+constraint-interface result.
+
 ## Two-arm C decision
 
 The conserved-C branch and the finite-cone-C branch are deliberately separate:

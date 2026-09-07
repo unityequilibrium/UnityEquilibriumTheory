@@ -1,0 +1,121 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "CONDITIONAL_INTERFACE_NOT_MERGED_AS_ACCEPTED_ACTION",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "equation_entries": [
+    {
+      "equation_id": "uet.o2.thermal.material_lattice_interface_contract",
+      "version": "1",
+      "classification": "conditional_uet_material_lattice_interface",
+      "relation_or_code_path": {
+        "strain": "strain_ij=(partial_i u_j+partial_j u_i)/2",
+        "volumetric_strain": "theta=strain_i^i=div(u)",
+        "canonical_response_map": "Phi_E=Z_Phi*DeltaPhi",
+        "conditional_interaction": "L_int=-g_Phi_theta*Phi_E*theta",
+        "phonon_heat_current": "J_Q^i=sum_qnu hbar*omega_qnu*v_qnu^i*delta_n_qnu/V",
+        "pbte": "partial_t delta_n+v.grad(delta_n)=-C_ph[delta_n]+S_Phi",
+        "collision_split": "C_ph=C_N+C_R; C_N preserves crystal momentum; C_R relaxes it",
+        "exchange_ledger": "partial_mu T_UET^(mu0)=-Q_ex; partial_mu T_lat^(mu0)=+Q_ex",
+        "conditional_temperature_map": "DeltaT=(chi_u_theta*g_Phi_theta*Z_Phi/C_src)*DeltaPhi",
+        "conditional_alpha": "alpha_Phi_K=chi_u_theta*g_Phi_theta*Z_Phi/C_src with SI conversion and uncertainty"
+      },
+      "ontology": {
+        "u_i": "external material displacement field",
+        "strain_ij": "symmetric gradient of u_i",
+        "delta_n_qnu": "phonon distribution perturbation",
+        "Phi": "UET effective response variable; not temperature, displacement or strain",
+        "C": "unchanged collective coordinate; not lattice mass or heat capacity",
+        "R_gen": "derived history trace with no interface backreaction"
+      },
+      "standard_physics_counterpart": "Scalar-strain material coupling plus linearized phonon BTE and subsystem exchange ledger",
+      "variables": {
+        "Phi_E": "canonical energy-dimension response amplitude",
+        "theta": "volumetric strain",
+        "delta_n_qnu": "phonon distribution perturbation",
+        "Q_ex": "energy exchange rate density"
+      },
+      "mathematical_role": "conditional bridge from UET response to external material energy/current",
+      "observable_mapping": "Conditional phonon energy/current response to normalized Phi; no numeric physical coefficient",
+      "unit_lane": "conditional_natural_3p1_open_SI",
+      "units": {
+        "coordinate_x": -1,
+        "derivative": 1,
+        "displacement_u": -1,
+        "strain_theta": 0,
+        "Phi_E": 1,
+        "g_Phi_theta": 3,
+        "interaction_energy_density": 4,
+        "phonon_energy_density": 4,
+        "heat_current": 4,
+        "exchange_rate_density": 5,
+        "C_src_natural": 3,
+        "alpha_per_normalized_Phi_natural": 1
+      },
+      "parameter_dimensions": {
+        "coordinate_x": -1,
+        "derivative": 1,
+        "displacement_u": -1,
+        "strain_theta": 0,
+        "Phi_E": 1,
+        "g_Phi_theta": 3,
+        "interaction_energy_density": 4,
+        "phonon_energy_density": 4,
+        "heat_current": 4,
+        "exchange_rate_density": 5,
+        "C_src_natural": 3,
+        "alpha_per_normalized_Phi_natural": 1
+      },
+      "derivation_class": "conditional_interface_and_identifiability_contract",
+      "source_or_origin": "Conditional interface design constrained by the current-action Umklapp no-go and Calorine source boundary",
+      "assumptions": {
+        "external_material_sector": true,
+        "scalar_volumetric_strain_channel": true,
+        "physical_coefficients_supplied": false
+      },
+      "symmetry_and_conservation": "Displacement shift enters through strain; subsystem energy sources cancel exactly",
+      "limiting_cases": [
+        "zero coupling",
+        "homogeneous strain",
+        "field-coordinate rescaling"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_material_lattice_interface_contract.py"
+      ],
+      "verifier_paths": [
+        "docs/core/test/test_topic13_material_lattice_interface_contract.py",
+        "docs/scripts/audit/audit_topic13_material_lattice_interface_contract.py"
+      ],
+      "observable": "Conditional phonon energy/current response to normalized Phi; no numeric physical coefficient",
+      "data_role": "DERIVED_CONDITIONAL_INTERFACE_NO_CALIBRATION",
+      "evidence_class": "INTERNAL_CONDITIONAL_INTERFACE",
+      "proof_status": "ARCHITECTURE_AND_IDENTIFIABILITY_VERIFIED_PHYSICAL_INPUTS_OPEN",
+      "verification_status": "PASS_CONDITIONAL_MATERIAL_LATTICE_INTERFACE_CONTRACT",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_uet_material_lattice_interface_contract_audit.json",
+          "sha256": "e6cfea6a55f8d54040fcaa570c3b244a98bd454fd1462144f8948c5caa16487c"
+        }
+      ],
+      "downstream_dependencies": [
+        "physical_Phi_strain_coupling_derivation_or_source_gate",
+        "material_response_kernel_chi_u_theta_source_gate",
+        "conditional_alpha_uncertainty_propagation_design"
+      ],
+      "dependency_role": "physical_coupling_and_alpha_controller",
+      "physical_dependency_unlock": false,
+      "controlling_blocker": "physical_Phi_residue_strain_coupling_and_material_response_missing",
+      "failure_mode": [
+        "physical_Phi_energy_residue_Z_Phi_missing",
+        "physical_Phi_strain_coupling_g_missing",
+        "source_backed_material_response_chi_u_theta_missing",
+        "normal_umklapp_split_or_admissible_full_collision_operator_missing",
+        "Ding_material_state_and_source_uncertainty_missing",
+        "SI_conversion_and_independent_alpha_record_missing"
+      ],
+      "next_hardening_step": "Derive or source-lock Z_Phi, g_Phi_theta and chi_u_theta independently, and acquire an admissible material collision operator before evaluating alpha or transport.",
+      "claim_boundary": "Conditional interface architecture and identifiability result only; not a new accepted UET action term, physical Phi residue/coupling, material transport coefficient, alpha calibration, TTG prediction, external validation or Full Topic 13 closure."
+    }
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}

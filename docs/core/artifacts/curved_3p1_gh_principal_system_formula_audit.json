@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0",
+  "artifact": "curved_3p1_gh_principal_system_formula_audit",
+  "generated_at": "2026-08-29T04:51:30.207101+00:00",
+  "status": "PASS_SOURCE_LOCKED_GH_PRINCIPAL_FORMULAS",
+  "relations": [
+    {
+      "formula_id": "UET-CURVED3P1-GH-GAUGE-009",
+      "relation": "H_a(x,psi) = -Gamma_a; C_a = H_a + Gamma_a",
+      "variables": {
+        "psi_ab": "spacetime metric",
+        "H_a": "declared algebraic gauge source",
+        "C_a": "GH gauge constraint"
+      },
+      "units": {
+        "psi_ab": "1",
+        "H_a": "L^-1",
+        "Gamma_a": "L^-1"
+      },
+      "conversion_steps": "none in geometric c=1 lane",
+      "constant_origin": "Lindblom et al. Eqs. 6 and 12",
+      "derivation_class": "source-locked standard-physics relation",
+      "unit_lane": "geometric c=1",
+      "unit_closure": "L^-1",
+      "proof_status": "flat-space analytic control passes",
+      "verification_role": "gauge-constraint interface gate",
+      "failure_mode": "gauge source is mistaken for a fitted physical field",
+      "next_hardening_step": "implement complete nonlinear gamma0 damping RHS",
+      "code_path": "docs/core/uet_curved_3p1_generalized_harmonic.py"
+    },
+    {
+      "formula_id": "UET-CURVED3P1-GH-PRINCIPAL-010",
+      "relation": "Eqs. 27-29 on {psi_ab,Pi_ab,Phi_iab}, with gamma3=gamma1 gamma2",
+      "variables": {
+        "Pi_ab": "minus normal metric derivative",
+        "Phi_iab": "spatial metric derivative",
+        "gamma1": "dimensionless constraint addition",
+        "gamma2": "L^-1 reduction damping"
+      },
+      "units": {
+        "Pi_ab": "L^-1",
+        "Phi_iab": "L^-1",
+        "gamma2": "L^-1"
+      },
+      "conversion_steps": "local orthonormal principal frame",
+      "constant_origin": "Lindblom et al. Eqs. 27-29",
+      "derivation_class": "source-locked standard-physics principal system",
+      "unit_lane": "geometric c=1",
+      "unit_closure": "metric equation L^-1; derivative equations L^-2",
+      "proof_status": "principal matrix and manufactured convergence pass",
+      "verification_role": "formulation gate",
+      "failure_mode": "non-principal implementation is silently implied",
+      "next_hardening_step": "transcribe and verify complete nonlinear algebraic terms",
+      "code_path": "docs/core/uet_curved_3p1_generalized_harmonic.py"
+    },
+    {
+      "formula_id": "UET-CURVED3P1-GH-SYMMETRIZER-011",
+      "relation": "S: Lambda^2 dpsi^2 + dPi^2 - 2 gamma2 dpsi dPi + dPhi_i dPhi^i; Lambda^2 > gamma2^2",
+      "variables": {
+        "S": "positive symmetrizer",
+        "Lambda": "L^-1 norm scale"
+      },
+      "units": "blockwise geometric energy norm",
+      "conversion_steps": "one metric-component block in a local orthonormal frame",
+      "constant_origin": "Lindblom et al. Eq. 30",
+      "derivation_class": "source-locked analytic symmetrizer",
+      "unit_lane": "blockwise geometric",
+      "unit_closure": "all norm terms L^-2 after Lambda scaling",
+      "proof_status": "positive eigenvalue and S A symmetry pass",
+      "verification_role": "symmetric-hyperbolicity gate",
+      "failure_mode": "diagonalizability is asserted without a positive symmetrizer",
+      "next_hardening_step": "carry the symmetrizer through variable-coefficient energy estimates",
+      "code_path": "docs/core/uet_curved_3p1_generalized_harmonic.py"
+    },
+    {
+      "formula_id": "UET-CURVED3P1-GH-CHARACTERISTICS-012",
+      "relation": "u0=psi; u1pm=Pi +/- n^i Phi_i - gamma2 psi; u2_i=P_i^k Phi_k",
+      "variables": {
+        "n_i": "unit propagation covector",
+        "P_i^k": "transverse projector"
+      },
+      "units": "u1pm L^-1; gamma2 psi supplies L^-1",
+      "conversion_steps": "local orthonormal characteristic projection",
+      "constant_origin": "Lindblom et al. Eqs. 32-34",
+      "derivation_class": "source-locked characteristic decomposition",
+      "unit_lane": "geometric c=1",
+      "unit_closure": "blockwise",
+      "proof_status": "rank, residual, speed, and roundtrip gates pass",
+      "verification_role": "strong-hyperbolicity and causal-speed gate",
+      "failure_mode": "incomplete eigenvectors reproduce the rejected ADM branch",
+      "next_hardening_step": "use characteristic families in constraint-preserving boundary conditions",
+      "code_path": "docs/core/uet_curved_3p1_generalized_harmonic.py"
+    },
+    {
+      "formula_id": "UET-CURVED3P1-GH-REDUCTION-DAMPING-013",
+      "relation": "C_iab=partial_i psi_ab-Phi_iab; (partial_t-beta^k partial_k)C_iab ~= -alpha gamma2 C_iab",
+      "variables": {
+        "C_iab": "first-order reduction constraint",
+        "gamma2": "positive damping rate"
+      },
+      "units": {
+        "C_iab": "L^-1",
+        "gamma2": "L^-1"
+      },
+      "conversion_steps": "constant-coefficient periodic operator control",
+      "constant_origin": "Lindblom et al. Eqs. 26, 29, and discussion after Eq. 39",
+      "derivation_class": "source-locked relation with discrete identity check",
+      "unit_lane": "geometric c=1",
+      "unit_closure": "L^-2",
+      "proof_status": "constant-coefficient reduction-damping identity passes",
+      "verification_role": "reduction-constraint gate only",
+      "failure_mode": "reduction damping is overread as full gauge-constraint damping",
+      "next_hardening_step": "implement gamma0 gauge-constraint damping and propagation",
+      "code_path": "docs/core/uet_curved_3p1_generalized_harmonic.py"
+    }
+  ],
+  "source": {
+    "schema_version": "1.0",
+    "source_id": "lindblom_et_al_2006_generalized_harmonic",
+    "title": "A New Generalized Harmonic Evolution System",
+    "authors": [
+      "Lee Lindblom",
+      "Mark A. Scheel",
+      "Lawrence E. Kidder",
+      "Robert Owen",
+      "Oliver Rinne"
+    ],
+    "year": 2006,
+    "arxiv_id": "gr-qc/0512093",
+    "doi": "10.1088/0264-9381/23/16/S09",
+    "url": "https://arxiv.org/abs/gr-qc/0512093",
+    "version": "v3",
+    "journal_reference": "Class. Quantum Grav. 23 (2006) S447-S462",
+    "formula_locators": {
+      "gh_gauge": "Section 2, Eqs. (6), (11), and (12)",
+      "constraint_damping": "Section 2.2, Eqs. (17)-(21)",
+      "first_order_variables": "Section 3, Eqs. (22)-(26)",
+      "modified_principal_system": "Section 3, Eqs. (27)-(29)",
+      "symmetrizer": "Section 3, Eq. (30), with gamma3=gamma1*gamma2 and Lambda^2>gamma2^2",
+      "characteristic_fields": "Section 3, Eqs. (31)-(34)",
+      "complete_rhs": "Section 3, Eqs. (35)-(39)",
+      "first_order_gauge_constraint": "Section 4.1, Eq. (40)"
+    },
+    "source_role": "preregistered next-branch formulation and constraint-damping reference",
+    "used_scope": [
+      "first-order generalized-harmonic variables and gauge-source concept",
+      "symmetric-hyperbolic formulation target",
+      "constraint-damping and constraint-preserving boundary target",
+      "principal equations, symmetrizer, characteristic fields, and reduction-constraint damping"
+    ],
+    "not_used_for": [
+      "claim that a generalized-harmonic UET branch is already implemented",
+      "claim that periodic ADM controls validate black-hole evolution",
+      "UET coefficient fitting",
+      "external physical validation"
+    ],
+    "local_payload": "metadata-only source record; no redistributed PDF",
+    "accessed_on": "2026-08-28"
+  },
+  "source_hashes": {
+    "docs/core/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92",
+    "docs/scripts/audit/audit_uet_curved_3p1_generalized_harmonic.py": "b8014a15ebf620c5668d45c4aae277eb96a2b2ee2bfabfd8d7ffbb60515c9eee",
+    "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a"
+  },
+  "open_items": [
+    "constraint-preserving boundaries",
+    "matter stress-energy wiring and detector observable map"
+  ],
+  "claim_ceiling": "source-locked vacuum GH system with bounded periodic time-evolution controls; not a production numerical-relativity solver, matter-coupled system, or UET validation"
+}

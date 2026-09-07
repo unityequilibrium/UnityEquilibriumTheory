@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "source_id": "gourgoulhon_2007_3p1_formalism",
+  "title": "3+1 Formalism and Bases of Numerical Relativity",
+  "author": "Eric Gourgoulhon",
+  "year": 2007,
+  "arxiv_id": "gr-qc/0703035",
+  "url": "https://arxiv.org/abs/gr-qc/0703035",
+  "source_role": "standard-physics formula and sign-convention reference",
+  "used_scope": [
+    "3+1 decomposition terminology",
+    "Hamiltonian constraint structure",
+    "momentum constraint structure",
+    "initial-data and gauge separation",
+    "spatial Levi-Civita connection",
+    "spatial Ricci tensor and scalar",
+    "covariant divergence in the momentum constraint"
+  ],
+  "not_used_for": [
+    "UET coefficient fitting",
+    "physical validation",
+    "claim that UET derives Einstein equations"
+  ],
+  "local_payload": "metadata-only source record; no redistributed PDF",
+  "accessed_on": "2026-08-28"
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-calorine-legacy-nep2-pbte-reproduction-audit-v1",
   "artifact": "t13_calorine_legacy_nep2_pbte_reproduction_audit",
-  "generated_at": "2026-08-20",
+  "generated_at": "2026-08-24",
   "status": "PASS_SCOPED_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION",
   "major_result": {
     "major_result_id": "T13_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION",
@@ -68,8 +68,8 @@
       },
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_legacy_nep2_cx/state_4x4x2/POSCAR",
-        "size_bytes": 491,
-        "sha256": "52c0ab2d703274b60868f6391caedf888324d55fb3ef7c656616de357083be97",
+        "size_bytes": 488,
+        "sha256": "03dd8062d7393cc4188993a9163edb1a6acab63d52a834db65a6b1f06d2ca4bb",
         "locator": null
       },
       {
@@ -121,7 +121,7 @@
   },
   "source_package": {
     "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/calorine_legacy_nep2_pbte_reproduction_source_package.json",
-    "sha256": "b7da7ab6931bba4d5c9cb5a8112873c4f1f7da46e0b2945d90f0c9cd0555109b",
+    "sha256": "564606b5634d4cf1e87907da1598401b9f9ebcedacd0a41030b3766a774f84fc",
     "role": "source, backend, force-constant, and candidate C_src manifest"
   },
   "source": {
@@ -197,8 +197,8 @@
     "force_constants": {
       "poscar": {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_legacy_nep2_cx/state_4x4x2/POSCAR",
-        "size_bytes": 491,
-        "sha256": "52c0ab2d703274b60868f6391caedf888324d55fb3ef7c656616de357083be97",
+        "size_bytes": 488,
+        "sha256": "03dd8062d7393cc4188993a9163edb1a6acab63d52a834db65a6b1f06d2ca4bb",
         "locator": null
       },
       "fc2": {
@@ -381,6 +381,7 @@
     "state_dim_valid": true,
     "displacement_contract_valid": true,
     "force_constant_payloads_present": true,
+    "poscar_state_contract_valid": true,
     "same_force_constant_state_across_meshes": true,
     "mesh_pair_preflight_pass": true,
     "all_c_src_rows_finite_positive": true,
@@ -419,8 +420,8 @@
     },
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_legacy_nep2_cx/state_4x4x2/POSCAR",
-      "size_bytes": 491,
-      "sha256": "52c0ab2d703274b60868f6391caedf888324d55fb3ef7c656616de357083be97",
+      "size_bytes": 488,
+      "sha256": "03dd8062d7393cc4188993a9163edb1a6acab63d52a834db65a6b1f06d2ca4bb",
       "locator": null
     },
     {

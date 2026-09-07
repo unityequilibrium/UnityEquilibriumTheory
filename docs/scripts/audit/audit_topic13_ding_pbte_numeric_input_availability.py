@@ -108,6 +108,17 @@ def main() -> int:
         "oa_record_identity_matches": oa_record.attrib.get("id") == "PMC8755757",
         "oa_record_license_is_cc_by": oa_record.attrib.get("license") == "CC BY",
         "oa_record_not_retracted": oa_record.attrib.get("retracted") == "no",
+        "publisher_source_identity_is_locked": (
+            package["source_identity"]["doi"] == "10.1038/s41467-021-27907-z"
+            and package["source_identity"]["publisher_url"]
+            == "https://www.nature.com/articles/s41467-021-27907-z"
+        ),
+        "publisher_data_availability_statement_is_locked": (
+            package["source_identity"]["publisher_data_availability_locator"]
+            == "Nature Communications article, Data availability section"
+            and package["source_identity"]["publisher_data_availability_statement"]
+            == "The data that support the findings of this study are available from the corresponding author on reasonable request."
+        ),
         "s3_prefix_is_complete_not_truncated": inventory_root.findtext(
             "{*}IsTruncated"
         )
@@ -208,7 +219,7 @@ def main() -> int:
             "verification_status": status,
             "open_blockers": open_blockers,
             "dependency_unlocked": "Select either a documented corresponding-author request or an independently sourced graphite phonon reproduction package; no Core dependency is unlocked.",
-            "claim_boundary": "The no-go applies only to the captured official PMC OA distribution. It does not prove that author-held or third-party data are unavailable and does not close numeric C_src or Topic 13.",
+            "claim_boundary": "The no-go applies only to the captured official PMC OA distribution and the publisher's stated author-request route. It does not prove that author-held or third-party data are unavailable and does not close numeric C_src or Topic 13.",
         },
         "inventory_witness": {
             "object_count": len(object_keys),
@@ -232,8 +243,8 @@ def main() -> int:
         ],
         "missing_reproduction_inputs": package["missing_reproduction_inputs"],
         "checks": checks,
-        "what_changed": "The Ding numeric-input source search now verifies the complete official OA inventory and all three locally archived supplementary PDFs with role-specific hashes before applying the scoped no-go.",
-        "verification": "The PMC OA API identity, complete S3 prefix, object metadata, full-text availability statement, published computational details, archived hashes, and holdout non-access are checked.",
+        "what_changed": "The Ding numeric-input source search now records the primary Nature Communications locator and publisher-level data-availability statement, then verifies the complete official OA inventory and all three locally archived supplementary PDFs with role-specific hashes before applying the scoped no-go.",
+        "verification": "The publisher identity and data-availability statement, PMC OA API identity, complete S3 prefix, object metadata, full-text availability statement, published computational details, archived hashes, and holdout non-access are checked.",
         "controlling_blocker": "ding_pbte_author_data_or_independent_reproduction_package_missing",
         "next_action": "Prepare a source-specific author request for relaxed structure, force constants, ShengBTE inputs/outputs, and c_mu(T), or source-lock an independent open graphite phonon package and label it independent reproduction; do not infer C_src from normalized TTG data.",
         "claim_boundary": "This is a scoped source-availability no-go, not a physics no-go, numeric calibration, or Topic 13 closure.",

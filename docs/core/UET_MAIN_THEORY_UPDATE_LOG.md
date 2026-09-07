@@ -6,6 +6,68 @@
 
 ## Entries
 
+### 2026-08-30 - Close the prescribed Topic 13 curved-matter wiring lane
+
+- Scope: He-4/O(2) relativistic stress tensor, Eulerian 3+1 projection, trace-reversed GH source, and natural/SI scaling control
+- Result: `CORE_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING_READY` is `CLOSED_FOR_LANE`; the curved parent remains `PARTIAL`
+- Verified with: 23/23 source/unit/ontology/algebra checks plus seven focused module tests, including a nonzero-shift Eulerian projection
+- Next controller: `curved_3p1_constraint_preserving_boundaries_and_dimensional_observable_mapping_missing`
+- Claim impact: no self-consistent matter evolution, physical SI Einstein coupling, Gravity, or global theory promotion
+
+### 2026-08-29 - Close the periodic GH vacuum time-evolution lane
+
+- Scope: classical RK4 method-of-lines evolution, characteristic CFL, exact gauge wave, and propagated GH constraints
+- Result: `CORE_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY` is `CLOSED_FOR_LANE`; the curved parent remains `PARTIAL`
+- Verified with: exact Minkowski, harmonic gauge-wave spatial order `1.9845`, RK4 temporal order `3.9266`, analytic `gamma2` damping, CFL/ontology/negative controls, and integrated Core tests
+- Next controller: `curved_3p1_constraint_preserving_boundaries_and_topic13_stress_energy_wiring_missing`
+- Claim impact: no matter-coupled parent, production numerical relativity, Gravity, or global theory promotion
+
+### 2026-08-29 - Stabilize Topic 13 handoff and curved-parent evidence chain
+
+- Scope: Wave 8 track separation, Topic 13 provenance-cycle repair, nonlinear GH parent integration, and all-wave completion
+- Result: Topic 13 remains `CLOSED_FOR_CORE`; the nonlinear vacuum GH RHS remains `CLOSED_FOR_LANE`; all evidence hashes are current
+- Verified with: 13/13 Topic 13 acceptance, Core/downstream artifact regeneration, and 1260 Core tests with 0 failures
+- Next controller: `curved_3p1_generalized_harmonic_time_integration_and_constraint_propagation_missing`
+- Claim impact: graphite/TTG external validation and Gravity remain blocked; no global theory promotion
+
+### 2026-08-28 - Close the nonlinear GH vacuum-RHS companion lane
+
+- Scope: curved 3+1 generalized-harmonic nonlinear vacuum operator after the principal-system pass
+- Result: complete vacuum Eqs. (35)-(40), metric-derived kinematics, first-order connection/gauge constraint, and algebraic `gamma0` damping are `CLOSED_FOR_LANE`; the curved parent remains `PARTIAL`
+- Verified with: source locators, independent constant/variable-grid index references, Minkowski and gauge-source controls, focused tests, parent registry, and dependency gates
+- Next controller: `curved_3p1_generalized_harmonic_time_integration_and_constraint_propagation_missing`
+- Claim impact: no global theory, time-evolution, matter-coupling, Gravity, or external-validation promotion
+
+### 2026-08-28 - Close the GH principal-system companion lane
+
+- Scope: curved 3+1 generalized-harmonic formulation after the fixed-gauge ADM no-go
+- Result: GH principal equations, complete characteristics, positive symmetrizer, causal normal-frame speeds, and reduction damping are `CLOSED_FOR_LANE`; the curved parent remains `PARTIAL`
+- Verified with: source/formula locators, 15 principal-symbol cases, analytic symmetrizer identity, manufactured spatial convergence, focused tests, and parent/dependency gates
+- Next controller: `curved_3p1_generalized_harmonic_nonlinear_rhs_and_gamma0_constraint_damping_missing`
+- Claim impact: no global theory, time-evolution, Gravity, or external-validation promotion
+
+### 2026-08-28 - Select generalized harmonic after fixed-gauge ADM no-go
+
+- Scope: curved 3+1 companion branch after Topic 13 Core closure
+- Result: ADM nonlinear RHS is closed operator-only; fixed-geodesic ADM is closed as a strong-hyperbolicity no-go; the parent remains `PARTIAL`
+- Verified with: analytic RHS controls, second-order spatial derivative convergence, principal-symbol defect audit, major-result register, dependency gate, and theory-spine audit
+- Next controller: `curved_3p1_generalized_harmonic_evolution_constraint_damping_and_propagation_missing`
+- Claim impact: no global theory, Gravity, or external-validation promotion
+
+### 2026-08-28 - Synchronize Wave 5 with curved 3+1 companion progress
+
+- Scope: fixed-Minkowski Wave 5 gate and the separate curved 3+1 parent dependency
+- Wave type: gate synchronization and claim-boundary pass
+- Added or changed: Wave 5 generator now reads the curved-parent gate and records ADM/geometry companion progress without changing the fixed-background spine result
+- Files touched: `audit_uet_covariant_theory_spine.py`, regenerated Wave 5 artifacts, this update log, and downstream closure accounting as required
+- Verified with: Wave 5 verifier, curved 3+1 focused tests, equation-foundation audit, and dependency-gate checks
+- Result: Wave 5 remains `PASS_MINKOWSKI_1P1_CONTROL_CURVED_BLOCKED`; ADM constraints and periodic spatial geometry are recorded as companion lane passes, while the parent remains `PARTIAL`
+- Blocker narrowed: obsolete all-or-nothing curved wording is replaced by `curved_3p1_gauge_evolution_hyperbolicity_and_constraint_propagation_missing`
+- Still open: gauge-declared metric/`K` evolution, strong hyperbolicity, constraint propagation/damping, temporal convergence, non-periodic boundaries, Topic 13 stress-energy projection, and dimensional observables
+- Next controller: `curved_3p1_gauge_evolution_hyperbolicity_and_constraint_propagation_missing`
+- Claim impact: no promotion; fixed-Minkowski success and curved companion progress remain separate
+- Workflow linkage: companion integration for the post-Topic-13 curved-parent hardening sequence
+
 ### 2026-08-09 - Wave 0 foundation reconstruction and schema repair
 
 - Scope: equation inventory, O(2)/GR program gate, and main-theory dependency graph

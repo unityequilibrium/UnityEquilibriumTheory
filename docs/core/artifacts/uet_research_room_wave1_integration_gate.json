@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_research_room_wave1_integration_gate",
-  "generated_at": "2026-08-20",
+  "generated_at": "2026-08-21",
   "status": "PASS_WITH_BLOCKED_LANES",
   "claim_promotion": false,
   "brief": {
@@ -10,7 +10,7 @@
   },
   "contract": {
     "path": "docs/core/artifacts/uet_research_room_wave1_contract.json",
-    "sha256": "2da8f72335fc05fb00394e57caafaca3d34b410cf2f7fb18ff1ce3e4208e3fee"
+    "sha256": "7df61943f54da4d907e4f9817d31178bbc01a2ff95117611548548c96e63e912"
   },
   "registry": {
     "path": "docs/core/artifacts/uet_equation_correspondence_registry.json",
@@ -397,7 +397,7 @@
     },
     "inbox_alignment": {
       "path": "docs/core/artifacts/inbox_research_alignment_drift_note.json",
-      "sha256": "adb50db63d06d07e429496d4355b8e43ea0f7cd12e507a73ad5973a6b20d19a1",
+      "sha256": "b3088ebc8c4e2666dedad16f8e3d0e4c6b021529e5a936e8bedc9493697ce0bf",
       "status": "BLOCKED_STALE_SOURCE_PATHS"
     },
     "topic_0_3_index": {

@@ -6,6 +6,88 @@
 > program without upgrading claims ahead of generated evidence.
 
 ## Entries
+
+### 2026-08-30 - Close prescribed Topic 13 stress-energy wiring
+
+- Scope: bounded He-4/O(2) stress-energy construction, 3+1 projection, GH source, unit scaling, parent gate, and registry sync
+- Wave type: formula/source composition, algebraic reconstruction, negative-control, ontology, dependency, and claim-boundary pass
+- Result: `CORE_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING_READY` is `CLOSED_FOR_LANE`; parent is `PARTIAL_CURVED_3P1_GH_PERIODIC_PRESCRIBED_MATTER_READY`; Gravity remains blocked
+- Verified with: 23/23 audit checks, rest/boost/nonzero-shift reconstruction, vacuum-null source, natural/SI scaling, and seven focused tests
+- Still open: constraint-preserving non-periodic boundaries, self-consistent matter evolution/conservation, physical SI Einstein coupling, and dimensional detector observables
+- Next controller: `curved_3p1_constraint_preserving_boundaries_and_dimensional_observable_mapping_missing`
+- Claim impact: prescribed source interface only; no matter-coupled spacetime solution, Einstein-equation derivation, or external validation
+### 2026-08-29 - Close the periodic generalized-harmonic time-evolution lane
+
+- Scope: periodic vacuum RK4 evolution, characteristic CFL policy, exact harmonic gauge wave, and propagated gauge/reduction/curl constraints
+- Wave type: numerical integration, analytic-control, convergence, constraint-damping, gate, registry, and claim-boundary pass
+- Added or changed: GH evolution module, verifier, three artifacts, focused tests, Core exports, parent gate, equation-registry addendum, dependency reporting, and branch/research specifications
+- Verified with: Minkowski exact fixed point; spatial orders `1.9845, 1.9961`; temporal order `3.9266`; `gamma2` damping relative error below `1e-8`; CFL and no-projection/filtering controls
+- Result: `CORE_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY` is `CLOSED_FOR_LANE`; parent is `PARTIAL_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY`; Gravity remains blocked
+- Blocker narrowed: time integration, CFL, periodic constraint propagation, and temporal convergence are no longer open
+- Still open: constraint-preserving non-periodic boundaries, Topic 13 stress-energy wiring, strong-field/multi-chart controls, and dimensional detector observables
+- Next controller: `curved_3p1_constraint_preserving_boundaries_and_topic13_stress_energy_wiring_missing`
+- Claim impact: no promotion to production numerical relativity, matter-coupled UET, Gravity compatibility, or external validation
+
+### 2026-08-28 - Close the generalized-harmonic nonlinear vacuum-RHS lane
+
+- Scope: source-locked GH Eqs. (35)-(40), metric-state reconstruction, nonlinear vacuum RHS, and algebraic `gamma0` gauge-constraint damping
+- Wave type: formula/source pass, independent-index operator verification, negative-control gate, registry/dependency sync, and claim-boundary pass
+- Added or changed: nonlinear GH module path, verifier, three artifacts, focused tests, Core exports, parent gate, equation-registry addendum, dependency reporting, and branch/research specifications
+- Verified with: Minkowski exact fixed point; constant-grid and spatially varying explicit-index references; gauge-source derivative injection; `gamma0` isolation and linear scaling; kinematics, tensor-symmetry, invalid-metric, and no-fit/no-clipping controls
+- Result: `CORE_CURVED_3P1_GH_NONLINEAR_VACUUM_RHS_READY` is `CLOSED_FOR_LANE`; parent is `PARTIAL_CURVED_3P1_GH_NONLINEAR_VACUUM_RHS_READY`; Gravity remains blocked
+- Blocker narrowed: nonlinear RHS transcription and algebraic gauge damping are no longer open; controller is now `curved_3p1_generalized_harmonic_time_integration_and_constraint_propagation_missing`
+- Still open: time integrator/CFL, propagated gauge/reduction constraints, temporal convergence, constraint-preserving boundaries, matter wiring, and SI observables
+- Claim impact: no promotion to a time-integrated numerical-relativity solver, matter-coupled curved UET parent, or Gravity compatibility
+
+### 2026-08-28 - Close the generalized-harmonic principal-system lane
+
+- Scope: source-locked first-order GH principal equations, characteristic fields, symmetrizer, gauge/reduction constraints, and reduction damping
+- Wave type: formula/source pass, formal hyperbolicity gate, manufactured convergence gate, negative-control gate, registry/dependency sync, and claim-boundary pass
+- Added or changed: GH module, verifier, formula/verification/branch artifacts, source equation locators, focused tests, Core exports, parent gate, registry addendum, dependency reporting, and branch specification
+- Verified with: 15 direction/parameter principal symbols; complete rank-5 transforms; analytic symmetrizer positivity and symmetry; characteristic roundtrip; Minkowski gauge constraint; reduction/curl controls; three-resolution manufactured convergence
+- Result: `CORE_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY` is `CLOSED_FOR_LANE`; parent remains `PARTIAL`; Gravity remains blocked
+- Blocker narrowed: GH formulation/hyperbolicity is no longer open at principal level; controller is now `curved_3p1_generalized_harmonic_nonlinear_rhs_and_gamma0_constraint_damping_missing`
+- Still open: complete nonlinear GH RHS, gamma0 gauge damping, time integration/CFL, full constraint propagation, temporal convergence, constraint-preserving boundaries, matter wiring, and SI observables
+- Claim impact: no promotion to a complete Einstein evolution, numerical-relativity solver, or Gravity compatibility
+
+### 2026-08-28 - Close ADM RHS operator and fixed-gauge hyperbolicity no-go
+
+- Scope: nonlinear periodic ADM metric/K right-hand sides and formulation selection
+- Wave type: source/formula pass, analytic and convergence controls, principal-symbol no-go, registry/dependency sync, and claim-boundary pass
+- Added or changed: ADM evolution module, verifier, four artifacts, two source records, focused tests, Core exports, GH branch specification, parent gate, and dependency reporting
+- Verified with: Minkowski and dust-FLRW controls; lapse/shift second-order convergence; five-direction principal-symbol audit; invalid-input controls; focused curved 3+1 tests
+- Result: `CORE_CURVED_3P1_ADM_EVOLUTION_RHS_READY` is `CLOSED_FOR_LANE`; fixed-geodesic ADM is `CLOSED_AS_NO_GO`; GH is selected but not implemented; Gravity remains blocked
+- Blocker narrowed: open-ended gauge/evolution work is reduced to `curved_3p1_generalized_harmonic_evolution_constraint_damping_and_propagation_missing`
+- Still open: GH characteristic fields, time integration/CFL, constraint damping/propagation, temporal convergence, constraint-preserving boundaries, Topic 13 stress-energy projection, and SI observables
+- Next controller: `curved_3p1_generalized_harmonic_evolution_constraint_damping_and_propagation_missing`
+- Claim impact: no promotion to a well-posed numerical-relativity solver or Gravity compatibility
+
+### 2026-08-28 - Close the periodic spatial geometry operator lane
+
+- Scope: Core curved 3+1 periodic single-chart differential geometry and ADM-input integration
+- Wave type: formula pass, numerical implementation, analytic-control/convergence gate, negative-control gate, registry/dependency sync, and claim-boundary pass
+- Added or changed: periodic-grid Levi-Civita/Ricci/divergence module, verifier, formula and verification artifacts, focused tests, Core exports, parent gate, registry addendum, source scope, and dependency reporting
+- Verified with: flat exact-zero control; conformally-flat analytic Ricci control; manufactured off-diagonal-`K` divergence control; three-resolution spatial convergence; ADM adapter and negative matter/spacing controls; focused curved 3+1 tests
+- Result: `CORE_CURVED_3P1_GEOMETRY_OPERATOR_READY` is `CLOSED_FOR_LANE`; Ricci observed orders are `1.9660, 1.9914`, divergence orders are `1.9852, 1.9963`; parent remains `PARTIAL` and Gravity remains `BLOCKED_DEPENDENCY`
+- Blocker narrowed: `metric_to_ricci_operator` and periodic covariant momentum-divergence implementation are now `PASS` with second-order spatial convergence
+- Still open: lapse/shift gauge, metric/extrinsic-curvature evolution, strong hyperbolicity, constraint propagation/damping, temporal convergence, non-periodic boundaries/multiple charts, Topic 13 stress-energy projection, and dimensional observables
+- Next controller: `curved_3p1_gauge_evolution_hyperbolicity_and_constraint_propagation_missing`
+- Claim impact: Class B retained; no continuum proof, numerical-GR validation, Einstein-equation derivation, Gravity unlock, or global promotion
+- Workflow linkage: second post-Topic-13 Core hardening wave under the F0-F8 and major-result contracts
+
+### 2026-08-28 - Add the curved 3+1 ADM constraint interface
+
+- Scope: Core curved 3+1 parent, standard ADM initial-value constraints, analytic controls, and dependency reporting
+- Wave type: formula/source pass, artifact pass, negative-control gate, unit/ontology audit, and dependency-boundary pass
+- Added or changed: ADM constraint module, Gourgoulhon source record, strict verifier, verification/formula/parent-gate/register-addendum artifacts, focused tests, Core exports, and major-result/dependency integration
+- Verified with: `audit_uet_curved_3p1_constraints.py`, focused ADM tests, major-result register regeneration, dependency-gate regeneration, and Core regression
+- Result: `CORE_CURVED_3P1_ADM_CONSTRAINT_INTERFACE_READY` is `CLOSED_FOR_LANE`; `CORE_CURVED_3P1_OBSERVABLE_PARENT_READY` is `PARTIAL`; Gravity remains `BLOCKED_DEPENDENCY`
+- Blocker narrowed: `curved_3p1_dynamical_metric_and_gr_constraints_not_implemented` is split into a passing algebraic ADM constraint interface and named open differential-geometry/evolution/gauge/propagation requirements
+- Still open: metric-to-Ricci and covariant-divergence grid operators, gauge choice, metric/extrinsic-curvature evolution, strong hyperbolicity, constraint propagation/damping, convergence, Topic 13 stress-energy projection, and dimensional observables
+- Next controller: `curved_3p1_differential_geometry_evolution_gauge_and_constraint_propagation_missing`
+- Claim impact: Class B retained; no Einstein-equation derivation, numerical-GR validation, Gravity unlock, or global claim promotion
+- Workflow linkage: first post-Topic-13 Core hardening wave under the major-result closure/dependency contract
+
 ### 2026-07-23 - Derive finite-density O(2) EOS and lock the T=0 Kubo boundary
 
 - Scope: homogeneous signed-charge EOS, canonical Legendre transform, response reciprocity, covariant T=0 pure-superfluid current/stress, and longitudinal Kubo/entropy/causal interface

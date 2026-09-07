@@ -1,0 +1,1010 @@
+{
+  "schema_version": "t13-response-one-loop-match-v1",
+  "major_result_id": "T13_RESPONSE_AXIS_ONE_LOOP_RENORMALIZED_MATCH",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "PARTIAL",
+  "verification_status": "PASS_SCOPED_RESPONSE_ONE_LOOP_MATCH",
+  "what_is_closed": [
+    "Declared response-axis one-loop vacuum subtraction and kinetic reference conditions.",
+    "Strict-loop mean/pole versus partial resummation are distinguished.",
+    "Collisionless k=0 retarded response, static occupation term and action pair-cut KMS/FDT are linked."
+  ],
+  "equation_registry_ids": [
+    "uet.o2.thermal.response_axis_one_loop_match"
+  ],
+  "registration_status": "CANDIDATE_DIAGNOSTIC_NOT_CENTRAL_ACCEPTANCE",
+  "equation_or_mapping": {
+    "vacuum_axis": "V_CW_ren(x)=V_CW(x)-Taylor_x=0_through_degree_4[V_CW(x)], charged degeneracy 2 and neutral degeneracy 1",
+    "reference_conditions": "d_x^n V_CW_ren(0)=0 for n=0..4; Pi_vac_ren(0)=Pi_vac_ren_s'(0)=0",
+    "retarded_convention": "D_R^-1(omega,k=0)=(omega+i0)^2-M0^2-Pi_R; s=omega^2",
+    "thermal_kernel": "Pi_T(s)=6*lambda_response*I_response-G^2 integral (n_plus+n_minus)/(E*(4E^2-s))",
+    "vacuum_kernel": "Pi_vac_ren(s)=-G^2/(16*pi^2) integral_0^1 [-log(1-z(1-z)*s/m^2)-z(1-z)*s/m^2] dz",
+    "static_dynamic": "M_dynamic0^2-M_static^2=G^2 integral [n_plus(1+n_plus)+n_minus(1+n_minus)]/(4*T*E^2)",
+    "pole": "M_pole^2(strict 1-loop)=M0^2+Pi_R(M0^2); partial Dyson root separately labelled",
+    "pair_cut": "rho_Pi=G^2/(8*pi)*sqrt(1-4*m^2/omega^2)*(1+n_plus+n_minus); Pi_greater/Pi_lesser=exp(omega/T)"
+  },
+  "loop_order_contract": {
+    "self_energy_loop_order": 1,
+    "self_energy_background_x": 0.0,
+    "mean_shift": "x1=-Omega1_prime(0)/M0^2; stationary one-loop functional minimum is separately reported",
+    "excluded_at_strict_order": [
+      "tree response mass shift proportional to x1^2 (order two)",
+      "bubble from induced response cubic squared (order three)",
+      "full next-order vertices and collision/ladder widths"
+    ],
+    "renormalization_scope": "response axis and response two-point kinetic condition, NOT complete charged-sector or full-action matching"
+  },
+  "ontology": {
+    "C": "collective system-behaviour coordinate, not universal mass, charge or quasiparticle count",
+    "Phi": "effective response, not a particle or metric",
+    "R_gen": "derived trace, not a state or self-energy source",
+    "R_obs": "excluded"
+  },
+  "unit_lane": "natural_units",
+  "config": {
+    "z": 1.0,
+    "mass_squared": 1.0,
+    "quartic": 0.1,
+    "epsilon": 1.0,
+    "response_kinetic": 1.0,
+    "response_mass_squared": 0.5,
+    "response_coupling": 0.2,
+    "response_quartic": 1.0
+  },
+  "temperature_grid": [
+    0.1,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "chemical_potential": 0.2,
+  "quadrature": {
+    "order": 160,
+    "cutoff_factor": 64.0
+  },
+  "units": {
+    "x": 1,
+    "T": 1,
+    "mu": 1,
+    "s": 2,
+    "self_energy": 2,
+    "potential": 4,
+    "force": 3,
+    "curvature": 2,
+    "spectral_self_energy": 2,
+    "pole_residue": 0
+  },
+  "unit_convention": "Integer powers of natural energy with hbar=c=k_B=1; not SI or a calibrated material map.",
+  "derivation_class": "numerical_approximation",
+  "derivation_origin": "Declared one-loop scalar determinant, bubble analytic continuation, and two-particle cut of the same canonical cubic vertex.",
+  "constant_origin": "Zero-temperature zero-field subtraction conditions fixed from synthetic action inputs, not fitted to a thermal curve or holdout.",
+  "observable": "Internal response-sector stationary displacement, spectral pole and pair-cut kernels; no SI transport coefficient.",
+  "data_role": "DERIVED_SYNTHETIC_DIAGNOSTIC",
+  "checks": {
+    "vacuum_reference_conditions": true,
+    "normal_stationarity": true,
+    "positive_subthreshold_response": true,
+    "static_dynamic_population_match": true,
+    "independent_matsubara_sum": true,
+    "independent_spectral_dispersion": true,
+    "pair_cut_KMS_FDT": true,
+    "pair_cut_spectral_positivity": true,
+    "threshold_support": true,
+    "pole_refinement": true,
+    "kernel_component_refinement": true
+  },
+  "states": [
+    {
+      "phi_c": 1.4218957793439143e-07,
+      "Phi_natural_displacement": 1.4218957793439143e-07,
+      "T": 0.1,
+      "mu": 0.2,
+      "omega": -2.1188688260245458e-07,
+      "pressure": 2.1188688260245458e-07,
+      "force": -3.535558961938157e-17,
+      "static_response_curvature": 0.5000044546271568,
+      "matter_thermal_force": -7.109543204337986e-08,
+      "response_thermal_force": 6.430408256832918e-13,
+      "omega_phi_mu": -6.854638110027799e-07,
+      "charge_density": 7.905256208722294e-07,
+      "entropy_density": 2.154133199514908e-05,
+      "energy_density": 2.1003514410868994e-06,
+      "fixed_phi_charge_susceptibility": 8.201082536866205e-06,
+      "matter": {
+        "omega": -8.199768630581148e-08,
+        "tadpole": 3.554771602168993e-07,
+        "mass_second": -1.6947935221960425e-06,
+        "charge": 7.905256208722294e-07,
+        "entropy": 8.808399212617404e-06,
+        "energy": 9.56947359130375e-07,
+        "charge_susceptibility_fixed_mass": 8.201082536866205e-06,
+        "tadpole_mu": 3.4273190550138994e-06
+      },
+      "response": {
+        "omega": -1.2988920135111212e-07,
+        "tadpole": 7.537364728423829e-07,
+        "mass_second": -4.989584684160935e-06,
+        "charge": 0.0,
+        "entropy": 1.2732932782531679e-05,
+        "energy": 1.1434040769020555e-06,
+        "charge_susceptibility_fixed_mass": 0.0,
+        "tadpole_mu": 0.0
+      },
+      "background": {
+        "tree_potential": 5.0544690182901965e-15,
+        "tree_force": 7.109478896719859e-08,
+        "matter_mass_squared": 0.9999999715620844,
+        "response_tree_mass_squared": 0.5000000000000606,
+        "matter_mass_derivative": -0.2,
+        "response_mass_derivative": 8.531374676063485e-07,
+        "response_mass_second_derivative": 6.0,
+        "response_tree_cubic": 8.531374676063485e-07
+      },
+      "vacuum_axis": {
+        "potential": -1.727484254191227e-42,
+        "force": -5.908953968894829e-35,
+        "curvature": -1.5923848452158894e-27
+      },
+      "strict_one_loop_mean_shift": 1.421908448082032e-07,
+      "stationary_vs_strict_relative_change": 8.909672162715765e-06,
+      "stationary_charge_susceptibility": 8.201083476579105e-06,
+      "boundary": "Stationary one-loop functional reuses selected higher-order terms; strict mean shift is reported separately."
+    },
+    {
+      "phi_c": 8.539014243653302e-05,
+      "Phi_natural_displacement": 8.539014243653302e-05,
+      "T": 0.25,
+      "mu": 0.2,
+      "omega": -0.0002715462194711907,
+      "pressure": 0.0002715462194711907,
+      "force": -3.359094826271007e-18,
+      "static_response_curvature": 0.5013383374496863,
+      "matter_thermal_force": -4.281067593740927e-05,
+      "response_thermal_force": 1.1560409651918899e-07,
+      "omega_phi_mu": -0.00011620631884469661,
+      "charge_density": 0.00039717001964131583,
+      "entropy_density": 0.006641986637676618,
+      "energy_density": 0.0014683844438762269,
+      "fixed_phi_charge_susceptibility": 0.00240803634296327,
+      "matter": {
+        "omega": -0.00014814985235247498,
+        "tadpole": 0.0002140533796870463,
+        "mass_second": -0.00038796233168552057,
+        "charge": 0.00039717001964131583,
+        "entropy": 0.003765059414545946,
+        "energy": 0.0008725490052122744,
+        "charge_susceptibility_fixed_mass": 0.00240803634296327,
+        "tadpole_mu": 0.000581031594223483
+      },
+      "response": {
+        "omega": -0.0001233981899878353,
+        "tadpole": 0.00022563903595998168,
+        "mass_second": -0.0005609116912483719,
+        "charge": 0.0,
+        "entropy": 0.002876927223130672,
+        "energy": 0.0005958336157948328,
+        "charge_susceptibility_fixed_mass": 0.0,
+        "tadpole_mu": 0.0
+      },
+      "background": {
+        "tree_potential": 1.8228691196242565e-09,
+        "tree_force": 4.269507184088672e-05,
+        "matter_mass_squared": 0.9999829219715127,
+        "response_tree_mass_squared": 0.5000000218744293,
+        "matter_mass_derivative": -0.2,
+        "response_mass_derivative": 0.0005123408546191981,
+        "response_mass_second_derivative": 6.0,
+        "response_tree_cubic": 0.0005123408546191981
+      },
+      "vacuum_axis": {
+        "potential": 1.0893541152507838e-26,
+        "force": 7.672381315819723e-22,
+        "curvature": 4.503059173919298e-17
+      },
+      "strict_one_loop_mean_shift": 8.561870167394267e-05,
+      "stationary_vs_strict_relative_change": 0.0026695013232045373,
+      "stationary_charge_susceptibility": 0.002408063278682186,
+      "boundary": "Stationary one-loop functional reuses selected higher-order terms; strict mean shift is reported separately."
+    },
+    {
+      "phi_c": 0.001568688954931016,
+      "Phi_natural_displacement": 0.001568688954931016,
+      "T": 0.5,
+      "mu": 0.2,
+      "omega": -0.011567296983916363,
+      "pressure": 0.011567296983916363,
+      "force": 3.237399067175106e-15,
+      "static_response_curvature": 0.5182753078032332,
+      "matter_thermal_force": -0.0008132293753534943,
+      "response_thermal_force": 2.888103768329217e-05,
+      "omega_phi_mu": -0.000719794538126034,
+      "charge_density": 0.005722702719841752,
+      "entropy_density": 0.112650771551905,
+      "energy_density": 0.045902629336004475,
+      "fixed_phi_charge_susceptibility": 0.03052873029394095,
+      "matter": {
+        "omega": -0.007107054898972799,
+        "tadpole": 0.004066146876767472,
+        "mass_second": -0.003567154847999866,
+        "charge": 0.005722702719841752,
+        "entropy": 0.07082684279516308,
+        "energy": 0.029450907042577093,
+        "charge_susceptibility_fixed_mass": 0.03052873029394095,
+        "tadpole_mu": 0.00359897269063017
+      },
+      "response": {
+        "omega": -0.004460857282716759,
+        "tadpole": 0.0030684899421379373,
+        "mass_second": -0.003702702318165793,
+        "charge": 0.0,
+        "entropy": 0.041823928756741936,
+        "energy": 0.01645110709565419,
+        "charge_susceptibility_fixed_mass": 0.0,
+        "tadpole_mu": 0.0
+      },
+      "background": {
+        "tree_potential": 6.151977731963908e-07,
+        "tree_force": 0.0007843483376718164,
+        "matter_mass_squared": 0.9996862622090138,
+        "response_tree_mass_squared": 0.500007382355112,
+        "matter_mass_derivative": -0.2,
+        "response_mass_derivative": 0.009412133729586096,
+        "response_mass_second_derivative": 6.0,
+        "response_tree_cubic": 0.009412133729586096
+      },
+      "vacuum_axis": {
+        "potential": 4.243106353141934e-19,
+        "force": 1.6231270644296492e-15,
+        "curvature": 5.174156347448477e-12
+      },
+      "strict_one_loop_mean_shift": 0.0016260111869499288,
+      "stationary_vs_strict_relative_change": 0.035253282682782716,
+      "stationary_charge_susceptibility": 0.03052972996374832,
+      "boundary": "Stationary one-loop functional reuses selected higher-order terms; strict mean shift is reported separately."
+    },
+    {
+      "phi_c": 0.01137190124022719,
+      "Phi_natural_displacement": 0.01137190124022719,
+      "T": 1.0,
+      "mu": 0.2,
+      "omega": -0.271728465938742,
+      "pressure": 0.271728465938742,
+      "force": -1.3213116016057089e-17,
+      "static_response_curvature": 0.6341293405778756,
+      "matter_thermal_force": -0.0072161689932509175,
+      "response_thermal_force": 0.0015287477247959882,
+      "omega_phi_mu": -0.0022691350394752766,
+      "charge_density": 0.0403601888038501,
+      "entropy_density": 1.173391452124512,
+      "energy_density": 0.9097350239465405,
+      "fixed_phi_charge_susceptibility": 0.20695643827831162,
+      "matter": {
+        "omega": -0.1759788574842221,
+        "tadpole": 0.036080844966254584,
+        "mass_second": -0.015693958632851328,
+        "charge": 0.0403601888038501,
+        "entropy": 0.7678409589863971,
+        "energy": 0.5999341392629454,
+        "charge_susceptibility_fixed_mass": 0.20695643827831162,
+        "tadpole_mu": 0.011345675197376382
+      },
+      "response": {
+        "omega": -0.09578194266996042,
+        "tadpole": 0.022405337690121176,
+        "mass_second": -0.013511241458068432,
+        "charge": 0.0,
+        "entropy": 0.40555049313811475,
+        "energy": 0.30976855046815466,
+        "charge_susceptibility_fixed_mass": 0.0,
+        "tadpole_mu": 0.0
+      },
+      "background": {
+        "tree_potential": 3.233421537888146e-05,
+        "tree_force": 0.005687421235949229,
+        "matter_mass_squared": 0.9977256197519545,
+        "response_tree_mass_squared": 0.5003879604134525,
+        "matter_mass_derivative": -0.2,
+        "response_mass_derivative": 0.06823140744136315,
+        "response_mass_second_derivative": 6.0,
+        "response_tree_cubic": 0.06823140744136315
+      },
+      "vacuum_axis": {
+        "potential": 6.161148979984044e-14,
+        "force": 3.250568739204332e-11,
+        "curvature": 1.4290878042300516e-08
+      },
+      "strict_one_loop_mean_shift": 0.014418075939074746,
+      "stationary_vs_strict_relative_change": 0.21127470209752808,
+      "stationary_charge_susceptibility": 0.20696455803164565,
+      "boundary": "Stationary one-loop functional reuses selected higher-order terms; strict mean shift is reported separately."
+    }
+  ],
+  "poles": [
+    {
+      "T": 0.1,
+      "mu": 0.2,
+      "strict_one_loop_pole_squared": 0.5000033785683416,
+      "partial_Dyson_pole_squared": 0.5000033785523539,
+      "Dyson_vs_strict_relative_change": 3.197531128762421e-11,
+      "pole_residue": 0.9999952678594918,
+      "static_curvature_at_zero_field": 0.5000044546271063,
+      "collisionless_dynamic_zero_frequency_mass_squared": 0.5000045169132963,
+      "static_dynamic_gap": 6.228618998349589e-08,
+      "population_term": 6.228619003087146e-08,
+      "kernel_at_tree_pole": {
+        "s": 0.5,
+        "vacuum_subtracted": -1.13773125560783e-06,
+        "quartic_thermal_tadpole": 4.522418837056114e-06,
+        "charged_thermal_pair": -6.119239745395906e-09,
+        "self_energy": 3.3785683417028882e-06,
+        "self_energy_s_derivative": -4.732127060886454e-06,
+        "static_population_term": 6.228619003087146e-08
+      },
+      "kernel_at_Dyson_pole": {
+        "s": 0.5000033785523539,
+        "vacuum_subtracted": -1.1377472387837835e-06,
+        "quartic_thermal_tadpole": 4.522418837056114e-06,
+        "charged_thermal_pair": -6.119244369006367e-09,
+        "self_energy": 3.378552353903324e-06,
+        "self_energy_s_derivative": -4.7321629015093575e-06,
+        "static_population_term": 6.228619003087146e-08
+      },
+      "one_loop_on_shell_width": 0.0,
+      "width_boundary": "Kinematically below pair threshold at k=0; not zero full collision damping.",
+      "partial_Dyson_boundary": "Solves a one-loop kernel repeatedly, not a complete higher-loop result."
+    },
+    {
+      "T": 0.25,
+      "mu": 0.2,
+      "strict_one_loop_pole_squared": 0.501349977596514,
+      "partial_Dyson_pole_squared": 0.5013499705344197,
+      "Dyson_vs_strict_relative_change": 1.4086156685522155e-08,
+      "pole_residue": 0.9999947614367806,
+      "static_curvature_at_zero_field": 0.501338316403028,
+      "collisionless_dynamic_zero_frequency_mass_squared": 0.5013513397830641,
+      "static_dynamic_gap": 1.3023380036170096e-05,
+      "population_term": 1.3023380036187e-05,
+      "kernel_at_tree_pole": {
+        "s": 0.5,
+        "vacuum_subtracted": -1.13773125560783e-06,
+        "quartic_thermal_tadpole": 0.0013538342893776323,
+        "charged_thermal_pair": -2.718961608054217e-06,
+        "self_energy": 0.0013499775965139704,
+        "self_energy_s_derivative": -5.2240012203613545e-06,
+        "static_population_term": 1.3023380036187e-05
+      },
+      "kernel_at_Dyson_pole": {
+        "s": 0.5013499705344197,
+        "vacuum_subtracted": -1.144127308153259e-06,
+        "quartic_thermal_tadpole": 0.0013538342893776323,
+        "charged_thermal_pair": -2.7196276498017485e-06,
+        "self_energy": 0.0013499705344196774,
+        "self_energy_s_derivative": -5.238590662116804e-06,
+        "static_population_term": 1.3023380036187e-05
+      },
+      "one_loop_on_shell_width": 0.0,
+      "width_boundary": "Kinematically below pair threshold at k=0; not zero full collision damping.",
+      "partial_Dyson_boundary": "Solves a one-loop kernel repeatedly, not a complete higher-loop result."
+    },
+    {
+      "T": 0.5,
+      "mu": 0.2,
+      "strict_one_loop_pole_squared": 0.518373585953278,
+      "partial_Dyson_pole_squared": 0.518373397356149,
+      "Dyson_vs_strict_relative_change": 3.638247282333751e-07,
+      "pole_residue": 0.9999896196433846,
+      "static_curvature_at_zero_field": 0.518268479140866,
+      "collisionless_dynamic_zero_frequency_mass_squared": 0.518377214570057,
+      "static_dynamic_gap": 0.000108735429190987,
+      "population_term": 0.00010873542919090021,
+      "kernel_at_tree_pole": {
+        "s": 0.5,
+        "vacuum_subtracted": -1.13773125560783e-06,
+        "quartic_thermal_tadpole": 0.018411103662131705,
+        "charged_thermal_pair": -3.637997759807918e-05,
+        "self_energy": 0.01837358595327802,
+        "self_energy_s_derivative": -1.0149261608138844e-05,
+        "static_population_term": 0.00010873542919090021
+      },
+      "kernel_at_Dyson_pole": {
+        "s": 0.518373397356149,
+        "vacuum_subtracted": -1.2264471902228301e-06,
+        "quartic_thermal_tadpole": 0.018411103662131705,
+        "charged_thermal_pair": -3.6479858792531827e-05,
+        "self_energy": 0.01837339735614895,
+        "self_energy_s_derivative": -1.0380464368393282e-05,
+        "static_population_term": 0.00010873542919090021
+      },
+      "one_loop_on_shell_width": 0.0,
+      "width_boundary": "Kinematically below pair threshold at k=0; not zero full collision damping.",
+      "partial_Dyson_boundary": "Solves a one-loop kernel repeatedly, not a complete higher-loop result."
+    },
+    {
+      "T": 1.0,
+      "mu": 0.2,
+      "strict_one_loop_pole_squared": 0.6342552743796224,
+      "partial_Dyson_pole_squared": 0.6342510642715695,
+      "Dyson_vs_strict_relative_change": 6.637876298287715e-06,
+      "pole_residue": 0.9999673190036097,
+      "static_curvature_at_zero_field": 0.6338370963814045,
+      "collisionless_dynamic_zero_frequency_mass_squared": 0.634268145777404,
+      "static_dynamic_gap": 0.0004310493959994721,
+      "population_term": 0.00043104939599952486,
+      "kernel_at_tree_pole": {
+        "s": 0.5,
+        "vacuum_subtracted": -1.13773125560783e-06,
+        "quartic_thermal_tadpole": 0.13446348698073052,
+        "charged_thermal_pair": -0.00020707486985249588,
+        "self_energy": 0.13425527437962242,
+        "self_energy_s_derivative": -3.0068802245393205e-05,
+        "static_population_term": 0.00043104939599952486
+      },
+      "kernel_at_Dyson_pole": {
+        "s": 0.6342510642715695,
+        "vacuum_subtracted": -1.8705697444684777e-06,
+        "quartic_thermal_tadpole": 0.13446348698073052,
+        "charged_thermal_pair": -0.00021055213941653187,
+        "self_energy": 0.13425106427156952,
+        "self_energy_s_derivative": -3.2682064472789395e-05,
+        "static_population_term": 0.00043104939599952486
+      },
+      "one_loop_on_shell_width": 0.0,
+      "width_boundary": "Kinematically below pair threshold at k=0; not zero full collision damping.",
+      "partial_Dyson_boundary": "Solves a one-loop kernel repeatedly, not a complete higher-loop result."
+    }
+  ],
+  "pair_cuts": [
+    {
+      "T": 0.1,
+      "omega": 1.0,
+      "spectral": 0.0,
+      "greater": 0.0,
+      "lesser": 0.0,
+      "noise": 0.0,
+      "log_kms_error": null,
+      "fdt_relative_error": null,
+      "support": false
+    },
+    {
+      "T": 0.1,
+      "omega": 2.0,
+      "spectral": 0.0,
+      "greater": 0.0,
+      "lesser": 0.0,
+      "noise": 0.0,
+      "log_kms_error": null,
+      "fdt_relative_error": null,
+      "support": false
+    },
+    {
+      "T": 0.1,
+      "omega": 2.1,
+      "spectral": 0.00048538098379672414,
+      "greater": 0.0004853809841647672,
+      "lesser": 3.6804306429887e-13,
+      "noise": 0.00048538098453281025,
+      "imag_retarded_self_energy": -0.00024269049189836207,
+      "log_lesser": -28.630576441037086,
+      "lesser_underflow": false,
+      "log_kms_error": 3.552713678800501e-15,
+      "fdt_relative_error": 1.1102230246251565e-16,
+      "support": true
+    },
+    {
+      "T": 0.1,
+      "omega": 3.0,
+      "spectral": 0.0011862736361752475,
+      "greater": 0.0011862736361753583,
+      "lesser": 1.1100701425204089e-16,
+      "noise": 0.0011862736361754694,
+      "imag_retarded_self_energy": -0.0005931368180876238,
+      "log_lesser": -36.73693828311716,
+      "lesser_underflow": false,
+      "log_kms_error": 7.105427357601002e-15,
+      "fdt_relative_error": 2.220446049250313e-16,
+      "support": true
+    },
+    {
+      "T": 0.1,
+      "omega": 4.0,
+      "spectral": 0.0013783222599307791,
+      "greater": 0.0013783222599307791,
+      "lesser": 5.855601238140045e-21,
+      "noise": 0.0013783222599307791,
+      "imag_retarded_self_energy": -0.0006891611299653896,
+      "log_lesser": -46.586888273114404,
+      "lesser_underflow": false,
+      "log_kms_error": 0.0,
+      "fdt_relative_error": 0.0,
+      "support": true
+    },
+    {
+      "T": 0.25,
+      "omega": 1.0,
+      "spectral": 0.0,
+      "greater": 0.0,
+      "lesser": 0.0,
+      "noise": 0.0,
+      "log_kms_error": null,
+      "fdt_relative_error": null,
+      "support": false
+    },
+    {
+      "T": 0.25,
+      "omega": 2.0,
+      "spectral": 0.0,
+      "greater": 0.0,
+      "lesser": 0.0,
+      "noise": 0.0,
+      "log_kms_error": null,
+      "fdt_relative_error": null,
+      "support": false
+    },
+    {
+      "T": 0.25,
+      "omega": 2.1,
+      "spectral": 0.0005053269392806552,
+      "greater": 0.0005054405963550888,
+      "lesser": 1.1365707443373012e-07,
+      "noise": 0.0005055542534295226,
+      "imag_retarded_self_energy": -0.0002526634696403276,
+      "log_lesser": -15.990080041038036,
+      "lesser_underflow": false,
+      "log_kms_error": 1.7763568394002505e-15,
+      "fdt_relative_error": 0.0,
+      "support": true
+    },
+    {
+      "T": 0.25,
+      "omega": 3.0,
+      "spectral": 0.0011941740592528016,
+      "greater": 0.0011941813965568905,
+      "lesser": 7.337304088839579e-09,
+      "noise": 0.0011941887338609793,
+      "imag_retarded_self_energy": -0.0005970870296264008,
+      "log_lesser": -18.73029435213644,
+      "lesser_underflow": false,
+      "log_kms_error": 0.0,
+      "fdt_relative_error": 0.0,
+      "support": true
+    },
+    {
+      "T": 0.25,
+      "omega": 4.0,
+      "spectral": 0.001379559833285026,
+      "greater": 0.0013795599885340502,
+      "lesser": 1.5524902434537834e-10,
+      "noise": 0.0013795601437830746,
+      "imag_retarded_self_energy": -0.000689779916642513,
+      "log_lesser": -22.58599067954451,
+      "lesser_underflow": false,
+      "log_kms_error": 0.0,
+      "fdt_relative_error": 1.1102230246251565e-16,
+      "support": true
+    },
+    {
+      "T": 0.5,
+      "omega": 1.0,
+      "spectral": 0.0,
+      "greater": 0.0,
+      "lesser": 0.0,
+      "noise": 0.0,
+      "log_kms_error": null,
+      "fdt_relative_error": null,
+      "support": false
+    },
+    {
+      "T": 0.5,
+      "omega": 2.0,
+      "spectral": 0.0,
+      "greater": 0.0,
+      "lesser": 0.0,
+      "noise": 0.0,
+      "log_kms_error": null,
+      "fdt_relative_error": null,
+      "support": false
+    },
+    {
+      "T": 0.5,
+      "omega": 2.1,
+      "spectral": 0.0006371449198093606,
+      "greater": 0.000646844729643653,
+      "lesser": 9.699809834292531e-06,
+      "noise": 0.0006565445394779456,
+      "imag_retarded_self_energy": -0.0003185724599046803,
+      "log_lesser": -11.543404277359222,
+      "lesser_underflow": false,
+      "log_kms_error": 0.0,
+      "fdt_relative_error": 0.0,
+      "support": true
+    },
+    {
+      "T": 0.5,
+      "omega": 3.0,
+      "spectral": 0.001322405279487033,
+      "greater": 0.0013256913397811031,
+      "lesser": 3.28606029407015e-06,
+      "noise": 0.0013289774000751734,
+      "imag_retarded_self_energy": -0.0006612026397435165,
+      "log_lesser": -12.625821189743904,
+      "lesser_underflow": false,
+      "log_kms_error": 0.0,
+      "fdt_relative_error": 2.220446049250313e-16,
+      "support": true
+    },
+    {
+      "T": 0.5,
+      "omega": 4.0,
+      "spectral": 0.0014341735473989436,
+      "greater": 0.0014346548204751534,
+      "lesser": 4.812730762096011e-07,
+      "noise": 0.0014351360935513629,
+      "imag_retarded_self_energy": -0.0007170867736994718,
+      "log_lesser": -14.546831001928604,
+      "lesser_underflow": false,
+      "log_kms_error": 0.0,
+      "fdt_relative_error": 0.0,
+      "support": true
+    },
+    {
+      "T": 1.0,
+      "omega": 1.0,
+      "spectral": 0.0,
+      "greater": 0.0,
+      "lesser": 0.0,
+      "noise": 0.0,
+      "log_kms_error": null,
+      "fdt_relative_error": null,
+      "support": false
+    },
+    {
+      "T": 1.0,
+      "omega": 2.0,
+      "spectral": 0.0,
+      "greater": 0.0,
+      "lesser": 0.0,
+      "noise": 0.0,
+      "log_kms_error": null,
+      "fdt_relative_error": null,
+      "support": false
+    },
+    {
+      "T": 1.0,
+      "omega": 2.1,
+      "spectral": 0.001042390341291109,
+      "greater": 0.0011878502388387546,
+      "lesser": 0.00014545989754764533,
+      "noise": 0.0013333101363863999,
+      "imag_retarded_self_energy": -0.0005211951706455544,
+      "log_lesser": -8.835610127571654,
+      "lesser_underflow": false,
+      "log_kms_error": 4.440892098500626e-16,
+      "fdt_relative_error": 2.220446049250313e-16,
+      "support": true
+    },
+    {
+      "T": 1.0,
+      "omega": 3.0,
+      "spectral": 0.0018958350318222315,
+      "greater": 0.00199516862874708,
+      "lesser": 9.933359692484821e-05,
+      "noise": 0.002094502225671928,
+      "imag_retarded_self_energy": -0.0009479175159111157,
+      "log_lesser": -9.217026706524646,
+      "lesser_underflow": false,
+      "log_kms_error": 0.0,
+      "fdt_relative_error": 2.220446049250313e-16,
+      "support": true
+    },
+    {
+      "T": 1.0,
+      "omega": 4.0,
+      "spectral": 0.0018230296510187332,
+      "greater": 0.0018570425721716349,
+      "lesser": 3.401292115290174e-05,
+      "noise": 0.0018910554933245366,
+      "imag_retarded_self_energy": -0.0009115148255093666,
+      "log_lesser": -10.288770071633834,
+      "lesser_underflow": false,
+      "log_kms_error": 8.881784197001252e-16,
+      "fdt_relative_error": 0.0,
+      "support": true
+    }
+  ],
+  "matsubara_witness": {
+    "mode_energy": 1.3,
+    "T": 0.25,
+    "mu": 0.2,
+    "summation_cutoff": 4096,
+    "rows": [
+      {
+        "external_index": 0,
+        "numeric_real": 0.12440915436280048,
+        "numeric_imag": 0.0,
+        "analytic": 0.12440915436319872,
+        "relative_error": 3.2010264917518446e-12
+      },
+      {
+        "external_index": 1,
+        "numeric_real": 0.08460710969638767,
+        "numeric_imag": 8.673617379884035e-19,
+        "analytic": 0.08460710969678589,
+        "relative_error": 4.7067335425276725e-12
+      },
+      {
+        "external_index": 2,
+        "numeric_real": 0.0469466211144037,
+        "numeric_imag": 1.3010426069826053e-18,
+        "analytic": 0.046946621114801926,
+        "relative_error": 8.482466079370393e-12
+      },
+      {
+        "external_index": 4,
+        "numeric_real": 0.016884309142426168,
+        "numeric_imag": 1.6263032587282567e-19,
+        "analytic": 0.016884309142824398,
+        "relative_error": 2.3585807193563222e-11
+      }
+    ]
+  },
+  "dispersion_witness": [
+    {
+      "s": 0.5,
+      "T": 0.1,
+      "mu": 0.2,
+      "vacuum_dispersion": -1.1377312556078185e-06,
+      "thermal_dispersion": -6.119239745319603e-09,
+      "vacuum_absolute_error": 1.1434944787933055e-20,
+      "thermal_absolute_error": 7.630244842434148e-20,
+      "quadrature_error_estimates": [
+        1.4667963668484312e-15,
+        1.4800039125397705e-15
+      ]
+    },
+    {
+      "s": 0.5,
+      "T": 0.25,
+      "mu": 0.2,
+      "vacuum_dispersion": -1.1377312556078185e-06,
+      "thermal_dispersion": -2.718961608054243e-06,
+      "vacuum_absolute_error": 1.1434944787933055e-20,
+      "thermal_absolute_error": 2.583450489125616e-20,
+      "quadrature_error_estimates": [
+        1.4667963668484312e-15,
+        8.978968522204474e-16
+      ]
+    },
+    {
+      "s": 0.5,
+      "T": 0.5,
+      "mu": 0.2,
+      "vacuum_dispersion": -1.1377312556078185e-06,
+      "thermal_dispersion": -3.637997759808013e-05,
+      "vacuum_absolute_error": 1.1434944787933055e-20,
+      "thermal_absolute_error": 9.486769009248164e-19,
+      "quadrature_error_estimates": [
+        1.4667963668484312e-15,
+        1.582250769207455e-15
+      ]
+    },
+    {
+      "s": 0.5,
+      "T": 1.0,
+      "mu": 0.2,
+      "vacuum_dispersion": -1.1377312556078185e-06,
+      "thermal_dispersion": -0.00020707486985250127,
+      "vacuum_absolute_error": 1.1434944787933055e-20,
+      "thermal_absolute_error": 5.3939058081153846e-18,
+      "quadrature_error_estimates": [
+        1.4667963668484312e-15,
+        4.972422213561645e-16
+      ]
+    }
+  ],
+  "pole_refinement": [
+    {
+      "T": 0.25,
+      "mu": 0.2,
+      "strict_one_loop_pole_squared": 0.501349977596514,
+      "partial_Dyson_pole_squared": 0.5013499705344197,
+      "Dyson_vs_strict_relative_change": 1.4086156685522155e-08,
+      "pole_residue": 0.9999947614367806,
+      "static_curvature_at_zero_field": 0.501338316403028,
+      "collisionless_dynamic_zero_frequency_mass_squared": 0.5013513397830641,
+      "static_dynamic_gap": 1.3023380036170096e-05,
+      "population_term": 1.302338003618716e-05,
+      "kernel_at_tree_pole": {
+        "s": 0.5,
+        "vacuum_subtracted": -1.1377312556078373e-06,
+        "quartic_thermal_tadpole": 0.001353834289377639,
+        "charged_thermal_pair": -2.7189616080541747e-06,
+        "self_energy": 0.0013499775965139771,
+        "self_energy_s_derivative": -5.224001220361056e-06,
+        "static_population_term": 1.302338003618716e-05
+      },
+      "kernel_at_Dyson_pole": {
+        "s": 0.5013499705344197,
+        "vacuum_subtracted": -1.1441273081532678e-06,
+        "quartic_thermal_tadpole": 0.001353834289377639,
+        "charged_thermal_pair": -2.7196276498017082e-06,
+        "self_energy": 0.001349970534419684,
+        "self_energy_s_derivative": -5.238590662116501e-06,
+        "static_population_term": 1.302338003618716e-05
+      },
+      "one_loop_on_shell_width": 0.0,
+      "width_boundary": "Kinematically below pair threshold at k=0; not zero full collision damping.",
+      "partial_Dyson_boundary": "Solves a one-loop kernel repeatedly, not a complete higher-loop result."
+    },
+    {
+      "T": 0.25,
+      "mu": 0.2,
+      "strict_one_loop_pole_squared": 0.501349977596514,
+      "partial_Dyson_pole_squared": 0.5013499705344197,
+      "Dyson_vs_strict_relative_change": 1.4086156685522155e-08,
+      "pole_residue": 0.9999947614367806,
+      "static_curvature_at_zero_field": 0.501338316403028,
+      "collisionless_dynamic_zero_frequency_mass_squared": 0.5013513397830641,
+      "static_dynamic_gap": 1.3023380036170096e-05,
+      "population_term": 1.3023380036187e-05,
+      "kernel_at_tree_pole": {
+        "s": 0.5,
+        "vacuum_subtracted": -1.13773125560783e-06,
+        "quartic_thermal_tadpole": 0.0013538342893776323,
+        "charged_thermal_pair": -2.718961608054217e-06,
+        "self_energy": 0.0013499775965139704,
+        "self_energy_s_derivative": -5.2240012203613545e-06,
+        "static_population_term": 1.3023380036187e-05
+      },
+      "kernel_at_Dyson_pole": {
+        "s": 0.5013499705344197,
+        "vacuum_subtracted": -1.144127308153259e-06,
+        "quartic_thermal_tadpole": 0.0013538342893776323,
+        "charged_thermal_pair": -2.7196276498017485e-06,
+        "self_energy": 0.0013499705344196774,
+        "self_energy_s_derivative": -5.238590662116804e-06,
+        "static_population_term": 1.3023380036187e-05
+      },
+      "one_loop_on_shell_width": 0.0,
+      "width_boundary": "Kinematically below pair threshold at k=0; not zero full collision damping.",
+      "partial_Dyson_boundary": "Solves a one-loop kernel repeatedly, not a complete higher-loop result."
+    },
+    {
+      "T": 0.25,
+      "mu": 0.2,
+      "strict_one_loop_pole_squared": 0.501349977596514,
+      "partial_Dyson_pole_squared": 0.5013499705344197,
+      "Dyson_vs_strict_relative_change": 1.4086156685522155e-08,
+      "pole_residue": 0.9999947614367806,
+      "static_curvature_at_zero_field": 0.501338316403028,
+      "collisionless_dynamic_zero_frequency_mass_squared": 0.5013513397830641,
+      "static_dynamic_gap": 1.3023380036170096e-05,
+      "population_term": 1.3023380036187397e-05,
+      "kernel_at_tree_pole": {
+        "s": 0.5,
+        "vacuum_subtracted": -1.137731255607834e-06,
+        "quartic_thermal_tadpole": 0.0013538342893776487,
+        "charged_thermal_pair": -2.718961608054332e-06,
+        "self_energy": 0.0013499775965139867,
+        "self_energy_s_derivative": -5.224001220361409e-06,
+        "static_population_term": 1.3023380036187397e-05
+      },
+      "kernel_at_Dyson_pole": {
+        "s": 0.5013499705344197,
+        "vacuum_subtracted": -1.1441273081532638e-06,
+        "quartic_thermal_tadpole": 0.0013538342893776487,
+        "charged_thermal_pair": -2.719627649801864e-06,
+        "self_energy": 0.0013499705344196936,
+        "self_energy_s_derivative": -5.238590662116859e-06,
+        "static_population_term": 1.3023380036187397e-05
+      },
+      "one_loop_on_shell_width": 0.0,
+      "width_boundary": "Kinematically below pair threshold at k=0; not zero full collision damping.",
+      "partial_Dyson_boundary": "Solves a one-loop kernel repeatedly, not a complete higher-loop result."
+    }
+  ],
+  "pole_refinement_relative_changes": [
+    0.0,
+    0.0
+  ],
+  "kernel_component_refinement_relative_changes": {
+    "vacuum_subtracted": [
+      6.5503158452884236e-15,
+      3.552713678800501e-15
+    ],
+    "quartic_thermal_tadpole": [
+      4.9960036108132044e-15,
+      1.2212453270876722e-14
+    ],
+    "charged_thermal_pair": [
+      1.554312234475219e-14,
+      4.218847493575595e-14
+    ],
+    "self_energy": [
+      4.9960036108132044e-15,
+      1.199040866595169e-14
+    ]
+  },
+  "uncertainty_boundary": "Numerical refinement and strict-versus-partially-resummed differences are diagnostic, not a certified omitted-order or physical source uncertainty.",
+  "open_blockers": [
+    "charged_sector_and_full_vertex_counterterm_matching",
+    "finite_k_and_collision_resummed_hydrodynamic_limit",
+    "leading_collision_width_current_entropy_transport_matching",
+    "material_SI_calibration_and_full_T13_acceptance"
+  ],
+  "controlling_blocker": "coupled_sector_and_collision_resummed_current_matching",
+  "source_hashes": {
+    "docs/scripts/audit/audit_topic13_response_one_loop_match.py": "0c048b3b82d926eec8946964676f30a281b723cd78eaba6ebb32b01e795bb6cd",
+    "docs/core/test/test_topic13_response_one_loop_match.py": "c21e4bf08e325451fd7066eda26753393b27a3c02c0721a989414e0aa909d041",
+    "docs/scripts/audit/audit_topic13_normal_thermal_background.py": "edc4cf486febd9e5c68662a9c6a2567f99821a8a72de66bde7b317bc78ad940f",
+    "docs/scripts/audit/audit_topic13_coupled_gain_loss_operator.py": "ecc057e1d343c8c6c295a21eefb9e4bccc24cc11c668f88dd4083f3072b2a81d",
+    "docs/scripts/audit/audit_topic13_action_normalized_elastic_scattering.py": "c09fbdd4d921c2c9ea1ba578c27935887900545725c978015104e9d4594a258b",
+    "docs/core/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+    "docs/core/uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_normal_thermal_background_audit.json",
+      "sha256": "ac402fe1bb4dd547dec069676ee0925f5805a2d12d4354fdc14b0a9f29e50914"
+    }
+  ],
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "xie_2026_accessed": false,
+  "parameter_fitting_performed": false,
+  "collision_artifact_rerun": false,
+  "literature_context": [
+    {
+      "url": "https://arxiv.org/abs/hep-ph/9307335",
+      "role": "Order of zero-momentum thermal limits; no numeric input"
+    },
+    {
+      "url": "https://arxiv.org/abs/hep-ph/9901312",
+      "role": "One-loop effective-potential and approximation context"
+    }
+  ],
+  "claim_boundary": "Response-axis and k=0 one-loop scheme only. Not full interacting SK/KMS, finite-width transport, physical Phi particles, SI alpha, or Full Topic 13 closure.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "PARTIAL",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "Declared response-axis one-loop vacuum subtraction and kinetic reference conditions.",
+      "Strict-loop mean/pole versus partial resummation are distinguished.",
+      "Collisionless k=0 retarded response, static occupation term and action pair-cut KMS/FDT are linked."
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "charged_sector_and_full_vertex_counterterm_matching",
+      "finite_k_and_collision_resummed_hydrodynamic_limit",
+      "leading_collision_width_current_entropy_transport_matching",
+      "material_SI_calibration_and_full_T13_acceptance"
+    ],
+    "DEPENDENCY_UNLOCKED": [],
+    "STATUS": "PASS_SCOPED_RESPONSE_ONE_LOOP_MATCH",
+    "WHAT_CHANGED": "Added explicit vacuum/kinetic subtraction, loop-order separation, retarded response and pair-cut KMS/FDT.",
+    "EQUATION_OR_MAPPING": {
+      "vacuum_axis": "V_CW_ren(x)=V_CW(x)-Taylor_x=0_through_degree_4[V_CW(x)], charged degeneracy 2 and neutral degeneracy 1",
+      "reference_conditions": "d_x^n V_CW_ren(0)=0 for n=0..4; Pi_vac_ren(0)=Pi_vac_ren_s'(0)=0",
+      "retarded_convention": "D_R^-1(omega,k=0)=(omega+i0)^2-M0^2-Pi_R; s=omega^2",
+      "thermal_kernel": "Pi_T(s)=6*lambda_response*I_response-G^2 integral (n_plus+n_minus)/(E*(4E^2-s))",
+      "vacuum_kernel": "Pi_vac_ren(s)=-G^2/(16*pi^2) integral_0^1 [-log(1-z(1-z)*s/m^2)-z(1-z)*s/m^2] dz",
+      "static_dynamic": "M_dynamic0^2-M_static^2=G^2 integral [n_plus(1+n_plus)+n_minus(1+n_minus)]/(4*T*E^2)",
+      "pole": "M_pole^2(strict 1-loop)=M0^2+Pi_R(M0^2); partial Dyson root separately labelled",
+      "pair_cut": "rho_Pi=G^2/(8*pi)*sqrt(1-4*m^2/omega^2)*(1+n_plus+n_minus); Pi_greater/Pi_lesser=exp(omega/T)"
+    },
+    "VERIFICATION": {
+      "vacuum_reference_conditions": true,
+      "normal_stationarity": true,
+      "positive_subthreshold_response": true,
+      "static_dynamic_population_match": true,
+      "independent_matsubara_sum": true,
+      "independent_spectral_dispersion": true,
+      "pair_cut_KMS_FDT": true,
+      "pair_cut_spectral_positivity": true,
+      "threshold_support": true,
+      "pole_refinement": true,
+      "kernel_component_refinement": true
+    },
+    "CONTROLLING_BLOCKER": "coupled_sector_and_collision_resummed_current_matching",
+    "NEXT_ACTION": "Match charged-sector propagators/vertices and collision-resummed response in the declared approximation before a physical transport handoff.",
+    "CLAIM_BOUNDARY": "Response-axis and k=0 one-loop scheme only. Not full interacting SK/KMS, finite-width transport, physical Phi particles, SI alpha, or Full Topic 13 closure."
+  }
+}

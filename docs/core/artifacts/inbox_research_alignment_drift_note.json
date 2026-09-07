@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "inbox_research_alignment_drift_note",
-  "generated_at": "2026-08-20",
+  "generated_at": "2026-08-21",
   "status": "BLOCKED_STALE_SOURCE_PATHS",
   "expected_path": "docs/core/00_inbox",
   "path_exists": false,

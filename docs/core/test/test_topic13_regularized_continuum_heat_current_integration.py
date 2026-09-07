@@ -40,5 +40,5 @@ def test_regularized_lane_is_integrated_without_downstream_unlock() -> None:
     )
     assert (
         dependency["decisions"]["CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"]["status"]
-        == "BLOCKED_DEPENDENCY"
+        == "UNLOCKED"
     )

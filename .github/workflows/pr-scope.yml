@@ -1,0 +1,103 @@
+
+name: PR Scope and Safety
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: pr-scope-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  scope-safety:
+    name: Scope and public boundary
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Validate branch naming
+        env:
+          HEAD_BRANCH: ${{ github.head_ref }}
+        run: |
+          set -euo pipefail
+          [[ "$HEAD_BRANCH" =~ ^codex/(research|book|history|policy|services|repo)/[^/[:space:]]+$ ]] || {
+            echo "Use codex/<area>/<task>."
+            exit 1
+          }
+      - name: Collect changed files
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          git diff --name-only "$BASE_SHA" "$HEAD_SHA" | sort -u > changed-files.txt
+          test -s changed-files.txt
+      - name: Check whitespace and JSON
+        run: |
+          set -euo pipefail
+          git diff --check ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }}
+          while IFS= read -r file; do
+            case "$file" in
+              *.json) python -m json.tool "$file" >/dev/null ;;
+            esac
+          done < changed-files.txt
+      - name: Check public boundary
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          blocked = []
+          for raw in Path("changed-files.txt").read_text().splitlines():
+              path = raw.replace("\\", "/")
+              lower = path.lower()
+              suffix = Path(lower).suffix
+              parts = set(lower.split("/"))
+              name = Path(lower).name
+              if name.startswith(".env") or suffix in {".pem", ".key", ".p12", ".pfx", ".exe", ".dll", ".so", ".zip", ".sqlite", ".sqlite3", ".db"}:
+                  blocked.append(path)
+              if parts & {"target", "node_modules", ".next", "__pycache__", ".pytest_cache", "debug", "build", "dist"}:
+                  blocked.append(path)
+              if any(f"/{marker}/" in f"/{lower}/" for marker in ("1_raw", "ch_drafts", "raw")):
+                  blocked.append(path)
+              if lower.startswith("thailand_proposals/") and suffix in {".pdf", ".png", ".jpg", ".jpeg", ".mp3", ".m4a", ".wav"}:
+                  blocked.append(path)
+          if blocked:
+              print(*sorted(set(blocked)), sep="\\n")
+              raise SystemExit("Blocked public-boundary files")
+          PY
+      - name: Check path drift and workflow side effects
+        run: |
+          set -euo pipefail
+          if grep -Eq '^(docs/topics/For_Work/|uet_history/3_publish/books/origin_of_wealth_and_economics/)' changed-files.txt; then
+            echo "Known non-canonical path changed."
+            exit 1
+          fi
+          python - <<'PY'
+          from pathlib import Path
+          changed = Path("changed-files.txt").read_text().splitlines()
+          forbidden = ("git commit", "git push", "gh pr merge")
+          violations = []
+          for raw in changed:
+              path = raw.replace("\\", "/")
+              if path.startswith(".github/workflows/") and path != ".github/workflows/pr-scope.yml" and Path(path).is_file():
+                  text = Path(path).read_text(encoding="utf-8")
+                  for token in forbidden:
+                      if token in text:
+                          violations.append(f"{path}: {token}")
+          if violations:
+              print(*violations, sep="\n")
+              raise SystemExit("Workflows must not commit or push source changes.")
+          PY
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr-scope-report
+          path: changed-files.txt
+          if-no-files-found: warn

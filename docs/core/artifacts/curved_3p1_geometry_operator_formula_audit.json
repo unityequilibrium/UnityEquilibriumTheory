@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0",
+  "artifact": "curved_3p1_geometry_operator_formula_audit",
+  "generated_at": "2026-08-28T05:53:27.123424+00:00",
+  "topic": "docs/core curved 3+1 parent",
+  "version": "periodic-geometry-operator-v1",
+  "benchmark_role": "formula and unit audit",
+  "method_label": "second-order periodic Levi-Civita/Ricci/divergence operators",
+  "status": "PASS_NUMERICAL_GEOMETRY_FORMULAS",
+  "relations": [
+    {
+      "formula_id": "UET-CURVED3P1-CHRISTOFFEL-003",
+      "relation": "Gamma^k_ij = 1/2 gamma^kl (d_i gamma_lj + d_j gamma_li - d_l gamma_ij)",
+      "variables": {
+        "gamma_ij": "spatial metric",
+        "Gamma^k_ij": "Levi-Civita connection",
+        "d_i": "periodic centered coordinate derivative"
+      },
+      "units": {
+        "gamma_ij": "dimensionless chart component",
+        "d_i": "L^-1",
+        "Gamma^k_ij": "L^-1"
+      },
+      "conversion_steps": "none in geometric chart lane; spacing is supplied in L",
+      "constant_origin": {
+        "1/2": "exact Levi-Civita identity"
+      },
+      "derivation_class": "standard identity plus numerical approximation",
+      "unit_lane": "geometric periodic Cartesian chart",
+      "unit_closure": "L^-1 on both sides",
+      "proof_status": "flat exact-zero and metric-compatibility controls pass",
+      "verification_role": "formal/numerical prerequisite",
+      "failure_mode": "index placement or derivative error corrupts every curvature and divergence result",
+      "next_hardening_step": "add non-periodic boundary/multiple-chart implementation only after evolution requirements are defined",
+      "code_path": "docs/core/uet_curved_3p1_geometry.py"
+    },
+    {
+      "formula_id": "UET-CURVED3P1-RICCI-004",
+      "relation": "R_ij = d_k Gamma^k_ij - d_j Gamma^k_ik + Gamma^k_ij Gamma^l_kl - Gamma^l_ik Gamma^k_jl; R3 = gamma^ij R_ij",
+      "variables": {
+        "R_ij": "spatial Ricci tensor",
+        "R3": "spatial Ricci scalar",
+        "Gamma": "Levi-Civita connection",
+        "gamma^ij": "inverse spatial metric"
+      },
+      "units": {
+        "R_ij": "L^-2",
+        "R3": "L^-2",
+        "Gamma": "L^-1"
+      },
+      "conversion_steps": "none in geometric chart lane",
+      "constant_origin": "no fitted constants",
+      "derivation_class": "standard identity plus second-order finite differences",
+      "unit_lane": "geometric periodic Cartesian chart",
+      "unit_closure": "L^-2 on every term",
+      "proof_status": "conformally-flat analytic control converges at observed order >= 1.8",
+      "verification_role": "spatial convergence gate",
+      "failure_mode": "incorrect Ricci curvature invalidates the Hamiltonian constraint input",
+      "next_hardening_step": "couple to gauge-declared metric/K evolution and test constraint propagation",
+      "code_path": "docs/core/uet_curved_3p1_geometry.py"
+    },
+    {
+      "formula_id": "UET-CURVED3P1-MOMENTUM-DIVERGENCE-005",
+      "relation": "B^j_i = K^j_i - delta^j_i K; D_j B^j_i = d_j B^j_i + Gamma^j_jm B^m_i - Gamma^m_ji B^j_m",
+      "variables": {
+        "B^j_i": "mixed ADM momentum tensor",
+        "K^j_i": "mixed extrinsic curvature",
+        "K": "trace of K_ij",
+        "D_j": "spatial covariant derivative"
+      },
+      "units": {
+        "K_ij": "L^-1",
+        "B^j_i": "L^-1",
+        "D_j_B^j_i": "L^-2"
+      },
+      "conversion_steps": "raise the first K index with gamma^jk before differentiation",
+      "constant_origin": "Kronecker delta identity; no fitted constants",
+      "derivation_class": "standard tensor identity plus second-order finite differences",
+      "unit_lane": "geometric periodic Cartesian chart",
+      "unit_closure": "L^-2 on both sides",
+      "proof_status": "manufactured off-diagonal K control converges at observed order >= 1.8",
+      "verification_role": "spatial convergence and ADM-input gate",
+      "failure_mode": "connection sign/index drift produces a false momentum-constraint residual",
+      "next_hardening_step": "test propagation under a declared strongly-hyperbolic evolution system",
+      "code_path": "docs/core/uet_curved_3p1_geometry.py"
+    }
+  ],
+  "source": {
+    "path": "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json",
+    "sha256": "d989b9dd637828dd64f975eaf1f744163ac71e362bde71e46e86e599eced1754",
+    "identity": {
+      "schema_version": "1.0",
+      "source_id": "gourgoulhon_2007_3p1_formalism",
+      "title": "3+1 Formalism and Bases of Numerical Relativity",
+      "author": "Eric Gourgoulhon",
+      "year": 2007,
+      "arxiv_id": "gr-qc/0703035",
+      "url": "https://arxiv.org/abs/gr-qc/0703035",
+      "source_role": "standard-physics formula and sign-convention reference",
+      "used_scope": [
+        "3+1 decomposition terminology",
+        "Hamiltonian constraint structure",
+        "momentum constraint structure",
+        "initial-data and gauge separation",
+        "spatial Levi-Civita connection",
+        "spatial Ricci tensor and scalar",
+        "covariant divergence in the momentum constraint"
+      ],
+      "not_used_for": [
+        "UET coefficient fitting",
+        "physical validation",
+        "claim that UET derives Einstein equations"
+      ],
+      "local_payload": "metadata-only source record; no redistributed PDF",
+      "accessed_on": "2026-08-28"
+    }
+  },
+  "thresholds": {
+    "flat_max_abs_ricci_scalar": 1e-14,
+    "metric_compatibility_max_abs": 1e-12,
+    "ricci_antisymmetry_max_abs": 1e-12,
+    "minimum_observed_spatial_order": 1.8,
+    "finest_ricci_l2_error": 0.002,
+    "finest_momentum_divergence_l2_error": 0.00015,
+    "matched_adm_constraint_max_abs": 1e-12,
+    "negative_control_min_abs": 0.0001
+  },
+  "metrics": {
+    "flat_max_abs_christoffel": 0.0,
+    "flat_max_abs_ricci_scalar": 0.0,
+    "ricci_l2_errors": [
+      0.025326008204864178,
+      0.0064824312434219634,
+      0.0016303327306680204
+    ],
+    "ricci_observed_orders": [
+      1.9660127983411686,
+      1.9913685684143443
+    ],
+    "momentum_divergence_l2_errors": [
+      0.0018399889847024965,
+      0.00046475273342829967,
+      0.00011648722591182725
+    ],
+    "momentum_divergence_observed_orders": [
+      1.9851618740077892,
+      1.9962915939448886
+    ],
+    "max_metric_compatibility_residual": 2.7755575615628914e-17,
+    "max_ricci_antisymmetry": 0.0,
+    "matched_adm_hamiltonian_residual": 5.551115123125783e-17,
+    "matched_adm_momentum_residual": 0.0,
+    "mismatched_density_hamiltonian_residual": 0.049440727456161015
+  },
+  "open_items": [
+    "non-periodic boundary conditions or multiple charts",
+    "lapse and shift gauge evolution",
+    "spatial-metric and extrinsic-curvature evolution",
+    "strong-hyperbolicity proof",
+    "constraint propagation or damping",
+    "temporal convergence",
+    "Topic 13 stress-energy projection wiring",
+    "SI detector-observable mapping"
+  ],
+  "claim_ceiling": "periodic-grid spatial differential-geometry operator with internal analytic controls only; not a spacetime evolution solver or GR validation"
+}

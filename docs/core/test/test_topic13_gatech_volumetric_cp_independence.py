@@ -67,7 +67,7 @@ def test_full_gate_records_no_go_without_promoting_topic() -> None:
         "independent_same_grade_density_or_direct_volumetric_heat_capacity_missing"
         not in gate["major_result"]["what_remains_open"]
     )
-    assert "density_uncertainty_not_source_locked" in gate["major_result"]["what_remains_open"]
+    assert "density_uncertainty_not_source_locked" not in gate["major_result"]["what_remains_open"]
     assert "c_v_source_uncertainty_not_closed" in gate["major_result"]["what_remains_open"]
     assert "direct_volumetric_c_v_or_same_state_Cp_source_missing" not in gate["major_result"]["what_remains_open"]
 
@@ -80,4 +80,4 @@ def test_major_result_register_contains_scoped_no_go_only() -> None:
     result = entries["T13_GATECH_VOLUMETRIC_CP_INDEPENDENCE_NO_GO"]
     assert result["closure_level"] == "CLOSED_FOR_LANE"
     assert register["claim_promotion"] is False
-    assert register["next_major_result"] == "T13_FULL_THERMODYNAMIC_BRIDGE"
+    assert register["next_major_result"] == "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"

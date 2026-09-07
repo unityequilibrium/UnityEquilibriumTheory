@@ -67,6 +67,29 @@ def relative_change(previous: float, current: float) -> float:
     return abs(current - previous) / denominator
 
 
+def poscar_geometry(file_path: Path) -> tuple[int, float]:
+    """Read the atom count and cell volume without treating formatting as state."""
+
+    lines = [line.strip() for line in file_path.read_text(encoding="utf-8").splitlines()]
+    if len(lines) < 8:
+        raise SystemExit(f"invalid POSCAR: {file_path}")
+    scale = float(lines[1])
+    cell = [[float(value) * scale for value in lines[index].split()[:3]] for index in range(2, 5)]
+    counts_index = 5
+    try:
+        counts = [int(value) for value in lines[counts_index].split()]
+    except ValueError:
+        counts_index = 6
+        counts = [int(value) for value in lines[counts_index].split()]
+    ax, ay, az = cell
+    volume = abs(
+        ax[0] * (ay[1] * az[2] - ay[2] * az[1])
+        - ax[1] * (ay[0] * az[2] - ay[2] * az[0])
+        + ax[2] * (ay[0] * az[1] - ay[1] * az[0])
+    )
+    return sum(counts), volume
+
+
 def find_row(rows: list[dict[str, Any]], temperature: float) -> dict[str, Any]:
     for row in rows:
         if float(row.get("temperature_K")) == temperature:
@@ -192,8 +215,16 @@ def main() -> int:
     expected_force_hashes = {
         name: item["sha256"] for name, item in force_records.items()
     }
-    same_force_state = all(
-        run["force_constant_hashes"] == expected_force_hashes for run in runs
+    poscar_atom_count, poscar_volume = poscar_geometry(path(state_poscar_rel))
+    expected_volume = float(
+        state_summary.get("geometry", {}).get(
+            "primitive_volume_A3", runs[0]["primitive_volume_A3"]
+        )
+    )
+    poscar_state_contract_valid = (
+        poscar_atom_count == 4
+        and expected_volume > 0.0
+        and math.isclose(poscar_volume, expected_volume, rel_tol=0.0, abs_tol=1e-9)
     )
     source_hashes_match = digest(structure) == STRUCTURE_SHA256 and digest(potential) == MODEL_SHA256
     header_matches = potential.read_text(encoding="utf-8").splitlines()[0].strip() == EXPECTED_MODEL_HEADER
@@ -202,6 +233,11 @@ def main() -> int:
         f"source_commit: {LEGACY_COMMIT}" in receipt.read_text(encoding="utf-8")
         and "returncode: 0" in receipt_contract
         and "use the nep2 potential" in receipt_contract
+    )
+    same_force_state = poscar_state_contract_valid and all(
+        run["force_constant_hashes"].get(name) == expected_force_hashes[name]
+        for run in runs
+        for name in ("fc2", "fc3")
     )
     checks = {
         "structure_source_hash_matches": source_hashes_match and digest(structure) == STRUCTURE_SHA256,
@@ -219,6 +255,7 @@ def main() -> int:
         and force.get("supercell_atoms") == 128
         and force.get("force_array_shape") == [1220, 128, 3],
         "force_constant_payloads_present": all(item["size_bytes"] > 0 for item in force_records.values()),
+        "poscar_state_contract_valid": poscar_state_contract_valid,
         "same_force_constant_state_across_meshes": same_force_state,
         "mesh_pair_preflight_pass": convergence["latest_pair_pass"],
         "all_c_src_rows_finite_positive": all(

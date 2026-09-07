@@ -813,3 +813,165 @@ __all__ += [
     "newtonian_poisson_residual",
     "gr_correspondence_contract",
 ]
+
+from .uet_curved_3p1_constraints import (
+    ADM_CONSTRAINT_INTERFACE_STATUS,
+    ADMGeometryState,
+    ADMMatterProjection,
+    ADMConstraintResult,
+    evaluate_adm_constraints,
+    minkowski_adm_control,
+    flat_flrw_adm_control,
+    adm_constraint_contract,
+)
+
+__all__ += [
+    "ADM_CONSTRAINT_INTERFACE_STATUS",
+    "ADMGeometryState",
+    "ADMMatterProjection",
+    "ADMConstraintResult",
+    "evaluate_adm_constraints",
+    "minkowski_adm_control",
+    "flat_flrw_adm_control",
+    "adm_constraint_contract",
+]
+
+from .uet_curved_3p1_geometry import (
+    CURVED_3P1_GEOMETRY_OPERATOR_STATUS,
+    SpatialGeometryResult,
+    periodic_central_derivative,
+    compute_periodic_spatial_geometry,
+    compute_periodic_momentum_tensor_divergence,
+    adm_geometry_from_periodic_grid,
+    curved_3p1_geometry_operator_contract,
+)
+
+__all__ += [
+    "CURVED_3P1_GEOMETRY_OPERATOR_STATUS",
+    "SpatialGeometryResult",
+    "periodic_central_derivative",
+    "compute_periodic_spatial_geometry",
+    "compute_periodic_momentum_tensor_divergence",
+    "adm_geometry_from_periodic_grid",
+    "curved_3p1_geometry_operator_contract",
+]
+
+from .uet_curved_3p1_adm_evolution import (
+    ADM_EVOLUTION_OPERATOR_STATUS,
+    ADMStressProjection,
+    ADMEvolutionRHS,
+    ADMPrincipalSymbolResult,
+    compute_adm_evolution_rhs,
+    fixed_gauge_adm_principal_symbol,
+    adm_evolution_contract,
+)
+
+__all__ += [
+    "ADM_EVOLUTION_OPERATOR_STATUS",
+    "ADMStressProjection",
+    "ADMEvolutionRHS",
+    "ADMPrincipalSymbolResult",
+    "compute_adm_evolution_rhs",
+    "fixed_gauge_adm_principal_symbol",
+    "adm_evolution_contract",
+]
+
+from .uet_curved_3p1_generalized_harmonic import (
+    GH_PRINCIPAL_SYSTEM_STATUS,
+    GHParameters,
+    GHNonlinearParameters,
+    GHPrincipalSymbolResult,
+    GHLinearRHS,
+    GHKinematics,
+    GHNonlinearVacuumRHS,
+    gh_principal_symbol,
+    gh_characteristic_fields,
+    reconstruct_gh_state,
+    gh_reduction_constraint,
+    gh_curl_constraint,
+    gh_gauge_constraint,
+    derive_gh_kinematics,
+    reconstruct_metric_derivatives,
+    lowered_christoffel_from_gh_state,
+    gh_gauge_constraint_grid,
+    gh_gamma0_damping_term,
+    compute_linear_gh_reduction_damped_rhs,
+    compute_nonlinear_vacuum_gh_rhs,
+    generalized_harmonic_contract,
+)
+
+__all__ += [
+    "GH_PRINCIPAL_SYSTEM_STATUS",
+    "GHParameters",
+    "GHNonlinearParameters",
+    "GHPrincipalSymbolResult",
+    "GHLinearRHS",
+    "GHKinematics",
+    "GHNonlinearVacuumRHS",
+    "gh_principal_symbol",
+    "gh_characteristic_fields",
+    "reconstruct_gh_state",
+    "gh_reduction_constraint",
+    "gh_curl_constraint",
+    "gh_gauge_constraint",
+    "derive_gh_kinematics",
+    "reconstruct_metric_derivatives",
+    "lowered_christoffel_from_gh_state",
+    "gh_gauge_constraint_grid",
+    "gh_gamma0_damping_term",
+    "compute_linear_gh_reduction_damped_rhs",
+    "compute_nonlinear_vacuum_gh_rhs",
+    "generalized_harmonic_contract",
+]
+
+from .uet_curved_3p1_gh_evolution import (
+    GH_TIME_EVOLUTION_STATUS,
+    GHEvolutionState,
+    GHTimeIntegrationParameters,
+    GHConstraintNorms,
+    GHTimeEvolutionResult,
+    gh_constraint_norms,
+    gh_cfl_timestep,
+    rk4_periodic_vacuum_gh_step,
+    evolve_periodic_vacuum_gh,
+    harmonic_gauge_wave_state,
+    generalized_harmonic_time_evolution_contract,
+)
+
+__all__ += [
+    "GH_TIME_EVOLUTION_STATUS",
+    "GHEvolutionState",
+    "GHTimeIntegrationParameters",
+    "GHConstraintNorms",
+    "GHTimeEvolutionResult",
+    "gh_constraint_norms",
+    "gh_cfl_timestep",
+    "rk4_periodic_vacuum_gh_step",
+    "evolve_periodic_vacuum_gh",
+    "harmonic_gauge_wave_state",
+    "generalized_harmonic_time_evolution_contract",
+]
+
+from .uet_curved_3p1_matter_wiring import (
+    CURVED_3P1_MATTER_WIRING_STATUS,
+    RelativisticFluidState,
+    CurvedMatterProjection,
+    GHNonlinearMatterRHS,
+    relativistic_fluid_stress_energy,
+    project_stress_energy_3p1,
+    trace_reversed_stress_energy,
+    compute_nonlinear_prescribed_matter_gh_rhs,
+    curved_3p1_matter_wiring_contract,
+)
+
+__all__ += [
+    "CURVED_3P1_MATTER_WIRING_STATUS",
+    "RelativisticFluidState",
+    "CurvedMatterProjection",
+    "GHNonlinearMatterRHS",
+    "relativistic_fluid_stress_energy",
+    "project_stress_energy_3p1",
+    "trace_reversed_stress_energy",
+    "compute_nonlinear_prescribed_matter_gh_rhs",
+    "curved_3p1_matter_wiring_contract",
+]

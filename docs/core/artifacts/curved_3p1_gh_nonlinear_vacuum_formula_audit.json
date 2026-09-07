@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "artifact": "curved_3p1_gh_nonlinear_vacuum_formula_audit",
+  "generated_at": "2026-08-29T04:51:37.128904+00:00",
+  "status": "PASS_SOURCE_LOCKED_GH_NONLINEAR_VACUUM_FORMULAS",
+  "relations": [
+    {
+      "formula_id": "UET-CURVED3P1-GH-PSI-RHS-014",
+      "relation": "complete first-order GH metric RHS, Eq. 35",
+      "variables": {
+        "psi_ab": "spacetime metric",
+        "Pi_ab": "minus normal metric derivative",
+        "Phi_iab": "spatial metric derivative"
+      },
+      "units": "L^-1",
+      "conversion_steps": "lapse/shift derived from psi_ab",
+      "constant_origin": "Lindblom et al. Eq. 35",
+      "derivation_class": "source-locked standard-physics relation",
+      "unit_lane": "geometric c=1",
+      "unit_closure": "L^-1",
+      "proof_status": "Minkowski and explicit-index controls pass",
+      "verification_role": "nonlinear vacuum RHS gate",
+      "failure_mode": "metric kinematics and first-order variables drift",
+      "next_hardening_step": "time integration and gauge-wave convergence",
+      "code_path": "docs/core/uet_curved_3p1_generalized_harmonic.py"
+    },
+    {
+      "formula_id": "UET-CURVED3P1-GH-PI-RHS-015",
+      "relation": "complete vacuum Pi_ab RHS with gamma0 damping, Eq. 36",
+      "variables": {
+        "H_a": "declared algebraic gauge source",
+        "nabla_a_H_b": "declared covariant derivative input",
+        "gamma0": "positive gauge-constraint damping rate"
+      },
+      "units": "L^-2",
+      "conversion_steps": "Christoffel and C_a reconstructed from first-order state",
+      "constant_origin": "Lindblom et al. Eqs. 36 and 40",
+      "derivation_class": "source-locked standard-physics relation",
+      "unit_lane": "geometric c=1 vacuum",
+      "unit_closure": "L^-2",
+      "proof_status": "independent index, gauge derivative, and gamma0 controls pass",
+      "verification_role": "nonlinear vacuum and gauge-damping gate",
+      "failure_mode": "gauge derivative is hidden or gamma0 damping sign drifts",
+      "next_hardening_step": "constraint-propagation evolution test",
+      "code_path": "docs/core/uet_curved_3p1_generalized_harmonic.py"
+    },
+    {
+      "formula_id": "UET-CURVED3P1-GH-PHI-RHS-016",
+      "relation": "complete vacuum Phi_iab RHS with reduction damping, Eq. 37",
+      "variables": {
+        "gamma2": "positive reduction-constraint damping rate"
+      },
+      "units": "L^-2",
+      "conversion_steps": "spatial derivatives use declared periodic spacing",
+      "constant_origin": "Lindblom et al. Eq. 37",
+      "derivation_class": "source-locked standard-physics relation",
+      "unit_lane": "geometric c=1 vacuum",
+      "unit_closure": "L^-2",
+      "proof_status": "independent index and tensor-symmetry controls pass",
+      "verification_role": "nonlinear vacuum RHS gate",
+      "failure_mode": "reduction damping is overread as full constraint propagation",
+      "next_hardening_step": "temporal reduction-constraint decay convergence",
+      "code_path": "docs/core/uet_curved_3p1_generalized_harmonic.py"
+    },
+    {
+      "formula_id": "UET-CURVED3P1-GH-STATE-RECONSTRUCTION-017",
+      "relation": "partial_t psi=-N Pi+N^i Phi_i; partial_i psi=Phi_i; C_a from Eq. 40",
+      "variables": {
+        "N": "metric-derived lapse",
+        "N_i": "metric-derived shift",
+        "C_a": "GH gauge constraint"
+      },
+      "units": "metric derivatives and C_a are L^-1",
+      "conversion_steps": "3+1 decomposition derived from psi inverse",
+      "constant_origin": "Lindblom et al. Eqs. 38-40",
+      "derivation_class": "source-locked identity",
+      "unit_lane": "geometric c=1",
+      "unit_closure": "L^-1",
+      "proof_status": "kinematics and point/grid constraint controls pass",
+      "verification_role": "state reconstruction gate",
+      "failure_mode": "lapse/shift are duplicated as inconsistent inputs",
+      "next_hardening_step": "couple declared matter stress projection",
+      "code_path": "docs/core/uet_curved_3p1_generalized_harmonic.py"
+    }
+  ],
+  "source": {
+    "schema_version": "1.0",
+    "source_id": "lindblom_et_al_2006_generalized_harmonic",
+    "title": "A New Generalized Harmonic Evolution System",
+    "authors": [
+      "Lee Lindblom",
+      "Mark A. Scheel",
+      "Lawrence E. Kidder",
+      "Robert Owen",
+      "Oliver Rinne"
+    ],
+    "year": 2006,
+    "arxiv_id": "gr-qc/0512093",
+    "doi": "10.1088/0264-9381/23/16/S09",
+    "url": "https://arxiv.org/abs/gr-qc/0512093",
+    "version": "v3",
+    "journal_reference": "Class. Quantum Grav. 23 (2006) S447-S462",
+    "formula_locators": {
+      "gh_gauge": "Section 2, Eqs. (6), (11), and (12)",
+      "constraint_damping": "Section 2.2, Eqs. (17)-(21)",
+      "first_order_variables": "Section 3, Eqs. (22)-(26)",
+      "modified_principal_system": "Section 3, Eqs. (27)-(29)",
+      "symmetrizer": "Section 3, Eq. (30), with gamma3=gamma1*gamma2 and Lambda^2>gamma2^2",
+      "characteristic_fields": "Section 3, Eqs. (31)-(34)",
+      "complete_rhs": "Section 3, Eqs. (35)-(39)",
+      "first_order_gauge_constraint": "Section 4.1, Eq. (40)"
+    },
+    "source_role": "preregistered next-branch formulation and constraint-damping reference",
+    "used_scope": [
+      "first-order generalized-harmonic variables and gauge-source concept",
+      "symmetric-hyperbolic formulation target",
+      "constraint-damping and constraint-preserving boundary target",
+      "principal equations, symmetrizer, characteristic fields, and reduction-constraint damping"
+    ],
+    "not_used_for": [
+      "claim that a generalized-harmonic UET branch is already implemented",
+      "claim that periodic ADM controls validate black-hole evolution",
+      "UET coefficient fitting",
+      "external physical validation"
+    ],
+    "local_payload": "metadata-only source record; no redistributed PDF",
+    "accessed_on": "2026-08-28"
+  },
+  "source_hashes": {
+    "docs/core/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92",
+    "docs/scripts/audit/audit_uet_curved_3p1_gh_nonlinear_vacuum.py": "e2b052a08728024f5f6ce1aed221e402f3ee8ad250f34bb23eae63d3b777c4a1",
+    "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a",
+    "docs/core/artifacts/curved_3p1_gh_principal_system_verification.json": "93c01c20d16b906a3f4653222bfe4f1648d4ab6e6dbaf7596e254f2e0f41d973"
+  },
+  "open_items": [
+    "time integration and CFL policy",
+    "full gauge/reduction constraint propagation convergence",
+    "constraint-preserving non-periodic boundaries",
+    "matter stress-energy source wiring",
+    "SI detector-observable mapping"
+  ],
+  "claim_ceiling": "complete vacuum RHS operator only; not a time-integrated solver, matter-coupled UET parent, Gravity validation, or external claim"
+}

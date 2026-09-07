@@ -1,5 +1,576 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Finite-q Spatial Compatibility (2026-09-07)
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-SPATIAL-COMPATIBILITY-20260907 | `R_n=B*(B^T*K_el*B)^-1*B^T; dT=T*(beta^T*R_n*G)*phi_r/(c_eps+T*beta^T*R_n*beta)` | docs/core/uet_thermoelastic_spatial_compatibility.py | natural: K_el E^4; beta and G E^3; R_n E^-4; c_eps E^3; T and phi_r E; eps dimensionless | standard elasticity plus conditional coupling; physical G/Z open | derived under quasistatic fixed-entropy ansatz | independent solve, full rotations, longitudinal analytic witness | zero stress is not general grating equilibrium; initial entropy and dynamics absent | derive frequency-dependent response and identify physical coefficients |
+
+See [full derivation](../../core/T13_THERMOELASTIC_SPATIAL_COMPATIBILITY.md)
+and [artifact](../../core/artifacts/t13_thermoelastic_spatial_compatibility_audit.json).
+The 0.5614 synthetic gain ratio is not a data comparison. Constant gain
+cancels in normalized TTG. No SI map or accepted UET action is promoted.
+
+## Transition-Operator Rate-Dimension No-Go (2026-09-01)
+
+The current formula has two radial measures with dimension `E^6`, cross
+section `E^-2`, state weight `E^2`, and transition vector `E^-1`. Hence
+`L=sum W_c v_c v_c^T` has dimension `E^2`, while a collision rate in
+`(L-i*omega I)^-1` must have dimension `E`.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-TRANSITION-RATE-DIMENSION-NOGO-20260901 | current `L~E^2`; required `L_rate~E` | docs/scripts/audit/audit_topic13_transition_kernel_rate_dimension_no_go.py | natural-energy powers | code formula and whole-action rescaling | dimensional no-go verified | operator trace scales as scale^2 | resolvent combines unlike dimensions; absolute mode cutoff is noncovariant | derive invariant single-particle collision measure and weighted inner product |
+
+## Charge-Resolved Invariant Scalar Galerkin Collision (2026-09-01)
+
+The repaired connected scalar lane uses `Q_ab=(beta/4) integral dPi1 dPi2
+dPhi2 |M_contact+M_Phi|^2 f1 f2(1+f3)(1+f4) DeltaF_a DeltaF_b/S_final`
+and `L_rate=G^(-1/2) Q G^(-1/2)`. Here `Q~E^3`, `G~E^2`, and
+`L_rate~E`. Charge, energy, and three-momentum close at each quadrature
+event; no posterior conservation projector is used.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-INVARIANT-SCALAR-GALERKIN-COLLISION-20260901 | `L_rate=G^(-1/2) Q G^(-1/2)` | docs/core/uet_o2_invariant_galerkin_collision_operator.py | `Q~E^3`, `G~E^2`, `L~E` | invariant phase space and production O(2)-Phi action | finite scalar lane verified | whole-action scaling, radial/angular convergence, eventwise invariants, PSD | vector/tensor basis, same-kernel width and continuum limit remain open | derive tagged/spectral width and vector heat-current basis from the same kernel |
+
+## Same-Kernel Tree Loss/Gain and Retarded Width (repaired 2026-09-02)
+
+The tagged cut is the out-scattering rate `Gamma_out`. The inverse cut gives
+`Gamma_in`, and equilibrium KMS requires
+`Gamma_R=Gamma_out-Gamma_in=Gamma_out/(1+f_q)`. Only `Gamma_R` enters the
+retarded pole map `-Im Sigma_R,q(E_p,p)=2E_p Gamma_R,q(p)`. The earlier direct
+identification of `Gamma_out` as the retarded width is superseded.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-SAME-KERNEL-TREE-TAGGED-WIDTH-20260901 | `Gamma_R=Gamma_out-Gamma_in=Gamma_out/(1+f)`; `-Im Sigma_R=2E Gamma_R` | docs/core/uet_o2_same_kernel_tagged_width.py | all widths `~E`, `Im Sigma_R~E^2` | same production contact-plus-Phi amplitude, inverse cut and KMS | loss/gain/retarded distinction verified; old out-rate spectral label superseded | independent cross-section match, KMS residual, scaling, conjugation and refinement | dressed/resonant self-consistency and nonelastic channels open | use `Gamma_R`, never `Gamma_out`, in the RA pair |
+
+## Vector Current and Landau Heat-Rank Boundary (2026-09-01)
+
+For `F_qk^i=(p^i/m)y(E)^k`, the invariant vector block is
+`L_vector=G_vector^(-1/2)Q_vectorG_vector^(-1/2)`. In the equal-mass
+elastic lane, `J_Q^i=(E-mu*q)p^i/E=P^i-mu*J_charge^i`; projecting out the
+conserved momentum gives `J_Q_perp=-mu*J_charge_perp`.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-VECTOR-CURRENT-HEAT-RANK-BOUNDARY-20260901 | `P_perp J_Q=-mu P_perp J_charge` | docs/core/uet_o2_invariant_vector_current_galerkin.py | `L_vector~E`; charge/heat response forms `E/E^3` | same invariant elastic kernel and Landau decomposition | vector lane verified; independent heat source closed as no-go | momentum null, PSD, scaling, refinement, conjugation and rank | equal-mass elastic lane has no second projected heat source | use charge lane in dressed RA ladder and add a genuine normal/response carrier before heat transport |
+
+## Same-Kernel Dressed RA Charge-Current Ladder (2026-09-02)
+
+The event collision form and the independently integrated retarded width give
+`L_vector=D_RA-K_gain`. In the momentum-deflated subspace the direct
+Bethe-Salpeter equation `(D_RA-K_gain)chi=J_charge` is equivalent to the
+kinetic Galerkin equation.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-DRESSED-RA-CHARGE-LADDER-20260902 | `L_vector=D_RA-K_gain`; `(D_RA-K_gain)chi=J_charge` | docs/core/uet_o2_dressed_ra_charge_current_ladder.py | `D_RA,K_gain,L~E`; response form `~E` | KMS retarded width and same production collision events | finite-basis charge ladder verified | independent event/width loss match, direct ladder/kinetic equality, scaling and refinement | no independent heat carrier, continuum/cutoff and physical Kubo/SI still open | harden continuum and add a genuine normal/response carrier before heat transport |
+
+## Coupled Response Heat-Carrier Route No-Go (2026-09-02)
+
+For the declared relativistic quasiparticles, `J_E=P`. Therefore
+`J_H=J_E-mu J_charge=P-mu J_charge` and Landau projection gives
+`P_perp J_H=-mu P_perp J_charge`. The neutral response trial is linearly
+independent, but its number is relaxed by conversion channels; the
+`E*p/T^2` direction is a trial basis function rather than the heat observable.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-COUPLED-RESPONSE-HEAT-CARRIER-NOGO-20260902 | `P_perp J_H=-mu P_perp J_charge`; source rank `<=1` | docs/scripts/audit/audit_topic13_coupled_response_heat_carrier_no_go.py | source rank dimensionless | relativistic current identity and coupled collision metric | current neutral-response carrier route closed as no-go | source rank, zero-mu null, neutral-count relaxation, metric refinement | no admissible second conserved diffusion charge or lattice frame | derive a momentum-relaxing lattice/open-bath branch or an independently conserved charge from an explicit action |
+
+## Lattice Momentum-Relaxing Heat Parent (2026-09-02)
+
+The standard comparator declares a lattice rest frame and splits its linearized
+collision operator into `C_N=gamma_N(I-|P><P|)` and `C_R=gamma_R I`.
+Normal collisions preserve crystal momentum. A positive resistive rate removes
+that null mode and permits a finite response
+`kappa_natural=S_T^T(C_N+C_R)^(-1)S_T`; when `gamma_R=0` and the Debye heat
+source overlaps momentum, no finite steady conductivity exists.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-LATTICE-MOMENTUM-RELAXING-HEAT-PARENT-20260902 | `(C_N+C_R)chi=S_T`; `kappa_natural=S_T^T(C_N+C_R)^(-1)S_T`; `sigma=chi^T(C_N+C_R)chi>=0` | docs/core/uet_lattice_momentum_relaxing_heat_parent.py | `T,p,gamma~E`; `S_T~E^(3/2)`; `kappa_natural~E^2` | standard Debye PBTE; `gamma_N` and `gamma_R` are synthetic controls | standard comparator parent verified; no UET correspondence claimed | momentum null, singular limit, Onsager/entropy, inverse-rate, quadrature and energy scaling | physical lattice collision kernel and UET-to-lattice map absent | derive a source-backed collision kernel and explicit UET quasiparticle/current correspondence |
+
+## Continuum-Action Direct Umklapp No-Go (2026-09-02)
+
+The current homogeneous continuum O(2)/`Phi` action and elastic collision
+events enforce `p1+p2-p3-p4=0`. Umklapp instead requires
+`p1+p2-p3-p4=G` with a nonzero reciprocal-lattice vector. Because the owning
+config and amplitude surfaces contain no lattice spacing, unit cell, Bloch
+label or reciprocal vector, the current coefficients cannot be reused as an
+Umklapp kernel without adding a declared material sector or deriving a new
+periodic background.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-CONTINUUM-ACTION-UMKLAPP-DIRECT-NOGO-20260902 | current `p1+p2-p3-p4=0`; required Umklapp `p1+p2-p3-p4=G!=0` | docs/scripts/audit/audit_topic13_continuum_action_umklapp_no_go.py | `p_i,G~E`; lattice spacing `a~E^-1` | translation symmetry and current action/config surfaces | direct current-action route closed as scoped no-go | config-field inventory, amplitude interface and eventwise four-momentum residual | explicit material lattice sector or periodic background absent | build external material-lattice interface for TTG; keep periodic/Bloch derivation separate |
+
+## Calorine Lattice-Interface Input Boundary (2026-09-02)
+
+The hash-locked 12x12x6 Calorine/Phono3py output supplies mode frequency,
+q point, weight, group velocity, heat capacity, total RTA `gamma` and
+`mode_kappa`. It does not supply a Normal/Umklapp split, collision matrix or
+collision eigenvectors. Therefore the arrays can populate a source-backed
+comparator interface, but `gamma_total` cannot be relabeled as a resistive-only
+Umklapp rate.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-CALORINE-LATTICE-INTERFACE-INPUT-BOUNDARY-20260902 | admitted `S_T[omega,v,c,w]`; prohibited `gamma_total=gamma_U`; required `C_ph=C_N+C_R` with `C_N|P>=0` | docs/scripts/audit/audit_topic13_calorine_lattice_interface_inputs.py | source mode/SI conventions; total `gamma` not promoted to SI resistive rate | hash-locked Calorine/Phono3py 12x12x6 candidate reproduction | mode inputs admitted for comparator; physical collision split blocked | binary hash/schema/range scan across 29 HDF5 and retained full-LBTE warning | no Normal/Umklapp split, collision matrix/eigenvectors, Ding mapping or source-grade uncertainty | acquire resolved rates or an admissible positive full collision operator |
+
+## Conditional UET-Material Lattice Interface (2026-09-02)
+
+The external material sector owns displacement `u_i`, strain and phonon
+distribution perturbations. UET retains `(C,Phi,Pi)`. A conditional scalar
+interface uses `Phi_E=Z_Phi DeltaPhi` and
+`L_int=-g_Phi_theta Phi_E theta`. The observable route is
+`DeltaT=(chi_u_theta g_Phi_theta Z_Phi/C_src)DeltaPhi`; no factor is fitted or
+silently identified with `Phi`.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-UET-MATERIAL-LATTICE-INTERFACE-20260902 | `L_int=-g_Phi_theta Phi_E theta`; `alpha_Phi_K=chi_u_theta*g_Phi_theta*Z_Phi/C_src`; UET/lattice exchange sources `-Q_ex/+Q_ex` | docs/core/uet_material_lattice_interface_contract.py | natural exponents: `Phi_E~E`, `g~E^3`, `theta~1`, energy density `E^4`, `Q_ex~E^5`, `alpha~E` | conditional interface constrained by current no-go and PBTE source boundary | ontology/units/ledger/identifiability closed; physical coefficients open | exact unit sums, exchange cancellation and field-rescaling invariance | physical `Z_Phi`, coupling, material response, collision split and SI uncertainty absent | derive or source-lock every factor independently before evaluating alpha |
+
+## Material-Interface Factor Resolution (2026-09-02)
+
+The implemented interaction and the required material interaction are not the
+same operator. The current action has
+`V_int=-epsilon_nc*h*delta_phi*(chi_1^2+chi_2^2)/2`, where `h~E`. The
+conditional material route needs `L_int=-g_Phi_theta*Phi_E*theta`, where
+`g_Phi_theta~E^3`. The coefficients differ by mass dimension two, and the
+operators act on different state variables. Directly relabeling `h` as
+`g_Phi_theta` is therefore closed as a scoped no-go.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-MATERIAL-INTERFACE-FACTOR-RESOLUTION-20260902 | implemented `h*delta_phi*chi^2`; required `g_Phi_theta*Phi_E*theta`; `alpha_Phi_K=chi_u_theta*g_Phi_theta*Z_Phi/C_src` | docs/core/uet_material_interface_factor_resolution.py | `h~E`, `g~E^3`, `Phi_E~E`, `theta~1`, `C_src~E^3`, `alpha~E` | current covariant action, normalization no-go, natural action bridge and conditional material interface | factor gate closed; direct coupling substitution closed as no-go; physical factors open | operator signature, unit gap, prior artifact identities, uncertainty algebra and holdout policy | physical residue, new strain operator/microscopic match, material response, accepted `C_src` and collision split missing | design a separate `Phi_E*theta` candidate through F0-F4 or source-lock a microscopic match; never reuse `h` |
+
+## Scalar Thermoelastic Response Bridge (2026-09-02)
+
+For a scalar isotropic material pilot, zero external stress and fixed entropy
+close the two linear equations
+`K_T*theta-K_T*alpha_V*DeltaT+g_Phi_theta*Phi_E=0` and
+`K_T*alpha_V*theta+(C_v^V/T)*DeltaT=0`. Their solution derives the
+material factor rather than leaving it arbitrary. The coupled static Hessian
+also requires `a_Phi*K_T-g_Phi_theta^2>0`.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-SCALAR-THERMOELASTIC-RESPONSE-BRIDGE-20260902 | `C_p^V=C_v^V+T*alpha_V^2*K_T`; `chi_u_theta=T*alpha_V*C_v^V/C_p^V`; `DeltaT=T*alpha_V*g_Phi_theta*Phi_E/C_p^V`; stability `g^2<a_Phi*K_T` | docs/core/uet_scalar_thermoelastic_response_bridge.py | `T~E`, `alpha_V~E^-1`, `K_T~E^4`, `C_v^V,C_p^V~E^3`, `g~E^3`, `Phi_E~E`, `DeltaT~E` | standard linear scalar thermoelasticity plus conditional Phi-strain interaction | conditional static map and stability bound derived; physical inputs open | unit sums, independent 2x2 solve, stress/entropy residuals, limiting cases, source-role audit | scalar/isotropic/static approximation; physical `g`, `Z`, same-state inputs, anisotropic tensor and dynamic KMS transport missing | acquire one same-material/state alpha/K/Cv package and derive or match `g`, `Z`, and `a_Phi` before numeric alpha |
+
+## Anisotropic Thermoelastic Response Bridge (2026-09-02)
+
+The scalar result extends to the symmetric normal-strain block with stiffness
+`C`, compliance `S=C^-1`, thermal expansion tensor `alpha` and coupling tensor
+`G`. Zero stress and fixed entropy give a closed block solve. For hexagonal
+graphite, the two basal axes are explicit and permutation covariant.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-ANISOTROPIC-THERMOELASTIC-RESPONSE-BRIDGE-20260902 | `C_sigma=C_epsilon+T*alpha:C:alpha`; `DeltaT=T*(alpha:G)*Phi_E/C_sigma`; hexagonal `alpha:G=2*alpha_a*g_a+alpha_c*g_c`; stability `a_Phi-G:S:G>0` | docs/core/uet_anisotropic_thermoelastic_response_bridge.py | `C~E^4`, `S~E^-4`, `alpha~E^-1`, `G~E^3`, `C_epsilon,C_sigma~E^3`, `Phi_E,DeltaT~E` | standard anisotropic thermoelasticity plus conditional Phi-strain tensor interface | tensor map, hexagonal reduction, scalar limit and Schur stability derived; physical tensor inputs open | block solve, unit sums, basal permutation, scalar reduction, source-role guards | Bosak is dynamic stiffness; TPG alpha rows are mixed-specimen; physical `G`, `Z`, same-state tensor and dynamic transport missing | acquire one same-state isothermal stiffness/alpha/Ce tensor package and derive or match `G`, `Z`, `a_Phi` |
+
+## Dressed RA Pair and Microscopic Rung Boundary (2026-09-01)
+
+In the positive-energy pole approximation,
+`integral dp0/(2pi) G_R G_A=1/(4E^2 Gamma)`. Combined with
+`Gamma_tree^i=2q p_i` and `-dn/dE=n(1+n)/T`, this gives exactly the kinetic
+weighted source squared divided by `Gamma`.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-DRESSED-RA-PAIR-RUNG-BOUNDARY-20260901 | RA pair `1/(4E^2 Gamma)`; required `sigma_channel=abs(M_contact+M_Phi)^2/(16*pi*s*S_final)` | docs/scripts/audit/audit_topic13_dressed_ra_pair_microscopic_rung_boundary.py | E,Gamma energy; cross section energy^-2 | production action; no fit | RA source match closed, legacy rung rejected | independent energy integral and channel ratios | legacy `M=lambda` omits charge normalization, final-state counting and Phi exchange | derive charge-resolved SK cuts and self-consistent width |
+
+## Retarded/Advanced Mixed Current Vertex (2026-09-01)
+
+For the latest-time current leg, the declared continuation has
+`Im z_current=+2*eta` and `Im z_in=Im z_out=-eta`, preserving energy sum.
+Thermal Bose weights are evaluated before continuation. The resulting proper
+vertex obeys `Q_mu Gamma_RA^mu=q*(D_RA^-1(P+Q)-D_RA^-1(P))`.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-RETARDED-RA-MIXED-CURRENT-20260901 | latest-time RA continuation of bare+mixed+vacuum vertex; continued Ward identity | docs/scripts/audit/audit_topic13_retarded_ra_mixed_current_vertex.py | energies, eta, Gamma in natural energy | canonical one-loop action; eta is continuation control, not fitted width | checked finite-transfer proper vertex only | Matsubara reduction, Ward, eta refinement, zero-transfer 1PI probe | response bath, dressed RA pair and microscopic rung absent | build same-action current-current RA pair and four-point ladder kernel |
+
+## Microscopic Current-to-Ladder Boundary (2026-09-01)
+
+For a canonical charged scalar on shell,
+`Gamma_tree^i=2*q*p^i` and external-leg normalization gives
+`Gamma_tree^i/(2E)=q*p^i/E`. Multiplying by `sqrt(w)` reproduces the kinetic
+source used by the finite-cutoff current correlator.
+
+This longitudinal/tree match does not identify a transverse correction. For
+any bounded scalar function `F`,
+`Gamma_F^mu=Gamma^mu+F(P,Q)*(Qz,-Q0)` has the same Ward contraction because
+`Q_mu*(Gamma_F-Gamma)^mu=0`; its addition also vanishes at `Q=0`. A retarded
+finite-k three-point spectral kernel and a same-action four-point kernel are
+therefore independent required inputs to microscopic ladder matching.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-MICROSCOPIC-CURRENT-LADDER-BOUNDARY-20260901 | `Gamma_i/(2E)=q*p_i/E`; `deltaGamma_T=F*(Qz,-Q0)` | docs/scripts/audit/audit_topic13_microscopic_current_ladder_matching_boundary.py | `Gamma,p,E,Q` natural energy; normalized velocity source dimensionless | canonical action and declared kinetic contracts; no fit | tree handoff exact; transverse non-uniqueness closed as no-go | source normalization, action-parameter bridge, Ward-preserving counterfamily | default actions differ and Ward/static evidence underdetermines retarded transverse vertex | derive same-state retarded 3-point spectral kernel and microscopic 4-point ladder kernel |
+
+## Static Confluent Charged Vertex (2026-09-01)
+
+At the thermodynamic Euclidean point `P=Q=0`, use
+
+`Gamma_static^0=-i partial_mu[m^2-mu^2+Sigma_mean+Sigma_quartic+Sigma_mix+Sigma_vac]`.
+
+The removable Landau coincidence is evaluated without root splitting:
+
+`partial_a[(n(a)-n(W))/(a-W)]=integral_0^1 t*n''(W+t*(a-W)) dt`.
+
+This gives `Gamma_bath^0=i*(-4*lambda_chi+G^2/M0^2)*partial_mu I_chi`,
+`Gamma_mix^0=i*G^2*q*partial_r B_T|r=q*mu`, and
+`Gamma_vac^0=-2*i*mu*partial_s Sigma_vac|s=mu^2`. The spatial vertex is zero
+at this point by isotropy. This thermodynamic order of limits is not the
+collisionless retarded finite-k limit.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-CHARGED-STATIC-CONFLUENT-VERTEX-20260901 | `Gamma0=-i partial_mu D_static^-1`; analytic confluent Bose derivative | docs/scripts/audit/audit_topic13_charged_static_confluent_vertex.py | `mu,T,Gamma0` natural energy | canonical action and fixed one-loop subtraction; no fit | checked static Euclidean one-loop lane | diagram-component derivatives, full inverse finite difference, symmetry and refinement | static limit does not determine real-time transverse/current transport | derive real-time finite-k transverse vertex, then collision/heat-current ladder |
+
+## Explicit Charged Current Insertion (2026-09-01)
+
+Candidate ID: uet.o2.thermal.charged_one_loop_current_vertex.
+Keep the existing Euclidean charged inverse propagator
+D_q,E^-1(R)=(R0+i*q*mu)^2+r^2+m^2. Choose response-loop momentum K.
+The two charged lines in the mixed triangle are P-K and P+Q-K:
+
+delta Gamma_mix^mu =
+G^2*T*sum_l*integral_k D_response(K) D_q(P-K) D_q(P+Q-K)
+gamma_q^mu(P-K+Q,P-K),
+
+where gamma_q^0=q*[2*(P0-K0+i*q*mu)+Q0] and
+gamma_q^z=q*[2*(p_z-k_z)+Q_z]. Contracting the numerator gives
+Q_mu*gamma_q^mu=q*[D_q^-1(P+Q-K)-D_q^-1(P-K)], hence the explicit
+triangle, not a reconstructed placeholder, satisfies
+
+Q_mu*delta Gamma_mix^mu=q*[Sigma_mix(P+Q)-Sigma_mix(P)].
+
+The vacuum triangle is evaluated independently with two Feynman parameters.
+The same zero-field kinetic subtraction as the charged propagator adds the
+local delta-Z vertex. Its contraction matches the difference of the
+renormalized vacuum self-energies.
+
+The one-loop thermal background also responds to the current source. For one
+complex O(2) field the finite-Q bath insertion is
+
+L_bath^mu=T*sum_l*integral_k D_+(K) gamma_+^mu(K+Q,K) D_+(K+Q).
+
+The action-normalized quartic tadpole supplies -4*lambda_chi*L_bath.
+Allowing the strict response mean to relax supplies
+G^2*D_response(Q)*L_bath. Thus
+
+delta Gamma_bath^mu =
+[-4*lambda_chi+G^2/(Q0^2+q^2+M0^2)]*L_bath^mu.
+
+A continuum shift gives Q_mu*L_bath^mu=0. This term is transverse and cannot
+be inferred from the longitudinal Ward equation alone. It is labeled
+response-relaxed because integrating out the response displacement at this
+order is not the same object as the proper mixed triangle of the full
+multi-field action.
+
+For bosonic P0=2*pi*nP*T and Q0=2*pi*nQ*T, the contour poles of the P-K
+charged line are -q*mu+i*P0 plus/minus E. This explains why its P=0
+denominator may be written (K0-i*q*mu)^2+E^2 while the field propagator
+itself retains plus i*q*mu. The direct Matsubara sum verifies this routing.
+The corresponding analytic continuation of the charged bubble in this
+routing is Omega=q*mu-i*nu_n, not q*mu+i*nu_n.
+
+Thermal radial integrals use the fixed half-line map
+k=s*(1+u)/(1-u), dk=2*s*du/(1-u)^2. The initial long-interval quadrature gave
+a 1.85e-6 bath refinement change, above the pre-existing 1e-6 criterion.
+The full half-line map reduces both declared correction refinements to about
+1e-14 on the same grid sequence without changing the criterion or projecting
+the result onto a transverse subspace.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-CHARGED-CURRENT-VERTEX-20260901 | explicit mixed triangle; response-relaxed bath insertion; Q.Gamma=q*(D_full^-1(P+Q)-D_full^-1(P)) | docs/scripts/audit/audit_topic13_charged_one_loop_current_vertex.py | P,Q,mu,G,Gamma natural energy; lambda dimensionless | canonical action and fixed charged two-point subtraction; no fit | checked generic nonzero Euclidean one-loop transfer only | direct Matsubara residues, Feynman-parameter vacuum Ward, bath shift/transversality | Ward-reconstructed vertex misses transverse bath term; P-K routing can be mistaken for convention reversal | static/confluent and retarded transverse limits, then collision/heat-current ladder |
+
+## Charged Mixed One-Loop Match (2026-09-01)
+
+Candidate ID: uet.o2.thermal.charged_mixed_one_loop_match.
+The action is unchanged. Let Omega=omega+q*mu, where omega is grand-canonical
+frequency, E=sqrt(p^2+m^2), W=sqrt(p^2+M0^2), S=E+W and D=E-W.
+For the positive-charge orientation write n_plus=n(E-mu),
+n_minus=n(E+mu), n0=n(W). The thermal part of the mixed bubble is
+
+B_T=[(n_plus+n0)/(S-Omega)+(n_minus+n0)/(S+Omega)
+-(n_plus-n0)/(D-Omega)+(n0-n_minus)/(D+Omega)]/(4*E*W).
+
+Charge q=-1 replaces mu by -mu. The full Matsubara witness includes an
+additional 1 in both pair numerators. With the declared legacy convention
+D_q^-1(R)=(R0+i*q*mu)^2+E^2 and response-loop routing K, the charged line is
+P-K and its complex continuation is Omega=q*mu-i*nu_n. At n=0 apparent Landau poles are removable: use
+[n(a)-n(b)]/(a-b), with exact limit -n(a)*(1+n(a))/T, not a regulator.
+Independent direct Matsubara sums verify both static and nonzero components.
+
+With I_chi=integral_p(n_plus+n_minus)/(2E), the same-order inverse propagator is
+
+Sigma_q=-G*x1+4*lambda_chi*I_chi-G^2*integral_p B_T+Sigma_vac_sub,
+x1=G*I_chi/M0^2, D_R^-1=Omega^2-m^2-Sigma_q.
+
+The factor 4*lambda_chi follows the O(2) potential lambda_chi*(chi^2)^2/4.
+At a real charged displacement r the zero-mu fluctuation mass matrix has
+diagonals (m^2+3*lambda_chi*r^2, m^2+lambda_chi*r^2, M0^2) and mixed
+entries -G*r. Differentiating its Gaussian thermal determinant reproduces
+the quartic tadpole plus static mixed bubble. At nonzero mu a separate
+Euclidean three-field determinant derivative checks the action coefficients.
+
+The vacuum subtraction uses Sigma_vac(0)=partial_s Sigma_vac(0)=0 with
+s=Omega^2, denominator Delta(z)=z*m^2+(1-z)*M0^2 and
+a=z*(1-z)*s/Delta. Sigma_vac_sub=-G^2/(16*pi^2)*integral[-log(1-a)-a].
+This fixes the charged two-point reference; it does not fix all cubic,
+quartic or current counterterms. It is compatible with the response-axis
+scheme without claiming a full coupled renormalized action.
+
+Strict charged energy is E_q=m+Sigma_q(m)/(2m), not an unlabelled square-root
+resummation. Its grand excitation is E_q-q*mu. A partial Dyson root is
+reported separately. The strict response mean is inserted once; shifted
+internal masses would add selected higher-order corrections and are not
+silently used. Static grand curvature is m^2-mu^2+Sigma_q(Omega=q*mu).
+
+For m>M0 the positive-frequency spectral supports are Omega>m+M0 (pair)
+and 0<Omega<m-M0 (Landau). With phase=G^2*p/(4*pi*Omega),
+
+- Pair: greater=phase*(1+n_chi)*(1+n0), lesser=phase*n_chi*n0.
+- Landau: greater=phase*n0*(1+n_chi), lesser=phase*n_chi*(1+n0).
+- rho=greater-lesser, Im Sigma_R=-rho/2; rho=noise*tanh((Omega-q*mu)/(2T)).
+
+Both cuts obey charged KMS. The cross-multiplied FDT is finite at grand
+frequency zero; a negative rho there on the negative-frequency side is not
+a negative transition probability. Integrating both signed cuts reconstructs
+the real thermal bubble; unequal-mass vacuum dispersion is checked separately.
+[Brandt et al.](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.74.085006)
+is primary abstract-level context for finite-temperature/chemical-potential
+cutting methods, not numerical input or an external UET validation.
+
+The zero-spatial-transfer Ward identity requires
+Gamma_q^0=q*(2*Omega-partial_Omega Sigma_q).
+An inverse-propagator derivative verifies this longitudinal requirement.
+It is not a diagram-derived full current vertex: transverse parts, spatial
+momentum dependence and collision/ladder resummation remain open.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-CHARGED-ONE-LOOP-MATCH-20260901 | Sigma_q=-G*x1+4*lambda_chi*I_chi-G^2*B_T+Sigma_vac; charged KMS | docs/scripts/audit/audit_topic13_charged_one_loop_match.py | Omega,omega,mu,T,G energy; Sigma energy^2; Gamma0 energy | canonical O(2)/response action and fixed vacuum reference, no fit | checked scoped one-loop numerical approximation | three-field determinant, mixed Matsubara, pair/Landau dispersion | missing Landau term or using Omega instead of Omega-q*mu in KMS | finite-temperature vertices and collision-resummed current matching |
+
+## Response-Axis Renormalization and Real-Time Match (2026-09-01)
+
+Candidate ID: uet.o2.thermal.response_axis_one_loop_match.
+Use canonical displacement x and the same action as the preceding thermal
+background: m_chi^2=m0^2-G*x and M_r^2=M0^2+3*lambda_r*x^2.
+The vacuum determinant is sum_i d_i m_i^4[log(m_i^2/Q^2)-3/2]/(64*pi^2),
+with charged degeneracy 2 and response degeneracy 1. Subtract its Taylor
+polynomial in x through degree four at x=0. Thus the vacuum correction and
+its first four field derivatives vanish at the reference point. Linear and
+cubic counterterms are allowed because G*x*chi^2 already breaks x reflection.
+This fixes only the response axis, not every charged/full-action counterterm.
+
+For r=delta(m^2)/m_ref^2, the charged subtraction removes through r^4 and
+the response subtraction through r^2 (since its r is proportional to x^2).
+The surviving logarithmic remainder is independent of Q in this axis scheme.
+High-precision direct Coleman-Weinberg subtraction checks both derivatives
+and multiplicities; a convergent series avoids subtractive cancellation.
+
+Define Sigma_R as the retarded self-energy. The implementation uses the
+conventional alias Pi_R; it is NOT the core state Pi=partial_t Phi.
+D_R^-1=(omega+i0)^2-M0^2-Sigma_R at k=0, with s=omega^2.
+Fix Sigma_vac(0)=partial_s Sigma_vac(0)=0. Then
+
+- Sigma_vac(s)=-G^2/(16*pi^2) integral_0^1[-log(1-z(1-z)s/m^2)-z(1-z)s/m^2] dz.
+- Sigma_T(s)=6*lambda_r*I_r-G^2 integral_p(n_plus+n_minus)/(E*(4E^2-s)).
+- M_pole^2(strict)=M0^2+Sigma_R(M0^2).
+- M_dynamic0^2-M_static^2=G^2 integral_p[n_plus(1+n_plus)+n_minus(1+n_minus)]/(4*T*E^2).
+
+Here integral_p means d^3p/(2*pi)^3 and I_r=integral_p n_r/(2E_r).
+The zero Matsubara component includes the last occupation term; nonzero
+components analytically continue to the collisionless pair response.
+Independent complex Matsubara sums and vacuum/thermal dispersion integrals
+check this distinction. It is an order-of-limits result, not a failure of KMS
+or a statement about the exact collision-resummed hydrodynamic response.
+[Evans](https://arxiv.org/abs/hep-ph/9307335) provides context for thermal
+zero-momentum limit dependence; [Quiros](https://arxiv.org/abs/hep-ph/9901312)
+provides effective-potential/renormalization context. Neither supplies UET
+numeric data or validates the material interpretation.
+
+At omega>2m, let phase=G^2*sqrt(1-4m^2/omega^2)/(8*pi).
+The same cubic interaction gives greater=phase*(1+n_plus)*(1+n_minus),
+lesser=phase*n_plus*n_minus and rho=greater-lesser.
+Im Sigma_R=-rho/2 and noise=greater+lesser=coth(omega/(2T))*rho.
+The charged chemical potentials cancel in log(greater/lesser)=omega/T.
+Below threshold support is exactly zero; the KMS ratio is undefined, not 0/0.
+The positive logarithmic lesser weight is retained when its floating-point
+value underflows. No noise amplitude or width is fitted.
+
+Loop counting is explicit: the strict mean shift x1=-Omega1_prime(0)/M0^2
+is first order. The response tree mass shift proportional to x1^2 is second
+order, and a bubble built from the induced response cubic squared is third
+order. Neither belongs in the strict first-loop zero-field response kernel.
+Minimizing a one-loop functional or solving a Dyson root repeatedly reuses
+selected higher-order terms, not a complete higher-loop calculation.
+Charged-sector matching, leading collision widths and current/vertex
+resummation remain required before a transport handoff.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-RESPONSE-ONE-LOOP-MATCH-20260901 | vacuum Taylor subtraction; Sigma_R; static occupation gap; pair-cut KMS | docs/scripts/audit/audit_topic13_response_one_loop_match.py | x,T,mu,G energy; Sigma_R,s energy^2; Omega energy^4; lambda dimensionless | declared canonical action and fixed zero-field reference, no fit | checked scoped one-loop numerical approximation | independent vacuum derivatives, Matsubara and spectral dispersion | static curvature relabelled pole; partial resummation relabelled full transport | charged-sector and collision-resummed current matching |
+
+## Normal Thermal Response Stationarity (2026-09-01)
+
+Candidate ID: uet.o2.thermal.normal_response_stationarity. This extends the
+normal-background question, not the existing fixed-Phi Hartree calculation.
+Let x=sqrt(epsilon*K)*Delta_Phi_natural, m_chi^2(x)=m0^2-G*x and
+M_response^2(x)=M0^2+3*lambda_response*x^2. At chi=0 the two charged and one
+neutral thermal determinants add to V_tree(x). The field-dependent vacuum
+determinant and counterterms are omitted explicitly; this is not a complete
+renormalization prescription. Matter quartic effects enter interacting
+self-energies/higher loops and are not supplied by this Gaussian determinant.
+
+For I_i=integral f_i/(2E_i) and J_i=partial I_i/partial m_i^2,
+Omega_x=M0^2*x+lambda_response*x^3-G*I_chi+6*lambda_response*x*I_response.
+Solving Omega_x=0 with positive Omega_xx gives a local stationary response
+inside the strict normal-mode gap. No global or condensed-phase minimum is
+claimed. The stationary pressure obeys the envelope relation, with
+chi_stationary=chi_fixed+Omega_xmu^2/Omega_xx. The small-displacement estimate
+is x_star approximately G*I_chi(0)/(M0^2+6*lambda_response*I_response(0)+G^2*J_chi(0)).
+
+The shifted tree response vertex is H_cubic=6*lambda_response*x_star.
+Consequently mixed scattering contains
+M=G^2*(1/(s-m_chi^2)+1/(u-m_chi^2))-G*H_cubic/(t-M_response^2).
+The last term is absent in a mass-only update. Shifted-tree sensitivity is not
+a full thermal loop amplitude: other terms at the same perturbative order
+must be matched. The static Hessian Omega_xx is not a pole-mass prescription.
+
+[Floerchinger's thermal determinant and stationary-pressure derivation](https://www.tpi.uni-jena.de/~floerchinger/qft2/lecture22/)
+provides method context only, not numerical coefficients or evidence for UET.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-NORMAL-THERMAL-BACKGROUND-20260901 | Omega_x=0; p=-Omega(x_star); H_cubic=6*lambda_response*x_star | docs/scripts/audit/audit_topic13_normal_thermal_background.py | x,T,mu,H_cubic natural energy; Omega energy^4; force energy^3; curvature energy^2 | declared tree action plus thermal Bose determinant, no fit | checked local numerical approximation; full renormalized matching open | diagnostic-only stationary response and shifted-vertex handoff | mass-only update drops exchange term; static Hessian mistaken for pole mass | consistent thermal background, propagator, vertices and current matching |
+
+## Coupled Bose Collision Form (2026-09-01)
+
+Candidate registry ID: uet.o2.thermal.normal_coupled_gain_loss. The named
+normal-state diagnostic adds response-mode quartic self-scattering, mixed
+matter/response scattering and charge-pair conversion to the preceding elastic
+action calculation. The response label is a kinetic-lane assumption, not a
+physical-particle interpretation of Phi. C is not charge or population count.
+
+For dimensionless population affinity psi, delta f=f*(1+f)*psi,
+F=f1*f2*(1+f3)*(1+f4), R=f3*f4*(1+f1)*(1+f2), and
+delta(F-R)=F_eq*(psi1+psi2-psi3-psi4). The scalar collision form is
+the invariant four-leg phase-space integral of
+abs(M)^2*F_eq*Delta_psi_a*Delta_psi_b/(S_in*S_out*S_reverse).
+The vector form additionally uses the isotropic component average 1/3.
+Each identical pair gives a factor 2; S_reverse=2 for an elastic species
+multiset, otherwise 1 for a conversion orientation listed once. Full ordered
+species enumeration with prefactor 1/8 independently reproduces these weights.
+
+The projected-current response is S_perp^T*L_active^-1*S_perp. L has natural
+energy dimension 4, the susceptibility has dimension 3, its generalized rates
+dimension 1, and this response dimension 2. It is not SI conductivity.
+Nested trial bases use the same collision nodes, so their variational response
+is compared without a simultaneous quadrature change. The smallest basis omits
+neutral*p/T, a relative sector-momentum direction whose relaxation form scales
+as G^4. At G=0 this is an additional conserved momentum and the current inverse
+is rejected rather than given an artificial regulator. At mu=0 the charge
+source has no overlap with this charge-even slow mode.
+
+The entropy witness checks (F-R)*log(F/R)>=0 for reversible Bose events; it is
+not a complete interacting SK/KMS construction or a spacetime entropy current.
+The thermal background is not self-consistently renormalized and number-changing
+higher-order channels are missing. The derivation-to-transport distinction is
+consistent with [Jeon's linearized Boltzmann framework](https://arxiv.org/abs/hep-ph/9409250);
+the paper supplies method context, not these action coefficients or numerical inputs.
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-NORMAL-GAINLOSS-20260901 | L_ab=integral abs(M)^2 F_eq Delta_psi_a Delta_psi_b / reaction_factors | docs/scripts/audit/audit_topic13_coupled_gain_loss_operator.py | q=species label, not C; psi dimensionless; L energy^4; response energy^2 | declared synthetic action, invariant phase space; no fit | checked local tree-level and finite-basis approximation; physical mapping open | diagnostic-only candidate addendum | missing relative-momentum trial direction; extra truncation invariants; incomplete thermal background | independent basis/completeness and physical current/entropy matching |
+
+## Named Elastic Contact/Phi Exchange (2026-09-01)
+
+Candidate ID: uet.o2.thermal.normal_tree_elastic_scattering, stored in a
+diagnostic-only registry addendum. For chi=0 and Phi=Phi_equilibrium in flat
+space, canonical normalization gives phi_c=sqrt(epsilon*K)*deltaPhi,
+G=sqrt(epsilon)*h/(Z*sqrt(K)), lambda_c=lambda/Z^2 and M_Phi^2=U''/K.
+The contact tensor and s/t/u response exchange are contracted with charge
+polarizations before taking the squared amplitude. The relative sign agrees
+with eliminating the massive response at low energy; interference is retained.
+
+The full-solid-angle cross section uses
+d_sigma/d_Omega=|M|^2/(64*pi^2*s*S_final).
+S_final is 2 for identical outgoing charges, otherwise 1. Each unlike final
+ordering is represented once. The tagged incoming particle introduces no
+incoming pair-counting factor. Contact-only ratios to the old unit-channel
+convention are therefore 8 and 16 for like and unlike charges, not one global
+multiplier. Full gain/loss operator and physical transport remain open.
+
+Phase-space and scalar-exchange conventions were checked against
+[Tong, Interacting Fields, sections 3.5 and 3.6.3](https://www.damtp.cam.ac.uk/user/tong/qft/qfthtml/S3.html).
+This is method context, not numeric calibration or evidence of UET validity.
+
+## Kinetic Normalization and Action-Tensor Boundary (2026-08-31)
+
+The normal kinetic setup now uses m_c^2=m_eff^2/Z,
+lambda_c=lambda_action/Z^2 and signed mu. Occupations are
+n_s=[exp((sqrt(k^2+m_c^2)-s*mu)/T)-1]^-1 with fixed species order (-1,+1).
+Changing mu to -mu swaps these species rather than silently replacing mu by
+its magnitude. The existing unit-channel comparator cross section remains
+lambda_c^2/(16*pi*s); its overall action/channel convention is not repaired
+by changing the input scale.
+
+Independent fourth differences of the production matter_potential, at three
+field normalizations and three step sizes, give
+V_abcd=2*lambda_c*(delta_ab*delta_cd+delta_ac*delta_bd+delta_ad*delta_bc).
+The legacy _tree_vertex_tensor(lambda_c) instead has coefficient lambda_c.
+Contracting the action derivative with unit charge polarizations
+e_plus,e_plus,e_minus,e_minus gives magnitude 4*lambda_c. The unit-channel
+comparator amplitude lambda_c must not be equated to this derivative.
+
+This is a local quartic/contact normalization finding, not a completed
+scattering cross section, symmetry-factor prescription, exchange-channel sum,
+or retarded Kubo result. Preserve previous comparator outputs as such; audit
+the channel-resolved action mapping rather than globally multiplying rates.
+See t13_kinetic_canonical_action_match_audit.json: canonical covariance passes,
+but legacy action matching is BLOCKED and Full Topic 13 remains open.
+
+## Fixed-Phi Implementation Correction (2026-08-31)
+
+This corrects implementations of the existing fixed-background quadratic
+action, not a new core equation. With q=Z*mu^2-m_eff^2>0, a=q/Z and
+B=2*mu^2+a, the roots obey
+(E^2-k^2)*(E^2-k^2-2*a)-4*mu^2*E^2=0.
+Evaluate E_plus^2=k^2+B+sqrt(B^2+4*mu^2*k^2) and the rationalized
+E_minus^2=k^2*(k^2+2*a)/E_plus^2 without clipping.
+The normal energies are sqrt(k^2+m_eff^2/Z) +/- mu.
+
+Canonical chi_c=sqrt(Z)*chi changes m_c^2=m_eff^2/Z and
+lambda_c=lambda/Z^2, not chemical potential or time. Pressure and static
+momentum response must be invariant under this field redefinition. For the
+ideal relativistic normal branch only, integration by parts gives
+chi_perp=epsilon+p; this is not a full condensed two-fluid identity.
+
+The regression and independent repair audit verify these relations for the
+declared synthetic grid. At Z=m_eff^2=lambda=1 and mu^2=3, the old gap squared
+20 and sound squared 0.4 become 16 and 0.25. Phi is held fixed; this is not
+the live-Phi three-mode spectrum. The repair artifact preserves the old git
+identity and marks downstream review. It supplies no SI or full-core unlock.
+The older bounded Core-ready composition below must not be read as full
+thermal-bridge completion.
+
+## T13 Core-Ready Composition (2026-08-28)
+
+MAJOR_RESULT_CLOSURE: `T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY` is `CLOSED_FOR_CORE` with final acceptance `13/13`.
+EQUATION_OR_MAPPING: `Delta_Tq=alpha_Phi_K*Delta_Phi_norm`; `Delta_Phi_norm=Z_Phi*Delta_Phi_natural`; `T_K=theta_T*T_natural`; `f_SI=e0*f_natural`; `beta_T13=beta_natural/Z_Phi^2`; `beta_SI=e0*beta_T13`; `eta=-lim_(omega->0+) Im G_R^(xy,xy)/omega`; `nabla_mu J_S^mu` contains `2 eta sigma_mu_nu sigma^mu_nu/T >= 0`.
+UNITS: `alpha_Phi_K` is K per normalized base Phi; `Z_Phi` is normalized base Phi per natural action Phi; `e0` is J m^-3; `beta_SI` is J m^-3 per normalized Phi squared; `eta` is Pa s.
+DERIVATION_CLASS: Natural bridge and beta origin are action-derived; `alpha`, `Z_Phi`, `theta_T`, and `e0` are lane-specific external calibration/scale inputs; `eta` is a source-locked external transport input; Landauer is an imported constraint only.
+VERIFICATION: `alpha_Phi_K=-1.02237987858849 +/- 0.056753979576408715`; `Z_Phi=-0.017488421860832278`; `e0=512994.17164886114 J m^-3`; `beta_T13=-0.007936042649802305 +/- 0.0008831273413443808`; `beta_SI=-4071.143625305366 +/- 453.5201739147111 J m^-3` per normalized Phi squared; `eta=(1.29e-6 +/- 5e-8) Pa s`.
+CLAIM_BOUNDARY: These are bounded O(2)/He-4 Core mappings, not universal identities for `Phi`, not graphite TTG external validation, and not global UET closure. `R_gen` remains absent from the state vector and has no backreaction.
+
 ## T13-094 - Condensed Dissipative Transport Identifiability Boundary
 
 MAJOR_RESULT_CLOSURE: CLOSED_AS_NO_GO for T13_UET_O2_CONDENSED_DISSIPATIVE_TRANSPORT_IDENTIFIABILITY_NO_GO; Full Topic 13 remains PARTIAL.
@@ -1229,3 +1800,272 @@ NEXT_ACTION: Obtain a permissioned raw numeric table or numeric measurement unce
 CLAIM_BOUNDARY: This is a provenance and acquisition boundary, not a closed
 Berut numeric row, uncertainty result, `alpha_Phi_K`, UET bridge, or external
 validation.
+
+## T13-145 - Semantic alpha-calibration admission gate
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for the calibration-admission contract; the numeric alpha_Phi_K result remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: Candidate eligibility is evaluated from substantive values within one paired record rather than from field-name presence across an arbitrary JSON tree. The gate requires source identity and locator, matched material/state/geometry, finite base-Phi and SI response amplitudes, units, numeric uncertainty, preprocessing, row identity, a valid source hash, and an independence statement.
+
+WHAT_REMAINS_OPEN: All 11 current candidate packages remain ineligible. No independent paired base-Phi/SI record, numeric alpha_Phi_K, or base-Phi to Phi_E scale was produced.
+
+DEPENDENCY_UNLOCKED: Calibration-admission contract only; no alpha, dimensional map, Full Topic 13, Core, Gravity, or transport dependency is unlocked.
+
+STATUS: PASS_SCOPED_NO_ELIGIBLE_PAIRED_ALPHA_RECORD; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.
+
+WHAT_CHANGED: The candidate audit now validates semantic paired records and keeps key-presence diagnostics separate. The full gate, closure register, and dependency projection consume the regenerated candidate artifact.
+
+EQUATION_OR_MAPPING: y_TTG^UET = Delta_Phi(t) / Delta_Phi(0); Delta_Tq = alpha_Phi_K * Delta_Phi; no coefficient is emitted from normalized data, Landauer, or a comparator package.
+
+VERIFICATION: Candidate count is 11 and eligible count is 0; numeric_alpha_Phi_K_emitted=false, holdout_accessed=false, and target_fit_performed=false. The focused regression passed with 10 tests.
+
+CONTROLLING_BLOCKER: independent_paired_base_Phi_amplitude_and_SI_observable_record_missing.
+
+NEXT_ACTION: Obtain a permitted paired base-Phi/SI record or derive a coefficient-provenance-backed dimensional map without reading Xie 2026, then rerun the semantic admission gate before any calibration or prediction.
+
+CLAIM_BOUNDARY: This closes the admission and provenance boundary only. It is not a numeric calibration, temperature prediction, external validation, or Full Topic 13 closure.
+## T13-147 - Joint thermal-bridge scale-dependency no-go
+
+MAJOR_RESULT_CLOSURE: `CLOSED_AS_NO_GO` for the current normalized/action scale question; the thermal dimensional bridge remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: Field rescaling of the declared scalar action leaves the action terms and normalized Phi coordinate invariant when the scalar coefficients and field scale transform together. A joint field/energy-density scale family leaves normalized TTG shape unchanged but changes the absolute Kelvin response and the normalized beta correspondence.
+
+WHAT_REMAINS_OPEN: Independent field-energy-temperature scale provenance, paired base-Phi/SI observable evidence, physical beta source provenance, and the base-Phi-to-Delta_u_ph mapping remain missing.
+
+DEPENDENCY_UNLOCKED: None. The result closes a structural identifiability question and does not satisfy the alpha, dimensional observable, EOS, transport, KMS, entropy, or source gates.
+
+STATUS: `PASS_SCOPED_THERMAL_BRIDGE_SCALE_DEPENDENCY_NO_GO`.
+
+WHAT_CHANGED: Added a deterministic field/action and joint-scale witness plus a machine-readable major-result artifact. The full gate places this lane under `dimensional_observable_map`.
+
+EQUATION_OR_MAPPING: `y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)`; `Delta_Tq = alpha_Phi_K * Delta_Phi`; `alpha_Phi_K' = alpha_Phi_K / s_phi`; `beta_T13 = (Phi_scale^2 / e0_scale) beta_Phi^nat`; `Delta_Tq = (e0 / c_v) r_Phi Delta_Phi`.
+
+VERIFICATION: `t13_thermal_bridge_scale_dependency_no_go.json` passed all structural checks; no numeric alpha_Phi_K/e0, target, fit, Landauer inference, threshold tuning, or Xie 2026 access was used. Full gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE` / `PARTIAL` with 10 blockers.
+
+CONTROLLING_BLOCKER: `independent_field_energy_and_temperature_scale_map_missing`.
+
+NEXT_ACTION: Seek a permitted source-locked field residue or independent paired Phi/SI observable anchor, then rerun dimensional and alpha admission without using normalized target residuals.
+
+CLAIM_BOUNDARY: Scoped structural no-go only; no physical coefficient, Kelvin prediction, external validation, or Core closure is claimed.
+
+## T13-148 - AIST source-route boundary
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE`; no formula or SI coefficient was promoted.
+WHAT_IS_ACTUALLY_CLOSED: The AIST TPDS route is catalogued as a possible thermophysical source surface, but its displayed terms do not permit embedding the numeric contents in the public repository. The local artifact stores metadata only and marks the route as non-calibration.
+WHAT_REMAINS_OPEN: Numeric `c_v`, density/uncertainty, material-state mapping, Ding `C_src`, and independent `alpha_Phi_K` remain open.
+DEPENDENCY_UNLOCKED: None beyond source-route classification.
+STATUS: `PASS_SCOPED_AIST_GRAPHITE_SOURCE_ROUTE_BOUNDARY`; full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_CHANGED: Added a source-route audit and gate lane with explicit no-payload and no-redistribution fields.
+EQUATION_OR_MAPPING: Candidate relation `c_v^V(T, material) = rho(T, material) * c_v(T, material)` is recorded with `c_v` in `J kg^-1 K^-1`, `rho` in `kg m^-3`, and `c_v^V` in `J m^-3 K^-1`; it is not evaluated numerically. The UET bridge remains `y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)` and `Delta_Tq = alpha_Phi_K * Delta_Phi`, with alpha uninstantiated.
+VERIFICATION: AIST metadata boundary artifact and focused regression passed; no material detail, numeric payload, fit, calibration, or holdout was accessed.
+CONTROLLING_BLOCKER: `aist_numeric_payload_not_publicly_redistributable` for this route; global full-bridge blockers are unchanged.
+NEXT_ACTION: Seek a permitted redistributable numeric source or a separately controlled private source package; do not relabel AIST metadata as c_v evidence.
+CLAIM_BOUNDARY: Source-provenance boundary only; no numeric thermodynamic correction, calibration, prediction, or external validation.
+## T13-149 - NIST SRM 3600 heat-capacity comparator boundary
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE`; this is a source/material/uncertainty boundary, not physical Topic 13 closure.
+WHAT_IS_ACTUALLY_CLOSED: The official NIST SRM 3600 PDF identity, hash, page locators, 20-295 K comparison range, and source-reported approximately +/-2 percent 90 percent-confidence uncertainty boundary are recorded. The paper's glassy-carbon and graphite-powder material identity is kept separate from Ding HOPG PBTE `C_src`.
+WHAT_REMAINS_OPEN: Figure 3 supplies no machine-readable rows in the archived paper; row-level standard uncertainty, same-state Ding mapping, volumetric `c_v`, `C_src`, `alpha_Phi_K`, SI map, and physical transport remain open.
+DEPENDENCY_UNLOCKED: Comparator lane only; no calibration or downstream dependency unlock.
+STATUS: `PASS_SCOPED_NIST_SRM_3600_HEAT_CAPACITY_COMPARATOR_BOUNDARY`.
+WHAT_CHANGED: Added a source-boundary artifact and verifier, connected it to the canonical full gate, and preserved the raw PDF as local-only ignored source material.
+EQUATION_OR_MAPPING: `c_v^V = rho c_v^m` is a declared standard-physics conversion contract only; no numeric row or UET mapping is emitted.
+VERIFICATION: Hash/source-boundary verifier and synchronized focused regression passed; `numeric_rows_emitted=0`, `figure_only_payload=true`, `material_match_to_Ding_TTG=false`, `holdout_accessed=false`.
+CONTROLLING_BLOCKER: `figure_only_numeric_payload_and_Ding_material_mapping_missing`.
+NEXT_ACTION: Seek a permitted same-state numeric source or separately controlled Ding-compatible PBTE package with uncertainty and convergence; do not use Figure 3 or its approximate uncertainty as `C_src` or alpha calibration.
+CLAIM_BOUNDARY: Source-traceable comparator boundary only; not a formula derivation, SI calibration, temperature prediction, external validation, or Full Topic 13 closure.
+## T13-150 - Perez-Castaneda HOPG specific-heat source boundary
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for a source-traceable HOPG specific-heat comparator boundary; not CLOSED_FOR_CORE.
+
+WHAT_IS_ACTUALLY_CLOSED: The author-posted paper is hash-locked with DOI/arXiv and page-level locators. The HOPG specimen identity, natural-graphite comparison identity, temperature range, and below-3-percent method-comparison statement are recorded. The published numeric route is figure-only and cannot be promoted to row-level evidence.
+
+WHAT_REMAINS_OPEN: Machine-readable rows, row-level uncertainty, fixed-volume c_v, Ding material/state and PBTE-response mapping, Ding C_src, independent alpha_Phi_K, dimensional Phi mapping, and full EOS/transport/KMS/entropy closure remain open.
+
+DEPENDENCY_UNLOCKED: HOPG source-boundary lane only; no c_v, C_src, alpha, Full Topic 13, Core, Gravity, constitutive transport, or Galaxy dependency is unlocked.
+
+STATUS: PASS_SCOPED_HOPG_SPECIFIC_HEAT_SOURCE_BOUNDARY; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.
+
+WHAT_CHANGED: Added the hash-locked author-posted PDF source boundary, verifier, focused test, full-gate source-package projection, closure-register/dependency synchronization, and this formula-audit entry. No figure digitization, synthetic replacement, fit, threshold change, Landauer inference, or Xie 2026 access occurred.
+
+EQUATION_OR_MAPPING: Candidate standard-physics relation is c_p^m(T, material) with candidate volumetric map c_v^V(T, material) = rho(T, material) * c_p^m(T, material) - Cp-to-Cv correction. No numeric rows or correction are emitted. The UET measurement contract remains y_TTG = Delta_Tq(t) / Delta_Tq(0), y_TTG^UET = Delta_Phi(t) / Delta_Phi(0), and Delta_Tq = alpha_Phi_K * Delta_Phi; alpha remains uninstantiated.
+
+VERIFICATION: Raw PDF SHA-256 is f5056e3804275336deca634da84a47fec1e91876ff65ab62a84596a5ad3ebd4a, size 1141942 bytes, 21 pages; numeric_rows_emitted=0; figure_only_payload=true; method_comparison_relative_bound=0.03; row_level_standard_uncertainty_present=false; Ding match=false; focused source/gate/register/dependency regression passed 13 tests. Full gate remains 10 blockers, claim promotion=false, and Xie 2026 remains unconsumed.
+
+CONTROLLING_BLOCKER: figure_only_numeric_payload_and_Ding_PBTE_response_mapping_missing for this lane; the global primary blocker remains the missing independent dimensional/alpha anchor together with the other full-bridge blockers.
+
+NEXT_ACTION: Acquire a permitted machine-readable same-state heat-capacity or Ding PBTE C_src package with row locators, units, row-level uncertainty, preprocessing, convergence, material identity, and hash; do not digitize Figures 6-8 into calibration without a declared digitization and uncertainty contract.
+
+CLAIM_BOUNDARY: Comparator source boundary only; not numeric C_src, not alpha calibration, not a temperature prediction, not external validation, and not Full Topic 13 closure.
+
+EVIDENCE_PATHS: docs/core/artifacts/t13_perez_castaneda_hopg_source_boundary_audit.json; docs/scripts/audit/audit_topic13_perez_castaneda_hopg_boundary.py; docs/core/test/test_topic13_perez_castaneda_hopg_boundary.py; docs/scripts/audit/audit_topic13_full_bridge_gate.py; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json; docs/core/artifacts/uet_major_result_closure_register.json; docs/core/artifacts/uet_major_result_dependency_unlock_gate.json.
+
+EVIDENCE_HASHES: artifact a7116b76ede94cd71f70d61c488795159ca4cf9e9f9922b9960f9f1166640fdf; verifier 3adcfe4166b7f0729a43daa8d34b8644cc401040c470f8245304049d9842069c; regression a9ccf1c613494af41dc59d0720045f5124141fee424fbbdce8e8dc8c4832ab01; full gate fe00b27f371e78ef4f337ffd5a66e8c6e54bf5fdcc8ef19826cfd44e37f2143c; register a5a2c43cd059db34edc18b85866a7eb9e387bc47ccd4a4234989be69a0d01816; dependency d76237a766620684b46cb7fce270cfe553f6ed81c0ba8715ea542bd84c87a7fe.
+## T13-151 - Calorine full-LBTE numerical stability boundary
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE`; this is an external full-LBTE numerical boundary, not a UET transport derivation.
+WHAT_IS_ACTUALLY_CLOSED: The source-locked force-constant identity, natural-isotope control, full-LBTE solver-method comparison, collision-spectrum sign diagnostic, and adjacent mesh response record are reproducible from the archived local payload hashes.
+WHAT_REMAINS_OPEN: `kappa` is not accepted as a UET coefficient. The collision matrix is not positive semidefinite at the high mesh, method-1 response is not converged, and material/state equivalence, source uncertainty, `alpha_Phi_K`, SI `Phi` mapping, Kubo, EOS, KMS, and entropy closure are absent.
+DEPENDENCY_UNLOCKED: None beyond the numerical-boundary lane.
+STATUS: `WARN_FULL_LBTE_NUMERICAL_STABILITY_OPEN`.
+WHAT_CHANGED: Added formula and solver semantics for `pinv_method=0/1` and kept the source mapping separate from UET variables.
+EQUATION_OR_MAPPING: `C_src(T) = [sum_q w_q sum_mu c_qmu(T)] / [sum_q w_q V_primitive]`; `Delta_Tq = Delta_u_ph/C_src(T)`; `kappa` is a candidate heat-current response. `C_src` is not UET `C`; `Phi` and `R_gen` are not relabeled.
+VERIFICATION: `pinv_method=0` yields negative in-plane `kappa` at 300 K; method `1` ignores negative eigenvalues but the latest mesh change is `0.129379135193`. No fit, calibration, or Xie 2026 holdout access occurred.
+CONTROLLING_BLOCKER: `full_lbte_collision_spectrum_positive_semidefinite_missing` and `full_lbte_mesh_convergence_missing`.
+NEXT_ACTION: Supply a declared, source-supported collision/transport stability and uncertainty contract before any physical transport comparison.
+CLAIM_BOUNDARY: Numerical boundary only; no UET dimensional map, `alpha_Phi_K`, TTG prediction, external validation, or Full Topic 13 closure.
+EVIDENCE: `docs/core/artifacts/t13_calorine_full_lbte_stability_boundary_audit.json` (SHA-256 `8b5de32a8c33b0a646c8e26faf263585d98bcb939df8adb78b1b16f9d832859d`).
+
+## T13-152 - QH-15 Graphite Comparator Boundary
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for `T13_QH15_GRAPHITE_CV_COMPARATOR_BOUNDARY`; Full Topic 13 remains `PARTIAL`.
+WHAT_IS_ACTUALLY_CLOSED: QH-15 source identity, selected raw-entry hashes, `SpecificC` column units, the `1.0e9` SI conversion, separate isopure control, and non-fitting 200/300 K comparison with the Calorine candidate.
+WHAT_REMAINS_OPEN: Ding mode-resolved `C_src`, response-contract/material mapping, source-grade uncertainty, independent `alpha_Phi_K`, and full thermodynamic closure.
+DEPENDENCY_UNLOCKED: Comparator lane only; no Core, Gravity, transport, Galaxy, or external claim is unlocked.
+STATUS: `PASS_SCOPED_QH15_CV_COMPARATOR_BOUNDARY`.
+WHAT_CHANGED: Added a source package and verifier that keep macroscopic QH-15 `SpecificC` separate from Ding `C_src` and from the UET `Phi` map.
+EQUATION_OR_MAPPING: `C_v^QH15 = SpecificC * 1.0e9 J m^-3 K^-1`; `r_T = (C_v^QH15-C_src^Calorine)/C_src^Calorine`.
+VERIFICATION: Source hashes, row schema, unit witness, selected rows, cross-check rows, no-fit policy, no-alpha policy, and Xie holdout non-access pass. The cross-checks are `-0.682889%` at 200 K and `+0.014257%` at 300 K.
+CONTROLLING_BLOCKER: `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing`.
+NEXT_ACTION: Obtain an authorized Ding numeric package or accepted same-regime PBTE reproduction with source-grade uncertainty; do not use QH-15 to calibrate Phi.
+CLAIM_BOUNDARY: Comparator evidence only; not Ding `C_src`, not alpha calibration, not temperature prediction, not external validation, and not Full Topic 13 closure.
+EVIDENCE: `docs/core/artifacts/t13_qh15_graphite_transport_boundary_audit.json`.
+
+## T13-153 - Covariant matter-coupling normalization identifiability
+
+MAJOR_RESULT_CLOSURE: `CLOSED_AS_NO_GO` for the declared natural-unit response-matter coupling chart; Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_IS_ACTUALLY_CLOSED: The implemented reciprocal interaction `V_int = -epsilon_nc * response_coupling * delta_phi * (chi_1^2 + chi_2^2) / 2` is invariant under `delta_phi_prime=s delta_phi` and `response_coupling_prime=response_coupling/s`. The response force transforms covariantly, the matter force remains invariant in the fixed matter chart, and the normalized coordinate remains unchanged after `Phi_scale_prime=s Phi_scale`.
+WHAT_REMAINS_OPEN: A source-locked physical field residue or interaction coefficient, a system-specific SI energy-density contract, the base-Phi-to-Phi_E map, independent `alpha_Phi_K`, and the matter-amplitude-to-density `C` reduction remain open.
+DEPENDENCY_UNLOCKED: None. This is an action-coupling identifiability no-go only; it does not unlock the SI thermal bridge, Core curved 3+1, Gravity, transport, or external validation.
+STATUS: `PASS_SCOPED_NO_GO_COVARIANT_MATTER_COUPLING_NORMALIZATION`; full gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE`; claim promotion remains false.
+WHAT_CHANGED: Added a structural action-coupling witness, machine-readable artifact, focused tests, and gate/register/dependency linkage. No target data, fit, Landauer inference, or Xie 2026 holdout access was used.
+EQUATION_OR_MAPPING: `[delta_phi]=[chi_A]=1`, `[epsilon_nc]=0`, `[response_coupling]=1`, `[V_int]=4` in natural units; `response_coupling_prime=response_coupling/s`; raw `alpha_base_prime=alpha_base/s` preserves a raw-field product, while normalized `Phi` requires an external `Phi_scale` contract.
+VERIFICATION: The action, reciprocal derivatives, natural-unit dimension declaration, prior field-normalization no-go, and deterministic rescaling witness all pass. `numeric_e0_emitted=false`, `numeric_alpha_Phi_K_emitted=false`, `target_data_used=false`, `xie_2026_accessed=false`, and `landauer_used_for_derivation=false`.
+CONTROLLING_BLOCKER: `physical_field_normalization_and_interaction_coefficient_provenance_missing`; the full Topic 13 controller remains the missing independent dimensional/alpha anchor together with Ding/source and EOS/transport/KMS/entropy blockers.
+NEXT_ACTION: Source-lock a physical response residue or interaction coefficient with canonical matter normalization and SI units/uncertainty, or obtain an independent non-TTG alpha calibration; do not infer the scale from normalized TTG or Xie 2026.
+CLAIM_BOUNDARY: This closes only a no-go for the current natural-unit action chart. It does not prove that a future physical normalization is impossible, does not identify `Phi` with `C`, temperature, heat flux, entropy, or `R_gen`, and does not close Topic 13.
+EVIDENCE: `docs/core/artifacts/t13_covariant_matter_coupling_normalization_no_go.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/artifacts/uet_major_result_closure_register.json`; `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`.
+
+## T13-154 - Ding Experimental Heating Input Boundary
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for T13_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY; Full Topic 13 remains PARTIAL / BLOCKED_OPEN_T13_FULL_BRIDGE.
+WHAT_IS_ACTUALLY_CLOSED: The Ding 2022 source identity, local full-text hash, method locators, reported pump/probe setup rows, the <3 K surface-temperature upper bound, and the geometric incident-fluence conversion are machine-readable and independently rechecked.
+WHAT_REMAINS_OPEN: Absorption fraction, optical penetration depth, thermalized volume, absorbed energy density, numeric Ding C_src(T), base Phi-to-energy mapping, e0, independent alpha_Phi_K, and the remaining thermodynamic bridge closure.
+DEPENDENCY_UNLOCKED: Incident TTG setup provenance and geometric fluence lane only; no Ding C_src acceptance, SI Phi anchor, alpha calibration, or Full Topic 13 dependency is unlocked.
+STATUS: PASS_SCOPED_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY.
+WHAT_CHANGED: Added a source package, source-hash audit, typed setup rows, SI unit conversion, focused regression, full-gate source-package projection, closure-register entry, and dependency evidence. No absorbed-energy value, fit, calibration, threshold adjustment, Landauer inference, or Xie 2026 holdout access was introduced.
+EQUATION_OR_MAPPING: w=d_1e2/2; A_1e2=pi*w^2; F_incident=E_pump/A_1e2 = 6.189358898018153 J m^-2 for the reported 70 nJ and 120 um 1/e2 diameter. Delta_u_abs=eta_abs*F_incident/l_abs remains conditional on source-locked absorption inputs; Delta_Tq=Delta_u_ph/C_src remains formula-only until numeric C_src is accepted.
+VERIFICATION: 21/21 source checks pass; raw text is 41581 bytes with SHA-256 b1b029f2812586647077a7b8506c2f52aeb7261714395907f8f8d20868fe2874; package/audit/full-gate/closure/dependency hashes are recorded below. The current full gate remains BLOCKED_OPEN_T13_FULL_BRIDGE with the same 10 open blocker groups; holdout access remains false.
+CONTROLLING_BLOCKER: ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing together with alpha_Phi_K_independent_calibration_missing.
+NEXT_ACTION: Obtain an authorized Ding numeric C_src package or accepted same-regime PBTE reproduction with uncertainty and state mapping; separately obtain the independent base-Phi/SI anchor. Do not infer absorbed energy, e0, or alpha from incident fluence or the <3 K bound.
+CLAIM_BOUNDARY: This closes only the source/setup and incident-fluence lane. It does not identify absorbed energy density, predict Delta_Tq, derive e0, calibrate alpha_Phi_K, validate UET externally, or close Full Topic 13.
+EVIDENCE: package 62e6f6ce403c74e0601b2e05f6be2d2a5728d0237fb5392774713f9ee0a8eccd; audit 6e39bbf42037971dc2b5a1068df14835dd0b4689f26a60fff95bc26810b8b008; full gate 065f734a58d542cc98c1dfdf4ecc2f67768641a05205fce57b5109e6e11c0560; closure register 9a8fe0b9598755e48577d103b38768a0a321e89abbe3597fb499b5e8854c289e; dependency gate 78c8424bb973ecaa20b72b8683e45bac7efff05e7fd21adc348e1a98d5a8c9ec.
+
+## T13-155 - Ding C_src fixed-volume thermodynamic identity
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for `T13_DING_C_SRC_FIXED_VOLUME_THERMODYNAMIC_IDENTITY`; Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+WHAT_IS_ACTUALLY_CLOSED: Under a declared fixed-volume mode basis, the Ding PBTE denominator is conditionally identified as the temperature derivative of the phonon thermal-energy density. The Bose-mode kernel, SI unit route, source locators, and separation from UET `C` are machine-readable and numerically checked.
+WHAT_REMAINS_OPEN: Numeric Ding `C_src(T)`, accepted same-regime reproduction, material/state and volume identity, anharmonic frequency-temperature dependence, source-grade uncertainty/convergence, base `Phi` to energy, and independent `alpha_Phi_K` remain open.
+DEPENDENCY_UNLOCKED: Conditional `C_src` to fixed-volume `c_v` identity only; no numeric Ding source, alpha, bridge, transport, Core, Gravity, or external-validation dependency is unlocked.
+STATUS: `PASS_SCOPED_C_SRC_FIXED_VOLUME_IDENTITY`.
+WHAT_CHANGED: Added `audit_topic13_csrc_fixed_volume_identity.py`, its artifact and focused regression, then projected the result into the full gate, closure register, and dependency gate. No comparator was relabeled as Ding `C_src`.
+EQUATION_OR_MAPPING: `u_ph(T,V)=(1/V) sum_mu[hbar*omega_mu(V)*n_B]`; `C_src(T,V)=(partial u_ph/partial T)_V=(1/V) sum_mu c_mu(T,V)`; for fixed frequencies `c_mu/V=k_B*x_mu^2*exp(x_mu)/(V*(exp(x_mu)-1)^2)`. The source response remains `Delta_Tq=Delta_u_ph/C_src`; `C_p^vol-C_v^vol=T*alpha_V^2*K_T` is a separate correction and is not used to manufacture Ding `C_src`.
+VERIFICATION: Source locators and unit/ontology contracts pass; analytic Bose-mode derivative agrees with the central finite-difference witness at relative error `7.995153125698355e-11`; focused Topic 13 regression passed `19` tests; full gate remains blocked with `10` open blockers; Xie 2026 remains unconsumed.
+CONTROLLING_BLOCKER: `ding_pbte_numeric_C_src_or_accepted_independent_reproduction_missing`; independent `alpha_Phi_K` and the remaining SI/EOS/transport/KMS/entropy blockers remain open.
+NEXT_ACTION: Obtain a source-locked Ding-compatible mode or fixed-volume `c_v` record with material/state, volume, uncertainty, and convergence metadata; evaluate it under this identity without fitting alpha or reading the holdout.
+CLAIM_BOUNDARY: Conditional standard-physics identity only; no numeric `C_src`, no temperature prediction, no base-Phi calibration, no external validation, and no Full Topic 13 closure.
+EVIDENCE: `docs/core/artifacts/t13_csrc_fixed_volume_identity_audit.json` (SHA-256 `155b15ac1184f0309e10db8466925d6ad6483d4321a7703d82ecfb09a086cdd5`); full gate `f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50`; closure register `eb044c3083382b61855baa8ee26ea847a85005c148f5e0b85612a74bfb7b3c0b`; dependency gate `985a9727e59db875b6446096942b07b70375da9ba59cb06cc456e9cd25ef93e2`; verifier/test paths are adjacent.
+## T13-162 - Day 2012 preferred thermodynamic assessment boundary
+
+MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for `T13_DAY2012_PREFERRED_THERMODYNAMIC_ASSESSMENT_BOUNDARY`; Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+
+WHAT_IS_ACTUALLY_CLOSED: Day 2012 Table 2 is source-locked at its publisher/printed-page locator. The graphite assessment records `B0 = 338 +/- 30 kbar (2 sigma)`, `dB/dT = -0.07 +/- 0.02 kbar K^-1 (2 sigma)`, and the stated volume-expansion function.
+
+WHAT_REMAINS_OPEN: The table reports no uncertainty for the graphite thermal-expansion coefficient/function, does not establish a same-specimen alpha_V/K_T pair, and does not close Ding TTG material-regime mapping. The Cp-to-Cv correction, independent `alpha_Phi_K`, Ding `C_src`, physical Kubo, SI map, and full EOS/transport/KMS/entropy remain open.
+
+DEPENDENCY_UNLOCKED: Day source-compatibility boundary only; no numeric thermodynamic correction, Ding C_src, alpha calibration, Core, Gravity, transport, Galaxy, or external-validation dependency is unlocked.
+
+STATUS: `PASS_SCOPED_DAY2012_THERMODYNAMIC_ASSESSMENT_BOUNDARY_NO_GO`.
+
+WHAT_CHANGED: Added the Day source package, route audit, machine-readable artifact, full-gate projection, closure-register/dependency evidence, and focused regression. No values were combined with another specimen and no correction was emitted.
+
+EQUATION_OR_MAPPING: `V(T)/V0 = 1 + a0*(T - 298) - 20*a0*(sqrt(T) - sqrt(298))`; `K_T(T) = B0 + Bprime*(T - 298)` under the table notation; `c_p^V - c_v^V = T*alpha_V^2*K_T` remains a declared but unevaluated contract.
+
+VERIFICATION: All Day route checks pass; focused integration suite `14 passed`; full gate remains blocked with 9 open blockers; `claim_promotion=false`; Xie 2026 remains unconsumed.
+
+CONTROLLING_BLOCKER: `same_grade_alpha_V_and_K_T_missing` for this route; `alpha_V_source_uncertainty_not_reported` is an explicit route-level sub-blocker.
+
+NEXT_ACTION: Acquire a permitted same-state alpha_V/K_T record with units, uncertainty, row/state identity, and Ding-regime mapping, or retain this no-go while continuing independent Ding/PBTE and Phi/SI acquisition.
+
+CLAIM_BOUNDARY: Source-compatibility evidence only; not a numeric Cp-to-Cv correction, Ding `C_src`, independent `alpha_Phi_K`, TTG prediction, physical transport, external validation, or Full Topic 13 closure.
+
+EVIDENCE: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/day_2012_preferred_thermodynamic_table_source_package.json`; `docs/core/artifacts/t13_day2012_preferred_thermodynamic_table_boundary_audit.json`; `docs/scripts/audit/audit_topic13_day2012_preferred_thermodynamic_table.py`.
+
+## T13-163 - Kim 2018 external Green-Kubo input
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for T13_KIM_2018_GRAPHITE_GREEN_KUBO_EXTERNAL_INPUT; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.
+
+WHAT_IS_ACTUALLY_CLOSED: The public source locator, Eq. (2) Green-Kubo relation, Eq. (3) uncertainty locator, 300 K pristine-graphite c-axis and basal-plane rows, convergence metadata, and canonical source-transcription hash are recorded.
+
+WHAT_REMAINS_OPEN: No UET Phi space-response state, base-Phi amplitude, Ding material equivalence, raw correlator payload, or physical UET Kubo promotion is available.
+
+DEPENDENCY_UNLOCKED: External standard-physics transport-input lane only.
+
+STATUS: PASS_SCOPED_SOURCE_LOCKED_EXTERNAL_GREEN_KUBO_INPUT.
+
+WHAT_CHANGED: Added the bounded source package and audit. The record is explicitly external comparator/input evidence, not UET derivation or alpha calibration.
+
+EQUATION_OR_MAPPING: kappa_i(tau) = V/(k_B*T^2) * integral [<J_i(s)J_i(0)>/<J_i(0)J_i(0)>] ds; source rows are 7.9 +/- 0.9 W m^-1 K^-1 for c-axis and 1435 +/- 153 W m^-1 K^-1 for basal plane at 300 K.
+
+VERIFICATION: Audit checks pass; source_payload_sha256=e33f0750db2f5bf16fc24a2cd8e84437f17cd77a3dfba3a5a9e63a2074f930c8; no fit or holdout access.
+
+CONTROLLING_BLOCKER: UET_space_response_and_base_Phi_mapping_missing.
+
+NEXT_ACTION: Find a source-locked UET space-response/Phi map or keep this record as a comparator.
+
+CLAIM_BOUNDARY: Standard-physics external transport input only; not physical UET Kubo, alpha_Phi_K, Ding C_src, or Full Topic 13 closure.
+
+EVIDENCE: package e3282c72a48883b25fc5dcb248ff840cbe7de08a3be2057bf01754c245ca472f; audit 13b2b2c677d2d4d0e1035df99b9b6ae40619040caa976f71baf1d406bb25b208; verifier da42657918ef109ad4130e7fa579c534d3016cfe8b7457d8f14a38d66a78f1f0; full gate 192bf678aa95ccdfcde21e14a476362066b9b2f8b57994ec964da3ca9dd14e8e.
+
+## T13-164 - Ding supplementary content boundary
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.
+
+WHAT_IS_ACTUALLY_CLOSED: Page-level content review and hash identity for MOESM1, MOESM2, and MOESM3. The reviewed equations preserve C_src(T) = sum_mu c_mu(T) and Delta_Tq = Delta_u_ph / C_src as source notation only; no numeric mode sum is emitted.
+
+WHAT_REMAINS_OPEN: Numeric Ding C_src, accepted independent reproduction, dimensional base-Phi map, independent alpha_Phi_K, and physical EOS/transport/KMS/entropy closure.
+
+DEPENDENCY_UNLOCKED: Public supplementary content boundary only.
+
+STATUS: PASS_SCOPED_DING_SUPPLEMENTARY_CONTENT_BOUNDARY_NO_NUMERIC_PAYLOAD.
+
+WHAT_CHANGED: Added a source-content review package with page locators, PDF size/hash identity, an audit verifier, and full-gate projection. This is not a derivation or calibration artifact.
+
+EQUATION_OR_MAPPING: C_src(T) = sum_mu c_mu(T); Delta_Tq = Delta_u_ph / C_src; y_TTG = Delta_Tq(t) / Delta_Tq(0); Delta_Tq = alpha_Phi_K * Delta_Phi remains open.
+
+VERIFICATION: All source-content checks pass; the three PDF hashes match the archived files; no figure digitization, fit, threshold change, or holdout access occurred.
+
+CONTROLLING_BLOCKER: ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing.
+
+NEXT_ACTION: Acquire an authorized numeric package or accepted same-regime PBTE reproduction with uncertainty and convergence; do not promote PDF equations or figures to numeric C_src.
+
+CLAIM_BOUNDARY: Source-content boundary only; not numeric C_src, alpha calibration, SI prediction, physical transport, external validation, or Full Topic 13 closure.
+
+EVIDENCE: docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_supplementary_content_review_package.json; docs/core/artifacts/t13_ding_supplementary_content_review_audit.json; docs/scripts/audit/audit_topic13_ding_supplementary_content_review.py.
+
+## Dynamical-Stability Diagnostic Addendum
+
+These formulas diagnose the declared normalized evolution and do not alter the thermal bridge.
+
+| formula_id | relation | units | derivation_class | observable | verification_status | controlling_blocker | claim_boundary |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| `T13-CHAOS-TANGENT` | `delta_dot_X=D F[X]delta_X`, `X=(C,Phi,Pi)` | normalized tangent state per normalized time | exact discrete Jacobian action | perturbation growth | tangent JVP and method controls pass | state-dependent sources require an explicit JVP | `R_gen` and `R_obs` are excluded; no new physical law |
+| `T13-CHAOS-LAMBDA` | `lambda_i=lim_T log(s_i)/T` | inverse normalized time | standard diagnostic | Lyapunov spectrum and conditional `1/lambda_max` | Fourier/Cattaneo and matter-space pilot pass | SI time/state metric remains open | no physical predictability claim |
+| `T13-CHAOS-RESOLUTION` | `lambda_res=max(delta_dt,delta_dx,2 SE_block,delta_method)` | inverse normalized time | preregistered gate | sign-resolved regime class | tangent/shadow and ledger gates pass | accepted open/KMS input missing | chaos candidate is not external validation |
+
+## Invariant-rate collision-operator addendum
+
+| formula_id | relation | units | derivation_class | observable | verification_status | controlling_blocker | claim_boundary |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| `T13-INVARIANT-RATE-WEIGHT` | `W_c=beta*dPi1*dPi2*dPhi2_cell*|M_contact+M_Phi|^2*f1*f2*(1+f3)*(1+f4)/S_final` | `E^3` | invariant finite representative phase-space candidate | channel quadratic-form weight | symbolic and whole-action scaling pass | connected angular/multi-shell measure missing | not a continuum collision integral |
+| `T13-INVARIANT-RATE-OPERATOR` | `L_rate=sum_c W_c*v_c*v_c^T`, `v_c~E^-1` | `E` | weighted finite collision quadratic form | finite collision rate operator | PSD, symmetry and five invariant checks pass | self-consistent width and continuum ladder missing | not a Kubo/SI coefficient |

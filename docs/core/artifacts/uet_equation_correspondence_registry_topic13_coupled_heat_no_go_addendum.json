@@ -1,0 +1,92 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "CANDIDATE_DIAGNOSTIC_NOT_MERGED",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "equation_entries": [
+    {
+      "ontology": {
+        "C": "unchanged; not quasiparticle number",
+        "Phi": "effective response variable; neutral excitation is lane-specific and not a new substance",
+        "R_gen": "excluded",
+        "R_obs": "excluded"
+      },
+      "unit_lane": "natural_units",
+      "units": {
+        "current_source": "declared vector-source units",
+        "source_rank": "dimensionless"
+      },
+      "derivation_class": "relativistic_current_identity_and_source_rank_no_go",
+      "observable": "Physical grand-heat source rank, not conductivity",
+      "data_role": "DERIVED_SYNTHETIC_STRUCTURAL_NO_GO",
+      "verification_status": "PASS_COUPLED_RESPONSE_HEAT_CARRIER_ROUTE_NO_GO",
+      "controlling_blocker": "admissible_preferred_frame_or_independent_conserved_diffusion_charge_missing",
+      "claim_boundary": "Structural no-go for the current relativistic coupled response-mode route only; not a theorem against heat transport in a lattice, open bath, multicharge theory, or external material, and not Full Topic 13 closure.",
+      "equation_id": "uet.o2.thermal.coupled_response_heat_carrier_no_go",
+      "version": "1",
+      "classification": "structural_heat_carrier_route_no_go",
+      "relation_or_code_path": {
+        "energy_current": "J_E^i=sum_a integral E_a v_a^i delta f_a=P^i",
+        "grand_heat_current": "J_H^i=J_E^i-mu J_charge^i=P^i-mu J_charge^i",
+        "landau_no_go": "P_perp J_H=-mu P_perp J_charge; rank(J_charge,J_H)<=1",
+        "required_escape": "independent heat requires an admissible extra conserved diffusion current or a declared preferred/lattice momentum-relaxing frame"
+      },
+      "standard_physics_counterpart": "Landau-frame relativistic heat/diffusion current decomposition",
+      "variables": {
+        "J_E": "energy current",
+        "P": "momentum density/current",
+        "J_H": "grand heat current",
+        "J_charge": "conserved charge current"
+      },
+      "mathematical_role": "source-rank obstruction for the existing neutral response carrier route",
+      "observable_mapping": "Physical grand-heat source rank, not conductivity",
+      "parameter_dimensions": {
+        "current_source": "declared vector-source units",
+        "source_rank": "dimensionless"
+      },
+      "source_or_origin": "Relativistic quasiparticle current identity and current coupled collision metric",
+      "assumptions": {
+        "relativistic_group_velocity": "v=p/E",
+        "single_physical_chemical_potential": true,
+        "Landau_frame": true,
+        "neutral_response_count_not_conserved": true
+      },
+      "symmetry_and_conservation": "Total momentum and U(1) charge conserved; response count converted",
+      "limiting_cases": [
+        "mu=0",
+        "finite mu",
+        "metric orders 128 and 192"
+      ],
+      "implementation_paths": [
+        "docs/scripts/audit/audit_topic13_coupled_response_heat_carrier_no_go.py",
+        "docs/scripts/audit/audit_topic13_coupled_gain_loss_operator.py"
+      ],
+      "verifier_paths": [
+        "docs/core/test/test_topic13_coupled_response_heat_carrier_no_go.py"
+      ],
+      "evidence_class": "INTERNAL_STRUCTURAL_NO_GO",
+      "proof_status": "CURRENT_RESPONSE_CARRIER_ROUTE_REJECTED",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_coupled_response_heat_carrier_no_go_audit.json",
+          "sha256": "299fe0f67b8d6aa618e00bac4c2c98a2ef165b17af11c1245824593e78905f0b"
+        }
+      ],
+      "downstream_dependencies": [
+        "lattice_or_momentum_relaxing_heat_branch_design",
+        "second_conserved_charge_diffusion_branch_design"
+      ],
+      "dependency_role": "heat_carrier_design_controller",
+      "physical_dependency_unlock": false,
+      "failure_mode": [
+        "admissible_second_conserved_diffusion_charge_or_lattice_frame",
+        "momentum_relaxing_Umklapp_boundary_or_open_bath_contract",
+        "self_consistent_dressed_width_and_continuum_limit",
+        "physical_Kubo_and_SI_frame_normalization",
+        "material_heat_observable_and_uncertainty_mapping"
+      ],
+      "next_hardening_step": "Choose and derive either a lattice/momentum-relaxing frame or an independently conserved diffusion charge from an explicit action before reopening heat conductivity."
+    }
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}

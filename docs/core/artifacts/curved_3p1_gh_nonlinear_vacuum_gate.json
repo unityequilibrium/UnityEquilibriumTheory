@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "artifact": "curved_3p1_gh_nonlinear_vacuum_gate",
+  "generated_at": "2026-08-29T04:51:37.128904+00:00",
+  "status": "PARTIAL_GH_NONLINEAR_VACUUM_RHS_READY",
+  "requirements": {
+    "source_complete_rhs_locators": "PASS",
+    "principal_system_dependency": "PASS",
+    "vacuum_nonlinear_rhs": "PASS",
+    "gamma0_gauge_constraint_damping": "PASS",
+    "metric_kinematics_and_constraints": "PASS",
+    "time_integration_and_cfl": "OPEN",
+    "constraint_propagation_convergence": "OPEN",
+    "constraint_preserving_boundaries": "OPEN",
+    "matter_stress_energy_wiring": "OPEN",
+    "dimensional_observable_mapping": "OPEN"
+  },
+  "closed_requirements": [
+    "source_complete_rhs_locators",
+    "principal_system_dependency",
+    "vacuum_nonlinear_rhs",
+    "gamma0_gauge_constraint_damping",
+    "metric_kinematics_and_constraints"
+  ],
+  "open_requirements": [
+    "time_integration_and_cfl",
+    "constraint_propagation_convergence",
+    "constraint_preserving_boundaries",
+    "matter_stress_energy_wiring",
+    "dimensional_observable_mapping"
+  ],
+  "controlling_blocker": "curved_3p1_generalized_harmonic_time_integration_and_constraint_propagation_missing",
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json",
+      "sha256": "a5e0dfd38c6d5f410ce41ba941eee7dc82c3dcc9744e1f3fdbb6b46b03666c17"
+    },
+    {
+      "path": "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_formula_audit.json",
+      "sha256": "7e5f54ea15d36e331a345f0a04f645557a0671ada35ce12962530e419ce70aa3"
+    }
+  ],
+  "dependency_unlocked": "time integration and constraint-propagation wave only",
+  "claim_boundary": "complete vacuum RHS operator only; not a time-integrated solver, matter-coupled UET parent, Gravity validation, or external claim",
+  "claim_promotion": false
+}

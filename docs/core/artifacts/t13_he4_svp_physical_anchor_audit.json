@@ -1,0 +1,201 @@
+{
+  "schema_version": "t13-he4-svp-physical-anchor-audit-v1",
+  "artifact": "t13_he4_svp_physical_anchor_audit",
+  "generated_at": "2026-08-28",
+  "status": "PASS_HE4_EQUILIBRIUM_SOURCE_ANCHOR_UNCERTAINTY_OPEN",
+  "major_result": {
+    "major_result_id": "T13_HE4_SVP_O2_PHYSICAL_ANCHOR",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": "A source-locked He-4 SVP equilibrium grid for total density, superfluid density, normal density, and superfluid fraction, with deterministic row identity and no holdout access.",
+    "equation_or_mapping": "rho_n = rho - rho_s; candidate only: Delta(rho_s/rho) = Z_Phi Delta_Phi",
+    "units": {
+      "temperature": "K",
+      "total_density": "kg m^-3",
+      "superfluid_density": "kg m^-3",
+      "normal_density": "kg m^-3",
+      "superfluid_fraction": "dimensionless"
+    },
+    "derivation_class": "SOURCE_TRANSCRIPTION_AND_EQUILIBRIUM_IDENTITY",
+    "observable": "rho, rho_s, rho_n, and rho_s/rho at He-4 SVP",
+    "data_role": "CALIBRATION_REFERENCE_CANDIDATE_NOT_TARGET_DATA",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_o2_physical_anchor_source_package.json",
+        "sha256": "4d02b1faac1cefe3ce79ced525183e2d38066604808d91f9c2769d515ab8b770"
+      },
+      {
+        "path": "docs/core/he4_svp_reference.py",
+        "sha256": "0fa04451375a761f525c1bb2acc65f99b1e2632eb42d5bc95987fcaa4a007367"
+      }
+    ],
+    "verification_status": "PASS_HE4_EQUILIBRIUM_SOURCE_ANCHOR_UNCERTAINTY_OPEN",
+    "open_blockers": [
+      "property_level_source_uncertainty_not_yet_extracted",
+      "independent_Z_Phi_field_normalization_missing",
+      "SI_energy_and_length_scale_mapping_missing",
+      "physical_transport_coefficient_not_closed"
+    ],
+    "dependency_unlocked": "He-4/O(2) physical calibration lane may proceed to field-normalization and SI-scale design; no Core-ready promotion yet.",
+    "claim_boundary": "This package source-locks an equilibrium He-4 O(2)-compatible physical anchor candidate. It does not calibrate alpha_Phi_K, prove that Phi equals the superfluid fraction, validate TTG, or close Topic 13."
+  },
+  "source_identity": {
+    "title": "The Observed Properties of Liquid Helium at the Saturated Vapor Pressure",
+    "authors": [
+      "Russell J. Donnelly",
+      "Carlo F. Barenghi"
+    ],
+    "doi": "10.1063/1.556028",
+    "paper_locator": "Journal of Physical and Chemical Reference Data 27, 1217-1274 (1998)",
+    "interactive_locator": "https://www.mas.ncl.ac.uk/helium/",
+    "interactive_snapshot_sha256": "12665f1450f4a1370206e23a11eff4b13606041e870ccbf59805f842e423a25a",
+    "interactive_snapshot_bytes": 98593,
+    "snapshot_observed_at": "2026-08-27",
+    "permission_or_terms": "Public interactive reference-data calculator; selected derived rows are recorded for internal research verification. The remote page itself is not redistributed in this repository.",
+    "preprocessing": "Direct transcription of the published interactive total-density formula and superfluid-density cubic-spline coefficients; evaluate only the preregistered temperatures 1.4 through 2.0 K in 0.1 K increments; no fit, smoothing, target-curve access, or UET parameter tuning.",
+    "source_data_role": "CALIBRATION_REFERENCE_CANDIDATE_NOT_TARGET_DATA"
+  },
+  "material_state": {
+    "material_identity": "liquid helium-4",
+    "phase": "He II",
+    "pressure_path": "saturated vapour pressure",
+    "temperature_range_K": [
+      1.4,
+      2.0
+    ],
+    "lambda_temperature_K": 2.1768,
+    "critical_endpoint_excluded": true
+  },
+  "rows": [
+    {
+      "row_id": "he4-svp-1.400K",
+      "temperature_K": 1.4,
+      "total_density_kg_m3": 145.1372639198283,
+      "superfluid_density_kg_m3": 134.56589598075473,
+      "normal_density_kg_m3": 10.571367939073582,
+      "superfluid_fraction": 0.9271629652264007
+    },
+    {
+      "row_id": "he4-svp-1.500K",
+      "temperature_K": 1.5,
+      "total_density_kg_m3": 145.16460055269843,
+      "superfluid_density_kg_m3": 128.998960336147,
+      "normal_density_kg_m3": 16.165640216551424,
+      "superfluid_fraction": 0.888639240179751
+    },
+    {
+      "row_id": "he4-svp-1.600K",
+      "temperature_K": 1.6,
+      "total_density_kg_m3": 145.20708312781613,
+      "superfluid_density_kg_m3": 121.62786936585003,
+      "normal_density_kg_m3": 23.579213761966102,
+      "superfluid_fraction": 0.8376166420118026
+    },
+    {
+      "row_id": "he4-svp-1.700K",
+      "temperature_K": 1.7,
+      "total_density_kg_m3": 145.26863945323475,
+      "superfluid_density_kg_m3": 112.06212812005488,
+      "normal_density_kg_m3": 33.206511333179876,
+      "superfluid_fraction": 0.7714130767785583
+    },
+    {
+      "row_id": "he4-svp-1.800K",
+      "temperature_K": 1.8,
+      "total_density_kg_m3": 145.35380245088032,
+      "superfluid_density_kg_m3": 99.81609435999891,
+      "normal_density_kg_m3": 45.53770809088141,
+      "superfluid_fraction": 0.6867112705478066
+    },
+    {
+      "row_id": "he4-svp-1.900K",
+      "temperature_K": 1.9,
+      "total_density_kg_m3": 145.46842159013025,
+      "superfluid_density_kg_m3": 84.43795619683978,
+      "normal_density_kg_m3": 61.03046539329047,
+      "superfluid_fraction": 0.580455574301555
+    },
+    {
+      "row_id": "he4-svp-2.000K",
+      "temperature_K": 2.0,
+      "total_density_kg_m3": 145.62165302284959,
+      "superfluid_density_kg_m3": 65.07292297835451,
+      "normal_density_kg_m3": 80.54873004449507,
+      "superfluid_fraction": 0.4468629604701979
+    }
+  ],
+  "row_recompute_absolute_residuals": {
+    "he4-svp-1.400K": {
+      "temperature_K": 0.0,
+      "total_density_kg_m3": 0.0,
+      "superfluid_density_kg_m3": 0.0,
+      "normal_density_kg_m3": 0.0,
+      "superfluid_fraction": 0.0
+    },
+    "he4-svp-1.500K": {
+      "temperature_K": 0.0,
+      "total_density_kg_m3": 0.0,
+      "superfluid_density_kg_m3": 0.0,
+      "normal_density_kg_m3": 0.0,
+      "superfluid_fraction": 0.0
+    },
+    "he4-svp-1.600K": {
+      "temperature_K": 0.0,
+      "total_density_kg_m3": 0.0,
+      "superfluid_density_kg_m3": 0.0,
+      "normal_density_kg_m3": 0.0,
+      "superfluid_fraction": 0.0
+    },
+    "he4-svp-1.700K": {
+      "temperature_K": 0.0,
+      "total_density_kg_m3": 0.0,
+      "superfluid_density_kg_m3": 0.0,
+      "normal_density_kg_m3": 0.0,
+      "superfluid_fraction": 0.0
+    },
+    "he4-svp-1.800K": {
+      "temperature_K": 0.0,
+      "total_density_kg_m3": 0.0,
+      "superfluid_density_kg_m3": 0.0,
+      "normal_density_kg_m3": 0.0,
+      "superfluid_fraction": 0.0
+    },
+    "he4-svp-1.900K": {
+      "temperature_K": 0.0,
+      "total_density_kg_m3": 0.0,
+      "superfluid_density_kg_m3": 0.0,
+      "normal_density_kg_m3": 0.0,
+      "superfluid_fraction": 0.0
+    },
+    "he4-svp-2.000K": {
+      "temperature_K": 0.0,
+      "total_density_kg_m3": 0.0,
+      "superfluid_density_kg_m3": 0.0,
+      "normal_density_kg_m3": 0.0,
+      "superfluid_fraction": 0.0
+    }
+  },
+  "checks": {
+    "source_doi_matches_transcription": true,
+    "source_url_matches_transcription": true,
+    "source_snapshot_hash_matches": true,
+    "source_snapshot_bytes_match": true,
+    "lambda_temperature_matches": true,
+    "row_ids_are_unique": true,
+    "preregistered_grid_complete": true,
+    "rows_recompute_from_source_transcription": true,
+    "density_ledger_closes": true,
+    "fractions_are_physical": true,
+    "temperature_grid_excludes_lambda_endpoint": true,
+    "mapping_remains_open": true,
+    "uncertainty_gap_is_explicit": true,
+    "no_numeric_uncertainty_consumed": true,
+    "holdout_not_accessed": true,
+    "target_not_used": true,
+    "no_fit_or_tuning": true,
+    "no_threshold_adjustment": true
+  },
+  "controlling_blocker": "independent_Z_Phi_and_property_uncertainty_missing",
+  "next_controller": "Source-lock property-level uncertainty, then preregister a thermodynamic field-normalization condition for Z_Phi without TTG or Xie 2026 target access.",
+  "claim_boundary": "This package source-locks an equilibrium He-4 O(2)-compatible physical anchor candidate. It does not calibrate alpha_Phi_K, prove that Phi equals the superfluid fraction, validate TTG, or close Topic 13."
+}
