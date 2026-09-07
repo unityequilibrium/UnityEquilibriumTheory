@@ -295,6 +295,7 @@ thailand_proposals/**/*.webp
 /uet_history/3_publish/books/*
 !/uet_history/3_publish/books/README.md
 !/uet_history/3_publish/books/BOOK_REGISTRY.json
+!/uet_history/3_publish/books/โครงสร้างหนังสือ.md
 !/uet_history/3_publish/books/00_uet_core_theory/
 /uet_history/3_publish/books/00_uet_core_theory/*
 !/uet_history/3_publish/books/00_uet_core_theory/README.md
@@ -358,16 +359,19 @@ docs/topics/**/Result/_Logs/
 !/uet_history/3_publish/books/biology_psychology_economics/01_biology/README.md
 !/uet_history/3_publish/books/biology_psychology_economics/01_biology/book_blueprint.md
 !/uet_history/3_publish/books/biology_psychology_economics/01_biology/BOOK_MANIFEST.json
+!/uet_history/3_publish/books/biology_psychology_economics/01_biology/UPDATE_LOG.md
 !/uet_history/3_publish/books/biology_psychology_economics/02_biology_psychology/
 /uet_history/3_publish/books/biology_psychology_economics/02_biology_psychology/*
 !/uet_history/3_publish/books/biology_psychology_economics/02_biology_psychology/README.md
 !/uet_history/3_publish/books/biology_psychology_economics/02_biology_psychology/book_blueprint.md
 !/uet_history/3_publish/books/biology_psychology_economics/02_biology_psychology/BOOK_MANIFEST.json
+!/uet_history/3_publish/books/biology_psychology_economics/02_biology_psychology/UPDATE_LOG.md
 !/uet_history/3_publish/books/biology_psychology_economics/03_psychology_economics/
 /uet_history/3_publish/books/biology_psychology_economics/03_psychology_economics/*
 !/uet_history/3_publish/books/biology_psychology_economics/03_psychology_economics/README.md
 !/uet_history/3_publish/books/biology_psychology_economics/03_psychology_economics/book_blueprint.md
 !/uet_history/3_publish/books/biology_psychology_economics/03_psychology_economics/BOOK_MANIFEST.json
+!/uet_history/3_publish/books/biology_psychology_economics/03_psychology_economics/UPDATE_LOG.md
 !/uet_history/3_publish/books/economics_ai_energy/
 /uet_history/3_publish/books/economics_ai_energy/*
 !/uet_history/3_publish/books/economics_ai_energy/SECTION_MANIFEST.json
