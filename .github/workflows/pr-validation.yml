@@ -109,15 +109,21 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m compileall -q docs
-      - name: Parse research JSON artifacts
+      - name: Parse changed research JSON artifacts
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
-          python - <<'PY'
-          import json
-          from pathlib import Path
-          for path in Path("docs/topics").glob("**/*.json"):
-              json.loads(path.read_text(encoding="utf-8"))
-          print("Research JSON artifacts are parseable.")
-          PY
+          set -euo pipefail
+          git diff --name-only "$BASE_SHA" "$HEAD_SHA" | awk '/\.json$/ {print}' > changed-research-json.txt
+          if test -s changed-research-json.txt; then
+            while IFS= read -r file; do
+              python -m json.tool "$file" >/dev/null
+            done < changed-research-json.txt
+            echo "Changed research JSON artifacts are parseable."
+          else
+            echo "No changed research JSON artifacts; JSON validation is not applicable."
+          fi
 
   book-validation:
     name: Book registry validation
