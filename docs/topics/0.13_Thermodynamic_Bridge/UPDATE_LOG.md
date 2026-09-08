@@ -1,3 +1,17 @@
+## 2026-09-09 - Numeric UED rows and time-index interpretation
+
+MAJOR_RESULT_CLOSURE: PARTIAL; storage/row interpretation closed, physical signal map open.
+WHAT_IS_ACTUALLY_CLOSED: Seventy paired image rows decoded as inert numeric summaries; source one-based time index reconciled without shifting any delay.
+WHAT_REMAINS_OPEN: Full image/mask export, covariance, detector-to-population inversion and independent Phi coupling.
+DEPENDENCY_UNLOCKED: Mask-aware source inspection only.
+STATUS: NUMERIC_ROWS_EXTRACTED_MAPPING_OPEN.
+WHAT_CHANGED: Added inert syntax interpreter, strict table reader, tests, artifact and docs/core/T13_UED_NUMERIC_ROWS.md.
+EQUATION_OR_MAPPING: Source t0_index=8 maps to zero-based row 7; both delay arrays already equal zero there. Reciprocal calibration is detector-specific, not Phi calibration.
+VERIFICATION: Nine linked tests; two members yield 38 and 32 rows, 512x512 images. Nonfinite occurrences are 482116 and 401488; preserved rather than replaced. Pinned author cells explain one-based indexing and intensity-dependent NaN preprocessing. Source hash/compression integrity checked; no arbitrary unpickle or notebook execution.
+CONTROLLING_BLOCKER: mask_aware_detector_signal_and_uncertainty_missing.
+NEXT_ACTION: Export reviewed images with masks, define common support and uncertainty, then test mode inversion. Do not fit a rate to image summaries.
+CLAIM_BOUNDARY: Processed detector rows, not occupations, heat, temperature or physical alpha. No holdout or full-topic promotion; separate He-4 status unchanged.
+
 ## 2026-09-08 - Permitted experimental UED archive acquired
 
 MAJOR_RESULT_CLOSURE: PARTIAL; numeric archive acquired, physical population mapping open.
