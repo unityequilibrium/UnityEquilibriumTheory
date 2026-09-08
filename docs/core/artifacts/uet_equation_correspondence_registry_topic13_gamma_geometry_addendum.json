@@ -1,0 +1,24 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "status": "CANDIDATE_DIAGNOSTIC_NOT_MERGED",
+  "equation_entries": [{
+    "equation_id": "uet.diagnostic.gamma_one_phonon_geometry",
+    "classification": "IMPORTED_STANDARD_KINEMATIC_DIAGNOSTIC",
+    "relation_or_code_path": "S_pair(Q)=sum_j |sum_s exp(i Q.r_s) Q.e_sj/sqrt(m_s)|^2",
+    "ontology": "Material displacements only; C/Phi not identified with phonons. R_gen remains derived; R_obs excluded.",
+    "units": {"Q": "angstrom^-1", "r": "angstrom", "m": "atomic mass unit", "e": "dimensionless orthonormal mass-weighted eigenvector", "S": "angstrom^-2/atomic mass unit"},
+    "derivation_class": "IMPORTED_GEOMETRIC_PART_WITH_EXPLICIT_GAMMA_ATOM_PHASE",
+    "standard_physics_counterpart": "Kinematic one-phonon structure factor, Rene de Cotret et al., arXiv:1908.02795 equations 2-3; phase convention made explicit for atom-basis Gamma eigenvectors",
+    "source_locator": "https://arxiv.org/pdf/1908.02795",
+    "observable": "geometric factor only, not absolute intensity or temperature",
+    "data_role": "SOURCE_MODEL_DIAGNOSTIC",
+    "verification_status": "GEOMETRY_CHECKED_POPULATION_INVERSION_OPEN",
+    "assumptions": ["Gamma only", "common carbon form factor and equal site Debye-Waller factor omitted", "equal occupations within each degenerate pair when used as scalar response", "kinematic single scattering"],
+    "controlling_blocker": "finite_q_response_and_independent_information_required_for_two_pair_inversion",
+    "claim_boundary": "Six basal reciprocal vectors only. No physical UET mapping, detector count prediction or population fit.",
+    "implementation_paths": ["docs/scripts/audit/audit_topic13_gamma_scattering_geometry.py"],
+    "dependency_role": "diagnostic_only",
+    "physical_dependency_unlock": false
+  }]
+}

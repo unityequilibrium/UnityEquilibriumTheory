@@ -1,3 +1,17 @@
+## 2026-09-09 - Gamma scattering rank boundary
+
+MAJOR_RESULT_CLOSURE: PARTIAL; six sampled Gamma geometry rows cannot independently distinguish the two E2g pair populations.
+WHAT_IS_ACTUALLY_CLOSED: Column-normalized singular values 1.4142 and 2.255e-16 show numerical proportionality under declared common-site-factor assumptions.
+WHAT_REMAINS_OPEN: Finite-q phase/branch weights, elastic/detector model, covariance and Phi coupling.
+DEPENDENCY_UNLOCKED: Information-design research only.
+STATUS: GEOMETRY_ONLY_INVERSION_OPEN.
+WHAT_CHANGED: Geometric comparator, registry addendum, tests/artifact and docs/core/T13_GAMMA_SCATTERING_GEOMETRY.md.
+EQUATION_OR_MAPPING: Atom-phase and polarization weighted one-phonon geometry, not absolute intensity.
+VERIFICATION: Three tests and actual source/hash audit; F0 369 rows, zero duplicate IDs. Foundation and compatibility audits PASS while physical states remain BLOCKED. Upstream near-zero grouping issue retained.
+CONTROLLING_BLOCKER: finite_q_response_and_independent_information_required_for_two_pair_inversion.
+NEXT_ACTION: Evaluate finite-q multi-branch operator with verified phase and detector coverage; do not fit two populations to a rank-one proxy.
+CLAIM_BOUNDARY: Six-vector Gamma model diagnostic only, not global UED no-go, temperature, physical alpha or Topic 13 closure. No holdout input.
+
 ## 2026-09-09 - Same-irrep branch distinction
 
 MAJOR_RESULT_CLOSURE: PARTIAL; two distinct source E2g eigenspaces, global grouping unresolved.
