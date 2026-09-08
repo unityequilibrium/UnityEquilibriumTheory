@@ -1,0 +1,68 @@
+{
+  "major_result_id": "T13_MODE_WORK_HEAT_PROTOCOL_SEPARATION",
+  "topic": "0.13",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_CONDITIONAL_HARMONIC_PROTOCOLS",
+  "what_is_closed": [
+    "Mode energy separates source work and occupation heat",
+    "Equilibrium isentropic gain requires mode-specific source derivatives",
+    "Frozen unequal mode scalings do not define one thermal temperature"
+  ],
+  "equation_or_mapping": "dU=sum[(n+1/2)*d_epsilon+epsilon*dn]; dT/dlambda|S=T*sum(C_i*epsilon_i_prime/epsilon_i)/sum(C_i)",
+  "units": {
+    "gaps": "J",
+    "capacity": "J/K for the two-oscillator illustration",
+    "work_and_heat_derivatives": "J per dimensionless log-gap control",
+    "isentropic_gain": "K per dimensionless log-gap control"
+  },
+  "derivation_class": "harmonic_equilibrium_first_law",
+  "observable": "protocol-dependent energy, heat and equilibrium temperature tangent",
+  "data_role": "SOURCE_FREQUENCIES_WITH_SYNTHETIC_CONTROL_NOT_CALIBRATION",
+  "control": {
+    "identity": "lambda=common log-gap scaling",
+    "gap_derivative": "epsilon_i_prime=epsilon_i",
+    "physical_source": false,
+    "Phi_identified": false
+  },
+  "gaps_J": [
+    5.777306674132574e-22,
+    5.777306674134781e-22
+  ],
+  "temperature_K": 200.0,
+  "population": [
+    4.296981978999966,
+    4.296981978998148
+  ],
+  "result": {
+    "capacity": 2.751247067152405e-23,
+    "isothermal_work_derivative": 5.542727200594045e-21,
+    "isothermal_heat_derivative": -5.5024941343048105e-21,
+    "isothermal_energy_derivative": 4.023306628923462e-23,
+    "isothermal_entropy_derivative": -2.751247067152405e-23,
+    "equilibrium_isentropic_temperature_derivative": 200.0,
+    "frozen_occupation_energy_derivative": 5.542727200594045e-21,
+    "frozen_occupation_heat_derivative": 0.0
+  },
+  "zero_point_policy": "Retained in oscillator energy/work, absent from heat and entropy; not UET vacuum matching.",
+  "scope": "Two Gamma oscillators with unit weights, not Brillouin-zone or sample heat capacity.",
+  "open_blockers": [
+    "physical epsilon_i_prime(Phi)",
+    "normalization",
+    "source/bath relaxation",
+    "full dispersion/weights and same-state material match"
+  ],
+  "dependency_unlocked": [
+    "protocol-aware thermal mapping design only"
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "alpha_Phi_K": null,
+  "evidence_hashes": {
+    "docs/core/artifacts/t13_mp48_interlayer_mode_residue_audit.json": "c2a9361d4ce0344ef96576f1f1131707af3fd9fc8819f05d0cf180395ea2c538",
+    "docs/scripts/audit/audit_topic13_mode_work_heat.py": "da11e1345f541d61fd46a74f7596f90e4e0977b0e49b6e62929230a078f37714",
+    "docs/core/uet_mode_work_heat.py": "c30c53d8ed87c9f8ecdb7946d1755eca1b8508d7f5509fc6851d90a987b55d31",
+    "docs/core/test/test_topic13_mode_work_heat.py": "71f3fcb58a558298bc1bb1829631324f981779983a84c0caeeb0bab62c525144",
+    "docs/core/artifacts/uet_equation_correspondence_registry_topic13_mode_heat_addendum.json": "18ef2d6af3c3f8dcf3f84cd3e2ab07f110e72194ef2ddca08b38cbea8a30989e"
+  },
+  "claim_boundary": "No temperature prediction for a driven TTG experiment, KMS/bath coefficient or physical alpha."
+}

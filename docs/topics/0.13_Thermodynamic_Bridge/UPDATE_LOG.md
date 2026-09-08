@@ -1,3 +1,17 @@
+## 2026-09-08 - Mode work/heat and preparation protocol
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for conditional harmonic protocol separation.
+WHAT_IS_ACTUALLY_CLOSED: Gap work is separated from occupation heat; isothermal, reversible isentropic and frozen-occupation limits differ. Unperturbed spectra do not fix source derivatives.
+WHAT_REMAINS_OPEN: Physical Phi gap derivative/normalization, preparation, bath dynamics and full material measure.
+DEPENDENCY_UNLOCKED: Protocol-aware design only; no physical unlock.
+STATUS: PASS_CONDITIONAL_HARMONIC_PROTOCOLS.
+WHAT_CHANGED: Added comparator, nine tests, source-pole illustration, candidate registry and docs/core/T13_MODE_WORK_HEAT_PROTOCOL.md.
+EQUATION_OR_MAPPING: dU=sum[(n+1/2)d_epsilon+epsilon*dn]; equilibrium isentropic gain is T*sum(C_i*f_i/epsilon_i)/sum(C_i).
+VERIFICATION: Nine focused tests pass; central derivatives and entropy cancellation independently checked. Example uses two source Gamma oscillators and artificial log-gap scaling, not physical Phi. No holdout or clipped negative modes.
+CONTROLLING_BLOCKER: physical_gap_source_derivative_and_relaxation_protocol_missing.
+NEXT_ACTION: Derive independent source response and occupation dynamics; do not use strain response or all energy change as heat without mapping.
+CLAIM_BOUNDARY: Harmonic protocol comparator, not sample heat capacity, KMS closure, physical alpha or full Topic 13 readiness.
+
 ## 2026-09-08 - MP48 Gamma crystal irrep identified
 
 MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for source Gamma E2g identification only.
