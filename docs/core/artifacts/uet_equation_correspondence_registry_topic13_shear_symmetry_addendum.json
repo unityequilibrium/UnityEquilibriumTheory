@@ -1,0 +1,21 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "status": "CANDIDATE_SELECTION_RULE_DIAGNOSTIC",
+  "equation_entries": [{
+    "equation_id": "uet.thermal.scalar_to_shear_selection_rule",
+    "classification": "conditional_selection_rule",
+    "ontology": {"Phi": "assumed invariant scalar under the declared material point group only", "s": "E2g material normal-coordinate doublet, not Phi", "C_R_gen_R_obs": "unchanged and excluded"},
+    "relation_or_code_path": "Invariant linear vector satisfies D(g)^T*l=l; invariant symmetric Hessian satisfies D(g)^T*H*D(g)=H.",
+    "units": {"representation": "1", "s": "m", "H": "N/m for physical displacement potential"},
+    "unit_lane": "dimensionless_representation_on_material_coordinates",
+    "derivation_class": "conditional_group_algebra",
+    "observable": "allowed linear force and quadratic spectral perturbation channels",
+    "data_role": "ANALYTIC_DIAGNOSTIC_NO_CALIBRATION",
+    "verification_status": "CONDITIONAL_ALGEBRA_TESTED_NOT_PHYSICAL_MATCH",
+    "controlling_blocker": "material_representation_and_pump_mapping_not_closed",
+    "claim_boundary": "No universal Phi representation or graphite/UET mode identification is asserted."
+  }],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}

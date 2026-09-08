@@ -1,3 +1,17 @@
+## 2026-09-08 - Scalar versus coherent-shear selection rule
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE conditional algebra, not material identity.
+WHAT_IS_ACTUALLY_CLOSED: Scalar-only linear forcing of a declared Gamma E2g doublet is excluded; quadratic scalar coupling and anisotropic pump pairing remain allowed.
+WHAT_REMAINS_OPEN: Full irrep/source identification, Phi normalization and source derivative, pump tensor and bath/occupation mapping.
+DEPENDENCY_UNLOCKED: Research channel choice only, no physical unlock.
+STATUS: CONDITIONAL_ALGEBRA_ONLY.
+WHAT_CHANGED: Added diagnostic module, tests, candidate registry and docs/core/T13_SHEAR_SYMMETRY_CHANNELS.md. Existing quadratic matter interaction is not rejected or modified.
+EQUATION_OR_MAPPING: D^T*l=l implies l=0; D^T*H*D=H allows H=h*I. Equal pump intensities can have opposite traceless directional sources.
+VERIFICATION: Twenty linked tests pass, seven new; invariant dimensions zero and one, group-average residual 1.434e-16. No source or holdout input. Temporary tool quota refusal resolved via read-only usage/state check without reset credits or alternative execution path.
+CONTROLLING_BLOCKER: physical_scalar_mass_source_and_pump_channel_identification_missing.
+NEXT_ACTION: Follow scalar occupation/energy response for thermal mapping; require polarized source and detector map for coherent motion. Check full crystal irrep rather than promoting shape-only identification.
+CLAIM_BOUNDARY: Conditional symmetry rule only; discrete material E2g is not the complete internal O(2) action. No physical alpha, thermalization or full-topic unlock.
+
 ## 2026-09-08 - Independent axial-strain source and transfer boundary
 
 MAJOR_RESULT_CLOSURE: PARTIAL; published-model source route found, physical transfer not closed.
