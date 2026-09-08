@@ -1,0 +1,50 @@
+{
+  "major_result_id": "T13_INDEPENDENT_AXIAL_STRAIN_SOURCE_TRANSFER_BOUNDARY",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "what_is_closed": [
+    "Independent published-model axial strain route located; direct MP48 transfer is not admissible."
+  ],
+  "equation_or_mapping": "At source reference strain: d ln(nu^2)/d epsilon_zz=-6*gamma",
+  "units": {
+    "log_squared_energy_strain_derivative": "1"
+  },
+  "derivation_class": "derivative_of_published_fit_not_microscopic_UET_derivation",
+  "observable": "source-model shear spectral strain sensitivity",
+  "data_role": "PUBLISHED_MODEL_COMPARISON_NOT_EXPERIMENTAL_CALIBRATION",
+  "verification_status": "SOURCE_JOIN_CHECKED_TRANSFER_BLOCKED",
+  "result": {
+    "source_state_log_squared_energy_strain_derivative": -10.0374,
+    "fit_error_only_derivative_uncertainty": 0.0012000000000000001,
+    "MP48_spacing_angstrom": 3.53936985952671,
+    "source_reference_spacing_angstrom": 3.2,
+    "MP48_strain_relative_to_source_reference": 0.10605308110209677,
+    "above_compressive_reference": true,
+    "full_fit_domain_membership": "OUTSIDE",
+    "cross_model_transfer_allowed": false,
+    "corrected_MP48_frequency": null,
+    "physical_D_tensor": null,
+    "alpha_Phi_K": null
+  },
+  "open_blockers": [
+    "same-state strained force constants",
+    "model uncertainty",
+    "UET mode/normalization"
+  ],
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "source_row_hashes": {
+    "reference_spacing": "269a5ff235f4be9648fc6a26fe5bb767fc4e27483b1e21824172488b0e4fddb7",
+    "reference_shear_frequency": "7ef7347a71b741dd5a7bd365b9915e702e5ecabe93ef0df1b0994c17ee8a01e2",
+    "fixed_plane_gamma": "a805214af6a5d7a976c215916dcaf0fb36a2fec5bafdaca541e4c1f2bde1f6cf",
+    "relaxed_plane_gamma": "a866557f851e8d000c3d4b155fa09bbfe59a0bd209966214b75fe542c4cf09ed"
+  },
+  "evidence_hashes": {
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/sun_2017_interlayer_strain_source_package.json": "646b3337d80d0745e521a28228e0763277307dcee6427c479d52852ae5a7d148",
+    "docs/core/artifacts/t13_mp48_interlayer_mode_residue_audit.json": "c2a9361d4ce0344ef96576f1f1131707af3fd9fc8819f05d0cf180395ea2c538",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/sun_2017_interlayer_strain.pdf": "c555a50a136f67ddd522e2eba12486ea605f196ed71b125830cdfd85cdb1a2c4",
+    "docs/scripts/audit/audit_topic13_interlayer_strain_transfer.py": "70a96f2d8c9a5a12ead9779d523f26db4d1e5f1c452dea6f6777b9c81d0a55bb"
+  },
+  "claim_boundary": "No frequency correction, physical D/alpha, external validation or holdout access."
+}

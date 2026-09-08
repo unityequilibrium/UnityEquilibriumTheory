@@ -1,3 +1,17 @@
+## 2026-09-08 - Independent axial-strain source and transfer boundary
+
+MAJOR_RESULT_CLOSURE: PARTIAL; published-model source route found, physical transfer not closed.
+WHAT_IS_ACTUALLY_CLOSED: Source PDF/rows locked; published strain-fit derivative and MP48 geometry comparison reproduced.
+WHAT_REMAINS_OPEN: Same-state strained force constants, model uncertainty and UET identity/normalization.
+DEPENDENCY_UNLOCKED: None.
+STATUS: SOURCE_JOIN_CHECKED_TRANSFER_BLOCKED.
+WHAT_CHANGED: Added Sun source package, transfer audit, three new tests and docs/core/T13_INTERLAYER_STRAIN_TRANSFER.md.
+EQUATION_OR_MAPPING: Source-reference d ln(nu^2)/d epsilon_zz=-6*gamma. No MP48 correction or physical alpha generated.
+VERIFICATION: Thirteen combined tests pass; PDF pages visually checked; source and precursor evidence hashes match. No holdout or force-constant edits.
+CONTROLLING_BLOCKER: common_state_strained_force_constants_and_model_uncertainty_missing.
+NEXT_ACTION: Acquire common-functional strain data; separate geometry, interaction approximation and temperature before attributing the mismatch.
+CLAIM_BOUNDARY: Published fit derivative, not experimental calibration or new accepted core equation. Full-topic/He-4 status unchanged.
+
 ## 2026-09-08 - Interlayer mode source-model progress (partial)
 
 MAJOR_RESULT_CLOSURE: PARTIAL; no physical or full-topic closure.

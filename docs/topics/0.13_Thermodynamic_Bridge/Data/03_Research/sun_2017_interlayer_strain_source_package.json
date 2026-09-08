@@ -1,0 +1,27 @@
+{
+  "schema_version": "t13-source-strain-candidate-v1",
+  "status": "SOURCE_FACTS_LOCKED_CROSS_MODEL_TRANSFER_BLOCKED",
+  "source_id": "sun_2017_arxiv_1704_04202v1",
+  "url": "https://arxiv.org/pdf/1704.04202v1",
+  "title": "Graphite Under Compression: Shift of Layer Breathing and Shear Modes Frequencies with Interlayer Spacing",
+  "raw_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/sun_2017_interlayer_strain.pdf",
+  "sha256": "c555a50a136f67ddd522e2eba12486ea605f196ed71b125830cdfd85cdb1a2c4",
+  "rights": "Publicly accessible author preprint; raw PDF local-only, redistribution not asserted.",
+  "method": "PBE plus Grimme vdW, harmonic finite displacement; not MP48 PBEsol.",
+  "data_role": "PUBLISHED_MODEL_COMPARISON_NOT_EXPERIMENTAL_CALIBRATION",
+  "preprocessing": "Manual numeric transcription; pages 2 and 3 visually checked; no curve digitization.",
+  "rows": {
+    "reference_spacing": {"value": 3.20, "unit": "angstrom", "uncertainty": null, "locator": "page 2 left column optimized geometry"},
+    "reference_shear_frequency": {"value": 48.70, "unit": "cm^-1", "uncertainty": null, "locator": "page 2 right column unstrained CM"},
+    "fixed_plane_gamma": {"value": 1.6729, "unit": "1", "uncertainty": 0.0002, "locator": "page 3 left column and Fig. 2(a)"},
+    "relaxed_plane_gamma": {"value": 1.675, "unit": "1", "uncertainty": 0.001, "locator": "page 3 left column and Fig. 2(b)"}
+  },
+  "formula": "nu/nu0=(d/d0)^(-3*gamma)",
+  "formula_locator": "page 1 Eq. (3)",
+  "fit_domain": "Compression corresponding to 0-10 GPa; fixed-plane fit starts at d0=3.20 angstrom.",
+  "uncertainty_policy": "Reported errors are fit errors; confidence/covariance and functional model error are not supplied.",
+  "transfer_to_MP48": "BLOCKED_DIFFERENT_FUNCTIONAL_GEOMETRY_AND_FIT_DOMAIN",
+  "transfer_to_Raman": "BLOCKED_SAME_STATE_UNCERTAINTY_NOT_ESTABLISHED",
+  "Phi_identification": false,
+  "holdout_role": "NONE"
+}
