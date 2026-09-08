@@ -1,3 +1,17 @@
+## 2026-09-08 - Permitted experimental UED archive acquired
+
+MAJOR_RESULT_CLOSURE: PARTIAL; numeric archive acquired, physical population mapping open.
+WHAT_IS_ACTUALLY_CLOSED: CC-BY-4.0 processed archive downloaded; 271920160 bytes and publisher MD5 verified. Two processed members and pinned author notebook identified without unpickling.
+WHAT_REMAINS_OPEN: Safe decoding, numeric units/row identities/uncertainties, detector-to-mode inversion, unseen modes, sample equivalence and Phi coefficient.
+DEPENDENCY_UNLOCKED: Safe payload inspection only.
+STATUS: ARCHIVE_HASH_VERIFIED_NUMERIC_MAPPING_OPEN.
+WHAT_CHANGED: Added acquisition audit, two tests and docs/core/T13_UED_POPULATION_SOURCE_ROUTE.md. Raw archive, metadata and notebook remain ignored/local-only.
+EQUATION_OR_MAPPING: Pump-on/off diffraction images versus delay are not yet mode occupations or temperature.
+VERIFICATION: Two tests pass; published archive checksum and SHA-256 recorded; member directory inspected without extraction, CRC inflation or code execution. No holdout file was downloaded/read; an unrelated locked-source search hit was not opened or used computationally.
+CONTROLLING_BLOCKER: safe_numeric_decoding_and_detector_to_mode_mapping_missing.
+NEXT_ACTION: Convert reviewed payloads to non-executable arrays; preserve calibration and uncertainty before population or relaxation inference. Do not equate dephasing with energy relaxation.
+CLAIM_BOUNDARY: Experimental acquisition only, not mode lifetime, physical alpha or TTG validation. Full-topic and He-4 statuses unchanged.
+
 ## 2026-09-08 - Mode work/heat and preparation protocol
 
 MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for conditional harmonic protocol separation.
