@@ -6,6 +6,20 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Raman Material-Deformation Constraint (2026-09-08)
+
+The [Raman result](../../core/artifacts/t13_raman_deformation_constraint_audit.json)
+adds a source-backed physical constraint rather than another synthetic coupling.
+Eight extracted Hanfland 1989 rows identify graphite mode gaps and hydrostatic
+squared-energy derivatives at the source state. They constrain one combination
+of two scalar strain coefficients per mode, not a full D tensor or Phi scale.
+An independent fixed-in-plane axial-strain measurement is sufficient to remove
+that scalar rank deficiency. Abstract/table uncertainty differences are retained.
+The 44 cm^-1 interlayer mode has gap/k_B=63.31 K, versus 2271.83 K for the
+1579 cm^-1 mode. Fixed-frequency oscillator screening favors studying the low
+gap first; it does not identify a whole heat-carrying branch or TTG transport.
+[Source, derivation and limits](../../core/T13_RAMAN_DEFORMATION_CONSTRAINT.md).
+
 ## Reciprocal Material/Response Dynamics (2026-09-08)
 
 The [reciprocal result](../../core/artifacts/t13_reciprocal_thermal_dynamics_audit.json)

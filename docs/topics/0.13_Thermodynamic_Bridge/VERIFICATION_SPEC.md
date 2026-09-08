@@ -1,5 +1,16 @@
 # Verification Spec
 
+## Raman Deformation Source Constraint (2026-09-08)
+
+Run docs.scripts.audit.audit_topic13_raman_deformation_constraint and pytest
+docs/core/test/test_topic13_raman_deformation_constraint.py. Check the primary
+PDF hash, eight unique rows, source units/locators and both uncertainty routes.
+Check wavenumber/angular-frequency equivalence, independent pressure and
+temperature derivatives, interval corners, rank/null directions and the
+synthetic second-strain design. Two modes have four unknown scalar components.
+Reject missing source files, wrong units and invalid domains rather than
+substituting data. Preserve aggregate hashes and absent physical D/alpha fields.
+
 ## Reciprocal G/r Thermal Dynamics (2026-09-08)
 
 Run docs.scripts.audit.audit_topic13_reciprocal_thermal_dynamics and pytest

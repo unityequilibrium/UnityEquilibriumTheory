@@ -1,0 +1,98 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "SCOPED_SPECTRAL_CONSTRAINT_NOT_UET_IDENTITY",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "equation_entries": [
+    {
+      "ontology": {
+        "x_mode": "squared measured mode energy, not automatically UET mass",
+        "D": "conditional mode strain derivative",
+        "C_Phi_R_gen_R_obs": "unchanged; no mode identification"
+      },
+      "units": {
+        "x_mode": "J^2",
+        "dx_dP": "J^2 Pa^-1",
+        "D_over_x": "1",
+        "nu": "cm^-1",
+        "B": "GPa",
+        "delta0": "GPa^-1"
+      },
+      "unit_lane": "SI_spectroscopic_not_base_Phi",
+      "derivation_class": "derived_relation",
+      "observable": "mode gap and hydrostatic squared-energy susceptibility",
+      "data_role": "EXTERNAL_SPECTROSCOPIC_CONSTRAINT_WITH_SEPARATE_HARMONIC_SCREENING",
+      "verification_status": "PASS_SOURCE_BACKED_SPECTRAL_PROJECTION_FULL_D_OPEN",
+      "controlling_blocker": "independent_strain_and_UET_mode_identification_missing",
+      "claim_boundary": "Source-state spectral constraints, not full D, Phi calibration, branch heat capacity, TTG transport or UET validation. Oscillator screening is conditional. Separate He-4 status unchanged.",
+      "physical_dependency_unlock": false,
+      "equation_id": "uet.thermal.raman_mass_deformation_constraint",
+      "version": "1",
+      "classification": "observable_definition",
+      "relation_or_code_path": {
+        "mode_energy": "E=h*c*100*nu_cm; x_mode=E^2",
+        "pressure_susceptibility": "dx_mode/dP=2*x_mode*delta0_GPa/1e9",
+        "constraint": "(-2/B_a,-1/B_c).(D_ab/x_mode,D_c/x_mode)=2*delta0",
+        "independent_axial_row": "D_c/x_mode=2*dln(nu)/deps_zz at fixed in-plane strain"
+      },
+      "variables": {
+        "x_mode": "squared measured mode energy, not automatically UET mass",
+        "D": "conditional mode strain derivative",
+        "C_Phi_R_gen_R_obs": "unchanged; no mode identification"
+      },
+      "mathematical_role": "measured projection and identifiability",
+      "standard_physics_counterpart": "Raman eigenfrequency pressure/strain susceptibility",
+      "observable_mapping": "mode gap and hydrostatic squared-energy susceptibility",
+      "parameter_dimensions": {
+        "x_mode": "J^2",
+        "dx_dP": "J^2 Pa^-1",
+        "D_over_x": "1",
+        "nu": "cm^-1",
+        "B": "GPa",
+        "delta0": "GPa^-1"
+      },
+      "source_or_origin": "Hanfland et al. 1989 Tables I/II and abstract, exact SI constants, chain rule",
+      "assumptions": [
+        "small hydrostatic perturbation",
+        "source pressure-fit derivatives",
+        "hexagonal scalar projection",
+        "UET mode identity open"
+      ],
+      "symmetry_and_conservation": "scalar symmetry restriction explicit; no new O(2) charge claim",
+      "limiting_cases": [
+        "one mode rank one",
+        "two modes rank two for four unknowns",
+        "independent axial strain"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_raman_deformation_constraint.py"
+      ],
+      "verifier_paths": [
+        "docs/core/test/test_topic13_raman_deformation_constraint.py",
+        "docs/scripts/audit/audit_topic13_raman_deformation_constraint.py"
+      ],
+      "evidence_class": "SOURCE_BACKED_DERIVED_SPECTRAL_CONSTRAINT",
+      "proof_status": "chain-rule/unit/rank identities with independent tests",
+      "failure_mode": [
+        "same_state_independent_strain_direction_missing",
+        "source_uncertainty_convention_unresolved",
+        "UET_mode_identity_and_kinetic_residue_missing",
+        "momentum_resolved_dispersion_and_thermal_measure_missing",
+        "Phi_normalization_and_pump_interface_missing",
+        "source_300K_to_TTG_state_equivalence_missing"
+      ],
+      "downstream_dependencies": [
+        "material_mode_identification"
+      ],
+      "dependency_role": "conditional_material_input_not_physical_unlock",
+      "next_hardening_step": "same-state independent strain, dispersion and residue",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_raman_deformation_constraint_audit.json",
+          "sha256": "ecd6e25601454d4f1df0932c7e98610d3089bb558c548aa9efe53f4d10868af4"
+        }
+      ]
+    }
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}

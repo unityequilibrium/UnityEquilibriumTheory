@@ -1,5 +1,14 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Raman Deformation Projection (2026-09-08)
+
+| formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| T13-RAMAN-DEFORMATION-20260908 | `x=(h*c*100*nu)^2; dx/dP=2*x*delta0/1e9; (-2/B_a,-1/B_c).(D_ab/x,D_c/x)=2*delta0` | docs/core/uet_raman_deformation_constraint.py | x J^2; dx/dP J^2 Pa^-1; nu cm^-1; delta0 GPa^-1; B GPa; D/x 1 | Hanfland 1989 source-fit coefficients and exact SI constants; no UET fit | spectral chain rule and conditional hexagonal rank identity | source hash, derivative/unit equivalence, uncertainty envelope and nullspace | missing independent strain direction, source-state and UET mode identity | acquire same-state strain/dispersion/residue before physical D or Phi mapping |
+
+The oscillator temperature scan freezes source frequencies and is screening
+only. Do not confuse the source's fitted pressure slopes with UET prediction.
+
 ## Reciprocal Thermal Dynamics (2026-09-08)
 
 | formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |

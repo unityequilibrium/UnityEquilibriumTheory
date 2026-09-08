@@ -1,4 +1,13 @@
 # Data Manifest
+## Raman Deformation Source (2026-09-08)
+
+- Source: Hanfland, Beister and Syassen, Phys. Rev. B 39, 12598 (1989), DOI 10.1103/PhysRevB.39.12598.
+- Package: Data/03_Research/hanfland_1989_raman_deformation_source_package.json; eight numeric rows from Tables I/II and abstract, with source notation, units, errors and locators.
+- Raw: Data/03_Research/raw/hanfland_1989_graphite_raman.pdf; SHA-256 300a6b03af667f71a27fc7c269e7a928af57d4b846bded25feaefa0e37b1089e; ignored local copy, not redistribution-authorized.
+- Preprocessing: manual transcription visually checked against the PDF; no digitization/refit/interpolation. Abstract/table uncertainty differences remain explicit; endpoint envelopes are not confidence intervals.
+- Role: source-state spectral deformation constraint, not physical UET calibration, TTG source admission, or permission to use a holdout. Original fit coefficients stay labelled as source-reported fits.
+- Consumer: docs/scripts/audit/audit_topic13_raman_deformation_constraint.py; emits evidence/row hashes and keeps physical_D_tensor and alpha_Phi_K absent. Fixed-frequency oscillator screening is separate from material observations.
+
 ## Current Core-Ready Data Projection (2026-08-28)
 
 - He-4 SVP equilibrium anchor: source-locked density/superfluid-fraction grid with row identity and hashes; calibration role only, not holdout.

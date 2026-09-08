@@ -1,0 +1,255 @@
+{
+  "schema_version": "t13-raman-deformation-constraint-v1",
+  "major_result_id": "T13_GRAPHITE_RAMAN_DEFORMATION_PROJECTION",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_SOURCE_BACKED_SPECTRAL_PROJECTION_FULL_D_OPEN",
+  "what_is_closed": [
+    "Eight source-reported spectral/modulus rows with PDF hash, row identity and uncertainty caveats.",
+    "SI mode-energy/pressure-susceptibility conversion and a measured hydrostatic deformation constraint.",
+    "Rank boundary and sufficient independent axial-strain design for the scalar two-component projection."
+  ],
+  "equation_registry_ids": [
+    "uet.thermal.raman_mass_deformation_constraint"
+  ],
+  "equation_or_mapping": {
+    "mode_energy": "E=h*c*100*nu_cm; x_mode=E^2",
+    "pressure_susceptibility": "dx_mode/dP=2*x_mode*delta0_GPa/1e9",
+    "constraint": "(-2/B_a,-1/B_c).(D_ab/x_mode,D_c/x_mode)=2*delta0",
+    "independent_axial_row": "D_c/x_mode=2*dln(nu)/deps_zz at fixed in-plane strain"
+  },
+  "ontology": {
+    "x_mode": "squared measured mode energy, not automatically UET mass",
+    "D": "conditional mode strain derivative",
+    "C_Phi_R_gen_R_obs": "unchanged; no mode identification"
+  },
+  "units": {
+    "x_mode": "J^2",
+    "dx_dP": "J^2 Pa^-1",
+    "D_over_x": "1",
+    "nu": "cm^-1",
+    "B": "GPa",
+    "delta0": "GPa^-1"
+  },
+  "unit_lane": "SI_spectroscopic_not_base_Phi",
+  "derivation_class": "derived_relation",
+  "observable": "mode gap and hydrostatic squared-energy susceptibility",
+  "data_role": "EXTERNAL_SPECTROSCOPIC_CONSTRAINT_WITH_SEPARATE_HARMONIC_SCREENING",
+  "source_state": {
+    "material": "hexagonal single-crystalline graphite",
+    "reference_temperature_K": 300,
+    "reference_pressure_Pa": 0,
+    "pressure_fit_range_GPa": [
+      0,
+      14
+    ],
+    "low_mode_caveat": "Pressure-cell low-frequency spectra visible only above about 4.5 GPa, with a separate free-standing zero-pressure frequency; delta0 is a fitted zero-pressure derivative, not a direct infinitesimal measurement.",
+    "axial_modulus_caveat": "a-axis fit uses fixed beta_prime=1; modulus represents a weak-compression average over the measured pressure range.",
+    "TTG_state_equivalence": "NOT_ESTABLISHED"
+  },
+  "uncertainty_policy": {
+    "kind": "source_reported_parenthetic_uncertainty",
+    "confidence_level": "NOT_IDENTIFIED",
+    "covariance": "NOT_REPORTED",
+    "propagation": "Rectangle sensitivity envelope only, not a statistical confidence interval or an independence assumption.",
+    "source_precision_discrepancy": "Abstract absolute pressure-slope uncertainties are broader than those implied by Table II logarithmic slopes, especially E2g(2). Preserve both routes and their union sensitivity envelope; do not silently select the tighter table errors.",
+    "full_uncertainty_closure": false
+  },
+  "source_row_hashes": {
+    "E2g1_absolute_pressure_slope": "aa63b67cd9fc80d1c17c23f43d7da95f7c98a0f25c68fbb8f8fdcc9089b7e87f",
+    "E2g2_absolute_pressure_slope": "1a138073201391199e187d689bddd2e616df4742303189cd6f78cc3f6908b56c",
+    "E2g1_frequency": "386933e3681afd8b5ac44ca00959677f850ec370e6b3ee26f91190b5610c83b8",
+    "E2g1_pressure_log_slope": "a7d1ca22e4c4006941abe5d7a501099c955c226f4208d24b723533ef568b990d",
+    "E2g2_frequency": "567b6e7e0c83d6aa9eafaa5abb5f573fefb254ca2ee678e41707ffb0c4ce8fb5",
+    "E2g2_pressure_log_slope": "b59c570eeb25c7f9552acc2c5d1afb30cafb97e4e74e1a162805417655eae081",
+    "axial_modulus_a": "d7b419e0eb024381b763c57c70490efb3dc4a8fea3d8467c5638bedeb61e10e2",
+    "axial_modulus_c": "66c13c44829a40304a20fea62db973ed6db0024a355198c304b0e4d1979dfc2f"
+  },
+  "primary_source": {
+    "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/hanfland_1989_graphite_raman.pdf",
+    "sha256": "300a6b03af667f71a27fc7c269e7a928af57d4b846bded25feaefa0e37b1089e",
+    "role": "LOCAL_ONLY_NOT_REDISTRIBUTED"
+  },
+  "mode_results": {
+    "E2g1": {
+      "table_log_slope_route": {
+        "gap_J": 8.740361771455285e-22,
+        "gap_over_k_B_K": 63.306182610173074,
+        "squared_gap_J2": 7.639392389591696e-43,
+        "squared_gap_pressure_derivative_J2_per_Pa": 1.6806663257101734e-52,
+        "log_squared_gap_pressure_derivative_per_Pa": 2.2e-10,
+        "gap_sensitivity_envelope_J": [
+          8.541717185740393e-22,
+          8.939006357170178e-22
+        ],
+        "pressure_derivative_sensitivity_envelope_J2_per_Pa": [
+          1.4884030226159248e-52,
+          1.8857776978232806e-52
+        ],
+        "uncertainty_interpretation": "endpoint sensitivity envelope, not a confidence interval"
+      },
+      "abstract_absolute_slope_route": {
+        "squared_gap_pressure_derivative_J2_per_Pa": 1.6667765213654611e-52,
+        "pressure_derivative_sensitivity_envelope_J2_per_Pa": [
+          1.4592186496234553e-52,
+          1.8822263273942352e-52
+        ],
+        "uncertainty_interpretation": "endpoint sensitivity envelope, not a confidence interval"
+      },
+      "union_sensitivity_envelope_J2_per_Pa": [
+        1.4592186496234553e-52,
+        1.8857776978232806e-52
+      ],
+      "normalized_constraint_rhs_per_GPa": 0.22,
+      "frozen_frequency_single_oscillator_c_over_k_B": {
+        "100.0": 0.9672614580799608,
+        "200.0": 0.9916923427100478,
+        "300.0": 0.9962974393732974
+      },
+      "screening_role": "HARMONIC_FIXED_FREQUENCY_COMPARATOR_NOT_LOW_T_MATERIAL_DATA"
+    },
+    "E2g2": {
+      "table_log_slope_route": {
+        "gap_J": 3.136598008438158e-20,
+        "gap_over_k_B_K": 2271.828689578711,
+        "squared_gap_J2": 9.838247066538217e-40,
+        "squared_gap_pressure_derivative_J2_per_Pa": 5.824242263390625e-51,
+        "log_squared_gap_pressure_derivative_per_Pa": 5.92e-12,
+        "gap_sensitivity_envelope_J": [
+          3.1346115625810093e-20,
+          3.138584454295307e-20
+        ],
+        "pressure_derivative_sensitivity_envelope_J2_per_Pa": [
+          5.777564313180735e-51,
+          5.871024576539525e-51
+        ],
+        "uncertainty_interpretation": "endpoint sensitivity envelope, not a confidence interval"
+      },
+      "abstract_absolute_slope_route": {
+        "squared_gap_pressure_derivative_J2_per_Pa": 5.856841192239345e-51,
+        "pressure_derivative_sensitivity_envelope_J2_per_Pa": [
+          5.479527813988954e-51,
+          6.234628086546942e-51
+        ],
+        "uncertainty_interpretation": "endpoint sensitivity envelope, not a confidence interval"
+      },
+      "union_sensitivity_envelope_J2_per_Pa": [
+        5.479527813988954e-51,
+        6.234628086546942e-51
+      ],
+      "normalized_constraint_rhs_per_GPa": 0.00592,
+      "frozen_frequency_single_oscillator_c_over_k_B": {
+        "100.0": 7.0197965001185e-08,
+        "200.0": 0.0015048318666232008,
+        "300.0": 0.02952205431841202
+      },
+      "screening_role": "HARMONIC_FIXED_FREQUENCY_COMPARATOR_NOT_LOW_T_MATERIAL_DATA"
+    }
+  },
+  "identifiability": {
+    "measurement_matrix": [
+      [
+        -0.0016,
+        -0.028011204481792715,
+        -0.0,
+        -0.0
+      ],
+      [
+        -0.0,
+        -0.0,
+        -0.0016,
+        -0.028011204481792715
+      ]
+    ],
+    "matrix_units": "GPa^-1",
+    "unknowns": "two dimensionless D_i/x_mode coefficients per mode",
+    "rank": 2,
+    "unknown_count": 4,
+    "nullity": 2,
+    "single_mode_null_direction": [
+      0.9983726339176906,
+      -0.0570270448493785
+    ],
+    "null_residual": 2.168404344971009e-19,
+    "component_bounds_identified": false
+  },
+  "axial_compressibility_sensitivity_envelopes_per_GPa": {
+    "a": [
+      0.0007575757575757576,
+      0.000847457627118644
+    ],
+    "c": [
+      0.026178010471204185,
+      0.03012048192771084
+    ]
+  },
+  "independent_axial_design_witness": {
+    "data_role": "SYNTHETIC_ONLY",
+    "input_D_over_x": [
+      -0.4,
+      -8.0
+    ],
+    "recovered_D_over_x": [
+      -0.400000000000001,
+      -8.0
+    ]
+  },
+  "physical_D_tensor": null,
+  "alpha_Phi_K": null,
+  "full_source_uncertainty_accepted": false,
+  "checks": {
+    "primary_pdf_hash_matches_reviewed_copy": true,
+    "eight_unique_source_rows_with_units_and_errors": true,
+    "SI_defining_constants_match": true,
+    "independent_conversion_uncertainty_and_rank_tests": true,
+    "two_modes_do_not_identify_four_components": true,
+    "null_residual_small": true,
+    "second_strain_design_recovers_synthetic_witness": true,
+    "source_uncertainty_discrepancy_retained": true,
+    "spectral_projections_positive": true,
+    "oscillator_screen_bounded": true,
+    "whole_topic_hashes_unchanged": true
+  },
+  "test_count": 12,
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/hanfland_1989_raman_deformation_source_package.json",
+      "sha256": "37310f0ec57bf1e9071d4622001cf931f98a7abe919dd1f892940bc798722518"
+    },
+    {
+      "path": "docs/core/T13_RAMAN_DEFORMATION_CONSTRAINT.md",
+      "sha256": "0b61d354e6e689810ad0562c4a791d42998a660a9b9ab0717e35ce6d1cf5f84c"
+    },
+    {
+      "path": "docs/core/uet_raman_deformation_constraint.py",
+      "sha256": "0d20ef2d9a72a5aa749adc875f549c2c93b8eaf6eb2a59789171b720be7d5e85"
+    },
+    {
+      "path": "docs/core/test/test_topic13_raman_deformation_constraint.py",
+      "sha256": "81b1c183f3fc701eb43e42bbd99163a83433f5a9a282096172b35c0c44566f61"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_raman_deformation_constraint.py",
+      "sha256": "71ed71035e7e0f31f7ae499a5d70d9ed55baf90825f28af5569b5cb0f6b7afac"
+    }
+  ],
+  "protected_full_closure_hashes": {
+    "docs/core/artifacts/t13_topic13_closure_matrix.json": "9545138da34726bba60c3e8af29714d577f6579b2cb0489bbba94834f4cb45e5",
+    "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json": "dc0d658a353172074425d2a8259dce3a4fa7b6b75bea68310c7a1492421d5d58"
+  },
+  "input_policy": "Only named 1989 Raman package/PDF and code/tests. No Ding/Xie numeric inputs, TTG fit or holdout. Original study fit parameters remain labelled as such.",
+  "open_blockers": [
+    "same_state_independent_strain_direction_missing",
+    "source_uncertainty_convention_unresolved",
+    "UET_mode_identity_and_kinetic_residue_missing",
+    "momentum_resolved_dispersion_and_thermal_measure_missing",
+    "Phi_normalization_and_pump_interface_missing",
+    "source_300K_to_TTG_state_equivalence_missing"
+  ],
+  "controlling_blocker": "independent_strain_and_UET_mode_identification_missing",
+  "dependency_unlocked": "Low-interlayer-mode identification and independent-strain research design only",
+  "physical_dependency_unlock": false,
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "claim_boundary": "Source-state spectral constraints, not full D, Phi calibration, branch heat capacity, TTG transport or UET validation. Oscillator screening is conditional. Separate He-4 status unchanged."
+}

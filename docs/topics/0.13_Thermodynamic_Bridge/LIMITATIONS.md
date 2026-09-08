@@ -1,5 +1,17 @@
 # Limitations
 
+## Raman Source and Mode-Identity Boundary (2026-09-08)
+
+Raman eigenfrequency derivatives constrain a physical spectral quantity, not
+an automatically identified UET matter curvature. Full D, kinetic residue,
+Phi normalization, dispersion, thermal measure and pump coupling remain open.
+The pressure study is at 300 K; its fitted zero-pressure slopes and axial
+moduli do not establish TTG sample/temperature equivalence. Source error
+confidence/covariance and abstract/table precision differences remain open.
+Frozen-frequency oscillator screening is not a measured low-temperature heat
+capacity, integrated branch heat capacity or conductivity. Raw copyrighted
+article copies are local-only. No He-4 status or physical dependency is changed.
+
 ## Reciprocal Quadratic Lane Boundary (2026-09-08)
 
 The new reciprocal G/r system is a declared local material extension, not an

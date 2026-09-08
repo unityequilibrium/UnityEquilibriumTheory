@@ -1,3 +1,29 @@
+## 2026-09-08 - Source-backed graphite Raman deformation projection
+
+MAJOR_RESULT_CLOSURE: T13_GRAPHITE_RAMAN_DEFORMATION_PROJECTION is CLOSED_FOR_LANE as a source-state spectral constraint, not a UET material calibration.
+
+WHAT_IS_ACTUALLY_CLOSED: Eight primary-source numeric rows with locators, reported errors, original PDF hash and row hashes. SI mode-energy/pressure-susceptibility conversion, one hydrostatic deformation contraction per mode, and the rank deficiency that an independent axial-strain measurement can remove.
+
+WHAT_REMAINS_OPEN: Independent same-state strain direction, source uncertainty convention, UET mode identity and kinetic residue, momentum-resolved dispersion/thermal measure, Phi normalization/pump interface and 300 K to TTG state equivalence.
+
+DEPENDENCY_UNLOCKED: Source-backed low-interlayer-mode identification and independent-strain research design only. No physical dependency or separate He-4 status is changed.
+
+STATUS: PASS_SOURCE_BACKED_SPECTRAL_PROJECTION_FULL_D_OPEN; local full_core_unlock=false; physical D tensor and alpha_Phi_K remain absent.
+
+WHAT_CHANGED: Added source package and local-only raw PDF, spectral conversion/rank module, tests, derivation, audit and candidate registry. Synchronized source manifest and topic docs. Raw article/renderings are excluded from Git; source facts are cited. A transient tool-quota refusal interrupted audit creation; read-only state and restored usage were verified before the same editing path resumed.
+
+EQUATION_OR_MAPPING: x_mode=(h*c*100*nu_cm)^2; dx/dP=2*x_mode*delta0_GPa/1e9; (-2/B_a,-1/B_c).(D_ab/x_mode,D_c/x_mode)=2*delta0. Each Raman mode has its own two unknown scalar deformation coefficients.
+
+VERIFICATION: 86 linked pytest cases pass (12 Raman cases); 11 generated checks pass. Source PDF/evidence/registry/protected hashes verified, no fit or TTG/holdout input. Low/high gaps divided by k_B are 63.3062 K and 2271.8287 K. At frozen frequency the single-oscillator c/k_B at 200 K is 0.991692 and 0.00150483; these are screening calculations, not branch or sample heat capacities. Table-derived dx/dP is 1.68067e-52 and 5.82424e-51 J^2/Pa, with separate abstract-derived routes and union sensitivity envelopes. Both modes together have rank two for four unknowns. F0 369 rows without duplicates; foundation/compatibility remain BLOCKED.
+
+CONTROLLING_BLOCKER: independent_strain_and_UET_mode_identification_missing.
+
+NEXT_ACTION: Inspect the existing independent graphite phonon payload for low-interlayer-doublet eigenvectors, dispersion and residue; compare a separate fixed-in-plane strain source without treating DFT fit errors as experimental uncertainty or fusing mismatched states.
+
+CLAIM_BOUNDARY: Source-state spectral evidence, not full D, physical Phi/alpha, total heat capacity, TTG heat transport or UET validation. The source pressure slopes are published fit parameters, not UET predictions. Abstract/table uncertainty precision differs and remains unresolved; endpoint envelopes are not confidence intervals.
+
+EVIDENCE_HASHES: Raman artifact ecd6e25601454d4f1df0932c7e98610d3089bb558c548aa9efe53f4d10868af4; registry fa16bfd34a605202211ce868e5b8883da2ba114576d6ef6ff9b8fcc374f2516e; source package 37310f0ec57bf1e9071d4622001cf931f98a7abe919dd1f892940bc798722518.
+
 ## 2026-09-08 - Reciprocal material/response energy and entropy
 
 MAJOR_RESULT_CLOSURE: T13_RECIPROCAL_MATERIAL_RESPONSE_ENERGY_ENTROPY is CLOSED_FOR_LANE within the declared local quadratic material extension.

@@ -1,5 +1,17 @@
 ﻿# Method
 
+## Spectroscopic Material-Source Projection (2026-09-08)
+
+Use the hash-locked Hanfland 1989 source package, not digitized TTG curves.
+Convert Raman wavenumber to E=h*c*100*nu and x_mode=E^2, then convert the
+reported logarithmic pressure derivative with dx/dP=2*x*delta0/1e9 in SI.
+Keep the absolute-slope abstract route separate and form only an endpoint
+sensitivity envelope spanning both reports, not a confidence interval.
+For each mode the hexagonal scalar relation is
+(-2/B_a,-1/B_c).(D_ab/x,D_c/x)=2*delta0. Demonstrate its nullspace before
+considering independent axial-strain data. A second Raman mode brings its
+own unknown coefficients and does not remove the first mode's nullspace.
+
 ## Joint G/r Reciprocal Dynamics (2026-09-08)
 
 Use the same declared quadratic free energy for stress, entropy and Phi force.
