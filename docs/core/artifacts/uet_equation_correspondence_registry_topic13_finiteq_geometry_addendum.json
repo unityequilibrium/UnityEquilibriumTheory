@@ -1,0 +1,22 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "status": "CANDIDATE_DIAGNOSTIC_NOT_MERGED",
+  "equation_entries": [{
+    "equation_id": "uet.diagnostic.finiteq_one_phonon_geometry",
+    "relation_or_code_path": "S_j=|sum_s exp(2pi i G.x_s) Q.conj(e_sj(q))/sqrt(m_s)|^2; Q=(G+q) reciprocal",
+    "ontology": "Material harmonic displacement; not C, Phi, R_gen or R_obs state identification",
+    "units": {"Q": "angstrom^-1 including 2pi", "x": "fractional direct", "G": "fractional reciprocal", "m": "atomic mass unit", "S": "angstrom^-2/atomic mass unit"},
+    "derivation_class": "IMPORTED_KINEMATIC_GEOMETRY",
+    "standard_physics_counterpart": "Phonopy one-phonon amplitude phase convention, with common atomic/Debye-Waller and frequency factors omitted",
+    "source_locator": "https://phonopy.github.io/phonopy/dynamic-structure-factor.html",
+    "observable": "geometric response, not absolute electron counts",
+    "data_role": "SOURCE_MODEL_DIAGNOSTIC",
+    "verification_status": "NUMERICAL_AMPLITUDE_CROSS_CHECK_ONLY",
+    "controlling_blocker": "physical_detector_response_and_covariance_not_identified",
+    "claim_boundary": "No physical UET map, fit, independent source validation or temperature calibration",
+    "implementation_paths": ["docs/scripts/audit/audit_topic13_finiteq_scattering_geometry.py"],
+    "dependency_role": "diagnostic_only",
+    "physical_dependency_unlock": false
+  }]
+}

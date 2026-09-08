@@ -1,3 +1,17 @@
+## 2026-09-09 - Finite-q phase and response rank
+
+MAJOR_RESULT_CLOSURE: PARTIAL; finite-q geometric phase cross-check and declared-grid rank quantified.
+WHAT_IS_ACTUALLY_CLOSED: Six q points, 24 basal reciprocal vectors, eight visible columns; ranks six and five on the two paths.
+WHAT_REMAINS_OPEN: Energy-functional identifiability, actual response/covariance, invisible modes and Phi coupling.
+DEPENDENCY_UNLOCKED: Observable-identifiability design only.
+STATUS: REFERENCE_MATCHED_GEOMETRY_ONLY.
+WHAT_CHANGED: Operator, registry addendum, three tests, artifact and docs/core/T13_FINITEQ_SCATTERING_GEOMETRY.md.
+EQUATION_OR_MAPPING: G-position phase and conjugated Phonopy eigenvectors; Q polarization contraction. Geometric factors only.
+VERIFICATION: Three tests; maximum reference discrepancy 5.603e-16; source hashes and reference version/method hash recorded. F0 369 rows/no duplicates; foundation/compatibility audits PASS with physical states BLOCKED.
+CONTROLLING_BLOCKER: energy_functional_identifiability_and_physical_detector_operator_missing.
+NEXT_ACTION: Test energy functional against frequency-weighted response null space; do not force all populations to be individually resolved if an aggregate observable is identifiable.
+CLAIM_BOUNDARY: Ideal geometry rank, not experimental rank or population/temperature recovery. No holdout, fitting, clipping or topic closure promotion.
+
 ## 2026-09-09 - Gamma scattering rank boundary
 
 MAJOR_RESULT_CLOSURE: PARTIAL; six sampled Gamma geometry rows cannot independently distinguish the two E2g pair populations.
