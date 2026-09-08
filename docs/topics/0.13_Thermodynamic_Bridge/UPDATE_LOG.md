@@ -1,3 +1,17 @@
+## 2026-09-08 - Interlayer mode source-model progress (partial)
+
+MAJOR_RESULT_CLOSURE: PARTIAL; no physical or full-topic closure.
+WHAT_IS_ACTUALLY_CLOSED: Mass-centroid and spectral response identities independently tested; source-locked short-path calculation executed.
+WHAT_REMAINS_OPEN: Raman/material-state correspondence, independent strain, phase-convention review, registry integration and Phi normalization.
+DEPENDENCY_UNLOCKED: None.
+STATUS: Ten focused tests and eight source-model checks pass; draft remains PARTIAL.
+WHAT_CHANGED: Added interlayer module tests, audit and progress record at docs/core/T13_MP48_INTERLAYER_MODE_PROGRESS.md.
+EQUATION_OR_MAPPING: mu=1.9944236595077444e-26 kg; Z_pair=B^dagger*P_pair*B/mu. Gamma pair 29.083635244 cm^-1; minimum short-path shear weight 0.9969846893.
+VERIFICATION: Locked raw hashes, independent Gamma assembly, spectral resolvent, eigenpairs and q parity checked. F0 369 rows, foundation/compatibility BLOCKED; original gates unchanged.
+CONTROLLING_BLOCKER: material_mode_correspondence_and_independent_strain_missing.
+NEXT_ACTION: Join source records and explain the mismatch with Raman 44 +/- 1 cm^-1 before material/UET matching; no force-constant retuning.
+CLAIM_BOUNDARY: Harmonic material diagnostic only; no alpha, transport, holdout use or physical unlock. Separate He-4 claim unchanged, not revalidated.
+
 ## 2026-09-08 - Source-backed graphite Raman deformation projection
 
 MAJOR_RESULT_CLOSURE: T13_GRAPHITE_RAMAN_DEFORMATION_PROJECTION is CLOSED_FOR_LANE as a source-state spectral constraint, not a UET material calibration.
