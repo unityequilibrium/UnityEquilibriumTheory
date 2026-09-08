@@ -1,3 +1,17 @@
+## 2026-09-09 - Same-irrep branch distinction
+
+MAJOR_RESULT_CLOSURE: PARTIAL; two distinct source E2g eigenspaces, global grouping unresolved.
+WHAT_IS_ACTUALLY_CLOSED: Source pairs 3/4 and 8/9 both match E2g but occur at 29.0836 and 1585.2968 cm^-1 with rigid-shear weights near one and zero.
+WHAT_REMAINS_OPEN: Branch-resolved detector map, source correspondence, Phi coefficient and near-zero grouping stability.
+DEPENDENCY_UNLOCKED: Branch-aware source choice only.
+STATUS: UNRESOLVED aggregate; individual pair character tests pass.
+WHAT_CHANGED: Multiplicity audit, three tests, full signed spectrum/grouping artifact and docs/core/T13_MP48_E2G_MULTIPLICITY.md.
+EQUATION_OR_MAPPING: Existing symmetry and shear projectors applied to separate source eigenspaces; no new core equation.
+VERIFICATION: Three tests pass; actual audit exits nonzero with grouping_stable=false. Sweep changes only near-zero indices; both E2g pairs remain separate. Force constants and thresholds unchanged. Foundation audit PASS, foundation BLOCKED.
+CONTROLLING_BLOCKER: physical_branch_resolved_scattering_map_missing.
+NEXT_ACTION: Model branch-specific scattering with actual eigenvectors; do not equate shared E2g names or import fitted EELS temperatures as independent calibration.
+CLAIM_BOUNDARY: No UED population, physical alpha or full-topic promotion. No holdout input. Partial artifact intentionally retains failed aggregate check.
+
 ## 2026-09-09 - Source strip and physical-mixture boundary
 
 MAJOR_RESULT_CLOSURE: PARTIAL; changing finite support excluded in the declared archived strip.
