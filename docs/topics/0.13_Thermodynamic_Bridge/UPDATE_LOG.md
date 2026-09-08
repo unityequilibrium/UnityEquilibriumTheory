@@ -1,3 +1,17 @@
+## 2026-09-08 - MP48 Gamma crystal irrep identified
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for source Gamma E2g identification only.
+WHAT_IS_ACTUALLY_CLOSED: All 24 crystal operations, including screw translations/atom permutations, preserve the selected pair and match E2g characters.
+WHAT_REMAINS_OPEN: Phi representation/coupling, independent strain, state equivalence and occupation/bath dynamics.
+DEPENDENCY_UNLOCKED: Material side of the conditional Gamma selection rule; no physical unlock.
+STATUS: PASS_SOURCE_E2G.
+WHAT_CHANGED: Added source irrep audit, four tests, research note and narrowed interlayer registry blocker.
+EQUATION_OR_MAPPING: Pair representation E^dagger*U_g*E uses Cartesian rotation and actual atom permutation at Gamma.
+VERIFICATION: Eleven combined tests; locked raw hashes; maximum subspace leakage 1.965e-12 and character error 3.553e-15. Source force constants not symmetrized again. No TTG/holdout access.
+CONTROLLING_BLOCKER: physical_response_source_and_thermal_mode_mapping_missing.
+NEXT_ACTION: Develop independent scalar source-to-energy/occupation mapping, keeping strain and material-frequency mismatch open.
+CLAIM_BOUNDARY: Source Gamma irrep only, not Phi identity, full O(2) equivalence, Raman agreement or full Topic 13 closure. Details: docs/core/T13_MP48_SHEAR_IRREP.md.
+
 ## 2026-09-08 - Scalar versus coherent-shear selection rule
 
 MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE conditional algebra, not material identity.
