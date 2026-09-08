@@ -1,3 +1,17 @@
+## 2026-09-09 - Source strip and physical-mixture boundary
+
+MAJOR_RESULT_CLOSURE: PARTIAL; changing finite support excluded in the declared archived strip.
+WHAT_IS_ACTUALLY_CLOSED: All 627/608 selected pixels are finite throughout ON/OFF histories; mask-choice difference is exactly zero there.
+WHAT_REMAINS_OPEN: Bragg/diffuse separation, branch weights/rank, source covariance and independent Phi coupling.
+DEPENDENCY_UNLOCKED: Region-specific forward-map research only.
+STATUS: REGION_EXTRACTED_INVERSION_OPEN.
+WHAT_CHANGED: Added source-coordinate strip audit, three tests, artifact and docs/core/T13_UED_REGION_SUPPORT.md.
+EQUATION_OR_MAPPING: Unsmoothed near-Bragg strip ratio using per-scan calibration; not a resolved phonon population.
+VERIFICATION: Fifteen UED tests pass; actual image/upstream hashes checked. Foundation audit PASS with foundation BLOCKED. Source cell 6 Gaussian and nonuniform delays documented as a timing-review issue, not an assumed historical implementation.
+CONTROLLING_BLOCKER: bragg_diffuse_and_branch_resolved_forward_map_missing.
+NEXT_ACTION: Resolve elastic/inelastic mixture and mode identity; shared E2g label alone cannot link low shear to the experimental optical channel.
+CLAIM_BOUNDARY: No full-topic, alpha, rate or temperature claim. No holdout or new core equation; earlier source preprocessing still requires uncertainty treatment.
+
 ## 2026-09-09 - Lossless UED export and support sensitivity
 
 MAJOR_RESULT_CLOSURE: PARTIAL; image export and support comparison completed.
