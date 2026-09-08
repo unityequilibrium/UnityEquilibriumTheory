@@ -52,7 +52,7 @@ class BoundedReader:
         return self.stream.tell()
 
 
-def numeric_summary(args):
+def numeric_summary(args, numeric_sink=None):
     buffer, dtype, shape, order = args
     if not isinstance(buffer, Buffer) or not isinstance(dtype, Node):
         raise ValueError('unsupported numeric buffer')
@@ -87,12 +87,16 @@ def numeric_summary(args):
         record.update(minimum=float(array.min()), maximum=float(array.max()), mean=float(array.mean()))
     if count <= 8192:
         record['values'] = array.tolist()
+    if numeric_sink is not None:
+        view = array.view()
+        view.flags.writeable = False
+        numeric_sink(view, dict(record))
     buffer.cached[key] = Node('NUMERIC', record)
     buffer.data = None
     return buffer.cached[key]
 
 
-def read_inert(stream):
+def read_inert(stream, *, numeric_sink=None):
     stack, memo, marker = [], {}, object()
     globals_seen = set()
 
@@ -142,7 +146,7 @@ def read_inert(stream):
         elif name in ('REDUCE', 'NEWOBJ'):
             args, target = stack.pop(), stack.pop()
             if target in (Node('GLOBAL', ('numpy.core.numeric', '_frombuffer')), Node('GLOBAL', ('numpy._core.numeric', '_frombuffer'))):
-                stack.append(numeric_summary(args))
+                stack.append(numeric_summary(args, numeric_sink=numeric_sink))
             else: stack.append(Node(name, (target, args)))
         elif name == 'BUILD':
             state = stack.pop()

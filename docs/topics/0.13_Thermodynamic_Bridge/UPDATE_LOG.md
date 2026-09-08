@@ -1,3 +1,17 @@
+## 2026-09-09 - Lossless UED export and support sensitivity
+
+MAJOR_RESULT_CLOSURE: PARTIAL; image export and support comparison completed.
+WHAT_IS_ACTUALLY_CLOSED: Seventy paired images exported with preserved source bytes, NaNs and row identities; per-scan common masks constructed.
+WHAT_REMAINS_OPEN: Region-specific scattering map, covariance, unseen modes and independent Phi coupling.
+DEPENDENCY_UNLOCKED: Mask-aware source analysis only.
+STATUS: EXPORTED_WITH_SUPPORT_DEPENDENCE_DISCLOSED.
+WHAT_CHANGED: Numeric sink, support audit, three tests, refreshed inventory and docs/core/T13_UED_MASK_SUPPORT.md.
+EQUATION_OR_MAPPING: Whole-detector ON/OFF ratio, baseline mean removed; compare paired-frame and common finite support.
+VERIFICATION: Twelve tests pass; actual export repeated with byte-for-byte checks. Maximum support differences 8.2056868e-7 and 9.0138554e-6 are dimensionless, not uncertainties or causal metrics.
+CONTROLLING_BLOCKER: region_specific_scattering_map_and_preprocessing_covariance_missing.
+NEXT_ACTION: Define physical reciprocal-space regions and weights before estimating populations; test local support sensitivity and covariance.
+CLAIM_BOUNDARY: No rate, heat, temperature or alpha inference. No holdout input, threshold adjustment or full-topic promotion. Earlier pending image export is superseded by this result.
+
 ## 2026-09-09 - Numeric UED rows and time-index interpretation
 
 MAJOR_RESULT_CLOSURE: PARTIAL; storage/row interpretation closed, physical signal map open.
