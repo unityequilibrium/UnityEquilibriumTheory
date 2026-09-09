@@ -1,3 +1,17 @@
+## 2026-09-09 - Energy-functional identifiability
+
+MAJOR_RESULT_CLOSURE: PARTIAL; fixed-harmonic energy ambiguity demonstrated for all six source q points.
+WHAT_IS_ACTUALLY_CLOSED: Full and visible-only energies have nonzero null projections. Positive synthetic occupations can produce near-identical model signals but different energy; rank deficiency alone was not used as proof.
+WHAT_REMAINS_OPEN: Independent energy information, justified kinetics/equilibrium, experimental response and Phi coupling.
+DEPENDENCY_UNLOCKED: Complementary-observable design only.
+STATUS: NULL_SPACE_TESTED_NOT_THERMOMETRY.
+WHAT_CHANGED: Null-space audit, three tests, registry, counterexample artifact and docs/core/T13_ENERGY_IDENTIFIABILITY.md.
+EQUATION_OR_MAPPING: A=S/f; c=f; observable identifiable iff c in row(A). Energy in h*1e12 Hz units, fixed gaps only.
+VERIFICATION: Three tests; actual six source responses; positive witnesses have relative response residuals 4.14e-16 to 5.82e-15. Tolerance sweep recorded. F0 369/no duplicates; foundation/compatibility audits PASS with physical gates BLOCKED.
+CONTROLLING_BLOCKER: independent_energy_information_or_justified_population_constraint.
+NEXT_ACTION: Seek an independently calibrated energy-sensitive observation or justified preparation constraint; do not fit the same incomplete response repeatedly.
+CLAIM_BOUNDARY: Constructed numerical witnesses, not observed populations, thermal data or universal no-go. No holdout, fit, physical alpha or full-topic promotion.
+
 ## 2026-09-09 - Finite-q phase and response rank
 
 MAJOR_RESULT_CLOSURE: PARTIAL; finite-q geometric phase cross-check and declared-grid rank quantified.

@@ -1,0 +1,21 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "status": "CANDIDATE_DIAGNOSTIC_NOT_MERGED",
+  "equation_entries": [{
+    "equation_id": "uet.diagnostic.harmonic_energy_identifiability",
+    "relation_or_code_path": "A=S/f; c=f; c^T delta_n identifiable iff c in row(A). Energy equals h*1e12 Hz times c^T delta_n with f in THz.",
+    "ontology": "Material mode populations only; no C/Phi identification; R_gen remains derived and R_obs does not enter dynamics",
+    "units": {"f": "THz", "n": "dimensionless", "energy": "joule after h*1e12 Hz conversion", "A": "angstrom^-2/(atomic mass unit*THz)"},
+    "derivation_class": "FIXED_HARMONIC_RESPONSE_AND_LINEAR_OBSERVABILITY_IDENTITY",
+    "standard_physics_counterpart": "Fixed-frequency harmonic population energy and one-phonon frequency weighting; null-space linear algebra",
+    "observable": "energy change at fixed q/frequencies, not heat automatically or bulk temperature",
+    "data_role": "SOURCE_MODEL_AND_SYNTHETIC_WITNESS",
+    "verification_status": "NUMERICAL_NULL_SPACE_DIAGNOSTIC",
+    "controlling_blocker": "independent_energy_information_or_justified_population_constraint",
+    "claim_boundary": "No physical alpha, material calorimetry, equilibrium assumption, global no-go or full-topic closure",
+    "implementation_paths": ["docs/scripts/audit/audit_topic13_energy_identifiability.py"],
+    "dependency_role": "diagnostic_only",
+    "physical_dependency_unlock": false
+  }]
+}
