@@ -1,3 +1,17 @@
+## 2026-09-09 - Cut pooling provenance
+
+MAJOR_RESULT_CLOSURE: PARTIAL; published file pooling identified, not physical covariance.
+WHAT_IS_ACTUALLY_CLOSED: Pinned cell sums image files and uses last input stage coordinates; actual 400nm cuts have matching coordinates but differing sensor/pressure metadata in all 38 rows.
+WHAT_REMAINS_OPEN: Pre-sorting aggregation, cut independence, noise/gain and sensor calibration.
+DEPENDENCY_UNLOCKED: Cut sensitivity only; full_core_unlock=false.
+STATUS: POOLING_IDENTIFIED_INDEPENDENCE_UNVERIFIED.
+WHAT_CHANGED: Pooling audit, three tests, artifact and docs/core/T13_CUT_POOLING_PROVENANCE.md.
+EQUATION_OR_MAPPING: Source file-axis sum only; metadata differences are not variance estimates.
+VERIFICATION: Three tests PASS; source hashes and paired rows checked. Foundation audit PASS with foundation BLOCKED. Pinned online processing notebook read as text only.
+CONTROLLING_BLOCKER: pre_sorting_acquisition_and_cut_independence.
+NEXT_ACTION: Keep cuts separate for sensitivity; seek frame-level and sensor provenance before covariance/calibration.
+CLAIM_BOUNDARY: No demonstrated experimental failure, calibrated drift, covariance, alpha, holdout access or promotion.
+
 ## 2026-09-09 - Raw acquisition structure
 
 MAJOR_RESULT_CLOSURE: PARTIAL; raw source and numeric acquisition structure identified.
