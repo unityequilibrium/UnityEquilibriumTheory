@@ -1,3 +1,17 @@
+## 2026-09-09 - Thermometry calibration transfer rejected
+
+MAJOR_RESULT_CLOSURE: PARTIAL; source timing/model assumptions cannot directly calibrate acquired UED data.
+WHAT_IS_ACTUALLY_CLOSED: Neither actual scan overlaps the reviewed >100 ps source window; quoted source temperatures are model-inferred, not independent calibration rows.
+WHAT_REMAINS_OPEN: Matched numeric calibration, same-preparation equilibrium and Phi coupling.
+DEPENDENCY_UNLOCKED: None physically.
+STATUS: NO_OVERLAP_NO_CALIBRATION_TRANSFER.
+WHAT_CHANGED: Window audit/two tests/artifact and docs/core/T13_THERMOMETRY_WINDOW.md.
+EQUATION_OR_MAPPING: Source-specific delay eligibility only; no universal equilibration threshold.
+VERIFICATION: Two tests and actual inventory hash chain; 38/32 rows end at 42.26244/8.93244 ps, zero eligible rows. Targeted search did not acquire calibration data. Publisher 403/PMC challenge respected. Foundation audit PASS, foundation BLOCKED.
+CONTROLLING_BLOCKER: same_preparation_equilibrium_evidence_and_independent_calibration_rows.
+NEXT_ACTION: Same-preparation calibration or nonequilibrium response; independent Phi coupling can proceed separately.
+CLAIM_BOUNDARY: No claim that the samples cannot equilibrate, no fabricated late data or transferred temperatures, no holdout or full-topic promotion.
+
 ## 2026-09-09 - Complementary experimental source routes
 
 MAJOR_RESULT_CLOSURE: PARTIAL; primary literature capabilities identified, matched numeric package not acquired.
