@@ -1,0 +1,18 @@
+{
+  "record_type": "unmerged_equation_registry_addendum",
+  "equation_registry_id": "uet.thermo.natural_fixed_charge_response",
+  "owner_topic": "0.13",
+  "status": "INTERNAL_DERIVATIVE_COMPARISON",
+  "ontology": "n is the existing O(2) charge density. Phi remains the effective response coordinate; C and R_gen are not reinterpreted.",
+  "equation": "(d epsilon/dx)_n = epsilon_x - epsilon_mu*n_x/n_mu, x in {T,Phi}",
+  "units": "All derivatives in the declared natural EOS lane; n_mu has charge-density per natural chemical potential units. No SI material density identification.",
+  "derivation_class": "implicit-function chain rule where n_mu is finite and nonzero",
+  "assumptions": ["smooth same-branch EOS", "fixed other controls", "positive n_mu required by this diagnostic's local susceptibility check"],
+  "observable": "natural energy susceptibility for a fixed O(2) charge constraint",
+  "data_role": "INTERNAL_COMPARISON_NOT_CALIBRATION",
+  "verification_status": "analytic fixture and direct constrained-root comparison at three finite-difference steps",
+  "evidence_artifact": "docs/core/artifacts/t13_fixed_charge_response_audit.json",
+  "controlling_blocker": "O(2)-charge/material correspondence and matched experimental thermodynamic constraints",
+  "dependency_unlocked": [],
+  "claim_boundary": "Not physical He-4 c_v, fixed mass density, SVP response, new alpha calibration or full-topic promotion. No existing registry entry superseded."
+}

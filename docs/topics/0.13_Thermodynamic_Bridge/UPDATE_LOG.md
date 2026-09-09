@@ -1,3 +1,17 @@
+## 2026-09-10 - Natural fixed-charge response
+
+MAJOR_RESULT_CLOSURE: PARTIAL; ensemble dependence computed by derivative and direct-root methods.
+WHAT_IS_ACTUALLY_CLOSED: At the frozen action state, alpha_natural changes from about+0.002314 at fixed mu to-0.0005626 at fixed O(2) charge. Sign persists under step refinement.
+WHAT_REMAINS_OPEN: Charge-to-material mapping and physical perturbation constraints; not a new Kelvin calibration.
+DEPENDENCY_UNLOCKED: Natural constraint comparison only; no physical unlock.
+STATUS: ENSEMBLE_COMPARISON_NOT_PHYSICAL_CALIBRATION.
+WHAT_CHANGED: Audit/tests/artifact, unmerged registry addendum and docs/core/T13_NATURAL_FIXED_CHARGE_RESPONSE.md.
+EQUATION_OR_MAPPING: epsilon_x|n=epsilon_x-epsilon_mu*n_x/n_mu; O(2) charge not relabeled as mass density.
+VERIFICATION: Two tests PASS; three steps and direct fixed-charge roots, charge residual about2.1e-16; F0 inventory369/no duplicates; foundation/compatibility audits PASS with physical states BLOCKED.
+CONTROLLING_BLOCKER: physical_protocol_and_material_charge_correspondence.
+NEXT_ACTION: Declare conserved/exchanged material variables before applying a frozen-scale response; do not retune alpha to conceal ensemble dependence.
+CLAIM_BOUNDARY: No new physical alpha, source fit, holdout or change to recorded He-4 composition.
+
 ## 2026-09-10 - He4 matching independence boundary
 
 MAJOR_RESULT_CLOSURE: PARTIAL; matching identity distinguished from independent validation.
