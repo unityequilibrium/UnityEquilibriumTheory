@@ -1,3 +1,17 @@
+## 2026-09-09 - Constructive complementary geometry
+
+MAJOR_RESULT_CLOSURE: PARTIAL; ideal extra reciprocal planes remove sampled energy ambiguity.
+WHAT_IS_ACTUALLY_CLOSED: l=-2..2 design has rank 12 and energy null fraction below 1.2e-15 at six q points. l=0,+1 remains insufficient.
+WHAT_REMAINS_OPEN: Experimental access, matched preparation, detector covariance, conditioning and Phi coupling.
+DEPENDENCY_UNLOCKED: Measurement/source targeting only.
+STATUS: COMPLEMENTARY_DESIGNS_EVALUATED.
+WHAT_CHANGED: Design audit, three tests, artifact and docs/core/T13_COMPLEMENTARY_GEOMETRY.md.
+EQUATION_OR_MAPPING: Existing A=S/f and energy row-space test with added G at fixed q; no new physical equation.
+VERIFICATION: Three tests; source hashes/frequencies/basal matrix reproduced. Threshold sweep stable. Raw condition numbers 399-14688; not physical uncertainty. Foundation/compatibility audits PASS with physical gates BLOCKED.
+CONTROLLING_BLOCKER: experimentally_accessible_energy_sensitive_geometry_and_noise_contract.
+NEXT_ACTION: Find matched orientation-resolved data or independent energy-sensitive observable; evaluate noise-weighted energy estimator before proposing acquisition.
+CLAIM_BOUNDARY: Ideal design, not actual measurement, minimum-design proof, physical alpha or full-topic closure. No holdout or fit.
+
 ## 2026-09-09 - Energy-functional identifiability
 
 MAJOR_RESULT_CLOSURE: PARTIAL; fixed-harmonic energy ambiguity demonstrated for all six source q points.
