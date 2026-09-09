@@ -1,3 +1,17 @@
+## 2026-09-09 - Complementary experimental source routes
+
+MAJOR_RESULT_CLOSURE: PARTIAL; primary literature capabilities identified, matched numeric package not acquired.
+WHAT_IS_ACTUALLY_CLOSED: Out-of-plane reflection and late-equilibrium CBED thermometry are source-backed routes, not assumed available data.
+WHAT_REMAINS_OPEN: Matched numeric rows, response, covariance, timing consistency and Phi coupling.
+DEPENDENCY_UNLOCKED: Targeted acquisition/planning only.
+STATUS: FULL_TEXT_REVIEWED_NUMERIC_PACKAGE_OPEN.
+WHAT_CHANGED: Literature-only route JSON and docs/core/T13_COMPLEMENTARY_SOURCE_ROUTES.md.
+EQUATION_OR_MAPPING: Bragg intensity, deformation and diffuse scattering retain distinct response models; no new equation.
+VERIFICATION: Two primary full texts inspected; author PDF used after PMC access failure. JSON parsed and unacquired fields checked. Foundation audit PASS, foundation BLOCKED.
+CONTROLLING_BLOCKER: matched_numeric_energy_sensitive_observable_and_response_contract.
+NEXT_ACTION: Seek same-preparation calibration and numeric observations; do not combine unrelated source states. Reconcile source timing discrepancy before importing kinetics.
+CLAIM_BOUNDARY: No numeric acquisition, measurement validation, physical alpha, fit or holdout. Capability review is not full-topic closure.
+
 ## 2026-09-09 - Constructive complementary geometry
 
 MAJOR_RESULT_CLOSURE: PARTIAL; ideal extra reciprocal planes remove sampled energy ambiguity.
