@@ -1,3 +1,17 @@
+## 2026-09-10 - Closure-track reporting repair
+
+MAJOR_RESULT_CLOSURE: Reporting repair; existing He-4 Core closure made visible separately from graphite OPEN.
+WHAT_IS_ACTUALLY_CLOSED: Gate records bounded O(2)/He-4 CLOSED_FOR_CORE with local alpha/SI/transport composition. Its12 evidence hashes match. Graphite calibration/source remains OPEN.
+WHAT_REMAINS_OPEN: Graphite physical inputs, external validation, full transport tensor and separate downstream gates.
+DEPENDENCY_UNLOCKED: None newly; preserve existing He-4 handoff without transferring it to graphite.
+STATUS: REPORTING_SCOPES_RECONCILED.
+WHAT_CHANGED: Progress renderer, JSON and status Markdown, two tests and docs/core/T13_CLOSURE_TRACK_REPORTING_REPAIR.md. Added explicit scopes and later holdout-exposure declaration; physics gates unchanged.
+EQUATION_OR_MAPPING: No formula change; lane-specific alpha cannot be transferred across materials.
+VERIFICATION: Two reporting tests PASS;12 composition evidence hashes checked; foundation audit PASS with foundation BLOCKED. No new physical replication.
+CONTROLLING_BLOCKER: Previous renderer mixed graphite status and He-4 unlock. Graphite blockers and future blind-eligibility review remain.
+NEXT_ACTION: Select work from explicit tracks; do not describe all Topic13 alpha/transport as absent or count graphite image fits as new Core closure.
+CLAIM_BOUNDARY: Corrects overbroad recent conversational statements. He-4 composition remains bounded, not global theory or complete external validation. Historical log hashes not rewritten.
+
 ## 2026-09-10 - Physical-source qualification and exposure disclosure
 
 MAJOR_RESULT_CLOSURE: PARTIAL; alternate source role and independence boundary identified.
