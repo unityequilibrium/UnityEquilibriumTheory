@@ -1,3 +1,17 @@
+## 2026-09-09 - Controlled rotation comparison
+
+MAJOR_RESULT_CLOSURE: PARTIAL; rotation effect isolated under unchanged weighting.
+WHAT_IS_ACTUALLY_CLOSED:152 ROIs/456 fits, all retained; primary residual norm9.00-9.22% versus about11.3% unrotated. Angular starts agree within2.51e-8px.
+WHAT_REMAINS_OPEN: Residual/background/covariance and actual registration accuracy; none of the three physical root input packages accepted.
+DEPENDENCY_UNLOCKED: Instrument-model comparison only; full_core_unlock=false.
+STATUS: ROTATION_COMPARISON_PHYSICAL_ACCURACY_OPEN.
+WHAT_CHANGED: Controlled rotation solver/tests/artifact and docs/core/T13_CONTROLLED_ROTATION_PROFILE_COMPARISON.md.
+EQUATION_OR_MAPPING: Rotated Voigt plus constant offset with uniform residual weighting. Source's simultaneous weighting change intentionally excluded.
+VERIFICATION: Two tests PASS; all real fits and hashes retained; foundation/compatibility audits PASS with physical states BLOCKED.
+CONTROLLING_BLOCKER: profile_background_detector_model_adequacy.
+NEXT_ACTION: Residual structure before correction; do not treat lower nested-model residual as physical validation or keep adding parameters without new evidence.
+CLAIM_BOUNDARY: No image shifted, covariance, alpha, holdout, source-lmfit replication or full-topic claim.
+
 ## 2026-09-09 - Voigt position method comparison
 
 MAJOR_RESULT_CLOSURE: PARTIAL; source-form optimization compared, physical accuracy unresolved.
