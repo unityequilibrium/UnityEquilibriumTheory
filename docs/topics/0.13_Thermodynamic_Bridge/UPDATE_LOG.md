@@ -1,3 +1,17 @@
+## 2026-09-09 - Raw cut signal sensitivity
+
+MAJOR_RESULT_CLOSURE: PARTIAL; whole-detector cut difference quantified, not covariance.
+WHAT_IS_ACTUALLY_CLOSED: Actual 38-row 400nm cut ratios differ by max 1.555084076e-4 after exploratory negative-delay baseline subtraction; pooling is intensity weighted.
+WHAT_REMAINS_OPEN: Noise/drift attribution, acquisition independence, physical spatial observable and Phi calibration.
+DEPENDENCY_UNLOCKED: Cut-resolved robustness only; no physical unlock.
+STATUS: CUT_DIFFERENCE_MEASURED_CAUSE_UNRESOLVED.
+WHAT_CHANGED: Signal audit/tests/artifact and docs/core/T13_RAW_CUT_SIGNAL_SENSITIVITY.md. Corrected previous pooling source locator to treat_pickle.ipynb using pinned Git blob identity; regenerated pooling artifact.
+EQUATION_OR_MAPPING: Descriptive whole-detector ratios, not heat or mode populations.
+VERIFICATION: Six signal/pooling tests PASS; source hashes checked; foundation audit PASS with foundation BLOCKED.
+CONTROLLING_BLOCKER: acquisition_independence_and_physical_observable_mapping.
+NEXT_ACTION: Spatial cut robustness and source provenance; do not treat scalar differences as measured covariance.
+CLAIM_BOUNDARY: No confidence interval, significance, causal leakage, TTG prediction, alpha or full-topic claim. No holdout access.
+
 ## 2026-09-09 - Cut pooling provenance
 
 MAJOR_RESULT_CLOSURE: PARTIAL; published file pooling identified, not physical covariance.

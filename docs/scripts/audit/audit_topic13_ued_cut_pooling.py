@@ -40,7 +40,7 @@ def main():
         units='Raw metadata units retained as unverified except explicit source labels; differences are not uncertainties',
         derivation_class='SOURCE_CODE_AND_DATA_AUDIT',observable='acquisition metadata',data_role='SOURCE_PROVENANCE',
         verification_status='POOLING_IDENTIFIED_INDEPENDENCE_UNVERIFIED',
-        cross_cut_differences=delta,source_locator='UED_data_paper.ipynb cell 1 at 7f7036bfda28f9330f19b40e57f4edf464b67d64',
+        cross_cut_differences=delta,source_locator='treat_pickle.ipynb cell 1 at 7f7036bfda28f9330f19b40e57f4edf464b67d64',
         source_pooling=dict(operation='sum across files',independence_check_present=False,
                             exposure_weighting_present=False,last_input_supplies_time_axis=True,
                             actual_cut_time_axes_equal=True,scope='reviewed import/pooling cell only'),

@@ -2,7 +2,7 @@
 
 MAJOR_RESULT_CLOSURE: PARTIAL; source pooling operation identified, physical covariance remains open.
 
-WHAT_IS_ACTUALLY_CLOSED: Pinned UED_data_paper.ipynb cell 1 sums ON/OFF images across matching files before subsequent processing. It uses the final input table's stage positions to form the relative time axis. Actual 400nm cut stage/delay coordinates agree, so this inspection finds no actual time-axis mismatch. No independence check or exposure weighting appears in this import/pooling cell.
+WHAT_IS_ACTUALLY_CLOSED: Pinned treat_pickle.ipynb cell 1 sums ON/OFF images across matching files before subsequent processing. It uses the final input table's stage positions to form the relative time axis. Actual 400nm cut stage/delay coordinates agree, so this inspection finds no actual time-axis mismatch. No independence check or exposure weighting appears in this import/pooling cell. Corrected the earlier notebook-name locator: local bytes match Git blob 12410c47274320d1c6e770872772e5d8cf864be0, which the pinned upstream tree assigns to treat_pickle.ipynb.
 
 WHAT_REMAINS_OPEN: How each RAW_sorted image was accumulated, whether cuts are independent acquisitions, and whether differences reflect drift or detector noise. No independent-frame axis was found in the supplied table layout. The observed repository tree and treat_pickle.ipynb at the same commit expose processing of already sorted files, not an established pre-sorting acquisition protocol.
 
