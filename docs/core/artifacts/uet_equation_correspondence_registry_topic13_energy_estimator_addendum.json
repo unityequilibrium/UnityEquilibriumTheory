@@ -1,0 +1,20 @@
+{
+ "schema_version":"uet-equation-registry-addendum-v1",
+ "extends":"docs/core/artifacts/uet_equation_correspondence_registry.json",
+ "status":"CANDIDATE_DIAGNOSTIC_NOT_MERGED",
+ "equation_entries":[{
+  "equation_id":"uet.diagnostic.energy_linear_estimator",
+  "relation_or_code_path":"min w^T Sigma w subject to A^T w=c; E_hat=w^T y",
+  "ontology":"Statistical estimator of material energy, no new state or C/Phi/R_gen identification",
+  "units":{"A,c,y":"explicit normalized design lane","variance":"normalized energy squared"},
+  "derivation_class":"LINEAR_MINIMUM_VARIANCE_UNBIASED_ESTIMATION",
+  "standard_physics_counterpart":"Covariance-weighted linear observable estimation",
+  "observable":"fixed-gap scalar energy, not temperature",
+  "data_role":"HYPOTHETICAL_COVARIANCE_DESIGN",
+  "verification_status":"NUMERICAL_DIAGNOSTIC_ONLY",
+  "controlling_blocker":"measured_covariance_and_intensity_scale_missing",
+  "claim_boundary":"No measured uncertainties, physical calibration, or core unlock",
+  "implementation_paths":["docs/scripts/audit/audit_topic13_energy_estimator_noise.py"],
+  "physical_dependency_unlock":false
+ }]
+}

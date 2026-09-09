@@ -1,3 +1,17 @@
+## 2026-09-09 - Energy estimator noise sensitivity
+
+MAJOR_RESULT_CLOSURE: PARTIAL; unbiased scalar energy weights and hypothetical covariance sensitivity computed.
+WHAT_IS_ACTUALLY_CLOSED: Minimum-variance energy estimator works without requiring a full-state estimate; full-rank design still has large normalized noise gain near Gamma.
+WHAT_REMAINS_OPEN: Real covariance, absolute intensity, acquisition budget, coverage and Phi coupling.
+DEPENDENCY_UNLOCKED: Noise-aware design only.
+STATUS: UNBIASED_WEIGHTS_CHECKED_REAL_NOISE_OPEN.
+WHAT_CHANGED: Estimator, registry, three tests, artifact and docs/core/T13_ENERGY_ESTIMATOR_NOISE.md.
+EQUATION_OR_MAPPING: min w^T Sigma w with A^T w=c; no population fit.
+VERIFICATION: Three tests and source hashes; six q points under two hypothetical covariance cases. F0 369/no duplicates; foundation/compatibility audit PASS with physical states BLOCKED.
+CONTROLLING_BLOCKER: measured_covariance_and_absolute_intensity_scale_missing.
+NEXT_ACTION: Real response/noise covariance and fixed-exposure evaluation; do not present normalized sensitivity as an experimental error bar.
+CLAIM_BOUNDARY: No measured uncertainty, thermometry, physical alpha, holdout or full-topic promotion.
+
 ## 2026-09-09 - Thermometry calibration transfer rejected
 
 MAJOR_RESULT_CLOSURE: PARTIAL; source timing/model assumptions cannot directly calibrate acquired UED data.
