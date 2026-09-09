@@ -1,3 +1,17 @@
+## 2026-09-09 - Fixed-grid spatial cut sensitivity
+
+MAJOR_RESULT_CLOSURE: PARTIAL; actual spatial cut sensitivity quantified, not thermal attribution.
+WHAT_IS_ACTUALLY_CLOSED: All16 fixed disjoint tiles compared over38 delays; sum reconstructs whole-detector ratios. Tile5 holds about45% of OFF intensity; local maximum cut-ratio differences span0.000161175-0.001358918.
+WHAT_REMAINS_OPEN: Geometry/registration, physical scattering observable, gain/noise and independent Phi coupling.
+DEPENDENCY_UNLOCKED: Geometry-aware cut comparison only; full_core_unlock=false.
+STATUS: SPATIAL_DIFFERENCES_MEASURED_PHYSICAL_ATTRIBUTION_OPEN.
+WHAT_CHANGED: Tile audit/tests/artifact and docs/core/T13_RAW_SPATIAL_CUT_SENSITIVITY.md.
+EQUATION_OR_MAPPING: Raw-pixel partition and descriptive ratios, not mode or energy identification.
+VERIFICATION: Six tests PASS; inert read/hash checks, complete partition and whole-signal reconstruction. Foundation audit PASS with foundation BLOCKED.
+CONTROLLING_BLOCKER: source_backed_geometric_registration_and_physical_observable.
+NEXT_ACTION: Source-based geometry and cut alignment sensitivity; do not repeat arbitrary grids as substitutes for mapping.
+CLAIM_BOUNDARY: Larger low-intensity tile ratios are not evidence of greater physical noise/heat. No covariance, significance, alpha, holdout or full-topic promotion.
+
 ## 2026-09-09 - Raw cut signal sensitivity
 
 MAJOR_RESULT_CLOSURE: PARTIAL; whole-detector cut difference quantified, not covariance.
