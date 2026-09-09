@@ -1,3 +1,17 @@
+## 2026-09-09 - Source-centered position sensitivity
+
+MAJOR_RESULT_CLOSURE: PARTIAL; detector moment difference measured, not registration closure.
+WHAT_IS_ACTUALLY_CLOSED: Both cuts have global intensity maxima inside source-centered ROIs; between-cut centroid differences about0.04px persist across half-width10/15/20.
+WHAT_REMAINS_OPEN: Background/shape ambiguity, source-fit comparison, geometry and calibration.
+DEPENDENCY_UNLOCKED: Registration-method comparison only; no physical unlock.
+STATUS: MOMENTS_MEASURED_REGISTRATION_OPEN.
+WHAT_CHANGED: Beam-position audit/tests/artifact and docs/core/T13_SOURCE_CENTERED_POSITION_SENSITIVITY.md.
+EQUATION_OR_MAPPING: Raw positive-intensity moments, not source Voigt fit or physical displacement.
+VERIFICATION: Three tests PASS; source hashes/inert read; foundation audit PASS with foundation BLOCKED. External ROI helper inspected as text only.
+CONTROLLING_BLOCKER: centroid_shape_background_ambiguity_before_registration.
+NEXT_ACTION: Source-style fit and background/shape sensitivity before transforming images; no attribution of tile differences without forward calculation.
+CLAIM_BOUNDARY: No fit or correction applied, no covariance, heat, alpha, holdout or topic promotion.
+
 ## 2026-09-09 - Fixed-grid spatial cut sensitivity
 
 MAJOR_RESULT_CLOSURE: PARTIAL; actual spatial cut sensitivity quantified, not thermal attribution.
