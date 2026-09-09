@@ -1,3 +1,17 @@
+## 2026-09-09 - Voigt position method comparison
+
+MAJOR_RESULT_CLOSURE: PARTIAL; source-form optimization compared, physical accuracy unresolved.
+WHAT_IS_ACTUALLY_CLOSED:152 ROIs/304 fits; both starts agree within5.86e-10px and all optimizers terminate successfully. Between-cut fitted center difference about0.0469px.
+WHAT_REMAINS_OPEN: Relative residual about11.3%; source-form centers differ from raw moments by up to0.1506px. Model/background/rotation and covariance remain open.
+DEPENDENCY_UNLOCKED: Residual/model comparison only; full_core_unlock=false.
+STATUS: METHOD_COMPARISON_REGISTRATION_OPEN.
+WHAT_CHANGED: Independent SciPy source-form solver/tests/artifact and docs/core/T13_VOIGT_POSITION_METHOD_COMPARISON.md; helper retained ignored/local-only.
+EQUATION_OR_MAPPING: Separable Voigt plus constant background; uniform residuals. Not exact lmfit replication and not alpha fitting.
+VERIFICATION: Two tests PASS; all actual fit records retained; pinned helper Git blob checked. F0 inventory369/no duplicates; foundation/compatibility audits PASS with physical states BLOCKED.
+CONTROLLING_BLOCKER: profile_model_adequacy_not_tested_initial_position.
+NEXT_ACTION: Residual shape and declared rotation/background comparisons before any image correction; do not equate convergence with registration accuracy.
+CLAIM_BOUNDARY: No source code execution, image shifting, physical uncertainty, heat, alpha, holdout or topic promotion.
+
 ## 2026-09-09 - Source-centered position sensitivity
 
 MAJOR_RESULT_CLOSURE: PARTIAL; detector moment difference measured, not registration closure.
