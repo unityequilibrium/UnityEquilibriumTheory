@@ -1,3 +1,17 @@
+## 2026-09-10 - He4 matching independence boundary
+
+MAJOR_RESULT_CLOSURE: PARTIAL; matching identity distinguished from independent validation.
+WHAT_IS_ACTUALLY_CLOSED: Existing Z=theta*alpha_natural/alpha_external reconstructed. Rematching Z necessarily preserves alpha equality, including labeled synthetic half/double probes.
+WHAT_REMAINS_OPEN: Independent perturbation-protocol/state-variable correspondence and an observable not used to set the scales.
+DEPENDENCY_UNLOCKED: Interpretation of calibrated interface only; no new physical unlock.
+STATUS: MATCHING_IDENTITY_CONFIRMED_PROTOCOL_MATCH_OPEN.
+WHAT_CHANGED: Independence audit/tests/artifact and docs/core/T13_HE4_MATCHING_INDEPENDENCE.md. Calibration values and recorded Core-ready composition untouched.
+EQUATION_OR_MAPPING: SVP equilibrium fraction derivative and fixed-variable natural energy derivative are separate protocols; rescaling does not independently validate their equivalence.
+VERIFICATION: Two tests PASS; composition hashes checked and real Z reconstructed; foundation audit PASS with foundation BLOCKED.
+CONTROLLING_BLOCKER: independent_protocol_match_beyond_calibration_construction.
+NEXT_ACTION: Freeze theta,Z,e0; identify normal-component versus whole-material state and a separately constrained observable before claiming stronger physical validity.
+CLAIM_BOUNDARY: Does not invalidate external calibration or effective matching. No new physical data, retune, holdout access or gate rewrite.
+
 ## 2026-09-10 - Closure-track reporting repair
 
 MAJOR_RESULT_CLOSURE: Reporting repair; existing He-4 Core closure made visible separately from graphite OPEN.
