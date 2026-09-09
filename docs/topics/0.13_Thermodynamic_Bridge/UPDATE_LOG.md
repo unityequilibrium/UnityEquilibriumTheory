@@ -1,3 +1,17 @@
+## 2026-09-10 - Physical-source qualification and exposure disclosure
+
+MAJOR_RESULT_CLOSURE: PARTIAL; alternate source role and independence boundary identified.
+WHAT_IS_ACTUALLY_CLOSED: Huang2023 transport source qualified as literature/request route, not acquired C_src. Imported heat capacity in conductivity extraction cannot serve as independent validation of that same input.
+WHAT_REMAINS_OPEN: Numeric force constants/mode data, uncertainty, state correspondence and base-Phi SI anchor.
+DEPENDENCY_UNLOCKED: Source-request qualification only; no physical unlock.
+STATUS: SOURCE_ROLE_IDENTIFIED_NUMERIC_INPUT_NOT_ACQUIRED.
+WHAT_CHANGED: docs/core/T13_POISEUILLE_SOURCE_QUALIFICATION.md and T13_HOLDOUT_EXPOSURE_2026_09_10.json. No physics parameter, fit, threshold or old artifact changed.
+EQUATION_OR_MAPPING: Imported heat-capacity input -> fitted conductivity; no inverse calibration accepted.
+VERIFICATION: Primary Methods/Data availability and local acceptance contracts reviewed; event JSON parse/invariants and foundation audit. No new simulation run.
+CONTROLLING_BLOCKER: Numeric acquisition and independent SI mapping; future blind holdout eligibility requires review after incidental public-summary exposure.
+NEXT_ACTION: Qualify/request actual source package before further fits. Do not use incidental2026 search content for tuning or claim a pristine blind comparison from this context.
+CLAIM_BOUNDARY: No holdout numeric download or calibration performed in this pass; nevertheless public-summary exposure occurred and is explicitly disclosed. Historical no-access artifacts remain historical, not current global assurances.
+
 ## 2026-09-09 - Controlled rotation comparison
 
 MAJOR_RESULT_CLOSURE: PARTIAL; rotation effect isolated under unchanged weighting.
