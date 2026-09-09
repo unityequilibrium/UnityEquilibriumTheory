@@ -1,3 +1,17 @@
+## 2026-09-09 - Raw acquisition structure
+
+MAJOR_RESULT_CLOSURE: PARTIAL; raw source and numeric acquisition structure identified.
+WHAT_IS_ACTUALLY_CLOSED: Publisher checksums verified; three tables decoded inertly with row hashes and member CRC. 400nm cuts align at 38 stage/delay rows with no identical image pairs; 800nm has 32 rows.
+WHAT_REMAINS_OPEN: Independent repeat interpretation, aggregation, gain/count units, covariance, sensor calibration and Phi coupling.
+DEPENDENCY_UNLOCKED: Acquisition reconstruction and cut sensitivity only; full_core_unlock=false.
+STATUS: ROWS_DECODED_REPEAT_INDEPENDENCE_OPEN.
+WHAT_CHANGED: Raw archive/structure verifiers, tests, two artifacts and docs/core/T13_RAW_ACQUISITION_STRUCTURE.md.
+EQUATION_OR_MAPPING: Source detector arrays and metadata only. Instrument PHI columns are not UET Phi; sensor temperature is not transient thermometry.
+VERIFICATION: Nine tests; all three payloads read without callable execution. Foundation audit PASS; foundation remains BLOCKED.
+CONTROLLING_BLOCKER: acquisition_aggregation_semantics_and_measured_covariance.
+NEXT_ACTION: Inspect pinned sorting/acquisition source before pooling cuts, interpreting nimages=2 or using sensor values as calibration.
+CLAIM_BOUNDARY: No physical covariance, alpha, holdout read or full-topic promotion; raw source remains local-only.
+
 ## 2026-09-09 - Energy estimator noise sensitivity
 
 MAJOR_RESULT_CLOSURE: PARTIAL; unbiased scalar energy weights and hypothetical covariance sensitivity computed.
