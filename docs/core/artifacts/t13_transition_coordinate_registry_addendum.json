@@ -7,10 +7,11 @@
   "derivation_class": "Linear change-of-coordinates identity conditional on psi interpolation",
   "observable": "Channel amplitude and quadratic collision form, not SI heat transport",
   "data_role": "INTERNAL_MANUFACTURED_CONTROL",
-  "verification_status": "COUNTEREXAMPLE_TESTED_NOT_INSTALLED",
-  "controlling_blocker": "production_coordinate_map_repair_and_interpolation_convergence",
+  "verification_status": "INSTALLED_OPT_IN_NUMERICALLY_BLOCKED",
+  "controlling_blocker": "weighted_interpolation_conditioning_and_response_solver",
   "claim_boundary": "No continuum, material or global claim promotion",
   "evidence_artifact": "docs/core/artifacts/t13_transition_coordinate_map_audit.json",
+  "implementation_evidence_artifact": "docs/core/artifacts/t13_transition_pullback_pilot.json",
   "dependency_unlocked": [],
   "full_core_unlock": false
 }

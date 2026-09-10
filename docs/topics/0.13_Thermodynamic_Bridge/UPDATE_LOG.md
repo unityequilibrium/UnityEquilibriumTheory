@@ -1,3 +1,17 @@
+## 2026-09-11 - Coordinate pullback installed; response failure exposed
+
+MAJOR_RESULT_CLOSURE: PARTIAL; weighted coordinate path implemented, not transport closure.
+WHAT_IS_ACTUALLY_CLOSED: Actual four-case pilot distinguishes legacy and corrected mapping; legacy reproduced and both pullback responses fail explicitly.
+WHAT_REMAINS_OPEN: Tail interpolation/conditioning, stable response and material mapping.
+DEPENDENCY_UNLOCKED: None.
+STATUS: BLOCKED_PULLBACK_NUMERICAL_FAILURE.
+WHAT_CHANGED: Named opt-in path, helper/tests, pilot artifact, registry proposal and docs/core/T13_TRANSITION_PULLBACK_PILOT.md.
+EQUATION_OR_MAPPING: V sqrt(W_exact) S.T inv_sqrt(W_basis), no fitted coefficient.
+VERIFICATION: Eleven tests; pilot exit1 from two response failures. Original thresholds and default comparator preserved. Foundation/compatibility physical gates remain BLOCKED.
+CONTROLLING_BLOCKER: weighted_interpolation_conditioning_and_response_solver.
+NEXT_ACTION: Isolate rate-weighted tail support and factorized solve without clipping or threshold changes.
+CLAIM_BOUNDARY: No valid corrected kappa emitted; algebraic repair alone does not close thermodynamic transport.
+
 ## 2026-09-11 - Transition weighted-coordinate counterexample
 
 MAJOR_RESULT_CLOSURE: PARTIAL; interpolation coordinate mismatch established.

@@ -111,6 +111,7 @@ class ContinuumCollisionOperatorState:
         "ACTION_DERIVED_CONSERVATIVE_CONTINUUM_COLLOCATION_NOT_MICROSCOPIC"
     )
     moment_direction_rule: str = "axis6"
+    transition_coordinate_map: str = "legacy_z_interpolation"
 
 
 def _finite(value: float, name: str) -> float:
@@ -232,6 +233,17 @@ def _interpolation_matrix(
     return matrix
 
 
+def _weighted_transition_rows(vectors, interpolation, exact_weights, basis_weights):
+    """Pull back channel rows when interpolation acts on psi, not sqrt(w)*psi."""
+    v, s = np.asarray(vectors), np.asarray(interpolation)
+    we, wb = np.asarray(exact_weights), np.asarray(basis_weights)
+    if we.ndim != 1 or wb.ndim != 1 or s.shape != (len(wb), len(we)) or v.ndim != 2 or v.shape[1] != len(we):
+        raise ValueError("incompatible transition coordinate dimensions")
+    if any(not np.all(np.isfinite(a)) for a in (v, s, we, wb)) or np.any(we <= 0) or np.any(wb <= 0):
+        raise ValueError("finite arrays and positive susceptibility weights required")
+    return ((v * np.sqrt(we)) @ s.T) / np.sqrt(wb)[None, :]
+
+
 def continuum_collision_operator_state(
     temperature: float,
     chemical_potential: float,
@@ -249,8 +261,12 @@ def continuum_collision_operator_state(
     kms_frequency_over_temperature: tuple[float, ...] = (0.25, 0.5, 1.0),
     bs_frequency_over_rate: tuple[float, ...] = (0.5, 1.0, 2.0),
     _direction_rule: str = "axis6",
+    _transition_map: str = "legacy_z_interpolation",
 ) -> ContinuumCollisionOperatorState:
     """Build the conservative finite-cutoff continuum-collocation operator."""
+
+    if _transition_map not in ("legacy_z_interpolation", "weighted_psi_pullback"):
+        raise ValueError("unknown transition coordinate map")
 
     if isinstance(radial_order, bool) or int(radial_order) != radial_order or int(radial_order) < 8:
         raise ValueError("radial_order must be an integer >= 8")
@@ -343,7 +359,12 @@ def continuum_collision_operator_state(
         support_order=int(transition_interpolation_order),
     )
     exact_vectors = np.asarray(exact.transition_vectors, dtype=float)
-    mapped_rows = exact_vectors @ interpolation.T
+    if _transition_map == "weighted_psi_pullback":
+        mapped_rows = _weighted_transition_rows(
+            exact_vectors, interpolation, exact.state_weights, basis_weights
+        )
+    else:
+        mapped_rows = exact_vectors @ interpolation.T
     projected_rows = mapped_rows @ projector
     transition_rates = np.asarray(exact.channel_rates, dtype=float)
     transition_vertex = projected_rows.T @ np.diag(transition_rates) @ projected_rows
@@ -490,6 +511,7 @@ def continuum_collision_operator_state(
         bs_match_residuals=bs_residuals,
         entropy_production_witness=entropy_witness,
         moment_direction_rule=base.moment_direction_rule,
+        transition_coordinate_map=_transition_map,
     )
 
 
@@ -502,6 +524,7 @@ def continuum_collision_operator_contract() -> dict[str, object]:
             "continuum_basis": "w_(s,k,n)=k^2/(2*pi^2*T)*f_s(E_k)*(1+f_s(E_k))*dk*dOmega/(4*pi)",
             "conserved_invariants": "I_A=(q_s,E_k,p_x,p_y,p_z)*sqrt(w_(s,k,n)); Q=orth(I_A); P=I-Q*Q^T",
             "exact_channel_mapping": "u_c=B*v_c; B maps exact channel legs to the declared momentum basis by normalized local interpolation",
+            "weighted_psi_candidate": "U=V sqrt(W_exact) B.T inv_sqrt(W_basis); legacy map remains default comparator",
             "conservative_channel_projection": "u_c^P=P*u_c",
             "action_width_operator": "L_width=P*diag(Gamma_action_s(k))*P",
             "transition_vertex_operator": "K_transition=sum_c W_c*u_c^P*(u_c^P)^T",
