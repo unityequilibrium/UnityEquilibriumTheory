@@ -1,3 +1,17 @@
+## 2026-09-10 - Susceptibility entropy metric repair
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE; internal entropy normalization repaired.
+WHAT_IS_ACTUALLY_CLOSED: Current and kinetic entropy use the same I/T metric derived from Bose entropy and existing susceptibility weights. Heat flux unchanged by repair.
+WHAT_REMAINS_OPEN: Action-config correspondence, frame/charge diffusion and physical transport matching.
+DEPENDENCY_UNLOCKED: None at physical/Core level.
+STATUS: INTERNAL_NORMALIZATION_REPAIRED.
+WHAT_CHANGED: Core entropy implementation/contract, independent tests, new repair audit/artifact, unmerged registry addendum and derivation note.
+EQUATION_OR_MAPPING: sigma=z.L.z/T=X.q/T, with weighted z rather than literal delta f.
+VERIFICATION:13 tests PASS; unchanged entropy residual gate1e-7 met by5.18689e-8. F0 inventory369/no duplicates. Historical counterexample retained.
+CONTROLLING_BLOCKER: entropy_default_action_is_not_alpha_beta_action; frame/charge-diffusion mapping.
+NEXT_ACTION: Recompute entropy using declared alpha/beta action configuration, not fitted parameters.
+CLAIM_BOUNDARY: No historical composition refresh, material prediction or global closure.
+
 ## 2026-09-10 - Entropy force convention counterexample
 
 MAJOR_RESULT_CLOSURE: PARTIAL; physical entropy interpretation defect isolated.

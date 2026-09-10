@@ -1,0 +1,16 @@
+{
+  "status": "UNMERGED_INTERNAL_REPAIR_ADDENDUM",
+  "equation_id": "uet.topic13.susceptibility_entropy_metric_v2",
+  "owner_topic": "0.13_Thermodynamic_Bridge",
+  "ontology": "z is the susceptibility-weighted occupation perturbation; not a new state. C, Phi, R_gen and R_obs unchanged.",
+  "equation_or_mapping": "w=m*f*(1+f)/T; z=sqrt(w)*psi; delta f=f*(1+f)*psi/T; sigma=z^T Lz/T=X.q/T",
+  "units": "natural k_B=1; quadratic dissipation carries an extra temperature factor relative to entropy production",
+  "derivation_class": "Bose entropy Hessian and fixed-pressure heat-only local streaming",
+  "observable": "formal heat-only entropy-current divergence",
+  "data_role": "INTERNAL_NO_CALIBRATION",
+  "verification_status": "REPAIRED_REFERENCE_AND_INDEPENDENT_TESTS",
+  "evidence_artifact": "docs/core/artifacts/t13_entropy_metric_repair_audit.json",
+  "controlling_blocker": "action_configuration_correspondence_and_frame_charge_diffusion_map",
+  "dependency_unlocked": [],
+  "claim_boundary": "No physical transport or full Topic13 promotion; merge only through Core integration review."
+}

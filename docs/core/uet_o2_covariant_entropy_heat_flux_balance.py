@@ -133,7 +133,8 @@ def covariant_entropy_heat_flux(
     projected_force_covariant = g @ force_contravariant
     heat_flux = kappa * force_contravariant
     entropy_current = entropy_density * velocity + heat_flux / temperature
-    entropy_production = float(projected_force_covariant @ heat_flux)
+    # X=-Delta(grad T+T a)/T is temperature-weighted entropy force.
+    entropy_production = float(projected_force_covariant @ heat_flux) / temperature
     return {
         "metric": g,
         "inverse_metric": inverse,
@@ -341,7 +342,8 @@ def covariant_entropy_heat_flux_balance_state(
     force_spatial = np.asarray(covariant["thermal_force_contravariant"], dtype=float)[1:]
     distribution_response = collision_inverse @ projected_sources @ force_spatial
     collision_action = collision_operator_symmetric @ distribution_response
-    kinetic_entropy = float(distribution_response @ collision_action)
+    # Susceptibility weights contain f(1+f)/T: the entropy metric is I/T.
+    kinetic_entropy = float(distribution_response @ collision_action) / temperature
     entropy_production = float(covariant["entropy_production"])
     heat_response = response_matrix @ force_spatial
     heat_flux_spatial = np.asarray(covariant["heat_flux_contravariant"], dtype=float)[1:]
@@ -445,9 +447,10 @@ def covariant_entropy_heat_flux_balance_contract() -> dict[str, Any]:
             "covariant_thermal_force": "X_T^mu=-Delta^(mu nu)*(nabla_nu T+T*a_nu)/T",
             "covariant_heat_flux": "q^mu=kappa_natural*X_T^mu",
             "entropy_current": "J_S^mu=s*u^mu+q^mu/T",
-            "entropy_production": "sigma=X_T_mu*q^mu=kappa_natural*X_T_mu*X_T^mu>=0",
-            "kinetic_entropy_balance": "delta_f=L_cont^+*b_a^perp*X^a; delta_f^T*L_cont*delta_f=X^a*K_ab*X^b",
-            "conserved_dissipative_balance": "I_A^T*L_cont*delta_f=0 for charge, energy, and momentum moments",
+            "entropy_production": "sigma=X_T_mu*q^mu/T=kappa_natural*X_T_mu*X_T^mu/T>=0",
+            "kinetic_entropy_balance": "z=L_cont^+*b_a^perp*X^a; sigma=z^T*L_cont*z/T=X^a*K_ab*X^b/T",
+            "entropy_metric": "w_i=m_i*f_i*(1+f_i)/T; delta_f_i=f_i*(1+f_i)*psi_i/T; z_i=sqrt(w_i)*psi_i; delta2(-s)=z^T*z/(2*T)",
+            "conserved_dissipative_balance": "I_A^T*L_cont*z=0 for charge, energy, and momentum moments",
         },
         "unit_contract": {
             "unit_lane": "natural",
@@ -466,6 +469,12 @@ def covariant_entropy_heat_flux_balance_contract() -> dict[str, Any]:
             "action-derived finite-temperature quasiparticle EOS plus finite-cutoff conservative collision operator, "
             "Landau moment subtraction, pseudoinverse response, and covariant projector lift"
         ),
+        "normalization_revision": "SUSCEPTIBILITY_ENTROPY_METRIC_V2",
+        "interpretation_blockers": [
+            "hydrodynamic_frame_and_charge_diffusion_map",
+            "action_configuration_correspondence",
+            "physical_transport_and_microscopic_SK_matching",
+        ],
         "observable": (
             "local-rest-frame formal heat-current response, covariant entropy-production scalar, "
             "and conserved charge/energy/momentum dissipative balance"

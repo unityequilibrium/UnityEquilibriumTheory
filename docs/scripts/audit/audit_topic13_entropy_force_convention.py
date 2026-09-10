@@ -48,19 +48,21 @@ def main():
     historical_path = ROOT / "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json"
     old = json.loads(historical_path.read_text(encoding="utf-8"))["state"]
     current = asdict(covariant_entropy_heat_flux_balance_state(.22, .35, .15))
+    witnesses = [witness(t) for t in (.22, .5, 1., 2.)]
+    normalized = all(abs(r["reported_over_divergence"]-1.) < 1.e-10 for r in witnesses)
     result = {
         "major_result_id": "T13_ENTROPY_FORCE_NORMALIZATION_COUNTEREXAMPLE",
-        "closure_level": "PARTIAL", "status": "BLOCKED_PHYSICAL_ENTROPY_INTERPRETATION",
-        "what_is_closed": "Counterexample to interpreting X.q as div(Js) under declared X=-grad(T)/T and Js=s*u+q/T; positivity alone is insufficient.",
+        "closure_level": "PARTIAL", "status": "NORMALIZATION_REPAIRED_PHYSICAL_MAPPING_OPEN" if normalized else "BLOCKED_PHYSICAL_ENTROPY_INTERPRETATION",
+        "what_is_closed": "Current implementation tested against independent entropy-current divergence; historical X.q counterexample remains in the frozen artifact.",
         "equation_or_mapping": "Heat-only rest limit: T ds/dt=-d_x q; sigma=ds/dt+d_x(q/T)=-q*d_x(T)/T^2=X.q/T.",
         "units": "Natural k_B=1; X.q has one extra temperature factor relative to entropy production.",
         "derivation_class": "Independent product-rule and local energy-balance diagnostic",
         "observable": "Formal entropy-current divergence, not material heat transport",
         "data_role": "ANALYTIC_MANUFACTURED_CONTROL_NO_CALIBRATION",
-        "witnesses": [witness(t) for t in (.22, .5, 1., 2.)],
+        "witnesses": witnesses,
         "current_reference_comparison": compare_states(old, current),
         "reference_scope": "Existing entropy default EOS config, NOT action_bridge_config; equal T/mu/Phi alone does not establish identical action parameters.",
-        "verification_status": "COUNTEREXAMPLE_REPRODUCED; original positivity/kinetic tests do not check entropy-current divergence",
+        "verification_status": "CURRENT_DIVERGENCE_AGREES" if normalized else "CURRENT_DIVERGENCE_DISAGREES",
         "open_blockers": ["thermal_force_flux_entropy_normalization", "hydrodynamic_frame_and_charge_diffusion_map", "action_configuration_correspondence"],
         "repair_options_not_applied": [
             "Keep X and q conventions; identify X.q as temperature-weighted dissipation and derive physical sigma plus kinetic normalization coherently.",
