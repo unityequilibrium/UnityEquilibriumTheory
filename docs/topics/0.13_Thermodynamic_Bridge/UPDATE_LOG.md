@@ -1,3 +1,17 @@
+## 2026-09-10 - Entropy force convention counterexample
+
+MAJOR_RESULT_CLOSURE: PARTIAL; physical entropy interpretation defect isolated.
+WHAT_IS_ACTUALLY_CLOSED: Declared X=-grad(T)/T and Js=s*u+q/T require sigma=X.q/T in the heat-only rest limit; existing output uses X.q.
+WHAT_REMAINS_OPEN: Consistent kinetic driving/current normalization, frame and action-configuration mapping.
+DEPENDENCY_UNLOCKED: None; renewed physical composition acceptance requires repair.
+STATUS: BLOCKED_PHYSICAL_ENTROPY_INTERPRETATION.
+WHAT_CHANGED: Independent audit/test/artifact and docs/core/T13_ENTROPY_FORCE_CONVENTION.md; old gates preserved.
+EQUATION_OR_MAPPING: Product-rule entropy divergence from local energy balance, not a new UET equation.
+VERIFICATION: Seven tests passed, including four counterexample controls and three unchanged legacy tests. Current reference kappa drift2.09372e-10 relative. Positivity tests do not detect normalization defect.
+CONTROLLING_BLOCKER: thermal_force_flux_entropy_normalization.
+NEXT_ACTION: Derive one consistent kinetic/frame convention before physical entropy closure; do not repair by output rescaling alone.
+CLAIM_BOUNDARY: Internal formal positivity remains distinct from physical entropy interpretation; no holdout or calibration changes.
+
 ## 2026-09-10 - Local EOS revision impact
 
 MAJOR_RESULT_CLOSURE: PARTIAL; reference alpha/beta revision differences measured.
