@@ -1,3 +1,17 @@
+## 2026-09-11 - Transition weighted-coordinate counterexample
+
+MAJOR_RESULT_CLOSURE: PARTIAL; interpolation coordinate mismatch established.
+WHAT_IS_ACTUALLY_CLOSED: Same-node weight-change control yields -10.333333 instead of -9 in the old map; derived coordinate pullback preserves -9 and the collision quadratic form.
+WHAT_REMAINS_OPEN: Production repair, weighted response comparison, interpolation/convergence and material correspondence.
+DEPENDENCY_UNLOCKED: None.
+STATUS: WEIGHTED_COORDINATE_MISMATCH_IDENTIFIED.
+WHAT_CHANGED: Audit/test/artifact, registry proposal and docs/core/T13_TRANSITION_COORDINATE_MAP.md; production and historical artifacts unchanged.
+EQUATION_OR_MAPPING: U_b=V_e sqrt(W_e) S.T inv_sqrt(W_b), conditional on psi interpolation.
+VERIFICATION: Four tests PASS; actual axis6/axis_cube14 constant-channel defects measured. Foundation and compatibility audits PASS while physical gates remain BLOCKED.
+CONTROLLING_BLOCKER: production_coordinate_map_repair.
+NEXT_ACTION: Explicit revised mapping and full-path rate-weighted response tests without fitting.
+CLAIM_BOUNDARY: Tail-amplified raw errors are not conductivity errors; a positive projected operator does not prove interpolation correspondence.
+
 ## 2026-09-11 - Weighted angular full-path pilot
 
 MAJOR_RESULT_CLOSURE: PARTIAL; weighted quadrature reaches the actual heat-response path.
