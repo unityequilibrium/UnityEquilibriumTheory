@@ -1,3 +1,17 @@
+## 2026-09-10 - Production frame-current output
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE; explicit canonical current decomposition integrated into production state.
+WHAT_IS_ACTUALLY_CLOSED: Q,V,Q-hV and canonical Landau entropy output are separated; linear Eckart entropy identity verified.
+WHAT_REMAINS_OPEN: Resolution convergence, material/protocol and historical integration review.
+DEPENDENCY_UNLOCKED: No physical/Core promotion.
+STATUS: FRAME_OUTPUT_INTEGRATED.
+WHAT_CHANGED: Additive state/contract fields, production audit/test/artifact and docs/core/T13_FRAME_OUTPUT_INTEGRATION.md.
+EQUATION_OR_MAPPING: Canonical S_L=s*u+(Q-muV)/T; legacy formal entropy output preserved and labeled noncanonical.
+VERIFICATION:16 tests PASS; F0 inventory369/no duplicates. Unit-force V/n about298350 is labeled a linear coefficient, not finite velocity; small-probe norm.00029835.
+CONTROLLING_BLOCKER: finite_cutoff_convergence_and_material_charge_protocol_map.
+NEXT_ACTION: Test shared-action collision-grid convergence, not just algebraic identities.
+CLAIM_BOUNDARY: No nonlinear flow, SI transport, holdout or full-theory claim.
+
 ## 2026-09-10 - Linear heat-charge frame mapping
 
 MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE; projected heat moment identified and linear entropy-frame relation verified.

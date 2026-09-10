@@ -231,6 +231,7 @@ class CovariantEntropyHeatFluxBalanceState:
     data_role: str = (
         "ACTION_DERIVED_FINITE_CUTOFF_NATURAL_MOMENT_RESPONSE_NOT_PHYSICAL_KUBO"
     )
+    frame_current_decomposition: dict[str, Any] | None = None
 
 
 def covariant_entropy_heat_flux_balance_state(
@@ -373,7 +374,40 @@ def covariant_entropy_heat_flux_balance_state(
     )
     if not all(isfinite(float(value)) for value in values):
         raise FloatingPointError("covariant heat-flux response is not finite")
+    # Raw moments distinguish Landau energy flux from Q-h*V heat response.
+    energy_source = momenta * np.sqrt(weights)[:, None]
+    charge_source = charges[:, None] * velocities * np.sqrt(weights)[:, None]
+    energy_current = np.r_[0.0, energy_source.T @ distribution_response]
+    charge_current = np.r_[0.0, charge_source.T @ distribution_response]
+    invariant_heat = energy_current - enthalpy_per_charge * charge_current
+    landau_entropy = (
+        eos.entropy_density * velocity
+        + (energy_current - chemical_potential * charge_current) / temperature
+    )
+    frame_shift = charge_current / eos.charge_density
+    eckart_linear_velocity = velocity + frame_shift
+    transformed_eckart_entropy = (
+        eos.entropy_density * eckart_linear_velocity + invariant_heat / temperature
+    )
+    frame_decomposition = {
+        "revision": "LINEAR_CHARGED_FRAME_CURRENT_V1",
+        "evaluation_frame": "LANDAU_ENERGY_FRAME_TO_LINEAR_ORDER",
+        "energy_flux_contravariant": _vector_tuple(energy_current),
+        "charge_diffusion_contravariant": _vector_tuple(charge_current),
+        "invariant_heat_contravariant": _vector_tuple(invariant_heat),
+        "landau_entropy_current_contravariant": _vector_tuple(landau_entropy),
+        "eckart_entropy_current_in_landau_coordinates_linear": _vector_tuple(transformed_eckart_entropy),
+        "eckart_velocity_shift_linear": _vector_tuple(frame_shift),
+        "frame_shift_spatial_norm": float(np.linalg.norm(frame_shift[1:])),
+        "entropy_frame_identity_residual": float(np.linalg.norm(landau_entropy-transformed_eckart_entropy)),
+        "heat_moment_response_residual": float(np.linalg.norm(invariant_heat[1:]-heat_response)),
+        "legacy_entropy_current_role": "FORMAL_s_u_PLUS_HEAT_OVER_T_NOT_CANONICAL_LANDAU_CURRENT",
+        "legacy_heat_flux_role": "ISOTROPIC_LIFT_OF_INVARIANT_HEAT_RESPONSE_NOT_LANDAU_ENERGY_FLUX",
+        "finite_velocity_state_validated": False,
+        "claim_boundary": "Linear response coefficients/probes only; a unit force is not a validated finite fluid state. Signed O(2) charge is not material mass.",
+    }
     return CovariantEntropyHeatFluxBalanceState(
+        frame_current_decomposition=frame_decomposition,
         temperature=operator.temperature,
         chemical_potential=operator.chemical_potential,
         space_response=operator.space_response,
@@ -470,8 +504,16 @@ def covariant_entropy_heat_flux_balance_contract() -> dict[str, Any]:
             "Landau moment subtraction, pseudoinverse response, and covariant projector lift"
         ),
         "normalization_revision": "SUSCEPTIBILITY_ENTROPY_METRIC_V2",
+        "frame_current_contract": {
+            "invariant_heat": "q_heat=Q-h*V; Q_L=0 to projected precision",
+            "canonical_entropy_current": "S_L=s*u_L+(Q-mu*V)/T",
+            "linear_frame_map": "u_E=u_L+V/n+O(V^2); S_E=s*u_E+q_heat/T equals S_L to first order",
+            "legacy_entropy_current_contravariant": "Formal s*u+q_heat/T retained for compatibility; NOT canonical Landau entropy current",
+            "new_canonical_output": "frame_current_decomposition.landau_entropy_current_contravariant",
+            "finite_velocity_scope": "Linear coefficients only; unit driving may yield large formal V/n and is not a physical velocity state",
+        },
         "interpretation_blockers": [
-            "hydrodynamic_frame_and_charge_diffusion_map",
+            "material_charge_and_nonlinear_frame_map",
             "action_configuration_correspondence",
             "physical_transport_and_microscopic_SK_matching",
         ],
