@@ -1,3 +1,17 @@
+## 2026-09-11 - Angular moment representation boundary
+
+MAJOR_RESULT_CLOSURE: PARTIAL; six-axis quadrupole deficit identified with explicit replacement candidate.
+WHAT_IS_ACTUALLY_CLOSED: Actual basis has quadrupole rank2/5 and identically missing off-diagonal shear sources. Positive14-direction candidate restores degree-four moments, not sixth-order completeness.
+WHAT_REMAINS_OPEN: Weighted production quadrature, directional/transition convergence and physical material map.
+DEPENDENCY_UNLOCKED: None.
+STATUS: SIX_AXIS_QUADRUPOLE_DEFICIT_IDENTIFIED.
+WHAT_CHANGED: Angular audit/test/artifact and docs/core/T13_DIRECTION_MOMENT_BOUNDARY.md; no production grid or historical result changed.
+EQUATION_OR_MAPPING: Six axis weights1/15 plus eight cube weights3/40; analytic sphere moments used, no fit.
+VERIFICATION: Three tests PASS; candidate fourth-order Gram error2.22e-16, sixth-order discrepancy retained explicitly.
+CONTROLLING_BLOCKER: production_weighted_direction_interface_and_directional_transport_convergence.
+NEXT_ACTION: Explicit weighted-rule plumbing with frozen six-axis baseline, then transport comparison and separate transition controls.
+CLAIM_BOUNDARY: Missing angular representation is not zero physical viscosity or refutation of the restricted heat lane.
+
 ## 2026-09-11 - Joint radial/cutoff/inverse resolution review
 
 MAJOR_RESULT_CLOSURE: PARTIAL; local numerical sensitivity narrowed, not full convergence.

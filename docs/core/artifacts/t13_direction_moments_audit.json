@@ -1,0 +1,276 @@
+{
+  "major_result_id": "T13_ANGULAR_MOMENT_COVERAGE_BOUNDARY",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "PARTIAL",
+  "status": "SIX_AXIS_QUADRUPOLE_DEFICIT_IDENTIFIED",
+  "what_is_closed": "Production six-axis rule loses three quadrupole channels; a positive 14-direction candidate restores degree-four moments but not all higher moments",
+  "equation_or_mapping": "Sphere E[n_i n_j]=delta_ij/3; E[n_i^4]=1/5; E[n_i^2 n_j^2]=1/15; E[n_i^6]=1/7",
+  "units": "dimensionless angular quadrature",
+  "derivation_class": "Sphere integral and moment matching",
+  "observable": "Angular source representability, not material viscosity/heat conductivity",
+  "data_role": "INTERNAL_ANALYTIC_CONTROL",
+  "sphere_reference": {
+    "second_moment": [
+      [
+        0.3333333333333333,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.3333333333333333,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.3333333333333333
+      ]
+    ],
+    "x4": 0.2,
+    "x2y2": 0.06666666666666667,
+    "x6": 0.14285714285714285,
+    "quadrupole_rank": 5
+  },
+  "production_six_axis": {
+    "direction_count": 6,
+    "weight_sum": 0.9999999999999999,
+    "second_moment": [
+      [
+        0.3333333333333333,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.3333333333333333,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.3333333333333333
+      ]
+    ],
+    "x4": 0.3333333333333333,
+    "x2y2": 0.0,
+    "x6": 0.3333333333333333,
+    "quadrupole_gram": [
+      [
+        0.6666666666666666,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.6666666666666667,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "quadrupole_rank": 2,
+    "shear_xy_source_norm": 0.0,
+    "fourth_order_gram_error": 0.7302967433402215
+  },
+  "candidate14": {
+    "direction_count": 14,
+    "weight_sum": 0.9999999999999998,
+    "second_moment": [
+      [
+        0.3333333333333335,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.3333333333333335,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.3333333333333335
+      ]
+    ],
+    "x4": 0.19999999999999998,
+    "x2y2": 0.06666666666666671,
+    "x6": 0.15555555555555547,
+    "quadrupole_gram": [
+      [
+        0.26666666666666666,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.2666666666666668,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.2666666666666668,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.2666666666666668,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.2666666666666668
+      ]
+    ],
+    "quadrupole_rank": 5,
+    "shear_xy_source_norm": 0.2581988897471612,
+    "fourth_order_gram_error": 2.220446049250313e-16
+  },
+  "candidate_directions": [
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      -1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    [
+      -0.5773502691896258,
+      -0.5773502691896258,
+      -0.5773502691896258
+    ],
+    [
+      -0.5773502691896258,
+      -0.5773502691896258,
+      0.5773502691896258
+    ],
+    [
+      -0.5773502691896258,
+      0.5773502691896258,
+      -0.5773502691896258
+    ],
+    [
+      -0.5773502691896258,
+      0.5773502691896258,
+      0.5773502691896258
+    ],
+    [
+      0.5773502691896258,
+      -0.5773502691896258,
+      -0.5773502691896258
+    ],
+    [
+      0.5773502691896258,
+      -0.5773502691896258,
+      0.5773502691896258
+    ],
+    [
+      0.5773502691896258,
+      0.5773502691896258,
+      -0.5773502691896258
+    ],
+    [
+      0.5773502691896258,
+      0.5773502691896258,
+      0.5773502691896258
+    ]
+  ],
+  "candidate_weights": [
+    0.06666666666666667,
+    0.06666666666666667,
+    0.06666666666666667,
+    0.06666666666666667,
+    0.06666666666666667,
+    0.06666666666666667,
+    0.075,
+    0.075,
+    0.075,
+    0.075,
+    0.075,
+    0.075,
+    0.075,
+    0.075
+  ],
+  "derivation": "Sign symmetry cancels odd powers. Normalization 6a+8b=1 and cross moment 8b/9=1/15 give b=3/40,a=1/15; diagonal fourth moment follows. Sphere E[x^(2m)]=1/(2m+1).",
+  "verification_status": "ANGULAR_MOMENTS_ONLY_NO_TRANSPORT_RERUN",
+  "open_blockers": [
+    "production_weighted_direction_interface",
+    "directional_transport_convergence",
+    "transition_discretization",
+    "physical_material_mapping"
+  ],
+  "dependency_unlocked": [],
+  "claim_promotion": false,
+  "claim_boundary": "Six-axis degree-four failure does not alone disprove its degree-two heat response. Candidate14 is not a full angular convergence proof and is not installed into production.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/scripts/audit/audit_topic13_direction_moments.py",
+      "sha256": "ae6bb003af8a760f9ddcb4b671a4a1de6d40c80adcc84ed96dfbb8077f792845"
+    },
+    {
+      "path": "docs/core/test/test_topic13_direction_moments.py",
+      "sha256": "5ee44ab1b3040289cdd1ffeaebb6a19af0b5e8246170b062cc10484ffd1cef5e"
+    },
+    {
+      "path": "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+      "sha256": "eb69cc8ab6c35d782fbc687bc6fa503a22ae76c78e28d65c466eaf0e7e4719a9"
+    }
+  ]
+}
