@@ -1,0 +1,346 @@
+{
+  "major_result_id": "T13_JOINT_TRANSPORT_RESOLUTION",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "PARTIAL",
+  "status": "JOINT_RESOLUTION_MEASURED_NOT_CERTIFIED",
+  "completed": true,
+  "equation_or_mapping": "Existing tensor moment response; spectral pseudoinverse diagnostic retains both signs above cutoff",
+  "units": "natural",
+  "derivation_class": "numerical resolution experiment",
+  "observable": "formal heat response",
+  "data_role": "INTERNAL_NO_FIT",
+  "config": {
+    "eos": {
+      "matter": {
+        "matter_kinetic": 1.0,
+        "matter_mass_sq": 1.0,
+        "matter_quartic": 1.0,
+        "response_coupling": 0.8,
+        "unit_lane": "natural"
+      },
+      "response": {
+        "epsilon_nc": 0.05,
+        "einstein_coupling": 1.0,
+        "cosmological_constant": 0.0,
+        "phi_equilibrium": 0.0,
+        "response_kinetic": 1.0,
+        "response_mass_sq": 1.0,
+        "response_quartic": 1.0,
+        "curvature_coupling": 0.0,
+        "equilibrium_density": 0.0,
+        "unit_lane": "natural"
+      },
+      "branch_tolerance": 1e-12,
+      "inversion_tolerance": 1e-13,
+      "inversion_max_iterations": 256,
+      "phase_convention": "theta_equals_minus_mu_t",
+      "metric_signature": "minus_plus_plus_plus",
+      "unit_lane": "natural"
+    },
+    "quadrature_order": 128,
+    "cutoff_factor": 60.0,
+    "derivative_step": 0.0001,
+    "phase_tolerance": 1e-10
+  },
+  "rows": [
+    {
+      "controls": {
+        "collision_integration_order": 48,
+        "angular_order": 32,
+        "transition_quadrature_order": 24,
+        "transition_channel_count": 64,
+        "transition_interpolation_order": 40,
+        "radial_order": 24,
+        "cutoff_factor": 48.0
+      },
+      "status": "EVALUATED",
+      "kappa": 147.19397125216298,
+      "entropy_residual": 0.0,
+      "entropy_original_gate": true,
+      "lorentz_residual": 2.2737367544323206e-13,
+      "isotropy_residual": 1.9146412415535627e-07,
+      "state_count": 288,
+      "minimum_momentum": 0.11515967856582082,
+      "inverse_diagnostic": [
+        {
+          "rcond": 1e-10,
+          "kappa": 147.19397125216304,
+          "rank": 283,
+          "retained_negative": 0,
+          "relative_to_production": 4.440892098500626e-16
+        },
+        {
+          "rcond": 1e-12,
+          "kappa": 147.19397125216304,
+          "rank": 283,
+          "retained_negative": 0,
+          "relative_to_production": 4.440892098500626e-16
+        },
+        {
+          "rcond": 1e-14,
+          "kappa": 147.19397125216304,
+          "rank": 283,
+          "retained_negative": 0,
+          "relative_to_production": 4.440892098500626e-16
+        }
+      ]
+    },
+    {
+      "controls": {
+        "collision_integration_order": 48,
+        "angular_order": 32,
+        "transition_quadrature_order": 24,
+        "transition_channel_count": 64,
+        "transition_interpolation_order": 40,
+        "radial_order": 32,
+        "cutoff_factor": 48.0
+      },
+      "status": "EVALUATED",
+      "kappa": 150.19429469662646,
+      "entropy_residual": 5.684341886080801e-13,
+      "entropy_original_gate": true,
+      "lorentz_residual": 1.1368683772161603e-13,
+      "isotropy_residual": 1.8127435712321781e-07,
+      "state_count": 384,
+      "minimum_momentum": 0.06547001727283754,
+      "inverse_diagnostic": [
+        {
+          "rcond": 1e-10,
+          "kappa": 150.19429469662657,
+          "rank": 379,
+          "retained_negative": 0,
+          "relative_to_production": 6.661338147750939e-16
+        },
+        {
+          "rcond": 1e-12,
+          "kappa": 150.19429469662657,
+          "rank": 379,
+          "retained_negative": 0,
+          "relative_to_production": 6.661338147750939e-16
+        },
+        {
+          "rcond": 1e-14,
+          "kappa": 150.19429469662657,
+          "rank": 379,
+          "retained_negative": 0,
+          "relative_to_production": 6.661338147750939e-16
+        }
+      ]
+    },
+    {
+      "controls": {
+        "collision_integration_order": 48,
+        "angular_order": 32,
+        "transition_quadrature_order": 24,
+        "transition_channel_count": 64,
+        "transition_interpolation_order": 40,
+        "radial_order": 48,
+        "cutoff_factor": 48.0
+      },
+      "status": "EVALUATED",
+      "kappa": 149.75635253830424,
+      "entropy_residual": 1.1368683772161603e-13,
+      "entropy_original_gate": true,
+      "lorentz_residual": 7.105427357601204e-15,
+      "isotropy_residual": 6.395864097059037e-08,
+      "state_count": 576,
+      "minimum_momentum": 0.029407205333039116,
+      "inverse_diagnostic": [
+        {
+          "rcond": 1e-10,
+          "kappa": 149.75635253830438,
+          "rank": 571,
+          "retained_negative": 0,
+          "relative_to_production": 8.881784197001252e-16
+        },
+        {
+          "rcond": 1e-12,
+          "kappa": 149.75635253830438,
+          "rank": 571,
+          "retained_negative": 0,
+          "relative_to_production": 8.881784197001252e-16
+        },
+        {
+          "rcond": 1e-14,
+          "kappa": 149.75635253830438,
+          "rank": 571,
+          "retained_negative": 0,
+          "relative_to_production": 8.881784197001252e-16
+        }
+      ]
+    },
+    {
+      "controls": {
+        "collision_integration_order": 48,
+        "angular_order": 32,
+        "transition_quadrature_order": 24,
+        "transition_channel_count": 64,
+        "transition_interpolation_order": 40,
+        "radial_order": 64,
+        "cutoff_factor": 48.0
+      },
+      "status": "EVALUATED",
+      "kappa": 149.7500451890738,
+      "entropy_residual": 2.2737367544323206e-13,
+      "entropy_original_gate": true,
+      "lorentz_residual": 2.2737367544323206e-13,
+      "isotropy_residual": 5.66528011316616e-08,
+      "state_count": 768,
+      "minimum_momentum": 0.016628886064936555,
+      "inverse_diagnostic": [
+        {
+          "rcond": 1e-10,
+          "kappa": 149.75004518907392,
+          "rank": 763,
+          "retained_negative": 0,
+          "relative_to_production": 6.661338147750939e-16
+        },
+        {
+          "rcond": 1e-12,
+          "kappa": 149.75004518907392,
+          "rank": 763,
+          "retained_negative": 0,
+          "relative_to_production": 6.661338147750939e-16
+        },
+        {
+          "rcond": 1e-14,
+          "kappa": 149.75004518907392,
+          "rank": 763,
+          "retained_negative": 0,
+          "relative_to_production": 6.661338147750939e-16
+        }
+      ]
+    },
+    {
+      "controls": {
+        "collision_integration_order": 48,
+        "angular_order": 32,
+        "transition_quadrature_order": 24,
+        "transition_channel_count": 64,
+        "transition_interpolation_order": 40,
+        "radial_order": 48,
+        "cutoff_factor": 36.0
+      },
+      "status": "EVALUATED",
+      "kappa": 149.75251032829115,
+      "entropy_residual": 5.684341886080801e-13,
+      "entropy_original_gate": true,
+      "lorentz_residual": 3.410605131648481e-13,
+      "isotropy_residual": 1.4630368344323544e-06,
+      "state_count": 576,
+      "minimum_momentum": 0.022055403999779337,
+      "inverse_diagnostic": [
+        {
+          "rcond": 1e-10,
+          "kappa": 149.7525103282912,
+          "rank": 571,
+          "retained_negative": 0,
+          "relative_to_production": 4.440892098500626e-16
+        },
+        {
+          "rcond": 1e-12,
+          "kappa": 149.7525103282912,
+          "rank": 571,
+          "retained_negative": 0,
+          "relative_to_production": 4.440892098500626e-16
+        },
+        {
+          "rcond": 1e-14,
+          "kappa": 149.7525103282912,
+          "rank": 571,
+          "retained_negative": 0,
+          "relative_to_production": 4.440892098500626e-16
+        }
+      ]
+    },
+    {
+      "controls": {
+        "collision_integration_order": 48,
+        "angular_order": 32,
+        "transition_quadrature_order": 24,
+        "transition_channel_count": 64,
+        "transition_interpolation_order": 40,
+        "radial_order": 48,
+        "cutoff_factor": 60.0
+      },
+      "status": "EVALUATED",
+      "kappa": 149.7541047913329,
+      "entropy_residual": 7.958078640513122e-13,
+      "entropy_original_gate": true,
+      "lorentz_residual": 7.105427357601002e-15,
+      "isotropy_residual": 4.967021146398866e-09,
+      "state_count": 576,
+      "minimum_momentum": 0.036759006666298895,
+      "inverse_diagnostic": [
+        {
+          "rcond": 1e-10,
+          "kappa": 149.75410479133285,
+          "rank": 571,
+          "retained_negative": 0,
+          "relative_to_production": -3.3306690738754696e-16
+        },
+        {
+          "rcond": 1e-12,
+          "kappa": 149.75410479133285,
+          "rank": 571,
+          "retained_negative": 0,
+          "relative_to_production": -3.3306690738754696e-16
+        },
+        {
+          "rcond": 1e-14,
+          "kappa": 149.75410479133285,
+          "rank": 571,
+          "retained_negative": 0,
+          "relative_to_production": -3.3306690738754696e-16
+        }
+      ]
+    }
+  ],
+  "open_blockers": [
+    "joint_transport_convergence",
+    "transition_and_directional_basis",
+    "physical_material_mapping"
+  ],
+  "dependency_unlocked": [],
+  "claim_promotion": false,
+  "claim_boundary": "Same natural_bridge_config; preserve production rcond=1e-12. Spectral inverse sensitivity is a diagnostic, not a selection or fit. No claim promotion threshold. Transition/directional basis remain fixed.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_joint_resolution_plan.json",
+      "sha256": "434ff3bd63676a7ce0f4e5d97f73617e91242bc787421ad42b015e818fa269b4"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_joint_resolution.py",
+      "sha256": "3338cd30fda6b8c5946711e5f911dca42bbd63705731bf1e5b5689cf6527636d"
+    },
+    {
+      "path": "docs/core/test/test_topic13_joint_resolution.py",
+      "sha256": "7c83cefc0b3a41088e5c0e15cd5caceb068dac305d1415cb138a637f65563e9e"
+    },
+    {
+      "path": "docs/core/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "a1be58b8230240775654e7c0d6265870010f546238e96e59e36045e6a893e5d2"
+    },
+    {
+      "path": "docs/core/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    },
+    {
+      "path": "docs/core/uet_o2_continuum_collision_operator.py",
+      "sha256": "010c1322063b806a1d87d3708cf5509e696f7370170dc2b859f61fd8f884e9e2"
+    },
+    {
+      "path": "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+      "sha256": "eb69cc8ab6c35d782fbc687bc6fa503a22ae76c78e28d65c466eaf0e7e4719a9"
+    },
+    {
+      "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+      "sha256": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f"
+    },
+    {
+      "path": "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py",
+      "sha256": "566d6a57a377269a0d551189341b4550e4da9ee8fa711ab04b7d4785bbcff209"
+    }
+  ],
+  "verification_status": "ALL_LOCKED_CASES_ATTEMPTED"
+}

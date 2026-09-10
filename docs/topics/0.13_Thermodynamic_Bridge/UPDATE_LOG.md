@@ -1,3 +1,17 @@
+## 2026-09-11 - Joint radial/cutoff/inverse resolution review
+
+MAJOR_RESULT_CLOSURE: PARTIAL; local numerical sensitivity narrowed, not full convergence.
+WHAT_IS_ACTUALLY_CLOSED: All six locked cases evaluated; radial48/64 difference0.0042119%; cutoff36/48/60 spread at radial48 about0.0025656%; three inverse cutoffs agree.
+WHAT_REMAINS_OPEN: Transition/directional basis, isotropy, global resolution and physical material mapping.
+DEPENDENCY_UNLOCKED: None.
+STATUS: JOINT_RESOLUTION_MEASURED_NOT_CERTIFIED.
+WHAT_CHANGED: Joint plan/runner/artifact/tests and docs/core/T13_JOINT_RESOLUTION.md. Existing physics and historical artifacts unchanged.
+EQUATION_OR_MAPPING: Existing tensor response; diagnostic spectral inverse cross-check, production rcond unchanged.
+VERIFICATION: Two tests PASS and all input hashes checked. Completed artifact with six EVALUATED rows; no remaining process. Final job exit code unavailable after session expiration, not claimed.
+CONTROLLING_BLOCKER: transition_and_directional_basis_and_physical_material_mapping; overall convergence still open.
+NEXT_ACTION: Transition quadrature/channel/interpolation and direction-basis study at fixed resolved radial reference.
+CLAIM_BOUNDARY: Observed numerical differences are not physical error bars or full Topic13 closure.
+
 ## 2026-09-10 - Full response tensor lift repair
 
 MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE; scalar-lift entropy discrepancy repaired.
