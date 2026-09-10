@@ -1,7 +1,8 @@
 """Finite-grid energy-momentum conserving response for Topic 13.
 
 This lane extends the action-derived momentum collision widths to an explicit
-six-direction momentum grid.  A Gram projector preserves charge, energy, and
+six-direction momentum grid by default, with an opt-in weighted fourteen-node
+research rule. A Gram projector preserves charge, energy, and
 the three spatial momentum moments.  The projected operator is then written
 as an algebraic Bethe-Salpeter resolvent and paired with an algebraic KMS/FDT
 interface.
@@ -14,6 +15,7 @@ SK action match, a physical Kubo coefficient, or an SI observable.
 from __future__ import annotations
 
 from dataclasses import dataclass
+from itertools import product
 from math import cosh, exp, expm1, isfinite, pi, sinh, sqrt
 
 import numpy as np
@@ -40,6 +42,17 @@ _DIRECTIONS = (
     (0.0, 0.0, 1.0),
     (0.0, 0.0, -1.0),
 )
+
+
+def _moment_direction_rule(name: str):
+    """Dimensionless quadrature controls, not material parameters."""
+    if name == "axis6":
+        return _DIRECTIONS, (1.0 / 6.0,) * 6
+    if name == "axis_cube14":
+        corners = tuple(tuple(v / sqrt(3.0) for v in node)
+                        for node in product((-1.0, 1.0), repeat=3))
+        return _DIRECTIONS + corners, (1.0 / 15.0,) * 6 + (3.0 / 40.0,) * 8
+    raise ValueError("unknown moment direction rule")
 
 
 @dataclass(frozen=True)
@@ -103,6 +116,7 @@ class EnergyMomentumConservingBSState:
     data_role: str = (
         "ACTION_DERIVED_FINITE_DISCRETE_MOMENT_CONSERVING_BS_INTERFACE_NOT_MICROSCOPIC"
     )
+    moment_direction_rule: str = "axis6"
 
 
 def _finite(value: float, name: str) -> float:
@@ -182,6 +196,7 @@ def energy_momentum_conserving_bs_state(
     kms_frequency_over_temperature: tuple[float, ...] = (0.25, 0.5, 1.0),
     bs_frequency_over_rate: tuple[float, ...] = (0.5, 1.0, 2.0),
     include_final_state_bose_enhancement: bool = True,
+    _direction_rule: str = "axis6",
 ) -> EnergyMomentumConservingBSState:
     """Evaluate the finite-grid full-moment conserving interface."""
 
@@ -242,7 +257,7 @@ def energy_momentum_conserving_bs_state(
     widths: list[float] = []
     source: list[float] = []
     radial_measure = 1.0 / (2.0 * np.pi * np.pi)
-    direction_weight = 1.0 / float(len(_DIRECTIONS))
+    directions, direction_weights = _moment_direction_rule(_direction_rule)
     for sign in (-1.0, 1.0):
         for momentum, momentum_weight in zip(radial_nodes, radial_weights):
             p = float(momentum)
@@ -270,7 +285,7 @@ def energy_momentum_conserving_bs_state(
                 * (1.0 + occupation)
                 / t
             )
-            for direction in _DIRECTIONS:
+            for direction, direction_weight in zip(directions, direction_weights):
                 px, py, pz = (p * float(value) for value in direction)
                 weight = _positive(base_weight * direction_weight, "state weight")
                 state_signs.append(sign)
@@ -368,7 +383,7 @@ def energy_momentum_conserving_bs_state(
         radial_order=int(radial_order),
         collision_integration_order=int(collision_integration_order),
         angular_order=int(angular_order),
-        direction_count=len(_DIRECTIONS),
+        direction_count=len(directions),
         state_count=state_count,
         state_species_signs=tuple(state_signs),
         state_momenta=tuple(momenta),
@@ -405,6 +420,7 @@ def energy_momentum_conserving_bs_state(
         bs_frequency_over_rate=bs_ratios,
         bs_match_residuals=bs_residuals,
         entropy_production_witness=entropy_witness,
+        moment_direction_rule=_direction_rule,
     )
 
 

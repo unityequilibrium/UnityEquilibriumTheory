@@ -1,0 +1,16 @@
+{
+  "registry_id": "uet.o2.numerical_moment_quadrature.axis_cube14",
+  "registration_status": "UNMERGED_INTERNAL_NUMERICAL_CANDIDATE",
+  "ontology": "Momentum integration nodes; no new physical state or change to C, Phi, R_gen or R_obs",
+  "units": "Dimensionless unit vectors and normalized angular weights",
+  "equation_or_mapping": "w_state = w_radial * w_direction; six axis weights 1/15 and eight cube-corner weights 3/40",
+  "derivation_class": "Analytic sphere moment matching through degree four, not degree six",
+  "observable": "Internal finite-grid moment response, not SI material transport",
+  "data_role": "INTERNAL_ANALYTIC_CONTROL_NO_TARGET_DATA",
+  "verification_status": "WEIGHTED_FULL_PATH_PILOT_ONLY",
+  "controlling_blocker": "angular_transition_convergence_and_weighted_interpolation_correspondence",
+  "claim_boundary": "Six-axis remains default; fourteen-node rule is opt-in and not continuum-certified",
+  "evidence_artifact": "docs/core/artifacts/t13_weighted_direction_pilot.json",
+  "dependency_unlocked": [],
+  "full_core_unlock": false
+}

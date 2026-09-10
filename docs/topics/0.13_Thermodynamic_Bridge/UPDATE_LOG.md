@@ -1,3 +1,17 @@
+## 2026-09-11 - Weighted angular full-path pilot
+
+MAJOR_RESULT_CLOSURE: PARTIAL; weighted quadrature reaches the actual heat-response path.
+WHAT_IS_ACTUALLY_CLOSED: Nonuniform weights and five conserved moments tested; missing shear source restored in the opt-in14-node rule, six-axis default preserved.
+WHAT_REMAINS_OPEN: Angular/transition convergence, weighted interpolation correspondence and material mapping.
+DEPENDENCY_UNLOCKED: None.
+STATUS: WARN_COARSE_ANGULAR_COMPARISON_NOT_CONVERGED.
+WHAT_CHANGED: Two research builders, appended state metadata, pilot/test/registry addendum and docs/core/T13_WEIGHTED_DIRECTION_PILOT.md.
+EQUATION_OR_MAPPING: Explicit radial times angular susceptibility weights; no new physical state or parameter fit.
+VERIFICATION:18 tests PASS; both coarse cases satisfy original entropy/boost criteria; fourteen-node isotropy5.26848e-8 FAILS original1e-8. Foundation/compatibility audits retain BLOCKED physical gates.
+CONTROLLING_BLOCKER: angular_transition_convergence_and_weighted_interpolation_correspondence.
+NEXT_ACTION: Locked interpolation/channel comparison before higher-resolution angular transport.
+CLAIM_BOUNDARY: No viscosity computation, SI coefficient, holdout use or full Topic13 promotion. Historical artifacts unchanged.
+
 ## 2026-09-11 - Angular moment representation boundary
 
 MAJOR_RESULT_CLOSURE: PARTIAL; six-axis quadrupole deficit identified with explicit replacement candidate.

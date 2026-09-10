@@ -110,6 +110,7 @@ class ContinuumCollisionOperatorState:
     data_role: str = (
         "ACTION_DERIVED_CONSERVATIVE_CONTINUUM_COLLOCATION_NOT_MICROSCOPIC"
     )
+    moment_direction_rule: str = "axis6"
 
 
 def _finite(value: float, name: str) -> float:
@@ -247,6 +248,7 @@ def continuum_collision_operator_state(
     retarded_frequency_over_rate: tuple[float, ...] = (0.0, 0.5, 1.0, 2.0),
     kms_frequency_over_temperature: tuple[float, ...] = (0.25, 0.5, 1.0),
     bs_frequency_over_rate: tuple[float, ...] = (0.5, 1.0, 2.0),
+    _direction_rule: str = "axis6",
 ) -> ContinuumCollisionOperatorState:
     """Build the conservative finite-cutoff continuum-collocation operator."""
 
@@ -310,6 +312,7 @@ def continuum_collision_operator_state(
         kms_frequency_over_temperature=kms_ratios,
         bs_frequency_over_rate=bs_ratios,
         include_final_state_bose_enhancement=True,
+        _direction_rule=_direction_rule,
     )
     exact = action_derived_transition_kernel_state(
         temperature,
@@ -486,6 +489,7 @@ def continuum_collision_operator_state(
         bs_frequency_over_rate=bs_ratios,
         bs_match_residuals=bs_residuals,
         entropy_production_witness=entropy_witness,
+        moment_direction_rule=base.moment_direction_rule,
     )
 
 
