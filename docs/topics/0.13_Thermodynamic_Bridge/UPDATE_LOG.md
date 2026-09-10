@@ -1,3 +1,17 @@
+## 2026-09-10 - Linear heat-charge frame mapping
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE; projected heat moment identified and linear entropy-frame relation verified.
+WHAT_IS_ACTUALLY_CLOSED: Q_L approximately0, q_heat=-hV; transforming convection makes Landau and Eckart entropy currents agree to first order.
+WHAT_REMAINS_OPEN: Production frame propagation, convergence, material/protocol and two-fluid completion.
+DEPENDENCY_UNLOCKED: Internal correspondence only.
+STATUS: LINEAR_FRAME_MAP_RESOLVED.
+WHAT_CHANGED: Direct moment/frame audit/test/artifact, note and unmerged registry addendum.
+EQUATION_OR_MAPPING: K_heat=h^2 K_charge; S_L=s*u_L-mu*V/T; S_E=s*u_E+q_E/T.
+VERIFICATION: Three tests PASS; fixed three amplitudes; moment/entropy identities near1e-15 relative on the declared grid. F0 inventory369/no duplicates.
+CONTROLLING_BLOCKER: production_frame_labels_and_physical_material_charge_map.
+NEXT_ACTION: Propagate explicit current/frame outputs without declaring O(2) charge to be He4 mass.
+CLAIM_BOUNDARY: Linear internal identity, not nonlinear hydrodynamics or external validation.
+
 ## 2026-09-10 - Same-action local composition
 
 MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE; common-action local alpha/beta/EOS/entropy reference.
