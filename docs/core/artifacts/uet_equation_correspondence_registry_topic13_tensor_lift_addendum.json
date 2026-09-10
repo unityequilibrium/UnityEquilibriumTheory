@@ -1,0 +1,15 @@
+{
+  "status": "UNMERGED_INTERNAL_TENSOR_LIFT_REPAIR",
+  "equation_id": "uet.topic13.full_transverse_heat_response_lift",
+  "ontology": "K is a finite-grid response tensor; q_heat is the invariant heat combination, not Landau energy flux. C/Phi/R_gen/R_obs unchanged.",
+  "equation_or_mapping": "q^mu=K^(mu nu)X_nu; sigma=X_mu K^(mu nu)X_nu/T; K'=Lambda K Lambda^T",
+  "units": "Natural moment response; tr(K_spatial)/3 is only a scalar summary, not an SI conductivity",
+  "derivation_class": "Full projected response contraction and Lorentz tensor transformation",
+  "observable": "Formal heat response and entropy balance",
+  "data_role": "INTERNAL_NO_CALIBRATION",
+  "verification_status": "SEE_TENSOR_REPAIR_ARTIFACT",
+  "evidence_artifact": "docs/core/artifacts/t13_tensor_lift_repair_audit.json",
+  "controlling_blocker": "radial_cutoff_convergence_and_physical_material_protocol_map",
+  "dependency_unlocked": [],
+  "claim_boundary": "No isotropy certification, continuum limit, physical transport or global theory promotion."
+}

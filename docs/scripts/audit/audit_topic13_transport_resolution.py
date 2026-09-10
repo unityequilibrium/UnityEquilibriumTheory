@@ -60,6 +60,8 @@ def main():
                 charge_residual=s.charge_balance_residual,energy_residual=s.energy_balance_residual,
                 momentum_residual=s.momentum_balance_residual,
                 kinetic_residual=s.kinetic_equation_residual,
+                lorentz_residual=s.lorentz_covariance_residual,
+                heat_flux_response_residual=s.heat_flux_response_residual,
                 isotropy_residual=s.heat_response_isotropy_residual,
                 state_count=op.state_count,null_modes=op.null_mode_count,
                 min_operator_eigenvalue=op.positive_semidefinite_min_eigenvalue,

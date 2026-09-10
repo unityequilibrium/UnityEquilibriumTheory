@@ -150,24 +150,59 @@ def covariant_entropy_heat_flux(
     }
 
 
-def _boost_scalar_residual(
+def _covariant_tensor_entropy_heat_flux(
+    metric: Any,
+    four_velocity: Any,
+    temperature: float,
+    entropy_density: float,
+    response_tensor: Any,
+    thermal_force_covariant: Any,
+) -> dict[str, Any]:
+    """Lift the full transverse moment response without isotropic averaging."""
+    base = covariant_entropy_heat_flux(
+        metric, four_velocity, temperature, entropy_density, 1.0,
+        thermal_force_covariant,
+    )
+    tensor = np.asarray(response_tensor, dtype=float)
+    if tensor.shape != (4, 4) or not np.all(np.isfinite(tensor)):
+        raise ValueError("response_tensor must be finite with shape (4,4)")
+    scale = max(float(np.linalg.norm(tensor)), 1.0)
+    if np.linalg.norm(tensor-tensor.T) > 1.0e-12*scale:
+        raise ValueError("response_tensor must be symmetric")
+    velocity = base["four_velocity"]
+    g = base["metric"]
+    if np.linalg.norm(velocity @ g @ tensor) > 1.0e-12*scale:
+        raise ValueError("response_tensor must be transverse")
+    if np.min(np.linalg.eigvalsh(tensor)) < -1.0e-8:
+        raise ValueError("response_tensor must be positive semidefinite within the existing numerical tolerance")
+    heat_flux = tensor @ base["thermal_force_covariant"]
+    base.update(
+        heat_flux_contravariant=heat_flux,
+        entropy_current_contravariant=entropy_density*velocity+heat_flux/temperature,
+        entropy_production=float(base["thermal_force_covariant"] @ heat_flux)/temperature,
+        heat_flux_orthogonality_residual=abs(float(velocity @ g @ heat_flux)),
+    )
+    return base
+
+
+def _boost_tensor_residual(
     metric: np.ndarray,
     velocity: np.ndarray,
     temperature: float,
     entropy_density: float,
-    kappa: float,
+    response_tensor: np.ndarray,
     force_covariant: np.ndarray,
     base: dict[str, Any],
 ) -> float:
     boost = lorentz_boost_x(0.37)
     boosted_velocity = boost @ velocity
     boosted_force_covariant = np.linalg.inv(boost).T @ force_covariant
-    boosted = covariant_entropy_heat_flux(
+    boosted = _covariant_tensor_entropy_heat_flux(
         metric,
         boosted_velocity,
         temperature,
         entropy_density,
-        kappa,
+        boost @ response_tensor @ boost.T,
         boosted_force_covariant,
     )
     scalar_residual = abs(
@@ -332,12 +367,14 @@ def covariant_entropy_heat_flux_balance_state(
         / max(kappa_natural, 1.0)
     )
 
-    covariant = covariant_entropy_heat_flux(
+    response_tensor = np.zeros((4, 4), dtype=float)
+    response_tensor[1:, 1:] = response_matrix
+    covariant = _covariant_tensor_entropy_heat_flux(
         metric_array,
         velocity,
         temperature,
         eos.entropy_density,
-        kappa_natural,
+        response_tensor,
         force_covariant,
     )
     force_spatial = np.asarray(covariant["thermal_force_contravariant"], dtype=float)[1:]
@@ -356,12 +393,12 @@ def covariant_entropy_heat_flux_balance_state(
     charge_balance = float(abs(invariant_balance[0]))
     energy_balance = float(abs(invariant_balance[1]))
     momentum_balance = float(np.linalg.norm(invariant_balance[2:]))
-    equilibrium = covariant_entropy_heat_flux(
+    equilibrium = _covariant_tensor_entropy_heat_flux(
         metric_array,
         velocity,
         temperature,
         eos.entropy_density,
-        kappa_natural,
+        response_tensor,
         np.zeros(4, dtype=float),
     )
     values = (
@@ -402,7 +439,8 @@ def covariant_entropy_heat_flux_balance_state(
         "entropy_frame_identity_residual": float(np.linalg.norm(landau_entropy-transformed_eckart_entropy)),
         "heat_moment_response_residual": float(np.linalg.norm(invariant_heat[1:]-heat_response)),
         "legacy_entropy_current_role": "FORMAL_s_u_PLUS_HEAT_OVER_T_NOT_CANONICAL_LANDAU_CURRENT",
-        "legacy_heat_flux_role": "ISOTROPIC_LIFT_OF_INVARIANT_HEAT_RESPONSE_NOT_LANDAU_ENERGY_FLUX",
+        "legacy_heat_flux_role": "FULL_TENSOR_INVARIANT_HEAT_RESPONSE_NOT_LANDAU_ENERGY_FLUX",
+        "response_lift_revision": "FULL_TRANSVERSE_TENSOR_V1",
         "finite_velocity_state_validated": False,
         "claim_boundary": "Linear response coefficients/probes only; a unit force is not a validated finite fluid state. Signed O(2) charge is not material mass.",
     }
@@ -453,12 +491,12 @@ def covariant_entropy_heat_flux_balance_state(
             covariant["heat_flux_orthogonality_residual"]
         ),
         projector_orthogonality_residual=projector_residual,
-        lorentz_covariance_residual=_boost_scalar_residual(
+        lorentz_covariance_residual=_boost_tensor_residual(
             metric_array,
             velocity,
             temperature,
             eos.entropy_density,
-            kappa_natural,
+            response_tensor,
             force_covariant,
             covariant,
         ),
@@ -479,9 +517,10 @@ def covariant_entropy_heat_flux_balance_contract() -> dict[str, Any]:
             "conservative_projection": "b_i^perp=P*b_i with P preserving charge and four-momentum null modes",
             "finite_cutoff_response": "K_ab=(b_a^perp)^T*L_cont^+*b_b^perp",
             "covariant_thermal_force": "X_T^mu=-Delta^(mu nu)*(nabla_nu T+T*a_nu)/T",
-            "covariant_heat_flux": "q^mu=kappa_natural*X_T^mu",
+            "covariant_heat_flux": "q^mu=K^(mu nu)*X_T_nu; K is the full transverse response tensor",
             "entropy_current": "J_S^mu=s*u^mu+q^mu/T",
-            "entropy_production": "sigma=X_T_mu*q^mu/T=kappa_natural*X_T_mu*X_T^mu/T>=0",
+            "entropy_production": "sigma=X_T_mu*q^mu/T=X_T_mu*K^(mu nu)*X_T_nu/T>=0",
+            "scalar_summary": "kappa_natural=trace(K_spatial)/3 is a summary, not the tensor used in the state response",
             "kinetic_entropy_balance": "z=L_cont^+*b_a^perp*X^a; sigma=z^T*L_cont*z/T=X^a*K_ab*X^b/T",
             "entropy_metric": "w_i=m_i*f_i*(1+f_i)/T; delta_f_i=f_i*(1+f_i)*psi_i/T; z_i=sqrt(w_i)*psi_i; delta2(-s)=z^T*z/(2*T)",
             "conserved_dissipative_balance": "I_A^T*L_cont*z=0 for charge, energy, and momentum moments",

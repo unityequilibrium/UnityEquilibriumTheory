@@ -1,3 +1,17 @@
+## 2026-09-10 - Full response tensor lift repair
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE; scalar-lift entropy discrepancy repaired.
+WHAT_IS_ACTUALLY_CLOSED: Production tensor flux and entropy balance now agree on all ten locked resolution cases; boost check transforms full tensor.
+WHAT_REMAINS_OPEN: Radial/cutoff convergence, isotropy, material and physical transport mapping.
+DEPENDENCY_UNLOCKED: No physical/Core promotion.
+STATUS: TENSOR_BALANCE_REPAIRED_TRANSPORT_UNRESOLVED.
+WHAT_CHANGED: Private tensor implementation, anisotropic/boost tests, new repair artifact/addendum/note; scalar baseline frozen.
+EQUATION_OR_MAPPING: q=K X and sigma=X K X/T; scalar trace summary no longer replaces response matrix.
+VERIFICATION:14 tests PASS; ten cases pass original entropy/covariance thresholds. Maximum entropy residual2.274e-12; same-case kappa unchanged. F0 inventory369/no duplicates.
+CONTROLLING_BLOCKER: radial_cutoff_underresolution_and_material_protocol_mapping.
+NEXT_ACTION: Joint resolution/cutoff and inverse-sensitivity checks, not another entropy threshold change.
+CLAIM_BOUNDARY: No conductivity convergence or full Topic13 claim; historical scalar failures remain recorded.
+
 ## 2026-09-10 - Shared-action transport resolution
 
 MAJOR_RESULT_CLOSURE: PARTIAL; radial/cutoff sensitivity and scalar entropy-lift failure isolated.
