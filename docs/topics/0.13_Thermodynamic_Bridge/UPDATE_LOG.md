@@ -1,3 +1,17 @@
+## 2026-09-10 - Shared-action transport resolution
+
+MAJOR_RESULT_CLOSURE: PARTIAL; radial/cutoff sensitivity and scalar entropy-lift failure isolated.
+WHAT_IS_ACTUALLY_CLOSED: Ten one-factor cases retained; full tensor entropy agrees with collision entropy within2.274e-12 even where scalar lift fails.
+WHAT_REMAINS_OPEN: Transport convergence and physical material/protocol mapping.
+DEPENDENCY_UNLOCKED: None.
+STATUS: RESOLUTION_MEASURED_CONVERGENCE_NOT_CERTIFIED.
+WHAT_CHANGED: Locked plan, runner/artifact, integrity tests and docs/core/T13_TRANSPORT_RESOLUTION.md.
+EQUATION_OR_MAPPING: Scalar tr(K)/3 differs from directional K_xx; no threshold or physics changes.
+VERIFICATION: Ten cases completed; three integrity tests PASS. Four original entropy gates FAIL and remain recorded. Post-hoc tensor diagnostic explicitly disclosed.
+CONTROLLING_BLOCKER: radial_cutoff_underresolution_and_scalar_lift_discrepancy.
+NEXT_ACTION: Full tensor lift plus separate coupled radial/cutoff convergence checks.
+CLAIM_BOUNDARY: Algebraic consistency does not establish converged physical transport.
+
 ## 2026-09-10 - Production frame-current output
 
 MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE; explicit canonical current decomposition integrated into production state.
