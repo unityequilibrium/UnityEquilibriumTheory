@@ -1,3 +1,17 @@
+## 2026-09-10 - Same-action local composition
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE; common-action local alpha/beta/EOS/entropy reference.
+WHAT_IS_ACTUALLY_CLOSED: Full config passed identically; shared thermodynamic quantities match and corrected entropy meets original thresholds.
+WHAT_REMAINS_OPEN: Frame/current mapping, convergence, material protocol and historical integration review.
+DEPENDENCY_UNLOCKED: Internal reference only.
+STATUS: SAME_ACTION_REFERENCE_CONSISTENT.
+WHAT_CHANGED: Same-action driver/test/artifact and docs/core/T13_SAME_ACTION_COMPOSITION.md; default/old artifacts preserved.
+EQUATION_OR_MAPPING: Existing natural_bridge_config for all components; no new equation or fitting.
+VERIFICATION: Two tests PASS; shared-action kappa254.8247192440348 and entropy residual5.15436e-8. Configuration-comparison difference is not solely a coupling effect.
+CONTROLLING_BLOCKER: hydrodynamic_frame_charge_diffusion_map.
+NEXT_ACTION: Map the projected moment current and entropy current in an explicit hydrodynamic frame.
+CLAIM_BOUNDARY: No SI transport, full Core promotion or holdout use.
+
 ## 2026-09-10 - Susceptibility entropy metric repair
 
 MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE; internal entropy normalization repaired.
