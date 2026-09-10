@@ -1,3 +1,17 @@
+## 2026-09-10 - Local EOS revision impact
+
+MAJOR_RESULT_CLOSURE: PARTIAL; reference alpha/beta revision differences measured.
+WHAT_IS_ACTUALLY_CLOSED: Current normal-reference alpha differs relatively1.26021e-6 and beta2.53909e-5 from recorded values, without calibration rematching.
+WHAT_REMAINS_OPEN: Physical protocol mapping and full dependent evidence reconciliation.
+DEPENDENCY_UNLOCKED: None.
+STATUS: REVISION_IMPACT_MEASURED_NOT_FULL_COMPOSITION_REVALIDATED.
+WHAT_CHANGED: audit_topic13_eos_revision_impact.py, tests, JSON artifact and docs/core/T13_EOS_REVISION_IMPACT.md.
+EQUATION_OR_MAPPING: Existing default natural alpha/beta builders, no equation or scale changes.
+VERIFICATION: Two tests PASS; two reference evaluations; declared Core graph61 matching,9 stale,30 excluded edges. No missing inspected path. Excluded files were not read.
+CONTROLLING_BLOCKER: physical_protocol_and_remaining_recursive_revision_review.
+NEXT_ACTION: Check entropy reference and transverse-response revision before refreshing any composition.
+CLAIM_BOUNDARY: No physical uncertainty estimate, full composition rerun or holdout validation. Old artifacts and user changes preserved.
+
 ## 2026-09-10 - Current-EOS isentropic source work
 
 MAJOR_RESULT_CLOSURE: PARTIAL; reversible natural source-work accounting.

@@ -1,0 +1,997 @@
+{
+  "status": "REVISION_IMPACT_MEASURED_NOT_FULL_COMPOSITION_REVALIDATED",
+  "major_result_id": "T13_LOCAL_EOS_REVISION_IMPACT",
+  "closure_level": "PARTIAL",
+  "configuration": "Unchanged bridge and beta default builders: T=.22, mu=.35, Phi=.15; quadrature=128. Historical generator scripts call these defaults. No calibration rematching.",
+  "evidence_graph": {
+    "documents_inspected": [
+      "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
+      "docs/core/artifacts/covariant_superfluid_transport_contract.json",
+      "docs/core/artifacts/covariant_superfluid_transport_verification.json",
+      "docs/core/artifacts/matter_space_causal_cone_compatibility.json",
+      "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
+      "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
+      "docs/core/artifacts/t13_berut_figure3_remote_binary_identity.json",
+      "docs/core/artifacts/t13_berut_source_package_availability_boundary.json",
+      "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json",
+      "docs/core/artifacts/t13_collective_response_eos_stability_audit.json",
+      "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+      "docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json",
+      "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+      "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json",
+      "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json",
+      "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
+      "docs/core/artifacts/t13_he4_svp_physical_anchor_audit.json",
+      "docs/core/artifacts/t13_hong_final_source_package_boundary.json",
+      "docs/core/artifacts/t13_jun_final_source_package_boundary.json",
+      "docs/core/artifacts/t13_kim_2018_graphite_green_kubo_external_input_audit.json",
+      "docs/core/artifacts/t13_landauer_core_disposition_audit.json",
+      "docs/core/artifacts/t13_peterson_source_identity_no_go.json",
+      "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json",
+      "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json",
+      "docs/core/artifacts/t13_uet_o2_action_thermal_observable_bridge_audit.json",
+      "docs/core/artifacts/t13_uet_o2_action_thermal_stiffness_beta_audit.json",
+      "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+      "docs/core/artifacts/t13_uet_o2_finite_temperature_two_fluid_response_audit.json",
+      "docs/core/artifacts/t13_uet_o2_thermodynamic_normal_component_audit.json"
+    ],
+    "edges": [
+      {
+        "parent": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+        "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
+        "expected_sha256": "1cb84b6c8e9741fef1dc6e0f83fba3dfe68ca6cd89adac8fa1a31835b4debf62",
+        "actual_sha256": "1cb84b6c8e9741fef1dc6e0f83fba3dfe68ca6cd89adac8fa1a31835b4debf62",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+        "path": "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json",
+        "expected_sha256": "6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a",
+        "actual_sha256": "6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+        "path": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+        "expected_sha256": "65a85d9abc2d051570af72898bd8b8848c29d1fb20685c9b284ce6915fe8a8fe",
+        "actual_sha256": "65a85d9abc2d051570af72898bd8b8848c29d1fb20685c9b284ce6915fe8a8fe",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+        "path": "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json",
+        "expected_sha256": "46e292d9b0f88125ecf134faa51322421a06d058015ba318f25c3be3cd2dd26f",
+        "actual_sha256": "46e292d9b0f88125ecf134faa51322421a06d058015ba318f25c3be3cd2dd26f",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+        "path": "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json",
+        "expected_sha256": "1c44ffce6310488bf3a9b2e9cce74d1281fb27a949c1b9d26c6f80d970b7fbd0",
+        "actual_sha256": "1c44ffce6310488bf3a9b2e9cce74d1281fb27a949c1b9d26c6f80d970b7fbd0",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+        "path": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
+        "expected_sha256": "1a8289aadbed1c069add276bb3f734d6c642174cf2101a664fba4ee5a8bfd021",
+        "actual_sha256": "1a8289aadbed1c069add276bb3f734d6c642174cf2101a664fba4ee5a8bfd021",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+        "path": "docs/core/artifacts/t13_he4_svp_physical_anchor_audit.json",
+        "expected_sha256": "a27c4a1138edbeb890e9fcea3b7929da9fc68f82a116ca4cfe2784e320c4f0de",
+        "actual_sha256": "a27c4a1138edbeb890e9fcea3b7929da9fc68f82a116ca4cfe2784e320c4f0de",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+        "path": "docs/core/artifacts/t13_landauer_core_disposition_audit.json",
+        "expected_sha256": "82f77043c8921819175146841afd8cc5178385939e8ccf455678ead65731aa43",
+        "actual_sha256": "82f77043c8921819175146841afd8cc5178385939e8ccf455678ead65731aa43",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+        "path": "docs/core/artifacts/t13_uet_o2_action_thermal_observable_bridge_audit.json",
+        "expected_sha256": "7ba49d3f629c91f3f88dda6ad717d8928e58439de7517a5979f0a465b9f52585",
+        "actual_sha256": "7ba49d3f629c91f3f88dda6ad717d8928e58439de7517a5979f0a465b9f52585",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+        "path": "docs/core/artifacts/t13_uet_o2_action_thermal_stiffness_beta_audit.json",
+        "expected_sha256": "c8079bbdbfa3a340e66b26dfa4d2f0cb93a5b32a1ef6827e604415958b4c649e",
+        "actual_sha256": "c8079bbdbfa3a340e66b26dfa4d2f0cb93a5b32a1ef6827e604415958b4c649e",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+        "path": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+        "expected_sha256": "9ea6f37eb43e353b8c89e42b1c3dd01c957b2063e41a09230483989accb2b3f4",
+        "actual_sha256": "9ea6f37eb43e353b8c89e42b1c3dd01c957b2063e41a09230483989accb2b3f4",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+        "path": "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json",
+        "expected_sha256": "c3185da0a233894d7f338138bbe6acee287194e1852a80e40b0b5f6f2134e21b",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+        "path": "docs/core/uet_o2_continuum_collision_operator.py",
+        "expected_sha256": "010c1322063b806a1d87d3708cf5509e696f7370170dc2b859f61fd8f884e9e2",
+        "actual_sha256": "010c1322063b806a1d87d3708cf5509e696f7370170dc2b859f61fd8f884e9e2",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+        "path": "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py",
+        "expected_sha256": "89171426c2209521a16ca99e79ef4312cc9d3a987991692cc40ac9235a2fc251",
+        "actual_sha256": "89171426c2209521a16ca99e79ef4312cc9d3a987991692cc40ac9235a2fc251",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+        "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+        "expected_sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4",
+        "actual_sha256": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
+        "status": "STALE"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_uet_o2_action_thermal_stiffness_beta_audit.json",
+        "path": "docs/core/uet_covariant_matter.py",
+        "expected_sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+        "actual_sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_uet_o2_action_thermal_stiffness_beta_audit.json",
+        "path": "docs/core/uet_covariant_response.py",
+        "expected_sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
+        "actual_sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_uet_o2_action_thermal_stiffness_beta_audit.json",
+        "path": "docs/core/uet_o2_action_thermal_stiffness_beta.py",
+        "expected_sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6",
+        "actual_sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_uet_o2_action_thermal_stiffness_beta_audit.json",
+        "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+        "expected_sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4",
+        "actual_sha256": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
+        "status": "STALE"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_uet_o2_action_thermal_observable_bridge_audit.json",
+        "path": "docs/core/uet_o2_action_thermal_observable_bridge.py",
+        "expected_sha256": "a1be58b8230240775654e7c0d6265870010f546238e96e59e36045e6a893e5d2",
+        "actual_sha256": "a1be58b8230240775654e7c0d6265870010f546238e96e59e36045e6a893e5d2",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_uet_o2_action_thermal_observable_bridge_audit.json",
+        "path": "docs/core/uet_o2_action_thermal_stiffness_beta.py",
+        "expected_sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6",
+        "actual_sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_uet_o2_action_thermal_observable_bridge_audit.json",
+        "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+        "expected_sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4",
+        "actual_sha256": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
+        "status": "STALE"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_landauer_core_disposition_audit.json",
+        "path": "docs/core/artifacts/t13_berut_source_package_availability_boundary.json",
+        "expected_sha256": "6631d275f11f0d71239a6ea0fee35b6542e386862c1a683de96ffdfcfb8b370d",
+        "actual_sha256": "6631d275f11f0d71239a6ea0fee35b6542e386862c1a683de96ffdfcfb8b370d",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_landauer_core_disposition_audit.json",
+        "path": "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json",
+        "expected_sha256": "46e292d9b0f88125ecf134faa51322421a06d058015ba318f25c3be3cd2dd26f",
+        "actual_sha256": "46e292d9b0f88125ecf134faa51322421a06d058015ba318f25c3be3cd2dd26f",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_landauer_core_disposition_audit.json",
+        "path": "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json",
+        "expected_sha256": "1c44ffce6310488bf3a9b2e9cce74d1281fb27a949c1b9d26c6f80d970b7fbd0",
+        "actual_sha256": "1c44ffce6310488bf3a9b2e9cce74d1281fb27a949c1b9d26c6f80d970b7fbd0",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_landauer_core_disposition_audit.json",
+        "path": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
+        "expected_sha256": "1a8289aadbed1c069add276bb3f734d6c642174cf2101a664fba4ee5a8bfd021",
+        "actual_sha256": "1a8289aadbed1c069add276bb3f734d6c642174cf2101a664fba4ee5a8bfd021",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_landauer_core_disposition_audit.json",
+        "path": "docs/core/artifacts/t13_hong_final_source_package_boundary.json",
+        "expected_sha256": "4c5a81ae8884a4e11b2f358f2e557eecbe4f82c67c6da1e9eb7eed314bf815f7",
+        "actual_sha256": "4c5a81ae8884a4e11b2f358f2e557eecbe4f82c67c6da1e9eb7eed314bf815f7",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_landauer_core_disposition_audit.json",
+        "path": "docs/core/artifacts/t13_jun_final_source_package_boundary.json",
+        "expected_sha256": "0171a53d873a8fe5c386c1221c26679f908434aa425fb80b740f9778e51e72ec",
+        "actual_sha256": "0171a53d873a8fe5c386c1221c26679f908434aa425fb80b740f9778e51e72ec",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_landauer_core_disposition_audit.json",
+        "path": "docs/core/artifacts/t13_peterson_source_identity_no_go.json",
+        "expected_sha256": "c6d1a0154b7c138416e7de0662264559727244802b1b2ec20be07bfe7a263b12",
+        "actual_sha256": "c6d1a0154b7c138416e7de0662264559727244802b1b2ec20be07bfe7a263b12",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_peterson_source_identity_no_go.json",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/peterson_source_identity_no_go_package.json",
+        "expected_sha256": "c1fbb8f06a8d4ddf6e1c8227056fdc0fa52ef186c246ebcdb094a647ffdd50c0",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_jun_final_source_package_boundary.json",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/jun_2014_final_source_package.json",
+        "expected_sha256": "b835eb1b7b52602517a349db4e003e3c71fa5bf430afc662f5e368e9079e677c",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_jun_final_source_package_boundary.json",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/jun_2014_prl_reprint.pdf",
+        "expected_sha256": "3283e23a31a546dec28d9e33364456297e13e89f302546cabd8b5c8d0eb92519",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_hong_final_source_package_boundary.json",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/hong_2016_final_source_package.json",
+        "expected_sha256": "0cbd225b5225dff8954b471a31ad5e1b569fc33aee2f2bfb456e21e277950838",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_hong_final_source_package_boundary.json",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/hong_2016_science_advances_article.pdf",
+        "expected_sha256": "5d7e305edacfb31c66892329375fe0b8fef4ed674c53bb68bfc1139fc26ffe17",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
+        "path": "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json",
+        "expected_sha256": "1c44ffce6310488bf3a9b2e9cce74d1281fb27a949c1b9d26c6f80d970b7fbd0",
+        "actual_sha256": "1c44ffce6310488bf3a9b2e9cce74d1281fb27a949c1b9d26c6f80d970b7fbd0",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
+        "path": "docs/core/artifacts/t13_uet_o2_action_thermal_stiffness_beta_audit.json",
+        "expected_sha256": "c8079bbdbfa3a340e66b26dfa4d2f0cb93a5b32a1ef6827e604415958b4c649e",
+        "actual_sha256": "c8079bbdbfa3a340e66b26dfa4d2f0cb93a5b32a1ef6827e604415958b4c649e",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
+        "path": "docs/core/he4_o2_si_beta_mapping.py",
+        "expected_sha256": "e39a863866ca6db30100ad004c01d62e9598c151824d16849b32fabfed35dd23",
+        "actual_sha256": "e39a863866ca6db30100ad004c01d62e9598c151824d16849b32fabfed35dd23",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
+        "path": "docs/data/external/constants/codata/si_2019_exact_constants.json",
+        "expected_sha256": "dcced6d840f4f4fbcea90128061ab7a528be04e1b37917893dbf4a28934b3560",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_o2_si_beta_mapping_source_package.json",
+        "expected_sha256": "5b0e63acc6932e4d050300f05a42d3dfb0411138883cdf6d6816ec0e16d9fe2e",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_o2_physical_anchor_source_package.json",
+        "expected_sha256": "4d02b1faac1cefe3ce79ced525183e2d38066604808d91f9c2769d515ab8b770",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json",
+        "path": "docs/core/artifacts/t13_uet_o2_action_thermal_observable_bridge_audit.json",
+        "expected_sha256": "7ba49d3f629c91f3f88dda6ad717d8928e58439de7517a5979f0a465b9f52585",
+        "actual_sha256": "7ba49d3f629c91f3f88dda6ad717d8928e58439de7517a5979f0a465b9f52585",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json",
+        "path": "docs/core/he4_o2_response_calibration.py",
+        "expected_sha256": "314a4a100fe7b71cb3dd81051c261a3a1f1ec80d7d4d3a08456a997629f253e3",
+        "actual_sha256": "314a4a100fe7b71cb3dd81051c261a3a1f1ec80d7d4d3a08456a997629f253e3",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_o2_local_response_calibration_source_package.json",
+        "expected_sha256": "f10e9468c4417730dff0eed5c45d661fdf7aa1a96c7a3375792de98e4dbfac17",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_o2_physical_anchor_source_package.json",
+        "expected_sha256": "4d02b1faac1cefe3ce79ced525183e2d38066604808d91f9c2769d515ab8b770",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json",
+        "path": "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json",
+        "expected_sha256": "1c44ffce6310488bf3a9b2e9cce74d1281fb27a949c1b9d26c6f80d970b7fbd0",
+        "actual_sha256": "1c44ffce6310488bf3a9b2e9cce74d1281fb27a949c1b9d26c6f80d970b7fbd0",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json",
+        "path": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
+        "expected_sha256": "1a8289aadbed1c069add276bb3f734d6c642174cf2101a664fba4ee5a8bfd021",
+        "actual_sha256": "1a8289aadbed1c069add276bb3f734d6c642174cf2101a664fba4ee5a8bfd021",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json",
+        "path": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+        "expected_sha256": "9ea6f37eb43e353b8c89e42b1c3dd01c957b2063e41a09230483989accb2b3f4",
+        "actual_sha256": "9ea6f37eb43e353b8c89e42b1c3dd01c957b2063e41a09230483989accb2b3f4",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json",
+        "path": "docs/core/he4_normal_viscosity_kubo.py",
+        "expected_sha256": "60d06acd1218682e6bc90cbc77efb6592841abd1f03ff8879ed50ddf401c70c0",
+        "actual_sha256": "60d06acd1218682e6bc90cbc77efb6592841abd1f03ff8879ed50ddf401c70c0",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_normal_viscosity_kubo_source_package.json",
+        "expected_sha256": "12ad2f8ab4620d02f957e21bf98330c9eec7ae83a077a1786bcfd56be10b8200",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_berut_source_package_availability_boundary.json",
+        "path": "docs/core/artifacts/t13_berut_figure3_remote_binary_identity.json",
+        "expected_sha256": "6bf15b41e98939e014dab98e7103931175c6deda1ea24cde787622d5f1d03239",
+        "actual_sha256": "6bf15b41e98939e014dab98e7103931175c6deda1ea24cde787622d5f1d03239",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_berut_source_package_availability_boundary.json",
+        "path": "docs/data/external/thermodynamics/landauer/berut_2012/source_record.json",
+        "expected_sha256": "857934c8bbbb38a86a2f382394f2c2eb19f778b01bcdd697e286f560e036557e",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_berut_source_package_availability_boundary.json",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/berut_2012.json",
+        "expected_sha256": "1126550d8217fc0c6c20efafb57153356268302f8772ac15ae52546f8aea4879",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_berut_source_package_availability_boundary.json",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/berut_2012_figure3_panel_c_digitized.json",
+        "expected_sha256": "00fb44ef1d25563ab6d7c7fc63a44cb5625e31abc2bd9f6b8b896ea712f3adb4",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_berut_source_package_availability_boundary.json",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/landauer_source_lock.json",
+        "expected_sha256": "2d5c6a16e86cdc105a6f6153ff0d1d19f213bbef681d25363eb094a668f0c1e7",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_berut_source_package_availability_boundary.json",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/berut_2012_figure3_source.ppt",
+        "expected_sha256": "e4bab6be849a093b7578bc52ce6df9be95dc25d83d51ecb718b4f798a37d50fa",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_berut_source_package_availability_boundary.json",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/landauer/berut_2012.json",
+        "expected_sha256": "1126550d8217fc0c6c20efafb57153356268302f8772ac15ae52546f8aea4879",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_berut_figure3_remote_binary_identity.json",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/berut_2012_figure3_source.ppt",
+        "expected_sha256": "e4bab6be849a093b7578bc52ce6df9be95dc25d83d51ecb718b4f798a37d50fa",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_svp_physical_anchor_audit.json",
+        "path": "docs/core/he4_svp_reference.py",
+        "expected_sha256": "0fa04451375a761f525c1bb2acc65f99b1e2632eb42d5bc95987fcaa4a007367",
+        "actual_sha256": "0fa04451375a761f525c1bb2acc65f99b1e2632eb42d5bc95987fcaa4a007367",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_he4_svp_physical_anchor_audit.json",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_o2_physical_anchor_source_package.json",
+        "expected_sha256": "4d02b1faac1cefe3ce79ced525183e2d38066604808d91f9c2769d515ab8b770",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+        "path": "docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json",
+        "expected_sha256": "42842e5e787a8de7007c026bf7c49dbeeeec7f48cabd403000f817e5c4a90c32",
+        "actual_sha256": "42842e5e787a8de7007c026bf7c49dbeeeec7f48cabd403000f817e5c4a90c32",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+        "path": "docs/core/artifacts/t13_kim_2018_graphite_green_kubo_external_input_audit.json",
+        "expected_sha256": "13b2b2c677d2d4d0e1035df99b9b6ae40619040caa976f71baf1d406bb25b208",
+        "actual_sha256": "13b2b2c677d2d4d0e1035df99b9b6ae40619040caa976f71baf1d406bb25b208",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+        "path": "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json",
+        "expected_sha256": "d9632a317270260f4d18be5d1cb8e7f0889ca9e3e9631ebe47aa32212320f4ba",
+        "actual_sha256": "d9632a317270260f4d18be5d1cb8e7f0889ca9e3e9631ebe47aa32212320f4ba",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+        "path": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+        "expected_sha256": "9ea6f37eb43e353b8c89e42b1c3dd01c957b2063e41a09230483989accb2b3f4",
+        "actual_sha256": "9ea6f37eb43e353b8c89e42b1c3dd01c957b2063e41a09230483989accb2b3f4",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+        "path": "docs/core/artifacts/t13_uet_o2_thermodynamic_normal_component_audit.json",
+        "expected_sha256": "3975ac974a3e265c14094b4b40a0fee86ddcee900fb1c2d534b97d3f38384719",
+        "actual_sha256": "3975ac974a3e265c14094b4b40a0fee86ddcee900fb1c2d534b97d3f38384719",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+        "path": "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json",
+        "expected_sha256": "c3185da0a233894d7f338138bbe6acee287194e1852a80e40b0b5f6f2134e21b",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/kim_2018_graphite_green_kubo_source_package.json",
+        "expected_sha256": "e3282c72a48883b25fc5dcb248ff840cbe7de08a3be2057bf01754c245ca472f",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_uet_o2_thermodynamic_normal_component_audit.json",
+        "path": "docs/core/artifacts/t13_uet_o2_finite_temperature_two_fluid_response_audit.json",
+        "expected_sha256": "3ec0f5a942d548b2f3722d4263eb0e311df3c56cb707f596efc11436c6fcfdcf",
+        "actual_sha256": "3ec0f5a942d548b2f3722d4263eb0e311df3c56cb707f596efc11436c6fcfdcf",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_uet_o2_thermodynamic_normal_component_audit.json",
+        "path": "docs/core/uet_o2_finite_temperature_normal_component.py",
+        "expected_sha256": "0a4010c0e390b7e910473698c4e5cc7dc6738df626e0de9c364b4258167a9335",
+        "actual_sha256": "0a4010c0e390b7e910473698c4e5cc7dc6738df626e0de9c364b4258167a9335",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_uet_o2_thermodynamic_normal_component_audit.json",
+        "path": "docs/core/uet_o2_finite_temperature_two_fluid_response.py",
+        "expected_sha256": "a68531bc34596aa115797e2353e1871913d4e9a158aeeb7f1ea5125c86aa236b",
+        "actual_sha256": "a68531bc34596aa115797e2353e1871913d4e9a158aeeb7f1ea5125c86aa236b",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_uet_o2_finite_temperature_two_fluid_response_audit.json",
+        "path": "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py",
+        "expected_sha256": "89171426c2209521a16ca99e79ef4312cc9d3a987991692cc40ac9235a2fc251",
+        "actual_sha256": "89171426c2209521a16ca99e79ef4312cc9d3a987991692cc40ac9235a2fc251",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_uet_o2_finite_temperature_two_fluid_response_audit.json",
+        "path": "docs/core/uet_o2_finite_temperature_two_fluid_response.py",
+        "expected_sha256": "a68531bc34596aa115797e2353e1871913d4e9a158aeeb7f1ea5125c86aa236b",
+        "actual_sha256": "a68531bc34596aa115797e2353e1871913d4e9a158aeeb7f1ea5125c86aa236b",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_uet_o2_finite_temperature_two_fluid_response_audit.json",
+        "path": "docs/core/uet_o2_formal_transverse_response.py",
+        "expected_sha256": "bb30501e3486323dc56e814b5855a66383949a71029b4683cd4bc9931c6bbd58",
+        "actual_sha256": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba",
+        "status": "STALE"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_uet_o2_finite_temperature_two_fluid_response_audit.json",
+        "path": "docs/core/uet_o2_formal_two_sector_thermodynamics.py",
+        "expected_sha256": "531ed369c6e96dd071d40dadadd59e02cd6a459dcf2ddc48662c8f294cfcf49c",
+        "actual_sha256": "531ed369c6e96dd071d40dadadd59e02cd6a459dcf2ddc48662c8f294cfcf49c",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json",
+        "path": "docs/core/artifacts/covariant_superfluid_transport_contract.json",
+        "expected_sha256": "a24d96ce15bbda1bdc8b473b7dc2c9690a9482af29b98310bc20566506ef748c",
+        "actual_sha256": "62c634d26595d458f7cde2af15d03f61a61c2e26eef91abdedd69fdc21c5925e",
+        "status": "STALE"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json",
+        "path": "docs/core/artifacts/covariant_superfluid_transport_verification.json",
+        "expected_sha256": "49fc1a047cfa84e8155940a491eb9c3fb3c3536ac707b010ba15b32298632ad1",
+        "actual_sha256": "2a36d0dee2590abeddebe21cfbe5e36be2410346f43af16abbe2601fbef4a5bd",
+        "status": "STALE"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json",
+        "path": "docs/core/thermal_sk_kms_entropy_contract.py",
+        "expected_sha256": "ea63f10f1f0f18c22f9055196b60d727182d2582f9188e3079c0c1de1f334d1b",
+        "actual_sha256": "ea63f10f1f0f18c22f9055196b60d727182d2582f9188e3079c0c1de1f334d1b",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/covariant_superfluid_transport_verification.json",
+        "path": "docs/data/external/relativistic_transport/chapman_hoyos_oz_superfluid_kubo_2013/source_record.json",
+        "expected_sha256": "868f63a01bc6b0c90dee8ef26a46822e7c4d8fe44ef806262e8103367138ca8e",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/covariant_superfluid_transport_verification.json",
+        "path": "docs/data/external/relativistic_transport/haehl_loganayagam_rangamani_2018/source_record.json",
+        "expected_sha256": "f3cc5c2505e341cc7c8cbee790b50b925087afc7ddd6f0d78479cc393e818f06",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/covariant_superfluid_transport_verification.json",
+        "path": "docs/data/external/relativistic_transport/jain_kovtun_2024/source_record.json",
+        "expected_sha256": "90c8c7dfe8256da2b1dbe6631d189470800ea8ed7eec228fc9bedf49dd39dbc7",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/covariant_superfluid_transport_verification.json",
+        "path": "docs/data/external/relativistic_transport/son_relativistic_superfluid_2002/source_record.json",
+        "expected_sha256": "da0317ae6f1bbf6e09ed7321c720f090572ad122e124782bb71059adb36ae56c",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json",
+        "path": "docs/core/artifacts/t13_collective_response_eos_stability_audit.json",
+        "expected_sha256": "5bcdbfdd4f14b6d28ce6bdd737020030b85add2f5f0a38db22e9e36d9c77772d",
+        "actual_sha256": "5bcdbfdd4f14b6d28ce6bdd737020030b85add2f5f0a38db22e9e36d9c77772d",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json",
+        "path": "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json",
+        "expected_sha256": "d9632a317270260f4d18be5d1cb8e7f0889ca9e3e9631ebe47aa32212320f4ba",
+        "actual_sha256": "d9632a317270260f4d18be5d1cb8e7f0889ca9e3e9631ebe47aa32212320f4ba",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json",
+        "path": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+        "expected_sha256": "9ea6f37eb43e353b8c89e42b1c3dd01c957b2063e41a09230483989accb2b3f4",
+        "actual_sha256": "9ea6f37eb43e353b8c89e42b1c3dd01c957b2063e41a09230483989accb2b3f4",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json",
+        "path": "docs/core/t13_formal_thermodynamic_bridge_integration.py",
+        "expected_sha256": "cc45b7fd41d550767b6bae00bcc189234374075f45ae81bfe8dda118391c5c8e",
+        "actual_sha256": "cc45b7fd41d550767b6bae00bcc189234374075f45ae81bfe8dda118391c5c8e",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json",
+        "path": "docs/core/thermal_collective_response_eos.py",
+        "expected_sha256": "a67c60ea87b848896a37fb9f97cffbff843f20bf07d5d32ff8f3ec82f61544a3",
+        "actual_sha256": "a67c60ea87b848896a37fb9f97cffbff843f20bf07d5d32ff8f3ec82f61544a3",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json",
+        "path": "docs/core/thermal_sk_kms_entropy_contract.py",
+        "expected_sha256": "ea63f10f1f0f18c22f9055196b60d727182d2582f9188e3079c0c1de1f334d1b",
+        "actual_sha256": "ea63f10f1f0f18c22f9055196b60d727182d2582f9188e3079c0c1de1f334d1b",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json",
+        "path": "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py",
+        "expected_sha256": "89171426c2209521a16ca99e79ef4312cc9d3a987991692cc40ac9235a2fc251",
+        "actual_sha256": "89171426c2209521a16ca99e79ef4312cc9d3a987991692cc40ac9235a2fc251",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_collective_response_eos_stability_audit.json",
+        "path": "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json",
+        "expected_sha256": "9383fe0c7ea3a5d85399d86df94b199f03435d3714bae1fc052f75f88e55c412",
+        "actual_sha256": "fea0ca9bacd6497f67292a015f651d0183f65b150469eb0be533bdf91adee2c8",
+        "status": "STALE"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_collective_response_eos_stability_audit.json",
+        "path": "docs/core/thermal_collective_response_eos.py",
+        "expected_sha256": "a67c60ea87b848896a37fb9f97cffbff843f20bf07d5d32ff8f3ec82f61544a3",
+        "actual_sha256": "a67c60ea87b848896a37fb9f97cffbff843f20bf07d5d32ff8f3ec82f61544a3",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_collective_response_eos_stability_audit.json",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/thermal_closure_derivation_audit.json",
+        "expected_sha256": "62943cca93cedf856959a3d01dfa8e44fbd5ddae086b9ad7cf0b06427da9b816",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_collective_response_eos_stability_audit.json",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
+        "expected_sha256": "13dc1de1666bdb8637417d1759676a08184f126a0a592feab55cbd85f811e6dd",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json",
+        "path": "docs/core/thermal_response_beta_contract.py",
+        "expected_sha256": "5c75a52a0fc99698bbd9662f8f4ec66762a291a08e9916c87afea7af89e07a9e",
+        "actual_sha256": "5c75a52a0fc99698bbd9662f8f4ec66762a291a08e9916c87afea7af89e07a9e",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json",
+        "path": "docs/core/uet_master_equation.py",
+        "expected_sha256": "dc06b67609725cfbec432a65c811e3da51f9cbbe2b91ea34f98d0a3a58486e8c",
+        "actual_sha256": "dc06b67609725cfbec432a65c811e3da51f9cbbe2b91ea34f98d0a3a58486e8c",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json",
+        "path": "docs/core/uet_parameters.py",
+        "expected_sha256": "eff2fc6fe0fe35f18c49a032729e385c97b633a90e9a0bd3789be5051d316651",
+        "actual_sha256": "eff2fc6fe0fe35f18c49a032729e385c97b633a90e9a0bd3789be5051d316651",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/thermal_closure_derivation_audit.json",
+        "expected_sha256": "62943cca93cedf856959a3d01dfa8e44fbd5ddae086b9ad7cf0b06427da9b816",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
+        "expected_sha256": "60e3b52f7657893b0e6177a376905dd35e29187e11a40b615191519404d28643",
+        "status": "EXCLUDED_NOT_READ"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json",
+        "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
+        "expected_sha256": "3b58b2633a30f8a91710a59c46097f76bb2f36e2dda07e8cae03c9268d3f76bc",
+        "actual_sha256": "1cb84b6c8e9741fef1dc6e0f83fba3dfe68ca6cd89adac8fa1a31835b4debf62",
+        "status": "STALE"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json",
+        "path": "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
+        "expected_sha256": "70eafbe2b7b845c76336117bb3fe940c7427862a7a0d30d328a67a804356761c",
+        "actual_sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b",
+        "status": "STALE"
+      },
+      {
+        "parent": "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json",
+        "path": "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
+        "expected_sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b",
+        "actual_sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b",
+        "status": "MATCH"
+      },
+      {
+        "parent": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
+        "path": "docs/core/artifacts/matter_space_causal_cone_compatibility.json",
+        "expected_sha256": "29c731e945a635eb5e2b0bbb3ab8d60aa0f65572af4a5433fcd314f402ad4d15",
+        "actual_sha256": "29c731e945a635eb5e2b0bbb3ab8d60aa0f65572af4a5433fcd314f402ad4d15",
+        "status": "MATCH"
+      }
+    ],
+    "scope": "Declared path/sha256 pairs only; not unrecorded imports or external sources. Stale JSON traversed as CURRENT contents, not reconstructed historical contents."
+  },
+  "local_recomputations": {
+    "observable_bridge": {
+      "historical_artifact": "docs/core/artifacts/t13_uet_o2_action_thermal_observable_bridge_audit.json",
+      "historical_sha256": "7ba49d3f629c91f3f88dda6ad717d8928e58439de7517a5979f0a465b9f52585",
+      "branch_historical": "normal",
+      "branch_current": "normal",
+      "comparison": {
+        "temperature": {
+          "historical": 0.22,
+          "current": 0.22,
+          "absolute_difference": 0.0,
+          "relative_difference": 0.0
+        },
+        "chemical_potential": {
+          "historical": 0.35,
+          "current": 0.35,
+          "absolute_difference": 0.0,
+          "relative_difference": 0.0
+        },
+        "space_response": {
+          "historical": 0.15,
+          "current": 0.15,
+          "absolute_difference": 0.0,
+          "relative_difference": 0.0
+        },
+        "pressure": {
+          "historical": 0.00011541104065114354,
+          "current": 0.00011541104065115239,
+          "absolute_difference": 8.84980023291293e-18,
+          "relative_difference": 7.66807073481253e-14
+        },
+        "entropy_density": {
+          "historical": 0.0031073474100778336,
+          "current": 0.0031073474100336523,
+          "absolute_difference": 4.4181238528784306e-14,
+          "relative_difference": 1.4218313145641363e-11
+        },
+        "charge_density": {
+          "historical": 0.0004871367148896776,
+          "current": 0.0004871367149648264,
+          "absolute_difference": 7.514876308040153e-14,
+          "relative_difference": 1.5426626814080428e-10
+        },
+        "energy_density": {
+          "historical": 0.0007387032397773671,
+          "current": 0.0007387032397939403,
+          "absolute_difference": 1.657322282883067e-14,
+          "relative_difference": 2.2435562667662815e-11
+        },
+        "thermodynamic_identity_residual": {
+          "historical": 0.0,
+          "current": 0.0,
+          "absolute_difference": 0.0,
+          "relative_difference": null
+        },
+        "energy_response_derivative": {
+          "historical": 4.091655367513959e-05,
+          "current": 4.091650198791521e-05,
+          "absolute_difference": 5.168722437901008e-11,
+          "relative_difference": 1.2632350414794249e-06
+        },
+        "refined_energy_response_derivative": {
+          "historical": 4.091652105027649e-05,
+          "current": 4.091650184992338e-05,
+          "absolute_difference": 1.9200353112980295e-11,
+          "relative_difference": 4.6925673591329313e-07
+        },
+        "energy_temperature_susceptibility": {
+          "historical": 0.01768326164348574,
+          "current": 0.01768326159002319,
+          "absolute_difference": 5.346255035898473e-11,
+          "relative_difference": 3.023342154679907e-09
+        },
+        "refined_energy_temperature_susceptibility": {
+          "historical": 0.01768282747047201,
+          "current": 0.017682827496939876,
+          "absolute_difference": 2.6467866093282666e-11,
+          "relative_difference": 1.4968118722800702e-09
+        },
+        "alpha_phi_temperature_natural": {
+          "historical": 0.0023138578447835533,
+          "current": 0.002313854928832818,
+          "absolute_difference": 2.9159507352119474e-09,
+          "relative_difference": 1.2602117030593624e-06
+        },
+        "refined_alpha_phi_temperature_natural": {
+          "historical": 0.002313912812789792,
+          "current": 0.0023139117235071276,
+          "absolute_difference": 1.0892826645021725e-09,
+          "relative_difference": 4.707535471869694e-07
+        },
+        "response_probe_phi": {
+          "historical": 0.001,
+          "current": 0.001,
+          "absolute_difference": 0.0,
+          "relative_difference": 0.0
+        },
+        "linear_energy_response": {
+          "historical": 4.091655367513959e-08,
+          "current": 4.091650198791521e-08,
+          "absolute_difference": 5.168722437901008e-14,
+          "relative_difference": 1.2632350414794249e-06
+        },
+        "linear_temperature_response_natural": {
+          "historical": 2.3138578447835533e-06,
+          "current": 2.313854928832818e-06,
+          "absolute_difference": 2.915950735283098e-12,
+          "relative_difference": 1.2602117030901123e-06
+        },
+        "exact_energy_response": {
+          "historical": 4.0917912607664475e-08,
+          "current": 4.091789128422667e-08,
+          "absolute_difference": 2.132343780714141e-14,
+          "relative_difference": 5.211272141762981e-07
+        },
+        "linearization_relative_residual": {
+          "historical": 3.321118889703099e-05,
+          "current": 3.395327246477082e-05,
+          "absolute_difference": 7.420835677398327e-07,
+          "relative_difference": 0.022344384298936478
+        },
+        "response_refinement_relative_change": {
+          "historical": 7.973518339314533e-07,
+          "current": 3.372522705123458e-09,
+          "absolute_difference": 7.939793112263298e-07,
+          "relative_difference": 0.9957703455844645
+        },
+        "susceptibility_refinement_relative_change": {
+          "historical": 2.455337046373951e-05,
+          "current": 2.4548850198734297e-05,
+          "absolute_difference": 4.5202650052124805e-09,
+          "relative_difference": 0.00018409957247572268
+        },
+        "coefficient_refinement_relative_change": {
+          "historical": 2.37554353538764e-05,
+          "current": 2.454487512745818e-05,
+          "absolute_difference": 7.894397735817801e-07,
+          "relative_difference": 0.033231964046197104
+        }
+      }
+    },
+    "stiffness_beta": {
+      "historical_artifact": "docs/core/artifacts/t13_uet_o2_action_thermal_stiffness_beta_audit.json",
+      "historical_sha256": "c8079bbdbfa3a340e66b26dfa4d2f0cb93a5b32a1ef6827e604415958b4c649e",
+      "branch_historical": "normal",
+      "branch_current": "normal",
+      "comparison": {
+        "temperature": {
+          "historical": 0.22,
+          "current": 0.22,
+          "absolute_difference": 0.0,
+          "relative_difference": 0.0
+        },
+        "chemical_potential": {
+          "historical": 0.35,
+          "current": 0.35,
+          "absolute_difference": 0.0,
+          "relative_difference": 0.0
+        },
+        "space_response": {
+          "historical": 0.15,
+          "current": 0.15,
+          "absolute_difference": 0.0,
+          "relative_difference": 0.0
+        },
+        "effective_mass": {
+          "historical": 0.9969954864491614,
+          "current": 0.9969954864491614,
+          "absolute_difference": 0.0,
+          "relative_difference": 0.0
+        },
+        "pressure": {
+          "historical": 0.00011541104065114354,
+          "current": 0.00011541104065115239,
+          "absolute_difference": 8.84980023291293e-18,
+          "relative_difference": 7.66807073481253e-14
+        },
+        "entropy_density": {
+          "historical": 0.0031073474100778336,
+          "current": 0.0031073474100336523,
+          "absolute_difference": 4.4181238528784306e-14,
+          "relative_difference": 1.4218313145641363e-11
+        },
+        "response_epsilon_nc": {
+          "historical": 0.05,
+          "current": 0.05,
+          "absolute_difference": 0.0,
+          "relative_difference": 0.0
+        },
+        "response_coupling": {
+          "historical": 0.8,
+          "current": 0.8,
+          "absolute_difference": 0.0,
+          "relative_difference": 0.0
+        },
+        "phi_step": {
+          "historical": 0.005,
+          "current": 0.005,
+          "absolute_difference": 0.0,
+          "relative_difference": 0.0
+        },
+        "temperature_step": {
+          "historical": 0.002,
+          "current": 0.002,
+          "absolute_difference": 0.0,
+          "relative_difference": 0.0
+        },
+        "refined_phi_step": {
+          "historical": 0.002,
+          "current": 0.002,
+          "absolute_difference": 0.0,
+          "relative_difference": 0.0
+        },
+        "refined_temperature_step": {
+          "historical": 0.001,
+          "current": 0.001,
+          "absolute_difference": 0.0,
+          "relative_difference": 0.0
+        },
+        "a_phi_natural": {
+          "historical": -6.643796596856807e-07,
+          "current": -6.64380685883037e-07,
+          "absolute_difference": 1.02619735625753e-12,
+          "relative_difference": 1.5445947829634427e-06
+        },
+        "beta_phi_natural": {
+          "historical": -2.4271981641363002e-06,
+          "current": -2.4272597928982897e-06,
+          "absolute_difference": 6.162876198950729e-11,
+          "relative_difference": 2.5390906642942938e-05
+        },
+        "refined_a_phi_natural": {
+          "historical": -6.643888625292461e-07,
+          "current": -6.643806768028438e-07,
+          "absolute_difference": 8.185726402265558e-12,
+          "relative_difference": 1.2320685766921968e-05
+        },
+        "refined_beta_phi_natural": {
+          "historical": -2.427707354265597e-06,
+          "current": -2.4272627297309245e-06,
+          "absolute_difference": 4.4462453467272733e-10,
+          "relative_difference": 0.00018314585318180996
+        },
+        "curvature_relative_change": {
+          "historical": 1.385159216892113e-05,
+          "current": 1.3667154255993907e-08,
+          "absolute_difference": 1.3837925014665137e-05,
+          "relative_difference": 0.9990133152861186
+        },
+        "beta_relative_change": {
+          "historical": 0.00020974114874360104,
+          "current": 1.2099360315418654e-06,
+          "absolute_difference": 0.00020853121271205917,
+          "relative_difference": 0.9942312891924657
+        }
+      }
+    }
+  },
+  "claim_promotion": false,
+  "dependency_unlocked": [],
+  "holdout_policy": "No excluded file opened; no holdout payload, calibration or fitting. This does not erase prior context exposure.",
+  "controlling_blocker": "Physical protocol correspondence and remaining dependent artifact revision review",
+  "claim_boundary": "Two normal-reference calculations only. No condensed/nonunit-kinetic sweep, external validation, or historical gate replacement.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/scripts/audit/audit_topic13_eos_revision_impact.py",
+      "sha256": "43f5b146eed725f81b5b01ecb120ada80023ca9c02d78957b29cc5c6497ab4de"
+    },
+    {
+      "path": "docs/core/test/test_topic13_eos_revision_impact.py",
+      "sha256": "7ee2e14bf48031104b5e970d129f606d055914cfb8b65844fa6ba344ac48d611"
+    },
+    {
+      "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+      "sha256": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f"
+    },
+    {
+      "path": "docs/core/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "a1be58b8230240775654e7c0d6265870010f546238e96e59e36045e6a893e5d2"
+    },
+    {
+      "path": "docs/core/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    }
+  ]
+}
