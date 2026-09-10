@@ -1,0 +1,16 @@
+{
+  "record_type": "unmerged_registry_addendum",
+  "equation_registry_id": "uet.thermo.natural_isentropic_source_work",
+  "owner_topic": "0.13",
+  "ontology": "Existing Phi source and O(2) charge; no C/mass or R_gen/state identification",
+  "equation": "J_(s,n)/(T,mu)*(T_Phi,mu_Phi)=-(s_Phi,n_Phi); d epsilon|s,n,V=-p_Phi dPhi",
+  "units": "Natural EOS units only",
+  "derivation_class": "implicit-function constraints and generalized equilibrium first law",
+  "assumptions": ["smooth same EOS branch", "nonsingular constraint Jacobian", "fixed volume", "reversible equilibrium path"],
+  "observable": "natural source-work and temperature derivatives",
+  "data_role": "INTERNAL_COMPARISON_NOT_CALIBRATION",
+  "verification_status": "three-step derivative and direct-root crosscheck; physical mapping open",
+  "evidence_artifact": "docs/core/artifacts/t13_isentropic_source_work_audit.json",
+  "controlling_blocker": "physical process and material-variable correspondence",
+  "claim_boundary": "No SI heat, finite-rate dynamics, holdout or full-topic unlock"
+}

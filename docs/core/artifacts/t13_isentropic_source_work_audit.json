@@ -1,0 +1,122 @@
+{
+  "major_result_id": "T13_NATURAL_ISENTROPIC_SOURCE_WORK",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "what_is_closed": [
+    "Natural reversible source-work balance compared using derivatives and constrained roots"
+  ],
+  "equation_or_mapping": "J_(s,n)/(T,mu)*(T_Phi,mu_Phi)=-(s_Phi,n_Phi); d epsilon|s,n = -p_Phi dPhi at fixed volume",
+  "units": "natural EOS units; O(2) charge is not He-4 mass density",
+  "derivation_class": "IMPLICIT_CONSTRAINT_AND_FIRST_LAW",
+  "observable": "quasistatic natural source response",
+  "data_role": "INTERNAL_NO_CALIBRATION",
+  "verification_status": "CURRENT_EOS_REVERSIBLE_WORK_NOT_HISTORICAL_REPLICATION",
+  "state": [
+    0.22,
+    0.35,
+    0.15
+  ],
+  "records": [
+    {
+      "step": 0.001,
+      "dT_dPhi": -0.001257026657582692,
+      "dmu_dPhi": -0.008473023284451169,
+      "direct_dT_dPhi": -0.0012570517895216238,
+      "source_work_derivative": -7.896776350174977e-06,
+      "chain_energy_derivative": -7.89718267704486e-06,
+      "direct_energy_derivative": -7.89677837248308e-06,
+      "chain_first_law_relative_error": 5.145477747686549e-05,
+      "direct_first_law_relative_error": 2.5609286784268326e-07,
+      "root_checks": [
+        {
+          "success": true,
+          "scaled_residual": 1.3910393878900469e-13
+        },
+        {
+          "success": true,
+          "scaled_residual": 2.191190344929996e-14
+        }
+      ]
+    },
+    {
+      "step": 0.0005,
+      "dT_dPhi": -0.0012570455179884768,
+      "dmu_dPhi": -0.008473018096061189,
+      "direct_dT_dPhi": -0.0012570517853305319,
+      "source_work_derivative": -7.896776341582675e-06,
+      "chain_energy_derivative": -7.896879440789933e-06,
+      "direct_energy_derivative": -7.896778339631753e-06,
+      "chain_first_law_relative_error": 1.3055860112892967e-05,
+      "direct_first_law_relative_error": 2.5302085207832725e-07,
+      "root_checks": [
+        {
+          "success": true,
+          "scaled_residual": 1.3910393878900469e-13
+        },
+        {
+          "success": true,
+          "scaled_residual": 4.354467437058336e-14
+        }
+      ]
+    },
+    {
+      "step": 0.00025,
+      "dT_dPhi": -0.0012570501421594984,
+      "dmu_dPhi": -0.008473017335402344,
+      "direct_dT_dPhi": -0.00125705175824109,
+      "source_work_derivative": -7.89677633925164e-06,
+      "chain_energy_derivative": -7.89680363018698e-06,
+      "direct_energy_derivative": -7.896778104034621e-06,
+      "chain_first_law_relative_error": 3.455959010057661e-06,
+      "direct_first_law_relative_error": 2.2348144424921275e-07,
+      "root_checks": [
+        {
+          "success": true,
+          "scaled_residual": 4.1731181636701403e-13
+        },
+        {
+          "success": true,
+          "scaled_residual": 2.7820787757800937e-13
+        }
+      ]
+    }
+  ],
+  "source_revision_comparison": [
+    {
+      "path": "docs/core/uet_o2_action_thermal_observable_bridge.py",
+      "historical_sha256": "a1be58b8230240775654e7c0d6265870010f546238e96e59e36045e6a893e5d2",
+      "current_sha256": "a1be58b8230240775654e7c0d6265870010f546238e96e59e36045e6a893e5d2",
+      "matches_historical": true
+    },
+    {
+      "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+      "historical_sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4",
+      "current_sha256": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
+      "matches_historical": false
+    },
+    {
+      "path": "docs/core/uet_o2_action_thermal_stiffness_beta.py",
+      "historical_sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6",
+      "current_sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6",
+      "matches_historical": true
+    }
+  ],
+  "provenance_scope": "Historical artifact supplies initial coordinates only. Current source code is hashed separately; EOS changed in bd55dc487. No historical closure or calibration is regenerated.",
+  "evidence_hashes": {
+    "docs/core/artifacts/t13_uet_o2_action_thermal_observable_bridge_audit.json": "7ba49d3f629c91f3f88dda6ad717d8928e58439de7517a5979f0a465b9f52585",
+    "docs/scripts/audit/audit_topic13_isentropic_source_work.py": "cf960d3199ad60da25ede5a421d24fa1a0b495dcd82ca840b010cc92e699cbf7",
+    "docs/core/uet_o2_action_thermal_observable_bridge.py": "a1be58b8230240775654e7c0d6265870010f546238e96e59e36045e6a893e5d2",
+    "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
+    "docs/core/test/test_topic13_isentropic_source_work.py": "f321121520742f1264644b982453a859eb43826d01748cd774480e0554717dcf"
+  },
+  "open_blockers": [
+    "physical process and material-variable mapping",
+    "finite-rate entropy production and relaxation"
+  ],
+  "dependency_unlocked": [
+    "natural reversible accounting only"
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "claim_boundary": "Zero reversible heat follows imposed ds=0; not a finite-rate isolation proof, SI alpha or He-4 validation. No holdout, retuning or composition gate change."
+}

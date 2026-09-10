@@ -1,3 +1,17 @@
+## 2026-09-10 - Current-EOS isentropic source work
+
+MAJOR_RESULT_CLOSURE: PARTIAL; reversible natural source-work accounting.
+WHAT_IS_ACTUALLY_CLOSED: At fixed entropy/charge/volume, temperature changes while energy change matches source work. Direct-root first-law relative residual about2.23e-7 at finest step.
+WHAT_REMAINS_OPEN: Physical process mapping, finite-rate entropy production and historical EOS source reconciliation.
+DEPENDENCY_UNLOCKED: Natural accounting only.
+STATUS: CURRENT_EOS_REVERSIBLE_WORK_NOT_HISTORICAL_REPLICATION.
+WHAT_CHANGED: Audit/tests/artifact, unmerged registry addendum and docs/core/T13_ISENTROPIC_SOURCE_WORK.md.
+EQUATION_OR_MAPPING: d epsilon|s,n,V=-p_Phi dPhi; zero reversible heat follows the imposed entropy constraint, not temperature constancy.
+VERIFICATION: Two unit tests and three-step/direct-root comparison. Initial stale-hash failure disclosed: historical artifact predates EOS repair bd55dc487; current and historical hashes kept separately.
+CONTROLLING_BLOCKER: physical_protocol_and_recursive_EOS_version_consistency.
+NEXT_ACTION: Reconcile historical dependent artifacts without silently refreshing hashes or calibration.
+CLAIM_BOUNDARY: No He4 prediction, new alpha, holdout or composition-gate change.
+
 ## 2026-09-10 - Natural fixed-charge response
 
 MAJOR_RESULT_CLOSURE: PARTIAL; ensemble dependence computed by derivative and direct-root methods.
