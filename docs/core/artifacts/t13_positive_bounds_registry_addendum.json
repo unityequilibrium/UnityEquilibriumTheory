@@ -1,0 +1,16 @@
+{
+  "registry_id": "uet.o2.positive_interpolation_probe_bounds",
+  "registration_status": "UNMERGED_INTERNAL_ANALYTIC_DIAGNOSTIC",
+  "ontology": "Error bounds on two response probes, not new dynamics or states",
+  "units": "Inverse momentum Lipschitz constants times momentum distance; dimensionless probe errors",
+  "equation_or_mapping": "b_leg=L sum(a distance)+abs(sum(a)-1) abs(psi_target); b_channel=abs(incidence) b_leg",
+  "derivation_class": "Gradient bounds, triangle inequality and nonnegative rate norm",
+  "observable": "Two probe/channel errors, not whole operator or conductivity uncertainty",
+  "data_role": "INTERNAL_FIXED_CHANNELS_NO_FIT",
+  "verification_status": "NINE_GRIDS_NO_MEASURED_BOUND_VIOLATIONS",
+  "controlling_blocker": "tighter_local_bounds_and_operator_projection_control",
+  "claim_boundary": "No transport/material/continuum closure; rates are sampled-model inputs",
+  "evidence_artifact": "docs/core/artifacts/t13_positive_interpolation_bounds_audit.json",
+  "dependency_unlocked": [],
+  "full_core_unlock": false
+}

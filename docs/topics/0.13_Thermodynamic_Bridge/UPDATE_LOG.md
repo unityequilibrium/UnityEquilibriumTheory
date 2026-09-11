@@ -1,3 +1,17 @@
+## 2026-09-11 - Positive local and rate-weighted probe bounds
+
+MAJOR_RESULT_CLOSURE: PARTIAL; explicit error-accounting route for two probes.
+WHAT_IS_ACTUALLY_CLOSED: Local Lipschitz and signed-channel triangle bounds cover all nine grids, including normalization roundoff; original sampled rates unchanged.
+WHAT_REMAINS_OPEN: Tighter bounds, arbitrary operator response, projection/boundary control and material mapping.
+DEPENDENCY_UNLOCKED: None.
+STATUS: PROBE_BOUNDS_MEASURED_NOT_OPERATOR_CLOSURE.
+WHAT_CHANGED: Bounds runner/tests/artifact, registry proposal and docs/core/T13_POSITIVE_INTERPOLATION_BOUNDS.md; no production change.
+EQUATION_OR_MAPPING: L weighted support distance plus normalization defect; channel bound via absolute incidence and nonnegative rate norm.
+VERIFICATION: Four tests PASS; nine cases exit0, no measured violations. Mass/E rate-weighted error slightly worsens at the last refinement. Foundation physical gates remain BLOCKED.
+CONTROLLING_BLOCKER: bounds_too_loose_for_operator_or_transport_accuracy.
+NEXT_ACTION: Tighter local derivative bounds and channel/projection error analysis, not empirical threshold relaxation.
+CLAIM_BOUNDARY: Probe bounds, not material uncertainty or Full Topic13 closure.
+
 ## 2026-09-11 - Nine-grid refinement and signed-candidate restriction
 
 MAJOR_RESULT_CLOSURE: PARTIAL; enforced moments distinguished from stable approximation.

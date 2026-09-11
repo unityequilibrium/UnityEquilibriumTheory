@@ -1,0 +1,383 @@
+{
+  "major_result_id": "T13_POSITIVE_INTERPOLATION_ERROR_BOUND",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "status": "PROBE_BOUNDS_MEASURED_NOT_OPERATOR_CLOSURE",
+  "completed": true,
+  "what_is_closed": "Local Lipschitz and channel error bounds measured on the nine fixed grids",
+  "equation_or_mapping": "|error_leg|<=L sum_i a_i |p_i-p_target|+|sum a-1| |probe_target|; |error_channel|<=|incidence| bound_leg",
+  "units": "Natural momentum radius, inverse-momentum Lipschitz constants; dimensionless probes",
+  "derivation_class": "Lipschitz/triangle inequalities and positive-rate norm monotonicity",
+  "observable": "Two probe approximation errors; not whole collision-operator error",
+  "data_role": "INTERNAL_NO_FIT",
+  "plan": {
+    "radial_orders": [
+      8,
+      16,
+      32
+    ],
+    "angular_rules": [
+      "axis_cube14",
+      "product4x8",
+      "product8x16"
+    ],
+    "support_order": 40,
+    "rank_relative_floor": 1e-12,
+    "state": [
+      0.22,
+      0.35,
+      0.15
+    ],
+    "cutoff_factor": 48.0,
+    "channel_count": 64,
+    "transition_order": 24,
+    "policy": "Nine predetermined grids; mapping/probes only, not transport reruns. Preserve support40 and rank floor1e-12. If any channel-leg support is rank deficient, report the whole corrected-grid result blocked with all failed indices. No automatic support expansion or source selection. Product sphere grids are diagnostic-only."
+  },
+  "rows": [
+    {
+      "radial_order": 8,
+      "angular_rule": "axis_cube14",
+      "radius_mean": 21.221606716325034,
+      "radius_max": 59.50565909473257,
+      "normalization_defect_max": 4.440892098500626e-16,
+      "lipschitz": [
+        1.0030135678562992,
+        0.3860601022684542
+      ],
+      "leg_error_rms": [
+        0.14768517811585835,
+        0.1411594477598705
+      ],
+      "leg_bound_rms": [
+        24.277010108843605,
+        9.34422554764008
+      ],
+      "max_leg_bound_violation": 0.0,
+      "rate_weighted_channel_error_rms": [
+        0.08919189111408363,
+        0.0689277584453537
+      ],
+      "rate_weighted_channel_bound_rms": [
+        29.036423793573686,
+        11.176124729015884
+      ],
+      "raw_rate_weighted_error_norm": [
+        7.776746895015713e-15,
+        6.0098931054692765e-15
+      ],
+      "max_channel_bound_violation": 0.0
+    },
+    {
+      "radial_order": 8,
+      "angular_rule": "product4x8",
+      "radius_mean": 17.12881672902642,
+      "radius_max": 50.16972062260006,
+      "normalization_defect_max": 7.771561172376096e-16,
+      "lipschitz": [
+        1.0030135678562992,
+        0.3860601022684542
+      ],
+      "leg_error_rms": [
+        0.12642569876628584,
+        0.12555623887347397
+      ],
+      "leg_bound_rms": [
+        19.694702957610623,
+        7.5804947027908085
+      ],
+      "max_leg_bound_violation": 0.0,
+      "rate_weighted_channel_error_rms": [
+        0.08101425971870843,
+        0.1055827587647135
+      ],
+      "rate_weighted_channel_bound_rms": [
+        20.793832652441484,
+        8.003549919580749
+      ],
+      "raw_rate_weighted_error_norm": [
+        7.063729503320056e-15,
+        9.205886108418061e-15
+      ],
+      "max_channel_bound_violation": 0.0
+    },
+    {
+      "radial_order": 8,
+      "angular_rule": "product8x16",
+      "radius_mean": 11.104024564176296,
+      "radius_max": 39.028618984953155,
+      "normalization_defect_max": 8.881784197001252e-16,
+      "lipschitz": [
+        1.0030135678562992,
+        0.3860601022684542
+      ],
+      "leg_error_rms": [
+        0.07809504133958879,
+        0.09481259067856937
+      ],
+      "leg_bound_rms": [
+        12.787769469899432,
+        4.922014763854211
+      ],
+      "max_leg_bound_violation": 0.0,
+      "rate_weighted_channel_error_rms": [
+        0.056354445176926886,
+        0.20080326105186405
+      ],
+      "rate_weighted_channel_bound_rms": [
+        15.686800648008948,
+        6.037852384567975
+      ],
+      "raw_rate_weighted_error_norm": [
+        4.913610991714896e-15,
+        1.750827477014369e-14
+      ],
+      "max_channel_bound_violation": 0.0
+    },
+    {
+      "radial_order": 16,
+      "angular_rule": "axis_cube14",
+      "radius_mean": 17.127847661411423,
+      "radius_max": 50.314409412291425,
+      "normalization_defect_max": 6.661338147750939e-16,
+      "lipschitz": [
+        1.0030135678562992,
+        0.3860601022684542
+      ],
+      "leg_error_rms": [
+        0.12719550745955208,
+        0.14523638914235318
+      ],
+      "leg_bound_rms": [
+        19.626875979126062,
+        7.554388086599892
+      ],
+      "max_leg_bound_violation": 0.0,
+      "rate_weighted_channel_error_rms": [
+        0.09639994882507226,
+        0.1311964318944934
+      ],
+      "rate_weighted_channel_bound_rms": [
+        20.736497639538296,
+        7.981481662824983
+      ],
+      "raw_rate_weighted_error_norm": [
+        8.405226005872615e-15,
+        1.1439172682947374e-14
+      ],
+      "max_channel_bound_violation": 0.0
+    },
+    {
+      "radial_order": 16,
+      "angular_rule": "product4x8",
+      "radius_mean": 14.363125911810894,
+      "radius_max": 44.34918308079067,
+      "normalization_defect_max": 6.661338147750939e-16,
+      "lipschitz": [
+        1.0030135678562992,
+        0.3860601022684542
+      ],
+      "leg_error_rms": [
+        0.10170947213821925,
+        0.09704666774570664
+      ],
+      "leg_bound_rms": [
+        16.448750001978755,
+        6.331126827650196
+      ],
+      "max_leg_bound_violation": 0.0,
+      "rate_weighted_channel_error_rms": [
+        0.10316860601222176,
+        0.07636326414684123
+      ],
+      "rate_weighted_channel_bound_rms": [
+        18.154538628956544,
+        6.987685176294348
+      ],
+      "raw_rate_weighted_error_norm": [
+        8.995393263300336e-15,
+        6.658203676695456e-15
+      ],
+      "max_channel_bound_violation": 0.0
+    },
+    {
+      "radial_order": 16,
+      "angular_rule": "product8x16",
+      "radius_mean": 9.146744026961738,
+      "radius_max": 34.14175837975806,
+      "normalization_defect_max": 8.881784197001252e-16,
+      "lipschitz": [
+        1.0030135678562992,
+        0.3860601022684542
+      ],
+      "leg_error_rms": [
+        0.05696998718434512,
+        0.03367256142259624
+      ],
+      "leg_bound_rms": [
+        10.55158619231176,
+        4.06130741900582
+      ],
+      "max_leg_bound_violation": 0.0,
+      "rate_weighted_channel_error_rms": [
+        0.05628675140369158,
+        0.026483843293912155
+      ],
+      "rate_weighted_channel_bound_rms": [
+        13.052308991263548,
+        5.023836073101454
+      ],
+      "raw_rate_weighted_error_norm": [
+        4.907708691245157e-15,
+        2.309157744402762e-15
+      ],
+      "max_channel_bound_violation": 0.0
+    },
+    {
+      "radial_order": 32,
+      "angular_rule": "axis_cube14",
+      "radius_mean": 13.250806097338165,
+      "radius_max": 45.813532078802965,
+      "normalization_defect_max": 4.440892098500626e-16,
+      "lipschitz": [
+        1.0030135678562992,
+        0.3860601022684542
+      ],
+      "leg_error_rms": [
+        0.10262379218388844,
+        0.10437670302155688
+      ],
+      "leg_bound_rms": [
+        15.160657748339712,
+        5.835339888063811
+      ],
+      "max_leg_bound_violation": 0.0,
+      "rate_weighted_channel_error_rms": [
+        0.08579104281354581,
+        0.04202951352641616
+      ],
+      "rate_weighted_channel_bound_rms": [
+        17.892610882693244,
+        6.886869139752114
+      ],
+      "raw_rate_weighted_error_norm": [
+        7.480222893435812e-15,
+        3.664603191309248e-15
+      ],
+      "max_channel_bound_violation": 0.0
+    },
+    {
+      "radial_order": 32,
+      "angular_rule": "product4x8",
+      "radius_mean": 11.94629502040065,
+      "radius_max": 38.75518756587356,
+      "normalization_defect_max": 6.661338147750939e-16,
+      "lipschitz": [
+        1.0030135678562992,
+        0.3860601022684542
+      ],
+      "leg_error_rms": [
+        0.07917848833729921,
+        0.05197120345500332
+      ],
+      "leg_bound_rms": [
+        13.691440613434324,
+        5.2698379491733895
+      ],
+      "max_leg_bound_violation": 0.0,
+      "rate_weighted_channel_error_rms": [
+        0.08057452516641077,
+        0.042540334370651335
+      ],
+      "rate_weighted_channel_bound_rms": [
+        15.60726583658484,
+        6.007239421377539
+      ],
+      "raw_rate_weighted_error_norm": [
+        7.02538852555294e-15,
+        3.709142267280112e-15
+      ],
+      "max_channel_bound_violation": 0.0
+    },
+    {
+      "radial_order": 32,
+      "angular_rule": "product8x16",
+      "radius_mean": 7.5879212118019055,
+      "radius_max": 30.778281568890836,
+      "normalization_defect_max": 8.881784197001252e-16,
+      "lipschitz": [
+        1.0030135678562992,
+        0.3860601022684542
+      ],
+      "leg_error_rms": [
+        0.0397166876401434,
+        0.01983929304867084
+      ],
+      "leg_bound_rms": [
+        8.820352646842691,
+        3.394955316668039
+      ],
+      "max_leg_bound_violation": 0.0,
+      "rate_weighted_channel_error_rms": [
+        0.04948852966623142,
+        0.026963153818711113
+      ],
+      "rate_weighted_channel_bound_rms": [
+        10.563231318360764,
+        4.065789630111915
+      ],
+      "raw_rate_weighted_error_norm": [
+        4.314963665570131e-15,
+        2.3509493982058067e-15
+      ],
+      "max_channel_bound_violation": 0.0
+    }
+  ],
+  "rates_policy": "Original sampled rates unchanged; normalization is only for descriptive RMS, not a physical probability law",
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "open_blockers": [
+    "full_operator_consistency",
+    "boundary_and_projection_control",
+    "material_mapping"
+  ],
+  "claim_boundary": "Bounds cover specified probe amplitudes, not arbitrary distributions, transport coefficient error or continuum convergence. No output clipping: positive-part expressions report violation only.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_interpolation_refinement_plan.json",
+      "sha256": "db462098f5d31f43081b7951102186465809cdafd94c3bf0e7b01ea9db83e3f8"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_positive_interpolation_bounds.py",
+      "sha256": "8bdf4a21f697c21840f6fdaf604eaef7c75951031e65ce2e82e0c5a072ca3188"
+    },
+    {
+      "path": "docs/core/test/test_topic13_positive_interpolation_bounds.py",
+      "sha256": "6dc630b77f66ad571aa59b621c838d653692c1f48fee2f981c63dd345ded0026"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_interpolation_refinement.py",
+      "sha256": "7e8beda5c20480537ff5424e70a02572f02732bce3792526c52b10b1600c7fd9"
+    },
+    {
+      "path": "docs/core/uet_o2_continuum_collision_operator.py",
+      "sha256": "1c58e860e4237f2f2b4a43fb5ba3d4d82967db791cb9cbff46df2a9c6bd296b2"
+    },
+    {
+      "path": "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+      "sha256": "98b43f2bde1bf335ed7296f51b253e707699e4052b0903d216ab5381eac5b835"
+    },
+    {
+      "path": "docs/core/uet_o2_action_derived_transition_kernel.py",
+      "sha256": "2f818500b353e8cf81caddf892bcf2db43a4341fe831b6f67e62423e3c2feb8f"
+    },
+    {
+      "path": "docs/core/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "a1be58b8230240775654e7c0d6265870010f546238e96e59e36045e6a893e5d2"
+    },
+    {
+      "path": "docs/core/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    }
+  ],
+  "verification_status": "NINE_POSITIVE_GRIDS_EVALUATED"
+}
