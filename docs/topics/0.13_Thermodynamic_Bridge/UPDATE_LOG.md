@@ -1,3 +1,17 @@
+## 2026-09-12 - Existing matter actuation harmonics
+
+MAJOR_RESULT_CLOSURE: PARTIAL.
+WHAT_IS_ACTUALLY_CLOSED: Production quadratic matter forcing has no linear coherent source at zero background; DC/second-harmonic terms measured.
+WHAT_REMAINS_OPEN: Physical matter amplitude/variance input, thermal mass-source matching and source energy ledger.
+DEPENDENCY_UNLOCKED: None.
+STATUS: SOURCE_HARMONICS_NOT_CALIBRATION.
+WHAT_CHANGED: Residual-based diagnostic, three tests, artifact and T13_MATTER_ACTUATION_HARMONICS.md; production unchanged.
+EQUATION_OR_MAPPING: DeltaJ=epsilon*h*(chi0*A*cos(wt)+A^2*(1+cos(2wt))/4).
+VERIFICATION: Three tests PASS, seven cases; maximum harmonic residual below4e-18, GR null retained.
+CONTROLLING_BLOCKER: physical_preparation_and_measurement_of_matter_amplitude_or_variance.
+NEXT_ACTION: Inspect existing thermal mass-source response for normal matter; do not substitute coherent mean for variance.
+CLAIM_BOUNDARY: Source probe only, not on-shell drive, measured Phi, material calibration or full closure.
+
 ## 2026-09-12 - Operational actuation/readout anchor
 
 MAJOR_RESULT_CLOSURE: PARTIAL.
