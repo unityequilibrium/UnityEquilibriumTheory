@@ -1,3 +1,17 @@
+## 2026-09-12 - Hydrostatic spectral actuation route
+
+MAJOR_RESULT_CLOSURE: PARTIAL.
+WHAT_IS_ACTUALLY_CLOSED: Source-backed hydrostatic mode-energy derivative does not require full deformation tensor reconstruction.
+WHAT_REMAINS_OPEN: O(2) mode identification, TTG state equivalence, covariance and physical pressure-drive protocol.
+DEPENDENCY_UNLOCKED: No physical gate.
+STATUS: SPECTRAL_PROJECTION_NOT_UET_SOURCE.
+WHAT_CHANGED: Hydrostatic route runner/artifact and T13_HYDROSTATIC_ACTUATION_ROUTE.md; source/production unchanged.
+EQUATION_OR_MAPPING: u_mode=(dE_mode^2/dP)*deltaP; u_O2 not identified.
+VERIFICATION:12 existing Raman tests PASS, primary hash matches, four tensor-null perturbations preserve measured projection within3.5e-18.
+CONTROLLING_BLOCKER: phonon_mode_to_O2_operator_matching_and_TTG_state_equivalence.
+NEXT_ACTION: Audit dispersion/polarization/multiplicity and thermal weighting before any source substitution.
+CLAIM_BOUNDARY: Existing300K spectral facts only, no new calibration or whole-topic closure.
+
 ## 2026-09-12 - Conditional thermal variance actuation
 
 MAJOR_RESULT_CLOSURE: PARTIAL.
