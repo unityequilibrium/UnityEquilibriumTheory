@@ -1,3 +1,17 @@
+## 2026-09-12 - Composite alpha measurement design
+
+MAJOR_RESULT_CLOSURE: PARTIAL.
+WHAT_IS_ACTUALLY_CLOSED: Target-product identifiability need not imply individual-factor identifiability.
+WHAT_REMAINS_OPEN: Actual numerator measurement, fixed Phi convention, material operator, sign/units/covariance.
+DEPENDENCY_UNLOCKED: No physical gate.
+STATUS: CONDITIONAL_MEASUREMENT_DESIGN.
+WHAT_CHANGED: Six design audit, three tests and T13_COMPOSITE_ALPHA_DESIGN.md; no calibration or gate replacement.
+EQUATION_OR_MAPPING: Target log-alpha lies in rowspace of measurement matrix; Var(log-alpha)=c^T Sigma c.
+VERIFICATION: Three tests PASS; full numerator plus heat capacity identifies magnitude, gZ plus heat capacity does not.
+CONTROLLING_BLOCKER: independent_source_backed_numerator_measurement_with_fixed_Phi_convention.
+NEXT_ACTION: Inspect admissible absolute-amplitude matching sources, not require individual factors unnecessarily.
+CLAIM_BOUNDARY: Algebraic design only, no measured alpha or full Topic13 closure.
+
 ## 2026-09-12 - Current metric surface identity
 
 MAJOR_RESULT_CLOSURE: PARTIAL.
