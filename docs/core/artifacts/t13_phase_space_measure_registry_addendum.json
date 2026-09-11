@@ -1,0 +1,15 @@
+{
+  "registry_id": "uet.o2.independent_phase_space_measure_pilot",
+  "registration_status": "UNMERGED_INTERNAL_NUMERICAL_DIAGNOSTIC",
+  "ontology": "Quadrature of scalar test functions, no new physical state",
+  "units": "Dimensionless x=p/P; normalized angular averages",
+  "derivation_class": "Product Gauss-Legendre quadrature with periodic azimuth",
+  "observable": "Manufactured moments, not physical conductivity",
+  "data_role": "ANALYTIC_MANUFACTURED_CONTROL",
+  "verification_status": "THREE_TESTS_PASS_MANUFACTURED_MEASURE_ONLY",
+  "controlling_blocker": "differential_cross_section_and_species_symmetry_contract",
+  "claim_boundary": "No collision normalization, tensor response, material or Core closure",
+  "evidence_artifact": "docs/core/artifacts/t13_phase_space_measure_audit.json",
+  "dependency_unlocked": [],
+  "full_core_unlock": false
+}

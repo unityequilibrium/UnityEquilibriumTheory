@@ -1,3 +1,17 @@
+## 2026-09-11 - Independent product-measure pilot
+
+MAJOR_RESULT_CLOSURE: PARTIAL.
+WHAT_IS_ACTUALLY_CLOSED: Independent radial pairs and normalized angular weights reproduce analytic scalar controls.
+WHAT_REMAINS_OPEN: Physical scattering/species factors, Bose-weighted collision, tensor orientations and calibration.
+DEPENDENCY_UNLOCKED: None.
+STATUS: MANUFACTURED_MEASURE_ONLY.
+WHAT_CHANGED: Standalone measure runner, three tests, artifact, registry proposal and T13_PHASE_SPACE_MEASURE_PILOT.md; production unchanged.
+EQUATION_OR_MAPPING: x1^2 dx1 x2^2 dx2 du/2 dv/2 dphi/(2*pi).
+VERIFICATION: Three tests PASS; four radial orders grow pair counts16 to1024. Manufactured exponential errors reach floating-point scale; hashes match; foundation audit PASS with physical gate BLOCKED.
+CONTROLLING_BLOCKER: differential_cross_section_and_species_symmetry_contract.
+NEXT_ACTION: Derive physical measure conventions and species factors before evaluating Bose-weighted collision quadrature.
+CLAIM_BOUNDARY: Numerical control, not continuum collision validation or full Topic13 closure.
+
 ## 2026-09-11 - Channel attribution and sampling boundary
 
 MAJOR_RESULT_CLOSURE: PARTIAL.
