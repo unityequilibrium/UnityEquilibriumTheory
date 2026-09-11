@@ -1,3 +1,17 @@
+## 2026-09-11 - Integrated action-normalized elastic events
+
+MAJOR_RESULT_CLOSURE: PARTIAL.
+WHAT_IS_ACTUALLY_CLOSED: Existing charge-resolved scattering conventions recovered and reused in independent double-radial event integration.
+WHAT_REMAINS_OPEN: Joint resolution/cutoff, linearized gain-loss, projection and transport/calibration.
+DEPENDENCY_UNLOCKED: None.
+STATUS: ELASTIC_EVENT_DENSITY_NOT_TRANSPORT.
+WHAT_CHANGED: Integration runner, tests, artifact and T13_INTEGRATED_ELASTIC_EVENTS.md; no production replacement.
+EQUATION_OR_MAPPING: Event density is one half of the equilibrium occupation-weighted sum of tagged loss densities; natural energy^4.
+VERIFICATION: Existing17 plus new2 tests PASS; last radial change0.04497%, angular change0.004066%; detailed balance below2.2e-14; hashes match. Foundation physical gate remains BLOCKED.
+CONTROLLING_BLOCKER: linearized_collision_gain_loss_and_conserved_projection_with_resolution_control.
+NEXT_ACTION: Build and test invariant-null gain-loss forms before transport inversion.
+CLAIM_BOUNDARY: Synthetic tree elastic event count, not conductivity or full Topic13 closure.
+
 ## 2026-09-11 - Independent product-measure pilot
 
 MAJOR_RESULT_CLOSURE: PARTIAL.
