@@ -1,3 +1,17 @@
+## 2026-09-11 - Signed moment-preserving interpolation candidate
+
+MAJOR_RESULT_CLOSURE: PARTIAL; fixed-grid moments reproduced before projection.
+WHAT_IS_ACTUALLY_CLOSED: Both grids achieve scaled feature errors near1e-15 and raw channel errors below1.49e-15 with an explicit signed numerical correction; full reference tensors stay positive and balanced.
+WHAT_REMAINS_OPEN: Nonlinear accuracy/refinement, input sensitivity, occupation admissibility and material mapping.
+DEPENDENCY_UNLOCKED: No physical/Core unlock.
+STATUS: SIGNED_MOMENT_CANDIDATE_MEASURED_NOT_CONVERGED.
+WHAT_CHANGED: Fixed-support plan, helper/tests, artifact, registry proposal and docs/core/T13_SIGNED_MOMENT_INTERPOLATION.md; production defaults unchanged.
+EQUATION_OR_MAPPING: Minimum Euclidean correction subject to reproducing(1,E,p); signed psi coefficients, unchanged positive physical rates/weights.
+VERIFICATION: Three tests PASS; two candidate tensors complete exit0; nonlinear probes retained, including worsened mass/E RMS on axis6. Foundation physical gates remain BLOCKED.
+CONTROLLING_BLOCKER: nonlinear_interpolation_accuracy_under_refinement_and_input_sensitivity.
+NEXT_ACTION: Refine representable probes and coefficient/error bounds; do not use moment enforcement as continuum validation.
+CLAIM_BOUNDARY: Numerical candidate only, no negative-probability interpretation or full Topic13 promotion.
+
 ## 2026-09-11 - Support scan and positive mass-shell interpolation boundary
 
 MAJOR_RESULT_CLOSURE: PARTIAL; stable tensor distinguished from interpolation accuracy.
