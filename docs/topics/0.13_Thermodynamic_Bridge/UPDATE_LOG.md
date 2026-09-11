@@ -1,3 +1,17 @@
+## 2026-09-11 - Local segment bounds and two-probe collision form
+
+MAJOR_RESULT_CLOSURE: PARTIAL; local bounds connected to a restricted quadratic-form certificate.
+WHAT_IS_ACTUALLY_CLOSED: Nine grids satisfy measured bounds; finest leg bounds improve about11/43 times. The certificate covers all combinations of two probes, not just individual amplitudes.
+WHAT_REMAINS_OPEN: Accurate full operator, width/projection/boundary effects and transport/material mapping.
+DEPENDENCY_UNLOCKED: None.
+STATUS: LOCAL_PROBE_FORM_CERTIFICATE_NOT_FULL_OPERATOR_CLOSURE.
+WHAT_CHANGED: Runner/tests/artifact, registry proposal and docs/core/T13_LOCAL_QUADRATIC_BOUNDS.md; production unchanged.
+EQUATION_OR_MAPPING: Segment derivative envelopes; ||B.T B-A.T A||<=2||A|| epsilon+epsilon^2.
+VERIFICATION: Three tests PASS; nine cases exit0 and no bound violation. Finest direct sampled Gram discrepancy remains about55.17% relative. Physical foundation gates remain BLOCKED.
+CONTROLLING_BLOCKER: sampled_channel_form_accuracy_and_certificate_tightness.
+NEXT_ACTION: Identify channel contributions and verify wider function-space/interpolation accuracy, not scalar conductivity alone.
+CLAIM_BOUNDARY: Unprojected sampled channel term on two probes, not full collision operator or Full Topic13 closure.
+
 ## 2026-09-11 - Positive local and rate-weighted probe bounds
 
 MAJOR_RESULT_CLOSURE: PARTIAL; explicit error-accounting route for two probes.

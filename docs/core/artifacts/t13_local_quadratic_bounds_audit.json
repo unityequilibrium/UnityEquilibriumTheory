@@ -1,0 +1,481 @@
+{
+  "major_result_id": "T13_LOCAL_TWO_PROBE_QUADRATIC_ERROR_BOUND",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "status": "LOCAL_PROBE_FORM_CERTIFICATE_NOT_FULL_OPERATOR_CLOSURE",
+  "completed": true,
+  "what_is_closed": "Segment-local bounds and two-probe quadratic certificate evaluated",
+  "equation_or_mapping": "||B.T B-A.T A||_2 <= 2||A||_2 epsilon+epsilon^2; epsilon bounds ||B-A||_2 via local leg bounds",
+  "units": "Rate-normalized probe Gram, plus raw rate-scaled bound",
+  "derivation_class": "Analytic segment derivative envelope and matrix norm inequality",
+  "observable": "Collision quadratic form restricted to two fixed probes, not full operator norm",
+  "data_role": "INTERNAL_NO_FIT",
+  "rows": [
+    {
+      "radial_order": 8,
+      "angular_rule": "axis_cube14",
+      "local_leg_bound_rms": [
+        4.395795602903745,
+        1.0454260778146394
+      ],
+      "global_leg_bound_rms": [
+        24.277010108843605,
+        9.34422554764008
+      ],
+      "actual_leg_error_rms": [
+        0.14768517811585835,
+        0.1411594477598705
+      ],
+      "max_leg_violation": 0.0,
+      "max_local_exceeds_global": 0.0,
+      "certificate": {
+        "exact_gram": [
+          [
+            0.008632757102998365,
+            0.0027564317380424364
+          ],
+          [
+            0.0027564317380424364,
+            0.004890185470030024
+          ]
+        ],
+        "mapped_gram": [
+          [
+            4.86503127987482e-05,
+            -2.8834568011040613e-06
+          ],
+          [
+            -2.8834568011040613e-06,
+            1.265867303414277e-06
+          ]
+        ],
+        "error_norm": 0.010057269500697226,
+        "error_bound": 318.13442977755307,
+        "amplitude_error_bound": 17.736141930143045,
+        "actual_amplitude_error": 0.09797145596767076,
+        "raw_rate_sum": 7.602303164772018e-27,
+        "raw_quadratic_error_bound": 2.418554382320833e-24
+      }
+    },
+    {
+      "radial_order": 8,
+      "angular_rule": "product4x8",
+      "local_leg_bound_rms": [
+        2.529660166165403,
+        0.5165837859792733
+      ],
+      "global_leg_bound_rms": [
+        19.694702957610623,
+        7.5804947027908085
+      ],
+      "actual_leg_error_rms": [
+        0.12642569876628584,
+        0.12555623887347397
+      ],
+      "max_leg_violation": 0.0,
+      "max_local_exceeds_global": 0.0,
+      "certificate": {
+        "exact_gram": [
+          [
+            0.008632757102998365,
+            0.0027564317380424364
+          ],
+          [
+            0.0027564317380424364,
+            0.004890185470030024
+          ]
+        ],
+        "mapped_gram": [
+          [
+            0.0004951063940592909,
+            0.0005882186706632842
+          ],
+          [
+            0.0005882186706632842,
+            0.0014273124139590457
+          ]
+        ],
+        "error_norm": 0.008988448582102848,
+        "error_bound": 154.11469337938718,
+        "amplitude_error_bound": 12.314236088255262,
+        "actual_amplitude_error": 0.11639706773777488,
+        "raw_rate_sum": 7.602303164772018e-27,
+        "raw_quadratic_error_bound": 1.1716266212159842e-24
+      }
+    },
+    {
+      "radial_order": 8,
+      "angular_rule": "product8x16",
+      "local_leg_bound_rms": [
+        1.3183896096061565,
+        0.21744453252571627
+      ],
+      "global_leg_bound_rms": [
+        12.787769469899432,
+        4.922014763854211
+      ],
+      "actual_leg_error_rms": [
+        0.07809504133958879,
+        0.09481259067856937
+      ],
+      "max_leg_violation": 0.0,
+      "max_local_exceeds_global": 0.0,
+      "certificate": {
+        "exact_gram": [
+          [
+            0.008632757102998365,
+            0.0027564317380424364
+          ],
+          [
+            0.0027564317380424364,
+            0.004890185470030024
+          ]
+        ],
+        "mapped_gram": [
+          [
+            0.0053962716116682736,
+            0.005316324238212408
+          ],
+          [
+            0.005316324238212408,
+            0.07116303131214019
+          ]
+        ],
+        "error_norm": 0.06636699414685715,
+        "error_bound": 54.29397775751781,
+        "amplitude_error_bound": 7.26866525546708,
+        "actual_amplitude_error": 0.2009103149503103,
+        "raw_rate_sum": 7.602303164772018e-27,
+        "raw_quadratic_error_bound": 4.1275927893403917e-25
+      }
+    },
+    {
+      "radial_order": 16,
+      "angular_rule": "axis_cube14",
+      "local_leg_bound_rms": [
+        2.7442375377896435,
+        0.5535048327055869
+      ],
+      "global_leg_bound_rms": [
+        19.626875979126062,
+        7.554388086599892
+      ],
+      "actual_leg_error_rms": [
+        0.12719550745955208,
+        0.14523638914235318
+      ],
+      "max_leg_violation": 0.0,
+      "max_local_exceeds_global": 0.0,
+      "certificate": {
+        "exact_gram": [
+          [
+            0.008632757102998365,
+            0.0027564317380424364
+          ],
+          [
+            0.0027564317380424364,
+            0.004890185470030024
+          ]
+        ],
+        "mapped_gram": [
+          [
+            0.00010698930483494758,
+            0.0005069195335822798
+          ],
+          [
+            0.0005069195335822798,
+            0.003988739804109351
+          ]
+        ],
+        "error_norm": 0.009139990939503802,
+        "error_bound": 178.79330969204491,
+        "amplitude_error_bound": 13.27127462904254,
+        "actual_amplitude_error": 0.14869585378095077,
+        "raw_rate_sum": 7.602303164772018e-27,
+        "raw_quadratic_error_bound": 1.3592409441118965e-24
+      }
+    },
+    {
+      "radial_order": 16,
+      "angular_rule": "product4x8",
+      "local_leg_bound_rms": [
+        1.7842139870429534,
+        0.26143619295772014
+      ],
+      "global_leg_bound_rms": [
+        16.448750001978755,
+        6.331126827650196
+      ],
+      "actual_leg_error_rms": [
+        0.10170947213821925,
+        0.09704666774570664
+      ],
+      "max_leg_violation": 0.0,
+      "max_local_exceeds_global": 0.0,
+      "certificate": {
+        "exact_gram": [
+          [
+            0.008632757102998365,
+            0.0027564317380424364
+          ],
+          [
+            0.0027564317380424364,
+            0.004890185470030024
+          ]
+        ],
+        "mapped_gram": [
+          [
+            0.00030488929520737995,
+            -0.001980231061044858
+          ],
+          [
+            -0.001980231061044858,
+            0.02062363816990498
+          ]
+        ],
+        "error_norm": 0.01663232301042884,
+        "error_bound": 85.19994102469349,
+        "amplitude_error_bound": 9.130463798671801,
+        "actual_amplitude_error": 0.10833286022118552,
+        "raw_rate_sum": 7.602303164772018e-27,
+        "raw_quadratic_error_bound": 6.477157812904166e-25
+      }
+    },
+    {
+      "radial_order": 16,
+      "angular_rule": "product8x16",
+      "local_leg_bound_rms": [
+        1.0021491296302818,
+        0.1116730985192219
+      ],
+      "global_leg_bound_rms": [
+        10.55158619231176,
+        4.06130741900582
+      ],
+      "actual_leg_error_rms": [
+        0.05696998718434512,
+        0.03367256142259624
+      ],
+      "max_leg_violation": 0.0,
+      "max_local_exceeds_global": 0.0,
+      "certificate": {
+        "exact_gram": [
+          [
+            0.008632757102998365,
+            0.0027564317380424364
+          ],
+          [
+            0.0027564317380424364,
+            0.004890185470030024
+          ]
+        ],
+        "mapped_gram": [
+          [
+            0.003893992133864777,
+            -0.0003752476933001854
+          ],
+          [
+            -0.0003752476933001854,
+            0.006597437201968705
+          ]
+        ],
+        "error_norm": 0.0060096634810413215,
+        "error_bound": 28.03433201712707,
+        "amplitude_error_bound": 5.195234406205811,
+        "actual_amplitude_error": 0.0587532609585611,
+        "raw_rate_sum": 7.602303164772018e-27,
+        "raw_quadratic_error_bound": 2.131254910160746e-25
+      }
+    },
+    {
+      "radial_order": 32,
+      "angular_rule": "axis_cube14",
+      "local_leg_bound_rms": [
+        1.8460449658638538,
+        0.28792315577628147
+      ],
+      "global_leg_bound_rms": [
+        15.160657748339712,
+        5.835339888063811
+      ],
+      "actual_leg_error_rms": [
+        0.10262379218388844,
+        0.10437670302155688
+      ],
+      "max_leg_violation": 0.0,
+      "max_local_exceeds_global": 0.0,
+      "certificate": {
+        "exact_gram": [
+          [
+            0.008632757102998365,
+            0.0027564317380424364
+          ],
+          [
+            0.0027564317380424364,
+            0.004890185470030024
+          ]
+        ],
+        "mapped_gram": [
+          [
+            0.0015496110086211162,
+            -0.0013386090813443973
+          ],
+          [
+            -0.0013386090813443973,
+            0.011833053979999248
+          ]
+        ],
+        "error_norm": 0.00819119972860755,
+        "error_bound": 94.18194876122942,
+        "amplitude_error_bound": 9.604794134037984,
+        "actual_amplitude_error": 0.09325377246856295,
+        "raw_rate_sum": 7.602303164772018e-27,
+        "raw_quadratic_error_bound": 7.159997271318904e-25
+      }
+    },
+    {
+      "radial_order": 32,
+      "angular_rule": "product4x8",
+      "local_leg_bound_rms": [
+        1.3487368539649855,
+        0.16131360684325327
+      ],
+      "global_leg_bound_rms": [
+        13.691440613434324,
+        5.2698379491733895
+      ],
+      "actual_leg_error_rms": [
+        0.07917848833729921,
+        0.05197120345500332
+      ],
+      "max_leg_violation": 0.0,
+      "max_local_exceeds_global": 0.0,
+      "certificate": {
+        "exact_gram": [
+          [
+            0.008632757102998365,
+            0.0027564317380424364
+          ],
+          [
+            0.0027564317380424364,
+            0.004890185470030024
+          ]
+        ],
+        "mapped_gram": [
+          [
+            0.003827163575721404,
+            -0.0035857282653335085
+          ],
+          [
+            -0.0035857282653335085,
+            0.011879160669805532
+          ]
+        ],
+        "error_norm": 0.009752000090121943,
+        "error_bound": 51.02820118224127,
+        "amplitude_error_bound": 7.043644730748804,
+        "actual_amplitude_error": 0.0880910805500215,
+        "raw_rate_sum": 7.602303164772018e-27,
+        "raw_quadratic_error_bound": 3.87931855340376e-25
+      }
+    },
+    {
+      "radial_order": 32,
+      "angular_rule": "product8x16",
+      "local_leg_bound_rms": [
+        0.7894267430792442,
+        0.0784733974598256
+      ],
+      "global_leg_bound_rms": [
+        8.820352646842691,
+        3.394955316668039
+      ],
+      "actual_leg_error_rms": [
+        0.0397166876401434,
+        0.01983929304867084
+      ],
+      "max_leg_violation": 0.0,
+      "max_local_exceeds_global": 0.0,
+      "certificate": {
+        "exact_gram": [
+          [
+            0.008632757102998365,
+            0.0027564317380424364
+          ],
+          [
+            0.0027564317380424364,
+            0.004890185470030024
+          ]
+        ],
+        "mapped_gram": [
+          [
+            0.005470226206541884,
+            -0.0006749575908275037
+          ],
+          [
+            -0.0006749575908275037,
+            0.004214962113325827
+          ]
+        ],
+        "error_norm": 0.005568686357979924,
+        "error_bound": 16.96988116800496,
+        "amplitude_error_bound": 4.020212101629912,
+        "actual_amplitude_error": 0.04965890959532487,
+        "raw_rate_sum": 7.602303164772018e-27,
+        "raw_quadratic_error_bound": 1.2901018130932917e-25
+      }
+    }
+  ],
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "open_blockers": [
+    "larger_function_space_certificate",
+    "projection_and_boundary_control",
+    "transport_uncertainty",
+    "material_mapping"
+  ],
+  "claim_boundary": "No closure of the full collision operator or inverse transport; exact sampled channels are the reference, not continuum data",
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_interpolation_refinement_plan.json",
+      "sha256": "db462098f5d31f43081b7951102186465809cdafd94c3bf0e7b01ea9db83e3f8"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_local_quadratic_bounds.py",
+      "sha256": "935adaa2d3b707277cdb9faa68600022bc0b39d2a4b5dec02f769114d40b0261"
+    },
+    {
+      "path": "docs/core/test/test_topic13_local_quadratic_bounds.py",
+      "sha256": "5ee0a73e63a84188082ed16a7e3f45413b7ac1b4a67c38cda37d09d91eec3301"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_positive_interpolation_bounds.py",
+      "sha256": "8bdf4a21f697c21840f6fdaf604eaef7c75951031e65ce2e82e0c5a072ca3188"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_interpolation_refinement.py",
+      "sha256": "7e8beda5c20480537ff5424e70a02572f02732bce3792526c52b10b1600c7fd9"
+    },
+    {
+      "path": "docs/core/uet_o2_continuum_collision_operator.py",
+      "sha256": "1c58e860e4237f2f2b4a43fb5ba3d4d82967db791cb9cbff46df2a9c6bd296b2"
+    },
+    {
+      "path": "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+      "sha256": "98b43f2bde1bf335ed7296f51b253e707699e4052b0903d216ab5381eac5b835"
+    },
+    {
+      "path": "docs/core/uet_o2_action_derived_transition_kernel.py",
+      "sha256": "2f818500b353e8cf81caddf892bcf2db43a4341fe831b6f67e62423e3c2feb8f"
+    },
+    {
+      "path": "docs/core/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "a1be58b8230240775654e7c0d6265870010f546238e96e59e36045e6a893e5d2"
+    },
+    {
+      "path": "docs/core/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    }
+  ],
+  "verification_status": "ALL_NINE_FIXED_GRIDS_EVALUATED"
+}

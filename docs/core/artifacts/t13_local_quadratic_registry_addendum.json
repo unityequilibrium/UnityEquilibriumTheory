@@ -1,0 +1,16 @@
+{
+  "registry_id": "uet.o2.local_two_probe_collision_form_bound",
+  "registration_status": "UNMERGED_INTERNAL_ANALYTIC_DIAGNOSTIC",
+  "ontology": "Error certificate on a fixed response-probe span; not a new state or equation of motion",
+  "units": "Rate-normalized dimensionless probe Gram; raw form scales by sum of sampled rates",
+  "equation_or_mapping": "||B^T B-A^T A||_2<=2||A||_2 epsilon+epsilon^2",
+  "derivation_class": "Segment derivative envelopes and matrix norm inequalities",
+  "observable": "Unprojected sampled channel quadratic contribution on two probes",
+  "data_role": "INTERNAL_NO_TARGET_FIT",
+  "verification_status": "NINE_GRIDS_MEASURED_WITH_NO_BOUND_VIOLATION",
+  "controlling_blocker": "large_relative_channel_form_error_and_certificate_tightness",
+  "claim_boundary": "Excludes width term, projection and full inverse transport; no physical unlock",
+  "evidence_artifact": "docs/core/artifacts/t13_local_quadratic_bounds_audit.json",
+  "dependency_unlocked": [],
+  "full_core_unlock": false
+}
