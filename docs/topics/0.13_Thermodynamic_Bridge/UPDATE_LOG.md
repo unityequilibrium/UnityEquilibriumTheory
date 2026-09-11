@@ -1,3 +1,17 @@
+## 2026-09-11 - Constrained full tensor and covariant lift
+
+MAJOR_RESULT_CLOSURE: PARTIAL; all nine response entries, reciprocity and factorized balance evaluated.
+WHAT_IS_ACTUALLY_CLOSED: Both direction rules at120/180 digits give positive tensors; all16 force/lift cases meet original entropy/boost/isotropy thresholds.
+WHAT_REMAINS_OPEN: Input/interpolation/resolution consistency, charged-frame state integration and material mapping.
+DEPENDENCY_UNLOCKED: Internal reference route only; no physical/Core unlock.
+STATUS: TENSOR_REFERENCE_MEASURED_NOT_PHYSICAL_CLOSURE.
+WHAT_CHANGED: Multi-source solver, tests, tensor/lift artifacts, registry proposal and docs/core/T13_CONSTRAINED_TENSOR_REFERENCE.md.
+EQUATION_OR_MAPPING: K=G.T W Psi, D=Psi.T diag(w*gamma) Psi+(J Psi).T R(J Psi); all-entry comparison and sigma=X.T K X/T.
+VERIFICATION: Nine tests PASS; four tensor cases and16 lift cases complete; max boost6.822e-13. Physical foundation gates remain BLOCKED.
+CONTROLLING_BLOCKER: input_interpolation_and_resolution_consistency.
+NEXT_ACTION: Controlled input perturbation and interpolation study without tuning; preserve old failure evidence.
+CLAIM_BOUNDARY: Reference tensor, not continuum/material transport or50-digit physical accuracy; production defaults unchanged.
+
 ## 2026-09-11 - Constrained high-precision x-response recovered
 
 MAJOR_RESULT_CLOSURE: PARTIAL; fixed-grid positive x-response recovered without spectral truncation.
