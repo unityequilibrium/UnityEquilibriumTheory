@@ -1,0 +1,15 @@
+{
+  "registry_id": "uet.o2.thermal.current_metric_surface_identity",
+  "registration_status": "UNMERGED_INTERNAL_DIAGNOSTIC",
+  "ontology": "Consistency identity of existing Bose response metric, no new state",
+  "units": "T G00 and enthalpy energy^4; G01 and charge density energy^3",
+  "derivation_class": "Integration by parts with finite upper boundary",
+  "observable": "Metric projection versus thermodynamic projection coefficient",
+  "data_role": "SYNTHETIC_NO_FIT",
+  "verification_status": "FIVE_TESTS_PASS",
+  "controlling_blocker": "basis_completeness_and_physical_collision_current_matching",
+  "evidence_artifact": "docs/core/artifacts/t13_current_metric_surface_audit.json",
+  "claim_boundary": "Scoped finite-cutoff identity, not material or full transport closure",
+  "dependency_unlocked": [],
+  "full_core_unlock": false
+}

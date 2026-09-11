@@ -1,3 +1,17 @@
+## 2026-09-12 - Current metric surface identity
+
+MAJOR_RESULT_CLOSURE: PARTIAL.
+WHAT_IS_ACTUALLY_CLOSED: Finite-cutoff surface terms reconcile momentum metric and charge/enthalpy moments; negligible at tested cutoff24.
+WHAT_REMAINS_OPEN: Basis completeness and physical current/material matching.
+DEPENDENCY_UNLOCKED: None.
+STATUS: METRIC_SURFACE_TERM_NOT_CONTROLLING_AT_TESTED_STATE.
+WHAT_CHANGED: Surface audit/test/artifact, registry proposal and T13_CURRENT_METRIC_SURFACE.md; no production change.
+EQUATION_OR_MAPPING: T*G00=w-Bw; G01=n-Bn.
+VERIFICATION: Five tests PASS, corrected residuals below4e-15; Bw/w falls from0.1021 at cutoff2 to2.239e-35 at24. F0 inventory369/no duplicates; physical foundation and compatibility remain BLOCKED.
+CONTROLLING_BLOCKER: basis_completeness_and_physical_collision_current_matching.
+NEXT_ACTION: Preserve metric projection and investigate physical matching, not negligible cutoff correction.
+CLAIM_BOUNDARY: One synthetic normal state and cutoff sweep; not material validation.
+
 ## 2026-09-12 - Recover existing coupled gain-loss evidence
 
 MAJOR_RESULT_CLOSURE: PARTIAL.

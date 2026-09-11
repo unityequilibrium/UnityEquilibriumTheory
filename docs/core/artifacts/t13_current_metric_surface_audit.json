@@ -1,0 +1,166 @@
+{
+  "major_result_id": "T13_CURRENT_METRIC_FINITE_CUTOFF_IDENTITY",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "equation_or_mapping": "T*G00=w-Bw; G01=n-Bn; Bw=P^3 sum E(P)f(P)/(6*pi^2); Bn=P^3 sum q f(P)/(6*pi^2)",
+  "units": "G00 energy^2; G01 energy^3; w,Bw energy^4; n,Bn energy^3",
+  "derivation_class": "Integration by parts of the existing Bose metric",
+  "observable": "Projection coefficient consistency",
+  "data_role": "SYNTHETIC_DIAGNOSTIC_NO_FIT",
+  "rows": [
+    {
+      "cutoff": 2.0,
+      "mu": 0.2,
+      "order": 192,
+      "T": 0.25,
+      "metric": [
+        [
+          0.0057908375341025695,
+          0.00034904534990959336
+        ],
+        [
+          0.00034904534990959336,
+          8.505173002914594e-05
+        ]
+      ],
+      "charge_density": 0.00038036648157776945,
+      "enthalpy_density": 0.0016123561172817645,
+      "charge_surface": 3.132113166817728e-05,
+      "enthalpy_surface": 0.00016464673375612737,
+      "corrected_charge_residual": 1.8491919634737246e-16,
+      "corrected_enthalpy_residual": 3.2276805180632285e-15,
+      "omitted_enthalpy_surface_fraction": 0.10211561328877002,
+      "momentum_projection_ratio": 0.06027545201433222,
+      "thermodynamic_projection_ratio": 0.05897681000817315,
+      "boundary": "Finite-cutoff metric identities, not transport or material calibration"
+    },
+    {
+      "cutoff": 4.0,
+      "mu": 0.2,
+      "order": 192,
+      "T": 0.25,
+      "metric": [
+        [
+          0.006953339460918709,
+          0.00039699917132598203
+        ],
+        [
+          0.00039699917132598203,
+          9.212271896663347e-05
+        ]
+      ],
+      "charge_density": 0.0003971311962004319,
+      "enthalpy_density": 0.0017395401246762007,
+      "charge_surface": 1.3202487444945187e-07,
+      "enthalpy_surface": 1.2052594465226373e-06,
+      "corrected_charge_residual": 5.453607464797076e-17,
+      "corrected_enthalpy_residual": 4.986155396385898e-16,
+      "omitted_enthalpy_surface_fraction": 0.0006928609633232721,
+      "momentum_projection_ratio": 0.05709474901337962,
+      "thermodynamic_projection_ratio": 0.05707416439651747,
+      "boundary": "Finite-cutoff metric identities, not transport or material calibration"
+    },
+    {
+      "cutoff": 8.0,
+      "mu": 0.2,
+      "order": 192,
+      "T": 0.25,
+      "metric": [
+        [
+          0.006959640482052214,
+          0.00039716009675763004
+        ],
+        [
+          0.00039716009675763004,
+          9.213647066688989e-05
+        ]
+      ],
+      "charge_density": 0.00039716009690924373,
+      "enthalpy_density": 0.0017399101231300711,
+      "charge_surface": 1.516133867769757e-13,
+      "enthalpy_surface": 2.6170176624894772e-12,
+      "corrected_charge_residual": 4.6735266296472903e-17,
+      "corrected_enthalpy_residual": 0.0,
+      "omitted_enthalpy_surface_fraction": 1.5041108317603804e-09,
+      "momentum_projection_ratio": 0.05706618003930543,
+      "thermodynamic_projection_ratio": 0.057066179975256266,
+      "boundary": "Finite-cutoff metric identities, not transport or material calibration"
+    },
+    {
+      "cutoff": 12.0,
+      "mu": 0.2,
+      "order": 192,
+      "T": 0.25,
+      "metric": [
+        [
+          0.006959640493964124,
+          0.0003971600969244905
+        ],
+        [
+          0.0003971600969244905,
+          9.213647067443317e-05
+        ]
+      ],
+      "charge_density": 0.00039716009692449173,
+      "enthalpy_density": 0.0017399101234910352,
+      "charge_surface": 6.254537747491311e-20,
+      "enthalpy_surface": 1.5941656450389632e-18,
+      "corrected_charge_residual": 1.7136264305151618e-16,
+      "corrected_enthalpy_residual": 1.4955285211768686e-15,
+      "omitted_enthalpy_surface_fraction": 9.162344787329339e-16,
+      "momentum_projection_ratio": 0.057066179965608116,
+      "thermodynamic_projection_ratio": 0.05706617996560816,
+      "boundary": "Finite-cutoff metric identities, not transport or material calibration"
+    },
+    {
+      "cutoff": 24.0,
+      "mu": 0.2,
+      "order": 192,
+      "T": 0.25,
+      "metric": [
+        [
+          0.006959640493964157,
+          0.0003971600969244923
+        ],
+        [
+          0.0003971600969244923,
+          9.213647067443347e-05
+        ]
+      ],
+      "charge_density": 0.00039716009692449206,
+      "enthalpy_density": 0.0017399101234910385,
+      "charge_surface": 7.748751711614658e-40,
+      "enthalpy_surface": 3.895023046412576e-38,
+      "corrected_charge_residual": 3.11568441911847e-17,
+      "corrected_enthalpy_residual": 4.985095070589552e-16,
+      "omitted_enthalpy_surface_fraction": 2.2386346247571778e-35,
+      "momentum_projection_ratio": 0.0570661799656081,
+      "thermodynamic_projection_ratio": 0.0570661799656081,
+      "boundary": "Finite-cutoff metric identities, not transport or material calibration"
+    }
+  ],
+  "what_is_closed": "Finite-cutoff surface terms explicitly compared with current metric and thermodynamic densities",
+  "verification_status": "MEASURED_IDENTITY_NOT_FULL_CURRENT_MATCH",
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "open_blockers": [
+    "basis_completeness",
+    "physical_collision_current_matching",
+    "material_calibration"
+  ],
+  "evidence_artifacts": [
+    {
+      "path": "docs/scripts/audit/audit_topic13_current_metric_surface.py",
+      "sha256": "a8a6c6d52c2b3ba271c811b6568d8279900257224cd06aa89d317a364c0db95c"
+    },
+    {
+      "path": "docs/core/test/test_topic13_current_metric_surface.py",
+      "sha256": "2eeb76780c48f24eb9b22ff1675dc4224054ef1475e3c14d7220837d26a5fcc5"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_coupled_gain_loss_operator.py",
+      "sha256": "ecc057e1d343c8c6c295a21eefb9e4bccc24cc11c668f88dd4083f3072b2a81d"
+    }
+  ],
+  "claim_boundary": "No modification to projection or rates; no external data/holdout. This is not a remedy for missing material normalization."
+}
