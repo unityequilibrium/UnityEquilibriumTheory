@@ -7,10 +7,11 @@
   "derivation_class": "Numerical ansatz with derived minimum-norm moment constraints",
   "observable": "Pre-projection moment fidelity and internal response tensor",
   "data_role": "INTERNAL_NO_TARGET_DATA_FIT",
-  "verification_status": "TWO_FIXED_GRIDS_MOMENTS_AND_NONLINEAR_PROBES_MEASURED",
-  "controlling_blocker": "nonlinear_interpolation_refinement_and_input_sensitivity",
+  "verification_status": "TWO_GRID_RESULT_RETAINED_FIXED_SUPPORT_REFINEMENT_BLOCKED",
+  "controlling_blocker": "rank_deficiency_and_coefficient_amplification_under_refinement",
   "claim_boundary": "No probability interpretation, microscopic transport derivation or physical unlock",
   "evidence_artifact": "docs/core/artifacts/t13_moment_interpolation_audit.json",
+  "refinement_evidence_artifact": "docs/core/artifacts/t13_interpolation_refinement_audit.json",
   "dependency_unlocked": [],
   "full_core_unlock": false
 }

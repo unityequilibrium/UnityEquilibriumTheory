@@ -1,3 +1,17 @@
+## 2026-09-11 - Nine-grid refinement and signed-candidate restriction
+
+MAJOR_RESULT_CLOSURE: PARTIAL; enforced moments distinguished from stable approximation.
+WHAT_IS_ACTUALLY_CLOSED: Nine grids attempted; two fail rank, several full-rank signed grids amplify nonlinear errors. All rank failures are inside cutoff.
+WHAT_REMAINS_OPEN: Approximation/operator convergence, boundary and material mapping.
+DEPENDENCY_UNLOCKED: None.
+STATUS: FIXED_SUPPORT_SIGNED_CANDIDATE_NOT_READY_UNDER_TESTED_REFINEMENT.
+WHAT_CHANGED: Plan/runner/tests/artifact, registry restriction and docs/core/T13_INTERPOLATION_REFINEMENT_REVIEW.md; no production replacement.
+EQUATION_OR_MAPPING: Fixed40-point support and1e-12 rank floor, no fallback.
+VERIFICATION: Six tests PASS; nine-grid study exit1 retains two blocked grids. Twelve outside legs separately reported. Foundation physical gates remain BLOCKED.
+CONTROLLING_BLOCKER: stable_interpolation_error_control_not_exact_moment_enforcement_alone.
+NEXT_ACTION: Positive interpolation local-radius and rate-weighted bounds; no clipping or tuned support.
+CLAIM_BOUNDARY: Tested instability, not continuum impossibility or material error estimate.
+
 ## 2026-09-11 - Signed moment-preserving interpolation candidate
 
 MAJOR_RESULT_CLOSURE: PARTIAL; fixed-grid moments reproduced before projection.
