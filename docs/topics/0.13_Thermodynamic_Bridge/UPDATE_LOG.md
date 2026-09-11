@@ -1,3 +1,17 @@
+## 2026-09-12 - Operational actuation/readout anchor
+
+MAJOR_RESULT_CLOSURE: PARTIAL.
+WHAT_IS_ACTUALLY_CLOSED: Absolute transfer data alone leave a source/readout gain symmetry in the declared linear control.
+WHAT_REMAINS_OPEN: Operational base-Phi actuation or independent amplitude anchor and material coupling.
+DEPENDENCY_UNLOCKED: None.
+STATUS: OPERATIONAL_ANCHOR_REQUIRED.
+WHAT_CHANGED: Two-test diagnostic/artifact and T13_OPERATIONAL_CALIBRATION_ROUTE.md; no new UET dynamics or source payload.
+EQUATION_OR_MAPPING: H=alpha*b/D; reciprocal alpha/b scaling preserves H.
+VERIFICATION: Two tests PASS; rank1 without anchor, rank2 with independent b. Existing source inventory inspected and a2011 method abstract searched; not a fresh exhaustive dataset audit.
+CONTROLLING_BLOCKER: operational_input_to_base_Phi_operator_and_gain.
+NEXT_ACTION: Define registered physical input coupling before requesting undefined paired Phi data.
+CLAIM_BOUNDARY: Conditional identifiability control, no alpha calibration or full Topic13 closure.
+
 ## 2026-09-12 - Composite alpha measurement design
 
 MAJOR_RESULT_CLOSURE: PARTIAL.

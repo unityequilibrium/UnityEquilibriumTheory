@@ -1,0 +1,50 @@
+{
+  "major_result_id": "T13_ACTUATION_READOUT_CALIBRATION_DESIGN",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "what_is_closed": "Absolute input-output gain alone cannot separate Phi actuation and temperature readout gains in the declared linear control",
+  "equation_or_mapping": "D Phi=b U; DeltaT=alpha Phi; H_TU=alpha*b/D; b->s*b, alpha->alpha/s leaves H invariant",
+  "units": "D has inverse-time dimension in this scalar control; b has Phi/(input*time); alpha has K/Phi",
+  "derivation_class": "Conditional linear input-output invariance, not a UET action derivation",
+  "data_role": "SYNTHETIC_IDENTIFIABILITY_CONTROL_NO_CALIBRATION",
+  "rows": [
+    {
+      "scale": 0.1,
+      "relative_error": 0.0
+    },
+    {
+      "scale": 2.0,
+      "relative_error": 0.0
+    },
+    {
+      "scale": 10.0,
+      "relative_error": 2.2796398002136934e-16
+    }
+  ],
+  "frequency_count": 5,
+  "gain_design_rank": 1,
+  "rank_with_independent_actuation": 2,
+  "verification_status": "ALGEBRAIC_AMBIGUITY_DEMONSTRATED",
+  "open_blockers": [
+    "operational_input_to_base_Phi_operator_and_gain",
+    "independent_gain_or_absolute_Phi_anchor",
+    "same_material_calibration_provenance"
+  ],
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "claim_boundary": "Does not prove all nonlinear/source protocols unidentifiable. Applies when alpha and actuation enter only through their product; no numeric alpha or external source payload is inferred.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/scripts/audit/audit_topic13_actuation_readout_identifiability.py",
+      "sha256": "dd5506a3a1fe062e3bb5de5030831aa59ed8bd82773a22027cf9e7f49c0f5ff4"
+    },
+    {
+      "path": "docs/core/test/test_topic13_actuation_readout_identifiability.py",
+      "sha256": "7f302ed42b2e2e4e692c2e4adcd855338777e48d2f866ff6fb71d60e4cbdea74"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/BASE_PHI_INDEPENDENT_CALIBRATION_PROTOCOL.md",
+      "sha256": "8d813f633bdf90d1cd5e2d1365107f97db68292c19ff95649965e6dc07a0b049"
+    }
+  ]
+}
