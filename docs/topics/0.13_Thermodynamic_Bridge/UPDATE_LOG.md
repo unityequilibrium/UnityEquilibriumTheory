@@ -1,3 +1,17 @@
+## 2026-09-12 - Conditional thermal variance actuation
+
+MAJOR_RESULT_CLOSURE: PARTIAL.
+WHAT_IS_ACTUALLY_CLOSED: Static thermal mass-source susceptibility includes Phi feedback and agrees with nonlinear local roots.
+WHAT_REMAINS_OPEN: Physical input gain, bare/reference provenance, dynamic source work and SI material mapping.
+DEPENDENCY_UNLOCKED: None.
+STATUS: CONDITIONAL_STATIC_RESPONSE.
+WHAT_CHANGED: Implicit-root audit/test/artifact and T13_THERMAL_MASS_ACTUATION.md; production unchanged.
+EQUATION_OR_MAPPING: A_eff=A+eta^2 F_xx; dphi/du=eta F_xx/A_eff.
+VERIFICATION: Three tests PASS, three temperatures and three perturbation steps; final derivative errors decrease, stability checked. Background tadpole convention explicitly disclosed.
+CONTROLLING_BLOCKER: physical_mass_source_gain_and_reference_coefficient_provenance.
+NEXT_ACTION: Independently calibrated physical mass-source and dynamic work contract, not temperature-derived alpha.
+CLAIM_BOUNDARY: Synthetic static normal Gaussian lane only, not physical calibration or full closure.
+
 ## 2026-09-12 - Existing matter actuation harmonics
 
 MAJOR_RESULT_CLOSURE: PARTIAL.

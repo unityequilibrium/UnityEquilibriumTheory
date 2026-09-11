@@ -1,0 +1,136 @@
+{
+  "major_result_id": "T13_THERMAL_MASS_SOURCE_STATIC_RESPONSE",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "equation_or_mapping": "A*phi-eta*(F_x(T+dT,x+u-eta*phi)-F_x(T,x))=0; A_eff=A+eta^2*F_xx; dphi/du=eta*F_xx/A_eff; dphi/dT=eta*F_xT/A_eff",
+  "units": "u,x energy^2; phi,T,eta energy; A,A_eff energy^2; F energy^4",
+  "derivation_class": "Implicit derivative of declared local Gaussian thermal free energy",
+  "observable": "Static Phi susceptibility to mass-source or temperature, not a measured material coefficient",
+  "data_role": "SYNTHETIC_CONDITIONAL_SOURCE_RESPONSE",
+  "config": {
+    "x": 2.25,
+    "eta": 0.35,
+    "curvature": 0.8,
+    "reference_tadpole_subtracted": true
+  },
+  "what_is_closed": "A thermal variance route can drive Phi at linear order without nonzero coherent mean chi; local feedback explicitly retained",
+  "rows": [
+    {
+      "T": 0.4,
+      "effective_curvature": 0.7999533676505913,
+      "mass_gain": -0.00016655381352582063,
+      "temperature_gain": 0.0029890355241301834,
+      "frozen_phi_mass_gain": -0.00016654410503128602,
+      "amplification": 1.000058293834734,
+      "derivatives": [
+        {
+          "step": 0.01,
+          "mass_derivative": -0.00016655701882697292,
+          "temperature_derivative": 0.0029910884765133286,
+          "mass_relative_error": 1.924483795612275e-05,
+          "temperature_relative_error": 0.0006868276962825881
+        },
+        {
+          "step": 0.005,
+          "mass_derivative": -0.00016655461472428479,
+          "temperature_derivative": 0.0029895487825419343,
+          "mass_relative_error": 4.810448029912706e-06,
+          "temperature_relative_error": 0.00017171372090007964
+        },
+        {
+          "step": 0.0025,
+          "mass_derivative": -0.00016655401358967134,
+          "temperature_derivative": 0.0029891638397677904,
+          "mass_relative_error": 1.2011964569680345e-06,
+          "temperature_relative_error": 4.2928776379902445e-05
+        }
+      ]
+    },
+    {
+      "T": 0.8,
+      "effective_curvature": 0.7995350669352046,
+      "mass_gain": -0.0016614408048689995,
+      "temperature_gain": 0.02093201945061197,
+      "frozen_phi_mass_gain": -0.0016604752314122696,
+      "amplification": 1.0005815042817041,
+      "derivatives": [
+        {
+          "step": 0.01,
+          "mass_derivative": -0.0016614547472279927,
+          "temperature_derivative": 0.020932621816792365,
+          "mass_relative_error": 8.391727801759785e-06,
+          "temperature_relative_error": 2.8777260685064476e-05
+        },
+        {
+          "step": 0.005,
+          "mass_derivative": -0.0016614442904313628,
+          "temperature_derivative": 0.020932170036092112,
+          "mass_relative_error": 2.097915467791367e-06,
+          "temperature_relative_error": 7.194025425816264e-06
+        },
+        {
+          "step": 0.0025,
+          "mass_derivative": -0.00166144167625795,
+          "temperature_derivative": 0.020932057096603392,
+          "mass_relative_error": 5.244778797930394e-07,
+          "temperature_relative_error": 1.79848826875606e-06
+        }
+      ]
+    },
+    {
+      "T": 1.2,
+      "effective_curvature": 0.7988217878268322,
+      "mass_gain": -0.004214107008677534,
+      "temperature_gain": 0.045494669490999194,
+      "frozen_phi_mass_gain": -0.004207900618456714,
+      "amplification": 1.0014749374530372,
+      "derivatives": [
+        {
+          "step": 0.01,
+          "mass_derivative": -0.004214132507912993,
+          "temperature_derivative": 0.04549488967047454,
+          "mass_relative_error": 6.050922628730859e-06,
+          "temperature_relative_error": 4.8396763359104256e-06
+        },
+        {
+          "step": 0.005,
+          "mass_derivative": -0.004214113383439282,
+          "temperature_derivative": 0.04549472453456736,
+          "mass_relative_error": 1.512719476570723e-06,
+          "temperature_relative_error": 1.2098904944579658e-06
+        },
+        {
+          "step": 0.0025,
+          "mass_derivative": -0.004214108602365673,
+          "temperature_derivative": 0.045494683251810754,
+          "mass_relative_error": 3.781793238566422e-07,
+          "temperature_relative_error": 3.02470854585124e-07
+        }
+      ]
+    }
+  ],
+  "verification_status": "IMPLICIT_ROOT_DERIVATIVE_CHECK",
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "open_blockers": [
+    "physical_mass_source_gain",
+    "bare_coefficient_and_reference_provenance",
+    "finite_frequency_and_source_energy_ledger",
+    "material_SI_calibration"
+  ],
+  "claim_boundary": "Fixed synthetic bare curvature and tadpole convention; do not add this correction again to measured total coefficients. Temperature-driven Phi is not an independent alpha calibration.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/scripts/audit/audit_topic13_thermal_mass_actuation.py",
+      "sha256": "42857e6cf2424d229b1304fd109b28f07303ec7ce9a733e56160ca645a944707"
+    },
+    {
+      "path": "docs/core/test/test_topic13_thermal_mass_actuation.py",
+      "sha256": "54d370ef310db39eacca45d4b03b7d8ed4161d965fba82976ba37827a0acb6ed"
+    },
+    {
+      "path": "docs/core/uet_matter_strain_susceptibility.py",
+      "sha256": "827e7745ce840baf5ef6c23b2f5cd8ba353711aedfefa36ec5e98a3358a2f421"
+    }
+  ]
+}
