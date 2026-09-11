@@ -1,3 +1,17 @@
+## 2026-09-11 - Support scan and positive mass-shell interpolation boundary
+
+MAJOR_RESULT_CLOSURE: PARTIAL; stable tensor distinguished from interpolation accuracy.
+WHAT_IS_ACTUALLY_CLOSED: Six locked support cases completed; trace response varies less than2e-16 relatively within each rule despite substantial pre-projection pointwise errors. Strict convexity limits exact positive per-leg reproduction.
+WHAT_REMAINS_OPEN: Refinement-controlled and rate-weighted interpolation error, input sensitivity and material mapping.
+DEPENDENCY_UNLOCKED: None.
+STATUS: SUPPORT_SENSITIVITY_MEASURED_NOT_CONVERGENCE.
+WHAT_CHANGED: Plan, runner, three tests, artifact, registry proposal and docs/core/T13_INTERPOLATION_SUPPORT_BOUNDARY.md; no production change.
+EQUATION_OR_MAPPING: Massive E(p) strictly convex; positive mixtures cannot exactly match both off-grid momentum and energy unless support momenta coincide.
+VERIFICATION: Three tests PASS; all six cases complete exit0; support64 saturates at48 for axis6. Foundation physical gates remain BLOCKED.
+CONTROLLING_BLOCKER: interpolation_consistency_under_refinement_and_rate_weighted_accuracy.
+NEXT_ACTION: Explicit moment-reproducing candidate or controlled refinement; no support selected as best fit.
+CLAIM_BOUNDARY: Conditional pointwise exactness boundary, not a ban on convergent approximate interpolation or a material error estimate.
+
 ## 2026-09-11 - Constrained full tensor and covariant lift
 
 MAJOR_RESULT_CLOSURE: PARTIAL; all nine response entries, reciprocity and factorized balance evaluated.

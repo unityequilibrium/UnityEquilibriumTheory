@@ -1,0 +1,13 @@
+{
+  "state": [0.22, 0.35, 0.15],
+  "direction_rules": ["axis6", "axis_cube14"],
+  "support_orders": [16, 40, 64],
+  "dps": 120,
+  "radial_order": 8,
+  "collision_integration_order": 24,
+  "angular_order": 24,
+  "cutoff_factor": 48.0,
+  "transition_quadrature_order": 24,
+  "transition_channel_count": 64,
+  "policy": "Record all six cases, including support saturation; no best setting, fitting, threshold adjustment, clipping or convergence claim. Positive interpolation cannot exactly reproduce off-grid massive on-shell energy and momentum simultaneously, but may converge under refinement."
+}

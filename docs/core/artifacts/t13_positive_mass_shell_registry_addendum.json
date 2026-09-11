@@ -1,0 +1,16 @@
+{
+  "registry_id": "uet.o2.positive_pointwise_mass_shell_interpolation_boundary",
+  "registration_status": "UNMERGED_INTERNAL_CONDITIONAL_BOUNDARY",
+  "ontology": "Numerical interpolation of same-mass channel momenta and energies, not new dynamics",
+  "units": "Natural energy/momentum; dimensionless normalized weights",
+  "equation_or_mapping": "Hessian E=I/E-p p^T/E^3 positive definite for m>0; E(sum a p)<sum a E(p) for distinct supported momenta and positive normalized a",
+  "derivation_class": "Strict convexity and Jensen inequality",
+  "observable": "Pre-projection per-leg interpolation error, not material conductivity",
+  "data_role": "INTERNAL_ANALYTIC_CONTROL_AND_LOCKED_SUPPORT_SCAN",
+  "verification_status": "MANUFACTURED_CASES_AND_SIX_ACTUAL_CASES",
+  "controlling_blocker": "interpolation_error_control_under_refinement_and_rate_weighted_accuracy",
+  "claim_boundary": "Conditional no-go for exact positive pointwise reproduction only; approximate convergence and channel-level conservation remain possible",
+  "evidence_artifact": "docs/core/artifacts/t13_interpolation_support_audit.json",
+  "dependency_unlocked": [],
+  "full_core_unlock": false
+}
