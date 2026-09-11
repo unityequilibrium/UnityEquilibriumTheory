@@ -1,3 +1,17 @@
+## 2026-09-12 - Recover existing coupled gain-loss evidence
+
+MAJOR_RESULT_CLOSURE: PARTIAL.
+WHAT_IS_ACTUALLY_CLOSED: Existing scalar/coupled constructions found and regression-tested; coupled source hashes match and archived finite-grid gate passes.
+WHAT_REMAINS_OPEN: Basis completeness and physical current/material matching, finite-T self-energy and higher-order channels.
+DEPENDENCY_UNLOCKED: None new.
+STATUS: EXISTING_GAIN_LOSS_REVALIDATED.
+WHAT_CHANGED: Reconciliation runner/artifact and T13_COLLISION_EVIDENCE_RECONCILIATION.md correct the preceding next-action inventory.
+EQUATION_OR_MAPPING: Reuse registered coupled gain-loss quadratic form; no new equation.
+VERIFICATION:53 tests PASS; coupled/event hashes match. Historical scalar continuum reference drift disclosed. Full archived refinement not rerun today.
+CONTROLLING_BLOCKER: basis_completeness_and_physical_collision_current_matching.
+NEXT_ACTION: Inspect existing vector/current/material handoffs before selecting missing physical work, not reconstruct gain-loss.
+CLAIM_BOUNDARY: Finite-basis diagnostic remains distinct from full thermodynamic/material closure.
+
 ## 2026-09-11 - Integrated action-normalized elastic events
 
 MAJOR_RESULT_CLOSURE: PARTIAL.
