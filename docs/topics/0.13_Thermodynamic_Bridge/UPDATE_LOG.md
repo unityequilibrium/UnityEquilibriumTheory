@@ -1,3 +1,17 @@
+## 2026-09-11 - Constrained high-precision x-response recovered
+
+MAJOR_RESULT_CLOSURE: PARTIAL; fixed-grid positive x-response recovered without spectral truncation.
+WHAT_IS_ACTUALLY_CLOSED: Both direction rules at120/180 digits give positive K_xx near254.8247192563; each precision pair agrees in all50 reported digits, with factorized balance and five constraints.
+WHAT_REMAINS_OPEN: Full tensor, input sensitivity, production integration, interpolation/convergence and material mapping.
+DEPENDENCY_UNLOCKED: Reference diagnostic route only; no physical/Core unlock.
+STATUS: PRECISION_STUDY_MEASURED_NOT_PHYSICAL_CLOSURE.
+WHAT_CHANGED: Independent constrained solver, tests, artifact, registry proposal and docs/core/T13_CONSTRAINED_PRECISION_RESPONSE.md. Previous failure preserved.
+EQUATION_OR_MAPPING: H=diag(w*gamma)+J.T R J; C=W*F; H psi+C lambda=W*g, C.T psi=0.
+VERIFICATION: Two manufactured tests PASS; four fixed cases completed exit0;120/180 precision agreement and conservation/balance measured. Foundation physical gates remain BLOCKED.
+CONTROLLING_BLOCKER: full_tensor_reference_and_interpolation_consistency.
+NEXT_ACTION: Three-source/cross-response tensor, factorized entropy and input sensitivity; audit tail support before production replacement.
+CLAIM_BOUNDARY: Fixed binary64 input solve, not50-digit input accuracy, full kappa or material validation.
+
 ## 2026-09-11 - Coordinate pullback installed; response failure exposed
 
 MAJOR_RESULT_CLOSURE: PARTIAL; weighted coordinate path implemented, not transport closure.
