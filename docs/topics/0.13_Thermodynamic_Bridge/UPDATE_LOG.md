@@ -1,3 +1,17 @@
+## 2026-09-11 - Channel attribution and sampling boundary
+
+MAJOR_RESULT_CLOSURE: PARTIAL.
+WHAT_IS_ACTUALLY_CLOSED: All64 channel contributions reconstruct the matrix-error witness; inspected incoming index rule has period21 and only7 second-leg radial indices at order24.
+WHAT_REMAINS_OPEN: Independent phase-space quadrature, interpolation/full operator error and material calibration.
+DEPENDENCY_UNLOCKED: None.
+STATUS: INTERNAL_SAMPLER_COVERAGE_LIMITATION_IDENTIFIED.
+WHAT_CHANGED: Attribution runner/test/artifact and docs/core/T13_CHANNEL_SAMPLING_BOUNDARY.md; no production changes.
+EQUATION_OR_MAPPING: Signed channel decomposition of Delta Gram; radial indices use modulo21.
+VERIFICATION: Two tests PASS; all artifact evidence hashes match. Direct enumeration finds21 pairs, not441. Incoming relative cosine is identically zero by the inspected axis rule. No new physical gate run or promotion in this documentation pass.
+CONTROLLING_BLOCKER: incoming_phase_space_coverage_and_measure_before_channel_count_convergence.
+NEXT_ACTION: Separately declare and validate independent radial/relative-angle/outgoing-angle integration before a transport rerun.
+CLAIM_BOUNDARY: Finite-channel diagnostic; no continuum or Full Topic13 closure and no holdout use.
+
 ## 2026-09-11 - Local segment bounds and two-probe collision form
 
 MAJOR_RESULT_CLOSURE: PARTIAL; local bounds connected to a restricted quadratic-form certificate.
