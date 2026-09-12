@@ -1,0 +1,67 @@
+{
+  "major_result_id": "T13_FIRST_FOURIER_SHEAR_ANISOTROPY_ESTIMATE",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "source": {
+    "url": "https://arxiv.org/pdf/1205.0777",
+    "locator": "Equation(1), PDF page4",
+    "role": "PUBLISHED_MODEL_NOT_DIRECT_CUBIC_MEASUREMENT"
+  },
+  "equation_or_mapping": "U/U1=3*k^2*r^2/2-sqrt(3)*k^3*(x^3-3*x*y^2)/2+O(r^4); k=2*pi/3 for x,y in bond-length units",
+  "units": "Normalized U/U1 and displacement/bond length; no UET coefficient",
+  "derivation_class": "Taylor expansion of published first-spatial-harmonic approximation",
+  "rows": [
+    {
+      "radius_over_bond": 0.001,
+      "leading_force_ratio": 0.001813799364234218,
+      "sampled_full_force_ratio": 0.0018159892928163311,
+      "sampled_after_cubic_ratio": 2.196558799976182e-06
+    },
+    {
+      "radius_over_bond": 0.002,
+      "leading_force_ratio": 0.003627598728468436,
+      "sampled_full_force_ratio": 0.003636345161301825,
+      "sampled_after_cubic_ratio": 8.799474180086838e-06
+    },
+    {
+      "radius_over_bond": 0.005,
+      "leading_force_ratio": 0.009068996821171089,
+      "sampled_full_force_ratio": 0.009123412474589022,
+      "sampled_after_cubic_ratio": 5.524441301244462e-05
+    },
+    {
+      "radius_over_bond": 0.01,
+      "leading_force_ratio": 0.018137993642342178,
+      "sampled_full_force_ratio": 0.018353985661732172,
+      "sampled_after_cubic_ratio": 0.00022262179082840729
+    },
+    {
+      "radius_over_bond": 0.02,
+      "leading_force_ratio": 0.036275987284684355,
+      "sampled_full_force_ratio": 0.037126489093453535,
+      "sampled_after_cubic_ratio": 0.0009035302098463604
+    }
+  ],
+  "illustrative_leading_one_percent_radius_over_bond": 0.005513288954217921,
+  "illustrative_radius_angstrom_at_source_bond_1p42": 0.007828870314989448,
+  "what_is_closed": "Model-dependent leading anisotropic force ratio is pi*r/(sqrt(3)*bond_length), independent of U1",
+  "verification_status": "TAYLOR_NUMERICAL_CONTROL",
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "open_blockers": [
+    "higher_spatial_harmonic_derivatives",
+    "same_state_mode_amplitude_and_normalization",
+    "anharmonic_thermal_dynamics"
+  ],
+  "claim_boundary": "One-percent illustration is not a changed acceptance threshold or proven material bound. Small potential-fit error does not bound third derivatives. No physical c3, alpha, holdout or full-topic promotion.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/scripts/audit/audit_topic13_fourier_shear_anisotropy.py",
+      "sha256": "6bd2338789748da0af1c6f21fdb5a244b35c78cfd7df404e7815ce1222067130"
+    },
+    {
+      "path": "docs/core/test/test_topic13_fourier_shear_anisotropy.py",
+      "sha256": "d3326765252b4f4e05975a31eea147f7bc9d18461458ac041f274be1f29d520b"
+    }
+  ]
+}

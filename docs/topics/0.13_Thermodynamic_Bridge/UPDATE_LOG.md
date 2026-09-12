@@ -1,3 +1,17 @@
+## 2026-09-13 - Published Fourier anisotropy estimate
+
+MAJOR_RESULT_CLOSURE: PARTIAL.
+WHAT_IS_ACTUALLY_CLOSED: Published first-harmonic potential yields a model-dependent cubic/harmonic force ratio without fitting c3.
+WHAT_REMAINS_OPEN: Higher-harmonic derivatives and same-state displacement/mode mapping.
+DEPENDENCY_UNLOCKED: None.
+STATUS: MODEL_ESTIMATE_NOT_MATERIAL_BOUND.
+WHAT_CHANGED: Taylor audit/test/artifact and T13_FOURIER_SHEAR_ANISOTROPY.md; production unchanged.
+EQUATION_OR_MAPPING: Leading force ratio pi*r/(sqrt(3)*bond_length).
+VERIFICATION: Two tests PASS; gradient and remainder refinement. Five radii evaluated; r/l=.005 gives0.9123% sampled exact-model deviation.
+CONTROLLING_BLOCKER: higher_spatial_harmonic_derivatives_and_same_state_amplitude.
+NEXT_ACTION: Compare source-backed anharmonic derivatives and actual mode amplitudes, not claim a universal1% bound.
+CLAIM_BOUNDARY: Published-model estimate, no physical coefficient or whole-topic closure.
+
 ## 2026-09-13 - Nonlinear E2 symmetry boundary
 
 MAJOR_RESULT_CLOSURE: PARTIAL.
