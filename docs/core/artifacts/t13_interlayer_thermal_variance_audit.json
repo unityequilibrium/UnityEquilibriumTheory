@@ -1,0 +1,372 @@
+{
+  "major_result_id": "T13_MP48_LOCAL_INTERLAYER_THERMAL_VARIANCE",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "equation_or_mapping": "Cov(s)=1/Nq sum_q O_q diag[hbar*coth(hbar*w/(2*kB*T))/(2*mu*w)] O_q^dagger; O_q=B^dagger phase(q) e_q",
+  "units": "m^2; mass-centroid layer-relative local displacement",
+  "derivation_class": "Harmonic source-model equilibrium covariance",
+  "data_role": "SOURCE_HARMONIC_MODEL_NOT_EXPERIMENTAL_AMPLITUDE",
+  "rows": [
+    {
+      "mesh": 2,
+      "q_count": 8,
+      "minimum_raw_eigenvalue": 0.09290189058574037,
+      "unstable_points": [],
+      "status": "HARMONIC_COVARIANCE_COMPUTED",
+      "covariance": {
+        "0.0": {
+          "real_m2": [
+            [
+              1.640978317638717e-23,
+              2.5322783691617764e-24
+            ],
+            [
+              2.532278369161777e-24,
+              1.933380637258441e-23
+            ]
+          ],
+          "imaginary_norm": 1.226163424844254e-56,
+          "radial_rms_angstrom": 0.059785942786721676
+        },
+        "100.0": {
+          "real_m2": [
+            [
+              1.6419932611397478e-23,
+              2.5494769485390348e-24
+            ],
+            [
+              2.549476948539035e-24,
+              1.9363815016461003e-23
+            ]
+          ],
+          "imaginary_norm": 4.779275733397357e-57,
+          "radial_rms_angstrom": 0.059819518242676006
+        },
+        "200.0": {
+          "real_m2": [
+            [
+              1.6748015829187155e-23,
+              2.9954891411250993e-24
+            ],
+            [
+              2.9954891411250993e-24,
+              2.0206908753153513e-23
+            ]
+          ],
+          "imaginary_norm": 5.700371632680326e-58,
+          "radial_rms_angstrom": 0.06079056224640521
+        },
+        "300.0": {
+          "real_m2": [
+            [
+              1.7727450071730227e-23,
+              3.941680023262213e-24
+            ],
+            [
+              3.941680023262213e-24,
+              2.2278910116709855e-23
+            ]
+          ],
+          "imaginary_norm": 3.1861838222649046e-58,
+          "radial_rms_angstrom": 0.06325058117396241
+        }
+      }
+    },
+    {
+      "mesh": 4,
+      "q_count": 64,
+      "minimum_raw_eigenvalue": 0.007518247608373788,
+      "unstable_points": [],
+      "status": "HARMONIC_COVARIANCE_COMPUTED",
+      "covariance": {
+        "0.0": {
+          "real_m2": [
+            [
+              1.8621573780375867e-23,
+              1.3262999513963065e-24
+            ],
+            [
+              1.3262999513963065e-24,
+              2.015305304830557e-23
+            ]
+          ],
+          "imaginary_norm": 2.837413132254144e-44,
+          "radial_rms_angstrom": 0.062269275592929
+        },
+        "100.0": {
+          "real_m2": [
+            [
+              1.8727267955598057e-23,
+              1.4581670117539134e-24
+            ],
+            [
+              1.4581670117539136e-24,
+              2.0411014189117173e-23
+            ]
+          ],
+          "imaginary_norm": 2.378082351816896e-44,
+          "radial_rms_angstrom": 0.06256059634044038
+        },
+        "200.0": {
+          "real_m2": [
+            [
+              1.9846550405583278e-23,
+              2.1534441106989092e-24
+            ],
+            [
+              2.1534441106989096e-24,
+              2.2333133479576974e-23
+            ]
+          ],
+          "imaginary_norm": 1.9059719736450266e-44,
+          "radial_rms_angstrom": 0.06494588815711141
+        },
+        "300.0": {
+          "real_m2": [
+            [
+              2.2071081657042334e-23,
+              3.007577536374322e-24
+            ],
+            [
+              3.007577536374322e-24,
+              2.5543933057511145e-23
+            ]
+          ],
+          "imaginary_norm": 5.747032350224166e-44,
+          "radial_rms_angstrom": 0.06900363375544326
+        }
+      }
+    },
+    {
+      "mesh": 6,
+      "q_count": 216,
+      "minimum_raw_eigenvalue": 0.0021006820631756986,
+      "unstable_points": [],
+      "status": "HARMONIC_COVARIANCE_COMPUTED",
+      "covariance": {
+        "0.0": {
+          "real_m2": [
+            [
+              1.9395231606531654e-23,
+              1.012850638225934e-24
+            ],
+            [
+              1.012850638225934e-24,
+              2.0564770783788892e-23
+            ]
+          ],
+          "imaginary_norm": 4.0945072362305304e-40,
+          "radial_rms_angstrom": 0.06321392440777629
+        },
+        "100.0": {
+          "real_m2": [
+            [
+              1.9699261595421284e-23,
+              1.2699553782905083e-24
+            ],
+            [
+              1.269955378290508e-24,
+              2.1165679754450944e-23
+            ]
+          ],
+          "imaginary_norm": 4.185055164786594e-40,
+          "radial_rms_angstrom": 0.06392569229181036
+        },
+        "200.0": {
+          "real_m2": [
+            [
+              2.1580719528691203e-23,
+              1.9744390634911162e-24
+            ],
+            [
+              1.974439063491116e-24,
+              2.386060537830136e-23
+            ]
+          ],
+          "imaginary_norm": 6.509051967438753e-40,
+          "radial_rms_angstrom": 0.067410180912821
+        },
+        "300.0": {
+          "real_m2": [
+            [
+              2.4660137868162994e-23,
+              2.751834699051084e-24
+            ],
+            [
+              2.7518346990510848e-24,
+              2.783768287668791e-23
+            ]
+          ],
+          "imaginary_norm": 9.89226763727905e-40,
+          "radial_rms_angstrom": 0.07245537988641762
+        }
+      }
+    },
+    {
+      "mesh": 8,
+      "q_count": 512,
+      "minimum_raw_eigenvalue": 0.0009436582895788782,
+      "unstable_points": [],
+      "status": "HARMONIC_COVARIANCE_COMPUTED",
+      "covariance": {
+        "0.0": {
+          "real_m2": [
+            [
+              1.9767452359121982e-23,
+              8.808377293807036e-25
+            ],
+            [
+              8.808377293807036e-25,
+              2.078455615946263e-23
+            ]
+          ],
+          "imaginary_norm": 1.257544606403457e-44,
+          "radial_rms_angstrom": 0.06368045894823986
+        },
+        "100.0": {
+          "real_m2": [
+            [
+              2.0309087091318527e-23,
+              1.2161802344258392e-24
+            ],
+            [
+              1.2161802344258394e-24,
+              2.1713411062776187e-23
+            ]
+          ],
+          "imaginary_norm": 4.2884369407013094e-44,
+          "radial_rms_angstrom": 0.06482476236292325
+        },
+        "200.0": {
+          "real_m2": [
+            [
+              2.2772193776703656e-23,
+              1.8939949247564458e-24
+            ],
+            [
+              1.8939949247564465e-24,
+              2.4959190736007405e-23
+            ]
+          ],
+          "imaginary_norm": 3.013326303260584e-44,
+          "radial_rms_angstrom": 0.06908790379850228
+        },
+        "300.0": {
+          "real_m2": [
+            [
+              2.6446921068608498e-23,
+              2.6316039156328765e-24
+            ],
+            [
+              2.6316039156328765e-24,
+              2.9485635526790583e-23
+            ]
+          ],
+          "imaginary_norm": 8.516500577442496e-44,
+          "radial_rms_angstrom": 0.07478807163939921
+        }
+      }
+    },
+    {
+      "mesh": 12,
+      "q_count": 1728,
+      "minimum_raw_eigenvalue": 0.0003449173132878046,
+      "unstable_points": [],
+      "status": "HARMONIC_COVARIANCE_COMPUTED",
+      "covariance": {
+        "0.0": {
+          "real_m2": [
+            [
+              2.012298826735258e-23,
+              7.586533793133077e-25
+            ],
+            [
+              7.586533793133081e-25,
+              2.099900573288879e-23
+            ]
+          ],
+          "imaginary_norm": 1.0730436114745161e-39,
+          "radial_rms_angstrom": 0.064126432927648
+        },
+        "100.0": {
+          "real_m2": [
+            [
+              2.1113450782953364e-23,
+              1.1569814432772457e-24
+            ],
+            [
+              1.1569814432772457e-24,
+              2.2449417878400286e-23
+            ]
+          ],
+          "imaginary_norm": 2.0028679950574123e-39,
+          "radial_rms_angstrom": 0.06600217319251969
+        },
+        "200.0": {
+          "real_m2": [
+            [
+              2.4376387888346688e-23,
+              1.779964436296088e-24
+            ],
+            [
+              1.7799644362960878e-24,
+              2.6431713781233386e-23
+            ]
+          ],
+          "imaginary_norm": 3.775691650789695e-39,
+          "radial_rms_angstrom": 0.07127980195650102
+        },
+        "300.0": {
+          "real_m2": [
+            [
+              2.885319609463022e-23,
+              2.460574224223779e-24
+            ],
+            [
+              2.460574224223779e-24,
+              3.169442247606322e-23
+            ]
+          ],
+          "imaginary_norm": 5.48458316675949e-39,
+          "radial_rms_angstrom": 0.07781235028624534
+        }
+      }
+    }
+  ],
+  "what_is_closed": "All-mode shifted-mesh variance attempted without replacing local motion by one coherent Gamma oscillator",
+  "verification_status": "MEASURED_MESH_SEQUENCE",
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "open_blockers": [
+    "mesh_convergence_and_source_stability",
+    "anharmonic_state_and_displacement_mapping",
+    "same_state_Fourier_model_transfer"
+  ],
+  "claim_boundary": "No clipping negative modes; no direct transfer to Popov potential or UET alpha. RMS fluctuation is not coherent pump amplitude.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_FORCE_CONSTANTS.gz",
+      "sha256": "a410f36fd34e8603aec0dde48c1f8cb47fbf0a237ca911437f744fb7cbf02763"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_phonopy.yaml.gz",
+      "sha256": "00be787d0fbe986304ffdfa51a917b9aa0038deb6d31a563979afe42a7a2b5f8"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_interlayer_thermal_variance.py",
+      "sha256": "190d1e27620b7379ff253db6e73ce4cde7c1b25c1f547398897fc68a91d42720"
+    },
+    {
+      "path": "docs/core/test/test_topic13_interlayer_thermal_variance.py",
+      "sha256": "efac001c0738868f7a409ba3c689a25ea500d2e7a854834a9bb27406694b64cd"
+    },
+    {
+      "path": "docs/core/uet_interlayer_mode_residue.py",
+      "sha256": "f7c40cffe59575c7337433099b3c6e4f2ec9ef392182fa2e82361ec315d21ff5"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py",
+      "sha256": "66bfddff927a9d98ef045e3e56daf1c97ceca2c23aac99df7ff6bad1118b3604"
+    }
+  ]
+}

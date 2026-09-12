@@ -1,3 +1,17 @@
+## 2026-09-12 - Local interlayer thermal covariance completion
+
+MAJOR_RESULT_CLOSURE: PARTIAL.
+WHAT_IS_ACTUALLY_CLOSED: Source-locked all-mode local covariance implementation and five-mesh evidence packaged.
+WHAT_REMAINS_OPEN: Mesh convergence, spectral attribution, anharmonic state and UET observable mapping.
+DEPENDENCY_UNLOCKED: None; full_core_unlock=false.
+STATUS: INTERNAL_SOURCE_MODEL_NOT_CONVERGED.
+WHAT_CHANGED: Variance runner, four tests, hashed artifact and T13_INTERLAYER_THERMAL_VARIANCE.md; no production changes.
+EQUATION_OR_MAPPING: Mode-projected quantum harmonic covariance in m^2; RMS is not coherent shear amplitude.
+VERIFICATION: Four tests rerun PASS; declared hashes match; foundation audit PASS/foundation BLOCKED. Previously completed mesh run retained, not rerun. Mesh8-to12 trace change at300K is8.2511%.
+CONTROLLING_BLOCKER: unresolved_thermal_covariance_mesh_convergence_and_mode_to_observable_mapping.
+NEXT_ACTION: Frequency/projector-resolved attribution, including low-frequency contributions and phase convention, before material transfer.
+CLAIM_BOUNDARY: No alpha, physical dependency or Full Topic13 closure. Date follows current environment; pre-existing future-dated entries retained without rewriting history.
+
 ## 2026-09-13 - Published Fourier anisotropy estimate
 
 MAJOR_RESULT_CLOSURE: PARTIAL.
