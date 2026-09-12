@@ -1,3 +1,17 @@
+## 2026-09-13 - Grouped radial registration transfer
+
+MAJOR_RESULT_CLOSURE: PARTIAL; whole-shell transfer checked.
+WHAT_IS_ACTUALLY_CLOSED: Excluding all six same-radius peaks exposes outer-shell affine RMS0.482-to0.634px, larger than earlier aggregate single-peak figures.
+WHAT_REMAINS_OPEN: Peak/background bias, physical geometry uncertainty and detector response.
+DEPENDENCY_UNLOCKED: None.
+STATUS: INTERNAL_GROUPED_TRANSFER_NOT_CALIBRATION.
+WHAT_CHANGED: Shell-transfer runner, two tests, artifact and T13_REGISTRATION_SHELL_TRANSFER.md; existing maps not applied.
+EQUATION_OR_MAPPING: Train baseline coordinate map on two radial shells; predict the third.
+VERIFICATION: Two tests PASS;36 grouped fits; foundation audit PASS/foundation BLOCKED.
+CONTROLLING_BLOCKER: centroid_shape_bias_and_physical_registration_uncertainty.
+NEXT_ACTION: Outer-shell peak/background adequacy before adding distortion complexity or propagating a falsely precise global error.
+CLAIM_BOUNDARY: Same processed image, not independent validation; no uncertainty bound, alpha or full-topic promotion.
+
 ## 2026-09-13 - Baseline registration model comparison
 
 MAJOR_RESULT_CLOSURE: PARTIAL; baseline-only coordinate model comparison completed.
