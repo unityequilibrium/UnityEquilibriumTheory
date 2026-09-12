@@ -1,3 +1,17 @@
+## 2026-09-13 - Baseline registration model comparison
+
+MAJOR_RESULT_CLOSURE: PARTIAL; baseline-only coordinate model comparison completed.
+WHAT_IS_ACTUALLY_CLOSED: Translation/similarity/affine models tested with excluded-peak predictions; richer maps reduce residuals without using thermal signals.
+WHAT_REMAINS_OPEN: Centroid/background and preprocessing bias, independent registration uncertainty and detector response/covariance.
+DEPENDENCY_UNLOCKED: None.
+STATUS: BASELINE_MODEL_NOT_CALIBRATED_CORRECTION.
+WHAT_CHANGED: Coordinate-fit runner, two tests, artifact and T13_BASELINE_REGISTRATION_MODELS.md; no image map applied.
+EQUATION_OR_MAPPING: Two/four/six-parameter linear displacement maps on baseline OFF centroids only.
+VERIFICATION: Two tests PASS;12 fits and internal leave-one-peak-out checks; affine RMS0.268-to0.358px, window-map differences up to0.215px. Foundation audit PASS/foundation BLOCKED.
+CONTROLLING_BLOCKER: centroid_shape_bias_and_physical_registration_uncertainty.
+NEXT_ACTION: Peak/background bias and baseline registration uncertainty propagation, not automatic flexible-map selection.
+CLAIM_BOUNDARY: Excluded peaks share processed-image dependencies; residuals are not calibrated error bars. No alpha, holdout fit or full-topic promotion.
+
 ## 2026-09-13 - Generic-q coordinate sensitivity of actual signals
 
 MAJOR_RESULT_CLOSURE: PARTIAL; actual detector-ratio sensitivity measured.
