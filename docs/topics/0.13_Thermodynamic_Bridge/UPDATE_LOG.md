@@ -1,3 +1,17 @@
+## 2026-09-13 - Nonlinear E2 symmetry boundary
+
+MAJOR_RESULT_CLOSURE: PARTIAL.
+WHAT_IS_ACTUALLY_CLOSED: Conditional E2 allows a cubic invariant absent from continuous O(2); harmonic degeneracy alone is insufficient for identity.
+WHAT_REMAINS_OPEN: Material extra symmetries, anisotropy coefficient/bound, dispersion and residue.
+DEPENDENCY_UNLOCKED: None.
+STATUS: CONDITIONAL_NONLINEAR_SYMMETRY_BOUNDARY.
+WHAT_CHANGED: Polynomial audit/test/artifact and T13_E2G_NONLINEAR_SYMMETRY.md; production unchanged.
+EQUATION_OR_MAPPING: Re((s1+i*s2)^3) invariant under represented lattice group, not arbitrary O(2) rotations.
+VERIFICATION: Three tests PASS; degree1..6 invariant dimensions checked and explicit cubic/torque witnesses verified.
+CONTROLLING_BLOCKER: anisotropy_coefficient_or_suppression_bound_and_mode_identity.
+NEXT_ACTION: Source-backed anharmonic force constants or nonlinear response bounds, not arbitrary Core anisotropy.
+CLAIM_BOUNDARY: Allowed term not measured nonzero term; no physical no-go or full closure.
+
 ## 2026-09-12 - Hydrostatic spectral actuation route
 
 MAJOR_RESULT_CLOSURE: PARTIAL.
