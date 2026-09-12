@@ -1,3 +1,17 @@
+## 2026-09-13 - Actual generic-q image support
+
+MAJOR_RESULT_CLOSURE: PARTIAL; actual common masks preserve conditional ideal target observability.
+WHAT_IS_ACTUALLY_CLOSED: Both archived scans retain21-to22 of24 footprints at four generic q; all16 restricted ideal operators remain rank8 and target-identifiable.
+WHAT_REMAINS_OPEN: Full reciprocal indexing, detector response/covariance, aperture integration and UET normalization.
+DEPENDENCY_UNLOCKED: None.
+STATUS: ACTUAL_SUPPORT_CONDITIONAL_OPERATOR_NOT_INVERSION.
+WHAT_CHANGED: Source-origin footprint runner, two tests plus reused target tests, artifact and T13_GENERIC_Q_IMAGE_SUPPORT.md.
+EQUATION_OR_MAPPING: Candidate first-vector alignment with both mirror choices; physical source calibration, no scale fit.
+VERIFICATION: Five tests PASS; actual exported-array hashes and finite masks checked; foundation audit PASS/foundation BLOCKED.
+CONTROLLING_BLOCKER: full_reciprocal_indexing_and_detector_weighted_identifiability.
+NEXT_ACTION: Noncollinear Bragg indexing and geometry uncertainty before physical target extraction.
+CLAIM_BOUNDARY: Support/rank do not establish calibrated detector response; no image signal fit, populations, alpha or full-topic promotion.
+
 ## 2026-09-13 - Generic-q basal route recovery
 
 MAJOR_RESULT_CLOSURE: PARTIAL; constructive same-plane local-target route found.
