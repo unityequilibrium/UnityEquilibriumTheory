@@ -9,7 +9,7 @@ WHAT_CHANGED: Reused existing null-space and scattering routines with the local 
 EQUATION_OR_MAPPING: A=S/f_THz; c_j=||B^dagger P e_j||^2/f_THz. For fixed frequencies and diagonal occupations, delta trace per q=hbar*c.delta_n/(mu_kg*2*pi*1e12), before BZ weights. Identifiability requires c in row(A).
 VERIFICATION: Three tests PASS. Positive synthetic occupation pairs produce relative model-response residuals7.17e-16 to7.09e-15 but different local targets. Basal null fractions0.04377 to0.35067; complementary null fractions below9.46e-16. Rank tolerances1e-9,1e-10,1e-11 recorded without altering physical thresholds.
 CONTROLLING_BLOCKER: physical_detector_geometry_covariance_and_material_operator_matching.
-NEXT_ACTION: Inspect availability of independently measured complementary reciprocal planes or another local-second-moment-sensitive observable with known response. Do not spend further iterations fitting the same ideal basal rows to a unique local variance. A new actual detector design requires noise/conditioning analysis.
+NEXT_ACTION: Follow T13_BASAL_COVERAGE_EXTENSION.md: generic-q basal rows can identify this target in the same ideal model. Inspect existing image coverage there before requesting complementary planes. Do not fit the original ambiguous symmetry-line rows to a unique variance; actual detector noise/conditioning remains required.
 CLAIM_BOUNDARY: Conditional harmonic single-phonon diagonal-occupation result, not a universal scattering no-go or acquired experiment. No absolute alpha, TTG holdout, thermometry or Full Topic13 closure.
 
 ## What is new relative to the energy audit

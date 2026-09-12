@@ -1,3 +1,17 @@
+## 2026-09-13 - Generic-q basal route recovery
+
+MAJOR_RESULT_CLOSURE: PARTIAL; constructive same-plane local-target route found.
+WHAT_IS_ACTUALLY_CLOSED: Four generic-q cases identify local second moment using24 basal rows; symmetry-line controls remain ambiguous even with60 rows.
+WHAT_REMAINS_OPEN: Actual region coverage/masks, conditioning/covariance, BZ support and physical UET normalization.
+DEPENDENCY_UNLOCKED: None; existing-image generic-region inspection is a research next step only.
+STATUS: IDEAL_GENERIC_Q_ROUTE_NOT_CALIBRATION.
+WHAT_CHANGED: Coverage-extension runner/artifact, literature reconciliation note and corrected earlier next-action wording.
+EQUATION_OR_MAPPING: Existing local target in row(A) at generic q despite rank8 of12.
+VERIFICATION: Six existing tests PASS;12 cases and tolerance sweeps; generic24-row null fractions below1.27e-15. Foundation audit PASS/foundation BLOCKED.
+CONTROLLING_BLOCKER: usable_generic_q_detector_regions_and_physical_response_covariance.
+NEXT_ACTION: Inspect generic-q support in existing images before seeking new tilted measurements.
+CLAIM_BOUNDARY: Prior ambiguity applied to selected symmetry lines, not every basal observation. No measured inversion, new numeric dataset, alpha or full-topic promotion.
+
 ## 2026-09-13 - Local second-moment observability
 
 MAJOR_RESULT_CLOSURE: PARTIAL; target-specific ambiguity and complementary ideal route established.
