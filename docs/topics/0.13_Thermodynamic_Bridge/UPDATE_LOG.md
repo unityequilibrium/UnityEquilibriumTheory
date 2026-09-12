@@ -1,3 +1,17 @@
+## 2026-09-13 - Independent local displacement phase identity
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for same-cell harmonic readout identity only.
+WHAT_IS_ACTUALLY_CLOSED: Positive intracell phase and explicit atomic mass-centroid readout agree; independent commensurate force-matrix checks support the convention.
+WHAT_REMAINS_OPEN: Off-commensurate interpolation, continuum convergence, physical spatial averaging and UET normalization.
+DEPENDENCY_UNLOCKED: None.
+STATUS: LOCAL_READOUT_IDENTITY_NOT_CALIBRATION.
+WHAT_CHANGED: Independent phase runner, two tests, t13_displacement_phase.json and derivation note; existing covariance unchanged.
+EQUATION_OR_MAPPING: D_cell=P D_phonopy P^dagger; s=B^dagger P e/sqrt(mu).
+VERIFICATION: Two tests PASS; four matrix checks below9.93e-16, readout checks below2.07e-16; hashes match; foundation audit PASS/foundation BLOCKED.
+CONTROLLING_BLOCKER: continuum_covariance_and_material_to_UET_mapping.
+NEXT_ACTION: Specify physical spatial readout and check off-commensurate interpolation; do not remove the correct phase or equate local RMS with uniform slip.
+CLAIM_BOUNDARY: Pointwise omitted-phase difference10-to31% is a negative control, not a correction to previous RMS; no Full Topic13 promotion.
+
 ## 2026-09-12 - Directional covariance refinement
 
 MAJOR_RESULT_CLOSURE: PARTIAL.

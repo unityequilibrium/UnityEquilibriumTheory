@@ -1,0 +1,96 @@
+{
+  "major_result_id": "T13_LOCAL_DISPLACEMENT_PHASE_CONVENTION",
+  "topic": "0.13",
+  "closure_level": "CLOSED_FOR_LANE",
+  "what_is_closed": "Cell-gauge phase and explicit local mass-centroid readout identity; commensurate source-matrix cross-check",
+  "equation_or_mapping": "P=diag(exp(i*q*r_j)); D_cell=P D_phonopy P^dagger; s=B^dagger P e/sqrt(mu)",
+  "units": "s mode coefficient kg^-1/2; covariance m^2",
+  "derivation_class": "algebraic gauge/readout identity with source-model checks",
+  "observable": "same-cell local layer-centroid difference, not uniform slip",
+  "data_role": "SOURCE_MODEL_NOT_EXPERIMENT",
+  "verification_status": "IDENTITY_AND_COMMENSURATE_CHECKS_PASS",
+  "rows": [
+    {
+      "q": [
+        0.2,
+        0,
+        0
+      ],
+      "cell_gauge_matrix_relative_error": 5.085611676068555e-16,
+      "explicit_readout_relative_error": 1.7153624828202935e-16,
+      "omitted_phase_relative_covariance_difference": 0.10017221252469938
+    },
+    {
+      "q": [
+        0.2,
+        0.2,
+        0.5
+      ],
+      "cell_gauge_matrix_relative_error": 9.138701829974521e-16,
+      "explicit_readout_relative_error": 2.0691596234692803e-16,
+      "omitted_phase_relative_covariance_difference": 0.18952497846786076
+    },
+    {
+      "q": [
+        0.4,
+        0.2,
+        0.5
+      ],
+      "cell_gauge_matrix_relative_error": 9.927425411932554e-16,
+      "explicit_readout_relative_error": 1.3309939473273528e-16,
+      "omitted_phase_relative_covariance_difference": 0.1310813714065305
+    },
+    {
+      "q": [
+        0.4,
+        0.4,
+        0
+      ],
+      "cell_gauge_matrix_relative_error": 8.960174602610364e-16,
+      "explicit_readout_relative_error": 1.5603014582028764e-16,
+      "omitted_phase_relative_covariance_difference": 0.3121093209767183
+    }
+  ],
+  "primary_source": "https://phonopy.github.io/phonopy/formulation.html#dynamical-matrix",
+  "controlling_blocker": "continuum_covariance_and_material_to_UET_mapping",
+  "open_blockers": [
+    "off_commensurate_interpolation_not_independently_checked",
+    "continuum_convergence",
+    "coherent_mode_and_UET_mapping",
+    "anharmonicity"
+  ],
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "global_claim_promotion": false,
+  "claim_boundary": "Only declared same-cell harmonic readout closes. No whole-layer average, local-slip equivalence, alpha or full-topic closure.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_FORCE_CONSTANTS.gz",
+      "sha256": "a410f36fd34e8603aec0dde48c1f8cb47fbf0a237ca911437f744fb7cbf02763"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_phonopy.yaml.gz",
+      "sha256": "00be787d0fbe986304ffdfa51a917b9aa0038deb6d31a563979afe42a7a2b5f8"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_displacement_phase.py",
+      "sha256": "83cfcacd607daf685b82b8608616ee98864e96d6f621c9f1ca77cba397aa43ba"
+    },
+    {
+      "path": "docs/core/test/test_topic13_displacement_phase.py",
+      "sha256": "d08c2b545f00a567a4f5df69bdfd7d3bf180d81305546662bee03db1504b6c8a"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py",
+      "sha256": "66bfddff927a9d98ef045e3e56daf1c97ceca2c23aac99df7ff6bad1118b3604"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_interlayer_thermal_variance.py",
+      "sha256": "190d1e27620b7379ff253db6e73ce4cde7c1b25c1f547398897fc68a91d42720"
+    },
+    {
+      "path": "docs/core/uet_interlayer_mode_residue.py",
+      "sha256": "f7c40cffe59575c7337433099b3c6e4f2ec9ef392182fa2e82361ec315d21ff5"
+    }
+  ]
+}
