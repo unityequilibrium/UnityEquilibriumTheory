@@ -1,3 +1,17 @@
+## 2026-09-12 - Covariance grid-shift sensitivity
+
+MAJOR_RESULT_CLOSURE: PARTIAL.
+WHAT_IS_ACTUALLY_CLOSED: Fifteen fixed shift/resolution cases show sampled shift spread smaller than refinement drift.
+WHAT_REMAINS_OPEN: Directional/continuum convergence, phase/mode mapping and anharmonicity.
+DEPENDENCY_UNLOCKED: None.
+STATUS: INTERNAL_QUADRATURE_NOT_CONVERGED.
+WHAT_CHANGED: Shift runner/test/artifact and T13_VARIANCE_MESH_SHIFT.md; original source and gates unchanged.
+EQUATION_OR_MAPPING: Equal-weight harmonic covariance on shifted BZ meshes in m^2.
+VERIFICATION: Three tests PASS;15 cases stable at sampled points; inversion pairs agree within2.11e-15. Foundation audit PASS/foundation BLOCKED.
+CONTROLLING_BLOCKER: quadrature_convergence_and_material_observable_mapping.
+NEXT_ACTION: Directional refinement; shift range0.406-to0.464% cannot explain away mesh12-to16 trace change4.9131%.
+CLAIM_BOUNDARY: No statistical error bar, physical dimensional reduction or Full Topic13 promotion.
+
 ## 2026-09-12 - Frequency attribution of covariance refinement
 
 MAJOR_RESULT_CLOSURE: PARTIAL.
