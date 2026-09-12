@@ -1,3 +1,17 @@
+## 2026-09-13 - Quadratic source spatial averaging
+
+MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for finite positive-weight source identity.
+WHAT_IS_ACTUALLY_CLOSED: Average local source differs from source of averaged matter by the within-window second moment.
+WHAT_REMAINS_OPEN: Material-to-chi normalization, actual measurement weights, dynamics and independent calibration.
+DEPENDENCY_UNLOCKED: None.
+STATUS: SOURCE_AVERAGING_IDENTITY_NOT_CALIBRATION.
+WHAT_CHANGED: Production residual diagnostic, four tests, artifact and T13_QUADRATIC_SOURCE_AVERAGING.md.
+EQUATION_OR_MAPPING: Average J minus J(mean chi)=epsilon*h*weighted variance/2.
+VERIFICATION: Four tests PASS; four rows, maximum error6.94e-18. Initial negative-epsilon test rejected by production as intended; test repaired, domain not relaxed. Foundation audit PASS/foundation BLOCKED.
+CONTROLLING_BLOCKER: physical_local_second_moment_and_UET_operator_normalization.
+NEXT_ACTION: Local second-moment response/operator matching, not substitution of coherent whole-layer amplitude. Signed TTG Fourier weights require separate handling.
+CLAIM_BOUNDARY: No new variance state, physical displacement identity, alpha or full-topic promotion.
+
 ## 2026-09-13 - Independent local displacement phase identity
 
 MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for same-cell harmonic readout identity only.
