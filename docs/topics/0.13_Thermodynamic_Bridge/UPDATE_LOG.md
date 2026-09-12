@@ -1,3 +1,17 @@
+## 2026-09-13 - Baseline multi-Bragg position check
+
+MAJOR_RESULT_CLOSURE: PARTIAL; actual peak containment and coordinate sensitivity measured.
+WHAT_IS_ACTUALLY_CLOSED: Eighteen patches per processed scan have interior maxima at both fixed window sizes.
+WHAT_REMAINS_OPEN: Subpixel shape/background and geometry uncertainty, detector response/covariance and UET mapping.
+DEPENDENCY_UNLOCKED: None.
+STATUS: POSITION_DIAGNOSTIC_NOT_CALIBRATION.
+WHAT_CHANGED: Baseline OFF multi-peak runner, two tests, artifact and T13_MULTIBRAGG_POSITIONS.md; no image transformation.
+EQUATION_OR_MAPPING: Uncorrected moments/integer maxima relative to candidate reciprocal coordinates.
+VERIFICATION: Two tests PASS;36 patches at two sizes; max peak offsets1.22964/1.79612px for400/800nm; foundation audit PASS/foundation BLOCKED.
+CONTROLLING_BLOCKER: peak_shape_background_and_geometry_uncertainty.
+NEXT_ACTION: Assess generic-q patch sensitivity before signal extraction; no blind recentering on integer maxima.
+CLAIM_BOUNDARY: Symmetry-processed peak agreement is not independent orientation calibration; offsets are not uncertainty bounds or physical displacements.
+
 ## 2026-09-13 - Actual generic-q image support
 
 MAJOR_RESULT_CLOSURE: PARTIAL; actual common masks preserve conditional ideal target observability.
