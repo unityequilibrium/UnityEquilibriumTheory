@@ -1,3 +1,17 @@
+## 2026-09-13 - Frozen profile residual versus baseline scatter
+
+MAJOR_RESULT_CLOSURE: PARTIAL; actual residual/scatter scale measured.
+WHAT_IS_ACTUALLY_CLOSED:24 frozen profile residuals exceed observed patch frame scatter by approximately18-to74 times; no refit or independence assumption.
+WHAT_REMAINS_OPEN: Structured residual origin, processing bias, credible detector/coordinate error model and UET mapping.
+DEPENDENCY_UNLOCKED: None.
+STATUS: DESCRIPTIVE_COMPARISON_NOT_STATISTICAL_REJECTION.
+WHAT_CHANGED: Frozen-residual baseline wrapper, two tests, artifact and T13_PROFILE_RESIDUAL_BASELINE_SCATTER.md.
+EQUATION_OR_MAPPING: Mean-model norm compared with sample frame-scatter norm; no sqrt(N) standard-error reduction.
+VERIFICATION: Two tests PASS; prior residuals reconstructed, source/array hashes checked; foundation audit PASS/foundation BLOCKED.
+CONTROLLING_BLOCKER: profile_background_adequacy_and_detector_error_model.
+NEXT_ACTION: Spatial residual and preprocessing analysis before trusting fitted-center accuracy or adding profile parameters.
+CLAIM_BOUNDARY: Ratios are not sigma counts or proof of model rejection; no alpha, refit or full-topic promotion.
+
 ## 2026-09-13 - Outer Bragg profile comparison
 
 MAJOR_RESULT_CLOSURE: PARTIAL; actual outer-peak center-estimator dependence measured.
