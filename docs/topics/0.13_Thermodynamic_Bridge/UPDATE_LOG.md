@@ -1,3 +1,17 @@
+## 2026-09-13 - Local second-moment observability
+
+MAJOR_RESULT_CLOSURE: PARTIAL; target-specific ambiguity and complementary ideal route established.
+WHAT_IS_ACTUALLY_CLOSED: Basal-only geometry cannot identify local variance at six tested q; complementary planes restore algebraic target identifiability.
+WHAT_REMAINS_OPEN: Actual detector geometry/response/covariance, BZ coverage, coherences and UET normalization.
+DEPENDENCY_UNLOCKED: None.
+STATUS: IDEAL_OBSERVABILITY_NOT_CALIBRATION.
+WHAT_CHANGED: Existing null-space/scattering methods reused with local second-moment target; runner/test/artifact and interpretation note.
+EQUATION_OR_MAPPING: c_j=projected relative-layer weight/frequency; target identifiable iff c lies in row(A).
+VERIFICATION: Three tests PASS; positive occupation witnesses yield basal response residual below7.09e-15; complementary target null fraction below9.46e-16. Hashes match; foundation audit PASS/foundation BLOCKED.
+CONTROLLING_BLOCKER: physical_detector_geometry_covariance_and_material_operator_matching.
+NEXT_ACTION: Independent complementary geometry or another calibrated second-moment observable, not repeated fitting of the same basal data.
+CLAIM_BOUNDARY: Ideal six-q design, not acquired detector data, practical precision, alpha or full-topic closure.
+
 ## 2026-09-13 - Quadratic source spatial averaging
 
 MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for finite positive-weight source identity.
