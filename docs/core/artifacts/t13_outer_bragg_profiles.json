@@ -1,0 +1,2878 @@
+{
+  "major_result_id": "T13_OUTER_BRAGG_PROFILE_COMPARISON",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "what_is_closed": "Frozen source-style and rotated Voigt fits evaluated on actual baseline outer-shell patches",
+  "equation_or_mapping": "Existing separable/rotated Voigt plus constant background; uniform weighting and bounds unchanged",
+  "units": "centers pixels; normalized intensity residual",
+  "derivation_class": "empirical baseline profile comparison",
+  "observable": "baseline outer Bragg profile centers",
+  "data_role": "EXTERNAL_BASELINE_DIAGNOSTIC",
+  "rows": [
+    {
+      "member": "PROCESSED/PROC_400nm",
+      "probes": [
+        {
+          "G": [
+            -2,
+            0,
+            0
+          ],
+          "nominal_yx": [
+            51.51774678870973,
+            246.97141657836394
+          ],
+          "fits": {
+            "4": {
+              "unrotated_source": {
+                "start": "source",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 18,
+                "parameters_normalized": {
+                  "amplitude": 29.104351628094015,
+                  "row": 51.824904930123466,
+                  "column": 246.159012507581,
+                  "sigma_row": 1.360502625834231,
+                  "sigma_column": 1.8723175868787165,
+                  "gamma_row": 1.0957011407268586,
+                  "gamma_column": 0.349558033979179,
+                  "offset": 0.05069880112208243
+                },
+                "intensity_scale": 374599.94372423436,
+                "centroid_row_col": [
+                  51.824904930123466,
+                  246.159012507581
+                ],
+                "relative_residual_l2": 0.09920560202236024,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.06369788664002175,
+                "optimality": 2.756540451160446e-05
+              },
+              "unrotated_peak": {
+                "start": "peak",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 20,
+                "parameters_normalized": {
+                  "amplitude": 29.104368890004576,
+                  "row": 51.82490489046541,
+                  "column": 246.15901251827555,
+                  "sigma_row": 1.3605018470530004,
+                  "sigma_column": 1.8723165386460134,
+                  "gamma_row": 1.0957023549522045,
+                  "gamma_column": 0.3495600414157718,
+                  "offset": 0.050698766851812474
+                },
+                "intensity_scale": 374599.94372423436,
+                "centroid_row_col": [
+                  51.82490489046541,
+                  246.15901251827555
+                ],
+                "relative_residual_l2": 0.09920560202246015,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.06369788664015004,
+                "optimality": 3.069625796972263e-05
+              },
+              "rotated_primary": {
+                "initial_angle_rad": 3.141592653589793,
+                "success": true,
+                "termination_status": 2,
+                "nfev": 25,
+                "parameters_normalized": {
+                  "amplitude": 35.19752811938108,
+                  "row": 51.81666769873203,
+                  "column": 246.17052542323344,
+                  "sigma_row": 1.2407794560668624,
+                  "sigma_column": 1.5680850213368234,
+                  "gamma_row": 1.3738502671909822,
+                  "gamma_column": 0.9225018731962477,
+                  "offset": 0.03142357425168988,
+                  "angle_rad": 2.8904262632728046
+                },
+                "intensity_scale": 374599.94372423436,
+                "center_row_col": [
+                  51.81666769873203,
+                  246.17052542323344
+                ],
+                "relative_residual_l2": 0.09737439937047802,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.061368034435766855
+              },
+              "start_center_difference_pixels": 4.107474503470085e-08,
+              "rotated_minus_moment_pixels": 0.18657890113680406
+            },
+            "8": {
+              "unrotated_source": {
+                "start": "source",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 15,
+                "parameters_normalized": {
+                  "amplitude": 32.619103279255576,
+                  "row": 51.82242869825312,
+                  "column": 246.11117077886885,
+                  "sigma_row": 1.7776096406191524,
+                  "sigma_column": 1.609159637782757,
+                  "gamma_row": 0.5922725789921485,
+                  "gamma_column": 1.0153929037487426,
+                  "offset": 0.0295550254171524
+                },
+                "intensity_scale": 374599.94372423436,
+                "centroid_row_col": [
+                  51.82242869825312,
+                  246.11117077886885
+                ],
+                "relative_residual_l2": 0.11472265079665524,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.09075449529490506,
+                "optimality": 5.626012955931433e-05
+              },
+              "unrotated_peak": {
+                "start": "peak",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 15,
+                "parameters_normalized": {
+                  "amplitude": 32.61910398307699,
+                  "row": 51.822428695485335,
+                  "column": 246.11117077153548,
+                  "sigma_row": 1.777609548273237,
+                  "sigma_column": 1.609159702625389,
+                  "gamma_row": 0.5922727319247745,
+                  "gamma_column": 1.0153928469275886,
+                  "offset": 0.029555024053201776
+                },
+                "intensity_scale": 374599.94372423436,
+                "centroid_row_col": [
+                  51.822428695485335,
+                  246.11117077153548
+                ],
+                "relative_residual_l2": 0.11472265079665182,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.09075449529489966,
+                "optimality": 5.4250667303849585e-05
+              },
+              "rotated_primary": {
+                "initial_angle_rad": 3.141592653589793,
+                "success": true,
+                "termination_status": 2,
+                "nfev": 22,
+                "parameters_normalized": {
+                  "amplitude": 33.97897741058602,
+                  "row": 51.82520614948932,
+                  "column": 246.12055694483135,
+                  "sigma_row": 1.7270436448982764,
+                  "sigma_column": 1.4914682041812013,
+                  "gamma_row": 0.6997218003518261,
+                  "gamma_column": 1.1611998996964998,
+                  "offset": 0.02730645958457122,
+                  "angle_rad": 2.9626970197515106
+                },
+                "intensity_scale": 374599.94372423436,
+                "center_row_col": [
+                  51.82520614948932,
+                  246.12055694483135
+                ],
+                "relative_residual_l2": 0.11294627223762457,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.08796574855846592
+              },
+              "start_center_difference_pixels": 7.838299385310094e-09,
+              "rotated_minus_moment_pixels": 0.01931889392475452
+            }
+          },
+          "rotated_window_center_difference_pixels": 0.050692740852660616
+        },
+        {
+          "G": [
+            -2,
+            2,
+            0
+          ],
+          "nominal_yx": [
+            146.49134595814843,
+            82.47231743921463
+          ],
+          "fits": {
+            "4": {
+              "unrotated_source": {
+                "start": "source",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 20,
+                "parameters_normalized": {
+                  "amplitude": 28.347529978463495,
+                  "row": 147.41598138879527,
+                  "column": 83.0394260645367,
+                  "sigma_row": 2.156532222081473,
+                  "sigma_column": 0.9814066344220724,
+                  "gamma_row": 1.4014257047092893e-21,
+                  "gamma_column": 1.4415491333842443,
+                  "offset": 0.07218069546386902
+                },
+                "intensity_scale": 281288.61993195995,
+                "centroid_row_col": [
+                  147.41598138879527,
+                  83.0394260645367
+                ],
+                "relative_residual_l2": 0.1290718185422004,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  0
+                ],
+                "cost": 0.10873928360939776,
+                "optimality": 3.138048759693792e-06
+              },
+              "unrotated_peak": {
+                "start": "peak",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 19,
+                "parameters_normalized": {
+                  "amplitude": 28.34758564373942,
+                  "row": 147.41598154283156,
+                  "column": 83.03942551630455,
+                  "sigma_row": 2.1565329984779202,
+                  "sigma_column": 0.9813978873332555,
+                  "gamma_row": 1.4147829682590415e-22,
+                  "gamma_column": 1.441558390866395,
+                  "offset": 0.07218054937172551
+                },
+                "intensity_scale": 281288.61993195995,
+                "centroid_row_col": [
+                  147.41598154283156,
+                  83.03942551630455
+                ],
+                "relative_residual_l2": 0.12907181854200986,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  0
+                ],
+                "cost": 0.1087392836090767,
+                "optimality": 0.0001438373981333102
+              },
+              "rotated_primary": {
+                "initial_angle_rad": 3.141592653589793,
+                "success": true,
+                "termination_status": 2,
+                "nfev": 12,
+                "parameters_normalized": {
+                  "amplitude": 29.652224045248733,
+                  "row": 147.424324473239,
+                  "column": 83.0440240722517,
+                  "sigma_row": 2.3398274552097917,
+                  "sigma_column": 0.7727709939139459,
+                  "gamma_row": 2.498914859263013e-18,
+                  "gamma_column": 1.463617106800089,
+                  "offset": 0.06454153089024832,
+                  "angle_rad": 3.6309245558662306
+                },
+                "intensity_scale": 281288.61993195995,
+                "center_row_col": [
+                  147.424324473239,
+                  83.0440240722517
+                ],
+                "relative_residual_l2": 0.09412846048956823,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.057831641661455054
+              },
+              "start_center_difference_pixels": 5.69460858209847e-07,
+              "rotated_minus_moment_pixels": 0.7440747463825633
+            },
+            "8": {
+              "unrotated_source": {
+                "start": "source",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 14,
+                "parameters_normalized": {
+                  "amplitude": 30.771310337494462,
+                  "row": 147.40657445765856,
+                  "column": 82.9593894796614,
+                  "sigma_row": 2.0963591112118642,
+                  "sigma_column": 1.5525827780891426,
+                  "gamma_row": 0.38303135610003836,
+                  "gamma_column": 0.8408762976268633,
+                  "offset": 0.03677310649563514
+                },
+                "intensity_scale": 281288.61993195995,
+                "centroid_row_col": [
+                  147.40657445765856,
+                  82.9593894796614
+                ],
+                "relative_residual_l2": 0.14859575223505908,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.15535117818053398,
+                "optimality": 0.0001341547165455195
+              },
+              "unrotated_peak": {
+                "start": "peak",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 14,
+                "parameters_normalized": {
+                  "amplitude": 30.771311098203544,
+                  "row": 147.40657444590775,
+                  "column": 82.95938940203554,
+                  "sigma_row": 2.096359086702198,
+                  "sigma_column": 1.5525829330733596,
+                  "gamma_row": 0.38303145535246186,
+                  "gamma_column": 0.8408761905393544,
+                  "offset": 0.03677310411096531
+                },
+                "intensity_scale": 281288.61993195995,
+                "centroid_row_col": [
+                  147.40657444590775,
+                  82.95938940203554
+                ],
+                "relative_residual_l2": 0.14859575223502988,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.155351178180473,
+                "optimality": 0.00010300244564301671
+              },
+              "rotated_primary": {
+                "initial_angle_rad": 3.141592653589793,
+                "success": true,
+                "termination_status": 2,
+                "nfev": 15,
+                "parameters_normalized": {
+                  "amplitude": 33.2979913216324,
+                  "row": 147.38883125833232,
+                  "column": 82.97555502224216,
+                  "sigma_row": 2.2577505466345293,
+                  "sigma_column": 1.0573542349590885,
+                  "gamma_row": 0.3306062898221397,
+                  "gamma_column": 1.2952242962259033,
+                  "offset": 0.031101097753905398,
+                  "angle_rad": 3.6590462059378663
+                },
+                "intensity_scale": 281288.61993195995,
+                "center_row_col": [
+                  147.38883125833232,
+                  82.97555502224216
+                ],
+                "relative_residual_l2": 0.1197686815756692,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.10092256952101876
+              },
+              "start_center_difference_pixels": 7.851022313000436e-08,
+              "rotated_minus_moment_pixels": 0.608495789866563
+            }
+          },
+          "rotated_window_center_difference_pixels": 0.07712184589091244
+        },
+        {
+          "G": [
+            0,
+            -2,
+            0
+          ],
+          "nominal_yx": [
+            146.49134595814843,
+            411.4705157175133
+          ],
+          "fits": {
+            "4": {
+              "unrotated_source": {
+                "start": "source",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 20,
+                "parameters_normalized": {
+                  "amplitude": 27.891060957121194,
+                  "row": 146.03222647148763,
+                  "column": 410.58267409775544,
+                  "sigma_row": 1.0393286827189931,
+                  "sigma_column": 2.015249017410446,
+                  "gamma_row": 1.4244169888397342,
+                  "gamma_column": 6.798083783749621e-18,
+                  "offset": 0.04764345819904945
+                },
+                "intensity_scale": 391581.1487973986,
+                "centroid_row_col": [
+                  146.03222647148763,
+                  410.58267409775544
+                ],
+                "relative_residual_l2": 0.09851216422117531,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0
+                ],
+                "cost": 0.0598844888607886,
+                "optimality": 3.511820372428034e-05
+              },
+              "unrotated_peak": {
+                "start": "peak",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 20,
+                "parameters_normalized": {
+                  "amplitude": 27.891060957121194,
+                  "row": 146.03222647148763,
+                  "column": 410.58267409775544,
+                  "sigma_row": 1.0393286827189931,
+                  "sigma_column": 2.015249017410446,
+                  "gamma_row": 1.4244169888397342,
+                  "gamma_column": 6.798083783749621e-18,
+                  "offset": 0.04764345819904945
+                },
+                "intensity_scale": 391581.1487973986,
+                "centroid_row_col": [
+                  146.03222647148763,
+                  410.58267409775544
+                ],
+                "relative_residual_l2": 0.09851216422117531,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0
+                ],
+                "cost": 0.0598844888607886,
+                "optimality": 3.511820372428034e-05
+              },
+              "rotated_primary": {
+                "initial_angle_rad": 3.141592653589793,
+                "success": true,
+                "termination_status": 2,
+                "nfev": 15,
+                "parameters_normalized": {
+                  "amplitude": 35.27689570512508,
+                  "row": 146.0248262910936,
+                  "column": 410.592467149766,
+                  "sigma_row": 0.6481769702990672,
+                  "sigma_column": 1.8075018956129192,
+                  "gamma_row": 1.914691527513282,
+                  "gamma_column": 0.49744787730477547,
+                  "offset": 0.02200790888678029,
+                  "angle_rad": 3.406124775878896
+                },
+                "intensity_scale": 391581.1487973986,
+                "center_row_col": [
+                  146.0248262910936,
+                  410.592467149766
+                ],
+                "relative_residual_l2": 0.09178583544369188,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.0519859466899125
+              },
+              "start_center_difference_pixels": 0.0,
+              "rotated_minus_moment_pixels": 0.12147815908773478
+            },
+            "8": {
+              "unrotated_source": {
+                "start": "source",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 16,
+                "parameters_normalized": {
+                  "amplitude": 29.560528557634584,
+                  "row": 145.99822392050783,
+                  "column": 410.5713315825336,
+                  "sigma_row": 1.460404041894862,
+                  "sigma_column": 1.8896901140898315,
+                  "gamma_row": 0.9881925598042249,
+                  "gamma_column": 0.37705130448801044,
+                  "offset": 0.03005447777611805
+                },
+                "intensity_scale": 391581.1487973986,
+                "centroid_row_col": [
+                  145.99822392050783,
+                  410.5713315825336
+                ],
+                "relative_residual_l2": 0.11351818865756967,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.0832570058299087,
+                "optimality": 0.00022512983383581064
+              },
+              "unrotated_peak": {
+                "start": "peak",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 16,
+                "parameters_normalized": {
+                  "amplitude": 29.560528557634584,
+                  "row": 145.99822392050783,
+                  "column": 410.5713315825336,
+                  "sigma_row": 1.460404041894862,
+                  "sigma_column": 1.8896901140898315,
+                  "gamma_row": 0.9881925598042249,
+                  "gamma_column": 0.37705130448801044,
+                  "offset": 0.03005447777611805
+                },
+                "intensity_scale": 391581.1487973986,
+                "centroid_row_col": [
+                  145.99822392050783,
+                  410.5713315825336
+                ],
+                "relative_residual_l2": 0.11351818865756967,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.0832570058299087,
+                "optimality": 0.00022512983383581064
+              },
+              "rotated_primary": {
+                "initial_angle_rad": 3.141592653589793,
+                "success": true,
+                "termination_status": 2,
+                "nfev": 16,
+                "parameters_normalized": {
+                  "amplitude": 31.729310641985684,
+                  "row": 145.9931613847745,
+                  "column": 410.5829552084913,
+                  "sigma_row": 1.2901820566158848,
+                  "sigma_column": 1.7899331292881964,
+                  "gamma_row": 1.25333136371439,
+                  "gamma_column": 0.5271368034611539,
+                  "offset": 0.026083497120281508,
+                  "angle_rad": 3.4306503412553724
+                },
+                "intensity_scale": 391581.1487973986,
+                "center_row_col": [
+                  145.9931613847745,
+                  410.5829552084913
+                ],
+                "relative_residual_l2": 0.1073289356115052,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.0744258027772033
+              },
+              "start_center_difference_pixels": 0.0,
+              "rotated_minus_moment_pixels": 0.18787224631491434
+            }
+          },
+          "rotated_window_center_difference_pixels": 0.03306271796162911
+        },
+        {
+          "G": [
+            0,
+            2,
+            0
+          ],
+          "nominal_yx": [
+            336.43854429702577,
+            82.47231743921466
+          ],
+          "fits": {
+            "4": {
+              "unrotated_source": {
+                "start": "source",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 23,
+                "parameters_normalized": {
+                  "amplitude": 22.594867375275847,
+                  "row": 337.23541646721026,
+                  "column": 83.52435748595593,
+                  "sigma_row": 1.866598486848808,
+                  "sigma_column": 2.1409454952913562,
+                  "gamma_row": 9.022775729972404e-24,
+                  "gamma_column": 3.5472420013451775e-19,
+                  "offset": 0.05908590106658095
+                },
+                "intensity_scale": 322624.4506953,
+                "centroid_row_col": [
+                  337.23541646721026,
+                  83.52435748595593
+                ],
+                "relative_residual_l2": 0.10265545450033974,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  -1,
+                  0
+                ],
+                "cost": 0.06664823898345058,
+                "optimality": 7.30133649038892e-08
+              },
+              "unrotated_peak": {
+                "start": "peak",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 22,
+                "parameters_normalized": {
+                  "amplitude": 22.59486819817365,
+                  "row": 337.2354165019071,
+                  "column": 83.52435747543713,
+                  "sigma_row": 1.8665985415652704,
+                  "sigma_column": 2.1409455212690616,
+                  "gamma_row": 9.633786469203373e-22,
+                  "gamma_column": 1.3964679206191146e-14,
+                  "offset": 0.05908589427710227
+                },
+                "intensity_scale": 322624.4506953,
+                "centroid_row_col": [
+                  337.2354165019071,
+                  83.52435747543713
+                ],
+                "relative_residual_l2": 0.10265545450034184,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  -1,
+                  0
+                ],
+                "cost": 0.06664823898345332,
+                "optimality": 2.7420934982539346e-07
+              },
+              "rotated_primary": {
+                "initial_angle_rad": 3.141592653589793,
+                "success": true,
+                "termination_status": 2,
+                "nfev": 32,
+                "parameters_normalized": {
+                  "amplitude": 26.8222764009658,
+                  "row": 337.22821131871325,
+                  "column": 83.51550414409472,
+                  "sigma_row": 1.4336127448049767,
+                  "sigma_column": 2.2101193418026996,
+                  "gamma_row": 0.7506793688573627,
+                  "gamma_column": 7.769693090543935e-41,
+                  "offset": 0.0439280943353676,
+                  "angle_rad": 3.5465102180374797
+                },
+                "intensity_scale": 322624.4506953,
+                "center_row_col": [
+                  337.22821131871325,
+                  83.51550414409472
+                ],
+                "relative_residual_l2": 0.09420943489495374,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  0
+                ],
+                "cost": 0.05613237474123094
+              },
+              "start_center_difference_pixels": 3.625623935557654e-08,
+              "rotated_minus_moment_pixels": 0.6337863885123837
+            },
+            "8": {
+              "unrotated_source": {
+                "start": "source",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 21,
+                "parameters_normalized": {
+                  "amplitude": 31.0033712226867,
+                  "row": 337.2904335213206,
+                  "column": 83.52729183341562,
+                  "sigma_row": 1.5642277146472314,
+                  "sigma_column": 2.097125397444726,
+                  "gamma_row": 0.8834153547252387,
+                  "gamma_column": 0.29445022517827596,
+                  "offset": 0.03292894193854432
+                },
+                "intensity_scale": 322624.4506953,
+                "centroid_row_col": [
+                  337.2904335213206,
+                  83.52729183341562
+                ],
+                "relative_residual_l2": 0.13211029760080237,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.1230135616257873,
+                "optimality": 0.000264951469594098
+              },
+              "unrotated_peak": {
+                "start": "peak",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 18,
+                "parameters_normalized": {
+                  "amplitude": 31.003353459183526,
+                  "row": 337.2904340924925,
+                  "column": 83.52729179160075,
+                  "sigma_row": 1.5642306350129034,
+                  "sigma_column": 2.0971258036650733,
+                  "gamma_row": 0.88341186436651,
+                  "gamma_column": 0.2944493542741318,
+                  "offset": 0.03292896327655992
+                },
+                "intensity_scale": 322624.4506953,
+                "centroid_row_col": [
+                  337.2904340924925,
+                  83.52729179160075
+                ],
+                "relative_residual_l2": 0.13211029760015047,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.12301356162457332,
+                "optimality": 0.00014018691291933755
+              },
+              "rotated_primary": {
+                "initial_angle_rad": 3.141592653589793,
+                "success": true,
+                "termination_status": 2,
+                "nfev": 18,
+                "parameters_normalized": {
+                  "amplitude": 33.876366156609805,
+                  "row": 337.2867562298101,
+                  "column": 83.51767672557462,
+                  "sigma_row": 1.1454357993388902,
+                  "sigma_column": 2.1420935006547213,
+                  "gamma_row": 1.3407961324909756,
+                  "gamma_column": 0.3388156016775136,
+                  "offset": 0.027184965558170626,
+                  "angle_rad": 3.584928936069556
+                },
+                "intensity_scale": 322624.4506953,
+                "center_row_col": [
+                  337.2867562298101,
+                  83.51767672557462
+                ],
+                "relative_residual_l2": 0.11757835803912776,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.0974393623379498
+              },
+              "start_center_difference_pixels": 5.72700446591221e-07,
+              "rotated_minus_moment_pixels": 0.37936373020737846
+            }
+          },
+          "rotated_window_center_difference_pixels": 0.05858520910287559
+        },
+        {
+          "G": [
+            2,
+            -2,
+            0
+          ],
+          "nominal_yx": [
+            336.43854429702577,
+            411.4705157175133
+          ],
+          "fits": {
+            "4": {
+              "unrotated_source": {
+                "start": "source",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 24,
+                "parameters_normalized": {
+                  "amplitude": 20.387207650457377,
+                  "row": 335.5585412598187,
+                  "column": 411.4593358460049,
+                  "sigma_row": 1.9387454830369464,
+                  "sigma_column": 1.8685088829528342,
+                  "gamma_row": 7.238967712986413e-20,
+                  "gamma_column": 5.14536006861154e-30,
+                  "offset": 0.07839742178237123
+                },
+                "intensity_scale": 398389.4823789945,
+                "centroid_row_col": [
+                  335.5585412598187,
+                  411.4593358460049
+                ],
+                "relative_residual_l2": 0.10118855424341978,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  -1,
+                  0
+                ],
+                "cost": 0.06557355769246645,
+                "optimality": 2.014074471545976e-08
+              },
+              "unrotated_peak": {
+                "start": "peak",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 24,
+                "parameters_normalized": {
+                  "amplitude": 20.387207650457377,
+                  "row": 335.5585412598187,
+                  "column": 411.4593358460049,
+                  "sigma_row": 1.9387454830369464,
+                  "sigma_column": 1.8685088829528342,
+                  "gamma_row": 7.238967712986413e-20,
+                  "gamma_column": 5.14536006861154e-30,
+                  "offset": 0.07839742178237123
+                },
+                "intensity_scale": 398389.4823789945,
+                "centroid_row_col": [
+                  335.5585412598187,
+                  411.4593358460049
+                ],
+                "relative_residual_l2": 0.10118855424341978,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  -1,
+                  0
+                ],
+                "cost": 0.06557355769246645,
+                "optimality": 2.014074471545976e-08
+              },
+              "rotated_primary": {
+                "initial_angle_rad": 3.141592653589793,
+                "success": true,
+                "termination_status": 2,
+                "nfev": 22,
+                "parameters_normalized": {
+                  "amplitude": 40.880861076269,
+                  "row": 335.56640274152727,
+                  "column": 411.45112677109853,
+                  "sigma_row": 1.4909914721970041,
+                  "sigma_column": 0.9258275082295373,
+                  "gamma_row": 1.1857702528626408,
+                  "gamma_column": 1.6723822248324574,
+                  "offset": 8.16738820155564e-29,
+                  "angle_rad": 3.8985687007132963
+                },
+                "intensity_scale": 398389.4823789945,
+                "center_row_col": [
+                  335.56640274152727,
+                  411.45112677109853
+                ],
+                "relative_residual_l2": 0.0898151044819804,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0
+                ],
+                "cost": 0.05166122786529878
+              },
+              "start_center_difference_pixels": 0.0,
+              "rotated_minus_moment_pixels": 0.08501590072474036
+            },
+            "8": {
+              "unrotated_source": {
+                "start": "source",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 14,
+                "parameters_normalized": {
+                  "amplitude": 27.423594576993974,
+                  "row": 335.5395388422263,
+                  "column": 411.4756641048448,
+                  "sigma_row": 1.8446289285357658,
+                  "sigma_column": 1.8795706029996593,
+                  "gamma_row": 0.4824732648875139,
+                  "gamma_column": 0.3013981630044723,
+                  "offset": 0.035375505011935225
+                },
+                "intensity_scale": 398389.4823789945,
+                "centroid_row_col": [
+                  335.5395388422263,
+                  411.4756641048448
+                ],
+                "relative_residual_l2": 0.11532871086504344,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.08931210380116959,
+                "optimality": 6.536306956167344e-05
+              },
+              "unrotated_peak": {
+                "start": "peak",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 14,
+                "parameters_normalized": {
+                  "amplitude": 27.423594576993974,
+                  "row": 335.5395388422263,
+                  "column": 411.4756641048448,
+                  "sigma_row": 1.8446289285357658,
+                  "sigma_column": 1.8795706029996593,
+                  "gamma_row": 0.4824732648875139,
+                  "gamma_column": 0.3013981630044723,
+                  "offset": 0.035375505011935225
+                },
+                "intensity_scale": 398389.4823789945,
+                "centroid_row_col": [
+                  335.5395388422263,
+                  411.4756641048448
+                ],
+                "relative_residual_l2": 0.11532871086504344,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.08931210380116959,
+                "optimality": 6.536306956167344e-05
+              },
+              "rotated_primary": {
+                "initial_angle_rad": 3.141592653589793,
+                "success": true,
+                "termination_status": 2,
+                "nfev": 35,
+                "parameters_normalized": {
+                  "amplitude": 34.01216104463891,
+                  "row": 335.54947707242405,
+                  "column": 411.4649267737813,
+                  "sigma_row": 1.2261218086557013,
+                  "sigma_column": 1.7470049908032965,
+                  "gamma_row": 1.2852569703977572,
+                  "gamma_column": 0.7133350306663276,
+                  "offset": 0.02182579529813055,
+                  "angle_rad": 2.3892276261421643
+                },
+                "intensity_scale": 398389.4823789945,
+                "center_row_col": [
+                  335.54947707242405,
+                  411.4649267737813
+                ],
+                "relative_residual_l2": 0.1035382962330107,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.07198424813534063
+              },
+              "start_center_difference_pixels": 0.0,
+              "rotated_minus_moment_pixels": 0.03530832987281383
+            }
+          },
+          "rotated_window_center_difference_pixels": 0.021838460308282834
+        },
+        {
+          "G": [
+            2,
+            0,
+            0
+          ],
+          "nominal_yx": [
+            431.4121434664645,
+            246.971416578364
+          ],
+          "fits": {
+            "4": {
+              "unrotated_source": {
+                "start": "source",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 22,
+                "parameters_normalized": {
+                  "amplitude": 19.48385881943252,
+                  "row": 431.54159429308106,
+                  "column": 247.56467622545188,
+                  "sigma_row": 1.5758921283552139,
+                  "sigma_column": 2.001306607446504,
+                  "gamma_row": 0.15709094304716367,
+                  "gamma_column": 2.0389530213430822e-16,
+                  "offset": 0.07297265933067844
+                },
+                "intensity_scale": 331004.32341914304,
+                "centroid_row_col": [
+                  431.54159429308106,
+                  247.56467622545188
+                ],
+                "relative_residual_l2": 0.1028865024326499,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0
+                ],
+                "cost": 0.062408704748471475,
+                "optimality": 8.632670849985283e-05
+              },
+              "unrotated_peak": {
+                "start": "peak",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 22,
+                "parameters_normalized": {
+                  "amplitude": 19.48385881943252,
+                  "row": 431.54159429308106,
+                  "column": 247.56467622545188,
+                  "sigma_row": 1.5758921283552139,
+                  "sigma_column": 2.001306607446504,
+                  "gamma_row": 0.15709094304716367,
+                  "gamma_column": 2.0389530213430822e-16,
+                  "offset": 0.07297265933067844
+                },
+                "intensity_scale": 331004.32341914304,
+                "centroid_row_col": [
+                  431.54159429308106,
+                  247.56467622545188
+                ],
+                "relative_residual_l2": 0.1028865024326499,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0
+                ],
+                "cost": 0.062408704748471475,
+                "optimality": 8.632670849985283e-05
+              },
+              "rotated_primary": {
+                "initial_angle_rad": 3.141592653589793,
+                "success": true,
+                "termination_status": 2,
+                "nfev": 12,
+                "parameters_normalized": {
+                  "amplitude": 20.80456502968998,
+                  "row": 431.546261891386,
+                  "column": 247.57190339251275,
+                  "sigma_row": 1.4522456765114515,
+                  "sigma_column": 2.097709713990839,
+                  "gamma_row": 0.3171890251095004,
+                  "gamma_column": 1.0229137251998232e-20,
+                  "offset": 0.06435591008157004,
+                  "angle_rad": 2.7518956173059714
+                },
+                "intensity_scale": 331004.32341914304,
+                "center_row_col": [
+                  431.546261891386,
+                  247.57190339251275
+                ],
+                "relative_residual_l2": 0.07426582274184818,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  0
+                ],
+                "cost": 0.0325166918051952
+              },
+              "start_center_difference_pixels": 0.0,
+              "rotated_minus_moment_pixels": 0.16210229722758487
+            },
+            "8": {
+              "unrotated_source": {
+                "start": "source",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 15,
+                "parameters_normalized": {
+                  "amplitude": 28.2267957135324,
+                  "row": 431.55303978039643,
+                  "column": 247.60532612468032,
+                  "sigma_row": 1.4747801547337078,
+                  "sigma_column": 1.6981830778387712,
+                  "gamma_row": 0.5713609788661567,
+                  "gamma_column": 0.8825079812303063,
+                  "offset": 0.03241048216415767
+                },
+                "intensity_scale": 331004.32341914304,
+                "centroid_row_col": [
+                  431.55303978039643,
+                  247.60532612468032
+                ],
+                "relative_residual_l2": 0.12154581889771367,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.09236282052973084,
+                "optimality": 6.4389657085555e-05
+              },
+              "unrotated_peak": {
+                "start": "peak",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 15,
+                "parameters_normalized": {
+                  "amplitude": 28.2267957135324,
+                  "row": 431.55303978039643,
+                  "column": 247.60532612468032,
+                  "sigma_row": 1.4747801547337078,
+                  "sigma_column": 1.6981830778387712,
+                  "gamma_row": 0.5713609788661567,
+                  "gamma_column": 0.8825079812303063,
+                  "offset": 0.03241048216415767
+                },
+                "intensity_scale": 331004.32341914304,
+                "centroid_row_col": [
+                  431.55303978039643,
+                  247.60532612468032
+                ],
+                "relative_residual_l2": 0.12154581889771367,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.09236282052973084,
+                "optimality": 6.4389657085555e-05
+              },
+              "rotated_primary": {
+                "initial_angle_rad": 3.141592653589793,
+                "success": true,
+                "termination_status": 2,
+                "nfev": 16,
+                "parameters_normalized": {
+                  "amplitude": 27.587933040664886,
+                  "row": 431.5515342474203,
+                  "column": 247.61818927916093,
+                  "sigma_row": 1.401921164358711,
+                  "sigma_column": 1.9115385576501525,
+                  "gamma_row": 0.597878704496922,
+                  "gamma_column": 0.6592058973120144,
+                  "offset": 0.032652239559400845,
+                  "angle_rad": 2.8179534076820105
+                },
+                "intensity_scale": 331004.32341914304,
+                "center_row_col": [
+                  431.5515342474203,
+                  247.61818927916093
+                ],
+                "relative_residual_l2": 0.10148383716329534,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.06438888406934695
+              },
+              "start_center_difference_pixels": 0.0,
+              "rotated_minus_moment_pixels": 0.09930476753132267
+            }
+          },
+          "rotated_window_center_difference_pixels": 0.0465852019525571
+        }
+      ]
+    },
+    {
+      "member": "PROCESSED/PROC_800nm",
+      "probes": [
+        {
+          "G": [
+            -2,
+            0,
+            0
+          ],
+          "nominal_yx": [
+            52.0130490448328,
+            247.32943650975668
+          ],
+          "fits": {
+            "4": {
+              "unrotated_source": {
+                "start": "source",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 18,
+                "parameters_normalized": {
+                  "amplitude": 52.24948281043329,
+                  "row": 51.8325419364104,
+                  "column": 246.34970253315447,
+                  "sigma_row": 2.070857093028085,
+                  "sigma_column": 2.2898172687762806,
+                  "gamma_row": 0.963244597804773,
+                  "gamma_column": 0.6380242299651411,
+                  "offset": 2.343588747278725e-18
+                },
+                "intensity_scale": 168205.814746975,
+                "centroid_row_col": [
+                  51.8325419364104,
+                  246.34970253315447
+                ],
+                "relative_residual_l2": 0.07915379440472234,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1
+                ],
+                "cost": 0.06528303967903833,
+                "optimality": 4.0008891345400215e-06
+              },
+              "unrotated_peak": {
+                "start": "peak",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 19,
+                "parameters_normalized": {
+                  "amplitude": 52.2495207652337,
+                  "row": 51.832541902384406,
+                  "column": 246.34970241534975,
+                  "sigma_row": 2.0708537190512124,
+                  "sigma_column": 2.289817310636326,
+                  "gamma_row": 0.9632502018943191,
+                  "gamma_column": 0.6380243109458188,
+                  "offset": 6.244291569045026e-20
+                },
+                "intensity_scale": 168205.814746975,
+                "centroid_row_col": [
+                  51.832541902384406,
+                  246.34970241534975
+                ],
+                "relative_residual_l2": 0.0791537944048233,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1
+                ],
+                "cost": 0.06528303967920487,
+                "optimality": 5.6979819444309376e-05
+              },
+              "rotated_primary": {
+                "initial_angle_rad": 3.141592653589793,
+                "success": true,
+                "termination_status": 2,
+                "nfev": 15,
+                "parameters_normalized": {
+                  "amplitude": 46.20143259137397,
+                  "row": 51.83094735434522,
+                  "column": 246.34725189252288,
+                  "sigma_row": 2.105649008472784,
+                  "sigma_column": 2.733545590003539,
+                  "gamma_row": 0.6457864699354735,
+                  "gamma_column": 8.932601488029365e-19,
+                  "offset": 1.6127795886693197e-20,
+                  "angle_rad": 2.4140680153213743
+                },
+                "intensity_scale": 168205.814746975,
+                "center_row_col": [
+                  51.83094735434522,
+                  246.34725189252288
+                ],
+                "relative_residual_l2": 0.06301295374642191,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  -1,
+                  0
+                ],
+                "cost": 0.0413729574061934
+              },
+              "start_center_difference_pixels": 1.2262022536539603e-07,
+              "rotated_minus_moment_pixels": 0.23819760543947116
+            },
+            "8": {
+              "unrotated_source": {
+                "start": "source",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 15,
+                "parameters_normalized": {
+                  "amplitude": 39.28413173953141,
+                  "row": 51.849670046510006,
+                  "column": 246.340479439853,
+                  "sigma_row": 2.3899590881150328,
+                  "sigma_column": 2.380755859840901,
+                  "gamma_row": 0.10877479992015048,
+                  "gamma_column": 0.24059664072060405,
+                  "offset": 0.04126207698368003
+                },
+                "intensity_scale": 168205.814746975,
+                "centroid_row_col": [
+                  51.849670046510006,
+                  246.340479439853
+                ],
+                "relative_residual_l2": 0.08555773249373262,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.08114341397541891,
+                "optimality": 3.36093848884407e-05
+              },
+              "unrotated_peak": {
+                "start": "peak",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 16,
+                "parameters_normalized": {
+                  "amplitude": 39.28413203311659,
+                  "row": 51.849670212410906,
+                  "column": 246.34047943341432,
+                  "sigma_row": 2.3899590162482336,
+                  "sigma_column": 2.3807557952970106,
+                  "gamma_row": 0.1087748883593557,
+                  "gamma_column": 0.24059670792419505,
+                  "offset": 0.04126207765786544
+                },
+                "intensity_scale": 168205.814746975,
+                "centroid_row_col": [
+                  51.849670212410906,
+                  246.34047943341432
+                ],
+                "relative_residual_l2": 0.08555773249370793,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.08114341397537207,
+                "optimality": 4.18640384588426e-05
+              },
+              "rotated_primary": {
+                "initial_angle_rad": 3.141592653589793,
+                "success": true,
+                "termination_status": 2,
+                "nfev": 10,
+                "parameters_normalized": {
+                  "amplitude": 38.669784545262125,
+                  "row": 51.8427944154808,
+                  "column": 246.3318880086882,
+                  "sigma_row": 2.2204815678664027,
+                  "sigma_column": 2.615895798287943,
+                  "gamma_row": 0.2184054463802009,
+                  "gamma_column": 1.2818596993466482e-25,
+                  "offset": 0.04160296274679672,
+                  "angle_rad": 2.4912161222866236
+                },
+                "intensity_scale": 168205.814746975,
+                "center_row_col": [
+                  51.8427944154808,
+                  246.3318880086882
+                ],
+                "relative_residual_l2": 0.0706470645919125,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  0
+                ],
+                "cost": 0.05532519925820316
+              },
+              "start_center_difference_pixels": 1.6602579707845827e-07,
+              "rotated_minus_moment_pixels": 0.14107724175575823
+            }
+          },
+          "rotated_window_center_difference_pixels": 0.01940107687825116
+        },
+        {
+          "G": [
+            -2,
+            2,
+            0
+          ],
+          "nominal_yx": [
+            147.0948476420873,
+            82.64293046428051
+          ],
+          "fits": {
+            "4": {
+              "unrotated_source": {
+                "start": "source",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 23,
+                "parameters_normalized": {
+                  "amplitude": 41.101732957576765,
+                  "row": 147.7419976342976,
+                  "column": 82.97006543649664,
+                  "sigma_row": 2.5470341947653363,
+                  "sigma_column": 2.2120774016988407,
+                  "gamma_row": 1.0809681797785103e-30,
+                  "gamma_column": 0.4923334367567958,
+                  "offset": 0.04885816080526366
+                },
+                "intensity_scale": 122272.43808724477,
+                "centroid_row_col": [
+                  147.7419976342976,
+                  82.97006543649664
+                ],
+                "relative_residual_l2": 0.11977713390287788,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  0
+                ],
+                "cost": 0.15778226852972202,
+                "optimality": 0.00014399444324946986
+              },
+              "unrotated_peak": {
+                "start": "peak",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 23,
+                "parameters_normalized": {
+                  "amplitude": 41.101688443397265,
+                  "row": 147.74199721121929,
+                  "column": 82.97006736847226,
+                  "sigma_row": 2.547034758774388,
+                  "sigma_column": 2.212085241337675,
+                  "gamma_row": 5.776422567413529e-29,
+                  "gamma_column": 0.4923204458885862,
+                  "offset": 0.04885796396232672
+                },
+                "intensity_scale": 122272.43808724477,
+                "centroid_row_col": [
+                  147.74199721121929,
+                  82.97006736847226
+                ],
+                "relative_residual_l2": 0.1197771339034255,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  0
+                ],
+                "cost": 0.15778226853116473,
+                "optimality": 1.0167306006658202e-05
+              },
+              "rotated_primary": {
+                "initial_angle_rad": 3.141592653589793,
+                "success": true,
+                "termination_status": 2,
+                "nfev": 22,
+                "parameters_normalized": {
+                  "amplitude": 55.930967747765635,
+                  "row": 147.71959756205456,
+                  "column": 83.02017204629247,
+                  "sigma_row": 2.8352635479329855,
+                  "sigma_column": 1.2949100617451885,
+                  "gamma_row": 2.080452908265656e-29,
+                  "gamma_column": 1.7952160906816945,
+                  "offset": 1.1313887199969077e-34,
+                  "angle_rad": 3.778818653441145
+                },
+                "intensity_scale": 122272.43808724477,
+                "center_row_col": [
+                  147.71959756205456,
+                  83.02017204629247
+                ],
+                "relative_residual_l2": 0.09751376250646511,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  -1,
+                  0
+                ],
+                "cost": 0.1045784473580389
+              },
+              "start_center_difference_pixels": 1.977757581571968e-06,
+              "rotated_minus_moment_pixels": 0.24982999134035555
+            },
+            "8": {
+              "unrotated_source": {
+                "start": "source",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 16,
+                "parameters_normalized": {
+                  "amplitude": 39.79819147456217,
+                  "row": 147.73847260817217,
+                  "column": 82.911589507895,
+                  "sigma_row": 2.5201485455804513,
+                  "sigma_column": 2.363155432490815,
+                  "gamma_row": 9.981129543598826e-14,
+                  "gamma_column": 0.2724522679961769,
+                  "offset": 0.051135026353070524
+                },
+                "intensity_scale": 122272.43808724477,
+                "centroid_row_col": [
+                  147.73847260817217,
+                  82.911589507895
+                ],
+                "relative_residual_l2": 0.13296938243042494,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  0
+                ],
+                "cost": 0.2105495249699791,
+                "optimality": 0.00026493956101196877
+              },
+              "unrotated_peak": {
+                "start": "peak",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 16,
+                "parameters_normalized": {
+                  "amplitude": 39.79818982640455,
+                  "row": 147.7384726037557,
+                  "column": 82.91158943977875,
+                  "sigma_row": 2.5201485429919255,
+                  "sigma_column": 2.363155708925407,
+                  "gamma_row": 3.800180650043506e-14,
+                  "gamma_column": 0.2724518627527889,
+                  "offset": 0.05113502747742845
+                },
+                "intensity_scale": 122272.43808724477,
+                "centroid_row_col": [
+                  147.7384726037557,
+                  82.91158943977875
+                ],
+                "relative_residual_l2": 0.132969382430377,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  0
+                ],
+                "cost": 0.21054952496982723,
+                "optimality": 0.00025333157603053786
+              },
+              "rotated_primary": {
+                "initial_angle_rad": 3.141592653589793,
+                "success": true,
+                "termination_status": 2,
+                "nfev": 18,
+                "parameters_normalized": {
+                  "amplitude": 46.99806443470286,
+                  "row": 147.7132618838878,
+                  "column": 82.96296259886391,
+                  "sigma_row": 2.626077445739894,
+                  "sigma_column": 1.6722850285568667,
+                  "gamma_row": 0.15574858090667032,
+                  "gamma_column": 1.1547943008999424,
+                  "offset": 0.03799464236800314,
+                  "angle_rad": 3.7673281211027225
+                },
+                "intensity_scale": 122272.43808724477,
+                "center_row_col": [
+                  147.7132618838878,
+                  82.96296259886391
+                ],
+                "relative_residual_l2": 0.11790365158265623,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.16554096179069336
+              },
+              "start_center_difference_pixels": 6.825927664132259e-08,
+              "rotated_minus_moment_pixels": 0.2041033655546871
+            }
+          },
+          "rotated_window_center_difference_pixels": 0.057559201635481616
+        },
+        {
+          "G": [
+            0,
+            -2,
+            0
+          ],
+          "nominal_yx": [
+            147.0948476420873,
+            412.01594255523287
+          ],
+          "fits": {
+            "4": {
+              "unrotated_source": {
+                "start": "source",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 21,
+                "parameters_normalized": {
+                  "amplitude": 37.888244479580294,
+                  "row": 146.2425106454303,
+                  "column": 411.35222838551914,
+                  "sigma_row": 2.572183945729376,
+                  "sigma_column": 2.3660831355301037,
+                  "gamma_row": 1.771107247707516e-23,
+                  "gamma_column": 5.864634418150804e-18,
+                  "offset": 0.025210704405851474
+                },
+                "intensity_scale": 165444.785949951,
+                "centroid_row_col": [
+                  146.2425106454303,
+                  411.35222838551914
+                ],
+                "relative_residual_l2": 0.08021531523403003,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  -1,
+                  0
+                ],
+                "cost": 0.06433810342154825,
+                "optimality": 7.828616744416937e-09
+              },
+              "unrotated_peak": {
+                "start": "peak",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 22,
+                "parameters_normalized": {
+                  "amplitude": 37.88824401911132,
+                  "row": 146.24251064438204,
+                  "column": 411.35222838434703,
+                  "sigma_row": 2.5721839315898665,
+                  "sigma_column": 2.3660831235409856,
+                  "gamma_row": 1.1622536146176553e-24,
+                  "gamma_column": 3.3883669139956034e-19,
+                  "offset": 0.02521070799377039
+                },
+                "intensity_scale": 165444.785949951,
+                "centroid_row_col": [
+                  146.24251064438204,
+                  411.35222838434703
+                ],
+                "relative_residual_l2": 0.08021531523403004,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  -1,
+                  0
+                ],
+                "cost": 0.06433810342154828,
+                "optimality": 3.263524775815366e-09
+              },
+              "rotated_primary": {
+                "initial_angle_rad": 3.141592653589793,
+                "success": true,
+                "termination_status": 2,
+                "nfev": 23,
+                "parameters_normalized": {
+                  "amplitude": 47.462738113837155,
+                  "row": 146.24864140389977,
+                  "column": 411.33467147926297,
+                  "sigma_row": 2.6864120401395497,
+                  "sigma_column": 1.7319491731559986,
+                  "gamma_row": 1.0754258205487993e-36,
+                  "gamma_column": 1.145114665939494,
+                  "offset": 7.539808335399802e-34,
+                  "angle_rad": 2.5695954014854094
+                },
+                "intensity_scale": 165444.785949951,
+                "center_row_col": [
+                  146.24864140389977,
+                  411.33467147926297
+                ],
+                "relative_residual_l2": 0.06546229576787235,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  -1,
+                  0
+                ],
+                "cost": 0.04284854994233472
+              },
+              "start_center_difference_pixels": 1.5724731729935093e-09,
+              "rotated_minus_moment_pixels": 0.35534954645063443
+            },
+            "8": {
+              "unrotated_source": {
+                "start": "source",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 15,
+                "parameters_normalized": {
+                  "amplitude": 37.112885781477004,
+                  "row": 146.2342757994425,
+                  "column": 411.3385176201307,
+                  "sigma_row": 2.5317997016875355,
+                  "sigma_column": 2.238511771195237,
+                  "gamma_row": 2.223705372042174e-20,
+                  "gamma_column": 0.1859372449451415,
+                  "offset": 0.04280326453906511
+                },
+                "intensity_scale": 165444.785949951,
+                "centroid_row_col": [
+                  146.2342757994425,
+                  411.3385176201307
+                ],
+                "relative_residual_l2": 0.08555020871174769,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  0
+                ],
+                "cost": 0.07853882612797052,
+                "optimality": 7.190477978244834e-08
+              },
+              "unrotated_peak": {
+                "start": "peak",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 15,
+                "parameters_normalized": {
+                  "amplitude": 37.11288532771248,
+                  "row": 146.234275803838,
+                  "column": 411.33851761750157,
+                  "sigma_row": 2.531799699687472,
+                  "sigma_column": 2.2385118260143213,
+                  "gamma_row": 2.0097903945624344e-23,
+                  "gamma_column": 0.1859371539450953,
+                  "offset": 0.04280326514017519
+                },
+                "intensity_scale": 165444.785949951,
+                "centroid_row_col": [
+                  146.234275803838,
+                  411.33851761750157
+                ],
+                "relative_residual_l2": 0.08555020871174762,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  0
+                ],
+                "cost": 0.07853882612797039,
+                "optimality": 5.382922898088913e-07
+              },
+              "rotated_primary": {
+                "initial_angle_rad": 3.141592653589793,
+                "success": true,
+                "termination_status": 2,
+                "nfev": 12,
+                "parameters_normalized": {
+                  "amplitude": 38.218040674486716,
+                  "row": 146.23190376219242,
+                  "column": 411.3263418298897,
+                  "sigma_row": 2.591133182678705,
+                  "sigma_column": 2.093928036976671,
+                  "gamma_row": 1.4926582905473555e-24,
+                  "gamma_column": 0.35586485666084994,
+                  "offset": 0.04052537928487764,
+                  "angle_rad": 2.661872555922002
+                },
+                "intensity_scale": 165444.785949951,
+                "center_row_col": [
+                  146.23190376219242,
+                  411.3263418298897
+                ],
+                "relative_residual_l2": 0.07368003308182726,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.05825616389500874
+              },
+              "start_center_difference_pixels": 5.1217648316048116e-09,
+              "rotated_minus_moment_pixels": 0.22600883767254362
+            }
+          },
+          "rotated_window_center_difference_pixels": 0.01869576713068976
+        },
+        {
+          "G": [
+            0,
+            2,
+            0
+          ],
+          "nominal_yx": [
+            337.25844483659625,
+            82.64293046428054
+          ],
+          "fits": {
+            "4": {
+              "unrotated_source": {
+                "start": "source",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 23,
+                "parameters_normalized": {
+                  "amplitude": 39.92779529497497,
+                  "row": 338.3835727978667,
+                  "column": 83.39954083564255,
+                  "sigma_row": 2.6367854023003146,
+                  "sigma_column": 2.4612931290660303,
+                  "gamma_row": 2.36000682290368e-32,
+                  "gamma_column": 1.5953103236348993e-12,
+                  "offset": 0.020536099330428197
+                },
+                "intensity_scale": 153748.94098803808,
+                "centroid_row_col": [
+                  338.3835727978667,
+                  83.39954083564255
+                ],
+                "relative_residual_l2": 0.1125595518363221,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  -1,
+                  0
+                ],
+                "cost": 0.12712242913177585,
+                "optimality": 2.999399233248866e-08
+              },
+              "unrotated_peak": {
+                "start": "peak",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 20,
+                "parameters_normalized": {
+                  "amplitude": 39.9277950988738,
+                  "row": 338.3835727936078,
+                  "column": 83.39954083683628,
+                  "sigma_row": 2.6367853938241557,
+                  "sigma_column": 2.461293125453046,
+                  "gamma_row": 3.020880952500135e-32,
+                  "gamma_column": 7.774754503210266e-12,
+                  "offset": 0.02053610054883457
+                },
+                "intensity_scale": 153748.94098803808,
+                "centroid_row_col": [
+                  338.3835727936078,
+                  83.39954083683628
+                ],
+                "relative_residual_l2": 0.11255955183632255,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  -1,
+                  0
+                ],
+                "cost": 0.12712242913177688,
+                "optimality": 3.532718908305781e-08
+              },
+              "rotated_primary": {
+                "initial_angle_rad": 3.141592653589793,
+                "success": true,
+                "termination_status": 2,
+                "nfev": 17,
+                "parameters_normalized": {
+                  "amplitude": 50.77535217247929,
+                  "row": 338.38446877516174,
+                  "column": 83.39713770768277,
+                  "sigma_row": 2.896287096643451,
+                  "sigma_column": 1.5125810045634218,
+                  "gamma_row": 1.5704836649692308e-24,
+                  "gamma_column": 1.3384126605935074,
+                  "offset": 4.393178930535332e-25,
+                  "angle_rad": 2.4760068721764186
+                },
+                "intensity_scale": 153748.94098803808,
+                "center_row_col": [
+                  338.38446877516174,
+                  83.39713770768277
+                ],
+                "relative_residual_l2": 0.05975408789647146,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  -1,
+                  0
+                ],
+                "cost": 0.035825537561954314
+              },
+              "start_center_difference_pixels": 4.423012110627382e-09,
+              "rotated_minus_moment_pixels": 0.5699214937140628
+            },
+            "8": {
+              "unrotated_source": {
+                "start": "source",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 13,
+                "parameters_normalized": {
+                  "amplitude": 38.64805138716676,
+                  "row": 338.3982468779763,
+                  "column": 83.38803375458578,
+                  "sigma_row": 2.589571670003791,
+                  "sigma_column": 2.282042004941814,
+                  "gamma_row": 3.293124548990379e-14,
+                  "gamma_column": 0.21893429014307683,
+                  "offset": 0.04166643903520513
+                },
+                "intensity_scale": 153748.94098803808,
+                "centroid_row_col": [
+                  338.3982468779763,
+                  83.38803375458578
+                ],
+                "relative_residual_l2": 0.11497363016032337,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  0
+                ],
+                "cost": 0.14575613348643873,
+                "optimality": 7.986668085663397e-05
+              },
+              "unrotated_peak": {
+                "start": "peak",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 16,
+                "parameters_normalized": {
+                  "amplitude": 38.648050932588035,
+                  "row": 338.39824704650914,
+                  "column": 83.38803394727253,
+                  "sigma_row": 2.589571532792735,
+                  "sigma_column": 2.2820420786922506,
+                  "gamma_row": 1.4074812251417001e-25,
+                  "gamma_column": 0.21893430552657672,
+                  "offset": 0.04166644068541803
+                },
+                "intensity_scale": 153748.94098803808,
+                "centroid_row_col": [
+                  338.39824704650914,
+                  83.38803394727253
+                ],
+                "relative_residual_l2": 0.11497363016029613,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  0
+                ],
+                "cost": 0.14575613348636968,
+                "optimality": 1.3614503143172919e-07
+              },
+              "rotated_primary": {
+                "initial_angle_rad": 3.141592653589793,
+                "success": true,
+                "termination_status": 2,
+                "nfev": 12,
+                "parameters_normalized": {
+                  "amplitude": 41.36792476625536,
+                  "row": 338.39678528844985,
+                  "column": 83.41139420164417,
+                  "sigma_row": 2.7702875596095415,
+                  "sigma_column": 1.8982404553059353,
+                  "gamma_row": 1.2055915526769447e-26,
+                  "gamma_column": 0.6026234165849348,
+                  "offset": 0.03615471043106536,
+                  "angle_rad": 2.5228330064393756
+                },
+                "intensity_scale": 153748.94098803808,
+                "center_row_col": [
+                  338.39678528844985,
+                  83.41139420164417
+                ],
+                "relative_residual_l2": 0.07202131920111535,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.05719426658070482
+              },
+              "start_center_difference_pixels": 2.5599121552667033e-07,
+              "rotated_minus_moment_pixels": 0.3618617097214243
+            }
+          },
+          "rotated_window_center_difference_pixels": 0.01883996071247556
+        },
+        {
+          "G": [
+            2,
+            -2,
+            0
+          ],
+          "nominal_yx": [
+            337.25844483659625,
+            412.01594255523287
+          ],
+          "fits": {
+            "4": {
+              "unrotated_source": {
+                "start": "source",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 19,
+                "parameters_normalized": {
+                  "amplitude": 43.37992961352786,
+                  "row": 336.4888913488348,
+                  "column": 412.2571983178638,
+                  "sigma_row": 2.149534207352725,
+                  "sigma_column": 2.583889423357692,
+                  "gamma_row": 0.5383449302510133,
+                  "gamma_column": 2.6187594056235386e-18,
+                  "offset": 0.021105369562382764
+                },
+                "intensity_scale": 164639.74051340926,
+                "centroid_row_col": [
+                  336.4888913488348,
+                  412.2571983178638
+                ],
+                "relative_residual_l2": 0.0649295017471411,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0
+                ],
+                "cost": 0.04585818690341347,
+                "optimality": 1.2289545491337876e-06
+              },
+              "unrotated_peak": {
+                "start": "peak",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 19,
+                "parameters_normalized": {
+                  "amplitude": 43.37997403807994,
+                  "row": 336.4888914229859,
+                  "column": 412.2571982995158,
+                  "sigma_row": 2.1495324332325576,
+                  "sigma_column": 2.583889999199807,
+                  "gamma_row": 0.5383489883115476,
+                  "gamma_column": 2.471286248757274e-15,
+                  "offset": 0.021105209150638314
+                },
+                "intensity_scale": 164639.74051340926,
+                "centroid_row_col": [
+                  336.4888914229859,
+                  412.2571982995158
+                ],
+                "relative_residual_l2": 0.06492950174710203,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0
+                ],
+                "cost": 0.0458581869033583,
+                "optimality": 4.5041005690018904e-07
+              },
+              "rotated_primary": {
+                "initial_angle_rad": 3.141592653589793,
+                "success": true,
+                "termination_status": 2,
+                "nfev": 13,
+                "parameters_normalized": {
+                  "amplitude": 49.34008919562799,
+                  "row": 336.4837056904476,
+                  "column": 412.25295582395404,
+                  "sigma_row": 1.8919175032618,
+                  "sigma_column": 2.652488763654683,
+                  "gamma_row": 1.0675329516068424,
+                  "gamma_column": 3.0501168567741566e-18,
+                  "offset": 1.5682267765655967e-16,
+                  "angle_rad": 2.8384845461423165
+                },
+                "intensity_scale": 164639.74051340926,
+                "center_row_col": [
+                  336.4837056904476,
+                  412.25295582395404
+                ],
+                "relative_residual_l2": 0.06228184047646704,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  -1,
+                  0
+                ],
+                "cost": 0.04219447768490795
+              },
+              "start_center_difference_pixels": 7.638740979585965e-08,
+              "rotated_minus_moment_pixels": 0.18228065372512028
+            },
+            "8": {
+              "unrotated_source": {
+                "start": "source",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 14,
+                "parameters_normalized": {
+                  "amplitude": 38.82350267895125,
+                  "row": 336.49121954148546,
+                  "column": 412.2660729782997,
+                  "sigma_row": 2.23447627954896,
+                  "sigma_column": 2.5040110860120137,
+                  "gamma_row": 0.24788424612488769,
+                  "gamma_column": 4.0402672046113434e-18,
+                  "offset": 0.04380382469619181
+                },
+                "intensity_scale": 164639.74051340926,
+                "centroid_row_col": [
+                  336.49121954148546,
+                  412.2660729782997
+                ],
+                "relative_residual_l2": 0.06963003315966472,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0
+                ],
+                "cost": 0.05573257540286489,
+                "optimality": 6.558539039427577e-08
+              },
+              "unrotated_peak": {
+                "start": "peak",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 14,
+                "parameters_normalized": {
+                  "amplitude": 38.82350247324754,
+                  "row": 336.4912195335014,
+                  "column": 412.26607298066523,
+                  "sigma_row": 2.234476293008716,
+                  "sigma_column": 2.5040110786288245,
+                  "gamma_row": 0.24788422257351528,
+                  "gamma_column": 3.0311946823257704e-16,
+                  "offset": 0.04380382513715966
+                },
+                "intensity_scale": 164639.74051340926,
+                "centroid_row_col": [
+                  336.4912195335014,
+                  412.26607298066523
+                ],
+                "relative_residual_l2": 0.06963003315966487,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0
+                ],
+                "cost": 0.055732575402865143,
+                "optimality": 1.8629653222348534e-07
+              },
+              "rotated_primary": {
+                "initial_angle_rad": 3.141592653589793,
+                "success": true,
+                "termination_status": 2,
+                "nfev": 9,
+                "parameters_normalized": {
+                  "amplitude": 39.21466099941919,
+                  "row": 336.48969656319,
+                  "column": 412.26301245464697,
+                  "sigma_row": 2.1961983849070164,
+                  "sigma_column": 2.5121392142986334,
+                  "gamma_row": 0.30885356022087057,
+                  "gamma_column": 4.889875461335932e-32,
+                  "offset": 0.04306656623360045,
+                  "angle_rad": 2.918070454561805
+                },
+                "intensity_scale": 164639.74051340926,
+                "center_row_col": [
+                  336.48969656319,
+                  412.26301245464697
+                ],
+                "relative_residual_l2": 0.06864916184327494,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  0
+                ],
+                "cost": 0.05417343658054451
+              },
+              "start_center_difference_pixels": 8.327119892782288e-09,
+              "rotated_minus_moment_pixels": 0.09658166131858346
+            }
+          },
+          "rotated_window_center_difference_pixels": 0.011705826630776347
+        },
+        {
+          "G": [
+            2,
+            0,
+            0
+          ],
+          "nominal_yx": [
+            432.3402434338508,
+            247.32943650975673
+          ],
+          "fits": {
+            "4": {
+              "unrotated_source": {
+                "start": "source",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 24,
+                "parameters_normalized": {
+                  "amplitude": 37.82816300180941,
+                  "row": 432.8556462697338,
+                  "column": 248.3449513395838,
+                  "sigma_row": 1.839474589359151,
+                  "sigma_column": 2.58828399177624,
+                  "gamma_row": 0.6756968587775611,
+                  "gamma_column": 1.428022640090786e-14,
+                  "offset": 0.04357509064910948
+                },
+                "intensity_scale": 162666.9907432205,
+                "centroid_row_col": [
+                  432.8556462697338,
+                  248.3449513395838
+                ],
+                "relative_residual_l2": 0.07228196442625409,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0
+                ],
+                "cost": 0.04794337731487036,
+                "optimality": 3.983114807095871e-06
+              },
+              "unrotated_peak": {
+                "start": "peak",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 22,
+                "parameters_normalized": {
+                  "amplitude": 37.828165068336205,
+                  "row": 432.8556462729057,
+                  "column": 248.3449513375338,
+                  "sigma_row": 1.8394744638794984,
+                  "sigma_column": 2.5882840134010916,
+                  "gamma_row": 0.6756971033791752,
+                  "gamma_column": 2.0423036391819675e-14,
+                  "offset": 0.043575084666486665
+                },
+                "intensity_scale": 162666.9907432205,
+                "centroid_row_col": [
+                  432.8556462729057,
+                  248.3449513375338
+                ],
+                "relative_residual_l2": 0.07228196442625376,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0
+                ],
+                "cost": 0.04794337731486993,
+                "optimality": 1.1496294437566424e-06
+              },
+              "rotated_primary": {
+                "initial_angle_rad": 3.141592653589793,
+                "success": true,
+                "termination_status": 2,
+                "nfev": 11,
+                "parameters_normalized": {
+                  "amplitude": 37.681195525460566,
+                  "row": 432.8698829924571,
+                  "column": 248.35188776720466,
+                  "sigma_row": 1.8542795174525792,
+                  "sigma_column": 2.6796914737158692,
+                  "gamma_row": 0.5427610666444846,
+                  "gamma_column": 2.1652113514211527e-21,
+                  "offset": 0.03994806151072733,
+                  "angle_rad": 2.755892948953458
+                },
+                "intensity_scale": 162666.9907432205,
+                "center_row_col": [
+                  432.8698829924571,
+                  248.35188776720466
+                ],
+                "relative_residual_l2": 0.03689839730405379,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  0
+                ],
+                "cost": 0.012493488915116114
+              },
+              "start_center_difference_pixels": 3.776667550117745e-09,
+              "rotated_minus_moment_pixels": 0.6706973560498114
+            },
+            "8": {
+              "unrotated_source": {
+                "start": "source",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 18,
+                "parameters_normalized": {
+                  "amplitude": 35.71399135541819,
+                  "row": 432.85147398429154,
+                  "column": 248.32894095446687,
+                  "sigma_row": 2.0410809749340557,
+                  "sigma_column": 2.567854766563026,
+                  "gamma_row": 0.2969793543008232,
+                  "gamma_column": 0.015009908812029415,
+                  "offset": 0.04172490075432908
+                },
+                "intensity_scale": 162666.9907432205,
+                "centroid_row_col": [
+                  432.85147398429154,
+                  248.32894095446687
+                ],
+                "relative_residual_l2": 0.07959986584883072,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.06326858334461638,
+                "optimality": 1.1172679359369684e-05
+              },
+              "unrotated_peak": {
+                "start": "peak",
+                "success": true,
+                "termination_status": 2,
+                "message": "`ftol` termination condition is satisfied.",
+                "nfev": 18,
+                "parameters_normalized": {
+                  "amplitude": 35.71399216933523,
+                  "row": 432.85147399022736,
+                  "column": 248.328940959244,
+                  "sigma_row": 2.041080913137252,
+                  "sigma_column": 2.5678547517546804,
+                  "gamma_row": 0.29697946337532277,
+                  "gamma_column": 0.01500994754896171,
+                  "offset": 0.04172489948765889
+                },
+                "intensity_scale": 162666.9907432205,
+                "centroid_row_col": [
+                  432.85147399022736,
+                  248.328940959244
+                ],
+                "relative_residual_l2": 0.07959986584883091,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "cost": 0.06326858334461667,
+                "optimality": 7.438677782310248e-06
+              },
+              "rotated_primary": {
+                "initial_angle_rad": 3.141592653589793,
+                "success": true,
+                "termination_status": 2,
+                "nfev": 10,
+                "parameters_normalized": {
+                  "amplitude": 36.264553648010505,
+                  "row": 432.85038336287727,
+                  "column": 248.33040727197422,
+                  "sigma_row": 1.932519780296322,
+                  "sigma_column": 2.654805786825135,
+                  "gamma_row": 0.37079012612606344,
+                  "gamma_column": 1.1674109622742753e-19,
+                  "offset": 0.040294250949673156,
+                  "angle_rad": 2.759627173282274
+                },
+                "intensity_scale": 162666.9907432205,
+                "center_row_col": [
+                  432.85038336287727,
+                  248.33040727197422
+                ],
+                "relative_residual_l2": 0.04279964493742771,
+                "active_bounds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  0
+                ],
+                "cost": 0.018291266227681197
+              },
+              "start_center_difference_pixels": 7.61937069471136e-09,
+              "rotated_minus_moment_pixels": 0.4347173435231682
+            }
+          },
+          "rotated_window_center_difference_pixels": 0.02901115697617513
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "fit_count": 72,
+    "failed_optimizer_count": 0,
+    "rotated_relative_residual_range": [
+      0.03689839730405379,
+      0.1197686815756692
+    ],
+    "max_unrotated_start_center_difference_pixels": 1.977757581571968e-06,
+    "max_rotated_window_center_difference_pixels": 0.07712184589091244
+  },
+  "verification_status": "FIT_DIAGNOSTICS_RECORDED_NOT_ACCURACY",
+  "controlling_blocker": "profile_background_adequacy_and_coordinate_uncertainty",
+  "open_blockers": [
+    "no_measured_noise_floor",
+    "rotated_start_sensitivity",
+    "processing_correlation",
+    "finite_patch_response",
+    "UET_mapping"
+  ],
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "global_claim_promotion": false,
+  "claim_boundary": "No optimizer outcome, small residual or window agreement defines physical accuracy. No image correction, alpha fitting or holdout.",
+  "array_export_hashes": {
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/76ec79f27836037aeac1b68854bfbf791bbff2e6256bc1f51080454d525a9a27.npy": "bca59224d8588d760b0f4f9c7af5a90c67d3aabd73d204c997e8131e4977cd27",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/119dfcf6733f29adb2fa1ea4c49c743a0df0840b6e57b9b91f38cfc4afc3859a.npy": "b1b0a5f83da8d2bd6a68528710a424cc313608d51b9867f2e53bbd5fa2e6392f",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/7942e252bc61adaffb92e580b34d2a03ee9b864c525b1eccb3e5e4a3205ac76c.npy": "bcbb75e4a3693c3cf3f519137fa3557b788edec6e8d854548cd575ed8ccfe8f8",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/5fb8eb5e5caa006c3efbe91d52f6ec6f6a749953546d6f0887f67536f18beb1c.npy": "6dfee3710d7cefd319297aeed365bf9276eeb941557db3f57d10f5fd6526f85e",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/76a1dfe0e2c8c3825c582912bae05a42b7cbdfcad5bfd46a2dab73b016f74f1c.npy": "4222ddb5dbab042c6669645cfd43a059c76e26e40b5337d227800dcb65326a55",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/8b4a00429a20b8f7b8dfa719eb016174e1b7934fa27681cab5621fcca510c552.npy": "fa9545b55dc27d5cb7edc4df3ec0049fb65438684ce977c737b3c49312038f9e",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/37047d4bfdd099026ffb09841b6b32eb6ce6d1abca0331d9a704f6bdbd1e14e5.npy": "ce02ba0b009019f65f05f298bc283399275642b6365d274f048e9015f728719f",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/5af174c20afa7986a02c0e71725cebab8360f53e90f42ddcfda791d5ec1b6074.npy": "50bfe54293a26037094cc087c749efe4d8cbddb8d931b67f579eb586c0cda2d2",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/a59f326f2380d2e8eeacd98519c18a61fadf5b95ee45e29fd33bab8416649b14.npy": "1887fc03ef92323890ddba2e7e56a03ee5da0ba85168c36cc152c8664d193fed",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/016f35314b7dd85931d9bb9aedfa93d0ca0577e6bb1008808bc7f1aac10c2d19.npy": "d5916420058d39efaafa26825257b69bfe50cd97a9f9608ab97e9d86c658f87a",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/da849c15e140b6804f2071130e8935b9abb51d8456a46f3c1969a28471e4f477.npy": "e18a743a130352978f1c6c8935edfee74258d9ed06a97ed70c24791a06bc4ae5",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/d53788431bca67423acb165356454cf8e38551e1a74564b9289190b8ba167bd4.npy": "cd8853f5748a084d4c1af666a835a7570d2d8d60842c7bb5c278b4c0a76d10bd"
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_multibragg_positions.json",
+      "sha256": "f3a26671945d94d6635191433f4c3f75951b4a81201fcdb6ca6fddb88e2fdcef"
+    },
+    {
+      "path": "docs/core/artifacts/t13_ued_numeric_inventory_audit.json",
+      "sha256": "b5ec9fbb53c2be6c8b6628dc9561605cd1df271d94511b9be55e1d42e67baddc"
+    },
+    {
+      "path": "docs/core/artifacts/t13_ued_mask_support_audit.json",
+      "sha256": "a83e252fb0cfe08624da122051658bd7fea5d1a5a37170365b925c803e73b7a0"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_outer_bragg_profiles.py",
+      "sha256": "5f6a66569ba7f9a3070eca9462e05d593702cc0ec8090823af613dccbfd7f296"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_ued_voigt_position.py",
+      "sha256": "9098d30e812f3475035b52a9fca6b97469bc807435ef7fb9beeefc132190ea76"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_ued_rotated_position.py",
+      "sha256": "798303861dfc868a1708580b83535ff5acae4c7fcb344db086c0c894100db8ec"
+    },
+    {
+      "path": "docs/core/test/test_topic13_ued_voigt_position.py",
+      "sha256": "f01f50a06745a70894ed671159d814063fdd89587f774b10fca9f3b5c70fa90e"
+    },
+    {
+      "path": "docs/core/test/test_topic13_ued_rotated_position.py",
+      "sha256": "463b49db0300cc4e88503e6abdecfc06fe2a3e1b019a6916c757ccf9deb667be"
+    }
+  ]
+}

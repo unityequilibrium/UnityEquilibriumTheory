@@ -1,3 +1,17 @@
+## 2026-09-13 - Outer Bragg profile comparison
+
+MAJOR_RESULT_CLOSURE: PARTIAL; actual outer-peak center-estimator dependence measured.
+WHAT_IS_ACTUALLY_CLOSED:72 frozen-solver fits completed; profile-vs-moment centers differ up to0.744px, while tested rotated window differences stay below0.0772px.
+WHAT_REMAINS_OPEN: Residual/background adequacy, noise floor, rotated starts, coherent multi-shell estimator and geometry uncertainty.
+DEPENDENCY_UNLOCKED: None.
+STATUS: PROFILE_COMPARISON_NOT_REGISTRATION_CLOSURE.
+WHAT_CHANGED: Outer baseline profile wrapper/artifact and T13_OUTER_BRAGG_PROFILES.md; existing solvers/bounds unchanged.
+EQUATION_OR_MAPPING: Existing unrotated/rotated Voigt with constant background and uniform residual weights.
+VERIFICATION: Four existing tests PASS;72 optimizer successes, residual norms3.69-to11.98%; foundation audit PASS/foundation BLOCKED.
+CONTROLLING_BLOCKER: profile_background_adequacy_and_coordinate_uncertainty.
+NEXT_ACTION: Residual/background adequacy and consistent profile estimator across shells; do not reinterpret raw-moment transfer error solely as geometric distortion.
+CLAIM_BOUNDARY: Fitted-window stability is not physical accuracy; no image correction, alpha or full-topic promotion.
+
 ## 2026-09-13 - Grouped radial registration transfer
 
 MAJOR_RESULT_CLOSURE: PARTIAL; whole-shell transfer checked.
