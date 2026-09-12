@@ -1,3 +1,17 @@
+## 2026-09-12 - Directional covariance refinement
+
+MAJOR_RESULT_CLOSURE: PARTIAL.
+WHAT_IS_ACTUALLY_CLOSED: Tested mesh drift localized predominantly in-plane; six directional cases completed.
+WHAT_REMAINS_OPEN: Convergence, independently verified phase/observable mapping and anharmonic material response.
+DEPENDENCY_UNLOCKED: None.
+STATUS: INTERNAL_DIRECTIONAL_NOT_CONVERGED.
+WHAT_CHANGED: Directional runner/test/artifact and T13_VARIANCE_DIRECTIONAL_GRID.md.
+EQUATION_OR_MAPPING: Existing harmonic local covariance integrated on rectangular reciprocal grids in m^2.
+VERIFICATION: Three tests PASS; six cases sampled stable.32x32x8-to48x48x8 trace changes2.3378%; third-axis refinement at16x16 changes below9e-10 relative. Foundation audit PASS/foundation BLOCKED.
+CONTROLLING_BLOCKER: directional_convergence_and_independent_phase_mapping.
+NEXT_ACTION: Independent phase/displacement audit, then targeted in-plane and coupled directional refinement rather than repeated isotropic passes.
+CLAIM_BOUNDARY: Below30cm^-1 contribution rises to1.8553% on48x48x8; earlier negligible result was coarse-mesh-specific. No physical dimensional reduction or whole-topic closure.
+
 ## 2026-09-12 - Covariance grid-shift sensitivity
 
 MAJOR_RESULT_CLOSURE: PARTIAL.
