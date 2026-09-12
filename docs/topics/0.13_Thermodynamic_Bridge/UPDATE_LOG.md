@@ -1,3 +1,17 @@
+## 2026-09-12 - Frequency attribution of covariance refinement
+
+MAJOR_RESULT_CLOSURE: PARTIAL.
+WHAT_IS_ACTUALLY_CLOSED: Frequency attribution of mesh8-to12 total difference, reconstructing all eight temperature/mesh totals.
+WHAT_REMAINS_OPEN: Shift/resolution convergence, physical mode and phase mapping, anharmonic response.
+DEPENDENCY_UNLOCKED: None.
+STATUS: INTERNAL_ATTRIBUTION_NOT_CONVERGENCE.
+WHAT_CHANGED: Spectral runner, three tests, t13_thermal_variance_spectrum.json and interpretation note.
+EQUATION_OR_MAPPING: Frequency-binned positive harmonic covariance trace in m^2.
+VERIFICATION: Three tests PASS; maximum total reconstruction difference1.45e-15. At300K the30-to300cm^-1 band accounts for105.2582% of net change with cancellation elsewhere; below30 contribution negligible on sampled meshes.
+CONTROLLING_BLOCKER: frequency_resolved_quadrature_convergence_and_physical_mode_mapping.
+NEXT_ACTION: Shifted-mesh and cumulative-band diagnostics; do not infer branch identity or individual mode migration from bins.
+CLAIM_BOUNDARY: No alpha, continuum convergence or Full Topic13 promotion; no holdout read.
+
 ## 2026-09-12 - Local interlayer thermal covariance completion
 
 MAJOR_RESULT_CLOSURE: PARTIAL.
