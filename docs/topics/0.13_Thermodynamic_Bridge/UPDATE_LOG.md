@@ -1,3 +1,17 @@
+## 2026-09-13 - Generic-q coordinate sensitivity of actual signals
+
+MAJOR_RESULT_CLOSURE: PARTIAL; actual detector-ratio sensitivity measured.
+WHAT_IS_ACTUALLY_CLOSED: Nine fixed offsets retain support but can change baseline-subtracted ratios more than nominal signal size in sensitive patches.
+WHAT_REMAINS_OPEN: Registration/background, calibrated geometry uncertainty, finite-patch response/covariance and UET mapping.
+DEPENDENCY_UNLOCKED: None.
+STATUS: EXTERNAL_STRESS_TEST_NOT_CALIBRATION.
+WHAT_CHANGED: Fixed-offset ratio runner, two tests, full curve artifact and T13_PATCH_POSITION_SENSITIVITY.md; no image shifting or optimum selection.
+EQUATION_OR_MAPPING: Patch sum ON/OFF ratio, fixed delay<-.5ps baseline subtraction, axial1/2px readout offsets.
+VERIFICATION: Two tests PASS;16 cases, nine offsets; max differences0.0304602/0.0429036 vs same-patch nominal maxima0.0179255/0.0335967. Foundation audit PASS/foundation BLOCKED.
+CONTROLLING_BLOCKER: registration_response_and_detector_covariance.
+NEXT_ACTION: Model registration/shape uncertainty and propagate through finite-patch response before physical inversion.
+CLAIM_BOUNDARY: Stress offsets are not statistical uncertainty bounds; no calibrated correction, alpha, fit or full-topic promotion.
+
 ## 2026-09-13 - Baseline multi-Bragg position check
 
 MAJOR_RESULT_CLOSURE: PARTIAL; actual peak containment and coordinate sensitivity measured.
