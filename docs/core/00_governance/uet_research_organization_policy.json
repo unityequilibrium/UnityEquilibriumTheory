@@ -132,5 +132,179 @@
     "required_active_rooms": ["ROOM_CORE_ORGANIZATION", "ROOM_TOPIC_013", "ROOM_TOPIC_011"],
     "shared_file_rule": "one canonical owner; other rooms submit a handoff",
     "one_wave_one_blocker": true
-  }
+  },
+  "review_disposition_rules": [
+    {
+      "disposition_id": "W1-T13-HOLDOUT",
+      "patterns": ["docs/core/T13_HOLDOUT_EXPOSURE_*.json"],
+      "owner_id": "DATA",
+      "room_id": "ROOM_TOPIC_013",
+      "logical_area": "06_data",
+      "equation_family_or_lane": "lane.topic13.holdout_source",
+      "organization_status": "ASSIGNED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/06_data/manifests/{name}",
+      "next_action": "add_source_provenance_hash_units_and_preprocessing",
+      "review_action": "assign_to_topic13_data_owner",
+      "reason": "Topic 0.13 holdout metadata belongs to the provenance/data owner; assignment does not make the holdout usable or validated."
+    },
+    {
+      "disposition_id": "W1-FOUNDATION-COARSE-GRAINING",
+      "patterns": ["docs/core/uet_coarse_graining.py"],
+      "owner_id": "FOUNDATION",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "logical_area": "01_contracts",
+      "equation_family_or_lane": "core.coarse_graining_contract_pending",
+      "organization_status": "ASSIGNED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/01_contracts/{name}",
+      "next_action": "close_scale_kernel_units_information_loss_and_observable_map",
+      "review_action": "assign_to_foundation_contract_owner",
+      "reason": "The module defines a cross-lane coarse-graining contract and must be reviewed as foundation metadata before any lane-specific interpretation."
+    },
+    {
+      "disposition_id": "W1-FOUNDATION-GR-CORRESPONDENCE",
+      "patterns": ["docs/core/uet_gr_correspondence.py"],
+      "owner_id": "FOUNDATION",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "logical_area": "01_contracts",
+      "equation_family_or_lane": "core.gr_correspondence_contract_pending",
+      "organization_status": "ASSIGNED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/01_contracts/{name}",
+      "next_action": "close_metric_stress_energy_covariance_and_gr_null_limit",
+      "review_action": "assign_to_foundation_correspondence_owner",
+      "reason": "GR correspondence is a foundation contract and not an application result; the physical mapping remains unclosed."
+    },
+    {
+      "disposition_id": "W1-EQUATION-COVARIANT",
+      "patterns": [
+        "docs/core/uet_covariant_open_system.py",
+        "docs/core/uet_covariant_parent.py",
+        "docs/core/uet_covariant_theory_spine.py",
+        "docs/core/uet_curved_3p1_*.py"
+      ],
+      "owner_id": "EQUATION",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "logical_area": "02_equations",
+      "equation_family_or_lane": "core.covariant_pending",
+      "organization_status": "ASSIGNED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/02_equations/covariant/{name}",
+      "next_action": "link_parent_action_principal_symbol_constraints_units_and_verifier",
+      "review_action": "assign_to_covariant_equation_owner",
+      "reason": "These are covariant equation surfaces, but ownership does not imply a closed parent action, hyperbolic evolution, or GR validation."
+    },
+    {
+      "disposition_id": "W1-EQUATION-MATTER-SPACE",
+      "patterns": [
+        "docs/core/uet_matter_space_flux_*.py"
+      ],
+      "owner_id": "EQUATION",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "logical_area": "02_equations",
+      "equation_family_or_lane": "core.matter_space_flux_pending",
+      "organization_status": "ASSIGNED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/02_equations/matter_space/{name}",
+      "next_action": "link_functional_derivatives_flux_boundary_energy_ledger_and_causal_status",
+      "review_action": "assign_to_matter_space_equation_owner",
+      "reason": "Matter-space flux modules implement an equation family that needs explicit conservation, units, and causal-lane review."
+    },
+    {
+      "disposition_id": "W1-EQUATION-O2-EXTENDED",
+      "patterns": ["docs/core/uet_o2_*.py"],
+      "owner_id": "EQUATION",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "logical_area": "02_equations",
+      "equation_family_or_lane": "core.o2_extended_pending",
+      "organization_status": "ASSIGNED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/02_equations/o2/{name}",
+      "next_action": "link_o2_action_units_derivation_kubo_status_and_verifier",
+      "review_action": "assign_to_o2_equation_owner",
+      "reason": "The O(2) surfaces form an extended equation family; their extensive thermal/Kubo work is not automatically a closed UET derivation."
+    },
+    {
+      "disposition_id": "W1-LANE-QUANTUM-OBSERVER",
+      "patterns": [
+        "docs/core/uet_quantum_interpretations.py",
+        "docs/core/uet_quantum_measurement.py"
+      ],
+      "owner_id": "LANE",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "logical_area": "03_lanes",
+      "equation_family_or_lane": "lane.quantum_measurement_pending",
+      "organization_status": "ASSIGNED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/03_lanes/carrier_observer/{name}",
+      "next_action": "separate_operational_qm_from_interpretation_and_verify_detector_map",
+      "review_action": "assign_to_quantum_observer_lane_owner",
+      "reason": "Quantum measurement and interpretation are a downstream observer lane; the assignment preserves the rule that interpretation metadata cannot change physical dynamics."
+    },
+    {
+      "disposition_id": "W1-LANE-TOPIC13-SUPPORT",
+      "patterns": [
+        "docs/core/t13_*.py",
+        "docs/core/topic13_*.py"
+      ],
+      "owner_id": "LANE",
+      "room_id": "ROOM_TOPIC_013",
+      "logical_area": "03_lanes",
+      "equation_family_or_lane": "lane.topic13.thermal_pending",
+      "organization_status": "ASSIGNED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/03_lanes/topic13_support/{name}",
+      "next_action": "link_observable_units_provenance_calibration_and_holdout_policy",
+      "review_action": "assign_to_topic13_lane_owner",
+      "reason": "The filename and existing topic role identify Topic 0.13 support, but dimensional mapping and external evidence remain blocked."
+    },
+    {
+      "disposition_id": "W1-LANE-THERMAL-SUPPORT",
+      "patterns": [
+        "docs/core/he4_*.py",
+        "docs/core/standard_o2_*.py",
+        "docs/core/thermal_*.py",
+        "docs/core/uet_anisotropic_thermoelastic_response_bridge.py",
+        "docs/core/uet_dynamic_thermoelastic_response.py",
+        "docs/core/uet_dynamical_stability.py",
+        "docs/core/uet_interlayer_mode_residue.py",
+        "docs/core/uet_lattice_momentum_relaxing_heat_parent.py",
+        "docs/core/uet_material_interface_factor_resolution.py",
+        "docs/core/uet_material_lattice_interface_contract.py",
+        "docs/core/uet_matter_strain_susceptibility.py",
+        "docs/core/uet_mode_work_heat.py",
+        "docs/core/uet_raman_deformation_constraint.py",
+        "docs/core/uet_reciprocal_thermal_dynamics.py",
+        "docs/core/uet_scalar_thermoelastic_response_bridge.py",
+        "docs/core/uet_shear_symmetry.py",
+        "docs/core/uet_thermoelastic_spatial_compatibility.py",
+        "docs/core/uet_transport_coefficient_identifiability.py"
+      ],
+      "owner_id": "LANE",
+      "room_id": "ROOM_TOPIC_013",
+      "logical_area": "03_lanes",
+      "equation_family_or_lane": "lane.topic13.thermal_transport_pending",
+      "organization_status": "ASSIGNED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/03_lanes/thermal/{name}",
+      "next_action": "link_formula_units_observable_verifier_and_external_provenance",
+      "review_action": "assign_to_thermal_lane_owner",
+      "reason": "These modules support thermal, thermoelastic, or transport diagnostics; assignment does not establish a dimensional Phi-to-temperature map or empirical validation."
+    },
+    {
+      "disposition_id": "W1-QUARANTINE-UNMATCHED",
+      "patterns": ["docs/core/*"],
+      "owner_id": "ORG",
+      "room_id": "ROOM_CORE_ORGANIZATION",
+      "logical_area": "99_review",
+      "equation_family_or_lane": "QUARANTINE",
+      "organization_status": "QUARANTINED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/99_review/{name}",
+      "next_action": "manual_scope_review",
+      "review_action": "quarantine_unmatched_review_surface",
+      "reason": "No explicit family/lane rule matched this review surface; quarantine prevents an unverified ownership inference from entering a downstream lane."
+    }
+  ]
 }

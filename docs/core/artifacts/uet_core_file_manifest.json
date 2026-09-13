@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_core_file_manifest",
-  "generated_at": "2026-09-13T09:27:04+00:00",
+  "generated_at": "2026-09-13T17:06:05+00:00",
   "generator": "docs/scripts/audit/build_uet_core_file_manifest.py",
   "status": "PASS_WITH_REVIEW_REQUIRED",
   "controlling_blocker": "unlinked_or_ambiguous_core_paths_require_family_assignment_or_quarantine",
@@ -23,7 +23,7 @@
     "support_or_adapter_module": 29,
     "unassigned_python_surface": 33,
     "update_log": 15,
-    "verifier_or_regression_test": 495
+    "verifier_or_regression_test": 496
   },
   "logical_area_counts": {
     "00_governance": 2,
@@ -31,7 +31,7 @@
     "02_equations": 21,
     "03_lanes": 211,
     "04_proofs": 1,
-    "05_tests": 495,
+    "05_tests": 496,
     "06_data": 131,
     "07_artifacts": 589,
     "08_history": 15,
@@ -48,7 +48,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "001ebb9a38961c97485a3cdfc5ad53b2a6391059d794528d4fa3a56fa5cbef15",
+      "sha256": "24254a1e56c90d7a3e07ef85a753f407c810912d3e4b13c0a21ee5bdcb01bec6",
       "review_action": "link_to_registry_and_current_artifact"
     },
     {
@@ -59,7 +59,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "f4680f8cfd811812e6aec3a408437689dd0a24950aabe4899a80fec7e5065949",
+      "sha256": "c76bc8df7b8d21d462fd5b728061ca3c266ee647ca909333919af4f7515f15b8",
       "review_action": "classify_nonstandard_file"
     },
     {
@@ -5317,7 +5317,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "d8686492e1af2824e594b66248e779d5aecf381a9966c5ed6904e83b15d155e4",
+      "sha256": "2d6224e93bf78205867474ce4971cc27cbfe94c1665c5a83796255a2db3ddfba",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -5328,7 +5328,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "0fcc63383adabd7598554c25c31d7d5de373e30faa05d6081943d6d14eff6464",
+      "sha256": "c565688ca1b35c1152e60a9ff4c76b4f825b75d136871a91846bfa84ed1022f9",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -5339,7 +5339,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "f8ff387124fd20778300fa94b24c522b7348a1d26ae7dc5df7fd12a14d2401c6",
+      "sha256": "943f8bf752ceb1df847cc6d51ab30176f43ea0063ef01f2eddc62cac7205b010",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -6505,7 +6505,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "8ebe2306f755c38986eb2f6351bdf3b3b946d63937888e707e6c38523e1007e5",
+      "sha256": "4e733e1a383039e485270a5302918c3f5508854fcb572d2245d09647e86440a0",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -6604,7 +6604,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "7081beb96f68ed5491d00c34e806e10d48343b11ae01025149858c9b7fc78037",
+      "sha256": "6efe93d9be09504ee0cfa5960e9d9a0c3e6b4385249af7cc912c7fca1ca95167",
       "review_action": "link_to_registry_and_current_artifact"
     },
     {
@@ -6615,7 +6615,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "606d35043e7c0b0afd25c496c13630d50a03b1a94f918c2e3589f676cd7a10ef",
+      "sha256": "fa8f4c514137ce2791f77842d222f4644c96d9a3063375e1f28e281255f2c91b",
       "review_action": "link_to_registry_and_current_artifact"
     },
     {
@@ -6626,7 +6626,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "b2fcea68f858f54047e32e6db22715eb0a21896f9021ead34ec1fde1518fe7fe",
+      "sha256": "4b412261b8b469a0d7ba0cfefbc8a3e1478e8b23cb626c9314aab653e27e4500",
       "review_action": "retain_one_entry_per_completed_wave"
     },
     {
@@ -14569,6 +14569,17 @@
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
       "sha256": "468a6c49d66093455a2cd53859000357c923c6f30330d145d5c33c1efc4bed55",
+      "review_action": "link_to_equation_family_or_artifact"
+    },
+    {
+      "path": "docs/core/test/test_uet_core_organization_wave1.py",
+      "file_kind": "verifier_or_regression_test",
+      "logical_area": "05_tests",
+      "owner_family_or_lane": "core_test_surface",
+      "registry_link_status": "NOT_APPLICABLE",
+      "status_source": "MANIFEST_CLASSIFICATION_ONLY",
+      "generated_or_source": "source",
+      "sha256": "9c6660f5d1d74a1a4d5b382ec9ae784c7a4efc6f4c2d93e03a524105a850db8d",
       "review_action": "link_to_equation_family_or_artifact"
     },
     {
