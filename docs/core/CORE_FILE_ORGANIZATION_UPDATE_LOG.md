@@ -28,3 +28,13 @@
 - CONTROLLING_BLOCKER: `assigned_records_need_scientific_link_review`; the foundation gate remains `BLOCKED`, and physical migration is still not performed.
 - NEXT_ACTION: Link each assigned family to its canonical equation/contract, unit lane, verifier, artifact, and claim boundary; then run import/link/compatibility scans before any physical move.
 - CLAIM_BOUNDARY: Organization ownership and routing only; this wave does not validate equations, establish physical correspondence, promote evidence, or alter legacy behavior.
+
+## 2026-09-14 — Wave 2: scientific-link inventory
+
+- STATUS: `BLOCKED_OPEN_SCIENTIFIC_LINKS`
+- WHAT_CHANGED: Added `audit_uet_core_scientific_links.py`, its machine-readable audit artifact, and regression tests. The audit compares the 133 Wave 1 assignments with the canonical equation-family contract and records the missing formula, unit, verifier, artifact, and claim links without inferring them from filenames.
+- VERIFICATION: The audit covered all 133 assigned records across nine pending families; every source path exists; organization assignment did not promote evidence; the foundation gate remains `BLOCKED`; and the physical-move flag remains `false`.
+- RESULT: No assigned record currently has a direct canonical family-contract match or any of the five required scientific-link fields. The exact JSON correspondence registry parses successfully, while its case-insensitive compatibility lint reports the visible `g_munu`/`G_munu` key collision for review.
+- CONTROLLING_BLOCKER: `pending_families_have_no_canonical_formula_unit_verifier_artifact_chain`.
+- NEXT_ACTION: Create canonical family-link records in bounded batches, starting with foundation/matter-space and covariant families; populate formula IDs, unit lanes, verifier paths, artifact paths, and claim ceilings only from existing source contracts or newly verified outputs.
+- CLAIM_BOUNDARY: This is a link inventory and metadata-drift audit only; it does not verify equations, close units, establish observables, or promote physical/empirical claims.

@@ -66,6 +66,7 @@ Prose ที่มีจำนวนหรือสถานะเก่าก�
 - organization registry: `docs/core/artifacts/uet_research_organization_registry.json`
 - migration map: `docs/core/artifacts/uet_core_file_migration_map.json`
 - organization audit: `docs/core/artifacts/uet_core_organization_audit.json`
+- scientific-link audit: `docs/core/artifacts/uet_core_scientific_link_audit.json`
 
 ทุก record ต้องมีอย่างน้อย:
 
@@ -95,9 +96,10 @@ unit lane และ claim ceiling
 2. สร้างหรือ refresh core-file manifest
 3. refresh organization registry และ migration map
 4. ระบุ owner family/lane และ logical area
-5. แยก equation, support, comparator, verifier, artifact และ history
-6. ผูก formula → implementation → verifier → artifact → source
-7. อัปเดต manifest, registry และ update log ใน wave เดียวกัน
+5. รัน scientific-link audit เพื่อแยก organization assignment ออกจาก scientific linkage
+6. แยก equation, support, comparator, verifier, artifact และ history
+7. ผูก formula → implementation → verifier → artifact → source
+8. อัปเดต manifest, registry, link audit และ update log ใน wave เดียวกัน
 
 ห้ามเพิ่มไฟล์ใหม่ที่ root ของ `docs/core/` หากอยู่ใน logical area เดิมได้
 หากต้องรักษา legacy path ให้ใช้ adapter/index และบันทึกเหตุผล
