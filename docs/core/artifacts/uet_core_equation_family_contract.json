@@ -148,6 +148,14 @@
         "docs/core/artifacts/trace_kernel_formula_audit.json"
       ],
       "next_gate": "close compact-support and dimensional measurement operator",
+      "formula_ids": [
+        "uet.trace.derived_observable"
+      ],
+      "verifier_paths": [
+        "docs/core/test/test_spacetime_trace.py",
+        "docs/core/artifacts/spacetime_trace_verification.json"
+      ],
+      "organization_review_required": true,
       "candidate_surface_count": 40,
       "module_paths_exist": true
     },

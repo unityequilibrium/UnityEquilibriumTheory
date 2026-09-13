@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_core_file_manifest",
-  "generated_at": "2026-09-13T22:56:01+00:00",
+  "generated_at": "2026-09-13T23:09:58+00:00",
   "generator": "docs/scripts/audit/build_uet_core_file_manifest.py",
   "status": "PASS_WITH_REVIEW_REQUIRED",
   "controlling_blocker": "unlinked_or_ambiguous_core_paths_require_family_assignment_or_quarantine",
@@ -12,19 +12,19 @@
   ],
   "counts": {
     "declared_input_data": 131,
-    "equation_module": 18,
+    "equation_module": 17,
     "folder_governance": 1,
     "generated_artifact": 593,
     "lane_specific_module": 99,
     "navigation_and_legacy_boundary": 1,
     "proof_or_derivation_runner": 1,
     "review_required": 2,
-    "review_required_equation_module": 6,
+    "review_required_equation_module": 7,
     "specification_or_research_note": 127,
     "support_or_adapter_module": 29,
     "unassigned_python_surface": 30,
     "update_log": 15,
-    "verifier_or_regression_test": 500
+    "verifier_or_regression_test": 502
   },
   "logical_area_counts": {
     "00_governance": 2,
@@ -32,13 +32,13 @@
     "02_equations": 24,
     "03_lanes": 211,
     "04_proofs": 1,
-    "05_tests": 500,
+    "05_tests": 502,
     "06_data": 131,
     "07_artifacts": 593,
     "08_history": 15,
     "99_review": 32
   },
-  "review_required_count": 135,
+  "review_required_count": 136,
   "source_artifact_parse_errors": [],
   "files": [
     {
@@ -49,7 +49,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "44f4f9510e15e3dbe2aa63dcd21b0f1696c83e5c0986a76ea8cb1afed9506168",
+      "sha256": "27cbb1ef63dc1a3cdae388cd5f329fd79ae4693ba1e86bc0ed5d20a4ff7be623",
       "review_action": "link_to_registry_and_current_artifact"
     },
     {
@@ -60,7 +60,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "465092964203802fcad7a24eaf717f964f5defa3da079d154e36e47f6e77e3e8",
+      "sha256": "5cd887de2ccf2d158b42855874231e91977e4f42f8065c76107d2e8dd18c8dc8",
       "review_action": "classify_nonstandard_file"
     },
     {
@@ -5307,7 +5307,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "1bb218e1894abab97a1cb6da4393acb255050cf8902be1e828141966dc6cfa5b",
+      "sha256": "e15ed1e606abe16c73c4a250f5adb4a1df52341cb48c3b4d462097171b7764c9",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -5318,7 +5318,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "cd1765de5dbaae1b61754f57cd46d7b2dce46fb79c5d83429447b0242f99654e",
+      "sha256": "df500a3d99e0e40ad34d55f710e5965eba783154bcd494c1bc505f70ce768fd4",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -5329,7 +5329,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "fb9aae90b0b3ae7d5f6cbd58d917343461bb2e1bbefb3c54034d46256894e2cb",
+      "sha256": "e9006e30d7a88332c5d21ce834dced202dbe556660caad01a534ef05ad31af6c",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -5340,7 +5340,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "329d8d5afbb2b34ffa687d21ccca72cd76190b51a3c74e39fb9ebfd440f879b0",
+      "sha256": "d5d7b9868495a14212f14f46a48db6d5a43268f2bd38d542d56108cba6fe140f",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -5351,7 +5351,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "4c2dabb67ca66449f7c081c81cef0d799f3ea809ce51e05c4915fe75196cdb89",
+      "sha256": "b35c42854aec05ee6375fb9227582dde7ab1faedcf9e274f281ece2ae3223b5c",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -6187,7 +6187,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "7b6d4d2aa4665bfa282c16e81c1ae8a78244e48a05a306054af355eee8277868",
+      "sha256": "60ebdf406d4ba16b2d42f26724400f9eff3582365e61f10575c50995e2716793",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -6550,7 +6550,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "fa5d5d4cf7220cfbdcd18ad24ea8dea532ffd5197db9856b2e94948fa5dc1c3f",
+      "sha256": "fbd7316a0cbb799659f9a070b799eb28b51e52eaf9e5ed99d2918630ac187005",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -6660,7 +6660,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "0800cade329b89d75f05ed7c61be7ee35030dd44c1cb304131790a6e10761b34",
+      "sha256": "06868d13def0021bb17562ea373240762c651eb4583a70246e9ecd93fbd7b7e5",
       "review_action": "link_to_registry_and_current_artifact"
     },
     {
@@ -6671,7 +6671,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "1760ea7567b2638b1d46ce1b7a4432cb3de3dc5f783790eb544d4b500ec12faa",
+      "sha256": "1838a7726aae97aa67b76c0a4f328287eb0d852a18e609c5e576a36ca030010e",
       "review_action": "retain_one_entry_per_completed_wave"
     },
     {
@@ -14624,7 +14624,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "9c6660f5d1d74a1a4d5b382ec9ae784c7a4efc6f4c2d93e03a524105a850db8d",
+      "sha256": "592c2b9b2ff45239367d29e7d46db7f5e28a5e9ee7b46c37929add6550492c0d",
       "review_action": "link_to_equation_family_or_artifact"
     },
     {
@@ -14635,7 +14635,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "bcead6c2f17ad6025718b43392ee6cc3b379cef9499de1eb0d11e5e80a0a03fd",
+      "sha256": "5e59a2af252f7f3878fc8671bfa768b0e1a329248cd869b9f631f4341f66d959",
       "review_action": "link_to_equation_family_or_artifact"
     },
     {
@@ -14914,6 +14914,17 @@
       "review_action": "link_to_equation_family_or_artifact"
     },
     {
+      "path": "docs/core/test/test_uet_noether_mapping_links.py",
+      "file_kind": "verifier_or_regression_test",
+      "logical_area": "05_tests",
+      "owner_family_or_lane": "core_test_surface",
+      "registry_link_status": "NOT_APPLICABLE",
+      "status_source": "MANIFEST_CLASSIFICATION_ONLY",
+      "generated_or_source": "source",
+      "sha256": "9a27f2787b72bb13a139d56a63a75498179999b3c7bdf30627dd48ba04343a3b",
+      "review_action": "link_to_equation_family_or_artifact"
+    },
+    {
       "path": "docs/core/test/test_uet_quantum_interpretations.py",
       "file_kind": "verifier_or_regression_test",
       "logical_area": "05_tests",
@@ -14966,6 +14977,17 @@
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
       "sha256": "6e17e091d806c26c75e0bcb7612a75978d79d51502d79893ef4420a3015934ba",
+      "review_action": "link_to_equation_family_or_artifact"
+    },
+    {
+      "path": "docs/core/test/test_uet_trace_links.py",
+      "file_kind": "verifier_or_regression_test",
+      "logical_area": "05_tests",
+      "owner_family_or_lane": "core_test_surface",
+      "registry_link_status": "NOT_APPLICABLE",
+      "status_source": "MANIFEST_CLASSIFICATION_ONLY",
+      "generated_or_source": "source",
+      "sha256": "8e84fea94b199db81b98bfb34167864d5a491928ec2f147f19304e5e5b79593d",
       "review_action": "link_to_equation_family_or_artifact"
     },
     {
@@ -17071,14 +17093,14 @@
     },
     {
       "path": "docs/core/uet_trace.py",
-      "file_kind": "equation_module",
+      "file_kind": "review_required_equation_module",
       "logical_area": "02_equations",
       "owner_family_or_lane": "core.trace",
-      "registry_link_status": "LINKED_BY_FAMILY_CONTRACT",
+      "registry_link_status": "REVIEW_REQUIRED",
       "status_source": "docs/core/artifacts/uet_core_equation_family_contract.json",
       "generated_or_source": "source",
       "sha256": "1ec92af5edba09f1a4352661c5489b371f89dcf72c223c2843ce694ee75f78fb",
-      "review_action": "update_family_record_when_surface_changes"
+      "review_action": "complete_bounded_family_link_review"
     },
     {
       "path": "docs/core/uet_transport_coefficient_identifiability.py",

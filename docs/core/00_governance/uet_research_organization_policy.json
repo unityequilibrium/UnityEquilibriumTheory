@@ -324,6 +324,22 @@
       "reason": "These modules support thermal, thermoelastic, or transport diagnostics; assignment does not establish a dimensional Phi-to-temperature map or empirical validation."
     },
     {
+      "disposition_id": "W2-EQUATION-TRACE",
+      "patterns": [
+        "docs/core/uet_trace.py"
+      ],
+      "owner_id": "EQUATION",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "logical_area": "02_equations",
+      "equation_family_or_lane": "core.trace",
+      "organization_status": "ASSIGNED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/02_equations/matter_space/{name}",
+      "next_action": "repair_trace_compact_support_and_define_dimensional_measurement_operator_without_backreaction",
+      "review_action": "assign_to_trace_equation_owner",
+      "reason": "The trace module has an existing normalized derived-observable record and local causal/history tests; assignment does not establish continuum Green-function validity, SI measurement, energy-reservoir semantics, or feedback into physical dynamics."
+    },
+    {
       "disposition_id": "W2-EQUATION-NOETHER-MAPPING",
       "patterns": [
         "docs/core/uet_noether.py",
