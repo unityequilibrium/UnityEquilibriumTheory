@@ -157,6 +157,12 @@ FAMILIES = [
         "diagnostic derived observable; no substance/energy-reservoir claim",
         ["docs/core/artifacts/spacetime_trace_verification.json", "docs/core/artifacts/trace_kernel_formula_audit.json"],
         "close compact-support and dimensional measurement operator",
+        formula_ids=["uet.trace.derived_observable"],
+        verifier_paths=[
+            "docs/core/test/test_spacetime_trace.py",
+            "docs/core/artifacts/spacetime_trace_verification.json",
+        ],
+        organization_review_required=True,
     ),
     family(
         "core.covariant_response",

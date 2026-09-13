@@ -20,12 +20,12 @@ def test_wave1_covers_previous_review_queue_without_physical_move() -> None:
     audit = load_json("uet_core_organization_audit.json")
 
     assert registry["organization_wave"] == "WAVE_1_ASSIGN_AND_QUARANTINE"
-    assert registry["pre_disposition_review_count"] == 136
-    assert registry["dispositioned_review_count"] == 136
+    assert registry["pre_disposition_review_count"] == 137
+    assert registry["dispositioned_review_count"] == 137
     assert registry["undispositioned_review_count"] == 0
     assert registry["review_queue_count"] == 0
     assert registry["quarantine_count"] == 0
-    assert registry["assigned_review_count"] == 136
+    assert registry["assigned_review_count"] == 137
     assert audit["undispositioned_paths"] == []
     assert audit["unassigned_paths"] == []
     assert audit["quarantined_paths"] == []
@@ -40,7 +40,7 @@ def test_wave1_assignments_do_not_promote_scientific_evidence() -> None:
         if item.get("organization_disposition") is not None
     ]
 
-    assert len(assigned) == 136
+    assert len(assigned) == 137
     assert all(item["evidence_status"] == "BLOCKED" for item in assigned)
     assert all(item["status_source"].endswith("uet_research_organization_policy.json") for item in assigned)
     assert registry["scientific_foundation_status"]["status"] == "BLOCKED"
@@ -53,7 +53,7 @@ def test_wave1_disposition_rules_are_explicit_and_used() -> None:
     rule_ids = {rule["disposition_id"] for rule in policy["review_disposition_rules"]}
     used_ids = set(registry["disposition_counts"])
 
-    assert len(rule_ids) == 13
+    assert len(rule_ids) == 14
     assert used_ids <= rule_ids
     assert used_ids >= {
         "W1-T13-HOLDOUT",

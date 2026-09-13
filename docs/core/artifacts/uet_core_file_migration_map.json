@@ -1,8 +1,8 @@
 {
   "artifact": "uet_core_file_migration_map",
-  "assigned_review_count": 136,
+  "assigned_review_count": 137,
   "controlling_blocker": "assigned_records_need_scientific_link_review",
-  "dispositioned_review_count": 136,
+  "dispositioned_review_count": 137,
   "files": [
     {
       "asset_id": "UET-CORE-FILE-E34A3762F36D",
@@ -23515,6 +23515,23 @@
       "target_physical_path": "docs/core/05_tests/regression/test_uet_matter_space_flux_links.py"
     },
     {
+      "asset_id": "UET-CORE-FILE-699FE86CDFE8",
+      "compatibility_plan": "retain_current_path_until_import_link_and_test_gates_pass",
+      "current_path": "docs/core/test/test_uet_noether_mapping_links.py",
+      "equation_family_or_lane": "core_test_surface",
+      "evidence_status": "INTERNAL",
+      "import_reference_count": null,
+      "link_reference_count": null,
+      "migration_state": "COMPATIBILITY_PATH_RETAINED",
+      "next_action": "link_registry_status_and_owner",
+      "organization_status": "ASSIGNED",
+      "owner_id": "EVIDENCE",
+      "reference_scan_status": "DEFERRED_TO_MIGRATION_WAVE",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "target_path": "docs/core/05_tests/regression/test_uet_noether_mapping_links.py",
+      "target_physical_path": "docs/core/05_tests/regression/test_uet_noether_mapping_links.py"
+    },
+    {
       "asset_id": "UET-CORE-FILE-AA0AC250DDFA",
       "compatibility_plan": "retain_current_path_until_import_link_and_test_gates_pass",
       "current_path": "docs/core/test/test_uet_quantum_interpretations.py",
@@ -23598,6 +23615,23 @@
       "room_id": "ROOM_CORE_FOUNDATION",
       "target_path": "docs/core/05_tests/equation/test_uet_topic_formula_correspondence_manifest.py",
       "target_physical_path": "docs/core/05_tests/equation/test_uet_topic_formula_correspondence_manifest.py"
+    },
+    {
+      "asset_id": "UET-CORE-FILE-1636DB617B55",
+      "compatibility_plan": "retain_current_path_until_import_link_and_test_gates_pass",
+      "current_path": "docs/core/test/test_uet_trace_links.py",
+      "equation_family_or_lane": "core_test_surface",
+      "evidence_status": "INTERNAL",
+      "import_reference_count": null,
+      "link_reference_count": null,
+      "migration_state": "COMPATIBILITY_PATH_RETAINED",
+      "next_action": "link_registry_status_and_owner",
+      "organization_status": "ASSIGNED",
+      "owner_id": "EVIDENCE",
+      "reference_scan_status": "DEFERRED_TO_MIGRATION_WAVE",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "target_path": "docs/core/05_tests/regression/test_uet_trace_links.py",
+      "target_physical_path": "docs/core/05_tests/regression/test_uet_trace_links.py"
     },
     {
       "asset_id": "UET-CORE-FILE-8FE6F820DF08",
@@ -26628,12 +26662,14 @@
       "asset_id": "UET-CORE-FILE-6F1D9D3D4B50",
       "compatibility_plan": "retain_current_path_until_import_link_and_test_gates_pass",
       "current_path": "docs/core/uet_trace.py",
+      "disposition_reason": "The trace module has an existing normalized derived-observable record and local causal/history tests; assignment does not establish continuum Green-function validity, SI measurement, energy-reservoir semantics, or feedback into physical dynamics.",
       "equation_family_or_lane": "core.trace",
-      "evidence_status": "INTERNAL",
+      "evidence_status": "BLOCKED",
       "import_reference_count": null,
       "link_reference_count": null,
       "migration_state": "NOT_STARTED",
-      "next_action": "link_formula_verifier_artifact_and_migration_target",
+      "next_action": "repair_trace_compact_support_and_define_dimensional_measurement_operator_without_backreaction",
+      "organization_disposition": "W2-EQUATION-TRACE",
       "organization_status": "ASSIGNED",
       "owner_id": "EQUATION",
       "reference_scan_status": "DEFERRED_TO_MIGRATION_WAVE",
@@ -26678,12 +26714,12 @@
       "target_physical_path": "docs/core/03_lanes/review/uet_viz.py"
     }
   ],
-  "generated_at": "2026-09-13T22:56:07+00:00",
+  "generated_at": "2026-09-13T23:10:05+00:00",
   "generator": "docs/scripts/audit/build_uet_research_organization_registry_v2.py",
   "organization_disposition_source": "docs/core/00_governance/uet_research_organization_policy.json",
   "organization_wave": "WAVE_1_ASSIGN_AND_QUARANTINE",
   "physical_move_performed": false,
-  "pre_disposition_review_count": 136,
+  "pre_disposition_review_count": 137,
   "preconditions": [
     "owner and logical area assigned",
     "import scan passes",

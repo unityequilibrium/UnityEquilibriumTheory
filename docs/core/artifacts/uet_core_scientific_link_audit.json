@@ -14,8 +14,8 @@
   "checks": [
     {
       "check_id": "assigned_records_are_all_audited",
-      "expected": 136,
-      "observed": 136,
+      "expected": 137,
+      "observed": 137,
       "status": "PASS"
     },
     {
@@ -464,6 +464,42 @@
       "unit_lane_from_contract": null
     },
     {
+      "canonical_family_contract_id": "core.trace",
+      "canonical_family_contract_status": "FOUND",
+      "claim_boundary": "link audit only; no equation or physical claim promotion",
+      "claim_ceiling_from_contract": "diagnostic derived observable; no substance/energy-reservoir claim",
+      "contract_evidence_paths": [
+        "docs/core/artifacts/spacetime_trace_verification.json",
+        "docs/core/artifacts/trace_kernel_formula_audit.json"
+      ],
+      "contract_evidence_paths_exist": true,
+      "family_or_lane": "core.trace",
+      "link_status": "LINKED_PENDING_VERIFICATION",
+      "missing_link_fields": [],
+      "next_action": "repair_trace_compact_support_and_define_dimensional_measurement_operator_without_backreaction",
+      "organization_dispositions": [
+        "W2-EQUATION-TRACE"
+      ],
+      "owner_ids": [
+        "EQUATION"
+      ],
+      "record_count": 1,
+      "record_link_field_counts": {
+        "artifact_paths": 1,
+        "claim_ceiling": 1,
+        "formula_ids": 1,
+        "unit_lane": 1,
+        "verifier_paths": 1
+      },
+      "record_paths": [
+        "docs/core/uet_trace.py"
+      ],
+      "room_ids": [
+        "ROOM_CORE_FOUNDATION"
+      ],
+      "unit_lane_from_contract": "normalized_v1"
+    },
+    {
       "canonical_family_contract_id": null,
       "canonical_family_contract_status": "MISSING",
       "claim_boundary": "link audit only; no equation or physical claim promotion",
@@ -650,7 +686,7 @@
       "unit_lane_from_contract": null
     }
   ],
-  "generated_at": "2026-09-13T22:56:12+00:00",
+  "generated_at": "2026-09-13T23:10:09+00:00",
   "generator": "docs/scripts/audit/audit_uet_core_scientific_links.py",
   "input_errors": [],
   "inputs": {
@@ -660,7 +696,7 @@
     },
     "family_contract": {
       "path": "docs/core/artifacts/uet_core_equation_family_contract.json",
-      "sha256": "1bb218e1894abab97a1cb6da4393acb255050cf8902be1e828141966dc6cfa5b"
+      "sha256": "e15ed1e606abe16c73c4a250f5adb4a1df52341cb48c3b4d462097171b7764c9"
     },
     "foundation_gate": {
       "path": "docs/core/artifacts/uet_foundation_dependency_gate.json",
@@ -668,15 +704,15 @@
     },
     "migration_map": {
       "path": "docs/core/artifacts/uet_core_file_migration_map.json",
-      "sha256": "e9006e30d7a88332c5d21ce834dced202dbe556660caad01a534ef05ad31af6c"
+      "sha256": "36ad7cd49775d934dc03fc610c61db0d919d1733d7d7672129cf634a0585d828"
     },
     "organization_policy": {
       "path": "docs/core/00_governance/uet_research_organization_policy.json",
-      "sha256": "465092964203802fcad7a24eaf717f964f5defa3da079d154e36e47f6e77e3e8"
+      "sha256": "5cd887de2ccf2d158b42855874231e91977e4f42f8065c76107d2e8dd18c8dc8"
     },
     "organization_registry": {
       "path": "docs/core/artifacts/uet_research_organization_registry.json",
-      "sha256": "fbd7316a0cbb799659f9a070b799eb28b51e52eaf9e5ed99d2918630ac187005"
+      "sha256": "f037f106d91a394129d1007c02388bbc81c1d45a10a44e94569a5b914f89aabc"
     }
   },
   "interpretation": [
@@ -2422,6 +2458,23 @@
       "verifier_paths_present": false
     },
     {
+      "artifact_paths_present": true,
+      "claim_ceiling_present": true,
+      "evidence_status": "BLOCKED",
+      "family_link_status": "LINKED_PENDING_VERIFICATION",
+      "family_or_lane": "core.trace",
+      "formula_ids_present": true,
+      "next_action": "repair_trace_compact_support_and_define_dimensional_measurement_operator_without_backreaction",
+      "organization_disposition": "W2-EQUATION-TRACE",
+      "organization_status": "ASSIGNED",
+      "owner_id": "EQUATION",
+      "path": "docs/core/uet_trace.py",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "source_exists": true,
+      "unit_lane_present": true,
+      "verifier_paths_present": true
+    },
+    {
       "artifact_paths_present": false,
       "claim_ceiling_present": false,
       "evidence_status": "BLOCKED",
@@ -3002,15 +3055,15 @@
   ],
   "schema_version": "1.0",
   "scope": {
-    "assigned_review_record_count": 136,
-    "family_or_lane_count": 12,
-    "organization_registry_file_count": 1553,
+    "assigned_review_record_count": 137,
+    "family_or_lane_count": 13,
+    "organization_registry_file_count": 1555,
     "physical_move_performed": false
   },
   "summary": {
-    "assigned_records": 136,
-    "audited_records": 136,
-    "canonical_family_contract_matches": 4,
+    "assigned_records": 137,
+    "audited_records": 137,
+    "canonical_family_contract_matches": 5,
     "case_insensitive_key_collision_count": 2,
     "families_without_canonical_contract": 8,
     "missing_link_field_counts": {
@@ -3021,11 +3074,11 @@
       "verifier_paths": 130
     },
     "missing_source_path_count": 0,
-    "records_with_artifact_paths": 6,
-    "records_with_claim_ceiling": 6,
-    "records_with_formula_ids": 6,
-    "records_with_unit_lane": 6,
-    "records_with_verifier_paths": 6,
+    "records_with_artifact_paths": 7,
+    "records_with_claim_ceiling": 7,
+    "records_with_formula_ids": 7,
+    "records_with_unit_lane": 7,
+    "records_with_verifier_paths": 7,
     "records_without_canonical_contract": 130
   }
 }
