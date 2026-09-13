@@ -58,3 +58,13 @@
 - CONTROLLING_BLOCKER: `pending_families_have_no_canonical_formula_unit_verifier_artifact_chain` remains active for the eight unresolved groups; the parent family itself remains blocked for curved 3+1 evolution, dimensional observables, and physical GR validation.
 - NEXT_ACTION: Build the next bounded covariant family-link package only from an existing complete chain (likely theory-spine or a single curved 3+1 sub-family); keep open-system and remaining curved modules pending and do not physically migrate files.
 - CLAIM_BOUNDARY: This wave establishes organization traceability for a candidate natural-unit conservative parent formula evaluator. It does not derive Einstein/GR, open-system closure, SI physics, or an empirical UET claim.
+
+## 2026-09-14 — Wave 5: bounded covariant-diffusion family link
+
+- STATUS: `BLOCKED_OPEN_SCIENTIFIC_LINKS`
+- WHAT_CHANGED: Added a generated four-entry correspondence addendum for the covariant current decomposition, finite-relaxation bridge, semi-discrete energy identity, and Model-B adiabatic limit. Declared `core.covariant_diffusion` with its natural-to-normalized unit lane, verifier/test paths, and a dedicated `W2-EQUATION-COVARIANT-DIFFUSION` organization disposition; no physics source or legacy operator was changed.
+- VERIFICATION: Generated the addendum from the existing diffusion audit and source hashes; its local verification input remains `audit_status=PASS` with `evidence_status=PARTIAL`; 51 focused diffusion/parent/flux/organization/link tests passed; organization and scientific-link checks remain gated for the final checkpoint.
+- RESULT: 4 of 134 assigned review records now carry the full formula/unit/verifier/artifact/claim link set. The remaining 130 records are still open across 8 family groups; the `g_munu`/`G_munu` case-insensitive metadata lint remains visible.
+- CONTROLLING_BLOCKER: `pending_families_have_no_canonical_formula_unit_verifier_artifact_chain` remains active for the unresolved groups; the diffusion family itself remains blocked for microscopic transport origin, UV/spinodal causality, KMS/Bianchi completion, SI mapping, and physical validation.
+- NEXT_ACTION: Select the next single family only from an existing complete chain (likely `core.noether_mapping` or another explicitly verified comparator); preserve the diffusion branch as a partial constitutive bridge and keep physical migration deferred.
+- CLAIM_BOUNDARY: This wave establishes correspondence traceability for a named normalized covariant-current bridge. It does not derive microscopic transport, finite-cone full phase dynamics, SI heat physics, GR validation, or a universal meaning for `C`.

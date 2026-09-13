@@ -10,8 +10,8 @@
   "checks": [
     {
       "check_id": "assigned_records_are_all_audited",
-      "expected": 133,
-      "observed": 133,
+      "expected": 134,
+      "observed": 134,
       "status": "PASS"
     },
     {
@@ -97,6 +97,42 @@
         "ROOM_CORE_FOUNDATION"
       ],
       "unit_lane_from_contract": null
+    },
+    {
+      "canonical_family_contract_id": "core.covariant_diffusion",
+      "canonical_family_contract_status": "FOUND",
+      "claim_boundary": "link audit only; no equation or physical claim promotion",
+      "claim_ceiling_from_contract": "candidate constitutive transport; coefficient provenance and SI map remain open",
+      "contract_evidence_paths": [
+        "docs/core/artifacts/covariant_diffusion_formula_audit.json",
+        "docs/core/artifacts/covariant_diffusive_current_verification.json"
+      ],
+      "contract_evidence_paths_exist": true,
+      "family_or_lane": "core.covariant_diffusion",
+      "link_status": "LINKED_PENDING_VERIFICATION",
+      "missing_link_fields": [],
+      "next_action": "verify_covariant_current_link_chain_and_preserve_uv_kms_si_blockers",
+      "organization_dispositions": [
+        "W2-EQUATION-COVARIANT-DIFFUSION"
+      ],
+      "owner_ids": [
+        "EQUATION"
+      ],
+      "record_count": 1,
+      "record_link_field_counts": {
+        "artifact_paths": 1,
+        "claim_ceiling": 1,
+        "formula_ids": 1,
+        "unit_lane": 1,
+        "verifier_paths": 1
+      },
+      "record_paths": [
+        "docs/core/uet_covariant_diffusion.py"
+      ],
+      "room_ids": [
+        "ROOM_CORE_FOUNDATION"
+      ],
+      "unit_lane_from_contract": "natural_or_normalized_control"
     },
     {
       "canonical_family_contract_id": "core.covariant_parent",
@@ -568,17 +604,17 @@
       "unit_lane_from_contract": null
     }
   ],
-  "generated_at": "2026-09-13T22:08:18+00:00",
+  "generated_at": "2026-09-13T22:43:29+00:00",
   "generator": "docs/scripts/audit/audit_uet_core_scientific_links.py",
   "input_errors": [],
   "inputs": {
     "correspondence_registry": {
       "path": "docs/core/artifacts/uet_equation_correspondence_registry.json",
-      "sha256": "8bbcf28ed4a3ab11b17536f3122aefd1c9d6dd7ce5b98a5872b5ce6082193a10"
+      "sha256": "522ff6de8e4892fedd85fb3d02b3fbba7bf7621fb12c40b1da3597c41308f073"
     },
     "family_contract": {
       "path": "docs/core/artifacts/uet_core_equation_family_contract.json",
-      "sha256": "05abc2433b2c38a55829da8ee50ded7aab0366f2fb1ec8c007cadf124ce55cb4"
+      "sha256": "cda3b04788ff337d54b4b671d73cc69dbb680e3d809b89498ce71ae96f729127"
     },
     "foundation_gate": {
       "path": "docs/core/artifacts/uet_foundation_dependency_gate.json",
@@ -586,15 +622,15 @@
     },
     "migration_map": {
       "path": "docs/core/artifacts/uet_core_file_migration_map.json",
-      "sha256": "e0e98accdfa98f0a663a501aa23c27f9c78769be046bbe3d07550fe5d0b2a1b8"
+      "sha256": "fb9aae90b0b3ae7d5f6cbd58d917343461bb2e1bbefb3c54034d46256894e2cb"
     },
     "organization_policy": {
       "path": "docs/core/00_governance/uet_research_organization_policy.json",
-      "sha256": "9aabfd120abf9dc408a72687d1a23f4f64ef3787680bfbcf8a8ae06ca8287e78"
+      "sha256": "9b3b5f4af365c8cda9a2b8323fdb78dc77f56582013a33c237f3ae4cb664c463"
     },
     "organization_registry": {
       "path": "docs/core/artifacts/uet_research_organization_registry.json",
-      "sha256": "7476f8f1707be5ed0b2467047f4741a35fea2ea2c07e45b7db30c3dcab31f53e"
+      "sha256": "fa5d5d4cf7220cfbdcd18ad24ea8dea532ffd5197db9856b2e94948fa5dc1c3f"
     }
   },
   "interpretation": [
@@ -621,6 +657,23 @@
       "source_exists": true,
       "unit_lane_present": false,
       "verifier_paths_present": false
+    },
+    {
+      "artifact_paths_present": true,
+      "claim_ceiling_present": true,
+      "evidence_status": "BLOCKED",
+      "family_link_status": "LINKED_PENDING_VERIFICATION",
+      "family_or_lane": "core.covariant_diffusion",
+      "formula_ids_present": true,
+      "next_action": "verify_covariant_current_link_chain_and_preserve_uv_kms_si_blockers",
+      "organization_disposition": "W2-EQUATION-COVARIANT-DIFFUSION",
+      "organization_status": "ASSIGNED",
+      "owner_id": "EQUATION",
+      "path": "docs/core/uet_covariant_diffusion.py",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "source_exists": true,
+      "unit_lane_present": true,
+      "verifier_paths_present": true
     },
     {
       "artifact_paths_present": true,
@@ -2869,15 +2922,15 @@
   ],
   "schema_version": "1.0",
   "scope": {
-    "assigned_review_record_count": 133,
-    "family_or_lane_count": 10,
-    "organization_registry_file_count": 1550,
+    "assigned_review_record_count": 134,
+    "family_or_lane_count": 11,
+    "organization_registry_file_count": 1552,
     "physical_move_performed": false
   },
   "summary": {
-    "assigned_records": 133,
-    "audited_records": 133,
-    "canonical_family_contract_matches": 2,
+    "assigned_records": 134,
+    "audited_records": 134,
+    "canonical_family_contract_matches": 3,
     "case_insensitive_key_collision_count": 1,
     "families_without_canonical_contract": 8,
     "missing_link_field_counts": {
@@ -2888,11 +2941,11 @@
       "verifier_paths": 130
     },
     "missing_source_path_count": 0,
-    "records_with_artifact_paths": 3,
-    "records_with_claim_ceiling": 3,
-    "records_with_formula_ids": 3,
-    "records_with_unit_lane": 3,
-    "records_with_verifier_paths": 3,
+    "records_with_artifact_paths": 4,
+    "records_with_claim_ceiling": 4,
+    "records_with_formula_ids": 4,
+    "records_with_unit_lane": 4,
+    "records_with_verifier_paths": 4,
     "records_without_canonical_contract": 130
   }
 }

@@ -36,7 +36,8 @@
       "docs/core/artifacts/uet_equation_correspondence_registry_quantum_interpretations_addendum.json",
       "docs/core/artifacts/uet_equation_correspondence_registry_gr_controls_addendum.json",
       "docs/core/artifacts/uet_equation_correspondence_registry_dynamical_stability_addendum.json",
-      "docs/core/artifacts/uet_equation_correspondence_registry_matter_space_flux_addendum.json"
+      "docs/core/artifacts/uet_equation_correspondence_registry_matter_space_flux_addendum.json",
+      "docs/core/artifacts/uet_equation_correspondence_registry_covariant_diffusion_addendum.json"
     ],
     "extension_status": "CANDIDATE_ADDENDA_MERGED_NOT_EXHAUSTIVE"
   },
@@ -2704,6 +2705,217 @@
       "claim_boundary": "normalized numerical ledger only; it does not establish physical energy units or global open-system conservation",
       "failure_mode": "reporting normalized residuals as SI energy closure or using the trace as an energy source",
       "next_hardening_step": "define dimensional work/heat observables and independently validate the ledger scale"
+    },
+    {
+        "equation_id": "uet.covariant_diffusion.frame_decomposition",
+        "version": "covariant-diffusion-v1",
+        "classification": "kinematic_mapping",
+        "relation_or_code_path": "N^mu = n u^mu + j^mu; u_mu j^mu = 0",
+        "variables": {
+            "N_mu": "on-shell O(2) Noether current",
+            "u_mu": "normalized timelike frame velocity",
+            "n": "frame-projected charge density",
+            "j_mu": "spatial current orthogonal to u_mu"
+        },
+        "mathematical_role": "frame decomposition and reconstruction of a covariant current",
+        "standard_physics_counterpart": "relativistic current decomposition in a chosen timelike frame",
+        "observable_mapping": {
+            "status": "PARTIAL",
+            "observable": "normalized frame density/current and relaxation diagnostics",
+            "reason": "material-specific SI units, detector response, and external physical validation are open"
+        },
+        "unit_lane": "natural_to_normalized",
+        "parameter_dimensions": "density_scale, length_scale, time_scale, mobility, and relaxation are declared; SI transport dimensions remain open",
+        "source_or_origin": "existing covariant O(2) current bridge and its declared constitutive reduction",
+        "assumptions": [
+            "metric signature (-,+,+,+)",
+            "u_mu u^mu = -1",
+            "the current is supplied by the declared on-shell O(2) pilot"
+        ],
+        "symmetry_and_conservation": "the decomposition is kinematic and reconstructs N^mu exactly; it does not add a source or alter current conservation",
+        "limiting_cases": [
+            "zero spatial current gives a comoving current",
+            "changing the frame changes n and j without changing N^mu"
+        ],
+      "implementation_paths": [
+        "docs/core/uet_covariant_diffusion.py"
+      ],
+      "implementation_symbols": [
+        "docs/core/uet_covariant_diffusion.py::decompose_noether_current"
+      ],
+        "verifier_paths": [
+            "docs/scripts/audit/audit_uet_gr_covariant_diffusion.py",
+            "docs/core/test/test_covariant_diffusion.py",
+            "docs/core/test/test_gr_covariant_diffusion_alignment.py",
+            "docs/core/artifacts/covariant_diffusive_current_verification.json"
+        ],
+        "evidence_class": "INTERNAL_CONSTITUTIVE_NUMERICAL",
+        "proof_status": "current reconstruction and orthogonality pass local numerical checks; microscopic density matching is not established",
+        "downstream_dependencies": [
+            "uet.o2.finite_density_eos",
+            "uet.main_theory.coarse_graining"
+        ],
+        "claim_boundary": "frame decomposition and normalized mapping only; not a microscopic transport derivation",
+        "failure_mode": "identifying the projected charge density or normalized C with mass density without a lane contract",
+        "next_hardening_step": "close the coarse-graining and dimensional observable map"
+    },
+    {
+        "equation_id": "uet.covariant_diffusion.finite_relaxation_current",
+        "version": "covariant-diffusion-v1",
+        "classification": "constitutive_lane_specific_equation",
+        "relation_or_code_path": "partial_t C + partial_x J = 0; tau_J partial_t J + J = -M_C partial_x mu_C",
+        "variables": {
+            "C": "normalized coarse-grained charge/current coordinate",
+            "J": "finite-volume face current",
+            "mu_C": "conditioned matter chemical potential",
+            "tau_J": "current relaxation time"
+        },
+        "mathematical_role": "finite-relaxation constitutive bridge coupled to exact one-dimensional continuity",
+        "standard_physics_counterpart": "Maxwell-Cattaneo-type current relaxation with a conservative continuity equation",
+        "observable_mapping": {
+            "status": "PARTIAL",
+            "observable": "normalized frame density/current and relaxation diagnostics",
+            "reason": "material-specific SI units, detector response, and external physical validation are open"
+        },
+        "unit_lane": "natural_to_normalized",
+        "parameter_dimensions": "density_scale, length_scale, time_scale, mobility, and relaxation are declared; SI transport dimensions remain open",
+        "source_or_origin": "existing covariant O(2) current bridge and its declared constitutive reduction",
+        "assumptions": [
+            "one-dimensional periodic or zero-flux finite-volume lane",
+            "declared natural-to-normalized scales",
+            "C changes only through the face-current divergence"
+        ],
+        "symmetry_and_conservation": "continuity is conservative under the declared closed boundaries; current relaxation is a constitutive input",
+        "limiting_cases": [
+            "tau_J tending to zero gives the formal Model-B current",
+            "epsilon_nc = 0 removes the nested response coupling"
+        ],
+      "implementation_paths": [
+        "docs/core/uet_covariant_diffusion.py"
+      ],
+      "implementation_symbols": [
+        "docs/core/uet_covariant_diffusion.py::causal_current_rhs"
+      ],
+        "verifier_paths": [
+            "docs/scripts/audit/audit_uet_gr_covariant_diffusion.py",
+            "docs/core/test/test_covariant_diffusion.py",
+            "docs/core/test/test_gr_covariant_diffusion_alignment.py",
+            "docs/core/artifacts/covariant_diffusive_current_verification.json"
+        ],
+        "evidence_class": "INTERNAL_CONSTITUTIVE_NUMERICAL",
+        "proof_status": "local constitutive and conservation checks pass; transport coefficients and full gradient-phase closure remain open",
+        "downstream_dependencies": [
+            "uet.covariant_diffusion.frame_decomposition",
+            "uet.matter_space_flux.conservation"
+        ],
+        "claim_boundary": "candidate normalized constitutive current bridge; not a relativistic microscopic transport law",
+        "failure_mode": "calling finite current relaxation a complete causal Cahn-Hilliard or covariant transport derivation",
+        "next_hardening_step": "close coefficient provenance, KMS/Kubo matching, and the UV phase-field branch"
+    },
+    {
+        "equation_id": "uet.covariant_diffusion.energy_identity",
+        "version": "covariant-diffusion-v1",
+        "classification": "numerical_energy_ledger",
+        "relation_or_code_path": "d_t [F_C + tau_J integral(J^2)/(2 M_C)] = - integral(J^2/M_C)",
+        "variables": {
+            "F_C": "conditioned normalized matter free energy",
+            "J": "face current",
+            "M_C": "positive mobility coefficient",
+            "tau_J": "current relaxation time"
+        },
+        "mathematical_role": "semi-discrete closed-system energy ledger for the current bridge",
+        "standard_physics_counterpart": "dissipative energy balance for a finite-relaxation constitutive current",
+        "observable_mapping": {
+            "status": "PARTIAL",
+            "observable": "normalized frame density/current and relaxation diagnostics",
+            "reason": "material-specific SI units, detector response, and external physical validation are open"
+        },
+        "unit_lane": "natural_to_normalized",
+        "parameter_dimensions": "density_scale, length_scale, time_scale, mobility, and relaxation are declared; SI transport dimensions remain open",
+        "source_or_origin": "existing covariant O(2) current bridge and its declared constitutive reduction",
+        "assumptions": [
+            "periodic or zero-flux boundaries",
+            "positive mobility and relaxation time",
+            "the current-storage term is included in the extended energy"
+        ],
+        "symmetry_and_conservation": "current dissipation is non-negative and the ledger exposes, rather than hides, the residual",
+        "limiting_cases": [
+            "J = 0 removes current dissipation",
+            "the energy identity is conditional on the declared constitutive update"
+        ],
+      "implementation_paths": [
+        "docs/core/uet_covariant_diffusion.py"
+      ],
+      "implementation_symbols": [
+        "docs/core/uet_covariant_diffusion.py::current_energy_balance"
+      ],
+        "verifier_paths": [
+            "docs/scripts/audit/audit_uet_gr_covariant_diffusion.py",
+            "docs/core/test/test_covariant_diffusion.py",
+            "docs/core/test/test_gr_covariant_diffusion_alignment.py",
+            "docs/core/artifacts/covariant_diffusive_current_verification.json"
+        ],
+        "evidence_class": "INTERNAL_CONSTITUTIVE_NUMERICAL",
+        "proof_status": "the declared semi-discrete identity closes to numerical precision in periodic and zero-flux tests",
+        "downstream_dependencies": [
+            "uet.covariant_diffusion.finite_relaxation_current"
+        ],
+        "claim_boundary": "normalized numerical ledger only; it is not a dimensional thermodynamic energy proof",
+        "failure_mode": "reporting the normalized ledger as SI energy or treating the trace as an energy source",
+        "next_hardening_step": "define dimensional work/heat observables and independently validate the ledger scale"
+    },
+    {
+        "equation_id": "uet.covariant_diffusion.adiabatic_model_b_limit",
+        "version": "covariant-diffusion-v1",
+        "classification": "limiting_relation",
+        "relation_or_code_path": "J -> -M_C partial_x mu_C; partial_t C -> M_C partial_x^2 mu_C",
+        "variables": {
+            "J": "equilibrium face current",
+            "C": "conserved normalized coordinate",
+            "mu_C": "conditioned matter chemical potential",
+            "M_C": "mobility coefficient"
+        },
+        "mathematical_role": "exact discrete adiabatic limit from the finite-relaxation bridge to Model B",
+        "standard_physics_counterpart": "overdamped conserved gradient-flow comparator",
+        "observable_mapping": {
+            "status": "PARTIAL",
+            "observable": "normalized frame density/current and relaxation diagnostics",
+            "reason": "material-specific SI units, detector response, and external physical validation are open"
+        },
+        "unit_lane": "natural_to_normalized",
+        "parameter_dimensions": "density_scale, length_scale, time_scale, mobility, and relaxation are declared; SI transport dimensions remain open",
+        "source_or_origin": "existing covariant O(2) current bridge and its declared constitutive reduction",
+        "assumptions": [
+            "adiabatic current relaxation",
+            "the same declared chemical potential is used on both sides",
+            "one-dimensional finite-volume boundary rules are shared"
+        ],
+        "symmetry_and_conservation": "the limiting continuity equation remains conservative under the declared boundaries",
+        "limiting_cases": [
+            "finite tau_J retains current memory",
+            "kappa_matter greater than zero retains the fourth-order high-k blocker"
+        ],
+      "implementation_paths": [
+        "docs/core/uet_covariant_diffusion.py"
+      ],
+      "implementation_symbols": [
+        "docs/core/uet_covariant_diffusion.py::compare_adiabatic_limit"
+      ],
+        "verifier_paths": [
+            "docs/scripts/audit/audit_uet_gr_covariant_diffusion.py",
+            "docs/core/test/test_covariant_diffusion.py",
+            "docs/core/test/test_gr_covariant_diffusion_alignment.py",
+            "docs/core/artifacts/covariant_diffusive_current_verification.json"
+        ],
+        "evidence_class": "INTERNAL_CONSTITUTIVE_NUMERICAL",
+        "proof_status": "the bridge continuity update and Model-B RHS agree within the generated artifact tolerance",
+        "downstream_dependencies": [
+            "uet.covariant_diffusion.finite_relaxation_current",
+            "uet.matter_space_flux.conservation"
+        ],
+        "claim_boundary": "limiting comparator only; it does not establish finite-cone causality for the original fourth-order gradient system",
+        "failure_mode": "using the overdamped limit as proof of a relativistic causal Cahn-Hilliard theory",
+        "next_hardening_step": "keep the Model-B limit as a comparator while resolving the first-order hyperbolic UV closure"
     }
   ],
   "merge_history": {
@@ -2711,7 +2923,11 @@
       "uet.matter_space_flux.conservation",
       "uet.matter_space_flux.relaxation",
       "uet.matter_space_flux.phi_response",
-      "uet.matter_space_flux.shared_energy_ledger"
+      "uet.matter_space_flux.shared_energy_ledger",
+      "uet.covariant_diffusion.frame_decomposition",
+      "uet.covariant_diffusion.finite_relaxation_current",
+      "uet.covariant_diffusion.energy_identity",
+      "uet.covariant_diffusion.adiabatic_model_b_limit"
     ],
     "already_present": [
       "uet.impact_effect.information_flow",
