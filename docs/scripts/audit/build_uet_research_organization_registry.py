@@ -328,6 +328,16 @@ def build_file_record(
     if record.get("file_kind") == "generated_artifact":
         artifacts = [path]
     linked_tests = related_tests(path, test_paths) if record.get("file_kind") in {"equation_module", "lane_specific_module", "support_or_adapter_module"} else []
+    family_verifiers = [
+        normalize_path(str(item))
+        for item in (family or {}).get("verifier_paths", [])
+    ]
+    verifier_paths = sorted(set(linked_tests + family_verifiers))
+    formula_ids = [
+        str(item)
+        for item in (family or {}).get("formula_ids", [])
+        if str(item)
+    ]
     organization = organization_status(record)
     evidence = evidence_status(record, family)
     status_source = str(record.get("status_source") or "")
@@ -345,8 +355,8 @@ def build_file_record(
         "evidence_status": evidence,
         "status_source": status_source,
         "generated_or_source": record.get("generated_or_source", "source"),
-        "formula_ids": [],
-        "verifier_paths": linked_tests,
+        "formula_ids": formula_ids,
+        "verifier_paths": verifier_paths,
         "artifact_paths": artifacts,
         "upstream_dependencies": UPSTREAM_BY_OWNER.get(owner_id, []),
         "downstream_dependencies": DOWNSTREAM_BY_OWNER.get(owner_id, []),

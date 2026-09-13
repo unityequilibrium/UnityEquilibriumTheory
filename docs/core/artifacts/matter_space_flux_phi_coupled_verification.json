@@ -1,7 +1,7 @@
 {
   "schema_version": "matter-space-flux-phi-coupled-verification-v1",
   "artifact": "matter_space_flux_phi_coupled_verification",
-  "generated_at": "2026-08-24",
+  "generated_at": "2026-09-14",
   "status": "PASS",
   "operator_mode": "matter_space_conserved_flux_phi_coupled_v1",
   "branch_id": "T13-CAUSAL-FLUX-PHI-COUPLED-001",

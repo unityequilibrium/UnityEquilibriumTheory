@@ -150,6 +150,16 @@ def classify(path: Path, families: dict[str, dict[str, Any]], unlinked: set[str]
     if suffix == ".py":
         family = families.get(relative)
         if family:
+            if family.get("organization_review_required"):
+                record.update(
+                    file_kind="review_required_equation_module",
+                    logical_area="02_equations",
+                    owner_family_or_lane=family.get("family_id"),
+                    registry_link_status="REVIEW_REQUIRED",
+                    status_source="docs/core/artifacts/uet_core_equation_family_contract.json",
+                    review_action="complete_bounded_family_link_review",
+                )
+                return record
             is_equation = bool(family.get("equation_family"))
             record.update(
                 file_kind="equation_module" if is_equation else "support_or_adapter_module",

@@ -37,6 +37,7 @@ ADDENDA = (
     ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_quantum_interpretations_addendum.json",
     ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_gr_controls_addendum.json",
     ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_dynamical_stability_addendum.json",
+    ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_matter_space_flux_addendum.json",
 )
 
 

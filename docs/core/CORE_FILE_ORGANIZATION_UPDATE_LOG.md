@@ -38,3 +38,13 @@
 - CONTROLLING_BLOCKER: `pending_families_have_no_canonical_formula_unit_verifier_artifact_chain`.
 - NEXT_ACTION: Create canonical family-link records in bounded batches, starting with foundation/matter-space and covariant families; populate formula IDs, unit lanes, verifier paths, artifact paths, and claim ceilings only from existing source contracts or newly verified outputs.
 - CLAIM_BOUNDARY: This is a link inventory and metadata-drift audit only; it does not verify equations, close units, establish observables, or promote physical/empirical claims.
+
+## 2026-09-14 — Wave 3: bounded matter-space flux family link
+
+- STATUS: `BLOCKED_OPEN_SCIENTIFIC_LINKS`
+- WHAT_CHANGED: Added a four-entry matter-space flux correspondence addendum and merged it into the central formula registry. Declared `core.matter_space_flux` as a bounded family with two source modules, explicit normalized unit lane, verifier paths, artifact paths, formula IDs, and a claim ceiling. The organization registry now materializes those links while retaining the bounded-review flag.
+- VERIFICATION: Reran the conserved flux verifier and coupled C/Phi verifier with `PASS`; ran 19 targeted regression tests; organization registry `--check` passed; scientific-link audit `--check` passed; foundation audit parsed 51 central entries and kept the foundation gate `BLOCKED`.
+- RESULT: The scientific-link audit now reports one canonical family contract and two records with all five required link fields. The remaining gap is 131 records across eight pending families; the case-insensitive `g_munu`/`G_munu` metadata lint remains review-required.
+- CONTROLLING_BLOCKER: `pending_families_have_no_canonical_formula_unit_verifier_artifact_chain` remains active for the eight unresolved families; the flux branch itself remains blocked for promotion by the foundation and dimensional-observable gates.
+- NEXT_ACTION: Build the next bounded family-link package for `core.covariant_pending` only after preserving the same formula → implementation → verifier → artifact chain and its claim ceiling; do not physically migrate files yet.
+- CLAIM_BOUNDARY: This wave establishes traceability for a named normalized conserved flux/response branch. It does not establish a universal meaning for `C`, SI thermal validity, the original `kappa_C>0` causal class, or a global UET claim.

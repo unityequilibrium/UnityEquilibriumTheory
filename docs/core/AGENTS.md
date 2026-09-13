@@ -54,6 +54,11 @@ After the organization assignment wave, scientific-link work must also read and 
 assigned file is actually linked to a canonical family contract, formula IDs, units,
 verifiers, artifacts, and claim metadata. `BLOCKED_OPEN_SCIENTIFIC_LINKS` is a valid
 stopping state and must not be converted into a physics pass by ownership assignment.
+When a bounded family is added, its module paths may remain in organization review through
+an explicit `organization_review_required` contract flag. The family link is complete only
+when formula IDs are present in the central correspondence registry and the generated
+organization record contains the unit, verifier, artifact, and claim links. A named branch
+can be internally verified while the foundation gate and its scientific claim remain blocked.
 
 ## Mandatory workflow
 

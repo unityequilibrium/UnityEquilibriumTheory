@@ -67,6 +67,9 @@ Prose ที่มีจำนวนหรือสถานะเก่าก�
 - migration map: `docs/core/artifacts/uet_core_file_migration_map.json`
 - organization audit: `docs/core/artifacts/uet_core_organization_audit.json`
 - scientific-link audit: `docs/core/artifacts/uet_core_scientific_link_audit.json`
+- equation-family contract: `docs/core/artifacts/uet_core_equation_family_contract.json`
+- central formula correspondence registry:
+  `docs/core/artifacts/uet_equation_correspondence_registry.json`
 
 ทุก record ต้องมีอย่างน้อย:
 
@@ -85,6 +88,11 @@ review_action
 สำหรับ equation-bearing code ให้เพิ่ม family, formula registry, verifier/test paths,
 unit lane และ claim ceiling
 
+ถ้า family ถูกระบุว่า `organization_review_required` จะต้องผ่าน bounded scientific-link
+review ก่อน แม้ source path จะถูกประกาศใน family contract แล้วก็ตาม โดยต้อง materialize
+formula IDs, unit lane, verifier paths, artifact paths และ claim ceiling จาก contract หรือ
+registry ที่ตรวจสอบย้อนกลับได้
+
 การ assign ครบทุก path ไม่ได้แปลว่าสมการถูกพิสูจน์แล้ว แต่แปลว่าไม่มีไฟล์หลุดจากการ
 ตรวจสอบโดยไม่รู้ตัว
 
@@ -101,6 +109,10 @@ unit lane และ claim ceiling
 7. ผูก formula → implementation → verifier → artifact → source
 8. อัปเดต manifest, registry, link audit และ update log ใน wave เดียวกัน
 
+สำหรับ family ใหม่ให้แยกให้ชัดระหว่าง “มี family contract” กับ “ผ่าน physics gate”:
+การมี formula/verifier/artifact chain หมายถึง traceability ครบขึ้นเท่านั้น ไม่ได้เลื่อน
+`evidence_status`, foundation gate หรือ claim boundary โดยอัตโนมัติ
+
 ห้ามเพิ่มไฟล์ใหม่ที่ root ของ `docs/core/` หากอยู่ใน logical area เดิมได้
 หากต้องรักษา legacy path ให้ใช้ adapter/index และบันทึกเหตุผล
 
@@ -112,7 +124,11 @@ unit lane และ claim ceiling
 - research note ที่ยังไม่ผ่าน gate ต้องติด `DRAFT`, `CANDIDATE`, `INTERNAL`,
   `SIMULATION_ONLY`, `WARN` หรือ `BLOCKED`
 - `Result/` ของ topic ไม่ถูกคัดลอกมาเป็น core evidence โดยไม่มี provenance link
-- การอ้างหนึ่งผลต้องย้อนกลับได้อย่างน้อย `source → formula/spec → code → verifier → artifact`
++ การอ้างหนึ่งผลต้องย้อนกลับได้อย่างน้อย `source → formula/spec → code → verifier → artifact`
++  และ formula ID ต้องอยู่ใน central correspondence registry
++- named normalized branches เช่น `core.matter_space_flux` ต้องระบุว่าเป็น branch/comparator
++  เฉพาะ lane; ห้ามใช้ branch นั้นแทนสมการ matter-space อื่นหรือแปลง normalized quantity
++  เป็น SI โดยไม่มี observable/unit contract
 
 ## 7. Physical migration policy
 

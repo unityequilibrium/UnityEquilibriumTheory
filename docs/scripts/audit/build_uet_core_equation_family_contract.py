@@ -48,8 +48,11 @@ def family(
     next_gate: str,
     *,
     equation_family: bool = True,
+    formula_ids: list[str] | None = None,
+    verifier_paths: list[str] | None = None,
+    organization_review_required: bool = False,
 ) -> dict[str, Any]:
-    return {
+    result = {
         "family_id": family_id,
         "name": name,
         "module_paths": paths,
@@ -64,6 +67,13 @@ def family(
         "evidence_paths": evidence,
         "next_gate": next_gate,
     }
+    if formula_ids is not None:
+        result["formula_ids"] = list(formula_ids)
+    if verifier_paths is not None:
+        result["verifier_paths"] = list(verifier_paths)
+    if organization_review_required:
+        result["organization_review_required"] = True
+    return result
 
 
 FAMILIES = [
@@ -94,6 +104,45 @@ FAMILIES = [
         "candidate normalized effective model; not SI or total-universe energy law",
         ["docs/core/artifacts/matter_space_variational_verification.json", "docs/core/artifacts/matter_space_dependency_gate.json"],
         "repair pre-arrival leakage and then define dimensional observable map",
+    ),
+    family(
+        "core.matter_space_flux",
+        "Conserved matter-space flux and causal response branch",
+        [
+            "docs/core/uet_matter_space_flux_telegraph.py",
+            "docs/core/uet_matter_space_flux_phi.py",
+        ],
+        {
+            "C": "conserved collective-coordinate field on the named flux lane",
+            "J_C": "conserved face flux",
+            "Phi": "effective response variable",
+            "Pi": "discrete Phi response rate",
+            "R_gen": "derived trace absent from physical dynamics",
+        },
+        "one-dimensional continuity equation with Maxwell-Cattaneo-like flux relaxation and a damped coupled response",
+        "normalized_v1",
+        "named constitutive flux branch with internal numerical energy-ledger verification; not a first-principles universal law",
+        "INTERNAL_FLUX_BRANCH_GATES_PASS_ORIGINAL_KAPPA_C_GT_0_CLASS_BLOCKED",
+        "kappa_C=0 named branch only; the original kappa_C>0 conserved-gradient causal class remains separate and blocked",
+        "candidate normalized conserved flux/response comparator; not SI thermal closure, not a universal C ontology, and not global energy law",
+        [
+            "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
+            "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
+        ],
+        "complete dimensional observable mapping and independently locked external comparison",
+        formula_ids=[
+            "uet.matter_space_flux.conservation",
+            "uet.matter_space_flux.relaxation",
+            "uet.matter_space_flux.phi_response",
+            "uet.matter_space_flux.shared_energy_ledger",
+        ],
+        verifier_paths=[
+            "docs/scripts/audit/audit_matter_space_conserved_flux_telegraph.py",
+            "docs/scripts/audit/audit_matter_space_flux_phi_coupled.py",
+            "docs/core/test/test_matter_space_conserved_flux_telegraph.py",
+            "docs/core/test/test_matter_space_flux_phi_coupled.py",
+        ],
+        organization_review_required=True,
     ),
     family(
         "core.trace",
