@@ -9,3 +9,12 @@
 - NEXT_ACTION: Review the queue by family/lane, assign each path to an owner or quarantine, and repair registry links without changing physical paths.
 - CLAIM_BOUNDARY: Organization and traceability repair only; no physical interpretation, readiness, or empirical claim was promoted.
 
+## 2026-09-13 — Wave 0: organization control plane
+
+- STATUS: `PASS_WITH_REVIEW_REQUIRED`
+- WHAT_CHANGED: Added the organization policy, generated central owner/room/file registry, generated migration map, organization audit, and governance index. Added a targeted regression test. No physical file move, equation change, or legacy-path deletion was performed.
+- VERIFICATION: Refreshed `uet_core_file_manifest.json`; ran `build_uet_research_organization_registry_v2.py`; ran its `--check`; ran `pytest docs/core/test/test_uet_research_organization_registry.py -q` with 3 passing tests; parsed all new JSON artifacts.
+- RESULT: 1,544 core files indexed; 133 records remain explicitly in the review queue; organization audit is `PASS_WITH_REVIEW_REQUIRED`; foundation gate remains `BLOCKED`.
+- CONTROLLING_BLOCKER: 133 files still require owner/family or quarantine review, and import/link reference scanning is deferred until the physical migration wave.
+- NEXT_ACTION: Review and assign the queue in bounded family/lane batches; do not move files until import scan, link scan, compatibility tests, and generator-path updates pass.
+- CLAIM_BOUNDARY: Organization control-plane readiness only; this does not promote any equation, physics, application, or empirical claim.

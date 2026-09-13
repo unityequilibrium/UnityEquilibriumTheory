@@ -61,6 +61,11 @@ Prose ที่มีจำนวนหรือสถานะเก่าก�
 - generator: `docs/scripts/audit/build_uet_core_file_manifest.py`
 - manifest: `docs/core/artifacts/uet_core_file_manifest.json`
 - human index: `docs/core/CORE_FILE_INDEX.md`
+- organization policy: `docs/core/00_governance/uet_research_organization_policy.json`
+- organization registry generator: `docs/scripts/audit/build_uet_research_organization_registry_v2.py`
+- organization registry: `docs/core/artifacts/uet_research_organization_registry.json`
+- migration map: `docs/core/artifacts/uet_core_file_migration_map.json`
+- organization audit: `docs/core/artifacts/uet_core_organization_audit.json`
 
 ทุก record ต้องมีอย่างน้อย:
 
@@ -88,10 +93,11 @@ unit lane และ claim ceiling
 
 1. อ่าน `AGENTS.md` และ source-of-truth artifacts
 2. สร้างหรือ refresh core-file manifest
-3. ระบุ owner family/lane และ logical area
-4. แยก equation, support, comparator, verifier, artifact และ history
-5. ผูก formula → implementation → verifier → artifact → source
-6. อัปเดต manifest และ update log ใน wave เดียวกัน
+3. refresh organization registry และ migration map
+4. ระบุ owner family/lane และ logical area
+5. แยก equation, support, comparator, verifier, artifact และ history
+6. ผูก formula → implementation → verifier → artifact → source
+7. อัปเดต manifest, registry และ update log ใน wave เดียวกัน
 
 ห้ามเพิ่มไฟล์ใหม่ที่ root ของ `docs/core/` หากอยู่ใน logical area เดิมได้
 หากต้องรักษา legacy path ให้ใช้ adapter/index และบันทึกเหตุผล
@@ -130,4 +136,3 @@ organization wave ถือว่าเสร็จเมื่อ reviewer ต�
 - blocker ปัจจุบันคืออะไร
 
 การจัดโฟลเดอร์ให้สวยขึ้นแต่ตอบคำถามเหล่านี้ไม่ได้ ถือว่ายังไม่เสร็จ
-

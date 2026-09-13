@@ -18,26 +18,30 @@ Before editing an equation, parameter, operator, verifier, or core narrative, re
 10. `docs/core/artifacts/uet_foundation_correspondence_matrix.json`
 11. `docs/core/artifacts/uet_code_surface_inventory.json`
 12. `docs/core/artifacts/uet_core_equation_family_contract.json`
-13. `docs/core/artifacts/uet_foundation_status_aggregate.json`
-14. `docs/core/artifacts/uet_legacy_variational_closure.json`
-15. `docs/core/artifacts/matter_space_causal_discretization_diagnostic.json`
-16. `docs/core/artifacts/matter_space_causal_reference_verification.json`
-17. `docs/core/artifacts/uet_foundation_compatibility_decision.json`
-18. `docs/core/artifacts/uet_main_theory_wave0_gate.json`
-19. `docs/core/artifacts/uet_main_theory_dependency_graph.json`
-20. `docs/core/UET_MAIN_THEORY_AXIOMS_SPEC.md`
-21. `docs/core/artifacts/uet_main_theory_ontology_gate.json`
-22. `docs/core/artifacts/uet_main_theory_wave2_gate.json`
-23. `docs/core/artifacts/uet_main_theory_wave3_gate.json`
-24. `docs/core/artifacts/uet_main_theory_wave4_gate.json`
-25. `docs/core/artifacts/uet_main_theory_wave5_gate.json`
-26. `docs/core/artifacts/uet_main_theory_wave6_gate.json`
-27. `docs/core/artifacts/uet_main_theory_wave7_gate.json`
-28. `docs/core/artifacts/uet_main_theory_wave8_gate.json`
-29. `docs/core/artifacts/uet_main_theory_wave9_gate.json`
-30. `docs/core/artifacts/uet_main_theory_wave10_gate.json`
-31. `docs/core/artifacts/uet_main_theory_wave11_gate.json`
-32. `docs/core/artifacts/uet_main_theory_closure_gate.json`
+13. `docs/core/00_governance/uet_research_organization_policy.json`
+14. `docs/core/artifacts/uet_research_organization_registry.json`
+15. `docs/core/artifacts/uet_core_file_migration_map.json`
+16. `docs/core/artifacts/uet_core_organization_audit.json`
+17. `docs/core/artifacts/uet_foundation_status_aggregate.json`
+18. `docs/core/artifacts/uet_legacy_variational_closure.json`
+19. `docs/core/artifacts/matter_space_causal_discretization_diagnostic.json`
+20. `docs/core/artifacts/matter_space_causal_reference_verification.json`
+21. `docs/core/artifacts/uet_foundation_compatibility_decision.json`
+22. `docs/core/artifacts/uet_main_theory_wave0_gate.json`
+23. `docs/core/artifacts/uet_main_theory_dependency_graph.json`
+24. `docs/core/UET_MAIN_THEORY_AXIOMS_SPEC.md`
+25. `docs/core/artifacts/uet_main_theory_ontology_gate.json`
+26. `docs/core/artifacts/uet_main_theory_wave2_gate.json`
+27. `docs/core/artifacts/uet_main_theory_wave3_gate.json`
+28. `docs/core/artifacts/uet_main_theory_wave4_gate.json`
+29. `docs/core/artifacts/uet_main_theory_wave5_gate.json`
+30. `docs/core/artifacts/uet_main_theory_wave6_gate.json`
+31. `docs/core/artifacts/uet_main_theory_wave7_gate.json`
+32. `docs/core/artifacts/uet_main_theory_wave8_gate.json`
+33. `docs/core/artifacts/uet_main_theory_wave9_gate.json`
+34. `docs/core/artifacts/uet_main_theory_wave10_gate.json`
+35. `docs/core/artifacts/uet_main_theory_wave11_gate.json`
+36. `docs/core/artifacts/uet_main_theory_closure_gate.json`
 
 The foundation gate and registry are the controlling status sources for new core work.
 Existing topic prose, old badges, and legacy validators do not override them.
@@ -46,7 +50,7 @@ compatibility, but it cannot promote a blocked foundation.
 
 ## Mandatory workflow
 
-Before changing or adding a core equation, regenerate the F0 inventory with `docs/scripts/audit/build_uet_equation_inventory.py`; its `inventory_gate_status` must remain visible in the wave record.
+Before changing or adding a core equation, regenerate the F0 inventory with `docs/scripts/audit/build_uet_equation_inventory.py`; its `inventory_gate_status` must remain visible in the wave record. For organization-only changes, refresh the core-file manifest and then run `docs/scripts/audit/build_uet_research_organization_registry_v2.py`.
 
 Every new equation or operator must complete the F0–F8 sequence in the equation research
 standard. A blocked upstream gate blocks physical interpretation and downstream promotion.
@@ -98,6 +102,7 @@ Before closing a wave:
 - run the foundation compatibility audit when equation meaning, implementation, units, or limiting-case language changed
 - run the relevant scientific verifier only if evidence-producing state changed
 - check JSON parsing and dependency integrity
+- run the organization registry `--check` when the organization control plane changes
 - sync core docs and update logs to the controlling blocker
 - record the wave in `WORK_LEDGER/YYYY/YYYY-MM-DD.md`
 

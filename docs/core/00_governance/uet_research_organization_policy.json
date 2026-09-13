@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "registry_id": "UET-RESEARCH-ORGANIZATION",
+  "status": "ACTIVE",
+  "scope": "docs/core organization, ownership, room routing, and migration only",
+  "scientific_status_authority": [
+    "docs/core/artifacts/uet_foundation_dependency_gate.json",
+    "docs/core/artifacts/uet_equation_correspondence_registry.json",
+    "docs/core/artifacts/uet_foundation_equation_inventory.json"
+  ],
+  "owners": [
+    {
+      "owner_id": "ORG",
+      "name": "Core organization",
+      "purpose": "file registry, navigation, migration, legacy boundary, and history",
+      "logical_areas": ["00_governance", "08_history", "99_review"],
+      "room_id": "ROOM_CORE_ORGANIZATION"
+    },
+    {
+      "owner_id": "FOUNDATION",
+      "name": "Foundation contracts",
+      "purpose": "ontology, standard correspondence, units, derivation, and claim contracts",
+      "logical_areas": ["01_contracts"],
+      "room_id": "ROOM_CORE_FOUNDATION"
+    },
+    {
+      "owner_id": "EQUATION",
+      "name": "Equation implementation",
+      "purpose": "equation families, production operators, and compatibility entrypoints",
+      "logical_areas": ["02_equations"],
+      "room_id": "ROOM_CORE_FOUNDATION"
+    },
+    {
+      "owner_id": "LANE",
+      "name": "Lane research",
+      "purpose": "topic-specific models, comparators, and observable bridges",
+      "logical_areas": ["03_lanes"],
+      "room_id": "ROOM_CORE_FOUNDATION"
+    },
+    {
+      "owner_id": "EVIDENCE",
+      "name": "Evidence and reproducibility",
+      "purpose": "proofs, tests, gates, artifact generation, and regression control",
+      "logical_areas": ["04_proofs", "05_tests", "07_artifacts"],
+      "room_id": "ROOM_CORE_FOUNDATION"
+    },
+    {
+      "owner_id": "DATA",
+      "name": "Data and provenance",
+      "purpose": "source packages, preprocessing, hashes, units, and derived inputs",
+      "logical_areas": ["06_data"],
+      "room_id": "ROOM_CORE_ORGANIZATION"
+    }
+  ],
+  "rooms": [
+    {
+      "room_id": "ROOM_CORE_ORGANIZATION",
+      "owner_id": "ORG",
+      "purpose": "organization control plane and file migration",
+      "active_slot": "foundation_slot_1",
+      "allowed_outputs": ["registry", "manifest", "migration_map", "organization_audit", "handoff"]
+    },
+    {
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "owner_id": "FOUNDATION",
+      "purpose": "shared equation and evidence contracts",
+      "active_slot": "foundation_slot_1",
+      "allowed_outputs": ["contract", "equation_audit", "gate", "verifier_handoff"]
+    },
+    {
+      "room_id": "ROOM_TOPIC_013",
+      "owner_id": "LANE",
+      "purpose": "thermal and dimensional observable pilot",
+      "active_slot": "foundation_slot_2",
+      "allowed_outputs": ["source_package", "thermal_artifact", "blocked_or_ready_handoff"]
+    },
+    {
+      "room_id": "ROOM_TOPIC_011",
+      "owner_id": "LANE",
+      "purpose": "phase-transition and replication pilot",
+      "active_slot": "foundation_slot_3",
+      "allowed_outputs": ["diagnostic_artifact", "uncertainty_report", "blocked_or_ready_handoff"]
+    }
+  ],
+  "logical_areas": {
+    "00_governance": "rules, indexes, registries, and navigation",
+    "01_contracts": "ontology, correspondence, units, formula, and claim contracts",
+    "02_equations": "equation-family source modules and public operators",
+    "03_lanes": "lane-specific models, comparators, and observable bridges",
+    "04_proofs": "formal derivations and proof runners",
+    "05_tests": "equation, numerical, artifact, and compatibility tests",
+    "06_data": "declared inputs, source packages, manifests, and derived inputs",
+    "07_artifacts": "generated gates, verification outputs, correspondence, and provenance",
+    "08_history": "update logs, research notes, and legacy records",
+    "99_review": "unassigned, ambiguous, or quarantined files"
+  },
+  "evidence_statuses": [
+    "LEGACY",
+    "COMPARATOR",
+    "CANDIDATE",
+    "INTERNAL",
+    "SIMULATION_ONLY",
+    "EXTERNAL_COMPARISON",
+    "BLOCKED"
+  ],
+  "organization_statuses": [
+    "UNASSIGNED",
+    "ASSIGNED",
+    "MIGRATION_READY",
+    "MIGRATED",
+    "QUARANTINED"
+  ],
+  "migration_policy": {
+    "default": "logical_registration_before_physical_move",
+    "preserve_legacy_paths": true,
+    "require_import_scan": true,
+    "require_link_scan": true,
+    "require_compatibility_test": true,
+    "generated_artifacts_are_not_hand_edited": true,
+    "delete_old_path_only_after": "one complete family rerun and reviewer approval"
+  },
+  "dependency_edges": [
+    {"from": "ORG", "to": "FOUNDATION", "reason": "organization metadata routes contract ownership"},
+    {"from": "FOUNDATION", "to": "EQUATION", "reason": "equations require ontology, units, and derivation contract"},
+    {"from": "EQUATION", "to": "LANE", "reason": "lanes consume declared equation families"},
+    {"from": "EQUATION", "to": "EVIDENCE", "reason": "equation changes require verification"},
+    {"from": "DATA", "to": "LANE", "reason": "lanes consume provenance-locked inputs"},
+    {"from": "LANE", "to": "EVIDENCE", "reason": "lane claims require reproducible evidence"}
+  ],
+  "parallel_policy": {
+    "max_active_rooms_during_foundation": 3,
+    "required_active_rooms": ["ROOM_CORE_ORGANIZATION", "ROOM_TOPIC_013", "ROOM_TOPIC_011"],
+    "shared_file_rule": "one canonical owner; other rooms submit a handoff",
+    "one_wave_one_blocker": true
+  }
+}
