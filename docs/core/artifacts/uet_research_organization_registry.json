@@ -1,18 +1,18 @@
 {
   "artifact": "uet_research_organization_registry",
-  "assigned_review_count": 134,
+  "assigned_review_count": 136,
   "controlling_blocker": "assigned_records_need_scientific_link_review",
   "counts": {
     "declared_input_data": 131,
-    "equation_module": 20,
+    "equation_module": 18,
     "folder_governance": 1,
-    "generated_artifact": 592,
+    "generated_artifact": 593,
     "governance_policy": 1,
     "lane_specific_module": 99,
     "navigation_and_legacy_boundary": 2,
     "proof_or_derivation_runner": 1,
     "review_required": 1,
-    "review_required_equation_module": 4,
+    "review_required_equation_module": 6,
     "specification_or_research_note": 126,
     "support_or_adapter_module": 29,
     "unassigned_python_surface": 30,
@@ -62,14 +62,15 @@
     "W1-LANE-TOPIC13-SUPPORT": 3,
     "W1-T13-HOLDOUT": 1,
     "W2-EQUATION-COVARIANT-DIFFUSION": 1,
-    "W2-EQUATION-COVARIANT-PARENT": 1
+    "W2-EQUATION-COVARIANT-PARENT": 1,
+    "W2-EQUATION-NOETHER-MAPPING": 2
   },
-  "dispositioned_review_count": 134,
+  "dispositioned_review_count": 136,
   "evidence_status_counts": {
-    "BLOCKED": 424,
+    "BLOCKED": 426,
     "CANDIDATE": 11,
     "COMPARATOR": 1,
-    "INTERNAL": 1116
+    "INTERNAL": 1115
   },
   "files": [
     {
@@ -98,7 +99,7 @@
       "registry_link_status": "GENERATED_INDEX",
       "review_action": "retain_generated_index",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "ae4e5cc6cff5e8b787b2926b1083e3cb695931a86cec9f11fb68416bf01191b3",
+      "sha256": "44f4f9510e15e3dbe2aa63dcd21b0f1696c83e5c0986a76ea8cb1afed9506168",
       "status_source": "docs/scripts/audit/build_uet_research_organization_registry_v2.py",
       "target_physical_path": "docs/core/00_governance/CORE_RESEARCH_ORGANIZATION_INDEX.md",
       "unit_lane": null,
@@ -131,7 +132,7 @@
       "registry_link_status": "SOURCE_POLICY",
       "review_action": "keep_as_governance_source",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "9b3b5f4af365c8cda9a2b8323fdb78dc77f56582013a33c237f3ae4cb664c463",
+      "sha256": "465092964203802fcad7a24eaf717f964f5defa3da079d154e36e47f6e77e3e8",
       "status_source": "docs/core/00_governance/uet_research_organization_policy.json",
       "target_physical_path": "docs/core/00_governance/uet_research_organization_policy.json",
       "unit_lane": null,
@@ -342,7 +343,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "link_to_registry_and_current_artifact",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256": "85724ff59ee03bd1e6722f6353a388d25335abcc3081f6e335020be60ffccdba",
+      "sha256": "0800cade329b89d75f05ed7c61be7ee35030dd44c1cb304131790a6e10761b34",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/01_contracts/CORE_FILE_INDEX.md",
       "unit_lane": null,
@@ -377,7 +378,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "retain_one_entry_per_completed_wave",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "c4515d4d5018fbce9e5bde6da39db11b6f5ccef51fb59d84af14ff8dcd25cb73",
+      "sha256": "1760ea7567b2638b1d46ce1b7a4432cb3de3dc5f783790eb544d4b500ec12faa",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/08_history/update_logs/CORE_FILE_ORGANIZATION_UPDATE_LOG.md",
       "unit_lane": null,
@@ -22397,7 +22398,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "retain_path_and_link_generator",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256": "cda3b04788ff337d54b4b671d73cc69dbb680e3d809b89498ce71ae96f729127",
+      "sha256": "1bb218e1894abab97a1cb6da4393acb255050cf8902be1e828141966dc6cfa5b",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/07_artifacts/verification/uet_core_equation_family_contract.json",
       "unit_lane": null,
@@ -22433,7 +22434,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "retain_path_and_link_generator",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256": "2dd164cc331618fec43b852d8c6dfadc0c9c5d66cbde87a4ef0bbc6c15646845",
+      "sha256": "cd1765de5dbaae1b61754f57cd46d7b2dce46fb79c5d83429447b0242f99654e",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/07_artifacts/verification/uet_core_file_manifest.json",
       "unit_lane": null,
@@ -22469,7 +22470,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "retain_path_and_link_generator",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256": "e0e98accdfa98f0a663a501aa23c27f9c78769be046bbe3d07550fe5d0b2a1b8",
+      "sha256": "fb9aae90b0b3ae7d5f6cbd58d917343461bb2e1bbefb3c54034d46256894e2cb",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/07_artifacts/verification/uet_core_file_migration_map.json",
       "unit_lane": null,
@@ -22505,7 +22506,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "retain_path_and_link_generator",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256": "4e1fbd7ab4f721cb9bc246949ad2e75a531f5ebfc1ced0f2ab78df6f33aebd26",
+      "sha256": "329d8d5afbb2b34ffa687d21ccca72cd76190b51a3c74e39fb9ebfd440f879b0",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/07_artifacts/verification/uet_core_organization_audit.json",
       "unit_lane": null,
@@ -22541,7 +22542,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "retain_path_and_link_generator",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256": "b1589f83dfb04a1f3272c6b9106a4ee26b42ec33573d17ae4a3ef8a95bbc8fad",
+      "sha256": "4c2dabb67ca66449f7c081c81cef0d799f3ea809ce51e05c4915fe75196cdb89",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/07_artifacts/verification/uet_core_scientific_link_audit.json",
       "unit_lane": null,
@@ -22757,7 +22758,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "retain_path_and_link_generator",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256": "45a2c39f28e0f4bab6345e9fbae2290f9e619913c1ba481119c330f07662c177",
+      "sha256": "9fd592d590291dea95e793cc8211e052004c33302c8585dae2c7e3d80676d307",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/07_artifacts/verification/uet_equation_correspondence_registry.json",
       "unit_lane": null,
@@ -22865,7 +22866,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "retain_path_and_link_generator",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256": "b0f1b5a334752164f4de3f4eb34ea1962e08fc8ce5f0bfbb39477da3f6740447",
+      "sha256": "b65dfd26c0d595c735827e8901899938dfea45f4c6a2f32eda70af2596cd7814",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/07_artifacts/verification/uet_equation_correspondence_registry_covariant_diffusion_addendum.json",
       "unit_lane": null,
@@ -23120,6 +23121,42 @@
       "sha256": "4879739078fddcb952e4f4ac7b6856222d51f46999d391dc63f583f0394b9f93",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/07_artifacts/verification/uet_equation_correspondence_registry_matter_space_flux_addendum.json",
+      "unit_lane": null,
+      "upstream_dependencies": [
+        "FOUNDATION",
+        "EQUATION",
+        "LANE"
+      ],
+      "verifier_paths": []
+    },
+    {
+      "artifact_paths": [
+        "docs/core/artifacts/uet_equation_correspondence_registry_noether_mapping_addendum.json"
+      ],
+      "asset_id": "UET-CORE-FILE-03BD59DC5215",
+      "claim_ceiling": null,
+      "derivation_class": null,
+      "downstream_dependencies": [],
+      "equation_family_or_lane": "foundation_or_shared",
+      "evidence_status": "INTERNAL",
+      "file_kind": "generated_artifact",
+      "formula_ids": [],
+      "generated_or_source": "generated",
+      "import_reference_count": null,
+      "link_reference_count": null,
+      "logical_area": "07_artifacts",
+      "migration_state": "COMPATIBILITY_PATH_RETAINED",
+      "next_action": "retain_path_and_link_generator",
+      "organization_status": "ASSIGNED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/artifacts/uet_equation_correspondence_registry_noether_mapping_addendum.json",
+      "reference_scan_status": "DEFERRED_TO_MIGRATION_WAVE",
+      "registry_link_status": "NOT_APPLICABLE",
+      "review_action": "retain_path_and_link_generator",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "sha256": "11ed7b48523f3139a2bb8a92f47c36c913c3e0403d93e6ad6ad39ced6fb513df",
+      "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
+      "target_physical_path": "docs/core/07_artifacts/verification/uet_equation_correspondence_registry_noether_mapping_addendum.json",
       "unit_lane": null,
       "upstream_dependencies": [
         "FOUNDATION",
@@ -25241,7 +25278,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "retain_path_and_link_generator",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256": "f4c173f55c7754cfde9365b4d8061a70a2b226e53e0c09d8ff55a359935367ae",
+      "sha256": "7b6d4d2aa4665bfa282c16e81c1ae8a78244e48a05a306054af355eee8277868",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/07_artifacts/verification/uet_foundation_compatibility_gate.json",
       "unit_lane": null,
@@ -26429,7 +26466,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "retain_path_and_link_generator",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256": "7476f8f1707be5ed0b2467047f4741a35fea2ea2c07e45b7db30c3dcab31f53e",
+      "sha256": "fa5d5d4cf7220cfbdcd18ad24ea8dea532ffd5197db9856b2e94948fa5dc1c3f",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/07_artifacts/verification/uet_research_organization_registry.json",
       "unit_lane": null,
@@ -47659,7 +47696,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "link_to_equation_family_or_artifact",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256": "7e42147a214b6e489f7653807e85224b190d46adb03f9b2c3f7f6b189576ca97",
+      "sha256": "bcead6c2f17ad6025718b43392ee6cc3b379cef9499de1eb0d11e5e80a0a03fd",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/05_tests/regression/test_uet_core_scientific_links.py",
       "unit_lane": null,
@@ -51017,78 +51054,110 @@
     {
       "artifact_paths": [
         "docs/core/artifacts/noether_phase_field_map_formula_audit.json",
-        "docs/core/artifacts/noether_phase_field_state_map_verification.json"
+        "docs/core/artifacts/noether_phase_field_state_map_verification.json",
+        "docs/core/artifacts/noether_phase_field_dependency_gate.json"
       ],
       "asset_id": "UET-CORE-FILE-EE0D8D1E6BBF",
       "claim_ceiling": "mapping/diagnostic only; no universal C ontology",
       "derivation_class": "action-level Noether relation plus constitutive/coarse-graining map",
+      "disposition_reason": "The Noether surface contains a legacy diagnostic and a bounded hydrodynamic coordinate map; assignment does not establish a universal C ontology, microscopic inversion, equation of state, transport closure, or physical validation.",
       "downstream_dependencies": [
         "LANE",
         "EVIDENCE"
       ],
       "equation_family_or_lane": "core.noether_mapping",
-      "evidence_status": "INTERNAL",
-      "file_kind": "equation_module",
-      "formula_ids": [],
+      "evidence_status": "BLOCKED",
+      "file_kind": "review_required_equation_module",
+      "formula_ids": [
+        "uet.noether_mapping.frame_projected_charge_density",
+        "uet.noether_mapping.affine_phase_coordinate",
+        "uet.noether_mapping.normalized_current_coordinate",
+        "uet.noether_mapping.continuity_residual_scaling",
+        "uet.noether_mapping.o2_polar_current",
+        "uet.noether_mapping.symmetric_double_well_conjugacy",
+        "uet.noether_mapping.normalized_constitutive_scales"
+      ],
       "generated_or_source": "source",
       "import_reference_count": null,
       "link_reference_count": null,
       "logical_area": "02_equations",
       "migration_state": "NOT_STARTED",
-      "next_action": "link_formula_verifier_artifact_and_migration_target",
+      "next_action": "link_noether_coordinate_formulas_and_preserve_eos_transport_observable_blockers",
+      "organization_disposition": "W2-EQUATION-NOETHER-MAPPING",
       "organization_status": "ASSIGNED",
       "owner_id": "EQUATION",
       "path": "docs/core/uet_noether.py",
       "reference_scan_status": "DEFERRED_TO_MIGRATION_WAVE",
-      "registry_link_status": "LINKED_BY_FAMILY_CONTRACT",
-      "review_action": "update_family_record_when_surface_changes",
+      "registry_link_status": "ORGANIZATION_POLICY_ASSIGNED",
+      "review_action": "assign_to_noether_mapping_equation_owner",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256": "90467d709f10d9124633d776c947ed0dc8d3c66d8d38817fda2b2547e4afeb83",
-      "status_source": "docs/core/artifacts/uet_core_equation_family_contract.json",
+      "status_source": "docs/core/00_governance/uet_research_organization_policy.json",
       "target_physical_path": "docs/core/02_equations/lorentz_noether/uet_noether.py",
       "unit_lane": "natural_parent_plus_normalized_map",
       "upstream_dependencies": [
         "FOUNDATION"
       ],
-      "verifier_paths": []
+      "verifier_paths": [
+        "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
+        "docs/core/test/test_noether_phase_field_map.py",
+        "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py",
+        "docs/scripts/audit/audit_uet_noether_phase_field_map.py"
+      ]
     },
     {
       "artifact_paths": [
         "docs/core/artifacts/noether_phase_field_map_formula_audit.json",
-        "docs/core/artifacts/noether_phase_field_state_map_verification.json"
+        "docs/core/artifacts/noether_phase_field_state_map_verification.json",
+        "docs/core/artifacts/noether_phase_field_dependency_gate.json"
       ],
       "asset_id": "UET-CORE-FILE-FE8C07A06467",
       "claim_ceiling": "mapping/diagnostic only; no universal C ontology",
       "derivation_class": "action-level Noether relation plus constitutive/coarse-graining map",
+      "disposition_reason": "The Noether surface contains a legacy diagnostic and a bounded hydrodynamic coordinate map; assignment does not establish a universal C ontology, microscopic inversion, equation of state, transport closure, or physical validation.",
       "downstream_dependencies": [
         "LANE",
         "EVIDENCE"
       ],
       "equation_family_or_lane": "core.noether_mapping",
-      "evidence_status": "INTERNAL",
-      "file_kind": "equation_module",
-      "formula_ids": [],
+      "evidence_status": "BLOCKED",
+      "file_kind": "review_required_equation_module",
+      "formula_ids": [
+        "uet.noether_mapping.frame_projected_charge_density",
+        "uet.noether_mapping.affine_phase_coordinate",
+        "uet.noether_mapping.normalized_current_coordinate",
+        "uet.noether_mapping.continuity_residual_scaling",
+        "uet.noether_mapping.o2_polar_current",
+        "uet.noether_mapping.symmetric_double_well_conjugacy",
+        "uet.noether_mapping.normalized_constitutive_scales"
+      ],
       "generated_or_source": "source",
       "import_reference_count": null,
       "link_reference_count": null,
       "logical_area": "02_equations",
       "migration_state": "NOT_STARTED",
-      "next_action": "link_formula_verifier_artifact_and_migration_target",
+      "next_action": "link_noether_coordinate_formulas_and_preserve_eos_transport_observable_blockers",
+      "organization_disposition": "W2-EQUATION-NOETHER-MAPPING",
       "organization_status": "ASSIGNED",
       "owner_id": "EQUATION",
       "path": "docs/core/uet_noether_phase_field_map.py",
       "reference_scan_status": "DEFERRED_TO_MIGRATION_WAVE",
-      "registry_link_status": "LINKED_BY_FAMILY_CONTRACT",
-      "review_action": "update_family_record_when_surface_changes",
+      "registry_link_status": "ORGANIZATION_POLICY_ASSIGNED",
+      "review_action": "assign_to_noether_mapping_equation_owner",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256": "e992834d7d3ca90476202d849551ab16d1aba4bb1156b0519b3cd79e2566f9e8",
-      "status_source": "docs/core/artifacts/uet_core_equation_family_contract.json",
+      "status_source": "docs/core/00_governance/uet_research_organization_policy.json",
       "target_physical_path": "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py",
       "unit_lane": "natural_parent_plus_normalized_map",
       "upstream_dependencies": [
         "FOUNDATION"
       ],
-      "verifier_paths": []
+      "verifier_paths": [
+        "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
+        "docs/core/test/test_noether_phase_field_map.py",
+        "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py",
+        "docs/scripts/audit/audit_uet_noether_phase_field_map.py"
+      ]
     },
     {
       "artifact_paths": [],
@@ -54946,7 +55015,7 @@
       "verifier_paths": []
     }
   ],
-  "generated_at": "2026-09-13T22:36:13+00:00",
+  "generated_at": "2026-09-13T22:56:07+00:00",
   "generator": "docs/scripts/audit/build_uet_research_organization_registry_v2.py",
   "logical_area_counts": {
     "00_governance": 4,
@@ -54956,7 +55025,7 @@
     "04_proofs": 1,
     "05_tests": 500,
     "06_data": 132,
-    "07_artifacts": 592,
+    "07_artifacts": 593,
     "08_history": 15
   },
   "logical_areas": {
@@ -54972,7 +55041,7 @@
     "99_review": "unassigned, ambiguous, or quarantined files"
   },
   "migration_state_counts": {
-    "COMPATIBILITY_PATH_RETAINED": 1224,
+    "COMPATIBILITY_PATH_RETAINED": 1225,
     "MIGRATED": 2,
     "NOT_STARTED": 326
   },
@@ -54981,7 +55050,7 @@
   "owner_counts": {
     "DATA": 132,
     "EQUATION": 118,
-    "EVIDENCE": 1093,
+    "EVIDENCE": 1094,
     "FOUNDATION": 45,
     "LANE": 145,
     "ORG": 19
@@ -55056,7 +55125,7 @@
     ],
     "shared_file_rule": "one canonical owner; other rooms submit a handoff"
   },
-  "pre_disposition_review_count": 134,
+  "pre_disposition_review_count": 136,
   "quarantine_count": 0,
   "registry_id": "UET-RESEARCH-ORGANIZATION",
   "review_queue_count": 0,

@@ -45,8 +45,8 @@
     },
     {
       "check_id": "review_disposition_coverage",
-      "expected": 134,
-      "observed": 134,
+      "expected": 136,
+      "observed": 136,
       "status": "PASS"
     },
     {
@@ -75,7 +75,8 @@
     "W1-LANE-TOPIC13-SUPPORT": 3,
     "W1-T13-HOLDOUT": 1,
     "W2-EQUATION-COVARIANT-DIFFUSION": 1,
-    "W2-EQUATION-COVARIANT-PARENT": 1
+    "W2-EQUATION-COVARIANT-PARENT": 1,
+    "W2-EQUATION-NOETHER-MAPPING": 2
   },
   "dispositioned_paths": [
     "docs/core/T13_HOLDOUT_EXPOSURE_2026_09_10.json",
@@ -118,6 +119,8 @@
     "docs/core/uet_matter_space_flux_telegraph.py",
     "docs/core/uet_matter_strain_susceptibility.py",
     "docs/core/uet_mode_work_heat.py",
+    "docs/core/uet_noether.py",
+    "docs/core/uet_noether_phase_field_map.py",
     "docs/core/uet_o2_action_1pi_sunset_euclidean.py",
     "docs/core/uet_o2_action_1pi_sunset_retarded.py",
     "docs/core/uet_o2_action_1pi_sunset_tensor.py",
@@ -214,18 +217,18 @@
     "docs/core/uet_transport_coefficient_identifiability.py"
   ],
   "duplicate_asset_ids": [],
-  "generated_at": "2026-09-13T22:36:13+00:00",
+  "generated_at": "2026-09-13T22:56:07+00:00",
   "generator": "docs/scripts/audit/build_uet_research_organization_registry_v2.py",
   "organization_disposition_source": "docs/core/00_governance/uet_research_organization_policy.json",
   "organization_wave": "WAVE_1_ASSIGN_AND_QUARANTINE",
   "quarantined_paths": [],
   "schema_version": "1.0",
   "scope": {
-    "assigned_review_count": 134,
-    "dispositioned_review_count": 134,
+    "assigned_review_count": 136,
+    "dispositioned_review_count": 136,
     "foundation_status": "BLOCKED",
-    "manifest_file_count": 1552,
-    "pre_disposition_review_count": 134,
+    "manifest_file_count": 1553,
+    "pre_disposition_review_count": 136,
     "quarantine_count": 0,
     "review_queue_count": 0,
     "undispositioned_review_count": 0

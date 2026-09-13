@@ -5,13 +5,17 @@
     [
       "G_munu",
       "g_munu"
+    ],
+    [
+      "J",
+      "j"
     ]
   ],
   "checks": [
     {
       "check_id": "assigned_records_are_all_audited",
-      "expected": 134,
-      "observed": 134,
+      "expected": 136,
+      "observed": 136,
       "status": "PASS"
     },
     {
@@ -51,6 +55,10 @@
         [
           "G_munu",
           "g_munu"
+        ],
+        [
+          "J",
+          "j"
         ]
       ],
       "status": "REVIEW_REQUIRED"
@@ -292,6 +300,44 @@
         "ROOM_CORE_FOUNDATION"
       ],
       "unit_lane_from_contract": "normalized_v1"
+    },
+    {
+      "canonical_family_contract_id": "core.noether_mapping",
+      "canonical_family_contract_status": "FOUND",
+      "claim_boundary": "link audit only; no equation or physical claim promotion",
+      "claim_ceiling_from_contract": "mapping/diagnostic only; no universal C ontology",
+      "contract_evidence_paths": [
+        "docs/core/artifacts/noether_phase_field_map_formula_audit.json",
+        "docs/core/artifacts/noether_phase_field_state_map_verification.json",
+        "docs/core/artifacts/noether_phase_field_dependency_gate.json"
+      ],
+      "contract_evidence_paths_exist": true,
+      "family_or_lane": "core.noether_mapping",
+      "link_status": "LINKED_PENDING_VERIFICATION",
+      "missing_link_fields": [],
+      "next_action": "link_noether_coordinate_formulas_and_preserve_eos_transport_observable_blockers",
+      "organization_dispositions": [
+        "W2-EQUATION-NOETHER-MAPPING"
+      ],
+      "owner_ids": [
+        "EQUATION"
+      ],
+      "record_count": 2,
+      "record_link_field_counts": {
+        "artifact_paths": 2,
+        "claim_ceiling": 2,
+        "formula_ids": 2,
+        "unit_lane": 2,
+        "verifier_paths": 2
+      },
+      "record_paths": [
+        "docs/core/uet_noether.py",
+        "docs/core/uet_noether_phase_field_map.py"
+      ],
+      "room_ids": [
+        "ROOM_CORE_FOUNDATION"
+      ],
+      "unit_lane_from_contract": "natural_parent_plus_normalized_map"
     },
     {
       "canonical_family_contract_id": null,
@@ -604,17 +650,17 @@
       "unit_lane_from_contract": null
     }
   ],
-  "generated_at": "2026-09-13T22:43:29+00:00",
+  "generated_at": "2026-09-13T22:56:12+00:00",
   "generator": "docs/scripts/audit/audit_uet_core_scientific_links.py",
   "input_errors": [],
   "inputs": {
     "correspondence_registry": {
       "path": "docs/core/artifacts/uet_equation_correspondence_registry.json",
-      "sha256": "522ff6de8e4892fedd85fb3d02b3fbba7bf7621fb12c40b1da3597c41308f073"
+      "sha256": "9fd592d590291dea95e793cc8211e052004c33302c8585dae2c7e3d80676d307"
     },
     "family_contract": {
       "path": "docs/core/artifacts/uet_core_equation_family_contract.json",
-      "sha256": "cda3b04788ff337d54b4b671d73cc69dbb680e3d809b89498ce71ae96f729127"
+      "sha256": "1bb218e1894abab97a1cb6da4393acb255050cf8902be1e828141966dc6cfa5b"
     },
     "foundation_gate": {
       "path": "docs/core/artifacts/uet_foundation_dependency_gate.json",
@@ -622,15 +668,15 @@
     },
     "migration_map": {
       "path": "docs/core/artifacts/uet_core_file_migration_map.json",
-      "sha256": "fb9aae90b0b3ae7d5f6cbd58d917343461bb2e1bbefb3c54034d46256894e2cb"
+      "sha256": "e9006e30d7a88332c5d21ce834dced202dbe556660caad01a534ef05ad31af6c"
     },
     "organization_policy": {
       "path": "docs/core/00_governance/uet_research_organization_policy.json",
-      "sha256": "9b3b5f4af365c8cda9a2b8323fdb78dc77f56582013a33c237f3ae4cb664c463"
+      "sha256": "465092964203802fcad7a24eaf717f964f5defa3da079d154e36e47f6e77e3e8"
     },
     "organization_registry": {
       "path": "docs/core/artifacts/uet_research_organization_registry.json",
-      "sha256": "fa5d5d4cf7220cfbdcd18ad24ea8dea532ffd5197db9856b2e94948fa5dc1c3f"
+      "sha256": "fbd7316a0cbb799659f9a070b799eb28b51e52eaf9e5ed99d2918630ac187005"
     }
   },
   "interpretation": [
@@ -874,6 +920,40 @@
       "organization_status": "ASSIGNED",
       "owner_id": "EQUATION",
       "path": "docs/core/uet_matter_space_flux_telegraph.py",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "source_exists": true,
+      "unit_lane_present": true,
+      "verifier_paths_present": true
+    },
+    {
+      "artifact_paths_present": true,
+      "claim_ceiling_present": true,
+      "evidence_status": "BLOCKED",
+      "family_link_status": "LINKED_PENDING_VERIFICATION",
+      "family_or_lane": "core.noether_mapping",
+      "formula_ids_present": true,
+      "next_action": "link_noether_coordinate_formulas_and_preserve_eos_transport_observable_blockers",
+      "organization_disposition": "W2-EQUATION-NOETHER-MAPPING",
+      "organization_status": "ASSIGNED",
+      "owner_id": "EQUATION",
+      "path": "docs/core/uet_noether.py",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "source_exists": true,
+      "unit_lane_present": true,
+      "verifier_paths_present": true
+    },
+    {
+      "artifact_paths_present": true,
+      "claim_ceiling_present": true,
+      "evidence_status": "BLOCKED",
+      "family_link_status": "LINKED_PENDING_VERIFICATION",
+      "family_or_lane": "core.noether_mapping",
+      "formula_ids_present": true,
+      "next_action": "link_noether_coordinate_formulas_and_preserve_eos_transport_observable_blockers",
+      "organization_disposition": "W2-EQUATION-NOETHER-MAPPING",
+      "organization_status": "ASSIGNED",
+      "owner_id": "EQUATION",
+      "path": "docs/core/uet_noether_phase_field_map.py",
       "room_id": "ROOM_CORE_FOUNDATION",
       "source_exists": true,
       "unit_lane_present": true,
@@ -2922,16 +3002,16 @@
   ],
   "schema_version": "1.0",
   "scope": {
-    "assigned_review_record_count": 134,
-    "family_or_lane_count": 11,
-    "organization_registry_file_count": 1552,
+    "assigned_review_record_count": 136,
+    "family_or_lane_count": 12,
+    "organization_registry_file_count": 1553,
     "physical_move_performed": false
   },
   "summary": {
-    "assigned_records": 134,
-    "audited_records": 134,
-    "canonical_family_contract_matches": 3,
-    "case_insensitive_key_collision_count": 1,
+    "assigned_records": 136,
+    "audited_records": 136,
+    "canonical_family_contract_matches": 4,
+    "case_insensitive_key_collision_count": 2,
     "families_without_canonical_contract": 8,
     "missing_link_field_counts": {
       "artifact_paths": 130,
@@ -2941,11 +3021,11 @@
       "verifier_paths": 130
     },
     "missing_source_path_count": 0,
-    "records_with_artifact_paths": 4,
-    "records_with_claim_ceiling": 4,
-    "records_with_formula_ids": 4,
-    "records_with_unit_lane": 4,
-    "records_with_verifier_paths": 4,
+    "records_with_artifact_paths": 6,
+    "records_with_claim_ceiling": 6,
+    "records_with_formula_ids": 6,
+    "records_with_unit_lane": 6,
+    "records_with_verifier_paths": 6,
     "records_without_canonical_contract": 130
   }
 }

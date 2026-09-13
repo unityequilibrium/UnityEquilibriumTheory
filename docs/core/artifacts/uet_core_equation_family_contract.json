@@ -340,9 +340,26 @@
       "claim_ceiling": "mapping/diagnostic only; no universal C ontology",
       "evidence_paths": [
         "docs/core/artifacts/noether_phase_field_map_formula_audit.json",
-        "docs/core/artifacts/noether_phase_field_state_map_verification.json"
+        "docs/core/artifacts/noether_phase_field_state_map_verification.json",
+        "docs/core/artifacts/noether_phase_field_dependency_gate.json"
       ],
       "next_gate": "derive coarse-graining/gradient EFT and prove observable map without many-to-one ambiguity",
+      "formula_ids": [
+        "uet.noether_mapping.frame_projected_charge_density",
+        "uet.noether_mapping.affine_phase_coordinate",
+        "uet.noether_mapping.normalized_current_coordinate",
+        "uet.noether_mapping.continuity_residual_scaling",
+        "uet.noether_mapping.o2_polar_current",
+        "uet.noether_mapping.symmetric_double_well_conjugacy",
+        "uet.noether_mapping.normalized_constitutive_scales"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_noether_phase_field_map.py",
+        "docs/core/test/test_noether_phase_field_map.py",
+        "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
+        "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py"
+      ],
+      "organization_review_required": true,
       "candidate_surface_count": 205,
       "module_paths_exist": true
     },
