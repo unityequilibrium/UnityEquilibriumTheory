@@ -185,22 +185,19 @@
       "unit_lane_from_contract": null
     },
     {
-      "canonical_family_contract_id": null,
-      "canonical_family_contract_status": "MISSING",
+      "canonical_family_contract_id": "core.matter_space_flux",
+      "canonical_family_contract_status": "FOUND",
       "claim_boundary": "link audit only; no equation or physical claim promotion",
-      "claim_ceiling_from_contract": null,
-      "contract_evidence_paths": [],
-      "contract_evidence_paths_exist": true,
-      "family_or_lane": "core.matter_space_flux_pending",
-      "link_status": "BLOCKED_NO_CANONICAL_FAMILY_CONTRACT",
-      "missing_link_fields": [
-        "artifact_paths",
-        "claim_ceiling",
-        "formula_ids",
-        "unit_lane",
-        "verifier_paths"
+      "claim_ceiling_from_contract": "candidate normalized conserved flux/response comparator; not SI thermal closure, not a universal C ontology, and not global energy law",
+      "contract_evidence_paths": [
+        "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
+        "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json"
       ],
-      "next_action": "link_functional_derivatives_flux_boundary_energy_ledger_and_causal_status",
+      "contract_evidence_paths_exist": true,
+      "family_or_lane": "core.matter_space_flux",
+      "link_status": "LINKED_PENDING_VERIFICATION",
+      "missing_link_fields": [],
+      "next_action": "verify_bounded_flux_family_links_and_preserve_original_kappa_C_gt_0_blocker",
       "organization_dispositions": [
         "W1-EQUATION-MATTER-SPACE"
       ],
@@ -209,11 +206,11 @@
       ],
       "record_count": 2,
       "record_link_field_counts": {
-        "artifact_paths": 0,
-        "claim_ceiling": 0,
-        "formula_ids": 0,
-        "unit_lane": 0,
-        "verifier_paths": 0
+        "artifact_paths": 2,
+        "claim_ceiling": 2,
+        "formula_ids": 2,
+        "unit_lane": 2,
+        "verifier_paths": 2
       },
       "record_paths": [
         "docs/core/uet_matter_space_flux_phi.py",
@@ -222,7 +219,7 @@
       "room_ids": [
         "ROOM_CORE_FOUNDATION"
       ],
-      "unit_lane_from_contract": null
+      "unit_lane_from_contract": "normalized_v1"
     },
     {
       "canonical_family_contract_id": null,
@@ -535,17 +532,17 @@
       "unit_lane_from_contract": null
     }
   ],
-  "generated_at": "2026-09-13T20:19:27+00:00",
+  "generated_at": "2026-09-13T21:12:04+00:00",
   "generator": "docs/scripts/audit/audit_uet_core_scientific_links.py",
   "input_errors": [],
   "inputs": {
     "correspondence_registry": {
       "path": "docs/core/artifacts/uet_equation_correspondence_registry.json",
-      "sha256": "b0633c9764f64280a28355b4ebe73f0d5ec0fa915563cc18ae3d46665526c5d9"
+      "sha256": "8bbcf28ed4a3ab11b17536f3122aefd1c9d6dd7ce5b98a5872b5ce6082193a10"
     },
     "family_contract": {
       "path": "docs/core/artifacts/uet_core_equation_family_contract.json",
-      "sha256": "e101f9b8bfea97750b54aa1718c38b7196d91aed718f2f1abb5203c459a3abc1"
+      "sha256": "5356ed1c60759aec7ec41a1ee6dbdbee7da3899e1876491cf7c63e303d3e5f14"
     },
     "foundation_gate": {
       "path": "docs/core/artifacts/uet_foundation_dependency_gate.json",
@@ -553,15 +550,15 @@
     },
     "migration_map": {
       "path": "docs/core/artifacts/uet_core_file_migration_map.json",
-      "sha256": "6e1ed4aa341a1593f85a01986e4dadf2e62cf58ea8ac281b45223c6d42e20ba6"
+      "sha256": "0900839e449fcd11aa7755564f2e26a235b607388a66a1a63fe7c1ecfefbb7e9"
     },
     "organization_policy": {
       "path": "docs/core/00_governance/uet_research_organization_policy.json",
-      "sha256": "c76bc8df7b8d21d462fd5b728061ca3c266ee647ca909333919af4f7515f15b8"
+      "sha256": "503b2b89703c49fa9d903b538f92210f76a974f4b098d0e7e1b9452141b532b1"
     },
     "organization_registry": {
       "path": "docs/core/artifacts/uet_research_organization_registry.json",
-      "sha256": "da6404ecb0a7594e0e66a00646d55fe495668fdf58dcfad952c3f7d20fb9e15d"
+      "sha256": "d67f7121d244b3a848c9656f2e443bfb11fad7c2386a65f1936bdc6da3fb5c13"
     }
   },
   "interpretation": [
@@ -760,38 +757,38 @@
       "verifier_paths_present": false
     },
     {
-      "artifact_paths_present": false,
-      "claim_ceiling_present": false,
+      "artifact_paths_present": true,
+      "claim_ceiling_present": true,
       "evidence_status": "BLOCKED",
-      "family_link_status": "BLOCKED_NO_CANONICAL_FAMILY_CONTRACT",
-      "family_or_lane": "core.matter_space_flux_pending",
-      "formula_ids_present": false,
-      "next_action": "link_functional_derivatives_flux_boundary_energy_ledger_and_causal_status",
+      "family_link_status": "LINKED_PENDING_VERIFICATION",
+      "family_or_lane": "core.matter_space_flux",
+      "formula_ids_present": true,
+      "next_action": "verify_bounded_flux_family_links_and_preserve_original_kappa_C_gt_0_blocker",
       "organization_disposition": "W1-EQUATION-MATTER-SPACE",
       "organization_status": "ASSIGNED",
       "owner_id": "EQUATION",
       "path": "docs/core/uet_matter_space_flux_phi.py",
       "room_id": "ROOM_CORE_FOUNDATION",
       "source_exists": true,
-      "unit_lane_present": false,
-      "verifier_paths_present": false
+      "unit_lane_present": true,
+      "verifier_paths_present": true
     },
     {
-      "artifact_paths_present": false,
-      "claim_ceiling_present": false,
+      "artifact_paths_present": true,
+      "claim_ceiling_present": true,
       "evidence_status": "BLOCKED",
-      "family_link_status": "BLOCKED_NO_CANONICAL_FAMILY_CONTRACT",
-      "family_or_lane": "core.matter_space_flux_pending",
-      "formula_ids_present": false,
-      "next_action": "link_functional_derivatives_flux_boundary_energy_ledger_and_causal_status",
+      "family_link_status": "LINKED_PENDING_VERIFICATION",
+      "family_or_lane": "core.matter_space_flux",
+      "formula_ids_present": true,
+      "next_action": "verify_bounded_flux_family_links_and_preserve_original_kappa_C_gt_0_blocker",
       "organization_disposition": "W1-EQUATION-MATTER-SPACE",
       "organization_status": "ASSIGNED",
       "owner_id": "EQUATION",
       "path": "docs/core/uet_matter_space_flux_telegraph.py",
       "room_id": "ROOM_CORE_FOUNDATION",
       "source_exists": true,
-      "unit_lane_present": false,
-      "verifier_paths_present": false
+      "unit_lane_present": true,
+      "verifier_paths_present": true
     },
     {
       "artifact_paths_present": false,
@@ -2838,28 +2835,28 @@
   "scope": {
     "assigned_review_record_count": 133,
     "family_or_lane_count": 9,
-    "organization_registry_file_count": 1547,
+    "organization_registry_file_count": 1549,
     "physical_move_performed": false
   },
   "summary": {
     "assigned_records": 133,
     "audited_records": 133,
-    "canonical_family_contract_matches": 0,
+    "canonical_family_contract_matches": 1,
     "case_insensitive_key_collision_count": 1,
-    "families_without_canonical_contract": 9,
+    "families_without_canonical_contract": 8,
     "missing_link_field_counts": {
-      "artifact_paths": 133,
-      "claim_ceiling": 133,
-      "formula_ids": 133,
-      "unit_lane": 133,
-      "verifier_paths": 133
+      "artifact_paths": 131,
+      "claim_ceiling": 131,
+      "formula_ids": 131,
+      "unit_lane": 131,
+      "verifier_paths": 131
     },
     "missing_source_path_count": 0,
-    "records_with_artifact_paths": 0,
-    "records_with_claim_ceiling": 0,
-    "records_with_formula_ids": 0,
-    "records_with_unit_lane": 0,
-    "records_with_verifier_paths": 0,
-    "records_without_canonical_contract": 133
+    "records_with_artifact_paths": 2,
+    "records_with_claim_ceiling": 2,
+    "records_with_formula_ids": 2,
+    "records_with_unit_lane": 2,
+    "records_with_verifier_paths": 2,
+    "records_without_canonical_contract": 131
   }
 }

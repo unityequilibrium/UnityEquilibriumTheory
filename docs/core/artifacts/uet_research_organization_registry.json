@@ -6,17 +6,18 @@
     "declared_input_data": 131,
     "equation_module": 21,
     "folder_governance": 1,
-    "generated_artifact": 590,
+    "generated_artifact": 591,
     "governance_policy": 1,
     "lane_specific_module": 99,
     "navigation_and_legacy_boundary": 2,
     "proof_or_derivation_runner": 1,
     "review_required": 1,
+    "review_required_equation_module": 2,
     "specification_or_research_note": 126,
     "support_or_adapter_module": 29,
-    "unassigned_python_surface": 33,
+    "unassigned_python_surface": 31,
     "update_log": 15,
-    "verifier_or_regression_test": 497
+    "verifier_or_regression_test": 498
   },
   "dependency_edges": [
     {
@@ -66,7 +67,7 @@
     "BLOCKED": 423,
     "CANDIDATE": 12,
     "COMPARATOR": 1,
-    "INTERNAL": 1111
+    "INTERNAL": 1113
   },
   "files": [
     {
@@ -95,7 +96,7 @@
       "registry_link_status": "GENERATED_INDEX",
       "review_action": "retain_generated_index",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "452735fe6c32408c056f98f1b1bf4618bbbae6589f20fe6207f2263247921d44",
+      "sha256": "eb7f567ceeb2bb631388d0025208e762218f1fc46df6790be0d629215b75317d",
       "status_source": "docs/scripts/audit/build_uet_research_organization_registry_v2.py",
       "target_physical_path": "docs/core/00_governance/CORE_RESEARCH_ORGANIZATION_INDEX.md",
       "unit_lane": null,
@@ -128,7 +129,7 @@
       "registry_link_status": "SOURCE_POLICY",
       "review_action": "keep_as_governance_source",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "c76bc8df7b8d21d462fd5b728061ca3c266ee647ca909333919af4f7515f15b8",
+      "sha256": "503b2b89703c49fa9d903b538f92210f76a974f4b098d0e7e1b9452141b532b1",
       "status_source": "docs/core/00_governance/uet_research_organization_policy.json",
       "target_physical_path": "docs/core/00_governance/uet_research_organization_policy.json",
       "unit_lane": null,
@@ -197,7 +198,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "keep_as_folder_rule",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "885deb588718f20066dedbf0f0398864c687729fffff0ec140476bfb80587ad6",
+      "sha256": "1329cbd44f873db571b7a6b31bba248ae0aa56920d181006ef3df334c66903a6",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/00_governance/AGENTS.md",
       "unit_lane": null,
@@ -303,7 +304,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "link_to_registry_and_current_artifact",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256": "3c118bfaf0ad7ca2438fb5c355a5e3affc7917d1a6f37b4b16e28a3bde543a2f",
+      "sha256": "8bf37c2450eb1d2827320a1f977a7387f5699df016d7bbfe7e6cb0e4f6d10215",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/01_contracts/CORE_FILE_AND_RESEARCH_STANDARD.md",
       "unit_lane": null,
@@ -339,7 +340,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "link_to_registry_and_current_artifact",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256": "93f38dfd994e3d26a0a05383cecf488673c6f1184688526bbad3674fbe8688a0",
+      "sha256": "36035645bb23622c0421dcb88d9a0d333c6e981a1ac02158bfca598bb914cda3",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/01_contracts/CORE_FILE_INDEX.md",
       "unit_lane": null,
@@ -374,7 +375,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "retain_one_entry_per_completed_wave",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "4c4cf299d4e0ae393a604f4010b5f244eb20a73a7e4844f605f14892bbc9c30e",
+      "sha256": "7332c119da9edcfc43a295aa460d3d834f2b27991abab018b56fcc5893e10271",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/08_history/update_logs/CORE_FILE_ORGANIZATION_UPDATE_LOG.md",
       "unit_lane": null,
@@ -8426,7 +8427,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "retain_path_and_link_generator",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256": "26574821b2ec5b90621681d4676422ecfbea9e4c649f1c0991b172cec7f3bc0b",
+      "sha256": "bf74f0c4b9db0b85dfe06a584c60d1076ac174d544a5aecf5502bfc4cc2b1b9a",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/07_artifacts/verification/matter_space_conserved_flux_telegraph_verification.json",
       "unit_lane": null,
@@ -8570,7 +8571,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "retain_path_and_link_generator",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b",
+      "sha256": "008681ec4a8e393b22e51e51827df5a19d649d4d1b7267f16e5330dfff3c4de0",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/07_artifacts/verification/matter_space_flux_phi_coupled_verification.json",
       "unit_lane": null,
@@ -22358,7 +22359,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "retain_path_and_link_generator",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256": "628f960d0a4caf57c013acfca9bcfa15d892fd6a2b8f5cc29e84ff0a3889cefe",
+      "sha256": "401d98a30020cfd01e0aa5df06a36c4d53b18c9c1cbe4aba113e1d3e4a3e42ec",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/07_artifacts/verification/uet_code_surface_inventory.json",
       "unit_lane": null,
@@ -22394,7 +22395,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "retain_path_and_link_generator",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256": "e101f9b8bfea97750b54aa1718c38b7196d91aed718f2f1abb5203c459a3abc1",
+      "sha256": "5356ed1c60759aec7ec41a1ee6dbdbee7da3899e1876491cf7c63e303d3e5f14",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/07_artifacts/verification/uet_core_equation_family_contract.json",
       "unit_lane": null,
@@ -22430,7 +22431,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "retain_path_and_link_generator",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256": "397814ec27e667da43c542403e38e6b766e672f1d3495fce3f5c53f955924f7a",
+      "sha256": "db3468f143ea807900a3f49252cf2e591c41a22e16c5ef1f125fc1774766117c",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/07_artifacts/verification/uet_core_file_manifest.json",
       "unit_lane": null,
@@ -22466,7 +22467,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "retain_path_and_link_generator",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256": "f062cb26b42a74f58451f4474e1e9ab2212a5b09b66d3b1d1cbd6245104b3a0e",
+      "sha256": "d1df130b2d42a7a4669a101596d34ddcd27f84d827d02c4ec8300ec497c8adcb",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/07_artifacts/verification/uet_core_file_migration_map.json",
       "unit_lane": null,
@@ -22502,7 +22503,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "retain_path_and_link_generator",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256": "bb16177dcec938d02c3d5206f5abc14fa5d9d40011fd9b8d9968743240653916",
+      "sha256": "80c8b748f99fd356df97d7067e542c6fce340c6091c57d5155dc0e8cc42e0524",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/07_artifacts/verification/uet_core_organization_audit.json",
       "unit_lane": null,
@@ -22538,7 +22539,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "retain_path_and_link_generator",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256": "41c1eeaacaa546515656008e15e521b4bb7423637ef790d76a8589f6552ef622",
+      "sha256": "43a0b0e5233186f574f88c3f4130b01336c29dbbcc4fe6a020e63800c4d5b8c3",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/07_artifacts/verification/uet_core_scientific_link_audit.json",
       "unit_lane": null,
@@ -22754,7 +22755,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "retain_path_and_link_generator",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256": "b0633c9764f64280a28355b4ebe73f0d5ec0fa915563cc18ae3d46665526c5d9",
+      "sha256": "8bbcf28ed4a3ab11b17536f3122aefd1c9d6dd7ce5b98a5872b5ce6082193a10",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/07_artifacts/verification/uet_equation_correspondence_registry.json",
       "unit_lane": null,
@@ -23055,6 +23056,42 @@
     },
     {
       "artifact_paths": [
+        "docs/core/artifacts/uet_equation_correspondence_registry_matter_space_flux_addendum.json"
+      ],
+      "asset_id": "UET-CORE-FILE-0169E37F7A93",
+      "claim_ceiling": null,
+      "derivation_class": null,
+      "downstream_dependencies": [],
+      "equation_family_or_lane": "foundation_or_shared",
+      "evidence_status": "INTERNAL",
+      "file_kind": "generated_artifact",
+      "formula_ids": [],
+      "generated_or_source": "generated",
+      "import_reference_count": null,
+      "link_reference_count": null,
+      "logical_area": "07_artifacts",
+      "migration_state": "COMPATIBILITY_PATH_RETAINED",
+      "next_action": "retain_path_and_link_generator",
+      "organization_status": "ASSIGNED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/artifacts/uet_equation_correspondence_registry_matter_space_flux_addendum.json",
+      "reference_scan_status": "DEFERRED_TO_MIGRATION_WAVE",
+      "registry_link_status": "NOT_APPLICABLE",
+      "review_action": "retain_path_and_link_generator",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "sha256": "4879739078fddcb952e4f4ac7b6856222d51f46999d391dc63f583f0394b9f93",
+      "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
+      "target_physical_path": "docs/core/07_artifacts/verification/uet_equation_correspondence_registry_matter_space_flux_addendum.json",
+      "unit_lane": null,
+      "upstream_dependencies": [
+        "FOUNDATION",
+        "EQUATION",
+        "LANE"
+      ],
+      "verifier_paths": []
+    },
+    {
+      "artifact_paths": [
         "docs/core/artifacts/uet_equation_correspondence_registry_open_system_addendum.json"
       ],
       "asset_id": "UET-CORE-FILE-FDF6200D1D12",
@@ -23222,7 +23259,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "retain_path_and_link_generator",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256": "46dc5b068c246760f82a20c45ec0241bea3a87101177367018e580e28583ae10",
+      "sha256": "7fe3f4d06215808b6702bc12e5bfa14d439060e6d0050ad9106fb6fa7baf5f09",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/07_artifacts/verification/uet_equation_correspondence_registry_theory_spine_addendum.json",
       "unit_lane": null,
@@ -26354,7 +26391,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "retain_path_and_link_generator",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256": "46a5d7246246a1af1d4233cef582458f98875f7740c503462f1bc7cdda09fe6e",
+      "sha256": "8241bea02d0ca0fd1e8799d5ccca9233f8594da2aefcaa621ef97632d4f17d6a",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/07_artifacts/verification/uet_research_organization_registry.json",
       "unit_lane": null,
@@ -47584,7 +47621,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "review_action": "link_to_equation_family_or_artifact",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256": "1e2a15e998b0bc6af2255dcf1cf0c0cdfc7ab2137fa306f2546cce517c7537c3",
+      "sha256": "c5face22e22430562360cbd7b19820d0d6e22f1476b1326318aceaeaf9cabd16",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/05_tests/regression/test_uet_core_scientific_links.py",
       "unit_lane": null,
@@ -48335,6 +48372,40 @@
       "sha256": "ad232d465fa54af3d1944efc05f18b7ee2372652488a6539c7c8228471504ea8",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "target_physical_path": "docs/core/05_tests/regression/test_uet_main_theory_wave0.py",
+      "unit_lane": null,
+      "upstream_dependencies": [
+        "FOUNDATION",
+        "EQUATION",
+        "LANE"
+      ],
+      "verifier_paths": []
+    },
+    {
+      "artifact_paths": [],
+      "asset_id": "UET-CORE-FILE-49D959D50A95",
+      "claim_ceiling": null,
+      "derivation_class": null,
+      "downstream_dependencies": [],
+      "equation_family_or_lane": "core_test_surface",
+      "evidence_status": "INTERNAL",
+      "file_kind": "verifier_or_regression_test",
+      "formula_ids": [],
+      "generated_or_source": "source",
+      "import_reference_count": null,
+      "link_reference_count": null,
+      "logical_area": "05_tests",
+      "migration_state": "COMPATIBILITY_PATH_RETAINED",
+      "next_action": "link_registry_status_and_owner",
+      "organization_status": "ASSIGNED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/test/test_uet_matter_space_flux_links.py",
+      "reference_scan_status": "DEFERRED_TO_MIGRATION_WAVE",
+      "registry_link_status": "NOT_APPLICABLE",
+      "review_action": "link_to_equation_family_or_artifact",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "sha256": "3b568157da28f5a3bb4e3fa34a6ce91f2e2fc76884d68cf5c5e98ba7dd411f0f",
+      "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
+      "target_physical_path": "docs/core/05_tests/regression/test_uet_matter_space_flux_links.py",
       "unit_lane": null,
       "upstream_dependencies": [
         "FOUNDATION",
@@ -50570,25 +50641,33 @@
       "verifier_paths": []
     },
     {
-      "artifact_paths": [],
-      "asset_id": "UET-CORE-FILE-A6946B6B1835",
-      "claim_ceiling": null,
-      "derivation_class": null,
-      "disposition_reason": "Matter-space flux modules implement an equation family that needs explicit conservation, units, and causal-lane review.",
-      "downstream_dependencies": [
-        "FOUNDATION",
-        "DATA"
+      "artifact_paths": [
+        "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
+        "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json"
       ],
-      "equation_family_or_lane": "core.matter_space_flux_pending",
+      "asset_id": "UET-CORE-FILE-A6946B6B1835",
+      "claim_ceiling": "candidate normalized conserved flux/response comparator; not SI thermal closure, not a universal C ontology, and not global energy law",
+      "derivation_class": "named constitutive flux branch with internal numerical energy-ledger verification; not a first-principles universal law",
+      "disposition_reason": "Matter-space flux modules now have a declared bounded family contract; organization assignment still does not promote the normalized branch or remove the original causal blocker.",
+      "downstream_dependencies": [
+        "LANE",
+        "EVIDENCE"
+      ],
+      "equation_family_or_lane": "core.matter_space_flux",
       "evidence_status": "BLOCKED",
-      "file_kind": "unassigned_python_surface",
-      "formula_ids": [],
+      "file_kind": "review_required_equation_module",
+      "formula_ids": [
+        "uet.matter_space_flux.conservation",
+        "uet.matter_space_flux.relaxation",
+        "uet.matter_space_flux.phi_response",
+        "uet.matter_space_flux.shared_energy_ledger"
+      ],
       "generated_or_source": "source",
       "import_reference_count": null,
       "link_reference_count": null,
       "logical_area": "02_equations",
       "migration_state": "NOT_STARTED",
-      "next_action": "link_functional_derivatives_flux_boundary_energy_ledger_and_causal_status",
+      "next_action": "verify_bounded_flux_family_links_and_preserve_original_kappa_C_gt_0_blocker",
       "organization_disposition": "W1-EQUATION-MATTER-SPACE",
       "organization_status": "ASSIGNED",
       "owner_id": "EQUATION",
@@ -50600,30 +50679,45 @@
       "sha256": "d7435f6be8f72ed2e318f573e5ebd5ada7622209263a77ef72335f6410c868e0",
       "status_source": "docs/core/00_governance/uet_research_organization_policy.json",
       "target_physical_path": "docs/core/02_equations/matter_space/uet_matter_space_flux_phi.py",
-      "unit_lane": null,
-      "upstream_dependencies": [],
-      "verifier_paths": []
+      "unit_lane": "normalized_v1",
+      "upstream_dependencies": [
+        "FOUNDATION"
+      ],
+      "verifier_paths": [
+        "docs/core/test/test_matter_space_conserved_flux_telegraph.py",
+        "docs/core/test/test_matter_space_flux_phi_coupled.py",
+        "docs/scripts/audit/audit_matter_space_conserved_flux_telegraph.py",
+        "docs/scripts/audit/audit_matter_space_flux_phi_coupled.py"
+      ]
     },
     {
-      "artifact_paths": [],
-      "asset_id": "UET-CORE-FILE-80475AF95181",
-      "claim_ceiling": null,
-      "derivation_class": null,
-      "disposition_reason": "Matter-space flux modules implement an equation family that needs explicit conservation, units, and causal-lane review.",
-      "downstream_dependencies": [
-        "FOUNDATION",
-        "DATA"
+      "artifact_paths": [
+        "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
+        "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json"
       ],
-      "equation_family_or_lane": "core.matter_space_flux_pending",
+      "asset_id": "UET-CORE-FILE-80475AF95181",
+      "claim_ceiling": "candidate normalized conserved flux/response comparator; not SI thermal closure, not a universal C ontology, and not global energy law",
+      "derivation_class": "named constitutive flux branch with internal numerical energy-ledger verification; not a first-principles universal law",
+      "disposition_reason": "Matter-space flux modules now have a declared bounded family contract; organization assignment still does not promote the normalized branch or remove the original causal blocker.",
+      "downstream_dependencies": [
+        "LANE",
+        "EVIDENCE"
+      ],
+      "equation_family_or_lane": "core.matter_space_flux",
       "evidence_status": "BLOCKED",
-      "file_kind": "unassigned_python_surface",
-      "formula_ids": [],
+      "file_kind": "review_required_equation_module",
+      "formula_ids": [
+        "uet.matter_space_flux.conservation",
+        "uet.matter_space_flux.relaxation",
+        "uet.matter_space_flux.phi_response",
+        "uet.matter_space_flux.shared_energy_ledger"
+      ],
       "generated_or_source": "source",
       "import_reference_count": null,
       "link_reference_count": null,
       "logical_area": "02_equations",
       "migration_state": "NOT_STARTED",
-      "next_action": "link_functional_derivatives_flux_boundary_energy_ledger_and_causal_status",
+      "next_action": "verify_bounded_flux_family_links_and_preserve_original_kappa_C_gt_0_blocker",
       "organization_disposition": "W1-EQUATION-MATTER-SPACE",
       "organization_status": "ASSIGNED",
       "owner_id": "EQUATION",
@@ -50635,9 +50729,16 @@
       "sha256": "19cf32dac3e2fd3b1b16e2998542aa17d92c7701b874025ae373e0a3c7eeeda9",
       "status_source": "docs/core/00_governance/uet_research_organization_policy.json",
       "target_physical_path": "docs/core/02_equations/matter_space/uet_matter_space_flux_telegraph.py",
-      "unit_lane": null,
-      "upstream_dependencies": [],
-      "verifier_paths": []
+      "unit_lane": "normalized_v1",
+      "upstream_dependencies": [
+        "FOUNDATION"
+      ],
+      "verifier_paths": [
+        "docs/core/test/test_matter_space_conserved_flux_telegraph.py",
+        "docs/core/test/test_matter_space_flux_phi_coupled.py",
+        "docs/scripts/audit/audit_matter_space_conserved_flux_telegraph.py",
+        "docs/scripts/audit/audit_matter_space_flux_phi_coupled.py"
+      ]
     },
     {
       "artifact_paths": [
@@ -54717,7 +54818,7 @@
       "verifier_paths": []
     }
   ],
-  "generated_at": "2026-09-13T20:19:14+00:00",
+  "generated_at": "2026-09-13T21:11:57+00:00",
   "generator": "docs/scripts/audit/build_uet_research_organization_registry_v2.py",
   "logical_area_counts": {
     "00_governance": 4,
@@ -54725,9 +54826,9 @@
     "02_equations": 118,
     "03_lanes": 145,
     "04_proofs": 1,
-    "05_tests": 497,
+    "05_tests": 498,
     "06_data": 132,
-    "07_artifacts": 590,
+    "07_artifacts": 591,
     "08_history": 15
   },
   "logical_areas": {
@@ -54743,7 +54844,7 @@
     "99_review": "unassigned, ambiguous, or quarantined files"
   },
   "migration_state_counts": {
-    "COMPATIBILITY_PATH_RETAINED": 1219,
+    "COMPATIBILITY_PATH_RETAINED": 1221,
     "MIGRATED": 2,
     "NOT_STARTED": 326
   },
@@ -54752,7 +54853,7 @@
   "owner_counts": {
     "DATA": 132,
     "EQUATION": 118,
-    "EVIDENCE": 1088,
+    "EVIDENCE": 1090,
     "FOUNDATION": 45,
     "LANE": 145,
     "ORG": 19

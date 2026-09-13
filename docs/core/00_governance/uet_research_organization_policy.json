@@ -203,13 +203,13 @@
       "owner_id": "EQUATION",
       "room_id": "ROOM_CORE_FOUNDATION",
       "logical_area": "02_equations",
-      "equation_family_or_lane": "core.matter_space_flux_pending",
+      "equation_family_or_lane": "core.matter_space_flux",
       "organization_status": "ASSIGNED",
       "evidence_status": "BLOCKED",
       "target_path_template": "docs/core/02_equations/matter_space/{name}",
-      "next_action": "link_functional_derivatives_flux_boundary_energy_ledger_and_causal_status",
+      "next_action": "verify_bounded_flux_family_links_and_preserve_original_kappa_C_gt_0_blocker",
       "review_action": "assign_to_matter_space_equation_owner",
-      "reason": "Matter-space flux modules implement an equation family that needs explicit conservation, units, and causal-lane review."
+      "reason": "Matter-space flux modules now have a declared bounded family contract; organization assignment still does not promote the normalized branch or remove the original causal blocker."
     },
     {
       "disposition_id": "W1-EQUATION-O2-EXTENDED",

@@ -1,16 +1,16 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_core_equation_family_contract",
-  "generated_at": "2026-08-08",
+  "generated_at": "2026-09-14",
   "audit_status": "PASS",
   "contract_status": "BLOCKED",
   "controlling_blocker": "core_code_surface_classification_or_upstream_compatibility_incomplete",
   "coverage": {
     "core_code_surface_file_count": 51,
-    "assigned_module_path_count": 51,
+    "assigned_module_path_count": 53,
     "missing_core_paths": [],
     "nonexistent_declared_paths": [],
-    "equation_family_count": 9,
+    "equation_family_count": 10,
     "support_or_contract_family_count": 3
   },
   "upstream_evidence_snapshot": {
@@ -81,6 +81,48 @@
       ],
       "next_gate": "repair pre-arrival leakage and then define dimensional observable map",
       "candidate_surface_count": 231,
+      "module_paths_exist": true
+    },
+    {
+      "family_id": "core.matter_space_flux",
+      "name": "Conserved matter-space flux and causal response branch",
+      "module_paths": [
+        "docs/core/uet_matter_space_flux_telegraph.py",
+        "docs/core/uet_matter_space_flux_phi.py"
+      ],
+      "equation_family": true,
+      "variables": {
+        "C": "conserved collective-coordinate field on the named flux lane",
+        "J_C": "conserved face flux",
+        "Phi": "effective response variable",
+        "Pi": "discrete Phi response rate",
+        "R_gen": "derived trace absent from physical dynamics"
+      },
+      "standard_physics_counterpart": "one-dimensional continuity equation with Maxwell-Cattaneo-like flux relaxation and a damped coupled response",
+      "unit_lane": "normalized_v1",
+      "derivation_class": "named constitutive flux branch with internal numerical energy-ledger verification; not a first-principles universal law",
+      "mathematical_compatibility_status": "INTERNAL_FLUX_BRANCH_GATES_PASS_ORIGINAL_KAPPA_C_GT_0_CLASS_BLOCKED",
+      "old_theory_special_case_status": "kappa_C=0 named branch only; the original kappa_C>0 conserved-gradient causal class remains separate and blocked",
+      "claim_ceiling": "candidate normalized conserved flux/response comparator; not SI thermal closure, not a universal C ontology, and not global energy law",
+      "evidence_paths": [
+        "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
+        "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json"
+      ],
+      "next_gate": "complete dimensional observable mapping and independently locked external comparison",
+      "formula_ids": [
+        "uet.matter_space_flux.conservation",
+        "uet.matter_space_flux.relaxation",
+        "uet.matter_space_flux.phi_response",
+        "uet.matter_space_flux.shared_energy_ledger"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_matter_space_conserved_flux_telegraph.py",
+        "docs/scripts/audit/audit_matter_space_flux_phi_coupled.py",
+        "docs/core/test/test_matter_space_conserved_flux_telegraph.py",
+        "docs/core/test/test_matter_space_flux_phi_coupled.py"
+      ],
+      "organization_review_required": true,
+      "candidate_surface_count": 0,
       "module_paths_exist": true
     },
     {

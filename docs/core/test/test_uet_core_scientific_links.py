@@ -20,18 +20,30 @@ def test_scientific_link_audit_keeps_open_links_blocked() -> None:
     assert audit["audit_status"] == "BLOCKED_OPEN_SCIENTIFIC_LINKS"
     assert audit["summary"]["assigned_records"] == 133
     assert audit["summary"]["audited_records"] == 133
-    assert audit["summary"]["families_without_canonical_contract"] == 9
-    assert audit["summary"]["records_without_canonical_contract"] == 133
+    assert audit["summary"]["canonical_family_contract_matches"] == 1
+    assert audit["summary"]["families_without_canonical_contract"] == 8
+    assert audit["summary"]["records_without_canonical_contract"] == 131
     assert audit["summary"]["missing_link_field_counts"] == {
-        "artifact_paths": 133,
-        "claim_ceiling": 133,
-        "formula_ids": 133,
-        "unit_lane": 133,
-        "verifier_paths": 133,
+        "artifact_paths": 131,
+        "claim_ceiling": 131,
+        "formula_ids": 131,
+        "unit_lane": 131,
+        "verifier_paths": 131,
     }
+    assert audit["summary"]["records_with_formula_ids"] == 2
+    assert audit["summary"]["records_with_unit_lane"] == 2
+    assert audit["summary"]["records_with_verifier_paths"] == 2
+    assert audit["summary"]["records_with_artifact_paths"] == 2
+    assert audit["summary"]["records_with_claim_ceiling"] == 2
+    flux_family = next(
+        family for family in audit["families"]
+        if family["family_or_lane"] == "core.matter_space_flux"
+    )
+    assert flux_family["link_status"] == "LINKED_PENDING_VERIFICATION"
     assert all(
         family["link_status"].startswith("BLOCKED")
         for family in audit["families"]
+        if family is not flux_family
     )
 
 
