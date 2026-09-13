@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_core_file_manifest",
-  "generated_at": "2026-09-13T08:38:36+00:00",
+  "generated_at": "2026-09-13T09:27:04+00:00",
   "generator": "docs/scripts/audit/build_uet_core_file_manifest.py",
   "status": "PASS_WITH_REVIEW_REQUIRED",
   "controlling_blocker": "unlinked_or_ambiguous_core_paths_require_family_assignment_or_quarantine",
@@ -14,32 +14,54 @@
     "declared_input_data": 131,
     "equation_module": 21,
     "folder_governance": 1,
-    "generated_artifact": 586,
+    "generated_artifact": 589,
     "lane_specific_module": 99,
     "navigation_and_legacy_boundary": 1,
     "proof_or_derivation_runner": 1,
-    "review_required": 1,
-    "specification_or_research_note": 126,
+    "review_required": 2,
+    "specification_or_research_note": 127,
     "support_or_adapter_module": 29,
     "unassigned_python_surface": 33,
     "update_log": 15,
-    "verifier_or_regression_test": 494
+    "verifier_or_regression_test": 495
   },
   "logical_area_counts": {
     "00_governance": 2,
-    "01_contracts": 43,
+    "01_contracts": 44,
     "02_equations": 21,
     "03_lanes": 211,
     "04_proofs": 1,
-    "05_tests": 494,
+    "05_tests": 495,
     "06_data": 131,
-    "07_artifacts": 586,
+    "07_artifacts": 589,
     "08_history": 15,
-    "99_review": 34
+    "99_review": 35
   },
   "review_required_count": 132,
   "source_artifact_parse_errors": [],
   "files": [
+    {
+      "path": "docs/core/00_governance/CORE_RESEARCH_ORGANIZATION_INDEX.md",
+      "file_kind": "specification_or_research_note",
+      "logical_area": "01_contracts",
+      "owner_family_or_lane": "core_document_review_required",
+      "registry_link_status": "NOT_APPLICABLE",
+      "status_source": "MANIFEST_CLASSIFICATION_ONLY",
+      "generated_or_source": "source",
+      "sha256": "001ebb9a38961c97485a3cdfc5ad53b2a6391059d794528d4fa3a56fa5cbef15",
+      "review_action": "link_to_registry_and_current_artifact"
+    },
+    {
+      "path": "docs/core/00_governance/uet_research_organization_policy.json",
+      "file_kind": "review_required",
+      "logical_area": "99_review",
+      "owner_family_or_lane": null,
+      "registry_link_status": "NOT_APPLICABLE",
+      "status_source": "MANIFEST_CLASSIFICATION_ONLY",
+      "generated_or_source": "source",
+      "sha256": "f4680f8cfd811812e6aec3a408437689dd0a24950aabe4899a80fec7e5065949",
+      "review_action": "classify_nonstandard_file"
+    },
     {
       "path": "docs/core/02_Proof/Proof_00_Master_Balance.py",
       "file_kind": "proof_or_derivation_runner",
@@ -70,7 +92,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "47a5292e7236d891605e9dcb3f7ff7e0ee5d62d40845e7408edef1f891f121dc",
+      "sha256": "a8fd811833bd8d6050293ff337a4cb174166895cf336b3f928965b4995b8e56c",
       "review_action": "keep_as_folder_rule"
     },
     {
@@ -5295,7 +5317,29 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "0986be85bebc1977e405afb103116003de3dbe5ed536d8c6c3b79f699bd43a4c",
+      "sha256": "d8686492e1af2824e594b66248e779d5aecf381a9966c5ed6904e83b15d155e4",
+      "review_action": "retain_path_and_link_generator"
+    },
+    {
+      "path": "docs/core/artifacts/uet_core_file_migration_map.json",
+      "file_kind": "generated_artifact",
+      "logical_area": "07_artifacts",
+      "owner_family_or_lane": "foundation_or_shared",
+      "registry_link_status": "NOT_APPLICABLE",
+      "status_source": "MANIFEST_CLASSIFICATION_ONLY",
+      "generated_or_source": "generated",
+      "sha256": "0fcc63383adabd7598554c25c31d7d5de373e30faa05d6081943d6d14eff6464",
+      "review_action": "retain_path_and_link_generator"
+    },
+    {
+      "path": "docs/core/artifacts/uet_core_organization_audit.json",
+      "file_kind": "generated_artifact",
+      "logical_area": "07_artifacts",
+      "owner_family_or_lane": "foundation_or_shared",
+      "registry_link_status": "NOT_APPLICABLE",
+      "status_source": "MANIFEST_CLASSIFICATION_ONLY",
+      "generated_or_source": "generated",
+      "sha256": "f8ff387124fd20778300fa94b24c522b7348a1d26ae7dc5df7fd12a14d2401c6",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -6454,6 +6498,17 @@
       "review_action": "retain_path_and_link_generator"
     },
     {
+      "path": "docs/core/artifacts/uet_research_organization_registry.json",
+      "file_kind": "generated_artifact",
+      "logical_area": "07_artifacts",
+      "owner_family_or_lane": "foundation_or_shared",
+      "registry_link_status": "NOT_APPLICABLE",
+      "status_source": "MANIFEST_CLASSIFICATION_ONLY",
+      "generated_or_source": "generated",
+      "sha256": "8ebe2306f755c38986eb2f6351bdf3b3b946d63937888e707e6c38523e1007e5",
+      "review_action": "retain_path_and_link_generator"
+    },
+    {
       "path": "docs/core/artifacts/uet_research_room_wave1_contract.json",
       "file_kind": "generated_artifact",
       "logical_area": "07_artifacts",
@@ -6549,7 +6604,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "c31cb157b83de57d343f37a09e606043d110ed74aac7f58629b4461ab1fc63b8",
+      "sha256": "7081beb96f68ed5491d00c34e806e10d48343b11ae01025149858c9b7fc78037",
       "review_action": "link_to_registry_and_current_artifact"
     },
     {
@@ -6560,7 +6615,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "4faa96b3f8d94c23d726ae60fc0cacf82825ab7f99c92e883195484af95fb490",
+      "sha256": "606d35043e7c0b0afd25c496c13630d50a03b1a94f918c2e3589f676cd7a10ef",
       "review_action": "link_to_registry_and_current_artifact"
     },
     {
@@ -6571,7 +6626,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "b438b6d8522552497ed353f227ed6801c9b107f0f97a1d9d4b1468a90d4371e9",
+      "sha256": "b2fcea68f858f54047e32e6db22715eb0a21896f9021ead34ec1fde1518fe7fe",
       "review_action": "retain_one_entry_per_completed_wave"
     },
     {
@@ -14778,6 +14833,17 @@
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
       "sha256": "bd43c4420d01a96d9ed5d3a331c2e8060eed34ce910c147a14a3c85fb92cef37",
+      "review_action": "link_to_equation_family_or_artifact"
+    },
+    {
+      "path": "docs/core/test/test_uet_research_organization_registry.py",
+      "file_kind": "verifier_or_regression_test",
+      "logical_area": "05_tests",
+      "owner_family_or_lane": "core_test_surface",
+      "registry_link_status": "NOT_APPLICABLE",
+      "status_source": "MANIFEST_CLASSIFICATION_ONLY",
+      "generated_or_source": "source",
+      "sha256": "6142177a72f5717f04f40afe64a3560ca0e97a8d472702360253e34cf5a416b8",
       "review_action": "link_to_equation_family_or_artifact"
     },
     {
