@@ -65,7 +65,7 @@
   "claim_boundary": "organization pass does not promote any physics or application claim",
   "controlling_blocker": "assigned_records_need_scientific_link_review",
   "disposition_counts": {
-    "W1-EQUATION-COVARIANT": 9,
+    "W1-EQUATION-COVARIANT": 8,
     "W1-EQUATION-MATTER-SPACE": 2,
     "W1-EQUATION-O2-EXTENDED": 86,
     "W1-FOUNDATION-COARSE-GRAINING": 1,
@@ -73,7 +73,8 @@
     "W1-LANE-QUANTUM-OBSERVER": 2,
     "W1-LANE-THERMAL-SUPPORT": 28,
     "W1-LANE-TOPIC13-SUPPORT": 3,
-    "W1-T13-HOLDOUT": 1
+    "W1-T13-HOLDOUT": 1,
+    "W2-EQUATION-COVARIANT-PARENT": 1
   },
   "dispositioned_paths": [
     "docs/core/T13_HOLDOUT_EXPOSURE_2026_09_10.json",
@@ -211,7 +212,7 @@
     "docs/core/uet_transport_coefficient_identifiability.py"
   ],
   "duplicate_asset_ids": [],
-  "generated_at": "2026-09-13T21:11:57+00:00",
+  "generated_at": "2026-09-13T22:07:04+00:00",
   "generator": "docs/scripts/audit/build_uet_research_organization_registry_v2.py",
   "organization_disposition_source": "docs/core/00_governance/uet_research_organization_policy.json",
   "organization_wave": "WAVE_1_ASSIGN_AND_QUARANTINE",
@@ -221,7 +222,7 @@
     "assigned_review_count": 133,
     "dispositioned_review_count": 133,
     "foundation_status": "BLOCKED",
-    "manifest_file_count": 1549,
+    "manifest_file_count": 1550,
     "pre_disposition_review_count": 133,
     "quarantine_count": 0,
     "review_queue_count": 0,
