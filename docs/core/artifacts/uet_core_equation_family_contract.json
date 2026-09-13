@@ -7,10 +7,10 @@
   "controlling_blocker": "core_code_surface_classification_or_upstream_compatibility_incomplete",
   "coverage": {
     "core_code_surface_file_count": 51,
-    "assigned_module_path_count": 53,
+    "assigned_module_path_count": 54,
     "missing_core_paths": [],
     "nonexistent_declared_paths": [],
-    "equation_family_count": 10,
+    "equation_family_count": 11,
     "support_or_contract_family_count": 3
   },
   "upstream_evidence_snapshot": {
@@ -181,6 +181,43 @@
       ],
       "next_gate": "add field-equation, Bianchi/Noether, metric PDE and initial-value verification",
       "candidate_surface_count": 185,
+      "module_paths_exist": true
+    },
+    {
+      "family_id": "core.covariant_parent",
+      "name": "Integrated covariant conservative parent formula evaluator",
+      "module_paths": [
+        "docs/core/uet_covariant_parent.py"
+      ],
+      "equation_family": true,
+      "variables": {
+        "g_mu_nu": "Lorentz metric",
+        "chi_A": "global O(2) scalar matter doublet",
+        "Phi": "candidate response scalar",
+        "epsilon_nc": "closed/non-closed nesting parameter",
+        "Q^nu": "reciprocal local exchange source"
+      },
+      "standard_physics_counterpart": "scalar-tensor effective action with global O(2) matter and local reciprocal exchange",
+      "unit_lane": "natural_only_v1",
+      "derivation_class": "candidate conservative action evaluator with locally checked variational identities",
+      "mathematical_compatibility_status": "INTERNAL_CONSERVATIVE_PARENT_IDENTITIES_PASS_CURVED_DYNAMICS_BLOCKED",
+      "old_theory_special_case_status": "epsilon_nc=0 gives an algebraic/local Einstein-GR residual comparison only; it is not a full GR derivation",
+      "claim_ceiling": "candidate natural-unit conservative parent formula evaluator; not a metric PDE solver, open-system closure, or physical GR validation",
+      "evidence_paths": [
+        "docs/core/artifacts/covariant_parent_verification.json",
+        "docs/core/artifacts/covariant_parent_formula_audit.json",
+        "docs/core/artifacts/uet_main_theory_wave2_gate.json"
+      ],
+      "next_gate": "close lane-specific covariant coarse-graining, then curved 3+1 initial-value/constraint evolution and dimensional observables",
+      "formula_ids": [
+        "uet.main_theory.covariant_parent"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_covariant_parent.py",
+        "docs/core/test/test_uet_covariant_parent.py"
+      ],
+      "organization_review_required": true,
+      "candidate_surface_count": 0,
       "module_paths_exist": true
     },
     {

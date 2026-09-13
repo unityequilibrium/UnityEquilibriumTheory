@@ -177,10 +177,25 @@
       "reason": "GR correspondence is a foundation contract and not an application result; the physical mapping remains unclosed."
     },
     {
+      "disposition_id": "W2-EQUATION-COVARIANT-PARENT",
+      "patterns": [
+        "docs/core/uet_covariant_parent.py"
+      ],
+      "owner_id": "EQUATION",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "logical_area": "02_equations",
+      "equation_family_or_lane": "core.covariant_parent",
+      "organization_status": "ASSIGNED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/02_equations/covariant/{name}",
+      "next_action": "verify_parent_formula_chain_and_preserve_curved_3p1_gr_blocker",
+      "review_action": "assign_to_covariant_parent_equation_owner",
+      "reason": "The integrated conservative parent has a local formula/verifier chain; organization assignment does not establish curved GR evolution, dimensional closure, or physical validation."
+    },
+    {
       "disposition_id": "W1-EQUATION-COVARIANT",
       "patterns": [
         "docs/core/uet_covariant_open_system.py",
-        "docs/core/uet_covariant_parent.py",
         "docs/core/uet_covariant_theory_spine.py",
         "docs/core/uet_curved_3p1_*.py"
       ],

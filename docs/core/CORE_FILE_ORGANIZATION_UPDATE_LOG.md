@@ -48,3 +48,13 @@
 - CONTROLLING_BLOCKER: `pending_families_have_no_canonical_formula_unit_verifier_artifact_chain` remains active for the eight unresolved families; the flux branch itself remains blocked for promotion by the foundation and dimensional-observable gates.
 - NEXT_ACTION: Build the next bounded family-link package for `core.covariant_pending` only after preserving the same formula → implementation → verifier → artifact chain and its claim ceiling; do not physically migrate files yet.
 - CLAIM_BOUNDARY: This wave establishes traceability for a named normalized conserved flux/response branch. It does not establish a universal meaning for `C`, SI thermal validity, the original `kappa_C>0` causal class, or a global UET claim.
+
+## 2026-09-14 — Wave 4: bounded covariant-parent family link
+
+- STATUS: `BLOCKED_OPEN_SCIENTIFIC_LINKS`
+- WHAT_CHANGED: Declared `core.covariant_parent` for `uet_covariant_parent.py`, added the dedicated `W2-EQUATION-COVARIANT-PARENT` organization disposition, and materialized its central formula record, natural-unit lane, verifier paths, artifact paths, and conservative claim ceiling in the generated organization views.
+- VERIFICATION: The existing `covariant_parent_verification.json` reports `audit_status=PASS` for its local parent identities; 17 targeted parent/link/organization/regression tests passed; manifest, organization registry, and scientific-link checks passed; the foundation audit still reports `foundation_gate_status=BLOCKED`.
+- RESULT: 3 of 133 assigned review records now carry all five scientific-link fields: 2 matter-space flux records and 1 covariant-parent record. The remaining gap is 130 records across 8 unresolved family groups; the case-insensitive `g_munu`/`G_munu` metadata lint remains review-required.
+- CONTROLLING_BLOCKER: `pending_families_have_no_canonical_formula_unit_verifier_artifact_chain` remains active for the eight unresolved groups; the parent family itself remains blocked for curved 3+1 evolution, dimensional observables, and physical GR validation.
+- NEXT_ACTION: Build the next bounded covariant family-link package only from an existing complete chain (likely theory-spine or a single curved 3+1 sub-family); keep open-system and remaining curved modules pending and do not physically migrate files.
+- CLAIM_BOUNDARY: This wave establishes organization traceability for a candidate natural-unit conservative parent formula evaluator. It does not derive Einstein/GR, open-system closure, SI physics, or an empirical UET claim.

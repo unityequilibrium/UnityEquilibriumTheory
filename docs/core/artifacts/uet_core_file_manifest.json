@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_core_file_manifest",
-  "generated_at": "2026-09-13T21:11:44+00:00",
+  "generated_at": "2026-09-13T22:06:29+00:00",
   "generator": "docs/scripts/audit/build_uet_core_file_manifest.py",
   "status": "PASS_WITH_REVIEW_REQUIRED",
   "controlling_blocker": "unlinked_or_ambiguous_core_paths_require_family_assignment_or_quarantine",
@@ -19,24 +19,24 @@
     "navigation_and_legacy_boundary": 1,
     "proof_or_derivation_runner": 1,
     "review_required": 2,
-    "review_required_equation_module": 2,
+    "review_required_equation_module": 3,
     "specification_or_research_note": 127,
     "support_or_adapter_module": 29,
-    "unassigned_python_surface": 31,
+    "unassigned_python_surface": 30,
     "update_log": 15,
-    "verifier_or_regression_test": 498
+    "verifier_or_regression_test": 499
   },
   "logical_area_counts": {
     "00_governance": 2,
     "01_contracts": 44,
-    "02_equations": 23,
+    "02_equations": 24,
     "03_lanes": 211,
     "04_proofs": 1,
-    "05_tests": 498,
+    "05_tests": 499,
     "06_data": 131,
     "07_artifacts": 591,
     "08_history": 15,
-    "99_review": 33
+    "99_review": 32
   },
   "review_required_count": 132,
   "source_artifact_parse_errors": [],
@@ -49,7 +49,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "eb7f567ceeb2bb631388d0025208e762218f1fc46df6790be0d629215b75317d",
+      "sha256": "bfbb661414cc5adac10798e54b7d80221a67d92c3a6520284a5b0b466f8a4e86",
       "review_action": "link_to_registry_and_current_artifact"
     },
     {
@@ -60,7 +60,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "503b2b89703c49fa9d903b538f92210f76a974f4b098d0e7e1b9452141b532b1",
+      "sha256": "9aabfd120abf9dc408a72687d1a23f4f64ef3787680bfbcf8a8ae06ca8287e78",
       "review_action": "classify_nonstandard_file"
     },
     {
@@ -5307,7 +5307,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "5356ed1c60759aec7ec41a1ee6dbdbee7da3899e1876491cf7c63e303d3e5f14",
+      "sha256": "05abc2433b2c38a55829da8ee50ded7aab0366f2fb1ec8c007cadf124ce55cb4",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -5318,7 +5318,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "db3468f143ea807900a3f49252cf2e591c41a22e16c5ef1f125fc1774766117c",
+      "sha256": "7b08a506dc724b24ea2a83779d51bc4d62c94f0ccd0b99339f2c512d5b9ffbf1",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -5329,7 +5329,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "d1df130b2d42a7a4669a101596d34ddcd27f84d827d02c4ec8300ec497c8adcb",
+      "sha256": "ce3916d31a4574d7eae2bbac956002c99b0668441894b187fc70ad1c2af6bc51",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -5340,7 +5340,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "80c8b748f99fd356df97d7067e542c6fce340c6091c57d5155dc0e8cc42e0524",
+      "sha256": "d5d99bf52c195ab7c6f77a7a3af7162d31bf2b9a67943b3d0b7e22e4830bf5a2",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -5351,7 +5351,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "43a0b0e5233186f574f88c3f4130b01336c29dbbcc4fe6a020e63800c4d5b8c3",
+      "sha256": "4ba2dca7a7e1db10ddc8da4408a263832ca975419ea2a7e48e7083355c3b9f1f",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -6528,7 +6528,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "8241bea02d0ca0fd1e8799d5ccca9233f8594da2aefcaa621ef97632d4f17d6a",
+      "sha256": "88b37f0593969b5839172a7c6def9bcf5a2ff699c4e93cd809304b909e1b4050",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -6638,7 +6638,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "36035645bb23622c0421dcb88d9a0d333c6e981a1ac02158bfca598bb914cda3",
+      "sha256": "3f6397fdeba0340cd06f1b0c591dc9e3c704a452f6516a8df1560c524de9c9e6",
       "review_action": "link_to_registry_and_current_artifact"
     },
     {
@@ -14613,7 +14613,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "c5face22e22430562360cbd7b19820d0d6e22f1476b1326318aceaeaf9cabd16",
+      "sha256": "2decf6d030b83fe9c3fbc7880e8a0edc89c419cd5a89e0975282ec575177dc09",
       "review_action": "link_to_equation_family_or_artifact"
     },
     {
@@ -14636,6 +14636,17 @@
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
       "sha256": "6e74b1587f8fbd92a444c64c3fd71aefc3a70c827994ca5398581cdbecaca71c",
+      "review_action": "link_to_equation_family_or_artifact"
+    },
+    {
+      "path": "docs/core/test/test_uet_covariant_parent_links.py",
+      "file_kind": "verifier_or_regression_test",
+      "logical_area": "05_tests",
+      "owner_family_or_lane": "core_test_surface",
+      "registry_link_status": "NOT_APPLICABLE",
+      "status_source": "MANIFEST_CLASSIFICATION_ONLY",
+      "generated_or_source": "source",
+      "sha256": "14da0b1bd4a0fae5a7ff95d93902af938819808192574c79238234addeb4ddf3",
       "review_action": "link_to_equation_family_or_artifact"
     },
     {
@@ -15311,14 +15322,14 @@
     },
     {
       "path": "docs/core/uet_covariant_parent.py",
-      "file_kind": "unassigned_python_surface",
-      "logical_area": "99_review",
-      "owner_family_or_lane": "REVIEW_REQUIRED",
+      "file_kind": "review_required_equation_module",
+      "logical_area": "02_equations",
+      "owner_family_or_lane": "core.covariant_parent",
       "registry_link_status": "REVIEW_REQUIRED",
-      "status_source": "MANIFEST_CLASSIFICATION_ONLY",
+      "status_source": "docs/core/artifacts/uet_core_equation_family_contract.json",
       "generated_or_source": "source",
       "sha256": "dd2d003f4da8539d76566d546d7a75ff26b4849ddd9640d0bef512bd625640ee",
-      "review_action": "assign_family_or_quarantine"
+      "review_action": "complete_bounded_family_link_review"
     },
     {
       "path": "docs/core/uet_covariant_reduction.py",
