@@ -11,11 +11,11 @@
 notes, update logs และ generated artifacts อยู่ร่วม namespace เดียวกัน จำนวนไฟล์จึง
 ไม่เท่ากับจำนวนสมการ และไฟล์ชื่อคล้ายกันอาจมีบทบาทกับหลักฐานคนละระดับ
 
-ผลตรวจล่าสุดที่ใช้เป็นขอบเขตการจัดระบบ:
+ผลตรวจล่าสุดที่ใช้เป็นขอบเขตการจัดระบบ (ตัวเลขละเอียดให้ยึด generated artifacts):
 
-- code-surface artifact: 51 Python modules, 1,941 candidate surfaces และ 28 paths ที่ยังต้องผูกกับ family หรือ quarantine
-- equation inventory artifact: 39 formula-audit files และ 369 rows ตาม artifact ที่อ่านได้
-- `artifacts/` มี 584 JSON/NPZ outputs และยังเป็น flat namespace
+- core-file manifest: 1,545 ไฟล์; Wave 1 จัด disposition ให้ review records เดิม 133 รายการครบแล้ว โดยยังมี scientific-link follow-up 133 รายการ
+- code-surface และ equation inventory: ให้ยึด summary/records ใน `uet_code_surface_inventory.json` และ `uet_foundation_equation_inventory.json` ตามลำดับ ไม่คัดลอกตัวเลขเก่ามาเป็นสถานะถาวรใน prose
+- `artifacts/` มี generated records จำนวนมากและยังเป็น flat namespace; การนับปัจจุบันให้ยึด `uet_core_file_manifest.json`
 - core มีโฟลเดอร์ `02_Proof`, `artifacts`, `data`, `test` แต่ research/spec จำนวนมากยังอยู่ที่ root
 
 ตัวเลขนี้เป็นขอบเขตการจัดระบบ ไม่ใช่คะแนนความถูกต้องของทฤษฎี
