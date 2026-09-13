@@ -48,6 +48,13 @@ Existing topic prose, old badges, and legacy validators do not override them.
 The aggregate status is the cross-family stopping boundary: it may expose conditional
 compatibility, but it cannot promote a blocked foundation.
 
+After the organization assignment wave, scientific-link work must also read and run
+`docs/core/artifacts/uet_core_scientific_link_audit.json` and
+`docs/scripts/audit/audit_uet_core_scientific_links.py`. Its status answers whether an
+assigned file is actually linked to a canonical family contract, formula IDs, units,
+verifiers, artifacts, and claim metadata. `BLOCKED_OPEN_SCIENTIFIC_LINKS` is a valid
+stopping state and must not be converted into a physics pass by ownership assignment.
+
 ## Mandatory workflow
 
 Before changing or adding a core equation, regenerate the F0 inventory with `docs/scripts/audit/build_uet_equation_inventory.py`; its `inventory_gate_status` must remain visible in the wave record. For organization-only changes, refresh the core-file manifest and then run `docs/scripts/audit/build_uet_research_organization_registry_v2.py`.
@@ -103,6 +110,8 @@ Before closing a wave:
 - run the relevant scientific verifier only if evidence-producing state changed
 - check JSON parsing and dependency integrity
 - run the organization registry `--check` when the organization control plane changes
+- run `docs/scripts/audit/audit_uet_core_scientific_links.py --check` when owner/family
+  disposition or equation-link metadata changes
 - sync core docs and update logs to the controlling blocker
 - record the wave in `WORK_LEDGER/YYYY/YYYY-MM-DD.md`
 

@@ -10632,6 +10632,23 @@
       "target_physical_path": "docs/core/07_artifacts/verification/uet_core_organization_audit.json"
     },
     {
+      "asset_id": "UET-CORE-FILE-9988C726F2B1",
+      "compatibility_plan": "retain_current_path_until_import_link_and_test_gates_pass",
+      "current_path": "docs/core/artifacts/uet_core_scientific_link_audit.json",
+      "equation_family_or_lane": "foundation_or_shared",
+      "evidence_status": "INTERNAL",
+      "import_reference_count": null,
+      "link_reference_count": null,
+      "migration_state": "COMPATIBILITY_PATH_RETAINED",
+      "next_action": "retain_path_and_link_generator",
+      "organization_status": "ASSIGNED",
+      "owner_id": "EVIDENCE",
+      "reference_scan_status": "DEFERRED_TO_MIGRATION_WAVE",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "target_path": "docs/core/07_artifacts/verification/uet_core_scientific_link_audit.json",
+      "target_physical_path": "docs/core/07_artifacts/verification/uet_core_scientific_link_audit.json"
+    },
+    {
       "asset_id": "UET-CORE-FILE-CBAA1BBA3D64",
       "compatibility_plan": "retain_current_path_until_import_link_and_test_gates_pass",
       "current_path": "docs/core/artifacts/uet_cosmological_open_system_trace_contract.json",
@@ -23005,6 +23022,23 @@
       "target_physical_path": "docs/core/05_tests/regression/test_uet_core_organization_wave1.py"
     },
     {
+      "asset_id": "UET-CORE-FILE-8383EFC7F020",
+      "compatibility_plan": "retain_current_path_until_import_link_and_test_gates_pass",
+      "current_path": "docs/core/test/test_uet_core_scientific_links.py",
+      "equation_family_or_lane": "core_test_surface",
+      "evidence_status": "INTERNAL",
+      "import_reference_count": null,
+      "link_reference_count": null,
+      "migration_state": "COMPATIBILITY_PATH_RETAINED",
+      "next_action": "link_registry_status_and_owner",
+      "organization_status": "ASSIGNED",
+      "owner_id": "EVIDENCE",
+      "reference_scan_status": "DEFERRED_TO_MIGRATION_WAVE",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "target_path": "docs/core/05_tests/regression/test_uet_core_scientific_links.py",
+      "target_physical_path": "docs/core/05_tests/regression/test_uet_core_scientific_links.py"
+    },
+    {
       "asset_id": "UET-CORE-FILE-8C6663421D12",
       "compatibility_plan": "retain_current_path_until_import_link_and_test_gates_pass",
       "current_path": "docs/core/test/test_uet_covariant_open_system.py",
@@ -26536,7 +26570,7 @@
       "target_physical_path": "docs/core/03_lanes/review/uet_viz.py"
     }
   ],
-  "generated_at": "2026-09-13T17:06:20+00:00",
+  "generated_at": "2026-09-13T20:19:14+00:00",
   "generator": "docs/scripts/audit/build_uet_research_organization_registry_v2.py",
   "organization_disposition_source": "docs/core/00_governance/uet_research_organization_policy.json",
   "organization_wave": "WAVE_1_ASSIGN_AND_QUARANTINE",
