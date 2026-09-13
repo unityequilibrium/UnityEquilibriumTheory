@@ -37,7 +37,8 @@
       "docs/core/artifacts/uet_equation_correspondence_registry_gr_controls_addendum.json",
       "docs/core/artifacts/uet_equation_correspondence_registry_dynamical_stability_addendum.json",
       "docs/core/artifacts/uet_equation_correspondence_registry_matter_space_flux_addendum.json",
-      "docs/core/artifacts/uet_equation_correspondence_registry_covariant_diffusion_addendum.json"
+      "docs/core/artifacts/uet_equation_correspondence_registry_covariant_diffusion_addendum.json",
+      "docs/core/artifacts/uet_equation_correspondence_registry_noether_mapping_addendum.json"
     ],
     "extension_status": "CANDIDATE_ADDENDA_MERGED_NOT_EXHAUSTIVE"
   },
@@ -2916,6 +2917,396 @@
         "claim_boundary": "limiting comparator only; it does not establish finite-cone causality for the original fourth-order gradient system",
         "failure_mode": "using the overdamped limit as proof of a relativistic causal Cahn-Hilliard theory",
         "next_hardening_step": "keep the Model-B limit as a comparator while resolving the first-order hyperbolic UV closure"
+    },
+    {
+        "equation_id": "uet.noether_mapping.frame_projected_charge_density",
+        "version": "noether-mapping-v1",
+        "classification": "kinematic_mapping",
+        "relation_or_code_path": "n = -u_mu N^mu",
+        "variables": {
+            "N^mu": "covariant O(2) Noether current",
+            "u_mu": "declared unit timelike frame covector",
+            "n": "frame-projected signed charge density"
+        },
+        "mathematical_role": "frame projection of a covariant current to a hydrodynamic density",
+        "standard_physics_counterpart": "relativistic decomposition of a conserved current in a chosen frame",
+        "observable_mapping": {
+            "status": "PARTIAL",
+            "observable": "coarse signed O(2) charge/current coordinates and phase-field diagnostics",
+            "reason": "the fixed-scale coordinate layer is checked, while a covariant coarse-graining kernel, material units, detector response, and external validation remain open"
+        },
+        "unit_lane": "natural_to_normalized",
+        "parameter_dimensions": "natural charge/current scales and declared density, length, time, and chemical-potential scales; material SI mapping remains open",
+        "source_or_origin": "existing O(2) Noether-current identity plus a declared fixed-scale hydrodynamic coordinate map",
+        "assumptions": [
+            "metric signature (-,+,+,+) for the covariant current identity",
+            "signed global-O2 Noether charge convention",
+            "declared local cell-average coarse graining precedes the affine map",
+            "positive fixed reference and scale parameters"
+        ],
+        "symmetry_and_conservation": "the O(2) current and continuity scaling are used as declared; the coordinate map introduces no source and does not prove microscopic Cahn-Hilliard conservation",
+        "limiting_cases": [
+            "changing u_mu changes the projected density and spatial current without changing N^mu",
+            "zero spatial current gives a comoving current"
+        ],
+        "implementation_paths": [
+            "docs/core/uet_noether_phase_field_map.py",
+            "docs/core/uet_covariant_diffusion.py"
+        ],
+        "implementation_symbols": [
+            "docs/core/uet_covariant_diffusion.py::decompose_noether_current",
+            "docs/core/uet_noether_phase_field_map.py::normalize_noether_hydrodynamic_state"
+        ],
+        "verifier_paths": [
+            "docs/scripts/audit/audit_uet_noether_phase_field_map.py",
+            "docs/core/test/test_noether_phase_field_map.py",
+            "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
+            "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py",
+            "docs/core/artifacts/noether_phase_field_state_map_verification.json"
+        ],
+        "evidence_class": "INTERNAL_MAPPING_DIAGNOSTIC",
+        "proof_status": "kinematic projection is covered by existing local current/map checks; microscopic inversion is not established",
+        "downstream_dependencies": [
+            "uet.o2.finite_density_eos",
+            "uet.main_theory.coarse_graining"
+        ],
+        "claim_boundary": "frame-projected signed O(2) charge only; not mass density and not universal C",
+        "failure_mode": "a frame-projected charge density is silently renamed mass, energy, or universal C",
+        "next_hardening_step": "complete covariant coarse-graining, equation-of-state, transport, and observable matching before physical interpretation"
+    },
+    {
+        "equation_id": "uet.noether_mapping.affine_phase_coordinate",
+        "version": "noether-mapping-v1",
+        "classification": "coordinate_definition",
+        "relation_or_code_path": "C = (n_bar - n_ref) / n_scale",
+        "variables": {
+            "n_bar": "already coarse-grained signed charge density",
+            "n_ref": "declared density reference",
+            "n_scale": "positive density scale",
+            "C": "normalized hydrodynamic coordinate"
+        },
+        "mathematical_role": "exact affine coordinate change after the declared coarse-graining layer",
+        "standard_physics_counterpart": "dimensionless nondimensionalization of a lane-specific hydrodynamic variable",
+        "observable_mapping": {
+            "status": "PARTIAL",
+            "observable": "coarse signed O(2) charge/current coordinates and phase-field diagnostics",
+            "reason": "the fixed-scale coordinate layer is checked, while a covariant coarse-graining kernel, material units, detector response, and external validation remain open"
+        },
+        "unit_lane": "natural_to_normalized",
+        "parameter_dimensions": "natural charge/current scales and declared density, length, time, and chemical-potential scales; material SI mapping remains open",
+        "source_or_origin": "existing O(2) Noether-current identity plus a declared fixed-scale hydrodynamic coordinate map",
+        "assumptions": [
+            "metric signature (-,+,+,+) for the covariant current identity",
+            "signed global-O2 Noether charge convention",
+            "declared local cell-average coarse graining precedes the affine map",
+            "positive fixed reference and scale parameters"
+        ],
+        "symmetry_and_conservation": "the affine change preserves a declared continuity residual under constant scales",
+        "limiting_cases": [
+            "fixed positive scales give exact coordinate round-trip",
+            "changing the reference shifts C without changing the underlying coarse density"
+        ],
+        "implementation_paths": [
+            "docs/core/uet_noether_phase_field_map.py"
+        ],
+        "implementation_symbols": [
+            "docs/core/uet_noether_phase_field_map.py::normalize_noether_hydrodynamic_state",
+            "docs/core/uet_noether_phase_field_map.py::denormalize_phase_field_coordinates"
+        ],
+        "verifier_paths": [
+            "docs/scripts/audit/audit_uet_noether_phase_field_map.py",
+            "docs/core/test/test_noether_phase_field_map.py",
+            "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
+            "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py",
+            "docs/core/artifacts/noether_phase_field_state_map_verification.json"
+        ],
+        "evidence_class": "INTERNAL_MAPPING_DIAGNOSTIC",
+        "proof_status": "fixed-scale round-trip and negative controls pass; the upstream microscopic map remains many-to-one",
+        "downstream_dependencies": [
+            "uet.main_theory.coarse_graining",
+            "uet.matter_space_flux.conservation"
+        ],
+        "claim_boundary": "candidate C_charge coordinate on a declared O(2) lane; no universal C ontology",
+        "failure_mode": "the affine coordinate change is presented as a microscopic reconstruction or mass definition",
+        "next_hardening_step": "derive a covariant coarse-graining kernel and an independent physical observable map"
+    },
+    {
+        "equation_id": "uet.noether_mapping.normalized_current_coordinate",
+        "version": "noether-mapping-v1",
+        "classification": "coordinate_definition",
+        "relation_or_code_path": "J = j / (n_scale L/T)",
+        "variables": {
+            "j": "coarse spatial charge current",
+            "L": "declared length scale",
+            "T": "declared time scale",
+            "J": "normalized current coordinate"
+        },
+        "mathematical_role": "fixed-scale normalization of the spatial current paired with C",
+        "standard_physics_counterpart": "dimensionless current coordinate in a declared natural-to-normalized lane",
+        "observable_mapping": {
+            "status": "PARTIAL",
+            "observable": "coarse signed O(2) charge/current coordinates and phase-field diagnostics",
+            "reason": "the fixed-scale coordinate layer is checked, while a covariant coarse-graining kernel, material units, detector response, and external validation remain open"
+        },
+        "unit_lane": "natural_to_normalized",
+        "parameter_dimensions": "natural charge/current scales and declared density, length, time, and chemical-potential scales; material SI mapping remains open",
+        "source_or_origin": "existing O(2) Noether-current identity plus a declared fixed-scale hydrodynamic coordinate map",
+        "assumptions": [
+            "metric signature (-,+,+,+) for the covariant current identity",
+            "signed global-O2 Noether charge convention",
+            "declared local cell-average coarse graining precedes the affine map",
+            "positive fixed reference and scale parameters"
+        ],
+        "symmetry_and_conservation": "the O(2) current and continuity scaling are used as declared; the coordinate map introduces no source and does not prove microscopic Cahn-Hilliard conservation",
+        "limiting_cases": [
+            "the current scale is n_scale L/T",
+            "zero current maps to zero normalized current"
+        ],
+        "implementation_paths": [
+            "docs/core/uet_noether_phase_field_map.py"
+        ],
+        "implementation_symbols": [
+            "docs/core/uet_noether_phase_field_map.py::normalize_noether_hydrodynamic_state",
+            "docs/core/uet_noether_phase_field_map.py::denormalize_phase_field_coordinates"
+        ],
+        "verifier_paths": [
+            "docs/scripts/audit/audit_uet_noether_phase_field_map.py",
+            "docs/core/test/test_noether_phase_field_map.py",
+            "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
+            "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py",
+            "docs/core/artifacts/noether_phase_field_state_map_verification.json"
+        ],
+        "evidence_class": "INTERNAL_MAPPING_DIAGNOSTIC",
+        "proof_status": "current round-trip and legacy bridge compatibility pass for the declared scales",
+        "downstream_dependencies": [
+            "uet.noether_mapping.affine_phase_coordinate",
+            "uet.matter_space_flux.relaxation"
+        ],
+        "claim_boundary": "normalized current-coordinate map only; transport coefficients and SI meaning remain open",
+        "failure_mode": "the normalized current is treated as an independently derived microscopic transport law",
+        "next_hardening_step": "complete covariant coarse-graining, equation-of-state, transport, and observable matching before physical interpretation"
+    },
+    {
+        "equation_id": "uet.noether_mapping.continuity_residual_scaling",
+        "version": "noether-mapping-v1",
+        "classification": "conservation_scaling",
+        "relation_or_code_path": "R_hat = (T/n_scale) R_natural",
+        "variables": {
+            "R_natural": "natural continuity residual",
+            "R_hat": "normalized continuity residual",
+            "n_scale": "density scale",
+            "T": "time scale"
+        },
+        "mathematical_role": "exact residual scaling under constant space-time and density scales",
+        "standard_physics_counterpart": "nondimensional continuity-equation rescaling",
+        "observable_mapping": {
+            "status": "PARTIAL",
+            "observable": "coarse signed O(2) charge/current coordinates and phase-field diagnostics",
+            "reason": "the fixed-scale coordinate layer is checked, while a covariant coarse-graining kernel, material units, detector response, and external validation remain open"
+        },
+        "unit_lane": "natural_to_normalized",
+        "parameter_dimensions": "natural charge/current scales and declared density, length, time, and chemical-potential scales; material SI mapping remains open",
+        "source_or_origin": "existing O(2) Noether-current identity plus a declared fixed-scale hydrodynamic coordinate map",
+        "assumptions": [
+            "metric signature (-,+,+,+) for the covariant current identity",
+            "signed global-O2 Noether charge convention",
+            "declared local cell-average coarse graining precedes the affine map",
+            "positive fixed reference and scale parameters"
+        ],
+        "symmetry_and_conservation": "the residual vanishes together with the declared natural continuity residual",
+        "limiting_cases": [
+            "constant scales preserve exact proportionality",
+            "non-constant scales would require extra derivative terms and are outside v1"
+        ],
+        "implementation_paths": [
+            "docs/core/uet_noether_phase_field_map.py"
+        ],
+        "implementation_symbols": [
+            "docs/core/uet_noether_phase_field_map.py::map_continuity_terms"
+        ],
+        "verifier_paths": [
+            "docs/scripts/audit/audit_uet_noether_phase_field_map.py",
+            "docs/core/test/test_noether_phase_field_map.py",
+            "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
+            "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py",
+            "docs/core/artifacts/noether_phase_field_state_map_verification.json"
+        ],
+        "evidence_class": "INTERNAL_MAPPING_DIAGNOSTIC",
+        "proof_status": "analytic scaling identity passes deterministic numerical checks",
+        "downstream_dependencies": [
+            "uet.noether_mapping.affine_phase_coordinate",
+            "uet.noether_mapping.normalized_current_coordinate"
+        ],
+        "claim_boundary": "coordinate-level continuity scaling; it does not close dynamics or prove a physical conservation law by itself",
+        "failure_mode": "a zero normalized residual is used as evidence of microscopic conservation without the declared current dynamics",
+        "next_hardening_step": "connect the scaled residual to a covariant current law and dimensional measurement operator"
+    },
+    {
+        "equation_id": "uet.noether_mapping.o2_polar_current",
+        "version": "noether-mapping-v1",
+        "classification": "action_level_identity",
+        "relation_or_code_path": "N^mu = Z A^2 partial^mu(theta)",
+        "variables": {
+            "A": "O(2) polar amplitude",
+            "theta": "O(2) phase",
+            "Z": "declared kinetic coefficient",
+            "N^mu": "Noether current"
+        },
+        "mathematical_role": "polar-coordinate identity for the implemented global O(2) current",
+        "standard_physics_counterpart": "global O(2)/U(1) Noether current in a complex-scalar realization",
+        "observable_mapping": {
+            "status": "PARTIAL",
+            "observable": "coarse signed O(2) charge/current coordinates and phase-field diagnostics",
+            "reason": "the fixed-scale coordinate layer is checked, while a covariant coarse-graining kernel, material units, detector response, and external validation remain open"
+        },
+        "unit_lane": "natural_to_normalized",
+        "parameter_dimensions": "natural charge/current scales and declared density, length, time, and chemical-potential scales; material SI mapping remains open",
+        "source_or_origin": "existing O(2) Noether-current identity plus a declared fixed-scale hydrodynamic coordinate map",
+        "assumptions": [
+            "global O(2) scalar doublet written in polar variables",
+            "declared inverse metric and kinetic coefficient",
+            "away from any singular amplitude-coordinate patch"
+        ],
+        "symmetry_and_conservation": "the identity is associated with the declared global O(2) current; conservation still depends on the matter equations and boundary conditions",
+        "limiting_cases": [
+            "constant phase gives vanishing derivative current",
+            "changing amplitude and phase gradient can preserve the same current, demonstrating non-invertibility"
+        ],
+        "implementation_paths": [
+            "docs/core/uet_covariant_matter.py",
+            "docs/core/uet_noether_phase_field_map.py"
+        ],
+        "implementation_symbols": [
+            "docs/core/uet_covariant_matter.py::matter_noether_current",
+            "docs/core/test/test_noether_phase_field_map.py::test_polar_O2_identity_matches_matter_noether_current"
+        ],
+        "verifier_paths": [
+            "docs/scripts/audit/audit_uet_noether_phase_field_map.py",
+            "docs/core/test/test_noether_phase_field_map.py",
+            "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
+            "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py",
+            "docs/core/artifacts/noether_phase_field_state_map_verification.json"
+        ],
+        "evidence_class": "INTERNAL_ACTION_IDENTITY",
+        "proof_status": "polar-current identity passes the local analytic/numerical comparison in the declared metric convention",
+        "downstream_dependencies": [
+            "uet.o2.finite_density_eos",
+            "uet.main_theory.covariant_parent"
+        ],
+        "claim_boundary": "O(2) realization identity only; it does not identify the scalar amplitude, current, or charge with universal C or mass",
+        "failure_mode": "the O(2) current identity is used to infer a unique microscopic state from N^mu",
+        "next_hardening_step": "derive the covariant projected current law and match its hydrodynamic coefficients"
+    },
+    {
+        "equation_id": "uet.noether_mapping.symmetric_double_well_conjugacy",
+        "version": "noether-mapping-v1",
+        "classification": "constitutive_comparator",
+        "relation_or_code_path": "f = n_scale*mu_scale*(C^2 - 1)^2/4; df/dn = mu_scale*(C^3 - C)",
+        "variables": {
+            "C": "normalized lane coordinate",
+            "n": "coarse charge-coordinate realization",
+            "f": "declared natural free-energy density comparator",
+            "mu_scale": "chemical-potential scale"
+        },
+        "mathematical_role": "local conjugacy check for the symmetric double-well constitutive comparator",
+        "standard_physics_counterpart": "Landau/Cahn-Hilliard-style constitutive free-energy coordinate",
+        "observable_mapping": {
+            "status": "PARTIAL",
+            "observable": "coarse signed O(2) charge/current coordinates and phase-field diagnostics",
+            "reason": "the fixed-scale coordinate layer is checked, while a covariant coarse-graining kernel, material units, detector response, and external validation remain open"
+        },
+        "unit_lane": "natural_to_normalized",
+        "parameter_dimensions": "natural charge/current scales and declared density, length, time, and chemical-potential scales; material SI mapping remains open",
+        "source_or_origin": "existing O(2) Noether-current identity plus a declared fixed-scale hydrodynamic coordinate map",
+        "assumptions": [
+            "metric signature (-,+,+,+) for the covariant current identity",
+            "signed global-O2 Noether charge convention",
+            "declared local cell-average coarse graining precedes the affine map",
+            "positive fixed reference and scale parameters"
+        ],
+        "symmetry_and_conservation": "free-energy conjugacy does not itself impose charge conservation",
+        "limiting_cases": [
+            "C = plus or minus 1 gives the declared coexistence minima",
+            "the curvature changes sign near the comparator spinodal region"
+        ],
+        "implementation_paths": [
+            "docs/core/uet_noether_phase_field_map.py"
+        ],
+        "implementation_symbols": [
+            "docs/core/uet_noether_phase_field_map.py::symmetric_double_well_thermodynamic_map",
+            "docs/core/test/test_noether_phase_field_map.py::test_physical_free_energy_derivative_matches_mapped_chemical_potential"
+        ],
+        "verifier_paths": [
+            "docs/scripts/audit/audit_uet_noether_phase_field_map.py",
+            "docs/core/test/test_noether_phase_field_map.py",
+            "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
+            "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py",
+            "docs/core/artifacts/noether_phase_field_state_map_verification.json"
+        ],
+        "evidence_class": "INTERNAL_CONSTITUTIVE_COMPARATOR",
+        "proof_status": "local derivative and coefficient checks pass; the double well is explicitly not derived from the O(2) action",
+        "downstream_dependencies": [
+            "uet.noether_mapping.affine_phase_coordinate",
+            "uet.o2.finite_density_eos"
+        ],
+        "claim_boundary": "constitutive comparator in a declared coordinate; not the O(2) equation of state and not universal C physics",
+        "failure_mode": "local conjugacy is called a microscopic EOS derivation or used to identify C with mass",
+        "next_hardening_step": "compare against the exact finite-density O(2) EOS in a preregistered domain without fitting the comparator to holdout data"
+    },
+    {
+        "equation_id": "uet.noether_mapping.normalized_constitutive_scales",
+        "version": "noether-mapping-v1",
+        "classification": "unit_coordinate_map",
+        "relation_or_code_path": "tau_nat = T*tau_hat; M_nat = n_scale*L^2/(T*mu_scale)",
+        "variables": {
+            "tau_hat": "normalized relaxation parameter",
+            "M_hat": "normalized mobility parameter",
+            "tau_nat": "mapped relaxation scale",
+            "M_nat": "mapped mobility scale"
+        },
+        "mathematical_role": "dimensional coordinate conversion for declared constitutive parameters",
+        "standard_physics_counterpart": "unit conversion/nondimensionalization of relaxation and mobility coefficients",
+        "observable_mapping": {
+            "status": "PARTIAL",
+            "observable": "coarse signed O(2) charge/current coordinates and phase-field diagnostics",
+            "reason": "the fixed-scale coordinate layer is checked, while a covariant coarse-graining kernel, material units, detector response, and external validation remain open"
+        },
+        "unit_lane": "natural_to_normalized",
+        "parameter_dimensions": "natural charge/current scales and declared density, length, time, and chemical-potential scales; material SI mapping remains open",
+        "source_or_origin": "existing O(2) Noether-current identity plus a declared fixed-scale hydrodynamic coordinate map",
+        "assumptions": [
+            "metric signature (-,+,+,+) for the covariant current identity",
+            "signed global-O2 Noether charge convention",
+            "declared local cell-average coarse graining precedes the affine map",
+            "positive fixed reference and scale parameters"
+        ],
+        "symmetry_and_conservation": "parameter rescaling does not alter the underlying continuity law",
+        "limiting_cases": [
+            "positive density, length, time, and chemical-potential scales are required",
+            "nonnegative normalized gradient coefficient is enforced by the map contract"
+        ],
+        "implementation_paths": [
+            "docs/core/uet_noether_phase_field_map.py"
+        ],
+        "implementation_symbols": [
+            "docs/core/uet_noether_phase_field_map.py::map_normalized_constitutive_scales"
+        ],
+        "verifier_paths": [
+            "docs/scripts/audit/audit_uet_noether_phase_field_map.py",
+            "docs/core/test/test_noether_phase_field_map.py",
+            "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
+            "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py",
+            "docs/core/artifacts/noether_phase_field_state_map_verification.json"
+        ],
+        "evidence_class": "INTERNAL_DEFINITIONAL_MAP",
+        "proof_status": "fixed-scale conversion identity passes; no microscopic coefficient origin is supplied",
+        "downstream_dependencies": [
+            "uet.foundation.units",
+            "uet.covariant_diffusion.finite_relaxation_current"
+        ],
+        "claim_boundary": "declared natural-to-normalized scale map only; no SI transport prediction",
+        "failure_mode": "a coordinate conversion is presented as a measured or action-derived transport coefficient",
+        "next_hardening_step": "supply provenance, Kubo matching, and a material-specific observable/unit contract"
     }
   ],
   "merge_history": {
@@ -2927,7 +3318,14 @@
       "uet.covariant_diffusion.frame_decomposition",
       "uet.covariant_diffusion.finite_relaxation_current",
       "uet.covariant_diffusion.energy_identity",
-      "uet.covariant_diffusion.adiabatic_model_b_limit"
+      "uet.covariant_diffusion.adiabatic_model_b_limit",
+      "uet.noether_mapping.frame_projected_charge_density",
+      "uet.noether_mapping.affine_phase_coordinate",
+      "uet.noether_mapping.normalized_current_coordinate",
+      "uet.noether_mapping.continuity_residual_scaling",
+      "uet.noether_mapping.o2_polar_current",
+      "uet.noether_mapping.symmetric_double_well_conjugacy",
+      "uet.noether_mapping.normalized_constitutive_scales"
     ],
     "already_present": [
       "uet.impact_effect.information_flow",

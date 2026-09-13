@@ -324,6 +324,23 @@
       "reason": "These modules support thermal, thermoelastic, or transport diagnostics; assignment does not establish a dimensional Phi-to-temperature map or empirical validation."
     },
     {
+      "disposition_id": "W2-EQUATION-NOETHER-MAPPING",
+      "patterns": [
+        "docs/core/uet_noether.py",
+        "docs/core/uet_noether_phase_field_map.py"
+      ],
+      "owner_id": "EQUATION",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "logical_area": "02_equations",
+      "equation_family_or_lane": "core.noether_mapping",
+      "organization_status": "ASSIGNED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/02_equations/lorentz_noether/{name}",
+      "next_action": "link_noether_coordinate_formulas_and_preserve_eos_transport_observable_blockers",
+      "review_action": "assign_to_noether_mapping_equation_owner",
+      "reason": "The Noether surface contains a legacy diagnostic and a bounded hydrodynamic coordinate map; assignment does not establish a universal C ontology, microscopic inversion, equation of state, transport closure, or physical validation."
+    },
+    {
       "disposition_id": "W1-QUARANTINE-UNMATCHED",
       "patterns": ["docs/core/*"],
       "owner_id": "ORG",
