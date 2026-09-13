@@ -215,6 +215,18 @@ FAMILIES = [
         "candidate constitutive transport; coefficient provenance and SI map remain open",
         ["docs/core/artifacts/covariant_diffusion_formula_audit.json", "docs/core/artifacts/covariant_diffusive_current_verification.json"],
         "close coefficient origin, Kubo relation and dimensional observable lane",
+        formula_ids=[
+            "uet.covariant_diffusion.frame_decomposition",
+            "uet.covariant_diffusion.finite_relaxation_current",
+            "uet.covariant_diffusion.energy_identity",
+            "uet.covariant_diffusion.adiabatic_model_b_limit",
+        ],
+        verifier_paths=[
+            "docs/scripts/audit/audit_uet_gr_covariant_diffusion.py",
+            "docs/core/test/test_covariant_diffusion.py",
+            "docs/core/test/test_gr_covariant_diffusion_alignment.py",
+        ],
+        organization_review_required=True,
     ),
     family(
         "core.hyperbolic_phase",

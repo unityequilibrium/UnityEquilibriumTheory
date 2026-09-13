@@ -245,6 +245,18 @@
         "docs/core/artifacts/covariant_diffusive_current_verification.json"
       ],
       "next_gate": "close coefficient origin, Kubo relation and dimensional observable lane",
+      "formula_ids": [
+        "uet.covariant_diffusion.frame_decomposition",
+        "uet.covariant_diffusion.finite_relaxation_current",
+        "uet.covariant_diffusion.energy_identity",
+        "uet.covariant_diffusion.adiabatic_model_b_limit"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_gr_covariant_diffusion.py",
+        "docs/core/test/test_covariant_diffusion.py",
+        "docs/core/test/test_gr_covariant_diffusion_alignment.py"
+      ],
+      "organization_review_required": true,
       "candidate_surface_count": 91,
       "module_paths_exist": true
     },

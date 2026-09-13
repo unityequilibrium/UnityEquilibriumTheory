@@ -193,6 +193,22 @@
       "reason": "The integrated conservative parent has a local formula/verifier chain; organization assignment does not establish curved GR evolution, dimensional closure, or physical validation."
     },
     {
+      "disposition_id": "W2-EQUATION-COVARIANT-DIFFUSION",
+      "patterns": [
+        "docs/core/uet_covariant_diffusion.py"
+      ],
+      "owner_id": "EQUATION",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "logical_area": "02_equations",
+      "equation_family_or_lane": "core.covariant_diffusion",
+      "organization_status": "ASSIGNED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/02_equations/covariant/{name}",
+      "next_action": "verify_covariant_current_link_chain_and_preserve_uv_kms_si_blockers",
+      "review_action": "assign_to_covariant_diffusion_equation_owner",
+      "reason": "The current bridge has local constitutive, conservation, energy, and adiabatic-limit evidence; assignment does not establish microscopic transport, full gradient-phase causality, KMS completion, SI closure, or physical validation."
+    },
+    {
       "disposition_id": "W1-EQUATION-COVARIANT",
       "patterns": [
         "docs/core/uet_covariant_open_system.py",

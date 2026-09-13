@@ -18,9 +18,9 @@ def test_scientific_link_audit_keeps_open_links_blocked() -> None:
     audit = load_json("uet_core_scientific_link_audit.json")
 
     assert audit["audit_status"] == "BLOCKED_OPEN_SCIENTIFIC_LINKS"
-    assert audit["summary"]["assigned_records"] == 133
-    assert audit["summary"]["audited_records"] == 133
-    assert audit["summary"]["canonical_family_contract_matches"] == 2
+    assert audit["summary"]["assigned_records"] == 134
+    assert audit["summary"]["audited_records"] == 134
+    assert audit["summary"]["canonical_family_contract_matches"] == 3
     assert audit["summary"]["families_without_canonical_contract"] == 8
     assert audit["summary"]["records_without_canonical_contract"] == 130
     assert audit["summary"]["missing_link_field_counts"] == {
@@ -30,11 +30,11 @@ def test_scientific_link_audit_keeps_open_links_blocked() -> None:
         "unit_lane": 130,
         "verifier_paths": 130,
     }
-    assert audit["summary"]["records_with_formula_ids"] == 3
-    assert audit["summary"]["records_with_unit_lane"] == 3
-    assert audit["summary"]["records_with_verifier_paths"] == 3
-    assert audit["summary"]["records_with_artifact_paths"] == 3
-    assert audit["summary"]["records_with_claim_ceiling"] == 3
+    assert audit["summary"]["records_with_formula_ids"] == 4
+    assert audit["summary"]["records_with_unit_lane"] == 4
+    assert audit["summary"]["records_with_verifier_paths"] == 4
+    assert audit["summary"]["records_with_artifact_paths"] == 4
+    assert audit["summary"]["records_with_claim_ceiling"] == 4
     flux_family = next(
         family for family in audit["families"]
         if family["family_or_lane"] == "core.matter_space_flux"
@@ -45,11 +45,19 @@ def test_scientific_link_audit_keeps_open_links_blocked() -> None:
         if family["family_or_lane"] == "core.covariant_parent"
     )
     assert parent_family["link_status"] == "LINKED_PENDING_VERIFICATION"
+    diffusion_family = next(
+        family for family in audit["families"]
+        if family["family_or_lane"] == "core.covariant_diffusion"
+    )
+    assert diffusion_family["link_status"] == "LINKED_PENDING_VERIFICATION"
     assert all(
         family["link_status"].startswith("BLOCKED")
         for family in audit["families"]
-        if family["family_or_lane"]
-        not in {"core.matter_space_flux", "core.covariant_parent"}
+        if family["family_or_lane"] not in {
+            "core.matter_space_flux",
+            "core.covariant_parent",
+            "core.covariant_diffusion",
+        }
     )
 
 

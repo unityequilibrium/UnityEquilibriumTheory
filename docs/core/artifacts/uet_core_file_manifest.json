@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_core_file_manifest",
-  "generated_at": "2026-09-13T22:06:29+00:00",
+  "generated_at": "2026-09-13T22:35:57+00:00",
   "generator": "docs/scripts/audit/build_uet_core_file_manifest.py",
   "status": "PASS_WITH_REVIEW_REQUIRED",
   "controlling_blocker": "unlinked_or_ambiguous_core_paths_require_family_assignment_or_quarantine",
@@ -12,19 +12,19 @@
   ],
   "counts": {
     "declared_input_data": 131,
-    "equation_module": 21,
+    "equation_module": 20,
     "folder_governance": 1,
-    "generated_artifact": 591,
+    "generated_artifact": 592,
     "lane_specific_module": 99,
     "navigation_and_legacy_boundary": 1,
     "proof_or_derivation_runner": 1,
     "review_required": 2,
-    "review_required_equation_module": 3,
+    "review_required_equation_module": 4,
     "specification_or_research_note": 127,
     "support_or_adapter_module": 29,
     "unassigned_python_surface": 30,
     "update_log": 15,
-    "verifier_or_regression_test": 499
+    "verifier_or_regression_test": 500
   },
   "logical_area_counts": {
     "00_governance": 2,
@@ -32,13 +32,13 @@
     "02_equations": 24,
     "03_lanes": 211,
     "04_proofs": 1,
-    "05_tests": 499,
+    "05_tests": 500,
     "06_data": 131,
-    "07_artifacts": 591,
+    "07_artifacts": 592,
     "08_history": 15,
     "99_review": 32
   },
-  "review_required_count": 132,
+  "review_required_count": 133,
   "source_artifact_parse_errors": [],
   "files": [
     {
@@ -49,7 +49,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "bfbb661414cc5adac10798e54b7d80221a67d92c3a6520284a5b0b466f8a4e86",
+      "sha256": "ae4e5cc6cff5e8b787b2926b1083e3cb695931a86cec9f11fb68416bf01191b3",
       "review_action": "link_to_registry_and_current_artifact"
     },
     {
@@ -60,7 +60,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "9aabfd120abf9dc408a72687d1a23f4f64ef3787680bfbcf8a8ae06ca8287e78",
+      "sha256": "9b3b5f4af365c8cda9a2b8323fdb78dc77f56582013a33c237f3ae4cb664c463",
       "review_action": "classify_nonstandard_file"
     },
     {
@@ -5307,7 +5307,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "05abc2433b2c38a55829da8ee50ded7aab0366f2fb1ec8c007cadf124ce55cb4",
+      "sha256": "cda3b04788ff337d54b4b671d73cc69dbb680e3d809b89498ce71ae96f729127",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -5318,7 +5318,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "7b08a506dc724b24ea2a83779d51bc4d62c94f0ccd0b99339f2c512d5b9ffbf1",
+      "sha256": "2dd164cc331618fec43b852d8c6dfadc0c9c5d66cbde87a4ef0bbc6c15646845",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -5329,7 +5329,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "ce3916d31a4574d7eae2bbac956002c99b0668441894b187fc70ad1c2af6bc51",
+      "sha256": "e0e98accdfa98f0a663a501aa23c27f9c78769be046bbe3d07550fe5d0b2a1b8",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -5340,7 +5340,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "d5d99bf52c195ab7c6f77a7a3af7162d31bf2b9a67943b3d0b7e22e4830bf5a2",
+      "sha256": "4e1fbd7ab4f721cb9bc246949ad2e75a531f5ebfc1ced0f2ab78df6f33aebd26",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -5351,7 +5351,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "4ba2dca7a7e1db10ddc8da4408a263832ca975419ea2a7e48e7083355c3b9f1f",
+      "sha256": "b1589f83dfb04a1f3272c6b9106a4ee26b42ec33573d17ae4a3ef8a95bbc8fad",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -5417,7 +5417,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "8bbcf28ed4a3ab11b17536f3122aefd1c9d6dd7ce5b98a5872b5ce6082193a10",
+      "sha256": "45a2c39f28e0f4bab6345e9fbae2290f9e619913c1ba481119c330f07662c177",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -5440,6 +5440,17 @@
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
       "sha256": "33b4288341dff4f00a942d2579a2fabb72aa7e8a60775dd0dc884479f5a38ac5",
+      "review_action": "retain_path_and_link_generator"
+    },
+    {
+      "path": "docs/core/artifacts/uet_equation_correspondence_registry_covariant_diffusion_addendum.json",
+      "file_kind": "generated_artifact",
+      "logical_area": "07_artifacts",
+      "owner_family_or_lane": "foundation_or_shared",
+      "registry_link_status": "NOT_APPLICABLE",
+      "status_source": "MANIFEST_CLASSIFICATION_ONLY",
+      "generated_or_source": "generated",
+      "sha256": "b0f1b5a334752164f4de3f4eb34ea1962e08fc8ce5f0bfbb39477da3f6740447",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -6528,7 +6539,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "88b37f0593969b5839172a7c6def9bcf5a2ff699c4e93cd809304b909e1b4050",
+      "sha256": "7476f8f1707be5ed0b2467047f4741a35fea2ea2c07e45b7db30c3dcab31f53e",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -6638,7 +6649,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "3f6397fdeba0340cd06f1b0c591dc9e3c704a452f6516a8df1560c524de9c9e6",
+      "sha256": "85724ff59ee03bd1e6722f6353a388d25335abcc3081f6e335020be60ffccdba",
       "review_action": "link_to_registry_and_current_artifact"
     },
     {
@@ -6649,7 +6660,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "7332c119da9edcfc43a295aa460d3d834f2b27991abab018b56fcc5893e10271",
+      "sha256": "c4515d4d5018fbce9e5bde6da39db11b6f5ccef51fb59d84af14ff8dcd25cb73",
       "review_action": "retain_one_entry_per_completed_wave"
     },
     {
@@ -14613,7 +14624,18 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "2decf6d030b83fe9c3fbc7880e8a0edc89c419cd5a89e0975282ec575177dc09",
+      "sha256": "7e42147a214b6e489f7653807e85224b190d46adb03f9b2c3f7f6b189576ca97",
+      "review_action": "link_to_equation_family_or_artifact"
+    },
+    {
+      "path": "docs/core/test/test_uet_covariant_diffusion_links.py",
+      "file_kind": "verifier_or_regression_test",
+      "logical_area": "05_tests",
+      "owner_family_or_lane": "core_test_surface",
+      "registry_link_status": "NOT_APPLICABLE",
+      "status_source": "MANIFEST_CLASSIFICATION_ONLY",
+      "generated_or_source": "source",
+      "sha256": "b3d405e058ea33cb9be38beaacdd8658a86afce9ffc845aa4ab6695a999e15ab",
       "review_action": "link_to_equation_family_or_artifact"
     },
     {
@@ -14646,7 +14668,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "14da0b1bd4a0fae5a7ff95d93902af938819808192574c79238234addeb4ddf3",
+      "sha256": "c0c6ec556b4e3291d3546e5c206cee88844535979a2caed2e136b55d2f373f2b",
       "review_action": "link_to_equation_family_or_artifact"
     },
     {
@@ -15278,14 +15300,14 @@
     },
     {
       "path": "docs/core/uet_covariant_diffusion.py",
-      "file_kind": "equation_module",
+      "file_kind": "review_required_equation_module",
       "logical_area": "02_equations",
       "owner_family_or_lane": "core.covariant_diffusion",
-      "registry_link_status": "LINKED_BY_FAMILY_CONTRACT",
+      "registry_link_status": "REVIEW_REQUIRED",
       "status_source": "docs/core/artifacts/uet_core_equation_family_contract.json",
       "generated_or_source": "source",
       "sha256": "a267b89e39db4a8dfac56e71a070539a9da05a55b8bb8b22216e7fd1b839bc53",
-      "review_action": "update_family_record_when_surface_changes"
+      "review_action": "complete_bounded_family_link_review"
     },
     {
       "path": "docs/core/uet_covariant_matter.py",

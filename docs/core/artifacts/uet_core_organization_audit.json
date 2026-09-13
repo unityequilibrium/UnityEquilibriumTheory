@@ -45,8 +45,8 @@
     },
     {
       "check_id": "review_disposition_coverage",
-      "expected": 133,
-      "observed": 133,
+      "expected": 134,
+      "observed": 134,
       "status": "PASS"
     },
     {
@@ -74,6 +74,7 @@
     "W1-LANE-THERMAL-SUPPORT": 28,
     "W1-LANE-TOPIC13-SUPPORT": 3,
     "W1-T13-HOLDOUT": 1,
+    "W2-EQUATION-COVARIANT-DIFFUSION": 1,
     "W2-EQUATION-COVARIANT-PARENT": 1
   },
   "dispositioned_paths": [
@@ -96,6 +97,7 @@
     "docs/core/topic13_closure_record_contract.py",
     "docs/core/uet_anisotropic_thermoelastic_response_bridge.py",
     "docs/core/uet_coarse_graining.py",
+    "docs/core/uet_covariant_diffusion.py",
     "docs/core/uet_covariant_open_system.py",
     "docs/core/uet_covariant_parent.py",
     "docs/core/uet_covariant_theory_spine.py",
@@ -212,18 +214,18 @@
     "docs/core/uet_transport_coefficient_identifiability.py"
   ],
   "duplicate_asset_ids": [],
-  "generated_at": "2026-09-13T22:07:04+00:00",
+  "generated_at": "2026-09-13T22:36:13+00:00",
   "generator": "docs/scripts/audit/build_uet_research_organization_registry_v2.py",
   "organization_disposition_source": "docs/core/00_governance/uet_research_organization_policy.json",
   "organization_wave": "WAVE_1_ASSIGN_AND_QUARANTINE",
   "quarantined_paths": [],
   "schema_version": "1.0",
   "scope": {
-    "assigned_review_count": 133,
-    "dispositioned_review_count": 133,
+    "assigned_review_count": 134,
+    "dispositioned_review_count": 134,
     "foundation_status": "BLOCKED",
-    "manifest_file_count": 1550,
-    "pre_disposition_review_count": 133,
+    "manifest_file_count": 1552,
+    "pre_disposition_review_count": 134,
     "quarantine_count": 0,
     "review_queue_count": 0,
     "undispositioned_review_count": 0
