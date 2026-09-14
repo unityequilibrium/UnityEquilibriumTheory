@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-standard-o2-finite-temperature-comparator-v1",
   "artifact": "t13_standard_o2_finite_temperature_comparator_audit",
-  "generated_at": "2026-08-12",
+  "generated_at": "2026-09-15",
   "status": "PASS_STANDARD_O2_FINITE_T_NORMAL_COMPARATOR",
   "major_result": {
     "major_result_id": "T13_STANDARD_O2_FINITE_TEMPERATURE_NORMAL_COMPARATOR",
@@ -37,7 +37,7 @@
     "evidence_artifacts": [
       {
         "path": "docs/core/standard_o2_finite_temperature_comparator.py",
-        "sha256": "147feb7c94792ce4050b384ac3f7a89c32e09de4f7ec2da52e04816d6a992268"
+        "sha256": "c40f3df6a8cd76c2c801e5807d0accf0b5b137544d48e2bf36377bf195410a1a"
       },
       {
         "path": "docs/core/uet_o2_finite_density_eos.py",
@@ -96,7 +96,7 @@
     "trace_is_not_state": true
   },
   "source_hashes": {
-    "docs/core/standard_o2_finite_temperature_comparator.py": "147feb7c94792ce4050b384ac3f7a89c32e09de4f7ec2da52e04816d6a992268",
+    "docs/core/standard_o2_finite_temperature_comparator.py": "c40f3df6a8cd76c2c801e5807d0accf0b5b137544d48e2bf36377bf195410a1a",
     "docs/core/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
   },
   "controlling_blocker": "finite_temperature_UET_effective_action_and_normal_two_fluid_sector_not_derived",

@@ -10,6 +10,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from docs.core.core_paths import canonical_existing_path
+
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -48,11 +50,11 @@ from docs.core.uet_o2_finite_density_eos import (  # noqa: E402
 )
 
 OUT = ROOT / "docs/core/artifacts"
-EOS_CORE = ROOT / "docs/core/uet_o2_finite_density_eos.py"
-TRANSPORT_CORE = ROOT / "docs/core/uet_covariant_superfluid_transport.py"
-MATTER_CORE = ROOT / "docs/core/uet_covariant_matter.py"
-STATE_MAP_CORE = ROOT / "docs/core/uet_noether_phase_field_map.py"
-SPEC = ROOT / "docs/core/O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md"
+EOS_CORE = canonical_existing_path(ROOT / "docs/core/uet_o2_finite_density_eos.py")
+TRANSPORT_CORE = canonical_existing_path(ROOT / "docs/core/uet_covariant_superfluid_transport.py")
+MATTER_CORE = canonical_existing_path(ROOT / "docs/core/uet_covariant_matter.py")
+STATE_MAP_CORE = canonical_existing_path(ROOT / "docs/core/uet_noether_phase_field_map.py")
+SPEC = canonical_existing_path(ROOT / "docs/core/O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md")
 SOURCE_RECORDS = (
     ROOT
     / "docs/data/external/relativistic_transport/son_relativistic_superfluid_2002/source_record.json",
@@ -494,17 +496,21 @@ def build_artifacts(
     transport_checks = _transport_checks(config)
     eos_pass = source["status"] == "PASS" and all(eos_checks["gates"].values())
     transport_pass = all(transport_checks["gates"].values())
+    # Keep legacy labels stable in committed artifacts while hashing the
+    # canonical implementation selected by the shared path resolver.
     source_hashes = {
-        str(path.relative_to(ROOT)).replace("\\", "/"): _sha(path)
-        for path in (
-            EOS_CORE,
-            TRANSPORT_CORE,
-            MATTER_CORE,
-            STATE_MAP_CORE,
-            SPEC,
-            *SOURCE_RECORDS,
-        )
+        "docs/core/uet_o2_finite_density_eos.py": _sha(EOS_CORE),
+        "docs/core/uet_covariant_superfluid_transport.py": _sha(TRANSPORT_CORE),
+        "docs/core/uet_covariant_matter.py": _sha(MATTER_CORE),
+        "docs/core/uet_noether_phase_field_map.py": _sha(STATE_MAP_CORE),
+        "docs/core/O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md": _sha(SPEC),
     }
+    source_hashes.update(
+        {
+            str(path.relative_to(ROOT)).replace("\\", "/"): _sha(path)
+            for path in SOURCE_RECORDS
+        }
+    )
     input_identity = {
         "eos_core": "docs/core/uet_o2_finite_density_eos.py",
         "transport_core": "docs/core/uet_covariant_superfluid_transport.py",
