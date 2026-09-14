@@ -60,7 +60,10 @@ def is_python_shim(path: str | Path) -> bool:
     except (OSError, UnicodeDecodeError):
         return False
     # Match generated compatibility shims, not the helper implementation or its docs.
-    forward_shim = re.search(r'(?m)^\s*_?forward_public_symbols\(globals\(\),\s*"docs\.core\.', text) is not None
+    forward_shim = re.search(
+        r'(?s)_?forward_public_symbols\s*\(\s*globals\(\)\s*,\s*"docs\.core\.',
+        text,
+    ) is not None
     runpy_shim = re.search(r'(?m)^_CANONICAL_RELATIVE\s*=\s*"docs/', text) is not None and "runpy.run_path" in text
     return forward_shim or runpy_shim
 

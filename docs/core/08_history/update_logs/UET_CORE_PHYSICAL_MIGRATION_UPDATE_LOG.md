@@ -253,3 +253,12 @@
 - Verification: observable migration and focused matter-space regression suite PASS (62); physical planner/audit PASS with zero duplicate targets, missing paths, or broken shims; physics status changes 0.
 - Controller: 1,135 active physical move targets remain; remaining unassigned/support modules require explicit disposition; 588 generated artifacts remain behind generator/consumer/provenance review; foundation remains BLOCKED.
 - Public-safety boundary: source-of-truth and support-lane paths changed only; no equation, derivation, interpretation, unit, or scientific claim was promoted.
+## 2026-09-15 — Core physical migration v3 — Wave 6f Lorentz equation family
+
+- Scope: canonical source migration for the explicitly registered Lorentz diagnostic family; organization and compatibility only.
+- Moved: `uet_lorentz.py` into `docs/core/02_equations/lorentz_noether/` with a numbered family package and README.
+- Preserved: the root import and direct-script entrypoint through a compatibility shim; no duplicate implementation is retained.
+- Repaired: the legacy Lorentz/Noether alignment audit now resolves canonical implementations when a root module is a shim; the migration planner recognizes multiline forwarding shims without reporting false target collisions.
+- Verification: canonical/legacy import identity, legacy alignment regression, and direct Lorentz script smoke PASS (6 tests); physical migration audit PASS with zero duplicate targets, missing paths, or broken shims.
+- Controller: 1,134 active physical move targets remain after this family; 589 generated artifacts remain behind generator/consumer/provenance review, and foundation remains `BLOCKED`.
+- Public-safety boundary: source-of-truth and audit path changes only; Lorentz invariance, curved-spacetime covariance, Noether conservation, and Einstein-equation claims remain blocked.
