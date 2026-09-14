@@ -5,6 +5,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from docs.core.core_paths import canonical_artifact_path
+
 
 ROOT = Path(__file__).resolve().parents[3]
 PROGRAM = ROOT / "docs/core/artifacts/uet_wave3_wave10_research_program.json"
@@ -13,7 +15,7 @@ PROGRAM = ROOT / "docs/core/artifacts/uet_wave3_wave10_research_program.json"
 REQUIRED = (
     "docs/core/artifacts/matter_space_causal_lane_comparison.json",
     "docs/core/artifacts/matter_space_variational_verification.json",
-    "docs/core/artifacts/matter_space_energy_ledger_verification.json",
+    canonical_artifact_path("matter_space_energy_ledger_verification.json", "verification"),
     "docs/core/artifacts/matter_space_phase_pilot.json",
     "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json",
     "docs/core/artifacts/o2_finite_density_eos_verification.json",

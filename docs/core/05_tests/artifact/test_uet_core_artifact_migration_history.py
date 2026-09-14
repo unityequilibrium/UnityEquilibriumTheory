@@ -43,9 +43,27 @@ def test_migrated_generators_use_canonical_path_authority() -> None:
     generators = {
         "audit_matter_interaction_forward.py": "matter_interaction_forward_verification.json",
         "audit_resource_selection_physical_cost_map.py": "resource_selection_physical_cost_map_verification.json",
+        "audit_matter_space_energy_ledger.py": "matter_space_energy_ledger_verification.json",
     }
     for generator_name, artifact_name in generators.items():
         generator = ROOT / "docs" / "scripts" / "audit" / generator_name
         text = generator.read_text(encoding="utf-8")
         assert "canonical_artifact_path" in text
         assert f"docs/core/artifacts/{artifact_name}" not in text
+
+
+def test_migrated_artifacts_have_semantic_hash_metadata() -> None:
+    history = load_json(GOVERNANCE / "uet_core_artifact_migration_history.json")
+    migrated = [item for item in history["records"] if item["migration_state"] == "MIGRATED"]
+
+    assert migrated
+    for item in migrated:
+        assert len(item["semantic_payload_sha256"]) == 64
+        assert isinstance(item.get("semantic_ignored_paths", []), list)
+
+    energy = next(
+        item
+        for item in migrated
+        if item["canonical_path"].endswith("matter_space_energy_ledger_verification.json")
+    )
+    assert energy["semantic_ignored_paths"] == ["generated_at"]

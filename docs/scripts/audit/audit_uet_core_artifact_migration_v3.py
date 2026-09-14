@@ -30,8 +30,37 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+VOLATILE_JSON_KEYS = frozenset({"generated_at"})
+
+
+def normalize_json_payload(value: Any) -> Any:
+    if isinstance(value, dict):
+        return {
+            key: normalize_json_payload(item)
+            for key, item in value.items()
+            if key not in VOLATILE_JSON_KEYS
+        }
+    if isinstance(value, list):
+        return [normalize_json_payload(item) for item in value]
+    return value
+
+
 def load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def semantic_payload_sha256(path: Path) -> str:
+    if path.suffix.lower() == ".json":
+        payload = normalize_json_payload(load_json(path))
+        encoded = json.dumps(
+            payload,
+            ensure_ascii=False,
+            sort_keys=True,
+            separators=(",", ":"),
+        ).encode("utf-8")
+    else:
+        encoded = path.read_bytes()
+    return hashlib.sha256(encoded).hexdigest()
 
 
 def build() -> dict[str, Any]:
@@ -41,6 +70,7 @@ def build() -> dict[str, Any]:
     source_hash_mismatches: list[dict[str, str | None]] = []
     missing_targets: list[str] = []
     target_hash_mismatches: list[dict[str, str | None]] = []
+    target_semantic_hash_mismatches: list[dict[str, str | None]] = []
     migrated_source_present: list[str] = []
     migrated_active_consumer_rows: list[str] = []
     existing_targets: list[str] = []
@@ -66,14 +96,24 @@ def build() -> dict[str, Any]:
             if not target.exists():
                 missing_targets.append(canonical_path)
             else:
-                expected = row.get("sha256_after") or row.get("sha256_before")
-                observed = sha256(target)
-                if expected and observed != expected:
-                    target_hash_mismatches.append({
-                        "path": canonical_path,
-                        "expected": expected,
-                        "observed": observed,
-                    })
+                semantic_expected = row.get("semantic_payload_sha256")
+                if semantic_expected:
+                    observed = semantic_payload_sha256(target)
+                    if observed != semantic_expected:
+                        target_semantic_hash_mismatches.append({
+                            "path": canonical_path,
+                            "expected": semantic_expected,
+                            "observed": observed,
+                        })
+                else:
+                    expected = row.get("sha256_after") or row.get("sha256_before")
+                    observed = sha256(target)
+                    if expected and observed != expected:
+                        target_hash_mismatches.append({
+                            "path": canonical_path,
+                            "expected": expected,
+                            "observed": observed,
+                        })
             if source.exists():
                 migrated_source_present.append(legacy_path)
         else:
@@ -146,6 +186,11 @@ def build() -> dict[str, Any]:
             "observed": len(target_hash_mismatches),
         },
         {
+            "check_id": "migrated_target_semantic_hashes_stable",
+            "status": "PASS" if not target_semantic_hash_mismatches else "FAIL",
+            "observed": len(target_semantic_hash_mismatches),
+        },
+        {
             "check_id": "migrated_legacy_sources_absent",
             "status": "PASS" if not migrated_source_present else "FAIL",
             "observed": len(migrated_source_present),
@@ -193,6 +238,7 @@ def build() -> dict[str, Any]:
         "source_hash_mismatches": source_hash_mismatches,
         "missing_targets": missing_targets,
         "target_hash_mismatches": target_hash_mismatches,
+        "target_semantic_hash_mismatches": target_semantic_hash_mismatches,
         "migrated_source_present": migrated_source_present,
         "migrated_active_consumer_rows": migrated_active_consumer_rows,
         "duplicate_targets": duplicate_targets,
@@ -202,11 +248,29 @@ def build() -> dict[str, Any]:
     }
 
 
+def comparable_payload(payload: dict[str, Any]) -> dict[str, Any]:
+    normalized = json.loads(json.dumps(payload))
+    normalized.pop("generated_at", None)
+    return normalized
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true")
-    parser.parse_args()
+    args = parser.parse_args()
     result = build()
+    if args.check:
+        mismatches: list[str] = []
+        if not AUDIT.exists():
+            mismatches.append(repo_path(AUDIT))
+        else:
+            current = load_json(AUDIT)
+            if comparable_payload(current) != comparable_payload(result):
+                mismatches.append(repo_path(AUDIT))
+        status = "PASS" if not mismatches else "DRIFT"
+        print(json.dumps({"status": status, "mismatches": mismatches}, ensure_ascii=False))
+        return 0 if status == "PASS" else 1
+
     AUDIT.write_text(json.dumps(result, indent=2, ensure_ascii=False, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps({
         "status": result["status"],

@@ -209,7 +209,14 @@ refreshed, but unresolved active consumers block the move. If generator output
 differs from the legacy artifact, stop; do not overwrite legacy work. A source
 provenance refresh may be proposed only through an explicit review step, and
 must never hide changes beyond declared metadata. The canonical output belongs
-The machine-readable generator review queue is `07_artifacts/gates/uet_core_artifact_generator_review_queue.json`; it separates unresolved generator identity, active-consumer rewrites, generator-path switches, and already migrated records. Its `PASS_WITH_REVIEW_REQUIRED` state is an organization blocker, not a physics result.
 under `07_artifacts/`; the old artifacts directory is an index/compatibility
-boundary only. A migrated artifact remains `INTERNAL` or its existing evidence
+boundary only. For JSON outputs, `generated_at` is the only currently declared
+volatile metadata key: migration history records a semantic SHA-256 with that
+key removed, and the audit compares the semantic hash after later regeneration.
+No other field may be ignored without an explicit registry/test change. If a
+completed move predates semantic-hash metadata, run
+`docs/scripts/audit/backfill_uet_core_artifact_semantic_hashes_v3.py` as the
+controlled history-maintenance step; do not hand-edit migration history.
+The machine-readable generator review queue is `07_artifacts/gates/uet_core_artifact_generator_review_queue.json`; it separates unresolved generator identity, active-consumer rewrites, generator-path switches, and already migrated records. Its `PASS_WITH_REVIEW_REQUIRED` state is an organization blocker, not a physics result.
+A migrated artifact remains `INTERNAL` or its existing evidence
 class; organization migration never promotes physics claims.
