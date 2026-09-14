@@ -278,3 +278,9 @@
 - Verification: Noether canonical/legacy import identity and map-facade tests, Noether mapping tests, and legacy alignment regression PASS (31 tests); Noether direct-script smoke PASS; alignment audit PASS.
 - Controller: 1,132 active physical move targets remain after this family; generated artifacts remain behind the separate generator/consumer/provenance controller, and foundation remains `BLOCKED`.
 - Public-safety boundary: source-of-truth and compatibility paths changed only; no universal `C` ontology, Noether conservation proof, or physics claim was promoted.
+## 2026-09-15 — Wave 6g post-commit metadata consistency correction
+
+- Scope: migration control-plane synchronization after the Noether family commit.
+- Corrected: regenerated the physical migration manifest, report, audit, and organization/navigation indexes from the committed two-module Noether layout.
+- Verification: physical migration audit PASS with zero duplicate targets, missing current paths, or redirect errors; planner reports 1,784 records, 1,132 active move targets, 652 canonical assets, 190 compatibility assets, and 2 unrelated dirty sources; physics status changes remain 0.
+- Public-safety boundary: metadata-only correction; the Noether mapping remains many-to-one/constitutive at its declared boundary, foundation remains `BLOCKED`, and no physics claim was promoted.
