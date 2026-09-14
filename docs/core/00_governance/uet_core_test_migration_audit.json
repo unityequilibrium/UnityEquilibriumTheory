@@ -1,0 +1,64 @@
+{
+  "artifact": "uet_core_test_migration_audit",
+  "checks": [
+    {
+      "check_id": "manifest_schema",
+      "status": "PASS"
+    },
+    {
+      "check_id": "migrated_canonical_files_exist",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "migrated_hashes_preserved",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "quarantined_sources_retained",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "no_duplicate_test_targets",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "no_old_python_wrappers_for_moved_tests",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "legacy_test_boundary_present",
+      "status": "PASS"
+    },
+    {
+      "check_id": "organization_does_not_change_physics_status",
+      "observed": 0,
+      "status": "PASS"
+    }
+  ],
+  "controlling_blocker": null,
+  "duplicate_targets": {},
+  "generated_at": "2026-09-14T07:52:08+00:00",
+  "generator": "docs/scripts/audit/audit_uet_core_test_migration.py",
+  "migrated_hash_mismatches": [],
+  "migrated_missing": [],
+  "quarantined_missing": [],
+  "schema_version": "1.0",
+  "stale_old_python_wrappers": [],
+  "status": "PASS",
+  "summary": {
+    "dirty_sources": 0,
+    "duplicate_targets": {},
+    "existing_target_conflicts": [],
+    "files_total": 500,
+    "migrated": 205,
+    "migration_ready": 0,
+    "physical_move_performed": true,
+    "physics_status_changes": 0,
+    "quarantined": 295
+  }
+}
