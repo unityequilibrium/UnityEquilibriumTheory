@@ -58,7 +58,9 @@ def is_python_shim(path: str | Path) -> bool:
         text = value.read_text(encoding="utf-8")
     except (OSError, UnicodeDecodeError):
         return False
-    return "__canonical_module__" in text and "forward_public_symbols" in text
+    # Match the generated shim call, not the helper implementation or its docs.
+    # The helper itself contains both marker names as part of its API definition.
+    return "forward_public_symbols(globals()," in text and "__canonical_module__" in text
 
 
 def _artifact_domain(name: str) -> str:
@@ -151,10 +153,14 @@ def canonical_path_for(legacy_path: str | Path) -> str:
     )):
         return relative
     if tail.startswith("02_Proof/"):
+        if tail == "02_Proof/README.md":
+            return relative
         return "docs/core/04_proofs/" + tail[len("02_Proof/") :]
     if tail.startswith("artifacts/"):
         name = Path(tail).name
         return f"docs/core/07_artifacts/{_artifact_domain(name)}/{name}"
+    if tail == "data/scripts/README.md":
+        return "docs/scripts/core/legacy/UET_SCRIPT_UTILITY_HUB.md"
     if tail.startswith("data/scripts/"):
         rest = Path(tail[len("data/scripts/") :])
         parts = list(rest.parts)
