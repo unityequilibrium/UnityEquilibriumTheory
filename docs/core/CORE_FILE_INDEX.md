@@ -27,10 +27,10 @@ AGENTS.md, README.md, CORE_FILE_INDEX.md and __init__.py remain permanent root e
 
 ## Physical state
 
-- Files indexed: **1740**
-- Move targets: **1161**
-- Already canonical or protected: **579**
-- Dirty sources held back: **44**
+- Files indexed: **1742**
+- Move targets: **1159**
+- Already canonical or protected: **583**
+- Dirty sources held back: **29**
 - Duplicate targets: **0**
 - Existing destination conflicts: **0**
 - Physics status changes from organization migration: **0**
@@ -50,8 +50,8 @@ AGENTS.md, README.md, CORE_FILE_INDEX.md and __init__.py remain permanent root e
 - Tests physically migrated: **205**
 - Tests quarantined for path/package review: **295**
 - Test migration audit: **PASS**
-- Full pytest collection: **PASS** (2107 collected)
-- Canonical-only collection: **PASS** (1281 collected)
+- Full pytest collection: **PASS** (2109 collected)
+- Canonical-only collection: **PASS** (1283 collected)
 - Test physics status changes: **0**
 
 ## Generated artifact control
@@ -60,7 +60,8 @@ AGENTS.md, README.md, CORE_FILE_INDEX.md and __init__.py remain permanent root e
 - One-generator identities resolved: **57**
 - Ambiguous generator identities: **0**
 - Missing generator identities: **536**
-- Consumer rewrites required: **593**
+- Consumer rewrites required: **539**
+- Canonical artifacts migrated: **2**
 - Artifact migration audit: **PASS**
 No generated output is moved until its generator and active consumers use the canonical path authority.
 
@@ -68,18 +69,18 @@ No generated output is moved until its generator and active consumers use the ca
 
 | Area | Indexed paths |
 | :-- | --: |
-| 00_governance | 28 |
+| 00_governance | 29 |
 | 01_contracts | 25 |
 | 02_Proof | 2 |
 | 02_equations | 1 |
 | 03_lanes | 84 |
 | 04_proofs | 1 |
-| 05_tests | 211 |
+| 05_tests | 212 |
 | 06_data | 22 |
-| 07_artifacts | 1 |
+| 07_artifacts | 3 |
 | 08_history | 31 |
 | 99_review | 1 |
-| artifacts | 594 |
+| artifacts | 592 |
 | data | 113 |
 | root_entrypoints | 328 |
 | test | 298 |
@@ -88,8 +89,8 @@ No generated output is moved until its generator and active consumers use the ca
 
 | Wave | Paths |
 | :-- | --: |
-| already_canonical | 579 |
-| artifacts | 594 |
+| already_canonical | 583 |
+| artifacts | 592 |
 | data_tooling | 86 |
 | equation_or_lane | 181 |
 | proofs | 1 |

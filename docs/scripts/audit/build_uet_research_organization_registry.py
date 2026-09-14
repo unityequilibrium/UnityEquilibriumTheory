@@ -234,11 +234,23 @@ def test_group(path: str) -> str:
     return "regression"
 
 
+def canonical_artifact_target(name: str) -> str:
+    import sys
+
+    if str(ROOT) not in sys.path:
+        sys.path.insert(0, str(ROOT))
+    from docs.core.core_paths import canonical_artifact_path
+
+    return repo_path(canonical_artifact_path(name))
+
 def target_path(record: dict[str, Any], family: dict[str, Any] | None, room_id: str) -> str:
     path = normalize_path(str(record["path"]))
     name = Path(path).name
     area = str(record.get("logical_area", "99_review"))
-    family_id = str((family or {}).get("family_id") or record.get("owner_family_or_lane") or "")
+    family_id = str((family or {}).get("family_id") or record.get("owner_family_or_lane") or "review_required")
+
+    if record.get("file_kind") == "generated_artifact":
+        return canonical_artifact_target(name)
 
     if area == "00_governance":
         return f"docs/core/00_governance/{name}"
@@ -322,7 +334,7 @@ def build_file_record(
     owner_id = owner_for(logical_area)
     room_id = room_for(path, logical_area)
     family = family_for(record, by_module)
-    family_id = str((family or {}).get("family_id") or record.get("owner_family_or_lane") or "")
+    family_id = str((family or {}).get("family_id") or record.get("owner_family_or_lane") or "review_required")
     planned_path = target_path(record, family, room_id)
     artifacts = [normalize_path(str(item)) for item in (family or {}).get("evidence_paths", [])]
     if record.get("file_kind") == "generated_artifact":
@@ -590,6 +602,9 @@ def canonical_without_timestamp(payload: dict[str, Any]) -> dict[str, Any]:
     return copied
 
 
+def canonical_index(text: str) -> str:
+    return re.sub(r"Generated at: `[^`]+`", "Generated at: `<timestamp>`", text)
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true", help="compare existing outputs without writing")
@@ -615,7 +630,7 @@ def main() -> int:
             actual = load_json(path)
             if canonical_without_timestamp(actual) != canonical_without_timestamp(expected):
                 mismatches.append(repo_path(path))
-        if not INDEX_PATH.exists() or INDEX_PATH.read_text(encoding="utf-8") != index:
+        if not INDEX_PATH.exists() or canonical_index(INDEX_PATH.read_text(encoding="utf-8")) != canonical_index(index):
             mismatches.append(repo_path(INDEX_PATH))
         print(json.dumps({"status": "PASS" if not mismatches else "DRIFT", "mismatches": mismatches}, ensure_ascii=False))
         return 0 if not mismatches else 1

@@ -104,3 +104,40 @@
 - Verification: 181/181 root Python module imports PASS; active link audit PASS; path/ownership audit PASS; combined enforcement audit PASS; organization registry `--check` PASS; data/tooling, source-package, test, and artifact-plan audits PASS; test collection PASS with 2,105 collected; physics status changes 0.
 - Controller: generated artifact migration remains the next physical blocker — 593 legacy outputs still need generator/consumer switching (57 candidate writers, 536 unresolved writer identities); no generated artifact was moved.
 - Public-safety boundary: organization discovery and compatibility improved only; organization `MIGRATED`/audit `PASS` does not mean an equation is derived or the foundation gate is open.
+## 2026-09-14 — Core physical migration v3 — Wave 5b bounded artifact family
+
+- Scope: one generated verification artifact under `docs/core/artifacts`; organization migration only.
+- Changed: added migration-history-aware artifact planner/audit and bounded runner; switched the matter-interaction generator to `core_paths.canonical_artifact_path`; repaired its active README consumer; classified canonical artifact/test/data/governance surfaces in the core manifest; and updated the stale organization regression test to the current registry schema.
+- Moved: `matter_interaction_forward_verification.json` to `docs/core/07_artifacts/verification/` with one canonical copy and preserved SHA-256 `3525364bb21fe7c56bc8f8812838cc93ad0a947e8b24c3eb88f3b20b0ddb4b31`. Migration history is recorded in `00_governance/uet_core_artifact_migration_history.json`.
+- Safety correction: `matter_collective_behavior_observation_gate.json` was not moved because its current generator differed only in an upstream source SHA; legacy output was not overwritten. That remains a separate refresh/controller item.
+- Verification: bounded artifact planner/audit PASS; physical planner/audit PASS; core path/import/link enforcement PASS; organization registry audit PASS_WITH_REVIEW_REQUIRED; organization `--check` PASS; targeted regression 8 passed; test collection PASS with 2,109 full and 1,283 canonical tests; physics status changes 0.
+- Controller: 592 generated outputs remain at legacy paths; 536 have no resolved generator identity. Select the next family only after active legacy consumers, generator path, semantic payload, and provenance are explicitly checked.
+- Public-safety boundary: canonical organization and compatibility improved; the moved artifact remains `SIMULATION_ONLY` / `INTERNAL_STANDARD_COMPARATOR`; no equation, interpretation, foundation, or application claim was promoted.
+## 2026-09-14 — Core physical migration v3 — Wave 5b continuation and gate tightening
+
+- Scope: bounded generated-artifact migration and consumer classification.
+- Moved: resource_selection_physical_cost_map_verification.json to
+  docs/core/07_artifacts/provenance/; its generator now uses
+  core_paths.canonical_artifact_path, and the SHA-256 is unchanged
+  (016585fdd672b420f21b119f9fba0154a3553ce6162e3f0cda6708db38e125d8).
+  Together with the earlier matter-interaction move, 2 of 593 generated
+  artifacts now have canonical outputs.
+- Tightened: governance, history, ledger, and generated control-plane references
+  are retained for provenance but are not counted as active runtime consumers;
+  completed migration records explicitly store zero active consumers.
+- Held back: Topic 0.13 joint-resolution output failed semantic comparison after
+  its moved-test dependency changed; foundation dependency graph also failed
+  semantic comparison. Temporary canonical targets were removed and legacy
+  outputs were not overwritten. Matter-collective output remains blocked by
+  upstream source-hash drift.
+- Verification: artifact planner/audit PASS; zero missing sources, hash
+  mismatches, target conflicts, duplicate targets, or migrated active consumers;
+  physical planner/audit PASS; organization/enforcement checks PASS; pytest
+  collection PASS (2,109 full / 1,283 canonical / 825 legacy); targeted
+  migration/organization tests PASS (7); physics status changes 0.
+- Controller: 591 generated outputs remain at the legacy boundary; 536 have no
+  resolved generator identity and 539 active consumer rewrites remain. The
+  next family must pass generator-path, active-consumer, semantic-payload, and
+  provenance gates before moving.
+- Public-safety boundary: organization-only progress; foundation remains
+  BLOCKED, and no physics interpretation or claim was promoted.

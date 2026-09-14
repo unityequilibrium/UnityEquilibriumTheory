@@ -115,6 +115,7 @@ def render(physical: dict, tooling: dict, tests: dict, test_audit: dict, collect
         f"- Ambiguous generator identities: **{artifact_summary.get('generator_identity_ambiguous', 0)}**",
         f"- Missing generator identities: **{artifact_summary.get('generator_identity_missing', 0)}**",
         f"- Consumer rewrites required: **{artifact_summary.get('consumer_rewrite_required', 0)}**",
+        f"- Canonical artifacts migrated: **{artifact_summary.get('migrated_files', 0)}**",
         f"- Artifact migration audit: **{artifact_audit.get('status', 'UNKNOWN')}**",
         "No generated output is moved until its generator and active consumers use the canonical path authority.",
         "",

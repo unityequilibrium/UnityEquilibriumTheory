@@ -14,8 +14,8 @@
   "checks": [
     {
       "check_id": "assigned_records_are_all_audited",
-      "expected": 137,
-      "observed": 137,
+      "expected": 139,
+      "observed": 139,
       "status": "PASS"
     },
     {
@@ -67,6 +67,46 @@
   "claim_boundary": "organization/scientific-link audit only; no equation, physical, or empirical claim is promoted",
   "controlling_blocker": "pending_families_have_no_canonical_formula_unit_verifier_artifact_chain",
   "families": [
+    {
+      "canonical_family_contract_id": null,
+      "canonical_family_contract_status": "MISSING",
+      "claim_boundary": "link audit only; no equation or physical claim promotion",
+      "claim_ceiling_from_contract": null,
+      "contract_evidence_paths": [],
+      "contract_evidence_paths_exist": true,
+      "family_or_lane": "QUARANTINE",
+      "link_status": "BLOCKED_NO_CANONICAL_FAMILY_CONTRACT",
+      "missing_link_fields": [
+        "artifact_paths",
+        "claim_ceiling",
+        "formula_ids",
+        "unit_lane",
+        "verifier_paths"
+      ],
+      "next_action": "manual_scope_review",
+      "organization_dispositions": [
+        "W1-QUARANTINE-UNMATCHED"
+      ],
+      "owner_ids": [
+        "ORG"
+      ],
+      "record_count": 2,
+      "record_link_field_counts": {
+        "artifact_paths": 0,
+        "claim_ceiling": 0,
+        "formula_ids": 0,
+        "unit_lane": 0,
+        "verifier_paths": 0
+      },
+      "record_paths": [
+        "docs/core/core_compat.py",
+        "docs/core/core_paths.py"
+      ],
+      "room_ids": [
+        "ROOM_CORE_ORGANIZATION"
+      ],
+      "unit_lane_from_contract": null
+    },
     {
       "canonical_family_contract_id": null,
       "canonical_family_contract_status": "MISSING",
@@ -686,7 +726,7 @@
       "unit_lane_from_contract": null
     }
   ],
-  "generated_at": "2026-09-13T23:10:09+00:00",
+  "generated_at": "2026-09-14T13:45:23+00:00",
   "generator": "docs/scripts/audit/audit_uet_core_scientific_links.py",
   "input_errors": [],
   "inputs": {
@@ -704,7 +744,7 @@
     },
     "migration_map": {
       "path": "docs/core/artifacts/uet_core_file_migration_map.json",
-      "sha256": "36ad7cd49775d934dc03fc610c61db0d919d1733d7d7672129cf634a0585d828"
+      "sha256": "1cab01f5ab3bbbd5097e99fd48c371034b5f5247f227a48ddf784b86046f4fc9"
     },
     "organization_policy": {
       "path": "docs/core/00_governance/uet_research_organization_policy.json",
@@ -712,7 +752,7 @@
     },
     "organization_registry": {
       "path": "docs/core/artifacts/uet_research_organization_registry.json",
-      "sha256": "f037f106d91a394129d1007c02388bbc81c1d45a10a44e94569a5b914f89aabc"
+      "sha256": "71e5bfbf77f0d89212315dde3149efc5f5ba0c8dc837ae3d484966bc22c461fb"
     }
   },
   "interpretation": [
@@ -723,6 +763,40 @@
   ],
   "next_controller": "create canonical family-link records, beginning with foundation/matter-space and covariant families, then populate formula IDs, unit lanes, verifier paths, artifact paths, and claim ceilings",
   "records": [
+    {
+      "artifact_paths_present": false,
+      "claim_ceiling_present": false,
+      "evidence_status": "BLOCKED",
+      "family_link_status": "BLOCKED_NO_CANONICAL_FAMILY_CONTRACT",
+      "family_or_lane": "QUARANTINE",
+      "formula_ids_present": false,
+      "next_action": "manual_scope_review",
+      "organization_disposition": "W1-QUARANTINE-UNMATCHED",
+      "organization_status": "QUARANTINED",
+      "owner_id": "ORG",
+      "path": "docs/core/core_compat.py",
+      "room_id": "ROOM_CORE_ORGANIZATION",
+      "source_exists": true,
+      "unit_lane_present": false,
+      "verifier_paths_present": false
+    },
+    {
+      "artifact_paths_present": false,
+      "claim_ceiling_present": false,
+      "evidence_status": "BLOCKED",
+      "family_link_status": "BLOCKED_NO_CANONICAL_FAMILY_CONTRACT",
+      "family_or_lane": "QUARANTINE",
+      "formula_ids_present": false,
+      "next_action": "manual_scope_review",
+      "organization_disposition": "W1-QUARANTINE-UNMATCHED",
+      "organization_status": "QUARANTINED",
+      "owner_id": "ORG",
+      "path": "docs/core/core_paths.py",
+      "room_id": "ROOM_CORE_ORGANIZATION",
+      "source_exists": true,
+      "unit_lane_present": false,
+      "verifier_paths_present": false
+    },
     {
       "artifact_paths_present": false,
       "claim_ceiling_present": false,
@@ -3055,23 +3129,23 @@
   ],
   "schema_version": "1.0",
   "scope": {
-    "assigned_review_record_count": 137,
-    "family_or_lane_count": 13,
-    "organization_registry_file_count": 1555,
+    "assigned_review_record_count": 139,
+    "family_or_lane_count": 14,
+    "organization_registry_file_count": 1742,
     "physical_move_performed": false
   },
   "summary": {
-    "assigned_records": 137,
-    "audited_records": 137,
+    "assigned_records": 139,
+    "audited_records": 139,
     "canonical_family_contract_matches": 5,
     "case_insensitive_key_collision_count": 2,
-    "families_without_canonical_contract": 8,
+    "families_without_canonical_contract": 9,
     "missing_link_field_counts": {
-      "artifact_paths": 130,
-      "claim_ceiling": 130,
-      "formula_ids": 130,
-      "unit_lane": 130,
-      "verifier_paths": 130
+      "artifact_paths": 132,
+      "claim_ceiling": 132,
+      "formula_ids": 132,
+      "unit_lane": 132,
+      "verifier_paths": 132
     },
     "missing_source_path_count": 0,
     "records_with_artifact_paths": 7,
@@ -3079,6 +3153,6 @@
     "records_with_formula_ids": 7,
     "records_with_unit_lane": 7,
     "records_with_verifier_paths": 7,
-    "records_without_canonical_contract": 130
+    "records_without_canonical_contract": 132
   }
 }

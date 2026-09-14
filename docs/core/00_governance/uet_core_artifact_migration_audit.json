@@ -6,13 +6,38 @@
       "status": "PASS"
     },
     {
-      "check_id": "legacy_sources_exist",
+      "check_id": "active_legacy_sources_exist",
       "observed": 0,
       "status": "PASS"
     },
     {
-      "check_id": "source_hashes_stable",
+      "check_id": "active_source_hashes_stable",
       "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "migrated_canonical_targets_exist",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "migrated_target_hashes_stable",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "migrated_legacy_sources_absent",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "migrated_active_consumers_empty",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "migration_history_matches_manifest",
+      "observed": [],
       "status": "PASS"
     },
     {
@@ -21,7 +46,7 @@
       "status": "PASS"
     },
     {
-      "check_id": "canonical_targets_not_written_before_consumer_switch",
+      "check_id": "active_canonical_targets_not_written_before_consumer_switch",
       "observed": 0,
       "status": "PASS"
     },
@@ -35,32 +60,41 @@
       "status": "PASS"
     }
   ],
-  "claim_boundary": "artifact organization plan only; no physics-status promotion",
+  "claim_boundary": "artifact organization and compatibility control only; no physics-status promotion",
   "controlling_blocker": null,
   "duplicate_targets": {},
   "existing_targets": [],
-  "generated_at": "2026-09-14T09:02:44+00:00",
+  "generated_at": "2026-09-14T13:47:09+00:00",
   "generator": "docs/scripts/audit/audit_uet_core_artifact_migration_v3.py",
+  "migrated_active_consumer_rows": [],
+  "migrated_source_present": [],
   "missing_sources": [],
+  "missing_targets": [],
   "schema_version": "1.0",
   "source_hash_mismatches": [],
   "status": "PASS",
   "summary": {
+    "active_legacy_files": 591,
     "claim_promotion": false,
-    "consumer_rewrite_required": 593,
+    "consumer_rewrite_required": 539,
     "disposition_counts": {
-      "generator_and_consumer_rewrite_required": 57,
-      "generator_identity_not_resolved": 536
+      "generator_and_consumer_rewrite_required": 51,
+      "generator_identity_not_resolved": 536,
+      "generator_switch_required_before_move": 4,
+      "migrated_canonical_output": 2
     },
     "duplicate_targets": {},
     "existing_target_conflicts": [],
+    "files_migrated_in_prior_waves": 2,
     "files_total": 593,
     "generator_identity_ambiguous": 0,
     "generator_identity_missing": 536,
     "generator_identity_resolved": 57,
     "json_files": 592,
+    "migrated_files": 2,
     "npz_files": 1,
-    "physical_move_performed": false,
+    "physical_move_performed": true,
     "physics_status_changes": 0
-  }
+  },
+  "target_hash_mismatches": []
 }
