@@ -1,6 +1,6 @@
 {
   "canonical_path_authority": "docs/core/core_paths.py",
-  "generated_at": "2026-09-14T17:35:02+00:00",
+  "generated_at": "2026-09-14T17:44:23+00:00",
   "generator": "docs/scripts/audit/plan_uet_core_artifact_migration_v3.py",
   "history_path": "docs/core/00_governance/uet_core_artifact_migration_history.json",
   "legacy_boundary": "docs/core/artifacts/README.md",
@@ -22678,7 +22678,7 @@
       "rollback_path": "docs/core/artifacts/uet_core_scientific_link_audit.json",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_after": null,
-      "sha256_before": "e9a90ff54dcf0aaf019f90a118ced991e27b78089ed93bd60cd8d67c8391b9a2",
+      "sha256_before": "eb91e7bc19822efe3944866bcf5f5d5d7756ba0e1efd6c0fcf02a5375e6c498d",
       "source_or_generated": "generated",
       "status_source": "artifact_migration_manifest",
       "upstream_dependencies": [],
