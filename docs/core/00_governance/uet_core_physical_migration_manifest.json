@@ -1,6 +1,6 @@
 {
   "canonical_path_authority": "docs/core/core_paths.py",
-  "generated_at": "2026-09-14T08:19:32+00:00",
+  "generated_at": "2026-09-14T08:23:55+00:00",
   "generator": "docs/scripts/audit/plan_uet_core_physical_migration.py",
   "migration_id": "UET-CORE-PHYSICAL-MIGRATION-V3",
   "physical_move_performed": false,
@@ -123,7 +123,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_artifact_migration_audit.json",
       "room_id": null,
       "sha256_after": null,
-      "sha256_before": "922f76dcdb638f853a73ee6a099c15c5f71a9fb034c386e5e3f8c0f8c2329c4a",
+      "sha256_before": "3947de5ac84c682b5f577f6954693b4235ffb2d578d436d45df2019fb94590b1",
       "status_source": null,
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -153,7 +153,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
       "room_id": null,
       "sha256_after": null,
-      "sha256_before": "907ae1bdca0108e36eb7d752b98aea724e22946fad85b7a70b862b883585ad9d",
+      "sha256_before": "869cf6e8072c8e25640b2446a8645f15c169999164a21c9ea020d6e34d2b0f0f",
       "status_source": null,
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -183,7 +183,7 @@
       "rollback_path": "docs/core/00_governance/UET_CORE_ARTIFACT_MIGRATION_REPORT.md",
       "room_id": null,
       "sha256_after": null,
-      "sha256_before": "a4228ba4ad42636143a0d89c8791ace236bbe8c72d6ba6b0f9cc2cf7e34c12a7",
+      "sha256_before": "beebd93b2eae82e4e0fdf4462907f5b67703d50d89cf1839697d19411221edbc",
       "status_source": null,
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -285,7 +285,7 @@
       "collision_key": "docs/core/00_governance/uet_core_physical_migration_audit.json",
       "compatibility_mode": "none",
       "current_path": "docs/core/00_governance/uet_core_physical_migration_audit.json",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": null,
       "evidence_status": null,
@@ -303,7 +303,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_physical_migration_audit.json",
       "room_id": null,
       "sha256_after": null,
-      "sha256_before": "095e8e807f0ae9863210631151529d56a1aa79ed82b8eebf332d0a99b5ad664b",
+      "sha256_before": "932b7fa098f00ae072c0a24e280a776cb4afa82b1c0aba56b52747bb77c6cf67",
       "status_source": null,
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -333,7 +333,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
       "room_id": null,
       "sha256_after": null,
-      "sha256_before": "6c3215af7048778fb96cfbe1c5fd3776a7a487b78b2960a804a7d284faf90966",
+      "sha256_before": "321c6871cc56afeb486d5bedf8a9e01b8dcb98e5a6b5e3b073fdffa42417ebf7",
       "status_source": null,
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -363,7 +363,7 @@
       "rollback_path": "docs/core/00_governance/UET_CORE_PHYSICAL_MIGRATION_REPORT.md",
       "room_id": null,
       "sha256_after": null,
-      "sha256_before": "eca8d4c6d63d03155848bb068e4dec97e7e13c0bf1b868f5f45088c793287fdf",
+      "sha256_before": "2004d44031c6fec90f97a8c2f0b0f4b213fec767b31a811564429a7fde683405",
       "status_source": null,
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -525,7 +525,7 @@
       "collision_key": "docs/core/00_governance/uet_core_test_migration_audit.json",
       "compatibility_mode": "none",
       "current_path": "docs/core/00_governance/uet_core_test_migration_audit.json",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": null,
       "evidence_status": null,
@@ -543,7 +543,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_test_migration_audit.json",
       "room_id": null,
       "sha256_after": null,
-      "sha256_before": "02274ff78749364985d13a9e147530bec127e55fce37e25667fdbea98b498d27",
+      "sha256_before": "97256794d662cb10d32d421d6b00859083092531c3fa76f141779508bdab702f",
       "status_source": null,
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -11874,7 +11874,7 @@
       "collision_key": "docs/core/08_history/update_logs/uet_core_physical_migration_update_log.md",
       "compatibility_mode": "none",
       "current_path": "docs/core/08_history/update_logs/UET_CORE_PHYSICAL_MIGRATION_UPDATE_LOG.md",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": null,
       "evidence_status": null,
@@ -33641,7 +33641,7 @@
       "collision_key": "docs/core/core_file_index.md",
       "compatibility_mode": "none",
       "current_path": "docs/core/CORE_FILE_INDEX.md",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EQUATION",
         "LANE",
@@ -33663,7 +33663,7 @@
       "rollback_path": "docs/core/CORE_FILE_INDEX.md",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_after": null,
-      "sha256_before": "42caabdd1dbeb8904c5db392bd053428a7b731fb5a89a64700858fa58337c920",
+      "sha256_before": "1b49b1aa9e1f7c587271db732f56e4eb45ebb677e36eeb90a2e53954101a41c4",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [
         "ORG"
@@ -59231,7 +59231,7 @@
       "redirect_or_shim": 166,
       "root_python_shim": 181
     },
-    "dirty_sources": 9,
+    "dirty_sources": 5,
     "duplicate_targets": {},
     "existing_target_conflicts": [],
     "files_migrated_in_wave": 0,

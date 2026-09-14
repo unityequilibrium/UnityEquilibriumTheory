@@ -150,7 +150,7 @@ def classify_generator(path: str, name: str) -> bool:
     text = load_text(ROOT / path)
     if name not in text:
         return False
-    return bool(re.search(r"OUTPUT|write_text|json\.dump|save\(|np\.save|to_json|dump\(", text, re.IGNORECASE))
+    return bool(re.search(rf"(?im)^\s*(?:OUTPUT|OUTPUT_PATH|ARTIFACT_PATH|output)\s*=\s*[^\n]*{re.escape(name)}", text))
 
 
 def build_records() -> tuple[list[dict[str, Any]], dict[str, Any]]:

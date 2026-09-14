@@ -78,3 +78,20 @@
   paths, regenerate and compare semantic payloads, then move only that family.
 - Public-safety boundary: no generated artifact moved and no physics claim
   promoted. The legacy artifacts directory remains the compatibility boundary.
+## 2026-09-14 — Core physical migration v3 — Wave 5a artifact scanner hardening
+
+- Scope: artifact-control planner only; no generated output moved.
+- Changed: replaced the memory-heavy repository cache with a streaming
+  ripgrep reference index and tightened generator detection to require an
+  output-path assignment containing the artifact name.
+- Correction: the earlier exploratory report over-counted audit consumers as
+  generator candidates. The regenerated manifest is now canonical: 57
+  single-generator candidates, 0 ambiguous candidates under the stricter
+  classifier, and 536 without a resolved writer; all 593 still require
+  consumer rewrites.
+- Verification: artifact migration audit PASS; source hashes, target
+  uniqueness, and legacy boundary checks PASS; global physical migration
+  audit PASS; physics status changes 0.
+- Controller: generator identity remains a candidate classification, not proof;
+  one bounded family must still be manually confirmed and switched with all
+  consumers before any move.
