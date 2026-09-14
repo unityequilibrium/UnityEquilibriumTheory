@@ -298,3 +298,13 @@
 - Corrected: regenerated the physical migration manifest, report, audit, and organization/navigation indexes from the committed review-lane source.
 - Verification: physical migration audit PASS with zero duplicate targets, missing current paths, or redirect errors; planner reports 1,786 records, 1,131 active move targets, 655 canonical assets, 191 compatibility assets, and 2 unrelated dirty sources; physics status changes remain 0.
 - Public-safety boundary: metadata-only correction; observable helpers remain review-only with unresolved units/measurement/uncertainty mapping, foundation remains `BLOCKED`.
+## 2026-09-15 — Core physical migration v3 — Wave 6i O(2) equation family
+
+- Scope: canonical source migration for the registered O(2) equation family; organization and compatibility only.
+- Moved: `uet_o2_finite_density_eos.py` and `standard_o2_finite_temperature_comparator.py` into `docs/core/02_equations/o2/`.
+- Added: canonical O(2) package metadata, family README, two root compatibility shims, canonical-path resolution regression, and canonical source-hash handling in the O(2) EOS/transport and thermal-comparator generators.
+- Repaired: migration metadata now propagates the classified legacy owner/family to moved canonical records and assigns conservative owners to newly created package/test support files; this closes the organization path gate without changing physics status.
+- Preserved: the covariant ideal-superfluid transport implementation remains owned by `02_equations/covariant`; no duplicate transport implementation was created and no public import was removed.
+- Verification: O(2) equation/transport/path/shim regression PASS (25); Wave 10 artifact reproduction PASS (6); standard finite-temperature comparator checks PASS (2); import audit PASS (181 modules); link audit PASS (255 links); test-collection audit PASS (2,139 full / 1,313 canonical / 825 legacy); migration enforcement, physical migration, and path audits PASS with zero duplicate targets, missing paths, broken redirects, or physics-status changes.
+- Controller: 1,129 active physical move targets remain; 589 generated artifacts remain behind the separate generator/consumer/provenance checkpoint; foundation remains `BLOCKED`.
+- Public-safety boundary: source organization, compatibility, metadata propagation, and generator path resolution only. The EOS remains a tree-level finite-density O(2) mean-field result, the thermal comparator remains standard-QFT comparator-only, and no SI, transport, GR, particle, or downstream claim was promoted.

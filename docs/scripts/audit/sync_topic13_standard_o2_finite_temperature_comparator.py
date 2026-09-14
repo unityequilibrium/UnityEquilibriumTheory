@@ -8,6 +8,8 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
+from docs.core.core_paths import canonical_existing_path
+
 
 ROOT = Path(__file__).resolve().parents[3]
 AUDIT_REL = "docs/core/artifacts/t13_standard_o2_finite_temperature_comparator_audit.json"
@@ -30,7 +32,7 @@ def load(rel: str) -> dict[str, Any]:
 
 
 def digest(rel: str) -> str:
-    return hashlib.sha256((ROOT / rel).read_bytes()).hexdigest()
+    return hashlib.sha256(canonical_existing_path(ROOT / rel).read_bytes()).hexdigest()
 
 
 def evidence(rel: str, summary: dict[str, Any]) -> dict[str, Any]:

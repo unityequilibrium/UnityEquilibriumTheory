@@ -13,6 +13,8 @@ import numpy as np
 if str(Path(__file__).resolve().parents[3]) not in sys.path:
     sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
 
+from docs.core.core_paths import canonical_existing_path
+
 from docs.core.uet_covariant_matter import CovariantMatterConfig
 from docs.core.uet_covariant_response import CovariantResponseConfig
 from docs.core.uet_o2_finite_density_eos import O2FiniteDensityEOSConfig
@@ -29,7 +31,7 @@ OUT = ROOT / "docs/core/artifacts/t13_standard_o2_finite_temperature_comparator_
 
 
 def digest(rel: str) -> str:
-    return hashlib.sha256((ROOT / rel).read_bytes()).hexdigest()
+    return hashlib.sha256(canonical_existing_path(ROOT / rel).read_bytes()).hexdigest()
 
 
 def config() -> O2FiniteDensityEOSConfig:

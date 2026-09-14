@@ -230,6 +230,31 @@ def canonical_module_path(legacy_path: str | Path) -> str:
     return canonical_module_name(canonical_path_for(legacy_path))
 
 
+
+def canonical_existing_path(path: str | Path) -> Path:
+    """Return the canonical repository path when it already exists.
+
+    Callers may keep a legacy path in metadata for compatibility, but file
+    reads and source hashing must follow the canonical implementation after a
+    migration.  If the canonical target is not present yet, the current path
+    is returned so dry-runs and pre-migration consumers remain usable.
+    """
+
+    candidate = Path(path)
+    if not candidate.is_absolute():
+        candidate = REPO_ROOT / candidate
+    candidate = candidate.resolve()
+    try:
+        relative = candidate.relative_to(REPO_ROOT).as_posix()
+    except ValueError:
+        return candidate
+    if not relative.startswith("docs/core/"):
+        return candidate
+    canonical = REPO_ROOT / canonical_path_for(relative)
+    if canonical.resolve() != candidate and canonical.exists():
+        return canonical.resolve()
+    return candidate
+
 def canonical_artifact_path(name: str | Path, domain: str | None = None) -> Path:
     filename = Path(name).name
     return CANONICAL_ARTIFACT_ROOT / (domain or _artifact_domain(filename)) / filename

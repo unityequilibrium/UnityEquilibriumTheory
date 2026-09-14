@@ -92,8 +92,68 @@ def existing_metadata() -> dict[str, dict[str, Any]]:
         path = normalize_relative(item.get("path", item.get("current_path", "")))
         if path:
             merged.setdefault(path, {}).update(item)
+    # Moved implementations retain the authoritative classification of their
+    # legacy source while the canonical record becomes the active source of
+    # truth.  This prevents every physical move from creating an unassigned
+    # canonical record.
+    for legacy, item in list(merged.items()):
+        canonical = canonical_path_for(legacy)
+        if canonical == legacy:
+            continue
+        target = merged.setdefault(canonical, {})
+        for key, value in item.items():
+            if key not in target or target[key] in (None, "", [], {}):
+                target[key] = value
     return merged
 
+
+
+
+def _organization_defaults(relative: str) -> dict[str, Any]:
+    """Provide a conservative owner for newly created canonical support files."""
+
+    tail = relative.removeprefix("docs/core/")
+    parts = Path(tail).parts
+    area = parts[0] if parts else "99_review"
+    owner_by_area = {
+        "00_governance": "ORG",
+        "01_contracts": "FOUNDATION",
+        "02_equations": "EQUATION",
+        "03_lanes": "LANE",
+        "04_proofs": "EVIDENCE",
+        "05_tests": "EVIDENCE",
+        "06_data": "DATA",
+        "07_artifacts": "EVIDENCE",
+        "08_history": "ORG",
+        "99_review": "ORG",
+    }
+    owner = owner_by_area.get(area, "ORG")
+    room_by_owner = {
+        "ORG": "ROOM_CORE_ORGANIZATION",
+        "FOUNDATION": "ROOM_CORE_FOUNDATION",
+        "EQUATION": "ROOM_CORE_FOUNDATION",
+        "LANE": "ROOM_CORE_FOUNDATION",
+        "EVIDENCE": "ROOM_CORE_FOUNDATION",
+        "DATA": "ROOM_CORE_FOUNDATION",
+    }
+    if area == "03_lanes" and len(parts) > 1 and parts[1] == "topic13_support":
+        room_by_owner["LANE"] = "ROOM_TOPIC_013"
+    if area == "05_tests":
+        family = "core_test_surface"
+    elif area == "02_equations" and len(parts) > 1:
+        family = f"core.{parts[1]}"
+    elif area == "03_lanes" and len(parts) > 1:
+        family = f"lane.{parts[1]}"
+    else:
+        family = f"core_{area}"
+    return {
+        "logical_area": area,
+        "owner_id": owner,
+        "room_id": room_by_owner[owner],
+        "equation_family_or_lane": family,
+        "evidence_status": "INTERNAL",
+        "status_source": "docs/core/00_governance/uet_research_organization_policy.json",
+    }
 
 def inferred_kind(relative: str, old: dict[str, Any]) -> str:
     if old.get("file_kind") and old.get("file_kind") not in {"compatibility_redirect", "compatibility_python_shim"}:
@@ -159,7 +219,11 @@ def build_records() -> tuple[list[dict[str, Any]], dict[str, Any]]:
         # forwards to.  Treating the shim itself as canonical creates a false
         # target collision as soon as a real source is moved beside it.
         canonical = canonical_path_for(relative)
-        old = metadata.get(relative, {})
+        old = dict(metadata.get(relative, {}))
+        defaults = _organization_defaults(relative)
+        for key, value in defaults.items():
+            if old.get(key) in (None, "", [], {}):
+                old[key] = value
         records.append(
             {
                 "asset_id": old.get(
