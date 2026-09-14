@@ -31,7 +31,7 @@ AGENTS.md, README.md, CORE_FILE_INDEX.md and __init__.py remain permanent root e
 - Files indexed: **1781**
 - Move targets: **1134**
 - Already canonical or protected: **647**
-- Dirty sources held back: **11**
+- Dirty sources held back: **6**
 - Duplicate targets: **0**
 - Existing destination conflicts: **0**
 - Physics status changes from organization migration: **0**
