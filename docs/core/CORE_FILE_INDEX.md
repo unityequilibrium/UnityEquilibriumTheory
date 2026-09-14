@@ -28,7 +28,7 @@ AGENTS.md, README.md, CORE_FILE_INDEX.md and __init__.py remain permanent root e
 - Files indexed: **1734**
 - Move targets: **1161**
 - Already canonical or protected: **573**
-- Dirty sources held back: **9**
+- Dirty sources held back: **5**
 - Duplicate targets: **0**
 - Existing destination conflicts: **0**
 - Physics status changes from organization migration: **0**
@@ -55,9 +55,9 @@ AGENTS.md, README.md, CORE_FILE_INDEX.md and __init__.py remain permanent root e
 ## Generated artifact control
 
 - Artifacts indexed: **593**
-- One-generator identities resolved: **193**
-- Ambiguous generator identities: **380**
-- Missing generator identities: **20**
+- One-generator identities resolved: **57**
+- Ambiguous generator identities: **0**
+- Missing generator identities: **536**
 - Consumer rewrites required: **593**
 - Artifact migration audit: **PASS**
 No generated output is moved until its generator and active consumers use the canonical path authority.
