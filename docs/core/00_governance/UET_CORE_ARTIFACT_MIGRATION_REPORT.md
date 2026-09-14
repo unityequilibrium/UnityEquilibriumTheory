@@ -2,7 +2,7 @@
 
 > Organization control artifact. Each physical move is recorded per bounded wave; no physics claim is promoted.
 
-Generated at: 2026-09-14T17:35:02+00:00
+Generated at: 2026-09-14T17:44:23+00:00
 Generator: docs/scripts/audit/plan_uet_core_artifact_migration_v3.py
 
 ## Inventory

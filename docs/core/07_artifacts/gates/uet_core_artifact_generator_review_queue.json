@@ -1,7 +1,7 @@
 {
   "artifact": "uet_core_artifact_generator_review_queue",
   "canonical_path_authority": "docs/core/core_paths.py",
-  "generated_at": "2026-09-14T17:35:05+00:00",
+  "generated_at": "2026-09-14T17:44:26+00:00",
   "generator": "docs/scripts/audit/build_uet_core_artifact_generator_review_queue_v3.py",
   "records": [
     {
@@ -21406,7 +21406,7 @@
       "preflight_required": true,
       "review_category": "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256_before": "e9a90ff54dcf0aaf019f90a118ced991e27b78089ed93bd60cd8d67c8391b9a2"
+      "sha256_before": "eb91e7bc19822efe3944866bcf5f5d5d7756ba0e1efd6c0fcf02a5375e6c498d"
     },
     {
       "active_consumers": [
@@ -26728,7 +26728,7 @@
   "source_manifest": {
     "path": "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
     "record_count": 593,
-    "sha256": "1c03c8ce019b0ebe3b6f0dace0742d4b58194d007b57ac281290fec369e774d3"
+    "sha256": "dca269705934e13e54d29e931804674afffdc859fd396cdc5b25a3fe0883ac3b"
   },
   "summary": {
     "category_counts": {

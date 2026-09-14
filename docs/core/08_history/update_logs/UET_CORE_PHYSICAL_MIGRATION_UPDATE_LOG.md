@@ -186,3 +186,8 @@
 - Verification: focused migration/history/planner tests PASS (5); artifact planner/audit PASS; physical migration audit PASS; path audit PASS after regenerating the physical manifest; active scientific-link check PASS with its existing BLOCKED_OPEN_SCIENTIFIC_LINKS scientific boundary; physics status changes 0.
 - Controller: 588 generated outputs remain at the legacy boundary; queue status is PASS_WITH_REVIEW_REQUIRED with 70 generator/consumer rewrites, 510 unresolved generator identities, and 8 generator-switch candidates. The next move still requires exact generator, consumer, semantic-payload, provenance, and compatibility checks.
 - Public-safety boundary: organization-only progress; foundation remains BLOCKED, and no equation, interpretation, or physics claim was promoted.
+## 2026-09-15 — Wave 5g post-commit metadata consistency correction
+- Scope: migration control-plane synchronization only; no source, artifact payload, or physics claim changed.
+- Corrected: regenerated the artifact manifest, review queue, and audit after refreshing the scientific-link input hash, removing the post-commit manifest drift while retaining the same 5 migrated / 588 pending state.
+- Verification: artifact planner, queue, and artifact-audit freshness checks PASS; the canonical resource contract remains the only move in this correction; foundation remains BLOCKED.
+- Public-safety boundary: metadata provenance is now reproducible from the current worktree; unrelated user-dirty files remain outside the scoped commit.
