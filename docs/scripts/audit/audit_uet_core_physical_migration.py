@@ -16,6 +16,9 @@ MANIFEST = CORE / "00_governance" / "uet_core_physical_migration_manifest.json"
 AUDIT = CORE / "00_governance" / "uet_core_physical_migration_audit.json"
 REDIRECT_PATTERN = re.compile(r"Canonical source: \[[^\]]+\]\(([^)]+)\)")
 SHIM_PATTERN = re.compile(r'_CANONICAL_RELATIVE\s*=\s*"([^"]+)"')
+FORWARD_SHIM_PATTERN = re.compile(
+    r'forward_public_symbols\(globals\(\),\s*"([^"]+)"\)'
+)
 
 
 def repo_path(path: Path) -> str:
@@ -25,6 +28,18 @@ def repo_path(path: Path) -> str:
 def redirect_target(path: Path) -> str | None:
     match = REDIRECT_PATTERN.search(path.read_text(encoding="utf-8"))
     return None if match is None else repo_path((path.parent / match.group(1)).resolve())
+
+
+def shim_target(path: Path) -> str | None:
+    text = path.read_text(encoding="utf-8")
+    match = SHIM_PATTERN.search(text)
+    if match is not None:
+        return match.group(1).replace("\\", "/")
+    match = FORWARD_SHIM_PATTERN.search(text)
+    if match is None:
+        return None
+    module = match.group(1)
+    return module.replace(".", "/") + ".py"
 
 
 def build() -> dict:
@@ -44,8 +59,7 @@ def build() -> dict:
                 redirect_errors.append({"path": item["current_path"], "target": target})
             continue
         if item.get("file_kind") == "compatibility_python_shim":
-            match = SHIM_PATTERN.search(current.read_text(encoding="utf-8"))
-            target = None if match is None else match.group(1)
+            target = shim_target(current)
             if target is None or not (ROOT / target).exists():
                 redirect_errors.append({"path": item["current_path"], "target": target})
             continue

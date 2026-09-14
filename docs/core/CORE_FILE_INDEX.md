@@ -28,10 +28,10 @@ AGENTS.md, README.md, CORE_FILE_INDEX.md and __init__.py remain permanent root e
 
 ## Physical state
 
-- Files indexed: **1744**
-- Move targets: **1156**
-- Already canonical or protected: **588**
-- Dirty sources held back: **20**
+- Files indexed: **1757**
+- Move targets: **1322**
+- Already canonical or protected: **435**
+- Dirty sources held back: **19**
 - Duplicate targets: **0**
 - Existing destination conflicts: **0**
 - Physics status changes from organization migration: **0**
@@ -74,7 +74,7 @@ No generated output is moved until its generator and active consumers use the ca
 | 00_governance | 29 |
 | 01_contracts | 25 |
 | 02_Proof | 2 |
-| 02_equations | 1 |
+| 02_equations | 14 |
 | 03_lanes | 84 |
 | 04_proofs | 1 |
 | 05_tests | 213 |
@@ -91,10 +91,10 @@ No generated output is moved until its generator and active consumers use the ca
 
 | Wave | Paths |
 | :-- | --: |
-| already_canonical | 588 |
+| already_canonical | 611 |
 | artifacts | 589 |
 | data_tooling | 86 |
-| equation_or_lane | 181 |
+| equation_or_lane | 171 |
 | proofs | 1 |
 | review | 1 |
 | tests | 298 |
