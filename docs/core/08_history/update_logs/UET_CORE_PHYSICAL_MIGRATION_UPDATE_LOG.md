@@ -217,3 +217,12 @@
 - Current state: 1,757 records; 1,146 active move targets; 611 canonical/compatibility assets; 2 actual dirty core sources held back; zero duplicate targets and zero destination conflicts.
 - Verification: covariant import/regression results remain PASS; physical projection and audit remain PASS; foundation remains `BLOCKED`.
 - Controller: choose the next equation family only after its dependency, import, and compatibility boundary is explicitly classified.
+## 2026-09-15 — Core physical migration v3 — Wave 6b matter-space equation family
+
+- Scope: canonical source migration for the bounded matter-space equation family; organization and compatibility only.
+- Moved: uet_trace.py, uet_spatial.py, uet_matter_space.py, and the retained legacy uet_master_equation.py into docs/core/02_equations/matter_space/.
+- Preserved: four root compatibility shims, the docs.core facade, existing public symbol identity, and the legacy master-equation direct-script entrypoint.
+- Added: canonical family package metadata, family README, and migration regression coverage; the shared script runner now executes canonical files by path for direct-script compatibility.
+- Verification: canonical/legacy/facade import identity PASS; matter-space and trace regression suite PASS (60); legacy master direct-script smoke PASS; physical migration audit PASS with zero duplicate targets, missing paths, or broken shims; physics status changes 0.
+- Controller: 1,142 active physical move targets remain; matter-space causal/finite-cone/flux modules still require explicit lane classification before migration; 588 generated artifacts remain behind generator/consumer/provenance review; foundation remains BLOCKED.
+- Public-safety boundary: source-of-truth paths changed only; no equation, derivation, interpretation, unit, or scientific claim was promoted.
