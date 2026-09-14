@@ -1,0 +1,70 @@
+{
+  "artifact": "uet_core_physical_migration_audit",
+  "checks": [
+    {
+      "check_id": "manifest_schema",
+      "status": "PASS"
+    },
+    {
+      "check_id": "canonical_target_uniqueness",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "current_paths_exist",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "redirects_point_to_existing_sources",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "root_entrypoints_retained",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "organization_does_not_change_physics_status",
+      "observed": 0,
+      "status": "PASS"
+    }
+  ],
+  "controlling_blocker": null,
+  "duplicate_targets": {},
+  "generated_at": "2026-09-14T06:28:10+00:00",
+  "generator": "docs/scripts/audit/audit_uet_core_physical_migration.py",
+  "missing_current_paths": [],
+  "redirect_errors": [],
+  "root_entrypoint_errors": [],
+  "schema_version": "1.0",
+  "status": "PASS",
+  "summary": {
+    "already_canonical": 290,
+    "compatibility_counts": {
+      "legacy_artifact_index": 593,
+      "markdown_redirect": 8,
+      "none": 148,
+      "path_resolver": 627,
+      "redirect_or_shim": 142,
+      "root_python_shim": 181
+    },
+    "dirty_sources": 286,
+    "duplicate_targets": {},
+    "existing_target_conflicts": [],
+    "files_to_move": 1409,
+    "files_total": 1699,
+    "migration_wave_counts": {
+      "already_canonical": 290,
+      "artifacts": 593,
+      "data_tooling": 131,
+      "equation_or_lane": 181,
+      "proofs": 1,
+      "review": 1,
+      "tests": 502
+    },
+    "physical_move_performed": false,
+    "physics_status_changes": 0
+  }
+}
