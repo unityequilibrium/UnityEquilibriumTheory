@@ -244,3 +244,12 @@
 - Verification: canonical/legacy import identity and candidate regression suite PASS (60); physical planner/audit PASS with zero duplicate targets, missing paths, or broken shims; physics status changes 0.
 - Controller: 1,136 active physical move targets remain; matter-space observable/support modules and remaining unassigned Python surfaces still require explicit disposition; 588 generated artifacts remain behind generator/consumer/provenance review; foundation remains BLOCKED.
 - Public-safety boundary: source-of-truth paths changed only; no equation, derivation, interpretation, unit, or scientific claim was promoted.
+## 2026-09-15 — Core physical migration v3 — Wave 6e matter-space observable support
+
+- Scope: canonical lane migration for the normalized matter-space observable adapter; organization and compatibility only.
+- Moved: uet_matter_space_observable.py into docs/core/03_lanes/review/ with lane package metadata and a root compatibility shim.
+- Preserved: normalized-only output, explicit NOT_DEFINED mass/energy mappings, SI BLOCKED boundary, and docs.core public facade behavior.
+- Repaired: the adapter now imports the public trace path after leaving the equation package; path classification records it as review support rather than an equation source.
+- Verification: observable migration and focused matter-space regression suite PASS (62); physical planner/audit PASS with zero duplicate targets, missing paths, or broken shims; physics status changes 0.
+- Controller: 1,135 active physical move targets remain; remaining unassigned/support modules require explicit disposition; 588 generated artifacts remain behind generator/consumer/provenance review; foundation remains BLOCKED.
+- Public-safety boundary: source-of-truth and support-lane paths changed only; no equation, derivation, interpretation, unit, or scientific claim was promoted.
