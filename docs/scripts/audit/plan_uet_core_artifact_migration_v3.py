@@ -199,15 +199,15 @@ def build_records() -> tuple[list[dict[str, Any]], dict[str, Any]]:
         name = path.name
         legacy = repo_path(path)
         target = canonical_for(name)
-        hits = reference_map.get(name, [])
-        generator_candidates = [item for item in hits if classify_generator(item, name)]
-        consumer_paths = [
+        hits = sorted(set(reference_map.get(name, [])))
+        generator_candidates = sorted(item for item in hits if classify_generator(item, name))
+        consumer_paths = sorted([
             item
             for item in hits
             if item not in generator_candidates
             and not is_reference_only_path(item)
             and references_legacy_artifact(item, name)
-        ]
+        ])
         if not generator_candidates:
             disposition = "generator_identity_not_resolved"
         elif consumer_paths:
@@ -341,11 +341,36 @@ def build_payload() -> dict[str, Any]:
     }
 
 
+def comparable_payload(payload: dict[str, Any]) -> dict[str, Any]:
+    normalized = json.loads(json.dumps(payload))
+    normalized.pop("generated_at", None)
+    return normalized
+
+
+def comparable_report(text: str) -> str:
+    return re.sub(r"Generated at: .*", "Generated at: <timestamp>", text)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true")
-    parser.parse_args()
+    args = parser.parse_args()
     payload = build_payload()
+    if args.check:
+        mismatches: list[str] = []
+        if not MANIFEST.exists():
+            mismatches.append(repo_path(MANIFEST))
+        else:
+            current = json.loads(MANIFEST.read_text(encoding="utf-8"))
+            if comparable_payload(current) != comparable_payload(payload):
+                mismatches.append(repo_path(MANIFEST))
+        expected_report = comparable_report(render_report(payload))
+        if not REPORT.exists() or comparable_report(REPORT.read_text(encoding="utf-8")) != expected_report:
+            mismatches.append(repo_path(REPORT))
+        status = "PASS" if not mismatches else "DRIFT"
+        print(json.dumps({"status": status, "mismatches": mismatches}, ensure_ascii=False))
+        return 0 if status == "PASS" else 1
+
     GOVERNANCE.mkdir(parents=True, exist_ok=True)
     MANIFEST.write_text(json.dumps(payload, indent=2, ensure_ascii=False, sort_keys=True) + "\n", encoding="utf-8")
     REPORT.write_text(render_report(payload), encoding="utf-8")

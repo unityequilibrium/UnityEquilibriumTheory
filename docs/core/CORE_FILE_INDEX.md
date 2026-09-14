@@ -16,6 +16,7 @@
 - Test collection audit: [00_governance/uet_core_test_collection_audit.json](00_governance/uet_core_test_collection_audit.json)
 - Artifact migration manifest: [00_governance/uet_core_artifact_migration_manifest.json](00_governance/uet_core_artifact_migration_manifest.json)
 - Artifact migration audit: [00_governance/uet_core_artifact_migration_audit.json](00_governance/uet_core_artifact_migration_audit.json)
+- Artifact generator review queue: [07_artifacts/gates/uet_core_artifact_generator_review_queue.json](07_artifacts/gates/uet_core_artifact_generator_review_queue.json)
 - Core migration enforcement audit: [00_governance/uet_core_migration_enforcement_audit.json](00_governance/uet_core_migration_enforcement_audit.json)
 - Core path/import/link enforcement: **PASS**
 - Path authority: [core_paths.py](core_paths.py)
@@ -27,10 +28,10 @@ AGENTS.md, README.md, CORE_FILE_INDEX.md and __init__.py remain permanent root e
 
 ## Physical state
 
-- Files indexed: **1742**
+- Files indexed: **1744**
 - Move targets: **1159**
-- Already canonical or protected: **583**
-- Dirty sources held back: **29**
+- Already canonical or protected: **585**
+- Dirty sources held back: **23**
 - Duplicate targets: **0**
 - Existing destination conflicts: **0**
 - Physics status changes from organization migration: **0**
@@ -50,8 +51,8 @@ AGENTS.md, README.md, CORE_FILE_INDEX.md and __init__.py remain permanent root e
 - Tests physically migrated: **205**
 - Tests quarantined for path/package review: **295**
 - Test migration audit: **PASS**
-- Full pytest collection: **PASS** (2109 collected)
-- Canonical-only collection: **PASS** (1283 collected)
+- Full pytest collection: **PASS** (2110 collected)
+- Canonical-only collection: **PASS** (1284 collected)
 - Test physics status changes: **0**
 
 ## Generated artifact control
@@ -63,6 +64,7 @@ AGENTS.md, README.md, CORE_FILE_INDEX.md and __init__.py remain permanent root e
 - Consumer rewrites required: **539**
 - Canonical artifacts migrated: **2**
 - Artifact migration audit: **PASS**
+- Generator review queue: **PASS_WITH_REVIEW_REQUIRED** (591 pending)
 No generated output is moved until its generator and active consumers use the canonical path authority.
 
 ## Canonical areas
@@ -75,9 +77,9 @@ No generated output is moved until its generator and active consumers use the ca
 | 02_equations | 1 |
 | 03_lanes | 84 |
 | 04_proofs | 1 |
-| 05_tests | 212 |
+| 05_tests | 213 |
 | 06_data | 22 |
-| 07_artifacts | 3 |
+| 07_artifacts | 4 |
 | 08_history | 31 |
 | 99_review | 1 |
 | artifacts | 592 |
@@ -89,7 +91,7 @@ No generated output is moved until its generator and active consumers use the ca
 
 | Wave | Paths |
 | :-- | --: |
-| already_canonical | 583 |
+| already_canonical | 585 |
 | artifacts | 592 |
 | data_tooling | 86 |
 | equation_or_lane | 181 |

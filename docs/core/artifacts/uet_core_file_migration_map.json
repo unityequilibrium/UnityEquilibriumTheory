@@ -2453,6 +2453,23 @@
       "target_physical_path": "docs/core/00_governance/README.md"
     },
     {
+      "asset_id": "UET-CORE-FILE-8092787C2C9C",
+      "compatibility_plan": "retain_current_path_until_import_link_and_test_gates_pass",
+      "current_path": "docs/core/05_tests/artifact/test_uet_core_artifact_generator_review_queue.py",
+      "equation_family_or_lane": "core_test_surface",
+      "evidence_status": "INTERNAL",
+      "import_reference_count": null,
+      "link_reference_count": null,
+      "migration_state": "MIGRATED",
+      "next_action": "link_registry_status_and_owner",
+      "organization_status": "ASSIGNED",
+      "owner_id": "EVIDENCE",
+      "reference_scan_status": "DEFERRED_TO_MIGRATION_WAVE",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "target_path": "docs/core/05_tests/artifact/test_uet_core_artifact_generator_review_queue.py",
+      "target_physical_path": "docs/core/05_tests/artifact/test_uet_core_artifact_generator_review_queue.py"
+    },
+    {
       "asset_id": "UET-CORE-FILE-72B954607A3E",
       "compatibility_plan": "retain_current_path_until_import_link_and_test_gates_pass",
       "current_path": "docs/core/05_tests/artifact/test_uet_core_artifact_migration_history.py",
@@ -6412,6 +6429,23 @@
       "room_id": "ROOM_CORE_ORGANIZATION",
       "target_path": "docs/core/00_governance/README.md",
       "target_physical_path": "docs/core/00_governance/README.md"
+    },
+    {
+      "asset_id": "UET-CORE-FILE-80FBA74C208B",
+      "compatibility_plan": "retain_current_path_until_import_link_and_test_gates_pass",
+      "current_path": "docs/core/07_artifacts/gates/uet_core_artifact_generator_review_queue.json",
+      "equation_family_or_lane": "foundation_or_shared",
+      "evidence_status": "INTERNAL",
+      "import_reference_count": null,
+      "link_reference_count": null,
+      "migration_state": "NOT_STARTED",
+      "next_action": "retain_path_and_link_generator",
+      "organization_status": "ASSIGNED",
+      "owner_id": "EVIDENCE",
+      "reference_scan_status": "DEFERRED_TO_MIGRATION_WAVE",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "target_path": "docs/core/07_artifacts/archive/uet_core_artifact_generator_review_queue.json",
+      "target_physical_path": "docs/core/07_artifacts/archive/uet_core_artifact_generator_review_queue.json"
     },
     {
       "asset_id": "UET-CORE-FILE-9C47A2ECA270",
@@ -29897,7 +29931,7 @@
       "target_physical_path": "docs/core/03_lanes/review/uet_viz.py"
     }
   ],
-  "generated_at": "2026-09-14T13:45:22+00:00",
+  "generated_at": "2026-09-14T14:52:57+00:00",
   "generator": "docs/scripts/audit/build_uet_research_organization_registry_v2.py",
   "organization_disposition_source": "docs/core/00_governance/uet_research_organization_policy.json",
   "organization_wave": "WAVE_1_ASSIGN_AND_QUARANTINE",

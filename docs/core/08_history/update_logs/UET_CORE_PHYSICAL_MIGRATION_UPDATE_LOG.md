@@ -141,3 +141,13 @@
   provenance gates before moving.
 - Public-safety boundary: organization-only progress; foundation remains
   BLOCKED, and no physics interpretation or claim was promoted.
+## 2026-09-14 — Core physical migration v3 — Wave 5c generator review queue
+
+- Scope: generated-artifact migration control; no artifact payload was moved in this wave.
+- Added: `docs/scripts/audit/build_uet_core_artifact_generator_review_queue_v3.py`, the canonical review queue at `docs/core/07_artifacts/gates/uet_core_artifact_generator_review_queue.json`, and a focused regression test.
+- Narrowed: 593 artifact records are now grouped machine-readably as 2 migrated, 4 requiring a generator-path switch and preflight, 51 requiring generator/consumer rewrites, and 536 without a resolved generator identity. The queue is organization control only and cannot promote physics status.
+- Corrected: artifact-planner `--check` is now read-only; reference lists are sorted deterministically so the migration manifest no longer oscillates between runs. Core navigation and AGENTS guidance expose the queue and its blocker boundary.
+- Verification: queue freshness PASS; deterministic artifact-planner `--check` PASS; artifact integrity audit PASS; physical migration planner/audit PASS; combined path/import/link enforcement PASS; organization registry `--check` PASS; scientific-link artifact freshness PASS with its existing `BLOCKED_OPEN_SCIENTIFIC_LINKS` scientific blocker; canonical test collection PASS (1,284 canonical / 825 retained legacy / 2,110 full); focused queue/history tests PASS (3).
+- Additional check: repository-wide `pytest -q` remains BLOCKED by the pre-existing Topic 0.11 loader path `docs/docs/topics/0.11_Phase_Transitions/Code/01_Engine/Engine_Phase.py`; this wave did not alter that topic surface.
+- Controller: resolve one bounded generator/consumer family, switch it through `core_paths.canonical_artifact_path`, run semantic/provenance preflight, and move only if the legacy payload remains identical.
+- Public-safety boundary: organization-only progress; foundation remains `BLOCKED`, no physics status changed, and the 2 existing canonical artifacts remain `INTERNAL`/legacy evidence classes.
