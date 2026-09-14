@@ -161,3 +161,11 @@
 - Additional known check: repository-wide `pytest -q` remains blocked by the pre-existing Topic 0.11 loader path `docs/docs/topics/0.11_Phase_Transitions/Code/01_Engine/Engine_Phase.py`; this wave did not alter that topic surface.
 - Controller: select the next explicitly resolved generator family or reduce the 536 unresolved generator identities; 590 generated outputs remain at the legacy boundary and 538 active consumer rewrites remain. No further artifact move is allowed without the same generator, consumer, semantic-payload, and provenance gates.
 - Public-safety boundary: organization-only progress; foundation remains `BLOCKED`, no equation/interpretation/physics claim was promoted, and the canonical artifact remains an internal normalized-ledger verification only.
+## 2026-09-14 — Core physical migration v3 — Wave 5e candidate preflight held
+
+- Scope: bounded no-write preflight for `uet_all_waves_completion_audit.json`; no generator switch and no physical move.
+- Result: the candidate generator is uniquely identified and has no active consumers, but its current output is not semantically identical to the legacy artifact. The no-write preflight returned exit 1 with differences beyond `generated_at`, including closure evidence hashes, log-coverage flags, and core-regression fields.
+- Safety decision: held the candidate at the legacy boundary; did not overwrite or delete the legacy output, did not change its generator, and did not promote any status. The artifact queue remains the source of truth for the unresolved candidate.
+- Verification: the previous Wave 5d artifact planner/audit, queue, organization/path/import/link controls, and focused tests remain PASS; this candidate preflight is BLOCKED by semantic payload drift.
+- Controller: retain `uet_all_waves_completion_audit.json` as `GENERATOR_SWITCH_REQUIRED` until its source/evidence drift is reconciled. The next move must be a different candidate with a clean semantic preflight or an explicit repair of this candidate's evidence dependencies.
+- Public-safety boundary: organization-only progress; no physics status changed and foundation remains `BLOCKED`.
