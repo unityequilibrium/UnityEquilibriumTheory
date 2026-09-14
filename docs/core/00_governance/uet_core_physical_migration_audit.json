@@ -33,7 +33,7 @@
   ],
   "controlling_blocker": null,
   "duplicate_targets": {},
-  "generated_at": "2026-09-14T18:32:04+00:00",
+  "generated_at": "2026-09-14T18:37:35+00:00",
   "generator": "docs/scripts/audit/audit_uet_core_physical_migration.py",
   "missing_current_paths": [],
   "redirect_errors": [],
@@ -41,7 +41,7 @@
   "schema_version": "1.0",
   "status": "PASS",
   "summary": {
-    "already_canonical": 435,
+    "already_canonical": 611,
     "compatibility_assets_present": 176,
     "compatibility_counts": {
       "legacy_artifact_index": 588,
@@ -51,12 +51,12 @@
       "redirect_or_shim": 176,
       "root_python_shim": 171
     },
-    "dirty_sources": 19,
+    "dirty_sources": 2,
     "duplicate_targets": {},
     "existing_target_conflicts": [],
     "files_migrated_in_wave": 0,
     "files_skipped_in_wave": 0,
-    "files_to_move": 1322,
+    "files_to_move": 1146,
     "files_total": 1757,
     "migration_wave_counts": {
       "already_canonical": 611,

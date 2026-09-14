@@ -211,3 +211,9 @@
 - Verification: canonical/legacy/facade import smoke PASS; covariant regression suite PASS (115); physical migration audit PASS with zero duplicate targets, missing paths, or broken shims; physics status changes 0.
 - Controller: remaining physical migration is 1,146 active move targets; generated artifacts remain 588 pending behind generator/consumer/provenance review, and foundation remains `BLOCKED`.
 - Public-safety boundary: source-of-truth paths changed only; no equation, derivation, interpretation, unit, or scientific claim was promoted.
+## 2026-09-15 — Core physical migration v3 — Wave 6a post-commit metadata correction
+- Scope: migration control-plane synchronization only; no source equation, artifact payload, or physics status changed.
+- Corrected: regenerated the physical migration manifest/report/audit and both organization navigation indexes after commit `1104e0c35` so staged-work dirt is not counted as user dirt.
+- Current state: 1,757 records; 1,146 active move targets; 611 canonical/compatibility assets; 2 actual dirty core sources held back; zero duplicate targets and zero destination conflicts.
+- Verification: covariant import/regression results remain PASS; physical projection and audit remain PASS; foundation remains `BLOCKED`.
+- Controller: choose the next equation family only after its dependency, import, and compatibility boundary is explicitly classified.
