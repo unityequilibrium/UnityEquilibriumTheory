@@ -226,3 +226,12 @@
 - Verification: canonical/legacy/facade import identity PASS; matter-space and trace regression suite PASS (60); legacy master direct-script smoke PASS; physical migration audit PASS with zero duplicate targets, missing paths, or broken shims; physics status changes 0.
 - Controller: 1,142 active physical move targets remain; matter-space causal/finite-cone/flux modules still require explicit lane classification before migration; 588 generated artifacts remain behind generator/consumer/provenance review; foundation remains BLOCKED.
 - Public-safety boundary: source-of-truth paths changed only; no equation, derivation, interpretation, unit, or scientific claim was promoted.
+## 2026-09-15 — Core physical migration v3 — Wave 6c matter-space flux family
+
+- Scope: canonical source migration for the explicitly registered matter-space flux branch; organization and compatibility only.
+- Moved: uet_matter_space_flux_telegraph.py and uet_matter_space_flux_phi.py into docs/core/02_equations/matter_space/.
+- Preserved: root compatibility shims, public symbols, legacy consumers, normalized_v1 boundary, and the separate blocked high-k/causal interpretation.
+- Repaired: canonical path classification now assigns the two core.matter_space_flux sources to the equation family instead of 99_review; the family README and migration regression are linked to the canonical location.
+- Verification: flux canonical/legacy shim tests PASS; existing flux regressions PASS (13 total); physical planner/audit PASS with zero duplicate targets, missing paths, or broken shims; physics status changes 0.
+- Controller: 1,140 active physical move targets remain; causal/finite-cone/observable/split matter-space modules still require explicit lane classification; 588 generated artifacts remain behind generator/consumer/provenance review; foundation remains BLOCKED.
+- Public-safety boundary: source-of-truth paths changed only; no equation, derivation, interpretation, unit, or scientific claim was promoted.

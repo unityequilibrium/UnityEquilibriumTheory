@@ -6,6 +6,9 @@ equation family:
 - `uet_spatial.py` — one-dimensional conservative spatial primitives;
 - `uet_matter_space.py` — the normalized `matter_space_coupled_v1` operator;
 - `uet_trace.py` — the derived, retarded history-trace lane;
+- uet_matter_space_flux_telegraph.py — the named conserved flux-relaxation
+  comparator;
+- uet_matter_space_flux_phi.py — the named coupled flux/response comparator;
 - `uet_master_equation.py` — the retained legacy master-engine facade and its
   opt-in operator dispatch.
 

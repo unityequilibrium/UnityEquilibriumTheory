@@ -101,6 +101,8 @@ def _python_area(stem: str) -> str:
         return "02_equations/covariant"
     if lower.startswith(("uet_noether", "uet_lorentz")):
         return "02_equations/lorentz_noether"
+    if lower.startswith("uet_matter_space_flux_"):
+        return "02_equations/matter_space"
     if lower in {"uet_trace", "uet_matter_space", "uet_spatial", "uet_master_equation"}:
         return "02_equations/matter_space"
     if lower.startswith("mass_density"):
