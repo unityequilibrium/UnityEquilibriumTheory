@@ -191,3 +191,9 @@
 - Corrected: regenerated the artifact manifest, review queue, and audit after refreshing the scientific-link input hash, removing the post-commit manifest drift while retaining the same 5 migrated / 588 pending state.
 - Verification: artifact planner, queue, and artifact-audit freshness checks PASS; the canonical resource contract remains the only move in this correction; foundation remains BLOCKED.
 - Public-safety boundary: metadata provenance is now reproducible from the current worktree; unrelated user-dirty files remain outside the scoped commit.
+## 2026-09-15 — Core physical migration v3 — Wave 5h Noether addendum preflight held
+- Scope: one correspondence-artifact candidate; no physical move and no generator switch retained.
+- Result: the uniquely identified Noether addendum generator produced a candidate differing from the legacy payload at generated_at, merge_metadata.merged_on, and the source-spec SHA. The runner classified this as semantic/provenance drift under the current exact-payload policy.
+- Safety decision: removed the temporary canonical target, restored the generator and migration control-plane metadata, and preserved the legacy artifact unchanged. No source equation, correspondence claim, or physics status changed.
+- Verification: no-write restoration checks leave the Wave 5g artifact planner/audit baseline intact; the candidate remains a generator-switch review item until source-date and source-hash provenance are reconciled.
+- Controller: continue selecting only candidates whose generator output is byte-identical or passes the declared semantic/provenance policy without weakening raw-hash preservation.
