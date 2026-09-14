@@ -1,6 +1,6 @@
 {
   "canonical_path_authority": "docs/core/core_paths.py",
-  "generated_at": "2026-09-14T19:31:56+00:00",
+  "generated_at": "2026-09-14T19:35:40+00:00",
   "generator": "docs/scripts/audit/plan_uet_core_physical_migration.py",
   "migration_id": "UET-CORE-PHYSICAL-MIGRATION-V3",
   "physical_move_performed": false,
@@ -48,7 +48,7 @@
       "collision_key": "docs/core/00_governance/core_research_organization_index.md",
       "compatibility_mode": "none",
       "current_path": "docs/core/00_governance/CORE_RESEARCH_ORGANIZATION_INDEX.md",
-      "dirty_source": false,
+      "dirty_source": true,
       "downstream_dependencies": [
         "FOUNDATION",
         "DATA"
@@ -69,7 +69,7 @@
       "rollback_path": "docs/core/00_governance/CORE_RESEARCH_ORGANIZATION_INDEX.md",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "b1bad4b5d077a941c4b408a04e20a9d45cf2ebe6f4f40178b24e38937c396ff0",
+      "sha256_before": "3d9006500affd1020c1629a74373a92f1a2201285b66ac22914207ff7668a410",
       "status_source": "docs/scripts/audit/build_uet_research_organization_registry_v2.py",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -543,7 +543,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_physical_migration_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "8b561e8ba84f6f919146ca4ab01f82538042c344c72b5158e6f2edc4db75f8bb",
+      "sha256_before": "21fcc39e02e3df67c657b659728a0505232bde28bc6b73d4e6f3f601448c240c",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -576,7 +576,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "231599520e31854083b77166883905cd22ce428a57f8f32bf00189816825f329",
+      "sha256_before": "71ab3e458103f5891c97a777bd4ec085a88fd4e6f7e6346e907910199e2d3415",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -610,7 +610,7 @@
       "rollback_path": "docs/core/00_governance/UET_CORE_PHYSICAL_MIGRATION_REPORT.md",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_after": null,
-      "sha256_before": "cb2d2eb97092f52d62e6e467b292bc24c242c82e1926f5ea6f8e7c10e0c2f044",
+      "sha256_before": "1dae3e9e0a312501bd9f98d75814d34adbff0cd90919cbd15a929b2a90de34c6",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [
         "ORG"
@@ -2286,7 +2286,7 @@
       "collision_key": "docs/core/02_equations/lorentz_noether/__init__.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/lorentz_noether/__init__.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": null,
       "evidence_status": null,
@@ -2316,7 +2316,7 @@
       "collision_key": "docs/core/02_equations/lorentz_noether/readme.md",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/lorentz_noether/README.md",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": null,
       "evidence_status": null,
@@ -2346,7 +2346,7 @@
       "collision_key": "docs/core/02_equations/lorentz_noether/uet_lorentz.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/lorentz_noether/uet_lorentz.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": null,
       "evidence_status": null,
@@ -7436,7 +7436,7 @@
       "collision_key": "docs/core/05_tests/regression/root/test_lorentz_canonical_migration.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/05_tests/regression/root/test_lorentz_canonical_migration.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": null,
       "evidence_status": null,
@@ -15316,7 +15316,7 @@
       "rollback_path": "docs/core/08_history/update_logs/UET_CORE_PHYSICAL_MIGRATION_UPDATE_LOG.md",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "26f517cae7e2810ca98f2c248505a13a51c77f9ea7e04782dd62bbcd2fe77725",
+      "sha256_before": "3822ee2eb2b04e754fc58bd76175d2ad26eea710e705d76d4b886b13534d9a78",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -17978,7 +17978,7 @@
       "collision_key": "docs/core/07_artifacts/gates/legacy_covariance_alignment_gate.json",
       "compatibility_mode": "legacy_artifact_index",
       "current_path": "docs/core/artifacts/legacy_covariance_alignment_gate.json",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": "foundation_or_shared",
       "evidence_status": "INTERNAL",
@@ -36931,7 +36931,7 @@
       "rollback_path": "docs/core/CORE_FILE_INDEX.md",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_after": null,
-      "sha256_before": "99f53c337e98c237853392175af6c295b0e1deb0479b35b190c857fc4f41e3f7",
+      "sha256_before": "b47bb81e164dea6ec919ed2802ab00e1ebf695e13fd249a3a4d84aa821ac5d4f",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [
         "ORG"
@@ -36978,7 +36978,7 @@
       "collision_key": "docs/core/core_paths.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/core_paths.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "FOUNDATION",
         "DATA"
@@ -62514,7 +62514,7 @@
       "redirect_or_shim": 188,
       "root_python_shim": 159
     },
-    "dirty_sources": 11,
+    "dirty_sources": 6,
     "duplicate_targets": {},
     "existing_target_conflicts": [],
     "files_migrated_in_wave": 0,

@@ -33,7 +33,7 @@
   ],
   "controlling_blocker": null,
   "duplicate_targets": {},
-  "generated_at": "2026-09-14T19:31:53+00:00",
+  "generated_at": "2026-09-14T19:35:45+00:00",
   "generator": "docs/scripts/audit/audit_uet_core_physical_migration.py",
   "missing_current_paths": [],
   "redirect_errors": [],
@@ -41,140 +41,28 @@
   "schema_version": "1.0",
   "status": "PASS",
   "summary": {
-    "already_canonical": 625,
-    "compatibility_assets_present": 166,
+    "already_canonical": 647,
+    "compatibility_assets_present": 188,
     "compatibility_counts": {
       "legacy_artifact_index": 588,
       "markdown_redirect": 2,
       "none": 459,
       "path_resolver": 385,
-      "redirect_or_shim": 166,
-      "root_python_shim": 181
+      "redirect_or_shim": 188,
+      "root_python_shim": 159
     },
-    "dirty_sources": 12,
-    "duplicate_targets": {
-      "docs/core/02_equations/covariant/uet_covariant_balance.py": [
-        "docs/core/02_equations/covariant/uet_covariant_balance.py",
-        "docs/core/uet_covariant_balance.py"
-      ],
-      "docs/core/02_equations/covariant/uet_covariant_diffusion.py": [
-        "docs/core/02_equations/covariant/uet_covariant_diffusion.py",
-        "docs/core/uet_covariant_diffusion.py"
-      ],
-      "docs/core/02_equations/covariant/uet_covariant_matter.py": [
-        "docs/core/02_equations/covariant/uet_covariant_matter.py",
-        "docs/core/uet_covariant_matter.py"
-      ],
-      "docs/core/02_equations/covariant/uet_covariant_nonclosed.py": [
-        "docs/core/02_equations/covariant/uet_covariant_nonclosed.py",
-        "docs/core/uet_covariant_nonclosed.py"
-      ],
-      "docs/core/02_equations/covariant/uet_covariant_open_system.py": [
-        "docs/core/02_equations/covariant/uet_covariant_open_system.py",
-        "docs/core/uet_covariant_open_system.py"
-      ],
-      "docs/core/02_equations/covariant/uet_covariant_parent.py": [
-        "docs/core/02_equations/covariant/uet_covariant_parent.py",
-        "docs/core/uet_covariant_parent.py"
-      ],
-      "docs/core/02_equations/covariant/uet_covariant_reduction.py": [
-        "docs/core/02_equations/covariant/uet_covariant_reduction.py",
-        "docs/core/uet_covariant_reduction.py"
-      ],
-      "docs/core/02_equations/covariant/uet_covariant_response.py": [
-        "docs/core/02_equations/covariant/uet_covariant_response.py",
-        "docs/core/uet_covariant_response.py"
-      ],
-      "docs/core/02_equations/covariant/uet_covariant_superfluid_transport.py": [
-        "docs/core/02_equations/covariant/uet_covariant_superfluid_transport.py",
-        "docs/core/uet_covariant_superfluid_transport.py"
-      ],
-      "docs/core/02_equations/covariant/uet_covariant_theory_spine.py": [
-        "docs/core/02_equations/covariant/uet_covariant_theory_spine.py",
-        "docs/core/uet_covariant_theory_spine.py"
-      ],
-      "docs/core/02_equations/lorentz_noether/uet_lorentz.py": [
-        "docs/core/02_equations/lorentz_noether/uet_lorentz.py",
-        "docs/core/uet_lorentz.py"
-      ],
-      "docs/core/02_equations/matter_space/uet_master_equation.py": [
-        "docs/core/02_equations/matter_space/uet_master_equation.py",
-        "docs/core/uet_master_equation.py"
-      ],
-      "docs/core/02_equations/matter_space/uet_matter_space.py": [
-        "docs/core/02_equations/matter_space/uet_matter_space.py",
-        "docs/core/uet_matter_space.py"
-      ],
-      "docs/core/02_equations/matter_space/uet_matter_space_causal.py": [
-        "docs/core/02_equations/matter_space/uet_matter_space_causal.py",
-        "docs/core/uet_matter_space_causal.py"
-      ],
-      "docs/core/02_equations/matter_space/uet_matter_space_characteristic.py": [
-        "docs/core/02_equations/matter_space/uet_matter_space_characteristic.py",
-        "docs/core/uet_matter_space_characteristic.py"
-      ],
-      "docs/core/02_equations/matter_space/uet_matter_space_finite_cone.py": [
-        "docs/core/02_equations/matter_space/uet_matter_space_finite_cone.py",
-        "docs/core/uet_matter_space_finite_cone.py"
-      ],
-      "docs/core/02_equations/matter_space/uet_matter_space_flux_phi.py": [
-        "docs/core/02_equations/matter_space/uet_matter_space_flux_phi.py",
-        "docs/core/uet_matter_space_flux_phi.py"
-      ],
-      "docs/core/02_equations/matter_space/uet_matter_space_flux_telegraph.py": [
-        "docs/core/02_equations/matter_space/uet_matter_space_flux_telegraph.py",
-        "docs/core/uet_matter_space_flux_telegraph.py"
-      ],
-      "docs/core/02_equations/matter_space/uet_matter_space_split.py": [
-        "docs/core/02_equations/matter_space/uet_matter_space_split.py",
-        "docs/core/uet_matter_space_split.py"
-      ],
-      "docs/core/02_equations/matter_space/uet_spatial.py": [
-        "docs/core/02_equations/matter_space/uet_spatial.py",
-        "docs/core/uet_spatial.py"
-      ],
-      "docs/core/02_equations/matter_space/uet_trace.py": [
-        "docs/core/02_equations/matter_space/uet_trace.py",
-        "docs/core/uet_trace.py"
-      ],
-      "docs/core/03_lanes/review/uet_matter_space_observable.py": [
-        "docs/core/03_lanes/review/uet_matter_space_observable.py",
-        "docs/core/uet_matter_space_observable.py"
-      ]
-    },
-    "existing_target_conflicts": [
-      "docs/core/02_equations/covariant/uet_covariant_balance.py",
-      "docs/core/02_equations/covariant/uet_covariant_diffusion.py",
-      "docs/core/02_equations/covariant/uet_covariant_matter.py",
-      "docs/core/02_equations/covariant/uet_covariant_nonclosed.py",
-      "docs/core/02_equations/covariant/uet_covariant_open_system.py",
-      "docs/core/02_equations/covariant/uet_covariant_parent.py",
-      "docs/core/02_equations/covariant/uet_covariant_reduction.py",
-      "docs/core/02_equations/covariant/uet_covariant_response.py",
-      "docs/core/02_equations/covariant/uet_covariant_superfluid_transport.py",
-      "docs/core/02_equations/covariant/uet_covariant_theory_spine.py",
-      "docs/core/02_equations/lorentz_noether/uet_lorentz.py",
-      "docs/core/02_equations/matter_space/uet_master_equation.py",
-      "docs/core/02_equations/matter_space/uet_matter_space.py",
-      "docs/core/02_equations/matter_space/uet_matter_space_causal.py",
-      "docs/core/02_equations/matter_space/uet_matter_space_characteristic.py",
-      "docs/core/02_equations/matter_space/uet_matter_space_finite_cone.py",
-      "docs/core/02_equations/matter_space/uet_matter_space_flux_phi.py",
-      "docs/core/02_equations/matter_space/uet_matter_space_flux_telegraph.py",
-      "docs/core/02_equations/matter_space/uet_matter_space_split.py",
-      "docs/core/02_equations/matter_space/uet_spatial.py",
-      "docs/core/02_equations/matter_space/uet_trace.py",
-      "docs/core/03_lanes/review/uet_matter_space_observable.py"
-    ],
+    "dirty_sources": 6,
+    "duplicate_targets": {},
+    "existing_target_conflicts": [],
     "files_migrated_in_wave": 0,
     "files_skipped_in_wave": 0,
-    "files_to_move": 1156,
+    "files_to_move": 1134,
     "files_total": 1781,
     "migration_wave_counts": {
-      "already_canonical": 625,
+      "already_canonical": 647,
       "artifacts": 589,
       "data_tooling": 86,
-      "equation_or_lane": 181,
+      "equation_or_lane": 159,
       "proofs": 1,
       "review": 1,
       "tests": 298

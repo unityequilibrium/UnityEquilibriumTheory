@@ -262,3 +262,10 @@
 - Verification: canonical/legacy import identity, legacy alignment regression, and direct Lorentz script smoke PASS (6 tests); physical migration audit PASS with zero duplicate targets, missing paths, or broken shims.
 - Controller: 1,134 active physical move targets remain after this family; 589 generated artifacts remain behind generator/consumer/provenance review, and foundation remains `BLOCKED`.
 - Public-safety boundary: source-of-truth and audit path changes only; Lorentz invariance, curved-spacetime covariance, Noether conservation, and Einstein-equation claims remain blocked.
+## 2026-09-15 — Wave 6f post-commit metadata consistency correction
+
+- Scope: migration control-plane and compatibility-audit correction after the Lorentz family commit.
+- Corrected: physical audit shim parsing now accepts multiline forwarding calls; regenerated the physical manifest, report, audit, and organization/navigation indexes from the committed Lorentz source layout.
+- Verification: physical migration audit PASS with zero duplicate targets, missing current paths, or redirect errors; Lorentz import/direct-script and legacy alignment checks remain PASS; physics status changes remain 0.
+- Current state: 1,134 active physical move targets remain, with Lorentz counted as canonical and its root path retained only as a compatibility shim; generated artifacts remain behind the separate provenance/generator controller.
+- Public-safety boundary: metadata and audit behavior only; foundation remains `BLOCKED` and no Lorentz, Noether, GR, or other physics claim was promoted.
