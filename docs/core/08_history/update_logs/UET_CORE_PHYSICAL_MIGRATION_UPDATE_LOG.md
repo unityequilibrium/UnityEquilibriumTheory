@@ -269,3 +269,12 @@
 - Verification: physical migration audit PASS with zero duplicate targets, missing current paths, or redirect errors; Lorentz import/direct-script and legacy alignment checks remain PASS; physics status changes remain 0.
 - Current state: 1,134 active physical move targets remain, with Lorentz counted as canonical and its root path retained only as a compatibility shim; generated artifacts remain behind the separate provenance/generator controller.
 - Public-safety boundary: metadata and audit behavior only; foundation remains `BLOCKED` and no Lorentz, Noether, GR, or other physics claim was promoted.
+## 2026-09-15 — Core physical migration v3 — Wave 6g Noether mapping family
+
+- Scope: canonical source migration for the registered Noether/mapping family; organization and compatibility only.
+- Moved: `uet_noether.py` and `uet_noether_phase_field_map.py` into `docs/core/02_equations/lorentz_noether/`.
+- Preserved: root imports, the legacy Noether direct-script entrypoint, the `docs.core` phase-field map facade, and the many-to-one/constitutive claim boundaries declared by the family contract.
+- Repaired: the legacy Lorentz/Noether alignment audit now reads both implementations from their canonical paths while retaining stable legacy source labels and hashes.
+- Verification: Noether canonical/legacy import identity and map-facade tests, Noether mapping tests, and legacy alignment regression PASS (31 tests); Noether direct-script smoke PASS; alignment audit PASS.
+- Controller: 1,132 active physical move targets remain after this family; generated artifacts remain behind the separate generator/consumer/provenance controller, and foundation remains `BLOCKED`.
+- Public-safety boundary: source-of-truth and compatibility paths changed only; no universal `C` ontology, Noether conservation proof, or physics claim was promoted.

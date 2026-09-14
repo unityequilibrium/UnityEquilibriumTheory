@@ -11,3 +11,14 @@ their shared legacy dependencies and mapping tests are checked.
 The root imports under `docs.core.uet_lorentz` remain compatibility shims.
 Organization status is independent of physics evidence status; the current
 family contract still limits claims to support utilities and mapping layers.
+
+## Included sources
+
+- `uet_lorentz.py` — legacy Lorentz transform and metric diagnostics.
+- `uet_noether.py` — legacy spatial Noether/conservation diagnostics.
+- `uet_noether_phase_field_map.py` — declared hydrodynamic coordinate map from
+  coarse-grained O(2) Noether charge/current to normalized `C`/`J` coordinates.
+
+These sources retain their existing evidence boundaries.  The package layout
+is an organization change; it does not turn the diagnostics into a covariance
+or conservation proof and does not make `C` a universal physical quantity.
