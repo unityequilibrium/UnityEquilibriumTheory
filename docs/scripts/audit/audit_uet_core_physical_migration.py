@@ -17,7 +17,7 @@ AUDIT = CORE / "00_governance" / "uet_core_physical_migration_audit.json"
 REDIRECT_PATTERN = re.compile(r"Canonical source: \[[^\]]+\]\(([^)]+)\)")
 SHIM_PATTERN = re.compile(r'_CANONICAL_RELATIVE\s*=\s*"([^"]+)"')
 FORWARD_SHIM_PATTERN = re.compile(
-    r'_?forward_public_symbols\s*\(\s*globals\(\)\s*,\s*"([^"]+)"\s*\)'
+    r'_?forward_public_symbols\s*\(\s*globals\(\)\s*,\s*"([^"]+)"\s*,?\s*\)'
 )
 
 
