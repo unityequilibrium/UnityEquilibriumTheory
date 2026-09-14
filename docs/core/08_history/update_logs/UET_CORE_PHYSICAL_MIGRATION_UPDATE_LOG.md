@@ -235,3 +235,12 @@
 - Verification: flux canonical/legacy shim tests PASS; existing flux regressions PASS (13 total); physical planner/audit PASS with zero duplicate targets, missing paths, or broken shims; physics status changes 0.
 - Controller: 1,140 active physical move targets remain; causal/finite-cone/observable/split matter-space modules still require explicit lane classification; 588 generated artifacts remain behind generator/consumer/provenance review; foundation remains BLOCKED.
 - Public-safety boundary: source-of-truth paths changed only; no equation, derivation, interpretation, unit, or scientific claim was promoted.
+## 2026-09-15 — Core physical migration v3 — Wave 6d matter-space candidate equations
+
+- Scope: canonical source migration for four explicitly classified candidate equation modules; organization and compatibility only.
+- Moved: uet_matter_space_causal.py, uet_matter_space_finite_cone.py, uet_matter_space_characteristic.py, and uet_matter_space_split.py into docs/core/02_equations/matter_space/.
+- Preserved: root compatibility shims, docs.core facade behavior, candidate/blocked evidence boundaries, and the separation between conserved and finite-cone C lanes.
+- Repaired: path classification now keeps these four equation modules in the matter-space family; observable/support modules remain outside this move pending lane review.
+- Verification: canonical/legacy import identity and candidate regression suite PASS (60); physical planner/audit PASS with zero duplicate targets, missing paths, or broken shims; physics status changes 0.
+- Controller: 1,136 active physical move targets remain; matter-space observable/support modules and remaining unassigned Python surfaces still require explicit disposition; 588 generated artifacts remain behind generator/consumer/provenance review; foundation remains BLOCKED.
+- Public-safety boundary: source-of-truth paths changed only; no equation, derivation, interpretation, unit, or scientific claim was promoted.

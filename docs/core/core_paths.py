@@ -103,7 +103,16 @@ def _python_area(stem: str) -> str:
         return "02_equations/lorentz_noether"
     if lower.startswith("uet_matter_space_flux_"):
         return "02_equations/matter_space"
-    if lower in {"uet_trace", "uet_matter_space", "uet_spatial", "uet_master_equation"}:
+    if lower in {
+        "uet_trace",
+        "uet_matter_space",
+        "uet_spatial",
+        "uet_master_equation",
+        "uet_matter_space_causal",
+        "uet_matter_space_finite_cone",
+        "uet_matter_space_characteristic",
+        "uet_matter_space_split",
+    }:
         return "02_equations/matter_space"
     if lower.startswith("mass_density"):
         return "03_lanes/mass_density"
