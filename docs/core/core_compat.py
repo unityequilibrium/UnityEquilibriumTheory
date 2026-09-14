@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import importlib
 import runpy
+from pathlib import Path
 from types import ModuleType
 from typing import Any
 
@@ -33,5 +34,9 @@ def forward_public_symbols(namespace: dict[str, Any], module_name: str) -> Modul
 def run_canonical_as_script(module_name: str) -> None:
     """Preserve direct-script execution for a migrated module when requested."""
 
-    runpy.run_module(module_name, run_name="__main__")
+    implementation = load_canonical_module(module_name)
+    implementation_path = getattr(implementation, "__file__", None)
+    if implementation_path is None:
+        raise RuntimeError(f"canonical module has no executable file: {module_name}")
+    runpy.run_path(str(Path(implementation_path).resolve()), run_name="__main__")
 

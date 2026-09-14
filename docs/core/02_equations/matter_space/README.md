@@ -1,0 +1,16 @@
+# Matter-space equation family
+
+This directory is the canonical source area for the bounded matter-space
+equation family:
+
+- `uet_spatial.py` — one-dimensional conservative spatial primitives;
+- `uet_matter_space.py` — the normalized `matter_space_coupled_v1` operator;
+- `uet_trace.py` — the derived, retarded history-trace lane;
+- `uet_master_equation.py` — the retained legacy master-engine facade and its
+  opt-in operator dispatch.
+
+The root paths under `docs/core/` remain compatibility shims. Moving the
+implementation changes organization and import provenance only; it does not
+promote the physics evidence status. The current causal and dimensional
+limitations remain controlled by the equation-family contracts and foundation
+gates.

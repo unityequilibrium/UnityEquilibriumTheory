@@ -2,7 +2,7 @@
 
 > Generated organization view. Organization migration does not promote physics evidence.
 
-Generated at: 2026-09-14T18:37:28+00:00
+Generated at: 2026-09-14T19:02:04+00:00
 
 ## Control plane
 
@@ -14,10 +14,10 @@ Generated at: 2026-09-14T18:37:28+00:00
 
 ## Current state
 
-- Physical files indexed: **1757**
-- Canonical move targets remaining: **1146**
+- Physical files indexed: **1764**
+- Canonical move targets remaining: **1142**
 - Contracts/history files migrated in the latest completed wave: **0**
-- Dirty sources held back: **2**
+- Dirty sources held back: **16**
 - Duplicate canonical targets: **0**
 - Physics status changes from this migration: **0**
 - Scientific registry status: **PASS_WITH_REVIEW_REQUIRED**
