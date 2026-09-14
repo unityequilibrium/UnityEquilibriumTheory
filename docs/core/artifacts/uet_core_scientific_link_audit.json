@@ -726,7 +726,7 @@
       "unit_lane_from_contract": null
     }
   ],
-  "generated_at": "2026-09-14T13:45:23+00:00",
+  "generated_at": "2026-09-14T15:06:12+00:00",
   "generator": "docs/scripts/audit/audit_uet_core_scientific_links.py",
   "input_errors": [],
   "inputs": {
@@ -744,7 +744,7 @@
     },
     "migration_map": {
       "path": "docs/core/artifacts/uet_core_file_migration_map.json",
-      "sha256": "1cab01f5ab3bbbd5097e99fd48c371034b5f5247f227a48ddf784b86046f4fc9"
+      "sha256": "d69748e7b024155d5cf1d2d03e89fd6379a5a12d47b8a3d4227818bb282f6df2"
     },
     "organization_policy": {
       "path": "docs/core/00_governance/uet_research_organization_policy.json",
@@ -752,7 +752,7 @@
     },
     "organization_registry": {
       "path": "docs/core/artifacts/uet_research_organization_registry.json",
-      "sha256": "71e5bfbf77f0d89212315dde3149efc5f5ba0c8dc837ae3d484966bc22c461fb"
+      "sha256": "0a77d45e2827bac4c860bdd0de2b3ee0326c6ebded4b4310ceb91ae930c809a7"
     }
   },
   "interpretation": [
@@ -3131,7 +3131,7 @@
   "scope": {
     "assigned_review_record_count": 139,
     "family_or_lane_count": 14,
-    "organization_registry_file_count": 1742,
+    "organization_registry_file_count": 1744,
     "physical_move_performed": false
   },
   "summary": {

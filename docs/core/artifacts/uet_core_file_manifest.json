@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_core_file_manifest",
-  "generated_at": "2026-09-14T13:41:53+00:00",
+  "generated_at": "2026-09-14T14:52:52+00:00",
   "generator": "docs/scripts/audit/build_uet_core_file_manifest.py",
   "status": "PASS_WITH_REVIEW_REQUIRED",
   "controlling_blocker": "unlinked_or_ambiguous_core_paths_require_family_assignment_or_quarantine",
@@ -14,7 +14,7 @@
     "declared_input_data": 133,
     "equation_module": 17,
     "folder_governance": 1,
-    "generated_artifact": 594,
+    "generated_artifact": 595,
     "governance_artifact": 18,
     "lane_specific_module": 99,
     "navigation_and_legacy_boundary": 15,
@@ -25,7 +25,7 @@
     "support_or_adapter_module": 29,
     "unassigned_python_surface": 32,
     "update_log": 31,
-    "verifier_or_regression_test": 505
+    "verifier_or_regression_test": 506
   },
   "logical_area_counts": {
     "00_governance": 34,
@@ -33,9 +33,9 @@
     "02_equations": 24,
     "03_lanes": 294,
     "04_proofs": 2,
-    "05_tests": 505,
+    "05_tests": 506,
     "06_data": 133,
-    "07_artifacts": 594,
+    "07_artifacts": 595,
     "08_history": 31,
     "99_review": 33
   },
@@ -61,7 +61,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "6ca5c86c19614c4f0885405e6973c2f82368e22090b8d72851d020619dc0d343",
+      "sha256": "1d46c606566becf043b4eb72b91984445f221c3a9d08122a48469e5bbb0d2faa",
       "review_action": "link_to_registry_and_current_artifact"
     },
     {
@@ -83,7 +83,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "708b0db82de468d0344135ab40ea55bd7712375fdf6081f58893d0229ddaac1c",
+      "sha256": "9ed81629f8621921740c83e68df0d2d4192495b8556a563297a3d69bb02b062b",
       "review_action": "retain_governance_control_artifact"
     },
     {
@@ -105,7 +105,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "e57a03fa21ce010c6e357e4214fef339627636857d959b178e9da59cab04dec3",
+      "sha256": "c04ed7ccecb6fdc8222d68d089e0b5d41dc937ea7be6d3ac593808da5ff9aaaa",
       "review_action": "retain_governance_control_artifact"
     },
     {
@@ -116,7 +116,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "60960052eaa348f853f1c5a419bbdb6ca3a6d990337d52adae35d9c954da79b2",
+      "sha256": "918681a2984773368b11c235271a4a7e0c3fb8c21d80cbabf26a370049e5f942",
       "review_action": "link_to_registry_and_current_artifact"
     },
     {
@@ -160,7 +160,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "dd4e7de7b2162874c8a7a6239c1e174f67b17426b09fa940d0f824ccfd2e0c60",
+      "sha256": "3157cfefb7db603ee92eac32f1f5b06792bd4d41454720cb4fdd4ea3a030bb5b",
       "review_action": "retain_governance_control_artifact"
     },
     {
@@ -171,7 +171,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "68f2e008a1d18ca305b134b663f5f1be40975da54cf7b0ff37d08ffa8ab48432",
+      "sha256": "62c4cf4acf9da1409f6b2cb855c80c5738147f85a49181e2bdfd9c6c50d5b131",
       "review_action": "retain_governance_control_artifact"
     },
     {
@@ -182,7 +182,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "d6137c68dbbba54609ac8574f127de26f9e3579d0bc782ece72149243d366640",
+      "sha256": "9e083ae795f7c9ffd652fb9e1e50e449bc6d9337033104aa4b953dfbe36ce9da",
       "review_action": "retain_governance_control_artifact"
     },
     {
@@ -193,7 +193,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "bea1d6bebf2c4e5c7395b8f5739272886bc6b5f5551a6768bcf69886ebae2746",
+      "sha256": "68f9e37ebecc92cd3bf554abe1ce045e390c45efc291905a5efd048e5a13c701",
       "review_action": "link_to_registry_and_current_artifact"
     },
     {
@@ -204,7 +204,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "ae6c1b6bcbf6dbe02e9871ad295fa97d90e6ec079a0e8898e232a3616cb7769e",
+      "sha256": "364fa6da7b190654c6161d42d0ba64d50c76ad68a8e04bc9fc09b9a62f9c56d7",
       "review_action": "retain_governance_control_artifact"
     },
     {
@@ -215,7 +215,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "4529e42bcf6fd549a6cad1c828f335f6819871ec6759a9d9c06ecc581ef8e4f8",
+      "sha256": "97bcf90c75861d29ad94b4dd8228d9e6c64218c075404c810b16b22cc42c1c6c",
       "review_action": "retain_governance_control_artifact"
     },
     {
@@ -226,7 +226,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "c0ef4e51a2f14386e7288bb8ca314204fa0202c4487a7bedabcb41f20339f98f",
+      "sha256": "24d2d59871577eebf9ab1264b264dbaa4a3d5e7e5ed8f7c8922be003b438e29f",
       "review_action": "retain_governance_control_artifact"
     },
     {
@@ -237,7 +237,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "acedb720f057e2d29557ca6ae7eb6614c502b3360109307db7a14d415ad0bffb",
+      "sha256": "5101b595ddb0d007bc5de6d302b8260da27aedac715a8e4e000bde3f46c40624",
       "review_action": "link_to_registry_and_current_artifact"
     },
     {
@@ -1614,6 +1614,17 @@
       "generated_or_source": "source",
       "sha256": "b6ba4dc5265ddf25de02649f8a6e164632a862557c0e5371ef03ef17d102abcf",
       "review_action": "link_to_current_gate_and_generated_index"
+    },
+    {
+      "path": "docs/core/05_tests/artifact/test_uet_core_artifact_generator_review_queue.py",
+      "file_kind": "verifier_or_regression_test",
+      "logical_area": "05_tests",
+      "owner_family_or_lane": "core_test_surface",
+      "registry_link_status": "NOT_APPLICABLE",
+      "status_source": "MANIFEST_CLASSIFICATION_ONLY",
+      "generated_or_source": "source",
+      "sha256": "b2ac9c4fd61a1ca6f8ba5b228de3102d3fd053820250b8839269906fe15ccb21",
+      "review_action": "link_to_equation_family_or_artifact"
     },
     {
       "path": "docs/core/05_tests/artifact/test_uet_core_artifact_migration_history.py",
@@ -4179,6 +4190,17 @@
       "review_action": "link_to_current_gate_and_generated_index"
     },
     {
+      "path": "docs/core/07_artifacts/gates/uet_core_artifact_generator_review_queue.json",
+      "file_kind": "generated_artifact",
+      "logical_area": "07_artifacts",
+      "owner_family_or_lane": "foundation_or_shared",
+      "registry_link_status": "NOT_APPLICABLE",
+      "status_source": "MANIFEST_CLASSIFICATION_ONLY",
+      "generated_or_source": "generated",
+      "sha256": "647e3d502d497f423b6cb13ddf995a6a183d56f2870d293d94ad8223cd2027fa",
+      "review_action": "retain_canonical_artifact_and_link_generator"
+    },
+    {
       "path": "docs/core/07_artifacts/provenance/resource_selection_physical_cost_map_verification.json",
       "file_kind": "generated_artifact",
       "logical_area": "07_artifacts",
@@ -4582,7 +4604,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "b77acd15b83b17431a82429423b6434deca0b3d2fdb595feafe8d85cda63d65b",
+      "sha256": "77cb64a61d9cee236d846ff5dda4eaa1f9c6ab66977dbb3346c9c4f168f9a524",
       "review_action": "keep_as_folder_rule"
     },
     {
@@ -9796,7 +9818,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "b98f1a44c88e7fb644c30b02936c605855b51332b1ba591fe949a5eee696fe86",
+      "sha256": "eb8a158e0502f39b1ff46b22cca9366fd9f18f665eaaa5c76b0e9718dcc1c5ca",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -9807,7 +9829,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "a9bb33987be53ea1e28d07e8de118de865dd78a8733776fecfc23e0b5f99d6f5",
+      "sha256": "e8657217903fd8bea1fa295f5e7a7b81ac970c4e7667038cf23aae31c8586cd8",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -9818,7 +9840,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "ab009f926b828305a80c30c8c7986f322c1ae03f1b045b1f2656b59e58faf987",
+      "sha256": "75e7c0081a570f31b1ae0a2d34bb5c91ef5324dc191d367764305ede194dc3a1",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -9829,7 +9851,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "c3c565fb8db158d13cc8bac85de5d3c6c2eba39682f33f9a681c745e3321b95b",
+      "sha256": "de1af4f901e656298ed29f7902c677cdec858aca11488cb294da132c92c1ed35",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -11028,7 +11050,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "generated",
-      "sha256": "4fe4a2d61698ab1af151bceee8a8344e39ff69990b382659735d13ec718b4b29",
+      "sha256": "d0ecdc1cc16f91a53c69ac7dc11ebd5c8af825132c20e83b1332b2571b679b81",
       "review_action": "retain_path_and_link_generator"
     },
     {
@@ -11149,7 +11171,7 @@
       "registry_link_status": "NOT_APPLICABLE",
       "status_source": "MANIFEST_CLASSIFICATION_ONLY",
       "generated_or_source": "source",
-      "sha256": "99b979bf854fb370e7b302cf19a829f7fc432bd23ecea9bc159818df96b7bee4",
+      "sha256": "d7a62660ab441e93723fdd13796022a956088c023e7465411113895f69bc5648",
       "review_action": "link_to_registry_and_current_artifact"
     },
     {

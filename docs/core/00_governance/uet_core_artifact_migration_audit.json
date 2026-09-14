@@ -64,7 +64,7 @@
   "controlling_blocker": null,
   "duplicate_targets": {},
   "existing_targets": [],
-  "generated_at": "2026-09-14T13:47:09+00:00",
+  "generated_at": "2026-09-14T15:07:11+00:00",
   "generator": "docs/scripts/audit/audit_uet_core_artifact_migration_v3.py",
   "migrated_active_consumer_rows": [],
   "migrated_source_present": [],
