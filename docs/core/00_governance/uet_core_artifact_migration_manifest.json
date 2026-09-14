@@ -1,6 +1,6 @@
 {
   "canonical_path_authority": "docs/core/core_paths.py",
-  "generated_at": "2026-09-14T16:23:28+00:00",
+  "generated_at": "2026-09-14T17:35:02+00:00",
   "generator": "docs/scripts/audit/plan_uet_core_artifact_migration_v3.py",
   "history_path": "docs/core/00_governance/uet_core_artifact_migration_history.json",
   "legacy_boundary": "docs/core/artifacts/README.md",
@@ -2916,15 +2916,17 @@
       "collision_key": "docs/core/07_artifacts/gates/legacy_covariance_alignment_gate.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
       "consumer_count": 0,
-      "disposition": "generator_identity_not_resolved",
+      "disposition": "generator_switch_required_before_move",
       "downstream_dependencies": [],
       "equation_family_or_lane": "generated_core_artifact",
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
       "formula_ids": [],
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/audit_uet_gr_legacy_alignment.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/audit_uet_gr_legacy_alignment.py",
       "legacy_path": "docs/core/artifacts/legacy_covariance_alignment_gate.json",
       "legacy_reference_paths": [
         "WORK_LEDGER/2026/2026-07-21.md",
@@ -3458,10 +3460,9 @@
       "canonical_path": "docs/core/07_artifacts/archive/matter_space_causal_lane_selection.json",
       "collision_key": "docs/core/07_artifacts/archive/matter_space_causal_lane_selection.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
-      "consumer_count": 5,
+      "consumer_count": 4,
       "disposition": "generator_and_consumer_rewrite_required",
       "downstream_dependencies": [
-        "docs/scripts/audit/audit_matter_space_finite_cone_integration.py",
         "docs/scripts/audit/audit_matter_space_topic_pilot_sync.py",
         "docs/scripts/audit/audit_uet_foundation_dependency_gate.py",
         "docs/scripts/audit/audit_uet_wave3_wave10_program.py",
@@ -3472,10 +3473,11 @@
       "file_kind": "generated_artifact",
       "formula_ids": [],
       "generator_candidates": [
-        "docs/scripts/audit/audit_matter_space_causal_lane_selection.py"
+        "docs/scripts/audit/audit_matter_space_causal_lane_selection.py",
+        "docs/scripts/audit/audit_matter_space_finite_cone_integration.py"
       ],
-      "generator_count": 1,
-      "generator_path": "docs/scripts/audit/audit_matter_space_causal_lane_selection.py",
+      "generator_count": 2,
+      "generator_path": null,
       "legacy_path": "docs/core/artifacts/matter_space_causal_lane_selection.json",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -3655,11 +3657,10 @@
       "canonical_path": "docs/core/07_artifacts/verification/matter_space_characteristic_cone_verification.json",
       "collision_key": "docs/core/07_artifacts/verification/matter_space_characteristic_cone_verification.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
-      "consumer_count": 6,
+      "consumer_count": 5,
       "disposition": "generator_and_consumer_rewrite_required",
       "downstream_dependencies": [
         "docs/scripts/audit/audit_matter_space_causal_lane_selection.py",
-        "docs/scripts/audit/audit_matter_space_finite_cone_integration.py",
         "docs/scripts/audit/audit_matter_space_topic_pilot_sync.py",
         "docs/scripts/audit/audit_uet_foundation_dependency_gate.py",
         "docs/scripts/audit/audit_uet_wave3_wave10_program.py",
@@ -3670,10 +3671,11 @@
       "file_kind": "generated_artifact",
       "formula_ids": [],
       "generator_candidates": [
-        "docs/scripts/audit/audit_matter_space_characteristic.py"
+        "docs/scripts/audit/audit_matter_space_characteristic.py",
+        "docs/scripts/audit/audit_matter_space_finite_cone_integration.py"
       ],
-      "generator_count": 1,
-      "generator_path": "docs/scripts/audit/audit_matter_space_characteristic.py",
+      "generator_count": 2,
+      "generator_path": null,
       "legacy_path": "docs/core/artifacts/matter_space_characteristic_cone_verification.json",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -3975,10 +3977,9 @@
       "canonical_path": "docs/core/07_artifacts/verification/matter_space_observable_verification.json",
       "collision_key": "docs/core/07_artifacts/verification/matter_space_observable_verification.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
-      "consumer_count": 4,
+      "consumer_count": 3,
       "disposition": "generator_and_consumer_rewrite_required",
       "downstream_dependencies": [
-        "docs/scripts/audit/audit_matter_space_finite_cone_integration.py",
         "docs/scripts/audit/audit_matter_space_topic_pilot_sync.py",
         "docs/scripts/audit/audit_uet_foundation_dependency_gate.py",
         "docs/scripts/audit/audit_uet_wave3_wave10_program.py"
@@ -3988,10 +3989,11 @@
       "file_kind": "generated_artifact",
       "formula_ids": [],
       "generator_candidates": [
+        "docs/scripts/audit/audit_matter_space_finite_cone_integration.py",
         "docs/scripts/audit/audit_matter_space_observable.py"
       ],
-      "generator_count": 1,
-      "generator_path": "docs/scripts/audit/audit_matter_space_observable.py",
+      "generator_count": 2,
+      "generator_path": null,
       "legacy_path": "docs/core/artifacts/matter_space_observable_verification.json",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -4113,18 +4115,18 @@
       "canonical_path": "docs/core/07_artifacts/gates/matter_space_report_alignment_gate.json",
       "collision_key": "docs/core/07_artifacts/gates/matter_space_report_alignment_gate.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
-      "consumer_count": 1,
-      "disposition": "generator_identity_not_resolved",
-      "downstream_dependencies": [
-        "docs/scripts/audit/audit_matter_space_report_alignment.py"
-      ],
+      "consumer_count": 0,
+      "disposition": "generator_switch_required_before_move",
+      "downstream_dependencies": [],
       "equation_family_or_lane": "generated_core_artifact",
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
       "formula_ids": [],
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/audit_matter_space_report_alignment.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/audit_matter_space_report_alignment.py",
       "legacy_path": "docs/core/artifacts/matter_space_report_alignment_gate.json",
       "legacy_reference_paths": [
         "WORK_LEDGER/2026/2026-07-23.md",
@@ -4205,10 +4207,9 @@
       "canonical_path": "docs/core/07_artifacts/archive/matter_space_topic_pilot_sync.json",
       "collision_key": "docs/core/07_artifacts/archive/matter_space_topic_pilot_sync.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
-      "consumer_count": 4,
+      "consumer_count": 3,
       "disposition": "generator_and_consumer_rewrite_required",
       "downstream_dependencies": [
-        "docs/scripts/audit/audit_matter_space_finite_cone_integration.py",
         "docs/scripts/audit/audit_uet_all_waves_closure.py",
         "docs/scripts/audit/audit_uet_foundation_dependency_gate.py",
         "docs/scripts/audit/audit_uet_wave3_wave10_program.py"
@@ -4218,10 +4219,11 @@
       "file_kind": "generated_artifact",
       "formula_ids": [],
       "generator_candidates": [
+        "docs/scripts/audit/audit_matter_space_finite_cone_integration.py",
         "docs/scripts/audit/audit_matter_space_topic_pilot_sync.py"
       ],
-      "generator_count": 1,
-      "generator_path": "docs/scripts/audit/audit_matter_space_topic_pilot_sync.py",
+      "generator_count": 2,
+      "generator_path": null,
       "legacy_path": "docs/core/artifacts/matter_space_topic_pilot_sync.json",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -4253,8 +4255,8 @@
       "canonical_path": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
       "collision_key": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
-      "consumer_count": 20,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 19,
+      "disposition": "generator_and_consumer_rewrite_required",
       "downstream_dependencies": [
         "docs/core/test/test_uet_wave3_wave10_artifact_coverage.py",
         "docs/scripts/audit/audit_matter_space_causal_discretization.py",
@@ -4262,7 +4264,6 @@
         "docs/scripts/audit/audit_matter_space_causal_reference.py",
         "docs/scripts/audit/audit_matter_space_causal_repair.py",
         "docs/scripts/audit/audit_matter_space_core.py",
-        "docs/scripts/audit/audit_matter_space_finite_cone_integration.py",
         "docs/scripts/audit/audit_matter_space_research_program.py",
         "docs/scripts/audit/audit_thermal_wave1_branch_gate.py",
         "docs/scripts/audit/audit_uet_foundation_compatibility.py",
@@ -4281,9 +4282,11 @@
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
       "formula_ids": [],
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/audit_matter_space_finite_cone_integration.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/audit_matter_space_finite_cone_integration.py",
       "legacy_path": "docs/core/artifacts/matter_space_variational_verification.json",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -4937,7 +4940,7 @@
       "collision_key": "docs/core/07_artifacts/provenance/resource_persistence_principle_contract.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
       "consumer_count": 1,
-      "disposition": "generator_identity_not_resolved",
+      "disposition": "generator_and_consumer_rewrite_required",
       "downstream_dependencies": [
         "docs/core/01_contracts/RESOURCE_PERSISTENCE_PRINCIPLE_SPEC.md"
       ],
@@ -4945,9 +4948,11 @@
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
       "formula_ids": [],
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/audit_persistence_energy_diagnostic.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/audit_persistence_energy_diagnostic.py",
       "legacy_path": "docs/core/artifacts/resource_persistence_principle_contract.json",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -4966,43 +4971,6 @@
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_after": null,
       "sha256_before": "b9e48a2c1b62348e10e4a781adc73cc98ac22295d16bcb01211e8c5b025477a5",
-      "source_or_generated": "generated",
-      "status_source": "artifact_migration_manifest",
-      "upstream_dependencies": [],
-      "verifier_paths": []
-    },
-    {
-      "artifact_paths": [],
-      "asset_id": "UET-ARTIFACT-945922F305EF",
-      "canonical_path": "docs/core/07_artifacts/provenance/resource_selection_dynamic_game_contract.json",
-      "collision_key": "docs/core/07_artifacts/provenance/resource_selection_dynamic_game_contract.json",
-      "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
-      "consumer_count": 0,
-      "disposition": "generator_identity_not_resolved",
-      "downstream_dependencies": [],
-      "equation_family_or_lane": "generated_core_artifact",
-      "evidence_status": "INTERNAL",
-      "file_kind": "generated_artifact",
-      "formula_ids": [],
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
-      "legacy_path": "docs/core/artifacts/resource_selection_dynamic_game_contract.json",
-      "legacy_reference_paths": [
-        "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
-        "docs/core/00_governance/uet_core_physical_migration_manifest.json",
-        "docs/scripts/audit/audit_resource_selection.py"
-      ],
-      "logical_area": "07_artifacts",
-      "migration_state": "NOT_STARTED",
-      "migration_wave": "artifact_consumer_control",
-      "next_action": "map_and_switch_generator_and_consumers",
-      "organization_status": "ASSIGNED",
-      "owner_id": "EVIDENCE",
-      "rollback_path": "docs/core/artifacts/resource_selection_dynamic_game_contract.json",
-      "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256_after": null,
-      "sha256_before": "f16246b05cbdeff3111e3e010994e4242d87a6c41f7dfab25a00c492cc3881e1",
       "source_or_generated": "generated",
       "status_source": "artifact_migration_manifest",
       "upstream_dependencies": [],
@@ -5404,10 +5372,9 @@
       "canonical_path": "docs/core/07_artifacts/topic13/t13_anisotropic_thermoelastic_response_bridge_audit.json",
       "collision_key": "docs/core/07_artifacts/topic13/t13_anisotropic_thermoelastic_response_bridge_audit.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
-      "consumer_count": 5,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 4,
+      "disposition": "generator_and_consumer_rewrite_required",
       "downstream_dependencies": [
-        "docs/core/test/test_topic13_anisotropic_thermoelastic_response_bridge.py",
         "docs/scripts/audit/audit_topic13_anisotropic_thermoelastic_response_bridge.py",
         "docs/scripts/audit/audit_topic13_thermoelastic_spatial_compatibility.py",
         "docs/topics/0.13_Thermodynamic_Bridge/README.md",
@@ -5417,9 +5384,11 @@
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
       "formula_ids": [],
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/core/test/test_topic13_anisotropic_thermoelastic_response_bridge.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/core/test/test_topic13_anisotropic_thermoelastic_response_bridge.py",
       "legacy_path": "docs/core/artifacts/t13_anisotropic_thermoelastic_response_bridge_audit.json",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -5451,19 +5420,20 @@
       "canonical_path": "docs/core/07_artifacts/topic13/t13_basal_coverage_extension.json",
       "collision_key": "docs/core/07_artifacts/topic13/t13_basal_coverage_extension.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
-      "consumer_count": 2,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 1,
+      "disposition": "generator_and_consumer_rewrite_required",
       "downstream_dependencies": [
-        "docs/scripts/audit/audit_topic13_basal_coverage_extension.py",
         "docs/scripts/audit/audit_topic13_generic_q_image_support.py"
       ],
       "equation_family_or_lane": "generated_core_artifact",
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
       "formula_ids": [],
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/audit_topic13_basal_coverage_extension.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/audit_topic13_basal_coverage_extension.py",
       "legacy_path": "docs/core/artifacts/t13_basal_coverage_extension.json",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -5660,18 +5630,18 @@
       "canonical_path": "docs/core/07_artifacts/topic13/t13_baseline_registration_models.json",
       "collision_key": "docs/core/07_artifacts/topic13/t13_baseline_registration_models.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
-      "consumer_count": 1,
-      "disposition": "generator_identity_not_resolved",
-      "downstream_dependencies": [
-        "docs/scripts/audit/audit_topic13_baseline_registration_models.py"
-      ],
+      "consumer_count": 0,
+      "disposition": "generator_switch_required_before_move",
+      "downstream_dependencies": [],
       "equation_family_or_lane": "generated_core_artifact",
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
       "formula_ids": [],
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/audit_topic13_baseline_registration_models.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/audit_topic13_baseline_registration_models.py",
       "legacy_path": "docs/core/artifacts/t13_baseline_registration_models.json",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -6135,23 +6105,24 @@
       "canonical_path": "docs/core/07_artifacts/topic13/t13_calorine_isotope_mass_sensitivity_audit.json",
       "collision_key": "docs/core/07_artifacts/topic13/t13_calorine_isotope_mass_sensitivity_audit.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
-      "consumer_count": 6,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 5,
+      "disposition": "generator_and_consumer_rewrite_required",
       "downstream_dependencies": [
         "docs/scripts/audit/audit_topic13_csrc_equilibrium_component_acceptance.py",
         "docs/scripts/audit/audit_topic13_full_bridge_gate.py",
         "docs/scripts/audit/record_topic13_calorine_pbte_reproduction_log.py",
         "docs/scripts/audit/record_topic13_csrc_equilibrium_component_wave.py",
-        "docs/scripts/audit/run_topic13_calorine_isotope_mass_sensitivity.py",
         "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
       ],
       "equation_family_or_lane": "generated_core_artifact",
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
       "formula_ids": [],
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/run_topic13_calorine_isotope_mass_sensitivity.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/run_topic13_calorine_isotope_mass_sensitivity.py",
       "legacy_path": "docs/core/artifacts/t13_calorine_isotope_mass_sensitivity_audit.json",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -9944,7 +9915,7 @@
       "collision_key": "docs/core/07_artifacts/topic13/t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
       "consumer_count": 6,
-      "disposition": "generator_identity_not_resolved",
+      "disposition": "generator_and_consumer_rewrite_required",
       "downstream_dependencies": [
         "docs/scripts/audit/audit_topic13_cv_source_reconciliation.py",
         "docs/scripts/audit/audit_topic13_farooqui_ig210_volumetric_cp_uncertainty.py",
@@ -9957,9 +9928,11 @@
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
       "formula_ids": [],
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/core/test/test_topic13_farooqui_ig210_volumetric_cp_uncertainty.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/core/test/test_topic13_farooqui_ig210_volumetric_cp_uncertainty.py",
       "legacy_path": "docs/core/artifacts/t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -10781,19 +10754,20 @@
       "canonical_path": "docs/core/07_artifacts/topic13/t13_generic_q_image_support.json",
       "collision_key": "docs/core/07_artifacts/topic13/t13_generic_q_image_support.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
-      "consumer_count": 2,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 1,
+      "disposition": "generator_and_consumer_rewrite_required",
       "downstream_dependencies": [
-        "docs/scripts/audit/audit_topic13_generic_q_image_support.py",
         "docs/scripts/audit/audit_topic13_patch_position_sensitivity.py"
       ],
       "equation_family_or_lane": "generated_core_artifact",
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
       "formula_ids": [],
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/audit_topic13_generic_q_image_support.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/audit_topic13_generic_q_image_support.py",
       "legacy_path": "docs/core/artifacts/t13_generic_q_image_support.json",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -12940,10 +12914,9 @@
       "canonical_path": "docs/core/07_artifacts/topic13/t13_material_interface_factor_resolution_audit.json",
       "collision_key": "docs/core/07_artifacts/topic13/t13_material_interface_factor_resolution_audit.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
-      "consumer_count": 5,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 4,
+      "disposition": "generator_and_consumer_rewrite_required",
       "downstream_dependencies": [
-        "docs/core/test/test_topic13_material_interface_factor_resolution.py",
         "docs/scripts/audit/audit_topic13_material_interface_factor_resolution.py",
         "docs/scripts/audit/audit_topic13_scalar_thermoelastic_response_bridge.py",
         "docs/topics/0.13_Thermodynamic_Bridge/README.md",
@@ -12953,9 +12926,11 @@
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
       "formula_ids": [],
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/core/test/test_topic13_material_interface_factor_resolution.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/core/test/test_topic13_material_interface_factor_resolution.py",
       "legacy_path": "docs/core/artifacts/t13_material_interface_factor_resolution_audit.json",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -13579,11 +13554,10 @@
       "canonical_path": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.json",
       "collision_key": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
-      "consumer_count": 7,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 6,
+      "disposition": "generator_and_consumer_rewrite_required",
       "downstream_dependencies": [
         "docs/core/test/test_topic13_mp48_mode_resolved_csrc_diagnostic.py",
-        "docs/scripts/audit/audit_topic13_mp48_mode_resolved_csrc_diagnostic.py",
         "docs/topics/0.13_Thermodynamic_Bridge/DATA_MANIFEST.md",
         "docs/topics/0.13_Thermodynamic_Bridge/FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md",
         "docs/topics/0.13_Thermodynamic_Bridge/README.md",
@@ -13594,9 +13568,11 @@
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
       "formula_ids": [],
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/audit_topic13_mp48_mode_resolved_csrc_diagnostic.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/audit_topic13_mp48_mode_resolved_csrc_diagnostic.py",
       "legacy_path": "docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.json",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -13630,11 +13606,10 @@
       "canonical_path": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz",
       "collision_key": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
-      "consumer_count": 7,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 6,
+      "disposition": "generator_and_consumer_rewrite_required",
       "downstream_dependencies": [
         "docs/core/test/test_topic13_mp48_mode_resolved_csrc_diagnostic.py",
-        "docs/scripts/audit/audit_topic13_mp48_mode_resolved_csrc_diagnostic.py",
         "docs/topics/0.13_Thermodynamic_Bridge/DATA_MANIFEST.md",
         "docs/topics/0.13_Thermodynamic_Bridge/FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md",
         "docs/topics/0.13_Thermodynamic_Bridge/README.md",
@@ -13645,9 +13620,11 @@
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
       "formula_ids": [],
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/audit_topic13_mp48_mode_resolved_csrc_diagnostic.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/audit_topic13_mp48_mode_resolved_csrc_diagnostic.py",
       "legacy_path": "docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.npz",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -14374,19 +14351,20 @@
       "canonical_path": "docs/core/07_artifacts/topic13/t13_outer_bragg_profiles.json",
       "collision_key": "docs/core/07_artifacts/topic13/t13_outer_bragg_profiles.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
-      "consumer_count": 2,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 1,
+      "disposition": "generator_and_consumer_rewrite_required",
       "downstream_dependencies": [
-        "docs/scripts/audit/audit_topic13_outer_bragg_profiles.py",
         "docs/scripts/audit/audit_topic13_profile_residual_baseline_scatter.py"
       ],
       "equation_family_or_lane": "generated_core_artifact",
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
       "formula_ids": [],
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/audit_topic13_outer_bragg_profiles.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/audit_topic13_outer_bragg_profiles.py",
       "legacy_path": "docs/core/artifacts/t13_outer_bragg_profiles.json",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -15237,18 +15215,18 @@
       "canonical_path": "docs/core/07_artifacts/topic13/t13_profile_residual_baseline_scatter.json",
       "collision_key": "docs/core/07_artifacts/topic13/t13_profile_residual_baseline_scatter.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
-      "consumer_count": 1,
-      "disposition": "generator_identity_not_resolved",
-      "downstream_dependencies": [
-        "docs/scripts/audit/audit_topic13_profile_residual_baseline_scatter.py"
-      ],
+      "consumer_count": 0,
+      "disposition": "generator_switch_required_before_move",
+      "downstream_dependencies": [],
       "equation_family_or_lane": "generated_core_artifact",
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
       "formula_ids": [],
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/audit_topic13_profile_residual_baseline_scatter.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/audit_topic13_profile_residual_baseline_scatter.py",
       "legacy_path": "docs/core/artifacts/t13_profile_residual_baseline_scatter.json",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -15711,10 +15689,9 @@
       "canonical_path": "docs/core/07_artifacts/topic13/t13_scalar_thermoelastic_response_bridge_audit.json",
       "collision_key": "docs/core/07_artifacts/topic13/t13_scalar_thermoelastic_response_bridge_audit.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
-      "consumer_count": 5,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 4,
+      "disposition": "generator_and_consumer_rewrite_required",
       "downstream_dependencies": [
-        "docs/core/test/test_topic13_scalar_thermoelastic_response_bridge.py",
         "docs/scripts/audit/audit_topic13_anisotropic_thermoelastic_response_bridge.py",
         "docs/scripts/audit/audit_topic13_scalar_thermoelastic_response_bridge.py",
         "docs/topics/0.13_Thermodynamic_Bridge/README.md",
@@ -15724,9 +15701,11 @@
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
       "formula_ids": [],
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/core/test/test_topic13_scalar_thermoelastic_response_bridge.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/core/test/test_topic13_scalar_thermoelastic_response_bridge.py",
       "legacy_path": "docs/core/artifacts/t13_scalar_thermoelastic_response_bridge_audit.json",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -22563,7 +22542,7 @@
       "rollback_path": "docs/core/artifacts/uet_core_file_manifest.json",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_after": null,
-      "sha256_before": "590bbc39002eefab5296891faee2ee5916051a138f5f90c14d26792474258935",
+      "sha256_before": "bc5edad0275a4113e56e5b2a293c7be94617902ea9daf32e052ef4784c6eed2d",
       "source_or_generated": "generated",
       "status_source": "artifact_migration_manifest",
       "upstream_dependencies": [],
@@ -22609,7 +22588,7 @@
       "rollback_path": "docs/core/artifacts/uet_core_file_migration_map.json",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_after": null,
-      "sha256_before": "8453b2ec08b0571df6c95cb096ea81883ca3d4a37fbe5a4f03ad2bf5bdae4b1d",
+      "sha256_before": "7c08f0b3624b905e003eed5bb0b2843eb62a9f28022cfcdea37631c96a5d0f06",
       "source_or_generated": "generated",
       "status_source": "artifact_migration_manifest",
       "upstream_dependencies": [],
@@ -22654,7 +22633,7 @@
       "rollback_path": "docs/core/artifacts/uet_core_organization_audit.json",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_after": null,
-      "sha256_before": "f231358256ef3f948f4ad001062c8b405fc5bcbb61ed37ee50760bcd3f22faf2",
+      "sha256_before": "c913cd45c63a7b0fbecd3b63643d4d4f23c20e5ff00af820e220992b1221cdf7",
       "source_or_generated": "generated",
       "status_source": "artifact_migration_manifest",
       "upstream_dependencies": [],
@@ -23171,7 +23150,7 @@
       "collision_key": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_covariant_diffusion_addendum.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
       "consumer_count": 1,
-      "disposition": "generator_identity_not_resolved",
+      "disposition": "generator_and_consumer_rewrite_required",
       "downstream_dependencies": [
         "docs/scripts/audit/build_uet_noether_mapping_correspondence.py"
       ],
@@ -23179,9 +23158,11 @@
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
       "formula_ids": [],
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/build_uet_covariant_diffusion_correspondence.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/build_uet_covariant_diffusion_correspondence.py",
       "legacy_path": "docs/core/artifacts/uet_equation_correspondence_registry_covariant_diffusion_addendum.json",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -23487,15 +23468,17 @@
       "collision_key": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_noether_mapping_addendum.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
       "consumer_count": 0,
-      "disposition": "generator_identity_not_resolved",
+      "disposition": "generator_switch_required_before_move",
       "downstream_dependencies": [],
       "equation_family_or_lane": "generated_core_artifact",
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
       "formula_ids": [],
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/build_uet_noether_mapping_correspondence.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/build_uet_noether_mapping_correspondence.py",
       "legacy_path": "docs/core/artifacts/uet_equation_correspondence_registry_noether_mapping_addendum.json",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -23724,7 +23707,7 @@
       "collision_key": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_anisotropic_thermoelastic_bridge_addendum.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
       "consumer_count": 2,
-      "disposition": "generator_identity_not_resolved",
+      "disposition": "generator_and_consumer_rewrite_required",
       "downstream_dependencies": [
         "docs/scripts/audit/audit_topic13_anisotropic_thermoelastic_response_bridge.py",
         "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
@@ -23733,9 +23716,11 @@
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
       "formula_ids": [],
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/core/test/test_topic13_anisotropic_thermoelastic_response_bridge.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/core/test/test_topic13_anisotropic_thermoelastic_response_bridge.py",
       "legacy_path": "docs/core/artifacts/uet_equation_correspondence_registry_topic13_anisotropic_thermoelastic_bridge_addendum.json",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -23765,10 +23750,9 @@
       "canonical_path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_calorine_lattice_inputs_addendum.json",
       "collision_key": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_calorine_lattice_inputs_addendum.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
-      "consumer_count": 3,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 2,
+      "disposition": "generator_and_consumer_rewrite_required",
       "downstream_dependencies": [
-        "docs/core/test/test_topic13_calorine_lattice_interface_inputs.py",
         "docs/scripts/audit/audit_topic13_calorine_lattice_interface_inputs.py",
         "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
       ],
@@ -23776,9 +23760,11 @@
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
       "formula_ids": [],
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/core/test/test_topic13_calorine_lattice_interface_inputs.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/core/test/test_topic13_calorine_lattice_interface_inputs.py",
       "legacy_path": "docs/core/artifacts/uet_equation_correspondence_registry_topic13_calorine_lattice_inputs_addendum.json",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -24770,10 +24756,9 @@
       "canonical_path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_lattice_heat_parent_addendum.json",
       "collision_key": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_lattice_heat_parent_addendum.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
-      "consumer_count": 3,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 2,
+      "disposition": "generator_and_consumer_rewrite_required",
       "downstream_dependencies": [
-        "docs/core/test/test_topic13_lattice_momentum_relaxing_heat_parent.py",
         "docs/scripts/audit/audit_topic13_lattice_momentum_relaxing_heat_parent.py",
         "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
       ],
@@ -24781,9 +24766,11 @@
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
       "formula_ids": [],
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/core/test/test_topic13_lattice_momentum_relaxing_heat_parent.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/core/test/test_topic13_lattice_momentum_relaxing_heat_parent.py",
       "legacy_path": "docs/core/artifacts/uet_equation_correspondence_registry_topic13_lattice_heat_parent_addendum.json",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -24814,7 +24801,7 @@
       "collision_key": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_material_interface_factor_resolution_addendum.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
       "consumer_count": 2,
-      "disposition": "generator_identity_not_resolved",
+      "disposition": "generator_and_consumer_rewrite_required",
       "downstream_dependencies": [
         "docs/scripts/audit/audit_topic13_material_interface_factor_resolution.py",
         "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
@@ -24823,9 +24810,11 @@
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
       "formula_ids": [],
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/core/test/test_topic13_material_interface_factor_resolution.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/core/test/test_topic13_material_interface_factor_resolution.py",
       "legacy_path": "docs/core/artifacts/uet_equation_correspondence_registry_topic13_material_interface_factor_resolution_addendum.json",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -24855,10 +24844,9 @@
       "canonical_path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_material_lattice_interface_addendum.json",
       "collision_key": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_material_lattice_interface_addendum.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
-      "consumer_count": 3,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 2,
+      "disposition": "generator_and_consumer_rewrite_required",
       "downstream_dependencies": [
-        "docs/core/test/test_topic13_material_lattice_interface_contract.py",
         "docs/scripts/audit/audit_topic13_material_lattice_interface_contract.py",
         "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
       ],
@@ -24866,9 +24854,11 @@
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
       "formula_ids": [],
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/core/test/test_topic13_material_lattice_interface_contract.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/core/test/test_topic13_material_lattice_interface_contract.py",
       "legacy_path": "docs/core/artifacts/uet_equation_correspondence_registry_topic13_material_lattice_interface_addendum.json",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -25211,7 +25201,7 @@
       "collision_key": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_scalar_thermoelastic_bridge_addendum.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
       "consumer_count": 2,
-      "disposition": "generator_identity_not_resolved",
+      "disposition": "generator_and_consumer_rewrite_required",
       "downstream_dependencies": [
         "docs/scripts/audit/audit_topic13_scalar_thermoelastic_response_bridge.py",
         "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
@@ -25220,9 +25210,11 @@
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
       "formula_ids": [],
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/core/test/test_topic13_scalar_thermoelastic_response_bridge.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/core/test/test_topic13_scalar_thermoelastic_response_bridge.py",
       "legacy_path": "docs/core/artifacts/uet_equation_correspondence_registry_topic13_scalar_thermoelastic_bridge_addendum.json",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -25561,10 +25553,9 @@
       "canonical_path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_umklapp_no_go_addendum.json",
       "collision_key": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_umklapp_no_go_addendum.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
-      "consumer_count": 3,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 2,
+      "disposition": "generator_and_consumer_rewrite_required",
       "downstream_dependencies": [
-        "docs/core/test/test_topic13_continuum_action_umklapp_no_go.py",
         "docs/scripts/audit/audit_topic13_continuum_action_umklapp_no_go.py",
         "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
       ],
@@ -25572,9 +25563,11 @@
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
       "formula_ids": [],
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/core/test/test_topic13_continuum_action_umklapp_no_go.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/core/test/test_topic13_continuum_action_umklapp_no_go.py",
       "legacy_path": "docs/core/artifacts/uet_equation_correspondence_registry_topic13_umklapp_no_go_addendum.json",
       "legacy_reference_paths": [
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
@@ -25811,13 +25804,12 @@
       "canonical_path": "docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json",
       "collision_key": "docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
-      "consumer_count": 5,
+      "consumer_count": 4,
       "disposition": "generator_and_consumer_rewrite_required",
       "downstream_dependencies": [
         "docs/scripts/audit/audit_uet_foundation_dependency_gate.py",
         "docs/scripts/audit/build_uet_core_equation_family_contract.py",
         "docs/scripts/audit/build_uet_foundation_compatibility_decision.py",
-        "docs/scripts/audit/build_uet_foundation_correspondence_matrix.py",
         "docs/scripts/audit/build_uet_foundation_status_aggregate.py"
       ],
       "equation_family_or_lane": "generated_core_artifact",
@@ -25825,10 +25817,11 @@
       "file_kind": "generated_artifact",
       "formula_ids": [],
       "generator_candidates": [
-        "docs/scripts/audit/audit_uet_foundation_compatibility.py"
+        "docs/scripts/audit/audit_uet_foundation_compatibility.py",
+        "docs/scripts/audit/build_uet_foundation_correspondence_matrix.py"
       ],
-      "generator_count": 1,
-      "generator_path": "docs/scripts/audit/audit_uet_foundation_compatibility.py",
+      "generator_count": 2,
+      "generator_path": null,
       "legacy_path": "docs/core/artifacts/uet_foundation_compatibility_gate.json",
       "legacy_reference_paths": [
         "WORK_LEDGER/2026/2026-07-26.md",
@@ -26036,7 +26029,7 @@
       "canonical_path": "docs/core/07_artifacts/gates/uet_foundation_equation_inventory.json",
       "collision_key": "docs/core/07_artifacts/gates/uet_foundation_equation_inventory.json",
       "compatibility_mode": "legacy_artifact_index_until_consumer_switch",
-      "consumer_count": 12,
+      "consumer_count": 11,
       "disposition": "generator_and_consumer_rewrite_required",
       "downstream_dependencies": [
         "docs/core/01_contracts/UET_FOUNDATION_EQUATION_INVENTORY.md",
@@ -26047,7 +26040,6 @@
         "docs/scripts/audit/build_uet_active_correspondence_contract.py",
         "docs/scripts/audit/build_uet_code_surface_inventory.py",
         "docs/scripts/audit/build_uet_foundation_compatibility_decision.py",
-        "docs/scripts/audit/build_uet_foundation_correspondence_matrix.py",
         "docs/scripts/audit/build_uet_foundation_coverage_closure.py",
         "docs/scripts/audit/build_uet_foundation_status_aggregate.py",
         "docs/scripts/audit/build_uet_full_correspondence_coverage.py"
@@ -26057,10 +26049,11 @@
       "file_kind": "generated_artifact",
       "formula_ids": [],
       "generator_candidates": [
-        "docs/scripts/audit/build_uet_equation_inventory.py"
+        "docs/scripts/audit/build_uet_equation_inventory.py",
+        "docs/scripts/audit/build_uet_foundation_correspondence_matrix.py"
       ],
-      "generator_count": 1,
-      "generator_path": "docs/scripts/audit/build_uet_equation_inventory.py",
+      "generator_count": 2,
+      "generator_path": null,
       "legacy_path": "docs/core/artifacts/uet_foundation_equation_inventory.json",
       "legacy_reference_paths": [
         "WORK_LEDGER/2026/2026-07-26.md",
@@ -28014,7 +28007,7 @@
       "rollback_path": "docs/core/artifacts/uet_research_organization_registry.json",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_after": null,
-      "sha256_before": "f934e38ca73b9ef8cf8958db1dfd1e777793a73922aaefd3d42302e6b15e7dfe",
+      "sha256_before": "884695becc59c0fb723ff65902cf68e5ffcf80b327cba48539e809504a2d6380",
       "source_or_generated": "generated",
       "status_source": "artifact_migration_manifest",
       "upstream_dependencies": [],
@@ -28403,6 +28396,50 @@
     {
       "active_consumers": [],
       "artifact_paths": [],
+      "asset_id": "UET-ARTIFACT-945922F305EF",
+      "canonical_path": "docs/core/07_artifacts/provenance/resource_selection_dynamic_game_contract.json",
+      "collision_key": "docs/core/07_artifacts/provenance/resource_selection_dynamic_game_contract.json",
+      "compatibility_mode": "legacy_index_only",
+      "consumer_count": 0,
+      "disposition": "migrated_canonical_output",
+      "downstream_dependencies": [],
+      "equation_family_or_lane": "generated_core_artifact",
+      "evidence_status": "INTERNAL",
+      "file_kind": "generated_artifact",
+      "formula_ids": [],
+      "generator_candidates": [
+        "docs/scripts/audit/audit_resource_selection.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/audit_resource_selection.py",
+      "legacy_path": "docs/core/artifacts/resource_selection_dynamic_game_contract.json",
+      "legacy_reference_paths": [
+        "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
+        "docs/core/00_governance/uet_core_physical_migration_manifest.json",
+        "docs/scripts/audit/audit_resource_selection.py"
+      ],
+      "logical_area": "07_artifacts",
+      "migrated_at": "2026-09-14T17:07:35+00:00",
+      "migration_state": "MIGRATED",
+      "migration_wave": "artifact_family_bounded_move",
+      "next_action": "refresh_generated_indexes_and_verify_canonical_consumer_paths",
+      "organization_status": "ASSIGNED",
+      "owner_id": "EVIDENCE",
+      "preflight_generator_output_sha256": "f16246b05cbdeff3111e3e010994e4242d87a6c41f7dfab25a00c492cc3881e1",
+      "rollback_path": "docs/core/artifacts/resource_selection_dynamic_game_contract.json",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "semantic_ignored_paths": [],
+      "semantic_payload_sha256": "3dbdfb1028ce6a65e6fb57fcb2aa4d88b992ead7a7f9dd6977310cfe90bcf143",
+      "sha256_after": "f16246b05cbdeff3111e3e010994e4242d87a6c41f7dfab25a00c492cc3881e1",
+      "sha256_before": "f16246b05cbdeff3111e3e010994e4242d87a6c41f7dfab25a00c492cc3881e1",
+      "source_or_generated": "generated",
+      "status_source": "artifact_migration_manifest",
+      "upstream_dependencies": [],
+      "verifier_paths": []
+    },
+    {
+      "active_consumers": [],
+      "artifact_paths": [],
       "asset_id": "UET-ARTIFACT-188A16F8BBBD",
       "canonical_path": "docs/core/07_artifacts/provenance/resource_selection_physical_cost_map_verification.json",
       "collision_key": "docs/core/07_artifacts/provenance/resource_selection_physical_cost_map_verification.json",
@@ -28494,24 +28531,24 @@
   "schema_version": "1.0",
   "scope": "docs/core/artifacts generated JSON and NPZ outputs",
   "summary": {
-    "active_legacy_files": 589,
+    "active_legacy_files": 588,
     "claim_promotion": false,
-    "consumer_rewrite_required": 538,
+    "consumer_rewrite_required": 535,
     "disposition_counts": {
-      "generator_and_consumer_rewrite_required": 50,
-      "generator_identity_not_resolved": 536,
-      "generator_switch_required_before_move": 3,
-      "migrated_canonical_output": 4
+      "generator_and_consumer_rewrite_required": 70,
+      "generator_identity_not_resolved": 510,
+      "generator_switch_required_before_move": 8,
+      "migrated_canonical_output": 5
     },
     "duplicate_targets": {},
     "existing_target_conflicts": [],
-    "files_migrated_in_prior_waves": 4,
+    "files_migrated_in_prior_waves": 5,
     "files_total": 593,
-    "generator_identity_ambiguous": 0,
-    "generator_identity_missing": 536,
-    "generator_identity_resolved": 57,
+    "generator_identity_ambiguous": 6,
+    "generator_identity_missing": 510,
+    "generator_identity_resolved": 77,
     "json_files": 592,
-    "migrated_files": 4,
+    "migrated_files": 5,
     "npz_files": 1,
     "physical_move_performed": true,
     "physics_status_changes": 0

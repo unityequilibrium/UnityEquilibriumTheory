@@ -166,7 +166,20 @@ def classify_generator(path: str, name: str) -> bool:
     text = load_text(ROOT / path)
     if name not in text:
         return False
-    return bool(re.search(rf"(?im)^\s*(?:OUTPUT|OUTPUT_PATH|ARTIFACT_PATH|output)\s*=\s*[^\n]*{re.escape(name)}", text))
+    lines = text.splitlines()
+    assignment = re.compile(r"(?im)^\s*(?:OUTPUT|OUTPUT_PATH|ARTIFACT_PATH|output)\s*=")
+    top_level_assignment = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*\s*=")
+    for index, line in enumerate(lines):
+        if not assignment.search(line):
+            continue
+        block = [line]
+        for continuation in lines[index + 1 :]:
+            if continuation and not continuation[0].isspace() and top_level_assignment.match(continuation):
+                break
+            block.append(continuation)
+        if name in "\n".join(block):
+            return True
+    return False
 
 
 def references_legacy_artifact(path: str, name: str) -> bool:

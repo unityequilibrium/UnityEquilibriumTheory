@@ -1,7 +1,7 @@
 {
   "artifact": "uet_core_artifact_generator_review_queue",
   "canonical_path_authority": "docs/core/core_paths.py",
-  "generated_at": "2026-09-14T16:23:42+00:00",
+  "generated_at": "2026-09-14T17:35:05+00:00",
   "generator": "docs/scripts/audit/build_uet_core_artifact_generator_review_queue_v3.py",
   "records": [
     {
@@ -2710,19 +2710,21 @@
       "active_consumers": [],
       "artifact_name": "legacy_covariance_alignment_gate.json",
       "asset_id": "UET-ARTIFACT-4FCE9F354184",
-      "blocker": "no unique generator identity is recorded",
+      "blocker": "the unique generator must write the canonical path before preflight",
       "canonical_path": "docs/core/07_artifacts/gates/legacy_covariance_alignment_gate.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
       "consumer_count": 0,
-      "disposition": "generator_identity_not_resolved",
+      "disposition": "generator_switch_required_before_move",
       "evidence_status": "INTERNAL",
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/audit_uet_gr_legacy_alignment.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/audit_uet_gr_legacy_alignment.py",
       "generator_status": {
         "contains_legacy_output_literal": false,
-        "path_exists": false,
-        "status": "UNRESOLVED",
+        "path_exists": true,
+        "status": "LEGACY_OUTPUT_PATH_OR_UNDECLARED",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/legacy_covariance_alignment_gate.json",
@@ -2736,10 +2738,10 @@
       ],
       "logical_area": "07_artifacts",
       "migration_state": "NOT_STARTED",
-      "next_action": "identify and source-lock the sole artifact generator before any move",
+      "next_action": "switch the generator, run a bounded semantic preflight, then decide move or block",
       "owner_id": "EVIDENCE",
-      "preflight_required": false,
-      "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
+      "preflight_required": true,
+      "review_category": "GENERATOR_SWITCH_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "a17009083710af0d537f53754ed02652354a923205652819c7f81dbe49137548"
     },
@@ -3252,7 +3254,6 @@
     },
     {
       "active_consumers": [
-        "docs/scripts/audit/audit_matter_space_finite_cone_integration.py",
         "docs/scripts/audit/audit_matter_space_topic_pilot_sync.py",
         "docs/scripts/audit/audit_uet_foundation_dependency_gate.py",
         "docs/scripts/audit/audit_uet_wave3_wave10_program.py",
@@ -3263,18 +3264,19 @@
       "blocker": "active consumers still reference the legacy artifact boundary",
       "canonical_path": "docs/core/07_artifacts/archive/matter_space_causal_lane_selection.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
-      "consumer_count": 5,
+      "consumer_count": 4,
       "disposition": "generator_and_consumer_rewrite_required",
       "evidence_status": "INTERNAL",
       "generator_candidates": [
-        "docs/scripts/audit/audit_matter_space_causal_lane_selection.py"
+        "docs/scripts/audit/audit_matter_space_causal_lane_selection.py",
+        "docs/scripts/audit/audit_matter_space_finite_cone_integration.py"
       ],
-      "generator_count": 1,
-      "generator_path": "docs/scripts/audit/audit_matter_space_causal_lane_selection.py",
+      "generator_count": 2,
+      "generator_path": null,
       "generator_status": {
         "contains_legacy_output_literal": false,
-        "path_exists": true,
-        "status": "LEGACY_OUTPUT_PATH_OR_UNDECLARED",
+        "path_exists": false,
+        "status": "UNRESOLVED",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/matter_space_causal_lane_selection.json",
@@ -3438,7 +3440,6 @@
     {
       "active_consumers": [
         "docs/scripts/audit/audit_matter_space_causal_lane_selection.py",
-        "docs/scripts/audit/audit_matter_space_finite_cone_integration.py",
         "docs/scripts/audit/audit_matter_space_topic_pilot_sync.py",
         "docs/scripts/audit/audit_uet_foundation_dependency_gate.py",
         "docs/scripts/audit/audit_uet_wave3_wave10_program.py",
@@ -3449,18 +3450,19 @@
       "blocker": "active consumers still reference the legacy artifact boundary",
       "canonical_path": "docs/core/07_artifacts/verification/matter_space_characteristic_cone_verification.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
-      "consumer_count": 6,
+      "consumer_count": 5,
       "disposition": "generator_and_consumer_rewrite_required",
       "evidence_status": "INTERNAL",
       "generator_candidates": [
-        "docs/scripts/audit/audit_matter_space_characteristic.py"
+        "docs/scripts/audit/audit_matter_space_characteristic.py",
+        "docs/scripts/audit/audit_matter_space_finite_cone_integration.py"
       ],
-      "generator_count": 1,
-      "generator_path": "docs/scripts/audit/audit_matter_space_characteristic.py",
+      "generator_count": 2,
+      "generator_path": null,
       "generator_status": {
         "contains_legacy_output_literal": false,
-        "path_exists": true,
-        "status": "LEGACY_OUTPUT_PATH_OR_UNDECLARED",
+        "path_exists": false,
+        "status": "UNRESOLVED",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/matter_space_characteristic_cone_verification.json",
@@ -3778,7 +3780,6 @@
     },
     {
       "active_consumers": [
-        "docs/scripts/audit/audit_matter_space_finite_cone_integration.py",
         "docs/scripts/audit/audit_matter_space_topic_pilot_sync.py",
         "docs/scripts/audit/audit_uet_foundation_dependency_gate.py",
         "docs/scripts/audit/audit_uet_wave3_wave10_program.py"
@@ -3788,18 +3789,19 @@
       "blocker": "active consumers still reference the legacy artifact boundary",
       "canonical_path": "docs/core/07_artifacts/verification/matter_space_observable_verification.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
-      "consumer_count": 4,
+      "consumer_count": 3,
       "disposition": "generator_and_consumer_rewrite_required",
       "evidence_status": "INTERNAL",
       "generator_candidates": [
+        "docs/scripts/audit/audit_matter_space_finite_cone_integration.py",
         "docs/scripts/audit/audit_matter_space_observable.py"
       ],
-      "generator_count": 1,
-      "generator_path": "docs/scripts/audit/audit_matter_space_observable.py",
+      "generator_count": 2,
+      "generator_path": null,
       "generator_status": {
         "contains_legacy_output_literal": false,
-        "path_exists": true,
-        "status": "LEGACY_OUTPUT_PATH_OR_UNDECLARED",
+        "path_exists": false,
+        "status": "UNRESOLVED",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/matter_space_observable_verification.json",
@@ -3906,24 +3908,24 @@
       "sha256_before": "06eb4f686b3c436e345877acccacfc69c1f62c9fa1fa8f0e4d62c2f5381b119d"
     },
     {
-      "active_consumers": [
-        "docs/scripts/audit/audit_matter_space_report_alignment.py"
-      ],
+      "active_consumers": [],
       "artifact_name": "matter_space_report_alignment_gate.json",
       "asset_id": "UET-ARTIFACT-6763B55DD993",
-      "blocker": "no unique generator identity is recorded",
+      "blocker": "the unique generator must write the canonical path before preflight",
       "canonical_path": "docs/core/07_artifacts/gates/matter_space_report_alignment_gate.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
-      "consumer_count": 1,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 0,
+      "disposition": "generator_switch_required_before_move",
       "evidence_status": "INTERNAL",
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/audit_matter_space_report_alignment.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/audit_matter_space_report_alignment.py",
       "generator_status": {
-        "contains_legacy_output_literal": false,
-        "path_exists": false,
-        "status": "UNRESOLVED",
+        "contains_legacy_output_literal": true,
+        "path_exists": true,
+        "status": "LEGACY_OUTPUT_LITERAL_REMAINS",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/matter_space_report_alignment_gate.json",
@@ -3938,10 +3940,10 @@
       ],
       "logical_area": "07_artifacts",
       "migration_state": "NOT_STARTED",
-      "next_action": "identify and source-lock the sole artifact generator before any move",
+      "next_action": "switch the generator, run a bounded semantic preflight, then decide move or block",
       "owner_id": "EVIDENCE",
-      "preflight_required": false,
-      "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
+      "preflight_required": true,
+      "review_category": "GENERATOR_SWITCH_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "2227c8d0afdecb03b9a89f8805ce4097735652784403162a55271e0d9a195b40"
     },
@@ -3993,7 +3995,6 @@
     },
     {
       "active_consumers": [
-        "docs/scripts/audit/audit_matter_space_finite_cone_integration.py",
         "docs/scripts/audit/audit_uet_all_waves_closure.py",
         "docs/scripts/audit/audit_uet_foundation_dependency_gate.py",
         "docs/scripts/audit/audit_uet_wave3_wave10_program.py"
@@ -4003,18 +4004,19 @@
       "blocker": "active consumers still reference the legacy artifact boundary",
       "canonical_path": "docs/core/07_artifacts/archive/matter_space_topic_pilot_sync.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
-      "consumer_count": 4,
+      "consumer_count": 3,
       "disposition": "generator_and_consumer_rewrite_required",
       "evidence_status": "INTERNAL",
       "generator_candidates": [
+        "docs/scripts/audit/audit_matter_space_finite_cone_integration.py",
         "docs/scripts/audit/audit_matter_space_topic_pilot_sync.py"
       ],
-      "generator_count": 1,
-      "generator_path": "docs/scripts/audit/audit_matter_space_topic_pilot_sync.py",
+      "generator_count": 2,
+      "generator_path": null,
       "generator_status": {
-        "contains_legacy_output_literal": true,
-        "path_exists": true,
-        "status": "LEGACY_OUTPUT_LITERAL_REMAINS",
+        "contains_legacy_output_literal": false,
+        "path_exists": false,
+        "status": "UNRESOLVED",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/matter_space_topic_pilot_sync.json",
@@ -4044,7 +4046,6 @@
         "docs/scripts/audit/audit_matter_space_causal_reference.py",
         "docs/scripts/audit/audit_matter_space_causal_repair.py",
         "docs/scripts/audit/audit_matter_space_core.py",
-        "docs/scripts/audit/audit_matter_space_finite_cone_integration.py",
         "docs/scripts/audit/audit_matter_space_research_program.py",
         "docs/scripts/audit/audit_thermal_wave1_branch_gate.py",
         "docs/scripts/audit/audit_uet_foundation_compatibility.py",
@@ -4061,19 +4062,21 @@
       ],
       "artifact_name": "matter_space_variational_verification.json",
       "asset_id": "UET-ARTIFACT-29F7527F574E",
-      "blocker": "no unique generator identity is recorded",
+      "blocker": "active consumers still reference the legacy artifact boundary",
       "canonical_path": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
-      "consumer_count": 20,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 19,
+      "disposition": "generator_and_consumer_rewrite_required",
       "evidence_status": "INTERNAL",
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/audit_matter_space_finite_cone_integration.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/audit_matter_space_finite_cone_integration.py",
       "generator_status": {
-        "contains_legacy_output_literal": false,
-        "path_exists": false,
-        "status": "UNRESOLVED",
+        "contains_legacy_output_literal": true,
+        "path_exists": true,
+        "status": "LEGACY_OUTPUT_LITERAL_REMAINS",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/matter_space_variational_verification.json",
@@ -4107,10 +4110,10 @@
       ],
       "logical_area": "07_artifacts",
       "migration_state": "NOT_STARTED",
-      "next_action": "identify and source-lock the sole artifact generator before any move",
+      "next_action": "switch the generator and every active consumer through the path authority",
       "owner_id": "EVIDENCE",
-      "preflight_required": false,
-      "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
+      "preflight_required": true,
+      "review_category": "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "e5ae26fb40ff6cd4a0d1d0c86576e91218294e683902bb60b6afb0b2596cc62c"
     },
@@ -4686,19 +4689,21 @@
       ],
       "artifact_name": "resource_persistence_principle_contract.json",
       "asset_id": "UET-ARTIFACT-C822A8C0E91C",
-      "blocker": "no unique generator identity is recorded",
+      "blocker": "active consumers still reference the legacy artifact boundary",
       "canonical_path": "docs/core/07_artifacts/provenance/resource_persistence_principle_contract.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
       "consumer_count": 1,
-      "disposition": "generator_identity_not_resolved",
+      "disposition": "generator_and_consumer_rewrite_required",
       "evidence_status": "INTERNAL",
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/audit_persistence_energy_diagnostic.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/audit_persistence_energy_diagnostic.py",
       "generator_status": {
         "contains_legacy_output_literal": false,
-        "path_exists": false,
-        "status": "UNRESOLVED",
+        "path_exists": true,
+        "status": "LEGACY_OUTPUT_PATH_OR_UNDECLARED",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/resource_persistence_principle_contract.json",
@@ -4711,10 +4716,10 @@
       ],
       "logical_area": "07_artifacts",
       "migration_state": "NOT_STARTED",
-      "next_action": "identify and source-lock the sole artifact generator before any move",
+      "next_action": "switch the generator and every active consumer through the path authority",
       "owner_id": "EVIDENCE",
-      "preflight_required": false,
-      "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
+      "preflight_required": true,
+      "review_category": "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "b9e48a2c1b62348e10e4a781adc73cc98ac22295d16bcb01211e8c5b025477a5"
     },
@@ -4722,20 +4727,22 @@
       "active_consumers": [],
       "artifact_name": "resource_selection_dynamic_game_contract.json",
       "asset_id": "UET-ARTIFACT-945922F305EF",
-      "blocker": "no unique generator identity is recorded",
+      "blocker": "no pending migration action",
       "canonical_path": "docs/core/07_artifacts/provenance/resource_selection_dynamic_game_contract.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
       "consumer_count": 0,
-      "disposition": "generator_identity_not_resolved",
+      "disposition": "migrated_canonical_output",
       "evidence_status": "INTERNAL",
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/audit_resource_selection.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/audit_resource_selection.py",
       "generator_status": {
         "contains_legacy_output_literal": false,
-        "path_exists": false,
-        "status": "UNRESOLVED",
-        "uses_canonical_path_authority": false
+        "path_exists": true,
+        "status": "CANONICAL_PATH_AUTHORITY_PRESENT",
+        "uses_canonical_path_authority": true
       },
       "legacy_path": "docs/core/artifacts/resource_selection_dynamic_game_contract.json",
       "legacy_reference_paths": [
@@ -4744,11 +4751,11 @@
         "docs/scripts/audit/audit_resource_selection.py"
       ],
       "logical_area": "07_artifacts",
-      "migration_state": "NOT_STARTED",
-      "next_action": "identify and source-lock the sole artifact generator before any move",
+      "migration_state": "MIGRATED",
+      "next_action": "retain legacy index boundary and verify canonical consumers",
       "owner_id": "EVIDENCE",
       "preflight_required": false,
-      "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
+      "review_category": "MIGRATED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "f16246b05cbdeff3111e3e010994e4242d87a6c41f7dfab25a00c492cc3881e1"
     },
@@ -4774,7 +4781,7 @@
         "contains_legacy_output_literal": true,
         "path_exists": true,
         "status": "LEGACY_OUTPUT_LITERAL_REMAINS",
-        "uses_canonical_path_authority": false
+        "uses_canonical_path_authority": true
       },
       "legacy_path": "docs/core/artifacts/resource_selection_dynamic_game_verification.json",
       "legacy_reference_paths": [
@@ -5156,7 +5163,6 @@
     },
     {
       "active_consumers": [
-        "docs/core/test/test_topic13_anisotropic_thermoelastic_response_bridge.py",
         "docs/scripts/audit/audit_topic13_anisotropic_thermoelastic_response_bridge.py",
         "docs/scripts/audit/audit_topic13_thermoelastic_spatial_compatibility.py",
         "docs/topics/0.13_Thermodynamic_Bridge/README.md",
@@ -5164,19 +5170,21 @@
       ],
       "artifact_name": "t13_anisotropic_thermoelastic_response_bridge_audit.json",
       "asset_id": "UET-ARTIFACT-AD5EBA723ADB",
-      "blocker": "no unique generator identity is recorded",
+      "blocker": "active consumers still reference the legacy artifact boundary",
       "canonical_path": "docs/core/07_artifacts/topic13/t13_anisotropic_thermoelastic_response_bridge_audit.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
-      "consumer_count": 5,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 4,
+      "disposition": "generator_and_consumer_rewrite_required",
       "evidence_status": "INTERNAL",
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/core/test/test_topic13_anisotropic_thermoelastic_response_bridge.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/core/test/test_topic13_anisotropic_thermoelastic_response_bridge.py",
       "generator_status": {
-        "contains_legacy_output_literal": false,
-        "path_exists": false,
-        "status": "UNRESOLVED",
+        "contains_legacy_output_literal": true,
+        "path_exists": true,
+        "status": "LEGACY_OUTPUT_LITERAL_REMAINS",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/t13_anisotropic_thermoelastic_response_bridge_audit.json",
@@ -5191,33 +5199,34 @@
       ],
       "logical_area": "07_artifacts",
       "migration_state": "NOT_STARTED",
-      "next_action": "identify and source-lock the sole artifact generator before any move",
+      "next_action": "switch the generator and every active consumer through the path authority",
       "owner_id": "EVIDENCE",
-      "preflight_required": false,
-      "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
+      "preflight_required": true,
+      "review_category": "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "9f091208770210f39e7d7ea2b552f2bddeb821999d58d20f3810df0435135312"
     },
     {
       "active_consumers": [
-        "docs/scripts/audit/audit_topic13_basal_coverage_extension.py",
         "docs/scripts/audit/audit_topic13_generic_q_image_support.py"
       ],
       "artifact_name": "t13_basal_coverage_extension.json",
       "asset_id": "UET-ARTIFACT-4292BBF05397",
-      "blocker": "no unique generator identity is recorded",
+      "blocker": "active consumers still reference the legacy artifact boundary",
       "canonical_path": "docs/core/07_artifacts/topic13/t13_basal_coverage_extension.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
-      "consumer_count": 2,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 1,
+      "disposition": "generator_and_consumer_rewrite_required",
       "evidence_status": "INTERNAL",
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/audit_topic13_basal_coverage_extension.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/audit_topic13_basal_coverage_extension.py",
       "generator_status": {
-        "contains_legacy_output_literal": false,
-        "path_exists": false,
-        "status": "UNRESOLVED",
+        "contains_legacy_output_literal": true,
+        "path_exists": true,
+        "status": "LEGACY_OUTPUT_LITERAL_REMAINS",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/t13_basal_coverage_extension.json",
@@ -5230,10 +5239,10 @@
       ],
       "logical_area": "07_artifacts",
       "migration_state": "NOT_STARTED",
-      "next_action": "identify and source-lock the sole artifact generator before any move",
+      "next_action": "switch the generator and every active consumer through the path authority",
       "owner_id": "EVIDENCE",
-      "preflight_required": false,
-      "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
+      "preflight_required": true,
+      "review_category": "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "4347d1d3e1dd741e3f8f260d5efc4b612b7463b9986c35aed3e8b7cd38174e3a"
     },
@@ -5396,24 +5405,24 @@
       "sha256_before": "41197f374b8d3a3811adcbb3f5fd0d62b2df1a1016131e33fd11da9a3377cf05"
     },
     {
-      "active_consumers": [
-        "docs/scripts/audit/audit_topic13_baseline_registration_models.py"
-      ],
+      "active_consumers": [],
       "artifact_name": "t13_baseline_registration_models.json",
       "asset_id": "UET-ARTIFACT-56E6113DCFF1",
-      "blocker": "no unique generator identity is recorded",
+      "blocker": "the unique generator must write the canonical path before preflight",
       "canonical_path": "docs/core/07_artifacts/topic13/t13_baseline_registration_models.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
-      "consumer_count": 1,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 0,
+      "disposition": "generator_switch_required_before_move",
       "evidence_status": "INTERNAL",
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/audit_topic13_baseline_registration_models.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/audit_topic13_baseline_registration_models.py",
       "generator_status": {
-        "contains_legacy_output_literal": false,
-        "path_exists": false,
-        "status": "UNRESOLVED",
+        "contains_legacy_output_literal": true,
+        "path_exists": true,
+        "status": "LEGACY_OUTPUT_LITERAL_REMAINS",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/t13_baseline_registration_models.json",
@@ -5425,10 +5434,10 @@
       ],
       "logical_area": "07_artifacts",
       "migration_state": "NOT_STARTED",
-      "next_action": "identify and source-lock the sole artifact generator before any move",
+      "next_action": "switch the generator, run a bounded semantic preflight, then decide move or block",
       "owner_id": "EVIDENCE",
-      "preflight_required": false,
-      "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
+      "preflight_required": true,
+      "review_category": "GENERATOR_SWITCH_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "80c66dba7c45d16ebb9b9079929674c1e5690535a291887464b8c68479296c66"
     },
@@ -5849,24 +5858,25 @@
         "docs/scripts/audit/audit_topic13_full_bridge_gate.py",
         "docs/scripts/audit/record_topic13_calorine_pbte_reproduction_log.py",
         "docs/scripts/audit/record_topic13_csrc_equilibrium_component_wave.py",
-        "docs/scripts/audit/run_topic13_calorine_isotope_mass_sensitivity.py",
         "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
       ],
       "artifact_name": "t13_calorine_isotope_mass_sensitivity_audit.json",
       "asset_id": "UET-ARTIFACT-CD7DEE48FA05",
-      "blocker": "no unique generator identity is recorded",
+      "blocker": "active consumers still reference the legacy artifact boundary",
       "canonical_path": "docs/core/07_artifacts/topic13/t13_calorine_isotope_mass_sensitivity_audit.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
-      "consumer_count": 6,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 5,
+      "disposition": "generator_and_consumer_rewrite_required",
       "evidence_status": "INTERNAL",
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/run_topic13_calorine_isotope_mass_sensitivity.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/run_topic13_calorine_isotope_mass_sensitivity.py",
       "generator_status": {
-        "contains_legacy_output_literal": false,
-        "path_exists": false,
-        "status": "UNRESOLVED",
+        "contains_legacy_output_literal": true,
+        "path_exists": true,
+        "status": "LEGACY_OUTPUT_LITERAL_REMAINS",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/t13_calorine_isotope_mass_sensitivity_audit.json",
@@ -5883,10 +5893,10 @@
       ],
       "logical_area": "07_artifacts",
       "migration_state": "NOT_STARTED",
-      "next_action": "identify and source-lock the sole artifact generator before any move",
+      "next_action": "switch the generator and every active consumer through the path authority",
       "owner_id": "EVIDENCE",
-      "preflight_required": false,
-      "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
+      "preflight_required": true,
+      "review_category": "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "5db4a9487f728e5275906a1d4514c154b02cee4854fadcc0ea45f3ac6d5a0221"
     },
@@ -9431,19 +9441,21 @@
       ],
       "artifact_name": "t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json",
       "asset_id": "UET-ARTIFACT-585083AA9B00",
-      "blocker": "no unique generator identity is recorded",
+      "blocker": "active consumers still reference the legacy artifact boundary",
       "canonical_path": "docs/core/07_artifacts/topic13/t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
       "consumer_count": 6,
-      "disposition": "generator_identity_not_resolved",
+      "disposition": "generator_and_consumer_rewrite_required",
       "evidence_status": "INTERNAL",
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/core/test/test_topic13_farooqui_ig210_volumetric_cp_uncertainty.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/core/test/test_topic13_farooqui_ig210_volumetric_cp_uncertainty.py",
       "generator_status": {
         "contains_legacy_output_literal": false,
-        "path_exists": false,
-        "status": "UNRESOLVED",
+        "path_exists": true,
+        "status": "LEGACY_OUTPUT_PATH_OR_UNDECLARED",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json",
@@ -9460,10 +9472,10 @@
       ],
       "logical_area": "07_artifacts",
       "migration_state": "NOT_STARTED",
-      "next_action": "identify and source-lock the sole artifact generator before any move",
+      "next_action": "switch the generator and every active consumer through the path authority",
       "owner_id": "EVIDENCE",
-      "preflight_required": false,
-      "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
+      "preflight_required": true,
+      "review_category": "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "7abf9b3292d2d46a2cb476768f452f23f6bad7ef40c2614255cf5c1f55048df0"
     },
@@ -10209,24 +10221,25 @@
     },
     {
       "active_consumers": [
-        "docs/scripts/audit/audit_topic13_generic_q_image_support.py",
         "docs/scripts/audit/audit_topic13_patch_position_sensitivity.py"
       ],
       "artifact_name": "t13_generic_q_image_support.json",
       "asset_id": "UET-ARTIFACT-7F7A636CEA0B",
-      "blocker": "no unique generator identity is recorded",
+      "blocker": "active consumers still reference the legacy artifact boundary",
       "canonical_path": "docs/core/07_artifacts/topic13/t13_generic_q_image_support.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
-      "consumer_count": 2,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 1,
+      "disposition": "generator_and_consumer_rewrite_required",
       "evidence_status": "INTERNAL",
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/audit_topic13_generic_q_image_support.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/audit_topic13_generic_q_image_support.py",
       "generator_status": {
-        "contains_legacy_output_literal": false,
-        "path_exists": false,
-        "status": "UNRESOLVED",
+        "contains_legacy_output_literal": true,
+        "path_exists": true,
+        "status": "LEGACY_OUTPUT_LITERAL_REMAINS",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/t13_generic_q_image_support.json",
@@ -10239,10 +10252,10 @@
       ],
       "logical_area": "07_artifacts",
       "migration_state": "NOT_STARTED",
-      "next_action": "identify and source-lock the sole artifact generator before any move",
+      "next_action": "switch the generator and every active consumer through the path authority",
       "owner_id": "EVIDENCE",
-      "preflight_required": false,
-      "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
+      "preflight_required": true,
+      "review_category": "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "3173cbd73e9a4b2fc188c777d24dd166720be6b5d14e142470c20e56a26cf0c1"
     },
@@ -12233,7 +12246,6 @@
     },
     {
       "active_consumers": [
-        "docs/core/test/test_topic13_material_interface_factor_resolution.py",
         "docs/scripts/audit/audit_topic13_material_interface_factor_resolution.py",
         "docs/scripts/audit/audit_topic13_scalar_thermoelastic_response_bridge.py",
         "docs/topics/0.13_Thermodynamic_Bridge/README.md",
@@ -12241,19 +12253,21 @@
       ],
       "artifact_name": "t13_material_interface_factor_resolution_audit.json",
       "asset_id": "UET-ARTIFACT-55D99506C60F",
-      "blocker": "no unique generator identity is recorded",
+      "blocker": "active consumers still reference the legacy artifact boundary",
       "canonical_path": "docs/core/07_artifacts/topic13/t13_material_interface_factor_resolution_audit.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
-      "consumer_count": 5,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 4,
+      "disposition": "generator_and_consumer_rewrite_required",
       "evidence_status": "INTERNAL",
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/core/test/test_topic13_material_interface_factor_resolution.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/core/test/test_topic13_material_interface_factor_resolution.py",
       "generator_status": {
-        "contains_legacy_output_literal": false,
-        "path_exists": false,
-        "status": "UNRESOLVED",
+        "contains_legacy_output_literal": true,
+        "path_exists": true,
+        "status": "LEGACY_OUTPUT_LITERAL_REMAINS",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/t13_material_interface_factor_resolution_audit.json",
@@ -12268,10 +12282,10 @@
       ],
       "logical_area": "07_artifacts",
       "migration_state": "NOT_STARTED",
-      "next_action": "identify and source-lock the sole artifact generator before any move",
+      "next_action": "switch the generator and every active consumer through the path authority",
       "owner_id": "EVIDENCE",
-      "preflight_required": false,
-      "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
+      "preflight_required": true,
+      "review_category": "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "3bb802c32d27275601584f4ce2a25b3fe28d187aefdb7eced2607938df0eb7be"
     },
@@ -12834,7 +12848,6 @@
     {
       "active_consumers": [
         "docs/core/test/test_topic13_mp48_mode_resolved_csrc_diagnostic.py",
-        "docs/scripts/audit/audit_topic13_mp48_mode_resolved_csrc_diagnostic.py",
         "docs/topics/0.13_Thermodynamic_Bridge/DATA_MANIFEST.md",
         "docs/topics/0.13_Thermodynamic_Bridge/FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md",
         "docs/topics/0.13_Thermodynamic_Bridge/README.md",
@@ -12843,19 +12856,21 @@
       ],
       "artifact_name": "t13_mp48_mode_resolved_csrc_diagnostic.json",
       "asset_id": "UET-ARTIFACT-EB1278D6D545",
-      "blocker": "no unique generator identity is recorded",
+      "blocker": "active consumers still reference the legacy artifact boundary",
       "canonical_path": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
-      "consumer_count": 7,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 6,
+      "disposition": "generator_and_consumer_rewrite_required",
       "evidence_status": "INTERNAL",
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/audit_topic13_mp48_mode_resolved_csrc_diagnostic.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/audit_topic13_mp48_mode_resolved_csrc_diagnostic.py",
       "generator_status": {
-        "contains_legacy_output_literal": false,
-        "path_exists": false,
-        "status": "UNRESOLVED",
+        "contains_legacy_output_literal": true,
+        "path_exists": true,
+        "status": "LEGACY_OUTPUT_LITERAL_REMAINS",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.json",
@@ -12872,17 +12887,16 @@
       ],
       "logical_area": "07_artifacts",
       "migration_state": "NOT_STARTED",
-      "next_action": "identify and source-lock the sole artifact generator before any move",
+      "next_action": "switch the generator and every active consumer through the path authority",
       "owner_id": "EVIDENCE",
-      "preflight_required": false,
-      "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
+      "preflight_required": true,
+      "review_category": "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "c4f1b4ecb22c97bdb0e6cc61b595eca51f394f5ad05456227f38b6420d7e562b"
     },
     {
       "active_consumers": [
         "docs/core/test/test_topic13_mp48_mode_resolved_csrc_diagnostic.py",
-        "docs/scripts/audit/audit_topic13_mp48_mode_resolved_csrc_diagnostic.py",
         "docs/topics/0.13_Thermodynamic_Bridge/DATA_MANIFEST.md",
         "docs/topics/0.13_Thermodynamic_Bridge/FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md",
         "docs/topics/0.13_Thermodynamic_Bridge/README.md",
@@ -12891,19 +12905,21 @@
       ],
       "artifact_name": "t13_mp48_mode_resolved_csrc_diagnostic.npz",
       "asset_id": "UET-ARTIFACT-148122FCEA79",
-      "blocker": "no unique generator identity is recorded",
+      "blocker": "active consumers still reference the legacy artifact boundary",
       "canonical_path": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
-      "consumer_count": 7,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 6,
+      "disposition": "generator_and_consumer_rewrite_required",
       "evidence_status": "INTERNAL",
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/audit_topic13_mp48_mode_resolved_csrc_diagnostic.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/audit_topic13_mp48_mode_resolved_csrc_diagnostic.py",
       "generator_status": {
-        "contains_legacy_output_literal": false,
-        "path_exists": false,
-        "status": "UNRESOLVED",
+        "contains_legacy_output_literal": true,
+        "path_exists": true,
+        "status": "LEGACY_OUTPUT_LITERAL_REMAINS",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.npz",
@@ -12920,10 +12936,10 @@
       ],
       "logical_area": "07_artifacts",
       "migration_state": "NOT_STARTED",
-      "next_action": "identify and source-lock the sole artifact generator before any move",
+      "next_action": "switch the generator and every active consumer through the path authority",
       "owner_id": "EVIDENCE",
-      "preflight_required": false,
-      "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
+      "preflight_required": true,
+      "review_category": "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "fd535acd474382daf8c12bcd8d58b100a7d2fee63ba1c67913ca5556a1e33007"
     },
@@ -13583,24 +13599,25 @@
     },
     {
       "active_consumers": [
-        "docs/scripts/audit/audit_topic13_outer_bragg_profiles.py",
         "docs/scripts/audit/audit_topic13_profile_residual_baseline_scatter.py"
       ],
       "artifact_name": "t13_outer_bragg_profiles.json",
       "asset_id": "UET-ARTIFACT-A0BF1FC3F021",
-      "blocker": "no unique generator identity is recorded",
+      "blocker": "active consumers still reference the legacy artifact boundary",
       "canonical_path": "docs/core/07_artifacts/topic13/t13_outer_bragg_profiles.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
-      "consumer_count": 2,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 1,
+      "disposition": "generator_and_consumer_rewrite_required",
       "evidence_status": "INTERNAL",
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/audit_topic13_outer_bragg_profiles.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/audit_topic13_outer_bragg_profiles.py",
       "generator_status": {
-        "contains_legacy_output_literal": false,
-        "path_exists": false,
-        "status": "UNRESOLVED",
+        "contains_legacy_output_literal": true,
+        "path_exists": true,
+        "status": "LEGACY_OUTPUT_LITERAL_REMAINS",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/t13_outer_bragg_profiles.json",
@@ -13613,10 +13630,10 @@
       ],
       "logical_area": "07_artifacts",
       "migration_state": "NOT_STARTED",
-      "next_action": "identify and source-lock the sole artifact generator before any move",
+      "next_action": "switch the generator and every active consumer through the path authority",
       "owner_id": "EVIDENCE",
-      "preflight_required": false,
-      "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
+      "preflight_required": true,
+      "review_category": "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "4cd01ab87b48ff2a11a8b1df06d34a3df4f497bfaa1c8df9d04a1cdb9cb2c470"
     },
@@ -14391,24 +14408,24 @@
       "sha256_before": "baeded82e544cdf13785f2b50b78581a15968ac8cf2ae455d2678b451ab366a3"
     },
     {
-      "active_consumers": [
-        "docs/scripts/audit/audit_topic13_profile_residual_baseline_scatter.py"
-      ],
+      "active_consumers": [],
       "artifact_name": "t13_profile_residual_baseline_scatter.json",
       "asset_id": "UET-ARTIFACT-C8CC651C95ED",
-      "blocker": "no unique generator identity is recorded",
+      "blocker": "the unique generator must write the canonical path before preflight",
       "canonical_path": "docs/core/07_artifacts/topic13/t13_profile_residual_baseline_scatter.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
-      "consumer_count": 1,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 0,
+      "disposition": "generator_switch_required_before_move",
       "evidence_status": "INTERNAL",
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/audit_topic13_profile_residual_baseline_scatter.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/audit_topic13_profile_residual_baseline_scatter.py",
       "generator_status": {
-        "contains_legacy_output_literal": false,
-        "path_exists": false,
-        "status": "UNRESOLVED",
+        "contains_legacy_output_literal": true,
+        "path_exists": true,
+        "status": "LEGACY_OUTPUT_LITERAL_REMAINS",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/t13_profile_residual_baseline_scatter.json",
@@ -14420,10 +14437,10 @@
       ],
       "logical_area": "07_artifacts",
       "migration_state": "NOT_STARTED",
-      "next_action": "identify and source-lock the sole artifact generator before any move",
+      "next_action": "switch the generator, run a bounded semantic preflight, then decide move or block",
       "owner_id": "EVIDENCE",
-      "preflight_required": false,
-      "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
+      "preflight_required": true,
+      "review_category": "GENERATOR_SWITCH_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "ce7ab7dcdd5a3f0f8a477b64a6ffcadfdf6e3439f516c792ffab7a461c1cbe62"
     },
@@ -14833,7 +14850,6 @@
     },
     {
       "active_consumers": [
-        "docs/core/test/test_topic13_scalar_thermoelastic_response_bridge.py",
         "docs/scripts/audit/audit_topic13_anisotropic_thermoelastic_response_bridge.py",
         "docs/scripts/audit/audit_topic13_scalar_thermoelastic_response_bridge.py",
         "docs/topics/0.13_Thermodynamic_Bridge/README.md",
@@ -14841,19 +14857,21 @@
       ],
       "artifact_name": "t13_scalar_thermoelastic_response_bridge_audit.json",
       "asset_id": "UET-ARTIFACT-678B6F807AC4",
-      "blocker": "no unique generator identity is recorded",
+      "blocker": "active consumers still reference the legacy artifact boundary",
       "canonical_path": "docs/core/07_artifacts/topic13/t13_scalar_thermoelastic_response_bridge_audit.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
-      "consumer_count": 5,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 4,
+      "disposition": "generator_and_consumer_rewrite_required",
       "evidence_status": "INTERNAL",
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/core/test/test_topic13_scalar_thermoelastic_response_bridge.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/core/test/test_topic13_scalar_thermoelastic_response_bridge.py",
       "generator_status": {
-        "contains_legacy_output_literal": false,
-        "path_exists": false,
-        "status": "UNRESOLVED",
+        "contains_legacy_output_literal": true,
+        "path_exists": true,
+        "status": "LEGACY_OUTPUT_LITERAL_REMAINS",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/t13_scalar_thermoelastic_response_bridge_audit.json",
@@ -14869,10 +14887,10 @@
       ],
       "logical_area": "07_artifacts",
       "migration_state": "NOT_STARTED",
-      "next_action": "identify and source-lock the sole artifact generator before any move",
+      "next_action": "switch the generator and every active consumer through the path authority",
       "owner_id": "EVIDENCE",
-      "preflight_required": false,
-      "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
+      "preflight_required": true,
+      "review_category": "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "980cbbfe4d9056fbcce1066f53b88d538184322dc220961932d837282811ba77"
     },
@@ -21261,7 +21279,7 @@
       "preflight_required": false,
       "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256_before": "590bbc39002eefab5296891faee2ee5916051a138f5f90c14d26792474258935"
+      "sha256_before": "bc5edad0275a4113e56e5b2a293c7be94617902ea9daf32e052ef4784c6eed2d"
     },
     {
       "active_consumers": [
@@ -21304,7 +21322,7 @@
       "preflight_required": false,
       "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256_before": "8453b2ec08b0571df6c95cb096ea81883ca3d4a37fbe5a4f03ad2bf5bdae4b1d"
+      "sha256_before": "7c08f0b3624b905e003eed5bb0b2843eb62a9f28022cfcdea37631c96a5d0f06"
     },
     {
       "active_consumers": [
@@ -21346,7 +21364,7 @@
       "preflight_required": false,
       "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256_before": "f231358256ef3f948f4ad001062c8b405fc5bcbb61ed37ee50760bcd3f22faf2"
+      "sha256_before": "c913cd45c63a7b0fbecd3b63643d4d4f23c20e5ff00af820e220992b1221cdf7"
     },
     {
       "active_consumers": [
@@ -21831,19 +21849,21 @@
       ],
       "artifact_name": "uet_equation_correspondence_registry_covariant_diffusion_addendum.json",
       "asset_id": "UET-ARTIFACT-B58889F78118",
-      "blocker": "no unique generator identity is recorded",
+      "blocker": "active consumers still reference the legacy artifact boundary",
       "canonical_path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_covariant_diffusion_addendum.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
       "consumer_count": 1,
-      "disposition": "generator_identity_not_resolved",
+      "disposition": "generator_and_consumer_rewrite_required",
       "evidence_status": "INTERNAL",
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/build_uet_covariant_diffusion_correspondence.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/build_uet_covariant_diffusion_correspondence.py",
       "generator_status": {
         "contains_legacy_output_literal": false,
-        "path_exists": false,
-        "status": "UNRESOLVED",
+        "path_exists": true,
+        "status": "LEGACY_OUTPUT_PATH_OR_UNDECLARED",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/uet_equation_correspondence_registry_covariant_diffusion_addendum.json",
@@ -21856,10 +21876,10 @@
       ],
       "logical_area": "07_artifacts",
       "migration_state": "NOT_STARTED",
-      "next_action": "identify and source-lock the sole artifact generator before any move",
+      "next_action": "switch the generator and every active consumer through the path authority",
       "owner_id": "EVIDENCE",
-      "preflight_required": false,
-      "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
+      "preflight_required": true,
+      "review_category": "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "b65dfd26c0d595c735827e8901899938dfea45f4c6a2f32eda70af2596cd7814"
     },
@@ -22121,19 +22141,21 @@
       "active_consumers": [],
       "artifact_name": "uet_equation_correspondence_registry_noether_mapping_addendum.json",
       "asset_id": "UET-ARTIFACT-C9EBEAB9E1CF",
-      "blocker": "no unique generator identity is recorded",
+      "blocker": "the unique generator must write the canonical path before preflight",
       "canonical_path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_noether_mapping_addendum.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
       "consumer_count": 0,
-      "disposition": "generator_identity_not_resolved",
+      "disposition": "generator_switch_required_before_move",
       "evidence_status": "INTERNAL",
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/scripts/audit/build_uet_noether_mapping_correspondence.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/build_uet_noether_mapping_correspondence.py",
       "generator_status": {
         "contains_legacy_output_literal": false,
-        "path_exists": false,
-        "status": "UNRESOLVED",
+        "path_exists": true,
+        "status": "LEGACY_OUTPUT_PATH_OR_UNDECLARED",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/uet_equation_correspondence_registry_noether_mapping_addendum.json",
@@ -22145,10 +22167,10 @@
       ],
       "logical_area": "07_artifacts",
       "migration_state": "NOT_STARTED",
-      "next_action": "identify and source-lock the sole artifact generator before any move",
+      "next_action": "switch the generator, run a bounded semantic preflight, then decide move or block",
       "owner_id": "EVIDENCE",
-      "preflight_required": false,
-      "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
+      "preflight_required": true,
+      "review_category": "GENERATOR_SWITCH_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "11ed7b48523f3139a2bb8a92f47c36c913c3e0403d93e6ad6ad39ced6fb513df"
     },
@@ -22343,19 +22365,21 @@
       ],
       "artifact_name": "uet_equation_correspondence_registry_topic13_anisotropic_thermoelastic_bridge_addendum.json",
       "asset_id": "UET-ARTIFACT-C413550BB0B5",
-      "blocker": "no unique generator identity is recorded",
+      "blocker": "active consumers still reference the legacy artifact boundary",
       "canonical_path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_anisotropic_thermoelastic_bridge_addendum.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
       "consumer_count": 2,
-      "disposition": "generator_identity_not_resolved",
+      "disposition": "generator_and_consumer_rewrite_required",
       "evidence_status": "INTERNAL",
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/core/test/test_topic13_anisotropic_thermoelastic_response_bridge.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/core/test/test_topic13_anisotropic_thermoelastic_response_bridge.py",
       "generator_status": {
         "contains_legacy_output_literal": false,
-        "path_exists": false,
-        "status": "UNRESOLVED",
+        "path_exists": true,
+        "status": "LEGACY_OUTPUT_PATH_OR_UNDECLARED",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/uet_equation_correspondence_registry_topic13_anisotropic_thermoelastic_bridge_addendum.json",
@@ -22368,34 +22392,35 @@
       ],
       "logical_area": "07_artifacts",
       "migration_state": "NOT_STARTED",
-      "next_action": "identify and source-lock the sole artifact generator before any move",
+      "next_action": "switch the generator and every active consumer through the path authority",
       "owner_id": "EVIDENCE",
-      "preflight_required": false,
-      "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
+      "preflight_required": true,
+      "review_category": "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "9341fd1951a2c1dba0130c5e544da911e7ebaa277d695e1a901dd2ab46598a82"
     },
     {
       "active_consumers": [
-        "docs/core/test/test_topic13_calorine_lattice_interface_inputs.py",
         "docs/scripts/audit/audit_topic13_calorine_lattice_interface_inputs.py",
         "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
       ],
       "artifact_name": "uet_equation_correspondence_registry_topic13_calorine_lattice_inputs_addendum.json",
       "asset_id": "UET-ARTIFACT-9CAD8F946C50",
-      "blocker": "no unique generator identity is recorded",
+      "blocker": "active consumers still reference the legacy artifact boundary",
       "canonical_path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_calorine_lattice_inputs_addendum.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
-      "consumer_count": 3,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 2,
+      "disposition": "generator_and_consumer_rewrite_required",
       "evidence_status": "INTERNAL",
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/core/test/test_topic13_calorine_lattice_interface_inputs.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/core/test/test_topic13_calorine_lattice_interface_inputs.py",
       "generator_status": {
-        "contains_legacy_output_literal": false,
-        "path_exists": false,
-        "status": "UNRESOLVED",
+        "contains_legacy_output_literal": true,
+        "path_exists": true,
+        "status": "LEGACY_OUTPUT_LITERAL_REMAINS",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/uet_equation_correspondence_registry_topic13_calorine_lattice_inputs_addendum.json",
@@ -22408,10 +22433,10 @@
       ],
       "logical_area": "07_artifacts",
       "migration_state": "NOT_STARTED",
-      "next_action": "identify and source-lock the sole artifact generator before any move",
+      "next_action": "switch the generator and every active consumer through the path authority",
       "owner_id": "EVIDENCE",
-      "preflight_required": false,
-      "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
+      "preflight_required": true,
+      "review_category": "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "024f41724965cfb4bc76aacf583c6b28555003641fd5ac2a62570abea36c628c"
     },
@@ -23304,25 +23329,26 @@
     },
     {
       "active_consumers": [
-        "docs/core/test/test_topic13_lattice_momentum_relaxing_heat_parent.py",
         "docs/scripts/audit/audit_topic13_lattice_momentum_relaxing_heat_parent.py",
         "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
       ],
       "artifact_name": "uet_equation_correspondence_registry_topic13_lattice_heat_parent_addendum.json",
       "asset_id": "UET-ARTIFACT-56A57464FA85",
-      "blocker": "no unique generator identity is recorded",
+      "blocker": "active consumers still reference the legacy artifact boundary",
       "canonical_path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_lattice_heat_parent_addendum.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
-      "consumer_count": 3,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 2,
+      "disposition": "generator_and_consumer_rewrite_required",
       "evidence_status": "INTERNAL",
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/core/test/test_topic13_lattice_momentum_relaxing_heat_parent.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/core/test/test_topic13_lattice_momentum_relaxing_heat_parent.py",
       "generator_status": {
-        "contains_legacy_output_literal": false,
-        "path_exists": false,
-        "status": "UNRESOLVED",
+        "contains_legacy_output_literal": true,
+        "path_exists": true,
+        "status": "LEGACY_OUTPUT_LITERAL_REMAINS",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/uet_equation_correspondence_registry_topic13_lattice_heat_parent_addendum.json",
@@ -23335,10 +23361,10 @@
       ],
       "logical_area": "07_artifacts",
       "migration_state": "NOT_STARTED",
-      "next_action": "identify and source-lock the sole artifact generator before any move",
+      "next_action": "switch the generator and every active consumer through the path authority",
       "owner_id": "EVIDENCE",
-      "preflight_required": false,
-      "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
+      "preflight_required": true,
+      "review_category": "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "5a698ee6891c6baf56aa0558efc833783002ca8de10a5993ddfd9b5371c78fd4"
     },
@@ -23349,19 +23375,21 @@
       ],
       "artifact_name": "uet_equation_correspondence_registry_topic13_material_interface_factor_resolution_addendum.json",
       "asset_id": "UET-ARTIFACT-0640E74B4EC8",
-      "blocker": "no unique generator identity is recorded",
+      "blocker": "active consumers still reference the legacy artifact boundary",
       "canonical_path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_material_interface_factor_resolution_addendum.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
       "consumer_count": 2,
-      "disposition": "generator_identity_not_resolved",
+      "disposition": "generator_and_consumer_rewrite_required",
       "evidence_status": "INTERNAL",
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/core/test/test_topic13_material_interface_factor_resolution.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/core/test/test_topic13_material_interface_factor_resolution.py",
       "generator_status": {
         "contains_legacy_output_literal": false,
-        "path_exists": false,
-        "status": "UNRESOLVED",
+        "path_exists": true,
+        "status": "LEGACY_OUTPUT_PATH_OR_UNDECLARED",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/uet_equation_correspondence_registry_topic13_material_interface_factor_resolution_addendum.json",
@@ -23374,34 +23402,35 @@
       ],
       "logical_area": "07_artifacts",
       "migration_state": "NOT_STARTED",
-      "next_action": "identify and source-lock the sole artifact generator before any move",
+      "next_action": "switch the generator and every active consumer through the path authority",
       "owner_id": "EVIDENCE",
-      "preflight_required": false,
-      "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
+      "preflight_required": true,
+      "review_category": "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "31d57069f31741aa8421a207d44457d606bc106d55296cb04f929be8b20bb5c6"
     },
     {
       "active_consumers": [
-        "docs/core/test/test_topic13_material_lattice_interface_contract.py",
         "docs/scripts/audit/audit_topic13_material_lattice_interface_contract.py",
         "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
       ],
       "artifact_name": "uet_equation_correspondence_registry_topic13_material_lattice_interface_addendum.json",
       "asset_id": "UET-ARTIFACT-4CFE63D62F03",
-      "blocker": "no unique generator identity is recorded",
+      "blocker": "active consumers still reference the legacy artifact boundary",
       "canonical_path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_material_lattice_interface_addendum.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
-      "consumer_count": 3,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 2,
+      "disposition": "generator_and_consumer_rewrite_required",
       "evidence_status": "INTERNAL",
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/core/test/test_topic13_material_lattice_interface_contract.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/core/test/test_topic13_material_lattice_interface_contract.py",
       "generator_status": {
-        "contains_legacy_output_literal": false,
-        "path_exists": false,
-        "status": "UNRESOLVED",
+        "contains_legacy_output_literal": true,
+        "path_exists": true,
+        "status": "LEGACY_OUTPUT_LITERAL_REMAINS",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/uet_equation_correspondence_registry_topic13_material_lattice_interface_addendum.json",
@@ -23414,10 +23443,10 @@
       ],
       "logical_area": "07_artifacts",
       "migration_state": "NOT_STARTED",
-      "next_action": "identify and source-lock the sole artifact generator before any move",
+      "next_action": "switch the generator and every active consumer through the path authority",
       "owner_id": "EVIDENCE",
-      "preflight_required": false,
-      "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
+      "preflight_required": true,
+      "review_category": "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "cc5166154fc87403b02798d2fadce2c95a4150d75b4151f8757d2452a2e807fc"
     },
@@ -23716,19 +23745,21 @@
       ],
       "artifact_name": "uet_equation_correspondence_registry_topic13_scalar_thermoelastic_bridge_addendum.json",
       "asset_id": "UET-ARTIFACT-FE68AE4F5258",
-      "blocker": "no unique generator identity is recorded",
+      "blocker": "active consumers still reference the legacy artifact boundary",
       "canonical_path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_scalar_thermoelastic_bridge_addendum.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
       "consumer_count": 2,
-      "disposition": "generator_identity_not_resolved",
+      "disposition": "generator_and_consumer_rewrite_required",
       "evidence_status": "INTERNAL",
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/core/test/test_topic13_scalar_thermoelastic_response_bridge.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/core/test/test_topic13_scalar_thermoelastic_response_bridge.py",
       "generator_status": {
         "contains_legacy_output_literal": false,
-        "path_exists": false,
-        "status": "UNRESOLVED",
+        "path_exists": true,
+        "status": "LEGACY_OUTPUT_PATH_OR_UNDECLARED",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/uet_equation_correspondence_registry_topic13_scalar_thermoelastic_bridge_addendum.json",
@@ -23741,10 +23772,10 @@
       ],
       "logical_area": "07_artifacts",
       "migration_state": "NOT_STARTED",
-      "next_action": "identify and source-lock the sole artifact generator before any move",
+      "next_action": "switch the generator and every active consumer through the path authority",
       "owner_id": "EVIDENCE",
-      "preflight_required": false,
-      "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
+      "preflight_required": true,
+      "review_category": "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "76b4e29eac591fdd6f02117f8f777decb966ca13c8d6662b16b38e0cf173daf2"
     },
@@ -24035,25 +24066,26 @@
     },
     {
       "active_consumers": [
-        "docs/core/test/test_topic13_continuum_action_umklapp_no_go.py",
         "docs/scripts/audit/audit_topic13_continuum_action_umklapp_no_go.py",
         "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
       ],
       "artifact_name": "uet_equation_correspondence_registry_topic13_umklapp_no_go_addendum.json",
       "asset_id": "UET-ARTIFACT-D60DB62D6B86",
-      "blocker": "no unique generator identity is recorded",
+      "blocker": "active consumers still reference the legacy artifact boundary",
       "canonical_path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_umklapp_no_go_addendum.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
-      "consumer_count": 3,
-      "disposition": "generator_identity_not_resolved",
+      "consumer_count": 2,
+      "disposition": "generator_and_consumer_rewrite_required",
       "evidence_status": "INTERNAL",
-      "generator_candidates": [],
-      "generator_count": 0,
-      "generator_path": null,
+      "generator_candidates": [
+        "docs/core/test/test_topic13_continuum_action_umklapp_no_go.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/core/test/test_topic13_continuum_action_umklapp_no_go.py",
       "generator_status": {
-        "contains_legacy_output_literal": false,
-        "path_exists": false,
-        "status": "UNRESOLVED",
+        "contains_legacy_output_literal": true,
+        "path_exists": true,
+        "status": "LEGACY_OUTPUT_LITERAL_REMAINS",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/uet_equation_correspondence_registry_topic13_umklapp_no_go_addendum.json",
@@ -24066,10 +24098,10 @@
       ],
       "logical_area": "07_artifacts",
       "migration_state": "NOT_STARTED",
-      "next_action": "identify and source-lock the sole artifact generator before any move",
+      "next_action": "switch the generator and every active consumer through the path authority",
       "owner_id": "EVIDENCE",
-      "preflight_required": false,
-      "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
+      "preflight_required": true,
+      "review_category": "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "cd948d5c8a982cb1a0914833335980ca9709c617cc82d2c38e30fc8437d8f376"
     },
@@ -24270,7 +24302,6 @@
         "docs/scripts/audit/audit_uet_foundation_dependency_gate.py",
         "docs/scripts/audit/build_uet_core_equation_family_contract.py",
         "docs/scripts/audit/build_uet_foundation_compatibility_decision.py",
-        "docs/scripts/audit/build_uet_foundation_correspondence_matrix.py",
         "docs/scripts/audit/build_uet_foundation_status_aggregate.py"
       ],
       "artifact_name": "uet_foundation_compatibility_gate.json",
@@ -24278,18 +24309,19 @@
       "blocker": "active consumers still reference the legacy artifact boundary",
       "canonical_path": "docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
-      "consumer_count": 5,
+      "consumer_count": 4,
       "disposition": "generator_and_consumer_rewrite_required",
       "evidence_status": "INTERNAL",
       "generator_candidates": [
-        "docs/scripts/audit/audit_uet_foundation_compatibility.py"
+        "docs/scripts/audit/audit_uet_foundation_compatibility.py",
+        "docs/scripts/audit/build_uet_foundation_correspondence_matrix.py"
       ],
-      "generator_count": 1,
-      "generator_path": "docs/scripts/audit/audit_uet_foundation_compatibility.py",
+      "generator_count": 2,
+      "generator_path": null,
       "generator_status": {
-        "contains_legacy_output_literal": true,
-        "path_exists": true,
-        "status": "LEGACY_OUTPUT_LITERAL_REMAINS",
+        "contains_legacy_output_literal": false,
+        "path_exists": false,
+        "status": "UNRESOLVED",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/uet_foundation_compatibility_gate.json",
@@ -24524,7 +24556,6 @@
         "docs/scripts/audit/build_uet_active_correspondence_contract.py",
         "docs/scripts/audit/build_uet_code_surface_inventory.py",
         "docs/scripts/audit/build_uet_foundation_compatibility_decision.py",
-        "docs/scripts/audit/build_uet_foundation_correspondence_matrix.py",
         "docs/scripts/audit/build_uet_foundation_coverage_closure.py",
         "docs/scripts/audit/build_uet_foundation_status_aggregate.py",
         "docs/scripts/audit/build_uet_full_correspondence_coverage.py"
@@ -24534,18 +24565,19 @@
       "blocker": "active consumers still reference the legacy artifact boundary",
       "canonical_path": "docs/core/07_artifacts/gates/uet_foundation_equation_inventory.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
-      "consumer_count": 12,
+      "consumer_count": 11,
       "disposition": "generator_and_consumer_rewrite_required",
       "evidence_status": "INTERNAL",
       "generator_candidates": [
-        "docs/scripts/audit/build_uet_equation_inventory.py"
+        "docs/scripts/audit/build_uet_equation_inventory.py",
+        "docs/scripts/audit/build_uet_foundation_correspondence_matrix.py"
       ],
-      "generator_count": 1,
-      "generator_path": "docs/scripts/audit/build_uet_equation_inventory.py",
+      "generator_count": 2,
+      "generator_path": null,
       "generator_status": {
-        "contains_legacy_output_literal": true,
-        "path_exists": true,
-        "status": "LEGACY_OUTPUT_LITERAL_REMAINS",
+        "contains_legacy_output_literal": false,
+        "path_exists": false,
+        "status": "UNRESOLVED",
         "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/uet_foundation_equation_inventory.json",
@@ -26415,7 +26447,7 @@
       "preflight_required": false,
       "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256_before": "f934e38ca73b9ef8cf8958db1dfd1e777793a73922aaefd3d42302e6b15e7dfe"
+      "sha256_before": "884695becc59c0fb723ff65902cf68e5ffcf80b327cba48539e809504a2d6380"
     },
     {
       "active_consumers": [
@@ -26696,20 +26728,20 @@
   "source_manifest": {
     "path": "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
     "record_count": 593,
-    "sha256": "0e7918aebd3948ae9bb1883a8eea172e963eb818099dcde183bd1c5cdae61cb1"
+    "sha256": "1c03c8ce019b0ebe3b6f0dace0742d4b58194d007b57ac281290fec369e774d3"
   },
   "summary": {
     "category_counts": {
-      "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED": 50,
-      "GENERATOR_IDENTITY_UNRESOLVED": 536,
-      "GENERATOR_SWITCH_REQUIRED": 3,
-      "MIGRATED": 4
+      "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED": 70,
+      "GENERATOR_IDENTITY_UNRESOLVED": 510,
+      "GENERATOR_SWITCH_REQUIRED": 8,
+      "MIGRATED": 5
     },
     "claim_boundary": "organization control only; this artifact cannot promote physics status",
     "controlling_blocker": "generator_identity_or_consumer_path_not_closed",
-    "migrated_records": 4,
+    "migrated_records": 5,
     "next_wave": "resolve one bounded generator/consumer family and run semantic preflight",
-    "pending_records": 589,
+    "pending_records": 588,
     "records_total": 593,
     "status": "PASS_WITH_REVIEW_REQUIRED"
   }
