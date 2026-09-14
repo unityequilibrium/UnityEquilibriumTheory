@@ -1,6 +1,6 @@
 {
   "canonical_path_authority": "docs/core/core_paths.py",
-  "generated_at": "2026-09-14T19:57:50+00:00",
+  "generated_at": "2026-09-14T19:58:49+00:00",
   "generator": "docs/scripts/audit/plan_uet_core_physical_migration.py",
   "migration_id": "UET-CORE-PHYSICAL-MIGRATION-V3",
   "physical_move_performed": false,
@@ -48,7 +48,7 @@
       "collision_key": "docs/core/00_governance/core_research_organization_index.md",
       "compatibility_mode": "none",
       "current_path": "docs/core/00_governance/CORE_RESEARCH_ORGANIZATION_INDEX.md",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "FOUNDATION",
         "DATA"
@@ -69,7 +69,7 @@
       "rollback_path": "docs/core/00_governance/CORE_RESEARCH_ORGANIZATION_INDEX.md",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "4a6ac51d2f0aa014b6469ff2742f55022d16c67aedaaf38d5c0e93653ca4a924",
+      "sha256_before": "1e679faccc19249da4f0c4473bcc39b2d65849ea7d20617f9e09aa677379f5aa",
       "status_source": "docs/scripts/audit/build_uet_research_organization_registry_v2.py",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -522,7 +522,7 @@
       "collision_key": "docs/core/00_governance/uet_core_physical_migration_audit.json",
       "compatibility_mode": "none",
       "current_path": "docs/core/00_governance/uet_core_physical_migration_audit.json",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "FOUNDATION",
         "DATA"
@@ -543,7 +543,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_physical_migration_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "6e9b038f8ee05566e1d1e481af8a8c85ede09010383a753b1de2d64fe5e61a94",
+      "sha256_before": "9003bf17939ab2e51b2f27db986f9fe78a790355349bd325d3667d7556019149",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -555,7 +555,7 @@
       "collision_key": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
       "compatibility_mode": "none",
       "current_path": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "FOUNDATION",
         "DATA"
@@ -576,7 +576,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "e2908e50377dccc49e922082490edd79e31df24db5fbb8792de4c8b5ad5e26c7",
+      "sha256_before": "2f351a1c801fedf74c522040760fd9a841479ea18f5c13055ba6dd07eba6f6a7",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -588,7 +588,7 @@
       "collision_key": "docs/core/00_governance/uet_core_physical_migration_report.md",
       "compatibility_mode": "none",
       "current_path": "docs/core/00_governance/UET_CORE_PHYSICAL_MIGRATION_REPORT.md",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EQUATION",
         "LANE",
@@ -610,7 +610,7 @@
       "rollback_path": "docs/core/00_governance/UET_CORE_PHYSICAL_MIGRATION_REPORT.md",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_after": null,
-      "sha256_before": "33a6bbe66e433005a9d835a78b93c3a1217efa19a3efe1f1de086d615ed16cfe",
+      "sha256_before": "3953408cfa15cf0ad4f06cd2eb80917f4193570f16300ac3ba57db45736e1bef",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [
         "ORG"
@@ -2992,7 +2992,7 @@
       "collision_key": "docs/core/03_lanes/review/readme.md",
       "compatibility_mode": "none",
       "current_path": "docs/core/03_lanes/review/README.md",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": null,
       "evidence_status": null,
@@ -3052,7 +3052,7 @@
       "collision_key": "docs/core/03_lanes/review/uet_observables.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/03_lanes/review/uet_observables.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": null,
       "evidence_status": null,
@@ -8012,7 +8012,7 @@
       "collision_key": "docs/core/05_tests/regression/root/test_observables_canonical_migration.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/05_tests/regression/root/test_observables_canonical_migration.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": null,
       "evidence_status": null,
@@ -15445,7 +15445,7 @@
       "collision_key": "docs/core/08_history/update_logs/uet_core_physical_migration_update_log.md",
       "compatibility_mode": "none",
       "current_path": "docs/core/08_history/update_logs/UET_CORE_PHYSICAL_MIGRATION_UPDATE_LOG.md",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "FOUNDATION",
         "DATA"
@@ -37059,7 +37059,7 @@
       "collision_key": "docs/core/core_file_index.md",
       "compatibility_mode": "none",
       "current_path": "docs/core/CORE_FILE_INDEX.md",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EQUATION",
         "LANE",
@@ -37081,7 +37081,7 @@
       "rollback_path": "docs/core/CORE_FILE_INDEX.md",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_after": null,
-      "sha256_before": "d1af9c1b61cee29887e6d11ffc9f646b72c5aaa857ba3efffd6fe72f9902726b",
+      "sha256_before": "155a44a48ad2eb21d02c31336d4e6eb7e1492b7b77ddf1ff181abeed74482f7d",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [
         "ORG"
@@ -37128,7 +37128,7 @@
       "collision_key": "docs/core/core_paths.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/core_paths.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "FOUNDATION",
         "DATA"
@@ -62664,7 +62664,7 @@
       "redirect_or_shim": 191,
       "root_python_shim": 156
     },
-    "dirty_sources": 12,
+    "dirty_sources": 2,
     "duplicate_targets": {},
     "existing_target_conflicts": [],
     "files_migrated_in_wave": 0,
