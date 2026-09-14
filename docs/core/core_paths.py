@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import os
+import re
 from pathlib import Path
 
 
@@ -58,9 +59,10 @@ def is_python_shim(path: str | Path) -> bool:
         text = value.read_text(encoding="utf-8")
     except (OSError, UnicodeDecodeError):
         return False
-    # Match the generated shim call, not the helper implementation or its docs.
-    # The helper itself contains both marker names as part of its API definition.
-    return "forward_public_symbols(globals()," in text and "__canonical_module__" in text
+    # Match generated compatibility shims, not the helper implementation or its docs.
+    forward_shim = re.search(r'(?m)^\s*forward_public_symbols\(globals\(\),', text) is not None and "__canonical_module__" in text
+    runpy_shim = re.search(r'(?m)^_CANONICAL_RELATIVE\s*=\s*"docs/', text) is not None and "runpy.run_path" in text
+    return forward_shim or runpy_shim
 
 
 def _artifact_domain(name: str) -> str:

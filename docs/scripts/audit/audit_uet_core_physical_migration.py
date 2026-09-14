@@ -15,6 +15,7 @@ CORE = ROOT / "docs" / "core"
 MANIFEST = CORE / "00_governance" / "uet_core_physical_migration_manifest.json"
 AUDIT = CORE / "00_governance" / "uet_core_physical_migration_audit.json"
 REDIRECT_PATTERN = re.compile(r"Canonical source: \[[^\]]+\]\(([^)]+)\)")
+SHIM_PATTERN = re.compile(r'_CANONICAL_RELATIVE\s*=\s*"([^"]+)"')
 
 
 def repo_path(path: Path) -> str:
@@ -39,6 +40,12 @@ def build() -> dict:
             continue
         if item.get("file_kind") == "compatibility_redirect":
             target = redirect_target(current)
+            if target is None or not (ROOT / target).exists():
+                redirect_errors.append({"path": item["current_path"], "target": target})
+            continue
+        if item.get("file_kind") == "compatibility_python_shim":
+            match = SHIM_PATTERN.search(current.read_text(encoding="utf-8"))
+            target = None if match is None else match.group(1)
             if target is None or not (ROOT / target).exists():
                 redirect_errors.append({"path": item["current_path"], "target": target})
             continue

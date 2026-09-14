@@ -1,0 +1,35 @@
+{
+  "artifact": "uet_core_data_tooling_migration_audit",
+  "checks": [
+    {
+      "check_id": "manifest_schema",
+      "status": "PASS"
+    },
+    {
+      "check_id": "migrated_targets_and_shims",
+      "status": "PASS"
+    },
+    {
+      "check_id": "canonical_target_uniqueness",
+      "status": "PASS"
+    },
+    {
+      "check_id": "organization_does_not_change_physics_status",
+      "status": "PASS"
+    }
+  ],
+  "controlling_blocker": null,
+  "failures_detail": [],
+  "generated_at": "2026-09-14T07:13:34+00:00",
+  "generator": "docs/scripts/audit/audit_uet_core_data_tooling_migration.py",
+  "schema_version": "1.0",
+  "status": "PASS",
+  "summary": {
+    "duplicate_targets": {},
+    "failures": 0,
+    "files_total": 111,
+    "migrated_with_shim": 25,
+    "physics_status_changes": 0,
+    "quarantined": 86
+  }
+}

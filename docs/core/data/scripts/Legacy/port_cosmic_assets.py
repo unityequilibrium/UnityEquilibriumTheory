@@ -1,31 +1,22 @@
-import shutil
-import os
+"""Compatibility shim for the migrated core tooling path."""
+
+from __future__ import annotations
+
+import runpy
 from pathlib import Path
 
-# Source with non-ASCII characters
-SOURCE_DIR = r"c:\Users\santa\Desktop\lad\Lab_uet_harness_v0.9.0\(search Only) ทองข้อมูลดี\Fali\Re(fail003)\03_universal_physics\data"
-
-# Destination in active lab
-DEST_DIR = r"c:\Users\santa\Desktop\lad\Lab_uet_harness_v0.9.0\docs\data\03_universal"
+_CANONICAL_RELATIVE = "docs/scripts/core/legacy/port_cosmic_assets.py"
 
 
-def port_data():
-    print(f"Copying from: {SOURCE_DIR}")
-    print(f"To: {DEST_DIR}")
-
-    if os.path.exists(DEST_DIR):
-        shutil.rmtree(DEST_DIR)
-
-    try:
-        shutil.copytree(SOURCE_DIR, DEST_DIR)
-        print("✅ Data transfer complete.")
-        # List files to verify
-        print("Files:")
-        for f in os.listdir(DEST_DIR):
-            print(f" - {f}")
-    except Exception as e:
-        print(f"❌ Error: {e}")
+def _run() -> None:
+    current = Path(__file__).resolve()
+    for ancestor in (current.parent, *current.parents):
+        candidate = ancestor / _CANONICAL_RELATIVE
+        if candidate.exists():
+            runpy.run_path(str(candidate), run_name="__main__")
+            return
+    raise FileNotFoundError(f"canonical tooling script not found: {_CANONICAL_RELATIVE}")
 
 
 if __name__ == "__main__":
-    port_data()
+    _run()
