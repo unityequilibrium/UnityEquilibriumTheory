@@ -12,6 +12,9 @@ PHYSICAL = CORE / "00_governance" / "uet_core_physical_migration_manifest.json"
 TOOLING = CORE / "00_governance" / "uet_core_data_tooling_migration_manifest.json"
 SOURCE_MANIFEST = CORE / "00_governance" / "uet_core_source_package_migration_manifest.json"
 SOURCE_AUDIT = CORE / "00_governance" / "uet_core_source_package_migration_audit.json"
+TEST_MANIFEST = CORE / "00_governance" / "uet_core_test_migration_manifest.json"
+TEST_AUDIT = CORE / "00_governance" / "uet_core_test_migration_audit.json"
+COLLECTION_AUDIT = CORE / "00_governance" / "uet_core_test_collection_audit.json"
 INDEX = CORE / "CORE_FILE_INDEX.md"
 
 
@@ -39,9 +42,11 @@ def wave_counts(records: list[dict]) -> dict[str, int]:
     return counts
 
 
-def render(physical: dict, tooling: dict) -> str:
+def render(physical: dict, tooling: dict, tests: dict, test_audit: dict, collection_audit: dict) -> str:
     summary = physical.get("summary", {})
     tooling_summary = tooling.get("summary", {})
+    test_summary = tests.get("summary", {})
+    collection_summary = collection_audit.get("collections", {})
     lines = [
         "# Core File Index",
         "",
@@ -56,6 +61,9 @@ def render(physical: dict, tooling: dict) -> str:
         "- Data/tooling report: [00_governance/UET_CORE_DATA_TOOLING_MIGRATION_REPORT.md](00_governance/UET_CORE_DATA_TOOLING_MIGRATION_REPORT.md)",
         "- Source-package manifest: [00_governance/uet_core_source_package_migration_manifest.json](00_governance/uet_core_source_package_migration_manifest.json)",
         "- Source-package audit: [00_governance/uet_core_source_package_migration_audit.json](00_governance/uet_core_source_package_migration_audit.json)",
+        "- Test migration manifest: [00_governance/uet_core_test_migration_manifest.json](00_governance/uet_core_test_migration_manifest.json)",
+        "- Test migration audit: [00_governance/uet_core_test_migration_audit.json](00_governance/uet_core_test_migration_audit.json)",
+        "- Test collection audit: [00_governance/uet_core_test_collection_audit.json](00_governance/uet_core_test_collection_audit.json)",
         "- Path authority: [core_paths.py](core_paths.py)",
         "- Compatibility loader: [core_compat.py](core_compat.py)",
         "",
@@ -81,6 +89,16 @@ def render(physical: dict, tooling: dict) -> str:
         f"- Tooling duplicate targets: **{len(tooling_summary.get('duplicate_targets', {}))}**",
         f"- Tooling physics status changes: **{tooling_summary.get('physics_status_changes', 0)}**",
         "",
+        "",
+        "## Test surface wave",
+        "",
+        f"- Tests indexed in migration manifest: **{test_summary.get('files_total', 0)}**",
+        f"- Tests physically migrated: **{test_summary.get('migrated', 0)}**",
+        f"- Tests quarantined for path/package review: **{test_summary.get('quarantined', 0)}**",
+        f"- Test migration audit: **{test_audit.get('status', 'UNKNOWN')}**",
+        f"- Full pytest collection: **{collection_summary.get('full', {}).get('status', 'UNKNOWN')}** ({collection_summary.get('full', {}).get('collected', 0)} collected)",
+        f"- Canonical-only collection: **{collection_summary.get('canonical_only', {}).get('status', 'UNKNOWN')}** ({collection_summary.get('canonical_only', {}).get('collected', 0)} collected)",
+        f"- Test physics status changes: **{test_summary.get('physics_status_changes', 0)}**",
         "## Canonical areas",
         "",
         "| Area | Indexed paths |",
@@ -104,7 +122,10 @@ def render(physical: dict, tooling: dict) -> str:
 def main() -> int:
     physical = load(PHYSICAL)
     tooling = load(TOOLING)
-    INDEX.write_text(render(physical, tooling), encoding="utf-8")
+    tests = load(TEST_MANIFEST)
+    test_audit = load(TEST_AUDIT)
+    collection_audit = load(COLLECTION_AUDIT)
+    INDEX.write_text(render(physical, tooling, tests, test_audit, collection_audit), encoding="utf-8")
     print(json.dumps({
         "status": "PASS",
         "index": INDEX.relative_to(ROOT).as_posix(),

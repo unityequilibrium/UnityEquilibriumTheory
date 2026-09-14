@@ -41,3 +41,23 @@
 - Changed: moved 20 source files to docs/core/06_data/source_packages/particle_physics with one canonical copy, preserved byte hashes, and added a governance redirect index plus legacy README boundary.
 - Verification: source-package audit PASS; all 20 before/after hashes equal; no raw files remain in the legacy external root; global physical migration audit remained PASS; physics status changes 0.
 - Controller: update consumers/manifests that still reference the legacy core path, then continue with path-bootstrap repair for quarantined tooling.
+
+## 2026-09-14 — Core physical migration v3 — Wave 4 test surface safe subset
+
+- Scope: Python tests under docs/core/test; physical organization only.
+- Changed: moved 205 path-safe test/support files into docs/core/05_tests
+  by equation, numerical, artifact and regression role; preserved byte hashes.
+- Held back: 295 files remain at the legacy boundary: 290 require
+  path-bootstrap or legacy-reference repair, 3 depend on the legacy
+  parameter_engine import path, 1 is the package boundary, and 1 is the
+  sandbox surface. No duplicate Python wrappers were created.
+- Added: test migration manifest and integrity audit, pytest collection audit,
+  four canonical test-area READMEs, and navigation links to all controls.
+- Verification: test migration audit PASS; pytest collection audit PASS with
+  2,105 tests collected (1,279 canonical and 825 retained legacy in the
+  quarantine-excluded split); canonical test compilation PASS; global planner
+  and physical migration audit PASS; physics status changes 0.
+- Controller: path-bootstrap repair and explicit review of the remaining 295
+  legacy test/support files before any further physical test move.
+- Public-safety boundary: organization and collection evidence only; the
+  foundation gate and all physics claim statuses are unchanged.

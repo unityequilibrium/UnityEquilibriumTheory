@@ -11,6 +11,9 @@
 - Data/tooling report: [00_governance/UET_CORE_DATA_TOOLING_MIGRATION_REPORT.md](00_governance/UET_CORE_DATA_TOOLING_MIGRATION_REPORT.md)
 - Source-package manifest: [00_governance/uet_core_source_package_migration_manifest.json](00_governance/uet_core_source_package_migration_manifest.json)
 - Source-package audit: [00_governance/uet_core_source_package_migration_audit.json](00_governance/uet_core_source_package_migration_audit.json)
+- Test migration manifest: [00_governance/uet_core_test_migration_manifest.json](00_governance/uet_core_test_migration_manifest.json)
+- Test migration audit: [00_governance/uet_core_test_migration_audit.json](00_governance/uet_core_test_migration_audit.json)
+- Test collection audit: [00_governance/uet_core_test_collection_audit.json](00_governance/uet_core_test_collection_audit.json)
 - Path authority: [core_paths.py](core_paths.py)
 - Compatibility loader: [core_compat.py](core_compat.py)
 
@@ -20,10 +23,10 @@ AGENTS.md, README.md, CORE_FILE_INDEX.md and __init__.py remain permanent root e
 
 ## Physical state
 
-- Files indexed: **1722**
-- Move targets: **1366**
-- Already canonical or protected: **356**
-- Dirty sources held back: **30**
+- Files indexed: **1731**
+- Move targets: **1161**
+- Already canonical or protected: **570**
+- Dirty sources held back: **223**
 - Duplicate targets: **0**
 - Existing destination conflicts: **0**
 - Physics status changes from organization migration: **0**
@@ -36,17 +39,27 @@ AGENTS.md, README.md, CORE_FILE_INDEX.md and __init__.py remain permanent root e
 - Tooling duplicate targets: **0**
 - Tooling physics status changes: **0**
 
+
+## Test surface wave
+
+- Tests indexed in migration manifest: **500**
+- Tests physically migrated: **205**
+- Tests quarantined for path/package review: **295**
+- Test migration audit: **PASS**
+- Full pytest collection: **PASS** (2105 collected)
+- Canonical-only collection: **PASS** (1279 collected)
+- Test physics status changes: **0**
 ## Canonical areas
 
 | Area | Indexed paths |
 | :-- | --: |
-| 00_governance | 15 |
+| 00_governance | 20 |
 | 01_contracts | 25 |
 | 02_Proof | 2 |
 | 02_equations | 1 |
 | 03_lanes | 84 |
 | 04_proofs | 1 |
-| 05_tests | 1 |
+| 05_tests | 210 |
 | 06_data | 22 |
 | 07_artifacts | 1 |
 | 08_history | 31 |
@@ -54,19 +67,19 @@ AGENTS.md, README.md, CORE_FILE_INDEX.md and __init__.py remain permanent root e
 | artifacts | 594 |
 | data | 113 |
 | root_entrypoints | 328 |
-| test | 503 |
+| test | 298 |
 
 ## Migration waves
 
 | Wave | Paths |
 | :-- | --: |
-| already_canonical | 356 |
+| already_canonical | 570 |
 | artifacts | 594 |
 | data_tooling | 86 |
 | equation_or_lane | 181 |
 | proofs | 1 |
 | review | 1 |
-| tests | 503 |
+| tests | 298 |
 
 ## Working rule
 
