@@ -114,6 +114,8 @@ def _python_area(stem: str) -> str:
         "uet_matter_space_split",
     }:
         return "02_equations/matter_space"
+    if lower == "uet_matter_space_observable":
+        return "03_lanes/review"
     if lower.startswith("mass_density"):
         return "03_lanes/mass_density"
     if lower.startswith(("photon", "quantum", "carrier", "impact", "observer", "relational")):
