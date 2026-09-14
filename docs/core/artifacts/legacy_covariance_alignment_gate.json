@@ -1,14 +1,18 @@
 {
   "schema_version": "1.0",
   "artifact": "legacy_covariance_alignment_gate",
-  "generated_at": "2026-08-01T16:27:51.476931+00:00",
+  "generated_at": "2026-09-14T19:29:22.194752+00:00",
   "audit_status": "PASS",
   "evidence_status": "BLOCKED",
   "claim_class": "LEGACY_EXPLORATORY_DIAGNOSTIC",
   "controlling_blocker": "legacy_covariance_not_implemented",
   "source_files": {
     "docs/core/uet_lorentz.py": "0fc5fa82a1327cef1653941987c528510db49e958f6d91693a0542cab94f2c45",
-    "docs/core/uet_noether.py": "2556791d053ea06079be3766167fafb2e340292d44f2759f5ac63ddd08d5994e"
+    "docs/core/uet_noether.py": "90467d709f10d9124633d776c947ed0dc8d3c66d8d38817fda2b2547e4afeb83"
+  },
+  "source_paths_used": {
+    "lorentz": "docs/core/02_equations/lorentz_noether/uet_lorentz.py",
+    "noether": "docs/core/uet_noether.py"
   },
   "findings": {
     "lorentz": {
