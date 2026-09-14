@@ -1,7 +1,7 @@
 {
   "artifact": "uet_core_artifact_migration_history",
   "canonical_path_authority": "docs/core/core_paths.py",
-  "generated_at": "2026-09-14T15:27:21+00:00",
+  "generated_at": "2026-09-14T16:05:41+00:00",
   "generator": "docs/scripts/audit/migrate_uet_core_artifact_family_v3.py",
   "migration_id": "UET-CORE-ARTIFACT-V3",
   "records": [
@@ -138,6 +138,52 @@
       "semantic_payload_sha256": "1696a27e99457db18a09352aebe0d996f7b9d783d575eb86dcf3526c9d5e1642",
       "sha256_after": "016585fdd672b420f21b119f9fba0154a3553ce6162e3f0cda6708db38e125d8",
       "sha256_before": "016585fdd672b420f21b119f9fba0154a3553ce6162e3f0cda6708db38e125d8",
+      "source_or_generated": "generated",
+      "status_source": "artifact_migration_manifest",
+      "upstream_dependencies": [],
+      "verifier_paths": []
+    },
+    {
+      "active_consumers": [],
+      "artifact_paths": [],
+      "asset_id": "UET-ARTIFACT-F2430244A9C6",
+      "canonical_path": "docs/core/07_artifacts/gates/uet_foundation_dependency_graph.json",
+      "collision_key": "docs/core/07_artifacts/gates/uet_foundation_dependency_graph.json",
+      "compatibility_mode": "legacy_index_only",
+      "consumer_count": 0,
+      "disposition": "migrated_canonical_output",
+      "downstream_dependencies": [],
+      "equation_family_or_lane": "generated_core_artifact",
+      "evidence_status": "INTERNAL",
+      "file_kind": "generated_artifact",
+      "formula_ids": [],
+      "generator_candidates": [
+        "docs/scripts/audit/build_uet_foundation_dependency_graph.py"
+      ],
+      "generator_count": 1,
+      "generator_path": "docs/scripts/audit/build_uet_foundation_dependency_graph.py",
+      "legacy_path": "docs/core/artifacts/uet_foundation_dependency_graph.json",
+      "legacy_reference_paths": [
+        "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
+        "docs/core/00_governance/uet_core_physical_migration_manifest.json",
+        "docs/scripts/audit/build_uet_foundation_dependency_graph.py"
+      ],
+      "logical_area": "07_artifacts",
+      "migrated_at": "2026-09-14T16:05:41+00:00",
+      "migration_state": "MIGRATED",
+      "migration_wave": "artifact_family_bounded_move",
+      "next_action": "refresh_generated_indexes_and_verify_canonical_consumer_paths",
+      "organization_status": "ASSIGNED",
+      "owner_id": "EVIDENCE",
+      "preflight_generator_output_sha256": "d2a11dfa09248ba8ed830a6cc91c9fd5cea189ab281ea094e0c9159d39392b42",
+      "rollback_path": "docs/core/artifacts/uet_foundation_dependency_graph.json",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "semantic_ignored_paths": [
+        "generated_at"
+      ],
+      "semantic_payload_sha256": "e643e6da2732fd5d2e5c02cb54797c79417585a34d4f3b3d58c1914a673d113e",
+      "sha256_after": "e14becf039cc4565aa3b9d62b38f7a023b307fb4101718c60b258d97acbb2420",
+      "sha256_before": "e14becf039cc4565aa3b9d62b38f7a023b307fb4101718c60b258d97acbb2420",
       "source_or_generated": "generated",
       "status_source": "artifact_migration_manifest",
       "upstream_dependencies": [],

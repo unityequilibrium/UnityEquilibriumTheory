@@ -726,7 +726,7 @@
       "unit_lane_from_contract": null
     }
   ],
-  "generated_at": "2026-09-14T15:48:21+00:00",
+  "generated_at": "2026-09-14T16:16:47+00:00",
   "generator": "docs/scripts/audit/audit_uet_core_scientific_links.py",
   "input_errors": [],
   "inputs": {
@@ -744,7 +744,7 @@
     },
     "migration_map": {
       "path": "docs/core/artifacts/uet_core_file_migration_map.json",
-      "sha256": "1e9b823ed606e7119fb42ea1b7a46a25798ec70dbee28aa002a434f2fd347d06"
+      "sha256": "8453b2ec08b0571df6c95cb096ea81883ca3d4a37fbe5a4f03ad2bf5bdae4b1d"
     },
     "organization_policy": {
       "path": "docs/core/00_governance/uet_research_organization_policy.json",
@@ -752,7 +752,7 @@
     },
     "organization_registry": {
       "path": "docs/core/artifacts/uet_research_organization_registry.json",
-      "sha256": "60472a28a238cf0f9f42f574c27a94414c3e648231413685fb150087246cd9da"
+      "sha256": "f934e38ca73b9ef8cf8958db1dfd1e777793a73922aaefd3d42302e6b15e7dfe"
     }
   },
   "interpretation": [

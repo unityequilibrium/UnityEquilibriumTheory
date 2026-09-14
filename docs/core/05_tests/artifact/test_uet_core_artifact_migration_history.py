@@ -44,6 +44,7 @@ def test_migrated_generators_use_canonical_path_authority() -> None:
         "audit_matter_interaction_forward.py": "matter_interaction_forward_verification.json",
         "audit_resource_selection_physical_cost_map.py": "resource_selection_physical_cost_map_verification.json",
         "audit_matter_space_energy_ledger.py": "matter_space_energy_ledger_verification.json",
+        "build_uet_foundation_dependency_graph.py": "uet_foundation_dependency_graph.json",
     }
     for generator_name, artifact_name in generators.items():
         generator = ROOT / "docs" / "scripts" / "audit" / generator_name
