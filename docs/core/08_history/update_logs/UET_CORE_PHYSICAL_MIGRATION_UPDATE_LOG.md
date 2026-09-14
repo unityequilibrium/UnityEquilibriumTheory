@@ -292,3 +292,9 @@
 - Verification: canonical/legacy helper identity regression PASS (2 tests); root direct-script smoke PASS; `core_paths.py` compile PASS; physical migration planner/audit PASS with zero duplicate targets, missing paths, destination conflicts, or physics-status changes.
 - Controller: 1,131 active physical move targets remain; generated artifacts remain behind the separate provenance/generator controller, and foundation remains `BLOCKED`.
 - Public-safety boundary: organization-only support migration; legacy `a0(z)`, informational-lag, cosmology, and galaxy interpretations remain review-only and were not promoted.
+## 2026-09-15 — Wave 6h post-commit metadata consistency correction
+
+- Scope: migration control-plane synchronization after the observable-helper commit.
+- Corrected: regenerated the physical migration manifest, report, audit, and organization/navigation indexes from the committed review-lane source.
+- Verification: physical migration audit PASS with zero duplicate targets, missing current paths, or redirect errors; planner reports 1,786 records, 1,131 active move targets, 655 canonical assets, 191 compatibility assets, and 2 unrelated dirty sources; physics status changes remain 0.
+- Public-safety boundary: metadata-only correction; observable helpers remain review-only with unresolved units/measurement/uncertainty mapping, foundation remains `BLOCKED`.
