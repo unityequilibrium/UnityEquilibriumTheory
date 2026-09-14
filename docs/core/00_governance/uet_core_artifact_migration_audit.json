@@ -1,0 +1,66 @@
+{
+  "artifact": "uet_core_artifact_migration_audit",
+  "checks": [
+    {
+      "check_id": "manifest_schema",
+      "status": "PASS"
+    },
+    {
+      "check_id": "legacy_sources_exist",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hashes_stable",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "canonical_targets_unique",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "canonical_targets_not_written_before_consumer_switch",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "legacy_artifact_boundary_present",
+      "status": "PASS"
+    },
+    {
+      "check_id": "physics_status_unchanged",
+      "observed": 0,
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary": "artifact organization plan only; no physics-status promotion",
+  "controlling_blocker": null,
+  "duplicate_targets": {},
+  "existing_targets": [],
+  "generated_at": "2026-09-14T08:19:27+00:00",
+  "generator": "docs/scripts/audit/audit_uet_core_artifact_migration_v3.py",
+  "missing_sources": [],
+  "schema_version": "1.0",
+  "source_hash_mismatches": [],
+  "status": "PASS",
+  "summary": {
+    "claim_promotion": false,
+    "consumer_rewrite_required": 593,
+    "disposition_counts": {
+      "generator_and_consumer_rewrite_required": 573,
+      "generator_identity_not_resolved": 20
+    },
+    "duplicate_targets": {},
+    "existing_target_conflicts": [],
+    "files_total": 593,
+    "generator_identity_ambiguous": 380,
+    "generator_identity_missing": 20,
+    "generator_identity_resolved": 193,
+    "json_files": 592,
+    "npz_files": 1,
+    "physical_move_performed": false,
+    "physics_status_changes": 0
+  }
+}

@@ -14,6 +14,8 @@
 - Test migration manifest: [00_governance/uet_core_test_migration_manifest.json](00_governance/uet_core_test_migration_manifest.json)
 - Test migration audit: [00_governance/uet_core_test_migration_audit.json](00_governance/uet_core_test_migration_audit.json)
 - Test collection audit: [00_governance/uet_core_test_collection_audit.json](00_governance/uet_core_test_collection_audit.json)
+- Artifact migration manifest: [00_governance/uet_core_artifact_migration_manifest.json](00_governance/uet_core_artifact_migration_manifest.json)
+- Artifact migration audit: [00_governance/uet_core_artifact_migration_audit.json](00_governance/uet_core_artifact_migration_audit.json)
 - Path authority: [core_paths.py](core_paths.py)
 - Compatibility loader: [core_compat.py](core_compat.py)
 
@@ -23,10 +25,10 @@ AGENTS.md, README.md, CORE_FILE_INDEX.md and __init__.py remain permanent root e
 
 ## Physical state
 
-- Files indexed: **1731**
+- Files indexed: **1734**
 - Move targets: **1161**
-- Already canonical or protected: **570**
-- Dirty sources held back: **223**
+- Already canonical or protected: **573**
+- Dirty sources held back: **9**
 - Duplicate targets: **0**
 - Existing destination conflicts: **0**
 - Physics status changes from organization migration: **0**
@@ -49,11 +51,22 @@ AGENTS.md, README.md, CORE_FILE_INDEX.md and __init__.py remain permanent root e
 - Full pytest collection: **PASS** (2105 collected)
 - Canonical-only collection: **PASS** (1279 collected)
 - Test physics status changes: **0**
+
+## Generated artifact control
+
+- Artifacts indexed: **593**
+- One-generator identities resolved: **193**
+- Ambiguous generator identities: **380**
+- Missing generator identities: **20**
+- Consumer rewrites required: **593**
+- Artifact migration audit: **PASS**
+No generated output is moved until its generator and active consumers use the canonical path authority.
+
 ## Canonical areas
 
 | Area | Indexed paths |
 | :-- | --: |
-| 00_governance | 20 |
+| 00_governance | 23 |
 | 01_contracts | 25 |
 | 02_Proof | 2 |
 | 02_equations | 1 |
@@ -73,7 +86,7 @@ AGENTS.md, README.md, CORE_FILE_INDEX.md and __init__.py remain permanent root e
 
 | Wave | Paths |
 | :-- | --: |
-| already_canonical | 570 |
+| already_canonical | 573 |
 | artifacts | 594 |
 | data_tooling | 86 |
 | equation_or_lane | 181 |
