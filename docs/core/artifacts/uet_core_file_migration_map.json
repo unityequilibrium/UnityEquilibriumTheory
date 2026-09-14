@@ -6465,6 +6465,23 @@
       "target_physical_path": "docs/core/07_artifacts/gates/uet_foundation_dependency_graph.json"
     },
     {
+      "asset_id": "UET-CORE-FILE-029694951248",
+      "compatibility_plan": "retain_current_path_until_import_link_and_test_gates_pass",
+      "current_path": "docs/core/07_artifacts/provenance/resource_selection_dynamic_game_contract.json",
+      "equation_family_or_lane": "foundation_or_shared",
+      "evidence_status": "INTERNAL",
+      "import_reference_count": null,
+      "link_reference_count": null,
+      "migration_state": "MIGRATED",
+      "next_action": "retain_path_and_link_generator",
+      "organization_status": "ASSIGNED",
+      "owner_id": "EVIDENCE",
+      "reference_scan_status": "DEFERRED_TO_MIGRATION_WAVE",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "target_path": "docs/core/07_artifacts/provenance/resource_selection_dynamic_game_contract.json",
+      "target_physical_path": "docs/core/07_artifacts/provenance/resource_selection_dynamic_game_contract.json"
+    },
+    {
       "asset_id": "UET-CORE-FILE-9C47A2ECA270",
       "compatibility_plan": "retain_current_path_until_import_link_and_test_gates_pass",
       "current_path": "docs/core/07_artifacts/provenance/resource_selection_physical_cost_map_verification.json",
@@ -11395,23 +11412,6 @@
       "room_id": "ROOM_CORE_FOUNDATION",
       "target_path": "docs/core/07_artifacts/provenance/resource_persistence_principle_contract.json",
       "target_physical_path": "docs/core/07_artifacts/provenance/resource_persistence_principle_contract.json"
-    },
-    {
-      "asset_id": "UET-CORE-FILE-83044DA3067A",
-      "compatibility_plan": "retain_current_path_until_import_link_and_test_gates_pass",
-      "current_path": "docs/core/artifacts/resource_selection_dynamic_game_contract.json",
-      "equation_family_or_lane": "foundation_or_shared",
-      "evidence_status": "INTERNAL",
-      "import_reference_count": null,
-      "link_reference_count": null,
-      "migration_state": "COMPATIBILITY_PATH_RETAINED",
-      "next_action": "retain_path_and_link_generator",
-      "organization_status": "ASSIGNED",
-      "owner_id": "EVIDENCE",
-      "reference_scan_status": "DEFERRED_TO_MIGRATION_WAVE",
-      "room_id": "ROOM_CORE_FOUNDATION",
-      "target_path": "docs/core/07_artifacts/provenance/resource_selection_dynamic_game_contract.json",
-      "target_physical_path": "docs/core/07_artifacts/provenance/resource_selection_dynamic_game_contract.json"
     },
     {
       "asset_id": "UET-CORE-FILE-C11DCFF5B410",
@@ -29931,7 +29931,7 @@
       "target_physical_path": "docs/core/03_lanes/review/uet_viz.py"
     }
   ],
-  "generated_at": "2026-09-14T16:09:20+00:00",
+  "generated_at": "2026-09-14T17:28:19+00:00",
   "generator": "docs/scripts/audit/build_uet_research_organization_registry_v2.py",
   "organization_disposition_source": "docs/core/00_governance/uet_research_organization_policy.json",
   "organization_wave": "WAVE_1_ASSIGN_AND_QUARANTINE",
