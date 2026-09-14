@@ -284,3 +284,11 @@
 - Corrected: regenerated the physical migration manifest, report, audit, and organization/navigation indexes from the committed two-module Noether layout.
 - Verification: physical migration audit PASS with zero duplicate targets, missing current paths, or redirect errors; planner reports 1,784 records, 1,132 active move targets, 652 canonical assets, 190 compatibility assets, and 2 unrelated dirty sources; physics status changes remain 0.
 - Public-safety boundary: metadata-only correction; the Noether mapping remains many-to-one/constitutive at its declared boundary, foundation remains `BLOCKED`, and no physics claim was promoted.
+## 2026-09-15 — Core physical migration v3 — Wave 6h observable helper review lane
+
+- Scope: canonical organization migration for the legacy observable-helper support module; review lane only.
+- Moved: `uet_observables.py` into `docs/core/03_lanes/review/` and retained the root direct-script/import compatibility shim.
+- Repaired: canonical path classification now assigns the helper to the review lane rather than leaving it unassigned; the review README records its unresolved units, measurement-operator, and external-evidence boundary.
+- Verification: canonical/legacy helper identity regression PASS (2 tests); root direct-script smoke PASS; `core_paths.py` compile PASS; physical migration planner/audit PASS with zero duplicate targets, missing paths, destination conflicts, or physics-status changes.
+- Controller: 1,131 active physical move targets remain; generated artifacts remain behind the separate provenance/generator controller, and foundation remains `BLOCKED`.
+- Public-safety boundary: organization-only support migration; legacy `a0(z)`, informational-lag, cosmology, and galaxy interpretations remain review-only and were not promoted.
