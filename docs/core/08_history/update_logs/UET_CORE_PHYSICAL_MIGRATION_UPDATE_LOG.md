@@ -308,3 +308,11 @@
 - Verification: O(2) equation/transport/path/shim regression PASS (25); Wave 10 artifact reproduction PASS (6); standard finite-temperature comparator checks PASS (2); import audit PASS (181 modules); link audit PASS (255 links); test-collection audit PASS (2,139 full / 1,313 canonical / 825 legacy); migration enforcement, physical migration, and path audits PASS with zero duplicate targets, missing paths, broken redirects, or physics-status changes.
 - Controller: 1,129 active physical move targets remain; 589 generated artifacts remain behind the separate generator/consumer/provenance checkpoint; foundation remains `BLOCKED`.
 - Public-safety boundary: source organization, compatibility, metadata propagation, and generator path resolution only. The EOS remains a tree-level finite-density O(2) mean-field result, the thermal comparator remains standard-QFT comparator-only, and no SI, transport, GR, particle, or downstream claim was promoted.
+
+## 2026-09-15 — Wave 6i post-commit metadata consistency correction
+
+- Scope: migration control-plane synchronization after commit `6800085e4`.
+- Corrected: regenerated the physical migration manifest/report/audit and organization/navigation indexes after the O(2) source move; committed work is no longer counted as dirty source work.
+- Verification: physical migration, path, migration-enforcement, import, link, and test-collection audits remain PASS; planner reports 1,792 records, 1,129 active move targets, 663 canonical assets, 193 compatibility assets, 2 unrelated dirty sources, and zero duplicate targets or destination conflicts.
+- Public-safety boundary: metadata-only correction; O(2) remains split between tree-level EOS, standard comparator, and separately owned covariant transport, foundation remains `BLOCKED`, and no physics claim was promoted.
+- Next controller: classify the next registered equation/lane family from dependency evidence; generated artifacts remain behind the separate generator/consumer/provenance checkpoint.
