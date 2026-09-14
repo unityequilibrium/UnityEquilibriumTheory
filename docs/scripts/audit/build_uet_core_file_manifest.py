@@ -93,6 +93,41 @@ def classify(path: Path, families: dict[str, dict[str, Any]], unlinked: set[str]
         )
         return record
 
+    if relative.startswith("docs/core/00_governance/") and suffix == ".json":
+        record.update(
+            file_kind="governance_artifact",
+            logical_area="00_governance",
+            owner_family_or_lane="core_governance",
+            generated_or_source="generated",
+            review_action="retain_governance_control_artifact",
+        )
+        return record
+
+    if relative.startswith("docs/core/06_data/") and name.lower() != "readme.md":
+        record.update(
+            file_kind="declared_input_data",
+            logical_area="06_data",
+            owner_family_or_lane="core_data_surface",
+            review_action="link_to_provenance_manifest_and_unit_lane",
+        )
+        return record
+    if relative.startswith("docs/core/05_tests/") and suffix == ".py":
+        record.update(
+            file_kind="verifier_or_regression_test",
+            logical_area="05_tests",
+            owner_family_or_lane="core_test_surface",
+            review_action="link_to_equation_family_or_artifact",
+        )
+        return record
+    if relative.startswith("docs/core/07_artifacts/") and suffix in {".json", ".npz"}:
+        record.update(
+            file_kind="generated_artifact",
+            logical_area="07_artifacts",
+            owner_family_or_lane=artifact_domain(name),
+            generated_or_source="generated",
+            review_action="retain_canonical_artifact_and_link_generator",
+        )
+        return record
     if relative.startswith("docs/core/test/"):
         record.update(
             file_kind="verifier_or_regression_test",

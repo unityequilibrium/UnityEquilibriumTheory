@@ -1,9 +1,9 @@
 """Build a consumer-aware plan for moving generated core artifacts.
 
-This wave is deliberately plan-only.  Generated artifacts are not moved until
-their generator and every active consumer have been switched to the canonical
-path authority.  The plan records the exact legacy references so a later
-bounded artifact family can be migrated without leaving stale readers behind.
+Generated artifacts are moved only after their generator and every active
+consumer have been switched to the canonical path authority. References in
+the generated governance control plane remain in the audit trail but are not
+treated as active readers of an artifact.
 """
 
 from __future__ import annotations
@@ -24,11 +24,18 @@ CORE = ROOT / "docs" / "core"
 SOURCE_ROOT = CORE / "artifacts"
 GOVERNANCE = CORE / "00_governance"
 MANIFEST = GOVERNANCE / "uet_core_artifact_migration_manifest.json"
+HISTORY = GOVERNANCE / "uet_core_artifact_migration_history.json"
 REPORT = GOVERNANCE / "UET_CORE_ARTIFACT_MIGRATION_REPORT.md"
 GENERATOR = "docs/scripts/audit/plan_uet_core_artifact_migration_v3.py"
 EXCLUDED_PARTS = {".git", "__pycache__", ".venv", "node_modules", ".pytest_cache", ".mypy_cache"}
 TEXT_SUFFIXES = {".py", ".md", ".json", ".yml", ".yaml", ".toml", ".ps1", ".sh"}
 LEGACY_PREFIX = "docs/core/artifacts/"
+REFERENCE_ONLY_PREFIXES = (
+    "docs/core/00_governance/",
+    "docs/core/08_history/",
+    "WORK_LEDGER/",
+    "uet_history/",
+)
 SCAN_ROOTS = [ROOT / "docs", ROOT / "uet_history", ROOT / "WORK_LEDGER", ROOT / "README.md", ROOT / "AGENTS.md"]
 
 
@@ -80,6 +87,15 @@ def load_text(path: Path) -> str:
         return ""
 
 
+def load_history_records() -> list[dict[str, Any]]:
+    """Load completed bounded moves so a regenerated plan does not forget them."""
+    if not HISTORY.exists():
+        return []
+    payload = json.loads(HISTORY.read_text(encoding="utf-8"))
+    records = payload.get("records", [])
+    if not isinstance(records, list):
+        raise ValueError("artifact migration history records must be a list")
+    return [dict(record) for record in records]
 def reference_index(names: list[str]) -> dict[str, list[str]]:
     """Stream artifact references with ripgrep without caching the repository."""
     index: dict[str, list[str]] = {name: [] for name in names}
@@ -153,6 +169,24 @@ def classify_generator(path: str, name: str) -> bool:
     return bool(re.search(rf"(?im)^\s*(?:OUTPUT|OUTPUT_PATH|ARTIFACT_PATH|output)\s*=\s*[^\n]*{re.escape(name)}", text))
 
 
+def references_legacy_artifact(path: str, name: str) -> bool:
+    """Distinguish a basename mention from an actual legacy-path consumer."""
+    text = load_text(ROOT / path)
+    return any(
+        needle in text
+        for needle in (
+            f"{LEGACY_PREFIX}{name}",
+            f"./artifacts/{name}",
+            f"/artifacts/{name}",
+        )
+    )
+
+def is_reference_only_path(path: str) -> bool:
+    """Keep governance and historical records out of the active-consumer gate."""
+    normalized = path.replace("\\", "/")
+    return any(normalized.startswith(prefix) for prefix in REFERENCE_ONLY_PREFIXES)
+
+
 def build_records() -> tuple[list[dict[str, Any]], dict[str, Any]]:
     artifacts = [
         path
@@ -167,7 +201,13 @@ def build_records() -> tuple[list[dict[str, Any]], dict[str, Any]]:
         target = canonical_for(name)
         hits = reference_map.get(name, [])
         generator_candidates = [item for item in hits if classify_generator(item, name)]
-        consumer_paths = [item for item in hits if item not in generator_candidates]
+        consumer_paths = [
+            item
+            for item in hits
+            if item not in generator_candidates
+            and not is_reference_only_path(item)
+            and references_legacy_artifact(item, name)
+        ]
         if not generator_candidates:
             disposition = "generator_identity_not_resolved"
         elif consumer_paths:
@@ -209,6 +249,14 @@ def build_records() -> tuple[list[dict[str, Any]], dict[str, Any]]:
                 "next_action": "map_and_switch_generator_and_consumers",
             }
         )
+    migrated_records = load_history_records()
+    active_legacy_paths = {row["legacy_path"] for row in rows}
+    for migrated in migrated_records:
+        if migrated.get("migration_state") != "MIGRATED":
+            raise ValueError("artifact migration history contains a non-MIGRATED record")
+        if migrated.get("legacy_path") in active_legacy_paths:
+            raise ValueError(f"artifact history overlaps active legacy source: {migrated.get('legacy_path')}")
+        rows.append(migrated)
     by_target: dict[str, list[str]] = defaultdict(list)
     for row in rows:
         by_target[row["collision_key"]].append(row["legacy_path"])
@@ -217,22 +265,26 @@ def build_records() -> tuple[list[dict[str, Any]], dict[str, Any]]:
         {
             row["canonical_path"]
             for row in rows
-            if (ROOT / row["canonical_path"]).exists()
+            if row.get("migration_state") != "MIGRATED"
+            and (ROOT / row["canonical_path"]).exists()
         }
     )
     summary = {
         "files_total": len(rows),
+        "active_legacy_files": sum(row.get("migration_state") != "MIGRATED" for row in rows),
+        "migrated_files": sum(row.get("migration_state") == "MIGRATED" for row in rows),
         "json_files": sum(row["legacy_path"].lower().endswith(".json") for row in rows),
         "npz_files": sum(row["legacy_path"].lower().endswith(".npz") for row in rows),
         "generator_identity_resolved": sum(row["generator_count"] == 1 for row in rows),
         "generator_identity_ambiguous": sum(row["generator_count"] > 1 for row in rows),
         "generator_identity_missing": sum(row["generator_count"] == 0 for row in rows),
-        "consumer_rewrite_required": sum(row["consumer_count"] > 0 for row in rows),
+        "consumer_rewrite_required": sum(row["consumer_count"] > 0 and row.get("migration_state") != "MIGRATED" for row in rows),
         "duplicate_targets": duplicate_targets,
         "existing_target_conflicts": existing_targets,
-        "physical_move_performed": False,
+        "physical_move_performed": any(row.get("migration_state") == "MIGRATED" for row in rows),
         "physics_status_changes": 0,
         "claim_promotion": False,
+        "files_migrated_in_prior_waves": sum(row.get("migration_state") == "MIGRATED" for row in rows),
         "disposition_counts": dict(Counter(row["disposition"] for row in rows)),
     }
     return rows, summary
@@ -243,7 +295,7 @@ def render_report(payload: dict[str, Any]) -> str:
     lines = [
         "# UET Core Artifact Migration Report",
         "",
-        "> Plan-only control artifact. No generated output is moved by this wave.",
+        "> Organization control artifact. Each physical move is recorded per bounded wave; no physics claim is promoted.",
         "",
         f"Generated at: {payload['generated_at']}",
         f"Generator: {payload['generator']}",
@@ -251,18 +303,20 @@ def render_report(payload: dict[str, Any]) -> str:
         "## Inventory",
         "",
         f"- Generated artifacts indexed: **{summary['files_total']}** ({summary['json_files']} JSON, {summary['npz_files']} NPZ)",
+        f"- Active legacy outputs: **{summary['active_legacy_files']}**",
+        f"- Canonical outputs migrated: **{summary['migrated_files']}**",
         f"- One generator identity resolved: **{summary['generator_identity_resolved']}**",
         f"- Ambiguous generator identity: **{summary['generator_identity_ambiguous']}**",
         f"- Missing generator identity: **{summary['generator_identity_missing']}**",
         f"- Consumer rewrite required: **{summary['consumer_rewrite_required']}**",
         f"- Duplicate canonical targets: **{len(summary['duplicate_targets'])}**",
         f"- Existing canonical targets: **{len(summary['existing_target_conflicts'])}**",
-        f"- Physical move performed: **{summary['physical_move_performed']}**",
+        f"- Physical move recorded: **{summary['physical_move_performed']}**",
         f"- Physics status changes: **{summary['physics_status_changes']}**",
         "",
         "## Gate",
         "",
-        "Every artifact remains at its legacy path until its generator writes the canonical path and every active consumer is switched. The legacy directory remains a compatibility boundary; it is not a second generated-output store after a family is migrated.",
+        "Active artifacts remain at their legacy path until their generator and consumers are ready. Migrated artifacts are represented by one canonical output plus history metadata; the legacy directory is not a second generated-output store.",
         "",
         "## Required next action",
         "",
@@ -281,6 +335,7 @@ def build_payload() -> dict[str, Any]:
         "scope": "docs/core/artifacts generated JSON and NPZ outputs",
         "canonical_path_authority": "docs/core/core_paths.py",
         "legacy_boundary": "docs/core/artifacts/README.md",
+        "history_path": repo_path(HISTORY) if HISTORY.exists() else None,
         "summary": summary,
         "records": rows,
     }
@@ -299,6 +354,7 @@ def main() -> int:
     print(json.dumps({
         "status": status,
         "files_total": summary["files_total"],
+        "migrated_files": summary["migrated_files"],
         "generator_identity_resolved": summary["generator_identity_resolved"],
         "generator_identity_ambiguous": summary["generator_identity_ambiguous"],
         "generator_identity_missing": summary["generator_identity_missing"],

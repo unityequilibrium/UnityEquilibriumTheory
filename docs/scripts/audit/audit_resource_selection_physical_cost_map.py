@@ -17,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT.parent) not in sys.path:
     sys.path.insert(0, str(ROOT.parent))
 
+from docs.core.core_paths import canonical_artifact_path
 from docs.core.resource_selection_physical_cost_map import (
     PHYSICAL_COST_MAP_OPERATOR_MODE,
     PHYSICAL_COST_MAP_STATUS,
@@ -235,7 +236,7 @@ def main() -> int:
             "calorimetry or heat-flux measurement, uncertainty, detector operator, and holdout"
         ),
     }
-    output = ROOT / "core" / "artifacts" / "resource_selection_physical_cost_map_verification.json"
+    output = ROOT.parent / canonical_artifact_path("resource_selection_physical_cost_map_verification.json", "provenance")
     output.write_text(json.dumps(artifact, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(artifact, indent=2))
     return 0 if artifact["audit_status"] != "FAIL" else 1

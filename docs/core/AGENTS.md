@@ -196,3 +196,19 @@ The structural migration control plane has four executable checks:
 - `docs/scripts/audit/audit_uet_core_migration.py` — runs the three checks and writes the combined enforcement artifact/report.
 
 These checks are organization controls only. A PASS cannot promote a formula, evidence class or foundation claim.
+## Bounded generated-artifact migration
+
+Generated output migration is a separate organization wave. Use
+`docs/scripts/audit/migrate_uet_core_artifact_family_v3.py` for one explicitly
+resolved family at a time. The runner requires a switched generator, checks
+actual legacy-path consumers, compares semantic payloads, preserves hashes, and
+records the move in `00_governance/uet_core_artifact_migration_history.json`.
+
+A generated-index reference is not an active reader once the generator is
+refreshed, but unresolved active consumers block the move. If generator output
+differs from the legacy artifact, stop; do not overwrite legacy work. A source
+provenance refresh may be proposed only through an explicit review step, and
+must never hide changes beyond declared metadata. The canonical output belongs
+under `07_artifacts/`; the old artifacts directory is an index/compatibility
+boundary only. A migrated artifact remains `INTERNAL` or its existing evidence
+class; organization migration never promotes physics claims.
