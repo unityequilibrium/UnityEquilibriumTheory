@@ -169,3 +169,12 @@
 - Verification: the previous Wave 5d artifact planner/audit, queue, organization/path/import/link controls, and focused tests remain PASS; this candidate preflight is BLOCKED by semantic payload drift.
 - Controller: retain `uet_all_waves_completion_audit.json` as `GENERATOR_SWITCH_REQUIRED` until its source/evidence drift is reconciled. The next move must be a different candidate with a clean semantic preflight or an explicit repair of this candidate's evidence dependencies.
 - Public-safety boundary: organization-only progress; no physics status changed and foundation remains `BLOCKED`.
+## 2026-09-14 — Core physical migration v3 — Wave 5f foundation dependency-graph artifact
+
+- Scope: one generated governance artifact under `docs/core/artifacts`; organization migration only.
+- Changed: switched `build_uet_foundation_dependency_graph.py` to `core_paths.canonical_artifact_path`; no active runtime consumers required rewriting. A temporary backup/restore preflight showed semantic equality with the legacy JSON after removing only `generated_at`.
+- Moved: `uet_foundation_dependency_graph.json` to `docs/core/07_artifacts/gates/` with one canonical copy and preserved raw SHA-256 `e14becf039cc4565aa3b9d62b38f7a023b307fb4101718c60b258d97acbb2420`.
+- Synchronized: artifact migration history/manifest/audit, generator review queue, core file/organization/physical manifests, and navigation. The moved record has zero active consumers and remains `INTERNAL`; physics status changes remain 0.
+- Verification: bounded artifact planner/audit and read-only checks PASS; queue freshness PASS (4 migrated, 589 pending); physical/path/import/link enforcement PASS; organization registry `--check` PASS; scientific-link freshness PASS with its existing `BLOCKED_OPEN_SCIENTIFIC_LINKS` scientific blocker; targeted migration/coverage/history tests PASS; test collection remains PASS with the migrated core test surface.
+- Controller: 589 generated outputs remain at the legacy boundary; 50 require generator/consumer rewrites, 536 have unresolved generator identities, and 3 generator-switch candidates remain. No further move is allowed without a clean semantic/provenance preflight.
+- Public-safety boundary: organization-only progress; the dependency graph remains a project-control artifact with `BLOCKED` scientific nodes; foundation remains `BLOCKED` and no physics claim was promoted.

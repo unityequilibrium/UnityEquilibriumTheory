@@ -1,7 +1,7 @@
 {
   "artifact": "uet_core_artifact_generator_review_queue",
   "canonical_path_authority": "docs/core/core_paths.py",
-  "generated_at": "2026-09-14T15:53:21+00:00",
+  "generated_at": "2026-09-14T16:23:42+00:00",
   "generator": "docs/scripts/audit/build_uet_core_artifact_generator_review_queue_v3.py",
   "records": [
     {
@@ -21094,8 +21094,10 @@
       },
       "legacy_path": "docs/core/artifacts/uet_all_waves_completion_audit.json",
       "legacy_reference_paths": [
+        "WORK_LEDGER/2026/2026-09-14.md",
         "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
         "docs/core/00_governance/uet_core_physical_migration_manifest.json",
+        "docs/core/08_history/update_logs/UET_CORE_PHYSICAL_MIGRATION_UPDATE_LOG.md",
         "docs/scripts/audit/audit_uet_all_waves_completion.py"
       ],
       "logical_area": "07_artifacts",
@@ -21259,7 +21261,7 @@
       "preflight_required": false,
       "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256_before": "8dc803c1e1f343f295fbe51c0baad5500c4d6e767b5bc9f133988fa2aaf36fa6"
+      "sha256_before": "590bbc39002eefab5296891faee2ee5916051a138f5f90c14d26792474258935"
     },
     {
       "active_consumers": [
@@ -21302,7 +21304,7 @@
       "preflight_required": false,
       "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256_before": "1e9b823ed606e7119fb42ea1b7a46a25798ec70dbee28aa002a434f2fd347d06"
+      "sha256_before": "8453b2ec08b0571df6c95cb096ea81883ca3d4a37fbe5a4f03ad2bf5bdae4b1d"
     },
     {
       "active_consumers": [
@@ -21344,7 +21346,7 @@
       "preflight_required": false,
       "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256_before": "e04855bade920686346c6110f6d10d7faadd8daed7c7ebecbe8adc49bd31044b"
+      "sha256_before": "f231358256ef3f948f4ad001062c8b405fc5bcbb61ed37ee50760bcd3f22faf2"
     },
     {
       "active_consumers": [
@@ -21386,7 +21388,7 @@
       "preflight_required": true,
       "review_category": "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256_before": "9e23706ef6d690562fb328c850be72401e0b27ab6434f6e17ae010049881eeec"
+      "sha256_before": "e9a90ff54dcf0aaf019f90a118ced991e27b78089ed93bd60cd8d67c8391b9a2"
     },
     {
       "active_consumers": [
@@ -24480,11 +24482,11 @@
       "active_consumers": [],
       "artifact_name": "uet_foundation_dependency_graph.json",
       "asset_id": "UET-ARTIFACT-F2430244A9C6",
-      "blocker": "the unique generator must write the canonical path before preflight",
+      "blocker": "no pending migration action",
       "canonical_path": "docs/core/07_artifacts/gates/uet_foundation_dependency_graph.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
       "consumer_count": 0,
-      "disposition": "generator_switch_required_before_move",
+      "disposition": "migrated_canonical_output",
       "evidence_status": "INTERNAL",
       "generator_candidates": [
         "docs/scripts/audit/build_uet_foundation_dependency_graph.py"
@@ -24492,10 +24494,10 @@
       "generator_count": 1,
       "generator_path": "docs/scripts/audit/build_uet_foundation_dependency_graph.py",
       "generator_status": {
-        "contains_legacy_output_literal": true,
+        "contains_legacy_output_literal": false,
         "path_exists": true,
-        "status": "LEGACY_OUTPUT_LITERAL_REMAINS",
-        "uses_canonical_path_authority": false
+        "status": "CANONICAL_PATH_AUTHORITY_PRESENT",
+        "uses_canonical_path_authority": true
       },
       "legacy_path": "docs/core/artifacts/uet_foundation_dependency_graph.json",
       "legacy_reference_paths": [
@@ -24504,11 +24506,11 @@
         "docs/scripts/audit/build_uet_foundation_dependency_graph.py"
       ],
       "logical_area": "07_artifacts",
-      "migration_state": "NOT_STARTED",
-      "next_action": "switch the generator, run a bounded semantic preflight, then decide move or block",
+      "migration_state": "MIGRATED",
+      "next_action": "retain legacy index boundary and verify canonical consumers",
       "owner_id": "EVIDENCE",
-      "preflight_required": true,
-      "review_category": "GENERATOR_SWITCH_REQUIRED",
+      "preflight_required": false,
+      "review_category": "MIGRATED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "e14becf039cc4565aa3b9d62b38f7a023b307fb4101718c60b258d97acbb2420"
     },
@@ -26413,7 +26415,7 @@
       "preflight_required": false,
       "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256_before": "60472a28a238cf0f9f42f574c27a94414c3e648231413685fb150087246cd9da"
+      "sha256_before": "f934e38ca73b9ef8cf8958db1dfd1e777793a73922aaefd3d42302e6b15e7dfe"
     },
     {
       "active_consumers": [
@@ -26694,20 +26696,20 @@
   "source_manifest": {
     "path": "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
     "record_count": 593,
-    "sha256": "75cd94c62994ae7680dc64f8e4eb616b2b9c4e7425e4f78c373975517ae0ffbd"
+    "sha256": "0e7918aebd3948ae9bb1883a8eea172e963eb818099dcde183bd1c5cdae61cb1"
   },
   "summary": {
     "category_counts": {
       "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED": 50,
       "GENERATOR_IDENTITY_UNRESOLVED": 536,
-      "GENERATOR_SWITCH_REQUIRED": 4,
-      "MIGRATED": 3
+      "GENERATOR_SWITCH_REQUIRED": 3,
+      "MIGRATED": 4
     },
     "claim_boundary": "organization control only; this artifact cannot promote physics status",
     "controlling_blocker": "generator_identity_or_consumer_path_not_closed",
-    "migrated_records": 3,
+    "migrated_records": 4,
     "next_wave": "resolve one bounded generator/consumer family and run semantic preflight",
-    "pending_records": 590,
+    "pending_records": 589,
     "records_total": 593,
     "status": "PASS_WITH_REVIEW_REQUIRED"
   }

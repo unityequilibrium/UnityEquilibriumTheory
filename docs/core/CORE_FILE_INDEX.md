@@ -29,9 +29,9 @@ AGENTS.md, README.md, CORE_FILE_INDEX.md and __init__.py remain permanent root e
 ## Physical state
 
 - Files indexed: **1744**
-- Move targets: **1158**
-- Already canonical or protected: **586**
-- Dirty sources held back: **29**
+- Move targets: **1157**
+- Already canonical or protected: **587**
+- Dirty sources held back: **20**
 - Duplicate targets: **0**
 - Existing destination conflicts: **0**
 - Physics status changes from organization migration: **0**
@@ -62,9 +62,9 @@ AGENTS.md, README.md, CORE_FILE_INDEX.md and __init__.py remain permanent root e
 - Ambiguous generator identities: **0**
 - Missing generator identities: **536**
 - Consumer rewrites required: **538**
-- Canonical artifacts migrated: **3**
+- Canonical artifacts migrated: **4**
 - Artifact migration audit: **PASS**
-- Generator review queue: **PASS_WITH_REVIEW_REQUIRED** (590 pending)
+- Generator review queue: **PASS_WITH_REVIEW_REQUIRED** (589 pending)
 No generated output is moved until its generator and active consumers use the canonical path authority.
 
 ## Canonical areas
@@ -79,10 +79,10 @@ No generated output is moved until its generator and active consumers use the ca
 | 04_proofs | 1 |
 | 05_tests | 213 |
 | 06_data | 22 |
-| 07_artifacts | 5 |
+| 07_artifacts | 6 |
 | 08_history | 31 |
 | 99_review | 1 |
-| artifacts | 591 |
+| artifacts | 590 |
 | data | 113 |
 | root_entrypoints | 328 |
 | test | 298 |
@@ -91,8 +91,8 @@ No generated output is moved until its generator and active consumers use the ca
 
 | Wave | Paths |
 | :-- | --: |
-| already_canonical | 586 |
-| artifacts | 591 |
+| already_canonical | 587 |
+| artifacts | 590 |
 | data_tooling | 86 |
 | equation_or_lane | 181 |
 | proofs | 1 |
