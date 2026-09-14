@@ -1,20 +1,22 @@
-import zipfile
-import os
-import shutil
+"""Compatibility shim for the migrated core tooling path."""
 
-zip_path = r"c:\Users\santa\Desktop\lad\Lab_uet_harness_v0.9.0\(search Only) ทองข้อมูลดี\v0.9.0+\04.01.2026.zip"
-restore_dir = r"c:\Users\santa\Desktop\lad\Lab_uet_harness_v0.9.0\docs\topics\0.6_Electroweak_Physics\Code\experiments"
-target_internal = "04.01.2026/data/01_particle_physics/w_mass_anomaly_data.py"
-target_name = "w_mass_anomaly_data.py"
+from __future__ import annotations
 
-print(f"Restoring {target_name} to {restore_dir}...")
+import runpy
+from pathlib import Path
 
-try:
-    with zipfile.ZipFile(zip_path, "r") as z:
-        source = z.open(target_internal)
-        target_path = os.path.join(restore_dir, target_name)
-        with open(target_path, "wb") as target:
-            shutil.copyfileobj(source, target)
-        print("Success.")
-except Exception as e:
-    print(f"Error: {e}")
+_CANONICAL_RELATIVE = "docs/scripts/core/legacy/restore_dep.py"
+
+
+def _run() -> None:
+    current = Path(__file__).resolve()
+    for ancestor in (current.parent, *current.parents):
+        candidate = ancestor / _CANONICAL_RELATIVE
+        if candidate.exists():
+            runpy.run_path(str(candidate), run_name="__main__")
+            return
+    raise FileNotFoundError(f"canonical tooling script not found: {_CANONICAL_RELATIVE}")
+
+
+if __name__ == "__main__":
+    _run()

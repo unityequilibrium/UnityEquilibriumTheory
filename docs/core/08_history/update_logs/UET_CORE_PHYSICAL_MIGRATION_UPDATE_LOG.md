@@ -26,3 +26,11 @@
 - Changed: appended the v3 physical-tree, ownership, compatibility, and no-physics-promotion rules to docs/core/AGENTS.md.
 - Verification: planner check PASS; physical migration audit PASS; core helper py_compile PASS; physics status changes 0.
 - Controller: data/tooling, tests, artifacts, and equation implementations remain pending consumer/import/generator checkpoints.
+
+## 2026-09-14 — Wave 3a data/tooling safe subset
+
+- Scope: tooling currently under docs/core/data/scripts.
+- Changed: moved 25 documentation/Python tools to docs/scripts/core with canonical source files and old-path redirect/runpy compatibility shims.
+- Held back: 86 files with location-sensitive bootstrap or non-code output/provenance ambiguity; no source data moved in this wave.
+- Verification: tooling migration audit PASS; canonical and compatibility Python compile PASS for 17 moved scripts; all 17 shim targets exist; physical migration audit PASS; physics status changes 0.
+- Controller: path-bootstrap repair and source/output provenance classification for the remaining tooling and core external data package.

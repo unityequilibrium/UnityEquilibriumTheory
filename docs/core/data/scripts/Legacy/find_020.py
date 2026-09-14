@@ -1,14 +1,22 @@
-import os
+"""Compatibility shim for the migrated core tooling path."""
 
-base = r"C:\Users\santa\Desktop\lad\Lab_uet_harness_v0.9.0\docs\topics\0.20_Atomic_Physics"
+from __future__ import annotations
 
-print(f"Scanning {base}...")
-found = False
-for root, dirs, files in os.walk(base):
-    for f in files:
-        if f.endswith(".py"):
-            print(f"FOUND: {os.path.join(root, f)}")
-            found = True
+import runpy
+from pathlib import Path
 
-if not found:
-    print("CRITICAL: No python files found in Topic 0.20!")
+_CANONICAL_RELATIVE = "docs/scripts/core/legacy/find_020.py"
+
+
+def _run() -> None:
+    current = Path(__file__).resolve()
+    for ancestor in (current.parent, *current.parents):
+        candidate = ancestor / _CANONICAL_RELATIVE
+        if candidate.exists():
+            runpy.run_path(str(candidate), run_name="__main__")
+            return
+    raise FileNotFoundError(f"canonical tooling script not found: {_CANONICAL_RELATIVE}")
+
+
+if __name__ == "__main__":
+    _run()

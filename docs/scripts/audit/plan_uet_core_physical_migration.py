@@ -96,7 +96,7 @@ def existing_metadata() -> dict[str, dict[str, Any]]:
 
 
 def inferred_kind(relative: str, old: dict[str, Any]) -> str:
-    if old.get("file_kind"):
+    if old.get("file_kind") and old.get("file_kind") not in {"compatibility_redirect", "compatibility_python_shim"}:
         return str(old["file_kind"])
     lower = relative.lower()
     if "/artifacts/" in lower:
@@ -197,7 +197,7 @@ def build_records() -> tuple[list[dict[str, Any]], dict[str, Any]]:
                 "migration_wave": "already_canonical" if compatibility else wave_for(relative, canonical),
                 "migration_state": "MIGRATED" if relative == canonical else "NOT_STARTED",
                 "compatibility_mode": "redirect_or_shim" if compatibility else compatibility_for(relative, canonical),
-                "dirty_source": relative in dirty,
+                "dirty_source": relative in dirty and not compatibility,
                 "next_action": "retain_canonical_path" if relative == canonical else "resolve_preconditions_then_apply_staged_move",
             }
         )
@@ -279,7 +279,12 @@ def render_report(payload: dict[str, Any]) -> str:
 
 
 def write_plan() -> dict[str, Any]:
+    prior = load_json(MANIFEST_PATH)
     records, summary = build_records()
+    prior_summary = prior.get("summary", {})
+    summary["files_migrated_in_wave"] = prior_summary.get("files_migrated_in_wave", 0)
+    summary["files_skipped_in_wave"] = prior_summary.get("files_skipped_in_wave", 0)
+    summary["compatibility_assets_present"] = sum(item["file_kind"] in {"compatibility_redirect", "compatibility_python_shim"} for item in records)
     payload = {
         "schema_version": "1.0",
         "migration_id": "UET-CORE-PHYSICAL-MIGRATION-V3",

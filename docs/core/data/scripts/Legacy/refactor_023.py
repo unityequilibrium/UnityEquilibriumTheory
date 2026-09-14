@@ -1,26 +1,22 @@
-import shutil
-import os
+"""Compatibility shim for the migrated core tooling path."""
 
-BASE = r"C:\Users\santa\Desktop\lad\Lab_uet_harness_v0.9.0\docs\topics\0.23_Condensed_Matter"
+from __future__ import annotations
 
-# Move Code
-src_solver = os.path.join(BASE, "Code", "baseline", "superfluid_solver.py")
-src_run = os.path.join(BASE, "Code", "baseline", "run_superfluid_experiment.py")
+import runpy
+from pathlib import Path
 
-dst_dir = os.path.join(BASE, "Code", "section 1", "code")
+_CANONICAL_RELATIVE = "docs/scripts/core/legacy/refactor_023.py"
 
-if os.path.exists(src_solver):
-    shutil.move(src_solver, os.path.join(dst_dir, "superfluid_solver.py"))
-    print("Moved solver.")
 
-if os.path.exists(src_run):
-    shutil.move(src_run, os.path.join(dst_dir, "run_superfluid_experiment.py"))
-    print("Moved runner.")
+def _run() -> None:
+    current = Path(__file__).resolve()
+    for ancestor in (current.parent, *current.parents):
+        candidate = ancestor / _CANONICAL_RELATIVE
+        if candidate.exists():
+            runpy.run_path(str(candidate), run_name="__main__")
+            return
+    raise FileNotFoundError(f"canonical tooling script not found: {_CANONICAL_RELATIVE}")
 
-# Remove legacy/baseline folders if empty
-try:
-    shutil.rmtree(os.path.join(BASE, "Code", "baseline"))
-    shutil.rmtree(os.path.join(BASE, "Code", "legacy"))
-    print("Cleaned up old folders.")
-except:
-    pass
+
+if __name__ == "__main__":
+    _run()

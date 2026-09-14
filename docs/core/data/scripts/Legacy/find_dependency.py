@@ -1,28 +1,22 @@
-import zipfile
-import os
+"""Compatibility shim for the migrated core tooling path."""
 
-zip_dir = (
-    r"c:\Users\santa\Desktop\lad\Lab_uet_harness_v0.9.0\(search Only) ทองข้อมูลดี\v0.9.0+"
-)
-target_file = "w_mass_anomaly_data.py"
-files = ["lab 02.01.2026.zip", "03.01.2026.zip", "04.01.2026.zip"]
+from __future__ import annotations
 
-print(f"Searching for {target_file} in archives...\n")
+import runpy
+from pathlib import Path
 
-found = False
-for f in files:
-    path = os.path.join(zip_dir, f)
-    if not os.path.exists(path):
-        continue
+_CANONICAL_RELATIVE = "docs/scripts/core/legacy/find_dependency.py"
 
-    try:
-        with zipfile.ZipFile(path, "r") as z:
-            for name in z.namelist():
-                if target_file in name:
-                    print(f"FOUND in {f}: {name}")
-                    found = True
-    except Exception as e:
-        print(f"Error reading {f}: {e}")
 
-if not found:
-    print("File not found in inspected archives.")
+def _run() -> None:
+    current = Path(__file__).resolve()
+    for ancestor in (current.parent, *current.parents):
+        candidate = ancestor / _CANONICAL_RELATIVE
+        if candidate.exists():
+            runpy.run_path(str(candidate), run_name="__main__")
+            return
+    raise FileNotFoundError(f"canonical tooling script not found: {_CANONICAL_RELATIVE}")
+
+
+if __name__ == "__main__":
+    _run()
