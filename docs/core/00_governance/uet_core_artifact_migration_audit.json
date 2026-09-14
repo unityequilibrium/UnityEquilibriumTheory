@@ -26,6 +26,11 @@
       "status": "PASS"
     },
     {
+      "check_id": "migrated_target_semantic_hashes_stable",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
       "check_id": "migrated_legacy_sources_absent",
       "observed": 0,
       "status": "PASS"
@@ -64,7 +69,7 @@
   "controlling_blocker": null,
   "duplicate_targets": {},
   "existing_targets": [],
-  "generated_at": "2026-09-14T15:07:11+00:00",
+  "generated_at": "2026-09-14T15:53:18+00:00",
   "generator": "docs/scripts/audit/audit_uet_core_artifact_migration_v3.py",
   "migrated_active_consumer_rows": [],
   "migrated_source_present": [],
@@ -74,27 +79,28 @@
   "source_hash_mismatches": [],
   "status": "PASS",
   "summary": {
-    "active_legacy_files": 591,
+    "active_legacy_files": 590,
     "claim_promotion": false,
-    "consumer_rewrite_required": 539,
+    "consumer_rewrite_required": 538,
     "disposition_counts": {
-      "generator_and_consumer_rewrite_required": 51,
+      "generator_and_consumer_rewrite_required": 50,
       "generator_identity_not_resolved": 536,
       "generator_switch_required_before_move": 4,
-      "migrated_canonical_output": 2
+      "migrated_canonical_output": 3
     },
     "duplicate_targets": {},
     "existing_target_conflicts": [],
-    "files_migrated_in_prior_waves": 2,
+    "files_migrated_in_prior_waves": 3,
     "files_total": 593,
     "generator_identity_ambiguous": 0,
     "generator_identity_missing": 536,
     "generator_identity_resolved": 57,
     "json_files": 592,
-    "migrated_files": 2,
+    "migrated_files": 3,
     "npz_files": 1,
     "physical_move_performed": true,
     "physics_status_changes": 0
   },
-  "target_hash_mismatches": []
+  "target_hash_mismatches": [],
+  "target_semantic_hash_mismatches": []
 }

@@ -1,7 +1,7 @@
 {
   "artifact": "uet_core_artifact_generator_review_queue",
   "canonical_path_authority": "docs/core/core_paths.py",
-  "generated_at": "2026-09-14T15:06:29+00:00",
+  "generated_at": "2026-09-14T15:53:21+00:00",
   "generator": "docs/scripts/audit/build_uet_core_artifact_generator_review_queue_v3.py",
   "records": [
     {
@@ -3591,16 +3591,14 @@
       "sha256_before": "5af4debf7c189ac255d074eaaf1dbab7515721d480f200d6cb56c13b3a52ede5"
     },
     {
-      "active_consumers": [
-        "docs/core/test/test_uet_wave3_wave10_artifact_coverage.py"
-      ],
+      "active_consumers": [],
       "artifact_name": "matter_space_energy_ledger_verification.json",
       "asset_id": "UET-ARTIFACT-2B38909CD5BD",
-      "blocker": "active consumers still reference the legacy artifact boundary",
+      "blocker": "no pending migration action",
       "canonical_path": "docs/core/07_artifacts/verification/matter_space_energy_ledger_verification.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
-      "consumer_count": 1,
-      "disposition": "generator_and_consumer_rewrite_required",
+      "consumer_count": 0,
+      "disposition": "migrated_canonical_output",
       "evidence_status": "INTERNAL",
       "generator_candidates": [
         "docs/scripts/audit/audit_matter_space_energy_ledger.py"
@@ -3608,10 +3606,10 @@
       "generator_count": 1,
       "generator_path": "docs/scripts/audit/audit_matter_space_energy_ledger.py",
       "generator_status": {
-        "contains_legacy_output_literal": true,
+        "contains_legacy_output_literal": false,
         "path_exists": true,
-        "status": "LEGACY_OUTPUT_LITERAL_REMAINS",
-        "uses_canonical_path_authority": false
+        "status": "CANONICAL_PATH_AUTHORITY_PRESENT",
+        "uses_canonical_path_authority": true
       },
       "legacy_path": "docs/core/artifacts/matter_space_energy_ledger_verification.json",
       "legacy_reference_paths": [
@@ -3623,11 +3621,11 @@
         "docs/scripts/audit/audit_matter_space_energy_ledger.py"
       ],
       "logical_area": "07_artifacts",
-      "migration_state": "NOT_STARTED",
-      "next_action": "switch the generator and every active consumer through the path authority",
+      "migration_state": "MIGRATED",
+      "next_action": "retain legacy index boundary and verify canonical consumers",
       "owner_id": "EVIDENCE",
-      "preflight_required": true,
-      "review_category": "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED",
+      "preflight_required": false,
+      "review_category": "MIGRATED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "e22a4b1f72133e2d28331548516309369290c2fe2bd28d02a90f5e7b8d678e4b"
     },
@@ -21261,7 +21259,7 @@
       "preflight_required": false,
       "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256_before": "0ed1fc708377a6d13e7d98d996f4fd414928024741e392920dd8a37084ffbc02"
+      "sha256_before": "8dc803c1e1f343f295fbe51c0baad5500c4d6e767b5bc9f133988fa2aaf36fa6"
     },
     {
       "active_consumers": [
@@ -21304,7 +21302,7 @@
       "preflight_required": false,
       "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256_before": "d69748e7b024155d5cf1d2d03e89fd6379a5a12d47b8a3d4227818bb282f6df2"
+      "sha256_before": "1e9b823ed606e7119fb42ea1b7a46a25798ec70dbee28aa002a434f2fd347d06"
     },
     {
       "active_consumers": [
@@ -21346,7 +21344,7 @@
       "preflight_required": false,
       "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256_before": "650598a05677e4ebe31ca18a0246498b76597adc89f1761423f61b5f14adf9ea"
+      "sha256_before": "e04855bade920686346c6110f6d10d7faadd8daed7c7ebecbe8adc49bd31044b"
     },
     {
       "active_consumers": [
@@ -21388,7 +21386,7 @@
       "preflight_required": true,
       "review_category": "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256_before": "ce860500a4ae761dd6a2cb66b861dd4e6c02062a1c401fdb612117f3f8733d30"
+      "sha256_before": "9e23706ef6d690562fb328c850be72401e0b27ab6434f6e17ae010049881eeec"
     },
     {
       "active_consumers": [
@@ -26415,7 +26413,7 @@
       "preflight_required": false,
       "review_category": "GENERATOR_IDENTITY_UNRESOLVED",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256_before": "0a77d45e2827bac4c860bdd0de2b3ee0326c6ebded4b4310ceb91ae930c809a7"
+      "sha256_before": "60472a28a238cf0f9f42f574c27a94414c3e648231413685fb150087246cd9da"
     },
     {
       "active_consumers": [
@@ -26696,20 +26694,20 @@
   "source_manifest": {
     "path": "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
     "record_count": 593,
-    "sha256": "d582e58b7279c47bfbdf457a90746bc59bf2cb6e7bbb3cd88ac25ba124fa7c9d"
+    "sha256": "75cd94c62994ae7680dc64f8e4eb616b2b9c4e7425e4f78c373975517ae0ffbd"
   },
   "summary": {
     "category_counts": {
-      "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED": 51,
+      "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED": 50,
       "GENERATOR_IDENTITY_UNRESOLVED": 536,
       "GENERATOR_SWITCH_REQUIRED": 4,
-      "MIGRATED": 2
+      "MIGRATED": 3
     },
     "claim_boundary": "organization control only; this artifact cannot promote physics status",
     "controlling_blocker": "generator_identity_or_consumer_path_not_closed",
-    "migrated_records": 2,
+    "migrated_records": 3,
     "next_wave": "resolve one bounded generator/consumer family and run semantic preflight",
-    "pending_records": 591,
+    "pending_records": 590,
     "records_total": 593,
     "status": "PASS_WITH_REVIEW_REQUIRED"
   }

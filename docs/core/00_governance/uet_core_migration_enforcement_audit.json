@@ -13,7 +13,7 @@
       "returncode": 0,
       "script": "docs/scripts/audit/audit_uet_core_links.py",
       "stderr": "",
-      "stdout": "{\"status\": \"PASS\", \"links_checked\": 254, \"broken\": 0}"
+      "stdout": "{\"status\": \"PASS\", \"links_checked\": 239, \"broken\": 0}"
     },
     "paths": {
       "returncode": 0,
@@ -23,7 +23,7 @@
     }
   },
   "failed_subaudits": [],
-  "generated_at": "2026-09-14T15:07:37+00:00",
+  "generated_at": "2026-09-14T15:50:37+00:00",
   "generator": "docs/scripts/audit/audit_uet_core_migration.py",
   "schema_version": "1.0",
   "status": "PASS",
@@ -45,7 +45,7 @@
       "controlling_blocker": null,
       "facade_error": null,
       "failed_modules": [],
-      "generated_at": "2026-09-14T15:07:37+00:00",
+      "generated_at": "2026-09-14T15:50:36+00:00",
       "generator": "docs/scripts/audit/audit_uet_core_imports.py",
       "imported_modules": [
         "docs.core.he4_normal_viscosity_kubo",
@@ -246,9 +246,9 @@
       ],
       "claim_boundary": "Markdown path audit only; no physics-status promotion",
       "controlling_blocker": null,
-      "generated_at": "2026-09-14T15:07:37+00:00",
+      "generated_at": "2026-09-14T15:50:37+00:00",
       "generator": "docs/scripts/audit/audit_uet_core_links.py",
-      "links_checked": 254,
+      "links_checked": 239,
       "schema_version": "1.0",
       "status": "PASS"
     },
@@ -298,7 +298,7 @@
       "claim_boundary": "organization/path audit only; no physics-status promotion",
       "controlling_blocker": null,
       "duplicate_targets": {},
-      "generated_at": "2026-09-14T15:07:33+00:00",
+      "generated_at": "2026-09-14T15:50:33+00:00",
       "generator": "docs/scripts/audit/audit_uet_core_paths.py",
       "invalid_migration_states": [],
       "missing_canonical_paths": [],

@@ -92,10 +92,51 @@ def find_row(payload: dict[str, Any], selector: str) -> dict[str, Any]:
     return matches[0]
 
 
+VOLATILE_JSON_KEYS = frozenset({"generated_at"})
+
+
+def normalize_json_payload(value: Any) -> Any:
+    if isinstance(value, dict):
+        return {
+            key: normalize_json_payload(item)
+            for key, item in value.items()
+            if key not in VOLATILE_JSON_KEYS
+        }
+    if isinstance(value, list):
+        return [normalize_json_payload(item) for item in value]
+    return value
+
+
+def is_volatile_json_path(path: str) -> bool:
+    return path == "generated_at" or path.endswith(".generated_at")
+
+
+def semantic_metadata_difference_paths(source: Path, target: Path) -> list[str]:
+    if source.suffix.lower() != ".json" or target.suffix.lower() != ".json":
+        return []
+    differences = differing_json_paths(load_json(source), load_json(target))
+    return [path for path in differences if is_volatile_json_path(path)]
+
+
 def semantic_equal(source: Path, target: Path) -> bool:
     if source.suffix.lower() == ".json" and target.suffix.lower() == ".json":
-        return load_json(source) == load_json(target)
+        return normalize_json_payload(load_json(source)) == normalize_json_payload(load_json(target))
     return source.read_bytes() == target.read_bytes()
+
+
+def semantic_payload_sha256(path: Path) -> str:
+    """Hash artifact content after removing declared volatile JSON metadata."""
+    if path.suffix.lower() == ".json":
+        payload = normalize_json_payload(load_json(path))
+        encoded = json.dumps(
+            payload,
+            ensure_ascii=False,
+            sort_keys=True,
+            separators=(",", ":"),
+        ).encode("utf-8")
+    else:
+        encoded = path.read_bytes()
+    return hashlib.sha256(encoded).hexdigest()
 
 
 def differing_json_paths(left: Any, right: Any, prefix: str = "") -> list[str]:
@@ -187,7 +228,13 @@ def run_generator(generator: Path) -> dict[str, Any]:
         return {"stdout": result.stdout[-2000:]}
 
 
-def update_history(row: dict[str, Any], preflight_hash: str, after_hash: str) -> dict[str, Any]:
+def update_history(
+    row: dict[str, Any],
+    preflight_hash: str,
+    after_hash: str,
+    semantic_ignored_paths: list[str],
+    semantic_hash: str,
+) -> dict[str, Any]:
     history = load_history()
     existing = [
         item
@@ -204,6 +251,8 @@ def update_history(row: dict[str, Any], preflight_hash: str, after_hash: str) ->
             "compatibility_mode": "legacy_index_only",
             "sha256_after": after_hash,
             "preflight_generator_output_sha256": preflight_hash,
+            "semantic_payload_sha256": semantic_hash,
+            "semantic_ignored_paths": semantic_ignored_paths,
             "migration_wave": "artifact_family_bounded_move",
             "migrated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
             "active_consumers": [],
@@ -227,6 +276,7 @@ def apply(row: dict[str, Any]) -> dict[str, Any]:
     if not target.exists():
         raise RuntimeError("generator did not create the canonical target")
     preflight_hash = sha256(target)
+    semantic_ignored_paths = semantic_metadata_difference_paths(source, target)
     if not semantic_equal(source, target):
         drift_kind = (
             "source-provenance metadata"
@@ -248,7 +298,13 @@ def apply(row: dict[str, Any]) -> dict[str, Any]:
         after_hash = sha256(target)
         if after_hash != row.get("sha256_before") or not semantic_equal(backup_path, target):
             raise RuntimeError("post-move artifact hash or semantic payload changed")
-        migrated = update_history(row, preflight_hash, after_hash)
+        migrated = update_history(
+            row,
+            preflight_hash,
+            after_hash,
+            semantic_ignored_paths,
+            semantic_payload_sha256(target),
+        )
     except Exception:
         if target.exists() and not source.exists():
             target.unlink()
@@ -260,6 +316,8 @@ def apply(row: dict[str, Any]) -> dict[str, Any]:
         if backup_path and backup_path.exists():
             backup_path.unlink()
 
+    subprocess.run([sys.executable, str(PLANNER)], cwd=ROOT, check=True)
+    subprocess.run([sys.executable, str(AUDITOR)], cwd=ROOT, check=True)
     subprocess.run([sys.executable, str(PLANNER), "--check"], cwd=ROOT, check=True)
     subprocess.run([sys.executable, str(AUDITOR), "--check"], cwd=ROOT, check=True)
     return {
