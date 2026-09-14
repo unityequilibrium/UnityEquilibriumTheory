@@ -155,3 +155,33 @@ The central registry and dependency graph are controlling. New impact/effect or 
 - matter_space_characteristic_cone_v1 is a selected normalized finite-cone
   candidate only. Its compact-support result does not promote the conserved-C
   changing-response branch or the default full operator.
+
+## Physical organization v3
+
+The canonical physical tree is the source-of-truth layout for new work:
+
+- 00_governance/ owns navigation, registries, migration maps, and room routing.
+- 01_contracts/ owns ontology, correspondence, units, derivation, and claim contracts.
+- 02_equations/ owns canonical equation-family implementations.
+- 03_lanes/ owns lane-specific models, comparators, and observable bridges.
+- 04_proofs/ and 05_tests/ own proofs, verification, numerical, artifact, and regression tests.
+- 06_data/ owns source packages, manifests, and derived inputs.
+- 07_artifacts/ is the only canonical destination for generated outputs.
+- 08_history/ owns update logs, research notes, and legacy research records.
+- 99_review/ is the quarantine boundary for unassigned or ambiguous surfaces.
+- Core tooling belongs under docs/scripts/core/, not under 06_data/.
+
+Use docs/core/core_paths.py as the path authority and docs/core/core_compat.py for
+compatibility loading. Numeric folders are documentation namespaces; do not invent a second
+import scheme. Keep docs/core/__init__.py, AGENTS.md, README.md, and
+CORE_FILE_INDEX.md as permanent root entrypoints.
+
+For every new file, classify it, assign one owner and one canonical path, connect its
+formula/source/verifier/artifact metadata, run the physical migration/path audit, update the
+appropriate log and work ledger, then make a scoped commit. A file may be
+MIGRATED_WITH_SHIM while its old import or link remains usable.
+
+Organization state (MIGRATED, QUARANTINED, or BLOCKED) is independent of scientific
+evidence state. Moving, renaming, indexing, or repairing links must never change an equation's
+physics status, unlock a foundation gate, or promote a claim. Dirty user files are held back
+until their owning change is explicitly included.

@@ -18,3 +18,11 @@
   implementation consumers still need their dedicated checkpoints.
 - Scientific boundary: the foundation gate remains BLOCKED; organization migration
   changes no physics status.
+
+## 2026-09-14 — Wave 0 control-plane hardening
+
+- Scope: canonical path resolver, collision policy, and core physical-organization rules.
+- Changed: protected the legacy proof README boundary, assigned the tooling-hub README a non-colliding legacy target, and tightened Python-shim detection so helper code is not classified as a shim.
+- Changed: appended the v3 physical-tree, ownership, compatibility, and no-physics-promotion rules to docs/core/AGENTS.md.
+- Verification: planner check PASS; physical migration audit PASS; core helper py_compile PASS; physics status changes 0.
+- Controller: data/tooling, tests, artifacts, and equation implementations remain pending consumer/import/generator checkpoints.
