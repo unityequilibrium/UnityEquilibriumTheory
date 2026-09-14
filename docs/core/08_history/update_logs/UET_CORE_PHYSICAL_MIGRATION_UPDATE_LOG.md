@@ -197,3 +197,17 @@
 - Safety decision: removed the temporary canonical target, restored the generator and migration control-plane metadata, and preserved the legacy artifact unchanged. No source equation, correspondence claim, or physics status changed.
 - Verification: no-write restoration checks leave the Wave 5g artifact planner/audit baseline intact; the candidate remains a generator-switch review item until source-date and source-hash provenance are reconciled.
 - Controller: continue selecting only candidates whose generator output is byte-identical or passes the declared semantic/provenance policy without weakening raw-hash preservation.
+## 2026-09-15 — Core physical migration v3 — Wave 5i T13 baseline preflight held
+- Scope: one Topic 0.13 baseline artifact candidate; no generator switch or physical move retained.
+- Result: the generator was uniquely identified, but preflight stopped before output because its evidence list still referenced the moved legacy test path `docs/core/test/test_topic13_multibragg_positions.py`.
+- Safety decision: restored the candidate generator and migration controls; no legacy artifact was overwritten and no physics status changed.
+- Controller: reconcile generator evidence paths under the compatibility policy before retrying; do not rewrite legacy evidence hashes as an organization migration.
+
+## 2026-09-15 — Core physical migration v3 — Wave 6a covariant equation family
+- Scope: canonical source migration for the covariant equation family; organization and compatibility only.
+- Moved: 10 covariant implementation modules from `docs/core/` into `docs/core/02_equations/covariant/`; added the numbered package entrypoints and family README.
+- Preserved: 10 root compatibility shims forward to the canonical modules; `docs.core` public facade and legacy imports remain available without duplicate implementations.
+- Repaired: physical planner/audit now model source-plus-shim pairs without false target collisions and verify both importlib-forwarding and legacy run-path shims.
+- Verification: canonical/legacy/facade import smoke PASS; covariant regression suite PASS (115); physical migration audit PASS with zero duplicate targets, missing paths, or broken shims; physics status changes 0.
+- Controller: remaining physical migration is 1,146 active move targets; generated artifacts remain 588 pending behind generator/consumer/provenance review, and foundation remains `BLOCKED`.
+- Public-safety boundary: source-of-truth paths changed only; no equation, derivation, interpretation, unit, or scientific claim was promoted.

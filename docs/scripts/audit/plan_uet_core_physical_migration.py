@@ -155,7 +155,10 @@ def build_records() -> tuple[list[dict[str, Any]], dict[str, Any]]:
         redirect = is_markdown_redirect(path)
         shim = is_python_shim(path)
         compatibility = redirect or shim
-        canonical = relative if compatibility else canonical_path_for(relative)
+        # A compatibility file is still indexed against the implementation it
+        # forwards to.  Treating the shim itself as canonical creates a false
+        # target collision as soon as a real source is moved beside it.
+        canonical = canonical_path_for(relative)
         old = metadata.get(relative, {})
         records.append(
             {
@@ -177,7 +180,7 @@ def build_records() -> tuple[list[dict[str, Any]], dict[str, Any]]:
                 "owner_id": old.get("owner_id"),
                 "room_id": old.get("room_id"),
                 "equation_family_or_lane": old.get("equation_family_or_lane"),
-                "organization_status": "MIGRATED" if relative == canonical else old.get("organization_status", "MIGRATION_READY"),
+                "organization_status": "MIGRATED" if relative == canonical or compatibility else old.get("organization_status", "MIGRATION_READY"),
                 "evidence_status": old.get("evidence_status"),
                 "status_source": old.get("status_source"),
                 "generated_or_source": old.get(
@@ -195,15 +198,32 @@ def build_records() -> tuple[list[dict[str, Any]], dict[str, Any]]:
                 "collision_key": canonical.lower(),
                 "rollback_path": relative,
                 "migration_wave": "already_canonical" if compatibility else wave_for(relative, canonical),
-                "migration_state": "MIGRATED" if relative == canonical else "NOT_STARTED",
+                "migration_state": (
+                    "MIGRATED_WITH_SHIM"
+                    if compatibility and relative != canonical
+                    else "MIGRATED"
+                    if relative == canonical
+                    else "NOT_STARTED"
+                ),
                 "compatibility_mode": "redirect_or_shim" if compatibility else compatibility_for(relative, canonical),
                 "dirty_source": relative in dirty and not compatibility,
-                "next_action": "retain_canonical_path" if relative == canonical else "resolve_preconditions_then_apply_staged_move",
+                "next_action": (
+                    "retain_canonical_path"
+                    if relative == canonical
+                    else "retain_compatibility_shim"
+                    if compatibility
+                    else "resolve_preconditions_then_apply_staged_move"
+                ),
             }
         )
 
     by_target: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for record in records:
+        # A source and its declared compatibility shim intentionally share a
+        # canonical target.  Only active source records participate in target
+        # collision detection.
+        if record["file_kind"] in {"compatibility_redirect", "compatibility_python_shim"}:
+            continue
         by_target[record["collision_key"]].append(record)
     collisions = {
         key: [item["current_path"] for item in values]
@@ -212,14 +232,19 @@ def build_records() -> tuple[list[dict[str, Any]], dict[str, Any]]:
     }
     existing_conflicts = []
     for record in records:
+        if record["file_kind"] in {"compatibility_redirect", "compatibility_python_shim"}:
+            continue
         source = ROOT / record["current_path"]
         target = ROOT / record["canonical_path"]
         if source != target and target.exists():
             existing_conflicts.append(record["canonical_path"])
+    compatibility_kinds = {"compatibility_redirect", "compatibility_python_shim"}
+    active_records = [item for item in records if item["file_kind"] not in compatibility_kinds]
+    compatibility_records = [item for item in records if item["file_kind"] in compatibility_kinds]
     summary = {
         "files_total": len(records),
-        "files_to_move": sum(item["current_path"] != item["canonical_path"] for item in records),
-        "already_canonical": sum(item["current_path"] == item["canonical_path"] for item in records),
+        "files_to_move": sum(item["current_path"] != item["canonical_path"] for item in active_records),
+        "already_canonical": sum(item["current_path"] == item["canonical_path"] for item in active_records) + len(compatibility_records),
         "dirty_sources": sum(item["dirty_source"] for item in records),
         "duplicate_targets": collisions,
         "existing_target_conflicts": sorted(set(existing_conflicts)),
