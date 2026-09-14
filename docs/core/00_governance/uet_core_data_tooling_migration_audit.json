@@ -20,7 +20,7 @@
   ],
   "controlling_blocker": null,
   "failures_detail": [],
-  "generated_at": "2026-09-14T07:13:34+00:00",
+  "generated_at": "2026-09-14T07:25:01+00:00",
   "generator": "docs/scripts/audit/audit_uet_core_data_tooling_migration.py",
   "schema_version": "1.0",
   "status": "PASS",
