@@ -9,10 +9,11 @@ import sys
 from datetime import date
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
+
+from docs.core.core_paths import canonical_existing_path  # noqa: E402
 
 from docs.core.he4_normal_viscosity_kubo import physical_transport_record  # noqa: E402
 from docs.core.topic13_closure_record_contract import validate_physical_transport_record  # noqa: E402
@@ -91,7 +92,7 @@ def main() -> int:
             "observable": "normal-component shear viscosity of He II at 1.7 K and SVP",
             "data_role": "EXTERNAL_INPUT_NOT_UET_PREDICTION",
             "evidence_artifacts": [
-                {"path": str(path.relative_to(ROOT)).replace("\\", "/"), "sha256": sha256(path)}
+                {"path": str(path.relative_to(ROOT)).replace("\\", "/"), "sha256": sha256(canonical_existing_path(path))}
                 for path in evidence_paths
             ],
             "verification_status": status,

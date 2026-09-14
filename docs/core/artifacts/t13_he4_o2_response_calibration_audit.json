@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-he4-o2-response-calibration-audit-v1",
   "artifact": "t13_he4_o2_response_calibration_audit",
-  "generated_at": "2026-08-28",
+  "generated_at": "2026-09-15",
   "status": "PASS_HE4_LOCAL_ALPHA_AND_FIELD_NORMALIZATION",
   "major_result": {
     "major_result_id": "T13_HE4_LOCAL_ALPHA_AND_FIELD_NORMALIZATION",
@@ -33,7 +33,7 @@
       },
       {
         "path": "docs/core/he4_o2_response_calibration.py",
-        "sha256": "314a4a100fe7b71cb3dd81051c261a3a1f1ec80d7d4d3a08456a997629f253e3"
+        "sha256": "92254aa63a54adc2ff826a73ca8d2856d0b4c6a59b7675280edd7cfd38d8f536"
       },
       {
         "path": "docs/core/artifacts/t13_uet_o2_action_thermal_observable_bridge_audit.json",

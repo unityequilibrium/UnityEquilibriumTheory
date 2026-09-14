@@ -316,3 +316,17 @@
 - Verification: physical migration, path, migration-enforcement, import, link, and test-collection audits remain PASS; planner reports 1,792 records, 1,129 active move targets, 663 canonical assets, 193 compatibility assets, 2 unrelated dirty sources, and zero duplicate targets or destination conflicts.
 - Public-safety boundary: metadata-only correction; O(2) remains split between tree-level EOS, standard comparator, and separately owned covariant transport, foundation remains `BLOCKED`, and no physics claim was promoted.
 - Next controller: classify the next registered equation/lane family from dependency evidence; generated artifacts remain behind the separate generator/consumer/provenance checkpoint.
+
+## 2026-09-15 — Core physical migration v3 — Wave 6j HE4 thermal lane
+
+- Scope: canonical source migration for the source-backed He-4 thermal support lane; organization and compatibility only.
+- Wave type: source-organization and provenance-path repair.
+- Added or changed: moved `he4_normal_viscosity_kubo.py`, `he4_o2_response_calibration.py`, `he4_o2_si_beta_mapping.py`, and `he4_svp_reference.py` into `docs/core/03_lanes/thermal/`; added the thermal package README/exports, four root compatibility shims, a canonical-migration regression, and canonical-source hashing in the four HE4 audit generators.
+- Verified with: focused HE4/canonical migration tests (11 passed); broader HE4 regression slice (16 passed); all four HE4 audit generators PASS; physical migration, path, migration-enforcement, import, link, and test-collection audits PASS (181 modules; 255 links; 2,139 full / 1,313 canonical / 825 legacy test collection).
+- Result: no duplicate target, missing path, broken redirect, import, link, or test-collection regression; physics status changes 0.
+- Blocker narrowed: the four HE4 implementations now have one canonical thermal source path while legacy consumers retain stable imports and artifact labels; source hashes resolve the canonical implementation without copying generated artifacts.
+- Still open: generated artifacts remain under the separate generator/consumer/provenance migration controller; the He-4 lane remains source-backed external/calibration evidence and does not close the full Topic 13 or foundation gates.
+- Next controller: commit this scoped thermal move, refresh post-commit metadata so staged work is not counted as dirty, then classify the next registered family from dependency evidence.
+- Claim impact: no change; organization migration and source-hash resolution do not promote a UET thermal prediction, SI derivation, transport derivation, or foundation claim.
+- Workflow linkage: follows the core physical migration v3 canonical-path, compatibility-shim, and generated-artifact provenance policy.
+- Notes: package imports use relative canonical dependencies and the shared repository-root resolver; no raw source data was changed.

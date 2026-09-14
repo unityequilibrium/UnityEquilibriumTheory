@@ -9,10 +9,11 @@ import sys
 from datetime import date
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
+
+from docs.core.core_paths import canonical_existing_path  # noqa: E402
 
 from docs.core.he4_o2_response_calibration import calibration_record  # noqa: E402
 
@@ -90,10 +91,10 @@ def main() -> int:
             "observable": "local He-4 superfluid-fraction response around 1.7 K at SVP",
             "data_role": "CALIBRATION_NOT_HOLDOUT",
             "evidence_artifacts": [
-                {"path": str(PACKAGE.relative_to(ROOT)).replace("\\", "/"), "sha256": sha256(PACKAGE)},
-                {"path": str(SOURCE_ROWS.relative_to(ROOT)).replace("\\", "/"), "sha256": sha256(SOURCE_ROWS)},
-                {"path": str(MODULE.relative_to(ROOT)).replace("\\", "/"), "sha256": sha256(MODULE)},
-                {"path": str(NATURAL_BRIDGE.relative_to(ROOT)).replace("\\", "/"), "sha256": sha256(NATURAL_BRIDGE)},
+                {"path": str(PACKAGE.relative_to(ROOT)).replace("\\", "/"), "sha256": sha256(canonical_existing_path(PACKAGE))},
+                {"path": str(SOURCE_ROWS.relative_to(ROOT)).replace("\\", "/"), "sha256": sha256(canonical_existing_path(SOURCE_ROWS))},
+                {"path": str(MODULE.relative_to(ROOT)).replace("\\", "/"), "sha256": sha256(canonical_existing_path(MODULE))},
+                {"path": str(NATURAL_BRIDGE.relative_to(ROOT)).replace("\\", "/"), "sha256": sha256(canonical_existing_path(NATURAL_BRIDGE))},
             ],
             "verification_status": status,
             "open_blockers": [
