@@ -255,6 +255,7 @@ def render_index(registry: dict[str, Any], audit: dict[str, Any]) -> str:
         f"Organization registry: [`{REGISTRY_PATH.name}`](../artifacts/{REGISTRY_PATH.name})",
         f"Migration map: [`{MIGRATION_PATH.name}`](../artifacts/{MIGRATION_PATH.name})",
         f"Audit: [`{AUDIT_PATH.name}`](../artifacts/{AUDIT_PATH.name})",
+        "Migration enforcement: [uet_core_migration_enforcement_audit.json](uet_core_migration_enforcement_audit.json)",
         "",
         "## Current state",
         "",

@@ -96,7 +96,7 @@ declare at least:
 4. the observable operator for the measured curve;
 5. uncertainty, parameter lock, and holdout policy.
 
-Implementation: [mass_density_correspondence.py](./mass_density_correspondence.py)
+Implementation: [mass_density_correspondence.py](../mass_density_correspondence.py)
 
 Audit: `docs/scripts/audit/audit_mass_density_correspondence.py`
 
@@ -114,8 +114,8 @@ parallax -> distance/coordinates -> selection-corrected source field
 
 The source package therefore keeps `local_raw_path`, `local_raw_sha256`, selection, mass
 calibration, uncertainty, and holdout fields explicit. No fit is permitted until those fields
-are closed. See [gaia_edr3_gcns source manifest](../data/external/astronomy/gaia_edr3_gcns/2026-08-08/source_manifest.json)
-and [mass_density_3d_external_source_package.json](artifacts/mass_density_3d_external_source_package.json).
+are closed. See [gaia_edr3_gcns source manifest](../../data/external/astronomy/gaia_edr3_gcns/2026-08-08/source_manifest.json)
+and [mass_density_3d_external_source_package.json](../artifacts/mass_density_3d_external_source_package.json).
 
 This narrows the problem: the remaining obstacle is not merely a missing algebraic rewrite of
 `rho_3D`; it is the physical measurement and calibration chain needed to decide whether the

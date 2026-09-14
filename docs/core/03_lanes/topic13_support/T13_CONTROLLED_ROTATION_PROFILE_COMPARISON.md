@@ -10,7 +10,7 @@ DEPENDENCY_UNLOCKED: Instrument-model comparison only; no physical unlock.
 
 STATUS: ROTATION_COMPARISON_PHYSICAL_ACCURACY_OPEN.
 
-WHAT_CHANGED: Controlled rotated-profile solver/tests and [all fits and summary](artifacts/t13_ued_rotated_position_audit.json). The frozen unrotated artifact remains unchanged.
+WHAT_CHANGED: Controlled rotated-profile solver/tests and [all fits and summary](../../artifacts/t13_ued_rotated_position_audit.json). The frozen unrotated artifact remains unchanged.
 
 EQUATION_OR_MAPPING: Separable Voigt profiles in rotated centered pixel coordinates plus constant offset. Source rotated helper also changes weights to1/sqrt(1+raw intensity); this comparator deliberately does not, so the rotation effect is not confounded with weighting. No source lmfit replication or uncertainty model is claimed.
 

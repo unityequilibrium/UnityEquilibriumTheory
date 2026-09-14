@@ -10,7 +10,7 @@ DEPENDENCY_UNLOCKED: Natural ensemble-specific comparison only; no physical unlo
 
 STATUS: ENSEMBLE_COMPARISON_NOT_PHYSICAL_CALIBRATION.
 
-WHAT_CHANGED: Fixed-charge audit/tests, [numerical evidence](artifacts/t13_fixed_charge_response_audit.json), and an unmerged equation-registry addendum. Existing alpha,Z,e0 and composition gates remain unchanged.
+WHAT_CHANGED: Fixed-charge audit/tests, [numerical evidence](../../artifacts/t13_fixed_charge_response_audit.json), and an unmerged equation-registry addendum. Existing alpha,Z,e0 and composition gates remain unchanged.
 
 EQUATION_OR_MAPPING: At fixed n, dmu/dx=-n_x/n_mu and d epsilon/dx=epsilon_x-epsilon_mu*n_x/n_mu. Apply independently to x=T and x=Phi; their ratio defines a different natural quasi-temperature response. The auxiliary charge constraint is not a new physical state or ontology.
 

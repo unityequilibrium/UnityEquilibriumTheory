@@ -127,14 +127,14 @@ $$
 |:-----|:-----|:------------|
 | [`uet_master_equation.py`](./uet_master_equation.py) | **Legacy engine entry point** | Defines candidate Ω functionals and solver paths; not a universal physical law or single source of truth. |
 | [`uet_matrix_engine.py`](./uet_matrix_engine.py) | **The Solver** | Fast Tensor-based implementation for large-scale grids (3D Galaxies). |
-| [`uet_matrix_toolkit.py`](./uet_matrix_toolkit.py) | **The Tools** | Helper functions for visualization and matrix algebra. |
-| [`uet_4d_engine.py`](./uet_4d_engine.py) | **Relativity** | Extension for 4D spacetime metrics and tensor operations. |
+| [`uet_matrix_toolkit.py`](./uet_matrix_engine.py) | **The Tools** | Helper functions for visualization and matrix algebra. |
+| [`uet_4d_engine.py`](./uet_gr_correspondence.py) | **Relativity** | Extension for 4D spacetime metrics and tensor operations. |
 
 ---
 
 ## 📚 Documentation
-| [`../Doc/DOMAIN_MAPPING.md`](../Doc/DOMAIN_MAPPING.md) | C/I ในแต่ละสาขา (6 domains) |
-| [`../Doc/VALUE_EQUATION.md`](../Doc/VALUE_EQUATION.md) | 𝒱 = -ΔΩ — สมการ Value |
+| [`../UET_Documentation_Details/LEGACY_REPORTS/03_Evidence/DOMAIN_MAPPING.md`](../UET_Documentation_Details/LEGACY_REPORTS/03_Evidence/DOMAIN_MAPPING.md) | C/I ในแต่ละสาขา (6 domains) |
+| [`../UET_Documentation_Details/LEGACY_REPORTS/03_Evidence/VALUE_EQUATION.md`](../UET_Documentation_Details/LEGACY_REPORTS/03_Evidence/VALUE_EQUATION.md) | 𝒱 = -ΔΩ — สมการ Value |
 
 ---
 
@@ -150,7 +150,7 @@ C และ I มีความหมายต่างกันในแต่
 | **Biology** | lane-specific mapping from interaction structure | lane-specific second sector |
 | **Machine Learning** | lane-specific mapping from interaction structure | lane-specific second sector |
 
-> 📖 **Full domain mapping**: See [`../Doc/DOMAIN_MAPPING.md`](../Doc/DOMAIN_MAPPING.md)
+> 📖 **Full domain mapping**: See [`../UET_Documentation_Details/LEGACY_REPORTS/03_Evidence/DOMAIN_MAPPING.md`](../UET_Documentation_Details/LEGACY_REPORTS/03_Evidence/DOMAIN_MAPPING.md)
 
 ---
 
@@ -161,7 +161,7 @@ These scripts ensure the engine adheres to fundamental physics limits (Axiom 11)
 | Script | Purpose |
 |:-------|:--------|
 | [`test/`](./test/) | Unit tests for core functions |
-| [`validation/`](./validation/) | Physics validation scripts |
+| [`validation/`](./05_tests/) | Physics validation scripts |
 
 ---
 
@@ -169,8 +169,8 @@ These scripts ensure the engine adheres to fundamental physics limits (Axiom 11)
 
 - **🔙 [Research Root](../README.md)**
 - **🧪 [Topics (Applications)](../topics/)**
-- **📊 [Data Sources](../DATA_SOURCE_MAP.md)**
-- **📖 [Documentation Index](../Doc/DOC_INDEX.md)**
+- **📊 [Data Sources](../UET_Documentation_Details/LEGACY_REPORTS/03_Evidence/DATA_SOURCE_MAP.md)**
+- **📖 [Documentation Index](../UET_Documentation_Details/LEGACY_REPORTS/99_Legacy/DOC_INDEX.md)**
 
 ---
 

@@ -17,6 +17,7 @@ TEST_AUDIT = CORE / "00_governance" / "uet_core_test_migration_audit.json"
 COLLECTION_AUDIT = CORE / "00_governance" / "uet_core_test_collection_audit.json"
 ARTIFACT_MANIFEST = CORE / "00_governance" / "uet_core_artifact_migration_manifest.json"
 ARTIFACT_AUDIT = CORE / "00_governance" / "uet_core_artifact_migration_audit.json"
+ENFORCEMENT_AUDIT = CORE / "00_governance" / "uet_core_migration_enforcement_audit.json"
 INDEX = CORE / "CORE_FILE_INDEX.md"
 
 
@@ -44,7 +45,7 @@ def wave_counts(records: list[dict]) -> dict[str, int]:
     return counts
 
 
-def render(physical: dict, tooling: dict, tests: dict, test_audit: dict, collection_audit: dict, artifacts: dict, artifact_audit: dict) -> str:
+def render(physical: dict, tooling: dict, tests: dict, test_audit: dict, collection_audit: dict, artifacts: dict, artifact_audit: dict, enforcement: dict) -> str:
     summary = physical.get("summary", {})
     tooling_summary = tooling.get("summary", {})
     test_summary = tests.get("summary", {})
@@ -69,6 +70,8 @@ def render(physical: dict, tooling: dict, tests: dict, test_audit: dict, collect
         "- Test collection audit: [00_governance/uet_core_test_collection_audit.json](00_governance/uet_core_test_collection_audit.json)",
         "- Artifact migration manifest: [00_governance/uet_core_artifact_migration_manifest.json](00_governance/uet_core_artifact_migration_manifest.json)",
         "- Artifact migration audit: [00_governance/uet_core_artifact_migration_audit.json](00_governance/uet_core_artifact_migration_audit.json)",
+        "- Core migration enforcement audit: [00_governance/uet_core_migration_enforcement_audit.json](00_governance/uet_core_migration_enforcement_audit.json)",
+        f"- Core path/import/link enforcement: **{enforcement.get('status', 'UNKNOWN')}**",
         "- Path authority: [core_paths.py](core_paths.py)",
         "- Compatibility loader: [core_compat.py](core_compat.py)",
         "",
@@ -143,7 +146,8 @@ def main() -> int:
     collection_audit = load(COLLECTION_AUDIT)
     artifacts = load(ARTIFACT_MANIFEST)
     artifact_audit = load(ARTIFACT_AUDIT)
-    INDEX.write_text(render(physical, tooling, tests, test_audit, collection_audit, artifacts, artifact_audit), encoding="utf-8")
+    enforcement = load(ENFORCEMENT_AUDIT)
+    INDEX.write_text(render(physical, tooling, tests, test_audit, collection_audit, artifacts, artifact_audit, enforcement), encoding="utf-8")
     print(json.dumps({
         "status": "PASS",
         "index": INDEX.relative_to(ROOT).as_posix(),

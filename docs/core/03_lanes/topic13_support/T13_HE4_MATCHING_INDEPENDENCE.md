@@ -10,7 +10,7 @@ DEPENDENCY_UNLOCKED: Calibrated-interface interpretation only; no new physical u
 
 STATUS: MATCHING_IDENTITY_CONFIRMED_PROTOCOL_MATCH_OPEN.
 
-WHAT_CHANGED: Audit/tests and [matching identity evidence](artifacts/t13_he4_matching_independence_audit.json). Existing calibration, source data, composition status and physics gates remain unchanged.
+WHAT_CHANGED: Audit/tests and [matching identity evidence](../../artifacts/t13_he4_matching_independence_audit.json). Existing calibration, source data, composition status and physics gates remain unchanged.
 
 EQUATION_OR_MAPPING: Z=theta_T*alpha_natural/alpha_external. Equality of reconstructed and calibration alpha is a construction identity, not an additional empirical constraint. The existing SI energy scale is explicitly classified as an external scale convention plus action derivation; dimensional consistency must not be called independent calorimetric verification.
 
