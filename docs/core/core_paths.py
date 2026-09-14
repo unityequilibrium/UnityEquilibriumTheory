@@ -169,6 +169,8 @@ def canonical_path_for(legacy_path: str | Path) -> str:
         if parts:
             parts[0] = _TOOLING_DIRS.get(parts[0], parts[0].lower())
         return "docs/scripts/core/" + "/".join(parts)
+    if tail == "data/README.md":
+        return relative
     if tail.startswith("data/external/"):
         return "docs/core/06_data/source_packages/" + tail[len("data/external/") :]
     if tail.startswith("data/"):

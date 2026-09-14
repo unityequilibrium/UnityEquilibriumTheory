@@ -34,3 +34,10 @@
 - Held back: 86 files with location-sensitive bootstrap or non-code output/provenance ambiguity; no source data moved in this wave.
 - Verification: tooling migration audit PASS; canonical and compatibility Python compile PASS for 17 moved scripts; all 17 shim targets exist; physical migration audit PASS; physics status changes 0.
 - Controller: path-bootstrap repair and source/output provenance classification for the remaining tooling and core external data package.
+
+## 2026-09-14 — Wave 3b core source package migration
+
+- Scope: raw external source package under docs/core/data/external.
+- Changed: moved 20 source files to docs/core/06_data/source_packages/particle_physics with one canonical copy, preserved byte hashes, and added a governance redirect index plus legacy README boundary.
+- Verification: source-package audit PASS; all 20 before/after hashes equal; no raw files remain in the legacy external root; global physical migration audit remained PASS; physics status changes 0.
+- Controller: update consumers/manifests that still reference the legacy core path, then continue with path-bootstrap repair for quarantined tooling.

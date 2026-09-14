@@ -9,6 +9,8 @@
 - Physical migration report: [00_governance/UET_CORE_PHYSICAL_MIGRATION_REPORT.md](00_governance/UET_CORE_PHYSICAL_MIGRATION_REPORT.md)
 - Data/tooling manifest: [00_governance/uet_core_data_tooling_migration_manifest.json](00_governance/uet_core_data_tooling_migration_manifest.json)
 - Data/tooling report: [00_governance/UET_CORE_DATA_TOOLING_MIGRATION_REPORT.md](00_governance/UET_CORE_DATA_TOOLING_MIGRATION_REPORT.md)
+- Source-package manifest: [00_governance/uet_core_source_package_migration_manifest.json](00_governance/uet_core_source_package_migration_manifest.json)
+- Source-package audit: [00_governance/uet_core_source_package_migration_audit.json](00_governance/uet_core_source_package_migration_audit.json)
 - Path authority: [core_paths.py](core_paths.py)
 - Compatibility loader: [core_compat.py](core_compat.py)
 
@@ -18,10 +20,10 @@ AGENTS.md, README.md, CORE_FILE_INDEX.md and __init__.py remain permanent root e
 
 ## Physical state
 
-- Files indexed: **1717**
-- Move targets: **1387**
-- Already canonical or protected: **330**
-- Dirty sources held back: **11**
+- Files indexed: **1722**
+- Move targets: **1366**
+- Already canonical or protected: **356**
+- Dirty sources held back: **30**
 - Duplicate targets: **0**
 - Existing destination conflicts: **0**
 - Physics status changes from organization migration: **0**
@@ -38,19 +40,19 @@ AGENTS.md, README.md, CORE_FILE_INDEX.md and __init__.py remain permanent root e
 
 | Area | Indexed paths |
 | :-- | --: |
-| 00_governance | 12 |
+| 00_governance | 15 |
 | 01_contracts | 25 |
 | 02_Proof | 2 |
 | 02_equations | 1 |
 | 03_lanes | 84 |
 | 04_proofs | 1 |
 | 05_tests | 1 |
-| 06_data | 1 |
+| 06_data | 22 |
 | 07_artifacts | 1 |
 | 08_history | 31 |
 | 99_review | 1 |
 | artifacts | 594 |
-| data | 132 |
+| data | 113 |
 | root_entrypoints | 328 |
 | test | 503 |
 
@@ -58,9 +60,9 @@ AGENTS.md, README.md, CORE_FILE_INDEX.md and __init__.py remain permanent root e
 
 | Wave | Paths |
 | :-- | --: |
-| already_canonical | 330 |
+| already_canonical | 356 |
 | artifacts | 594 |
-| data_tooling | 107 |
+| data_tooling | 86 |
 | equation_or_lane | 181 |
 | proofs | 1 |
 | review | 1 |

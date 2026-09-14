@@ -1,6 +1,6 @@
 {
   "canonical_path_authority": "docs/core/core_paths.py",
-  "generated_at": "2026-09-14T06:57:12+00:00",
+  "generated_at": "2026-09-14T07:25:01+00:00",
   "generator": "docs/scripts/audit/migrate_uet_core_data_tooling_v3.py",
   "migration_id": "UET-CORE-DATA-TOOLING-V3",
   "records": [

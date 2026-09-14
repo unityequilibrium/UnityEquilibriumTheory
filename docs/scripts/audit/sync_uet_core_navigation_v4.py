@@ -10,6 +10,8 @@ ROOT = Path(__file__).resolve().parents[3]
 CORE = ROOT / "docs" / "core"
 PHYSICAL = CORE / "00_governance" / "uet_core_physical_migration_manifest.json"
 TOOLING = CORE / "00_governance" / "uet_core_data_tooling_migration_manifest.json"
+SOURCE_MANIFEST = CORE / "00_governance" / "uet_core_source_package_migration_manifest.json"
+SOURCE_AUDIT = CORE / "00_governance" / "uet_core_source_package_migration_audit.json"
 INDEX = CORE / "CORE_FILE_INDEX.md"
 
 
@@ -52,6 +54,8 @@ def render(physical: dict, tooling: dict) -> str:
         "- Physical migration report: [00_governance/UET_CORE_PHYSICAL_MIGRATION_REPORT.md](00_governance/UET_CORE_PHYSICAL_MIGRATION_REPORT.md)",
         "- Data/tooling manifest: [00_governance/uet_core_data_tooling_migration_manifest.json](00_governance/uet_core_data_tooling_migration_manifest.json)",
         "- Data/tooling report: [00_governance/UET_CORE_DATA_TOOLING_MIGRATION_REPORT.md](00_governance/UET_CORE_DATA_TOOLING_MIGRATION_REPORT.md)",
+        "- Source-package manifest: [00_governance/uet_core_source_package_migration_manifest.json](00_governance/uet_core_source_package_migration_manifest.json)",
+        "- Source-package audit: [00_governance/uet_core_source_package_migration_audit.json](00_governance/uet_core_source_package_migration_audit.json)",
         "- Path authority: [core_paths.py](core_paths.py)",
         "- Compatibility loader: [core_compat.py](core_compat.py)",
         "",
