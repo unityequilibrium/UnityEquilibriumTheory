@@ -61,3 +61,20 @@
   legacy test/support files before any further physical test move.
 - Public-safety boundary: organization and collection evidence only; the
   foundation gate and all physics claim statuses are unchanged.
+## 2026-09-14 — Core physical migration v3 — Wave 5 artifact consumer control plane
+
+- Scope: generated outputs under docs/core/artifacts; plan-only control wave.
+- Added: consumer-aware artifact migration manifest, integrity audit, and
+  navigation links. The planner uses the canonical path authority and records
+  source hash, proposed target, generator candidates, and every repository
+  consumer reference.
+- Result: 593 generated artifacts indexed (592 JSON and 1 NPZ); 193 have one
+  candidate generator identity, 380 have ambiguous generator identity, 20 have
+  no resolved generator identity, and all 593 still require consumer rewrites.
+- Verification: artifact migration audit PASS; no missing sources, hash
+  mismatches, duplicate targets, or pre-existing canonical targets; physical
+  move false; physics status changes 0.
+- Controller: switch one bounded generator/consumer family to canonical output
+  paths, regenerate and compare semantic payloads, then move only that family.
+- Public-safety boundary: no generated artifact moved and no physics claim
+  promoted. The legacy artifacts directory remains the compatibility boundary.

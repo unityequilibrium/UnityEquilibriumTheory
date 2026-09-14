@@ -15,6 +15,8 @@ SOURCE_AUDIT = CORE / "00_governance" / "uet_core_source_package_migration_audit
 TEST_MANIFEST = CORE / "00_governance" / "uet_core_test_migration_manifest.json"
 TEST_AUDIT = CORE / "00_governance" / "uet_core_test_migration_audit.json"
 COLLECTION_AUDIT = CORE / "00_governance" / "uet_core_test_collection_audit.json"
+ARTIFACT_MANIFEST = CORE / "00_governance" / "uet_core_artifact_migration_manifest.json"
+ARTIFACT_AUDIT = CORE / "00_governance" / "uet_core_artifact_migration_audit.json"
 INDEX = CORE / "CORE_FILE_INDEX.md"
 
 
@@ -42,11 +44,12 @@ def wave_counts(records: list[dict]) -> dict[str, int]:
     return counts
 
 
-def render(physical: dict, tooling: dict, tests: dict, test_audit: dict, collection_audit: dict) -> str:
+def render(physical: dict, tooling: dict, tests: dict, test_audit: dict, collection_audit: dict, artifacts: dict, artifact_audit: dict) -> str:
     summary = physical.get("summary", {})
     tooling_summary = tooling.get("summary", {})
     test_summary = tests.get("summary", {})
     collection_summary = collection_audit.get("collections", {})
+    artifact_summary = artifacts.get("summary", {})
     lines = [
         "# Core File Index",
         "",
@@ -64,6 +67,8 @@ def render(physical: dict, tooling: dict, tests: dict, test_audit: dict, collect
         "- Test migration manifest: [00_governance/uet_core_test_migration_manifest.json](00_governance/uet_core_test_migration_manifest.json)",
         "- Test migration audit: [00_governance/uet_core_test_migration_audit.json](00_governance/uet_core_test_migration_audit.json)",
         "- Test collection audit: [00_governance/uet_core_test_collection_audit.json](00_governance/uet_core_test_collection_audit.json)",
+        "- Artifact migration manifest: [00_governance/uet_core_artifact_migration_manifest.json](00_governance/uet_core_artifact_migration_manifest.json)",
+        "- Artifact migration audit: [00_governance/uet_core_artifact_migration_audit.json](00_governance/uet_core_artifact_migration_audit.json)",
         "- Path authority: [core_paths.py](core_paths.py)",
         "- Compatibility loader: [core_compat.py](core_compat.py)",
         "",
@@ -99,6 +104,17 @@ def render(physical: dict, tooling: dict, tests: dict, test_audit: dict, collect
         f"- Full pytest collection: **{collection_summary.get('full', {}).get('status', 'UNKNOWN')}** ({collection_summary.get('full', {}).get('collected', 0)} collected)",
         f"- Canonical-only collection: **{collection_summary.get('canonical_only', {}).get('status', 'UNKNOWN')}** ({collection_summary.get('canonical_only', {}).get('collected', 0)} collected)",
         f"- Test physics status changes: **{test_summary.get('physics_status_changes', 0)}**",
+        "",
+        "## Generated artifact control",
+        "",
+        f"- Artifacts indexed: **{artifact_summary.get('files_total', 0)}**",
+        f"- One-generator identities resolved: **{artifact_summary.get('generator_identity_resolved', 0)}**",
+        f"- Ambiguous generator identities: **{artifact_summary.get('generator_identity_ambiguous', 0)}**",
+        f"- Missing generator identities: **{artifact_summary.get('generator_identity_missing', 0)}**",
+        f"- Consumer rewrites required: **{artifact_summary.get('consumer_rewrite_required', 0)}**",
+        f"- Artifact migration audit: **{artifact_audit.get('status', 'UNKNOWN')}**",
+        "No generated output is moved until its generator and active consumers use the canonical path authority.",
+        "",
         "## Canonical areas",
         "",
         "| Area | Indexed paths |",
@@ -125,7 +141,9 @@ def main() -> int:
     tests = load(TEST_MANIFEST)
     test_audit = load(TEST_AUDIT)
     collection_audit = load(COLLECTION_AUDIT)
-    INDEX.write_text(render(physical, tooling, tests, test_audit, collection_audit), encoding="utf-8")
+    artifacts = load(ARTIFACT_MANIFEST)
+    artifact_audit = load(ARTIFACT_AUDIT)
+    INDEX.write_text(render(physical, tooling, tests, test_audit, collection_audit, artifacts, artifact_audit), encoding="utf-8")
     print(json.dumps({
         "status": "PASS",
         "index": INDEX.relative_to(ROOT).as_posix(),
