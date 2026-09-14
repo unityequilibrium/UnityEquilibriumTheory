@@ -185,3 +185,14 @@ Organization state (MIGRATED, QUARANTINED, or BLOCKED) is independent of scienti
 evidence state. Moving, renaming, indexing, or repairing links must never change an equation's
 physics status, unlock a foundation gate, or promote a claim. Dirty user files are held back
 until their owning change is explicitly included.
+
+## Physical migration enforcement controls
+
+The structural migration control plane has four executable checks:
+
+- `docs/scripts/audit/audit_uet_core_paths.py` — canonical target, ownership, disposition and protected-entrypoint invariants.
+- `docs/scripts/audit/audit_uet_core_imports.py` — public root-module and `docs.core` import smoke tests.
+- `docs/scripts/audit/audit_uet_core_links.py` — active-core local Markdown link resolution; historical and quarantine areas are intentionally excluded.
+- `docs/scripts/audit/audit_uet_core_migration.py` — runs the three checks and writes the combined enforcement artifact/report.
+
+These checks are organization controls only. A PASS cannot promote a formula, evidence class or foundation claim.

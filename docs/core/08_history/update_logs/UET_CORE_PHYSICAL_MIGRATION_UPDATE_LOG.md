@@ -95,3 +95,12 @@
 - Controller: generator identity remains a candidate classification, not proof;
   one bounded family must still be manually confirmed and switched with all
   consumers before any move.
+## 2026-09-14 — Core physical migration v3 — Wave 8 enforcement and link repair
+
+- Scope: organization enforcement only; no equation, interpretation, data-evidence, or physics-status promotion.
+- Added: path/ownership, public-import, active-Markdown-link, and combined migration enforcement audits, plus a schema regression test and generated report.
+- Repaired: 31 active links whose relative targets became invalid after the earlier documentation move; the audit now resolves all 253 active-core local links.
+- Refreshed: current organization and physical-migration metadata to include the files created by the migration control plane. The registry indexes 1,740 files, with 244 explicitly quarantined/review-controlled records; foundation status remains `BLOCKED`.
+- Verification: 181/181 root Python module imports PASS; active link audit PASS; path/ownership audit PASS; combined enforcement audit PASS; organization registry `--check` PASS; data/tooling, source-package, test, and artifact-plan audits PASS; test collection PASS with 2,105 collected; physics status changes 0.
+- Controller: generated artifact migration remains the next physical blocker — 593 legacy outputs still need generator/consumer switching (57 candidate writers, 536 unresolved writer identities); no generated artifact was moved.
+- Public-safety boundary: organization discovery and compatibility improved only; organization `MIGRATED`/audit `PASS` does not mean an equation is derived or the foundation gate is open.

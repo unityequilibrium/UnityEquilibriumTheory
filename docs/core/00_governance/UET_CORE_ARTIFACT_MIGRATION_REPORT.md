@@ -2,7 +2,7 @@
 
 > Plan-only control artifact. No generated output is moved by this wave.
 
-Generated at: 2026-09-14T08:22:48+00:00
+Generated at: 2026-09-14T09:01:45+00:00
 Generator: docs/scripts/audit/plan_uet_core_artifact_migration_v3.py
 
 ## Inventory

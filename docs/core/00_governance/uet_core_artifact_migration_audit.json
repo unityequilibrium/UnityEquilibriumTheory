@@ -39,7 +39,7 @@
   "controlling_blocker": null,
   "duplicate_targets": {},
   "existing_targets": [],
-  "generated_at": "2026-09-14T08:23:50+00:00",
+  "generated_at": "2026-09-14T09:02:44+00:00",
   "generator": "docs/scripts/audit/audit_uet_core_artifact_migration_v3.py",
   "missing_sources": [],
   "schema_version": "1.0",

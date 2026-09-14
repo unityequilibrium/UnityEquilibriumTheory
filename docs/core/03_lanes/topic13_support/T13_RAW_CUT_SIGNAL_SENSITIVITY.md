@@ -10,7 +10,7 @@ DEPENDENCY_UNLOCKED: Cut-resolved robustness assessment only; no physical unlock
 
 STATUS: CUT_DIFFERENCE_MEASURED_CAUSE_UNRESOLVED.
 
-WHAT_CHANGED: Descriptive comparison audit, three tests, [generated rows and metrics](artifacts/t13_ued_cut_signal_audit.json). Corrected previous pooling locator to treat_pickle.ipynb, confirmed against pinned Git blob 12410c47274320d1c6e770872772e5d8cf864be0; regenerated pooling artifact/hash chain.
+WHAT_CHANGED: Descriptive comparison audit, three tests, [generated rows and metrics](../../artifacts/t13_ued_cut_signal_audit.json). Corrected previous pooling locator to treat_pickle.ipynb, confirmed against pinned Git blob 12410c47274320d1c6e770872772e5d8cf864be0; regenerated pooling artifact/hash chain.
 
 EQUATION_OR_MAPPING: Ratio of ON/OFF image means, baseline subtraction and ratio after file-axis pooling. Pooling is denominator-weighted, not the arithmetic average of cut ratios. No new UET physical equation or registry claim is introduced.
 

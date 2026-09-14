@@ -2,9 +2,9 @@
 
 This document summarizes the generated cross-family foundation boundary. It is a coordination artifact, not a physics proof.
 
-Machine-readable source: [`uet_foundation_status_aggregate.json`](artifacts/uet_foundation_status_aggregate.json)
+Machine-readable source: [`uet_foundation_status_aggregate.json`](../artifacts/uet_foundation_status_aggregate.json)
 
-Regenerator: [`build_uet_foundation_status_aggregate.py`](../scripts/audit/build_uet_foundation_status_aggregate.py)
+Regenerator: [`build_uet_foundation_status_aggregate.py`](../../scripts/audit/build_uet_foundation_status_aggregate.py)
 
 ## Current result
 

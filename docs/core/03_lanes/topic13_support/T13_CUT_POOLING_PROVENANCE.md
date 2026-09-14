@@ -10,7 +10,7 @@ DEPENDENCY_UNLOCKED: Cut-resolved sensitivity only; no physical unlock.
 
 STATUS: POOLING_IDENTIFIED_INDEPENDENCE_UNVERIFIED.
 
-WHAT_CHANGED: Pooling provenance audit, three tests and [generated artifact](artifacts/t13_ued_cut_pooling_audit.json), with source/hash linkage to the earlier raw structure audit. No external notebook was executed or redistributed.
+WHAT_CHANGED: Pooling provenance audit, three tests and [generated artifact](../../artifacts/t13_ued_cut_pooling_audit.json), with source/hash linkage to the earlier raw structure audit. No external notebook was executed or redistributed.
 
 EQUATION_OR_MAPPING: Source file-axis image sum, not a new UET equation. Source metadata is preserved separately; neither Temperature_B nor PHI instrument columns are relabeled as UET variables.
 
