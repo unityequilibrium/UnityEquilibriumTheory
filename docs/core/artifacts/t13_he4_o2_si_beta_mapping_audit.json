@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-he4-o2-si-beta-audit-v1",
   "artifact": "t13_he4_o2_si_beta_mapping_audit",
-  "generated_at": "2026-08-28",
+  "generated_at": "2026-09-15",
   "status": "PASS_HE4_SI_SCALE_AND_NORMALIZED_BETA",
   "major_result": {
     "major_result_id": "T13_HE4_O2_SI_SCALE_AND_NORMALIZED_BETA",
@@ -37,7 +37,7 @@
       },
       {
         "path": "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json",
-        "sha256": "1c44ffce6310488bf3a9b2e9cce74d1281fb27a949c1b9d26c6f80d970b7fbd0"
+        "sha256": "705783a70c4c2b87505afa47863b2eceee73ead6c7dd26b3b415ba5dfb871d4f"
       },
       {
         "path": "docs/core/artifacts/t13_uet_o2_action_thermal_stiffness_beta_audit.json",
@@ -45,7 +45,7 @@
       },
       {
         "path": "docs/core/he4_o2_si_beta_mapping.py",
-        "sha256": "e39a863866ca6db30100ad004c01d62e9598c151824d16849b32fabfed35dd23"
+        "sha256": "326e0cdbbd73cce4ee4b54166bbce2e949ce66ff90c7bf431f7df235468820bc"
       }
     ],
     "verification_status": "PASS_HE4_SI_SCALE_AND_NORMALIZED_BETA",
