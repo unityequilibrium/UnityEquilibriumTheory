@@ -387,3 +387,16 @@
 - Claim impact: no change; this wave changes organization, compatibility, and generated path metadata only. No mass, charge, covariant, GR, quantum, thermal, or downstream claim was promoted.
 - Workflow linkage: follows the Core Physical Migration v3 canonical-path, compatibility-shim, and generated-artifact provenance policy.
 - Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
+
+## 2026-09-15 — Wave 6l post-commit metadata consistency correction
+
+- Scope: migration control-plane synchronization after commit 3f70450c4.
+- Corrected: regenerated the physical migration manifest/report and governance audits after the coarse-graining ontology move; committed source and package files are no longer counted as dirty work.
+- Verification: physical migration, path, migration-enforcement, import, link, and test-collection audits PASS; post-commit collection reports 2,143 full / 1,317 canonical / 825 legacy tests, all with zero collection errors.
+- Result: planner reports 1,806 indexed files, 1,122 active move targets, 684 canonical/protected records, 200 compatibility assets, 2 unrelated dirty sources, and zero duplicate targets or destination conflicts.
+- Blocker narrowed: the coarse-graining ontology source, package target, and compatibility path are now represented consistently in the committed organization control plane; physics status changes remain 0.
+- Still open: 589 generated artifacts remain behind the separate generator/consumer/provenance migration controller; the coarse-graining contract remains declared-field/internal only; foundation remains BLOCKED.
+- Next controller: select the next registered family from dependency evidence; do not begin generated-artifact mass migration until generator and consumer checkpoints are explicit.
+- Claim impact: no change; this pass changes only migration metadata and audit state.
+- Workflow linkage: closes the post-commit checkpoint required by Core Physical Migration v3 and the shared hardening/update-log standard.
+- Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
