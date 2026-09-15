@@ -1,7 +1,7 @@
 {
   "schema_version": "uet-audit-generator-drift-v1",
   "record_id": "T13_ENERGY_RESPONSE_AUDIT_GENERATOR_DRIFT_20260915",
-  "status": "BLOCKED_REVIEW_REQUIRED",
+  "status": "RECONCILED_WITH_OPEN_INPUTS",
   "scope": "Topic 13 energy-response audit artifact and its generator",
   "generator": "docs/scripts/audit/audit_topic13_energy_response_bridge.py",
   "artifact": "docs/core/artifacts/t13_energy_response_bridge_audit.json",
@@ -36,12 +36,24 @@
       "result": "2 passed"
     }
   },
-  "unresolved": [
-    "the live worktree artifact was already rewritten before the preservation repair and no longer contains the committed aggregate detail",
-    "a human-approved restore or explicit replacement/reconciliation is required before the artifact can be treated as clean",
-    "the focused audit and aggregate Topic 13 register ownership should be reviewed together"
-  ],
-  "next_action": "review the committed aggregate payload, approve a non-destructive reconciliation, rerun the repaired generator in a controlled temporary output, then update the canonical artifact and downstream hashes",
+  "unresolved": [],
+  "reconciliation": {
+    "status": "PASS_NON_DESTRUCTIVE_AGGREGATE_PRESERVATION",
+    "approval": "explicit user approval received in the research room",
+    "base_artifact": "HEAD:docs/core/artifacts/t13_energy_response_bridge_audit.json",
+    "method": "repaired generator executed against the committed aggregate payload in a temporary output; preservation assertions passed; candidate promoted atomically",
+    "preserved_top_level_fields": [
+      "source_anchor",
+      "cp_cv_correction_contract",
+      "standard_pbte_source_anchor",
+      "pbte_numeric_input_availability"
+    ],
+    "preserved_major_result_evidence_artifact_count": 11,
+    "preserved_major_result_what_is_closed_type": "list",
+    "focused_regression_tests": "23 passed",
+    "claim_impact": "no physics, calibration, SI, or empirical claim promoted"
+  },
+  "next_action": "continue with the existing thermal input controller: source-lock volumetric c_v and e0, then derive or independently calibrate the base Phi-to-Phi_E mapping without target residuals or holdout access",
   "evidence_status": "BLOCKED",
-  "organization_status": "REVIEW_REQUIRED"
+  "organization_status": "ASSIGNED"
 }

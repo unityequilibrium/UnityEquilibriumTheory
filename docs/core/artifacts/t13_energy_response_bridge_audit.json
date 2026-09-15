@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-energy-response-bridge-audit-v1",
   "artifact": "t13_energy_response_bridge_audit",
-  "generated_at": "2026-08-12",
+  "generated_at": "2026-09-15",
   "status": "PASS_NAMED_BRANCH_OPEN_INPUTS",
   "major_result": {
     "major_result_id": "T13_PHI_E_TTG_BRIDGE_CONDITIONAL",
@@ -31,7 +31,7 @@
     },
     "derivation_class": "named-branch algebra with explicit dimensional inputs and first-order uncertainty propagation",
     "observable": "Delta_Tq = alpha_Phi_E_K * Phi_E",
-    "data_role": "source-backed standard PBTE formula plus named-branch algebra; no numeric C_src, e0, base-Phi calibration, target residual, or holdout data consumed",
+    "data_role": "source identity and formula audit; candidate Cp rows not consumed for calibration",
     "evidence_artifacts": [
       {
         "path": "docs/core/artifacts/t13_energy_response_bridge_audit.json"
@@ -98,21 +98,7 @@
       "source_uncertainty_for_c_v_not_reported",
       "e0_energy_density_scale_not_source_locked",
       "base_Phi_to_Phi_E_mapping_not_derived",
-      "independent_alpha_Phi_K_calibration_missing",
-      "source_quantity_is_c_p_not_volumetric_c_v",
-      "density_uncertainty_missing_for_volumetric_conversion",
-      "source_k_is_derived_not_independent_density_evidence",
-      "material_regime_mapping_to_TTG_not_closed",
-      "volumetric_alpha_V_not_source_locked",
-      "isothermal_bulk_modulus_K_T_not_source_locked",
-      "density_uncertainty_not_source_locked",
-      "c_v_source_uncertainty_not_closed",
-      "ding_pbte_numeric_C_src_T_not_packaged",
-      "ding_pbte_mode_resolved_c_mu_or_reproducible_inputs_missing",
-      "ding_pbte_C_src_uncertainty_or_convergence_contract_missing",
-      "ding_pbte_C_src_to_thermodynamic_c_v_regime_not_closed",
-      "base_Phi_to_Delta_u_ph_mapping_not_derived",
-      "ding_pbte_author_data_or_independent_reproduction_package_missing"
+      "independent_alpha_Phi_K_calibration_missing"
     ],
     "dependency_unlocked": "named Phi_E formula lane only; no base Phi Kelvin prediction or downstream transport dependency",
     "claim_boundary": "This is a named conditional response branch. It does not identify Phi_E with base Phi, does not calibrate alpha_Phi_K, and does not consume TTG target data or Xie 2026 holdout data."
@@ -122,18 +108,12 @@
     "sha256": "9e968cdc534e2259cec91908cfa4162cd5d3bc491bcb4de6abb7ec0b4ffd1f9e",
     "status": "SOURCE_IDENTITY_READY_CV_UNCERTAINTY_OPEN",
     "candidate_quantity": "molar Cp and mass-specific heat",
-    "required_quantity": "volumetric c_v",
-    "independent_c_p_anchor": {
-      "path": "docs/core/artifacts/t13_gatech_graphite_source_audit.json",
-      "sha256": "56866720546cdf201c5b45ef7262f82679a5676482835d6d476933f114b3d394",
-      "status": "PASS_SOURCE_CP_95CI_CV_OPEN"
-    }
+    "required_quantity": "volumetric c_v"
   },
   "conditional_inputs": {
     "c_v": {
-      "status": "OPEN_NUMERIC_DING_C_SRC_AND_THERMODYNAMIC_REGIME",
-      "units": "J m^-3 K^-1",
-      "source_formula_status": "CLOSED_FOR_LANE"
+      "status": "OPEN_CP_TO_CV_UNCERTAINTY",
+      "units": "J m^-3 K^-1"
     },
     "e0": {
       "status": "OPEN_NOT_SOURCE_LOCKED",
@@ -180,9 +160,9 @@
     "alpha_Phi_E_K": null,
     "status": "NOT_EMITTED_SOURCE_INPUTS_INCOMPLETE"
   },
-  "controlling_blocker": "ding_pbte_author_data_or_independent_reproduction_package_missing",
-  "next_controller": "If authorized, send the bounded author request and audit any returned payload; keep numeric C_src and the base-Phi energy anchor open until source acceptance.",
-  "claim_boundary": "The Ding PBTE source formula and named energy-response algebra are closed for their lanes only. Numeric C_src(T), e0, base Phi correspondence, Full Topic 13, and external validation remain open.",
+  "controlling_blocker": "c_v_e0_and_base_Phi_to_Phi_E_inputs_not_source_locked",
+  "next_controller": "source-lock volumetric c_v with uncertainty, independently derive or calibrate e0, and prove the base Phi-to-Phi_E mapping without TTG target residuals or Xie 2026",
+  "claim_boundary": "The named energy-response algebra is closed for this lane only; Full Topic 13 remains blocked at dimensional calibration and thermodynamic closure.",
   "source_anchor": {
     "status": "PASS_SOURCE_CP_95CI_CV_OPEN",
     "major_result_id": "T13_SOURCE_CP_95CI_ANCHOR",
@@ -293,5 +273,26 @@
       "numeric_alpha_Phi_K_emitted": false,
       "xie_2026_accessed": false
     }
+  },
+  "artifact_provenance": {
+    "prior_artifact_preserved": true,
+    "preserved_top_level_fields": [
+      "source_anchor",
+      "cp_cv_correction_contract",
+      "standard_pbte_source_anchor",
+      "pbte_numeric_input_availability"
+    ],
+    "preserved_major_result_fields": [],
+    "preserved_evidence_artifacts": [
+      "docs/core/artifacts/t13_gatech_graphite_source_audit.json",
+      "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/gatech_gen3csp_graphite_source_package.json",
+      "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/gen3csp_graphite.xlsx",
+      "docs/core/artifacts/t13_cp_cv_correction_audit.json",
+      "docs/core/artifacts/t13_ding_pbte_energy_temperature_mapping_audit.json",
+      "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_pbte_energy_temperature_source_package.json",
+      "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ding_2022_supplementary_information.pdf",
+      "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
+      "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_pbte_numeric_input_availability_package.json"
+    ]
   }
 }
