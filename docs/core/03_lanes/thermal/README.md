@@ -19,3 +19,6 @@ does not promote a UET thermal prediction or close the full Topic 13 lane.
 The root paths remain compatibility shims while consumers migrate to this
 package.  Organization migration does not alter the source data, evidence
 status, parameter provenance, or physics claim boundary.
+
+- thermal_observable_bridge.py — normalized C-to-temperature proxy with Fourier/Cattaneo controls; the gain remains an open mapping coefficient.
+- thermal_source_observable_map.py — TTG observable definitions and an explicit Phi-to-kelvin calibration contract; open calibration returns no physical temperature.
