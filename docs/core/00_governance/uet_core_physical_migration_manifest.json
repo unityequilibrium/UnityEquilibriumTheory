@@ -1,6 +1,6 @@
 {
   "canonical_path_authority": "docs/core/core_paths.py",
-  "generated_at": "2026-09-15T01:38:10+00:00",
+  "generated_at": "2026-09-15T01:45:50+00:00",
   "generator": "docs/scripts/audit/plan_uet_core_physical_migration.py",
   "migration_id": "UET-CORE-PHYSICAL-MIGRATION-V3",
   "physical_move_performed": false,
@@ -375,7 +375,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_imports_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "8e3b1a36b7892368494fab3c4a1392af2e74922060c15304e574185fa1b2d459",
+      "sha256_before": "985169e33a07a9c79413362d1f1188fa7e594d29fe1a49fbb22f45463cd4cc53",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -408,7 +408,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_links_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "fba090ebac2a03b84d0e815c1ef0336040ff188e398e678118a05c14f97cc317",
+      "sha256_before": "a4dfcb9f8a591c9f874559fa0515451e4f28357d872f4e0ba12299deda0c6dad",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -441,7 +441,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_migration_enforcement_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "9f6949daa73705e14ca7a938bde1652210fc88c1d14aaf69d90f59bb33952f5d",
+      "sha256_before": "17dcf6299448a9ec2e65d6f86547fdcaa85507fa7fb3338377f364285507603e",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -475,7 +475,7 @@
       "rollback_path": "docs/core/00_governance/UET_CORE_MIGRATION_ENFORCEMENT_REPORT.md",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_after": null,
-      "sha256_before": "fec77489d25249f7e7fd96cd07a54a7f3919ef53e5985cee6b0c19f1789c67db",
+      "sha256_before": "a43a0205cd0974f5e382b053c2884cfcb59eb99843f06f981c20e02ee7ed1469",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [
         "ORG"
@@ -510,7 +510,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_paths_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "5bd620ca0c6f8485e40b6d06ea8abc8e3cbecc75c86235fe05b1539db3816e04",
+      "sha256_before": "ea709688b92cd6c2c7c512197e0d6084c9bbb07050cf0c50a7ba6e6be20f915f",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -543,7 +543,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_physical_migration_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "be21cfdc244735d8ab79d940a0f1b02963f4235aa97258c62f8f1d24a3c7ec40",
+      "sha256_before": "cba69d7b64ad2d91f0b8bf50d0382ad75c70f5a37ffbde558a48bfceec3d3b84",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -576,7 +576,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "3624d5b9fe6f609ef4a7c28c15669b6e216dcdb1e37eea9093df9808ac681d29",
+      "sha256_before": "7585cb2fcdfcbf77ff8679f2616c17ea17511a8df3d8945f93c33b5a9ce0885a",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -610,7 +610,7 @@
       "rollback_path": "docs/core/00_governance/UET_CORE_PHYSICAL_MIGRATION_REPORT.md",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_after": null,
-      "sha256_before": "22420f59a1924b97a0ea49602e3e133cf5f6317730246a9f9b5b789d72f49afd",
+      "sha256_before": "d7515c039b13f17aae6c0f1822a07c9e4488677fe9de86a69b643cf277006283",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [
         "ORG"
@@ -780,7 +780,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_test_collection_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "e42ac5ed65f4fd35a6aed3cb9e3efb1909ce6905e002bdca102945c916b13d56",
+      "sha256_before": "14683643f134fc47e02d59a87bff715abf88cc449ee66d09b4b1e69ec9c9a7db",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -2604,7 +2604,7 @@
       "collision_key": "docs/core/02_equations/matter_space/readme.md",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/matter_space/README.md",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": "core.matter_space",
       "evidence_status": "INTERNAL",
@@ -2637,7 +2637,7 @@
       "collision_key": "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "LANE",
         "EVIDENCE"
@@ -2675,7 +2675,7 @@
       "collision_key": "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field_bridge.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field_bridge.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "LANE",
         "EVIDENCE"
@@ -8159,7 +8159,7 @@
       "collision_key": "docs/core/05_tests/regression/root/test_hyperbolic_phase_canonical_migration.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/05_tests/regression/root/test_hyperbolic_phase_canonical_migration.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": "core_test_surface",
       "evidence_status": "INTERNAL",
@@ -16263,7 +16263,7 @@
       "rollback_path": "docs/core/08_history/update_logs/UET_CORE_PHYSICAL_MIGRATION_UPDATE_LOG.md",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "cfbc2c0940eaa2b3eb7558226925f2d616c9c5d1967c2966f508154083babdc2",
+      "sha256_before": "a3e50099bf3549b78d9eb416061d76995c0493371c54788d5de1815f6652caf2",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -18529,7 +18529,7 @@
       "collision_key": "docs/core/07_artifacts/correspondence/hyperbolic_phase_field_bridge_formula_audit.json",
       "compatibility_mode": "legacy_artifact_index",
       "current_path": "docs/core/artifacts/hyperbolic_phase_field_bridge_formula_audit.json",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": "foundation_or_shared",
       "evidence_status": "INTERNAL",
@@ -18565,7 +18565,7 @@
       "collision_key": "docs/core/07_artifacts/archive/hyperbolic_phase_field_causal_feasibility.json",
       "compatibility_mode": "legacy_artifact_index",
       "current_path": "docs/core/artifacts/hyperbolic_phase_field_causal_feasibility.json",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": "foundation_or_shared",
       "evidence_status": "INTERNAL",
@@ -18601,7 +18601,7 @@
       "collision_key": "docs/core/07_artifacts/gates/hyperbolic_phase_field_covariant_mapping_gate.json",
       "compatibility_mode": "legacy_artifact_index",
       "current_path": "docs/core/artifacts/hyperbolic_phase_field_covariant_mapping_gate.json",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": "foundation_or_shared",
       "evidence_status": "INTERNAL",
@@ -18637,7 +18637,7 @@
       "collision_key": "docs/core/07_artifacts/verification/hyperbolic_phase_field_external_comparator_verification.json",
       "compatibility_mode": "legacy_artifact_index",
       "current_path": "docs/core/artifacts/hyperbolic_phase_field_external_comparator_verification.json",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": "foundation_or_shared",
       "evidence_status": "INTERNAL",
@@ -18673,7 +18673,7 @@
       "collision_key": "docs/core/07_artifacts/correspondence/hyperbolic_phase_field_formula_audit.json",
       "compatibility_mode": "legacy_artifact_index",
       "current_path": "docs/core/artifacts/hyperbolic_phase_field_formula_audit.json",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": "foundation_or_shared",
       "evidence_status": "INTERNAL",
@@ -18709,7 +18709,7 @@
       "collision_key": "docs/core/07_artifacts/provenance/hyperbolic_phase_field_source_contract.json",
       "compatibility_mode": "legacy_artifact_index",
       "current_path": "docs/core/artifacts/hyperbolic_phase_field_source_contract.json",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": "foundation_or_shared",
       "evidence_status": "INTERNAL",
@@ -36673,7 +36673,7 @@
       "collision_key": "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json",
       "compatibility_mode": "legacy_artifact_index",
       "current_path": "docs/core/artifacts/uet_gr_research_program_gate.json",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": "foundation_or_shared",
       "evidence_status": "INTERNAL",
@@ -37925,7 +37925,7 @@
       "collision_key": "docs/core/core_paths.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/core_paths.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "FOUNDATION",
         "DATA"
@@ -47247,7 +47247,7 @@
       "collision_key": "docs/core/05_tests/regression/root/test_gr_hyperbolic_phase_field_alignment.py",
       "compatibility_mode": "path_resolver",
       "current_path": "docs/core/test/test_gr_hyperbolic_phase_field_alignment.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": "core_test_surface",
       "evidence_status": "INTERNAL",
@@ -47281,7 +47281,7 @@
       "collision_key": "docs/core/05_tests/regression/root/test_gr_hyperbolic_phase_field_bridge_alignment.py",
       "compatibility_mode": "path_resolver",
       "current_path": "docs/core/test/test_gr_hyperbolic_phase_field_bridge_alignment.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": "core_test_surface",
       "evidence_status": "INTERNAL",
@@ -63461,7 +63461,7 @@
       "redirect_or_shim": 199,
       "root_python_shim": 148
     },
-    "dirty_sources": 16,
+    "dirty_sources": 2,
     "duplicate_targets": {},
     "existing_target_conflicts": [],
     "files_migrated_in_wave": 0,
