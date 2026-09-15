@@ -510,3 +510,17 @@
 - Claim impact: no change; this pass changes only migration metadata and audit state.
 - Workflow linkage: closes the post-commit checkpoint required by Core Physical Migration v3 and the shared hardening/update-log standard.
 - Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
+## 2026-09-15 — Core physical migration v3 — Wave 6q persistence/resource-selection family
+
+- Scope: canonical source migration for the normalized persistence-energy diagnostic, physical cost-map contract, and resource-selection thermal bridge; organization and dependency-path repair only.
+- Moved: persistence_energy_diagnostic.py, resource_selection_physical_cost_map.py, and resource_selection_thermal_bridge.py into docs/core/03_lanes/persistence/.
+- Added: persistence lane README/exports, three root compatibility shims, and canonical migration regression coverage.
+- Repaired: the thermal bridge now resolves the still-rooted resource-selection comparator through its compatibility facade, preserving the existing public API while that dependent source remains unmigrated.
+- Verification: persistence/resource-selection/canonical migration tests PASS (21); persistence-energy, SI cost-map, and thermal-bridge audits PASS with their declared open statuses; physical migration, path, migration-enforcement, import, link, and test-collection audits PASS; post-move collection reports 2,151 full / 1,325 canonical / 825 legacy tests with zero collection errors.
+- Result: the normalized diagnostic preserves the candidate persistence principle and ledger closure; physical cost-map calibration and thermal mapping remain explicitly open. Planner reports 1,834 indexed files, 1,109 active move targets, 725 canonical/protected records, 213 compatibility assets, and zero duplicate targets or destination conflicts before the commit checkpoint.
+- Blocker narrowed: persistence/resource-selection support now has one canonical lane path without turning a constitutive comparator into a derived physical law.
+- Still open: normalized work is not SI energy, proxy entropy is not measured entropy production, no independent cost-scale/thermal observable source is accepted, and foundation remains BLOCKED.
+- Controller: commit this scoped persistence move, refresh post-commit metadata, then classify the next registered family; generated-artifact mass migration remains behind its separate generator/consumer/provenance controller.
+- Claim impact: no change; this wave changes organization, compatibility, dependency imports, and lane metadata only. No energy, thermal, gravity, cosmology, galaxy, or downstream claim was promoted.
+- Workflow linkage: follows the Core Physical Migration v3 canonical-path, compatibility-shim, and generated-artifact provenance policy.
+- Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
