@@ -604,3 +604,15 @@
 - Claim impact: no change; this wave changes organization, exports, compatibility, and lane metadata only. No mass, gravity, galaxy, cosmology, or particle claim was promoted.
 - Workflow linkage: follows the Core Physical Migration v3 canonical-path, compatibility-shim, dependency-facade, and lane-boundary policy.
 - Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
+
+## 2026-09-15 — Wave 6t post-commit metadata consistency correction
+
+- Scope: post-commit synchronization after 2cd57728f.
+- Corrected: regenerated the migration plan/report, physical migration manifest, governance audits, and test-collection artifact after the matter-interaction move; committed sources are no longer counted as dirty.
+- Verification: physical migration, canonical path, migration enforcement, import, link, and test-collection audits PASS; canonical imports 181/181; links 255/255; test collection 2,151 full / 1,325 canonical / 825 legacy with zero collection errors.
+- Result: planner reports 1,841 indexed files, 1,105 active move targets, 736 canonical/protected records, 217 compatibility assets, 2 unrelated dirty sources, zero duplicate targets, zero existing destination conflicts, and zero physics-status changes.
+- Blocker narrowed: matter-interaction organization and metadata now agree after commit; the forward source-to-density/relational-C map remains a normalized standard comparator with no inverse C-to-rho law.
+- Still open: dimensional measurement map, uncertainty and holdout, inverse C-to-rho identifiability, extra UET constitutive response, and foundation remain BLOCKED.
+- Next controller: classify the next registered family from dependency evidence; keep generated-artifact mass migration behind its separate generator/consumer/provenance checkpoint.
+- Claim impact: no change; this pass changes only migration metadata and audit state.
+- Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.

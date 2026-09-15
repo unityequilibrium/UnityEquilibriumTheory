@@ -2,7 +2,7 @@
 
 > Organization control-plane report. Physical migration does not promote physics evidence.
 
-Generated at: 2026-09-15T03:42:22+00:00
+Generated at: 2026-09-15T03:46:21+00:00
 Generator: docs/scripts/audit/plan_uet_core_physical_migration.py
 
 ## Current control state
@@ -10,7 +10,7 @@ Generator: docs/scripts/audit/plan_uet_core_physical_migration.py
 - Files indexed: **1841**
 - Files with a move target: **1105**
 - Already canonical/protected: **736**
-- Dirty sources held back: **7**
+- Dirty sources held back: **2**
 - Duplicate targets: **0**
 - Existing target conflicts: **0**
 - Physical move performed in this run: **False**
