@@ -527,6 +527,53 @@
       ],
       "status": "MIGRATED_WITH_SHIM",
       "target_prefix": "docs/core/02_equations/o2"
+    },
+    {
+      "applied_at": "2026-09-15T11:35:17+00:00",
+      "claim_boundary": "Organization migration only; no physics status or claim changed.",
+      "family": "thermal_remaining",
+      "files_moved": 6,
+      "generator": "docs/scripts/audit/migrate_uet_core_python_family_v3.py",
+      "moves": [
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/thermal_collective_response_eos.py",
+          "legacy_path": "docs/core/thermal_collective_response_eos.py",
+          "sha256_after": "a67c60ea87b848896a37fb9f97cffbff843f20bf07d5d32ff8f3ec82f61544a3",
+          "sha256_before": "a67c60ea87b848896a37fb9f97cffbff843f20bf07d5d32ff8f3ec82f61544a3"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/thermal_covariant_action_si_conversion.py",
+          "legacy_path": "docs/core/thermal_covariant_action_si_conversion.py",
+          "sha256_after": "24639807ce714cfb2f05adc5063e55392f33280bb9ddd42eaf16813e314ee9fe",
+          "sha256_before": "24639807ce714cfb2f05adc5063e55392f33280bb9ddd42eaf16813e314ee9fe"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/thermal_cp_cv_correction.py",
+          "legacy_path": "docs/core/thermal_cp_cv_correction.py",
+          "sha256_after": "5b768b74f46e7734acc1372a51bdbcaca28d7f822be151cc248675dac446ff47",
+          "sha256_before": "5b768b74f46e7734acc1372a51bdbcaca28d7f822be151cc248675dac446ff47"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/thermal_sk_kms_entropy_contract.py",
+          "legacy_path": "docs/core/thermal_sk_kms_entropy_contract.py",
+          "sha256_after": "ea63f10f1f0f18c22f9055196b60d727182d2582f9188e3079c0c1de1f334d1b",
+          "sha256_before": "ea63f10f1f0f18c22f9055196b60d727182d2582f9188e3079c0c1de1f334d1b"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_raman_deformation_constraint.py",
+          "legacy_path": "docs/core/uet_raman_deformation_constraint.py",
+          "sha256_after": "0d20ef2d9a72a5aa749adc875f549c2c93b8eaf6eb2a59789171b720be7d5e85",
+          "sha256_before": "0d20ef2d9a72a5aa749adc875f549c2c93b8eaf6eb2a59789171b720be7d5e85"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_reciprocal_thermal_dynamics.py",
+          "legacy_path": "docs/core/uet_reciprocal_thermal_dynamics.py",
+          "sha256_after": "f8336990a61dc4b798bea8b8d3c6f2acadba279f79d778e6ba5b391e3165db2a",
+          "sha256_before": "f8336990a61dc4b798bea8b8d3c6f2acadba279f79d778e6ba5b391e3165db2a"
+        }
+      ],
+      "status": "MIGRATED_WITH_SHIM",
+      "target_prefix": "docs/core/03_lanes/thermal"
     }
   ],
   "schema_version": "1.0"
