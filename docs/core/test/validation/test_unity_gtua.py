@@ -5,12 +5,10 @@ import sys
 
 # Import from UET V3.0 Master Equation
 import sys
-from pathlib import Path
+from docs.core.core_paths import repo_root
 
-_root = Path(__file__).parent
-while _root.name != "docs" and _root.parent != _root:
-    _root = _root.parent
-sys.path.insert(0, str(_root.parent))
+ROOT = repo_root()
+sys.path.insert(0, str(ROOT))
 try:
     from docs.core.uet_master_equation import (
         UETParameters,

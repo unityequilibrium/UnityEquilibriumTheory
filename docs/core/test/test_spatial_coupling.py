@@ -3,19 +3,16 @@
 from __future__ import annotations
 
 import sys
-from pathlib import Path
+from docs.core.core_paths import repo_root
 
 import numpy as np
 
 
-def _bootstrap() -> Path:
-    current = Path(__file__).resolve()
-    for parent in [current] + list(current.parents):
-        if (parent / "docs").exists() and (parent / "docs" / "core").exists():
-            if str(parent) not in sys.path:
-                sys.path.insert(0, str(parent))
-            return parent
-    raise RuntimeError("UET docs root not found")
+def _bootstrap():
+    root = repo_root()
+    if str(root) not in sys.path:
+        sys.path.insert(0, str(root))
+    return root
 
 
 _bootstrap()
