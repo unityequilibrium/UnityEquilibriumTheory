@@ -444,3 +444,16 @@
 - Claim impact: no change; this wave changes organization, compatibility, classifier metadata, and generated correspondence-path fields only. QBism/RQM remain interpretation adapters and no quantum, particle, GR, or downstream claim was promoted.
 - Workflow linkage: follows the Core Physical Migration v3 canonical-path, compatibility-shim, and generated-artifact provenance policy.
 - Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
+
+## 2026-09-15 — Wave 6n post-commit metadata consistency correction
+
+- Scope: migration control-plane synchronization after commit 01db3583c.
+- Corrected: regenerated the physical migration manifest/report and governance audits after the operational quantum lane move; committed sources and lane-package files are no longer counted as dirty work.
+- Verification: physical migration, path, migration-enforcement, import, link, and test-collection audits PASS; post-commit collection reports 2,145 full / 1,319 canonical / 825 legacy tests, all with zero collection errors.
+- Result: planner reports 1,815 indexed files, 1,119 active move targets, 696 canonical/protected records, 203 compatibility assets, 2 unrelated dirty sources, and zero duplicate targets or destination conflicts.
+- Blocker narrowed: the operational quantum and interpretation sources are now represented consistently in the committed carrier-observer lane and legacy-compatible path map; physics status changes remain 0.
+- Still open: operational QM remains a standard interface and QBism/RQM comparison layer, not a UET quantum derivation; detector/physical carrier calibration, particle correspondence, and foundation remain BLOCKED.
+- Next controller: select the next registered family from dependency evidence; do not begin generated-artifact mass migration until generator and consumer checkpoints are explicit.
+- Claim impact: no change; this pass changes only migration metadata and audit state.
+- Workflow linkage: closes the post-commit checkpoint required by Core Physical Migration v3 and the shared hardening/update-log standard.
+- Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
