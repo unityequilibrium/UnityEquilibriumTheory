@@ -102,6 +102,8 @@ def _python_area(stem: str) -> str:
         return "01_contracts/ontology"
     if lower == "uet_gr_correspondence":
         return "01_contracts/correspondence"
+    if lower == "topic13_closure_record_contract":
+        return "03_lanes/topic13_support"
     if lower.startswith(("uet_o2_", "standard_o2")):
         return "02_equations/o2"
     if lower.startswith(("uet_covariant", "covariant_")):

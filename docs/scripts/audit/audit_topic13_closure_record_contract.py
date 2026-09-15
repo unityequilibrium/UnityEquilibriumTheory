@@ -79,7 +79,7 @@ def main() -> int:
             "observable": "Topic 13 closure-input readiness",
             "data_role": "INTERNAL_CONTRACT_NOT_CALIBRATION",
             "evidence_artifacts": [
-                "docs/core/topic13_closure_record_contract.py",
+                "docs/core/03_lanes/topic13_support/topic13_closure_record_contract.py",
                 "docs/core/artifacts/t13_closure_record_contract_audit.json",
             ],
             "verification_status": status,

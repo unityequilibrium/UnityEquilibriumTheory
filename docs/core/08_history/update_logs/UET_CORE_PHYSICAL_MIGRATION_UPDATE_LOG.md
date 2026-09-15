@@ -457,3 +457,18 @@
 - Claim impact: no change; this pass changes only migration metadata and audit state.
 - Workflow linkage: closes the post-commit checkpoint required by Core Physical Migration v3 and the shared hardening/update-log standard.
 - Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
+
+## 2026-09-15 — Core physical migration v3 — Wave 6o Topic 13 support family
+
+- Scope: canonical source migration for the Topic 13 formal bridge, dimensional scale-dependency witness, and fail-closed closure-record contract; organization and provenance-path repair only.
+- Moved: t13_formal_thermodynamic_bridge_integration.py, t13_thermal_bridge_scale_dependency.py, and topic13_closure_record_contract.py into docs/core/03_lanes/topic13_support/.
+- Added: Topic 13 support package README/exports, three root compatibility shims, and canonical migration regression coverage.
+- Repaired: the path classifier now routes topic13_closure_record_contract to the Topic 13 support lane; the three Topic 13 audit generators now record canonical implementation paths.
+- Verification: Topic 13 support/canonical migration tests PASS (14); formal bridge, scale-dependency no-go, and closure-record audits PASS; physical migration, path, migration-enforcement, import, link, and test-collection audits PASS; duplicate targets, destination conflicts, missing paths, broken redirects, import failures, broken links, and collection errors are 0; physics status changes remain 0.
+- Result: planner reports 1,821 indexed files, 1,116 active move targets, 705 canonical/protected records, 206 compatibility assets, and zero duplicate targets or destination conflicts before the commit checkpoint.
+- Blocker narrowed: the three Topic 13 support sources now have one canonical lane path while old imports remain compatible and generated evidence points to the canonical sources.
+- Still open: the formal bridge remains internal normalized/natural-unit support; independent Phi/SI calibration, physical Kubo matching, TTG observable closure, and foundation remain BLOCKED. The scale-dependency artifact remains a scoped no-go, not a physical prediction.
+- Controller: commit this scoped Topic 13 support move, refresh post-commit metadata, then select the next registered family; generated-artifact mass migration remains behind its separate generator/consumer/provenance controller.
+- Claim impact: no change; this wave changes organization, compatibility, classifier metadata, and evidence paths only. No thermal, EOS, transport, GR, quantum, particle, or downstream claim was promoted.
+- Workflow linkage: follows the Core Physical Migration v3 canonical-path, compatibility-shim, and generated-artifact provenance policy.
+- Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
