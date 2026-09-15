@@ -751,3 +751,9 @@
 - Verification: all source hashes match before/after; 40 legacy/canonical imports pass; core import audit 181/181, path audit, and migration audit pass.
 - Result: only 12 root Python surfaces remain unclassified; they are tooling/support candidates, not implicitly physics equations.
 - Claim impact: organization only; no physical status, unit lane, or claim boundary changed.
+## 2026-09-15 — Wave 6z post-commit migration metadata refresh
+
+- Scope: regenerate the physical migration manifest and report after commit `1fd96a48e`.
+- Verification: planner PASS; zero duplicate targets, zero destination conflicts, and zero physics-status changes.
+- Result: 1,966 files indexed; 979 canonical/protected, 987 remaining migration targets, 335 compatibility assets, and 16 unrelated dirty source records.
+- Claim impact: none; this is organization metadata only.
