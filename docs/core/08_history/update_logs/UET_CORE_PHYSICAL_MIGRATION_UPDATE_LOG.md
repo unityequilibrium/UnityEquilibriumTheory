@@ -663,3 +663,24 @@
 - Next controller: review/fix the audit generator drift as a separate evidence task, then classify the next registered family; keep generated-artifact mass migration behind its separate generator/consumer/provenance checkpoint.
 - Claim impact: no change; this pass changes only migration metadata and audit state.
 - Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
+## 2026-09-15 — Wave 6v-a audit-generator provenance preservation repair
+
+- Scope: evidence-generator drift review discovered while closing Wave 6v; no equation or physical claim change.
+- Observed: direct regeneration of t13_energy_response_bridge_audit.json dropped four committed provenance blocks, changed major_result.what_is_closed from list to string, and reduced evidence_artifacts from 11 entries to 2.
+- Changed: audit_topic13_energy_response_bridge.py now preserves known source/aggregate fields and unmatched evidence paths for same-schema artifacts, refreshes current generator-owned fields, and refuses identity/schema-mismatched overwrite; added artifact regression coverage and a machine-readable review record.
+- Verification: generator-preservation regression PASS (2); no live artifact regeneration was run after the repair.
+- Result: future focused audit reruns have a non-destructive merge/guard path; the current worktree artifact remains BLOCKED_REVIEW_REQUIRED and is intentionally not restored or committed in this wave.
+- Controller narrowed: the overwrite mechanism is guarded, but the aggregate-vs-focused artifact ownership and reconciliation of the current live payload still require explicit evidence review.
+- Still open: review the committed aggregate payload, approve a non-destructive reconciliation, rerun in a temporary output, then update downstream hashes/registers; thermal dimensional calibration and foundation remain blocked.
+- Next controller: human-approved artifact reconciliation, separate from core physical migration.
+- Claim impact: no change; this wave changes generator safety, regression coverage, and review metadata only.
+- Notes: unrelated root/foundation/book changes and the two existing topic13 artifact edits remain untouched and unstaged; no push or PR was made.
+## 2026-09-15 — Wave 6v-a verification synchronization
+
+- Scope: synchronize the generator-repair packet with the standalone test-collection result after the earlier parallel audit run left a stale count.
+- Verification: standalone collection generator PASS; 2,166 full / 1,340 canonical / 825 legacy / 2,165 excluding the quarantined parameter-engine test, with zero collection errors; physical migration, canonical path, migration enforcement, import, and link audits PASS; imports 181/181 and links 255/255.
+- Result: the canonical collection artifact now matches direct pytest collection; this is collection evidence only and does not promote physics or thermal claims.
+- Controller narrowed: collection writer ordering/count freshness is now explicit for this packet; the Topic 13 energy-response artifact ownership/reconciliation remains BLOCKED_REVIEW_REQUIRED.
+- Next controller: commit the generator-preservation repair and synchronized governance metadata, then obtain human-approved reconciliation for the excluded topic13 audit artifacts before any downstream evidence use.
+- Claim impact: no change; no equation, calibration, SI, or empirical status was promoted.
+- Notes: the two drifted topic13 audit artifacts, foundation files, root guidance, and book changes remain untouched and unstaged; no push or PR was made.
