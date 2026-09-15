@@ -13,6 +13,9 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from docs.core.core_paths import canonical_existing_path  # noqa: E402
+GR_CORRESPONDENCE_SOURCE = canonical_existing_path(ROOT / ("docs/core/" + "uet_gr_correspondence.py")).relative_to(ROOT).as_posix()
+
 from docs.core.uet_gr_correspondence import (
     flat_flrw_control, gr_correspondence_contract, minkowski_null_control,
     newtonian_poisson_residual, schwarzschild_exterior_null_control,
@@ -72,7 +75,7 @@ def build_artifacts() -> tuple[dict, dict, dict]:
         "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json", "status": "CANDIDATE_ENTRY_PENDING_MERGE",
         "equation_entries": [{
             "equation_id": "uet.main_theory.gr_correspondence_controls", "version": "gr-controls-v1",
-            "classification": "standard_physics_interface", "relation_or_code_path": "docs/core/uet_gr_correspondence.py",
+            "classification": "standard_physics_interface", "relation_or_code_path": GR_CORRESPONDENCE_SOURCE,
             "variables": {"g_munu": "analytic metric input", "G_munu": "analytic Einstein-tensor input", "T_munu": "matching standard stress tensor", "Phi_N": "Newtonian potential"},
             "mathematical_role": "analytic GR and weak-field correspondence controls",
             "standard_physics_counterpart": "Einstein equation, FLRW perfect fluid, Schwarzschild exterior vacuum, and Poisson equation",
@@ -82,7 +85,7 @@ def build_artifacts() -> tuple[dict, dict, dict]:
             "assumptions": ["analytic tensors supplied", "no curvature derivation", "fixed coordinates", "closed response branch"],
             "symmetry_and_conservation": "Einstein residual identity only; curved Bianchi evolution not tested",
             "limiting_cases": ["Minkowski vacuum", "flat FLRW perfect fluid", "Schwarzschild exterior", "Newtonian Poisson"],
-            "implementation_paths": ["docs/core/uet_gr_correspondence.py"],
+            "implementation_paths": [GR_CORRESPONDENCE_SOURCE],
             "verifier_paths": ["docs/scripts/audit/audit_uet_gr_correspondence.py", "docs/core/artifacts/gr_correspondence_verification.json", "docs/core/test/test_uet_gr_correspondence.py"],
             "evidence_class": "STANDARD_THEORY_REPRODUCTION", "proof_status": "analytic tensor-input identities pass; curved numerical closure blocked",
             "downstream_dependencies": ["uet.main_theory.covariant_parent", "uet.main_theory.hyperbolic_spine_control", "uet.main_theory.gravity_observables"],

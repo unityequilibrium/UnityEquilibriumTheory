@@ -400,3 +400,19 @@
 - Claim impact: no change; this pass changes only migration metadata and audit state.
 - Workflow linkage: closes the post-commit checkpoint required by Core Physical Migration v3 and the shared hardening/update-log standard.
 - Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
+
+## 2026-09-15 — Core physical migration v3 — Wave 6m GR correspondence contract
+
+- Scope: canonical source migration for the registered analytic GR correspondence controls; organization, correspondence-path, and provenance metadata repair only.
+- Moved: uet_gr_correspondence.py into docs/core/01_contracts/correspondence/.
+- Added: correspondence package README/exports, a root compatibility shim, and canonical migration regression coverage.
+- Repaired: the path classifier now assigns the module to the FOUNDATION correspondence area; the existing GR correspondence generator now emits canonical implementation paths in its correspondence addendum.
+- Preserved: analytic Minkowski, FLRW, Schwarzschild, and Newtonian controls, the supplied-tensor boundary, and the explicit block on curvature computation, dynamical constraints, gauge-invariant observables, and curved numerical validation.
+- Verification: GR correspondence/canonical-migration tests PASS (5); GR audit PASS with status PASS_ANALYTIC_CONTROLS_CURVED_NUMERICS_BLOCKED; physical migration, path, migration-enforcement, import, link, and test-collection audits PASS (181 modules, 255 links, 2,144 full / 1,318 canonical / 825 legacy tests, zero collection errors).
+- Result: duplicate targets, destination conflicts, missing paths, broken redirects, import failures, broken links, and collection errors are all 0; physics status changes remain 0.
+- Blocker narrowed: the GR correspondence implementation now has one canonical FOUNDATION contract path while legacy core imports and artifact labels remain compatible.
+- Still open: this is standard analytic correspondence evidence, not a UET GR derivation or curved-spacetime numerical validation; curvature, constraint evolution, gauge-invariant observables, and foundation remain BLOCKED.
+- Controller: commit this scoped correspondence move, refresh post-commit metadata, then classify the next registered family from dependency evidence; planner reports 1,810 indexed files and 1,121 active move targets before the commit checkpoint.
+- Claim impact: no change; this wave changes organization, compatibility, and generated correspondence-path metadata only. No GR, cosmology, gravity, mass, or downstream claim was promoted.
+- Workflow linkage: follows the Core Physical Migration v3 canonical-path, compatibility-shim, and generated-artifact provenance policy.
+- Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
