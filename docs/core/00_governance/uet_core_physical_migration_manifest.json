@@ -1,6 +1,6 @@
 {
   "canonical_path_authority": "docs/core/core_paths.py",
-  "generated_at": "2026-09-15T11:32:02+00:00",
+  "generated_at": "2026-09-15T11:41:11+00:00",
   "generator": "docs/scripts/audit/plan_uet_core_physical_migration.py",
   "migration_id": "UET-CORE-PHYSICAL-MIGRATION-V3",
   "physical_move_performed": false,
@@ -375,7 +375,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_imports_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "dcfd52e464d7989bf01f6c52190352a2d97a8a7cf4087069dd31c2b65aa46642",
+      "sha256_before": "74eb1e1c2abfd8a08a8d1bb245899e2629c03217ff19f5a309d1d7efc517d124",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -387,7 +387,7 @@
       "collision_key": "docs/core/00_governance/uet_core_links_audit.json",
       "compatibility_mode": "none",
       "current_path": "docs/core/00_governance/uet_core_links_audit.json",
-      "dirty_source": false,
+      "dirty_source": true,
       "downstream_dependencies": [
         "FOUNDATION",
         "DATA"
@@ -408,7 +408,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_links_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "ced291243969745b6d9099614cb391c563790ac5c0270f5f8bf0167e5ab52431",
+      "sha256_before": "c70ef2d1339bcf877285a66d6e81337e0ea0a88daa3fe06797ae87e2acb50bfc",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -441,7 +441,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_migration_enforcement_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "5f11af3bad88cf51bbff27209e5c9e3caad097db3df22e8f5567f9f7c5723363",
+      "sha256_before": "bbb80f275784784415b8cb58b220d456466dd19f68135a38d5ecc5632329a7da",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -475,7 +475,7 @@
       "rollback_path": "docs/core/00_governance/UET_CORE_MIGRATION_ENFORCEMENT_REPORT.md",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_after": null,
-      "sha256_before": "ad200d6328bf259991aef03951e2a48e4313ded21169f3017fb39cc5589b8ede",
+      "sha256_before": "f1b6887ffe81a46d7d252acb4db55ce1c9f849abdb39d152960aee6a93d3b43a",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [
         "ORG"
@@ -510,7 +510,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_paths_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "26092cd38bdb3edf63663d779bb20a5d33f471f267c0fa66cf563ddcb25d593e",
+      "sha256_before": "ec35a8c7740a9518d66a879684ed2e58056acb7e0644c75989f55f2b2e2808c1",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -555,7 +555,7 @@
       "collision_key": "docs/core/00_governance/uet_core_physical_migration_execution_plan.md",
       "compatibility_mode": "none",
       "current_path": "docs/core/00_governance/UET_CORE_PHYSICAL_MIGRATION_EXECUTION_PLAN.md",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": "core_00_governance",
       "evidence_status": "INTERNAL",
@@ -606,7 +606,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "af5619f1d74390176af0c734035d8745b7242a67785bc84f805395a38f003540",
+      "sha256_before": "b736205983cf13233d72df541ea7ba45fa16dad48b0d1bd6d7b0e3e8cd2854d0",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -640,7 +640,7 @@
       "rollback_path": "docs/core/00_governance/UET_CORE_PHYSICAL_MIGRATION_REPORT.md",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_after": null,
-      "sha256_before": "5bf28636d2d9056aeafbcfd0a75bbb52341af51c268fa08df13aea674a43914f",
+      "sha256_before": "0abf26d3db67eb008b5377e073e8ea11b5bd9b8c44f67ec720dab9c347db5722",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [
         "ORG"
@@ -672,7 +672,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_python_family_migration_history.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "e521ad68a82b6372766c23e58c04ef01e36357395dfc610c153c8a22ce9dbe59",
+      "sha256_before": "696a487caeb5e2d8dfbbf8ed779a315f2338c7c7c09632e19379509dc0341a9e",
       "status_source": "docs/core/00_governance/uet_research_organization_policy.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -3427,7 +3427,7 @@
       "collision_key": "docs/core/02_equations/o2/readme.md",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/README.md",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "FOUNDATION",
         "DATA"
@@ -3496,7 +3496,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_action_1pi_sunset_euclidean.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_action_1pi_sunset_euclidean.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -3532,7 +3532,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_action_1pi_sunset_retarded.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_action_1pi_sunset_retarded.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -3568,7 +3568,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_action_1pi_sunset_tensor.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_action_1pi_sunset_tensor.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -3604,7 +3604,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_action_derived_transition_kernel.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_action_derived_transition_kernel.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -3640,7 +3640,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_action_sunset_1pi_spectral.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_action_sunset_1pi_spectral.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -3676,7 +3676,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_action_sunset_zero_eta.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_action_sunset_zero_eta.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -3712,7 +3712,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -3748,7 +3748,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -3784,7 +3784,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_auxiliary_field_condensed.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_auxiliary_field_condensed.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -3820,7 +3820,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_beta_correspondence.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_beta_correspondence.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -3856,7 +3856,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_charge_conserving_ladder_response.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_charge_conserving_ladder_response.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -3892,7 +3892,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_charged_current_correlator.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_charged_current_correlator.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -3928,7 +3928,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_collisionless_kubo.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_collisionless_kubo.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -3964,7 +3964,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_condensate_fluctuations.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_condensate_fluctuations.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4000,7 +4000,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_condensate_gaussian_thermal.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_condensate_gaussian_thermal.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4036,7 +4036,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_condensed_dissipative_transport_identifiability_no_go.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_condensed_dissipative_transport_identifiability_no_go.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4072,7 +4072,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_condensed_loop_renormalized_vertex.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_condensed_loop_renormalized_vertex.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4108,7 +4108,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_condensed_relative_flow_collision.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_condensed_relative_flow_collision.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4144,7 +4144,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_condensed_relative_flow_kubo_admission.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_condensed_relative_flow_kubo_admission.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4180,7 +4180,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_condensed_retarded_dissipation_no_go.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_condensed_retarded_dissipation_no_go.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4216,7 +4216,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_condensed_sk_kms_kubo_match.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_condensed_sk_kms_kubo_match.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4252,7 +4252,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_contact_sk_transition_vertex_match.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_contact_sk_transition_vertex_match.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4288,7 +4288,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_continuum_collision_operator.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_continuum_collision_operator.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4324,7 +4324,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_continuum_limit_boundary.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_continuum_limit_boundary.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4360,7 +4360,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_continuum_relative_flow_kubo.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_continuum_relative_flow_kubo.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4396,7 +4396,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_continuum_sunset_cut.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_continuum_sunset_cut.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4432,7 +4432,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_covariant_entropy_heat_flux_balance.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_covariant_entropy_heat_flux_balance.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4468,7 +4468,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_dressed_ra_charge_current_ladder.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_dressed_ra_charge_current_ladder.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4504,7 +4504,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4540,7 +4540,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_equilibrium_kms.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_equilibrium_kms.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4576,7 +4576,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_finite_channel_entropy_balance.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_finite_channel_entropy_balance.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4612,7 +4612,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_finite_density_charged_vertex.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_finite_density_charged_vertex.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4688,7 +4688,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_finite_temperature_all_22_permutation_identity.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_all_22_permutation_identity.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4724,7 +4724,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_finite_temperature_all_onshell_cut_response.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_all_onshell_cut_response.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4760,7 +4760,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4796,7 +4796,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_finite_temperature_declared_retarded_1pi_grid.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_declared_retarded_1pi_grid.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4832,7 +4832,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_finite_temperature_full_sunset_sk_kms.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_full_sunset_sk_kms.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4868,7 +4868,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_finite_temperature_hartree_thermodynamics.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_hartree_thermodynamics.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4904,7 +4904,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_finite_temperature_normal_component.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_normal_component.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4940,7 +4940,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_finite_temperature_normal_stability.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_normal_stability.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4976,7 +4976,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_finite_temperature_offshell_1pi.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_offshell_1pi.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5012,7 +5012,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_finite_temperature_offshell_threshold_crossing_1pi.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_offshell_threshold_crossing_1pi.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5048,7 +5048,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5084,7 +5084,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_finite_temperature_renormalized_hartree.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_renormalized_hartree.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5120,7 +5120,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_finite_temperature_scheme_identifiability.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_scheme_identifiability.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5156,7 +5156,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_finite_temperature_self_energy.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_self_energy.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5192,7 +5192,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_finite_temperature_signed_cut_coverage.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_signed_cut_coverage.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5228,7 +5228,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_finite_temperature_stationarity_scheme.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_stationarity_scheme.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5264,7 +5264,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_cut_multiplicity.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_cut_multiplicity.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5300,7 +5300,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_renormalization_identifiability_no_go.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_renormalization_identifiability_no_go.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5336,7 +5336,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_scattering_sk_kms.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_scattering_sk_kms.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5372,7 +5372,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_sk_kms.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_sk_kms.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5408,7 +5408,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_vacuum_match.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_vacuum_match.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5444,7 +5444,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5480,7 +5480,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5516,7 +5516,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_formal_two_sector_thermodynamics.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_formal_two_sector_thermodynamics.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5552,7 +5552,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_gaussian_offshell_background.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_gaussian_offshell_background.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5588,7 +5588,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_gaussian_thermal_stationarity_no_go.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_gaussian_thermal_stationarity_no_go.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5624,7 +5624,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_heat_current_kubo_continuum_boundary.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_heat_current_kubo_continuum_boundary.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5660,7 +5660,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_heat_current_kubo_match.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_heat_current_kubo_match.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5696,7 +5696,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_interacting_sk_kms_action.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_interacting_sk_kms_action.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5732,7 +5732,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_invariant_galerkin_collision_operator.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_invariant_galerkin_collision_operator.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5768,7 +5768,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_invariant_rate_collision_operator.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_invariant_rate_collision_operator.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5804,7 +5804,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_invariant_vector_current_galerkin.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_invariant_vector_current_galerkin.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5840,7 +5840,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_kinetic_collision_kubo.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_kinetic_collision_kubo.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5876,7 +5876,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_microscopic_kubo_match.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_microscopic_kubo_match.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5912,7 +5912,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_momentum_ladder_sk_kms.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_momentum_ladder_sk_kms.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5948,7 +5948,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_nonlocal_sk_kms_memory_kernel.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_nonlocal_sk_kms_memory_kernel.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -5984,7 +5984,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_normal_response_curvature.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_normal_response_curvature.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -6020,7 +6020,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_on_shell_sunset_width.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_on_shell_sunset_width.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -6056,7 +6056,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_one_loop_normal_branch.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_one_loop_normal_branch.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -6092,7 +6092,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_one_loop_retarded_self_energy_no_go.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_one_loop_retarded_self_energy_no_go.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -6128,7 +6128,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_one_loop_vertex_uv_boundary.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_one_loop_vertex_uv_boundary.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -6164,7 +6164,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_open_system_sk_kms.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_open_system_sk_kms.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -6200,7 +6200,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_physical_renormalization_condition_contract.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_physical_renormalization_condition_contract.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -6236,7 +6236,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_regularized_continuum_heat_current.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_regularized_continuum_heat_current.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -6272,7 +6272,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_renormalized_normal_branch.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_renormalized_normal_branch.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -6308,7 +6308,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_renormalized_vertex_scheme.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_renormalized_vertex_scheme.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -6344,7 +6344,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_same_kernel_tagged_width.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_same_kernel_tagged_width.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -6380,7 +6380,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_sunset_dispersion_interface.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_sunset_dispersion_interface.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -6416,7 +6416,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_sunset_dispersion_interface_verified.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_sunset_dispersion_interface_verified.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -6452,7 +6452,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_thermal_stability_boundary.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_thermal_stability_boundary.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -6488,7 +6488,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_tree_level_bs_sk_match.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_tree_level_bs_sk_match.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -6524,7 +6524,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_tree_level_charged_ward_vertex.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_tree_level_charged_ward_vertex.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -6560,7 +6560,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_two_loop_sunset_cut.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_two_loop_sunset_cut.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -6596,7 +6596,7 @@
       "collision_key": "docs/core/02_equations/o2/uet_o2_ward_constrained_condensed.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/02_equations/o2/uet_o2_ward_constrained_condensed.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -7639,7 +7639,7 @@
       "collision_key": "docs/core/03_lanes/thermal/__init__.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/03_lanes/thermal/__init__.py",
-      "dirty_source": false,
+      "dirty_source": true,
       "downstream_dependencies": [
         "FOUNDATION",
         "DATA"
@@ -7660,7 +7660,7 @@
       "rollback_path": "docs/core/03_lanes/thermal/__init__.py",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "06e094ad50775ecb74a42adc4689a1408f64f6bf7e0bb387f32de7883bd4c7d9",
+      "sha256_before": "27fdfc53ce526206d9f40bd6c21a2e1d777646b7baa9cef841639a17aa87471a",
       "status_source": "docs/core/00_governance/uet_research_organization_policy.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -7816,7 +7816,7 @@
       "collision_key": "docs/core/03_lanes/thermal/readme.md",
       "compatibility_mode": "none",
       "current_path": "docs/core/03_lanes/thermal/README.md",
-      "dirty_source": false,
+      "dirty_source": true,
       "downstream_dependencies": [
         "FOUNDATION",
         "DATA"
@@ -7837,9 +7837,117 @@
       "rollback_path": "docs/core/03_lanes/thermal/README.md",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "3c95c3157019610e6bcfcc3faaa3103060ce894dcc6e01072ba3cf96c32f4551",
+      "sha256_before": "3f50952196929d51ec69864f1611d2df0b4c3b69629bf74d576372ea695de553",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
+      "verifier_paths": []
+    },
+    {
+      "artifact_paths": [],
+      "asset_id": "UET-CORE-FILE-04D19BC11319",
+      "canonical_path": "docs/core/03_lanes/thermal/thermal_collective_response_eos.py",
+      "collision_key": "docs/core/03_lanes/thermal/thermal_collective_response_eos.py",
+      "compatibility_mode": "none",
+      "current_path": "docs/core/03_lanes/thermal/thermal_collective_response_eos.py",
+      "dirty_source": true,
+      "downstream_dependencies": [
+        "EVIDENCE"
+      ],
+      "equation_family_or_lane": "lane.topic13.thermal_transport_pending",
+      "evidence_status": "BLOCKED",
+      "file_kind": "lane_specific_module",
+      "formula_ids": [],
+      "generated_or_source": "source",
+      "generator_path": null,
+      "legacy_path": null,
+      "logical_area": "03_lanes",
+      "migration_state": "MIGRATED",
+      "migration_wave": "already_canonical",
+      "next_action": "retain_canonical_path",
+      "organization_status": "MIGRATED",
+      "owner_id": "LANE",
+      "rollback_path": "docs/core/03_lanes/thermal/thermal_collective_response_eos.py",
+      "room_id": "ROOM_TOPIC_013",
+      "sha256_after": null,
+      "sha256_before": "a67c60ea87b848896a37fb9f97cffbff843f20bf07d5d32ff8f3ec82f61544a3",
+      "status_source": "docs/core/00_governance/uet_research_organization_policy.json",
+      "upstream_dependencies": [
+        "FOUNDATION",
+        "EQUATION",
+        "DATA"
+      ],
+      "verifier_paths": []
+    },
+    {
+      "artifact_paths": [],
+      "asset_id": "UET-CORE-FILE-6EC96906B15D",
+      "canonical_path": "docs/core/03_lanes/thermal/thermal_covariant_action_si_conversion.py",
+      "collision_key": "docs/core/03_lanes/thermal/thermal_covariant_action_si_conversion.py",
+      "compatibility_mode": "none",
+      "current_path": "docs/core/03_lanes/thermal/thermal_covariant_action_si_conversion.py",
+      "dirty_source": true,
+      "downstream_dependencies": [
+        "EVIDENCE"
+      ],
+      "equation_family_or_lane": "lane.topic13.thermal_transport_pending",
+      "evidence_status": "BLOCKED",
+      "file_kind": "lane_specific_module",
+      "formula_ids": [],
+      "generated_or_source": "source",
+      "generator_path": null,
+      "legacy_path": null,
+      "logical_area": "03_lanes",
+      "migration_state": "MIGRATED",
+      "migration_wave": "already_canonical",
+      "next_action": "retain_canonical_path",
+      "organization_status": "MIGRATED",
+      "owner_id": "LANE",
+      "rollback_path": "docs/core/03_lanes/thermal/thermal_covariant_action_si_conversion.py",
+      "room_id": "ROOM_TOPIC_013",
+      "sha256_after": null,
+      "sha256_before": "24639807ce714cfb2f05adc5063e55392f33280bb9ddd42eaf16813e314ee9fe",
+      "status_source": "docs/core/00_governance/uet_research_organization_policy.json",
+      "upstream_dependencies": [
+        "FOUNDATION",
+        "EQUATION",
+        "DATA"
+      ],
+      "verifier_paths": []
+    },
+    {
+      "artifact_paths": [],
+      "asset_id": "UET-CORE-FILE-E1FC1E1E6B8A",
+      "canonical_path": "docs/core/03_lanes/thermal/thermal_cp_cv_correction.py",
+      "collision_key": "docs/core/03_lanes/thermal/thermal_cp_cv_correction.py",
+      "compatibility_mode": "none",
+      "current_path": "docs/core/03_lanes/thermal/thermal_cp_cv_correction.py",
+      "dirty_source": true,
+      "downstream_dependencies": [
+        "EVIDENCE"
+      ],
+      "equation_family_or_lane": "lane.topic13.thermal_transport_pending",
+      "evidence_status": "BLOCKED",
+      "file_kind": "lane_specific_module",
+      "formula_ids": [],
+      "generated_or_source": "source",
+      "generator_path": null,
+      "legacy_path": null,
+      "logical_area": "03_lanes",
+      "migration_state": "MIGRATED",
+      "migration_wave": "already_canonical",
+      "next_action": "retain_canonical_path",
+      "organization_status": "MIGRATED",
+      "owner_id": "LANE",
+      "rollback_path": "docs/core/03_lanes/thermal/thermal_cp_cv_correction.py",
+      "room_id": "ROOM_TOPIC_013",
+      "sha256_after": null,
+      "sha256_before": "5b768b74f46e7734acc1372a51bdbcaca28d7f822be151cc248675dac446ff47",
+      "status_source": "docs/core/00_governance/uet_research_organization_policy.json",
+      "upstream_dependencies": [
+        "FOUNDATION",
+        "EQUATION",
+        "DATA"
+      ],
       "verifier_paths": []
     },
     {
@@ -8025,6 +8133,42 @@
       "verifier_paths": []
     },
     {
+      "artifact_paths": [],
+      "asset_id": "UET-CORE-FILE-AC69EF646888",
+      "canonical_path": "docs/core/03_lanes/thermal/thermal_sk_kms_entropy_contract.py",
+      "collision_key": "docs/core/03_lanes/thermal/thermal_sk_kms_entropy_contract.py",
+      "compatibility_mode": "none",
+      "current_path": "docs/core/03_lanes/thermal/thermal_sk_kms_entropy_contract.py",
+      "dirty_source": true,
+      "downstream_dependencies": [
+        "EVIDENCE"
+      ],
+      "equation_family_or_lane": "lane.topic13.thermal_transport_pending",
+      "evidence_status": "BLOCKED",
+      "file_kind": "lane_specific_module",
+      "formula_ids": [],
+      "generated_or_source": "source",
+      "generator_path": null,
+      "legacy_path": null,
+      "logical_area": "03_lanes",
+      "migration_state": "MIGRATED",
+      "migration_wave": "already_canonical",
+      "next_action": "retain_canonical_path",
+      "organization_status": "MIGRATED",
+      "owner_id": "LANE",
+      "rollback_path": "docs/core/03_lanes/thermal/thermal_sk_kms_entropy_contract.py",
+      "room_id": "ROOM_TOPIC_013",
+      "sha256_after": null,
+      "sha256_before": "ea63f10f1f0f18c22f9055196b60d727182d2582f9188e3079c0c1de1f334d1b",
+      "status_source": "docs/core/00_governance/uet_research_organization_policy.json",
+      "upstream_dependencies": [
+        "FOUNDATION",
+        "EQUATION",
+        "DATA"
+      ],
+      "verifier_paths": []
+    },
+    {
       "artifact_paths": [
         "docs/core/artifacts/uet_code_surface_inventory.json"
       ],
@@ -8060,6 +8204,72 @@
         "EQUATION",
         "DATA"
       ],
+      "verifier_paths": []
+    },
+    {
+      "artifact_paths": [],
+      "asset_id": "UET-CORE-FILE-9486EB4961DB",
+      "canonical_path": "docs/core/03_lanes/thermal/uet_raman_deformation_constraint.py",
+      "collision_key": "docs/core/03_lanes/thermal/uet_raman_deformation_constraint.py",
+      "compatibility_mode": "none",
+      "current_path": "docs/core/03_lanes/thermal/uet_raman_deformation_constraint.py",
+      "dirty_source": true,
+      "downstream_dependencies": [
+        "FOUNDATION",
+        "DATA"
+      ],
+      "equation_family_or_lane": "lane.topic13.thermal_transport_pending",
+      "evidence_status": "BLOCKED",
+      "file_kind": "unassigned_python_surface",
+      "formula_ids": [],
+      "generated_or_source": "source",
+      "generator_path": null,
+      "legacy_path": null,
+      "logical_area": "03_lanes",
+      "migration_state": "MIGRATED",
+      "migration_wave": "already_canonical",
+      "next_action": "retain_canonical_path",
+      "organization_status": "MIGRATED",
+      "owner_id": "LANE",
+      "rollback_path": "docs/core/03_lanes/thermal/uet_raman_deformation_constraint.py",
+      "room_id": "ROOM_TOPIC_013",
+      "sha256_after": null,
+      "sha256_before": "0d20ef2d9a72a5aa749adc875f549c2c93b8eaf6eb2a59789171b720be7d5e85",
+      "status_source": "docs/core/00_governance/uet_research_organization_policy.json",
+      "upstream_dependencies": [],
+      "verifier_paths": []
+    },
+    {
+      "artifact_paths": [],
+      "asset_id": "UET-CORE-FILE-B98B7925F281",
+      "canonical_path": "docs/core/03_lanes/thermal/uet_reciprocal_thermal_dynamics.py",
+      "collision_key": "docs/core/03_lanes/thermal/uet_reciprocal_thermal_dynamics.py",
+      "compatibility_mode": "none",
+      "current_path": "docs/core/03_lanes/thermal/uet_reciprocal_thermal_dynamics.py",
+      "dirty_source": true,
+      "downstream_dependencies": [
+        "FOUNDATION",
+        "DATA"
+      ],
+      "equation_family_or_lane": "lane.topic13.thermal_transport_pending",
+      "evidence_status": "BLOCKED",
+      "file_kind": "unassigned_python_surface",
+      "formula_ids": [],
+      "generated_or_source": "source",
+      "generator_path": null,
+      "legacy_path": null,
+      "logical_area": "03_lanes",
+      "migration_state": "MIGRATED",
+      "migration_wave": "already_canonical",
+      "next_action": "retain_canonical_path",
+      "organization_status": "MIGRATED",
+      "owner_id": "LANE",
+      "rollback_path": "docs/core/03_lanes/thermal/uet_reciprocal_thermal_dynamics.py",
+      "room_id": "ROOM_TOPIC_013",
+      "sha256_after": null,
+      "sha256_before": "f8336990a61dc4b798bea8b8d3c6f2acadba279f79d778e6ba5b391e3165db2a",
+      "status_source": "docs/core/00_governance/uet_research_organization_policy.json",
+      "upstream_dependencies": [],
       "verifier_paths": []
     },
     {
@@ -21226,7 +21436,7 @@
       "rollback_path": "docs/core/08_history/update_logs/UET_CORE_PHYSICAL_MIGRATION_UPDATE_LOG.md",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "4772513da43e3627daafa4bf4536d7cb5c20c9e604f391a62ccfe50b164e798c",
+      "sha256_before": "a4cdb1773e9d213b19f2a6d5cbd64c3edce4981e409e9c265678d568016765d7",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -61489,7 +61699,7 @@
       "asset_id": "UET-CORE-FILE-04D19BC11319",
       "canonical_path": "docs/core/03_lanes/thermal/thermal_collective_response_eos.py",
       "collision_key": "docs/core/03_lanes/thermal/thermal_collective_response_eos.py",
-      "compatibility_mode": "root_python_shim",
+      "compatibility_mode": "redirect_or_shim",
       "current_path": "docs/core/thermal_collective_response_eos.py",
       "dirty_source": false,
       "downstream_dependencies": [
@@ -61497,21 +61707,21 @@
       ],
       "equation_family_or_lane": "lane.topic13.thermal_transport_pending",
       "evidence_status": "BLOCKED",
-      "file_kind": "lane_specific_module",
+      "file_kind": "compatibility_python_shim",
       "formula_ids": [],
       "generated_or_source": "source",
       "generator_path": null,
       "legacy_path": "docs/core/thermal_collective_response_eos.py",
       "logical_area": "03_lanes",
-      "migration_state": "NOT_STARTED",
-      "migration_wave": "equation_or_lane",
-      "next_action": "resolve_preconditions_then_apply_staged_move",
-      "organization_status": "ASSIGNED",
+      "migration_state": "MIGRATED_WITH_SHIM",
+      "migration_wave": "already_canonical",
+      "next_action": "retain_compatibility_shim",
+      "organization_status": "MIGRATED",
       "owner_id": "LANE",
       "rollback_path": "docs/core/thermal_collective_response_eos.py",
       "room_id": "ROOM_TOPIC_013",
       "sha256_after": null,
-      "sha256_before": "a67c60ea87b848896a37fb9f97cffbff843f20bf07d5d32ff8f3ec82f61544a3",
+      "sha256_before": "d31ed43677b2af6d02df2712479f579839037bc415bd69319960b532ad1a4a72",
       "status_source": "docs/core/00_governance/uet_research_organization_policy.json",
       "upstream_dependencies": [
         "FOUNDATION",
@@ -61525,7 +61735,7 @@
       "asset_id": "UET-CORE-FILE-6EC96906B15D",
       "canonical_path": "docs/core/03_lanes/thermal/thermal_covariant_action_si_conversion.py",
       "collision_key": "docs/core/03_lanes/thermal/thermal_covariant_action_si_conversion.py",
-      "compatibility_mode": "root_python_shim",
+      "compatibility_mode": "redirect_or_shim",
       "current_path": "docs/core/thermal_covariant_action_si_conversion.py",
       "dirty_source": false,
       "downstream_dependencies": [
@@ -61533,21 +61743,21 @@
       ],
       "equation_family_or_lane": "lane.topic13.thermal_transport_pending",
       "evidence_status": "BLOCKED",
-      "file_kind": "lane_specific_module",
+      "file_kind": "compatibility_python_shim",
       "formula_ids": [],
       "generated_or_source": "source",
       "generator_path": null,
       "legacy_path": "docs/core/thermal_covariant_action_si_conversion.py",
       "logical_area": "03_lanes",
-      "migration_state": "NOT_STARTED",
-      "migration_wave": "equation_or_lane",
-      "next_action": "resolve_preconditions_then_apply_staged_move",
-      "organization_status": "ASSIGNED",
+      "migration_state": "MIGRATED_WITH_SHIM",
+      "migration_wave": "already_canonical",
+      "next_action": "retain_compatibility_shim",
+      "organization_status": "MIGRATED",
       "owner_id": "LANE",
       "rollback_path": "docs/core/thermal_covariant_action_si_conversion.py",
       "room_id": "ROOM_TOPIC_013",
       "sha256_after": null,
-      "sha256_before": "24639807ce714cfb2f05adc5063e55392f33280bb9ddd42eaf16813e314ee9fe",
+      "sha256_before": "9371e983df8d878835524aad8e1df3c4dd09ab95df3ecc47a8dcbbf7530f3829",
       "status_source": "docs/core/00_governance/uet_research_organization_policy.json",
       "upstream_dependencies": [
         "FOUNDATION",
@@ -61561,7 +61771,7 @@
       "asset_id": "UET-CORE-FILE-E1FC1E1E6B8A",
       "canonical_path": "docs/core/03_lanes/thermal/thermal_cp_cv_correction.py",
       "collision_key": "docs/core/03_lanes/thermal/thermal_cp_cv_correction.py",
-      "compatibility_mode": "root_python_shim",
+      "compatibility_mode": "redirect_or_shim",
       "current_path": "docs/core/thermal_cp_cv_correction.py",
       "dirty_source": false,
       "downstream_dependencies": [
@@ -61569,21 +61779,21 @@
       ],
       "equation_family_or_lane": "lane.topic13.thermal_transport_pending",
       "evidence_status": "BLOCKED",
-      "file_kind": "lane_specific_module",
+      "file_kind": "compatibility_python_shim",
       "formula_ids": [],
       "generated_or_source": "source",
       "generator_path": null,
       "legacy_path": "docs/core/thermal_cp_cv_correction.py",
       "logical_area": "03_lanes",
-      "migration_state": "NOT_STARTED",
-      "migration_wave": "equation_or_lane",
-      "next_action": "resolve_preconditions_then_apply_staged_move",
-      "organization_status": "ASSIGNED",
+      "migration_state": "MIGRATED_WITH_SHIM",
+      "migration_wave": "already_canonical",
+      "next_action": "retain_compatibility_shim",
+      "organization_status": "MIGRATED",
       "owner_id": "LANE",
       "rollback_path": "docs/core/thermal_cp_cv_correction.py",
       "room_id": "ROOM_TOPIC_013",
       "sha256_after": null,
-      "sha256_before": "5b768b74f46e7734acc1372a51bdbcaca28d7f822be151cc248675dac446ff47",
+      "sha256_before": "786a98b8b8fbb631c21c66ed2b710a2d33e221897ec13ec08b0f61d9420bdf7a",
       "status_source": "docs/core/00_governance/uet_research_organization_policy.json",
       "upstream_dependencies": [
         "FOUNDATION",
@@ -61848,7 +62058,7 @@
       "asset_id": "UET-CORE-FILE-AC69EF646888",
       "canonical_path": "docs/core/03_lanes/thermal/thermal_sk_kms_entropy_contract.py",
       "collision_key": "docs/core/03_lanes/thermal/thermal_sk_kms_entropy_contract.py",
-      "compatibility_mode": "root_python_shim",
+      "compatibility_mode": "redirect_or_shim",
       "current_path": "docs/core/thermal_sk_kms_entropy_contract.py",
       "dirty_source": false,
       "downstream_dependencies": [
@@ -61856,21 +62066,21 @@
       ],
       "equation_family_or_lane": "lane.topic13.thermal_transport_pending",
       "evidence_status": "BLOCKED",
-      "file_kind": "lane_specific_module",
+      "file_kind": "compatibility_python_shim",
       "formula_ids": [],
       "generated_or_source": "source",
       "generator_path": null,
       "legacy_path": "docs/core/thermal_sk_kms_entropy_contract.py",
       "logical_area": "03_lanes",
-      "migration_state": "NOT_STARTED",
-      "migration_wave": "equation_or_lane",
-      "next_action": "resolve_preconditions_then_apply_staged_move",
-      "organization_status": "ASSIGNED",
+      "migration_state": "MIGRATED_WITH_SHIM",
+      "migration_wave": "already_canonical",
+      "next_action": "retain_compatibility_shim",
+      "organization_status": "MIGRATED",
       "owner_id": "LANE",
       "rollback_path": "docs/core/thermal_sk_kms_entropy_contract.py",
       "room_id": "ROOM_TOPIC_013",
       "sha256_after": null,
-      "sha256_before": "ea63f10f1f0f18c22f9055196b60d727182d2582f9188e3079c0c1de1f334d1b",
+      "sha256_before": "85264118527a958a206408142958d87688ee45257fc07d56885d7bf43cf86940",
       "status_source": "docs/core/00_governance/uet_research_organization_policy.json",
       "upstream_dependencies": [
         "FOUNDATION",
@@ -67845,7 +68055,7 @@
       "asset_id": "UET-CORE-FILE-9486EB4961DB",
       "canonical_path": "docs/core/03_lanes/thermal/uet_raman_deformation_constraint.py",
       "collision_key": "docs/core/03_lanes/thermal/uet_raman_deformation_constraint.py",
-      "compatibility_mode": "root_python_shim",
+      "compatibility_mode": "redirect_or_shim",
       "current_path": "docs/core/uet_raman_deformation_constraint.py",
       "dirty_source": false,
       "downstream_dependencies": [
@@ -67854,21 +68064,21 @@
       ],
       "equation_family_or_lane": "lane.topic13.thermal_transport_pending",
       "evidence_status": "BLOCKED",
-      "file_kind": "unassigned_python_surface",
+      "file_kind": "compatibility_python_shim",
       "formula_ids": [],
       "generated_or_source": "source",
       "generator_path": null,
       "legacy_path": "docs/core/uet_raman_deformation_constraint.py",
       "logical_area": "03_lanes",
-      "migration_state": "NOT_STARTED",
-      "migration_wave": "equation_or_lane",
-      "next_action": "resolve_preconditions_then_apply_staged_move",
-      "organization_status": "ASSIGNED",
+      "migration_state": "MIGRATED_WITH_SHIM",
+      "migration_wave": "already_canonical",
+      "next_action": "retain_compatibility_shim",
+      "organization_status": "MIGRATED",
       "owner_id": "LANE",
       "rollback_path": "docs/core/uet_raman_deformation_constraint.py",
       "room_id": "ROOM_TOPIC_013",
       "sha256_after": null,
-      "sha256_before": "0d20ef2d9a72a5aa749adc875f549c2c93b8eaf6eb2a59789171b720be7d5e85",
+      "sha256_before": "2af833d5ddbd94e25da551ec6ff1e39806da80bcc6330c29d382e4407ba04ed0",
       "status_source": "docs/core/00_governance/uet_research_organization_policy.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -67878,7 +68088,7 @@
       "asset_id": "UET-CORE-FILE-B98B7925F281",
       "canonical_path": "docs/core/03_lanes/thermal/uet_reciprocal_thermal_dynamics.py",
       "collision_key": "docs/core/03_lanes/thermal/uet_reciprocal_thermal_dynamics.py",
-      "compatibility_mode": "root_python_shim",
+      "compatibility_mode": "redirect_or_shim",
       "current_path": "docs/core/uet_reciprocal_thermal_dynamics.py",
       "dirty_source": false,
       "downstream_dependencies": [
@@ -67887,21 +68097,21 @@
       ],
       "equation_family_or_lane": "lane.topic13.thermal_transport_pending",
       "evidence_status": "BLOCKED",
-      "file_kind": "unassigned_python_surface",
+      "file_kind": "compatibility_python_shim",
       "formula_ids": [],
       "generated_or_source": "source",
       "generator_path": null,
       "legacy_path": "docs/core/uet_reciprocal_thermal_dynamics.py",
       "logical_area": "03_lanes",
-      "migration_state": "NOT_STARTED",
-      "migration_wave": "equation_or_lane",
-      "next_action": "resolve_preconditions_then_apply_staged_move",
-      "organization_status": "ASSIGNED",
+      "migration_state": "MIGRATED_WITH_SHIM",
+      "migration_wave": "already_canonical",
+      "next_action": "retain_compatibility_shim",
+      "organization_status": "MIGRATED",
       "owner_id": "LANE",
       "rollback_path": "docs/core/uet_reciprocal_thermal_dynamics.py",
       "room_id": "ROOM_TOPIC_013",
       "sha256_after": null,
-      "sha256_before": "f8336990a61dc4b798bea8b8d3c6f2acadba279f79d778e6ba5b391e3165db2a",
+      "sha256_before": "e158cf45626e212eb8cae00753335b8144db16c3e4ebe38536ac80adac3d317b",
       "status_source": "docs/core/00_governance/uet_research_organization_policy.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -68447,28 +68657,28 @@
   "schema_version": "1.0",
   "scope": "all non-cache files currently under docs/core",
   "summary": {
-    "already_canonical": 927,
-    "compatibility_assets_present": 309,
+    "already_canonical": 939,
+    "compatibility_assets_present": 315,
     "compatibility_counts": {
       "legacy_artifact_index": 588,
       "markdown_redirect": 2,
-      "none": 618,
+      "none": 624,
       "path_resolver": 385,
-      "redirect_or_shim": 309,
-      "root_python_shim": 38
+      "redirect_or_shim": 315,
+      "root_python_shim": 32
     },
-    "dirty_sources": 105,
+    "dirty_sources": 26,
     "duplicate_targets": {},
     "existing_target_conflicts": [],
     "files_migrated_in_wave": 0,
     "files_skipped_in_wave": 0,
-    "files_to_move": 1013,
-    "files_total": 1940,
+    "files_to_move": 1007,
+    "files_total": 1946,
     "migration_wave_counts": {
-      "already_canonical": 927,
+      "already_canonical": 939,
       "artifacts": 589,
       "data_tooling": 86,
-      "equation_or_lane": 38,
+      "equation_or_lane": 32,
       "proofs": 1,
       "review": 1,
       "tests": 298

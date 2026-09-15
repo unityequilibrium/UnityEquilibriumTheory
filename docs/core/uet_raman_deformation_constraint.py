@@ -1,4 +1,4 @@
-"""Compatibility shim for `docs/core/03_lanes/thermal/thermal_cp_cv_correction.py`."""
+"""Compatibility shim for `docs/core/03_lanes/thermal/uet_raman_deformation_constraint.py`."""
 
 from __future__ import annotations
 
@@ -16,5 +16,5 @@ else:
     from docs.core.core_compat import forward_public_symbols as _forward_public_symbols
     del _sys, _Path, _current, _parent
 
-_forward_public_symbols(globals(), "docs.core.03_lanes.thermal.thermal_cp_cv_correction")
+_forward_public_symbols(globals(), "docs.core.03_lanes.thermal.uet_raman_deformation_constraint")
 del _forward_public_symbols

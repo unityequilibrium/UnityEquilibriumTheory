@@ -735,3 +735,12 @@
 - Controller narrowed: the next Python-family work is the 38 remaining equation/lane modules. Families with relative imports require explicit canonical-import repair before moving; generated artifacts, tests, and tooling remain separate migration tracks.
 - Claim impact: no formula, unit, evidence class, calibration, or physical claim changed; foundation remains BLOCKED.
 - Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
+## 2026-09-15 — Wave 6y remaining thermal-family migration
+
+- Scope: migrate the six remaining root thermal support modules into `docs/core/03_lanes/thermal/` with root compatibility shims and a canonical package entrypoint.
+- Changed: moved collective-response EOS, symbolic SI-action conversion, Cp/Cv correction, SK/KMS entropy, Raman deformation, and reciprocal thermal-dynamics modules; exposed the three modules with declared public APIs through the thermal package; documented the canonical members.
+- Verification: preflight PASS with six selected files and no dirty source, relative-import block, target conflict, or collision; source hashes match after migration; 12 legacy/canonical imports PASS; targeted thermal tests 38/38 PASS.
+- Result: all presently classified thermal root modules now have canonical implementations in the thermal lane while legacy imports remain operational.
+- Controller narrowed: 32 remaining root Python surfaces are currently classified to `99_review/unassigned_python`; they require owner/family classification before migration. Do not bulk-move them into quarantine.
+- Claim impact: no formula, unit, evidence class, calibration, or physics claim changed; foundation remains BLOCKED.
+- Notes: an export-insertion syntax error was introduced and corrected within the same uncommitted wave before verification; unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.

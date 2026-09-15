@@ -27,3 +27,7 @@ status, parameter provenance, or physics claim boundary.
 - thermal_energy_response_bridge.py — named Phi_E energy-density response branch with heat-capacity conversion and uncertainty requirements; Phi_E is not the base Phi.
 - thermal_phi_e_reference_normalization.py — reference-temperature normalization for the named Phi_E lane; it does not calibrate base Phi.
 - thermal_response_beta_contract.py — finite-temperature normalized response-beta contract with explicit unit and non-Landauer boundaries.
+- `thermal_collective_response_eos.py` — normalized collective-response free-energy and stability contract; its normalized ledger is not an SI observable by itself.
+- `thermal_covariant_action_si_conversion.py` — symbolic natural-unit-to-SI action conversion contract; it does not provide a completed dimensional UET calibration.
+- `thermal_cp_cv_correction.py` — standard heat-capacity conversion and uncertainty contract for declared external inputs.
+- `thermal_sk_kms_entropy_contract.py`, `uet_raman_deformation_constraint.py`, and `uet_reciprocal_thermal_dynamics.py` — thermal support surfaces retained with their existing formula and evidence boundaries.
