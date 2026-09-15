@@ -61,7 +61,7 @@ def is_python_shim(path: str | Path) -> bool:
         return False
     # Match generated compatibility shims, not the helper implementation or its docs.
     forward_shim = re.search(
-        r'(?s)_?forward_public_symbols\s*\(\s*globals\(\)\s*,\s*"docs\.core\.',
+        r'(?s)_?forward_public_symbols\s*\(\s*globals\(\)\s*,\s*"docs\.',
         text,
     ) is not None
     runpy_shim = re.search(r'(?m)^_CANONICAL_RELATIVE\s*=\s*"docs/', text) is not None and "runpy.run_path" in text
@@ -162,6 +162,16 @@ def _python_area(stem: str) -> str:
         return "03_lanes/thermal"
     if lower in {"uet_dynamical_stability"}:
         return "02_equations/matter_space"
+    if lower in {"uet_parameters"}:
+        return "01_contracts/units"
+    if lower in {"reproducibility", "scientific_validation", "truth_auditor", "uet_bug_hunter"}:
+        return "../scripts/core/audit"
+    if lower in {"uet_base_solver", "uet_glass_box", "uet_lite_engine", "uet_matrix_engine"}:
+        return "../scripts/core/runners"
+    if lower in {"uet_data_orchestrator", "uet_references"}:
+        return "../scripts/core/data"
+    if lower in {"uet_viz"}:
+        return "../scripts/core/reporting"
     if lower in {"uet_resource_selection"}:
         return "03_lanes/persistence"
     if lower.startswith("t13_"):
@@ -246,7 +256,10 @@ def canonical_path_for(legacy_path: str | Path) -> str:
         return f"docs/core/05_tests/{role}/{rest.as_posix()}"
     path = Path(tail)
     if path.suffix.lower() == ".py":
-        return f"docs/core/{_python_area(path.stem)}/{path.name}"
+        area = _python_area(path.stem)
+        if area.startswith("../scripts/core/"):
+            return "docs/scripts/core/" + area[len("../scripts/core/"):] + "/" + path.name
+        return "docs/core/" + area + "/" + path.name
     if path.suffix.lower() == ".md":
         return f"docs/core/{_markdown_area(path.name)}/{path.name}"
     if path.suffix.lower() in {".json", ".npz", ".csv", ".tsv", ".sqlite", ".pdf", ".html"}:

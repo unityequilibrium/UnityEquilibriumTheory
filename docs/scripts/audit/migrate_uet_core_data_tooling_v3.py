@@ -334,11 +334,65 @@ def apply_first_wave(payload: dict[str, Any]) -> dict[str, Any]:
     return {"applied": applied, "skipped": skipped}
 
 
+
+def apply_all(payload: dict[str, Any]) -> dict[str, Any]:
+    """Move every remaining tooling asset after explicit full-migration approval."""
+    summary = payload["summary"]
+    if summary["duplicate_targets"] or summary["existing_target_conflicts"]:
+        raise RuntimeError("tooling migration has duplicate or existing target conflicts")
+    applied: list[dict[str, str]] = []
+    for row in payload["records"]:
+        if row["migration_state"] == "MIGRATED_WITH_SHIM":
+            continue
+        source = ROOT / row["legacy_path"]
+        target = ROOT / row["canonical_path"]
+        if not source.exists():
+            raise FileNotFoundError(f"tooling source disappeared before move: {row['legacy_path']}")
+        if target.exists():
+            raise FileExistsError(f"tooling target already exists: {row['canonical_path']}")
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.move(str(source), str(target))
+        source.parent.mkdir(parents=True, exist_ok=True)
+        if source.suffix.lower() == ".py":
+            source.write_text(shim_text(row["canonical_path"]), encoding="utf-8")
+            row["migration_state"] = "MIGRATED_WITH_SHIM"
+            row["compatibility_mode"] = "runpy_shim"
+        elif source.suffix.lower() == ".md":
+            source.write_text(redirect_text(source, target), encoding="utf-8")
+            row["migration_state"] = "MIGRATED_WITH_SHIM"
+            row["compatibility_mode"] = "markdown_redirect"
+        else:
+            row["migration_state"] = "MIGRATED"
+            row["compatibility_mode"] = "path_resolver"
+        row["sha256_after"] = sha256(target)
+        row["next_action"] = "verify_moved_tooling_surface"
+        applied.append({"from": row["legacy_path"], "to": row["canonical_path"]})
+    payload["summary"]["migration_ready"] = 0
+    payload["summary"]["quarantined"] = 0
+    payload["summary"]["migrated_with_shim"] = sum(
+        row["migration_state"] == "MIGRATED_WITH_SHIM" for row in payload["records"]
+    )
+    payload["summary"]["physical_move_performed"] = bool(applied)
+    payload["summary"]["files_migrated_in_wave"] = len(applied)
+    payload["generated_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    payload["full_move_policy"] = (
+        "Explicit organization migration; path-sensitive scripts retain source behavior "
+        "and require post-move smoke review."
+    )
+    payload["applied_moves"] = applied
+    MANIFEST.write_text(
+        json.dumps(payload, indent=2, ensure_ascii=False, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+    REPORT.write_text(render_report(payload), encoding="utf-8")
+    return {"applied": applied}
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--plan", action="store_true")
     parser.add_argument("--check", action="store_true")
     parser.add_argument("--apply", action="store_true")
+    parser.add_argument("--apply-all", action="store_true", help="move all quarantined tooling assets after explicit full-migration approval")
     args = parser.parse_args()
     payload = write_plan()
     blocked = bool(payload["summary"]["duplicate_targets"] or payload["summary"]["existing_target_conflicts"])
@@ -348,6 +402,13 @@ def main() -> int:
             return 1
         result = apply_first_wave(payload)
         print(json.dumps({"status": "PASS", "wave": "data_tooling_safe_subset", **result}, ensure_ascii=False, indent=2))
+        return 0
+    if args.apply_all:
+        if blocked:
+            print(json.dumps({"status": "BLOCKED", "summary": payload["summary"]}, ensure_ascii=False, indent=2))
+            return 1
+        result = apply_all(payload)
+        print(json.dumps({"status": "PASS", "wave": "data_tooling_full_move", **result}, ensure_ascii=False, indent=2))
         return 0
     print(json.dumps({"status": "BLOCKED" if blocked else "PASS", "manifest": repo_path(MANIFEST), "report": repo_path(REPORT), "summary": payload["summary"]}, ensure_ascii=False, indent=2))
     return 1 if blocked else 0
