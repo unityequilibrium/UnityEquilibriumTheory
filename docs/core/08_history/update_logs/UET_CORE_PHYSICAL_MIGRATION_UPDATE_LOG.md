@@ -717,4 +717,12 @@
 - Controller narrowed: the organization/path migration is closed for this pair; scientific-link audit remains `BLOCKED_OPEN_SCIENTIFIC_LINKS` because broader family contracts and link fields are still incomplete.
 - Next action: continue only with a registered thermal source-lock or migration wave; keep the normalized Phi_E and beta_T13 lanes conditional and do not promote base-Phi, SI, transport, or empirical claims.
 - Claim impact: no equation meaning, unit status, evidence class, calibration, or physics claim changed.
-- Notes: generated governance refresh is staged separately from unrelated dimensional/foundation/root-guidance/book changes; no push or PR was made.
+- Notes: generated governance refresh is staged separately from unrelated dimensional/foundation/root-guidance/book changes; no push or PR was made.## 2026-09-15 — Wave 6w post-commit migration metadata correction
+
+- Scope: synchronize physical migration and path/import/link audit metadata after the thermal response contract commit.
+- Verification: planner PASS with 1,852 indexed files, 1,099 remaining move targets, 753 canonical/protected records, 223 compatibility assets, 3 unrelated dirty sources, zero duplicate targets, zero destination conflicts, and zero physics-status changes; registry deterministic check PASS; migration enforcement PASS; physical migration PASS.
+- Result: the manifest/report and organization enforcement outputs now describe the post-commit tree rather than the pre-commit generated state.
+- Controller: scientific-link audit remains `BLOCKED_OPEN_SCIENTIFIC_LINKS` for the broader repository; this thermal migration itself remains organization-complete with physics evidence unchanged.
+- Next action: continue with a registered thermal source-lock or migration wave only; do not treat organization status as physics verification.
+- Claim impact: no equation meaning, units, calibration, evidence class, or claim boundary changed.
+- Notes: dimensional audit, foundation artifacts, root guidance, book changes, and the three unrelated dirty sources remain untouched; no push or PR was made.
