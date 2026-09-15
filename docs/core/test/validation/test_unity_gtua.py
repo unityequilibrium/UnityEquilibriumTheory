@@ -28,9 +28,7 @@ except ImportError:
 # 1. Setup Data Paths
 SPARC_PATH = "data/SPARC_GALAXIES"  # Placeholder for actual path if needed, but we simulate the logic here or import if available.
 # checking local imports
-sys.path.append(
-    os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../../"))
-)
+sys.path.append(str(ROOT))
 try:
     from docs.lab.lib.uet_galaxy_data import (
         load_sparc_galaxy,
