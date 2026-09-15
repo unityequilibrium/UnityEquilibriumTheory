@@ -577,3 +577,15 @@
 - Claim impact: no change; this wave changes organization, exports, compatibility, and lane metadata only. No carrier identity, mass, gravity, cosmology, galaxy, or particle claim was promoted.
 - Workflow linkage: follows the Core Physical Migration v3 canonical-path, compatibility-shim, and impact/effect layer-separation policy.
 - Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
+
+## 2026-09-15 — Wave 6s post-commit metadata consistency correction
+
+- Scope: post-commit synchronization after 4bbdca65e.
+- Corrected: regenerated the migration plan/report, physical migration manifest, governance audits, and test-collection artifact after the impact/effect move; committed sources are no longer counted as dirty.
+- Verification: physical migration, canonical path, migration enforcement, import, link, and test-collection audits PASS; canonical imports 181/181; links 255/255; test collection 2,151 full / 1,325 canonical / 825 legacy with zero collection errors.
+- Result: planner reports 1,839 indexed files, 1,106 active move targets, 733 canonical/protected records, 216 compatibility assets, 2 unrelated dirty sources, zero duplicate targets, zero existing destination conflicts, and zero physics-status changes.
+- Blocker narrowed: impact/effect organization and metadata now agree after commit; carrier-neutral verification remains internally checked while physical carrier, SI, and observable mapping remain open.
+- Still open: carrier-specific conservation, SI units, detector/observable mapping, physical memory derivation, UET source-to-carrier law, and foundation remain BLOCKED.
+- Next controller: classify the next registered family from dependency evidence; keep generated-artifact mass migration behind its separate generator/consumer/provenance checkpoint.
+- Claim impact: no change; this pass changes only migration metadata and audit state.
+- Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
