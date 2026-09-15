@@ -358,3 +358,16 @@
 - Claim impact: no change; this wave changes organization, imports, and provenance resolution only. Foundation remains BLOCKED; no causal, GR, mass, particle, or downstream physics claim was promoted.
 - Workflow linkage: follows the Core Physical Migration v3 canonical-path, compatibility-shim, and generated-artifact provenance policy.
 - Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
+
+## 2026-09-15 — Wave 6k post-commit metadata consistency correction
+
+- Scope: migration control-plane synchronization after commit b72133dae.
+- Corrected: regenerated the physical migration manifest/report and governance audits after the hyperbolic comparator source move; committed canonical sources are no longer counted as dirty work.
+- Verification: physical migration, path, migration-enforcement, import, link, and test-collection audits PASS; post-commit collection reports 2,142 full / 1,316 canonical / 825 legacy tests, all with zero collection errors.
+- Result: planner reports 1,802 indexed files, 1,123 active move targets, 679 canonical/protected records, 199 compatibility assets, 2 unrelated dirty sources, and zero duplicate targets or destination conflicts.
+- Blocker narrowed: the hyperbolic comparator source paths and legacy shims are now represented consistently in the committed organization control plane; physics status changes remain 0.
+- Still open: 589 generated artifacts remain behind the separate generator/consumer/provenance migration controller; foundation remains BLOCKED and the hyperbolic evidence remains external comparator/analytic bridge support rather than a UET prediction.
+- Next controller: select the next registered family from dependency evidence; do not begin generated-artifact mass migration until generator and consumer checkpoints are explicit.
+- Claim impact: no change; this pass changes only migration metadata and audit state.
+- Workflow linkage: closes the post-commit checkpoint required by Core Physical Migration v3 and the shared hardening/update-log standard.
+- Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
