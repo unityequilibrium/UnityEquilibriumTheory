@@ -99,3 +99,13 @@
 - CONTROLLING_BLOCKER: test_asset_provenance_and_legacy_data_boundary
 - NEXT_ACTION: Migrate the remaining non-Python test assets with source hashes and canonical-path records, then re-run physical planning before the data/tooling wave.
 - CLAIM_BOUNDARY: Organization and test-collection compatibility only; no equation, evidence class, physics status, or empirical claim changed.
+
+### 2026-09-15 — Wave 6zf: remaining test assets
+
+- STATUS: PASS_WITH_REVIEW_REQUIRED
+- WHAT_CHANGED: Moved the remaining CSV and JSON test inputs into docs/core/05_tests/regression while preserving their relative subtrees; moved the legacy test boundary README into the canonical regression root and left a compatibility redirect at the old path. Added an explicit asset migration runner and hash manifest.
+- VERIFICATION: Asset runner dry-run blocked only while three allowlisted sources were ready; apply completed with two MIGRATED and one MIGRATED_WITH_REDIRECT. Follow-up check reports no conflicts, no missing assets, and identical source/canonical SHA-256 values. Physical planner now reports no remaining tests wave.
+- RESULT: The legacy docs/core/test boundary has no test implementation or raw test input; only the declared README redirect remains.
+- CONTROLLING_BLOCKER: data_tooling_path_bootstrap_and_provenance_review
+- NEXT_ACTION: Repair and migrate data/tooling in bounded categories, beginning with path-safe scripts and then the path-sensitive/provenance-review queue.
+- CLAIM_BOUNDARY: Organization and provenance traceability only; no equation, evidence class, physics status, or empirical claim changed.
