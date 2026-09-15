@@ -33,7 +33,7 @@
   ],
   "controlling_blocker": null,
   "duplicate_targets": {},
-  "generated_at": "2026-09-15T03:25:50+00:00",
+  "generated_at": "2026-09-15T03:28:55+00:00",
   "generator": "docs/scripts/audit/audit_uet_core_physical_migration.py",
   "missing_current_paths": [],
   "redirect_errors": [],
@@ -51,7 +51,7 @@
       "redirect_or_shim": 215,
       "root_python_shim": 132
     },
-    "dirty_sources": 8,
+    "dirty_sources": 2,
     "duplicate_targets": {},
     "existing_target_conflicts": [],
     "files_migrated_in_wave": 0,
