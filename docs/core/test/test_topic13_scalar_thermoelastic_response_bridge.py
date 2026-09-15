@@ -1,4 +1,5 @@
 """Tests for the conditional scalar thermoelastic response bridge."""
+from docs.core.core_paths import repo_root
 import hashlib
 import json
 from pathlib import Path
@@ -97,7 +98,7 @@ def test_nonpositive_stability_input_fails_closed(field):
 
 
 def test_generated_thermoelastic_artifact_is_scoped_and_hash_linked():
-    root = Path(__file__).resolve().parents[3]
+    root = repo_root()
     artifact_path = (
         root / "docs/core/artifacts/t13_scalar_thermoelastic_response_bridge_audit.json"
     )

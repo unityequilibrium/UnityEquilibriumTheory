@@ -1,12 +1,13 @@
 """Regression tests for the repository-level foundation compatibility audit."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import importlib.util
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = (repo_root() / "docs")
 SCRIPT = ROOT / "scripts/audit/audit_uet_foundation_compatibility.py"
 
 

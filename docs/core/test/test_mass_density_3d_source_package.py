@@ -1,12 +1,13 @@
 """Regression tests for the metadata-only external 3D source gate."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import importlib.util
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = (repo_root() / "docs")
 SCRIPT = ROOT / "scripts/audit/audit_mass_density_3d_source_package.py"
 
 

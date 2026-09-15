@@ -1,4 +1,5 @@
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 from pathlib import Path
@@ -7,7 +8,7 @@ import docs.core as core
 
 from docs.scripts.audit.audit_uet_o2_superfluid_transport import build_artifacts
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 OUT = ROOT / "docs/core/artifacts"
 
 

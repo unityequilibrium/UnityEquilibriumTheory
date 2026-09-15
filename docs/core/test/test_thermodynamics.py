@@ -17,13 +17,14 @@ Proof:
 
 We will verify numerically that F[C] strictly decreases over time, proving the system seeks Equilibrium (Maximum Entropy).
 """
+from docs.core.core_paths import repo_root
 
 import sys
 import numpy as np
 import matplotlib.pyplot as plt
 import os
 
-repo_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+repo_root = str(repo_root())
 if repo_root not in sys.path:
     sys.path.insert(0, repo_root)
 

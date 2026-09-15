@@ -1,6 +1,7 @@
 """Artifact alignment tests for the conserved-current reduction wave."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import hashlib
 import json
@@ -8,7 +9,7 @@ from pathlib import Path
 
 from docs.scripts.audit.audit_uet_gr_covariant_diffusion import build_artifacts
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 ARTIFACT_DIR = ROOT / "docs/core/artifacts"
 
 

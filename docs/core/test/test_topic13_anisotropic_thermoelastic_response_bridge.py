@@ -1,4 +1,5 @@
 """Tests for the conditional anisotropic thermoelastic response bridge."""
+from docs.core.core_paths import repo_root
 import hashlib
 import json
 from pathlib import Path
@@ -135,7 +136,7 @@ def test_natural_unit_contract_closes():
 
 
 def test_generated_anisotropic_artifact_is_scoped_and_hash_linked():
-    root = Path(__file__).resolve().parents[3]
+    root = repo_root()
     artifact_path = root / (
         "docs/core/artifacts/t13_anisotropic_thermoelastic_response_bridge_audit.json"
     )

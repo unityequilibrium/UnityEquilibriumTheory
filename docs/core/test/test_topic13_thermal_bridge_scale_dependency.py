@@ -1,12 +1,13 @@
 """Regression tests for the Topic 13 dimensional scale-dependency no-go."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import sys
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 sys.path.insert(0, str(ROOT / "docs/core"))
 
 from t13_thermal_bridge_scale_dependency import (  # noqa: E402

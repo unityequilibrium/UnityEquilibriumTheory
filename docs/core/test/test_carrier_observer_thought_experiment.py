@@ -1,12 +1,13 @@
 """Boundary tests for the Wave 8 observer thought-experiment artifact."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 ARTIFACT = ROOT / "docs/core/artifacts/carrier_observer_thought_experiment.json"
 
 

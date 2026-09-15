@@ -1,4 +1,5 @@
 """Tests for Topic 13 material-interface factor resolution."""
+from docs.core.core_paths import repo_root
 import hashlib
 import json
 from pathlib import Path
@@ -107,7 +108,7 @@ def test_missing_uncertainty_factor_fails_closed():
 
 
 def test_generated_factor_artifact_is_scoped_and_hash_linked():
-    root = Path(__file__).resolve().parents[3]
+    root = repo_root()
     artifact_path = (
         root / "docs/core/artifacts/t13_material_interface_factor_resolution_audit.json"
     )

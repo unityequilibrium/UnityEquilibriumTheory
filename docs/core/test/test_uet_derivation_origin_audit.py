@@ -1,12 +1,13 @@
 """Regression tests for the derivation-origin audit."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = (repo_root() / "docs")
 
 
 def test_derivation_origin_audit_is_complete_without_physical_promotion():

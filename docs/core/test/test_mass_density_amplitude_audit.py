@@ -1,10 +1,11 @@
+from docs.core.core_paths import repo_root
 import json
 import subprocess
 import sys
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = (repo_root() / "docs")
 
 
 def test_mass_density_amplitude_audit_is_reproducibly_blocked_only_by_dimensional_map():

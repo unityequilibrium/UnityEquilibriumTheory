@@ -1,13 +1,14 @@
 """Integration checks for the formal Topic 13 SK/KMS/entropy result."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import hashlib
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 ACTION = "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json"
 FULL = "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
 REGISTER = "docs/core/artifacts/uet_major_result_closure_register.json"

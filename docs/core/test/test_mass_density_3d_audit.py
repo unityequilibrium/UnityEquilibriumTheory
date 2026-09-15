@@ -1,13 +1,14 @@
 """Artifact-boundary tests for the candidate SI 3D density operator."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import importlib.util
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 SCRIPT = ROOT / "docs/scripts/audit/audit_mass_density_3d.py"
 ARTIFACT = ROOT / "docs/core/artifacts/mass_density_3d_contract_verification.json"
 

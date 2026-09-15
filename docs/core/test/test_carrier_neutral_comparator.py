@@ -1,13 +1,14 @@
 """Tests for the carrier-neutral comparator contract boundary."""
 
 from __future__ import annotations
+from docs.core.core_paths import canonical_artifact_path
 
 import json
 from pathlib import Path
 
 
 def test_carrier_comparator_has_three_declared_lanes_and_stays_blocked() -> None:
-    path = Path(__file__).resolve().parents[1] / "artifacts" / "carrier_neutral_comparator_contract.json"
+    path = canonical_artifact_path("carrier_neutral_comparator_contract.json")
     artifact = json.loads(path.read_text(encoding="utf-8"))
     assert artifact["contract_verification"] == "PASS"
     assert artifact["dependency_status"] == "BLOCKED"
@@ -17,7 +18,7 @@ def test_carrier_comparator_has_three_declared_lanes_and_stays_blocked() -> None
 
 
 def test_carrier_comparator_does_not_promote_trace_or_transition_identity() -> None:
-    path = Path(__file__).resolve().parents[1] / "artifacts" / "carrier_neutral_comparator_contract.json"
+    path = canonical_artifact_path("carrier_neutral_comparator_contract.json")
     artifact = json.loads(path.read_text(encoding="utf-8"))
     policy = artifact["comparison_policy"]
     assert policy["parameter_fitting"] is False

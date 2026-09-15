@@ -1,12 +1,13 @@
 """Regression tests for shared verification input path resolution."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import importlib.util
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 SCRIPT = ROOT / "docs/scripts/audit/run_core_verifications.py"
 
 

@@ -1,12 +1,13 @@
 """Regression checks for the bounded covariant-parent scientific-link package."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 ARTIFACTS = ROOT / "docs" / "core" / "artifacts"
 
 

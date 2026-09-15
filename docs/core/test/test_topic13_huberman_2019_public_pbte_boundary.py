@@ -1,10 +1,11 @@
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = (repo_root() / "docs")
 ARTIFACT = ROOT / "core/artifacts/t13_huberman_2019_public_pbte_boundary_audit.json"
 
 

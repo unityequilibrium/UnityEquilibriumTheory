@@ -1,10 +1,11 @@
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 AUDIT = ROOT / "docs/core/artifacts/t13_physical_kubo_coefficient_provenance_audit.json"
 CONTRACT = ROOT / "docs/core/artifacts/covariant_superfluid_transport_contract.json"
 VERIFICATION = ROOT / "docs/core/artifacts/covariant_superfluid_transport_verification.json"

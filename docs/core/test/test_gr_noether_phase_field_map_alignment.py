@@ -1,6 +1,7 @@
 """Alignment tests for the Noether-charge/phase-field state-map wave."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import hashlib
 import inspect
@@ -18,7 +19,7 @@ from docs.core.uet_noether_phase_field_map import (
 )
 from docs.scripts.audit.audit_uet_noether_phase_field_map import build_artifacts
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 ARTIFACTS = ROOT / "docs/core/artifacts"
 SOURCES = [
     ROOT

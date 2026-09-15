@@ -12,13 +12,14 @@ Testing:
 2. Noether's Theorem for all cases
 3. Conservation laws for all cases
 """
+from docs.core.core_paths import core_root
 
 import numpy as np
 import sys
 from pathlib import Path
 
 # Add parent directory to path
-sys.path.insert(0, str(Path(__file__).parent.parent))
+sys.path.insert(0, str(core_root()))
 
 from docs.core.uet_lorentz import UETLorentz
 from docs.core.uet_noether import UETNoether

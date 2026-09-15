@@ -1,0 +1,2299 @@
+{
+  "change_counts": {
+    "artifact_path": 8,
+    "artifact_root": 6,
+    "core_root": 11,
+    "docs_root": 17,
+    "repo_root": 244
+  },
+  "claim_boundary": "Path repair only; no test assertion or physics claim changed.",
+  "files_repaired": 285,
+  "generated_at": "2026-09-15T12:24:24+00:00",
+  "generator": "docs/scripts/audit/repair_uet_core_test_paths_v3.py",
+  "records": [
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_all_waves_closure.py",
+      "sha256_after": "330ffea3c6d46c74aac4f2b5015092bd929b6344181e34a132658a9d16745bd1",
+      "sha256_before": "bf07f40eafdb4355f69f3801a5c89048602566d1d54995877ca74f84bea3f7c9"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_all_waves_completion_audit.py",
+      "sha256_after": "1ea1db8bb42ea5bd623196579aa10025187889a925c0e336b886b0fa7d308338",
+      "sha256_before": "e67b7a0cd74553c50c01eda665475d2827b65050da8a8c8e3973d5df2e29cc76"
+    },
+    {
+      "changes": [
+        "artifact_path",
+        "artifact_path"
+      ],
+      "path": "docs/core/test/test_carrier_neutral_comparator.py",
+      "sha256_after": "52bca48fce8b5bbef1a7fedb6b2b828464698bbe36cd9d4bb089dbb8f3ba61ac",
+      "sha256_before": "5b194a5adaafe75c113fc2b7030c97a1d73f2d43c7f53179506f10b47b8190cb"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_carrier_observer_thought_experiment.py",
+      "sha256_after": "e9c01b0f3bdddc5b1da2aabcbb318986e26f48608096c693b138f0e9cf6337de",
+      "sha256_before": "fe0e763105163b056677bac3d3189938a3c1bdc895f66aa32a34bf41caee8fb4"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_conserved_c_no_go_assessment.py",
+      "sha256_after": "18628f2932dbd2ca5cddbb9070e03c873efa0bf71c87cd158104af4d34fcf85b",
+      "sha256_before": "cb5e4aa6f19bd642850674640ce35ecf34fb83b71c0df7a5d1498609aee9cca0"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_core_gr_topic_0_19_dependency.py",
+      "sha256_after": "aa8c39dca2da73e422e7a03117095b66112aba1d1db94aad21afbaeef632cf75",
+      "sha256_before": "5c7bcfee9dc42787ea192b3a0ed89a84eb76089243036fb27360f5cbfd3d5c28"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_core_thermodynamic_topic_0_13_constraint.py",
+      "sha256_after": "27cd5318956cf8892cd4e902c283679f7206e09011a4b322f1db710defdb40ba",
+      "sha256_before": "93102ecd0a32c30beb747ee2a7fa0beec9d0dab5989f22658a7195f54e3204cb"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_ding_2022_source_mapping.py",
+      "sha256_after": "44f1195ebadc5ef30b680c6ac29d5dc976f52ec4d3bec469a522a49828d96a24",
+      "sha256_before": "85adbdd5ffc7e4ce33f3b06e3aedb3220bf50c42daa3d01fbc63e651b9be613a"
+    },
+    {
+      "changes": [
+        "docs_root"
+      ],
+      "path": "docs/core/test/test_foundation_compatibility.py",
+      "sha256_after": "e1067542de15cdb30fe13c4906ef7144807ce3e7c6c32cf6e9bb3be198a4db3f",
+      "sha256_before": "8e1600acb4ba50898501dd4470f4b4e9e73ffb675a989095f1b18a09a7935ce4"
+    },
+    {
+      "changes": [
+        "docs_root"
+      ],
+      "path": "docs/core/test/test_foundation_correspondence_matrix.py",
+      "sha256_after": "65852f3da82e75fee3c98819d05ce2fadf8e0d55791f03c4d2dba4be8f9a55c1",
+      "sha256_before": "e9486aed309342111ac4a62ab99b09bda52b03810917eef4e2ccc5ecc5367c8b"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_foundation_status_aggregate.py",
+      "sha256_after": "63e594a8863fb58cfe251076081c267b858215a9726bba142e5c6a9c181b76fe",
+      "sha256_before": "b1a347b6afb95ca2a35f5f1ffbef075958a887f7288a807e6eb5af39670e3170"
+    },
+    {
+      "changes": [
+        "docs_root"
+      ],
+      "path": "docs/core/test/test_gaia_3d_query_manifest.py",
+      "sha256_after": "efb5cac2d00bdd46918eb65c9430a99ddb91b5da0781e25dad14f9848c7d14f0",
+      "sha256_before": "f5e2f468abab944a1a99377ab8fb9d15c8dcc6f0164fe965124bc470ffb7e258"
+    },
+    {
+      "changes": [
+        "artifact_root"
+      ],
+      "path": "docs/core/test/test_gr_bianchi_exchange_alignment.py",
+      "sha256_after": "f95c6d47a0c81ecb34131c9ff9416cf29735b029f3a46d5bb973585e6495ff70",
+      "sha256_before": "542071cfecdeb1ae1268616569b2fccdec9fc5ceae56a28a1a7b81c793215e27"
+    },
+    {
+      "changes": [
+        "artifact_root"
+      ],
+      "path": "docs/core/test/test_gr_causal_nonclosed_alignment.py",
+      "sha256_after": "f00b46416da5532452fa69d9dc9848577b8e2ba4545596a9e88f686953c2ff77",
+      "sha256_before": "2da2b0ec79a52fad19a075128a189c9c3eaac6e6a8dc83c5d2daf22eb9e3ee0f"
+    },
+    {
+      "changes": [
+        "artifact_root"
+      ],
+      "path": "docs/core/test/test_gr_closed_limit_alignment.py",
+      "sha256_after": "b2b82393c1ecbdc51d93753e9a2519a3ac4eb34a38c4c4f0e73ab4e04a73bfb4",
+      "sha256_before": "a6e815bd4b69669b42aaeada19f52c698aa3b6b3c64be9921fa783afa8754866"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_gr_covariant_diffusion_alignment.py",
+      "sha256_after": "d2eb2f59e62eb02d5978cb5dd30bf29edf3c8582d1994d45133f6376e6ce42aa",
+      "sha256_before": "3448c1c3e6b6e4b8c5c7801912d7ede2fd09873c970e011b796170c252a22c00"
+    },
+    {
+      "changes": [
+        "artifact_root"
+      ],
+      "path": "docs/core/test/test_gr_covariant_matter_alignment.py",
+      "sha256_after": "78d7235d79ea076cc647905f7f5292a935799994a50cfbdb38a6ab4e270d68ec",
+      "sha256_before": "af1a6285837502cc137dc370fb2f2b6fc6227ac8b49693e9342f391c74f59c5c"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_gr_hyperbolic_phase_field_alignment.py",
+      "sha256_after": "069f24578f947de402d3337d02f82064e289cd5eb7214a43cdea126401358936",
+      "sha256_before": "3672bd6b2f11d3007d67c6175850347987309597442e03d63602b62636cf687d"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_gr_hyperbolic_phase_field_bridge_alignment.py",
+      "sha256_after": "cc68d7896e858e1e73083eee051d73ef26e008855dccf439b39c79cd1cef1304",
+      "sha256_before": "25bdb7bf106df10c5babf341741caf5b9e22a5a4e1fffa067a8983f35d2cf823"
+    },
+    {
+      "changes": [
+        "core_root"
+      ],
+      "path": "docs/core/test/test_gr_legacy_alignment.py",
+      "sha256_after": "fc43b5a3f673fe69b747185214359f6076aa50faa98453306bf06b4c2dd66d8c",
+      "sha256_before": "c511f3275a5bbfcc6d575b081755474a0512228d72c06354e874d8d2300f4acc"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
+      "sha256_after": "c35d00bcd78411643e4f625e52c8892d149a27b17ee5416992decb265190cdf6",
+      "sha256_before": "672739e38f9cd98d646f2026d062a8664eae393abc29b5bfe6910bfa086a85b3"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_gr_o2_superfluid_alignment.py",
+      "sha256_after": "332f536a63ab3f82aa5b2bd2d17b5480ec56610189b8fd21df071998a014d5f0",
+      "sha256_before": "138f70c3dd162cf66fbbf7057e98bd086fab1607881d8b9b2adf7c254bf6a74f"
+    },
+    {
+      "changes": [
+        "artifact_root"
+      ],
+      "path": "docs/core/test/test_gr_weak_field_reduction_alignment.py",
+      "sha256_after": "2c79378bf42ff8a647cd27065d8e406d168ae7d53fc2cba8118ab8d64edd1c98",
+      "sha256_before": "55054791c6149d6ece5b15398885c2e5041320e008d7514ed1aaffce2ec88b2b"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_legacy_variational_closure.py",
+      "sha256_after": "6a643e49accff37dd1fac9510accf0ece5b7f168bbd3d0478ad73298f27682a9",
+      "sha256_before": "0c8f865b2809e6406585587681519e446bc5bba92cfbca892e4094e682e0ede7"
+    },
+    {
+      "changes": [
+        "core_root"
+      ],
+      "path": "docs/core/test/test_lorentz_noether_comprehensive.py",
+      "sha256_after": "1658a95f3b2b7e2d8506ff1ca6b155014a53e6fa6973bb4838b5b9b703e7713b",
+      "sha256_before": "3fbb2c9101d73d5bd81e1644e1dc4f7d6387e3ec89de5a635a7dac0c9039c64f"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_major_result_closure.py",
+      "sha256_after": "693fb7d8f16d369c410e68b218ede4baac93acd8711c392dec96336caf7a8de1",
+      "sha256_before": "354afc795ee4bb44ffe33150b068432e356fecf289fcfc09c4795f9b8486b6ae"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_major_result_dependency_unlock.py",
+      "sha256_after": "66b3f138b59f6288dedfdefb401e7035cab73bdb2e2a7d11fc43ca38f237a917",
+      "sha256_before": "0678b3066b247e87b95f9d1e65156618c9a2363ed0a34d2fdf5425c0f5cfe2f8"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_mass_density_3d_audit.py",
+      "sha256_after": "cc32ba8d605b166d816eff95c7b5142a957463de78caaa3b472a30929901672d",
+      "sha256_before": "972d498ce535dc607aed5799cfe3d1352874432ef0a332add2bd07d55729fb73"
+    },
+    {
+      "changes": [
+        "docs_root"
+      ],
+      "path": "docs/core/test/test_mass_density_3d_source_package.py",
+      "sha256_after": "a7d0e7f6625efcab1ce4d79bde0bd6fac79d56456bc4a37f441ca102ecce03b0",
+      "sha256_before": "d905e75c6be2ee5e58e2bd46a34c9c6e2d3054776314ef20f729853321949a66"
+    },
+    {
+      "changes": [
+        "docs_root"
+      ],
+      "path": "docs/core/test/test_mass_density_amplitude_audit.py",
+      "sha256_after": "ef15a5995d3f8999541a2337bf9279c006cb021085c797a8859966be9a589e58",
+      "sha256_before": "4c03602b784ffa5e3456a823bdd6f9787a65b973869ef3b35e41e13184e57c48"
+    },
+    {
+      "changes": [
+        "docs_root"
+      ],
+      "path": "docs/core/test/test_mass_density_dimensional_audit.py",
+      "sha256_after": "cc25fcb64e84028f2b1a19958a6f7a11527b96b46d82661686aa4144603f4a32",
+      "sha256_before": "da165523a0a34b856621079abad34f155ad5bf9ef608447eb6ef8d324d2a7bc2"
+    },
+    {
+      "changes": [
+        "core_root"
+      ],
+      "path": "docs/core/test/test_matrix_proof.py",
+      "sha256_after": "24912fc3cef959dee47bb96b8fc050291a483529178379731933cb28b7f901da",
+      "sha256_before": "6ca10ef9a067e2016586ac3a567fdb7ffb8d0897daf14899b4ad2e430a16a6a3"
+    },
+    {
+      "changes": [
+        "core_root"
+      ],
+      "path": "docs/core/test/test_matrix_real_galaxy.py",
+      "sha256_after": "ae1103013207fac873c080d67464c3a3f35b256b682e3417ec22fea217d97782",
+      "sha256_before": "32e216c64b8ca6271bbbc884c2f93f762ddbd110ab488ada695c88d59869532a"
+    },
+    {
+      "changes": [
+        "artifact_path",
+        "artifact_root"
+      ],
+      "path": "docs/core/test/test_matter_space_alignment.py",
+      "sha256_after": "9f2ee149ddffd05f64a1ddc01035e550db55e78729ef82d7235d6d2ca56701b6",
+      "sha256_before": "5450232f4500a37ff09cd4df91396472effda83289560770ab7e51924fb55cba"
+    },
+    {
+      "changes": [
+        "artifact_path"
+      ],
+      "path": "docs/core/test/test_matter_space_causal_cone_compatibility.py",
+      "sha256_after": "84461c2c10414e60efc64731c7630d580e919278625e90032c6d57eecb236ae1",
+      "sha256_before": "bea93616f369f85e0833a1568f551aa59f75e422ea3bba868048796c89de2351"
+    },
+    {
+      "changes": [
+        "artifact_path"
+      ],
+      "path": "docs/core/test/test_matter_space_causal_discrete_gradient_artifact.py",
+      "sha256_after": "a37a074868d62440831c214e7142594ab8004c0830481bb0277addc7b6aabc9e",
+      "sha256_before": "5acaf317ded4195cd3ec6f028ab5e8275f8fe792d9054816500dd339dd1d61bb"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_matter_space_causal_discretization.py",
+      "sha256_after": "fd013161d35b17507a971f6e11a7330c2376d8edd2ded7230c6300472d239768",
+      "sha256_before": "e4677ccf40a454e91d0289619302b4fc37f896fab864f3202f801a9d1980f35b"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_matter_space_causal_reference.py",
+      "sha256_after": "bb4aa1229bd2e8a42a8358babcba9fc623ee67ce21aac11f9e9e5df080029eaf",
+      "sha256_before": "fc370739727a9218fa8dd1dd8c4d9d523e315bc214f8050cb5eea2f005595921"
+    },
+    {
+      "changes": [
+        "core_root"
+      ],
+      "path": "docs/core/test/test_matter_space_causal_reference_energy.py",
+      "sha256_after": "952ce0b91ccaf85d9576826a7448bcadbdf93cc7ff6635555095c1be5c475777",
+      "sha256_before": "c63d489bc6787c429b0254265ae8a7607c81d4cfd32b62d21883f384c6ee3221"
+    },
+    {
+      "changes": [
+        "artifact_path"
+      ],
+      "path": "docs/core/test/test_matter_space_causal_repair.py",
+      "sha256_after": "bae3e26da7126821323a5b30e2c3aa22f3631743806f906e41e4768e53411a4f",
+      "sha256_before": "9ab0895dee360e355bb05a8d677243e91bbd1d16103f8365c4928ec1ccd196e3"
+    },
+    {
+      "changes": [
+        "artifact_path"
+      ],
+      "path": "docs/core/test/test_matter_space_conserved_flux_telegraph.py",
+      "sha256_after": "8fc294a62edb4afaa5308389e0a771c3ad4da1c07f4948477d7e421f2b57a288",
+      "sha256_before": "15799eb8d7cfbe35ec9c07aefe30f36b49fd21cfb4d3b8feb97e3332fe59570b"
+    },
+    {
+      "changes": [
+        "artifact_path"
+      ],
+      "path": "docs/core/test/test_matter_space_energy_ledger_artifact.py",
+      "sha256_after": "62d2af07ac9f208a6024b3740cef3eb9ebe548bb8db375e1aff308ae52ffbd90",
+      "sha256_before": "e31b92d7c9fdcf4a1a25a5e829478a8e917d4b1c14433af6dc2e92cbda43b435"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_matter_space_finite_cone_integration.py",
+      "sha256_after": "0b19b509f1b1adacac110b300e8ff7fe3168698793a31198e2536b10819ebc94",
+      "sha256_before": "a6d9d386326dd6ea3058e98e7380b31b27bd2c2c3066892ddb1f906a5a90ea64"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_matter_space_flux_phi_coupled.py",
+      "sha256_after": "0d41117f1bd5f4dba1e8795057c6c2d530de6c0c3d23dcf5b3cac9776d97859c",
+      "sha256_before": "5aeb68595cd72b5249eb72584e585b2a8b31f4818b187054b03fb62b7a9cbc98"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_matter_space_phase_pilot.py",
+      "sha256_after": "cba47e5620f20793fe014f697832168724c376c99a27fdd5d432672415ca5e37",
+      "sha256_before": "4971728ec0d768393d9d43197a9d8cf3ff881a3a6e93632d0e300c55cf1e4716"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_matter_space_phase_pilot_summary.py",
+      "sha256_after": "6cc3a5bbedfbcc5efce6ec5178a7f36f42e5799a4316f87bbef4f8c032b79b19",
+      "sha256_before": "aa0ac17aa89755e6a064d245d4c3a165cbae691fb383e4d965b732dab53069ef"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_matter_space_report_alignment.py",
+      "sha256_after": "48564eabbd4935fe79dd60a65c0adbe256090cf79d4aa6a02087a304be867712",
+      "sha256_before": "1e93d38dfc2123f395594e16807035af2a1904a29dfaa55e650bbbf628f4db7e"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_matter_space_research_program.py",
+      "sha256_after": "e827df50e44f6f5eafd43b83a5bf55908ea87cc9ee0affa7ad49a160962595ce",
+      "sha256_before": "a32da4b0df88f8f24938a5c138819876b0ecf00f23f6d34eaba3374a1ad0f83a"
+    },
+    {
+      "changes": [
+        "artifact_path"
+      ],
+      "path": "docs/core/test/test_matter_space_split_artifact.py",
+      "sha256_after": "c705ede3ace955deee80893e03daa66f887b5aee7c70b8cffdd69aca22504a4c",
+      "sha256_before": "44b576b8def45844e0a2360359066e28b6e57f54422b93c3a8021d7d60b589d8"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_matter_space_thermal_pilot.py",
+      "sha256_after": "4c7f0a7bfa2c893b2ffb9215c9e3731c369e3ae5306ec6b63b7503cbee86bcd0",
+      "sha256_before": "560da2906175a45cbc013f8b6744cb7699272a2a5c8c3bd059d0fb3932cb04e8"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py",
+      "sha256_after": "6e403c8e9b8d72a488e01050bb1276e3fc3c850dde1631f65cc325b4bff37311",
+      "sha256_before": "2d0c36b5e7bb1accddbd21128c6fff00c1f717083f0b5491dc527f2745503433"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_orbit_cosmology_correspondence.py",
+      "sha256_after": "22c1a98fd6d72af2a68bd591b419722969e67a548a4cb854f70752c539818463",
+      "sha256_before": "96e785c04fb6ad65e5474cdcb2a28652f5cd68465eaebe3eff9c6c3b002cffbb"
+    },
+    {
+      "changes": [
+        "core_root"
+      ],
+      "path": "docs/core/test/test_particle_dirac_program_gate.py",
+      "sha256_after": "2762d4e9e425ee929c480494c15a856c61ae20ef5934756e6745740f9dee974e",
+      "sha256_before": "022b2bd82008da4139ed56a398902236b2d2f4958fc37d972907613360f41c8e"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_protein_folding_dynamics_gate.py",
+      "sha256_after": "a8e1d639282c0a12ad9e0541d55cbc5857efecb18083dc116ab7ec3cdcd50172",
+      "sha256_before": "d455233115ed81b00c31596d993a00dc93c9d863b2f5d4e84a5836eb3809b0ca"
+    },
+    {
+      "changes": [
+        "docs_root"
+      ],
+      "path": "docs/core/test/test_protein_folding_hp_benchmark.py",
+      "sha256_after": "7c9bc379bd5fe34b9018049f14fe5276ac3c7cb8834749cf519145800e76765e",
+      "sha256_before": "774e0f4644b5440cf2ee7ab07cd9b599531142713e819bdc934ba525245b875c"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_run_core_verifications_input_resolution.py",
+      "sha256_after": "2b4b36e17e441ace66ae97c585316f81e21b9dc749e4789c399934c53718b312",
+      "sha256_before": "2a0c06d764e6b1cfe2afd140369ffa70aedbd7b7be7c0d985fd2a9b7a33fda8c"
+    },
+    {
+      "changes": [
+        "core_root"
+      ],
+      "path": "docs/core/test/test_tensor_parity.py",
+      "sha256_after": "edefac700eb55e0abaa4fdabf786b22874afccaba2155e17230bfc12b9222200",
+      "sha256_before": "a544ea79c1e92048111dc8b46701b2656f102dcef44b3273562fb40e915eca5b"
+    },
+    {
+      "changes": [
+        "docs_root"
+      ],
+      "path": "docs/core/test/test_thermal_dimensional_calibration.py",
+      "sha256_after": "34a639155d96b55302344557683b01fac8e4356f91c90c1e7bf8d0df85fcbf58",
+      "sha256_before": "293660c9414a921ec5aeb1b1d9eb1f1f4c461fd5fa2f4a603f8387b196e0ea01"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_thermodynamics.py",
+      "sha256_after": "229c642aec618b096819f219fff9821fda08da692b1e1850b6dff1e96331b97c",
+      "sha256_before": "686354834d0c290bed388e1cbe83578fd1cfb2214779aba46f8ac876861185cc"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_aist_graphite_source_route_boundary.py",
+      "sha256_after": "00664fe712caa0074046c4148d2716f6babfd7fc57b7ea84944fde7eee645ca5",
+      "sha256_before": "feaa4ef9b94d3dd32bf1b87a9c5da9f2781fa543e0b6403b6fcd4982e962e261"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_alpha_identifiability.py",
+      "sha256_after": "989b6cd89db22ae417074c9b5a77a7bfe20e559880024509f0c70a30ef7e49da",
+      "sha256_before": "8bac1ccf4f1a41fc62994f81a45809d7a63a394790c111bca332dc9b161cd40b"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_alpha_phi_k_calibration_candidates.py",
+      "sha256_after": "2b3abf7b63f6d88612b761be6c40239bd5f95ee185f46f9d0ed63ecf9a5f9650",
+      "sha256_before": "ee93422f681f63fcbbe1490b9f9d12c5297507efe8b1ae0d8218f7f6c8d2a0fe"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_anisotropic_thermoelastic_response_bridge.py",
+      "sha256_after": "99258fb3a321b0cc81dbeb57453c17147bf42f1ef4ae2c68e44766fb2d40eb1d",
+      "sha256_before": "71c0ef256fb7705f111e0b250a34699fa6a60919a90418260b7c6be8321a8219"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_base_phi_independent_calibration_requirement_integration.py",
+      "sha256_after": "7afc1c2b809d0bad960728a6a80bb90c9a497b50f92aee959cbb0325cbd3a0cb",
+      "sha256_before": "acc5ac16f9f23890a9b5b578764f7b431a7ada814c2aa5782beb535f17cc60ef"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_base_phi_reconciliation.py",
+      "sha256_after": "2c0ac507cbcd4b9b9c59804b9eaf0146b33fc4bb3df846c9d83f8cd41dfdc09e",
+      "sha256_before": "1d0fd474b9e3fd7a04491d2f8ad45f2781f06d0903718609e4ae79c67bb3a5c8"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_base_phi_reconciliation_integration.py",
+      "sha256_after": "623041ac0dab53340c73af1ac904658126965efca7897c3cc3c1b181eed9bafb",
+      "sha256_before": "445b6deab54136bc590157d2558dfc6cf42080a70da9fc8ebb3cc1c8b0559004"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_berut_figure3_binary_identity.py",
+      "sha256_after": "263d984e7ef27646ef805eed0e51d08d12bdfdfd37b36ff43878975827aef165",
+      "sha256_before": "9a2e5e6edec54ae121bc10ee7b0be672290f517f62506d9288fc28eaf596c08c"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_berut_figure3_binary_identity_integration.py",
+      "sha256_after": "a8e51882c83af1b33f6cc6e57637e0524b88eb2d361135e610a58e3f25a4da8d",
+      "sha256_before": "5ef5ae5241883080bdebebcb12880df37b50940882e420ba19cd388d4961d988"
+    },
+    {
+      "changes": [
+        "docs_root"
+      ],
+      "path": "docs/core/test/test_topic13_berut_figure3_digitization.py",
+      "sha256_after": "fc51c706f8682cd3d8f39a35055a9216a80801942169307b94dad2afbb7afcfd",
+      "sha256_before": "03a49f5f12c9a401cbdaea7db354049b657e44f24056775f6ebb5f307acb42ad"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_berut_source_package_availability.py",
+      "sha256_after": "f1b6deeb5f2d666469ab6fd8c22e90d084a158b09cb027ef8995d18e49378757",
+      "sha256_before": "386a1521665ad575cb800ad91fa2b010628a1b432e9d06aa11c2f0a747d52f8a"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_berut_source_package_availability_integration.py",
+      "sha256_after": "325759b922d8a6b51d9e2e9b6fe4d368921ef0d9b3edaf5739f03eb3d7e1e988",
+      "sha256_before": "a0835b97b3ec8115ca4ab56c2967ce899dd793f49e6a5b5ef8796ae52018fbb7"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_beta_correspondence.py",
+      "sha256_after": "abe89df686d0ad8db73c4f8d5df1b28aa06f4e0c826e016d63799a72b2df0a52",
+      "sha256_before": "e65cc4773d839e4c0f29628d59e74bd0b5b4c019973c9d2feb3fb3acc5d10e86"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_beta_symbol_separation.py",
+      "sha256_after": "656d665228cb934c6342578c040a1c3da5a60c03775894e01376c8c2645a78af",
+      "sha256_before": "3095ffd482ac905ea3d378269dceb65b25522e11c08746ec017cbf3a3bc2f23b"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_beta_symbol_separation_integration.py",
+      "sha256_after": "d46cf3f002506340d32f1d5dc05c80521592a473d080967fbf66bc39aace192a",
+      "sha256_before": "565ed6cecd49f5361a5e7589692d792f7e1681569930a6322a7dfee67056b8ed"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_bipm_specific_heat_source.py",
+      "sha256_after": "15c9234f8f170536a6b64ccf4423871f51431cf095286ae3798a56d6fd1d06aa",
+      "sha256_before": "c9d15b2a5f81d2072060a4059ecdac4bf2c5f2a201d254eaadc3e45f7a97b599"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_calorine_csrc_equilibrium_crosscheck.py",
+      "sha256_after": "453d4da062512ee6bcb3267f4c8e87ee2ee3b172521aab8b1e0964684fcafdc5",
+      "sha256_before": "2e17bf7c99ad854dbc8ee80657faf78315de358d1c9dee94412b711b9df4c328"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_calorine_full_lbte_stability.py",
+      "sha256_after": "fe96fe35121b5b0525bbcc5d2795014aa2f0eea27420599623e17ef9abbcbd29",
+      "sha256_before": "1521a6650775182890c650461568ae8a5e6422835c944b6b4b9cd846a1e7a25a"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_calorine_lattice_interface_inputs.py",
+      "sha256_after": "f58e6f6afc00b6620d966b6b6f113147646c668afc3040815311ff4f96340ca8",
+      "sha256_before": "34863948001bc0daad27ca494d7f48ed5429aeaaf44d69fc54fb95e0b208b1a1"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_calorine_legacy_nep2_backend_probe.py",
+      "sha256_after": "e6122b23eb26b28e883ef39ce5cda4d3e6e9d280cd02a6fd0870844c39b30be9",
+      "sha256_before": "c5b7b360ded4081d66cf9c1607e8418b39329d98f728917ef1b02d755ed63039"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_calorine_legacy_nep2_pbte_reproduction.py",
+      "sha256_after": "514831ec3b89d9c4cc16c966181c67d60734d897871877267e07d38e17424998",
+      "sha256_before": "c4b42e0128d194c85de9215aaab65571c1de850b06bd9f75b7e79ce13a4c14fe"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_calorine_model_form_state_spread.py",
+      "sha256_after": "7e73a15dfc2eedc4ef4694df6636a6720db472987a67440023d6b42fb71e9692",
+      "sha256_before": "b68015030b0a84928c1f3e715866297866b12a47164bc7d5d1775162aba13c94"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_calorine_nep1_backend_compatibility.py",
+      "sha256_after": "facacf261b759690069d4ea3d6146ccde1f139d651d481fcd43102208b84a7df",
+      "sha256_before": "5394b506adaffefeabb6c77e96e1ce19021678b7dd7476820e16be01620c425b"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_calorine_public_model_variant_boundary.py",
+      "sha256_after": "6e6354b960740a7ce4104c5f73144ecd275f6a68a3b2f5e820b55f3f81a7ea07",
+      "sha256_before": "852e8258e29e0e90bae2dcd3505abfe4f896fc5037733f76f686c651996427dd"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_calorine_zenodo_nep_bte_candidate_boundary.py",
+      "sha256_after": "4428d61cc5d1e3f7f5894ed1e55edfd2cd2175903a3ee418c73b9eaebeb8faf8",
+      "sha256_before": "02ffd65f3415ea2f5942518421d015a304b5e9d4b794457819c641a19bdffe9f"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_calorine_zenodo_nep_bte_reproduction.py",
+      "sha256_after": "8c8e78c4612cef155c9459dadacae8654cd88662e04e79f158afbc2ecc84f60c",
+      "sha256_before": "53ac19d0cb35c152cf31f8788f9eb59a097909d4d754d4ca2167e01a69d001f7"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_candidate_core_compatibility.py",
+      "sha256_after": "d0b26a20914954dbdc001b7edb6f4f118025936f1495c8773becad65f949b507",
+      "sha256_before": "2b874e192dc3eaf6f62e4b2c8c6d7783005d188473cb00f6433fecfad1a5f258"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_causal_branch_holdout_contract.py",
+      "sha256_after": "56370330b9465b88fff8da47270b0d7623f705ec980a1e5183f0e6732607dd1d",
+      "sha256_before": "0fbe63eb34791ce1302e3923bf81c0e16128b3a39c7c6add729d47caa5f47a64"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_causal_branch_selection.py",
+      "sha256_after": "3fe4e0a89e515344ee70b926037d5f2510fee209d6b3209ac97a1af47fd6b6b6",
+      "sha256_before": "9cb60bd5b55d5b6c3d9a2049e86fc6c2c7b5bfa75770a169eedc0e1c906bc76d"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_causal_branch_selection_integration.py",
+      "sha256_after": "48571dfa3dae560bfddef9376cc056e3e33a1e5933b8a30c2dbc468961e6ba32",
+      "sha256_before": "2f3430c0c143a39e1a1bcee4c344af1f56228351fe77ea5e91637f200b299303"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_causal_core_compatibility.py",
+      "sha256_after": "7a68ed2b1242775089ef415845e5a7cbd56629918bcae2b95a47fddc250d4035",
+      "sha256_before": "1a88ae4fa88b732f475d4c667a89354f3b1181ac42f41a7362959c97e69f7141"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_closure_critical_path.py",
+      "sha256_after": "4b60f5a411b271bc10481ba05b64586e449760d4d7404811b492c8ff7030ef82",
+      "sha256_before": "c17c4fe61349152c0894ee617803b93cdce53b4953730b008cb3a23818c7bc8a"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_closure_input_packages.py",
+      "sha256_after": "7fc2ac32b1225024984bf722d560707c62c35830ac4151b3c3526b40f14112ac",
+      "sha256_before": "35903af1fc83e11bc5b71bf446c67c078a6ef4c9f031a0d6a8d7dd36da0cce09"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_closure_matrix.py",
+      "sha256_after": "7da1c28e97cc558ebe05e818732ba52a8bbb3ffdb652185dc1d9754532afe24d",
+      "sha256_before": "470adf7e20fd7aa05ccb2c46529cb30a3d9c8c0e8b7c4e8ef22e78c05e93da83"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_closure_tracks.py",
+      "sha256_after": "7f2deb7e0e6114f1b6952db6b030882466249cd1ef4bef2b512f1aad8c371d70",
+      "sha256_before": "14bf4c5ce13dc924efb1105ae93ec81cd936f2fb2213798750860dd8b0ffa42d"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_collective_response_eos.py",
+      "sha256_after": "9ed6cc952a2535d23de996dae7be4265869dd92752b56b80a3e68b447e3a7878",
+      "sha256_before": "8b41b6c8117d0b6b6fa4a655ce501bc80cce1a1f9db70ddc0ef31885971fbd58"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_collective_response_eos_integration.py",
+      "sha256_after": "726406830ede8ad9e01f55bc8db00be1359f0a3ef5f9a938ff453dc8dbb8683b",
+      "sha256_before": "511139ac4c9078bc07d7243353433e5120e9e15abcd51e664950fc4baaaad5b8"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_continuum_action_umklapp_no_go.py",
+      "sha256_after": "7ada857335d3727c970e23a725d0acbf7bdf11cf76e3efd684818140c2ba5c13",
+      "sha256_before": "43aa24498e280139c023c690d3f6dcfa0282a9b04c77c07a783c2616c7087886"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_covariant_action_si_anchor_integration.py",
+      "sha256_after": "54eacedf261df7cb5f6598a8dca67da59215cf9f160cdff91a471e88cea90f70",
+      "sha256_before": "ccfca2ef6a267dc64cdf45ca925632596f4b0156062ab226bc56d5567898352a"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_covariant_action_si_anchor_route.py",
+      "sha256_after": "9d9e9e2a50bece9e14736e7c9cf435998ce5b8d6c7f069f8db822c4c14b4d611",
+      "sha256_before": "2e207ecfe18a3d2cf6edca30ed1a28562d4671c02e619974109bd705ce4ee88f"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_covariant_action_symbolic_si_conversion.py",
+      "sha256_after": "080a0f265b212b5275c0e11b6ab6ad16719790087e2a64cbd667a6f9ca7e2fd1",
+      "sha256_before": "e168b8113775ef4b5bfe1e02f7b60e30d98ed8d1f436bc57c651b068640a462b"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_covariant_field_normalization_identifiability.py",
+      "sha256_after": "9685ade25e61a4cdb51b2bd691bd4e23039d1547fd527834aa1b88466090ce48",
+      "sha256_before": "5fd1eeb4ca2b5ceb50820ebac051f70d980fe2d87992ff2d9425c6134a82dff9"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_covariant_field_normalization_integration.py",
+      "sha256_after": "9492d40281981053c3c6416b3333ce454eab04414ff3686f17e84f33f8503c6c",
+      "sha256_before": "c56eb55132a621c033de33a75a158edfcb71c5eec0588f2020910aa73d73f331"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_covariant_matter_coupling_normalization.py",
+      "sha256_after": "18fe742235c032e144b7961c4b85247b9f47c906260e2f86d7c6c2c52a6106a9",
+      "sha256_before": "12d03cb0158fca0a35d5f9363c516b7eee16d55e0da7b86d5f72d8d220d37dc0"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_covariant_matter_coupling_normalization_integration.py",
+      "sha256_after": "414deac41f1813964f3dd3992eabbf394756f4a374d920a609481bbe6f45105f",
+      "sha256_before": "4c38453aeed55c897d4ae2aa569f097eae48b9ca932b7b01ea8d13a969b3e10e"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_covariant_transport_implementation_boundary.py",
+      "sha256_after": "945655cba46a7926bf9251adf3cb2e0e89f47533fc41996ef4692e8b021ae5c1",
+      "sha256_before": "0a2ade40f41f169564643487f70de8b88e63df1af7217ee94455241567c05ca8"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_covariant_transport_implementation_boundary_integration.py",
+      "sha256_after": "d896d1033c4e82a2e83a4ebdba1d9becd14855ef00401f88f5df6c07e06e142c",
+      "sha256_before": "99c4c555a9fa13f13a656c40f0222690c168e7a92162faf74abd3af2362af5fa"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_cp_cv_correction.py",
+      "sha256_after": "86a85e70af3d6ef3f52d50dd6c5aadfb5db0e9259b195f5b408cbca426505a71",
+      "sha256_before": "8993e3fa19100f24dd30a4a956b12704c9cbe4020cd8d75266cb21f6c5cafaab"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_csrc_equilibrium_component_acceptance.py",
+      "sha256_after": "fe29265ffbc0a2a469eab16c2393f62f9df3ff3ad46e7388ec2da718c2f1faee",
+      "sha256_before": "a298055055c28c35b21c34f7e00da2ab0f3f4b8422dad46742f37a6cb0a59fdd"
+    },
+    {
+      "changes": [
+        "docs_root"
+      ],
+      "path": "docs/core/test/test_topic13_csrc_fixed_volume_identity.py",
+      "sha256_after": "a43cbff2cd2186ab1987caf9fa53968dcafedea8afac2ea394e2d98e3ef0699f",
+      "sha256_before": "ad9ded0838a76f879e8ea79c371a17e34e4629f6e8480734e96db055cf59c493"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_csrc_reconciliation.py",
+      "sha256_after": "6cbcbb9735c1a359e6af7ff79aee1b542076ee92386966d9bde4f4b640bcd535",
+      "sha256_before": "c7f2b3035a7fabacbbe1c242511ad9abb6e4ef5d30f28d1f699e8d547ad33450"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_csrc_reconciliation_integration.py",
+      "sha256_after": "8e82be9f4bfe2c3020fe6e7c2043ffbf33d75b79173757217e7453d870c23d13",
+      "sha256_before": "097406500b448b5b885378dbcf15d9f322af745319bc40246e4d3e80212c9be1"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_csrc_source_route_priority.py",
+      "sha256_after": "23db31ec2169caa6a168f89b5dbc80dd627b73db48f5b783ca592a1acecbfeca",
+      "sha256_before": "e83649cbb3fb5fb83f9a2dc321cba3840cf5b0cbf1396d43c6556c42239ec89f"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_csrc_thermodynamic_transport_regime.py",
+      "sha256_after": "41a4457b391a2f9e28871f7fede9959cb7ae0ef7742f136d3f4e94cb1ef9e159",
+      "sha256_before": "7c256f0c3fc29ae5abc787574cebe703099ae9fbe6cb665ae47e77f48a4c1a54"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_cv_source_reconciliation.py",
+      "sha256_after": "eae3c86651e092d983af145bc27188e4aee57c02595156087cb06b7125aacf4e",
+      "sha256_before": "8d0e8e7496dd9944a022112078857a0fb0fae9d17f9b33d5a66cafdbb3c7266b"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_cv_source_reconciliation_integration.py",
+      "sha256_after": "da4114ad5de280698efc774477c3c6dce8a91400db389355c6d287cb661f20e9",
+      "sha256_before": "5dc6a52d9e252454af5800fbcf1d409666e23aa7072f62eb6cb8c822e6d66de1"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_day2012_preferred_thermodynamic_table.py",
+      "sha256_after": "097c2f827ceb8b6dbcd49665fe777bbf82fe04fb3b660ddbe06e20046d6ab718",
+      "sha256_before": "8aa814a9d4a57cc34831d71e295a9bbbc0e7cbf89ba1baa863a9c77e8acd0b25"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_desorbo_ceylon_graphite_cp.py",
+      "sha256_after": "b38842ea839cc540f1d7b1faffc4beb2362d3959bed11f0f27edc53f30fd49bd",
+      "sha256_before": "c2b3c705f201da085c819d23253bc18a9869f70a9b9fa2efc2d86210e8afce7e"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_dimensional_bridge_contract.py",
+      "sha256_after": "8e05b3dddf96291132baf4445e875edb329bc1c16c5062247ccbfc8e4245d5d1",
+      "sha256_before": "fcf94469ce7c8d02510063d852dc84df0d0e19344587ad7d8dea1930b22bb41d"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_ding_2017_acs_supplementary_boundary.py",
+      "sha256_after": "19c125dd1bb9e40ca8c348dc95aa9de092603cab732541f28e5148607c26f925",
+      "sha256_before": "ce0fa563e540c8fbb39411cee3a3a374840fdde55321fbdb5551936b5c0c62d5"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_ding_alternate_public_dataset_discovery.py",
+      "sha256_after": "06b5bc4ee384409126e9bf65e290412adad071bb757eea6ed39de429e4cf6328",
+      "sha256_before": "5074c1dda17979d7bd7a307a12b6412b1c7d581eb3b6c06cdda581cbb7747e71"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_ding_csrc_heating_backcalculation_identifiability.py",
+      "sha256_after": "3e5efef60d4ca83d41fdd1eaab0b09863ab98c052dac34176af3eb8742b692f0",
+      "sha256_before": "5d98ed585ef93a75f3c9c1cecc1179acaa4c1205440142e4758cd0d6dbfbbe9c"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_ding_experimental_heating_input.py",
+      "sha256_after": "da6474b6be011dc95b396b342bcbe2aeb870add40e7179cb05da400f98ed1805",
+      "sha256_before": "83c15e34a939be2e55987f2dcd183f11e053e0678f0305fdba3f92173dc2c467"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_ding_fig1d_normalized_source_lane_integration.py",
+      "sha256_after": "9d285e44ef9a9e23e6bcaf6d202e92eb74ab4ed7ca83f5ea71dd14e8e9936714",
+      "sha256_before": "64073c637a93f44c968e9ec7d8c7fff336f6bfcdf514d4a0ff9194aaf2d47bfb"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_ding_material_regime_boundary.py",
+      "sha256_after": "c3d56bc7b7e56abed58f1642f28d10871a2a3298bcd6ee3c964f5d830a298afb",
+      "sha256_before": "5d4493f1b23749eb9b7c4bee699fd0dff61082f5d44fcc3b736b3839dbb44e89"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_ding_pbte_author_request.py",
+      "sha256_after": "cd7b17f627c7f934f7398aae5e5b4233f735ff77b016ac9ca668534572546236",
+      "sha256_before": "7d5344ad244d304aca3db16de9a37b877583e0d09c7e7d2ab7fdb42b55a0fed8"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_ding_pbte_author_request_integration.py",
+      "sha256_after": "1e349ea976b628d99460b561aa59f6250aa4ebfb168fb9630ae4c4eb299824d4",
+      "sha256_before": "862cf7a21d87b4f44080843e87243b76be0ea8e5563e279e152e9bcb1884fb7a"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_ding_pbte_energy_temperature_mapping.py",
+      "sha256_after": "14a5c7675c67a4c7a5e6f6dd0a5812d56c03b250d227d96260f0d133d49f6784",
+      "sha256_before": "09643ccaa05b65dbd67b1a6e23e1b871ce057496ee81bc3e6bebe711dc7d53ae"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_ding_pbte_numeric_input_availability.py",
+      "sha256_after": "f03a03864dc09c5ec89e9686b8b3b983a5f27c781c8654edd42f26d3307595d8",
+      "sha256_before": "471fb64a27da6380d876ea91cb102f306a790680a2d424fefaca20254f3e65e8"
+    },
+    {
+      "changes": [
+        "docs_root"
+      ],
+      "path": "docs/core/test/test_topic13_ding_pbte_payload_acceptance_integration.py",
+      "sha256_after": "c02f113928b39b9da4f824757b1bc8d1dd9bb28fd6b7b6de6dec0499db6a5c5a",
+      "sha256_before": "1f2da4bdb8560ee9093f688ad8c7c1b44ff76fe02bc41682c75b536563aabe79"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_ding_public_supplementary_boundary.py",
+      "sha256_after": "f2667c3f2c27fc20920f8c181a31d78caf38e723d9d6de6af72816a7750f216a",
+      "sha256_before": "afea3796956f81dc54ed53a5fd3d5aa98e28d5b6bf90532035b04fe4edc20ae3"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_ding_row_metadata_alignment.py",
+      "sha256_after": "98e52350b6a19e6da7c246593860e3b61a37b8e4d2bd25b28a0aad0517e1fd15",
+      "sha256_before": "6d8dd4bf15d0de301af5ceb52a56c15af78aa3ad91571622ee078df3f8ae396d"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_ding_supplementary_content_review.py",
+      "sha256_after": "fb7e120df8a073886afade3740086da1a1ab21eab34000d5aabd5a59e2bb512f",
+      "sha256_before": "eb61c021c090384be12ff64d27fa53bb675a80abc702c20e0c16fcafc54d5ece"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_energy_response_bridge.py",
+      "sha256_after": "fdbc90b5f815e673ea1a35853626d0f901126b11f71ced0173f1aaedf42516e4",
+      "sha256_before": "6fd774c4af9dcbe0ced380d7cf202226532f0962a1acb2b069c7b27371f60c1e"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_entropy_metric_repair.py",
+      "sha256_after": "55edc1733dfcb0acf5d57d6d24c3b1097d4e72c28f496e33728e2bb2618b59b5",
+      "sha256_before": "91a5fe03da1598ea63ddc617c658f2711cac8d3c592173433be086031815060a"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_farooqui_ig210_thermophysical_source.py",
+      "sha256_after": "365b7fa1637e7b49adc054990d696b61ece85573c4e9d43f7660b0194a569078",
+      "sha256_before": "4b698a131d27f3debdaa9146a6a0b849bb3f567a4fba30e5308ed7fad386b801"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_farooqui_ig210_volumetric_cp_uncertainty.py",
+      "sha256_after": "a0ac9fd810513c3de0947b5e18d128348d909b0c33f9a8deb0d08ed558781621",
+      "sha256_before": "d997c78bba7d21a5784461ab397887303365f8ed6a40192b6b8a57da355bc0ea"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_figshare_dft_force_data_boundary.py",
+      "sha256_after": "e8b4f2b7795099623b41353499597a981be2ea2584644e818cd5a6c19b7ddc53",
+      "sha256_before": "f5db1bd3b9801cf4df46c3a838863d1357a9fd8cc48686aa2aff0972b01a0bab"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_flat_thermodynamic_bridge_components.py",
+      "sha256_after": "f3bdc2e341f700c788df020f1e1d4714772c09e8d7bc1f799a6e90821534ad3f",
+      "sha256_before": "d598a7cdd9fe602c645db664256e0bbdaaff3a2d42ecdfd47e52acff527410dc"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_formal_bridge_boundary.py",
+      "sha256_after": "db9218edc1526371afe96d6190eb5e48a779f54cbaadd6983b3eb56964bf9a3a",
+      "sha256_before": "a63655b967d76d5f7070f06dc22fe3099d03fc210f8b808914c56e7e40483f1d"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_formal_thermodynamic_bridge_integration.py",
+      "sha256_after": "21428f8b408e265ef717b6a82ca6ec125abb6dffc86296f035f0d1d8166d3ef4",
+      "sha256_before": "a9164653ad46b8cb660bb804758f3ce1c52c55c89c3d1adf943ea3ab49222c71"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_full_core_ready_acceptance.py",
+      "sha256_after": "c62ad4ce9e12b1f90b149fc41e599fbb038a06483ab31e2c51ad088a999dec58",
+      "sha256_before": "dbab4eca3cf19f0c65143d67df62ceac9146e1688019eb5576e0e3df26065556"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_gatech_graphite_source.py",
+      "sha256_after": "8009cac859717b810b3c7949c859438648f5c07bfcf2a533c3c428c87edf4c86",
+      "sha256_before": "6d9644d07ad7b6082eda63868cc9517be43f6db9109cbb6ff600abcba84114c5"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_gatech_standard_transport_comparator.py",
+      "sha256_after": "95053016941d9ef50b9023f745f2f61f02969e51ce3d99b07921a3d34ea57b98",
+      "sha256_before": "160b5a8de25b5d34b811374da2ad19351412f5ee50afb6b8cf87d4c7f35146e2"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_gatech_standard_transport_comparator_integration.py",
+      "sha256_after": "322d13cf7451b258ae1799d782848aec322a17af49d6f85610f23f82eea26737",
+      "sha256_before": "da0fcee2a9be8dd2fa669e40b3c8feb361102edeb5aa94af0609ae6c37d044e4"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_gatech_volumetric_cp_independence.py",
+      "sha256_after": "5d6ecf8460ce6c6e77837330f662b1bfac13341ccf01821bca85fca6296313a9",
+      "sha256_before": "d5425c4b758965dc8dd9ca1b53db15a40eea67a3984a4423e1db6775a28ece52"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_graphite_alpha_v_kt_matched_source_boundary.py",
+      "sha256_after": "a354771de34cb3745939b62224fe35ed785681bb6a6469aa554150f128880e37",
+      "sha256_before": "a76f0bc920eddb91a03559ca144319671104a71eba64bb9b91b4f04f002c4435"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_graphite_elastic_bulk_gate_integration.py",
+      "sha256_after": "55c8f18ee003a9e544e9013418c15491be89d7b8a43ece05e236c324040ded44",
+      "sha256_before": "45d567f24689f418e7c7c08f8d53b92ec22ec0e24f7c1a439b54b5e18fb8a2ac"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_graphite_elastic_bulk_modulus_source.py",
+      "sha256_after": "9f3dec9bcda38d2b7e8583ee0091273f3d0d1b9b010a55355cbd0c0905f1103c",
+      "sha256_before": "b5c8602a86ae099354e9e2344bf77ece7191bb9c1206c5b09ca286ea102cda62"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_graphite_green_kubo_source_boundary.py",
+      "sha256_after": "4171ef3e93ee7870f5091b003c7efc9475e757b803ad37db7f35fece8c5fd3c4",
+      "sha256_before": "54040341df7819f26468a35544047304183e10e163367994e7a3e5c17ab29640"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_graphite_isothermal_kt_gate_integration.py",
+      "sha256_after": "6624dbddbbf44e474a4f56f99ad168f3c757402884ad0e4ef30cc7fd957b9771",
+      "sha256_before": "7411c80dff963c954774cc988cd1e69a94eee97d5be15173dee87c3e001d8f82"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_graphite_isothermal_kt_source.py",
+      "sha256_after": "240f39cb92a4938969cb7b1be224f7be68fce16d4a9ec732974529aa8442a5b3",
+      "sha256_before": "ab648cdaebf958e757b980c42b139c3be6318c6e0e49dd14eb0b7dd28bc7a7fb"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_he4_alpha_gate_integration.py",
+      "sha256_after": "689a52cce4b2e69c4b692ea8998ff90c1704b98d3462e5493ae57a7b61920c2a",
+      "sha256_before": "663d91ca7e62b37e1374611d6bb9dd5771844088f7e448b3016c11e1c99cb2ce"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_he4_core_composition.py",
+      "sha256_after": "daf317f6ca9171726d68040c05e366a11923567d5672a62ebc748b2d2d65acc2",
+      "sha256_before": "f2c9aeff919bfad94887ca4bc2757c9cc266e566785a86d76cebbcb828e8ed0f"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_he4_normal_viscosity_kubo.py",
+      "sha256_after": "056a727edd02407fb9a54d57f6a18aea82c24d1664f562594b38e760074adab7",
+      "sha256_before": "0e9b3938c98e56bc16f0bd9825eab3b3ca04dc24f91c485621d93262f199bffb"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_he4_o2_response_calibration.py",
+      "sha256_after": "bf4b5a20a3cda37780a1008f652178af1814221ce91355dfa2fee92ee5149805",
+      "sha256_before": "3f3f0860a1d88b6ed6f11ffd347c90858ceacae425ef433c67a17e0d700a8c70"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_he4_o2_si_beta_mapping.py",
+      "sha256_after": "b8d31a4b7b3f32747f62de3d034606c53c994841d458c57505fff6ad6364d00d",
+      "sha256_before": "df65b9410d8c698268a4cb3aa768971cefe29b49cb95c9382899b1383d75f021"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_he4_svp_physical_anchor.py",
+      "sha256_after": "c9d2260d3e01de6fc0f4f4ac6e8414847497378dcf8ca717344e4a4d1fac28fa",
+      "sha256_before": "b5c2cfeac3ec025278bee23a4c93f01a49854d2c1c2ef5baa43e0fec279df110"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_hong_source_package_boundary.py",
+      "sha256_after": "fb546c112216fb308220baba01dd2d5aba8f6c2823c0fb3b24e7b1bccc23d997",
+      "sha256_before": "9529abf03a5df3559880fc97e6b45915dfaba457db7d3a5bc005d2c32850b22b"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_huang_2022_utokyo_graphite_ribbons_boundary.py",
+      "sha256_after": "a9d3e21b163b7f2eed2d822046586521c576f5e4a8309b53ef3096dae75ec443",
+      "sha256_before": "9dee4fb20d8e10af5a2356e2da0b52dbcb456891ce7cea7ba7f142a7b9f53b62"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_huang_2023_nims_mdr_payload_boundary.py",
+      "sha256_after": "28148484e1cce3e41d3523e80ff69476a170b755946a40f2dc3019caebadcdd5",
+      "sha256_before": "f58506c62a4df206a6446462957a842a672dd4a4237e471a536de4d254b65173"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_huang_2023_supplementary_payload_boundary.py",
+      "sha256_after": "db53cc83275bda8d5de4427577788d3de4dbb82e7db46e7bf2031a95fca38189",
+      "sha256_before": "10ffdc2447a77253e13c9a2f05f87aa51d5736a54e2649ed32a6cf4a32141eed"
+    },
+    {
+      "changes": [
+        "docs_root"
+      ],
+      "path": "docs/core/test/test_topic13_huberman_2019_public_pbte_boundary.py",
+      "sha256_after": "645e4f74a0733b74c64b27fa487b18043e8e0e1fe6be60c126044e2f8581dda6",
+      "sha256_before": "249cd7ccab83d503d4d0d105d54ccf752e038162cedd794cf220f999fa556ee9"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_iaea_cv_uncertainty_boundary.py",
+      "sha256_after": "56ff48210fdb26d11cf9f08b20aa02ab701ac56c038259ea25370e4b4716cb4b",
+      "sha256_before": "866c5c0a0650b00e408ec720913bf0115e22d98f6d82853b302d7c65849aa32c"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_iaea_gr280_same_state_cp_source.py",
+      "sha256_after": "067a96153d47bc3159f6decbc4b0ba22ca0aa88c0b83170aeb126b30c9f168bf",
+      "sha256_before": "f77af1aa8c94e5dfd54dada648f186220fcc0c1cdb41de795780f2682820072c"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_iaea_graphite_constant_volume_source.py",
+      "sha256_after": "da69933d0d4359cee31e62277a1a3a47c669b87b767140808e0d828bb5929772",
+      "sha256_before": "1c806edc491465b453c75c38266ffd503c29df5f1964a5ac99c613a012dfb5cc"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_independent_csrc_acceptance.py",
+      "sha256_after": "ba8fa184051160d98cd9ad0c530a0712c12d1154d3dfef03983d652b7eabcfcd",
+      "sha256_before": "2bac162e713957c6a9ad8db83d44def66a56f6902b465ec8a1487eb3d63b3bf4"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_jun_source_package_boundary.py",
+      "sha256_after": "4767615ccfee3963df1374b76b5073b2a343212d45a54d0547a02fbc530b620b",
+      "sha256_before": "dca21c93cdb0c862d2886a9538e6cd013ce1f0d80674252c60e0cdeb85a92bf7"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_kim_2018_graphite_green_kubo_external_input.py",
+      "sha256_after": "cb7485654ea16fd32780ec83221b183fd09fcf46422249b53c0c50edd01aa3ab",
+      "sha256_before": "33c1c4494d446748ba08e368d91b971afdad36de4145a45715476bcb7071f268"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_landauer_core_disposition.py",
+      "sha256_after": "392e112f12028405986ff6dd592b787c2cb9874ae3480b879cf0d6201ab74b62",
+      "sha256_before": "ce709ce896c89909e9f3b37e190a3b04cfaf526d1051316df454dd2bb6a88b8c"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_lattice_momentum_relaxing_heat_parent.py",
+      "sha256_after": "6cbf3ccd4b575e2cd2f9cf78de21d70d313cb7ddac8e28238496bc54c6884c05",
+      "sha256_before": "3e59a2205410b5ede7a8e2a3cf17fe86766790f8c393cef0b20aef3bdcd4fe8d"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_lowitzer_full_source_pair.py",
+      "sha256_after": "ae510891e8e4b43f96e7d46750f972f6d8ea384f40c2c939d661d6f6faed8b24",
+      "sha256_before": "a839e13d311051b60da1043b58fb6e73f64b753d1181cd427fb1c62d4bbc1c97"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_major_result_register_sync.py",
+      "sha256_after": "06b5d791fa7006a741c07c733bc7d0610e7ff0835ab6501d4327aed5b08394e7",
+      "sha256_before": "bf35da9f0ed51c941cd3639ca6079c6a70f4da0aa41d26291d576230a644c7ad"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_material_interface_factor_resolution.py",
+      "sha256_after": "2c1211dd50ee54ad26685a50f85506dd0787e8c90c574adc46d5c7a07c6c536d",
+      "sha256_before": "6cddf428adaa75764aa92600a1beb7c5272f014e1150a7b547199635c7b808ed"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_material_lattice_interface_contract.py",
+      "sha256_after": "269cdbb3a2d34e71cf1f75b87361b04d36010e99d2df90d1a417f20c70561866",
+      "sha256_before": "c9a638afe131cabdef4ef72d51dde4ec62ca0afdce9ae5396c5ddd5c45ad4c02"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_microscopic_finite_cutoff_kubo_match.py",
+      "sha256_after": "aef6b2b279bf3c494ac51223fa84bf245baf7c2842e2e1a51190d43f470ae78c",
+      "sha256_before": "388015b6e2913954fc05f78fe4e4d9386d6f3969ca524d4cc0d26eb9c0fcb52e"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_minimal_input_contract.py",
+      "sha256_after": "de9b41e2ae10737312e5f01335f12e967fb038c0616854e894490dce42ad69a3",
+      "sha256_before": "bfcea18f3bb18637e734b96f98145998f5774fe4f3b59fa484ac4a089240f146"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_mp48_ding_csrc_response_mapping.py",
+      "sha256_after": "198123d89e22feff34f2bc351c7b342e7e6f1ea9045d972bdfeedf857981991c",
+      "sha256_before": "08674848651a891677e79f93ec2c94e69a00064c217b61d19e31b90139672e81"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_mp48_force_constant_csrc_mesh_convergence.py",
+      "sha256_after": "0b1412a5f087244f21f4114580237ba236995b701d4c6a026f2421a01066d1a9",
+      "sha256_before": "84353aef306dcee2f4d0c6cfa386dae2dcb409734eae1019f9132a3b144a98c1"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_mp48_force_constant_harmonic_reconstruction.py",
+      "sha256_after": "4e82dbb1c6f054572cf868bcae0758036ce485c74cc662a5df9ebbaaa9f71646",
+      "sha256_before": "b0c6d8a88a2df4fb50afa67009e93e4dd0557046a77782c31c877113adebe8b6"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_mp48_independent_graphite_cv.py",
+      "sha256_after": "0eda8fdb3436c064f20c7753973f7787530ea4f2be4385312a951a78050bd425",
+      "sha256_before": "3ee596b7417f4e6e42dceacd51d0ca10d4f562d20fb139c017b20e096a9e899f"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_mp48_mode_resolved_csrc_diagnostic.py",
+      "sha256_after": "6834d523b1de54406abe1b49868df77beea6b124645c3a3ce36874372069384a",
+      "sha256_before": "cfa9d67f382a4b80eeb6d801686d32f5d01b724d69f732acab9b0135052b0652"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_mp48_phi_e_dimensional_comparator.py",
+      "sha256_after": "d21814bdf71ee0192ffa8a53c5d8b1e67472c217980de6a231f544b6d5a6ff0a",
+      "sha256_before": "565625ac6e07323dcc656f711d3387f6a5414d4fcba458cd1d0f1fa8dd400d0a"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_mp48_spectral_csrc_reproduction.py",
+      "sha256_after": "a16de4866d5f6f83e17b09d980fce9751499bdc25aa26728f2a4e848a472f86d",
+      "sha256_before": "2639c58940fb807462a4913f0ef901bc6f6f2885514a7caa4a1fcc7dfdb33a3d"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_mp48_temperature_volume_uncertainty_boundary.py",
+      "sha256_after": "c2ad24b8c32c21fb00bee4db5c33ff056af1205a55bc9f6395044c0ab24f6431",
+      "sha256_before": "c814b634eca01291ef2f4ff90dd8b421ce74b35c5acc14f52f303576edb8ae76"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_natural_graphite_nelson_riley_alpha_v_gate_integration.py",
+      "sha256_after": "6a51fb5d9fa300df86318e30226c9436c20ee5a9222cd1f15801a8f2d848662e",
+      "sha256_before": "eeacb2487bb2d91f52d79ca005b9301ecd511e7be4eb9772550080c959af3259"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_natural_graphite_nelson_riley_alpha_v_source.py",
+      "sha256_after": "b2884b67b6a4cbf35bdf33b8da74fd475d39980702d3aae5658ada19dfd57c9f",
+      "sha256_before": "dd0ff77e9d4b0ef247175ed4a4f604d15f66262bc017073e9cbd0a9629606f85"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_nims_graphite_ltc_route_no_go.py",
+      "sha256_after": "6580c334882f15d3afb703466c23b0fe23157a63d8e35a49dbc60171c99dcac1",
+      "sha256_before": "242fbfff986a6b7b70972cc6ed9dc014aad9b96227a44293cbcc2014bb9aa477"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_nims_mp990448_phonon_source_boundary.py",
+      "sha256_after": "0e823c2b91d494571c7014d40a01113afda6a32b192ba3c11f76a19a7c81fae7",
+      "sha256_before": "fb45a6fb04bb8a5b712d11b548bffc12c7d71d7c0512442e8116b499b2ebb901"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_nist_alpha_v_gate_integration.py",
+      "sha256_after": "08ecef6f6f3cf51f1a0b832273a8d551494b0d8d94c0616db6ac90034b892969",
+      "sha256_before": "6e14b713b8804c97f9e5e28c5f88394af58adf622d8a0ef8a70d6d5678258585"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_nist_axm5q1_density_source_boundary.py",
+      "sha256_after": "211b34d6d2139f0f8356bdb35124f5ddab160eb65da626c35eb0d2f20237e80d",
+      "sha256_before": "3c9ca19a17ffdfd777e575ea8c7d030ebb17a8c1e599c6a843d797945a997700"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_nist_graphite_alpha_v_source_boundary.py",
+      "sha256_after": "e891d02727605ea76ffce5ca303ae001ddda3a468c3d2c5e84881b3d48aeeafe",
+      "sha256_before": "88dcb4b7d920970f2a8f99dc621f058bd1e262a1b5ffd67eed7f4ba90239a083"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_nist_srm_3600_heat_capacity_boundary.py",
+      "sha256_after": "f972d219f7b04257ca0fbbecf263175f929a28e0822f4ecade4eb853748ca6bd",
+      "sha256_before": "2f4747db569daa205cbcb97f83ee18f9ce35990f1a3daca70cc32358a3c7111b"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_normal_response_curvature.py",
+      "sha256_after": "d15e1a4a1236146ba01e922dd8a5a563f108e941337d82c666b0c828212ec0cd",
+      "sha256_before": "5dc31db97eabe5ba121e65c656260e0301154732b606e094b62e3dca658a88c3"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_npl_rsa40_graphite_specific_heat.py",
+      "sha256_after": "9e0cdc6c88d934c89cd2f177f5cc2cce452966a57ba34e61e08dece416c2ebb7",
+      "sha256_before": "7c4a6eaafd9e8c8477cf3653473262a58a7cea00b5b1e80473b27a6cf6b0f881"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_oxford_tgs_comparator_provenance.py",
+      "sha256_after": "353a723097b1271b6adacbaa834481730719417e7c10f3fd5dc8413d0d8d0901",
+      "sha256_before": "7a89ae252a6b1bd13c7219001f792bf07dd25ba67296723d27759eea43922810"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_oxford_tgs_numeric_rows.py",
+      "sha256_after": "bd11c8bddc323de0eb827ed9f28094898bd0638f213716b3c32b1bca0704a236",
+      "sha256_before": "1431a28d8bc4d3c5f769bc8dea246da04dc05c523f054c9e33177b49b29670a2"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_perez_castaneda_hopg_boundary.py",
+      "sha256_after": "385ff1abc8800ff17790144a634d0fd28c9fce6b7473ac0e9b9e07ebd682048d",
+      "sha256_before": "a9ccf1c613494af41dc59d0720045f5124141fee424fbbdce8e8dc8c4832ab01"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_peterson_source_identity_no_go.py",
+      "sha256_after": "4219ee332c1a7e34a2937f7bf111e3ee55578f06e7ce2cb671687fcf043bd218",
+      "sha256_before": "36aff716813f55313d81c72feed8665176979fab64ad9d9c6c6f747aae6f3ae1"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_phi_e_reference_normalization.py",
+      "sha256_after": "df13ed37461c498950c866c0d93e9eefbd3b4010d86c7df37acec6942421e033",
+      "sha256_before": "1b6c3bec2d645becc44d16c2281d02836dbc40c1485dadea370d394f3bd243d7"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_phi_e_reference_normalization_integration.py",
+      "sha256_after": "5e57b5ddfae98dba5473922eea604622e4efb39f2af7075013ac7bb2059aabd3",
+      "sha256_before": "90c42bb3ebe231cb00c2b7f23f395fb6d623d198a2ab0cb37cd964d6004ff57f"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_phi_energy_anchor_gate_integration.py",
+      "sha256_after": "29c02e76e3b587c8b47c6e881c4f148d8420f55e1b0fb665b424187aa861afd6",
+      "sha256_before": "c88369b494305084d13ba8cb02a20bb8f05f952f598d9274e528722f3342ee3d"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_phi_energy_anchor_identifiability.py",
+      "sha256_after": "30b6f370450991786a6ecf5e2cc053afdac56889fc2d4a69b30ccc28a47008b4",
+      "sha256_before": "6584412f30ebaf99d9fcf51d86060060f7f09815d2285c9c935fceb3f5783808"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_phi_si_anchor_public_source_boundary.py",
+      "sha256_after": "a6e730ca10b029c29ab27211b81f54ae4256e2ce70aa432812ba23e9c3059fcd",
+      "sha256_before": "a5a715a4a72616a469bcaa738aecb2d12a92d1a1102db59dfe9e0ac749c70f7d"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_phonix_mp47_graphite_comparator.py",
+      "sha256_after": "45be00d5bed23ab4fe4bf8a330cb569c2738453f700468d7e6d367da4ecd927d",
+      "sha256_before": "7dde80a9922d3a6d64259813e180ab48958ec30d6c787c0bbfde19e95efc3e85"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_physical_kubo_coefficient_provenance.py",
+      "sha256_after": "16d628af33cb57c94e8827b772a5b6635655cd3c746b21420a2c022ad601d44d",
+      "sha256_before": "e3651ae8d403dfc055fb43a18d8368f37632aa97001b65724b4a7d94cda5174a"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_physical_kubo_coefficient_provenance_integration.py",
+      "sha256_after": "9e5a154af3752463581c19a050d32ded757016aba3d8d83fcc483e13c9addeb9",
+      "sha256_before": "3d7a07c1d960589894876ae6b779ab3433771b61067ae998e1495fac42b83f5c"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_physical_transport_reconciliation.py",
+      "sha256_after": "d0080d642a6130e6931e960f6e959dd9353b8a4fc2c38c58beb7cc6aa7c94de1",
+      "sha256_before": "5e42b8ad660d65c012e3df29603f44d9d83f8bfa9dc87add57a18ec58c061e88"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_physical_transport_reconciliation_integration.py",
+      "sha256_after": "d83905b6ee934b6794e7bdb497571cefa2fb3e1a8fa543e971a94136a0813cc1",
+      "sha256_before": "ee012b40d6a1616715da43114e9563160d763ad6c69791a17fe340d5baf5fa1d"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_qh15_graphite_transport_boundary.py",
+      "sha256_after": "89928af65b12ff48a64d0751d6b1bbc7de53fce1f0103445f51df6a294af7375",
+      "sha256_before": "723796cfb217177525be5afc5ca14589957afa94a534d33f405b48d87b3b2121"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_regularized_continuum_heat_current.py",
+      "sha256_after": "a3f50335ff8a53f81da867279670c4eb2107a5838bdc66d4729f079e8746744e",
+      "sha256_before": "d30321e21a51c8eae355f4dce144705c0a84d01f6ae65ceb3fd608f332981d56"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_regularized_continuum_heat_current_integration.py",
+      "sha256_after": "02e8c6b80dc4d5bcd135bca213bd652ef0e22ddf56831590ad34ca194d529436",
+      "sha256_before": "ba0a6918e3c905feef7b23df3e499e471a24a18ff824deebebe0260482f2c730"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_scalar_thermoelastic_response_bridge.py",
+      "sha256_after": "8e33cccd283a102c43d6791e77711ed4aa2098e583ead9c740d1af8cb217491f",
+      "sha256_before": "646d7b1129d1becb0c5d9046b86b04b350b0f0f184dcba4385cb9521f4f871dc"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_sk_kms_entropy_contract_integration.py",
+      "sha256_after": "6335c3288ce1005cc25d7e4ab534ec816e8b3cb5123758df68b799d14fbafaee",
+      "sha256_before": "6408d1670dcade5e765c02faee535af574265fa58cb07b0391447dadca5be112"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_standard_o2_finite_temperature_comparator.py",
+      "sha256_after": "fc20a9469be461ee2c2493e399fc3ea5333b5d353893fff6e46e18cf64b71032",
+      "sha256_before": "32df0fc8f47e6b391b0fbf14599ee336794ea374c6530b595c40e5f5f1537371"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_standard_o2_finite_temperature_comparator_integration.py",
+      "sha256_after": "59cd9c481f9cbb51288b26df9c1b8a5892782259005c3786c3f3b5d312c066cb",
+      "sha256_before": "a540dc497853bf952897fb07d57c83907629789cff16ee50e4dee3a8cbc39181"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_thermal_bridge_scale_dependency.py",
+      "sha256_after": "ed1b230df0bac44e37fcc09e37206c7e95138ccf347936f2a04209dd0ae1a15c",
+      "sha256_before": "4adc0423ee3ae5189bbdc8ba71735d0787110ebd6783eb49475d473f444f4a7d"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_thermal_response_beta_contract.py",
+      "sha256_after": "cfac9ca3513b2f237f4d3319d8f0a020cce757d407c57b193f7e6eee0b6abb0c",
+      "sha256_before": "0e486a01dc186a5ea22396668145e2096218af993f1b4c1c51b00b46bc2dfafa"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_thermal_response_beta_contract_integration.py",
+      "sha256_after": "33dcfdf20702f9f12bf861ba819ecc5d0f2804565198d74ee2d81a5d55500559",
+      "sha256_before": "4fa17e46d5f759fba197cfa72fbdf1fe929e4d16d6845a8c53780418aa03c330"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_tpg_anisotropic_alpha_v_gate_integration.py",
+      "sha256_after": "64935c38ec90a012ae4071339d03f25f5691620cab75cd43b1e7bf6fae4c40b9",
+      "sha256_before": "a30da8c0c1530d147979675e0a924a09261be9846386d21d2612c312ae21bf74"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_tpg_anisotropic_alpha_v_source.py",
+      "sha256_after": "cced5ccee0e97ae102b10d6f4ef1a0bc245386ce4a27ac0b4dddcaa7d4167508",
+      "sha256_before": "1d0d509462c1b840685c450e9ab7537bc7bc56316e496ed483950780decf46f6"
+    },
+    {
+      "changes": [
+        "core_root"
+      ],
+      "path": "docs/core/test/test_topic13_transition_pullback.py",
+      "sha256_after": "19c47ecb3f672f6731e77c3150e6c20f69ee2c3dfb708776021a204e5c3849ce",
+      "sha256_before": "668568e8832d69f78ede486cd1038dfcaea979866b1ac26ce7893c759c68bfbe"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_transport_coefficient_identifiability.py",
+      "sha256_after": "47c9c1c7107af23804a9b8aaafca93964b3e86f007d73063e30b12f29db466b4",
+      "sha256_before": "86eb8e9fb37021722910d0a7dc86d520e7f0918f2fc893ec08247db3d9d7eb60"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_transport_kms_entropy_status_boundary.py",
+      "sha256_after": "ad253a2adf1754ecf3e0a507957f13803185cfca2c98e8b7e53d8e2ce2b69375",
+      "sha256_before": "22f244ad611e2a451894ce983d32183c8732c7e7712e23b9f63fe6f8015f4287"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_transport_resolution.py",
+      "sha256_after": "74bbfc8bc62285134b8d48c43a0827bb76905d5feabb047e5dfdcb167e3fc9ed",
+      "sha256_before": "de6589358472f304e9bb025288c7fd74c8fe73a81389f135035196cd1b8ca69a"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_auxiliary_field_condensed.py",
+      "sha256_after": "4d60109860663a18924cf23a85c44cebd9a15e941864c578d1b60b3907084d2a",
+      "sha256_before": "e35fb9938dfd519add947f4a74a7b910b9be7022c430aa59c77a5e80c7f69270"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_condensate_fluctuation_spectrum.py",
+      "sha256_after": "766b60b4bb790fa6d39e55036ed54d831ea327a49aed9388efed0c6611d143a7",
+      "sha256_before": "c2f07308638dd18fac20b5039f70d6fd499e3e09307b2020d78a7a6d825783d9"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_condensate_fluctuation_spectrum_integration.py",
+      "sha256_after": "3052ff62459ca0c54b7a738ddd3621108244ca47b8769484a0612337c5b06546",
+      "sha256_before": "d0e205ddffd9bafb3ffc6c6180f039091ab88cacac5c98adafde4eff30a28256"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_condensate_gaussian_thermal.py",
+      "sha256_after": "01f685d0dc0ea51244ba5a519ddbcc76a57fa385ff458258ab6615ddc0eceab7",
+      "sha256_before": "8dac423e836c6d1755fd08656a12c6d215afd9a1c06b1ea4861f347bcdb49945"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_condensate_gaussian_thermal_integration.py",
+      "sha256_after": "1beefa6563724b9bf5be861c421b69033e86acf5b0e9ce56a0cd894153fc13e1",
+      "sha256_before": "7919513e998c3df3a0e58ad2029f736957f92d81e00cfef7f3112b3ebfa05710"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_condensate_goldstone_ideal_lane.py",
+      "sha256_after": "946d45319cf5219c51c0a90173e5e9cdd42f1c55418bb7b5ac503b09ac4890c6",
+      "sha256_before": "b755f6743f1be0dc8bb1105466eeaf755d5463c44b7ef0727f3ba0ae6b78f6cb"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_condensate_goldstone_ideal_lane_integration.py",
+      "sha256_after": "c5873924e45664b3e15b5b3c5c1e77d1419a636224e7ef53ef458ffce7aad975",
+      "sha256_before": "e187468c525bfbbcc4952708383019cbf79b2a044eeb268c877e7e24dc691e83"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_condensed_goldstone_ward.py",
+      "sha256_after": "84aea376477638ac7292e6551d2d3cc4102404ff2f0c682caa319d0fca55eb7b",
+      "sha256_before": "a97ce7d7b569ef065208bd1ab3e46072f220b3a3b8339cc8632e88a44198a002"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_finite_temperature_renormalized_hartree.py",
+      "sha256_after": "1dcd1ea987b5c204ecc9a0cb21d186e81a821846a23985d90d50e3e0d0ed3f16",
+      "sha256_before": "aa8cf0ed8b1abb6400089713e393c850ebe52befe0469f8e39436ce0f9b51b3a"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_finite_temperature_scheme_identifiability.py",
+      "sha256_after": "5da356a8f4ba97da5e189131a0d7a6dbcca2fd42ef9c85bd70d910567e121f2f",
+      "sha256_before": "62d3cb7f47eb64734bae3b4d9de80439a4885125b57be45a442e8cd0d20b14aa"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_finite_temperature_self_energy.py",
+      "sha256_after": "b6fe09181f01fdabb7c34f4ec266501d14733129a39eb3f10f68cf5747c7424d",
+      "sha256_before": "21ef9e81d1fd7617667eb1a3030532e9937726b51922677e51f14a6c35f8cf1d"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_finite_temperature_sunset_vacuum_match.py",
+      "sha256_after": "8900a4a20392f60e2fc50019ae8ac54ae7001891f7ee0602bbccb4523d7bcbb2",
+      "sha256_before": "04c7c068c768aee70fc7ebdc4a301ce812d2fbc2daf7420fba54609b46140ab2"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_gaussian_offshell_background.py",
+      "sha256_after": "fd8592d7015d25395e27236e47c2a363c600d5582e0c967cf59c41346f4868d9",
+      "sha256_before": "84b2a7c60ff60c72bf516fe9de7c99723e93a47587bb6f5e8ab8c7f4505d8f2a"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_gaussian_thermal_stationarity_no_go.py",
+      "sha256_after": "5434cb0f235f1546452c306c4f176202514a17fa70e58df7497d3f99bab0a087",
+      "sha256_before": "d4fcfb3dab5e32ba01845133a887444869b44b317d9aae583f585d101fb5b851"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_hartree_normal_stability.py",
+      "sha256_after": "8e4ac467a0b29db1eed7e1a38753305eff556d7ee6c98404f1bcb16da4308e89",
+      "sha256_before": "b2d7f020bf6834fb1fb2a32803f09fc4c51b3914093eadae0516d48d82a17fc3"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_hartree_thermodynamic_consistency.py",
+      "sha256_after": "0ffc29d3ce111647c2360865e00690c329a1b511a23be48ac4918ca48074dc4f",
+      "sha256_before": "05531d98dfd7b846a5e6784ac04b257f5aa2ba6ea6dff97776ea24e9efd63ab7"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_normal_thermodynamic_consistency.py",
+      "sha256_after": "743c5ca707df9c9b85a21089577deeba5facf19ac6840c73fc0e1bd64b78e3d7",
+      "sha256_before": "6942f83b028e61c14a2a890b5a064c0d7b060ba6eed0de097149976078aba4c4"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_normal_thermodynamic_consistency_integration.py",
+      "sha256_after": "7c1b439ef9de5a4cb9c121a8982489ff472d9e32a1140b009b957708b7706a69",
+      "sha256_before": "29be7a9cc11021858d63e8e54375a2221f18d6bd6fec1923fb5e6a4e8adc9fca"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_one_loop_convergence.py",
+      "sha256_after": "11fc2dbe5bd888b386f73bf2d0d9b9204a99205a23b8aa8980661ed1d72382e7",
+      "sha256_before": "e99368fc9e81203ede62e4caf1d244c6d0d0fdddac9d15f911d2763f930fdbf8"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_one_loop_convergence_integration.py",
+      "sha256_after": "0d79c0736e31c0039c30714b211754b52c089f625e381ea9b8fd4cb5235dd9f9",
+      "sha256_before": "56ee7d228e7f99cb16456fd7b71da29a825458137fe2a180f3d07e01933f1953"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_one_loop_normal_branch.py",
+      "sha256_after": "d152dc4ab8b8cd795701dca36f2b5621daa1c22d51747647087082dd12a916de",
+      "sha256_before": "c762f4a235596be42c190fb2da218a0393499ee767107ab682158d33ef65ece0"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_one_loop_normal_branch_integration.py",
+      "sha256_after": "bde0e2dd0f0fe8845c8afc37c6922ed83e3185c2edf74cd396a3a526446dbe67",
+      "sha256_before": "c2646ea3f42114f5d9fde516ba853b5e7c325221f0dce78663af2c1568233509"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_one_loop_uv_boundary.py",
+      "sha256_after": "ac675cb6d2b626f5f4a3560184c053ec461c81dd6b1526d2dfe303e9a8039e13",
+      "sha256_before": "94cebcafb3692fe7d8884aec2245daae1d6ae1f119d3bda91e67432400366c9c"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_one_loop_uv_boundary_integration.py",
+      "sha256_after": "be6e7d77a00eb6ed4692ee2bfd6e4fe390ec9cc2178cf9b80652796c278e36e4",
+      "sha256_before": "5cde2512ad2d09e0554ccfea6b49d2ee890c8852954e48172adef179b7b0383f"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_renormalized_normal_branch.py",
+      "sha256_after": "519cc57d88c6e3d9fd662abd7a6d3ee205c2e275475d0a455864abbb2cc5ae81",
+      "sha256_before": "ee3965cb518dcfe3731fac6520328aae1667c137caddb8afb4a09dfcbfdb1505"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_stationarity_scheme_dependence.py",
+      "sha256_after": "293a0cd575dc4050bd00accc1ffc30a4764586851f68ce2e36b65bf2f2b0f7c7",
+      "sha256_before": "efeaadcdc18c8997a5492e0888e21240e16dd8110197794e4065238d611cd6b8"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_thermal_stability_boundary.py",
+      "sha256_after": "d0bce9c77d26d7e6190b36f40f23f4e09eb363ec08624dd72a2ec242b1016dc7",
+      "sha256_before": "e2e95eade7a1a8b315b3d577aff9bbb54eb397296e30e73b1b79fdde207949cd"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_ward_coefficient_state_dependence.py",
+      "sha256_after": "9909e4bf34edd74e3acb47e076af1b7da826bfe98f20384385820b86b63a368c",
+      "sha256_before": "390d02fee6f56489efab63b50602e3785190cc3adf9385b4c82322cc7357f807"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_uet_o2_ward_constrained_condensed.py",
+      "sha256_after": "c847df680e8082b1f3bf6cfa1c16db56686bf2df46156153458be587fa3a24e8",
+      "sha256_before": "3476b5d32f60c46761309843080b57304832a94f0392109058cc37a682cbd94e"
+    },
+    {
+      "changes": [
+        "core_root"
+      ],
+      "path": "docs/core/test/test_topic13_weighted_directions.py",
+      "sha256_after": "84081c81e7d95074d08043d2b5696f9d215c2a27359ea70ea51c5418ed3df20d",
+      "sha256_before": "c48a2e38e376a7635e74bec0e79bad4a866a58fa063d21cd12a25ba9b09f2fba"
+    },
+    {
+      "changes": [
+        "core_root"
+      ],
+      "path": "docs/core/test/test_topic13_xie_2026_holdout_access_audit.py",
+      "sha256_after": "1184b19aa2c8c05d0f2fdd81e55aab6b3285c9fe4d7b7b3c7503a9c10781f2c2",
+      "sha256_before": "c8fa6a3625b1548077c9f3279d99ae7e358b5435554ed3c0b61c4498a5651dcb"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_zenodo_hitrace_isotropic_graphite_cp_source.py",
+      "sha256_after": "98061999507baea14410f804d65df79fef28e320d47710e9a5327b70e8ca90b4",
+      "sha256_before": "15f2ffa40e517c21f4dfc96c1d7fb2dbaee6954983c7347ae2c94e5620cb357d"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_topic13_zenodo_ig210_alpha_l_source.py",
+      "sha256_after": "659693a883dc56faf8da802feb65f9dbb8190d026e8d08b2737af7cdaf6b5886",
+      "sha256_before": "99011bd20c72b5efea88484aefc1c3646b8680343735c9496d126dcce9b350b4"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_uet_chaos_integration.py",
+      "sha256_after": "f0a05b7dcaba10be9c86e6dbf6dee42ca01929a9d58834ea52c67f0264ed0e3b",
+      "sha256_before": "0a7d0feee540cb0a001928f5a6ceed9dd1fa2158d4af8f478b403978cdeba850"
+    },
+    {
+      "changes": [
+        "docs_root"
+      ],
+      "path": "docs/core/test/test_uet_code_surface_inventory.py",
+      "sha256_after": "303e47752c35f08dca5a9f5ac92746bf684b7a64ab9b23e8512fd80b105831b4",
+      "sha256_before": "c0352471184c6e752dcc428eb95e7532ae64e8befa84cb074e77aca496deac73"
+    },
+    {
+      "changes": [
+        "docs_root"
+      ],
+      "path": "docs/core/test/test_uet_core_equation_family_contract.py",
+      "sha256_after": "c4d66f4682a5b6a99cf7b599767c700370f5e6256ce34e31228b582879ea9c38",
+      "sha256_before": "468a6c49d66093455a2cd53859000357c923c6f30330d145d5c33c1efc4bed55"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_uet_core_organization_wave1.py",
+      "sha256_after": "924608781b95d6a84b289a8af41e1be455c855831198c98eadc05b3575e79ccf",
+      "sha256_before": "b955dc33fb5b7fe66b2655db01fd6a12632f9a367de83716fe6f471a1a82970d"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_uet_core_scientific_links.py",
+      "sha256_after": "7c0d1abe386c8f7ba86ec52325bd623a6b6fd473b8202c5143ff0837744f69ce",
+      "sha256_before": "5e59a2af252f7f3878fc8671bfa768b0e1a329248cd869b9f631f4341f66d959"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_uet_covariant_diffusion_links.py",
+      "sha256_after": "297de48857ab5217168d3d39f05ed948cd68ed67495a85c20ac698594c8f0403",
+      "sha256_before": "b3d405e058ea33cb9be38beaacdd8658a86afce9ffc845aa4ab6695a999e15ab"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_uet_covariant_parent.py",
+      "sha256_after": "f5fc582cad70d6f9f205bf7fd1c16e9fd5d4fb83dcc420a9f6d5c3ad76118853",
+      "sha256_before": "f588719fe42f79f328737370f75222dd6df41d2aa1c5cc0159964ad009abdb9a"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_uet_covariant_parent_links.py",
+      "sha256_after": "41b9beaa13fa431deffd8bed32234c178a3d9e6cc81cc5d025af27a420985412",
+      "sha256_before": "c0c6ec556b4e3291d3546e5c206cee88844535979a2caed2e136b55d2f373f2b"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_uet_curved_3p1_adm_evolution.py",
+      "sha256_after": "059e2d8b908dab034abc4a830bcf4919644c072fa4eedcff22fa2440a8100caa",
+      "sha256_before": "f58cd28ad83b117d17978aca7e434273c640cba40b5ee238b0e6fcfdcea34103"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_uet_curved_3p1_constraints.py",
+      "sha256_after": "52d58ec72f47b0ea7a32c2ee45aa55f12405ccfdbf237e11554870dd21a6f7f0",
+      "sha256_before": "67a9d1f4bac4fc01ea5f1a306e31864d09722748158f6011007492e9701afa95"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_uet_curved_3p1_generalized_harmonic.py",
+      "sha256_after": "829c5730c8233002b27f8a9ee14f0a4b2a01f3c40fa1a6ef3506fd81b8b27084",
+      "sha256_before": "7302d186019df6fea3cb59b1b7f04dcebe2751ed48828240cca7145f297d36f0"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_uet_curved_3p1_geometry.py",
+      "sha256_after": "fc371ce7068cc305505dd059ce7fd52e9a555491bc450d8eb4bb7e5a674b8b65",
+      "sha256_before": "b80fc7b5581758a08227abe7806f609805376f75846cfbe20b8b357eaa56e953"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_uet_curved_3p1_gh_nonlinear_vacuum.py",
+      "sha256_after": "c1f3eac0501ea2a7c725d33da15f6b5969681f8c03c2e3e47f679cff6428af91",
+      "sha256_before": "b36cb24ae657b1c501244087d09cec2e62d2a975e8317b8e2c6c1ce862c492e5"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_uet_curved_3p1_gh_time_evolution.py",
+      "sha256_after": "41dfc5dc1413e7282e10c20e72af4ff1f0958adce27549777b8f2eb4d14fff9e",
+      "sha256_before": "2cee8ee3bbbb4991668619c128cba50b248c20f7ca8ce14be45587203be6f441"
+    },
+    {
+      "changes": [
+        "docs_root"
+      ],
+      "path": "docs/core/test/test_uet_derivation_origin_audit.py",
+      "sha256_after": "9731c0bd03ce94406e125078ff8cca1b97149381fb7ecaae93b56a2d7fc7539b",
+      "sha256_before": "3694a5968d85697f9083bf5b9df51303f3aa8e9c9e6ef8316fa86267796d2b76"
+    },
+    {
+      "changes": [
+        "docs_root"
+      ],
+      "path": "docs/core/test/test_uet_equation_inventory.py",
+      "sha256_after": "920435fd7137c14cd5d6d242a43ded9eda1eb35cb51f7dddb39d72f1f81e039c",
+      "sha256_before": "04c482835ec96696feef5ab06e4c3abaa739ef4b13781967978d7ac68eda32dd"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_uet_foundation_compatibility_decision.py",
+      "sha256_after": "fb2c0ffc799b79cc148b63f6ea0b8801fceed83b9b15afd081d4538b6f833522",
+      "sha256_before": "5b438d10110adefb3f1d3fca3e000fee8b9a8dbd87e00a0b737c13cfe5fcc581"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_uet_main_theory_axioms.py",
+      "sha256_after": "897342d1787b39ff1fe86a526596cb9e36365cb98f58cce501c826118f59d1be",
+      "sha256_before": "920297e718b6852795323da02aaa48f0622e95e2dc060572671fe123f89bf7f9"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_uet_main_theory_wave0.py",
+      "sha256_after": "63a4508e1895a1f84b325c17e373331305d065dd1d9f861eafc6efbd6ca76b7c",
+      "sha256_before": "b522175a7665fcc447fc3b3154a74c6cb115bcefadb8b2c581073e29963f8c31"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_uet_matter_space_flux_links.py",
+      "sha256_after": "11bd666d149dda17f711869a6227a1d32e5dba683372fa9eab5860671bc8533f",
+      "sha256_before": "3b568157da28f5a3bb4e3fa34a6ce91f2e2fc76884d68cf5c5e98ba7dd411f0f"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_uet_noether_mapping_links.py",
+      "sha256_after": "fb1283c3d341294477c9073f570f869b7d7c6b7fdfff327513402b5fa37bf87f",
+      "sha256_before": "9a27f2787b72bb13a139d56a63a75498179999b3c7bdf30627dd48ba04343a3b"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_uet_research_organization_registry.py",
+      "sha256_after": "f6f8e8cb6b66ada320a0dbdb2292f4bec67a584fe30eac11403dbdc98e50460a",
+      "sha256_before": "6142177a72f5717f04f40afe64a3560ca0e97a8d472702360253e34cf5a416b8"
+    },
+    {
+      "changes": [
+        "docs_root"
+      ],
+      "path": "docs/core/test/test_uet_research_room_wave1.py",
+      "sha256_after": "93273673606ab955cc12bd00f386580b9916b7aac400d6780918352b86eee960",
+      "sha256_before": "00243b1aa9541003145f8358eee4f848b1b2765613b0b8e98280bda1a9ad51a1"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_uet_topic_formula_correspondence_manifest.py",
+      "sha256_after": "1f057f73e860f73a962cf0050c2156cdd4fd74e9f3728a9d5e555605fd684dfa",
+      "sha256_before": "6e17e091d806c26c75e0bcb7612a75978d79d51502d79893ef4420a3015934ba"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_uet_trace_links.py",
+      "sha256_after": "827ae3bf5b47440d108e8d4ebc6334d0f35435fa803f4c0a6c6aaaab1be5809c",
+      "sha256_before": "8e84fea94b199db81b98bfb34167864d5a491928ec2f147f19304e5e5b79593d"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_uet_wave3_wave10_artifact_coverage.py",
+      "sha256_after": "96f88d2501725cd8ee4ea786dcc4c483a7b7f617f81553c493d5664b7a73855c",
+      "sha256_before": "eb09010412bf3359982103c3bf777abf499ffe85fac2a3f8c3f5c4aa50b3c6d9"
+    },
+    {
+      "changes": [
+        "repo_root"
+      ],
+      "path": "docs/core/test/test_uet_wave3_wave10_program.py",
+      "sha256_after": "1ad2647fa6c8de92b258b640d6cb2afb0392bf6240e3ef1b184b7639d1c8f6d0",
+      "sha256_before": "0852c743923b2234686907a1f960d094dc1c31684cf617296625f2b159c3cecc"
+    },
+    {
+      "changes": [
+        "core_root"
+      ],
+      "path": "docs/core/test/validation/test_matrix_proof.py",
+      "sha256_after": "24912fc3cef959dee47bb96b8fc050291a483529178379731933cb28b7f901da",
+      "sha256_before": "6ca10ef9a067e2016586ac3a567fdb7ffb8d0897daf14899b4ad2e430a16a6a3"
+    }
+  ],
+  "schema_version": "1.0",
+  "scope": "docs/core/test"
+}

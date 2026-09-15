@@ -1,4 +1,5 @@
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 from pathlib import Path
@@ -6,7 +7,7 @@ from pathlib import Path
 import pytest
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 AUDIT = ROOT / "docs/core/artifacts/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json"
 MATRIX = ROOT / "docs/core/artifacts/t13_topic13_closure_matrix.json"
 

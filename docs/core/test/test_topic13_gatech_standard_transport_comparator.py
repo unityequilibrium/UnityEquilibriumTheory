@@ -1,11 +1,12 @@
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 import math
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 AUDIT = ROOT / "docs/core/artifacts/t13_gatech_standard_transport_comparator_audit.json"
 
 

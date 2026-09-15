@@ -1,6 +1,7 @@
 """API and ontology alignment gates for matter_space_coupled_v1."""
 
 from __future__ import annotations
+from docs.core.core_paths import CANONICAL_ARTIFACT_ROOT, canonical_artifact_path
 
 from dataclasses import fields
 import json
@@ -128,7 +129,7 @@ def test_legacy_default_and_explicit_legacy_mode_are_unchanged() -> None:
 
 
 def test_generated_artifacts_keep_failed_controller_machine_readable() -> None:
-    artifact_dir = Path(__file__).resolve().parents[1] / "artifacts"
+    artifact_dir = CANONICAL_ARTIFACT_ROOT
     verification = json.loads(
         (artifact_dir / "matter_space_variational_verification.json").read_text(encoding="utf-8")
     )
@@ -147,7 +148,7 @@ def test_generated_artifacts_keep_failed_controller_machine_readable() -> None:
 
 
 def test_formula_audit_links_present_implementation_without_si_promotion() -> None:
-    artifact = Path(__file__).resolve().parents[1] / "artifacts" / "matter_space_formula_audit.json"
+    artifact = canonical_artifact_path("matter_space_formula_audit.json")
     audit = json.loads(artifact.read_text(encoding="utf-8"))
     assert audit["status"] == "WARN"
     assert audit["implementation_status"] == "PRESENT"

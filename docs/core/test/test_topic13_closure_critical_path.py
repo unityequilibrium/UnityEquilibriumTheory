@@ -1,9 +1,10 @@
+from docs.core.core_paths import repo_root
 import json
 import unittest
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 ARTIFACT = ROOT / "docs/core/artifacts/t13_closure_critical_path_audit.json"
 
 

@@ -1,9 +1,10 @@
 """Integrity checks for the locked resolution experiment, not convergence proof."""
+from docs.core.core_paths import repo_root
 import json
 from hashlib import sha256
 from pathlib import Path
 
-ROOT=Path(__file__).resolve().parents[3]
+ROOT=repo_root()
 
 
 def read(name):

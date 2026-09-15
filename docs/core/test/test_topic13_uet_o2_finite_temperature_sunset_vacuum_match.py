@@ -1,4 +1,5 @@
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 from pathlib import Path
@@ -13,7 +14,7 @@ from docs.core.uet_o2_finite_temperature_sunset_vacuum_match import (
 
 @pytest.fixture(scope="module")
 def vacuum_match_state():
-    root = Path(__file__).resolve().parents[3]
+    root = repo_root()
     artifact = json.loads(
         (root / "docs/core/artifacts/t13_uet_o2_action_1pi_sunset_retarded_audit.json").read_text(
             encoding="utf-8-sig"

@@ -1,12 +1,13 @@
 """Regression tests for the all-wave closure evidence snapshot."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import hashlib
 import importlib.util
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 SCRIPT = ROOT / "docs/scripts/audit/audit_uet_all_waves_closure.py"
 
 

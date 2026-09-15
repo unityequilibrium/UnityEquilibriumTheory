@@ -1,13 +1,14 @@
 """Regression tests for the core GR to Topic 0.19 dependency gate."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import importlib.util
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 SCRIPT = (
     ROOT
     / "docs/topics/0.19_Gravity_GR/Code/03_Research"

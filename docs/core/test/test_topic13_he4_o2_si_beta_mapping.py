@@ -1,4 +1,5 @@
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 import math
@@ -7,7 +8,7 @@ from pathlib import Path
 from docs.core.he4_o2_si_beta_mapping import si_beta_record
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 AUDIT = ROOT / "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json"
 
 

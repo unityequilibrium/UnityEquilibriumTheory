@@ -1,12 +1,13 @@
 """Tests for the Wave 9 orbit/GR/cosmology correspondence gate."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 ARTIFACT = ROOT / "docs/core/artifacts/orbit_cosmology_correspondence_gate.json"
 
 

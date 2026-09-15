@@ -1,6 +1,7 @@
 """Regression test for the source-locked Ceylon graphite Cp comparator."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 import subprocess
@@ -8,7 +9,7 @@ import sys
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 AUDIT = ROOT / "docs/scripts/audit/audit_topic13_desorbo_ceylon_graphite_cp.py"
 ARTIFACT = ROOT / "docs/core/artifacts/t13_desorbo_ceylon_graphite_cp_audit.json"
 

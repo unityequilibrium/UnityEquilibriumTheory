@@ -1,10 +1,11 @@
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 LANE = ROOT / "docs/core/artifacts/t13_nist_graphite_alpha_v_source_boundary_audit.json"
 
 

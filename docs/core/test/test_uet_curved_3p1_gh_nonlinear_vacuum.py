@@ -1,4 +1,5 @@
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import hashlib
 import json
@@ -16,7 +17,7 @@ from docs.core.uet_curved_3p1_generalized_harmonic import (
 )
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 VERIFY = ROOT / "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json"
 FORMULA = ROOT / "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_formula_audit.json"
 GATE = ROOT / "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_gate.json"

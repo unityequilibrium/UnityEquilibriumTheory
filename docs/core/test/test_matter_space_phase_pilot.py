@@ -1,13 +1,14 @@
 """Artifact, provenance, and claim-boundary checks for the Topic 0.11 pilot."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import hashlib
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 TOPIC = ROOT / "docs" / "topics" / "0.11_Phase_Transitions"
 DATA = TOPIC / "Data" / "03_Research"
 ARTIFACT = TOPIC / "Result" / "artifacts" / "0_11_matter_space_coupled_diagnostic.json"

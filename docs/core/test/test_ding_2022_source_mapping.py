@@ -1,10 +1,11 @@
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 ARTIFACT = ROOT / "docs/core/artifacts/ding_2022_source_mapping_audit.json"
 MAPPING = ROOT / "docs/core/artifacts/ding_2022_fig1d_series_mapping.json"
 
