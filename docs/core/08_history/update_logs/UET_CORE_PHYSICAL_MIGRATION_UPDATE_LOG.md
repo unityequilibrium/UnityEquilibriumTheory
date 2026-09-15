@@ -536,3 +536,17 @@
 - Claim impact: no change; this pass changes only migration metadata and audit state.
 - Workflow linkage: closes the post-commit checkpoint required by Core Physical Migration v3 and the shared hardening/update-log standard.
 - Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
+
+## 2026-09-15 — Core physical migration v3 — Wave 6r carrier/observer baseline family
+
+- Scope: canonical source migration for the normalized photon observer comparator and relational two-body baseline; organization and dependency-path repair only.
+- Moved: photon_observer_baseline.py and relational_two_body_baseline.py into docs/core/03_lanes/carrier_observer/.
+- Added: carrier/observer package exports, two root compatibility shims, and canonical migration regression coverage.
+- Verification: carrier/observer migration and dependent mass-density/matter-interaction tests PASS (23); photon standard comparator PASS with dependency BLOCKED; relational comparator PASS with SIMULATION_ONLY claim status; physical migration, path, migration-enforcement, import, link, and test-collection audits PASS; post-move collection reports 2,151 full / 1,325 canonical / 825 legacy tests with zero collection errors.
+- Result: legacy imports preserve class identity while canonical modules are available to the carrier/observer lane; relational mass remains a standard comparator parameter and photon remains a standard propagation/detector baseline.
+- Blocker narrowed: carrier/observer baselines now have one canonical lane path without identifying C with mass, R_gen with a photon, or the observer record with physical feedback.
+- Still open: normalized photon SI detector/source package, Lorentz-covariant signal lane, UET source-to-carrier transition law, dimensional observable mapping, and foundation remain BLOCKED.
+- Controller: commit this scoped carrier/observer move, refresh post-commit metadata, then classify the next registered family; generated-artifact mass migration remains behind its separate generator/consumer/provenance controller.
+- Claim impact: no change; this wave changes organization, exports, compatibility, and lane metadata only. No photon identity, gravity, mass, galaxy, cosmology, or particle claim was promoted.
+- Workflow linkage: follows the Core Physical Migration v3 canonical-path, compatibility-shim, and package-entrypoint policy.
+- Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.

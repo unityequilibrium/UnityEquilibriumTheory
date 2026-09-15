@@ -1,7 +1,7 @@
 {
   "schema_version": "photon-observer-baseline-v1",
   "artifact": "photon_observer_baseline_verification",
-  "generated_at": "2026-08-02",
+  "generated_at": "2026-09-15",
   "status": "PASS_WITH_OPEN_DIMENSIONAL_AND_UET_MAPPING",
   "standard_comparator_verification": "PASS",
   "dependency_status": "BLOCKED",
