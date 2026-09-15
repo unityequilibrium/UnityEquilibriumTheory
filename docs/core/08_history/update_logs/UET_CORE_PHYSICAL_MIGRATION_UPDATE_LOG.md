@@ -330,3 +330,16 @@
 - Claim impact: no change; organization migration and source-hash resolution do not promote a UET thermal prediction, SI derivation, transport derivation, or foundation claim.
 - Workflow linkage: follows the core physical migration v3 canonical-path, compatibility-shim, and generated-artifact provenance policy.
 - Notes: package imports use relative canonical dependencies and the shared repository-root resolver; no raw source data was changed.
+## 2026-09-15 — Wave 6j post-commit metadata consistency correction
+
+- Scope: migration control-plane synchronization after commit `8c996c49b`.
+- Wave type: metadata/audit correction pass.
+- Added or changed: regenerated the physical migration manifest/report, organization index, path/import/link/enforcement/physical audits, and test-collection artifact from the committed HE4 layout.
+- Verified with: physical migration, path, migration-enforcement, import, link, and test-collection audits PASS; post-commit collection reports 2,141 full / 1,315 canonical / 825 legacy tests, all with zero collection errors.
+- Result: planner reports 1,799 indexed files, 1,125 active move targets, 674 canonical/protected records, 197 compatibility assets, 2 unrelated dirty core sources, and zero duplicate targets or destination conflicts.
+- Blocker narrowed: committed HE4 source paths are now reflected in the control plane without staged-work dirt; the organization migration state is reproducible from the canonical layout.
+- Still open: 589 generated artifacts remain behind the separate generator/consumer/provenance migration controller; foundation remains `BLOCKED` and the HE4 evidence remains external/calibration support rather than a UET prediction.
+- Next controller: classify the next registered equation/lane family from dependency evidence; do not begin artifact mass migration until generator and consumer checkpoints are explicit.
+- Claim impact: no change; this pass changes only metadata and audit state.
+- Workflow linkage: closes the post-commit checkpoint required by Core Physical Migration v3 and the shared hardening/update-log standard.
+- Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
