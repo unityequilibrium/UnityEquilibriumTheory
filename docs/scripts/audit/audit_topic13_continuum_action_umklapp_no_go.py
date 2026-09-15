@@ -20,8 +20,8 @@ from docs.scripts.audit.audit_topic13_action_normalized_elastic_scattering impor
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_continuum_action_umklapp_direct_route_no_go.json"
-REGISTRY_OUT = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_umklapp_no_go_addendum.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_continuum_action_umklapp_direct_route_no_go.json"
+REGISTRY_OUT = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_umklapp_no_go_addendum.json"
 EQUATION_ID = "uet.o2.thermal.continuum_action_umklapp_direct_route_no_go"
 LATTICE_TOKENS = (
     "lattice",
@@ -91,7 +91,7 @@ def build_boundary_witness() -> dict[str, object]:
 
 def main() -> int:
     witness = build_boundary_witness()
-    parent_path = "docs/core/artifacts/t13_lattice_momentum_relaxing_heat_parent_audit.json"
+    parent_path = "docs/core/07_artifacts/topic13/t13_lattice_momentum_relaxing_heat_parent_audit.json"
     parent = json.loads((ROOT / parent_path).read_text(encoding="utf-8"))
     checks = {
         "declared_action_configs_have_no_lattice_fields": not any(witness["lattice_fields"].values()),
@@ -254,7 +254,7 @@ def main() -> int:
     REGISTRY_OUT.write_text(json.dumps({
         "schema_version": "uet-equation-registry-addendum-v1",
         "status": "STRUCTURAL_NO_GO_NOT_MERGED_AS_CORE_EQUATION",
-        "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+        "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
         "equation_entries": [entry],
         "full_core_unlock": False,
         "claim_promotion": False,

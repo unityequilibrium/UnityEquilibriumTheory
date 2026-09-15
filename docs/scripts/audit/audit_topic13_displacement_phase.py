@@ -82,7 +82,7 @@ def main():
         dependency_unlocked=[],full_core_unlock=False,global_claim_promotion=False,
         claim_boundary='Only declared same-cell harmonic readout closes. No whole-layer average, local-slip equivalence, alpha or full-topic closure.',
         evidence_artifacts=[dict(path=p.relative_to(ROOT).as_posix(),sha256=sha256(p.read_bytes()).hexdigest()) for p in paths])
-    (ROOT/'docs/core/artifacts/t13_displacement_phase.json').write_text(json.dumps(artifact,indent=2,allow_nan=False)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_displacement_phase.json').write_text(json.dumps(artifact,indent=2,allow_nan=False)+'\n')
     print(json.dumps(rows),flush=True)
 
 

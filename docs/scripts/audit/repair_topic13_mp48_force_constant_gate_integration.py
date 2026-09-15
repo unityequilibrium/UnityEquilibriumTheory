@@ -19,8 +19,8 @@ replace_once(
     "registry mapping",
 )
 replace_once(
-    '    spectral_csrc_path, spectral_csrc = load(\n        "docs/core/artifacts/t13_mp48_spectral_csrc_reproduction_audit.json"\n    )\n',
-    '    spectral_csrc_path, spectral_csrc = load(\n        "docs/core/artifacts/t13_mp48_spectral_csrc_reproduction_audit.json"\n    )\n    force_constant_path, force_constant = load(\n        "docs/core/artifacts/t13_mp48_force_constant_harmonic_reconstruction_audit.json"\n    )\n',
+    '    spectral_csrc_path, spectral_csrc = load(\n        "docs/core/07_artifacts/topic13/t13_mp48_spectral_csrc_reproduction_audit.json"\n    )\n',
+    '    spectral_csrc_path, spectral_csrc = load(\n        "docs/core/07_artifacts/topic13/t13_mp48_spectral_csrc_reproduction_audit.json"\n    )\n    force_constant_path, force_constant = load(\n        "docs/core/07_artifacts/topic13/t13_mp48_force_constant_harmonic_reconstruction_audit.json"\n    )\n',
     "force-constant artifact load",
 )
 replace_once(

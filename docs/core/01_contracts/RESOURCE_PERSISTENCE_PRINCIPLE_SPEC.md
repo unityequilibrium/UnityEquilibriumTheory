@@ -115,8 +115,8 @@ map_behavior_path_cost_to_measured_work_heat_or_entropy_in_one_declared_physical
 
 Current controlling artifacts:
 
-- docs/core/artifacts/resource_persistence_principle_contract.json
-- docs/core/artifacts/persistence_energy_diagnostic_verification.json
+- docs/core/07_artifacts/provenance/resource_persistence_principle_contract.json
+- docs/core/07_artifacts/verification/persistence_energy_diagnostic_verification.json
 
 ## Dynamic-selection control result ? 2026-08-08
 

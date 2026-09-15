@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/artifacts/t13_nist_srm_3600_heat_capacity_boundary_audit.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_nist_srm_3600_heat_capacity_boundary_audit.json"
 RAW = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nist_srm_3600_glassy_carbon_heat_capacity.pdf"
 FULL_GATE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
 

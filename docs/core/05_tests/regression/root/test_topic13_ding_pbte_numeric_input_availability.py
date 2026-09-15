@@ -10,13 +10,13 @@ PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "ding_2022_pbte_numeric_input_availability_package.json"
 )
-AUDIT = ROOT / "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json"
-ENERGY = ROOT / "docs/core/artifacts/t13_energy_response_bridge_audit.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_ding_pbte_numeric_input_availability_audit.json"
+ENERGY = ROOT / "docs/core/07_artifacts/topic13/t13_energy_response_bridge_audit.json"
 GATE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
     "topic13_full_thermodynamic_bridge_core_ready_gate.json"
 )
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
 
 
 def load(path: Path) -> dict:

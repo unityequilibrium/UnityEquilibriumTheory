@@ -1,26 +1,22 @@
-#!/usr/bin/env python3
-"""
-Clean up temporary log reports
-"""
+"""Compatibility shim for the migrated core tooling path."""
 
+from __future__ import annotations
+
+import runpy
 from pathlib import Path
 
-maintenance_dir = Path("docs/scripts/maintenance")
+_CANONICAL_RELATIVE = "docs/scripts/core/maintenance/log/cleanup_reports.py"
 
-# Find all temporary report files
-report_files = [
-    "log_analysis_report.csv",
-    "log_analysis_report.json",
-    "log_health_report.json",
-    "log_reset_report.json"
-]
 
-deleted_count = 0
-for filename in report_files:
-    file_path = maintenance_dir / filename
-    if file_path.exists():
-        file_path.unlink()
-        print(f"Deleted: {filename}")
-        deleted_count += 1
+def _run() -> None:
+    current = Path(__file__).resolve()
+    for ancestor in (current.parent, *current.parents):
+        candidate = ancestor / _CANONICAL_RELATIVE
+        if candidate.exists():
+            runpy.run_path(str(candidate), run_name="__main__")
+            return
+    raise FileNotFoundError(f"canonical tooling script not found: {_CANONICAL_RELATIVE}")
 
-print(f"\nCleaned up {deleted_count} temporary report files")
+
+if __name__ == "__main__":
+    _run()

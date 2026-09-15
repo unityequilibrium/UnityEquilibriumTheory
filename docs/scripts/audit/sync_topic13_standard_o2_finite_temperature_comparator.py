@@ -12,12 +12,12 @@ from docs.core.core_paths import canonical_existing_path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-AUDIT_REL = "docs/core/artifacts/t13_standard_o2_finite_temperature_comparator_audit.json"
+AUDIT_REL = "docs/core/07_artifacts/topic13/t13_standard_o2_finite_temperature_comparator_audit.json"
 MODULE_REL = "docs/core/standard_o2_finite_temperature_comparator.py"
 EOS_REL = "docs/core/uet_o2_finite_density_eos.py"
 FULL_REL = "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-REGISTER_REL = "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY_REL = "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+REGISTER_REL = "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY_REL = "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 FORMULA_REL = "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md"
 REPORT_REL = "docs/topics/0.13_Thermodynamic_Bridge/FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md"
 LOG_REL = "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"

@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parents[3]
 MODULE_REL = "docs/core/uet_o2_renormalized_normal_branch.py"
 NORMAL_REL = "docs/core/uet_o2_one_loop_normal_branch.py"
 CURVATURE_REL = "docs/core/uet_o2_normal_response_curvature.py"
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_renormalized_normal_branch_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_renormalized_normal_branch_audit.json"
 
 TEMPERATURE = 0.35
 CHEMICAL_POTENTIAL = 0.2

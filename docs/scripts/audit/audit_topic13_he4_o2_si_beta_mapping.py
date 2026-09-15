@@ -27,10 +27,10 @@ DENSITY = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "he4_svp_o2_physical_anchor_source_package.json"
 )
-CALIBRATION = ROOT / "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json"
-ACTION_BETA = ROOT / "docs/core/artifacts/t13_uet_o2_action_thermal_stiffness_beta_audit.json"
+CALIBRATION = ROOT / "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json"
+ACTION_BETA = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_action_thermal_stiffness_beta_audit.json"
 MODULE = ROOT / "docs/core/he4_o2_si_beta_mapping.py"
-OUT = ROOT / "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json"
 
 
 def load(path: Path) -> dict:

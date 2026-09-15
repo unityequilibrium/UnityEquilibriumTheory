@@ -45,7 +45,7 @@ def witness(temperature, gradient=-0.01, coefficient=1.0):
 
 
 def main():
-    historical_path = ROOT / "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json"
+    historical_path = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json"
     old = json.loads(historical_path.read_text(encoding="utf-8"))["state"]
     current = asdict(covariant_entropy_heat_flux_balance_state(.22, .35, .15))
     witnesses = [witness(t) for t in (.22, .5, 1., 2.)]
@@ -78,9 +78,9 @@ def main():
             "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py",
             "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
             "docs/core/uet_o2_continuum_collision_operator.py",
-            "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json")],
+            "docs/core/07_artifacts/topic13/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json")],
     }
-    target = ROOT / "docs/core/artifacts/t13_entropy_force_convention_audit.json"
+    target = ROOT / "docs/core/07_artifacts/topic13/t13_entropy_force_convention_audit.json"
     target.write_text(json.dumps(result, indent=2, allow_nan=False)+"\n", encoding="utf-8")
     print(json.dumps({"status": result["status"], "witnesses": result["witnesses"],
                       "kappa_comparison": result["current_reference_comparison"]["kappa_natural"]}, indent=2))

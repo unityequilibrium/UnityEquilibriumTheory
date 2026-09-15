@@ -100,7 +100,7 @@ def test_nonpositive_stability_input_fails_closed(field):
 def test_generated_thermoelastic_artifact_is_scoped_and_hash_linked():
     root = repo_root()
     artifact_path = (
-        root / "docs/core/artifacts/t13_scalar_thermoelastic_response_bridge_audit.json"
+        root / "docs/core/07_artifacts/topic13/t13_scalar_thermoelastic_response_bridge_audit.json"
     )
     registry_path = root / (
         "docs/core/artifacts/"

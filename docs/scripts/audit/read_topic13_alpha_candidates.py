@@ -17,9 +17,9 @@ def pick(obj: dict, *keys: str):
 
 def main() -> None:
     artifact_paths = [
-        ROOT / "docs/core/artifacts/t13_base_phi_independent_calibration_requirement.json",
-        ROOT / "docs/core/artifacts/t13_energy_response_bridge_audit.json",
-        ROOT / "docs/core/artifacts/t13_alpha_phi_k_identifiability_audit.json",
+        ROOT / "docs/core/07_artifacts/topic13/t13_base_phi_independent_calibration_requirement.json",
+        ROOT / "docs/core/07_artifacts/topic13/t13_energy_response_bridge_audit.json",
+        ROOT / "docs/core/07_artifacts/topic13/t13_alpha_phi_k_identifiability_audit.json",
     ]
     for path in artifact_paths:
         obj = load(path)

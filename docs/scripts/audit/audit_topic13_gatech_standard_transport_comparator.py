@@ -14,9 +14,9 @@ PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "gatech_gen3csp_graphite_source_package.json"
 )
-SOURCE_AUDIT = ROOT / "docs/core/artifacts/t13_gatech_graphite_source_audit.json"
+SOURCE_AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_gatech_graphite_source_audit.json"
 RAW = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/gen3csp_graphite.xlsx"
-OUT = ROOT / "docs/core/artifacts/t13_gatech_standard_transport_comparator_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_gatech_standard_transport_comparator_audit.json"
 
 
 def load(path: Path) -> dict:
@@ -117,8 +117,8 @@ def main() -> int:
         "separation of Fourier/Cattaneo synthetic controls from UET Phi-response and trace-only lanes",
     ] if status.startswith("PASS") else []
     report["major_result"]["evidence_artifacts"] = [
-        {"path": "docs/core/artifacts/t13_gatech_standard_transport_comparator_audit.json"},
-        {"path": "docs/core/artifacts/t13_gatech_graphite_source_audit.json", "sha256": sha256(SOURCE_AUDIT)},
+        {"path": "docs/core/07_artifacts/topic13/t13_gatech_standard_transport_comparator_audit.json"},
+        {"path": "docs/core/07_artifacts/topic13/t13_gatech_graphite_source_audit.json", "sha256": sha256(SOURCE_AUDIT)},
         {"path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/gatech_gen3csp_graphite_source_package.json", "sha256": sha256(PACKAGE)},
         {"path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/gen3csp_graphite.xlsx", "sha256": sha256(RAW)},
     ]

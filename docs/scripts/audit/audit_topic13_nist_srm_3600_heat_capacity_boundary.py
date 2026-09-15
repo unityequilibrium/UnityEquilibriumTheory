@@ -20,7 +20,7 @@ SOURCE_PATH = (
     / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
     / "nist_srm_3600_glassy_carbon_heat_capacity.pdf"
 )
-OUT = ROOT / "docs/core/artifacts/t13_nist_srm_3600_heat_capacity_boundary_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_nist_srm_3600_heat_capacity_boundary_audit.json"
 
 EXPECTED_SHA256 = "5bbbd0e3949a1e38cbb7ec00bbfc1a75a9d4708f6a0656e5e49c8d44d32ba5da"
 EXPECTED_BYTES = 758635
@@ -155,7 +155,7 @@ def build_artifact() -> dict[str, Any]:
                     "locator": "official NIST PDF, Figure 3 and section 4.1",
                 },
                 {
-                    "path": "docs/core/artifacts/t13_nist_srm_3600_heat_capacity_boundary_audit.json",
+                    "path": "docs/core/07_artifacts/topic13/t13_nist_srm_3600_heat_capacity_boundary_audit.json",
                     "source_record_sha256": source_record_sha256,
                 },
             ],

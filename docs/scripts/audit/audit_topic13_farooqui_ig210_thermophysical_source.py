@@ -18,7 +18,7 @@ RAW = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
     "farooqui_2022_ig210_thermophysical_table.pdf"
 )
-OUT = ROOT / "docs/core/artifacts/t13_farooqui_ig210_thermophysical_source_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_farooqui_ig210_thermophysical_source_audit.json"
 
 EXPECTED_SIZE = 4116498
 EXPECTED_MD5 = "95237ebba081f28e48d5ee7ec88babe8"

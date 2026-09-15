@@ -10,11 +10,11 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-CONTRACT = ROOT / "docs/core/artifacts/uet_research_room_wave1_contract.json"
-REGISTRY = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry.json"
-GATE = ROOT / "docs/core/artifacts/uet_research_room_wave1_integration_gate.json"
+CONTRACT = ROOT / "docs/core/07_artifacts/archive/uet_research_room_wave1_contract.json"
+REGISTRY = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json"
+GATE = ROOT / "docs/core/07_artifacts/gates/uet_research_room_wave1_integration_gate.json"
 NOTE = ROOT / "docs/core/UET_RESEARCH_ROOM_WAVE1_INTEGRATION_NOTE.md"
-INBOX_DRIFT = ROOT / "docs/core/artifacts/inbox_research_alignment_drift_note.json"
+INBOX_DRIFT = ROOT / "docs/core/07_artifacts/archive/inbox_research_alignment_drift_note.json"
 
 
 def rel(path: Path) -> str:

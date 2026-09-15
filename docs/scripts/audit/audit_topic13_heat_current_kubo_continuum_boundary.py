@@ -22,9 +22,9 @@ from docs.core.uet_o2_heat_current_kubo_continuum_boundary import (  # noqa: E40
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_heat_current_kubo_continuum_boundary_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_heat_current_kubo_continuum_boundary_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_heat_current_kubo_continuum_boundary.py"
-HEAT_MATCH_REL = "docs/core/artifacts/t13_uet_o2_heat_current_kubo_match_audit.json"
+HEAT_MATCH_REL = "docs/core/07_artifacts/topic13/t13_uet_o2_heat_current_kubo_match_audit.json"
 COLLISION_MODULE = ROOT / "docs/core/uet_o2_continuum_collision_operator.py"
 BALANCE_MODULE = ROOT / "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py"
 

@@ -27,8 +27,8 @@ SOURCE_ROWS = ROOT / (
     "he4_svp_o2_physical_anchor_source_package.json"
 )
 MODULE = ROOT / "docs/core/he4_o2_response_calibration.py"
-NATURAL_BRIDGE = ROOT / "docs/core/artifacts/t13_uet_o2_action_thermal_observable_bridge_audit.json"
-OUT = ROOT / "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json"
+NATURAL_BRIDGE = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_action_thermal_observable_bridge_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json"
 
 
 def load(path: Path) -> dict:

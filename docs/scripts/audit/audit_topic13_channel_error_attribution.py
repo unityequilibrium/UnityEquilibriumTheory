@@ -88,8 +88,8 @@ def main():
             "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
             "docs/core/uet_o2_action_thermal_observable_bridge.py",
             "docs/core/uet_o2_action_thermal_stiffness_beta.py",
-            "docs/core/artifacts/t13_local_quadratic_bounds_audit.json")])
-    (ROOT/"docs/core/artifacts/t13_channel_error_attribution_audit.json").write_text(json.dumps(r,indent=2,allow_nan=False)+"\n",encoding="utf-8")
+            "docs/core/07_artifacts/topic13/t13_local_quadratic_bounds_audit.json")])
+    (ROOT/"docs/core/07_artifacts/topic13/t13_channel_error_attribution_audit.json").write_text(json.dumps(r,indent=2,allow_nan=False)+"\n",encoding="utf-8")
     print(json.dumps({key:r[key] for key in ("relative_gram_error","witness_eigenvalue","reconstruction_residual",
         "rate_concentration_inverse_sum_squares","reference_concentration_inverse_sum_squares",
         "top_five_absolute_witness_fraction","outside_absolute_witness_fraction")}))

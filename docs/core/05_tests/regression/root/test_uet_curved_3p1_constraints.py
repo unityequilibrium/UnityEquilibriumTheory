@@ -22,10 +22,10 @@ from docs.core.uet_curved_3p1_constraints import (
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/artifacts/curved_3p1_adm_constraint_interface_audit.json"
-GATE = ROOT / "docs/core/artifacts/core_curved_3p1_parent_gate.json"
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY = ROOT / "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/verification/curved_3p1_adm_constraint_interface_audit.json"
+GATE = ROOT / "docs/core/07_artifacts/gates/core_curved_3p1_parent_gate.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 
 
 def test_minkowski_vacuum_constraints_vanish() -> None:

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_foundation_compatibility_gate",
-  "generated_at": "2026-09-09",
+  "generated_at": "2026-09-14",
   "audit_status": "PASS",
   "compatibility_status": "BLOCKED",
   "controlling_blockers": [
@@ -24,7 +24,7 @@
       "NOT_ESTABLISHED": 6,
       "REJECTED_REDUCTION": 1
     },
-    "registry_entry_count": 47,
+    "registry_entry_count": 62,
     "registry_coverage_status": "INITIAL_SEED_NOT_EXHAUSTIVE",
     "legacy_alignment_gate_status": "BLOCKED",
     "matter_space_dependency_status": "BLOCKED",
@@ -660,7 +660,7 @@
     "docs/core/uet_parameters.py": "eff2fc6fe0fe35f18c49a032729e385c97b633a90e9a0bd3789be5051d316651",
     "docs/core/MATTER_SPACE_RESEARCH_SPEC.md": "3fca7d82e7f0c0c5e7904811eec7d81d772fe802492dbf2147b1ee95232fb2a4",
     "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md": "1609cfdada2ad9e67ebcb8e9ae53f2f3f035fdc70469424e486eb3f7e53c1f86",
-    "docs/core/artifacts/uet_equation_correspondence_registry.json": "b0633c9764f64280a28355b4ebe73f0d5ec0fa915563cc18ae3d46665526c5d9",
+    "docs/core/artifacts/uet_equation_correspondence_registry.json": "9fd592d590291dea95e793cc8211e052004c33302c8585dae2c7e3d80676d307",
     "docs/core/artifacts/master_equation_alignment_gate_v2.json": "b2184ce72accffcb1baf609bfb3db789247fc387b30413996f49a74a794a3515",
     "docs/core/artifacts/matter_space_formula_audit.json": "b601c8a92201660aee06c4f577521e4fe0b421d7f9b047616e23ca9dd846d0da",
     "docs/core/artifacts/matter_space_variational_verification.json": "e5ae26fb40ff6cd4a0d1d0c86576e91218294e683902bb60b6afb0b2596cc62c",

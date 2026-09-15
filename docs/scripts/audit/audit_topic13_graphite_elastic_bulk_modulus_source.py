@@ -24,7 +24,7 @@ RAW_PATH = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
     "bosak_2007_graphite_elasticity.pdf"
 )
-OUT = ROOT / "docs/core/artifacts/t13_graphite_elastic_bulk_modulus_source_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_graphite_elastic_bulk_modulus_source_audit.json"
 EXPECTED_RAW_SHA256 = "5db6247c3dbf48dcbed70d749da96ca61816fe6fed480f32d80a947ead649d7d"
 
 

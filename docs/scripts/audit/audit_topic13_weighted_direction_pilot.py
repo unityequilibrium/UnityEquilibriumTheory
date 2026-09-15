@@ -39,7 +39,7 @@ def main():
             "docs/core/uet_o2_action_thermal_observable_bridge.py",
             "docs/core/uet_o2_action_thermal_stiffness_beta.py",
             "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py")])
-    out = ROOT / "docs/core/artifacts/t13_weighted_direction_pilot.json"
+    out = ROOT / "docs/core/07_artifacts/topic13/t13_weighted_direction_pilot.json"
     def save():
         out.write_text(json.dumps(record, indent=2, allow_nan=False)+"\n", encoding="utf-8")
     save()

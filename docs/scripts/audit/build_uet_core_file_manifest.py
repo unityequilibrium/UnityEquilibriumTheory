@@ -191,7 +191,7 @@ def classify(path: Path, families: dict[str, dict[str, Any]], unlinked: set[str]
                     logical_area="02_equations",
                     owner_family_or_lane=family.get("family_id"),
                     registry_link_status="REVIEW_REQUIRED",
-                    status_source="docs/core/artifacts/uet_core_equation_family_contract.json",
+                    status_source="docs/core/07_artifacts/archive/uet_core_equation_family_contract.json",
                     review_action="complete_bounded_family_link_review",
                 )
                 return record
@@ -201,7 +201,7 @@ def classify(path: Path, families: dict[str, dict[str, Any]], unlinked: set[str]
                 logical_area="02_equations" if is_equation else "03_lanes",
                 owner_family_or_lane=family.get("family_id"),
                 registry_link_status="LINKED_BY_FAMILY_CONTRACT",
-                status_source="docs/core/artifacts/uet_core_equation_family_contract.json",
+                status_source="docs/core/07_artifacts/archive/uet_core_equation_family_contract.json",
                 review_action="update_family_record_when_surface_changes",
             )
             return record
@@ -211,7 +211,7 @@ def classify(path: Path, families: dict[str, dict[str, Any]], unlinked: set[str]
                 logical_area="99_review",
                 owner_family_or_lane="REVIEW_REQUIRED",
                 registry_link_status="REVIEW_REQUIRED",
-                status_source="docs/core/artifacts/uet_code_surface_inventory.json",
+                status_source="docs/core/07_artifacts/archive/uet_code_surface_inventory.json",
                 review_action="assign_family_or_quarantine",
             )
             return record

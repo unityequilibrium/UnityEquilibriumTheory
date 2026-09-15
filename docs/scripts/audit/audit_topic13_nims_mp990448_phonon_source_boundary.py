@@ -31,7 +31,7 @@ PACKAGE_REL = (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "nims_mdr_mp990448_phonon_source_package.json"
 )
-OUT_REL = "docs/core/artifacts/t13_nims_mp990448_phonon_source_boundary_audit.json"
+OUT_REL = "docs/core/07_artifacts/topic13/t13_nims_mp990448_phonon_source_boundary_audit.json"
 COLLECTION_URL = "https://mdr.nims.go.jp/collections/d7aab932-8512-4b9a-b93d-b61f6e5e7019?locale=en"
 DATASET_URL = "https://mdr.nims.go.jp/datasets/5383108b-180d-4eb0-a34f-b28ff9e430d7"
 ZIP_URL = f"{DATASET_URL}.zip"

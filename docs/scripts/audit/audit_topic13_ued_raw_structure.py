@@ -69,7 +69,7 @@ def compare_cuts(a, b):
 
 
 def main():
-    source = ROOT/'docs/core/artifacts/t13_ued_raw_archive_audit.json'
+    source = ROOT/'docs/core/07_artifacts/topic13/t13_ued_raw_archive_audit.json'
     acquisition = json.loads(source.read_text())
     for p,h in acquisition['evidence_hashes'].items():
         if digest(ROOT/p) != h: raise ValueError('stale source evidence')
@@ -106,7 +106,7 @@ def main():
         dependency_unlocked=['source-specific acquisition and sensor provenance research only'],
         full_core_unlock=False, claim_promotion=False, untrusted_callables_invoked=False,
         claim_boundary='No shot-level claim, physical covariance, alpha calibration or holdout access. nimages metadata alone does not expose individual frames.')
-    (ROOT/'docs/core/artifacts/t13_ued_raw_structure_audit.json').write_text(json.dumps(result,indent=2,allow_nan=False)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_ued_raw_structure_audit.json').write_text(json.dumps(result,indent=2,allow_nan=False)+'\n')
     print(json.dumps(dict(tables=[{k:t[k] for k in ('member','row_count','scalar_ranges')} for t in tables], cut_comparison=result['cut_comparison']),indent=2))
 
 

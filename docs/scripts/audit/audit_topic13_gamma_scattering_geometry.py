@@ -32,7 +32,7 @@ def main():
     cell = model.primitive
     reciprocal = 2*np.pi*np.linalg.inv(cell.cell).T
     pairs = [[3, 4], [8, 9]]
-    identity_path = ROOT/'docs/core/artifacts/t13_mp48_e2g_multiplicity_audit.json'
+    identity_path = ROOT/'docs/core/07_artifacts/topic13/t13_mp48_e2g_multiplicity_audit.json'
     identity = json.loads(identity_path.read_text())
     if [r['indices'] for r in identity['eigenspaces'] if r['e2g']] != pairs:
         raise ValueError('source branch identity changed')
@@ -49,7 +49,7 @@ def main():
     singular = np.linalg.svd(table/np.where(norms > 0, norms, 1), compute_uv=False)
     evidence = list(LOCKS)+[Path(__file__), identity_path, ROOT/'docs/core/test/test_topic13_gamma_scattering_geometry.py',
                           ROOT/'docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py',
-                          ROOT/'docs/core/artifacts/uet_equation_correspondence_registry_topic13_gamma_geometry_addendum.json']
+                          ROOT/'docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_gamma_geometry_addendum.json']
     artifact = dict(major_result_id='T13_GAMMA_SCATTERING_GEOMETRY', topic='0.13', closure_level='PARTIAL',
         what_is_closed=['Pair-resolved ideal Gamma geometry evaluated at six basal reciprocal vectors'],
         equation_registry_ids=['uet.diagnostic.gamma_one_phonon_geometry'],
@@ -66,7 +66,7 @@ def main():
         full_core_unlock=False, claim_promotion=False, dependency_unlocked=['finite-q forward-model design only'],
         evidence_hashes={str(p.relative_to(ROOT)).replace('\\', '/'): hashlib.sha256(p.read_bytes()).hexdigest() for p in evidence},
         claim_boundary='Gamma ideal geometry only; no population inversion or experimental identifiability proof. Original grouping uncertainty retained upstream.')
-    (ROOT/'docs/core/artifacts/t13_gamma_scattering_geometry_audit.json').write_text(json.dumps(artifact, indent=2, allow_nan=False)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_gamma_scattering_geometry_audit.json').write_text(json.dumps(artifact, indent=2, allow_nan=False)+'\n')
     print(json.dumps(dict(rows=rows, singular_values=singular.tolist()), indent=2))
 
 

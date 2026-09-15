@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-AUDIT = ROOT / "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json"
 
 
 def test_he4_thermodynamic_bridge_composition_is_core_ready() -> None:

@@ -38,8 +38,8 @@ def main():
             "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py",
             "docs/core/uet_o2_action_thermal_observable_bridge.py",
             "docs/core/uet_o2_action_thermal_stiffness_beta.py",
-            "docs/core/artifacts/t13_transition_coordinate_map_audit.json")])
-    out=ROOT/"docs/core/artifacts/t13_transition_pullback_pilot.json"
+            "docs/core/07_artifacts/topic13/t13_transition_coordinate_map_audit.json")])
+    out=ROOT/"docs/core/07_artifacts/topic13/t13_transition_pullback_pilot.json"
     def save():
         out.write_text(json.dumps(r,indent=2,allow_nan=False)+"\n",encoding="utf-8")
     save()

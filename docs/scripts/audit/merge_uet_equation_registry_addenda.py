@@ -14,30 +14,30 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-REGISTRY = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry.json"
+REGISTRY = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json"
 ADDENDA = (
-    ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_impact_effect_addendum.json",
-    ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_cosmology_addendum.json",
-    ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_persistence_addendum.json",
-    ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_wave_addendum.json",
-    ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_sunset_width_addendum.json",
-    ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_contact_sk_addendum.json",
-    ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_current_correlator_addendum.json",
-    ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_tree_level_charged_ward_addendum.json",
-    ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_thermodynamic_normal_component_addendum.json",
-    ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_condensed_relative_flow_addendum.json",
-    ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_continuum_relative_flow_addendum.json",
-    ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_condensed_loop_vertex_addendum.json",
-    ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_mass_density_addendum.json",
-    ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_main_theory_addendum.json",
-    ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_coarse_graining_addendum.json",
-    ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_open_system_addendum.json",
-    ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_theory_spine_addendum.json",
-    ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_quantum_measurement_addendum.json",
-    ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_quantum_interpretations_addendum.json",
-    ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_gr_controls_addendum.json",
-    ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_dynamical_stability_addendum.json",
-    ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_matter_space_flux_addendum.json",
+    ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_impact_effect_addendum.json",
+    ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_cosmology_addendum.json",
+    ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_persistence_addendum.json",
+    ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_wave_addendum.json",
+    ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_sunset_width_addendum.json",
+    ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_contact_sk_addendum.json",
+    ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_current_correlator_addendum.json",
+    ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_tree_level_charged_ward_addendum.json",
+    ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_thermodynamic_normal_component_addendum.json",
+    ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_condensed_relative_flow_addendum.json",
+    ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_continuum_relative_flow_addendum.json",
+    ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_condensed_loop_vertex_addendum.json",
+    ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_mass_density_addendum.json",
+    ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_main_theory_addendum.json",
+    ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_coarse_graining_addendum.json",
+    ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_open_system_addendum.json",
+    ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_theory_spine_addendum.json",
+    ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_quantum_measurement_addendum.json",
+    ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_quantum_interpretations_addendum.json",
+    ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_gr_controls_addendum.json",
+    ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_dynamical_stability_addendum.json",
+    ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_matter_space_flux_addendum.json",
 )
 
 

@@ -88,7 +88,7 @@ def main():
                     dependency_unlocked=['branch-aware source selection only'],
                     evidence_hashes={str(p.relative_to(ROOT)).replace('\\', '/'): hashlib.sha256(p.read_bytes()).hexdigest() for p in evidence},
                     claim_boundary='Source Gamma identification only; does not prove which mode dominates UED, equate Phi to a phonon, or transfer fitted EELS temperatures.')
-    (ROOT/'docs/core/artifacts/t13_mp48_e2g_multiplicity_audit.json').write_text(json.dumps(artifact, indent=2, allow_nan=False)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_mp48_e2g_multiplicity_audit.json').write_text(json.dumps(artifact, indent=2, allow_nan=False)+'\n')
     print(json.dumps(dict(checks=checks, e2g_pairs=pairs), indent=2))
     if not all(checks.values()):
         raise RuntimeError('source multiplicity unresolved')

@@ -17,11 +17,11 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-CODE_PATH = ROOT / "docs/core/artifacts/uet_code_surface_inventory.json"
-FORMULA_PATH = ROOT / "docs/core/artifacts/uet_foundation_equation_inventory.json"
-FAMILY_PATH = ROOT / "docs/core/artifacts/uet_core_equation_family_contract.json"
-REGISTRY_PATH = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry.json"
-OUT = ROOT / "docs/core/artifacts/uet_foundation_coverage_closure.json"
+CODE_PATH = ROOT / "docs/core/07_artifacts/archive/uet_code_surface_inventory.json"
+FORMULA_PATH = ROOT / "docs/core/07_artifacts/gates/uet_foundation_equation_inventory.json"
+FAMILY_PATH = ROOT / "docs/core/07_artifacts/archive/uet_core_equation_family_contract.json"
+REGISTRY_PATH = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json"
+OUT = ROOT / "docs/core/07_artifacts/gates/uet_foundation_coverage_closure.json"
 
 
 def load(path: Path) -> dict[str, Any]:

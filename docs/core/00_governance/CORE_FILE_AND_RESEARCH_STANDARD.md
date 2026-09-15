@@ -24,11 +24,11 @@ notes, update logs และ generated artifacts อยู่ร่วม namesp
 
 เมื่อข้อมูลขัดกัน ให้ใช้ลำดับนี้:
 
-1. `docs/core/artifacts/uet_foundation_dependency_gate.json`
-2. `docs/core/artifacts/uet_equation_correspondence_registry.json`
-3. `docs/core/artifacts/uet_foundation_equation_inventory.json`
-4. `docs/core/artifacts/uet_code_surface_inventory.json`
-5. `docs/core/artifacts/uet_core_equation_family_contract.json`
+1. `docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json`
+2. `docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json`
+3. `docs/core/07_artifacts/gates/uet_foundation_equation_inventory.json`
+4. `docs/core/07_artifacts/archive/uet_code_surface_inventory.json`
+5. `docs/core/07_artifacts/archive/uet_core_equation_family_contract.json`
 6. specification และ formula-audit ที่ถูก link จาก artifact
 7. `README.md`, research report และ update log
 
@@ -59,17 +59,17 @@ Prose ที่มีจำนวนหรือสถานะเก่าก�
 ไฟล์ควบคุมคือ:
 
 - generator: `docs/scripts/audit/build_uet_core_file_manifest.py`
-- manifest: `docs/core/artifacts/uet_core_file_manifest.json`
+- manifest: `docs/core/07_artifacts/provenance/uet_core_file_manifest.json`
 - human index: `docs/core/CORE_FILE_INDEX.md`
 - organization policy: `docs/core/00_governance/uet_research_organization_policy.json`
 - organization registry generator: `docs/scripts/audit/build_uet_research_organization_registry_v2.py`
-- organization registry: `docs/core/artifacts/uet_research_organization_registry.json`
-- migration map: `docs/core/artifacts/uet_core_file_migration_map.json`
-- organization audit: `docs/core/artifacts/uet_core_organization_audit.json`
-- scientific-link audit: `docs/core/artifacts/uet_core_scientific_link_audit.json`
-- equation-family contract: `docs/core/artifacts/uet_core_equation_family_contract.json`
+- organization registry: `docs/core/07_artifacts/gates/uet_research_organization_registry.json`
+- migration map: `docs/core/07_artifacts/archive/uet_core_file_migration_map.json`
+- organization audit: `docs/core/07_artifacts/gates/uet_core_organization_audit.json`
+- scientific-link audit: `docs/core/07_artifacts/verification/uet_core_scientific_link_audit.json`
+- equation-family contract: `docs/core/07_artifacts/archive/uet_core_equation_family_contract.json`
 - central formula correspondence registry:
-  `docs/core/artifacts/uet_equation_correspondence_registry.json`
+  `docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json`
 
 ทุก record ต้องมีอย่างน้อย:
 

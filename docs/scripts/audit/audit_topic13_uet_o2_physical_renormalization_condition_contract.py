@@ -23,7 +23,7 @@ from docs.core.uet_o2_physical_renormalization_condition_contract import (  # no
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_physical_renormalization_condition_contract.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_physical_renormalization_condition_contract.json"
 MODULE = ROOT / "docs/core/uet_o2_physical_renormalization_condition_contract.py"
 
 

@@ -43,7 +43,7 @@ def probe_errors(s,p,e,target_p,target_e,mass):
 
 
 def main():
-    plan_path="docs/core/artifacts/t13_moment_interpolation_plan.json"
+    plan_path="docs/core/07_artifacts/topic13/t13_moment_interpolation_plan.json"
     plan=json.loads((ROOT/plan_path).read_text()); state=plan["state"]; config=natural_bridge_config()
     eos=finite_temperature_o2_state(*state,config); h=(eos.energy_density+eos.pressure)/eos.charge_density
     exact=action_derived_transition_kernel_state(*state,config,quadrature_order=plan["transition_quadrature_order"],
@@ -71,7 +71,7 @@ def main():
             "docs/core/uet_o2_action_thermal_observable_bridge.py",
             "docs/core/uet_o2_action_thermal_stiffness_beta.py",
             "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py")])
-    out=ROOT/"docs/core/artifacts/t13_moment_interpolation_audit.json"
+    out=ROOT/"docs/core/07_artifacts/topic13/t13_moment_interpolation_audit.json"
     def save(): out.write_text(json.dumps(record,indent=2,allow_nan=False)+"\n",encoding="utf-8")
     save()
     for rule in plan["direction_rules"]:

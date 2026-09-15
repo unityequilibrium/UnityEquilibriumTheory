@@ -22,4 +22,4 @@ NEXT_ACTION: Obtain an allowed state-matched retarded correlator or derive a mic
 
 CLAIM_BOUNDARY: This is a scoped structural no-go for the current conservative condensed action. It is not a physical Kubo coefficient, a complete two-fluid transport theory, an SI `Phi` map, an `alpha_Phi_K` calibration, a TTG prediction, or Full Topic 13 closure.
 
-Evidence: `docs/core/artifacts/t13_uet_o2_condensed_retarded_dissipation_no_go_audit.json`.
+Evidence: `docs/core/07_artifacts/topic13/t13_uet_o2_condensed_retarded_dissipation_no_go_audit.json`.

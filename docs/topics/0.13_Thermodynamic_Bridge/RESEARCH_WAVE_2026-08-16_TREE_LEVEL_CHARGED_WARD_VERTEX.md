@@ -13,4 +13,4 @@ CONTROLLING_BLOCKER: `loop_renormalized_off_shell_self_energy_and_current_vertex
 NEXT_ACTION: Derive and renormalize the finite-temperature retarded self-energy and current vertex together through the SK/KMS action, then test continuum control before physical Kubo admission.
 CLAIM_BOUNDARY: This is a tree-level natural-unit normal-branch Ward identity only. It is not a loop-renormalized physical vertex, Kubo coefficient, SI observable, TTG prediction, or Full Topic 13 closure.
 
-EVIDENCE: `docs/core/artifacts/t13_uet_o2_tree_level_charged_ward_vertex_audit.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/artifacts/uet_equation_correspondence_registry.json`.
+EVIDENCE: `docs/core/07_artifacts/topic13/t13_uet_o2_tree_level_charged_ward_vertex_audit.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json`.

@@ -9,9 +9,9 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-WAVE1 = ROOT / "docs/core/artifacts/uet_research_room_wave1_contract.json"
-CONTRACT = ROOT / "docs/core/artifacts/uet_major_result_closure_contract.json"
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
+WAVE1 = ROOT / "docs/core/07_artifacts/archive/uet_research_room_wave1_contract.json"
+CONTRACT = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_contract.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
 
 
 def sha256(path: Path) -> str:

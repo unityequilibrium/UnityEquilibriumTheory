@@ -10,11 +10,11 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-NO_GO_REL = "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json"
-UNITS_REL = "docs/core/artifacts/uet_active_lane_units_observable_register.json"
+NO_GO_REL = "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json"
+UNITS_REL = "docs/core/07_artifacts/archive/uet_active_lane_units_observable_register.json"
 FULL_REL = "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-REGISTER_REL = "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY_REL = "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+REGISTER_REL = "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY_REL = "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 LOG_REL = "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
 LEDGER_REL = "WORK_LEDGER/2026/2026-08-11.md"
 

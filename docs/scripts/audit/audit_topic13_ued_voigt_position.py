@@ -40,9 +40,9 @@ def fit_roi(roi,origin=(227,232),start='source'):
 
 
 def main():
-    inventory=ROOT/'docs/core/artifacts/t13_ued_raw_structure_audit.json'
-    acquisition=ROOT/'docs/core/artifacts/t13_ued_raw_archive_audit.json'
-    moments=ROOT/'docs/core/artifacts/t13_ued_beam_position_audit.json'
+    inventory=ROOT/'docs/core/07_artifacts/topic13/t13_ued_raw_structure_audit.json'
+    acquisition=ROOT/'docs/core/07_artifacts/topic13/t13_ued_raw_archive_audit.json'
+    moments=ROOT/'docs/core/07_artifacts/topic13/t13_ued_beam_position_audit.json'
     helper=ROOT/'docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_find_peak_7f7036b.py'
     for p in (inventory,acquisition,moments):
         for f,h in json.loads(p.read_text())['evidence_hashes'].items():
@@ -97,7 +97,7 @@ def main():
         open_blockers=['profile misspecification/background and covariance','independent geometry/registration accuracy','physical observable and Phi calibration'],
         dependency_unlocked=['profile residual/model comparison only'],full_core_unlock=False,claim_promotion=False,
         claim_boundary='Optimizer success is not physical accuracy. No uncertainty intervals, image shifting, exact source replication, heat, alpha or holdout. Both starts retained even if disagreeing.')
-    (ROOT/'docs/core/artifacts/t13_ued_voigt_position_audit.json').write_text(json.dumps(artifact,indent=2,allow_nan=False)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_ued_voigt_position_audit.json').write_text(json.dumps(artifact,indent=2,allow_nan=False)+'\n')
     print(json.dumps(summary,indent=2))
 
 

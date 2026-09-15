@@ -58,7 +58,7 @@ def main():
             "docs/scripts/audit/audit_topic13_direction_moments.py","docs/core/test/test_topic13_direction_moments.py",
             "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py")],
     }
-    (ROOT/"docs/core/artifacts/t13_direction_moments_audit.json").write_text(json.dumps(result,indent=2,allow_nan=False)+"\n",encoding="utf-8")
+    (ROOT/"docs/core/07_artifacts/topic13/t13_direction_moments_audit.json").write_text(json.dumps(result,indent=2,allow_nan=False)+"\n",encoding="utf-8")
     print(json.dumps({k:result[k] for k in ("status","production_six_axis","candidate14")},indent=2))
 
 

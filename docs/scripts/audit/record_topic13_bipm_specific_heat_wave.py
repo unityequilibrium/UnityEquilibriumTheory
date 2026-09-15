@@ -8,10 +8,10 @@ ROOT = Path(__file__).resolve().parents[3]
 TOPIC = ROOT / "docs/topics/0.13_Thermodynamic_Bridge"
 RAW = TOPIC / "Data/03_Research/raw/bipm_2006_01_graphite_specific_heat.pdf"
 PACKAGE = TOPIC / "Data/03_Research/bipm_2006_01_graphite_specific_heat_source_package.json"
-AUDIT = ROOT / "docs/core/artifacts/t13_bipm_specific_heat_source_audit.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_bipm_specific_heat_source_audit.json"
 FULL = TOPIC / "Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY = ROOT / "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 
 
 def digest(path: Path) -> str:
@@ -53,7 +53,7 @@ CLAIM_BOUNDARY: Source-traceable BIPM ultra-pure graphite `c_p^V` comparator onl
 
 Raw report: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/bipm_2006_01_graphite_specific_heat.pdf` (`{raw_hash}`).
 Source package: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/bipm_2006_01_graphite_specific_heat_source_package.json` (`{package_hash}`).
-Audit: `docs/core/artifacts/t13_bipm_specific_heat_source_audit.json` (`{audit_hash}`).
+Audit: `docs/core/07_artifacts/topic13/t13_bipm_specific_heat_source_audit.json` (`{audit_hash}`).
 
 The lane source-locks the report's sample-H mass-specific `c_p` and same-report
 density, then computes a volumetric `c_p` comparator with uncertainty. It does

@@ -9,9 +9,9 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-ACTION_REL = "docs/core/artifacts/t13_formal_bridge_boundary_audit.json"
-REGISTER_REL = "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY_REL = "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+ACTION_REL = "docs/core/07_artifacts/topic13/t13_formal_bridge_boundary_audit.json"
+REGISTER_REL = "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY_REL = "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 LOG_REL = "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
 
 

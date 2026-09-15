@@ -27,7 +27,7 @@ from docs.core.standard_o2_finite_temperature_comparator import (
 ROOT = Path(__file__).resolve().parents[3]
 MODULE_REL = "docs/core/standard_o2_finite_temperature_comparator.py"
 EOS_REL = "docs/core/uet_o2_finite_density_eos.py"
-OUT = ROOT / "docs/core/artifacts/t13_standard_o2_finite_temperature_comparator_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_standard_o2_finite_temperature_comparator_audit.json"
 
 
 def digest(rel: str) -> str:

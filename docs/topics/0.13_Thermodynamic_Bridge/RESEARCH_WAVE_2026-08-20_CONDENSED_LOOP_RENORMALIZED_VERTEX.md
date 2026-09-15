@@ -35,8 +35,8 @@ CLAIM_BOUNDARY: This is an action-derived natural-unit loop-renormalized contact
 EVIDENCE_HASHES:
 
 - module `docs/core/uet_o2_condensed_loop_renormalized_vertex.py`: `6384e8bc5553b696c17a079b93fd97df95b8f545475732b2a23f7133f03fe0dc`
-- audit `docs/core/artifacts/t13_uet_o2_condensed_loop_renormalized_vertex_audit.json`: `6a3b581978b4020648c5f2c9b9d38fef4aed501267190e5a8c5c2178e666737b`
-- equation registry `docs/core/artifacts/uet_equation_correspondence_registry.json`: `ae143f9bd06738ae777415b46d39752c8fbb4a96b17f31de94eac3e563a7be44`
+- audit `docs/core/07_artifacts/topic13/t13_uet_o2_condensed_loop_renormalized_vertex_audit.json`: `6a3b581978b4020648c5f2c9b9d38fef4aed501267190e5a8c5c2178e666737b`
+- equation registry `docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json`: `ae143f9bd06738ae777415b46d39752c8fbb4a96b17f31de94eac3e563a7be44`
 - full gate `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`: `3336e8e0ee0fa3e0d4f455f39010a3c9426af8583074d830c8143518dbc94c09`
-- closure register `docs/core/artifacts/uet_major_result_closure_register.json`: `fd0db3bd2358b0e66c480464ddf088e13fa37ccb8b0b1df0a542ec383740078d`
-- dependency gate `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`: `ec6199d171b0aea536c0f072e498c0bfd9988ae66612bedfac94d422b5462637`
+- closure register `docs/core/07_artifacts/gates/uet_major_result_closure_register.json`: `fd0db3bd2358b0e66c480464ddf088e13fa37ccb8b0b1df0a542ec383740078d`
+- dependency gate `docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json`: `ec6199d171b0aea536c0f072e498c0bfd9988ae66612bedfac94d422b5462637`

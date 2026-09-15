@@ -15,8 +15,8 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-FORMULA_PATH = ROOT / "docs/core/artifacts/uet_foundation_equation_inventory.json"
-OUTPUT = ROOT / "docs/core/artifacts/uet_active_correspondence_contract.json"
+FORMULA_PATH = ROOT / "docs/core/07_artifacts/gates/uet_foundation_equation_inventory.json"
+OUTPUT = ROOT / "docs/core/07_artifacts/correspondence/uet_active_correspondence_contract.json"
 
 
 ACTIVE_TOPICS = {"0.11", "0.13"}

@@ -18,9 +18,9 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-INVENTORY_PATH = ROOT / "docs/core/artifacts/uet_foundation_equation_inventory.json"
-REGISTRY_PATH = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry.json"
-OUTPUT = ROOT / "docs/core/artifacts/uet_code_surface_inventory.json"
+INVENTORY_PATH = ROOT / "docs/core/07_artifacts/gates/uet_foundation_equation_inventory.json"
+REGISTRY_PATH = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json"
+OUTPUT = ROOT / "docs/core/07_artifacts/archive/uet_code_surface_inventory.json"
 
 
 MATH_TOKENS = (

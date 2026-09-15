@@ -10,7 +10,7 @@ DEPENDENCY_UNLOCKED: MP48 comparator-boundary reporting only. No Ding `C_src`, `
 
 STATUS: `PASS_SCOPED_MP48_TEMPERATURE_VOLUME_UNCERTAINTY_BOUNDARY_NO_GO`; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
 
-WHAT_CHANGED: Added the source-contract boundary audit `docs/core/artifacts/t13_mp48_temperature_volume_uncertainty_boundary_audit.json`, integrated the lane into the full Topic 13 gate and major-result registry, and added a focused regression test. The MP48 source package remains an independent harmonic comparator.
+WHAT_CHANGED: Added the source-contract boundary audit `docs/core/07_artifacts/topic13/t13_mp48_temperature_volume_uncertainty_boundary_audit.json`, integrated the lane into the full Topic 13 gate and major-result registry, and added a focused regression test. The MP48 source package remains an independent harmonic comparator.
 
 EQUATION_OR_MAPPING: `C_v^vol(T) = C_v^mol,cell(T) / V_mol,cell(T)`; the current comparator uses the declared room-temperature volume anchor as `V_mol,cell(T)`, so the fixed-volume step is an explicit approximation. `Delta_Tq = Delta_u / C_v^vol(T)` remains a standard comparator mapping only.
 

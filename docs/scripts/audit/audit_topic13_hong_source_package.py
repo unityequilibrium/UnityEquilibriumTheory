@@ -11,7 +11,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
 PACKAGE_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/hong_2016_final_source_package.json"
-OUT = ROOT / "docs/core/artifacts/t13_hong_final_source_package_boundary.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_hong_final_source_package_boundary.json"
 
 
 def sha256(path: Path) -> str:

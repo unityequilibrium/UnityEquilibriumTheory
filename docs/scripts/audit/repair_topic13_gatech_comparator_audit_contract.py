@@ -25,8 +25,8 @@ def main() -> int:
     )
     text = replace_once(
         text,
-        '{"path": "docs/core/artifacts/t13_gatech_standard_transport_comparator_audit.json", "sha256": sha256(OUT) if OUT.exists() else None},',
-        '{"path": "docs/core/artifacts/t13_gatech_standard_transport_comparator_audit.json"},',
+        '{"path": "docs/core/07_artifacts/topic13/t13_gatech_standard_transport_comparator_audit.json", "sha256": sha256(OUT) if OUT.exists() else None},',
+        '{"path": "docs/core/07_artifacts/topic13/t13_gatech_standard_transport_comparator_audit.json"},',
         "self-hash evidence entry",
     )
     AUDIT.write_text(text, encoding="utf-8")

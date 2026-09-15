@@ -115,7 +115,7 @@ parallax -> distance/coordinates -> selection-corrected source field
 The source package therefore keeps `local_raw_path`, `local_raw_sha256`, selection, mass
 calibration, uncertainty, and holdout fields explicit. No fit is permitted until those fields
 are closed. See [gaia_edr3_gcns source manifest](../../data/external/astronomy/gaia_edr3_gcns/2026-08-08/source_manifest.json)
-and [mass_density_3d_external_source_package.json](../artifacts/mass_density_3d_external_source_package.json).
+and [mass_density_3d_external_source_package.json](../07_artifacts/provenance/mass_density_3d_external_source_package.json).
 
 This narrows the problem: the remaining obstacle is not merely a missing algebraic rewrite of
 `rho_3D`; it is the physical measurement and calibration chain needed to decide whether the

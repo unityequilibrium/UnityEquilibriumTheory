@@ -25,7 +25,7 @@ CLAIM_BOUNDARY: This result is a source-payload boundary only. It is not a numer
 EVIDENCE_PATHS:
 - `docs/scripts/audit/audit_topic13_nims_mp990448_phonon_source_boundary.py`
 - `docs/core/test/test_topic13_nims_mp990448_phonon_source_boundary.py`
-- `docs/core/artifacts/t13_nims_mp990448_phonon_source_boundary_audit.json`
+- `docs/core/07_artifacts/topic13/t13_nims_mp990448_phonon_source_boundary_audit.json`
 - `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/nims_mdr_mp990448_phonon_source_package.json`
 - `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nims_mdr_mp990448_graphite_phonon_dataset.zip`
 - `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`

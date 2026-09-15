@@ -71,4 +71,4 @@ a physical charge EOS, Kubo coefficient, SI Phi-to-temperature map, alpha
 calibration, TTG prediction, external validation, or Full Topic 13 closure.
 
 Evidence artifact:
-docs/core/artifacts/t13_uet_o2_finite_temperature_two_fluid_response_audit.json
+docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_two_fluid_response_audit.json

@@ -8,7 +8,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-INPUT_REL = "docs/core/artifacts/t13_full_closure_progress.json"
+INPUT_REL = "docs/core/07_artifacts/topic13/t13_full_closure_progress.json"
 OUT_REL = "docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_SUBRESULT_CLOSURE_MAP.md"
 
 

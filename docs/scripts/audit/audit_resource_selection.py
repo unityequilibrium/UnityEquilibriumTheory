@@ -248,7 +248,7 @@ def main() -> int:
         "unit_lane": "normalized",
         "physical_mapping_status": "OPEN",
         "formula_ids": [row["formula_id"] for row in artifact["formula_audit"]],
-        "verifier_artifact": "docs/core/artifacts/resource_selection_dynamic_game_verification.json",
+        "verifier_artifact": "docs/core/07_artifacts/provenance/resource_selection_dynamic_game_verification.json",
         "no_intentionality": True,
         "no_parameter_fitting": True,
         "control_experiment_status": "PASS_COST_AND_INTERACTION_SEPARATED",

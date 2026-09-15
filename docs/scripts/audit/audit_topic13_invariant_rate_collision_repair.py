@@ -25,8 +25,8 @@ from docs.scripts.audit.audit_topic13_action_normalized_elastic_scattering impor
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_invariant_rate_collision_operator_repair.json"
-REGISTRY_OUT = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_invariant_rate_collision_addendum.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_invariant_rate_collision_operator_repair.json"
+REGISTRY_OUT = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_invariant_rate_collision_addendum.json"
 EQUATION_ID = "uet.o2.thermal.invariant_rate_finite_collision_operator"
 
 
@@ -116,7 +116,7 @@ def main() -> int:
         "docs/core/test/test_topic13_invariant_rate_collision_repair.py",
         "docs/core/uet_o2_action_derived_transition_kernel.py",
     ]
-    prior = "docs/core/artifacts/t13_transition_kernel_rate_dimension_no_go.json"
+    prior = "docs/core/07_artifacts/topic13/t13_transition_kernel_rate_dimension_no_go.json"
     artifact = {
         "schema_version": "t13-invariant-rate-collision-repair-v1",
         "major_result_id": "T13_INVARIANT_RATE_DIMENSION_COLLISION_OPERATOR_REPAIR",
@@ -207,7 +207,7 @@ def main() -> int:
     REGISTRY_OUT.write_text(json.dumps({
         "schema_version": "uet-equation-registry-addendum-v1",
         "status": "CANDIDATE_DIAGNOSTIC_NOT_MERGED",
-        "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+        "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
         "equation_entries": [entry],
         "full_core_unlock": False,
         "claim_promotion": False,

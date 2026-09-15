@@ -69,7 +69,7 @@
   "controlling_blocker": null,
   "duplicate_targets": {},
   "existing_targets": [],
-  "generated_at": "2026-09-14T17:44:27+00:00",
+  "generated_at": "2026-09-15T18:29:01+00:00",
   "generator": "docs/scripts/audit/audit_uet_core_artifact_migration_v3.py",
   "migrated_active_consumer_rows": [],
   "migrated_source_present": [],
@@ -79,24 +79,21 @@
   "source_hash_mismatches": [],
   "status": "PASS",
   "summary": {
-    "active_legacy_files": 588,
+    "active_legacy_files": 0,
     "claim_promotion": false,
-    "consumer_rewrite_required": 535,
+    "consumer_rewrite_required": 0,
     "disposition_counts": {
-      "generator_and_consumer_rewrite_required": 70,
-      "generator_identity_not_resolved": 510,
-      "generator_switch_required_before_move": 8,
-      "migrated_canonical_output": 5
+      "migrated_canonical_output": 593
     },
     "duplicate_targets": {},
     "existing_target_conflicts": [],
-    "files_migrated_in_prior_waves": 5,
+    "files_migrated_in_prior_waves": 593,
     "files_total": 593,
     "generator_identity_ambiguous": 6,
     "generator_identity_missing": 510,
     "generator_identity_resolved": 77,
     "json_files": 592,
-    "migrated_files": 5,
+    "migrated_files": 593,
     "npz_files": 1,
     "physical_move_performed": true,
     "physics_status_changes": 0

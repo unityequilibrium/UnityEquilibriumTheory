@@ -9,9 +9,9 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_flat_thermodynamic_bridge_components_gate.json"
 FULL = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
 
 
 def load(path: Path) -> dict:
@@ -58,7 +58,7 @@ def test_flat_components_are_linked_into_full_gate_without_promotion() -> None:
     assert lane["closure_level"] == "CLOSED_FOR_LANE"
     assert full["status"] == "BLOCKED_OPEN_T13_FULL_BRIDGE"
     assert full["claim_promotion"] is False
-    assert any(item["path"] == "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json" for item in full["evidence_artifacts"])
+    assert any(item["path"] == "docs/core/07_artifacts/topic13/t13_flat_thermodynamic_bridge_components_gate.json" for item in full["evidence_artifacts"])
 
 
 def test_register_contains_hash_locked_major_result() -> None:
@@ -70,7 +70,7 @@ def test_register_contains_hash_locked_major_result() -> None:
     assert entry["closure_level"] == "CLOSED_FOR_LANE"
     evidence = next(
         item for item in entry["evidence_artifacts"]
-        if item["path"] == "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json"
+        if item["path"] == "docs/core/07_artifacts/topic13/t13_flat_thermodynamic_bridge_components_gate.json"
     )
     assert evidence["sha256"] == digest(ARTIFACT)
     assert register["claim_promotion"] is False

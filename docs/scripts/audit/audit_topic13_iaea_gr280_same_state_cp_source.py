@@ -18,7 +18,7 @@ RAW = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
     "iaea_thermophysical_properties_web.pdf"
 )
-OUT = ROOT / "docs/core/artifacts/t13_iaea_gr280_same_state_cp_source_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_iaea_gr280_same_state_cp_source_audit.json"
 EXPECTED_RAW_SHA256 = "bdb8454de8bdadf83ecdb1794621180651bcf00108f1214f8f3a82193c05976b"
 
 

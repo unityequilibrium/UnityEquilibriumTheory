@@ -12,8 +12,8 @@ from docs.core.uet_o2_action_thermal_observable_bridge import natural_bridge_con
 from docs.core.uet_o2_continuum_collision_operator import continuum_collision_operator_state
 from docs.core.uet_o2_covariant_entropy_heat_flux_balance import covariant_entropy_heat_flux_balance_state
 
-PLAN="docs/core/artifacts/t13_transport_resolution_plan.json"
-OUT="docs/core/artifacts/t13_transport_resolution_audit.json"
+PLAN="docs/core/07_artifacts/topic13/t13_transport_resolution_plan.json"
+OUT="docs/core/07_artifacts/topic13/t13_transport_resolution_audit.json"
 
 
 def main():

@@ -89,7 +89,7 @@ EQUATION_OR_MAPPING:
 
 VERIFICATION:
 - This report is generated from the closure matrix, full gate, input-package audit, and minimal-input contract; it creates no scientific value.
-- Source hashes remain in docs/core/artifacts/t13_full_closure_progress.json; holdout access remains {'calibration_path_may_read_holdout': False, 'target_fit_performed': False, 'xie_2026_accessed': False}.
+- Source hashes remain in docs/core/07_artifacts/topic13/t13_full_closure_progress.json; holdout access remains {'calibration_path_may_read_holdout': False, 'target_fit_performed': False, 'xie_2026_accessed': False}.
 
 CONTROLLING_BLOCKER:
 - dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing; grouped input blockers: Ding-compatible source, independent base-Phi/SI/alpha/beta, and physical transport matching.
@@ -101,4 +101,4 @@ NEXT_ACTION:
 CLAIM_BOUNDARY:
 - This map reports research closure boundaries only. It does not claim Full Topic 13 closure, an SI temperature prediction, external validation, or global UET closure.
 
-Generated from docs/core/artifacts/t13_full_closure_progress.json.
+Generated from docs/core/07_artifacts/topic13/t13_full_closure_progress.json.

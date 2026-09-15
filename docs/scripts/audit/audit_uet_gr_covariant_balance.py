@@ -306,8 +306,8 @@ def build_artifacts() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
             else "Local conservative exchange closes, but a causal non-closed constitutive source and its stability gates are not implemented."
         ),
         "artifact_dependencies": {"closed_limit": str(CLOSED.relative_to(ROOT)),
-                                  "balance_verification": "docs/core/artifacts/covariant_bianchi_exchange_verification.json",
-                                  "exchange_contract": "docs/core/artifacts/covariant_exchange_contract.json"},
+                                  "balance_verification": "docs/core/07_artifacts/verification/covariant_bianchi_exchange_verification.json",
+                                  "exchange_contract": "docs/core/07_artifacts/archive/covariant_exchange_contract.json"},
     }
     apply_latest_hyperbolic_phase_field_stage(OUT, verification, exchange_contract, program)
     return verification, exchange_contract, program

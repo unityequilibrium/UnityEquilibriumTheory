@@ -30,7 +30,7 @@ ROOT = Path(__file__).resolve().parents[3]
 MODULE_REL = "docs/core/uet_o2_gaussian_thermal_stationarity_no_go.py"
 OFFSHELL_REL = "docs/core/uet_o2_gaussian_offshell_background.py"
 EOS_REL = "docs/core/uet_o2_finite_density_eos.py"
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_gaussian_thermal_stationarity_no_go.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_gaussian_thermal_stationarity_no_go.json"
 
 TEMPERATURE = 0.25
 CHEMICAL_POTENTIAL = 1.3

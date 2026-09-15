@@ -27,7 +27,7 @@ from docs.core.thermal_energy_response_bridge import (  # noqa: E402
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_energy_response_bridge_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_energy_response_bridge_audit.json"
 SOURCE_PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "graphite_heat_capacity_source_package.json"
@@ -206,7 +206,7 @@ def main() -> int:
             "observable": "Delta_Tq = alpha_Phi_E_K * Phi_E",
             "data_role": "source identity and formula audit; candidate Cp rows not consumed for calibration",
             "evidence_artifacts": [
-                {"path": "docs/core/artifacts/t13_energy_response_bridge_audit.json"},
+                {"path": "docs/core/07_artifacts/topic13/t13_energy_response_bridge_audit.json"},
                 {
                     "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/graphite_heat_capacity_source_package.json",
                     "sha256": sha256(SOURCE_PACKAGE),

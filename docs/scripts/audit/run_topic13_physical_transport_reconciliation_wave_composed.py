@@ -17,8 +17,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 CV_WAVE = ROOT / "docs/scripts/audit/run_topic13_cv_source_reconciliation_wave.py"
 RECONCILIATION_SCRIPT = ROOT / "docs/scripts/audit/audit_topic13_physical_transport_reconciliation.py"
-RECONCILIATION = ROOT / "docs/core/artifacts/t13_physical_transport_reconciliation_audit.json"
-INPUT_AUDIT = ROOT / "docs/core/artifacts/t13_closure_input_package_audit.json"
+RECONCILIATION = ROOT / "docs/core/07_artifacts/topic13/t13_physical_transport_reconciliation_audit.json"
+INPUT_AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json"
 
 
 def sha256(path: Path) -> str:
@@ -108,7 +108,7 @@ def main() -> int:
         "physical_uet_coefficient_count": summary.get("physical_uet_coefficient_count"),
         "eligible_physical_transport_input_count": summary.get("accepted_for_full_topic13_count"),
         "cv_projection_preserved": any(
-            item.get("path") == "docs/core/artifacts/t13_cv_source_reconciliation_audit.json"
+            item.get("path") == "docs/core/07_artifacts/topic13/t13_cv_source_reconciliation_audit.json"
             for item in audit.get("evidence_artifacts", [])
         ),
         "controlling_blocker": "physical_Kubo_coefficient_record_missing",

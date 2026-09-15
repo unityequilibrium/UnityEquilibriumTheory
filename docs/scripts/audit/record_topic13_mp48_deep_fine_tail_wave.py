@@ -9,10 +9,10 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-ARTIFACT = ROOT / "docs/core/artifacts/t13_mp48_force_constant_csrc_mesh_convergence_audit.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_mp48_force_constant_csrc_mesh_convergence_audit.json"
 FULL_GATE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY = ROOT / "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 UPDATE_LOG = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
 MANIFEST = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/DATA_MANIFEST.md"
 CURRENT = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md"
@@ -59,7 +59,7 @@ CLAIM_BOUNDARY: Source-traceable harmonic fine-tail convergence diagnostic only.
 
     manifest = f'''## MP48 Deep Fine-Tail Mesh Convergence (2026-08-13)
 
-The source-locked MP48 force-constant audit now includes seven meshes through `35x35x14`. The unchanged acceptance tolerance is `0.01` absolute relative adjacent-mesh step. The declared fine-tail `20x20x8` through `35x35x14` passes with maximum `{{policy["fine_tail_max_abs_relative_step"]}}`, while the complete route remains blocked at `{{artifact["max_abs_relative_mesh_step"]}}` because the native/coarse transition is not converged. The audit artifact is `docs/core/artifacts/t13_mp48_force_constant_csrc_mesh_convergence_audit.json` with SHA-256 `{{artifact_hash}}`; this is not Ding `C_src`, not a measurement uncertainty, and not an alpha calibration. Full-gate SHA-256 is `{{full_hash}}` and downstream unlock remains false.'''
+The source-locked MP48 force-constant audit now includes seven meshes through `35x35x14`. The unchanged acceptance tolerance is `0.01` absolute relative adjacent-mesh step. The declared fine-tail `20x20x8` through `35x35x14` passes with maximum `{{policy["fine_tail_max_abs_relative_step"]}}`, while the complete route remains blocked at `{{artifact["max_abs_relative_mesh_step"]}}` because the native/coarse transition is not converged. The audit artifact is `docs/core/07_artifacts/topic13/t13_mp48_force_constant_csrc_mesh_convergence_audit.json` with SHA-256 `{{artifact_hash}}`; this is not Ding `C_src`, not a measurement uncertainty, and not an alpha calibration. Full-gate SHA-256 is `{{full_hash}}` and downstream unlock remains false.'''
 
     current = f'''## Latest Source-Route Boundary: MP48 Deep Fine-Tail Convergence (2026-08-13)
 

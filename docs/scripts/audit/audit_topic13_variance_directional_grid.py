@@ -78,7 +78,7 @@ def main():
         dependency_unlocked=[], full_core_unlock=False, global_claim_promotion=False,
         claim_boundary='No dimensional reduction, continuum convergence or physical calibration follows from weak mesh dependence along one direction.',
         evidence_artifacts=[dict(path=p.relative_to(ROOT).as_posix(), sha256=sha256(p.read_bytes()).hexdigest()) for p in paths])
-    (ROOT/'docs/core/artifacts/t13_variance_directional_grid.json').write_text(json.dumps(artifact, indent=2, allow_nan=False)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_variance_directional_grid.json').write_text(json.dumps(artifact, indent=2, allow_nan=False)+'\n')
 
 
 if __name__ == '__main__':

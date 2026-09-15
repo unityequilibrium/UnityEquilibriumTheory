@@ -18,8 +18,8 @@ replace_once(
     "registry mapping",
 )
 replace_once(
-    '    spectral_csrc_path, spectral_csrc = load(\n        "docs/core/artifacts/t13_mp48_spectral_csrc_reproduction_audit.json"\n    )\n',
-    '    spectral_csrc_path, spectral_csrc = load(\n        "docs/core/artifacts/t13_mp48_spectral_csrc_reproduction_audit.json"\n    )\n    phi_e_comparator_path, phi_e_comparator = load(\n        "docs/core/artifacts/t13_mp48_phi_e_dimensional_comparator_audit.json"\n    )\n',
+    '    spectral_csrc_path, spectral_csrc = load(\n        "docs/core/07_artifacts/topic13/t13_mp48_spectral_csrc_reproduction_audit.json"\n    )\n',
+    '    spectral_csrc_path, spectral_csrc = load(\n        "docs/core/07_artifacts/topic13/t13_mp48_spectral_csrc_reproduction_audit.json"\n    )\n    phi_e_comparator_path, phi_e_comparator = load(\n        "docs/core/07_artifacts/topic13/t13_mp48_phi_e_dimensional_comparator_audit.json"\n    )\n',
     "Phi_E artifact load",
 )
 replace_once(

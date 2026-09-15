@@ -17,7 +17,7 @@ WORK_LEDGER = ROOT / "WORK_LEDGER/2026/2026-08-11.md"
 PACKAGE = TOPIC / (
     "Data/03_Research/ding_2022_pbte_numeric_input_availability_package.json"
 )
-AUDIT = ROOT / "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_ding_pbte_numeric_input_availability_audit.json"
 INVENTORY = TOPIC / "Data/03_Research/raw/ding_2022_pmc_s3_inventory.xml"
 MARKER = "### 2026-08-11 - Ding PBTE official-OA numeric-input no-go"
 
@@ -63,7 +63,7 @@ def insert_manifest_row() -> bool:
         "| Ding 2022 PMC OA numeric-input availability | "
         "`Data/03_Research/ding_2022_pbte_numeric_input_availability_package.json`; "
         "`Data/03_Research/raw/ding_2022_pmc_s3_inventory.xml`; "
-        "`docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json` | "
+        "`docs/core/07_artifacts/topic13/t13_ding_pbte_numeric_input_availability_audit.json` | "
         "PMC OA API, complete `PMC8755757.1/` S3 prefix, object metadata, and full text captured 2026-08-11 | "
         "source inventory only; required `C_src` units J m^-3 K^-1 | "
         f"{INVENTORY.stat().st_size} inventory bytes | inventory `{sha256(INVENTORY)}`; package `{sha256(PACKAGE)}`; audit `{sha256(AUDIT)}` | "
@@ -119,7 +119,7 @@ Run:
 
 Artifact:
 
-- `docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json`
+- `docs/core/07_artifacts/topic13/t13_ding_pbte_numeric_input_availability_audit.json`
 
 Acceptance requires archived hash/size parity, OA identity/license/retraction checks, a complete non-truncated 11-object prefix, media-role classification, absence of reproduction payload candidates, the author-request statement, published computational-detail locators, an explicit missing-input list, and holdout non-access. A pass closes only the captured official-OA source route.
 """,

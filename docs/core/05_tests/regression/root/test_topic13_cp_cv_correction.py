@@ -13,7 +13,7 @@ from docs.core.thermal_cp_cv_correction import (
 
 
 ROOT = repo_root()
-AUDIT = ROOT / "docs/core/artifacts/t13_cp_cv_correction_audit.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_cp_cv_correction_audit.json"
 
 
 def _inputs() -> CpCvCorrectionInputs:

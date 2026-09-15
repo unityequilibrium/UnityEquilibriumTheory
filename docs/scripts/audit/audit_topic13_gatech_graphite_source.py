@@ -27,7 +27,7 @@ PACKAGE = ROOT / (
     "gatech_gen3csp_graphite_source_package.json"
 )
 RAW = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/gen3csp_graphite.xlsx"
-OUT = ROOT / "docs/core/artifacts/t13_gatech_graphite_source_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_gatech_graphite_source_audit.json"
 NS = {"m": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
 
 
@@ -196,7 +196,7 @@ def main() -> int:
             "observable": "independent material heat-capacity candidate",
             "data_role": "CALIBRATION_CANDIDATE_NOT_CONSUMED",
             "evidence_artifacts": [
-                {"path": "docs/core/artifacts/t13_gatech_graphite_source_audit.json"},
+                {"path": "docs/core/07_artifacts/topic13/t13_gatech_graphite_source_audit.json"},
                 {
                     "path": str(PACKAGE.relative_to(ROOT)).replace("\\", "/"),
                     "sha256": sha256(PACKAGE),

@@ -32,8 +32,8 @@ def compare(on, off, delay):
 
 
 def main():
-    source=ROOT/'docs/core/artifacts/t13_ued_raw_structure_audit.json'
-    pooling=ROOT/'docs/core/artifacts/t13_ued_cut_pooling_audit.json'
+    source=ROOT/'docs/core/07_artifacts/topic13/t13_ued_raw_structure_audit.json'
+    pooling=ROOT/'docs/core/07_artifacts/topic13/t13_ued_cut_pooling_audit.json'
     for path in (source,pooling):
         for file,h in json.loads(path.read_text())['evidence_hashes'].items():
             if digest(ROOT/file)!=h: raise ValueError('stale evidence')
@@ -62,7 +62,7 @@ def main():
         evidence_hashes={str(p.relative_to(ROOT)).replace('\\','/'):digest(p) for p in files},
         dependency_unlocked=['cut-resolved robustness analysis only'],full_core_unlock=False,claim_promotion=False,
         claim_boundary='No hypothesis threshold or significance claim. Not covariance, error bars, causal leakage, TTG response, temperature or heat. Baseline selected for exploratory inspection; no fit or holdout read.')
-    (ROOT/'docs/core/artifacts/t13_ued_cut_signal_audit.json').write_text(json.dumps(artifact,indent=2,allow_nan=False)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_ued_cut_signal_audit.json').write_text(json.dumps(artifact,indent=2,allow_nan=False)+'\n')
     print(json.dumps({k:v for k,v in result.items() if k.startswith(('max_','rms_','cut_response'))},indent=2))
 
 

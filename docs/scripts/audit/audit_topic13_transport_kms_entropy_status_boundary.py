@@ -14,15 +14,15 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT_REL = "docs/core/artifacts/t13_transport_kms_entropy_status_boundary_audit.json"
+OUT_REL = "docs/core/07_artifacts/topic13/t13_transport_kms_entropy_status_boundary_audit.json"
 
 SOURCE_RELS = {
-    "transport_identifiability": "docs/core/artifacts/t13_transport_coefficient_identifiability_no_go.json",
-    "formal_sk_kms_entropy": "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json",
-    "open_system_sk_kms": "docs/core/artifacts/t13_uet_o2_open_system_sk_kms_audit.json",
-    "covariant_entropy_heat_flux": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
-    "physical_kubo_gate": "docs/core/artifacts/t13_physical_kubo_coefficient_provenance_audit.json",
-    "transport_verification": "docs/core/artifacts/covariant_superfluid_transport_verification.json",
+    "transport_identifiability": "docs/core/07_artifacts/topic13/t13_transport_coefficient_identifiability_no_go.json",
+    "formal_sk_kms_entropy": "docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json",
+    "open_system_sk_kms": "docs/core/07_artifacts/topic13/t13_uet_o2_open_system_sk_kms_audit.json",
+    "covariant_entropy_heat_flux": "docs/core/07_artifacts/topic13/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+    "physical_kubo_gate": "docs/core/07_artifacts/topic13/t13_physical_kubo_coefficient_provenance_audit.json",
+    "transport_verification": "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json",
 }
 
 

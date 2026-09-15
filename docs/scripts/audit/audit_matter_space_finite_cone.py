@@ -24,7 +24,7 @@ from docs.core.uet_matter_space_finite_cone import (
 
 
 ROOT = Path(__file__).resolve().parents[3]
-ARTIFACT = ROOT / "docs/core/artifacts/matter_space_causal_lane_comparison.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/archive/matter_space_causal_lane_comparison.json"
 
 
 def _state(n: int = 32) -> FiniteConeCState:

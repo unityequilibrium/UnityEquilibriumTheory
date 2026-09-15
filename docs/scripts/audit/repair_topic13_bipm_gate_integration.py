@@ -25,8 +25,8 @@ def main() -> int:
     )
     text = replace_once(
         text,
-        '    natural_alpha_v_path, natural_alpha_v = load(\n        "docs/core/artifacts/t13_natural_graphite_nelson_riley_alpha_v_source_audit.json"\n    )\n    phi_e_comparator_path, phi_e_comparator = load(',
-        '    natural_alpha_v_path, natural_alpha_v = load(\n        "docs/core/artifacts/t13_natural_graphite_nelson_riley_alpha_v_source_audit.json"\n    )\n    bipm_specific_heat_path, bipm_specific_heat = load(\n        "docs/core/artifacts/t13_bipm_specific_heat_source_audit.json"\n    )\n    bipm_package_path, bipm_package = load(\n        "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/bipm_2006_01_graphite_specific_heat_source_package.json"\n    )\n    phi_e_comparator_path, phi_e_comparator = load(',
+        '    natural_alpha_v_path, natural_alpha_v = load(\n        "docs/core/07_artifacts/topic13/t13_natural_graphite_nelson_riley_alpha_v_source_audit.json"\n    )\n    phi_e_comparator_path, phi_e_comparator = load(',
+        '    natural_alpha_v_path, natural_alpha_v = load(\n        "docs/core/07_artifacts/topic13/t13_natural_graphite_nelson_riley_alpha_v_source_audit.json"\n    )\n    bipm_specific_heat_path, bipm_specific_heat = load(\n        "docs/core/07_artifacts/topic13/t13_bipm_specific_heat_source_audit.json"\n    )\n    bipm_package_path, bipm_package = load(\n        "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/bipm_2006_01_graphite_specific_heat_source_package.json"\n    )\n    phi_e_comparator_path, phi_e_comparator = load(',
         "BIPM source loading",
     )
     text = replace_once(

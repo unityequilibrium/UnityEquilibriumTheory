@@ -10,21 +10,21 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json"
 
 PATHS = {
-    "causal": "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json",
-    "no_go": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
-    "anchor": "docs/core/artifacts/t13_he4_svp_physical_anchor_audit.json",
-    "alpha": "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json",
-    "beta": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
-    "natural_bridge": "docs/core/artifacts/t13_uet_o2_action_thermal_observable_bridge_audit.json",
-    "action_beta": "docs/core/artifacts/t13_uet_o2_action_thermal_stiffness_beta_audit.json",
-    "flat_components": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
-    "entropy": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
-    "transport": "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json",
-    "holdout": "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json",
-    "landauer": "docs/core/artifacts/t13_landauer_core_disposition_audit.json",
+    "causal": "docs/core/07_artifacts/topic13/t13_causal_named_branch_core_compatibility.json",
+    "no_go": "docs/core/07_artifacts/archive/conserved_c_finite_cone_no_go_assessment.json",
+    "anchor": "docs/core/07_artifacts/topic13/t13_he4_svp_physical_anchor_audit.json",
+    "alpha": "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json",
+    "beta": "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json",
+    "natural_bridge": "docs/core/07_artifacts/topic13/t13_uet_o2_action_thermal_observable_bridge_audit.json",
+    "action_beta": "docs/core/07_artifacts/topic13/t13_uet_o2_action_thermal_stiffness_beta_audit.json",
+    "flat_components": "docs/core/07_artifacts/topic13/t13_flat_thermodynamic_bridge_components_gate.json",
+    "entropy": "docs/core/07_artifacts/topic13/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+    "transport": "docs/core/07_artifacts/topic13/t13_he4_normal_viscosity_kubo_audit.json",
+    "holdout": "docs/core/07_artifacts/topic13/t13_xie_2026_holdout_access_audit.json",
+    "landauer": "docs/core/07_artifacts/topic13/t13_landauer_core_disposition_audit.json",
 }
 
 

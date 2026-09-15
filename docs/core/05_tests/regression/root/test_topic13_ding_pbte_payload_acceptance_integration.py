@@ -23,7 +23,7 @@ def test_payload_acceptance_controller_is_projected_into_full_gate() -> None:
     assert controller["numeric_alpha_Phi_K_emitted"] is False
     assert controller["holdout_accessed"] is False
     assert controller["audit"]["path"] == (
-        "docs/core/artifacts/t13_ding_pbte_payload_acceptance_audit.json"
+        "docs/core/07_artifacts/topic13/t13_ding_pbte_payload_acceptance_audit.json"
     )
 
     evidence_paths = {item["path"] for item in gate["evidence_artifacts"]}

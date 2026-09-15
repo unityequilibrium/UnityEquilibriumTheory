@@ -22,7 +22,7 @@ from docs.core.uet_o2_finite_temperature_stationarity_scheme import (
 ROOT = Path(__file__).resolve().parents[3]
 STATIONARITY_REL = "docs/core/uet_o2_finite_temperature_stationarity_scheme.py"
 WARD_REL = "docs/core/uet_o2_ward_constrained_condensed.py"
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_ward_coefficient_state_dependence_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_ward_coefficient_state_dependence_audit.json"
 
 REFERENCE_X = 3.835
 REFERENCE_SCALE_SQ = 3.835

@@ -13,7 +13,7 @@ WHAT_IS_ACTUALLY_CLOSED:
   - `c_p^V - c_v^V = T * alpha_V^2 * K_T`
   - `c_v^V = rho * c_p^m - T * alpha_V^2 * K_T`
 - The implementation checks units, positivity of the corrected heat capacity, mass-to-volume consistency, and independent first-order uncertainty propagation.
-- The formula audit is recorded at `docs/core/artifacts/t13_cp_cv_correction_audit.json` with SHA-256 `73d2cb23c062ff29d8065651805842ac26a4f34a3c24f0bf9e826e6a16d797de`.
+- The formula audit is recorded at `docs/core/07_artifacts/topic13/t13_cp_cv_correction_audit.json` with SHA-256 `73d2cb23c062ff29d8065651805842ac26a4f34a3c24f0bf9e826e6a16d797de`.
 - The source contract cites NIST SP 960-11, Section 6.3.1.5, pages 69-70, Equation (21), as the standard relation. Numeric graphite correction inputs were not consumed.
 
 WHAT_REMAINS_OPEN:

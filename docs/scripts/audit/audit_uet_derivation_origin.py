@@ -15,8 +15,8 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-REGISTRY_PATH = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry.json"
-OUT_PATH = ROOT / "docs/core/artifacts/uet_derivation_origin_audit.json"
+REGISTRY_PATH = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json"
+OUT_PATH = ROOT / "docs/core/07_artifacts/verification/uet_derivation_origin_audit.json"
 
 REQUIRED_FIELDS = {
     "equation_id",

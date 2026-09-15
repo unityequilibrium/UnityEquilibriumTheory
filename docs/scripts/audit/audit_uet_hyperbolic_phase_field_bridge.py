@@ -616,8 +616,8 @@ def build_artifacts() -> tuple[dict[str, Any], ...]:
         "benchmark_role": "program_gate",
         "method_label": "monotonic_gr_research_stage_gate",
         "input_identity": {
-            "causal_feasibility_artifact": "docs/core/artifacts/hyperbolic_phase_field_causal_feasibility.json",
-            "covariant_mapping_gate": "docs/core/artifacts/hyperbolic_phase_field_covariant_mapping_gate.json",
+            "causal_feasibility_artifact": "docs/core/07_artifacts/archive/hyperbolic_phase_field_causal_feasibility.json",
+            "covariant_mapping_gate": "docs/core/07_artifacts/gates/hyperbolic_phase_field_covariant_mapping_gate.json",
         },
         "notes": [
             "The controlling blocker is the physical density/order-parameter state map.",

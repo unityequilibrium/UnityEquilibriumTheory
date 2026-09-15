@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-ARTIFACT = ROOT / "docs/core/artifacts/t13_mp48_force_constant_harmonic_reconstruction_audit.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_mp48_force_constant_harmonic_reconstruction_audit.json"
 FULL_GATE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
     "topic13_full_thermodynamic_bridge_core_ready_gate.json"
@@ -37,7 +37,7 @@ WHAT_IS_ACTUALLY_CLOSED: The archived 200x200 MP48 force-constant matrix parses 
 WHAT_REMAINS_OPEN: This does not reproduce Ding PBTE `C_src`, third-order PBTE transport, the Ding material regime, the base-Phi energy anchor, or independent `alpha_Phi_K`.
 DEPENDENCY_UNLOCKED: MP48 harmonic force-constant source lane only; no Ding source, alpha, transport, Core, Gravity, or Galaxy unlock.
 STATUS: `PASS_SCOPED_FORCE_CONSTANT_HARMONIC_RECONSTRUCTION`; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
-WHAT_CHANGED: Added and integrated `docs/core/artifacts/t13_mp48_force_constant_harmonic_reconstruction_audit.json` (SHA-256 `{artifact_hash}`) and linked it into the Topic 13 full gate (SHA-256 `{full_hash}`).
+WHAT_CHANGED: Added and integrated `docs/core/07_artifacts/topic13/t13_mp48_force_constant_harmonic_reconstruction_audit.json` (SHA-256 `{artifact_hash}`) and linked it into the Topic 13 full gate (SHA-256 `{full_hash}`).
 EQUATION_OR_MAPPING: `D_ij(q) = sum_R Phi_ij(R) exp(2*pi*i*q.R)/sqrt(m_i*m_j)` and `nu_mu = sign(lambda_mu)*sqrt(abs(lambda_mu))*conversion_factor`; mapping is from supercell Cartesian coordinates to primitive atom plus integer translation.
 VERIFICATION: Force-constant shape `200x200x3x3`, pair symmetry residual `1.1e-14`, acoustic-sum residual `9.5e-14`, Gamma acoustic maximum `8.17e-7 THz`, no q-grid negative eigenvalue beyond roundoff, and q-grid maximum `48.41862978666018 THz` versus deposited summary `48.4370817598 THz` (relative gap `-0.0003809472509372913`). No fit, target access, holdout access, or alpha emission.
 CONTROLLING_BLOCKER: `Ding_material_regime_and_mode_resolved_C_src_acceptance_missing` for this lane; the full gate remains controlled by the existing Ding source, dimensional alpha, bridge/beta, EOS/transport/KMS/entropy, and SI-map blockers.
@@ -68,7 +68,7 @@ calibration. No Xie 2026 holdout, target curve, or fitted coefficient was used.
 
 | formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| `T13-041` | `D_ij(q)=sum_R Phi_ij(R) exp(2*pi*i*q.R)/sqrt(m_i*m_j)`, `nu_mu=sign(lambda_mu)*sqrt(abs(lambda_mu))*conversion_factor` | `docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py`; `docs/core/artifacts/t13_mp48_force_constant_harmonic_reconstruction_audit.json` | force constants = eV Angstrom^-2; masses = amu; q = dimensionless reciprocal fractional; frequency = THz | source-locked MP48 force constants and Phonopy metadata | checked harmonic reconstruction; not Ding PBTE or UET derivation | source-integrity, acoustic, Hermitian, and limited q-grid comparator | finite supercell, harmonic approximation, q-grid choice, and material-regime mismatch can prevent Ding `C_src` equivalence; no uncertainty is silently promoted | obtain Ding-compatible mode-resolved PBTE inputs or an accepted same-regime reproduction with convergence and uncertainty; keep base-Phi SI anchor and alpha open |
+| `T13-041` | `D_ij(q)=sum_R Phi_ij(R) exp(2*pi*i*q.R)/sqrt(m_i*m_j)`, `nu_mu=sign(lambda_mu)*sqrt(abs(lambda_mu))*conversion_factor` | `docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py`; `docs/core/07_artifacts/topic13/t13_mp48_force_constant_harmonic_reconstruction_audit.json` | force constants = eV Angstrom^-2; masses = amu; q = dimensionless reciprocal fractional; frequency = THz | source-locked MP48 force constants and Phonopy metadata | checked harmonic reconstruction; not Ding PBTE or UET derivation | source-integrity, acoustic, Hermitian, and limited q-grid comparator | finite supercell, harmonic approximation, q-grid choice, and material-regime mismatch can prevent Ding `C_src` equivalence; no uncertainty is silently promoted | obtain Ding-compatible mode-resolved PBTE inputs or an accepted same-regime reproduction with convergence and uncertainty; keep base-Phi SI anchor and alpha open |
 
 The lane is `CLOSED_FOR_LANE` only. The artifact hash is `{artifact_hash}` and the
 full-gate hash after integration is `{full_hash}`. The q-grid comparison is a

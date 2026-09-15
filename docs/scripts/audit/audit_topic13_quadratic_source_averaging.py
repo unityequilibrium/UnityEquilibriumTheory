@@ -52,7 +52,7 @@ def main():
         dependency_unlocked=[],full_core_unlock=False,global_claim_promotion=False,
         claim_boundary='Not an on-shell experiment or a new effective closure. Signed Fourier weights and renormalized quantum composites require separate treatment.',
         evidence_artifacts=[dict(path=p.relative_to(ROOT).as_posix(),sha256=sha256(p.read_bytes()).hexdigest()) for p in paths])
-    (ROOT/'docs/core/artifacts/t13_quadratic_source_averaging.json').write_text(json.dumps(artifact,indent=2,allow_nan=False)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_quadratic_source_averaging.json').write_text(json.dumps(artifact,indent=2,allow_nan=False)+'\n')
     print(json.dumps(rows))
 
 

@@ -21,7 +21,7 @@ def spectral_response(eigenvalues,eigenvectors,source,rcond):
 
 
 def main():
-    plan_path="docs/core/artifacts/t13_joint_resolution_plan.json"
+    plan_path="docs/core/07_artifacts/topic13/t13_joint_resolution_plan.json"
     plan=json.loads((ROOT/plan_path).read_text())
     config=natural_bridge_config()
     record={"major_result_id":"T13_JOINT_TRANSPORT_RESOLUTION", "topic":"0.13_Thermodynamic_Bridge",
@@ -38,7 +38,7 @@ def main():
             "docs/core/uet_o2_continuum_collision_operator.py","docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
             "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py","docs/core/uet_o2_covariant_entropy_heat_flux_balance.py")],
     }
-    output=ROOT/"docs/core/artifacts/t13_joint_resolution_audit.json"
+    output=ROOT/"docs/core/07_artifacts/topic13/t13_joint_resolution_audit.json"
     def save():
         output.write_text(json.dumps(record,indent=2,allow_nan=False)+"\n",encoding="utf-8")
     save()

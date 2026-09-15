@@ -45,7 +45,7 @@
 ก่อนอ่านไฟล์ลึก ให้ทำตามลำดับ:
 
 1. `docs/core/CORE_FILE_INDEX.md`
-2. `docs/core/artifacts/uet_core_file_manifest.json` เฉพาะ record ที่อยู่ใน scope
+2. `docs/core/07_artifacts/provenance/uet_core_file_manifest.json` เฉพาะ record ที่อยู่ใน scope
 3. foundation gate หรือ topic gate ล่าสุด
 4. specification/FORMULA_AUDIT ที่ artifact ชี้เท่านั้น
 5. code และ test ที่เกี่ยวข้องกับ blocker เดียว

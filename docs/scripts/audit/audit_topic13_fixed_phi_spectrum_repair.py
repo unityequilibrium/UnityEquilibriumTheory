@@ -34,7 +34,7 @@ from docs.core.uet_o2_formal_transverse_response import (
 from docs.core.uet_o2_kinetic_collision_kubo import _normal_state_inputs
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_fixed_phi_spectrum_repair_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_fixed_phi_spectrum_repair_audit.json"
 EOS_PATH = "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py"
 STATIC_PATH = "docs/core/uet_o2_formal_transverse_response.py"
 AUDIT_PATH = "docs/scripts/audit/audit_topic13_fixed_phi_spectrum_repair.py"
@@ -226,7 +226,7 @@ def main() -> int:
     witnesses = fixed_phi_witnesses()
     inventory = consumer_inventory()
     passed = all(witnesses["checks"].values()) and not inventory["parse_errors"]
-    primary = ROOT / "docs/core/artifacts/t13_uet_o2_finite_temperature_quasiparticle_eos_audit.json"
+    primary = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_quasiparticle_eos_audit.json"
     primary_data = json.loads(primary.read_text(encoding="utf-8"))
     fresh = (
         primary_data.get("contract", {}).get("spectrum_revision") == "FIXED_PHI_CANONICAL_V2"

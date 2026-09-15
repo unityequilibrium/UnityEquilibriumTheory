@@ -16,7 +16,7 @@ from docs.core.uet_o2_finite_temperature_sunset_vacuum_match import (
 def vacuum_match_state():
     root = repo_root()
     artifact = json.loads(
-        (root / "docs/core/artifacts/t13_uet_o2_action_1pi_sunset_retarded_audit.json").read_text(
+        (root / "docs/core/07_artifacts/topic13/t13_uet_o2_action_1pi_sunset_retarded_audit.json").read_text(
             encoding="utf-8-sig"
         )
     )

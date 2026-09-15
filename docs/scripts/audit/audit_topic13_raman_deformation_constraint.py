@@ -16,14 +16,14 @@ from docs.core.uet_raman_deformation_constraint import (
 
 ROOT = Path(__file__).resolve().parents[3]
 SOURCE = 'docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/hanfland_1989_raman_deformation_source_package.json'
-OUTPUT = 'docs/core/artifacts/t13_raman_deformation_constraint_audit.json'
-REGISTRY = 'docs/core/artifacts/uet_equation_correspondence_registry_topic13_raman_deformation_addendum.json'
+OUTPUT = 'docs/core/07_artifacts/topic13/t13_raman_deformation_constraint_audit.json'
+REGISTRY = 'docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_raman_deformation_addendum.json'
 ID = 'uet.thermal.raman_mass_deformation_constraint'
 EVIDENCE = [SOURCE, 'docs/core/T13_RAMAN_DEFORMATION_CONSTRAINT.md',
             'docs/core/uet_raman_deformation_constraint.py',
             'docs/core/test/test_topic13_raman_deformation_constraint.py',
             'docs/scripts/audit/audit_topic13_raman_deformation_constraint.py']
-PROTECTED = ['docs/core/artifacts/t13_topic13_closure_matrix.json',
+PROTECTED = ['docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json',
              'docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json']
 
 
@@ -132,7 +132,7 @@ def build():
                  failure_mode=record['open_blockers'], downstream_dependencies=['material_mode_identification'],
                  dependency_role='conditional_material_input_not_physical_unlock', next_hardening_step='same-state independent strain, dispersion and residue')
     registry = dict(schema_version='uet-equation-registry-addendum-v1', status='SCOPED_SPECTRAL_CONSTRAINT_NOT_UET_IDENTITY',
-                    extends='docs/core/artifacts/uet_equation_correspondence_registry.json', equation_entries=[entry], full_core_unlock=False, claim_promotion=False)
+                    extends='docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json', equation_entries=[entry], full_core_unlock=False, claim_promotion=False)
     return record, registry
 
 

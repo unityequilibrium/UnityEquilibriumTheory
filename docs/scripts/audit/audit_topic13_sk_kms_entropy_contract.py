@@ -14,9 +14,9 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[3]
 MODULE_REL = "docs/core/thermal_sk_kms_entropy_contract.py"
-TRANSPORT_CONTRACT_REL = "docs/core/artifacts/covariant_superfluid_transport_contract.json"
-TRANSPORT_VERIFICATION_REL = "docs/core/artifacts/covariant_superfluid_transport_verification.json"
-OUT_REL = "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json"
+TRANSPORT_CONTRACT_REL = "docs/core/07_artifacts/archive/covariant_superfluid_transport_contract.json"
+TRANSPORT_VERIFICATION_REL = "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json"
+OUT_REL = "docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json"
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 

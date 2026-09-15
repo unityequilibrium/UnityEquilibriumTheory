@@ -6,8 +6,8 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-INPUT_AUDIT = ROOT / "docs/core/artifacts/t13_closure_input_package_audit.json"
-RECONCILIATION = "docs/core/artifacts/t13_base_phi_si_reconciliation_audit.json"
+INPUT_AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json"
+RECONCILIATION = "docs/core/07_artifacts/topic13/t13_base_phi_si_reconciliation_audit.json"
 
 
 def test_base_phi_reconciliation_is_projected_with_prior_waves() -> None:
@@ -19,8 +19,8 @@ def test_base_phi_reconciliation_is_projected_with_prior_waves() -> None:
     current = package["current_evidence"]
     evidence_paths = {item["path"] for item in audit["evidence_artifacts"]}
     assert RECONCILIATION in evidence_paths
-    assert "docs/core/artifacts/t13_cv_source_reconciliation_audit.json" in evidence_paths
-    assert "docs/core/artifacts/t13_physical_transport_reconciliation_audit.json" in evidence_paths
+    assert "docs/core/07_artifacts/topic13/t13_cv_source_reconciliation_audit.json" in evidence_paths
+    assert "docs/core/07_artifacts/topic13/t13_physical_transport_reconciliation_audit.json" in evidence_paths
     assert current["base_phi_reconciliation_status"] == "PASS_SCOPED_BASE_PHI_RECONCILIATION_OPEN"
     assert current["paired_alpha_search_candidate_count"] == 74
     assert current["eligible_paired_alpha_record_count"] == 0

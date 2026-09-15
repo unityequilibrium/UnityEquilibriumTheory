@@ -19,8 +19,8 @@ replace_once(
     "registry mapping",
 )
 replace_once(
-    '    force_constant_path, force_constant = load(\n        "docs/core/artifacts/t13_mp48_force_constant_harmonic_reconstruction_audit.json"\n    )\n',
-    '    force_constant_path, force_constant = load(\n        "docs/core/artifacts/t13_mp48_force_constant_harmonic_reconstruction_audit.json"\n    )\n    nist_alpha_v_path, nist_alpha_v = load(\n        "docs/core/artifacts/t13_nist_graphite_alpha_v_source_boundary_audit.json"\n    )\n',
+    '    force_constant_path, force_constant = load(\n        "docs/core/07_artifacts/topic13/t13_mp48_force_constant_harmonic_reconstruction_audit.json"\n    )\n',
+    '    force_constant_path, force_constant = load(\n        "docs/core/07_artifacts/topic13/t13_mp48_force_constant_harmonic_reconstruction_audit.json"\n    )\n    nist_alpha_v_path, nist_alpha_v = load(\n        "docs/core/07_artifacts/topic13/t13_nist_graphite_alpha_v_source_boundary_audit.json"\n    )\n',
     "NIST artifact load",
 )
 replace_once(

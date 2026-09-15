@@ -23,7 +23,7 @@ from docs.core.uet_o2_finite_density_eos import (  # noqa: E402
     O2FiniteDensityEOSConfig,
     effective_mass_sq,
 )
-OUT = ROOT / "docs/core/artifacts/t13_alpha_phi_k_identifiability_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_alpha_phi_k_identifiability_audit.json"
 
 
 def action_coordinate_reparameterization() -> dict[str, object]:
@@ -139,7 +139,7 @@ def main() -> int:
             "observable": "normalized TTG response and dimensional response operator",
             "data_role": "internal witness audit; no target or holdout data",
             "evidence_artifacts": [
-                {"path": "docs/core/artifacts/t13_alpha_phi_k_identifiability_audit.json"}
+                {"path": "docs/core/07_artifacts/topic13/t13_alpha_phi_k_identifiability_audit.json"}
             ],
             "verification_status": "PASS_NO_GO_FOR_NORMALIZED_SCALE",
             "open_blockers": [

@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-GATE = ROOT / "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+GATE = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 
 
 def test_curved_parent_work_unlocks_after_topic13_core_ready() -> None:

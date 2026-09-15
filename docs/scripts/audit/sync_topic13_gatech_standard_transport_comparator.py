@@ -10,8 +10,8 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-AUDIT_REL = "docs/core/artifacts/t13_gatech_standard_transport_comparator_audit.json"
-SOURCE_AUDIT_REL = "docs/core/artifacts/t13_gatech_graphite_source_audit.json"
+AUDIT_REL = "docs/core/07_artifacts/topic13/t13_gatech_standard_transport_comparator_audit.json"
+SOURCE_AUDIT_REL = "docs/core/07_artifacts/topic13/t13_gatech_graphite_source_audit.json"
 PACKAGE_REL = (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "gatech_gen3csp_graphite_source_package.json"
@@ -21,8 +21,8 @@ RAW_REL = (
     "gen3csp_graphite.xlsx"
 )
 FULL_REL = "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-REGISTER_REL = "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY_REL = "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+REGISTER_REL = "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY_REL = "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 FORMULA_REL = "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md"
 REPORT_REL = "docs/topics/0.13_Thermodynamic_Bridge/FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md"
 LOG_REL = "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"

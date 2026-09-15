@@ -58,7 +58,7 @@ ROOT_INPUT_PACKAGES:
 | `T13_INPUT_PHYSICAL_TRANSPORT_MATCH` | `BLOCKED` | physical_uet_kubo_record, physical_sk_transport_match, physical_entropy_production_mapping, physical_heat_flux_entropy_map | physical_coefficient_record, finite_temperature_transport_completion, physical_anchor_supplied, physical_heat_flux_entropy_link |
 
 MINIMAL_INPUT_CONTRACT:
-- docs/core/artifacts/t13_full_closure_minimal_input_contract.json; SHA-256 6fbf0218e66700d0804dce1c07d2b6a08e3013c7568e07df46ad5b6443337aa7.
+- docs/core/07_artifacts/topic13/t13_full_closure_minimal_input_contract.json; SHA-256 6fbf0218e66700d0804dce1c07d2b6a08e3013c7568e07df46ad5b6443337aa7.
 - This is a field-level evidence admission contract; it does not create a source value or promote a comparator.
 
 DEPENDENCY_UNLOCKED:
@@ -82,7 +82,7 @@ VERIFICATION:
 - Historical process holdout policy: `{'xie_2026_accessed': False, 'target_fit_performed': False, 'calibration_path_may_read_holdout': False}`.
 - Later agent-context exposure: `{'declaration_path': 'docs/core/T13_HOLDOUT_EXPOSURE_2026_09_10.json', 'incidental_public_summary_exposure': True, 'future_blind_holdout_eligibility': 'REVIEW_REQUIRED', 'scope': 'Later agent-context declaration; does not rewrite historical process audits'}`. Do not claim pristine blinding from historical no-access fields.
 - No numeric alpha, physical UET Kubo coefficient, or accepted Ding C_src payload is emitted by this report.
-- Source hashes are recorded in `docs/core/artifacts/t13_full_closure_progress.json` for the matrix, gate, and input audit.
+- Source hashes are recorded in `docs/core/07_artifacts/topic13/t13_full_closure_progress.json` for the matrix, gate, and input audit.
 
 CONTROLLING_BLOCKER:
 - `dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing`.

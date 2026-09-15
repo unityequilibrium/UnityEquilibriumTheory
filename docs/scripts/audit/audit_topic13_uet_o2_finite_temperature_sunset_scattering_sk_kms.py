@@ -23,7 +23,7 @@ from docs.core.uet_o2_finite_temperature_sunset_scattering_sk_kms import (  # no
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_finite_temperature_sunset_scattering_sk_kms_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_sunset_scattering_sk_kms_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_finite_temperature_sunset_scattering_sk_kms.py"
 TENSOR_MODULE = ROOT / "docs/core/uet_o2_action_1pi_sunset_tensor.py"
 

@@ -12,8 +12,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 PRIOR_COMPOSED_WAVE = ROOT / "docs/scripts/audit/run_topic13_physical_transport_reconciliation_wave_composed.py"
 BASE_PHI_SCRIPT = ROOT / "docs/scripts/audit/audit_topic13_base_phi_reconciliation.py"
-BASE_PHI = ROOT / "docs/core/artifacts/t13_base_phi_si_reconciliation_audit.json"
-INPUT_AUDIT = ROOT / "docs/core/artifacts/t13_closure_input_package_audit.json"
+BASE_PHI = ROOT / "docs/core/07_artifacts/topic13/t13_base_phi_si_reconciliation_audit.json"
+INPUT_AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json"
 
 
 def sha256(path: Path) -> str:
@@ -101,8 +101,8 @@ def main() -> int:
         "independent_base_phi_si_record_count": summary.get("independent_base_phi_si_record_count"),
         "eligible_base_phi_input_count": summary.get("accepted_for_full_topic13_count"),
         "cv_and_transport_projection_preserved": (
-            any(item.get("path") == "docs/core/artifacts/t13_cv_source_reconciliation_audit.json" for item in audit.get("evidence_artifacts", []))
-            and any(item.get("path") == "docs/core/artifacts/t13_physical_transport_reconciliation_audit.json" for item in audit.get("evidence_artifacts", []))
+            any(item.get("path") == "docs/core/07_artifacts/topic13/t13_cv_source_reconciliation_audit.json" for item in audit.get("evidence_artifacts", []))
+            and any(item.get("path") == "docs/core/07_artifacts/topic13/t13_physical_transport_reconciliation_audit.json" for item in audit.get("evidence_artifacts", []))
         ),
         "controlling_blocker": "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
     }, indent=2))

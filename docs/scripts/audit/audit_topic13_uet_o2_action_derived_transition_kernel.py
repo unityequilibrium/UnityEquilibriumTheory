@@ -24,7 +24,7 @@ from docs.core.uet_o2_finite_temperature_quasiparticle_eos import (  # noqa: E40
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_action_derived_transition_kernel_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_action_derived_transition_kernel_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_action_derived_transition_kernel.py"
 MOMENTUM_MODULE = ROOT / "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py"
 COLLISION_MODULE = ROOT / "docs/core/uet_o2_kinetic_collision_kubo.py"

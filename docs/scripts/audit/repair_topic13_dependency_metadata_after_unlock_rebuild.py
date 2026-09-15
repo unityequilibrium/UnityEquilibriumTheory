@@ -16,21 +16,21 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-DEPENDENCY_REL = "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
-REGISTER_REL = "docs/core/artifacts/uet_major_result_closure_register.json"
+DEPENDENCY_REL = "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
+REGISTER_REL = "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
 FULL_REL = "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
 UNLOCK_SCRIPT_REL = "docs/scripts/audit/audit_major_result_dependency_unlock.py"
 
 ROUTES = (
-    ("phi_energy_anchor_no_go", "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json", "PASS_SCOPED_NO_GO_NORMALIZED_PHI_ENERGY_ANCHOR"),
-    ("covariant_action_si_anchor_route", "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json", "PASS_NATURAL_UNIT_ROUTE_IDENTIFIED_SI_MAPPING_BLOCKED"),
-    ("covariant_field_normalization_no_go", "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json", "PASS_SCOPED_NO_GO_COVARIANT_FIELD_NORMALIZATION"),
-    ("causal_branch_selection", "docs/core/artifacts/t13_causal_branch_selection_audit.json", "PASS_CLOSED_AS_NO_GO_WITH_NAMED_COUPLED_BRANCH"),
-    ("beta_symbol_separation_noncircularity_no_go", "docs/core/artifacts/t13_beta_symbol_separation_noncircularity_audit.json", "PASS_SCOPED_NO_GO_BETA_SYMBOL_IDENTIFICATION"),
-    ("thermal_response_beta_contract", "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json", "PASS_NAMED_FINITE_TEMPERATURE_BETA_CONTRACT"),
-    ("collective_response_eos_stability_contract", "docs/core/artifacts/t13_collective_response_eos_stability_audit.json", "PASS_NAMED_COLLECTIVE_RESPONSE_EOS_STABILITY_CONTRACT"),
-    ("phi_e_reference_normalization", "docs/core/artifacts/t13_phi_e_reference_normalization_audit.json", "PASS_NAMED_PHI_E_REFERENCE_NORMALIZATION"),
-    ("base_phi_independent_calibration_requirement", "docs/core/artifacts/t13_base_phi_independent_calibration_requirement.json", "PASS_OPEN_CALIBRATION_REQUIREMENT"),
+    ("phi_energy_anchor_no_go", "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json", "PASS_SCOPED_NO_GO_NORMALIZED_PHI_ENERGY_ANCHOR"),
+    ("covariant_action_si_anchor_route", "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json", "PASS_NATURAL_UNIT_ROUTE_IDENTIFIED_SI_MAPPING_BLOCKED"),
+    ("covariant_field_normalization_no_go", "docs/core/07_artifacts/topic13/t13_covariant_field_normalization_identifiability_no_go.json", "PASS_SCOPED_NO_GO_COVARIANT_FIELD_NORMALIZATION"),
+    ("causal_branch_selection", "docs/core/07_artifacts/topic13/t13_causal_branch_selection_audit.json", "PASS_CLOSED_AS_NO_GO_WITH_NAMED_COUPLED_BRANCH"),
+    ("beta_symbol_separation_noncircularity_no_go", "docs/core/07_artifacts/topic13/t13_beta_symbol_separation_noncircularity_audit.json", "PASS_SCOPED_NO_GO_BETA_SYMBOL_IDENTIFICATION"),
+    ("thermal_response_beta_contract", "docs/core/07_artifacts/topic13/t13_thermal_response_beta_contract_audit.json", "PASS_NAMED_FINITE_TEMPERATURE_BETA_CONTRACT"),
+    ("collective_response_eos_stability_contract", "docs/core/07_artifacts/topic13/t13_collective_response_eos_stability_audit.json", "PASS_NAMED_COLLECTIVE_RESPONSE_EOS_STABILITY_CONTRACT"),
+    ("phi_e_reference_normalization", "docs/core/07_artifacts/topic13/t13_phi_e_reference_normalization_audit.json", "PASS_NAMED_PHI_E_REFERENCE_NORMALIZATION"),
+    ("base_phi_independent_calibration_requirement", "docs/core/07_artifacts/topic13/t13_base_phi_independent_calibration_requirement.json", "PASS_OPEN_CALIBRATION_REQUIREMENT"),
 )
 
 

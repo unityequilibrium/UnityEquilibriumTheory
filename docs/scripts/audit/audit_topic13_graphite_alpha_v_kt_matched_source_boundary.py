@@ -9,14 +9,14 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json"
 
 AUDIT_PATHS = {
-    "nist_alpha_v": ROOT / "docs/core/artifacts/t13_nist_graphite_alpha_v_source_boundary_audit.json",
-    "hanfland_kt": ROOT / "docs/core/artifacts/t13_graphite_isothermal_kt_source_audit.json",
-    "bosak_elastic_bulk": ROOT / "docs/core/artifacts/t13_graphite_elastic_bulk_modulus_source_audit.json",
-    "tpg_alpha_v": ROOT / "docs/core/artifacts/t13_tpg_anisotropic_alpha_v_source_audit.json",
-    "nelson_riley_alpha_v": ROOT / "docs/core/artifacts/t13_natural_graphite_nelson_riley_alpha_v_source_audit.json",
+    "nist_alpha_v": ROOT / "docs/core/07_artifacts/topic13/t13_nist_graphite_alpha_v_source_boundary_audit.json",
+    "hanfland_kt": ROOT / "docs/core/07_artifacts/topic13/t13_graphite_isothermal_kt_source_audit.json",
+    "bosak_elastic_bulk": ROOT / "docs/core/07_artifacts/topic13/t13_graphite_elastic_bulk_modulus_source_audit.json",
+    "tpg_alpha_v": ROOT / "docs/core/07_artifacts/topic13/t13_tpg_anisotropic_alpha_v_source_audit.json",
+    "nelson_riley_alpha_v": ROOT / "docs/core/07_artifacts/topic13/t13_natural_graphite_nelson_riley_alpha_v_source_audit.json",
 }
 
 PACKAGE_PATHS = {
@@ -36,7 +36,7 @@ LOWITZER_FULL = ROOT / (
     "lowitzer_2006_graphite_pvt_full_source_package.json"
 )
 LOWITZER_FULL_AUDIT = ROOT / (
-    "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json"
+    "docs/core/07_artifacts/topic13/t13_lowitzer_graphite_pvt_full_source_pair_audit.json"
 )
 TOHEI_TABLE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"

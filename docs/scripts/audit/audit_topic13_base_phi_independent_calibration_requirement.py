@@ -16,7 +16,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
 PROTOCOL_REL = "docs/topics/0.13_Thermodynamic_Bridge/BASE_PHI_INDEPENDENT_CALIBRATION_PROTOCOL.md"
-OUT_REL = "docs/core/artifacts/t13_base_phi_independent_calibration_requirement.json"
+OUT_REL = "docs/core/07_artifacts/topic13/t13_base_phi_independent_calibration_requirement.json"
 
 REQUIRED_SNIPPETS = (
     "MAJOR_RESULT_CLOSURE:",

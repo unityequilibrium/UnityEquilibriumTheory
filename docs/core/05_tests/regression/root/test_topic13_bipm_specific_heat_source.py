@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-LANE = ROOT / "docs/core/artifacts/t13_bipm_specific_heat_source_audit.json"
+LANE = ROOT / "docs/core/07_artifacts/topic13/t13_bipm_specific_heat_source_audit.json"
 PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "bipm_2006_01_graphite_specific_heat_source_package.json"
@@ -15,7 +15,7 @@ FULL = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
     "topic13_full_thermodynamic_bridge_core_ready_gate.json"
 )
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
 
 
 def load(path: Path) -> dict:
@@ -44,7 +44,7 @@ def test_bipm_cp_lane_is_source_locked_without_cv_or_topic13_promotion() -> None
     assert "c_v_source_uncertainty_not_closed" in full["major_result"]["what_remains_open"]
     assert "material_regime_mapping_to_TTG_not_closed" in full["major_result"]["what_remains_open"]
     assert any(
-        item["path"] == "docs/core/artifacts/t13_bipm_specific_heat_source_audit.json"
+        item["path"] == "docs/core/07_artifacts/topic13/t13_bipm_specific_heat_source_audit.json"
         for item in full["evidence_artifacts"]
     )
     assert any(

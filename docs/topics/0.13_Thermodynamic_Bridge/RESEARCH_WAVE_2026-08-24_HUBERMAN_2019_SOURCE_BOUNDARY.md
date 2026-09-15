@@ -22,6 +22,6 @@ NEXT_ACTION: Send one bounded request to the corresponding authors for the 2022 
 
 CLAIM_BOUNDARY: This is a source-availability boundary, not a numeric `C_src` result, not an independent alpha calibration, not a TTG prediction, and not Full Topic 13 or external validation.
 
-EVIDENCE_PATHS: `docs/core/artifacts/t13_huberman_2019_ttg_source_boundary_audit.json`; `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/huberman_2019_ttg_source_boundary_package.json`; `docs/core/artifacts/t13_closure_input_package_audit.json`; `docs/core/artifacts/t13_topic13_closure_matrix.json`.
+EVIDENCE_PATHS: `docs/core/07_artifacts/topic13/t13_huberman_2019_ttg_source_boundary_audit.json`; `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/huberman_2019_ttg_source_boundary_package.json`; `docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json`; `docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json`.
 
 EVIDENCE_HASHES: source-boundary audit `FA25C313272A79230263C92BF315510E11842D11070C41D67E41D4CB8F88C3AE`; package `F70FF820EA3CB16023D23BB3FD7D36D6ED486357B8CBC6CEB81BF2FD35492844`; input audit `BDE78DC8381E522CB477559B2B0BCC6C2DA5C834860AFAC1C735F870EA74A546`; matrix `B55AC2FC63CDFF1B9103A1A010B2D33CF47660D01BD0C99B8F512450E4438D7C`.

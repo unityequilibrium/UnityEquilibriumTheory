@@ -221,6 +221,8 @@ def canonical_path_for(legacy_path: str | Path) -> str:
         if tail == "02_Proof/README.md":
             return relative
         return "docs/core/04_proofs/" + tail[len("02_Proof/") :]
+    if tail == "artifacts/README.md":
+        return relative
     if tail.startswith("artifacts/"):
         name = Path(tail).name
         return f"docs/core/07_artifacts/{_artifact_domain(name)}/{name}"

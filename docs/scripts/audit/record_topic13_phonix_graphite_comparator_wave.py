@@ -8,10 +8,10 @@ ROOT = Path(__file__).resolve().parents[3]
 TOPIC = ROOT / "docs/topics/0.13_Thermodynamic_Bridge"
 RAW = TOPIC / "Data/03_Research/raw/phonix_mp47_graphite_summary_row.json"
 PACKAGE = TOPIC / "Data/03_Research/phonix_mp47_graphite_source_package.json"
-AUDIT = ROOT / "docs/core/artifacts/t13_phonix_mp47_graphite_comparator_audit.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_phonix_mp47_graphite_comparator_audit.json"
 FULL = TOPIC / "Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY = ROOT / "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 
 
 def digest(path: Path) -> str:
@@ -53,7 +53,7 @@ CLAIM_BOUNDARY: Source-provenance and harmonic-comparator lane only. This is not
 
 Raw snapshot: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/phonix_mp47_graphite_summary_row.json` (`{raw_hash}`).
 Source package: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/phonix_mp47_graphite_source_package.json` (`{package_hash}`).
-Audit: `docs/core/artifacts/t13_phonix_mp47_graphite_comparator_audit.json` (`{audit_hash}`).
+Audit: `docs/core/07_artifacts/topic13/t13_phonix_mp47_graphite_comparator_audit.json` (`{audit_hash}`).
 
 The immutable Phonix `mp-47` summary row is retained as a graphite harmonic
 comparison source. Its DOS is source-declared `a.u.` and no standard

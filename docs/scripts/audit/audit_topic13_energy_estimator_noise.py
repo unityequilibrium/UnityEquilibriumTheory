@@ -28,7 +28,7 @@ def energy_estimator(a, c, covariance):
 
 
 def main():
-    path = ROOT/'docs/core/artifacts/t13_complementary_geometry_audit.json'
+    path = ROOT/'docs/core/07_artifacts/topic13/t13_complementary_geometry_audit.json'
     source = json.loads(path.read_text())
     for relative, expected in source['evidence_hashes'].items():
         if hashlib.sha256((ROOT/relative).read_bytes()).hexdigest() != expected:
@@ -61,7 +61,7 @@ def main():
                                   weight_sum=float(w.sum()))
         rows.append(dict(q_fractional=q, response_spectral_scale=float(a_scale), energy_coefficient_norm=float(c_scale), cases=cases))
     files = [path, Path(__file__), ROOT/'docs/core/test/test_topic13_energy_estimator_noise.py',
-             ROOT/'docs/core/artifacts/uet_equation_correspondence_registry_topic13_energy_estimator_addendum.json',
+             ROOT/'docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_energy_estimator_addendum.json',
              ROOT/'docs/scripts/audit/audit_topic13_finiteq_scattering_geometry.py',
              ROOT/'docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py']
     result = dict(major_result_id='T13_ENERGY_ESTIMATOR_NOISE_DESIGN', topic='0.13', closure_level='PARTIAL',
@@ -76,7 +76,7 @@ def main():
         full_core_unlock=False, claim_promotion=False, dependency_unlocked=['noise-aware design only'],
         evidence_hashes={str(p.relative_to(ROOT)).replace('\\', '/'):hashlib.sha256(p.read_bytes()).hexdigest() for p in files},
         claim_boundary='No actual error bar or temperature. Real covariance, exposure budget, gain and model error not supplied. No holdout or fit.')
-    (ROOT/'docs/core/artifacts/t13_energy_estimator_noise_audit.json').write_text(json.dumps(result, indent=2, allow_nan=False)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_energy_estimator_noise_audit.json').write_text(json.dumps(result, indent=2, allow_nan=False)+'\n')
     print(json.dumps([dict(q=r['q_fractional'], gain={k:v['standard_deviation_per_unit_normalized_noise'] for k,v in r['cases'].items()}) for r in rows], indent=2))
 
 

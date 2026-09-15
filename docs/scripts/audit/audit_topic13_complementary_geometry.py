@@ -20,7 +20,7 @@ def main():
     for path, expected in LOCKS.items():
         if hashlib.sha256(path.read_bytes()).hexdigest() != expected:
             raise ValueError('changed source')
-    source_path = ROOT/'docs/core/artifacts/t13_finiteq_scattering_geometry_audit.json'
+    source_path = ROOT/'docs/core/07_artifacts/topic13/t13_finiteq_scattering_geometry_audit.json'
     source = json.loads(source_path.read_text())
     for relative, expected in source['evidence_hashes'].items():
         if hashlib.sha256((ROOT/relative).read_bytes()).hexdigest() != expected:
@@ -74,7 +74,7 @@ def main():
         full_core_unlock=False, claim_promotion=False, dependency_unlocked=['complementary measurement/source targeting only'],
         evidence_hashes={str(p.relative_to(ROOT)).replace('\\', '/'): hashlib.sha256(p.read_bytes()).hexdigest() for p in files},
         claim_boundary='Not experimental closure or a new dataset. No fit, holdout or physical alpha; added geometry may be inaccessible.')
-    (ROOT/'docs/core/artifacts/t13_complementary_geometry_audit.json').write_text(json.dumps(artifact, indent=2, allow_nan=False)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_complementary_geometry_audit.json').write_text(json.dumps(artifact, indent=2, allow_nan=False)+'\n')
     print(json.dumps([dict(q=r['q_fractional'], designs={k:dict(rank=v['energy_test']['rank'], null=v['energy_test']['observable_null_fraction']) for k,v in r['designs'].items()}) for r in results], indent=2))
 
 

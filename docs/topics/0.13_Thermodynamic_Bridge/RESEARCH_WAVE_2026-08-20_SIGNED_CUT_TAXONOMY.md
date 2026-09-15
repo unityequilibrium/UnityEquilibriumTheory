@@ -39,6 +39,6 @@ EVIDENCE_PATHS:
 
 - `docs/core/uet_o2_finite_temperature_signed_cut_coverage.py`
 - `docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_signed_cut_coverage.py`
-- `docs/core/artifacts/t13_uet_o2_finite_temperature_signed_cut_coverage_audit.json`
+- `docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_signed_cut_coverage_audit.json`
 - `docs/core/uet_o2_finite_temperature_full_sunset_sk_kms.py`
-- `docs/core/artifacts/t13_uet_o2_finite_temperature_full_sunset_sk_kms_audit.json`
+- `docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_full_sunset_sk_kms_audit.json`

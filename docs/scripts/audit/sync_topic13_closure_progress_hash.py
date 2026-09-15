@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-PROGRESS = ROOT / "docs/core/artifacts/t13_full_closure_progress.json"
+PROGRESS = ROOT / "docs/core/07_artifacts/topic13/t13_full_closure_progress.json"
 UPDATE_LOG = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
 MARKER = "### 2026-08-24 - Topic 13 closure progress dashboard"
 HASH_BLOCK = re.compile(r"(EVIDENCE_HASH:\n- `)[0-9a-fA-F]{64}(`)")

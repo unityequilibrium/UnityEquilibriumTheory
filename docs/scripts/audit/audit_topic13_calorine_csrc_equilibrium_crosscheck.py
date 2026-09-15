@@ -18,7 +18,7 @@ IAEA_REL = (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "iaea_graphite_handbook_constant_volume_source_package.json"
 )
-OUT_REL = "docs/core/artifacts/t13_calorine_csrc_equilibrium_crosscheck_audit.json"
+OUT_REL = "docs/core/07_artifacts/topic13/t13_calorine_csrc_equilibrium_crosscheck_audit.json"
 
 
 def load(relative: str) -> tuple[Path, dict[str, Any]]:

@@ -71,8 +71,8 @@ def main():
             "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
             "docs/core/uet_o2_action_thermal_observable_bridge.py",
             "docs/core/uet_o2_action_thermal_stiffness_beta.py",
-            "docs/core/artifacts/t13_transition_pullback_pilot.json")])
-    out=ROOT/"docs/core/artifacts/t13_constrained_precision_audit.json"
+            "docs/core/07_artifacts/topic13/t13_transition_pullback_pilot.json")])
+    out=ROOT/"docs/core/07_artifacts/topic13/t13_constrained_precision_audit.json"
     def save(): out.write_text(json.dumps(r,indent=2,allow_nan=False)+"\n",encoding="utf-8")
     save()
     for rule in r["direction_rules"]:

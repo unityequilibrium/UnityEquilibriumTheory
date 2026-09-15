@@ -12,12 +12,12 @@ text = text.replace(old, new)
 
 old = (
     '    mesh_convergence_path, mesh_convergence = load(\n'
-    '        "docs/core/artifacts/t13_mp48_force_constant_csrc_mesh_convergence_audit.json"\n'
+    '        "docs/core/07_artifacts/topic13/t13_mp48_force_constant_csrc_mesh_convergence_audit.json"\n'
     '    )\n'
 )
 new = old + (
     '    huang_supplementary_path, huang_supplementary = load(\n'
-    '        "docs/core/artifacts/t13_huang_2023_supplementary_payload_boundary_audit.json"\n'
+    '        "docs/core/07_artifacts/topic13/t13_huang_2023_supplementary_payload_boundary_audit.json"\n'
     '    )\n'
 )
 assert text.count(old) == 1

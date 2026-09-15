@@ -35,7 +35,7 @@ Delta_Tq = alpha_Phi_K * Delta_Phi
 ```
 
 VERIFICATION:
-`docs/core/artifacts/t13_dimensional_bridge_contract_audit.json` reports
+`docs/core/07_artifacts/topic13/t13_dimensional_bridge_contract_audit.json` reports
 `PASS_CONDITIONAL_FORMULA_OPEN_INPUTS`; focused tests pass `6`; the full Topic
 13 source wave passes; Wave 1 integrity remains
 `PASS_WITH_BLOCKED_LANES`; target data and Xie 2026 holdout were not used.

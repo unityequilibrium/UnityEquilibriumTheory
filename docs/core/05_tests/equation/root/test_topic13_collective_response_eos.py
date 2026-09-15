@@ -15,7 +15,7 @@ from docs.core.thermal_response_beta_contract import ThermalResponseBetaInputs
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/artifacts/t13_collective_response_eos_stability_audit.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_collective_response_eos_stability_audit.json"
 
 
 def test_collective_response_eos_reciprocity_and_stability() -> None:

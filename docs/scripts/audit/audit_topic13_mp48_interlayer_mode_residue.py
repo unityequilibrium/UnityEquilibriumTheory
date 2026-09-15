@@ -17,7 +17,7 @@ from docs.scripts.audit.audit_topic13_mp48_force_constant_harmonic_reconstructio
 )
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT/'docs/core/artifacts/t13_mp48_interlayer_mode_residue_audit.json'
+OUT = ROOT/'docs/core/07_artifacts/topic13/t13_mp48_interlayer_mode_residue_audit.json'
 LOCKS = {
     FORCE_CONSTANTS_PATH: 'a410f36fd34e8603aec0dde48c1f8cb47fbf0a237ca911437f744fb7cbf02763',
     PHONOPY_PATH: '00be787d0fbe986304ffdfa51a917b9aa0038deb6d31a563979afe42a7a2b5f8',

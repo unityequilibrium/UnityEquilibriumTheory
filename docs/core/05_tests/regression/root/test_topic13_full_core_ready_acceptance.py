@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-AUDIT = ROOT / "docs/core/artifacts/t13_full_core_ready_acceptance_audit.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_full_core_ready_acceptance_audit.json"
 
 
 def test_full_topic13_core_ready_acceptance_passes_every_declared_criterion() -> None:

@@ -16,8 +16,8 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-SOURCE = ROOT / "docs/core/artifacts/relational_two_body_baseline_verification.json"
-OUT = ROOT / "docs/core/artifacts/carrier_observer_thought_experiment.json"
+SOURCE = ROOT / "docs/core/07_artifacts/verification/relational_two_body_baseline_verification.json"
+OUT = ROOT / "docs/core/07_artifacts/archive/carrier_observer_thought_experiment.json"
 
 
 def sha256(path: Path) -> str:

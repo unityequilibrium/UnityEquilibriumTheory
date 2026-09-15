@@ -44,7 +44,7 @@ def main():
             "docs/core/uet_o2_continuum_collision_operator.py",
             "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py")],
     }
-    (ROOT/"docs/core/artifacts/t13_frame_output_audit.json").write_text(json.dumps(result,indent=2,allow_nan=False)+"\n",encoding="utf-8")
+    (ROOT/"docs/core/07_artifacts/topic13/t13_frame_output_audit.json").write_text(json.dumps(result,indent=2,allow_nan=False)+"\n",encoding="utf-8")
     print(json.dumps({"status":result["status"],"checks":checks,"frame_shifts":[s["frame_current_decomposition"]["frame_shift_spatial_norm"] for s in states]}))
     return 0 if all(checks.values()) else 1
 

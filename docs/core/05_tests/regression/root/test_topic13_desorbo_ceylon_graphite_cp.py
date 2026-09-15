@@ -11,7 +11,7 @@ from pathlib import Path
 
 ROOT = repo_root()
 AUDIT = ROOT / "docs/scripts/audit/audit_topic13_desorbo_ceylon_graphite_cp.py"
-ARTIFACT = ROOT / "docs/core/artifacts/t13_desorbo_ceylon_graphite_cp_audit.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_desorbo_ceylon_graphite_cp_audit.json"
 
 
 def test_desorbo_ceylon_graphite_cp_is_source_locked_without_promotion() -> None:

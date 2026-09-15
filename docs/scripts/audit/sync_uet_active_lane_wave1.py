@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-PATH = ROOT / "docs/core/artifacts/uet_active_lane_units_observable_register.json"
+PATH = ROOT / "docs/core/07_artifacts/archive/uet_active_lane_units_observable_register.json"
 
 
 def main() -> int:
@@ -39,7 +39,7 @@ def main() -> int:
         "evidence": [
             "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/thermal_wave1_branch_gate.json",
             "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_observable_map_readiness.json",
-            "docs/core/artifacts/thermal_dimensional_calibration_contract.json",
+            "docs/core/07_artifacts/topic13/thermal_dimensional_calibration_contract.json",
         ],
         "claim_boundary": "normalized observable/control lane only; no temperature prediction or external validation",
         "wave1_status": "BLOCKED_OPEN_CALIBRATION",

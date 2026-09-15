@@ -11,8 +11,8 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
 DATA_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/berut_2012_figure3_panel_c_digitized.json"
-BINARY_REL = "docs/core/artifacts/t13_berut_figure3_remote_binary_identity.json"
-OUT = ROOT / "docs/core/artifacts/t13_berut_figure3_digitization.json"
+BINARY_REL = "docs/core/07_artifacts/topic13/t13_berut_figure3_remote_binary_identity.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_berut_figure3_digitization.json"
 
 EXPECTED_ASSET_SHA256 = "95823a29ed7f979d3979eb6fa776bce7df8eaa4485632073347874b5c868b188"
 EXPECTED_BINARY_SHA256 = "e4bab6be849a093b7578bc52ce6df9be95dc25d83d51ecb718b4f798a37d50fa"

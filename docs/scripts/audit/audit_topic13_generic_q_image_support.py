@@ -20,9 +20,9 @@ def footprint(shape,center):
 
 
 def main():
-    ip=ROOT/'docs/core/artifacts/t13_ued_numeric_inventory_audit.json'
-    ep=ROOT/'docs/core/artifacts/t13_ued_mask_support_audit.json'
-    gp=ROOT/'docs/core/artifacts/t13_basal_coverage_extension.json'
+    ip=ROOT/'docs/core/07_artifacts/topic13/t13_ued_numeric_inventory_audit.json'
+    ep=ROOT/'docs/core/07_artifacts/topic13/t13_ued_mask_support_audit.json'
+    gp=ROOT/'docs/core/07_artifacts/topic13/t13_basal_coverage_extension.json'
     inventory=json.loads(ip.read_text()); exports=json.loads(ep.read_text()); geometry=json.loads(gp.read_text())
     for source in (inventory,exports):
         for path,h in source['evidence_hashes'].items():
@@ -93,7 +93,7 @@ def main():
         dependency_unlocked=[],full_core_unlock=False,global_claim_promotion=False,
         claim_boundary='No numerical signal extraction, branch population or alpha. One-vector alignment does not establish complete reciprocal indexing.',
         array_export_hashes=files,evidence_artifacts=[dict(path=p.relative_to(ROOT).as_posix(),sha256=sha256(p.read_bytes()).hexdigest()) for p in paths])
-    (ROOT/'docs/core/artifacts/t13_generic_q_image_support.json').write_text(json.dumps(output,indent=2,allow_nan=False)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_generic_q_image_support.json').write_text(json.dumps(output,indent=2,allow_nan=False)+'\n')
     print(json.dumps([dict(member=r['member'],source_peak=r['source_peak_momentum'],model_peak=r['model_first_reciprocal_magnitude'],
         support=[dict(q=s['q'],mirror=s['mirror'],rows=s['full_finite_rows']) for s in r['results']]) for r in rows]))
 

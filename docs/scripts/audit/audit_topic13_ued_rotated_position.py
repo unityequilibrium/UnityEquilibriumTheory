@@ -36,9 +36,9 @@ def fit_rotated(roi,base,angle=np.pi,origin=(227,232)):
 
 
 def main():
-    basepath=ROOT/'docs/core/artifacts/t13_ued_voigt_position_audit.json'
-    inventory=ROOT/'docs/core/artifacts/t13_ued_raw_structure_audit.json'
-    acquisition=ROOT/'docs/core/artifacts/t13_ued_raw_archive_audit.json'
+    basepath=ROOT/'docs/core/07_artifacts/topic13/t13_ued_voigt_position_audit.json'
+    inventory=ROOT/'docs/core/07_artifacts/topic13/t13_ued_raw_structure_audit.json'
+    acquisition=ROOT/'docs/core/07_artifacts/topic13/t13_ued_raw_archive_audit.json'
     for path in (basepath,inventory,acquisition):
         for f,h in json.loads(path.read_text())['evidence_hashes'].items():
             if digest(ROOT/f)!=h: raise ValueError('stale evidence')
@@ -92,7 +92,7 @@ def main():
         open_blockers=['remaining profile/background residual','detector covariance and physical registration accuracy','geometry and independent Phi calibration'],
         dependency_unlocked=['instrument model comparison only'],full_core_unlock=False,claim_promotion=False,
         claim_boundary='Nested-model in-sample improvement alone is not validation. No physical angles inferred, fit uncertainty, image shifting, weighted source replication, holdout or thermal claim.')
-    (ROOT/'docs/core/artifacts/t13_ued_rotated_position_audit.json').write_text(json.dumps(result,indent=2,allow_nan=False)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_ued_rotated_position_audit.json').write_text(json.dumps(result,indent=2,allow_nan=False)+'\n')
     print(json.dumps(summary,indent=2))
 
 

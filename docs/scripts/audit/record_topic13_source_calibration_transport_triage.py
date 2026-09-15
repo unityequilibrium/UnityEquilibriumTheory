@@ -10,15 +10,15 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
 TOPIC = ROOT / "docs/topics/0.13_Thermodynamic_Bridge"
-MATRIX = ROOT / "docs/core/artifacts/t13_topic13_closure_matrix.json"
-INPUT_AUDIT = ROOT / "docs/core/artifacts/t13_closure_input_package_audit.json"
+MATRIX = ROOT / "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json"
+INPUT_AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json"
 FULL_GATE = TOPIC / "Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-RECORD_AUDIT = ROOT / "docs/core/artifacts/t13_closure_record_contract_audit.json"
+RECORD_AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_closure_record_contract_audit.json"
 ROUTE_ARTIFACTS = (
-    ROOT / "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
-    ROOT / "docs/core/artifacts/t13_bipm_specific_heat_source_audit.json",
-    ROOT / "docs/core/artifacts/t13_kim_2018_graphite_green_kubo_external_input_audit.json",
-    ROOT / "docs/core/artifacts/t13_calorine_full_lbte_stability_boundary_audit.json",
+    ROOT / "docs/core/07_artifacts/topic13/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
+    ROOT / "docs/core/07_artifacts/topic13/t13_bipm_specific_heat_source_audit.json",
+    ROOT / "docs/core/07_artifacts/topic13/t13_kim_2018_graphite_green_kubo_external_input_audit.json",
+    ROOT / "docs/core/07_artifacts/topic13/t13_calorine_full_lbte_stability_boundary_audit.json",
 )
 UPDATE_LOG = TOPIC / "UPDATE_LOG.md"
 ROADMAP = TOPIC / "TOPIC13_FULL_CLOSURE_ROADMAP.md"
@@ -103,7 +103,7 @@ VERIFICATION: Closure-record contract `PASS` with zero failed checks; input-pack
 CONTROLLING_BLOCKER: The three independent package blockers remain: Ding-compatible `C_src`/material uncertainty, independent base-Phi SI alpha/beta scale, and physical Kubo/SK/KMS/entropy provenance.
 NEXT_ACTION: Do not rerun existing comparators as a substitute. Obtain one authorized Ding-compatible payload or accepted same-regime reproduction, one independent base-Phi/SI response or dimensionful action anchor, and one state-matched physical Kubo record; admit each only through the fail-closed record contract.
 CLAIM_BOUNDARY: This wave narrows source and derivation routes only. It does not close Full Topic 13, promote a comparator to UET evidence, use Xie 2026, infer `alpha_Phi_K`, or unlock Core/Gravity.
-EVIDENCE_PATHS: `docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json`; `docs/core/artifacts/t13_bipm_specific_heat_source_audit.json`; `docs/core/artifacts/t13_kim_2018_graphite_green_kubo_external_input_audit.json`; `docs/core/artifacts/t13_calorine_full_lbte_stability_boundary_audit.json`; `docs/core/artifacts/t13_closure_record_contract_audit.json`; `docs/core/artifacts/t13_closure_input_package_audit.json`; `docs/core/artifacts/t13_topic13_closure_matrix.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.
+EVIDENCE_PATHS: `docs/core/07_artifacts/topic13/t13_lowitzer_graphite_pvt_full_source_pair_audit.json`; `docs/core/07_artifacts/topic13/t13_bipm_specific_heat_source_audit.json`; `docs/core/07_artifacts/topic13/t13_kim_2018_graphite_green_kubo_external_input_audit.json`; `docs/core/07_artifacts/topic13/t13_calorine_full_lbte_stability_boundary_audit.json`; `docs/core/07_artifacts/topic13/t13_closure_record_contract_audit.json`; `docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json`; `docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.
 EVIDENCE_HASHES: {evidence_hashes}.
 """
 

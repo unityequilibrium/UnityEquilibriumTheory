@@ -90,8 +90,8 @@ def test_no_fit_holdout_or_uet_mapping_is_emitted():
 
 def test_generated_artifact_and_registry_are_strict_and_hash_linked():
     root = repo_root()
-    artifact_path = root / "docs/core/artifacts/t13_lattice_momentum_relaxing_heat_parent_audit.json"
-    registry_path = root / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_lattice_heat_parent_addendum.json"
+    artifact_path = root / "docs/core/07_artifacts/topic13/t13_lattice_momentum_relaxing_heat_parent_audit.json"
+    registry_path = root / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_lattice_heat_parent_addendum.json"
     artifact = json.loads(artifact_path.read_text(encoding="utf-8"))
     registry = json.loads(registry_path.read_text(encoding="utf-8"))
     json.dumps(artifact, allow_nan=False)

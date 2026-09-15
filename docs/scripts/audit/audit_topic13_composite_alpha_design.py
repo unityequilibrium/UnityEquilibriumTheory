@@ -60,7 +60,7 @@ def main():
         dependency_unlocked=[],full_core_unlock=False,alpha_value_emitted=False,
         claim_boundary="No source or calibration found; no physical gate relaxed. Composite calibration cannot close missing action/transport derivations or the entire topic.",
         evidence_artifacts=[dict(path=p,sha256=sha256((ROOT/p).read_bytes()).hexdigest()) for p in paths])
-    (ROOT/"docs/core/artifacts/t13_composite_alpha_design_audit.json").write_text(json.dumps(artifact,indent=2,allow_nan=False)+"\n",encoding="utf-8")
+    (ROOT/"docs/core/07_artifacts/topic13/t13_composite_alpha_design_audit.json").write_text(json.dumps(artifact,indent=2,allow_nan=False)+"\n",encoding="utf-8")
     for k,r in rows.items():print(k,r["rank"],r["alpha_magnitude_identifiable"])
 
 

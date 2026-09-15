@@ -22,6 +22,6 @@ NEXT_ACTION: Obtain a state-matched UET response-space/Kubo record or microscopi
 
 CLAIM_BOUNDARY: This is a flat/natural-unit component result only. It is not a UET temperature prediction, physical Kubo coefficient, alpha calibration, TTG validation, curved 3+1 result, external validation, or Full Topic 13 closure.
 
-EVIDENCE_PATHS: `docs/scripts/audit/audit_topic13_flat_thermodynamic_bridge_components.py`; `docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/artifacts/t13_topic13_closure_matrix.json`.
+EVIDENCE_PATHS: `docs/scripts/audit/audit_topic13_flat_thermodynamic_bridge_components.py`; `docs/core/07_artifacts/topic13/t13_flat_thermodynamic_bridge_components_gate.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json`.
 
 EVIDENCE_HASHES: component `eaafd852fdf978efcefe8bf13900a96bf7d57e89b66c09cf1f4e65d3f10ba105`; full gate `f52715ad8e81f0288ce08fbf05c3423f2f912c22122f5f4f9fe5dec7b20ac7c3`; matrix `d7be94ca0476c1788d7dabd52caeeb35d5edf193c43d0342dd8a9d8b1a250b72`.

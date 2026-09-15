@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[3]
 
 
 def main():
-    path = ROOT/'docs/core/artifacts/t13_mp48_interlayer_mode_residue_audit.json'
+    path = ROOT/'docs/core/07_artifacts/topic13/t13_mp48_interlayer_mode_residue_audit.json'
     source = json.loads(path.read_text(encoding='utf-8'))
     for relative, expected in source['evidence_hashes'].items():
         if hashlib.sha256((ROOT/relative).read_bytes()).hexdigest() != expected:
@@ -25,7 +25,7 @@ def main():
     state = equilibrium(gaps, temperature)
     files = [path, Path(__file__), ROOT/'docs/core/uet_mode_work_heat.py',
              ROOT/'docs/core/test/test_topic13_mode_work_heat.py',
-             ROOT/'docs/core/artifacts/uet_equation_correspondence_registry_topic13_mode_heat_addendum.json']
+             ROOT/'docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_mode_heat_addendum.json']
     artifact = dict(
         major_result_id='T13_MODE_WORK_HEAT_PROTOCOL_SEPARATION', topic='0.13',
         closure_level='CLOSED_FOR_LANE', verification_status='PASS_CONDITIONAL_HARMONIC_PROTOCOLS',
@@ -52,7 +52,7 @@ def main():
         evidence_hashes={str(p.relative_to(ROOT)).replace('\\', '/'): hashlib.sha256(p.read_bytes()).hexdigest() for p in files},
         claim_boundary='No temperature prediction for a driven TTG experiment, KMS/bath coefficient or physical alpha.',
     )
-    (ROOT/'docs/core/artifacts/t13_mode_work_heat_audit.json').write_text(json.dumps(artifact, indent=2, allow_nan=False)+'\n', encoding='utf-8')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_mode_work_heat_audit.json').write_text(json.dumps(artifact, indent=2, allow_nan=False)+'\n', encoding='utf-8')
     print(json.dumps(result, indent=2))
 
 

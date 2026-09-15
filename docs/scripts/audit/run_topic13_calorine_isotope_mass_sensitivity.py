@@ -179,7 +179,7 @@ def run_state(
     return summary
 
 def build_uncertainty_audit(isotope_audit: dict[str, object], isotope_audit_path: Path) -> tuple[Path, dict[str, object]]:
-    reproduction_path = ROOT / "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json"
+    reproduction_path = ROOT / "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_reproduction_audit.json"
     if not reproduction_path.is_file():
         raise FileNotFoundError(f"missing Calorine reproduction audit: {reproduction_path}")
     reproduction = json.loads(reproduction_path.read_text(encoding="utf-8-sig"))
@@ -280,7 +280,7 @@ def build_uncertainty_audit(isotope_audit: dict[str, object], isotope_audit_path
             },
         ],
     }
-    output_path = ROOT / "docs/core/artifacts/t13_calorine_state_uncertainty_decomposition_audit.json"
+    output_path = ROOT / "docs/core/07_artifacts/topic13/t13_calorine_state_uncertainty_decomposition_audit.json"
     output_path.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
     return output_path, artifact
 
@@ -376,7 +376,7 @@ def main() -> int:
     output_dir.mkdir(parents=True, exist_ok=True)
     audit_path = output_dir / "t13_calorine_isotope_mass_sensitivity_audit.json"
     audit_path.write_text(json.dumps(audit, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
-    core_projection_path = ROOT / "docs/core/artifacts/t13_calorine_isotope_mass_sensitivity_audit.json"
+    core_projection_path = ROOT / "docs/core/07_artifacts/topic13/t13_calorine_isotope_mass_sensitivity_audit.json"
     core_projection_path.write_text(json.dumps(audit, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
     print(json.dumps({"status": audit["status"], "audit": str(audit_path), "sensitivity": sensitivity_rows}, indent=2))
     uncertainty_path, _ = build_uncertainty_audit(audit, audit_path)

@@ -45,7 +45,7 @@ def main():
         dependency_unlocked=[],full_core_unlock=False,
         claim_boundary="Prescribed chi is a diagnostic, not an on-shell driven solution. A normal thermal variance may respond linearly to another input; this result does not exclude that route. No epsilon division at GR null, no calibration value or holdout.",
         evidence_artifacts=[dict(path=p,sha256=sha256((ROOT/p).read_bytes()).hexdigest()) for p in files])
-    (ROOT/"docs/core/artifacts/t13_matter_actuation_harmonics_audit.json").write_text(json.dumps(r,indent=2,allow_nan=False)+"\n",encoding="utf-8")
+    (ROOT/"docs/core/07_artifacts/topic13/t13_matter_actuation_harmonics_audit.json").write_text(json.dumps(r,indent=2,allow_nan=False)+"\n",encoding="utf-8")
     for row in rows:print(row)
 
 

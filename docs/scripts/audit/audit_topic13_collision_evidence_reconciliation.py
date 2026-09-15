@@ -32,7 +32,7 @@ def main():
         next_action="Review existing vector/current/material handoffs before extending basis; do not repeat solved scalar or gain-loss construction",
         full_core_unlock=False, dependency_unlocked=[],
         claim_boundary="Matching hashes do not prove continuum completeness. Historical mismatches are disclosed, not repaired by rewriting archived results.")
-    (ROOT/"docs/core/artifacts/t13_collision_evidence_reconciliation.json").write_text(
+    (ROOT/"docs/core/07_artifacts/topic13/t13_collision_evidence_reconciliation.json").write_text(
         json.dumps(result,indent=2,allow_nan=False)+"\n",encoding="utf-8")
     for row in rows:
         print(row["path"],row["all_declared_references_match"])

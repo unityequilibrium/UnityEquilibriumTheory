@@ -1,38 +1,22 @@
-import sys
-import os
+"""Compatibility shim for the migrated core tooling path."""
 
-# Setup Path
-current_dir = os.path.dirname(os.path.abspath(__file__))
-project_root = os.path.dirname(current_dir)
-if project_root not in sys.path:
-    sys.path.insert(0, project_root)
+from __future__ import annotations
 
-print(f"Project Root: {project_root}")
-print(f"Sys Path: {sys.path[:3]}")
+import runpy
+from pathlib import Path
 
-try:
-    print("Attempting to import docs...")
-    import docs
+_CANONICAL_RELATIVE = "docs/scripts/core/debug/debug_imports.py"
 
-    print(f"Success: {docs}")
 
-    print("Attempting to import docs.core...")
-    import docs.core
+def _run() -> None:
+    current = Path(__file__).resolve()
+    for ancestor in (current.parent, *current.parents):
+        candidate = ancestor / _CANONICAL_RELATIVE
+        if candidate.exists():
+            runpy.run_path(str(candidate), run_name="__main__")
+            return
+    raise FileNotFoundError(f"canonical tooling script not found: {_CANONICAL_RELATIVE}")
 
-    print(f"Success: {docs.core}")
 
-    print("Attempting to import docs.core.uet_parameters...")
-    import docs.core.uet_parameters as p
-
-    print(f"Success module: {p}")
-    print(f"Has UETParameters? {'UETParameters' in dir(p)}")
-
-    from docs.core.uet_parameters import UETParameters
-
-    print(f"Success class: {UETParameters}")
-
-except Exception as e:
-    print(f"FAIL: {e}")
-    import traceback
-
-    traceback.print_exc()
+if __name__ == "__main__":
+    _run()

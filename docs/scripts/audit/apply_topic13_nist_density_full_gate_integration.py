@@ -12,12 +12,12 @@ text = text.replace(old, new)
 
 old = (
     '    huang_supplementary_path, huang_supplementary = load(\n'
-    '        "docs/core/artifacts/t13_huang_2023_supplementary_payload_boundary_audit.json"\n'
+    '        "docs/core/07_artifacts/topic13/t13_huang_2023_supplementary_payload_boundary_audit.json"\n'
     '    )\n'
 )
 new = old + (
     '    nist_density_path, nist_density = load(\n'
-    '        "docs/core/artifacts/t13_nist_axm5q1_density_source_boundary_audit.json"\n'
+    '        "docs/core/07_artifacts/topic13/t13_nist_axm5q1_density_source_boundary_audit.json"\n'
     '    )\n'
 )
 assert text.count(old) == 1

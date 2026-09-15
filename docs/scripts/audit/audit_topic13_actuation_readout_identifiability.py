@@ -34,7 +34,7 @@ def main():
         dependency_unlocked=[],full_core_unlock=False,
         claim_boundary="Does not prove all nonlinear/source protocols unidentifiable. Applies when alpha and actuation enter only through their product; no numeric alpha or external source payload is inferred.",
         evidence_artifacts=[dict(path=p,sha256=sha256((ROOT/p).read_bytes()).hexdigest()) for p in files])
-    (ROOT/"docs/core/artifacts/t13_actuation_readout_identifiability_audit.json").write_text(json.dumps(r,indent=2,allow_nan=False)+"\n",encoding="utf-8")
+    (ROOT/"docs/core/07_artifacts/topic13/t13_actuation_readout_identifiability_audit.json").write_text(json.dumps(r,indent=2,allow_nan=False)+"\n",encoding="utf-8")
     print(json.dumps(dict(rows=rows,rank=r["gain_design_rank"],anchored_rank=r["rank_with_independent_actuation"])))
 
 

@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-GATE = ROOT / "docs/core/artifacts/uet_research_room_wave1_integration_gate.json"
+GATE = ROOT / "docs/core/07_artifacts/gates/uet_research_room_wave1_integration_gate.json"
 INDEX = ROOT / "docs/topics/README.md"
 
 

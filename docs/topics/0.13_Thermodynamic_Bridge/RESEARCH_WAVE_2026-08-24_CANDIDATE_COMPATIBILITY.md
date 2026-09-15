@@ -59,7 +59,7 @@ Full Topic 13 cannot be closed by rerunning the existing comparators alone. Thre
 
 ## What Changed
 
-Added `docs/core/artifacts/t13_candidate_core_compatibility_audit.json`, its deterministic generator and regression, and linked the artifact into the three-package input audit. The register projection was repaired to preserve the matrix counts `10` and `36`.
+Added `docs/core/07_artifacts/topic13/t13_candidate_core_compatibility_audit.json`, its deterministic generator and regression, and linked the artifact into the three-package input audit. The register projection was repaired to preserve the matrix counts `10` and `36`.
 
 ## Equation Or Mapping
 
@@ -83,8 +83,8 @@ This is a compatibility and evidence-acquisition result only. It is not Full Top
 
 ## Evidence Paths
 
-- `docs/core/artifacts/t13_candidate_core_compatibility_audit.json`
-- `docs/core/artifacts/t13_closure_input_package_audit.json`
-- `docs/core/artifacts/t13_topic13_closure_matrix.json`
-- `docs/core/artifacts/uet_major_result_closure_register.json`
-- `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`
+- `docs/core/07_artifacts/topic13/t13_candidate_core_compatibility_audit.json`
+- `docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json`
+- `docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json`
+- `docs/core/07_artifacts/gates/uet_major_result_closure_register.json`
+- `docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json`

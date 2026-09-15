@@ -65508,7 +65508,7 @@
       "verifier_paths": []
     }
   ],
-  "generated_at": "2026-09-15T10:35:52+00:00",
+  "generated_at": "2026-09-15T11:14:29+00:00",
   "generator": "docs/scripts/audit/build_uet_research_organization_registry_v2.py",
   "logical_area_counts": {
     "00_governance": 47,

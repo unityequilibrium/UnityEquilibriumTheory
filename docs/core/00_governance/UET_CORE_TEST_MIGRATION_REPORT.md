@@ -2,7 +2,7 @@
 
 > Organization migration report. It does not promote a physics claim.
 
-Generated at: 2026-09-15T16:11:47+00:00
+Generated at: 2026-09-15T17:43:01+00:00
 Generator: docs/scripts/audit/migrate_uet_core_tests_v3.py
 
 ## Current state
@@ -19,8 +19,6 @@ Generator: docs/scripts/audit/migrate_uet_core_tests_v3.py
 ## Test-specific compatibility rule
 
 - Moved Python tests do not receive old-path wrappers, because wrappers would create duplicate pytest collection.
-- The old tree is retained only as a non-Python compatibility boundary and for
-  its boundary README after the move wave; no Python test implementation remains
-  there.
+- The old tree is retained only for tests not yet safe to move and for its boundary README after the move wave.
 - The migration manifest is the path map for moved tests; it is not evidence that the tests prove the underlying physics.
 - Package marker and sandbox residue are relocated to history/review destinations and are not collected as production tests.

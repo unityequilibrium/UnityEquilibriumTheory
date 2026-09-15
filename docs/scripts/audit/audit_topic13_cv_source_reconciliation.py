@@ -14,13 +14,13 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_cv_source_reconciliation_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_cv_source_reconciliation_audit.json"
 
 
 CANDIDATES = [
     {
         "candidate_id": "bipm_2006_graphite",
-        "artifact_path": "docs/core/artifacts/t13_bipm_specific_heat_source_audit.json",
+        "artifact_path": "docs/core/07_artifacts/topic13/t13_bipm_specific_heat_source_audit.json",
         "quantity_class": "volumetric_Cp_with_source_uncertainty",
         "direct_or_derived_cv": False,
         "source_grade_uncertainty_for_required_cv": False,
@@ -30,7 +30,7 @@ CANDIDATES = [
     },
     {
         "candidate_id": "npl_rsa40_ig11",
-        "artifact_path": "docs/core/artifacts/t13_npl_rsa40_graphite_specific_heat_audit.json",
+        "artifact_path": "docs/core/07_artifacts/topic13/t13_npl_rsa40_graphite_specific_heat_audit.json",
         "quantity_class": "mass_specific_Cp_with_source_uncertainty",
         "direct_or_derived_cv": False,
         "source_grade_uncertainty_for_required_cv": False,
@@ -40,7 +40,7 @@ CANDIDATES = [
     },
     {
         "candidate_id": "gatech_gen3csp_graphite_cp_95ci",
-        "artifact_path": "docs/core/artifacts/t13_gatech_graphite_source_audit.json",
+        "artifact_path": "docs/core/07_artifacts/topic13/t13_gatech_graphite_source_audit.json",
         "quantity_class": "mass_specific_Cp_with_95pct_confidence_interval_without_density_uncertainty",
         "direct_or_derived_cv": False,
         "source_grade_uncertainty_for_required_cv": False,
@@ -50,7 +50,7 @@ CANDIDATES = [
     },
     {
         "candidate_id": "iaea_gr280_same_state_cp",
-        "artifact_path": "docs/core/artifacts/t13_iaea_gr280_same_state_cp_source_audit.json",
+        "artifact_path": "docs/core/07_artifacts/topic13/t13_iaea_gr280_same_state_cp_source_audit.json",
         "quantity_class": "same_state_mass_specific_Cp_and_density_without_density_standard_uncertainty",
         "direct_or_derived_cv": False,
         "source_grade_uncertainty_for_required_cv": False,
@@ -60,7 +60,7 @@ CANDIDATES = [
     },
     {
         "candidate_id": "iaea_manufactured_graphite",
-        "artifact_path": "docs/core/artifacts/t13_iaea_cv_uncertainty_boundary_audit.json",
+        "artifact_path": "docs/core/07_artifacts/topic13/t13_iaea_cv_uncertainty_boundary_audit.json",
         "quantity_class": "table_derived_mass_specific_cv_without_standard_uncertainty",
         "direct_or_derived_cv": True,
         "source_grade_uncertainty_for_required_cv": False,
@@ -70,7 +70,7 @@ CANDIDATES = [
     },
     {
         "candidate_id": "mp48_harmonic_graphite",
-        "artifact_path": "docs/core/artifacts/t13_mp48_independent_graphite_cv_audit.json",
+        "artifact_path": "docs/core/07_artifacts/topic13/t13_mp48_independent_graphite_cv_audit.json",
         "quantity_class": "harmonic_volumetric_cv_with_nonstatistical_envelope",
         "direct_or_derived_cv": True,
         "source_grade_uncertainty_for_required_cv": False,
@@ -80,7 +80,7 @@ CANDIDATES = [
     },
     {
         "candidate_id": "lowitzer_graphite_pvt",
-        "artifact_path": "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
+        "artifact_path": "docs/core/07_artifacts/topic13/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
         "quantity_class": "alphaV_KT_correction_pair_without_same_state_cv",
         "direct_or_derived_cv": False,
         "source_grade_uncertainty_for_required_cv": False,
@@ -90,7 +90,7 @@ CANDIDATES = [
     },
     {
         "candidate_id": "desorbo_ceylon_graphite",
-        "artifact_path": "docs/core/artifacts/t13_desorbo_ceylon_graphite_cp_audit.json",
+        "artifact_path": "docs/core/07_artifacts/topic13/t13_desorbo_ceylon_graphite_cp_audit.json",
         "quantity_class": "natural_graphite_molar_Cp_without_standard_uncertainty",
         "direct_or_derived_cv": False,
         "source_grade_uncertainty_for_required_cv": False,
@@ -100,7 +100,7 @@ CANDIDATES = [
     },
     {
         "candidate_id": "farooqui_ig210",
-        "artifact_path": "docs/core/artifacts/t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json",
+        "artifact_path": "docs/core/07_artifacts/topic13/t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json",
         "quantity_class": "volumetric_Cp_with_expanded_uncertainty",
         "direct_or_derived_cv": False,
         "source_grade_uncertainty_for_required_cv": False,

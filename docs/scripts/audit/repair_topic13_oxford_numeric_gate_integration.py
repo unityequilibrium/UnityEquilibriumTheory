@@ -26,8 +26,8 @@ def main() -> int:
     )
     text = replace_once(
         text,
-        '    phonix_path, phonix = load(\n        "docs/core/artifacts/t13_phonix_mp47_graphite_comparator_audit.json"\n    )\n',
-        '    phonix_path, phonix = load(\n        "docs/core/artifacts/t13_phonix_mp47_graphite_comparator_audit.json"\n    )\n    oxford_numeric_path, oxford_numeric = load(\n        "docs/core/artifacts/t13_oxford_tgs_numeric_rows_audit.json"\n    )\n',
+        '    phonix_path, phonix = load(\n        "docs/core/07_artifacts/topic13/t13_phonix_mp47_graphite_comparator_audit.json"\n    )\n',
+        '    phonix_path, phonix = load(\n        "docs/core/07_artifacts/topic13/t13_phonix_mp47_graphite_comparator_audit.json"\n    )\n    oxford_numeric_path, oxford_numeric = load(\n        "docs/core/07_artifacts/topic13/t13_oxford_tgs_numeric_rows_audit.json"\n    )\n',
         "numeric audit load",
     )
     oxford_anchor = '''    oxford_source_lane = discovered_lane_integrations.get(

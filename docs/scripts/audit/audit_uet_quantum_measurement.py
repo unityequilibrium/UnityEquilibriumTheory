@@ -91,7 +91,7 @@ def build_artifacts() -> tuple[dict, dict, dict]:
     }
     addendum = {
         "schema_version": "1.0", "artifact": "uet_equation_correspondence_registry_quantum_measurement_addendum",
-        "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json", "status": "CANDIDATE_ENTRY_PENDING_MERGE",
+        "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json", "status": "CANDIDATE_ENTRY_PENDING_MERGE",
         "equation_entries": [{
             "equation_id": "uet.main_theory.operational_quantum_measurement", "version": "operational-qm-v1",
             "classification": "standard_physics_interface", "relation_or_code_path": QUANTUM_MEASUREMENT_SOURCE,
@@ -105,7 +105,7 @@ def build_artifacts() -> tuple[dict, dict, dict]:
             "symmetry_and_conservation": "trace preservation, positivity, and no-signalling baseline",
             "limiting_cases": ["identity channel preserves preparation", "projective instrument is a POVM special case"],
             "implementation_paths": [QUANTUM_MEASUREMENT_SOURCE],
-            "verifier_paths": ["docs/scripts/audit/audit_uet_quantum_measurement.py", "docs/core/artifacts/quantum_measurement_verification.json", "docs/core/test/test_uet_quantum_measurement.py"],
+            "verifier_paths": ["docs/scripts/audit/audit_uet_quantum_measurement.py", "docs/core/07_artifacts/verification/quantum_measurement_verification.json", "docs/core/test/test_uet_quantum_measurement.py"],
             "evidence_class": "STANDARD_THEORY_REPRODUCTION", "proof_status": "finite-dimensional baseline tests pass",
             "downstream_dependencies": ["uet.main_theory.quantum_interpretations", "uet.main_theory.detector_observables"],
             "claim_boundary": "standard interface adopted by UET; not a UET derivation of quantum mechanics",

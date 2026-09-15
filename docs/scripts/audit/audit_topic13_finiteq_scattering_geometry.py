@@ -65,7 +65,7 @@ def main():
                          reference_relative_error=err))
     files = list(LOCKS)+[Path(__file__), ROOT/'docs/core/test/test_topic13_finiteq_scattering_geometry.py',
         ROOT/'docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py',
-        ROOT/'docs/core/artifacts/uet_equation_correspondence_registry_topic13_finiteq_geometry_addendum.json']
+        ROOT/'docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_finiteq_geometry_addendum.json']
     result = dict(major_result_id='T13_FINITEQ_SCATTERING_GEOMETRY', topic='0.13', closure_level='PARTIAL',
         what_is_closed=['Finite-q amplitude convention cross-checked against installed Phonopy for declared source/grid'],
         equation_registry_ids=['uet.diagnostic.finiteq_one_phonon_geometry'],
@@ -87,7 +87,7 @@ def main():
         claim_boundary='No detector inversion, rates, temperatures or physical alpha. No holdout input; no negative mode clipped.')
     if max(r['reference_relative_error'] for r in rows) > 1e-12:
         raise ValueError('reference disagreement')
-    (ROOT/'docs/core/artifacts/t13_finiteq_scattering_geometry_audit.json').write_text(json.dumps(result, indent=2, allow_nan=False)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_finiteq_scattering_geometry_audit.json').write_text(json.dumps(result, indent=2, allow_nan=False)+'\n')
     print(json.dumps([dict(q=r['q_fractional'], columns=len(r['resolved_geometry_columns']), rank=r['numerical_rank'],
                            singular=r['normalized_singular_values'], error=r['reference_relative_error']) for r in rows], indent=2))
 

@@ -1,23 +1,22 @@
-import csv
-import os
-import sys
+"""Compatibility shim for the migrated core tooling path."""
 
-sys.path.insert(0, os.getcwd())
+from __future__ import annotations
 
-from docs.lab.galaxies.test_175_galaxies_v4 import SPARC_GALAXIES
+import runpy
+from pathlib import Path
+
+_CANONICAL_RELATIVE = "docs/scripts/core/legacy/recover_data.py"
 
 
-def recover():
-    output_path = "docs/data_vault/sources/sparc_175.csv"
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-
-    with open(output_path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerow(["name", "R_kpc", "v_obs", "M_disk_Msun", "R_disk_kpc", "type"])
-        writer.writerows(SPARC_GALAXIES)
-
-    print(f"Recovered {len(SPARC_GALAXIES)} records to {output_path}")
+def _run() -> None:
+    current = Path(__file__).resolve()
+    for ancestor in (current.parent, *current.parents):
+        candidate = ancestor / _CANONICAL_RELATIVE
+        if candidate.exists():
+            runpy.run_path(str(candidate), run_name="__main__")
+            return
+    raise FileNotFoundError(f"canonical tooling script not found: {_CANONICAL_RELATIVE}")
 
 
 if __name__ == "__main__":
-    recover()
+    _run()

@@ -52,9 +52,9 @@ def build_artifacts() -> tuple[dict, dict]:
         "input_identity": {
             PHASE.relative_to(ROOT).as_posix(): _sha(PHASE),
             THERMAL.relative_to(ROOT).as_posix(): _sha(THERMAL),
-            "docs/core/artifacts/uet_main_theory_wave8_gate.json": _sha(CORE / "uet_main_theory_wave8_gate.json"),
-            "docs/core/artifacts/uet_main_theory_wave9_gate.json": _sha(CORE / "uet_main_theory_wave9_gate.json"),
-            "docs/core/artifacts/uet_fundamental_track_gate.json": _sha(CORE / "uet_fundamental_track_gate.json"),
+            "docs/core/07_artifacts/gates/uet_main_theory_wave8_gate.json": _sha(CORE / "uet_main_theory_wave8_gate.json"),
+            "docs/core/07_artifacts/gates/uet_main_theory_wave9_gate.json": _sha(CORE / "uet_main_theory_wave9_gate.json"),
+            "docs/core/07_artifacts/gates/uet_fundamental_track_gate.json": _sha(CORE / "uet_fundamental_track_gate.json"),
         },
         "unlock_order": ["thermal/phase internal pilots", "fluid/vacuum/covariant stress-energy", "gravity/orbit", "galaxy/cosmology", "particle/Dirac"],
         "claim_boundary": "dependency decisions only; PASS_INTERNAL_ONLY is not physical or external validation",

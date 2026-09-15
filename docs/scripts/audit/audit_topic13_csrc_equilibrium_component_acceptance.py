@@ -16,13 +16,13 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT_REL = "docs/core/artifacts/t13_csrc_equilibrium_component_acceptance_audit.json"
-REPRO_REL = "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json"
-STATE_REL = "docs/core/artifacts/t13_calorine_state_uncertainty_decomposition_audit.json"
-ISOTOPE_REL = "docs/core/artifacts/t13_calorine_isotope_mass_sensitivity_audit.json"
-MODEL_REL = "docs/core/artifacts/t13_calorine_model_form_state_spread_comparison_audit.json"
-IDENTITY_REL = "docs/core/artifacts/t13_csrc_fixed_volume_identity_audit.json"
-DECOMPOSITION_REL = "docs/core/artifacts/t13_csrc_thermodynamic_transport_regime_decomposition_audit.json"
+OUT_REL = "docs/core/07_artifacts/topic13/t13_csrc_equilibrium_component_acceptance_audit.json"
+REPRO_REL = "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_reproduction_audit.json"
+STATE_REL = "docs/core/07_artifacts/topic13/t13_calorine_state_uncertainty_decomposition_audit.json"
+ISOTOPE_REL = "docs/core/07_artifacts/topic13/t13_calorine_isotope_mass_sensitivity_audit.json"
+MODEL_REL = "docs/core/07_artifacts/topic13/t13_calorine_model_form_state_spread_comparison_audit.json"
+IDENTITY_REL = "docs/core/07_artifacts/topic13/t13_csrc_fixed_volume_identity_audit.json"
+DECOMPOSITION_REL = "docs/core/07_artifacts/topic13/t13_csrc_thermodynamic_transport_regime_decomposition_audit.json"
 SOURCE_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_nep_bte_reproduction_source_package.json"
 DING_FORMULA_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_pbte_energy_temperature_source_package.json"
 

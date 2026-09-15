@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = repo_root()
 EXTRACT = ROOT / "docs/scripts/audit/extract_topic13_oxford_tgs_numeric_rows.py"
 AUDIT = ROOT / "docs/scripts/audit/audit_topic13_oxford_tgs_numeric_rows.py"
-ARTIFACT = ROOT / "docs/core/artifacts/t13_oxford_tgs_numeric_rows_audit.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_oxford_tgs_numeric_rows_audit.json"
 
 
 def test_oxford_tgs_numeric_rows_are_source_locked_without_promotion() -> None:

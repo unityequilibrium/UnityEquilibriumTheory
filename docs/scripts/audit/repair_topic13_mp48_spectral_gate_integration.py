@@ -18,8 +18,8 @@ replace_once(
     "registry mapping",
 )
 replace_once(
-    '    ding_public_supplementary_path, ding_public_supplementary = load(\n        "docs/core/artifacts/t13_ding_public_supplementary_payload_boundary_audit.json"\n    )\n',
-    '    ding_public_supplementary_path, ding_public_supplementary = load(\n        "docs/core/artifacts/t13_ding_public_supplementary_payload_boundary_audit.json"\n    )\n    spectral_csrc_path, spectral_csrc = load(\n        "docs/core/artifacts/t13_mp48_spectral_csrc_reproduction_audit.json"\n    )\n',
+    '    ding_public_supplementary_path, ding_public_supplementary = load(\n        "docs/core/07_artifacts/topic13/t13_ding_public_supplementary_payload_boundary_audit.json"\n    )\n',
+    '    ding_public_supplementary_path, ding_public_supplementary = load(\n        "docs/core/07_artifacts/topic13/t13_ding_public_supplementary_payload_boundary_audit.json"\n    )\n    spectral_csrc_path, spectral_csrc = load(\n        "docs/core/07_artifacts/topic13/t13_mp48_spectral_csrc_reproduction_audit.json"\n    )\n',
     "spectral artifact load",
 )
 replace_once(

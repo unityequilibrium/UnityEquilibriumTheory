@@ -115,7 +115,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
     }
     addendum = {
         "schema_version": "1.0", "artifact": "uet_equation_correspondence_registry_open_system_addendum",
-        "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+        "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
         "status": "CANDIDATE_ENTRY_PENDING_MERGE",
         "equation_entries": [{
             "equation_id": "uet.main_theory.open_system_linear_kms", "version": "open-system-linear-kms-v1",
@@ -130,7 +130,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
             "symmetry_and_conservation": "Onsager symmetry/PSD and extended entropy ledger; local covariant Q^mu integration remains open",
             "limiting_cases": ["tau to zero approaches instantaneous Onsager response distributionally", "zero coefficient removes dissipation and noise"],
             "implementation_paths": ["docs/core/uet_covariant_open_system.py"],
-            "verifier_paths": ["docs/scripts/audit/audit_uet_covariant_open_system.py", "docs/core/artifacts/covariant_open_system_verification.json", "docs/core/test/test_uet_covariant_open_system.py"],
+            "verifier_paths": ["docs/scripts/audit/audit_uet_covariant_open_system.py", "docs/core/07_artifacts/verification/covariant_open_system_verification.json", "docs/core/test/test_uet_covariant_open_system.py"],
             "evidence_class": "INTERNAL_FORMAL", "proof_status": "linear classical control passes; full SK/KMS derivation blocked",
             "downstream_dependencies": ["uet.main_theory.coarse_graining", "uet.main_theory.curved_3p1", "uet.main_theory.observables"],
             "claim_boundary": "candidate constitutive bridge, not microscopic transport derivation",

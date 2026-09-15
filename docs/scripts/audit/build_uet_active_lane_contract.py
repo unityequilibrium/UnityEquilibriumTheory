@@ -16,7 +16,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/uet_active_lane_units_observable_register.json"
+OUT = ROOT / "docs/core/07_artifacts/archive/uet_active_lane_units_observable_register.json"
 
 
 def build() -> dict[str, Any]:
@@ -31,7 +31,7 @@ def build() -> dict[str, Any]:
             "units_status": "CLOSED_NORMALIZED_ONLY",
             "uncertainty_status": "NUMERICAL_REFINEMENT_ONLY",
             "open_items": ["no SI map", "no material calibration", "C is not mass density"],
-            "evidence": ["docs/core/artifacts/matter_space_characteristic_cone_verification.json"],
+            "evidence": ["docs/core/07_artifacts/verification/matter_space_characteristic_cone_verification.json"],
         },
         {
             "lane_id": "matter_space_conserved_phase_comparator",
@@ -43,7 +43,7 @@ def build() -> dict[str, Any]:
             "units_status": "CLOSED_NORMALIZED_ONLY",
             "uncertainty_status": "REPLICATE_AND_TEMPORAL_ACQUISITION_OPEN",
             "open_items": ["changing-C finite cone is blocked by high-k dispersion", "material units open"],
-            "evidence": ["docs/core/artifacts/matter_space_causal_lane_selection.json", "docs/core/artifacts/matter_space_phase_pilot.json"],
+            "evidence": ["docs/core/07_artifacts/archive/matter_space_causal_lane_selection.json", "docs/core/07_artifacts/archive/matter_space_phase_pilot.json"],
         },
         {
             "lane_id": "matter_density_augmented_amplitude",
@@ -64,7 +64,7 @@ def build() -> dict[str, Any]:
                 "A_m and L_scale are explicit inputs, not UET derivations",
                 "3D physical source, uncertainty, galaxy data, and holdout remain open",
             ],
-            "evidence": ["docs/core/artifacts/mass_density_correspondence_verification.json", "docs/core/artifacts/mass_density_amplitude_contract_verification.json", "docs/core/artifacts/mass_density_dimensional_contract_verification.json"],
+            "evidence": ["docs/core/07_artifacts/correspondence/mass_density_correspondence_verification.json", "docs/core/07_artifacts/verification/mass_density_amplitude_contract_verification.json", "docs/core/07_artifacts/verification/mass_density_dimensional_contract_verification.json"],
         },
         {
             "lane_id": "matter_density_3d_observable_operator",
@@ -87,8 +87,8 @@ def build() -> dict[str, Any]:
                 "external 3D source, calibration, propagated uncertainty, galaxy data, and holdout remain open",
             ],
             "evidence": [
-                "docs/core/artifacts/mass_density_3d_contract_verification.json",
-                "docs/core/artifacts/uet_equation_correspondence_registry.json",
+                "docs/core/07_artifacts/verification/mass_density_3d_contract_verification.json",
+                "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
             ],
         },
         {
@@ -101,7 +101,7 @@ def build() -> dict[str, Any]:
             "units_status": "CLOSED_NORMALIZED_ONLY",
             "uncertainty_status": "PARAMETER_SENSITIVITY_OPEN",
             "open_items": ["no physical energy/work/temperature mapping", "not an intention or teleological law"],
-            "evidence": ["docs/core/artifacts/resource_selection_dynamic_game_verification.json", "docs/core/artifacts/resource_selection_thermal_bridge_verification.json"],
+            "evidence": ["docs/core/07_artifacts/provenance/resource_selection_dynamic_game_verification.json", "docs/core/07_artifacts/provenance/resource_selection_thermal_bridge_verification.json"],
         },
         {
             "lane_id": "thermal_cattaneo_bridge",
@@ -113,7 +113,7 @@ def build() -> dict[str, Any]:
             "units_status": "BLOCKED_SI_MAP",
             "uncertainty_status": "EXTERNAL_SOURCE_PACKAGE_OPEN",
             "open_items": ["Phi/C to T and q map not derived", "normalized proxy is not calorimetry"],
-            "evidence": ["docs/core/artifacts/thermal_observable_bridge_verification.json", "docs/core/artifacts/resource_selection_thermal_bridge_verification.json"],
+            "evidence": ["docs/core/07_artifacts/topic13/thermal_observable_bridge_verification.json", "docs/core/07_artifacts/provenance/resource_selection_thermal_bridge_verification.json"],
         },
         {
             "lane_id": "o2_finite_density_eos",
@@ -125,7 +125,7 @@ def build() -> dict[str, Any]:
             "units_status": "CLOSED_NATURAL_OPEN_SI",
             "uncertainty_status": "EXTERNAL_COEFFICIENT_MATCH_OPEN",
             "open_items": ["not universal definition of C", "finite-temperature transport and Kubo values open"],
-            "evidence": ["docs/core/artifacts/o2_finite_density_eos_verification.json", "docs/core/artifacts/covariant_superfluid_transport_verification.json"],
+            "evidence": ["docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json", "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json"],
         },
         {
             "lane_id": "impact_carrier_observer",
@@ -138,7 +138,7 @@ def build() -> dict[str, Any]:
             "uncertainty_status": "DETECTOR_RESPONSE_AND_SOURCE_PROVENANCE_OPEN",
             "standard_control": "normalized standard-photon source-propagation-detector comparator",
             "open_items": ["R_gen is not photon/neutrino/positron", "no universal carrier identity", "SI detector map and external provenance remain open"],
-            "evidence": ["docs/core/artifacts/impact_effect_core_verification.json", "docs/core/artifacts/carrier_observer_thought_experiment.json", "docs/core/artifacts/photon_observer_baseline_verification.json"],
+            "evidence": ["docs/core/07_artifacts/verification/impact_effect_core_verification.json", "docs/core/07_artifacts/archive/carrier_observer_thought_experiment.json", "docs/core/07_artifacts/verification/photon_observer_baseline_verification.json"],
         },
         {
             "lane_id": "gravity_orbit_cosmology",
@@ -150,7 +150,7 @@ def build() -> dict[str, Any]:
             "units_status": "BLOCKED",
             "uncertainty_status": "PROVENANCE_AND_RESIDUAL_POLICY_OPEN",
             "open_items": ["no Einstein derivation", "no global open-universe claim"],
-            "evidence": ["docs/core/artifacts/orbit_cosmology_correspondence_gate.json", "docs/core/artifacts/uet_gr_research_program_gate.json"],
+            "evidence": ["docs/core/07_artifacts/gates/orbit_cosmology_correspondence_gate.json", "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json"],
         },
     ]
     counts: dict[str, int] = {}

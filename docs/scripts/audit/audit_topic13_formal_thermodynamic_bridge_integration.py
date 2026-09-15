@@ -23,7 +23,7 @@ from docs.core.t13_formal_thermodynamic_bridge_integration import (
 from docs.core.uet_o2_covariant_entropy_heat_flux_balance import (
     covariant_entropy_heat_flux_balance_contract,
 )
-OUT = ROOT / "docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_formal_thermodynamic_bridge_integration_audit.json"
 
 
 def rel(path: Path) -> str:
@@ -48,9 +48,9 @@ def main() -> int:
         ROOT / "docs/core/thermal_collective_response_eos.py",
         ROOT / "docs/core/thermal_sk_kms_entropy_contract.py",
         ROOT / "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py",
-        ROOT / "docs/core/artifacts/t13_collective_response_eos_stability_audit.json",
-        ROOT / "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json",
-        ROOT / "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+        ROOT / "docs/core/07_artifacts/topic13/t13_collective_response_eos_stability_audit.json",
+        ROOT / "docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json",
+        ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
     ]
     artifact = {
         "schema_version": "t13-formal-thermodynamic-bridge-integration-v1",

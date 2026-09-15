@@ -33,7 +33,7 @@ def predict(points,parameters,kind):
 
 
 def main():
-    source_path=ROOT/'docs/core/artifacts/t13_multibragg_positions.json'
+    source_path=ROOT/'docs/core/07_artifacts/topic13/t13_multibragg_positions.json'
     source=json.loads(source_path.read_text())
     for e in source['evidence_artifacts']:
         if sha256((ROOT/e['path']).read_bytes()).hexdigest()!=e['sha256']:raise ValueError('upstream drift')
@@ -68,7 +68,7 @@ def main():
         dependency_unlocked=[],full_core_unlock=False,global_claim_promotion=False,
         claim_boundary='No model automatically selected or applied. Leave-one-peak-out is internal, not independent external validation or a statistical uncertainty bound. No holdout read.',
         evidence_artifacts=[dict(path=p.relative_to(ROOT).as_posix(),sha256=sha256(p.read_bytes()).hexdigest()) for p in files])
-    (ROOT/'docs/core/artifacts/t13_baseline_registration_models.json').write_text(json.dumps(output,indent=2,allow_nan=False)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_baseline_registration_models.json').write_text(json.dumps(output,indent=2,allow_nan=False)+'\n')
     print(json.dumps([dict(member=r['member'],radii={rad:{m:(v['loo_rms_pixels'],v['loo_max_pixels']) for m,v in ms.items()} for rad,ms in r['models_by_radius'].items()},disagreement=r['radius_model_disagreement_max_pixels']) for r in rows]))
 
 

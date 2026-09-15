@@ -37,7 +37,7 @@ sigma_J = b_Jx,perp^T L_cont b_Jx,perp / T >= 0
 ```
 
 VERIFICATION:
-- `docs/core/artifacts/t13_uet_o2_charged_current_correlator_audit.json`: `PASS_ACTION_MATCHED_CHARGED_CURRENT_CORRELATOR_LANE`; no failed checks.
+- `docs/core/07_artifacts/topic13/t13_uet_o2_charged_current_correlator_audit.json`: `PASS_ACTION_MATCHED_CHARGED_CURRENT_CORRELATOR_LANE`; no failed checks.
 - KMS maximum relative residual: `1.6337129034990842e-16`.
 - FDT maximum relative residual: `1.5143303520891009e-16`.
 - Focused regression: `9 passed`.

@@ -19,11 +19,11 @@ from docs.core.uet_o2_beta_correspondence import (
 
 
 ROOT = Path(__file__).resolve().parents[3]
-CURVATURE_REL = "docs/core/artifacts/t13_uet_o2_normal_response_curvature_audit.json"
-BETA_REL = "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json"
-PHI_ANCHOR_REL = "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json"
+CURVATURE_REL = "docs/core/07_artifacts/topic13/t13_uet_o2_normal_response_curvature_audit.json"
+BETA_REL = "docs/core/07_artifacts/topic13/t13_thermal_response_beta_contract_audit.json"
+PHI_ANCHOR_REL = "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json"
 MODULE_REL = "docs/core/uet_o2_beta_correspondence.py"
-OUT = ROOT / "docs/core/artifacts/t13_beta_action_normalized_correspondence_no_go.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_beta_action_normalized_correspondence_no_go.json"
 
 
 def load(relative: str) -> dict:

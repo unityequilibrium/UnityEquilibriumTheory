@@ -30,8 +30,8 @@ NEXT_ACTION: Obtain an authorized Ding-compatible numeric package or accepted sa
 CLAIM_BOUNDARY: This is a source-locked candidate reproduction and verifier-repair result. It is not Ding `C_src` acceptance, a `Phi`-to-temperature prediction, an independent `alpha_Phi_K` calibration, physical UET transport, external validation, Full Topic 13 closure, or global UET closure.
 
 EVIDENCE_PATHS:
-- `docs/core/artifacts/t13_calorine_legacy_nep2_pbte_reproduction_audit.json`
+- `docs/core/07_artifacts/topic13/t13_calorine_legacy_nep2_pbte_reproduction_audit.json`
 - `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/calorine_legacy_nep2_pbte_reproduction_source_package.json`
-- `docs/core/artifacts/t13_calorine_nep1_backend_compatibility_audit.json`
-- `docs/core/artifacts/t13_calorine_public_model_variant_boundary_audit.json`
+- `docs/core/07_artifacts/topic13/t13_calorine_nep1_backend_compatibility_audit.json`
+- `docs/core/07_artifacts/topic13/t13_calorine_public_model_variant_boundary_audit.json`
 - `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`

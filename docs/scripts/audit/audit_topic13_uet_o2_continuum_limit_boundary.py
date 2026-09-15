@@ -28,8 +28,8 @@ from docs.core.uet_o2_finite_temperature_quasiparticle_eos import (  # noqa: E40
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_continuum_limit_boundary_audit.json"
-SOURCE_REL = "docs/core/artifacts/t13_uet_o2_tree_level_bs_sk_match_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_continuum_limit_boundary_audit.json"
+SOURCE_REL = "docs/core/07_artifacts/topic13/t13_uet_o2_tree_level_bs_sk_match_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_continuum_limit_boundary.py"
 SOURCE_MODULE = ROOT / "docs/core/uet_o2_tree_level_bs_sk_match.py"
 COLLISION_MODULE = ROOT / "docs/core/uet_o2_continuum_collision_operator.py"

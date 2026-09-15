@@ -4,7 +4,7 @@
 โดยไม่ถือว่าทุกบรรทัดในโค้ดเป็นสมการฟิสิกส์
 
 ผล machine-readable อยู่ที่
-[`uet_core_equation_family_contract.json`](../artifacts/uet_core_equation_family_contract.json)
+[`uet_core_equation_family_contract.json`](../07_artifacts/archive/uet_core_equation_family_contract.json)
 และสร้างซ้ำได้จาก
 [`build_uet_core_equation_family_contract.py`](../../scripts/audit/build_uet_core_equation_family_contract.py)
 

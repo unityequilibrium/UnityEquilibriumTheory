@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-ARTIFACT = ROOT / "docs/core/artifacts/t13_graphite_elastic_bulk_modulus_source_audit.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_graphite_elastic_bulk_modulus_source_audit.json"
 FULL_GATE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
     "topic13_full_thermodynamic_bridge_core_ready_gate.json"
@@ -40,7 +40,7 @@ WHAT_IS_ACTUALLY_CLOSED: The Bosak et al. IXS primary PDF is archived with SHA-2
 WHAT_REMAINS_OPEN: The IXS result is an elastic/dynamic comparator rather than a source-locked isothermal `K_T`; same-state `Cp/Cv`, Ding TTG material mapping, `Cp -> Cv`, base-Phi mapping, and `alpha_Phi_K` remain open.
 DEPENDENCY_UNLOCKED: Source-locked graphite elastic bulk comparator only; no `K_T`, volumetric `c_v`, alpha, transport, Core, Gravity, or Galaxy unlock.
 STATUS: `PASS_SCOPED_GRAPHITE_ELASTIC_BULK_COMPARATOR`; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
-WHAT_CHANGED: Added and integrated `docs/core/artifacts/t13_graphite_elastic_bulk_modulus_source_audit.json` (SHA-256 `{artifact_hash}`), the Bosak source package, and the archived primary PDF; current full-gate hash is `{full_hash}`.
+WHAT_CHANGED: Added and integrated `docs/core/07_artifacts/topic13/t13_graphite_elastic_bulk_modulus_source_audit.json` (SHA-256 `{artifact_hash}`), the Bosak source package, and the archived primary PDF; current full-gate hash is `{full_hash}`.
 EQUATION_OR_MAPPING: `S=C_normal^-1`; `B_elastic=1/(2*S11+2*S12+4*S13+S33)`; no `C33 -> K_T` relabeling.
 VERIFICATION: Source hash, page locators, tensor positivity, compliance inversion, central-value agreement, uncertainty declaration, no `K_T` emission, no target fit, no alpha fit, and no Xie 2026 access pass.
 CONTROLLING_BLOCKER: `isothermal_K_T_material_regime_and_dynamic_to_thermal_conversion_missing` for this lane; the full gate remains controlled by Ding `C_src`, independent `alpha_Phi_K`, non-circular bridge/beta, EOS/transport/KMS/entropy, and base-Phi SI mapping.
@@ -56,7 +56,7 @@ The primary Bosak et al. IXS PDF is archived at
 `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/bosak_2007_graphite_elasticity.pdf`
 with SHA-256 `{raw_hash}`. The source package is
 `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/bosak_2007_graphite_elastic_bulk_source_package.json`.
-The audit artifact is `docs/core/artifacts/t13_graphite_elastic_bulk_modulus_source_audit.json`
+The audit artifact is `docs/core/07_artifacts/topic13/t13_graphite_elastic_bulk_modulus_source_audit.json`
 with SHA-256 `{artifact_hash}`.
 
 The source reports the room-temperature single-crystal graphite tensor and
@@ -70,7 +70,7 @@ elastic comparator from the normal compliance block. This is not an isothermal
 
 | formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| `T13-043` | `S=C_normal^-1`; `B_elastic=1/(2*S11+2*S12+4*S13+S33)` | `docs/scripts/audit/audit_topic13_graphite_elastic_bulk_modulus_source.py`; `docs/core/artifacts/t13_graphite_elastic_bulk_modulus_source_audit.json` | `C_ij` = GPa; `S_ij` = Pa^-1; `B_elastic` = Pa = J m^-3; source state = room-temperature single-crystal graphite | Bosak et al. 2007 IXS tensor, archived PDF, Table II | checked source comparator; not UET derivation and not isothermal `K_T` | source identity, unit-aware tensor inversion, and bulk-modulus reconstruction | dynamic/elastic B may not equal thermal isothermal `K_T`; no same-state `Cp/Cv` or Ding material mapping | source-lock same-state isothermal `K_T`, or derive a permitted dynamic-to-thermal conversion with matched `Cp/Cv` and uncertainty |
+| `T13-043` | `S=C_normal^-1`; `B_elastic=1/(2*S11+2*S12+4*S13+S33)` | `docs/scripts/audit/audit_topic13_graphite_elastic_bulk_modulus_source.py`; `docs/core/07_artifacts/topic13/t13_graphite_elastic_bulk_modulus_source_audit.json` | `C_ij` = GPa; `S_ij` = Pa^-1; `B_elastic` = Pa = J m^-3; source state = room-temperature single-crystal graphite | Bosak et al. 2007 IXS tensor, archived PDF, Table II | checked source comparator; not UET derivation and not isothermal `K_T` | source identity, unit-aware tensor inversion, and bulk-modulus reconstruction | dynamic/elastic B may not equal thermal isothermal `K_T`; no same-state `Cp/Cv` or Ding material mapping | source-lock same-state isothermal `K_T`, or derive a permitted dynamic-to-thermal conversion with matched `Cp/Cv` and uncertainty |
 
 Artifact hash: `{artifact_hash}`. The lane does not emit `K_T` or `alpha_Phi_K`, does not read Xie 2026, and does not promote `Phi` to temperature.
 """

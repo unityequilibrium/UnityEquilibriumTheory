@@ -8,8 +8,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
-AUDIT = ROOT / "docs/core/artifacts/t13_energy_response_bridge_audit.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_energy_response_bridge_audit.json"
 
 
 def sha256(path: Path) -> str:

@@ -37,6 +37,6 @@ EVIDENCE_PATHS:
 
 - `docs/core/uet_o2_finite_temperature_all_onshell_cut_response.py`
 - `docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_all_onshell_cut_response.py`
-- `docs/core/artifacts/t13_uet_o2_finite_temperature_all_onshell_cut_response_audit.json`
-- `docs/core/artifacts/t13_uet_o2_finite_temperature_sunset_cut_multiplicity_audit.json`
-- `docs/core/artifacts/t13_uet_o2_finite_temperature_declared_retarded_1pi_grid_audit.json`
+- `docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_all_onshell_cut_response_audit.json`
+- `docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_sunset_cut_multiplicity_audit.json`
+- `docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_declared_retarded_1pi_grid_audit.json`

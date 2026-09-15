@@ -23,9 +23,9 @@ def tile_totals(image):
 
 
 def main():
-    inventory=ROOT/'docs/core/artifacts/t13_ued_raw_structure_audit.json'
-    previous=ROOT/'docs/core/artifacts/t13_ued_cut_signal_audit.json'
-    acquisition=ROOT/'docs/core/artifacts/t13_ued_raw_archive_audit.json'
+    inventory=ROOT/'docs/core/07_artifacts/topic13/t13_ued_raw_structure_audit.json'
+    previous=ROOT/'docs/core/07_artifacts/topic13/t13_ued_cut_signal_audit.json'
+    acquisition=ROOT/'docs/core/07_artifacts/topic13/t13_ued_raw_archive_audit.json'
     for p in (inventory,previous,acquisition):
         for f,h in json.loads(p.read_text())['evidence_hashes'].items():
             if digest(ROOT/f)!=h: raise ValueError('stale evidence')
@@ -73,7 +73,7 @@ def main():
         open_blockers=['cut-dependent alignment/detector response','mode-resolving geometry','acquisition independence','independent Phi coupling'],
         dependency_unlocked=['geometry-aware cut comparison only'],full_core_unlock=False,claim_promotion=False,
         claim_boundary='Not Bragg/diffuse separation, thermal response, covariance, significance, causal leakage or calibration. All 16 tiles reported, no selected-region fit, clipping, interpolation or holdout.')
-    (ROOT/'docs/core/artifacts/t13_ued_cut_tiles_audit.json').write_text(json.dumps(artifact,indent=2,allow_nan=False)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_ued_cut_tiles_audit.json').write_text(json.dumps(artifact,indent=2,allow_nan=False)+'\n')
     print(json.dumps([dict(tile=t['tile_id'],bounds=t['bounds_y0_y1_x0_x1'],off_fraction=t['off_intensity_fraction_by_cut'],max_difference=None if t['result'] is None else t['result']['max_abs_cut_difference']) for t in results],indent=2))
 
 

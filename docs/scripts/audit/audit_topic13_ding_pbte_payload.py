@@ -23,7 +23,7 @@ DEFAULT_PAYLOAD = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/received/"
     "ding_2022_pbte_numeric_payload.json"
 )
-DEFAULT_OUTPUT = ROOT / "docs/core/artifacts/t13_ding_pbte_payload_acceptance_audit.json"
+DEFAULT_OUTPUT = ROOT / "docs/core/07_artifacts/topic13/t13_ding_pbte_payload_acceptance_audit.json"
 SHA256_RE = re.compile(r"^[0-9a-fA-F]{64}$")
 REL_TOL = 1.0e-10
 

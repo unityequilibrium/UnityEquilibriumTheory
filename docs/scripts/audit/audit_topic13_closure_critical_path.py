@@ -18,15 +18,15 @@ from typing import Any, Iterable
 
 
 ROOT = Path(__file__).resolve().parents[3]
-PROGRESS_PATH = ROOT / "docs/core/artifacts/t13_full_closure_progress.json"
-MATRIX_PATH = ROOT / "docs/core/artifacts/t13_topic13_closure_matrix.json"
-INPUT_AUDIT_PATH = ROOT / "docs/core/artifacts/t13_closure_input_package_audit.json"
-ROUTE_AUDIT_PATH = ROOT / "docs/core/artifacts/t13_csrc_source_route_priority_audit.json"
-SCALE_NO_GO_PATH = ROOT / "docs/core/artifacts/t13_thermal_bridge_scale_dependency_no_go.json"
-ACTION_SI_PATH = ROOT / "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json"
-CV_AUDIT_PATH = ROOT / "docs/core/artifacts/t13_cv_source_reconciliation_audit.json"
+PROGRESS_PATH = ROOT / "docs/core/07_artifacts/topic13/t13_full_closure_progress.json"
+MATRIX_PATH = ROOT / "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json"
+INPUT_AUDIT_PATH = ROOT / "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json"
+ROUTE_AUDIT_PATH = ROOT / "docs/core/07_artifacts/topic13/t13_csrc_source_route_priority_audit.json"
+SCALE_NO_GO_PATH = ROOT / "docs/core/07_artifacts/topic13/t13_thermal_bridge_scale_dependency_no_go.json"
+ACTION_SI_PATH = ROOT / "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json"
+CV_AUDIT_PATH = ROOT / "docs/core/07_artifacts/topic13/t13_cv_source_reconciliation_audit.json"
 
-OUTPUT_PATH = ROOT / "docs/core/artifacts/t13_closure_critical_path_audit.json"
+OUTPUT_PATH = ROOT / "docs/core/07_artifacts/topic13/t13_closure_critical_path_audit.json"
 MARKDOWN_PATH = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_CLOSURE_CRITICAL_PATH.md"
 
 PACKAGE_IDS = (

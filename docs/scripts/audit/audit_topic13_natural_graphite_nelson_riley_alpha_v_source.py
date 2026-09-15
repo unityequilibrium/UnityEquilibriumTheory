@@ -18,7 +18,7 @@ RAW_PATH = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
     "argonne_anl_5524_graphite_thermal_expansion_table.pdf"
 )
-OUT = ROOT / "docs/core/artifacts/t13_natural_graphite_nelson_riley_alpha_v_source_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_natural_graphite_nelson_riley_alpha_v_source_audit.json"
 EXPECTED_RAW_SHA256 = "7e334a4c380c130773f6c34a6238f25a9c28e15c3a9c0e1f9aa3769647e98561"
 
 

@@ -31,19 +31,19 @@ def controller(payload: dict[str, Any]) -> str:
 
 
 def build() -> dict[str, Any]:
-    eos = load("docs/core/artifacts/o2_finite_density_eos_verification.json")
-    eos_audit = load("docs/core/artifacts/o2_eos_formula_audit.json")
-    transport = load("docs/core/artifacts/covariant_superfluid_transport_verification.json")
-    impact = load("docs/core/artifacts/impact_effect_core_verification.json")
-    impact_gate = load("docs/core/artifacts/impact_effect_dependency_gate.json")
-    carrier = load("docs/core/artifacts/carrier_neutral_comparator_contract.json")
-    observer = load("docs/core/artifacts/carrier_observer_thought_experiment.json")
-    photon = load("docs/core/artifacts/photon_observer_baseline_verification.json")
-    orbit = load("docs/core/artifacts/orbit_cosmology_correspondence_gate.json")
-    gr = load("docs/core/artifacts/uet_gr_research_program_gate.json")
+    eos = load("docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json")
+    eos_audit = load("docs/core/07_artifacts/correspondence/o2_eos_formula_audit.json")
+    transport = load("docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json")
+    impact = load("docs/core/07_artifacts/verification/impact_effect_core_verification.json")
+    impact_gate = load("docs/core/07_artifacts/gates/impact_effect_dependency_gate.json")
+    carrier = load("docs/core/07_artifacts/archive/carrier_neutral_comparator_contract.json")
+    observer = load("docs/core/07_artifacts/archive/carrier_observer_thought_experiment.json")
+    photon = load("docs/core/07_artifacts/verification/photon_observer_baseline_verification.json")
+    orbit = load("docs/core/07_artifacts/gates/orbit_cosmology_correspondence_gate.json")
+    gr = load("docs/core/07_artifacts/gates/uet_gr_research_program_gate.json")
     galaxy = load("docs/topics/0.1_Galaxy_Rotation_Problem/Result/artifacts/galaxy_history_comparison.json")
     cosmic = load("docs/topics/0.26_Cosmic_Dynamic_Frame/Result/artifacts/0_26_cosmic_dynamic_frame_verification.json")
-    particle = load("docs/core/artifacts/particle_dirac_program_gate.json")
+    particle = load("docs/core/07_artifacts/gates/particle_dirac_program_gate.json")
 
     waves = [
         {
@@ -51,9 +51,9 @@ def build() -> dict[str, Any]:
             "name": "O2 finite-density EOS and covariant transport",
             "status": "PASS_CONDITIONAL_WITH_OPEN_TRANSPORT",
             "evidence": [
-                "docs/core/artifacts/o2_finite_density_eos_verification.json",
-                "docs/core/artifacts/o2_eos_formula_audit.json",
-                "docs/core/artifacts/covariant_superfluid_transport_verification.json",
+                "docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json",
+                "docs/core/07_artifacts/correspondence/o2_eos_formula_audit.json",
+                "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json",
             ],
             "local_results": {
                 "eos": first_status(eos),
@@ -70,11 +70,11 @@ def build() -> dict[str, Any]:
             "name": "Impact/effect/carrier and observer",
             "status": "BLOCKED",
             "evidence": [
-                "docs/core/artifacts/impact_effect_core_verification.json",
-                "docs/core/artifacts/impact_effect_dependency_gate.json",
-                "docs/core/artifacts/carrier_neutral_comparator_contract.json",
-                "docs/core/artifacts/carrier_observer_thought_experiment.json",
-                "docs/core/artifacts/photon_observer_baseline_verification.json",
+                "docs/core/07_artifacts/verification/impact_effect_core_verification.json",
+                "docs/core/07_artifacts/gates/impact_effect_dependency_gate.json",
+                "docs/core/07_artifacts/archive/carrier_neutral_comparator_contract.json",
+                "docs/core/07_artifacts/archive/carrier_observer_thought_experiment.json",
+                "docs/core/07_artifacts/verification/photon_observer_baseline_verification.json",
             ],
             "local_results": {
                 "impact_core": first_status(impact),
@@ -93,8 +93,8 @@ def build() -> dict[str, Any]:
             "name": "Gravity, orbit, cosmology, and effective open subsystem",
             "status": "BLOCKED",
             "evidence": [
-                "docs/core/artifacts/orbit_cosmology_correspondence_gate.json",
-                "docs/core/artifacts/uet_gr_research_program_gate.json",
+                "docs/core/07_artifacts/gates/orbit_cosmology_correspondence_gate.json",
+                "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json",
             ],
             "local_results": {
                 "orbit_cosmology": first_status(orbit),
@@ -125,7 +125,7 @@ def build() -> dict[str, Any]:
             "wave": 11,
             "name": "Particle, Dirac, neutrino, and antimatter program",
             "status": "DEFERRED_BLOCKED",
-            "evidence": ["docs/core/artifacts/particle_dirac_program_gate.json"],
+            "evidence": ["docs/core/07_artifacts/gates/particle_dirac_program_gate.json"],
             "local_results": {
                 "required_prerequisites": [
                     "Lorentz-covariant action",
@@ -175,7 +175,7 @@ def build() -> dict[str, Any]:
 
 def main() -> int:
     artifact = build()
-    output = ROOT / "docs/core/artifacts/uet_foundation_extended_wave_closure.json"
+    output = ROOT / "docs/core/07_artifacts/gates/uet_foundation_extended_wave_closure.json"
     output.write_text(json.dumps(artifact, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(artifact, indent=2))
     return 0

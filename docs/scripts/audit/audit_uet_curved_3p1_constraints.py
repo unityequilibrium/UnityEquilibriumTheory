@@ -500,7 +500,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
         "schema_version": "1.0",
         "artifact": "uet_equation_correspondence_registry_curved_3p1_addendum",
         "generated_at": now,
-        "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+        "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
         "status": "CANDIDATE_ENTRY_PENDING_MERGE",
         "equation_entries": [
             {

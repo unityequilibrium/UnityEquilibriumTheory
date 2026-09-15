@@ -10,13 +10,13 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-CALORINE_AUDIT_REL = "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json"
-DING_IDENTITY_REL = "docs/core/artifacts/t13_csrc_fixed_volume_identity_audit.json"
+CALORINE_AUDIT_REL = "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_reproduction_audit.json"
+DING_IDENTITY_REL = "docs/core/07_artifacts/topic13/t13_csrc_fixed_volume_identity_audit.json"
 SOURCE_PACKAGE_REL = (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "t13_calorine_zenodo_nep_bte_reproduction_source_package.json"
 )
-OUT_REL = "docs/core/artifacts/t13_csrc_thermodynamic_transport_regime_decomposition_audit.json"
+OUT_REL = "docs/core/07_artifacts/topic13/t13_csrc_thermodynamic_transport_regime_decomposition_audit.json"
 
 
 def load(relative: str) -> tuple[Path, dict[str, Any]]:

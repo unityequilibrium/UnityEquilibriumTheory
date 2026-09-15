@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-AUDIT_REL = "docs/core/artifacts/t13_phi_equation_registry_mapping_boundary_audit.json"
+AUDIT_REL = "docs/core/07_artifacts/topic13/t13_phi_equation_registry_mapping_boundary_audit.json"
 UPDATE_LOG = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
 MARKER = "### 2026-08-24 - Topic 13 Phi equation-registry mapping boundary audit"
 

@@ -26,7 +26,7 @@ def main() -> int:
     text = replace_once(
         text,
         '    bipm_package_path, bipm_package = load(\n        "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/bipm_2006_01_graphite_specific_heat_source_package.json"\n    )\n    phi_e_comparator_path, phi_e_comparator = load(',
-        '    bipm_package_path, bipm_package = load(\n        "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/bipm_2006_01_graphite_specific_heat_source_package.json"\n    )\n    iaea_graphite_cv_path, iaea_graphite_cv = load(\n        "docs/core/artifacts/t13_iaea_graphite_constant_volume_source_audit.json"\n    )\n    iaea_graphite_cv_package_path, iaea_graphite_cv_package = load(\n        "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_graphite_handbook_constant_volume_source_package.json"\n    )\n    phi_e_comparator_path, phi_e_comparator = load(',
+        '    bipm_package_path, bipm_package = load(\n        "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/bipm_2006_01_graphite_specific_heat_source_package.json"\n    )\n    iaea_graphite_cv_path, iaea_graphite_cv = load(\n        "docs/core/07_artifacts/topic13/t13_iaea_graphite_constant_volume_source_audit.json"\n    )\n    iaea_graphite_cv_package_path, iaea_graphite_cv_package = load(\n        "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_graphite_handbook_constant_volume_source_package.json"\n    )\n    phi_e_comparator_path, phi_e_comparator = load(',
         "IAEA source loading",
     )
     text = replace_once(

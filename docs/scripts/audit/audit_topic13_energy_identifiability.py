@@ -32,7 +32,7 @@ def observable_null_test(response, energy, rtol=1e-10):
 
 
 def main():
-    source_path = ROOT/'docs/core/artifacts/t13_finiteq_scattering_geometry_audit.json'
+    source_path = ROOT/'docs/core/07_artifacts/topic13/t13_finiteq_scattering_geometry_audit.json'
     source = json.loads(source_path.read_text())
     for relative, expected in source['evidence_hashes'].items():
         if hashlib.sha256((ROOT/relative).read_bytes()).hexdigest() != expected:
@@ -51,7 +51,7 @@ def main():
             tolerance_sweep={str(t): observable_null_test(response, f, t)['observable_null_fraction'] for t in (1e-9, 1e-10, 1e-11)},
             visible_indices=visible.tolist()))
     files = [source_path, Path(__file__), ROOT/'docs/core/test/test_topic13_energy_identifiability.py',
-        ROOT/'docs/core/artifacts/uet_equation_correspondence_registry_topic13_energy_identifiability_addendum.json']
+        ROOT/'docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_energy_identifiability_addendum.json']
     result = dict(major_result_id='T13_HARMONIC_ENERGY_OBSERVABILITY', topic='0.13', closure_level='PARTIAL',
         what_is_closed=['Energy functional tested against the declared frequency-weighted response null space'],
         equation_registry_ids=['uet.diagnostic.harmonic_energy_identifiability'],
@@ -65,7 +65,7 @@ def main():
         full_core_unlock=False, claim_promotion=False, dependency_unlocked=['energy-sensitive observable design only'],
         evidence_hashes={str(p.relative_to(ROOT)).replace('\\', '/'): hashlib.sha256(p.read_bytes()).hexdigest() for p in files},
         claim_boundary='Conditional numerical counterexamples, not observed populations or a universal no-go. No holdout read, fit or calibration.')
-    (ROOT/'docs/core/artifacts/t13_energy_identifiability_audit.json').write_text(json.dumps(result, indent=2, allow_nan=False)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_energy_identifiability_audit.json').write_text(json.dumps(result, indent=2, allow_nan=False)+'\n')
     print(json.dumps([dict(q=r['q_fractional'], full_null=r['full_energy']['observable_null_fraction'],
         visible_null=r['visible_energy']['observable_null_fraction'],
         response_residual=r['full_energy'].get('synthetic_witness', {}).get('normalized_response_difference')) for r in rows], indent=2))

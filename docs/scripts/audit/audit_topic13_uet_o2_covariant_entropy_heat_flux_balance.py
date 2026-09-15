@@ -22,7 +22,7 @@ from docs.core.uet_o2_covariant_entropy_heat_flux_balance import (  # noqa: E402
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py"
 CONTINUUM_MODULE = ROOT / "docs/core/uet_o2_continuum_collision_operator.py"
 EOS_MODULE = ROOT / "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py"

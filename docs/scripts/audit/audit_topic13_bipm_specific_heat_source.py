@@ -18,7 +18,7 @@ RAW = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
     "bipm_2006_01_graphite_specific_heat.pdf"
 )
-OUT = ROOT / "docs/core/artifacts/t13_bipm_specific_heat_source_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_bipm_specific_heat_source_audit.json"
 EXPECTED_RAW_SHA256 = "2c491c94adb3f70f4b1ba915259f0a1d2f4788e072e99c8d34a87f964f69ce42"
 
 

@@ -17,7 +17,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[3]
 MANIFEST_PATH = ROOT / "docs/data/external/astronomy/gaia_edr3_gcns/2026-08-08/query_and_holdout_manifest.json"
 SOURCE_PATH = ROOT / "docs/data/external/astronomy/gaia_edr3_gcns/2026-08-08/source_manifest.json"
-OUTPUT_PATH = ROOT / "docs/core/artifacts/gaia_3d_query_manifest_verification.json"
+OUTPUT_PATH = ROOT / "docs/core/07_artifacts/provenance/gaia_3d_query_manifest_verification.json"
 
 
 def _load(path: Path) -> dict[str, Any]:

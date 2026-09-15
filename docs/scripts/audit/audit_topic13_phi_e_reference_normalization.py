@@ -25,7 +25,7 @@ from docs.core.thermal_phi_e_reference_normalization import (
 
 SOURCE_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/mp48_independent_graphite_cv_source_package.json"
 ENERGY_REL = "docs/core/thermal_energy_response_bridge.py"
-OUT = ROOT / "docs/core/artifacts/t13_phi_e_reference_normalization_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_phi_e_reference_normalization_audit.json"
 
 
 def load(rel: str) -> dict[str, Any]:
@@ -69,7 +69,7 @@ def main() -> int:
             "derivation_class": "source-backed coordinate convention and standard energy/heat-capacity dimensional map",
             "observable": "named Phi_E energy-response/quasi-temperature operator only",
             "data_role": "INDEPENDENT_REFERENCE_NORMALIZATION_NOT_BASE_PHI_CALIBRATION",
-            "evidence_artifacts": [{"path": SOURCE_REL, "sha256": sha256(SOURCE_REL)}, {"path": ENERGY_REL, "sha256": sha256(ENERGY_REL)}, {"path": "docs/core/artifacts/t13_phi_e_reference_normalization_audit.json"}],
+            "evidence_artifacts": [{"path": SOURCE_REL, "sha256": sha256(SOURCE_REL)}, {"path": ENERGY_REL, "sha256": sha256(ENERGY_REL)}, {"path": "docs/core/07_artifacts/topic13/t13_phi_e_reference_normalization_audit.json"}],
             "verification_status": status,
             "open_blockers": ["base_Phi_to_Phi_E_mapping_missing", "Ding_specific_PBTE_C_src_and_material_matching_missing", "physical_field_normalization_and_independent_base_alpha_Phi_K_missing", "EOS_transport_SK_KMS_entropy_and_dissipative_closure_missing"],
             "dependency_unlocked": "named Phi_E dimensional operator only; no base-Phi bridge, full Topic 13, Core, or external-validation unlock",

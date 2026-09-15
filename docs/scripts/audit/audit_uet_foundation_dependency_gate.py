@@ -15,7 +15,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/uet_foundation_dependency_gate.json"
+OUT = ROOT / "docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json"
 
 
 def rel(path: Path) -> str:
@@ -31,25 +31,25 @@ def load(path: Path) -> dict[str, Any]:
 
 
 def build_gate() -> dict[str, Any]:
-    inventory_path = ROOT / "docs/core/artifacts/uet_foundation_equation_inventory.json"
-    code_path = ROOT / "docs/core/artifacts/uet_code_surface_inventory.json"
-    matrix_path = ROOT / "docs/core/artifacts/uet_foundation_correspondence_matrix.json"
-    registry_path = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry.json"
-    compat_path = ROOT / "docs/core/artifacts/uet_foundation_compatibility_gate.json"
-    characteristic_path = ROOT / "docs/core/artifacts/matter_space_characteristic_cone_verification.json"
-    finite_cone_integration_path = ROOT / "docs/core/artifacts/matter_space_finite_cone_shared_ledger_integration.json"
-    causal_lane_path = ROOT / "docs/core/artifacts/matter_space_causal_lane_selection.json"
-    pilot_sync_path = ROOT / "docs/core/artifacts/matter_space_topic_pilot_sync.json"
-    lane_contract_path = ROOT / "docs/core/artifacts/uet_active_lane_units_observable_register.json"
-    coverage_path = ROOT / "docs/core/artifacts/uet_foundation_coverage_closure.json"
-    correspondence_full_path = ROOT / "docs/core/artifacts/uet_full_correspondence_coverage.json"
-    correspondence_manifest_path = ROOT / "docs/core/artifacts/uet_topic_formula_correspondence_manifest.json"
-    observable_path = ROOT / "docs/core/artifacts/matter_space_observable_verification.json"
-    wording_path = ROOT / "docs/core/artifacts/impact_effect_legacy_wording_audit.json"
-    derivation_origin_path = ROOT / "docs/core/artifacts/uet_derivation_origin_audit.json"
-    thermal_calibration_path = ROOT / "docs/core/artifacts/thermal_dimensional_calibration_contract.json"
-    density_source_path = ROOT / "docs/core/artifacts/mass_density_3d_external_source_package.json"
-    query_manifest_path = ROOT / "docs/core/artifacts/gaia_3d_query_manifest_verification.json"
+    inventory_path = ROOT / "docs/core/07_artifacts/gates/uet_foundation_equation_inventory.json"
+    code_path = ROOT / "docs/core/07_artifacts/archive/uet_code_surface_inventory.json"
+    matrix_path = ROOT / "docs/core/07_artifacts/gates/uet_foundation_correspondence_matrix.json"
+    registry_path = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json"
+    compat_path = ROOT / "docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json"
+    characteristic_path = ROOT / "docs/core/07_artifacts/verification/matter_space_characteristic_cone_verification.json"
+    finite_cone_integration_path = ROOT / "docs/core/07_artifacts/archive/matter_space_finite_cone_shared_ledger_integration.json"
+    causal_lane_path = ROOT / "docs/core/07_artifacts/archive/matter_space_causal_lane_selection.json"
+    pilot_sync_path = ROOT / "docs/core/07_artifacts/archive/matter_space_topic_pilot_sync.json"
+    lane_contract_path = ROOT / "docs/core/07_artifacts/archive/uet_active_lane_units_observable_register.json"
+    coverage_path = ROOT / "docs/core/07_artifacts/gates/uet_foundation_coverage_closure.json"
+    correspondence_full_path = ROOT / "docs/core/07_artifacts/correspondence/uet_full_correspondence_coverage.json"
+    correspondence_manifest_path = ROOT / "docs/core/07_artifacts/provenance/uet_topic_formula_correspondence_manifest.json"
+    observable_path = ROOT / "docs/core/07_artifacts/verification/matter_space_observable_verification.json"
+    wording_path = ROOT / "docs/core/07_artifacts/verification/impact_effect_legacy_wording_audit.json"
+    derivation_origin_path = ROOT / "docs/core/07_artifacts/verification/uet_derivation_origin_audit.json"
+    thermal_calibration_path = ROOT / "docs/core/07_artifacts/topic13/thermal_dimensional_calibration_contract.json"
+    density_source_path = ROOT / "docs/core/07_artifacts/provenance/mass_density_3d_external_source_package.json"
+    query_manifest_path = ROOT / "docs/core/07_artifacts/provenance/gaia_3d_query_manifest_verification.json"
     inventory = load(inventory_path)
     code = load(code_path)
     matrix = load(matrix_path)
@@ -217,7 +217,7 @@ def build_gate() -> dict[str, Any]:
         "F8_data_and_claim": {
             "status": "BLOCKED",
             "reason": "Downstream evidence is simulation/internal or dependency-blocked; no foundation claim can be promoted to external physical validation.",
-            "evidence": [rel(pilot_sync_path), "docs/core/artifacts/uet_foundation_extended_wave_closure.json", rel(thermal_calibration_path), rel(density_source_path), rel(query_manifest_path)],
+            "evidence": [rel(pilot_sync_path), "docs/core/07_artifacts/gates/uet_foundation_extended_wave_closure.json", rel(thermal_calibration_path), rel(density_source_path), rel(query_manifest_path)],
             "required_next_artifact": "source-locked external data package plus preregistered holdout policy",
         },
     }
@@ -233,7 +233,7 @@ def build_gate() -> dict[str, Any]:
         "controlling_blocker": "foundation_coverage_units_observable_and_external_claim_gates_incomplete",
         "claim_ceiling": "candidate normalized effective models and explicitly labelled internal/simulation diagnostics; no universal C, mass, particle or global-cosmology claim",
         "authority": "docs/topics/For Work/EQUATION_RESEARCH_AND_PHYSICAL_CORRESPONDENCE_STANDARD.md",
-        "protocol": "docs/core/artifacts/uet_equation_research_protocol.json",
+        "protocol": "docs/core/07_artifacts/archive/uet_equation_research_protocol.json",
         "registry": rel(registry_path),
         "gates": gates,
         "finite_cone_C_lane": {

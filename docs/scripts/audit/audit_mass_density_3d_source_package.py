@@ -16,9 +16,9 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
 MANIFEST_PATH = ROOT / "docs/data/external/astronomy/gaia_edr3_gcns/2026-08-08/source_manifest.json"
-OPERATOR_PATH = ROOT / "docs/core/artifacts/mass_density_3d_contract_verification.json"
+OPERATOR_PATH = ROOT / "docs/core/07_artifacts/verification/mass_density_3d_contract_verification.json"
 QUERY_MANIFEST_PATH = ROOT / "docs/data/external/astronomy/gaia_edr3_gcns/2026-08-08/query_and_holdout_manifest.json"
-OUTPUT_PATH = ROOT / "docs/core/artifacts/mass_density_3d_external_source_package.json"
+OUTPUT_PATH = ROOT / "docs/core/07_artifacts/provenance/mass_density_3d_external_source_package.json"
 
 
 def _load(path: Path) -> dict[str, Any]:

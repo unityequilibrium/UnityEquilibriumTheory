@@ -9,11 +9,11 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-CONTRACT_REL = "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json"
-AUDIT_REL = "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json"
-CANDIDATE_REL = "docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json"
+CONTRACT_REL = "docs/core/07_artifacts/topic13/t13_independent_csrc_acceptance_contract.json"
+AUDIT_REL = "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_reproduction_audit.json"
+CANDIDATE_REL = "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json"
 SENSITIVITY_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/isotope_mass_sensitivity/t13_calorine_isotope_mass_sensitivity_audit.json"
-UNCERTAINTY_REL = "docs/core/artifacts/t13_calorine_state_uncertainty_decomposition_audit.json"
+UNCERTAINTY_REL = "docs/core/07_artifacts/topic13/t13_calorine_state_uncertainty_decomposition_audit.json"
 
 
 def digest(relative: str) -> str:

@@ -44,7 +44,7 @@ def positive_bounds(s,p,e,target_p,target_e,mass,incidence,rates):
 
 
 def main():
-    plan_path="docs/core/artifacts/t13_interpolation_refinement_plan.json"
+    plan_path="docs/core/07_artifacts/topic13/t13_interpolation_refinement_plan.json"
     plan=json.loads((ROOT/plan_path).read_text()); config=natural_bridge_config(); state=plan["state"]
     base=energy_momentum_conserving_bs_state(*state,config,radial_order=8,collision_integration_order=24,
         angular_order=24,cutoff_factor=plan["cutoff_factor"])
@@ -72,7 +72,7 @@ def main():
             "docs/core/uet_o2_action_derived_transition_kernel.py",
             "docs/core/uet_o2_action_thermal_observable_bridge.py",
             "docs/core/uet_o2_action_thermal_stiffness_beta.py")])
-    out=ROOT/"docs/core/artifacts/t13_positive_interpolation_bounds_audit.json"
+    out=ROOT/"docs/core/07_artifacts/topic13/t13_positive_interpolation_bounds_audit.json"
     def save(): out.write_text(json.dumps(r,indent=2,allow_nan=False)+"\n",encoding="utf-8")
     save()
     for radial in plan["radial_orders"]:

@@ -24,7 +24,7 @@ SOURCE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
     "ding_2022_pmc_full_text.txt"
 )
-OUT = ROOT / "docs/core/artifacts/t13_ding_experimental_heating_input_boundary_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_ding_experimental_heating_input_boundary_audit.json"
 
 EXPECTED_STATUS = "PASS_SCOPED_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY"
 EXPECTED_SOURCE_SHA256 = "b1b029f2812586647077a7b8506c2f52aeb7261714395907f8f8d20868fe2874"

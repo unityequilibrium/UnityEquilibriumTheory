@@ -21,9 +21,9 @@ from docs.core.uet_curved_3p1_gh_evolution import (
 
 
 ROOT = repo_root()
-VERIFY = ROOT / "docs/core/artifacts/curved_3p1_gh_time_evolution_verification.json"
-FORMULA = ROOT / "docs/core/artifacts/curved_3p1_gh_time_evolution_formula_audit.json"
-GATE = ROOT / "docs/core/artifacts/curved_3p1_gh_time_evolution_gate.json"
+VERIFY = ROOT / "docs/core/07_artifacts/verification/curved_3p1_gh_time_evolution_verification.json"
+FORMULA = ROOT / "docs/core/07_artifacts/correspondence/curved_3p1_gh_time_evolution_formula_audit.json"
+GATE = ROOT / "docs/core/07_artifacts/gates/curved_3p1_gh_time_evolution_gate.json"
 
 
 def test_cfl_domain_is_fail_closed() -> None:

@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/artifacts/matter_space_causal_reference_verification.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/verification/matter_space_causal_reference_verification.json"
 
 
 def load_artifact():

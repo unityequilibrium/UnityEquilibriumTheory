@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/artifacts/t13_kim_2018_graphite_green_kubo_external_input_audit.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_kim_2018_graphite_green_kubo_external_input_audit.json"
 PACKAGE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/kim_2018_graphite_green_kubo_source_package.json"
 
 

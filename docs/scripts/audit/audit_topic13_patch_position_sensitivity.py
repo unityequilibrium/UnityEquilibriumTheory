@@ -24,9 +24,9 @@ def patch_curve(on,off,center,baseline):
 
 
 def main():
-    sp=ROOT/'docs/core/artifacts/t13_generic_q_image_support.json'
-    ip=ROOT/'docs/core/artifacts/t13_ued_numeric_inventory_audit.json'
-    ep=ROOT/'docs/core/artifacts/t13_ued_mask_support_audit.json'
+    sp=ROOT/'docs/core/07_artifacts/topic13/t13_generic_q_image_support.json'
+    ip=ROOT/'docs/core/07_artifacts/topic13/t13_ued_numeric_inventory_audit.json'
+    ep=ROOT/'docs/core/07_artifacts/topic13/t13_ued_mask_support_audit.json'
     support=json.loads(sp.read_text());inventory=json.loads(ip.read_text());exports=json.loads(ep.read_text())
     for e in support['evidence_artifacts']:
         if sha256((ROOT/e['path']).read_bytes()).hexdigest()!=e['sha256']:raise ValueError('upstream drift')
@@ -69,7 +69,7 @@ def main():
         dependency_unlocked=[],full_core_unlock=False,global_claim_promotion=False,
         claim_boundary='Offsets are stress scenarios, not calibrated uncertainty bounds. No optimum selected, pixel filled, image shifted, smoothing, fit or holdout.',
         array_export_hashes=array_hashes,evidence_artifacts=[dict(path=p.relative_to(ROOT).as_posix(),sha256=sha256(p.read_bytes()).hexdigest()) for p in files])
-    (ROOT/'docs/core/artifacts/t13_patch_position_sensitivity.json').write_text(json.dumps(result,indent=2,allow_nan=False)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_patch_position_sensitivity.json').write_text(json.dumps(result,indent=2,allow_nan=False)+'\n')
     print(json.dumps([dict(member=r['member'],cases=[{k:v for k,v in s.items() if k!='probes'} for s in r['cases']]) for r in rows]))
 
 

@@ -9,8 +9,8 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-REGISTRY = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry.json"
-ADDENDUM = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_wave1_research_rooms_addendum.json"
+REGISTRY = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json"
+ADDENDUM = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_wave1_research_rooms_addendum.json"
 
 
 def read_json(path: Path) -> dict[str, Any]:

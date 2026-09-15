@@ -18,10 +18,10 @@ from docs.core.uet_reciprocal_thermal_dynamics import reciprocal_mode
 from docs.core.uet_thermoelastic_spatial_compatibility import isotropic_stiffness, strain_map
 
 ROOT = Path(__file__).resolve().parents[3]
-OUTPUT = 'docs/core/artifacts/t13_reciprocal_thermal_dynamics_audit.json'
-REGISTRY = 'docs/core/artifacts/uet_equation_correspondence_registry_topic13_reciprocal_thermal_dynamics_addendum.json'
+OUTPUT = 'docs/core/07_artifacts/topic13/t13_reciprocal_thermal_dynamics_audit.json'
+REGISTRY = 'docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_reciprocal_thermal_dynamics_addendum.json'
 ID = 'uet.thermal.reciprocal_material_response'
-PROTECTED = ['docs/core/artifacts/t13_topic13_closure_matrix.json',
+PROTECTED = ['docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json',
              'docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json']
 EVIDENCE = ['docs/core/T13_RECIPROCAL_THERMAL_DYNAMICS.md',
             'docs/core/uet_reciprocal_thermal_dynamics.py',
@@ -31,7 +31,7 @@ EVIDENCE = ['docs/core/T13_RECIPROCAL_THERMAL_DYNAMICS.md',
             'docs/core/uet_matter_strain_susceptibility.py',
             'docs/core/uet_covariant_matter.py', 'docs/core/uet_covariant_response.py',
             'docs/core/uet_thermoelastic_spatial_compatibility.py',
-            'docs/core/artifacts/t13_matter_strain_susceptibility_matching_audit.json']
+            'docs/core/07_artifacts/topic13/t13_matter_strain_susceptibility_matching_audit.json']
 
 
 def digest(path):
@@ -146,7 +146,7 @@ def build():
         claim_boundary='Local quadratic natural-unit extension with external damping/transport; not accepted core action, physical alpha, Kubo/KMS, nonlinear total-energy closure or finite-cone proof. Separate He-4 Core-ready record is unchanged and not revalidated.')
     registry = dict(schema_version='uet-equation-registry-addendum-v1',
                     status='CANDIDATE_RECIPROCAL_MATERIAL_EXTENSION',
-                    extends='docs/core/artifacts/uet_equation_correspondence_registry.json',
+                    extends='docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json',
                     full_core_unlock=False, claim_promotion=False)
     entry = {key: result[key] for key in ('ontology', 'units', 'unit_lane', 'derivation_class', 'observable',
              'data_role', 'verification_status', 'controlling_blocker', 'claim_boundary', 'physical_dependency_unlock')}

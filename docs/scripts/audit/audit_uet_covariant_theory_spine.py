@@ -128,7 +128,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
     }
     addendum = {
         "schema_version": "1.0", "artifact": "uet_equation_correspondence_registry_theory_spine_addendum",
-        "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json", "status": "CANDIDATE_ENTRY_PENDING_MERGE",
+        "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json", "status": "CANDIDATE_ENTRY_PENDING_MERGE",
         "equation_entries": [{
             "equation_id": "uet.main_theory.hyperbolic_spine_control", "version": "minkowski-1p1-spine-v1",
             "classification": "numerical_implementation", "relation_or_code_path": "docs/core/uet_covariant_theory_spine.py",
@@ -142,7 +142,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
             "symmetry_and_conservation": "periodic gradient constraint and damped energy ledger; no GR constraints",
             "limiting_cases": ["zero damping gives wave control", "zero fields are exact fixed point"],
             "implementation_paths": ["docs/core/uet_covariant_theory_spine.py"],
-            "verifier_paths": ["docs/scripts/audit/audit_uet_covariant_theory_spine.py", "docs/core/artifacts/covariant_theory_spine_verification.json", "docs/core/test/test_uet_covariant_theory_spine.py"],
+            "verifier_paths": ["docs/scripts/audit/audit_uet_covariant_theory_spine.py", "docs/core/07_artifacts/verification/covariant_theory_spine_verification.json", "docs/core/test/test_uet_covariant_theory_spine.py"],
             "evidence_class": "INTERNAL_NUMERICAL", "proof_status": "linear fixed-background hyperbolicity and convergence pass; curved 3+1 blocked",
             "downstream_dependencies": ["uet.main_theory.covariant_parent", "uet.main_theory.open_system", "uet.main_theory.gravity"],
             "claim_boundary": "causal numerical control, not a curved covariant solver",

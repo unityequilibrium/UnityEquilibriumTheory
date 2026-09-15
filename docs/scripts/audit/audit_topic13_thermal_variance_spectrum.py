@@ -45,7 +45,7 @@ def main():
     np.testing.assert_allclose(positions[:, 2], [.25, .75, .25, .75], atol=1e-12, rtol=0)
     basis, mu = shear_basis(amu*physical_constants['atomic mass constant'][0], [0, 1, 0, 1], [0, 0, 1], [1, 0, 0])
     factor = float(meta['phonopy']['frequency_unit_conversion_factor'])*2*np.pi*1e12
-    reference_path = ROOT/'docs/core/artifacts/t13_interlayer_thermal_variance_audit.json'
+    reference_path = ROOT/'docs/core/07_artifacts/topic13/t13_interlayer_thermal_variance_audit.json'
     reference = json.loads(reference_path.read_text())
     for evidence in reference['evidence_artifacts']:
         if sha256((ROOT/evidence['path']).read_bytes()).hexdigest() != evidence['sha256']:
@@ -94,7 +94,7 @@ def main():
         dependency_unlocked=[], full_core_unlock=False, global_claim_promotion=False,
         claim_boundary='Frequency bins are not acoustic/shear branch identities; signed difference shares are not uncertainty estimates. No alpha or holdout use.',
         evidence_artifacts=[dict(path=p.relative_to(ROOT).as_posix(), sha256=sha256(p.read_bytes()).hexdigest()) for p in paths])
-    (ROOT/'docs/core/artifacts/t13_thermal_variance_spectrum.json').write_text(json.dumps(artifact, indent=2, allow_nan=False)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_thermal_variance_spectrum.json').write_text(json.dumps(artifact, indent=2, allow_nan=False)+'\n')
 
 
 if __name__ == '__main__':

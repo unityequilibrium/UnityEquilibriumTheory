@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json"
 
 
 def test_action_route_is_natural_only_and_si_mapping_is_blocked() -> None:

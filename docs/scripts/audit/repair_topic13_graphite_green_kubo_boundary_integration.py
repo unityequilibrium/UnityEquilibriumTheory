@@ -11,7 +11,7 @@ SYNC = ROOT / "docs/scripts/audit/sync_topic13_major_result_lanes.py"
 
 LANE_ID = "T13_GRAPHITE_GREEN_KUBO_SOURCE_BOUNDARY"
 LANE_KEY = "graphite_green_kubo_source_boundary"
-AUDIT_REL = "docs/core/artifacts/t13_graphite_green_kubo_source_boundary_audit.json"
+AUDIT_REL = "docs/core/07_artifacts/topic13/t13_graphite_green_kubo_source_boundary_audit.json"
 
 
 def replace_once(text: str, old: str, new: str, label: str) -> str:
@@ -31,11 +31,11 @@ def patch_gate() -> bool:
         text = replace_once(text, marker, replacement, "full-gate lane registry")
 
     load_marker = '''    equilibrium_kms_path, equilibrium_kms = load(
-        "docs/core/artifacts/t13_uet_o2_equilibrium_kms_audit.json"
+        "docs/core/07_artifacts/topic13/t13_uet_o2_equilibrium_kms_audit.json"
     )
 '''
     load_block = load_marker + '''    graphite_green_kubo_path, graphite_green_kubo = load(
-        "docs/core/artifacts/t13_graphite_green_kubo_source_boundary_audit.json"
+        "docs/core/07_artifacts/topic13/t13_graphite_green_kubo_source_boundary_audit.json"
     )
 '''
     if "graphite_green_kubo_path, graphite_green_kubo" not in text:

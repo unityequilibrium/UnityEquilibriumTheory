@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_graphite_green_kubo_source_boundary_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_graphite_green_kubo_source_boundary_audit.json"
 SCRIPT = ROOT / "docs/scripts/audit/audit_topic13_graphite_green_kubo_source_boundary.py"
 
 

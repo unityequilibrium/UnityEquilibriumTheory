@@ -89,7 +89,7 @@ def summarize_table(root, member, *, time_index_base):
 
 
 def main():
-    precursor_path = ROOT/'docs/core/artifacts/t13_ued_source_acquisition_audit.json'
+    precursor_path = ROOT/'docs/core/07_artifacts/topic13/t13_ued_source_acquisition_audit.json'
     precursor = json.loads(precursor_path.read_text(encoding='utf-8'))
     for relative, expected in precursor['evidence_hashes'].items():
         if digest(ROOT/relative) != expected:
@@ -130,7 +130,7 @@ def main():
                     dependency_unlocked=['processed row inspection only'], full_core_unlock=False, claim_promotion=False,
                     evidence_hashes={str(p.relative_to(ROOT)).replace('\\', '/'): digest(p) for p in files},
                     claim_boundary='Image statistics are not heat, phonon occupations or physical alpha. No holdout used.')
-    (ROOT/'docs/core/artifacts/t13_ued_numeric_inventory_audit.json').write_text(json.dumps(artifact, indent=2, allow_nan=False)+'\n', encoding='utf-8')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_ued_numeric_inventory_audit.json').write_text(json.dumps(artifact, indent=2, allow_nan=False)+'\n', encoding='utf-8')
     print(json.dumps([{k: t[k] for k in ('member', 'row_count', 'delay_range_ps', 'source_t0_index', 'source_zero_time_row', 'time_origin_reconciled', 'calibration_inverse_angstrom_per_pixel', 'image_nonfinite_count')} for t in tables], indent=2))
 
 

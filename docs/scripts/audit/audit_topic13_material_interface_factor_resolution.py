@@ -15,8 +15,8 @@ from docs.core.uet_material_interface_factor_resolution import (
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_material_interface_factor_resolution_audit.json"
-REGISTRY_OUT = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_material_interface_factor_resolution_addendum.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_material_interface_factor_resolution_audit.json"
+REGISTRY_OUT = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_material_interface_factor_resolution_addendum.json"
 EQUATION_ID = "uet.o2.thermal.material_interface_factor_resolution"
 
 
@@ -36,19 +36,19 @@ def main() -> int:
     no_go = contract["operator_substitution_no_go"]
     factors = contract["factor_matrix"]
     action_bridge = _load(
-        "docs/core/artifacts/t13_uet_o2_action_thermal_observable_bridge_audit.json"
+        "docs/core/07_artifacts/topic13/t13_uet_o2_action_thermal_observable_bridge_audit.json"
     )
     coupling_no_go = _load(
-        "docs/core/artifacts/t13_covariant_matter_coupling_normalization_no_go.json"
+        "docs/core/07_artifacts/topic13/t13_covariant_matter_coupling_normalization_no_go.json"
     )
     field_no_go = _load(
-        "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json"
+        "docs/core/07_artifacts/topic13/t13_covariant_field_normalization_identifiability_no_go.json"
     )
     calorine = _load(
-        "docs/core/artifacts/t13_calorine_lattice_interface_input_boundary.json"
+        "docs/core/07_artifacts/topic13/t13_calorine_lattice_interface_input_boundary.json"
     )
     interface = _load(
-        "docs/core/artifacts/t13_uet_material_lattice_interface_contract_audit.json"
+        "docs/core/07_artifacts/topic13/t13_uet_material_lattice_interface_contract_audit.json"
     )
     signature = inspect.signature(interaction_energy_density)
     witness = conditional_alpha_witness(
@@ -143,11 +143,11 @@ def main() -> int:
         "docs/scripts/audit/audit_topic13_material_interface_factor_resolution.py",
     ]
     evidence_paths = [
-        "docs/core/artifacts/t13_uet_material_lattice_interface_contract_audit.json",
-        "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json",
-        "docs/core/artifacts/t13_covariant_matter_coupling_normalization_no_go.json",
-        "docs/core/artifacts/t13_uet_o2_action_thermal_observable_bridge_audit.json",
-        "docs/core/artifacts/t13_calorine_lattice_interface_input_boundary.json",
+        "docs/core/07_artifacts/topic13/t13_uet_material_lattice_interface_contract_audit.json",
+        "docs/core/07_artifacts/topic13/t13_covariant_field_normalization_identifiability_no_go.json",
+        "docs/core/07_artifacts/topic13/t13_covariant_matter_coupling_normalization_no_go.json",
+        "docs/core/07_artifacts/topic13/t13_uet_o2_action_thermal_observable_bridge_audit.json",
+        "docs/core/07_artifacts/topic13/t13_calorine_lattice_interface_input_boundary.json",
     ]
     artifact = {
         "schema_version": "t13-material-interface-factor-resolution-v1",
@@ -271,7 +271,7 @@ def main() -> int:
             {
                 "schema_version": "uet-equation-registry-addendum-v1",
                 "status": "DIAGNOSTIC_FACTOR_GATE_NOT_NEW_ACTION_TERM",
-                "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+                "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
                 "equation_entries": [entry],
                 "full_core_unlock": False,
                 "claim_promotion": False,

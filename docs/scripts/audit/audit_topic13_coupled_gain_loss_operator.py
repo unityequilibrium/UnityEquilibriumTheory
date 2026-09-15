@@ -18,8 +18,8 @@ from docs.scripts.audit.audit_topic13_action_normalized_elastic_scattering impor
 )
 
 ROOT=Path(__file__).resolve().parents[3]
-OUT=ROOT/"docs/core/artifacts/t13_coupled_gain_loss_operator_audit.json"
-REGISTRY_OUT=ROOT/"docs/core/artifacts/uet_equation_correspondence_registry_topic13_gain_loss_addendum.json"
+OUT=ROOT/"docs/core/07_artifacts/topic13/t13_coupled_gain_loss_operator_audit.json"
+REGISTRY_OUT=ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_gain_loss_addendum.json"
 EQUATION_ID="uet.o2.thermal.normal_coupled_gain_loss"
 CHANNELS=(
     ("++", (1,1,1,1)), ("--",(-1,-1,-1,-1)),
@@ -487,8 +487,8 @@ def main():
         "causal_status":"NOT_EVALUATED_LOCAL_COLLISION_FORM_ONLY",
         "ledger_status":"ON_SHELL_COLLISION_ENERGY_MOMENTUM_ONLY_NOT_FULL_OPEN_SYSTEM_LEDGER",
         "gain_loss_witness":witness,"neutral_quartic_derivative_witness":neutral_vertex,
-        "initial_probe_failure":{"path":"docs/core/artifacts/t13_coupled_gain_loss_initial_probe_failure.json",
-            "sha256":sha("docs/core/artifacts/t13_coupled_gain_loss_initial_probe_failure.json"),
+        "initial_probe_failure":{"path":"docs/core/07_artifacts/topic13/t13_coupled_gain_loss_initial_probe_failure.json",
+            "sha256":sha("docs/core/07_artifacts/topic13/t13_coupled_gain_loss_initial_probe_failure.json"),
             "diagnosis":"Near-null first-cell relative derivative test amplifies subtractive cancellation; retained in every grid row. Independent non-null multi-step probe uses the original 1e-4 criterion."},
         "convergence_status":"NOT_ACCEPTED_CONTINUUM_OR_BASIS_CLOSURE",
         "spurious_invariant":"Total quasiparticle number is conserved by this 2-to-2 truncation, not the full cubic/quartic action.",
@@ -516,7 +516,7 @@ def main():
                   "evidence_artifacts":[{"path":OUT.relative_to(ROOT).as_posix(),"sha256":hashlib.sha256(OUT.read_bytes()).hexdigest()}],
                   "dependency_role":"diagnostic_only","physical_dependency_unlock":False})
     REGISTRY_OUT.write_text(json.dumps({"schema_version":"uet-equation-registry-addendum-v1",
-        "extends":"docs/core/artifacts/uet_equation_correspondence_registry.json","status":"CANDIDATE_DIAGNOSTIC_NOT_MERGED",
+        "extends":"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json","status":"CANDIDATE_DIAGNOSTIC_NOT_MERGED",
         "equation_entries":[entry],"full_core_unlock":False,"claim_promotion":False},indent=2)+"\n",encoding="utf-8")
     print(json.dumps({"status":artifact["verification_status"],"checks":checks,"response_changes":changes,
                      "independent_changes":refinement_changes,"metric_change":metric_change,

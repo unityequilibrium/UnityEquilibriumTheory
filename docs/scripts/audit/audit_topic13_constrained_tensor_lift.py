@@ -16,7 +16,7 @@ from docs.core.uet_o2_finite_temperature_quasiparticle_eos import finite_tempera
 
 
 def main():
-    path="docs/core/artifacts/t13_constrained_tensor_audit.json"
+    path="docs/core/07_artifacts/topic13/t13_constrained_tensor_audit.json"
     source=json.loads((ROOT/path).read_text())
     if not source["completed"] or len(source["rows"])!=4 or any(row["status"]!="EVALUATED" for row in source["rows"]):
         raise ValueError("complete four-case tensor evidence required")
@@ -56,7 +56,7 @@ def main():
         evidence_artifacts=[dict(path=p,sha256=sha256((ROOT/p).read_bytes()).hexdigest()) for p in (
             path,"docs/scripts/audit/audit_topic13_constrained_tensor_lift.py",
             "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py")])
-    (ROOT/"docs/core/artifacts/t13_constrained_tensor_lift_audit.json").write_text(json.dumps(record,indent=2)+"\n",encoding="utf-8")
+    (ROOT/"docs/core/07_artifacts/topic13/t13_constrained_tensor_lift_audit.json").write_text(json.dumps(record,indent=2)+"\n",encoding="utf-8")
     print(json.dumps(dict(cases=len(rows),max_entropy=max(r["entropy_balance_absolute"] for r in rows),
         max_boost=max(r["boost_residual"] for r in rows),all_gates=all(r["entropy_original_gate"] and r["boost_original_gate"] and r["isotropy_original_gate"] for r in rows))))
     return 0 if all(r["entropy_original_gate"] and r["boost_original_gate"] and r["isotropy_original_gate"] for r in rows) else 1

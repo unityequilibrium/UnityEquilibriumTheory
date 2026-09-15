@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-ARTIFACT = ROOT / "docs/core/artifacts/t13_nims_graphite_ltc_route_no_go.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_nims_graphite_ltc_route_no_go.json"
 
 
 def main() -> int:

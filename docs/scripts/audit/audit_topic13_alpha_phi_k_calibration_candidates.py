@@ -18,7 +18,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
 DATA_DIR = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research"
-OUTPUT = ROOT / "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json"
+OUTPUT = ROOT / "docs/core/07_artifacts/topic13/t13_alpha_phi_k_calibration_candidate_audit.json"
 
 REQUIRED_FIELDS = (
     "source_identity",
@@ -321,9 +321,9 @@ def main() -> None:
             "data_role": "CALIBRATION_SEARCH_NOT_EVIDENCE",
             "evidence_artifacts": [
                 {"path": str(OUTPUT.relative_to(ROOT)).replace("\\", "/")},
-                {"path": "docs/core/artifacts/t13_base_phi_independent_calibration_requirement.json"},
-                {"path": "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json"},
-                {"path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json"},
+                {"path": "docs/core/07_artifacts/topic13/t13_base_phi_independent_calibration_requirement.json"},
+                {"path": "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json"},
+                {"path": "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json"},
             ],
             "verification_status": "PASS_SCOPED_NO_ELIGIBLE_PAIRED_ALPHA_RECORD" if not eligible else "REVIEW_ELIGIBLE_CANDIDATE_RECORD",
             "open_blockers": [

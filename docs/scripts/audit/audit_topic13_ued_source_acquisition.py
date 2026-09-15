@@ -76,7 +76,7 @@ def main():
                          for p in (metadata_path, notebook_path, archive_path, Path(__file__))},
         claim_boundary='Neither a mode lifetime nor TTG validation, physical occupation curve or Phi calibration.',
     )
-    out = ROOT/'docs/core/artifacts/t13_ued_source_acquisition_audit.json'
+    out = ROOT/'docs/core/07_artifacts/topic13/t13_ued_source_acquisition_audit.json'
     out.write_text(json.dumps(result, indent=2, allow_nan=False)+'\n', encoding='utf-8')
     print(json.dumps(dict(status=result['verification_status'], members=inventory, inspected_cells=cells), indent=2))
 

@@ -11,10 +11,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 UPDATE_LOG = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
 LEDGER = ROOT / "WORK_LEDGER/2026/2026-08-24.md"
-CAUSAL = ROOT / "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json"
-CONTRACT = ROOT / "docs/core/artifacts/t13_closure_record_contract_audit.json"
-INPUT = ROOT / "docs/core/artifacts/t13_closure_input_package_audit.json"
-MATRIX = ROOT / "docs/core/artifacts/t13_topic13_closure_matrix.json"
+CAUSAL = ROOT / "docs/core/07_artifacts/topic13/t13_causal_named_branch_core_compatibility.json"
+CONTRACT = ROOT / "docs/core/07_artifacts/topic13/t13_closure_record_contract_audit.json"
+INPUT = ROOT / "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json"
+MATRIX = ROOT / "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json"
 FULL_GATE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
 
 MARKER = "### 2026-08-24 - Final Topic 13 gate snapshot after causal roadmap sync"
@@ -105,10 +105,10 @@ CLAIM_BOUNDARY:
 - This is an internal verification snapshot. It is not Full Topic 13 closure, external validation, temperature prediction, or global UET closure.
 
 EVIDENCE_PATHS:
-- `docs/core/artifacts/t13_causal_named_branch_core_compatibility.json`
-- `docs/core/artifacts/t13_closure_record_contract_audit.json`
-- `docs/core/artifacts/t13_closure_input_package_audit.json`
-- `docs/core/artifacts/t13_topic13_closure_matrix.json`
+- `docs/core/07_artifacts/topic13/t13_causal_named_branch_core_compatibility.json`
+- `docs/core/07_artifacts/topic13/t13_closure_record_contract_audit.json`
+- `docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json`
+- `docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json`
 - `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`
 
 EVIDENCE_HASHES:

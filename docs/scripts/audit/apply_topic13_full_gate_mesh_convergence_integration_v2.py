@@ -22,8 +22,8 @@ def main() -> None:
     )
     text = replace_once(
         text,
-        '    force_constant_path, force_constant = load(\n        "docs/core/artifacts/t13_mp48_force_constant_harmonic_reconstruction_audit.json"\n    )\n',
-        '    force_constant_path, force_constant = load(\n        "docs/core/artifacts/t13_mp48_force_constant_harmonic_reconstruction_audit.json"\n    )\n    mesh_convergence_path, mesh_convergence = load(\n        "docs/core/artifacts/t13_mp48_force_constant_csrc_mesh_convergence_audit.json"\n    )\n',
+        '    force_constant_path, force_constant = load(\n        "docs/core/07_artifacts/topic13/t13_mp48_force_constant_harmonic_reconstruction_audit.json"\n    )\n',
+        '    force_constant_path, force_constant = load(\n        "docs/core/07_artifacts/topic13/t13_mp48_force_constant_harmonic_reconstruction_audit.json"\n    )\n    mesh_convergence_path, mesh_convergence = load(\n        "docs/core/07_artifacts/topic13/t13_mp48_force_constant_csrc_mesh_convergence_audit.json"\n    )\n',
     )
     text = replace_once(
         text,

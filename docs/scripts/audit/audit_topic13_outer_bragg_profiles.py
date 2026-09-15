@@ -12,9 +12,9 @@ from docs.scripts.audit.audit_topic13_ued_rotated_position import fit_rotated
 
 
 def main():
-    pp=ROOT/'docs/core/artifacts/t13_multibragg_positions.json'
-    ip=ROOT/'docs/core/artifacts/t13_ued_numeric_inventory_audit.json'
-    ep=ROOT/'docs/core/artifacts/t13_ued_mask_support_audit.json'
+    pp=ROOT/'docs/core/07_artifacts/topic13/t13_multibragg_positions.json'
+    ip=ROOT/'docs/core/07_artifacts/topic13/t13_ued_numeric_inventory_audit.json'
+    ep=ROOT/'docs/core/07_artifacts/topic13/t13_ued_mask_support_audit.json'
     positions=json.loads(pp.read_text());inventory=json.loads(ip.read_text());exports=json.loads(ep.read_text())
     for source in (positions,):
         for e in source['evidence_artifacts']:
@@ -63,7 +63,7 @@ def main():
         dependency_unlocked=[],full_core_unlock=False,global_claim_promotion=False,
         claim_boundary='No optimizer outcome, small residual or window agreement defines physical accuracy. No image correction, alpha fitting or holdout.',
         array_export_hashes=hashes,evidence_artifacts=[dict(path=p.relative_to(ROOT).as_posix(),sha256=sha256(p.read_bytes()).hexdigest()) for p in files])
-    (ROOT/'docs/core/artifacts/t13_outer_bragg_profiles.json').write_text(json.dumps(output,indent=2,allow_nan=False)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_outer_bragg_profiles.json').write_text(json.dumps(output,indent=2,allow_nan=False)+'\n')
     print(json.dumps(summary))
 
 

@@ -57,7 +57,7 @@ def main():
         open_blockers=["cutoff_and_joint_resolution_control", "linearized_collision_gain_loss_and_conserved_projection", "material_calibration"],
         claim_boundary="Uses existing nonresonant tree amplitude and species factors. Does not replace legacy channels, infer full transport, or access external data/holdout.",
         evidence_artifacts=[dict(path=p,sha256=sha256((ROOT/p).read_bytes()).hexdigest()) for p in files])
-    (ROOT/"docs/core/artifacts/t13_integrated_elastic_events_audit.json").write_text(json.dumps(artifact,indent=2,allow_nan=False)+"\n",encoding="utf-8")
+    (ROOT/"docs/core/07_artifacts/topic13/t13_integrated_elastic_events_audit.json").write_text(json.dumps(artifact,indent=2,allow_nan=False)+"\n",encoding="utf-8")
     print(json.dumps(dict(rows=rows,changes=artifact["successive_relative_changes"])))
 
 

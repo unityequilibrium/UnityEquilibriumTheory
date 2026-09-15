@@ -18,7 +18,7 @@ def tangent(jacobian, gradient):
 
 
 def main():
-    source = ROOT/'docs/core/artifacts/t13_uet_o2_action_thermal_observable_bridge_audit.json'
+    source = ROOT/'docs/core/07_artifacts/topic13/t13_uet_o2_action_thermal_observable_bridge_audit.json'
     a = json.loads(source.read_text()); s = a['state']; cfg = natural_bridge_config()
     revisions = []
     for e in a['major_result']['evidence_artifacts']:
@@ -71,7 +71,7 @@ def main():
         open_blockers=['physical process and material-variable mapping', 'finite-rate entropy production and relaxation'],
         dependency_unlocked=['natural reversible accounting only'], full_core_unlock=False, claim_promotion=False,
         claim_boundary='Zero reversible heat follows imposed ds=0; not a finite-rate isolation proof, SI alpha or He-4 validation. No holdout, retuning or composition gate change.')
-    (ROOT/'docs/core/artifacts/t13_isentropic_source_work_audit.json').write_text(json.dumps(result, indent=2, allow_nan=False)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_isentropic_source_work_audit.json').write_text(json.dumps(result, indent=2, allow_nan=False)+'\n')
     print(json.dumps(records, indent=2))
 
 

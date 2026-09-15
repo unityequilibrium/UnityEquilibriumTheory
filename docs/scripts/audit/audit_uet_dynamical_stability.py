@@ -11,7 +11,7 @@ import numpy as np
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/uet_dynamical_stability_diagnostic.json"
+OUT = ROOT / "docs/core/07_artifacts/archive/uet_dynamical_stability_diagnostic.json"
 MODULE = ROOT / "docs/core/uet_dynamical_stability.py"
 METHOD = (
     ROOT

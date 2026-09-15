@@ -25,8 +25,8 @@ def main() -> int:
     )
     text = replace_once(
         text,
-        '    material_boundary_path, material_boundary = load(\n        "docs/core/artifacts/t13_ding_material_regime_boundary_audit.json"\n    )',
-        '    cv_uncertainty_path, cv_uncertainty = load(\n        "docs/core/artifacts/t13_iaea_cv_uncertainty_boundary_audit.json"\n    )\n    cv_uncertainty_package_path, cv_uncertainty_package = load(\n        "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_graphite_cv_uncertainty_boundary_source_package.json"\n    )\n    material_boundary_path, material_boundary = load(\n        "docs/core/artifacts/t13_ding_material_regime_boundary_audit.json"\n    )',
+        '    material_boundary_path, material_boundary = load(\n        "docs/core/07_artifacts/topic13/t13_ding_material_regime_boundary_audit.json"\n    )',
+        '    cv_uncertainty_path, cv_uncertainty = load(\n        "docs/core/07_artifacts/topic13/t13_iaea_cv_uncertainty_boundary_audit.json"\n    )\n    cv_uncertainty_package_path, cv_uncertainty_package = load(\n        "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_graphite_cv_uncertainty_boundary_source_package.json"\n    )\n    material_boundary_path, material_boundary = load(\n        "docs/core/07_artifacts/topic13/t13_ding_material_regime_boundary_audit.json"\n    )',
         "uncertainty boundary loading",
     )
     text = replace_once(

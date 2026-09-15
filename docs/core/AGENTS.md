@@ -12,36 +12,36 @@ Before editing an equation, parameter, operator, verifier, or core narrative, re
 4. `docs/topics/For Work/17_Formula_Audit_Standard.md`
 5. `docs/topics/For Work/18_Research_Hardening_Workflow.md`
 6. `docs/topics/For Work/EQUATION_RESEARCH_AND_PHYSICAL_CORRESPONDENCE_STANDARD.md`
-7. `docs/core/artifacts/uet_foundation_dependency_gate.json`
-8. `docs/core/artifacts/uet_equation_correspondence_registry.json`
-9. `docs/core/artifacts/uet_foundation_equation_inventory.json`
-10. `docs/core/artifacts/uet_foundation_correspondence_matrix.json`
-11. `docs/core/artifacts/uet_code_surface_inventory.json`
-12. `docs/core/artifacts/uet_core_equation_family_contract.json`
+7. `docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json`
+8. `docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json`
+9. `docs/core/07_artifacts/gates/uet_foundation_equation_inventory.json`
+10. `docs/core/07_artifacts/gates/uet_foundation_correspondence_matrix.json`
+11. `docs/core/07_artifacts/archive/uet_code_surface_inventory.json`
+12. `docs/core/07_artifacts/archive/uet_core_equation_family_contract.json`
 13. `docs/core/00_governance/uet_research_organization_policy.json`
-14. `docs/core/artifacts/uet_research_organization_registry.json`
-15. `docs/core/artifacts/uet_core_file_migration_map.json`
-16. `docs/core/artifacts/uet_core_organization_audit.json`
-17. `docs/core/artifacts/uet_foundation_status_aggregate.json`
-18. `docs/core/artifacts/uet_legacy_variational_closure.json`
-19. `docs/core/artifacts/matter_space_causal_discretization_diagnostic.json`
-20. `docs/core/artifacts/matter_space_causal_reference_verification.json`
-21. `docs/core/artifacts/uet_foundation_compatibility_decision.json`
-22. `docs/core/artifacts/uet_main_theory_wave0_gate.json`
-23. `docs/core/artifacts/uet_main_theory_dependency_graph.json`
+14. `docs/core/07_artifacts/gates/uet_research_organization_registry.json`
+15. `docs/core/07_artifacts/archive/uet_core_file_migration_map.json`
+16. `docs/core/07_artifacts/gates/uet_core_organization_audit.json`
+17. `docs/core/07_artifacts/gates/uet_foundation_status_aggregate.json`
+18. `docs/core/07_artifacts/gates/uet_legacy_variational_closure.json`
+19. `docs/core/07_artifacts/archive/matter_space_causal_discretization_diagnostic.json`
+20. `docs/core/07_artifacts/verification/matter_space_causal_reference_verification.json`
+21. `docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json`
+22. `docs/core/07_artifacts/gates/uet_main_theory_wave0_gate.json`
+23. `docs/core/07_artifacts/archive/uet_main_theory_dependency_graph.json`
 24. `docs/core/UET_MAIN_THEORY_AXIOMS_SPEC.md`
-25. `docs/core/artifacts/uet_main_theory_ontology_gate.json`
-26. `docs/core/artifacts/uet_main_theory_wave2_gate.json`
-27. `docs/core/artifacts/uet_main_theory_wave3_gate.json`
-28. `docs/core/artifacts/uet_main_theory_wave4_gate.json`
-29. `docs/core/artifacts/uet_main_theory_wave5_gate.json`
-30. `docs/core/artifacts/uet_main_theory_wave6_gate.json`
-31. `docs/core/artifacts/uet_main_theory_wave7_gate.json`
-32. `docs/core/artifacts/uet_main_theory_wave8_gate.json`
-33. `docs/core/artifacts/uet_main_theory_wave9_gate.json`
-34. `docs/core/artifacts/uet_main_theory_wave10_gate.json`
-35. `docs/core/artifacts/uet_main_theory_wave11_gate.json`
-36. `docs/core/artifacts/uet_main_theory_closure_gate.json`
+25. `docs/core/07_artifacts/gates/uet_main_theory_ontology_gate.json`
+26. `docs/core/07_artifacts/gates/uet_main_theory_wave2_gate.json`
+27. `docs/core/07_artifacts/gates/uet_main_theory_wave3_gate.json`
+28. `docs/core/07_artifacts/gates/uet_main_theory_wave4_gate.json`
+29. `docs/core/07_artifacts/gates/uet_main_theory_wave5_gate.json`
+30. `docs/core/07_artifacts/gates/uet_main_theory_wave6_gate.json`
+31. `docs/core/07_artifacts/gates/uet_main_theory_wave7_gate.json`
+32. `docs/core/07_artifacts/gates/uet_main_theory_wave8_gate.json`
+33. `docs/core/07_artifacts/gates/uet_main_theory_wave9_gate.json`
+34. `docs/core/07_artifacts/gates/uet_main_theory_wave10_gate.json`
+35. `docs/core/07_artifacts/gates/uet_main_theory_wave11_gate.json`
+36. `docs/core/07_artifacts/gates/uet_main_theory_closure_gate.json`
 
 The foundation gate and registry are the controlling status sources for new core work.
 Existing topic prose, old badges, and legacy validators do not override them.
@@ -49,7 +49,7 @@ The aggregate status is the cross-family stopping boundary: it may expose condit
 compatibility, but it cannot promote a blocked foundation.
 
 After the organization assignment wave, scientific-link work must also read and run
-`docs/core/artifacts/uet_core_scientific_link_audit.json` and
+`docs/core/07_artifacts/verification/uet_core_scientific_link_audit.json` and
 `docs/scripts/audit/audit_uet_core_scientific_links.py`. Its status answers whether an
 assigned file is actually linked to a canonical family contract, formula IDs, units,
 verifiers, artifacts, and claim metadata. `BLOCKED_OPEN_SCIENTIFIC_LINKS` is a valid

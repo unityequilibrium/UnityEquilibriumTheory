@@ -103,7 +103,7 @@ def main():
                   full_core_unlock=False, claim_promotion=False,
                   evidence_hashes={str(p.relative_to(ROOT)).replace('\\', '/'): hashlib.sha256(p.read_bytes()).hexdigest() for p in files},
                   claim_boundary='Not finite-q irrep, Raman frequency agreement, full internal O(2) equivalence or Phi normalization.')
-    (ROOT/'docs/core/artifacts/t13_mp48_shear_irrep_audit.json').write_text(json.dumps(result, indent=2)+'\n', encoding='utf-8')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_mp48_shear_irrep_audit.json').write_text(json.dumps(result, indent=2)+'\n', encoding='utf-8')
     print(json.dumps(dict(checks=checks, maximum_subspace_leakage=max(r['subspace_leakage'] for r in rows),
                          maximum_character_error=max(r['character_error'] for r in rows)), indent=2))
     if not all(checks.values()):

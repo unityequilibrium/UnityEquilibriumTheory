@@ -18,7 +18,7 @@ RAW = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
     "npl_rsa40_graphite_specific_heat.pdf"
 )
-OUT = ROOT / "docs/core/artifacts/t13_npl_rsa40_graphite_specific_heat_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_npl_rsa40_graphite_specific_heat_audit.json"
 EXPECTED_RAW_SHA256 = "aabe560c3e4e012e606b2d87facb67600653a781c4b46c8fde986f3fd9fa28f1"
 
 

@@ -58,7 +58,7 @@ def main():
         dependency_unlocked=['calibrated interface interpretation only; no new physical unlock'],full_core_unlock=False,claim_promotion=False,
         evidence_hashes={str(p.relative_to(ROOT)).replace('\\','/'):digest(p) for p in files},
         claim_boundary='Does not invalidate external fraction calibration or forbid EFT matching. Synthetic rescaling is not physical data. Retain bounded composition as recorded, but do not call its matching identity an independent validation. No holdout, calibration retune or gate rewrite.')
-    (ROOT/'docs/core/artifacts/t13_he4_matching_independence_audit.json').write_text(json.dumps(result,indent=2,allow_nan=False)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_he4_matching_independence_audit.json').write_text(json.dumps(result,indent=2,allow_nan=False)+'\n')
     print(json.dumps(dict(external_alpha=alpha,Z=base['Z'],probes=probes),indent=2))
 
 

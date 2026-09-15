@@ -16,7 +16,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
 SOURCE = ROOT / "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_matter_space_phase_coupling_diagnostic.json"
-OUT = ROOT / "docs/core/artifacts/matter_space_phase_pilot.json"
+OUT = ROOT / "docs/core/07_artifacts/archive/matter_space_phase_pilot.json"
 
 
 def sha256(path: Path) -> str:

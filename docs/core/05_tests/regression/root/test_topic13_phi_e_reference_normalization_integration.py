@@ -9,10 +9,10 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ACTION = "docs/core/artifacts/t13_phi_e_reference_normalization_audit.json"
+ACTION = "docs/core/07_artifacts/topic13/t13_phi_e_reference_normalization_audit.json"
 FULL = "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-REGISTER = "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY = "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+REGISTER = "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY = "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 
 
 def load(rel: str) -> dict:

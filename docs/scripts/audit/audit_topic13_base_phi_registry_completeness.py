@@ -9,15 +9,15 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUTPUT = ROOT / "docs/core/artifacts/t13_base_phi_registry_completeness_audit.json"
+OUTPUT = ROOT / "docs/core/07_artifacts/topic13/t13_base_phi_registry_completeness_audit.json"
 
-ACTIVE_LANE = "docs/core/artifacts/uet_active_lane_units_observable_register.json"
-ALPHA_AUDIT = "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json"
+ACTIVE_LANE = "docs/core/07_artifacts/archive/uet_active_lane_units_observable_register.json"
+ALPHA_AUDIT = "docs/core/07_artifacts/topic13/t13_alpha_phi_k_calibration_candidate_audit.json"
 CALIBRATION_REQUIREMENT = (
-    "docs/core/artifacts/t13_base_phi_independent_calibration_requirement.json"
+    "docs/core/07_artifacts/topic13/t13_base_phi_independent_calibration_requirement.json"
 )
 PHI_ANCHOR_BOUNDARY = (
-    "docs/core/artifacts/t13_phi_si_anchor_public_source_boundary_audit.json"
+    "docs/core/07_artifacts/topic13/t13_phi_si_anchor_public_source_boundary_audit.json"
 )
 SI_CONVERSION = "docs/core/thermal_covariant_action_si_conversion.py"
 ENERGY_BRIDGE = "docs/core/thermal_energy_response_bridge.py"

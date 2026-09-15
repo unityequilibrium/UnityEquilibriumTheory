@@ -42,7 +42,7 @@ def repair_test_paths() -> bool:
     changed = False
     source_text = SOURCE_TEST.read_text(encoding="utf-8-sig")
     source_old = 'ROOT = Path(__file__).resolve().parents[2]\nAUDIT = ROOT / "artifacts/t13_berut_source_package_availability_boundary.json"'
-    source_new = 'ROOT = Path(__file__).resolve().parents[3]\nAUDIT = ROOT / "docs/core/artifacts/t13_berut_source_package_availability_boundary.json"'
+    source_new = 'ROOT = Path(__file__).resolve().parents[3]\nAUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_berut_source_package_availability_boundary.json"'
     if source_old in source_text:
         SOURCE_TEST.write_text(source_text.replace(source_old, source_new, 1), encoding="utf-8")
         changed = True
@@ -54,8 +54,8 @@ REGISTER = ROOT / "artifacts/uet_major_result_closure_register.json"
 DEPENDENCY = ROOT / "artifacts/uet_major_result_dependency_unlock_gate.json"'''
     integration_new = '''ROOT = Path(__file__).resolve().parents[3]
 FULL = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY = ROOT / "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"'''
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"'''
     if integration_old in integration_text:
         INTEGRATION_TEST.write_text(integration_text.replace(integration_old, integration_new, 1), encoding="utf-8")
         changed = True

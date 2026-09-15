@@ -10,7 +10,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUTPUT = ROOT / "docs/core/artifacts/impact_effect_legacy_wording_audit.json"
+OUTPUT = ROOT / "docs/core/07_artifacts/verification/impact_effect_legacy_wording_audit.json"
 TEXT_SUFFIXES = {".md", ".py", ".txt"}
 EXCLUDED_PARTS = {".git", "__pycache__", "Result", "_Logs", "artifacts"}
 PATTERNS: tuple[tuple[str, re.Pattern[str], str], ...] = (

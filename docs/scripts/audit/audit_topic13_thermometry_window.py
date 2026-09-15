@@ -11,7 +11,7 @@ def eligible_delays(delays, lower_bound_ps):
 
 
 def main():
-    path = ROOT/'docs/core/artifacts/t13_ued_numeric_inventory_audit.json'
+    path = ROOT/'docs/core/07_artifacts/topic13/t13_ued_numeric_inventory_audit.json'
     source = json.loads(path.read_text())
     for relative, expected in source['evidence_hashes'].items():
         if hashlib.sha256((ROOT/relative).read_bytes()).hexdigest() != expected:
@@ -36,7 +36,7 @@ def main():
         dependency_unlocked=['reject this unsupported calibration transfer only'],
         evidence_hashes={str(p.relative_to(ROOT)).replace('\\', '/'):hashlib.sha256(p.read_bytes()).hexdigest() for p in files},
         claim_boundary='Different samples may equilibrate differently. Nonoverlap rejects the proposed justification, not equilibrium itself or all thermometry routes. No holdout, fit or invented rows.')
-    (ROOT/'docs/core/artifacts/t13_thermometry_window_audit.json').write_text(json.dumps(result, indent=2)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_thermometry_window_audit.json').write_text(json.dumps(result, indent=2)+'\n')
     print(json.dumps(rows, indent=2))
 
 

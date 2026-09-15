@@ -8,7 +8,7 @@ import pytest
 
 
 ROOT = repo_root()
-LANE = ROOT / "docs/core/artifacts/t13_natural_graphite_nelson_riley_alpha_v_source_audit.json"
+LANE = ROOT / "docs/core/07_artifacts/topic13/t13_natural_graphite_nelson_riley_alpha_v_source_audit.json"
 
 
 def load(path: Path) -> dict:

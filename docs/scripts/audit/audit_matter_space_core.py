@@ -709,7 +709,7 @@ def update_formula_audit(verification: dict[str, Any]) -> dict[str, Any]:
         if isinstance(implementation, str):
             entry["implementation"] = implementation.replace(" (target)", "")
         entry["implementation_status"] = "PRESENT"
-        entry["last_verifier"] = "docs/core/artifacts/matter_space_variational_verification.json"
+        entry["last_verifier"] = "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
     audit["status"] = "WARN"
     audit["verification_status"] = verification["status"]
     audit["next_controller"] = verification["controlling_blocker"]

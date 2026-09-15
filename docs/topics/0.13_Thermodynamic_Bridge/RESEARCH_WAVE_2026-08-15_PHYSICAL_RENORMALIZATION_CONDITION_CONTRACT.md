@@ -12,4 +12,4 @@ CONTROLLING_BLOCKER: `external_physical_pole_or_residue_anchor_missing`, alongsi
 NEXT_ACTION: Source-lock one independent physical pole/residue or microscopic renormalization-condition record with locator, units, uncertainty, state matching, independence statement, and hash; then evaluate the complete finite-temperature 1PI object without TTG target residuals or Xie 2026.
 CLAIM_BOUNDARY: This closes only the acceptance contract and formal algebraic witness. It does not claim a physical mass/residue, unique renormalization, complete 1PI, transport, entropy, SI `Phi` mapping, `alpha_Phi_K` calibration, TTG prediction, external validation, or Full Topic 13 closure.
 
-Evidence artifact: `docs/core/artifacts/t13_uet_o2_physical_renormalization_condition_contract.json`.
+Evidence artifact: `docs/core/07_artifacts/topic13/t13_uet_o2_physical_renormalization_condition_contract.json`.

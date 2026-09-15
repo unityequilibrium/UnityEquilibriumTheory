@@ -16,17 +16,17 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_flat_thermodynamic_bridge_components_gate.json"
 
 
 INPUTS = {
-    "normal_component": "docs/core/artifacts/t13_uet_o2_thermodynamic_normal_component_audit.json",
-    "formal_bridge": "docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json",
-    "sk_kms_entropy": "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json",
-    "entropy_heat_flux": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
-    "kim_audit": "docs/core/artifacts/t13_kim_2018_graphite_green_kubo_external_input_audit.json",
+    "normal_component": "docs/core/07_artifacts/topic13/t13_uet_o2_thermodynamic_normal_component_audit.json",
+    "formal_bridge": "docs/core/07_artifacts/topic13/t13_formal_thermodynamic_bridge_integration_audit.json",
+    "sk_kms_entropy": "docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json",
+    "entropy_heat_flux": "docs/core/07_artifacts/topic13/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+    "kim_audit": "docs/core/07_artifacts/topic13/t13_kim_2018_graphite_green_kubo_external_input_audit.json",
     "kim_package": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/kim_2018_graphite_green_kubo_source_package.json",
-    "holdout": "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json",
+    "holdout": "docs/core/07_artifacts/topic13/t13_xie_2026_holdout_access_audit.json",
 }
 
 

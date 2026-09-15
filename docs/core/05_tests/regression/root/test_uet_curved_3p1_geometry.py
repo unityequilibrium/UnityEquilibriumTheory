@@ -23,11 +23,11 @@ from docs.scripts.audit.audit_uet_curved_3p1_geometry import build_artifacts
 
 
 ROOT = repo_root()
-VERIFY = ROOT / "docs/core/artifacts/curved_3p1_geometry_operator_verification.json"
-FORMULA = ROOT / "docs/core/artifacts/curved_3p1_geometry_operator_formula_audit.json"
-GATE = ROOT / "docs/core/artifacts/core_curved_3p1_parent_gate.json"
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY = ROOT / "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+VERIFY = ROOT / "docs/core/07_artifacts/verification/curved_3p1_geometry_operator_verification.json"
+FORMULA = ROOT / "docs/core/07_artifacts/correspondence/curved_3p1_geometry_operator_formula_audit.json"
+GATE = ROOT / "docs/core/07_artifacts/gates/core_curved_3p1_parent_gate.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 
 
 def _flat_metric(resolution: int) -> np.ndarray:

@@ -27,7 +27,7 @@ from docs.core.uet_o2_condensed_retarded_dissipation_no_go import (  # noqa: E40
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_condensed_retarded_dissipation_no_go_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_condensed_retarded_dissipation_no_go_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_condensed_retarded_dissipation_no_go.py"
 FLUCTUATION_MODULE = ROOT / "docs/core/uet_o2_condensate_fluctuations.py"
 EOS_MODULE = ROOT / "docs/core/uet_o2_finite_density_eos.py"

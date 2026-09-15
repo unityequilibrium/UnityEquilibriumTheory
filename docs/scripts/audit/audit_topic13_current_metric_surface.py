@@ -49,7 +49,7 @@ def main():
         open_blockers=["basis_completeness","physical_collision_current_matching","material_calibration"],
         evidence_artifacts=[dict(path=p,sha256=sha256((ROOT/p).read_bytes()).hexdigest()) for p in paths],
         claim_boundary="No modification to projection or rates; no external data/holdout. This is not a remedy for missing material normalization.")
-    (ROOT/"docs/core/artifacts/t13_current_metric_surface_audit.json").write_text(json.dumps(result,indent=2,allow_nan=False)+"\n",encoding="utf-8")
+    (ROOT/"docs/core/07_artifacts/topic13/t13_current_metric_surface_audit.json").write_text(json.dumps(result,indent=2,allow_nan=False)+"\n",encoding="utf-8")
     for r in rows: print(r["cutoff"],r["omitted_enthalpy_surface_fraction"],r["corrected_enthalpy_residual"],r["corrected_charge_residual"])
 
 

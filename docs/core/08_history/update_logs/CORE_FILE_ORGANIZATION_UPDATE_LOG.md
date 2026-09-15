@@ -119,3 +119,12 @@
 - CONTROLLING_BLOCKER: data_tooling_python_bootstrap_and_smoke_review
 - NEXT_ACTION: Add one shared repo-root bootstrap contract, repair path-sensitive Python in bounded categories, then migrate each category with legacy shims and direct smoke checks.
 - CLAIM_BOUNDARY: Organization and provenance traceability only; no equation, evidence class, physics status, or empirical claim changed.
+### 2026-09-16 — Wave 6zh: complete physical core migration
+
+- STATUS: PASS_WITH_REVIEW_REQUIRED
+- WHAT_CHANGED: Completed the physical migration boundary for docs/core. Moved all 588 remaining generated JSON/NPZ artifacts into 07_artifacts/, moved the two final proof/review assets, and moved the remaining 74 path-sensitive tooling sources into docs/scripts/core/ with legacy runpy shims. Reconciled 892 active reference files with 3,214 path replacements; retained only the declared legacy README/index/shim boundaries. No equation implementation or physics interpretation was changed.
+- VERIFICATION: Physical migration, path, import, active-link, artifact, test-migration, test-collection, and combined migration audits pass. Artifact migration reports 593/593 canonical files with zero missing sources, hash mismatches, target conflicts, or active legacy consumers. Canonical test collection reports 2,169 tests; 181 core modules import successfully; core/scripts compile successfully.
+- RESULT: files_to_move=0, duplicate canonical targets 0, broken active links 0, broken imports 0, artifact hash mismatches 0, and physics-status changes 0. Organization migration is complete at the file-placement level.
+- CONTROLLING_BLOCKER: None for physical organization. Scientific foundation/evidence gates remain unchanged; 510 artifact records still lack resolved generator identity and remain an evidence/production-generator concern, not a path-layout blocker.
+- NEXT_ACTION: Preserve the legacy compatibility boundaries, review generator identity and consumer deprecation as a separate hardening wave, and keep physics claim promotion behind the existing foundation gates. Commit this scoped migration without pushing.
+- CLAIM_BOUNDARY: This wave establishes canonical file placement, compatibility routing, provenance-preserving path reconciliation, and test/import/link integrity only. It does not prove, promote, or reinterpret any UET physics claim.

@@ -106,7 +106,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
     }
     addendum = {
         "schema_version": "1.0", "artifact": "uet_equation_correspondence_registry_coarse_graining_addendum",
-        "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+        "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
         "status": "CANDIDATE_ENTRY_PENDING_MERGE",
         "equation_entries": [{
             "equation_id": "uet.main_theory.coarse_graining", "version": "lane-coarse-graining-v1",
@@ -121,7 +121,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
             "symmetry_and_conservation": "global mean preserved for equal-volume blocks",
             "limiting_cases": ["single-sample cell reproduces the lower-level field up to affine normalization", "coarser blocks erase within-cell fluctuations"],
             "implementation_paths": [COARSE_GRAINING_SOURCE],
-            "verifier_paths": ["docs/scripts/audit/audit_uet_coarse_graining.py", "docs/core/artifacts/coarse_graining_verification.json", "docs/core/test/test_uet_coarse_graining.py"],
+            "verifier_paths": ["docs/scripts/audit/audit_uet_coarse_graining.py", "docs/core/07_artifacts/correspondence/coarse_graining_verification.json", "docs/core/test/test_uet_coarse_graining.py"],
             "evidence_class": "INTERNAL_FORMAL", "proof_status": "operator consistency verified; microscopic and observable closure open",
             "downstream_dependencies": ["uet.main_theory.covariant_parent", "uet.main_theory.open_system", "uet.main_theory.observables"],
             "claim_boundary": "lane-specific candidate coarse coordinate; C is not mass, charge, or order universally",

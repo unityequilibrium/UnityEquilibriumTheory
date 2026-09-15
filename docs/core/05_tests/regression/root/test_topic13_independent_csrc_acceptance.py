@@ -13,7 +13,7 @@ def load(relative: str) -> dict:
 
 
 def test_independent_csrc_contract_keeps_current_routes_blocked() -> None:
-    artifact = load("docs/core/artifacts/t13_independent_csrc_acceptance_contract.json")
+    artifact = load("docs/core/07_artifacts/topic13/t13_independent_csrc_acceptance_contract.json")
     acceptance = artifact["acceptance"]
 
     assert artifact["major_result"]["closure_level"] == "CLOSED_FOR_LANE"

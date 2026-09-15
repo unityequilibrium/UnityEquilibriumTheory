@@ -28,7 +28,7 @@ def main() -> int:
     text = replace_once(
         text,
         '    material_boundary_path, material_boundary = load(\n',
-        '    finite_qp_eos_path, finite_qp_eos = load(\n        "docs/core/artifacts/t13_uet_o2_finite_temperature_quasiparticle_eos_audit.json"\n    )\n    material_boundary_path, material_boundary = load(\n',
+        '    finite_qp_eos_path, finite_qp_eos = load(\n        "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_quasiparticle_eos_audit.json"\n    )\n    material_boundary_path, material_boundary = load(\n',
         "finite-temperature EOS audit loading",
     )
     text = replace_once(

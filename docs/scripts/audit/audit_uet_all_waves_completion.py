@@ -19,13 +19,13 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
-CLOSURE = ROOT / "docs/core/artifacts/uet_all_waves_closure.json"
-FOUNDATION = ROOT / "docs/core/artifacts/uet_foundation_dependency_gate.json"
+CLOSURE = ROOT / "docs/core/07_artifacts/gates/uet_all_waves_closure.json"
+FOUNDATION = ROOT / "docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json"
 CLOSURE_LOG = ROOT / "docs/core/UET_ALL_WAVES_CLOSURE_UPDATE_LOG.md"
 REPORT = ROOT / "docs/core/UET_FOUNDATION_RESEARCH_PROGRAM_REPORT.md"
 WAVE_LOG = ROOT / "docs/core/UET_WAVE3_WAVE10_UPDATE_LOG.md"
 WORK_LEDGER = ROOT / "WORK_LEDGER/2026/2026-08-08.md"
-OUTPUT = ROOT / "docs/core/artifacts/uet_all_waves_completion_audit.json"
+OUTPUT = ROOT / "docs/core/07_artifacts/verification/uet_all_waves_completion_audit.json"
 CORE_REGRESSION_TIMEOUT_SECONDS = 300
 
 

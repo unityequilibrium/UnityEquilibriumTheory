@@ -8,8 +8,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-ENERGY = ROOT / "docs/core/artifacts/t13_energy_response_bridge_audit.json"
-AUDIT = ROOT / "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json"
+ENERGY = ROOT / "docs/core/07_artifacts/topic13/t13_energy_response_bridge_audit.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_ding_pbte_numeric_input_availability_audit.json"
 PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "ding_2022_pbte_numeric_input_availability_package.json"

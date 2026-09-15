@@ -18,8 +18,8 @@ from docs.scripts.audit.audit_topic13_invariant_rate_collision_repair import con
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_dressed_ra_charge_current_ladder_audit.json"
-REGISTRY_OUT = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_dressed_ra_charge_ladder_addendum.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_dressed_ra_charge_current_ladder_audit.json"
+REGISTRY_OUT = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_dressed_ra_charge_ladder_addendum.json"
 EQUATION_ID = "uet.o2.thermal.same_kernel_dressed_ra_charge_current_ladder"
 LOSS_MATCH_THRESHOLD = 5.0e-3
 RADIAL_REFINEMENT_THRESHOLD = 1.0e-2
@@ -201,8 +201,8 @@ def main() -> int:
         "docs/scripts/audit/audit_topic13_dressed_ra_charge_current_ladder.py",
     ]
     priors = [
-        "docs/core/artifacts/t13_same_kernel_tagged_spectral_width_audit.json",
-        "docs/core/artifacts/t13_vector_current_heat_rank_boundary_audit.json",
+        "docs/core/07_artifacts/topic13/t13_same_kernel_tagged_spectral_width_audit.json",
+        "docs/core/07_artifacts/topic13/t13_vector_current_heat_rank_boundary_audit.json",
     ]
     artifact = {
         "schema_version": "t13-dressed-ra-charge-current-ladder-v1",
@@ -337,7 +337,7 @@ def main() -> int:
         json.dumps({
             "schema_version": "uet-equation-registry-addendum-v1",
             "status": "CANDIDATE_DIAGNOSTIC_NOT_MERGED",
-            "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+            "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
             "equation_entries": [entry],
             "full_core_unlock": False,
             "claim_promotion": False,

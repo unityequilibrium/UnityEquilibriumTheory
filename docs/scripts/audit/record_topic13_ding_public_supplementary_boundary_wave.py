@@ -8,12 +8,12 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-LANE = ROOT / "docs/core/artifacts/t13_ding_public_supplementary_payload_boundary_audit.json"
+LANE = ROOT / "docs/core/07_artifacts/topic13/t13_ding_public_supplementary_payload_boundary_audit.json"
 FULL = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
     "topic13_full_thermodynamic_bridge_core_ready_gate.json"
 )
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
 MANIFEST = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/DATA_MANIFEST.md"
 REPORT = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md"
 UPDATE_LOG = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
@@ -58,7 +58,7 @@ identified.
 | MOESM3 | `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ding_2022_supplementary_materials_3.pdf` | 927,333 | `4405683b720a24437d64fe3429d409503fcc91bd33c1e8616a3252cc50d94c5f` | reporting summary |
 
 The machine-readable boundary result is
-`docs/core/artifacts/t13_ding_public_supplementary_payload_boundary_audit.json`
+`docs/core/07_artifacts/topic13/t13_ding_public_supplementary_payload_boundary_audit.json`
 with SHA-256 `{lane_hash}`. This closes only the public supplementary
 availability lane; the author-request or accepted PBTE reproduction route remains open.
 """
@@ -77,7 +77,7 @@ DEPENDENCY_UNLOCKED: Public Ding supplementary provenance boundary only. No full
 
 STATUS: `PASS_PUBLIC_SUPPLEMENTARY_PAYLOAD_BOUNDARY_NO_NUMERIC_C_SRC`
 
-WHAT_CHANGED: Added `docs/core/artifacts/t13_ding_public_supplementary_payload_boundary_audit.json`, integrated it into the Topic 13 full gate under `verification_status.source_package`, and recorded the MOESM1-3 hashes in `DATA_MANIFEST.md`.
+WHAT_CHANGED: Added `docs/core/07_artifacts/topic13/t13_ding_public_supplementary_payload_boundary_audit.json`, integrated it into the Topic 13 full gate under `verification_status.source_package`, and recorded the MOESM1-3 hashes in `DATA_MANIFEST.md`.
 
 EQUATION_OR_MAPPING: `C_src(T) = sum_mu c_mu(T)` and `Delta_Tq = Delta_u_ph / C_src` remain Ding source definitions; the audited PDFs and figures are not relabeled as numeric `C_src` rows. The measurement layer remains `y_TTG = Delta_Tq(t) / Delta_Tq(0)`.
 
@@ -104,7 +104,7 @@ DEPENDENCY_UNLOCKED: Public source-provenance boundary only; no full Topic 13 de
 
 STATUS: `PASS_PUBLIC_SUPPLEMENTARY_PAYLOAD_BOUNDARY_NO_NUMERIC_C_SRC`
 
-WHAT_CHANGED: Added and integrated `docs/core/artifacts/t13_ding_public_supplementary_payload_boundary_audit.json` (SHA-256 `{lane_hash}`); updated the data manifest, full gate, closure register, and dependency record.
+WHAT_CHANGED: Added and integrated `docs/core/07_artifacts/topic13/t13_ding_public_supplementary_payload_boundary_audit.json` (SHA-256 `{lane_hash}`); updated the data manifest, full gate, closure register, and dependency record.
 
 EQUATION_OR_MAPPING: `C_src(T) = sum_mu c_mu(T)` and `Delta_Tq = Delta_u_ph / C_src`; equations/figures remain source context, not machine-readable numeric `C_src`.
 

@@ -26,15 +26,15 @@ def append_once(relative: str, marker: str, body: str) -> None:
 
 
 def main() -> int:
-    component = digest("docs/core/artifacts/t13_csrc_equilibrium_component_acceptance_audit.json")
-    reproduction = digest("docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json")
-    state = digest("docs/core/artifacts/t13_calorine_state_uncertainty_decomposition_audit.json")
-    isotope = digest("docs/core/artifacts/t13_calorine_isotope_mass_sensitivity_audit.json")
-    model = digest("docs/core/artifacts/t13_calorine_model_form_state_spread_comparison_audit.json")
+    component = digest("docs/core/07_artifacts/topic13/t13_csrc_equilibrium_component_acceptance_audit.json")
+    reproduction = digest("docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_reproduction_audit.json")
+    state = digest("docs/core/07_artifacts/topic13/t13_calorine_state_uncertainty_decomposition_audit.json")
+    isotope = digest("docs/core/07_artifacts/topic13/t13_calorine_isotope_mass_sensitivity_audit.json")
+    model = digest("docs/core/07_artifacts/topic13/t13_calorine_model_form_state_spread_comparison_audit.json")
     full_gate = digest("docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json")
-    matrix = digest("docs/core/artifacts/t13_topic13_closure_matrix.json")
-    register = digest("docs/core/artifacts/uet_major_result_closure_register.json")
-    dependency = digest("docs/core/artifacts/uet_major_result_dependency_unlock_gate.json")
+    matrix = digest("docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json")
+    register = digest("docs/core/07_artifacts/gates/uet_major_result_closure_register.json")
+    dependency = digest("docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json")
 
     wave = f"""# Research Wave: Topic 13 Equilibrium C_src Component ({DAY})
 

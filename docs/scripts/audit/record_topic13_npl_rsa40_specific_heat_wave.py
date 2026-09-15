@@ -8,10 +8,10 @@ ROOT = Path(__file__).resolve().parents[3]
 TOPIC = ROOT / "docs/topics/0.13_Thermodynamic_Bridge"
 RAW = TOPIC / "Data/03_Research/raw/npl_rsa40_graphite_specific_heat.pdf"
 PACKAGE = TOPIC / "Data/03_Research/npl_rsa40_graphite_specific_heat_source_package.json"
-AUDIT = ROOT / "docs/core/artifacts/t13_npl_rsa40_graphite_specific_heat_audit.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_npl_rsa40_graphite_specific_heat_audit.json"
 FULL = TOPIC / "Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY = ROOT / "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 
 
 def digest(path: Path) -> str:
@@ -53,7 +53,7 @@ CLAIM_BOUNDARY: Source-traceable NPL IG-11 mass-specific `c_p` comparator only. 
 
 Raw report: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/npl_rsa40_graphite_specific_heat.pdf` (`{raw_hash}`).
 Source package: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/npl_rsa40_graphite_specific_heat_source_package.json` (`{package_hash}`).
-Audit: `docs/core/artifacts/t13_npl_rsa40_graphite_specific_heat_audit.json` (`{audit_hash}`).
+Audit: `docs/core/07_artifacts/topic13/t13_npl_rsa40_graphite_specific_heat_audit.json` (`{audit_hash}`).
 
 The lane source-locks the NPL IG-11 mass-specific `c_p` relation and its
 reported uncertainty. The nominal density product is kept as a cross-check

@@ -45,7 +45,7 @@ def main():
         open_blockers=["material_representation_and_extra_symmetries","anisotropy_coefficient_or_suppression_bound","dispersion_and_kinetic_residue"],
         claim_boundary="Allowed does not mean nonzero. Harmonic/emergent O(2) remains possible in a declared approximation; two components alone do not establish exact O(2) charge.",
         evidence_artifacts=[dict(path=p,sha256=sha256((ROOT/p).read_bytes()).hexdigest()) for p in files])
-    (ROOT/"docs/core/artifacts/t13_e2g_nonlinear_symmetry_audit.json").write_text(json.dumps(r,indent=2,allow_nan=False)+"\n",encoding="utf-8")
+    (ROOT/"docs/core/07_artifacts/topic13/t13_e2g_nonlinear_symmetry_audit.json").write_text(json.dumps(r,indent=2,allow_nan=False)+"\n",encoding="utf-8")
     print(json.dumps(dict(rows=rows,residual=r["cubic_group_residual"],rotation_difference=r["arbitrary_rotation_difference"])))
 
 

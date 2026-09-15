@@ -34,7 +34,7 @@ dependency is unlocked.
 ## WHAT_CHANGED:
 
 Added `docs/core/uet_o2_finite_temperature_scheme_identifiability.py`, audit
-artifact `docs/core/artifacts/t13_uet_o2_finite_temperature_scheme_identifiability_no_go.json`,
+artifact `docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_scheme_identifiability_no_go.json`,
 full-gate projection, major-result register sync, and focused regression test.
 
 ## EQUATION_OR_MAPPING:

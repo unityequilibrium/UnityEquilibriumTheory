@@ -22,7 +22,7 @@ MODULE_REL = "docs/core/uet_o2_finite_temperature_renormalized_hartree.py"
 VACUUM_REL = "docs/core/uet_o2_renormalized_normal_branch.py"
 SELF_ENERGY_REL = "docs/core/uet_o2_finite_temperature_self_energy.py"
 HARTREE_REL = "docs/core/uet_o2_finite_temperature_hartree_thermodynamics.py"
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_finite_temperature_renormalized_hartree_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_renormalized_hartree_audit.json"
 
 TEMPERATURE = 0.35
 CHEMICAL_POTENTIAL = 0.20

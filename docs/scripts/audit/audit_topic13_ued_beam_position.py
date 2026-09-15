@@ -30,8 +30,8 @@ def position(image, radius, center=(242,247)):
 
 
 def main():
-    source=ROOT/'docs/core/artifacts/t13_ued_raw_structure_audit.json'
-    acquisition=ROOT/'docs/core/artifacts/t13_ued_raw_archive_audit.json'
+    source=ROOT/'docs/core/07_artifacts/topic13/t13_ued_raw_structure_audit.json'
+    acquisition=ROOT/'docs/core/07_artifacts/topic13/t13_ued_raw_archive_audit.json'
     notebook=ROOT/'docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_treat_pickle_7f7036b.ipynb'
     for p in (source,acquisition):
         for f,h in json.loads(p.read_text())['evidence_hashes'].items():
@@ -77,7 +77,7 @@ def main():
         open_blockers=['centroid/background/shape ambiguity','source Voigt registration replication and uncertainty','reciprocal geometry and Phi mapping'],
         dependency_unlocked=['registration-method comparison only'],full_core_unlock=False,claim_promotion=False,
         claim_boundary='Moment differences can reflect shape/background, not pure translation. No image shifted, no background removed or fit, no holdout, physical alignment correction, heat or alpha claim.')
-    (ROOT/'docs/core/artifacts/t13_ued_beam_position_audit.json').write_text(json.dumps(artifact,indent=2,allow_nan=False)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_ued_beam_position_audit.json').write_text(json.dumps(artifact,indent=2,allow_nan=False)+'\n')
     print(json.dumps(summary,indent=2))
 
 

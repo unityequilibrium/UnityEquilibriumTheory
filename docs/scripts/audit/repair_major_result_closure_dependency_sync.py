@@ -12,8 +12,8 @@ TARGET = ROOT / "docs/scripts/audit/audit_major_result_closure.py"
 def main() -> int:
     text = TARGET.read_text(encoding="utf-8-sig")
     marker = '    OUT.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\\n", encoding="utf-8")\n'
-    insertion = marker + '''    dependency_path = ROOT / "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"\n    if dependency_path.is_file():\n        dependency = load(dependency_path)\n        dependency["generated_at"] = date.today().isoformat()\n        dependency.setdefault("register", {})["path"] = rel(OUT)\n        dependency["register"]["sha256"] = sha256(OUT)\n        dependency_path.write_text(\n            json.dumps(dependency, indent=2, ensure_ascii=True) + "\\n",\n            encoding="utf-8",\n        )\n'''
-    if 'dependency_path = ROOT / "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"' in text:
+    insertion = marker + '''    dependency_path = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"\n    if dependency_path.is_file():\n        dependency = load(dependency_path)\n        dependency["generated_at"] = date.today().isoformat()\n        dependency.setdefault("register", {})["path"] = rel(OUT)\n        dependency["register"]["sha256"] = sha256(OUT)\n        dependency_path.write_text(\n            json.dumps(dependency, indent=2, ensure_ascii=True) + "\\n",\n            encoding="utf-8",\n        )\n'''
+    if 'dependency_path = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"' in text:
         print("MAJOR_RESULT_CLOSURE_DEPENDENCY_SYNC_ALREADY_PRESENT")
         return 0
     if marker not in text:

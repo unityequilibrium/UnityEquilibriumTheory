@@ -8,8 +8,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
-AUDIT = ROOT / "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_ding_pbte_numeric_input_availability_audit.json"
 
 
 def load(path: Path) -> dict:

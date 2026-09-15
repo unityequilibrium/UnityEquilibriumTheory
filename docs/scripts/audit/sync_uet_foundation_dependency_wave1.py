@@ -8,9 +8,9 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-GATE = ROOT / "docs/core/artifacts/uet_foundation_dependency_gate.json"
-CONTRACT = ROOT / "docs/core/artifacts/uet_research_room_wave1_contract.json"
-INTEGRATION = ROOT / "docs/core/artifacts/uet_research_room_wave1_integration_gate.json"
+GATE = ROOT / "docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json"
+CONTRACT = ROOT / "docs/core/07_artifacts/archive/uet_research_room_wave1_contract.json"
+INTEGRATION = ROOT / "docs/core/07_artifacts/gates/uet_research_room_wave1_integration_gate.json"
 
 
 def rel(path: Path) -> str:

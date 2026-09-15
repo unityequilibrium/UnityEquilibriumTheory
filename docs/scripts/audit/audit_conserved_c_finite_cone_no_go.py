@@ -13,8 +13,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-SOURCE = ROOT / "docs/core/artifacts/matter_space_causal_cone_compatibility.json"
-OUT = ROOT / "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json"
+SOURCE = ROOT / "docs/core/07_artifacts/archive/matter_space_causal_cone_compatibility.json"
+OUT = ROOT / "docs/core/07_artifacts/archive/conserved_c_finite_cone_no_go_assessment.json"
 
 
 def main() -> int:

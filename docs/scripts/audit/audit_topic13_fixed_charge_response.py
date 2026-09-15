@@ -17,7 +17,7 @@ def constrained_derivative(e_x,e_mu,n_x,n_mu):
 
 
 def main():
-    source=ROOT/'docs/core/artifacts/t13_uet_o2_action_thermal_observable_bridge_audit.json'
+    source=ROOT/'docs/core/07_artifacts/topic13/t13_uet_o2_action_thermal_observable_bridge_audit.json'
     a=json.loads(source.read_text());s=a['state']
     base=np.array([s['temperature'],s['chemical_potential'],s['space_response']])
     cfg=natural_bridge_config()
@@ -66,7 +66,7 @@ def main():
         open_blockers=['O(2) charge to material density correspondence','physical thermodynamic path and uncertainty','independent material observable'],
         dependency_unlocked=['ensemble-specific natural response comparison only'],full_core_unlock=False,claim_promotion=False,
         claim_boundary='No parameter or calibration retuning. This does not identify either susceptibility as physical c_v or SVP response. Existing Core composition remains unchanged; no holdout read.')
-    (ROOT/'docs/core/artifacts/t13_fixed_charge_response_audit.json').write_text(json.dumps(result,indent=2,allow_nan=False)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_fixed_charge_response_audit.json').write_text(json.dumps(result,indent=2,allow_nan=False)+'\n')
     print(json.dumps(records,indent=2))
 
 

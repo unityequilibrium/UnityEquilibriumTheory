@@ -9,13 +9,13 @@ REPORT = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/"
     "FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md"
 )
-ARTIFACT = ROOT / "docs/core/artifacts/t13_mp48_force_constant_csrc_mesh_convergence_audit.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_mp48_force_constant_csrc_mesh_convergence_audit.json"
 FULL_GATE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
     "topic13_full_thermodynamic_bridge_core_ready_gate.json"
 )
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY = ROOT / "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 
 
 def digest(path: Path) -> str:

@@ -45,10 +45,10 @@ CLAIM_BOUNDARY: This result is internal Core integration, not external replicati
 
 Evidence hashes:
 
-- `docs/core/artifacts/t13_full_core_ready_acceptance_audit.json`: `846d2bfbc819c1b6f700f109645a451b5d3647a570527af5dc0e21240dacae41`
-- `docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json`: `13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418`
-- `docs/core/artifacts/t13_topic13_closure_matrix.json`: `ba42d8a9c1745398ec0ee04300a792d18416fccae9205bc376a96f68d423036d`
+- `docs/core/07_artifacts/topic13/t13_full_core_ready_acceptance_audit.json`: `846d2bfbc819c1b6f700f109645a451b5d3647a570527af5dc0e21240dacae41`
+- `docs/core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json`: `13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418`
+- `docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json`: `ba42d8a9c1745398ec0ee04300a792d18416fccae9205bc376a96f68d423036d`
 - `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`: `77c4fa3cfafb1fa6ee4e1e3df65f953ea3011bd33500f6786e92eca6869390c9`
-- `docs/core/artifacts/uet_major_result_closure_register.json`: `94a9356f24e2dae0d396bd96931d068919e4f1773e95fd255f2cf4470bac1e55`
-- `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`: `800cf61860945108ea3cb4a1604da32765d8ca0e4ddc55118ccf8702bee4d6fc`
-- `docs/core/artifacts/t13_xie_2026_holdout_access_audit.json`: `c3185da0a233894d7f338138bbe6acee287194e1852a80e40b0b5f6f2134e21b`
+- `docs/core/07_artifacts/gates/uet_major_result_closure_register.json`: `94a9356f24e2dae0d396bd96931d068919e4f1773e95fd255f2cf4470bac1e55`
+- `docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json`: `800cf61860945108ea3cb4a1604da32765d8ca0e4ddc55118ccf8702bee4d6fc`
+- `docs/core/07_artifacts/topic13/t13_xie_2026_holdout_access_audit.json`: `c3185da0a233894d7f338138bbe6acee287194e1852a80e40b0b5f6f2134e21b`

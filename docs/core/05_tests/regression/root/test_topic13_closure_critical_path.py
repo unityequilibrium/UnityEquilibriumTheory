@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/artifacts/t13_closure_critical_path_audit.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_closure_critical_path_audit.json"
 
 
 class Topic13ClosureCriticalPathTest(unittest.TestCase):

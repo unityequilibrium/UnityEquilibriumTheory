@@ -66,4 +66,4 @@ not an SI Phi-to-temperature map, not an alpha calibration, and not Full Topic
 13 closure. Phi, C, R_gen, and R_obs retain their existing meanings.
 
 Evidence artifact:
-docs/core/artifacts/t13_uet_o2_condensed_dissipative_transport_audit.json
+docs/core/07_artifacts/topic13/t13_uet_o2_condensed_dissipative_transport_audit.json

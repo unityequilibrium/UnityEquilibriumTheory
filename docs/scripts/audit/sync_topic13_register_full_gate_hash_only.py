@@ -7,11 +7,11 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-REGISTER_REL = "docs/core/artifacts/uet_major_result_closure_register.json"
+REGISTER_REL = "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
 FULL_REL = "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-MATRIX_REL = "docs/core/artifacts/t13_topic13_closure_matrix.json"
-DEPENDENCY_REL = "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
-COMPONENT_REL = "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json"
+MATRIX_REL = "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json"
+DEPENDENCY_REL = "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
+COMPONENT_REL = "docs/core/07_artifacts/topic13/t13_flat_thermodynamic_bridge_components_gate.json"
 
 
 def digest(relative: str) -> str:

@@ -39,7 +39,7 @@ def main():
         open_blockers=['repeat/exposure structure', 'count units', 'safe numeric decoding', 'processed covariance propagation', 'Phi coupling'],
         dependency_unlocked=['safe pre-processing payload inspection only'],
         claim_boundary='Raw-sorted label does not prove shot-level or independent repeat availability. No pickle execution, fitted covariance, holdout or physical calibration.')
-    (ROOT/'docs/core/artifacts/t13_ued_raw_archive_audit.json').write_text(json.dumps(result, indent=2)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_ued_raw_archive_audit.json').write_text(json.dumps(result, indent=2)+'\n')
     print(json.dumps(inventory, indent=2))
 
 

@@ -18,7 +18,7 @@ from docs.core.thermal_response_beta_contract import (
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_thermal_response_beta_contract_audit.json"
 
 
 def test_beta_t13_unit_and_derivative_contract() -> None:

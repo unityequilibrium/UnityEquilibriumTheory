@@ -16,19 +16,19 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_formal_bridge_boundary_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_formal_bridge_boundary_audit.json"
 
 INPUTS = {
-    "beta_symbol_no_go": "docs/core/artifacts/t13_beta_symbol_separation_noncircularity_audit.json",
-    "beta_contract": "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json",
-    "dimensional_bridge": "docs/core/artifacts/t13_dimensional_bridge_contract_audit.json",
-    "energy_response": "docs/core/artifacts/t13_energy_response_bridge_audit.json",
-    "phi_e_reference": "docs/core/artifacts/t13_phi_e_reference_normalization_audit.json",
-    "phi_energy_no_go": "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
-    "covariant_normalization_no_go": "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json",
-    "eos_contract": "docs/core/artifacts/t13_collective_response_eos_stability_audit.json",
-    "sk_kms_entropy": "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json",
-    "kubo_provenance": "docs/core/artifacts/t13_physical_kubo_coefficient_provenance_audit.json",
+    "beta_symbol_no_go": "docs/core/07_artifacts/topic13/t13_beta_symbol_separation_noncircularity_audit.json",
+    "beta_contract": "docs/core/07_artifacts/topic13/t13_thermal_response_beta_contract_audit.json",
+    "dimensional_bridge": "docs/core/07_artifacts/topic13/t13_dimensional_bridge_contract_audit.json",
+    "energy_response": "docs/core/07_artifacts/topic13/t13_energy_response_bridge_audit.json",
+    "phi_e_reference": "docs/core/07_artifacts/topic13/t13_phi_e_reference_normalization_audit.json",
+    "phi_energy_no_go": "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json",
+    "covariant_normalization_no_go": "docs/core/07_artifacts/topic13/t13_covariant_field_normalization_identifiability_no_go.json",
+    "eos_contract": "docs/core/07_artifacts/topic13/t13_collective_response_eos_stability_audit.json",
+    "sk_kms_entropy": "docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json",
+    "kubo_provenance": "docs/core/07_artifacts/topic13/t13_physical_kubo_coefficient_provenance_audit.json",
 }
 
 

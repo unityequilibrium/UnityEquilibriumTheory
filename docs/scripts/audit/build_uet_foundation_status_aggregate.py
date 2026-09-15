@@ -11,24 +11,24 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/uet_foundation_status_aggregate.json"
+OUT = ROOT / "docs/core/07_artifacts/gates/uet_foundation_status_aggregate.json"
 
 INPUTS = {
-    "foundation_gate": ROOT / "docs/core/artifacts/uet_foundation_dependency_gate.json",
-    "compatibility": ROOT / "docs/core/artifacts/uet_foundation_compatibility_gate.json",
-    "topic_inventory": ROOT / "docs/core/artifacts/uet_foundation_equation_inventory.json",
-    "code_inventory": ROOT / "docs/core/artifacts/uet_code_surface_inventory.json",
-    "coverage_closure": ROOT / "docs/core/artifacts/uet_foundation_coverage_closure.json",
-    "full_correspondence": ROOT / "docs/core/artifacts/uet_full_correspondence_coverage.json",
-    "family_contract": ROOT / "docs/core/artifacts/uet_core_equation_family_contract.json",
-    "correspondence_matrix": ROOT / "docs/core/artifacts/uet_foundation_correspondence_matrix.json",
-    "matter_space": ROOT / "docs/core/artifacts/matter_space_variational_verification.json",
-    "gr_closed_limit": ROOT / "docs/core/artifacts/gr_closed_limit_verification.json",
-    "o2_eos": ROOT / "docs/core/artifacts/o2_finite_density_eos_verification.json",
-    "trace": ROOT / "docs/core/artifacts/spacetime_trace_verification.json",
-    "legacy_variational": ROOT / "docs/core/artifacts/uet_legacy_variational_closure.json",
-    "causal_discretization": ROOT / "docs/core/artifacts/matter_space_causal_discretization_diagnostic.json",
-    "causal_reference": ROOT / "docs/core/artifacts/matter_space_causal_reference_verification.json",
+    "foundation_gate": ROOT / "docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json",
+    "compatibility": ROOT / "docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json",
+    "topic_inventory": ROOT / "docs/core/07_artifacts/gates/uet_foundation_equation_inventory.json",
+    "code_inventory": ROOT / "docs/core/07_artifacts/archive/uet_code_surface_inventory.json",
+    "coverage_closure": ROOT / "docs/core/07_artifacts/gates/uet_foundation_coverage_closure.json",
+    "full_correspondence": ROOT / "docs/core/07_artifacts/correspondence/uet_full_correspondence_coverage.json",
+    "family_contract": ROOT / "docs/core/07_artifacts/archive/uet_core_equation_family_contract.json",
+    "correspondence_matrix": ROOT / "docs/core/07_artifacts/gates/uet_foundation_correspondence_matrix.json",
+    "matter_space": ROOT / "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
+    "gr_closed_limit": ROOT / "docs/core/07_artifacts/verification/gr_closed_limit_verification.json",
+    "o2_eos": ROOT / "docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json",
+    "trace": ROOT / "docs/core/07_artifacts/verification/spacetime_trace_verification.json",
+    "legacy_variational": ROOT / "docs/core/07_artifacts/gates/uet_legacy_variational_closure.json",
+    "causal_discretization": ROOT / "docs/core/07_artifacts/archive/matter_space_causal_discretization_diagnostic.json",
+    "causal_reference": ROOT / "docs/core/07_artifacts/verification/matter_space_causal_reference_verification.json",
 }
 
 

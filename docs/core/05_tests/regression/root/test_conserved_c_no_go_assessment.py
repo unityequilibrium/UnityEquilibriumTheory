@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ASSESSMENT = ROOT / "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json"
+ASSESSMENT = ROOT / "docs/core/07_artifacts/archive/conserved_c_finite_cone_no_go_assessment.json"
 GATE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
 
 
@@ -51,6 +51,6 @@ def test_topic13_gate_keeps_original_baseline_blocked_after_no_go() -> None:
     no_go_paths = [
         item["path"]
         for item in gate["evidence_artifacts"]
-        if item.get("path") == "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json"
+        if item.get("path") == "docs/core/07_artifacts/archive/conserved_c_finite_cone_no_go_assessment.json"
     ]
     assert len(no_go_paths) == 1

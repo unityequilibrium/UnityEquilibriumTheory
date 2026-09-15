@@ -10,12 +10,12 @@ from docs.scripts.audit import audit_topic13_transport_resolution as experiment
 
 
 def main():
-    baseline=ROOT/"docs/core/artifacts/t13_transport_resolution_audit.json"
+    baseline=ROOT/"docs/core/07_artifacts/topic13/t13_transport_resolution_audit.json"
     baseline_hash=sha256(baseline.read_bytes()).hexdigest()
     if baseline_hash!="28bc408cdc624f33c503c38727c85cff14de104d3c4409ed35cd496a8bda666f":
         raise ValueError("Frozen scalar baseline changed")
     # Override only the output destination; reuse every locked experiment case.
-    experiment.OUT="docs/core/artifacts/t13_tensor_lift_repair_audit.json"
+    experiment.OUT="docs/core/07_artifacts/topic13/t13_tensor_lift_repair_audit.json"
     code=experiment.main()
     path=ROOT/experiment.OUT
     record=json.loads(path.read_text())

@@ -21,7 +21,7 @@ PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "mp48_independent_graphite_cv_source_package.json"
 )
-OUT = ROOT / "docs/core/artifacts/t13_mp48_independent_graphite_cv_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_mp48_independent_graphite_cv_audit.json"
 AVOGADRO = 6.02214076e23
 
 
@@ -203,7 +203,7 @@ def main() -> int:
             "data_role": "INDEPENDENT_REPRODUCTION_NOT_CALIBRATION",
             "evidence_artifacts": [
                 {"path": str(PACKAGE.relative_to(ROOT)).replace("\\", "/"), "sha256": sha256(PACKAGE)},
-                {"path": "docs/core/artifacts/t13_mp48_independent_graphite_cv_audit.json"},
+                {"path": "docs/core/07_artifacts/topic13/t13_mp48_independent_graphite_cv_audit.json"},
             ],
             "verification_status": status,
             "open_blockers": package["major_result"]["open_blockers"],

@@ -25,7 +25,7 @@ from docs.core.uet_o2_tree_level_bs_sk_match import (  # noqa: E402
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_tree_level_bs_sk_match_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_tree_level_bs_sk_match_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_tree_level_bs_sk_match.py"
 CONTINUUM_MODULE = ROOT / "docs/core/uet_o2_continuum_collision_operator.py"
 TRANSITION_MODULE = ROOT / "docs/core/uet_o2_action_derived_transition_kernel.py"

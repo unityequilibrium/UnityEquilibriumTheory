@@ -43,7 +43,7 @@ def main():
     from hashlib import sha256
     r["evidence_artifacts"]=[dict(path=p,sha256=sha256((ROOT/p).read_bytes()).hexdigest()) for p in (
         "docs/scripts/audit/audit_topic13_fourier_shear_anisotropy.py","docs/core/test/test_topic13_fourier_shear_anisotropy.py")]
-    (ROOT/"docs/core/artifacts/t13_fourier_shear_anisotropy_audit.json").write_text(json.dumps(r,indent=2,allow_nan=False)+"\n",encoding="utf-8")
+    (ROOT/"docs/core/07_artifacts/topic13/t13_fourier_shear_anisotropy_audit.json").write_text(json.dumps(r,indent=2,allow_nan=False)+"\n",encoding="utf-8")
     print(json.dumps(r["rows"]))
 
 

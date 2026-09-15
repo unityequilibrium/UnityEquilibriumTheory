@@ -15,7 +15,7 @@ from docs.core.thermal_covariant_action_si_conversion import (
 
 ROOT = repo_root()
 CONSTANTS_REL = "docs/data/external/constants/codata/si_2019_exact_constants.json"
-AUDIT_REL = "docs/core/artifacts/t13_covariant_action_symbolic_si_conversion_audit.json"
+AUDIT_REL = "docs/core/07_artifacts/topic13/t13_covariant_action_symbolic_si_conversion_audit.json"
 
 
 def constants() -> ExactSIConstants:

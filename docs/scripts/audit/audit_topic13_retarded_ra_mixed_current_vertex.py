@@ -20,8 +20,8 @@ CFG = euclidean.CFG
 charged = euclidean.charged
 thermal = euclidean.thermal
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_retarded_ra_mixed_current_vertex_audit.json"
-REGISTRY_OUT = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_retarded_ra_vertex_addendum.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_retarded_ra_mixed_current_vertex_audit.json"
+REGISTRY_OUT = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_retarded_ra_vertex_addendum.json"
 EQUATION_ID = "uet.o2.thermal.retarded_ra_mixed_current_vertex"
 
 
@@ -130,8 +130,8 @@ def main():
         "docs/scripts/audit/audit_topic13_charged_one_loop_current_vertex.py",
         "docs/scripts/audit/audit_topic13_microscopic_current_ladder_matching_boundary.py"]
     sha=lambda p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest()
-    priors=["docs/core/artifacts/t13_charged_one_loop_current_vertex_audit.json",
-        "docs/core/artifacts/t13_microscopic_current_ladder_matching_boundary_audit.json"]
+    priors=["docs/core/07_artifacts/topic13/t13_charged_one_loop_current_vertex_audit.json",
+        "docs/core/07_artifacts/topic13/t13_microscopic_current_ladder_matching_boundary_audit.json"]
     artifact={"schema_version":"t13-retarded-ra-mixed-current-vertex-v1",
         "major_result_id":"T13_RETARDED_RA_MIXED_CURRENT_VERTEX","topic":"0.13_Thermodynamic_Bridge",
         "closure_level":"PARTIAL","verification_status":"PASS_SCOPED_RETARDED_RA_MIXED_VERTEX" if all(checks.values()) else "WARN_RETARDED_RA_MIXED_VERTEX",
@@ -180,7 +180,7 @@ def main():
         "downstream_dependencies":[],"dependency_role":"proper_RA_vertex_handoff_only","physical_dependency_unlock":False,
         "failure_mode":artifact["open_blockers"],"next_hardening_step":artifact["report"]["NEXT_ACTION"]})
     REGISTRY_OUT.write_text(json.dumps({"schema_version":"uet-equation-registry-addendum-v1","status":"CANDIDATE_DIAGNOSTIC_NOT_MERGED",
-        "extends":"docs/core/artifacts/uet_equation_correspondence_registry.json","equation_entries":[entry],"full_core_unlock":False,"claim_promotion":False},indent=2,allow_nan=False)+"\n",encoding="utf-8")
+        "extends":"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json","equation_entries":[entry],"full_core_unlock":False,"claim_promotion":False},indent=2,allow_nan=False)+"\n",encoding="utf-8")
     print(json.dumps({"status":artifact["verification_status"],"checks":checks,"Ward_errors":[r["Ward_relative_error"] for r in rows],
         "finite_transfer_changes":finite_changes,"zero_transfer_probe":zero_scan},indent=2))
     return 0 if all(checks.values()) else 1

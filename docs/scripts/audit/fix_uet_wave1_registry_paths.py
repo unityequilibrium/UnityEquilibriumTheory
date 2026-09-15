@@ -7,15 +7,15 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-REGISTRY = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry.json"
-ADDENDUM = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_wave1_research_rooms_addendum.json"
+REGISTRY = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json"
+ADDENDUM = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_wave1_research_rooms_addendum.json"
 
 
 def main() -> int:
     replacements = {
         "uet.thermal.ttg_normalized_observable": [
             "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_observable_map_readiness.json",
-            "docs/core/artifacts/thermal_dimensional_calibration_contract.json",
+            "docs/core/07_artifacts/topic13/thermal_dimensional_calibration_contract.json",
         ],
         "uet.phase.structure_factor_estimator_policy": [
             "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_structure_factor_source_archive_policy_gate.json",

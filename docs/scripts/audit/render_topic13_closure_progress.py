@@ -15,14 +15,14 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-MATRIX_REL = "docs/core/artifacts/t13_topic13_closure_matrix.json"
+MATRIX_REL = "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json"
 GATE_REL = (
     "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
     "topic13_full_thermodynamic_bridge_core_ready_gate.json"
 )
-INPUT_REL = "docs/core/artifacts/t13_closure_input_package_audit.json"
-MINIMAL_INPUT_REL = "docs/core/artifacts/t13_full_closure_minimal_input_contract.json"
-OUT_JSON_REL = "docs/core/artifacts/t13_full_closure_progress.json"
+INPUT_REL = "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json"
+MINIMAL_INPUT_REL = "docs/core/07_artifacts/topic13/t13_full_closure_minimal_input_contract.json"
+OUT_JSON_REL = "docs/core/07_artifacts/topic13/t13_full_closure_progress.json"
 EXPOSURE_REL = "docs/core/T13_HOLDOUT_EXPOSURE_2026_09_10.json"
 OUT_MD_REL = "docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_FULL_CLOSURE_STATUS.md"
 

@@ -22,4 +22,4 @@ NEXT_ACTION: Match the natural action stiffness to an independently sourced phys
 
 CLAIM_BOUNDARY: This is an action-derived finite-temperature natural-unit response-stiffness slope on a declared normal quasiparticle branch. It is not normalized `beta_T13`, a universal UET beta, a physical SI coefficient, an alpha calibration, a TTG prediction, or Full Topic 13 closure.
 
-EVIDENCE: `docs/core/artifacts/t13_uet_o2_action_thermal_stiffness_beta_audit.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/artifacts/uet_major_result_closure_register.json`; `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`.
+EVIDENCE: `docs/core/07_artifacts/topic13/t13_uet_o2_action_thermal_stiffness_beta_audit.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/07_artifacts/gates/uet_major_result_closure_register.json`; `docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json`.

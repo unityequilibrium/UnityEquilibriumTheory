@@ -18,8 +18,8 @@ def differences(a, b, columns):
 
 
 def main():
-    source = ROOT/'docs/core/artifacts/t13_ued_source_acquisition_audit.json'
-    structure = ROOT/'docs/core/artifacts/t13_ued_raw_structure_audit.json'
+    source = ROOT/'docs/core/07_artifacts/topic13/t13_ued_source_acquisition_audit.json'
+    structure = ROOT/'docs/core/07_artifacts/topic13/t13_ued_raw_structure_audit.json'
     for p in (source, structure):
         for file, h in json.loads(p.read_text())['evidence_hashes'].items():
             if digest(ROOT/file) != h: raise ValueError('stale evidence')
@@ -50,7 +50,7 @@ def main():
         dependency_unlocked=['cut-resolved sensitivity only'],full_core_unlock=False,claim_promotion=False,
         evidence_hashes={str(p.relative_to(ROOT)).replace('\\','/'):digest(p) for p in files},
         claim_boundary='Metadata differences do not prove physical drift or invalidate the experiment. Summed images are not independent frames. No covariance estimate, holdout, fitted alpha or thermal claim.')
-    (ROOT/'docs/core/artifacts/t13_ued_cut_pooling_audit.json').write_text(json.dumps(artifact,indent=2)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_ued_cut_pooling_audit.json').write_text(json.dumps(artifact,indent=2)+'\n')
     print(json.dumps(delta,indent=2))
 
 

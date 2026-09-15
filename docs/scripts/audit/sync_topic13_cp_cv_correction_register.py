@@ -8,8 +8,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
-AUDIT = ROOT / "docs/core/artifacts/t13_cp_cv_correction_audit.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_cp_cv_correction_audit.json"
 
 
 def rel(path: Path) -> str:

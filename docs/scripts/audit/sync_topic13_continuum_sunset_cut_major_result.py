@@ -14,10 +14,10 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-REGISTER_REL = "docs/core/artifacts/uet_major_result_closure_register.json"
+REGISTER_REL = "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
 FULL_REL = "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-LANE_REL = "docs/core/artifacts/t13_uet_o2_continuum_sunset_cut_audit.json"
-DEPENDENCY_REL = "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+LANE_REL = "docs/core/07_artifacts/topic13/t13_uet_o2_continuum_sunset_cut_audit.json"
+DEPENDENCY_REL = "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 LANE_ID = "T13_UET_O2_CONTINUUM_SUNSET_CUT_LANE"
 
 

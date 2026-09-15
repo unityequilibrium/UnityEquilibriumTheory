@@ -82,7 +82,7 @@ def main():
             row_norm_legacy=float(np.linalg.norm(old)),row_norm_coordinate=float(np.linalg.norm(corrected)))
         record["rows"].append(row)
         print(json.dumps(row),flush=True)
-    (ROOT/"docs/core/artifacts/t13_transition_coordinate_map_audit.json").write_text(
+    (ROOT/"docs/core/07_artifacts/topic13/t13_transition_coordinate_map_audit.json").write_text(
         json.dumps(record,indent=2,allow_nan=False)+"\n",encoding="utf-8")
     print(json.dumps(record["manufactured"]))
 

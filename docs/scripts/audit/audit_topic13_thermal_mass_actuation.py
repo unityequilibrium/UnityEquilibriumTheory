@@ -63,7 +63,7 @@ def main():
         open_blockers=["physical_mass_source_gain","bare_coefficient_and_reference_provenance","finite_frequency_and_source_energy_ledger","material_SI_calibration"],
         claim_boundary="Fixed synthetic bare curvature and tadpole convention; do not add this correction again to measured total coefficients. Temperature-driven Phi is not an independent alpha calibration.",
         evidence_artifacts=[dict(path=p,sha256=sha256((ROOT/p).read_bytes()).hexdigest()) for p in paths])
-    (ROOT/"docs/core/artifacts/t13_thermal_mass_actuation_audit.json").write_text(json.dumps(artifact,indent=2,allow_nan=False)+"\n",encoding="utf-8")
+    (ROOT/"docs/core/07_artifacts/topic13/t13_thermal_mass_actuation_audit.json").write_text(json.dumps(artifact,indent=2,allow_nan=False)+"\n",encoding="utf-8")
     for r in rows: print(r)
 
 

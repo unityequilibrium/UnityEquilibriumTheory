@@ -14,16 +14,16 @@ from docs.core.uet_dynamic_thermoelastic_response import material_mode
 from docs.core.uet_thermoelastic_spatial_compatibility import isotropic_stiffness
 
 ROOT = Path(__file__).resolve().parents[3]
-OUTPUT = "docs/core/artifacts/t13_dynamic_thermoelastic_response_audit.json"
-REGISTRY = "docs/core/artifacts/uet_equation_correspondence_registry_topic13_dynamic_material_response_addendum.json"
+OUTPUT = "docs/core/07_artifacts/topic13/t13_dynamic_thermoelastic_response_audit.json"
+REGISTRY = "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_dynamic_material_response_addendum.json"
 ID = "uet.o2.thermal.dynamic_material_response"
 EVIDENCE = ["docs/core/T13_DYNAMIC_THERMOELASTIC_RESPONSE.md",
             "docs/core/uet_dynamic_thermoelastic_response.py",
             "docs/core/test/test_topic13_dynamic_thermoelastic_response.py",
             "docs/scripts/audit/audit_topic13_dynamic_thermoelastic_response.py",
-            "docs/core/artifacts/t13_thermoelastic_spatial_compatibility_audit.json",
+            "docs/core/07_artifacts/topic13/t13_thermoelastic_spatial_compatibility_audit.json",
             "docs/core/uet_thermoelastic_spatial_compatibility.py"]
-PROTECTED = ["docs/core/artifacts/t13_topic13_closure_matrix.json",
+PROTECTED = ["docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
              "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"]
 
 
@@ -151,7 +151,7 @@ def main():
                  downstream_dependencies=["physical_pump_and_material_interface"], dependency_role="diagnostic_material_mapping",
                  failure_mode=result["open_blockers"], next_hardening_step="derive physical pump/initialization and reciprocal material coupling before calibration")
     registry = {"schema_version": "uet-equation-registry-addendum-v1", "status": "CONDITIONAL_INTERFACE_NOT_ACCEPTED_UET_ACTION",
-                "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json", "equation_entries": [entry],
+                "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json", "equation_entries": [entry],
                 "full_core_unlock": False, "claim_promotion": False}
     (ROOT/REGISTRY).write_text(json.dumps(registry, indent=2, allow_nan=False)+"\n", encoding="utf-8")
     print(result["verification_status"])

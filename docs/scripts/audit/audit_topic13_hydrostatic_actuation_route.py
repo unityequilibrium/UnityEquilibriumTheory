@@ -52,7 +52,7 @@ def main():
         claim_boundary="No prescribed pressure amplitude or temperature curve fitted; hydrostatic projection does not identify arbitrary-direction tensor or base Phi. Local derivative is not a validated finite-pressure drive model.",
         evidence_artifacts=[dict(path=p,sha256=sha256((ROOT/p).read_bytes()).hexdigest()) for p in paths],
         primary_source=dict(doi=raw["doi"],sha256=raw["sha256"],raw_redistribution=False))
-    (ROOT/"docs/core/artifacts/t13_hydrostatic_actuation_route_audit.json").write_text(json.dumps(r,indent=2,allow_nan=False)+"\n",encoding="utf-8")
+    (ROOT/"docs/core/07_artifacts/topic13/t13_hydrostatic_actuation_route_audit.json").write_text(json.dumps(r,indent=2,allow_nan=False)+"\n",encoding="utf-8")
     print(json.dumps(dict(modes=modes,null_error=r["tensor_null_direction_projection_error"])))
 
 

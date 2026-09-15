@@ -9,7 +9,7 @@ from docs.core.he4_o2_response_calibration import calibration_record
 
 
 ROOT = repo_root()
-AUDIT = ROOT / "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json"
 
 
 def load(path: Path) -> dict:

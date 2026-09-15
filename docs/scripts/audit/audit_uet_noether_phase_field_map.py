@@ -664,8 +664,8 @@ def build_artifacts() -> tuple[dict[str, Any], ...]:
         "benchmark_role": "program_gate",
         "method_label": "monotonic_gr_research_stage_gate",
         "input_identity": {
-            "state_map_artifact": "docs/core/artifacts/noether_phase_field_state_map_verification.json",
-            "state_map_dependency_gate": "docs/core/artifacts/noether_phase_field_dependency_gate.json",
+            "state_map_artifact": "docs/core/07_artifacts/verification/noether_phase_field_state_map_verification.json",
+            "state_map_dependency_gate": "docs/core/07_artifacts/gates/noether_phase_field_dependency_gate.json",
         },
         "notes": [
             "The hydrodynamic coordinate map is verified while microscopic reconstruction is disproved by counterexample.",

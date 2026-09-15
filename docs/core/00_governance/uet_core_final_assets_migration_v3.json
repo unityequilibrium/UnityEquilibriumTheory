@@ -1,0 +1,66 @@
+{
+  "artifact": "uet_core_final_assets_migration_v3",
+  "claim_boundary": "physical organization and compatibility only; no physics/evidence promotion",
+  "generated_at": "2026-09-15T17:38:01+00:00",
+  "generator": "docs/scripts/audit/migrate_uet_core_final_assets_v3.py",
+  "moves": [
+    {
+      "canonical_path": "docs/core/04_proofs/Proof_00_Master_Balance.py",
+      "compatibility_mode": "python_shim",
+      "legacy_path": "docs/core/02_Proof/Proof_00_Master_Balance.py",
+      "sha256_after": "b1b4be3373771d0ed4e62eb0348dbcdaf026c81bbb3a43eab3da5f858b808ccf",
+      "sha256_before": "b1b4be3373771d0ed4e62eb0348dbcdaf026c81bbb3a43eab3da5f858b808ccf"
+    },
+    {
+      "canonical_path": "docs/core/99_review/unresolved_assets/T13_HOLDOUT_EXPOSURE_2026_09_10.json",
+      "compatibility_mode": "none",
+      "legacy_path": "docs/core/T13_HOLDOUT_EXPOSURE_2026_09_10.json",
+      "sha256_after": "bfeda10609e542bc30a50f4cabd7d91e4bbca542873894f23c191171610ef1eb",
+      "sha256_before": "bfeda10609e542bc30a50f4cabd7d91e4bbca542873894f23c191171610ef1eb"
+    }
+  ],
+  "physical_move_performed": true,
+  "physics_status_changes": 0,
+  "reference_changes": [
+    {
+      "path": "docs/core/00_governance/CORE_RESEARCH_ORGANIZATION_INDEX.md",
+      "replacement_count": 1,
+      "sha256_after": "54c15aa956c2d0407655f71c37179a237ee6f953cefda2755e5711aaa82e265c",
+      "sha256_before": "1951dd36c882ec8b3f35e74eb5840e437549c0233fc3a570281aa13e919c57c0"
+    },
+    {
+      "path": "docs/scripts/audit/build_uet_core_equation_family_contract.py",
+      "replacement_count": 1,
+      "sha256_after": "84b625f29d79b0b633da578e6c2183572e2b85ae6fbacc1fd646065547796855",
+      "sha256_before": "dadd54077c878e15b66dd9dcd986d025ff9b6e75aa1b9eb8fce5023832b46062"
+    },
+    {
+      "path": "docs/scripts/audit/migrate_uet_core_final_assets_v3.py",
+      "replacement_count": 2,
+      "sha256_after": "29365dec77d3c8a9d8fbdfa775fe5dc36d14f4fc59eaeb51ddaa0e2cb7272934",
+      "sha256_before": "32cdd4e4f27ac85fb2208d559aa4a962d4d380616a8d10f55501e26215b546e8"
+    },
+    {
+      "path": "docs/scripts/audit/render_topic13_closure_progress.py",
+      "replacement_count": 1,
+      "sha256_after": "d4005a1c05c929dcee5dff5be0521a651e1d548e196a25fba3dcab67da808015",
+      "sha256_before": "031756c17860af9b07a76640aec600955ba1a43d4d9e4ce67d29b390e25731aa"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_FULL_CLOSURE_STATUS.md",
+      "replacement_count": 1,
+      "sha256_after": "74e4cdf52854c494bf926eb3759b6a26ac79bdae4f244ab61f278d04a816cf11",
+      "sha256_before": "614557555aded0fa73cd7ce173aa3925adf77b0612b12f740b15f9e09150077f"
+    }
+  ],
+  "schema_version": "1.0",
+  "status": "PASS",
+  "summary": {
+    "files_moved": 2,
+    "files_selected": 2,
+    "physics_status_changes": 0,
+    "python_shims_created": 1,
+    "reference_files_changed": 5,
+    "reference_replacements": 6
+  }
+}

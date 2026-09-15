@@ -11,8 +11,8 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
 THERMAL = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json"
-REFERENCE = ROOT / "docs/core/artifacts/matter_space_causal_reference_verification.json"
-FULL = ROOT / "docs/core/artifacts/matter_space_variational_verification.json"
+REFERENCE = ROOT / "docs/core/07_artifacts/verification/matter_space_causal_reference_verification.json"
+FULL = ROOT / "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
 PACKAGE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_second_sound_source_package.json"
 REVIEW = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_thermal_source_review.json"
 OUT = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/thermal_wave1_branch_gate.json"

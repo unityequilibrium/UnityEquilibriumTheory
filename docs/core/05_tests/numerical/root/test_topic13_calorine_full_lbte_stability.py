@@ -7,9 +7,9 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-AUDIT_REL = "docs/core/artifacts/t13_calorine_full_lbte_stability_boundary_audit.json"
+AUDIT_REL = "docs/core/07_artifacts/topic13/t13_calorine_full_lbte_stability_boundary_audit.json"
 FULL_REL = "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-REGISTER_REL = "docs/core/artifacts/uet_major_result_closure_register.json"
+REGISTER_REL = "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
 
 
 def load(relative: str) -> dict:

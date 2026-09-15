@@ -25,12 +25,12 @@ def append_once(relative: str, marker: str, body: str) -> None:
 
 
 def main() -> int:
-    audit = digest("docs/core/artifacts/t13_ding_alternate_public_dataset_discovery_boundary_audit.json")
+    audit = digest("docs/core/07_artifacts/topic13/t13_ding_alternate_public_dataset_discovery_boundary_audit.json")
     package = digest("docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_ding_alternate_public_dataset_discovery_package.json")
     full = digest("docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json")
-    register = digest("docs/core/artifacts/uet_major_result_closure_register.json")
-    dependency = digest("docs/core/artifacts/uet_major_result_dependency_unlock_gate.json")
-    integrity = digest("docs/core/artifacts/uet_research_room_wave1_integrity.json")
+    register = digest("docs/core/07_artifacts/gates/uet_major_result_closure_register.json")
+    dependency = digest("docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json")
+    integrity = digest("docs/core/07_artifacts/archive/uet_research_room_wave1_integrity.json")
 
     update = f"""### 2026-08-13 - Ding alternate public dataset boundary
 

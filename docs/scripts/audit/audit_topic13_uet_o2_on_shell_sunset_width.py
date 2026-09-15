@@ -20,7 +20,7 @@ from docs.core.uet_o2_on_shell_sunset_width import (
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_on_shell_sunset_width_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_on_shell_sunset_width_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_on_shell_sunset_width.py"
 SUNSET = ROOT / "docs/core/uet_o2_finite_temperature_full_sunset_sk_kms.py"
 

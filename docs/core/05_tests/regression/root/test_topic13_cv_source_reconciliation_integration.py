@@ -6,8 +6,8 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-INPUT_AUDIT = ROOT / "docs/core/artifacts/t13_closure_input_package_audit.json"
-RECONCILIATION = "docs/core/artifacts/t13_cv_source_reconciliation_audit.json"
+INPUT_AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json"
+RECONCILIATION = "docs/core/07_artifacts/topic13/t13_cv_source_reconciliation_audit.json"
 
 
 def test_cv_reconciliation_is_projected_into_input_package_audit() -> None:

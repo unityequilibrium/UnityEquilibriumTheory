@@ -8,10 +8,10 @@ ROOT = Path(__file__).resolve().parents[3]
 TOPIC = ROOT / "docs/topics/0.13_Thermodynamic_Bridge"
 RAW = TOPIC / "Data/03_Research/raw/ding_2022_supplementary_information.pdf"
 PACKAGE = TOPIC / "Data/03_Research/ding_graphite_material_regime_boundary_source_package.json"
-AUDIT = ROOT / "docs/core/artifacts/t13_ding_material_regime_boundary_audit.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_ding_material_regime_boundary_audit.json"
 FULL = TOPIC / "Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY = ROOT / "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 
 
 def digest(path: Path) -> str:
@@ -53,7 +53,7 @@ CLAIM_BOUNDARY: This closes only the evidence boundary against silent material s
 
 Target supplementary source: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ding_2022_supplementary_information.pdf` (`{raw_hash}`).
 Package: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_graphite_material_regime_boundary_source_package.json` (`{package_hash}`).
-Audit: `docs/core/artifacts/t13_ding_material_regime_boundary_audit.json` (`{audit_hash}`).
+Audit: `docs/core/07_artifacts/topic13/t13_ding_material_regime_boundary_audit.json` (`{audit_hash}`).
 
 The boundary records why ideal, manufactured, isotopically purified, and
 fine-grained graphite comparators cannot be silently promoted to Ding's

@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/artifacts/t13_causal_branch_selection_audit.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_causal_branch_selection_audit.json"
 
 
 def test_causal_selection_closes_a_lane_without_erasing_the_baseline_failure() -> None:

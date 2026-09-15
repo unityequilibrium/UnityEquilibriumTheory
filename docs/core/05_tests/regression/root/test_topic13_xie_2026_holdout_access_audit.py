@@ -35,7 +35,7 @@ def test_full_gate_uses_canonical_holdout_audit_when_present() -> None:
     gate = _load(FULL_GATE_PATH)
     holdout = gate["verification_status"]["holdout_integrity"]
     assert holdout["canonical_access_audit"]["path"] == (
-        "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json"
+        "docs/core/07_artifacts/topic13/t13_xie_2026_holdout_access_audit.json"
     )
     assert holdout["metadata_only_observed"] is True
     assert holdout["numeric_payload_consumed"] is False

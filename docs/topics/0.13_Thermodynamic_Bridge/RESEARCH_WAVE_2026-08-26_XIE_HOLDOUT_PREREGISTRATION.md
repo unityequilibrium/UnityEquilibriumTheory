@@ -48,6 +48,6 @@ CLAIM_BOUNDARY:
 
 EVIDENCE_PATHS:
 - docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_xie_2026_holdout_comparison_preregistration.json
-- docs/core/artifacts/t13_xie_2026_holdout_access_audit.json
-- docs/core/artifacts/t13_xie_2026_holdout_preregistration_audit.json
+- docs/core/07_artifacts/topic13/t13_xie_2026_holdout_access_audit.json
+- docs/core/07_artifacts/topic13/t13_xie_2026_holdout_preregistration_audit.json
 - docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_SUBRESULT_CLOSURE_MAP.md

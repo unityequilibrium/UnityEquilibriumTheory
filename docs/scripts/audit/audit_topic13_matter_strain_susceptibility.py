@@ -17,15 +17,15 @@ from docs.core.uet_matter_strain_susceptibility import canonical_sources, therma
 from docs.core.uet_thermoelastic_spatial_compatibility import isotropic_stiffness
 
 ROOT = Path(__file__).resolve().parents[3]
-OUTPUT = "docs/core/artifacts/t13_matter_strain_susceptibility_matching_audit.json"
-REGISTRY = "docs/core/artifacts/uet_equation_correspondence_registry_topic13_matter_strain_matching_addendum.json"
+OUTPUT = "docs/core/07_artifacts/topic13/t13_matter_strain_susceptibility_matching_audit.json"
+REGISTRY = "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_matter_strain_matching_addendum.json"
 ID = "uet.o2.thermal.matter_strain_susceptibility_matching"
 PUMP = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_experimental_heating_input_source_package.json"
 EVIDENCE = ["docs/core/T13_MATTER_STRAIN_SUSCEPTIBILITY_MATCH.md", "docs/core/uet_matter_strain_susceptibility.py",
             "docs/core/test/test_topic13_matter_strain_susceptibility.py", "docs/scripts/audit/audit_topic13_matter_strain_susceptibility.py",
             "docs/core/uet_covariant_matter.py", "docs/core/uet_covariant_response.py",
             "docs/core/uet_thermoelastic_spatial_compatibility.py", PUMP]
-PROTECTED = ["docs/core/artifacts/t13_topic13_closure_matrix.json",
+PROTECTED = ["docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
              "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"]
 
 
@@ -134,7 +134,7 @@ def main():
                  dependency_role="conditional_material_matching", failure_mode=result["open_blockers"],
                  next_hardening_step="identify physical mass-deformation source and carry G/r together without double counting")
     registry = {"schema_version": "uet-equation-registry-addendum-v1", "status": "CONDITIONAL_EXTERNAL_SOURCE_NOT_ACCEPTED_UET_ACTION",
-                "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json", "equation_entries": [entry], "full_core_unlock": False, "claim_promotion": False}
+                "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json", "equation_entries": [entry], "full_core_unlock": False, "claim_promotion": False}
     (ROOT/REGISTRY).write_text(json.dumps(registry, indent=2, allow_nan=False)+"\n", encoding="utf-8")
     print(result["verification_status"])
     print("G="+str(result["thermal_matching"]["G"])+"; r="+str(result["thermal_matching"]["entropy_phi_coefficient"]))

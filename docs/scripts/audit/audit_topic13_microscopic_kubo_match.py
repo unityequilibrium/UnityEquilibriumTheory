@@ -18,7 +18,7 @@ from docs.core.uet_o2_microscopic_kubo_match import (
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT_REL = "docs/core/artifacts/t13_uet_o2_microscopic_finite_cutoff_kubo_match_audit.json"
+OUT_REL = "docs/core/07_artifacts/topic13/t13_uet_o2_microscopic_finite_cutoff_kubo_match_audit.json"
 
 
 def digest(relative: str) -> str:

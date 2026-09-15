@@ -75,7 +75,7 @@ def main():
             "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
             "docs/core/uet_o2_continuum_collision_operator.py")],
     }
-    (ROOT/"docs/core/artifacts/t13_same_action_composition_audit.json").write_text(json.dumps(result, indent=2, allow_nan=False)+"\n", encoding="utf-8")
+    (ROOT/"docs/core/07_artifacts/topic13/t13_same_action_composition_audit.json").write_text(json.dumps(result, indent=2, allow_nan=False)+"\n", encoding="utf-8")
     print(json.dumps({"status": result["status"], "checks": checks, "default_comparison":result["default_comparison"]}))
     return 0 if all(checks.values()) else 1
 

@@ -42,12 +42,12 @@ def support_signals(on, off, baseline):
 
 
 def main():
-    previous_path = ROOT/'docs/core/artifacts/t13_ued_numeric_inventory_audit.json'
+    previous_path = ROOT/'docs/core/07_artifacts/topic13/t13_ued_numeric_inventory_audit.json'
     previous = json.loads(previous_path.read_text(encoding='utf-8'))
     for relative, expected in previous['evidence_hashes'].items():
         if digest(ROOT/relative) != expected:
             raise ValueError('numeric inventory must be regenerated: '+relative)
-    acquisition = json.loads((ROOT/'docs/core/artifacts/t13_ued_source_acquisition_audit.json').read_text(encoding='utf-8'))
+    acquisition = json.loads((ROOT/'docs/core/07_artifacts/topic13/t13_ued_source_acquisition_audit.json').read_text(encoding='utf-8'))
     for relative, expected in acquisition['evidence_hashes'].items():
         if digest(ROOT/relative) != expected:
             raise ValueError('source acquisition mismatch')
@@ -105,7 +105,7 @@ def main():
                     dependency_unlocked=['mask-aware detector analysis only'], full_core_unlock=False, claim_promotion=False,
                     evidence_hashes={str(p.relative_to(ROOT)).replace('\\', '/'): digest(p) for p in files},
                     claim_boundary='Support comparison is not a heat signal, confidence interval, lifetime, mode occupation or alpha calibration.')
-    (ROOT/'docs/core/artifacts/t13_ued_mask_support_audit.json').write_text(json.dumps(artifact, indent=2, allow_nan=False)+'\n', encoding='utf-8')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_ued_mask_support_audit.json').write_text(json.dumps(artifact, indent=2, allow_nan=False)+'\n', encoding='utf-8')
     print(json.dumps([dict(member=r['member'], common_pixels=r['signals']['common_finite_count'],
                            pairwise_min=min(r['signals']['pairwise_finite_counts']), pairwise_max=max(r['signals']['pairwise_finite_counts']),
                            support_difference=r['signals']['support_choice_max_difference']) for r in results], indent=2))

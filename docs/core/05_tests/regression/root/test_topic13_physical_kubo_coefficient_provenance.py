@@ -6,9 +6,9 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-AUDIT = ROOT / "docs/core/artifacts/t13_physical_kubo_coefficient_provenance_audit.json"
-CONTRACT = ROOT / "docs/core/artifacts/covariant_superfluid_transport_contract.json"
-VERIFICATION = ROOT / "docs/core/artifacts/covariant_superfluid_transport_verification.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_physical_kubo_coefficient_provenance_audit.json"
+CONTRACT = ROOT / "docs/core/07_artifacts/archive/covariant_superfluid_transport_contract.json"
+VERIFICATION = ROOT / "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json"
 
 
 def load(path: Path) -> dict:

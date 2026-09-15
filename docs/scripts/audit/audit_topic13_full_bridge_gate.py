@@ -178,241 +178,241 @@ def main() -> int:
     constraint_path, constraint = load(
         "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/0_13_core_thermodynamic_constraint_gate.json"
     )
-    calibration_path, calibration = load("docs/core/artifacts/thermal_dimensional_calibration_contract.json")
-    transport_path, transport = load("docs/core/artifacts/covariant_superfluid_transport_contract.json")
+    calibration_path, calibration = load("docs/core/07_artifacts/topic13/thermal_dimensional_calibration_contract.json")
+    transport_path, transport = load("docs/core/07_artifacts/archive/covariant_superfluid_transport_contract.json")
     transport_verification_path, transport_verification = load(
-        "docs/core/artifacts/covariant_superfluid_transport_verification.json"
+        "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json"
     )
     flat_components_path, flat_components = load(
-        "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json"
+        "docs/core/07_artifacts/topic13/t13_flat_thermodynamic_bridge_components_gate.json"
     )
     entropy_heat_flux_path, entropy_heat_flux = load(
-        "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json"
+        "docs/core/07_artifacts/topic13/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json"
     )
     on_shell_sunset_width_path, on_shell_sunset_width = load(
-        "docs/core/artifacts/t13_uet_o2_on_shell_sunset_width_audit.json"
+        "docs/core/07_artifacts/topic13/t13_uet_o2_on_shell_sunset_width_audit.json"
     )
     contact_sk_transition_path, contact_sk_transition = load(
-        "docs/core/artifacts/t13_uet_o2_contact_sk_transition_vertex_match_audit.json"
+        "docs/core/07_artifacts/topic13/t13_uet_o2_contact_sk_transition_vertex_match_audit.json"
     )
     charged_current_correlator_path, charged_current_correlator = load(
-        "docs/core/artifacts/t13_uet_o2_charged_current_correlator_audit.json"
+        "docs/core/07_artifacts/topic13/t13_uet_o2_charged_current_correlator_audit.json"
     )
     tree_level_charged_ward_path, tree_level_charged_ward = load(
-        "docs/core/artifacts/t13_uet_o2_tree_level_charged_ward_vertex_audit.json"
+        "docs/core/07_artifacts/topic13/t13_uet_o2_tree_level_charged_ward_vertex_audit.json"
     )
     action_beta_path, action_beta = load(
-        "docs/core/artifacts/t13_uet_o2_action_thermal_stiffness_beta_audit.json"
+        "docs/core/07_artifacts/topic13/t13_uet_o2_action_thermal_stiffness_beta_audit.json"
     )
     natural_bridge_path, natural_bridge = load(
-        "docs/core/artifacts/t13_uet_o2_action_thermal_observable_bridge_audit.json"
+        "docs/core/07_artifacts/topic13/t13_uet_o2_action_thermal_observable_bridge_audit.json"
     )
-    eos_path, eos = load("docs/core/artifacts/o2_finite_density_eos_verification.json")
-    causal_path, causal = load("docs/core/artifacts/matter_space_causal_cone_compatibility.json")
+    eos_path, eos = load("docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json")
+    causal_path, causal = load("docs/core/07_artifacts/archive/matter_space_causal_cone_compatibility.json")
     source_package_path, source_package = load(
         "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_second_sound_source_package.json"
     )
     he4_anchor_path, he4_anchor = load(
-        "docs/core/artifacts/t13_he4_svp_physical_anchor_audit.json"
+        "docs/core/07_artifacts/topic13/t13_he4_svp_physical_anchor_audit.json"
     )
     he4_alpha_path, he4_alpha = load(
-        "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json"
+        "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json"
     )
     he4_si_beta_path, he4_si_beta = load(
-        "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json"
+        "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json"
     )
     he4_transport_path, he4_transport = load(
-        "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json"
+        "docs/core/07_artifacts/topic13/t13_he4_normal_viscosity_kubo_audit.json"
     )
     landauer_disposition_path, landauer_disposition = load(
-        "docs/core/artifacts/t13_landauer_core_disposition_audit.json"
+        "docs/core/07_artifacts/topic13/t13_landauer_core_disposition_audit.json"
     )
     he4_core_composition_path, he4_core_composition = load(
-        "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json"
+        "docs/core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json"
     )
     ding_source_mapping_path, ding_source_mapping = load(
-        "docs/core/artifacts/ding_2022_source_mapping_audit.json"
+        "docs/core/07_artifacts/provenance/ding_2022_source_mapping_audit.json"
     )
     alpha_search_path, alpha_search = load(
-        "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json"
+        "docs/core/07_artifacts/topic13/t13_alpha_phi_k_calibration_candidate_audit.json"
     )
     ding_c_src_boundary_path, ding_c_src_boundary = load(
-        "docs/core/artifacts/t13_ding_c_src_independent_reproduction_boundary_audit.json"
+        "docs/core/07_artifacts/topic13/t13_ding_c_src_independent_reproduction_boundary_audit.json"
     )
     ding_public_supplementary_path, ding_public_supplementary = load(
-        "docs/core/artifacts/t13_ding_public_supplementary_payload_boundary_audit.json"
+        "docs/core/07_artifacts/topic13/t13_ding_public_supplementary_payload_boundary_audit.json"
     )
     ding_supplementary_content_path, ding_supplementary_content = load(
-        "docs/core/artifacts/t13_ding_supplementary_content_review_audit.json"
+        "docs/core/07_artifacts/topic13/t13_ding_supplementary_content_review_audit.json"
     )
     ding_experimental_heating_path, ding_experimental_heating = load(
-        "docs/core/artifacts/t13_ding_experimental_heating_input_boundary_audit.json"
+        "docs/core/07_artifacts/topic13/t13_ding_experimental_heating_input_boundary_audit.json"
     )
     ding_2017_acs_supplementary_path, ding_2017_acs_supplementary = load(
-        "docs/core/artifacts/t13_ding_2017_acs_supplementary_payload_boundary_audit.json"
+        "docs/core/07_artifacts/topic13/t13_ding_2017_acs_supplementary_payload_boundary_audit.json"
     )
     phi_si_anchor_boundary_path, phi_si_anchor_boundary = load(
-        "docs/core/artifacts/t13_phi_si_anchor_public_source_boundary_audit.json"
+        "docs/core/07_artifacts/topic13/t13_phi_si_anchor_public_source_boundary_audit.json"
     )
     spectral_csrc_path, spectral_csrc = load(
-        "docs/core/artifacts/t13_mp48_spectral_csrc_reproduction_audit.json"
+        "docs/core/07_artifacts/topic13/t13_mp48_spectral_csrc_reproduction_audit.json"
     )
     force_constant_path, force_constant = load(
-        "docs/core/artifacts/t13_mp48_force_constant_harmonic_reconstruction_audit.json"
+        "docs/core/07_artifacts/topic13/t13_mp48_force_constant_harmonic_reconstruction_audit.json"
     )
     mesh_convergence_path, mesh_convergence = load(
-        "docs/core/artifacts/t13_mp48_force_constant_csrc_mesh_convergence_audit.json"
+        "docs/core/07_artifacts/topic13/t13_mp48_force_constant_csrc_mesh_convergence_audit.json"
     )
     huang_supplementary_path, huang_supplementary = load(
-        "docs/core/artifacts/t13_huang_2023_supplementary_payload_boundary_audit.json"
+        "docs/core/07_artifacts/topic13/t13_huang_2023_supplementary_payload_boundary_audit.json"
     )
     huberman_public_pbte_path, huberman_public_pbte = load(
-        "docs/core/artifacts/t13_huberman_2019_public_pbte_boundary_audit.json"
+        "docs/core/07_artifacts/topic13/t13_huberman_2019_public_pbte_boundary_audit.json"
     )
     nist_density_path, nist_density = load(
-        "docs/core/artifacts/t13_nist_axm5q1_density_source_boundary_audit.json"
+        "docs/core/07_artifacts/topic13/t13_nist_axm5q1_density_source_boundary_audit.json"
     )
     nist_alpha_v_path, nist_alpha_v = load(
-        "docs/core/artifacts/t13_nist_graphite_alpha_v_source_boundary_audit.json"
+        "docs/core/07_artifacts/topic13/t13_nist_graphite_alpha_v_source_boundary_audit.json"
     )
     elastic_bulk_path, elastic_bulk = load(
-        "docs/core/artifacts/t13_graphite_elastic_bulk_modulus_source_audit.json"
+        "docs/core/07_artifacts/topic13/t13_graphite_elastic_bulk_modulus_source_audit.json"
     )
     isothermal_kt_path, isothermal_kt = load(
-        "docs/core/artifacts/t13_graphite_isothermal_kt_source_audit.json"
+        "docs/core/07_artifacts/topic13/t13_graphite_isothermal_kt_source_audit.json"
     )
     tpg_alpha_v_path, tpg_alpha_v = load(
-        "docs/core/artifacts/t13_tpg_anisotropic_alpha_v_source_audit.json"
+        "docs/core/07_artifacts/topic13/t13_tpg_anisotropic_alpha_v_source_audit.json"
     )
     natural_alpha_v_path, natural_alpha_v = load(
-        "docs/core/artifacts/t13_natural_graphite_nelson_riley_alpha_v_source_audit.json"
+        "docs/core/07_artifacts/topic13/t13_natural_graphite_nelson_riley_alpha_v_source_audit.json"
     )
     bipm_specific_heat_path, bipm_specific_heat = load(
-        "docs/core/artifacts/t13_bipm_specific_heat_source_audit.json"
+        "docs/core/07_artifacts/topic13/t13_bipm_specific_heat_source_audit.json"
     )
     bipm_package_path, bipm_package = load(
         "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/bipm_2006_01_graphite_specific_heat_source_package.json"
     )
     iaea_graphite_cv_path, iaea_graphite_cv = load(
-        "docs/core/artifacts/t13_iaea_graphite_constant_volume_source_audit.json"
+        "docs/core/07_artifacts/topic13/t13_iaea_graphite_constant_volume_source_audit.json"
     )
     iaea_graphite_cv_package_path, iaea_graphite_cv_package = load(
         "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_graphite_handbook_constant_volume_source_package.json"
     )
     cv_uncertainty_path, cv_uncertainty = load(
-        "docs/core/artifacts/t13_iaea_cv_uncertainty_boundary_audit.json"
+        "docs/core/07_artifacts/topic13/t13_iaea_cv_uncertainty_boundary_audit.json"
     )
     cv_uncertainty_package_path, cv_uncertainty_package = load(
         "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_graphite_cv_uncertainty_boundary_source_package.json"
     )
     iaea_gr280_path, iaea_gr280 = load(
-        "docs/core/artifacts/t13_iaea_gr280_same_state_cp_source_audit.json"
+        "docs/core/07_artifacts/topic13/t13_iaea_gr280_same_state_cp_source_audit.json"
     )
     iaea_gr280_package_path, iaea_gr280_package = load(
         "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_gr280_same_state_cp_source_package.json"
     )
     farooqui_source_path, farooqui_source = load(
-        "docs/core/artifacts/t13_farooqui_ig210_thermophysical_source_audit.json"
+        "docs/core/07_artifacts/topic13/t13_farooqui_ig210_thermophysical_source_audit.json"
     )
     farooqui_package_path, farooqui_package = load(
         "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/farooqui_2022_ig210_thermophysical_source_package.json"
     )
     day2012_boundary_path, day2012_boundary = load(
-        "docs/core/artifacts/t13_day2012_preferred_thermodynamic_table_boundary_audit.json"
+        "docs/core/07_artifacts/topic13/t13_day2012_preferred_thermodynamic_table_boundary_audit.json"
     )
     day2012_package_path, day2012_package = load(
         "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/day_2012_preferred_thermodynamic_table_source_package.json"
     )
     phonix_path, phonix = load(
-        "docs/core/artifacts/t13_phonix_mp47_graphite_comparator_audit.json"
+        "docs/core/07_artifacts/topic13/t13_phonix_mp47_graphite_comparator_audit.json"
     )
     oxford_numeric_path, oxford_numeric = load(
-        "docs/core/artifacts/t13_oxford_tgs_numeric_rows_audit.json"
+        "docs/core/07_artifacts/topic13/t13_oxford_tgs_numeric_rows_audit.json"
     )
     desorbo_ceylon_path, desorbo_ceylon = load(
-        "docs/core/artifacts/t13_desorbo_ceylon_graphite_cp_audit.json"
+        "docs/core/07_artifacts/topic13/t13_desorbo_ceylon_graphite_cp_audit.json"
     )
     desorbo_ceylon_package_path, desorbo_ceylon_package = load(
         "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/desorbo_1955_ceylon_graphite_cp_source_package.json"
     )
     finite_qp_eos_path, finite_qp_eos = load(
-        "docs/core/artifacts/t13_uet_o2_finite_temperature_quasiparticle_eos_audit.json"
+        "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_quasiparticle_eos_audit.json"
     )
     equilibrium_kms_path, equilibrium_kms = load(
-        "docs/core/artifacts/t13_uet_o2_equilibrium_kms_audit.json"
+        "docs/core/07_artifacts/topic13/t13_uet_o2_equilibrium_kms_audit.json"
     )
     graphite_green_kubo_path, graphite_green_kubo = load(
-        "docs/core/artifacts/t13_graphite_green_kubo_source_boundary_audit.json"
+        "docs/core/07_artifacts/topic13/t13_graphite_green_kubo_source_boundary_audit.json"
     )
     kim_external_path, kim_external = load(
-        "docs/core/artifacts/t13_kim_2018_graphite_green_kubo_external_input_audit.json"
+        "docs/core/07_artifacts/topic13/t13_kim_2018_graphite_green_kubo_external_input_audit.json"
     )
     kim_external_package_path, kim_external_package = load(
         "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/kim_2018_graphite_green_kubo_source_package.json"
     )
     material_boundary_path, material_boundary = load(
-        "docs/core/artifacts/t13_ding_material_regime_boundary_audit.json"
+        "docs/core/07_artifacts/topic13/t13_ding_material_regime_boundary_audit.json"
     )
     material_boundary_package_path, material_boundary_package = load(
         "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_graphite_material_regime_boundary_source_package.json"
     )
     independent_csrc_acceptance_path, independent_csrc_acceptance = load(
-        "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json"
+        "docs/core/07_artifacts/topic13/t13_independent_csrc_acceptance_contract.json"
     )
     ding_payload_acceptance_path, ding_payload_acceptance = load(
-        "docs/core/artifacts/t13_ding_pbte_payload_acceptance_audit.json"
+        "docs/core/07_artifacts/topic13/t13_ding_pbte_payload_acceptance_audit.json"
     )
     calorine_candidate_path, calorine_candidate = load(
-        "docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json"
+        "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json"
     )
     calorine_reproduction_path, calorine_reproduction = load(
-        "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json"
+        "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_reproduction_audit.json"
     )
     calorine_model_form_state_spread_path, calorine_model_form_state_spread = load(
-        "docs/core/artifacts/t13_calorine_model_form_state_spread_comparison_audit.json"
+        "docs/core/07_artifacts/topic13/t13_calorine_model_form_state_spread_comparison_audit.json"
     )
     calorine_full_lbte_path, calorine_full_lbte = load(
-        "docs/core/artifacts/t13_calorine_full_lbte_stability_boundary_audit.json"
+        "docs/core/07_artifacts/topic13/t13_calorine_full_lbte_stability_boundary_audit.json"
     )
     calorine_isotope_path, calorine_isotope = load(
-        "docs/core/artifacts/t13_calorine_isotope_mass_sensitivity_audit.json"
+        "docs/core/07_artifacts/topic13/t13_calorine_isotope_mass_sensitivity_audit.json"
     )
     csrc_equilibrium_component_path, csrc_equilibrium_component = load(
-        "docs/core/artifacts/t13_csrc_equilibrium_component_acceptance_audit.json"
+        "docs/core/07_artifacts/topic13/t13_csrc_equilibrium_component_acceptance_audit.json"
     )
     calorine_uncertainty_path, calorine_uncertainty = load(
-        "docs/core/artifacts/t13_calorine_state_uncertainty_decomposition_audit.json"
+        "docs/core/07_artifacts/topic13/t13_calorine_state_uncertainty_decomposition_audit.json"
     )
     nims_graphite_route_path, nims_graphite_route = load(
-        "docs/core/artifacts/t13_nims_graphite_ltc_route_no_go.json"
+        "docs/core/07_artifacts/topic13/t13_nims_graphite_ltc_route_no_go.json"
     )
     nims_mp990448_path, nims_mp990448 = load(
-        "docs/core/artifacts/t13_nims_mp990448_phonon_source_boundary_audit.json"
+        "docs/core/07_artifacts/topic13/t13_nims_mp990448_phonon_source_boundary_audit.json"
     )
     srm3600_path, srm3600 = load(
-        "docs/core/artifacts/t13_nist_srm_3600_heat_capacity_boundary_audit.json"
+        "docs/core/07_artifacts/topic13/t13_nist_srm_3600_heat_capacity_boundary_audit.json"
     )
     perez_hopg_path, perez_hopg = load(
-        "docs/core/artifacts/t13_perez_castaneda_hopg_source_boundary_audit.json"
+        "docs/core/07_artifacts/topic13/t13_perez_castaneda_hopg_source_boundary_audit.json"
     )
     npl_graphite_cp_path, npl_graphite_cp = load(
-        "docs/core/artifacts/t13_npl_rsa40_graphite_specific_heat_audit.json"
+        "docs/core/07_artifacts/topic13/t13_npl_rsa40_graphite_specific_heat_audit.json"
     )
     utokyo_graphite_boundary_path, utokyo_graphite_boundary = load(
-        "docs/core/artifacts/t13_huang_2022_utokyo_graphite_ribbons_boundary_audit.json"
+        "docs/core/07_artifacts/topic13/t13_huang_2022_utokyo_graphite_ribbons_boundary_audit.json"
     )
 
     holdout_audit_path, holdout_audit = load(
-        "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json"
+        "docs/core/07_artifacts/topic13/t13_xie_2026_holdout_access_audit.json"
     )
     phi_e_comparator_path, phi_e_comparator = load(
-        "docs/core/artifacts/t13_mp48_phi_e_dimensional_comparator_audit.json"
+        "docs/core/07_artifacts/topic13/t13_mp48_phi_e_dimensional_comparator_audit.json"
     )
-    no_go_path, no_go = load("docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json")
-    telegraph_path, telegraph = load("docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json")
-    coupled_path, coupled = load("docs/core/artifacts/matter_space_flux_phi_coupled_verification.json")
+    no_go_path, no_go = load("docs/core/07_artifacts/archive/conserved_c_finite_cone_no_go_assessment.json")
+    telegraph_path, telegraph = load("docs/core/07_artifacts/verification/matter_space_conserved_flux_telegraph_verification.json")
+    coupled_path, coupled = load("docs/core/07_artifacts/verification/matter_space_flux_phi_coupled_verification.json")
     causal_core_path, causal_core = load(
-        "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json"
+        "docs/core/07_artifacts/topic13/t13_causal_named_branch_core_compatibility.json"
     )
 
     selected = branch.get("selected_causal_branch", {})
@@ -1166,7 +1166,7 @@ def main() -> int:
     artifact["verification_status"]["eos_transport_kms_entropy"].update(merged_lane_integrations)
     formal_bridge_lane = merged_lane_integrations.get("formal_thermodynamic_bridge_integration")
     if formal_bridge_lane:
-        formal_bridge_path = ROOT / "docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json"
+        formal_bridge_path = ROOT / "docs/core/07_artifacts/topic13/t13_formal_thermodynamic_bridge_integration_audit.json"
         if formal_bridge_path.is_file() and not any(
             item.get("path") == rel(formal_bridge_path)
             for item in artifact.get("evidence_artifacts", [])
@@ -2220,10 +2220,10 @@ def main() -> int:
                 "resolution_source": {
                     "major_result_id": "T13_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY",
                     "artifact": rel(
-                        ROOT / "docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json"
+                        ROOT / "docs/core/07_artifacts/topic13/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json"
                     ),
                     "artifact_sha256": sha256(
-                        ROOT / "docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json"
+                        ROOT / "docs/core/07_artifacts/topic13/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json"
                     ),
                     "representative_source_artifact": rel(lowitzer_full_package_path) if same_grade_alpha_kt_pair_closed else rel(natural_alpha_v_path),
                     "representative_source_sha256": sha256(lowitzer_full_package_path) if same_grade_alpha_kt_pair_closed else sha256(natural_alpha_v_path),
@@ -2261,10 +2261,10 @@ def main() -> int:
                 "resolution_source": {
                     "major_result_id": "T13_MP48_INDEPENDENT_GRAPHITE_CV_REPRODUCTION",
                     "artifact": rel(
-                        ROOT / "docs/core/artifacts/t13_mp48_independent_graphite_cv_audit.json"
+                        ROOT / "docs/core/07_artifacts/topic13/t13_mp48_independent_graphite_cv_audit.json"
                     ),
                     "artifact_sha256": sha256(
-                        ROOT / "docs/core/artifacts/t13_mp48_independent_graphite_cv_audit.json"
+                        ROOT / "docs/core/07_artifacts/topic13/t13_mp48_independent_graphite_cv_audit.json"
                     ),
                     "uncertainty_status": "NON_STATISTICAL_DISPLAY_ONLY",
                 },
@@ -2290,10 +2290,10 @@ def main() -> int:
                 "resolution_source": {
                     "major_result_id": "T13_BETA_ACTION_NORMALIZED_CORRESPONDENCE_NO_GO",
                     "artifact": rel(
-                        ROOT / "docs/core/artifacts/t13_beta_action_normalized_correspondence_no_go.json"
+                        ROOT / "docs/core/07_artifacts/topic13/t13_beta_action_normalized_correspondence_no_go.json"
                     ),
                     "artifact_sha256": sha256(
-                        ROOT / "docs/core/artifacts/t13_beta_action_normalized_correspondence_no_go.json"
+                        ROOT / "docs/core/07_artifacts/topic13/t13_beta_action_normalized_correspondence_no_go.json"
                     ),
                 },
                 "what_is_closed": (
@@ -2321,9 +2321,9 @@ def main() -> int:
                 "status": "CLOSED_AS_NO_GO",
                 "resolution_source": {
                     "major_result_id": "T13_PHI_ENERGY_ANCHOR_IDENTIFIABILITY_NO_GO",
-                    "artifact": "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
+                    "artifact": "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json",
                     "artifact_sha256": sha256(
-                        ROOT / "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json"
+                        ROOT / "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json"
                     ),
                     "normalization_boundary_artifact": rel(phi_si_anchor_boundary_path),
                     "normalization_boundary_sha256": sha256(phi_si_anchor_boundary_path),
@@ -2349,9 +2349,9 @@ def main() -> int:
                 "status": "CLOSED_AS_NO_GO",
                 "resolution_source": {
                     "major_result_id": "T13_ALPHA_PHI_K_NORMALIZED_SCALE_NO_GO",
-                    "artifact": "docs/core/artifacts/t13_alpha_phi_k_identifiability_audit.json",
+                    "artifact": "docs/core/07_artifacts/topic13/t13_alpha_phi_k_identifiability_audit.json",
                     "artifact_sha256": sha256(
-                        ROOT / "docs/core/artifacts/t13_alpha_phi_k_identifiability_audit.json"
+                        ROOT / "docs/core/07_artifacts/topic13/t13_alpha_phi_k_identifiability_audit.json"
                     ),
                 },
                 "what_is_closed": (
@@ -2521,7 +2521,7 @@ def main() -> int:
                 },
             )
         )
-    mp48_ding_mapping_path = ROOT / "docs/core/artifacts/t13_mp48_ding_csrc_response_mapping_audit.json"
+    mp48_ding_mapping_path = ROOT / "docs/core/07_artifacts/topic13/t13_mp48_ding_csrc_response_mapping_audit.json"
     if mp48_ding_mapping_path.is_file() and not any(
         item.get("path") == rel(mp48_ding_mapping_path)
         for item in artifact.get("evidence_artifacts", [])
@@ -2557,7 +2557,7 @@ def main() -> int:
                 {"status": "PASS_INDEPENDENT_NUMERIC_CV_WITH_EPISTEMIC_ENVELOPE", "data_role": "INDEPENDENT_REPRODUCTION_NOT_CALIBRATION"},
             )
         )
-    mp48_temperature_volume_path = ROOT / "docs/core/artifacts/t13_mp48_temperature_volume_uncertainty_boundary_audit.json"
+    mp48_temperature_volume_path = ROOT / "docs/core/07_artifacts/topic13/t13_mp48_temperature_volume_uncertainty_boundary_audit.json"
     if mp48_temperature_volume_path.is_file() and not any(
         item.get("path") == rel(mp48_temperature_volume_path)
         for item in artifact.get("evidence_artifacts", [])
@@ -2579,7 +2579,7 @@ def main() -> int:
                 },
             )
         )
-    graphite_alpha_v_kt_path = ROOT / "docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json"
+    graphite_alpha_v_kt_path = ROOT / "docs/core/07_artifacts/topic13/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json"
     if graphite_alpha_v_kt_path.is_file() and not any(
         item.get("path") == rel(graphite_alpha_v_kt_path)
         for item in artifact.get("evidence_artifacts", [])
@@ -2600,7 +2600,7 @@ def main() -> int:
                 },
             )
         )
-    ding_alternate_public_dataset_path = ROOT / "docs/core/artifacts/t13_ding_alternate_public_dataset_discovery_boundary_audit.json"
+    ding_alternate_public_dataset_path = ROOT / "docs/core/07_artifacts/topic13/t13_ding_alternate_public_dataset_discovery_boundary_audit.json"
     if ding_alternate_public_dataset_path.is_file() and not any(
         item.get("path") == rel(ding_alternate_public_dataset_path)
         for item in artifact.get("evidence_artifacts", [])
@@ -2974,7 +2974,7 @@ def main() -> int:
                 },
             )
         )
-    formal_two_sector_rel = "docs/core/artifacts/t13_uet_o2_formal_two_sector_thermodynamics_audit.json"
+    formal_two_sector_rel = "docs/core/07_artifacts/topic13/t13_uet_o2_formal_two_sector_thermodynamics_audit.json"
     formal_two_sector_path = ROOT / formal_two_sector_rel
     if formal_two_sector_path.is_file() and formal_two_sector_rel not in {
         item.get("path") for item in artifact.get("evidence_artifacts", [])
@@ -2993,7 +2993,7 @@ def main() -> int:
                 },
             )
         )
-    formal_transverse_rel = "docs/core/artifacts/t13_uet_o2_formal_transverse_response_audit.json"
+    formal_transverse_rel = "docs/core/07_artifacts/topic13/t13_uet_o2_formal_transverse_response_audit.json"
     formal_transverse_path = ROOT / formal_transverse_rel
     if formal_transverse_path.is_file() and formal_transverse_rel not in {
         item.get("path") for item in artifact.get("evidence_artifacts", [])
@@ -3524,7 +3524,7 @@ def main() -> int:
                 },
             )
         )
-    csrc_decomposition_path = ROOT / "docs/core/artifacts/t13_csrc_thermodynamic_transport_regime_decomposition_audit.json"
+    csrc_decomposition_path = ROOT / "docs/core/07_artifacts/topic13/t13_csrc_thermodynamic_transport_regime_decomposition_audit.json"
     csrc_decomposition_rel = rel(csrc_decomposition_path)
     if csrc_decomposition_path.is_file() and csrc_decomposition_rel not in {
         item.get("path") for item in artifact.get("evidence_artifacts", [])

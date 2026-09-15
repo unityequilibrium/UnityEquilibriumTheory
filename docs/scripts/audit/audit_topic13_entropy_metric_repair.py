@@ -15,7 +15,7 @@ from docs.scripts.audit.audit_topic13_entropy_force_convention import witness
 
 def main():
     state = asdict(covariant_entropy_heat_flux_balance_state(.22, .35, .15))
-    old_path = "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json"
+    old_path = "docs/core/07_artifacts/topic13/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json"
     old = json.loads((ROOT/old_path).read_text())["state"]
     controls = [witness(t) for t in (.22, .5, 1., 2.)]
     checks = {
@@ -54,7 +54,7 @@ def main():
             "docs/core/uet_o2_continuum_collision_operator.py",
             "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py")],
     }
-    (ROOT/"docs/core/artifacts/t13_entropy_metric_repair_audit.json").write_text(json.dumps(record, indent=2, allow_nan=False)+"\n")
+    (ROOT/"docs/core/07_artifacts/topic13/t13_entropy_metric_repair_audit.json").write_text(json.dumps(record, indent=2, allow_nan=False)+"\n")
     print(json.dumps({"status":record["status"], "checks": checks,
         "entropy":state["entropy_production"], "balance_residual":state["entropy_balance_residual"]}))
     return 0 if all(checks.values()) else 1

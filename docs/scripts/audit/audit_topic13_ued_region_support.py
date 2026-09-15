@@ -23,8 +23,8 @@ def region_mask(shape, origin, calibration, peak_distance):
 
 
 def main():
-    inventory_path = ROOT/'docs/core/artifacts/t13_ued_numeric_inventory_audit.json'
-    exports_path = ROOT/'docs/core/artifacts/t13_ued_mask_support_audit.json'
+    inventory_path = ROOT/'docs/core/07_artifacts/topic13/t13_ued_numeric_inventory_audit.json'
+    exports_path = ROOT/'docs/core/07_artifacts/topic13/t13_ued_mask_support_audit.json'
     inventory = json.loads(inventory_path.read_text())
     exports = json.loads(exports_path.read_text())
     for source in (inventory, exports):
@@ -75,7 +75,7 @@ def main():
                   dependency_unlocked=['source-region forward-map design only'],
                   evidence_hashes={str(p.relative_to(ROOT)).replace('\\', '/'): digest(p) for p in evidence},
                   claim_boundary='Not reproduction of smoothed author figure, pure diffuse intensity, phonon population, relaxation rate or thermometer.')
-    (ROOT/'docs/core/artifacts/t13_ued_region_support_audit.json').write_text(json.dumps(result, indent=2, allow_nan=False)+'\n')
+    (ROOT/'docs/core/07_artifacts/topic13/t13_ued_region_support_audit.json').write_text(json.dumps(result, indent=2, allow_nan=False)+'\n')
     print(json.dumps([dict(member=r['member'], pixels=r['geometric_pixels'], common=r['common_pixels'],
                            difference=r['signals']['support_choice_max_difference'], delay_step=r['delay_step_range_ps']) for r in rows], indent=2))
 

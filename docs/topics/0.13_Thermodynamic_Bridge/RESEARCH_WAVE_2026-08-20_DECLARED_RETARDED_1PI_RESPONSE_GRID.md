@@ -35,7 +35,7 @@ EVIDENCE_HASHES:
 
 - module `docs/core/uet_o2_finite_temperature_declared_retarded_1pi_grid.py`: `f635e131e00c295cb90bf51607a8c41b392fef4af610682d9c4d3bc99e504885`
 - audit script `docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_declared_retarded_1pi_grid.py`: `c2c379f776a48d0c4daad099696042e3c205ded0f51dcc7893a959ebe9d2c281`
-- audit artifact `docs/core/artifacts/t13_uet_o2_finite_temperature_declared_retarded_1pi_grid_audit.json`: `f22d74b88c82e62bb0dc984bc96b1171bc2b7579d563d693fa3559ac199e3861`
+- audit artifact `docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_declared_retarded_1pi_grid_audit.json`: `f22d74b88c82e62bb0dc984bc96b1171bc2b7579d563d693fa3559ac199e3861`
 - full gate `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`: `53f40cd31b9cba7d608aeb5e8a3d48d3dc204302c478c16d4bb165a96f66a9ee`
-- closure register `docs/core/artifacts/uet_major_result_closure_register.json`: `8561401dec879ebc1b3c98f438e0ea774e8a8bacaf9cbe6cacae0ab1b25b985c`
-- dependency gate `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`: `cc3ef8f07c4e16037d9d232f40487f5de6cd841f9b12ddc8f163541bc7f820fd`
+- closure register `docs/core/07_artifacts/gates/uet_major_result_closure_register.json`: `8561401dec879ebc1b3c98f438e0ea774e8a8bacaf9cbe6cacae0ab1b25b985c`
+- dependency gate `docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json`: `cc3ef8f07c4e16037d9d232f40487f5de6cd841f9b12ddc8f163541bc7f820fd`

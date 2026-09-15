@@ -18,7 +18,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 RAW = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw"
 SOURCE = RAW / "huberman_2019_graphite_second_sound_arxiv.pdf"
-OUT = ROOT / "docs/core/artifacts/t13_huberman_2019_public_pbte_boundary_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_huberman_2019_public_pbte_boundary_audit.json"
 
 EXPECTED_SIZE_BYTES = 1_888_806
 EXPECTED_SHA256 = "29dc508df146125e6aef524404c0cfff98b31605783524526e81a8c93ad46027"

@@ -11,7 +11,7 @@ from pathlib import Path
 
 ROOT = repo_root()
 SCRIPT = ROOT / "docs/scripts/audit/audit_topic13_oxford_tgs_comparator_provenance.py"
-ARTIFACT = ROOT / "docs/core/artifacts/t13_oxford_tgs_comparator_provenance_audit.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_oxford_tgs_comparator_provenance_audit.json"
 
 
 def test_oxford_tgs_provenance_audit_passes_without_numeric_rows() -> None:

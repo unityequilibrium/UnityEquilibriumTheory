@@ -19,7 +19,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[3]
 TOPIC = "0.13_Thermodynamic_Bridge"
 ARCHIVE_ROOT = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte"
-OUT = ROOT / "docs/core/artifacts/t13_calorine_full_lbte_stability_boundary_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_calorine_full_lbte_stability_boundary_audit.json"
 FORCE_ROOT = ARCHIVE_ROOT / "force_constants_dim_4x4x2"
 METHOD1_ROOT = ARCHIVE_ROOT / "full_lbte_natural_isotope_pinv_method1"
 METHOD0_ROOT = ARCHIVE_ROOT / "full_lbte_natural_isotope_pinv_method0"

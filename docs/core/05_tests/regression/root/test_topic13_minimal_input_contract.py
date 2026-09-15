@@ -7,9 +7,9 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-CONTRACT = ROOT / "docs/core/artifacts/t13_full_closure_minimal_input_contract.json"
-PROGRESS = ROOT / "docs/core/artifacts/t13_full_closure_progress.json"
-INPUT_AUDIT = ROOT / "docs/core/artifacts/t13_closure_input_package_audit.json"
+CONTRACT = ROOT / "docs/core/07_artifacts/topic13/t13_full_closure_minimal_input_contract.json"
+PROGRESS = ROOT / "docs/core/07_artifacts/topic13/t13_full_closure_progress.json"
+INPUT_AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json"
 
 
 def load(path: Path) -> dict:
@@ -25,7 +25,7 @@ def test_minimal_input_contract_covers_current_open_subresults() -> None:
     progress = load(PROGRESS)
     input_audit = load(INPUT_AUDIT)
 
-    assert progress["minimal_input_contract"]["path"] == "docs/core/artifacts/t13_full_closure_minimal_input_contract.json"
+    assert progress["minimal_input_contract"]["path"] == "docs/core/07_artifacts/topic13/t13_full_closure_minimal_input_contract.json"
     assert progress["minimal_input_contract"]["sha256"] == digest(CONTRACT)
     assert progress["minimal_input_contract"]["status"] == contract["status"]
     assert contract["status"] == "PASS_SCOPED_MINIMAL_INPUT_CONTRACT_OPEN"

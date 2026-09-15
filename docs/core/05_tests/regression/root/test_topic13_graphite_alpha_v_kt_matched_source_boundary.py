@@ -7,15 +7,15 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-AUDIT_REL = "docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json"
+AUDIT_REL = "docs/core/07_artifacts/topic13/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json"
 LOWITZER_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/lowitzer_2006_graphite_pvt_candidate_source_package.json"
 LOWITZER_FULL_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/lowitzer_2006_graphite_pvt_full_source_package.json"
-LOWITZER_FULL_AUDIT_REL = "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json"
+LOWITZER_FULL_AUDIT_REL = "docs/core/07_artifacts/topic13/t13_lowitzer_graphite_pvt_full_source_pair_audit.json"
 TOHEI_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/tohei_2006_graphite_alpha_v_kt_table_comparator_source_package.json"
 FAROOQUI_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/farooqui_2022_ig210_thermophysical_source_package.json"
 FULL_REL = "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-REGISTER_REL = "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY_REL = "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+REGISTER_REL = "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY_REL = "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 
 
 def load(relative: str) -> dict:

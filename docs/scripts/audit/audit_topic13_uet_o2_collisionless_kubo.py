@@ -21,7 +21,7 @@ from docs.core.uet_o2_finite_temperature_quasiparticle_eos import (
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_collisionless_kubo_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_collisionless_kubo_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_collisionless_kubo.py"
 STATIC_MODULE = ROOT / "docs/core/uet_o2_formal_transverse_response.py"
 EOS_MODULE = ROOT / "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py"

@@ -71,7 +71,7 @@ def main():
         open_blockers=["differential_cross_section_and_species_symmetry_contract", "boosted_Bose_weight_and_collision_integrand", "global_orientation_for_tensor_response", "material_calibration"],
         dependency_unlocked=[], full_core_unlock=False, global_claim_promotion=False,
         claim_boundary="No production replacement. Angular factors are normalized averages, not derived scattering rates. No external data or holdout is read by this runner.")
-    out = ROOT/"docs/core/artifacts/t13_phase_space_measure_audit.json"
+    out = ROOT/"docs/core/07_artifacts/topic13/t13_phase_space_measure_audit.json"
     out.write_text(json.dumps(result, indent=2, allow_nan=False)+"\n", encoding="utf-8")
     for row in rows:
         print(row["radial_order"], row["independent_radial_pairs"], row["exponential_relative_error"])

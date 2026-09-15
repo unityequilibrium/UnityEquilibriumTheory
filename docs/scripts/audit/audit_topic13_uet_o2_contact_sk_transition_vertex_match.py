@@ -19,7 +19,7 @@ from docs.core.uet_o2_contact_sk_transition_vertex_match import (  # noqa: E402
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_contact_sk_transition_vertex_match_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_contact_sk_transition_vertex_match_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_contact_sk_transition_vertex_match.py"
 ACTION = ROOT / "docs/core/uet_o2_interacting_sk_kms_action.py"
 KERNEL = ROOT / "docs/core/uet_o2_action_derived_transition_kernel.py"

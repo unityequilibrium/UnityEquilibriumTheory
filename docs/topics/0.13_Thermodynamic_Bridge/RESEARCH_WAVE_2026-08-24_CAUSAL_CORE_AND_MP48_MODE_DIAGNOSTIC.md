@@ -22,4 +22,4 @@ NEXT_ACTION: Obtain one admissible Ding-compatible/permissioned PBTE package wit
 
 CLAIM_BOUNDARY: The causal named branch is Core-ready only as a normalized bounded input. The MP48 artifact is a harmonic comparator. Neither result closes Full Topic 13, establishes SI thermal prediction, proves external validity, or promotes a global UET claim.
 
-EVIDENCE_PATHS: `docs/core/artifacts/t13_causal_named_branch_core_compatibility.json`; `docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.json`; `docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.npz`; `docs/core/artifacts/t13_topic13_closure_matrix.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.
+EVIDENCE_PATHS: `docs/core/07_artifacts/topic13/t13_causal_named_branch_core_compatibility.json`; `docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.json`; `docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz`; `docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.

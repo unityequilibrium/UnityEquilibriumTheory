@@ -7,8 +7,8 @@ from pathlib import Path
 
 ROOT = repo_root()
 FULL = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY = ROOT / "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 
 
 def load(path: Path) -> dict:
@@ -36,7 +36,7 @@ def test_regularized_lane_is_integrated_without_downstream_unlock() -> None:
     assert entry["closure_level"] == "CLOSED_FOR_LANE"
     assert any(
         item["path"]
-        == "docs/core/artifacts/t13_uet_o2_regularized_continuum_heat_current_audit.json"
+        == "docs/core/07_artifacts/topic13/t13_uet_o2_regularized_continuum_heat_current_audit.json"
         for item in entry["evidence_artifacts"]
     )
     assert (

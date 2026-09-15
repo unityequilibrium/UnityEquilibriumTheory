@@ -26,7 +26,7 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_interacting_sk_kms_action_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_interacting_sk_kms_action_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_interacting_sk_kms_action.py"
 CHARGED_MODULE = ROOT / "docs/core/uet_o2_finite_density_charged_vertex.py"
 TRANSITION_MODULE = ROOT / "docs/core/uet_o2_action_derived_transition_kernel.py"
@@ -153,7 +153,7 @@ def main() -> int:
         "closure_level": "CLOSED_FOR_LANE" if not failed else "OPEN",
         "data_role": state.data_role,
         "audit": {
-            "path": "docs/core/artifacts/t13_uet_o2_interacting_sk_kms_action_audit.json",
+            "path": "docs/core/07_artifacts/topic13/t13_uet_o2_interacting_sk_kms_action_audit.json",
             "summary": {
                 "status": status,
                 "major_result_id": "T13_UET_O2_INTERACTING_SK_KMS_ACTION_INTERFACE",

@@ -18,7 +18,7 @@ def main():
     files = ['docs/core/uet_shear_symmetry.py',
              'docs/core/test/test_topic13_shear_symmetry.py',
              'docs/core/T13_MATTER_STRAIN_SUSCEPTIBILITY_MATCH.md',
-             'docs/core/artifacts/uet_equation_correspondence_registry_topic13_shear_symmetry_addendum.json',
+             'docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_shear_symmetry_addendum.json',
              str(Path(__file__).relative_to(ROOT)).replace('\\', '/')]
     artifact = dict(
         major_result_id='T13_SCALAR_SHEAR_SELECTION_RULE', topic='0.13',
@@ -46,7 +46,7 @@ def main():
         evidence_hashes={p: hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in files},
         claim_boundary='Not a universal no-go, E2g source identification, thermalization proof or alpha calibration.',
     )
-    out = ROOT/'docs/core/artifacts/t13_shear_symmetry_audit.json'
+    out = ROOT/'docs/core/07_artifacts/topic13/t13_shear_symmetry_audit.json'
     out.write_text(json.dumps(artifact, indent=2, allow_nan=False)+'\n', encoding='utf-8')
     print(json.dumps({k: artifact[k] for k in ('invariant_linear_dimension', 'invariant_quadratic_dimension', 'group_average_residual')}))
     if linear_rank != 2 or quadratic_rank != 2:

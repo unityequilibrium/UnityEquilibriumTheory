@@ -23,7 +23,7 @@ from docs.core.uet_o2_finite_temperature_full_sunset_sk_kms import (  # noqa: E4
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_finite_temperature_full_sunset_sk_kms_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_full_sunset_sk_kms_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_finite_temperature_full_sunset_sk_kms.py"
 ONE_TO_THREE = ROOT / "docs/core/uet_o2_finite_temperature_sunset_sk_kms.py"
 TWO_TO_TWO = ROOT / "docs/core/uet_o2_finite_temperature_sunset_scattering_sk_kms.py"
