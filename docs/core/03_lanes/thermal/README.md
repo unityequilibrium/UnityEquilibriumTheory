@@ -25,3 +25,5 @@ status, parameter provenance, or physics claim boundary.
 
 - thermal_dimensional_bridge.py — conditional local-equilibrium Phi-to-kelvin bridge with explicit dimensional inputs; it is not a source-free calibration.
 - thermal_energy_response_bridge.py — named Phi_E energy-density response branch with heat-capacity conversion and uncertainty requirements; Phi_E is not the base Phi.
+- thermal_phi_e_reference_normalization.py — reference-temperature normalization for the named Phi_E lane; it does not calibrate base Phi.
+- thermal_response_beta_contract.py — finite-temperature normalized response-beta contract with explicit unit and non-Landauer boundaries.
