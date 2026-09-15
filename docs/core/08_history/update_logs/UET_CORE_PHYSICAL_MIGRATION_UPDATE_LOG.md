@@ -757,3 +757,10 @@
 - Verification: planner PASS; zero duplicate targets, zero destination conflicts, and zero physics-status changes.
 - Result: 1,966 files indexed; 979 canonical/protected, 987 remaining migration targets, 335 compatibility assets, and 16 unrelated dirty source records.
 - Claim impact: none; this is organization metadata only.
+## 2026-09-15 — Wave 6za core support/tooling migration
+
+- Scope: move the remaining root support modules to their declared tooling or contract destinations.
+- Changed: moved 4 audit helpers to docs/scripts/core/audit/, 4 engines/runners to docs/scripts/core/runners/, 2 data/reference helpers to docs/scripts/core/data/, uet_parameters.py to docs/core/01_contracts/units/, and uet_viz.py to docs/scripts/core/reporting/; retained root compatibility shims.
+- Verification: source hashes preserved; legacy/canonical support imports 12/12; core import audit 181/181; path and migration audits PASS.
+- Result: no non-shim root support implementation remains; organization metadata records the tooling namespace separately from physics equations.
+- Claim impact: organization only; no physics status or claim boundary changed.

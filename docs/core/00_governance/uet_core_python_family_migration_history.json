@@ -738,6 +738,133 @@
       ],
       "status": "MIGRATED_WITH_SHIM",
       "target_prefix": "docs/core/02_equations/matter_space"
+    },
+    {
+      "applied_at": "2026-09-15T12:06:56+00:00",
+      "claim_boundary": "Organization migration only; no physics status or claim changed.",
+      "family": "support_audit",
+      "files_moved": 4,
+      "generator": "docs/scripts/audit/migrate_uet_core_python_family_v3.py",
+      "moves": [
+        {
+          "canonical_path": "docs/scripts/core/audit/reproducibility.py",
+          "legacy_path": "docs/core/reproducibility.py",
+          "sha256_after": "1bce9668c93fb1230f94192f3ce0afbce1b17a2a3151b0cf0845ece267b80c43",
+          "sha256_before": "1bce9668c93fb1230f94192f3ce0afbce1b17a2a3151b0cf0845ece267b80c43"
+        },
+        {
+          "canonical_path": "docs/scripts/core/audit/scientific_validation.py",
+          "legacy_path": "docs/core/scientific_validation.py",
+          "sha256_after": "66a4ecaa6cf192010b472ccfc086b0908e1b11ddf7a23217f85e41aee50a597f",
+          "sha256_before": "66a4ecaa6cf192010b472ccfc086b0908e1b11ddf7a23217f85e41aee50a597f"
+        },
+        {
+          "canonical_path": "docs/scripts/core/audit/truth_auditor.py",
+          "legacy_path": "docs/core/truth_auditor.py",
+          "sha256_after": "89aed08f29b037173ca2c7899ae953ac6cc5f931175e7c3735758a137a9e182f",
+          "sha256_before": "89aed08f29b037173ca2c7899ae953ac6cc5f931175e7c3735758a137a9e182f"
+        },
+        {
+          "canonical_path": "docs/scripts/core/audit/uet_bug_hunter.py",
+          "legacy_path": "docs/core/uet_bug_hunter.py",
+          "sha256_after": "983639f1aa236a726ca4725cc1c264085213d2086cb633ef6dad9904e2607fb2",
+          "sha256_before": "983639f1aa236a726ca4725cc1c264085213d2086cb633ef6dad9904e2607fb2"
+        }
+      ],
+      "status": "MIGRATED_WITH_SHIM",
+      "target_prefix": "docs/scripts/core/audit"
+    },
+    {
+      "applied_at": "2026-09-15T12:07:02+00:00",
+      "claim_boundary": "Organization migration only; no physics status or claim changed.",
+      "family": "support_runners",
+      "files_moved": 4,
+      "generator": "docs/scripts/audit/migrate_uet_core_python_family_v3.py",
+      "moves": [
+        {
+          "canonical_path": "docs/scripts/core/runners/uet_base_solver.py",
+          "legacy_path": "docs/core/uet_base_solver.py",
+          "sha256_after": "b601cd461686b1e8cf09a065619f6720c284edbc06505b35b8fe993e3c663127",
+          "sha256_before": "b601cd461686b1e8cf09a065619f6720c284edbc06505b35b8fe993e3c663127"
+        },
+        {
+          "canonical_path": "docs/scripts/core/runners/uet_glass_box.py",
+          "legacy_path": "docs/core/uet_glass_box.py",
+          "sha256_after": "7e42a61824a11d1abd7d6e864771265487a05a91993f0ae2fba3c9b578d0aeb7",
+          "sha256_before": "7e42a61824a11d1abd7d6e864771265487a05a91993f0ae2fba3c9b578d0aeb7"
+        },
+        {
+          "canonical_path": "docs/scripts/core/runners/uet_lite_engine.py",
+          "legacy_path": "docs/core/uet_lite_engine.py",
+          "sha256_after": "1c91cbfd4ef136594287855a6b2ea45ad9fc529045283b7aabe0f85f4062edea",
+          "sha256_before": "1c91cbfd4ef136594287855a6b2ea45ad9fc529045283b7aabe0f85f4062edea"
+        },
+        {
+          "canonical_path": "docs/scripts/core/runners/uet_matrix_engine.py",
+          "legacy_path": "docs/core/uet_matrix_engine.py",
+          "sha256_after": "5f3369f73cd3e572fd721c6c11ef3caf5fddb39d591d72aae528da4491cd02bc",
+          "sha256_before": "5f3369f73cd3e572fd721c6c11ef3caf5fddb39d591d72aae528da4491cd02bc"
+        }
+      ],
+      "status": "MIGRATED_WITH_SHIM",
+      "target_prefix": "docs/scripts/core/runners"
+    },
+    {
+      "applied_at": "2026-09-15T12:07:08+00:00",
+      "claim_boundary": "Organization migration only; no physics status or claim changed.",
+      "family": "support_data",
+      "files_moved": 2,
+      "generator": "docs/scripts/audit/migrate_uet_core_python_family_v3.py",
+      "moves": [
+        {
+          "canonical_path": "docs/scripts/core/data/uet_data_orchestrator.py",
+          "legacy_path": "docs/core/uet_data_orchestrator.py",
+          "sha256_after": "3347cb439a28a3b9cc10c0f5b6f8fd6b8eecc1a1d8a6f5b989e3834d0ac0a2ee",
+          "sha256_before": "3347cb439a28a3b9cc10c0f5b6f8fd6b8eecc1a1d8a6f5b989e3834d0ac0a2ee"
+        },
+        {
+          "canonical_path": "docs/scripts/core/data/uet_references.py",
+          "legacy_path": "docs/core/uet_references.py",
+          "sha256_after": "59bb81b8189f5270186559fd131f9accd9f7550b6df0aade2c9e67a1c2578608",
+          "sha256_before": "59bb81b8189f5270186559fd131f9accd9f7550b6df0aade2c9e67a1c2578608"
+        }
+      ],
+      "status": "MIGRATED_WITH_SHIM",
+      "target_prefix": "docs/scripts/core/data"
+    },
+    {
+      "applied_at": "2026-09-15T12:07:14+00:00",
+      "claim_boundary": "Organization migration only; no physics status or claim changed.",
+      "family": "parameters_contract",
+      "files_moved": 1,
+      "generator": "docs/scripts/audit/migrate_uet_core_python_family_v3.py",
+      "moves": [
+        {
+          "canonical_path": "docs/core/01_contracts/units/uet_parameters.py",
+          "legacy_path": "docs/core/uet_parameters.py",
+          "sha256_after": "eff2fc6fe0fe35f18c49a032729e385c97b633a90e9a0bd3789be5051d316651",
+          "sha256_before": "eff2fc6fe0fe35f18c49a032729e385c97b633a90e9a0bd3789be5051d316651"
+        }
+      ],
+      "status": "MIGRATED_WITH_SHIM",
+      "target_prefix": "docs/core/01_contracts/units"
+    },
+    {
+      "applied_at": "2026-09-15T12:07:20+00:00",
+      "claim_boundary": "Organization migration only; no physics status or claim changed.",
+      "family": "support_reporting",
+      "files_moved": 1,
+      "generator": "docs/scripts/audit/migrate_uet_core_python_family_v3.py",
+      "moves": [
+        {
+          "canonical_path": "docs/scripts/core/reporting/uet_viz.py",
+          "legacy_path": "docs/core/uet_viz.py",
+          "sha256_after": "8b5a00250bc28078f0ef6eb7a0e283f59e07b2ff0812a40704d0b73c164a82e8",
+          "sha256_before": "8b5a00250bc28078f0ef6eb7a0e283f59e07b2ff0812a40704d0b73c164a82e8"
+        }
+      ],
+      "status": "MIGRATED_WITH_SHIM",
+      "target_prefix": "docs/scripts/core/reporting"
     }
   ],
   "schema_version": "1.0"
