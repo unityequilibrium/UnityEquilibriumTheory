@@ -42,7 +42,7 @@
   ],
   "controlling_blocker": null,
   "duplicate_targets": {},
-  "generated_at": "2026-09-15T18:29:06+00:00",
+  "generated_at": "2026-09-15T18:54:23+00:00",
   "generator": "docs/scripts/audit/audit_uet_core_test_migration.py",
   "migrated_hash_mismatches": [],
   "migrated_missing": [],

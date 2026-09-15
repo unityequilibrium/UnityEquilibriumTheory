@@ -128,3 +128,12 @@
 - CONTROLLING_BLOCKER: None for physical organization. Scientific foundation/evidence gates remain unchanged; 510 artifact records still lack resolved generator identity and remain an evidence/production-generator concern, not a path-layout blocker.
 - NEXT_ACTION: Preserve the legacy compatibility boundaries, review generator identity and consumer deprecation as a separate hardening wave, and keep physics claim promotion behind the existing foundation gates. Commit this scoped migration without pushing.
 - CLAIM_BOUNDARY: This wave establishes canonical file placement, compatibility routing, provenance-preserving path reconciliation, and test/import/link integrity only. It does not prove, promote, or reinterpret any UET physics claim.
+### 2026-09-16 — Wave 6zi: final boundary README reconciliation
+
+- STATUS: PASS
+- WHAT_CHANGED: Reconciled the remaining `docs/core/data/README.md` and `docs/core/02_Proof/README.md` boundary documents against the existing canonical `06_data/README.md` and `04_proofs/README.md`; the legacy paths now contain explicit redirects, and the central path resolver points to the canonical locations. Added a dedicated migration runner and machine-readable reconciliation artifact.
+- VERIFICATION: Boundary README preflight and apply passed for 2/2 records with no conflicts or active references to rewrite. The physical planner regenerated 1,964 records with zero move targets, zero duplicate targets, zero destination conflicts, 425 compatibility assets, and zero physics-status changes.
+- RESULT: Both legacy README boundaries are now compatibility-only; the canonical area READMEs remain the single source of truth. No source, equation, artifact payload, or scientific claim was promoted or reinterpreted.
+- CONTROLLING_BLOCKER: None for physical file placement. Scientific foundation and evidence gates remain independently controlled and unchanged.
+- NEXT_ACTION: Run the final repository-wide migration verification, then commit this scoped boundary reconciliation. Do not push without an explicit instruction.
+- CLAIM_BOUNDARY: Organization, canonical-path resolution, and compatibility traceability only; this wave is not a physics verification or empirical validation.

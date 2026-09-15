@@ -219,7 +219,7 @@ def canonical_path_for(legacy_path: str | Path) -> str:
         return relative
     if tail.startswith("02_Proof/"):
         if tail == "02_Proof/README.md":
-            return relative
+            return "docs/core/04_proofs/README.md"
         return "docs/core/04_proofs/" + tail[len("02_Proof/") :]
     if tail == "artifacts/README.md":
         return relative
@@ -235,7 +235,7 @@ def canonical_path_for(legacy_path: str | Path) -> str:
             parts[0] = _TOOLING_DIRS.get(parts[0], parts[0].lower())
         return "docs/scripts/core/" + "/".join(parts)
     if tail == "data/README.md":
-        return relative
+        return "docs/core/06_data/README.md"
     if tail.startswith("data/external/"):
         return "docs/core/06_data/source_packages/" + tail[len("data/external/") :]
     if tail.startswith("data/"):

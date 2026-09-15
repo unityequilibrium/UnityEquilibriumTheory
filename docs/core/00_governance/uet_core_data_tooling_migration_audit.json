@@ -20,16 +20,16 @@
   ],
   "controlling_blocker": null,
   "failures_detail": [],
-  "generated_at": "2026-09-14T16:17:20+00:00",
+  "generated_at": "2026-09-15T18:57:19+00:00",
   "generator": "docs/scripts/audit/audit_uet_core_data_tooling_migration.py",
   "schema_version": "1.0",
   "status": "PASS",
   "summary": {
     "duplicate_targets": {},
     "failures": 0,
-    "files_total": 111,
-    "migrated_with_shim": 25,
+    "files_total": 99,
+    "migrated_with_shim": 99,
     "physics_status_changes": 0,
-    "quarantined": 86
+    "quarantined": 0
   }
 }
