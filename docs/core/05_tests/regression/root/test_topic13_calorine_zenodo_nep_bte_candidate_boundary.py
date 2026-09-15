@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json"
 FULL_GATE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
 
 

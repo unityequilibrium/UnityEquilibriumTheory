@@ -10,15 +10,15 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-CONTRACT = ROOT / "docs/core/artifacts/uet_research_room_wave1_contract.json"
-INTEGRATION = ROOT / "docs/core/artifacts/uet_research_room_wave1_integration_gate.json"
-FOUNDATION = ROOT / "docs/core/artifacts/uet_foundation_dependency_gate.json"
+CONTRACT = ROOT / "docs/core/07_artifacts/archive/uet_research_room_wave1_contract.json"
+INTEGRATION = ROOT / "docs/core/07_artifacts/gates/uet_research_room_wave1_integration_gate.json"
+FOUNDATION = ROOT / "docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json"
 BRANCH = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/thermal_wave1_branch_gate.json"
-PROVENANCE = ROOT / "docs/core/artifacts/thermal_source_provenance_gate.json"
-HOLDOUT_AUDIT = ROOT / "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json"
-REGISTRY = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry.json"
+PROVENANCE = ROOT / "docs/core/07_artifacts/topic13/thermal_source_provenance_gate.json"
+HOLDOUT_AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_xie_2026_holdout_access_audit.json"
+REGISTRY = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json"
 INDEX = ROOT / "docs/topics/README.md"
-OUT = ROOT / "docs/core/artifacts/uet_research_room_wave1_integrity.json"
+OUT = ROOT / "docs/core/07_artifacts/archive/uet_research_room_wave1_integrity.json"
 
 
 def load(path: Path) -> dict[str, Any]:
@@ -55,8 +55,8 @@ def main() -> int:
         BRANCH,
         PROVENANCE,
         HOLDOUT_AUDIT,
-        ROOT / "docs/core/artifacts/matter_space_causal_reference_verification.json",
-        ROOT / "docs/core/artifacts/matter_space_variational_verification.json",
+        ROOT / "docs/core/07_artifacts/verification/matter_space_causal_reference_verification.json",
+        ROOT / "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
         ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_observable_map_readiness.json",
         ROOT / "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_structure_factor_source_archive_policy_gate.json",
         ROOT / "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_benchmark_validation.json",

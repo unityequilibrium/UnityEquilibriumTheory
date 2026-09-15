@@ -67,7 +67,7 @@ def build_artifacts() -> tuple[dict, dict, dict]:
     }
     addendum = {
         "schema_version": "1.0", "artifact": "uet_equation_correspondence_registry_quantum_interpretations_addendum",
-        "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json", "status": "CANDIDATE_ENTRY_PENDING_MERGE",
+        "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json", "status": "CANDIDATE_ENTRY_PENDING_MERGE",
         "equation_entries": [{
             "equation_id": "uet.main_theory.quantum_interpretation_adapters", "version": "interpretation-adapters-v1",
             "classification": "observable_definition", "relation_or_code_path": QUANTUM_INTERPRETATIONS_SOURCE,
@@ -81,7 +81,7 @@ def build_artifacts() -> tuple[dict, dict, dict]:
             "symmetry_and_conservation": "empirical prediction invariance",
             "limiting_cases": ["changing agent or reference labels leaves probabilities unchanged"],
             "implementation_paths": [QUANTUM_INTERPRETATIONS_SOURCE],
-            "verifier_paths": ["docs/scripts/audit/audit_uet_quantum_interpretations.py", "docs/core/artifacts/quantum_interpretation_invariance_verification.json", "docs/core/test/test_uet_quantum_interpretations.py"],
+            "verifier_paths": ["docs/scripts/audit/audit_uet_quantum_interpretations.py", "docs/core/07_artifacts/verification/quantum_interpretation_invariance_verification.json", "docs/core/test/test_uet_quantum_interpretations.py"],
             "evidence_class": "INTERNAL_FORMAL", "proof_status": "finite-dimensional invariance tests pass",
             "downstream_dependencies": ["uet.main_theory.operational_quantum_measurement", "uet.main_theory.detector_observables"],
             "claim_boundary": "interpretation comparison only; no new empirical prediction",

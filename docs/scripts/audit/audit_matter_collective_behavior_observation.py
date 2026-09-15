@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUTPUT = ROOT / "docs/core/artifacts/matter_collective_behavior_observation_gate.json"
+OUTPUT = ROOT / "docs/core/07_artifacts/gates/matter_collective_behavior_observation_gate.json"
 
 
 def _source(relative_path: str, markers: list[str]) -> dict[str, object]:

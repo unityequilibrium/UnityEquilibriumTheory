@@ -19,11 +19,11 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 OUTPUT_PATH = REPO_ROOT / "docs" / "core" / "artifacts" / "matter_space_research_program_gate.json"
 
 INPUT_PATHS = {
-    "ontology_contract": REPO_ROOT / "docs/core/artifacts/matter_space_ontology_contract.json",
-    "formula_audit": REPO_ROOT / "docs/core/artifacts/matter_space_formula_audit.json",
-    "alignment_gate": REPO_ROOT / "docs/core/artifacts/master_equation_alignment_gate_v2.json",
-    "core_verification": REPO_ROOT / "docs/core/artifacts/matter_space_variational_verification.json",
-    "core_dependency_gate": REPO_ROOT / "docs/core/artifacts/matter_space_dependency_gate.json",
+    "ontology_contract": REPO_ROOT / "docs/core/07_artifacts/correspondence/matter_space_ontology_contract.json",
+    "formula_audit": REPO_ROOT / "docs/core/07_artifacts/correspondence/matter_space_formula_audit.json",
+    "alignment_gate": REPO_ROOT / "docs/core/07_artifacts/gates/master_equation_alignment_gate_v2.json",
+    "core_verification": REPO_ROOT / "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
+    "core_dependency_gate": REPO_ROOT / "docs/core/07_artifacts/gates/matter_space_dependency_gate.json",
     "thermal_pilot": REPO_ROOT
     / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json",
     "thermal_source_package": REPO_ROOT

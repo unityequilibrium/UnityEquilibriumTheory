@@ -4,7 +4,7 @@
 ไม่ใช่การแทนที่ inventory ทั้ง 260 rows
 
 ผล machine-readable อยู่ที่
-[`uet_foundation_correspondence_matrix.json`](../artifacts/uet_foundation_correspondence_matrix.json)
+[`uet_foundation_correspondence_matrix.json`](../07_artifacts/gates/uet_foundation_correspondence_matrix.json)
 และสร้างซ้ำได้จาก
 [`build_uet_foundation_correspondence_matrix.py`](../../scripts/audit/build_uet_foundation_correspondence_matrix.py)
 

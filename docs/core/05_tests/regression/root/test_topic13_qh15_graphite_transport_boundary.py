@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/artifacts/t13_qh15_graphite_transport_boundary_audit.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_qh15_graphite_transport_boundary_audit.json"
 
 
 def test_qh15_is_a_source_locked_comparator_without_promotion() -> None:

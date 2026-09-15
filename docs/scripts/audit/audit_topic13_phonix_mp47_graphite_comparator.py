@@ -24,7 +24,7 @@ ROOT = Path(__file__).resolve().parents[3]
 DATA = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research"
 RAW = DATA / "raw/phonix_mp47_graphite_summary_row.json"
 PACKAGE = DATA / "phonix_mp47_graphite_source_package.json"
-OUT = ROOT / "docs/core/artifacts/t13_phonix_mp47_graphite_comparator_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_phonix_mp47_graphite_comparator_audit.json"
 
 DATASET = "phonix-db/phonix-summary"
 EXPECTED_REVISION = "284bddebbd144ae3e3f93474dc05e4658417d09f"

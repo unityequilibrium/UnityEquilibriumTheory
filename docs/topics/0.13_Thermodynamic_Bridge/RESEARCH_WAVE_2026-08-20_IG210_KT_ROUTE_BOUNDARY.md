@@ -15,6 +15,6 @@ CLAIM_BOUNDARY: Source-provenance/no-go lane only; not C_v, not Ding validation,
 Evidence:
 
 - Source package: `Data/03_Research/farooqui_2022_ig210_thermophysical_source_package.json`.
-- Boundary audit: `docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json`.
+- Boundary audit: `docs/core/07_artifacts/topic13/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json`.
 - Full gate: `Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.
 - Focused regression: `docs/core/test/test_topic13_graphite_alpha_v_kt_matched_source_boundary.py`.

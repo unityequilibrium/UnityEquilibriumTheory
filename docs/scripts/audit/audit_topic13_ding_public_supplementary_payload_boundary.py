@@ -17,7 +17,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 RAW = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw"
 INVENTORY = RAW / "ding_2022_pmc_s3_inventory.xml"
-OUT = ROOT / "docs/core/artifacts/t13_ding_public_supplementary_payload_boundary_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_ding_public_supplementary_payload_boundary_audit.json"
 
 EXPECTED_KEYS = {
     "PMC8755757.1/41467_2021_27907_Fig1_HTML.jpg",

@@ -21,7 +21,7 @@ from docs.core.photon_observer_baseline import (
 )
 
 
-OUTPUT = ROOT / "docs/core/artifacts/photon_observer_baseline_verification.json"
+OUTPUT = ROOT / "docs/core/07_artifacts/verification/photon_observer_baseline_verification.json"
 
 
 def build() -> dict:

@@ -21,7 +21,7 @@ SOURCE_PATH = (
     / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
     / "perez_castaneda_2013_graphite_specific_heat.pdf"
 )
-OUT = ROOT / "docs/core/artifacts/t13_perez_castaneda_hopg_source_boundary_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_perez_castaneda_hopg_source_boundary_audit.json"
 
 EXPECTED_SHA256 = "f5056e3804275336deca634da84a47fec1e91876ff65ab62a84596a5ad3ebd4a"
 EXPECTED_BYTES = 1141942
@@ -172,7 +172,7 @@ def build_artifact() -> dict[str, Any]:
                     "locator": "author-posted arXiv PDF, sections 2.1 and 3.2, Figures 6-8",
                 },
                 {
-                    "path": "docs/core/artifacts/t13_perez_castaneda_hopg_source_boundary_audit.json",
+                    "path": "docs/core/07_artifacts/topic13/t13_perez_castaneda_hopg_source_boundary_audit.json",
                     "source_record_sha256": source_record_sha256,
                 },
             ],

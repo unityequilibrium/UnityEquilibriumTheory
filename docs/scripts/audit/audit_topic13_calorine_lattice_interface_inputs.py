@@ -13,9 +13,9 @@ ROOT = Path(__file__).resolve().parents[3]
 BASE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research"
 SUMMARY = BASE / "t13_calorine_zenodo_pbte_run_m12x12x6_summary.json"
 KAPPA = BASE / "reproduction/t13_calorine_pbte/mesh_12x12x6/kappa-m12126.hdf5"
-FULL_LBTE = ROOT / "docs/core/artifacts/t13_calorine_full_lbte_stability_boundary_audit.json"
-OUT = ROOT / "docs/core/artifacts/t13_calorine_lattice_interface_input_boundary.json"
-REGISTRY_OUT = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_calorine_lattice_inputs_addendum.json"
+FULL_LBTE = ROOT / "docs/core/07_artifacts/topic13/t13_calorine_full_lbte_stability_boundary_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_calorine_lattice_interface_input_boundary.json"
+REGISTRY_OUT = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_calorine_lattice_inputs_addendum.json"
 EQUATION_ID = "standard.graphite.pbte.calorine_lattice_interface_input_boundary"
 REQUIRED_COMPARATOR_KEYS = {
     "frequency",
@@ -189,12 +189,12 @@ def main() -> int:
         "source_hashes": {path: _sha(path) for path in source_paths},
         "evidence_artifacts": [
             {
-                "path": "docs/core/artifacts/t13_lattice_momentum_relaxing_heat_parent_audit.json",
-                "sha256": _sha("docs/core/artifacts/t13_lattice_momentum_relaxing_heat_parent_audit.json"),
+                "path": "docs/core/07_artifacts/topic13/t13_lattice_momentum_relaxing_heat_parent_audit.json",
+                "sha256": _sha("docs/core/07_artifacts/topic13/t13_lattice_momentum_relaxing_heat_parent_audit.json"),
             },
             {
-                "path": "docs/core/artifacts/t13_continuum_action_umklapp_direct_route_no_go.json",
-                "sha256": _sha("docs/core/artifacts/t13_continuum_action_umklapp_direct_route_no_go.json"),
+                "path": "docs/core/07_artifacts/topic13/t13_continuum_action_umklapp_direct_route_no_go.json",
+                "sha256": _sha("docs/core/07_artifacts/topic13/t13_continuum_action_umklapp_direct_route_no_go.json"),
             },
         ],
         "dependency_unlocked": [
@@ -258,7 +258,7 @@ def main() -> int:
     REGISTRY_OUT.write_text(json.dumps({
         "schema_version": "uet-equation-registry-addendum-v1",
         "status": "EXTERNAL_COMPARATOR_INPUT_NOT_MERGED_AS_UET_EQUATION",
-        "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+        "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
         "equation_entries": [entry],
         "full_core_unlock": False,
         "claim_promotion": False,

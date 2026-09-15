@@ -24,7 +24,7 @@ PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "huang_2022_utokyo_graphite_ribbons_source_package.json"
 )
-OUT = ROOT / "docs/core/artifacts/t13_huang_2022_utokyo_graphite_ribbons_boundary_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_huang_2022_utokyo_graphite_ribbons_boundary_audit.json"
 
 EXPECTED_SIZE_BYTES = 25_529_971
 EXPECTED_SHA256 = "812ca326070b8036179a0f5fd40addacb88c9bfdf73c2f4c16f0873175a04e6a"

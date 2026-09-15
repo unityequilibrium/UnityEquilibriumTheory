@@ -4,7 +4,7 @@
 สมการใดขัดกับคณิตศาสตร์/ฟิสิกส์มาตรฐาน หรือเป็นกรณีพิเศษของทฤษฎีเดิม
 
 ผลเชิงเครื่องอยู่ที่
-[`uet_foundation_equation_inventory.json`](../artifacts/uet_foundation_equation_inventory.json)
+[`uet_foundation_equation_inventory.json`](../07_artifacts/gates/uet_foundation_equation_inventory.json)
 และสร้างซ้ำได้จาก
 [`build_uet_equation_inventory.py`](../../scripts/audit/build_uet_equation_inventory.py)
 

@@ -25,8 +25,8 @@ def main() -> int:
     )
     text = replace_once(
         text,
-        '''    ding_c_src_boundary_path, ding_c_src_boundary = load(\n        "docs/core/artifacts/t13_ding_c_src_independent_reproduction_boundary_audit.json"\n    )''',
-        '''    ding_c_src_boundary_path, ding_c_src_boundary = load(\n        "docs/core/artifacts/t13_ding_c_src_independent_reproduction_boundary_audit.json"\n    )\n    ding_public_supplementary_path, ding_public_supplementary = load(\n        "docs/core/artifacts/t13_ding_public_supplementary_payload_boundary_audit.json"\n    )''',
+        '''    ding_c_src_boundary_path, ding_c_src_boundary = load(\n        "docs/core/07_artifacts/topic13/t13_ding_c_src_independent_reproduction_boundary_audit.json"\n    )''',
+        '''    ding_c_src_boundary_path, ding_c_src_boundary = load(\n        "docs/core/07_artifacts/topic13/t13_ding_c_src_independent_reproduction_boundary_audit.json"\n    )\n    ding_public_supplementary_path, ding_public_supplementary = load(\n        "docs/core/07_artifacts/topic13/t13_ding_public_supplementary_payload_boundary_audit.json"\n    )''',
         "artifact load",
     )
     old_placement = '''    if ding_c_src_boundary_lane:\n        artifact["verification_status"]["source_package"][\n            "ding_c_src_independent_reproduction_boundary"\n        ] = ding_c_src_boundary_lane\n        artifact["verification_status"]["eos_transport_kms_entropy"].pop(\n            "ding_c_src_independent_reproduction_boundary", None\n        )'''

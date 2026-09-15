@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-LANE = ROOT / "docs/core/artifacts/t13_iaea_cv_uncertainty_boundary_audit.json"
+LANE = ROOT / "docs/core/07_artifacts/topic13/t13_iaea_cv_uncertainty_boundary_audit.json"
 PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "iaea_graphite_cv_uncertainty_boundary_source_package.json"
@@ -15,7 +15,7 @@ FULL = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
     "topic13_full_thermodynamic_bridge_core_ready_gate.json"
 )
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
 
 
 def load(path: Path) -> dict:
@@ -44,7 +44,7 @@ def test_iaea_cv_uncertainty_boundary_is_closed_without_core_promotion() -> None
     assert "c_v_source_uncertainty_not_closed" in full["major_result"]["what_remains_open"]
     assert "direct_volumetric_c_v_or_same_state_Cp_source_missing" not in full["major_result"]["what_remains_open"]
     assert any(
-        item["path"] == "docs/core/artifacts/t13_iaea_cv_uncertainty_boundary_audit.json"
+        item["path"] == "docs/core/07_artifacts/topic13/t13_iaea_cv_uncertainty_boundary_audit.json"
         for item in full["evidence_artifacts"]
     )
     assert any(

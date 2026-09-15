@@ -8,10 +8,10 @@ ROOT = Path(__file__).resolve().parents[3]
 TOPIC = ROOT / "docs/topics/0.13_Thermodynamic_Bridge"
 CSV_GZ = TOPIC / "Data/03_Research/oxford_tgs_figure1_numeric_rows.csv.gz"
 MANIFEST = TOPIC / "Data/03_Research/oxford_tgs_figure1_numeric_rows_manifest.json"
-AUDIT = ROOT / "docs/core/artifacts/t13_oxford_tgs_numeric_rows_audit.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_oxford_tgs_numeric_rows_audit.json"
 FULL = TOPIC / "Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY = ROOT / "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 
 
 def digest(path: Path) -> str:
@@ -53,7 +53,7 @@ CLAIM_BOUNDARY: Source-locked Oxford TGS numeric-row comparator only. It is not 
 
 Numeric rows: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/oxford_tgs_figure1_numeric_rows.csv.gz` (`{csv_hash}`; 20,020 rows).
 Extraction manifest: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/oxford_tgs_figure1_numeric_rows_manifest.json` (`{manifest_hash}`).
-Audit: `docs/core/artifacts/t13_oxford_tgs_numeric_rows_audit.json` (`{audit_hash}`).
+Audit: `docs/core/07_artifacts/topic13/t13_oxford_tgs_numeric_rows_audit.json` (`{audit_hash}`).
 
 The rows preserve the Oxford source's Figure 1 time/intensity data and its
 `yy1 - yy` subtraction at the selected map point. They are a comparison-only

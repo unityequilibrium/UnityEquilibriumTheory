@@ -1,39 +1,22 @@
-#!/usr/bin/env python3
-"""
-Reset 0.1 Galaxy Rotation Problem Logs
+"""Compatibility shim for the migrated core tooling path."""
 
-Topic-specific reset script for 0.1_Galaxy_Rotation_Problem topic.
-This topic has moderate logs (371 items) and may need periodic cleanup.
-"""
+from __future__ import annotations
 
-import sys
+import runpy
 from pathlib import Path
 
-# Add parent directory to path to import the core reset system
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
-from reset_topic_logs import LogResetter
+_CANONICAL_RELATIVE = "docs/scripts/core/maintenance/log/reset_logs/reset_0.1_galaxy_rotation.py"
 
 
-def main():
-    """Reset logs for 0.1_Galaxy_Rotation_Problem topic."""
-    print("=" * 80)
-    print("RESET LOGS: 0.1_Galaxy_Rotation_Problem")
-    print("=" * 80)
-    print()
-    print("This topic has 371 log files.")
-    print()
-
-    # Create resetter
-    resetter = LogResetter(dry_run=False, verbose=True)
-
-    # Reset logs, keeping 10 most recent
-    print("Keeping 10 most recent timestamp folders...")
-    resetter.reset_topic("0.1_Galaxy_Rotation_Problem", keep_recent=10, force=False)
-
-    # Generate report
-    resetter.generate_report()
+def _run() -> None:
+    current = Path(__file__).resolve()
+    for ancestor in (current.parent, *current.parents):
+        candidate = ancestor / _CANONICAL_RELATIVE
+        if candidate.exists():
+            runpy.run_path(str(candidate), run_name="__main__")
+            return
+    raise FileNotFoundError(f"canonical tooling script not found: {_CANONICAL_RELATIVE}")
 
 
 if __name__ == "__main__":
-    main()
+    _run()

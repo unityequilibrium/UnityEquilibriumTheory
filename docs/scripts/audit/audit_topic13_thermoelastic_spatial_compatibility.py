@@ -18,11 +18,11 @@ if str(ROOT) not in sys.path:
 from docs.core.uet_thermoelastic_spatial_compatibility import (
     isotropic_stiffness, spatial_response,
 )
-ARTIFACT = "docs/core/artifacts/t13_thermoelastic_spatial_compatibility_audit.json"
-REGISTRY = "docs/core/artifacts/uet_equation_correspondence_registry_topic13_spatial_compatibility_addendum.json"
+ARTIFACT = "docs/core/07_artifacts/topic13/t13_thermoelastic_spatial_compatibility_audit.json"
+REGISTRY = "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_spatial_compatibility_addendum.json"
 EQUATION_ID = "uet.o2.thermal.thermoelastic_spatial_compatibility"
 PROTECTED = [
-    "docs/core/artifacts/t13_topic13_closure_matrix.json",
+    "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
     "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
 ]
 EVIDENCE = [
@@ -30,7 +30,7 @@ EVIDENCE = [
     "docs/core/uet_thermoelastic_spatial_compatibility.py",
     "docs/core/test/test_topic13_thermoelastic_spatial_compatibility.py",
     "docs/scripts/audit/audit_topic13_thermoelastic_spatial_compatibility.py",
-    "docs/core/artifacts/t13_anisotropic_thermoelastic_response_bridge_audit.json",
+    "docs/core/07_artifacts/topic13/t13_anisotropic_thermoelastic_response_bridge_audit.json",
 ]
 
 
@@ -150,7 +150,7 @@ def main():
     (ROOT/ARTIFACT).write_text(json.dumps(result, indent=2, allow_nan=False)+"\n", encoding="utf-8")
     entry["evidence_artifacts"] = [{"path": ARTIFACT, "sha256": digest(ARTIFACT)}]
     registry = {"schema_version": "uet-equation-registry-addendum-v1", "status": "CONDITIONAL_INTERFACE_NOT_ACCEPTED_UET_ACTION",
-                "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+                "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
                 "equation_entries": [entry], "full_core_unlock": False, "claim_promotion": False}
     (ROOT/REGISTRY).write_text(json.dumps(registry, indent=2, allow_nan=False)+"\n", encoding="utf-8")
     print(result["verification_status"])

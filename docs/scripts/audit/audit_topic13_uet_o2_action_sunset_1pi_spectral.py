@@ -36,10 +36,10 @@ from docs.core.uet_covariant_matter import CovariantMatterConfig  # noqa: E402
 from docs.core.uet_covariant_response import CovariantResponseConfig  # noqa: E402
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_action_sunset_1pi_spectral_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_action_sunset_1pi_spectral_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_action_sunset_1pi_spectral.py"
 COMPARATOR_MODULE = ROOT / "docs/core/uet_o2_sunset_dispersion_interface.py"
-CONTINUUM_ARTIFACT = ROOT / "docs/core/artifacts/t13_uet_o2_continuum_sunset_cut_audit.json"
+CONTINUUM_ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_continuum_sunset_cut_audit.json"
 
 
 def sha256(path: Path) -> str:
@@ -214,7 +214,7 @@ def main() -> int:
             "sha256": sha256(COMPARATOR_MODULE),
         },
         {
-            "path": "docs/core/artifacts/t13_uet_o2_continuum_sunset_cut_audit.json",
+            "path": "docs/core/07_artifacts/topic13/t13_uet_o2_continuum_sunset_cut_audit.json",
             "sha256": sha256(CONTINUUM_ARTIFACT),
         },
     ]

@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-LANE = ROOT / "docs/core/artifacts/t13_mp48_spectral_csrc_reproduction_audit.json"
+LANE = ROOT / "docs/core/07_artifacts/topic13/t13_mp48_spectral_csrc_reproduction_audit.json"
 FULL = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
     "topic13_full_thermodynamic_bridge_core_ready_gate.json"
@@ -52,6 +52,6 @@ def test_full_gate_keeps_spectral_lane_separate_from_source_and_alpha_closure() 
     assert full["claim_promotion"] is False
     assert full["verification_status"]["alpha_Phi_K"]["status"] == "BLOCKED"
     assert any(
-        item["path"] == "docs/core/artifacts/t13_mp48_spectral_csrc_reproduction_audit.json"
+        item["path"] == "docs/core/07_artifacts/topic13/t13_mp48_spectral_csrc_reproduction_audit.json"
         for item in full["evidence_artifacts"]
     )

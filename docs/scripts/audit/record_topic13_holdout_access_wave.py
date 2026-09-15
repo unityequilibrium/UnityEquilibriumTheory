@@ -25,7 +25,7 @@ WHAT_IS_ACTUALLY_CLOSED: The current audit now distinguishes metadata-only obser
 WHAT_REMAINS_OPEN: Xie 2026 remains a locked holdout and must not be used for calibration, tuning, fitting, or threshold adjustment.
 DEPENDENCY_UNLOCKED: Holdout-integrity reporting may proceed from the canonical access audit; no thermal-bridge, alpha, prediction, or external-validation dependency is unlocked.
 STATUS: `PASS_HOLDOUT_DATA_UNCONSUMED_METADATA_ONLY`; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
-WHAT_CHANGED: Added `docs/core/artifacts/t13_xie_2026_holdout_access_audit.json` (SHA-256 `c3185da0a233894d7f338138bbe6acee287194e1852a80e40b0b5f6f2134e21b`), wired it into the active full-gate and Ding source-mapping verifiers, and synchronized the major-result register/dependency gate.
+WHAT_CHANGED: Added `docs/core/07_artifacts/topic13/t13_xie_2026_holdout_access_audit.json` (SHA-256 `c3185da0a233894d7f338138bbe6acee287194e1852a80e40b0b5f6f2134e21b`), wired it into the active full-gate and Ding source-mapping verifiers, and synchronized the major-result register/dependency gate.
 EQUATION_OR_MAPPING: Access contract is `metadata_only_observed != numeric_payload_consumed`; the locked rule is `numeric_payload_consumed = used_for_fit = used_for_tuning = used_for_calibration = used_for_threshold_adjustment = false`.
 VERIFICATION: Canonical holdout audit and full-gate evidence hash agree; full-gate holdout integrity is `PASS` with metadata-only observation recorded and all numeric-consumption controls false. Focused holdout/acceptance/KMS tests pass (`7 passed`).
 CONTROLLING_BLOCKER: No blocker remains in the access-control lane. Full Topic 13 remains controlled by Ding-regime `C_src`, independent `alpha_Phi_K`, dimensional/base-Phi anchor, bridge/beta, EOS/transport/KMS/entropy, and source uncertainty blockers.
@@ -36,7 +36,7 @@ CLAIM_BOUNDARY: This closes an access-control audit only. It is not evidence for
 MANIFEST_BLOCK = """
 ## Xie 2026 Holdout Access Control (2026-08-13)
 
-Canonical audit: `docs/core/artifacts/t13_xie_2026_holdout_access_audit.json` (`c3185da0a233894d7f338138bbe6acee287194e1852a80e40b0b5f6f2134e21b`).
+Canonical audit: `docs/core/07_artifacts/topic13/t13_xie_2026_holdout_access_audit.json` (`c3185da0a233894d7f338138bbe6acee287194e1852a80e40b0b5f6f2134e21b`).
 
 The current record is explicit that metadata/article identity was observed during
 source discovery, while no numeric holdout payload, rows, curves, or source bytes

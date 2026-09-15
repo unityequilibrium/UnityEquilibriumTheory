@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/artifacts/t13_huang_2023_supplementary_payload_boundary_audit.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_huang_2023_supplementary_payload_boundary_audit.json"
 
 
 def test_huang_public_supplementary_boundary_is_source_locked_without_payload() -> None:

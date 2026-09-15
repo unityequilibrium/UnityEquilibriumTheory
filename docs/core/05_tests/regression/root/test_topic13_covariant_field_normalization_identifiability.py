@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_covariant_field_normalization_identifiability_no_go.json"
 
 
 def test_field_rescaling_no_go_is_closed_only_for_the_lane() -> None:

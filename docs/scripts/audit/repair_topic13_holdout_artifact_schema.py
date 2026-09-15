@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-PATH = ROOT / "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json"
+PATH = ROOT / "docs/core/07_artifacts/topic13/t13_xie_2026_holdout_access_audit.json"
 
 
 def main() -> int:

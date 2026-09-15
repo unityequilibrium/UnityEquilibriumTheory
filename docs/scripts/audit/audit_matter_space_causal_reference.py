@@ -29,9 +29,9 @@ from docs.core.uet_matter_space import (  # noqa: E402
 )
 
 
-OUT = ROOT / "docs/core/artifacts/matter_space_causal_reference_verification.json"
+OUT = ROOT / "docs/core/07_artifacts/verification/matter_space_causal_reference_verification.json"
 DEFAULT_VERIFICATION = (
-    ROOT / "docs/core/artifacts/matter_space_variational_verification.json"
+    ROOT / "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
 )
 
 

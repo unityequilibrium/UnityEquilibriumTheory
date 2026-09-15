@@ -1,50 +1,22 @@
+"""Compatibility shim for the migrated core tooling path."""
+
+from __future__ import annotations
+
+import runpy
 from pathlib import Path
-import shutil
 
-# Robust Path: scripts/Maintenance -> docs
-current_file = Path(__file__).resolve()
-root = current_file.parents[2] / "topics"
+_CANONICAL_RELATIVE = "docs/scripts/core/maintenance/fix_paths.py"
 
 
-def fix_paths():
-    if not root.exists():
-        print(f"Root not found: {root}")
-        return
-
-    # 1. Update Scripts
-    for path in root.rglob("test_*.py"):
-        try:
-            content = path.read_text(encoding="utf-8")
-            if 'parents[1] / "Result"' in content:
-                new_content = content.replace(
-                    'parents[1] / "Result"', 'parents[2] / "Result"'
-                )
-                path.write_text(new_content, encoding="utf-8")
-                print(f"Fixed path in {path.name}")
-        except Exception as e:
-            print(f"Error reading {path}: {e}")
-
-    # 2. Move Files
-    for code_res in root.rglob("Code/Result"):
-        if code_res.is_dir():
-            # Target is Topic/Result
-            # Code/Result -> Code -> Topic -> Result
-            topic_res = code_res.parents[1] / "Result"
-            topic_res.mkdir(parents=True, exist_ok=True)
-
-            for item in code_res.iterdir():
-                if item.is_file():
-                    target = topic_res / item.name
-                    shutil.move(str(item), str(target))
-                    print(f"Moved {item.name} to {topic_res}")
-
-            # Remove empty Code/Result
-            try:
-                code_res.rmdir()
-                print(f"Removed empty {code_res}")
-            except:
-                pass
+def _run() -> None:
+    current = Path(__file__).resolve()
+    for ancestor in (current.parent, *current.parents):
+        candidate = ancestor / _CANONICAL_RELATIVE
+        if candidate.exists():
+            runpy.run_path(str(candidate), run_name="__main__")
+            return
+    raise FileNotFoundError(f"canonical tooling script not found: {_CANONICAL_RELATIVE}")
 
 
 if __name__ == "__main__":
-    fix_paths()
+    _run()

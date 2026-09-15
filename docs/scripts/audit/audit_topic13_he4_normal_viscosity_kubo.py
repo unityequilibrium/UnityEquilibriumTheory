@@ -24,10 +24,10 @@ PACKAGE = ROOT / (
     "he4_svp_normal_viscosity_kubo_source_package.json"
 )
 MODULE = ROOT / "docs/core/he4_normal_viscosity_kubo.py"
-CALIBRATION = ROOT / "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json"
-SI_BETA = ROOT / "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json"
-HEAT_ENTROPY = ROOT / "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json"
-OUT = ROOT / "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json"
+CALIBRATION = ROOT / "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json"
+SI_BETA = ROOT / "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json"
+HEAT_ENTROPY = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_he4_normal_viscosity_kubo_audit.json"
 
 
 def load(path: Path) -> dict:

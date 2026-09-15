@@ -28,9 +28,9 @@ def repair_full_gate() -> None:
             "    source_package_path, source_package = load(\n"
             "        \"docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_second_sound_source_package.json\"\n"
             "    )\n"
-            "    no_go_path, no_go = load(\"docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json\")\n"
-            "    telegraph_path, telegraph = load(\"docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json\")\n"
-            "    coupled_path, coupled = load(\"docs/core/artifacts/matter_space_flux_phi_coupled_verification.json\")\n",
+            "    no_go_path, no_go = load(\"docs/core/07_artifacts/archive/conserved_c_finite_cone_no_go_assessment.json\")\n"
+            "    telegraph_path, telegraph = load(\"docs/core/07_artifacts/verification/matter_space_conserved_flux_telegraph_verification.json\")\n"
+            "    coupled_path, coupled = load(\"docs/core/07_artifacts/verification/matter_space_flux_phi_coupled_verification.json\")\n",
             "full-gate causal artifact inputs",
         )
         text = replace_once(
@@ -141,8 +141,8 @@ def repair_no_go_sync() -> None:
             text,
             "    no_go_hash = hashlib.sha256(NO_GO.read_bytes()).hexdigest()\n",
             "    no_go_hash = hashlib.sha256(NO_GO.read_bytes()).hexdigest()\n"
-            "    telegraph_path = ROOT / \"docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json\"\n"
-            "    coupled_path = ROOT / \"docs/core/artifacts/matter_space_flux_phi_coupled_verification.json\"\n"
+            "    telegraph_path = ROOT / \"docs/core/07_artifacts/verification/matter_space_conserved_flux_telegraph_verification.json\"\n"
+            "    coupled_path = ROOT / \"docs/core/07_artifacts/verification/matter_space_flux_phi_coupled_verification.json\"\n"
             "    telegraph = json.loads(telegraph_path.read_text(encoding=\"utf-8-sig\"))\n"
             "    coupled = json.loads(coupled_path.read_text(encoding=\"utf-8-sig\"))\n"
             "    named_finite_cone_branch_pass = telegraph.get(\"status\") == \"PASS\" and telegraph.get(\"major_result\", {}).get(\"closure_level\") == \"CLOSED_FOR_LANE\"\n"

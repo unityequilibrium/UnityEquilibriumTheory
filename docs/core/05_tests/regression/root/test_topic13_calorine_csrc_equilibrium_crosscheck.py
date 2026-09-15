@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/artifacts/t13_calorine_csrc_equilibrium_crosscheck_audit.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_calorine_csrc_equilibrium_crosscheck_audit.json"
 
 
 def test_calorine_equilibrium_crosscheck_is_scoped_and_source_separated() -> None:

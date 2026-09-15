@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-AUDIT = ROOT / "docs/core/artifacts/t13_gatech_standard_transport_comparator_audit.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_gatech_standard_transport_comparator_audit.json"
 
 
 def load(path: Path) -> dict:

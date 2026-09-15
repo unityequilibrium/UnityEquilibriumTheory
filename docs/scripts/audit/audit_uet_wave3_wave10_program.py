@@ -89,27 +89,27 @@ def wave(
 
 
 def build() -> dict[str, Any]:
-    foundation_path = ROOT / "docs/core/artifacts/uet_foundation_dependency_gate.json"
-    wording_path = ROOT / "docs/core/artifacts/impact_effect_legacy_wording_audit.json"
+    foundation_path = ROOT / "docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json"
+    wording_path = ROOT / "docs/core/07_artifacts/verification/impact_effect_legacy_wording_audit.json"
     foundation = load(foundation_path)
     wording = load(wording_path)
     foundation_status = status_of(foundation)
     foundation_blocked = foundation_status in {"BLOCKED", "FAIL", "WARN"}
 
-    causal = load(ROOT / "docs/core/artifacts/matter_space_causal_lane_comparison.json")
-    causal_selection = load(ROOT / "docs/core/artifacts/matter_space_causal_lane_selection.json")
+    causal = load(ROOT / "docs/core/07_artifacts/archive/matter_space_causal_lane_comparison.json")
+    causal_selection = load(ROOT / "docs/core/07_artifacts/archive/matter_space_causal_lane_selection.json")
     causal_status = status_of(causal_selection)
-    thermal = load(ROOT / "docs/core/artifacts/thermal_observable_bridge_verification.json")
-    observable = load(ROOT / "docs/core/artifacts/matter_space_observable_verification.json")
-    persistence_dynamic = load(ROOT / "docs/core/artifacts/resource_selection_dynamic_game_verification.json")
-    persistence_thermal = load(ROOT / "docs/core/artifacts/resource_selection_thermal_bridge_verification.json")
-    extended_closure = load(ROOT / "docs/core/artifacts/uet_foundation_extended_wave_closure.json")
-    eos = load(ROOT / "docs/core/artifacts/o2_finite_density_eos_verification.json")
-    transport = load(ROOT / "docs/core/artifacts/covariant_superfluid_transport_verification.json")
-    gr = load(ROOT / "docs/core/artifacts/uet_gr_research_program_gate.json")
-    carrier = load(ROOT / "docs/core/artifacts/carrier_neutral_comparator_contract.json")
-    photon = load(ROOT / "docs/core/artifacts/photon_observer_baseline_verification.json")
-    pilot_sync = load(ROOT / "docs/core/artifacts/matter_space_topic_pilot_sync.json")
+    thermal = load(ROOT / "docs/core/07_artifacts/topic13/thermal_observable_bridge_verification.json")
+    observable = load(ROOT / "docs/core/07_artifacts/verification/matter_space_observable_verification.json")
+    persistence_dynamic = load(ROOT / "docs/core/07_artifacts/provenance/resource_selection_dynamic_game_verification.json")
+    persistence_thermal = load(ROOT / "docs/core/07_artifacts/provenance/resource_selection_thermal_bridge_verification.json")
+    extended_closure = load(ROOT / "docs/core/07_artifacts/gates/uet_foundation_extended_wave_closure.json")
+    eos = load(ROOT / "docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json")
+    transport = load(ROOT / "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json")
+    gr = load(ROOT / "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json")
+    carrier = load(ROOT / "docs/core/07_artifacts/archive/carrier_neutral_comparator_contract.json")
+    photon = load(ROOT / "docs/core/07_artifacts/verification/photon_observer_baseline_verification.json")
+    pilot_sync = load(ROOT / "docs/core/07_artifacts/archive/matter_space_topic_pilot_sync.json")
     phase = load(ROOT / "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_matter_space_coupled_diagnostic.json")
     thermal_pilot = load(ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json")
     phase_rerun = load(ROOT / "docs/topics/0.11_Phase_Transitions/Result/artifacts/matter_space_0_11_characteristic_lane_rerun.json")
@@ -122,7 +122,7 @@ def build() -> dict[str, Any]:
             0,
             "Foundation inventory and metadata repair",
             controller_of(foundation),
-            ["docs/core/artifacts/uet_foundation_dependency_gate.json", "docs/core/artifacts/uet_foundation_equation_inventory.json"],
+            ["docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json", "docs/core/07_artifacts/gates/uet_foundation_equation_inventory.json"],
             foundation_status,
             "inventory and correspondence repair only",
             foundation_blocked,
@@ -131,7 +131,7 @@ def build() -> dict[str, Any]:
             1,
             "Ontology and standard-physics correspondence",
             wording.get("next_controller", "active prose legacy wording review") + "; complete F2 lane matrix",
-            ["docs/core/artifacts/uet_equation_correspondence_registry.json", "docs/core/artifacts/matter_space_ontology_contract.json", "docs/core/artifacts/impact_effect_legacy_wording_audit.json", "docs/core/artifacts/uet_topic_formula_correspondence_manifest.json"],
+            ["docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json", "docs/core/07_artifacts/correspondence/matter_space_ontology_contract.json", "docs/core/07_artifacts/verification/impact_effect_legacy_wording_audit.json", "docs/core/07_artifacts/provenance/uet_topic_formula_correspondence_manifest.json"],
             foundation.get("gates", {}).get("F2_physical_correspondence", {}).get("status", "BLOCKED"),
             "lane-specific correspondence; no universal identity",
             foundation_blocked,
@@ -140,7 +140,7 @@ def build() -> dict[str, Any]:
             2,
             "Units and derivation registry",
             "complete dimensional contract and derivation-origin coverage",
-            ["docs/core/artifacts/matter_space_formula_audit.json", "docs/core/artifacts/o2_eos_formula_audit.json"],
+            ["docs/core/07_artifacts/correspondence/matter_space_formula_audit.json", "docs/core/07_artifacts/correspondence/o2_eos_formula_audit.json"],
             foundation.get("gates", {}).get("F3_units", {}).get("status", "BLOCKED"),
             "normalized/natural lanes only until dimensional maps close",
             foundation_blocked,
@@ -149,7 +149,7 @@ def build() -> dict[str, Any]:
             3,
             "Mathematical closure and causal two-arm decision",
             causal_selection.get("next_controller", controller_of(causal_selection)) + "; normalized observable operator verified; SI mapping remains open",
-            ["docs/core/artifacts/matter_space_causal_lane_selection.json", "docs/core/artifacts/matter_space_characteristic_cone_verification.json", "docs/core/artifacts/matter_space_finite_cone_shared_ledger_integration.json", "docs/core/artifacts/matter_space_causal_lane_comparison.json", "docs/core/artifacts/matter_space_causal_reference_verification.json", "docs/core/artifacts/matter_space_dependency_gate.json", "docs/core/artifacts/matter_space_observable_verification.json"],
+            ["docs/core/07_artifacts/archive/matter_space_causal_lane_selection.json", "docs/core/07_artifacts/verification/matter_space_characteristic_cone_verification.json", "docs/core/07_artifacts/archive/matter_space_finite_cone_shared_ledger_integration.json", "docs/core/07_artifacts/archive/matter_space_causal_lane_comparison.json", "docs/core/07_artifacts/verification/matter_space_causal_reference_verification.json", "docs/core/07_artifacts/gates/matter_space_dependency_gate.json", "docs/core/07_artifacts/verification/matter_space_observable_verification.json"],
             causal_status,
             "selected characteristic finite-cone candidate plus conserved-C comparator; no physical promotion",
             foundation_blocked,
@@ -158,7 +158,7 @@ def build() -> dict[str, Any]:
             4,
             "Observable mapping and synthetic control",
             "normalized_observable_operator_passes; dimensional_observable_operator_and_uncertainty_missing",
-            ["docs/core/artifacts/thermal_observable_bridge_verification.json", "docs/core/artifacts/resource_selection_thermal_bridge_verification.json", "docs/core/artifacts/matter_space_research_program_gate.json", "docs/core/artifacts/matter_space_observable_verification.json"],
+            ["docs/core/07_artifacts/topic13/thermal_observable_bridge_verification.json", "docs/core/07_artifacts/provenance/resource_selection_thermal_bridge_verification.json", "docs/core/07_artifacts/gates/matter_space_research_program_gate.json", "docs/core/07_artifacts/verification/matter_space_observable_verification.json"],
             "PASS_WITH_OPEN_SI_MAPPING" if status_of(observable).startswith("PASS") else status_of(thermal),
             "declared measurement operators and simulation-only controls",
             foundation_blocked,
@@ -167,7 +167,7 @@ def build() -> dict[str, Any]:
             5,
             "Topic 0.11 matter-space phase pilot",
             pilot_sync.get("topic_0_11", {}).get("controller", phase.get("controlling_blocker", controller_of(phase))),
-            ["docs/core/artifacts/matter_space_phase_pilot.json", "docs/core/artifacts/matter_space_topic_pilot_sync.json", "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_matter_space_phase_coupling_diagnostic.json", "docs/topics/0.11_Phase_Transitions/Result/artifacts/matter_space_0_11_characteristic_lane_rerun.json", "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_conserved_order_spectral_finite_size_replication.json", "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_noether_phase_field_dependency_gate.json"],
+            ["docs/core/07_artifacts/archive/matter_space_phase_pilot.json", "docs/core/07_artifacts/archive/matter_space_topic_pilot_sync.json", "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_matter_space_phase_coupling_diagnostic.json", "docs/topics/0.11_Phase_Transitions/Result/artifacts/matter_space_0_11_characteristic_lane_rerun.json", "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_conserved_order_spectral_finite_size_replication.json", "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_noether_phase_field_dependency_gate.json"],
             status_of(phase),
             "internal normalized diagnostic; no universality or mass-generation claim",
             foundation_blocked,
@@ -176,7 +176,7 @@ def build() -> dict[str, Any]:
             6,
             "Topic 0.13 thermodynamic and thermal pilot",
             thermal_pilot.get("controlling_blocker", controller_of(thermal_pilot)),
-            ["docs/core/artifacts/matter_space_topic_pilot_sync.json", "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json", "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_0_13_characteristic_thermal_lane_rerun.json", "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_second_sound_source_package.json", "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_observable_map_readiness.json"],
+            ["docs/core/07_artifacts/archive/matter_space_topic_pilot_sync.json", "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json", "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_0_13_characteristic_thermal_lane_rerun.json", "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_second_sound_source_package.json", "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_observable_map_readiness.json"],
             status_of(thermal_pilot),
             "simulation-only Fourier/Cattaneo/trace comparator; external validation blocked",
             foundation_blocked,
@@ -185,7 +185,7 @@ def build() -> dict[str, Any]:
             7,
             "O(2) finite-density EOS and covariant transport",
             gr.get("controlling_blocker", controller_of(gr)),
-            ["docs/core/artifacts/o2_finite_density_eos_verification.json", "docs/core/artifacts/covariant_superfluid_transport_verification.json", "docs/core/artifacts/uet_gr_research_program_gate.json"],
+            ["docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json", "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json", "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json"],
             "PASS_INTERNAL_EOS_AND_IDEAL_TRANSPORT_WITH_PROGRAM_BLOCKER" if status_of(eos) == "PASS" and status_of(transport) == "PASS" else "BLOCKED",
             "tree-level finite-density O(2) EOS and ideal covariant constitutive structure",
             foundation_blocked,
@@ -194,7 +194,7 @@ def build() -> dict[str, Any]:
             8,
             "Impact/effect/carrier and observer program",
             carrier.get("next_controller", controller_of(carrier)) + "; photon=SI detector/observable map and UET source-to-carrier law remain open",
-            ["docs/core/artifacts/impact_effect_core_verification.json", "docs/core/artifacts/impact_effect_dependency_gate.json", "docs/core/artifacts/carrier_neutral_comparator_contract.json", "docs/core/artifacts/carrier_observer_thought_experiment.json", "docs/core/artifacts/photon_observer_baseline_verification.json"],
+            ["docs/core/07_artifacts/verification/impact_effect_core_verification.json", "docs/core/07_artifacts/gates/impact_effect_dependency_gate.json", "docs/core/07_artifacts/archive/carrier_neutral_comparator_contract.json", "docs/core/07_artifacts/archive/carrier_observer_thought_experiment.json", "docs/core/07_artifacts/verification/photon_observer_baseline_verification.json"],
             "BLOCKED_WITH_NORMALIZED_PHOTON_BASELINE" if photon.get("standard_comparator_verification") == "PASS" else status_of(carrier),
             "carrier-neutral comparator contract; no photon/neutrino/positron identity for R_gen",
             foundation_blocked,
@@ -203,7 +203,7 @@ def build() -> dict[str, Any]:
             9,
             "Standard gravity, orbit, and open-system correspondence",
             gr.get("controlling_blocker", controller_of(gr)),
-            ["docs/core/artifacts/orbit_cosmology_correspondence_gate.json", "docs/core/artifacts/gr_closed_limit_verification.json", "docs/core/artifacts/gr_correspondence_claim_gate.json", "docs/core/artifacts/uet_gr_research_program_gate.json", "docs/topics/0.19_Gravity_GR/Result/artifacts/0_19_core_gr_program_dependency_gate.json"],
+            ["docs/core/07_artifacts/gates/orbit_cosmology_correspondence_gate.json", "docs/core/07_artifacts/verification/gr_closed_limit_verification.json", "docs/core/07_artifacts/gates/gr_correspondence_claim_gate.json", "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json", "docs/topics/0.19_Gravity_GR/Result/artifacts/0_19_core_gr_program_dependency_gate.json"],
             status_of(gr),
             "local covariant/closed-limit checks only; no GR derivation or global-open claim",
             foundation_blocked,
@@ -246,19 +246,19 @@ def build() -> dict[str, Any]:
             "dynamic_selection": {
                 "status": status_of(persistence_dynamic),
                 "controller": controller_of(persistence_dynamic),
-                "artifact": "docs/core/artifacts/resource_selection_dynamic_game_verification.json",
+                "artifact": "docs/core/07_artifacts/provenance/resource_selection_dynamic_game_verification.json",
             },
             "thermal_bridge": {
                 "status": status_of(persistence_thermal),
                 "controller": controller_of(persistence_thermal),
-                "artifact": "docs/core/artifacts/resource_selection_thermal_bridge_verification.json",
+                "artifact": "docs/core/07_artifacts/provenance/resource_selection_thermal_bridge_verification.json",
             },
             "claim_boundary": "normalized internal diagnostics only; physical work/heat/entropy mapping and external validation remain open",
         },
         "extended_wave_closure": {
             "status": status_of(extended_closure),
             "controller": controller_of(extended_closure),
-            "artifact": "docs/core/artifacts/uet_foundation_extended_wave_closure.json",
+            "artifact": "docs/core/07_artifacts/gates/uet_foundation_extended_wave_closure.json",
         },
         "claim_boundary": {
             "allowed": ["candidate collective-behaviour coordinate", "candidate normalized effective model", "internal diagnostic", "tree-level finite-density O(2) EOS", "covariant ideal-superfluid constitutive structure", "simulation/comparator contract"],

@@ -30,7 +30,7 @@ PACKAGE = ROOT / (
     "he4_svp_o2_physical_anchor_source_package.json"
 )
 MODULE = ROOT / "docs/core/he4_svp_reference.py"
-OUT = ROOT / "docs/core/artifacts/t13_he4_svp_physical_anchor_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_he4_svp_physical_anchor_audit.json"
 
 
 def load(path: Path) -> dict:

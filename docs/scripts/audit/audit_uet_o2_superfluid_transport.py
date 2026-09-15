@@ -703,10 +703,10 @@ def build_artifacts(
         "benchmark_role": "program_gate",
         "method_label": "monotonic_gr_research_stage_gate",
         "input_identity": {
-            "eos_verification": "docs/core/artifacts/o2_finite_density_eos_verification.json",
-            "eos_formula_audit": "docs/core/artifacts/o2_eos_formula_audit.json",
-            "transport_verification": "docs/core/artifacts/covariant_superfluid_transport_verification.json",
-            "transport_contract": "docs/core/artifacts/covariant_superfluid_transport_contract.json",
+            "eos_verification": "docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json",
+            "eos_formula_audit": "docs/core/07_artifacts/correspondence/o2_eos_formula_audit.json",
+            "transport_verification": "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json",
+            "transport_contract": "docs/core/07_artifacts/archive/covariant_superfluid_transport_contract.json",
         },
         "notes": [
             "The EOS and ideal T=0 constitutive gates pass at tree level.",

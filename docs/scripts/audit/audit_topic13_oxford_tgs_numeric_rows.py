@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[3]
 BASE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research"
 MANIFEST = BASE / "oxford_tgs_figure1_numeric_rows_manifest.json"
 CSV_GZ = BASE / "oxford_tgs_figure1_numeric_rows.csv.gz"
-OUT = ROOT / "docs/core/artifacts/t13_oxford_tgs_numeric_rows_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_oxford_tgs_numeric_rows_audit.json"
 
 
 def load_json(path: Path) -> dict:

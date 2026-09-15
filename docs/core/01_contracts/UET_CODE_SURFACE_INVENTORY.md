@@ -4,7 +4,7 @@ F0 ยังไม่จบเพียงการอ่าน `FORMULA_AUDIT.m
 เขียนลง registry ดังนั้นจึงมี static scan ของ core Python modules แยกออกมา
 
 ผลเครื่องอยู่ที่
-[`uet_code_surface_inventory.json`](../artifacts/uet_code_surface_inventory.json)
+[`uet_code_surface_inventory.json`](../07_artifacts/archive/uet_code_surface_inventory.json)
 และสร้างซ้ำได้จาก
 [`build_uet_code_surface_inventory.py`](../../scripts/audit/build_uet_code_surface_inventory.py)
 

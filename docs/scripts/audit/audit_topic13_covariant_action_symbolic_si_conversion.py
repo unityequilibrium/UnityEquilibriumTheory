@@ -13,7 +13,7 @@ CONSTANTS = ROOT / "docs/data/external/constants/codata/si_2019_exact_constants.
 MODULE = ROOT / "docs/core/thermal_covariant_action_si_conversion.py"
 RESPONSE = ROOT / "docs/core/uet_covariant_response.py"
 SPEC = ROOT / "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
-OUT = ROOT / "docs/core/artifacts/t13_covariant_action_symbolic_si_conversion_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_covariant_action_symbolic_si_conversion_audit.json"
 
 
 def load_json(path: Path) -> dict:

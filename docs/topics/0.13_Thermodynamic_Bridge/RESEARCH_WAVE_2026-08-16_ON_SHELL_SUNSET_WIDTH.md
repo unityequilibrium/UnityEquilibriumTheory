@@ -13,4 +13,4 @@ CONTROLLING_BLOCKER: `complete_off_shell_finite_temperature_1pi_self_energy_and_
 NEXT_ACTION: Derive a charged finite-temperature off-shell retarded self-energy and match its current correlator through SK/KMS; retain this neutral width as a scoped witness and do not promote it to a physical Kubo coefficient.
 CLAIM_BOUNDARY: This is a neutral natural-unit on-shell sunset-width lane. It is not a complete physical self-energy, conductivity/viscosity, entropy-current closure, SI thermal observable, alpha_Phi_K calibration, TTG prediction, or Full Topic 13 closure.
 
-EVIDENCE: `docs/core/artifacts/t13_uet_o2_on_shell_sunset_width_audit.json`; full-gate hash integration is recorded in `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.
+EVIDENCE: `docs/core/07_artifacts/topic13/t13_uet_o2_on_shell_sunset_width_audit.json`; full-gate hash integration is recorded in `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.

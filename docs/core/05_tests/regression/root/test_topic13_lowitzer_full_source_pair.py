@@ -6,7 +6,7 @@ from pathlib import Path
 
 ROOT = repo_root()
 PACKAGE_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/lowitzer_2006_graphite_pvt_full_source_package.json"
-AUDIT_REL = "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json"
+AUDIT_REL = "docs/core/07_artifacts/topic13/t13_lowitzer_graphite_pvt_full_source_pair_audit.json"
 RAW_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/lowitzer_2006_graphite_pvt.pdf"
 
 

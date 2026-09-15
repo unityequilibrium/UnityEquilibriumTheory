@@ -23,7 +23,7 @@ from docs.core.uet_o2_heat_current_kubo_match import (  # noqa: E402
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_heat_current_kubo_match_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_heat_current_kubo_match_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_heat_current_kubo_match.py"
 HEAT_MODULE = ROOT / "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py"
 CONTINUUM_MODULE = ROOT / "docs/core/uet_o2_continuum_collision_operator.py"

@@ -11,14 +11,14 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-CODE_SURFACE_PATH = ROOT / "docs/core/artifacts/uet_code_surface_inventory.json"
-COMPATIBILITY_PATH = ROOT / "docs/core/artifacts/uet_foundation_compatibility_gate.json"
-MATTER_VERIFY_PATH = ROOT / "docs/core/artifacts/matter_space_variational_verification.json"
-GR_VERIFY_PATH = ROOT / "docs/core/artifacts/gr_closed_limit_verification.json"
-O2_VERIFY_PATH = ROOT / "docs/core/artifacts/o2_finite_density_eos_verification.json"
-O2_FORMULA_PATH = ROOT / "docs/core/artifacts/o2_eos_formula_audit.json"
-TRACE_VERIFY_PATH = ROOT / "docs/core/artifacts/spacetime_trace_verification.json"
-OUTPUT = ROOT / "docs/core/artifacts/uet_core_equation_family_contract.json"
+CODE_SURFACE_PATH = ROOT / "docs/core/07_artifacts/archive/uet_code_surface_inventory.json"
+COMPATIBILITY_PATH = ROOT / "docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json"
+MATTER_VERIFY_PATH = ROOT / "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
+GR_VERIFY_PATH = ROOT / "docs/core/07_artifacts/verification/gr_closed_limit_verification.json"
+O2_VERIFY_PATH = ROOT / "docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json"
+O2_FORMULA_PATH = ROOT / "docs/core/07_artifacts/correspondence/o2_eos_formula_audit.json"
+TRACE_VERIFY_PATH = ROOT / "docs/core/07_artifacts/verification/spacetime_trace_verification.json"
+OUTPUT = ROOT / "docs/core/07_artifacts/archive/uet_core_equation_family_contract.json"
 
 
 def p(relative: str) -> Path:
@@ -88,7 +88,7 @@ FAMILIES = [
         "CONTRADICTION_AND_CONFLICT",
         "NOT_ESTABLISHED",
         "legacy comparator only; no universal physical interpretation",
-        ["docs/core/artifacts/uet_foundation_compatibility_gate.json", "docs/core/artifacts/master_equation_alignment_gate_v2.json"],
+        ["docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json", "docs/core/07_artifacts/gates/master_equation_alignment_gate_v2.json"],
         "repair potential/derivative pair, information operator declaration, and beta unit surface",
     ),
     family(
@@ -102,7 +102,7 @@ FAMILIES = [
         "INTERNAL_VARIATIONAL_GATES_PASS_CAUSAL_GATE_FAILS",
         "g=0/adiabatic/closed limits conditionally supported; physical standard limit not complete",
         "candidate normalized effective model; not SI or total-universe energy law",
-        ["docs/core/artifacts/matter_space_variational_verification.json", "docs/core/artifacts/matter_space_dependency_gate.json"],
+        ["docs/core/07_artifacts/verification/matter_space_variational_verification.json", "docs/core/07_artifacts/gates/matter_space_dependency_gate.json"],
         "repair pre-arrival leakage and then define dimensional observable map",
     ),
     family(
@@ -126,8 +126,8 @@ FAMILIES = [
         "kappa_C=0 named branch only; the original kappa_C>0 conserved-gradient causal class remains separate and blocked",
         "candidate normalized conserved flux/response comparator; not SI thermal closure, not a universal C ontology, and not global energy law",
         [
-            "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
-            "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
+            "docs/core/07_artifacts/verification/matter_space_conserved_flux_telegraph_verification.json",
+            "docs/core/07_artifacts/verification/matter_space_flux_phi_coupled_verification.json",
         ],
         "complete dimensional observable mapping and independently locked external comparison",
         formula_ids=[
@@ -155,12 +155,12 @@ FAMILIES = [
         "INTERNAL_TRACE_COMPARATOR",
         "zero-source/zero-memory/static limits conditionally support a Markovian comparator",
         "diagnostic derived observable; no substance/energy-reservoir claim",
-        ["docs/core/artifacts/spacetime_trace_verification.json", "docs/core/artifacts/trace_kernel_formula_audit.json"],
+        ["docs/core/07_artifacts/verification/spacetime_trace_verification.json", "docs/core/07_artifacts/correspondence/trace_kernel_formula_audit.json"],
         "close compact-support and dimensional measurement operator",
         formula_ids=["uet.trace.derived_observable"],
         verifier_paths=[
             "docs/core/test/test_spacetime_trace.py",
-            "docs/core/artifacts/spacetime_trace_verification.json",
+            "docs/core/07_artifacts/verification/spacetime_trace_verification.json",
         ],
         organization_review_required=True,
     ),
@@ -175,7 +175,7 @@ FAMILIES = [
         "CONDITIONALLY_COMPATIBLE_NOT_FULL_GR",
         "epsilon_nc=0/ordered reference gives exact algebraic-local null contract only",
         "candidate covariant parent; not Einstein derivation or global-universe closure",
-        ["docs/core/artifacts/gr_closed_limit_verification.json", "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md"],
+        ["docs/core/07_artifacts/verification/gr_closed_limit_verification.json", "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md"],
         "add field-equation, Bianchi/Noether, metric PDE and initial-value verification",
     ),
     family(
@@ -196,9 +196,9 @@ FAMILIES = [
         "epsilon_nc=0 gives an algebraic/local Einstein-GR residual comparison only; it is not a full GR derivation",
         "candidate natural-unit conservative parent formula evaluator; not a metric PDE solver, open-system closure, or physical GR validation",
         [
-            "docs/core/artifacts/covariant_parent_verification.json",
-            "docs/core/artifacts/covariant_parent_formula_audit.json",
-            "docs/core/artifacts/uet_main_theory_wave2_gate.json",
+            "docs/core/07_artifacts/verification/covariant_parent_verification.json",
+            "docs/core/07_artifacts/correspondence/covariant_parent_formula_audit.json",
+            "docs/core/07_artifacts/gates/uet_main_theory_wave2_gate.json",
         ],
         "close lane-specific covariant coarse-graining, then curved 3+1 initial-value/constraint evolution and dimensional observables",
         formula_ids=["uet.main_theory.covariant_parent"],
@@ -219,7 +219,7 @@ FAMILIES = [
         "CONDITIONAL_CONSTITUTIVE_NOT_MICROSCOPIC",
         "parabolic/Markovian limit is a comparator, not a derivation of microscopic transport",
         "candidate constitutive transport; coefficient provenance and SI map remain open",
-        ["docs/core/artifacts/covariant_diffusion_formula_audit.json", "docs/core/artifacts/covariant_diffusive_current_verification.json"],
+        ["docs/core/07_artifacts/correspondence/covariant_diffusion_formula_audit.json", "docs/core/07_artifacts/verification/covariant_diffusive_current_verification.json"],
         "close coefficient origin, Kubo relation and dimensional observable lane",
         formula_ids=[
             "uet.covariant_diffusion.frame_decomposition",
@@ -245,7 +245,7 @@ FAMILIES = [
         "COMPATIBLE_COMPARATOR_ONLY",
         "fixed light-cone/causal feasibility limit is analytic comparator, not UET special-case proof",
         "simulation/comparator only",
-        ["docs/core/artifacts/hyperbolic_phase_field_formula_audit.json", "docs/core/artifacts/hyperbolic_phase_field_covariant_mapping_gate.json"],
+        ["docs/core/07_artifacts/correspondence/hyperbolic_phase_field_formula_audit.json", "docs/core/07_artifacts/gates/hyperbolic_phase_field_covariant_mapping_gate.json"],
         "derive from declared action or keep permanently as external comparator",
     ),
     family(
@@ -259,7 +259,7 @@ FAMILIES = [
         "CONDITIONALLY_COMPATIBLE_NATURAL_UNITS",
         "O(2) lane is a controlled realization; does not establish universal C=mass or legacy double-well reduction",
         "tree-level EOS and ideal transport only; physical Kubo/SI/full finite-T blocked",
-        ["docs/core/artifacts/o2_finite_density_eos_verification.json", "docs/core/artifacts/o2_eos_formula_audit.json", "docs/core/artifacts/covariant_superfluid_transport_contract.json"],
+        ["docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json", "docs/core/07_artifacts/correspondence/o2_eos_formula_audit.json", "docs/core/07_artifacts/archive/covariant_superfluid_transport_contract.json"],
         "complete Kubo provenance, finite-T normal component and SI/observable map",
     ),
     family(
@@ -274,9 +274,9 @@ FAMILIES = [
         "Noether charge map does not prove legacy C field or microscopic Cahn-Hilliard dissipation",
         "mapping/diagnostic only; no universal C ontology",
         [
-            "docs/core/artifacts/noether_phase_field_map_formula_audit.json",
-            "docs/core/artifacts/noether_phase_field_state_map_verification.json",
-            "docs/core/artifacts/noether_phase_field_dependency_gate.json",
+            "docs/core/07_artifacts/correspondence/noether_phase_field_map_formula_audit.json",
+            "docs/core/07_artifacts/verification/noether_phase_field_state_map_verification.json",
+            "docs/core/07_artifacts/gates/noether_phase_field_dependency_gate.json",
         ],
         "derive coarse-graining/gradient EFT and prove observable map without many-to-one ambiguity",
         formula_ids=[
@@ -321,7 +321,7 @@ FAMILIES = [
         "UNIT_SEMANTICS_OPEN",
         "Landauer SI lower bound and normalized beta are not the same quantity",
         "parameter support only; no beta-as-energy claim",
-        ["docs/core/artifacts/uet_foundation_compatibility_gate.json", "docs/core/uet_parameters.py"],
+        ["docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json", "docs/core/uet_parameters.py"],
         "split normalized/SI APIs and close provenance for every physical coefficient",
         equation_family=False,
     ),
@@ -336,7 +336,7 @@ FAMILIES = [
         "OBSERVABLE_MAP_OPEN",
         "without observable map no real-data fit can test the theory",
         "diagnostic/internal only",
-        ["docs/core/artifacts/uet_foundation_dependency_gate.json", "docs/core/UET_FOUNDATION_COMPATIBILITY_AUDIT.md"],
+        ["docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json", "docs/core/UET_FOUNDATION_COMPATIBILITY_AUDIT.md"],
         "define O[C,Phi,Pi,R], units, uncertainty, resolution and nuisance parameters",
         equation_family=False,
     ),
@@ -357,7 +357,7 @@ FAMILIES = [
         "NOT_AN_EQUATION_FAMILY",
         "not applicable until a support path is promoted into a declared equation family",
         "no independent physics claim",
-        ["docs/core/artifacts/uet_code_surface_inventory.json"],
+        ["docs/core/07_artifacts/archive/uet_code_surface_inventory.json"],
         "link formula-bearing support paths to an owning equation family or quarantine as legacy",
         equation_family=False,
     ),

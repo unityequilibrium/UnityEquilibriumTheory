@@ -29,7 +29,7 @@ from docs.core.uet_matter_space_split import (  # noqa: E402
 )
 
 
-OUT = ROOT / "docs/core/artifacts/matter_space_causal_split_verification.json"
+OUT = ROOT / "docs/core/07_artifacts/verification/matter_space_causal_split_verification.json"
 CORE_SOURCE = ROOT / "docs/core/uet_matter_space_split.py"
 THRESHOLD = 1.0e-6
 

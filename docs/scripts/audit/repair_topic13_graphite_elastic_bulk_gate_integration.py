@@ -19,8 +19,8 @@ replace_once(
     "registry mapping",
 )
 replace_once(
-    '    nist_alpha_v_path, nist_alpha_v = load(\n        "docs/core/artifacts/t13_nist_graphite_alpha_v_source_boundary_audit.json"\n    )\n',
-    '    nist_alpha_v_path, nist_alpha_v = load(\n        "docs/core/artifacts/t13_nist_graphite_alpha_v_source_boundary_audit.json"\n    )\n    elastic_bulk_path, elastic_bulk = load(\n        "docs/core/artifacts/t13_graphite_elastic_bulk_modulus_source_audit.json"\n    )\n',
+    '    nist_alpha_v_path, nist_alpha_v = load(\n        "docs/core/07_artifacts/topic13/t13_nist_graphite_alpha_v_source_boundary_audit.json"\n    )\n',
+    '    nist_alpha_v_path, nist_alpha_v = load(\n        "docs/core/07_artifacts/topic13/t13_nist_graphite_alpha_v_source_boundary_audit.json"\n    )\n    elastic_bulk_path, elastic_bulk = load(\n        "docs/core/07_artifacts/topic13/t13_graphite_elastic_bulk_modulus_source_audit.json"\n    )\n',
     "elastic bulk artifact load",
 )
 replace_once(

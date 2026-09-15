@@ -81,8 +81,12 @@ def git_dirty_paths() -> set[str]:
 
 
 def existing_metadata() -> dict[str, dict[str, Any]]:
-    manifest = load_json(CORE / "artifacts" / "uet_core_file_manifest.json")
-    registry = load_json(CORE / "artifacts" / "uet_research_organization_registry.json")
+    manifest = load_json(
+        ROOT / canonical_path_for("docs/core/07_artifacts/provenance/uet_core_file_manifest.json")
+    )
+    registry = load_json(
+        ROOT / canonical_path_for("docs/core/07_artifacts/gates/uet_research_organization_registry.json")
+    )
     merged: dict[str, dict[str, Any]] = {}
     for item in manifest.get("files", []):
         path = normalize_relative(item.get("path", ""))
@@ -316,6 +320,7 @@ def build_records() -> tuple[list[dict[str, Any]], dict[str, Any]]:
         "compatibility_counts": dict(Counter(item["compatibility_mode"] for item in records)),
         "physics_status_changes": 0,
         "physical_move_performed": False,
+        "physical_migration_complete": sum(item["current_path"] != item["canonical_path"] for item in active_records) == 0,
     }
     return records, summary
 
@@ -338,6 +343,7 @@ def render_report(payload: dict[str, Any]) -> str:
         f"- Dirty sources held back: **{summary['dirty_sources']}**",
         f"- Duplicate targets: **{len(summary['duplicate_targets'])}**",
         f"- Existing target conflicts: **{len(summary['existing_target_conflicts'])}**",
+        f"- Physical migration complete: **{summary['physical_migration_complete']}**",
         f"- Physical move performed in this run: **{summary['physical_move_performed']}**",
         f"- Physics status changes: **{summary['physics_status_changes']}**",
         "",
@@ -355,7 +361,7 @@ def render_report(payload: dict[str, Any]) -> str:
         "- Dirty user files are held back and never overwritten.",
         "- Root entrypoints and the public facade stay in place.",
         "- Python implementation moves create root shims; Markdown moves create redirects.",
-        "- Generated artifacts move only after generator and consumer checkpoints.",
+        "- Generated artifacts are canonicalized by a provenance-aware migration; generator/consumer validation remains a separate evidence gate.",
         "- Organization migration is not a scientific pass.",
         "",
     ]

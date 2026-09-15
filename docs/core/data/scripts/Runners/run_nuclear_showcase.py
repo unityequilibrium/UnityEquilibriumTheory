@@ -1,64 +1,22 @@
-import sys
-import subprocess
-import time
+"""Compatibility shim for the migrated core tooling path."""
+
+from __future__ import annotations
+
+import runpy
 from pathlib import Path
 
-# --- PATH SETUP ---
-current_path = Path(__file__).resolve()
-repo_root = current_path.parent.parent.parent
-if str(repo_root) not in sys.path:
-    sys.path.insert(0, str(repo_root))
+_CANONICAL_RELATIVE = "docs/scripts/core/runners/run_nuclear_showcase.py"
 
 
-def print_header(title):
-    print("\n" + "=" * 60)
-    print(f"🎬 UET LIVE SHOWCASE: {title}")
-    print("=" * 60 + "\n")
-
-
-def run_script(rel_path, description):
-    print(f"▶️  Running: {description}...")
-    full_path = repo_root / rel_path
-    if not full_path.exists():
-        print(f"❌ Error: Script not found at {full_path}")
-        return
-
-    start_time = time.time()
-    result = subprocess.run([sys.executable, str(full_path)], capture_output=True, text=True)
-    end_time = time.time()
-
-    if result.returncode == 0:
-        print(f"✅ PASS ({end_time - start_time:.2f}s)")
-        print("\n".join(["    " + line for line in result.stdout.splitlines() if line.strip()]))
-    else:
-        print(f"❌ FAIL")
-        print(result.stderr)
-    print("-" * 60)
-
-
-def main():
-    print_header("NUCLEAR POWER & THE STRONG FORCE")
-
-    # 1. Competitor Baseline (The Standard - now verified)
-    run_script(
-        "docs/topics/0.5_Nuclear_Binding_Hadrons/Code/04_Competitor/Competitor_Nuclear_Baseline.py",
-        "Nuclear Binding Energy (H-2 to U-238)",
-    )
-
-    # 2. Strong Force & Color Confinement
-    run_script(
-        "docs/topics/0.5_Nuclear_Binding_Hadrons/Code/03_Research/Research_Strong_Force.py",
-        "Strong Force: Confinement & Alpha_s Running",
-    )
-
-    # 3. Heavy Nuclei (Island of Stability)
-    run_script(
-        "docs/topics/0.16_Heavy_Nuclei_Fission/Code/01_Engine/Engine_Heavy_Nuclei.py",
-        "Heavy Nuclei Stability (Predicting Z=126)",
-    )
-
-    print("\n[CONCLUSION] Nuclear Forces are Geometry. Energy is Information.")
+def _run() -> None:
+    current = Path(__file__).resolve()
+    for ancestor in (current.parent, *current.parents):
+        candidate = ancestor / _CANONICAL_RELATIVE
+        if candidate.exists():
+            runpy.run_path(str(candidate), run_name="__main__")
+            return
+    raise FileNotFoundError(f"canonical tooling script not found: {_CANONICAL_RELATIVE}")
 
 
 if __name__ == "__main__":
-    main()
+    _run()

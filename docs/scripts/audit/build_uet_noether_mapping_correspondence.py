@@ -56,7 +56,7 @@ VERIFIER_PATHS = [
     "docs/core/test/test_noether_phase_field_map.py",
     "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
     "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py",
-    "docs/core/artifacts/noether_phase_field_state_map_verification.json",
+    "docs/core/07_artifacts/verification/noether_phase_field_state_map_verification.json",
 ]
 
 
@@ -401,7 +401,7 @@ def build() -> dict[str, Any]:
         "artifact": "uet_equation_correspondence_registry_noether_mapping_addendum",
         "generated_at": date.today().isoformat(),
         "generator": "docs/scripts/audit/build_uet_noether_mapping_correspondence.py",
-        "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+        "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
         "status": "CANDIDATE_ENTRY_MERGED_INTO_CENTRAL_REGISTRY",
         "equation_entries": entries,
         "open_gates": sorted(
@@ -413,7 +413,7 @@ def build() -> dict[str, Any]:
             for path in source_paths
         },
         "merge_metadata": {
-            "merged_into": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+            "merged_into": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
             "merged_on": date.today().isoformat(),
             "equation_ids": FORMULA_IDS,
             "claim_promotion": False,
@@ -451,7 +451,7 @@ def merge_into_central(payload: dict[str, Any]) -> None:
     if addendum_path in raw:
         raise ValueError("Noether addendum is already listed in the central registry")
     diffusion_marker = (
-        '      "docs/core/artifacts/uet_equation_correspondence_registry_covariant_diffusion_addendum.json"\n'
+        '      "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_covariant_diffusion_addendum.json"\n'
     )
     if raw.count(diffusion_marker) != 1:
         raise ValueError("covariant-diffusion addendum marker is missing or ambiguous")

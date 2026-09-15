@@ -16,7 +16,7 @@ from docs.core.uet_matter_space_flux_telegraph import FluxTelegraphConfig
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/verification/matter_space_flux_phi_coupled_verification.json"
 GATE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
 
 

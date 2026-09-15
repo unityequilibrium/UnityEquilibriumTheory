@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/artifacts/t13_beta_symbol_separation_noncircularity_audit.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_beta_symbol_separation_noncircularity_audit.json"
 
 
 def test_beta_symbol_no_go_is_closed_only_for_the_lane() -> None:

@@ -19,7 +19,7 @@ from docs.core.uet_o2_charged_current_correlator import (  # noqa: E402
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_charged_current_correlator_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_charged_current_correlator_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_charged_current_correlator.py"
 CONTINUUM = ROOT / "docs/core/uet_o2_continuum_collision_operator.py"
 CONTACT = ROOT / "docs/core/uet_o2_contact_sk_transition_vertex_match.py"

@@ -16,12 +16,12 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
 INPUTS = {
-    "orbital_baseline": ROOT / "docs/core/artifacts/relational_two_body_baseline_verification.json",
-    "gr_closed_limit": ROOT / "docs/core/artifacts/gr_closed_limit_verification.json",
-    "gr_program_gate": ROOT / "docs/core/artifacts/uet_gr_research_program_gate.json",
-    "cosmological_contract": ROOT / "docs/core/artifacts/uet_cosmological_open_system_trace_contract.json",
+    "orbital_baseline": ROOT / "docs/core/07_artifacts/verification/relational_two_body_baseline_verification.json",
+    "gr_closed_limit": ROOT / "docs/core/07_artifacts/verification/gr_closed_limit_verification.json",
+    "gr_program_gate": ROOT / "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json",
+    "cosmological_contract": ROOT / "docs/core/07_artifacts/archive/uet_cosmological_open_system_trace_contract.json",
 }
-OUT = ROOT / "docs/core/artifacts/orbit_cosmology_correspondence_gate.json"
+OUT = ROOT / "docs/core/07_artifacts/gates/orbit_cosmology_correspondence_gate.json"
 
 
 def load(path: Path) -> dict[str, Any]:

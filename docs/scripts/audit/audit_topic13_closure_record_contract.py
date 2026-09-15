@@ -15,7 +15,7 @@ if str(ROOT) not in sys.path:
 from docs.core.topic13_closure_record_contract import topic13_closure_record_schema
 
 
-OUT = ROOT / "docs/core/artifacts/t13_closure_record_contract_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_closure_record_contract_audit.json"
 
 
 def main() -> int:
@@ -80,7 +80,7 @@ def main() -> int:
             "data_role": "INTERNAL_CONTRACT_NOT_CALIBRATION",
             "evidence_artifacts": [
                 "docs/core/03_lanes/topic13_support/topic13_closure_record_contract.py",
-                "docs/core/artifacts/t13_closure_record_contract_audit.json",
+                "docs/core/07_artifacts/topic13/t13_closure_record_contract_audit.json",
             ],
             "verification_status": status,
             "controlling_blocker": "three_core_input_packages_not_accepted",

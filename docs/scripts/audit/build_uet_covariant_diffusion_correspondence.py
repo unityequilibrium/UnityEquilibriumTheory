@@ -90,7 +90,7 @@ def entry(
             "docs/scripts/audit/audit_uet_gr_covariant_diffusion.py",
             "docs/core/test/test_covariant_diffusion.py",
             "docs/core/test/test_gr_covariant_diffusion_alignment.py",
-            "docs/core/artifacts/covariant_diffusive_current_verification.json",
+            "docs/core/07_artifacts/verification/covariant_diffusive_current_verification.json",
         ],
         "evidence_class": "INTERNAL_CONSTITUTIVE_NUMERICAL",
         "proof_status": proof_status,
@@ -249,7 +249,7 @@ def build() -> dict[str, Any]:
         "artifact": "uet_equation_correspondence_registry_covariant_diffusion_addendum",
         "generated_at": date.today().isoformat(),
         "generator": "docs/scripts/audit/build_uet_covariant_diffusion_correspondence.py",
-        "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+        "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
         "status": "CANDIDATE_ENTRY_MERGED_INTO_CENTRAL_REGISTRY",
         "equation_entries": entries,
         "open_gates": sorted(set(formula_audit.get("open_formula_gates", []))),
@@ -258,7 +258,7 @@ def build() -> dict[str, Any]:
             for path in (SOURCE, SPEC, FORMULA_AUDIT, VERIFICATION, CONTRACT)
         },
         "merge_metadata": {
-            "merged_into": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+            "merged_into": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
             "merged_on": date.today().isoformat(),
             "equation_ids": FORMULA_IDS,
             "claim_promotion": False,
@@ -294,7 +294,7 @@ def merge_into_central(payload: dict[str, Any]) -> None:
 
     addendum_path = str(OUTPUT.relative_to(ROOT)).replace("\\", "/")
     addenda_marker = (
-        '      "docs/core/artifacts/uet_equation_correspondence_registry_matter_space_flux_addendum.json"\n'
+        '      "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_matter_space_flux_addendum.json"\n'
     )
     if addendum_path in raw:
         raise ValueError("diffusion addendum is already listed in the central registry")

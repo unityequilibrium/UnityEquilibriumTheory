@@ -16,8 +16,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 BASE_AUDIT = ROOT / "docs/scripts/audit/audit_topic13_closure_input_packages.py"
-RECONCILIATION = ROOT / "docs/core/artifacts/t13_cv_source_reconciliation_audit.json"
-INPUT_AUDIT = ROOT / "docs/core/artifacts/t13_closure_input_package_audit.json"
+RECONCILIATION = ROOT / "docs/core/07_artifacts/topic13/t13_cv_source_reconciliation_audit.json"
+INPUT_AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json"
 
 
 def sha256(path: Path) -> str:

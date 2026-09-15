@@ -24,7 +24,7 @@ THERMAL_AUDIT_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ther
 CONSTRAINT_REL = "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_Core_Thermodynamic_Constraint_Gate.py"
 LEGACY_RESEARCH_REL = "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_Thermodynamic_Bridge.py"
 FORMULA_REL = "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md"
-OUT = ROOT / "docs/core/artifacts/t13_beta_symbol_separation_noncircularity_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_beta_symbol_separation_noncircularity_audit.json"
 
 
 def text(rel: str) -> str:
@@ -163,7 +163,7 @@ def main() -> int:
                 {"path": CONSTRAINT_REL, "sha256": sha256(CONSTRAINT_REL)},
                 {"path": LEGACY_RESEARCH_REL, "sha256": sha256(LEGACY_RESEARCH_REL)},
                 {"path": FORMULA_REL, "sha256": sha256(FORMULA_REL)},
-                {"path": "docs/core/artifacts/t13_beta_symbol_separation_noncircularity_audit.json"},
+                {"path": "docs/core/07_artifacts/topic13/t13_beta_symbol_separation_noncircularity_audit.json"},
             ],
             "verification_status": status,
             "open_blockers": [

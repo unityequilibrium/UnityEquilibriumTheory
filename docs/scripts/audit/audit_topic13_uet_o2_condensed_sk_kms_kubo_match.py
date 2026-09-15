@@ -29,10 +29,10 @@ from docs.core.uet_o2_finite_temperature_quasiparticle_eos import (  # noqa: E40
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_condensed_sk_kms_kubo_match_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_condensed_sk_kms_kubo_match_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_condensed_sk_kms_kubo_match.py"
 LOOP_MODULE = ROOT / "docs/core/uet_o2_condensed_loop_renormalized_vertex.py"
-KUBO_ADMISSION = ROOT / "docs/core/artifacts/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json"
+KUBO_ADMISSION = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json"
 
 
 def sha256(path: Path) -> str:
@@ -109,7 +109,7 @@ def main() -> int:
     evidence = [
         {"path": "docs/core/uet_o2_condensed_sk_kms_kubo_match.py", "sha256": sha256(MODULE)},
         {"path": "docs/core/uet_o2_condensed_loop_renormalized_vertex.py", "sha256": sha256(LOOP_MODULE)},
-        {"path": "docs/core/artifacts/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json", "sha256": sha256(KUBO_ADMISSION)},
+        {"path": "docs/core/07_artifacts/topic13/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json", "sha256": sha256(KUBO_ADMISSION)},
     ]
     artifact = {
         "schema_version": "t13-uet-o2-condensed-sk-kms-kubo-match-v1",

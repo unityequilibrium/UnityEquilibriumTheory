@@ -25,8 +25,8 @@ PACKAGE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/mp48_in
 FORCE_CONSTANTS = RAW / "mp48_FORCE_CONSTANTS.gz"
 PHONOPY_METADATA = RAW / "mp48_phonopy.yaml.gz"
 THERMAL_PROPERTIES = RAW / "mp48_thermal_properties.yaml.gz"
-NPZ_OUT = ROOT / "docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.npz"
-JSON_OUT = ROOT / "docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.json"
+NPZ_OUT = ROOT / "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz"
+JSON_OUT = ROOT / "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.json"
 
 AVOGADRO = 6.02214076e23
 PLANCK = 6.62607015e-34
@@ -219,7 +219,7 @@ def main() -> int:
             "observable": "mode-resolved and aggregate harmonic graphite C_src comparator",
             "data_role": "DERIVED_COMPARISON",
             "evidence_artifacts": [
-                {"path": "docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.npz", "sha256": digest(NPZ_OUT)},
+                {"path": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz", "sha256": digest(NPZ_OUT)},
                 {"path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/mp48_independent_graphite_cv_source_package.json", "sha256": digest(PACKAGE)},
                 {"path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_FORCE_CONSTANTS.gz", "sha256": digest(FORCE_CONSTANTS)},
                 {"path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_phonopy.yaml.gz", "sha256": digest(PHONOPY_METADATA)},
@@ -245,7 +245,7 @@ def main() -> int:
             "mode_count": int(frequencies.shape[1]),
         },
         "derived_payload": {
-            "path": "docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.npz",
+            "path": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz",
             "sha256": digest(NPZ_OUT),
             "format": "NumPy compressed archive",
             "arrays": [
@@ -274,8 +274,8 @@ def main() -> int:
         json.dumps(
             {
                 "status": status,
-                "artifact": "docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.json",
-                "payload": "docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.npz",
+                "artifact": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.json",
+                "payload": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz",
                 "q_point_count": int(qpoints.shape[0]),
                 "mode_count": int(frequencies.shape[1]),
                 "failed_checks": [key for key, value in checks.items() if not value],

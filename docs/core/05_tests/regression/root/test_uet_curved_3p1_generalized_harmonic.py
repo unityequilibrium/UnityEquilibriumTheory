@@ -23,9 +23,9 @@ from docs.core.uet_curved_3p1_geometry import periodic_central_derivative
 
 
 ROOT = repo_root()
-VERIFY = ROOT / "docs/core/artifacts/curved_3p1_gh_principal_system_verification.json"
-FORMULA = ROOT / "docs/core/artifacts/curved_3p1_gh_principal_system_formula_audit.json"
-GATE = ROOT / "docs/core/artifacts/curved_3p1_gh_branch_gate.json"
+VERIFY = ROOT / "docs/core/07_artifacts/verification/curved_3p1_gh_principal_system_verification.json"
+FORMULA = ROOT / "docs/core/07_artifacts/correspondence/curved_3p1_gh_principal_system_formula_audit.json"
+GATE = ROOT / "docs/core/07_artifacts/gates/curved_3p1_gh_branch_gate.json"
 
 
 def test_preregistered_parameter_domain_is_enforced() -> None:

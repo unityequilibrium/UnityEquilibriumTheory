@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-AUDIT = ROOT / 'docs/core/artifacts/t13_berut_figure3_remote_binary_identity.json'
+AUDIT = ROOT / 'docs/core/07_artifacts/topic13/t13_berut_figure3_remote_binary_identity.json'
 
 
 def load() -> dict:

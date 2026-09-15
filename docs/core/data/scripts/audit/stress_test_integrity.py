@@ -1,91 +1,22 @@
-import numpy as np
-import sys
+"""Compatibility shim for the migrated core tooling path."""
+
+from __future__ import annotations
+
+import runpy
 from pathlib import Path
-import importlib.util
 
-# Path setup
-repo_root = Path("c:/Users/santa/Desktop/lad/Lab_uet_harness_v0.9.0")
-sys.path.insert(0, str(repo_root))
-
-from docs.core.uet_bug_hunter import UETBugHunter
+_CANONICAL_RELATIVE = "docs/scripts/core/audit/stress_test_integrity.py"
 
 
-def load_module(name, path):
-    spec = importlib.util.spec_from_file_location(name, path)
-    mod = importlib.util.module_from_spec(spec)
-    sys.modules[name] = mod
-    spec.loader.exec_module(mod)
-    return mod
-
-
-def run_stress_test():
-    print("====================================================")
-    print("UET SYSTEM INTEGRITY STRESS TEST (V0.8.6+ RESTORED)")
-    print("====================================================\n")
-
-    # 1. Audit Topic 0.1 (Galaxy)
-    print("Auditing Topic 0.1: Galaxy Rotation (Axiomatic Restoration)")
-    gal_path = (
-        repo_root
-        / "docs/topics/0.1_Galaxy_Rotation_Problem/Code/01_Engine/Engine_Galaxy_V3.py"
-    )
-    gal_mod = load_module("Engine_Galaxy_V3", gal_path)
-
-    params = gal_mod.GalaxyParams(mass_disk=1e9, radius_disk=1.3, mass_bulge=0.0)
-    engine = gal_mod.UETGalaxyEngine(params)
-    hunter = UETBugHunter("Topic_0.1")
-
-    # Mocking a step-wise audit
-    metrics = {
-        "omega": 100.0,  # Initial
-        "M_I": engine.M_I_total,
-        "gamma": engine.gamma_dynamic,
-    }
-
-    failures = hunter.audit_step(metrics)
-    if not failures:
-        print("✅ G0-G4 Gates: PASS (First Principles Validated)")
-    else:
-        print(f"❌ G0-G4 Gates: FAIL ({failures})")
-
-    # 2. Audit Topic 0.2 (Black Hole)
-    print("\nAuditing Topic 0.2: Black Hole Physics (k=3.0 restoration)")
-    bh_path = (
-        repo_root
-        / "docs/topics/0.2_Black_Hole_Physics/Code/01_Engine/Engine_BlackHole.py"
-    )
-    bh_mod = load_module("Engine_BlackHole", bh_path)
-
-    bh_engine = bh_mod.UETBlackHoleSolver()
-    k = bh_engine.solve_coupling_k()
-
-    hunter_bh = UETBugHunter("Topic_0.2")
-    bh_metrics = {"omega": -100.0, "k": k}
-
-    if k == 3.0:
-        print("✅ Axiomatic k=3.0: PASS")
-    else:
-        print(f"❌ Axiomatic k: FAIL (Found {k}, Expected 3.0)")
-
-    # 3. Audit Topic 0.3 (Cosmology)
-    print("\nAuditing Topic 0.3: Cosmology Hubble Tension (Axiomatic Restoration)")
-    cosmo_path = (
-        repo_root
-        / "docs/topics/0.3_Cosmology_Hubble_Tension/Code/01_Engine/Engine_Cosmology.py"
-    )
-    cosmo_mod = load_module("Engine_Cosmology", cosmo_path)
-
-    cosmo_engine = cosmo_mod.UETCosmologyEngine()
-    cosmo_engine.step()
-
-    print(
-        f"✅ Resolved Tension: {cosmo_engine.results_cache[1]['H0_UET_Pred']:.2f} km/s/Mpc (No Fitting)"
-    )
-
-    print("\n" + "=" * 52)
-    print("FINAL SYSTEM STATUS: INTEGRITY RESTORED (PHASE 2 & 3)")
-    print("=" * 52)
+def _run() -> None:
+    current = Path(__file__).resolve()
+    for ancestor in (current.parent, *current.parents):
+        candidate = ancestor / _CANONICAL_RELATIVE
+        if candidate.exists():
+            runpy.run_path(str(candidate), run_name="__main__")
+            return
+    raise FileNotFoundError(f"canonical tooling script not found: {_CANONICAL_RELATIVE}")
 
 
 if __name__ == "__main__":
-    run_stress_test()
+    _run()

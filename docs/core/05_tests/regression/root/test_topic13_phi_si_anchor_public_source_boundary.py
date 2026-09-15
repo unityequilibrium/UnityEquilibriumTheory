@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-LANE = ROOT / "docs/core/artifacts/t13_phi_si_anchor_public_source_boundary_audit.json"
+LANE = ROOT / "docs/core/07_artifacts/topic13/t13_phi_si_anchor_public_source_boundary_audit.json"
 FULL = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
     "topic13_full_thermodynamic_bridge_core_ready_gate.json"
@@ -51,6 +51,6 @@ def test_full_gate_exposes_anchor_boundary_without_unlocking_dimensional_map() -
     assert full["status"] == "BLOCKED_OPEN_T13_FULL_BRIDGE"
     assert full["claim_promotion"] is False
     assert any(
-        item["path"] == "docs/core/artifacts/t13_phi_si_anchor_public_source_boundary_audit.json"
+        item["path"] == "docs/core/07_artifacts/topic13/t13_phi_si_anchor_public_source_boundary_audit.json"
         for item in full["evidence_artifacts"]
     )

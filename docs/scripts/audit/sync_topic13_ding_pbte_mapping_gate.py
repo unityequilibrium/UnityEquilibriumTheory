@@ -12,7 +12,7 @@ GATE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
     "topic13_full_thermodynamic_bridge_core_ready_gate.json"
 )
-AUDIT = ROOT / "docs/core/artifacts/t13_ding_pbte_energy_temperature_mapping_audit.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_ding_pbte_energy_temperature_mapping_audit.json"
 PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "ding_2022_pbte_energy_temperature_source_package.json"

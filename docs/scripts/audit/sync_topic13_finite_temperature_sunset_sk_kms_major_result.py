@@ -9,10 +9,10 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-REGISTER_REL = "docs/core/artifacts/uet_major_result_closure_register.json"
+REGISTER_REL = "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
 FULL_REL = "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-LANE_REL = "docs/core/artifacts/t13_uet_o2_finite_temperature_sunset_sk_kms_audit.json"
-DEPENDENCY_REL = "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+LANE_REL = "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_sunset_sk_kms_audit.json"
+DEPENDENCY_REL = "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 LANE_ID = "T13_UET_O2_FINITE_T_THREE_BODY_SUNSET_SK_KMS_LANE"
 ANCHOR_ID = "T13_UET_O2_VACUUM_RETARDED_SUNSET_DISCONTINUITY_LANE"
 

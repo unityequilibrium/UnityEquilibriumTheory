@@ -354,7 +354,7 @@ def build_file_record(
     evidence = evidence_status(record, family)
     status_source = str(record.get("status_source") or "")
     if status_source == "MANIFEST_CLASSIFICATION_ONLY":
-        status_source = "docs/core/artifacts/uet_foundation_dependency_gate.json"
+        status_source = "docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json"
     return {
         "asset_id": stable_asset_id(path),
         "path": path,

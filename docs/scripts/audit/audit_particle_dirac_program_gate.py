@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUTPUT = ROOT / "docs/core/artifacts/particle_dirac_program_gate.json"
+OUTPUT = ROOT / "docs/core/07_artifacts/gates/particle_dirac_program_gate.json"
 
 
 PREREQUISITES = (

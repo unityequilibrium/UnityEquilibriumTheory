@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[3]
 BASE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research"
 PACKAGE = BASE / "desorbo_1955_ceylon_graphite_cp_source_package.json"
 RAW = BASE / "raw/nist_srd69_graphite_desorbo_1955.html"
-OUT = ROOT / "docs/core/artifacts/t13_desorbo_ceylon_graphite_cp_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_desorbo_ceylon_graphite_cp_audit.json"
 
 
 def load_json(path: Path) -> dict:

@@ -30,7 +30,7 @@ from docs.core.uet_o2_finite_temperature_quasiparticle_eos import (  # noqa: E40
     FiniteTemperatureO2QuasiparticleConfig,
 )
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_condensed_loop_renormalized_vertex_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_condensed_loop_renormalized_vertex_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_condensed_loop_renormalized_vertex.py"
 CONTINUUM = ROOT / "docs/core/uet_o2_continuum_relative_flow_kubo.py"
 EOS = ROOT / "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py"

@@ -9,7 +9,7 @@ from docs.core.he4_o2_si_beta_mapping import si_beta_record
 
 
 ROOT = repo_root()
-AUDIT = ROOT / "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json"
 
 
 def test_si_beta_record_is_finite_uncertainty_bearing_and_non_circular() -> None:

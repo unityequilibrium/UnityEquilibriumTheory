@@ -13,7 +13,7 @@ PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "oxford_tgs_figure1_source_package.json"
 )
-OUT = ROOT / "docs/core/artifacts/t13_oxford_tgs_comparator_provenance_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_oxford_tgs_comparator_provenance_audit.json"
 
 
 def load_json(path: Path) -> dict:

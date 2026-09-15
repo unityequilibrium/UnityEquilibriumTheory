@@ -10,7 +10,7 @@ DEPENDENCY_UNLOCKED: Geometry-aware cut comparison only; full_core_unlock=false.
 
 STATUS: SPATIAL_DIFFERENCES_MEASURED_PHYSICAL_ATTRIBUTION_OPEN.
 
-WHAT_CHANGED: Fixed-grid audit/tests and [all tile traces and metrics](../../artifacts/t13_ued_cut_tiles_audit.json). No raw images were exported or external pickle callables invoked.
+WHAT_CHANGED: Fixed-grid audit/tests and [all tile traces and metrics](../../07_artifacts/topic13/t13_ued_cut_tiles_audit.json). No raw images were exported or external pickle callables invoked.
 
 EQUATION_OR_MAPPING: Disjoint detector sums followed by the previous exploratory ON/OFF ratio and negative-delay baseline subtraction. Detector additivity is not an energy-conservation proof. No new physical equation or registry claim.
 

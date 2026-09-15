@@ -10,7 +10,7 @@ DEPENDENCY_UNLOCKED: Source-specific acquisition reconstruction and cut-to-cut s
 
 STATUS: ROWS_DECODED_REPEAT_INDEPENDENCE_OPEN.
 
-WHAT_CHANGED: Raw archive verifier/test and structure verifier/tests; generated [acquisition artifact](../../artifacts/t13_ued_raw_archive_audit.json) and [row structure artifact](../../artifacts/t13_ued_raw_structure_audit.json). Artifacts retain file/hash chains and row identities. Acquisition artifact intentionally describes only archive inventory; downstream structure artifact records completed payload/CRC inspection.
+WHAT_CHANGED: Raw archive verifier/test and structure verifier/tests; generated [acquisition artifact](../../07_artifacts/topic13/t13_ued_raw_archive_audit.json) and [row structure artifact](../../07_artifacts/topic13/t13_ued_raw_structure_audit.json). Artifacts retain file/hash chains and row identities. Acquisition artifact intentionally describes only archive inventory; downstream structure artifact records completed payload/CRC inspection.
 
 EQUATION_OR_MAPPING: Detector records and instrument metadata only; no new UET equation. Source PHI_DEG/PHI_RAW are instrument columns, not UET Phi. Source Delay_ps is not the pump-relative time axis; its larger numeric values do not extend the processed observation window.
 

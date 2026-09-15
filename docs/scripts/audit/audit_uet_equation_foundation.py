@@ -15,9 +15,9 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
 STANDARD = ROOT / "docs/topics/For Work/EQUATION_RESEARCH_AND_PHYSICAL_CORRESPONDENCE_STANDARD.md"
-REGISTRY_PATH = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry.json"
-PROTOCOL_PATH = ROOT / "docs/core/artifacts/uet_equation_research_protocol.json"
-GATE_PATH = ROOT / "docs/core/artifacts/uet_foundation_dependency_gate.json"
+REGISTRY_PATH = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json"
+PROTOCOL_PATH = ROOT / "docs/core/07_artifacts/archive/uet_equation_research_protocol.json"
+GATE_PATH = ROOT / "docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json"
 
 REQUIRED_ENTRY_FIELDS = {
     "equation_id",

@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/artifacts/t13_cv_source_reconciliation_audit.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_cv_source_reconciliation_audit.json"
 
 
 def test_topic13_cv_reconciliation_is_fail_closed() -> None:

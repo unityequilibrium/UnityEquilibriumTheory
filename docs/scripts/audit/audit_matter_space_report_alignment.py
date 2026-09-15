@@ -21,7 +21,7 @@ from typing import Any, Iterable
 REPO_ROOT = Path(__file__).resolve().parents[3]
 OUTPUT_PATH = (
     REPO_ROOT
-    / "docs/core/artifacts/matter_space_report_alignment_gate.json"
+    / "docs/core/07_artifacts/gates/matter_space_report_alignment_gate.json"
 )
 BASE_REPORT_PATH = REPO_ROOT / "docs/core/MATTER_SPACE_RESEARCH_REPORT.md"
 ADDENDUM_PATH = (
@@ -32,10 +32,10 @@ TOPIC_READINESS_PATH = REPO_ROOT / "docs/meta/topic_readiness.json"
 
 INPUT_PATHS = {
     "matter_space_program": REPO_ROOT
-    / "docs/core/artifacts/matter_space_research_program_gate.json",
-    "gr_program": REPO_ROOT / "docs/core/artifacts/uet_gr_research_program_gate.json",
+    / "docs/core/07_artifacts/gates/matter_space_research_program_gate.json",
+    "gr_program": REPO_ROOT / "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json",
     "noether_dependency": REPO_ROOT
-    / "docs/core/artifacts/noether_phase_field_dependency_gate.json",
+    / "docs/core/07_artifacts/gates/noether_phase_field_dependency_gate.json",
     "topic_0_11_dependency": REPO_ROOT
     / "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_noether_phase_field_dependency_gate.json",
     "topic_0_19_dependency": REPO_ROOT

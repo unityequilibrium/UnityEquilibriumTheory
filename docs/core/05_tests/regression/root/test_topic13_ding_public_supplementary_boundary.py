@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-LANE = ROOT / "docs/core/artifacts/t13_ding_public_supplementary_payload_boundary_audit.json"
+LANE = ROOT / "docs/core/07_artifacts/topic13/t13_ding_public_supplementary_payload_boundary_audit.json"
 FULL = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
     "topic13_full_thermodynamic_bridge_core_ready_gate.json"
@@ -41,7 +41,7 @@ def test_full_gate_keeps_public_boundary_separate_from_full_source_closure() -> 
     assert source["raw_author_C_src_route_ready"] is False
     assert source["controlling_blocker"] == "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
     assert any(
-        item["path"] == "docs/core/artifacts/t13_ding_public_supplementary_payload_boundary_audit.json"
+        item["path"] == "docs/core/07_artifacts/topic13/t13_ding_public_supplementary_payload_boundary_audit.json"
         for item in full["evidence_artifacts"]
     )
     assert full["status"] == "BLOCKED_OPEN_T13_FULL_BRIDGE"

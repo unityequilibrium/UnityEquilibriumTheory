@@ -2,18 +2,18 @@
 
 > Organization control artifact. Each physical move is recorded per bounded wave; no physics claim is promoted.
 
-Generated at: 2026-09-14T17:44:23+00:00
+Generated at: 2026-09-15T17:31:34+00:00
 Generator: docs/scripts/audit/plan_uet_core_artifact_migration_v3.py
 
 ## Inventory
 
 - Generated artifacts indexed: **593** (592 JSON, 1 NPZ)
-- Active legacy outputs: **588**
-- Canonical outputs migrated: **5**
+- Active legacy outputs: **0**
+- Canonical outputs migrated: **593**
 - One generator identity resolved: **77**
 - Ambiguous generator identity: **6**
 - Missing generator identity: **510**
-- Consumer rewrite required: **535**
+- Consumer rewrite required: **0**
 - Duplicate canonical targets: **0**
 - Existing canonical targets: **0**
 - Physical move recorded: **True**

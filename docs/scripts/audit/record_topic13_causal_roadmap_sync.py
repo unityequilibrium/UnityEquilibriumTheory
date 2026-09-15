@@ -12,8 +12,8 @@ ROOT = Path(__file__).resolve().parents[3]
 ROADMAP = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_FULL_CLOSURE_ROADMAP.md"
 UPDATE_LOG = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
 LEDGER = ROOT / "WORK_LEDGER/2026/2026-08-24.md"
-CAUSAL = ROOT / "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json"
-MATRIX = ROOT / "docs/core/artifacts/t13_topic13_closure_matrix.json"
+CAUSAL = ROOT / "docs/core/07_artifacts/topic13/t13_causal_named_branch_core_compatibility.json"
+MATRIX = ROOT / "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json"
 
 MARKER = "### 2026-08-24 - Causal branch roadmap synchronization"
 OLD = """The causal structural question is already a scoped no-go for the declared

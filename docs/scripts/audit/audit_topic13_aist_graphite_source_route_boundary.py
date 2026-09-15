@@ -9,7 +9,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_aist_graphite_source_route_boundary_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_aist_graphite_source_route_boundary_audit.json"
 
 
 SOURCE_RECORD: dict[str, Any] = {

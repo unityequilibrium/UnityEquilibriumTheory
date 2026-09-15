@@ -4,13 +4,13 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/artifacts/t13_calorine_model_form_state_spread_comparison_audit.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_calorine_model_form_state_spread_comparison_audit.json"
 FULL_GATE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
     "topic13_full_thermodynamic_bridge_core_ready_gate.json"
 )
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY = ROOT / "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 
 
 def test_calorine_model_form_state_spread_is_comparator_only() -> None:

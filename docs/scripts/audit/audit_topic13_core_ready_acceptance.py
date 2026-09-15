@@ -10,27 +10,27 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_full_core_ready_acceptance_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_full_core_ready_acceptance_audit.json"
 
 PATHS = {
     "gate": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-    "matrix": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-    "composition": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
-    "causal": "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json",
-    "no_go": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
-    "ttg_source": "docs/core/artifacts/ding_2022_source_mapping_audit.json",
-    "alpha": "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json",
-    "beta": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
-    "normal_component": "docs/core/artifacts/t13_uet_o2_thermodynamic_normal_component_audit.json",
-    "formal_bridge": "docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json",
-    "sk_kms": "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json",
-    "entropy": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
-    "transport": "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json",
-    "landauer": "docs/core/artifacts/t13_landauer_core_disposition_audit.json",
-    "holdout": "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json",
+    "matrix": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
+    "composition": "docs/core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+    "causal": "docs/core/07_artifacts/topic13/t13_causal_named_branch_core_compatibility.json",
+    "no_go": "docs/core/07_artifacts/archive/conserved_c_finite_cone_no_go_assessment.json",
+    "ttg_source": "docs/core/07_artifacts/provenance/ding_2022_source_mapping_audit.json",
+    "alpha": "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json",
+    "beta": "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json",
+    "normal_component": "docs/core/07_artifacts/topic13/t13_uet_o2_thermodynamic_normal_component_audit.json",
+    "formal_bridge": "docs/core/07_artifacts/topic13/t13_formal_thermodynamic_bridge_integration_audit.json",
+    "sk_kms": "docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json",
+    "entropy": "docs/core/07_artifacts/topic13/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+    "transport": "docs/core/07_artifacts/topic13/t13_he4_normal_viscosity_kubo_audit.json",
+    "landauer": "docs/core/07_artifacts/topic13/t13_landauer_core_disposition_audit.json",
+    "holdout": "docs/core/07_artifacts/topic13/t13_xie_2026_holdout_access_audit.json",
     "chaos": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_thermal_dynamical_regime_audit.json",
-    "register": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "dependency": "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json",
+    "register": "docs/core/07_artifacts/gates/uet_major_result_closure_register.json",
+    "dependency": "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json",
 }
 
 

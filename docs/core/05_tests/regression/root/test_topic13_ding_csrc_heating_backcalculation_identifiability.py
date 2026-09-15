@@ -8,8 +8,8 @@ import pytest
 
 
 ROOT = repo_root()
-AUDIT = ROOT / "docs/core/artifacts/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json"
-MATRIX = ROOT / "docs/core/artifacts/t13_topic13_closure_matrix.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json"
+MATRIX = ROOT / "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json"
 
 
 def load(path: Path) -> dict:
@@ -44,7 +44,7 @@ def test_no_go_is_visible_in_source_requirement_without_closing_numeric_csrc() -
         for item in matrix["requirements"]
         if item["requirement_id"] == "source_and_uncertainty"
     )
-    assert "docs/core/artifacts/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json" in {
+    assert "docs/core/07_artifacts/topic13/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json" in {
         ref["path"] for ref in source["evidence_artifacts"]
     }
     accepted = next(

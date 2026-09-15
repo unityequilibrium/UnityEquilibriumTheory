@@ -19,7 +19,7 @@ from docs.core.uet_o2_action_thermal_observable_bridge import (  # noqa: E402
     action_natural_phi_thermal_bridge_state,
 )
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_action_thermal_observable_bridge_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_action_thermal_observable_bridge_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_action_thermal_observable_bridge.py"
 EOS = ROOT / "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py"
 BETA = ROOT / "docs/core/uet_o2_action_thermal_stiffness_beta.py"

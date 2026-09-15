@@ -52,7 +52,7 @@ SOURCE_RECORD = (
     / "hyperbolic_cahn_hilliard/dhaouadi_dumbser_gavrilyuk_2025"
     / "source_record.json"
 )
-DIFFUSION = ROOT / "docs/core/artifacts/covariant_diffusive_current_verification.json"
+DIFFUSION = ROOT / "docs/core/07_artifacts/verification/covariant_diffusive_current_verification.json"
 OUT = ROOT / "docs/core/artifacts"
 
 

@@ -24,7 +24,7 @@ from docs.core.uet_o2_finite_temperature_sunset_renormalization_identifiability_
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_finite_temperature_sunset_renormalization_identifiability_no_go.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_sunset_renormalization_identifiability_no_go.json"
 MODULE = ROOT / "docs/core/uet_o2_finite_temperature_sunset_renormalization_identifiability_no_go.py"
 ONE_TO_THREE = ROOT / "docs/core/uet_o2_finite_temperature_sunset_sk_kms.py"
 TWO_TO_TWO = ROOT / "docs/core/uet_o2_finite_temperature_sunset_scattering_sk_kms.py"

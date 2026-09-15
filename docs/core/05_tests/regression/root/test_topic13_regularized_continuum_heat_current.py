@@ -10,7 +10,7 @@ from docs.core.uet_o2_regularized_continuum_heat_current import (
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/artifacts/t13_uet_o2_regularized_continuum_heat_current_audit.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_regularized_continuum_heat_current_audit.json"
 
 
 def load(path: Path) -> dict:
@@ -39,7 +39,7 @@ def test_regularized_continuum_heat_current_lane_passes_without_promotion() -> N
 
 def test_regularized_lane_does_not_replace_old_finite_cutoff_no_go() -> None:
     baseline = load(
-        ROOT / "docs/core/artifacts/t13_uet_o2_heat_current_kubo_continuum_boundary_audit.json"
+        ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_heat_current_kubo_continuum_boundary_audit.json"
     )
     assert baseline["major_result"]["closure_level"] == "CLOSED_AS_NO_GO"
     assert baseline["claim_promotion"] is False

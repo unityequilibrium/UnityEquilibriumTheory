@@ -9,7 +9,7 @@ from pathlib import Path
 ROOT = repo_root()
 PDF = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/huang_2022_utokyo_graphite_ribbons_thesis.pdf"
 PACKAGE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/huang_2022_utokyo_graphite_ribbons_source_package.json"
-AUDIT = ROOT / "docs/core/artifacts/t13_huang_2022_utokyo_graphite_ribbons_boundary_audit.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_huang_2022_utokyo_graphite_ribbons_boundary_audit.json"
 
 
 def load(path: Path) -> dict:

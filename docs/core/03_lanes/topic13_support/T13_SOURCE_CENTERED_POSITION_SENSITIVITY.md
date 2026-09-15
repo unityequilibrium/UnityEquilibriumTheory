@@ -10,7 +10,7 @@ DEPENDENCY_UNLOCKED: Registration-method comparison only; no physical unlock.
 
 STATUS: MOMENTS_MEASURED_REGISTRATION_OPEN.
 
-WHAT_CHANGED: Moment diagnostic/tests and [all row-level positions](../../artifacts/t13_ued_beam_position_audit.json). External find_peak.py inspected as text to check ROI slicing convention, not executed or redistributed.
+WHAT_CHANGED: Moment diagnostic/tests and [all row-level positions](../../07_artifacts/topic13/t13_ued_beam_position_audit.json). External find_peak.py inspected as text to check ROI slicing convention, not executed or redistributed.
 
 EQUATION_OR_MAPPING: Positive-intensity weighted raw pixel coordinates, no background subtraction, source fit, shifting, interpolation or new UET physical equation.
 

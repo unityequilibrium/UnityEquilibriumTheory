@@ -16,7 +16,7 @@ from docs.core.he4_svp_reference import (
 
 
 ROOT = repo_root()
-AUDIT = ROOT / "docs/core/artifacts/t13_he4_svp_physical_anchor_audit.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_he4_svp_physical_anchor_audit.json"
 PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "he4_svp_o2_physical_anchor_source_package.json"

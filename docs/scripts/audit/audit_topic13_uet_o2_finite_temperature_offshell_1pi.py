@@ -22,7 +22,7 @@ from docs.core.uet_o2_finite_temperature_offshell_1pi import (  # noqa: E402
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_finite_temperature_offshell_1pi_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_offshell_1pi_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_finite_temperature_offshell_1pi.py"
 TENSOR = ROOT / "docs/core/uet_o2_action_1pi_sunset_tensor.py"
 EUCLIDEAN = ROOT / "docs/core/uet_o2_action_1pi_sunset_euclidean.py"

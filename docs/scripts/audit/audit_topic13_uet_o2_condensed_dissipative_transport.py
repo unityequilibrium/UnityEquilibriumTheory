@@ -19,14 +19,14 @@ from docs.core.uet_o2_condensed_dissipative_transport_identifiability_no_go impo
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_condensed_dissipative_transport_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_condensed_dissipative_transport_audit.json"
 MODULE = (
     ROOT
     / "docs/core/uet_o2_condensed_dissipative_transport_identifiability_no_go.py"
 )
 STATIC_MODULE = ROOT / "docs/core/uet_o2_finite_temperature_two_fluid_response.py"
 STATIC_ARTIFACT = (
-    ROOT / "docs/core/artifacts/t13_uet_o2_finite_temperature_two_fluid_response_audit.json"
+    ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_two_fluid_response_audit.json"
 )
 
 
@@ -101,7 +101,7 @@ def main() -> int:
             "sha256": sha256(STATIC_MODULE),
         },
         {
-            "path": "docs/core/artifacts/t13_uet_o2_finite_temperature_two_fluid_response_audit.json",
+            "path": "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_two_fluid_response_audit.json",
             "sha256": sha256(STATIC_ARTIFACT),
         },
     ]

@@ -34,7 +34,7 @@ def test_completed_artifact_preserves_failed_original_gates():
 
 def test_frozen_scalar_artifact_not_rewritten_after_tensor_repair():
     # This baseline records historical code hashes, not the repaired runtime.
-    baseline=ROOT/"docs/core/artifacts/t13_transport_resolution_audit.json"
+    baseline=ROOT/"docs/core/07_artifacts/topic13/t13_transport_resolution_audit.json"
     assert sha256(baseline.read_bytes()).hexdigest()=="28bc408cdc624f33c503c38727c85cff14de104d3c4409ed35cd496a8bda666f"
     artifact=read("t13_transport_resolution_audit.json")
     plan=artifact["evidence_artifacts"][0]

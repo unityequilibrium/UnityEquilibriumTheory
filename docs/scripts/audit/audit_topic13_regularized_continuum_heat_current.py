@@ -23,9 +23,9 @@ from docs.core.uet_o2_regularized_continuum_heat_current import (  # noqa: E402
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_regularized_continuum_heat_current_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_regularized_continuum_heat_current_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_regularized_continuum_heat_current.py"
-BASELINE_REL = "docs/core/artifacts/t13_uet_o2_heat_current_kubo_continuum_boundary_audit.json"
+BASELINE_REL = "docs/core/07_artifacts/topic13/t13_uet_o2_heat_current_kubo_continuum_boundary_audit.json"
 
 
 def sha256(path: Path) -> str:

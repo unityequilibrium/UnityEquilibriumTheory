@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/artifacts/t13_covariant_matter_coupling_normalization_no_go.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_covariant_matter_coupling_normalization_no_go.json"
 
 
 def test_matter_coupling_no_go_is_closed_only_as_a_scoped_no_go() -> None:

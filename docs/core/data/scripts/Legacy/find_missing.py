@@ -1,11 +1,22 @@
-from pathlib import Path
-import os
+"""Compatibility shim for the migrated core tooling path."""
 
-root = Path(r"c:\Users\santa\Desktop\lad\Lab_uet_harness_v0.9.0\docs\topics")
-for p in root.rglob("*.py"):
-    if (
-        "Cosmological_Constant" in p.name
-        or "Oscillation_4D" in p.name
-        or "Quantum_Mechanics" in p.name
-    ):
-        print(p)
+from __future__ import annotations
+
+import runpy
+from pathlib import Path
+
+_CANONICAL_RELATIVE = "docs/scripts/core/legacy/find_missing.py"
+
+
+def _run() -> None:
+    current = Path(__file__).resolve()
+    for ancestor in (current.parent, *current.parents):
+        candidate = ancestor / _CANONICAL_RELATIVE
+        if candidate.exists():
+            runpy.run_path(str(candidate), run_name="__main__")
+            return
+    raise FileNotFoundError(f"canonical tooling script not found: {_CANONICAL_RELATIVE}")
+
+
+if __name__ == "__main__":
+    _run()

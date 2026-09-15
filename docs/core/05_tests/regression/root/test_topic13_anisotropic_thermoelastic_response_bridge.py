@@ -138,7 +138,7 @@ def test_natural_unit_contract_closes():
 def test_generated_anisotropic_artifact_is_scoped_and_hash_linked():
     root = repo_root()
     artifact_path = root / (
-        "docs/core/artifacts/t13_anisotropic_thermoelastic_response_bridge_audit.json"
+        "docs/core/07_artifacts/topic13/t13_anisotropic_thermoelastic_response_bridge_audit.json"
     )
     registry_path = root / (
         "docs/core/artifacts/"

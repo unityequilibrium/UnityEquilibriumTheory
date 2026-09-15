@@ -32,17 +32,17 @@ def main() -> int:
         "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
         "t13_calorine_zenodo_nep_bte_reproduction_source_package.json"
     )
-    audit = digest("docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json")
+    audit = digest("docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_reproduction_audit.json")
     decomposition = digest(
-        "docs/core/artifacts/t13_csrc_thermodynamic_transport_regime_decomposition_audit.json"
+        "docs/core/07_artifacts/topic13/t13_csrc_thermodynamic_transport_regime_decomposition_audit.json"
     )
     full_gate = digest(
         "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
         "topic13_full_thermodynamic_bridge_core_ready_gate.json"
     )
-    matrix = digest("docs/core/artifacts/t13_topic13_closure_matrix.json")
-    register = digest("docs/core/artifacts/uet_major_result_closure_register.json")
-    dependency = digest("docs/core/artifacts/uet_major_result_dependency_unlock_gate.json")
+    matrix = digest("docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json")
+    register = digest("docs/core/07_artifacts/gates/uet_major_result_closure_register.json")
+    dependency = digest("docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json")
     summary = digest(
         "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
         "t13_calorine_zenodo_pbte_run_m12x12x6_summary.json"
@@ -62,7 +62,7 @@ VERIFICATION: Source hashes and force-constant identity remain fixed; the new ca
 CONTROLLING_BLOCKER: `ding_C_src_mode_state_and_source_grade_uncertainty_missing` controls this decomposition; `alpha_Phi_K_independent_calibration_missing` and Ding-compatible `C_src` remain independent full-topic controllers.
 NEXT_ACTION: Obtain an authorized Ding numeric package or accepted same-regime PBTE reproduction with source-grade uncertainty and material/state mapping; keep RTA transport outside the Phi calibration path.
 CLAIM_BOUNDARY: Numerical convergence sub-lane only; not Ding-regime validation, source-grade uncertainty closure, alpha calibration, TTG prediction, external validation, or Full Topic 13 closure.
-EVIDENCE_PATHS: `docs/topics/0.13_Thermodynamic_Bridge/RESEARCH_WAVE_20260823_C_SRC_MESH_12.md`; `docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json`; `docs/core/artifacts/t13_csrc_thermodynamic_transport_regime_decomposition_audit.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.
+EVIDENCE_PATHS: `docs/topics/0.13_Thermodynamic_Bridge/RESEARCH_WAVE_20260823_C_SRC_MESH_12.md`; `docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_reproduction_audit.json`; `docs/core/07_artifacts/topic13/t13_csrc_thermodynamic_transport_regime_decomposition_audit.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.
 EVIDENCE_HASHES: package `{package}`; reproduction audit `{audit}`; decomposition `{decomposition}`; full gate `{full_gate}`; matrix `{matrix}`; register `{register}`; dependency `{dependency}`; mesh summary `{summary}`; wave brief `{wave}`.
 """
     manifest = f"""## C_src mesh-tail extension ({WAVE_DATE})
@@ -78,7 +78,7 @@ VERIFICATION: Fixed force-constant identity, SI units, candidate mesh preflight,
 CONTROLLING_BLOCKER: ding_C_src_mode_state_and_source_grade_uncertainty_missing.
 NEXT_ACTION: Acquire authorized Ding numeric C_src or an accepted same-regime PBTE package with material/state mapping and source-grade uncertainty.
 CLAIM_BOUNDARY: Numerical convergence sub-lane only; not Ding-equivalent, not source-grade uncertainty closure, not calibration, not prediction, and not Full Topic 13 closure.
-EVIDENCE_PATHS: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_pbte_run_m12x12x6_summary.json`; `docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json`; `docs/core/artifacts/t13_csrc_thermodynamic_transport_regime_decomposition_audit.json`.
+EVIDENCE_PATHS: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_pbte_run_m12x12x6_summary.json`; `docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_reproduction_audit.json`; `docs/core/07_artifacts/topic13/t13_csrc_thermodynamic_transport_regime_decomposition_audit.json`.
 EVIDENCE_HASHES: package `{package}`; audit `{audit}`; decomposition `{decomposition}`; full gate `{full_gate}`.
 """
     ledger = f"""## Topic 13 C_src mesh-tail extension

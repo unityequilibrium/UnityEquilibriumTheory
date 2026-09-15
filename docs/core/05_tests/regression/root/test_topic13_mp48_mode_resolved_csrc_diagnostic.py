@@ -7,8 +7,8 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.json"
-PAYLOAD = ROOT / "docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.npz"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.json"
+PAYLOAD = ROOT / "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz"
 
 
 def load(path: Path) -> dict:

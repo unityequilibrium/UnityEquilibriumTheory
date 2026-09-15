@@ -10,10 +10,10 @@ ROOT = Path(__file__).resolve().parents[3]
 TOPIC = ROOT / "docs/topics/0.13_Thermodynamic_Bridge"
 RAW = TOPIC / "Data/03_Research/raw/nist_srd69_graphite_desorbo_1955.html"
 PACKAGE = TOPIC / "Data/03_Research/desorbo_1955_ceylon_graphite_cp_source_package.json"
-AUDIT = ROOT / "docs/core/artifacts/t13_desorbo_ceylon_graphite_cp_audit.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_desorbo_ceylon_graphite_cp_audit.json"
 FULL = TOPIC / "Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY = ROOT / "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 
 
 def digest(path: Path) -> str:
@@ -55,7 +55,7 @@ CLAIM_BOUNDARY: Source-traceable natural-graphite molar `Cp` comparator only. It
 
 Raw archive: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nist_srd69_graphite_desorbo_1955.html` (`{raw_hash}`).
 Source package: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/desorbo_1955_ceylon_graphite_cp_source_package.json` (`{package_hash}`).
-Audit: `docs/core/artifacts/t13_desorbo_ceylon_graphite_cp_audit.json` (`{audit_hash}`).
+Audit: `docs/core/07_artifacts/topic13/t13_desorbo_ceylon_graphite_cp_audit.json` (`{audit_hash}`).
 
 The lane source-locks the NIST row attributed to DeSorbo 1955 Ceylon natural
 graphite at 298.15 K. It preserves the reported accuracy boundary without

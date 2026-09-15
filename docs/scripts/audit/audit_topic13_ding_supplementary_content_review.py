@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 PACKAGE_PATH = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_supplementary_content_review_package.json"
-OUT = ROOT / "docs/core/artifacts/t13_ding_supplementary_content_review_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_ding_supplementary_content_review_audit.json"
 
 EXPECTED_SOURCES = {
     "DING2022_MOESM1": {

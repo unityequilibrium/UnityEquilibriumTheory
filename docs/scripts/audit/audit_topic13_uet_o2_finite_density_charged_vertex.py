@@ -28,7 +28,7 @@ from docs.core.uet_covariant_matter import CovariantMatterConfig  # noqa: E402
 from docs.core.uet_covariant_response import CovariantResponseConfig  # noqa: E402
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_finite_density_charged_vertex_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_finite_density_charged_vertex_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_finite_density_charged_vertex.py"
 RENORMALIZED_MODULE = ROOT / "docs/core/uet_o2_renormalized_vertex_scheme.py"
 UV_MODULE = ROOT / "docs/core/uet_o2_one_loop_vertex_uv_boundary.py"
@@ -200,7 +200,7 @@ def main() -> int:
         "closure_level": "CLOSED_FOR_LANE" if not failed else "OPEN",
         "data_role": state.data_role,
         "audit": {
-            "path": "docs/core/artifacts/t13_uet_o2_finite_density_charged_vertex_audit.json",
+            "path": "docs/core/07_artifacts/topic13/t13_uet_o2_finite_density_charged_vertex_audit.json",
             "summary": {
                 "status": status,
                 "major_result_id": "T13_UET_O2_FINITE_DENSITY_CHARGED_VERTEX_SCHEME",

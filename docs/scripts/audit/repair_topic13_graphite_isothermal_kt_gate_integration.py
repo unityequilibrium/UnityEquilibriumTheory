@@ -19,8 +19,8 @@ replace_once(
     "registry mapping",
 )
 replace_once(
-    '    elastic_bulk_path, elastic_bulk = load(\n        "docs/core/artifacts/t13_graphite_elastic_bulk_modulus_source_audit.json"\n    )\n',
-    '    elastic_bulk_path, elastic_bulk = load(\n        "docs/core/artifacts/t13_graphite_elastic_bulk_modulus_source_audit.json"\n    )\n    isothermal_kt_path, isothermal_kt = load(\n        "docs/core/artifacts/t13_graphite_isothermal_kt_source_audit.json"\n    )\n',
+    '    elastic_bulk_path, elastic_bulk = load(\n        "docs/core/07_artifacts/topic13/t13_graphite_elastic_bulk_modulus_source_audit.json"\n    )\n',
+    '    elastic_bulk_path, elastic_bulk = load(\n        "docs/core/07_artifacts/topic13/t13_graphite_elastic_bulk_modulus_source_audit.json"\n    )\n    isothermal_kt_path, isothermal_kt = load(\n        "docs/core/07_artifacts/topic13/t13_graphite_isothermal_kt_source_audit.json"\n    )\n',
     "isothermal K_T artifact load",
 )
 replace_once(

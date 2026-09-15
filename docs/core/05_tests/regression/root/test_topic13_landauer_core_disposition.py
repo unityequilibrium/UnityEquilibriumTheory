@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-AUDIT = ROOT / "docs/core/artifacts/t13_landauer_core_disposition_audit.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_landauer_core_disposition_audit.json"
 
 
 def test_landauer_controllers_close_only_their_core_dependency_role() -> None:

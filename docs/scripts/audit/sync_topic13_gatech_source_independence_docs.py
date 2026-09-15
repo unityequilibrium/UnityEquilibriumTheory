@@ -50,7 +50,7 @@ def insert_manifest_row() -> bool:
     row = (
         "| Georgia Tech graphite c_p source and dependency no-go | "
         "`Data/03_Research/gatech_gen3csp_graphite_source_package.json`; "
-        "`docs/core/artifacts/t13_gatech_volumetric_cp_independence_audit.json` | "
+        "`docs/core/07_artifacts/topic13/t13_gatech_volumetric_cp_independence_audit.json` | "
         "Georgia Tech Gen3 CSP graphite page, uncertainty method, and archived `Graphite.xlsx` row A3:G3 | "
         "`c_p` J g^-1 K^-1; D mm^2 s^-1; k W m^-1 K^-1; assumed density g cm^-3 | "
         "11234 raw bytes | raw `baa7f6181fa3d5521fc594cb2c832308927bc77dbac89c43b373bc304eaa6900`; "

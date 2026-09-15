@@ -25,7 +25,7 @@ SUPPLEMENTARY_FILES = {
     "SUPPLEMENTARY_MATERIALS_3": TOPIC_DATA
     / "raw/ding_2022_supplementary_materials_3.pdf",
 }
-OUT = ROOT / "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_ding_pbte_numeric_input_availability_audit.json"
 
 
 def load(path: Path) -> dict:

@@ -9,7 +9,7 @@ from docs.core.topic13_closure_record_contract import validate_physical_transpor
 
 
 ROOT = repo_root()
-AUDIT = ROOT / "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_he4_normal_viscosity_kubo_audit.json"
 
 
 def test_physical_viscosity_record_passes_fail_closed_contract() -> None:

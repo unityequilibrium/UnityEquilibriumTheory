@@ -9,38 +9,38 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_landauer_core_disposition_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_landauer_core_disposition_audit.json"
 
 CONTROLLERS = {
     "berut": (
-        "docs/core/artifacts/t13_berut_source_package_availability_boundary.json",
+        "docs/core/07_artifacts/topic13/t13_berut_source_package_availability_boundary.json",
         "PASS_SCOPED_BERUT_SOURCE_PACKAGE_BOUNDARY",
         "CLOSED_FOR_LANE",
         "CONSTRAINT_COMPARISON_ONLY_EXTERNAL_ROWS_OPEN",
     ),
     "jun": (
-        "docs/core/artifacts/t13_jun_final_source_package_boundary.json",
+        "docs/core/07_artifacts/topic13/t13_jun_final_source_package_boundary.json",
         "PASS_SCOPED_JUN_FINAL_SOURCE_BOUNDARY",
         "CLOSED_FOR_LANE",
         "SOURCE_IDENTITY_ONLY_EXTERNAL_ROWS_OPEN",
     ),
     "hong": (
-        "docs/core/artifacts/t13_hong_final_source_package_boundary.json",
+        "docs/core/07_artifacts/topic13/t13_hong_final_source_package_boundary.json",
         "PASS_SCOPED_HONG_FINAL_SOURCE_BOUNDARY",
         "CLOSED_FOR_LANE",
         "SOURCE_IDENTITY_ONLY_LEGACY_ROW_REJECTED",
     ),
     "peterson": (
-        "docs/core/artifacts/t13_peterson_source_identity_no_go.json",
+        "docs/core/07_artifacts/topic13/t13_peterson_source_identity_no_go.json",
         "PASS_SCOPED_PETERSON_SOURCE_IDENTITY_NO_GO",
         "CLOSED_FOR_LANE",
         "CLOSED_AS_SOURCE_IDENTITY_NO_GO",
     ),
 }
 
-ALPHA = ROOT / "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json"
-BETA = ROOT / "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json"
-TRANSPORT = ROOT / "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json"
+ALPHA = ROOT / "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json"
+BETA = ROOT / "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json"
+TRANSPORT = ROOT / "docs/core/07_artifacts/topic13/t13_he4_normal_viscosity_kubo_audit.json"
 
 
 def load(path: Path) -> dict:

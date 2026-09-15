@@ -9,18 +9,18 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUTPUT = ROOT / "docs/core/artifacts/t13_base_phi_si_reconciliation_audit.json"
+OUTPUT = ROOT / "docs/core/07_artifacts/topic13/t13_base_phi_si_reconciliation_audit.json"
 EVIDENCE = {
-    "alpha_search": ROOT / "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json",
-    "phi_e": ROOT / "docs/core/artifacts/t13_mp48_phi_e_dimensional_comparator_audit.json",
-    "formula": ROOT / "docs/core/artifacts/t13_dimensional_bridge_contract_audit.json",
-    "public": ROOT / "docs/core/artifacts/t13_phi_si_anchor_public_source_boundary_audit.json",
-    "action": ROOT / "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
-    "field_no_go": ROOT / "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json",
-    "normalized_no_go": ROOT / "docs/core/artifacts/t13_alpha_phi_k_identifiability_audit.json",
-    "calibration": ROOT / "docs/core/artifacts/thermal_dimensional_calibration_contract.json",
-    "observable": ROOT / "docs/core/artifacts/uet_dimensional_observable_closure_audit.json",
-    "protocol": ROOT / "docs/core/artifacts/t13_base_phi_independent_calibration_requirement.json",
+    "alpha_search": ROOT / "docs/core/07_artifacts/topic13/t13_alpha_phi_k_calibration_candidate_audit.json",
+    "phi_e": ROOT / "docs/core/07_artifacts/topic13/t13_mp48_phi_e_dimensional_comparator_audit.json",
+    "formula": ROOT / "docs/core/07_artifacts/topic13/t13_dimensional_bridge_contract_audit.json",
+    "public": ROOT / "docs/core/07_artifacts/topic13/t13_phi_si_anchor_public_source_boundary_audit.json",
+    "action": ROOT / "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json",
+    "field_no_go": ROOT / "docs/core/07_artifacts/topic13/t13_covariant_field_normalization_identifiability_no_go.json",
+    "normalized_no_go": ROOT / "docs/core/07_artifacts/topic13/t13_alpha_phi_k_identifiability_audit.json",
+    "calibration": ROOT / "docs/core/07_artifacts/topic13/thermal_dimensional_calibration_contract.json",
+    "observable": ROOT / "docs/core/07_artifacts/gates/uet_dimensional_observable_closure_audit.json",
+    "protocol": ROOT / "docs/core/07_artifacts/topic13/t13_base_phi_independent_calibration_requirement.json",
 }
 
 

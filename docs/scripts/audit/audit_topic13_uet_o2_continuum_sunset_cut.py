@@ -27,9 +27,9 @@ from docs.core.uet_covariant_matter import CovariantMatterConfig  # noqa: E402
 from docs.core.uet_covariant_response import CovariantResponseConfig  # noqa: E402
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_continuum_sunset_cut_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_continuum_sunset_cut_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_continuum_sunset_cut.py"
-FINITE_SUNSET_ARTIFACT = ROOT / "docs/core/artifacts/t13_uet_o2_two_loop_sunset_cut_audit.json"
+FINITE_SUNSET_ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_two_loop_sunset_cut_audit.json"
 
 
 def sha256(path: Path) -> str:
@@ -119,7 +119,7 @@ def main() -> int:
     evidence = [
         {"path": "docs/core/uet_o2_continuum_sunset_cut.py", "sha256": sha256(MODULE)},
         {
-            "path": "docs/core/artifacts/t13_uet_o2_two_loop_sunset_cut_audit.json",
+            "path": "docs/core/07_artifacts/topic13/t13_uet_o2_two_loop_sunset_cut_audit.json",
             "sha256": sha256(FINITE_SUNSET_ARTIFACT),
         },
     ]

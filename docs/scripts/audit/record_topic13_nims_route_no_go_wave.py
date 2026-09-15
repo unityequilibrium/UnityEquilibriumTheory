@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-ARTIFACT = ROOT / "docs/core/artifacts/t13_nims_graphite_ltc_route_no_go.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_nims_graphite_ltc_route_no_go.json"
 FULL_GATE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
 MANIFEST = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/DATA_MANIFEST.md"
 UPDATE_LOG = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
@@ -34,7 +34,7 @@ WHAT_IS_ACTUALLY_CLOSED: The public NIMS lattice-thermal-conductivity collection
 WHAT_REMAINS_OPEN: Ding numeric `C_src` or a permitted same-regime PBTE reproduction with mode-resolved rows, SI units, uncertainty, convergence, and material-state mapping remains open. The independent `alpha_Phi_K` calibration remains open. :codex-annotation{index="1"}
 DEPENDENCY_UNLOCKED: NIMS graphite-source route exclusion only; no `C_src`, alpha, bridge, transport, Core, Gravity, or Galaxy unlock.
 STATUS: `PASS_SCOPED_NIMS_GRAPHITE_ROUTE_NO_GO`; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
-WHAT_CHANGED: Added `docs/core/artifacts/t13_nims_graphite_ltc_route_no_go.json` (SHA-256 `""" + artifact_hash + """`), integrated it into the full-gate source-package lane, and added a focused test. The regenerated full gate is `""" + full_hash + """`.
+WHAT_CHANGED: Added `docs/core/07_artifacts/topic13/t13_nims_graphite_ltc_route_no_go.json` (SHA-256 `""" + artifact_hash + """`), integrated it into the full-gate source-package lane, and added a focused test. The regenerated full gate is `""" + full_hash + """`.
 EQUATION_OR_MAPPING: Required source quantity remains `C_src(T)=sum_mu c_mu(T)` with `C_src` in `J m^-3 K^-1`; `Delta_Tq=Delta_u_ph/C_src`. This route emits no numeric `C_src` and no `Delta_Tq=alpha_Phi_K*Delta_Phi` calibration.
 VERIFICATION: Public NIMS collection/API metadata was source-located, query outcomes and response hashes were recorded, no numeric research payload was consumed, no fit/tuning/alpha emission occurred, Xie 2026 was not accessed, and focused source-route tests passed (`6 passed`).
 CONTROLLING_BLOCKER: `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing`; full Topic 13 remains additionally controlled by the dimensional Phi anchor/independent alpha, bridge/beta, EOS/transport/KMS/entropy, and uncertainty blockers.
@@ -48,7 +48,7 @@ CLAIM_BOUNDARY: This closes only the NIMS source-route no-go. It is not `C_src` 
 
 The public [NIMS MDR lattice thermal conductivity collection](https://mdr.nims.go.jp/collections/0113dccc-ec45-42ed-86db-f455f9b63fb1?locale=en) was checked through its exact subject and full-text search routes. `C`, `Graphite`, `Carbon`, `graphite`, and `specimen:graphite` searches returned no record in that collection. The `carbon` full-text result set (349 records over 35 pages) contained no elemental-carbon formula `C` material record. A public API cross-check returned two `specimen:"graphite"` records, both in the unrelated `MDR XAFS DB` collection.
 
-Artifact: `docs/core/artifacts/t13_nims_graphite_ltc_route_no_go.json` (SHA-256 `""" + artifact_hash + """). This is a source-route no-go only; it does not produce `C_src`, replace Ding, or unlock `alpha_Phi_K`.
+Artifact: `docs/core/07_artifacts/topic13/t13_nims_graphite_ltc_route_no_go.json` (SHA-256 `""" + artifact_hash + """). This is a source-route no-go only; it does not produce `C_src`, replace Ding, or unlock `alpha_Phi_K`.
 """,
     )
     append_once(UPDATE_LOG, "### 2026-08-13 - NIMS graphite LTC source-route no-go", "### 2026-08-13 - NIMS graphite LTC source-route no-go\n\n" + common)

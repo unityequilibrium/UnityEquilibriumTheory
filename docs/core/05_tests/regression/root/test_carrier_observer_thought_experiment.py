@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/artifacts/carrier_observer_thought_experiment.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/archive/carrier_observer_thought_experiment.json"
 
 
 def read() -> dict:

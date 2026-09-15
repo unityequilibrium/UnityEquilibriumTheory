@@ -30,7 +30,7 @@ from docs.core.uet_covariant_matter import CovariantMatterConfig  # noqa: E402
 from docs.core.uet_covariant_response import CovariantResponseConfig  # noqa: E402
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_action_sunset_zero_eta_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_action_sunset_zero_eta_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_action_sunset_zero_eta.py"
 ACTION_MODULE = ROOT / "docs/core/uet_o2_action_sunset_1pi_spectral.py"
 

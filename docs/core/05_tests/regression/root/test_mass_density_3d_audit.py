@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = repo_root()
 SCRIPT = ROOT / "docs/scripts/audit/audit_mass_density_3d.py"
-ARTIFACT = ROOT / "docs/core/artifacts/mass_density_3d_contract_verification.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/verification/mass_density_3d_contract_verification.json"
 
 
 def _module():

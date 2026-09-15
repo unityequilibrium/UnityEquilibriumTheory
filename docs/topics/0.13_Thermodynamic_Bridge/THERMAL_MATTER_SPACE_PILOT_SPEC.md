@@ -7,7 +7,7 @@ It compares response shapes and numerical accounting; it does not identify
 `space_response` with temperature, heat flux, entropy, or an SI observable.
 
 Current dependency state: `BLOCKED` by
-`docs/core/artifacts/matter_space_dependency_gate.json`, whose controlling
+`docs/core/07_artifacts/gates/matter_space_dependency_gate.json`, whose controlling
 blocker is pre-arrival leakage in the physical-response discretization.
 Diagnostic execution is allowed, but physical interpretation and claim
 promotion are not.

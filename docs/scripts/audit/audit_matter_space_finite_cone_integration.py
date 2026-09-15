@@ -14,7 +14,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUTPUT = ROOT / "docs/core/artifacts/matter_space_finite_cone_shared_ledger_integration.json"
+OUTPUT = ROOT / "docs/core/07_artifacts/archive/matter_space_finite_cone_shared_ledger_integration.json"
 
 
 def load(relative: str) -> dict[str, Any]:
@@ -22,11 +22,11 @@ def load(relative: str) -> dict[str, Any]:
 
 
 def build() -> dict[str, Any]:
-    characteristic = load("docs/core/artifacts/matter_space_characteristic_cone_verification.json")
-    observable = load("docs/core/artifacts/matter_space_observable_verification.json")
-    lane = load("docs/core/artifacts/matter_space_causal_lane_selection.json")
-    pilot_sync = load("docs/core/artifacts/matter_space_topic_pilot_sync.json")
-    full = load("docs/core/artifacts/matter_space_variational_verification.json")
+    characteristic = load("docs/core/07_artifacts/verification/matter_space_characteristic_cone_verification.json")
+    observable = load("docs/core/07_artifacts/verification/matter_space_observable_verification.json")
+    lane = load("docs/core/07_artifacts/archive/matter_space_causal_lane_selection.json")
+    pilot_sync = load("docs/core/07_artifacts/archive/matter_space_topic_pilot_sync.json")
+    full = load("docs/core/07_artifacts/verification/matter_space_variational_verification.json")
 
     characteristic_pass = (
         characteristic.get("audit_status") == "PASS"

@@ -23,7 +23,7 @@ RAW_PATH = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
     "hanfland_1989_graphite_equation_of_state.pdf"
 )
-OUT = ROOT / "docs/core/artifacts/t13_graphite_isothermal_kt_source_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_graphite_isothermal_kt_source_audit.json"
 EXPECTED_RAW_SHA256 = "300a6b03af667f71a27fc7c269e7a928af57d4b846bded25feaefa0e37b1089e"
 
 

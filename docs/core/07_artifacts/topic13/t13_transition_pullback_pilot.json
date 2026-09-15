@@ -1,0 +1,220 @@
+{
+  "major_result_id": "T13_TRANSITION_PULLBACK_IMPLEMENTATION",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "status": "BLOCKED_PULLBACK_NUMERICAL_FAILURE",
+  "completed": true,
+  "what_is_closed": "Weighted coordinate path installed and measured separately from legacy interpolation",
+  "equation_or_mapping": "U=V sqrt(W_exact) S.T inv_sqrt(W_basis); remaining projector and rates unchanged",
+  "units": "natural",
+  "derivation_class": "Coordinate identity with numerical interpolation approximation",
+  "observable": "Rate-weighted collision and heat response",
+  "data_role": "INTERNAL_NO_FIT",
+  "config": {
+    "eos": {
+      "matter": {
+        "matter_kinetic": 1.0,
+        "matter_mass_sq": 1.0,
+        "matter_quartic": 1.0,
+        "response_coupling": 0.8,
+        "unit_lane": "natural"
+      },
+      "response": {
+        "epsilon_nc": 0.05,
+        "einstein_coupling": 1.0,
+        "cosmological_constant": 0.0,
+        "phi_equilibrium": 0.0,
+        "response_kinetic": 1.0,
+        "response_mass_sq": 1.0,
+        "response_quartic": 1.0,
+        "curvature_coupling": 0.0,
+        "equilibrium_density": 0.0,
+        "unit_lane": "natural"
+      },
+      "branch_tolerance": 1e-12,
+      "inversion_tolerance": 1e-13,
+      "inversion_max_iterations": 256,
+      "phase_convention": "theta_equals_minus_mu_t",
+      "metric_signature": "minus_plus_plus_plus",
+      "unit_lane": "natural"
+    },
+    "quadrature_order": 128,
+    "cutoff_factor": 60.0,
+    "derivative_step": 0.0001,
+    "phase_tolerance": 1e-10
+  },
+  "controls": {
+    "radial_order": 8,
+    "collision_integration_order": 24,
+    "angular_order": 24,
+    "cutoff_factor": 48.0,
+    "transition_quadrature_order": 24,
+    "transition_channel_count": 64,
+    "transition_interpolation_order": 40
+  },
+  "cases": [
+    {
+      "_direction_rule": "axis6",
+      "_transition_map": "legacy_z_interpolation"
+    },
+    {
+      "_direction_rule": "axis6",
+      "_transition_map": "weighted_psi_pullback"
+    },
+    {
+      "_direction_rule": "axis_cube14",
+      "_transition_map": "legacy_z_interpolation"
+    },
+    {
+      "_direction_rule": "axis_cube14",
+      "_transition_map": "weighted_psi_pullback"
+    }
+  ],
+  "rows": [
+    {
+      "case": {
+        "_direction_rule": "axis6",
+        "_transition_map": "legacy_z_interpolation"
+      },
+      "operator_evaluated": true,
+      "map": "legacy_z_interpolation",
+      "conservation_residual": 3.4647596134647054e-23,
+      "minimum_eigenvalue": -1.621618386918114e-22,
+      "null_mode_count": 5,
+      "vertex_trace_ratio": 1.6044696293359482e-06,
+      "projection_correction": 0.29644482815660006,
+      "maximum_absolute_eigenvalue": 1.464702579741981e-06,
+      "maximum_collision_width": 1.464702579741952e-06,
+      "eigen_to_width_ratio": 1.0000000000000198,
+      "relative_pinv_retained_modes": 91,
+      "basis_weight_span": 7.944306352179601e+87,
+      "status": "EVALUATED",
+      "kappa": 254.8247192440348,
+      "entropy_residual": 2.0463630789890885e-12,
+      "boost_residual": 1.1102230246251565e-16,
+      "isotropy_residual": 4.450120184959954e-11,
+      "original_gates": {
+        "entropy": true,
+        "boost": true,
+        "isotropy": true
+      }
+    },
+    {
+      "case": {
+        "_direction_rule": "axis6",
+        "_transition_map": "weighted_psi_pullback"
+      },
+      "operator_evaluated": true,
+      "map": "weighted_psi_pullback",
+      "conservation_residual": 1.5299644698143136,
+      "minimum_eigenvalue": -8.536531817237027e+42,
+      "null_mode_count": 40,
+      "vertex_trace_ratio": 9.54618626168821e+62,
+      "projection_correction": 8.654161698914847e-43,
+      "maximum_absolute_eigenvalue": 1.6782865344442e+58,
+      "maximum_collision_width": 1.464702579741952e-06,
+      "eigen_to_width_ratio": 1.1458206994759828e+64,
+      "relative_pinv_retained_modes": 5,
+      "basis_weight_span": 7.944306352179601e+87,
+      "status": "ERROR",
+      "error_type": "ValueError",
+      "error": "kappa_natural must be positive"
+    },
+    {
+      "case": {
+        "_direction_rule": "axis_cube14",
+        "_transition_map": "legacy_z_interpolation"
+      },
+      "operator_evaluated": true,
+      "map": "legacy_z_interpolation",
+      "conservation_residual": 1.337569752414941e-22,
+      "minimum_eigenvalue": 4.64973596965946e-22,
+      "null_mode_count": 5,
+      "vertex_trace_ratio": 6.428836696435813e-07,
+      "projection_correction": 2.046232668558852e-09,
+      "maximum_absolute_eigenvalue": 1.4647026081321872e-06,
+      "maximum_collision_width": 1.464702579741952e-06,
+      "eigen_to_width_ratio": 1.0000000193829353,
+      "relative_pinv_retained_modes": 219,
+      "basis_weight_span": 8.93734464620205e+87,
+      "status": "EVALUATED",
+      "kappa": 254.82471242642325,
+      "entropy_residual": 9.094947017729282e-13,
+      "boost_residual": 2.2737367544323206e-13,
+      "isotropy_residual": 5.2684812788691394e-08,
+      "original_gates": {
+        "entropy": true,
+        "boost": true,
+        "isotropy": false
+      }
+    },
+    {
+      "case": {
+        "_direction_rule": "axis_cube14",
+        "_transition_map": "weighted_psi_pullback"
+      },
+      "operator_evaluated": true,
+      "map": "weighted_psi_pullback",
+      "conservation_residual": 1.3480612895668185e-22,
+      "minimum_eigenvalue": -72607667.89150125,
+      "null_mode_count": 28,
+      "vertex_trace_ratio": 3.9961054604114623e+27,
+      "projection_correction": 1.348123702855794e-42,
+      "maximum_absolute_eigenvalue": 3.1230089444697474e+23,
+      "maximum_collision_width": 1.464702579741952e-06,
+      "eigen_to_width_ratio": 2.1321795889920205e+29,
+      "relative_pinv_retained_modes": 9,
+      "basis_weight_span": 8.93734464620205e+87,
+      "status": "ERROR",
+      "error_type": "ValueError",
+      "error": "kappa_natural must be positive"
+    }
+  ],
+  "open_blockers": [
+    "interpolation_and_angular_convergence",
+    "rate_weighted_stability",
+    "material_mapping"
+  ],
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "claim_boundary": "Opt-in revised coordinate map; legacy default preserved as comparator, not endorsed as scalar interpolation. No physical validation.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/scripts/audit/audit_topic13_transition_pullback_pilot.py",
+      "sha256": "5e48080360a1557d25d855f9d947296b107ed5178ee16f03f22c1e2697718a9f"
+    },
+    {
+      "path": "docs/core/test/test_topic13_transition_pullback.py",
+      "sha256": "668568e8832d69f78ede486cd1038dfcaea979866b1ac26ce7893c759c68bfbe"
+    },
+    {
+      "path": "docs/core/uet_o2_continuum_collision_operator.py",
+      "sha256": "1c58e860e4237f2f2b4a43fb5ba3d4d82967db791cb9cbff46df2a9c6bd296b2"
+    },
+    {
+      "path": "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+      "sha256": "98b43f2bde1bf335ed7296f51b253e707699e4052b0903d216ab5381eac5b835"
+    },
+    {
+      "path": "docs/core/uet_o2_action_derived_transition_kernel.py",
+      "sha256": "2f818500b353e8cf81caddf892bcf2db43a4341fe831b6f67e62423e3c2feb8f"
+    },
+    {
+      "path": "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py",
+      "sha256": "566d6a57a377269a0d551189341b4550e4da9ee8fa711ab04b7d4785bbcff209"
+    },
+    {
+      "path": "docs/core/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "a1be58b8230240775654e7c0d6265870010f546238e96e59e36045e6a893e5d2"
+    },
+    {
+      "path": "docs/core/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    },
+    {
+      "path": "docs/core/artifacts/t13_transition_coordinate_map_audit.json",
+      "sha256": "6377b0ee8ad639db082e94d190a85a591aef8990acc5ae3a868d0cde4a0e05b0"
+    }
+  ],
+  "verification_status": "ALL_PREREGISTERED_CASES_ATTEMPTED"
+}

@@ -1,39 +1,22 @@
-#!/usr/bin/env python3
-"""
-Reset 0.17 Mass Generation Logs
+"""Compatibility shim for the migrated core tooling path."""
 
-Topic-specific reset script for 0.17_Mass_Generation topic.
-This topic has no logs - may indicate a broken log system.
-"""
+from __future__ import annotations
 
-import sys
+import runpy
 from pathlib import Path
 
-# Add parent directory to path to import the core reset system
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
-from reset_topic_logs import LogResetter
+_CANONICAL_RELATIVE = "docs/scripts/core/maintenance/log/reset_logs/reset_0.17_mass_generation.py"
 
 
-def main():
-    """Reset logs for 0.17_Mass_Generation topic."""
-    print("=" * 80)
-    print("RESET LOGS: 0.17_Mass_Generation")
-    print("=" * 80)
-    print()
-    print("This topic has no logs - may indicate a broken log system.")
-    print("Running reset will not delete anything but will verify the structure.")
-    print()
-
-    # Create resetter
-    resetter = LogResetter(dry_run=False, verbose=True)
-
-    # Reset logs (will find nothing to delete)
-    resetter.reset_topic("0.17_Mass_Generation", keep_recent=0, force=True)
-
-    # Generate report
-    resetter.generate_report()
+def _run() -> None:
+    current = Path(__file__).resolve()
+    for ancestor in (current.parent, *current.parents):
+        candidate = ancestor / _CANONICAL_RELATIVE
+        if candidate.exists():
+            runpy.run_path(str(candidate), run_name="__main__")
+            return
+    raise FileNotFoundError(f"canonical tooling script not found: {_CANONICAL_RELATIVE}")
 
 
 if __name__ == "__main__":
-    main()
+    _run()

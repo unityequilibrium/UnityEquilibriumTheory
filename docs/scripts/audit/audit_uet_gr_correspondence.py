@@ -72,7 +72,7 @@ def build_artifacts() -> tuple[dict, dict, dict]:
     }
     addendum = {
         "schema_version": "1.0", "artifact": "uet_equation_correspondence_registry_gr_controls_addendum",
-        "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json", "status": "CANDIDATE_ENTRY_PENDING_MERGE",
+        "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json", "status": "CANDIDATE_ENTRY_PENDING_MERGE",
         "equation_entries": [{
             "equation_id": "uet.main_theory.gr_correspondence_controls", "version": "gr-controls-v1",
             "classification": "standard_physics_interface", "relation_or_code_path": GR_CORRESPONDENCE_SOURCE,
@@ -86,7 +86,7 @@ def build_artifacts() -> tuple[dict, dict, dict]:
             "symmetry_and_conservation": "Einstein residual identity only; curved Bianchi evolution not tested",
             "limiting_cases": ["Minkowski vacuum", "flat FLRW perfect fluid", "Schwarzschild exterior", "Newtonian Poisson"],
             "implementation_paths": [GR_CORRESPONDENCE_SOURCE],
-            "verifier_paths": ["docs/scripts/audit/audit_uet_gr_correspondence.py", "docs/core/artifacts/gr_correspondence_verification.json", "docs/core/test/test_uet_gr_correspondence.py"],
+            "verifier_paths": ["docs/scripts/audit/audit_uet_gr_correspondence.py", "docs/core/07_artifacts/correspondence/gr_correspondence_verification.json", "docs/core/test/test_uet_gr_correspondence.py"],
             "evidence_class": "STANDARD_THEORY_REPRODUCTION", "proof_status": "analytic tensor-input identities pass; curved numerical closure blocked",
             "downstream_dependencies": ["uet.main_theory.covariant_parent", "uet.main_theory.hyperbolic_spine_control", "uet.main_theory.gravity_observables"],
             "claim_boundary": "correspondence controls, not a UET derivation or numerical GR validation",

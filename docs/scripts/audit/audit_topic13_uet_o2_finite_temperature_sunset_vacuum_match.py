@@ -23,11 +23,11 @@ from docs.core.uet_o2_finite_temperature_sunset_vacuum_match import (  # noqa: E
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_finite_temperature_sunset_vacuum_match_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_sunset_vacuum_match_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_finite_temperature_sunset_vacuum_match.py"
 THERMAL_MODULE = ROOT / "docs/core/uet_o2_finite_temperature_full_sunset_sk_kms.py"
 VACUUM_MODULE = ROOT / "docs/core/uet_o2_action_1pi_sunset_retarded.py"
-VACUUM_ARTIFACT = ROOT / "docs/core/artifacts/t13_uet_o2_action_1pi_sunset_retarded_audit.json"
+VACUUM_ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_action_1pi_sunset_retarded_audit.json"
 
 
 def sha256(path: Path) -> str:
@@ -95,7 +95,7 @@ def main() -> int:
         {"path": "docs/core/uet_o2_finite_temperature_sunset_vacuum_match.py", "sha256": sha256(MODULE)},
         {"path": "docs/core/uet_o2_finite_temperature_full_sunset_sk_kms.py", "sha256": sha256(THERMAL_MODULE)},
         {"path": "docs/core/uet_o2_action_1pi_sunset_retarded.py", "sha256": sha256(VACUUM_MODULE)},
-        {"path": "docs/core/artifacts/t13_uet_o2_action_1pi_sunset_retarded_audit.json", "sha256": sha256(VACUUM_ARTIFACT)},
+        {"path": "docs/core/07_artifacts/topic13/t13_uet_o2_action_1pi_sunset_retarded_audit.json", "sha256": sha256(VACUUM_ARTIFACT)},
     ]
     closure_level = "CLOSED_FOR_LANE" if not failed else "OPEN"
     artifact = {

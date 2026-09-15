@@ -1,0 +1,124 @@
+{
+  "major_result_id": "T13_ACTION_NORMALIZED_INTEGRATED_ELASTIC_EVENTS",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "what_is_closed": "Independent double-radial integration connected to the existing tree elastic amplitude",
+  "equation_or_mapping": "R_event=1/2 sum_q integral d^3k/(2*pi)^3 f_q(k) Gamma_q(k)",
+  "units": "Natural energy^4 (events per volume per time)",
+  "derivation_class": "TREE_ELASTIC_QUASIPARTICLE_DIAGNOSTIC",
+  "observable": "Equilibrium elastic event density, not relaxation eigenvalue or conductivity",
+  "data_role": "SYNTHETIC_ACTION_INPUTS_NO_FIT",
+  "config": {
+    "z": 1.0,
+    "mass_squared": 1.0,
+    "quartic": 0.1,
+    "epsilon": 1.0,
+    "response_kinetic": 1.0,
+    "response_mass_squared": 0.5,
+    "response_coupling": 0.2
+  },
+  "temperature": 0.25,
+  "mu": 0.2,
+  "rows": [
+    {
+      "radial_order": 8,
+      "angular_order": 8,
+      "cutoff": 12.0,
+      "ordered_tag_density": [
+        [
+          1.3523273935544383e-12,
+          1.6741777443004125e-11
+        ],
+        [
+          1.6741777443004128e-11,
+          3.4114245000388504e-11
+        ]
+      ],
+      "event_density": 3.44750636399756e-11,
+      "incoming_exchange_relative_error": 1.9300067025651881e-16,
+      "detailed_balance_relative_error": 1.7580631488785455e-14
+    },
+    {
+      "radial_order": 16,
+      "angular_order": 8,
+      "cutoff": 12.0,
+      "ordered_tag_density": [
+        [
+          1.3827088849017932e-12,
+          1.772967276677841e-11
+        ],
+        [
+          1.7729672766778405e-11,
+          3.522536315151054e-11
+        ]
+      ],
+      "event_density": 3.603370878498458e-11,
+      "incoming_exchange_relative_error": 1.8224669514712022e-16,
+      "detailed_balance_relative_error": 1.8136475660597056e-14
+    },
+    {
+      "radial_order": 24,
+      "angular_order": 8,
+      "cutoff": 12.0,
+      "ordered_tag_density": [
+        [
+          1.3820254598327484e-12,
+          1.7722057817138972e-11
+        ],
+        [
+          1.772205781713897e-11,
+          3.520886594817927e-11
+        ]
+      ],
+      "event_density": 3.601750352114498e-11,
+      "incoming_exchange_relative_error": 1.8232500430398106e-16,
+      "detailed_balance_relative_error": 2.1491793637486706e-14
+    },
+    {
+      "radial_order": 24,
+      "angular_order": 12,
+      "cutoff": 12.0,
+      "ordered_tag_density": [
+        [
+          1.3819793546168175e-12,
+          1.772119114754511e-11
+        ],
+        [
+          1.7721191147545124e-11,
+          3.520771665607835e-11
+        ]
+      ],
+      "event_density": 3.60160391528927e-11,
+      "incoming_exchange_relative_error": 7.2933568423991e-16,
+      "detailed_balance_relative_error": 2.1624582070988383e-14
+    }
+  ],
+  "successive_relative_changes": [
+    0.045210798195645774,
+    0.00044972511534402404,
+    4.065712803824617e-05
+  ],
+  "verification_status": "MEASURED_REFINEMENT_NOT_PHYSICAL_CLOSURE",
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "open_blockers": [
+    "cutoff_and_joint_resolution_control",
+    "linearized_collision_gain_loss_and_conserved_projection",
+    "material_calibration"
+  ],
+  "claim_boundary": "Uses existing nonresonant tree amplitude and species factors. Does not replace legacy channels, infer full transport, or access external data/holdout.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/scripts/audit/audit_topic13_integrated_elastic_events.py",
+      "sha256": "517ee7f5eee16ab4493b0e3d42341178124cf9d3b61d0590e82725fdaac6ab54"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_action_normalized_elastic_scattering.py",
+      "sha256": "c09fbdd4d921c2c9ea1ba578c27935887900545725c978015104e9d4594a258b"
+    },
+    {
+      "path": "docs/core/test/test_topic13_action_normalized_elastic_scattering.py",
+      "sha256": "37d3353dd8286b1b01558ea2690a9aad96be130c8a2077683b38446aaeff9bd5"
+    }
+  ]
+}

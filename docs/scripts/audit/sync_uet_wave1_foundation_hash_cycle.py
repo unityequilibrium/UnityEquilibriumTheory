@@ -7,8 +7,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-CONTRACT = ROOT / "docs/core/artifacts/uet_research_room_wave1_contract.json"
-FOUNDATION_REL = "docs/core/artifacts/uet_foundation_dependency_gate.json"
+CONTRACT = ROOT / "docs/core/07_artifacts/archive/uet_research_room_wave1_contract.json"
+FOUNDATION_REL = "docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json"
 
 
 def main() -> int:

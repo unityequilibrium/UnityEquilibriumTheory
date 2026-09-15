@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-LANE = ROOT / "docs/core/artifacts/t13_mp48_force_constant_csrc_mesh_convergence_audit.json"
+LANE = ROOT / "docs/core/07_artifacts/topic13/t13_mp48_force_constant_csrc_mesh_convergence_audit.json"
 
 
 def load(path: Path) -> dict:

@@ -12,8 +12,8 @@ from docs.core.t13_formal_thermodynamic_bridge_integration import (
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json"
-DEPENDENCY = ROOT / "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_formal_thermodynamic_bridge_integration_audit.json"
+DEPENDENCY = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 FULL_GATE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
 
 
@@ -65,6 +65,6 @@ def test_full_gate_projects_formal_lane_without_promoting_full_topic() -> None:
     assert full["major_result"]["closure_level"] == "PARTIAL"
     assert full["claim_promotion"] is False
     assert any(
-        item["path"] == "docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json"
+        item["path"] == "docs/core/07_artifacts/topic13/t13_formal_thermodynamic_bridge_integration_audit.json"
         for item in full["evidence_artifacts"]
     )

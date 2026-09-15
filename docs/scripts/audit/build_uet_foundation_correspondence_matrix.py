@@ -19,9 +19,9 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-INVENTORY_PATH = ROOT / "docs/core/artifacts/uet_foundation_equation_inventory.json"
-COMPATIBILITY_PATH = ROOT / "docs/core/artifacts/uet_foundation_compatibility_gate.json"
-OUTPUT = ROOT / "docs/core/artifacts/uet_foundation_correspondence_matrix.json"
+INVENTORY_PATH = ROOT / "docs/core/07_artifacts/gates/uet_foundation_equation_inventory.json"
+COMPATIBILITY_PATH = ROOT / "docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json"
+OUTPUT = ROOT / "docs/core/07_artifacts/gates/uet_foundation_correspondence_matrix.json"
 
 
 SELECTED_ROWS: dict[str, dict[str, Any]] = {
@@ -209,7 +209,7 @@ def build_matrix() -> dict[str, Any]:
                 **definition,
                 "inventory_record": {
                     "topic_id": source_record.get("topic_id") if source_record else "core",
-                    "source": source_record.get("source") if source_record else {"path": "docs/core/artifacts/uet_foundation_compatibility_gate.json"},
+                    "source": source_record.get("source") if source_record else {"path": "docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json"},
                     "evidence_class": source_record.get("evidence_class") if source_record else None,
                     "proof_status": source_record.get("proof_status") if source_record else None,
                     "constant_origin": source_record.get("constant_origin") if source_record else None,
@@ -231,7 +231,7 @@ def build_matrix() -> dict[str, Any]:
         "coverage": {
             "role": "focused critical-row correspondence matrix, not exhaustive code inventory",
             "selected_row_count": len(matrix_rows),
-            "full_inventory_artifact": "docs/core/artifacts/uet_foundation_equation_inventory.json",
+            "full_inventory_artifact": "docs/core/07_artifacts/gates/uet_foundation_equation_inventory.json",
             "inventory_gate_status": inventory.get("inventory_gate_status"),
             "compatibility_gate_status": compatibility.get("compatibility_status"),
         },

@@ -18,16 +18,16 @@ def load(relative: str) -> dict[str, Any]:
 
 
 def build_artifact() -> dict[str, Any]:
-    lane = load("docs/core/artifacts/matter_space_causal_lane_selection.json")
-    characteristic = load("docs/core/artifacts/matter_space_characteristic_cone_verification.json")
+    lane = load("docs/core/07_artifacts/archive/matter_space_causal_lane_selection.json")
+    characteristic = load("docs/core/07_artifacts/verification/matter_space_characteristic_cone_verification.json")
     phase = load("docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_matter_space_phase_coupling_diagnostic.json")
     thermal = load("docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json")
     phase_rerun = load("docs/topics/0.11_Phase_Transitions/Result/artifacts/matter_space_0_11_characteristic_lane_rerun.json")
     phase_structure_factor_replication = load("docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_conserved_order_spectral_finite_size_replication.json")
     thermal_rerun = load("docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_0_13_characteristic_thermal_lane_rerun.json")
-    observable = load("docs/core/artifacts/matter_space_observable_verification.json")
-    thermal_map = load("docs/core/artifacts/thermal_observable_bridge_verification.json")
-    resource_map = load("docs/core/artifacts/resource_selection_thermal_bridge_verification.json")
+    observable = load("docs/core/07_artifacts/verification/matter_space_observable_verification.json")
+    thermal_map = load("docs/core/07_artifacts/topic13/thermal_observable_bridge_verification.json")
+    resource_map = load("docs/core/07_artifacts/provenance/resource_selection_thermal_bridge_verification.json")
 
     checks = {
         "selected_characteristic_lane_passes": (
@@ -102,7 +102,7 @@ def build_artifact() -> dict[str, Any]:
             "claim_boundary": "Fourier/Cattaneo/trace and normalized matter-space diagnostic; no external validation or SI C-to-T identity",
         },
         "new_internal_bridge": {
-            "artifact": "docs/core/artifacts/resource_selection_thermal_bridge_verification.json",
+            "artifact": "docs/core/07_artifacts/provenance/resource_selection_thermal_bridge_verification.json",
             "status": resource_map["audit_status"],
             "claim_boundary": resource_map["claim_boundary"],
         },
@@ -117,7 +117,7 @@ def build_artifact() -> dict[str, Any]:
 
 def main() -> int:
     artifact = build_artifact()
-    output = ROOT / "docs/core/artifacts/matter_space_topic_pilot_sync.json"
+    output = ROOT / "docs/core/07_artifacts/archive/matter_space_topic_pilot_sync.json"
     output.write_text(json.dumps(artifact, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(artifact, indent=2))
     return 0 if artifact["audit_status"] != "FAIL" else 1

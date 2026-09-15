@@ -26,7 +26,7 @@ from docs.core.uet_o2_finite_temperature_two_fluid_response import (  # noqa: E4
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_finite_temperature_two_fluid_response_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_two_fluid_response_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_finite_temperature_two_fluid_response.py"
 SECTOR_MODULE = ROOT / "docs/core/uet_o2_formal_two_sector_thermodynamics.py"
 STATIC_MODULE = ROOT / "docs/core/uet_o2_formal_transverse_response.py"

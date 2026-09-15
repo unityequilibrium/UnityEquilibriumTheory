@@ -1,0 +1,260 @@
+{
+  "major_result_id": "T13_LOCAL_VARIANCE_FREQUENCY_ATTRIBUTION",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "units": "covariance trace m^2; frequency cm^-1",
+  "derivation_class": "source harmonic model spectral decomposition",
+  "equation_or_mapping": "trace_bin=sum_qj_in_bin ||B^dagger phase(q)e_qj||^2 hbar*coth(hbar*w/(2*kB*T))/(2*mu*w*Nq)",
+  "frequency_bin_edges_cm_inverse": [
+    0,
+    10,
+    30,
+    100,
+    300,
+    1000,
+    "infinity"
+  ],
+  "interval_policy": "left closed, right open",
+  "rows": [
+    {
+      "mesh": 8,
+      "trace_bins_m2": {
+        "0.0": [
+          0.0,
+          7.822068718675421e-31,
+          2.538220937692412e-29,
+          7.071065004185946e-24,
+          2.378142772989825e-23,
+          9.699489620084171e-24
+        ],
+        "100.0": [
+          0.0,
+          4.3969422042765554e-30,
+          6.504861939436928e-29,
+          8.472607403119928e-24,
+          2.385033032045785e-23,
+          9.699490984955386e-24
+        ],
+        "200.0": [
+          0.0,
+          8.72270044044719e-30,
+          1.2471972322945857e-28,
+          1.293217055006842e-23,
+          2.50962194544726e-23,
+          9.702861065746384e-24
+        ],
+        "300.0": [
+          0.0,
+          1.3064237360566752e-29,
+          1.855678042035781e-28,
+          1.816491129410597e-23,
+          2.801497413717419e-23,
+          9.75247253207737e-24
+        ]
+      },
+      "total_reconstruction_relative_error": {
+        "0.0": 0.0,
+        "100.0": 1.3322676295501878e-15,
+        "200.0": 2.220446049250313e-16,
+        "300.0": 2.220446049250313e-16
+      }
+    },
+    {
+      "mesh": 12,
+      "trace_bins_m2": {
+        "0.0": [
+          1.3783124729380317e-32,
+          1.3841642498621554e-30,
+          2.1037212633265106e-24,
+          5.69678556732978e-24,
+          2.3866584691882738e-23,
+          9.454901079754905e-24
+        ],
+        "100.0": [
+          1.9815207182211165e-31,
+          8.04747935217594e-30,
+          3.6124949601385065e-24,
+          6.56128822840142e-24,
+          2.3934175024482255e-23,
+          9.454902202700042e-24
+        ],
+        "200.0": [
+          3.9582419691841775e-31,
+          1.5971348820606718e-29,
+          6.5491232503141905e-24,
+          9.651146375946957e-24,
+          2.5149900392325168e-23,
+          9.457915283820767e-24
+        ],
+        "300.0": [
+          5.9360293850277016e-31,
+          2.3922617428015773e-29,
+          9.631104743173792e-24,
+          1.3391723188793935e-23,
+          2.802091387295913e-23,
+          9.503852249546202e-24
+        ]
+      },
+      "total_reconstruction_relative_error": {
+        "0.0": 1.4432899320127035e-15,
+        "100.0": 1.1102230246251565e-16,
+        "200.0": 6.661338147750939e-16,
+        "300.0": 3.3306690738754696e-16
+      }
+    }
+  ],
+  "refinement_attribution": {
+    "0.0": {
+      "delta_trace_bins_m2": [
+        1.3783124729380317e-32,
+        6.019573779946133e-31,
+        2.1036958811171335e-24,
+        -1.3742794368561666e-24,
+        8.515696198448814e-26,
+        -2.4458854032926586e-25
+      ],
+      "signed_share_of_net_change": [
+        2.4181536500401666e-08,
+        1.056092474925841e-06,
+        3.6907885355301233,
+        -2.411077967919031,
+        0.14940198430488982,
+        -0.4291136321899933
+      ],
+      "final_trace_fraction": [
+        3.351764685656886e-10,
+        3.3659949706087524e-08,
+        0.051158055791607905,
+        0.1385337872306569,
+        0.5803849076905825,
+        0.2299232152920265
+      ]
+    },
+    "100.0": {
+      "delta_trace_bins_m2": [
+        1.9815207182211165e-31,
+        3.650537147899385e-30,
+        3.612429911519112e-24,
+        -1.9113191747185084e-24,
+        8.38447040244048e-26,
+        -2.4458878225534403e-25
+      ],
+      "signed_share_of_net_change": [
+        1.2863922730819267e-07,
+        2.3699084932465884e-06,
+        2.3451694864941897,
+        -1.2408178199410826,
+        0.054431517371497776,
+        -0.1587856824723254
+      ],
+      "final_trace_fraction": [
+        4.548646081195756e-09,
+        1.8473253941871786e-07,
+        0.08292601178818361,
+        0.15061653261191682,
+        0.5494168717524155,
+        0.21704039456629867
+      ]
+    },
+    "200.0": {
+      "delta_trace_bins_m2": [
+        3.9582419691841775e-31,
+        7.248648380159528e-30,
+        6.548998530590961e-24,
+        -3.2810241741214622e-24,
+        5.368093785256906e-26,
+        -2.4494578192561706e-25
+      ],
+      "signed_share_of_net_change": [
+        1.2865147387198304e-07,
+        2.3559683944220595e-06,
+        2.128566974695667,
+        -1.0664042246445375,
+        0.01744747245703814,
+        -0.07961270712803584
+      ],
+      "final_trace_fraction": [
+        7.790572446350739e-09,
+        3.143464978178688e-07,
+        0.12889919196164912,
+        0.18995290236803525,
+        0.4949978362876516,
+        0.18614974724559377
+      ]
+    },
+    "300.0": {
+      "delta_trace_bins_m2": [
+        5.9360293850277016e-31,
+        1.0858380067449021e-29,
+        9.630919175369589e-24,
+        -4.773188105312035e-24,
+        5.939735784938879e-27,
+        -2.486202825311686e-25
+      ],
+      "signed_share_of_net_change": [
+        1.286229614424436e-07,
+        2.352813488871191e-06,
+        2.0868450363021114,
+        -1.0342630566749045,
+        0.0012870327238801744,
+        -0.05387149378753741
+      ],
+      "final_trace_fraction": [
+        9.803902325401927e-09,
+        3.951041839917206e-07,
+        0.1590666151787428,
+        0.22117671189921692,
+        0.46279134562894203,
+        0.15696492238501195
+      ]
+    }
+  },
+  "phonopy_version": "4.4.0",
+  "verification_status": "TOTAL_RECONSTRUCTION_CHECKED",
+  "data_role": "SOURCE_MODEL_NOT_EXPERIMENT",
+  "what_is_closed": "Frequency attribution of the existing mesh8-to12 difference, not continuum convergence",
+  "controlling_blocker": "frequency_resolved_quadrature_convergence_and_physical_mode_mapping",
+  "open_blockers": [
+    "continuum_convergence",
+    "phase_and_material_observable_mapping",
+    "anharmonic_corrections"
+  ],
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "global_claim_promotion": false,
+  "claim_boundary": "Frequency bins are not acoustic/shear branch identities; signed difference shares are not uncertainty estimates. No alpha or holdout use.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_FORCE_CONSTANTS.gz",
+      "sha256": "a410f36fd34e8603aec0dde48c1f8cb47fbf0a237ca911437f744fb7cbf02763"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_phonopy.yaml.gz",
+      "sha256": "00be787d0fbe986304ffdfa51a917b9aa0038deb6d31a563979afe42a7a2b5f8"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_thermal_variance_spectrum.py",
+      "sha256": "f1fcf39311af80bfea8b3d71a1b0fd2ca866a2c8637f1d78a442720619d89821"
+    },
+    {
+      "path": "docs/core/artifacts/t13_interlayer_thermal_variance_audit.json",
+      "sha256": "d0d1d53f7c07187388fa272d0e67a04e93bca61c97ec409154b515f870d763f9"
+    },
+    {
+      "path": "docs/core/test/test_topic13_thermal_variance_spectrum.py",
+      "sha256": "d44a42c21ef15b054255a493650bab5260338026a7ec5426e0318067923965b3"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_interlayer_thermal_variance.py",
+      "sha256": "190d1e27620b7379ff253db6e73ce4cde7c1b25c1f547398897fc68a91d42720"
+    },
+    {
+      "path": "docs/core/uet_interlayer_mode_residue.py",
+      "sha256": "f7c40cffe59575c7337433099b3c6e4f2ec9ef392182fa2e82361ec315d21ff5"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py",
+      "sha256": "66bfddff927a9d98ef045e3e56daf1c97ceca2c23aac99df7ff6bad1118b3604"
+    }
+  ]
+}

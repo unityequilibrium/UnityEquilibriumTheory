@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-PROGRESS_REL = "docs/core/artifacts/t13_full_closure_progress.json"
+PROGRESS_REL = "docs/core/07_artifacts/topic13/t13_full_closure_progress.json"
 UPDATE_LOG = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
 MARKER = "### 2026-08-24 - Topic 13 closure progress dashboard"
 
@@ -45,7 +45,7 @@ STATUS:
 - `{status['full_topic_status']}`; `claim_promotion=false`.
 
 WHAT_CHANGED:
-- Added `docs/core/artifacts/t13_full_closure_progress.json` and `docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_FULL_CLOSURE_STATUS.md`, generated from the canonical matrix, full gate, and input audit.
+- Added `docs/core/07_artifacts/topic13/t13_full_closure_progress.json` and `docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_FULL_CLOSURE_STATUS.md`, generated from the canonical matrix, full gate, and input audit.
 
 EQUATION_OR_MAPPING:
 - Existing operators remain `y_TTG=Delta_Tq(t)/Delta_Tq(0)`, `y_TTG^UET=Delta_Phi(t)/Delta_Phi(0)`, and `Delta_Tq=alpha_Phi_K*Delta_Phi`; no numeric alpha or SI map was emitted.

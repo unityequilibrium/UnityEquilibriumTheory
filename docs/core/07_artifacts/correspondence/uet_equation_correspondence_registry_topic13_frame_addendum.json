@@ -1,0 +1,15 @@
+{
+  "status": "UNMERGED_INTERNAL_LINEAR_FRAME_ADDENDUM",
+  "equation_id": "uet.topic13.linear_heat_charge_frame_map",
+  "ontology": "Q energy flux; V signed O(2) charge diffusion; q_heat=Q-hV. Neither V nor n is declared material mass flow/density. C/Phi/R_gen/R_obs unchanged.",
+  "units": "natural; h energy per charge; entropy current requires explicit frame",
+  "equation_or_mapping": "Q_L=0; q_heat=-hV; u_E=u_L+V/n; S_L=s*u_L-mu*V/T=S_E to first order; K_heat=h^2*K_charge",
+  "derivation_class": "Conserved-moment projection plus first-order charged-fluid frame transformation",
+  "observable": "formal heat/charge diffusion and entropy-current decomposition",
+  "data_role": "INTERNAL_NO_FIT",
+  "verification_status": "FINITE_GRID_LINEAR_IDENTITIES",
+  "evidence_artifact": "docs/core/artifacts/t13_heat_charge_frame_map_audit.json",
+  "controlling_blocker": "production_frame_propagation_and_material_charge_protocol_map",
+  "dependency_unlocked": [],
+  "claim_boundary": "No exact nonlinear frame map, material identification or physical transport promotion."
+}

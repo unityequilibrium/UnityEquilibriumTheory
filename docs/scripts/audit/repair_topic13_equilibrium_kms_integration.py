@@ -11,7 +11,7 @@ SYNC = ROOT / "docs/scripts/audit/sync_topic13_major_result_lanes.py"
 
 LANE_ID = "T13_UET_O2_EQUILIBRIUM_KMS_LANE"
 LANE_KEY = "uet_o2_equilibrium_kms_lane"
-AUDIT_REL = "docs/core/artifacts/t13_uet_o2_equilibrium_kms_audit.json"
+AUDIT_REL = "docs/core/07_artifacts/topic13/t13_uet_o2_equilibrium_kms_audit.json"
 
 
 def replace_once(text: str, old: str, new: str, label: str) -> str:
@@ -32,11 +32,11 @@ def patch_gate() -> bool:
         text = replace_once(text, mapping_old, mapping_new, "full-gate lane registry")
 
     load_old = """    finite_qp_eos_path, finite_qp_eos = load(
-        "docs/core/artifacts/t13_uet_o2_finite_temperature_quasiparticle_eos_audit.json"
+        "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_quasiparticle_eos_audit.json"
     )
 """
     load_new = load_old + """    equilibrium_kms_path, equilibrium_kms = load(
-        "docs/core/artifacts/t13_uet_o2_equilibrium_kms_audit.json"
+        "docs/core/07_artifacts/topic13/t13_uet_o2_equilibrium_kms_audit.json"
     )
 """
     if "equilibrium_kms_path, equilibrium_kms" not in text:

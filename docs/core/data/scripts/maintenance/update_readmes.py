@@ -1,62 +1,22 @@
-import os
+"""Compatibility shim for the migrated core tooling path."""
+
+from __future__ import annotations
+
+import runpy
 from pathlib import Path
 
-# Robust Path: scripts/Maintenance -> scripts -> docs
-current_file = Path(__file__).resolve()
-TOPICS_DIR = current_file.parents[2] / "topics"
+_CANONICAL_RELATIVE = "docs/scripts/core/maintenance/update_readmes.py"
 
 
-def update_readme(folder_path):
-    readme_path = folder_path / "README.md"
-    name = folder_path.name
-
-    # Check status based on name
-    status = "100% PASS (Production Ready)"
-    if name.startswith("0.1_"):
-        status = "78% PASS (Known Limitations: Compact Galaxies)"
-
-    # Generic content if missing or simple update
-    content = f"""# {name}
-
-## Status
-**{status}**
-
-## Overview
-This module implements the UET solution for {name.split('_', 1)[1].replace('_', ' ')}.
-
-## Test Coverage
-- **Core Tests**: Passed
-- **Validation**: Verified against real data (where applicable).
-
-## Key Files
-- `Code/`: Implementation and Test Scripts
-- `Data/`: Real-world datasets (audit verified)
-
-[Return to Topics Index](../README.md)
-"""
-
-    if not readme_path.exists():
-        print(f"Creating {readme_path}")
-        with open(readme_path, "w", encoding="utf-8") as f:
-            f.write(content)
-    else:
-        print(f"Updating {readme_path}")
-        # Simplistic rewrite to ensure uniformity, but we could try to preserve custom content if needed.
-        # Given "Update All", I'll append/prepend Status if not present, or just overwrite for consistency (User asked "Update All").
-        # I will overwrite to ensure the "100%" badge is visible.
-        with open(readme_path, "w", encoding="utf-8") as f:
-            f.write(content)
-
-
-def main():
-    if not TOPICS_DIR.exists():
-        print(f"Topics dir not found at {TOPICS_DIR}")
-        return
-
-    for item in TOPICS_DIR.iterdir():
-        if item.is_dir() and item.name[0].isdigit():  # 0.1, 0.2 etc
-            update_readme(item)
+def _run() -> None:
+    current = Path(__file__).resolve()
+    for ancestor in (current.parent, *current.parents):
+        candidate = ancestor / _CANONICAL_RELATIVE
+        if candidate.exists():
+            runpy.run_path(str(candidate), run_name="__main__")
+            return
+    raise FileNotFoundError(f"canonical tooling script not found: {_CANONICAL_RELATIVE}")
 
 
 if __name__ == "__main__":
-    main()
+    _run()

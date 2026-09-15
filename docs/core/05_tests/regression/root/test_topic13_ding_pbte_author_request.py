@@ -10,7 +10,7 @@ MANIFEST = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "ding_2022_pbte_author_request_manifest.json"
 )
-AUDIT = ROOT / "docs/core/artifacts/t13_ding_pbte_author_request_audit.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_ding_pbte_author_request_audit.json"
 
 
 def load(path: Path) -> dict:

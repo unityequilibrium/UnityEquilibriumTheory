@@ -18,8 +18,8 @@ PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "mp48_independent_graphite_cv_source_package.json"
 )
-BASE_AUDIT = ROOT / "docs/core/artifacts/t13_mp48_independent_graphite_cv_audit.json"
-OUT = ROOT / "docs/core/artifacts/t13_mp48_temperature_volume_uncertainty_boundary_audit.json"
+BASE_AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_mp48_independent_graphite_cv_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_mp48_temperature_volume_uncertainty_boundary_audit.json"
 
 
 def load_json(path: Path) -> dict:

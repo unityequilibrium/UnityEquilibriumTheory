@@ -8,8 +8,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 LOG = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
-RECONCILIATION = ROOT / "docs/core/artifacts/t13_physical_transport_reconciliation_audit.json"
-INPUT_AUDIT = ROOT / "docs/core/artifacts/t13_closure_input_package_audit.json"
+RECONCILIATION = ROOT / "docs/core/07_artifacts/topic13/t13_physical_transport_reconciliation_audit.json"
+INPUT_AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json"
 MARKER = "### 2026-08-24 - Topic 13 physical transport reconciliation wave"
 
 
@@ -19,7 +19,7 @@ ENTRY = f"""
 - Scope: `Topic 13 transport/Kubo/SK/KMS/entropy acceptance boundary`
 - Wave type: `transport evidence reconciliation`
 - Added or changed: `t13_physical_transport_reconciliation_audit.json`; projected it into `t13_closure_input_package_audit.json`; preserved the physical coefficient blocker.
-- Files touched: `docs/core/artifacts/t13_physical_transport_reconciliation_audit.json`, `docs/core/artifacts/t13_closure_input_package_audit.json`, `docs/core/artifacts/t13_topic13_closure_matrix.json`, `docs/core/artifacts/t13_full_closure_progress.json`, `docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_FULL_CLOSURE_STATUS.md`
+- Files touched: `docs/core/07_artifacts/topic13/t13_physical_transport_reconciliation_audit.json`, `docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json`, `docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json`, `docs/core/07_artifacts/topic13/t13_full_closure_progress.json`, `docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_FULL_CLOSURE_STATUS.md`
 - Verified with: `audit_topic13_physical_transport_reconciliation.py`, `run_topic13_physical_transport_reconciliation_wave.py`, `audit_topic13_full_bridge_gate.py`, `audit_topic13_closure_matrix.py`, `render_topic13_closure_progress.py`
 - Result: `PASS_SCOPED_PHYSICAL_TRANSPORT_RECONCILIATION_OPEN`; `candidate_count=5`, `formal_lane_count=3`, `external_physical_comparator_count=1`, `physical_uet_coefficient_count=0`, `accepted_for_full_topic13_count=0`.
 - Blocker narrowed: formal SK/KMS/entropy, a natural-unit UET Kubo channel, and an external graphite Green-Kubo comparator are now explicitly separated; none is accepted as a physical UET coefficient.

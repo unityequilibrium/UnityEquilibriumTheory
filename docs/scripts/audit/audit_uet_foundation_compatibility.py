@@ -20,21 +20,21 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-ARTIFACT_PATH = ROOT / "docs/core/artifacts/uet_foundation_compatibility_gate.json"
+ARTIFACT_PATH = ROOT / "docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json"
 
 MASTER_PATH = ROOT / "docs/core/uet_master_equation.py"
 PARAMETERS_PATH = ROOT / "docs/core/uet_parameters.py"
 MATTER_SPACE_SPEC = ROOT / "docs/core/MATTER_SPACE_RESEARCH_SPEC.md"
 GR_SPEC = ROOT / "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
-REGISTRY_PATH = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry.json"
-ALIGNMENT_PATH = ROOT / "docs/core/artifacts/master_equation_alignment_gate_v2.json"
-MATTER_FORMULA_PATH = ROOT / "docs/core/artifacts/matter_space_formula_audit.json"
-MATTER_VERIFY_PATH = ROOT / "docs/core/artifacts/matter_space_variational_verification.json"
-MATTER_DEPENDENCY_PATH = ROOT / "docs/core/artifacts/matter_space_dependency_gate.json"
-TRACE_VERIFY_PATH = ROOT / "docs/core/artifacts/spacetime_trace_verification.json"
-GR_VERIFY_PATH = ROOT / "docs/core/artifacts/gr_closed_limit_verification.json"
-O2_VERIFY_PATH = ROOT / "docs/core/artifacts/o2_finite_density_eos_verification.json"
-O2_FORMULA_PATH = ROOT / "docs/core/artifacts/o2_eos_formula_audit.json"
+REGISTRY_PATH = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json"
+ALIGNMENT_PATH = ROOT / "docs/core/07_artifacts/gates/master_equation_alignment_gate_v2.json"
+MATTER_FORMULA_PATH = ROOT / "docs/core/07_artifacts/correspondence/matter_space_formula_audit.json"
+MATTER_VERIFY_PATH = ROOT / "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
+MATTER_DEPENDENCY_PATH = ROOT / "docs/core/07_artifacts/gates/matter_space_dependency_gate.json"
+TRACE_VERIFY_PATH = ROOT / "docs/core/07_artifacts/verification/spacetime_trace_verification.json"
+GR_VERIFY_PATH = ROOT / "docs/core/07_artifacts/verification/gr_closed_limit_verification.json"
+O2_VERIFY_PATH = ROOT / "docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json"
+O2_FORMULA_PATH = ROOT / "docs/core/07_artifacts/correspondence/o2_eos_formula_audit.json"
 
 
 def load_json(path: Path) -> dict[str, Any]:

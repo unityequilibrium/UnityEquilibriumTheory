@@ -21,8 +21,8 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 CORE_PATH = ROOT / "docs/core/uet_matter_space.py"
-VERIFICATION_PATH = ROOT / "docs/core/artifacts/matter_space_variational_verification.json"
-OUT = ROOT / "docs/core/artifacts/matter_space_causal_discretization_diagnostic.json"
+VERIFICATION_PATH = ROOT / "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
+OUT = ROOT / "docs/core/07_artifacts/archive/matter_space_causal_discretization_diagnostic.json"
 
 
 def rel(path: Path) -> str:

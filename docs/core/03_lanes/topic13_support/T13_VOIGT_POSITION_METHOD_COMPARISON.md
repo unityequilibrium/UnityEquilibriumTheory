@@ -10,7 +10,7 @@ DEPENDENCY_UNLOCKED: Profile residual/model comparison only; no physical unlock.
 
 STATUS: METHOD_COMPARISON_REGISTRATION_OPEN.
 
-WHAT_CHANGED: Independent source-form Voigt solver, tests, [full fit records](../../artifacts/t13_ued_voigt_position_audit.json). Source helper stored ignored/local-only, read as text and not imported or executed. Source Git blob c2a9dd3b357f7f6d64d886d1fe354fbaabd017e0 matches pinned upstream find_peak.py at commit7f7036bfda28f9330f19b40e57f4edf464b67d64.
+WHAT_CHANGED: Independent source-form Voigt solver, tests, [full fit records](../../07_artifacts/topic13/t13_ued_voigt_position_audit.json). Source helper stored ignored/local-only, read as text and not imported or executed. Source Git blob c2a9dd3b357f7f6d64d886d1fe354fbaabd017e0 matches pinned upstream find_peak.py at commit7f7036bfda28f9330f19b40e57f4edf464b67d64.
 
 EQUATION_OR_MAPPING: Constant offset plus amplitude times row/column normalized Voigt profiles. Source bounds and source initial widths are retained; one source-center start and one peak-pixel start are both reported. ROI intensity is divided by its maximum, rescaling amplitude/offset without changing the uniform least-squares objective's minimizer. scipy least_squares TRF differs from the source lmfit default; this is not an exact source-pipeline replication. SciPy voigt_profile uses the same standard Voigt form with defined zero-width limits.
 

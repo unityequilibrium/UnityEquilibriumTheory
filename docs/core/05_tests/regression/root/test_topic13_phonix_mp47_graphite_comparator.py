@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-AUDIT = ROOT / "docs/core/artifacts/t13_phonix_mp47_graphite_comparator_audit.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_phonix_mp47_graphite_comparator_audit.json"
 PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "phonix_mp47_graphite_source_package.json"

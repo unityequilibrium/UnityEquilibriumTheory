@@ -17,8 +17,8 @@ from docs.scripts.audit.audit_topic13_invariant_rate_collision_repair import con
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_vector_current_heat_rank_boundary_audit.json"
-REGISTRY_OUT = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_vector_current_addendum.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_vector_current_heat_rank_boundary_audit.json"
+REGISTRY_OUT = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_vector_current_addendum.json"
 EQUATION_ID = "uet.o2.thermal.invariant_vector_current_landau_heat_rank_boundary"
 RADIAL_CONVERGENCE_THRESHOLD = 1.0e-2
 ANGULAR_CONVERGENCE_THRESHOLD = 1.0e-3
@@ -215,7 +215,7 @@ def main() -> int:
         "docs/core/uet_o2_invariant_galerkin_collision_operator.py",
         "docs/core/uet_o2_same_kernel_tagged_width.py",
     ]
-    prior = "docs/core/artifacts/t13_same_kernel_tagged_spectral_width_audit.json"
+    prior = "docs/core/07_artifacts/topic13/t13_same_kernel_tagged_spectral_width_audit.json"
     artifact = {
         "schema_version": "t13-vector-current-heat-rank-boundary-v1",
         "major_result_id": "T13_VECTOR_CURRENT_GALERKIN_AND_HEAT_RANK_BOUNDARY",
@@ -320,7 +320,7 @@ def main() -> int:
     REGISTRY_OUT.write_text(json.dumps({
         "schema_version": "uet-equation-registry-addendum-v1",
         "status": "CANDIDATE_DIAGNOSTIC_NOT_MERGED",
-        "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+        "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
         "equation_entries": [entry],
         "full_core_unlock": False,
         "claim_promotion": False,

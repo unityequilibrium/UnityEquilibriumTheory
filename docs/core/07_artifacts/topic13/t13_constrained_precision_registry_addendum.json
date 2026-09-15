@@ -1,0 +1,16 @@
+{
+  "registry_id": "uet.o2.constrained_factorized_response_reference",
+  "registration_status": "UNMERGED_INTERNAL_REFERENCE_SOLVER",
+  "ontology": "psi and z=sqrt(W)*psi are alternative coordinates of the declared response, not new physical states",
+  "units": "Natural response; constraint columns may be rescaled without changing their nullspace",
+  "equation_or_mapping": "H=diag(w*gamma)+J^T R J; H psi+C lambda=Wg; C^T psi=0; C=WF",
+  "derivation_class": "Finite constrained quadratic minimization; positive-definite H from positive width and nonnegative rate factors",
+  "observable": "Fixed-grid K_xx, not full thermal tensor or SI conductivity",
+  "data_role": "INTERNAL_FIXED_BINARY64_INPUTS_HIGH_PRECISION_SOLVE",
+  "verification_status": "TWO_RULES_TWO_PRECISIONS_X_RESPONSE_ONLY",
+  "controlling_blocker": "full_tensor_reference_input_sensitivity_and_interpolation_consistency",
+  "claim_boundary": "No production-default change, continuum proof or physical unlock",
+  "evidence_artifact": "docs/core/artifacts/t13_constrained_precision_audit.json",
+  "dependency_unlocked": [],
+  "full_core_unlock": false
+}

@@ -12,10 +12,10 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-FORMULA_PATH = ROOT / "docs/core/artifacts/uet_foundation_equation_inventory.json"
-REGISTRY_PATH = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry.json"
-ACTIVE_CONTRACT_PATH = ROOT / "docs/core/artifacts/uet_active_correspondence_contract.json"
-OUTPUT = ROOT / "docs/core/artifacts/uet_full_correspondence_coverage.json"
+FORMULA_PATH = ROOT / "docs/core/07_artifacts/gates/uet_foundation_equation_inventory.json"
+REGISTRY_PATH = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json"
+ACTIVE_CONTRACT_PATH = ROOT / "docs/core/07_artifacts/correspondence/uet_active_correspondence_contract.json"
+OUTPUT = ROOT / "docs/core/07_artifacts/correspondence/uet_full_correspondence_coverage.json"
 
 
 def load(path: Path) -> dict[str, Any]:

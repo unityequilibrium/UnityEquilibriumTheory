@@ -7,10 +7,10 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-MATRIX = ROOT / "docs/core/artifacts/t13_topic13_closure_matrix.json"
+MATRIX = ROOT / "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json"
 GATE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY = ROOT / "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 
 
 def load(path: Path) -> dict:
@@ -69,7 +69,7 @@ def test_topic13_closure_matrix_reports_full_topic_contract_without_promotion() 
     assert matrix["full_topic_closure_contract"]["required_input_package_count"] == 3
     assert (
         matrix["full_topic_closure_contract"]["input_package_audit"]["path"]
-        == "docs/core/artifacts/t13_closure_input_package_audit.json"
+        == "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json"
     )
     assert (
         matrix["full_topic_closure_contract"]["input_package_audit"]["summary"]["status"]
@@ -128,16 +128,16 @@ def test_topic13_closure_matrix_is_projected_into_register_and_dependency_gate()
     projection = dependency["topic13_core_ready"]["closure_matrix"]
     assert entry["closure_level"] == "CLOSED_FOR_CORE"
     assert entry["claim_promotion"] is False
-    assert entry["evidence_artifacts"][0]["path"] == "docs/core/artifacts/t13_topic13_closure_matrix.json"
+    assert entry["evidence_artifacts"][0]["path"] == "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json"
     assert entry["evidence_artifacts"][0]["sha256"] == digest(MATRIX)
     assert entry["closure_summary"]["reported_subresult_count"] == 37
     assert entry["full_topic_closure_contract"]["full_topic_ready"] is True
-    assert entry["input_package_audit"]["path"] == "docs/core/artifacts/t13_closure_input_package_audit.json"
+    assert entry["input_package_audit"]["path"] == "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json"
     assert len(entry["closure_input_packages"]) == 3
     assert full_entry["closure_matrix"]["sha256"] == digest(MATRIX)
     assert full_entry["closure_matrix"]["required_major_result_count"] == 10
     assert full_entry["closure_matrix"]["required_subresult_count"] == 37
-    assert projection["path"] == "docs/core/artifacts/t13_topic13_closure_matrix.json"
+    assert projection["path"] == "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json"
     assert projection["sha256"] == digest(MATRIX)
     assert projection["full_core_unlock"] is True
     assert dependency["topic13_core_ready"]["full_topic_closure_contract"]["full_topic_ready"] is True

@@ -16,14 +16,14 @@ if str(ROOT) not in sys.path:
 
 from docs.scripts.audit.audit_matter_space_causal_reference import run_reference  # noqa: E402
 
-DEFAULT_VERIFICATION = ROOT / "docs/core/artifacts/matter_space_variational_verification.json"
-CAUSAL_DIAGNOSTIC = ROOT / "docs/core/artifacts/matter_space_causal_discretization_diagnostic.json"
+DEFAULT_VERIFICATION = ROOT / "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
+CAUSAL_DIAGNOSTIC = ROOT / "docs/core/07_artifacts/archive/matter_space_causal_discretization_diagnostic.json"
 CORE_SOURCE = ROOT / "docs/core/uet_matter_space.py"
-OUTPUT = ROOT / "docs/core/artifacts/causal_discretization_repair_artifact.json"
-REFERENCE_ENERGY = ROOT / "docs/core/artifacts/matter_space_causal_reference_energy_verification.json"
-CAUSAL_DISCRETE_GRADIENT = ROOT / "docs/core/artifacts/matter_space_causal_discrete_gradient_verification.json"
-CAUSAL_SPLIT = ROOT / "docs/core/artifacts/matter_space_causal_split_verification.json"
-CAUSAL_CONE_COMPATIBILITY = ROOT / "docs/core/artifacts/matter_space_causal_cone_compatibility.json"
+OUTPUT = ROOT / "docs/core/07_artifacts/archive/causal_discretization_repair_artifact.json"
+REFERENCE_ENERGY = ROOT / "docs/core/07_artifacts/verification/matter_space_causal_reference_energy_verification.json"
+CAUSAL_DISCRETE_GRADIENT = ROOT / "docs/core/07_artifacts/verification/matter_space_causal_discrete_gradient_verification.json"
+CAUSAL_SPLIT = ROOT / "docs/core/07_artifacts/verification/matter_space_causal_split_verification.json"
+CAUSAL_CONE_COMPATIBILITY = ROOT / "docs/core/07_artifacts/archive/matter_space_causal_cone_compatibility.json"
 
 
 def sha256(path: Path) -> str:
@@ -74,7 +74,7 @@ def build_artifact() -> dict[str, Any]:
         "controlling_blocker": "conserved_C_gradient_term_has_unbounded_k4_characteristic_speed",
         "checks": checks,
         "default_candidate": {
-            "artifact": "docs/core/artifacts/matter_space_variational_verification.json",
+            "artifact": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
             "prearrival_leakage_fraction": default["metrics"]["prearrival_leakage"]["value"],
             "threshold": default["metrics"]["prearrival_leakage"]["threshold"],
             "gate": default["metrics"]["prearrival_leakage"]["gate"],
@@ -98,12 +98,12 @@ def build_artifact() -> dict[str, Any]:
         "evidence_inputs": {
             "core_source": "docs/core/uet_matter_space.py",
             "core_source_sha256": sha256(CORE_SOURCE),
-            "default_verification": "docs/core/artifacts/matter_space_variational_verification.json",
-            "causal_diagnostic": "docs/core/artifacts/matter_space_causal_discretization_diagnostic.json",
-            "reference_energy_verification": "docs/core/artifacts/matter_space_causal_reference_energy_verification.json",
-            "causal_discrete_gradient_verification": "docs/core/artifacts/matter_space_causal_discrete_gradient_verification.json",
-            "causal_split_verification": "docs/core/artifacts/matter_space_causal_split_verification.json",
-            "causal_cone_compatibility": "docs/core/artifacts/matter_space_causal_cone_compatibility.json",
+            "default_verification": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
+            "causal_diagnostic": "docs/core/07_artifacts/archive/matter_space_causal_discretization_diagnostic.json",
+            "reference_energy_verification": "docs/core/07_artifacts/verification/matter_space_causal_reference_energy_verification.json",
+            "causal_discrete_gradient_verification": "docs/core/07_artifacts/verification/matter_space_causal_discrete_gradient_verification.json",
+            "causal_split_verification": "docs/core/07_artifacts/verification/matter_space_causal_split_verification.json",
+            "causal_cone_compatibility": "docs/core/07_artifacts/archive/matter_space_causal_cone_compatibility.json",
         },
         "claim_boundary": "The repair closes the frozen-C Phi/Pi and changing-C shared-ledger diagnostics, but exposes a structural finite-cone incompatibility in conserved C with kappa_C>0; the full operator, continuum causality, SI physics, and downstream topics remain blocked.",
         "next_controller": "resolve the conserved-C k4 finite-cone incompatibility or restrict the causal claim before integrating the full operator",

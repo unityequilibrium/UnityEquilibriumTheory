@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/artifacts/t13_graphite_green_kubo_source_boundary_audit.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_graphite_green_kubo_source_boundary_audit.json"
 
 
 def test_green_kubo_boundary_rejects_silent_uet_relabel() -> None:

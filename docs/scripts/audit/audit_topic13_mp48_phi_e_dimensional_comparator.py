@@ -22,7 +22,7 @@ PACKAGE_PATH = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "mp48_independent_graphite_cv_source_package.json"
 )
-OUT = ROOT / "docs/core/artifacts/t13_mp48_phi_e_dimensional_comparator_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_mp48_phi_e_dimensional_comparator_audit.json"
 
 AVOGADRO = 6.02214076e23
 PLANCK = 6.62607015e-34

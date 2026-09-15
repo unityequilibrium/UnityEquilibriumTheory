@@ -23,7 +23,7 @@ from docs.core.uet_matter_space_flux_telegraph import (  # noqa: E402
 )
 
 
-OUT = ROOT / "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json"
+OUT = ROOT / "docs/core/07_artifacts/verification/matter_space_conserved_flux_telegraph_verification.json"
 CORE_SOURCE = ROOT / "docs/core/uet_matter_space_flux_telegraph.py"
 
 
@@ -234,7 +234,7 @@ def build_report() -> dict[str, Any]:
         "evidence_inputs": {
             "implementation": "docs/core/uet_matter_space_flux_telegraph.py",
             "implementation_sha256": sha256(CORE_SOURCE),
-            "baseline_no_go": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
+            "baseline_no_go": "docs/core/07_artifacts/archive/conserved_c_finite_cone_no_go_assessment.json",
         },
         "claim_boundary": (
             "This artifact verifies a named normalized conserved flux branch only. "
@@ -273,7 +273,7 @@ def build_report() -> dict[str, Any]:
             "observable": "normalized C response and conserved flux diagnostic",
             "data_role": "internal numerical branch verification; not external thermal data",
             "evidence_artifacts": [
-                {"path": "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json"}
+                {"path": "docs/core/07_artifacts/verification/matter_space_conserved_flux_telegraph_verification.json"}
             ],
             "verification_status": status,
             "open_blockers": [

@@ -1,0 +1,1164 @@
+{
+  "major_result_id": "T13_UED_NUMERIC_EXPORT_AND_SUPPORT_SENSITIVITY",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "what_is_closed": [
+    "Lossless numeric image export with source-byte identity",
+    "Common and pairwise masks with support-sensitivity diagnostic"
+  ],
+  "equation_or_mapping": "R(t)=sum_ON(mask)/sum_OFF(mask); baseline mean removed separately for each fixed mask rule",
+  "units": {
+    "ratio": "1",
+    "delay": "ps"
+  },
+  "derivation_class": "detector_support_diagnostic",
+  "observable": "whole-detector ratio, not diffuse-only or mode population",
+  "data_role": "EXTERNAL_DATA_DIAGNOSTIC",
+  "verification_status": "EXPORTED_WITH_SUPPORT_DEPENDENCE_DISCLOSED",
+  "policy": {
+    "baseline": "delay < -0.5 ps, from pinned author plotting convention",
+    "region": "all finite pixels; includes Bragg peaks",
+    "common_mask": "intersection across all ON/OFF frames per scan",
+    "fitting": false,
+    "pixel_fill": false,
+    "uncertainty": "Not supplied by deterministic support spread"
+  },
+  "results": [
+    {
+      "member": "PROCESSED/PROC_400nm",
+      "signals": {
+        "pairwise_finite_counts": [
+          256294,
+          255733,
+          255733,
+          255733,
+          255733,
+          255733,
+          255733,
+          255733,
+          255733,
+          255733,
+          255733,
+          255733,
+          256294,
+          255984,
+          255733,
+          255984,
+          256293,
+          256293,
+          256042,
+          255944,
+          255943,
+          255942,
+          255733,
+          255733,
+          255514,
+          255733,
+          255733,
+          255733,
+          255733,
+          255514,
+          255733,
+          255634,
+          255634,
+          255514,
+          255634,
+          255564,
+          255733,
+          255733
+        ],
+        "common_finite_count": 255379,
+        "dynamic_ratio": [
+          0.9999589308186796,
+          0.9999515081704267,
+          0.9999110457513938,
+          0.9999024613414599,
+          0.9999316950494264,
+          0.9999077186209976,
+          0.9999455207742544,
+          0.9999080706540916,
+          0.9999164588912238,
+          0.9999697269093687,
+          0.9999873098030491,
+          1.000007657048765,
+          1.0000228541600547,
+          1.0000486226270797,
+          1.000032559760225,
+          1.0000482630484737,
+          1.0000820262706582,
+          1.0000415443685966,
+          1.0000191912249212,
+          1.0000231443057381,
+          1.0000019373623406,
+          0.9999681882272579,
+          0.9999664375878473,
+          0.9999746007087293,
+          0.9999174896243729,
+          0.9999240861599356,
+          0.9998905378077865,
+          0.9998953895087513,
+          0.9997941261844459,
+          0.9997914425843389,
+          0.9997870745154493,
+          0.9997920267785358,
+          0.999756010009388,
+          0.9997197759712063,
+          0.9995641719325286,
+          0.9995362797649837,
+          0.9994000157047075,
+          0.9993856959186515
+        ],
+        "common_ratio": [
+          0.999958598235619,
+          0.9999518692628779,
+          0.9999113786473486,
+          0.9999028419592262,
+          0.9999320109265049,
+          0.9999080071817793,
+          0.9999458008028066,
+          0.9999083053668776,
+          0.9999166870669653,
+          0.9999700562702617,
+          0.9999872900566292,
+          1.0000076219060259,
+          1.0000231209255754,
+          1.000049130316274,
+          1.0000323211916062,
+          1.000048660907584,
+          1.0000829440214263,
+          1.0000418340726058,
+          1.0000191281441484,
+          1.0000235874867764,
+          1.0000016131138307,
+          0.999968132539716,
+          0.9999658414293318,
+          0.999974375861521,
+          0.9999174517720756,
+          0.9999242461979576,
+          0.9998905169671307,
+          0.9998950980283292,
+          0.9997938582879101,
+          0.999791403243237,
+          0.9997867924619586,
+          0.9997918461920802,
+          0.9997559503478858,
+          0.9997196859261489,
+          0.9995639254136074,
+          0.9995360560823153,
+          0.9993994641754591,
+          0.9993852286543832
+        ],
+        "dynamic_baseline_subtracted": [
+          3.170419328235585e-05,
+          2.4281545029425367e-05,
+          -1.6180874003457468e-05,
+          -2.4765283937355775e-05,
+          4.46842402912484e-06,
+          -1.9508004399648726e-05,
+          1.8294148857123105e-05,
+          -1.915597130563995e-05,
+          -1.076773417341137e-05,
+          4.250028397145833e-05,
+          6.008317765182625e-05,
+          8.043042336780548e-05,
+          9.562753465741647e-05,
+          0.00012139600168248332,
+          0.00010533313482785633,
+          0.00012103642307648155,
+          0.00015479964526099455,
+          0.00011431774319936583,
+          9.196459952398595e-05,
+          9.591768034089565e-05,
+          7.471073694331754e-05,
+          4.096160186062292e-05,
+          3.9210962450075826e-05,
+          4.737408333210791e-05,
+          -9.737001024356928e-06,
+          -3.140465461681785e-06,
+          -3.668881761076381e-05,
+          -3.183711664589417e-05,
+          -0.00013310044095138363,
+          -0.00013578404105829556,
+          -0.00014015210994788863,
+          -0.00013519984686138908,
+          -0.00017121661600927318,
+          -0.00020745065419092157,
+          -0.00036305469286868064,
+          -0.00039094686041352134,
+          -0.0005272109206897468,
+          -0.0005415307067457853
+        ],
+        "common_baseline_subtracted": [
+          3.114720005947813e-05,
+          2.4418227318467878e-05,
+          -1.607238821088597e-05,
+          -2.46090763332818e-05,
+          4.559890945388112e-06,
+          -1.9443853780165554e-05,
+          1.834976724712778e-05,
+          -1.914566868188583e-05,
+          -1.0763968594118545e-05,
+          4.260523470223099e-05,
+          5.983902106976302e-05,
+          8.017087046641169e-05,
+          9.566989001597026e-05,
+          0.00012167928071449285,
+          0.00010487015604676575,
+          0.00012120987202457467,
+          0.00015549298586681193,
+          0.00011438303704636166,
+          9.167710858892786e-05,
+          9.613645121697711e-05,
+          7.416207827126708e-05,
+          4.0681504156481196e-05,
+          3.839039377229181e-05,
+          4.692482596158065e-05,
+          -9.999263483884135e-06,
+          -3.204837601855637e-06,
+          -3.693406842875113e-05,
+          -3.2353007230256914e-05,
+          -0.00013359274764934703,
+          -0.0001360477923224579,
+          -0.00014065857360090472,
+          -0.0001356048434792978,
+          -0.00017150068767368687,
+          -0.0002077651094105626,
+          -0.0003635256219520766,
+          -0.00039139495324413964,
+          -0.0005279868601003601,
+          -0.0005422223811762938
+        ],
+        "baseline_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "support_choice_max_difference": 8.205686777840171e-07
+      },
+      "row_ids": [
+        "PROCESSED/PROC_400nm:row:0",
+        "PROCESSED/PROC_400nm:row:1",
+        "PROCESSED/PROC_400nm:row:2",
+        "PROCESSED/PROC_400nm:row:3",
+        "PROCESSED/PROC_400nm:row:4",
+        "PROCESSED/PROC_400nm:row:5",
+        "PROCESSED/PROC_400nm:row:6",
+        "PROCESSED/PROC_400nm:row:7",
+        "PROCESSED/PROC_400nm:row:8",
+        "PROCESSED/PROC_400nm:row:9",
+        "PROCESSED/PROC_400nm:row:10",
+        "PROCESSED/PROC_400nm:row:11",
+        "PROCESSED/PROC_400nm:row:12",
+        "PROCESSED/PROC_400nm:row:13",
+        "PROCESSED/PROC_400nm:row:14",
+        "PROCESSED/PROC_400nm:row:15",
+        "PROCESSED/PROC_400nm:row:16",
+        "PROCESSED/PROC_400nm:row:17",
+        "PROCESSED/PROC_400nm:row:18",
+        "PROCESSED/PROC_400nm:row:19",
+        "PROCESSED/PROC_400nm:row:20",
+        "PROCESSED/PROC_400nm:row:21",
+        "PROCESSED/PROC_400nm:row:22",
+        "PROCESSED/PROC_400nm:row:23",
+        "PROCESSED/PROC_400nm:row:24",
+        "PROCESSED/PROC_400nm:row:25",
+        "PROCESSED/PROC_400nm:row:26",
+        "PROCESSED/PROC_400nm:row:27",
+        "PROCESSED/PROC_400nm:row:28",
+        "PROCESSED/PROC_400nm:row:29",
+        "PROCESSED/PROC_400nm:row:30",
+        "PROCESSED/PROC_400nm:row:31",
+        "PROCESSED/PROC_400nm:row:32",
+        "PROCESSED/PROC_400nm:row:33",
+        "PROCESSED/PROC_400nm:row:34",
+        "PROCESSED/PROC_400nm:row:35",
+        "PROCESSED/PROC_400nm:row:36",
+        "PROCESSED/PROC_400nm:row:37"
+      ],
+      "delay_ps": [
+        -2.3997599999999966,
+        -1.733159999999987,
+        -1.3998600000000057,
+        -1.0665599999999773,
+        -0.799919999999983,
+        -0.5332799999999887,
+        -0.2666399999999943,
+        0.0,
+        0.2666399999999943,
+        0.5332800000000361,
+        0.7999200000000304,
+        1.0665600000000246,
+        1.333200000000019,
+        1.5998400000000133,
+        1.8664800000000077,
+        2.133120000000002,
+        2.3997599999999966,
+        2.6663999999999906,
+        2.9330400000000325,
+        3.1996800000000265,
+        3.466320000000021,
+        3.7329600000000154,
+        3.99960000000001,
+        4.666200000000019,
+        5.332800000000029,
+        5.999399999999991,
+        6.666,
+        7.33260000000001,
+        7.99920000000002,
+        8.265840000000013,
+        8.66580000000003,
+        8.932440000000023,
+        12.265440000000023,
+        15.598440000000023,
+        22.264440000000025,
+        28.930440000000026,
+        35.59644000000002,
+        42.262440000000026
+      ],
+      "mask_export": {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/400nm_validity.npz",
+        "sha256": "c8e088f2cc1f1ae79b703a27d652a748a1afe87e182d0e47305b5105a439c3fc"
+      }
+    },
+    {
+      "member": "PROCESSED/PROC_800nm",
+      "signals": {
+        "pairwise_finite_counts": [
+          255617,
+          255878,
+          255617,
+          255998,
+          255878,
+          255738,
+          256048,
+          255738,
+          255738,
+          255738,
+          255738,
+          255999,
+          256307,
+          255998,
+          256307,
+          255998,
+          255998,
+          255738,
+          255738,
+          255617,
+          255738,
+          255999,
+          255998,
+          255999,
+          255999,
+          255998,
+          255999,
+          255738,
+          255738,
+          255617,
+          255998,
+          255617
+        ],
+        "common_finite_count": 255530,
+        "dynamic_ratio": [
+          0.9871389684751166,
+          0.98717934360596,
+          0.9872088818176548,
+          0.987173284680617,
+          0.9871852541401155,
+          0.9871876874931175,
+          0.9872241564580277,
+          0.9872049682020213,
+          0.9872065064286268,
+          0.987235330116731,
+          0.9872199867371765,
+          0.987203260819613,
+          0.9872453835022844,
+          0.9872155696493924,
+          0.9872188010879035,
+          0.9872162278649863,
+          0.9872942056475813,
+          0.9873108817513567,
+          0.9872647739717425,
+          0.9872662219917823,
+          0.9872812645439832,
+          0.9872758518803247,
+          0.987310647324113,
+          0.9872970193452317,
+          0.9872400801953158,
+          0.9872931522398536,
+          0.9872739772838288,
+          0.9873169429819295,
+          0.9873183851836158,
+          0.9872406078626517,
+          0.9872390465696278,
+          0.9872700136409247
+        ],
+        "common_ratio": [
+          0.9871403845571108,
+          0.987181625168184,
+          0.9872101518281824,
+          0.987174336642938,
+          0.9871859502783457,
+          0.9871886005232074,
+          0.9872164140668214,
+          0.9872057545739826,
+          0.9872072200847063,
+          0.987236293644614,
+          0.9872208980916579,
+          0.9872039820113672,
+          0.9872446613887725,
+          0.9872169135454161,
+          0.9872173364080747,
+          0.9872175550078828,
+          0.987295259512853,
+          0.9873118025321634,
+          0.9872653734943736,
+          0.9872683821241645,
+          0.9872819169227437,
+          0.9872769968736317,
+          0.9873112195939396,
+          0.9872973074490905,
+          0.9872412128734168,
+          0.9872939009273253,
+          0.9872746075462399,
+          0.9873175669164308,
+          0.9873192637219909,
+          0.987242290340379,
+          0.9872396676102045,
+          0.9872715189087437
+        ],
+        "dynamic_baseline_subtracted": [
+          -3.993489364695346e-05,
+          4.4023719647512394e-07,
+          2.997844889118806e-05,
+          -5.618688146524775e-06,
+          6.3507713519150855e-06,
+          8.784124353899969e-06,
+          4.5253089264174484e-05,
+          2.60648332577329e-05,
+          2.7603059863268165e-05,
+          5.642674796746405e-05,
+          4.1083368412908605e-05,
+          2.435745084938823e-05,
+          6.648013352084092e-05,
+          3.6666280628816494e-05,
+          3.9897719139925236e-05,
+          3.7324496222734815e-05,
+          0.00011530227881773047,
+          0.00013197838259315642,
+          8.587060297893245e-05,
+          8.731862301869509e-05,
+          0.00010236117521966737,
+          9.69485115611679e-05,
+          0.00013174395534942818,
+          0.0001181159764681583,
+          6.11768265522672e-05,
+          0.00011424887109001691,
+          9.507391506524687e-05,
+          0.00013803961316594116,
+          0.0001394818148522381,
+          6.170449388809285e-05,
+          6.014320086422664e-05,
+          9.111027216113232e-05
+        ],
+        "common_baseline_subtracted": [
+          -3.979027588396633e-05,
+          1.4503351891681504e-06,
+          2.997699518758612e-05,
+          -5.838190056839387e-06,
+          5.775445350852948e-06,
+          8.425690212643389e-06,
+          3.623923382656269e-05,
+          2.557974098782445e-05,
+          2.7045251711488305e-05,
+          5.611881161915466e-05,
+          4.072325866311122e-05,
+          2.380717837235924e-05,
+          6.448655577773188e-05,
+          3.673871242126925e-05,
+          3.7161575079935893e-05,
+          3.738017488796874e-05,
+          0.0001150846798582128,
+          0.00013162769916863493,
+          8.519866137879362e-05,
+          8.820729116965076e-05,
+          0.00010174208974889076,
+          9.682204063687916e-05,
+          0.00013104476094483175,
+          0.00011713261609569425,
+          6.103804042201233e-05,
+          0.00011372609433046854,
+          9.443271324505176e-05,
+          0.0001373920834359943,
+          0.00013908888899605287,
+          6.211550738421945e-05,
+          5.949277720973534e-05,
+          9.134407574884484e-05
+        ],
+        "baseline_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "support_choice_max_difference": 9.013855437611795e-06
+      },
+      "row_ids": [
+        "PROCESSED/PROC_800nm:row:0",
+        "PROCESSED/PROC_800nm:row:1",
+        "PROCESSED/PROC_800nm:row:2",
+        "PROCESSED/PROC_800nm:row:3",
+        "PROCESSED/PROC_800nm:row:4",
+        "PROCESSED/PROC_800nm:row:5",
+        "PROCESSED/PROC_800nm:row:6",
+        "PROCESSED/PROC_800nm:row:7",
+        "PROCESSED/PROC_800nm:row:8",
+        "PROCESSED/PROC_800nm:row:9",
+        "PROCESSED/PROC_800nm:row:10",
+        "PROCESSED/PROC_800nm:row:11",
+        "PROCESSED/PROC_800nm:row:12",
+        "PROCESSED/PROC_800nm:row:13",
+        "PROCESSED/PROC_800nm:row:14",
+        "PROCESSED/PROC_800nm:row:15",
+        "PROCESSED/PROC_800nm:row:16",
+        "PROCESSED/PROC_800nm:row:17",
+        "PROCESSED/PROC_800nm:row:18",
+        "PROCESSED/PROC_800nm:row:19",
+        "PROCESSED/PROC_800nm:row:20",
+        "PROCESSED/PROC_800nm:row:21",
+        "PROCESSED/PROC_800nm:row:22",
+        "PROCESSED/PROC_800nm:row:23",
+        "PROCESSED/PROC_800nm:row:24",
+        "PROCESSED/PROC_800nm:row:25",
+        "PROCESSED/PROC_800nm:row:26",
+        "PROCESSED/PROC_800nm:row:27",
+        "PROCESSED/PROC_800nm:row:28",
+        "PROCESSED/PROC_800nm:row:29",
+        "PROCESSED/PROC_800nm:row:30",
+        "PROCESSED/PROC_800nm:row:31"
+      ],
+      "delay_ps": [
+        -2.3997599999999966,
+        -1.7331599999999394,
+        -1.3998599999999584,
+        -1.0665599999999773,
+        -0.7999199999999357,
+        -0.5332799999999887,
+        -0.266639999999947,
+        0.0,
+        0.2666400000000417,
+        0.5332800000000834,
+        0.7999200000000304,
+        1.0665600000000721,
+        1.333200000000019,
+        1.5998400000000608,
+        1.8664800000000077,
+        2.133120000000049,
+        2.3997599999999966,
+        2.666400000000038,
+        2.9330400000000796,
+        3.1996800000000265,
+        3.4663200000000685,
+        3.7329600000000154,
+        3.999600000000057,
+        4.666200000000019,
+        5.332800000000076,
+        5.999400000000038,
+        6.666,
+        7.332600000000057,
+        7.99920000000002,
+        8.265840000000061,
+        8.665800000000075,
+        8.932440000000023
+      ],
+      "mask_export": {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/800nm_validity.npz",
+        "sha256": "b06955fa98bbe434d116fa856e058b9c19db08f3dda619049c222a29488df7cb"
+      }
+    }
+  ],
+  "array_exports": {
+    "ff4c148d2748e9ddabfca936e782c9df45c924c5d6a183bba79dbe53e88ac8bf": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/ff4c148d2748e9ddabfca936e782c9df45c924c5d6a183bba79dbe53e88ac8bf.npy",
+      "sha256": "9c49c254f998162fcf892134436366ff71b61c45e7cb78c770ae953c2815db00"
+    },
+    "5b5f656620b3514d52792921174634cef6a529b3560c79faa672baf5d7298ba3": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/5b5f656620b3514d52792921174634cef6a529b3560c79faa672baf5d7298ba3.npy",
+      "sha256": "0fed2451bfdee8ce9962ac3098709c03ed816d16c036c81151c3a864e02c8ac1"
+    },
+    "d75efba6bdd86003192e2826a3aca32c6dcb0815e8c1fc88c3186818f9c7e34e": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/d75efba6bdd86003192e2826a3aca32c6dcb0815e8c1fc88c3186818f9c7e34e.npy",
+      "sha256": "f5cb3afb70b7840a0483ea813694d63a82eb4b9dac2aab95b07e4b638b6f27ac"
+    },
+    "e75865d8802625280c57eae44ec9afe6bb5cfd8b9b79b89bc584929e55183285": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/e75865d8802625280c57eae44ec9afe6bb5cfd8b9b79b89bc584929e55183285.npy",
+      "sha256": "f74f922a02626ce3cc432891832da34e7a999bdf635a99e23ef831f95e54b377"
+    },
+    "104b8d56e91ebc53877bdd9ec60f2e2af2375e6343095f3708e6013df1a43e44": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/104b8d56e91ebc53877bdd9ec60f2e2af2375e6343095f3708e6013df1a43e44.npy",
+      "sha256": "d88c4ae642f199278c6c2a671da03fc1e1479395801a9c51ff3ffa14ae922a14"
+    },
+    "e8f3b8727f7421df169ae60201068fef72792a603ce56a099c053db6de87e840": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/e8f3b8727f7421df169ae60201068fef72792a603ce56a099c053db6de87e840.npy",
+      "sha256": "dfeb4465a9dfa8a6716b9a78e38ab1bac1baf30338d6acbcc7e86ab6fe69d648"
+    },
+    "b2611845ee1f0af4544c925be5ff62ffede0bb1b26f44d66205028c3d1b1ebb9": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/b2611845ee1f0af4544c925be5ff62ffede0bb1b26f44d66205028c3d1b1ebb9.npy",
+      "sha256": "298acacb4035bb104a0869f1fcc25e04faf8f029a7630e84e701854f0ede2bc4"
+    },
+    "a8412359f8bb3067dc7a3802864f81d9cdb00217e442ebfe1fc95d03be9d7372": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/a8412359f8bb3067dc7a3802864f81d9cdb00217e442ebfe1fc95d03be9d7372.npy",
+      "sha256": "9f32ea88fcbbd5fb072a46be6353679e13ae226d3f1d5980f8598838989581e4"
+    },
+    "c9a82fd28cff894bb6d8915fda1f7749ae87f1d3107c04dd88493711918b1885": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/c9a82fd28cff894bb6d8915fda1f7749ae87f1d3107c04dd88493711918b1885.npy",
+      "sha256": "43be8cc46e9df3160957df93fc268f50efbc39df737686830b03539586657789"
+    },
+    "43e4badec7e7dd63f895c4b5c4411cd4ea12e2ba35fb1ce634201934a4eaa1e0": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/43e4badec7e7dd63f895c4b5c4411cd4ea12e2ba35fb1ce634201934a4eaa1e0.npy",
+      "sha256": "4fa0da94022d2f376af8f238b4d491b0a60fed5c5fcd7bf9fab2c6e5dc372dac"
+    },
+    "f63e0e2a867433d1c24277382d9e11b1fb404e236223da3df86df4669c8655a1": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/f63e0e2a867433d1c24277382d9e11b1fb404e236223da3df86df4669c8655a1.npy",
+      "sha256": "e809bb3636945c26785bd369e95780ab3bbf25ed6c898d419163439b192ba6ae"
+    },
+    "56c77a539d1ac4d44bd9862b28ac1d6044fadb99ba528970957d2e76798ff451": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/56c77a539d1ac4d44bd9862b28ac1d6044fadb99ba528970957d2e76798ff451.npy",
+      "sha256": "0375f60c829d37eb2aac18342796ec63619109732b090af78e4793402af0a00c"
+    },
+    "ed042d5de30fd079077044733310fffafcb18158d42b3e7d5e92058febcd4736": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/ed042d5de30fd079077044733310fffafcb18158d42b3e7d5e92058febcd4736.npy",
+      "sha256": "573901635a195f0e4e2688d8a66433a29bb10a97644d1972c9b43f850d0cb985"
+    },
+    "1a368c6ac5a230eb707d9d105defad1d4d61fd5b6f88ffa1489c0b80128775c3": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/1a368c6ac5a230eb707d9d105defad1d4d61fd5b6f88ffa1489c0b80128775c3.npy",
+      "sha256": "394773c6d056b9df9c80e350b9cb47196d13181b79040b3b19d536d5a07ed2d5"
+    },
+    "a0d0e2d6448f67d09ccb8c3dc31ac9b29b70f013fd4fe4a8683fac60573d2776": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/a0d0e2d6448f67d09ccb8c3dc31ac9b29b70f013fd4fe4a8683fac60573d2776.npy",
+      "sha256": "82d476cceac5bdaf257390560486101557a0d1fe7df088e08711b54c9efee8fd"
+    },
+    "bd4b083063469741af9ac5dc919e85ad664cf2aada9f60cd7220ef1bd9274ab4": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/bd4b083063469741af9ac5dc919e85ad664cf2aada9f60cd7220ef1bd9274ab4.npy",
+      "sha256": "504e09948014387dbab0ee0c28aeee2b8fd983d08dc59bb1346ec2f752649eb6"
+    },
+    "df7b340d24ee553f208f489807c795811c7738b6582c642a0913e4f4bed13c61": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/df7b340d24ee553f208f489807c795811c7738b6582c642a0913e4f4bed13c61.npy",
+      "sha256": "a0e2ffd6be1f1a5eb38ee1da3d0dcb638708f4f50cdfaa105d1365a99763e3de"
+    },
+    "45277d57c1faea4e7fd5a494e4ac3bdf07053b4d4f29cccf429aa859c3134b6e": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/45277d57c1faea4e7fd5a494e4ac3bdf07053b4d4f29cccf429aa859c3134b6e.npy",
+      "sha256": "ba938d027024c712dbd8ec7bf8b53f4bf5ba5c5bf8d88d3ebde35c5771883c53"
+    },
+    "6dcbc6841eab8db876778764f5980c854c0f42fa71a05e0f30eae56e54e76436": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/6dcbc6841eab8db876778764f5980c854c0f42fa71a05e0f30eae56e54e76436.npy",
+      "sha256": "c6e47d7a289d305277a5d324caff3e97b17f87aea6fc938913f1fdf93538e664"
+    },
+    "785b38c4b8cbc8417122868251de31a4642b2bb5626a065c1f4724c3a29280ef": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/785b38c4b8cbc8417122868251de31a4642b2bb5626a065c1f4724c3a29280ef.npy",
+      "sha256": "40b680e40bd321d3096f0bca98f91e86fdb8f522dfddaf04ded0470d85c9f3b6"
+    },
+    "e98c2495544d951e39247d725c9dc2ada1f1879c8aa41a63589367e49ed8aab0": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/e98c2495544d951e39247d725c9dc2ada1f1879c8aa41a63589367e49ed8aab0.npy",
+      "sha256": "e3aa2b8fc2f40b7d6c1a88ed358952fe61f54309d7fe19fd2f252ae3c8780022"
+    },
+    "6c2482bd700a6ebe5b471f44ef29b129cbdb599e44414540765ab7761b12cd56": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/6c2482bd700a6ebe5b471f44ef29b129cbdb599e44414540765ab7761b12cd56.npy",
+      "sha256": "c73bb4a04f7ef02d6e50b255072b6497de4a6d7b0ae70deca07b9c38532a0c94"
+    },
+    "7511ed59e13c219da589e716df2193e46d277f20ffd909ca4a00f049dc575dfc": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/7511ed59e13c219da589e716df2193e46d277f20ffd909ca4a00f049dc575dfc.npy",
+      "sha256": "745c49ff94a42e2ff933828d2e8f2a2f4bf254037a09583068fef41efd974d12"
+    },
+    "37c50e067054a5e8efe17c585e012ebbb80272cbc3d1f319ed10cfcad9d2c412": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/37c50e067054a5e8efe17c585e012ebbb80272cbc3d1f319ed10cfcad9d2c412.npy",
+      "sha256": "50c6d0a803440dfd35b11cfc8ec2d87f7175b40dd5c7840628ee26430d1dcaff"
+    },
+    "676ced736279ffe8c9f48e59a71e0df102dcb4ab85cb1a2afe2bcbb38075f633": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/676ced736279ffe8c9f48e59a71e0df102dcb4ab85cb1a2afe2bcbb38075f633.npy",
+      "sha256": "295dcaa09354e5260033e6662a30262eef7b32a3eaeb77a505a6fe9dd6972c4e"
+    },
+    "6f38c86a690de7c86a5dcfd6a0f340327f2b9911d716d8e7e07524e919456ce2": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/6f38c86a690de7c86a5dcfd6a0f340327f2b9911d716d8e7e07524e919456ce2.npy",
+      "sha256": "2d7fc47b021837b824b31e00a47d444fc1e06774c9c2143f408f5f3efd060e0d"
+    },
+    "df9ae54d47f0983ae9ab330b54fa1d0a2e1e93d45a91663b60cc10aa26305a71": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/df9ae54d47f0983ae9ab330b54fa1d0a2e1e93d45a91663b60cc10aa26305a71.npy",
+      "sha256": "f1d0ddf66e277ff6be7eb6ccb17965d79b5c8ac837b5dc3c6a8e9b1a72a5937b"
+    },
+    "910971660426eab5507a60ed668a73a33420e8e59b8e3ceee95dc951e59fc037": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/910971660426eab5507a60ed668a73a33420e8e59b8e3ceee95dc951e59fc037.npy",
+      "sha256": "c4ed27b522f5eb9117d4e4f7fd5e3f542d19b7237258ba4b6c5c37652f671975"
+    },
+    "e74f9eef159ca244e76a65cf5417fc4eb1165c89659f0dfbf7c514e9f74ece2a": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/e74f9eef159ca244e76a65cf5417fc4eb1165c89659f0dfbf7c514e9f74ece2a.npy",
+      "sha256": "5bd6eed65f2832549539a8c2d1681f5da93321829336c57950d79c32382c2ab4"
+    },
+    "df165a31188932c2a8e82ab21e48b19e1a041b15aff968f007c335b689805966": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/df165a31188932c2a8e82ab21e48b19e1a041b15aff968f007c335b689805966.npy",
+      "sha256": "0cd751b7791c21aea1db2da071dd6c1c112e6929351fe834902d1fe6e85d2564"
+    },
+    "4ca2eac40c5eb15f454ebceacfacfcd77894fc3b2f442e5285755f3a697a4132": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/4ca2eac40c5eb15f454ebceacfacfcd77894fc3b2f442e5285755f3a697a4132.npy",
+      "sha256": "df2fc4c5318a12adad81d93304d8b29befa025cc472f26770d9f677589292d0a"
+    },
+    "3b476bd726c222b9c738469589228ec7c3f5a09f81b71bceddb0c13167f5abf3": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/3b476bd726c222b9c738469589228ec7c3f5a09f81b71bceddb0c13167f5abf3.npy",
+      "sha256": "eae636257f6938c29b3f977149982cdc7a4d0f99c3a93e88cbf058cac76626da"
+    },
+    "ec1b08d31ad7d850d20f427cd4afa7664d1e72719f9d4d275760b9edb41ec215": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/ec1b08d31ad7d850d20f427cd4afa7664d1e72719f9d4d275760b9edb41ec215.npy",
+      "sha256": "33f3e880c23d91dca3c07c2c416fbfc58aa1c8656cefa851ff189ee61176e32d"
+    },
+    "e1d192f25218297d37de121d113e6f82fc29c3809be1aed81f5d0ecfa2c77a80": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/e1d192f25218297d37de121d113e6f82fc29c3809be1aed81f5d0ecfa2c77a80.npy",
+      "sha256": "afa5acb84fa94a6bd6f60c815c961ec397840beb044907c9cae342eeeeb9087f"
+    },
+    "c47546c414a25f6d7042cfdceddb9a66b5cb2a000cc5fa30b8041e6c25eecda1": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/c47546c414a25f6d7042cfdceddb9a66b5cb2a000cc5fa30b8041e6c25eecda1.npy",
+      "sha256": "9fd61cbfcf77f764d44a2f78b23f9292d6aff36c5ad9c4d23f7f51faca0c0a08"
+    },
+    "205c09bd5e71e959db2ee4a2b073af299678e0261d59fa45ce7edab0c287b466": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/205c09bd5e71e959db2ee4a2b073af299678e0261d59fa45ce7edab0c287b466.npy",
+      "sha256": "a5189ebeb8b7a47b605e934dbed4ef27a2d57fbe77f77445943ac6da9e90e5e6"
+    },
+    "27a3bc8b321335666ee68184ff5c93968de796506ca2fd99bfa509288d7f39c3": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/27a3bc8b321335666ee68184ff5c93968de796506ca2fd99bfa509288d7f39c3.npy",
+      "sha256": "59c6192b5a118a1114dbc7bbc2bfa8e877bd92dd0d08c4f1f0f5f4b78128c69d"
+    },
+    "055a578ac5c981f7b6c7ee40e6859d65369bd74af3921e639b0fd742c1bcf30d": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/055a578ac5c981f7b6c7ee40e6859d65369bd74af3921e639b0fd742c1bcf30d.npy",
+      "sha256": "5f664e4946112dc6771a585d055ebb8162e1ac0fe5f9a9029fd18b824e39077d"
+    },
+    "76ec79f27836037aeac1b68854bfbf791bbff2e6256bc1f51080454d525a9a27": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/76ec79f27836037aeac1b68854bfbf791bbff2e6256bc1f51080454d525a9a27.npy",
+      "sha256": "bca59224d8588d760b0f4f9c7af5a90c67d3aabd73d204c997e8131e4977cd27"
+    },
+    "119dfcf6733f29adb2fa1ea4c49c743a0df0840b6e57b9b91f38cfc4afc3859a": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/119dfcf6733f29adb2fa1ea4c49c743a0df0840b6e57b9b91f38cfc4afc3859a.npy",
+      "sha256": "b1b0a5f83da8d2bd6a68528710a424cc313608d51b9867f2e53bbd5fa2e6392f"
+    },
+    "7942e252bc61adaffb92e580b34d2a03ee9b864c525b1eccb3e5e4a3205ac76c": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/7942e252bc61adaffb92e580b34d2a03ee9b864c525b1eccb3e5e4a3205ac76c.npy",
+      "sha256": "bcbb75e4a3693c3cf3f519137fa3557b788edec6e8d854548cd575ed8ccfe8f8"
+    },
+    "5fb8eb5e5caa006c3efbe91d52f6ec6f6a749953546d6f0887f67536f18beb1c": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/5fb8eb5e5caa006c3efbe91d52f6ec6f6a749953546d6f0887f67536f18beb1c.npy",
+      "sha256": "6dfee3710d7cefd319297aeed365bf9276eeb941557db3f57d10f5fd6526f85e"
+    },
+    "76a1dfe0e2c8c3825c582912bae05a42b7cbdfcad5bfd46a2dab73b016f74f1c": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/76a1dfe0e2c8c3825c582912bae05a42b7cbdfcad5bfd46a2dab73b016f74f1c.npy",
+      "sha256": "4222ddb5dbab042c6669645cfd43a059c76e26e40b5337d227800dcb65326a55"
+    },
+    "8b4a00429a20b8f7b8dfa719eb016174e1b7934fa27681cab5621fcca510c552": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/8b4a00429a20b8f7b8dfa719eb016174e1b7934fa27681cab5621fcca510c552.npy",
+      "sha256": "fa9545b55dc27d5cb7edc4df3ec0049fb65438684ce977c737b3c49312038f9e"
+    },
+    "8fce4be4b8442e432212af9b0d55a9fd7c3c628256b6e6b40af36e6e2f25a7da": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/8fce4be4b8442e432212af9b0d55a9fd7c3c628256b6e6b40af36e6e2f25a7da.npy",
+      "sha256": "eb560bf72217ae250e45132506e6f4adc41490f6e6a8390813564c10bd5e4bd0"
+    },
+    "9b7bde57d8caa910e4e0ec347ec8c3863e97727877c0b078d0ebada6bf844593": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/9b7bde57d8caa910e4e0ec347ec8c3863e97727877c0b078d0ebada6bf844593.npy",
+      "sha256": "41e5af79eaa3051fb5dd774bb605153a16f5bf64378c0fde7478551d20c5cd35"
+    },
+    "9a68ef041aa1985b99d25865c5aba044606875ad813bd70b0ec15ec6838c7e49": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/9a68ef041aa1985b99d25865c5aba044606875ad813bd70b0ec15ec6838c7e49.npy",
+      "sha256": "bee22eeeab979867d84319499fd39de01fe321961f686a45469254ae2cff43d6"
+    },
+    "c4b6772d1355473d07130ce7e47eac995f27c4198fa52ee95e11dba14f05a71d": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/c4b6772d1355473d07130ce7e47eac995f27c4198fa52ee95e11dba14f05a71d.npy",
+      "sha256": "318339412c48a4c2fde715a4a48e3ffe8b97da204d2b303810a3123f3c3546d7"
+    },
+    "22d294fe765be3cb888de0b7707366c265f002c0d97561f3bea14d02a1cd4007": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/22d294fe765be3cb888de0b7707366c265f002c0d97561f3bea14d02a1cd4007.npy",
+      "sha256": "c8d4f63527cc87380f3ac678c92082320b90914e674378ca14e8372480c4bc1f"
+    },
+    "bd5cc3a88ee9eb7a4bd3b603735690196b799323bcb0f3a530aeba52a4fbcfc4": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/bd5cc3a88ee9eb7a4bd3b603735690196b799323bcb0f3a530aeba52a4fbcfc4.npy",
+      "sha256": "4e96e5da1b72cbf01576f3057bdbc10e83c99d8a7cad4f53db873f75db8bf601"
+    },
+    "4cc5d3ba3c5b6ec3eba680d70153c3970d7e83b71ac5deae96a3e3d37f3c9705": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/4cc5d3ba3c5b6ec3eba680d70153c3970d7e83b71ac5deae96a3e3d37f3c9705.npy",
+      "sha256": "c413c907117c9f470452af4d62dc7b8c40269415264620cd5a930dfee156aba9"
+    },
+    "f7a5440aaf3c03a5391e26e599131a95047a0da929ae00a179fd96a275d44d0d": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/f7a5440aaf3c03a5391e26e599131a95047a0da929ae00a179fd96a275d44d0d.npy",
+      "sha256": "43ee191996410be3a213e80578ad14b1a070618eda6ede75835a78e19c95964c"
+    },
+    "0c974adccbeb9fe3b9d38d5a201671bfcea8c224aa2397021a94607b589a68c9": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/0c974adccbeb9fe3b9d38d5a201671bfcea8c224aa2397021a94607b589a68c9.npy",
+      "sha256": "5ff1c41a91ead9effe1fc92f03b04b08b583cf74c9b97bd06f05c885392ee868"
+    },
+    "2c27fb5ddcb21c71e4c37c369f0c7092f28dbbe4e115751ec1ac715397f6d32c": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/2c27fb5ddcb21c71e4c37c369f0c7092f28dbbe4e115751ec1ac715397f6d32c.npy",
+      "sha256": "834babb5ee21c0d786363cd3734a9cb91811c1f62fbd206d7aa6d170e25b83fa"
+    },
+    "1c83b8389c19fdd19825ae614ee190b1fda5d9dab8681eb0fe5fd7e39101000d": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/1c83b8389c19fdd19825ae614ee190b1fda5d9dab8681eb0fe5fd7e39101000d.npy",
+      "sha256": "4e940d71f1fcee69196f7bb7419ea9737312b5cc65370eeb11cc080e9758967d"
+    },
+    "c9893b5c6e5492545551e8918f60a461e6a55b42badc0d9b0f12f73888534a92": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/c9893b5c6e5492545551e8918f60a461e6a55b42badc0d9b0f12f73888534a92.npy",
+      "sha256": "a69f19db087cf28c0b1f0437c6ad769fcff479d7138d4250cddff7e1d4cc54e7"
+    },
+    "e40feba828d4f62d6260388a1827d1efad5182c0531eef65556f228780237875": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/e40feba828d4f62d6260388a1827d1efad5182c0531eef65556f228780237875.npy",
+      "sha256": "b742dd0a2474a4eac49462baa4a582abb54c52b0b49d1947ad901112aa1d83f8"
+    },
+    "3f8884bc9a34714c1741ca8c1846a63af9bd347e3f6bdbdc2cc448ac38ee108b": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/3f8884bc9a34714c1741ca8c1846a63af9bd347e3f6bdbdc2cc448ac38ee108b.npy",
+      "sha256": "dcf7ca1048fcd4d5abc2f476e295ff761b88e7089bc55e69e3e05f4b9c3b8ed1"
+    },
+    "b24a5e276d178952f02a4a66a8b2a3c312d9f4028f3103d34ab2327007af2d21": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/b24a5e276d178952f02a4a66a8b2a3c312d9f4028f3103d34ab2327007af2d21.npy",
+      "sha256": "e604243d1e9f5e3f5cb55c401c319e58a8bfe4cb97fb2d114c7904a5920f3632"
+    },
+    "0fe17f514e38e57757272ba198a674779aa673f521a7b845bbfd58bb3eca1895": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/0fe17f514e38e57757272ba198a674779aa673f521a7b845bbfd58bb3eca1895.npy",
+      "sha256": "bf842da1d52a8ac6cfdb74cea0438d6711f634191564c90b88685b0f40ed0f0d"
+    },
+    "1c9358595e316a638745f4ee3c1593a9a734ca6bd9b208b69e3c48132adacec2": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/1c9358595e316a638745f4ee3c1593a9a734ca6bd9b208b69e3c48132adacec2.npy",
+      "sha256": "3972822b77954774ef7104131dba6c8877de175e01aaf20efebab2da68974b9e"
+    },
+    "c20ca30d72df9f2e21e88688fada9bef454ce0349a1ce2df4f81e8775559000d": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/c20ca30d72df9f2e21e88688fada9bef454ce0349a1ce2df4f81e8775559000d.npy",
+      "sha256": "f686ef6a5807b727552419a1afc1579cdebe40c8d8bd772b3ebd0c43f97c251b"
+    },
+    "c223eeebb624685a628528e3bf232f098fb5b7814e7af26e6ed18cd0335ca89a": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/c223eeebb624685a628528e3bf232f098fb5b7814e7af26e6ed18cd0335ca89a.npy",
+      "sha256": "68cd95022df59cde0b0e2d56eaf6fffbfb90d93c86de3cadb42ea258e71db89c"
+    },
+    "1e48936d2ca25e8712fede92dffd4dd3a780785b0d788c4eda03b1a4696c8a43": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/1e48936d2ca25e8712fede92dffd4dd3a780785b0d788c4eda03b1a4696c8a43.npy",
+      "sha256": "b4d9288258a14383e728e9cd151ffe40a0b537af401272e719e2911361c7b9d0"
+    },
+    "19657618c4502f2104e039c8cd7b6f4c6f7afe5674c5801e22c57e6633b5ce3d": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/19657618c4502f2104e039c8cd7b6f4c6f7afe5674c5801e22c57e6633b5ce3d.npy",
+      "sha256": "522b09a690e67a9940aabe47ffda1f8d2e04a28ae7271ebf3d316a34c9edf14b"
+    },
+    "1f7b506ffa7c55faaa08d6d78d04ef55a6bddb90adc2b3dbf6d25fd42398d4fc": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/1f7b506ffa7c55faaa08d6d78d04ef55a6bddb90adc2b3dbf6d25fd42398d4fc.npy",
+      "sha256": "a711f9ddae31251c9de9f28b7add8f3ef3c26b006885661f012d4ea2a401c101"
+    },
+    "c644ea99a7f8777e28972ac53d60d44a9eef29bb971a4320ac3fd510e54db061": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/c644ea99a7f8777e28972ac53d60d44a9eef29bb971a4320ac3fd510e54db061.npy",
+      "sha256": "3d029a51066f7623f58db140414d7c9a0ad8b567bcced8300f6b41273149a5b1"
+    },
+    "37c4efddf0b170ddf71927c9d371f9835c50433978a21037d49fb1d8466ae358": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/37c4efddf0b170ddf71927c9d371f9835c50433978a21037d49fb1d8466ae358.npy",
+      "sha256": "97e6dec23f709e5a16d6b419dbd04a32e9c606e3bb56bb5c466fb84941ec958c"
+    },
+    "6a70f5211814369f6c6964a6c4e2c323ffa57750833acce500e545033358c2cd": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/6a70f5211814369f6c6964a6c4e2c323ffa57750833acce500e545033358c2cd.npy",
+      "sha256": "6949152ce4812fd95d5491436f0382a69dcd7c651f0c7503c17f06a2e14042f5"
+    },
+    "4e84e1809101094fbf36772b7be4f9853735b4fcf832bb6900d812c3fb47eef1": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/4e84e1809101094fbf36772b7be4f9853735b4fcf832bb6900d812c3fb47eef1.npy",
+      "sha256": "a355221a52c9761360bc0269e7979c562e3ea518f27f93d623921ff5bd6dc2a6"
+    },
+    "8462148d05884fb4521088d803ef567a66d45080d9ca786ebb624e4f2eca1567": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/8462148d05884fb4521088d803ef567a66d45080d9ca786ebb624e4f2eca1567.npy",
+      "sha256": "4f0abdc611f63fcac7f524fc99f41194318076316b06f3d3372a9a0ae44f4718"
+    },
+    "d5024558da55a872d90a1f2a68679f3a443e6a498ca6472dfd266a7a4016a995": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/d5024558da55a872d90a1f2a68679f3a443e6a498ca6472dfd266a7a4016a995.npy",
+      "sha256": "c5e121c0899f6411b8fb2e175d63d318225025f3dd7d4f0671d9ef32b8cee6cd"
+    },
+    "ba42f305cea8da4d4980b041f4d3388d13228e250430cfc7d61850af17a06d53": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/ba42f305cea8da4d4980b041f4d3388d13228e250430cfc7d61850af17a06d53.npy",
+      "sha256": "86217af2f605e08ce7fe4281852d50f4646133851384098d5f296ad03137285e"
+    },
+    "bc968a7e0959f3eb9ed5680d61fd1909373a08aa74574cf1d2103d6e63fc873a": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/bc968a7e0959f3eb9ed5680d61fd1909373a08aa74574cf1d2103d6e63fc873a.npy",
+      "sha256": "5b0032681cae7a9ec9b3c62708e5a2e0abbf7ac2fb84d0aa634a0052caab0b7e"
+    },
+    "31c1915ba022b6b7f3e09c166355c825c4140276b8bf738290460c4ab643cfa1": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/31c1915ba022b6b7f3e09c166355c825c4140276b8bf738290460c4ab643cfa1.npy",
+      "sha256": "84e9be79fbaff41c8276f0129a1210699de84113045e31e45d45e6126be89c5d"
+    },
+    "d5f529f5f0bd43526c799df767980e2f9714566d1f2dffed4e3d1da3f8ebb166": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/d5f529f5f0bd43526c799df767980e2f9714566d1f2dffed4e3d1da3f8ebb166.npy",
+      "sha256": "f7b84fb6908e03c5d337ce9e6781d01b0a51f69f7dfd5471529f12548a2039cc"
+    },
+    "91efa0cf40a4da31af5b7e3ae9f47b2f35c29384cdb0125ef76076440a1a7d02": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/91efa0cf40a4da31af5b7e3ae9f47b2f35c29384cdb0125ef76076440a1a7d02.npy",
+      "sha256": "3511c02f8b1dad14b5365e236ad5e50ceab893bf56fd962f2ea50f5ae68b8a9a"
+    },
+    "b10ed78649b3d9058e0166dc4c0100b0f4c7fa70588544a0b6886d3df927fe45": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/b10ed78649b3d9058e0166dc4c0100b0f4c7fa70588544a0b6886d3df927fe45.npy",
+      "sha256": "31a04592f1a9f73c8565495e452e1a9775c5cc3ceb13f5a2cb025a7ec21c19ab"
+    },
+    "98b0162eb1ad61cc21978b8b419edb77ab9a8f16d29a0fe09622d86881044d35": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/98b0162eb1ad61cc21978b8b419edb77ab9a8f16d29a0fe09622d86881044d35.npy",
+      "sha256": "9780466c9365bebc7938944097ce032b73d69b9a83c8c0da7f3f82e99ca82009"
+    },
+    "3cfbeac30675aaa1270fd6f3d97c6186d6b2e9caefb0ebf3f9e44b4db802d7d8": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/3cfbeac30675aaa1270fd6f3d97c6186d6b2e9caefb0ebf3f9e44b4db802d7d8.npy",
+      "sha256": "67c05758e86c95c58336ce83474ca3cd993a54138c14f4fb7f0a3eca1356bfad"
+    },
+    "22e092daff036997bb003fcad8e91550f2a62262e694549ed52c5a3b43cc3ff1": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/22e092daff036997bb003fcad8e91550f2a62262e694549ed52c5a3b43cc3ff1.npy",
+      "sha256": "8d1a91ccdd72063af7fcc8ba38453988386e170ef1a0542cc5700bd34115836a"
+    },
+    "102adbefc7958ee554e1858012d27950cbb5e041ca331ed5a24153d4f0e944d8": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/102adbefc7958ee554e1858012d27950cbb5e041ca331ed5a24153d4f0e944d8.npy",
+      "sha256": "a177bc23ef4dc58cec5a6f2359c530166811ef34c7030ded0f758080c219f5f2"
+    },
+    "207d783072c2e337bfb20055707ca107cd4341eaa1206c1375963b040352c429": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/207d783072c2e337bfb20055707ca107cd4341eaa1206c1375963b040352c429.npy",
+      "sha256": "573c2cc934fc520fc43d5f2fe8e55a5e7986cf45c74f98cfbae7291670738660"
+    },
+    "9aa7297b880f248a8d76b1ffa5dbfca8a6c98cffd3492b651f9c8a7c4b01c2b0": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/9aa7297b880f248a8d76b1ffa5dbfca8a6c98cffd3492b651f9c8a7c4b01c2b0.npy",
+      "sha256": "59b630611f92a95ce6ac12c645a584d02e07ba9e9058cba309c090c21f09c808"
+    },
+    "2434068e8928af6e14cab4f5f8b2476c0c35f047023425bf3a30e852e4bbec43": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/2434068e8928af6e14cab4f5f8b2476c0c35f047023425bf3a30e852e4bbec43.npy",
+      "sha256": "7fb6bce1c80973220ade2ebb58debc8ad6bd25f5ce230f53355bdbdd4073f1d6"
+    },
+    "e28b288ca4ee08b9ec3388c344ea2183d5ad3c610595bf51d74ea549883eb5d5": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/e28b288ca4ee08b9ec3388c344ea2183d5ad3c610595bf51d74ea549883eb5d5.npy",
+      "sha256": "805d58051a24dd556706250b374b41316b409b79a720f4621bc044a1445cd680"
+    },
+    "03bd4f391ded0b9849c0610c616627da7dd6029929fa4f1722f7314db685049a": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/03bd4f391ded0b9849c0610c616627da7dd6029929fa4f1722f7314db685049a.npy",
+      "sha256": "4e853c33052f18e78bd920e7d6aea9b8deee2eeb30528cd415c50bb1668ab3f6"
+    },
+    "9fbde30b3459f19ca68388a33e1a9c5931cc0a296f956a380a4ba2214e3495df": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/9fbde30b3459f19ca68388a33e1a9c5931cc0a296f956a380a4ba2214e3495df.npy",
+      "sha256": "9061b778b6fc9689e1944f8ced560c09f3774c4f7df5c7e52ce8cdc6a38f7ef1"
+    },
+    "dd269d2d7911e1065a2012732b150fba60cf6e257f4c205c7a22cb25920fa138": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/dd269d2d7911e1065a2012732b150fba60cf6e257f4c205c7a22cb25920fa138.npy",
+      "sha256": "000e8ad835a35662111cae819eb1af830dbec8fc827223352636842804f8667d"
+    },
+    "e5978f72a1a0e46c3bb0eca3fde82848d03a35c71bfec72c364c6ff34ff1c137": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/e5978f72a1a0e46c3bb0eca3fde82848d03a35c71bfec72c364c6ff34ff1c137.npy",
+      "sha256": "0495074c6e3250f8de6592f1675940f9b742890b388680e4402f971ecbe36031"
+    },
+    "c4ff415b7875b636f0c5149565cb275b92d338e1e6feefba4b817e3bd29037ca": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/c4ff415b7875b636f0c5149565cb275b92d338e1e6feefba4b817e3bd29037ca.npy",
+      "sha256": "920a095d0bace45cfc2e423acd1a8dab152f6a7265d629c053afd63282432a65"
+    },
+    "db1a904e47164b9207954a319a220634ad3c5d79084ae9d17df8215cc46ad73d": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/db1a904e47164b9207954a319a220634ad3c5d79084ae9d17df8215cc46ad73d.npy",
+      "sha256": "dfeafac8972f4944de56bf859cc806b843700dfb75a2feebd1d68fee1dbf6cc7"
+    },
+    "746371960bfd8409de2ca24e1692c2e2d2ee4a3f5fbee4b9b5e856ee32f8d625": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/746371960bfd8409de2ca24e1692c2e2d2ee4a3f5fbee4b9b5e856ee32f8d625.npy",
+      "sha256": "1ed92f5a0e5679991c6b62b887ff75ba7c5485cf7ca290f54569c0ebd1b9960e"
+    },
+    "cc89b522a6f0e1141908eccc2e7b96bc86a1a6676bd90536a3311f74dde64db4": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/cc89b522a6f0e1141908eccc2e7b96bc86a1a6676bd90536a3311f74dde64db4.npy",
+      "sha256": "813a7434dd4381666e23a2b8516820dffea99aeb99f11af80baaab75ce76844d"
+    },
+    "15aa7219210e7e10b1991a5a22581ffae21e927cef642e638abce9415305249d": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/15aa7219210e7e10b1991a5a22581ffae21e927cef642e638abce9415305249d.npy",
+      "sha256": "992e11307eb82e0217af28d3024168c5032521652dda3288d010299f99a7be41"
+    },
+    "beeb970710e4faf89436dbf8338473229dc0d8229aa93b77a3db863e3af35a3c": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/beeb970710e4faf89436dbf8338473229dc0d8229aa93b77a3db863e3af35a3c.npy",
+      "sha256": "fc5c8d8817319683d9e3294073a5868f346838c1fd4daa5fb765102bbadba83b"
+    },
+    "212657a9b12b43e7701b4bc86a8c8c9f5f0c6119e0ad3df6af6e671e98161a59": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/212657a9b12b43e7701b4bc86a8c8c9f5f0c6119e0ad3df6af6e671e98161a59.npy",
+      "sha256": "7b3219b8a58524fd7849df2611c3b8abfaed5ca24dc32cf33a34cc931846d4f9"
+    },
+    "a3e1b661ba0f48d4d4db9dcd96dbb4a802eee1a142878c067b38a8266a6a701a": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/a3e1b661ba0f48d4d4db9dcd96dbb4a802eee1a142878c067b38a8266a6a701a.npy",
+      "sha256": "a0ae56662fc79faf121ddbc239dc68704016323f266999e6aecb812179a17607"
+    },
+    "88d5326054b6a86cceb330bceb9479bedd4376989e3ba64f1d40f4f7b7939a33": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/88d5326054b6a86cceb330bceb9479bedd4376989e3ba64f1d40f4f7b7939a33.npy",
+      "sha256": "cde4be20daa1b49256f49967ce3dd387fea220bb16cfb59fd272a9eac216cfd5"
+    },
+    "401028bd1671f3c2e3a453d4fd47626cb0593ff3ae45e978079c084a4e79e2a8": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/401028bd1671f3c2e3a453d4fd47626cb0593ff3ae45e978079c084a4e79e2a8.npy",
+      "sha256": "b7cc2624fad0a88a46f16268d104ab8bc2f416d8f5ac1aca02b6a8f32401faa7"
+    },
+    "5c3a89e27b4be5f1f5dc157e18e38add7234c77b4565d460dcede795a213ae4c": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/5c3a89e27b4be5f1f5dc157e18e38add7234c77b4565d460dcede795a213ae4c.npy",
+      "sha256": "a0a4cfda8a5472e3224f7b709cf67f3d73b11f066eb71cf6c53b02ed50701aef"
+    },
+    "be64352cb0b706de9143f6b8ebb385b4527671c0c46814db6c15dca190c1003a": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/be64352cb0b706de9143f6b8ebb385b4527671c0c46814db6c15dca190c1003a.npy",
+      "sha256": "61030604cd7400d18a9838f285ab5589d6878c69478e5351d07fe643374dee4c"
+    },
+    "e30405cd3f1bfa943b3c9750a76b96be764048acc4b7daff1e5386d813b0daf5": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/e30405cd3f1bfa943b3c9750a76b96be764048acc4b7daff1e5386d813b0daf5.npy",
+      "sha256": "4854e2060512f10321752e971b71ce16665fc578f2c3d266d01ae1d363626493"
+    },
+    "e6199c6b016db54040a2d0c347f2245106aef769c386a997dff0db14096e1c0e": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/e6199c6b016db54040a2d0c347f2245106aef769c386a997dff0db14096e1c0e.npy",
+      "sha256": "6fe5e9836a642106963352793a0b185cb66c51ba90708703317df3c181db8a74"
+    },
+    "ca9cec011ad7e964292957293486d448e26e9b870050e1438a33a11627ff69a7": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/ca9cec011ad7e964292957293486d448e26e9b870050e1438a33a11627ff69a7.npy",
+      "sha256": "c5ee83aaeaa517f3c578b812249510f6bc433703bc61f2910718bcd9537fc63f"
+    },
+    "cc3270c58b1c1e17f86b6730ef8872cc3d2a175735f97108fde2f80a23659f3b": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/cc3270c58b1c1e17f86b6730ef8872cc3d2a175735f97108fde2f80a23659f3b.npy",
+      "sha256": "8fcd501857828574052eaf4c7c77f4c31cc37cf5309fcb3cd8f0e35d2e55f7da"
+    },
+    "bccb0011114f819fd455deec99730ef25f3198bfdffe55622b72307afa6ab416": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/bccb0011114f819fd455deec99730ef25f3198bfdffe55622b72307afa6ab416.npy",
+      "sha256": "f977a16dfce6eef12b8e4bba3a263f80f9f8374dc1a64ace6df8788f1e8044ff"
+    },
+    "497e519a514ccb66746048d62fb8af10e14e626cb80f23279deed056419e1e22": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/497e519a514ccb66746048d62fb8af10e14e626cb80f23279deed056419e1e22.npy",
+      "sha256": "ddd56c263d2712d3ae78d6b15b1b59e55c0b7b790ab62f82da92e76c7d632b64"
+    },
+    "37047d4bfdd099026ffb09841b6b32eb6ce6d1abca0331d9a704f6bdbd1e14e5": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/37047d4bfdd099026ffb09841b6b32eb6ce6d1abca0331d9a704f6bdbd1e14e5.npy",
+      "sha256": "ce02ba0b009019f65f05f298bc283399275642b6365d274f048e9015f728719f"
+    },
+    "5af174c20afa7986a02c0e71725cebab8360f53e90f42ddcfda791d5ec1b6074": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/5af174c20afa7986a02c0e71725cebab8360f53e90f42ddcfda791d5ec1b6074.npy",
+      "sha256": "50bfe54293a26037094cc087c749efe4d8cbddb8d931b67f579eb586c0cda2d2"
+    },
+    "a59f326f2380d2e8eeacd98519c18a61fadf5b95ee45e29fd33bab8416649b14": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/a59f326f2380d2e8eeacd98519c18a61fadf5b95ee45e29fd33bab8416649b14.npy",
+      "sha256": "1887fc03ef92323890ddba2e7e56a03ee5da0ba85168c36cc152c8664d193fed"
+    },
+    "016f35314b7dd85931d9bb9aedfa93d0ca0577e6bb1008808bc7f1aac10c2d19": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/016f35314b7dd85931d9bb9aedfa93d0ca0577e6bb1008808bc7f1aac10c2d19.npy",
+      "sha256": "d5916420058d39efaafa26825257b69bfe50cd97a9f9608ab97e9d86c658f87a"
+    },
+    "da849c15e140b6804f2071130e8935b9abb51d8456a46f3c1969a28471e4f477": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/da849c15e140b6804f2071130e8935b9abb51d8456a46f3c1969a28471e4f477.npy",
+      "sha256": "e18a743a130352978f1c6c8935edfee74258d9ed06a97ed70c24791a06bc4ae5"
+    },
+    "d53788431bca67423acb165356454cf8e38551e1a74564b9289190b8ba167bd4": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/d53788431bca67423acb165356454cf8e38551e1a74564b9289190b8ba167bd4.npy",
+      "sha256": "cd8853f5748a084d4c1af666a835a7570d2d8d60842c7bb5c278b4c0a76d10bd"
+    },
+    "0fe26f232f28a639f77c876ff2a57f22bdb4ae858ffb3338b7dfb7bd0d36b0a0": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/0fe26f232f28a639f77c876ff2a57f22bdb4ae858ffb3338b7dfb7bd0d36b0a0.npy",
+      "sha256": "7d00eb38c34d964ed9c5c1da9b02e6c1bdb690a3c8984a0dda48df4ed5335065"
+    },
+    "690c29a2b4b85bc163c26e79c1bec70c9e70bd560264dd47c459dcfec012e469": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/690c29a2b4b85bc163c26e79c1bec70c9e70bd560264dd47c459dcfec012e469.npy",
+      "sha256": "3a76816e8ad0b32fb31e5ce8b40631f5af3caeb4b389a7ff16f988834d5c9b7e"
+    },
+    "95d4961fc08c8c344c01be436f440471ee1b80d70e6bf8bc0dd1abc7f25c6dad": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/95d4961fc08c8c344c01be436f440471ee1b80d70e6bf8bc0dd1abc7f25c6dad.npy",
+      "sha256": "72962e346a4e3589202ab67730117b0349780932282edea874e1336eff829691"
+    },
+    "0c256455c1e5576d21b990a2147988f1f6301e53647d36777c061bb960ccf38a": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/0c256455c1e5576d21b990a2147988f1f6301e53647d36777c061bb960ccf38a.npy",
+      "sha256": "067a063fac7623e0a9a24e91daa27be324b1aa35dd19cf45072207aaa0c9f7b2"
+    },
+    "7079879feb95655d578fad2fd4d60b36625c324f85d1d288ea7b431fcfa13932": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/7079879feb95655d578fad2fd4d60b36625c324f85d1d288ea7b431fcfa13932.npy",
+      "sha256": "a85bdec9becafebe512b2f304a7b53b4f540259704d0c4cf350e404c7d2517b2"
+    },
+    "1da861d4c873e1cc6cbad20e8faf2757a0a93b43b3192b50a632ffc773bcf16c": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/1da861d4c873e1cc6cbad20e8faf2757a0a93b43b3192b50a632ffc773bcf16c.npy",
+      "sha256": "d6330ab40a61af6717742397037adc069ccbf3655082f6b6b75fc4010705ca5a"
+    },
+    "d6c85f12cb86f30366650feaf61fa9c21694730dde8d16dc43dfb08e37044919": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/d6c85f12cb86f30366650feaf61fa9c21694730dde8d16dc43dfb08e37044919.npy",
+      "sha256": "5fbbcc6d197cd7856bd2346ef33db0e1c79c93f82d9aaedd686fc77c2fde7561"
+    },
+    "ee1bd9c3db6da931663e29830cf5e2b40990777941a8546f58b951f13799c325": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/ee1bd9c3db6da931663e29830cf5e2b40990777941a8546f58b951f13799c325.npy",
+      "sha256": "245fcf189479d20ea183f9f10dd15d5269797091391b9f6fcc9a9e1a082bc1c6"
+    },
+    "02100ea15a888ac13ede144432115602e01828df9f67f0228f46b092b36daaa6": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/02100ea15a888ac13ede144432115602e01828df9f67f0228f46b092b36daaa6.npy",
+      "sha256": "26e23c2b0ecee6a2925429296fc6659e5ba029af1f38fafb8ab2d01dfdb1528b"
+    },
+    "8bad0bebcb96d02c9f5b89796c6e4f5f7f189782fe81cfabd68ab19042fd60bd": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/8bad0bebcb96d02c9f5b89796c6e4f5f7f189782fe81cfabd68ab19042fd60bd.npy",
+      "sha256": "dc3795489d3e2d90f863eb5b174d09f3233fcb6a624b815dccc174a5d6aab6eb"
+    },
+    "ffa49c876fbc5ba52932a6698ecab8c704c13e383f4fc95fd5101f325f4f2eec": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/ffa49c876fbc5ba52932a6698ecab8c704c13e383f4fc95fd5101f325f4f2eec.npy",
+      "sha256": "52594e0b9c388d7d7fbda9b82e82012ac09ef976383b22e191c14ff9fcc7f3f9"
+    },
+    "866bb4a4f921a4398a727ffb94a748da7f1e91f51d6bc4a5f6c74d511b105e16": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/866bb4a4f921a4398a727ffb94a748da7f1e91f51d6bc4a5f6c74d511b105e16.npy",
+      "sha256": "bb473a9d9d6f64a681981174cc6ecada0dd16e8dab0f0794dda7fe8fcea3a627"
+    },
+    "9de599d57d20de7fa26aa578d8283f4ca76db9f6d0ab58d2a33d6edcb9ee7325": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/9de599d57d20de7fa26aa578d8283f4ca76db9f6d0ab58d2a33d6edcb9ee7325.npy",
+      "sha256": "512ce0e50addfbdb9a9955f3e0f02e3db8052d441510ad25edc701703987e30f"
+    },
+    "bde6fc1b2fc42902a3f1bd4767f923cac81b2e3a22431a64fe09240931cf1518": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/bde6fc1b2fc42902a3f1bd4767f923cac81b2e3a22431a64fe09240931cf1518.npy",
+      "sha256": "7563d5ea451f6b5f19588cf06e32ec301252365b6269708ab5ae20db7a643899"
+    },
+    "b6d4a8adf5d1f337bdb6c68773e9754281d30dfe523f52d4b17af0b04e703b02": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/b6d4a8adf5d1f337bdb6c68773e9754281d30dfe523f52d4b17af0b04e703b02.npy",
+      "sha256": "d62d4349fe223082333c116c1cc60bbfc765727559b013806ea35545d0a725a1"
+    },
+    "becb601d00e90a676385ced8b1d10de837c89d1a1b60e46ebbde6ca55034fb8c": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/becb601d00e90a676385ced8b1d10de837c89d1a1b60e46ebbde6ca55034fb8c.npy",
+      "sha256": "e3d41fb54f247273d01cfed12c5d0755c6b9820330db13f56c8233704e739ba4"
+    },
+    "7bc667fae50b27527de38e992b0c5d69a21c34df9a669335fd3a2e172873235f": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/7bc667fae50b27527de38e992b0c5d69a21c34df9a669335fd3a2e172873235f.npy",
+      "sha256": "b3e73d64783fc549995064126e04e21ba279f30ca4c0e466d05f37534be836e9"
+    },
+    "d5b33181a871e0cc0c421bee6fe1b8d7e8b3b2caff55e29e52cd2c2c6868252f": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/d5b33181a871e0cc0c421bee6fe1b8d7e8b3b2caff55e29e52cd2c2c6868252f.npy",
+      "sha256": "0cf1c4069ff8b29c26f4ac6e8fe99fd425c090b7d7b1809c4630855ff917044a"
+    },
+    "c9fd74769f5fe565b8817b3926ff1c58b13072e511c1827e77b30a092f281c46": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/c9fd74769f5fe565b8817b3926ff1c58b13072e511c1827e77b30a092f281c46.npy",
+      "sha256": "b9031b9121f319c116974e46da7a47dab8d87e50c465b855d43ac8250848582d"
+    },
+    "dd880f494cdcc222772d1f258797128d9ad468544f51c2e531d97e32e6c54fb4": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/dd880f494cdcc222772d1f258797128d9ad468544f51c2e531d97e32e6c54fb4.npy",
+      "sha256": "c34f39ed7a103a1c5e4d15f2aad0b624ac7aaa8b02972da2664881dface417da"
+    },
+    "a30403287bd71884e5239a4acd80c28db4e060e022816033251f8a49eee2b483": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/a30403287bd71884e5239a4acd80c28db4e060e022816033251f8a49eee2b483.npy",
+      "sha256": "ace86dc5da50cb41fcd09426c4b67e96182784ee2ba073a80526d53331df6c2b"
+    },
+    "7de8905386ea2d9e3f420cb4fa9bb2b56ad2dc2f7ac157b312d2ddf727956f06": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/7de8905386ea2d9e3f420cb4fa9bb2b56ad2dc2f7ac157b312d2ddf727956f06.npy",
+      "sha256": "8202eb47322e1f7477b08adaaffd675d7347d4b8f2b7bb84c5ecbdbb47070f4e"
+    },
+    "ccd9b7cd8a4be6d7b66706b89482dba6634dff7274bef064952fca239fb444ab": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/ccd9b7cd8a4be6d7b66706b89482dba6634dff7274bef064952fca239fb444ab.npy",
+      "sha256": "bcf33b4e56458ddfa5bd42be17d6771feb9390f131a22383f0ffbafc5be9edc8"
+    },
+    "61ccc9046217eec55b5387b5a5cf0c0acd8930203ee1fe986bbcd39842c02fa5": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/61ccc9046217eec55b5387b5a5cf0c0acd8930203ee1fe986bbcd39842c02fa5.npy",
+      "sha256": "44a8fad0f8aa4ff527a2251099c9a8d26a9e2a78131535432a44cbcb8036a5e4"
+    },
+    "080de6654f3845a8f9c09e71afb9c8605a6805928e4ee56990912b4204a7d582": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/080de6654f3845a8f9c09e71afb9c8605a6805928e4ee56990912b4204a7d582.npy",
+      "sha256": "9c5e126618c5e9d21999a90c9b2a174b487cd72c52af26449bf184449e8b363b"
+    },
+    "cd694cb0acff28896c5323abbc0f7645188ac738920f7d45a3311089b9685b3c": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/cd694cb0acff28896c5323abbc0f7645188ac738920f7d45a3311089b9685b3c.npy",
+      "sha256": "cf786473ffeaea2d4cea49e387e9ab85a5a107c46305e19908caaa7facee881f"
+    }
+  },
+  "open_blockers": [
+    "physical region/forward scattering map",
+    "preprocessing covariance",
+    "unobserved modes",
+    "Phi source coefficient"
+  ],
+  "dependency_unlocked": [
+    "mask-aware detector analysis only"
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "evidence_hashes": {
+    "docs/core/artifacts/t13_ued_numeric_inventory_audit.json": "b5ec9fbb53c2be6c8b6628dc9561605cd1df271d94511b9be55e1d42e67baddc",
+    "docs/scripts/audit/audit_topic13_ued_mask_support.py": "c1bd2e6064616a9332c35083181f335e5f68e501c2968f63b8aad2a5977e7212",
+    "docs/scripts/audit/ued_pickle_static.py": "56be2fa913c3d6988f9ea07e523d115930845a6d8f751780b987e9128bc097b5",
+    "docs/core/test/test_topic13_ued_mask_support.py": "71ac47c6a1d452b619260c510b345648fdbbf8ef53f76d20cd1f5eeb32046b0e"
+  },
+  "claim_boundary": "Support comparison is not a heat signal, confidence interval, lifetime, mode occupation or alpha calibration."
+}

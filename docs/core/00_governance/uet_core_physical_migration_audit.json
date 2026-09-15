@@ -33,7 +33,7 @@
   ],
   "controlling_blocker": null,
   "duplicate_targets": {},
-  "generated_at": "2026-09-15T10:43:13+00:00",
+  "generated_at": "2026-09-15T18:28:37+00:00",
   "generator": "docs/scripts/audit/audit_uet_core_physical_migration.py",
   "missing_current_paths": [],
   "redirect_errors": [],
@@ -41,32 +41,23 @@
   "schema_version": "1.0",
   "status": "PASS",
   "summary": {
-    "already_canonical": 753,
-    "compatibility_assets_present": 223,
+    "already_canonical": 1963,
+    "compatibility_assets_present": 423,
     "compatibility_counts": {
-      "legacy_artifact_index": 588,
-      "markdown_redirect": 2,
-      "none": 530,
-      "path_resolver": 385,
-      "redirect_or_shim": 223,
-      "root_python_shim": 124
+      "none": 1540,
+      "redirect_or_shim": 423
     },
-    "dirty_sources": 3,
+    "dirty_sources": 845,
     "duplicate_targets": {},
     "existing_target_conflicts": [],
     "files_migrated_in_wave": 0,
     "files_skipped_in_wave": 0,
-    "files_to_move": 1099,
-    "files_total": 1852,
+    "files_to_move": 0,
+    "files_total": 1963,
     "migration_wave_counts": {
-      "already_canonical": 753,
-      "artifacts": 589,
-      "data_tooling": 86,
-      "equation_or_lane": 124,
-      "proofs": 1,
-      "review": 1,
-      "tests": 298
+      "already_canonical": 1963
     },
+    "physical_migration_complete": true,
     "physical_move_performed": false,
     "physics_status_changes": 0
   }

@@ -22,7 +22,7 @@ from docs.core.uet_o2_kinetic_collision_kubo import (
 from docs.core.uet_o2_one_loop_vertex_uv_boundary import _tree_vertex_tensor
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_kinetic_canonical_action_match_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_kinetic_canonical_action_match_audit.json"
 
 
 def config(z=1., coupling=.5):

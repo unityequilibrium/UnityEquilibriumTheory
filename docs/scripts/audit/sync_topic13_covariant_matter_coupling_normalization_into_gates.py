@@ -10,10 +10,10 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-ACTION_REL = "docs/core/artifacts/t13_covariant_matter_coupling_normalization_no_go.json"
+ACTION_REL = "docs/core/07_artifacts/topic13/t13_covariant_matter_coupling_normalization_no_go.json"
 FULL_REL = "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-REGISTER_REL = "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY_REL = "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+REGISTER_REL = "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY_REL = "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 
 RESULT_ID = "T13_COVARIANT_MATTER_COUPLING_NORMALIZATION_IDENTIFIABILITY_NO_GO"
 LANE_KEY = "covariant_matter_coupling_normalization_no_go"

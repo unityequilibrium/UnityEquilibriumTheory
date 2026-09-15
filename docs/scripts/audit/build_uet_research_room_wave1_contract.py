@@ -14,7 +14,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/uet_research_room_wave1_contract.json"
+OUT = ROOT / "docs/core/07_artifacts/archive/uet_research_room_wave1_contract.json"
 BRIEF = ROOT / "docs/core/UET_RESEARCH_ROOM_BRIEF.md"
 
 
@@ -43,13 +43,13 @@ def snapshot(path: Path, selectors: tuple[str, ...] = ()) -> dict[str, Any]:
 
 
 def main() -> int:
-    registry_path = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry.json"
-    foundation_path = ROOT / "docs/core/artifacts/uet_foundation_dependency_gate.json"
-    causal_reference = ROOT / "docs/core/artifacts/matter_space_causal_reference_verification.json"
-    causal_full = ROOT / "docs/core/artifacts/matter_space_variational_verification.json"
+    registry_path = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json"
+    foundation_path = ROOT / "docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json"
+    causal_reference = ROOT / "docs/core/07_artifacts/verification/matter_space_causal_reference_verification.json"
+    causal_full = ROOT / "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
     thermal = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json"
     thermal_map = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_observable_map_readiness.json"
-    thermal_calibration = ROOT / "docs/core/artifacts/thermal_dimensional_calibration_contract.json"
+    thermal_calibration = ROOT / "docs/core/07_artifacts/topic13/thermal_dimensional_calibration_contract.json"
     thermal_source = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_second_sound_source_package.json"
     thermal_review = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_thermal_source_review.json"
     phase_source = ROOT / "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_structure_factor_source_archive_policy_gate.json"
@@ -57,8 +57,8 @@ def main() -> int:
     phase_next = ROOT / "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_structure_factor_ch_finite_k_next_path_decision_gate.json"
     phase_replication = ROOT / "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_conserved_order_spectral_finite_size_replication.json"
     fluid = ROOT / "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_benchmark_validation.json"
-    o2 = ROOT / "docs/core/artifacts/o2_finite_density_eos_verification.json"
-    o2_formula = ROOT / "docs/core/artifacts/o2_eos_formula_audit.json"
+    o2 = ROOT / "docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json"
+    o2_formula = ROOT / "docs/core/07_artifacts/correspondence/o2_eos_formula_audit.json"
 
     causal_ref = load(causal_reference) if causal_reference.is_file() else {}
     causal_full_value = load(causal_full) if causal_full.is_file() else {}

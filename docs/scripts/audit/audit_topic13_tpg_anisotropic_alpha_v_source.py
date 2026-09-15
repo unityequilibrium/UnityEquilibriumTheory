@@ -24,7 +24,7 @@ RAW_PATH = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
     "ihep_2001_32_tpg_thermal_expansion.pdf"
 )
-OUT = ROOT / "docs/core/artifacts/t13_tpg_anisotropic_alpha_v_source_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_tpg_anisotropic_alpha_v_source_audit.json"
 EXPECTED_RAW_SHA256 = "e9527b8dba9d3944a1a9298e9d516e501279b500586cf0179ec076b94fdd6f2e"
 
 

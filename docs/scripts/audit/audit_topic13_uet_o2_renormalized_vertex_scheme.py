@@ -28,7 +28,7 @@ from docs.core.uet_o2_renormalized_vertex_scheme import (  # noqa: E402
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_renormalized_vertex_scheme_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_renormalized_vertex_scheme_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_renormalized_vertex_scheme.py"
 UV_MODULE = ROOT / "docs/core/uet_o2_one_loop_vertex_uv_boundary.py"
 RENORMALIZED_NORMAL_MODULE = ROOT / "docs/core/uet_o2_renormalized_normal_branch.py"

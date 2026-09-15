@@ -1,0 +1,12 @@
+{
+  "state": [0.22, 0.35, 0.15],
+  "direction_rules": ["axis6", "axis_cube14"],
+  "support_order": 40,
+  "dps": 120,
+  "rank_relative_floor": 1e-12,
+  "controls": {"radial_order": 8, "collision_integration_order": 24, "angular_order": 24, "cutoff_factor": 48.0},
+  "transition_quadrature_order": 24,
+  "transition_channel_count": 64,
+  "probes": ["p_x*p_y/E^2", "mass/E"],
+  "policy": "Minimum Euclidean coefficient correction on the existing support, preserving 1,E,p_x,p_y,p_z. Signed numerical coefficients permitted, physical weights/rates unchanged. Reject rank deficiency; no support fallback, fitting or clipping. Nonlinear probes excluded from constraints."
+}

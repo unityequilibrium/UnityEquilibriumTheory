@@ -9,8 +9,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
-OUT = ROOT / "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+OUT = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 
 
 def main() -> int:
@@ -215,11 +215,11 @@ def main() -> int:
             "claim_boundary": topic13_core_entry.get("claim_boundary"),
         })
     partial_routes = {
-        "covariant_action_si_anchor_route": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
-        "covariant_field_normalization_no_go": "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json",
-        "phi_energy_anchor_no_go": "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
-        "thermal_response_beta_contract": "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json",
-        "ding_experimental_heating_input_boundary": "docs/core/artifacts/t13_ding_experimental_heating_input_boundary_audit.json",
+        "covariant_action_si_anchor_route": "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json",
+        "covariant_field_normalization_no_go": "docs/core/07_artifacts/topic13/t13_covariant_field_normalization_identifiability_no_go.json",
+        "phi_energy_anchor_no_go": "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json",
+        "thermal_response_beta_contract": "docs/core/07_artifacts/topic13/t13_thermal_response_beta_contract_audit.json",
+        "ding_experimental_heating_input_boundary": "docs/core/07_artifacts/topic13/t13_ding_experimental_heating_input_boundary_audit.json",
     }
     partial_evidence = artifact.get("topic13_partial_evidence", {})
     if isinstance(partial_evidence, dict):

@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-AUDIT = ROOT / "docs/core/artifacts/t13_jun_final_source_package_boundary.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_jun_final_source_package_boundary.json"
 
 
 def load() -> dict:

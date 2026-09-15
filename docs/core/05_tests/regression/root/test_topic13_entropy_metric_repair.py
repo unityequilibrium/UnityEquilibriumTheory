@@ -41,6 +41,6 @@ def test_fixed_pressure_bose_streaming_drives_existing_X(charge):
 
 def test_historical_counterexample_is_preserved():
     root = repo_root()
-    old = json.loads((root/"docs/core/artifacts/t13_entropy_force_convention_audit.json").read_text())
+    old = json.loads((root/"docs/core/07_artifacts/topic13/t13_entropy_force_convention_audit.json").read_text())
     assert old["status"] == "BLOCKED_PHYSICAL_ENTROPY_INTERPRETATION"
     assert old["witnesses"][0]["reported_over_divergence"] == pytest.approx(.22)

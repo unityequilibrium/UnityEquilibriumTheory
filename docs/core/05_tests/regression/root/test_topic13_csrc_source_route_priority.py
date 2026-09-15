@@ -6,9 +6,9 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-AUDIT = ROOT / "docs/core/artifacts/t13_csrc_source_route_priority_audit.json"
-MATRIX = ROOT / "docs/core/artifacts/t13_topic13_closure_matrix.json"
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_csrc_source_route_priority_audit.json"
+MATRIX = ROOT / "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
 
 
 def load(path: Path) -> dict:
@@ -96,7 +96,7 @@ def test_route_priority_is_projected_into_matrix_and_major_result_register() -> 
     source_requirement = next(
         item for item in matrix["requirements"] if item["requirement_id"] == "source_and_uncertainty"
     )
-    assert "docs/core/artifacts/t13_csrc_source_route_priority_audit.json" in {
+    assert "docs/core/07_artifacts/topic13/t13_csrc_source_route_priority_audit.json" in {
         ref["path"] for ref in source_requirement["evidence_artifacts"]
     }
     entry = next(

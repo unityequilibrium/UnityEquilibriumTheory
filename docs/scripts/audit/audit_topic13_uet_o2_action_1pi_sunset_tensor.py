@@ -22,7 +22,7 @@ from docs.core.uet_o2_action_1pi_sunset_tensor import (  # noqa: E402
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_action_1pi_sunset_tensor_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_action_1pi_sunset_tensor_audit.json"
 MODULE = ROOT / "docs/core/uet_o2_action_1pi_sunset_tensor.py"
 ACTION_MODULE = ROOT / "docs/core/uet_o2_action_sunset_1pi_spectral.py"
 ZERO_ETA_MODULE = ROOT / "docs/core/uet_o2_action_sunset_zero_eta.py"

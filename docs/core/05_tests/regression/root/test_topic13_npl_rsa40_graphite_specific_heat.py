@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-LANE = ROOT / "docs/core/artifacts/t13_npl_rsa40_graphite_specific_heat_audit.json"
+LANE = ROOT / "docs/core/07_artifacts/topic13/t13_npl_rsa40_graphite_specific_heat_audit.json"
 PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "npl_rsa40_graphite_specific_heat_source_package.json"
@@ -15,7 +15,7 @@ FULL = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
     "topic13_full_thermodynamic_bridge_core_ready_gate.json"
 )
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
 
 
 def load(path: Path) -> dict:
@@ -46,7 +46,7 @@ def test_npl_cp_uncertainty_lane_is_source_locked_without_cv_or_alpha_promotion(
     assert "alpha_Phi_K_independent_calibration_missing" in full["major_result"]["what_remains_open"]
     assert "c_v_source_uncertainty_not_closed" in full["major_result"]["what_remains_open"]
     assert any(
-        item["path"] == "docs/core/artifacts/t13_npl_rsa40_graphite_specific_heat_audit.json"
+        item["path"] == "docs/core/07_artifacts/topic13/t13_npl_rsa40_graphite_specific_heat_audit.json"
         for item in full["evidence_artifacts"]
     )
     assert any(

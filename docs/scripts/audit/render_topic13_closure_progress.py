@@ -15,14 +15,15 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-MATRIX_REL = "docs/core/artifacts/t13_topic13_closure_matrix.json"
+MATRIX_REL = "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json"
 GATE_REL = (
     "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
     "topic13_full_thermodynamic_bridge_core_ready_gate.json"
 )
-INPUT_REL = "docs/core/artifacts/t13_closure_input_package_audit.json"
-MINIMAL_INPUT_REL = "docs/core/artifacts/t13_full_closure_minimal_input_contract.json"
-OUT_JSON_REL = "docs/core/artifacts/t13_full_closure_progress.json"
+INPUT_REL = "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json"
+MINIMAL_INPUT_REL = "docs/core/07_artifacts/topic13/t13_full_closure_minimal_input_contract.json"
+OUT_JSON_REL = "docs/core/07_artifacts/topic13/t13_full_closure_progress.json"
+EXPOSURE_REL = "docs/core/T13_HOLDOUT_EXPOSURE_2026_09_10.json"
 OUT_MD_REL = "docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_FULL_CLOSURE_STATUS.md"
 
 
@@ -81,11 +82,27 @@ def subresult_record(major: dict[str, Any], subresult: dict[str, Any]) -> dict[s
     }
 
 
+def track_summary(gate: dict[str, Any]) -> dict[str, Any]:
+    tracks = gate.get("closure_tracks", {})
+    return {
+        name: {
+            "status": tracks.get(name, {}).get("status", "NOT_REPORTED"),
+            "what_is_closed": tracks.get(name, {}).get("what_is_closed", []),
+            "what_remains_open": tracks.get(name, {}).get("what_remains_open", []),
+            "dependency_unlocked": tracks.get(name, {}).get("dependency_unlocked", "Not reported"),
+            "claim_boundary": tracks.get(name, {}).get("claim_boundary", "Not reported"),
+        }
+        for name in ("o2_he4_core_ready", "graphite_ttg_external_validation")
+    }
+
+
 def build_payload() -> dict[str, Any]:
     matrix = load(MATRIX_REL)
     gate = load(GATE_REL)
     input_audit = load(INPUT_REL)
     minimal_input_contract = load(MINIMAL_INPUT_REL)
+    tracks = track_summary(gate)
+    exposure = load(EXPOSURE_REL)
 
     major_results: list[dict[str, Any]] = []
     subresults: list[dict[str, Any]] = []
@@ -129,7 +146,7 @@ def build_payload() -> dict[str, Any]:
 
     source_hashes = {
         relative: digest(relative)
-        for relative in (MATRIX_REL, GATE_REL, INPUT_REL, MINIMAL_INPUT_REL)
+        for relative in (MATRIX_REL, GATE_REL, INPUT_REL, MINIMAL_INPUT_REL, EXPOSURE_REL)
     }
     counts = dict(Counter(item["status"] for item in subresults))
     open_subresults = [item for item in subresults if item["status"] == "OPEN"]
@@ -169,6 +186,8 @@ def build_payload() -> dict[str, Any]:
         "artifact": "t13_full_closure_progress",
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "canonical_status": {
+            "full_topic_status_scope": "legacy_graphite_ttg_aggregate; not O(2)/He-4 Core readiness",
+            "full_core_unlock_scope": "o2_he4_core_ready from canonical matrix; not graphite validation",
             "full_topic_status": gate.get("status"),
             "full_topic_closure_level": gate.get("major_result", {}).get("closure_level"),
             "claim_promotion": gate.get("claim_promotion", False),
@@ -178,6 +197,14 @@ def build_payload() -> dict[str, Any]:
             "gate_blockers": gate_blockers,
         },
         "closure_counts": counts,
+        "closure_tracks": tracks,
+        "closure_arithmetic_scope": "Legacy graphite/base-Phi requirement matrix, not a percentage of O(2)/He-4 Core completion",
+        "holdout_context_review": {
+            "declaration_path": EXPOSURE_REL,
+            "incidental_public_summary_exposure": exposure["incidental_public_summary_exposure"],
+            "future_blind_holdout_eligibility": exposure["future_blind_holdout_eligibility"],
+            "scope": "Later agent-context declaration; does not rewrite historical process audits",
+        },
         "closure_arithmetic": closure_arithmetic,
         "core_handoff_results": core_handoff_results,
         "minimal_input_contract": {
@@ -194,7 +221,9 @@ def build_payload() -> dict[str, Any]:
         "input_packages": input_packages,
         "dependency_unlock": {
             "causal_named_branch": "CLOSED_FOR_CORE as a bounded normalized branch",
-            "full_topic_13": "LOCKED until all required subresults are closed at their declared level",
+            "full_topic_13": "See closure_tracks; O(2)/He-4 Core and graphite external validation are separate",
+            "o2_he4_core": tracks["o2_he4_core_ready"]["dependency_unlocked"],
+            "graphite_ttg_external_validation": tracks["graphite_ttg_external_validation"]["dependency_unlocked"],
             "downstream_core_gravity_transport": "LOCKED",
         },
         "rerun_policy": {
@@ -226,14 +255,17 @@ def render_markdown(payload: dict[str, Any]) -> str:
         "This file is generated from the canonical closure matrix and full gate. It is a status handoff, not a new scientific result.",
         "",
         "MAJOR_RESULT_CLOSURE:",
-        f"- Full Topic 13: `{status['full_topic_closure_level']}`.",
+        f"- O(2)/He-4 Core track: `{payload['closure_tracks']['o2_he4_core_ready']['status']}`.",
+        f"- Graphite TTG external-validation track: `{payload['closure_tracks']['graphite_ttg_external_validation']['status']}`.",
+        "- The legacy aggregate and counts below belong to the graphite/base-Phi requirement matrix; they are not the status of every Topic 13 lane.",
         f"- Required subresults: `{payload['required_subresult_count']}`; `CLOSED_FOR_LANE={counts.get('CLOSED_FOR_LANE', 0)}`, `CLOSED_AS_NO_GO={counts.get('CLOSED_AS_NO_GO', 0)}`, `CLOSED_FOR_CORE={counts.get('CLOSED_FOR_CORE', 0)}`, `OPEN={counts.get('OPEN', 0)}`.",
         f"- Progress arithmetic: `non_open={arithmetic['non_open']}/{arithmetic['required_subresults']}`; `open_gap={arithmetic['open_gap']}`; `non_open_fraction={arithmetic['non_open_fraction']:.4f}`. Non-open is not the same as Core closure.",
         "",
         "WHAT_IS_ACTUALLY_CLOSED:",
         "- The named causal flux-Phi branch is `CLOSED_FOR_CORE` only as a bounded normalized branch; the original conserved-C baseline remains blocked/no-go.",
         "- Formal natural-unit bridge, EOS, SK/KMS, entropy, heat-current, source-boundary, and comparator lanes remain separated and machine-audited.",
-        "- No input package is accepted for Full Topic 13 Core closure.",
+        "- Canonical O(2)/He-4 composition records a local physical anchor, independent alpha, SI scale and scoped transport interface. This does not calibrate graphite or establish external validation.",
+        "- The legacy graphite input packages below remain unaccepted; they do not negate the separate He-4 composition.",
         "",
         "WHAT_REMAINS_OPEN:",
         "| Major result | Open subresult | Required evidence |",
@@ -270,7 +302,7 @@ def render_markdown(payload: dict[str, Any]) -> str:
             f"- Core-ready requires all `{arithmetic['required_subresults']}` required subresults to leave `OPEN`; current counts are `CLOSED_FOR_LANE={arithmetic['closed_for_lane']}`, `CLOSED_AS_NO_GO={arithmetic['closed_as_no_go']}`, `CLOSED_FOR_CORE={arithmetic['closed_for_core']}`, `OPEN={arithmetic['open']}`.",
             f"- The visible progress count is `non_open={arithmetic['non_open']}` of `{arithmetic['required_subresults']}` (`{arithmetic['non_open_fraction']:.1%}`), while the remaining closure gap is `open_gap={arithmetic['open_gap']}`. This is a reporting metric only and does not promote lane evidence to Core.",
             f"- The `{arithmetic['open']}` open subresults are controlled by `{arithmetic['root_input_packages']}` root input packages, so the next work is evidence acquisition/derivation, not indefinite reruns.",
-            f"- Named core handoff count: {arithmetic['core_handoff_ready']}; this does not promote Full Topic 13 while any subresult or root input package remains open.",
+            f"- Legacy matrix named causal handoff count: {arithmetic['core_handoff_ready']}; do not use this count instead of the separate O(2)/He-4 composition track.",
             "",
             "ROOT_INPUT_PACKAGES:",
             "| Package | Status | Open subresults | Missing acceptance fields |",
@@ -289,10 +321,12 @@ def render_markdown(payload: dict[str, Any]) -> str:
             "- This is a field-level evidence admission contract; it does not create a source value or promote a comparator.",
             "",
             "DEPENDENCY_UNLOCKED:",
-            "- Causal named branch only. Full Topic 13, curved 3+1, Gravity, and constitutive transport remain locked.",
+            f"- O(2)/He-4: {payload['closure_tracks']['o2_he4_core_ready']['dependency_unlocked']}",
+            "- Graphite validation remains open; curved 3+1 and downstream acceptance require their own gates. This report grants no new unlock.",
             "",
             "STATUS:",
             f"- `{status['full_topic_status']}`; `claim_promotion={str(status['claim_promotion']).lower()}`; `full_core_unlock={str(status['full_core_unlock']).lower()}`.",
+            f"- Status scope: {status['full_topic_status_scope']}; unlock scope: {status['full_core_unlock_scope']}.",
             "",
             "WHAT_CHANGED:",
             "- Added package-level closure arithmetic and blocker ownership to the generated dashboard; no equation, threshold, source role, or claim status was changed.",
@@ -304,13 +338,14 @@ def render_markdown(payload: dict[str, Any]) -> str:
             "- `alpha_Phi_K = (e0 / c_v) * s_material` only after an independent base-Phi map and SI anchor are accepted.",
             "",
             "VERIFICATION:",
-            f"- Holdout policy: `{payload['holdout_policy']}`.",
+            f"- Historical process holdout policy: `{payload['holdout_policy']}`.",
+            f"- Later agent-context exposure: `{payload['holdout_context_review']}`. Do not claim pristine blinding from historical no-access fields.",
             "- No numeric alpha, physical UET Kubo coefficient, or accepted Ding C_src payload is emitted by this report.",
             f"- Source hashes are recorded in `{OUT_JSON_REL}` for the matrix, gate, and input audit.",
             "",
             "CONTROLLING_BLOCKER:",
             f"- `{status['controlling_blocker']}`.",
-            "- The three root input packages are still blocked: Ding-compatible source/material uncertainty, base-Phi/SI/alpha/beta, and physical transport matching.",
+            "- The three legacy graphite root input packages remain blocked; this is not a statement that the He-4 lane lacks its recorded anchor/alpha/transport.",
             "",
             "NEXT_ACTION:",
             "- Obtain one authorized Ding-compatible numeric package or accepted same-regime reproduction.",

@@ -15,11 +15,11 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-NO_GO_REL = "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json"
-TELEGRAPH_REL = "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json"
-COUPLED_REL = "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json"
-SELECTION_REL = "docs/core/artifacts/t13_causal_branch_selection_audit.json"
-OUT_REL = "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json"
+NO_GO_REL = "docs/core/07_artifacts/archive/conserved_c_finite_cone_no_go_assessment.json"
+TELEGRAPH_REL = "docs/core/07_artifacts/verification/matter_space_conserved_flux_telegraph_verification.json"
+COUPLED_REL = "docs/core/07_artifacts/verification/matter_space_flux_phi_coupled_verification.json"
+SELECTION_REL = "docs/core/07_artifacts/topic13/t13_causal_branch_selection_audit.json"
+OUT_REL = "docs/core/07_artifacts/topic13/t13_causal_named_branch_core_compatibility.json"
 
 
 def load(relative: str) -> dict[str, Any]:
