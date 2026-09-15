@@ -701,4 +701,11 @@
 - Result: the live energy-response artifact is cleanly reconciled and future same-schema regeneration is guarded against provenance loss.
 - Controller narrowed: the artifact ownership/reconciliation blocker is closed; the next controller is source-locking volumetric c_v and e0 and deriving or independently calibrating the base Phi-to-Phi_E map without target residuals or holdout access.
 - Claim impact: no physics, calibration, SI, empirical, or downstream promotion; Topic 13 remains blocked at open dimensional inputs.
-- Notes: the dimensional-bridge audit remains a separate uncommitted generated-date change; unrelated foundation, root-guidance, book, and other worktree changes remain untouched; no push or PR was made.
+- Notes: the dimensional-bridge audit remains a separate uncommitted generated-date change; unrelated foundation, root-guidance, book, and other worktree changes remain untouched; no push or PR was made.## 2026-09-15 — Wave 6v-a post-reconcile governance refresh
+
+- Scope: refresh organization/path/import/link and test-collection metadata after the approved Topic 13 artifact reconciliation.
+- Verification: migration enforcement PASS; physical migration PASS with zero duplicate targets, missing current paths, or redirect errors; standalone test collection PASS at 2,166 full / 1,340 canonical / 825 legacy with zero collection errors.
+- Result: governance artifacts now reflect the reconciled worktree and current collection state; no physics status or claim boundary changed.
+- Controller: thermal dimensional inputs remain open; the reconciled energy-response artifact is no longer blocked by generator provenance drift.
+- Next action: select the next registered thermal source-lock or migration wave only after confirming its input and owner contract.
+- Notes: dimensional-bridge generated-date change, foundation artifacts, root guidance, book changes, and other unrelated worktree changes remain untouched; no push or PR was made.
