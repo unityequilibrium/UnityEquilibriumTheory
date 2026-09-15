@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from docs.core.core_paths import canonical_existing_path  # noqa: E402
 from docs.core.uet_hyperbolic_phase_field import (  # noqa: E402
     HYPERBOLIC_PHASE_FIELD_SOURCE_ARXIV,
     HYPERBOLIC_PHASE_FIELD_SOURCE_DOI,
@@ -446,10 +447,10 @@ def build_artifacts() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any], d
         "PARTIAL_EXTERNAL_COMPARATOR" if audit_status == "PASS" else "BLOCKED"
     )
     hashes = {
-        str(CORE.relative_to(ROOT)): _sha(CORE),
-        str(SPEC.relative_to(ROOT)): _sha(SPEC),
-        str(SOURCE_RECORD.relative_to(ROOT)): _sha(SOURCE_RECORD),
-        str(DIFFUSION.relative_to(ROOT)): _sha(DIFFUSION),
+        str(CORE.relative_to(ROOT)): _sha(canonical_existing_path(CORE)),
+        str(SPEC.relative_to(ROOT)): _sha(canonical_existing_path(SPEC)),
+        str(SOURCE_RECORD.relative_to(ROOT)): _sha(canonical_existing_path(SOURCE_RECORD)),
+        str(DIFFUSION.relative_to(ROOT)): _sha(canonical_existing_path(DIFFUSION)),
     }
     verification = {
         "schema_version": "1.0",
