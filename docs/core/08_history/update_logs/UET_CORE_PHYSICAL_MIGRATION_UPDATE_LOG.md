@@ -639,3 +639,16 @@
 - Next controller: classify the next registered family from dependency evidence; keep generated-artifact mass migration behind its separate generator/consumer/provenance checkpoint.
 - Claim impact: no change; this pass changes only migration metadata and audit state.
 - Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
+## 2026-09-15 — Core physical migration v3 — Wave 6v thermal dimensional/energy-response family
+
+- Scope: canonical source migration for the conditional dimensional thermal bridge and named Phi_E energy-response branch; organization, export, compatibility, and dependency-path repair only.
+- Moved: thermal_dimensional_bridge.py and thermal_energy_response_bridge.py into docs/core/03_lanes/thermal/.
+- Added: thermal package exports, root compatibility shims, and canonical migration regression coverage.
+- Verification: targeted bridge/migration tests PASS (14); dimensional contract audit PASS_CONDITIONAL_FORMULA_OPEN_INPUTS; energy-response audit PASS_NAMED_BRANCH_OPEN_INPUTS; core physical/path/migration-enforcement/import/link audits PASS; test collection 2,164 full / 1,338 canonical / 825 legacy with zero collection errors.
+- Result: conditional Phi-to-kelvin and named Phi_E energy-density mappings now have one canonical implementation path while their external inputs, calibration, and uncertainty requirements remain explicit.
+- Blocker narrowed: the migration preserves the distinction between base Phi and Phi_E and does not invent material values, source calibration, or a universal dimensional map.
+- Still open: source-locked a_Phi(T), e0, c_v, equilibrium reference, independent calibration/uncertainty, external data and holdout, and the wider foundation remains BLOCKED.
+- Controller: commit this scoped thermal move, refresh post-commit metadata, then classify the next registered family; generated-artifact mass migration remains behind its separate generator/consumer/provenance controller.
+- Claim impact: no change; this wave changes organization, exports, compatibility, and lane metadata only. No SI thermal prediction, base-Phi identity, mass, carrier, gravity, cosmology, galaxy, or particle claim was promoted.
+- Artifact boundary: the two topic13 bridge audit outputs regenerated during this check were not included because the current runner rewrote prior provenance detail outside migration scope; their worktree changes remain uncommitted for separate review.
+- Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
