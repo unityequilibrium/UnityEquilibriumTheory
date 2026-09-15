@@ -129,6 +129,8 @@ def _python_area(stem: str) -> str:
         return "03_lanes/review"
     if lower == "uet_observables":
         return "03_lanes/review"
+    if lower == "matter_interaction_forward":
+        return "03_lanes/mass_density"
     if lower.startswith("mass_density"):
         return "03_lanes/mass_density"
     if lower.startswith(("uet_quantum_", "quantum_")):

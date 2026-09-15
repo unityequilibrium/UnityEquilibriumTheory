@@ -24,3 +24,6 @@ The former root modules remain compatibility shims while consumers migrate to
 this package.  Organization migration does not promote `C` to universal mass,
 does not create a galaxy prediction, and does not change the existing blocked
 foundation boundary.
+
+- matter_interaction_forward.py — forward comparator that keeps independent
+  source mass/density amplitude separate from the geometry-only relational C.
