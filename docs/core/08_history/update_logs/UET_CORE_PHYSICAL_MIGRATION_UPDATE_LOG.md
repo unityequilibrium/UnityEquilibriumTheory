@@ -726,3 +726,12 @@
 - Next action: continue with a registered thermal source-lock or migration wave only; do not treat organization status as physics verification.
 - Claim impact: no equation meaning, units, calibration, evidence class, or claim boundary changed.
 - Notes: dimensional audit, foundation artifacts, root guidance, book changes, and the three unrelated dirty sources remain untouched; no push or PR was made.
+## 2026-09-15 — Wave 6x O(2) extended equation-family migration
+
+- Scope: physically migrate the root-level O(2) extended implementation family into `docs/core/02_equations/o2/` while retaining legacy root imports as compatibility shims.
+- Changed: moved 86 O(2) response, Kubo, Schwinger–Keldysh, renormalization, and identifiability modules; added reusable family-migration tooling with hash, collision, dirty-source, and relative-import preflight; recorded the complete move set in governance history.
+- Verification: preflight PASS with 86 selected files, no dirty source, relative-import block, target conflict, or collision; source hashes match after migration; 87 root-shim and 87 canonical imports PASS; core path/import audits PASS; equation tests 42/42 PASS; O(2) regression tests 136/136 PASS.
+- Result: the O(2) family has one canonical implementation location. Root `uet_o2_*.py` paths remain compatible but are no longer implementation sources.
+- Controller narrowed: the next Python-family work is the 38 remaining equation/lane modules. Families with relative imports require explicit canonical-import repair before moving; generated artifacts, tests, and tooling remain separate migration tracks.
+- Claim impact: no formula, unit, evidence class, calibration, or physical claim changed; foundation remains BLOCKED.
+- Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
