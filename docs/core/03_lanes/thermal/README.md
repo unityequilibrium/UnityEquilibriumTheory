@@ -22,3 +22,6 @@ status, parameter provenance, or physics claim boundary.
 
 - thermal_observable_bridge.py — normalized C-to-temperature proxy with Fourier/Cattaneo controls; the gain remains an open mapping coefficient.
 - thermal_source_observable_map.py — TTG observable definitions and an explicit Phi-to-kelvin calibration contract; open calibration returns no physical temperature.
+
+- thermal_dimensional_bridge.py — conditional local-equilibrium Phi-to-kelvin bridge with explicit dimensional inputs; it is not a source-free calibration.
+- thermal_energy_response_bridge.py — named Phi_E energy-density response branch with heat-capacity conversion and uncertainty requirements; Phi_E is not the base Phi.
