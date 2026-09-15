@@ -484,3 +484,17 @@
 - Claim impact: no change; this pass changes only migration metadata and audit state.
 - Workflow linkage: closes the post-commit checkpoint required by Core Physical Migration v3 and the shared hardening/update-log standard.
 - Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
+## 2026-09-15 — Core physical migration v3 — Wave 6p mass-density support family
+
+- Scope: canonical source migration for the candidate C-to-mass-density correspondence, explicit amplitude contract, synthetic SI 1D conversion, and synthetic SI 3D measurement operator; organization and dependency-path repair only.
+- Moved: mass_density_correspondence.py, mass_density_amplitude.py, mass_density_dimensional.py, and mass_density_3d.py into docs/core/03_lanes/mass_density/.
+- Added: mass-density lane README/exports, four root compatibility shims, and canonical migration regression coverage.
+- Repaired: canonical modules now use the still-rooted relational baseline through its compatibility facade, preserving the existing public class identity while that dependent carrier/observer baseline remains unmigrated.
+- Verification: mass-density/canonical migration and existing lane tests PASS (23); normalized correspondence, amplitude, SI 1D, SI 3D, and source-package audits PASS with their declared blocked statuses; physical migration, path, migration-enforcement, import, link, and test-collection audits PASS; post-move collection reports 2,149 full / 1,323 canonical / 825 legacy tests with zero collection errors.
+- Result: the constructive diagnostic still gives identical geometry-only C with a 2x density-amplitude change; explicit source amplitude and SI scales close only synthetic operator contracts. Planner reports 1,828 indexed files, 1,112 active move targets, 716 canonical/protected records, 210 compatibility assets, and zero duplicate targets or destination conflicts before the commit checkpoint.
+- Blocker narrowed: mass-density support now has one canonical lane path and the direct C-to-rho amplitude identity remains explicitly blocked rather than hidden inside a helper.
+- Still open: C is not universal mass; normalized shape and synthetic SI operators are not galaxy measurements; Gaia source identity is metadata-only without a local raw archive, selection/mass calibration, propagated uncertainty, or holdout; foundation remains BLOCKED.
+- Controller: commit this scoped mass-density move, refresh post-commit metadata, then classify the next registered family; generated-artifact mass migration remains behind its separate generator/consumer/provenance controller.
+- Claim impact: no change; this wave changes organization, compatibility, dependency imports, and lane metadata only. No mass, galaxy, gravity, cosmology, or downstream claim was promoted.
+- Workflow linkage: follows the Core Physical Migration v3 canonical-path, compatibility-shim, and generated-artifact provenance policy.
+- Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
