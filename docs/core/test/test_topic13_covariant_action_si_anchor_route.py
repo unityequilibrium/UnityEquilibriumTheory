@@ -1,12 +1,13 @@
 """Regression checks for the conditional natural-unit action route."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 ARTIFACT = ROOT / "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json"
 
 

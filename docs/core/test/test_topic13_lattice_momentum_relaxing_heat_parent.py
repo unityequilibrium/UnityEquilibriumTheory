@@ -1,4 +1,5 @@
 """Regression tests for the Topic 13 lattice heat parent."""
+from docs.core.core_paths import repo_root
 import hashlib
 import json
 from pathlib import Path
@@ -88,7 +89,7 @@ def test_no_fit_holdout_or_uet_mapping_is_emitted():
 
 
 def test_generated_artifact_and_registry_are_strict_and_hash_linked():
-    root = Path(__file__).resolve().parents[3]
+    root = repo_root()
     artifact_path = root / "docs/core/artifacts/t13_lattice_momentum_relaxing_heat_parent_audit.json"
     registry_path = root / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_lattice_heat_parent_addendum.json"
     artifact = json.loads(artifact_path.read_text(encoding="utf-8"))

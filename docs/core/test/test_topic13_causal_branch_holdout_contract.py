@@ -1,12 +1,13 @@
 """Ensure the causal-branch major result has explicit holdout fields."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 ARTIFACT = ROOT / "docs/core/artifacts/t13_causal_branch_selection_audit.json"
 
 

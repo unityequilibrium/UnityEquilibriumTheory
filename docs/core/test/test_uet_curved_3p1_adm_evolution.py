@@ -1,6 +1,7 @@
 """Tests for the ADM RHS and fixed-gauge hyperbolicity no-go wave."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import hashlib
 import json
@@ -19,7 +20,7 @@ from docs.core.uet_curved_3p1_adm_evolution import (
 from docs.scripts.audit.audit_uet_curved_3p1_adm_evolution import build_artifacts
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 ARTIFACTS = ROOT / "docs/core/artifacts"
 
 

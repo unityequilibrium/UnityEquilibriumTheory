@@ -1,10 +1,11 @@
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 AUDIT = ROOT / "docs/core/artifacts/t13_csrc_source_route_priority_audit.json"
 MATRIX = ROOT / "docs/core/artifacts/t13_topic13_closure_matrix.json"
 REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"

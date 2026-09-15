@@ -1,11 +1,12 @@
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import hashlib
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 PDF = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/huang_2022_utokyo_graphite_ribbons_thesis.pdf"
 PACKAGE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/huang_2022_utokyo_graphite_ribbons_source_package.json"
 AUDIT = ROOT / "docs/core/artifacts/t13_huang_2022_utokyo_graphite_ribbons_boundary_audit.json"

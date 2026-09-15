@@ -1,9 +1,10 @@
+from docs.core.core_paths import repo_root
 import hashlib
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 ARTIFACT = ROOT / "docs/core/artifacts/t13_nims_mp990448_phonon_source_boundary_audit.json"
 PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"

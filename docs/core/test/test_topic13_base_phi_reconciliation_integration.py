@@ -1,10 +1,11 @@
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 INPUT_AUDIT = ROOT / "docs/core/artifacts/t13_closure_input_package_audit.json"
 RECONCILIATION = "docs/core/artifacts/t13_base_phi_si_reconciliation_audit.json"
 

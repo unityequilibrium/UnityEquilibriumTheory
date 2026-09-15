@@ -1,12 +1,13 @@
 """Tests for the explicit deferred particle-program boundary."""
 
 from __future__ import annotations
+from docs.core.core_paths import core_root
 
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = core_root()
 
 
 def test_particle_program_is_explicitly_deferred_without_particle_claims() -> None:

@@ -1,13 +1,14 @@
 """Artifact alignment tests for the causal non-closed kernel wave."""
 
 from __future__ import annotations
+from docs.core.core_paths import CANONICAL_ARTIFACT_ROOT
 
 import json
 from pathlib import Path
 
 from docs.scripts.audit.audit_uet_gr_causal_nonclosed import build_artifacts
 
-ARTIFACT_DIR = Path(__file__).resolve().parents[1] / "artifacts"
+ARTIFACT_DIR = CANONICAL_ARTIFACT_ROOT
 
 
 def _read(name: str) -> dict[str, object]:

@@ -1,4 +1,5 @@
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 from pathlib import Path
@@ -8,7 +9,7 @@ from docs.core.uet_o2_regularized_continuum_heat_current import (
 )
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 ARTIFACT = ROOT / "docs/core/artifacts/t13_uet_o2_regularized_continuum_heat_current_audit.json"
 
 

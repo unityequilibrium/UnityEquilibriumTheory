@@ -1,6 +1,7 @@
 """Integration tests for the Topic 13 formal thermodynamic bridge."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 from pathlib import Path
@@ -10,7 +11,7 @@ from docs.core.t13_formal_thermodynamic_bridge_integration import (
 )
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 ARTIFACT = ROOT / "docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json"
 DEPENDENCY = ROOT / "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
 FULL_GATE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"

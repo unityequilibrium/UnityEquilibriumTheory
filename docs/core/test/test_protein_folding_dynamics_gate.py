@@ -1,13 +1,14 @@
 """Regression checks for the protein-folding dynamics Wave-0 gate."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import importlib.util
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 TOPIC = ROOT / "docs" / "topics" / "0.22_Biophysics_Origin_of_Life"
 SCRIPT = TOPIC / "Code" / "03_Research" / "Research_Protein_Folding_Dynamics_Gate.py"
 

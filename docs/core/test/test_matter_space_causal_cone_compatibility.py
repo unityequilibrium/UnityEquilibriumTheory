@@ -1,15 +1,14 @@
 """Tests for the changing-C response-cone compatibility audit."""
 
 from __future__ import annotations
+from docs.core.core_paths import canonical_artifact_path
 
 import json
 from pathlib import Path
 
 
 ARTIFACT = (
-    Path(__file__).resolve().parents[1]
-    / "artifacts"
-    / "matter_space_causal_cone_compatibility.json"
+    canonical_artifact_path("matter_space_causal_cone_compatibility.json")
 )
 
 

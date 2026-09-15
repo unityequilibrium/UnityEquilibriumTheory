@@ -1,6 +1,7 @@
 """Regression checks for the named Topic 13 collective-response EOS lane."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 from pathlib import Path
@@ -13,7 +14,7 @@ from docs.core.thermal_collective_response_eos import (
 from docs.core.thermal_response_beta_contract import ThermalResponseBetaInputs
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 ARTIFACT = ROOT / "docs/core/artifacts/t13_collective_response_eos_stability_audit.json"
 
 

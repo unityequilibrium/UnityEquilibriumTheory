@@ -763,4 +763,10 @@
 - Changed: moved 4 audit helpers to docs/scripts/core/audit/, 4 engines/runners to docs/scripts/core/runners/, 2 data/reference helpers to docs/scripts/core/data/, uet_parameters.py to docs/core/01_contracts/units/, and uet_viz.py to docs/scripts/core/reporting/; retained root compatibility shims.
 - Verification: source hashes preserved; legacy/canonical support imports 12/12; core import audit 181/181; path and migration audits PASS.
 - Result: no non-shim root support implementation remains; organization metadata records the tooling namespace separately from physics equations.
-- Claim impact: organization only; no physics status or claim boundary changed.
+- Claim impact: organization only; no physics status or claim boundary changed.## 2026-09-15 — Wave 6zb core-test path repair
+
+- Scope: repair legacy `docs/core/test` path calculations before physical relocation; repository and artifact locations now resolve through shared path helpers rather than file-depth assumptions.
+- Changed: 285 test sources received path-only rewrites; no assertions, scientific formulas, evidence classes, or claim wording were changed. Added `repair_uet_core_test_paths_v3.py` and its machine-readable repair artifact.
+- Verification: repair PASS; all 295 Python files under the remaining test surface parse successfully. The migration planner still held repaired sources behind its dirty-source guard until this packet is committed.
+- Controller: test migration remains the next organization controller; package-boundary, parameter-engine, and sandbox files require explicit disposition after the repaired bulk is moved.
+- Claim impact: none; organization/path compatibility only. Foundation and physics evidence statuses are unchanged.

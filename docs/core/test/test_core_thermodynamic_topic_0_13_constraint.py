@@ -1,13 +1,14 @@
 """Regression tests for the Topic 0.13 core constraint-export gate."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import importlib.util
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 SCRIPT = (
     ROOT
     / "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research"

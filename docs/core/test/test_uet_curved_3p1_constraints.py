@@ -1,6 +1,7 @@
 """Tests for the curved 3+1 ADM constraint-interface wave."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import hashlib
 import json
@@ -20,7 +21,7 @@ from docs.core.uet_curved_3p1_constraints import (
 )
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 ARTIFACT = ROOT / "docs/core/artifacts/curved_3p1_adm_constraint_interface_audit.json"
 GATE = ROOT / "docs/core/artifacts/core_curved_3p1_parent_gate.json"
 REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"

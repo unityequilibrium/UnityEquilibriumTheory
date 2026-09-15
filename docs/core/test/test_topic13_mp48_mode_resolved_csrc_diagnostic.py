@@ -1,11 +1,12 @@
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import hashlib
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 ARTIFACT = ROOT / "docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.json"
 PAYLOAD = ROOT / "docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.npz"
 

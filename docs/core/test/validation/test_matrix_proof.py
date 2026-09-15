@@ -10,13 +10,14 @@ Test Case:
     - Mass stays stable (Energy Conservation).
     - Information accumulates (Memory/Entropy).
 """
+from docs.core.core_paths import core_root
 
 import numpy as np
 import sys
 import os
 
 # Add path to docs
-sys.path.append(os.path.join(os.path.dirname(__file__), "../.."))
+sys.path.append(str(core_root()))
 
 from docs.core.uet_matrix_engine import MatrixEvolution, create_galaxy_initial_state
 

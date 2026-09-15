@@ -1,3 +1,4 @@
+from docs.core.core_paths import repo_root
 import json
 from pathlib import Path
 
@@ -17,7 +18,7 @@ from docs.core.uet_covariant_parent import (
 from docs.core.uet_covariant_response import CovariantResponseConfig
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 ARTIFACTS = ROOT / "docs/core/artifacts"
 
 

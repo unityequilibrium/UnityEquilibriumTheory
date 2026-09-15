@@ -1,6 +1,7 @@
 """Regression tests for the source-locked Oxford TGS numeric-row lane."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 import subprocess
@@ -8,7 +9,7 @@ import sys
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 EXTRACT = ROOT / "docs/scripts/audit/extract_topic13_oxford_tgs_numeric_rows.py"
 AUDIT = ROOT / "docs/scripts/audit/audit_topic13_oxford_tgs_numeric_rows.py"
 ARTIFACT = ROOT / "docs/core/artifacts/t13_oxford_tgs_numeric_rows_audit.json"

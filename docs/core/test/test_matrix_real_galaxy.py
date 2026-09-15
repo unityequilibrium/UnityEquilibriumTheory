@@ -9,6 +9,7 @@ Steps:
 3. Evolve the Tensor State (generate Information Halo).
 4. Verify that the generated Halo matches the 'observed' missing mass trend.
 """
+from docs.core.core_paths import core_root
 
 import numpy as np
 import sys
@@ -16,7 +17,7 @@ import os
 import glob
 
 # Add path to docs
-sys.path.append(os.path.join(os.path.dirname(__file__), "../.."))
+sys.path.append(str(core_root()))
 
 from docs.core.uet_matrix_engine import MatrixEvolution, UniverseState
 

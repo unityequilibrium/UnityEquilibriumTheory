@@ -1,8 +1,9 @@
+from docs.core.core_paths import repo_root
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 ARTIFACT = ROOT / "docs/core/artifacts/matter_space_causal_reference_verification.json"
 
 

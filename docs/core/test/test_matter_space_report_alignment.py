@@ -1,6 +1,7 @@
 """Artifact-boundary tests for the post-Wave-9 report addendum."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import hashlib
 import json
@@ -16,7 +17,7 @@ from docs.scripts.audit.audit_matter_space_report_alignment import (
 )
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 
 
 def _read(path: Path) -> dict:

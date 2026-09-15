@@ -1,6 +1,7 @@
 """Tests for the named conserved finite-cone flux branch."""
 
 from __future__ import annotations
+from docs.core.core_paths import canonical_artifact_path
 
 import json
 from pathlib import Path
@@ -11,9 +12,7 @@ from docs.core.uet_matter_space_flux_telegraph import FluxTelegraphConfig
 
 
 ARTIFACT = (
-    Path(__file__).resolve().parents[1]
-    / "artifacts"
-    / "matter_space_conserved_flux_telegraph_verification.json"
+    canonical_artifact_path("matter_space_conserved_flux_telegraph_verification.json")
 )
 
 

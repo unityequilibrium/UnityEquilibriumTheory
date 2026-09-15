@@ -1,6 +1,7 @@
 """Regression tests for the Oxford TGS provenance-only lane."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 import subprocess
@@ -8,7 +9,7 @@ import sys
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 SCRIPT = ROOT / "docs/scripts/audit/audit_topic13_oxford_tgs_comparator_provenance.py"
 ARTIFACT = ROOT / "docs/core/artifacts/t13_oxford_tgs_comparator_provenance_audit.json"
 

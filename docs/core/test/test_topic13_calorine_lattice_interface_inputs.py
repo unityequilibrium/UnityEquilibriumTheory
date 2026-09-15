@@ -1,4 +1,5 @@
 """Tests for the Calorine material-lattice interface input boundary."""
+from docs.core.core_paths import repo_root
 import hashlib
 import json
 from pathlib import Path
@@ -27,7 +28,7 @@ def test_total_gamma_cannot_be_promoted_to_resistive_umklapp_rate():
 
 
 def test_generated_boundary_is_strict_scoped_and_hash_linked():
-    root = Path(__file__).resolve().parents[3]
+    root = repo_root()
     artifact_path = root / "docs/core/artifacts/t13_calorine_lattice_interface_input_boundary.json"
     registry_path = root / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_calorine_lattice_inputs_addendum.json"
     artifact = json.loads(artifact_path.read_text(encoding="utf-8"))

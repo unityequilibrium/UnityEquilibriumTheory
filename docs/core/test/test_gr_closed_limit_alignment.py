@@ -1,6 +1,7 @@
 """Artifact and source-alignment gates for the UET GR closed-limit wave."""
 
 from __future__ import annotations
+from docs.core.core_paths import CANONICAL_ARTIFACT_ROOT
 
 import json
 from pathlib import Path
@@ -12,7 +13,7 @@ from docs.core.uet_covariant_response import (
 )
 from docs.scripts.audit.audit_uet_gr_closed_limit import build_artifacts
 
-ARTIFACT_DIR = Path(__file__).resolve().parents[1] / "artifacts"
+ARTIFACT_DIR = CANONICAL_ARTIFACT_ROOT
 
 
 def _read(name: str) -> dict[str, object]:

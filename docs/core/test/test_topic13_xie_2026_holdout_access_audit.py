@@ -1,8 +1,9 @@
+from docs.core.core_paths import core_root
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = core_root()
 AUDIT_PATH = ROOT / "artifacts/t13_xie_2026_holdout_access_audit.json"
 FULL_GATE_PATH = ROOT.parent / "topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
 

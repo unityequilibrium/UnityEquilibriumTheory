@@ -1,13 +1,14 @@
 """Unit checks for the finite 2-D HP benchmark contract."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import importlib.util
 from pathlib import Path
 
 
 SCRIPT_PATH = (
-    Path(__file__).resolve().parents[2]
+    (repo_root() / "docs")
     / "topics"
     / "0.22_Biophysics_Origin_of_Life"
     / "Code"

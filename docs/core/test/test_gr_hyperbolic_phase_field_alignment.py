@@ -18,7 +18,7 @@ from docs.core.uet_hyperbolic_phase_field import (
     hyperbolic_phase_field_rhs,
 )
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 ARTIFACTS = ROOT / "docs/core/artifacts"
 SOURCE_RECORD = (
     ROOT

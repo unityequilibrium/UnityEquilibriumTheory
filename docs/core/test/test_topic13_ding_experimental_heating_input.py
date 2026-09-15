@@ -1,4 +1,5 @@
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 import math
@@ -6,7 +7,7 @@ from pathlib import Path
 
 import pytest
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "ding_2022_experimental_heating_input_source_package.json"

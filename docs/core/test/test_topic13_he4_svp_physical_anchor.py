@@ -1,4 +1,5 @@
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 import math
@@ -14,7 +15,7 @@ from docs.core.he4_svp_reference import (
 )
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 AUDIT = ROOT / "docs/core/artifacts/t13_he4_svp_physical_anchor_audit.json"
 PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"

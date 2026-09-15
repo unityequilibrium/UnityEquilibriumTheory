@@ -1,4 +1,5 @@
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 from pathlib import Path
@@ -7,7 +8,7 @@ from docs.core.he4_normal_viscosity_kubo import physical_transport_record
 from docs.core.topic13_closure_record_contract import validate_physical_transport_record
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 AUDIT = ROOT / "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json"
 
 

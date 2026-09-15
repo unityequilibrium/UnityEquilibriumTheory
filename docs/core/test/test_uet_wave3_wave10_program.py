@@ -1,12 +1,13 @@
 """Dependency and claim-boundary tests for the Wave 3--10 program artifact."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 ARTIFACT = ROOT / "docs/core/artifacts/uet_wave3_wave10_research_program.json"
 
 

@@ -1,6 +1,7 @@
 """Regression gates for legacy covariance and conservation claim quarantine."""
 
 from __future__ import annotations
+from docs.core.core_paths import core_root
 
 import json
 from pathlib import Path
@@ -10,7 +11,7 @@ from docs.core.uet_noether import LEGACY_NOETHER_EVIDENCE_STATUS
 from docs.scripts.audit.audit_uet_gr_legacy_alignment import build_gate
 
 
-CORE_DIR = Path(__file__).resolve().parents[1]
+CORE_DIR = core_root()
 
 
 def test_legacy_modules_export_blocked_evidence_status() -> None:

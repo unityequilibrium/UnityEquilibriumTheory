@@ -1,11 +1,12 @@
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import hashlib
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "ding_2022_pbte_energy_temperature_source_package.json"

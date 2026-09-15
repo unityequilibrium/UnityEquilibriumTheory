@@ -1,4 +1,5 @@
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 from pathlib import Path
@@ -12,7 +13,7 @@ from docs.core.thermal_covariant_action_si_conversion import (
 )
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 CONSTANTS_REL = "docs/data/external/constants/codata/si_2019_exact_constants.json"
 AUDIT_REL = "docs/core/artifacts/t13_covariant_action_symbolic_si_conversion_audit.json"
 

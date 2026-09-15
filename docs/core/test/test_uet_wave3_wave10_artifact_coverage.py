@@ -8,7 +8,7 @@ from pathlib import Path
 from docs.core.core_paths import canonical_artifact_path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 PROGRAM = ROOT / "docs/core/artifacts/uet_wave3_wave10_research_program.json"
 
 

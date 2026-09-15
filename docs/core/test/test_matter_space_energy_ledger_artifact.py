@@ -1,13 +1,14 @@
 """Schema and claim-boundary checks for the focused matter-space ledger artifact."""
 
 from __future__ import annotations
+from docs.core.core_paths import canonical_artifact_path
 
 import json
 from pathlib import Path
 
 
 def test_energy_ledger_artifact_keeps_normalized_and_blocked_boundaries() -> None:
-    path = Path(__file__).resolve().parents[1] / "artifacts" / "matter_space_energy_ledger_verification.json"
+    path = canonical_artifact_path("matter_space_energy_ledger_verification.json")
     artifact = json.loads(path.read_text(encoding="utf-8"))
     assert artifact["artifact"] == "matter_space_energy_ledger_verification"
     assert artifact["status"] in {"PASS", "FAIL"}

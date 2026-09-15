@@ -23,7 +23,7 @@ from docs.core.uet_noether_phase_field_map import (
     NOETHER_PHASE_FIELD_MAP_CONTROLLER,
 )
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 ARTIFACTS = ROOT / "docs/core/artifacts"
 SOURCES = [
     ROOT

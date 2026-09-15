@@ -1,6 +1,7 @@
 """Tests for the explicit thermal dimensional calibration contract."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import importlib.util
 from pathlib import Path
@@ -11,7 +12,7 @@ from docs.core.thermal_source_observable_map import (
 )
 
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = (repo_root() / "docs")
 SCRIPT = ROOT / "scripts/audit/audit_thermal_dimensional_calibration.py"
 
 

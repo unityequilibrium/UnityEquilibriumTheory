@@ -1,6 +1,7 @@
 """Cross-topic status, provenance, and claim-boundary tests for Wave 6."""
 
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import json
 from pathlib import Path
@@ -11,7 +12,7 @@ from docs.scripts.audit.audit_matter_space_research_program import (
 )
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 
 
 def _read(path: Path) -> dict:

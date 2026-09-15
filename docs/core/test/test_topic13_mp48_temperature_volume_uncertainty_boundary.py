@@ -1,11 +1,12 @@
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import hashlib
 import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 PACKAGE_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/mp48_independent_graphite_cv_source_package.json"
 AUDIT_REL = "docs/core/artifacts/t13_mp48_temperature_volume_uncertainty_boundary_audit.json"
 FULL_REL = "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"

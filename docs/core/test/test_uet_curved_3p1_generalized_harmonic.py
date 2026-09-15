@@ -1,4 +1,5 @@
 from __future__ import annotations
+from docs.core.core_paths import repo_root
 
 import hashlib
 import json
@@ -21,7 +22,7 @@ from docs.core.uet_curved_3p1_generalized_harmonic import (
 from docs.core.uet_curved_3p1_geometry import periodic_central_derivative
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = repo_root()
 VERIFY = ROOT / "docs/core/artifacts/curved_3p1_gh_principal_system_verification.json"
 FORMULA = ROOT / "docs/core/artifacts/curved_3p1_gh_principal_system_formula_audit.json"
 GATE = ROOT / "docs/core/artifacts/curved_3p1_gh_branch_gate.json"
