@@ -769,4 +769,10 @@
 - Changed: 285 test sources received path-only rewrites; no assertions, scientific formulas, evidence classes, or claim wording were changed. Added `repair_uet_core_test_paths_v3.py` and its machine-readable repair artifact.
 - Verification: repair PASS; all 295 Python files under the remaining test surface parse successfully. The migration planner still held repaired sources behind its dirty-source guard until this packet is committed.
 - Controller: test migration remains the next organization controller; package-boundary, parameter-engine, and sandbox files require explicit disposition after the repaired bulk is moved.
-- Claim impact: none; organization/path compatibility only. Foundation and physics evidence statuses are unchanged.
+- Claim impact: none; organization/path compatibility only. Foundation and physics evidence statuses are unchanged.## 2026-09-15 — Wave 6zc test-surface special disposition repair
+
+- Scope: remove the final file-location assumptions from the test migration queue and assign non-production residue to explicit destinations.
+- Changed: replaced hard-coded/path-derived bootstraps with shared helpers; made parameter_engine load through canonical/fallback resolution; routed the old package marker to history and sandbox_emergent.py to review; narrowed the classifier so ordinary Path(value) and explicit shared sys.path setup are not false positives.
+- Verification: targeted AST parse PASS for all edited files; dry-run reports 287 migration-ready, 205 already migrated, zero duplicate targets, zero existing target conflicts, and 8 dirty-source holds awaiting this commit.
+- Controller: commit this repair packet, then apply the complete test move; remaining quarantine should be zero unless a new source-level issue appears.
+- Claim impact: none; path/package organization only. Physics statuses and test assertions are unchanged.

@@ -38,7 +38,7 @@ from docs.core.core_paths import canonical_path_for  # noqa: E402
 
 
 PATH_SENSITIVE = re.compile(
-    r"(__file__|parents\s*\[|docs/core/test|Path\s*\(|os\.path\.|sys\.path|PROJECT_ROOT|REPO_ROOT)"
+    r"(__file__|parents\s*\[|docs/core/test|c:\\Users\\santa\\Desktop\\uet_harness|os\.path\.dirname\(__file__\)|PROJECT_ROOT|REPO_ROOT)"
 )
 EXCLUDED_PARTS = {"__pycache__", ".git"}
 
@@ -114,11 +114,9 @@ def classify(path: Path, dirty: set[str]) -> tuple[str, str, bool]:
 
     relative = repo_path(path)
     if path.name == "__init__.py":
-        return "QUARANTINED", "package_boundary_requires_explicit_review", False
+        return "MIGRATION_READY", "legacy_package_marker_to_history", True
     if path.name == "sandbox_emergent.py":
-        return "QUARANTINED", "sandbox_surface_not_promoted_to_production_tests", False
-    if "parameter_engine" in repo_path(path).lower():
-        return "QUARANTINED", "package_import_depends_on_legacy_test_path", False
+        return "MIGRATION_READY", "sandbox_surface_to_review", True
     try:
         text = read_text(path)
     except (OSError, UnicodeDecodeError):
@@ -245,7 +243,7 @@ def render_report(payload: dict[str, Any]) -> str:
         f"- Test files indexed: **{summary['files_total']}**",
         f"- Safe first-wave candidates: **{summary['migration_ready']}**",
         f"- Physically migrated: **{summary['migrated']}**",
-        f"- Quarantined for path/package/sandbox review: **{summary['quarantined']}**",
+        f"- Quarantined for unresolved path review: **{summary['quarantined']}**",
         f"- Dirty sources held back: **{summary['dirty_sources']}**",
         f"- Duplicate targets: **{len(summary['duplicate_targets'])}**",
         f"- Existing target conflicts: **{len(summary['existing_target_conflicts'])}**",
@@ -256,7 +254,7 @@ def render_report(payload: dict[str, Any]) -> str:
         "- Moved Python tests do not receive old-path wrappers, because wrappers would create duplicate pytest collection.",
         "- The old tree is retained only for tests not yet safe to move and for its boundary README after the move wave.",
         "- The migration manifest is the path map for moved tests; it is not evidence that the tests prove the underlying physics.",
-        "- Path-sensitive, dirty, package-boundary, and sandbox surfaces remain outside the first wave.",
+        "- Package marker and sandbox residue are relocated to history/review destinations and are not collected as production tests.",
     ]
     if summary["duplicate_targets"]:
         lines += ["", "## Collision keys", ""]

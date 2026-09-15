@@ -246,6 +246,10 @@ def canonical_path_for(legacy_path: str | Path) -> str:
         else:
             area = "source_packages"
         return f"docs/core/06_data/{area}/{rest}"
+    if tail == "test/__init__.py":
+        return "docs/core/08_history/legacy/core_test_package_marker.py"
+    if tail == "test/sandbox_emergent.py":
+        return "docs/core/99_review/unresolved_assets/sandbox_emergent.py"
     if tail.startswith("test/"):
         rest = Path(tail[len("test/") :])
         role = _test_role(rest.name, str(rest))

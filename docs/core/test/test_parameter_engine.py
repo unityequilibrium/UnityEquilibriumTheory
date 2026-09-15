@@ -4,17 +4,18 @@ UET Parameter Engine Validation
 Verifies that "Self-Driving" parameters match Reality (NIST).
 """
 
-import sys
-import os
-from pathlib import Path
+import importlib.util
 
-# Path setup
-current_dir = Path(__file__).parent
-sys.path.insert(0, str(current_dir))
-core_dir = current_dir.parent
-sys.path.insert(0, str(core_dir))
+from docs.core.core_paths import canonical_existing_path
 
-from parameter_engine.engine import UETParameterEngine
+
+_ENGINE_PATH = canonical_existing_path("docs/core/test/parameter_engine/engine.py")
+_ENGINE_SPEC = importlib.util.spec_from_file_location("uet_parameter_engine_canonical", _ENGINE_PATH)
+if _ENGINE_SPEC is None or _ENGINE_SPEC.loader is None:
+    raise ImportError(f"Unable to load parameter engine from {_ENGINE_PATH}")
+_ENGINE_MODULE = importlib.util.module_from_spec(_ENGINE_SPEC)
+_ENGINE_SPEC.loader.exec_module(_ENGINE_MODULE)
+UETParameterEngine = _ENGINE_MODULE.UETParameterEngine
 
 
 def test_engine():

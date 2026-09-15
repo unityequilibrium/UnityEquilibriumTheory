@@ -22,17 +22,14 @@ This restores the "Glass Box" visibility into the engine's phase space.
 import numpy as np
 import pandas as pd
 import sys
-import os
-from pathlib import Path
+
+from docs.core.core_paths import repo_root as _repo_root
 
 
 # === SETUP: Import Core Engine ===
-current_dir = Path(__file__).resolve().parent
-repo_root = current_dir.parents[
-    2
-]  # docs/core/test -> docs/core -> docs -> root
-if str(repo_root) not in sys.path:
-    sys.path.insert(0, str(repo_root))
+REPO_ROOT = _repo_root()
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
 from docs.core.uet_master_equation import UETParameters, UETMasterEquation
 
@@ -44,7 +41,7 @@ GAMMA_J_RANGE = np.linspace(
 STEPS = 500  # Enough to see divergence
 DT = 0.01
 
-OUTPUT_FILE = repo_root / "Data" / "03_Research" / "UET_V3_Parameter_Matrix.csv"
+OUTPUT_FILE = REPO_ROOT / "Data" / "03_Research" / "UET_V3_Parameter_Matrix.csv"
 
 
 def run_single_experiment(beta, gamma_J):

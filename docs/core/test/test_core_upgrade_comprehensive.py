@@ -7,10 +7,11 @@ Validates new A13 (Inertia) and A14 (Viscosity) axioms in the Master Equation.
 import numpy as np
 import unittest
 import sys
-import os
+
+from docs.core.core_paths import repo_root
 
 # Add the project root to sys.path to ensure we use the local files, not installed packages
-sys.path.insert(0, r"c:\Users\santa\Desktop\uet_harness")
+sys.path.insert(0, str(repo_root()))
 
 from docs.core.uet_parameters import UETParameters
 from docs.core.uet_master_equation import dynamics_step_complete, UETMasterEquation
