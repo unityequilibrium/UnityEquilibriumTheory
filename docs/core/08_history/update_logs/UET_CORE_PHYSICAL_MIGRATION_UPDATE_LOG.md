@@ -429,3 +429,18 @@
 - Claim impact: no change; this pass changes only migration metadata and audit state.
 - Workflow linkage: closes the post-commit checkpoint required by Core Physical Migration v3 and the shared hardening/update-log standard.
 - Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
+
+## 2026-09-15 — Core physical migration v3 — Wave 6n operational quantum and interpretation lane
+
+- Scope: canonical source migration for the operational quantum-measurement baseline and prediction-invariant QBism/RQM adapters; organization and provenance-path repair only.
+- Moved: uet_quantum_measurement.py and uet_quantum_interpretations.py into docs/core/03_lanes/carrier_observer/.
+- Added: carrier-observer lane README/exports, two root compatibility shims, and canonical migration regression coverage.
+- Repaired: the classifier now explicitly recognizes uet_quantum_* sources as carrier-observer lane files; the two existing quantum audit generators now emit canonical implementation paths in their correspondence addenda.
+- Verification: quantum measurement/interpretation/canonical-migration tests PASS (10); measurement and interpretation audits PASS with statuses PASS_OPERATIONAL_QM_BASELINE_ONLY and PASS_PREDICTION_INVARIANT_ADAPTERS; physical migration, path, migration-enforcement, import, link, and test-collection audits PASS (181 modules, 255 links, 2,145 full / 1,319 canonical / 825 legacy tests, zero collection errors).
+- Result: an initial path audit exposed two stale unassigned targets; the explicit classifier repair reduced that failure to PASS. After repair, duplicate targets, destination conflicts, missing paths, broken redirects, import failures, broken links, and collection errors are all 0; physics status changes remain 0.
+- Blocker narrowed: the operational quantum pair now has one canonical carrier-observer lane path while legacy core imports and artifact labels remain compatible.
+- Still open: this lane is a standard operational-QM interface and interpretation comparison only; it does not derive quantum mechanics from UET, add dynamics, establish detector calibration, or unlock particle claims; foundation remains BLOCKED.
+- Controller: commit this scoped quantum lane move, refresh post-commit metadata, then classify the next registered family from dependency evidence; planner reports 1,815 indexed files and 1,119 active move targets before the commit checkpoint.
+- Claim impact: no change; this wave changes organization, compatibility, classifier metadata, and generated correspondence-path fields only. QBism/RQM remain interpretation adapters and no quantum, particle, GR, or downstream claim was promoted.
+- Workflow linkage: follows the Core Physical Migration v3 canonical-path, compatibility-shim, and generated-artifact provenance policy.
+- Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.

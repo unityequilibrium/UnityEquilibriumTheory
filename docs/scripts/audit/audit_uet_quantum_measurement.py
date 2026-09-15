@@ -13,6 +13,9 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from docs.core.core_paths import canonical_existing_path  # noqa: E402
+QUANTUM_MEASUREMENT_SOURCE = canonical_existing_path(ROOT / ("docs/core/" + "uet_quantum_measurement.py")).relative_to(ROOT).as_posix()
+
 from docs.core.uet_quantum_measurement import (
     DensityOperator, MeasurementContext, QuantumChannel, QuantumInstrument,
     apply_quantum_channel, born_probabilities, expectation,
@@ -91,7 +94,7 @@ def build_artifacts() -> tuple[dict, dict, dict]:
         "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json", "status": "CANDIDATE_ENTRY_PENDING_MERGE",
         "equation_entries": [{
             "equation_id": "uet.main_theory.operational_quantum_measurement", "version": "operational-qm-v1",
-            "classification": "standard_physics_interface", "relation_or_code_path": "docs/core/uet_quantum_measurement.py",
+            "classification": "standard_physics_interface", "relation_or_code_path": QUANTUM_MEASUREMENT_SOURCE,
             "variables": {"rho": "density operator", "E_o": "POVM effect", "K_r": "channel/instrument Kraus operator", "p(o)": "Born probability", "R_obs": "observer outcome record"},
             "mathematical_role": "preparation-channel-instrument-outcome interface",
             "standard_physics_counterpart": "finite-dimensional operational quantum mechanics",
@@ -101,7 +104,7 @@ def build_artifacts() -> tuple[dict, dict, dict]:
             "assumptions": ["Born rule", "CPTP channels", "positive complete POVMs", "declared detector interaction"],
             "symmetry_and_conservation": "trace preservation, positivity, and no-signalling baseline",
             "limiting_cases": ["identity channel preserves preparation", "projective instrument is a POVM special case"],
-            "implementation_paths": ["docs/core/uet_quantum_measurement.py"],
+            "implementation_paths": [QUANTUM_MEASUREMENT_SOURCE],
             "verifier_paths": ["docs/scripts/audit/audit_uet_quantum_measurement.py", "docs/core/artifacts/quantum_measurement_verification.json", "docs/core/test/test_uet_quantum_measurement.py"],
             "evidence_class": "STANDARD_THEORY_REPRODUCTION", "proof_status": "finite-dimensional baseline tests pass",
             "downstream_dependencies": ["uet.main_theory.quantum_interpretations", "uet.main_theory.detector_observables"],
