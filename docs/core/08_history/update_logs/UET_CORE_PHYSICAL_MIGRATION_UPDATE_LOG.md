@@ -629,3 +629,13 @@
 - Controller: commit this scoped thermal move, refresh post-commit metadata, then classify the next registered family; generated-artifact mass migration remains behind its separate generator/consumer/provenance controller.
 - Claim impact: no change; this wave changes organization, exports, compatibility, and lane metadata only. No temperature, heat, mass, carrier, gravity, cosmology, galaxy, or particle claim was promoted.
 - Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
+## 2026-09-15 — Wave 6u post-commit metadata consistency correction
+
+- Scope: post-commit synchronization after 64a4777f9.
+- Corrected: regenerated the migration plan/report, physical migration manifest, governance audits, and test-collection artifact after the thermal observable pair move; committed thermal sources are no longer counted as dirty.
+- Verification: physical migration, canonical path, migration enforcement, import, link, and test-collection audits PASS; canonical imports 181/181; links 255/255; test collection 2,161 full / 1,335 canonical / 825 legacy / 2,160 excluding the quarantined parameter-engine test, with zero collection errors.
+- Result: planner reports 1,844 indexed files, 1,103 active move targets, 741 canonical/protected records, 219 compatibility assets, 6 remaining dirty sources from unrelated work, zero duplicate targets, zero existing destination conflicts, and zero physics-status changes.
+- Blocker narrowed: thermal observable organization and metadata now agree after commit; normalized TTG remains definition-only and the Phi-to-kelvin, heat-flux, entropy, external-data, and holdout gates remain blocked.
+- Next controller: classify the next registered family from dependency evidence; keep generated-artifact mass migration behind its separate generator/consumer/provenance checkpoint.
+- Claim impact: no change; this pass changes only migration metadata and audit state.
+- Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.

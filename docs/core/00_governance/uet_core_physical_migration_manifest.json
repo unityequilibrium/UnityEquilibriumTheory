@@ -1,6 +1,6 @@
 {
   "canonical_path_authority": "docs/core/core_paths.py",
-  "generated_at": "2026-09-15T03:54:17+00:00",
+  "generated_at": "2026-09-15T03:59:04+00:00",
   "generator": "docs/scripts/audit/plan_uet_core_physical_migration.py",
   "migration_id": "UET-CORE-PHYSICAL-MIGRATION-V3",
   "physical_move_performed": false,
@@ -354,7 +354,7 @@
       "collision_key": "docs/core/00_governance/uet_core_imports_audit.json",
       "compatibility_mode": "none",
       "current_path": "docs/core/00_governance/uet_core_imports_audit.json",
-      "dirty_source": false,
+      "dirty_source": true,
       "downstream_dependencies": [
         "FOUNDATION",
         "DATA"
@@ -375,7 +375,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_imports_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "0b02b57b1764ead007f93f60801e7429bf723934025ecb1661edea3555e35d87",
+      "sha256_before": "e09247decaffa1c5644511cd7d3d6bdcb6dd2ad1ec481b1a8ec1cdca05d901b6",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -387,7 +387,7 @@
       "collision_key": "docs/core/00_governance/uet_core_links_audit.json",
       "compatibility_mode": "none",
       "current_path": "docs/core/00_governance/uet_core_links_audit.json",
-      "dirty_source": false,
+      "dirty_source": true,
       "downstream_dependencies": [
         "FOUNDATION",
         "DATA"
@@ -408,7 +408,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_links_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "3ce24b499e0d8820a6b483d204a46ff43ef3dc0c37858a8d55a4514d9669f580",
+      "sha256_before": "c9d157a9752c859fd4dbcd030fdd1b17ebf301cc9f14dc15d6fbe694f270482a",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -441,7 +441,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_migration_enforcement_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "6ccc7c990539e606b3bf5da25acb089e535adeb618df131c4fef216bb2407b8d",
+      "sha256_before": "150e837721167d96a8eed9c48efb4a1a52b3474484f15d0d7a86a991d1bb7bc1",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -475,7 +475,7 @@
       "rollback_path": "docs/core/00_governance/UET_CORE_MIGRATION_ENFORCEMENT_REPORT.md",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_after": null,
-      "sha256_before": "223fe7f58025475bdd27f6e0c4dc7821afb74e3481e12f638e6668400b268dd1",
+      "sha256_before": "4983fa40eea981a185a31cb0b94e6b74765902b203efd8204022f382e180e425",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [
         "ORG"
@@ -489,7 +489,7 @@
       "collision_key": "docs/core/00_governance/uet_core_paths_audit.json",
       "compatibility_mode": "none",
       "current_path": "docs/core/00_governance/uet_core_paths_audit.json",
-      "dirty_source": false,
+      "dirty_source": true,
       "downstream_dependencies": [
         "FOUNDATION",
         "DATA"
@@ -510,7 +510,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_paths_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "d8801609a219659fc7d786796763a1e22b28a6fe35e91f4fd37ffb0f4fa3b11d",
+      "sha256_before": "658686765437c126d8e54ca5b9b28c977dabb0aa5fe367e3b9cac6041b20dd54",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -522,7 +522,7 @@
       "collision_key": "docs/core/00_governance/uet_core_physical_migration_audit.json",
       "compatibility_mode": "none",
       "current_path": "docs/core/00_governance/uet_core_physical_migration_audit.json",
-      "dirty_source": false,
+      "dirty_source": true,
       "downstream_dependencies": [
         "FOUNDATION",
         "DATA"
@@ -543,7 +543,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_physical_migration_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "ec3c3a1db7f372f9fc42f9a230727e7a055bb1b395dcda3299617ccdf6743f22",
+      "sha256_before": "638a170e355d2a8112dde6f97998ff1edc9f1f4cb051d8ebb94f169cfacaf937",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -576,7 +576,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "49028f6ab2afabca1611a58a5c34189df96e4f2e5f1ac563e3dde4a6bb6c7e19",
+      "sha256_before": "19ceda6f59fbd01af46d995a41ac0e88f75e276adafee908d11ea7620b8b246d",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -610,7 +610,7 @@
       "rollback_path": "docs/core/00_governance/UET_CORE_PHYSICAL_MIGRATION_REPORT.md",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_after": null,
-      "sha256_before": "165f6cb05a78da2683523ad64220a81901991c3e37af90bd4760f7946dc028c1",
+      "sha256_before": "4de1e0f0d206666055db55ac1b3390f90625fa92e27ef31a9ee0a1b647fce892",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [
         "ORG"
@@ -780,7 +780,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_test_collection_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "397c9e12f081aa0c128359d78d32381ca2d5e45b273dd8a9eae4dcf3b72ab35d",
+      "sha256_before": "3b3ddd8ab986f9ba83a4ebd94481dc5aac77c6965a2531c9225378e0356a856f",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -4403,7 +4403,7 @@
       "collision_key": "docs/core/03_lanes/thermal/__init__.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/03_lanes/thermal/__init__.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": "lane.thermal",
       "evidence_status": "INTERNAL",
@@ -4577,7 +4577,7 @@
       "collision_key": "docs/core/03_lanes/thermal/readme.md",
       "compatibility_mode": "none",
       "current_path": "docs/core/03_lanes/thermal/README.md",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": "lane.thermal",
       "evidence_status": "INTERNAL",
@@ -4609,7 +4609,7 @@
       "collision_key": "docs/core/03_lanes/thermal/thermal_observable_bridge.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/03_lanes/thermal/thermal_observable_bridge.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -4647,7 +4647,7 @@
       "collision_key": "docs/core/03_lanes/thermal/thermal_source_observable_map.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/03_lanes/thermal/thermal_source_observable_map.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -10400,7 +10400,7 @@
       "collision_key": "docs/core/05_tests/regression/root/test_thermal_observable_canonical_migration.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/05_tests/regression/root/test_thermal_observable_canonical_migration.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": "core_test_surface",
       "evidence_status": "INTERNAL",
@@ -17648,7 +17648,7 @@
       "rollback_path": "docs/core/08_history/update_logs/UET_CORE_PHYSICAL_MIGRATION_UPDATE_LOG.md",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "c04fda46c6bab53d136667e1050925afc796646ab254be2d110be96aaf44e4d4",
+      "sha256_before": "86236025853e5cad5b367e876790854df8d62526d31fdbe987324ecf65e5ad5a",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -64846,7 +64846,7 @@
       "redirect_or_shim": 219,
       "root_python_shim": 128
     },
-    "dirty_sources": 7,
+    "dirty_sources": 6,
     "duplicate_targets": {},
     "existing_target_conflicts": [],
     "files_migrated_in_wave": 0,
