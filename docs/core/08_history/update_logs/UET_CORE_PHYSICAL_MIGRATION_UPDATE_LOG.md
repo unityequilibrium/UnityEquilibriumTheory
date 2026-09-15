@@ -652,3 +652,14 @@
 - Claim impact: no change; this wave changes organization, exports, compatibility, and lane metadata only. No SI thermal prediction, base-Phi identity, mass, carrier, gravity, cosmology, galaxy, or particle claim was promoted.
 - Artifact boundary: the two topic13 bridge audit outputs regenerated during this check were not included because the current runner rewrote prior provenance detail outside migration scope; their worktree changes remain uncommitted for separate review.
 - Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
+## 2026-09-15 — Wave 6v post-commit metadata consistency correction
+
+- Scope: post-commit synchronization after 27e078f7f.
+- Corrected: regenerated the migration plan/report, physical migration manifest, governance audits, and test-collection artifact after the thermal dimensional/energy-response move; committed thermal sources are no longer counted as dirty.
+- Verification: physical migration, canonical path, migration enforcement, import, link, and test-collection audits PASS; canonical imports 181/181; links 255/255; test collection 2,164 full / 1,338 canonical / 825 legacy / 2,163 excluding the quarantined parameter-engine test, with zero collection errors.
+- Result: planner reports 1,847 indexed files, 1,101 active move targets, 746 canonical/protected records, 221 compatibility assets, 8 remaining dirty source records including the two intentionally excluded topic13 audit artifacts, zero duplicate targets, zero existing destination conflicts, and zero physics-status changes.
+- Blocker narrowed: thermal dimensional/energy-response organization and metadata now agree after commit; conditional inputs, independent calibration, source provenance, heat-flux/entropy mapping, and holdout gates remain blocked.
+- Artifact boundary: the two topic13 audit outputs remain uncommitted because the current audit runner rewrote prior provenance detail outside migration scope; they require a separate evidence-artifact review before any restore or replacement.
+- Next controller: review/fix the audit generator drift as a separate evidence task, then classify the next registered family; keep generated-artifact mass migration behind its separate generator/consumer/provenance checkpoint.
+- Claim impact: no change; this pass changes only migration metadata and audit state.
+- Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
