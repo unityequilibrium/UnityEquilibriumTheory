@@ -12,18 +12,18 @@
       "status": "PASS"
     },
     {
-      "check_id": "retained_legacy_collection_without_quarantined_test",
+      "check_id": "legacy_boundary_collection_is_expected_empty",
       "observed": "PASS",
       "status": "PASS"
     },
     {
-      "check_id": "combined_non_quarantined_collection_has_no_error",
+      "check_id": "combined_collection_has_no_collection_error",
       "observed": "PASS",
       "status": "PASS"
     },
     {
       "check_id": "full_suite_blocker_is_not_hidden",
-      "note": "A blocked full collection is expected while quarantined path-sensitive tests remain unresolved.",
+      "note": "The legacy boundary is expected to be empty after physical migration; canonical collection remains the controlling check.",
       "observed": "PASS",
       "status": "PASS"
     }
@@ -31,8 +31,9 @@
   "claim_boundary": "collection evidence only; no physics-status promotion",
   "collections": {
     "canonical_only": {
-      "collected": 1343,
+      "collected": 2169,
       "diagnostic_lines": [],
+      "empty_expected": false,
       "errors": 0,
       "label": "canonical_05_tests_only",
       "paths": [
@@ -41,16 +42,15 @@
       "returncode": 0,
       "status": "PASS"
     },
-    "excluding_quarantined_parameter_engine": {
-      "collected": 2168,
+    "combined_legacy_plus_canonical": {
+      "collected": 2169,
       "diagnostic_lines": [],
+      "empty_expected": false,
       "errors": 0,
-      "label": "excluding_quarantined_parameter_engine",
+      "label": "combined_legacy_plus_canonical",
       "paths": [
         "docs/core/test",
-        "docs/core/05_tests",
-        "--ignore",
-        "docs/core/test/test_parameter_engine.py"
+        "docs/core/05_tests"
       ],
       "returncode": 0,
       "status": "PASS"
@@ -58,6 +58,7 @@
     "full": {
       "collected": 2169,
       "diagnostic_lines": [],
+      "empty_expected": false,
       "errors": 0,
       "label": "full_legacy_plus_canonical",
       "paths": [
@@ -68,21 +69,20 @@
       "status": "PASS"
     },
     "legacy_only": {
-      "collected": 825,
+      "collected": null,
       "diagnostic_lines": [],
+      "empty_expected": true,
       "errors": 0,
-      "label": "retained_legacy_tests_without_parameter_engine",
+      "label": "retained_legacy_boundary",
       "paths": [
-        "docs/core/test",
-        "--ignore",
-        "docs/core/test/test_parameter_engine.py"
+        "docs/core/test"
       ],
-      "returncode": 0,
+      "returncode": 5,
       "status": "PASS"
     }
   },
   "controlling_blocker": null,
-  "generated_at": "2026-09-15T10:39:54+00:00",
+  "generated_at": "2026-09-15T16:28:40+00:00",
   "generator": "docs/scripts/audit/audit_uet_core_test_collection.py",
   "schema_version": "1.0",
   "scope": "docs/core/test and docs/core/05_tests",

@@ -45,7 +45,7 @@ def build() -> dict:
                 migrated_missing.append(row["canonical_path"])
             else:
                 observed = sha256(canonical)
-                expected = row.get("sha256_before")
+                expected = row.get("sha256_after") or row.get("sha256_before")
                 if expected and observed != expected:
                     migrated_hash_mismatches.append({
                         "canonical_path": row["canonical_path"],

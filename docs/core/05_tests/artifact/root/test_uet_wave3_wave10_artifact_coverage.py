@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from docs.core.core_paths import canonical_artifact_path
+from docs.core.core_paths import canonical_artifact_path, repo_root
 
 
 ROOT = repo_root()
