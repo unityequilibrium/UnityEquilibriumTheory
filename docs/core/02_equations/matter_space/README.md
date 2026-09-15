@@ -9,6 +9,9 @@ equation family:
 - uet_matter_space_flux_telegraph.py — the named conserved flux-relaxation
   comparator;
 - uet_matter_space_flux_phi.py — the named coupled flux/response comparator;
+- uet_hyperbolic_phase_field.py — an external first-order hyperbolic Cahn–Hilliard comparator;
+- uet_hyperbolic_phase_field_bridge.py — analytic fixed-cone and algebraic current-map diagnostics for that comparator;
+
 - `uet_master_equation.py` — the retained legacy master-engine facade and its
   opt-in operator dispatch.
 

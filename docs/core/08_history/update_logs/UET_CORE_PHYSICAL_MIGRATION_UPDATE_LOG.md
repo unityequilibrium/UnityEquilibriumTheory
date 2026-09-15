@@ -343,3 +343,18 @@
 - Claim impact: no change; this pass changes only metadata and audit state.
 - Workflow linkage: closes the post-commit checkpoint required by Core Physical Migration v3 and the shared hardening/update-log standard.
 - Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
+
+## 2026-09-15 — Core physical migration v3 — Wave 6k hyperbolic phase comparator
+
+- Scope: canonical source migration for the registered hyperbolic phase-field comparator and analytic bridge; organization and provenance-path repair only.
+- Moved: uet_hyperbolic_phase_field.py and uet_hyperbolic_phase_field_bridge.py into docs/core/02_equations/matter_space/.
+- Repaired: canonical classification now assigns both sources to the matter-space family; canonical relative imports, root compatibility shims, migration regression coverage, and canonical-source hashing in both hyperbolic audit generators are in place.
+- Preserved: the external first-order hyperbolic Cahn–Hilliard comparator boundary, analytic fixed-cone bridge, legacy artifact labels, and the existing blocked UET/GR mapping claims.
+- Verification: focused comparator/alignment/canonical-migration tests PASS (68); both hyperbolic audit generators regenerated their PASS artifacts; physical migration, path, migration-enforcement, import, link, and test-collection audits PASS (181 modules, 255 links, 2,142 full / 1,316 canonical / 825 legacy tests, zero collection errors).
+- Result: duplicate targets, missing paths, broken redirects, import failures, broken links, and collection errors are all 0; physics status changes remain 0.
+- Blocker narrowed: the two hyperbolic sources now have one canonical implementation path while legacy consumers and stable artifact source labels remain compatible.
+- Still open: the comparator remains external/calibration evidence with covariant UET derivation, physical validation, and full causal/foundation correspondence blocked; generated artifacts remain under the separate generator/consumer/provenance migration controller.
+- Controller: commit this scoped comparator move, refresh post-commit metadata, then classify the next registered family from dependency evidence; planner reports 1,802 indexed files and 1,123 active move targets before the commit checkpoint.
+- Claim impact: no change; this wave changes organization, imports, and provenance resolution only. Foundation remains BLOCKED; no causal, GR, mass, particle, or downstream physics claim was promoted.
+- Workflow linkage: follows the Core Physical Migration v3 canonical-path, compatibility-shim, and generated-artifact provenance policy.
+- Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.

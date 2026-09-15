@@ -7,6 +7,8 @@ import inspect
 import json
 from pathlib import Path
 
+from docs.core.core_paths import canonical_existing_path
+
 from docs.core.uet_hyperbolic_phase_field_bridge import (
     HYPERBOLIC_PHASE_FIELD_BRIDGE_CONTROLLER,
     HYPERBOLIC_PHASE_FIELD_BRIDGE_STATUS,
@@ -127,7 +129,7 @@ def test_relativistic_transport_sources_have_identity_hash_and_locators() -> Non
 def test_artifact_source_hashes_match_current_inputs() -> None:
     artifact = _load("hyperbolic_phase_field_causal_feasibility.json")
     for relative, expected in artifact["source_hashes"].items():
-        assert _sha(ROOT / relative) == expected
+        assert _sha(canonical_existing_path(ROOT / relative)) == expected
 
 
 def test_generator_reproduces_stable_scientific_payload() -> None:

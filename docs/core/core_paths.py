@@ -106,6 +106,8 @@ def _python_area(stem: str) -> str:
         return "02_equations/lorentz_noether"
     if lower.startswith("uet_matter_space_flux_"):
         return "02_equations/matter_space"
+    if lower.startswith(("uet_hyperbolic_phase_field", "hyperbolic_phase_field")):
+        return "02_equations/matter_space"
     if lower in {
         "uet_trace",
         "uet_matter_space",

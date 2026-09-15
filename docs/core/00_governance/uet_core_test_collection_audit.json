@@ -3,7 +3,7 @@
   "checks": [
     {
       "check_id": "full_collection_is_reported",
-      "observed": 2141,
+      "observed": 2142,
       "status": "PASS"
     },
     {
@@ -31,7 +31,7 @@
   "claim_boundary": "collection evidence only; no physics-status promotion",
   "collections": {
     "canonical_only": {
-      "collected": 1315,
+      "collected": 1316,
       "diagnostic_lines": [],
       "errors": 0,
       "label": "canonical_05_tests_only",
@@ -42,7 +42,7 @@
       "status": "PASS"
     },
     "excluding_quarantined_parameter_engine": {
-      "collected": 2140,
+      "collected": 2141,
       "diagnostic_lines": [],
       "errors": 0,
       "label": "excluding_quarantined_parameter_engine",
@@ -56,7 +56,7 @@
       "status": "PASS"
     },
     "full": {
-      "collected": 2141,
+      "collected": 2142,
       "diagnostic_lines": [],
       "errors": 0,
       "label": "full_legacy_plus_canonical",
@@ -82,7 +82,7 @@
     }
   },
   "controlling_blocker": null,
-  "generated_at": "2026-09-15T01:22:10+00:00",
+  "generated_at": "2026-09-15T01:40:00+00:00",
   "generator": "docs/scripts/audit/audit_uet_core_test_collection.py",
   "schema_version": "1.0",
   "scope": "docs/core/test and docs/core/05_tests",

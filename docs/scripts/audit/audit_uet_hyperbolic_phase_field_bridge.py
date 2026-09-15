@@ -22,6 +22,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 
+from docs.core.core_paths import canonical_existing_path  # noqa: E402
 from docs.core.uet_hyperbolic_phase_field import (
     HyperbolicPhaseFieldConfig,
     compare_augmented_to_cahn_hilliard_chemical,
@@ -409,7 +410,7 @@ def build_artifacts() -> tuple[dict[str, Any], ...]:
         "PARTIAL_ANALYTIC_CAUSAL_BRIDGE" if audit_status == "PASS" else "BLOCKED"
     )
     source_hashes = {
-        str(path.relative_to(ROOT)): _sha(path)
+        str(path.relative_to(ROOT)): _sha(canonical_existing_path(path))
         for path in (
             CORE,
             COMPARATOR,

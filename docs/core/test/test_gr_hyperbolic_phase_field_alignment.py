@@ -7,6 +7,8 @@ import inspect
 import json
 from pathlib import Path
 
+from docs.core.core_paths import canonical_existing_path
+
 from docs.core.uet_hyperbolic_phase_field import (
     HYPERBOLIC_PHASE_FIELD_SOURCE_ARXIV,
     HYPERBOLIC_PHASE_FIELD_SOURCE_DOI,
@@ -91,7 +93,7 @@ def test_artifact_source_hashes_match_current_inputs() -> None:
         "hyperbolic_phase_field_external_comparator_verification.json"
     )
     for relative, expected in artifact["source_hashes"].items():
-        assert _sha(ROOT / relative) == expected
+        assert _sha(canonical_existing_path(ROOT / relative)) == expected
 
 
 def test_public_rhs_has_no_trace_or_space_response_input() -> None:
