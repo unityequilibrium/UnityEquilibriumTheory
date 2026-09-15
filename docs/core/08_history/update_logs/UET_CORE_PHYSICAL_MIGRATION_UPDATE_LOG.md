@@ -371,3 +371,19 @@
 - Claim impact: no change; this pass changes only migration metadata and audit state.
 - Workflow linkage: closes the post-commit checkpoint required by Core Physical Migration v3 and the shared hardening/update-log standard.
 - Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
+
+## 2026-09-15 — Core physical migration v3 — Wave 6l coarse-graining ontology contract
+
+- Scope: canonical source migration for the registered lane-specific coarse-graining contract; organization, ontology-path, and provenance metadata repair only.
+- Moved: uet_coarse_graining.py into docs/core/01_contracts/ontology/.
+- Added: ontology package README/exports, a root compatibility shim, and canonical migration regression coverage.
+- Repaired: the path classifier now assigns the contract to the FOUNDATION ontology area; the existing coarse-graining audit generator now emits canonical implementation paths in formula and correspondence artifacts.
+- Preserved: the four lane-specific C mappings, declared information loss, many-to-one boundary, normalized/SI lane distinctions, and the open microscopic/covariant/observable closure.
+- Verification: coarse-graining and canonical-migration tests PASS (10); coarse-graining audit PASS with status PASS_DECLARED_FIELD_TO_COLLECTIVE_COORDINATE_ONLY and controller open_system_sk_kms_memory_not_derived; physical migration, path, migration-enforcement, import, link, and test-collection audits PASS (181 modules, 255 links, 2,143 full / 1,317 canonical / 825 legacy tests, zero collection errors).
+- Result: duplicate targets, destination conflicts, missing paths, broken redirects, import failures, broken links, and collection errors are all 0; physics status changes remain 0.
+- Blocker narrowed: the coarse-graining implementation now has one canonical ontology-contract path while legacy core imports and existing artifact generation remain compatible.
+- Still open: the contract remains an internal declared-field map; it does not derive microscopic dynamics, covariant averaging, RG flow, dimensional observables, or a universal physical identity for C; foundation remains BLOCKED.
+- Controller: commit this scoped ontology move, refresh post-commit metadata, then classify the next registered family from dependency evidence; planner reports 1,806 indexed files and 1,122 active move targets before the commit checkpoint.
+- Claim impact: no change; this wave changes organization, compatibility, and generated path metadata only. No mass, charge, covariant, GR, quantum, thermal, or downstream claim was promoted.
+- Workflow linkage: follows the Core Physical Migration v3 canonical-path, compatibility-shim, and generated-artifact provenance policy.
+- Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.

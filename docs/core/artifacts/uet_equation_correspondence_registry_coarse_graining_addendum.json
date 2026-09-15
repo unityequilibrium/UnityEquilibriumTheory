@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "artifact": "uet_equation_correspondence_registry_coarse_graining_addendum",
   "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
-  "status": "CANDIDATE_ENTRY_MERGED_INTO_CENTRAL_REGISTRY",
+  "status": "CANDIDATE_ENTRY_PENDING_MERGE",
   "equation_entries": [
     {
       "equation_id": "uet.main_theory.coarse_graining",
       "version": "lane-coarse-graining-v1",
       "classification": "constitutive_lane_specific_equation",
-      "relation_or_code_path": "docs/core/uet_coarse_graining.py",
+      "relation_or_code_path": "docs/core/01_contracts/ontology/uet_coarse_graining.py",
       "variables": {
         "X_lane": "declared lower-level lane field",
         "C_lane": "lane-specific collective coordinate",
@@ -35,7 +35,7 @@
         "coarser blocks erase within-cell fluctuations"
       ],
       "implementation_paths": [
-        "docs/core/uet_coarse_graining.py"
+        "docs/core/01_contracts/ontology/uet_coarse_graining.py"
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_coarse_graining.py",
@@ -53,13 +53,5 @@
       "failure_mode": "mapping assumes desired observable or silently identifies distinct lane coordinates",
       "next_hardening_step": "derive open-system memory and calibrate one dimensional observable lane"
     }
-  ],
-  "merge_metadata": {
-    "merged_into": "docs/core/artifacts/uet_equation_correspondence_registry.json",
-    "merged_on": "2026-08-09",
-    "equation_ids": [
-      "uet.main_theory.coarse_graining"
-    ],
-    "claim_promotion": false
-  }
+  ]
 }
