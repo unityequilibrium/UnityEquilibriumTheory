@@ -550,3 +550,15 @@
 - Claim impact: no change; this wave changes organization, exports, compatibility, and lane metadata only. No photon identity, gravity, mass, galaxy, cosmology, or particle claim was promoted.
 - Workflow linkage: follows the Core Physical Migration v3 canonical-path, compatibility-shim, and package-entrypoint policy.
 - Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
+
+## 2026-09-15 — Wave 6r post-commit metadata consistency correction
+
+- Scope: post-commit synchronization after 68dba8916.
+- Corrected: regenerated the migration plan/report, physical migration manifest, governance audits, and test-collection artifact after the carrier/observer move; committed sources are no longer counted as dirty.
+- Verification: physical migration, canonical path, migration enforcement, import, link, and test-collection audits PASS; canonical imports 181/181; links 255/255; test collection 2,151 full / 1,325 canonical / 825 legacy with zero collection errors.
+- Result: planner reports 1,837 indexed files, 1,107 active move targets, 730 canonical/protected records, 215 compatibility assets, 2 unrelated dirty sources, zero duplicate targets, zero existing destination conflicts, and zero physics-status changes.
+- Blocker narrowed: carrier/observer source organization and metadata now agree after commit; photon remains a normalized standard comparator and the relational baseline remains simulation-only.
+- Still open: SI detector/source provenance, Lorentz-covariant signal propagation, UET source-to-carrier law, dimensional observable mapping, and foundation remain BLOCKED.
+- Next controller: classify the next registered family from dependency evidence; keep generated-artifact mass migration behind its separate generator/consumer/provenance checkpoint.
+- Claim impact: no change; this pass changes only migration metadata and audit state.
+- Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
