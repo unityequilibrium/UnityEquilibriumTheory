@@ -39,7 +39,21 @@ from .mass_density_dimensional import (
     si_line_density_from_shape,
 )
 
+from .matter_interaction_forward import (
+    FORWARD_MAPPING_STATUS,
+    UET_EXTRA_RESPONSE_STATUS,
+    MatterInteractionForwardConfig,
+    MatterInteractionForwardResult,
+    MatterSource,
+    matter_to_interaction_forward,
+)
 __all__ = [
+    "FORWARD_MAPPING_STATUS",
+    "UET_EXTRA_RESPONSE_STATUS",
+    "MatterInteractionForwardConfig",
+    "MatterInteractionForwardResult",
+    "MatterSource",
+    "matter_to_interaction_forward",
     "ALLOWED_CALIBRATION_STATUS",
     "ALLOWED_EVIDENCE_STATUS",
     "ALLOWED_PROVENANCE",

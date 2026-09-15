@@ -589,3 +589,18 @@
 - Next controller: classify the next registered family from dependency evidence; keep generated-artifact mass migration behind its separate generator/consumer/provenance checkpoint.
 - Claim impact: no change; this pass changes only migration metadata and audit state.
 - Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
+
+## 2026-09-15 — Core physical migration v3 — Wave 6t matter-interaction forward family
+
+- Scope: canonical source migration for the forward matter-source → density/relational-C → standard-interaction comparator; classifier and dependency-path repair only.
+- Moved: matter_interaction_forward.py into docs/core/03_lanes/mass_density/.
+- Added: mass-density package exports, a root compatibility shim, and canonical migration regression coverage.
+- Repaired: the canonical source keeps mass-density imports local and resolves the still-rooted relational baseline through its compatibility facade.
+- Verification: matter-interaction migration and dependent tests PASS (21); forward audit PASS_WITH_UET_EXTENSION_BLOCKED with SIMULATION_ONLY claim status; physical migration, path, migration-enforcement, import, link, and test-collection audits PASS; post-move collection reports 2,151 full / 1,325 canonical / 825 legacy tests with zero collection errors.
+- Result: source mass controls density and standard interaction amplitude while geometry controls the normalized relational C coordinate; the forward map does not assert an inverse rho=f(C).
+- Blocker narrowed: matter-interaction support now has one canonical mass-density lane path without promoting C to universal mass or adding an un-derived UET force.
+- Still open: dimensional source/measurement map, uncertainty and holdout, inverse C-to-rho identifiability, extra UET constitutive response, and foundation remain BLOCKED.
+- Controller: commit this scoped matter-interaction move, refresh post-commit metadata, then classify the next registered family; generated-artifact mass migration remains behind its separate generator/consumer/provenance controller.
+- Claim impact: no change; this wave changes organization, exports, compatibility, and lane metadata only. No mass, gravity, galaxy, cosmology, or particle claim was promoted.
+- Workflow linkage: follows the Core Physical Migration v3 canonical-path, compatibility-shim, dependency-facade, and lane-boundary policy.
+- Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
