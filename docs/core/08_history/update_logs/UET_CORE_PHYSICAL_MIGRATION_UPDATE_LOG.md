@@ -744,3 +744,10 @@
 - Controller narrowed: 32 remaining root Python surfaces are currently classified to `99_review/unassigned_python`; they require owner/family classification before migration. Do not bulk-move them into quarantine.
 - Claim impact: no formula, unit, evidence class, calibration, or physics claim changed; foundation remains BLOCKED.
 - Notes: an export-insertion syntax error was introduced and corrected within the same uncommitted wave before verification; unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
+## 2026-09-15 — Wave 6z classified covariant and thermal migration
+
+- Scope: classify and physically migrate the remaining clearly owned equation/lane modules; do not place them in `99_review` merely because the original path resolver lacked a rule.
+- Changed: added path rules for curved 3+1 covariant, extended thermal/thermoelastic, matter-space stability, and persistence resource-selection families; moved 20 implementations to canonical packages and retained root compatibility shims.
+- Verification: all source hashes match before/after; 40 legacy/canonical imports pass; core import audit 181/181, path audit, and migration audit pass.
+- Result: only 12 root Python surfaces remain unclassified; they are tooling/support candidates, not implicitly physics equations.
+- Claim impact: organization only; no physical status, unit lane, or claim boundary changed.

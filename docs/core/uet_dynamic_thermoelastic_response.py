@@ -1,4 +1,4 @@
-"""Compatibility shim for `docs/core/02_equations/covariant/uet_curved_3p1_geometry.py`."""
+"""Compatibility shim for `docs/core/03_lanes/thermal/uet_dynamic_thermoelastic_response.py`."""
 
 from __future__ import annotations
 
@@ -16,5 +16,5 @@ else:
     from docs.core.core_compat import forward_public_symbols as _forward_public_symbols
     del _sys, _Path, _current, _parent
 
-_forward_public_symbols(globals(), "docs.core.02_equations.covariant.uet_curved_3p1_geometry")
+_forward_public_symbols(globals(), "docs.core.03_lanes.thermal.uet_dynamic_thermoelastic_response")
 del _forward_public_symbols

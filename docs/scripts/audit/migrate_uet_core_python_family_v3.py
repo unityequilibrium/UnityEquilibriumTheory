@@ -111,7 +111,9 @@ def relative_imports(path: Path) -> list[str]:
     return values
 
 
-def build_plan(target_prefix: str) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+def build_plan(
+    target_prefix: str, *, allow_internal_relative_imports: bool = False
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     dirty = dirty_paths()
     manifest = load_manifest()
     prefix = target_prefix.rstrip("/") + "/"
@@ -152,7 +154,7 @@ def build_plan(target_prefix: str) -> tuple[list[dict[str, Any]], dict[str, Any]
         "relative_import_blocks": {
             item["legacy_path"]: item["relative_imports"]
             for item in records
-            if item["relative_imports"]
+            if item["relative_imports"] and not allow_internal_relative_imports
         },
         "existing_target_conflicts": [
             item["canonical_path"] for item in records if item["target_exists"]
@@ -180,8 +182,12 @@ def refresh_physical_manifest() -> None:
     subprocess.run([sys.executable, str(PLANNER), "--plan"], cwd=ROOT, check=True)
 
 
-def apply(target_prefix: str, family: str) -> dict[str, Any]:
-    records, summary = build_plan(target_prefix)
+def apply(
+    target_prefix: str, family: str, *, allow_internal_relative_imports: bool = False
+) -> dict[str, Any]:
+    records, summary = build_plan(
+        target_prefix, allow_internal_relative_imports=allow_internal_relative_imports
+    )
     if not summary["ready"]:
         raise RuntimeError(json.dumps({"status": "BLOCKED", "summary": summary}, ensure_ascii=False))
     moved: list[dict[str, str]] = []
@@ -236,6 +242,11 @@ def main() -> int:
     parser.add_argument("--target-prefix", required=True, help="canonical package directory under docs/core")
     parser.add_argument("--check", action="store_true", help="validate one family without moving it")
     parser.add_argument("--apply", action="store_true", help="perform the checked migration")
+    parser.add_argument(
+        "--allow-internal-relative-imports",
+        action="store_true",
+        help="allow relative imports only for a complete same-package family move",
+    )
     args = parser.parse_args()
     if not SAFE_FAMILY.fullmatch(args.family):
         parser.error("family must contain only lowercase letters, digits, and underscores")
@@ -243,9 +254,19 @@ def main() -> int:
     if not prefix.startswith(("docs/core/02_equations/", "docs/core/03_lanes/")):
         parser.error("target-prefix must be an equation or lane package under docs/core")
     if args.apply:
-        print(json.dumps(apply(prefix, args.family), ensure_ascii=False, indent=2))
+        print(json.dumps(
+            apply(
+                prefix,
+                args.family,
+                allow_internal_relative_imports=args.allow_internal_relative_imports,
+            ),
+            ensure_ascii=False,
+            indent=2,
+        ))
         return 0
-    records, summary = build_plan(prefix)
+    records, summary = build_plan(
+        prefix, allow_internal_relative_imports=args.allow_internal_relative_imports
+    )
     print(json.dumps({"status": "PASS" if summary["ready"] else "BLOCKED", "family": args.family, "target_prefix": prefix, "summary": summary, "records": records}, ensure_ascii=False, indent=2))
     return 0 if summary["ready"] else 1
 

@@ -108,6 +108,8 @@ def _python_area(stem: str) -> str:
         return "02_equations/o2"
     if lower.startswith(("uet_covariant", "covariant_")):
         return "02_equations/covariant"
+    if lower.startswith("uet_curved_3p1"):
+        return "02_equations/covariant"
     if lower.startswith(("uet_noether", "uet_lorentz")):
         return "02_equations/lorentz_noether"
     if lower.startswith("uet_matter_space_flux_"):
@@ -143,6 +145,25 @@ def _python_area(stem: str) -> str:
         return "03_lanes/persistence"
     if lower.startswith(("thermal", "thermo", "he4", "uet_raman", "uet_reciprocal")):
         return "03_lanes/thermal"
+    if lower.startswith((
+        "uet_anisotropic_thermoelastic",
+        "uet_dynamic_thermoelastic",
+        "uet_interlayer_mode",
+        "uet_lattice_momentum",
+        "uet_material_interface",
+        "uet_material_lattice",
+        "uet_matter_strain",
+        "uet_mode_work_heat",
+        "uet_scalar_thermoelastic",
+        "uet_shear_symmetry",
+        "uet_thermoelastic",
+        "uet_transport_coefficient",
+    )):
+        return "03_lanes/thermal"
+    if lower in {"uet_dynamical_stability"}:
+        return "02_equations/matter_space"
+    if lower in {"uet_resource_selection"}:
+        return "03_lanes/persistence"
     if lower.startswith("t13_"):
         return "03_lanes/topic13_support"
     return "99_review/unassigned_python"

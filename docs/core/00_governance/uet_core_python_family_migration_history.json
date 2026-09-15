@@ -574,6 +574,170 @@
       ],
       "status": "MIGRATED_WITH_SHIM",
       "target_prefix": "docs/core/03_lanes/thermal"
+    },
+    {
+      "applied_at": "2026-09-15T11:53:29+00:00",
+      "claim_boundary": "Organization migration only; no physics status or claim changed.",
+      "family": "thermal_extended",
+      "files_moved": 12,
+      "generator": "docs/scripts/audit/migrate_uet_core_python_family_v3.py",
+      "moves": [
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_anisotropic_thermoelastic_response_bridge.py",
+          "legacy_path": "docs/core/uet_anisotropic_thermoelastic_response_bridge.py",
+          "sha256_after": "e762938d8f8f9b1a0129de3a1058d8260e11d09d7020bae98e26a071b8fed840",
+          "sha256_before": "e762938d8f8f9b1a0129de3a1058d8260e11d09d7020bae98e26a071b8fed840"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_dynamic_thermoelastic_response.py",
+          "legacy_path": "docs/core/uet_dynamic_thermoelastic_response.py",
+          "sha256_after": "ec02c5c96f30f8a6be38fd22d506c15ea6f2b8673ea76d1d25be00456a51d762",
+          "sha256_before": "ec02c5c96f30f8a6be38fd22d506c15ea6f2b8673ea76d1d25be00456a51d762"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_interlayer_mode_residue.py",
+          "legacy_path": "docs/core/uet_interlayer_mode_residue.py",
+          "sha256_after": "f7c40cffe59575c7337433099b3c6e4f2ec9ef392182fa2e82361ec315d21ff5",
+          "sha256_before": "f7c40cffe59575c7337433099b3c6e4f2ec9ef392182fa2e82361ec315d21ff5"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_lattice_momentum_relaxing_heat_parent.py",
+          "legacy_path": "docs/core/uet_lattice_momentum_relaxing_heat_parent.py",
+          "sha256_after": "186b34484df51d416f7ea2cc770b91b717cc83c2dca87c5d8f983c51a9b2111a",
+          "sha256_before": "186b34484df51d416f7ea2cc770b91b717cc83c2dca87c5d8f983c51a9b2111a"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_material_interface_factor_resolution.py",
+          "legacy_path": "docs/core/uet_material_interface_factor_resolution.py",
+          "sha256_after": "7ebcbed3f6c2056a06e393afd9cba2c81614237bf924da0dc4f54b42ee9b3ce1",
+          "sha256_before": "7ebcbed3f6c2056a06e393afd9cba2c81614237bf924da0dc4f54b42ee9b3ce1"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_material_lattice_interface_contract.py",
+          "legacy_path": "docs/core/uet_material_lattice_interface_contract.py",
+          "sha256_after": "85be68b8054556b78378fb06b8a6e99c8f936063cab55c4359d86ff9f93b9ca3",
+          "sha256_before": "85be68b8054556b78378fb06b8a6e99c8f936063cab55c4359d86ff9f93b9ca3"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_matter_strain_susceptibility.py",
+          "legacy_path": "docs/core/uet_matter_strain_susceptibility.py",
+          "sha256_after": "827e7745ce840baf5ef6c23b2f5cd8ba353711aedfefa36ec5e98a3358a2f421",
+          "sha256_before": "827e7745ce840baf5ef6c23b2f5cd8ba353711aedfefa36ec5e98a3358a2f421"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_mode_work_heat.py",
+          "legacy_path": "docs/core/uet_mode_work_heat.py",
+          "sha256_after": "c30c53d8ed87c9f8ecdb7946d1755eca1b8508d7f5509fc6851d90a987b55d31",
+          "sha256_before": "c30c53d8ed87c9f8ecdb7946d1755eca1b8508d7f5509fc6851d90a987b55d31"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_scalar_thermoelastic_response_bridge.py",
+          "legacy_path": "docs/core/uet_scalar_thermoelastic_response_bridge.py",
+          "sha256_after": "f379f657c597b8e453388fa4e96d1dd88d8dae8d6fa8d8629a133350f086306b",
+          "sha256_before": "f379f657c597b8e453388fa4e96d1dd88d8dae8d6fa8d8629a133350f086306b"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_shear_symmetry.py",
+          "legacy_path": "docs/core/uet_shear_symmetry.py",
+          "sha256_after": "b5426f6b4f3cc9e3df83318a8f36d2c0d1534bfc2b98bc62cdd4268011be1deb",
+          "sha256_before": "b5426f6b4f3cc9e3df83318a8f36d2c0d1534bfc2b98bc62cdd4268011be1deb"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_thermoelastic_spatial_compatibility.py",
+          "legacy_path": "docs/core/uet_thermoelastic_spatial_compatibility.py",
+          "sha256_after": "a3a4e96938984e4c7c4ac4c72ea78a541c5fa2dd0994f0f8cb431faaea823ca7",
+          "sha256_before": "a3a4e96938984e4c7c4ac4c72ea78a541c5fa2dd0994f0f8cb431faaea823ca7"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_transport_coefficient_identifiability.py",
+          "legacy_path": "docs/core/uet_transport_coefficient_identifiability.py",
+          "sha256_after": "16865cd7de7f78eaf72afa5d3dfc900b2c0c33a775ea35a3f7185183804fb212",
+          "sha256_before": "16865cd7de7f78eaf72afa5d3dfc900b2c0c33a775ea35a3f7185183804fb212"
+        }
+      ],
+      "status": "MIGRATED_WITH_SHIM",
+      "target_prefix": "docs/core/03_lanes/thermal"
+    },
+    {
+      "applied_at": "2026-09-15T11:53:52+00:00",
+      "claim_boundary": "Organization migration only; no physics status or claim changed.",
+      "family": "curved_3p1",
+      "files_moved": 6,
+      "generator": "docs/scripts/audit/migrate_uet_core_python_family_v3.py",
+      "moves": [
+        {
+          "canonical_path": "docs/core/02_equations/covariant/uet_curved_3p1_adm_evolution.py",
+          "legacy_path": "docs/core/uet_curved_3p1_adm_evolution.py",
+          "sha256_after": "257fdbc032fac4a4402307c68d2bf4ddec81162b5d3a051e234e445e6c539c20",
+          "sha256_before": "257fdbc032fac4a4402307c68d2bf4ddec81162b5d3a051e234e445e6c539c20"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/covariant/uet_curved_3p1_constraints.py",
+          "legacy_path": "docs/core/uet_curved_3p1_constraints.py",
+          "sha256_after": "6706080b4a38f99f6c9bd633cf9e59bc216929db2cba2272ad9044bc15bf3b9f",
+          "sha256_before": "6706080b4a38f99f6c9bd633cf9e59bc216929db2cba2272ad9044bc15bf3b9f"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py",
+          "legacy_path": "docs/core/uet_curved_3p1_generalized_harmonic.py",
+          "sha256_after": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92",
+          "sha256_before": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/covariant/uet_curved_3p1_geometry.py",
+          "legacy_path": "docs/core/uet_curved_3p1_geometry.py",
+          "sha256_after": "02f643a7d6efc3fb24508546477d647e12015ebdc7f1a70b4adeaeb1952266d3",
+          "sha256_before": "02f643a7d6efc3fb24508546477d647e12015ebdc7f1a70b4adeaeb1952266d3"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/covariant/uet_curved_3p1_gh_evolution.py",
+          "legacy_path": "docs/core/uet_curved_3p1_gh_evolution.py",
+          "sha256_after": "c18f231375609cebb76d342ba7ad94471eb280089458ace85882ed2450f3581e",
+          "sha256_before": "c18f231375609cebb76d342ba7ad94471eb280089458ace85882ed2450f3581e"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/covariant/uet_curved_3p1_matter_wiring.py",
+          "legacy_path": "docs/core/uet_curved_3p1_matter_wiring.py",
+          "sha256_after": "d45348efdbbd302c07f425f2f800cd677d14225f1ad49fb36b21de6a257614b1",
+          "sha256_before": "d45348efdbbd302c07f425f2f800cd677d14225f1ad49fb36b21de6a257614b1"
+        }
+      ],
+      "status": "MIGRATED_WITH_SHIM",
+      "target_prefix": "docs/core/02_equations/covariant"
+    },
+    {
+      "applied_at": "2026-09-15T11:54:13+00:00",
+      "claim_boundary": "Organization migration only; no physics status or claim changed.",
+      "family": "persistence_resource",
+      "files_moved": 1,
+      "generator": "docs/scripts/audit/migrate_uet_core_python_family_v3.py",
+      "moves": [
+        {
+          "canonical_path": "docs/core/03_lanes/persistence/uet_resource_selection.py",
+          "legacy_path": "docs/core/uet_resource_selection.py",
+          "sha256_after": "bc55c0a5b47e9980788e5c268c69c1dfeadcdf9dce7b540743d33a8f7a9a197f",
+          "sha256_before": "bc55c0a5b47e9980788e5c268c69c1dfeadcdf9dce7b540743d33a8f7a9a197f"
+        }
+      ],
+      "status": "MIGRATED_WITH_SHIM",
+      "target_prefix": "docs/core/03_lanes/persistence"
+    },
+    {
+      "applied_at": "2026-09-15T11:54:25+00:00",
+      "claim_boundary": "Organization migration only; no physics status or claim changed.",
+      "family": "matter_space_stability",
+      "files_moved": 1,
+      "generator": "docs/scripts/audit/migrate_uet_core_python_family_v3.py",
+      "moves": [
+        {
+          "canonical_path": "docs/core/02_equations/matter_space/uet_dynamical_stability.py",
+          "legacy_path": "docs/core/uet_dynamical_stability.py",
+          "sha256_after": "9ae6d3ee13001c243924e58238ea0d604c4d848824c9b98d29c441d26d0969b5",
+          "sha256_before": "9ae6d3ee13001c243924e58238ea0d604c4d848824c9b98d29c441d26d0969b5"
+        }
+      ],
+      "status": "MIGRATED_WITH_SHIM",
+      "target_prefix": "docs/core/02_equations/matter_space"
     }
   ],
   "schema_version": "1.0"
