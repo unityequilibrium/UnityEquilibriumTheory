@@ -42,6 +42,80 @@ def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+PRESERVED_TOP_LEVEL_FIELDS = (
+    "source_anchor",
+    "cp_cv_correction_contract",
+    "standard_pbte_source_anchor",
+    "pbte_numeric_input_availability",
+)
+
+
+def merge_prior_artifact(report: dict, prior: dict | None) -> dict:
+    """Refresh generated fields without discarding prior provenance detail.
+
+    The bridge audit is also consumed by aggregate Topic 13 registers. Older
+    aggregate payloads may contain source anchors and evidence blocks that are
+    not reconstructed by this focused formula audit. Preserve those blocks,
+    while allowing the current generator to remain authoritative for the
+    fields it emits.
+    """
+
+    if prior is None:
+        return report
+
+    merged = dict(report)
+    preserved_top_level = []
+    for key in PRESERVED_TOP_LEVEL_FIELDS:
+        if key in prior and key not in merged:
+            merged[key] = prior[key]
+            preserved_top_level.append(key)
+
+    current_major = dict(merged.get("major_result", {}))
+    prior_major = dict(prior.get("major_result", {}))
+    preserved_major_fields = []
+    for key, value in prior_major.items():
+        if key not in current_major:
+            current_major[key] = value
+            preserved_major_fields.append(key)
+
+    prior_closed = prior_major.get("what_is_closed")
+    current_closed = current_major.get("what_is_closed")
+    if isinstance(prior_closed, list):
+        closed = list(prior_closed)
+        if isinstance(current_closed, str) and current_closed not in closed:
+            closed.append(current_closed)
+        elif isinstance(current_closed, list):
+            for item in current_closed:
+                if item not in closed:
+                    closed.append(item)
+        current_major["what_is_closed"] = closed
+
+    current_evidence = list(current_major.get("evidence_artifacts", []))
+    seen_paths = {
+        item.get("path")
+        for item in current_evidence
+        if isinstance(item, dict) and item.get("path")
+    }
+    preserved_evidence_paths = []
+    for item in prior_major.get("evidence_artifacts", []):
+        if not isinstance(item, dict):
+            continue
+        path = item.get("path")
+        if path and path not in seen_paths:
+            current_evidence.append(item)
+            seen_paths.add(path)
+            preserved_evidence_paths.append(path)
+    current_major["evidence_artifacts"] = current_evidence
+    merged["major_result"] = current_major
+    merged["artifact_provenance"] = {
+        "prior_artifact_preserved": True,
+        "preserved_top_level_fields": preserved_top_level,
+        "preserved_major_result_fields": preserved_major_fields,
+        "preserved_evidence_artifacts": preserved_evidence_paths,
+    }
+    return merged
+
+
 def main() -> int:
     package = load(SOURCE_PACKAGE)
     contract = named_energy_response_branch_contract()
@@ -183,6 +257,18 @@ def main() -> int:
         "next_controller": "source-lock volumetric c_v with uncertainty, independently derive or calibrate e0, and prove the base Phi-to-Phi_E mapping without TTG target residuals or Xie 2026",
         "claim_boundary": "The named energy-response algebra is closed for this lane only; Full Topic 13 remains blocked at dimensional calibration and thermodynamic closure.",
     }
+    prior = None
+    if OUT.exists():
+        prior = load(OUT)
+        if (
+            prior.get("artifact") != report["artifact"]
+            or prior.get("schema_version") != report["schema_version"]
+        ):
+            raise RuntimeError(
+                "refusing to overwrite an existing artifact with a different "
+                "artifact identity or schema; resolve the artifact contract first"
+            )
+        report = merge_prior_artifact(report, prior)
     OUT.write_text(json.dumps(report, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
     print(
         json.dumps(

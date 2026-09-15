@@ -1,0 +1,47 @@
+{
+  "schema_version": "uet-audit-generator-drift-v1",
+  "record_id": "T13_ENERGY_RESPONSE_AUDIT_GENERATOR_DRIFT_20260915",
+  "status": "BLOCKED_REVIEW_REQUIRED",
+  "scope": "Topic 13 energy-response audit artifact and its generator",
+  "generator": "docs/scripts/audit/audit_topic13_energy_response_bridge.py",
+  "artifact": "docs/core/artifacts/t13_energy_response_bridge_audit.json",
+  "observed_drift": {
+    "committed_top_level_fields_missing_after_direct_regeneration": [
+      "cp_cv_correction_contract",
+      "pbte_numeric_input_availability",
+      "source_anchor",
+      "standard_pbte_source_anchor"
+    ],
+    "committed_major_result_what_is_closed_type": "list",
+    "direct_regeneration_major_result_what_is_closed_type": "string",
+    "committed_major_result_evidence_artifact_count": 11,
+    "direct_regeneration_major_result_evidence_artifact_count": 2,
+    "physics_status_change": "not established; this is an artifact/schema ownership conflict"
+  },
+  "controlling_interpretation": {
+    "source_of_truth": "the focused generator controls fields it explicitly emits; aggregate source/provenance fields must not be discarded",
+    "claim_boundary": "no thermal dimensional, base-Phi, or external-validation claim is promoted",
+    "artifact_change_policy": "do not restore, replace, or publish the current uncommitted artifact without explicit evidence review"
+  },
+  "repair_applied": {
+    "status": "GENERATOR_GUARD_AND_PRESERVING_MERGE_ADDED",
+    "changes": [
+      "preserve known source-anchor and aggregate evidence fields from a prior same-schema artifact",
+      "merge prior evidence artifact paths while current generator output remains authoritative for matching paths",
+      "refuse overwrite when artifact identity or schema version differs",
+      "add regression coverage without writing the live artifact"
+    ],
+    "test": {
+      "path": "docs/core/05_tests/artifact/test_topic13_energy_response_audit_preservation.py",
+      "result": "2 passed"
+    }
+  },
+  "unresolved": [
+    "the live worktree artifact was already rewritten before the preservation repair and no longer contains the committed aggregate detail",
+    "a human-approved restore or explicit replacement/reconciliation is required before the artifact can be treated as clean",
+    "the focused audit and aggregate Topic 13 register ownership should be reviewed together"
+  ],
+  "next_action": "review the committed aggregate payload, approve a non-destructive reconciliation, rerun the repaired generator in a controlled temporary output, then update the canonical artifact and downstream hashes",
+  "evidence_status": "BLOCKED",
+  "organization_status": "REVIEW_REQUIRED"
+}
