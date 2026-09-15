@@ -1,6 +1,6 @@
 {
   "canonical_path_authority": "docs/core/core_paths.py",
-  "generated_at": "2026-09-14T20:42:53+00:00",
+  "generated_at": "2026-09-15T01:19:53+00:00",
   "generator": "docs/scripts/audit/plan_uet_core_physical_migration.py",
   "migration_id": "UET-CORE-PHYSICAL-MIGRATION-V3",
   "physical_move_performed": false,
@@ -69,7 +69,7 @@
       "rollback_path": "docs/core/00_governance/CORE_RESEARCH_ORGANIZATION_INDEX.md",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "ed569b2b611aace2e509e2bd9c7d25567682344c03043c94ce79a90e678067e4",
+      "sha256_before": "5a151e9cc76fe41cdeaa432e16b6f1816225d0d8808e9aab02aa12235d69c6e3",
       "status_source": "docs/scripts/audit/build_uet_research_organization_registry_v2.py",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -375,7 +375,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_imports_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "ec24290c98be0cf2303feb7e7ac39db150c84c75fa48deef82d5c475e7b7c241",
+      "sha256_before": "82506717997336ba47b3fc41960079c4c140f579fe70258798b1586aa5ecee8a",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -408,7 +408,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_links_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "3df59006250cc74cf70a41f1800b46d03afed792ee34031463c3765ed7ae7543",
+      "sha256_before": "e21dfadcc94c0ae009e0258dd88614c24c6ee9b794142d7c189485d5ecb1233e",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -441,7 +441,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_migration_enforcement_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "664868fb8dc1f4b994cef922c081eddc5331914acd61e4653eb51b933221c887",
+      "sha256_before": "b404af89fa8bf680b1253684a19f0f61dc3ab826c3ca8fa2904840692997383f",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -475,7 +475,7 @@
       "rollback_path": "docs/core/00_governance/UET_CORE_MIGRATION_ENFORCEMENT_REPORT.md",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_after": null,
-      "sha256_before": "f163a4db15eb7d0ce7f8e435bfa6b995fbdae5ccc9f244904813b09f89081f9c",
+      "sha256_before": "e7bb32d2887e255e10ba4c32fc1ecea1fc4d9b38831668ccb4abf951dd5c733f",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [
         "ORG"
@@ -510,7 +510,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_paths_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "b9081fea5eafa35dfc4e5083cd9f8aca069d957f4bf82188901a16e688ef526b",
+      "sha256_before": "3d783d90416415c2dd0a74560a9a2c3d457bd274a1411f32246755f01603dec3",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -543,7 +543,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_physical_migration_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "8de8768a4568708e03dd66df732ec356985f05985b547beb99f23deea37a5039",
+      "sha256_before": "a0bd857b6fa461801dd0ce61ae37def9caa549b8a9cf3c17f274c05d2af3284d",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -576,7 +576,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "3104d59c51dec3935e552563884f541ead0f32c2cce5b44ba3a7dd0adaf55e87",
+      "sha256_before": "96f4d342643b4a2339619bac5550fcdf00f6bc7a4cd1e1417a7d5011a3df6405",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -610,7 +610,7 @@
       "rollback_path": "docs/core/00_governance/UET_CORE_PHYSICAL_MIGRATION_REPORT.md",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_after": null,
-      "sha256_before": "8ee1965574912015946f4dc606089d92dfc260dfe7d28fdee7c460fa86942169",
+      "sha256_before": "90008bfa03b5874b6808b21de44e10f8f40ac5c702bf7ddeba749433edee5a10",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [
         "ORG"
@@ -780,7 +780,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_test_collection_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "361a62d4fe1b078ad790bcbbf7e42bde1c9359840080bc35279d8b7798642831",
+      "sha256_before": "4c002ef1f88361ce1e5000110e4e01b80bd26c8b8ecd917e68b6fba981f127be",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -3477,7 +3477,7 @@
       "collision_key": "docs/core/03_lanes/thermal/__init__.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/03_lanes/thermal/__init__.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": "lane.thermal",
       "evidence_status": "INTERNAL",
@@ -3507,7 +3507,7 @@
       "collision_key": "docs/core/03_lanes/thermal/he4_normal_viscosity_kubo.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/03_lanes/thermal/he4_normal_viscosity_kubo.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -3543,7 +3543,7 @@
       "collision_key": "docs/core/03_lanes/thermal/he4_o2_response_calibration.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/03_lanes/thermal/he4_o2_response_calibration.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -3579,7 +3579,7 @@
       "collision_key": "docs/core/03_lanes/thermal/he4_o2_si_beta_mapping.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/03_lanes/thermal/he4_o2_si_beta_mapping.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -3615,7 +3615,7 @@
       "collision_key": "docs/core/03_lanes/thermal/he4_svp_reference.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/03_lanes/thermal/he4_svp_reference.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -3651,7 +3651,7 @@
       "collision_key": "docs/core/03_lanes/thermal/readme.md",
       "compatibility_mode": "none",
       "current_path": "docs/core/03_lanes/thermal/README.md",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": "lane.thermal",
       "evidence_status": "INTERNAL",
@@ -8053,7 +8053,7 @@
       "collision_key": "docs/core/05_tests/regression/root/test_he4_thermal_canonical_migration.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/05_tests/regression/root/test_he4_thermal_canonical_migration.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": "core_test_surface",
       "evidence_status": "INTERNAL",
@@ -16157,7 +16157,7 @@
       "rollback_path": "docs/core/08_history/update_logs/UET_CORE_PHYSICAL_MIGRATION_UPDATE_LOG.md",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "9a68c9259ad2597ba2efcf317f25e414f33c0950f84d4978cd994297032540f9",
+      "sha256_before": "aa354233c0b2dc93a242334b0bf0b657a577dbfe460b294febe766d7e824528e",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -24831,7 +24831,7 @@
       "collision_key": "docs/core/07_artifacts/topic13/t13_he4_normal_viscosity_kubo_audit.json",
       "compatibility_mode": "legacy_artifact_index",
       "current_path": "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": "topic13_or_source",
       "evidence_status": "INTERNAL",
@@ -24867,7 +24867,7 @@
       "collision_key": "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json",
       "compatibility_mode": "legacy_artifact_index",
       "current_path": "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": "topic13_or_source",
       "evidence_status": "INTERNAL",
@@ -24903,7 +24903,7 @@
       "collision_key": "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json",
       "compatibility_mode": "legacy_artifact_index",
       "current_path": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": "topic13_or_source",
       "evidence_status": "INTERNAL",
@@ -24939,7 +24939,7 @@
       "collision_key": "docs/core/07_artifacts/topic13/t13_he4_svp_physical_anchor_audit.json",
       "compatibility_mode": "legacy_artifact_index",
       "current_path": "docs/core/artifacts/t13_he4_svp_physical_anchor_audit.json",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": "topic13_or_source",
       "evidence_status": "INTERNAL",
@@ -63355,7 +63355,7 @@
       "redirect_or_shim": 197,
       "root_python_shim": 150
     },
-    "dirty_sources": 13,
+    "dirty_sources": 2,
     "duplicate_targets": {},
     "existing_target_conflicts": [],
     "files_migrated_in_wave": 0,
