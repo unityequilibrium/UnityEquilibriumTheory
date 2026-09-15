@@ -109,3 +109,13 @@
 - CONTROLLING_BLOCKER: data_tooling_path_bootstrap_and_provenance_review
 - NEXT_ACTION: Repair and migrate data/tooling in bounded categories, beginning with path-safe scripts and then the path-sensitive/provenance-review queue.
 - CLAIM_BOUNDARY: Organization and provenance traceability only; no equation, evidence class, physics status, or empirical claim changed.
+
+### 2026-09-15 — Wave 6zg: classified tooling assets
+
+- STATUS: PASS_WITH_REVIEW_REQUIRED
+- WHAT_CHANGED: Moved the explicit twelve-file non-Python tooling allowlist out of docs/core/data/scripts while preserving each source subtree under docs/scripts/core; added a hash manifest and kept all assets as legacy/support tooling with no duplicate old copies.
+- VERIFICATION: Tool-asset dry-run found twelve ready sources and no conflicts/missing targets; apply completed with twelve MIGRATED records and preserved SHA-256 values. Physical planner now reports 74 remaining data/tooling Python targets, with zero duplicate targets or destination conflicts.
+- RESULT: Non-code tooling residue is no longer mixed into the core data/scripts tree; path-sensitive Python remains deliberately pending for bootstrap repair.
+- CONTROLLING_BLOCKER: data_tooling_python_bootstrap_and_smoke_review
+- NEXT_ACTION: Add one shared repo-root bootstrap contract, repair path-sensitive Python in bounded categories, then migrate each category with legacy shims and direct smoke checks.
+- CLAIM_BOUNDARY: Organization and provenance traceability only; no equation, evidence class, physics status, or empirical claim changed.
