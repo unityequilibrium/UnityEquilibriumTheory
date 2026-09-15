@@ -15,7 +15,7 @@
   "controlling_blocker": null,
   "facade_error": null,
   "failed_modules": [],
-  "generated_at": "2026-09-15T10:21:38+00:00",
+  "generated_at": "2026-09-15T10:38:10+00:00",
   "generator": "docs/scripts/audit/audit_uet_core_imports.py",
   "imported_modules": [
     "docs.core.he4_normal_viscosity_kubo",

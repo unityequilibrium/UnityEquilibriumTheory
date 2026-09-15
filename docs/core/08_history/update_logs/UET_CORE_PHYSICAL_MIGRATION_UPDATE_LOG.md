@@ -708,4 +708,13 @@
 - Result: governance artifacts now reflect the reconciled worktree and current collection state; no physics status or claim boundary changed.
 - Controller: thermal dimensional inputs remain open; the reconciled energy-response artifact is no longer blocked by generator provenance drift.
 - Next action: select the next registered thermal source-lock or migration wave only after confirming its input and owner contract.
-- Notes: dimensional-bridge generated-date change, foundation artifacts, root guidance, book changes, and other unrelated worktree changes remain untouched; no push or PR was made.
+- Notes: dimensional-bridge generated-date change, foundation artifacts, root guidance, book changes, and other unrelated worktree changes remain untouched; no push or PR was made.## 2026-09-15 — Wave 6w thermal response contract migration
+
+- Scope: physically migrate the Topic 13 Phi_E reference-normalization and finite-temperature response-beta implementations into the canonical thermal lane.
+- Changed: added canonical implementations under `docs/core/03_lanes/thermal/`, retained root compatibility shims, exported the lanes through the thermal package without alias collisions, documented the members, and added canonical migration regression coverage.
+- Verification: targeted compatibility and dependent Topic 13 suite passed 12/12; physical planner reports 1,852 indexed files, 1,099 remaining move targets, 223 compatibility assets, zero duplicate targets, zero destination conflicts, and zero physics-status changes; organization registry check PASS.
+- Result: both source modules are `MIGRATED` with root shims as `MIGRATED_WITH_SHIM`; the thermal package has one canonical source for each implementation and legacy imports remain operational.
+- Controller narrowed: the organization/path migration is closed for this pair; scientific-link audit remains `BLOCKED_OPEN_SCIENTIFIC_LINKS` because broader family contracts and link fields are still incomplete.
+- Next action: continue only with a registered thermal source-lock or migration wave; keep the normalized Phi_E and beta_T13 lanes conditional and do not promote base-Phi, SI, transport, or empirical claims.
+- Claim impact: no equation meaning, unit status, evidence class, calibration, or physics claim changed.
+- Notes: generated governance refresh is staged separately from unrelated dimensional/foundation/root-guidance/book changes; no push or PR was made.
