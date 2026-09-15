@@ -472,3 +472,15 @@
 - Claim impact: no change; this wave changes organization, compatibility, classifier metadata, and evidence paths only. No thermal, EOS, transport, GR, quantum, particle, or downstream claim was promoted.
 - Workflow linkage: follows the Core Physical Migration v3 canonical-path, compatibility-shim, and generated-artifact provenance policy.
 - Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
+## 2026-09-15 — Wave 6o post-commit metadata consistency correction
+
+- Scope: migration control-plane synchronization after commit 494515d0a.
+- Corrected: regenerated the physical migration manifest/report and core governance audits after the Topic 13 support move; committed sources and package files are no longer counted as dirty work.
+- Verification: Topic 13 formal bridge, scale-dependency no-go, and closure-record audits remain PASS; physical migration, path, migration-enforcement, import, link, and test-collection audits remain PASS; post-commit collection reports 2,147 full / 1,321 canonical / 825 legacy tests with zero collection errors.
+- Result: planner reports 1,821 indexed files, 1,116 active move targets, 705 canonical/protected records, 206 compatibility assets, 2 unrelated dirty sources, and zero duplicate targets or destination conflicts.
+- Blocker narrowed: the Topic 13 support sources, canonical package, root shims, and audit evidence paths are now represented consistently in the committed organization control plane; physics status changes remain 0.
+- Still open: Topic 13 remains internal normalized/natural-unit support with independent Phi/SI calibration, physical transport matching, TTG observable closure, and foundation blockers unchanged; generated artifacts remain behind the separate migration controller.
+- Next controller: select the next registered family from dependency evidence; do not begin generated-artifact mass migration until generator, consumer, and provenance checkpoints are explicit.
+- Claim impact: no change; this pass changes only migration metadata and audit state.
+- Workflow linkage: closes the post-commit checkpoint required by Core Physical Migration v3 and the shared hardening/update-log standard.
+- Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
