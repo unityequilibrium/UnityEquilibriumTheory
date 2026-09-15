@@ -15,7 +15,43 @@ from .he4_svp_reference import (
     total_density_kg_m3,
 )
 
+from .thermal_observable_bridge import (
+    THERMAL_BRIDGE_STATUS,
+    THERMAL_MAPPING_STATUS,
+    ThermalObservableBridgeConfig,
+    ThermalObservableBridgeResult,
+    run_thermal_observable_bridge,
+)
+from .thermal_source_observable_map import (
+    NORMALIZED_TTG_OBSERVABLE,
+    THERMAL_CALIBRATION_SCHEMA_VERSION,
+    THERMAL_CALIBRATION_STATUSES,
+    THERMAL_SOURCE_MAP_SCHEMA_VERSION,
+    ThermalPhiCalibration,
+    normalized_ttg_signal,
+    quasi_temperature_difference_from_calibration,
+    quasi_temperature_difference_from_phi,
+    ttg_propagation_length,
+    ttg_wave_speed,
+    ttg_wavevector,
+)
 __all__ = [
+    "THERMAL_BRIDGE_STATUS",
+    "THERMAL_MAPPING_STATUS",
+    "ThermalObservableBridgeConfig",
+    "ThermalObservableBridgeResult",
+    "run_thermal_observable_bridge",
+    "NORMALIZED_TTG_OBSERVABLE",
+    "THERMAL_CALIBRATION_SCHEMA_VERSION",
+    "THERMAL_CALIBRATION_STATUSES",
+    "THERMAL_SOURCE_MAP_SCHEMA_VERSION",
+    "ThermalPhiCalibration",
+    "normalized_ttg_signal",
+    "quasi_temperature_difference_from_calibration",
+    "quasi_temperature_difference_from_phi",
+    "ttg_propagation_length",
+    "ttg_wave_speed",
+    "ttg_wavevector",
     "SOURCE_DOI",
     "SOURCE_SNAPSHOT_BYTES",
     "SOURCE_SNAPSHOT_SHA256",

@@ -616,3 +616,16 @@
 - Next controller: classify the next registered family from dependency evidence; keep generated-artifact mass migration behind its separate generator/consumer/provenance checkpoint.
 - Claim impact: no change; this pass changes only migration metadata and audit state.
 - Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
+
+## 2026-09-15 — Core physical migration v3 — Wave 6u thermal observable pair
+
+- Scope: canonical source migration for the normalized C-to-temperature bridge and TTG source-observable/calibration map; organization and dependency-path repair only.
+- Moved: thermal_observable_bridge.py and thermal_source_observable_map.py into docs/core/03_lanes/thermal/.
+- Added: thermal package exports, root compatibility shims, and canonical migration regression coverage.
+- Verification: targeted thermal migration/observable tests PASS (17); bridge audit PASS_WITH_BLOCKED_OPEN_MAPPING; source-map audit PASS_WITH_BLOCKED_DIMENSIONAL_AND_DATA_LANES; dimensional calibration audit PASS_WITH_BLOCKED_INDEPENDENT_CALIBRATION; core physical/path/migration-enforcement/import/link audits PASS; test collection 2,161 full / 1,335 canonical / 825 legacy with zero collection errors.
+- Result: the thermal observable layer now has one canonical implementation path while normalized TTG and Phi-to-kelvin calibration remain explicitly separated.
+- Blocker narrowed: the mapping contract and anti-fitting behavior are preserved through the canonical package and legacy shims; no dimensional Phi-to-kelvin coefficient was invented.
+- Still open: independent alpha_Phi_K calibration or dimensional Phi/energy anchor, locally archived row-level external data, heat-flux/entropy observable closure, holdout comparison, and foundation remain BLOCKED.
+- Controller: commit this scoped thermal move, refresh post-commit metadata, then classify the next registered family; generated-artifact mass migration remains behind its separate generator/consumer/provenance controller.
+- Claim impact: no change; this wave changes organization, exports, compatibility, and lane metadata only. No temperature, heat, mass, carrier, gravity, cosmology, galaxy, or particle claim was promoted.
+- Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
