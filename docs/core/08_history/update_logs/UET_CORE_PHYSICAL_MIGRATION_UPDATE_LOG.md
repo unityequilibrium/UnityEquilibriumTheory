@@ -524,3 +524,15 @@
 - Claim impact: no change; this wave changes organization, compatibility, dependency imports, and lane metadata only. No energy, thermal, gravity, cosmology, galaxy, or downstream claim was promoted.
 - Workflow linkage: follows the Core Physical Migration v3 canonical-path, compatibility-shim, and generated-artifact provenance policy.
 - Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
+## 2026-09-15 — Wave 6q post-commit metadata consistency correction
+
+- Scope: post-commit synchronization after aece6fb20.
+- Corrected: regenerated the migration plan/report, physical migration manifest, governance audits, and test-collection artifact after the persistence move; committed sources are no longer counted as dirty.
+- Verification: physical migration, canonical path, migration enforcement, import, link, and test-collection audits PASS; canonical imports 181/181; links 255/255; test collection 2,151 full / 1,325 canonical / 825 legacy with zero collection errors.
+- Result: planner reports 1,834 indexed files, 1,109 active move targets, 725 canonical/protected records, 213 compatibility assets, 2 unrelated dirty sources, zero duplicate targets, zero existing destination conflicts, and zero physics-status changes.
+- Blocker narrowed: persistence/resource-selection organization and metadata now agree after commit; normalized persistence remains a candidate comparator and physical cost/thermal mapping remain open.
+- Still open: normalized work is not SI energy, proxy entropy is not measured entropy production, no independent cost-scale/thermal observable source is accepted, and foundation remains BLOCKED.
+- Next controller: classify the next registered family from dependency evidence; keep generated-artifact mass migration behind its separate generator/consumer/provenance checkpoint.
+- Claim impact: no change; this pass changes only migration metadata and audit state.
+- Workflow linkage: closes the post-commit checkpoint required by Core Physical Migration v3 and the shared hardening/update-log standard.
+- Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
