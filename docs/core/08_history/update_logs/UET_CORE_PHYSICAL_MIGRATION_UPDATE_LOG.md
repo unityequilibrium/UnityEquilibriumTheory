@@ -693,4 +693,12 @@
 - Blocker narrowed: collection freshness and future audit overwrite safety are now explicit; the live Topic 13 energy-response artifact remains BLOCKED_REVIEW_REQUIRED because its prior aggregate provenance payload was already reduced before the guard was installed.
 - Next controller: human-approved reconciliation of the two excluded Topic 13 audit artifacts; do not use them for downstream evidence until the aggregate/focused ownership contract is resolved.
 - Claim impact: no change; this pass changes only migration metadata, collection evidence, and generator safety.
-- Notes: unrelated root/foundation/book changes and the two drifted Topic 13 artifacts remain untouched and unstaged; no push or PR was made.
+- Notes: unrelated root/foundation/book changes and the two drifted Topic 13 artifacts remain untouched and unstaged; no push or PR was made.## 2026-09-15 — Wave 6v-a approved Topic 13 artifact reconciliation
+
+- Scope: reconcile the Topic 13 energy-response audit after the user-approved preservation review.
+- Changed: promoted the repaired-generator candidate built from the committed aggregate artifact; restored the four source/provenance blocks, the aggregate evidence list, and the list-valued closure record without changing the physics claim.
+- Verification: preservation assertions passed; Topic 13 dependent regression suite passed 23/23; artifact status remains PASS_NAMED_BRANCH_OPEN_INPUTS; SHA-256 is $hash.
+- Result: the live energy-response artifact is cleanly reconciled and future same-schema regeneration is guarded against provenance loss.
+- Controller narrowed: the artifact ownership/reconciliation blocker is closed; the next controller is source-locking volumetric c_v and e0 and deriving or independently calibrating the base Phi-to-Phi_E map without target residuals or holdout access.
+- Claim impact: no physics, calibration, SI, empirical, or downstream promotion; Topic 13 remains blocked at open dimensional inputs.
+- Notes: the dimensional-bridge audit remains a separate uncommitted generated-date change; unrelated foundation, root-guidance, book, and other worktree changes remain untouched; no push or PR was made.
