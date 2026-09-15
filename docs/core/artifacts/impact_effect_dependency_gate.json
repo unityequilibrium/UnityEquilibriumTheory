@@ -1,7 +1,7 @@
 {
   "schema_version": "impact-effect-dependency-gate-v1",
   "artifact": "impact_effect_dependency_gate",
-  "generated_at": "2026-08-02",
+  "generated_at": "2026-09-15",
   "status": "BLOCKED",
   "local_verification_status": "PASS",
   "foundation_dependency": "BLOCKED",

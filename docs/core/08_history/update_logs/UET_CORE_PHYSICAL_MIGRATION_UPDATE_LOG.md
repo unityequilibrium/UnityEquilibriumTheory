@@ -562,3 +562,18 @@
 - Next controller: classify the next registered family from dependency evidence; keep generated-artifact mass migration behind its separate generator/consumer/provenance checkpoint.
 - Claim impact: no change; this pass changes only migration metadata and audit state.
 - Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
+
+## 2026-09-15 — Core physical migration v3 — Wave 6s impact/effect family
+
+- Scope: canonical source migration for the carrier-neutral impact/effect relation; classifier, package-entrypoint, and dependency-path repair only.
+- Moved: uet_impact_effect.py into docs/core/03_lanes/carrier_observer/.
+- Added: carrier/observer impact-effect exports, a root compatibility shim, and canonical migration regression coverage.
+- Repaired: the migration classifier now assigns the explicit impact/effect source to the carrier/observer lane instead of the unassigned review target.
+- Verification: impact/effect migration and behavior tests PASS (19); impact/effect audit PASS with dependency BLOCKED; physical migration, path, migration-enforcement, import, link, and test-collection audits PASS; post-move collection reports 2,151 full / 1,325 canonical / 825 legacy tests with zero collection errors.
+- Result: impact, optional carrier, derived effect, receiver feedback, generated trace, and observer record remain separate layers; the root import preserves class identity.
+- Blocker narrowed: carrier-neutral impact/effect now has one canonical implementation path without turning R_gen into an independent field or particle identity.
+- Still open: carrier-specific conservation, SI units, detector/observable mapping, physical memory derivation, UET source-to-carrier law, and foundation remain BLOCKED.
+- Controller: commit this scoped impact/effect move, refresh post-commit metadata, then classify the next registered family; generated-artifact mass migration remains behind its separate generator/consumer/provenance controller.
+- Claim impact: no change; this wave changes organization, exports, compatibility, and lane metadata only. No carrier identity, mass, gravity, cosmology, galaxy, or particle claim was promoted.
+- Workflow linkage: follows the Core Physical Migration v3 canonical-path, compatibility-shim, and impact/effect layer-separation policy.
+- Notes: unrelated root/foundation/book changes remain untouched and unstaged; no push or PR was made.
