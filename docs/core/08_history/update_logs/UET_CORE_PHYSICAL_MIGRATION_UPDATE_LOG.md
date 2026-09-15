@@ -684,3 +684,13 @@
 - Next controller: commit the generator-preservation repair and synchronized governance metadata, then obtain human-approved reconciliation for the excluded topic13 audit artifacts before any downstream evidence use.
 - Claim impact: no change; no equation, calibration, SI, or empirical status was promoted.
 - Notes: the two drifted topic13 audit artifacts, foundation files, root guidance, and book changes remain untouched and unstaged; no push or PR was made.
+## 2026-09-15 — Wave 6v-a post-commit metadata consistency correction
+
+- Scope: post-commit synchronization after 776761f7d.
+- Corrected: regenerated the migration plan/report, physical migration manifest, governance audits, and standalone test-collection artifact after the generator-preservation repair packet; committed repair files are no longer counted as dirty.
+- Verification: physical migration, canonical path, migration enforcement, import, link, and standalone test-collection audits PASS; canonical imports 181/181; links 255/255; test collection 2,166 full / 1,340 canonical / 825 legacy / 2,165 excluding the quarantined parameter-engine test, with zero collection errors.
+- Result: planner reports 1,849 indexed files, 1,101 active move targets, 748 canonical/protected records, 221 compatibility assets, 6 remaining dirty source records, zero duplicate targets, zero existing destination conflicts, and zero physics-status changes.
+- Blocker narrowed: collection freshness and future audit overwrite safety are now explicit; the live Topic 13 energy-response artifact remains BLOCKED_REVIEW_REQUIRED because its prior aggregate provenance payload was already reduced before the guard was installed.
+- Next controller: human-approved reconciliation of the two excluded Topic 13 audit artifacts; do not use them for downstream evidence until the aggregate/focused ownership contract is resolved.
+- Claim impact: no change; this pass changes only migration metadata, collection evidence, and generator safety.
+- Notes: unrelated root/foundation/book changes and the two drifted Topic 13 artifacts remain untouched and unstaged; no push or PR was made.
