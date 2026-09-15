@@ -88,3 +88,14 @@
 - CONTROLLING_BLOCKER: `pending_families_have_no_canonical_formula_unit_verifier_artifact_chain` remains active for the unresolved groups; the trace family itself remains blocked for continuum causal-support closure, dimensional measurement mapping, and external physical validation.
 - NEXT_ACTION: Link one further bounded family only when its existing formula, verifier, artifact, and claim boundary can be generated without inventing evidence; preserve `R` as a derived history observable with no automatic feedback into physical dynamics.
 - CLAIM_BOUNDARY: This wave establishes organization traceability for the existing normalized derived-trace candidate. It does not establish a physical information field, energy reservoir, universal carrier, SI observable, continuum Green-function derivation, or empirical validation.
+
+
+### 2026-09-15 — Wave 6ze: physical test-surface migration
+
+- STATUS: PASS_WITH_REVIEW_REQUIRED
+- WHAT_CHANGED: Physically moved the remaining 295 legacy Python test/support files into docs/core/05_tests by behavior, bringing the migrated legacy test surface to 500 records. Relocated the package marker to history and sandbox residue to review; no old-path Python wrappers were added.
+- VERIFICATION: Test migration audit PASS with 500 migrated, zero missing files, zero hash mismatches, zero stale wrappers, and zero physics-status changes. Canonical collection audit PASS with 2,169 collected tests and zero collection errors; all 525 canonical Python files parse successfully; targeted migration regressions passed.
+- RESULT: docs/core/test now contains no Python test implementation. Its two non-Python assets remain explicitly outside this wave for a separate provenance-aware asset migration.
+- CONTROLLING_BLOCKER: test_asset_provenance_and_legacy_data_boundary
+- NEXT_ACTION: Migrate the remaining non-Python test assets with source hashes and canonical-path records, then re-run physical planning before the data/tooling wave.
+- CLAIM_BOUNDARY: Organization and test-collection compatibility only; no equation, evidence class, physics status, or empirical claim changed.

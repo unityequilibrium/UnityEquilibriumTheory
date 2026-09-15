@@ -8,10 +8,13 @@ Owner: EVIDENCE
 
 ## Current migration checkpoint
 
-- 205 test/support files are canonical under this area.
-- 295 legacy files remain quarantined until path, package-import, boundary, or
-  sandbox review is complete.
-- The collection audit records 2,105 collected tests with no duplicate
-  collection; collection status is separate from physics evidence.
-- Do not add old-path Python wrappers for moved tests. Use the migration
-  manifest and repair the remaining source contracts before the next move.
+- 500 legacy test/support records are physically migrated into this area; the
+  canonical tree currently contains 525 Python files including pre-existing
+  canonical tests.
+- The collection audit records 2,169 collected tests with no collection error;
+  collection status is separate from physics evidence.
+- The `docs/core/test/` boundary contains no Python test implementation.
+  Its remaining non-Python assets are handled by a separate provenance-aware
+  migration wave.
+- Do not add old-path Python wrappers for moved tests. The migration manifest
+  and collection audit are the sources of truth for this wave.

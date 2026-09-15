@@ -1,9 +1,8 @@
 """Check pytest collection after the physical core-test migration.
 
-The full collection is intentionally reported separately from a collection that
-excludes the already-quarantined parameter-engine test.  A collection failure
-must remain visible; this script never turns an exclusion into a full-suite
-pass.
+The full collection, canonical collection, and legacy-boundary collection are
+reported separately. A collection failure must remain visible; this script
+never turns an exclusion into a full-suite pass.
 """
 
 from __future__ import annotations
@@ -26,7 +25,7 @@ COLLECTED_PATTERN = re.compile(r"(?P<count>\d+)\s+tests? collected")
 ERROR_PATTERN = re.compile(r"(?P<count>\d+)\s+errors?", re.IGNORECASE)
 
 
-def summarize(label: str, args: list[str]) -> dict[str, Any]:
+def summarize(label: str, args: list[str], allow_empty: bool = False) -> dict[str, Any]:
     result = subprocess.run(
         [sys.executable, "-m", "pytest", "--collect-only", "-q", *args],
         cwd=ROOT,
@@ -43,12 +42,13 @@ def summarize(label: str, args: list[str]) -> dict[str, Any]:
     ]
     return {
         "label": label,
-        "status": "PASS" if result.returncode == 0 else "BLOCKED",
+        "status": "PASS" if result.returncode == 0 or (allow_empty and result.returncode == 5 and collected_match is None) else "BLOCKED",
         "returncode": result.returncode,
         "collected": int(collected_match.group("count")) if collected_match else None,
         "errors": int(error_match.group("count")) if error_match else 0,
         "diagnostic_lines": error_lines[:8],
         "paths": args,
+        "empty_expected": allow_empty,
     }
 
 
@@ -57,19 +57,15 @@ def build() -> dict[str, Any]:
         "full_legacy_plus_canonical",
         ["docs/core/test", "docs/core/05_tests"],
     )
-    without_quarantined_parameter_engine = summarize(
-        "excluding_quarantined_parameter_engine",
-        [
-            "docs/core/test",
-            "docs/core/05_tests",
-            "--ignore",
-            "docs/core/test/test_parameter_engine.py",
-        ],
+    combined = summarize(
+        "combined_legacy_plus_canonical",
+        ["docs/core/test", "docs/core/05_tests"],
     )
     canonical_only = summarize("canonical_05_tests_only", ["docs/core/05_tests"])
     legacy_only = summarize(
-        "retained_legacy_tests_without_parameter_engine",
-        ["docs/core/test", "--ignore", "docs/core/test/test_parameter_engine.py"],
+        "retained_legacy_boundary",
+        ["docs/core/test"],
+        allow_empty=True,
     )
     checks = [
         {
@@ -83,20 +79,20 @@ def build() -> dict[str, Any]:
             "observed": canonical_only["status"],
         },
         {
-            "check_id": "retained_legacy_collection_without_quarantined_test",
+            "check_id": "legacy_boundary_collection_is_expected_empty",
             "status": "PASS" if legacy_only["status"] == "PASS" else "FAIL",
             "observed": legacy_only["status"],
         },
         {
-            "check_id": "combined_non_quarantined_collection_has_no_error",
-            "status": "PASS" if without_quarantined_parameter_engine["status"] == "PASS" else "FAIL",
-            "observed": without_quarantined_parameter_engine["status"],
+            "check_id": "combined_collection_has_no_collection_error",
+            "status": "PASS" if combined["status"] == "PASS" else "FAIL",
+            "observed": combined["status"],
         },
         {
             "check_id": "full_suite_blocker_is_not_hidden",
             "status": "PASS" if full["status"] == "BLOCKED" else "PASS",
             "observed": full["status"],
-            "note": "A blocked full collection is expected while quarantined path-sensitive tests remain unresolved.",
+            "note": "The legacy boundary is expected to be empty after physical migration; canonical collection remains the controlling check.",
         },
     ]
     return {
@@ -108,11 +104,11 @@ def build() -> dict[str, Any]:
         "status": "PASS" if canonical_only["status"] == "PASS" and legacy_only["status"] == "PASS" else "BLOCKED",
         "controlling_blocker": None
         if full["status"] == "PASS"
-        else "quarantined_path_sensitive_test_collection",
+        else "canonical_test_collection",
         "checks": checks,
         "collections": {
             "full": full,
-            "excluding_quarantined_parameter_engine": without_quarantined_parameter_engine,
+            "combined_legacy_plus_canonical": combined,
             "canonical_only": canonical_only,
             "legacy_only": legacy_only,
         },

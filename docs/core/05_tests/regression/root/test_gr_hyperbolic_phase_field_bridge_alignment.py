@@ -7,7 +7,7 @@ import inspect
 import json
 from pathlib import Path
 
-from docs.core.core_paths import canonical_existing_path
+from docs.core.core_paths import canonical_existing_path, repo_root
 
 from docs.core.uet_hyperbolic_phase_field_bridge import (
     HYPERBOLIC_PHASE_FIELD_BRIDGE_CONTROLLER,
