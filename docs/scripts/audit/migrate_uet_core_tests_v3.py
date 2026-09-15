@@ -38,7 +38,7 @@ from docs.core.core_paths import canonical_path_for  # noqa: E402
 
 
 PATH_SENSITIVE = re.compile(
-    r"(__file__|parents\s*\[|docs/core/test|c:\\Users\\santa\\Desktop\\uet_harness|os\.path\.dirname\(__file__\)|PROJECT_ROOT|REPO_ROOT)"
+    r"(__file__|parents\s*\[|c:\\Users\\santa\\Desktop\\uet_harness|os\.path\.dirname\(__file__\))"
 )
 EXCLUDED_PARTS = {"__pycache__", ".git"}
 

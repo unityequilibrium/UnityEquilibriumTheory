@@ -775,4 +775,10 @@
 - Changed: replaced hard-coded/path-derived bootstraps with shared helpers; made parameter_engine load through canonical/fallback resolution; routed the old package marker to history and sandbox_emergent.py to review; narrowed the classifier so ordinary Path(value) and explicit shared sys.path setup are not false positives.
 - Verification: targeted AST parse PASS for all edited files; dry-run reports 287 migration-ready, 205 already migrated, zero duplicate targets, zero existing target conflicts, and 8 dirty-source holds awaiting this commit.
 - Controller: commit this repair packet, then apply the complete test move; remaining quarantine should be zero unless a new source-level issue appears.
-- Claim impact: none; path/package organization only. Physics statuses and test assertions are unchanged.
+- Claim impact: none; path/package organization only. Physics statuses and test assertions are unchanged.## 2026-09-15 — Wave 6zd final test bootstrap cleanup
+
+- Scope: remove the last unresolved file-location bootstrap from the test migration classifier.
+- Changed: the validation Unity test now uses the shared repository resolver for both local imports; the classifier no longer treats shared-helper names or intentional legacy-path resolver inputs as unresolved path bootstraps.
+- Verification: py_compile PASS for the edited test and migration tool; dry-run reports 294 ready, 205 migrated, zero duplicate targets/conflicts, and one dirty-source hold for the edited validation file.
+- Controller: commit this small repair, then apply the full test move; the remaining hold is only the dirty-source guard.
+- Claim impact: none; organization/path compatibility only.
