@@ -1,6 +1,6 @@
 {
   "canonical_path_authority": "docs/core/core_paths.py",
-  "generated_at": "2026-09-15T02:54:42+00:00",
+  "generated_at": "2026-09-15T02:59:33+00:00",
   "generator": "docs/scripts/audit/plan_uet_core_physical_migration.py",
   "migration_id": "UET-CORE-PHYSICAL-MIGRATION-V3",
   "physical_move_performed": false,
@@ -375,7 +375,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_imports_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "db14352a18350f2d9125b8a8ddbef52d12dd551202afa8e889f2636486fe742e",
+      "sha256_before": "ee405731fb3fb7d9052f334a70ad4cd67d25da63a8177a9ce609d77521758831",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -408,7 +408,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_links_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "4a00e44093b741ac7f8427286af444425bdafa76bc93b01d715d91f23df8c7ab",
+      "sha256_before": "45989e2f8eff2b4691985d31b4127f769a836277c04e80457ff8e64655089440",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -441,7 +441,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_migration_enforcement_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "b11c52e55b786e6a24d4a0de7ed7e02f1dcd2bddccbc844015d25397391e46ab",
+      "sha256_before": "7b841182e66fc4558d6cc39c7761d03a25f615c7be13d581a21a7d052e3390c5",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -475,7 +475,7 @@
       "rollback_path": "docs/core/00_governance/UET_CORE_MIGRATION_ENFORCEMENT_REPORT.md",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_after": null,
-      "sha256_before": "9811d49ae4e190fd926a6f8b7663abd10ea674f51774262959e8170fda27923d",
+      "sha256_before": "7ca3ff424d47e04f2e0c1d5d4f101c82be6c2fde2dc2379d711b6b8d5be6f99f",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [
         "ORG"
@@ -510,7 +510,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_paths_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "29a28661eabdbc03d072c3271524401c758ef36dc86eb78d4927f3ae00bb3d68",
+      "sha256_before": "73aa3fb3d1396a2c33086d12966ec1bb0eba176a7a93e8a89492d366092e026a",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -543,7 +543,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_physical_migration_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "652bff1aafb050b12162756c6f09573ff8ae7e4da738558fde3a47dc079729e5",
+      "sha256_before": "f790b3801c6577e7877b4319b17b77a893ea23ae9bcf519de495d7fea4222ed5",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -576,7 +576,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "282580a51d1ccc8751078122bb603759bacc82044bf79a428b1d2c7cef57655d",
+      "sha256_before": "6f6f6066f97bd90cd02e3e85e7e3e7c6165c264240ebf89f18730a055d2530d8",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -610,7 +610,7 @@
       "rollback_path": "docs/core/00_governance/UET_CORE_PHYSICAL_MIGRATION_REPORT.md",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_after": null,
-      "sha256_before": "b041f011d1f093f35432f7f3d7c775e291969d947dfbb8c2433b227249981775",
+      "sha256_before": "30c3e75c5a08a66a5176948001f4fdf741c09b6f137959387c89d67cf7a76de8",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [
         "ORG"
@@ -780,7 +780,7 @@
       "rollback_path": "docs/core/00_governance/uet_core_test_collection_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "fb0b88a8f225335881fce0cf30b447fc96fa92fffeccb77b6919541b8e9072c0",
+      "sha256_before": "4eb1be1be0352a19613c84296b987d21cab62a974d2d8fcb399a2059b331795a",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -3695,7 +3695,7 @@
       "collision_key": "docs/core/03_lanes/mass_density/__init__.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/03_lanes/mass_density/__init__.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": "lane.mass_density",
       "evidence_status": "INTERNAL",
@@ -3727,7 +3727,7 @@
       "collision_key": "docs/core/03_lanes/mass_density/mass_density_3d.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/03_lanes/mass_density/mass_density_3d.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -3765,7 +3765,7 @@
       "collision_key": "docs/core/03_lanes/mass_density/mass_density_amplitude.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/03_lanes/mass_density/mass_density_amplitude.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -3803,7 +3803,7 @@
       "collision_key": "docs/core/03_lanes/mass_density/mass_density_correspondence.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/03_lanes/mass_density/mass_density_correspondence.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -3841,7 +3841,7 @@
       "collision_key": "docs/core/03_lanes/mass_density/mass_density_dimensional.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/03_lanes/mass_density/mass_density_dimensional.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [
         "EVIDENCE"
       ],
@@ -3877,7 +3877,7 @@
       "collision_key": "docs/core/03_lanes/mass_density/readme.md",
       "compatibility_mode": "none",
       "current_path": "docs/core/03_lanes/mass_density/README.md",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": "lane.mass_density",
       "evidence_status": "INTERNAL",
@@ -9132,7 +9132,7 @@
       "collision_key": "docs/core/05_tests/regression/root/test_mass_density_canonical_migration.py",
       "compatibility_mode": "none",
       "current_path": "docs/core/05_tests/regression/root/test_mass_density_canonical_migration.py",
-      "dirty_source": true,
+      "dirty_source": false,
       "downstream_dependencies": [],
       "equation_family_or_lane": "core_test_surface",
       "evidence_status": "INTERNAL",
@@ -17096,7 +17096,7 @@
       "rollback_path": "docs/core/08_history/update_logs/UET_CORE_PHYSICAL_MIGRATION_UPDATE_LOG.md",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
-      "sha256_before": "481d8790404ccb68f5741927d32672582ded185c4dde995c257d8a2b224a7f4d",
+      "sha256_before": "f40ca1c34cd59908c9d4dc40e83ef06e9a5e64d75303a34e2e478d6bc221b314",
       "status_source": "docs/core/artifacts/uet_foundation_dependency_gate.json",
       "upstream_dependencies": [],
       "verifier_paths": []
@@ -64294,7 +64294,7 @@
       "redirect_or_shim": 210,
       "root_python_shim": 137
     },
-    "dirty_sources": 9,
+    "dirty_sources": 2,
     "duplicate_targets": {},
     "existing_target_conflicts": [],
     "files_migrated_in_wave": 0,
