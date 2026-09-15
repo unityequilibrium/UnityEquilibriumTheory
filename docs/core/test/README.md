@@ -1,6 +1,7 @@
-# Legacy test compatibility boundary
+# Compatibility redirect
 
-All Python test implementations have been physically migrated to
-docs/core/05_tests by behavior. This directory is retained as a legacy
-compatibility boundary and for non-Python assets awaiting their own audited
-migration; duplicate test implementations must not be restored here.
+> This path is retained as a legacy discovery boundary.
+
+Canonical source: [docs/core/05_tests/regression/root/README.md](05_tests/regression/root/README.md)
+
+Do not store test data or source prose at this legacy path.
