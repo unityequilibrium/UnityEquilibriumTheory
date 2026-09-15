@@ -44,7 +44,7 @@ def main() -> int:
     sk_contract = thermal_sk_kms_entropy_contract()
     heat_contract = covariant_entropy_heat_flux_balance_contract()
     evidence_paths = [
-        ROOT / "docs/core/t13_formal_thermodynamic_bridge_integration.py",
+        ROOT / "docs/core/03_lanes/topic13_support/t13_formal_thermodynamic_bridge_integration.py",
         ROOT / "docs/core/thermal_collective_response_eos.py",
         ROOT / "docs/core/thermal_sk_kms_entropy_contract.py",
         ROOT / "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py",

@@ -30,7 +30,7 @@ def evidence_refs() -> list[dict[str, str]]:
         "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json",
         "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
         "docs/core/artifacts/t13_beta_action_normalized_correspondence_no_go.json",
-        "docs/core/t13_thermal_bridge_scale_dependency.py",
+        "docs/core/03_lanes/topic13_support/t13_thermal_bridge_scale_dependency.py",
     ]
     return [
         {"path": path, "sha256": sha256(path)}

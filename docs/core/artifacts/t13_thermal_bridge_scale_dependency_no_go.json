@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-thermal-bridge-scale-dependency-no-go-v1",
   "artifact": "t13_thermal_bridge_scale_dependency_no_go",
-  "generated_at": "2026-08-21",
+  "generated_at": "2026-09-15",
   "status": "PASS_SCOPED_THERMAL_BRIDGE_SCALE_DEPENDENCY_NO_GO",
   "major_result": {
     "major_result_id": "T13_THERMAL_BRIDGE_SCALE_DEPENDENCY_NO_GO",
@@ -56,7 +56,7 @@
         "sha256": "0c3dcff4f3520849f48f64043d52d3f735f95cabb96e606b1a7a1f65ce3d48e6"
       },
       {
-        "path": "docs/core/t13_thermal_bridge_scale_dependency.py",
+        "path": "docs/core/03_lanes/topic13_support/t13_thermal_bridge_scale_dependency.py",
         "sha256": "8181f9ec4a9f16b42f48c6c174c9aee84045fb489b76b0caac9292fcfe48918a"
       }
     ],

@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-closure-record-contract-audit-v1",
   "artifact": "t13_closure_record_contract_audit",
-  "generated_at": "2026-08-25",
+  "generated_at": "2026-09-15",
   "status": "PASS_T13_CLOSURE_RECORD_CONTRACT_OPEN",
   "major_result": {
     "major_result_id": "T13_CLOSURE_RECORD_CONTRACT",
@@ -32,7 +32,7 @@
     "observable": "Topic 13 closure-input readiness",
     "data_role": "INTERNAL_CONTRACT_NOT_CALIBRATION",
     "evidence_artifacts": [
-      "docs/core/topic13_closure_record_contract.py",
+      "docs/core/03_lanes/topic13_support/topic13_closure_record_contract.py",
       "docs/core/artifacts/t13_closure_record_contract_audit.json"
     ],
     "verification_status": "PASS_T13_CLOSURE_RECORD_CONTRACT_OPEN",

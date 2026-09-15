@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-formal-thermodynamic-bridge-integration-v1",
   "artifact": "t13_formal_thermodynamic_bridge_integration_audit",
-  "generated_at": "2026-08-22",
+  "generated_at": "2026-09-15",
   "status": "PASS_FORMAL_T13_THERMODYNAMIC_BRIDGE_INTEGRATION",
   "major_result": {
     "major_result_id": "T13_FORMAL_THERMODYNAMIC_BRIDGE_INTEGRATION",
@@ -26,7 +26,7 @@
       "kms_relation": "N(omega) = coth(beta_th omega / 2) * 2 Im D_R(omega)",
       "entropy_current": "J_S^mu = s u^mu + q^mu / T",
       "entropy_production": "nabla_mu J_S^mu = q_perp^2/(kappa T^2) + X_A L^(AB) X_B >= 0",
-      "heat_flux": "q^mu=kappa_natural*X_T^mu",
+      "heat_flux": "q^mu=K^(mu nu)*X_T_nu; K is the full transverse response tensor",
       "dissipative_balance": "nabla_mu T_matter^(mu nu) = Q^nu; nabla_mu T_UET^(mu nu) = -Q^nu"
     },
     "units": {
@@ -42,7 +42,7 @@
     "data_role": "INTERNAL_FORMAL_INTEGRATION_NO_SOURCE_ROWS_NO_HOLDOUT",
     "evidence_artifacts": [
       {
-        "path": "docs/core/t13_formal_thermodynamic_bridge_integration.py",
+        "path": "docs/core/03_lanes/topic13_support/t13_formal_thermodynamic_bridge_integration.py",
         "sha256": "cc45b7fd41d550767b6bae00bcc189234374075f45ae81bfe8dda118391c5c8e",
         "summary": {
           "role": "implementation_or_prior_lane",
@@ -67,7 +67,7 @@
       },
       {
         "path": "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py",
-        "sha256": "89171426c2209521a16ca99e79ef4312cc9d3a987991692cc40ac9235a2fc251",
+        "sha256": "566d6a57a377269a0d551189341b4550e4da9ee8fa711ab04b7d4785bbcff209",
         "summary": {
           "role": "implementation_or_prior_lane",
           "status": "HASH_LOCKED"
@@ -160,11 +160,13 @@
         "conservative_projection": "b_i^perp=P*b_i with P preserving charge and four-momentum null modes",
         "finite_cutoff_response": "K_ab=(b_a^perp)^T*L_cont^+*b_b^perp",
         "covariant_thermal_force": "X_T^mu=-Delta^(mu nu)*(nabla_nu T+T*a_nu)/T",
-        "covariant_heat_flux": "q^mu=kappa_natural*X_T^mu",
+        "covariant_heat_flux": "q^mu=K^(mu nu)*X_T_nu; K is the full transverse response tensor",
         "entropy_current": "J_S^mu=s*u^mu+q^mu/T",
-        "entropy_production": "sigma=X_T_mu*q^mu=kappa_natural*X_T_mu*X_T^mu>=0",
-        "kinetic_entropy_balance": "delta_f=L_cont^+*b_a^perp*X^a; delta_f^T*L_cont*delta_f=X^a*K_ab*X^b",
-        "conserved_dissipative_balance": "I_A^T*L_cont*delta_f=0 for charge, energy, and momentum moments"
+        "entropy_production": "sigma=X_T_mu*q^mu/T=X_T_mu*K^(mu nu)*X_T_nu/T>=0",
+        "scalar_summary": "kappa_natural=trace(K_spatial)/3 is a summary, not the tensor used in the state response",
+        "kinetic_entropy_balance": "z=L_cont^+*b_a^perp*X^a; sigma=z^T*L_cont*z/T=X^a*K_ab*X^b/T",
+        "entropy_metric": "w_i=m_i*f_i*(1+f_i)/T; delta_f_i=f_i*(1+f_i)*psi_i/T; z_i=sqrt(w_i)*psi_i; delta2(-s)=z^T*z/(2*T)",
+        "conserved_dissipative_balance": "I_A^T*L_cont*z=0 for charge, energy, and momentum moments"
       },
       "unit_contract": {
         "unit_lane": "natural",
@@ -180,6 +182,20 @@
         "R_obs": "separate observer record"
       },
       "derivation_class": "action-derived finite-temperature quasiparticle EOS plus finite-cutoff conservative collision operator, Landau moment subtraction, pseudoinverse response, and covariant projector lift",
+      "normalization_revision": "SUSCEPTIBILITY_ENTROPY_METRIC_V2",
+      "frame_current_contract": {
+        "invariant_heat": "q_heat=Q-h*V; Q_L=0 to projected precision",
+        "canonical_entropy_current": "S_L=s*u_L+(Q-mu*V)/T",
+        "linear_frame_map": "u_E=u_L+V/n+O(V^2); S_E=s*u_E+q_heat/T equals S_L to first order",
+        "legacy_entropy_current_contravariant": "Formal s*u+q_heat/T retained for compatibility; NOT canonical Landau entropy current",
+        "new_canonical_output": "frame_current_decomposition.landau_entropy_current_contravariant",
+        "finite_velocity_scope": "Linear coefficients only; unit driving may yield large formal V/n and is not a physical velocity state"
+      },
+      "interpretation_blockers": [
+        "material_charge_and_nonlinear_frame_map",
+        "action_configuration_correspondence",
+        "physical_transport_and_microscopic_SK_matching"
+      ],
       "observable": "local-rest-frame formal heat-current response, covariant entropy-production scalar, and conserved charge/energy/momentum dissipative balance",
       "data_role": "ACTION_DERIVED_INTERNAL_FORMAL_RESPONSE_NO_SOURCE_ROWS_NO_HOLDOUT",
       "included": {
