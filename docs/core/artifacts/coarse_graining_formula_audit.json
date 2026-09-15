@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "coarse_graining_formula_audit",
-  "generated_at": "2026-08-09T03:34:28.258765+00:00",
+  "generated_at": "2026-09-15T01:54:43.436768+00:00",
   "status": "WARN",
   "relations": [
     {
@@ -10,7 +10,7 @@
       "derivation_class": "declared coarse-graining operator",
       "unit_lane": "lane_specific",
       "proof_status": "mean preservation and many-to-one behavior verified",
-      "code_path": "docs/core/uet_coarse_graining.py"
+      "code_path": "docs/core/01_contracts/ontology/uet_coarse_graining.py"
     },
     {
       "formula_id": "UET-CG-SCALE-002",
@@ -18,7 +18,7 @@
       "derivation_class": "descriptive finite-difference audit",
       "unit_lane": "parameter_specific",
       "proof_status": "not an RG beta function",
-      "code_path": "docs/core/uet_coarse_graining.py"
+      "code_path": "docs/core/01_contracts/ontology/uet_coarse_graining.py"
     }
   ],
   "open_items": [

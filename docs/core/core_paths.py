@@ -98,6 +98,8 @@ def _test_role(name: str, relative: str) -> str:
 
 def _python_area(stem: str) -> str:
     lower = stem.lower()
+    if lower == "uet_coarse_graining":
+        return "01_contracts/ontology"
     if lower.startswith(("uet_o2_", "standard_o2")):
         return "02_equations/o2"
     if lower.startswith(("uet_covariant", "covariant_")):

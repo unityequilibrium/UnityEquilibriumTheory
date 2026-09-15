@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "coarse_graining_verification",
-  "generated_at": "2026-08-09T03:34:28.258765+00:00",
+  "generated_at": "2026-09-15T01:54:43.436768+00:00",
   "audit_status": "PASS",
   "research_status": "INTERNAL_DECLARED_FIELD_TO_COLLECTIVE_MAP_ONLY",
   "metrics": {
