@@ -13,6 +13,9 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from docs.core.core_paths import canonical_existing_path  # noqa: E402
+QUANTUM_INTERPRETATIONS_SOURCE = canonical_existing_path(ROOT / ("docs/core/" + "uet_quantum_interpretations.py")).relative_to(ROOT).as_posix()
+
 from docs.core.uet_quantum_interpretations import (
     compare_empirical_predictions, interpretation_contract,
 )
@@ -67,7 +70,7 @@ def build_artifacts() -> tuple[dict, dict, dict]:
         "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json", "status": "CANDIDATE_ENTRY_PENDING_MERGE",
         "equation_entries": [{
             "equation_id": "uet.main_theory.quantum_interpretation_adapters", "version": "interpretation-adapters-v1",
-            "classification": "observable_definition", "relation_or_code_path": "docs/core/uet_quantum_interpretations.py",
+            "classification": "observable_definition", "relation_or_code_path": QUANTUM_INTERPRETATIONS_SOURCE,
             "variables": {"rho_A": "agent-indexed probability assignment", "relation_SR": "system-reference metadata", "p_o": "shared operational Born probabilities"},
             "mathematical_role": "metadata views over one operational probability contract",
             "standard_physics_counterpart": "QBism, relational QM, and operational QM comparison",
@@ -77,7 +80,7 @@ def build_artifacts() -> tuple[dict, dict, dict]:
             "assumptions": ["same preparation and instrument", "interpretations add no dynamics"],
             "symmetry_and_conservation": "empirical prediction invariance",
             "limiting_cases": ["changing agent or reference labels leaves probabilities unchanged"],
-            "implementation_paths": ["docs/core/uet_quantum_interpretations.py"],
+            "implementation_paths": [QUANTUM_INTERPRETATIONS_SOURCE],
             "verifier_paths": ["docs/scripts/audit/audit_uet_quantum_interpretations.py", "docs/core/artifacts/quantum_interpretation_invariance_verification.json", "docs/core/test/test_uet_quantum_interpretations.py"],
             "evidence_class": "INTERNAL_FORMAL", "proof_status": "finite-dimensional invariance tests pass",
             "downstream_dependencies": ["uet.main_theory.operational_quantum_measurement", "uet.main_theory.detector_observables"],
