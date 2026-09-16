@@ -110,4 +110,3 @@ compatibility shim และ targeted tests ครบก่อนลบ path เ
 
 การลดจำนวนไฟล์ไม่ใช่เป้าหมายหลัก เป้าหมายคือทำให้ทุกไฟล์มี owner, role, source/status
 และ next action ที่ตรวจได้
-
