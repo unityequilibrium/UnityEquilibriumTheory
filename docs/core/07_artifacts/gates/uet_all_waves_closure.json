@@ -72,7 +72,7 @@
         {
           "path": "docs/core/07_artifacts/correspondence/matter_space_ontology_contract.json",
           "exists": true,
-          "sha256": "c460094a30d7ae72f1ccc4c5c335e3fe402d99fe3120d1156bb5d52810ff2e99",
+          "sha256": "9ef6d7a742e8c32b30d039623edcb38c71af021e0f102cce91ff0b4209ac0741",
           "status": "PASS",
           "controller": "not_declared"
         },
@@ -263,7 +263,7 @@
         {
           "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_noether_phase_field_dependency_gate.json",
           "exists": true,
-          "sha256": "376a37801708eb36720618c6812f92d629968d1e1c815e4d35bfbaeb05c69638",
+          "sha256": "9e0f03db29786a8000782c8f82ef423e180d87223a9c2ba535f5a802db3f3743",
           "status": "BLOCKED",
           "controller": "topic_0_11_signed_noether_charge_eos_transport_matching_missing"
         }
@@ -288,7 +288,7 @@
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json",
           "exists": true,
-          "sha256": "a360eea9e257b7846eabaebeab6f20c00b658da7b432aec7c1e94d9449c041a4",
+          "sha256": "509746deb1fc74ef81ff04cf5fdda91055a7e73dbb2b3b6a5de804c3f8786596",
           "status": "SIMULATION_ONLY",
           "controller": "core_prearrival_leakage"
         },

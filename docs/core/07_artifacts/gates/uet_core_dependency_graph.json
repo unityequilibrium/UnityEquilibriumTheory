@@ -1,6 +1,6 @@
 {
   "artifact": "uet_core_dependency_graph",
-  "edge_count": 10280,
+  "edge_count": 10264,
   "edges": [
     {
       "edge_type": "path_reference",
@@ -6257,18 +6257,6 @@
     {
       "edge_type": "path_reference",
       "from": "docs/core/00_governance/uet_core_artifact_bulk_migration_v3.json",
-      "reference": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz",
-      "to": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_artifact_bulk_migration_v3.json",
-      "reference": "docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.npz",
-      "to": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_artifact_bulk_migration_v3.json",
       "reference": "docs/core/07_artifacts/topic13/t13_mp48_phi_e_dimensional_comparator_audit.json",
       "to": "docs/core/07_artifacts/topic13/t13_mp48_phi_e_dimensional_comparator_audit.json"
     },
@@ -8581,12 +8569,6 @@
       "from": "docs/core/00_governance/uet_core_artifact_bulk_migration_v3.json",
       "reference": "docs/core/artifacts/gr_closed_limit_verification.json",
       "to": "docs/core/07_artifacts/verification/gr_closed_limit_verification.json"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_artifact_bulk_migration_v3.json",
-      "reference": "docs/core/artifacts/hyperbolic_phase_field_causal_feasibility.json",
-      "to": "docs/core/07_artifacts/verification/hyperbolic_phase_field_causal_feasibility.json"
     },
     {
       "edge_type": "path_reference",
@@ -15389,18 +15371,6 @@
     {
       "edge_type": "path_reference",
       "from": "docs/core/00_governance/uet_core_artifact_migration_history.json",
-      "reference": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz",
-      "to": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_artifact_migration_history.json",
-      "reference": "docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.npz",
-      "to": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_artifact_migration_history.json",
       "reference": "docs/core/07_artifacts/topic13/t13_mp48_phi_e_dimensional_comparator_audit.json",
       "to": "docs/core/07_artifacts/topic13/t13_mp48_phi_e_dimensional_comparator_audit.json"
     },
@@ -17713,12 +17683,6 @@
       "from": "docs/core/00_governance/uet_core_artifact_migration_history.json",
       "reference": "docs/core/artifacts/gr_closed_limit_verification.json",
       "to": "docs/core/07_artifacts/verification/gr_closed_limit_verification.json"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_artifact_migration_history.json",
-      "reference": "docs/core/artifacts/hyperbolic_phase_field_causal_feasibility.json",
-      "to": "docs/core/07_artifacts/verification/hyperbolic_phase_field_causal_feasibility.json"
     },
     {
       "edge_type": "path_reference",
@@ -24665,18 +24629,6 @@
     {
       "edge_type": "path_reference",
       "from": "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
-      "reference": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz",
-      "to": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
-      "reference": "docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.npz",
-      "to": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
       "reference": "docs/core/07_artifacts/topic13/t13_mp48_phi_e_dimensional_comparator_audit.json",
       "to": "docs/core/07_artifacts/topic13/t13_mp48_phi_e_dimensional_comparator_audit.json"
     },
@@ -26989,12 +26941,6 @@
       "from": "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
       "reference": "docs/core/artifacts/gr_closed_limit_verification.json",
       "to": "docs/core/07_artifacts/verification/gr_closed_limit_verification.json"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
-      "reference": "docs/core/artifacts/hyperbolic_phase_field_causal_feasibility.json",
-      "to": "docs/core/07_artifacts/verification/hyperbolic_phase_field_causal_feasibility.json"
     },
     {
       "edge_type": "path_reference",
@@ -44135,24 +44081,6 @@
     {
       "edge_type": "path_reference",
       "from": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
-      "reference": "docs/core/07_artifacts/causal_influence_formula_audit.json",
-      "to": "docs/core/07_artifacts/causal_influence_formula_audit.json"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
-      "reference": "docs/core/07_artifacts/causal_nonclosed_contract.json",
-      "to": "docs/core/07_artifacts/causal_nonclosed_contract.json"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
-      "reference": "docs/core/07_artifacts/causal_nonclosed_kernel_verification.json",
-      "to": "docs/core/07_artifacts/causal_nonclosed_kernel_verification.json"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
       "reference": "docs/core/07_artifacts/correspondence/causal_influence_formula_audit.json",
       "to": "docs/core/07_artifacts/correspondence/causal_influence_formula_audit.json"
     },
@@ -46175,12 +46103,6 @@
     {
       "edge_type": "path_reference",
       "from": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
-      "reference": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz",
-      "to": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
       "reference": "docs/core/07_artifacts/topic13/t13_mp48_phi_e_dimensional_comparator_audit.json",
       "to": "docs/core/07_artifacts/topic13/t13_mp48_phi_e_dimensional_comparator_audit.json"
     },
@@ -47237,12 +47159,6 @@
     {
       "edge_type": "path_reference",
       "from": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
-      "reference": "docs/core/07_artifacts/uet_gr_research_program_gate.json",
-      "to": "docs/core/07_artifacts/uet_gr_research_program_gate.json"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
       "reference": "docs/core/07_artifacts/verification/causal_nonclosed_kernel_verification.json",
       "to": "docs/core/07_artifacts/verification/causal_nonclosed_kernel_verification.json"
     },
@@ -47341,12 +47257,6 @@
       "from": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
       "reference": "docs/core/07_artifacts/verification/gr_closed_limit_verification.json",
       "to": "docs/core/07_artifacts/verification/gr_closed_limit_verification.json"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
-      "reference": "docs/core/07_artifacts/verification/hyperbolic_phase_field_causal_feasibility.json",
-      "to": "docs/core/07_artifacts/verification/hyperbolic_phase_field_causal_feasibility.json"
     },
     {
       "edge_type": "path_reference",
@@ -60706,12 +60616,6 @@
     },
     {
       "edge_type": "path_reference",
-      "from": "docs/core/05_tests/regression/root/test_topic13_mp48_mode_resolved_csrc_diagnostic.py",
-      "reference": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz",
-      "to": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz"
-    },
-    {
-      "edge_type": "path_reference",
       "from": "docs/core/05_tests/regression/root/test_topic13_mp48_phi_e_dimensional_comparator.py",
       "reference": "docs/core/07_artifacts/topic13/t13_mp48_phi_e_dimensional_comparator_audit.json",
       "to": "docs/core/07_artifacts/topic13/t13_mp48_phi_e_dimensional_comparator_audit.json"
@@ -61683,9 +61587,9 @@
       "to": "docs/core/99_review/unresolved_assets/sandbox_emergent.py"
     }
   ],
-  "generated_at": "2026-09-16T18:37:42+00:00",
+  "generated_at": "2026-09-16T20:28:05+00:00",
   "generator": "docs/scripts/audit/reconcile_uet_core_registry_v4.py",
-  "node_count": 1973,
+  "node_count": 1967,
   "nodes": [
     {
       "canonical_path": "docs/core/00_governance/CORE_FILE_AND_RESEARCH_STANDARD.md",
@@ -71525,33 +71429,6 @@
       "path": "docs/core/07_artifacts/archive/uet_wave3_wave10_research_program.json"
     },
     {
-      "canonical_path": "docs/core/07_artifacts/causal_influence_formula_audit.json",
-      "evidence_status": "INTERNAL",
-      "file_kind": "generated_artifact",
-      "logical_area": "07_artifacts",
-      "organization_status": "MIGRATED",
-      "owner_id": "EVIDENCE",
-      "path": "docs/core/07_artifacts/causal_influence_formula_audit.json"
-    },
-    {
-      "canonical_path": "docs/core/07_artifacts/causal_nonclosed_contract.json",
-      "evidence_status": "INTERNAL",
-      "file_kind": "generated_artifact",
-      "logical_area": "07_artifacts",
-      "organization_status": "MIGRATED",
-      "owner_id": "EVIDENCE",
-      "path": "docs/core/07_artifacts/causal_nonclosed_contract.json"
-    },
-    {
-      "canonical_path": "docs/core/07_artifacts/causal_nonclosed_kernel_verification.json",
-      "evidence_status": "INTERNAL",
-      "file_kind": "generated_artifact",
-      "logical_area": "07_artifacts",
-      "organization_status": "MIGRATED",
-      "owner_id": "EVIDENCE",
-      "path": "docs/core/07_artifacts/causal_nonclosed_kernel_verification.json"
-    },
-    {
       "canonical_path": "docs/core/07_artifacts/correspondence/causal_influence_formula_audit.json",
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
@@ -74585,15 +74462,6 @@
       "path": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.json"
     },
     {
-      "canonical_path": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz",
-      "evidence_status": "INTERNAL",
-      "file_kind": "generated_artifact",
-      "logical_area": "07_artifacts",
-      "organization_status": "MIGRATED",
-      "owner_id": "EVIDENCE",
-      "path": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz"
-    },
-    {
       "canonical_path": "docs/core/07_artifacts/topic13/t13_mp48_phi_e_dimensional_comparator_audit.json",
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
@@ -76178,15 +76046,6 @@
       "path": "docs/core/07_artifacts/topic13/thermal_source_provenance_gate.json"
     },
     {
-      "canonical_path": "docs/core/07_artifacts/uet_gr_research_program_gate.json",
-      "evidence_status": "INTERNAL",
-      "file_kind": "generated_artifact",
-      "logical_area": "07_artifacts",
-      "organization_status": "MIGRATED",
-      "owner_id": "EVIDENCE",
-      "path": "docs/core/07_artifacts/uet_gr_research_program_gate.json"
-    },
-    {
       "canonical_path": "docs/core/07_artifacts/verification/causal_nonclosed_kernel_verification.json",
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
@@ -76338,15 +76197,6 @@
       "organization_status": "MIGRATED",
       "owner_id": "EVIDENCE",
       "path": "docs/core/07_artifacts/verification/gr_closed_limit_verification.json"
-    },
-    {
-      "canonical_path": "docs/core/07_artifacts/verification/hyperbolic_phase_field_causal_feasibility.json",
-      "evidence_status": "INTERNAL",
-      "file_kind": "generated_artifact",
-      "logical_area": "07_artifacts",
-      "organization_status": "MIGRATED",
-      "owner_id": "EVIDENCE",
-      "path": "docs/core/07_artifacts/verification/hyperbolic_phase_field_causal_feasibility.json"
     },
     {
       "canonical_path": "docs/core/07_artifacts/verification/hyperbolic_phase_field_external_comparator_verification.json",
@@ -79506,6 +79356,11 @@
     {
       "edge_type": "path_reference",
       "from": "docs/core/00_governance/uet_core_artifact_bulk_migration_v3.json",
+      "reference": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_artifact_bulk_migration_v3.json",
       "reference": "docs/core/artifacts"
     },
     {
@@ -79515,6 +79370,36 @@
     },
     {
       "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_artifact_bulk_migration_v3.json",
+      "reference": "docs/core/artifacts/hyperbolic_phase_field_causal_feasibility.json"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_artifact_bulk_migration_v3.json",
+      "reference": "docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.npz"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_artifact_migration_history.json",
+      "reference": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_artifact_migration_history.json",
+      "reference": "docs/core/artifacts/hyperbolic_phase_field_causal_feasibility.json"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_artifact_migration_history.json",
+      "reference": "docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.npz"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
+      "reference": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz"
+    },
+    {
+      "edge_type": "path_reference",
       "from": "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
       "reference": "docs/core/artifacts"
     },
@@ -79522,6 +79407,16 @@
       "edge_type": "path_reference",
       "from": "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
       "reference": "docs/core/artifacts/README.md"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
+      "reference": "docs/core/artifacts/hyperbolic_phase_field_causal_feasibility.json"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
+      "reference": "docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.npz"
     },
     {
       "edge_type": "path_reference",
@@ -86437,6 +86332,11 @@
       "edge_type": "python_import",
       "from": "docs/core/05_tests/regression/root/test_topic13_mp48_independent_graphite_cv.py",
       "reference": "docs/docs/core/core_paths.py"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/05_tests/regression/root/test_topic13_mp48_mode_resolved_csrc_diagnostic.py",
+      "reference": "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz"
     },
     {
       "edge_type": "python_import",

@@ -10,7 +10,7 @@
   ],
   "claim_boundary": "Markdown path audit only; no physics-status promotion",
   "controlling_blocker": null,
-  "generated_at": "2026-09-16T18:40:08+00:00",
+  "generated_at": "2026-09-16T20:29:09+00:00",
   "generator": "docs/scripts/audit/audit_uet_core_links.py",
   "links_checked": 245,
   "schema_version": "1.0",

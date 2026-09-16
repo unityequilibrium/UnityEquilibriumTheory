@@ -5,9 +5,9 @@
       "check_id": "actual_core_files_covered",
       "expected": "physical baseline plus generated reconciliation outputs",
       "observed": {
-        "actual": 1973,
+        "actual": 1967,
         "new_reconciliation_outputs": [],
-        "physical_baseline": 1973
+        "physical_baseline": 1967
       },
       "status": "PASS"
     },
@@ -26,7 +26,7 @@
     {
       "check_id": "generated_artifacts_have_generator",
       "expected": 0,
-      "observed": 591,
+      "observed": 585,
       "status": "REVIEW_REQUIRED"
     },
     {
@@ -81,9 +81,6 @@
     "docs/core/07_artifacts/archive/uet_research_room_wave1_contract.json",
     "docs/core/07_artifacts/archive/uet_research_room_wave1_integrity.json",
     "docs/core/07_artifacts/archive/uet_wave3_wave10_research_program.json",
-    "docs/core/07_artifacts/causal_influence_formula_audit.json",
-    "docs/core/07_artifacts/causal_nonclosed_contract.json",
-    "docs/core/07_artifacts/causal_nonclosed_kernel_verification.json",
     "docs/core/07_artifacts/correspondence/causal_influence_formula_audit.json",
     "docs/core/07_artifacts/correspondence/coarse_graining_formula_audit.json",
     "docs/core/07_artifacts/correspondence/coarse_graining_verification.json",
@@ -414,7 +411,6 @@
     "docs/core/07_artifacts/topic13/t13_mp48_independent_graphite_cv_audit.json",
     "docs/core/07_artifacts/topic13/t13_mp48_interlayer_mode_residue_audit.json",
     "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.json",
-    "docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz",
     "docs/core/07_artifacts/topic13/t13_mp48_phi_e_dimensional_comparator_audit.json",
     "docs/core/07_artifacts/topic13/t13_mp48_shear_irrep_audit.json",
     "docs/core/07_artifacts/topic13/t13_mp48_spectral_csrc_reproduction_audit.json",
@@ -591,7 +587,6 @@
     "docs/core/07_artifacts/topic13/thermal_dimensional_calibration_contract.json",
     "docs/core/07_artifacts/topic13/thermal_observable_bridge_verification.json",
     "docs/core/07_artifacts/topic13/thermal_source_provenance_gate.json",
-    "docs/core/07_artifacts/uet_gr_research_program_gate.json",
     "docs/core/07_artifacts/verification/causal_nonclosed_kernel_verification.json",
     "docs/core/07_artifacts/verification/covariant_bianchi_exchange_verification.json",
     "docs/core/07_artifacts/verification/covariant_diffusive_current_verification.json",
@@ -609,7 +604,6 @@
     "docs/core/07_artifacts/verification/curved_3p1_gh_time_evolution_verification.json",
     "docs/core/07_artifacts/verification/curved_3p1_topic13_matter_wiring_verification.json",
     "docs/core/07_artifacts/verification/gr_closed_limit_verification.json",
-    "docs/core/07_artifacts/verification/hyperbolic_phase_field_causal_feasibility.json",
     "docs/core/07_artifacts/verification/hyperbolic_phase_field_external_comparator_verification.json",
     "docs/core/07_artifacts/verification/impact_effect_core_verification.json",
     "docs/core/07_artifacts/verification/impact_effect_legacy_wording_audit.json",
@@ -638,7 +632,7 @@
     "docs/core/07_artifacts/verification/uet_all_waves_completion_audit.json",
     "docs/core/07_artifacts/verification/uet_derivation_origin_audit.json"
   ],
-  "generated_at": "2026-09-16T18:37:42+00:00",
+  "generated_at": "2026-09-16T20:28:05+00:00",
   "generator": "docs/scripts/audit/reconcile_uet_core_registry_v4.py",
   "missing_canonical_targets": [],
   "next_action": "declare missing artifact generators and review quarantined assets before physical deprecation",
@@ -650,13 +644,13 @@
   ],
   "schema_version": "2.0",
   "scope": {
-    "actual_core_file_count": 1973,
-    "dependency_edge_count": 10280,
-    "generated_artifacts_without_generator": 591,
-    "physical_manifest_record_count": 1973,
+    "actual_core_file_count": 1967,
+    "dependency_edge_count": 10264,
+    "generated_artifacts_without_generator": 585,
+    "physical_manifest_record_count": 1967,
     "quarantine_count": 3,
-    "registry_record_count": 1973,
-    "unresolved_reference_count": 1624
+    "registry_record_count": 1967,
+    "unresolved_reference_count": 1634
   },
   "status": "PASS_WITH_REVIEW_REQUIRED",
   "unassigned_paths": []
