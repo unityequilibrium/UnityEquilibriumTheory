@@ -157,3 +157,13 @@
 - CONTROLLING_BLOCKER: No physical-placement blocker remains. Three explicit registry review/quarantine records, incomplete generated-artifact provenance, scientific-link gaps, and the foundation physics gate remain separate evidence blockers.
 - NEXT_ACTION: Commit the scoped migration files only; keep scientific claim promotion behind the existing foundation gate and do not push without explicit instruction.
 - CLAIM_BOUNDARY: This wave closes file placement, compatibility routing, and migration accounting only. It does not prove, promote, or reinterpret any UET physics claim.
+
+### 2026-09-17 — Wave 6zl: explicit migration-completion state
+
+- STATUS: `PASS`
+- WHAT_CHANGED: Updated the physical migration planner and canonical registry reconciler to distinguish a completed migration from a reconciliation run that has no new files to move. The generated manifest and indexes now expose `physical_migration.complete`, pending target count, current-run move status, and the last successful consolidation artifact. No source file, equation implementation, or physics interpretation was changed.
+- VERIFICATION: Regenerated the planner and registry outputs from their generators; the physical migration audit remains `PASS` with zero duplicate targets, missing paths, and redirect errors. The canonical organization index reports `Physical migration complete=True`, `Move targets pending=0`, and last consolidation `PASS` with 426 archived compatibility assets.
+- RESULT: A reviewer can now verify from the canonical index why the current run reports no move: the physical move already completed in the prior consolidation and there are no remaining targets.
+- CONTROLLING_BLOCKER: No physical-placement blocker remains. Three explicit quarantine records, generated-artifact provenance, scientific-link coverage, and the foundation physics gate remain separate evidence blockers.
+- NEXT_ACTION: Keep the six root entrypoints and compatibility boundaries as the canonical organization contract; do not start another physical move unless the planner reports a nonzero target count.
+- CLAIM_BOUNDARY: This wave improves migration accounting and reviewer legibility only. It does not promote organization status into equation verification or any physical claim.

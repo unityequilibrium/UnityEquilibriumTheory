@@ -638,7 +638,7 @@
     "docs/core/07_artifacts/verification/uet_all_waves_completion_audit.json",
     "docs/core/07_artifacts/verification/uet_derivation_origin_audit.json"
   ],
-  "generated_at": "2026-09-16T17:57:20+00:00",
+  "generated_at": "2026-09-16T18:37:42+00:00",
   "generator": "docs/scripts/audit/reconcile_uet_core_registry_v4.py",
   "missing_canonical_targets": [],
   "next_action": "declare missing artifact generators and review quarantined assets before physical deprecation",
@@ -651,7 +651,7 @@
   "schema_version": "2.0",
   "scope": {
     "actual_core_file_count": 1973,
-    "dependency_edge_count": 10279,
+    "dependency_edge_count": 10280,
     "generated_artifacts_without_generator": 591,
     "physical_manifest_record_count": 1973,
     "quarantine_count": 3,

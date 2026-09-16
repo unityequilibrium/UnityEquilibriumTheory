@@ -25,6 +25,7 @@ CORE = ROOT / "docs" / "core"
 GOVERNANCE = CORE / "00_governance"
 MANIFEST_PATH = GOVERNANCE / "uet_core_physical_migration_manifest.json"
 REPORT_PATH = GOVERNANCE / "UET_CORE_PHYSICAL_MIGRATION_REPORT.md"
+CONSOLIDATION_PATH = GOVERNANCE / "uet_core_compatibility_consolidation_v4.json"
 sys.path.insert(0, str(ROOT))
 from docs.core.core_paths import (  # noqa: E402
     PROTECTED_CORE_ROOT_FILES,
@@ -56,6 +57,20 @@ def load_json(path: Path) -> dict[str, Any]:
     if not path.exists():
         return {}
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def consolidation_history() -> dict[str, Any]:
+    """Return evidence of the last physical consolidation, if available."""
+
+    payload = load_json(CONSOLIDATION_PATH)
+    summary = payload.get("summary", {}) if isinstance(payload, dict) else {}
+    return {
+        "artifact": repo_path(CONSOLIDATION_PATH) if payload else None,
+        "status": payload.get("status", "NOT_FOUND") if payload else "NOT_FOUND",
+        "physical_move_performed": bool(payload.get("physical_move_performed")) if payload else False,
+        "files_archived": int(summary.get("files_archived", 0) or 0),
+        "generated_at": payload.get("generated_at") if payload else None,
+    }
 
 
 def git_dirty_paths() -> set[str]:
@@ -320,6 +335,7 @@ def build_records() -> tuple[list[dict[str, Any]], dict[str, Any]]:
         "compatibility_counts": dict(Counter(item["compatibility_mode"] for item in records)),
         "physics_status_changes": 0,
         "physical_move_performed": False,
+        "physical_move_performed_in_current_run": False,
         "physical_migration_complete": sum(item["current_path"] != item["canonical_path"] for item in active_records) == 0,
     }
     return records, summary
@@ -327,6 +343,7 @@ def build_records() -> tuple[list[dict[str, Any]], dict[str, Any]]:
 
 def render_report(payload: dict[str, Any]) -> str:
     summary = payload["summary"]
+    last_consolidation = summary.get("last_successful_consolidation", {})
     lines = [
         "# UET Core Physical Migration Report",
         "",
@@ -344,7 +361,9 @@ def render_report(payload: dict[str, Any]) -> str:
         f"- Duplicate targets: **{len(summary['duplicate_targets'])}**",
         f"- Existing target conflicts: **{len(summary['existing_target_conflicts'])}**",
         f"- Physical migration complete: **{summary['physical_migration_complete']}**",
-        f"- Physical move performed in this run: **{summary['physical_move_performed']}**",
+        f"- Move targets pending: **{summary['files_to_move']}**",
+        f"- Physical move performed in this run: **{summary.get('physical_move_performed_in_current_run', summary['physical_move_performed'])}**",
+        f"- Last physical consolidation: **{last_consolidation.get('status', 'NOT_FOUND')}** ({last_consolidation.get('files_archived', 0)} compatibility assets archived)",
         f"- Physics status changes: **{summary['physics_status_changes']}**",
         "",
         "## Migration waves",
@@ -380,6 +399,8 @@ def write_plan() -> dict[str, Any]:
     summary["files_migrated_in_wave"] = prior_summary.get("files_migrated_in_wave", 0)
     summary["files_skipped_in_wave"] = prior_summary.get("files_skipped_in_wave", 0)
     summary["compatibility_assets_present"] = sum(item["file_kind"] in {"compatibility_redirect", "compatibility_python_shim"} for item in records)
+    summary["last_successful_consolidation"] = consolidation_history()
+    summary["physical_move_performed_in_current_run"] = False
     payload = {
         "schema_version": "1.0",
         "migration_id": "UET-CORE-PHYSICAL-MIGRATION-V3",
@@ -388,6 +409,13 @@ def write_plan() -> dict[str, Any]:
         "scope": "all non-cache files currently under docs/core",
         "canonical_path_authority": "docs/core/core_paths.py",
         "physical_move_performed": False,
+        "physical_migration_complete": summary["physical_migration_complete"],
+        "physical_migration": {
+            "complete": summary["physical_migration_complete"],
+            "pending_move_targets": summary["files_to_move"],
+            "performed_in_current_run": False,
+            "last_successful_consolidation": summary["last_successful_consolidation"],
+        },
         "summary": summary,
         "records": records,
     }
@@ -469,7 +497,9 @@ def apply_contracts_history(payload: dict[str, Any]) -> dict[str, Any]:
         rewrite_moved_markdown(ROOT / new, old, moved)
     refreshed = write_plan()
     refreshed["physical_move_performed"] = bool(applied)
+    refreshed["physical_migration"]["performed_in_current_run"] = bool(applied)
     refreshed["summary"]["physical_move_performed"] = bool(applied)
+    refreshed["summary"]["physical_move_performed_in_current_run"] = bool(applied)
     refreshed["summary"]["files_migrated_in_wave"] = len(applied)
     refreshed["summary"]["files_skipped_in_wave"] = len(skipped)
     refreshed["applied_wave"] = "contracts_history"

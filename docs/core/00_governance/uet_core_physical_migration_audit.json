@@ -33,7 +33,7 @@
   ],
   "controlling_blocker": null,
   "duplicate_targets": {},
-  "generated_at": "2026-09-16T18:14:39+00:00",
+  "generated_at": "2026-09-16T18:39:00+00:00",
   "generator": "docs/scripts/audit/audit_uet_core_physical_migration.py",
   "missing_current_paths": [],
   "redirect_errors": [],
@@ -47,18 +47,26 @@
       "none": 1547,
       "redirect_or_shim": 426
     },
-    "dirty_sources": 448,
+    "dirty_sources": 23,
     "duplicate_targets": {},
     "existing_target_conflicts": [],
     "files_migrated_in_wave": 0,
     "files_skipped_in_wave": 0,
     "files_to_move": 0,
     "files_total": 1973,
+    "last_successful_consolidation": {
+      "artifact": "docs/core/00_governance/uet_core_compatibility_consolidation_v4.json",
+      "files_archived": 426,
+      "generated_at": "2026-09-16T17:23:05+00:00",
+      "physical_move_performed": true,
+      "status": "PASS"
+    },
     "migration_wave_counts": {
       "already_canonical": 1973
     },
     "physical_migration_complete": true,
     "physical_move_performed": false,
+    "physical_move_performed_in_current_run": false,
     "physics_status_changes": 0
   }
 }
