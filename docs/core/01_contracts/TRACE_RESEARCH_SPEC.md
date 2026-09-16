@@ -53,7 +53,7 @@ trace lane ใช้ retarded telegraph-diffusion constitutive ansatz:
 - G_ret = 0 ก่อน source และนอก discrete propagation cone
 - boundary condition ต้องประกาศเป็น periodic หรือ zero
 
-docs/core/uet_trace.py::compute_spacetime_trace เป็น finite-support
+docs/core/02_equations/matter_space/uet_trace.py::compute_spacetime_trace เป็น finite-support
 discrete approximation ของ ansatz นี้ ไม่ใช่ closed-form Green function
 และไม่ควรถูกเรียกว่า derivation ที่พิสูจน์แล้ว
 

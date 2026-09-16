@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_equation_correspondence_registry_quantum_measurement_addendum",
-  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
   "status": "CANDIDATE_ENTRY_PENDING_MERGE",
   "equation_entries": [
     {
       "equation_id": "uet.main_theory.operational_quantum_measurement",
       "version": "operational-qm-v1",
       "classification": "standard_physics_interface",
-      "relation_or_code_path": "docs/core/uet_quantum_measurement.py",
+      "relation_or_code_path": "docs/core/03_lanes/carrier_observer/uet_quantum_measurement.py",
       "variables": {
         "rho": "density operator",
         "E_o": "POVM effect",
@@ -37,11 +37,11 @@
         "projective instrument is a POVM special case"
       ],
       "implementation_paths": [
-        "docs/core/uet_quantum_measurement.py"
+        "docs/core/03_lanes/carrier_observer/uet_quantum_measurement.py"
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_quantum_measurement.py",
-        "docs/core/artifacts/quantum_measurement_verification.json",
+        "docs/core/07_artifacts/verification/quantum_measurement_verification.json",
         "docs/core/test/test_uet_quantum_measurement.py"
       ],
       "evidence_class": "STANDARD_THEORY_REPRODUCTION",

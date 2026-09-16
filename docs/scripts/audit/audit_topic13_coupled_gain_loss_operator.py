@@ -439,7 +439,7 @@ def main():
     }
     paths=["docs/scripts/audit/audit_topic13_coupled_gain_loss_operator.py",
            "docs/scripts/audit/audit_topic13_action_normalized_elastic_scattering.py",
-           "docs/core/uet_covariant_matter.py","docs/core/uet_covariant_response.py",
+           "docs/core/02_equations/covariant/uet_covariant_matter.py","docs/core/02_equations/covariant/uet_covariant_response.py",
            "docs/core/test/test_topic13_coupled_gain_loss_operator.py"]
     sha=lambda path:hashlib.sha256((ROOT/path).read_bytes()).hexdigest()
     artifact={

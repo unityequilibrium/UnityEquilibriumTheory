@@ -37,7 +37,7 @@ if project_root not in sys.path:
 try:
     # Use the Rich Parameter class confirmed to work with the engine
     from docs.core.uet_master_equation import UETMasterEquation, UETParameters
-    from docs.core.uet_lite_engine import UETLiteEngine
+    from docs.scripts.core.runners.uet_lite_engine import UETLiteEngine
 except ImportError as e:
     print(f"Import Error: {e}")
     print(f"Sys Path: {sys.path}")

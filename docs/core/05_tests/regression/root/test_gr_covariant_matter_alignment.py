@@ -1,18 +1,15 @@
 """Artifact alignment tests for the covariant O(2) matter-action wave."""
 
 from __future__ import annotations
-from docs.core.core_paths import CANONICAL_ARTIFACT_ROOT
+from docs.core.core_paths import canonical_artifact_path
 
 import json
 from pathlib import Path
 
 from docs.scripts.audit.audit_uet_gr_covariant_matter import build_artifacts
 
-ARTIFACT_DIR = CANONICAL_ARTIFACT_ROOT
-
-
 def _read(name: str) -> dict[str, object]:
-    return json.loads((ARTIFACT_DIR / name).read_text(encoding="utf-8"))
+    return json.loads(canonical_artifact_path(name).read_text(encoding="utf-8"))
 
 
 def test_matter_action_audit_passes_implemented_gates_but_stays_partial() -> None:

@@ -28,7 +28,7 @@ from docs.core.uet_master_equation import (
     UETParameters,
     UETMasterEquation,
 )
-from docs.core.uet_glass_box import UETMetricLogger
+from docs.scripts.core.runners.uet_glass_box import UETMetricLogger
 from docs.core.uet_parameters import INTEGRITY_KILL_SWITCH
 
 
@@ -124,7 +124,7 @@ class UETBaseSolver(ABC):
         """Initialize the Glass Box Logger."""
         try:
             # Connect to Central Path Manager
-            from docs.core.uet_glass_box import UETPathManager
+            from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
             if output_dir:
                 # Custom override (Manual)

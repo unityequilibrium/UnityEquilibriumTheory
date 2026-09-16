@@ -17,19 +17,34 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-ARTIFACTS = ROOT / "docs" / "core" / "artifacts"
-OUTPUT = ARTIFACTS / (
-    "uet_equation_correspondence_registry_noether_mapping_addendum.json"
+import sys
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from docs.core.core_paths import (  # noqa: E402
+    CANONICAL_ARTIFACT_ROOT,
+    canonical_artifact_path,
+    canonical_existing_path,
 )
-CENTRAL = ARTIFACTS / "uet_equation_correspondence_registry.json"
-FORMULA_AUDIT = ARTIFACTS / "noether_phase_field_map_formula_audit.json"
-VERIFICATION = ARTIFACTS / "noether_phase_field_state_map_verification.json"
-DEPENDENCY = ARTIFACTS / "noether_phase_field_dependency_gate.json"
-SOURCE_NOETHER = ROOT / "docs" / "core" / "uet_noether.py"
-SOURCE_MAP = ROOT / "docs" / "core" / "uet_noether_phase_field_map.py"
-SOURCE_MATTER = ROOT / "docs" / "core" / "uet_covariant_matter.py"
-SOURCE_DIFFUSION = ROOT / "docs" / "core" / "uet_covariant_diffusion.py"
-SPEC = ROOT / "docs" / "core" / "UET_GR_NONCLOSED_RESEARCH_SPEC.md"
+
+ARTIFACTS = CANONICAL_ARTIFACT_ROOT
+OUTPUT = canonical_artifact_path(
+    "uet_equation_correspondence_registry_noether_mapping_addendum.json",
+    "correspondence",
+)
+CENTRAL = canonical_artifact_path(
+    "uet_equation_correspondence_registry.json", "correspondence"
+)
+FORMULA_AUDIT = canonical_artifact_path("noether_phase_field_map_formula_audit.json")
+VERIFICATION = canonical_artifact_path(
+    "noether_phase_field_state_map_verification.json", "verification"
+)
+DEPENDENCY = canonical_artifact_path("noether_phase_field_dependency_gate.json", "gates")
+SOURCE_NOETHER = canonical_existing_path(ROOT / "docs" / "core" / "uet_noether.py")
+SOURCE_MAP = canonical_existing_path(ROOT / "docs" / "core" / "uet_noether_phase_field_map.py")
+SOURCE_MATTER = canonical_existing_path(ROOT / "docs" / "core" / "uet_covariant_matter.py")
+SOURCE_DIFFUSION = canonical_existing_path(ROOT / "docs" / "core" / "uet_covariant_diffusion.py")
+SPEC = canonical_existing_path(ROOT / "docs" / "core" / "UET_GR_NONCLOSED_RESEARCH_SPEC.md")
 
 FORMULA_IDS = [
     "uet.noether_mapping.frame_projected_charge_density",
@@ -190,12 +205,12 @@ def build() -> dict[str, Any]:
             "frame projection of a covariant current to a hydrodynamic density",
             "relativistic decomposition of a conserved current in a chosen frame",
             [
-                "docs/core/uet_noether_phase_field_map.py",
-                "docs/core/uet_covariant_diffusion.py",
+                "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py",
+                "docs/core/02_equations/covariant/uet_covariant_diffusion.py",
             ],
             [
-                "docs/core/uet_covariant_diffusion.py::decompose_noether_current",
-                "docs/core/uet_noether_phase_field_map.py::normalize_noether_hydrodynamic_state",
+                "docs/core/02_equations/covariant/uet_covariant_diffusion.py::decompose_noether_current",
+                "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py::normalize_noether_hydrodynamic_state",
             ],
             "kinematic projection is covered by existing local current/map checks; microscopic inversion is not established",
             ["uet.o2.finite_density_eos", "uet.main_theory.coarse_graining"],
@@ -221,10 +236,10 @@ def build() -> dict[str, Any]:
             },
             "exact affine coordinate change after the declared coarse-graining layer",
             "dimensionless nondimensionalization of a lane-specific hydrodynamic variable",
-            ["docs/core/uet_noether_phase_field_map.py"],
+            ["docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py"],
             [
-                "docs/core/uet_noether_phase_field_map.py::normalize_noether_hydrodynamic_state",
-                "docs/core/uet_noether_phase_field_map.py::denormalize_phase_field_coordinates",
+                "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py::normalize_noether_hydrodynamic_state",
+                "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py::denormalize_phase_field_coordinates",
             ],
             "fixed-scale round-trip and negative controls pass; the upstream microscopic map remains many-to-one",
             ["uet.main_theory.coarse_graining", "uet.matter_space_flux.conservation"],
@@ -250,10 +265,10 @@ def build() -> dict[str, Any]:
             },
             "fixed-scale normalization of the spatial current paired with C",
             "dimensionless current coordinate in a declared natural-to-normalized lane",
-            ["docs/core/uet_noether_phase_field_map.py"],
+            ["docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py"],
             [
-                "docs/core/uet_noether_phase_field_map.py::normalize_noether_hydrodynamic_state",
-                "docs/core/uet_noether_phase_field_map.py::denormalize_phase_field_coordinates",
+                "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py::normalize_noether_hydrodynamic_state",
+                "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py::denormalize_phase_field_coordinates",
             ],
             "current round-trip and legacy bridge compatibility pass for the declared scales",
             [FORMULA_IDS[1], "uet.matter_space_flux.relaxation"],
@@ -279,8 +294,8 @@ def build() -> dict[str, Any]:
             },
             "exact residual scaling under constant space-time and density scales",
             "nondimensional continuity-equation rescaling",
-            ["docs/core/uet_noether_phase_field_map.py"],
-            ["docs/core/uet_noether_phase_field_map.py::map_continuity_terms"],
+            ["docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py"],
+            ["docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py::map_continuity_terms"],
             "analytic scaling identity passes deterministic numerical checks",
             [FORMULA_IDS[1], FORMULA_IDS[2]],
             "coordinate-level continuity scaling; it does not close dynamics or prove a physical conservation law by itself",
@@ -305,9 +320,9 @@ def build() -> dict[str, Any]:
             },
             "polar-coordinate identity for the implemented global O(2) current",
             "global O(2)/U(1) Noether current in a complex-scalar realization",
-            ["docs/core/uet_covariant_matter.py", "docs/core/uet_noether_phase_field_map.py"],
+            ["docs/core/02_equations/covariant/uet_covariant_matter.py", "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py"],
             [
-                "docs/core/uet_covariant_matter.py::matter_noether_current",
+                "docs/core/02_equations/covariant/uet_covariant_matter.py::matter_noether_current",
                 "docs/core/test/test_noether_phase_field_map.py::test_polar_O2_identity_matches_matter_noether_current",
             ],
             "polar-current identity passes the local analytic/numerical comparison in the declared metric convention",
@@ -339,9 +354,9 @@ def build() -> dict[str, Any]:
             },
             "local conjugacy check for the symmetric double-well constitutive comparator",
             "Landau/Cahn-Hilliard-style constitutive free-energy coordinate",
-            ["docs/core/uet_noether_phase_field_map.py"],
+            ["docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py"],
             [
-                "docs/core/uet_noether_phase_field_map.py::symmetric_double_well_thermodynamic_map",
+                "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py::symmetric_double_well_thermodynamic_map",
                 "docs/core/test/test_noether_phase_field_map.py::test_physical_free_energy_derivative_matches_mapped_chemical_potential",
             ],
             "local derivative and coefficient checks pass; the double well is explicitly not derived from the O(2) action",
@@ -369,8 +384,8 @@ def build() -> dict[str, Any]:
             },
             "dimensional coordinate conversion for declared constitutive parameters",
             "unit conversion/nondimensionalization of relaxation and mobility coefficients",
-            ["docs/core/uet_noether_phase_field_map.py"],
-            ["docs/core/uet_noether_phase_field_map.py::map_normalized_constitutive_scales"],
+            ["docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py"],
+            ["docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py::map_normalized_constitutive_scales"],
             "fixed-scale conversion identity passes; no microscopic coefficient origin is supplied",
             ["uet.foundation.units", "uet.covariant_diffusion.finite_relaxation_current"],
             "declared natural-to-normalized scale map only; no SI transport prediction",

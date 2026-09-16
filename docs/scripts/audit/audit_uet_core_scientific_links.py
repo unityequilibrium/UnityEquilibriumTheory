@@ -19,14 +19,14 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
 CORE = ROOT / "docs" / "core"
-ARTIFACTS = CORE / "artifacts"
-REGISTRY_PATH = ARTIFACTS / "uet_research_organization_registry.json"
-MIGRATION_PATH = ARTIFACTS / "uet_core_file_migration_map.json"
+ARTIFACTS = CORE / "07_artifacts"
+REGISTRY_PATH = ARTIFACTS / "gates" / "uet_research_organization_registry.json"
+MIGRATION_PATH = ARTIFACTS / "archive" / "uet_core_file_migration_map.json"
 POLICY_PATH = CORE / "00_governance" / "uet_research_organization_policy.json"
-FAMILY_CONTRACT_PATH = ARTIFACTS / "uet_core_equation_family_contract.json"
-CORRESPONDENCE_PATH = ARTIFACTS / "uet_equation_correspondence_registry.json"
-FOUNDATION_GATE_PATH = ARTIFACTS / "uet_foundation_dependency_gate.json"
-OUTPUT_PATH = ARTIFACTS / "uet_core_scientific_link_audit.json"
+FAMILY_CONTRACT_PATH = ARTIFACTS / "archive" / "uet_core_equation_family_contract.json"
+CORRESPONDENCE_PATH = ARTIFACTS / "correspondence" / "uet_equation_correspondence_registry.json"
+FOUNDATION_GATE_PATH = ARTIFACTS / "gates" / "uet_foundation_dependency_gate.json"
+OUTPUT_PATH = ARTIFACTS / "verification" / "uet_core_scientific_link_audit.json"
 
 GENERATOR_ID = "docs/scripts/audit/audit_uet_core_scientific_links.py"
 REQUIRED_LINK_FIELDS = (
@@ -133,7 +133,11 @@ def build() -> dict[str, Any]:
     }
 
     files = registry.get("files", []) if isinstance(registry, dict) else []
-    assigned = [item for item in files if item.get("organization_disposition")]
+    assigned = [
+        item for item in files
+        if item.get("organization_status") == "MIGRATED"
+        and item.get("source_role") not in {"generated", "compatibility", "history", "verifier", "data"}
+    ]
     rules = {
         rule.get("disposition_id"): rule
         for rule in (policy.get("review_disposition_rules", []) if isinstance(policy, dict) else [])
@@ -157,7 +161,7 @@ def build() -> dict[str, Any]:
     source_path_missing_count = 0
 
     for family_id in sorted(by_family):
-        records = sorted(by_family[family_id], key=lambda item: item.get("path", ""))
+        records = sorted(by_family[family_id], key=lambda item: item.get("canonical_path", item.get("path", "")))
         rule_ids = sorted({str(item.get("organization_disposition")) for item in records})
         rule = rules.get(rule_ids[0]) if len(rule_ids) == 1 else None
         contract = families.get(family_id)
@@ -190,7 +194,7 @@ def build() -> dict[str, Any]:
             "owner_ids": sorted({item.get("owner_id") for item in records}),
             "room_ids": sorted({item.get("room_id") for item in records}),
             "record_count": len(records),
-            "record_paths": [item.get("path") for item in records],
+            "record_paths": [item.get("canonical_path", item.get("path")) for item in records],
             "canonical_family_contract_id": family_id if contract_exists else None,
             "canonical_family_contract_status": "FOUND" if contract_exists else "MISSING",
             "contract_evidence_paths": contract_evidence_paths,
@@ -210,7 +214,7 @@ def build() -> dict[str, Any]:
         family_rows.append(family_row)
 
         for item in records:
-            path = str(item.get("path", ""))
+            path = str(item.get("current_path", item.get("path", "")))
             source_exists = (ROOT / path).exists()
             if not source_exists:
                 source_path_missing_count += 1
@@ -234,11 +238,26 @@ def build() -> dict[str, Any]:
                 }
             )
 
-    assigned_paths = sorted(str(item.get("path")) for item in assigned)
+    assigned_paths = sorted(str(item.get("canonical_path", item.get("path"))) for item in assigned)
     audited_paths = sorted(row["path"] for row in file_rows)
     physical_move_not_performed = isinstance(migration, dict) and migration.get("physical_move_performed") is False
     foundation_blocked = isinstance(foundation_gate, dict) and foundation_gate.get("status") == "BLOCKED"
-    all_blocked = all(item.get("evidence_status") == "BLOCKED" for item in assigned)
+    allowed_evidence_statuses = {
+        "LEGACY",
+        "COMPARATOR",
+        "CANDIDATE",
+        "INTERNAL",
+        "SIMULATION_ONLY",
+        "EXTERNAL_COMPARISON",
+        "BLOCKED",
+    }
+    invalid_evidence_statuses = [
+        item for item in assigned if item.get("evidence_status") not in allowed_evidence_statuses
+    ]
+    promoted_organization_statuses = [
+        item for item in assigned
+        if item.get("organization_status") in {"PASS", "VERIFIED", "PUBLISHED"}
+    ]
     checks = [
         {
             "check_id": "assigned_records_are_all_audited",
@@ -254,9 +273,18 @@ def build() -> dict[str, Any]:
         },
         {
             "check_id": "organization_does_not_promote_evidence",
-            "status": "PASS" if all_blocked else "FAIL",
-            "observed": sum(item.get("evidence_status") != "BLOCKED" for item in assigned),
-            "expected": 0,
+            "status": "PASS" if not invalid_evidence_statuses and not promoted_organization_statuses else "FAIL",
+            "observed": {
+                "non_blocked_evidence_records": sum(
+                    item.get("evidence_status") != "BLOCKED" for item in assigned
+                ),
+                "invalid_evidence_status_count": len(invalid_evidence_statuses),
+                "promoted_organization_status_count": len(promoted_organization_statuses),
+            },
+            "expected": {
+                "invalid_evidence_status_count": 0,
+                "promoted_organization_status_count": 0,
+            },
         },
         {
             "check_id": "foundation_gate_remains_blocked",

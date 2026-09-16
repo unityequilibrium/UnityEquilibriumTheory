@@ -58,11 +58,11 @@ def main():
         evidence_artifacts=[dict(path=p,sha256=sha256((ROOT/p).read_bytes()).hexdigest()) for p in (
             "docs/scripts/audit/audit_topic13_transition_coordinate_map.py",
             "docs/core/test/test_topic13_transition_coordinate_map.py",
-            "docs/core/uet_o2_continuum_collision_operator.py",
-            "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
-            "docs/core/uet_o2_action_derived_transition_kernel.py",
-            "docs/core/uet_o2_action_thermal_observable_bridge.py",
-            "docs/core/uet_o2_action_thermal_stiffness_beta.py")])
+            "docs/core/02_equations/o2/uet_o2_continuum_collision_operator.py",
+            "docs/core/02_equations/o2/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+            "docs/core/02_equations/o2/uet_o2_action_derived_transition_kernel.py",
+            "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+            "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py")])
     for rule in ("axis6","axis_cube14"):
         base=energy_momentum_conserving_bs_state(.22,.35,.15,config,radial_order=8,
             collision_integration_order=24,angular_order=24,cutoff_factor=48.,_direction_rule=rule)

@@ -22,7 +22,11 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 
-from docs.core.core_paths import canonical_existing_path  # noqa: E402
+from docs.core.core_paths import (  # noqa: E402
+    CANONICAL_ARTIFACT_ROOT,
+    canonical_artifact_path,
+    canonical_existing_path,
+)
 from docs.core.uet_hyperbolic_phase_field import (
     HyperbolicPhaseFieldConfig,
     compare_augmented_to_cahn_hilliard_chemical,
@@ -41,11 +45,17 @@ from docs.scripts.audit.uet_gr_monotonic_stage import (
     apply_latest_hyperbolic_phase_field_stage,
 )
 
-OUT = ROOT / "docs/core/artifacts"
-CORE = ROOT / "docs/core/uet_hyperbolic_phase_field_bridge.py"
-COMPARATOR = ROOT / "docs/core/uet_hyperbolic_phase_field.py"
-DIFFUSION = ROOT / "docs/core/uet_covariant_diffusion.py"
-SPEC = ROOT / "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
+OUT = CANONICAL_ARTIFACT_ROOT
+CORE = canonical_existing_path(
+    ROOT / "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field_bridge.py"
+)
+COMPARATOR = canonical_existing_path(
+    ROOT / "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field.py"
+)
+DIFFUSION = canonical_existing_path(
+    ROOT / "docs/core/02_equations/covariant/uet_covariant_diffusion.py"
+)
+SPEC = canonical_existing_path(ROOT / "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md")
 JAIN_KOVTUN = (
     ROOT
     / "docs/data/external/relativistic_transport/jain_kovtun_2024"
@@ -57,8 +67,18 @@ CROSSLEY_GLORIOSO_LIU = (
     / "source_record.json"
 )
 COMPARATOR_ARTIFACT = (
-    OUT / "hyperbolic_phase_field_external_comparator_verification.json"
+    canonical_artifact_path(
+        "hyperbolic_phase_field_external_comparator_verification.json",
+        "verification",
+    )
 )
+
+_OUTPUT_DOMAINS = {
+    "hyperbolic_phase_field_causal_feasibility.json": "verification",
+    "hyperbolic_phase_field_bridge_formula_audit.json": "correspondence",
+    "hyperbolic_phase_field_covariant_mapping_gate.json": "gates",
+    "uet_gr_research_program_gate.json": "gates",
+}
 
 
 def _sha(path: Path) -> str:
@@ -82,8 +102,9 @@ def _jsonable(value: Any) -> Any:
 
 
 def _dump(name: str, payload: dict[str, Any]) -> None:
-    OUT.mkdir(parents=True, exist_ok=True)
-    (OUT / name).write_text(
+    path = canonical_artifact_path(name, _OUTPUT_DOMAINS.get(name))
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
         json.dumps(_jsonable(payload), indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
@@ -499,25 +520,25 @@ def build_artifacts() -> tuple[dict[str, Any], ...]:
             {
                 "id": "symmetric_domain_shifted_curvature_bounds",
                 "origin": "derived_from_g_second_equals_3C_squared_minus_1",
-                "implementation": "docs/core/uet_hyperbolic_phase_field_bridge.py::shifted_curvature_domain_bounds",
+                "implementation": "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field_bridge.py::shifted_curvature_domain_bounds",
                 "status": "DERIVED_EXACT",
             },
             {
                 "id": "fixed_light_cone_parameter_bounds",
                 "origin": "derived_from_sourced_characteristic_speeds",
-                "implementation": "docs/core/uet_hyperbolic_phase_field_bridge.py::subluminal_parameter_bounds",
+                "implementation": "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field_bridge.py::subluminal_parameter_bounds",
                 "status": "DERIVED_EXACT_NORMALIZED",
             },
             {
                 "id": "fixed_cone_parabolic_no_common_limit",
                 "origin": "derived_from_tau_lower_bound_and_parabolic_target",
-                "implementation": "docs/core/uet_hyperbolic_phase_field_bridge.py::fixed_cone_parabolic_limit_no_go",
+                "implementation": "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field_bridge.py::fixed_cone_parabolic_limit_no_go",
                 "status": "DERIVED_EXACT_FOR_DECLARED_COMPARATOR",
             },
             {
                 "id": "external_q_to_current_law_map",
                 "origin": "algebraic_change_J_equals_q_over_tau",
-                "implementation": "docs/core/uet_hyperbolic_phase_field_bridge.py::map_external_flux_law_to_current",
+                "implementation": "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field_bridge.py::map_external_flux_law_to_current",
                 "status": "EXACT_LOCAL_MOBILITY_ONE_ONLY",
             },
         ],

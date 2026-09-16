@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "hyperbolic_phase_field_causal_feasibility",
-  "generated_at": "2026-09-15T01:37:12+00:00",
+  "generated_at": "2026-09-16T08:39:48+00:00",
   "topic": "docs/core UET GR non-closed response",
   "version": "wave8_v1",
   "benchmark_role": "analytic_gate",
@@ -49,7 +49,7 @@
       }
     ],
     "sourced_comparator_prerequisite": {
-      "artifact": "docs\\core\\artifacts\\hyperbolic_phase_field_external_comparator_verification.json",
+      "artifact": "docs\\core\\07_artifacts\\verification\\hyperbolic_phase_field_external_comparator_verification.json",
       "audit_status": "PASS",
       "evidence_status": "PARTIAL_EXTERNAL_COMPARATOR",
       "passed": true
@@ -359,15 +359,15 @@
     "physical_validation": "BLOCKED"
   },
   "source_hashes": {
-    "docs\\core\\uet_hyperbolic_phase_field_bridge.py": "8902483bb56bb0ceb0f1cd21a2b27766378890531cb4226d392d275ff7e63e05",
-    "docs\\core\\uet_hyperbolic_phase_field.py": "f03b8907a606f3b8937556c32ea5f01d9880787aba193edccf53ffa5f1fbb74a",
-    "docs\\core\\uet_covariant_diffusion.py": "a267b89e39db4a8dfac56e71a070539a9da05a55b8bb8b22216e7fd1b839bc53",
-    "docs\\core\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "1609cfdada2ad9e67ebcb8e9ae53f2f3f035fdc70469424e486eb3f7e53c1f86",
+    "docs\\core\\02_equations\\matter_space\\uet_hyperbolic_phase_field_bridge.py": "8902483bb56bb0ceb0f1cd21a2b27766378890531cb4226d392d275ff7e63e05",
+    "docs\\core\\02_equations\\matter_space\\uet_hyperbolic_phase_field.py": "f03b8907a606f3b8937556c32ea5f01d9880787aba193edccf53ffa5f1fbb74a",
+    "docs\\core\\02_equations\\covariant\\uet_covariant_diffusion.py": "a267b89e39db4a8dfac56e71a070539a9da05a55b8bb8b22216e7fd1b839bc53",
+    "docs\\core\\01_contracts\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "1609cfdada2ad9e67ebcb8e9ae53f2f3f035fdc70469424e486eb3f7e53c1f86",
     "docs\\data\\external\\relativistic_transport\\jain_kovtun_2024\\source_record.json": "90c8c7dfe8256da2b1dbe6631d189470800ea8ed7eec228fc9bedf49dd39dbc7",
     "docs\\data\\external\\relativistic_transport\\crossley_glorioso_liu_2017\\source_record.json": "080912a9861ce6c5df645f35d67ddfc9d7415c42dfd97e12ae0f0fd8007ff6b5"
   },
   "input_identity": {
-    "external_comparator_artifact": "docs\\core\\artifacts\\hyperbolic_phase_field_external_comparator_verification.json",
+    "external_comparator_artifact": "docs\\core\\07_artifacts\\verification\\hyperbolic_phase_field_external_comparator_verification.json",
     "source_records": [
       "docs\\data\\external\\relativistic_transport\\jain_kovtun_2024\\source_record.json",
       "docs\\data\\external\\relativistic_transport\\crossley_glorioso_liu_2017\\source_record.json"
@@ -405,25 +405,5 @@
     "No parameters are fit to an external dataset.",
     "The no-common-limit result is restricted to the declared normalized comparator."
   ],
-  "next_controller": "noether_charge_equation_of_state_and_covariant_transport_matching_missing",
-  "downstream_hyperbolic_phase_field": {
-    "artifact": "hyperbolic_phase_field_external_comparator_verification.json",
-    "audit_status": "PASS",
-    "evidence_status": "PARTIAL_EXTERNAL_COMPARATOR",
-    "role": "external_fixed_parameter_formula_comparator",
-    "causal_feasibility_artifact": "hyperbolic_phase_field_causal_feasibility.json",
-    "causal_feasibility_status": "PASS",
-    "fixed_light_cone_parameter_domain": "PASS_NORMALIZED_ANALYTIC",
-    "uniform_subluminal_limit": "NO_GO_EXACT_PARABOLIC_LIMIT",
-    "uet_derivation": "BLOCKED"
-  },
-  "downstream_noether_phase_field_state_map": {
-    "artifact": "noether_phase_field_state_map_verification.json",
-    "audit_status": "PASS",
-    "evidence_status": "PARTIAL_HYDRODYNAMIC_STATE_COORDINATE_MAP",
-    "role": "hydrodynamic_state_coordinate_map_not_microscopic_derivation",
-    "affine_fixed_scale_layer": "PASS",
-    "microscopic_reconstruction": "NO_GO_MANY_TO_ONE",
-    "equation_of_state_and_transport": "BLOCKED"
-  }
+  "next_controller": "noether_density_to_phase_field_order_parameter_map_missing"
 }

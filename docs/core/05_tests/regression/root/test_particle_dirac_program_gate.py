@@ -1,17 +1,14 @@
 """Tests for the explicit deferred particle-program boundary."""
 
 from __future__ import annotations
-from docs.core.core_paths import core_root
+from docs.core.core_paths import canonical_artifact_path
 
 import json
 from pathlib import Path
 
 
-ROOT = core_root()
-
-
 def test_particle_program_is_explicitly_deferred_without_particle_claims() -> None:
-    artifact = json.loads((ROOT / "artifacts/particle_dirac_program_gate.json").read_text(encoding="utf-8"))
+    artifact = json.loads(canonical_artifact_path("particle_dirac_program_gate.json").read_text(encoding="utf-8"))
     assert artifact["audit_status"] == "PASS"
     assert artifact["status"] == "DEFERRED_BLOCKED"
     assert len(artifact["prerequisites"]) == 6

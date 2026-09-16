@@ -56,7 +56,7 @@ def main():
         "claim_boundary":"Six-axis degree-four failure does not alone disprove its degree-two heat response. Candidate14 is not a full angular convergence proof and is not installed into production.",
         "evidence_artifacts":[{"path":p,"sha256":sha256((ROOT/p).read_bytes()).hexdigest()} for p in (
             "docs/scripts/audit/audit_topic13_direction_moments.py","docs/core/test/test_topic13_direction_moments.py",
-            "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py")],
+            "docs/core/02_equations/o2/uet_o2_energy_momentum_conserving_bethe_salpeter.py")],
     }
     (ROOT/"docs/core/07_artifacts/topic13/t13_direction_moments_audit.json").write_text(json.dumps(result,indent=2,allow_nan=False)+"\n",encoding="utf-8")
     print(json.dumps({k:result[k] for k in ("status","production_six_axis","candidate14")},indent=2))

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "hyperbolic_phase_field_bridge_formula_audit",
-  "generated_at": "2026-09-15T01:37:12+00:00",
+  "generated_at": "2026-09-16T17:48:11+00:00",
   "status": "WARN",
   "topic": "docs/core UET GR non-closed response",
   "version": "wave8_v1",
@@ -14,25 +14,25 @@
     {
       "id": "symmetric_domain_shifted_curvature_bounds",
       "origin": "derived_from_g_second_equals_3C_squared_minus_1",
-      "implementation": "docs/core/uet_hyperbolic_phase_field_bridge.py::shifted_curvature_domain_bounds",
+      "implementation": "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field_bridge.py::shifted_curvature_domain_bounds",
       "status": "DERIVED_EXACT"
     },
     {
       "id": "fixed_light_cone_parameter_bounds",
       "origin": "derived_from_sourced_characteristic_speeds",
-      "implementation": "docs/core/uet_hyperbolic_phase_field_bridge.py::subluminal_parameter_bounds",
+      "implementation": "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field_bridge.py::subluminal_parameter_bounds",
       "status": "DERIVED_EXACT_NORMALIZED"
     },
     {
       "id": "fixed_cone_parabolic_no_common_limit",
       "origin": "derived_from_tau_lower_bound_and_parabolic_target",
-      "implementation": "docs/core/uet_hyperbolic_phase_field_bridge.py::fixed_cone_parabolic_limit_no_go",
+      "implementation": "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field_bridge.py::fixed_cone_parabolic_limit_no_go",
       "status": "DERIVED_EXACT_FOR_DECLARED_COMPARATOR"
     },
     {
       "id": "external_q_to_current_law_map",
       "origin": "algebraic_change_J_equals_q_over_tau",
-      "implementation": "docs/core/uet_hyperbolic_phase_field_bridge.py::map_external_flux_law_to_current",
+      "implementation": "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field_bridge.py::map_external_flux_law_to_current",
       "status": "EXACT_LOCAL_MOBILITY_ONE_ONLY"
     }
   ],
@@ -61,10 +61,10 @@
     "physical_validation"
   ],
   "source_hashes": {
-    "docs\\core\\uet_hyperbolic_phase_field_bridge.py": "8902483bb56bb0ceb0f1cd21a2b27766378890531cb4226d392d275ff7e63e05",
-    "docs\\core\\uet_hyperbolic_phase_field.py": "f03b8907a606f3b8937556c32ea5f01d9880787aba193edccf53ffa5f1fbb74a",
-    "docs\\core\\uet_covariant_diffusion.py": "a267b89e39db4a8dfac56e71a070539a9da05a55b8bb8b22216e7fd1b839bc53",
-    "docs\\core\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "1609cfdada2ad9e67ebcb8e9ae53f2f3f035fdc70469424e486eb3f7e53c1f86",
+    "docs\\core\\02_equations\\matter_space\\uet_hyperbolic_phase_field_bridge.py": "8902483bb56bb0ceb0f1cd21a2b27766378890531cb4226d392d275ff7e63e05",
+    "docs\\core\\02_equations\\matter_space\\uet_hyperbolic_phase_field.py": "f03b8907a606f3b8937556c32ea5f01d9880787aba193edccf53ffa5f1fbb74a",
+    "docs\\core\\02_equations\\covariant\\uet_covariant_diffusion.py": "2c99fb608885b45dbbc92409cfee9a35b2fc428d1f48d7c44e1a1187a0106840",
+    "docs\\core\\01_contracts\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "1609cfdada2ad9e67ebcb8e9ae53f2f3f035fdc70469424e486eb3f7e53c1f86",
     "docs\\data\\external\\relativistic_transport\\jain_kovtun_2024\\source_record.json": "90c8c7dfe8256da2b1dbe6631d189470800ea8ed7eec228fc9bedf49dd39dbc7",
     "docs\\data\\external\\relativistic_transport\\crossley_glorioso_liu_2017\\source_record.json": "080912a9861ce6c5df645f35d67ddfc9d7415c42dfd97e12ae0f0fd8007ff6b5"
   },

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "covariant_exchange_contract",
-  "generated_at": "2026-07-22T13:43:10.360549+00:00",
+  "generated_at": "2026-09-16T09:41:08.601453+00:00",
   "status": "CANDIDATE",
   "scalar_equation": "E_phi = epsilon_nc * j_phi",
   "matter_stress_balance": "nabla_mu T_m^(mu nu) = -epsilon_nc*j_phi*nabla^nu(phi)",

@@ -29,7 +29,7 @@ DENSITY = ROOT / (
 )
 CALIBRATION = ROOT / "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json"
 ACTION_BETA = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_action_thermal_stiffness_beta_audit.json"
-MODULE = ROOT / "docs/core/he4_o2_si_beta_mapping.py"
+MODULE = ROOT / "docs/core/03_lanes/thermal/he4_o2_si_beta_mapping.py"
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json"
 
 

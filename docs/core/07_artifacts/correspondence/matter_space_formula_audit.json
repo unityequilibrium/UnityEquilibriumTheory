@@ -23,7 +23,7 @@
       "failure_mode": "unbounded or non-variational dynamics",
       "next_hardening_step": "implement the discrete functional and directional-derivative gate",
       "implementation_status": "PRESENT",
-      "last_verifier": "docs/core/artifacts/matter_space_variational_verification.json"
+      "last_verifier": "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
     },
     {
       "formula_id": "MS-002",
@@ -41,7 +41,7 @@
       "failure_mode": "matter dynamics no longer descends the declared functional",
       "next_hardening_step": "finite-difference directional derivative comparison",
       "implementation_status": "PRESENT",
-      "last_verifier": "docs/core/artifacts/matter_space_variational_verification.json"
+      "last_verifier": "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
     },
     {
       "formula_id": "MS-003",
@@ -59,7 +59,7 @@
       "failure_mode": "space response exchanges untracked energy with matter",
       "next_hardening_step": "finite-difference directional derivative comparison",
       "implementation_status": "PRESENT",
-      "last_verifier": "docs/core/artifacts/matter_space_variational_verification.json"
+      "last_verifier": "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
     },
     {
       "formula_id": "MS-004",
@@ -78,7 +78,7 @@
       "failure_mode": "closed matter amount drifts",
       "next_hardening_step": "mass-drift and source-integral gates",
       "implementation_status": "PRESENT",
-      "last_verifier": "docs/core/artifacts/matter_space_variational_verification.json"
+      "last_verifier": "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
     },
     {
       "formula_id": "MS-005",
@@ -97,7 +97,7 @@
       "failure_mode": "non-conserved control is mistaken for matter-density conservation",
       "next_hardening_step": "separate lane test and explicit diagnostics",
       "implementation_status": "PRESENT",
-      "last_verifier": "docs/core/artifacts/matter_space_variational_verification.json"
+      "last_verifier": "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
     },
     {
       "formula_id": "MS-006",
@@ -118,7 +118,7 @@
       "failure_mode": "claimed memory lacks a physical state or ledger",
       "next_hardening_step": "causal-control, stability, and open-work gates",
       "implementation_status": "PRESENT",
-      "last_verifier": "docs/core/artifacts/matter_space_variational_verification.json"
+      "last_verifier": "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
     },
     {
       "formula_id": "MS-007",
@@ -136,7 +136,7 @@
       "failure_mode": "dissipation is mislabeled as lost energy",
       "next_hardening_step": "closed/open ledger residual gate",
       "implementation_status": "PRESENT",
-      "last_verifier": "docs/core/artifacts/matter_space_variational_verification.json"
+      "last_verifier": "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
     },
     {
       "formula_id": "MS-008",
@@ -155,7 +155,7 @@
       "failure_mode": "trace source becomes negative or loses thermodynamic meaning",
       "next_hardening_step": "non-negativity and discrete energy-law gates",
       "implementation_status": "PRESENT",
-      "last_verifier": "docs/core/artifacts/matter_space_variational_verification.json"
+      "last_verifier": "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
     },
     {
       "formula_id": "MS-009",
@@ -174,7 +174,7 @@
       "failure_mode": "derived information silently becomes a feedback state",
       "next_hardening_step": "trace-enabled versus trace-disabled state-invariance gate",
       "implementation_status": "PRESENT",
-      "last_verifier": "docs/core/artifacts/matter_space_variational_verification.json"
+      "last_verifier": "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
     },
     {
       "formula_id": "MS-010",
@@ -192,7 +192,7 @@
       "failure_mode": "causal interpretation exceeds the implemented response scale",
       "next_hardening_step": "arrival-speed control and SI speed-policy gate",
       "implementation_status": "PRESENT",
-      "last_verifier": "docs/core/artifacts/matter_space_variational_verification.json"
+      "last_verifier": "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
     }
   ],
   "coefficient_policy": {

@@ -17,9 +17,9 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-MATTER_REL = "docs/core/uet_covariant_matter.py"
-RESPONSE_REL = "docs/core/uet_covariant_response.py"
-SPEC_REL = "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
+MATTER_REL = "docs/core/02_equations/covariant/uet_covariant_matter.py"
+RESPONSE_REL = "docs/core/02_equations/covariant/uet_covariant_response.py"
+SPEC_REL = "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
 MATTER_CONTRACT_REL = "docs/core/07_artifacts/archive/covariant_matter_action_contract.json"
 MATTER_FORMULA_REL = "docs/core/07_artifacts/correspondence/covariant_matter_formula_audit.json"
 FIELD_NO_GO_REL = "docs/core/07_artifacts/topic13/t13_covariant_field_normalization_identifiability_no_go.json"

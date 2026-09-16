@@ -39,7 +39,7 @@ ASSETS = (
         "compatibility_mode": "path_resolver",
     },
     {
-        "legacy_path": "docs/core/test/README.md",
+        "legacy_path": "docs/core/05_tests/regression/root/README.md",
         "canonical_path": "docs/core/05_tests/regression/root/README.md",
         "file_kind": "legacy_boundary_readme",
         "compatibility_mode": "markdown_redirect",

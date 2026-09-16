@@ -14,6 +14,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+from docs.core.core_paths import canonical_artifact_path
+
 COMPARATOR_ARTIFACT = (
     "hyperbolic_phase_field_external_comparator_verification.json"
 )
@@ -46,9 +48,45 @@ O2_PROGRAM_CONTROLLER = "physical_kubo_coefficient_evidence_and_curved_3p1_solve
 PROGRAM_TOPIC = "docs/core UET GR non-closed response"
 
 
+_ARTIFACT_DOMAINS = {
+    COMPARATOR_ARTIFACT: "verification",
+    FEASIBILITY_ARTIFACT: "verification",
+    MAPPING_GATE_ARTIFACT: "gates",
+    STATE_MAP_ARTIFACT: "verification",
+    STATE_MAP_GATE_ARTIFACT: "gates",
+    O2_EOS_ARTIFACT: "verification",
+    O2_TRANSPORT_ARTIFACT: "verification",
+    O2_TRANSPORT_CONTRACT_ARTIFACT: "archive",
+    O2_PROGRAM_ARTIFACT: "gates",
+}
+
+
+def _artifact_path(out: Path, name: str) -> Path:
+    """Resolve a stage artifact through canonical authority with legacy fallback."""
+
+    canonical = canonical_artifact_path(name, _ARTIFACT_DOMAINS.get(name))
+    if canonical.exists():
+        return canonical
+    historical_canonical = canonical_artifact_path(name)
+    if historical_canonical.exists():
+        return historical_canonical
+    legacy = out / name
+    if legacy.exists():
+        return legacy
+    legacy_boundary = canonical.parents[2] / "artifacts" / name
+    if legacy_boundary.exists():
+        return legacy_boundary
+    return canonical
+
+
+def _artifact_ref(name: str) -> str:
+    path = canonical_artifact_path(name, _ARTIFACT_DOMAINS.get(name))
+    return "docs/core/" + path.relative_to(path.parents[2]).as_posix()
+
+
 
 def _load_comparator(out: Path) -> dict[str, Any] | None:
-    path = out / COMPARATOR_ARTIFACT
+    path = _artifact_path(out, COMPARATOR_ARTIFACT)
     if not path.exists():
         return None
     try:
@@ -63,7 +101,7 @@ def _load_comparator(out: Path) -> dict[str, Any] | None:
 
 
 def _load_feasibility(out: Path) -> dict[str, Any] | None:
-    path = out / FEASIBILITY_ARTIFACT
+    path = _artifact_path(out, FEASIBILITY_ARTIFACT)
     if not path.exists():
         return None
     try:
@@ -78,7 +116,7 @@ def _load_feasibility(out: Path) -> dict[str, Any] | None:
 
 
 def _load_state_map(out: Path) -> dict[str, Any] | None:
-    path = out / STATE_MAP_ARTIFACT
+    path = _artifact_path(out, STATE_MAP_ARTIFACT)
     if not path.exists():
         return None
     try:
@@ -103,7 +141,7 @@ def _load_o2_superfluid_program(out: Path) -> dict[str, Any] | None:
     )
     payloads: list[dict[str, Any]] = []
     for name in names:
-        path = out / name
+        path = _artifact_path(out, name)
         if not path.exists():
             return None
         try:
@@ -283,12 +321,12 @@ def _replace_program_with_state_map_stage(
             "version": "wave9_v1",
             "benchmark_role": "program_gate",
             "method_label": "monotonic_gr_research_stage_gate",
-            "input_identity": {
+                "input_identity": {
                 "state_map_artifact": (
-                    f"docs/core/artifacts/{STATE_MAP_ARTIFACT}"
+                    _artifact_ref(STATE_MAP_ARTIFACT)
                 ),
                 "state_map_dependency_gate": (
-                    f"docs/core/artifacts/{STATE_MAP_GATE_ARTIFACT}"
+                    _artifact_ref(STATE_MAP_GATE_ARTIFACT)
                 ),
             },
             "notes": [
@@ -349,12 +387,15 @@ def _replace_program_with_o2_superfluid_stage(
     payload: dict[str, Any],
     program: dict[str, Any],
 ) -> None:
-    """Preserve the generated Wave 10 gate while retaining rerun time."""
+    """Preserve the generated Wave 10 gate as the stage source of truth.
 
-    generated_at = payload.get("generated_at")
+    Earlier generators may rerun after Wave 10 is complete.  Reusing the
+    existing stage payload, including its timestamp, keeps cross-generator
+    reproducibility stable instead of making the stage depend on rerun order.
+    """
+
     payload.clear()
     payload.update(program)
-    payload["generated_at"] = generated_at
 
 
 
@@ -394,10 +435,10 @@ def apply_latest_hyperbolic_phase_field_stage(
             payload["method_label"] = "monotonic_gr_research_stage_gate"
             payload["input_identity"] = {
                 "causal_feasibility_artifact": (
-                    f"docs/core/artifacts/{FEASIBILITY_ARTIFACT}"
+                    _artifact_ref(FEASIBILITY_ARTIFACT)
                 ),
                 "covariant_mapping_gate": (
-                    f"docs/core/artifacts/{MAPPING_GATE_ARTIFACT}"
+                    _artifact_ref(MAPPING_GATE_ARTIFACT)
                 ),
             }
             payload["notes"] = [

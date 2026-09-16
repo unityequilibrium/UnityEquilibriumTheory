@@ -19,9 +19,9 @@ from docs.core.uet_o2_finite_temperature_scheme_identifiability import (
 
 
 ROOT = Path(__file__).resolve().parents[3]
-MODULE_REL = "docs/core/uet_o2_finite_temperature_scheme_identifiability.py"
-RENORMALIZED_REL = "docs/core/uet_o2_renormalized_normal_branch.py"
-HARTREE_REL = "docs/core/uet_o2_finite_temperature_self_energy.py"
+MODULE_REL = "docs/core/02_equations/o2/uet_o2_finite_temperature_scheme_identifiability.py"
+RENORMALIZED_REL = "docs/core/02_equations/o2/uet_o2_renormalized_normal_branch.py"
+HARTREE_REL = "docs/core/02_equations/o2/uet_o2_finite_temperature_self_energy.py"
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_scheme_identifiability_no_go.json"
 
 

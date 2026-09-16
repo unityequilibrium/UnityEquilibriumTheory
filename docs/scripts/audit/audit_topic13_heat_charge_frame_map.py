@@ -103,10 +103,10 @@ def main():
         "evidence_artifacts":[{"path":p,"sha256":sha256((ROOT/p).read_bytes()).hexdigest()} for p in (
             "docs/scripts/audit/audit_topic13_heat_charge_frame_map.py",
             "docs/core/test/test_topic13_heat_charge_frame_map.py",
-            "docs/core/uet_o2_action_thermal_observable_bridge.py",
-            "docs/core/uet_o2_action_thermal_stiffness_beta.py",
-            "docs/core/uet_o2_continuum_collision_operator.py",
-            "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py")],
+            "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+            "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
+            "docs/core/02_equations/o2/uet_o2_continuum_collision_operator.py",
+            "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py")],
     }
     (ROOT/"docs/core/07_artifacts/topic13/t13_heat_charge_frame_map_audit.json").write_text(json.dumps(result,indent=2,allow_nan=False)+"\n",encoding="utf-8")
     print(json.dumps({"status":result["status"],"checks":checks,"coefficient_residual":coefficient_residual,"witnesses":witnesses},indent=2))

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_fixed_gauge_adm_hyperbolicity_no_go",
-  "generated_at": "2026-08-28T15:32:03.440968+00:00",
+  "generated_at": "2026-09-16T08:09:16.297456+00:00",
   "topic": "docs/core curved 3+1 parent",
   "version": "fixed-geodesic-adm-symbol-v1",
   "status": "CLOSED_AS_NO_GO_FIXED_GAUGE_ADM_NOT_STRONGLY_HYPERBOLIC",
@@ -102,8 +102,8 @@
     }
   },
   "source_hashes": {
-    "docs/core/uet_curved_3p1_adm_evolution.py": "257fdbc032fac4a4402307c68d2bf4ddec81162b5d3a051e234e445e6c539c20",
-    "docs/scripts/audit/audit_uet_curved_3p1_adm_evolution.py": "c673d75b1ffec3d2dc7985afd585f477ef3381b6e1aecec6a45a49737ad0228c",
+    "docs/core/02_equations/covariant/uet_curved_3p1_adm_evolution.py": "257fdbc032fac4a4402307c68d2bf4ddec81162b5d3a051e234e445e6c539c20",
+    "docs/scripts/audit/audit_uet_curved_3p1_adm_evolution.py": "e49e1c2060492e1e410447f71e838a430162aa15970ef2016c606b3c4c42f586",
     "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json": "d989b9dd637828dd64f975eaf1f744163ac71e362bde71e46e86e599eced1754",
     "docs/data/external/gr_3p1/gundlach_martin_garcia_2006/source_record.json": "d9153620dad37fb08328b8dd308394023ac53b904b8ee2f4bf3a2239c0e200fc",
     "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a"

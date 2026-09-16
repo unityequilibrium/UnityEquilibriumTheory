@@ -17,9 +17,9 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-PARAMETERS_REL = "docs/core/uet_parameters.py"
-HYPERBOLIC_REL = "docs/core/uet_hyperbolic_phase_field.py"
-SELECTED_BRANCH_REL = "docs/core/uet_matter_space_flux_phi.py"
+PARAMETERS_REL = "docs/core/01_contracts/units/uet_parameters.py"
+HYPERBOLIC_REL = "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field.py"
+SELECTED_BRANCH_REL = "docs/core/02_equations/matter_space/uet_matter_space_flux_phi.py"
 THERMAL_AUDIT_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/thermal_closure_derivation_audit.json"
 CONSTRAINT_REL = "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_Core_Thermodynamic_Constraint_Gate.py"
 LEGACY_RESEARCH_REL = "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_Thermodynamic_Bridge.py"

@@ -28,7 +28,7 @@ coefficient values, a finite-temperature two-fluid completion, covariant
 coarse-graining, a curved 3+1 solver, SI map, or external physical validation.
 
 The machine-readable alignment record is
-[`matter_space_report_alignment_gate.json`](./artifacts/matter_space_report_alignment_gate.json).
+[`matter_space_report_alignment_gate.json`](../../07_artifacts/gates/matter_space_report_alignment_gate.json).
 
 ## 1. Two programs, two simultaneous controllers
 
@@ -51,11 +51,11 @@ These controllers answer different questions:
 | Extended GR/Noether program | Candidate covariant response formulas, exact response-null branch, local exchange identity, restricted 1+1 causal kernel, partial reduction, O(2) current, and fixed-scale charge-coordinate map | Charge equation of state, covariant coarse-graining, susceptibility/transport matching, and entropy/Bianchi closure |
 
 The first program remains controlled by
-[`matter_space_research_program_gate.json`](./artifacts/matter_space_research_program_gate.json).
+[`matter_space_research_program_gate.json`](../../07_artifacts/gates/matter_space_research_program_gate.json).
 The extended program is controlled by
-[`uet_gr_research_program_gate.json`](./artifacts/uet_gr_research_program_gate.json)
+[`uet_gr_research_program_gate.json`](../../07_artifacts/gates/uet_gr_research_program_gate.json)
 and
-[`noether_phase_field_dependency_gate.json`](./artifacts/noether_phase_field_dependency_gate.json).
+[`noether_phase_field_dependency_gate.json`](../../07_artifacts/gates/noether_phase_field_dependency_gate.json).
 
 ## 2. What “closed” and “open” mean in the current model
 
@@ -121,7 +121,7 @@ Noether-state map, stress-energy exchange, or physical evolution.
     without a system-specific mapping, equation-of-state match, and transport
     match.
   - Controlling artifact:
-    [`0_11_noether_phase_field_dependency_gate.json`](../topics/0.11_Phase_Transitions/Result/artifacts/0_11_noether_phase_field_dependency_gate.json).
+    [`0_11_noether_phase_field_dependency_gate.json`](../../../topics/0.11_Phase_Transitions/Result/artifacts/0_11_noether_phase_field_dependency_gate.json).
 
 - Topic 0.19: `Draft / Tier B`
   - Dependency result: `BLOCKED / CORE_CANDIDATE_GR_PARENT_AVAILABLE_TOPIC_PHYSICAL_VALIDATION_OPEN`.
@@ -129,7 +129,7 @@ Noether-state map, stress-energy exchange, or physical evolution.
     completion, curved 3+1 dynamics, SI mapping, and holdout evidence remain
     missing.
   - Controlling artifact:
-    [`0_19_core_gr_program_dependency_gate.json`](../topics/0.19_Gravity_GR/Result/artifacts/0_19_core_gr_program_dependency_gate.json).
+    [`0_19_core_gr_program_dependency_gate.json`](../../../topics/0.19_Gravity_GR/Result/artifacts/0_19_core_gr_program_dependency_gate.json).
 
 - Topic 0.13: `Draft / Tier B`
   - Dependency result: `BLOCKED / THERMODYNAMIC_CONSTRAINT_EXPORTS_AVAILABLE_CORE_CLOSURE_NOT_DERIVED`.
@@ -139,7 +139,7 @@ Noether-state map, stress-energy exchange, or physical evolution.
   - Cattaneo remains simulation-only and the thermal pilot retains its causal
     leakage and external-source blockers.
   - Controlling artifact:
-    [`0_13_core_thermodynamic_constraint_gate.json`](../topics/0.13_Thermodynamic_Bridge/Result/artifacts/0_13_core_thermodynamic_constraint_gate.json).
+    [`0_13_core_thermodynamic_constraint_gate.json`](../../../topics/0.13_Thermodynamic_Bridge/Result/artifacts/0_13_core_thermodynamic_constraint_gate.json).
 
 All three dependency packets have `topic_status_impact = NONE`.
 

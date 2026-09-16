@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_foundation_compatibility_gate",
-  "generated_at": "2026-09-14",
+  "generated_at": "2026-09-16",
   "audit_status": "PASS",
   "compatibility_status": "BLOCKED",
   "controlling_blockers": [
@@ -50,7 +50,7 @@
       "old_theory_relation": "The old implementation is not globally variational, but its default behavior is preserved and a separately named canonical lane is available for variational checks.",
       "evidence": [
         {
-          "path": "docs/core/uet_master_equation.py",
+          "path": "docs/core/02_equations/matter_space/uet_master_equation.py",
           "kind": "source_contract",
           "details": {
             "potential_uses_squared_state": true,
@@ -91,7 +91,7 @@
       "old_theory_relation": "The source-sign contract is conditionally closed in the canonical lane, not globally for the historical implementation.",
       "evidence": [
         {
-          "path": "docs/core/uet_master_equation.py",
+          "path": "docs/core/02_equations/matter_space/uet_master_equation.py",
           "kind": "source_contract",
           "details": {
             "positive_coupling_declared": true,
@@ -120,7 +120,7 @@
       "old_theory_relation": "This closes the scoped normalized operator contract, not a covariant box equation or a physical SI information field.",
       "evidence": [
         {
-          "path": "docs/core/uet_master_equation.py",
+          "path": "docs/core/02_equations/matter_space/uet_master_equation.py",
           "kind": "source_contract",
           "details": {
             "historical_box_equation_marked_comparator": true,
@@ -151,7 +151,7 @@
       "old_theory_relation": "No conversion from E_min to beta_normalized is claimed as a first-principles derivation; the conversion remains lane-specific and open.",
       "evidence": [
         {
-          "path": "docs/core/uet_parameters.py",
+          "path": "docs/core/01_contracts/units/uet_parameters.py",
           "kind": "source_contract",
           "details": {
             "normalized_beta_declared": true,
@@ -180,7 +180,7 @@
       "old_theory_relation": "A gradient-flow free-energy law is compatible with standard nonequilibrium modelling, but it is not equivalent to total energy conservation. An open-system ledger must expose boundary/source work explicitly.",
       "evidence": [
         {
-          "path": "docs/core/uet_master_equation.py",
+          "path": "docs/core/02_equations/matter_space/uet_master_equation.py",
           "kind": "source_contract",
           "details": {
             "lyapunov_not_conservation_disclosed": true,
@@ -204,7 +204,7 @@
       "old_theory_relation": "The standard O(2)/U(1) Noether theory is compatible in its own declared lane; it does not retroactively validate the legacy scalar implementation.",
       "evidence": [
         {
-          "path": "docs/core/uet_master_equation.py",
+          "path": "docs/core/02_equations/matter_space/uet_master_equation.py",
           "kind": "source_contract",
           "details": {
             "u1_claim_present": true,
@@ -227,7 +227,7 @@
       "old_theory_relation": "Lorentz covariance may be recovered in a separately declared covariant action/limit; it is not established for the legacy master engine.",
       "evidence": [
         {
-          "path": "docs/core/uet_master_equation.py",
+          "path": "docs/core/02_equations/matter_space/uet_master_equation.py",
           "kind": "source_contract",
           "details": {
             "grid_finite_difference_present": true,
@@ -250,7 +250,7 @@
       "old_theory_relation": "The covariant pilot provides a conditional closed response limit, not a proof that the global theory is non-closed.",
       "evidence": [
         {
-          "path": "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md",
+          "path": "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md",
           "kind": "claim_boundary",
           "details": {
             "explicit_subsystem_exchange": true,
@@ -273,7 +273,7 @@
       "old_theory_relation": "No old-theory special-case relation is established between legacy I and the new trace/response variables.",
       "evidence": [
         {
-          "path": "docs/core/artifacts/master_equation_alignment_gate_v2.json",
+          "path": "docs/core/07_artifacts/gates/master_equation_alignment_gate_v2.json",
           "kind": "artifact",
           "details": {
             "default_behavior_must_remain_unchanged": true,
@@ -287,7 +287,7 @@
           }
         },
         {
-          "path": "docs/core/MATTER_SPACE_RESEARCH_SPEC.md",
+          "path": "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
           "kind": "specification",
           "details": "R is derived and has no feedback in the new mode"
         }
@@ -306,7 +306,7 @@
       "old_theory_relation": "The candidate can contain standard gradient-flow and damped-response limits under explicit assumptions; it is not yet a validated physical replacement for a standard theory.",
       "evidence": [
         {
-          "path": "docs/core/artifacts/matter_space_variational_verification.json",
+          "path": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
           "kind": "artifact",
           "details": {
             "schema_version": "1.0",
@@ -385,7 +385,7 @@
       "old_theory_relation": "The standard telegraph/diffusion limiting equations remain available as comparators, but the current discretization cannot yet support a causal UET response claim.",
       "evidence": [
         {
-          "path": "docs/core/artifacts/matter_space_variational_verification.json",
+          "path": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
           "kind": "metric",
           "details": {
             "value": 0.017639381271029236,
@@ -410,7 +410,7 @@
       "old_theory_relation": "A standard memory observable is compatible with the trace-only construction; backreaction would be a separate constitutive hypothesis and is currently blocked in the new mode.",
       "evidence": [
         {
-          "path": "docs/core/artifacts/spacetime_trace_verification.json",
+          "path": "docs/core/07_artifacts/verification/spacetime_trace_verification.json",
           "kind": "artifact",
           "details": {
             "source_nonnegative": true,
@@ -435,7 +435,7 @@
       "old_theory_relation": "GR is a conditional closed-limit comparator of the covariant pilot only. It is not yet a limit proof for the legacy master equation.",
       "evidence": [
         {
-          "path": "docs/core/artifacts/gr_closed_limit_verification.json",
+          "path": "docs/core/07_artifacts/verification/gr_closed_limit_verification.json",
           "kind": "artifact",
           "details": {
             "status": "PASS",
@@ -476,7 +476,7 @@
       "old_theory_relation": "The standard relativistic O(2) condensate is a valid counterpart for this lane. It does not validate the legacy double-well as its action-derived EOS.",
       "evidence": [
         {
-          "path": "docs/core/artifacts/o2_finite_density_eos_verification.json",
+          "path": "docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json",
           "kind": "artifact",
           "details": {
             "gates": {
@@ -506,7 +506,7 @@
           }
         },
         {
-          "path": "docs/core/artifacts/o2_eos_formula_audit.json",
+          "path": "docs/core/07_artifacts/correspondence/o2_eos_formula_audit.json",
           "kind": "artifact",
           "details": {
             "status": "WARN",
@@ -535,7 +535,7 @@
       "old_theory_relation": "The old constitutive form is not currently a special case of the finite-density O(2) lane under the tested mapping.",
       "evidence": [
         {
-          "path": "docs/core/artifacts/o2_finite_density_eos_verification.json",
+          "path": "docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json",
           "kind": "metric",
           "details": {
             "residual": 1.0,
@@ -558,7 +558,7 @@
       "old_theory_relation": "Standard heat/GL behavior can be used as benchmark baselines after an exact operator and boundary contract is declared.",
       "evidence": [
         {
-          "path": "docs/core/uet_master_equation.py",
+          "path": "docs/core/02_equations/matter_space/uet_master_equation.py",
           "kind": "legacy_verifier_names",
           "details": [
             "verify_heat_equation_limit",
@@ -656,18 +656,18 @@
   ],
   "next_controller": "repair legacy variational/unit conflicts, complete foundation inventory, and repair matter-space causal leakage before downstream data tests",
   "source_hashes": {
-    "docs/core/uet_master_equation.py": "dc06b67609725cfbec432a65c811e3da51f9cbbe2b91ea34f98d0a3a58486e8c",
-    "docs/core/uet_parameters.py": "eff2fc6fe0fe35f18c49a032729e385c97b633a90e9a0bd3789be5051d316651",
-    "docs/core/MATTER_SPACE_RESEARCH_SPEC.md": "3fca7d82e7f0c0c5e7904811eec7d81d772fe802492dbf2147b1ee95232fb2a4",
-    "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md": "1609cfdada2ad9e67ebcb8e9ae53f2f3f035fdc70469424e486eb3f7e53c1f86",
-    "docs/core/artifacts/uet_equation_correspondence_registry.json": "9fd592d590291dea95e793cc8211e052004c33302c8585dae2c7e3d80676d307",
-    "docs/core/artifacts/master_equation_alignment_gate_v2.json": "b2184ce72accffcb1baf609bfb3db789247fc387b30413996f49a74a794a3515",
-    "docs/core/artifacts/matter_space_formula_audit.json": "b601c8a92201660aee06c4f577521e4fe0b421d7f9b047616e23ca9dd846d0da",
-    "docs/core/artifacts/matter_space_variational_verification.json": "e5ae26fb40ff6cd4a0d1d0c86576e91218294e683902bb60b6afb0b2596cc62c",
-    "docs/core/artifacts/matter_space_dependency_gate.json": "5af4debf7c189ac255d074eaaf1dbab7515721d480f200d6cb56c13b3a52ede5",
-    "docs/core/artifacts/spacetime_trace_verification.json": "1ba232f1d8d0e13e1492b7465e2afabd44639d7af5c88100a1d759ed53a75e27",
-    "docs/core/artifacts/gr_closed_limit_verification.json": "daecc68f691d897d58471e7bad65b4f4221648fcd00c9543695d3def092e32a4",
-    "docs/core/artifacts/o2_finite_density_eos_verification.json": "5e0a714f995e33ab2c2f714427c34fe160cb77cd4bd3538e5dca220bfa91bab5",
-    "docs/core/artifacts/o2_eos_formula_audit.json": "a1f3347b69ed86b90c8cfb7c9ca995a51afc7f4bfee53c7767bb4d9ad6d19ec7"
+    "docs/core/02_equations/matter_space/uet_master_equation.py": "4b8525d37f258352acca7c2cbc471e3f52384df599a45369fcc3f9231a91bd73",
+    "docs/core/01_contracts/units/uet_parameters.py": "eff2fc6fe0fe35f18c49a032729e385c97b633a90e9a0bd3789be5051d316651",
+    "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md": "49fbf80310cb31b545ee2594615f545fb54057820d433f6bcba256eb1c9a6e77",
+    "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md": "1609cfdada2ad9e67ebcb8e9ae53f2f3f035fdc70469424e486eb3f7e53c1f86",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json": "9fd592d590291dea95e793cc8211e052004c33302c8585dae2c7e3d80676d307",
+    "docs/core/07_artifacts/gates/master_equation_alignment_gate_v2.json": "b2184ce72accffcb1baf609bfb3db789247fc387b30413996f49a74a794a3515",
+    "docs/core/07_artifacts/correspondence/matter_space_formula_audit.json": "b601c8a92201660aee06c4f577521e4fe0b421d7f9b047616e23ca9dd846d0da",
+    "docs/core/07_artifacts/verification/matter_space_variational_verification.json": "e5ae26fb40ff6cd4a0d1d0c86576e91218294e683902bb60b6afb0b2596cc62c",
+    "docs/core/07_artifacts/gates/matter_space_dependency_gate.json": "5af4debf7c189ac255d074eaaf1dbab7515721d480f200d6cb56c13b3a52ede5",
+    "docs/core/07_artifacts/verification/spacetime_trace_verification.json": "1ba232f1d8d0e13e1492b7465e2afabd44639d7af5c88100a1d759ed53a75e27",
+    "docs/core/07_artifacts/verification/gr_closed_limit_verification.json": "78c6dc7d94e4f39e10af581f2aedeb87ef95d0b4e65282f475fa47c5dbad849b",
+    "docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json": "746e6db7be3dba2eb5d1eed9ec9a010b4b80f0131ecf8a82a4a65c80c6ebed1d",
+    "docs/core/07_artifacts/correspondence/o2_eos_formula_audit.json": "e7c1a5ad9a5efba62091226621b330be9f32ed64e38d981e956a167a04ebe12b"
   }
 }

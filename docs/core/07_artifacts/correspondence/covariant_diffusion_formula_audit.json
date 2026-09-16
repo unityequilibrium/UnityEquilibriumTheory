@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "covariant_diffusion_formula_audit",
-  "generated_at": "2026-08-30T10:26:12.196258+00:00",
+  "generated_at": "2026-09-16T17:48:08.700888+00:00",
   "status": "WARN",
   "implementation_status": "PRESENT",
   "derivation_status": "constitutive current reduction with exact discrete identities; microscopic and full hyperbolic phase-field derivations remain open",
@@ -9,22 +9,22 @@
   "formula_registry": [
     {
       "id": "current_frame_decomposition",
-      "implementation": "docs/core/uet_covariant_diffusion.py::decompose_noether_current",
+      "implementation": "docs/core/02_equations/covariant/uet_covariant_diffusion.py::decompose_noether_current",
       "status": "IMPLEMENTED_KINEMATIC"
     },
     {
       "id": "finite_relaxation_current",
-      "implementation": "docs/core/uet_covariant_diffusion.py::causal_current_rhs",
+      "implementation": "docs/core/02_equations/covariant/uet_covariant_diffusion.py::causal_current_rhs",
       "status": "IMPLEMENTED_CONSTITUTIVE"
     },
     {
       "id": "semi_discrete_energy_identity",
-      "implementation": "docs/core/uet_covariant_diffusion.py::current_energy_balance",
+      "implementation": "docs/core/02_equations/covariant/uet_covariant_diffusion.py::current_energy_balance",
       "status": "IMPLEMENTED_EXACT"
     },
     {
       "id": "model_b_adiabatic_limit",
-      "implementation": "docs/core/uet_covariant_diffusion.py::compare_adiabatic_limit",
+      "implementation": "docs/core/02_equations/covariant/uet_covariant_diffusion.py::compare_adiabatic_limit",
       "status": "IMPLEMENTED_EXACT_DISCRETE"
     }
   ],
@@ -51,9 +51,9 @@
   ],
   "epsilon_denominator_lines": [],
   "source_hashes": {
-    "docs\\core\\uet_covariant_diffusion.py": "a267b89e39db4a8dfac56e71a070539a9da05a55b8bb8b22216e7fd1b839bc53",
-    "docs\\core\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "1609cfdada2ad9e67ebcb8e9ae53f2f3f035fdc70469424e486eb3f7e53c1f86",
-    "docs\\core\\artifacts\\covariant_matter_action_verification.json": "b02aaa543ae9945496a434fa308edefa85dd1c0ac004ae95f6219abb1c35fc9a"
+    "docs\\core\\02_equations\\covariant\\uet_covariant_diffusion.py": "2c99fb608885b45dbbc92409cfee9a35b2fc428d1f48d7c44e1a1187a0106840",
+    "docs\\core\\01_contracts\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "1609cfdada2ad9e67ebcb8e9ae53f2f3f035fdc70469424e486eb3f7e53c1f86",
+    "docs\\core\\07_artifacts\\verification\\covariant_matter_action_verification.json": "f58b206833fd3bef2d5f43e5eeb494bc231348b3260da341537c382775503ea9"
   },
   "downstream_hyperbolic_phase_field": {
     "artifact": "hyperbolic_phase_field_external_comparator_verification.json",

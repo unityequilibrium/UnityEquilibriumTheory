@@ -18,10 +18,10 @@ from docs.core.uet_o2_finite_temperature_renormalized_hartree import (
 
 
 ROOT = Path(__file__).resolve().parents[3]
-MODULE_REL = "docs/core/uet_o2_finite_temperature_renormalized_hartree.py"
-VACUUM_REL = "docs/core/uet_o2_renormalized_normal_branch.py"
-SELF_ENERGY_REL = "docs/core/uet_o2_finite_temperature_self_energy.py"
-HARTREE_REL = "docs/core/uet_o2_finite_temperature_hartree_thermodynamics.py"
+MODULE_REL = "docs/core/02_equations/o2/uet_o2_finite_temperature_renormalized_hartree.py"
+VACUUM_REL = "docs/core/02_equations/o2/uet_o2_renormalized_normal_branch.py"
+SELF_ENERGY_REL = "docs/core/02_equations/o2/uet_o2_finite_temperature_self_energy.py"
+HARTREE_REL = "docs/core/02_equations/o2/uet_o2_finite_temperature_hartree_thermodynamics.py"
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_renormalized_hartree_audit.json"
 
 TEMPERATURE = 0.35

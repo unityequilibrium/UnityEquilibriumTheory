@@ -30,7 +30,7 @@ from docs.core.uet_matter_space_causal import (  # noqa: E402
 
 
 OUT = ROOT / "docs/core/07_artifacts/verification/matter_space_causal_discrete_gradient_verification.json"
-CORE_SOURCE = ROOT / "docs/core/uet_matter_space_causal.py"
+CORE_SOURCE = ROOT / "docs/core/02_equations/matter_space/uet_matter_space_causal.py"
 THRESHOLD = 1.0e-10
 
 

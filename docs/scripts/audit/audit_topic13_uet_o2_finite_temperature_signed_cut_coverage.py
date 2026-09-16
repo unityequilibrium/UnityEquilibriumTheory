@@ -28,10 +28,10 @@ OUT = ROOT / (
     "docs/core/artifacts/"
     "t13_uet_o2_finite_temperature_signed_cut_coverage_audit.json"
 )
-MODULE = ROOT / "docs/core/uet_o2_finite_temperature_signed_cut_coverage.py"
-SCATTERING = ROOT / "docs/core/uet_o2_finite_temperature_sunset_scattering_sk_kms.py"
-SUNSET = ROOT / "docs/core/uet_o2_finite_temperature_sunset_sk_kms.py"
-ACTION = ROOT / "docs/core/uet_o2_action_1pi_sunset_tensor.py"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_signed_cut_coverage.py"
+SCATTERING = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_scattering_sk_kms.py"
+SUNSET = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_sk_kms.py"
+ACTION = ROOT / "docs/core/02_equations/o2/uet_o2_action_1pi_sunset_tensor.py"
 
 
 def sha256(path: Path) -> str:

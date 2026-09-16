@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_active_lane_units_observable_register",
-  "generated_at": "2026-08-10",
+  "generated_at": "2026-09-16",
   "audit_status": "PASS_WITH_OPEN_LANES",
   "purpose": "make F3 units and F7 observable gaps explicit for every active research lane",
   "rule": "normalized or natural-unit results are not SI predictions without an explicit conversion, measurement operator and uncertainty contract",
-  "lane_count": 10,
+  "lane_count": 9,
   "observable_status_counts": {
     "BLOCKED": 1,
     "FORMAL_CONSTITUTIVE_ONLY": 1,
@@ -35,7 +35,7 @@
         "C is not mass density"
       ],
       "evidence": [
-        "docs/core/artifacts/matter_space_characteristic_cone_verification.json"
+        "docs/core/07_artifacts/verification/matter_space_characteristic_cone_verification.json"
       ]
     },
     {
@@ -55,8 +55,8 @@
         "material units open"
       ],
       "evidence": [
-        "docs/core/artifacts/matter_space_causal_lane_selection.json",
-        "docs/core/artifacts/matter_space_phase_pilot.json"
+        "docs/core/07_artifacts/archive/matter_space_causal_lane_selection.json",
+        "docs/core/07_artifacts/archive/matter_space_phase_pilot.json"
       ]
     },
     {
@@ -79,9 +79,9 @@
         "3D physical source, uncertainty, galaxy data, and holdout remain open"
       ],
       "evidence": [
-        "docs/core/artifacts/mass_density_correspondence_verification.json",
-        "docs/core/artifacts/mass_density_amplitude_contract_verification.json",
-        "docs/core/artifacts/mass_density_dimensional_contract_verification.json"
+        "docs/core/07_artifacts/correspondence/mass_density_correspondence_verification.json",
+        "docs/core/07_artifacts/verification/mass_density_amplitude_contract_verification.json",
+        "docs/core/07_artifacts/verification/mass_density_dimensional_contract_verification.json"
       ]
     },
     {
@@ -105,8 +105,8 @@
         "external 3D source, calibration, propagated uncertainty, galaxy data, and holdout remain open"
       ],
       "evidence": [
-        "docs/core/artifacts/mass_density_3d_contract_verification.json",
-        "docs/core/artifacts/uet_equation_correspondence_registry.json"
+        "docs/core/07_artifacts/verification/mass_density_3d_contract_verification.json",
+        "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json"
       ]
     },
     {
@@ -126,8 +126,8 @@
         "not an intention or teleological law"
       ],
       "evidence": [
-        "docs/core/artifacts/resource_selection_dynamic_game_verification.json",
-        "docs/core/artifacts/resource_selection_thermal_bridge_verification.json"
+        "docs/core/07_artifacts/provenance/resource_selection_dynamic_game_verification.json",
+        "docs/core/07_artifacts/provenance/resource_selection_thermal_bridge_verification.json"
       ]
     },
     {
@@ -148,8 +148,8 @@
         "normalized proxy is not calorimetry"
       ],
       "evidence": [
-        "docs/core/artifacts/thermal_observable_bridge_verification.json",
-        "docs/core/artifacts/resource_selection_thermal_bridge_verification.json"
+        "docs/core/07_artifacts/topic13/thermal_observable_bridge_verification.json",
+        "docs/core/07_artifacts/provenance/resource_selection_thermal_bridge_verification.json"
       ]
     },
     {
@@ -170,8 +170,8 @@
         "finite-temperature transport and Kubo values open"
       ],
       "evidence": [
-        "docs/core/artifacts/o2_finite_density_eos_verification.json",
-        "docs/core/artifacts/covariant_superfluid_transport_verification.json"
+        "docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json",
+        "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json"
       ]
     },
     {
@@ -194,9 +194,9 @@
         "SI detector map and external provenance remain open"
       ],
       "evidence": [
-        "docs/core/artifacts/impact_effect_core_verification.json",
-        "docs/core/artifacts/carrier_observer_thought_experiment.json",
-        "docs/core/artifacts/photon_observer_baseline_verification.json"
+        "docs/core/07_artifacts/verification/impact_effect_core_verification.json",
+        "docs/core/07_artifacts/archive/carrier_observer_thought_experiment.json",
+        "docs/core/07_artifacts/verification/photon_observer_baseline_verification.json"
       ]
     },
     {
@@ -217,40 +217,9 @@
         "no global open-universe claim"
       ],
       "evidence": [
-        "docs/core/artifacts/orbit_cosmology_correspondence_gate.json",
-        "docs/core/artifacts/uet_gr_research_program_gate.json"
+        "docs/core/07_artifacts/gates/orbit_cosmology_correspondence_gate.json",
+        "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json"
       ]
-    },
-    {
-      "lane_id": "thermal_ttg_observable_bridge",
-      "variables": {
-        "Phi": "normalized effective response variable",
-        "Delta_Phi": "normalized response difference",
-        "Delta_Tq": "source-defined quasi-temperature difference in K only after independent mapping",
-        "alpha_Phi_K": "open scale in K per normalized Phi",
-        "y_TTG": "dimensionless normalized TTG signal",
-        "R_gen": "derived trace/history variable; not a direct TTG observable"
-      },
-      "unit_lane": "normalized_plus_external_K_contract_open",
-      "standard_counterpart": "TTG quasi-temperature response with Fourier and Cattaneo controls",
-      "observable_operator": "y_TTG^UET(t)=Delta_Phi(t)/Delta_Phi(0); Delta_Tq=alpha_Phi_K*Delta_Phi",
-      "observable_status": "SIMULATION_ONLY_OPEN_DIMENSIONAL_MAP",
-      "units_status": "BLOCKED_INDEPENDENT_ALPHA_Phi_K",
-      "uncertainty_status": "PROVISIONAL_FIGURE_DIGITIZATION_PLUS_OPEN_ALPHA_UNCERTAINTY",
-      "open_items": [
-        "full coupled pre-arrival leakage remains above 1e-6",
-        "independent alpha_Phi_K derivation or calibration with uncertainty",
-        "heat-flux and entropy maps are downstream and not direct TTG observables",
-        "Xie 2026 remains locked holdout"
-      ],
-      "evidence": [
-        "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/thermal_wave1_branch_gate.json",
-        "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_observable_map_readiness.json",
-        "docs/core/artifacts/thermal_dimensional_calibration_contract.json"
-      ],
-      "claim_boundary": "normalized observable/control lane only; no temperature prediction or external validation",
-      "wave1_status": "BLOCKED_OPEN_CALIBRATION",
-      "generated_by": "sync_uet_active_lane_wave1.py"
     }
   ],
   "foundation_effect": {
@@ -258,11 +227,5 @@
     "F7_observable_mapping": "BLOCKED_UNTIL_MEASUREMENT_OPERATOR_AND_UNCERTAINTY_CLOSURE",
     "claim_ceiling": "internal normalized/natural-unit diagnostics and conditional constitutive relations only"
   },
-  "next_controller": "close one dimensional thermal lane and source-lock an external 3D density operator before any external fit or physical claim",
-  "wave1_extension": {
-    "status": "CANDIDATE_LANE_ADDED_WITH_BLOCKED_DIMENSIONAL_MAP",
-    "claim_promotion": false,
-    "selected_reference_branch": "frozen_C_normalized_control_only",
-    "full_candidate_gate": "preserved_separately"
-  }
+  "next_controller": "close one dimensional thermal lane and source-lock an external 3D density operator before any external fit or physical claim"
 }

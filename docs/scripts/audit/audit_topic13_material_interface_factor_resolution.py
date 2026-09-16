@@ -138,7 +138,7 @@ def main() -> int:
         "SI_conversion_and_independent_alpha_record_missing",
     ]
     source_paths = [
-        "docs/core/uet_material_interface_factor_resolution.py",
+        "docs/core/03_lanes/thermal/uet_material_interface_factor_resolution.py",
         "docs/core/test/test_topic13_material_interface_factor_resolution.py",
         "docs/scripts/audit/audit_topic13_material_interface_factor_resolution.py",
     ]

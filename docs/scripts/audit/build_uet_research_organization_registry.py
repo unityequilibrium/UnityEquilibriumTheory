@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import importlib.util
 import json
 import re
 from collections import Counter
@@ -20,14 +21,14 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
 CORE = ROOT / "docs" / "core"
-ARTIFACTS = CORE / "artifacts"
+ARTIFACTS = CORE / "07_artifacts"
 POLICY_PATH = CORE / "00_governance" / "uet_research_organization_policy.json"
-MANIFEST_PATH = ARTIFACTS / "uet_core_file_manifest.json"
-FAMILY_CONTRACT_PATH = ARTIFACTS / "uet_core_equation_family_contract.json"
-FOUNDATION_GATE_PATH = ARTIFACTS / "uet_foundation_dependency_gate.json"
-REGISTRY_PATH = ARTIFACTS / "uet_research_organization_registry.json"
-MIGRATION_PATH = ARTIFACTS / "uet_core_file_migration_map.json"
-AUDIT_PATH = ARTIFACTS / "uet_core_organization_audit.json"
+MANIFEST_PATH = ARTIFACTS / "provenance" / "uet_core_file_manifest.json"
+FAMILY_CONTRACT_PATH = ARTIFACTS / "archive" / "uet_core_equation_family_contract.json"
+FOUNDATION_GATE_PATH = ARTIFACTS / "gates" / "uet_foundation_dependency_gate.json"
+REGISTRY_PATH = ARTIFACTS / "gates" / "uet_research_organization_registry.json"
+MIGRATION_PATH = ARTIFACTS / "archive" / "uet_core_file_migration_map.json"
+AUDIT_PATH = ARTIFACTS / "gates" / "uet_core_organization_audit.json"
 INDEX_PATH = CORE / "00_governance" / "CORE_RESEARCH_ORGANIZATION_INDEX.md"
 
 REQUIRED_FILE_FIELDS = (
@@ -610,11 +611,17 @@ def main() -> int:
     parser.add_argument("--check", action="store_true", help="compare existing outputs without writing")
     args = parser.parse_args()
 
-    policy = load_json(POLICY_PATH)
-    manifest = load_json(MANIFEST_PATH)
-    contract = load_json(FAMILY_CONTRACT_PATH)
-    gate = load_json(FOUNDATION_GATE_PATH)
-    registry, migration, audit, index = build_registry(policy, manifest, contract, gate)
+    source = ROOT / "docs" / "scripts" / "audit" / "reconcile_uet_core_registry_v4.py"
+    spec = importlib.util.spec_from_file_location("uet_core_registry_reconcile", source)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"cannot load canonical generator: {source}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    outputs = module.build()
+    registry = outputs["registry"]
+    migration = outputs["migration"]
+    audit = outputs["audit"]
+    index = outputs["organization_index"]
 
     outputs = {
         REGISTRY_PATH: registry,
@@ -649,7 +656,7 @@ def main() -> int:
                 "index": repo_path(INDEX_PATH),
                 "indexed_files": len(registry["files"]),
                 "review_queue_count": registry["review_queue_count"],
-                "foundation_status": gate.get("status"),
+                "foundation_status": registry.get("scientific_foundation_status", {}).get("status"),
             },
             ensure_ascii=False,
         )

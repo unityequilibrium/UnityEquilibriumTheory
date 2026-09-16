@@ -20,12 +20,16 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from docs.core.core_paths import canonical_existing_path  # noqa: E402
 ARTIFACT_PATH = ROOT / "docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json"
 
-MASTER_PATH = ROOT / "docs/core/uet_master_equation.py"
-PARAMETERS_PATH = ROOT / "docs/core/uet_parameters.py"
-MATTER_SPACE_SPEC = ROOT / "docs/core/MATTER_SPACE_RESEARCH_SPEC.md"
-GR_SPEC = ROOT / "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
+MASTER_PATH = canonical_existing_path(ROOT / "docs/core/02_equations/matter_space/uet_master_equation.py")
+PARAMETERS_PATH = canonical_existing_path(ROOT / "docs/core/01_contracts/units/uet_parameters.py")
+MATTER_SPACE_SPEC = canonical_existing_path(ROOT / "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md")
+GR_SPEC = canonical_existing_path(ROOT / "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md")
 REGISTRY_PATH = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json"
 ALIGNMENT_PATH = ROOT / "docs/core/07_artifacts/gates/master_equation_alignment_gate_v2.json"
 MATTER_FORMULA_PATH = ROOT / "docs/core/07_artifacts/correspondence/matter_space_formula_audit.json"

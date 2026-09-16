@@ -13,20 +13,23 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 CORE = ROOT / "docs" / "core"
 AUDIT = CORE / "00_governance" / "uet_core_imports_audit.json"
+ALIAS_REGISTRY = CORE / "00_governance" / "uet_core_legacy_module_aliases.json"
 
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 
 def build() -> dict[str, object]:
-    module_names = sorted(
-        f"docs.core.{path.stem}"
-        for path in CORE.glob("*.py")
-        if path.name not in {"__init__.py", "core_paths.py", "core_compat.py"}
+    aliases = (
+        json.loads(ALIAS_REGISTRY.read_text(encoding="utf-8")).get("aliases", [])
+        if ALIAS_REGISTRY.exists()
+        else []
     )
+    module_names = sorted(str(item["legacy_module"]) for item in aliases)
+    canonical_names = sorted(str(item["canonical_module"]) for item in aliases)
     imported: list[str] = []
     failures: list[dict[str, str]] = []
-    for module_name in module_names:
+    for module_name in sorted(set(module_names + canonical_names)):
         try:
             importlib.import_module(module_name)
         except Exception as exc:  # pragma: no cover - exact failure is recorded for diagnosis
@@ -57,6 +60,8 @@ def build() -> dict[str, object]:
         "controlling_blocker": None if status == "PASS" else "public_core_import_surface_failed",
         "checks": checks,
         "module_count": len(module_names),
+        "canonical_module_count": len(canonical_names),
+        "legacy_alias_count": len(module_names),
         "imported_modules": imported,
         "failed_modules": failures,
         "facade_error": facade_error,

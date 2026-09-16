@@ -10,13 +10,18 @@ from __future__ import annotations
 
 import hashlib
 import json
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs" / "core" / "artifacts" / "uet_wave3_wave10_research_program.json"
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from docs.core.core_paths import canonical_artifact_path  # noqa: E402
+
+OUT = canonical_artifact_path("uet_wave3_wave10_research_program.json", "archive")
 
 
 def rel(path: Path) -> str:
@@ -89,8 +94,10 @@ def wave(
 
 
 def build() -> dict[str, Any]:
-    foundation_path = ROOT / "docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json"
-    wording_path = ROOT / "docs/core/07_artifacts/verification/impact_effect_legacy_wording_audit.json"
+    foundation_path = canonical_artifact_path("uet_foundation_dependency_gate.json", "gates")
+    wording_path = canonical_artifact_path(
+        "impact_effect_legacy_wording_audit.json", "verification"
+    )
     foundation = load(foundation_path)
     wording = load(wording_path)
     foundation_status = status_of(foundation)

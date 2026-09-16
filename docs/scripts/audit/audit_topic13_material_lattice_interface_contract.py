@@ -66,7 +66,7 @@ def main() -> int:
         "SI_conversion_and_independent_alpha_record_missing",
     ]
     source_paths = [
-        "docs/core/uet_material_lattice_interface_contract.py",
+        "docs/core/03_lanes/thermal/uet_material_lattice_interface_contract.py",
         "docs/core/test/test_topic13_material_lattice_interface_contract.py",
         "docs/scripts/audit/audit_topic13_material_lattice_interface_contract.py",
     ]

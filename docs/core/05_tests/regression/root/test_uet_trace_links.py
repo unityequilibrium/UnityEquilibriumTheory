@@ -1,18 +1,17 @@
 """Regression checks for the bounded derived-trace family link."""
 
 from __future__ import annotations
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import canonical_artifact_path, repo_root
 
 import json
 from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACTS = ROOT / "docs" / "core" / "artifacts"
-
-
 def load_json(name: str) -> dict:
-    return json.loads((ARTIFACTS / name).read_text(encoding="utf-8-sig"))
+    return json.loads(
+        canonical_artifact_path(name).read_text(encoding="utf-8-sig")
+    )
 
 
 FORMULA_IDS = ["uet.trace.derived_observable"]
@@ -26,7 +25,7 @@ def test_trace_family_has_explicit_scientific_chain() -> None:
         if item["family_id"] == "core.trace"
     )
 
-    assert family["module_paths"] == ["docs/core/uet_trace.py"]
+    assert family["module_paths"] == ["docs/core/02_equations/matter_space/uet_trace.py"]
     assert family["unit_lane"] == "normalized_v1"
     assert family["formula_ids"] == FORMULA_IDS
     assert all((ROOT / path).exists() for path in family["verifier_paths"])
@@ -41,7 +40,9 @@ def test_trace_record_materializes_links_without_promotion() -> None:
         item
         for item in registry["files"]
         if item.get("equation_family_or_lane") == "core.trace"
-        and item.get("path") == "docs/core/uet_trace.py"
+        and item.get("current_path") == item.get("canonical_path")
+        and item.get("canonical_path")
+        == "docs/core/02_equations/matter_space/uet_trace.py"
     ]
 
     assert len(records) == 1
@@ -52,8 +53,8 @@ def test_trace_record_materializes_links_without_promotion() -> None:
     assert record["artifact_paths"]
     assert record["claim_ceiling"] == "diagnostic derived observable; no substance/energy-reservoir claim"
     assert record["evidence_status"] == "BLOCKED"
-    assert record["organization_disposition"] == "W2-EQUATION-TRACE"
-    assert record["registry_link_status"] == "ORGANIZATION_POLICY_ASSIGNED"
+    assert record["organization_status"] == "MIGRATED"
+    assert record["registry_link_status"] == "CANONICAL_PATH"
 
 
 def test_trace_family_points_to_existing_central_record() -> None:

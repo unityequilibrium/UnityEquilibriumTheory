@@ -11,7 +11,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
 AUDIT_REL = "docs/core/07_artifacts/topic13/t13_beta_action_normalized_correspondence_no_go.json"
-MODULE_REL = "docs/core/uet_o2_beta_correspondence.py"
+MODULE_REL = "docs/core/02_equations/o2/uet_o2_beta_correspondence.py"
 CURVATURE_REL = "docs/core/07_artifacts/topic13/t13_uet_o2_normal_response_curvature_audit.json"
 BETA_REL = "docs/core/07_artifacts/topic13/t13_thermal_response_beta_contract_audit.json"
 FULL_REL = "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"

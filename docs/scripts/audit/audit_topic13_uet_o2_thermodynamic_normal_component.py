@@ -25,8 +25,8 @@ from docs.core.uet_o2_finite_temperature_quasiparticle_eos import (  # noqa: E40
 
 
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_thermodynamic_normal_component_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_finite_temperature_normal_component.py"
-TWO_FLUID_MODULE = ROOT / "docs/core/uet_o2_finite_temperature_two_fluid_response.py"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_normal_component.py"
+TWO_FLUID_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py"
 TWO_FLUID_AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_two_fluid_response_audit.json"
 
 

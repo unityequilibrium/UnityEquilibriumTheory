@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "hyperbolic_phase_field_covariant_mapping_gate",
-  "generated_at": "2026-09-15T01:37:12+00:00",
+  "generated_at": "2026-09-16T17:48:11+00:00",
   "topic": "docs/core UET GR non-closed response",
   "version": "wave8_v1",
   "benchmark_role": "dependency_gate",
@@ -9,7 +9,7 @@
   "status": "BLOCKED",
   "evidence_status": "PARTIAL_ANALYTIC_CAUSAL_BRIDGE",
   "input_identity": {
-    "external_comparator_artifact": "docs\\core\\artifacts\\hyperbolic_phase_field_external_comparator_verification.json",
+    "external_comparator_artifact": "docs\\core\\07_artifacts\\verification\\hyperbolic_phase_field_external_comparator_verification.json",
     "source_records": [
       "docs\\data\\external\\relativistic_transport\\jain_kovtun_2024\\source_record.json",
       "docs\\data\\external\\relativistic_transport\\crossley_glorioso_liu_2017\\source_record.json"

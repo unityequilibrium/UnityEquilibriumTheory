@@ -57,7 +57,7 @@ def main():
     rows = [audit_case(n, 6, 16) for n in (4, 8, 16, 32)]
     paths = ["docs/scripts/audit/audit_topic13_phase_space_measure.py",
              "docs/core/test/test_topic13_phase_space_measure.py",
-             "docs/core/uet_o2_action_derived_transition_kernel.py"]
+             "docs/core/02_equations/o2/uet_o2_action_derived_transition_kernel.py"]
     result = dict(
         major_result_id="T13_INDEPENDENT_PHASE_SPACE_MEASURE_PILOT", topic="0.13",
         closure_level="PARTIAL", verification_status="MANUFACTURED_MEASURE_ONLY",

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_core_equation_family_contract",
-  "generated_at": "2026-09-14",
+  "generated_at": "2026-09-16",
   "audit_status": "PASS",
   "contract_status": "BLOCKED",
   "controlling_blocker": "core_code_surface_classification_or_upstream_compatibility_incomplete",
@@ -27,7 +27,7 @@
       "family_id": "core.legacy_master",
       "name": "Legacy master functional and dynamics",
       "module_paths": [
-        "docs/core/uet_master_equation.py"
+        "docs/core/02_equations/matter_space/uet_master_equation.py"
       ],
       "equation_family": true,
       "variables": {
@@ -43,10 +43,13 @@
       "old_theory_special_case_status": "NOT_ESTABLISHED",
       "claim_ceiling": "legacy comparator only; no universal physical interpretation",
       "evidence_paths": [
-        "docs/core/artifacts/uet_foundation_compatibility_gate.json",
-        "docs/core/artifacts/master_equation_alignment_gate_v2.json"
+        "docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json",
+        "docs/core/07_artifacts/gates/master_equation_alignment_gate_v2.json"
       ],
       "next_gate": "repair potential/derivative pair, information operator declaration, and beta unit surface",
+      "compatibility_paths": [
+        "docs/core/uet_master_equation.py"
+      ],
       "candidate_surface_count": 274,
       "module_paths_exist": true
     },
@@ -54,12 +57,12 @@
       "family_id": "core.matter_space",
       "name": "Matter-space coupled state/response dynamics",
       "module_paths": [
-        "docs/core/uet_matter_space.py",
-        "docs/core/uet_spatial.py",
-        "docs/core/uet_matter_space_causal.py",
-        "docs/core/uet_matter_space_split.py",
-        "docs/core/uet_matter_space_finite_cone.py",
-        "docs/core/uet_matter_space_characteristic.py"
+        "docs/core/02_equations/matter_space/uet_matter_space.py",
+        "docs/core/02_equations/matter_space/uet_spatial.py",
+        "docs/core/02_equations/matter_space/uet_matter_space_causal.py",
+        "docs/core/02_equations/matter_space/uet_matter_space_split.py",
+        "docs/core/02_equations/matter_space/uet_matter_space_finite_cone.py",
+        "docs/core/02_equations/matter_space/uet_matter_space_characteristic.py"
       ],
       "equation_family": true,
       "variables": {
@@ -76,10 +79,18 @@
       "old_theory_special_case_status": "g=0/adiabatic/closed limits conditionally supported; physical standard limit not complete",
       "claim_ceiling": "candidate normalized effective model; not SI or total-universe energy law",
       "evidence_paths": [
-        "docs/core/artifacts/matter_space_variational_verification.json",
-        "docs/core/artifacts/matter_space_dependency_gate.json"
+        "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
+        "docs/core/07_artifacts/gates/matter_space_dependency_gate.json"
       ],
       "next_gate": "repair pre-arrival leakage and then define dimensional observable map",
+      "compatibility_paths": [
+        "docs/core/uet_matter_space.py",
+        "docs/core/uet_matter_space_causal.py",
+        "docs/core/uet_matter_space_characteristic.py",
+        "docs/core/uet_matter_space_finite_cone.py",
+        "docs/core/uet_matter_space_split.py",
+        "docs/core/uet_spatial.py"
+      ],
       "candidate_surface_count": 231,
       "module_paths_exist": true
     },
@@ -87,8 +98,8 @@
       "family_id": "core.matter_space_flux",
       "name": "Conserved matter-space flux and causal response branch",
       "module_paths": [
-        "docs/core/uet_matter_space_flux_telegraph.py",
-        "docs/core/uet_matter_space_flux_phi.py"
+        "docs/core/02_equations/matter_space/uet_matter_space_flux_telegraph.py",
+        "docs/core/02_equations/matter_space/uet_matter_space_flux_phi.py"
       ],
       "equation_family": true,
       "variables": {
@@ -105,10 +116,14 @@
       "old_theory_special_case_status": "kappa_C=0 named branch only; the original kappa_C>0 conserved-gradient causal class remains separate and blocked",
       "claim_ceiling": "candidate normalized conserved flux/response comparator; not SI thermal closure, not a universal C ontology, and not global energy law",
       "evidence_paths": [
-        "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
-        "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json"
+        "docs/core/07_artifacts/verification/matter_space_conserved_flux_telegraph_verification.json",
+        "docs/core/07_artifacts/verification/matter_space_flux_phi_coupled_verification.json"
       ],
       "next_gate": "complete dimensional observable mapping and independently locked external comparison",
+      "compatibility_paths": [
+        "docs/core/uet_matter_space_flux_phi.py",
+        "docs/core/uet_matter_space_flux_telegraph.py"
+      ],
       "formula_ids": [
         "uet.matter_space_flux.conservation",
         "uet.matter_space_flux.relaxation",
@@ -118,8 +133,8 @@
       "verifier_paths": [
         "docs/scripts/audit/audit_matter_space_conserved_flux_telegraph.py",
         "docs/scripts/audit/audit_matter_space_flux_phi_coupled.py",
-        "docs/core/test/test_matter_space_conserved_flux_telegraph.py",
-        "docs/core/test/test_matter_space_flux_phi_coupled.py"
+        "docs/core/05_tests/regression/root/test_matter_space_conserved_flux_telegraph.py",
+        "docs/core/05_tests/regression/root/test_matter_space_flux_phi_coupled.py"
       ],
       "organization_review_required": true,
       "candidate_surface_count": 0,
@@ -129,7 +144,7 @@
       "family_id": "core.trace",
       "name": "Causal derived history trace",
       "module_paths": [
-        "docs/core/uet_trace.py"
+        "docs/core/02_equations/matter_space/uet_trace.py"
       ],
       "equation_family": true,
       "variables": {
@@ -144,16 +159,19 @@
       "old_theory_special_case_status": "zero-source/zero-memory/static limits conditionally support a Markovian comparator",
       "claim_ceiling": "diagnostic derived observable; no substance/energy-reservoir claim",
       "evidence_paths": [
-        "docs/core/artifacts/spacetime_trace_verification.json",
-        "docs/core/artifacts/trace_kernel_formula_audit.json"
+        "docs/core/07_artifacts/verification/spacetime_trace_verification.json",
+        "docs/core/07_artifacts/correspondence/trace_kernel_formula_audit.json"
       ],
       "next_gate": "close compact-support and dimensional measurement operator",
+      "compatibility_paths": [
+        "docs/core/uet_trace.py"
+      ],
       "formula_ids": [
         "uet.trace.derived_observable"
       ],
       "verifier_paths": [
-        "docs/core/test/test_spacetime_trace.py",
-        "docs/core/artifacts/spacetime_trace_verification.json"
+        "docs/core/05_tests/regression/root/test_spacetime_trace.py",
+        "docs/core/07_artifacts/verification/spacetime_trace_verification.json"
       ],
       "organization_review_required": true,
       "candidate_surface_count": 40,
@@ -163,11 +181,11 @@
       "family_id": "core.covariant_response",
       "name": "Covariant response/GR parent evaluator",
       "module_paths": [
-        "docs/core/uet_covariant_response.py",
-        "docs/core/uet_covariant_matter.py",
-        "docs/core/uet_covariant_balance.py",
-        "docs/core/uet_covariant_nonclosed.py",
-        "docs/core/uet_covariant_reduction.py"
+        "docs/core/02_equations/covariant/uet_covariant_response.py",
+        "docs/core/02_equations/covariant/uet_covariant_matter.py",
+        "docs/core/02_equations/covariant/uet_covariant_balance.py",
+        "docs/core/02_equations/covariant/uet_covariant_nonclosed.py",
+        "docs/core/02_equations/covariant/uet_covariant_reduction.py"
       ],
       "equation_family": true,
       "variables": {
@@ -184,10 +202,17 @@
       "old_theory_special_case_status": "epsilon_nc=0/ordered reference gives exact algebraic-local null contract only",
       "claim_ceiling": "candidate covariant parent; not Einstein derivation or global-universe closure",
       "evidence_paths": [
-        "docs/core/artifacts/gr_closed_limit_verification.json",
-        "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
+        "docs/core/07_artifacts/verification/gr_closed_limit_verification.json",
+        "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
       ],
       "next_gate": "add field-equation, Bianchi/Noether, metric PDE and initial-value verification",
+      "compatibility_paths": [
+        "docs/core/uet_covariant_balance.py",
+        "docs/core/uet_covariant_matter.py",
+        "docs/core/uet_covariant_nonclosed.py",
+        "docs/core/uet_covariant_reduction.py",
+        "docs/core/uet_covariant_response.py"
+      ],
       "candidate_surface_count": 185,
       "module_paths_exist": true
     },
@@ -195,7 +220,7 @@
       "family_id": "core.covariant_parent",
       "name": "Integrated covariant conservative parent formula evaluator",
       "module_paths": [
-        "docs/core/uet_covariant_parent.py"
+        "docs/core/02_equations/covariant/uet_covariant_parent.py"
       ],
       "equation_family": true,
       "variables": {
@@ -212,17 +237,20 @@
       "old_theory_special_case_status": "epsilon_nc=0 gives an algebraic/local Einstein-GR residual comparison only; it is not a full GR derivation",
       "claim_ceiling": "candidate natural-unit conservative parent formula evaluator; not a metric PDE solver, open-system closure, or physical GR validation",
       "evidence_paths": [
-        "docs/core/artifacts/covariant_parent_verification.json",
-        "docs/core/artifacts/covariant_parent_formula_audit.json",
-        "docs/core/artifacts/uet_main_theory_wave2_gate.json"
+        "docs/core/07_artifacts/verification/covariant_parent_verification.json",
+        "docs/core/07_artifacts/correspondence/covariant_parent_formula_audit.json",
+        "docs/core/07_artifacts/gates/uet_main_theory_wave2_gate.json"
       ],
       "next_gate": "close lane-specific covariant coarse-graining, then curved 3+1 initial-value/constraint evolution and dimensional observables",
+      "compatibility_paths": [
+        "docs/core/uet_covariant_parent.py"
+      ],
       "formula_ids": [
         "uet.main_theory.covariant_parent"
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_covariant_parent.py",
-        "docs/core/test/test_uet_covariant_parent.py"
+        "docs/core/05_tests/regression/root/test_uet_covariant_parent.py"
       ],
       "organization_review_required": true,
       "candidate_surface_count": 0,
@@ -232,7 +260,7 @@
       "family_id": "core.covariant_diffusion",
       "name": "Covariant diffusion/current constitutive lane",
       "module_paths": [
-        "docs/core/uet_covariant_diffusion.py"
+        "docs/core/02_equations/covariant/uet_covariant_diffusion.py"
       ],
       "equation_family": true,
       "variables": {
@@ -249,10 +277,13 @@
       "old_theory_special_case_status": "parabolic/Markovian limit is a comparator, not a derivation of microscopic transport",
       "claim_ceiling": "candidate constitutive transport; coefficient provenance and SI map remain open",
       "evidence_paths": [
-        "docs/core/artifacts/covariant_diffusion_formula_audit.json",
-        "docs/core/artifacts/covariant_diffusive_current_verification.json"
+        "docs/core/07_artifacts/correspondence/covariant_diffusion_formula_audit.json",
+        "docs/core/07_artifacts/verification/covariant_diffusive_current_verification.json"
       ],
       "next_gate": "close coefficient origin, Kubo relation and dimensional observable lane",
+      "compatibility_paths": [
+        "docs/core/uet_covariant_diffusion.py"
+      ],
       "formula_ids": [
         "uet.covariant_diffusion.frame_decomposition",
         "uet.covariant_diffusion.finite_relaxation_current",
@@ -261,8 +292,8 @@
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_gr_covariant_diffusion.py",
-        "docs/core/test/test_covariant_diffusion.py",
-        "docs/core/test/test_gr_covariant_diffusion_alignment.py"
+        "docs/core/05_tests/regression/root/test_covariant_diffusion.py",
+        "docs/core/05_tests/regression/root/test_gr_covariant_diffusion_alignment.py"
       ],
       "organization_review_required": true,
       "candidate_surface_count": 91,
@@ -272,8 +303,8 @@
       "family_id": "core.hyperbolic_phase",
       "name": "Hyperbolic phase-field/telegraph comparator",
       "module_paths": [
-        "docs/core/uet_hyperbolic_phase_field.py",
-        "docs/core/uet_hyperbolic_phase_field_bridge.py"
+        "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field.py",
+        "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field_bridge.py"
       ],
       "equation_family": true,
       "variables": {
@@ -289,10 +320,14 @@
       "old_theory_special_case_status": "fixed light-cone/causal feasibility limit is analytic comparator, not UET special-case proof",
       "claim_ceiling": "simulation/comparator only",
       "evidence_paths": [
-        "docs/core/artifacts/hyperbolic_phase_field_formula_audit.json",
-        "docs/core/artifacts/hyperbolic_phase_field_covariant_mapping_gate.json"
+        "docs/core/07_artifacts/correspondence/hyperbolic_phase_field_formula_audit.json",
+        "docs/core/07_artifacts/gates/hyperbolic_phase_field_covariant_mapping_gate.json"
       ],
       "next_gate": "derive from declared action or keep permanently as external comparator",
+      "compatibility_paths": [
+        "docs/core/uet_hyperbolic_phase_field.py",
+        "docs/core/uet_hyperbolic_phase_field_bridge.py"
+      ],
       "candidate_surface_count": 108,
       "module_paths_exist": true
     },
@@ -300,8 +335,8 @@
       "family_id": "core.o2_superfluid",
       "name": "Finite-density O(2) EOS and ideal superfluid transport",
       "module_paths": [
-        "docs/core/uet_o2_finite_density_eos.py",
-        "docs/core/uet_covariant_superfluid_transport.py"
+        "docs/core/02_equations/o2/uet_o2_finite_density_eos.py",
+        "docs/core/02_equations/covariant/uet_covariant_superfluid_transport.py"
       ],
       "equation_family": true,
       "variables": {
@@ -318,11 +353,15 @@
       "old_theory_special_case_status": "O(2) lane is a controlled realization; does not establish universal C=mass or legacy double-well reduction",
       "claim_ceiling": "tree-level EOS and ideal transport only; physical Kubo/SI/full finite-T blocked",
       "evidence_paths": [
-        "docs/core/artifacts/o2_finite_density_eos_verification.json",
-        "docs/core/artifacts/o2_eos_formula_audit.json",
-        "docs/core/artifacts/covariant_superfluid_transport_contract.json"
+        "docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json",
+        "docs/core/07_artifacts/correspondence/o2_eos_formula_audit.json",
+        "docs/core/07_artifacts/archive/covariant_superfluid_transport_contract.json"
       ],
       "next_gate": "complete Kubo provenance, finite-T normal component and SI/observable map",
+      "compatibility_paths": [
+        "docs/core/uet_covariant_superfluid_transport.py",
+        "docs/core/uet_o2_finite_density_eos.py"
+      ],
       "candidate_surface_count": 104,
       "module_paths_exist": true
     },
@@ -330,8 +369,8 @@
       "family_id": "core.noether_mapping",
       "name": "Noether phase field and coarse-state map",
       "module_paths": [
-        "docs/core/uet_noether.py",
-        "docs/core/uet_noether_phase_field_map.py"
+        "docs/core/02_equations/lorentz_noether/uet_noether.py",
+        "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py"
       ],
       "equation_family": true,
       "variables": {
@@ -347,11 +386,15 @@
       "old_theory_special_case_status": "Noether charge map does not prove legacy C field or microscopic Cahn-Hilliard dissipation",
       "claim_ceiling": "mapping/diagnostic only; no universal C ontology",
       "evidence_paths": [
-        "docs/core/artifacts/noether_phase_field_map_formula_audit.json",
-        "docs/core/artifacts/noether_phase_field_state_map_verification.json",
-        "docs/core/artifacts/noether_phase_field_dependency_gate.json"
+        "docs/core/07_artifacts/correspondence/noether_phase_field_map_formula_audit.json",
+        "docs/core/07_artifacts/verification/noether_phase_field_state_map_verification.json",
+        "docs/core/07_artifacts/gates/noether_phase_field_dependency_gate.json"
       ],
       "next_gate": "derive coarse-graining/gradient EFT and prove observable map without many-to-one ambiguity",
+      "compatibility_paths": [
+        "docs/core/uet_noether.py",
+        "docs/core/uet_noether_phase_field_map.py"
+      ],
       "formula_ids": [
         "uet.noether_mapping.frame_projected_charge_density",
         "uet.noether_mapping.affine_phase_coordinate",
@@ -363,9 +406,9 @@
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_noether_phase_field_map.py",
-        "docs/core/test/test_noether_phase_field_map.py",
-        "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
-        "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py"
+        "docs/core/05_tests/equation/root/test_noether_phase_field_map.py",
+        "docs/core/05_tests/equation/root/test_gr_noether_phase_field_map_alignment.py",
+        "docs/core/05_tests/equation/root/test_noether_phase_field_topic_0_11_dependency.py"
       ],
       "organization_review_required": true,
       "candidate_surface_count": 205,
@@ -375,7 +418,7 @@
       "family_id": "core.lorentz",
       "name": "Lorentz transformation/causal utilities",
       "module_paths": [
-        "docs/core/uet_lorentz.py"
+        "docs/core/02_equations/lorentz_noether/uet_lorentz.py"
       ],
       "equation_family": true,
       "variables": {
@@ -390,10 +433,13 @@
       "old_theory_special_case_status": "Lorentz transform utility can support a lane but does not establish Lorentz invariance of all operators",
       "claim_ceiling": "support utility; no global invariance claim",
       "evidence_paths": [
-        "docs/core/test/test_lorentz_noether_comprehensive.py",
-        "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
+        "docs/core/05_tests/equation/root/test_lorentz_noether_comprehensive.py",
+        "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
       ],
       "next_gate": "connect each physical operator to a covariant action and transformation residual",
+      "compatibility_paths": [
+        "docs/core/uet_lorentz.py"
+      ],
       "candidate_surface_count": 97,
       "module_paths_exist": true
     },
@@ -401,7 +447,7 @@
       "family_id": "core.parameter_contract",
       "name": "Parameter/constants and unit bridge",
       "module_paths": [
-        "docs/core/uet_parameters.py"
+        "docs/core/01_contracts/units/uet_parameters.py"
       ],
       "equation_family": false,
       "variables": {
@@ -416,10 +462,13 @@
       "old_theory_special_case_status": "Landauer SI lower bound and normalized beta are not the same quantity",
       "claim_ceiling": "parameter support only; no beta-as-energy claim",
       "evidence_paths": [
-        "docs/core/artifacts/uet_foundation_compatibility_gate.json",
-        "docs/core/uet_parameters.py"
+        "docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json",
+        "docs/core/01_contracts/units/uet_parameters.py"
       ],
       "next_gate": "split normalized/SI APIs and close provenance for every physical coefficient",
+      "compatibility_paths": [
+        "docs/core/uet_parameters.py"
+      ],
       "candidate_surface_count": 47,
       "module_paths_exist": true
     },
@@ -427,7 +476,7 @@
       "family_id": "core.observable_contract",
       "name": "Observable and measurement helpers",
       "module_paths": [
-        "docs/core/uet_observables.py"
+        "docs/core/03_lanes/review/uet_observables.py"
       ],
       "equation_family": false,
       "variables": {
@@ -441,10 +490,13 @@
       "old_theory_special_case_status": "without observable map no real-data fit can test the theory",
       "claim_ceiling": "diagnostic/internal only",
       "evidence_paths": [
-        "docs/core/artifacts/uet_foundation_dependency_gate.json",
-        "docs/core/UET_FOUNDATION_COMPATIBILITY_AUDIT.md"
+        "docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json",
+        "docs/core/08_history/research_notes/UET_FOUNDATION_COMPATIBILITY_AUDIT.md"
       ],
       "next_gate": "define O[C,Phi,Pi,R], units, uncertainty, resolution and nuisance parameters",
+      "compatibility_paths": [
+        "docs/core/uet_observables.py"
+      ],
       "candidate_surface_count": 15,
       "module_paths_exist": true
     },
@@ -453,33 +505,33 @@
       "name": "Solvers, adapters, validation, proof and visualization support",
       "module_paths": [
         "docs/core/__init__.py",
-        "docs/core/uet_base_solver.py",
-        "docs/core/uet_lite_engine.py",
-        "docs/core/uet_matrix_engine.py",
-        "docs/core/uet_data_orchestrator.py",
-        "docs/core/uet_glass_box.py",
-        "docs/core/scientific_validation.py",
-        "docs/core/uet_bug_hunter.py",
-        "docs/core/truth_auditor.py",
-        "docs/core/reproducibility.py",
-        "docs/core/uet_references.py",
-        "docs/core/uet_viz.py",
-        "docs/core/02_Proof/Proof_00_Master_Balance.py",
-        "docs/core/mass_density_correspondence.py",
-        "docs/core/matter_interaction_forward.py",
-        "docs/core/persistence_energy_diagnostic.py",
-        "docs/core/relational_two_body_baseline.py",
-        "docs/core/resource_selection_thermal_bridge.py",
-        "docs/core/thermal_observable_bridge.py",
-        "docs/core/thermal_source_observable_map.py",
-        "docs/core/uet_impact_effect.py",
-        "docs/core/uet_resource_selection.py",
-        "docs/core/mass_density_3d.py",
-        "docs/core/mass_density_amplitude.py",
-        "docs/core/mass_density_dimensional.py",
-        "docs/core/photon_observer_baseline.py",
-        "docs/core/uet_matter_space_observable.py",
-        "docs/core/resource_selection_physical_cost_map.py"
+        "docs/scripts/core/runners/uet_base_solver.py",
+        "docs/scripts/core/runners/uet_lite_engine.py",
+        "docs/scripts/core/runners/uet_matrix_engine.py",
+        "docs/scripts/core/data/uet_data_orchestrator.py",
+        "docs/scripts/core/runners/uet_glass_box.py",
+        "docs/scripts/core/audit/scientific_validation.py",
+        "docs/scripts/core/audit/uet_bug_hunter.py",
+        "docs/scripts/core/audit/truth_auditor.py",
+        "docs/scripts/core/audit/reproducibility.py",
+        "docs/scripts/core/data/uet_references.py",
+        "docs/scripts/core/reporting/uet_viz.py",
+        "docs/core/04_proofs/Proof_00_Master_Balance.py",
+        "docs/core/03_lanes/mass_density/mass_density_correspondence.py",
+        "docs/core/03_lanes/mass_density/matter_interaction_forward.py",
+        "docs/core/03_lanes/persistence/persistence_energy_diagnostic.py",
+        "docs/core/03_lanes/carrier_observer/relational_two_body_baseline.py",
+        "docs/core/03_lanes/persistence/resource_selection_thermal_bridge.py",
+        "docs/core/03_lanes/thermal/thermal_observable_bridge.py",
+        "docs/core/03_lanes/thermal/thermal_source_observable_map.py",
+        "docs/core/03_lanes/carrier_observer/uet_impact_effect.py",
+        "docs/core/03_lanes/persistence/uet_resource_selection.py",
+        "docs/core/03_lanes/mass_density/mass_density_3d.py",
+        "docs/core/03_lanes/mass_density/mass_density_amplitude.py",
+        "docs/core/03_lanes/mass_density/mass_density_dimensional.py",
+        "docs/core/03_lanes/carrier_observer/photon_observer_baseline.py",
+        "docs/core/03_lanes/review/uet_matter_space_observable.py",
+        "docs/core/03_lanes/persistence/resource_selection_physical_cost_map.py"
       ],
       "equation_family": false,
       "variables": {},
@@ -490,9 +542,37 @@
       "old_theory_special_case_status": "not applicable until a support path is promoted into a declared equation family",
       "claim_ceiling": "no independent physics claim",
       "evidence_paths": [
-        "docs/core/artifacts/uet_code_surface_inventory.json"
+        "docs/core/07_artifacts/archive/uet_code_surface_inventory.json"
       ],
       "next_gate": "link formula-bearing support paths to an owning equation family or quarantine as legacy",
+      "compatibility_paths": [
+        "docs/core/mass_density_3d.py",
+        "docs/core/mass_density_amplitude.py",
+        "docs/core/mass_density_correspondence.py",
+        "docs/core/mass_density_dimensional.py",
+        "docs/core/matter_interaction_forward.py",
+        "docs/core/persistence_energy_diagnostic.py",
+        "docs/core/photon_observer_baseline.py",
+        "docs/core/relational_two_body_baseline.py",
+        "docs/core/reproducibility.py",
+        "docs/core/resource_selection_physical_cost_map.py",
+        "docs/core/resource_selection_thermal_bridge.py",
+        "docs/core/scientific_validation.py",
+        "docs/core/thermal_observable_bridge.py",
+        "docs/core/thermal_source_observable_map.py",
+        "docs/core/truth_auditor.py",
+        "docs/core/uet_base_solver.py",
+        "docs/core/uet_bug_hunter.py",
+        "docs/core/uet_data_orchestrator.py",
+        "docs/core/uet_glass_box.py",
+        "docs/core/uet_impact_effect.py",
+        "docs/core/uet_lite_engine.py",
+        "docs/core/uet_matrix_engine.py",
+        "docs/core/uet_matter_space_observable.py",
+        "docs/core/uet_references.py",
+        "docs/core/uet_resource_selection.py",
+        "docs/core/uet_viz.py"
+      ],
       "candidate_surface_count": 544,
       "module_paths_exist": true
     }

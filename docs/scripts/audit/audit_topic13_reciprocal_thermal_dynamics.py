@@ -23,14 +23,14 @@ REGISTRY = 'docs/core/07_artifacts/correspondence/uet_equation_correspondence_re
 ID = 'uet.thermal.reciprocal_material_response'
 PROTECTED = ['docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json',
              'docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json']
-EVIDENCE = ['docs/core/T13_RECIPROCAL_THERMAL_DYNAMICS.md',
-            'docs/core/uet_reciprocal_thermal_dynamics.py',
+EVIDENCE = ['docs/core/03_lanes/topic13_support/T13_RECIPROCAL_THERMAL_DYNAMICS.md',
+            'docs/core/03_lanes/thermal/uet_reciprocal_thermal_dynamics.py',
             'docs/core/test/test_topic13_reciprocal_thermal_dynamics.py',
             'docs/scripts/audit/audit_topic13_reciprocal_thermal_dynamics.py',
-            'docs/core/uet_dynamic_thermoelastic_response.py',
-            'docs/core/uet_matter_strain_susceptibility.py',
-            'docs/core/uet_covariant_matter.py', 'docs/core/uet_covariant_response.py',
-            'docs/core/uet_thermoelastic_spatial_compatibility.py',
+            'docs/core/03_lanes/thermal/uet_dynamic_thermoelastic_response.py',
+            'docs/core/03_lanes/thermal/uet_matter_strain_susceptibility.py',
+            'docs/core/02_equations/covariant/uet_covariant_matter.py', 'docs/core/02_equations/covariant/uet_covariant_response.py',
+            'docs/core/03_lanes/thermal/uet_thermoelastic_spatial_compatibility.py',
             'docs/core/07_artifacts/topic13/t13_matter_strain_susceptibility_matching_audit.json']
 
 

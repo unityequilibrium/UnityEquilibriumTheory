@@ -35,7 +35,7 @@ def main():
             fractional_squared_gap_gain_per_Pa=table["log_squared_gap_pressure_derivative_per_Pa"],
             union_sensitivity_envelope_J2_per_Pa=[min(i[0] for i in intervals),max(i[1] for i in intervals)],
             physical_O2_mass_source_gain=None)
-    paths=[SOURCE,"docs/core/uet_raman_deformation_constraint.py",
+    paths=[SOURCE,"docs/core/03_lanes/thermal/uet_raman_deformation_constraint.py",
            "docs/scripts/audit/audit_topic13_hydrostatic_actuation_route.py"]
     r=dict(major_result_id="T13_HYDROSTATIC_SPECTRAL_ACTUATION_ROUTE",topic="0.13",closure_level="PARTIAL",
         what_is_closed="Hydrostatic spectral mass-source projection is source-constrained without identifying the full deformation tensor",

@@ -50,7 +50,7 @@
         "docs/scripts/audit/audit_uet_gr_covariant_diffusion.py",
         "docs/core/test/test_covariant_diffusion.py",
         "docs/core/test/test_gr_covariant_diffusion_alignment.py",
-        "docs/core/artifacts/covariant_diffusive_current_verification.json"
+        "docs/core/07_artifacts/verification/covariant_diffusive_current_verification.json"
       ],
       "version": "covariant-diffusion-v1"
     },
@@ -103,7 +103,7 @@
         "docs/scripts/audit/audit_uet_gr_covariant_diffusion.py",
         "docs/core/test/test_covariant_diffusion.py",
         "docs/core/test/test_gr_covariant_diffusion_alignment.py",
-        "docs/core/artifacts/covariant_diffusive_current_verification.json"
+        "docs/core/07_artifacts/verification/covariant_diffusive_current_verification.json"
       ],
       "version": "covariant-diffusion-v1"
     },
@@ -155,7 +155,7 @@
         "docs/scripts/audit/audit_uet_gr_covariant_diffusion.py",
         "docs/core/test/test_covariant_diffusion.py",
         "docs/core/test/test_gr_covariant_diffusion_alignment.py",
-        "docs/core/artifacts/covariant_diffusive_current_verification.json"
+        "docs/core/07_artifacts/verification/covariant_diffusive_current_verification.json"
       ],
       "version": "covariant-diffusion-v1"
     },
@@ -208,13 +208,13 @@
         "docs/scripts/audit/audit_uet_gr_covariant_diffusion.py",
         "docs/core/test/test_covariant_diffusion.py",
         "docs/core/test/test_gr_covariant_diffusion_alignment.py",
-        "docs/core/artifacts/covariant_diffusive_current_verification.json"
+        "docs/core/07_artifacts/verification/covariant_diffusive_current_verification.json"
       ],
       "version": "covariant-diffusion-v1"
     }
   ],
-  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
-  "generated_at": "2026-09-14",
+  "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
+  "generated_at": "2026-09-16",
   "generator": "docs/scripts/audit/build_uet_covariant_diffusion_correspondence.py",
   "merge_metadata": {
     "claim_promotion": false,
@@ -224,8 +224,8 @@
       "uet.covariant_diffusion.energy_identity",
       "uet.covariant_diffusion.adiabatic_model_b_limit"
     ],
-    "merged_into": "docs/core/artifacts/uet_equation_correspondence_registry.json",
-    "merged_on": "2026-09-14"
+    "merged_into": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
+    "merged_on": "2026-09-16"
   },
   "open_gates": [
     "closed_time_path_kms_transport_derivation",
@@ -239,11 +239,11 @@
   ],
   "schema_version": "1.0",
   "source_hashes": {
-    "docs\\core\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "1609cfdada2ad9e67ebcb8e9ae53f2f3f035fdc70469424e486eb3f7e53c1f86",
-    "docs\\core\\artifacts\\covariant_diffusion_contract.json": "ded981ff64e60beb2d345afd5c2689a765d091f8b4c3239759abcd941518171a",
-    "docs\\core\\artifacts\\covariant_diffusion_formula_audit.json": "045e75242ea07a2e7b1e8e232eaea5aee75e49f9727a292ce24ff99bd952fa96",
-    "docs\\core\\artifacts\\covariant_diffusive_current_verification.json": "32248848918ea32dc7549dfb979f2cbcb36207fc7093f379c41c573c725ff5db",
-    "docs\\core\\uet_covariant_diffusion.py": "a267b89e39db4a8dfac56e71a070539a9da05a55b8bb8b22216e7fd1b839bc53"
+    "docs\\core\\01_contracts\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "1609cfdada2ad9e67ebcb8e9ae53f2f3f035fdc70469424e486eb3f7e53c1f86",
+    "docs\\core\\02_equations\\covariant\\uet_covariant_diffusion.py": "a267b89e39db4a8dfac56e71a070539a9da05a55b8bb8b22216e7fd1b839bc53",
+    "docs\\core\\07_artifacts\\archive\\covariant_diffusion_contract.json": "ac0eafabc143b9f281aced27eb5786565d2c1076e1b95a1177bcf92f9213b0ca",
+    "docs\\core\\07_artifacts\\correspondence\\covariant_diffusion_formula_audit.json": "eeb7119e9f8e0021ad6c4d794f88d4b9e30fc3b4a9c6a87aa3b3dec364b1f98e",
+    "docs\\core\\07_artifacts\\verification\\covariant_diffusive_current_verification.json": "c207226e5f3602541344067ed8d7c92d588b0b08fd6bedba802ba829507bddd5"
   },
   "status": "CANDIDATE_ENTRY_MERGED_INTO_CENTRAL_REGISTRY"
 }

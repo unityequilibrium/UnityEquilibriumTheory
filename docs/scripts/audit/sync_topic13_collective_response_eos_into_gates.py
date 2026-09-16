@@ -35,6 +35,19 @@ def append_unique(items: list[Any], value: Any) -> None:
         items.append(value)
 
 
+def replace_evidence(items: list[Any], value: dict[str, Any]) -> None:
+    """Replace the same artifact's legacy-path record with its canonical one."""
+
+    canonical = value["path"]
+    legacy = f"docs/core/artifacts/{Path(canonical).name}"
+    items[:] = [
+        item
+        for item in items
+        if not isinstance(item, dict) or item.get("path") not in {canonical, legacy}
+    ]
+    items.append(value)
+
+
 def evidence(rel: str, summary: dict[str, Any]) -> dict[str, Any]:
     return {"path": rel, "sha256": digest(rel), "summary": summary}
 
@@ -128,7 +141,10 @@ def main() -> int:
         "controlling_blocker": action["controlling_blocker"],
         "claim_boundary": action["claim_boundary"],
     }
-    append_unique(full.setdefault("evidence_artifacts", []), evidence(ACTION_REL, {"status": action["status"], "data_role": action["major_result"]["data_role"]}))
+    replace_evidence(
+        full.setdefault("evidence_artifacts", []),
+        evidence(ACTION_REL, {"status": action["status"], "data_role": action["major_result"]["data_role"]}),
+    )
     (ROOT / FULL_REL).write_text(json.dumps(full, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
 
     register = load(REGISTER_REL)
@@ -136,7 +152,10 @@ def main() -> int:
     full_entry = next(item for item in register["entries"] if item.get("major_result_id") == "T13_FULL_THERMODYNAMIC_BRIDGE")
     append_unique(full_entry["what_is_closed"], "named collective-response finite-temperature EOS derivatives, reciprocity, and local stability contract")
     append_unique(full_entry["open_blockers"], action["controlling_blocker"])
-    append_unique(full_entry["evidence_artifacts"], evidence(ACTION_REL, {"status": action["status"], "major_result_id": action["major_result"]["major_result_id"]}))
+    replace_evidence(
+        full_entry["evidence_artifacts"],
+        evidence(ACTION_REL, {"status": action["status"], "major_result_id": action["major_result"]["major_result_id"]}),
+    )
     for item in full_entry["evidence_artifacts"]:
         if item.get("path") == FULL_REL:
             item["sha256"] = digest(FULL_REL)
@@ -158,6 +177,11 @@ def main() -> int:
             "dependency_unlocked": action["major_result"]["dependency_unlocked"],
             "claim_boundary": action["major_result"]["claim_boundary"],
         })
+    else:
+        replace_evidence(
+            entry["evidence_artifacts"],
+            evidence(ACTION_REL, {"status": action["status"], "major_result_id": action["major_result"]["major_result_id"]}),
+        )
     (ROOT / REGISTER_REL).write_text(json.dumps(register, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
 
     dependency = load(DEPENDENCY_REL)

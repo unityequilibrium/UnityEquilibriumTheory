@@ -1,7 +1,7 @@
 """Artifact and source-alignment gates for the UET GR closed-limit wave."""
 
 from __future__ import annotations
-from docs.core.core_paths import CANONICAL_ARTIFACT_ROOT
+from docs.core.core_paths import canonical_artifact_path
 
 import json
 from pathlib import Path
@@ -13,11 +13,8 @@ from docs.core.uet_covariant_response import (
 )
 from docs.scripts.audit.audit_uet_gr_closed_limit import build_artifacts
 
-ARTIFACT_DIR = CANONICAL_ARTIFACT_ROOT
-
-
 def _read(name: str) -> dict[str, object]:
-    return json.loads((ARTIFACT_DIR / name).read_text(encoding="utf-8"))
+    return json.loads(canonical_artifact_path(name).read_text(encoding="utf-8"))
 
 
 def test_generated_closed_limit_artifact_passes_every_implemented_gate() -> None:

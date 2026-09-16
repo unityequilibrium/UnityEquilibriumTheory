@@ -1,7 +1,7 @@
 """Regression tests for the derivation-origin audit."""
 
 from __future__ import annotations
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import canonical_artifact_path, repo_root
 
 import json
 from pathlib import Path
@@ -11,7 +11,7 @@ ROOT = (repo_root() / "docs")
 
 
 def test_derivation_origin_audit_is_complete_without_physical_promotion():
-    path = ROOT / "core/artifacts/uet_derivation_origin_audit.json"
+    path = canonical_artifact_path("uet_derivation_origin_audit.json")
     report = json.loads(path.read_text(encoding="utf-8"))
     assert report["audit_status"] == "PASS"
     assert report["status"] == "PASS_WITH_DECLARED_OPEN_ORIGINS"

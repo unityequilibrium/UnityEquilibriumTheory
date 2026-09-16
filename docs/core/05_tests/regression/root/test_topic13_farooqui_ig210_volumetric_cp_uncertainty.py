@@ -1,5 +1,5 @@
 from __future__ import annotations
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import canonical_artifact_path, repo_root
 
 import json
 import math
@@ -11,8 +11,7 @@ PACKAGE_PATH = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "farooqui_2022_ig210_thermophysical_source_package.json"
 )
-ARTIFACT_PATH = ROOT / (
-    "docs/core/artifacts/"
+ARTIFACT_PATH = canonical_artifact_path(
     "t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json"
 )
 

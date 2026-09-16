@@ -21,8 +21,8 @@ from docs.core.uet_o2_on_shell_sunset_width import (
 
 
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_on_shell_sunset_width_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_on_shell_sunset_width.py"
-SUNSET = ROOT / "docs/core/uet_o2_finite_temperature_full_sunset_sk_kms.py"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_on_shell_sunset_width.py"
+SUNSET = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_full_sunset_sk_kms.py"
 
 
 def sha256(path: Path) -> str:
@@ -95,8 +95,8 @@ def main() -> int:
             "observable": contract["observable"],
             "data_role": contract["data_role"],
             "evidence_artifacts": [
-                {"path": "docs/core/uet_o2_on_shell_sunset_width.py", "sha256": sha256(MODULE)},
-                {"path": "docs/core/uet_o2_finite_temperature_full_sunset_sk_kms.py", "sha256": sha256(SUNSET)},
+                {"path": "docs/core/02_equations/o2/uet_o2_on_shell_sunset_width.py", "sha256": sha256(MODULE)},
+                {"path": "docs/core/02_equations/o2/uet_o2_finite_temperature_full_sunset_sk_kms.py", "sha256": sha256(SUNSET)},
             ],
             "verification_status": status,
             "open_blockers": [

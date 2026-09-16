@@ -80,7 +80,7 @@ def main():
         changes[str(T)] = dict(delta_trace_bins_m2=delta.tolist(), signed_share_of_net_change=(delta/delta.sum()).tolist(),
                               final_trace_fraction=(b/b.sum()).tolist())
     paths = list(LOCKS)+[Path(__file__), reference_path, ROOT/'docs/core/test/test_topic13_thermal_variance_spectrum.py',
-        ROOT/'docs/scripts/audit/audit_topic13_interlayer_thermal_variance.py', ROOT/'docs/core/uet_interlayer_mode_residue.py',
+        ROOT/'docs/scripts/audit/audit_topic13_interlayer_thermal_variance.py', ROOT/'docs/core/03_lanes/thermal/uet_interlayer_mode_residue.py',
         ROOT/'docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py']
     artifact = dict(major_result_id='T13_LOCAL_VARIANCE_FREQUENCY_ATTRIBUTION', topic='0.13', closure_level='PARTIAL',
         units='covariance trace m^2; frequency cm^-1', derivation_class='source harmonic model spectral decomposition',

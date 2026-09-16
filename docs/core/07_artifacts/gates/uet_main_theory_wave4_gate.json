@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_main_theory_wave4_gate",
-  "generated_at": "2026-08-09T03:45:28.027517+00:00",
+  "generated_at": "2026-09-16T08:45:51.795208+00:00",
   "audit_status": "PASS",
   "open_system_status": "PASS_LINEAR_CLASSICAL_KMS_CONTROL_ONLY",
   "upstream_gate": "uet_main_theory_wave3_gate.json",

@@ -1,18 +1,20 @@
 from __future__ import annotations
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import canonical_artifact_path, repo_root
 
 import json
 from pathlib import Path
 
 
 ROOT = (repo_root() / "docs")
-AUDIT = ROOT / "core/artifacts/t13_csrc_fixed_volume_identity_audit.json"
+AUDIT = canonical_artifact_path(
+    "t13_csrc_fixed_volume_identity_audit.json"
+)
 GATE = ROOT / (
     "topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
     "topic13_full_thermodynamic_bridge_core_ready_gate.json"
 )
-REGISTER = ROOT / "core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY = ROOT / "core/artifacts/uet_major_result_dependency_unlock_gate.json"
+REGISTER = canonical_artifact_path("uet_major_result_closure_register.json")
+DEPENDENCY = canonical_artifact_path("uet_major_result_dependency_unlock_gate.json")
 
 
 def load(path: Path) -> dict:

@@ -47,6 +47,23 @@ def build() -> dict:
         current = ROOT / row["legacy_path"]
         target = ROOT / row["canonical_path"]
         state = row.get("migration_state")
+        if state == "MIGRATED" and row.get("compatibility_mode") in {
+            "archived_runpy_shim",
+            "archived_redirect",
+        }:
+            migrated += 1
+            archive_value = row.get("compatibility_archive_path")
+            archive = ROOT / archive_value if archive_value else None
+            if not target.exists() or archive is None or not archive.exists():
+                failures.append({"path": row["legacy_path"], "reason": "archived_shim_or_canonical_target_missing"})
+            if archive is not None and archive.exists() and row.get("file_kind") == "documentation":
+                observed = redirect_target(archive)
+                if observed != row["canonical_path"]:
+                    failures.append({"path": row["legacy_path"], "reason": f"archived_redirect_target_mismatch:{observed}"})
+            expected_hash = row.get("sha256_after")
+            if expected_hash and target.exists() and sha256(target) != expected_hash:
+                failures.append({"path": row["legacy_path"], "reason": "canonical_hash_mismatch"})
+            continue
         if state == "MIGRATED_WITH_SHIM":
             migrated += 1
             if not current.exists() or not target.exists():

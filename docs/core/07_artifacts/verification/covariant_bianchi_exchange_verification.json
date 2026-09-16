@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "covariant_bianchi_exchange_verification",
-  "generated_at": "2026-07-22T13:43:10.360549+00:00",
+  "generated_at": "2026-09-16T09:41:08.601453+00:00",
   "status": "PASS",
   "evidence_class": "B",
   "claim": "symbolic local Noether/Bianchi identity and exchange-completed ledger for the candidate parent",
@@ -50,9 +50,9 @@
     "closed_limit_dependency": "PASS"
   },
   "source_hashes": {
-    "docs\\core\\uet_covariant_balance.py": "815852035010f278e395d845516d1714eebafb24a851f38533bbeea15f01b885",
-    "docs\\core\\uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
-    "docs\\core\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "7762422a01348233ecbd532d166be6cc675ac94b8a11b1f960fd0fe0527a0ddb"
+    "docs\\core\\02_equations\\covariant\\uet_covariant_balance.py": "815852035010f278e395d845516d1714eebafb24a851f38533bbeea15f01b885",
+    "docs\\core\\02_equations\\covariant\\uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
+    "docs\\core\\01_contracts\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "1609cfdada2ad9e67ebcb8e9ae53f2f3f035fdc70469424e486eb3f7e53c1f86"
   },
   "run_contract": {
     "seed": 190031,

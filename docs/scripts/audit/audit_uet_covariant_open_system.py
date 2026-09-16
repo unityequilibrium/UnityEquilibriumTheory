@@ -18,8 +18,9 @@ from docs.core.uet_covariant_open_system import (
     derive_noise_kernel, derive_retarded_kernel, entropy_current_divergence,
     open_system_contract, open_system_evolution,
 )
+from docs.core.core_paths import CANONICAL_ARTIFACT_ROOT, canonical_artifact_path
 
-ARTIFACTS = ROOT / "docs/core/artifacts"
+ARTIFACTS = CANONICAL_ARTIFACT_ROOT
 
 
 def _config() -> OpenSystemConfig:
@@ -97,9 +98,9 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
         "schema_version": "1.0", "artifact": "covariant_open_system_formula_audit",
         "generated_at": now, "status": "WARN",
         "relations": [
-            {"formula_id": "UET-OPEN-EXP-MEMORY-001", "relation": "K_R(t)=theta(t) exp(-t/tau)L/tau", "derivation_class": "causal constitutive ansatz", "proof_status": "support, normalization, and positivity domain checked", "unit_lane": "natural", "code_path": "docs/core/uet_covariant_open_system.py"},
-            {"formula_id": "UET-OPEN-CLASSICAL-KMS-002", "relation": "N(t)=T[K_R(|t|)+K_R(|t|)^T]", "derivation_class": "classical KMS/FDT control relation", "proof_status": "internal numerical identity only", "unit_lane": "natural", "code_path": "docs/core/uet_covariant_open_system.py"},
-            {"formula_id": "UET-OPEN-ENTROPY-003", "relation": "sigma_mem=z^T L^+ z >= 0 with force.z split into storage plus dissipation", "derivation_class": "extended-memory entropy ledger", "proof_status": "PSD numerical gate", "unit_lane": "natural", "code_path": "docs/core/uet_covariant_open_system.py"},
+            {"formula_id": "UET-OPEN-EXP-MEMORY-001", "relation": "K_R(t)=theta(t) exp(-t/tau)L/tau", "derivation_class": "causal constitutive ansatz", "proof_status": "support, normalization, and positivity domain checked", "unit_lane": "natural", "code_path": "docs/core/02_equations/covariant/uet_covariant_open_system.py"},
+            {"formula_id": "UET-OPEN-CLASSICAL-KMS-002", "relation": "N(t)=T[K_R(|t|)+K_R(|t|)^T]", "derivation_class": "classical KMS/FDT control relation", "proof_status": "internal numerical identity only", "unit_lane": "natural", "code_path": "docs/core/02_equations/covariant/uet_covariant_open_system.py"},
+            {"formula_id": "UET-OPEN-ENTROPY-003", "relation": "sigma_mem=z^T L^+ z >= 0 with force.z split into storage plus dissipation", "derivation_class": "extended-memory entropy ledger", "proof_status": "PSD numerical gate", "unit_lane": "natural", "code_path": "docs/core/02_equations/covariant/uet_covariant_open_system.py"},
         ],
         "open_items": ["doubled-field SK action", "dynamical KMS symmetry", "microscopic influence functional", "covariant entropy current", "externally matched Kubo coefficients"],
         "claim_ceiling": "linearized classical KMS constitutive bridge",
@@ -119,7 +120,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
         "status": "CANDIDATE_ENTRY_PENDING_MERGE",
         "equation_entries": [{
             "equation_id": "uet.main_theory.open_system_linear_kms", "version": "open-system-linear-kms-v1",
-            "classification": "constitutive_lane_specific_equation", "relation_or_code_path": "docs/core/uet_covariant_open_system.py",
+            "classification": "constitutive_lane_specific_equation", "relation_or_code_path": "docs/core/02_equations/covariant/uet_covariant_open_system.py",
             "variables": {"L": "provenance-bearing Onsager matrix", "tau": "memory relaxation time", "K_R": "physical retarded memory kernel", "N": "noise covariance", "R_gen": "post-evolution derived trace"},
             "mathematical_role": "linear causal memory and classical fluctuation-dissipation bridge",
             "standard_physics_counterpart": "generalized Langevin/Maxwell memory with classical KMS fluctuation-dissipation",
@@ -129,7 +130,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
             "assumptions": ["linear response", "classical KMS limit", "exponential memory", "shared relaxation time for coupled sectors", "provenance-bearing coefficients"],
             "symmetry_and_conservation": "Onsager symmetry/PSD and extended entropy ledger; local covariant Q^mu integration remains open",
             "limiting_cases": ["tau to zero approaches instantaneous Onsager response distributionally", "zero coefficient removes dissipation and noise"],
-            "implementation_paths": ["docs/core/uet_covariant_open_system.py"],
+            "implementation_paths": ["docs/core/02_equations/covariant/uet_covariant_open_system.py"],
             "verifier_paths": ["docs/scripts/audit/audit_uet_covariant_open_system.py", "docs/core/07_artifacts/verification/covariant_open_system_verification.json", "docs/core/test/test_uet_covariant_open_system.py"],
             "evidence_class": "INTERNAL_FORMAL", "proof_status": "linear classical control passes; full SK/KMS derivation blocked",
             "downstream_dependencies": ["uet.main_theory.coarse_graining", "uet.main_theory.curved_3p1", "uet.main_theory.observables"],
@@ -145,7 +146,9 @@ def main() -> int:
     names = ("covariant_open_system_verification.json", "covariant_open_system_formula_audit.json", "uet_main_theory_wave4_gate.json", "uet_equation_correspondence_registry_open_system_addendum.json")
     outputs = dict(zip(names, build_artifacts()))
     for name, payload in outputs.items():
-        (ARTIFACTS / name).write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        path = canonical_artifact_path(name)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     gate = outputs["uet_main_theory_wave4_gate.json"]
     print(f"audit_status={gate['audit_status']}")
     print(f"open_system_status={gate['open_system_status']}")

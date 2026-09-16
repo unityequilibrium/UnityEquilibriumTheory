@@ -48,8 +48,8 @@ def main():
     rows={k:dict(matrix=v,**design(v)) for k,v in matrices.items()}
     paths=["docs/scripts/audit/audit_topic13_composite_alpha_design.py",
            "docs/core/test/test_topic13_composite_alpha_design.py",
-           "docs/core/uet_material_interface_factor_resolution.py",
-           "docs/core/uet_material_lattice_interface_contract.py"]
+           "docs/core/03_lanes/thermal/uet_material_interface_factor_resolution.py",
+           "docs/core/03_lanes/thermal/uet_material_lattice_interface_contract.py"]
     artifact=dict(major_result_id="T13_COMPOSITE_ALPHA_MEASUREMENT_DESIGN",topic="0.13",closure_level="PARTIAL",
         equation_or_mapping="log|alpha|=log|chi|+log|g|+log|Z|-log|C_src|; identifiable iff target is in rowspace(A)",
         units="Logs of magnitudes relative to fixed unit references, not logs of dimensionful values",

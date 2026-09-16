@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "covariant_matter_space_reduction_verification",
-  "generated_at": "2026-07-22T13:43:29.821397+00:00",
+  "generated_at": "2026-09-16T10:00:29.883881+00:00",
   "audit_status": "PASS",
   "evidence_status": "PARTIAL",
   "claim_class": "B",
@@ -55,8 +55,8 @@
     "system_specific_SI_map": "BLOCKED"
   },
   "source_hashes": {
-    "docs\\core\\uet_covariant_reduction.py": "aa65633292562810e4aa5aaed6c689ee00483543342187597c49534524a754dc",
-    "docs\\core\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "7762422a01348233ecbd532d166be6cc675ac94b8a11b1f960fd0fe0527a0ddb"
+    "docs\\core\\02_equations\\covariant\\uet_covariant_reduction.py": "aa65633292562810e4aa5aaed6c689ee00483543342187597c49534524a754dc",
+    "docs\\core\\01_contracts\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "1609cfdada2ad9e67ebcb8e9ae53f2f3f035fdc70469424e486eb3f7e53c1f86"
   },
   "run_contract": {
     "seed": 190041,

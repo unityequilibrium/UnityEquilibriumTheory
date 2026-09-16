@@ -108,7 +108,7 @@ def main() -> int:
         "independent_alpha_Phi_K_and_TTG_source_closure_missing",
     ]
     source_paths = [
-        "docs/core/uet_lattice_momentum_relaxing_heat_parent.py",
+        "docs/core/03_lanes/thermal/uet_lattice_momentum_relaxing_heat_parent.py",
         "docs/core/test/test_topic13_lattice_momentum_relaxing_heat_parent.py",
         "docs/scripts/audit/audit_topic13_lattice_momentum_relaxing_heat_parent.py",
     ]

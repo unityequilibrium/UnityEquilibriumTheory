@@ -1,18 +1,17 @@
 """Regression checks for the bounded Noether mapping scientific-link package."""
 
 from __future__ import annotations
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import canonical_artifact_path, repo_root
 
 import json
 from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACTS = ROOT / "docs" / "core" / "artifacts"
-
-
 def load_json(name: str) -> dict:
-    return json.loads((ARTIFACTS / name).read_text(encoding="utf-8-sig"))
+    return json.loads(
+        canonical_artifact_path(name).read_text(encoding="utf-8-sig")
+    )
 
 
 FORMULA_IDS = [
@@ -35,8 +34,8 @@ def test_noether_mapping_family_has_explicit_scientific_chain() -> None:
     )
 
     assert family["module_paths"] == [
-        "docs/core/uet_noether.py",
-        "docs/core/uet_noether_phase_field_map.py",
+        "docs/core/02_equations/lorentz_noether/uet_noether.py",
+        "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py",
     ]
     assert family["unit_lane"] == "natural_parent_plus_normalized_map"
     assert family["formula_ids"] == FORMULA_IDS
@@ -52,11 +51,12 @@ def test_noether_mapping_records_materialize_links_without_promotion() -> None:
         item
         for item in registry["files"]
         if item.get("equation_family_or_lane") == "core.noether_mapping"
+        and item.get("current_path") == item.get("canonical_path")
     ]
 
     assert {item["path"] for item in records} == {
-        "docs/core/uet_noether.py",
-        "docs/core/uet_noether_phase_field_map.py",
+        "docs/core/02_equations/lorentz_noether/uet_noether.py",
+        "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py",
     }
     for record in records:
         assert record["formula_ids"] == FORMULA_IDS
@@ -65,8 +65,8 @@ def test_noether_mapping_records_materialize_links_without_promotion() -> None:
         assert record["artifact_paths"]
         assert record["claim_ceiling"] == "mapping/diagnostic only; no universal C ontology"
         assert record["evidence_status"] == "BLOCKED"
-        assert record["organization_disposition"] == "W2-EQUATION-NOETHER-MAPPING"
-        assert record["registry_link_status"] == "ORGANIZATION_POLICY_ASSIGNED"
+        assert record["organization_status"] == "MIGRATED"
+        assert record["registry_link_status"] == "CANONICAL_PATH"
 
 
 def test_noether_mapping_family_points_to_central_records() -> None:

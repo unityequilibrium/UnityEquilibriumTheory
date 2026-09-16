@@ -11,8 +11,8 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
 AUDIT_REL = "docs/core/07_artifacts/topic13/t13_uet_o2_one_loop_uv_boundary_audit.json"
-MODULE_REL = "docs/core/uet_o2_one_loop_normal_branch.py"
-COMPARATOR_REL = "docs/core/standard_o2_finite_temperature_comparator.py"
+MODULE_REL = "docs/core/02_equations/o2/uet_o2_one_loop_normal_branch.py"
+COMPARATOR_REL = "docs/core/02_equations/o2/standard_o2_finite_temperature_comparator.py"
 BRANCH_REL = "docs/core/07_artifacts/topic13/t13_uet_o2_one_loop_normal_branch_audit.json"
 CONVERGENCE_REL = "docs/core/07_artifacts/topic13/t13_uet_o2_one_loop_convergence_audit.json"
 FULL_REL = "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"

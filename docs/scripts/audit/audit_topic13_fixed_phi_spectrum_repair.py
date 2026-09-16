@@ -35,8 +35,8 @@ from docs.core.uet_o2_kinetic_collision_kubo import _normal_state_inputs
 
 ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_fixed_phi_spectrum_repair_audit.json"
-EOS_PATH = "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py"
-STATIC_PATH = "docs/core/uet_o2_formal_transverse_response.py"
+EOS_PATH = "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py"
+STATIC_PATH = "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py"
 AUDIT_PATH = "docs/scripts/audit/audit_topic13_fixed_phi_spectrum_repair.py"
 
 
@@ -245,8 +245,8 @@ def main() -> int:
     ))
     source_paths = [
         EOS_PATH, STATIC_PATH, AUDIT_PATH,
-        "docs/core/uet_covariant_matter.py",
-        "docs/core/uet_o2_finite_density_eos.py",
+        "docs/core/02_equations/covariant/uet_covariant_matter.py",
+        "docs/core/02_equations/o2/uet_o2_finite_density_eos.py",
         "docs/core/test/test_topic13_fixed_phi_spectrum_regression.py",
     ]
     artifact = {
@@ -285,9 +285,9 @@ def main() -> int:
             "global_acceptance": "Not regenerated; bounded He4 composition is not evidence of full thermodynamic closure.",
         },
         "known_unrepaired_copied_formula": {
-            "path": "docs/core/uet_o2_kinetic_collision_kubo.py",
+            "path": "docs/core/02_equations/o2/uet_o2_kinetic_collision_kubo.py",
             "symbol": "_normal_state_inputs",
-            "source_sha256": digest(ROOT / "docs/core/uet_o2_kinetic_collision_kubo.py"),
+            "source_sha256": digest(ROOT / "docs/core/02_equations/o2/uet_o2_kinetic_collision_kubo.py"),
             "finding": "Probe canonical mass, signed chemical potential and coupling independently; full action tensor/channel matching is separate.",
             "canonical_inputs": list(copied_inputs),
             "input_normalization_repaired": copied_repaired,

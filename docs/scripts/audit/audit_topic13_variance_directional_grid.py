@@ -65,7 +65,7 @@ def main():
                 relative_trace_change=rows[b]['total_trace_m2']/rows[a]['total_trace_m2']-1))
     paths = list(LOCKS)+[Path(__file__), ROOT/'docs/core/test/test_topic13_variance_directional_grid.py',
         ROOT/'docs/scripts/audit/audit_topic13_thermal_variance_spectrum.py', ROOT/'docs/scripts/audit/audit_topic13_interlayer_thermal_variance.py',
-        ROOT/'docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py', ROOT/'docs/core/uet_interlayer_mode_residue.py']
+        ROOT/'docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py', ROOT/'docs/core/03_lanes/thermal/uet_interlayer_mode_residue.py']
     artifact = dict(major_result_id='T13_VARIANCE_DIRECTIONAL_RESOLUTION', topic='0.13', closure_level='PARTIAL',
         what_is_closed='Directional refinement comparison of source harmonic covariance at300K',
         equation_or_mapping='Existing all-mode covariance trace integrated with separate reciprocal-axis mesh sizes',

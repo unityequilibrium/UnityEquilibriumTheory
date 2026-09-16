@@ -2,15 +2,15 @@
 
 > Organization control-plane report. Physical migration does not promote physics evidence.
 
-Generated at: 2026-09-15T18:54:16+00:00
+Generated at: 2026-09-16T17:57:06+00:00
 Generator: docs/scripts/audit/plan_uet_core_physical_migration.py
 
 ## Current control state
 
-- Files indexed: **1964**
+- Files indexed: **1973**
 - Files with a move target: **0**
-- Already canonical/protected: **1964**
-- Dirty sources held back: **6**
+- Already canonical/protected: **1973**
+- Dirty sources held back: **448**
 - Duplicate targets: **0**
 - Existing target conflicts: **0**
 - Physical migration complete: **True**
@@ -21,13 +21,13 @@ Generator: docs/scripts/audit/plan_uet_core_physical_migration.py
 
 | Wave | Files |
 | :-- | --: |
-| already_canonical | 1964 |
+| already_canonical | 1973 |
 
 ## Safety rules
 
 - Duplicate canonical targets and existing destinations block apply.
 - Dirty user files are held back and never overwritten.
 - Root entrypoints and the public facade stay in place.
-- Python implementation moves create root shims; Markdown moves create redirects.
+- Python implementations live at numeric canonical paths; old imports use one lazy alias registry, and old Markdown paths use redirects.
 - Generated artifacts are canonicalized by a provenance-aware migration; generator/consumer validation remains a separate evidence gate.
 - Organization migration is not a scientific pass.

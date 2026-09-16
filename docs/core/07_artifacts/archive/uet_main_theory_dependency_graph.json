@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_main_theory_dependency_graph",
-  "generated_at": "2026-08-09",
+  "generated_at": "2026-09-16",
   "program_tracks": {
     "primary": "covariant_effective_theory",
     "secondary": "fundamental_unification_hypothesis_track"

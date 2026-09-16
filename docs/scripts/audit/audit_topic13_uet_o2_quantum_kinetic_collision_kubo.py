@@ -23,8 +23,8 @@ from docs.core.uet_o2_kinetic_collision_kubo import kinetic_collision_state
 
 ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_quantum_kinetic_collision_kubo_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_kinetic_collision_kubo.py"
-EOS_MODULE = ROOT / "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_kinetic_collision_kubo.py"
+EOS_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py"
 
 STATUS = "PASS_ACTION_DERIVED_QUANTUM_KINETIC_COLLISION_LANE"
 
@@ -134,9 +134,9 @@ def main() -> int:
     failed = [key for key, value in checks.items() if not value]
     status = STATUS if not failed else "BLOCKED_ACTION_DERIVED_QUANTUM_KINETIC_COLLISION_LANE"
     evidence = [
-        {"path": "docs/core/uet_o2_kinetic_collision_kubo.py", "sha256": sha256(MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_kinetic_collision_kubo.py", "sha256": sha256(MODULE)},
         {
-            "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+            "path": "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py",
             "sha256": sha256(EOS_MODULE),
         },
     ]
@@ -243,7 +243,7 @@ def main() -> int:
         "action_matching_boundary": "Canonical comparator only; full action tensor/channel normalization remains open.",
         "source_hashes": {
             path: sha256(ROOT / path) for path in (
-                "docs/core/uet_o2_kinetic_collision_kubo.py",
+                "docs/core/02_equations/o2/uet_o2_kinetic_collision_kubo.py",
                 "docs/scripts/audit/audit_topic13_uet_o2_quantum_kinetic_collision_kubo.py",
             )
         },

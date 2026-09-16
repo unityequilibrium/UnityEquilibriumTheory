@@ -26,7 +26,7 @@ SOURCE_ROWS = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "he4_svp_o2_physical_anchor_source_package.json"
 )
-MODULE = ROOT / "docs/core/he4_o2_response_calibration.py"
+MODULE = ROOT / "docs/core/03_lanes/thermal/he4_o2_response_calibration.py"
 NATURAL_BRIDGE = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_action_thermal_observable_bridge_audit.json"
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json"
 

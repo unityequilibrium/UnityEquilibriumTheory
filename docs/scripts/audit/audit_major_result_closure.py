@@ -62,7 +62,7 @@ def main() -> int:
             "derivation_class": "workflow and registry contract",
             "observable": "registry-linked observable/dependency records",
             "data_role": "metadata and artifact integration",
-            "evidence_artifacts": [ref("docs/core/UET_RESEARCH_ROOM_BRIEF.md", {"required_report_headings": True})],
+            "evidence_artifacts": [ref("docs/core/00_governance/UET_RESEARCH_ROOM_BRIEF.md", {"required_report_headings": True})],
             "verification_status": "PARTIAL_FOUNDATION_CONTRACT",
             "open_blockers": ["foundation correspondence, units, accepted physical observables, and external claim gates remain open"],
             "dependency_unlocked": "parallel room hardening only",
@@ -167,7 +167,7 @@ def main() -> int:
     discovered_entries: list[dict[str, Any]] = []
     discovered_ids: set[str] = set()
     for artifact_root in (
-        ROOT / "docs/core/artifacts",
+        ROOT / "docs/core/07_artifacts",
         ROOT / "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts",
         ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts",
     ):

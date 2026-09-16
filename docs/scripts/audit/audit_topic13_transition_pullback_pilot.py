@@ -32,12 +32,12 @@ def main():
         evidence_artifacts=[dict(path=p,sha256=sha256((ROOT/p).read_bytes()).hexdigest()) for p in (
             "docs/scripts/audit/audit_topic13_transition_pullback_pilot.py",
             "docs/core/test/test_topic13_transition_pullback.py",
-            "docs/core/uet_o2_continuum_collision_operator.py",
-            "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
-            "docs/core/uet_o2_action_derived_transition_kernel.py",
-            "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py",
-            "docs/core/uet_o2_action_thermal_observable_bridge.py",
-            "docs/core/uet_o2_action_thermal_stiffness_beta.py",
+            "docs/core/02_equations/o2/uet_o2_continuum_collision_operator.py",
+            "docs/core/02_equations/o2/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+            "docs/core/02_equations/o2/uet_o2_action_derived_transition_kernel.py",
+            "docs/core/02_equations/o2/uet_o2_covariant_entropy_heat_flux_balance.py",
+            "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+            "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
             "docs/core/07_artifacts/topic13/t13_transition_coordinate_map_audit.json")])
     out=ROOT/"docs/core/07_artifacts/topic13/t13_transition_pullback_pilot.json"
     def save():

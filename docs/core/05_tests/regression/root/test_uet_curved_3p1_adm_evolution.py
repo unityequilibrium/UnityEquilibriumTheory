@@ -1,7 +1,7 @@
 """Tests for the ADM RHS and fixed-gauge hyperbolicity no-go wave."""
 
 from __future__ import annotations
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import canonical_artifact_path, repo_root
 
 import hashlib
 import json
@@ -21,9 +21,6 @@ from docs.scripts.audit.audit_uet_curved_3p1_adm_evolution import build_artifact
 
 
 ROOT = repo_root()
-ARTIFACTS = ROOT / "docs/core/artifacts"
-
-
 def _flat(resolution: int, scale: float = 1.0) -> np.ndarray:
     return np.broadcast_to(scale**2 * np.eye(3), (resolution,) * 3 + (3, 3)).copy()
 
@@ -105,7 +102,10 @@ def test_invalid_lapse_stress_and_direction_are_rejected() -> None:
 def test_artifacts_are_stable_hash_linked_and_select_gh_without_claiming_it() -> None:
     names = ("curved_3p1_adm_evolution_operator_verification.json", "curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json", "curved_3p1_adm_evolution_formula_audit.json", "curved_3p1_formulation_selection_gate.json")
     generated = build_artifacts()
-    persisted = tuple(json.loads((ARTIFACTS / name).read_text(encoding="utf-8")) for name in names)
+    persisted = tuple(
+        json.loads(canonical_artifact_path(name).read_text(encoding="utf-8"))
+        for name in names
+    )
     for live, stored in zip(generated, persisted):
         live.pop("generated_at", None)
         stored.pop("generated_at", None)

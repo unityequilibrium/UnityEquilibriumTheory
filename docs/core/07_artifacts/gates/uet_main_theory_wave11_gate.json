@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_main_theory_wave11_gate",
-  "generated_at": "2026-08-09T04:12:26.805624+00:00",
+  "generated_at": "2026-09-16T10:26:03.295375+00:00",
   "audit_status": "PASS",
   "downstream_unlock_status": "BLOCKED_EXCEPT_PHASE_INTERNAL_DIAGNOSTIC",
   "checks": {
@@ -21,9 +21,9 @@
     "thermal_external_comparison": {
       "status": "BLOCKED",
       "controller": [
-        "thermal_numeric_source_package_missing",
-        "alpha_phi_k_independent_calibration_missing",
-        "thermal_prearrival_leakage_gate_failed"
+        "legacy_graphite_ttg_numeric_source_package_missing",
+        "legacy_graphite_alpha_phi_k_independent_calibration_missing",
+        "legacy_graphite_thermal_prearrival_leakage_gate_failed"
       ],
       "allowed": "source metadata and normalized observable definition only"
     },

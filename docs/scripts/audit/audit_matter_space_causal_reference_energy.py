@@ -32,7 +32,7 @@ from docs.core.uet_matter_space import (  # noqa: E402
 
 OUT = ROOT / "docs/core/07_artifacts/verification/matter_space_causal_reference_energy_verification.json"
 DEFAULT_REPAIR = ROOT / "docs/core/07_artifacts/archive/causal_discretization_repair_artifact.json"
-CORE_SOURCE = ROOT / "docs/core/uet_matter_space.py"
+CORE_SOURCE = ROOT / "docs/core/02_equations/matter_space/uet_matter_space.py"
 THRESHOLD = 1.0e-10
 
 

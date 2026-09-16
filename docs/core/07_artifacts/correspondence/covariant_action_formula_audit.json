@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "covariant_action_formula_audit",
-  "generated_at": "2026-08-01T17:50:08.844976+00:00",
+  "generated_at": "2026-09-16T09:40:41.725203+00:00",
   "status": "WARN",
   "implementation_status": "PRESENT",
   "model_status": "CANDIDATE_CONSERVATIVE_TENSOR_FORMULA_EVALUATOR",
@@ -105,8 +105,8 @@
   "downstream_diffusion_evidence": "PARTIAL",
   "downstream_matter_evidence": "PARTIAL",
   "source_hashes": {
-    "docs\\core\\uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
-    "docs\\core\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "d15cc8e345a3df986f7608d48e3152134c4325dfa24e5dc9364b085fe37dd6c9"
+    "docs\\core\\02_equations\\covariant\\uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
+    "docs\\core\\01_contracts\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "1609cfdada2ad9e67ebcb8e9ae53f2f3f035fdc70469424e486eb3f7e53c1f86"
   },
   "downstream_hyperbolic_phase_field": {
     "artifact": "hyperbolic_phase_field_external_comparator_verification.json",

@@ -1,12 +1,12 @@
 {
   "schema_version": "uet-major-result-dependency-unlock-v1",
   "artifact": "uet_major_result_dependency_unlock_gate",
-  "generated_at": "2026-08-30",
+  "generated_at": "2026-09-16",
   "status": "BLOCKED_DOWNSTREAM_MAJOR_RESULTS",
   "claim_promotion": false,
   "register": {
-    "path": "docs/core/artifacts/uet_major_result_closure_register.json",
-    "sha256": "8368165bccd2c769d28e8ef17be088078c185d01f484ef052661ff3e3815714f"
+    "path": "docs/core/07_artifacts/gates/uet_major_result_closure_register.json",
+    "sha256": "b4bc9577e4eccb8028f0754ce9da73b969b898e9379b294d9002603b3d5533d6"
   },
   "decisions": {
     "TOPIC_0_11_CHAOS_DIAGNOSTIC_ROLLOUT": {
@@ -534,22 +534,23 @@
     "claim_boundary": "ADM constraint, periodic spatial geometry, RHS operator, and fixed-gauge no-go, GH principal/nonlinear RHS, periodic vacuum evolution, and prescribed Topic 13 matter-source progress only; the parent is not CLOSED_FOR_CORE and Gravity remains blocked"
   },
   "topic13_partial_evidence": {
-    "register_sha256": "8368165bccd2c769d28e8ef17be088078c185d01f484ef052661ff3e3815714f",
+    "register_sha256": "b4bc9577e4eccb8028f0754ce9da73b969b898e9379b294d9002603b3d5533d6",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",
     "full_core_unlock": false,
-    "reason": "The covariant matter-coupling no-go makes the missing physical response normalization explicit; it does not supply e0, alpha_Phi_K, Ding C_src, physical Kubo coefficients, or full closure.",
+    "reason": "Topic 13 has lane-level causal, field-normalization, beta, and collective-response EOS contracts; none supplies physical coefficient provenance, an SI Phi anchor, alpha_Phi_K, transport, KMS, entropy production, or full closure.",
     "phi_energy_anchor_no_go": {
-      "path": "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
+      "path": "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json",
       "sha256": "ce0837792cd63918dc371f64fa49801bfb0dd0f715264c8557cf54f5dcbe9059",
       "summary": {
         "status": "PASS_SCOPED_NO_GO_NORMALIZED_PHI_ENERGY_ANCHOR",
-        "full_core_unlock": false
+        "full_core_unlock": false,
+        "numeric_alpha_emitted": false
       }
     },
     "covariant_action_si_anchor_route": {
-      "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
+      "path": "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json",
       "sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52",
       "summary": {
         "status": "PASS_NATURAL_UNIT_ROUTE_IDENTIFIED_SI_MAPPING_BLOCKED",
@@ -565,7 +566,7 @@
       }
     },
     "causal_branch_selection": {
-      "path": "docs/core/artifacts/t13_causal_branch_selection_audit.json",
+      "path": "docs/core/07_artifacts/topic13/t13_causal_branch_selection_audit.json",
       "sha256": "5e4a7ed55bdcb2e7779b0ec9bd45ca24f935bdcab2d0c50fa91d525103d1c8eb",
       "summary": {
         "status": "PASS_CLOSED_AS_NO_GO_WITH_NAMED_COUPLED_BRANCH",
@@ -590,7 +591,7 @@
       }
     },
     "collective_response_eos_stability_contract": {
-      "path": "docs/core/artifacts/t13_collective_response_eos_stability_audit.json",
+      "path": "docs/core/07_artifacts/topic13/t13_collective_response_eos_stability_audit.json",
       "sha256": "5bcdbfdd4f14b6d28ce6bdd737020030b85add2f5f0a38db22e9e36d9c77772d",
       "summary": {
         "status": "PASS_NAMED_COLLECTIVE_RESPONSE_EOS_STABILITY_CONTRACT",

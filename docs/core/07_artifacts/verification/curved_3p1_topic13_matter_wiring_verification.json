@@ -1,7 +1,7 @@
 {
   "schema_version": "curved-3p1-topic13-matter-wiring-v1",
   "artifact": "curved_3p1_topic13_matter_wiring_verification",
-  "generated_at": "2026-08-30T10:40:22.286819+00:00",
+  "generated_at": "2026-09-16T10:23:53.922856+00:00",
   "status": "PASS_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING",
   "major_result": {
     "major_result_id": "CORE_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING_READY",
@@ -38,20 +38,20 @@
         "sha256": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a"
       },
       {
-        "path": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json",
         "sha256": "13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418"
       },
       {
-        "path": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
         "sha256": "9ea6f37eb43e353b8c89e42b1c3dd01c957b2063e41a09230483989accb2b3f4"
       },
       {
-        "path": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
-        "sha256": "1a8289aadbed1c069add276bb3f734d6c642174cf2101a664fba4ee5a8bfd021"
+        "path": "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json",
+        "sha256": "4fe52bd87f1531dcaaadeeddd99ea48744d4ef574eb7b1e6d9c65bb8f41aa2a9"
       },
       {
         "path": "docs/core/uet_curved_3p1_matter_wiring.py",
-        "sha256": "d45348efdbbd302c07f425f2f800cd677d14225f1ad49fb36b21de6a257614b1"
+        "sha256": "6c0dc1f670b385a37dbe5ab2cce09651a33fe7a6abd0d4e907a3aa9f83a61710"
       }
     ],
     "verification_status": "PASS_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING",
@@ -67,9 +67,9 @@
     "claim_boundary": "prescribed lane-specific stress-energy construction and projection only; not a self-consistent matter-coupled spacetime solution, Einstein-equation derivation, Gravity validation, or global UET closure"
   },
   "input_identity": {
-    "topic13_result": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
-    "natural_eos": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
-    "si_scale": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
+    "topic13_result": "docs/core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+    "natural_eos": "docs/core/07_artifacts/topic13/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+    "si_scale": "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json",
     "einstein_coupling_witness": 0.25,
     "einstein_coupling_role": "dimensionless internal operator witness; not a physical SI calibration"
   },

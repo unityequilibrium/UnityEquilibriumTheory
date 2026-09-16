@@ -1,5 +1,5 @@
 from __future__ import annotations
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import canonical_artifact_path, repo_root
 
 import json
 from pathlib import Path
@@ -9,11 +9,8 @@ import docs.core as core
 from docs.scripts.audit.audit_uet_o2_superfluid_transport import build_artifacts
 
 ROOT = repo_root()
-OUT = ROOT / "docs/core/artifacts"
-
-
 def _load(name: str) -> dict:
-    return json.loads((OUT / name).read_text(encoding="utf-8"))
+    return json.loads(canonical_artifact_path(name).read_text(encoding="utf-8"))
 
 
 def test_generated_wave10_artifacts_match_the_committed_payloads() -> None:

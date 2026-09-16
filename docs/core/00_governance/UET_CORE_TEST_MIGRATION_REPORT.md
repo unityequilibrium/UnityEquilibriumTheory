@@ -2,7 +2,7 @@
 
 > Organization migration report. It does not promote a physics claim.
 
-Generated at: 2026-09-15T17:43:01+00:00
+Generated at: 2026-09-16T10:58:06+00:00
 Generator: docs/scripts/audit/migrate_uet_core_tests_v3.py
 
 ## Current state

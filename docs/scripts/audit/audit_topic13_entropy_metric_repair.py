@@ -49,10 +49,10 @@ def main():
             old_path, "docs/scripts/audit/audit_topic13_entropy_metric_repair.py",
             "docs/core/test/test_topic13_entropy_metric_repair.py",
             "docs/core/test/test_topic13_entropy_force_convention.py",
-            "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py",
-            "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
-            "docs/core/uet_o2_continuum_collision_operator.py",
-            "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py")],
+            "docs/core/02_equations/o2/uet_o2_covariant_entropy_heat_flux_balance.py",
+            "docs/core/02_equations/o2/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+            "docs/core/02_equations/o2/uet_o2_continuum_collision_operator.py",
+            "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py")],
     }
     (ROOT/"docs/core/07_artifacts/topic13/t13_entropy_metric_repair_audit.json").write_text(json.dumps(record, indent=2, allow_nan=False)+"\n")
     print(json.dumps({"status":record["status"], "checks": checks,

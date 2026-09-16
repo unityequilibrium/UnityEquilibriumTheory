@@ -6,8 +6,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-COMPARATOR = ROOT / "docs/core/standard_o2_finite_temperature_comparator.py"
-ONE_LOOP = ROOT / "docs/core/uet_o2_one_loop_normal_branch.py"
+COMPARATOR = ROOT / "docs/core/02_equations/o2/standard_o2_finite_temperature_comparator.py"
+ONE_LOOP = ROOT / "docs/core/02_equations/o2/uet_o2_one_loop_normal_branch.py"
 
 
 def replace_once(path: Path, old: str, new: str, label: str) -> None:

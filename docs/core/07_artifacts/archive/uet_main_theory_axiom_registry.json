@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_main_theory_axiom_registry",
-  "generated_at": "2026-08-09",
-  "specification": "docs/core/UET_MAIN_THEORY_AXIOMS_SPEC.md",
+  "generated_at": "2026-09-16",
+  "specification": "docs/core/01_contracts/UET_MAIN_THEORY_AXIOMS_SPEC.md",
   "canonical_chain": "X_micro -> C_lane -> (C_lane,Phi,Pi) -> (T_munu,N_mu,Q_mu,sigma) -> R_gen -> carrier -> R_obs -> p_A(o|a)",
   "collective_coordinate_policy": {
     "status": "MULTI_LANE_REQUIRED",

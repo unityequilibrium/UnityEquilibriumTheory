@@ -19,9 +19,9 @@ CALIBRATION_REQUIREMENT = (
 PHI_ANCHOR_BOUNDARY = (
     "docs/core/07_artifacts/topic13/t13_phi_si_anchor_public_source_boundary_audit.json"
 )
-SI_CONVERSION = "docs/core/thermal_covariant_action_si_conversion.py"
-ENERGY_BRIDGE = "docs/core/thermal_energy_response_bridge.py"
-DIMENSIONAL_BRIDGE = "docs/core/thermal_dimensional_bridge.py"
+SI_CONVERSION = "docs/core/03_lanes/thermal/thermal_covariant_action_si_conversion.py"
+ENERGY_BRIDGE = "docs/core/03_lanes/thermal/thermal_energy_response_bridge.py"
+DIMENSIONAL_BRIDGE = "docs/core/03_lanes/thermal/thermal_dimensional_bridge.py"
 
 
 EVIDENCE_PATHS = [

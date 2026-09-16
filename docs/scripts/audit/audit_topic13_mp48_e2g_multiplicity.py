@@ -71,7 +71,7 @@ def main():
                   all_modes_accounted=sum(r['dimension'] for r in rows) == 12,
                   force_symmetry=bool(max(np.linalg.norm(a @ matrix-matrix @ a)/np.linalg.norm(matrix) for a in actions) < 1e-8))
     evidence = list(LOCKS)+[Path(__file__), ROOT/'docs/core/test/test_topic13_mp48_e2g_multiplicity.py',
-        ROOT/'docs/core/uet_interlayer_mode_residue.py', ROOT/'docs/scripts/audit/audit_topic13_mp48_shear_irrep.py',
+        ROOT/'docs/core/03_lanes/thermal/uet_interlayer_mode_residue.py', ROOT/'docs/scripts/audit/audit_topic13_mp48_shear_irrep.py',
         ROOT/'docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py']
     artifact = dict(major_result_id='T13_MP48_SAME_IRREP_DISTINCT_BRANCHES', topic='0.13',
                     closure_level='CLOSED_FOR_LANE' if all(checks.values()) else 'PARTIAL',

@@ -31,8 +31,8 @@ class UETDataOrchestrator:
     def _find_project_root(self) -> Path:
         current = Path(__file__).resolve()
         for parent in [current] + list(current.parents):
-            # Check for the TRUE root marker: docs/core/uet_parameters.py
-            if (parent / "docs" / "core" / "uet_parameters.py").exists():
+            # Check for the TRUE root marker: docs/core/01_contracts/units/uet_parameters.py
+            if (parent / "docs" / "core" / "01_contracts" / "units" / "uet_parameters.py").exists():
                 return parent
         # Fallback to checking for uet_harness name if parents aren't helping
         for parent in [current] + list(current.parents):

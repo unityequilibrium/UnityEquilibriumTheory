@@ -69,7 +69,7 @@ def main():
             omitted_phase_relative_covariance_difference=float(np.linalg.norm(wrong-cov)/np.linalg.norm(cov))))
     paths = list(LOCKS)+[Path(__file__), ROOT/'docs/core/test/test_topic13_displacement_phase.py',
         ROOT/'docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py',
-        ROOT/'docs/scripts/audit/audit_topic13_interlayer_thermal_variance.py',ROOT/'docs/core/uet_interlayer_mode_residue.py']
+        ROOT/'docs/scripts/audit/audit_topic13_interlayer_thermal_variance.py',ROOT/'docs/core/03_lanes/thermal/uet_interlayer_mode_residue.py']
     artifact = dict(major_result_id='T13_LOCAL_DISPLACEMENT_PHASE_CONVENTION',topic='0.13',closure_level='CLOSED_FOR_LANE',
         what_is_closed='Cell-gauge phase and explicit local mass-centroid readout identity; commensurate source-matrix cross-check',
         equation_or_mapping='P=diag(exp(i*q*r_j)); D_cell=P D_phonopy P^dagger; s=B^dagger P e/sqrt(mu)',

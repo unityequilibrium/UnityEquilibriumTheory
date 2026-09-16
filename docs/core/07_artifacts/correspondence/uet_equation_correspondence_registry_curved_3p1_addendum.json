@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_equation_correspondence_registry_curved_3p1_addendum",
-  "generated_at": "2026-08-30T10:40:45.491982+00:00",
-  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "generated_at": "2026-09-16T10:25:14.691682+00:00",
+  "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
   "status": "CANDIDATE_ENTRY_PENDING_MERGE",
   "equation_entries": [
     {
@@ -76,7 +76,7 @@
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_curved_3p1_constraints.py",
-        "docs/core/artifacts/curved_3p1_adm_constraint_interface_audit.json",
+        "docs/core/07_artifacts/verification/curved_3p1_adm_constraint_interface_audit.json",
         "docs/core/test/test_uet_curved_3p1_constraints.py"
       ],
       "evidence_class": "INTERNAL_FORMAL_AND_ANALYTIC_CONTROL",
@@ -162,7 +162,7 @@
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_curved_3p1_geometry.py",
-        "docs/core/artifacts/curved_3p1_geometry_operator_verification.json",
+        "docs/core/07_artifacts/verification/curved_3p1_geometry_operator_verification.json",
         "docs/core/test/test_uet_curved_3p1_geometry.py"
       ],
       "evidence_class": "INTERNAL_FORMAL_NUMERICAL_AND_CONVERGENCE_CONTROL",
@@ -315,7 +315,7 @@
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_curved_3p1_adm_evolution.py",
-        "docs/core/artifacts/curved_3p1_adm_evolution_operator_verification.json",
+        "docs/core/07_artifacts/verification/curved_3p1_adm_evolution_operator_verification.json",
         "docs/core/test/test_uet_curved_3p1_adm_evolution.py"
       ],
       "evidence_class": "INTERNAL_FORMAL_NUMERICAL_AND_CONVERGENCE_CONTROL",
@@ -433,7 +433,7 @@
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_curved_3p1_adm_evolution.py",
-        "docs/core/artifacts/curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json"
+        "docs/core/07_artifacts/archive/curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json"
       ],
       "evidence_class": "INTERNAL_FORMAL_PRINCIPAL_SYMBOL_NO_GO",
       "proof_status": "CLOSED_AS_NO_GO for the declared fixed-gauge branch",
@@ -527,7 +527,7 @@
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_curved_3p1_generalized_harmonic.py",
-        "docs/core/artifacts/curved_3p1_gh_principal_system_verification.json",
+        "docs/core/07_artifacts/verification/curved_3p1_gh_principal_system_verification.json",
         "docs/core/test/test_uet_curved_3p1_generalized_harmonic.py"
       ],
       "evidence_class": "INTERNAL_FORMAL_ANALYTIC_AND_MANUFACTURED_CONVERGENCE_CONTROL",
@@ -627,7 +627,7 @@
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_curved_3p1_gh_nonlinear_vacuum.py",
-        "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json",
+        "docs/core/07_artifacts/verification/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json",
         "docs/core/test/test_uet_curved_3p1_gh_nonlinear_vacuum.py"
       ],
       "evidence_class": "INTERNAL_FORMAL_NUMERICAL_OPERATOR_CONTROL",
@@ -666,10 +666,10 @@
       "parameter_dimensions": "geometric c=1 periodic-coordinate lane",
       "source_or_origin": {
         "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a",
-        "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json": "a5e0dfd38c6d5f410ce41ba941eee7dc82c3dcc9744e1f3fdbb6b46b03666c17",
-        "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_formula_audit.json": "7e5f54ea15d36e331a345f0a04f645557a0671ada35ce12962530e419ce70aa3",
-        "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_gate.json": "89050d1ffe351ae4eb19e49ebcb8dfbd87ca36a12d7d27631b8a20f9b93543fc",
-        "docs/core/uet_curved_3p1_gh_evolution.py": "c18f231375609cebb76d342ba7ad94471eb280089458ace85882ed2450f3581e"
+        "docs/core/07_artifacts/verification/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json": "7b6e7ae7ff020f60389323871f23468b7d607cc6c123f10057621c08a1d3f21e",
+        "docs/core/07_artifacts/correspondence/curved_3p1_gh_nonlinear_vacuum_formula_audit.json": "a7f53a0cc7ad1aeed666b6fd8cbd296b3f67c8e447f23e491551774349457c3a",
+        "docs/core/07_artifacts/gates/curved_3p1_gh_nonlinear_vacuum_gate.json": "34054008efffb5b1233320aae346ee6c7a4ed99a5bb4c9e8e8b4a3e9caf64640",
+        "docs/core/uet_curved_3p1_gh_evolution.py": "aeb9f24af11e2d7b45eed1db3132831135c8a17ff9f23ca62fd88e9e7ad857cc"
       },
       "assumptions": [
         "vacuum",
@@ -689,7 +689,7 @@
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_curved_3p1_gh_time_evolution.py",
-        "docs/core/artifacts/curved_3p1_gh_time_evolution_verification.json",
+        "docs/core/07_artifacts/verification/curved_3p1_gh_time_evolution_verification.json",
         "docs/core/test/test_uet_curved_3p1_gh_time_evolution.py"
       ],
       "evidence_class": "INTERNAL_ANALYTIC_AND_NUMERICAL_CONVERGENCE_CONTROL",
@@ -745,20 +745,20 @@
           "sha256": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a"
         },
         {
-          "path": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+          "path": "docs/core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json",
           "sha256": "13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418"
         },
         {
-          "path": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+          "path": "docs/core/07_artifacts/topic13/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
           "sha256": "9ea6f37eb43e353b8c89e42b1c3dd01c957b2063e41a09230483989accb2b3f4"
         },
         {
-          "path": "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json",
-          "sha256": "1a8289aadbed1c069add276bb3f734d6c642174cf2101a664fba4ee5a8bfd021"
+          "path": "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json",
+          "sha256": "4fe52bd87f1531dcaaadeeddd99ea48744d4ef574eb7b1e6d9c65bb8f41aa2a9"
         },
         {
           "path": "docs/core/uet_curved_3p1_matter_wiring.py",
-          "sha256": "d45348efdbbd302c07f425f2f800cd677d14225f1ad49fb36b21de6a257614b1"
+          "sha256": "6c0dc1f670b385a37dbe5ab2cce09651a33fe7a6abd0d4e907a3aa9f83a61710"
         }
       ],
       "assumptions": [
@@ -779,7 +779,7 @@
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_curved_3p1_matter_wiring.py",
-        "docs/core/artifacts/curved_3p1_topic13_matter_wiring_verification.json",
+        "docs/core/07_artifacts/verification/curved_3p1_topic13_matter_wiring_verification.json",
         "docs/core/test/test_uet_curved_3p1_matter_wiring.py"
       ],
       "evidence_class": "INTERNAL_FORMAL_ALGEBRAIC_AND_SOURCE_COMPOSITION_CONTROL",

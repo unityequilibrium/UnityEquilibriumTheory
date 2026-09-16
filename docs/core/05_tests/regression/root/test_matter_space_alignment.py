@@ -1,7 +1,7 @@
 """API and ontology alignment gates for matter_space_coupled_v1."""
 
 from __future__ import annotations
-from docs.core.core_paths import CANONICAL_ARTIFACT_ROOT, canonical_artifact_path
+from docs.core.core_paths import canonical_artifact_path
 
 from dataclasses import fields
 import json
@@ -129,15 +129,14 @@ def test_legacy_default_and_explicit_legacy_mode_are_unchanged() -> None:
 
 
 def test_generated_artifacts_keep_failed_controller_machine_readable() -> None:
-    artifact_dir = CANONICAL_ARTIFACT_ROOT
     verification = json.loads(
-        (artifact_dir / "matter_space_variational_verification.json").read_text(encoding="utf-8")
+        canonical_artifact_path("matter_space_variational_verification.json").read_text(encoding="utf-8")
     )
     dependency = json.loads(
-        (artifact_dir / "matter_space_dependency_gate.json").read_text(encoding="utf-8")
+        canonical_artifact_path("matter_space_dependency_gate.json").read_text(encoding="utf-8")
     )
     alignment = json.loads(
-        (artifact_dir / "master_equation_alignment_gate_v2.json").read_text(encoding="utf-8")
+        canonical_artifact_path("master_equation_alignment_gate_v2.json").read_text(encoding="utf-8")
     )
     assert verification["status"] in {"PASS", "FAIL"}
     assert dependency["core_verification_status"] == verification["status"]

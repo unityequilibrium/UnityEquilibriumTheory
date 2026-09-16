@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "core_curved_3p1_parent_gate",
-  "generated_at": "2026-08-30T10:40:45.491982+00:00",
+  "generated_at": "2026-09-16T10:25:14.691682+00:00",
   "status": "PARTIAL_CURVED_3P1_GH_PERIODIC_PRESCRIBED_MATTER_READY",
   "major_result": {
     "major_result_id": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
@@ -83,84 +83,84 @@
   "controlling_blocker": "curved_3p1_constraint_preserving_boundaries_and_dimensional_observable_mapping_missing",
   "evidence_artifacts": [
     {
-      "path": "docs/core/artifacts/curved_3p1_adm_constraint_interface_audit.json",
-      "sha256": "ce5ed05764b8d765819af1ff7485b5c2a1d30a0ddcc3e76e20686d7cfd80b3f0"
+      "path": "docs/core/07_artifacts/verification/curved_3p1_adm_constraint_interface_audit.json",
+      "sha256": "2e9a6dc853b3740925d027c2c5ecbdbcf42606cff9c323e6e14bef330b2cd9c1"
     },
     {
-      "path": "docs/core/artifacts/curved_3p1_adm_constraint_formula_audit.json",
-      "sha256": "72ecf1679800c48caf38b2cb9e1ed309b727436fe45d3226a19fa5aab8514b25"
+      "path": "docs/core/07_artifacts/correspondence/curved_3p1_adm_constraint_formula_audit.json",
+      "sha256": "82fc6d2a0fe51455500fee001f99bd64a1a9ba5f962181e457542b03f6236301"
     },
     {
-      "path": "docs/core/artifacts/curved_3p1_geometry_operator_verification.json",
-      "sha256": "c35cb35e1b8fb96bdf77b42f708cf0eff7b437332144e1d032bfd2d08338af70"
+      "path": "docs/core/07_artifacts/verification/curved_3p1_geometry_operator_verification.json",
+      "sha256": "f9c695ce884895e40c22ab186bca690dbc8c7e1b7a8ee9b523b0ed38101c5074"
     },
     {
-      "path": "docs/core/artifacts/curved_3p1_geometry_operator_formula_audit.json",
-      "sha256": "4dcd31c7867dbd85cbf2d827e27bc3138ab1e301c67f937eaea880a789ca9192"
+      "path": "docs/core/07_artifacts/correspondence/curved_3p1_geometry_operator_formula_audit.json",
+      "sha256": "90075accbbb0926943a4871f5345b7ec734c1ab8b4ffe2d2290d91b8319c6f32"
     },
     {
-      "path": "docs/core/artifacts/curved_3p1_adm_evolution_operator_verification.json",
-      "sha256": "c0ba6a81c3cf1867499352c95250248c412d87ff69ed33889c77a75870925436"
+      "path": "docs/core/07_artifacts/verification/curved_3p1_adm_evolution_operator_verification.json",
+      "sha256": "374ec8c32e3f6ef8c1a94b0f2f279a759bdc5e9d20fdf4157f4486764eb1ce48"
     },
     {
-      "path": "docs/core/artifacts/curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json",
-      "sha256": "fd2e6fce761796aef39e664c2df3237e585007ebf4a196eae1bec3222d7cf333"
+      "path": "docs/core/07_artifacts/archive/curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json",
+      "sha256": "ae9cd0c7c1b952ef2afea9d32a249b1f21aec27be82701efa945ab7623804ca8"
     },
     {
-      "path": "docs/core/artifacts/curved_3p1_adm_evolution_formula_audit.json",
-      "sha256": "2f250d4184bb8925d211517b6028aa2b2a39f1eaa9c324f0c04229316e0602b2"
+      "path": "docs/core/07_artifacts/correspondence/curved_3p1_adm_evolution_formula_audit.json",
+      "sha256": "1dd8a5d83248dfec0df506249d0180a832a770ca742d823223ca5d504502c681"
     },
     {
-      "path": "docs/core/artifacts/curved_3p1_formulation_selection_gate.json",
-      "sha256": "d7cb57c4cb667a3c0f68d700b0bb7e161664676e86945d2d9210fcd4d9828f82"
+      "path": "docs/core/07_artifacts/gates/curved_3p1_formulation_selection_gate.json",
+      "sha256": "b17314415cfc5c227739e6b728f7e3a82d23bbc6d26173862598b0cc276caee1"
     },
     {
-      "path": "docs/core/artifacts/curved_3p1_gh_principal_system_verification.json",
-      "sha256": "93c01c20d16b906a3f4653222bfe4f1648d4ab6e6dbaf7596e254f2e0f41d973"
+      "path": "docs/core/07_artifacts/verification/curved_3p1_gh_principal_system_verification.json",
+      "sha256": "df85f18aa30e14f65f59584e4d4602c30adfe4b5942c0a9657084593fe3f1ef6"
     },
     {
-      "path": "docs/core/artifacts/curved_3p1_gh_principal_system_formula_audit.json",
-      "sha256": "81e03e3df175c28419392dd4c0e5da6eadd9226cbd5117cf6e85bd5b5615c500"
+      "path": "docs/core/07_artifacts/correspondence/curved_3p1_gh_principal_system_formula_audit.json",
+      "sha256": "d729c95fbf543af9bd835606843ffc196f0595e89f9416816d4d85d6ea0cab41"
     },
     {
-      "path": "docs/core/artifacts/curved_3p1_gh_branch_gate.json",
-      "sha256": "330944d6edc433a5f8395fb3d20fda094e6d9f1568f7d41c5877d162e0cc9376"
+      "path": "docs/core/07_artifacts/gates/curved_3p1_gh_branch_gate.json",
+      "sha256": "4c91c7c712c71fd0be31dcbbd17fa78472e55e527803da2a1b2e9b8210cc0c1b"
     },
     {
-      "path": "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json",
-      "sha256": "a5e0dfd38c6d5f410ce41ba941eee7dc82c3dcc9744e1f3fdbb6b46b03666c17"
+      "path": "docs/core/07_artifacts/verification/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json",
+      "sha256": "7b6e7ae7ff020f60389323871f23468b7d607cc6c123f10057621c08a1d3f21e"
     },
     {
-      "path": "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_formula_audit.json",
-      "sha256": "7e5f54ea15d36e331a345f0a04f645557a0671ada35ce12962530e419ce70aa3"
+      "path": "docs/core/07_artifacts/correspondence/curved_3p1_gh_nonlinear_vacuum_formula_audit.json",
+      "sha256": "a7f53a0cc7ad1aeed666b6fd8cbd296b3f67c8e447f23e491551774349457c3a"
     },
     {
-      "path": "docs/core/artifacts/curved_3p1_gh_nonlinear_vacuum_gate.json",
-      "sha256": "89050d1ffe351ae4eb19e49ebcb8dfbd87ca36a12d7d27631b8a20f9b93543fc"
+      "path": "docs/core/07_artifacts/gates/curved_3p1_gh_nonlinear_vacuum_gate.json",
+      "sha256": "34054008efffb5b1233320aae346ee6c7a4ed99a5bb4c9e8e8b4a3e9caf64640"
     },
     {
-      "path": "docs/core/artifacts/curved_3p1_gh_time_evolution_verification.json",
-      "sha256": "9615a6f74fe274af74889abf5fc1c0a6bd79364aa5a35fe2d96b3464ade448e6"
+      "path": "docs/core/07_artifacts/verification/curved_3p1_gh_time_evolution_verification.json",
+      "sha256": "003545922ce8306b00d1f63504c7286f2b8e096770e9eed997e12268b4bd2d7e"
     },
     {
-      "path": "docs/core/artifacts/curved_3p1_gh_time_evolution_formula_audit.json",
-      "sha256": "0f967b2049fcfe452a155db107d42a5f57bee0cf865aa715d33693ce0dfcc359"
+      "path": "docs/core/07_artifacts/correspondence/curved_3p1_gh_time_evolution_formula_audit.json",
+      "sha256": "81cb7eb59480903a720ec9a3a789cfc54a791586056bca25700cf7c4793ff97a"
     },
     {
-      "path": "docs/core/artifacts/curved_3p1_gh_time_evolution_gate.json",
-      "sha256": "bed3535a5a922b4df50b8169eaa7b673a5185380e9c6c8c7fcb6e48006f08339"
+      "path": "docs/core/07_artifacts/gates/curved_3p1_gh_time_evolution_gate.json",
+      "sha256": "2796271840f1fb3c902f7f9c356ca72ebb2543f650ed32ffdc4e982fe7dc418b"
     },
     {
-      "path": "docs/core/artifacts/curved_3p1_topic13_matter_wiring_verification.json",
-      "sha256": "5dc24a2f74b0675441e51ffa3e63182b40409e59d242c02c27d1370c235f3166"
+      "path": "docs/core/07_artifacts/verification/curved_3p1_topic13_matter_wiring_verification.json",
+      "sha256": "9f7bef2168ad55ce087ffa905ac99453f5666e54e580b4c7aa1f6e132902b3fa"
     },
     {
-      "path": "docs/core/artifacts/curved_3p1_topic13_matter_wiring_formula_audit.json",
-      "sha256": "e46ad0f266231c8d068d53ee79086b101b98f661b78680d37844e22ae09bdadf"
+      "path": "docs/core/07_artifacts/correspondence/curved_3p1_topic13_matter_wiring_formula_audit.json",
+      "sha256": "c7a47bbfb0b230577812db94bf55178488edafb3b8d53787f296800211e8ca27"
     },
     {
-      "path": "docs/core/artifacts/curved_3p1_topic13_matter_wiring_gate.json",
-      "sha256": "6cd4b52a6d4b18d3338563374ebe6d36644b381a74c25bdb589a2a819d71852e"
+      "path": "docs/core/07_artifacts/gates/curved_3p1_topic13_matter_wiring_gate.json",
+      "sha256": "5a41fda247597bde8ce6ba1ee7580749b5f038c6c70c87d2280d9f60aacd0ac9"
     }
   ],
   "claim_promotion": false

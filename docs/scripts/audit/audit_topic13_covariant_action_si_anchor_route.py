@@ -10,8 +10,8 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-RESPONSE_REL = "docs/core/uet_covariant_response.py"
-SPEC_REL = "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
+RESPONSE_REL = "docs/core/02_equations/covariant/uet_covariant_response.py"
+SPEC_REL = "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
 FORMULA_REL = "docs/core/07_artifacts/correspondence/covariant_action_formula_audit.json"
 NO_GO_REL = "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json"
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json"

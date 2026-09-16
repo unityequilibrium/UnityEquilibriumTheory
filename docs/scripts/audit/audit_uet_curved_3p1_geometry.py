@@ -27,14 +27,15 @@ from docs.core.uet_curved_3p1_geometry import (
     curved_3p1_geometry_operator_contract,
     periodic_central_derivative,
 )
+from docs.core.core_paths import canonical_artifact_path
 
 
-ARTIFACTS = ROOT / "docs/core/artifacts"
+ARTIFACTS = ROOT / "docs/core/07_artifacts"
 SOURCE = ROOT / "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json"
-MODULE = ROOT / "docs/core/uet_curved_3p1_geometry.py"
+MODULE = ROOT / "docs/core/02_equations/covariant/uet_curved_3p1_geometry.py"
 AUDIT_SCRIPT = Path(__file__).resolve()
-VERIFY = ARTIFACTS / "curved_3p1_geometry_operator_verification.json"
-FORMULA = ARTIFACTS / "curved_3p1_geometry_operator_formula_audit.json"
+VERIFY = canonical_artifact_path("curved_3p1_geometry_operator_verification.json", "verification")
+FORMULA = canonical_artifact_path("curved_3p1_geometry_operator_formula_audit.json", "correspondence")
 
 
 def _sha256(path: Path) -> str:
@@ -266,7 +267,7 @@ def build_artifacts() -> tuple[dict, dict]:
             SOURCE.relative_to(ROOT).as_posix(): _sha256(SOURCE),
         },
         "input_identity": {
-            "module": "docs/core/uet_curved_3p1_geometry.py",
+            "module": "docs/core/02_equations/covariant/uet_curved_3p1_geometry.py",
             "source_record": SOURCE.relative_to(ROOT).as_posix(),
             "analytic_controls": [
                 "periodic Cartesian flat metric",
@@ -325,7 +326,7 @@ def build_artifacts() -> tuple[dict, dict]:
                 "verification_role": "formal/numerical prerequisite",
                 "failure_mode": "index placement or derivative error corrupts every curvature and divergence result",
                 "next_hardening_step": "add non-periodic boundary/multiple-chart implementation only after evolution requirements are defined",
-                "code_path": "docs/core/uet_curved_3p1_geometry.py",
+                "code_path": "docs/core/02_equations/covariant/uet_curved_3p1_geometry.py",
             },
             {
                 "formula_id": "UET-CURVED3P1-RICCI-004",
@@ -341,7 +342,7 @@ def build_artifacts() -> tuple[dict, dict]:
                 "verification_role": "spatial convergence gate",
                 "failure_mode": "incorrect Ricci curvature invalidates the Hamiltonian constraint input",
                 "next_hardening_step": "couple to gauge-declared metric/K evolution and test constraint propagation",
-                "code_path": "docs/core/uet_curved_3p1_geometry.py",
+                "code_path": "docs/core/02_equations/covariant/uet_curved_3p1_geometry.py",
             },
             {
                 "formula_id": "UET-CURVED3P1-MOMENTUM-DIVERGENCE-005",
@@ -357,7 +358,7 @@ def build_artifacts() -> tuple[dict, dict]:
                 "verification_role": "spatial convergence and ADM-input gate",
                 "failure_mode": "connection sign/index drift produces a false momentum-constraint residual",
                 "next_hardening_step": "test propagation under a declared strongly-hyperbolic evolution system",
-                "code_path": "docs/core/uet_curved_3p1_geometry.py",
+                "code_path": "docs/core/02_equations/covariant/uet_curved_3p1_geometry.py",
             },
         ],
         "source": verification["source"],

@@ -18,8 +18,8 @@ from docs.core.uet_o2_ward_constrained_condensed import (
 
 
 ROOT = Path(__file__).resolve().parents[3]
-MODULE_REL = "docs/core/uet_o2_ward_constrained_condensed.py"
-STATIONARITY_REL = "docs/core/uet_o2_finite_temperature_stationarity_scheme.py"
+MODULE_REL = "docs/core/02_equations/o2/uet_o2_ward_constrained_condensed.py"
+STATIONARITY_REL = "docs/core/02_equations/o2/uet_o2_finite_temperature_stationarity_scheme.py"
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_ward_constrained_condensed_audit.json"
 
 TEMPERATURE = 0.25

@@ -1,7 +1,11 @@
 """Alignment tests for the Noether-charge/phase-field state-map wave."""
 
 from __future__ import annotations
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import (
+    canonical_artifact_path,
+    canonical_existing_path,
+    repo_root,
+)
 
 import hashlib
 import inspect
@@ -20,7 +24,6 @@ from docs.core.uet_noether_phase_field_map import (
 from docs.scripts.audit.audit_uet_noether_phase_field_map import build_artifacts
 
 ROOT = repo_root()
-ARTIFACTS = ROOT / "docs/core/artifacts"
 SOURCES = [
     ROOT
     / "docs/data/external/condensed_matter/phase_transitions/cahn_hilliard_1958"
@@ -32,7 +35,7 @@ SOURCES = [
 
 
 def _load(name: str) -> dict:
-    return json.loads((ARTIFACTS / name).read_text(encoding="utf-8"))
+    return json.loads(canonical_artifact_path(name).read_text(encoding="utf-8"))
 
 
 def _sha(path: Path) -> str:
@@ -125,7 +128,7 @@ def test_primary_source_records_keep_narrow_external_roles() -> None:
 def test_artifact_source_hashes_match_current_inputs() -> None:
     artifact = _load("noether_phase_field_state_map_verification.json")
     for relative, expected in artifact["source_hashes"].items():
-        assert _sha(ROOT / relative) == expected
+        assert _sha(canonical_existing_path(ROOT / relative)) == expected
 
 
 def test_generator_reproduces_stable_scientific_payload() -> None:

@@ -75,7 +75,7 @@ def main():
         verification_status="MEASURED_MESH_SEQUENCE",dependency_unlocked=[],full_core_unlock=False,
         open_blockers=["mesh_convergence_and_source_stability","anharmonic_state_and_displacement_mapping","same_state_Fourier_model_transfer"],
         claim_boundary="No clipping negative modes; no direct transfer to Popov potential or UET alpha. RMS fluctuation is not coherent pump amplitude.",
-        evidence_artifacts=[dict(path=str(p.relative_to(ROOT)).replace('\\','/'),sha256=sha256(p.read_bytes()).hexdigest()) for p in list(LOCKS)+[Path(__file__),ROOT/'docs/core/test/test_topic13_interlayer_thermal_variance.py',ROOT/'docs/core/uet_interlayer_mode_residue.py',ROOT/'docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py']])
+        evidence_artifacts=[dict(path=str(p.relative_to(ROOT)).replace('\\','/'),sha256=sha256(p.read_bytes()).hexdigest()) for p in list(LOCKS)+[Path(__file__),ROOT/'docs/core/test/test_topic13_interlayer_thermal_variance.py',ROOT/'docs/core/03_lanes/thermal/uet_interlayer_mode_residue.py',ROOT/'docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py']])
     (ROOT/'docs/core/07_artifacts/topic13/t13_interlayer_thermal_variance_audit.json').write_text(json.dumps(r,indent=2,allow_nan=False)+'\n',encoding='utf-8')
 
 

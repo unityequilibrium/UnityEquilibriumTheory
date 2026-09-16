@@ -18,7 +18,7 @@ from docs.scripts.audit.audit_matter_space_causal_reference import run_reference
 
 DEFAULT_VERIFICATION = ROOT / "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
 CAUSAL_DIAGNOSTIC = ROOT / "docs/core/07_artifacts/archive/matter_space_causal_discretization_diagnostic.json"
-CORE_SOURCE = ROOT / "docs/core/uet_matter_space.py"
+CORE_SOURCE = ROOT / "docs/core/02_equations/matter_space/uet_matter_space.py"
 OUTPUT = ROOT / "docs/core/07_artifacts/archive/causal_discretization_repair_artifact.json"
 REFERENCE_ENERGY = ROOT / "docs/core/07_artifacts/verification/matter_space_causal_reference_energy_verification.json"
 CAUSAL_DISCRETE_GRADIENT = ROOT / "docs/core/07_artifacts/verification/matter_space_causal_discrete_gradient_verification.json"
@@ -96,7 +96,7 @@ def build_artifact() -> dict[str, Any]:
             "rerun the original full-candidate prearrival gate without clipping or cone padding",
         ],
         "evidence_inputs": {
-            "core_source": "docs/core/uet_matter_space.py",
+            "core_source": "docs/core/02_equations/matter_space/uet_matter_space.py",
             "core_source_sha256": sha256(CORE_SOURCE),
             "default_verification": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
             "causal_diagnostic": "docs/core/07_artifacts/archive/matter_space_causal_discretization_diagnostic.json",

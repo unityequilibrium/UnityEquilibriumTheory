@@ -20,9 +20,9 @@ from docs.core.uet_o2_contact_sk_transition_vertex_match import (  # noqa: E402
 
 
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_contact_sk_transition_vertex_match_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_contact_sk_transition_vertex_match.py"
-ACTION = ROOT / "docs/core/uet_o2_interacting_sk_kms_action.py"
-KERNEL = ROOT / "docs/core/uet_o2_action_derived_transition_kernel.py"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_contact_sk_transition_vertex_match.py"
+ACTION = ROOT / "docs/core/02_equations/o2/uet_o2_interacting_sk_kms_action.py"
+KERNEL = ROOT / "docs/core/02_equations/o2/uet_o2_action_derived_transition_kernel.py"
 
 
 def sha256(path: Path) -> str:
@@ -91,9 +91,9 @@ def main() -> int:
             "observable": contract["observable"],
             "data_role": contract["data_role"],
             "evidence_artifacts": [
-                {"path": "docs/core/uet_o2_contact_sk_transition_vertex_match.py", "sha256": sha256(MODULE)},
-                {"path": "docs/core/uet_o2_interacting_sk_kms_action.py", "sha256": sha256(ACTION)},
-                {"path": "docs/core/uet_o2_action_derived_transition_kernel.py", "sha256": sha256(KERNEL)},
+                {"path": "docs/core/02_equations/o2/uet_o2_contact_sk_transition_vertex_match.py", "sha256": sha256(MODULE)},
+                {"path": "docs/core/02_equations/o2/uet_o2_interacting_sk_kms_action.py", "sha256": sha256(ACTION)},
+                {"path": "docs/core/02_equations/o2/uet_o2_action_derived_transition_kernel.py", "sha256": sha256(KERNEL)},
             ],
             "verification_status": status,
             "open_blockers": open_blockers,

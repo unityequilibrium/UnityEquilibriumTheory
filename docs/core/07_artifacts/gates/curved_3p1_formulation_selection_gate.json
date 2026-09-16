@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_formulation_selection_gate",
-  "generated_at": "2026-08-28T15:32:03.440968+00:00",
+  "generated_at": "2026-09-16T08:09:16.297456+00:00",
   "status": "PASS_SELECT_GENERALIZED_HARMONIC_NEXT_BRANCH",
   "evaluated_branch": "fixed_geodesic_gauge_adm",
   "evaluated_branch_result": "REJECTED_STRONG_HYPERBOLICITY",
@@ -26,9 +26,9 @@
     "promoting periodic controls to black-hole or external GR validation"
   ],
   "evidence": [
-    "docs/core/artifacts/curved_3p1_adm_evolution_operator_verification.json",
-    "docs/core/artifacts/curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json",
-    "docs/core/artifacts/curved_3p1_adm_evolution_formula_audit.json"
+    "docs/core/07_artifacts/verification/curved_3p1_adm_evolution_operator_verification.json",
+    "docs/core/07_artifacts/archive/curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json",
+    "docs/core/07_artifacts/correspondence/curved_3p1_adm_evolution_formula_audit.json"
   ],
   "claim_promotion": false
 }

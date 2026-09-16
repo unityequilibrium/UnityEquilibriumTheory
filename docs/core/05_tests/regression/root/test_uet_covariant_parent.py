@@ -1,4 +1,4 @@
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import canonical_artifact_path, repo_root
 import json
 from pathlib import Path
 
@@ -19,9 +19,6 @@ from docs.core.uet_covariant_response import CovariantResponseConfig
 
 
 ROOT = repo_root()
-ARTIFACTS = ROOT / "docs/core/artifacts"
-
-
 def _sample(epsilon_nc: float):
     response = CovariantResponseConfig(
         epsilon_nc=epsilon_nc,
@@ -89,15 +86,19 @@ def test_parent_contract_excludes_trace_dissipation_and_metric_solver():
 
 def test_generated_parent_gate_is_scoped_and_registered():
     gate = json.loads(
-        (ARTIFACTS / "uet_main_theory_wave2_gate.json").read_text(encoding="utf-8")
+        canonical_artifact_path("uet_main_theory_wave2_gate.json").read_text(
+            encoding="utf-8"
+        )
     )
     verification = json.loads(
-        (ARTIFACTS / "covariant_parent_verification.json").read_text(
+        canonical_artifact_path("covariant_parent_verification.json").read_text(
             encoding="utf-8"
         )
     )
     registry = json.loads(
-        (ARTIFACTS / "uet_equation_correspondence_registry.json").read_text(
+        canonical_artifact_path(
+            "uet_equation_correspondence_registry.json"
+        ).read_text(
             encoding="utf-8"
         )
     )

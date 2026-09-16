@@ -12,10 +12,10 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
 CORE = ROOT / "docs" / "core"
-ARTIFACTS = CORE / "artifacts"
-CONTRACT_PATH = ARTIFACTS / "uet_core_equation_family_contract.json"
-CODE_INVENTORY_PATH = ARTIFACTS / "uet_code_surface_inventory.json"
-MANIFEST_PATH = ARTIFACTS / "uet_core_file_manifest.json"
+ARTIFACTS = CORE / "07_artifacts"
+CONTRACT_PATH = ARTIFACTS / "archive" / "uet_core_equation_family_contract.json"
+CODE_INVENTORY_PATH = ARTIFACTS / "archive" / "uet_code_surface_inventory.json"
+MANIFEST_PATH = ARTIFACTS / "provenance" / "uet_core_file_manifest.json"
 INDEX_PATH = CORE / "CORE_FILE_INDEX.md"
 
 
@@ -294,40 +294,15 @@ def write_index(manifest: dict[str, Any]) -> None:
 
 
 def build() -> dict[str, Any]:
-    families, unlinked, parse_errors = family_maps()
-    paths = sorted(
-        path
-        for path in CORE.rglob("*")
-        if path.is_file() and "__pycache__" not in path.parts and path.suffix.lower() != ".pyc"
-    )
-    records = [classify(path, families, unlinked) for path in paths]
-    counts = Counter(record["file_kind"] for record in records)
-    area_counts = Counter(record["logical_area"] for record in records)
-    review_count = sum(record["registry_link_status"] == "REVIEW_REQUIRED" for record in records)
-    manifest = {
-        "schema_version": "1.0",
-        "artifact": "uet_core_file_manifest",
-        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "generator": repo_path(Path(__file__)),
-        "status": "PASS_WITH_REVIEW_REQUIRED" if review_count else "PASS",
-        "controlling_blocker": "unlinked_or_ambiguous_core_paths_require_family_assignment_or_quarantine" if review_count else None,
-        "scope": "docs/core files excluding __pycache__ and .pyc",
-        "source_artifacts": [repo_path(CONTRACT_PATH), repo_path(CODE_INVENTORY_PATH)],
-        "counts": dict(sorted(counts.items())),
-        "logical_area_counts": dict(sorted(area_counts.items())),
-        "review_required_count": review_count,
-        "source_artifact_parse_errors": parse_errors,
-        "files": records,
-        "rules": [
-            "classification does not promote a physical claim",
-            "unlinked or ambiguous paths remain review-required",
-            "physical moves require import/link and targeted-test gates",
-            "generated artifacts must be rebuilt by their generator",
-        ],
-    }
-    MANIFEST_PATH.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    write_index(manifest)
-    return manifest
+    source = ROOT / "docs" / "scripts" / "audit" / "reconcile_uet_core_registry_v4.py"
+    spec = __import__("importlib.util").util.spec_from_file_location("uet_core_registry_reconcile", source)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"cannot load canonical generator: {source}")
+    module = __import__("importlib.util").util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    outputs = module.build()
+    module.write_outputs(outputs)
+    return outputs["manifest"]
 
 
 if __name__ == "__main__":

@@ -3,10 +3,14 @@
   "registry_id": "UET-RESEARCH-ORGANIZATION",
   "status": "ACTIVE",
   "scope": "docs/core organization, ownership, room routing, and migration only",
+  "canonical_path_authority": "docs/core/core_paths.py",
+  "canonical_registry_path": "docs/core/07_artifacts/gates/uet_research_organization_registry.json",
+  "canonical_manifest_path": "docs/core/07_artifacts/provenance/uet_core_file_manifest.json",
+  "canonical_dependency_graph_path": "docs/core/07_artifacts/gates/uet_core_dependency_graph.json",
   "scientific_status_authority": [
-    "docs/core/artifacts/uet_foundation_dependency_gate.json",
-    "docs/core/artifacts/uet_equation_correspondence_registry.json",
-    "docs/core/artifacts/uet_foundation_equation_inventory.json"
+    "docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
+    "docs/core/07_artifacts/gates/uet_foundation_equation_inventory.json"
   ],
   "owners": [
     {

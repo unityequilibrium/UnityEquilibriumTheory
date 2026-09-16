@@ -26,10 +26,10 @@ from docs.core.uet_o2_action_1pi_sunset_retarded import (  # noqa: E402
 
 
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_action_1pi_sunset_retarded_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_action_1pi_sunset_retarded.py"
-EUCLIDEAN_MODULE = ROOT / "docs/core/uet_o2_action_1pi_sunset_euclidean.py"
-TENSOR_MODULE = ROOT / "docs/core/uet_o2_action_1pi_sunset_tensor.py"
-ZERO_ETA_MODULE = ROOT / "docs/core/uet_o2_action_sunset_zero_eta.py"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_action_1pi_sunset_retarded.py"
+EUCLIDEAN_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_action_1pi_sunset_euclidean.py"
+TENSOR_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_action_1pi_sunset_tensor.py"
+ZERO_ETA_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_action_sunset_zero_eta.py"
 
 
 def sha256(path: Path) -> str:
@@ -136,10 +136,10 @@ def main() -> int:
         "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
     ]
     evidence = [
-        {"path": "docs/core/uet_o2_action_1pi_sunset_retarded.py", "sha256": sha256(MODULE)},
-        {"path": "docs/core/uet_o2_action_1pi_sunset_euclidean.py", "sha256": sha256(EUCLIDEAN_MODULE)},
-        {"path": "docs/core/uet_o2_action_1pi_sunset_tensor.py", "sha256": sha256(TENSOR_MODULE)},
-        {"path": "docs/core/uet_o2_action_sunset_zero_eta.py", "sha256": sha256(ZERO_ETA_MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_action_1pi_sunset_retarded.py", "sha256": sha256(MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_action_1pi_sunset_euclidean.py", "sha256": sha256(EUCLIDEAN_MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_action_1pi_sunset_tensor.py", "sha256": sha256(TENSOR_MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_action_sunset_zero_eta.py", "sha256": sha256(ZERO_ETA_MODULE)},
     ]
     closure_level = "CLOSED_FOR_LANE" if not failed else "OPEN"
     artifact = {

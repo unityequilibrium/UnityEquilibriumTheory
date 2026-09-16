@@ -19,8 +19,8 @@ from docs.core.uet_o2_one_loop_normal_branch import uet_o2_one_loop_normal_state
 
 
 ROOT = Path(__file__).resolve().parents[3]
-MODULE_REL = "docs/core/uet_o2_one_loop_normal_branch.py"
-COMPARATOR_REL = "docs/core/standard_o2_finite_temperature_comparator.py"
+MODULE_REL = "docs/core/02_equations/o2/uet_o2_one_loop_normal_branch.py"
+COMPARATOR_REL = "docs/core/02_equations/o2/standard_o2_finite_temperature_comparator.py"
 BRANCH_AUDIT_REL = "docs/core/07_artifacts/topic13/t13_uet_o2_one_loop_normal_branch_audit.json"
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_one_loop_convergence_audit.json"
 

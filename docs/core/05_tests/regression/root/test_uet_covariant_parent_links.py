@@ -1,18 +1,15 @@
 """Regression checks for the bounded covariant-parent scientific-link package."""
 
 from __future__ import annotations
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import canonical_artifact_path, repo_root
 
 import json
 from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACTS = ROOT / "docs" / "core" / "artifacts"
-
-
 def load_json(name: str) -> dict:
-    return json.loads((ARTIFACTS / name).read_text(encoding="utf-8"))
+    return json.loads(canonical_artifact_path(name).read_text(encoding="utf-8"))
 
 
 def test_covariant_parent_family_has_explicit_scientific_chain() -> None:
@@ -23,7 +20,9 @@ def test_covariant_parent_family_has_explicit_scientific_chain() -> None:
         if item["family_id"] == "core.covariant_parent"
     )
 
-    assert family["module_paths"] == ["docs/core/uet_covariant_parent.py"]
+    assert family["module_paths"] == [
+        "docs/core/02_equations/covariant/uet_covariant_parent.py"
+    ]
     assert family["unit_lane"] == "natural_only_v1"
     assert family["formula_ids"] == ["uet.main_theory.covariant_parent"]
     assert all((ROOT / path).exists() for path in family["verifier_paths"])
@@ -38,10 +37,11 @@ def test_covariant_parent_record_materializes_links_without_promotion() -> None:
         item
         for item in registry["files"]
         if item.get("equation_family_or_lane") == "core.covariant_parent"
+        and item.get("current_path") == item.get("canonical_path")
     ]
 
     assert {item["path"] for item in records} == {
-        "docs/core/uet_covariant_parent.py"
+        "docs/core/02_equations/covariant/uet_covariant_parent.py"
     }
     record = records[0]
     assert record["formula_ids"] == ["uet.main_theory.covariant_parent"]
@@ -50,8 +50,8 @@ def test_covariant_parent_record_materializes_links_without_promotion() -> None:
     assert record["artifact_paths"]
     assert record["claim_ceiling"]
     assert record["evidence_status"] == "BLOCKED"
-    assert record["organization_disposition"] == "W2-EQUATION-COVARIANT-PARENT"
-    assert record["registry_link_status"] == "ORGANIZATION_POLICY_ASSIGNED"
+    assert record["organization_status"] == "MIGRATED"
+    assert record["registry_link_status"] == "CANONICAL_PATH"
 
 
 def test_covariant_parent_family_points_to_the_central_record() -> None:

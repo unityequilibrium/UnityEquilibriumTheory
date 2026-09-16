@@ -79,10 +79,10 @@ def main() -> int:
         "observable": contract["observable"],
         "data_role": contract["data_role"],
         "evidence_artifacts": [
-            evidence("docs/core/uet_o2_microscopic_kubo_match.py", {"role": "matching implementation"}),
-            evidence("docs/core/uet_o2_continuum_collision_operator.py", {"role": "finite-cutoff conservative operator"}),
-            evidence("docs/core/uet_o2_contact_sk_transition_vertex_match.py", {"role": "contact-SK normalization"}),
-            evidence("docs/core/uet_o2_charged_current_correlator.py", {"role": "retarded charged-current interface"}),
+            evidence("docs/core/02_equations/o2/uet_o2_microscopic_kubo_match.py", {"role": "matching implementation"}),
+            evidence("docs/core/02_equations/o2/uet_o2_continuum_collision_operator.py", {"role": "finite-cutoff conservative operator"}),
+            evidence("docs/core/02_equations/o2/uet_o2_contact_sk_transition_vertex_match.py", {"role": "contact-SK normalization"}),
+            evidence("docs/core/02_equations/o2/uet_o2_charged_current_correlator.py", {"role": "retarded charged-current interface"}),
         ],
         "verification_status": status,
         "open_blockers": [

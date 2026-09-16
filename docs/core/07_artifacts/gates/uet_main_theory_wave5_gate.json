@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_main_theory_wave5_gate",
-  "generated_at": "2026-08-29T04:54:26.860863+00:00",
+  "generated_at": "2026-09-16T08:45:58.181105+00:00",
   "audit_status": "PASS",
   "theory_spine_status": "PASS_MINKOWSKI_1P1_CONTROL_CURVED_BLOCKED",
   "upstream_gate": "uet_main_theory_wave4_gate.json",
@@ -15,11 +15,11 @@
     "fixed_background_disclosed": true,
     "curved_claim_blocked": true
   },
-  "controlling_blocker": "curved_3p1_constraint_preserving_boundaries_and_topic13_stress_energy_wiring_missing",
+  "controlling_blocker": "curved_3p1_constraint_preserving_boundaries_and_dimensional_observable_mapping_missing",
   "claim_promotion": false,
   "curved_3p1_companion_progress": {
     "parent_gate": "core_curved_3p1_parent_gate.json",
-    "parent_status": "PARTIAL_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY",
+    "parent_status": "PARTIAL_CURVED_3P1_GH_PERIODIC_PRESCRIBED_MATTER_READY",
     "parent_closure_level": "PARTIAL",
     "adm_constraint_interface": "PASS",
     "metric_to_ricci_operator": "PASS",

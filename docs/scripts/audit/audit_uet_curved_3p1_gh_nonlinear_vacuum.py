@@ -23,16 +23,17 @@ from docs.core.uet_curved_3p1_generalized_harmonic import (
     gh_gamma0_damping_term,
     gh_gauge_constraint,
 )
+from docs.core.core_paths import canonical_artifact_path
 
 
-ARTIFACTS = ROOT / "docs/core/artifacts"
+ARTIFACTS = ROOT / "docs/core/07_artifacts"
 SOURCE = ROOT / "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json"
-MODULE = ROOT / "docs/core/uet_curved_3p1_generalized_harmonic.py"
+MODULE = ROOT / "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"
 AUDIT = ROOT / "docs/scripts/audit/audit_uet_curved_3p1_gh_nonlinear_vacuum.py"
-PRINCIPAL = ARTIFACTS / "curved_3p1_gh_principal_system_verification.json"
-VERIFY = ARTIFACTS / "curved_3p1_gh_nonlinear_vacuum_rhs_verification.json"
-FORMULA = ARTIFACTS / "curved_3p1_gh_nonlinear_vacuum_formula_audit.json"
-GATE = ARTIFACTS / "curved_3p1_gh_nonlinear_vacuum_gate.json"
+PRINCIPAL = canonical_artifact_path("curved_3p1_gh_principal_system_verification.json", "verification")
+VERIFY = canonical_artifact_path("curved_3p1_gh_nonlinear_vacuum_rhs_verification.json", "verification")
+FORMULA = canonical_artifact_path("curved_3p1_gh_nonlinear_vacuum_formula_audit.json", "correspondence")
+GATE = canonical_artifact_path("curved_3p1_gh_nonlinear_vacuum_gate.json", "gates")
 
 
 def _sha256(path: Path) -> str:

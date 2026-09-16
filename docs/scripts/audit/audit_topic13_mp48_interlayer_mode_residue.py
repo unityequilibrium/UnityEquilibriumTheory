@@ -93,7 +93,7 @@ def main():
         'predeclared_pair_weight': min(min(r['principal_weights']) for r in rows) >= .98,
         'predeclared_isolation': min(r['isolation_THz'] for r in rows) >= 1e-5,
     }
-    evidence = list(LOCKS)+[Path(__file__), ROOT/'docs/core/uet_interlayer_mode_residue.py',
+    evidence = list(LOCKS)+[Path(__file__), ROOT/'docs/core/03_lanes/thermal/uet_interlayer_mode_residue.py',
         ROOT/'docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py']
     artifact = dict(
         major_result_id='T13_MP48_INTERLAYER_MODE_SHAPE_AND_MATERIAL_RESIDUE',

@@ -34,7 +34,7 @@ def test_action_route_is_exposed_as_lane_only() -> None:
     assert full["claim_promotion"] is False
     assert "system_specific_SI_contract_missing" not in full["major_result"]["what_remains_open"]
     assert "covariant_Phi_to_normalized_Phi_map_missing" not in full["major_result"]["what_remains_open"]
-    assert "Ding numeric C_src(T)" in full["next_action"]
+    assert "base Phi-to-Delta_u_ph correspondence" in full["next_action"]
     assert "system_specific_SI_contract_missing" in route["open_blockers"]
 
 

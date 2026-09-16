@@ -96,7 +96,7 @@ declare at least:
 4. the observable operator for the measured curve;
 5. uncertainty, parameter lock, and holdout policy.
 
-Implementation: [mass_density_correspondence.py](../mass_density_correspondence.py)
+Implementation: [mass_density_correspondence.py](../03_lanes/mass_density/mass_density_correspondence.py)
 
 Audit: `docs/scripts/audit/audit_mass_density_correspondence.py`
 

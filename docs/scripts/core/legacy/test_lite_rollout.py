@@ -38,7 +38,7 @@ project_root = str(_UET_REPO_ROOT)
 if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
-from docs.core.uet_lite_engine import UETLiteEngine
+from docs.scripts.core.runners.uet_lite_engine import UETLiteEngine
 import importlib.util
 
 

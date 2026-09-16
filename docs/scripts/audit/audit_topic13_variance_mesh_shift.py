@@ -75,7 +75,7 @@ def main():
     paths = list(LOCKS)+[Path(__file__), ROOT/'docs/core/test/test_topic13_variance_mesh_shift.py',
         ROOT/'docs/scripts/audit/audit_topic13_thermal_variance_spectrum.py',
         ROOT/'docs/scripts/audit/audit_topic13_interlayer_thermal_variance.py',
-        ROOT/'docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py', ROOT/'docs/core/uet_interlayer_mode_residue.py']
+        ROOT/'docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py', ROOT/'docs/core/03_lanes/thermal/uet_interlayer_mode_residue.py']
     artifact = dict(major_result_id='T13_VARIANCE_SHIFT_SENSITIVITY', topic='0.13', closure_level='PARTIAL',
         what_is_closed='Fixed grid-shift sensitivity measurement at300K, not convergence',
         equation_or_mapping='Equal-weight BZ quadrature of the existing source-model local covariance trace',

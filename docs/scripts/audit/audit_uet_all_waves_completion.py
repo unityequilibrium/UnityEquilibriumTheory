@@ -19,11 +19,15 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from docs.core.core_paths import canonical_existing_path  # noqa: E402
 CLOSURE = ROOT / "docs/core/07_artifacts/gates/uet_all_waves_closure.json"
 FOUNDATION = ROOT / "docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json"
-CLOSURE_LOG = ROOT / "docs/core/UET_ALL_WAVES_CLOSURE_UPDATE_LOG.md"
-REPORT = ROOT / "docs/core/UET_FOUNDATION_RESEARCH_PROGRAM_REPORT.md"
-WAVE_LOG = ROOT / "docs/core/UET_WAVE3_WAVE10_UPDATE_LOG.md"
+CLOSURE_LOG = canonical_existing_path(ROOT / "docs/core/08_history/update_logs/UET_ALL_WAVES_CLOSURE_UPDATE_LOG.md")
+REPORT = canonical_existing_path(ROOT / "docs/core/08_history/research_notes/UET_FOUNDATION_RESEARCH_PROGRAM_REPORT.md")
+WAVE_LOG = canonical_existing_path(ROOT / "docs/core/08_history/update_logs/UET_WAVE3_WAVE10_UPDATE_LOG.md")
 WORK_LEDGER = ROOT / "WORK_LEDGER/2026/2026-08-08.md"
 OUTPUT = ROOT / "docs/core/07_artifacts/verification/uet_all_waves_completion_audit.json"
 CORE_REGRESSION_TIMEOUT_SECONDS = 300
@@ -112,7 +116,7 @@ def evidence_audit(waves: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], b
 
 
 def run_core_regression() -> dict[str, Any]:
-    command = [sys.executable, "-m", "pytest", "-q", "docs/core/test"]
+    command = [sys.executable, "-m", "pytest", "-q", "docs/core/05_tests"]
     try:
         result = subprocess.run(
             command,

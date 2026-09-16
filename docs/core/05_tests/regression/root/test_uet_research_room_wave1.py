@@ -1,7 +1,7 @@
 """Focused contract tests for the UET Wave 1 research-room checkpoint."""
 
 from __future__ import annotations
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import canonical_artifact_path, repo_root
 
 import json
 from pathlib import Path
@@ -11,6 +11,12 @@ ROOT = (repo_root() / "docs")
 
 
 def read_json(relative: str) -> dict:
+    if relative.startswith("core/artifacts/"):
+        return json.loads(
+            canonical_artifact_path(relative.split("/")[-1]).read_text(
+                encoding="utf-8-sig"
+            )
+        )
     return json.loads((ROOT / relative).read_text(encoding="utf-8-sig"))
 
 

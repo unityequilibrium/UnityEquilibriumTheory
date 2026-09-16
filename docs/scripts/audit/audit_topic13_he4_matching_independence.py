@@ -37,7 +37,7 @@ def main():
         probes.append(dict(synthetic_natural_alpha_factor=factor,rematched_Z=m['Z'],
             alpha_after_rematching=m['reconstructed_alpha'],
             alpha_if_Z_frozen=theta*factor*nat/base['Z']))
-    files=list(paths.values())+[ROOT/'docs/core/he4_o2_response_calibration.py',Path(__file__),ROOT/'docs/core/test/test_topic13_he4_matching_independence.py']
+    files=list(paths.values())+[ROOT/'docs/core/03_lanes/thermal/he4_o2_response_calibration.py',Path(__file__),ROOT/'docs/core/test/test_topic13_he4_matching_independence.py']
     result=dict(major_result_id='T13_HE4_MATCHING_INDEPENDENCE_BOUNDARY',topic='0.13',closure_level='PARTIAL',
         what_is_closed=['Existing Z matching identity reconstructed; its alpha agreement is algebraic by construction, not an independent physical test'],
         equation_or_mapping='Z = theta_T * alpha_natural / alpha_external; theta_T * alpha_natural / Z = alpha_external',

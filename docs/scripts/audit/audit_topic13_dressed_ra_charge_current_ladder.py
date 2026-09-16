@@ -144,7 +144,7 @@ def main() -> int:
     convergence = convergence_witnesses()
     contract = dressed_ra_charge_current_ladder_contract()
     source_text = (
-        ROOT / "docs/core/uet_o2_dressed_ra_charge_current_ladder.py"
+        ROOT / "docs/core/02_equations/o2/uet_o2_dressed_ra_charge_current_ladder.py"
     ).read_text(encoding="utf-8")
     radial_max = max(convergence["radial_last_relative_differences"].values())
     angular_max = max(convergence["angular_last_relative_differences"].values())
@@ -194,9 +194,9 @@ def main() -> int:
         else "WARN_DRESSED_RA_CHARGE_CURRENT_LADDER"
     )
     paths = [
-        "docs/core/uet_o2_dressed_ra_charge_current_ladder.py",
-        "docs/core/uet_o2_same_kernel_tagged_width.py",
-        "docs/core/uet_o2_invariant_vector_current_galerkin.py",
+        "docs/core/02_equations/o2/uet_o2_dressed_ra_charge_current_ladder.py",
+        "docs/core/02_equations/o2/uet_o2_same_kernel_tagged_width.py",
+        "docs/core/02_equations/o2/uet_o2_invariant_vector_current_galerkin.py",
         "docs/core/test/test_topic13_dressed_ra_charge_current_ladder.py",
         "docs/scripts/audit/audit_topic13_dressed_ra_charge_current_ladder.py",
     ]

@@ -1,19 +1,14 @@
 """Regression tests for the Topic 13 dimensional scale-dependency no-go."""
 
 from __future__ import annotations
-from docs.core.core_paths import core_root, repo_root
+from importlib import import_module
 
-import sys
-from pathlib import Path
-
+from docs.core.core_paths import repo_root
 
 ROOT = repo_root()
-sys.path.insert(0, str(core_root()))
-
-from t13_thermal_bridge_scale_dependency import (  # noqa: E402
-    build_scale_dependency_witness,
-    scale_dependency_contract,
-)
+_module = import_module("docs.core.03_lanes.topic13_support.t13_thermal_bridge_scale_dependency")
+build_scale_dependency_witness = _module.build_scale_dependency_witness
+scale_dependency_contract = _module.scale_dependency_contract
 
 
 def test_field_rescaling_witness_preserves_declared_action_terms() -> None:

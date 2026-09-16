@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_main_theory_ontology_gate",
-  "generated_at": "2026-08-09",
+  "generated_at": "2026-09-16",
   "audit_status": "PASS",
   "ontology_status": "PASS_CONTRACT_ONLY",
   "checks": {

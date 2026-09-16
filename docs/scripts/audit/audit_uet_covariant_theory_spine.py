@@ -17,9 +17,12 @@ from docs.core.uet_covariant_theory_spine import (
     Covariant3p1State, TheorySpineConfig, characteristic_analysis,
     recommended_max_dt, theory_spine_contract, theory_spine_step,
 )
+from docs.core.core_paths import CANONICAL_ARTIFACT_ROOT, canonical_artifact_path
 
-ARTIFACTS = ROOT / "docs/core/artifacts"
-CURVED_PARENT_GATE = ARTIFACTS / "core_curved_3p1_parent_gate.json"
+ARTIFACTS = CANONICAL_ARTIFACT_ROOT
+CURVED_PARENT_GATE = canonical_artifact_path(
+    "core_curved_3p1_parent_gate.json", "gates"
+)
 
 
 def _config(damping: bool = True) -> TheorySpineConfig:
@@ -100,8 +103,8 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
         "schema_version": "1.0", "artifact": "covariant_theory_spine_formula_audit",
         "generated_at": now, "status": "WARN",
         "relations": [
-            {"formula_id": "UET-SPINE-FIRST-ORDER-001", "relation": "d_t phi=pi; d_t pi=c^2 d_x psi-gamma pi+J; d_t psi=d_x pi", "derivation_class": "first-order reduction of damped wave control", "unit_lane": "natural", "proof_status": "linear characteristic and convergence gates pass", "code_path": "docs/core/uet_covariant_theory_spine.py"},
-            {"formula_id": "UET-SPINE-CONSTRAINT-002", "relation": "C_psi=psi-d_x phi", "derivation_class": "first-order auxiliary constraint", "unit_lane": "natural", "proof_status": "periodic one-step preservation gate", "code_path": "docs/core/uet_covariant_theory_spine.py"},
+            {"formula_id": "UET-SPINE-FIRST-ORDER-001", "relation": "d_t phi=pi; d_t pi=c^2 d_x psi-gamma pi+J; d_t psi=d_x pi", "derivation_class": "first-order reduction of damped wave control", "unit_lane": "natural", "proof_status": "linear characteristic and convergence gates pass", "code_path": "docs/core/02_equations/covariant/uet_covariant_theory_spine.py"},
+            {"formula_id": "UET-SPINE-CONSTRAINT-002", "relation": "C_psi=psi-d_x phi", "derivation_class": "first-order auxiliary constraint", "unit_lane": "natural", "proof_status": "periodic one-step preservation gate", "code_path": "docs/core/02_equations/covariant/uet_covariant_theory_spine.py"},
         ],
         "open_items": ["gauge-declared lapse/shift evolution", "dynamical spatial metric and extrinsic curvature", "strong-hyperbolicity proof for the curved evolution system", "constraint propagation/damping", "temporal convergence", "non-periodic curved boundary conditions", "parent-action coefficient matching"],
         "claim_ceiling": "Minkowski 1+1 strongly-hyperbolic numerical control",
@@ -131,7 +134,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
         "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json", "status": "CANDIDATE_ENTRY_PENDING_MERGE",
         "equation_entries": [{
             "equation_id": "uet.main_theory.hyperbolic_spine_control", "version": "minkowski-1p1-spine-v1",
-            "classification": "numerical_implementation", "relation_or_code_path": "docs/core/uet_covariant_theory_spine.py",
+            "classification": "numerical_implementation", "relation_or_code_path": "docs/core/02_equations/covariant/uet_covariant_theory_spine.py",
             "variables": {"phi": "sector coordinate", "pi": "time derivative", "psi": "declared spatial derivative", "c": "characteristic speed"},
             "mathematical_role": "first-order strongly-hyperbolic fixed-background control",
             "standard_physics_counterpart": "first-order reduction of damped relativistic wave/telegraph sectors",
@@ -141,7 +144,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
             "assumptions": ["fixed Minkowski 1+1", "periodic boundary", "linear principal part", "subluminal declared speeds"],
             "symmetry_and_conservation": "periodic gradient constraint and damped energy ledger; no GR constraints",
             "limiting_cases": ["zero damping gives wave control", "zero fields are exact fixed point"],
-            "implementation_paths": ["docs/core/uet_covariant_theory_spine.py"],
+            "implementation_paths": ["docs/core/02_equations/covariant/uet_covariant_theory_spine.py"],
             "verifier_paths": ["docs/scripts/audit/audit_uet_covariant_theory_spine.py", "docs/core/07_artifacts/verification/covariant_theory_spine_verification.json", "docs/core/test/test_uet_covariant_theory_spine.py"],
             "evidence_class": "INTERNAL_NUMERICAL", "proof_status": "linear fixed-background hyperbolicity and convergence pass; curved 3+1 blocked",
             "downstream_dependencies": ["uet.main_theory.covariant_parent", "uet.main_theory.open_system", "uet.main_theory.gravity"],
@@ -157,7 +160,9 @@ def main() -> int:
     names = ("covariant_theory_spine_verification.json", "covariant_theory_spine_formula_audit.json", "uet_main_theory_wave5_gate.json", "uet_equation_correspondence_registry_theory_spine_addendum.json")
     outputs = dict(zip(names, build_artifacts()))
     for name, payload in outputs.items():
-        (ARTIFACTS / name).write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        path = canonical_artifact_path(name)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     gate = outputs["uet_main_theory_wave5_gate.json"]
     print(f"audit_status={gate['audit_status']}")
     print(f"theory_spine_status={gate['theory_spine_status']}")

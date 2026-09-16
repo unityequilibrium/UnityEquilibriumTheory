@@ -175,7 +175,7 @@ def main() -> int:
         "independent_SI_alpha_record_missing",
     ]
     source_paths = [
-        "docs/core/uet_scalar_thermoelastic_response_bridge.py",
+        "docs/core/03_lanes/thermal/uet_scalar_thermoelastic_response_bridge.py",
         "docs/core/test/test_topic13_scalar_thermoelastic_response_bridge.py",
         "docs/scripts/audit/audit_topic13_scalar_thermoelastic_response_bridge.py",
     ]

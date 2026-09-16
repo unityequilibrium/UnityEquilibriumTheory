@@ -1,7 +1,7 @@
 """Regression tests for the focused cross-topic correspondence matrix."""
 
 from __future__ import annotations
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import canonical_artifact_path, repo_root
 
 import importlib.util
 from pathlib import Path
@@ -34,7 +34,11 @@ def test_matrix_keeps_standard_baseline_open_bridge_and_conflict_distinct():
 
 def test_foundation_gate_preserves_normalized_subgates_without_physical_promotion():
     import json
-    gate = json.loads((ROOT / "core/artifacts/uet_foundation_dependency_gate.json").read_text(encoding="utf-8"))
+    gate = json.loads(
+        canonical_artifact_path("uet_foundation_dependency_gate.json").read_text(
+            encoding="utf-8"
+        )
+    )
     assert gate["gates"]["F3_units"]["status"] == "BLOCKED"
     assert gate["gates"]["F3_units"]["normalized_subgate"]["status"] == "PASS_NORMALIZED_OR_NATURAL_ONLY"
     assert gate["gates"]["F7_observable_mapping"]["status"] == "BLOCKED"

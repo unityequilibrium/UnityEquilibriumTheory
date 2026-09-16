@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "legacy_covariance_alignment_gate",
-  "generated_at": "2026-09-14T19:39:18.291884+00:00",
+  "generated_at": "2026-09-16T10:00:33.519726+00:00",
   "audit_status": "PASS",
   "evidence_status": "BLOCKED",
   "claim_class": "LEGACY_EXPLORATORY_DIAGNOSTIC",

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "covariant_matter_formula_audit",
-  "generated_at": "2026-07-22T13:43:39.341257+00:00",
+  "generated_at": "2026-09-16T10:00:23.482426+00:00",
   "status": "WARN",
   "implementation_status": "PRESENT",
   "derivation_status": "candidate conservative scalar-matter ansatz",
@@ -83,8 +83,8 @@
   "downstream_diffusion_status": "PASS",
   "downstream_diffusion_evidence": "PARTIAL",
   "source_hashes": {
-    "docs\\core\\uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
-    "docs\\core\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "7762422a01348233ecbd532d166be6cc675ac94b8a11b1f960fd0fe0527a0ddb"
+    "docs\\core\\02_equations\\covariant\\uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+    "docs\\core\\01_contracts\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "1609cfdada2ad9e67ebcb8e9ae53f2f3f035fdc70469424e486eb3f7e53c1f86"
   },
   "downstream_hyperbolic_phase_field": {
     "artifact": "hyperbolic_phase_field_external_comparator_verification.json",
