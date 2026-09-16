@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from docs.core.core_paths import canonical_existing_path  # noqa: E402
+from docs.core.core_paths import canonical_artifact_path, canonical_existing_path  # noqa: E402
 QUANTUM_INTERPRETATIONS_SOURCE = canonical_existing_path(ROOT / ("docs/core/" + "uet_quantum_interpretations.py")).relative_to(ROOT).as_posix()
 
 from docs.core.uet_quantum_interpretations import (
@@ -21,7 +21,7 @@ from docs.core.uet_quantum_interpretations import (
 )
 from docs.core.uet_quantum_measurement import DensityOperator, POVMRecord
 
-ARTIFACTS = ROOT / "docs/core/artifacts"
+ARTIFACTS = ROOT / "docs/core/07_artifacts"
 
 
 def build_artifacts() -> tuple[dict, dict, dict]:
@@ -96,7 +96,9 @@ def main() -> int:
     names = ("quantum_interpretation_invariance_verification.json", "uet_main_theory_wave7_gate.json", "uet_equation_correspondence_registry_quantum_interpretations_addendum.json")
     outputs = dict(zip(names, build_artifacts()))
     for name, payload in outputs.items():
-        (ARTIFACTS / name).write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        canonical_artifact_path(name).write_text(
+            json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        )
     gate = outputs["uet_main_theory_wave7_gate.json"]
     print(f"audit_status={gate['audit_status']}")
     print(f"interpretation_status={gate['interpretation_status']}")

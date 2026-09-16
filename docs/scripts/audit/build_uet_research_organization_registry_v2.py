@@ -19,14 +19,14 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
 CORE = ROOT / "docs" / "core"
-ARTIFACTS = CORE / "artifacts"
+ARTIFACTS = CORE / "07_artifacts"
 POLICY_PATH = CORE / "00_governance" / "uet_research_organization_policy.json"
-MANIFEST_PATH = ARTIFACTS / "uet_core_file_manifest.json"
-CONTRACT_PATH = ARTIFACTS / "uet_core_equation_family_contract.json"
-GATE_PATH = ARTIFACTS / "uet_foundation_dependency_gate.json"
-REGISTRY_PATH = ARTIFACTS / "uet_research_organization_registry.json"
-MIGRATION_PATH = ARTIFACTS / "uet_core_file_migration_map.json"
-AUDIT_PATH = ARTIFACTS / "uet_core_organization_audit.json"
+MANIFEST_PATH = ARTIFACTS / "provenance" / "uet_core_file_manifest.json"
+CONTRACT_PATH = ARTIFACTS / "archive" / "uet_core_equation_family_contract.json"
+GATE_PATH = ARTIFACTS / "gates" / "uet_foundation_dependency_gate.json"
+REGISTRY_PATH = ARTIFACTS / "gates" / "uet_research_organization_registry.json"
+MIGRATION_PATH = ARTIFACTS / "archive" / "uet_core_file_migration_map.json"
+AUDIT_PATH = ARTIFACTS / "gates" / "uet_core_organization_audit.json"
 INDEX_PATH = CORE / "00_governance" / "CORE_RESEARCH_ORGANIZATION_INDEX.md"
 GENERATOR_ID = "docs/scripts/audit/build_uet_research_organization_registry_v2.py"
 DISPOSITION_SOURCE = "docs/core/00_governance/uet_research_organization_policy.json"
@@ -337,16 +337,15 @@ def canonical_index(value: str) -> str:
 
 
 def build() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any], str]:
-    builder = load_builder()
-    policy = load_json(POLICY_PATH)
-    manifest = normalize_manifest(load_json(MANIFEST_PATH))
-    contract = load_json(CONTRACT_PATH)
-    gate = load_json(GATE_PATH)
-    registry, migration, audit, index = builder.build_registry(policy, manifest, contract, gate)
-    apply_review_dispositions(registry, migration, audit, policy, builder)
-    refresh_status(registry, migration, audit)
-    index = render_index(registry, audit)
-    return registry, migration, audit, index
+    source = ROOT / "docs" / "scripts" / "audit" / "reconcile_uet_core_registry_v4.py"
+    spec = importlib.util.spec_from_file_location("uet_core_registry_reconcile", source)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"cannot load canonical generator: {source}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    outputs = module.build()
+    module.write_outputs(outputs)
+    return outputs["registry"], outputs["migration"], outputs["audit"], outputs["organization_index"]
 
 
 def write_json(path: Path, payload: dict[str, Any]) -> None:

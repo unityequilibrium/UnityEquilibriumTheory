@@ -14,9 +14,16 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
+import sys
+
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
-OUTPUT_PATH = REPO_ROOT / "docs" / "core" / "artifacts" / "matter_space_research_program_gate.json"
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from docs.core.core_paths import canonical_artifact_path  # noqa: E402
+
+OUTPUT_PATH = canonical_artifact_path("matter_space_research_program_gate.json", "gates")
 
 INPUT_PATHS = {
     "ontology_contract": REPO_ROOT / "docs/core/07_artifacts/correspondence/matter_space_ontology_contract.json",

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_fundamental_symmetry_inventory",
-  "generated_at": "2026-08-09T04:10:08.631130+00:00",
+  "generated_at": "2026-09-16T10:25:32.000079+00:00",
   "track_status": "HYPOTHESIS_TRACK",
   "components": {
     "lorentz_metric_parent": {
@@ -54,10 +54,10 @@
     }
   },
   "input_identity": {
-    "covariant_parent_verification.json": "3f8c75daec2d2ee852c8e5af9451e0b47a651b86c3b07ca0be2b3e8e26f5ddb4",
-    "o2_finite_density_eos_verification.json": "118d967a500052093fcb3439c1e090887efa2988bf7b8b25d84946c4a8dbfa26",
-    "photon_observer_baseline_verification.json": "6990cfd534dc6d3296b8ae891704c0a920b30a0b0436148ab6cd8eb4175fe82f",
-    "uet_gr_research_program_gate.json": "1ed4f111d32dd443318c9237d5d5647caaba0c6ebb59739d4faf1e801d42ce8a"
+    "covariant_parent_verification.json": "b51c02933fdba49378e03c0e41c3161030a35c6c90a2fe69f16a14a4066197d5",
+    "o2_finite_density_eos_verification.json": "746e6db7be3dba2eb5d1eed9ec9a010b4b80f0131ecf8a82a4a65c80c6ebed1d",
+    "photon_observer_baseline_verification.json": "a539319ef12bd27b16f9f260e66df9e3f568ab474870c489d1349cb8bbc74ce6",
+    "uet_gr_research_program_gate.json": "09a3605cfd5e16802b3109528dfecb4c46dde71292306894ef48e3bf4c3373e7"
   },
   "input_status_snapshot": {
     "parent": "PASS",

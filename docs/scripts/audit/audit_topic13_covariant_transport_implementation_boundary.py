@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-TRANSPORT_REL = "docs/core/uet_covariant_superfluid_transport.py"
+TRANSPORT_REL = "docs/core/02_equations/covariant/uet_covariant_superfluid_transport.py"
 CONTRACT_REL = "docs/core/07_artifacts/archive/covariant_superfluid_transport_contract.json"
 VERIFICATION_REL = "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json"
 TEST_REL = "docs/core/test/test_covariant_superfluid_transport.py"

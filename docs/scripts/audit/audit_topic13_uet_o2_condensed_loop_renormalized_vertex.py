@@ -31,9 +31,9 @@ from docs.core.uet_o2_finite_temperature_quasiparticle_eos import (  # noqa: E40
 )
 
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_condensed_loop_renormalized_vertex_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_condensed_loop_renormalized_vertex.py"
-CONTINUUM = ROOT / "docs/core/uet_o2_continuum_relative_flow_kubo.py"
-EOS = ROOT / "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_condensed_loop_renormalized_vertex.py"
+CONTINUUM = ROOT / "docs/core/02_equations/o2/uet_o2_continuum_relative_flow_kubo.py"
+EOS = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py"
 
 
 def sha256(path: Path) -> str:
@@ -130,9 +130,9 @@ def main() -> int:
         "BLOCKED_T13_CONDENSED_LOOP_RENORMALIZED_CONTACT_VERTEX"
     )
     evidence = [
-        {"path": "docs/core/uet_o2_condensed_loop_renormalized_vertex.py", "sha256": sha256(MODULE)},
-        {"path": "docs/core/uet_o2_continuum_relative_flow_kubo.py", "sha256": sha256(CONTINUUM)},
-        {"path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py", "sha256": sha256(EOS)},
+        {"path": "docs/core/02_equations/o2/uet_o2_condensed_loop_renormalized_vertex.py", "sha256": sha256(MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_continuum_relative_flow_kubo.py", "sha256": sha256(CONTINUUM)},
+        {"path": "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py", "sha256": sha256(EOS)},
     ]
     artifact = {
         "schema_version": "t13-uet-o2-condensed-loop-renormalized-vertex-v1",
@@ -185,7 +185,7 @@ def main() -> int:
                 "chemical_potential": state.chemical_potential,
                 "space_response": state.space_response,
                 "correlator_formula_id": "uet.o2.thermal.condensed_loop_relative_flow_retarded_v1",
-                "source_path_or_url": "docs/core/uet_o2_condensed_loop_renormalized_vertex.py",
+                "source_path_or_url": "docs/core/02_equations/o2/uet_o2_condensed_loop_renormalized_vertex.py",
                 "source_hash": sha256(MODULE),
                 "evidence_status": "INTERNAL_ACTION_DERIVED_NATURAL_RESPONSE_NOT_PHYSICAL_KUBO",
                 "state_match": True,

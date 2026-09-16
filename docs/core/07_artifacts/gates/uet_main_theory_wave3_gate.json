@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_main_theory_wave3_gate",
-  "generated_at": "2026-09-15T01:54:43.436768+00:00",
+  "generated_at": "2026-09-16T08:45:55.059665+00:00",
   "audit_status": "PASS",
   "coarse_graining_status": "PASS_DECLARED_FIELD_TO_COLLECTIVE_COORDINATE_ONLY",
   "upstream_gate": "uet_main_theory_wave2_gate.json",

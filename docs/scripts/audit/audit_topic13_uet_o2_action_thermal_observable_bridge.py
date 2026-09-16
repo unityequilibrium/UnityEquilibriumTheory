@@ -20,9 +20,9 @@ from docs.core.uet_o2_action_thermal_observable_bridge import (  # noqa: E402
 )
 
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_action_thermal_observable_bridge_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_action_thermal_observable_bridge.py"
-EOS = ROOT / "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py"
-BETA = ROOT / "docs/core/uet_o2_action_thermal_stiffness_beta.py"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py"
+EOS = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py"
+BETA = ROOT / "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py"
 
 
 def sha256(path: Path) -> str:
@@ -117,9 +117,9 @@ def main() -> int:
             "observable": contract["observable"],
             "data_role": contract["data_role"],
             "evidence_artifacts": [
-                {"path": "docs/core/uet_o2_action_thermal_observable_bridge.py", "sha256": sha256(MODULE)},
-                {"path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py", "sha256": sha256(EOS)},
-                {"path": "docs/core/uet_o2_action_thermal_stiffness_beta.py", "sha256": sha256(BETA)},
+                {"path": "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py", "sha256": sha256(MODULE)},
+                {"path": "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py", "sha256": sha256(EOS)},
+                {"path": "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py", "sha256": sha256(BETA)},
             ],
             "verification_status": status,
             "open_blockers": [

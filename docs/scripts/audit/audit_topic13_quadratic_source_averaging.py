@@ -39,7 +39,7 @@ def main():
     rows=[dict(case=name,**source_average(chi,w)) for name,chi,w in fixtures]
     rows.append(dict(case='GR_null',**source_average([[1.,0.],[-1.,0.]],[.5,.5],epsilon=0)))
     paths=[Path(__file__),ROOT/'docs/core/test/test_topic13_quadratic_source_averaging.py',
-           ROOT/'docs/core/uet_covariant_matter.py',ROOT/'docs/core/uet_covariant_response.py']
+           ROOT/'docs/core/02_equations/covariant/uet_covariant_matter.py',ROOT/'docs/core/02_equations/covariant/uet_covariant_response.py']
     artifact=dict(major_result_id='T13_QUADRATIC_SOURCE_SPATIAL_AVERAGING',topic='0.13',closure_level='CLOSED_FOR_LANE',
         what_is_closed='Exact finite positive-weight averaging identity of the existing quadratic source',
         equation_or_mapping='sum w_i J(chi_i)-J(sum w_i chi_i)=epsilon*h/2 * sum w_i |chi_i-chi_bar|^2',

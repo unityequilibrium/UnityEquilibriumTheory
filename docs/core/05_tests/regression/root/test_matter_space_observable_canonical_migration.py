@@ -22,6 +22,6 @@ def test_observable_root_module_forwards_to_review_lane() -> None:
 def test_observable_path_is_classified_as_review_support() -> None:
     from docs.core.core_paths import canonical_path_for
 
-    assert canonical_path_for("docs/core/uet_matter_space_observable.py") == (
+    assert canonical_path_for("docs/core/03_lanes/review/uet_matter_space_observable.py") == (
         "docs/core/03_lanes/review/uet_matter_space_observable.py"
     )

@@ -154,7 +154,7 @@ def main() -> int:
     legacy = legacy_decomposition_witness()
     contract = invariant_galerkin_collision_contract()
     source_text = (
-        ROOT / "docs/core/uet_o2_invariant_galerkin_collision_operator.py"
+        ROOT / "docs/core/02_equations/o2/uet_o2_invariant_galerkin_collision_operator.py"
     ).read_text(encoding="utf-8")
     checks = {
         "symbolic_operator_dimension_E1": contract["unit_contract"]["collision_operator"] == 1,
@@ -196,10 +196,10 @@ def main() -> int:
         else "WARN_INVARIANT_SCALAR_GALERKIN_COLLISION"
     )
     paths = [
-        "docs/core/uet_o2_invariant_galerkin_collision_operator.py",
+        "docs/core/02_equations/o2/uet_o2_invariant_galerkin_collision_operator.py",
         "docs/core/test/test_topic13_invariant_galerkin_collision_operator.py",
         "docs/scripts/audit/audit_topic13_invariant_galerkin_collision_operator.py",
-        "docs/core/uet_o2_continuum_collision_operator.py",
+        "docs/core/02_equations/o2/uet_o2_continuum_collision_operator.py",
     ]
     prior = "docs/core/07_artifacts/topic13/t13_invariant_rate_collision_operator_repair.json"
     artifact = {

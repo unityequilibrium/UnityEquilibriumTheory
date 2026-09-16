@@ -23,7 +23,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / "docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json"
-REPORT = ROOT / "docs/core/UET_FOUNDATION_COMPATIBILITY_DECISION.md"
+REPORT = ROOT / "docs/core/01_contracts/UET_FOUNDATION_COMPATIBILITY_DECISION.md"
 
 INPUTS = {
     "compatibility": ROOT / "docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json",
@@ -168,7 +168,7 @@ def build_decision() -> dict[str, Any]:
             "standard_physics_correspondence": "NOT_ESTABLISHED_GLOBAL",
             "old_theory_special_case": "NOT_ESTABLISHED",
             "reason": "Lorentz transformation utilities and tests do not establish covariance of every physical operator or the legacy master dynamics.",
-            "evidence": ["docs/core/test/test_lorentz_noether_comprehensive.py", "docs/core/UET_FOUNDATION_COMPATIBILITY_AUDIT.md"]
+            "evidence": ["docs/core/test/test_lorentz_noether_comprehensive.py", "docs/core/08_history/research_notes/UET_FOUNDATION_COMPATIBILITY_AUDIT.md"]
         },
         {
             "family_id": "core.parameter_contract",
@@ -176,7 +176,7 @@ def build_decision() -> dict[str, Any]:
             "standard_physics_correspondence": "PARAMETER_POLICY_ONLY",
             "old_theory_special_case": "NOT_ESTABLISHED",
             "reason": "The parameter registry still mixes normalized, natural-unit, and SI lanes globally; the scoped beta_normalized/Landauer separation is closed, but cross-family conversion remains open.",
-            "evidence": ["docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json", "docs/core/uet_parameters.py"]
+            "evidence": ["docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json", "docs/core/01_contracts/units/uet_parameters.py"]
         },
         {
             "family_id": "core.observable_contract",

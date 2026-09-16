@@ -44,7 +44,7 @@
   "claim_boundary": "organization/path audit only; no physics-status promotion",
   "controlling_blocker": null,
   "duplicate_targets": {},
-  "generated_at": "2026-09-15T18:54:17+00:00",
+  "generated_at": "2026-09-16T17:58:09+00:00",
   "generator": "docs/scripts/audit/audit_uet_core_paths.py",
   "invalid_migration_states": [],
   "missing_canonical_paths": [],

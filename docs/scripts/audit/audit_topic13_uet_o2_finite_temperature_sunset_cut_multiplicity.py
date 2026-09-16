@@ -26,11 +26,11 @@ OUT = ROOT / (
     "docs/core/artifacts/"
     "t13_uet_o2_finite_temperature_sunset_cut_multiplicity_audit.json"
 )
-MODULE = ROOT / "docs/core/uet_o2_finite_temperature_sunset_cut_multiplicity.py"
-TENSOR = ROOT / "docs/core/uet_o2_action_1pi_sunset_tensor.py"
-SCATTERING = ROOT / "docs/core/uet_o2_finite_temperature_sunset_scattering_sk_kms.py"
-TAXONOMY = ROOT / "docs/core/uet_o2_finite_temperature_signed_cut_coverage.py"
-PHYSICAL_COMPARATOR = ROOT / "docs/core/uet_o2_action_sunset_1pi_spectral.py"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_cut_multiplicity.py"
+TENSOR = ROOT / "docs/core/02_equations/o2/uet_o2_action_1pi_sunset_tensor.py"
+SCATTERING = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_scattering_sk_kms.py"
+TAXONOMY = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_signed_cut_coverage.py"
+PHYSICAL_COMPARATOR = ROOT / "docs/core/02_equations/o2/uet_o2_action_sunset_1pi_spectral.py"
 
 
 def sha256(path: Path) -> str:

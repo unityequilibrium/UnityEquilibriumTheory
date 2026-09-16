@@ -33,5 +33,5 @@
   },
   "next_required_artifact": "causal_discretization_repair_artifact.json",
   "claim_impact": "no_status_upgrade",
-  "last_verifier_artifact": "docs/core/artifacts/matter_space_variational_verification.json"
+  "last_verifier_artifact": "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
 }

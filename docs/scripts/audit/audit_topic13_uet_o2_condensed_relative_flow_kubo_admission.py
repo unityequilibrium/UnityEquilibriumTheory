@@ -32,8 +32,8 @@ from docs.core.uet_o2_finite_temperature_quasiparticle_eos import (  # noqa: E40
 
 
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_condensed_relative_flow_kubo_admission.py"
-LOOP_MODULE = ROOT / "docs/core/uet_o2_condensed_loop_renormalized_vertex.py"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_condensed_relative_flow_kubo_admission.py"
+LOOP_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_condensed_loop_renormalized_vertex.py"
 REGISTRY = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json"
 
 
@@ -65,7 +65,7 @@ def main() -> int:
         0.20,
         1.28,
         0.15,
-        source_path_or_url="docs/core/uet_o2_condensed_loop_renormalized_vertex.py",
+        source_path_or_url="docs/core/02_equations/o2/uet_o2_condensed_loop_renormalized_vertex.py",
         source_hash=loop_hash,
         reference_space_response=0.0,
         config=_config(),
@@ -109,8 +109,8 @@ def main() -> int:
         "BLOCKED_T13_CONDENSED_RELATIVE_FLOW_KUBO_ADMISSION"
     )
     evidence = [
-        {"path": "docs/core/uet_o2_condensed_relative_flow_kubo_admission.py", "sha256": sha256(MODULE)},
-        {"path": "docs/core/uet_o2_condensed_loop_renormalized_vertex.py", "sha256": loop_hash},
+        {"path": "docs/core/02_equations/o2/uet_o2_condensed_relative_flow_kubo_admission.py", "sha256": sha256(MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_condensed_loop_renormalized_vertex.py", "sha256": loop_hash},
         {"path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json", "sha256": sha256(REGISTRY)},
     ]
     artifact = {

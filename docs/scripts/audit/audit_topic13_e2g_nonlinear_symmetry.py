@@ -32,7 +32,7 @@ def main():
     rows=[dict(degree=d,e2_dimension=invariant_dimension(d,e2_group()),
                continuous_rotation_dimension=invariant_dimension(d,[rotation(np.sqrt(2.))])) for d in range(1,7)]
     files=["docs/scripts/audit/audit_topic13_e2g_nonlinear_symmetry.py",
-           "docs/core/test/test_topic13_e2g_nonlinear_symmetry.py","docs/core/uet_shear_symmetry.py"]
+           "docs/core/test/test_topic13_e2g_nonlinear_symmetry.py","docs/core/03_lanes/thermal/uet_shear_symmetry.py"]
     r=dict(major_result_id="T13_E2G_NONLINEAR_O2_MATCH_BOUNDARY",topic="0.13",closure_level="PARTIAL",
         what_is_closed="Conditional E2 representation permits a cubic invariant absent from continuous O(2)",
         equation_or_mapping="I3=s1^3-3*s1*s2^2=r^3*cos(3theta); internal torque=-partial_theta(c3*I3)",

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "covariant_parent_verification",
-  "generated_at": "2026-08-09T03:23:03.470344+00:00",
+  "generated_at": "2026-09-16T08:45:48.673041+00:00",
   "audit_status": "PASS",
   "research_status": "INTERNAL_CONSERVATIVE_PARENT_ONLY",
   "operator": "covariant_theory_parent_formula_v1",

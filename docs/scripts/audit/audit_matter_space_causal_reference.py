@@ -171,7 +171,7 @@ def build_report(verification_path: Path = DEFAULT_VERIFICATION) -> dict[str, An
             "scope_boundary": "reference/control lane only; not a replacement for matter_space_step",
         },
         "evidence_inputs": {
-            "core_source": "docs/core/uet_matter_space.py",
+            "core_source": "docs/core/02_equations/matter_space/uet_matter_space.py",
             "default_candidate_verification": rel(verification_path),
         },
         "claim_boundary": (

@@ -46,7 +46,7 @@ def main():
         "dimension_mismatch_is_nonzero":dimensions["collision_operator"]!=dimensions["required_frequency_rate"]}
     paths=["docs/scripts/audit/audit_topic13_transition_kernel_rate_dimension_no_go.py",
         "docs/core/test/test_topic13_transition_kernel_rate_dimension_no_go.py",
-        "docs/core/uet_o2_action_derived_transition_kernel.py","docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py"]
+        "docs/core/02_equations/o2/uet_o2_action_derived_transition_kernel.py","docs/core/02_equations/o2/uet_o2_energy_momentum_conserving_bethe_salpeter.py"]
     sha=lambda p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest()
     prior="docs/core/07_artifacts/topic13/t13_dressed_ra_pair_microscopic_rung_boundary_audit.json"
     artifact={"schema_version":"t13-transition-rate-dimension-no-go-v1","major_result_id":"T13_TRANSITION_KERNEL_RATE_DIMENSION_NO_GO",

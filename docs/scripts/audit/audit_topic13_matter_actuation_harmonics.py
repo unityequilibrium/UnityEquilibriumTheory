@@ -33,7 +33,7 @@ def main():
     rows.append(measure(.4,.1,epsilon=0.))
     files=["docs/scripts/audit/audit_topic13_matter_actuation_harmonics.py",
            "docs/core/test/test_topic13_matter_actuation_harmonics.py",
-           "docs/core/uet_covariant_matter.py","docs/core/uet_covariant_response.py"]
+           "docs/core/02_equations/covariant/uet_covariant_matter.py","docs/core/02_equations/covariant/uet_covariant_response.py"]
     r=dict(major_result_id="T13_EXISTING_MATTER_ACTUATION_HARMONICS",topic="0.13",closure_level="PARTIAL",
         equation_or_mapping="DeltaJ=epsilon*h*(chi0*A*cos(wt)+A^2*(1+cos(2wt))/4)",
         units="chi0,A energy; h energy; J energy^3; epsilon dimensionless",

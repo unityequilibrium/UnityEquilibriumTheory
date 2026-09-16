@@ -11,7 +11,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
 ACTION_REL = "docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json"
-MODULE_REL = "docs/core/thermal_sk_kms_entropy_contract.py"
+MODULE_REL = "docs/core/03_lanes/thermal/thermal_sk_kms_entropy_contract.py"
 FULL_REL = "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
 REGISTER_REL = "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
 DEPENDENCY_REL = "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"

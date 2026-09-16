@@ -24,7 +24,7 @@ from pathlib import Path
 
 
 from docs.core.uet_parameters import get_params, INTEGRITY_KILL_SWITCH
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
 
 class MasterBalanceProof:

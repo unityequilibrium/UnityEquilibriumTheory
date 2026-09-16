@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "covariant_matter_action_contract",
-  "generated_at": "2026-07-22T13:43:39.341257+00:00",
+  "generated_at": "2026-09-16T10:00:23.482426+00:00",
   "status": "CANDIDATE_O2_SCALAR_ACTION_WITH_RECIPROCAL_RESPONSE_COUPLING",
   "representation": "two_real_scalars_global_O2_equivalent_to_complex_scalar",
   "matter_amplitude_role": "lorentz_scalar_amplitude_not_yet_density_C",

@@ -137,3 +137,23 @@
 - CONTROLLING_BLOCKER: None for physical file placement. Scientific foundation and evidence gates remain independently controlled and unchanged.
 - NEXT_ACTION: Run the final repository-wide migration verification, then commit this scoped boundary reconciliation. Do not push without an explicit instruction.
 - CLAIM_BOUNDARY: Organization, canonical-path resolution, and compatibility traceability only; this wave is not a physics verification or empirical validation.
+
+### 2026-09-16 — Wave 6zj: canonical registry reconciliation
+
+- STATUS: `PASS_WITH_REVIEW_REQUIRED`
+- WHAT_CHANGED: Added the v4 canonical registry reconciler and shared control-plane path helpers; regenerated the manifest, organization registry, migration map, dependency graph, reconciliation gate, and governance indexes. Updated legacy registry entrypoints, the curved 3+1 artifact generator, and active link-contract tests to resolve canonical paths while retaining compatibility shims. No equation implementation, artifact meaning, or physics status was changed.
+- VERIFICATION: Reconciliation generation and `--check` passed; core path, import, active-link, and test-collection audits passed; the expanded canonical-path regression set passed 47 tests; scientific-link audit and `--check` remained reproducible with its existing blocked status.
+- RESULT: 1,966 actual core files are indexed (1,964 physical baseline files plus two reconciliation outputs): 1,540 canonical records, 426 compatibility records, and three explicit quarantines. Canonical targets are unique and present; 586 generated-artifact records still lack declared generator identity; physics-status changes are zero and the foundation gate remains `BLOCKED`.
+- CONTROLLING_BLOCKER: `generated_artifact_generator_provenance_incomplete`; the separate scientific-link audit also remains `BLOCKED_OPEN_SCIENTIFIC_LINKS` with 286 assigned records lacking a complete family contract.
+- NEXT_ACTION: Resolve generator identity and active consumers one bounded artifact family at a time, then rerun the reconciliation and scientific-link gates. Keep compatibility boundaries and all physics claims unchanged until evidence gates close.
+- CLAIM_BOUNDARY: This wave establishes canonical registry/dependency traceability and compatibility-test coverage only; it does not verify equations, promote evidence, or validate a physical/empirical UET claim.
+
+### 2026-09-17 — Wave 6zk: compatibility consolidation and closure checkpoint
+
+- STATUS: `PASS_WITH_REVIEW_REQUIRED`
+- WHAT_CHANGED: Consolidated the remaining root Python/Markdown/data/proof boundaries into explicit archive and redirect records; installed one lazy legacy-module alias registry; repaired canonical-path consumers and the completion-audit test root; regenerated the physical migration report, registry, dependency graph, and all-waves closure packet. No equation implementation or physics interpretation was changed.
+- VERIFICATION: Physical migration audit PASS (`duplicate_targets=0`, `missing_current_paths=0`, `redirect_errors=0`); path audit PASS; import audit PASS (`181/181`); active-link audit PASS (`245/245`); data/tooling audit PASS; combined migration audit PASS; closure completion audit `PASS_WITH_FOUNDATION_PHYSICS_BLOCKED`; targeted migration/closure tests `67 passed`.
+- RESULT: The root of `docs/core` contains only six protected entrypoints. `426` compatibility assets are archived or redirected, old `data`, `test`, `02_Proof`, and `artifacts` boundaries no longer contain active implementations, and the physical migration plan reports zero remaining move targets and zero target collisions.
+- CONTROLLING_BLOCKER: No physical-placement blocker remains. Three explicit registry review/quarantine records, incomplete generated-artifact provenance, scientific-link gaps, and the foundation physics gate remain separate evidence blockers.
+- NEXT_ACTION: Commit the scoped migration files only; keep scientific claim promotion behind the existing foundation gate and do not push without explicit instruction.
+- CLAIM_BOUNDARY: This wave closes file placement, compatibility routing, and migration accounting only. It does not prove, promote, or reinterpret any UET physics claim.

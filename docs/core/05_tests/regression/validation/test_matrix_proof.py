@@ -19,7 +19,7 @@ import os
 # Add path to docs
 sys.path.append(str(core_root()))
 
-from docs.core.uet_matrix_engine import MatrixEvolution, create_galaxy_initial_state
+from docs.scripts.core.runners.uet_matrix_engine import MatrixEvolution, create_galaxy_initial_state
 
 
 def run_proof():

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_all_waves_completion_audit",
-  "generated_at": "2026-08-30",
+  "generated_at": "2026-09-17",
   "audit_status": "PASS_WITH_FOUNDATION_PHYSICS_BLOCKED",
   "status": "PROGRAM_CONTROL_CLOSED_FOUNDATION_PHYSICS_NOT_CLOSED",
   "objective": "close every planned research wave as a bounded project-control lane without promoting blocked physics",
@@ -17,7 +17,7 @@
       "claim_ceiling": "inventory and correspondence repair only",
       "evidence": [
         {
-          "path": "docs/core/artifacts/uet_foundation_dependency_gate.json",
+          "path": "docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -27,7 +27,7 @@
           ]
         },
         {
-          "path": "docs/core/artifacts/uet_foundation_equation_inventory.json",
+          "path": "docs/core/07_artifacts/gates/uet_foundation_equation_inventory.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -51,7 +51,7 @@
       "claim_ceiling": "lane-specific correspondence; no universal identity",
       "evidence": [
         {
-          "path": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+          "path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -60,7 +60,7 @@
           ]
         },
         {
-          "path": "docs/core/artifacts/matter_space_ontology_contract.json",
+          "path": "docs/core/07_artifacts/correspondence/matter_space_ontology_contract.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -69,7 +69,7 @@
           ]
         },
         {
-          "path": "docs/core/artifacts/impact_effect_legacy_wording_audit.json",
+          "path": "docs/core/07_artifacts/verification/impact_effect_legacy_wording_audit.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -78,7 +78,7 @@
           ]
         },
         {
-          "path": "docs/core/artifacts/uet_topic_formula_correspondence_manifest.json",
+          "path": "docs/core/07_artifacts/provenance/uet_topic_formula_correspondence_manifest.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -102,7 +102,7 @@
       "claim_ceiling": "normalized/natural lanes only until dimensional maps close",
       "evidence": [
         {
-          "path": "docs/core/artifacts/matter_space_formula_audit.json",
+          "path": "docs/core/07_artifacts/correspondence/matter_space_formula_audit.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -111,7 +111,7 @@
           ]
         },
         {
-          "path": "docs/core/artifacts/o2_eos_formula_audit.json",
+          "path": "docs/core/07_artifacts/correspondence/o2_eos_formula_audit.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -135,7 +135,7 @@
       "claim_ceiling": "selected characteristic finite-cone candidate plus conserved-C comparator; no physical promotion",
       "evidence": [
         {
-          "path": "docs/core/artifacts/matter_space_causal_lane_selection.json",
+          "path": "docs/core/07_artifacts/archive/matter_space_causal_lane_selection.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -144,7 +144,7 @@
           ]
         },
         {
-          "path": "docs/core/artifacts/matter_space_characteristic_cone_verification.json",
+          "path": "docs/core/07_artifacts/verification/matter_space_characteristic_cone_verification.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -154,7 +154,7 @@
           ]
         },
         {
-          "path": "docs/core/artifacts/matter_space_finite_cone_shared_ledger_integration.json",
+          "path": "docs/core/07_artifacts/archive/matter_space_finite_cone_shared_ledger_integration.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -164,7 +164,7 @@
           ]
         },
         {
-          "path": "docs/core/artifacts/matter_space_causal_lane_comparison.json",
+          "path": "docs/core/07_artifacts/archive/matter_space_causal_lane_comparison.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -173,7 +173,7 @@
           ]
         },
         {
-          "path": "docs/core/artifacts/matter_space_causal_reference_verification.json",
+          "path": "docs/core/07_artifacts/verification/matter_space_causal_reference_verification.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -182,7 +182,7 @@
           ]
         },
         {
-          "path": "docs/core/artifacts/matter_space_dependency_gate.json",
+          "path": "docs/core/07_artifacts/gates/matter_space_dependency_gate.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -191,7 +191,7 @@
           ]
         },
         {
-          "path": "docs/core/artifacts/matter_space_observable_verification.json",
+          "path": "docs/core/07_artifacts/verification/matter_space_observable_verification.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -215,7 +215,7 @@
       "claim_ceiling": "declared measurement operators and simulation-only controls",
       "evidence": [
         {
-          "path": "docs/core/artifacts/thermal_observable_bridge_verification.json",
+          "path": "docs/core/07_artifacts/topic13/thermal_observable_bridge_verification.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -225,7 +225,7 @@
           ]
         },
         {
-          "path": "docs/core/artifacts/resource_selection_thermal_bridge_verification.json",
+          "path": "docs/core/07_artifacts/provenance/resource_selection_thermal_bridge_verification.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -235,7 +235,7 @@
           ]
         },
         {
-          "path": "docs/core/artifacts/matter_space_research_program_gate.json",
+          "path": "docs/core/07_artifacts/gates/matter_space_research_program_gate.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -244,7 +244,7 @@
           ]
         },
         {
-          "path": "docs/core/artifacts/matter_space_observable_verification.json",
+          "path": "docs/core/07_artifacts/verification/matter_space_observable_verification.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -268,7 +268,7 @@
       "claim_ceiling": "internal normalized diagnostic; no universality or mass-generation claim",
       "evidence": [
         {
-          "path": "docs/core/artifacts/matter_space_phase_pilot.json",
+          "path": "docs/core/07_artifacts/archive/matter_space_phase_pilot.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -277,7 +277,7 @@
           ]
         },
         {
-          "path": "docs/core/artifacts/matter_space_topic_pilot_sync.json",
+          "path": "docs/core/07_artifacts/archive/matter_space_topic_pilot_sync.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -337,7 +337,7 @@
       "claim_ceiling": "simulation-only Fourier/Cattaneo/trace comparator; external validation blocked",
       "evidence": [
         {
-          "path": "docs/core/artifacts/matter_space_topic_pilot_sync.json",
+          "path": "docs/core/07_artifacts/archive/matter_space_topic_pilot_sync.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -397,7 +397,7 @@
       "claim_ceiling": "tree-level natural-unit O2 EOS and conditional ideal covariant constitutive structure; transport coefficient values and SI remain open",
       "evidence": [
         {
-          "path": "docs/core/artifacts/o2_finite_density_eos_verification.json",
+          "path": "docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -406,7 +406,7 @@
           ]
         },
         {
-          "path": "docs/core/artifacts/o2_eos_formula_audit.json",
+          "path": "docs/core/07_artifacts/correspondence/o2_eos_formula_audit.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -415,7 +415,7 @@
           ]
         },
         {
-          "path": "docs/core/artifacts/covariant_superfluid_transport_verification.json",
+          "path": "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -439,7 +439,7 @@
       "claim_ceiling": "carrier-neutral and observer thought-experiment contracts only; no photon/neutrino/positron identity for R_gen",
       "evidence": [
         {
-          "path": "docs/core/artifacts/impact_effect_core_verification.json",
+          "path": "docs/core/07_artifacts/verification/impact_effect_core_verification.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -448,7 +448,7 @@
           ]
         },
         {
-          "path": "docs/core/artifacts/impact_effect_dependency_gate.json",
+          "path": "docs/core/07_artifacts/gates/impact_effect_dependency_gate.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -457,7 +457,7 @@
           ]
         },
         {
-          "path": "docs/core/artifacts/carrier_neutral_comparator_contract.json",
+          "path": "docs/core/07_artifacts/archive/carrier_neutral_comparator_contract.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -466,7 +466,7 @@
           ]
         },
         {
-          "path": "docs/core/artifacts/carrier_observer_thought_experiment.json",
+          "path": "docs/core/07_artifacts/archive/carrier_observer_thought_experiment.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -475,7 +475,7 @@
           ]
         },
         {
-          "path": "docs/core/artifacts/photon_observer_baseline_verification.json",
+          "path": "docs/core/07_artifacts/verification/photon_observer_baseline_verification.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -499,7 +499,7 @@
       "claim_ceiling": "local conditional covariant/closed-limit checks only; no Einstein derivation or global-open-universe claim",
       "evidence": [
         {
-          "path": "docs/core/artifacts/orbit_cosmology_correspondence_gate.json",
+          "path": "docs/core/07_artifacts/gates/orbit_cosmology_correspondence_gate.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -508,7 +508,7 @@
           ]
         },
         {
-          "path": "docs/core/artifacts/uet_gr_research_program_gate.json",
+          "path": "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -565,7 +565,7 @@
       "claim_ceiling": "particle, Dirac, neutrino, positron and antimatter identities remain deferred/not established",
       "evidence": [
         {
-          "path": "docs/core/artifacts/particle_dirac_program_gate.json",
+          "path": "docs/core/07_artifacts/gates/particle_dirac_program_gate.json",
           "exists": true,
           "hash_matches_closure": true,
           "json_parse_ok": true,
@@ -603,12 +603,12 @@
   },
   "failed_evidence_paths": [],
   "core_regression": {
-    "command": "C:\\Users\\santa\\Desktop\\uet_harness\\.venv\\Scripts\\python.exe -m pytest -q docs/core/test",
-    "exit_code": 0,
-    "passed_count": 1271,
-    "failed_count": 0,
-    "status": "PASS",
-    "tail": "  Did you mean to use `assert` instead of `return`?\n  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.\n    warnings.warn(\n\ndocs/core/test/test_parameter_engine.py::test_engine\n  C:\\Users\\santa\\Desktop\\uet_harness\\.venv\\Lib\\site-packages\\_pytest\\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but docs/core/test/test_parameter_engine.py::test_engine returned <class 'bool'>.\n  Did you mean to use `assert` instead of `return`?\n  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.\n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n1271 passed, 6 warnings in <elapsed> (0:02:54)"
+    "command": "not_run_in_build(run_tests=False)",
+    "exit_code": null,
+    "passed_count": null,
+    "failed_count": null,
+    "status": "NOT_RUN",
+    "tail": ""
   },
   "checks": {
     "closure_artifact_passes": true,

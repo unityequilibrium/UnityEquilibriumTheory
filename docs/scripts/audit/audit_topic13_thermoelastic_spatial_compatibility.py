@@ -26,8 +26,8 @@ PROTECTED = [
     "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
 ]
 EVIDENCE = [
-    "docs/core/T13_THERMOELASTIC_SPATIAL_COMPATIBILITY.md",
-    "docs/core/uet_thermoelastic_spatial_compatibility.py",
+    "docs/core/03_lanes/topic13_support/T13_THERMOELASTIC_SPATIAL_COMPATIBILITY.md",
+    "docs/core/03_lanes/thermal/uet_thermoelastic_spatial_compatibility.py",
     "docs/core/test/test_topic13_thermoelastic_spatial_compatibility.py",
     "docs/scripts/audit/audit_topic13_thermoelastic_spatial_compatibility.py",
     "docs/core/07_artifacts/topic13/t13_anisotropic_thermoelastic_response_bridge_audit.json",

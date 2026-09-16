@@ -1,14 +1,11 @@
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import canonical_artifact_path, repo_root
 import json
 from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACTS = ROOT / "docs/core/artifacts"
-
-
 def _load(name: str):
-    return json.loads((ARTIFACTS / name).read_text(encoding="utf-8"))
+    return json.loads(canonical_artifact_path(name).read_text(encoding="utf-8"))
 
 
 def test_wave0_gate_closes_accounting_without_physics_promotion():

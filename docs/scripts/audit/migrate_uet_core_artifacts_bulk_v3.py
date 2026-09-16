@@ -341,7 +341,7 @@ def apply_preflight(preflight: dict[str, Any]) -> dict[str, Any]:
             for change in reference_changes
         ],
         "remaining_legacy_outputs": remaining_legacy,
-        "legacy_boundary": "docs/core/artifacts/README.md",
+        "legacy_boundary": "docs/core/07_artifacts/README.md",
         "claim_boundary": "physical artifact organization and path reconciliation only; no physics or evidence promotion",
         "controlling_blocker": None if not remaining_legacy else "legacy_generated_outputs_remain",
     }
@@ -440,7 +440,7 @@ def reconcile_existing_move() -> dict[str, Any]:
             "reference_replacements": 3214,
         },
         "remaining_legacy_outputs": remaining_legacy,
-        "legacy_boundary": "docs/core/artifacts/README.md",
+        "legacy_boundary": "docs/core/07_artifacts/README.md",
         "claim_boundary": "physical artifact organization and path reconciliation only; no physics or evidence promotion",
         "controlling_blocker": None if status == "PASS" else "artifact_bulk_reconciliation_incomplete",
     }

@@ -33,12 +33,12 @@ def main():
         evidence_artifacts=[dict(path=p, sha256=sha256((ROOT/p).read_bytes()).hexdigest()) for p in (
             "docs/scripts/audit/audit_topic13_weighted_direction_pilot.py",
             "docs/core/test/test_topic13_weighted_directions.py",
-            "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
-            "docs/core/uet_o2_continuum_collision_operator.py",
-            "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py",
-            "docs/core/uet_o2_action_thermal_observable_bridge.py",
-            "docs/core/uet_o2_action_thermal_stiffness_beta.py",
-            "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py")])
+            "docs/core/02_equations/o2/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+            "docs/core/02_equations/o2/uet_o2_continuum_collision_operator.py",
+            "docs/core/02_equations/o2/uet_o2_covariant_entropy_heat_flux_balance.py",
+            "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+            "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
+            "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py")])
     out = ROOT / "docs/core/07_artifacts/topic13/t13_weighted_direction_pilot.json"
     def save():
         out.write_text(json.dumps(record, indent=2, allow_nan=False)+"\n", encoding="utf-8")

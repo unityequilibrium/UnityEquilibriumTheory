@@ -84,7 +84,7 @@ def main() -> int:
         for charges in ((-1, 1, -1, 1), (1, 1, 1, 1))
     ]
     implementation_text = (
-        ROOT / "docs/core/uet_o2_invariant_rate_collision_operator.py"
+        ROOT / "docs/core/02_equations/o2/uet_o2_invariant_rate_collision_operator.py"
     ).read_text(encoding="utf-8")
     checks = {
         "symbolic_operator_dimension_E1": contract["unit_contract"]["collision_operator"] == 1,
@@ -102,7 +102,7 @@ def main() -> int:
         "no_clipping_or_cone_padding": "min(1.0, max(-1.0" not in implementation_text
         and "cone_padding" not in implementation_text,
         "legacy_operator_not_overwritten": (
-            ROOT / "docs/core/uet_o2_action_derived_transition_kernel.py"
+            ROOT / "docs/core/02_equations/o2/uet_o2_action_derived_transition_kernel.py"
         ).exists(),
     }
     status = (
@@ -111,10 +111,10 @@ def main() -> int:
         else "WARN_INVARIANT_RATE_OPERATOR_REPAIR"
     )
     paths = [
-        "docs/core/uet_o2_invariant_rate_collision_operator.py",
+        "docs/core/02_equations/o2/uet_o2_invariant_rate_collision_operator.py",
         "docs/scripts/audit/audit_topic13_invariant_rate_collision_repair.py",
         "docs/core/test/test_topic13_invariant_rate_collision_repair.py",
-        "docs/core/uet_o2_action_derived_transition_kernel.py",
+        "docs/core/02_equations/o2/uet_o2_action_derived_transition_kernel.py",
     ]
     prior = "docs/core/07_artifacts/topic13/t13_transition_kernel_rate_dimension_no_go.json"
     artifact = {

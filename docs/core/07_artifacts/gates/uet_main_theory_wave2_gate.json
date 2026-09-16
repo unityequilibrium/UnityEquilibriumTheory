@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_main_theory_wave2_gate",
-  "generated_at": "2026-08-09T03:23:03.470344+00:00",
+  "generated_at": "2026-09-16T08:45:48.673041+00:00",
   "audit_status": "PASS",
   "parent_status": "PASS_CONSERVATIVE_PARENT_ONLY",
   "upstream_gate": "uet_main_theory_ontology_gate.json",

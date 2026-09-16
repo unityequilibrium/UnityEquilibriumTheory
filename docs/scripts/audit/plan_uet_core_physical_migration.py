@@ -360,7 +360,7 @@ def render_report(payload: dict[str, Any]) -> str:
         "- Duplicate canonical targets and existing destinations block apply.",
         "- Dirty user files are held back and never overwritten.",
         "- Root entrypoints and the public facade stay in place.",
-        "- Python implementation moves create root shims; Markdown moves create redirects.",
+        "- Python implementations live at numeric canonical paths; old imports use one lazy alias registry, and old Markdown paths use redirects.",
         "- Generated artifacts are canonicalized by a provenance-aware migration; generator/consumer validation remains a separate evidence gate.",
         "- Organization migration is not a scientific pass.",
         "",

@@ -23,7 +23,7 @@ def main():
     temperature = 200.
     result = protocol_response(gaps, temperature, gaps, np.ones(len(gaps)))
     state = equilibrium(gaps, temperature)
-    files = [path, Path(__file__), ROOT/'docs/core/uet_mode_work_heat.py',
+    files = [path, Path(__file__), ROOT/'docs/core/03_lanes/thermal/uet_mode_work_heat.py',
              ROOT/'docs/core/test/test_topic13_mode_work_heat.py',
              ROOT/'docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_mode_heat_addendum.json']
     artifact = dict(

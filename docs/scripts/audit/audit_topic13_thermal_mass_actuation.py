@@ -51,7 +51,7 @@ def main():
                 temperature_relative_error=abs(dt/analytic["temperature_gain"]-1)))
         rows.append(dict(T=T,**analytic,derivatives=derivatives))
     paths=["docs/scripts/audit/audit_topic13_thermal_mass_actuation.py",
-           "docs/core/test/test_topic13_thermal_mass_actuation.py","docs/core/uet_matter_strain_susceptibility.py"]
+           "docs/core/test/test_topic13_thermal_mass_actuation.py","docs/core/03_lanes/thermal/uet_matter_strain_susceptibility.py"]
     artifact=dict(major_result_id="T13_THERMAL_MASS_SOURCE_STATIC_RESPONSE",topic="0.13",closure_level="PARTIAL",
         equation_or_mapping="A*phi-eta*(F_x(T+dT,x+u-eta*phi)-F_x(T,x))=0; A_eff=A+eta^2*F_xx; dphi/du=eta*F_xx/A_eff; dphi/dT=eta*F_xT/A_eff",
         units="u,x energy^2; phi,T,eta energy; A,A_eff energy^2; F energy^4",

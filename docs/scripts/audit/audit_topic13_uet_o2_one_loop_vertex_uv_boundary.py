@@ -26,9 +26,9 @@ from docs.core.uet_o2_finite_temperature_quasiparticle_eos import (  # noqa: E40
 
 
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_one_loop_vertex_uv_boundary_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_one_loop_vertex_uv_boundary.py"
-TREE_LEVEL_MODULE = ROOT / "docs/core/uet_o2_tree_level_bs_sk_match.py"
-KMS_MODULE = ROOT / "docs/core/uet_o2_equilibrium_kms.py"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_one_loop_vertex_uv_boundary.py"
+TREE_LEVEL_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_tree_level_bs_sk_match.py"
+KMS_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_equilibrium_kms.py"
 UV_BOUNDARY_ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_one_loop_uv_boundary_audit.json"
 
 
@@ -107,9 +107,9 @@ def main() -> int:
         "BLOCKED_ACTION_DERIVED_O2_ONE_LOOP_VERTEX_UV_BOUNDARY"
     )
     evidence = [
-        {"path": "docs/core/uet_o2_one_loop_vertex_uv_boundary.py", "sha256": sha256(MODULE)},
-        {"path": "docs/core/uet_o2_tree_level_bs_sk_match.py", "sha256": sha256(TREE_LEVEL_MODULE)},
-        {"path": "docs/core/uet_o2_equilibrium_kms.py", "sha256": sha256(KMS_MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_one_loop_vertex_uv_boundary.py", "sha256": sha256(MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_tree_level_bs_sk_match.py", "sha256": sha256(TREE_LEVEL_MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_equilibrium_kms.py", "sha256": sha256(KMS_MODULE)},
         {"path": "docs/core/07_artifacts/topic13/t13_uet_o2_one_loop_uv_boundary_audit.json", "sha256": sha256(UV_BOUNDARY_ARTIFACT)},
     ]
     artifact = {

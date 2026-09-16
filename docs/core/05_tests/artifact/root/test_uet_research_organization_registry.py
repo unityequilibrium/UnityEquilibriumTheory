@@ -8,11 +8,16 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACTS = ROOT / "docs" / "core" / "artifacts"
+ARTIFACTS = ROOT / "docs" / "core" / "07_artifacts"
 
 
 def load(name: str) -> dict:
-    return json.loads((ARTIFACTS / name).read_text(encoding="utf-8"))
+    candidates = {
+        "uet_research_organization_registry.json": ARTIFACTS / "gates" / name,
+        "uet_core_organization_audit.json": ARTIFACTS / "gates" / name,
+        "uet_core_file_migration_map.json": ARTIFACTS / "archive" / name,
+    }
+    return json.loads(candidates[name].read_text(encoding="utf-8"))
 
 
 def test_registry_has_one_owner_and_role_per_file() -> None:
@@ -58,7 +63,7 @@ def test_migration_map_preserves_current_paths_and_does_not_move_files() -> None
     }
     for item in migration["files"]:
         assert item["current_path"].startswith("docs/core/")
-        assert item["target_path"].startswith("docs/core/")
+        assert item["target_path"].startswith(("docs/core/", "docs/scripts/core/"))
         assert item["compatibility_plan"]
 
 

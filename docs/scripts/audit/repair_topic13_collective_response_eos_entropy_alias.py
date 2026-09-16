@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-TARGET = ROOT / "docs/core/thermal_collective_response_eos.py"
+TARGET = ROOT / "docs/core/03_lanes/thermal/thermal_collective_response_eos.py"
 
 
 def main() -> int:

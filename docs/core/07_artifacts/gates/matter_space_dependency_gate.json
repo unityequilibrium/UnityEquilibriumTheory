@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "matter_space_dependency_gate",
-  "generated_at": "2026-07-26T05:05:10.868508+00:00",
+  "generated_at": "2026-09-16T10:09:35.864256+00:00",
   "status": "BLOCKED",
   "core_verification_status": "FAIL",
   "controlling_blocker": "prearrival_leakage",
@@ -27,24 +27,6 @@
     "0.17_Mass_Generation",
     "0.20_Atomic_Physics"
   ],
-  "causal_lane_decision": {
-    "conserved_C_lane": {
-      "status": "BLOCKED_FOR_CHANGING_C_FINITE_CONE",
-      "controller": "conserved_C_gradient_term_has_unbounded_k4_characteristic_speed",
-      "allowed_role": "normalized_conserved_phase_comparator"
-    },
-    "finite_cone_C_lane": {
-      "status": "CANDIDATE",
-      "operator_mode": "matter_space_finite_cone_c_v1",
-      "controller": "numerical_compact_support_not_yet_closed",
-      "allowed_role": "normalized_nonconserved_collective_response candidate"
-    },
-    "conserved_Cattaneo_branch": {
-      "status": "BLOCKED",
-      "controller": "high_k_group_speed_unbounded_when_kappa_C_positive",
-      "allowed_role": "negative control until UV/nonlocal regularization"
-    }
-  },
   "blocked_claims": [
     "space response as established spacetime geometry",
     "antimatter, positron, neutrino, or Dirac derivation",

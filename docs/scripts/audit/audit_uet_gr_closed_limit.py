@@ -38,14 +38,19 @@ from docs.core.uet_covariant_response import (  # noqa: E402
     response_stress_tensor,
     uet_metric_residual,
 )
+from docs.core.core_paths import canonical_artifact_path, canonical_existing_path  # noqa: E402
 
 from docs.scripts.audit.uet_gr_monotonic_stage import (  # noqa: E402
     apply_latest_hyperbolic_phase_field_stage,
 )
 
-CORE = ROOT / "docs/core/uet_covariant_response.py"
-SPEC = ROOT / "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
-OUT = ROOT / "docs/core/artifacts"
+CORE = canonical_existing_path(ROOT / "docs/core/02_equations/covariant/uet_covariant_response.py")
+SPEC = canonical_existing_path(ROOT / "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md")
+OUT = ROOT / "docs/core/07_artifacts"
+
+
+def _artifact(name: str) -> Path:
+    return canonical_artifact_path(name)
 
 
 def _sha(path: Path) -> str:
@@ -53,8 +58,9 @@ def _sha(path: Path) -> str:
 
 
 def _dump(name: str, payload: dict[str, Any]) -> None:
-    OUT.mkdir(parents=True, exist_ok=True)
-    (OUT / name).write_text(
+    path = _artifact(name)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
         json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
 
@@ -216,7 +222,7 @@ def build_artifacts() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
     symbolic, numeric, dimensions = _symbolic(), _numeric(), _dimension_audit()
     denominator_lines = _epsilon_denominators(source)
     contract = model_contract()
-    balance_path = OUT / "covariant_bianchi_exchange_verification.json"
+    balance_path = _artifact("covariant_bianchi_exchange_verification.json")
     balance_status = "NOT_RUN"
     if balance_path.exists():
         try:
@@ -224,7 +230,7 @@ def build_artifacts() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
         except (OSError, json.JSONDecodeError):
             balance_status = "FAIL"
     balance_passed = balance_status == "PASS"
-    causal_path = OUT / "causal_nonclosed_kernel_verification.json"
+    causal_path = _artifact("causal_nonclosed_kernel_verification.json")
     causal_status = "NOT_RUN"
     if causal_path.exists():
         try:
@@ -232,7 +238,7 @@ def build_artifacts() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
         except (OSError, json.JSONDecodeError):
             causal_status = "FAIL"
     causal_passed = causal_status == "PASS"
-    reduction_path = OUT / "covariant_matter_space_reduction_verification.json"
+    reduction_path = _artifact("covariant_matter_space_reduction_verification.json")
     reduction_status = "NOT_RUN"
     reduction_evidence = "MISSING"
     if reduction_path.exists():
@@ -244,7 +250,7 @@ def build_artifacts() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
     reduction_passed = (
         reduction_status == "PASS" and reduction_evidence == "PARTIAL"
     )
-    matter_path = OUT / "covariant_matter_action_verification.json"
+    matter_path = _artifact("covariant_matter_action_verification.json")
     matter_status = "NOT_RUN"
     matter_evidence = "MISSING"
     if matter_path.exists():
@@ -255,7 +261,7 @@ def build_artifacts() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
         except (OSError, json.JSONDecodeError):
             matter_status, matter_evidence = "FAIL", "BLOCKED"
     matter_passed = matter_status == "PASS" and matter_evidence == "PARTIAL"
-    diffusion_path = OUT / "covariant_diffusive_current_verification.json"
+    diffusion_path = _artifact("covariant_diffusive_current_verification.json")
     diffusion_status = "NOT_RUN"
     diffusion_evidence = "MISSING"
     if diffusion_path.exists():
@@ -317,7 +323,7 @@ def build_artifacts() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
         "unit_lane": "natural", "dimension_audit": dimensions,
         "epsilon_denominator_lines": denominator_lines,
         "formula_registry": [
-            {"id": item[0], "status": "IMPLEMENTED", "implementation": f"docs/core/uet_covariant_response.py::{item[1]}", "derivation_status": item[2]}
+            {"id": item[0], "status": "IMPLEMENTED", "implementation": f"docs/core/02_equations/covariant/uet_covariant_response.py::{item[1]}", "derivation_status": item[2]}
             for item in registry
         ],
         "coefficient_policy": {"defaults_are_physical_constants": False, "epsilon_is_open_percentage": False, "rho_star_maps_to_lambda_eff": True},

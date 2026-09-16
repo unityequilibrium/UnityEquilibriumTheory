@@ -24,7 +24,7 @@ from docs.core.uet_matter_space_flux_telegraph import (  # noqa: E402
 
 
 OUT = ROOT / "docs/core/07_artifacts/verification/matter_space_conserved_flux_telegraph_verification.json"
-CORE_SOURCE = ROOT / "docs/core/uet_matter_space_flux_telegraph.py"
+CORE_SOURCE = ROOT / "docs/core/02_equations/matter_space/uet_matter_space_flux_telegraph.py"
 
 
 def sha256(path: Path) -> str:
@@ -232,7 +232,7 @@ def build_report() -> dict[str, Any]:
             "xie_2026_accessed": False,
         },
         "evidence_inputs": {
-            "implementation": "docs/core/uet_matter_space_flux_telegraph.py",
+            "implementation": "docs/core/02_equations/matter_space/uet_matter_space_flux_telegraph.py",
             "implementation_sha256": sha256(CORE_SOURCE),
             "baseline_no_go": "docs/core/07_artifacts/archive/conserved_c_finite_cone_no_go_assessment.json",
         },

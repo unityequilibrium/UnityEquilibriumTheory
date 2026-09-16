@@ -19,7 +19,7 @@ from pathlib import Path
 project_root = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(project_root))
 
-from docs.core.uet_glass_box import UETPathManager, UETMetricLogger
+from docs.scripts.core.runners.uet_glass_box import UETPathManager, UETMetricLogger
 
 
 def main():

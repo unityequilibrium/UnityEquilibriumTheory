@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "covariant_matter_action_verification",
-  "generated_at": "2026-07-22T13:43:39.341257+00:00",
+  "generated_at": "2026-09-16T10:00:23.482426+00:00",
   "audit_status": "PASS",
   "evidence_status": "PARTIAL",
   "claim_class": "B",
@@ -32,7 +32,7 @@
     "on_shell_matter_eom_max_abs": 0.0,
     "on_shell_current_divergence_abs": 0.0,
     "current_vector_transform_max_abs_error": 6.938893903907228e-18,
-    "action_density_weight_abs_error": 0.0,
+    "action_density_weight_abs_error": 1.3877787807814457e-17,
     "gr_limit_componentwise_max_abs_residual": 0.0,
     "gr_limit_interaction": -0.0,
     "gr_limit_response_equation": 0.0,
@@ -94,8 +94,8 @@
     "particle_or_antimatter_identity": "BLOCKED"
   },
   "source_hashes": {
-    "docs\\core\\uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
-    "docs\\core\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "7762422a01348233ecbd532d166be6cc675ac94b8a11b1f960fd0fe0527a0ddb"
+    "docs\\core\\02_equations\\covariant\\uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+    "docs\\core\\01_contracts\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "1609cfdada2ad9e67ebcb8e9ae53f2f3f035fdc70469424e486eb3f7e53c1f86"
   },
   "run_contract": {
     "seed": 190051,

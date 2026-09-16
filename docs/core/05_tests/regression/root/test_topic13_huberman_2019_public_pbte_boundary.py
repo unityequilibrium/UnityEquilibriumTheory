@@ -1,12 +1,14 @@
 from __future__ import annotations
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import canonical_artifact_path, repo_root
 
 import json
 from pathlib import Path
 
 
 ROOT = (repo_root() / "docs")
-ARTIFACT = ROOT / "core/artifacts/t13_huberman_2019_public_pbte_boundary_audit.json"
+ARTIFACT = canonical_artifact_path(
+    "t13_huberman_2019_public_pbte_boundary_audit.json"
+)
 
 
 def test_huberman_public_pbte_boundary_is_source_locked_without_accepted_payload() -> None:

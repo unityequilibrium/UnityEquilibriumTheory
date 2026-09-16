@@ -27,9 +27,9 @@ OUT = ROOT / (
     "docs/core/artifacts/"
     "t13_uet_o2_finite_temperature_declared_retarded_1pi_grid_audit.json"
 )
-MODULE = ROOT / "docs/core/uet_o2_finite_temperature_declared_retarded_1pi_grid.py"
-ONE_TO_THREE = ROOT / "docs/core/uet_o2_finite_temperature_sunset_sk_kms.py"
-TWO_TO_TWO = ROOT / "docs/core/uet_o2_finite_temperature_sunset_scattering_sk_kms.py"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_declared_retarded_1pi_grid.py"
+ONE_TO_THREE = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_sk_kms.py"
+TWO_TO_TWO = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_scattering_sk_kms.py"
 
 
 def sha256(path: Path) -> str:

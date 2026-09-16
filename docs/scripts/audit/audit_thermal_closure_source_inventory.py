@@ -32,7 +32,7 @@ SOURCE_SPECS = [
     {
         "id": "o2_finite_density_eos",
         "relation": "tree-level finite-density O(2) equilibrium EOS",
-        "source_paths": ["docs/core/uet_o2_finite_density_eos.py"],
+        "source_paths": ["docs/core/02_equations/o2/uet_o2_finite_density_eos.py"],
         "native_variable": "signed global O(2) Noether charge density",
         "unit_lane": "natural",
         "derivation_class": "tree-level equilibrium derivation",
@@ -40,7 +40,7 @@ SOURCE_SPECS = [
         "can_define_a_Phi_T": False,
         "reason": "The contract explicitly marks the finite-temperature normal component as NOT_DERIVED.",
         "markers": {
-            "docs/core/uet_o2_finite_density_eos.py": [
+            "docs/core/02_equations/o2/uet_o2_finite_density_eos.py": [
                 '"finite_temperature_normal_component": "NOT_DERIVED"',
                 '"transport_coefficients": "NOT_DERIVED_FROM_CONSERVATIVE_ACTION"',
             ]

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_downstream_unlock_gate",
-  "generated_at": "2026-08-09T04:12:26.805624+00:00",
+  "generated_at": "2026-09-16T10:26:03.295375+00:00",
   "audit_status": "PASS",
   "decisions": {
     "thermal_internal_diagnostic": {
@@ -12,9 +12,9 @@
     "thermal_external_comparison": {
       "status": "BLOCKED",
       "controller": [
-        "thermal_numeric_source_package_missing",
-        "alpha_phi_k_independent_calibration_missing",
-        "thermal_prearrival_leakage_gate_failed"
+        "legacy_graphite_ttg_numeric_source_package_missing",
+        "legacy_graphite_alpha_phi_k_independent_calibration_missing",
+        "legacy_graphite_thermal_prearrival_leakage_gate_failed"
       ],
       "allowed": "source metadata and normalized observable definition only"
     },
@@ -76,10 +76,10 @@
   },
   "input_identity": {
     "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_matter_space_phase_coupling_diagnostic.json": "60603592d00c7a1bd857fda8e06531cd3bd0d70031400a943e5d3033df87f679",
-    "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json": "e0c5c507dcaa4545c02d06ab7b67d7d0d1d9b9b7ee7de395eb78048a5a08bdca",
-    "docs/core/artifacts/uet_main_theory_wave8_gate.json": "0d4b471f5695681c6781796da448f63ab652e582f7835e628522f97689d63a0d",
-    "docs/core/artifacts/uet_main_theory_wave9_gate.json": "c05647bc7c6658e2b4ebddd70f5bd3179a0a54e82a56788f80839095c7121c11",
-    "docs/core/artifacts/uet_fundamental_track_gate.json": "b84cdf66ec44b08758ce2771948c873fc7b9a447ee36ca1607c98bd8f6760071"
+    "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json": "a360eea9e257b7846eabaebeab6f20c00b658da7b432aec7c1e94d9449c041a4",
+    "docs/core/07_artifacts/gates/uet_main_theory_wave8_gate.json": "d3778d5e446f33eef448a0ee1945af131bc7e4a370c26ffed33083711fd03cdd",
+    "docs/core/07_artifacts/gates/uet_main_theory_wave9_gate.json": "3859f35ace966ac0d181b0456dc5a15f44e3cdcbcaa3e4b9f64e052b4d7c102e",
+    "docs/core/07_artifacts/gates/uet_fundamental_track_gate.json": "97a65eb3fd0d6a5c71a338e79454eb6c2869408be6a87808b5b6d8e0bfa8a43d"
   },
   "unlock_order": [
     "thermal/phase internal pilots",

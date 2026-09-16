@@ -93,4 +93,10 @@ def test_major_result_register_contains_ding_mapping_without_unlocking_core() ->
         "dependency_unlocked"
     ]
     assert register["claim_promotion"] is False
-    assert register["next_major_result"] == "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"
+    next_result = register["next_major_result"]
+    assert next_result["major_result_id"] == "T13_DIMENSIONAL_PHI_ENERGY_ANCHOR"
+    assert next_result["topic"] == "0.13_Thermodynamic_Bridge"
+    assert next_result["controlling_blocker"] == (
+        "base_Phi_to_Delta_u_ph_energy_anchor_and_independent_alpha_Phi_K_missing"
+    )
+    assert "no TTG fit" in next_result["source_route"]

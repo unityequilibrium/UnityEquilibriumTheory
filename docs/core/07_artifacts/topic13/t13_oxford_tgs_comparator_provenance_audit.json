@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-oxford-tgs-comparator-provenance-audit-v1",
   "artifact": "t13_oxford_tgs_comparator_provenance_audit",
-  "generated_at": "2026-08-30",
+  "generated_at": "2026-09-17",
   "status": "PASS_OXFORD_TGS_PROVENANCE_ARCHIVE_LOCKED_EXTRACTION_PENDING",
   "claim_promotion": false,
   "major_result": {
@@ -31,7 +31,7 @@
         "sha256": "39b727c9023ebc7d008e1cef3d32c47e9e2c812bd0030067f9c87d6705a91307"
       },
       {
-        "path": "docs/core/artifacts/t13_oxford_tgs_comparator_provenance_audit.json"
+        "path": "docs/core/07_artifacts/topic13/t13_oxford_tgs_comparator_provenance_audit.json"
       }
     ],
     "verification_status": "PASS_OXFORD_TGS_PROVENANCE_ARCHIVE_LOCKED_EXTRACTION_PENDING",

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "hyperbolic_phase_field_external_comparator_verification",
-  "generated_at": "2026-09-15T01:36:35.495926+00:00",
+  "generated_at": "2026-09-16T17:50:24.224686+00:00",
   "audit_status": "PASS",
   "evidence_status": "PARTIAL_EXTERNAL_COMPARATOR",
   "claim_class": "B",
@@ -184,10 +184,10 @@
     "physical_validation": "BLOCKED"
   },
   "source_hashes": {
-    "docs\\core\\uet_hyperbolic_phase_field.py": "f03b8907a606f3b8937556c32ea5f01d9880787aba193edccf53ffa5f1fbb74a",
-    "docs\\core\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "1609cfdada2ad9e67ebcb8e9ae53f2f3f035fdc70469424e486eb3f7e53c1f86",
+    "docs\\core\\02_equations\\matter_space\\uet_hyperbolic_phase_field.py": "f03b8907a606f3b8937556c32ea5f01d9880787aba193edccf53ffa5f1fbb74a",
+    "docs\\core\\01_contracts\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "1609cfdada2ad9e67ebcb8e9ae53f2f3f035fdc70469424e486eb3f7e53c1f86",
     "docs\\data\\external\\condensed_matter\\phase_transitions\\hyperbolic_cahn_hilliard\\dhaouadi_dumbser_gavrilyuk_2025\\source_record.json": "8751305c6296e3fa70f12dc9723e174e56710296d42298dcf0e2f3ccfe09e574",
-    "docs\\core\\artifacts\\covariant_diffusive_current_verification.json": "32248848918ea32dc7549dfb979f2cbcb36207fc7093f379c41c573c725ff5db"
+    "docs\\core\\07_artifacts\\verification\\covariant_diffusive_current_verification.json": "c0ea1e5cb0a836c9d80c36893bff91337657c9e237e277dda0add8aaa865c4b3"
   },
   "run_contract": {
     "seed": 719061,

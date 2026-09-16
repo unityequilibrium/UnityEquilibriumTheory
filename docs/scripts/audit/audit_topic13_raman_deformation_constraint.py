@@ -19,8 +19,8 @@ SOURCE = 'docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/hanfland_1989_r
 OUTPUT = 'docs/core/07_artifacts/topic13/t13_raman_deformation_constraint_audit.json'
 REGISTRY = 'docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_raman_deformation_addendum.json'
 ID = 'uet.thermal.raman_mass_deformation_constraint'
-EVIDENCE = [SOURCE, 'docs/core/T13_RAMAN_DEFORMATION_CONSTRAINT.md',
-            'docs/core/uet_raman_deformation_constraint.py',
+EVIDENCE = [SOURCE, 'docs/core/03_lanes/topic13_support/T13_RAMAN_DEFORMATION_CONSTRAINT.md',
+            'docs/core/03_lanes/thermal/uet_raman_deformation_constraint.py',
             'docs/core/test/test_topic13_raman_deformation_constraint.py',
             'docs/scripts/audit/audit_topic13_raman_deformation_constraint.py']
 PROTECTED = ['docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json',

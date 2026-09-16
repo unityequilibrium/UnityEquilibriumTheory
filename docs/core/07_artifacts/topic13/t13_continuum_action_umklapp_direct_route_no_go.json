@@ -139,17 +139,17 @@
   ],
   "controlling_blocker": "explicit_material_lattice_interface_or_periodic_background_missing",
   "source_hashes": {
-    "docs/core/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
-    "docs/core/uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
-    "docs/core/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d",
-    "docs/scripts/audit/audit_topic13_action_normalized_elastic_scattering.py": "c09fbdd4d921c2c9ea1ba578c27935887900545725c978015104e9d4594a258b",
-    "docs/core/uet_o2_invariant_galerkin_collision_operator.py": "278b168e5c3b444ac4df4b96b5a7d00410cd9485c511ab2a17aa4f11c6f6d94e",
-    "docs/scripts/audit/audit_topic13_continuum_action_umklapp_no_go.py": "d709df7c040fef150f592378146146f1729a2835ad81a76974c74a50d2d76964",
-    "docs/core/test/test_topic13_continuum_action_umklapp_no_go.py": "43aa24498e280139c023c690d3f6dcfa0282a9b04c77c07a783c2616c7087886"
+    "docs/core/02_equations/covariant/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+    "docs/core/02_equations/covariant/uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
+    "docs/core/02_equations/o2/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d",
+    "docs/scripts/audit/audit_topic13_action_normalized_elastic_scattering.py": "f41e1ef74c03266c6beffa013edf591a9c976854dca2a813227f91575af40089",
+    "docs/core/02_equations/o2/uet_o2_invariant_galerkin_collision_operator.py": "278b168e5c3b444ac4df4b96b5a7d00410cd9485c511ab2a17aa4f11c6f6d94e",
+    "docs/scripts/audit/audit_topic13_continuum_action_umklapp_no_go.py": "6a93f5f8c16c1ab953a42557b2bc878dcccdec3625a9cb524a7ef1ae23387c63",
+    "docs/core/05_tests/equation/root/test_topic13_continuum_action_umklapp_no_go.py": "b9bd9b8b9717bbbc28878cf61d88df540747426870d29c219282f544a7d70e25"
   },
   "evidence_artifacts": [
     {
-      "path": "docs/core/artifacts/t13_lattice_momentum_relaxing_heat_parent_audit.json",
+      "path": "docs/core/07_artifacts/topic13/t13_lattice_momentum_relaxing_heat_parent_audit.json",
       "sha256": "6974fb64948fc38cc831ac6e53474b6ab22f10b30a32fa53ea67d854b0116f21"
     }
   ],

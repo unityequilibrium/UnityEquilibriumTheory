@@ -25,8 +25,8 @@ from docs.core.thermal_collective_response_eos import (
 from docs.core.thermal_response_beta_contract import ThermalResponseBetaInputs
 
 
-EOS_REL = "docs/core/thermal_collective_response_eos.py"
-BETA_REL = "docs/core/thermal_response_beta_contract.py"
+EOS_REL = "docs/core/03_lanes/thermal/thermal_collective_response_eos.py"
+BETA_REL = "docs/core/03_lanes/thermal/thermal_response_beta_contract.py"
 BETA_AUDIT_REL = "docs/core/07_artifacts/topic13/t13_thermal_response_beta_contract_audit.json"
 THERMAL_AUDIT_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/thermal_closure_derivation_audit.json"
 FORMULA_REL = "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md"

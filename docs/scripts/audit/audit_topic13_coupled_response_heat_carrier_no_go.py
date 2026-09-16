@@ -181,8 +181,8 @@ def main() -> int:
         "docs/scripts/audit/audit_topic13_coupled_response_heat_carrier_no_go.py",
         "docs/core/test/test_topic13_coupled_response_heat_carrier_no_go.py",
         "docs/scripts/audit/audit_topic13_coupled_gain_loss_operator.py",
-        "docs/core/uet_o2_finite_temperature_normal_component.py",
-        "docs/core/uet_o2_finite_temperature_two_fluid_response.py",
+        "docs/core/02_equations/o2/uet_o2_finite_temperature_normal_component.py",
+        "docs/core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py",
     ]
     priors = [
         "docs/core/07_artifacts/topic13/t13_coupled_gain_loss_operator_audit.json",

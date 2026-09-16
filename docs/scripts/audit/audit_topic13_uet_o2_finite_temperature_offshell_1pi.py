@@ -23,10 +23,10 @@ from docs.core.uet_o2_finite_temperature_offshell_1pi import (  # noqa: E402
 
 
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_offshell_1pi_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_finite_temperature_offshell_1pi.py"
-TENSOR = ROOT / "docs/core/uet_o2_action_1pi_sunset_tensor.py"
-EUCLIDEAN = ROOT / "docs/core/uet_o2_action_1pi_sunset_euclidean.py"
-FULL_CUT = ROOT / "docs/core/uet_o2_finite_temperature_full_sunset_sk_kms.py"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_offshell_1pi.py"
+TENSOR = ROOT / "docs/core/02_equations/o2/uet_o2_action_1pi_sunset_tensor.py"
+EUCLIDEAN = ROOT / "docs/core/02_equations/o2/uet_o2_action_1pi_sunset_euclidean.py"
+FULL_CUT = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_full_sunset_sk_kms.py"
 
 
 def sha256(path: Path) -> str:
@@ -74,10 +74,10 @@ def main() -> int:
     failed = [key for key, value in checks.items() if not value]
     status = FINITE_T_OFFSHELL_1PI_STATUS if not failed else "BLOCKED_ACTION_DERIVED_O2_FINITE_T_OFFSHELL_1PI_FORMAL_LANE"
     evidence = [
-        {"path": "docs/core/uet_o2_finite_temperature_offshell_1pi.py", "sha256": sha256(MODULE)},
-        {"path": "docs/core/uet_o2_action_1pi_sunset_tensor.py", "sha256": sha256(TENSOR)},
-        {"path": "docs/core/uet_o2_action_1pi_sunset_euclidean.py", "sha256": sha256(EUCLIDEAN)},
-        {"path": "docs/core/uet_o2_finite_temperature_full_sunset_sk_kms.py", "sha256": sha256(FULL_CUT)},
+        {"path": "docs/core/02_equations/o2/uet_o2_finite_temperature_offshell_1pi.py", "sha256": sha256(MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_action_1pi_sunset_tensor.py", "sha256": sha256(TENSOR)},
+        {"path": "docs/core/02_equations/o2/uet_o2_action_1pi_sunset_euclidean.py", "sha256": sha256(EUCLIDEAN)},
+        {"path": "docs/core/02_equations/o2/uet_o2_finite_temperature_full_sunset_sk_kms.py", "sha256": sha256(FULL_CUT)},
     ]
     open_blockers = [
         "unique_physical_renormalization_scheme_match_missing",

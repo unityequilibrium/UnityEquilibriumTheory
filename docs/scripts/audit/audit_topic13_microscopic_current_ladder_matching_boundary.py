@@ -155,10 +155,10 @@ def main():
     paths = ["docs/scripts/audit/audit_topic13_microscopic_current_ladder_matching_boundary.py",
              "docs/core/test/test_topic13_microscopic_current_ladder_matching_boundary.py",
              "docs/scripts/audit/audit_topic13_charged_one_loop_current_vertex.py",
-             "docs/core/uet_o2_charged_current_correlator.py",
-             "docs/core/uet_o2_continuum_collision_operator.py",
-             "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
-             "docs/core/uet_o2_heat_current_kubo_match.py"]
+             "docs/core/02_equations/o2/uet_o2_charged_current_correlator.py",
+             "docs/core/02_equations/o2/uet_o2_continuum_collision_operator.py",
+             "docs/core/02_equations/o2/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+             "docs/core/02_equations/o2/uet_o2_heat_current_kubo_match.py"]
     sha = lambda p: hashlib.sha256((ROOT / p).read_bytes()).hexdigest()
     prior_paths = ["docs/core/07_artifacts/topic13/t13_charged_one_loop_current_vertex_audit.json",
                    "docs/core/07_artifacts/topic13/t13_charged_static_confluent_vertex_audit.json"]

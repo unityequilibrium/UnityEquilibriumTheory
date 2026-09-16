@@ -32,12 +32,13 @@ from docs.core.uet_matter_space import (  # noqa: E402
 )
 from docs.core.uet_spatial import integral_1d, laplacian_1d  # noqa: E402
 from docs.core.uet_trace import TraceKernelConfig  # noqa: E402
+from docs.core.core_paths import canonical_artifact_path  # noqa: E402
 
-ARTIFACT_DIR = REPO_ROOT / "docs" / "core" / "artifacts"
-VERIFICATION_PATH = ARTIFACT_DIR / "matter_space_variational_verification.json"
-DEPENDENCY_PATH = ARTIFACT_DIR / "matter_space_dependency_gate.json"
-ALIGNMENT_PATH = ARTIFACT_DIR / "master_equation_alignment_gate_v2.json"
-FORMULA_AUDIT_PATH = ARTIFACT_DIR / "matter_space_formula_audit.json"
+ARTIFACT_DIR = REPO_ROOT / "docs" / "core" / "07_artifacts"
+VERIFICATION_PATH = canonical_artifact_path("matter_space_variational_verification.json", "verification")
+DEPENDENCY_PATH = canonical_artifact_path("matter_space_dependency_gate.json", "gates")
+ALIGNMENT_PATH = canonical_artifact_path("master_equation_alignment_gate_v2.json", "gates")
+FORMULA_AUDIT_PATH = canonical_artifact_path("matter_space_formula_audit.json", "correspondence")
 
 THRESHOLDS = {
     "local_derivative_absolute_residual_max": 1e-10,

@@ -1,14 +1,15 @@
 """Regression checks for the row-complete F2 correspondence manifest."""
 
 from __future__ import annotations
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import canonical_artifact_path
 
 import json
 from pathlib import Path
 
 
-ROOT = repo_root() / "docs/core"
-ARTIFACT = ROOT / "artifacts/uet_topic_formula_correspondence_manifest.json"
+ARTIFACT = canonical_artifact_path(
+    "uet_topic_formula_correspondence_manifest.json", "provenance"
+)
 
 
 def load() -> dict:

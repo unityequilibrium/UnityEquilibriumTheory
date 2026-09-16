@@ -209,9 +209,9 @@ def main():
     paths=["docs/scripts/audit/audit_topic13_charged_one_loop_current_vertex.py",
         "docs/core/test/test_topic13_charged_one_loop_current_vertex.py",
         "docs/scripts/audit/audit_topic13_charged_one_loop_match.py",
-        "docs/core/uet_o2_tree_level_charged_ward_vertex.py",
-        "docs/core/uet_o2_finite_density_charged_vertex.py",
-        "docs/core/uet_o2_charged_current_correlator.py"]
+        "docs/core/02_equations/o2/uet_o2_tree_level_charged_ward_vertex.py",
+        "docs/core/02_equations/o2/uet_o2_finite_density_charged_vertex.py",
+        "docs/core/02_equations/o2/uet_o2_charged_current_correlator.py"]
     sha=lambda p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest()
     prior="docs/core/07_artifacts/topic13/t13_charged_one_loop_match_audit.json"
     artifact={"schema_version":"t13-charged-one-loop-current-vertex-v1",

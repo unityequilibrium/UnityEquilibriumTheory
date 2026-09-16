@@ -4,19 +4,24 @@ from __future__ import annotations
 
 import hashlib
 import json
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
-ARTIFACTS = ROOT / "docs/core/artifacts"
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+from docs.core.core_paths import canonical_artifact_path
+
+ARTIFACTS = ROOT / "docs/core/07_artifacts"
 
 
 def _read(name: str) -> dict:
-    return json.loads((ARTIFACTS / name).read_text(encoding="utf-8"))
+    return json.loads(canonical_artifact_path(name).read_text(encoding="utf-8"))
 
 
 def _sha(name: str) -> str:
-    return hashlib.sha256((ARTIFACTS / name).read_bytes()).hexdigest()
+    return hashlib.sha256(canonical_artifact_path(name).read_bytes()).hexdigest()
 
 
 def build_artifacts() -> tuple[dict, dict]:
@@ -78,7 +83,9 @@ def build_artifacts() -> tuple[dict, dict]:
 def main() -> int:
     inventory, gate = build_artifacts()
     for name, payload in (("uet_fundamental_symmetry_inventory.json", inventory), ("uet_fundamental_track_gate.json", gate), ("uet_main_theory_wave10_gate.json", {**gate, "artifact": "uet_main_theory_wave10_gate", "upstream_gate": "uet_main_theory_ontology_gate.json"})):
-        (ARTIFACTS / name).write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        canonical_artifact_path(name).write_text(
+            json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        )
     print(f"audit_status={gate['audit_status']}")
     print(f"fundamental_unification_status={gate['fundamental_unification_status']}")
     print("controlling_blockers=" + ",".join(gate["controlling_blockers"]))

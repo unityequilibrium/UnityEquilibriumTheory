@@ -8,11 +8,18 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACTS = ROOT / "docs" / "core" / "artifacts"
+ARTIFACTS = ROOT / "docs" / "core" / "07_artifacts"
 
 
 def load_json(name: str) -> dict:
-    return json.loads((ARTIFACTS / name).read_text(encoding="utf-8"))
+    if name.startswith("../"):
+        return json.loads((ARTIFACTS / name).resolve().read_text(encoding="utf-8"))
+    candidates = {
+        "uet_research_organization_registry.json": ARTIFACTS / "gates" / name,
+        "uet_core_organization_audit.json": ARTIFACTS / "gates" / name,
+        "uet_core_file_migration_map.json": ARTIFACTS / "archive" / name,
+    }
+    return json.loads(candidates[name].read_text(encoding="utf-8"))
 
 
 def test_organization_registry_covers_review_queue_without_promoting_physics() -> None:

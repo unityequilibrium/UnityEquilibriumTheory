@@ -135,11 +135,11 @@ def main():
                 and vertex["derivative_verification_pass"])
     contract = kinetic_collision_contract()
     paths = (
-        "docs/core/uet_o2_kinetic_collision_kubo.py",
-        "docs/core/uet_covariant_matter.py",
-        "docs/core/uet_o2_one_loop_vertex_uv_boundary.py",
-        "docs/core/uet_o2_contact_sk_transition_vertex_match.py",
-        "docs/core/uet_o2_tree_level_bs_sk_match.py",
+        "docs/core/02_equations/o2/uet_o2_kinetic_collision_kubo.py",
+        "docs/core/02_equations/covariant/uet_covariant_matter.py",
+        "docs/core/02_equations/o2/uet_o2_one_loop_vertex_uv_boundary.py",
+        "docs/core/02_equations/o2/uet_o2_contact_sk_transition_vertex_match.py",
+        "docs/core/02_equations/o2/uet_o2_tree_level_bs_sk_match.py",
         "docs/scripts/audit/audit_topic13_kinetic_canonical_action_match.py",
         "docs/core/test/test_topic13_kinetic_canonical_normalization.py",
     )

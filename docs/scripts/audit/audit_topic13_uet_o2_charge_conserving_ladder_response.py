@@ -24,9 +24,9 @@ from docs.core.uet_o2_finite_temperature_quasiparticle_eos import (  # noqa: E40
 
 
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_charge_conserving_ladder_response_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_charge_conserving_ladder_response.py"
-COLLISION_MODULE = ROOT / "docs/core/uet_o2_kinetic_collision_kubo.py"
-EOS_MODULE = ROOT / "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_charge_conserving_ladder_response.py"
+COLLISION_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_kinetic_collision_kubo.py"
+EOS_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py"
 
 
 def sha256(path: Path) -> str:
@@ -152,10 +152,10 @@ def main() -> int:
         reference.retarded_response_real,
     )
     evidence = [
-        {"path": "docs/core/uet_o2_charge_conserving_ladder_response.py", "sha256": sha256(MODULE)},
-        {"path": "docs/core/uet_o2_kinetic_collision_kubo.py", "sha256": sha256(COLLISION_MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_charge_conserving_ladder_response.py", "sha256": sha256(MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_kinetic_collision_kubo.py", "sha256": sha256(COLLISION_MODULE)},
         {
-            "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+            "path": "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py",
             "sha256": sha256(EOS_MODULE),
         },
     ]

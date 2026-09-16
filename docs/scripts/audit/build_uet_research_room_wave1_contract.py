@@ -15,7 +15,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / "docs/core/07_artifacts/archive/uet_research_room_wave1_contract.json"
-BRIEF = ROOT / "docs/core/UET_RESEARCH_ROOM_BRIEF.md"
+BRIEF = ROOT / "docs/core/00_governance/UET_RESEARCH_ROOM_BRIEF.md"
 
 
 def rel(path: Path) -> str:

@@ -23,7 +23,7 @@ import importlib.util
 repo_root = _UET_REPO_ROOT
 sys.path.insert(0, str(repo_root))
 
-from docs.core.uet_bug_hunter import UETBugHunter
+from docs.scripts.core.audit.uet_bug_hunter import UETBugHunter
 
 
 def load_module(name, path):

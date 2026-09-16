@@ -37,7 +37,7 @@ def main() -> None:
             ],
         ),
         _source(
-            "docs/core/uet_matter_space.py",
+            "docs/core/02_equations/matter_space/uet_matter_space.py",
             [
                 "class MatterSpaceState",
                 "space_response",

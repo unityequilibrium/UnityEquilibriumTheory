@@ -81,7 +81,7 @@ def main():
             model_first_reciprocal_magnitude=float(np.linalg.norm(g1)),results=results))
     paths=[ip,ep,gp,PHONOPY_PATH,Path(__file__),ROOT/'docs/core/test/test_topic13_generic_q_image_support.py',
         ROOT/'docs/scripts/audit/audit_topic13_local_variance_identifiability.py',ROOT/'docs/scripts/audit/audit_topic13_energy_identifiability.py',
-        ROOT/'docs/scripts/audit/audit_topic13_finiteq_scattering_geometry.py',ROOT/'docs/core/uet_interlayer_mode_residue.py']
+        ROOT/'docs/scripts/audit/audit_topic13_finiteq_scattering_geometry.py',ROOT/'docs/core/03_lanes/thermal/uet_interlayer_mode_residue.py']
     output=dict(major_result_id='T13_GENERIC_Q_IMAGE_SUPPORT',topic='0.13',closure_level='PARTIAL',
         what_is_closed='Conditional footprint support against actual finite masks, not indexed detector inversion',
         equation_or_mapping='Model first reciprocal vector aligned to source positive detector y; mirrored x alternatives retained',

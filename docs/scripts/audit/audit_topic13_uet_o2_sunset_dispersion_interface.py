@@ -33,8 +33,8 @@ from docs.core.uet_o2_finite_density_eos import effective_mass_sq  # noqa: E402
 
 
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_sunset_dispersion_interface_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_sunset_dispersion_interface.py"
-VERIFIED_MODULE = ROOT / "docs/core/uet_o2_sunset_dispersion_interface_verified.py"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_sunset_dispersion_interface.py"
+VERIFIED_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_sunset_dispersion_interface_verified.py"
 CONTINUUM_ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_continuum_sunset_cut_audit.json"
 
 
@@ -149,8 +149,8 @@ def main() -> int:
         "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
     ]
     evidence = [
-        {"path": "docs/core/uet_o2_sunset_dispersion_interface.py", "sha256": sha256(MODULE)},
-        {"path": "docs/core/uet_o2_sunset_dispersion_interface_verified.py", "sha256": sha256(VERIFIED_MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_sunset_dispersion_interface.py", "sha256": sha256(MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_sunset_dispersion_interface_verified.py", "sha256": sha256(VERIFIED_MODULE)},
         {"path": "docs/core/07_artifacts/topic13/t13_uet_o2_continuum_sunset_cut_audit.json", "sha256": sha256(CONTINUUM_ARTIFACT)},
     ]
     closure_level = "CLOSED_FOR_LANE" if not failed else "OPEN"

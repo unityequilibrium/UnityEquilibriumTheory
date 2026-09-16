@@ -19,7 +19,7 @@ import glob
 # Add path to docs
 sys.path.append(str(core_root()))
 
-from docs.core.uet_matrix_engine import MatrixEvolution, UniverseState
+from docs.scripts.core.runners.uet_matrix_engine import MatrixEvolution, UniverseState
 
 
 def load_sparc_data(galaxy_name="NGC6503"):

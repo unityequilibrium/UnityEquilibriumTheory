@@ -189,7 +189,7 @@ def main() -> int:
     independent = independent_cross_section_witness()
     conjugation = charge_conjugation_witness()
     contract = same_kernel_tagged_width_contract()
-    source_text = (ROOT / "docs/core/uet_o2_same_kernel_tagged_width.py").read_text(encoding="utf-8")
+    source_text = (ROOT / "docs/core/02_equations/o2/uet_o2_same_kernel_tagged_width.py").read_text(encoding="utf-8")
     loss_widths = np.asarray(reference.total_widths_by_tag_momentum)
     gain_widths = np.asarray(reference.total_gain_widths_by_tag_momentum)
     retarded_widths = np.asarray(
@@ -239,8 +239,8 @@ def main() -> int:
         else "WARN_SAME_KERNEL_TREE_TAGGED_SPECTRAL_WIDTH"
     )
     paths = [
-        "docs/core/uet_o2_same_kernel_tagged_width.py",
-        "docs/core/uet_o2_invariant_galerkin_collision_operator.py",
+        "docs/core/02_equations/o2/uet_o2_same_kernel_tagged_width.py",
+        "docs/core/02_equations/o2/uet_o2_invariant_galerkin_collision_operator.py",
         "docs/core/test/test_topic13_same_kernel_tagged_width.py",
         "docs/scripts/audit/audit_topic13_same_kernel_tagged_width.py",
         "docs/scripts/audit/audit_topic13_action_normalized_elastic_scattering.py",

@@ -28,7 +28,7 @@ def test_path_audit_preserves_physics_boundary() -> None:
     assert "physics-status promotion" in audit["claim_boundary"]
 
 
-def test_physical_planner_models_covariant_source_and_shim_without_collision() -> None:
+def test_physical_planner_models_canonical_source_and_archived_alias_without_collision() -> None:
     source = ROOT / "docs/scripts/audit/plan_uet_core_physical_migration.py"
     spec = importlib.util.spec_from_file_location("uet_core_physical_planner", source)
     assert spec is not None and spec.loader is not None
@@ -39,12 +39,13 @@ def test_physical_planner_models_covariant_source_and_shim_without_collision() -
         item for item in records
         if item["current_path"] == "docs/core/02_equations/covariant/uet_covariant_response.py"
     )
-    shim = next(
-        item for item in records
-        if item["current_path"] == "docs/core/uet_covariant_response.py"
-    )
-    assert canonical["canonical_path"] == shim["canonical_path"]
     assert canonical["migration_state"] == "MIGRATED"
-    assert shim["file_kind"] == "compatibility_python_shim"
-    assert shim["migration_state"] == "MIGRATED_WITH_SHIM"
+    aliases = load("uet_core_legacy_module_aliases.json")
+    alias = next(
+        item for item in aliases["aliases"]
+        if item["legacy_module"] == "docs.core.uet_covariant_response"
+    )
+    assert alias["canonical_path"] == canonical["canonical_path"]
+    assert alias["status"] == "ARCHIVED_ROOT_SHIM"
+    assert (ROOT / alias["archive_path"]).exists()
     assert not summary["duplicate_targets"]

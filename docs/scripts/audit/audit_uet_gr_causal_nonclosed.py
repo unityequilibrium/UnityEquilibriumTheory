@@ -33,12 +33,17 @@ from docs.core.uet_covariant_response import CovariantResponseConfig  # noqa: E4
 from docs.scripts.audit.uet_gr_monotonic_stage import (  # noqa: E402
     apply_latest_hyperbolic_phase_field_stage,
 )
+from docs.core.core_paths import (  # noqa: E402
+    CANONICAL_ARTIFACT_ROOT,
+    canonical_artifact_path,
+    canonical_existing_path,
+)
 
-CORE = ROOT / "docs/core/uet_covariant_nonclosed.py"
-SPEC = ROOT / "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
-OUT = ROOT / "docs/core/artifacts"
-CLOSED = OUT / "gr_closed_limit_verification.json"
-BALANCE = OUT / "covariant_bianchi_exchange_verification.json"
+CORE = canonical_existing_path(ROOT / "docs/core/02_equations/covariant/uet_covariant_nonclosed.py")
+SPEC = canonical_existing_path(ROOT / "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md")
+OUT = CANONICAL_ARTIFACT_ROOT
+CLOSED = canonical_artifact_path("gr_closed_limit_verification.json", "verification")
+BALANCE = canonical_artifact_path("covariant_bianchi_exchange_verification.json", "verification")
 
 
 def _sha(path: Path) -> str:
@@ -204,7 +209,9 @@ def build_artifacts() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any], d
     closed = json.loads(CLOSED.read_text(encoding="utf-8"))
     balance = json.loads(BALANCE.read_text(encoding="utf-8"))
     source = CORE.read_text(encoding="utf-8")
-    reduction_path = OUT / "covariant_matter_space_reduction_verification.json"
+    reduction_path = canonical_artifact_path(
+        "covariant_matter_space_reduction_verification.json", "verification"
+    )
     reduction_status = "NOT_RUN"
     reduction_evidence = "MISSING"
     if reduction_path.exists():
@@ -215,7 +222,9 @@ def build_artifacts() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any], d
         except (OSError, json.JSONDecodeError):
             reduction_status, reduction_evidence = "FAIL", "BLOCKED"
     reduction_passed = reduction_status == "PASS" and reduction_evidence == "PARTIAL"
-    matter_path = OUT / "covariant_matter_action_verification.json"
+    matter_path = canonical_artifact_path(
+        "covariant_matter_action_verification.json", "verification"
+    )
     matter_status = "NOT_RUN"
     matter_evidence = "MISSING"
     if matter_path.exists():
@@ -226,7 +235,9 @@ def build_artifacts() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any], d
         except (OSError, json.JSONDecodeError):
             matter_status, matter_evidence = "FAIL", "BLOCKED"
     matter_passed = matter_status == "PASS" and matter_evidence == "PARTIAL"
-    diffusion_path = OUT / "covariant_diffusive_current_verification.json"
+    diffusion_path = canonical_artifact_path(
+        "covariant_diffusive_current_verification.json", "verification"
+    )
     diffusion_status = "NOT_RUN"
     diffusion_evidence = "MISSING"
     if diffusion_path.exists():

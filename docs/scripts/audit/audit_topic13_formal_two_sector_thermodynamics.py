@@ -21,8 +21,8 @@ from docs.core.uet_o2_formal_two_sector_thermodynamics import (
 
 ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_formal_two_sector_thermodynamics_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_formal_two_sector_thermodynamics.py"
-EOS_MODULE = ROOT / "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_formal_two_sector_thermodynamics.py"
+EOS_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py"
 
 
 def sha256(path: Path) -> str:
@@ -131,8 +131,8 @@ def main() -> int:
             "observable": "natural-unit sector pressure, charge, entropy, energy, and susceptibility",
             "data_role": contract["data_role"],
             "evidence_artifacts": [
-                {"path": "docs/core/uet_o2_formal_two_sector_thermodynamics.py", "sha256": sha256(MODULE)},
-                {"path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py", "sha256": sha256(EOS_MODULE)},
+                {"path": "docs/core/02_equations/o2/uet_o2_formal_two_sector_thermodynamics.py", "sha256": sha256(MODULE)},
+                {"path": "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py", "sha256": sha256(EOS_MODULE)},
             ],
             "verification_status": FORMAL_TWO_SECTOR_STATUS if not failed else "BLOCKED_FORMAL_TWO_SECTOR_AUDIT",
             "open_blockers": [

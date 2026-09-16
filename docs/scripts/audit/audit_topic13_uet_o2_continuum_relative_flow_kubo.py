@@ -24,9 +24,9 @@ from docs.core.uet_o2_continuum_relative_flow_kubo import (  # noqa: E402
 
 
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_continuum_relative_flow_kubo_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_continuum_relative_flow_kubo.py"
-EOS = ROOT / "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py"
-CONDENSED = ROOT / "docs/core/uet_o2_condensed_relative_flow_collision.py"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_continuum_relative_flow_kubo.py"
+EOS = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py"
+CONDENSED = ROOT / "docs/core/02_equations/o2/uet_o2_condensed_relative_flow_collision.py"
 
 
 def sha256(path: Path) -> str:
@@ -105,9 +105,9 @@ def main() -> int:
             "observable": contract["observable"],
             "data_role": contract["data_role"],
             "evidence_artifacts": [
-                {"path": "docs/core/uet_o2_continuum_relative_flow_kubo.py", "sha256": sha256(MODULE)},
-                {"path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py", "sha256": sha256(EOS)},
-                {"path": "docs/core/uet_o2_condensed_relative_flow_collision.py", "sha256": sha256(CONDENSED)},
+                {"path": "docs/core/02_equations/o2/uet_o2_continuum_relative_flow_kubo.py", "sha256": sha256(MODULE)},
+                {"path": "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py", "sha256": sha256(EOS)},
+                {"path": "docs/core/02_equations/o2/uet_o2_condensed_relative_flow_collision.py", "sha256": sha256(CONDENSED)},
             ],
             "verification_status": status,
             "open_blockers": [

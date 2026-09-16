@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_dimensional_observable_closure_audit",
-  "generated_at": "2026-08-29T04:24:54.221661+00:00",
+  "generated_at": "2026-09-16T10:25:47.981341+00:00",
   "audit_status": "PASS_ACCOUNTING",
   "closure_status": "BLOCKED",
   "topic": "0.13_Thermodynamic_Bridge",
@@ -44,10 +44,10 @@
     "readiness_path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_observable_map_readiness.json",
     "readiness_sha256": "f64d0398c42ebcb8a501eee7c975eec6922cad681129fbf1d2c5ce462f7a0f58",
     "pilot_path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json",
-    "pilot_sha256": "509746deb1fc74ef81ff04cf5fdda91055a7e73dbb2b3b6a5de804c3f8786596",
+    "pilot_sha256": "a360eea9e257b7846eabaebeab6f20c00b658da7b432aec7c1e94d9449c041a4",
     "source_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_second_sound_source_package.json",
     "source_sha256": "3754d54cdee639be211a308d893b994ca78f7dd11aaeb191278b9085e7923b96",
-    "t13_he4_composition_path": "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+    "t13_he4_composition_path": "docs/core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json",
     "t13_he4_composition_sha256": "13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418"
   },
   "tracks": {

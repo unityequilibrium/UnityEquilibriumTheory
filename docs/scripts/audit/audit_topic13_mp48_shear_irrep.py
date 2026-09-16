@@ -85,7 +85,7 @@ def main():
                   character_match=max(r['character_error'] for r in rows) < 1e-8,
                   invariant_subspace=max(r['subspace_leakage'] for r in rows) < 1e-8,
                   force_symmetry=max(r['force_commutator_relative'] for r in rows) < 1e-8)
-    files = list(LOCKS)+[Path(__file__), ROOT/'docs/core/uet_interlayer_mode_residue.py',
+    files = list(LOCKS)+[Path(__file__), ROOT/'docs/core/03_lanes/thermal/uet_interlayer_mode_residue.py',
         ROOT/'docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py',
         ROOT/'docs/scripts/audit/audit_topic13_mp48_interlayer_mode_residue.py']
     result = dict(major_result_id='T13_MP48_GAMMA_E2G_SOURCE_IDENTIFICATION', topic='0.13',

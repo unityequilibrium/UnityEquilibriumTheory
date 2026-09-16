@@ -7,7 +7,11 @@ import inspect
 import json
 from pathlib import Path
 
-from docs.core.core_paths import canonical_existing_path, repo_root
+from docs.core.core_paths import (
+    canonical_artifact_path,
+    canonical_existing_path,
+    repo_root,
+)
 
 from docs.core.uet_hyperbolic_phase_field_bridge import (
     HYPERBOLIC_PHASE_FIELD_BRIDGE_CONTROLLER,
@@ -24,7 +28,6 @@ from docs.core.uet_noether_phase_field_map import (
 )
 
 ROOT = repo_root()
-ARTIFACTS = ROOT / "docs/core/artifacts"
 SOURCES = [
     ROOT
     / "docs/data/external/relativistic_transport/jain_kovtun_2024"
@@ -36,7 +39,7 @@ SOURCES = [
 
 
 def _load(name: str) -> dict:
-    return json.loads((ARTIFACTS / name).read_text(encoding="utf-8"))
+    return json.loads(canonical_artifact_path(name).read_text(encoding="utf-8"))
 
 
 def _sha(path: Path) -> str:

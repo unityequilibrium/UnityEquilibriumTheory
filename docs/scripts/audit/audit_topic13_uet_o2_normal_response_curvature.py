@@ -23,9 +23,9 @@ from docs.core.uet_o2_one_loop_normal_branch import uet_o2_one_loop_normal_state
 
 
 ROOT = Path(__file__).resolve().parents[3]
-MODULE_REL = "docs/core/uet_o2_normal_response_curvature.py"
-ONE_LOOP_REL = "docs/core/uet_o2_one_loop_normal_branch.py"
-RESPONSE_REL = "docs/core/uet_covariant_response.py"
+MODULE_REL = "docs/core/02_equations/o2/uet_o2_normal_response_curvature.py"
+ONE_LOOP_REL = "docs/core/02_equations/o2/uet_o2_one_loop_normal_branch.py"
+RESPONSE_REL = "docs/core/02_equations/covariant/uet_covariant_response.py"
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_normal_response_curvature_audit.json"
 
 TEMPERATURE = 0.35

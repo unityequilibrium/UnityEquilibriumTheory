@@ -53,7 +53,7 @@
         "docs/core/test/test_noether_phase_field_map.py",
         "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
         "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py",
-        "docs/core/artifacts/noether_phase_field_state_map_verification.json"
+        "docs/core/07_artifacts/verification/noether_phase_field_state_map_verification.json"
       ],
       "version": "noether-mapping-v1"
     },
@@ -109,7 +109,7 @@
         "docs/core/test/test_noether_phase_field_map.py",
         "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
         "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py",
-        "docs/core/artifacts/noether_phase_field_state_map_verification.json"
+        "docs/core/07_artifacts/verification/noether_phase_field_state_map_verification.json"
       ],
       "version": "noether-mapping-v1"
     },
@@ -165,7 +165,7 @@
         "docs/core/test/test_noether_phase_field_map.py",
         "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
         "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py",
-        "docs/core/artifacts/noether_phase_field_state_map_verification.json"
+        "docs/core/07_artifacts/verification/noether_phase_field_state_map_verification.json"
       ],
       "version": "noether-mapping-v1"
     },
@@ -220,7 +220,7 @@
         "docs/core/test/test_noether_phase_field_map.py",
         "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
         "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py",
-        "docs/core/artifacts/noether_phase_field_state_map_verification.json"
+        "docs/core/07_artifacts/verification/noether_phase_field_state_map_verification.json"
       ],
       "version": "noether-mapping-v1"
     },
@@ -276,7 +276,7 @@
         "docs/core/test/test_noether_phase_field_map.py",
         "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
         "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py",
-        "docs/core/artifacts/noether_phase_field_state_map_verification.json"
+        "docs/core/07_artifacts/verification/noether_phase_field_state_map_verification.json"
       ],
       "version": "noether-mapping-v1"
     },
@@ -332,7 +332,7 @@
         "docs/core/test/test_noether_phase_field_map.py",
         "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
         "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py",
-        "docs/core/artifacts/noether_phase_field_state_map_verification.json"
+        "docs/core/07_artifacts/verification/noether_phase_field_state_map_verification.json"
       ],
       "version": "noether-mapping-v1"
     },
@@ -387,13 +387,13 @@
         "docs/core/test/test_noether_phase_field_map.py",
         "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
         "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py",
-        "docs/core/artifacts/noether_phase_field_state_map_verification.json"
+        "docs/core/07_artifacts/verification/noether_phase_field_state_map_verification.json"
       ],
       "version": "noether-mapping-v1"
     }
   ],
-  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
-  "generated_at": "2026-09-14",
+  "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
+  "generated_at": "2026-09-16",
   "generator": "docs/scripts/audit/build_uet_noether_mapping_correspondence.py",
   "merge_metadata": {
     "claim_promotion": false,
@@ -407,8 +407,8 @@
       "uet.noether_mapping.symmetric_double_well_conjugacy",
       "uet.noether_mapping.normalized_constitutive_scales"
     ],
-    "merged_into": "docs/core/artifacts/uet_equation_correspondence_registry.json",
-    "merged_on": "2026-09-14",
+    "merged_into": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
+    "merged_on": "2026-09-16",
     "verification_status": "PARTIAL_HYDRODYNAMIC_STATE_COORDINATE_MAP"
   },
   "open_gates": [
@@ -423,14 +423,14 @@
   ],
   "schema_version": "1.0",
   "source_hashes": {
-    "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md": "1609cfdada2ad9e67ebcb8e9ae53f2f3f035fdc70469424e486eb3f7e53c1f86",
-    "docs/core/artifacts/noether_phase_field_dependency_gate.json": "97b6213a72e7de38bc28e51ed5d4a1e8531e2f1bf79dfe0de683f81c2cafcd33",
-    "docs/core/artifacts/noether_phase_field_map_formula_audit.json": "b3ebe9fe4d98469d8218201cdeb22181210ac072ba5788299835f469d68d04b1",
-    "docs/core/artifacts/noether_phase_field_state_map_verification.json": "defc553ac62d5bb2ff3497c02a482dd88da6592cdb17fb1736804716003ec65f",
-    "docs/core/uet_covariant_diffusion.py": "a267b89e39db4a8dfac56e71a070539a9da05a55b8bb8b22216e7fd1b839bc53",
-    "docs/core/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
-    "docs/core/uet_noether.py": "90467d709f10d9124633d776c947ed0dc8d3c66d8d38817fda2b2547e4afeb83",
-    "docs/core/uet_noether_phase_field_map.py": "e992834d7d3ca90476202d849551ab16d1aba4bb1156b0519b3cd79e2566f9e8"
+    "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md": "1609cfdada2ad9e67ebcb8e9ae53f2f3f035fdc70469424e486eb3f7e53c1f86",
+    "docs/core/02_equations/covariant/uet_covariant_diffusion.py": "a267b89e39db4a8dfac56e71a070539a9da05a55b8bb8b22216e7fd1b839bc53",
+    "docs/core/02_equations/covariant/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+    "docs/core/02_equations/lorentz_noether/uet_noether.py": "90467d709f10d9124633d776c947ed0dc8d3c66d8d38817fda2b2547e4afeb83",
+    "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py": "e992834d7d3ca90476202d849551ab16d1aba4bb1156b0519b3cd79e2566f9e8",
+    "docs/core/07_artifacts/correspondence/noether_phase_field_map_formula_audit.json": "accd76475dfb7eb73581bfce1c9651d5ec4c73d276dc36a919a3cda3385d4887",
+    "docs/core/07_artifacts/gates/noether_phase_field_dependency_gate.json": "b30e19e012929eca5ede1c057babd7bb532dbc0ac68dabae73a9d188ef36312f",
+    "docs/core/07_artifacts/verification/noether_phase_field_state_map_verification.json": "ca52d1cf88dcb3ca8b6786c5a7d816b7fbc39d0bd042b7cd553f3913c49d3e03"
   },
   "status": "CANDIDATE_ENTRY_MERGED_INTO_CENTRAL_REGISTRY"
 }

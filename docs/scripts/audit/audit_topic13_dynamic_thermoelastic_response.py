@@ -17,12 +17,12 @@ ROOT = Path(__file__).resolve().parents[3]
 OUTPUT = "docs/core/07_artifacts/topic13/t13_dynamic_thermoelastic_response_audit.json"
 REGISTRY = "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_dynamic_material_response_addendum.json"
 ID = "uet.o2.thermal.dynamic_material_response"
-EVIDENCE = ["docs/core/T13_DYNAMIC_THERMOELASTIC_RESPONSE.md",
-            "docs/core/uet_dynamic_thermoelastic_response.py",
+EVIDENCE = ["docs/core/03_lanes/topic13_support/T13_DYNAMIC_THERMOELASTIC_RESPONSE.md",
+            "docs/core/03_lanes/thermal/uet_dynamic_thermoelastic_response.py",
             "docs/core/test/test_topic13_dynamic_thermoelastic_response.py",
             "docs/scripts/audit/audit_topic13_dynamic_thermoelastic_response.py",
             "docs/core/07_artifacts/topic13/t13_thermoelastic_spatial_compatibility_audit.json",
-            "docs/core/uet_thermoelastic_spatial_compatibility.py"]
+            "docs/core/03_lanes/thermal/uet_thermoelastic_spatial_compatibility.py"]
 PROTECTED = ["docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
              "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"]
 

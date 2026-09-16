@@ -101,20 +101,33 @@ def category(record: dict[str, Any]) -> tuple[str, str, str, bool]:
     generator_count = int(record.get("generator_count") or 0)
     consumer_count = int(record.get("consumer_count") or 0)
     disposition = str(record.get("disposition", ""))
+    generator = generator_status(record)
+    generator_state = str(generator.get("status", "UNRESOLVED"))
 
-    if state == "MIGRATED":
-        return (
-            "MIGRATED",
-            "no pending migration action",
-            "retain legacy index boundary and verify canonical consumers",
-            False,
-        )
-    if generator_count == 0:
+    # Physical migration and generator closure are different controls. A
+    # canonical artifact can be moved while its producer still writes the
+    # legacy boundary (or while no unique producer has been identified). Do
+    # not let migration_state hide that review requirement.
+    if generator_count == 0 or generator_state in {"UNRESOLVED", "MISSING"}:
         return (
             "GENERATOR_IDENTITY_UNRESOLVED",
-            "no unique generator identity is recorded",
-            "identify and source-lock the sole artifact generator before any move",
+            "no usable generator identity is recorded for the canonical artifact",
+            "identify the producer, source-lock its output contract, then run a bounded preflight",
             False,
+        )
+    if generator_state == "LEGACY_OUTPUT_LITERAL_REMAINS":
+        return (
+            "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED" if consumer_count > 0 else "GENERATOR_SWITCH_REQUIRED",
+            "the recorded generator still contains the legacy artifact output path",
+            "route the generator through canonical_artifact_path, then rewrite active consumers and run semantic preflight",
+            True,
+        )
+    if generator_state == "LEGACY_OUTPUT_PATH_OR_UNDECLARED":
+        return (
+            "GENERATOR_AND_CONSUMER_REWRITE_REQUIRED" if consumer_count > 0 else "GENERATOR_SWITCH_REQUIRED",
+            "the recorded generator does not prove canonical output-path authority",
+            "declare the canonical output path through the shared path authority, then run semantic preflight",
+            True,
         )
     if consumer_count > 0:
         return (
@@ -122,6 +135,13 @@ def category(record: dict[str, Any]) -> tuple[str, str, str, bool]:
             "active consumers still reference the legacy artifact boundary",
             "switch the generator and every active consumer through the path authority",
             True,
+        )
+    if state == "MIGRATED" and generator_state == "CANONICAL_PATH_AUTHORITY_PRESENT":
+        return (
+            "MIGRATED",
+            "no pending migration action",
+            "retain legacy index boundary and verify canonical consumers",
+            False,
         )
     if disposition == "generator_switch_required_before_move" or generator_count == 1:
         return (

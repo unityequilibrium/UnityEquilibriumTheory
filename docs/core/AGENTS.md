@@ -29,7 +29,7 @@ Before editing an equation, parameter, operator, verifier, or core narrative, re
 21. `docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json`
 22. `docs/core/07_artifacts/gates/uet_main_theory_wave0_gate.json`
 23. `docs/core/07_artifacts/archive/uet_main_theory_dependency_graph.json`
-24. `docs/core/UET_MAIN_THEORY_AXIOMS_SPEC.md`
+24. `docs/core/01_contracts/UET_MAIN_THEORY_AXIOMS_SPEC.md`
 25. `docs/core/07_artifacts/gates/uet_main_theory_ontology_gate.json`
 26. `docs/core/07_artifacts/gates/uet_main_theory_wave2_gate.json`
 27. `docs/core/07_artifacts/gates/uet_main_theory_wave3_gate.json`
@@ -62,14 +62,14 @@ can be internally verified while the foundation gate and its scientific claim re
 
 ## Mandatory workflow
 
-Before changing or adding a core equation, regenerate the F0 inventory with `docs/scripts/audit/build_uet_equation_inventory.py`; its `inventory_gate_status` must remain visible in the wave record. For organization-only changes, refresh the core-file manifest and then run `docs/scripts/audit/build_uet_research_organization_registry_v2.py`.
+Before changing or adding a core equation, regenerate the F0 inventory with `docs/scripts/audit/build_uet_equation_inventory.py`; its `inventory_gate_status` must remain visible in the wave record. For organization-only changes, run `docs/scripts/audit/reconcile_uet_core_registry_v4.py` as the canonical controller (the older manifest and registry entrypoints delegate to it) and then run it with `--check`.
 
 Every new equation or operator must complete the F0–F8 sequence in the equation research
 standard. A blocked upstream gate blocks physical interpretation and downstream promotion.
 Exploratory work may continue only when it is explicitly labelled `DRAFT`, `CANDIDATE`,
 `INTERNAL`, or `SIMULATION_ONLY`.
 
-Before describing a standard theory as a special case, or describing two UET lanes as the same physical variable, run docs/scripts/audit/audit_uet_foundation_compatibility.py and read docs/core/UET_FOUNDATION_COMPATIBILITY_AUDIT.md. COMPATIBLE_CONDITIONAL is not a global physics proof; CONTRADICTION, CONFLICT, BLOCKED, and REJECTED_REDUCTION remain controlling blockers.
+Before describing a standard theory as a special case, or describing two UET lanes as the same physical variable, run docs/scripts/audit/audit_uet_foundation_compatibility.py and read docs/core/08_history/research_notes/UET_FOUNDATION_COMPATIBILITY_AUDIT.md. COMPATIBLE_CONDITIONAL is not a global physics proof; CONTRADICTION, CONFLICT, BLOCKED, and REJECTED_REDUCTION remain controlling blockers.
 
 Do not use topic numbers as a work queue. Follow the dependency graph.
 
@@ -194,6 +194,7 @@ The structural migration control plane has four executable checks:
 - `docs/scripts/audit/audit_uet_core_imports.py` — public root-module and `docs.core` import smoke tests.
 - `docs/scripts/audit/audit_uet_core_links.py` — active-core local Markdown link resolution; historical and quarantine areas are intentionally excluded.
 - `docs/scripts/audit/audit_uet_core_migration.py` — runs the three checks and writes the combined enforcement artifact/report.
+- `docs/scripts/audit/reconcile_uet_core_registry_v4.py` — regenerates the canonical manifest, organization registry, migration map, dependency graph, and reconciliation gate.
 
 These checks are organization controls only. A PASS cannot promote a formula, evidence class or foundation claim.
 ## Bounded generated-artifact migration

@@ -22,32 +22,33 @@ from docs.core.uet_curved_3p1_constraints import (
     flat_flrw_adm_control,
     minkowski_adm_control,
 )
+from docs.core.core_paths import canonical_artifact_path
 
 
-ARTIFACTS = ROOT / "docs/core/artifacts"
+ARTIFACTS = ROOT / "docs/core/07_artifacts"
 SOURCE = ROOT / "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json"
-VERIFY = ARTIFACTS / "curved_3p1_adm_constraint_interface_audit.json"
-FORMULA = ARTIFACTS / "curved_3p1_adm_constraint_formula_audit.json"
-GATE = ARTIFACTS / "core_curved_3p1_parent_gate.json"
-ADDENDUM = ARTIFACTS / "uet_equation_correspondence_registry_curved_3p1_addendum.json"
-GEOMETRY_VERIFY = ARTIFACTS / "curved_3p1_geometry_operator_verification.json"
-GEOMETRY_FORMULA = ARTIFACTS / "curved_3p1_geometry_operator_formula_audit.json"
-EVOLUTION_VERIFY = ARTIFACTS / "curved_3p1_adm_evolution_operator_verification.json"
-HYPERBOLICITY_NO_GO = ARTIFACTS / "curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json"
-EVOLUTION_FORMULA = ARTIFACTS / "curved_3p1_adm_evolution_formula_audit.json"
-FORMULATION_SELECTION = ARTIFACTS / "curved_3p1_formulation_selection_gate.json"
-GH_VERIFY = ARTIFACTS / "curved_3p1_gh_principal_system_verification.json"
-GH_FORMULA = ARTIFACTS / "curved_3p1_gh_principal_system_formula_audit.json"
-GH_GATE = ARTIFACTS / "curved_3p1_gh_branch_gate.json"
-GH_NONLINEAR_VERIFY = ARTIFACTS / "curved_3p1_gh_nonlinear_vacuum_rhs_verification.json"
-GH_NONLINEAR_FORMULA = ARTIFACTS / "curved_3p1_gh_nonlinear_vacuum_formula_audit.json"
-GH_NONLINEAR_GATE = ARTIFACTS / "curved_3p1_gh_nonlinear_vacuum_gate.json"
-GH_TIME_VERIFY = ARTIFACTS / "curved_3p1_gh_time_evolution_verification.json"
-GH_TIME_FORMULA = ARTIFACTS / "curved_3p1_gh_time_evolution_formula_audit.json"
-GH_TIME_GATE = ARTIFACTS / "curved_3p1_gh_time_evolution_gate.json"
-MATTER_VERIFY = ARTIFACTS / "curved_3p1_topic13_matter_wiring_verification.json"
-MATTER_FORMULA = ARTIFACTS / "curved_3p1_topic13_matter_wiring_formula_audit.json"
-MATTER_GATE = ARTIFACTS / "curved_3p1_topic13_matter_wiring_gate.json"
+VERIFY = canonical_artifact_path("curved_3p1_adm_constraint_interface_audit.json", "verification")
+FORMULA = canonical_artifact_path("curved_3p1_adm_constraint_formula_audit.json", "correspondence")
+GATE = canonical_artifact_path("core_curved_3p1_parent_gate.json", "gates")
+ADDENDUM = canonical_artifact_path("uet_equation_correspondence_registry_curved_3p1_addendum.json", "correspondence")
+GEOMETRY_VERIFY = canonical_artifact_path("curved_3p1_geometry_operator_verification.json", "verification")
+GEOMETRY_FORMULA = canonical_artifact_path("curved_3p1_geometry_operator_formula_audit.json", "correspondence")
+EVOLUTION_VERIFY = canonical_artifact_path("curved_3p1_adm_evolution_operator_verification.json", "verification")
+HYPERBOLICITY_NO_GO = canonical_artifact_path("curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json")
+EVOLUTION_FORMULA = canonical_artifact_path("curved_3p1_adm_evolution_formula_audit.json", "correspondence")
+FORMULATION_SELECTION = canonical_artifact_path("curved_3p1_formulation_selection_gate.json", "gates")
+GH_VERIFY = canonical_artifact_path("curved_3p1_gh_principal_system_verification.json", "verification")
+GH_FORMULA = canonical_artifact_path("curved_3p1_gh_principal_system_formula_audit.json", "correspondence")
+GH_GATE = canonical_artifact_path("curved_3p1_gh_branch_gate.json", "gates")
+GH_NONLINEAR_VERIFY = canonical_artifact_path("curved_3p1_gh_nonlinear_vacuum_rhs_verification.json", "verification")
+GH_NONLINEAR_FORMULA = canonical_artifact_path("curved_3p1_gh_nonlinear_vacuum_formula_audit.json", "correspondence")
+GH_NONLINEAR_GATE = canonical_artifact_path("curved_3p1_gh_nonlinear_vacuum_gate.json", "gates")
+GH_TIME_VERIFY = canonical_artifact_path("curved_3p1_gh_time_evolution_verification.json", "verification")
+GH_TIME_FORMULA = canonical_artifact_path("curved_3p1_gh_time_evolution_formula_audit.json", "correspondence")
+GH_TIME_GATE = canonical_artifact_path("curved_3p1_gh_time_evolution_gate.json", "gates")
+MATTER_VERIFY = canonical_artifact_path("curved_3p1_topic13_matter_wiring_verification.json", "verification")
+MATTER_FORMULA = canonical_artifact_path("curved_3p1_topic13_matter_wiring_formula_audit.json", "correspondence")
+MATTER_GATE = canonical_artifact_path("curved_3p1_topic13_matter_wiring_gate.json", "gates")
 
 
 def _sha256(path: Path) -> str:
@@ -238,7 +239,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
             "identity": source,
         },
         "input_identity": {
-            "module": "docs/core/uet_curved_3p1_constraints.py",
+            "module": "docs/core/02_equations/covariant/uet_curved_3p1_constraints.py",
             "source_record": SOURCE.relative_to(ROOT).as_posix(),
             "analytic_controls": ["Minkowski vacuum", "spatially flat FLRW"],
             "negative_controls": ["10 percent FLRW density perturbation", "non-positive spatial metric"],
@@ -290,7 +291,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "verification_role": "analytic gate and violation diagnostic",
                 "failure_mode": "vacuum/FLRW control does not cancel or a density violation is missed",
                 "next_hardening_step": "compute R3 from the grid metric and test spatial convergence",
-                "code_path": "docs/core/uet_curved_3p1_constraints.py",
+                "code_path": "docs/core/02_equations/covariant/uet_curved_3p1_constraints.py",
             },
             {
                 "formula_id": "UET-CURVED3P1-MOMENTUM-002",
@@ -312,7 +313,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "verification_role": "analytic gate and momentum-source negative control",
                 "failure_mode": "momentum source is ignored or covariant-divergence sign/index placement drifts",
                 "next_hardening_step": "compute the covariant divergence from grid gamma_ij and K_ij",
-                "code_path": "docs/core/uet_curved_3p1_constraints.py",
+                "code_path": "docs/core/02_equations/covariant/uet_curved_3p1_constraints.py",
             },
         ],
         "source": verification["source"],
@@ -507,7 +508,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "equation_id": "uet.main_theory.curved_3p1.adm_constraints",
                 "version": "adm-constraint-interface-v1",
                 "classification": "standard_physics_constraint_interface",
-                "relation_or_code_path": "docs/core/uet_curved_3p1_constraints.py",
+                "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_constraints.py",
                 "variables": {
                     "gamma_ij": "positive-definite spatial metric",
                     "K_ij": "extrinsic curvature",
@@ -523,7 +524,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "assumptions": ["(-,+,+,+) signature", "positive lapse", "positive-definite spatial metric", "declared Ricci scalar and momentum divergence"],
                 "symmetry_and_conservation": "symmetric gamma_ij and K_ij; ADM constraints evaluated but not propagated",
                 "limiting_cases": ["Minkowski vacuum", "spatially flat FLRW Friedmann control"],
-                "implementation_paths": ["docs/core/uet_curved_3p1_constraints.py"],
+                "implementation_paths": ["docs/core/02_equations/covariant/uet_curved_3p1_constraints.py"],
                 "verifier_paths": ["docs/scripts/audit/audit_uet_curved_3p1_constraints.py", VERIFY.relative_to(ROOT).as_posix(), "docs/core/test/test_uet_curved_3p1_constraints.py"],
                 "evidence_class": "INTERNAL_FORMAL_AND_ANALYTIC_CONTROL",
                 "proof_status": "constraint algebra and analytic controls pass; differential geometry and evolution open",
@@ -536,7 +537,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "equation_id": "uet.main_theory.curved_3p1.periodic_spatial_geometry",
                 "version": "periodic-geometry-operator-v1",
                 "classification": "numerical_implementation",
-                "relation_or_code_path": "docs/core/uet_curved_3p1_geometry.py",
+                "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_geometry.py",
                 "variables": {
                     "gamma_ij": "positive-definite spatial metric on a uniform periodic Cartesian chart",
                     "Gamma^k_ij": "Levi-Civita connection",
@@ -553,7 +554,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "assumptions": ["uniform three-dimensional grid", "periodic boundaries", "positive-definite gamma_ij", "second-order centered derivatives"],
                 "symmetry_and_conservation": "Levi-Civita metric compatibility and Ricci symmetry checked; evolution conservation/constraint propagation open",
                 "limiting_cases": ["Cartesian flat metric", "conformally flat analytic Ricci control", "manufactured off-diagonal K divergence control"],
-                "implementation_paths": ["docs/core/uet_curved_3p1_geometry.py"],
+                "implementation_paths": ["docs/core/02_equations/covariant/uet_curved_3p1_geometry.py"],
                 "verifier_paths": ["docs/scripts/audit/audit_uet_curved_3p1_geometry.py", GEOMETRY_VERIFY.relative_to(ROOT).as_posix(), "docs/core/test/test_uet_curved_3p1_geometry.py"],
                 "evidence_class": "INTERNAL_FORMAL_NUMERICAL_AND_CONVERGENCE_CONTROL",
                 "proof_status": "standard identities implemented with verified second-order periodic-grid convergence; no continuum or evolution proof",
@@ -566,7 +567,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "equation_id": "uet.main_theory.curved_3p1.adm_evolution_rhs",
                 "version": "adm-evolution-rhs-v1",
                 "classification": "standard_physics_evolution_operator",
-                "relation_or_code_path": "docs/core/uet_curved_3p1_adm_evolution.py",
+                "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_adm_evolution.py",
                 "variables": {"gamma_ij": "spatial metric; not Phi", "K_ij": "extrinsic curvature; not Pi", "alpha": "positive lapse", "beta_i": "shift", "rho_Sij": "Eulerian stress-energy projection; not universal C"},
                 "mathematical_role": "evaluate nonlinear ADM metric and extrinsic-curvature right-hand sides",
                 "standard_physics_counterpart": "ADM 3+1 evolution equations",
@@ -577,7 +578,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "assumptions": ["(-,+,+,+) signature", "positive lapse", "periodic grid", "declared Eulerian stress projection"],
                 "symmetry_and_conservation": "symmetric gamma_ij/K_ij; constraint propagation remains open",
                 "limiting_cases": ["Minkowski vacuum", "spatially flat dust FLRW instantaneous control"],
-                "implementation_paths": ["docs/core/uet_curved_3p1_adm_evolution.py"],
+                "implementation_paths": ["docs/core/02_equations/covariant/uet_curved_3p1_adm_evolution.py"],
                 "verifier_paths": ["docs/scripts/audit/audit_uet_curved_3p1_adm_evolution.py", EVOLUTION_VERIFY.relative_to(ROOT).as_posix(), "docs/core/test/test_uet_curved_3p1_adm_evolution.py"],
                 "evidence_class": "INTERNAL_FORMAL_NUMERICAL_AND_CONVERGENCE_CONTROL",
                 "proof_status": "RHS operator controls pass; well-posed time evolution remains open",
@@ -590,7 +591,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "equation_id": "uet.main_theory.curved_3p1.fixed_gauge_adm_hyperbolicity_no_go",
                 "version": "fixed-geodesic-adm-symbol-v1",
                 "classification": "formulation_no_go",
-                "relation_or_code_path": "docs/core/uet_curved_3p1_adm_evolution.py",
+                "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_adm_evolution.py",
                 "variables": {"P_n": "dimensionless principal symbol", "h_ij": "linear metric perturbation", "K_ij": "linear extrinsic-curvature perturbation"},
                 "mathematical_role": "reject the fixed-geodesic ADM branch from the strong-hyperbolicity parent gate",
                 "standard_physics_counterpart": "principal-symbol strong-hyperbolicity test",
@@ -601,7 +602,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "assumptions": ["linearization about flat space", "fixed geodesic gauge", "preregistered propagation directions"],
                 "symmetry_and_conservation": "not a conservation relation; tests completeness of characteristic fields",
                 "limiting_cases": ["axis directions", "diagonal direction", "fixed oblique direction"],
-                "implementation_paths": ["docs/core/uet_curved_3p1_adm_evolution.py"],
+                "implementation_paths": ["docs/core/02_equations/covariant/uet_curved_3p1_adm_evolution.py"],
                 "verifier_paths": ["docs/scripts/audit/audit_uet_curved_3p1_adm_evolution.py", HYPERBOLICITY_NO_GO.relative_to(ROOT).as_posix()],
                 "evidence_class": "INTERNAL_FORMAL_PRINCIPAL_SYMBOL_NO_GO",
                 "proof_status": "CLOSED_AS_NO_GO for the declared fixed-gauge branch",
@@ -614,7 +615,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "equation_id": "uet.main_theory.curved_3p1.generalized_harmonic_principal_system",
                 "version": "gh-principal-system-v1",
                 "classification": "standard_physics_hyperbolic_formulation",
-                "relation_or_code_path": "docs/core/uet_curved_3p1_generalized_harmonic.py",
+                "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py",
                 "variables": {"psi_ab": "spacetime metric; not UET Phi", "Pi_ab": "minus normal metric derivative; not UET Pi", "Phi_iab": "spatial metric derivative", "H_a": "declared algebraic gauge source", "C_iab": "first-order reduction constraint"},
                 "mathematical_role": "provide a complete symmetric-hyperbolic first-order principal system for the curved parent",
                 "standard_physics_counterpart": "Lindblom et al. first-order generalized harmonic Einstein formulation",
@@ -625,7 +626,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "assumptions": ["gamma1=-1", "gamma3=gamma1*gamma2", "gamma0>0", "gamma2>0", "Lambda^2>gamma2^2", "algebraic H_a(x,psi)"],
                 "symmetry_and_conservation": "positive analytic symmetrizer and complete characteristic basis pass; full Einstein/constraint propagation remains open",
                 "limiting_cases": ["Minkowski harmonic gauge", "constant-coefficient local orthonormal frame", "zero shift", "sub/super-coordinate shift cases with normal-frame causal waves"],
-                "implementation_paths": ["docs/core/uet_curved_3p1_generalized_harmonic.py"],
+                "implementation_paths": ["docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"],
                 "verifier_paths": ["docs/scripts/audit/audit_uet_curved_3p1_generalized_harmonic.py", GH_VERIFY.relative_to(ROOT).as_posix(), "docs/core/test/test_uet_curved_3p1_generalized_harmonic.py"],
                 "evidence_class": "INTERNAL_FORMAL_ANALYTIC_AND_MANUFACTURED_CONVERGENCE_CONTROL",
                 "proof_status": "principal/characteristic and reduction-damping lane passes; nonlinear vacuum RHS is tracked separately",
@@ -638,7 +639,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "equation_id": "uet.main_theory.curved_3p1.generalized_harmonic_nonlinear_vacuum_rhs",
                 "version": "gh-nonlinear-vacuum-rhs-v1",
                 "classification": "standard_physics_vacuum_evolution_operator",
-                "relation_or_code_path": "docs/core/uet_curved_3p1_generalized_harmonic.py",
+                "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py",
                 "formula_ids": [
                     "UET-CURVED3P1-GH-PSI-RHS-014",
                     "UET-CURVED3P1-GH-PI-RHS-015",
@@ -675,7 +676,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                     "constant nontrivial state",
                     "manufactured periodic variable state"
                 ],
-                "implementation_paths": ["docs/core/uet_curved_3p1_generalized_harmonic.py"],
+                "implementation_paths": ["docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"],
                 "verifier_paths": [
                     "docs/scripts/audit/audit_uet_curved_3p1_gh_nonlinear_vacuum.py",
                     GH_NONLINEAR_VERIFY.relative_to(ROOT).as_posix(),
@@ -692,7 +693,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "equation_id": "uet.main_theory.curved_3p1.generalized_harmonic_periodic_vacuum_evolution",
                 "version": "gh-periodic-vacuum-evolution-v1",
                 "classification": "standard_physics_numerical_evolution_control",
-                "relation_or_code_path": "docs/core/uet_curved_3p1_gh_evolution.py",
+                "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_gh_evolution.py",
                 "formula_ids": [
                     "UET-CURVED3P1-GH-RK4-018",
                     "UET-CURVED3P1-GH-CFL-019",
@@ -714,7 +715,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "assumptions": ["vacuum", "periodic grid", "prescribed time-independent H_a and nabla_a H_b", "fixed CFL coefficient", "no filtering or projection"],
                 "symmetry_and_conservation": "metric symmetry and gauge/reduction/curl constraint convergence pass on the declared periodic controls",
                 "limiting_cases": ["Minkowski fixed point", "exact harmonic gauge wave", "constant off-diagonal reduction violation"],
-                "implementation_paths": ["docs/core/uet_curved_3p1_gh_evolution.py"],
+                "implementation_paths": ["docs/core/02_equations/covariant/uet_curved_3p1_gh_evolution.py"],
                 "verifier_paths": ["docs/scripts/audit/audit_uet_curved_3p1_gh_time_evolution.py", GH_TIME_VERIFY.relative_to(ROOT).as_posix(), "docs/core/test/test_uet_curved_3p1_gh_time_evolution.py"],
                 "evidence_class": "INTERNAL_ANALYTIC_AND_NUMERICAL_CONVERGENCE_CONTROL",
                 "proof_status": "periodic vacuum evolution and propagated-constraint controls pass; non-periodic boundaries and matter remain open",
@@ -727,7 +728,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "equation_id": "uet.main_theory.curved_3p1.topic13_prescribed_matter_source",
                 "version": "topic13-prescribed-matter-wiring-v1",
                 "classification": "standard_physics_matter_source_interface",
-                "relation_or_code_path": "docs/core/uet_curved_3p1_matter_wiring.py",
+                "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_matter_wiring.py",
                 "formula_ids": [
                     "UET-CURVED3P1-MATTER-TAB-021",
                     "UET-CURVED3P1-MATTER-ADM-022",
@@ -759,7 +760,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 ],
                 "symmetry_and_conservation": "stress symmetry and projection reconstruction pass; stress-energy conservation evolution remains open",
                 "limiting_cases": ["rest perfect fluid", "boosted perfect fluid", "vacuum null source"],
-                "implementation_paths": ["docs/core/uet_curved_3p1_matter_wiring.py"],
+                "implementation_paths": ["docs/core/02_equations/covariant/uet_curved_3p1_matter_wiring.py"],
                 "verifier_paths": [
                     "docs/scripts/audit/audit_uet_curved_3p1_matter_wiring.py",
                     MATTER_VERIFY.relative_to(ROOT).as_posix(),

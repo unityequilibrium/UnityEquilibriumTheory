@@ -76,7 +76,7 @@ def main():
     paths=["docs/scripts/audit/audit_topic13_dressed_ra_pair_microscopic_rung_boundary.py",
         "docs/core/test/test_topic13_dressed_ra_pair_microscopic_rung_boundary.py",
         "docs/scripts/audit/audit_topic13_action_normalized_elastic_scattering.py",
-        "docs/core/uet_o2_action_derived_transition_kernel.py","docs/core/uet_o2_contact_sk_transition_vertex_match.py"]
+        "docs/core/02_equations/o2/uet_o2_action_derived_transition_kernel.py","docs/core/02_equations/o2/uet_o2_contact_sk_transition_vertex_match.py"]
     sha=lambda p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest()
     priors=["docs/core/07_artifacts/topic13/t13_retarded_ra_mixed_current_vertex_audit.json",
         "docs/core/07_artifacts/topic13/t13_microscopic_current_ladder_matching_boundary_audit.json"]

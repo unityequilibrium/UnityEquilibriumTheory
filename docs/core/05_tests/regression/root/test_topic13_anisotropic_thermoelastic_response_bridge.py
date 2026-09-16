@@ -1,5 +1,9 @@
 """Tests for the conditional anisotropic thermoelastic response bridge."""
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import (
+    canonical_artifact_path,
+    canonical_existing_path,
+    repo_root,
+)
 import hashlib
 import json
 from pathlib import Path
@@ -141,7 +145,7 @@ def test_generated_anisotropic_artifact_is_scoped_and_hash_linked():
         "docs/core/07_artifacts/topic13/t13_anisotropic_thermoelastic_response_bridge_audit.json"
     )
     registry_path = root / (
-        "docs/core/artifacts/"
+        "docs/core/07_artifacts/correspondence/"
         "uet_equation_correspondence_registry_topic13_anisotropic_thermoelastic_bridge_addendum.json"
     )
     artifact = json.loads(artifact_path.read_text(encoding="utf-8"))
@@ -155,7 +159,12 @@ def test_generated_anisotropic_artifact_is_scoped_and_hash_linked():
     assert artifact["claim_promotion"] is False
     assert artifact["xie_2026_accessed"] is False
     for relative, digest in artifact["source_hashes"].items():
-        assert hashlib.sha256((root / relative).read_bytes()).hexdigest() == digest
+        assert (
+            hashlib.sha256(
+                canonical_existing_path(root / relative).read_bytes()
+            ).hexdigest()
+            == digest
+        )
     evidence = registry["equation_entries"][0]["evidence_artifacts"][0]
     assert evidence["path"] == artifact_path.relative_to(root).as_posix()
     assert hashlib.sha256(artifact_path.read_bytes()).hexdigest() == evidence["sha256"]

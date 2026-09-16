@@ -1,4 +1,4 @@
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import canonical_artifact_path, repo_root
 import json
 import subprocess
 import sys
@@ -19,9 +19,9 @@ def test_mass_density_amplitude_audit_is_reproducibly_blocked_only_by_dimensiona
     )
     assert "AUGMENTED_AMPLITUDE_EXPLICIT_SOURCE_NOT_DERIVED" in completed.stdout
     artifact = json.loads(
-        (ROOT / "core/artifacts/mass_density_amplitude_contract_verification.json").read_text(
-            encoding="utf-8"
-        )
+        canonical_artifact_path(
+            "mass_density_amplitude_contract_verification.json"
+        ).read_text(encoding="utf-8")
     )
     assert artifact["audit_status"] == "PASS_WITH_BLOCKED_DIMENSIONAL_MAPPING"
     assert all(artifact["gates"].values())

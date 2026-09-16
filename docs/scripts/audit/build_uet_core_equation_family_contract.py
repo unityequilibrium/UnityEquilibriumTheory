@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import importlib.util
 import json
 import sys
 from datetime import date
@@ -23,6 +24,18 @@ OUTPUT = ROOT / "docs/core/07_artifacts/archive/uet_core_equation_family_contrac
 
 def p(relative: str) -> Path:
     return ROOT / relative
+
+
+_CORE_PATHS_SPEC = importlib.util.spec_from_file_location("uet_core_paths_family_contract", ROOT / "docs" / "core" / "core_paths.py")
+if _CORE_PATHS_SPEC is None or _CORE_PATHS_SPEC.loader is None:
+    raise RuntimeError("cannot load docs/core/core_paths.py")
+_CORE_PATHS = importlib.util.module_from_spec(_CORE_PATHS_SPEC)
+_CORE_PATHS_SPEC.loader.exec_module(_CORE_PATHS)
+
+
+def canonical_ref(value: str) -> str:
+    normalized = str(value).replace("\\", "/")
+    return _CORE_PATHS.canonical_path_for(normalized) if normalized.startswith("docs/core/") else normalized
 
 
 def load(path: Path) -> dict[str, Any]:
@@ -52,10 +65,15 @@ def family(
     verifier_paths: list[str] | None = None,
     organization_review_required: bool = False,
 ) -> dict[str, Any]:
+    original_paths = [str(path).replace("\\", "/") for path in paths]
+    canonical_paths = [canonical_ref(path) for path in original_paths]
+    compatibility_paths = sorted({path for path, canonical in zip(original_paths, canonical_paths) if path != canonical})
+    canonical_evidence = [canonical_ref(path) for path in evidence]
+    canonical_verifiers = [canonical_ref(path) for path in (verifier_paths or [])]
     result = {
         "family_id": family_id,
         "name": name,
-        "module_paths": paths,
+        "module_paths": canonical_paths,
         "equation_family": equation_family,
         "variables": variables,
         "standard_physics_counterpart": counterpart,
@@ -64,13 +82,15 @@ def family(
         "mathematical_compatibility_status": math_status,
         "old_theory_special_case_status": special_case,
         "claim_ceiling": claim_ceiling,
-        "evidence_paths": evidence,
+        "evidence_paths": canonical_evidence,
         "next_gate": next_gate,
     }
+    if compatibility_paths:
+        result["compatibility_paths"] = compatibility_paths
     if formula_ids is not None:
         result["formula_ids"] = list(formula_ids)
     if verifier_paths is not None:
-        result["verifier_paths"] = list(verifier_paths)
+        result["verifier_paths"] = canonical_verifiers
     if organization_review_required:
         result["organization_review_required"] = True
     return result
@@ -80,7 +100,7 @@ FAMILIES = [
     family(
         "core.legacy_master",
         "Legacy master functional and dynamics",
-        ["docs/core/uet_master_equation.py"],
+        ["docs/core/02_equations/matter_space/uet_master_equation.py"],
         {"C": "legacy normalized state label", "I": "legacy information field label", "V": "legacy velocity/value tuple label", "beta": "normalized coupling"},
         "effective free-energy/gradient-flow model only after exact functional-derivative closure",
         "normalized_or_legacy_open",
@@ -94,7 +114,7 @@ FAMILIES = [
     family(
         "core.matter_space",
         "Matter-space coupled state/response dynamics",
-        ["docs/core/uet_matter_space.py", "docs/core/uet_spatial.py", "docs/core/uet_matter_space_causal.py", "docs/core/uet_matter_space_split.py", "docs/core/uet_matter_space_finite_cone.py", "docs/core/uet_matter_space_characteristic.py"],
+        ["docs/core/02_equations/matter_space/uet_matter_space.py", "docs/core/02_equations/matter_space/uet_spatial.py", "docs/core/02_equations/matter_space/uet_matter_space_causal.py", "docs/core/02_equations/matter_space/uet_matter_space_split.py", "docs/core/02_equations/matter_space/uet_matter_space_finite_cone.py", "docs/core/02_equations/matter_space/uet_matter_space_characteristic.py"],
         {"C": "lane-specific matter/order state", "Phi": "effective space-response variable", "Pi": "d_t Phi", "sigma": "derived dissipation", "R": "derived trace, no feedback"},
         "coupled Landau-Ginzburg functional plus conserved/nonconserved gradient flow and damped response",
         "normalized_v1",
@@ -109,8 +129,8 @@ FAMILIES = [
         "core.matter_space_flux",
         "Conserved matter-space flux and causal response branch",
         [
-            "docs/core/uet_matter_space_flux_telegraph.py",
-            "docs/core/uet_matter_space_flux_phi.py",
+            "docs/core/02_equations/matter_space/uet_matter_space_flux_telegraph.py",
+            "docs/core/02_equations/matter_space/uet_matter_space_flux_phi.py",
         ],
         {
             "C": "conserved collective-coordinate field on the named flux lane",
@@ -147,7 +167,7 @@ FAMILIES = [
     family(
         "core.trace",
         "Causal derived history trace",
-        ["docs/core/uet_trace.py"],
+        ["docs/core/02_equations/matter_space/uet_trace.py"],
         {"R": "I_trace history observable", "G_ret": "retarded kernel", "sigma": "dissipation source"},
         "causal memory/convolution observable",
         "normalized_v1",
@@ -167,7 +187,7 @@ FAMILIES = [
     family(
         "core.covariant_response",
         "Covariant response/GR parent evaluator",
-        ["docs/core/uet_covariant_response.py", "docs/core/uet_covariant_matter.py", "docs/core/uet_covariant_balance.py", "docs/core/uet_covariant_nonclosed.py", "docs/core/uet_covariant_reduction.py"],
+        ["docs/core/02_equations/covariant/uet_covariant_response.py", "docs/core/02_equations/covariant/uet_covariant_matter.py", "docs/core/02_equations/covariant/uet_covariant_balance.py", "docs/core/02_equations/covariant/uet_covariant_nonclosed.py", "docs/core/02_equations/covariant/uet_covariant_reduction.py"],
         {"g_mu_nu": "metric", "Psi_m": "matter fields", "Phi": "effective response scalar", "Q^nu": "exchange current", "epsilon_nc": "nesting coupling"},
         "covariant scalar/tensor response model with an Einstein/GR closed-response comparator",
         "natural_units_candidate",
@@ -175,13 +195,13 @@ FAMILIES = [
         "CONDITIONALLY_COMPATIBLE_NOT_FULL_GR",
         "epsilon_nc=0/ordered reference gives exact algebraic-local null contract only",
         "candidate covariant parent; not Einstein derivation or global-universe closure",
-        ["docs/core/07_artifacts/verification/gr_closed_limit_verification.json", "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md"],
+        ["docs/core/07_artifacts/verification/gr_closed_limit_verification.json", "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md"],
         "add field-equation, Bianchi/Noether, metric PDE and initial-value verification",
     ),
     family(
         "core.covariant_parent",
         "Integrated covariant conservative parent formula evaluator",
-        ["docs/core/uet_covariant_parent.py"],
+        ["docs/core/02_equations/covariant/uet_covariant_parent.py"],
         {
             "g_mu_nu": "Lorentz metric",
             "chi_A": "global O(2) scalar matter doublet",
@@ -211,7 +231,7 @@ FAMILIES = [
     family(
         "core.covariant_diffusion",
         "Covariant diffusion/current constitutive lane",
-        ["docs/core/uet_covariant_diffusion.py"],
+        ["docs/core/02_equations/covariant/uet_covariant_diffusion.py"],
         {"N_mu": "matter current", "u_mu": "frame velocity", "D": "diffusion coefficient", "tau": "relaxation time", "mu": "chemical potential"},
         "relativistic diffusion and Maxwell-Cattaneo constitutive transport",
         "natural_or_normalized_control",
@@ -237,7 +257,7 @@ FAMILIES = [
     family(
         "core.hyperbolic_phase",
         "Hyperbolic phase-field/telegraph comparator",
-        ["docs/core/uet_hyperbolic_phase_field.py", "docs/core/uet_hyperbolic_phase_field_bridge.py"],
+        ["docs/core/02_equations/matter_space/uet_hyperbolic_phase_field.py", "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field_bridge.py"],
         {"C": "normalized phase/order field", "tau": "relaxation time", "kappa": "gradient coefficient", "v": "normalized characteristic speed"},
         "telegraph/hyperbolic phase-field equation and causal propagation comparator",
         "normalized_external_comparator",
@@ -251,7 +271,7 @@ FAMILIES = [
     family(
         "core.o2_superfluid",
         "Finite-density O(2) EOS and ideal superfluid transport",
-        ["docs/core/uet_o2_finite_density_eos.py", "docs/core/uet_covariant_superfluid_transport.py"],
+        ["docs/core/02_equations/o2/uet_o2_finite_density_eos.py", "docs/core/02_equations/covariant/uet_covariant_superfluid_transport.py"],
         {"n": "signed O(2) Noether charge density", "mu": "chemical potential", "A": "condensate amplitude", "Phi": "response input", "xi_mu": "phase gradient"},
         "relativistic finite-density O(2) mean-field condensate and T=0 ideal superfluid constitutive sector",
         "natural_units",
@@ -265,7 +285,7 @@ FAMILIES = [
     family(
         "core.noether_mapping",
         "Noether phase field and coarse-state map",
-        ["docs/core/uet_noether.py", "docs/core/uet_noether_phase_field_map.py"],
+        ["docs/core/02_equations/lorentz_noether/uet_noether.py", "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py"],
         {"chi": "complex O(2) matter field", "theta": "phase", "N_mu": "Noether current", "C": "coarse hydrodynamic coordinate"},
         "global O(2)/U(1) Noether current and hydrodynamic state-coordinate map",
         "natural_parent_plus_normalized_map",
@@ -299,7 +319,7 @@ FAMILIES = [
     family(
         "core.lorentz",
         "Lorentz transformation/causal utilities",
-        ["docs/core/uet_lorentz.py"],
+        ["docs/core/02_equations/lorentz_noether/uet_lorentz.py"],
         {"x_mu": "spacetime coordinate", "Lambda": "Lorentz transform", "c": "normalized light speed"},
         "special-relativistic Lorentz transformation and causal cone",
         "normalized_or_natural",
@@ -307,13 +327,13 @@ FAMILIES = [
         "UTILITY_COMPATIBILITY_NOT_THEORY_PROOF",
         "Lorentz transform utility can support a lane but does not establish Lorentz invariance of all operators",
         "support utility; no global invariance claim",
-        ["docs/core/test/test_lorentz_noether_comprehensive.py", "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md"],
+        ["docs/core/test/test_lorentz_noether_comprehensive.py", "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md"],
         "connect each physical operator to a covariant action and transformation residual",
     ),
     family(
         "core.parameter_contract",
         "Parameter/constants and unit bridge",
-        ["docs/core/uet_parameters.py"],
+        ["docs/core/01_contracts/units/uet_parameters.py"],
         {"beta": "normalized coupling in core lane", "kappa": "lane-dependent coefficient", "SI constants": "physical constants with provenance"},
         "dimensional parameter registry and external-constant provenance",
         "mixed_normalized_natural_SI",
@@ -321,14 +341,14 @@ FAMILIES = [
         "UNIT_SEMANTICS_OPEN",
         "Landauer SI lower bound and normalized beta are not the same quantity",
         "parameter support only; no beta-as-energy claim",
-        ["docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json", "docs/core/uet_parameters.py"],
+        ["docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json", "docs/core/01_contracts/units/uet_parameters.py"],
         "split normalized/SI APIs and close provenance for every physical coefficient",
         equation_family=False,
     ),
     family(
         "core.observable_contract",
         "Observable and measurement helpers",
-        ["docs/core/uet_observables.py"],
+        ["docs/core/03_lanes/review/uet_observables.py"],
         {"y_pred": "measurement operator output", "C/Phi/Pi/R": "candidate inputs"},
         "measurement operator mapping model state to a measured quantity",
         "lane_specific_open",
@@ -336,7 +356,7 @@ FAMILIES = [
         "OBSERVABLE_MAP_OPEN",
         "without observable map no real-data fit can test the theory",
         "diagnostic/internal only",
-        ["docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json", "docs/core/UET_FOUNDATION_COMPATIBILITY_AUDIT.md"],
+        ["docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json", "docs/core/08_history/research_notes/UET_FOUNDATION_COMPATIBILITY_AUDIT.md"],
         "define O[C,Phi,Pi,R], units, uncertainty, resolution and nuisance parameters",
         equation_family=False,
     ),
@@ -344,11 +364,11 @@ FAMILIES = [
         "core.support_and_adapters",
         "Solvers, adapters, validation, proof and visualization support",
         [
-            "docs/core/__init__.py", "docs/core/uet_base_solver.py", "docs/core/uet_lite_engine.py", "docs/core/uet_matrix_engine.py",
-            "docs/core/uet_data_orchestrator.py", "docs/core/uet_glass_box.py", "docs/core/scientific_validation.py",
-            "docs/core/uet_bug_hunter.py", "docs/core/truth_auditor.py", "docs/core/reproducibility.py", "docs/core/uet_references.py",
-            "docs/core/uet_viz.py", "docs/core/02_Proof/Proof_00_Master_Balance.py", "docs/core/mass_density_correspondence.py", "docs/core/matter_interaction_forward.py", "docs/core/persistence_energy_diagnostic.py", "docs/core/relational_two_body_baseline.py", "docs/core/resource_selection_thermal_bridge.py", "docs/core/thermal_observable_bridge.py", "docs/core/thermal_source_observable_map.py", "docs/core/uet_impact_effect.py", "docs/core/uet_resource_selection.py", "docs/core/mass_density_3d.py", "docs/core/mass_density_amplitude.py", "docs/core/mass_density_dimensional.py", "docs/core/photon_observer_baseline.py", "docs/core/uet_matter_space_observable.py",
-            "docs/core/resource_selection_physical_cost_map.py",
+            "docs/core/__init__.py", "docs/scripts/core/runners/uet_base_solver.py", "docs/scripts/core/runners/uet_lite_engine.py", "docs/scripts/core/runners/uet_matrix_engine.py",
+            "docs/scripts/core/data/uet_data_orchestrator.py", "docs/scripts/core/runners/uet_glass_box.py", "docs/scripts/core/audit/scientific_validation.py",
+            "docs/scripts/core/audit/uet_bug_hunter.py", "docs/scripts/core/audit/truth_auditor.py", "docs/scripts/core/audit/reproducibility.py", "docs/scripts/core/data/uet_references.py",
+            "docs/scripts/core/reporting/uet_viz.py", "docs/core/04_proofs/Proof_00_Master_Balance.py", "docs/core/03_lanes/mass_density/mass_density_correspondence.py", "docs/core/03_lanes/mass_density/matter_interaction_forward.py", "docs/core/03_lanes/persistence/persistence_energy_diagnostic.py", "docs/core/03_lanes/carrier_observer/relational_two_body_baseline.py", "docs/core/03_lanes/persistence/resource_selection_thermal_bridge.py", "docs/core/03_lanes/thermal/thermal_observable_bridge.py", "docs/core/03_lanes/thermal/thermal_source_observable_map.py", "docs/core/03_lanes/carrier_observer/uet_impact_effect.py", "docs/core/03_lanes/persistence/uet_resource_selection.py", "docs/core/03_lanes/mass_density/mass_density_3d.py", "docs/core/03_lanes/mass_density/mass_density_amplitude.py", "docs/core/03_lanes/mass_density/mass_density_dimensional.py", "docs/core/03_lanes/carrier_observer/photon_observer_baseline.py", "docs/core/03_lanes/review/uet_matter_space_observable.py",
+            "docs/core/03_lanes/persistence/resource_selection_physical_cost_map.py",
         ],
         {},
         "numerical implementation and audit support, not a unified physical equation",
@@ -375,18 +395,19 @@ def build_contract() -> dict[str, Any]:
     code_records = code_surface.get("records", [])
     count_by_path: dict[str, int] = {}
     for record in code_records:
-        path = record["path"]
+        path = canonical_ref(record["path"])
         count_by_path[path] = count_by_path.get(path, 0) + 1
 
     all_core_paths = set(count_by_path)
-    assigned_paths = {path for item in FAMILIES for path in item["module_paths"]}
+    assigned_paths = {canonical_ref(path) for item in FAMILIES for path in item["module_paths"]}
     missing_paths = sorted(all_core_paths - assigned_paths)
     nonexistent_paths = sorted(path for path in assigned_paths if not p(path).exists())
     enriched: list[dict[str, Any]] = []
     for item in FAMILIES:
         current = dict(item)
-        current["candidate_surface_count"] = sum(count_by_path.get(path, 0) for path in item["module_paths"])
-        current["module_paths_exist"] = all(p(path).exists() for path in item["module_paths"])
+        current["module_paths"] = [canonical_ref(path) for path in item["module_paths"]]
+        current["candidate_surface_count"] = sum(count_by_path.get(path, 0) for path in current["module_paths"])
+        current["module_paths_exist"] = all(p(path).exists() for path in current["module_paths"])
         enriched.append(current)
 
     hard_block = bool(missing_paths or nonexistent_paths or code_surface.get("inventory_gate_status") == "BLOCKED" or compatibility.get("compatibility_status") == "BLOCKED")

@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-TARGET = ROOT / "docs/core/uet_o2_condensate_fluctuations.py"
+TARGET = ROOT / "docs/core/02_equations/o2/uet_o2_condensate_fluctuations.py"
 
 
 def main() -> int:

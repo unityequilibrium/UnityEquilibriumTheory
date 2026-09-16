@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parents[3]
 CURVATURE_REL = "docs/core/07_artifacts/topic13/t13_uet_o2_normal_response_curvature_audit.json"
 BETA_REL = "docs/core/07_artifacts/topic13/t13_thermal_response_beta_contract_audit.json"
 PHI_ANCHOR_REL = "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json"
-MODULE_REL = "docs/core/uet_o2_beta_correspondence.py"
+MODULE_REL = "docs/core/02_equations/o2/uet_o2_beta_correspondence.py"
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_beta_action_normalized_correspondence_no_go.json"
 
 

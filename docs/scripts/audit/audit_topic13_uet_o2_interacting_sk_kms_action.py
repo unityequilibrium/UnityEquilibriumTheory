@@ -27,10 +27,10 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_interacting_sk_kms_action_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_interacting_sk_kms_action.py"
-CHARGED_MODULE = ROOT / "docs/core/uet_o2_finite_density_charged_vertex.py"
-TRANSITION_MODULE = ROOT / "docs/core/uet_o2_action_derived_transition_kernel.py"
-KMS_MODULE = ROOT / "docs/core/uet_o2_equilibrium_kms.py"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_interacting_sk_kms_action.py"
+CHARGED_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_finite_density_charged_vertex.py"
+TRANSITION_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_action_derived_transition_kernel.py"
+KMS_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_equilibrium_kms.py"
 
 
 def sha256(path: Path) -> str:
@@ -92,10 +92,10 @@ def main() -> int:
         "BLOCKED_ACTION_DERIVED_INTERACTING_SK_KMS_LOCAL_ACTION_INTERFACE"
     )
     evidence = [
-        {"path": "docs/core/uet_o2_interacting_sk_kms_action.py", "sha256": sha256(MODULE)},
-        {"path": "docs/core/uet_o2_finite_density_charged_vertex.py", "sha256": sha256(CHARGED_MODULE)},
-        {"path": "docs/core/uet_o2_action_derived_transition_kernel.py", "sha256": sha256(TRANSITION_MODULE)},
-        {"path": "docs/core/uet_o2_equilibrium_kms.py", "sha256": sha256(KMS_MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_interacting_sk_kms_action.py", "sha256": sha256(MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_finite_density_charged_vertex.py", "sha256": sha256(CHARGED_MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_action_derived_transition_kernel.py", "sha256": sha256(TRANSITION_MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_equilibrium_kms.py", "sha256": sha256(KMS_MODULE)},
     ]
     artifact = {
         "schema_version": "t13-uet-o2-interacting-sk-kms-local-action-v1",

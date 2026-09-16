@@ -53,8 +53,8 @@ def main():
             fixed_mu_alpha=e[2]/e[0],direct_fixed_charge_derivatives_T_Phi=direct,
             absolute_chain_vs_direct_disagreement=np.abs(np.array(constrained)-direct).tolist(),
             max_charge_constraint_residual=max(charge_errors),solved_mu_values=mus))
-    files=[source,Path(__file__),ROOT/'docs/core/uet_o2_action_thermal_observable_bridge.py',
-           ROOT/'docs/core/uet_o2_finite_temperature_quasiparticle_eos.py',ROOT/'docs/core/test/test_topic13_fixed_charge_response.py']
+    files=[source,Path(__file__),ROOT/'docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py',
+           ROOT/'docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py',ROOT/'docs/core/test/test_topic13_fixed_charge_response.py']
     result=dict(major_result_id='T13_NATURAL_FIXED_CHARGE_RESPONSE',topic='0.13',closure_level='PARTIAL',
         what_is_closed=['Fixed-charge response evaluated by chain-rule derivatives and direct charge-constrained roots at three steps'],
         equation_or_mapping='(d epsilon/dx)_n = epsilon_x - epsilon_mu*n_x/n_mu, x=T or Phi',

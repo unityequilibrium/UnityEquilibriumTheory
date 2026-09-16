@@ -15,16 +15,31 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-ARTIFACTS = ROOT / "docs" / "core" / "artifacts"
-OUTPUT = ARTIFACTS / (
-    "uet_equation_correspondence_registry_covariant_diffusion_addendum.json"
+import sys
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from docs.core.core_paths import (  # noqa: E402
+    CANONICAL_ARTIFACT_ROOT,
+    canonical_artifact_path,
+    canonical_existing_path,
 )
-CENTRAL = ARTIFACTS / "uet_equation_correspondence_registry.json"
-FORMULA_AUDIT = ARTIFACTS / "covariant_diffusion_formula_audit.json"
-VERIFICATION = ARTIFACTS / "covariant_diffusive_current_verification.json"
-CONTRACT = ARTIFACTS / "covariant_diffusion_contract.json"
-SOURCE = ROOT / "docs" / "core" / "uet_covariant_diffusion.py"
-SPEC = ROOT / "docs" / "core" / "UET_GR_NONCLOSED_RESEARCH_SPEC.md"
+
+ARTIFACTS = CANONICAL_ARTIFACT_ROOT
+OUTPUT = canonical_artifact_path(
+    "uet_equation_correspondence_registry_covariant_diffusion_addendum.json",
+    "correspondence",
+)
+CENTRAL = canonical_artifact_path(
+    "uet_equation_correspondence_registry.json", "correspondence"
+)
+FORMULA_AUDIT = canonical_artifact_path("covariant_diffusion_formula_audit.json")
+VERIFICATION = canonical_artifact_path(
+    "covariant_diffusive_current_verification.json", "verification"
+)
+CONTRACT = canonical_artifact_path("covariant_diffusion_contract.json")
+SOURCE = canonical_existing_path(ROOT / "docs" / "core" / "uet_covariant_diffusion.py")
+SPEC = canonical_existing_path(ROOT / "docs" / "core" / "UET_GR_NONCLOSED_RESEARCH_SPEC.md")
 
 FORMULA_IDS = [
     "uet.covariant_diffusion.frame_decomposition",
@@ -126,7 +141,7 @@ def build() -> dict[str, Any]:
     if contract.get("full_gradient_phase_field_causality") != "BLOCKED_FOURTH_ORDER_UV":
         raise ValueError("diffusion causal blocker wording changed; review before linking")
 
-    module_path = "docs/core/uet_covariant_diffusion.py"
+    module_path = "docs/core/02_equations/covariant/uet_covariant_diffusion.py"
     entries = [
         entry(
             FORMULA_IDS[0],

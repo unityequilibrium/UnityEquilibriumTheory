@@ -22,9 +22,9 @@ from docs.core.uet_o2_finite_temperature_quasiparticle_eos import (
 
 ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_collisionless_kubo_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_collisionless_kubo.py"
-STATIC_MODULE = ROOT / "docs/core/uet_o2_formal_transverse_response.py"
-EOS_MODULE = ROOT / "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_collisionless_kubo.py"
+STATIC_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py"
+EOS_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py"
 
 
 def sha256(path: Path) -> str:
@@ -92,9 +92,9 @@ def main() -> int:
     failed = [key for key, value in checks.items() if not value]
     status = COLLISIONLESS_KUBO_STATUS if not failed else "BLOCKED_COLLISIONLESS_KUBO_AUDIT"
     evidence = [
-        {"path": "docs/core/uet_o2_collisionless_kubo.py", "sha256": sha256(MODULE)},
-        {"path": "docs/core/uet_o2_formal_transverse_response.py", "sha256": sha256(STATIC_MODULE)},
-        {"path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py", "sha256": sha256(EOS_MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_collisionless_kubo.py", "sha256": sha256(MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py", "sha256": sha256(STATIC_MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py", "sha256": sha256(EOS_MODULE)},
     ]
     artifact = {
         "schema_version": "t13-uet-o2-collisionless-kubo-v1",

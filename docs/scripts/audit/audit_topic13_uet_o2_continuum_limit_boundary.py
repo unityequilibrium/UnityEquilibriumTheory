@@ -30,9 +30,9 @@ from docs.core.uet_o2_finite_temperature_quasiparticle_eos import (  # noqa: E40
 
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_continuum_limit_boundary_audit.json"
 SOURCE_REL = "docs/core/07_artifacts/topic13/t13_uet_o2_tree_level_bs_sk_match_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_continuum_limit_boundary.py"
-SOURCE_MODULE = ROOT / "docs/core/uet_o2_tree_level_bs_sk_match.py"
-COLLISION_MODULE = ROOT / "docs/core/uet_o2_continuum_collision_operator.py"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_continuum_limit_boundary.py"
+SOURCE_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_tree_level_bs_sk_match.py"
+COLLISION_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_continuum_collision_operator.py"
 
 FIXED_CHANNEL_RADIAL_ORDERS = (14, 16, 18, 20)
 FIXED_CHANNEL_COUNT = 256
@@ -182,10 +182,10 @@ def main() -> int:
         "observable": contract["observable"],
         "data_role": contract["data_role"],
         "evidence_artifacts": [
-            {"path": "docs/core/uet_o2_continuum_limit_boundary.py", "sha256": sha256(MODULE)},
+            {"path": "docs/core/02_equations/o2/uet_o2_continuum_limit_boundary.py", "sha256": sha256(MODULE)},
             {"path": SOURCE_REL, "sha256": sha256(source_path)},
-            {"path": "docs/core/uet_o2_tree_level_bs_sk_match.py", "sha256": sha256(SOURCE_MODULE)},
-            {"path": "docs/core/uet_o2_continuum_collision_operator.py", "sha256": sha256(COLLISION_MODULE)},
+            {"path": "docs/core/02_equations/o2/uet_o2_tree_level_bs_sk_match.py", "sha256": sha256(SOURCE_MODULE)},
+            {"path": "docs/core/02_equations/o2/uet_o2_continuum_collision_operator.py", "sha256": sha256(COLLISION_MODULE)},
         ],
         "verification_status": status,
         "open_blockers": [

@@ -17,6 +17,11 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from docs.core.core_paths import (  # noqa: E402
+    CANONICAL_ARTIFACT_ROOT,
+    canonical_artifact_path,
+    canonical_existing_path,
+)
 from docs.core.uet_covariant_diffusion import (  # noqa: E402
     ConservedCurrentBridgeConfig,
     normalize_local_charge_and_current,
@@ -42,12 +47,14 @@ from docs.scripts.audit.uet_gr_monotonic_stage import (  # noqa: E402
     apply_latest_hyperbolic_phase_field_stage,
 )
 
-OUT = ROOT / "docs/core/artifacts"
-CORE = ROOT / "docs/core/uet_noether_phase_field_map.py"
-MATTER = ROOT / "docs/core/uet_covariant_matter.py"
-DIFFUSION = ROOT / "docs/core/uet_covariant_diffusion.py"
-CAUSAL_BRIDGE = ROOT / "docs/core/uet_hyperbolic_phase_field_bridge.py"
-SPEC = ROOT / "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
+OUT = CANONICAL_ARTIFACT_ROOT
+CORE = canonical_existing_path(ROOT / "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py")
+MATTER = canonical_existing_path(ROOT / "docs/core/02_equations/covariant/uet_covariant_matter.py")
+DIFFUSION = canonical_existing_path(ROOT / "docs/core/02_equations/covariant/uet_covariant_diffusion.py")
+CAUSAL_BRIDGE = canonical_existing_path(
+    ROOT / "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field_bridge.py"
+)
+SPEC = canonical_existing_path(ROOT / "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md")
 CAHN_HILLIARD = (
     ROOT
     / "docs/data/external/condensed_matter/phase_transitions/cahn_hilliard_1958"
@@ -69,7 +76,10 @@ JAIN_KOVTUN = (
     / "source_record.json"
 )
 FEASIBILITY_ARTIFACT = (
-    OUT / "hyperbolic_phase_field_causal_feasibility.json"
+    canonical_artifact_path(
+        "hyperbolic_phase_field_causal_feasibility.json",
+        "verification",
+    )
 )
 
 
@@ -90,8 +100,9 @@ def _json_ready(value: Any) -> Any:
 
 
 def _dump(name: str, payload: dict[str, Any]) -> None:
-    OUT.mkdir(parents=True, exist_ok=True)
-    (OUT / name).write_text(
+    path = canonical_artifact_path(name)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
         json.dumps(_json_ready(payload), indent=2) + "\n",
         encoding="utf-8",
     )

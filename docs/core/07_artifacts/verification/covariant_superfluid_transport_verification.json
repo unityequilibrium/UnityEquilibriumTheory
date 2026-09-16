@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "covariant_superfluid_transport_verification",
-  "generated_at": "2026-08-30T10:31:04.073440+00:00",
+  "generated_at": "2026-09-16T17:50:27.301316+00:00",
   "topic": "docs/core UET GR non-closed response",
   "version": "wave10_v1",
   "benchmark_role": "internal_covariant_and_synthetic_transport_control",
@@ -10,11 +10,11 @@
   "evidence_status": "PARTIAL_T0_IDEAL_PLUS_SIMULATION_ONLY_DISSIPATIVE_CONTROL",
   "unit_lane": "natural",
   "input_identity": {
-    "eos_core": "docs/core/uet_o2_finite_density_eos.py",
-    "transport_core": "docs/core/uet_covariant_superfluid_transport.py",
-    "parent_action": "docs/core/uet_covariant_matter.py",
-    "state_map": "docs/core/uet_noether_phase_field_map.py",
-    "spec": "docs/core/O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md",
+    "eos_core": "docs/core/02_equations/o2/uet_o2_finite_density_eos.py",
+    "transport_core": "docs/core/02_equations/covariant/uet_covariant_superfluid_transport.py",
+    "parent_action": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+    "state_map": "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py",
+    "spec": "docs/core/01_contracts/O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md",
     "parameter_policy": "fixed_deterministic_synthetic_control_no_fit",
     "seed_eos": 102001,
     "seed_transport": 102002
@@ -129,11 +129,11 @@
     ]
   },
   "source_hashes": {
-    "docs/core/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d",
-    "docs/core/uet_covariant_superfluid_transport.py": "32489fd92d0bd390c81e761970dbcb7e3f5e13e7cbcbf69939cb9e09c154d25f",
-    "docs/core/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
-    "docs/core/uet_noether_phase_field_map.py": "e992834d7d3ca90476202d849551ab16d1aba4bb1156b0519b3cd79e2566f9e8",
-    "docs/core/O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md": "3210f45543dd90b42ef5593b6693a2348819b363a98cce3c66411378f0d6474d",
+    "docs/core/02_equations/o2/uet_o2_finite_density_eos.py": "9cf2fcbaac868a22643b753ed931b466cf125ff2da3e7452ca70e548f419bfe8",
+    "docs/core/02_equations/covariant/uet_covariant_superfluid_transport.py": "32489fd92d0bd390c81e761970dbcb7e3f5e13e7cbcbf69939cb9e09c154d25f",
+    "docs/core/02_equations/covariant/uet_covariant_matter.py": "af30152c6a505811f4da8ce6fddd0a2ef02774fb71f6dd18cff381a983386ada",
+    "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py": "e992834d7d3ca90476202d849551ab16d1aba4bb1156b0519b3cd79e2566f9e8",
+    "docs/core/01_contracts/O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md": "3210f45543dd90b42ef5593b6693a2348819b363a98cce3c66411378f0d6474d",
     "docs/data/external/relativistic_transport/son_relativistic_superfluid_2002/source_record.json": "da0317ae6f1bbf6e09ed7321c720f090572ad122e124782bb71059adb36ae56c",
     "docs/data/external/relativistic_transport/chapman_hoyos_oz_superfluid_kubo_2013/source_record.json": "868f63a01bc6b0c90dee8ef26a46822e7c4d8fe44ef806262e8103367138ca8e",
     "docs/data/external/relativistic_transport/jain_kovtun_2024/source_record.json": "90c8c7dfe8256da2b1dbe6631d189470800ea8ed7eec228fc9bedf49dd39dbc7",

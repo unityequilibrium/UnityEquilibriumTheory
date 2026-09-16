@@ -12,6 +12,13 @@ CORE_ROOT = REPO_ROOT / "docs" / "core"
 LEGACY_ARTIFACT_ROOT = CORE_ROOT / "artifacts"
 CANONICAL_ARTIFACT_ROOT = CORE_ROOT / "07_artifacts"
 
+# Canonical control-plane locations. Keep these in one place so generators,
+# tests, and readers do not silently drift back to the legacy ``artifacts``
+# boundary.
+CANONICAL_PROVENANCE_ROOT = CANONICAL_ARTIFACT_ROOT / "provenance"
+CANONICAL_GATE_ROOT = CANONICAL_ARTIFACT_ROOT / "gates"
+CANONICAL_VERIFICATION_ROOT = CANONICAL_ARTIFACT_ROOT / "verification"
+
 PROTECTED_CORE_ROOT_FILES = {
     "AGENTS.md",
     "README.md",
@@ -72,6 +79,8 @@ def _artifact_domain(name: str) -> str:
     lower = name.lower()
     if lower.startswith(("t13_", "topic13_", "thermal_", "he4_")):
         return "topic13"
+    if "feasibility" in lower:
+        return "verification"
     if any(token in lower for token in ("gate", "foundation", "organization", "closure")):
         return "gates"
     if any(token in lower for token in ("provenance", "source", "manifest", "hash")):
@@ -308,6 +317,54 @@ def canonical_existing_path(path: str | Path) -> Path:
     if canonical.resolve() != candidate and canonical.exists():
         return canonical.resolve()
     return candidate
+
+
+def canonical_file_manifest_path() -> Path:
+    """Return the canonical generated file-manifest location."""
+
+    return CANONICAL_PROVENANCE_ROOT / "uet_core_file_manifest.json"
+
+
+def canonical_organization_registry_path() -> Path:
+    """Return the canonical organization-registry location."""
+
+    return CANONICAL_GATE_ROOT / "uet_research_organization_registry.json"
+
+
+def canonical_migration_map_path() -> Path:
+    """Return the canonical organization migration-map location."""
+
+    return CANONICAL_ARTIFACT_ROOT / "archive" / "uet_core_file_migration_map.json"
+
+
+def canonical_organization_audit_path() -> Path:
+    """Return the canonical organization-audit location."""
+
+    return CANONICAL_GATE_ROOT / "uet_core_organization_audit.json"
+
+
+def canonical_dependency_graph_path() -> Path:
+    """Return the canonical core dependency-graph location."""
+
+    return CANONICAL_GATE_ROOT / "uet_core_dependency_graph.json"
+
+
+def canonical_registry_audit_path() -> Path:
+    """Return the canonical registry-reconciliation audit location."""
+
+    return CANONICAL_VERIFICATION_ROOT / "uet_core_registry_reconciliation_audit.json"
+
+
+def is_compatibility_asset(path: str | Path) -> bool:
+    """Whether a file is an intentionally retained redirect/shim boundary."""
+
+    value = Path(path)
+    relative = normalize_relative(value)
+    if relative.startswith("docs/core/"):
+        tail = relative[len("docs/core/") :]
+        if tail.startswith(("artifacts/", "data/", "test/", "02_Proof/")):
+            return True
+    return is_markdown_redirect(value) or is_python_shim(value)
 
 def canonical_artifact_path(name: str | Path, domain: str | None = None) -> Path:
     filename = Path(name).name

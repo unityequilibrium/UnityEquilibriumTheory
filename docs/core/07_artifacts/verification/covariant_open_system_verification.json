@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "covariant_open_system_verification",
-  "generated_at": "2026-08-09T03:45:28.027517+00:00",
+  "generated_at": "2026-09-16T08:45:51.795208+00:00",
   "audit_status": "PASS",
   "research_status": "INTERNAL_LINEAR_CLASSICAL_KMS_CONTROL_ONLY",
   "unit_lane": "natural",
@@ -12,7 +12,7 @@
     "noise_minimum_eigenvalue": 0.004563393024909856,
     "onsager_symmetry_residual": 0.0,
     "onsager_minimum_eigenvalue": 0.35857864376269055,
-    "minimum_entropy_production": 0.005552521141270815,
+    "minimum_entropy_production": 0.005552521141270813,
     "generated_trace_increment": 0.0009229013096464217
   },
   "thresholds": {

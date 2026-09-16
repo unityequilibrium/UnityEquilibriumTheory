@@ -62,7 +62,7 @@ def main():
         print(json.dumps(dict(q=q,tests={name:r['null_test'] for name,r in results.items()})),flush=True)
     files=list(LOCKS)+[Path(__file__),ROOT/'docs/core/test/test_topic13_local_variance_identifiability.py',
         ROOT/'docs/scripts/audit/audit_topic13_energy_identifiability.py',ROOT/'docs/scripts/audit/audit_topic13_finiteq_scattering_geometry.py',
-        ROOT/'docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py',ROOT/'docs/core/uet_interlayer_mode_residue.py']
+        ROOT/'docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py',ROOT/'docs/core/03_lanes/thermal/uet_interlayer_mode_residue.py']
     artifact=dict(major_result_id='T13_LOCAL_SECOND_MOMENT_OBSERVABILITY',topic='0.13',closure_level='PARTIAL',
         what_is_closed='Target-specific row-space test for local variance in two ideal geometry designs',
         equation_or_mapping='A=S/f_THz; c_j=||B^dagger P e_j||^2/f_THz; delta trace=hbar/(mu_kg*2*pi*1e12)*c.delta_n per q before BZ weights',

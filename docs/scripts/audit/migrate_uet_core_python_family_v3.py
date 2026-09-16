@@ -251,8 +251,15 @@ def main() -> int:
     if not SAFE_FAMILY.fullmatch(args.family):
         parser.error("family must contain only lowercase letters, digits, and underscores")
     prefix = args.target_prefix.replace("\\", "/").rstrip("/")
-    if not prefix.startswith(("docs/core/02_equations/", "docs/core/03_lanes/")):
-        parser.error("target-prefix must be an equation or lane package under docs/core")
+    if not prefix.startswith(
+        (
+            "docs/core/01_contracts/",
+            "docs/core/02_equations/",
+            "docs/core/03_lanes/",
+            "docs/scripts/core/",
+        )
+    ):
+        parser.error("target-prefix must be a canonical core equation, lane, contract, or tooling package")
     if args.apply:
         print(json.dumps(
             apply(

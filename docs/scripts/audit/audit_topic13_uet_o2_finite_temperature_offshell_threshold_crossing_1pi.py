@@ -27,9 +27,9 @@ OUT = ROOT / (
     "docs/core/artifacts/"
     "t13_uet_o2_finite_temperature_offshell_threshold_crossing_1pi_audit.json"
 )
-MODULE = ROOT / "docs/core/uet_o2_finite_temperature_offshell_threshold_crossing_1pi.py"
-SCATTERING = ROOT / "docs/core/uet_o2_finite_temperature_sunset_scattering_sk_kms.py"
-THREE_BODY = ROOT / "docs/core/uet_o2_finite_temperature_sunset_sk_kms.py"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_offshell_threshold_crossing_1pi.py"
+SCATTERING = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_scattering_sk_kms.py"
+THREE_BODY = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_sk_kms.py"
 
 
 def sha256(path: Path) -> str:
@@ -95,9 +95,9 @@ def main() -> int:
         "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
     ]
     evidence = [
-        {"path": "docs/core/uet_o2_finite_temperature_offshell_threshold_crossing_1pi.py", "sha256": sha256(MODULE)},
-        {"path": "docs/core/uet_o2_finite_temperature_sunset_sk_kms.py", "sha256": sha256(THREE_BODY)},
-        {"path": "docs/core/uet_o2_finite_temperature_sunset_scattering_sk_kms.py", "sha256": sha256(SCATTERING)},
+        {"path": "docs/core/02_equations/o2/uet_o2_finite_temperature_offshell_threshold_crossing_1pi.py", "sha256": sha256(MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_sk_kms.py", "sha256": sha256(THREE_BODY)},
+        {"path": "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_scattering_sk_kms.py", "sha256": sha256(SCATTERING)},
     ]
     closure_level = "CLOSED_FOR_LANE" if not failed else "OPEN"
     artifact = {

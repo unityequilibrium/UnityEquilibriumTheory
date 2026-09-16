@@ -25,10 +25,10 @@ from docs.core.uet_o2_finite_temperature_quasiparticle_eos import (  # noqa: E40
 
 
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_action_derived_transition_kernel_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_action_derived_transition_kernel.py"
-MOMENTUM_MODULE = ROOT / "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py"
-COLLISION_MODULE = ROOT / "docs/core/uet_o2_kinetic_collision_kubo.py"
-EOS_MODULE = ROOT / "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_action_derived_transition_kernel.py"
+MOMENTUM_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_energy_momentum_conserving_bethe_salpeter.py"
+COLLISION_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_kinetic_collision_kubo.py"
+EOS_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py"
 
 
 def sha256(path: Path) -> str:
@@ -188,10 +188,10 @@ def main() -> int:
         else "BLOCKED_ACTION_DERIVED_EXACT_KINEMATIC_2TO2_TRANSITION_KERNEL_LANE"
     )
     evidence = [
-        {"path": "docs/core/uet_o2_action_derived_transition_kernel.py", "sha256": sha256(MODULE)},
-        {"path": "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py", "sha256": sha256(MOMENTUM_MODULE)},
-        {"path": "docs/core/uet_o2_kinetic_collision_kubo.py", "sha256": sha256(COLLISION_MODULE)},
-        {"path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py", "sha256": sha256(EOS_MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_action_derived_transition_kernel.py", "sha256": sha256(MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_energy_momentum_conserving_bethe_salpeter.py", "sha256": sha256(MOMENTUM_MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_kinetic_collision_kubo.py", "sha256": sha256(COLLISION_MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py", "sha256": sha256(EOS_MODULE)},
     ]
     artifact = {
         "schema_version": "t13-uet-o2-action-derived-transition-kernel-v1",

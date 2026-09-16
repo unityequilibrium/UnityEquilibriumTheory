@@ -40,7 +40,7 @@ def main():
         rows.append(dict(q=q,q_norm_inverse_angstrom=float(np.linalg.norm(np.array(q)@rec)),designs=result))
     paths=list(LOCKS)+[Path(__file__),ROOT/'docs/scripts/audit/audit_topic13_local_variance_identifiability.py',
         ROOT/'docs/scripts/audit/audit_topic13_energy_identifiability.py',ROOT/'docs/scripts/audit/audit_topic13_finiteq_scattering_geometry.py',
-        ROOT/'docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py',ROOT/'docs/core/uet_interlayer_mode_residue.py']
+        ROOT/'docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py',ROOT/'docs/core/03_lanes/thermal/uet_interlayer_mode_residue.py']
     output=dict(major_result_id='T13_BASAL_COVERAGE_EXTENSION',topic='0.13',closure_level='PARTIAL',
         what_is_closed='Generic-q and expanded basal-row target-identifiability tests in the current MP48 comparator',
         equation_or_mapping='Existing A=S/f and local target c, with only reciprocal coverage and q changed',

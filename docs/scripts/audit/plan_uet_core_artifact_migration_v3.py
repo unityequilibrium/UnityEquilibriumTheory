@@ -347,7 +347,7 @@ def build_payload() -> dict[str, Any]:
         "generator": GENERATOR,
         "scope": "docs/core/artifacts generated JSON and NPZ outputs",
         "canonical_path_authority": "docs/core/core_paths.py",
-        "legacy_boundary": "docs/core/artifacts/README.md",
+        "legacy_boundary": "docs/core/07_artifacts/README.md",
         "history_path": repo_path(HISTORY) if HISTORY.exists() else None,
         "summary": summary,
         "records": rows,

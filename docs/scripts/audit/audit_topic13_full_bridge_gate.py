@@ -538,7 +538,10 @@ def main() -> int:
         }
     }
     discovered_lane_integrations = {}
-    for artifact_root in (ROOT / "docs/core/artifacts", ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts"):
+    for artifact_root in (
+        ROOT / "docs/core/07_artifacts",
+        ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts",
+    ):
         for artifact_path in sorted(artifact_root.rglob("*.json")):
             try:
                 candidate = json.loads(artifact_path.read_text(encoding="utf-8-sig"))

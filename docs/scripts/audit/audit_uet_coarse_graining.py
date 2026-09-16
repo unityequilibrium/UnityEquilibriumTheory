@@ -13,7 +13,11 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from docs.core.core_paths import canonical_existing_path  # noqa: E402
+from docs.core.core_paths import (  # noqa: E402
+    CANONICAL_ARTIFACT_ROOT,
+    canonical_artifact_path,
+    canonical_existing_path,
+)
 COARSE_GRAINING_SOURCE = canonical_existing_path(ROOT / ("docs/core/" + "uet_coarse_graining.py")).relative_to(ROOT).as_posix()
 
 from docs.core.uet_coarse_graining import (
@@ -21,7 +25,7 @@ from docs.core.uet_coarse_graining import (
     coarse_graining_contract, refine_coarse_graining, scale_dependence_audit,
 )
 
-ARTIFACTS = ROOT / "docs/core/artifacts"
+ARTIFACTS = CANONICAL_ARTIFACT_ROOT
 
 
 def _record(lane: str, cells: int) -> CoarseGrainingRecord:
@@ -136,7 +140,9 @@ def main() -> int:
     names = ("coarse_graining_verification.json", "coarse_graining_formula_audit.json", "uet_main_theory_wave3_gate.json", "uet_equation_correspondence_registry_coarse_graining_addendum.json")
     outputs = dict(zip(names, build_artifacts()))
     for name, payload in outputs.items():
-        (ARTIFACTS / name).write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        path = canonical_artifact_path(name)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     gate = outputs["uet_main_theory_wave3_gate.json"]
     print(f"audit_status={gate['audit_status']}")
     print(f"coarse_graining_status={gate['coarse_graining_status']}")

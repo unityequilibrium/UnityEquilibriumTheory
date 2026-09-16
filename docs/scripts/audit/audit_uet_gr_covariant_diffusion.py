@@ -34,15 +34,23 @@ from docs.core.uet_covariant_diffusion import (  # noqa: E402
     principal_symbol_diagnostics,
 )
 from docs.core.uet_spatial import integral_1d  # noqa: E402
+from docs.core.core_paths import (  # noqa: E402
+    CANONICAL_ARTIFACT_ROOT,
+    canonical_artifact_path,
+    canonical_existing_path,
+)
 
 from docs.scripts.audit.uet_gr_monotonic_stage import (  # noqa: E402
     apply_latest_hyperbolic_phase_field_stage,
 )
 
-CORE = ROOT / "docs/core/uet_covariant_diffusion.py"
-SPEC = ROOT / "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
-OUT = ROOT / "docs/core/artifacts"
-MATTER = OUT / "covariant_matter_action_verification.json"
+CORE = canonical_existing_path(ROOT / "docs/core/02_equations/covariant/uet_covariant_diffusion.py")
+SPEC = canonical_existing_path(ROOT / "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md")
+OUT = CANONICAL_ARTIFACT_ROOT
+MATTER = canonical_artifact_path(
+    "covariant_matter_action_verification.json",
+    "verification",
+)
 
 
 def _sha(path: Path) -> str:
@@ -50,7 +58,9 @@ def _sha(path: Path) -> str:
 
 
 def _dump(name: str, payload: dict[str, Any]) -> None:
-    (OUT / name).write_text(
+    path = canonical_artifact_path(name)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
         json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
 
@@ -455,22 +465,22 @@ def build_artifacts() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any], d
         "formula_registry": [
             {
                 "id": "current_frame_decomposition",
-                "implementation": "docs/core/uet_covariant_diffusion.py::decompose_noether_current",
+                "implementation": "docs/core/02_equations/covariant/uet_covariant_diffusion.py::decompose_noether_current",
                 "status": "IMPLEMENTED_KINEMATIC",
             },
             {
                 "id": "finite_relaxation_current",
-                "implementation": "docs/core/uet_covariant_diffusion.py::causal_current_rhs",
+                "implementation": "docs/core/02_equations/covariant/uet_covariant_diffusion.py::causal_current_rhs",
                 "status": "IMPLEMENTED_CONSTITUTIVE",
             },
             {
                 "id": "semi_discrete_energy_identity",
-                "implementation": "docs/core/uet_covariant_diffusion.py::current_energy_balance",
+                "implementation": "docs/core/02_equations/covariant/uet_covariant_diffusion.py::current_energy_balance",
                 "status": "IMPLEMENTED_EXACT",
             },
             {
                 "id": "model_b_adiabatic_limit",
-                "implementation": "docs/core/uet_covariant_diffusion.py::compare_adiabatic_limit",
+                "implementation": "docs/core/02_equations/covariant/uet_covariant_diffusion.py::compare_adiabatic_limit",
                 "status": "IMPLEMENTED_EXACT_DISCRETE",
             },
         ],

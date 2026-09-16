@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-desorbo-ceylon-graphite-cp-audit-v1",
   "artifact": "t13_desorbo_ceylon_graphite_cp_audit",
-  "generated_at": "2026-08-30",
+  "generated_at": "2026-09-17",
   "status": "PASS_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_LOCKED_COMPARATOR",
   "claim_promotion": false,
   "major_result": {
@@ -33,7 +33,7 @@
         "sha256": "2e9955e1a176adc93ee152aceb390da67f561bf5ba0a4c741e9936a552f1dc1b"
       },
       {
-        "path": "docs/core/artifacts/t13_desorbo_ceylon_graphite_cp_audit.json"
+        "path": "docs/core/07_artifacts/topic13/t13_desorbo_ceylon_graphite_cp_audit.json"
       }
     ],
     "verification_status": "PASS_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_LOCKED_COMPARATOR",

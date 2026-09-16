@@ -20,7 +20,7 @@ from docs.core.uet_o2_finite_temperature_all_22_permutation_identity import (  #
 
 
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_all_22_permutation_identity_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_finite_temperature_all_22_permutation_identity.py"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_all_22_permutation_identity.py"
 
 
 def _hash(path: Path) -> str:

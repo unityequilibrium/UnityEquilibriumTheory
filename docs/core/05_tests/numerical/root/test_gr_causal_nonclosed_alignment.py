@@ -1,18 +1,15 @@
 """Artifact alignment tests for the causal non-closed kernel wave."""
 
 from __future__ import annotations
-from docs.core.core_paths import CANONICAL_ARTIFACT_ROOT
+from docs.core.core_paths import canonical_artifact_path
 
 import json
 from pathlib import Path
 
 from docs.scripts.audit.audit_uet_gr_causal_nonclosed import build_artifacts
 
-ARTIFACT_DIR = CANONICAL_ARTIFACT_ROOT
-
-
 def _read(name: str) -> dict[str, object]:
-    return json.loads((ARTIFACT_DIR / name).read_text(encoding="utf-8"))
+    return json.loads(canonical_artifact_path(name).read_text(encoding="utf-8"))
 
 
 def test_causal_verification_passes_exact_support_and_dependency_gates() -> None:

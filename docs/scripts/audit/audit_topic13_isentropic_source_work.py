@@ -57,8 +57,8 @@ def main():
             chain_energy_derivative=float(chain), direct_energy_derivative=float(direct[2]),
             chain_first_law_relative_error=float(abs(chain-work)/abs(work)),
             direct_first_law_relative_error=float(abs(direct[2]-work)/abs(work)), root_checks=residuals))
-    files = [source, Path(__file__), ROOT/'docs/core/uet_o2_action_thermal_observable_bridge.py',
-        ROOT/'docs/core/uet_o2_finite_temperature_quasiparticle_eos.py', ROOT/'docs/core/test/test_topic13_isentropic_source_work.py']
+    files = [source, Path(__file__), ROOT/'docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py',
+        ROOT/'docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py', ROOT/'docs/core/test/test_topic13_isentropic_source_work.py']
     result = dict(major_result_id='T13_NATURAL_ISENTROPIC_SOURCE_WORK', topic='0.13', closure_level='PARTIAL',
         what_is_closed=['Natural reversible source-work balance compared using derivatives and constrained roots'],
         equation_or_mapping='J_(s,n)/(T,mu)*(T_Phi,mu_Phi)=-(s_Phi,n_Phi); d epsilon|s,n = -p_Phi dPhi at fixed volume',

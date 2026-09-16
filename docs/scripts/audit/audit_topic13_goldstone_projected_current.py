@@ -200,8 +200,8 @@ def build_report(*, quick=False):
     rows = [assemble(.01, p, q, cutoff, N=n) for p, q, cutoff, n in configs]
     current_checks = canonical_current_checks()
     paths = [
-        "docs/core/uet_covariant_matter.py",
-        "docs/core/uet_covariant_response.py",
+        "docs/core/02_equations/covariant/uet_covariant_matter.py",
+        "docs/core/02_equations/covariant/uet_covariant_response.py",
         "docs/scripts/audit/audit_topic13_goldstone_projected_current.py",
     ]
     checks = {

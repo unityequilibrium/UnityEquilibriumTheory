@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_gh_time_evolution_gate",
-  "generated_at": "2026-08-29T04:51:43.940855+00:00",
+  "generated_at": "2026-09-16T17:48:30.275578+00:00",
   "status": "PARTIAL_GH_PERIODIC_VACUUM_EVOLUTION_READY",
   "requirements": {
     "nonlinear_vacuum_rhs": "PASS",
@@ -30,12 +30,12 @@
   "controlling_blocker": "curved_3p1_constraint_preserving_boundaries_and_topic13_stress_energy_wiring_missing",
   "evidence_artifacts": [
     {
-      "path": "docs/core/artifacts/curved_3p1_gh_time_evolution_verification.json",
-      "sha256": "9615a6f74fe274af74889abf5fc1c0a6bd79364aa5a35fe2d96b3464ade448e6"
+      "path": "docs/core/07_artifacts/verification/curved_3p1_gh_time_evolution_verification.json",
+      "sha256": "e0a1c00213e4277498c43d7c7088a1c6d557720e041e0a84a2fc07bce675586d"
     },
     {
-      "path": "docs/core/artifacts/curved_3p1_gh_time_evolution_formula_audit.json",
-      "sha256": "0f967b2049fcfe452a155db107d42a5f57bee0cf865aa715d33693ce0dfcc359"
+      "path": "docs/core/07_artifacts/correspondence/curved_3p1_gh_time_evolution_formula_audit.json",
+      "sha256": "af7089f4d5112bd769435d277d5ffd07749745abe88564860c292f8989731b95"
     }
   ],
   "dependency_unlocked": "constraint-preserving boundary and Topic 13 matter-wiring waves only",

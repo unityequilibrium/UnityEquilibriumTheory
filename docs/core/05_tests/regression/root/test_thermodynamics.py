@@ -29,7 +29,7 @@ if repo_root_path not in sys.path:
     sys.path.insert(0, repo_root_path)
 
 from docs.core.uet_master_equation import UETParameters
-from docs.core.uet_base_solver import UETBaseSolver
+from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
 
 
 class ThermoTest(UETBaseSolver):

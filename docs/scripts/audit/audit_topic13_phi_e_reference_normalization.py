@@ -24,7 +24,7 @@ from docs.core.thermal_phi_e_reference_normalization import (
 
 
 SOURCE_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/mp48_independent_graphite_cv_source_package.json"
-ENERGY_REL = "docs/core/thermal_energy_response_bridge.py"
+ENERGY_REL = "docs/core/03_lanes/thermal/thermal_energy_response_bridge.py"
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_phi_e_reference_normalization_audit.json"
 
 

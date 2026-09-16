@@ -12,7 +12,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / "docs/core/07_artifacts/archive/uet_dynamical_stability_diagnostic.json"
-MODULE = ROOT / "docs/core/uet_dynamical_stability.py"
+MODULE = ROOT / "docs/core/02_equations/matter_space/uet_dynamical_stability.py"
 METHOD = (
     ROOT
     / "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/chaos_method_validation.json"

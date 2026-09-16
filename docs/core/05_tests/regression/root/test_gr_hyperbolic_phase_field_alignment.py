@@ -7,7 +7,11 @@ import inspect
 import json
 from pathlib import Path
 
-from docs.core.core_paths import canonical_existing_path, repo_root
+from docs.core.core_paths import (
+    canonical_artifact_path,
+    canonical_existing_path,
+    repo_root,
+)
 
 from docs.core.uet_hyperbolic_phase_field import (
     HYPERBOLIC_PHASE_FIELD_SOURCE_ARXIV,
@@ -19,7 +23,6 @@ from docs.core.uet_hyperbolic_phase_field import (
 )
 
 ROOT = repo_root()
-ARTIFACTS = ROOT / "docs/core/artifacts"
 SOURCE_RECORD = (
     ROOT
     / "docs/data/external/condensed_matter/phase_transitions"
@@ -29,7 +32,7 @@ SOURCE_RECORD = (
 
 
 def _load(name: str) -> dict:
-    return json.loads((ARTIFACTS / name).read_text(encoding="utf-8"))
+    return json.loads(canonical_artifact_path(name).read_text(encoding="utf-8"))
 
 
 def _sha(path: Path) -> str:

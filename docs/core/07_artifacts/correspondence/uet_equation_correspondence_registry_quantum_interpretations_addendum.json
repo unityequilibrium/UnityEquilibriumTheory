@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_equation_correspondence_registry_quantum_interpretations_addendum",
-  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
   "status": "CANDIDATE_ENTRY_PENDING_MERGE",
   "equation_entries": [
     {
       "equation_id": "uet.main_theory.quantum_interpretation_adapters",
       "version": "interpretation-adapters-v1",
       "classification": "observable_definition",
-      "relation_or_code_path": "docs/core/uet_quantum_interpretations.py",
+      "relation_or_code_path": "docs/core/03_lanes/carrier_observer/uet_quantum_interpretations.py",
       "variables": {
         "rho_A": "agent-indexed probability assignment",
         "relation_SR": "system-reference metadata",
@@ -32,11 +32,11 @@
         "changing agent or reference labels leaves probabilities unchanged"
       ],
       "implementation_paths": [
-        "docs/core/uet_quantum_interpretations.py"
+        "docs/core/03_lanes/carrier_observer/uet_quantum_interpretations.py"
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_quantum_interpretations.py",
-        "docs/core/artifacts/quantum_interpretation_invariance_verification.json",
+        "docs/core/07_artifacts/verification/quantum_interpretation_invariance_verification.json",
         "docs/core/test/test_uet_quantum_interpretations.py"
       ],
       "evidence_class": "INTERNAL_FORMAL",

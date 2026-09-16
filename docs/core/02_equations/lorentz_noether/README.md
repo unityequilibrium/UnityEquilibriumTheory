@@ -8,7 +8,7 @@ diagnostics are compatibility utilities, not a proof that every UET operator
 is Lorentz invariant.  The Noether sources are migrated separately after
 their shared legacy dependencies and mapping tests are checked.
 
-The root imports under `docs.core.uet_lorentz` remain compatibility shims.
+The root imports under `docs.core.02_equations.lorentz_noether.uet_lorentz` remain compatibility shims.
 Organization status is independent of physics evidence status; the current
 family contract still limits claims to support utilities and mapping layers.
 

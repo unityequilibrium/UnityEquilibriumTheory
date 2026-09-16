@@ -15,9 +15,9 @@ def main():
     linear, quadratic = constraints()
     linear_rank = int(np.linalg.matrix_rank(linear, tol=1e-10))
     quadratic_rank = int(np.linalg.matrix_rank(quadratic, tol=1e-10))
-    files = ['docs/core/uet_shear_symmetry.py',
+    files = ['docs/core/03_lanes/thermal/uet_shear_symmetry.py',
              'docs/core/test/test_topic13_shear_symmetry.py',
-             'docs/core/T13_MATTER_STRAIN_SUSCEPTIBILITY_MATCH.md',
+             'docs/core/03_lanes/topic13_support/T13_MATTER_STRAIN_SUSCEPTIBILITY_MATCH.md',
              'docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_shear_symmetry_addendum.json',
              str(Path(__file__).relative_to(ROOT)).replace('\\', '/')]
     artifact = dict(

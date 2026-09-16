@@ -119,6 +119,6 @@ The mass-density lane must add a dimensional map, a source/measurement operator,
 and a holdout protocol before any galaxy fit. The current comparator alone cannot choose between
 these lanes.
 
-Implementation: [relational_two_body_baseline.py](../relational_two_body_baseline.py)
+Implementation: [relational_two_body_baseline.py](../03_lanes/carrier_observer/relational_two_body_baseline.py)
 
 Audit: `docs/scripts/audit/audit_relational_two_body_baseline.py`

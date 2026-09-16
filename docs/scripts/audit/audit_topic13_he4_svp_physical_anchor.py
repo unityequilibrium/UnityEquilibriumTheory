@@ -29,7 +29,7 @@ PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "he4_svp_o2_physical_anchor_source_package.json"
 )
-MODULE = ROOT / "docs/core/he4_svp_reference.py"
+MODULE = ROOT / "docs/core/03_lanes/thermal/he4_svp_reference.py"
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_he4_svp_physical_anchor_audit.json"
 
 

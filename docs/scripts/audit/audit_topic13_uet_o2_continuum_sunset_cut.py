@@ -28,7 +28,7 @@ from docs.core.uet_covariant_response import CovariantResponseConfig  # noqa: E4
 
 
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_continuum_sunset_cut_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_continuum_sunset_cut.py"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_continuum_sunset_cut.py"
 FINITE_SUNSET_ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_two_loop_sunset_cut_audit.json"
 
 
@@ -117,7 +117,7 @@ def main() -> int:
         else "BLOCKED_ACTION_DERIVED_CONTINUUM_SUNSET_CUT_LANE"
     )
     evidence = [
-        {"path": "docs/core/uet_o2_continuum_sunset_cut.py", "sha256": sha256(MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_continuum_sunset_cut.py", "sha256": sha256(MODULE)},
         {
             "path": "docs/core/07_artifacts/topic13/t13_uet_o2_two_loop_sunset_cut_audit.json",
             "sha256": sha256(FINITE_SUNSET_ARTIFACT),

@@ -1,12 +1,13 @@
 """Tests for the quadratic causal-reference energy artifact."""
-from docs.core.core_paths import core_root
+from docs.core.core_paths import canonical_artifact_path
 
 import json
 from pathlib import Path
 
 
-ROOT = core_root()
-ARTIFACT = ROOT / "artifacts" / "matter_space_causal_reference_energy_verification.json"
+ARTIFACT = canonical_artifact_path(
+    "matter_space_causal_reference_energy_verification.json", "verification"
+)
 
 
 def load_artifact():

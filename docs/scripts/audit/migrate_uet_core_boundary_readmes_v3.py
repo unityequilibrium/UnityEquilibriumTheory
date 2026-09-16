@@ -28,8 +28,8 @@ PLANNER = ROOT / "docs/scripts/audit/plan_uet_core_physical_migration.py"
 GENERATOR = "docs/scripts/audit/migrate_uet_core_boundary_readmes_v3.py"
 
 MAPPINGS = (
-    ("docs/core/data/README.md", "docs/core/06_data/README.md"),
-    ("docs/core/02_Proof/README.md", "docs/core/04_proofs/README.md"),
+    ("docs/core/06_data/README.md", "docs/core/06_data/README.md"),
+    ("docs/core/04_proofs/README.md", "docs/core/04_proofs/README.md"),
 )
 TEXT_SUFFIXES = {".md", ".py", ".ps1", ".sh", ".yml", ".yaml", ".toml"}
 REDIRECT_MARKER = "# Compatibility redirect"

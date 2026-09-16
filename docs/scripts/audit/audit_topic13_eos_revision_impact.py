@@ -106,9 +106,9 @@ def main():
         "evidence_artifacts": [{"path": p, "sha256": digest(ROOT / p)} for p in (
             "docs/scripts/audit/audit_topic13_eos_revision_impact.py",
             "docs/core/test/test_topic13_eos_revision_impact.py",
-            "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
-            "docs/core/uet_o2_action_thermal_observable_bridge.py",
-            "docs/core/uet_o2_action_thermal_stiffness_beta.py")],
+            "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py",
+            "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+            "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py")],
     }
     target = ROOT / ART / "t13_eos_revision_impact_audit.json"
     target.write_text(json.dumps(result, indent=2, allow_nan=False) + "\n", encoding="utf-8")

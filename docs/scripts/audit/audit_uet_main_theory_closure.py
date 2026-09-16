@@ -4,12 +4,19 @@ from __future__ import annotations
 
 import hashlib
 import json
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 CORE = ROOT / "docs/core"
-ARTIFACTS = CORE / "artifacts"
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+from docs.core.core_paths import canonical_artifact_path
+
+ARTIFACTS = CORE / "07_artifacts"
+CANONICAL_REPORT_PATH = CORE / "08_history" / "research_notes" / "UET_MAIN_THEORY_CLOSURE_REPORT.md"
+LEGACY_REPORT_PATH = CORE / "UET_MAIN_THEORY_CLOSURE_REPORT.md"
 
 
 INPUTS = {
@@ -31,17 +38,23 @@ INPUTS = {
 
 
 def _read(name: str) -> dict:
-    return json.loads((ARTIFACTS / name).read_text(encoding="utf-8"))
+    return json.loads(canonical_artifact_path(name).read_text(encoding="utf-8"))
 
 
 def _sha(name: str) -> str:
-    return hashlib.sha256((ARTIFACTS / name).read_bytes()).hexdigest()
+    return hashlib.sha256(canonical_artifact_path(name).read_bytes()).hexdigest()
 
 
 def build_artifacts() -> tuple[dict, dict, dict, str]:
     now = datetime.now(timezone.utc).isoformat()
     inputs = {key: _read(name) for key, name in INPUTS.items()}
-    identities = {key: {"path": f"docs/core/artifacts/{name}", "sha256": _sha(name)} for key, name in INPUTS.items()}
+    identities = {
+        key: {
+            "path": canonical_artifact_path(name).relative_to(ROOT).as_posix(),
+            "sha256": _sha(name),
+        }
+        for key, name in INPUTS.items()
+    }
     categories = {
         "methodological_closure": {"status": "PASS", "reason": "axioms, registry, per-wave gates, tests, update log, and dependency decisions are machine-readable"},
         "ontology_closure": {"status": "PASS_CONTRACT_ONLY", "reason": "C lanes, Phi, physical memory, R_gen, R_obs, and interpretation boundaries are separated; lane realizations remain incomplete"},
@@ -146,8 +159,16 @@ derivation, dark-matter solution, or fundamental unification.
 def main() -> int:
     closure, matrix, falsification, report = build_artifacts()
     for name, payload in (("uet_main_theory_closure_gate.json", closure), ("uet_standard_physics_correspondence_matrix_v2.json", matrix), ("uet_main_theory_falsification_register.json", falsification)):
-        (ARTIFACTS / name).write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    (CORE / "UET_MAIN_THEORY_CLOSURE_REPORT.md").write_text(report, encoding="utf-8")
+        canonical_artifact_path(name).write_text(
+            json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        )
+    CANONICAL_REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    CANONICAL_REPORT_PATH.write_text(report, encoding="utf-8")
+    LEGACY_REPORT_PATH.write_text(
+        "# Compatibility redirect\n\n"
+        "Canonical source: [UET Main-Theory Closure Report](08_history/research_notes/UET_MAIN_THEORY_CLOSURE_REPORT.md)\n",
+        encoding="utf-8",
+    )
     print(f"overall_status={closure['overall_status']}")
     print(f"primary_eft_status={closure['primary_eft_status']}")
     print("controlling_blockers=" + ",".join(closure["controlling_blockers"]))

@@ -17,6 +17,14 @@ Author: UET Research Team
 Version: 0.9.0
 """
 
+# Root-level module files are no longer required for compatibility. Install
+# the explicit lazy alias boundary before the public facade imports its old
+# names below, so existing from docs.core.<module> callers keep working.
+from .core_compat import install_legacy_module_aliases as _install_legacy_module_aliases
+
+_install_legacy_module_aliases()
+del _install_legacy_module_aliases
+
 from .uet_parameters import (
     # Main API
     get_params,

@@ -24,7 +24,7 @@ from docs.core.uet_o2_regularized_continuum_heat_current import (  # noqa: E402
 
 
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_regularized_continuum_heat_current_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_regularized_continuum_heat_current.py"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_regularized_continuum_heat_current.py"
 BASELINE_REL = "docs/core/07_artifacts/topic13/t13_uet_o2_heat_current_kubo_continuum_boundary_audit.json"
 
 
@@ -103,7 +103,7 @@ def main() -> int:
         "observable": contract["observable"],
         "data_role": contract["data_role"],
         "evidence_artifacts": [
-            {"path": "docs/core/uet_o2_regularized_continuum_heat_current.py", "sha256": sha256(MODULE)},
+            {"path": "docs/core/02_equations/o2/uet_o2_regularized_continuum_heat_current.py", "sha256": sha256(MODULE)},
             {"path": BASELINE_REL, "sha256": sha256(baseline_path)},
         ],
         "verification_status": status,

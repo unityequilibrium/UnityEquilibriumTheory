@@ -22,18 +22,31 @@ from docs.core.uet_curved_3p1_adm_evolution import (
     compute_adm_evolution_rhs,
     fixed_gauge_adm_principal_symbol,
 )
+from docs.core.core_paths import CANONICAL_ARTIFACT_ROOT, canonical_artifact_path
 
 
-ARTIFACTS = ROOT / "docs/core/artifacts"
-MODULE = ROOT / "docs/core/uet_curved_3p1_adm_evolution.py"
+ARTIFACTS = CANONICAL_ARTIFACT_ROOT
+MODULE = ROOT / "docs/core/02_equations/covariant/uet_curved_3p1_adm_evolution.py"
 AUDIT_SCRIPT = Path(__file__).resolve()
 GOURGOULHON = ROOT / "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json"
 GUNDLACH = ROOT / "docs/data/external/gr_3p1/gundlach_martin_garcia_2006/source_record.json"
 LINDBLOM = ROOT / "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json"
-VERIFY = ARTIFACTS / "curved_3p1_adm_evolution_operator_verification.json"
-NO_GO = ARTIFACTS / "curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json"
-FORMULA = ARTIFACTS / "curved_3p1_adm_evolution_formula_audit.json"
-SELECTION = ARTIFACTS / "curved_3p1_formulation_selection_gate.json"
+VERIFY = canonical_artifact_path(
+    "curved_3p1_adm_evolution_operator_verification.json",
+    "verification",
+)
+NO_GO = canonical_artifact_path(
+    "curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json",
+    "archive",
+)
+FORMULA = canonical_artifact_path(
+    "curved_3p1_adm_evolution_formula_audit.json",
+    "correspondence",
+)
+SELECTION = canonical_artifact_path(
+    "curved_3p1_formulation_selection_gate.json",
+    "gates",
+)
 
 
 def _sha256(path: Path) -> str:

@@ -21,10 +21,10 @@ OUTPUT = "docs/core/07_artifacts/topic13/t13_matter_strain_susceptibility_matchi
 REGISTRY = "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_matter_strain_matching_addendum.json"
 ID = "uet.o2.thermal.matter_strain_susceptibility_matching"
 PUMP = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_experimental_heating_input_source_package.json"
-EVIDENCE = ["docs/core/T13_MATTER_STRAIN_SUSCEPTIBILITY_MATCH.md", "docs/core/uet_matter_strain_susceptibility.py",
+EVIDENCE = ["docs/core/03_lanes/topic13_support/T13_MATTER_STRAIN_SUSCEPTIBILITY_MATCH.md", "docs/core/03_lanes/thermal/uet_matter_strain_susceptibility.py",
             "docs/core/test/test_topic13_matter_strain_susceptibility.py", "docs/scripts/audit/audit_topic13_matter_strain_susceptibility.py",
-            "docs/core/uet_covariant_matter.py", "docs/core/uet_covariant_response.py",
-            "docs/core/uet_thermoelastic_spatial_compatibility.py", PUMP]
+            "docs/core/02_equations/covariant/uet_covariant_matter.py", "docs/core/02_equations/covariant/uet_covariant_response.py",
+            "docs/core/03_lanes/thermal/uet_thermoelastic_spatial_compatibility.py", PUMP]
 PROTECTED = ["docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
              "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"]
 

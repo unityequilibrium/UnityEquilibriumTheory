@@ -213,7 +213,7 @@ def main():
         "detailed_balance": all(r["max_detailed_balance_relative_error"]<1e-10 for r in sequence),
         "last_refinement_below_declared_2e_minus3": differences[-1]<2e-3,
     }
-    paths=["docs/core/uet_covariant_matter.py","docs/core/uet_covariant_response.py",
+    paths=["docs/core/02_equations/covariant/uet_covariant_matter.py","docs/core/02_equations/covariant/uet_covariant_response.py",
            "docs/scripts/audit/audit_topic13_action_normalized_elastic_scattering.py",
            "docs/core/test/test_topic13_action_normalized_elastic_scattering.py"]
     digest=lambda p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest()

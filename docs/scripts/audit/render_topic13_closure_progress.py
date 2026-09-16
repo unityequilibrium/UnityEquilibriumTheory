@@ -23,7 +23,7 @@ GATE_REL = (
 INPUT_REL = "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json"
 MINIMAL_INPUT_REL = "docs/core/07_artifacts/topic13/t13_full_closure_minimal_input_contract.json"
 OUT_JSON_REL = "docs/core/07_artifacts/topic13/t13_full_closure_progress.json"
-EXPOSURE_REL = "docs/core/T13_HOLDOUT_EXPOSURE_2026_09_10.json"
+EXPOSURE_REL = "docs/core/99_review/unresolved_assets/T13_HOLDOUT_EXPOSURE_2026_09_10.json"
 OUT_MD_REL = "docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_FULL_CLOSURE_STATUS.md"
 
 

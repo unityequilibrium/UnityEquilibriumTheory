@@ -1,7 +1,11 @@
 """Artifact alignment tests for the conserved-current reduction wave."""
 
 from __future__ import annotations
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import (
+    canonical_artifact_path,
+    canonical_existing_path,
+    repo_root,
+)
 
 import hashlib
 import json
@@ -10,15 +14,14 @@ from pathlib import Path
 from docs.scripts.audit.audit_uet_gr_covariant_diffusion import build_artifacts
 
 ROOT = repo_root()
-ARTIFACT_DIR = ROOT / "docs/core/artifacts"
-
-
 def _read(name: str) -> dict[str, object]:
-    return json.loads((ARTIFACT_DIR / name).read_text(encoding="utf-8"))
+    return json.loads(canonical_artifact_path(name).read_text(encoding="utf-8"))
 
 
 def _sha(relative_path: str) -> str:
-    return hashlib.sha256((ROOT / relative_path).read_bytes()).hexdigest()
+    return hashlib.sha256(
+        canonical_existing_path(ROOT / relative_path).read_bytes()
+    ).hexdigest()
 
 
 def test_diffusive_current_audit_passes_only_declared_partial_scope() -> None:

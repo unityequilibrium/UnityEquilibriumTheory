@@ -1,5 +1,5 @@
 """Integrity checks for the locked resolution experiment, not convergence proof."""
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import canonical_artifact_path, repo_root
 import json
 from hashlib import sha256
 from pathlib import Path
@@ -8,7 +8,7 @@ ROOT=repo_root()
 
 
 def read(name):
-    return json.loads((ROOT/"docs/core/artifacts"/name).read_text())
+    return json.loads(canonical_artifact_path(name).read_text())
 
 
 def test_plan_is_one_factor_and_has_no_physical_tuning():

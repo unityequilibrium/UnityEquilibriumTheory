@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[3]
 CONTRACT = ROOT / "docs/core/07_artifacts/archive/uet_research_room_wave1_contract.json"
 REGISTRY = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json"
 GATE = ROOT / "docs/core/07_artifacts/gates/uet_research_room_wave1_integration_gate.json"
-NOTE = ROOT / "docs/core/UET_RESEARCH_ROOM_WAVE1_INTEGRATION_NOTE.md"
+NOTE = ROOT / "docs/core/08_history/research_notes/UET_RESEARCH_ROOM_WAVE1_INTEGRATION_NOTE.md"
 INBOX_DRIFT = ROOT / "docs/core/07_artifacts/archive/inbox_research_alignment_drift_note.json"
 
 
@@ -82,7 +82,7 @@ def main() -> int:
         "generated_at": date.today().isoformat(),
         "status": gate_status,
         "claim_promotion": False,
-        "brief": {"path": "docs/core/UET_RESEARCH_ROOM_BRIEF.md", "sha256": sha256(ROOT / "docs/core/UET_RESEARCH_ROOM_BRIEF.md")},
+        "brief": {"path": "docs/core/00_governance/UET_RESEARCH_ROOM_BRIEF.md", "sha256": sha256(ROOT / "docs/core/00_governance/UET_RESEARCH_ROOM_BRIEF.md")},
         "contract": {"path": rel(CONTRACT), "sha256": sha256(CONTRACT)},
         "registry": {"path": rel(REGISTRY), "sha256": sha256(REGISTRY), "required_wave1_entries_present": not missing_registry, "missing_wave1_entries": missing_registry},
         "rooms": contract.get("rooms", {}),
