@@ -2,7 +2,7 @@
 
 > Organization controls only. A passing organization audit does not pass the physics foundation gate.
 
-Generated at: 2026-09-16T18:14:46+00:00
+Generated at: 2026-09-16T18:40:08+00:00
 Status: **PASS**
 
 ## Subaudits

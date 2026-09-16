@@ -107,7 +107,7 @@
       "owner_id": "ORG",
       "rollback_path": "docs/core/00_governance/UET_CORE_MIGRATION_ENFORCEMENT_REPORT.md",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "012eac8efea8671c8f44cec6228a73b13c68b8d90b557b3200edc4de38aae0e2",
+      "sha256": "b16eefc0040e603db6671fb800bfa0ca74cb4acb18898c75ad0bf96e8748da95",
       "target_path": "docs/core/00_governance/UET_CORE_MIGRATION_ENFORCEMENT_REPORT.md"
     },
     {
@@ -141,7 +141,7 @@
       "owner_id": "ORG",
       "rollback_path": "docs/core/00_governance/UET_CORE_PHYSICAL_MIGRATION_REPORT.md",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "f911d6ef407fa02af3de15c6f25a26a98b15f333e9191ecc205dc74c64e94db3",
+      "sha256": "d80052d5fa9395fa62a0327abc6373af998cc9be3265f87fa272ad59469cfb4b",
       "target_path": "docs/core/00_governance/UET_CORE_PHYSICAL_MIGRATION_REPORT.md"
     },
     {
@@ -3235,7 +3235,7 @@
       "owner_id": "ORG",
       "rollback_path": "docs/core/00_governance/uet_core_data_tooling_migration_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "306d8705c2c9d7e879aa7fdeb44ac10cc0f66fc8fae0ae2a00a63723d6425894",
+      "sha256": "9ffd990f3478bf3f12f8fe3a46c904b60e85a3a87dc80c6e159fe434515479cd",
       "target_path": "docs/core/00_governance/uet_core_data_tooling_migration_audit.json"
     },
     {
@@ -3303,7 +3303,7 @@
       "owner_id": "ORG",
       "rollback_path": "docs/core/00_governance/uet_core_imports_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "e092050d85be4d1e921f2109690a0dd1533bd518c89809884929e8a5b647117c",
+      "sha256": "7e62c4433465ec4f93e05bf9f0f9f8c232474b7729a1aaec12917a5538c28e88",
       "target_path": "docs/core/00_governance/uet_core_imports_audit.json"
     },
     {
@@ -3337,7 +3337,7 @@
       "owner_id": "ORG",
       "rollback_path": "docs/core/00_governance/uet_core_links_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "7cef57fd3e6a04a409b70ad0eb7fdda2df151f7ada96ddc1a0131f1e3a39e083",
+      "sha256": "c7c20c3dacfc77e31b2dd9566d41e8d6b31269de125d0228b74ec6debd9cb258",
       "target_path": "docs/core/00_governance/uet_core_links_audit.json"
     },
     {
@@ -3354,7 +3354,7 @@
       "owner_id": "ORG",
       "rollback_path": "docs/core/00_governance/uet_core_migration_enforcement_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "a472f9eb1bd1fd7ac7f4fb373b8bff26d2158dffcae0d34fa64e3d7708073cf5",
+      "sha256": "ea57c587966806b2d54d0d5faec167c83d0ef5cf938e21a5f13c79c4b7b3f43b",
       "target_path": "docs/core/00_governance/uet_core_migration_enforcement_audit.json"
     },
     {
@@ -3371,7 +3371,7 @@
       "owner_id": "ORG",
       "rollback_path": "docs/core/00_governance/uet_core_paths_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "4e9e53a2746f12d25d4ee18ccba93f14bcfaab8714b5bdf1e862e079a8ebd23c",
+      "sha256": "b69a4b54874d68a1dc74ac03ae82475284ebf83ae0d00753e772080b59277d19",
       "target_path": "docs/core/00_governance/uet_core_paths_audit.json"
     },
     {
@@ -3388,7 +3388,7 @@
       "owner_id": "ORG",
       "rollback_path": "docs/core/00_governance/uet_core_physical_migration_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "d4a4d783bd45cc733e0530ebe4e9e66d0ef002dd5a14cf1171e23dc04300daf7",
+      "sha256": "15d3f1ab1e459d3ec039816219c3ba84e69f138ae93e78f3de1418ddbd92d167",
       "target_path": "docs/core/00_governance/uet_core_physical_migration_audit.json"
     },
     {
@@ -3405,7 +3405,7 @@
       "owner_id": "ORG",
       "rollback_path": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "4cff88f4443acdd4affd605dbadac5be7c4cbeb9db0ec762c2aec4187d39881e",
+      "sha256": "10969fb9c0d89d9795b2e357b922dda6119ea2be5b3ee78f67fa5fc591aafc1c",
       "target_path": "docs/core/00_governance/uet_core_physical_migration_manifest.json"
     },
     {
@@ -33973,7 +33973,7 @@
       "owner_id": "ORG",
       "rollback_path": "docs/core/08_history/update_logs/CORE_FILE_ORGANIZATION_UPDATE_LOG.md",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "54729aff75c42e4327fc5ea2cfc7202e702610ea1ce834e74a2d4e4e7a6e0c6b",
+      "sha256": "6c6cb8cabf8a42ae3bcb6842c2f1d5b3c417f4df9f511a919f2a1c1999e8840e",
       "target_path": "docs/core/08_history/update_logs/CORE_FILE_ORGANIZATION_UPDATE_LOG.md"
     },
     {
@@ -34402,8 +34402,21 @@
       "target_path": "docs/core/core_paths.py"
     }
   ],
-  "generated_at": "2026-09-16T17:57:20+00:00",
+  "generated_at": "2026-09-16T18:37:42+00:00",
   "generator": "docs/scripts/audit/reconcile_uet_core_registry_v4.py",
+  "physical_migration": {
+    "complete": true,
+    "last_successful_consolidation": {
+      "artifact": "docs/core/00_governance/uet_core_compatibility_consolidation_v4.json",
+      "files_archived": 426,
+      "generated_at": "2026-09-16T17:23:05+00:00",
+      "physical_move_performed": true,
+      "status": "PASS"
+    },
+    "pending_move_targets": 0,
+    "performed_in_current_reconciliation": false,
+    "source_manifest": "docs/core/00_governance/uet_core_physical_migration_manifest.json"
+  },
   "physical_move_performed": false,
   "rules": [
     "do not overwrite a canonical target",

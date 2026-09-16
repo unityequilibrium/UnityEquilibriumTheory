@@ -1,6 +1,6 @@
 {
   "artifact": "uet_core_dependency_graph",
-  "edge_count": 10279,
+  "edge_count": 10280,
   "edges": [
     {
       "edge_type": "path_reference",
@@ -37576,6 +37576,12 @@
     },
     {
       "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_physical_migration_audit.json",
+      "reference": "docs/core/00_governance/uet_core_compatibility_consolidation_v4.json",
+      "to": "docs/core/00_governance/uet_core_compatibility_consolidation_v4.json"
+    },
+    {
+      "edge_type": "path_reference",
       "from": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
       "reference": "docs/core/00_governance/CORE_FILE_AND_RESEARCH_STANDARD.md",
       "to": "docs/core/00_governance/CORE_FILE_AND_RESEARCH_STANDARD.md"
@@ -61677,7 +61683,7 @@
       "to": "docs/core/99_review/unresolved_assets/sandbox_emergent.py"
     }
   ],
-  "generated_at": "2026-09-16T17:57:20+00:00",
+  "generated_at": "2026-09-16T18:37:42+00:00",
   "generator": "docs/scripts/audit/reconcile_uet_core_registry_v4.py",
   "node_count": 1973,
   "nodes": [

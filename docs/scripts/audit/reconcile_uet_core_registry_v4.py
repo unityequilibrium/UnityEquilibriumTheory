@@ -44,6 +44,7 @@ normalize_relative = _CORE_PATHS.normalize_relative
 
 CORE = ROOT / "docs" / "core"
 PHYSICAL_MANIFEST_PATH = CORE / "00_governance" / "uet_core_physical_migration_manifest.json"
+CONSOLIDATION_PATH = CORE / "00_governance" / "uet_core_compatibility_consolidation_v4.json"
 POLICY_PATH = CORE / "00_governance" / "uet_research_organization_policy.json"
 FAMILY_CONTRACT_PATH = CORE / "07_artifacts" / "archive" / "uet_core_equation_family_contract.json"
 CODE_SURFACE_PATH = CORE / "07_artifacts" / "archive" / "uet_code_surface_inventory.json"
@@ -104,6 +105,35 @@ def load_json(path: Path, default: dict[str, Any] | None = None) -> dict[str, An
     except (OSError, UnicodeDecodeError, json.JSONDecodeError):
         return {} if default is None else dict(default)
     return value if isinstance(value, dict) else ({} if default is None else dict(default))
+
+
+def physical_migration_status(records: list[dict[str, Any]]) -> dict[str, Any]:
+    """Report completion separately from whether this reconciliation moved files."""
+
+    active = [record for record in records if record["compatibility_mode"] == "none"]
+    pending = [record for record in active if record["current_path"] != record["canonical_path"]]
+    manifest = load_json(PHYSICAL_MANIFEST_PATH)
+    consolidation = load_json(CONSOLIDATION_PATH)
+    consolidation_summary = consolidation.get("summary", {}) if isinstance(consolidation, dict) else {}
+    physical_migration = manifest.get("physical_migration", {}) if isinstance(manifest, dict) else {}
+    return {
+        "complete": not pending,
+        "pending_move_targets": len(pending),
+        "performed_in_current_reconciliation": bool(
+            physical_migration.get(
+                "performed_in_current_run",
+                manifest.get("physical_move_performed", False),
+            )
+        ),
+        "last_successful_consolidation": {
+            "artifact": repo_path(CONSOLIDATION_PATH) if consolidation else None,
+            "status": consolidation.get("status", "NOT_FOUND") if consolidation else "NOT_FOUND",
+            "physical_move_performed": bool(consolidation.get("physical_move_performed")) if consolidation else False,
+            "files_archived": int(consolidation_summary.get("files_archived", 0) or 0),
+            "generated_at": consolidation.get("generated_at") if consolidation else None,
+        },
+        "source_manifest": repo_path(PHYSICAL_MANIFEST_PATH),
+    }
 
 
 def write_json(path: Path, payload: dict[str, Any]) -> None:
@@ -710,7 +740,7 @@ def render_file_index(manifest: dict[str, Any], graph: dict[str, Any], audit: di
         f"- Dependency edges: **{graph['edge_count']}**",
         f"- Quarantined assets: **{len(audit['quarantined_paths'])}**",
         f"- Controlling blocker: `{audit['controlling_blocker']}`",
-        "- Physical migration: no move is performed by this generator.", "",
+        "- This reconciliation generator does not move files; it reads physical completion and consolidation evidence.", "",
         "Legacy root Python and Markdown files are compatibility shims/redirects where recorded; they are not duplicate implementations.", "",
     ]
     return "\n".join(lines)
@@ -733,7 +763,11 @@ def render_organization_index(registry: dict[str, Any], audit: dict[str, Any]) -
         f"- Quarantine records: **{registry['quarantine_count']}**",
         f"- Foundation gate: **{registry['scientific_foundation_status']['status']}**",
         f"- Controlling blocker: `{registry['controlling_blocker']}`",
-        "- Physical move performed: **false**", "",
+        f"- Physical migration complete: **{registry.get('physical_migration', {}).get('complete', False)}**",
+        f"- Move targets pending: **{registry.get('physical_migration', {}).get('pending_move_targets', 0)}**",
+        f"- This reconciliation run moved files: **{registry.get('physical_migration', {}).get('performed_in_current_reconciliation', False)}**",
+        f"- Last physical consolidation: **{registry.get('physical_migration', {}).get('last_successful_consolidation', {}).get('status', 'NOT_FOUND')}**",
+        "",
         "## Owner counts", "", "| Owner | Files |", "| :-- | --: |",
     ]
     lines.extend(f"| `{key}` | {value} |" for key, value in sorted(registry["owner_counts"].items()))
@@ -759,6 +793,7 @@ def build() -> dict[str, Any]:
     records = sorted(build_records(actual, physical, family_paths), key=lambda item: item["current_path"])
     graph = build_dependency_graph(records)
     audit = build_audit(records, graph, physical)
+    physical_status = physical_migration_status(records)
     counts = Counter(record["file_kind"] for record in records)
     area_counts = Counter(record["logical_area"] for record in records)
     evidence_counts = Counter(record["evidence_status"] for record in records)
@@ -829,6 +864,7 @@ def build() -> dict[str, Any]:
         "counts": dict(sorted(migration_counts.items())),
         "duplicate_targets": audit["duplicate_canonical_paths"],
         "controlling_blocker": audit["controlling_blocker"],
+        "physical_migration": physical_status,
         "rules": [
             "do not overwrite a canonical target",
             "preserve old imports and links through explicit shims or redirects",
@@ -870,7 +906,7 @@ def build() -> dict[str, Any]:
         "organization_wave": "WAVE_0_CANONICAL_RECONCILIATION",
         "controlling_blocker": audit["controlling_blocker"],
         "scientific_foundation_status": foundation_status(),
-        "physical_migration": {"performed": False, "source": repo_path(PHYSICAL_MANIFEST_PATH), "record_count": len(physical)},
+        "physical_migration": physical_status,
         "rules": {
             "organization_status_does_not_promote_physics": True,
             "canonical_path_is_source_of_truth": True,
