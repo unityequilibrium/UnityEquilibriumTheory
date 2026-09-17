@@ -83,6 +83,6 @@ validation, prediction, or Full Topic 13 closure. `C`, `Phi`, `R_gen`, and
 ## EVIDENCE
 
 - `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_public_phonon_route_screening_package.json`
-- `docs/core/artifacts/t13_public_phonon_route_screening_audit.json`
-- `docs/core/artifacts/t13_closure_input_package_audit.json`
-- `docs/core/artifacts/t13_topic13_closure_matrix.json`
+- `docs/core/07_artifacts/topic13/t13_public_phonon_route_screening_audit.json`
+- `docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json`
+- `docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json`

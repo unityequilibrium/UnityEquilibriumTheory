@@ -24,10 +24,10 @@ from docs.core.thermal_dimensional_bridge import (  # noqa: E402
 
 
 TOPIC = ROOT / "docs/topics/0.13_Thermodynamic_Bridge"
-OUT = ROOT / "docs/core/artifacts/t13_dimensional_bridge_contract_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_dimensional_bridge_contract_audit.json"
 DERIVATION = TOPIC / "Data/03_Research/thermal_closure_derivation_audit.json"
 INVENTORY = TOPIC / "Data/03_Research/thermal_closure_source_inventory.json"
-CALIBRATION = ROOT / "docs/core/artifacts/thermal_dimensional_calibration_contract.json"
+CALIBRATION = ROOT / "docs/core/07_artifacts/topic13/thermal_dimensional_calibration_contract.json"
 
 
 def load(path: Path) -> dict:
@@ -114,7 +114,7 @@ def main() -> int:
             "observable": "Delta_Tq = alpha_Phi_K * Delta_Phi",
             "data_role": "symbolic/formula audit; no target, calibration, or holdout data",
             "evidence_artifacts": [
-                {"path": "docs/core/artifacts/t13_dimensional_bridge_contract_audit.json"},
+                {"path": "docs/core/07_artifacts/topic13/t13_dimensional_bridge_contract_audit.json"},
                 {"path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/thermal_closure_derivation_audit.json", "sha256": sha256(DERIVATION)},
             ],
             "verification_status": "PASS_CONDITIONAL_FORMULA_OPEN_INPUTS",

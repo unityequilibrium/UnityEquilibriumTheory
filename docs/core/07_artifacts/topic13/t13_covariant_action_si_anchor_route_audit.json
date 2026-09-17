@@ -1,0 +1,101 @@
+{
+  "schema_version": "t13-covariant-action-si-anchor-route-audit-v2",
+  "artifact": "t13_covariant_action_si_anchor_route_audit",
+  "generated_at": "2026-09-18",
+  "status": "PASS_NATURAL_UNIT_ROUTE_IDENTIFIED_SI_MAPPING_BLOCKED",
+  "major_result": {
+    "major_result_id": "T13_COVARIANT_ACTION_SI_ANCHOR_ROUTE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the covariant response action route is identified as the only current first-principles candidate source for an energy anchor",
+      "the implemented parent is explicitly natural-unit only",
+      "default response coefficients are research controls and cannot be treated as physical constants",
+      "the action gravitational coupling slot is dimension-declared but has no source-backed SI or Newton-coupling match",
+      "the system-specific natural-unit-to-SI and covariant-Phi-to-normalized-Phi maps are explicit blockers",
+      "the route is separated from the normalized-Phi structural no-go and from material c_v data"
+    ],
+    "equation_or_mapping": {
+      "candidate_action": "S = integral sqrt(-g)[F_epsilon(Phi)(R-2 Lambda)/(2 kappa_E) - epsilon_nc Z_Phi (nabla Phi)^2/2 - epsilon_nc U(Phi)] d^4x + S_m",
+      "natural_unit_policy": "c = hbar = 1; action and coefficients remain in natural units",
+      "required_bridge": "Phi_normalized = Phi_covariant / Phi_scale; e0 and Phi_scale require a declared SI contract",
+      "thermal_bridge": "Delta_Tq = (e0/C_src) * Phi_E only after base Phi-to-Phi_E is derived"
+    },
+    "coefficient_provenance": {
+      "kappa_E": {
+        "natural_unit_dimension": "mass^-2",
+        "numeric_value": null,
+        "status": "DIMENSION_DECLARED_ONLY",
+        "source_locator": "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md",
+        "si_or_newton_match": "NOT_DECLARED"
+      },
+      "einstein_coupling_config": {
+        "default_natural_value": 1.0,
+        "status": "RESEARCH_CONTROL_NOT_MEASURED_CONSTANT",
+        "source_locator": "docs/core/02_equations/covariant/uet_covariant_response.py"
+      },
+      "energy_reference_J": null,
+      "phi_scale": null,
+      "e0_J_per_m3": null
+    },
+    "units": {
+      "covariant_parent": "natural units; phi mass dimension 1",
+      "e0_required": "J m^-3",
+      "Phi_normalized": "dimensionless",
+      "C_src": "J m^-3 K^-1",
+      "alpha_Phi_K": "K per normalized Phi"
+    },
+    "derivation_class": "source/specification contract audit; no numeric SI conversion",
+    "observable": "conditional Phi-to-thermal response route",
+    "data_role": "FORMULA_AND_DEPENDENCY_AUDIT_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/02_equations/covariant/uet_covariant_response.py",
+        "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+      },
+      {
+        "path": "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md",
+        "sha256": "a52cbdb0cb9dd2f65be4813fd7b57da9a995f4ab9039d4631f95928f0997a8bf"
+      },
+      {
+        "path": "docs/core/07_artifacts/correspondence/covariant_action_formula_audit.json",
+        "sha256": "31233ea0aeb7981ed3cd6c54e4251a09eebd99d01dde38298d0e086ef8ffab5d"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json",
+        "sha256": "cafb22891c93080065c13810f83e4ed1b9f40a49fafddf51f25aff9950a816f0"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json"
+      }
+    ],
+    "verification_status": "PASS_NATURAL_UNIT_ROUTE_IDENTIFIED_SI_MAPPING_BLOCKED",
+    "open_blockers": [
+      "system_specific_SI_contract_missing",
+      "covariant_Phi_to_normalized_Phi_map_missing",
+      "dimensionful_phi_mass_or_field_scale_missing",
+      "temperature_dependent_response_coefficients_and_provenance_missing",
+      "base_Phi_to_Delta_u_ph_energy_anchor_and_independent_alpha_Phi_K_missing"
+    ],
+    "dependency_unlocked": "none; conditional action route identified, but no SI thermal or Core dependency unlock",
+    "claim_boundary": "This result does not convert natural-unit defaults into SI, does not derive e0, and does not identify covariant Phi with normalized Topic 13 Phi."
+  },
+  "checks": {
+    "response_contract_is_natural_units": true,
+    "response_claim_boundary_says_natural_only": true,
+    "response_defaults_not_measured": true,
+    "response_gravitational_coefficient_default_is_control": true,
+    "spec_declares_kappa_dimension_only": true,
+    "candidate_route_has_no_newton_coupling_match": true,
+    "spec_action_is_natural_units": true,
+    "spec_requires_later_si_map": true,
+    "formula_unit_lane_is_natural": true,
+    "formula_defaults_not_physical": true,
+    "formula_si_gate_open": true,
+    "phi_anchor_no_go_is_present": true,
+    "no_numeric_anchor_emitted": true
+  },
+  "controlling_blocker": "system_specific_SI_contract_and_covariant_Phi_to_normalized_Phi_map_missing",
+  "next_controller": "Specify a dimensionful field normalization and coefficient provenance for the covariant parent, then derive the SI action-to-observable map before any numeric e0 or alpha_Phi_K record.",
+  "claim_boundary": "Conditional action route only; no numeric e0, alpha_Phi_K, Kelvin prediction, or external validation."
+}

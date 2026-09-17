@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "artifact": "matter_space_phase_pilot",
+  "generated_at": "2026-09-17T21:31:16.738293+00:00",
+  "status": "INTERNAL_DIAGNOSTIC",
+  "verification_status": "PASS",
+  "simulation_status": "SIMULATION_ONLY",
+  "dependency_status": "BLOCKED",
+  "topic_status_impact": "NONE",
+  "source_artifact": {
+    "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_matter_space_phase_coupling_diagnostic.json",
+    "sha256": "d464d78aa6b3008d947d7198fead7a6711932762b818c9ff812fc64963268d8a",
+    "source_status": "INTERNAL_DIAGNOSTIC"
+  },
+  "operator_mode": "matter_space_coupled_v1",
+  "unit_lane": "normalized",
+  "comparators": [
+    "standard_conserved_gradient_flow",
+    "legacy_instantaneous_comparator",
+    "C_plus_trace_only",
+    "coupled_C_Phi_Pi",
+    "coupled_receiver_effect",
+    "adiabatic_reduced_model"
+  ],
+  "initial_conditions": [
+    "uniform",
+    "localized",
+    "two_domain",
+    "spinodal_1101",
+    "spinodal_1102",
+    "spinodal_1103"
+  ],
+  "diagnostics": {
+    "same_C_different_space_state": {
+      "physical_difference": 0.05654775613577053
+    },
+    "same_complete_state_different_trace_history": {
+      "physical_difference": 0.0,
+      "trace_history_changes_physical_state": false
+    },
+    "resolution_control": {
+      "scalar_observables": {
+        "32": {
+          "mean_C": 0.12049892022399672,
+          "variance_C": 0.01748734339631909,
+          "energy_dissipation_proxy": 0.0002237698949918432
+        },
+        "64": {
+          "mean_C": 0.12049892022399677,
+          "variance_C": 0.017487604714908376,
+          "energy_dissipation_proxy": 0.000228720897147483
+        }
+      },
+      "max_scalar_difference": 2.6131858928482576e-07
+    },
+    "causal_arrival": {
+      "status": "INHERITED_BLOCKED_CORE_CONTROLLER",
+      "core_artifact": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
+      "controller": "prearrival_leakage",
+      "new_causal_claim": false
+    },
+    "local_checks": {
+      "all_comparator_fields_finite": true,
+      "same_C_different_space_state_signal": true,
+      "same_complete_state_different_trace_history_invariant": true,
+      "receiver_effect_explicit_and_nonzero": true,
+      "resolution_scalar_difference_recorded": true,
+      "core_causal_dependency_not_hidden": true
+    }
+  },
+  "claim_boundary": [
+    "internal normalized diagnostic only",
+    "C_phase is a lane-specific persistence/compatibility proxy",
+    "morphology metrics are not accepted structure-factor estimators",
+    "no universality, mass, particle, GR, or cosmological claim"
+  ],
+  "falsification_state": "core_causal_support_and_topic_structure_factor_controllers_remain_blocking",
+  "controlling_blocker": "repair inherited causal-support discretization and separately execute Topic 0.11 replicate/temporal acquisition"
+}

@@ -10,10 +10,10 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-AUDIT_REL = "docs/core/artifacts/t13_physical_kubo_coefficient_provenance_audit.json"
+AUDIT_REL = "docs/core/07_artifacts/topic13/t13_physical_kubo_coefficient_provenance_audit.json"
 FULL_REL = "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-REGISTER_REL = "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY_REL = "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+REGISTER_REL = "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY_REL = "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 FORMULA_REL = "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md"
 REPORT_REL = "docs/topics/0.13_Thermodynamic_Bridge/FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md"
 LOG_REL = "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
@@ -120,7 +120,7 @@ def main() -> int:
 
 | formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| `T13-023` | `KuboCoefficientRecord -> constitutive coefficient` only when matched evidence passes | `{AUDIT_REL}`; `docs/core/uet_covariant_superfluid_transport.py` | value and coefficient units are source-specific; temperature, chemical potential, response state, correlator locator, source path, and hash are required | external/microscopic input required; no value supplied | provenance gate passes; physical coefficient remains open | separates readiness/formula sources from physical coefficient evidence and synthetic controls | a structural Kubo source or synthetic value can be misreported as a physical UET transport coefficient | acquire one state-matched coefficient record and rerun transport/state/unit checks |
+| `T13-023` | `KuboCoefficientRecord -> constitutive coefficient` only when matched evidence passes | `{AUDIT_REL}`; `docs/core/02_equations/covariant/uet_covariant_superfluid_transport.py` | value and coefficient units are source-specific; temperature, chemical potential, response state, correlator locator, source path, and hash are required | external/microscopic input required; no value supplied | provenance gate passes; physical coefficient remains open | separates readiness/formula sources from physical coefficient evidence and synthetic controls | a structural Kubo source or synthetic value can be misreported as a physical UET transport coefficient | acquire one state-matched coefficient record and rerun transport/state/unit checks |
 
 The gate does not derive a coefficient from the conservative action and does
 not use synthetic controls, TTG target data, or Xie 2026 as physical evidence.

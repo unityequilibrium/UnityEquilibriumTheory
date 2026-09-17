@@ -69,7 +69,7 @@ or global UET closure.
 
 Canonical evidence:
 
-- `docs/core/artifacts/t13_full_core_ready_acceptance_audit.json`
-- `docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json`
-- `docs/core/artifacts/t13_topic13_closure_matrix.json`
+- `docs/core/07_artifacts/topic13/t13_full_core_ready_acceptance_audit.json`
+- `docs/core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json`
+- `docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json`
 - `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`

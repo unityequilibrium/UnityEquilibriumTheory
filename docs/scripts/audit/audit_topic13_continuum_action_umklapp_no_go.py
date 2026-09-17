@@ -6,6 +6,14 @@ from pathlib import Path
 import hashlib
 import inspect
 import json
+import sys
+
+
+ROOT = Path(__file__).resolve().parents[3]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from docs.core.core_paths import canonical_existing_path  # noqa: E402
 
 from docs.core.uet_covariant_matter import CovariantMatterConfig
 from docs.core.uet_covariant_response import CovariantResponseConfig
@@ -19,9 +27,8 @@ from docs.scripts.audit.audit_topic13_action_normalized_elastic_scattering impor
 )
 
 
-ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_continuum_action_umklapp_direct_route_no_go.json"
-REGISTRY_OUT = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_umklapp_no_go_addendum.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_continuum_action_umklapp_direct_route_no_go.json"
+REGISTRY_OUT = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_umklapp_no_go_addendum.json"
 EQUATION_ID = "uet.o2.thermal.continuum_action_umklapp_direct_route_no_go"
 LATTICE_TOKENS = (
     "lattice",
@@ -39,6 +46,11 @@ def _sha(path: str | Path) -> str:
     if not candidate.is_absolute():
         candidate = ROOT / candidate
     return hashlib.sha256(candidate.read_bytes()).hexdigest()
+
+
+def _canonical_rel(path: str) -> str:
+    candidate = canonical_existing_path(ROOT / path)
+    return candidate.relative_to(ROOT).as_posix()
 
 
 def _field_names(config_type: type) -> list[str]:
@@ -91,7 +103,7 @@ def build_boundary_witness() -> dict[str, object]:
 
 def main() -> int:
     witness = build_boundary_witness()
-    parent_path = "docs/core/artifacts/t13_lattice_momentum_relaxing_heat_parent_audit.json"
+    parent_path = "docs/core/07_artifacts/topic13/t13_lattice_momentum_relaxing_heat_parent_audit.json"
     parent = json.loads((ROOT / parent_path).read_text(encoding="utf-8"))
     checks = {
         "declared_action_configs_have_no_lattice_fields": not any(witness["lattice_fields"].values()),
@@ -147,13 +159,15 @@ def main() -> int:
         },
     }
     source_paths = [
-        "docs/core/uet_covariant_matter.py",
-        "docs/core/uet_covariant_response.py",
-        "docs/core/uet_o2_finite_density_eos.py",
-        "docs/scripts/audit/audit_topic13_action_normalized_elastic_scattering.py",
-        "docs/core/uet_o2_invariant_galerkin_collision_operator.py",
-        "docs/scripts/audit/audit_topic13_continuum_action_umklapp_no_go.py",
-        "docs/core/test/test_topic13_continuum_action_umklapp_no_go.py",
+        _canonical_rel("docs/core/02_equations/covariant/uet_covariant_matter.py"),
+        _canonical_rel("docs/core/02_equations/covariant/uet_covariant_response.py"),
+        _canonical_rel("docs/core/02_equations/o2/uet_o2_finite_density_eos.py"),
+        _canonical_rel(
+            "docs/scripts/audit/audit_topic13_action_normalized_elastic_scattering.py"
+        ),
+        _canonical_rel("docs/core/02_equations/o2/uet_o2_invariant_galerkin_collision_operator.py"),
+        _canonical_rel("docs/scripts/audit/audit_topic13_continuum_action_umklapp_no_go.py"),
+        _canonical_rel("docs/core/test/test_topic13_continuum_action_umklapp_no_go.py"),
     ]
     artifact = {
         "schema_version": "t13-continuum-action-umklapp-direct-route-no-go-v1",
@@ -254,7 +268,7 @@ def main() -> int:
     REGISTRY_OUT.write_text(json.dumps({
         "schema_version": "uet-equation-registry-addendum-v1",
         "status": "STRUCTURAL_NO_GO_NOT_MERGED_AS_CORE_EQUATION",
-        "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+        "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
         "equation_entries": [entry],
         "full_core_unlock": False,
         "claim_promotion": False,

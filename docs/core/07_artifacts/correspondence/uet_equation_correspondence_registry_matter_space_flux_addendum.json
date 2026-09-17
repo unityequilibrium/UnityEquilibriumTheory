@@ -1,0 +1,224 @@
+{
+  "schema_version": "1.0",
+  "artifact": "uet_equation_correspondence_registry_matter_space_flux_addendum",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "status": "CANDIDATE_ENTRY_MERGED_INTO_CENTRAL_REGISTRY",
+  "equation_entries": [
+    {
+      "equation_id": "uet.matter_space_flux.conservation",
+      "version": "normalized-flux-v1",
+      "classification": "constitutive_lane_specific_equation",
+      "relation_or_code_path": "docs/core/uet_matter_space_flux_telegraph.py",
+      "variables": {
+        "C": "conserved collective-coordinate field",
+        "J_C": "face flux of the conserved C lane",
+        "mu_C": "local branch chemical potential"
+      },
+      "mathematical_role": "finite-volume continuity update",
+      "standard_physics_counterpart": "one-dimensional continuity equation with a conservative face flux",
+      "observable_mapping": {
+        "status": "PARTIAL",
+        "observable": "normalized C profile and conserved integral",
+        "reason": "a dimensional mass, charge, or material-density mapping is not established"
+      },
+      "unit_lane": "normalized_v1",
+      "parameter_dimensions": "normalized branch coefficients; no SI dimensions declared",
+      "source_or_origin": "named matter-space flux branch introduced for the bounded Wave 3 link review",
+      "assumptions": [
+        "one-dimensional grid",
+        "periodic or zero-flux boundary",
+        "C is conserved only in this declared branch",
+        "kappa_C is fixed to zero in the named finite-cone branch"
+      ],
+      "symmetry_and_conservation": "the finite-volume face divergence has zero global sum under the declared closed boundaries",
+      "limiting_cases": [
+        "zero flux leaves the C profile unchanged",
+        "zero coupling reduces the branch chemical potential to the local C polynomial"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_matter_space_flux_telegraph.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_matter_space_conserved_flux_telegraph.py",
+        "docs/core/test/test_matter_space_conserved_flux_telegraph.py",
+        "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json"
+      ],
+      "evidence_class": "INTERNAL_NUMERICAL",
+      "proof_status": "named branch artifact passes its declared internal checks; this is not proof of a universal C ontology",
+      "downstream_dependencies": [
+        "uet.matter_space_flux.relaxation",
+        "uet.main_theory.observables"
+      ],
+      "claim_boundary": "normalized conserved flux branch only; C is not thereby mass, charge, or a universal physical density",
+      "failure_mode": "silently treating the conserved coordinate as a dimensional density or extending the branch to kappa_C>0 without a causal analysis",
+      "next_hardening_step": "complete the dimensional observable map and test the branch against an independently locked external lane"
+    },
+    {
+      "equation_id": "uet.matter_space_flux.relaxation",
+      "version": "normalized-flux-v1",
+      "classification": "constitutive_lane_specific_equation",
+      "relation_or_code_path": "docs/core/uet_matter_space_flux_telegraph.py",
+      "variables": {
+        "tau_C": "flux relaxation time in the normalized branch",
+        "J_C": "conserved face flux",
+        "M_C": "positive mobility coefficient",
+        "partial_x_mu_C": "face gradient of the local chemical potential"
+      },
+      "mathematical_role": "Maxwell-Cattaneo-like flux relaxation coupled to the continuity update",
+      "standard_physics_counterpart": "causal constitutive relaxation comparator for a conserved current",
+      "observable_mapping": {
+        "status": "PARTIAL",
+        "observable": "arrival time, flux profile, and normalized relaxation",
+        "reason": "no material-specific conductivity or dimensional transport map is declared"
+      },
+      "unit_lane": "normalized_v1",
+      "parameter_dimensions": "normalized mobility and relaxation coefficients",
+      "source_or_origin": "named matter-space flux branch introduced for the bounded Wave 3 link review",
+      "assumptions": [
+        "nearest-neighbor finite-volume stencil",
+        "CFL is a domain-of-dependence condition",
+        "Crank-Nicolson damping factor is used for the local flux relaxation",
+        "no field clipping or cone padding"
+      ],
+      "symmetry_and_conservation": "continuity remains conservative because relaxation acts on the face flux and C changes through a face divergence",
+      "limiting_cases": [
+        "tau_C tending to zero is a formal overdamped comparator, not a universal derivation",
+        "coupling_g equal to zero decouples Phi from the C branch"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_matter_space_flux_telegraph.py",
+        "docs/core/uet_matter_space_flux_phi.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_matter_space_conserved_flux_telegraph.py",
+        "docs/scripts/audit/audit_matter_space_flux_phi_coupled.py",
+        "docs/core/test/test_matter_space_conserved_flux_telegraph.py",
+        "docs/core/test/test_matter_space_flux_phi_coupled.py",
+        "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
+        "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json"
+      ],
+      "evidence_class": "INTERNAL_NUMERICAL",
+      "proof_status": "named branch artifacts pass their declared internal checks; external transport coefficients remain open",
+      "downstream_dependencies": [
+        "uet.matter_space_flux.conservation",
+        "uet.matter_space_flux.phi_response"
+      ],
+      "claim_boundary": "normalized finite-cone flux comparator; not a microscopic transport derivation or SI heat law",
+      "failure_mode": "calling the comparator a finite-cone closure for the original kappa_C>0 conserved-gradient equation",
+      "next_hardening_step": "derive or source-lock transport dimensions and define a detector-level arrival observable"
+    },
+    {
+      "equation_id": "uet.matter_space_flux.phi_response",
+      "version": "normalized-flux-phi-v1",
+      "classification": "constitutive_lane_specific_equation",
+      "relation_or_code_path": "docs/core/uet_matter_space_flux_phi.py",
+      "variables": {
+        "Phi": "effective response field",
+        "Pi": "discrete Phi response rate",
+        "mu_Phi": "response chemical potential",
+        "g": "shared C-Phi coupling coefficient"
+      },
+      "mathematical_role": "damped causal response lane driven by the same declared coupling potential",
+      "standard_physics_counterpart": "damped scalar response with a discrete-gradient spatial force",
+      "observable_mapping": {
+        "status": "PARTIAL",
+        "observable": "normalized Phi response and causal arrival",
+        "reason": "Phi-to-temperature, energy, metric, or detector units are not established"
+      },
+      "unit_lane": "normalized_v1",
+      "parameter_dimensions": "normalized response coefficients",
+      "source_or_origin": "named coupled C/Phi branch introduced for the bounded Wave 3 link review",
+      "assumptions": [
+        "Phi is a response variable, not a metric or particle",
+        "the coupling energy is -g*C^2*Phi/2",
+        "R_gen is absent from the physical update",
+        "the C and Phi boundary conditions are matched"
+      ],
+      "symmetry_and_conservation": "the shared coupling is reciprocal at the declared functional level; C conservation is supplied by the face-divergence lane",
+      "limiting_cases": [
+        "zero coupling removes the C-to-Phi source",
+        "zero initial Phi and Pi is the ordered-response reference"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_matter_space_flux_phi.py",
+        "docs/core/uet_matter_space_flux_telegraph.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_matter_space_flux_phi_coupled.py",
+        "docs/core/test/test_matter_space_flux_phi_coupled.py",
+        "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json"
+      ],
+      "evidence_class": "INTERNAL_NUMERICAL",
+      "proof_status": "coupled normalized lane passes its declared internal checks; dimensional thermal closure remains open",
+      "downstream_dependencies": [
+        "uet.matter_space_flux.shared_energy_ledger",
+        "uet.main_theory.observables"
+      ],
+      "claim_boundary": "effective normalized response branch only; Phi is not information, metric, ether, or a new particle",
+      "failure_mode": "using a normalized response as a dimensional temperature, energy reservoir, or spacetime geometry",
+      "next_hardening_step": "close one independently calibrated dimensional observable map"
+    },
+    {
+      "equation_id": "uet.matter_space_flux.shared_energy_ledger",
+      "version": "normalized-flux-phi-v1",
+      "classification": "numerical_energy_ledger",
+      "relation_or_code_path": "docs/core/uet_matter_space_flux_phi.py",
+      "variables": {
+        "E": "combined normalized C/Phi branch energy",
+        "W_C": "C flux dissipation work",
+        "W_Phi": "Phi damping work",
+        "W_exchange": "discrete coupling exchange work"
+      },
+      "mathematical_role": "combined energy-accounting identity for the staggered internal update",
+      "standard_physics_counterpart": "closed-system energy ledger with explicit dissipative and exchange terms",
+      "observable_mapping": {
+        "status": "PARTIAL",
+        "observable": "normalized energy residual and dissipation diagnostics",
+        "reason": "the ledger is not yet mapped to a dimensional calorimetric observable"
+      },
+      "unit_lane": "normalized_v1",
+      "parameter_dimensions": "normalized energy and work quantities",
+      "source_or_origin": "named coupled C/Phi branch introduced for the bounded Wave 3 link review",
+      "assumptions": [
+        "one-dimensional normalized lane",
+        "the old-time C/Phi coupling is used for the split exchange accounting",
+        "no trace backreaction",
+        "no fitted verifier parameters"
+      ],
+      "symmetry_and_conservation": "the C mass ledger is conservative; the combined energy residual is reported rather than hidden",
+      "limiting_cases": [
+        "zero coupling removes the exchange-work contribution",
+        "zero flux and zero Phi rate remove the declared dissipative work terms"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_matter_space_flux_phi.py",
+        "docs/core/uet_matter_space_flux_telegraph.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_matter_space_flux_phi_coupled.py",
+        "docs/core/test/test_matter_space_flux_phi_coupled.py",
+        "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json"
+      ],
+      "evidence_class": "INTERNAL_NUMERICAL",
+      "proof_status": "ledger residual passes the named internal tolerance in the generated artifact; this is not a thermodynamic proof",
+      "downstream_dependencies": [
+        "uet.main_theory.open_system",
+        "uet.main_theory.observables"
+      ],
+      "claim_boundary": "normalized numerical ledger only; it does not establish physical energy units or global open-system conservation",
+      "failure_mode": "reporting normalized residuals as SI energy closure or using the trace as an energy source",
+      "next_hardening_step": "define dimensional work/heat observables and independently validate the ledger scale"
+    }
+  ],
+  "merge_metadata": {
+    "merged_into": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+    "merged_on": "2026-09-14",
+    "equation_ids": [
+      "uet.matter_space_flux.conservation",
+      "uet.matter_space_flux.relaxation",
+      "uet.matter_space_flux.phi_response",
+      "uet.matter_space_flux.shared_energy_ledger"
+    ],
+    "claim_promotion": false
+  }
+}

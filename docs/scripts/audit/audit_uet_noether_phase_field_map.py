@@ -17,6 +17,11 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from docs.core.core_paths import (  # noqa: E402
+    CANONICAL_ARTIFACT_ROOT,
+    canonical_artifact_path,
+    canonical_existing_path,
+)
 from docs.core.uet_covariant_diffusion import (  # noqa: E402
     ConservedCurrentBridgeConfig,
     normalize_local_charge_and_current,
@@ -42,12 +47,14 @@ from docs.scripts.audit.uet_gr_monotonic_stage import (  # noqa: E402
     apply_latest_hyperbolic_phase_field_stage,
 )
 
-OUT = ROOT / "docs/core/artifacts"
-CORE = ROOT / "docs/core/uet_noether_phase_field_map.py"
-MATTER = ROOT / "docs/core/uet_covariant_matter.py"
-DIFFUSION = ROOT / "docs/core/uet_covariant_diffusion.py"
-CAUSAL_BRIDGE = ROOT / "docs/core/uet_hyperbolic_phase_field_bridge.py"
-SPEC = ROOT / "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
+OUT = CANONICAL_ARTIFACT_ROOT
+CORE = canonical_existing_path(ROOT / "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py")
+MATTER = canonical_existing_path(ROOT / "docs/core/02_equations/covariant/uet_covariant_matter.py")
+DIFFUSION = canonical_existing_path(ROOT / "docs/core/02_equations/covariant/uet_covariant_diffusion.py")
+CAUSAL_BRIDGE = canonical_existing_path(
+    ROOT / "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field_bridge.py"
+)
+SPEC = canonical_existing_path(ROOT / "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md")
 CAHN_HILLIARD = (
     ROOT
     / "docs/data/external/condensed_matter/phase_transitions/cahn_hilliard_1958"
@@ -69,12 +76,20 @@ JAIN_KOVTUN = (
     / "source_record.json"
 )
 FEASIBILITY_ARTIFACT = (
-    OUT / "hyperbolic_phase_field_causal_feasibility.json"
+    canonical_artifact_path(
+        "hyperbolic_phase_field_causal_feasibility.json",
+        "verification",
+    )
 )
 
 
 def _sha(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _rel(path: Path) -> str:
+    """Return repository-relative paths with one platform-independent spelling."""
+    return path.relative_to(ROOT).as_posix()
 
 
 def _json_ready(value: Any) -> Any:
@@ -90,8 +105,9 @@ def _json_ready(value: Any) -> Any:
 
 
 def _dump(name: str, payload: dict[str, Any]) -> None:
-    OUT.mkdir(parents=True, exist_ok=True)
-    (OUT / name).write_text(
+    path = canonical_artifact_path(name)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
         json.dumps(_json_ready(payload), indent=2) + "\n",
         encoding="utf-8",
     )
@@ -131,7 +147,7 @@ def _source_provenance() -> dict[str, Any]:
         passed = passed and all(checks.values())
         records.append(
             {
-                "path": str(path.relative_to(ROOT)),
+                "path": _rel(path),
                 "doi": payload["doi"],
                 "title": payload["title"],
                 "benchmark_role": payload["benchmark_role"],
@@ -468,7 +484,7 @@ def build_artifacts() -> tuple[dict[str, Any], ...]:
         "external_physical_validation": "BLOCKED",
     }
     source_hashes = {
-        str(path.relative_to(ROOT)): _sha(path)
+        _rel(path): _sha(path)
         for path in (
             CORE,
             MATTER,
@@ -483,14 +499,12 @@ def build_artifacts() -> tuple[dict[str, Any], ...]:
         )
     }
     input_identity = {
-        "upstream_feasibility_artifact": str(
-            FEASIBILITY_ARTIFACT.relative_to(ROOT)
-        ),
+        "upstream_feasibility_artifact": _rel(FEASIBILITY_ARTIFACT),
         "source_records": [
-            str(CAHN_HILLIARD.relative_to(ROOT)),
-            str(HOHENBERG_HALPERIN.relative_to(ROOT)),
-            str(HYPERBOLIC_SOURCE.relative_to(ROOT)),
-            str(JAIN_KOVTUN.relative_to(ROOT)),
+            _rel(CAHN_HILLIARD),
+            _rel(HOHENBERG_HALPERIN),
+            _rel(HYPERBOLIC_SOURCE),
+            _rel(JAIN_KOVTUN),
         ],
     }
 
@@ -664,8 +678,8 @@ def build_artifacts() -> tuple[dict[str, Any], ...]:
         "benchmark_role": "program_gate",
         "method_label": "monotonic_gr_research_stage_gate",
         "input_identity": {
-            "state_map_artifact": "docs/core/artifacts/noether_phase_field_state_map_verification.json",
-            "state_map_dependency_gate": "docs/core/artifacts/noether_phase_field_dependency_gate.json",
+            "state_map_artifact": "docs/core/07_artifacts/verification/noether_phase_field_state_map_verification.json",
+            "state_map_dependency_gate": "docs/core/07_artifacts/gates/noether_phase_field_dependency_gate.json",
         },
         "notes": [
             "The hydrodynamic coordinate map is verified while microscopic reconstruction is disproved by counterexample.",

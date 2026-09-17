@@ -12,8 +12,8 @@ from docs.core.uet_o2_finite_temperature_quasiparticle_eos import FiniteTemperat
 from docs.core.uet_o2_action_derived_transition_kernel import action_derived_transition_kernel_state
 
 ROOT=Path(__file__).resolve().parents[3]
-OUT=ROOT/"docs/core/artifacts/t13_transition_kernel_rate_dimension_no_go.json"
-REGISTRY_OUT=ROOT/"docs/core/artifacts/uet_equation_correspondence_registry_topic13_transition_rate_dimension_addendum.json"
+OUT=ROOT/"docs/core/07_artifacts/topic13/t13_transition_kernel_rate_dimension_no_go.json"
+REGISTRY_OUT=ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_transition_rate_dimension_addendum.json"
 EQUATION_ID="uet.o2.thermal.transition_kernel_rate_dimension_no_go"
 
 def config(scale=1.):
@@ -46,9 +46,9 @@ def main():
         "dimension_mismatch_is_nonzero":dimensions["collision_operator"]!=dimensions["required_frequency_rate"]}
     paths=["docs/scripts/audit/audit_topic13_transition_kernel_rate_dimension_no_go.py",
         "docs/core/test/test_topic13_transition_kernel_rate_dimension_no_go.py",
-        "docs/core/uet_o2_action_derived_transition_kernel.py","docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py"]
+        "docs/core/02_equations/o2/uet_o2_action_derived_transition_kernel.py","docs/core/02_equations/o2/uet_o2_energy_momentum_conserving_bethe_salpeter.py"]
     sha=lambda p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest()
-    prior="docs/core/artifacts/t13_dressed_ra_pair_microscopic_rung_boundary_audit.json"
+    prior="docs/core/07_artifacts/topic13/t13_dressed_ra_pair_microscopic_rung_boundary_audit.json"
     artifact={"schema_version":"t13-transition-rate-dimension-no-go-v1","major_result_id":"T13_TRANSITION_KERNEL_RATE_DIMENSION_NO_GO",
         "topic":"0.13_Thermodynamic_Bridge","closure_level":"CLOSED_FOR_LANE","closure_disposition":"CLOSED_AS_DIMENSIONAL_NO_GO",
         "verification_status":"PASS_TRANSITION_RATE_DIMENSION_NO_GO" if all(checks.values()) else "WARN_TRANSITION_RATE_DIMENSION",
@@ -86,7 +86,7 @@ def main():
         "downstream_dependencies":[],"dependency_role":"blocks_microscopic_ladder_reuse","physical_dependency_unlock":False,
         "failure_mode":artifact["open_blockers"],"next_hardening_step":artifact["report"]["NEXT_ACTION"]})
     REGISTRY_OUT.write_text(json.dumps({"schema_version":"uet-equation-registry-addendum-v1","status":"CANDIDATE_DIAGNOSTIC_NOT_MERGED",
-        "extends":"docs/core/artifacts/uet_equation_correspondence_registry.json","equation_entries":[entry],"full_core_unlock":False,"claim_promotion":False},indent=2,allow_nan=False)+"\n",encoding="utf-8")
+        "extends":"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json","equation_entries":[entry],"full_core_unlock":False,"claim_promotion":False},indent=2,allow_nan=False)+"\n",encoding="utf-8")
     print(json.dumps({"status":artifact["verification_status"],"checks":checks,"scale_witnesses":rows},indent=2))
     return 0 if all(checks.values()) else 1
 

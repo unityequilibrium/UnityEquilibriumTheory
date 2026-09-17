@@ -1,0 +1,297 @@
+{
+  "schema_version": "1.0",
+  "artifact": "uet_main_theory_dependency_graph",
+  "generated_at": "2026-09-16",
+  "program_tracks": {
+    "primary": "covariant_effective_theory",
+    "secondary": "fundamental_unification_hypothesis_track"
+  },
+  "nodes": [
+    {
+      "wave_id": "W0",
+      "name": "foundation_inventory_and_metadata",
+      "depends_on": [],
+      "track": "primary_effective",
+      "initial_status": "PASS_ACCOUNTING_ONLY"
+    },
+    {
+      "wave_id": "W1",
+      "name": "minimal_postulates_and_ontology",
+      "depends_on": [
+        "W0"
+      ],
+      "track": "primary_effective",
+      "initial_status": "BLOCKED"
+    },
+    {
+      "wave_id": "W2",
+      "name": "covariant_conservative_parent",
+      "depends_on": [
+        "W1"
+      ],
+      "track": "primary_effective",
+      "initial_status": "BLOCKED"
+    },
+    {
+      "wave_id": "W3",
+      "name": "lane_specific_coarse_graining",
+      "depends_on": [
+        "W2"
+      ],
+      "track": "primary_effective",
+      "initial_status": "BLOCKED"
+    },
+    {
+      "wave_id": "W4",
+      "name": "open_system_sk_kms_memory",
+      "depends_on": [
+        "W2",
+        "W3"
+      ],
+      "track": "primary_effective",
+      "initial_status": "BLOCKED"
+    },
+    {
+      "wave_id": "W5",
+      "name": "hyperbolic_curved_3p1",
+      "depends_on": [
+        "W2",
+        "W4"
+      ],
+      "track": "primary_effective",
+      "initial_status": "BLOCKED"
+    },
+    {
+      "wave_id": "W6",
+      "name": "operational_quantum_measurement",
+      "depends_on": [
+        "W1"
+      ],
+      "track": "primary_effective",
+      "initial_status": "BLOCKED"
+    },
+    {
+      "wave_id": "W7",
+      "name": "quantum_interpretation_comparison",
+      "depends_on": [
+        "W6"
+      ],
+      "track": "primary_effective",
+      "initial_status": "BLOCKED"
+    },
+    {
+      "wave_id": "W8",
+      "name": "dimensional_observable_closure",
+      "depends_on": [
+        "W3",
+        "W4",
+        "W5"
+      ],
+      "track": "primary_effective",
+      "initial_status": "BLOCKED"
+    },
+    {
+      "wave_id": "W9",
+      "name": "gr_gravity_correspondence",
+      "depends_on": [
+        "W5",
+        "W8"
+      ],
+      "track": "primary_effective",
+      "initial_status": "BLOCKED"
+    },
+    {
+      "wave_id": "W10",
+      "name": "fundamental_unification_hypothesis",
+      "depends_on": [
+        "W2",
+        "W6"
+      ],
+      "track": "secondary_hypothesis",
+      "initial_status": "BLOCKED"
+    },
+    {
+      "wave_id": "W11",
+      "name": "external_evidence_unlock",
+      "depends_on": [
+        "W8",
+        "W9"
+      ],
+      "track": "primary_effective",
+      "initial_status": "BLOCKED"
+    },
+    {
+      "wave_id": "W12",
+      "name": "final_closure_audit",
+      "depends_on": [
+        "W0",
+        "W1",
+        "W2",
+        "W3",
+        "W4",
+        "W5",
+        "W6",
+        "W7",
+        "W8",
+        "W9",
+        "W10",
+        "W11"
+      ],
+      "track": "primary_effective",
+      "initial_status": "BLOCKED"
+    }
+  ],
+  "edges": [
+    {
+      "from": "W0",
+      "to": "W1",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W1",
+      "to": "W2",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W2",
+      "to": "W3",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W2",
+      "to": "W4",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W3",
+      "to": "W4",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W2",
+      "to": "W5",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W4",
+      "to": "W5",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W1",
+      "to": "W6",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W6",
+      "to": "W7",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W3",
+      "to": "W8",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W4",
+      "to": "W8",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W5",
+      "to": "W8",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W5",
+      "to": "W9",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W8",
+      "to": "W9",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W2",
+      "to": "W10",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W6",
+      "to": "W10",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W8",
+      "to": "W11",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W9",
+      "to": "W11",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W0",
+      "to": "W12",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W1",
+      "to": "W12",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W2",
+      "to": "W12",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W3",
+      "to": "W12",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W4",
+      "to": "W12",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W5",
+      "to": "W12",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W6",
+      "to": "W12",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W7",
+      "to": "W12",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W8",
+      "to": "W12",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W9",
+      "to": "W12",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W10",
+      "to": "W12",
+      "type": "required_dependency"
+    },
+    {
+      "from": "W11",
+      "to": "W12",
+      "type": "required_dependency"
+    }
+  ],
+  "claim_rule": "A downstream PASS cannot override a blocked required dependency."
+}

@@ -20,7 +20,7 @@ METHOD_ARTIFACT = (
     / "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/chaos_method_validation.json"
 )
 CORE_MODULE = ROOT / "docs/core/uet_dynamical_stability.py"
-HOLDOUT_AUDIT = ROOT / "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json"
+HOLDOUT_AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_xie_2026_holdout_access_audit.json"
 
 if str(ROOT) not in __import__("sys").path:
     __import__("sys").path.insert(0, str(ROOT))

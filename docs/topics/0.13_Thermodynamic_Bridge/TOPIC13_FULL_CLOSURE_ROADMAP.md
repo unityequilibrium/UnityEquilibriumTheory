@@ -168,10 +168,10 @@ ready for Core handoff; it is not external-ready and does not close global UET.
 
 ## Canonical Evidence
 
-- `docs/core/artifacts/t13_topic13_closure_matrix.json`
-- `docs/core/artifacts/t13_closure_input_package_audit.json`
-- `docs/core/artifacts/uet_major_result_closure_register.json`
-- `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`
+- `docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json`
+- `docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json`
+- `docs/core/07_artifacts/gates/uet_major_result_closure_register.json`
+- `docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json`
 - `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`
 
 ## Latest Source, Calibration, and Transport Triage (2026-08-24)

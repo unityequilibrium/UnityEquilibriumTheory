@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0",
+  "artifact": "uet_main_theory_axiom_registry",
+  "generated_at": "2026-09-16",
+  "specification": "docs/core/01_contracts/UET_MAIN_THEORY_AXIOMS_SPEC.md",
+  "canonical_chain": "X_micro -> C_lane -> (C_lane,Phi,Pi) -> (T_munu,N_mu,Q_mu,sigma) -> R_gen -> carrier -> R_obs -> p_A(o|a)",
+  "collective_coordinate_policy": {
+    "status": "MULTI_LANE_REQUIRED",
+    "lanes": {
+      "phase": "coarse-grained order or compatibility coordinate",
+      "charge": "coarse-grained signed Noether-charge coordinate",
+      "density": "declared mass/number-density realization",
+      "telegraph": "finite-cone non-conserved response coordinate"
+    },
+    "universal_identity": "REJECTED_UNLESS_DERIVED_BY_A_FUTURE_GATE"
+  },
+  "quantum_policy": "OPERATIONAL_BASELINE_WITH_QBISM_RQM_COMPARISON_ADAPTERS",
+  "persistence_policy": "DERIVED_SELECTION_HYPOTHESIS",
+  "open_system_policy": "H0_CLOSED_VERSUS_H1_NONCLOSED_TESTABLE_BRANCH",
+  "postulates": [
+    {
+      "postulate_id": "UET-P0",
+      "name": "declared_physical_state",
+      "status": "CANDIDATE_FOUNDATION_CONTRACT",
+      "standard_physics_counterpart": "state-space modeling and field representations",
+      "falsification_condition": "declared state does not determine fixed-input predictions",
+      "prohibited_inference": "coordinates are not automatically matter, energy, information, or observables",
+      "derivation_status": "POSTULATE_OR_METHOD_RULE",
+      "unit_lane": "not_applicable_until_realized",
+      "observable_mapping": "lane_or_measurement_specific"
+    },
+    {
+      "postulate_id": "UET-P1",
+      "name": "lane_specific_collective_coordinate",
+      "status": "CANDIDATE_FOUNDATION_CONTRACT",
+      "standard_physics_counterpart": "order parameters, hydrodynamic densities, and Noether densities",
+      "falsification_condition": "no stable refinement-consistent lane map exists",
+      "prohibited_inference": "C is not universal mass, energy, force, probability, or charge",
+      "derivation_status": "POSTULATE_OR_METHOD_RULE",
+      "unit_lane": "not_applicable_until_realized",
+      "observable_mapping": "lane_or_measurement_specific"
+    },
+    {
+      "postulate_id": "UET-P2",
+      "name": "conservative_generator",
+      "status": "CANDIDATE_FOUNDATION_CONTRACT",
+      "standard_physics_counterpart": "Lagrangian, Hamiltonian, and variational field theory",
+      "falsification_condition": "declared equations or currents are not derivatives of the same generator",
+      "prohibited_inference": "separate ansatz equations are not one derived conservative theory",
+      "derivation_status": "POSTULATE_OR_METHOD_RULE",
+      "unit_lane": "not_applicable_until_realized",
+      "observable_mapping": "lane_or_measurement_specific"
+    },
+    {
+      "postulate_id": "UET-P3",
+      "name": "open_system_reduction",
+      "status": "CANDIDATE_FOUNDATION_CONTRACT",
+      "standard_physics_counterpart": "Schwinger-Keldysh/KMS, GKSL, Mori-Zwanzig, nonequilibrium thermodynamics",
+      "falsification_condition": "positivity, entropy, fluctuation-dissipation, or exchange balance fails",
+      "prohibited_inference": "normalized damping is not automatically microscopic dissipation",
+      "derivation_status": "POSTULATE_OR_METHOD_RULE",
+      "unit_lane": "not_applicable_until_realized",
+      "observable_mapping": "lane_or_measurement_specific"
+    },
+    {
+      "postulate_id": "UET-P4",
+      "name": "causal_physical_influence",
+      "status": "CANDIDATE_FOUNDATION_CONTRACT",
+      "standard_physics_counterpart": "relativistic source-field-detector propagation",
+      "falsification_condition": "influence precedes its declared cone or lacks a physical ledger",
+      "prohibited_inference": "carrier identity is not inferred from the word information",
+      "derivation_status": "POSTULATE_OR_METHOD_RULE",
+      "unit_lane": "not_applicable_until_realized",
+      "observable_mapping": "lane_or_measurement_specific"
+    },
+    {
+      "postulate_id": "UET-P5",
+      "name": "detector_generated_record",
+      "status": "CANDIDATE_FOUNDATION_CONTRACT",
+      "standard_physics_counterpart": "operational measurement and detector response",
+      "falsification_condition": "observer protocol alone changes source dynamics",
+      "prohibited_inference": "records are not an independent substance",
+      "derivation_status": "POSTULATE_OR_METHOD_RULE",
+      "unit_lane": "not_applicable_until_realized",
+      "observable_mapping": "lane_or_measurement_specific"
+    },
+    {
+      "postulate_id": "UET-P6",
+      "name": "operational_quantum_probability",
+      "status": "CANDIDATE_FOUNDATION_CONTRACT",
+      "standard_physics_counterpart": "density operators, CPTP channels, POVMs, and the Born rule",
+      "falsification_condition": "positivity, normalization, no-signalling, or benchmark gates fail",
+      "prohibited_inference": "QBism or RQM does not alter propagation equations by interpretation alone",
+      "derivation_status": "POSTULATE_OR_METHOD_RULE",
+      "unit_lane": "not_applicable_until_realized",
+      "observable_mapping": "lane_or_measurement_specific"
+    },
+    {
+      "postulate_id": "UET-P7",
+      "name": "derived_persistence_selection",
+      "status": "CANDIDATE_FOUNDATION_CONTRACT",
+      "standard_physics_counterpart": "stochastic thermodynamics, survival analysis, and dynamical selection",
+      "falsification_condition": "physical resource/failure mapping has no holdout value beyond baseline",
+      "prohibited_inference": "persistence is not intention or a universal least-energy law",
+      "derivation_status": "POSTULATE_OR_METHOD_RULE",
+      "unit_lane": "not_applicable_until_realized",
+      "observable_mapping": "lane_or_measurement_specific"
+    },
+    {
+      "postulate_id": "UET-P8",
+      "name": "competing_closed_and_nonclosed_branches",
+      "status": "CANDIDATE_FOUNDATION_CONTRACT",
+      "standard_physics_counterpart": "nested-model testing and covariant stress-energy balance",
+      "falsification_condition": "closed limit is discontinuous or alternative fails penalized holdout comparison",
+      "prohibited_inference": "global-universe openness is not assumed",
+      "derivation_status": "POSTULATE_OR_METHOD_RULE",
+      "unit_lane": "not_applicable_until_realized",
+      "observable_mapping": "lane_or_measurement_specific"
+    }
+  ]
+}

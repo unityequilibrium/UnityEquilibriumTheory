@@ -12,8 +12,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 PRIOR_WAVE = ROOT / "docs/scripts/audit/run_topic13_base_phi_reconciliation_wave_composed.py"
 CSRC_SCRIPT = ROOT / "docs/scripts/audit/audit_topic13_csrc_reconciliation.py"
-CSRC = ROOT / "docs/core/artifacts/t13_csrc_reconciliation_audit.json"
-INPUT_AUDIT = ROOT / "docs/core/artifacts/t13_closure_input_package_audit.json"
+CSRC = ROOT / "docs/core/07_artifacts/topic13/t13_csrc_reconciliation_audit.json"
+INPUT_AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json"
 
 
 def sha256(path: Path) -> str:
@@ -106,9 +106,9 @@ def main() -> int:
         "prior_projections_preserved": all(
             any(item.get("path") == expected for item in audit.get("evidence_artifacts", []))
             for expected in [
-                "docs/core/artifacts/t13_cv_source_reconciliation_audit.json",
-                "docs/core/artifacts/t13_physical_transport_reconciliation_audit.json",
-                "docs/core/artifacts/t13_base_phi_si_reconciliation_audit.json",
+                "docs/core/07_artifacts/topic13/t13_cv_source_reconciliation_audit.json",
+                "docs/core/07_artifacts/topic13/t13_physical_transport_reconciliation_audit.json",
+                "docs/core/07_artifacts/topic13/t13_base_phi_si_reconciliation_audit.json",
             ]
         ),
         "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",

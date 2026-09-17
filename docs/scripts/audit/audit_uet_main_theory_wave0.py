@@ -8,13 +8,22 @@ from __future__ import annotations
 
 import hashlib
 import json
+import sys
 from datetime import date
 from pathlib import Path
 from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-ARTIFACTS = ROOT / "docs/core/artifacts"
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from docs.core.core_paths import (  # noqa: E402
+    CANONICAL_ARTIFACT_ROOT,
+    canonical_artifact_path,
+)
+
+ARTIFACTS = CANONICAL_ARTIFACT_ROOT
 
 REQUIRED_INPUTS = (
     "uet_foundation_equation_inventory.json",
@@ -45,6 +54,16 @@ WAVES = (
     ("W12", "final_closure_audit", tuple(f"W{i}" for i in range(12))),
 )
 
+# These are distinct mathematical symbols that intentionally differ only by
+# case inside variable-definition maps (metric g versus Einstein tensor G,
+# and physical current j versus normalized current J).  The scientific-link
+# audit reports them for human review; Wave 0's JSON-schema hygiene check must
+# not treat them as duplicate object keys.
+CASE_SENSITIVE_SYMBOL_PAIRS = {
+    frozenset({"g_munu", "G_munu"}),
+    frozenset({"j", "J"}),
+}
+
 
 def _rel(path: Path) -> str:
     return str(path.relative_to(ROOT)).replace("\\", "/")
@@ -63,9 +82,11 @@ def _load_with_case_audit(path: Path) -> tuple[Any, list[dict[str, str]]]:
         for key, value in items:
             folded = key.casefold()
             if folded in seen:
-                duplicates.append(
-                    {"path": _rel(path), "first": seen[folded], "second": key}
-                )
+                pair = frozenset({seen[folded], key})
+                if pair not in CASE_SENSITIVE_SYMBOL_PAIRS:
+                    duplicates.append(
+                        {"path": _rel(path), "first": seen[folded], "second": key}
+                    )
             seen[folded] = key
             result[key] = value
         return result
@@ -90,7 +111,7 @@ def build() -> tuple[dict[str, Any], dict[str, Any]]:
     inputs: list[dict[str, str]] = []
 
     for name in REQUIRED_INPUTS:
-        path = ARTIFACTS / name
+        path = canonical_artifact_path(name)
         if not path.exists():
             missing.append(_rel(path))
             continue
@@ -107,14 +128,6 @@ def build() -> tuple[dict[str, Any], dict[str, Any]]:
                 "reported_status": _artifact_status(payload),
             }
         )
-
-    for path in sorted(ARTIFACTS.glob("*.json")):
-        try:
-            _, duplicates = _load_with_case_audit(path)
-        except (OSError, json.JSONDecodeError) as exc:
-            parse_errors.append({"path": _rel(path), "error": str(exc)})
-            continue
-        duplicate_keys.extend(duplicates)
 
     duplicate_keys = list(
         {
@@ -193,7 +206,9 @@ def main() -> int:
         "uet_main_theory_wave0_gate.json": gate,
     }
     for name, payload in outputs.items():
-        (ARTIFACTS / name).write_text(
+        path = canonical_artifact_path(name)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(
             json.dumps(payload, indent=2, ensure_ascii=False) + "\n",
             encoding="utf-8",
         )

@@ -1,0 +1,203 @@
+{
+  "schema_version": "1.0",
+  "artifact": "noether_phase_field_state_map_verification",
+  "generated_at": "2026-09-17T21:48:23+00:00",
+  "topic": "docs/core UET GR non-closed response",
+  "version": "wave9_v1",
+  "benchmark_role": "analytic_state_map_gate",
+  "method_label": "factorized_noether_to_hydrodynamic_phase_coordinate_map",
+  "audit_status": "PASS",
+  "evidence_status": "PARTIAL_HYDRODYNAMIC_STATE_COORDINATE_MAP",
+  "claim_class": "B",
+  "claim": "exact fixed-scale affine map between coarse O2 Noether charge density/current and normalized phase coordinates, with explicit counterexamples to microscopic and coarse-graining invertibility",
+  "source_provenance": {
+    "status": "PASS",
+    "records": [
+      {
+        "path": "docs/data/external/condensed_matter/phase_transitions/cahn_hilliard_1958/source_record.json",
+        "doi": "10.1063/1.1744102",
+        "title": "Free Energy of a Nonuniform System. I. Interfacial Free Energy",
+        "benchmark_role": "EXTERNAL_PHASE_FIELD_VARIABLE_ROLE_SOURCE_NOT_UET_DERIVATION",
+        "local_copy_status": "NOT_DOWNLOADED_METADATA_AND_ABSTRACT_ONLY",
+        "checks": {
+          "doi_match": true,
+          "benchmark_role_match": true,
+          "local_path_absent": true,
+          "formula_locator_present": true,
+          "claim_boundary_present": true
+        }
+      },
+      {
+        "path": "docs/data/external/condensed_matter/phase_transitions/hohenberg_halperin_1977/source_record.json",
+        "doi": "10.1103/RevModPhys.49.435",
+        "title": "Theory of dynamic critical phenomena",
+        "benchmark_role": "EXTERNAL_MODEL_B_CLASSIFICATION_SOURCE_NOT_MICROSCOPIC_UET_MAP",
+        "local_copy_status": "NOT_DOWNLOADED_EXTERNAL_PDF_INSPECTION_ONLY",
+        "checks": {
+          "doi_match": true,
+          "benchmark_role_match": true,
+          "local_path_absent": true,
+          "formula_locator_present": true,
+          "claim_boundary_present": true
+        }
+      },
+      {
+        "path": "docs/data/external/condensed_matter/phase_transitions/hyperbolic_cahn_hilliard/dhaouadi_dumbser_gavrilyuk_2025/source_record.json",
+        "doi": "10.1098/rspa.2024.0606",
+        "title": "A first-order hyperbolic reformulation of the Cahn-Hilliard equation",
+        "benchmark_role": "EXTERNAL_MATHEMATICAL_COMPARATOR_NOT_PHYSICAL_VALIDATION",
+        "local_copy_status": "TEMPORARY_INSPECTION_ONLY_NOT_REDISTRIBUTED",
+        "checks": {
+          "doi_match": true,
+          "benchmark_role_match": true,
+          "local_path_absent": true,
+          "formula_locator_present": true,
+          "claim_boundary_present": true
+        }
+      },
+      {
+        "path": "docs/data/external/relativistic_transport/jain_kovtun_2024/source_record.json",
+        "doi": "10.1007/JHEP01(2024)162",
+        "title": "Schwinger-Keldysh effective field theory for stable and causal relativistic hydrodynamics",
+        "benchmark_role": "EXTERNAL_COVARIANT_TRANSPORT_READINESS_SOURCE_NOT_UET_DERIVATION",
+        "local_copy_status": "TEMPORARY_INSPECTION_ONLY_NOT_REDISTRIBUTED",
+        "checks": {
+          "doi_match": true,
+          "benchmark_role_match": true,
+          "local_path_absent": true,
+          "formula_locator_present": true,
+          "claim_boundary_present": true
+        }
+      }
+    ]
+  },
+  "numeric": {
+    "random_cases": 64,
+    "maximum_affine_roundtrip_error": 6.661338147750939e-16,
+    "maximum_continuity_scaling_error": 3.552713678800501e-15,
+    "maximum_existing_bridge_compatibility_error": 0.0,
+    "maximum_external_coordinate_roundtrip_error": 7.105427357601002e-15,
+    "maximum_free_energy_derivative_error": 1.27847421538263e-09,
+    "polar_noether_identity_error": 5.551115123125783e-17,
+    "microscopic_same_current_error": 8.881784197001252e-16,
+    "microscopic_state_difference": 1.061688204690543,
+    "coarse_same_average_error": 0.0,
+    "coarse_microstate_difference": 1.0,
+    "local_double_well_coefficient_error": 0.0,
+    "equilibrium_contract": {
+      "C_minus": -1.0,
+      "C_plus": 1.0,
+      "density_minus": 1.25,
+      "density_plus": 2.75,
+      "natural_chemical_potential_at_both_minima": 0.0,
+      "natural_inverse_susceptibility_at_both_minima": 3.733333333333333,
+      "natural_susceptibility_at_both_minima": 0.2678571428571429
+    },
+    "constitutive_scale_map": {
+      "normalized_relaxation": 0.4,
+      "normalized_gradient_coefficient": 0.2,
+      "natural_relaxation_time": 0.44000000000000006,
+      "natural_current_scale": 0.9454545454545454,
+      "natural_mobility": 0.44491978609625676,
+      "natural_density_gradient_coefficient": 0.16738461538461544
+    },
+    "negative_controls": {
+      "zero_density_scale": true,
+      "mass_shortcut": true,
+      "particle_number_shortcut": true,
+      "nonlocal_kernel_shortcut": true,
+      "nonpositive_external_tau": true,
+      "nondivisible_cell_average": true
+    },
+    "all_negative_controls_rejected": true,
+    "trace_and_space_response_absent": true
+  },
+  "achieved_gates": {
+    "source_provenance": "PASS",
+    "signed_O2_charge_variable_declared": "PASS",
+    "affine_coarse_density_coordinate_bijection": "PASS",
+    "continuity_and_current_scale_map": "PASS",
+    "external_C_coordinate_adapter": "PASS",
+    "double_well_conjugacy_and_local_coefficients": "PASS",
+    "O2_polar_current_identity": "PASS",
+    "microscopic_noninvertibility_counterexample": "PASS",
+    "coarse_graining_noninvertibility_counterexample": "PASS",
+    "negative_and_ontology_controls": "PASS"
+  },
+  "blocked_gates": {
+    "equation_of_state_from_covariant_O2_action": "BLOCKED_CONTROLLING",
+    "covariant_coarse_graining_kernel": "BLOCKED",
+    "susceptibility_and_transport_coefficient_matching": "BLOCKED",
+    "covariant_projected_current_law": "BLOCKED",
+    "entropy_current_and_dissipative_Bianchi_closure": "BLOCKED",
+    "curved_3p1_well_posed_solver": "BLOCKED",
+    "system_specific_SI_map": "BLOCKED",
+    "external_physical_validation": "BLOCKED"
+  },
+  "thresholds": {
+    "maximum_affine_roundtrip_error": 1e-12,
+    "maximum_continuity_scaling_error": 1e-12,
+    "maximum_existing_bridge_compatibility_error": 1e-12,
+    "maximum_external_coordinate_roundtrip_error": 1e-12,
+    "maximum_free_energy_derivative_error": 1e-08,
+    "polar_noether_identity_error": 1e-12,
+    "microscopic_same_current_error": 1e-12,
+    "minimum_microscopic_state_difference": 0.001,
+    "coarse_same_average_error": 1e-12,
+    "minimum_coarse_microstate_difference": 0.001,
+    "local_double_well_coefficient_error": 1e-12,
+    "all_negative_controls_rejected": true
+  },
+  "run_contract": {
+    "seed": 913201,
+    "random_cases": 64,
+    "unit_lane": "natural_to_normalized",
+    "charge_convention": "signed_global_O2_noether_charge",
+    "coarse_graining": "declared_local_cell_average",
+    "parameter_fitting": false,
+    "trace_backreaction": false,
+    "external_auxiliary_phase_is_UET_Phi": false,
+    "microscopic_inverse_claim": false,
+    "physical_validation": false
+  },
+  "source_hashes": {
+    "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py": "e992834d7d3ca90476202d849551ab16d1aba4bb1156b0519b3cd79e2566f9e8",
+    "docs/core/02_equations/covariant/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+    "docs/core/02_equations/covariant/uet_covariant_diffusion.py": "a267b89e39db4a8dfac56e71a070539a9da05a55b8bb8b22216e7fd1b839bc53",
+    "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field_bridge.py": "8902483bb56bb0ceb0f1cd21a2b27766378890531cb4226d392d275ff7e63e05",
+    "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md": "a52cbdb0cb9dd2f65be4813fd7b57da9a995f4ab9039d4631f95928f0997a8bf",
+    "docs/data/external/condensed_matter/phase_transitions/cahn_hilliard_1958/source_record.json": "6e72e3beac4697e9b3b77d2397a6868d81434229edd32964102ff84724c10727",
+    "docs/data/external/condensed_matter/phase_transitions/hohenberg_halperin_1977/source_record.json": "06cb9de42e6ccfc959ed38abb205513ed2cf3b768afd3c638887bf4abae829da",
+    "docs/data/external/condensed_matter/phase_transitions/hyperbolic_cahn_hilliard/dhaouadi_dumbser_gavrilyuk_2025/source_record.json": "8751305c6296e3fa70f12dc9723e174e56710296d42298dcf0e2f3ccfe09e574",
+    "docs/data/external/relativistic_transport/jain_kovtun_2024/source_record.json": "90c8c7dfe8256da2b1dbe6631d189470800ea8ed7eec228fc9bedf49dd39dbc7",
+    "docs/core/07_artifacts/verification/hyperbolic_phase_field_causal_feasibility.json": "11c1a24ae59ff5a5ad14f1daab8ba2b0b74fc65e6d79e9212b6122fae1472287"
+  },
+  "input_identity": {
+    "upstream_feasibility_artifact": "docs/core/07_artifacts/verification/hyperbolic_phase_field_causal_feasibility.json",
+    "source_records": [
+      "docs/data/external/condensed_matter/phase_transitions/cahn_hilliard_1958/source_record.json",
+      "docs/data/external/condensed_matter/phase_transitions/hohenberg_halperin_1977/source_record.json",
+      "docs/data/external/condensed_matter/phase_transitions/hyperbolic_cahn_hilliard/dhaouadi_dumbser_gavrilyuk_2025/source_record.json",
+      "docs/data/external/relativistic_transport/jain_kovtun_2024/source_record.json"
+    ]
+  },
+  "allowed_language": [
+    "hydrodynamic state-coordinate map",
+    "signed O2 Noether charge density",
+    "exact affine coarse-density coordinate change",
+    "external C compatible only after an explicit charge-coordinate declaration",
+    "microscopic reconstruction is many-to-one"
+  ],
+  "blocked_language": [
+    "scalar amplitude is the phase-field density",
+    "the external material concentration is derived as UET charge",
+    "the double-well equation of state is derived from the O2 action",
+    "the external auxiliary phase is UET Phi or information",
+    "Topic 0.11 or 0.19 is validated"
+  ],
+  "notes": [
+    "Only the final coarse-density/current to C/J coordinate layer is invertible.",
+    "The constitutive equation of state and transport remain the controlling physical map blocker."
+  ],
+  "next_controller": "noether_charge_equation_of_state_and_covariant_transport_matching_missing"
+}

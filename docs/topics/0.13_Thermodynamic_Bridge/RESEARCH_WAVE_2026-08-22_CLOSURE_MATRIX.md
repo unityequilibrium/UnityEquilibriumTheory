@@ -10,7 +10,7 @@ DEPENDENCY_UNLOCKED: None for Full Topic 13, Core, Gravity, or external validati
 
 STATUS: `BLOCKED_OPEN_T13_FULL_BRIDGE`; reporting projection generated from the canonical full gate.
 
-WHAT_CHANGED: Added `docs/core/artifacts/t13_topic13_closure_matrix.json`, its generator, registry projection, dependency projection, and focused regression. No equation, threshold, source role, calibration path, or holdout policy changed.
+WHAT_CHANGED: Added `docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json`, its generator, registry projection, dependency projection, and focused regression. No equation, threshold, source role, calibration path, or holdout policy changed.
 
 EQUATION_OR_MAPPING: The matrix preserves `y_TTG = Delta_Tq(t) / Delta_Tq(0)`, `y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)`, and `Delta_Tq = alpha_Phi_K * Delta_Phi`; it also records the formal natural-unit bridge and source response without promoting either to SI/base-Phi closure.
 

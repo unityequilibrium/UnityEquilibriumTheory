@@ -1,0 +1,125 @@
+{
+  "schema_version": "t13-desorbo-ceylon-graphite-cp-audit-v1",
+  "artifact": "t13_desorbo_ceylon_graphite_cp_audit",
+  "generated_at": "2026-09-18",
+  "status": "PASS_METADATA_ONLY_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_BOUNDARY",
+  "input_mode": "METADATA_ONLY_PUBLIC_BOUNDARY",
+  "raw_source_present": false,
+  "raw_source_declared_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nist_srd69_graphite_desorbo_1955.html",
+  "raw_source_declared_sha256": "2e9955e1a176adc93ee152aceb390da67f561bf5ba0a4c741e9936a552f1dc1b",
+  "claim_promotion": false,
+  "major_result": {
+    "major_result_id": "T13_DESORBO_1955_CEYLON_GRAPHITE_CP_COMPARATOR",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the committed source package preserves the official NIST locator, numeric row, material identity and declared raw-file hash",
+      "the raw NIST HTML is intentionally absent from this public checkout, so its bytes are not locally rehashed here",
+      "7.841 J mol^-1 K^-1 at 298.15 K remains a package-level comparison row only",
+      "the reported accuracy boundary is preserved without promotion to standard uncertainty",
+      "the row remains isolated from fitting, target access, Phi calibration, and holdout access"
+    ],
+    "equation_or_mapping": "Cp,solid^m(298.15 K) = 7.841 J mol^-1 K^-1; conversion to c_v^V is not consumed",
+    "units": {
+      "source_row": "J mol^-1 K^-1",
+      "required_downstream_quantity": "J m^-3 K^-1"
+    },
+    "derivation_class": "official secondary numeric table with primary-source attribution; no UET derivation",
+    "observable": "Ceylon natural graphite molar constant-pressure heat capacity",
+    "data_role": "COMPARISON_ONLY_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/desorbo_1955_ceylon_graphite_cp_source_package.json",
+        "sha256": "3bf9cebd1b3129f9b0f1cd66b49e16c2d7743059a207ed203048894abb6a746b"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nist_srd69_graphite_desorbo_1955.html",
+        "sha256": "2e9955e1a176adc93ee152aceb390da67f561bf5ba0a4c741e9936a552f1dc1b",
+        "availability": "DECLARED_NOT_IN_PUBLIC_CHECKOUT"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_desorbo_ceylon_graphite_cp_audit.json"
+      }
+    ],
+    "verification_status": "PASS_METADATA_ONLY_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_BOUNDARY",
+    "open_blockers": [
+      "standard_uncertainty_not_reported_in_archived_numeric_row",
+      "density_and_cp_to_cv_conversion_not_source_locked",
+      "Ceylon_natural_graphite_to_Ding_TTG_material_mapping_not_closed",
+      "Ding_specific_PBTE_C_src_remains_missing",
+      "base_Phi_SI_anchor_and_independent_alpha_Phi_K_remain_missing"
+    ],
+    "dependency_unlocked": "Ceylon natural-graphite numeric Cp comparator lane only; no c_v, C_src, alpha_Phi_K, Full Topic 13, Core, Gravity, or external-validation unlock",
+    "claim_boundary": "This package source-locks a NIST numeric Cp row attributed to primary DeSorbo 1955 Ceylon natural graphite. It does not emit volumetric c_v, C_src, a standard uncertainty, a Ding-material equivalence, e0, base-Phi dimensional mapping, or alpha_Phi_K. It is not UET calibration or external validation."
+  },
+  "source": {
+    "source_id": "nist_srd69_desorbo_1955_ceylon_graphite",
+    "title": "NIST Chemistry WebBook, SRD 69: Graphite",
+    "publisher": "National Institute of Standards and Technology",
+    "official_url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7782425&Mask=6F",
+    "source_locator": [
+      "HTML table aria-label=Constant pressure heat capacity of solid",
+      "row: DeSorbo, 1955; temperature 298.15 K",
+      "reference entry: Low temperature heat capacity of Ceylon graphite, J. Am. Chem. Soc. 77, 4713-4715",
+      "primary DOI: 10.1021/ja01623a006"
+    ],
+    "retrieved_on": "2026-08-13",
+    "local_raw_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nist_srd69_graphite_desorbo_1955.html",
+    "local_raw_sha256": "2e9955e1a176adc93ee152aceb390da67f561bf5ba0a4c741e9936a552f1dc1b",
+    "material": "Ceylon natural graphite",
+    "primary_paper": {
+      "author": "Warren DeSorbo",
+      "title": "Low Temperature Heat Capacity of Ceylon Graphite",
+      "journal": "Journal of the American Chemical Society",
+      "volume": 77,
+      "pages": "4713-4715",
+      "year": 1955,
+      "doi": "10.1021/ja01623a006"
+    },
+    "license_or_terms": "NIST SRD page and cited primary paper; reuse and publication terms require source-level review",
+    "preprocessing": "Byte-preserving HTML archive; numeric row read from the NIST table; no interpolation, fitting, smoothing, or target-curve access"
+  },
+  "source_row": {
+    "source_row_id": "nist_srd69_desorbo_1955_ceylon_graphite_cp_298_15K",
+    "temperature_K": 298.15,
+    "quantity": "Cp,solid",
+    "value_J_per_mol_K": 7.841,
+    "reported_units": "J mol^-1 K^-1",
+    "reference": "DeSorbo, 1955",
+    "data_role": "COMPARISON_ONLY_NOT_CALIBRATION",
+    "status": "SOURCE_LOCKED_NUMERIC_ROW"
+  },
+  "uncertainty_boundary": {
+    "primary_reported_accuracy_percent": 0.5,
+    "primary_reported_accuracy_locator": "DeSorbo 1955, experimental section, pp. 4713-4715; near the ice point",
+    "standard_uncertainty_value": null,
+    "standard_uncertainty_units": "J mol^-1 K^-1",
+    "status": "REPORTED_ACCURACY_BOUND_NOT_STANDARD_UNCERTAINTY",
+    "consumed_in_uncertainty_propagation": false,
+    "do_not_relabel_as_standard_uncertainty": true
+  },
+  "checks": {
+    "package_status_is_numeric_comparator": true,
+    "raw_source_present_or_public_metadata_boundary": true,
+    "raw_hash_matches_package_or_public_metadata_boundary": true,
+    "nist_cp_table_locator_present_or_package_locator": true,
+    "nist_numeric_row_present_or_package_row": true,
+    "nist_primary_reference_present_or_package_reference": true,
+    "row_units_are_molar_cp": true,
+    "row_temperature_is_declared": true,
+    "accuracy_not_relabelled_as_standard_uncertainty": true,
+    "volumetric_cv_not_emitted": true,
+    "no_fit_or_target_used": true,
+    "xie_holdout_not_accessed": true,
+    "alpha_not_emitted": true,
+    "raw_payload_not_synthesized": true
+  },
+  "numeric_cp_emitted": true,
+  "volumetric_cv_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "standard_uncertainty_density_and_Ding_material_mapping_missing",
+  "next_action": "Acquire a source-grade standard uncertainty and density/material-regime mapping, or retain this row as comparison-only evidence.",
+  "claim_boundary": "This package source-locks a NIST numeric Cp row attributed to primary DeSorbo 1955 Ceylon natural graphite. It does not emit volumetric c_v, C_src, a standard uncertainty, a Ding-material equivalence, e0, base-Phi dimensional mapping, or alpha_Phi_K. It is not UET calibration or external validation."
+}

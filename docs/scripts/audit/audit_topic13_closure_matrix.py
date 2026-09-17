@@ -22,10 +22,10 @@ GATE_REL = (
     "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
     "topic13_full_thermodynamic_bridge_core_ready_gate.json"
 )
-REGISTER_REL = "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY_REL = "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
-OUT_REL = "docs/core/artifacts/t13_topic13_closure_matrix.json"
-INPUT_AUDIT_REL = "docs/core/artifacts/t13_closure_input_package_audit.json"
+REGISTER_REL = "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY_REL = "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
+OUT_REL = "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json"
+INPUT_AUDIT_REL = "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json"
 
 
 REQUIREMENTS: tuple[dict[str, Any], ...] = (

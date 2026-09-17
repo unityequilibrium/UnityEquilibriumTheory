@@ -11,9 +11,9 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
 PREREG_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_xie_2026_holdout_comparison_preregistration.json"
-ACCESS_REL = "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json"
-PROGRESS_REL = "docs/core/artifacts/t13_full_closure_progress.json"
-OUT_REL = "docs/core/artifacts/t13_xie_2026_holdout_preregistration_audit.json"
+ACCESS_REL = "docs/core/07_artifacts/topic13/t13_xie_2026_holdout_access_audit.json"
+PROGRESS_REL = "docs/core/07_artifacts/topic13/t13_full_closure_progress.json"
+OUT_REL = "docs/core/07_artifacts/topic13/t13_xie_2026_holdout_preregistration_audit.json"
 
 
 def load(relative: str) -> dict[str, Any]:

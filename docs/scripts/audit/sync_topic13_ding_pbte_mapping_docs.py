@@ -18,7 +18,7 @@ PACKAGE = TOPIC / (
     "Data/03_Research/ding_2022_pbte_energy_temperature_source_package.json"
 )
 PDF = TOPIC / "Data/03_Research/raw/ding_2022_supplementary_information.pdf"
-AUDIT = ROOT / "docs/core/artifacts/t13_ding_pbte_energy_temperature_mapping_audit.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_ding_pbte_energy_temperature_mapping_audit.json"
 MARKER = "### 2026-08-11 - Ding PBTE energy-temperature source mapping"
 
 
@@ -63,7 +63,7 @@ def insert_manifest_row() -> bool:
         "| Ding 2022 PBTE energy-temperature source mapping | "
         "`Data/03_Research/ding_2022_pbte_energy_temperature_source_package.json`; "
         "`Data/03_Research/raw/ding_2022_supplementary_information.pdf`; "
-        "`docs/core/artifacts/t13_ding_pbte_energy_temperature_mapping_audit.json` | "
+        "`docs/core/07_artifacts/topic13/t13_ding_pbte_energy_temperature_mapping_audit.json` | "
         "Ding et al., Nature Communications 13, 285 (2022), Supplementary pp.3-5, Eqs. S1-S10; DOI `10.1038/s41467-021-27907-z`; PMC `PMC8755757` | "
         "`g_mu` and `Delta_u_ph` J m^-3; `C_src` J m^-3 K^-1; `Delta_Tq` K | "
         f"{PDF.stat().st_size} raw bytes | PDF `{sha256(PDF)}`; package `{sha256(PACKAGE)}`; audit `{sha256(AUDIT)}` | "
@@ -126,7 +126,7 @@ Run:
 
 Artifact:
 
-- `docs/core/artifacts/t13_ding_pbte_energy_temperature_mapping_audit.json`
+- `docs/core/07_artifacts/topic13/t13_ding_pbte_energy_temperature_mapping_audit.json`
 
 Acceptance requires the official PDF hash/size/MD5, source identity, Eq. S4/S10 locators, kelvin unit closure, source-`C`/UET-`C` separation, absent numeric calibration, material non-pooling, and Xie 2026 non-access checks to pass. `PASS_SOURCE_FORMULA_MAPPING_NUMERIC_C_OPEN` closes only the source-formula lane; it does not close numeric `C_src(T)`, base `Phi`, `e0`, `alpha_Phi_K`, or Full Topic 13.
 """,

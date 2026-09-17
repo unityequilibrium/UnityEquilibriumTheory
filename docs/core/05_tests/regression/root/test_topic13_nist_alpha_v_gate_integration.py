@@ -1,0 +1,37 @@
+from __future__ import annotations
+from docs.core.core_paths import repo_root
+
+import json
+from pathlib import Path
+
+
+ROOT = repo_root()
+LANE = ROOT / "docs/core/07_artifacts/topic13/t13_nist_graphite_alpha_v_source_boundary_audit.json"
+FULL = ROOT / (
+    "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
+    "topic13_full_thermodynamic_bridge_core_ready_gate.json"
+)
+
+
+def load(path: Path) -> dict:
+    return json.loads(path.read_text(encoding="utf-8-sig"))
+
+
+def test_nist_alpha_v_lane_is_integrated_without_closing_k_t_or_topic13() -> None:
+    lane = load(LANE)
+    full = load(FULL)
+    projected = full["verification_status"]["source_package"][
+        "nist_graphite_alpha_v_source_boundary"
+    ]
+    assert projected["major_result_id"] == "T13_NIST_GRAPHITE_ALPHA_V_SOURCE_BOUNDARY"
+    assert projected["closure_level"] == "CLOSED_FOR_LANE"
+    assert projected["data_role"] == "INTERNAL_SOURCE_COMPARATOR_NOT_DING_TTG_GRADE"
+    assert full["status"] == "BLOCKED_OPEN_T13_FULL_BRIDGE"
+    assert full["claim_promotion"] is False
+    assert "same_grade_alpha_V_and_K_T_missing" not in full["major_result"]["what_remains_open"]
+    assert "material_regime_mapping_to_TTG_not_closed" in full["major_result"]["what_remains_open"]
+    assert any(
+        item["path"] == "docs/core/07_artifacts/topic13/t13_nist_graphite_alpha_v_source_boundary_audit.json"
+        for item in full["evidence_artifacts"]
+    )
+    assert lane["numeric_alpha_Phi_K_emitted"] is False

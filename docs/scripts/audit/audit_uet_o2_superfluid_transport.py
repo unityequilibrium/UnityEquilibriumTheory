@@ -16,6 +16,12 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from docs.core.core_paths import (  # noqa: E402
+    CANONICAL_ARTIFACT_ROOT,
+    canonical_artifact_path,
+    canonical_existing_path,
+)
+
 from docs.core.uet_covariant_matter import (  # noqa: E402
     CovariantMatterConfig,
     matter_noether_current,
@@ -47,12 +53,12 @@ from docs.core.uet_o2_finite_density_eos import (  # noqa: E402
     o2_helmholtz_state,
 )
 
-OUT = ROOT / "docs/core/artifacts"
-EOS_CORE = ROOT / "docs/core/uet_o2_finite_density_eos.py"
-TRANSPORT_CORE = ROOT / "docs/core/uet_covariant_superfluid_transport.py"
-MATTER_CORE = ROOT / "docs/core/uet_covariant_matter.py"
-STATE_MAP_CORE = ROOT / "docs/core/uet_noether_phase_field_map.py"
-SPEC = ROOT / "docs/core/O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md"
+OUT = CANONICAL_ARTIFACT_ROOT
+EOS_CORE = canonical_existing_path(ROOT / "docs/core/02_equations/o2/uet_o2_finite_density_eos.py")
+TRANSPORT_CORE = canonical_existing_path(ROOT / "docs/core/02_equations/covariant/uet_covariant_superfluid_transport.py")
+MATTER_CORE = canonical_existing_path(ROOT / "docs/core/02_equations/covariant/uet_covariant_matter.py")
+STATE_MAP_CORE = canonical_existing_path(ROOT / "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py")
+SPEC = canonical_existing_path(ROOT / "docs/core/01_contracts/O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md")
 SOURCE_RECORDS = (
     ROOT
     / "docs/data/external/relativistic_transport/son_relativistic_superfluid_2002/source_record.json",
@@ -88,12 +94,18 @@ def _json_ready(value: Any) -> Any:
     if isinstance(value, np.ndarray):
         if np.iscomplexobj(value):
             return [
-                {"real": float(item.real), "imag": float(item.imag)}
+                _json_ready({"real": item.real, "imag": item.imag})
                 for item in value.flat
             ]
-        return value.tolist()
+        return _json_ready(value.tolist())
     if isinstance(value, np.generic):
-        return value.item()
+        return _json_ready(value.item())
+    if isinstance(value, float):
+        # Canonicalize serialization across Python/NumPy builds without
+        # changing the pass/fail calculations performed before serialization.
+        if abs(value) <= 1.0e-12:
+            return 0.0
+        return float(f"{value:.12f}")
     if isinstance(value, dict):
         return {key: _json_ready(item) for key, item in value.items()}
     if isinstance(value, (list, tuple)):
@@ -102,10 +114,12 @@ def _json_ready(value: Any) -> Any:
 
 
 def _dump(name: str, payload: dict[str, Any]) -> None:
-    OUT.mkdir(parents=True, exist_ok=True)
-    (OUT / name).write_text(
+    path = canonical_artifact_path(name)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
         json.dumps(_json_ready(payload), indent=2) + "\n",
         encoding="utf-8",
+        newline="\n",
     )
 
 
@@ -494,23 +508,27 @@ def build_artifacts(
     transport_checks = _transport_checks(config)
     eos_pass = source["status"] == "PASS" and all(eos_checks["gates"].values())
     transport_pass = all(transport_checks["gates"].values())
+    # Keep legacy labels stable in committed artifacts while hashing the
+    # canonical implementation selected by the shared path resolver.
     source_hashes = {
-        str(path.relative_to(ROOT)).replace("\\", "/"): _sha(path)
-        for path in (
-            EOS_CORE,
-            TRANSPORT_CORE,
-            MATTER_CORE,
-            STATE_MAP_CORE,
-            SPEC,
-            *SOURCE_RECORDS,
-        )
+        "docs/core/02_equations/o2/uet_o2_finite_density_eos.py": _sha(EOS_CORE),
+        "docs/core/02_equations/covariant/uet_covariant_superfluid_transport.py": _sha(TRANSPORT_CORE),
+        "docs/core/02_equations/covariant/uet_covariant_matter.py": _sha(MATTER_CORE),
+        "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py": _sha(STATE_MAP_CORE),
+        "docs/core/01_contracts/O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md": _sha(SPEC),
     }
+    source_hashes.update(
+        {
+            str(path.relative_to(ROOT)).replace("\\", "/"): _sha(path)
+            for path in SOURCE_RECORDS
+        }
+    )
     input_identity = {
-        "eos_core": "docs/core/uet_o2_finite_density_eos.py",
-        "transport_core": "docs/core/uet_covariant_superfluid_transport.py",
-        "parent_action": "docs/core/uet_covariant_matter.py",
-        "state_map": "docs/core/uet_noether_phase_field_map.py",
-        "spec": "docs/core/O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md",
+        "eos_core": "docs/core/02_equations/o2/uet_o2_finite_density_eos.py",
+        "transport_core": "docs/core/02_equations/covariant/uet_covariant_superfluid_transport.py",
+        "parent_action": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+        "state_map": "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py",
+        "spec": "docs/core/01_contracts/O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md",
         "parameter_policy": "fixed_deterministic_synthetic_control_no_fit",
         "seed_eos": 102001,
         "seed_transport": 102002,
@@ -565,7 +583,7 @@ def build_artifacts(
                 "constant_origin": "topic_derived_relation",
                 "proof_status": "derived",
                 "verification_role": "gate",
-                "implementation": "docs/core/uet_o2_finite_density_eos.py::effective_mass_sq",
+                "implementation": "docs/core/02_equations/o2/uet_o2_finite_density_eos.py::effective_mass_sq",
             },
             {
                 "formula_id": "finite_density_grand_potential",
@@ -575,7 +593,7 @@ def build_artifacts(
                 "constant_origin": "topic_derived_relation",
                 "proof_status": "derived_tree_level",
                 "verification_role": "gate",
-                "implementation": "docs/core/uet_o2_finite_density_eos.py::o2_equilibrium_state",
+                "implementation": "docs/core/02_equations/o2/uet_o2_finite_density_eos.py::o2_equilibrium_state",
             },
             {
                 "formula_id": "canonical_legendre_transform",
@@ -585,7 +603,7 @@ def build_artifacts(
                 "constant_origin": "topic_derived_relation",
                 "proof_status": "derived",
                 "verification_role": "gate",
-                "implementation": "docs/core/uet_o2_finite_density_eos.py::o2_helmholtz_state",
+                "implementation": "docs/core/02_equations/o2/uet_o2_finite_density_eos.py::o2_helmholtz_state",
             },
             {
                 "formula_id": "ideal_covariant_superfluid_current_stress",
@@ -595,7 +613,7 @@ def build_artifacts(
                 "constant_origin": "topic_derived_relation",
                 "proof_status": "derived_tree_level",
                 "verification_role": "gate",
-                "implementation": "docs/core/uet_covariant_superfluid_transport.py",
+                "implementation": "docs/core/02_equations/covariant/uet_covariant_superfluid_transport.py",
             },
             {
                 "formula_id": "longitudinal_kubo_transport",
@@ -605,7 +623,7 @@ def build_artifacts(
                 "constant_origin": "open_placeholder",
                 "proof_status": "open_coefficient_matching",
                 "verification_role": "synthetic_control",
-                "implementation": "docs/core/uet_covariant_superfluid_transport.py",
+                "implementation": "docs/core/02_equations/covariant/uet_covariant_superfluid_transport.py",
             },
         ],
         "completed_formula_gates": [
@@ -697,10 +715,10 @@ def build_artifacts(
         "benchmark_role": "program_gate",
         "method_label": "monotonic_gr_research_stage_gate",
         "input_identity": {
-            "eos_verification": "docs/core/artifacts/o2_finite_density_eos_verification.json",
-            "eos_formula_audit": "docs/core/artifacts/o2_eos_formula_audit.json",
-            "transport_verification": "docs/core/artifacts/covariant_superfluid_transport_verification.json",
-            "transport_contract": "docs/core/artifacts/covariant_superfluid_transport_contract.json",
+            "eos_verification": "docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json",
+            "eos_formula_audit": "docs/core/07_artifacts/correspondence/o2_eos_formula_audit.json",
+            "transport_verification": "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json",
+            "transport_contract": "docs/core/07_artifacts/archive/covariant_superfluid_transport_contract.json",
         },
         "notes": [
             "The EOS and ideal T=0 constitutive gates pass at tree level.",
@@ -761,12 +779,15 @@ def build_artifacts(
             "are not implemented."
         ),
     }
-    return (
-        eos_verification,
-        formula_audit,
-        transport_verification,
-        transport_contract,
-        program,
+    return tuple(
+        _json_ready(payload)
+        for payload in (
+            eos_verification,
+            formula_audit,
+            transport_verification,
+            transport_contract,
+            program,
+        )
     )
 
 

@@ -1,0 +1,226 @@
+{
+  "major_result_id": "T13_INDEPENDENT_PHASE_SPACE_MEASURE_PILOT",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "verification_status": "MANUFACTURED_MEASURE_ONLY",
+  "what_is_closed": "Independent radial pair and angular product integration checked against analytic moments",
+  "equation_or_mapping": "x1^2 dx1 x2^2 dx2 dcos(theta12)/2 dcos(theta_star)/2 dphi_star/(2*pi)",
+  "units": "Dimensionless x=p/P; physical radial prefactor P^6/(2*pi^2)^2 excluded",
+  "derivation_class": "Gauss-Legendre product integration and periodic angular average",
+  "observable": "Manufactured scalar integral, not Kubo or heat flux",
+  "data_role": "ANALYTIC_MANUFACTURED_CONTROL_NOT_EXTERNAL_DATA",
+  "rows": [
+    {
+      "radial_order": 4,
+      "cosine_order": 6,
+      "azimuth_order": 16,
+      "independent_radial_pairs": 16,
+      "product_node_count": 9216,
+      "weights_positive": true,
+      "normalized_angular_weight": 1.0,
+      "moments": {
+        "constant": {
+          "measured": 0.11111111111111108,
+          "reference": 0.1111111111111111,
+          "absolute_error": 2.7755575615628914e-17
+        },
+        "x1_squared_x2_fourth": {
+          "measured": 0.028571428571428532,
+          "reference": 0.02857142857142857,
+          "absolute_error": 3.8163916471489756e-17
+        },
+        "incoming_cosine_squared": {
+          "measured": 0.33333333333333326,
+          "reference": 0.3333333333333333,
+          "absolute_error": 5.551115123125783e-17
+        },
+        "outgoing_cosine_fourth": {
+          "measured": 0.1999999999999999,
+          "reference": 0.2,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        "outgoing_phi_cosine": {
+          "measured": -5.622629982202156e-17,
+          "reference": 0.0,
+          "absolute_error": 5.622629982202156e-17
+        },
+        "outgoing_phi_cosine_squared": {
+          "measured": 0.5,
+          "reference": 0.5,
+          "absolute_error": 0.0
+        },
+        "manufactured_exponential": {
+          "measured": 1.189498704121884e-06,
+          "reference": 1.3381930467857899e-06,
+          "absolute_error": 1.4869434266390587e-07
+        }
+      },
+      "exponential_relative_error": 0.1111157639184087
+    },
+    {
+      "radial_order": 8,
+      "cosine_order": 6,
+      "azimuth_order": 16,
+      "independent_radial_pairs": 64,
+      "product_node_count": 36864,
+      "weights_positive": true,
+      "normalized_angular_weight": 1.0,
+      "moments": {
+        "constant": {
+          "measured": 0.1111111111111112,
+          "reference": 0.1111111111111111,
+          "absolute_error": 9.71445146547012e-17
+        },
+        "x1_squared_x2_fourth": {
+          "measured": 0.028571428571428664,
+          "reference": 0.02857142857142857,
+          "absolute_error": 9.367506770274758e-17
+        },
+        "incoming_cosine_squared": {
+          "measured": 0.33333333333333326,
+          "reference": 0.3333333333333333,
+          "absolute_error": 5.551115123125783e-17
+        },
+        "outgoing_cosine_fourth": {
+          "measured": 0.1999999999999999,
+          "reference": 0.2,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        "outgoing_phi_cosine": {
+          "measured": -5.622629982202156e-17,
+          "reference": 0.0,
+          "absolute_error": 5.622629982202156e-17
+        },
+        "outgoing_phi_cosine_squared": {
+          "measured": 0.5,
+          "reference": 0.5,
+          "absolute_error": 0.0
+        },
+        "manufactured_exponential": {
+          "measured": 1.3381715240743246e-06,
+          "reference": 1.3381930467857899e-06,
+          "absolute_error": 2.1522711465256177e-11
+        }
+      },
+      "exponential_relative_error": 1.608341301499933e-05
+    },
+    {
+      "radial_order": 16,
+      "cosine_order": 6,
+      "azimuth_order": 16,
+      "independent_radial_pairs": 256,
+      "product_node_count": 147456,
+      "weights_positive": true,
+      "normalized_angular_weight": 1.0,
+      "moments": {
+        "constant": {
+          "measured": 0.11111111111111105,
+          "reference": 0.1111111111111111,
+          "absolute_error": 5.551115123125783e-17
+        },
+        "x1_squared_x2_fourth": {
+          "measured": 0.02857142857142852,
+          "reference": 0.02857142857142857,
+          "absolute_error": 5.204170427930421e-17
+        },
+        "incoming_cosine_squared": {
+          "measured": 0.33333333333333326,
+          "reference": 0.3333333333333333,
+          "absolute_error": 5.551115123125783e-17
+        },
+        "outgoing_cosine_fourth": {
+          "measured": 0.1999999999999999,
+          "reference": 0.2,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        "outgoing_phi_cosine": {
+          "measured": -5.622629982202156e-17,
+          "reference": 0.0,
+          "absolute_error": 5.622629982202156e-17
+        },
+        "outgoing_phi_cosine_squared": {
+          "measured": 0.5,
+          "reference": 0.5,
+          "absolute_error": 0.0
+        },
+        "manufactured_exponential": {
+          "measured": 1.338193046785791e-06,
+          "reference": 1.3381930467857899e-06,
+          "absolute_error": 1.0587911840678754e-21
+        }
+      },
+      "exponential_relative_error": 7.912095991015566e-16
+    },
+    {
+      "radial_order": 32,
+      "cosine_order": 6,
+      "azimuth_order": 16,
+      "independent_radial_pairs": 1024,
+      "product_node_count": 589824,
+      "weights_positive": true,
+      "normalized_angular_weight": 1.0,
+      "moments": {
+        "constant": {
+          "measured": 0.1111111111111112,
+          "reference": 0.1111111111111111,
+          "absolute_error": 9.71445146547012e-17
+        },
+        "x1_squared_x2_fourth": {
+          "measured": 0.028571428571428657,
+          "reference": 0.02857142857142857,
+          "absolute_error": 8.673617379884035e-17
+        },
+        "incoming_cosine_squared": {
+          "measured": 0.33333333333333326,
+          "reference": 0.3333333333333333,
+          "absolute_error": 5.551115123125783e-17
+        },
+        "outgoing_cosine_fourth": {
+          "measured": 0.1999999999999999,
+          "reference": 0.2,
+          "absolute_error": 1.1102230246251565e-16
+        },
+        "outgoing_phi_cosine": {
+          "measured": -5.622629982202156e-17,
+          "reference": 0.0,
+          "absolute_error": 5.622629982202156e-17
+        },
+        "outgoing_phi_cosine_squared": {
+          "measured": 0.5,
+          "reference": 0.5,
+          "absolute_error": 0.0
+        },
+        "manufactured_exponential": {
+          "measured": 1.3381930467857869e-06,
+          "reference": 1.3381930467857899e-06,
+          "absolute_error": 2.964615315390051e-21
+        }
+      },
+      "exponential_relative_error": 2.2153868774843585e-15
+    }
+  ],
+  "evidence_artifacts": [
+    {
+      "path": "docs/scripts/audit/audit_topic13_phase_space_measure.py",
+      "sha256": "f315e1a3b11a2ddc98b6d03c475f3e3f2e58b9a89b4030f9ec0bd211613e1773"
+    },
+    {
+      "path": "docs/core/test/test_topic13_phase_space_measure.py",
+      "sha256": "986de939925df6f4e037269cbd86f8e7dc850236a1e6662e27935c0555dc7830"
+    },
+    {
+      "path": "docs/core/uet_o2_action_derived_transition_kernel.py",
+      "sha256": "2f818500b353e8cf81caddf892bcf2db43a4341fe831b6f67e62423e3c2feb8f"
+    }
+  ],
+  "open_blockers": [
+    "differential_cross_section_and_species_symmetry_contract",
+    "boosted_Bose_weight_and_collision_integrand",
+    "global_orientation_for_tensor_response",
+    "material_calibration"
+  ],
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "global_claim_promotion": false,
+  "claim_boundary": "No production replacement. Angular factors are normalized averages, not derived scattering rates. No external data or holdout is read by this runner."
+}

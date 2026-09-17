@@ -1,0 +1,770 @@
+{
+  "major_result_id": "T13_INTERPOLATION_REFINEMENT_DIAGNOSTIC",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "status": "REFINEMENT_MEASURED_WITH_EXPLICIT_RANK_FAILURES",
+  "completed": true,
+  "what_is_closed": "Probe trends and fixed-support rank failures evaluated",
+  "equation_or_mapping": "Same local signed moment correction; product sphere nodes from Gauss-Legendre mu and uniform azimuth",
+  "units": "natural grid; dimensionless probe error",
+  "derivation_class": "Numerical refinement experiment",
+  "observable": "Nonlinear interpolation probes, not transport",
+  "data_role": "INTERNAL_NO_FIT",
+  "plan": {
+    "radial_orders": [
+      8,
+      16,
+      32
+    ],
+    "angular_rules": [
+      "axis_cube14",
+      "product4x8",
+      "product8x16"
+    ],
+    "support_order": 40,
+    "rank_relative_floor": 1e-12,
+    "state": [
+      0.22,
+      0.35,
+      0.15
+    ],
+    "cutoff_factor": 48.0,
+    "channel_count": 64,
+    "transition_order": 24,
+    "policy": "Nine predetermined grids; mapping/probes only, not transport reruns. Preserve support40 and rank floor1e-12. If any channel-leg support is rank deficient, report the whole corrected-grid result blocked with all failed indices. No automatic support expansion or source selection. Product sphere grids are diagnostic-only."
+  },
+  "rows": [
+    {
+      "radial_order": 8,
+      "angular_rule": "axis_cube14",
+      "state_count": 224,
+      "rank_deficient_indices": [],
+      "rank_deficient_count": 0,
+      "positive_probes": {
+        "rms_absolute": [
+          0.14768517811585835,
+          0.1411594477598705
+        ],
+        "maximum_absolute": [
+          0.4747403025468702,
+          0.24186632214321463
+        ]
+      },
+      "rank_deficient_inside_count": 0,
+      "rank_deficient_outside_count": 0,
+      "status": "EVALUATED",
+      "mapping": {
+        "max_feature_residual": 8.881784197001252e-16,
+        "max_condition": 21.637896627707757,
+        "minimum_coefficient": -0.1358228196466881,
+        "negative_coefficient_count": 2664,
+        "max_column_l1": 4.049680993125003,
+        "correction_frobenius": 4.884558450514369
+      },
+      "corrected_probes": {
+        "rms_absolute": [
+          0.08277955009458486,
+          0.1066982426200431
+        ],
+        "maximum_absolute": [
+          0.41936298116183157,
+          0.22777220965454742
+        ]
+      },
+      "domain_probes": {
+        "inside": {
+          "count": 244,
+          "positive": {
+            "rms_absolute": [
+              0.14484204730304956,
+              0.14452645971435005
+            ],
+            "maximum_absolute": [
+              0.4747403025468702,
+              0.24186632214321463
+            ]
+          },
+          "corrected": {
+            "rms_absolute": [
+              0.08252182307003786,
+              0.10918178145366388
+            ],
+            "maximum_absolute": [
+              0.41936298116183157,
+              0.22777220965454742
+            ]
+          }
+        },
+        "outside": {
+          "count": 12,
+          "positive": {
+            "rms_absolute": [
+              0.19677907981960352,
+              0.019162369968252928
+            ],
+            "maximum_absolute": [
+              0.4101770335863307,
+              0.021685224686737264
+            ]
+          },
+          "corrected": {
+            "rms_absolute": [
+              0.08785617458133889,
+              0.02197432683856355
+            ],
+            "maximum_absolute": [
+              0.1539342992917178,
+              0.03620059271026473
+            ]
+          }
+        }
+      }
+    },
+    {
+      "radial_order": 8,
+      "angular_rule": "product4x8",
+      "state_count": 512,
+      "rank_deficient_indices": [],
+      "rank_deficient_count": 0,
+      "positive_probes": {
+        "rms_absolute": [
+          0.12642569876628584,
+          0.12555623887347397
+        ],
+        "maximum_absolute": [
+          0.45375600767584257,
+          0.33518396789444016
+        ]
+      },
+      "rank_deficient_inside_count": 0,
+      "rank_deficient_outside_count": 0,
+      "status": "EVALUATED",
+      "mapping": {
+        "max_feature_residual": 4.53859172466764e-13,
+        "max_condition": 79568.88174872886,
+        "minimum_coefficient": -183.39447923030315,
+        "negative_coefficient_count": 3464,
+        "max_column_l1": 5388.9042038944,
+        "correction_frobenius": 3817.557897957531
+      },
+      "corrected_probes": {
+        "rms_absolute": [
+          0.04281401468550735,
+          3.901051412272691
+        ],
+        "maximum_absolute": [
+          0.1998358987263224,
+          15.428548744016167
+        ]
+      },
+      "domain_probes": {
+        "inside": {
+          "count": 244,
+          "positive": {
+            "rms_absolute": [
+              0.12494904335707559,
+              0.128586998365478
+            ],
+            "maximum_absolute": [
+              0.45375600767584257,
+              0.33518396789444016
+            ]
+          },
+          "corrected": {
+            "rms_absolute": [
+              0.039810839976268955,
+              3.8718290598914207
+            ],
+            "maximum_absolute": [
+              0.1673514786416873,
+              14.974656853660694
+            ]
+          }
+        },
+        "outside": {
+          "count": 12,
+          "positive": {
+            "rms_absolute": [
+              0.15339838999594482,
+              0.010133091271229461
+            ],
+            "maximum_absolute": [
+              0.31302059408469884,
+              0.01381259588968749
+            ]
+          },
+          "corrected": {
+            "rms_absolute": [
+              0.0829366603033744,
+              4.453847001797583
+            ],
+            "maximum_absolute": [
+              0.1998358987263224,
+              15.428548744016167
+            ]
+          }
+        }
+      }
+    },
+    {
+      "radial_order": 8,
+      "angular_rule": "product8x16",
+      "state_count": 2048,
+      "rank_deficient_indices": [
+        0,
+        7,
+        21,
+        36,
+        49,
+        51,
+        77,
+        79,
+        80,
+        83,
+        84,
+        105,
+        120,
+        133,
+        134,
+        161,
+        164,
+        167,
+        168,
+        189,
+        204,
+        217,
+        245,
+        248,
+        252
+      ],
+      "rank_deficient_count": 25,
+      "positive_probes": {
+        "rms_absolute": [
+          0.07809504133958879,
+          0.09481259067856937
+        ],
+        "maximum_absolute": [
+          0.32816742262125476,
+          0.37950511325558467
+        ]
+      },
+      "rank_deficient_inside_count": 25,
+      "rank_deficient_outside_count": 0,
+      "status": "BLOCKED_RANK"
+    },
+    {
+      "radial_order": 16,
+      "angular_rule": "axis_cube14",
+      "state_count": 448,
+      "rank_deficient_indices": [],
+      "rank_deficient_count": 0,
+      "positive_probes": {
+        "rms_absolute": [
+          0.12719550745955208,
+          0.14523638914235318
+        ],
+        "maximum_absolute": [
+          0.4697689792892768,
+          0.3886226666146084
+        ]
+      },
+      "rank_deficient_inside_count": 0,
+      "rank_deficient_outside_count": 0,
+      "status": "EVALUATED",
+      "mapping": {
+        "max_feature_residual": 1.5543122344752192e-15,
+        "max_condition": 78.82161333947393,
+        "minimum_coefficient": -0.2687242686513796,
+        "negative_coefficient_count": 3044,
+        "max_column_l1": 8.084397828960622,
+        "correction_frobenius": 5.412161215779635
+      },
+      "corrected_probes": {
+        "rms_absolute": [
+          0.06357826465651642,
+          0.06738731495722132
+        ],
+        "maximum_absolute": [
+          0.33488789452657647,
+          0.21330438124556433
+        ]
+      },
+      "domain_probes": {
+        "inside": {
+          "count": 244,
+          "positive": {
+            "rms_absolute": [
+              0.12589755037239925,
+              0.1487432484928438
+            ],
+            "maximum_absolute": [
+              0.4697689792892768,
+              0.3886226666146084
+            ]
+          },
+          "corrected": {
+            "rms_absolute": [
+              0.054068132561558915,
+              0.06897893370697832
+            ],
+            "maximum_absolute": [
+              0.33488789452657647,
+              0.21330438124556433
+            ]
+          }
+        },
+        "outside": {
+          "count": 12,
+          "positive": {
+            "rms_absolute": [
+              0.15118953994807416,
+              0.011447947218350869
+            ],
+            "maximum_absolute": [
+              0.2922056799520758,
+              0.015608118172953685
+            ]
+          },
+          "corrected": {
+            "rms_absolute": [
+              0.1636819952128986,
+              0.011306677683936292
+            ],
+            "maximum_absolute": [
+              0.27141466150446436,
+              0.02136727864204989
+            ]
+          }
+        }
+      }
+    },
+    {
+      "radial_order": 16,
+      "angular_rule": "product4x8",
+      "state_count": 1024,
+      "rank_deficient_indices": [],
+      "rank_deficient_count": 0,
+      "positive_probes": {
+        "rms_absolute": [
+          0.10170947213821925,
+          0.09704666774570664
+        ],
+        "maximum_absolute": [
+          0.4277002726782787,
+          0.3380409525842094
+        ]
+      },
+      "rank_deficient_inside_count": 0,
+      "rank_deficient_outside_count": 0,
+      "status": "EVALUATED",
+      "mapping": {
+        "max_feature_residual": 2.1600499167107046e-11,
+        "max_condition": 2288702.848537518,
+        "minimum_coefficient": -4563.8029340960475,
+        "negative_coefficient_count": 3632,
+        "max_column_l1": 135277.94577000872,
+        "correction_frobenius": 64208.22477981741
+      },
+      "corrected_probes": {
+        "rms_absolute": [
+          21.493796601254825,
+          4.490550488258556
+        ],
+        "maximum_absolute": [
+          316.01021894863356,
+          15.443594120860745
+        ]
+      },
+      "domain_probes": {
+        "inside": {
+          "count": 244,
+          "positive": {
+            "rms_absolute": [
+              0.10137989942479005,
+              0.09939111466751568
+            ],
+            "maximum_absolute": [
+              0.4277002726782787,
+              0.3380409525842094
+            ]
+          },
+          "corrected": {
+            "rms_absolute": [
+              8.685120666394981,
+              4.492136242350376
+            ],
+            "maximum_absolute": [
+              78.56526187065622,
+              14.990611633465024
+            ]
+          }
+        },
+        "outside": {
+          "count": 12,
+          "positive": {
+            "rms_absolute": [
+              0.10819326195661719,
+              0.007333756404247331
+            ],
+            "maximum_absolute": [
+              0.24684095029329045,
+              0.00979207706875989
+            ]
+          },
+          "corrected": {
+            "rms_absolute": [
+              91.2243025535245,
+              4.458184488340612
+            ],
+            "maximum_absolute": [
+              316.01021894863356,
+              15.443594120860745
+            ]
+          }
+        }
+      }
+    },
+    {
+      "radial_order": 16,
+      "angular_rule": "product8x16",
+      "state_count": 4096,
+      "rank_deficient_indices": [],
+      "rank_deficient_count": 0,
+      "positive_probes": {
+        "rms_absolute": [
+          0.05696998718434512,
+          0.03367256142259624
+        ],
+        "maximum_absolute": [
+          0.25392897432755324,
+          0.1512109374095041
+        ]
+      },
+      "rank_deficient_inside_count": 0,
+      "rank_deficient_outside_count": 0,
+      "status": "EVALUATED",
+      "mapping": {
+        "max_feature_residual": 4.001776687800884e-11,
+        "max_condition": 25388318.040298674,
+        "minimum_coefficient": -17142.90766760269,
+        "negative_coefficient_count": 3744,
+        "max_column_l1": 376812.3973660551,
+        "correction_frobenius": 166459.72214308367
+      },
+      "corrected_probes": {
+        "rms_absolute": [
+          84.52694597918928,
+          1.048872630906338
+        ],
+        "maximum_absolute": [
+          551.3235948221055,
+          3.844612861100573
+        ]
+      },
+      "domain_probes": {
+        "inside": {
+          "count": 244,
+          "positive": {
+            "rms_absolute": [
+              0.057111296410040306,
+              0.03446911622414892
+            ],
+            "maximum_absolute": [
+              0.25392897432755324,
+              0.1512109374095041
+            ]
+          },
+          "corrected": {
+            "rms_absolute": [
+              86.57919579064728,
+              1.049228715077092
+            ],
+            "maximum_absolute": [
+              551.3235948221055,
+              3.844612861100573
+            ]
+          }
+        },
+        "outside": {
+          "count": 12,
+          "positive": {
+            "rms_absolute": [
+              0.05401658174560896,
+              0.0054933525537073195
+            ],
+            "maximum_absolute": [
+              0.10204562824390995,
+              0.008142537824849909
+            ]
+          },
+          "corrected": {
+            "rms_absolute": [
+              2.1685948855315798,
+              1.0416058509562214
+            ],
+            "maximum_absolute": [
+              7.511883004190531,
+              3.6082147888892555
+            ]
+          }
+        }
+      }
+    },
+    {
+      "radial_order": 32,
+      "angular_rule": "axis_cube14",
+      "state_count": 896,
+      "rank_deficient_indices": [
+        63
+      ],
+      "rank_deficient_count": 1,
+      "positive_probes": {
+        "rms_absolute": [
+          0.10262379218388844,
+          0.10437670302155688
+        ],
+        "maximum_absolute": [
+          0.4180854648692081,
+          0.3565097511261101
+        ]
+      },
+      "rank_deficient_inside_count": 1,
+      "rank_deficient_outside_count": 0,
+      "status": "BLOCKED_RANK"
+    },
+    {
+      "radial_order": 32,
+      "angular_rule": "product4x8",
+      "state_count": 2048,
+      "rank_deficient_indices": [],
+      "rank_deficient_count": 0,
+      "positive_probes": {
+        "rms_absolute": [
+          0.07917848833729921,
+          0.05197120345500332
+        ],
+        "maximum_absolute": [
+          0.3383135790227769,
+          0.22877942183856514
+        ]
+      },
+      "rank_deficient_inside_count": 0,
+      "rank_deficient_outside_count": 0,
+      "status": "EVALUATED",
+      "mapping": {
+        "max_feature_residual": 6.428058085816701e-11,
+        "max_condition": 8004625.883770223,
+        "minimum_coefficient": -15245.030559269264,
+        "negative_coefficient_count": 3491,
+        "max_column_l1": 485871.88334197,
+        "correction_frobenius": 213340.36909253066
+      },
+      "corrected_probes": {
+        "rms_absolute": [
+          12.823756876020859,
+          5.012013975340558
+        ],
+        "maximum_absolute": [
+          146.67288277743117,
+          15.444879482862007
+        ]
+      },
+      "domain_probes": {
+        "inside": {
+          "count": 244,
+          "positive": {
+            "rms_absolute": [
+              0.07886892386223124,
+              0.05321628231210366
+            ],
+            "maximum_absolute": [
+              0.3383135790227769,
+              0.22877942183856514
+            ]
+          },
+          "corrected": {
+            "rms_absolute": [
+              12.058008168941718,
+              5.020611805889865
+            ],
+            "maximum_absolute": [
+              146.67288277743117,
+              14.991157061708622
+            ]
+          }
+        },
+        "outside": {
+          "count": 12,
+          "positive": {
+            "rms_absolute": [
+              0.08522944867031347,
+              0.00616572184240732
+            ],
+            "maximum_absolute": [
+              0.1653619230539995,
+              0.008399484147744066
+            ]
+          },
+          "corrected": {
+            "rms_absolute": [
+              23.49177278283139,
+              4.8338757557022785
+            ],
+            "maximum_absolute": [
+              67.2649476044111,
+              15.444879482862007
+            ]
+          }
+        }
+      }
+    },
+    {
+      "radial_order": 32,
+      "angular_rule": "product8x16",
+      "state_count": 8192,
+      "rank_deficient_indices": [],
+      "rank_deficient_count": 0,
+      "positive_probes": {
+        "rms_absolute": [
+          0.0397166876401434,
+          0.01983929304867084
+        ],
+        "maximum_absolute": [
+          0.17149062309078955,
+          0.11407695625670422
+        ]
+      },
+      "rank_deficient_inside_count": 0,
+      "rank_deficient_outside_count": 0,
+      "status": "EVALUATED",
+      "mapping": {
+        "max_feature_residual": 1.5159207222836812e-10,
+        "max_condition": 42748963.39970657,
+        "minimum_coefficient": -21651.782511523346,
+        "negative_coefficient_count": 3927,
+        "max_column_l1": 692014.8038795652,
+        "correction_frobenius": 291444.4343265707
+      },
+      "corrected_probes": {
+        "rms_absolute": [
+          168.28880694181075,
+          1.1424762510081254
+        ],
+        "maximum_absolute": [
+          1096.6835709003244,
+          3.8445015959295445
+        ]
+      },
+      "domain_probes": {
+        "inside": {
+          "count": 244,
+          "positive": {
+            "rms_absolute": [
+              0.03963004879046369,
+              0.020290805915878417
+            ],
+            "maximum_absolute": [
+              0.17149062309078955,
+              0.11407695625670422
+            ]
+          },
+          "corrected": {
+            "rms_absolute": [
+              172.20663068286277,
+              1.1472074025227343
+            ],
+            "maximum_absolute": [
+              1096.6835709003244,
+              3.8445015959295445
+            ]
+          }
+        },
+        "outside": {
+          "count": 12,
+          "positive": {
+            "rms_absolute": [
+              0.04143907551854713,
+              0.0050172378616084035
+            ],
+            "maximum_absolute": [
+              0.08738648532923765,
+              0.007444891258071155
+            ]
+          },
+          "corrected": {
+            "rms_absolute": [
+              34.589497258070985,
+              1.0416257637214261
+            ],
+            "maximum_absolute": [
+              119.82151483013713,
+              3.6082881528678987
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "outside_cutoff_target_count": 12,
+  "outside_cutoff_target_indices": [
+    19,
+    34,
+    67,
+    71,
+    74,
+    119,
+    150,
+    154,
+    158,
+    187,
+    202,
+    242
+  ],
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "open_blockers": [
+    "rank_robust_local_support",
+    "nonlinear_interpolation_convergence",
+    "physical_material_mapping"
+  ],
+  "claim_boundary": "Nine predetermined grids; mapping/probes only, not transport reruns. Preserve support40 and rank floor1e-12. If any channel-leg support is rank deficient, report the whole corrected-grid result blocked with all failed indices. No automatic support expansion or source selection. Product sphere grids are diagnostic-only.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_interpolation_refinement_plan.json",
+      "sha256": "db462098f5d31f43081b7951102186465809cdafd94c3bf0e7b01ea9db83e3f8"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_interpolation_refinement.py",
+      "sha256": "7e8beda5c20480537ff5424e70a02572f02732bce3792526c52b10b1600c7fd9"
+    },
+    {
+      "path": "docs/core/test/test_topic13_interpolation_refinement.py",
+      "sha256": "c0169466cb5f65e7cf74def641fca41d239ae6106f0101804bfb4e558fe43bdd"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_moment_interpolation.py",
+      "sha256": "cf7235082f62b78e4866e4855b3e560fa3210f2f149641f1023a66e792914e81"
+    },
+    {
+      "path": "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+      "sha256": "98b43f2bde1bf335ed7296f51b253e707699e4052b0903d216ab5381eac5b835"
+    },
+    {
+      "path": "docs/core/uet_o2_continuum_collision_operator.py",
+      "sha256": "1c58e860e4237f2f2b4a43fb5ba3d4d82967db791cb9cbff46df2a9c6bd296b2"
+    },
+    {
+      "path": "docs/core/uet_o2_action_derived_transition_kernel.py",
+      "sha256": "2f818500b353e8cf81caddf892bcf2db43a4341fe831b6f67e62423e3c2feb8f"
+    },
+    {
+      "path": "docs/core/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "a1be58b8230240775654e7c0d6265870010f546238e96e59e36045e6a893e5d2"
+    },
+    {
+      "path": "docs/core/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    }
+  ],
+  "verification_status": "ALL_NINE_LOCKED_GRIDS_ATTEMPTED"
+}

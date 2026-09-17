@@ -1,0 +1,2579 @@
+{
+  "actions": [
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/proofs/Proof_00_Master_Balance.py",
+      "canonical_path": "docs/core/04_proofs/Proof_00_Master_Balance.py",
+      "kind": "legacy_proof_shim",
+      "legacy_path": "docs/core/02_Proof/Proof_00_Master_Balance.py"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/legacy/02_Proof/README.md",
+      "canonical_path": "docs/core/04_proofs/README.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/02_Proof/README.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/CARRIER_NEUTRAL_COMPARATOR_SPEC.md",
+      "canonical_path": "docs/core/01_contracts/CARRIER_NEUTRAL_COMPARATOR_SPEC.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/CARRIER_NEUTRAL_COMPARATOR_SPEC.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/CORE_CURVED_3P1_EVOLUTION_BRANCH_SPEC.md",
+      "canonical_path": "docs/core/01_contracts/CORE_CURVED_3P1_EVOLUTION_BRANCH_SPEC.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/CORE_CURVED_3P1_EVOLUTION_BRANCH_SPEC.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/CORE_FILE_AND_RESEARCH_STANDARD.md",
+      "canonical_path": "docs/core/00_governance/CORE_FILE_AND_RESEARCH_STANDARD.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/CORE_FILE_AND_RESEARCH_STANDARD.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/CORE_FILE_ORGANIZATION_UPDATE_LOG.md",
+      "canonical_path": "docs/core/08_history/update_logs/CORE_FILE_ORGANIZATION_UPDATE_LOG.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/CORE_FILE_ORGANIZATION_UPDATE_LOG.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/CORE_RESEARCH_ROOM_PROTOCOL.md",
+      "canonical_path": "docs/core/00_governance/CORE_RESEARCH_ROOM_PROTOCOL.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/CORE_RESEARCH_ROOM_PROTOCOL.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/COSMOLOGICAL_OPEN_SYSTEM_AND_CAUSAL_TRACE_SPEC.md",
+      "canonical_path": "docs/core/01_contracts/COSMOLOGICAL_OPEN_SYSTEM_AND_CAUSAL_TRACE_SPEC.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/COSMOLOGICAL_OPEN_SYSTEM_AND_CAUSAL_TRACE_SPEC.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/COSMOLOGICAL_OPEN_SYSTEM_UPDATE_LOG.md",
+      "canonical_path": "docs/core/08_history/update_logs/COSMOLOGICAL_OPEN_SYSTEM_UPDATE_LOG.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/COSMOLOGICAL_OPEN_SYSTEM_UPDATE_LOG.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/IMPACT_EFFECT_AND_INFORMATION_FLOW_SPEC.md",
+      "canonical_path": "docs/core/01_contracts/IMPACT_EFFECT_AND_INFORMATION_FLOW_SPEC.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/IMPACT_EFFECT_AND_INFORMATION_FLOW_SPEC.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/IMPACT_EFFECT_UPDATE_LOG.md",
+      "canonical_path": "docs/core/08_history/update_logs/IMPACT_EFFECT_UPDATE_LOG.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/IMPACT_EFFECT_UPDATE_LOG.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/INBOX_RESEARCH_ALIGNMENT_AUDIT.md",
+      "canonical_path": "docs/core/08_history/research_notes/INBOX_RESEARCH_ALIGNMENT_AUDIT.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/INBOX_RESEARCH_ALIGNMENT_AUDIT.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/MASS_DENSITY_CORRESPONDENCE_SPEC.md",
+      "canonical_path": "docs/core/01_contracts/MASS_DENSITY_CORRESPONDENCE_SPEC.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/MASS_DENSITY_CORRESPONDENCE_SPEC.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/MASS_DENSITY_CORRESPONDENCE_UPDATE_LOG.md",
+      "canonical_path": "docs/core/08_history/update_logs/MASS_DENSITY_CORRESPONDENCE_UPDATE_LOG.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/MASS_DENSITY_CORRESPONDENCE_UPDATE_LOG.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/MATTER_INTERACTION_FORWARD_SPEC.md",
+      "canonical_path": "docs/core/01_contracts/MATTER_INTERACTION_FORWARD_SPEC.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/MATTER_INTERACTION_FORWARD_SPEC.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/MATTER_INTERACTION_FORWARD_UPDATE_LOG.md",
+      "canonical_path": "docs/core/08_history/update_logs/MATTER_INTERACTION_FORWARD_UPDATE_LOG.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/MATTER_INTERACTION_FORWARD_UPDATE_LOG.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/MATTER_SPACE_FINITE_CONE_C_SPEC.md",
+      "canonical_path": "docs/core/01_contracts/MATTER_SPACE_FINITE_CONE_C_SPEC.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/MATTER_SPACE_FINITE_CONE_C_SPEC.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/MATTER_SPACE_RESEARCH_REPORT.md",
+      "canonical_path": "docs/core/08_history/research_notes/MATTER_SPACE_RESEARCH_REPORT.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/MATTER_SPACE_RESEARCH_REPORT.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/MATTER_SPACE_RESEARCH_REPORT_ADDENDUM_2026-07-23.md",
+      "canonical_path": "docs/core/08_history/research_notes/MATTER_SPACE_RESEARCH_REPORT_ADDENDUM_2026-07-23.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/MATTER_SPACE_RESEARCH_REPORT_ADDENDUM_2026-07-23.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/MATTER_SPACE_RESEARCH_SPEC.md",
+      "canonical_path": "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/MATTER_SPACE_RESEARCH_SPEC.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/MATTER_SPACE_UPDATE_LOG.md",
+      "canonical_path": "docs/core/08_history/update_logs/MATTER_SPACE_UPDATE_LOG.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/MATTER_SPACE_UPDATE_LOG.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/O2_RESEARCH_ROOM_WAVE1_NOTE.md",
+      "canonical_path": "docs/core/08_history/research_notes/O2_RESEARCH_ROOM_WAVE1_NOTE.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/O2_RESEARCH_ROOM_WAVE1_NOTE.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md",
+      "canonical_path": "docs/core/01_contracts/O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/PERSISTENCE_ENERGY_DIAGNOSTIC_SPEC.md",
+      "canonical_path": "docs/core/01_contracts/PERSISTENCE_ENERGY_DIAGNOSTIC_SPEC.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/PERSISTENCE_ENERGY_DIAGNOSTIC_SPEC.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/PERSISTENCE_ENERGY_DIAGNOSTIC_UPDATE_LOG.md",
+      "canonical_path": "docs/core/08_history/update_logs/PERSISTENCE_ENERGY_DIAGNOSTIC_UPDATE_LOG.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/PERSISTENCE_ENERGY_DIAGNOSTIC_UPDATE_LOG.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/RELATIONAL_TWO_BODY_BASELINE_SPEC.md",
+      "canonical_path": "docs/core/01_contracts/RELATIONAL_TWO_BODY_BASELINE_SPEC.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/RELATIONAL_TWO_BODY_BASELINE_SPEC.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/RELATIONAL_TWO_BODY_UPDATE_LOG.md",
+      "canonical_path": "docs/core/08_history/update_logs/RELATIONAL_TWO_BODY_UPDATE_LOG.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/RELATIONAL_TWO_BODY_UPDATE_LOG.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/RESOURCE_PERSISTENCE_PRINCIPLE_SPEC.md",
+      "canonical_path": "docs/core/01_contracts/RESOURCE_PERSISTENCE_PRINCIPLE_SPEC.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/RESOURCE_PERSISTENCE_PRINCIPLE_SPEC.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/RESOURCE_SELECTION_DYNAMIC_GAME_SPEC.md",
+      "canonical_path": "docs/core/01_contracts/RESOURCE_SELECTION_DYNAMIC_GAME_SPEC.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/RESOURCE_SELECTION_DYNAMIC_GAME_SPEC.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_BASAL_COVERAGE_EXTENSION.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_BASAL_COVERAGE_EXTENSION.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_BASAL_COVERAGE_EXTENSION.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_BASELINE_REGISTRATION_MODELS.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_BASELINE_REGISTRATION_MODELS.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_BASELINE_REGISTRATION_MODELS.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_CHANNEL_SAMPLING_BOUNDARY.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_CHANNEL_SAMPLING_BOUNDARY.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_CHANNEL_SAMPLING_BOUNDARY.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_CLOSURE_TRACK_REPORTING_REPAIR.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_CLOSURE_TRACK_REPORTING_REPAIR.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_CLOSURE_TRACK_REPORTING_REPAIR.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_COLLISION_EVIDENCE_RECONCILIATION.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_COLLISION_EVIDENCE_RECONCILIATION.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_COLLISION_EVIDENCE_RECONCILIATION.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_COMPLEMENTARY_GEOMETRY.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_COMPLEMENTARY_GEOMETRY.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_COMPLEMENTARY_GEOMETRY.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_COMPLEMENTARY_SOURCE_ROUTES.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_COMPLEMENTARY_SOURCE_ROUTES.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_COMPLEMENTARY_SOURCE_ROUTES.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_COMPOSITE_ALPHA_DESIGN.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_COMPOSITE_ALPHA_DESIGN.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_COMPOSITE_ALPHA_DESIGN.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_CONSTRAINED_PRECISION_RESPONSE.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_CONSTRAINED_PRECISION_RESPONSE.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_CONSTRAINED_PRECISION_RESPONSE.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_CONSTRAINED_TENSOR_REFERENCE.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_CONSTRAINED_TENSOR_REFERENCE.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_CONSTRAINED_TENSOR_REFERENCE.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_CONTROLLED_ROTATION_PROFILE_COMPARISON.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_CONTROLLED_ROTATION_PROFILE_COMPARISON.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_CONTROLLED_ROTATION_PROFILE_COMPARISON.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_CORE_INTEGRATION_NOTE.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_CORE_INTEGRATION_NOTE.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_CORE_INTEGRATION_NOTE.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_CURRENT_METRIC_SURFACE.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_CURRENT_METRIC_SURFACE.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_CURRENT_METRIC_SURFACE.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_CUT_POOLING_PROVENANCE.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_CUT_POOLING_PROVENANCE.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_CUT_POOLING_PROVENANCE.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_DIRECTION_MOMENT_BOUNDARY.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_DIRECTION_MOMENT_BOUNDARY.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_DIRECTION_MOMENT_BOUNDARY.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_DISPLACEMENT_PHASE.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_DISPLACEMENT_PHASE.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_DISPLACEMENT_PHASE.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_DYNAMIC_THERMOELASTIC_RESPONSE.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_DYNAMIC_THERMOELASTIC_RESPONSE.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_DYNAMIC_THERMOELASTIC_RESPONSE.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_E2G_NONLINEAR_SYMMETRY.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_E2G_NONLINEAR_SYMMETRY.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_E2G_NONLINEAR_SYMMETRY.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_ENERGY_ESTIMATOR_NOISE.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_ENERGY_ESTIMATOR_NOISE.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_ENERGY_ESTIMATOR_NOISE.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_ENERGY_IDENTIFIABILITY.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_ENERGY_IDENTIFIABILITY.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_ENERGY_IDENTIFIABILITY.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_ENTROPY_FORCE_CONVENTION.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_ENTROPY_FORCE_CONVENTION.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_ENTROPY_FORCE_CONVENTION.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_ENTROPY_METRIC_REPAIR.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_ENTROPY_METRIC_REPAIR.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_ENTROPY_METRIC_REPAIR.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_EOS_REVISION_IMPACT.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_EOS_REVISION_IMPACT.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_EOS_REVISION_IMPACT.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_FINITEQ_SCATTERING_GEOMETRY.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_FINITEQ_SCATTERING_GEOMETRY.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_FINITEQ_SCATTERING_GEOMETRY.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_FOURIER_SHEAR_ANISOTROPY.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_FOURIER_SHEAR_ANISOTROPY.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_FOURIER_SHEAR_ANISOTROPY.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_FRAME_OUTPUT_INTEGRATION.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_FRAME_OUTPUT_INTEGRATION.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_FRAME_OUTPUT_INTEGRATION.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_GAMMA_SCATTERING_GEOMETRY.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_GAMMA_SCATTERING_GEOMETRY.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_GAMMA_SCATTERING_GEOMETRY.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_GENERIC_Q_IMAGE_SUPPORT.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_GENERIC_Q_IMAGE_SUPPORT.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_GENERIC_Q_IMAGE_SUPPORT.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_HE4_MATCHING_INDEPENDENCE.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_HE4_MATCHING_INDEPENDENCE.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_HE4_MATCHING_INDEPENDENCE.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_HEAT_CHARGE_FRAME_MAP.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_HEAT_CHARGE_FRAME_MAP.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_HEAT_CHARGE_FRAME_MAP.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_HYDROSTATIC_ACTUATION_ROUTE.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_HYDROSTATIC_ACTUATION_ROUTE.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_HYDROSTATIC_ACTUATION_ROUTE.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_INTEGRATED_ELASTIC_EVENTS.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_INTEGRATED_ELASTIC_EVENTS.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_INTEGRATED_ELASTIC_EVENTS.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_INTERLAYER_STRAIN_TRANSFER.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_INTERLAYER_STRAIN_TRANSFER.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_INTERLAYER_STRAIN_TRANSFER.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_INTERLAYER_THERMAL_VARIANCE.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_INTERLAYER_THERMAL_VARIANCE.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_INTERLAYER_THERMAL_VARIANCE.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_INTERPOLATION_REFINEMENT_REVIEW.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_INTERPOLATION_REFINEMENT_REVIEW.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_INTERPOLATION_REFINEMENT_REVIEW.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_INTERPOLATION_SUPPORT_BOUNDARY.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_INTERPOLATION_SUPPORT_BOUNDARY.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_INTERPOLATION_SUPPORT_BOUNDARY.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_ISENTROPIC_SOURCE_WORK.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_ISENTROPIC_SOURCE_WORK.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_ISENTROPIC_SOURCE_WORK.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_JOINT_RESOLUTION.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_JOINT_RESOLUTION.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_JOINT_RESOLUTION.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_LOCAL_QUADRATIC_BOUNDS.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_LOCAL_QUADRATIC_BOUNDS.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_LOCAL_QUADRATIC_BOUNDS.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_LOCAL_VARIANCE_IDENTIFIABILITY.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_LOCAL_VARIANCE_IDENTIFIABILITY.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_LOCAL_VARIANCE_IDENTIFIABILITY.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_MATTER_ACTUATION_HARMONICS.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_MATTER_ACTUATION_HARMONICS.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_MATTER_ACTUATION_HARMONICS.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_MATTER_STRAIN_SUSCEPTIBILITY_MATCH.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_MATTER_STRAIN_SUSCEPTIBILITY_MATCH.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_MATTER_STRAIN_SUSCEPTIBILITY_MATCH.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_MODE_WORK_HEAT_PROTOCOL.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_MODE_WORK_HEAT_PROTOCOL.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_MODE_WORK_HEAT_PROTOCOL.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_MP48_E2G_MULTIPLICITY.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_MP48_E2G_MULTIPLICITY.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_MP48_E2G_MULTIPLICITY.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_MP48_INTERLAYER_MODE_PROGRESS.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_MP48_INTERLAYER_MODE_PROGRESS.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_MP48_INTERLAYER_MODE_PROGRESS.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_MP48_INTERLAYER_MODE_RESIDUE.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_MP48_INTERLAYER_MODE_RESIDUE.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_MP48_INTERLAYER_MODE_RESIDUE.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_MP48_SHEAR_IRREP.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_MP48_SHEAR_IRREP.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_MP48_SHEAR_IRREP.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_MULTIBRAGG_POSITIONS.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_MULTIBRAGG_POSITIONS.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_MULTIBRAGG_POSITIONS.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_NATURAL_FIXED_CHARGE_RESPONSE.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_NATURAL_FIXED_CHARGE_RESPONSE.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_NATURAL_FIXED_CHARGE_RESPONSE.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_OPERATIONAL_CALIBRATION_ROUTE.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_OPERATIONAL_CALIBRATION_ROUTE.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_OPERATIONAL_CALIBRATION_ROUTE.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_OUTER_BRAGG_PROFILES.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_OUTER_BRAGG_PROFILES.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_OUTER_BRAGG_PROFILES.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_PATCH_POSITION_SENSITIVITY.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_PATCH_POSITION_SENSITIVITY.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_PATCH_POSITION_SENSITIVITY.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_PHASE_SPACE_MEASURE_PILOT.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_PHASE_SPACE_MEASURE_PILOT.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_PHASE_SPACE_MEASURE_PILOT.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_POISEUILLE_SOURCE_QUALIFICATION.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_POISEUILLE_SOURCE_QUALIFICATION.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_POISEUILLE_SOURCE_QUALIFICATION.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_POSITIVE_INTERPOLATION_BOUNDS.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_POSITIVE_INTERPOLATION_BOUNDS.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_POSITIVE_INTERPOLATION_BOUNDS.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_PROFILE_RESIDUAL_BASELINE_SCATTER.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_PROFILE_RESIDUAL_BASELINE_SCATTER.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_PROFILE_RESIDUAL_BASELINE_SCATTER.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_QUADRATIC_SOURCE_AVERAGING.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_QUADRATIC_SOURCE_AVERAGING.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_QUADRATIC_SOURCE_AVERAGING.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_RAMAN_DEFORMATION_CONSTRAINT.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_RAMAN_DEFORMATION_CONSTRAINT.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_RAMAN_DEFORMATION_CONSTRAINT.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_RAW_ACQUISITION_STRUCTURE.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_RAW_ACQUISITION_STRUCTURE.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_RAW_ACQUISITION_STRUCTURE.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_RAW_CUT_SIGNAL_SENSITIVITY.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_RAW_CUT_SIGNAL_SENSITIVITY.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_RAW_CUT_SIGNAL_SENSITIVITY.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_RAW_SPATIAL_CUT_SENSITIVITY.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_RAW_SPATIAL_CUT_SENSITIVITY.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_RAW_SPATIAL_CUT_SENSITIVITY.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_RECIPROCAL_THERMAL_DYNAMICS.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_RECIPROCAL_THERMAL_DYNAMICS.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_RECIPROCAL_THERMAL_DYNAMICS.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_REGISTRATION_SHELL_TRANSFER.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_REGISTRATION_SHELL_TRANSFER.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_REGISTRATION_SHELL_TRANSFER.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_SAME_ACTION_COMPOSITION.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_SAME_ACTION_COMPOSITION.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_SAME_ACTION_COMPOSITION.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_SHEAR_SYMMETRY_CHANNELS.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_SHEAR_SYMMETRY_CHANNELS.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_SHEAR_SYMMETRY_CHANNELS.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_SIGNED_MOMENT_INTERPOLATION.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_SIGNED_MOMENT_INTERPOLATION.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_SIGNED_MOMENT_INTERPOLATION.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_SOURCE_CENTERED_POSITION_SENSITIVITY.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_SOURCE_CENTERED_POSITION_SENSITIVITY.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_SOURCE_CENTERED_POSITION_SENSITIVITY.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_TENSOR_LIFT_REPAIR.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_TENSOR_LIFT_REPAIR.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_TENSOR_LIFT_REPAIR.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_THERMAL_MASS_ACTUATION.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_THERMAL_MASS_ACTUATION.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_THERMAL_MASS_ACTUATION.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_THERMAL_VARIANCE_SPECTRUM.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_THERMAL_VARIANCE_SPECTRUM.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_THERMAL_VARIANCE_SPECTRUM.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_THERMOELASTIC_SPATIAL_COMPATIBILITY.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_THERMOELASTIC_SPATIAL_COMPATIBILITY.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_THERMOELASTIC_SPATIAL_COMPATIBILITY.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_THERMOMETRY_WINDOW.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_THERMOMETRY_WINDOW.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_THERMOMETRY_WINDOW.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_TRANSITION_COORDINATE_MAP.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_TRANSITION_COORDINATE_MAP.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_TRANSITION_COORDINATE_MAP.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_TRANSITION_PULLBACK_PILOT.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_TRANSITION_PULLBACK_PILOT.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_TRANSITION_PULLBACK_PILOT.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_TRANSPORT_RESOLUTION.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_TRANSPORT_RESOLUTION.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_TRANSPORT_RESOLUTION.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_UED_MASK_SUPPORT.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_UED_MASK_SUPPORT.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_UED_MASK_SUPPORT.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_UED_NUMERIC_ROWS.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_UED_NUMERIC_ROWS.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_UED_NUMERIC_ROWS.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_UED_POPULATION_SOURCE_ROUTE.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_UED_POPULATION_SOURCE_ROUTE.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_UED_POPULATION_SOURCE_ROUTE.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_UED_REGION_SUPPORT.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_UED_REGION_SUPPORT.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_UED_REGION_SUPPORT.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_VARIANCE_DIRECTIONAL_GRID.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_VARIANCE_DIRECTIONAL_GRID.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_VARIANCE_DIRECTIONAL_GRID.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_VARIANCE_MESH_SHIFT.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_VARIANCE_MESH_SHIFT.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_VARIANCE_MESH_SHIFT.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_VOIGT_POSITION_METHOD_COMPARISON.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_VOIGT_POSITION_METHOD_COMPARISON.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_VOIGT_POSITION_METHOD_COMPARISON.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/T13_WEIGHTED_DIRECTION_PILOT.md",
+      "canonical_path": "docs/core/03_lanes/topic13_support/T13_WEIGHTED_DIRECTION_PILOT.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/T13_WEIGHTED_DIRECTION_PILOT.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/THERMAL_OBSERVABLE_BRIDGE_SPEC.md",
+      "canonical_path": "docs/core/01_contracts/THERMAL_OBSERVABLE_BRIDGE_SPEC.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/THERMAL_OBSERVABLE_BRIDGE_SPEC.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/THERMAL_OBSERVABLE_BRIDGE_UPDATE_LOG.md",
+      "canonical_path": "docs/core/08_history/update_logs/THERMAL_OBSERVABLE_BRIDGE_UPDATE_LOG.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/THERMAL_OBSERVABLE_BRIDGE_UPDATE_LOG.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/THOUGHT_EXPERIMENT_OBSERVATION_PAST_BEHAVIOR.md",
+      "canonical_path": "docs/core/08_history/research_notes/THOUGHT_EXPERIMENT_OBSERVATION_PAST_BEHAVIOR.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/THOUGHT_EXPERIMENT_OBSERVATION_PAST_BEHAVIOR.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/TRACE_RESEARCH_SPEC.md",
+      "canonical_path": "docs/core/01_contracts/TRACE_RESEARCH_SPEC.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/TRACE_RESEARCH_SPEC.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/TRACE_UPDATE_LOG.md",
+      "canonical_path": "docs/core/08_history/update_logs/TRACE_UPDATE_LOG.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/TRACE_UPDATE_LOG.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/UET_ALL_WAVES_CLOSURE_UPDATE_LOG.md",
+      "canonical_path": "docs/core/08_history/update_logs/UET_ALL_WAVES_CLOSURE_UPDATE_LOG.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/UET_ALL_WAVES_CLOSURE_UPDATE_LOG.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/UET_CHAOS_DIAGNOSTIC_INTEGRATION_NOTE.md",
+      "canonical_path": "docs/core/08_history/research_notes/UET_CHAOS_DIAGNOSTIC_INTEGRATION_NOTE.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/UET_CHAOS_DIAGNOSTIC_INTEGRATION_NOTE.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/UET_CODE_SURFACE_INVENTORY.md",
+      "canonical_path": "docs/core/01_contracts/UET_CODE_SURFACE_INVENTORY.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/UET_CODE_SURFACE_INVENTORY.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/UET_CONCEPT_EQUATION_RECONSTRUCTION_AUDIT.md",
+      "canonical_path": "docs/core/08_history/research_notes/UET_CONCEPT_EQUATION_RECONSTRUCTION_AUDIT.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/UET_CONCEPT_EQUATION_RECONSTRUCTION_AUDIT.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/UET_CORE_EQUATION_FAMILY_CONTRACT.md",
+      "canonical_path": "docs/core/01_contracts/UET_CORE_EQUATION_FAMILY_CONTRACT.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/UET_CORE_EQUATION_FAMILY_CONTRACT.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/UET_FOUNDATION_COMPATIBILITY_AUDIT.md",
+      "canonical_path": "docs/core/08_history/research_notes/UET_FOUNDATION_COMPATIBILITY_AUDIT.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/UET_FOUNDATION_COMPATIBILITY_AUDIT.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/UET_FOUNDATION_COMPATIBILITY_DECISION.md",
+      "canonical_path": "docs/core/01_contracts/UET_FOUNDATION_COMPATIBILITY_DECISION.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/UET_FOUNDATION_COMPATIBILITY_DECISION.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/UET_FOUNDATION_CORRESPONDENCE_MATRIX.md",
+      "canonical_path": "docs/core/01_contracts/UET_FOUNDATION_CORRESPONDENCE_MATRIX.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/UET_FOUNDATION_CORRESPONDENCE_MATRIX.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/UET_FOUNDATION_EQUATION_INVENTORY.md",
+      "canonical_path": "docs/core/01_contracts/UET_FOUNDATION_EQUATION_INVENTORY.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/UET_FOUNDATION_EQUATION_INVENTORY.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/UET_FOUNDATION_RESEARCH_PROGRAM_REPORT.md",
+      "canonical_path": "docs/core/08_history/research_notes/UET_FOUNDATION_RESEARCH_PROGRAM_REPORT.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/UET_FOUNDATION_RESEARCH_PROGRAM_REPORT.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/UET_FOUNDATION_STATUS_AGGREGATE.md",
+      "canonical_path": "docs/core/01_contracts/UET_FOUNDATION_STATUS_AGGREGATE.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/UET_FOUNDATION_STATUS_AGGREGATE.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/UET_FUNDAMENTAL_UNIFICATION_HYPOTHESIS_SPEC.md",
+      "canonical_path": "docs/core/01_contracts/UET_FUNDAMENTAL_UNIFICATION_HYPOTHESIS_SPEC.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/UET_FUNDAMENTAL_UNIFICATION_HYPOTHESIS_SPEC.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/UET_GR_NONCLOSED_RESEARCH_SPEC.md",
+      "canonical_path": "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/UET_GR_NONCLOSED_UPDATE_LOG.md",
+      "canonical_path": "docs/core/08_history/update_logs/UET_GR_NONCLOSED_UPDATE_LOG.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/UET_GR_NONCLOSED_UPDATE_LOG.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/UET_INFORMATION_FIELD_THERMODYNAMIC_TRACE_AUDIT.md",
+      "canonical_path": "docs/core/08_history/research_notes/UET_INFORMATION_FIELD_THERMODYNAMIC_TRACE_AUDIT.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/UET_INFORMATION_FIELD_THERMODYNAMIC_TRACE_AUDIT.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/UET_MAIN_THEORY_AXIOMS_SPEC.md",
+      "canonical_path": "docs/core/01_contracts/UET_MAIN_THEORY_AXIOMS_SPEC.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/UET_MAIN_THEORY_AXIOMS_SPEC.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/UET_MAIN_THEORY_CLOSURE_REPORT.md",
+      "canonical_path": "docs/core/08_history/research_notes/UET_MAIN_THEORY_CLOSURE_REPORT.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/UET_MAIN_THEORY_CLOSURE_REPORT.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/UET_MAIN_THEORY_UPDATE_LOG.md",
+      "canonical_path": "docs/core/08_history/update_logs/UET_MAIN_THEORY_UPDATE_LOG.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/UET_MAIN_THEORY_UPDATE_LOG.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/UET_MAJOR_RESULT_REPORTING_STANDARD.md",
+      "canonical_path": "docs/core/08_history/research_notes/UET_MAJOR_RESULT_REPORTING_STANDARD.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/UET_MAJOR_RESULT_REPORTING_STANDARD.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/UET_RESEARCH_DEPENDENCY_GRAPH.md",
+      "canonical_path": "docs/core/00_governance/UET_RESEARCH_DEPENDENCY_GRAPH.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/UET_RESEARCH_DEPENDENCY_GRAPH.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/UET_RESEARCH_ROOM_BRIEF.md",
+      "canonical_path": "docs/core/00_governance/UET_RESEARCH_ROOM_BRIEF.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/UET_RESEARCH_ROOM_BRIEF.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/UET_RESEARCH_ROOM_WAVE1_INTEGRATION_NOTE.md",
+      "canonical_path": "docs/core/08_history/research_notes/UET_RESEARCH_ROOM_WAVE1_INTEGRATION_NOTE.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/UET_RESEARCH_ROOM_WAVE1_INTEGRATION_NOTE.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/UET_RESEARCH_ROOM_WAVE1_UPDATE_LOG.md",
+      "canonical_path": "docs/core/08_history/update_logs/UET_RESEARCH_ROOM_WAVE1_UPDATE_LOG.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/UET_RESEARCH_ROOM_WAVE1_UPDATE_LOG.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/UET_WAVE3_WAVE10_UPDATE_LOG.md",
+      "canonical_path": "docs/core/08_history/update_logs/UET_WAVE3_WAVE10_UPDATE_LOG.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/UET_WAVE3_WAVE10_UPDATE_LOG.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/root/WAVE5_MASTER_EQUATION_ALIGNMENT_AUDIT.md",
+      "canonical_path": "docs/core/08_history/research_notes/WAVE5_MASTER_EQUATION_ALIGNMENT_AUDIT.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/WAVE5_MASTER_EQUATION_ALIGNMENT_AUDIT.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/legacy/artifacts/README.md",
+      "canonical_path": "docs/core/07_artifacts/README.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/artifacts/README.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/legacy/data/README.md",
+      "canonical_path": "docs/core/06_data/README.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/data/README.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/legacy/data/external/README.md",
+      "canonical_path": "docs/core/06_data/source_packages/README.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/data/external/README.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/legacy/data/scripts/Data/README.md",
+      "canonical_path": "docs/scripts/core/data/README.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/data/scripts/Data/README.md"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Data/archive_data.py",
+      "canonical_path": "docs/scripts/core/data/archive_data.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Data/archive_data.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Data/audit_electroweak_pdg_mapping.py",
+      "canonical_path": "docs/scripts/core/data/audit_electroweak_pdg_mapping.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Data/audit_electroweak_pdg_mapping.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Data/build_electroweak_benchmark_package.py",
+      "canonical_path": "docs/scripts/core/data/build_electroweak_benchmark_package.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Data/build_electroweak_benchmark_package.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Data/build_electroweak_reference_package.py",
+      "canonical_path": "docs/scripts/core/data/build_electroweak_reference_package.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Data/build_electroweak_reference_package.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Data/build_muon_g2_baseline_package.py",
+      "canonical_path": "docs/scripts/core/data/build_muon_g2_baseline_package.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Data/build_muon_g2_baseline_package.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Data/download_all_data.py",
+      "canonical_path": "docs/scripts/core/data/download_all_data.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Data/download_all_data.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Data/evaluate_external_particle_data.py",
+      "canonical_path": "docs/scripts/core/data/evaluate_external_particle_data.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Data/evaluate_external_particle_data.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Data/extract_ame2020_binding_subset.py",
+      "canonical_path": "docs/scripts/core/data/extract_ame2020_binding_subset.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Data/extract_ame2020_binding_subset.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Data/extract_katrin_2025_limit.py",
+      "canonical_path": "docs/scripts/core/data/extract_katrin_2025_limit.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Data/extract_katrin_2025_limit.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Data/extract_muon_g2_2025_result.py",
+      "canonical_path": "docs/scripts/core/data/extract_muon_g2_2025_result.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Data/extract_muon_g2_2025_result.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Data/extract_muon_g2_theory_2025.py",
+      "canonical_path": "docs/scripts/core/data/extract_muon_g2_theory_2025.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Data/extract_muon_g2_theory_2025.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Data/extract_nufit_v60_parameters.py",
+      "canonical_path": "docs/scripts/core/data/extract_nufit_v60_parameters.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Data/extract_nufit_v60_parameters.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Data/fetch_external_particle_data.py",
+      "canonical_path": "docs/scripts/core/data/fetch_external_particle_data.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Data/fetch_external_particle_data.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Data/run_particle_real_data_audit.py",
+      "canonical_path": "docs/scripts/core/data/run_particle_real_data_audit.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Data/run_particle_real_data_audit.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Data/validate_nufit_v60_provenance.py",
+      "canonical_path": "docs/scripts/core/data/validate_nufit_v60_provenance.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Data/validate_nufit_v60_provenance.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Legacy/find_020.py",
+      "canonical_path": "docs/scripts/core/legacy/find_020.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Legacy/find_020.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Legacy/find_dependency.py",
+      "canonical_path": "docs/scripts/core/legacy/find_dependency.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Legacy/find_dependency.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Legacy/find_missing.py",
+      "canonical_path": "docs/scripts/core/legacy/find_missing.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Legacy/find_missing.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Legacy/list_topic_files.py",
+      "canonical_path": "docs/scripts/core/legacy/list_topic_files.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Legacy/list_topic_files.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Legacy/port_cosmic_assets.py",
+      "canonical_path": "docs/scripts/core/legacy/port_cosmic_assets.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Legacy/port_cosmic_assets.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Legacy/recover_data.py",
+      "canonical_path": "docs/scripts/core/legacy/recover_data.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Legacy/recover_data.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Legacy/refactor_023.py",
+      "canonical_path": "docs/scripts/core/legacy/refactor_023.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Legacy/refactor_023.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Legacy/restore_dep.py",
+      "canonical_path": "docs/scripts/core/legacy/restore_dep.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Legacy/restore_dep.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Legacy/test_engine_comparison.py",
+      "canonical_path": "docs/scripts/core/legacy/test_engine_comparison.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Legacy/test_engine_comparison.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Legacy/test_import_debug.py",
+      "canonical_path": "docs/scripts/core/legacy/test_import_debug.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Legacy/test_import_debug.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Legacy/test_lite_rollout.py",
+      "canonical_path": "docs/scripts/core/legacy/test_lite_rollout.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Legacy/test_lite_rollout.py"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/legacy/data/scripts/README.md",
+      "canonical_path": "docs/scripts/core/legacy/UET_SCRIPT_UTILITY_HUB.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/data/scripts/README.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/legacy/data/scripts/Reporting/README.md",
+      "canonical_path": "docs/scripts/core/reporting/README.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/data/scripts/Reporting/README.md"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Reporting/apply_viz.py",
+      "canonical_path": "docs/scripts/core/reporting/apply_viz.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Reporting/apply_viz.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Reporting/collect_paper_figures.py",
+      "canonical_path": "docs/scripts/core/reporting/collect_paper_figures.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Reporting/collect_paper_figures.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Reporting/generate_analysis_docs.py",
+      "canonical_path": "docs/scripts/core/reporting/generate_analysis_docs.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Reporting/generate_analysis_docs.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Reporting/generate_final_report.py",
+      "canonical_path": "docs/scripts/core/reporting/generate_final_report.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Reporting/generate_final_report.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Reporting/generate_paper_figures.py",
+      "canonical_path": "docs/scripts/core/reporting/generate_paper_figures.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Reporting/generate_paper_figures.py"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/legacy/data/scripts/Runners/README.md",
+      "canonical_path": "docs/scripts/core/runners/README.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/data/scripts/Runners/README.md"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Runners/run_atom_showcase.py",
+      "canonical_path": "docs/scripts/core/runners/run_atom_showcase.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Runners/run_atom_showcase.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Runners/run_millennium_problems.py",
+      "canonical_path": "docs/scripts/core/runners/run_millennium_problems.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Runners/run_millennium_problems.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Runners/run_nuclear_showcase.py",
+      "canonical_path": "docs/scripts/core/runners/run_nuclear_showcase.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Runners/run_nuclear_showcase.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Runners/run_physics_anomalies.py",
+      "canonical_path": "docs/scripts/core/runners/run_physics_anomalies.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Runners/run_physics_anomalies.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Runners/run_quantum_future.py",
+      "canonical_path": "docs/scripts/core/runners/run_quantum_future.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Runners/run_quantum_future.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Runners/run_showcase_packs.py",
+      "canonical_path": "docs/scripts/core/runners/run_showcase_packs.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Runners/run_showcase_packs.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/Runners/uet_inventory.py",
+      "canonical_path": "docs/scripts/core/runners/uet_inventory.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/Runners/uet_inventory.py"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/legacy/data/scripts/audit/README.md",
+      "canonical_path": "docs/scripts/core/audit/README.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/data/scripts/audit/README.md"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/audit/audit_data_integrity.py",
+      "canonical_path": "docs/scripts/core/audit/audit_data_integrity.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/audit/audit_data_integrity.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/audit/audit_data_sources.py",
+      "canonical_path": "docs/scripts/core/audit/audit_data_sources.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/audit/audit_data_sources.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/audit/audit_docs.py",
+      "canonical_path": "docs/scripts/core/audit/audit_docs.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/audit/audit_docs.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/audit/audit_figure_coverage.py",
+      "canonical_path": "docs/scripts/core/audit/audit_figure_coverage.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/audit/audit_figure_coverage.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/audit/audit_standards_v2.py",
+      "canonical_path": "docs/scripts/core/audit/audit_standards_v2.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/audit/audit_standards_v2.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/audit/audit_system_integrity.py",
+      "canonical_path": "docs/scripts/core/audit/audit_system_integrity.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/audit/audit_system_integrity.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/audit/audit_topic_standards.py",
+      "canonical_path": "docs/scripts/core/audit/audit_topic_standards.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/audit/audit_topic_standards.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/audit/integrity_auditor_v2.py",
+      "canonical_path": "docs/scripts/core/audit/integrity_auditor_v2.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/audit/integrity_auditor_v2.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/audit/integrity_deep_audit.py",
+      "canonical_path": "docs/scripts/core/audit/integrity_deep_audit.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/audit/integrity_deep_audit.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/audit/integrity_truth_auditor.py",
+      "canonical_path": "docs/scripts/core/audit/integrity_truth_auditor.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/audit/integrity_truth_auditor.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/audit/run_core_verifications.py",
+      "canonical_path": "docs/scripts/core/audit/run_core_verifications.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/audit/run_core_verifications.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/audit/stress_test_integrity.py",
+      "canonical_path": "docs/scripts/core/audit/stress_test_integrity.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/audit/stress_test_integrity.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/audit/validate_foundation.py",
+      "canonical_path": "docs/scripts/core/audit/validate_foundation.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/audit/validate_foundation.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/batch_update_seo.py",
+      "canonical_path": "docs/scripts/core/batch_update_seo.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/batch_update_seo.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_imports.py",
+      "canonical_path": "docs/scripts/core/debug/debug_imports.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/debug/debug_imports.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp.py",
+      "canonical_path": "docs/scripts/core/debug/debug_mcp.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/debug/debug_mcp.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp_v2.py",
+      "canonical_path": "docs/scripts/core/debug/debug_mcp_v2.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/debug/debug_mcp_v2.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_tests.py",
+      "canonical_path": "docs/scripts/core/debug/debug_tests.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/debug/debug_tests.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/fix_uet_paths.py",
+      "canonical_path": "docs/scripts/core/fix_uet_paths.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/fix_uet_paths.py"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/legacy/data/scripts/maintenance/README.md",
+      "canonical_path": "docs/scripts/core/maintenance/README.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/data/scripts/maintenance/README.md"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/cleanup_outputs.py",
+      "canonical_path": "docs/scripts/core/maintenance/cleanup_outputs.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/cleanup_outputs.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/fix_paths.py",
+      "canonical_path": "docs/scripts/core/maintenance/fix_paths.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/fix_paths.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/inspect_legacy.py",
+      "canonical_path": "docs/scripts/core/maintenance/inspect_legacy.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/inspect_legacy.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/inspect_zips.py",
+      "canonical_path": "docs/scripts/core/maintenance/inspect_zips.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/inspect_zips.py"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/legacy/data/scripts/maintenance/log/LOG_RESET_README.md",
+      "canonical_path": "docs/scripts/core/maintenance/log/LOG_RESET_README.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/data/scripts/maintenance/log/LOG_RESET_README.md"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/legacy/data/scripts/maintenance/log/README.md",
+      "canonical_path": "docs/scripts/core/maintenance/log/README.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/data/scripts/maintenance/log/README.md"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/log/analyze_log_distribution.py",
+      "canonical_path": "docs/scripts/core/maintenance/log/analyze_log_distribution.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/log/analyze_log_distribution.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/log/analyze_logging_compliance.py",
+      "canonical_path": "docs/scripts/core/maintenance/log/analyze_logging_compliance.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/log/analyze_logging_compliance.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/log/cleanup_reports.py",
+      "canonical_path": "docs/scripts/core/maintenance/log/cleanup_reports.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/log/cleanup_reports.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/log/diagnose_log_systems.py",
+      "canonical_path": "docs/scripts/core/maintenance/log/diagnose_log_systems.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/log/diagnose_log_systems.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/log/log_reset_manager.py",
+      "canonical_path": "docs/scripts/core/maintenance/log/log_reset_manager.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/log/log_reset_manager.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/log/migrate_logging_compliance.py",
+      "canonical_path": "docs/scripts/core/maintenance/log/migrate_logging_compliance.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/log/migrate_logging_compliance.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/log/reset_logs/reset_0.0_grand_unification.py",
+      "canonical_path": "docs/scripts/core/maintenance/log/reset_logs/reset_0.0_grand_unification.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/log/reset_logs/reset_0.0_grand_unification.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/log/reset_logs/reset_0.10_fluid_dynamics.py",
+      "canonical_path": "docs/scripts/core/maintenance/log/reset_logs/reset_0.10_fluid_dynamics.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/log/reset_logs/reset_0.10_fluid_dynamics.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/log/reset_logs/reset_0.11_phase_transitions.py",
+      "canonical_path": "docs/scripts/core/maintenance/log/reset_logs/reset_0.11_phase_transitions.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/log/reset_logs/reset_0.11_phase_transitions.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/log/reset_logs/reset_0.13_thermodynamic_bridge.py",
+      "canonical_path": "docs/scripts/core/maintenance/log/reset_logs/reset_0.13_thermodynamic_bridge.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/log/reset_logs/reset_0.13_thermodynamic_bridge.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/log/reset_logs/reset_0.14_complex_systems.py",
+      "canonical_path": "docs/scripts/core/maintenance/log/reset_logs/reset_0.14_complex_systems.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/log/reset_logs/reset_0.14_complex_systems.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/log/reset_logs/reset_0.17_mass_generation.py",
+      "canonical_path": "docs/scripts/core/maintenance/log/reset_logs/reset_0.17_mass_generation.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/log/reset_logs/reset_0.17_mass_generation.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/log/reset_logs/reset_0.1_galaxy_rotation.py",
+      "canonical_path": "docs/scripts/core/maintenance/log/reset_logs/reset_0.1_galaxy_rotation.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/log/reset_logs/reset_0.1_galaxy_rotation.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/log/reset_logs/reset_0.29_ocean_recovery.py",
+      "canonical_path": "docs/scripts/core/maintenance/log/reset_logs/reset_0.29_ocean_recovery.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/log/reset_logs/reset_0.29_ocean_recovery.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/log/reset_logs/reset_0.30_mega_flora_biotech.py",
+      "canonical_path": "docs/scripts/core/maintenance/log/reset_logs/reset_0.30_mega_flora_biotech.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/log/reset_logs/reset_0.30_mega_flora_biotech.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/log/reset_logs/reset_0.31_spacetime_propulsion.py",
+      "canonical_path": "docs/scripts/core/maintenance/log/reset_logs/reset_0.31_spacetime_propulsion.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/log/reset_logs/reset_0.31_spacetime_propulsion.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/log/reset_logs/reset_0.3_cosmology.py",
+      "canonical_path": "docs/scripts/core/maintenance/log/reset_logs/reset_0.3_cosmology.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/log/reset_logs/reset_0.3_cosmology.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/log/reset_logs/reset_0.7_neutrino_physics.py",
+      "canonical_path": "docs/scripts/core/maintenance/log/reset_logs/reset_0.7_neutrino_physics.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/log/reset_logs/reset_0.7_neutrino_physics.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/log/reset_logs/reset_0.9_quantum_nonlocality.py",
+      "canonical_path": "docs/scripts/core/maintenance/log/reset_logs/reset_0.9_quantum_nonlocality.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/log/reset_logs/reset_0.9_quantum_nonlocality.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/log/reset_topic_logs.py",
+      "canonical_path": "docs/scripts/core/maintenance/log/reset_topic_logs.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/log/reset_topic_logs.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/log/validate_logging_compliance.py",
+      "canonical_path": "docs/scripts/core/maintenance/log/validate_logging_compliance.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/log/validate_logging_compliance.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/migrate_to_golden_result.py",
+      "canonical_path": "docs/scripts/core/maintenance/migrate_to_golden_result.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/migrate_to_golden_result.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/update_readmes.py",
+      "canonical_path": "docs/scripts/core/maintenance/update_readmes.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/update_readmes.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/upgrade_active_only.py",
+      "canonical_path": "docs/scripts/core/maintenance/upgrade_active_only.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/maintenance/upgrade_active_only.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/migrate_all_standards_v2.py",
+      "canonical_path": "docs/scripts/core/migrate_all_standards_v2.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/migrate_all_standards_v2.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/verify/verify_aeo_compliance.py",
+      "canonical_path": "docs/scripts/core/verify/verify_aeo_compliance.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/verify/verify_aeo_compliance.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/verify/verify_all_imports.py",
+      "canonical_path": "docs/scripts/core/verify/verify_all_imports.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/verify/verify_all_imports.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/verify/verify_mcp_connection.py",
+      "canonical_path": "docs/scripts/core/verify/verify_mcp_connection.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/verify/verify_mcp_connection.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/verify/verify_mcp_crud.py",
+      "canonical_path": "docs/scripts/core/verify/verify_mcp_crud.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/verify/verify_mcp_crud.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/verify/verify_packaging.py",
+      "canonical_path": "docs/scripts/core/verify/verify_packaging.py",
+      "kind": "legacy_tool_shim",
+      "legacy_path": "docs/core/data/scripts/verify/verify_packaging.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/he4_normal_viscosity_kubo.py",
+      "canonical_path": "docs/core/03_lanes/thermal/he4_normal_viscosity_kubo.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/he4_normal_viscosity_kubo.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/he4_o2_response_calibration.py",
+      "canonical_path": "docs/core/03_lanes/thermal/he4_o2_response_calibration.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/he4_o2_response_calibration.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/he4_o2_si_beta_mapping.py",
+      "canonical_path": "docs/core/03_lanes/thermal/he4_o2_si_beta_mapping.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/he4_o2_si_beta_mapping.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/he4_svp_reference.py",
+      "canonical_path": "docs/core/03_lanes/thermal/he4_svp_reference.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/he4_svp_reference.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/mass_density_3d.py",
+      "canonical_path": "docs/core/03_lanes/mass_density/mass_density_3d.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/mass_density_3d.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/mass_density_amplitude.py",
+      "canonical_path": "docs/core/03_lanes/mass_density/mass_density_amplitude.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/mass_density_amplitude.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/mass_density_correspondence.py",
+      "canonical_path": "docs/core/03_lanes/mass_density/mass_density_correspondence.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/mass_density_correspondence.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/mass_density_dimensional.py",
+      "canonical_path": "docs/core/03_lanes/mass_density/mass_density_dimensional.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/mass_density_dimensional.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/matter_interaction_forward.py",
+      "canonical_path": "docs/core/03_lanes/mass_density/matter_interaction_forward.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/matter_interaction_forward.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/persistence_energy_diagnostic.py",
+      "canonical_path": "docs/core/03_lanes/persistence/persistence_energy_diagnostic.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/persistence_energy_diagnostic.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/photon_observer_baseline.py",
+      "canonical_path": "docs/core/03_lanes/carrier_observer/photon_observer_baseline.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/photon_observer_baseline.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/relational_two_body_baseline.py",
+      "canonical_path": "docs/core/03_lanes/carrier_observer/relational_two_body_baseline.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/relational_two_body_baseline.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/reproducibility.py",
+      "canonical_path": "docs/scripts/core/audit/reproducibility.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/reproducibility.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/resource_selection_physical_cost_map.py",
+      "canonical_path": "docs/core/03_lanes/persistence/resource_selection_physical_cost_map.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/resource_selection_physical_cost_map.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/resource_selection_thermal_bridge.py",
+      "canonical_path": "docs/core/03_lanes/persistence/resource_selection_thermal_bridge.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/resource_selection_thermal_bridge.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/scientific_validation.py",
+      "canonical_path": "docs/scripts/core/audit/scientific_validation.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/scientific_validation.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/standard_o2_finite_temperature_comparator.py",
+      "canonical_path": "docs/core/02_equations/o2/standard_o2_finite_temperature_comparator.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/standard_o2_finite_temperature_comparator.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/t13_formal_thermodynamic_bridge_integration.py",
+      "canonical_path": "docs/core/03_lanes/topic13_support/t13_formal_thermodynamic_bridge_integration.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/t13_formal_thermodynamic_bridge_integration.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/t13_thermal_bridge_scale_dependency.py",
+      "canonical_path": "docs/core/03_lanes/topic13_support/t13_thermal_bridge_scale_dependency.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/t13_thermal_bridge_scale_dependency.py"
+    },
+    {
+      "archive_path": "docs/core/00_governance/redirects/legacy/test/README.md",
+      "canonical_path": "docs/core/05_tests/regression/root/README.md",
+      "kind": "markdown_redirect",
+      "legacy_path": "docs/core/test/README.md"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/thermal_collective_response_eos.py",
+      "canonical_path": "docs/core/03_lanes/thermal/thermal_collective_response_eos.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/thermal_collective_response_eos.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/thermal_covariant_action_si_conversion.py",
+      "canonical_path": "docs/core/03_lanes/thermal/thermal_covariant_action_si_conversion.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/thermal_covariant_action_si_conversion.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/thermal_cp_cv_correction.py",
+      "canonical_path": "docs/core/03_lanes/thermal/thermal_cp_cv_correction.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/thermal_cp_cv_correction.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/thermal_dimensional_bridge.py",
+      "canonical_path": "docs/core/03_lanes/thermal/thermal_dimensional_bridge.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/thermal_dimensional_bridge.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/thermal_energy_response_bridge.py",
+      "canonical_path": "docs/core/03_lanes/thermal/thermal_energy_response_bridge.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/thermal_energy_response_bridge.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/thermal_observable_bridge.py",
+      "canonical_path": "docs/core/03_lanes/thermal/thermal_observable_bridge.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/thermal_observable_bridge.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/thermal_phi_e_reference_normalization.py",
+      "canonical_path": "docs/core/03_lanes/thermal/thermal_phi_e_reference_normalization.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/thermal_phi_e_reference_normalization.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/thermal_response_beta_contract.py",
+      "canonical_path": "docs/core/03_lanes/thermal/thermal_response_beta_contract.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/thermal_response_beta_contract.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/thermal_sk_kms_entropy_contract.py",
+      "canonical_path": "docs/core/03_lanes/thermal/thermal_sk_kms_entropy_contract.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/thermal_sk_kms_entropy_contract.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/thermal_source_observable_map.py",
+      "canonical_path": "docs/core/03_lanes/thermal/thermal_source_observable_map.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/thermal_source_observable_map.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/topic13_closure_record_contract.py",
+      "canonical_path": "docs/core/03_lanes/topic13_support/topic13_closure_record_contract.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/topic13_closure_record_contract.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/truth_auditor.py",
+      "canonical_path": "docs/scripts/core/audit/truth_auditor.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/truth_auditor.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_anisotropic_thermoelastic_response_bridge.py",
+      "canonical_path": "docs/core/03_lanes/thermal/uet_anisotropic_thermoelastic_response_bridge.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_anisotropic_thermoelastic_response_bridge.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_base_solver.py",
+      "canonical_path": "docs/scripts/core/runners/uet_base_solver.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_base_solver.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_bug_hunter.py",
+      "canonical_path": "docs/scripts/core/audit/uet_bug_hunter.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_bug_hunter.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_coarse_graining.py",
+      "canonical_path": "docs/core/01_contracts/ontology/uet_coarse_graining.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_coarse_graining.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_covariant_balance.py",
+      "canonical_path": "docs/core/02_equations/covariant/uet_covariant_balance.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_covariant_balance.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_covariant_diffusion.py",
+      "canonical_path": "docs/core/02_equations/covariant/uet_covariant_diffusion.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_covariant_diffusion.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_covariant_matter.py",
+      "canonical_path": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_covariant_matter.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_covariant_nonclosed.py",
+      "canonical_path": "docs/core/02_equations/covariant/uet_covariant_nonclosed.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_covariant_nonclosed.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_covariant_open_system.py",
+      "canonical_path": "docs/core/02_equations/covariant/uet_covariant_open_system.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_covariant_open_system.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_covariant_parent.py",
+      "canonical_path": "docs/core/02_equations/covariant/uet_covariant_parent.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_covariant_parent.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_covariant_reduction.py",
+      "canonical_path": "docs/core/02_equations/covariant/uet_covariant_reduction.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_covariant_reduction.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_covariant_response.py",
+      "canonical_path": "docs/core/02_equations/covariant/uet_covariant_response.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_covariant_response.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_covariant_superfluid_transport.py",
+      "canonical_path": "docs/core/02_equations/covariant/uet_covariant_superfluid_transport.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_covariant_superfluid_transport.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_covariant_theory_spine.py",
+      "canonical_path": "docs/core/02_equations/covariant/uet_covariant_theory_spine.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_covariant_theory_spine.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_curved_3p1_adm_evolution.py",
+      "canonical_path": "docs/core/02_equations/covariant/uet_curved_3p1_adm_evolution.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_curved_3p1_adm_evolution.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_curved_3p1_constraints.py",
+      "canonical_path": "docs/core/02_equations/covariant/uet_curved_3p1_constraints.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_curved_3p1_constraints.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_curved_3p1_generalized_harmonic.py",
+      "canonical_path": "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_curved_3p1_generalized_harmonic.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_curved_3p1_geometry.py",
+      "canonical_path": "docs/core/02_equations/covariant/uet_curved_3p1_geometry.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_curved_3p1_geometry.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_curved_3p1_gh_evolution.py",
+      "canonical_path": "docs/core/02_equations/covariant/uet_curved_3p1_gh_evolution.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_curved_3p1_gh_evolution.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_curved_3p1_matter_wiring.py",
+      "canonical_path": "docs/core/02_equations/covariant/uet_curved_3p1_matter_wiring.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_curved_3p1_matter_wiring.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_data_orchestrator.py",
+      "canonical_path": "docs/scripts/core/data/uet_data_orchestrator.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_data_orchestrator.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_dynamic_thermoelastic_response.py",
+      "canonical_path": "docs/core/03_lanes/thermal/uet_dynamic_thermoelastic_response.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_dynamic_thermoelastic_response.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_dynamical_stability.py",
+      "canonical_path": "docs/core/02_equations/matter_space/uet_dynamical_stability.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_dynamical_stability.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_glass_box.py",
+      "canonical_path": "docs/scripts/core/runners/uet_glass_box.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_glass_box.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_gr_correspondence.py",
+      "canonical_path": "docs/core/01_contracts/correspondence/uet_gr_correspondence.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_gr_correspondence.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_hyperbolic_phase_field.py",
+      "canonical_path": "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_hyperbolic_phase_field.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_hyperbolic_phase_field_bridge.py",
+      "canonical_path": "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field_bridge.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_hyperbolic_phase_field_bridge.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_impact_effect.py",
+      "canonical_path": "docs/core/03_lanes/carrier_observer/uet_impact_effect.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_impact_effect.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_interlayer_mode_residue.py",
+      "canonical_path": "docs/core/03_lanes/thermal/uet_interlayer_mode_residue.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_interlayer_mode_residue.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_lattice_momentum_relaxing_heat_parent.py",
+      "canonical_path": "docs/core/03_lanes/thermal/uet_lattice_momentum_relaxing_heat_parent.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_lattice_momentum_relaxing_heat_parent.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_lite_engine.py",
+      "canonical_path": "docs/scripts/core/runners/uet_lite_engine.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_lite_engine.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_lorentz.py",
+      "canonical_path": "docs/core/02_equations/lorentz_noether/uet_lorentz.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_lorentz.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_master_equation.py",
+      "canonical_path": "docs/core/02_equations/matter_space/uet_master_equation.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_master_equation.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_material_interface_factor_resolution.py",
+      "canonical_path": "docs/core/03_lanes/thermal/uet_material_interface_factor_resolution.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_material_interface_factor_resolution.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_material_lattice_interface_contract.py",
+      "canonical_path": "docs/core/03_lanes/thermal/uet_material_lattice_interface_contract.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_material_lattice_interface_contract.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_matrix_engine.py",
+      "canonical_path": "docs/scripts/core/runners/uet_matrix_engine.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_matrix_engine.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_matter_space.py",
+      "canonical_path": "docs/core/02_equations/matter_space/uet_matter_space.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_matter_space.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_matter_space_causal.py",
+      "canonical_path": "docs/core/02_equations/matter_space/uet_matter_space_causal.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_matter_space_causal.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_matter_space_characteristic.py",
+      "canonical_path": "docs/core/02_equations/matter_space/uet_matter_space_characteristic.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_matter_space_characteristic.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_matter_space_finite_cone.py",
+      "canonical_path": "docs/core/02_equations/matter_space/uet_matter_space_finite_cone.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_matter_space_finite_cone.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_matter_space_flux_phi.py",
+      "canonical_path": "docs/core/02_equations/matter_space/uet_matter_space_flux_phi.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_matter_space_flux_phi.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_matter_space_flux_telegraph.py",
+      "canonical_path": "docs/core/02_equations/matter_space/uet_matter_space_flux_telegraph.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_matter_space_flux_telegraph.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_matter_space_observable.py",
+      "canonical_path": "docs/core/03_lanes/review/uet_matter_space_observable.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_matter_space_observable.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_matter_space_split.py",
+      "canonical_path": "docs/core/02_equations/matter_space/uet_matter_space_split.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_matter_space_split.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_matter_strain_susceptibility.py",
+      "canonical_path": "docs/core/03_lanes/thermal/uet_matter_strain_susceptibility.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_matter_strain_susceptibility.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_mode_work_heat.py",
+      "canonical_path": "docs/core/03_lanes/thermal/uet_mode_work_heat.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_mode_work_heat.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_noether.py",
+      "canonical_path": "docs/core/02_equations/lorentz_noether/uet_noether.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_noether.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_noether_phase_field_map.py",
+      "canonical_path": "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_noether_phase_field_map.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_action_1pi_sunset_euclidean.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_action_1pi_sunset_euclidean.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_action_1pi_sunset_euclidean.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_action_1pi_sunset_retarded.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_action_1pi_sunset_retarded.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_action_1pi_sunset_retarded.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_action_1pi_sunset_tensor.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_action_1pi_sunset_tensor.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_action_1pi_sunset_tensor.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_action_derived_transition_kernel.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_action_derived_transition_kernel.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_action_derived_transition_kernel.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_action_sunset_1pi_spectral.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_action_sunset_1pi_spectral.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_action_sunset_1pi_spectral.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_action_sunset_zero_eta.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_action_sunset_zero_eta.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_action_sunset_zero_eta.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_action_thermal_observable_bridge.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_action_thermal_observable_bridge.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_action_thermal_stiffness_beta.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_action_thermal_stiffness_beta.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_auxiliary_field_condensed.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_auxiliary_field_condensed.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_auxiliary_field_condensed.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_beta_correspondence.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_beta_correspondence.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_beta_correspondence.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_charge_conserving_ladder_response.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_charge_conserving_ladder_response.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_charge_conserving_ladder_response.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_charged_current_correlator.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_charged_current_correlator.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_charged_current_correlator.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_collisionless_kubo.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_collisionless_kubo.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_collisionless_kubo.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_condensate_fluctuations.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_condensate_fluctuations.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_condensate_fluctuations.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_condensate_gaussian_thermal.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_condensate_gaussian_thermal.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_condensate_gaussian_thermal.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_condensed_dissipative_transport_identifiability_no_go.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_condensed_dissipative_transport_identifiability_no_go.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_condensed_dissipative_transport_identifiability_no_go.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_condensed_loop_renormalized_vertex.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_condensed_loop_renormalized_vertex.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_condensed_loop_renormalized_vertex.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_condensed_relative_flow_collision.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_condensed_relative_flow_collision.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_condensed_relative_flow_collision.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_condensed_relative_flow_kubo_admission.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_condensed_relative_flow_kubo_admission.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_condensed_relative_flow_kubo_admission.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_condensed_retarded_dissipation_no_go.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_condensed_retarded_dissipation_no_go.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_condensed_retarded_dissipation_no_go.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_condensed_sk_kms_kubo_match.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_condensed_sk_kms_kubo_match.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_condensed_sk_kms_kubo_match.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_contact_sk_transition_vertex_match.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_contact_sk_transition_vertex_match.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_contact_sk_transition_vertex_match.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_continuum_collision_operator.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_continuum_collision_operator.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_continuum_collision_operator.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_continuum_limit_boundary.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_continuum_limit_boundary.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_continuum_limit_boundary.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_continuum_relative_flow_kubo.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_continuum_relative_flow_kubo.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_continuum_relative_flow_kubo.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_continuum_sunset_cut.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_continuum_sunset_cut.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_continuum_sunset_cut.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_covariant_entropy_heat_flux_balance.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_covariant_entropy_heat_flux_balance.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_dressed_ra_charge_current_ladder.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_dressed_ra_charge_current_ladder.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_dressed_ra_charge_current_ladder.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_equilibrium_kms.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_equilibrium_kms.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_equilibrium_kms.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_finite_channel_entropy_balance.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_channel_entropy_balance.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_finite_channel_entropy_balance.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_finite_density_charged_vertex.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_density_charged_vertex.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_finite_density_charged_vertex.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_finite_density_eos.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_density_eos.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_finite_density_eos.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_finite_temperature_all_22_permutation_identity.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_all_22_permutation_identity.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_finite_temperature_all_22_permutation_identity.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_finite_temperature_all_onshell_cut_response.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_all_onshell_cut_response.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_finite_temperature_all_onshell_cut_response.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_finite_temperature_declared_retarded_1pi_grid.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_declared_retarded_1pi_grid.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_finite_temperature_declared_retarded_1pi_grid.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_finite_temperature_full_sunset_sk_kms.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_full_sunset_sk_kms.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_finite_temperature_full_sunset_sk_kms.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_finite_temperature_hartree_thermodynamics.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_hartree_thermodynamics.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_finite_temperature_hartree_thermodynamics.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_finite_temperature_normal_component.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_normal_component.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_finite_temperature_normal_component.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_finite_temperature_normal_stability.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_normal_stability.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_finite_temperature_normal_stability.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_finite_temperature_offshell_1pi.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_offshell_1pi.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_finite_temperature_offshell_1pi.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_finite_temperature_offshell_threshold_crossing_1pi.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_offshell_threshold_crossing_1pi.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_finite_temperature_offshell_threshold_crossing_1pi.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_finite_temperature_quasiparticle_eos.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_finite_temperature_renormalized_hartree.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_renormalized_hartree.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_finite_temperature_renormalized_hartree.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_finite_temperature_scheme_identifiability.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_scheme_identifiability.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_finite_temperature_scheme_identifiability.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_finite_temperature_self_energy.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_self_energy.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_finite_temperature_self_energy.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_finite_temperature_signed_cut_coverage.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_signed_cut_coverage.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_finite_temperature_signed_cut_coverage.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_finite_temperature_stationarity_scheme.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_stationarity_scheme.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_finite_temperature_stationarity_scheme.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_finite_temperature_sunset_cut_multiplicity.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_cut_multiplicity.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_finite_temperature_sunset_cut_multiplicity.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_finite_temperature_sunset_renormalization_identifiability_no_go.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_renormalization_identifiability_no_go.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_finite_temperature_sunset_renormalization_identifiability_no_go.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_finite_temperature_sunset_scattering_sk_kms.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_scattering_sk_kms.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_finite_temperature_sunset_scattering_sk_kms.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_finite_temperature_sunset_sk_kms.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_sk_kms.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_finite_temperature_sunset_sk_kms.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_finite_temperature_sunset_vacuum_match.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_vacuum_match.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_finite_temperature_sunset_vacuum_match.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_finite_temperature_two_fluid_response.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_finite_temperature_two_fluid_response.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_formal_transverse_response.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_formal_transverse_response.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_formal_two_sector_thermodynamics.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_formal_two_sector_thermodynamics.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_formal_two_sector_thermodynamics.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_gaussian_offshell_background.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_gaussian_offshell_background.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_gaussian_offshell_background.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_gaussian_thermal_stationarity_no_go.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_gaussian_thermal_stationarity_no_go.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_gaussian_thermal_stationarity_no_go.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_heat_current_kubo_continuum_boundary.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_heat_current_kubo_continuum_boundary.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_heat_current_kubo_continuum_boundary.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_heat_current_kubo_match.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_heat_current_kubo_match.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_heat_current_kubo_match.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_interacting_sk_kms_action.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_interacting_sk_kms_action.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_interacting_sk_kms_action.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_invariant_galerkin_collision_operator.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_invariant_galerkin_collision_operator.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_invariant_galerkin_collision_operator.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_invariant_rate_collision_operator.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_invariant_rate_collision_operator.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_invariant_rate_collision_operator.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_invariant_vector_current_galerkin.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_invariant_vector_current_galerkin.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_invariant_vector_current_galerkin.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_kinetic_collision_kubo.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_kinetic_collision_kubo.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_kinetic_collision_kubo.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_microscopic_kubo_match.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_microscopic_kubo_match.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_microscopic_kubo_match.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_momentum_ladder_sk_kms.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_momentum_ladder_sk_kms.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_momentum_ladder_sk_kms.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_nonlocal_sk_kms_memory_kernel.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_nonlocal_sk_kms_memory_kernel.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_nonlocal_sk_kms_memory_kernel.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_normal_response_curvature.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_normal_response_curvature.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_normal_response_curvature.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_on_shell_sunset_width.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_on_shell_sunset_width.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_on_shell_sunset_width.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_one_loop_normal_branch.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_one_loop_normal_branch.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_one_loop_normal_branch.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_one_loop_retarded_self_energy_no_go.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_one_loop_retarded_self_energy_no_go.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_one_loop_retarded_self_energy_no_go.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_one_loop_vertex_uv_boundary.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_one_loop_vertex_uv_boundary.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_one_loop_vertex_uv_boundary.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_open_system_sk_kms.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_open_system_sk_kms.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_open_system_sk_kms.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_physical_renormalization_condition_contract.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_physical_renormalization_condition_contract.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_physical_renormalization_condition_contract.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_regularized_continuum_heat_current.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_regularized_continuum_heat_current.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_regularized_continuum_heat_current.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_renormalized_normal_branch.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_renormalized_normal_branch.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_renormalized_normal_branch.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_renormalized_vertex_scheme.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_renormalized_vertex_scheme.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_renormalized_vertex_scheme.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_same_kernel_tagged_width.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_same_kernel_tagged_width.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_same_kernel_tagged_width.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_sunset_dispersion_interface.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_sunset_dispersion_interface.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_sunset_dispersion_interface.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_sunset_dispersion_interface_verified.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_sunset_dispersion_interface_verified.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_sunset_dispersion_interface_verified.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_thermal_stability_boundary.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_thermal_stability_boundary.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_thermal_stability_boundary.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_tree_level_bs_sk_match.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_tree_level_bs_sk_match.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_tree_level_bs_sk_match.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_tree_level_charged_ward_vertex.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_tree_level_charged_ward_vertex.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_tree_level_charged_ward_vertex.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_two_loop_sunset_cut.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_two_loop_sunset_cut.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_two_loop_sunset_cut.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_o2_ward_constrained_condensed.py",
+      "canonical_path": "docs/core/02_equations/o2/uet_o2_ward_constrained_condensed.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_o2_ward_constrained_condensed.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_observables.py",
+      "canonical_path": "docs/core/03_lanes/review/uet_observables.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_observables.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_parameters.py",
+      "canonical_path": "docs/core/01_contracts/units/uet_parameters.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_parameters.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_quantum_interpretations.py",
+      "canonical_path": "docs/core/03_lanes/carrier_observer/uet_quantum_interpretations.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_quantum_interpretations.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_quantum_measurement.py",
+      "canonical_path": "docs/core/03_lanes/carrier_observer/uet_quantum_measurement.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_quantum_measurement.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_raman_deformation_constraint.py",
+      "canonical_path": "docs/core/03_lanes/thermal/uet_raman_deformation_constraint.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_raman_deformation_constraint.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_reciprocal_thermal_dynamics.py",
+      "canonical_path": "docs/core/03_lanes/thermal/uet_reciprocal_thermal_dynamics.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_reciprocal_thermal_dynamics.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_references.py",
+      "canonical_path": "docs/scripts/core/data/uet_references.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_references.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_resource_selection.py",
+      "canonical_path": "docs/core/03_lanes/persistence/uet_resource_selection.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_resource_selection.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_scalar_thermoelastic_response_bridge.py",
+      "canonical_path": "docs/core/03_lanes/thermal/uet_scalar_thermoelastic_response_bridge.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_scalar_thermoelastic_response_bridge.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_shear_symmetry.py",
+      "canonical_path": "docs/core/03_lanes/thermal/uet_shear_symmetry.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_shear_symmetry.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_spatial.py",
+      "canonical_path": "docs/core/02_equations/matter_space/uet_spatial.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_spatial.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_thermoelastic_spatial_compatibility.py",
+      "canonical_path": "docs/core/03_lanes/thermal/uet_thermoelastic_spatial_compatibility.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_thermoelastic_spatial_compatibility.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_trace.py",
+      "canonical_path": "docs/core/02_equations/matter_space/uet_trace.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_trace.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_transport_coefficient_identifiability.py",
+      "canonical_path": "docs/core/03_lanes/thermal/uet_transport_coefficient_identifiability.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_transport_coefficient_identifiability.py"
+    },
+    {
+      "archive_path": "docs/core/08_history/legacy/compatibility_shims/python/uet_viz.py",
+      "canonical_path": "docs/scripts/core/reporting/uet_viz.py",
+      "kind": "root_python_shim",
+      "legacy_path": "docs/core/uet_viz.py"
+    }
+  ],
+  "artifact": "uet_core_compatibility_consolidation",
+  "claim_boundary": "physical organization and compatibility consolidation only; no physics/evidence promotion",
+  "failures": [],
+  "generated_at": "2026-09-16T17:23:05+00:00",
+  "generator": "docs/scripts/audit/finalize_uet_core_compatibility_consolidation_v4.py",
+  "physical_move_performed": true,
+  "physics_status_changes": 0,
+  "schema_version": "1.0",
+  "status": "PASS",
+  "summary": {
+    "active_reference_rewrite_status": "completed_and_checked_by_canonical_link_audit",
+    "files_archived": 426,
+    "legacy_boundary_files_archived": 14,
+    "legacy_module_aliases": 181,
+    "legacy_tool_shims_archived": 91,
+    "physics_status_changes": 0,
+    "root_markdown_redirects_archived": 140,
+    "root_python_shims_archived": 181
+  }
+}

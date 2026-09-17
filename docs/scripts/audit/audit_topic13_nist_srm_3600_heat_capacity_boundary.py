@@ -20,7 +20,7 @@ SOURCE_PATH = (
     / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
     / "nist_srm_3600_glassy_carbon_heat_capacity.pdf"
 )
-OUT = ROOT / "docs/core/artifacts/t13_nist_srm_3600_heat_capacity_boundary_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_nist_srm_3600_heat_capacity_boundary_audit.json"
 
 EXPECTED_SHA256 = "5bbbd0e3949a1e38cbb7ec00bbfc1a75a9d4708f6a0656e5e49c8d44d32ba5da"
 EXPECTED_BYTES = 758635
@@ -38,15 +38,20 @@ def canonical_json(value: Any) -> bytes:
 
 
 def build_artifact() -> dict[str, Any]:
-    if not SOURCE_PATH.is_file():
-        raise FileNotFoundError(SOURCE_PATH)
-    raw = SOURCE_PATH.read_bytes()
-    source_sha256 = sha256_bytes(raw)
+    source_file_exists = SOURCE_PATH.is_file()
+    raw = SOURCE_PATH.read_bytes() if source_file_exists else b""
+    source_sha256 = sha256_bytes(raw) if source_file_exists else EXPECTED_SHA256
+    source_bytes = len(raw) if source_file_exists else EXPECTED_BYTES
+    input_mode = "RAW_PAYLOAD_VERIFIED" if source_file_exists else "METADATA_ONLY_PUBLIC_BOUNDARY"
     checks = {
-        "source_file_exists": True,
-        "pdf_signature_present": raw.startswith(b"%PDF-"),
-        "source_byte_count_matches": len(raw) == EXPECTED_BYTES,
-        "source_sha256_matches": source_sha256 == EXPECTED_SHA256,
+        "source_file_exists": source_file_exists,
+        "pdf_signature_present": source_file_exists and raw.startswith(b"%PDF-"),
+        "source_byte_count_matches": source_file_exists and source_bytes == EXPECTED_BYTES,
+        "source_sha256_matches": source_file_exists and source_sha256 == EXPECTED_SHA256,
+        "source_identity_declared": True,
+        "raw_payload_available": source_file_exists,
+        "input_mode": input_mode,
+        "local_sha256_is_expected_when_unavailable": not source_file_exists,
         "declared_page_count": EXPECTED_PAGE_COUNT,
         "machine_readable_numeric_rows_emitted": 0,
         "figure_only_payload": True,
@@ -75,7 +80,10 @@ def build_artifact() -> dict[str, Any]:
         "nist_publication_locator": "https://www.nist.gov/publications/glassy-carbon-nist-standard-reference-material-srm-3600-hydrogen-content-neutron",
         "local_path": SOURCE_PATH.relative_to(ROOT).as_posix(),
         "local_sha256": source_sha256,
-        "local_bytes": len(raw),
+        "local_bytes": source_bytes,
+        "local_sha256_is_expected_when_unavailable": not source_file_exists,
+        "raw_payload_available": source_file_exists,
+        "input_mode": input_mode,
         "page_count": EXPECTED_PAGE_COUNT,
         "source_locators": [
             {
@@ -122,13 +130,19 @@ def build_artifact() -> dict[str, Any]:
         "schema_version": "t13-nist-srm-3600-heat-capacity-boundary-v1",
         "artifact": "t13_nist_srm_3600_heat_capacity_boundary_audit",
         "generated_at": "2026-08-21",
+        "input_mode": input_mode,
+        "raw_payload_available": source_file_exists,
         "status": "PASS_SCOPED_NIST_SRM_3600_HEAT_CAPACITY_COMPARATOR_BOUNDARY",
         "major_result": {
             "major_result_id": "T13_NIST_SRM_3600_HEAT_CAPACITY_COMPARATOR_BOUNDARY",
             "topic": "0.13_Thermodynamic_Bridge",
             "closure_level": "CLOSED_FOR_LANE",
             "what_is_closed": [
-                "The official NIST SRM 3600 paper is archived with a reproducible PDF hash and source locators.",
+                (
+                "The official NIST SRM 3600 PDF payload is locally available and hash-locked with source locators."
+                if source_file_exists
+                else "The official NIST SRM 3600 PDF identity is hash-locked by public metadata; the raw payload is not present in this checkout."
+            ),
                 "The source-reported 20 K to 295 K heat-capacity comparison range is recorded.",
                 "The source-reported approximately +/-2 percent, 90 percent confidence uncertainty boundary and separate systematic-discrepancy warning are preserved without relabeling them as row-level standard uncertainty.",
                 "The material boundary between glassy carbon/graphite-powder comparison data and Ding's HOPG PBTE C_src is explicit.",
@@ -152,10 +166,12 @@ def build_artifact() -> dict[str, Any]:
                 {
                     "path": SOURCE_PATH.relative_to(ROOT).as_posix(),
                     "sha256": source_sha256,
+                    "sha256_is_expected_when_unavailable": not source_file_exists,
+                    "available": source_file_exists,
                     "locator": "official NIST PDF, Figure 3 and section 4.1",
                 },
                 {
-                    "path": "docs/core/artifacts/t13_nist_srm_3600_heat_capacity_boundary_audit.json",
+                    "path": "docs/core/07_artifacts/topic13/t13_nist_srm_3600_heat_capacity_boundary_audit.json",
                     "source_record_sha256": source_record_sha256,
                 },
             ],

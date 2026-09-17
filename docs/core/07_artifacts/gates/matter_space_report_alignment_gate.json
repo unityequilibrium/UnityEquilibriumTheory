@@ -1,0 +1,228 @@
+{
+  "schema_version": "1.0",
+  "artifact": "matter_space_report_alignment_gate",
+  "generated_at": "2026-09-17T23:31:39.245822+00:00",
+  "source_snapshot_at": "2026-09-17T23:26:46+00:00",
+  "status": "WARN",
+  "alignment_status": "PASS_WITH_HISTORICAL_BASE_REPORT_WARN",
+  "evidence_status": "POST_WAVE10_ADDENDUM_ALIGNED_BASE_SNAPSHOT_RETAINED",
+  "claim_class": "B_MODEL_AND_INTERNAL_DEPENDENCY_SUMMARY",
+  "controlling_blocker": "physical_kubo_coefficient_evidence_and_curved_3p1_solver_missing",
+  "base_matter_space_controller": "core_prearrival_leakage",
+  "global_universe_closure": "UNRESOLVED",
+  "report_status_impact": "NONE",
+  "input_artifacts": {
+    "matter_space_program": {
+      "path": "docs/core/07_artifacts/gates/matter_space_research_program_gate.json",
+      "sha256": "80c6fb7743be813ba976c77d75ee7d27243e05d5d1713e7b6106f72b7e74b265",
+      "status": "BLOCKED",
+      "controlling_blocker": "core_prearrival_leakage"
+    },
+    "gr_program": {
+      "path": "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json",
+      "sha256": "a092fadab911bfeb117daf8d3e49e78d982d732f6237c16b019a217faead75bd",
+      "status": "BLOCKED",
+      "program_stage": "O2_FINITE_DENSITY_EOS_AND_T0_SUPERFLUID_CONSTITUTIVE_VERIFIED",
+      "controlling_blocker": "physical_kubo_coefficient_evidence_and_curved_3p1_solver_missing"
+    },
+    "noether_dependency": {
+      "path": "docs/core/07_artifacts/gates/noether_phase_field_dependency_gate.json",
+      "sha256": "74f95237c88d3da341961bca94b72206d592201061e90fbfba82e08693c997d5",
+      "status": "BLOCKED",
+      "evidence_status": "PARTIAL_HYDRODYNAMIC_STATE_COORDINATE_MAP",
+      "controlling_blocker": "noether_charge_equation_of_state_and_covariant_transport_matching_missing"
+    },
+    "topic_0_11_dependency": {
+      "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_noether_phase_field_dependency_gate.json",
+      "sha256": "b87a58966f270c5097d04907736b15787d469311673a327e3d17cbb45e662ab2",
+      "status": "BLOCKED",
+      "evidence_status": "CONDITIONAL_HYDRODYNAMIC_COORDINATE_COMPATIBILITY",
+      "controlling_blocker": "topic_0_11_signed_noether_charge_eos_transport_matching_missing",
+      "topic_status_impact": "NONE"
+    },
+    "topic_0_19_dependency": {
+      "path": "docs/topics/0.19_Gravity_GR/Result/artifacts/0_19_core_gr_program_dependency_gate.json",
+      "sha256": "a25bad12a0e812afc2c80ad5fa28619f8be2abe401feb65ab1d5475268cc47a4",
+      "status": "BLOCKED",
+      "evidence_status": "CORE_CANDIDATE_GR_PARENT_AVAILABLE_TOPIC_PHYSICAL_VALIDATION_OPEN",
+      "controlling_blocker": "topic_0_19_classical_gr_tests_and_covariant_completion_missing",
+      "topic_status_impact": "NONE"
+    },
+    "topic_0_13_constraint": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/0_13_core_thermodynamic_constraint_gate.json",
+      "sha256": "fb67982e8ca47f0a483f19979f7285e4c91a35ed78c566b69f7daf308e72aa20",
+      "status": "BLOCKED",
+      "evidence_status": "THERMODYNAMIC_CONSTRAINT_EXPORTS_AVAILABLE_CORE_CLOSURE_NOT_DERIVED",
+      "controlling_blocker": "topic_0_13_constraint_only_eos_transport_entropy_bridge_missing",
+      "topic_status_impact": "NONE"
+    }
+  },
+  "input_documents": {
+    "base_report": {
+      "path": "docs/core/08_history/research_notes/MATTER_SPACE_RESEARCH_REPORT.md",
+      "sha256": "51be0280e86a025a6ec1cc74ae61694af0311102c5ae97d473baf7c9487d4d69",
+      "bytes": 22663
+    },
+    "addendum": {
+      "path": "docs/core/08_history/research_notes/MATTER_SPACE_RESEARCH_REPORT_ADDENDUM_2026-07-23.md",
+      "sha256": "d11bec3ccd951b6476062bbf557ad80b7f733e883334cb2b92de4af0684f1d9f",
+      "bytes": 10963
+    },
+    "topic_readiness": {
+      "path": "docs/meta/topic_readiness.json",
+      "sha256": "af09c78c14c872b96617fe4fe85d7ffd74a878478bf516f925cea3f2cc69693e",
+      "bytes": 27377
+    }
+  },
+  "canonical_topics": {
+    "0.11": {
+      "name": "0.11_Phase_Transitions",
+      "status": "Structured",
+      "tier": "B"
+    },
+    "0.13": {
+      "name": "0.13_Thermodynamic_Bridge",
+      "status": "Draft",
+      "tier": "B"
+    },
+    "0.19": {
+      "name": "0.19_Gravity_GR",
+      "status": "Draft",
+      "tier": "B"
+    }
+  },
+  "gates": {
+    "base_report_scope_gate": {
+      "status": "PASS",
+      "snapshot": "2026-07-21",
+      "scope": "normalized one-dimensional matter-space program",
+      "controller": "core_prearrival_leakage"
+    },
+    "post_wave10_addendum_gate": {
+      "status": "PASS",
+      "required_markers": {
+        "Base matter-space controller: `core_prearrival_leakage`": true,
+        "Extended GR controller: `physical_kubo_coefficient_evidence_and_curved_3p1_solver_missing`": true,
+        "Global-universe closure: `UNRESOLVED`": true,
+        "Topic 0.11: `Structured / Tier B`": true,
+        "Topic 0.19: `Draft / Tier B`": true,
+        "Topic 0.13: `Draft / Tier B`": true,
+        "Trace `R` remains derived and has no backreaction.": true,
+        "This does not prove that the complete universe is open or closed.": true
+      },
+      "required_links": {
+        "../../07_artifacts/gates/matter_space_report_alignment_gate.json": true,
+        "../../07_artifacts/gates/matter_space_research_program_gate.json": true,
+        "../../07_artifacts/gates/uet_gr_research_program_gate.json": true,
+        "../../07_artifacts/gates/noether_phase_field_dependency_gate.json": true,
+        "../../../topics/0.11_Phase_Transitions/Result/artifacts/0_11_noether_phase_field_dependency_gate.json": true,
+        "../../../topics/0.19_Gravity_GR/Result/artifacts/0_19_core_gr_program_dependency_gate.json": true,
+        "../../../topics/0.13_Thermodynamic_Bridge/Result/artifacts/0_13_core_thermodynamic_constraint_gate.json": true
+      }
+    },
+    "gr_null_vs_global_closure_gate": {
+      "status": "PASS",
+      "gr_null_model": {
+        "parameter": "epsilon_nc",
+        "value": 0,
+        "verification_status": "PASS"
+      },
+      "global_universe_closure": "UNRESOLVED",
+      "interpretation": "A passing epsilon_nc=0 response-null is a nested model limit, not a theorem about global universe closure."
+    },
+    "controller_separation_gate": {
+      "status": "PASS",
+      "matter_space_controller": "core_prearrival_leakage",
+      "extended_gr_controller": "physical_kubo_coefficient_evidence_and_curved_3p1_solver_missing"
+    },
+    "topic_0_11_historical_status_gate": {
+      "status": "WARN",
+      "drift_detected": true,
+      "historical_report_status": "Draft",
+      "canonical_status": "Structured",
+      "canonical_tier": "B",
+      "repair": "The addendum controls post-Wave-9 status; the base report is retained as a dated snapshot."
+    },
+    "downstream_dependency_gate": {
+      "status": "PASS",
+      "topic_0_11": {
+        "status": "BLOCKED",
+        "evidence_status": "CONDITIONAL_HYDRODYNAMIC_COORDINATE_COMPATIBILITY",
+        "topic_status_impact": "NONE"
+      },
+      "topic_0_19": {
+        "status": "BLOCKED",
+        "evidence_status": "CORE_CANDIDATE_GR_PARENT_AVAILABLE_TOPIC_PHYSICAL_VALIDATION_OPEN",
+        "topic_status_impact": "NONE"
+      },
+      "topic_0_13": {
+        "status": "BLOCKED",
+        "evidence_status": "THERMODYNAMIC_CONSTRAINT_EXPORTS_AVAILABLE_CORE_CLOSURE_NOT_DERIVED",
+        "topic_status_impact": "NONE"
+      }
+    },
+    "ontology_separation_gate": {
+      "status": "PASS",
+      "trace_backreaction": false,
+      "phi_metric_identity": false,
+      "coarse_variable": "normalized signed O(2) charge coordinate",
+      "equation_of_state_derived": false
+    },
+    "claim_boundary_gate": {
+      "status": "PASS",
+      "allowed": [
+        "historical matter-space report for its declared normalized 1D scope",
+        "candidate covariant GR parent and exact response-null model limit",
+        "partial fixed-scale Noether-charge coordinate map",
+        "dependency-only Topic 0.11, 0.19, and 0.13 summaries"
+      ],
+      "blocked": [
+        "the complete universe is proved open or closed",
+        "Einstein equations are derived from or validated by UET",
+        "the Noether coordinate map derives an equation of state or microscopic inverse",
+        "Phi is established spacetime geometry, a metric tensor, antimatter, or a particle",
+        "R is an independent field, substance, or feedback source",
+        "downstream topic promotion or external validation"
+      ]
+    }
+  },
+  "drift_table": [
+    {
+      "source": "docs/core/08_history/research_notes/MATTER_SPACE_RESEARCH_REPORT.md",
+      "statement": "Topic 0.11 remains Draft/Tier B.",
+      "conflict": "Canonical metadata and the 0.11 dependency gate now report Structured/Tier B.",
+      "controlling_state": "Structured / Tier B",
+      "repair_order": 1,
+      "repair": "Use the dated addendum for current status; retain the base report as historical evidence."
+    },
+    {
+      "source": "docs/core/08_history/research_notes/MATTER_SPACE_RESEARCH_REPORT.md",
+      "statement": "A geometry or Lorentz-covariant derivation is absent.",
+      "conflict": "A class-B candidate covariant parent, exact response-null branch, restricted causal sector, partial response reduction, and Noether coordinate map now exist.",
+      "controlling_state": "O2_FINITE_DENSITY_EOS_AND_T0_SUPERFLUID_CONSTITUTIVE_VERIFIED",
+      "repair_order": 2,
+      "repair": "Replace the all-or-nothing absence statement with candidate-parent-present / physical-completion-blocked wording in the addendum."
+    },
+    {
+      "source": "docs/core/08_history/research_notes/MATTER_SPACE_RESEARCH_REPORT.md",
+      "statement": "Topic 0.13 is represented only by the earlier thermal pilot.",
+      "conflict": "A later constraint gate permits class-C thermodynamic constraints while keeping UET bridge closure blocked.",
+      "controlling_state": "THERMODYNAMIC_CONSTRAINT_EXPORTS_AVAILABLE_CORE_CLOSURE_NOT_DERIVED",
+      "repair_order": 3,
+      "repair": "Add the constraint-only dependency boundary without modifying the historical thermal result."
+    }
+  ],
+  "required_next_evidence": [
+    "derive the signed-charge equation of state from the declared covariant matter theory or reject that identification",
+    "specify covariant coarse-graining, susceptibility, and transport matching",
+    "close entropy-current and dissipative-Bianchi accounting",
+    "build a curved 3+1 well-posed solver and physical GR benchmark suite",
+    "retain the independent matter-space pre-arrival leakage blocker for the normalized 1D physical-response lane"
+  ],
+  "next_controller": "physical_kubo_coefficient_evidence_and_curved_3p1_solver_missing",
+  "notes": [
+    "The addendum repairs report usability without rewriting the user-owned historical report.",
+    "The matter-space and extended-GR controllers are simultaneous scope-specific blockers, not competing global truth labels.",
+    "No topic readiness status is promoted by this alignment artifact."
+  ]
+}

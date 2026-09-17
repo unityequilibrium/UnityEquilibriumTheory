@@ -19,8 +19,8 @@ def repair_integrity_audit() -> None:
     path = ROOT / "docs/scripts/audit/audit_uet_research_room_wave1_integrity.py"
     replace_once(
         path,
-        'PROVENANCE = ROOT / "docs/core/artifacts/thermal_source_provenance_gate.json"\n',
-        'PROVENANCE = ROOT / "docs/core/artifacts/thermal_source_provenance_gate.json"\nHOLDOUT_AUDIT = ROOT / "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json"\n',
+        'PROVENANCE = ROOT / "docs/core/07_artifacts/topic13/thermal_source_provenance_gate.json"\n',
+        'PROVENANCE = ROOT / "docs/core/07_artifacts/topic13/thermal_source_provenance_gate.json"\nHOLDOUT_AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_xie_2026_holdout_access_audit.json"\n',
     )
     replace_once(
         path,

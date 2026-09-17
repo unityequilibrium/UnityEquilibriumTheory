@@ -4,13 +4,43 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
+import sys
 from datetime import date
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
-OUT = ROOT / "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+OUT = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
+
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from docs.core.core_paths import canonical_path_for  # noqa: E402
+
+
+_LEGACY_ARTIFACT_PATH_RE = re.compile(r"docs/core/artifacts/[^\s,\\\"']+")
+
+
+def _canonicalize_artifact_paths(value: object) -> object:
+    """Normalize inherited legacy artifact references in values and keys."""
+
+    if isinstance(value, dict):
+        return {
+            _canonicalize_artifact_paths(key) if isinstance(key, str) else key:
+            _canonicalize_artifact_paths(item)
+            for key, item in value.items()
+        }
+    if isinstance(value, list):
+        return [_canonicalize_artifact_paths(item) for item in value]
+    if not isinstance(value, str) or "docs/core/artifacts/" not in value:
+        return value
+
+    def replace(match: re.Match[str]) -> str:
+        return canonical_path_for(match.group(0))
+
+    return _LEGACY_ARTIFACT_PATH_RE.sub(replace, value.replace("\\", "/"))
 
 
 def main() -> int:
@@ -215,11 +245,22 @@ def main() -> int:
             "claim_boundary": topic13_core_entry.get("claim_boundary"),
         })
     partial_routes = {
-        "covariant_action_si_anchor_route": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
-        "covariant_field_normalization_no_go": "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json",
-        "phi_energy_anchor_no_go": "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
-        "thermal_response_beta_contract": "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json",
-        "ding_experimental_heating_input_boundary": "docs/core/artifacts/t13_ding_experimental_heating_input_boundary_audit.json",
+        # Refresh every promoted Topic 13 lane that is preserved in the
+        # dependency artifact.  Keeping this list explicit prevents a stale
+        # hash from surviving when the leaf audit is regenerated.
+        "collective_response_eos_stability_contract": "docs/core/07_artifacts/topic13/t13_collective_response_eos_stability_audit.json",
+        "causal_branch_selection": "docs/core/07_artifacts/topic13/t13_causal_branch_selection_audit.json",
+        "beta_symbol_separation_noncircularity_no_go": "docs/core/07_artifacts/topic13/t13_beta_symbol_separation_noncircularity_audit.json",
+        "covariant_matter_coupling_normalization_no_go": "docs/core/07_artifacts/topic13/t13_covariant_matter_coupling_normalization_no_go.json",
+        "formal_non_circular_bridge_boundary": "docs/core/07_artifacts/topic13/t13_formal_bridge_boundary_audit.json",
+        "sk_kms_entropy_interface": "docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json",
+        "base_phi_independent_calibration_requirement": "docs/core/07_artifacts/topic13/t13_base_phi_independent_calibration_requirement.json",
+        "phi_e_reference_normalization": "docs/core/07_artifacts/topic13/t13_phi_e_reference_normalization_audit.json",
+        "covariant_action_si_anchor_route": "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json",
+        "covariant_field_normalization_no_go": "docs/core/07_artifacts/topic13/t13_covariant_field_normalization_identifiability_no_go.json",
+        "phi_energy_anchor_no_go": "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json",
+        "thermal_response_beta_contract": "docs/core/07_artifacts/topic13/t13_thermal_response_beta_contract_audit.json",
+        "ding_experimental_heating_input_boundary": "docs/core/07_artifacts/topic13/t13_ding_experimental_heating_input_boundary_audit.json",
     }
     partial_evidence = artifact.get("topic13_partial_evidence", {})
     if isinstance(partial_evidence, dict):
@@ -242,6 +283,7 @@ def main() -> int:
                     "full_core_unlock": False,
                 },
             }
+    artifact = _canonicalize_artifact_paths(artifact)
     OUT.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
     print(json.dumps({"status": artifact["status"], "decisions": decisions}, indent=2))
     return 0

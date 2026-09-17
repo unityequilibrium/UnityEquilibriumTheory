@@ -30,7 +30,7 @@ FORCE_CONSTANTS_PATH = RAW / "mp48_FORCE_CONSTANTS.gz"
 PHONOPY_PATH = RAW / "mp48_phonopy.yaml.gz"
 SUMMARY_PATH = RAW / "mp48_summary.json.gz"
 THERMAL_PATH = RAW / "mp48_thermal_properties.yaml.gz"
-OUT = ROOT / "docs/core/artifacts/t13_mp48_force_constant_csrc_mesh_convergence_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_mp48_force_constant_csrc_mesh_convergence_audit.json"
 
 AVOGADRO = 6.02214076e23
 PLANCK = 6.62607015e-34

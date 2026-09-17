@@ -31,7 +31,7 @@ ROOT = _bootstrap()
 TOPIC = ROOT / "docs/topics/0.11_Phase_Transitions"
 PREREG_PATH = TOPIC / "Data/03_Research/matter_space_phase_coupling.json"
 PARENT_PREREG_PATH = TOPIC / "Data/03_Research/matter_space_coupled_preregistration.json"
-CORE_PATH = ROOT / "docs/core/artifacts/matter_space_variational_verification.json"
+CORE_PATH = ROOT / "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
 OUTPUT_PATH = TOPIC / "Result/artifacts/0_11_matter_space_phase_coupling_diagnostic.json"
 
 from docs.core.uet_impact_effect import (  # noqa: E402

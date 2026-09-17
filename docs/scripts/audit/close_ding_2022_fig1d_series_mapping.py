@@ -15,7 +15,7 @@ TOPIC = ROOT / "docs/topics/0.13_Thermodynamic_Bridge"
 FIGURE = TOPIC / "Data/03_Research/raw/ding_2022_fig1.png"
 MANIFEST = TOPIC / "Data/03_Research/ding_2022_fig1d_digitized_manifest.json"
 PACKAGE = TOPIC / "Data/03_Research/matter_space_second_sound_source_package.json"
-OUT = ROOT / "docs/core/artifacts/ding_2022_fig1d_series_mapping.json"
+OUT = ROOT / "docs/core/07_artifacts/archive/ding_2022_fig1d_series_mapping.json"
 
 EXPECTED_FIGURE_SHA256 = "d88faf2f5d7050c07a2c1bd820a16bdffa836d3d887b4d88b6be7634eed36ac4"
 
@@ -132,7 +132,7 @@ def main() -> int:
     manifest["status"] = "FIGURE_DERIVED_NUMERIC_PACKAGE_WITH_CLOSED_MAPPING"
     manifest["series_mapping_status"] = "CLOSED_COLOR_TO_GRATING_PERIOD"
     manifest["series_mapping"] = {
-        "mapping_artifact": "docs/core/artifacts/ding_2022_fig1d_series_mapping.json",
+        "mapping_artifact": "docs/core/07_artifacts/archive/ding_2022_fig1d_series_mapping.json",
         "mapping_sha256": mapping_hash,
         "series_to_grating_period_um": SERIES_MAPPING,
         "method": report["method"],
@@ -149,7 +149,7 @@ def main() -> int:
     target["source_locator"]["series_mapping_status"] = "CLOSED_COLOR_TO_GRATING_PERIOD"
     target["source_locator"]["series_mapping"] = SERIES_MAPPING
     target["source_locator"]["mapping_artifact"] = {
-        "path": "docs/core/artifacts/ding_2022_fig1d_series_mapping.json",
+        "path": "docs/core/07_artifacts/archive/ding_2022_fig1d_series_mapping.json",
         "sha256": mapping_hash,
     }
     target["benchmark_role"] = "permitted training/comparison source for normalized shape only; no fitting in current wave"
@@ -158,7 +158,7 @@ def main() -> int:
     package["usage_policy"]["blocker"] = "alpha_Phi_K and independent dimensional mapping remain open; raw author numeric route remains optional"
     package["source_access_audit"]["numeric_source_route_status"] = "FIGURE_DIGITIZATION_MAPPING_CLOSED"
     package["source_access_audit"]["figure_mapping_artifact"] = {
-        "path": "docs/core/artifacts/ding_2022_fig1d_series_mapping.json",
+        "path": "docs/core/07_artifacts/archive/ding_2022_fig1d_series_mapping.json",
         "sha256": mapping_hash,
     }
     package["claim_boundary"] = "Ding 2022 is a permitted CC BY figure-derived normalized-shape source with closed printed-legend mapping; it is not raw author data, external validation, or alpha_Phi_K calibration"
@@ -167,7 +167,7 @@ def main() -> int:
     print(json.dumps({
         "status": status,
         "mapping": SERIES_MAPPING,
-        "mapping_artifact": "docs/core/artifacts/ding_2022_fig1d_series_mapping.json",
+        "mapping_artifact": "docs/core/07_artifacts/archive/ding_2022_fig1d_series_mapping.json",
         "mapping_sha256": mapping_hash,
         "manifest_status": manifest["status"],
         "package_status": package["status"],

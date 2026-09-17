@@ -34,10 +34,12 @@ from docs.core.uet_o2_formal_transverse_response import (
 from docs.core.uet_o2_kinetic_collision_kubo import _normal_state_inputs
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_fixed_phi_spectrum_repair_audit.json"
-EOS_PATH = "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py"
-STATIC_PATH = "docs/core/uet_o2_formal_transverse_response.py"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_fixed_phi_spectrum_repair_audit.json"
+EOS_PATH = "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py"
+STATIC_PATH = "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py"
 AUDIT_PATH = "docs/scripts/audit/audit_topic13_fixed_phi_spectrum_repair.py"
+LEGACY_EOS_MODULE = "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+LEGACY_STATIC_MODULE = "docs.core.uet_o2_formal_transverse_response"
 
 
 def digest(path: Path) -> str:
@@ -191,7 +193,14 @@ def consumer_inventory(root: Path = ROOT) -> dict:
                 dependencies.update(base+"."+alias.name for alias in node.names)
         imports[name] = dependencies
 
-    seeds = {EOS_PATH[:-3].replace("/", "."), STATIC_PATH[:-3].replace("/", ".")}
+    seeds = {
+        EOS_PATH[:-3].replace("/", "."),
+        STATIC_PATH[:-3].replace("/", "."),
+        # Keep the pre-migration import names as seed aliases.  The scanner
+        # audits reachability, so compatibility imports remain reviewable.
+        LEGACY_EOS_MODULE,
+        LEGACY_STATIC_MODULE,
+    }
     affected = set(seeds)
     while True:
         grown = affected | {name for name, deps in imports.items() if deps & affected}
@@ -226,7 +235,7 @@ def main() -> int:
     witnesses = fixed_phi_witnesses()
     inventory = consumer_inventory()
     passed = all(witnesses["checks"].values()) and not inventory["parse_errors"]
-    primary = ROOT / "docs/core/artifacts/t13_uet_o2_finite_temperature_quasiparticle_eos_audit.json"
+    primary = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_quasiparticle_eos_audit.json"
     primary_data = json.loads(primary.read_text(encoding="utf-8"))
     fresh = (
         primary_data.get("contract", {}).get("spectrum_revision") == "FIXED_PHI_CANONICAL_V2"
@@ -245,9 +254,9 @@ def main() -> int:
     ))
     source_paths = [
         EOS_PATH, STATIC_PATH, AUDIT_PATH,
-        "docs/core/uet_covariant_matter.py",
-        "docs/core/uet_o2_finite_density_eos.py",
-        "docs/core/test/test_topic13_fixed_phi_spectrum_regression.py",
+        "docs/core/02_equations/covariant/uet_covariant_matter.py",
+        "docs/core/02_equations/o2/uet_o2_finite_density_eos.py",
+        "docs/core/05_tests/regression/root/test_topic13_fixed_phi_spectrum_regression.py",
     ]
     artifact = {
         "schema_version": "t13-fixed-phi-spectrum-repair-v1",
@@ -285,9 +294,9 @@ def main() -> int:
             "global_acceptance": "Not regenerated; bounded He4 composition is not evidence of full thermodynamic closure.",
         },
         "known_unrepaired_copied_formula": {
-            "path": "docs/core/uet_o2_kinetic_collision_kubo.py",
+            "path": "docs/core/02_equations/o2/uet_o2_kinetic_collision_kubo.py",
             "symbol": "_normal_state_inputs",
-            "source_sha256": digest(ROOT / "docs/core/uet_o2_kinetic_collision_kubo.py"),
+            "source_sha256": digest(ROOT / "docs/core/02_equations/o2/uet_o2_kinetic_collision_kubo.py"),
             "finding": "Probe canonical mass, signed chemical potential and coupling independently; full action tensor/channel matching is separate.",
             "canonical_inputs": list(copied_inputs),
             "input_normalization_repaired": copied_repaired,

@@ -28,11 +28,11 @@ from docs.core.uet_covariant_matter import CovariantMatterConfig  # noqa: E402
 from docs.core.uet_covariant_response import CovariantResponseConfig  # noqa: E402
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_two_loop_sunset_cut_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_two_loop_sunset_cut.py"
-TRANSITION_MODULE = ROOT / "docs/core/uet_o2_action_derived_transition_kernel.py"
-TRANSITION_AUDIT = ROOT / "docs/core/artifacts/t13_uet_o2_action_derived_transition_kernel_audit.json"
-ONE_LOOP_NO_GO = ROOT / "docs/core/artifacts/t13_uet_o2_one_loop_retarded_self_energy_no_go_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_two_loop_sunset_cut_audit.json"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_two_loop_sunset_cut.py"
+TRANSITION_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_action_derived_transition_kernel.py"
+TRANSITION_AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_action_derived_transition_kernel_audit.json"
+ONE_LOOP_NO_GO = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_one_loop_retarded_self_energy_no_go_audit.json"
 
 
 def sha256(path: Path) -> str:
@@ -123,10 +123,10 @@ def main() -> int:
     failed = [key for key, value in checks.items() if not value]
     status = TWO_LOOP_SUNSET_CUT_STATUS if not failed else "BLOCKED_ACTION_DERIVED_TWO_LOOP_SUNSET_CUT_LANE"
     evidence = [
-        {"path": "docs/core/uet_o2_two_loop_sunset_cut.py", "sha256": sha256(MODULE)},
-        {"path": "docs/core/uet_o2_action_derived_transition_kernel.py", "sha256": sha256(TRANSITION_MODULE)},
-        {"path": "docs/core/artifacts/t13_uet_o2_action_derived_transition_kernel_audit.json", "sha256": sha256(TRANSITION_AUDIT)},
-        {"path": "docs/core/artifacts/t13_uet_o2_one_loop_retarded_self_energy_no_go_audit.json", "sha256": sha256(ONE_LOOP_NO_GO)},
+        {"path": "docs/core/02_equations/o2/uet_o2_two_loop_sunset_cut.py", "sha256": sha256(MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_action_derived_transition_kernel.py", "sha256": sha256(TRANSITION_MODULE)},
+        {"path": "docs/core/07_artifacts/topic13/t13_uet_o2_action_derived_transition_kernel_audit.json", "sha256": sha256(TRANSITION_AUDIT)},
+        {"path": "docs/core/07_artifacts/topic13/t13_uet_o2_one_loop_retarded_self_energy_no_go_audit.json", "sha256": sha256(ONE_LOOP_NO_GO)},
     ]
     artifact = {
         "schema_version": "t13-uet-o2-two-loop-sunset-cut-v1",

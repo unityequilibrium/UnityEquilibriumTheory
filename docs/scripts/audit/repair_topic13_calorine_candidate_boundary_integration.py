@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[3]
 GATE = ROOT / "docs/scripts/audit/audit_topic13_full_bridge_gate.py"
 MANIFEST = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/DATA_MANIFEST.md"
 UPDATE_LOG = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
-ARTIFACT = ROOT / "docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json"
 
 
 def sha256(path: Path) -> str:
@@ -41,12 +41,12 @@ def integrate_gate() -> bool:
 
     load_old = (
         '    independent_csrc_acceptance_path, independent_csrc_acceptance = load(\n'
-        '        "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json"\n'
+        '        "docs/core/07_artifacts/topic13/t13_independent_csrc_acceptance_contract.json"\n'
         '    )\n'
     )
     load_new = load_old + (
         '    calorine_candidate_path, calorine_candidate = load(\n'
-        '        "docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json"\n'
+        '        "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json"\n'
         '    )\n'
     )
     if "calorine_candidate_path, calorine_candidate" not in text:
@@ -111,7 +111,7 @@ Public route: [Calorine thermal-conductivity BTE tutorial](https://calorine.mate
 
 The route is source-located as a candidate independent reproduction path. Its public inputs include `graphite-prim.xyz` (MD5 `76a98ce37aa503552a23883c4054f64a`) and `nep-C.txt` (MD5 `6196d0146f2314249bc2c8b9b743cad5`), while the tutorial generates `fc2/fc3` and uses a small `16x16x8` mesh with RTA. No deposited mode-resolved `C_src(T)` rows, source-grade uncertainty/convergence package, Ding natural-graphite defect-state mapping, or base-Phi SI anchor is imported. The route remains comparison/candidate-only.
 
-Artifact: `docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json` (SHA-256 `{sha256(ARTIFACT)}`).
+Artifact: `docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json` (SHA-256 `{sha256(ARTIFACT)}`).
 """
     MANIFEST.write_text(text.rstrip() + block, encoding="utf-8")
     return True
@@ -132,7 +132,7 @@ WHAT_IS_ACTUALLY_CLOSED: The public Calorine/Zenodo route is source-located. It 
 WHAT_REMAINS_OPEN: No deposited mode-resolved `C_src(T)` rows, source-grade uncertainty/convergence package, Ding natural-graphite defect-state mapping, base-Phi SI anchor, or `alpha_Phi_K` is available from this route.
 DEPENDENCY_UNLOCKED: Public candidate-route provenance only; no Ding source, alpha, bridge, transport, Core, Gravity, or Galaxy unlock.
 STATUS: `PASS_SCOPED_CALORINE_NEP_BTE_CANDIDATE_BOUNDARY`; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
-WHAT_CHANGED: Added `docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json` (SHA-256 `{artifact_hash}`), a focused test, and full-gate source-package integration.
+WHAT_CHANGED: Added `docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json` (SHA-256 `{artifact_hash}`), a focused test, and full-gate source-package integration.
 EQUATION_OR_MAPPING: Candidate route is `NEP graphite -> fc2/fc3 -> phono3py BTE -> C_src(T)`; Topic 13 still requires `C_src(T)=sum_mu c_mu(T)` in `J m^-3 K^-1` with uncertainty and an accepted material/state mapping. No `Delta_Tq = alpha_Phi_K * Delta_Phi` calibration is emitted.
 VERIFICATION: Public documentation and Zenodo API inventory were checked. The route is explicitly marked candidate-only; no fit, tuning, alpha emission, target access, or holdout access was performed.
 CONTROLLING_BLOCKER: `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing` remains the source controller; `alpha_Phi_K` remains independently unresolved. :codex-annotation{{index="1"}}

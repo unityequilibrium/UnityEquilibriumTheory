@@ -30,9 +30,9 @@ Source material and scope are recorded at PDF pp. 1-2: synthetic graphite from A
 
 - Source package: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/lowitzer_2006_graphite_pvt_full_source_package.json`
 - Local raw payload: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/lowitzer_2006_graphite_pvt.pdf` (local-only raw input; SHA-256 `401831675de0fa4ae36405f469553dcc39b12ae29cfc1799023aef8ecc658a2a`)
-- Source-pair audit: `docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json`
-- Matched-source boundary: `docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json`
+- Source-pair audit: `docs/core/07_artifacts/topic13/t13_lowitzer_graphite_pvt_full_source_pair_audit.json`
+- Matched-source boundary: `docs/core/07_artifacts/topic13/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json`
 - Canonical full gate: `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`
-- Closure matrix: `docs/core/artifacts/t13_topic13_closure_matrix.json`
+- Closure matrix: `docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json`
 
 The raw PDF is intentionally covered by the repository local-only raw-data rule. Its path, byte count, hash, locator, and preprocessing boundary are retained in the source package and audit artifact.

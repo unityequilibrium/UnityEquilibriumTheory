@@ -9,10 +9,10 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUTPUT = ROOT / "docs/core/artifacts/t13_phi_equation_registry_mapping_boundary_audit.json"
-REGISTRY = "docs/core/artifacts/uet_equation_correspondence_registry.json"
-ACTIVE_LANE = "docs/core/artifacts/uet_active_lane_units_observable_register.json"
-BASE_PHI_AUDIT = "docs/core/artifacts/t13_base_phi_registry_completeness_audit.json"
+OUTPUT = ROOT / "docs/core/07_artifacts/topic13/t13_phi_equation_registry_mapping_boundary_audit.json"
+REGISTRY = "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json"
+ACTIVE_LANE = "docs/core/07_artifacts/archive/uet_active_lane_units_observable_register.json"
+BASE_PHI_AUDIT = "docs/core/07_artifacts/topic13/t13_base_phi_registry_completeness_audit.json"
 
 
 def read_json(relative: str) -> dict:

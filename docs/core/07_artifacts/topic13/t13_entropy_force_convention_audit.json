@@ -1,0 +1,327 @@
+{
+  "major_result_id": "T13_ENTROPY_FORCE_NORMALIZATION_COUNTEREXAMPLE",
+  "closure_level": "PARTIAL",
+  "status": "BLOCKED_PHYSICAL_ENTROPY_INTERPRETATION",
+  "what_is_closed": "Counterexample to interpreting X.q as div(Js) under declared X=-grad(T)/T and Js=s*u+q/T; positivity alone is insufficient.",
+  "equation_or_mapping": "Heat-only rest limit: T ds/dt=-d_x q; sigma=ds/dt+d_x(q/T)=-q*d_x(T)/T^2=X.q/T.",
+  "units": "Natural k_B=1; X.q has one extra temperature factor relative to entropy production.",
+  "derivation_class": "Independent product-rule and local energy-balance diagnostic",
+  "observable": "Formal entropy-current divergence, not material heat transport",
+  "data_role": "ANALYTIC_MANUFACTURED_CONTROL_NO_CALIBRATION",
+  "witnesses": [
+    {
+      "temperature": 0.22,
+      "gradient": -0.01,
+      "q": 0.045454545454545456,
+      "reported_entropy_production": 0.002066115702479339,
+      "entropy_current_divergence": 0.009391435011269723,
+      "reported_over_divergence": 0.21999999999999997,
+      "reported_divided_by_T": 0.009391435011269723,
+      "direct_current_difference": [
+        {
+          "relative_temperature_step": 0.01,
+          "divergence": 0.009392374248694647,
+          "relative_error": 0.00010001000100579027
+        },
+        {
+          "relative_temperature_step": 0.005,
+          "divergence": 0.009391669803014828,
+          "relative_error": 2.500062501886724e-05
+        },
+        {
+          "relative_temperature_step": 0.0025,
+          "divergence": 0.009391493708105466,
+          "relative_error": 6.2500390698438935e-06
+        }
+      ]
+    },
+    {
+      "temperature": 0.5,
+      "gradient": -0.01,
+      "q": 0.02,
+      "reported_entropy_production": 0.0004,
+      "entropy_current_divergence": 0.0008,
+      "reported_over_divergence": 0.5,
+      "reported_divided_by_T": 0.0008,
+      "direct_current_difference": [
+        {
+          "relative_temperature_step": 0.01,
+          "divergence": 0.000800080008000803,
+          "relative_error": 0.00010001000100379187
+        },
+        {
+          "relative_temperature_step": 0.005,
+          "divergence": 0.0008000200005000013,
+          "relative_error": 2.500062500154776e-05
+        },
+        {
+          "relative_temperature_step": 0.0025,
+          "divergence": 0.0008000050000312176,
+          "relative_error": 6.250039021882259e-06
+        }
+      ]
+    },
+    {
+      "temperature": 1.0,
+      "gradient": -0.01,
+      "q": 0.01,
+      "reported_entropy_production": 0.0001,
+      "entropy_current_divergence": 0.0001,
+      "reported_over_divergence": 1.0,
+      "reported_divided_by_T": 0.0001,
+      "direct_current_difference": [
+        {
+          "relative_temperature_step": 0.01,
+          "divergence": 0.00010001000100010038,
+          "relative_error": 0.00010001000100379187
+        },
+        {
+          "relative_temperature_step": 0.005,
+          "divergence": 0.00010000250006250017,
+          "relative_error": 2.500062500154776e-05
+        },
+        {
+          "relative_temperature_step": 0.0025,
+          "divergence": 0.0001000006250039022,
+          "relative_error": 6.250039021882259e-06
+        }
+      ]
+    },
+    {
+      "temperature": 2.0,
+      "gradient": -0.01,
+      "q": 0.005,
+      "reported_entropy_production": 2.5e-05,
+      "entropy_current_divergence": 1.25e-05,
+      "reported_over_divergence": 2.0,
+      "reported_divided_by_T": 1.25e-05,
+      "direct_current_difference": [
+        {
+          "relative_temperature_step": 0.01,
+          "divergence": 1.2501250125012547e-05,
+          "relative_error": 0.00010001000100379187
+        },
+        {
+          "relative_temperature_step": 0.005,
+          "divergence": 1.250031250781252e-05,
+          "relative_error": 2.500062500154776e-05
+        },
+        {
+          "relative_temperature_step": 0.0025,
+          "divergence": 1.2500078125487774e-05,
+          "relative_error": 6.250039021882259e-06
+        }
+      ]
+    }
+  ],
+  "current_reference_comparison": {
+    "temperature": {
+      "historical": 0.22,
+      "current": 0.22,
+      "absolute_difference": 0.0,
+      "relative_difference": 0.0
+    },
+    "chemical_potential": {
+      "historical": 0.35,
+      "current": 0.35,
+      "absolute_difference": 0.0,
+      "relative_difference": 0.0
+    },
+    "space_response": {
+      "historical": 0.15,
+      "current": 0.15,
+      "absolute_difference": 0.0,
+      "relative_difference": 0.0
+    },
+    "entropy_density": {
+      "historical": 0.003082237702779398,
+      "current": 0.003082237702762999,
+      "absolute_difference": 1.6398774699277752e-14,
+      "relative_difference": 5.320412077397603e-12
+    },
+    "pressure": {
+      "historical": 0.00011423395970049235,
+      "current": 0.00011423395970050525,
+      "absolute_difference": 1.2902005852577503e-17,
+      "relative_difference": 1.1294369805971013e-13
+    },
+    "energy_density": {
+      "historical": 0.0007325968938388499,
+      "current": 0.0007325968938122713,
+      "absolute_difference": 2.657856573717865e-14,
+      "relative_difference": 3.6279932334828006e-11
+    },
+    "charge_density": {
+      "historical": 0.0004821101683653563,
+      "current": 0.00048211016829976204,
+      "absolute_difference": 6.559423143537302e-14,
+      "relative_difference": 1.3605651931751814e-10
+    },
+    "enthalpy_per_charge": {
+      "historical": 1.7565090079112182,
+      "current": 1.7565090080950996,
+      "absolute_difference": 1.8388135458735633e-10,
+      "relative_difference": 1.0468568835068024e-10
+    },
+    "operator_state_count": {
+      "historical": 96,
+      "current": 96,
+      "absolute_difference": 0,
+      "relative_difference": 0.0
+    },
+    "transition_channel_count": {
+      "historical": 64,
+      "current": 64,
+      "absolute_difference": 0,
+      "relative_difference": 0.0
+    },
+    "kappa_natural": {
+      "historical": 257.37286696883626,
+      "current": 257.3728670227229,
+      "absolute_difference": 5.3886651585344225e-08,
+      "relative_difference": 2.0937192105751006e-10
+    },
+    "heat_response_isotropy_residual": {
+      "historical": 4.433922804155191e-11,
+      "current": 4.433966975263725e-11,
+      "absolute_difference": 4.417110853379098e-16,
+      "relative_difference": 9.9620833480449e-06
+    },
+    "collision_operator_min_eigenvalue": {
+      "historical": -4.45813633260368e-22,
+      "current": -5.793723222428733e-22,
+      "absolute_difference": 1.3355868898250525e-22,
+      "relative_difference": 0.2995841289234489
+    },
+    "collision_operator_symmetry_residual": {
+      "historical": 1.9341094244005622e-22,
+      "current": 1.1836151081105104e-22,
+      "absolute_difference": 7.504943162900518e-23,
+      "relative_difference": 0.38803094944984934
+    },
+    "entropy_production": {
+      "historical": 257.37286696883626,
+      "current": 257.3728670227229,
+      "absolute_difference": 5.3886651585344225e-08,
+      "relative_difference": 2.0937192105751006e-10
+    },
+    "kinetic_entropy_production": {
+      "historical": 257.372866957425,
+      "current": 257.37286701131177,
+      "absolute_difference": 5.388676527218195e-08,
+      "relative_difference": 2.0937236278716193e-10
+    },
+    "entropy_balance_residual": {
+      "historical": 1.1411259492888348e-08,
+      "current": 1.1411145806050627e-08,
+      "absolute_difference": 1.1368683772161603e-13,
+      "relative_difference": 9.962689726972488e-06
+    },
+    "kinetic_equation_residual": {
+      "historical": 5.1199485579650025e-17,
+      "current": 6.488369612193798e-17,
+      "absolute_difference": 1.3684210542287954e-17,
+      "relative_difference": 0.2672724225129117
+    },
+    "charge_balance_residual": {
+      "historical": 1.3757887248623592e-19,
+      "current": 5.310663935029557e-20,
+      "absolute_difference": 8.447223313594035e-20,
+      "relative_difference": 0.6139913171943706
+    },
+    "energy_balance_residual": {
+      "historical": 1.889426413079151e-19,
+      "current": 7.22492266624088e-19,
+      "absolute_difference": 5.335496253161728e-19,
+      "relative_difference": 2.8238708934245302
+    },
+    "momentum_balance_residual": {
+      "historical": 6.799241443583089e-20,
+      "current": 9.457956184674395e-20,
+      "absolute_difference": 2.658714741091306e-20,
+      "relative_difference": 0.39103108238647966
+    },
+    "heat_flux_response_residual": {
+      "historical": 1.1426070575009013e-08,
+      "current": 1.1426185068748983e-08,
+      "absolute_difference": 1.1449373997001946e-13,
+      "relative_difference": 1.0020394957163929e-05
+    },
+    "force_orthogonality_residual": {
+      "historical": 0.0,
+      "current": 0.0,
+      "absolute_difference": 0.0,
+      "relative_difference": null
+    },
+    "heat_flux_orthogonality_residual": {
+      "historical": 0.0,
+      "current": 0.0,
+      "absolute_difference": 0.0,
+      "relative_difference": null
+    },
+    "projector_orthogonality_residual": {
+      "historical": 8.028643012164582e-16,
+      "current": 8.405835326045755e-16,
+      "absolute_difference": 3.771923138811731e-17,
+      "relative_difference": 0.046980830173875075
+    },
+    "lorentz_covariance_residual": {
+      "historical": 1.4210854715202004e-14,
+      "current": 1.4210854715202004e-14,
+      "absolute_difference": 0.0,
+      "relative_difference": 0.0
+    },
+    "equilibrium_heat_flux_norm": {
+      "historical": 0.0,
+      "current": 0.0,
+      "absolute_difference": 0.0,
+      "relative_difference": null
+    }
+  },
+  "reference_scope": "Existing entropy default EOS config, NOT action_bridge_config; equal T/mu/Phi alone does not establish identical action parameters.",
+  "verification_status": "COUNTEREXAMPLE_REPRODUCED; original positivity/kinetic tests do not check entropy-current divergence",
+  "open_blockers": [
+    "thermal_force_flux_entropy_normalization",
+    "hydrodynamic_frame_and_charge_diffusion_map",
+    "action_configuration_correspondence"
+  ],
+  "repair_options_not_applied": [
+    "Keep X and q conventions; identify X.q as temperature-weighted dissipation and derive physical sigma plus kinetic normalization coherently.",
+    "Use entropy-conjugate Y=X/T and rederive the coefficient/source response, not merely swap the force label."
+  ],
+  "dependency_unlocked": [],
+  "claim_promotion": false,
+  "claim_boundary": "No core equation changed, no historical gate replaced, no SI/Kubo or He4 validation. Finite-cutoff positivity can remain true while physical entropy interpretation is blocked.",
+  "source": {
+    "url": "https://arxiv.org/pdf/2602.20254v3",
+    "locator": "Lemma 4, equations 73-74, printed page 11",
+    "role": "Primary correspondence cross-check; independent local derivation used for test"
+  },
+  "holdout_policy": "No holdout file or calibration data read; no claim of pristine historical context.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/scripts/audit/audit_topic13_entropy_force_convention.py",
+      "sha256": "e0e57683a69d1533cef35aa766e27b384a96f331156079b8cb1520108e97a5d0"
+    },
+    {
+      "path": "docs/core/test/test_topic13_entropy_force_convention.py",
+      "sha256": "ade95b5bc16cd4f6cd967ba60cbd5da84cbf1f7342f8a2631eed061338e3d7bc"
+    },
+    {
+      "path": "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py",
+      "sha256": "89171426c2209521a16ca99e79ef4312cc9d3a987991692cc40ac9235a2fc251"
+    },
+    {
+      "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+      "sha256": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f"
+    },
+    {
+      "path": "docs/core/uet_o2_continuum_collision_operator.py",
+      "sha256": "010c1322063b806a1d87d3708cf5509e696f7370170dc2b859f61fd8f884e9e2"
+    },
+    {
+      "path": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+      "sha256": "9ea6f37eb43e353b8c89e42b1c3dd01c957b2063e41a09230483989accb2b3f4"
+    }
+  ]
+}

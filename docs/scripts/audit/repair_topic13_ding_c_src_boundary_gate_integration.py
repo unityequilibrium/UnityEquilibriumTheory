@@ -24,8 +24,8 @@ def main() -> None:
     )
     text = replace_once(
         text,
-        '    alpha_search_path, alpha_search = load(\n        "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json"\n    )\n',
-        '    alpha_search_path, alpha_search = load(\n        "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json"\n    )\n    ding_c_src_boundary_path, ding_c_src_boundary = load(\n        "docs/core/artifacts/t13_ding_c_src_independent_reproduction_boundary_audit.json"\n    )\n',
+        '    alpha_search_path, alpha_search = load(\n        "docs/core/07_artifacts/topic13/t13_alpha_phi_k_calibration_candidate_audit.json"\n    )\n',
+        '    alpha_search_path, alpha_search = load(\n        "docs/core/07_artifacts/topic13/t13_alpha_phi_k_calibration_candidate_audit.json"\n    )\n    ding_c_src_boundary_path, ding_c_src_boundary = load(\n        "docs/core/07_artifacts/topic13/t13_ding_c_src_independent_reproduction_boundary_audit.json"\n    )\n',
         "Ding boundary load",
     )
     text = replace_once(

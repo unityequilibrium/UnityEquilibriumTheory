@@ -4,15 +4,22 @@ from __future__ import annotations
 
 import hashlib
 import json
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
-ARTIFACTS = ROOT / "docs/core/artifacts"
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+from docs.core.core_paths import canonical_artifact_path
+
+ARTIFACTS = ROOT / "docs/core/07_artifacts"
 READINESS = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_observable_map_readiness.json"
 PILOT = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json"
 SOURCE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_second_sound_source_package.json"
-T13_HE4_COMPOSITION = ARTIFACTS / "t13_he4_core_thermodynamic_bridge_composition_audit.json"
+T13_HE4_COMPOSITION = canonical_artifact_path(
+    "t13_he4_core_thermodynamic_bridge_composition_audit.json", "topic13"
+)
 
 
 def _read(path: Path) -> dict:
@@ -140,7 +147,9 @@ def main() -> int:
     names = ("uet_dimensional_observable_closure_audit.json", "uet_main_theory_wave8_gate.json")
     outputs = dict(zip(names, build_artifacts()))
     for name, payload in outputs.items():
-        (ARTIFACTS / name).write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        canonical_artifact_path(name).write_text(
+            json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        )
     gate = outputs["uet_main_theory_wave8_gate.json"]
     print(f"audit_status={gate['audit_status']}")
     print(f"dimensional_observable_status={gate['dimensional_observable_status']}")

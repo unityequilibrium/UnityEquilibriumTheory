@@ -25,7 +25,7 @@ PACKAGE_REL = (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "huang_2023_nims_mdr_payload_source_package.json"
 )
-OUT_REL = "docs/core/artifacts/t13_huang_2023_nims_mdr_payload_boundary_audit.json"
+OUT_REL = "docs/core/07_artifacts/topic13/t13_huang_2023_nims_mdr_payload_boundary_audit.json"
 DATASET_URL = "https://mdr.nims.go.jp/datasets/bf141c90-3911-4b2c-9fbc-274dad05d5d0"
 ZIP_URL = f"{DATASET_URL}.zip"
 ARTICLE_URL = "https://www.nature.com/articles/s41467-023-37380-5"

@@ -13,4 +13,4 @@ CONTROLLING_BLOCKER: `loop_renormalized_off_shell_self_energy_and_physical_curre
 NEXT_ACTION: Match the loop-renormalized charged off-shell retarded self-energy and current correlator to the SK/KMS construction; do not call the contact normalization a physical transport result.
 CLAIM_BOUNDARY: This closes only the declared local contact SK-to-transition normalization lane. It is not a loop-renormalized physical vertex, complete retarded self-energy, physical Kubo coefficient, SI thermal observable, alpha_Phi_K calibration, TTG prediction, or Full Topic 13 closure.
 
-EVIDENCE: `docs/core/artifacts/t13_uet_o2_contact_sk_transition_vertex_match_audit.json`; full-gate hash integration is recorded in `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.
+EVIDENCE: `docs/core/07_artifacts/topic13/t13_uet_o2_contact_sk_transition_vertex_match_audit.json`; full-gate hash integration is recorded in `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.

@@ -1,0 +1,27 @@
+{
+  "record_type": "human_readable_agent_event_declaration_not_generated_verifier",
+  "recorded_on": "2026-09-10",
+  "topic": "0.13",
+  "event": "INCIDENTAL_PUBLIC_HOLDOUT_SUMMARY_EXPOSURE",
+  "scope": "Research-agent conversation context, not a numeric calibration process",
+  "last_research_commit_before_exposure": "588cc1dda",
+  "exposure_description": "A broad search for Ding/graphite force-constant sources returned text excerpts from the locked 2026 paper. A subsequently opened 2023 article also contained a related-article title/link. Excerpts are not copied into this record.",
+  "incidental_public_summary_exposure": true,
+  "deliberate_open_of_locked_2026_article": false,
+  "holdout_numeric_file_download_in_this_pass": false,
+  "holdout_numeric_calibration_run_in_this_pass": false,
+  "parameter_fit_tuning_or_threshold_change_after_exposure_in_this_pass": false,
+  "automated_process_access_audit_rerun": false,
+  "basis": "Observed conversation/tool actions; not a forensic audit of all historical processes",
+  "future_blind_holdout_eligibility": "REVIEW_REQUIRED",
+  "historical_artifacts": "Preserved as historical results. Their no-access fields do not certify absence of later agent-context exposure.",
+  "containment": [
+    "Do not use exposed content to choose models, parameters, data cuts, thresholds or conclusions.",
+    "Avoid further opening or querying the locked paper; use exact pre-2026 source URLs where possible.",
+    "Do not claim a pristine blind test from this same agent context without a reviewed independence protocol.",
+    "Retain frozen pre-exposure research artifacts and disclose this event in future holdout evaluation."
+  ],
+  "full_topic_unlock": false,
+  "claim_promotion": false,
+  "claim_boundary": "Incidental summary exposure is neither numeric training nor proof of uncontaminated reasoning. No independence waiver or holdout unlock is granted."
+}

@@ -32,7 +32,7 @@ MODULE = ROOT / (
     "docs/core/"
     "uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi.py"
 )
-SOURCE_MODULE = ROOT / "docs/core/uet_o2_finite_temperature_declared_retarded_1pi_grid.py"
+SOURCE_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_declared_retarded_1pi_grid.py"
 SOURCE_ARTIFACT = ROOT / (
     "docs/core/artifacts/"
     "t13_uet_o2_finite_temperature_declared_retarded_1pi_grid_audit.json"
@@ -102,9 +102,9 @@ def main() -> int:
         "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
     ]
     evidence = [
-        {"path": "docs/core/uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi.py", "sha256": sha256(MODULE)},
-        {"path": "docs/core/uet_o2_finite_temperature_declared_retarded_1pi_grid.py", "sha256": sha256(SOURCE_MODULE)},
-        {"path": "docs/core/artifacts/t13_uet_o2_finite_temperature_declared_retarded_1pi_grid_audit.json", "sha256": sha256(SOURCE_ARTIFACT)},
+        {"path": "docs/core/02_equations/o2/uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi.py", "sha256": sha256(MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_finite_temperature_declared_retarded_1pi_grid.py", "sha256": sha256(SOURCE_MODULE)},
+        {"path": "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_declared_retarded_1pi_grid_audit.json", "sha256": sha256(SOURCE_ARTIFACT)},
     ]
     closure_level = "CLOSED_FOR_LANE" if not failed else "OPEN"
     artifact = {

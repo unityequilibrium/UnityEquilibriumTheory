@@ -18,9 +18,9 @@ from docs.core.uet_o2_kinetic_collision_kubo import (
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_quantum_collision_enhancement_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_kinetic_collision_kubo.py"
-EOS_MODULE = ROOT / "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_quantum_collision_enhancement_audit.json"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_kinetic_collision_kubo.py"
+EOS_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py"
 
 
 def sha256(path: Path) -> str:
@@ -136,9 +136,9 @@ def main() -> int:
         else "BLOCKED_ACTION_DERIVED_QUANTUM_COLLISION_ENHANCEMENT_LANE"
     )
     evidence = [
-        {"path": "docs/core/uet_o2_kinetic_collision_kubo.py", "sha256": sha256(MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_kinetic_collision_kubo.py", "sha256": sha256(MODULE)},
         {
-            "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+            "path": "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py",
             "sha256": sha256(EOS_MODULE),
         },
     ]

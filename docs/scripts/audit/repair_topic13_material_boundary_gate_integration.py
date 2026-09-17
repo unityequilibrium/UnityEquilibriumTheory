@@ -26,7 +26,7 @@ def main() -> int:
     text = replace_once(
         text,
         '    iaea_graphite_cv_package_path, iaea_graphite_cv_package = load(\n        "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_graphite_handbook_constant_volume_source_package.json"\n    )\n    phi_e_comparator_path, phi_e_comparator = load(',
-        '    iaea_graphite_cv_package_path, iaea_graphite_cv_package = load(\n        "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_graphite_handbook_constant_volume_source_package.json"\n    )\n    material_boundary_path, material_boundary = load(\n        "docs/core/artifacts/t13_ding_material_regime_boundary_audit.json"\n    )\n    material_boundary_package_path, material_boundary_package = load(\n        "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_graphite_material_regime_boundary_source_package.json"\n    )\n    phi_e_comparator_path, phi_e_comparator = load(',
+        '    iaea_graphite_cv_package_path, iaea_graphite_cv_package = load(\n        "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_graphite_handbook_constant_volume_source_package.json"\n    )\n    material_boundary_path, material_boundary = load(\n        "docs/core/07_artifacts/topic13/t13_ding_material_regime_boundary_audit.json"\n    )\n    material_boundary_package_path, material_boundary_package = load(\n        "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_graphite_material_regime_boundary_source_package.json"\n    )\n    phi_e_comparator_path, phi_e_comparator = load(',
         "material boundary source loading",
     )
     text = replace_once(

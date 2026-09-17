@@ -15,8 +15,8 @@ from scipy.integrate import quad
 from docs.scripts.audit import audit_topic13_normal_thermal_background as thermal
 
 ROOT=Path(__file__).resolve().parents[3]
-OUT=ROOT/"docs/core/artifacts/t13_response_one_loop_match_audit.json"
-REGISTRY_OUT=ROOT/"docs/core/artifacts/uet_equation_correspondence_registry_topic13_response_one_loop_addendum.json"
+OUT=ROOT/"docs/core/07_artifacts/topic13/t13_response_one_loop_match_audit.json"
+REGISTRY_OUT=ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_response_one_loop_addendum.json"
 EQUATION_ID="uet.o2.thermal.response_axis_one_loop_match"
 CFG=thermal.MixtureInputs()
 TEMPERATURES=(.1,.25,.5,1.)
@@ -268,8 +268,8 @@ def main():
            "docs/scripts/audit/audit_topic13_normal_thermal_background.py",
            "docs/scripts/audit/audit_topic13_coupled_gain_loss_operator.py",
            "docs/scripts/audit/audit_topic13_action_normalized_elastic_scattering.py",
-           "docs/core/uet_covariant_matter.py","docs/core/uet_covariant_response.py"]
-    prior="docs/core/artifacts/t13_normal_thermal_background_audit.json"
+           "docs/core/02_equations/covariant/uet_covariant_matter.py","docs/core/02_equations/covariant/uet_covariant_response.py"]
+    prior="docs/core/07_artifacts/topic13/t13_normal_thermal_background_audit.json"
     sha=lambda p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest()
     artifact={
         "schema_version":"t13-response-one-loop-match-v1",
@@ -349,7 +349,7 @@ def main():
                   "evidence_artifacts":[{"path":OUT.relative_to(ROOT).as_posix(),"sha256":sha(OUT.relative_to(ROOT))}],
                   "dependency_role":"diagnostic_only","physical_dependency_unlock":False})
     REGISTRY_OUT.write_text(json.dumps({"schema_version":"uet-equation-registry-addendum-v1","status":"CANDIDATE_DIAGNOSTIC_NOT_MERGED",
-        "extends":"docs/core/artifacts/uet_equation_correspondence_registry.json","equation_entries":[entry],
+        "extends":"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json","equation_entries":[entry],
         "full_core_unlock":False,"claim_promotion":False},indent=2,allow_nan=False)+"\n",encoding="utf-8")
     print(json.dumps({"status":artifact["verification_status"],"checks":checks,
         "pole_refinement":changes,"poles":poles,

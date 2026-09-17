@@ -1,0 +1,263 @@
+{
+  "major_result_id": "T13_MP48_SAME_IRREP_DISTINCT_BRANCHES",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "what_is_closed": [],
+  "equation_or_mapping": "Project each distinct source eigenspace onto crystal characters and existing rigid-shear basis",
+  "units": {
+    "frequency": "cm^-1",
+    "weights": "1"
+  },
+  "derivation_class": "source_harmonic_representation_diagnostic",
+  "observable": "source mode symmetry and shape, not measured populations",
+  "data_role": "SOURCE_MODEL_DIAGNOSTIC",
+  "verification_status": "UNRESOLVED",
+  "checks": {
+    "two_separate_e2g_pairs": true,
+    "grouping_stable": false,
+    "all_modes_accounted": true,
+    "force_symmetry": true
+  },
+  "eigenspaces": [
+    {
+      "indices": [
+        0,
+        1
+      ],
+      "frequencies_cm_inverse": [
+        -1.5191735159868437e-05,
+        1.1403615263701012e-05
+      ],
+      "dimension": 2,
+      "e2g": false,
+      "subspace_leakage": 0.9999999515897711,
+      "e2g_character_error": 3.9999999999999987,
+      "rigid_shear_weight": 1.8593979905309843e-25
+    },
+    {
+      "indices": [
+        2
+      ],
+      "frequencies_cm_inverse": [
+        2.6914100854472018e-05
+      ],
+      "dimension": 1,
+      "e2g": false,
+      "subspace_leakage": 0.9999999515897714,
+      "e2g_character_error": 3.0,
+      "rigid_shear_weight": 5.928734710034783e-25
+    },
+    {
+      "indices": [
+        3,
+        4
+      ],
+      "frequencies_cm_inverse": [
+        29.083635244025864,
+        29.08363524403697
+      ],
+      "dimension": 2,
+      "e2g": true,
+      "subspace_leakage": 1.964765252070012e-12,
+      "e2g_character_error": 3.552713678800501e-15,
+      "rigid_shear_weight": 0.9999999612072137
+    },
+    {
+      "indices": [
+        5
+      ],
+      "frequencies_cm_inverse": [
+        76.13781801216206
+      ],
+      "dimension": 1,
+      "e2g": false,
+      "subspace_leakage": 7.608242207125353e-14,
+      "e2g_character_error": 2.9999999999999987,
+      "rigid_shear_weight": 1.1381726263914831e-27
+    },
+    {
+      "indices": [
+        6
+      ],
+      "frequencies_cm_inverse": [
+        870.0486313491488
+      ],
+      "dimension": 1,
+      "e2g": false,
+      "subspace_leakage": 9.282006570528344e-14,
+      "e2g_character_error": 2.9999999999999996,
+      "rigid_shear_weight": 2.471187416430138e-33
+    },
+    {
+      "indices": [
+        7
+      ],
+      "frequencies_cm_inverse": [
+        872.0506154603005
+      ],
+      "dimension": 1,
+      "e2g": false,
+      "subspace_leakage": 9.270619519070296e-14,
+      "e2g_character_error": 3.0000000000000004,
+      "rigid_shear_weight": 7.594071078289292e-34
+    },
+    {
+      "indices": [
+        8,
+        9
+      ],
+      "frequencies_cm_inverse": [
+        1585.2968262581894,
+        1585.2968262581905
+      ],
+      "dimension": 2,
+      "e2g": true,
+      "subspace_leakage": 2.9476924527016004e-13,
+      "e2g_character_error": 3.774758283725532e-15,
+      "rigid_shear_weight": 3.879278575620815e-08
+    },
+    {
+      "indices": [
+        10,
+        11
+      ],
+      "frequencies_cm_inverse": [
+        1588.0267521999847,
+        1588.0267521999863
+      ],
+      "dimension": 2,
+      "e2g": false,
+      "subspace_leakage": 2.951321379465053e-13,
+      "e2g_character_error": 3.999999999999999,
+      "rigid_shear_weight": 2.6231165842554152e-31
+    }
+  ],
+  "grouping_tolerance_THz": 1e-06,
+  "signed_frequencies_THz": [
+    -4.5543676248619814e-07,
+    3.418717849991245e-07,
+    8.068644450022067e-07,
+    0.8719054497381943,
+    0.8719054497385272,
+    2.2825543608622736,
+    26.08340177716972,
+    26.143419750925627,
+    47.526003220354156,
+    47.526003220354184,
+    47.60784434117903,
+    47.607844341179074
+  ],
+  "grouping_sweep": {
+    "1e-07": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5
+      ],
+      [
+        6
+      ],
+      [
+        7
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        10,
+        11
+      ]
+    ],
+    "1e-06": [
+      [
+        0,
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5
+      ],
+      [
+        6
+      ],
+      [
+        7
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        10,
+        11
+      ]
+    ],
+    "1e-05": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5
+      ],
+      [
+        6
+      ],
+      [
+        7
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        10,
+        11
+      ]
+    ]
+  },
+  "negative_frequencies_preserved": true,
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "open_blockers": [
+    "experimental branch weights and detector inversion",
+    "material/source frequency correspondence",
+    "independent Phi coupling"
+  ],
+  "dependency_unlocked": [
+    "branch-aware source selection only"
+  ],
+  "evidence_hashes": {
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_FORCE_CONSTANTS.gz": "a410f36fd34e8603aec0dde48c1f8cb47fbf0a237ca911437f744fb7cbf02763",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_phonopy.yaml.gz": "00be787d0fbe986304ffdfa51a917b9aa0038deb6d31a563979afe42a7a2b5f8",
+    "docs/scripts/audit/audit_topic13_mp48_e2g_multiplicity.py": "aa63cf7774bf8d1535d73add8db2e6f0cc60546575a4a317f5b26d4f00470295",
+    "docs/core/test/test_topic13_mp48_e2g_multiplicity.py": "d200abc2e4ba6e7be80f0f3d1de9b9ca6e464f2c61d0df0f81c3402447e6408e",
+    "docs/core/uet_interlayer_mode_residue.py": "f7c40cffe59575c7337433099b3c6e4f2ec9ef392182fa2e82361ec315d21ff5",
+    "docs/scripts/audit/audit_topic13_mp48_shear_irrep.py": "2ad13259e0aab2f48ae0e5f335320c47f032df3471179a14a5b26b1c568d8bc7",
+    "docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py": "66bfddff927a9d98ef045e3e56daf1c97ceca2c23aac99df7ff6bad1118b3604"
+  },
+  "claim_boundary": "Source Gamma identification only; does not prove which mode dominates UED, equate Phi to a phonon, or transfer fitted EELS temperatures."
+}

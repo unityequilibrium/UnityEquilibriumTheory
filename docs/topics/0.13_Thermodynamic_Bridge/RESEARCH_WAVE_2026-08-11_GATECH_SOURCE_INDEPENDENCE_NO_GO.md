@@ -39,7 +39,7 @@ CLAIM_BOUNDARY: This no-go is scoped to the information dependency of the Georgi
 
 ## Evidence
 
-- `docs/core/artifacts/t13_gatech_volumetric_cp_independence_audit.json`, SHA-256 `7e9e858548cac1843c6bf5d405aeb192226ea79ef69a7dd5c3dc1e55d3cf8c6e`
+- `docs/core/07_artifacts/topic13/t13_gatech_volumetric_cp_independence_audit.json`, SHA-256 `7e9e858548cac1843c6bf5d405aeb192226ea79ef69a7dd5c3dc1e55d3cf8c6e`
 - `Data/03_Research/gatech_gen3csp_graphite_source_package.json`, SHA-256 `2635be1d91f35c9be6fd36d14a9e4d04384f158dd90340b59c5d7fa3f277bd51`
 - `Data/03_Research/raw/gen3csp_graphite.xlsx`, SHA-256 `baa7f6181fa3d5521fc594cb2c832308927bc77dbac89c43b373bc304eaa6900`
 - Georgia Tech graphite method: <https://gen3csp.gatech.edu/graphite/>

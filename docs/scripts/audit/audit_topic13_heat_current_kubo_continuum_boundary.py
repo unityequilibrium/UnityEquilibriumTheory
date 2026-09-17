@@ -22,11 +22,11 @@ from docs.core.uet_o2_heat_current_kubo_continuum_boundary import (  # noqa: E40
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_heat_current_kubo_continuum_boundary_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_heat_current_kubo_continuum_boundary.py"
-HEAT_MATCH_REL = "docs/core/artifacts/t13_uet_o2_heat_current_kubo_match_audit.json"
-COLLISION_MODULE = ROOT / "docs/core/uet_o2_continuum_collision_operator.py"
-BALANCE_MODULE = ROOT / "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_heat_current_kubo_continuum_boundary_audit.json"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_heat_current_kubo_continuum_boundary.py"
+HEAT_MATCH_REL = "docs/core/07_artifacts/topic13/t13_uet_o2_heat_current_kubo_match_audit.json"
+COLLISION_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_continuum_collision_operator.py"
+BALANCE_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_covariant_entropy_heat_flux_balance.py"
 
 
 def sha256(path: Path) -> str:
@@ -93,10 +93,10 @@ def main() -> int:
         "observable": contract["observable"],
         "data_role": contract["data_role"],
         "evidence_artifacts": [
-            {"path": "docs/core/uet_o2_heat_current_kubo_continuum_boundary.py", "sha256": sha256(MODULE)},
+            {"path": "docs/core/02_equations/o2/uet_o2_heat_current_kubo_continuum_boundary.py", "sha256": sha256(MODULE)},
             {"path": HEAT_MATCH_REL, "sha256": sha256(heat_match_path)},
-            {"path": "docs/core/uet_o2_continuum_collision_operator.py", "sha256": sha256(COLLISION_MODULE)},
-            {"path": "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py", "sha256": sha256(BALANCE_MODULE)},
+            {"path": "docs/core/02_equations/o2/uet_o2_continuum_collision_operator.py", "sha256": sha256(COLLISION_MODULE)},
+            {"path": "docs/core/02_equations/o2/uet_o2_covariant_entropy_heat_flux_balance.py", "sha256": sha256(BALANCE_MODULE)},
         ],
         "verification_status": status,
         "open_blockers": [

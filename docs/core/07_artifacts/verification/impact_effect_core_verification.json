@@ -1,0 +1,61 @@
+{
+  "schema_version": "impact-effect-core-verification-v1",
+  "artifact": "impact_effect_core_verification",
+  "generated_at": "2026-09-18",
+  "status": "PASS",
+  "verification_status": "PASS",
+  "dependency_status": "BLOCKED",
+  "operator_mode": "carrier_neutral_impact_effect_v1",
+  "unit_lane": "normalized_only_v1",
+  "checks": {
+    "effect_without_mass_transfer": {
+      "passed": true,
+      "metric": "active_effect_with_zero_source_mass_transfer"
+    },
+    "no_carrier_no_receiver_change": {
+      "passed": true,
+      "metric": "receiver_state_delta=0"
+    },
+    "explicit_receiver_feedback": {
+      "passed": true,
+      "metric": "explicit_linear_receiver_update"
+    },
+    "observer_protocol_only_changes_record": {
+      "passed": true,
+      "metric": "R_gen_equal_and_R_obs_different"
+    },
+    "trace_feedback_is_disabled": {
+      "passed": true,
+      "metric": "no_R_gen_to_core_feedback_edge"
+    }
+  },
+  "contract": {
+    "operator_mode": "carrier_neutral_impact_effect_v1",
+    "chain": [
+      "impact",
+      "R_gen",
+      "carrier",
+      "detector_interaction",
+      "effect",
+      "R_obs"
+    ],
+    "effect_is_independent_field": false,
+    "trace_feedback_into_core": false,
+    "receiver_feedback_requires": [
+      "explicit mode",
+      "receiver dynamics",
+      "unit lane",
+      "input/ledger"
+    ],
+    "unit_lane": "normalized_only_v1",
+    "candidate_carriers": [
+      "photon",
+      "neutrino",
+      "gravitational_wave",
+      "matter_antimatter_products"
+    ],
+    "claim_boundary": "carrier-neutral candidate relation; no particle identity or transition law derived"
+  },
+  "claim_boundary": "internally verified normalized relation only; no carrier identity or physical transition derivation",
+  "next_controller": "add carrier-specific conservation, units, detector maps, and falsification tests without fitting"
+}

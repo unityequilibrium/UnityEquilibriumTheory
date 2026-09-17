@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "artifact": "uet_fundamental_track_gate",
+  "generated_at": "2026-09-16T10:25:32.000079+00:00",
+  "audit_status": "PASS_ACCOUNTING",
+  "fundamental_unification_status": "HYPOTHESIS_TRACK_BLOCKED",
+  "checks": {
+    "effective_parent_available": true,
+    "tree_level_o2_available": true,
+    "photon_kept_as_standard_baseline": true,
+    "trace_particle_identity_rejected": true,
+    "all_fundamental_prerequisites_closed": false
+  },
+  "controlling_blockers": [
+    "local_gauge_symmetry",
+    "dirac_spinor_action",
+    "c_p_t_cpt",
+    "anomaly_cancellation",
+    "renormalization",
+    "mass_generation"
+  ],
+  "primary_eft_dependency": "NON_BLOCKING",
+  "claim_promotion": false,
+  "next_controller": "declare a local symmetry and complete field representation before writing a Dirac/gauge parent action"
+}

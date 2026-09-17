@@ -18,7 +18,7 @@ PACKAGE = ROOT / PACKAGE_REL
 RAW_ROOT = TOPIC_DATA / "raw/qh15_materialscloud"
 CALORINE_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/calorine_legacy_nep2_pbte_reproduction_source_package.json"
 CALORINE = ROOT / CALORINE_REL
-OUT_REL = "docs/core/artifacts/t13_qh15_graphite_transport_boundary_audit.json"
+OUT_REL = "docs/core/07_artifacts/topic13/t13_qh15_graphite_transport_boundary_audit.json"
 OUT = ROOT / OUT_REL
 
 

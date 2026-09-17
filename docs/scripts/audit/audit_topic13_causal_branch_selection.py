@@ -10,12 +10,12 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-NO_GO_REL = "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json"
-FLUX_REL = "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json"
-COUPLED_REL = "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json"
+NO_GO_REL = "docs/core/07_artifacts/archive/conserved_c_finite_cone_no_go_assessment.json"
+FLUX_REL = "docs/core/07_artifacts/verification/matter_space_conserved_flux_telegraph_verification.json"
+COUPLED_REL = "docs/core/07_artifacts/verification/matter_space_flux_phi_coupled_verification.json"
 THERMAL_GATE_REL = "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/thermal_wave1_branch_gate.json"
 FULL_GATE_REL = "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-OUT = ROOT / "docs/core/artifacts/t13_causal_branch_selection_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_causal_branch_selection_audit.json"
 
 
 def load(rel: str) -> dict[str, Any]:
@@ -92,7 +92,7 @@ def main() -> int:
                 {"path": FLUX_REL, "sha256": sha256(FLUX_REL)},
                 {"path": COUPLED_REL, "sha256": sha256(COUPLED_REL)},
                 {"path": THERMAL_GATE_REL, "sha256": sha256(THERMAL_GATE_REL)},
-                {"path": "docs/core/artifacts/t13_causal_branch_selection_audit.json"}
+                {"path": "docs/core/07_artifacts/topic13/t13_causal_branch_selection_audit.json"}
             ],
             "verification_status": status,
             "open_blockers": [

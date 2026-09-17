@@ -1,0 +1,378 @@
+{
+  "schema_version": "1.0",
+  "registry_id": "UET-RESEARCH-ORGANIZATION",
+  "status": "ACTIVE",
+  "scope": "docs/core organization, ownership, room routing, and migration only",
+  "canonical_path_authority": "docs/core/core_paths.py",
+  "canonical_registry_path": "docs/core/07_artifacts/gates/uet_research_organization_registry.json",
+  "canonical_manifest_path": "docs/core/07_artifacts/provenance/uet_core_file_manifest.json",
+  "canonical_dependency_graph_path": "docs/core/07_artifacts/gates/uet_core_dependency_graph.json",
+  "scientific_status_authority": [
+    "docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
+    "docs/core/07_artifacts/gates/uet_foundation_equation_inventory.json"
+  ],
+  "owners": [
+    {
+      "owner_id": "ORG",
+      "name": "Core organization",
+      "purpose": "file registry, navigation, migration, legacy boundary, and history",
+      "logical_areas": ["00_governance", "08_history", "99_review"],
+      "room_id": "ROOM_CORE_ORGANIZATION"
+    },
+    {
+      "owner_id": "FOUNDATION",
+      "name": "Foundation contracts",
+      "purpose": "ontology, standard correspondence, units, derivation, and claim contracts",
+      "logical_areas": ["01_contracts"],
+      "room_id": "ROOM_CORE_FOUNDATION"
+    },
+    {
+      "owner_id": "EQUATION",
+      "name": "Equation implementation",
+      "purpose": "equation families, production operators, and compatibility entrypoints",
+      "logical_areas": ["02_equations"],
+      "room_id": "ROOM_CORE_FOUNDATION"
+    },
+    {
+      "owner_id": "LANE",
+      "name": "Lane research",
+      "purpose": "topic-specific models, comparators, and observable bridges",
+      "logical_areas": ["03_lanes"],
+      "room_id": "ROOM_CORE_FOUNDATION"
+    },
+    {
+      "owner_id": "EVIDENCE",
+      "name": "Evidence and reproducibility",
+      "purpose": "proofs, tests, gates, artifact generation, and regression control",
+      "logical_areas": ["04_proofs", "05_tests", "07_artifacts"],
+      "room_id": "ROOM_CORE_FOUNDATION"
+    },
+    {
+      "owner_id": "DATA",
+      "name": "Data and provenance",
+      "purpose": "source packages, preprocessing, hashes, units, and derived inputs",
+      "logical_areas": ["06_data"],
+      "room_id": "ROOM_CORE_ORGANIZATION"
+    }
+  ],
+  "rooms": [
+    {
+      "room_id": "ROOM_CORE_ORGANIZATION",
+      "owner_id": "ORG",
+      "purpose": "organization control plane and file migration",
+      "active_slot": "foundation_slot_1",
+      "allowed_outputs": ["registry", "manifest", "migration_map", "organization_audit", "handoff"]
+    },
+    {
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "owner_id": "FOUNDATION",
+      "purpose": "shared equation and evidence contracts",
+      "active_slot": "foundation_slot_1",
+      "allowed_outputs": ["contract", "equation_audit", "gate", "verifier_handoff"]
+    },
+    {
+      "room_id": "ROOM_TOPIC_013",
+      "owner_id": "LANE",
+      "purpose": "thermal and dimensional observable pilot",
+      "active_slot": "foundation_slot_2",
+      "allowed_outputs": ["source_package", "thermal_artifact", "blocked_or_ready_handoff"]
+    },
+    {
+      "room_id": "ROOM_TOPIC_011",
+      "owner_id": "LANE",
+      "purpose": "phase-transition and replication pilot",
+      "active_slot": "foundation_slot_3",
+      "allowed_outputs": ["diagnostic_artifact", "uncertainty_report", "blocked_or_ready_handoff"]
+    }
+  ],
+  "logical_areas": {
+    "00_governance": "rules, indexes, registries, and navigation",
+    "01_contracts": "ontology, correspondence, units, formula, and claim contracts",
+    "02_equations": "equation-family source modules and public operators",
+    "03_lanes": "lane-specific models, comparators, and observable bridges",
+    "04_proofs": "formal derivations and proof runners",
+    "05_tests": "equation, numerical, artifact, and compatibility tests",
+    "06_data": "declared inputs, source packages, manifests, and derived inputs",
+    "07_artifacts": "generated gates, verification outputs, correspondence, and provenance",
+    "08_history": "update logs, research notes, and legacy records",
+    "99_review": "unassigned, ambiguous, or quarantined files"
+  },
+  "evidence_statuses": [
+    "LEGACY",
+    "COMPARATOR",
+    "CANDIDATE",
+    "INTERNAL",
+    "SIMULATION_ONLY",
+    "EXTERNAL_COMPARISON",
+    "BLOCKED"
+  ],
+  "organization_statuses": [
+    "UNASSIGNED",
+    "ASSIGNED",
+    "MIGRATION_READY",
+    "MIGRATED",
+    "QUARANTINED"
+  ],
+  "migration_policy": {
+    "default": "logical_registration_before_physical_move",
+    "preserve_legacy_paths": true,
+    "require_import_scan": true,
+    "require_link_scan": true,
+    "require_compatibility_test": true,
+    "generated_artifacts_are_not_hand_edited": true,
+    "delete_old_path_only_after": "one complete family rerun and reviewer approval"
+  },
+  "dependency_edges": [
+    {"from": "ORG", "to": "FOUNDATION", "reason": "organization metadata routes contract ownership"},
+    {"from": "FOUNDATION", "to": "EQUATION", "reason": "equations require ontology, units, and derivation contract"},
+    {"from": "EQUATION", "to": "LANE", "reason": "lanes consume declared equation families"},
+    {"from": "EQUATION", "to": "EVIDENCE", "reason": "equation changes require verification"},
+    {"from": "DATA", "to": "LANE", "reason": "lanes consume provenance-locked inputs"},
+    {"from": "LANE", "to": "EVIDENCE", "reason": "lane claims require reproducible evidence"}
+  ],
+  "parallel_policy": {
+    "max_active_rooms_during_foundation": 3,
+    "required_active_rooms": ["ROOM_CORE_ORGANIZATION", "ROOM_TOPIC_013", "ROOM_TOPIC_011"],
+    "shared_file_rule": "one canonical owner; other rooms submit a handoff",
+    "one_wave_one_blocker": true
+  },
+  "review_disposition_rules": [
+    {
+      "disposition_id": "W1-T13-HOLDOUT",
+      "patterns": ["docs/core/T13_HOLDOUT_EXPOSURE_*.json"],
+      "owner_id": "DATA",
+      "room_id": "ROOM_TOPIC_013",
+      "logical_area": "06_data",
+      "equation_family_or_lane": "lane.topic13.holdout_source",
+      "organization_status": "ASSIGNED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/06_data/manifests/{name}",
+      "next_action": "add_source_provenance_hash_units_and_preprocessing",
+      "review_action": "assign_to_topic13_data_owner",
+      "reason": "Topic 0.13 holdout metadata belongs to the provenance/data owner; assignment does not make the holdout usable or validated."
+    },
+    {
+      "disposition_id": "W1-FOUNDATION-COARSE-GRAINING",
+      "patterns": ["docs/core/uet_coarse_graining.py"],
+      "owner_id": "FOUNDATION",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "logical_area": "01_contracts",
+      "equation_family_or_lane": "core.coarse_graining_contract_pending",
+      "organization_status": "ASSIGNED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/01_contracts/{name}",
+      "next_action": "close_scale_kernel_units_information_loss_and_observable_map",
+      "review_action": "assign_to_foundation_contract_owner",
+      "reason": "The module defines a cross-lane coarse-graining contract and must be reviewed as foundation metadata before any lane-specific interpretation."
+    },
+    {
+      "disposition_id": "W1-FOUNDATION-GR-CORRESPONDENCE",
+      "patterns": ["docs/core/uet_gr_correspondence.py"],
+      "owner_id": "FOUNDATION",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "logical_area": "01_contracts",
+      "equation_family_or_lane": "core.gr_correspondence_contract_pending",
+      "organization_status": "ASSIGNED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/01_contracts/{name}",
+      "next_action": "close_metric_stress_energy_covariance_and_gr_null_limit",
+      "review_action": "assign_to_foundation_correspondence_owner",
+      "reason": "GR correspondence is a foundation contract and not an application result; the physical mapping remains unclosed."
+    },
+    {
+      "disposition_id": "W2-EQUATION-COVARIANT-PARENT",
+      "patterns": [
+        "docs/core/uet_covariant_parent.py"
+      ],
+      "owner_id": "EQUATION",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "logical_area": "02_equations",
+      "equation_family_or_lane": "core.covariant_parent",
+      "organization_status": "ASSIGNED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/02_equations/covariant/{name}",
+      "next_action": "verify_parent_formula_chain_and_preserve_curved_3p1_gr_blocker",
+      "review_action": "assign_to_covariant_parent_equation_owner",
+      "reason": "The integrated conservative parent has a local formula/verifier chain; organization assignment does not establish curved GR evolution, dimensional closure, or physical validation."
+    },
+    {
+      "disposition_id": "W2-EQUATION-COVARIANT-DIFFUSION",
+      "patterns": [
+        "docs/core/uet_covariant_diffusion.py"
+      ],
+      "owner_id": "EQUATION",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "logical_area": "02_equations",
+      "equation_family_or_lane": "core.covariant_diffusion",
+      "organization_status": "ASSIGNED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/02_equations/covariant/{name}",
+      "next_action": "verify_covariant_current_link_chain_and_preserve_uv_kms_si_blockers",
+      "review_action": "assign_to_covariant_diffusion_equation_owner",
+      "reason": "The current bridge has local constitutive, conservation, energy, and adiabatic-limit evidence; assignment does not establish microscopic transport, full gradient-phase causality, KMS completion, SI closure, or physical validation."
+    },
+    {
+      "disposition_id": "W1-EQUATION-COVARIANT",
+      "patterns": [
+        "docs/core/uet_covariant_open_system.py",
+        "docs/core/uet_covariant_theory_spine.py",
+        "docs/core/uet_curved_3p1_*.py"
+      ],
+      "owner_id": "EQUATION",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "logical_area": "02_equations",
+      "equation_family_or_lane": "core.covariant_pending",
+      "organization_status": "ASSIGNED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/02_equations/covariant/{name}",
+      "next_action": "link_parent_action_principal_symbol_constraints_units_and_verifier",
+      "review_action": "assign_to_covariant_equation_owner",
+      "reason": "These are covariant equation surfaces, but ownership does not imply a closed parent action, hyperbolic evolution, or GR validation."
+    },
+    {
+      "disposition_id": "W1-EQUATION-MATTER-SPACE",
+      "patterns": [
+        "docs/core/uet_matter_space_flux_*.py"
+      ],
+      "owner_id": "EQUATION",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "logical_area": "02_equations",
+      "equation_family_or_lane": "core.matter_space_flux",
+      "organization_status": "ASSIGNED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/02_equations/matter_space/{name}",
+      "next_action": "verify_bounded_flux_family_links_and_preserve_original_kappa_C_gt_0_blocker",
+      "review_action": "assign_to_matter_space_equation_owner",
+      "reason": "Matter-space flux modules now have a declared bounded family contract; organization assignment still does not promote the normalized branch or remove the original causal blocker."
+    },
+    {
+      "disposition_id": "W1-EQUATION-O2-EXTENDED",
+      "patterns": ["docs/core/uet_o2_*.py"],
+      "owner_id": "EQUATION",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "logical_area": "02_equations",
+      "equation_family_or_lane": "core.o2_extended_pending",
+      "organization_status": "ASSIGNED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/02_equations/o2/{name}",
+      "next_action": "link_o2_action_units_derivation_kubo_status_and_verifier",
+      "review_action": "assign_to_o2_equation_owner",
+      "reason": "The O(2) surfaces form an extended equation family; their extensive thermal/Kubo work is not automatically a closed UET derivation."
+    },
+    {
+      "disposition_id": "W1-LANE-QUANTUM-OBSERVER",
+      "patterns": [
+        "docs/core/uet_quantum_interpretations.py",
+        "docs/core/uet_quantum_measurement.py"
+      ],
+      "owner_id": "LANE",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "logical_area": "03_lanes",
+      "equation_family_or_lane": "lane.quantum_measurement_pending",
+      "organization_status": "ASSIGNED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/03_lanes/carrier_observer/{name}",
+      "next_action": "separate_operational_qm_from_interpretation_and_verify_detector_map",
+      "review_action": "assign_to_quantum_observer_lane_owner",
+      "reason": "Quantum measurement and interpretation are a downstream observer lane; the assignment preserves the rule that interpretation metadata cannot change physical dynamics."
+    },
+    {
+      "disposition_id": "W1-LANE-TOPIC13-SUPPORT",
+      "patterns": [
+        "docs/core/t13_*.py",
+        "docs/core/topic13_*.py"
+      ],
+      "owner_id": "LANE",
+      "room_id": "ROOM_TOPIC_013",
+      "logical_area": "03_lanes",
+      "equation_family_or_lane": "lane.topic13.thermal_pending",
+      "organization_status": "ASSIGNED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/03_lanes/topic13_support/{name}",
+      "next_action": "link_observable_units_provenance_calibration_and_holdout_policy",
+      "review_action": "assign_to_topic13_lane_owner",
+      "reason": "The filename and existing topic role identify Topic 0.13 support, but dimensional mapping and external evidence remain blocked."
+    },
+    {
+      "disposition_id": "W1-LANE-THERMAL-SUPPORT",
+      "patterns": [
+        "docs/core/he4_*.py",
+        "docs/core/standard_o2_*.py",
+        "docs/core/thermal_*.py",
+        "docs/core/uet_anisotropic_thermoelastic_response_bridge.py",
+        "docs/core/uet_dynamic_thermoelastic_response.py",
+        "docs/core/uet_dynamical_stability.py",
+        "docs/core/uet_interlayer_mode_residue.py",
+        "docs/core/uet_lattice_momentum_relaxing_heat_parent.py",
+        "docs/core/uet_material_interface_factor_resolution.py",
+        "docs/core/uet_material_lattice_interface_contract.py",
+        "docs/core/uet_matter_strain_susceptibility.py",
+        "docs/core/uet_mode_work_heat.py",
+        "docs/core/uet_raman_deformation_constraint.py",
+        "docs/core/uet_reciprocal_thermal_dynamics.py",
+        "docs/core/uet_scalar_thermoelastic_response_bridge.py",
+        "docs/core/uet_shear_symmetry.py",
+        "docs/core/uet_thermoelastic_spatial_compatibility.py",
+        "docs/core/uet_transport_coefficient_identifiability.py"
+      ],
+      "owner_id": "LANE",
+      "room_id": "ROOM_TOPIC_013",
+      "logical_area": "03_lanes",
+      "equation_family_or_lane": "lane.topic13.thermal_transport_pending",
+      "organization_status": "ASSIGNED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/03_lanes/thermal/{name}",
+      "next_action": "link_formula_units_observable_verifier_and_external_provenance",
+      "review_action": "assign_to_thermal_lane_owner",
+      "reason": "These modules support thermal, thermoelastic, or transport diagnostics; assignment does not establish a dimensional Phi-to-temperature map or empirical validation."
+    },
+    {
+      "disposition_id": "W2-EQUATION-TRACE",
+      "patterns": [
+        "docs/core/uet_trace.py"
+      ],
+      "owner_id": "EQUATION",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "logical_area": "02_equations",
+      "equation_family_or_lane": "core.trace",
+      "organization_status": "ASSIGNED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/02_equations/matter_space/{name}",
+      "next_action": "repair_trace_compact_support_and_define_dimensional_measurement_operator_without_backreaction",
+      "review_action": "assign_to_trace_equation_owner",
+      "reason": "The trace module has an existing normalized derived-observable record and local causal/history tests; assignment does not establish continuum Green-function validity, SI measurement, energy-reservoir semantics, or feedback into physical dynamics."
+    },
+    {
+      "disposition_id": "W2-EQUATION-NOETHER-MAPPING",
+      "patterns": [
+        "docs/core/uet_noether.py",
+        "docs/core/uet_noether_phase_field_map.py"
+      ],
+      "owner_id": "EQUATION",
+      "room_id": "ROOM_CORE_FOUNDATION",
+      "logical_area": "02_equations",
+      "equation_family_or_lane": "core.noether_mapping",
+      "organization_status": "ASSIGNED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/02_equations/lorentz_noether/{name}",
+      "next_action": "link_noether_coordinate_formulas_and_preserve_eos_transport_observable_blockers",
+      "review_action": "assign_to_noether_mapping_equation_owner",
+      "reason": "The Noether surface contains a legacy diagnostic and a bounded hydrodynamic coordinate map; assignment does not establish a universal C ontology, microscopic inversion, equation of state, transport closure, or physical validation."
+    },
+    {
+      "disposition_id": "W1-QUARANTINE-UNMATCHED",
+      "patterns": ["docs/core/*"],
+      "owner_id": "ORG",
+      "room_id": "ROOM_CORE_ORGANIZATION",
+      "logical_area": "99_review",
+      "equation_family_or_lane": "QUARANTINE",
+      "organization_status": "QUARANTINED",
+      "evidence_status": "BLOCKED",
+      "target_path_template": "docs/core/99_review/{name}",
+      "next_action": "manual_scope_review",
+      "review_action": "quarantine_unmatched_review_surface",
+      "reason": "No explicit family/lane rule matched this review surface; quarantine prevents an unverified ownership inference from entering a downstream lane."
+    }
+  ]
+}

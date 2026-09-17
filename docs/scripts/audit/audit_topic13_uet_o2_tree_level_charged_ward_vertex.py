@@ -20,9 +20,9 @@ from docs.core.uet_o2_tree_level_charged_ward_vertex import (  # noqa: E402
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_tree_level_charged_ward_vertex_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_tree_level_charged_ward_vertex.py"
-PROPAGATOR = ROOT / "docs/core/uet_o2_finite_density_charged_vertex.py"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_tree_level_charged_ward_vertex_audit.json"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_tree_level_charged_ward_vertex.py"
+PROPAGATOR = ROOT / "docs/core/02_equations/o2/uet_o2_finite_density_charged_vertex.py"
 
 
 def sha256(path: Path) -> str:
@@ -84,8 +84,8 @@ def main() -> int:
             "observable": contract["observable"],
             "data_role": contract["data_role"],
             "evidence_artifacts": [
-                {"path": "docs/core/uet_o2_tree_level_charged_ward_vertex.py", "sha256": sha256(MODULE)},
-                {"path": "docs/core/uet_o2_finite_density_charged_vertex.py", "sha256": sha256(PROPAGATOR)},
+                {"path": "docs/core/02_equations/o2/uet_o2_tree_level_charged_ward_vertex.py", "sha256": sha256(MODULE)},
+                {"path": "docs/core/02_equations/o2/uet_o2_finite_density_charged_vertex.py", "sha256": sha256(PROPAGATOR)},
             ],
             "verification_status": status,
             "open_blockers": open_blockers,

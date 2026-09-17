@@ -31,7 +31,7 @@ PACKAGE_REL = (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "calorine_legacy_nep2_backend_probe_source_package.json"
 )
-OUT_REL = "docs/core/artifacts/t13_calorine_legacy_nep2_backend_probe_audit.json"
+OUT_REL = "docs/core/07_artifacts/topic13/t13_calorine_legacy_nep2_backend_probe_audit.json"
 
 MODEL_URL = "https://zenodo.org/api/records/7811021/files/nep-C-CX.txt/content"
 STRUCTURE_URL = "https://zenodo.org/api/records/21198312/files/graphite-prim.xyz/content"

@@ -7,7 +7,7 @@ import importlib.util
 repo_root = Path("c:/Users/santa/Desktop/lad/Lab_uet_harness_v0.9.0")
 sys.path.insert(0, str(repo_root))
 
-from docs.core.uet_bug_hunter import UETBugHunter
+from docs.scripts.core.audit.uet_bug_hunter import UETBugHunter
 
 
 def load_module(name, path):

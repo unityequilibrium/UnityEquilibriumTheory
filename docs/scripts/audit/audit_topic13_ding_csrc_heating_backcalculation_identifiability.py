@@ -18,9 +18,9 @@ SOURCE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
     "ding_2022_pmc_full_text.txt"
 )
-HEATING_AUDIT = ROOT / "docs/core/artifacts/t13_ding_experimental_heating_input_boundary_audit.json"
-NORMALIZED_AUDIT = ROOT / "docs/core/artifacts/t13_ding_fig1d_normalized_source_lane_audit.json"
-OUT = ROOT / "docs/core/artifacts/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json"
+HEATING_AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_ding_experimental_heating_input_boundary_audit.json"
+NORMALIZED_AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_ding_fig1d_normalized_source_lane_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json"
 
 
 def load(path: Path) -> dict[str, Any]:

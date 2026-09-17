@@ -10,11 +10,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 PACKAGE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_ding_alternate_public_dataset_discovery_package.json"
-OUT = ROOT / "docs/core/artifacts/t13_ding_alternate_public_dataset_discovery_boundary_audit.json"
-DING_AVAILABILITY = ROOT / "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json"
-DING_SUPPLEMENTARY = ROOT / "docs/core/artifacts/t13_ding_public_supplementary_payload_boundary_audit.json"
-ACCEPTANCE = ROOT / "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json"
-HOLDOUT = ROOT / "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_ding_alternate_public_dataset_discovery_boundary_audit.json"
+DING_AVAILABILITY = ROOT / "docs/core/07_artifacts/topic13/t13_ding_pbte_numeric_input_availability_audit.json"
+DING_SUPPLEMENTARY = ROOT / "docs/core/07_artifacts/topic13/t13_ding_public_supplementary_payload_boundary_audit.json"
+ACCEPTANCE = ROOT / "docs/core/07_artifacts/topic13/t13_independent_csrc_acceptance_contract.json"
+HOLDOUT = ROOT / "docs/core/07_artifacts/topic13/t13_xie_2026_holdout_access_audit.json"
 
 
 def load(path: Path) -> dict:

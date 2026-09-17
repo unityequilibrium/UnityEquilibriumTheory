@@ -20,11 +20,33 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-LORENTZ_PATH = REPO_ROOT / "docs" / "core" / "uet_lorentz.py"
-NOETHER_PATH = REPO_ROOT / "docs" / "core" / "uet_noether.py"
-ARTIFACT_PATH = (
-    REPO_ROOT / "docs" / "core" / "artifacts" / "legacy_covariance_alignment_gate.json"
+from docs.core.core_paths import canonical_artifact_path  # noqa: E402
+
+LEGACY_LORENTZ_PATH = REPO_ROOT / "docs" / "core" / "uet_lorentz.py"
+LEGACY_NOETHER_PATH = REPO_ROOT / "docs" / "core" / "uet_noether.py"
+CANONICAL_LORENTZ_PATH = (
+    REPO_ROOT
+    / "docs"
+    / "core"
+    / "02_equations"
+    / "lorentz_noether"
+    / "uet_lorentz.py"
 )
+CANONICAL_NOETHER_PATH = (
+    REPO_ROOT
+    / "docs"
+    / "core"
+    / "02_equations"
+    / "lorentz_noether"
+    / "uet_noether.py"
+)
+ARTIFACT_PATH = canonical_artifact_path("legacy_covariance_alignment_gate.json")
+
+
+def _source_path(legacy: Path, canonical: Path) -> Path:
+    """Read the canonical implementation while a legacy path is a shim."""
+
+    return canonical if canonical.exists() else legacy
 
 
 def _sha256(path: Path) -> str:
@@ -114,8 +136,10 @@ def _legacy_noether_findings(source: str) -> dict[str, Any]:
 
 
 def build_gate() -> dict[str, Any]:
-    lorentz_source = LORENTZ_PATH.read_text(encoding="utf-8")
-    noether_source = NOETHER_PATH.read_text(encoding="utf-8")
+    lorentz_path = _source_path(LEGACY_LORENTZ_PATH, CANONICAL_LORENTZ_PATH)
+    noether_path = _source_path(LEGACY_NOETHER_PATH, CANONICAL_NOETHER_PATH)
+    lorentz_source = lorentz_path.read_text(encoding="utf-8")
+    noether_source = noether_path.read_text(encoding="utf-8")
     lorentz = _legacy_lorentz_findings(lorentz_source)
     noether = _legacy_noether_findings(noether_source)
 
@@ -134,8 +158,12 @@ def build_gate() -> dict[str, Any]:
         "claim_class": "LEGACY_EXPLORATORY_DIAGNOSTIC",
         "controlling_blocker": "legacy_covariance_not_implemented",
         "source_files": {
-            "docs/core/uet_lorentz.py": _sha256(LORENTZ_PATH),
-            "docs/core/uet_noether.py": _sha256(NOETHER_PATH),
+            "docs/core/02_equations/lorentz_noether/uet_lorentz.py": _sha256(lorentz_path),
+            "docs/core/02_equations/lorentz_noether/uet_noether.py": _sha256(noether_path),
+        },
+        "source_paths_used": {
+            "lorentz": str(lorentz_path.relative_to(REPO_ROOT)).replace("\\", "/"),
+            "noether": str(noether_path.relative_to(REPO_ROOT)).replace("\\", "/"),
         },
         "findings": {
             "lorentz": lorentz,

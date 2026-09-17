@@ -17,13 +17,13 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-RESPONSE_REL = "docs/core/uet_covariant_response.py"
-SPEC_REL = "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
-FORMULA_REL = "docs/core/artifacts/covariant_action_formula_audit.json"
-ACTION_ROUTE_REL = "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json"
-ENERGY_NO_GO_REL = "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json"
-ENERGY_BRIDGE_REL = "docs/core/thermal_energy_response_bridge.py"
-OUT = ROOT / "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json"
+RESPONSE_REL = "docs/core/02_equations/covariant/uet_covariant_response.py"
+SPEC_REL = "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
+FORMULA_REL = "docs/core/07_artifacts/correspondence/covariant_action_formula_audit.json"
+ACTION_ROUTE_REL = "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json"
+ENERGY_NO_GO_REL = "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json"
+ENERGY_BRIDGE_REL = "docs/core/03_lanes/thermal/thermal_energy_response_bridge.py"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_covariant_field_normalization_identifiability_no_go.json"
 
 
 def text(rel: str) -> str:
@@ -192,7 +192,7 @@ def main() -> int:
                 {"path": ACTION_ROUTE_REL, "sha256": sha256(ACTION_ROUTE_REL)},
                 {"path": ENERGY_NO_GO_REL, "sha256": sha256(ENERGY_NO_GO_REL)},
                 {"path": ENERGY_BRIDGE_REL, "sha256": sha256(ENERGY_BRIDGE_REL)},
-                {"path": "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json"}
+                {"path": "docs/core/07_artifacts/topic13/t13_covariant_field_normalization_identifiability_no_go.json"}
             ],
             "verification_status": status,
             "open_blockers": [

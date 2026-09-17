@@ -35,7 +35,7 @@ alpha, TTG validation, or external validation.
 ## WHAT_CHANGED:
 
 Added `docs/core/uet_o2_finite_temperature_hartree_thermodynamics.py` and audit
-artifact `docs/core/artifacts/t13_uet_o2_hartree_thermodynamic_consistency_audit.json`
+artifact `docs/core/07_artifacts/topic13/t13_uet_o2_hartree_thermodynamic_consistency_audit.json`
 (`C0845D9D7C088B6D5D16623376C215B00AAE2810B6524A1ECFE0D1564016B443`). The
 lane is projected into the full gate and synchronized into the major-result
 register.

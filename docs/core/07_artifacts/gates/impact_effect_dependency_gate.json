@@ -1,0 +1,13 @@
+{
+  "schema_version": "impact-effect-dependency-gate-v1",
+  "artifact": "impact_effect_dependency_gate",
+  "generated_at": "2026-09-18",
+  "status": "BLOCKED",
+  "local_verification_status": "PASS",
+  "foundation_dependency": "BLOCKED",
+  "carrier_specific_derivation": "OPEN",
+  "observable_mapping": "OPEN",
+  "claim_promotion": "BLOCKED",
+  "allowed_status": "CANDIDATE / INTERNAL / SIMULATION_ONLY",
+  "controlling_blocker": "foundation correspondence, units, and carrier/detector maps are incomplete"
+}

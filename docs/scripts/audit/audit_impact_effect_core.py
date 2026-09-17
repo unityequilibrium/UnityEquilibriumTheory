@@ -23,10 +23,11 @@ from docs.core.uet_impact_effect import (
     impact_effect_contract,
     impact_to_effect,
 )
+from docs.core.core_paths import canonical_artifact_path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-ARTIFACT_DIR = ROOT / "docs/core/artifacts"
+ARTIFACT_DIR = ROOT / "docs/core/07_artifacts"
 
 
 def _fixture() -> tuple[ImpactRecord, CarrierRecord]:
@@ -119,10 +120,10 @@ def run() -> dict[str, Any]:
         "controlling_blocker": "foundation correspondence, units, and carrier/detector maps are incomplete",
     }
     ARTIFACT_DIR.mkdir(parents=True, exist_ok=True)
-    (ARTIFACT_DIR / "impact_effect_core_verification.json").write_text(
+    canonical_artifact_path("impact_effect_core_verification.json", "verification").write_text(
         json.dumps(verification, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
-    (ARTIFACT_DIR / "impact_effect_dependency_gate.json").write_text(
+    canonical_artifact_path("impact_effect_dependency_gate.json", "gates").write_text(
         json.dumps(gate, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
     return verification

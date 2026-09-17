@@ -19,8 +19,8 @@ replace_once(
     "registry mapping",
 )
 replace_once(
-    '    isothermal_kt_path, isothermal_kt = load(\n        "docs/core/artifacts/t13_graphite_isothermal_kt_source_audit.json"\n    )\n',
-    '    isothermal_kt_path, isothermal_kt = load(\n        "docs/core/artifacts/t13_graphite_isothermal_kt_source_audit.json"\n    )\n    tpg_alpha_v_path, tpg_alpha_v = load(\n        "docs/core/artifacts/t13_tpg_anisotropic_alpha_v_source_audit.json"\n    )\n',
+    '    isothermal_kt_path, isothermal_kt = load(\n        "docs/core/07_artifacts/topic13/t13_graphite_isothermal_kt_source_audit.json"\n    )\n',
+    '    isothermal_kt_path, isothermal_kt = load(\n        "docs/core/07_artifacts/topic13/t13_graphite_isothermal_kt_source_audit.json"\n    )\n    tpg_alpha_v_path, tpg_alpha_v = load(\n        "docs/core/07_artifacts/topic13/t13_tpg_anisotropic_alpha_v_source_audit.json"\n    )\n',
     "TPG alpha_V artifact load",
 )
 replace_once(

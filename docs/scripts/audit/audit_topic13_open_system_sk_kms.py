@@ -13,8 +13,8 @@ import numpy as np
 
 
 ROOT = Path(__file__).resolve().parents[3]
-MODULE_REL = "docs/core/uet_o2_open_system_sk_kms.py"
-OUT_REL = "docs/core/artifacts/t13_uet_o2_open_system_sk_kms_audit.json"
+MODULE_REL = "docs/core/02_equations/o2/uet_o2_open_system_sk_kms.py"
+OUT_REL = "docs/core/07_artifacts/topic13/t13_uet_o2_open_system_sk_kms_audit.json"
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 

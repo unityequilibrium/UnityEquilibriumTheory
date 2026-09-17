@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "artifact": "covariant_parent_formula_audit",
+  "generated_at": "2026-09-16T08:45:48.673041+00:00",
+  "status": "WARN",
+  "relations": [
+    {
+      "formula_id": "UET-PARENT-ACTION-001",
+      "relation": "S_parent = integral sqrt(-g)[F(Phi)(R-2Lambda)/(2kappa)+L_O2-epsilon U(Phi)]",
+      "derivation_class": "candidate conservative action",
+      "unit_lane": "natural",
+      "code_path": "docs/core/uet_covariant_parent.py",
+      "proof_status": "integrated formula evaluator checked locally"
+    },
+    {
+      "formula_id": "UET-PARENT-GR-LIMIT-002",
+      "relation": "epsilon_nc=0 implies metric residual equals Einstein-GR residual",
+      "derivation_class": "exact algebraic limiting relation",
+      "unit_lane": "natural",
+      "code_path": "docs/core/uet_covariant_parent.py",
+      "proof_status": "internal numerical identity gate"
+    },
+    {
+      "formula_id": "UET-PARENT-EXCHANGE-003",
+      "relation": "Q_m^nu + Q_response^nu = 0",
+      "derivation_class": "local conservative exchange identity",
+      "unit_lane": "natural",
+      "code_path": "docs/core/uet_covariant_balance.py",
+      "proof_status": "internal local ledger identity"
+    }
+  ],
+  "open_items": [
+    "lane-specific covariant coarse graining",
+    "Schwinger-Keldysh/KMS dissipative completion",
+    "strongly hyperbolic curved 3+1 evolution",
+    "SI and observable mapping",
+    "external GR benchmarks"
+  ],
+  "claim_ceiling": "candidate integrated conservative parent in natural units"
+}

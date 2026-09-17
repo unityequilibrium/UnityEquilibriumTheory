@@ -10,10 +10,10 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-CONTRACT = ROOT / "docs/core/artifacts/uet_major_result_closure_contract.json"
+CONTRACT = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_contract.json"
 T13 = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-MATRIX = ROOT / "docs/core/artifacts/t13_topic13_closure_matrix.json"
-OUT = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
+MATRIX = ROOT / "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json"
+OUT = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
 
 
 def rel(path: Path) -> str:
@@ -62,7 +62,7 @@ def main() -> int:
             "derivation_class": "workflow and registry contract",
             "observable": "registry-linked observable/dependency records",
             "data_role": "metadata and artifact integration",
-            "evidence_artifacts": [ref("docs/core/UET_RESEARCH_ROOM_BRIEF.md", {"required_report_headings": True})],
+            "evidence_artifacts": [ref("docs/core/00_governance/UET_RESEARCH_ROOM_BRIEF.md", {"required_report_headings": True})],
             "verification_status": "PARTIAL_FOUNDATION_CONTRACT",
             "open_blockers": ["foundation correspondence, units, accepted physical observables, and external claim gates remain open"],
             "dependency_unlocked": "parallel room hardening only",
@@ -109,7 +109,7 @@ def main() -> int:
             "derivation_class": "tree-level mean-field derivation",
             "observable": "formal EOS and ideal constitutive control",
             "data_role": "internal derivation and external structure references",
-            "evidence_artifacts": [ref("docs/core/artifacts/o2_finite_density_eos_verification.json", {"audit_status": "PASS"})],
+            "evidence_artifacts": [ref("docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json", {"audit_status": "PASS"})],
             "verification_status": "PASS_TREE_LEVEL_PARTIAL",
             "open_blockers": ["finite-temperature normal component", "physical Kubo coefficients", "full SK/KMS", "curved 3+1", "SI lane"],
             "dependency_unlocked": "formal O(2) constraint inheritance only",
@@ -167,7 +167,7 @@ def main() -> int:
     discovered_entries: list[dict[str, Any]] = []
     discovered_ids: set[str] = set()
     for artifact_root in (
-        ROOT / "docs/core/artifacts",
+        ROOT / "docs/core/07_artifacts",
         ROOT / "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts",
         ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts",
     ):
@@ -323,7 +323,7 @@ def main() -> int:
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
-    dependency_path = ROOT / "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+    dependency_path = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
     if dependency_path.is_file():
         dependency = load(dependency_path)
         dependency["generated_at"] = date.today().isoformat()

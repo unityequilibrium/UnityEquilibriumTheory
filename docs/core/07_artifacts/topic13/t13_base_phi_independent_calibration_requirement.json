@@ -1,0 +1,119 @@
+{
+  "schema_version": "t13-base-phi-independent-calibration-requirement-v1",
+  "artifact": "t13_base_phi_independent_calibration_requirement",
+  "generated_at": "2026-09-18",
+  "status": "PASS_OPEN_CALIBRATION_REQUIREMENT",
+  "major_result": {
+    "major_result_id": "T13_BASE_PHI_INDEPENDENT_CALIBRATION_REQUIREMENT",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "OPEN",
+    "what_is_closed": [
+      "the admissible independent base-Phi calibration route is specified",
+      "the required paired SI/base-Phi inputs and provenance fields are explicit",
+      "TTG target, Xie 2026 holdout, residuals, and post-inspection tuning are prohibited calibration inputs"
+    ],
+    "equation_or_mapping": {
+      "phi_e_definition": "Phi_E = Delta_u / e0",
+      "base_to_named_coordinate": "Phi_E = s_material * Phi_base",
+      "conditional_base_alpha": "alpha_Phi_K = (e0 / c_v) * s_material",
+      "measurement_operator": "Delta_Tq = alpha_Phi_K * Delta_Phi_base"
+    },
+    "units": {
+      "Delta_u": "J m^-3",
+      "e0": "J m^-3",
+      "c_v": "J m^-3 K^-1",
+      "Phi_base": "dimensionless normalized base Phi",
+      "Phi_E": "dimensionless named energy-response coordinate",
+      "s_material": "dimensionless scale between named and base coordinates",
+      "alpha_Phi_K": "K per normalized base Phi",
+      "Delta_Tq": "K or source-defined quasi-temperature unit, as declared by the paired source"
+    },
+    "derivation_class": "measurement and calibration protocol; no numerical calibration",
+    "observable": "paired SI energy/response amplitude and base-Phi amplitude",
+    "data_role": "PROTOCOL_NOT_EVIDENCE",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/BASE_PHI_INDEPENDENT_CALIBRATION_PROTOCOL.md",
+        "sha256": "8d813f633bdf90d1cd5e2d1365107f97db68292c19ff95649965e6dc07a0b049",
+        "summary": {
+          "status": "OPEN_INDEPENDENT_BASE_PHI_CALIBRATION_REQUIRED"
+        }
+      }
+    ],
+    "verification_status": "PASS_OPEN_CALIBRATION_REQUIREMENT",
+    "open_blockers": [
+      "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
+      "base_Phi_to_Phi_E_mapping_not_derived",
+      "e0_and_c_v_source_package_with_uncertainty_not_locked_for_base_calibration"
+    ],
+    "dependency_unlocked": "none; full Topic 13 and downstream Core/Gravity gates remain blocked",
+    "claim_boundary": "This protocol closes only the acceptance criteria for a future calibration record. It emits no alpha_Phi_K, no prediction, no fit, and no external validation."
+  },
+  "protocol": {
+    "path": "docs/topics/0.13_Thermodynamic_Bridge/BASE_PHI_INDEPENDENT_CALIBRATION_PROTOCOL.md",
+    "sha256": "8d813f633bdf90d1cd5e2d1365107f97db68292c19ff95649965e6dc07a0b049",
+    "required_snippets": [
+      "MAJOR_RESULT_CLOSURE:",
+      "WHAT_IS_ACTUALLY_CLOSED:",
+      "WHAT_REMAINS_OPEN:",
+      "DEPENDENCY_UNLOCKED:",
+      "STATUS:",
+      "WHAT_CHANGED:",
+      "EQUATION_OR_MAPPING:",
+      "VERIFICATION:",
+      "CONTROLLING_BLOCKER:",
+      "NEXT_ACTION:",
+      "CLAIM_BOUNDARY:",
+      "Phi_E = Delta_u / e0",
+      "Phi_E = s_material * Phi_base",
+      "alpha_Phi_K = (e0 / c_v) * s_material",
+      "Xie 2026",
+      "No numerical scale"
+    ],
+    "checks": {
+      "MAJOR_RESULT_CLOSURE:": true,
+      "WHAT_IS_ACTUALLY_CLOSED:": true,
+      "WHAT_REMAINS_OPEN:": true,
+      "DEPENDENCY_UNLOCKED:": true,
+      "STATUS:": true,
+      "WHAT_CHANGED:": true,
+      "EQUATION_OR_MAPPING:": true,
+      "VERIFICATION:": true,
+      "CONTROLLING_BLOCKER:": true,
+      "NEXT_ACTION:": true,
+      "CLAIM_BOUNDARY:": true,
+      "Phi_E = Delta_u / e0": true,
+      "Phi_E = s_material * Phi_base": true,
+      "alpha_Phi_K = (e0 / c_v) * s_material": true,
+      "Xie 2026": true,
+      "No numerical scale": true
+    }
+  },
+  "required_record_fields": [
+    "source_identity",
+    "locator",
+    "matched_material_state_geometry",
+    "base_Phi_amplitude",
+    "SI_energy_or_response_amplitude",
+    "units",
+    "uncertainty",
+    "preprocessing",
+    "row_identity",
+    "source_hash",
+    "independence_statement"
+  ],
+  "forbidden_calibration_inputs": [
+    "Xie 2026 numeric holdout",
+    "TTG target residuals",
+    "post-inspection parameter tuning",
+    "synthetic replacement data"
+  ],
+  "parameter_fitting_performed": false,
+  "source_rows_consumed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "controlling_blocker": "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
+  "next_controller": "Obtain a permitted paired record or an independently derived base-Phi-to-Phi_E map; do not use the named Phi_E coordinate convention as a base-Phi calibration.",
+  "claim_boundary": "This protocol closes only the acceptance criteria for a future calibration record. It emits no alpha_Phi_K, no prediction, no fit, and no external validation."
+}

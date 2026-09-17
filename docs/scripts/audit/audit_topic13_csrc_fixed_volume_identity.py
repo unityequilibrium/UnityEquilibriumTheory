@@ -18,7 +18,7 @@ DING_PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "ding_2022_pbte_energy_temperature_source_package.json"
 )
-OUT = ROOT / "docs/core/artifacts/t13_csrc_fixed_volume_identity_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_csrc_fixed_volume_identity_audit.json"
 
 
 H_PLANCK = 6.62607015e-34

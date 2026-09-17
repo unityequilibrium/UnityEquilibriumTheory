@@ -15,8 +15,8 @@ from docs.scripts.audit.audit_topic13_coupled_gain_loss_operator import (
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_coupled_response_heat_carrier_no_go_audit.json"
-REGISTRY_OUT = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_coupled_heat_no_go_addendum.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_coupled_response_heat_carrier_no_go_audit.json"
+REGISTRY_OUT = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_coupled_heat_no_go_addendum.json"
 EQUATION_ID = "uet.o2.thermal.coupled_response_heat_carrier_no_go"
 RANK_THRESHOLD = 1.0e-10
 
@@ -181,12 +181,12 @@ def main() -> int:
         "docs/scripts/audit/audit_topic13_coupled_response_heat_carrier_no_go.py",
         "docs/core/test/test_topic13_coupled_response_heat_carrier_no_go.py",
         "docs/scripts/audit/audit_topic13_coupled_gain_loss_operator.py",
-        "docs/core/uet_o2_finite_temperature_normal_component.py",
-        "docs/core/uet_o2_finite_temperature_two_fluid_response.py",
+        "docs/core/02_equations/o2/uet_o2_finite_temperature_normal_component.py",
+        "docs/core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py",
     ]
     priors = [
-        "docs/core/artifacts/t13_coupled_gain_loss_operator_audit.json",
-        "docs/core/artifacts/t13_dressed_ra_charge_current_ladder_audit.json",
+        "docs/core/07_artifacts/topic13/t13_coupled_gain_loss_operator_audit.json",
+        "docs/core/07_artifacts/topic13/t13_dressed_ra_charge_current_ladder_audit.json",
     ]
     what_is_closed = [
         "For every current state in the declared relativistic mixture, J_E=P and J_H=P-mu*J_charge, so Landau projection gives J_H_perp=-mu*J_charge_perp.",
@@ -333,7 +333,7 @@ def main() -> int:
         json.dumps({
             "schema_version": "uet-equation-registry-addendum-v1",
             "status": "CANDIDATE_DIAGNOSTIC_NOT_MERGED",
-            "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+            "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
             "equation_entries": [entry],
             "full_core_unlock": False,
             "claim_promotion": False,

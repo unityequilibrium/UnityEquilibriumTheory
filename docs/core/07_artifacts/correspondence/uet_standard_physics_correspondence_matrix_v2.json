@@ -1,0 +1,68 @@
+{
+  "schema_version": "2.0",
+  "artifact": "uet_standard_physics_correspondence_matrix_v2",
+  "generated_at": "2026-09-16T10:57:26.246170+00:00",
+  "rows": [
+    {
+      "uet_layer": "C_charge",
+      "standard_counterpart": "O(2) Noether charge density",
+      "status": "PARTIAL_TREE_LEVEL",
+      "observable": "charge/current; dimensional detector map open"
+    },
+    {
+      "uet_layer": "C_phase",
+      "standard_counterpart": "coarse order parameter",
+      "status": "PASS_INTERNAL_DIAGNOSTIC",
+      "observable": "phase fraction/interface/structure factor; external universality blocked"
+    },
+    {
+      "uet_layer": "C_density",
+      "standard_counterpart": "declared mass or number density input",
+      "status": "MAPPING_INPUT_ONLY",
+      "observable": "density profile; C does not derive mass"
+    },
+    {
+      "uet_layer": "C_telegraph",
+      "standard_counterpart": "finite-speed order response",
+      "status": "PASS_MINKOWSKI_CONTROL",
+      "observable": "arrival/dispersion; curved and dimensional maps open"
+    },
+    {
+      "uet_layer": "Phi",
+      "standard_counterpart": "effective response scalar",
+      "status": "CANDIDATE",
+      "observable": "normalized response; alpha_Phi_K open"
+    },
+    {
+      "uet_layer": "physical memory",
+      "standard_counterpart": "generalized Langevin/Maxwell memory",
+      "status": "LINEAR_CLASSICAL_CONTROL",
+      "observable": "response lag; microscopic SK/KMS open"
+    },
+    {
+      "uet_layer": "R_gen",
+      "standard_counterpart": "derived dissipation/history record",
+      "status": "DERIVED_ONLY",
+      "observable": "post-evolution trace; never particle or reservoir"
+    },
+    {
+      "uet_layer": "R_obs",
+      "standard_counterpart": "detector/observer record",
+      "status": "OPERATIONAL_QM_BASELINE",
+      "observable": "instrument outcome"
+    },
+    {
+      "uet_layer": "closed gravitational branch",
+      "standard_counterpart": "Einstein/GR controls",
+      "status": "ANALYTIC_INPUT_CONTROLS",
+      "observable": "curved gauge-invariant numerical map blocked"
+    },
+    {
+      "uet_layer": "QBism/RQM",
+      "standard_counterpart": "interpretation metadata",
+      "status": "PREDICTION_INVARIANT",
+      "observable": "same Born probabilities"
+    }
+  ],
+  "claim_boundary": "counterpart status is lane-specific and cannot be promoted to a universal identity"
+}

@@ -22,15 +22,15 @@ def repair_full_gate() -> None:
         path,
         (
             '    calorine_candidate_path, calorine_candidate = load(\n'
-            '        "docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json"\n'
+            '        "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json"\n'
             '    )\n'
         ),
         (
             '    calorine_candidate_path, calorine_candidate = load(\n'
-            '        "docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json"\n'
+            '        "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json"\n'
             '    )\n'
             '    holdout_audit_path, holdout_audit = load(\n'
-            '        "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json"\n'
+            '        "docs/core/07_artifacts/topic13/t13_xie_2026_holdout_access_audit.json"\n'
             '    )\n'
         ),
     )
@@ -112,8 +112,8 @@ def repair_ding_mapping() -> None:
     path = ROOT / "docs/scripts/audit/audit_ding_2022_source_mapping.py"
     replace_once(
         path,
-        'MAPPING = ROOT / "docs/core/artifacts/ding_2022_fig1d_series_mapping.json"\nOUT = ROOT / "docs/core/artifacts/ding_2022_source_mapping_audit.json"\n',
-        'MAPPING = ROOT / "docs/core/artifacts/ding_2022_fig1d_series_mapping.json"\nHOLDOUT_AUDIT = ROOT / "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json"\nOUT = ROOT / "docs/core/artifacts/ding_2022_source_mapping_audit.json"\n',
+        'MAPPING = ROOT / "docs/core/07_artifacts/archive/ding_2022_fig1d_series_mapping.json"\nOUT = ROOT / "docs/core/07_artifacts/provenance/ding_2022_source_mapping_audit.json"\n',
+        'MAPPING = ROOT / "docs/core/07_artifacts/archive/ding_2022_fig1d_series_mapping.json"\nHOLDOUT_AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_xie_2026_holdout_access_audit.json"\nOUT = ROOT / "docs/core/07_artifacts/provenance/ding_2022_source_mapping_audit.json"\n',
     )
     replace_once(
         path,

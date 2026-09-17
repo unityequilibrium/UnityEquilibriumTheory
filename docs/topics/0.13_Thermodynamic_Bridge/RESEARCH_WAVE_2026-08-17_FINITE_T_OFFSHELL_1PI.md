@@ -28,7 +28,7 @@ EQUATION_OR_MAPPING:
 `Gamma_R(omega,p;T) = Gamma_E(i*nu_l -> omega+i0+,p)` with `Sigma^> = exp(beta*omega) Sigma^<`.
 
 VERIFICATION:
-The dedicated audit and three regression tests pass. Evidence is in `docs/core/artifacts/t13_uet_o2_finite_temperature_offshell_1pi_audit.json`.
+The dedicated audit and three regression tests pass. Evidence is in `docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_offshell_1pi_audit.json`.
 
 CONTROLLING_BLOCKER:
 `unique_physical_renormalization_scheme_or_external_anchor_missing` for this lane; the full Topic 13 gate remains controlled by source, calibration, dimensional mapping, and EOS/transport/KMS/entropy completion.

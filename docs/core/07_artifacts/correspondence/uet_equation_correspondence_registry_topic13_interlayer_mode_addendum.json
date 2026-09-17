@@ -1,0 +1,22 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "DRAFT_MATERIAL_MODE_DIAGNOSTIC",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "equation_entries": [{
+    "equation_id": "uet.thermal.graphite_interlayer_mode_residue",
+    "classification": "observable_definition",
+    "ontology": {"s": "relative mass-centroid displacement of two material layers", "Q": "mass-weighted phonon coordinate", "C_Phi_R_gen_R_obs": "unchanged; not identified with s or Q"},
+    "units": {"s": "m", "Q": "kg^0.5 m", "mu": "kg", "pole_residue": "kg^-1", "susceptibility": "s^2 kg^-1"},
+    "unit_lane": "source_material_harmonic_SI",
+    "derivation_class": "derived_relation",
+    "relation_or_code_path": "s=R*Q; B=sqrt(mu)*R^T; P_s=B*B^T; chi_s(z)=R*(z^2*I+Omega^2)^-1*R^T",
+    "observable": "interlayer displacement pattern, near-Gamma spectrum and displacement-force residue",
+    "data_role": "SOURCE_DERIVED_HARMONIC_COMPARISON",
+    "verification_status": "SOURCE_GAMMA_E2G_CHECKED_PHYSICAL_MAPPING_OPEN",
+    "controlling_blocker": "same_state_material_and_Phi_mapping_missing",
+    "verification_artifacts": ["docs/core/artifacts/t13_mp48_interlayer_mode_residue_audit.json", "docs/core/artifacts/t13_mp48_shear_irrep_audit.json"],
+    "claim_boundary": "Material coordinate only, not UET mode identity, Phi normalization, Raman agreement or TTG heat transport."
+  }],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}

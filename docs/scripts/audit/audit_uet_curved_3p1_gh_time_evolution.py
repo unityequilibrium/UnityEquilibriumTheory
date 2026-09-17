@@ -25,17 +25,18 @@ from docs.core.uet_curved_3p1_gh_evolution import (
     gh_constraint_norms,
     harmonic_gauge_wave_state,
 )
+from docs.core.core_paths import canonical_artifact_path
 
 
-ARTIFACTS = ROOT / "docs/core/artifacts"
-VERIFY = ARTIFACTS / "curved_3p1_gh_time_evolution_verification.json"
-FORMULA = ARTIFACTS / "curved_3p1_gh_time_evolution_formula_audit.json"
-GATE = ARTIFACTS / "curved_3p1_gh_time_evolution_gate.json"
+ARTIFACTS = ROOT / "docs/core/07_artifacts"
+VERIFY = canonical_artifact_path("curved_3p1_gh_time_evolution_verification.json", "verification")
+FORMULA = canonical_artifact_path("curved_3p1_gh_time_evolution_formula_audit.json", "correspondence")
+GATE = canonical_artifact_path("curved_3p1_gh_time_evolution_gate.json", "gates")
 SOURCE_RECORD = ROOT / "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json"
-RHS_VERIFY = ARTIFACTS / "curved_3p1_gh_nonlinear_vacuum_rhs_verification.json"
-RHS_FORMULA = ARTIFACTS / "curved_3p1_gh_nonlinear_vacuum_formula_audit.json"
-RHS_GATE = ARTIFACTS / "curved_3p1_gh_nonlinear_vacuum_gate.json"
-MODULE = ROOT / "docs/core/uet_curved_3p1_gh_evolution.py"
+RHS_VERIFY = canonical_artifact_path("curved_3p1_gh_nonlinear_vacuum_rhs_verification.json", "verification")
+RHS_FORMULA = canonical_artifact_path("curved_3p1_gh_nonlinear_vacuum_formula_audit.json", "correspondence")
+RHS_GATE = canonical_artifact_path("curved_3p1_gh_nonlinear_vacuum_gate.json", "gates")
+MODULE = ROOT / "docs/core/02_equations/covariant/uet_curved_3p1_gh_evolution.py"
 
 
 THRESHOLDS = {

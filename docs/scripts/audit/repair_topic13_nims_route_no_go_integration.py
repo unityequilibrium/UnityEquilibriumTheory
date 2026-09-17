@@ -27,13 +27,13 @@ def main() -> int:
     text = replace_once(
         text,
         '    calorine_candidate_path, calorine_candidate = load(\n'
-        '        "docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json"\n'
+        '        "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json"\n'
         '    )\n',
         '    calorine_candidate_path, calorine_candidate = load(\n'
-        '        "docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json"\n'
+        '        "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json"\n'
         '    )\n'
         '    nims_graphite_route_path, nims_graphite_route = load(\n'
-        '        "docs/core/artifacts/t13_nims_graphite_ltc_route_no_go.json"\n'
+        '        "docs/core/07_artifacts/topic13/t13_nims_graphite_ltc_route_no_go.json"\n'
         '    )\n',
         "artifact load",
     )

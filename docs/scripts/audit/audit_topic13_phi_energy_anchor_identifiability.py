@@ -11,9 +11,9 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-UNITS_REL = "docs/core/artifacts/uet_active_lane_units_observable_register.json"
-BRIDGE_REL = "docs/core/artifacts/t13_energy_response_bridge_audit.json"
-OUT = ROOT / "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json"
+UNITS_REL = "docs/core/07_artifacts/archive/uet_active_lane_units_observable_register.json"
+BRIDGE_REL = "docs/core/07_artifacts/topic13/t13_energy_response_bridge_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json"
 
 
 def load(rel: str) -> dict[str, Any]:
@@ -108,7 +108,7 @@ def main() -> int:
             "evidence_artifacts": [
                 {"path": UNITS_REL, "sha256": sha256(UNITS_REL)},
                 {"path": BRIDGE_REL, "sha256": sha256(BRIDGE_REL)},
-                {"path": "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json"}
+                {"path": "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json"}
             ],
             "verification_status": status,
             "open_blockers": [

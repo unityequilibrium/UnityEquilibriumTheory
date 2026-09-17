@@ -23,18 +23,19 @@ from docs.core.uet_curved_3p1_matter_wiring import (
     relativistic_fluid_stress_energy,
     trace_reversed_stress_energy,
 )
+from docs.core.core_paths import canonical_artifact_path
 
 
-ARTIFACTS = ROOT / "docs/core/artifacts"
+ARTIFACTS = ROOT / "docs/core/07_artifacts"
 SOURCE_3P1 = ROOT / "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json"
 SOURCE_GH = ROOT / "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json"
-T13_COMPOSITION = ARTIFACTS / "t13_he4_core_thermodynamic_bridge_composition_audit.json"
-T13_EOS = ARTIFACTS / "t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json"
-T13_SI = ARTIFACTS / "t13_he4_o2_si_beta_mapping_audit.json"
-MODULE = ROOT / "docs/core/uet_curved_3p1_matter_wiring.py"
-VERIFY = ARTIFACTS / "curved_3p1_topic13_matter_wiring_verification.json"
-FORMULA = ARTIFACTS / "curved_3p1_topic13_matter_wiring_formula_audit.json"
-GATE = ARTIFACTS / "curved_3p1_topic13_matter_wiring_gate.json"
+T13_COMPOSITION = canonical_artifact_path("t13_he4_core_thermodynamic_bridge_composition_audit.json", "topic13")
+T13_EOS = canonical_artifact_path("t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json", "topic13")
+T13_SI = canonical_artifact_path("t13_he4_o2_si_beta_mapping_audit.json", "topic13")
+MODULE = ROOT / "docs/core/02_equations/covariant/uet_curved_3p1_matter_wiring.py"
+VERIFY = canonical_artifact_path("curved_3p1_topic13_matter_wiring_verification.json", "verification")
+FORMULA = canonical_artifact_path("curved_3p1_topic13_matter_wiring_formula_audit.json", "correspondence")
+GATE = canonical_artifact_path("curved_3p1_topic13_matter_wiring_gate.json", "gates")
 
 
 def _read(path: Path) -> dict:

@@ -18,7 +18,7 @@ RAW = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
     "iaea_graphite_handbook_2017.pdf"
 )
-OUT = ROOT / "docs/core/artifacts/t13_iaea_graphite_constant_volume_source_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_iaea_graphite_constant_volume_source_audit.json"
 EXPECTED_RAW_SHA256 = "91e9d84e5d1828ab1028bf0e5fec0743fe1fb49e416b9e6305edf2f71a30a28a"
 
 

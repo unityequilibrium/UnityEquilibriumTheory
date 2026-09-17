@@ -14,9 +14,9 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-SOURCE = ROOT / "docs/core/artifacts/uet_full_correspondence_coverage.json"
-REGISTRY = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry.json"
-OUTPUT = ROOT / "docs/core/artifacts/uet_topic_formula_correspondence_manifest.json"
+SOURCE = ROOT / "docs/core/07_artifacts/correspondence/uet_full_correspondence_coverage.json"
+REGISTRY = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json"
+OUTPUT = ROOT / "docs/core/07_artifacts/provenance/uet_topic_formula_correspondence_manifest.json"
 
 LANES: dict[str, dict[str, Any]] = {
     "0.11": {"lane_id": "C_phase", "role": "pilot_comparator", "registry": ["uet.matter_space.omega", "uet.matter_space.physical_dynamics", "uet.matter_space.energy_ledger"]},

@@ -289,9 +289,9 @@ Acceptance requires:
 
 Canonical artifacts:
 
-- `docs/core/artifacts/t13_full_core_ready_acceptance_audit.json`
-- `docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json`
-- `docs/core/artifacts/t13_topic13_closure_matrix.json`
+- `docs/core/07_artifacts/topic13/t13_full_core_ready_acceptance_audit.json`
+- `docs/core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json`
+- `docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json`
 - `Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`
 
 - Primary command:
@@ -369,7 +369,7 @@ Run:
 
 Artifact:
 
-- `docs/core/artifacts/t13_ding_pbte_energy_temperature_mapping_audit.json`
+- `docs/core/07_artifacts/topic13/t13_ding_pbte_energy_temperature_mapping_audit.json`
 
 Acceptance requires the official PDF hash/size/MD5, source identity, Eq. S4/S10 locators, kelvin unit closure, source-`C`/UET-`C` separation, absent numeric calibration, material non-pooling, and Xie 2026 non-access checks to pass. `PASS_SOURCE_FORMULA_MAPPING_NUMERIC_C_OPEN` closes only the source-formula lane; it does not close numeric `C_src(T)`, base `Phi`, `e0`, `alpha_Phi_K`, or Full Topic 13.
 
@@ -383,7 +383,7 @@ Run:
 
 Artifact:
 
-- `docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json`
+- `docs/core/07_artifacts/topic13/t13_ding_pbte_numeric_input_availability_audit.json`
 
 Acceptance requires archived hash/size parity, OA identity/license/retraction checks, a complete non-truncated 11-object prefix, media-role classification, absence of reproduction payload candidates, the author-request statement, published computational-detail locators, an explicit missing-input list, and holdout non-access. A pass closes only the captured official-OA source route.
 
@@ -398,7 +398,7 @@ Run:
 
 Artifact:
 
-- `docs/core/artifacts/t13_uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi_audit.json`
+- `docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi_audit.json`
 
 Acceptance requires retarded/advanced conjugacy, the declared spectral discontinuity, Keldysh component convention, Keldysh FDT residual, finite state, declared channel completion, and no-fit/no-holdout guards. The result is `CLOSED_FOR_LANE` only. Complete all-channel off-shell 1PI, physical renormalization, physical Kubo, entropy/heat-flux balance, SI `Phi` mapping, `alpha_Phi_K`, TTG validation, and Full Topic 13 remain blocked.
 

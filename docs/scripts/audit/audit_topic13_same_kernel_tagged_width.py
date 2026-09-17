@@ -21,8 +21,8 @@ from docs.scripts.audit.audit_topic13_invariant_rate_collision_repair import con
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_same_kernel_tagged_spectral_width_audit.json"
-REGISTRY_OUT = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_same_kernel_width_addendum.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_same_kernel_tagged_spectral_width_audit.json"
+REGISTRY_OUT = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_same_kernel_width_addendum.json"
 EQUATION_ID = "uet.o2.thermal.same_kernel_tree_tagged_spectral_width"
 REFINEMENT_THRESHOLD = 5.0e-4
 INDEPENDENT_FORM_THRESHOLD = 1.0e-10
@@ -189,7 +189,7 @@ def main() -> int:
     independent = independent_cross_section_witness()
     conjugation = charge_conjugation_witness()
     contract = same_kernel_tagged_width_contract()
-    source_text = (ROOT / "docs/core/uet_o2_same_kernel_tagged_width.py").read_text(encoding="utf-8")
+    source_text = (ROOT / "docs/core/02_equations/o2/uet_o2_same_kernel_tagged_width.py").read_text(encoding="utf-8")
     loss_widths = np.asarray(reference.total_widths_by_tag_momentum)
     gain_widths = np.asarray(reference.total_gain_widths_by_tag_momentum)
     retarded_widths = np.asarray(
@@ -239,13 +239,13 @@ def main() -> int:
         else "WARN_SAME_KERNEL_TREE_TAGGED_SPECTRAL_WIDTH"
     )
     paths = [
-        "docs/core/uet_o2_same_kernel_tagged_width.py",
-        "docs/core/uet_o2_invariant_galerkin_collision_operator.py",
+        "docs/core/02_equations/o2/uet_o2_same_kernel_tagged_width.py",
+        "docs/core/02_equations/o2/uet_o2_invariant_galerkin_collision_operator.py",
         "docs/core/test/test_topic13_same_kernel_tagged_width.py",
         "docs/scripts/audit/audit_topic13_same_kernel_tagged_width.py",
         "docs/scripts/audit/audit_topic13_action_normalized_elastic_scattering.py",
     ]
-    prior = "docs/core/artifacts/t13_invariant_galerkin_collision_operator_audit.json"
+    prior = "docs/core/07_artifacts/topic13/t13_invariant_galerkin_collision_operator_audit.json"
     artifact = {
         "schema_version": "t13-same-kernel-tagged-width-v2",
         "major_result_id": "T13_SAME_KERNEL_TREE_TAGGED_SPECTRAL_WIDTH",
@@ -337,7 +337,7 @@ def main() -> int:
     REGISTRY_OUT.write_text(json.dumps({
         "schema_version": "uet-equation-registry-addendum-v1",
         "status": "CANDIDATE_DIAGNOSTIC_NOT_MERGED",
-        "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+        "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
         "equation_entries": [entry],
         "full_core_unlock": False,
         "claim_promotion": False,

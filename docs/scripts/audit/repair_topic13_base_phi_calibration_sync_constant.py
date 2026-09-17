@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 TARGET = ROOT / "docs/scripts/audit/sync_topic13_base_phi_independent_calibration_requirement.py"
-NEEDLE = 'ACTION_REL = "docs/core/artifacts/t13_base_phi_independent_calibration_requirement.json"\n'
+NEEDLE = 'ACTION_REL = "docs/core/07_artifacts/topic13/t13_base_phi_independent_calibration_requirement.json"\n'
 INSERT = NEEDLE + 'PROTOCOL_REL = "docs/topics/0.13_Thermodynamic_Bridge/BASE_PHI_INDEPENDENT_CALIBRATION_PROTOCOL.md"\n'
 
 

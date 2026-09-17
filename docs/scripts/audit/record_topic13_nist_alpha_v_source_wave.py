@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-ARTIFACT = ROOT / "docs/core/artifacts/t13_nist_graphite_alpha_v_source_boundary_audit.json"
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_nist_graphite_alpha_v_source_boundary_audit.json"
 FULL_GATE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
     "topic13_full_thermodynamic_bridge_core_ready_gate.json"
@@ -37,7 +37,7 @@ WHAT_IS_ACTUALLY_CLOSED: Official NIST SP 260-89 AXM-5Q1 graphite source is arch
 WHAT_REMAINS_OPEN: `K_T` is not source-locked, the AXM-5Q1 comparator is not established as Ding/HOPG material equivalence, row-level statistical uncertainty is absent, and `Cp -> Cv`, Ding `C_src`, base-Phi mapping, and `alpha_Phi_K` remain open.
 DEPENDENCY_UNLOCKED: NIST alpha_V source-comparator lane only; no `K_T`, volumetric `c_v`, Ding source, alpha, transport, Core, Gravity, or Galaxy unlock.
 STATUS: `PASS_SCOPED_NIST_ALPHA_V_SOURCE_BOUNDARY`; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
-WHAT_CHANGED: Added and integrated `docs/core/artifacts/t13_nist_graphite_alpha_v_source_boundary_audit.json` (SHA-256 `{artifact_hash}`) and linked it into the Topic 13 full gate (SHA-256 `{full_hash}`).
+WHAT_CHANGED: Added and integrated `docs/core/07_artifacts/topic13/t13_nist_graphite_alpha_v_source_boundary_audit.json` (SHA-256 `{artifact_hash}`) and linked it into the Topic 13 full gate (SHA-256 `{full_hash}`).
 EQUATION_OR_MAPPING: `Delta_L/L[%] = -0.201 + 6.595e-4*T + 9.593e-8*T^2 - 3.427e-12*T^3`, `alpha_L = d(Delta_L/L)/dT/(1+Delta_L/L)`, and comparator `alpha_V=3 alpha_L`.
 VERIFICATION: PDF presence and hash, source locators, explicit percent-to-strain conversion, finite rows, NIST program accuracy boundary, no invented `K_T`, no target fit, no alpha fit, and no Xie 2026 access. At 300 K the comparator gives `alpha_V = 2.1482823124269745e-5 K^-1`.
 CONTROLLING_BLOCKER: `isothermal_bulk_modulus_K_T_and_Ding_material_regime_mapping_missing` for this lane; full Topic 13 remains controlled by the existing Ding source, alpha, bridge/beta, EOS/transport/KMS/entropy, and SI-map blockers.
@@ -65,7 +65,7 @@ source boundary only: no `K_T`, Ding/HOPG material equivalence, volumetric
 
 | formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| `T13-042` | `Delta_L/L[%] = -0.201 + 6.595e-4*T + 9.593e-8*T^2 - 3.427e-12*T^3`; `alpha_L=d(Delta_L/L)/dT/(1+Delta_L/L)`; `alpha_V=3 alpha_L` | `docs/scripts/audit/audit_topic13_nist_graphite_alpha_v_source_boundary.py`; `docs/core/artifacts/t13_nist_graphite_alpha_v_source_boundary_audit.json` | `T` = K; strain dimensionless; `alpha_L`, `alpha_V` = K^-1 | NIST SP 260-89 Eq. (5.5.2), Table 20 and archived PDF | checked source-boundary comparator; not UET derivation | source/provenance and standard thermodynamic geometry comparator | AXM-5Q1 state, isotropy assumption, program-level accuracy, missing `K_T`, and missing Ding sample mapping prevent `Cp -> Cv` promotion | source-lock `K_T` and material-state correspondence with uncertainty; keep alpha and base-Phi calibration separate |
+| `T13-042` | `Delta_L/L[%] = -0.201 + 6.595e-4*T + 9.593e-8*T^2 - 3.427e-12*T^3`; `alpha_L=d(Delta_L/L)/dT/(1+Delta_L/L)`; `alpha_V=3 alpha_L` | `docs/scripts/audit/audit_topic13_nist_graphite_alpha_v_source_boundary.py`; `docs/core/07_artifacts/topic13/t13_nist_graphite_alpha_v_source_boundary_audit.json` | `T` = K; strain dimensionless; `alpha_L`, `alpha_V` = K^-1 | NIST SP 260-89 Eq. (5.5.2), Table 20 and archived PDF | checked source-boundary comparator; not UET derivation | source/provenance and standard thermodynamic geometry comparator | AXM-5Q1 state, isotropy assumption, program-level accuracy, missing `K_T`, and missing Ding sample mapping prevent `Cp -> Cv` promotion | source-lock `K_T` and material-state correspondence with uncertainty; keep alpha and base-Phi calibration separate |
 
 Artifact hash: `{artifact_hash}`. Full-gate hash after integration: `{full_hash}`. The lane does not emit `alpha_Phi_K` and does not read Xie 2026.
 """

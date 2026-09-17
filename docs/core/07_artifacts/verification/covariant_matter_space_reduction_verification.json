@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0",
+  "artifact": "covariant_matter_space_reduction_verification",
+  "generated_at": "2026-09-16T10:00:29.883881+00:00",
+  "audit_status": "PASS",
+  "evidence_status": "PARTIAL",
+  "claim_class": "B",
+  "claim": "exact response-sector coefficient map under declared weak-field scaling assumptions",
+  "symbolic": {
+    "response_acceleration_difference": "0",
+    "response_mapping_exact": true,
+    "mapped_characteristic_speed": "T/L",
+    "expected_normalized_light_speed": "T/L",
+    "characteristic_map_exact": true,
+    "mapped_coefficients": {
+      "a_space": "T**2*mass_sq*tau/(Z*mobility)",
+      "b_space": "T**2*field_scale**2*quartic*tau/(Z*mobility)",
+      "kappa_space": "T**2*tau/(L**2*mobility)"
+    }
+  },
+  "numeric": {
+    "response_acceleration_max_abs_difference": 8.326672684688674e-17,
+    "mapped_speed": 0.4,
+    "expected_normalized_light_speed": 0.4,
+    "mapped_a_space": 0.7923809523809527,
+    "mapped_b_space": 0.07020000000000001,
+    "mapped_kappa_space": 0.2971428571428572,
+    "matter_template_preserved": true,
+    "dimensional_source_all_finite": true,
+    "epsilon_zero_branch_rejected": true,
+    "coefficient_record": {
+      "a_space": 0.7923809523809527,
+      "b_space": 0.07020000000000001,
+      "kappa_space": 0.2971428571428572,
+      "mobility_space": 0.7,
+      "tau_space": 1.3,
+      "coupling_g": 0.22
+    }
+  },
+  "achieved_gates": {
+    "symbolic_response_equation_map": "PASS",
+    "numeric_response_equation_map": "PASS",
+    "characteristic_scale_map": "PASS",
+    "matter_template_not_relabelled_as_derived": "PASS",
+    "dimensional_source_map_finite": "PASS",
+    "gr_branch_not_divided_by_epsilon": "PASS",
+    "derived_trace_disconnected": "PASS",
+    "causal_dependency": "PASS"
+  },
+  "blocked_gates": {
+    "first_order_hyperbolic_phase_field_uv_closure": "BLOCKED",
+    "closed_time_path_kms_transport_matching": "BLOCKED",
+    "required_source_from_causal_kernel": "BLOCKED",
+    "full_coupled_matter_space_reduction": "BLOCKED",
+    "system_specific_SI_map": "BLOCKED"
+  },
+  "source_hashes": {
+    "docs\\core\\02_equations\\covariant\\uet_covariant_reduction.py": "aa65633292562810e4aa5aaed6c689ee00483543342187597c49534524a754dc",
+    "docs\\core\\01_contracts\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "1609cfdada2ad9e67ebcb8e9ae53f2f3f035fdc70469424e486eb3f7e53c1f86"
+  },
+  "run_contract": {
+    "seed": 190041,
+    "external_data": false,
+    "parameter_fitting": false,
+    "response_sector_only": true,
+    "full_matter_equation_derived": false,
+    "epsilon_zero_operator_active": false,
+    "trace_backreaction": false
+  },
+  "allowed_language": [
+    "exact response-sector reduction under declared scaling",
+    "partial bridge to matter_space_coupled_v1"
+  ],
+  "blocked_language": [
+    "full matter-space model derived from the covariant parent",
+    "microscopic dissipative matter transport derived",
+    "causal bath source derived",
+    "Topic 0.11 or 0.19 validated"
+  ],
+  "next_controller": "noether_charge_equation_of_state_and_covariant_transport_matching_missing",
+  "downstream_matter_status": "PASS",
+  "downstream_matter_evidence": "PARTIAL",
+  "downstream_diffusion_status": "PASS",
+  "downstream_diffusion_evidence": "PARTIAL",
+  "downstream_hyperbolic_phase_field": {
+    "artifact": "hyperbolic_phase_field_external_comparator_verification.json",
+    "audit_status": "PASS",
+    "evidence_status": "PARTIAL_EXTERNAL_COMPARATOR",
+    "role": "external_fixed_parameter_formula_comparator",
+    "causal_feasibility_artifact": "hyperbolic_phase_field_causal_feasibility.json",
+    "causal_feasibility_status": "PASS",
+    "fixed_light_cone_parameter_domain": "PASS_NORMALIZED_ANALYTIC",
+    "uniform_subluminal_limit": "NO_GO_EXACT_PARABOLIC_LIMIT",
+    "uet_derivation": "BLOCKED"
+  },
+  "downstream_noether_phase_field_state_map": {
+    "artifact": "noether_phase_field_state_map_verification.json",
+    "audit_status": "PASS",
+    "evidence_status": "PARTIAL_HYDRODYNAMIC_STATE_COORDINATE_MAP",
+    "role": "hydrodynamic_state_coordinate_map_not_microscopic_derivation",
+    "affine_fixed_scale_layer": "PASS",
+    "microscopic_reconstruction": "NO_GO_MANY_TO_ONE",
+    "equation_of_state_and_transport": "BLOCKED"
+  }
+}

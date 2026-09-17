@@ -13,29 +13,37 @@ import argparse
 import hashlib
 import json
 import re
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from docs.core.core_paths import canonical_existing_path
+
+
 OUTPUT_PATH = (
     REPO_ROOT
-    / "docs/core/artifacts/matter_space_report_alignment_gate.json"
+    / "docs/core/07_artifacts/gates/matter_space_report_alignment_gate.json"
 )
-BASE_REPORT_PATH = REPO_ROOT / "docs/core/MATTER_SPACE_RESEARCH_REPORT.md"
-ADDENDUM_PATH = (
-    REPO_ROOT
-    / "docs/core/MATTER_SPACE_RESEARCH_REPORT_ADDENDUM_2026-07-23.md"
+BASE_REPORT_PATH = canonical_existing_path(
+    REPO_ROOT / "docs/core/08_history/research_notes/MATTER_SPACE_RESEARCH_REPORT.md"
+)
+ADDENDUM_PATH = canonical_existing_path(
+    REPO_ROOT / "docs/core/08_history/research_notes/MATTER_SPACE_RESEARCH_REPORT_ADDENDUM_2026-07-23.md"
 )
 TOPIC_READINESS_PATH = REPO_ROOT / "docs/meta/topic_readiness.json"
 
 INPUT_PATHS = {
     "matter_space_program": REPO_ROOT
-    / "docs/core/artifacts/matter_space_research_program_gate.json",
-    "gr_program": REPO_ROOT / "docs/core/artifacts/uet_gr_research_program_gate.json",
+    / "docs/core/07_artifacts/gates/matter_space_research_program_gate.json",
+    "gr_program": REPO_ROOT / "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json",
     "noether_dependency": REPO_ROOT
-    / "docs/core/artifacts/noether_phase_field_dependency_gate.json",
+    / "docs/core/07_artifacts/gates/noether_phase_field_dependency_gate.json",
     "topic_0_11_dependency": REPO_ROOT
     / "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_noether_phase_field_dependency_gate.json",
     "topic_0_19_dependency": REPO_ROOT
@@ -213,12 +221,13 @@ def build_alignment_gate(*, generated_at: str | None = None) -> dict[str, Any]:
         marker: marker in addendum_normalized for marker in ADDENDUM_REQUIRED_MARKERS
     }
     linked_paths = (
-        "artifacts/matter_space_research_program_gate.json",
-        "artifacts/uet_gr_research_program_gate.json",
-        "artifacts/noether_phase_field_dependency_gate.json",
-        "0_11_noether_phase_field_dependency_gate.json",
-        "0_19_core_gr_program_dependency_gate.json",
-        "0_13_core_thermodynamic_constraint_gate.json",
+        "../../07_artifacts/gates/matter_space_report_alignment_gate.json",
+        "../../07_artifacts/gates/matter_space_research_program_gate.json",
+        "../../07_artifacts/gates/uet_gr_research_program_gate.json",
+        "../../07_artifacts/gates/noether_phase_field_dependency_gate.json",
+        "../../../topics/0.11_Phase_Transitions/Result/artifacts/0_11_noether_phase_field_dependency_gate.json",
+        "../../../topics/0.19_Gravity_GR/Result/artifacts/0_19_core_gr_program_dependency_gate.json",
+        "../../../topics/0.13_Thermodynamic_Bridge/Result/artifacts/0_13_core_thermodynamic_constraint_gate.json",
     )
     link_checks = {path: path in addendum_text for path in linked_paths}
     addendum_pass = all(marker_checks.values()) and all(link_checks.values())

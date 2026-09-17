@@ -3,13 +3,23 @@
 from __future__ import annotations
 
 import json
+import sys
 from datetime import date
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-ARTIFACTS = ROOT / "docs/core/artifacts"
-SPEC = ROOT / "docs/core/UET_MAIN_THEORY_AXIOMS_SPEC.md"
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from docs.core.core_paths import (  # noqa: E402
+    CANONICAL_ARTIFACT_ROOT,
+    canonical_artifact_path,
+    canonical_existing_path,
+)
+
+ARTIFACTS = CANONICAL_ARTIFACT_ROOT
+SPEC = canonical_existing_path(ROOT / "docs/core/01_contracts/UET_MAIN_THEORY_AXIOMS_SPEC.md")
 
 POSTULATES = (
     (
@@ -183,7 +193,9 @@ def main() -> int:
         "uet_main_theory_ontology_gate.json": gate,
     }
     for name, payload in outputs.items():
-        (ARTIFACTS / name).write_text(
+        path = canonical_artifact_path(name)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(
             json.dumps(payload, indent=2, ensure_ascii=False) + "\n",
             encoding="utf-8",
         )

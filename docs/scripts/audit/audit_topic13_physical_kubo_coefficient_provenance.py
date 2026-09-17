@@ -8,9 +8,9 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-CONTRACT = ROOT / "docs/core/artifacts/covariant_superfluid_transport_contract.json"
-VERIFICATION = ROOT / "docs/core/artifacts/covariant_superfluid_transport_verification.json"
-OUT = ROOT / "docs/core/artifacts/t13_physical_kubo_coefficient_provenance_audit.json"
+CONTRACT = ROOT / "docs/core/07_artifacts/archive/covariant_superfluid_transport_contract.json"
+VERIFICATION = ROOT / "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_physical_kubo_coefficient_provenance_audit.json"
 SOURCE_RELS = [
     "docs/data/external/relativistic_transport/son_relativistic_superfluid_2002/source_record.json",
     "docs/data/external/relativistic_transport/chapman_hoyos_oz_superfluid_kubo_2013/source_record.json",
@@ -95,12 +95,12 @@ def main() -> int:
         "accepted_evidence_statuses": ["KUBO_MATCHED", "SOURCE_LOCKED", "EXTERNALLY_MATCHED"],
         "checks": checks,
         "transport_contract": {
-            "path": "docs/core/artifacts/covariant_superfluid_transport_contract.json",
+            "path": "docs/core/07_artifacts/archive/covariant_superfluid_transport_contract.json",
             "required_fields": contract["required_coefficient_fields"],
             "physical_values": contract["core_contract"]["transport_values"],
         },
         "transport_verification": {
-            "path": "docs/core/artifacts/covariant_superfluid_transport_verification.json",
+            "path": "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json",
             "physical_coefficient_evidence": verification["physical_coefficient_evidence"],
             "finite_temperature_two_fluid_completion": verification["finite_temperature_two_fluid_completion"],
             "full_SK_KMS_completion": verification["full_SK_KMS_completion"],
@@ -115,9 +115,9 @@ def main() -> int:
     report["major_result"] = template["major_result"]
     report["major_result"]["verification_status"] = status
     report["major_result"]["evidence_artifacts"] = [
-        "docs/core/artifacts/t13_physical_kubo_coefficient_provenance_audit.json",
-        "docs/core/artifacts/covariant_superfluid_transport_contract.json",
-        "docs/core/artifacts/covariant_superfluid_transport_verification.json",
+        "docs/core/07_artifacts/topic13/t13_physical_kubo_coefficient_provenance_audit.json",
+        "docs/core/07_artifacts/archive/covariant_superfluid_transport_contract.json",
+        "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json",
     ]
     OUT.write_text(json.dumps(report, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
     print(json.dumps({

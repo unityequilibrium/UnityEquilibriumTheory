@@ -9,18 +9,18 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUTPUT = ROOT / "docs/core/artifacts/t13_csrc_reconciliation_audit.json"
+OUTPUT = ROOT / "docs/core/07_artifacts/topic13/t13_csrc_reconciliation_audit.json"
 EVIDENCE = {
-    "ding_oa": ROOT / "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
-    "ding_request": ROOT / "docs/core/artifacts/t13_ding_pbte_author_request_audit.json",
-    "public_screening": ROOT / "docs/core/artifacts/t13_public_phonon_route_screening_audit.json",
-    "huberman": ROOT / "docs/core/artifacts/t13_huberman_2019_public_pbte_boundary_audit.json",
-    "calorine_boundary": ROOT / "docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json",
+    "ding_oa": ROOT / "docs/core/07_artifacts/topic13/t13_ding_pbte_numeric_input_availability_audit.json",
+    "ding_request": ROOT / "docs/core/07_artifacts/topic13/t13_ding_pbte_author_request_audit.json",
+    "public_screening": ROOT / "docs/core/07_artifacts/topic13/t13_public_phonon_route_screening_audit.json",
+    "huberman": ROOT / "docs/core/07_artifacts/topic13/t13_huberman_2019_public_pbte_boundary_audit.json",
+    "calorine_boundary": ROOT / "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json",
     "calorine_numeric": ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_nep_bte_reproduction_source_package.json",
-    "mp48_spectral": ROOT / "docs/core/artifacts/t13_mp48_spectral_csrc_reproduction_audit.json",
-    "mp48_mapping": ROOT / "docs/core/artifacts/t13_mp48_ding_csrc_response_mapping_audit.json",
-    "ding_2017_supplementary": ROOT / "docs/core/artifacts/t13_ding_2017_acs_supplementary_payload_boundary_audit.json",
-    "figshare_force_data": ROOT / "docs/core/artifacts/t13_figshare_dft_force_data_boundary_audit.json",
+    "mp48_spectral": ROOT / "docs/core/07_artifacts/topic13/t13_mp48_spectral_csrc_reproduction_audit.json",
+    "mp48_mapping": ROOT / "docs/core/07_artifacts/topic13/t13_mp48_ding_csrc_response_mapping_audit.json",
+    "ding_2017_supplementary": ROOT / "docs/core/07_artifacts/topic13/t13_ding_2017_acs_supplementary_payload_boundary_audit.json",
+    "figshare_force_data": ROOT / "docs/core/07_artifacts/topic13/t13_figshare_dft_force_data_boundary_audit.json",
 }
 
 

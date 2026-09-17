@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "artifact": "covariant_parent_verification",
+  "generated_at": "2026-09-16T08:45:48.673041+00:00",
+  "audit_status": "PASS",
+  "research_status": "INTERNAL_CONSERVATIVE_PARENT_ONLY",
+  "operator": "covariant_theory_parent_formula_v1",
+  "unit_lane": "natural",
+  "metrics": {
+    "gr_null_max_abs": 0.0,
+    "null_response_equation_abs": 0.0,
+    "null_exchange_max_abs": 0.0,
+    "coupled_matter_eom_max_abs": 0.0,
+    "coupled_noether_divergence_abs": 0.0,
+    "coupled_exchange_closure_max_abs": 0.0,
+    "matter_stress_asymmetry_max_abs": 0.0,
+    "response_stress_asymmetry_max_abs": 0.0,
+    "reciprocal_phi_fd_error": 1.953506800767002e-13,
+    "reciprocal_matter_fd_error": 7.562457604581851e-13
+  },
+  "thresholds": {
+    "exact_identity": 1e-10,
+    "finite_difference": 1e-08
+  },
+  "checks": {
+    "exact_gr_null_nesting": true,
+    "response_decouples_at_null": true,
+    "null_exchange_vanishes": true,
+    "matter_equation_on_shell": true,
+    "o2_noether_current_on_shell": true,
+    "exchange_ledger_closes": true,
+    "matter_stress_is_symmetric": true,
+    "response_stress_is_symmetric": true,
+    "reciprocal_phi_source_matches_fd": true,
+    "reciprocal_matter_source_matches_fd": true,
+    "trace_is_not_parent_state": true
+  },
+  "contract": {
+    "status": "CANDIDATE_INTEGRATED_CONSERVATIVE_PARENT_FORMULA_EVALUATOR",
+    "unit_lane": "natural",
+    "field_content": {
+      "metric": "standard Lorentz metric",
+      "matter": "global O(2) scalar doublet",
+      "response": "candidate scalar Phi"
+    },
+    "generator": "one conservative scalar-tensor-plus-O2 action density",
+    "derived_relations": [
+      "metric equation",
+      "response equation",
+      "matter equation",
+      "O2 Noether current",
+      "matter and response stress tensors",
+      "reciprocal interaction sources",
+      "local exchange-completed ledger"
+    ],
+    "gr_null_limit": "epsilon_nc=0 and Phi=Phi_* removes response corrections",
+    "generated_trace_present": false,
+    "observer_state_present": false,
+    "dissipative_sector_present": false,
+    "metric_pde_solver_present": false,
+    "claim_boundary": "integrated natural-unit conservative formula evaluator; not curved numerical GR, open-system closure, or physical validation",
+    "next_controller": "lane_specific_covariant_coarse_graining_not_closed"
+  },
+  "claim_boundary": "integrated conservative formula evaluator; not a metric PDE solver, open-system derivation, SI model, or physical GR validation"
+}

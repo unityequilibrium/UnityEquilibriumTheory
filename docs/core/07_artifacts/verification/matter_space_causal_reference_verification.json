@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "artifact": "matter_space_causal_reference_verification",
+  "generated_at": "2026-09-18",
+  "audit_status": "PASS",
+  "reference_status": "PASS",
+  "default_candidate_status": "BLOCKED",
+  "default_candidate_causal_gate": "FAIL",
+  "default_candidate_prearrival_leakage_fraction": 0.017639381271029236,
+  "reference": {
+    "grid": {
+      "n": 161,
+      "dx": 0.0125,
+      "center_index": 80,
+      "target_index": 120,
+      "target_distance_cells": 40
+    },
+    "config": {
+      "space_speed": 1.0,
+      "tau_space": 5.0,
+      "kappa_space": 5.0,
+      "mobility_space": 1.0,
+      "coupling_g": 0.0,
+      "boundary_condition": "zero_flux",
+      "unit_lane": "normalized"
+    },
+    "time_step": {
+      "dt": 0.0125,
+      "cfl": 1.0,
+      "steps_before_target": 40,
+      "arrival_step_checked": 41
+    },
+    "metrics": {
+      "prearrival_target_abs": 0.0,
+      "arrival_target_abs": 0.9488839472937474,
+      "prearrival_max_outside_discrete_cone": 0.0,
+      "prearrival_leakage_fraction": 0.0,
+      "support_violations": 0
+    },
+    "status": "PASS",
+    "scope": "linearized_space_response_with_frozen_C",
+    "interpretation": "The strict-CFL reference recurrence has compact discrete support in the tested frozen-C lane. This does not verify the full nonlinear coupled operator, its energy ledger, or the continuum equation."
+  },
+  "implementation_contract": {
+    "scheme": "centered_second_order_damped_recurrence",
+    "required_cfl": 1.0,
+    "support_property": "nearest-neighbor compact discrete cone",
+    "physical_state_feedback": "C is frozen and trace is absent",
+    "scope_boundary": "reference/control lane only; not a replacement for matter_space_step"
+  },
+  "evidence_inputs": {
+    "core_source": "docs/core/02_equations/matter_space/uet_matter_space.py",
+    "default_candidate_verification": "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
+  },
+  "claim_boundary": "The causal reference lane is an internally verified numerical control for compact support in its declared scope. The default full coupled candidate remains blocked by its original causal leakage gate and is not promoted by this artifact."
+}

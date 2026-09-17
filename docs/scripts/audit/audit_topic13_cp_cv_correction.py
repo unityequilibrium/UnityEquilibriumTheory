@@ -24,8 +24,8 @@ from docs.core.thermal_cp_cv_correction import (  # noqa: E402
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_cp_cv_correction_audit.json"
-MODULE = ROOT / "docs/core/thermal_cp_cv_correction.py"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_cp_cv_correction_audit.json"
+MODULE = ROOT / "docs/core/03_lanes/thermal/thermal_cp_cv_correction.py"
 
 
 def rel(path: Path) -> str:

@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "artifact": "uet_fundamental_symmetry_inventory",
+  "generated_at": "2026-09-16T10:25:32.000079+00:00",
+  "track_status": "HYPOTHESIS_TRACK",
+  "components": {
+    "lorentz_metric_parent": {
+      "status": "INTERNAL_CONSERVATIVE_FORMULA",
+      "evidence": "covariant_parent_verification.json"
+    },
+    "response_scalar": {
+      "status": "CANDIDATE_EFFECTIVE_SCALAR",
+      "evidence": "covariant_parent_verification.json"
+    },
+    "global_o2_scalar_matter": {
+      "status": "INTERNAL_TREE_LEVEL",
+      "evidence": "o2_finite_density_eos_verification.json"
+    },
+    "local_gauge_symmetry": {
+      "status": "BLOCKED",
+      "reason": "no local gauge group, connection, field strength, or Ward identity"
+    },
+    "dirac_spinor_action": {
+      "status": "BLOCKED",
+      "reason": "no spinor representation or covariant fermion parent action"
+    },
+    "c_p_t_cpt": {
+      "status": "BLOCKED",
+      "reason": "no complete field content and transformation convention"
+    },
+    "anomaly_cancellation": {
+      "status": "BLOCKED",
+      "reason": "no declared chiral spectrum"
+    },
+    "unitarity_ghost_tachyon": {
+      "status": "PARTIAL_SCALAR_TREE_LEVEL_ONLY",
+      "reason": "positive scalar kinetic/potential domain does not cover gauge, spinor, or loop sectors"
+    },
+    "renormalization": {
+      "status": "BLOCKED",
+      "reason": "no power counting, cutoff policy, counterterm basis, or loop audit"
+    },
+    "mass_generation": {
+      "status": "BLOCKED_SM_IDENTITY",
+      "reason": "effective scalar mass shift and O2 condensation do not derive Standard-Model masses"
+    },
+    "photon_source_detector": {
+      "status": "STANDARD_BASELINE_ONLY",
+      "evidence": "photon_observer_baseline_verification.json"
+    },
+    "neutrino_positron_uet_identity": {
+      "status": "REJECTED_UNDERIVED",
+      "reason": "R_gen is a derived trace, not a particle identity"
+    }
+  },
+  "input_identity": {
+    "covariant_parent_verification.json": "b51c02933fdba49378e03c0e41c3161030a35c6c90a2fe69f16a14a4066197d5",
+    "o2_finite_density_eos_verification.json": "746e6db7be3dba2eb5d1eed9ec9a010b4b80f0131ecf8a82a4a65c80c6ebed1d",
+    "photon_observer_baseline_verification.json": "a539319ef12bd27b16f9f260e66df9e3f568ab474870c489d1349cb8bbc74ce6",
+    "uet_gr_research_program_gate.json": "09a3605cfd5e16802b3109528dfecb4c46dde71292306894ef48e3bf4c3373e7"
+  },
+  "input_status_snapshot": {
+    "parent": "PASS",
+    "eos": "PASS",
+    "photon": "PASS_WITH_OPEN_DIMENSIONAL_AND_UET_MAPPING",
+    "gr_program": "BLOCKED"
+  },
+  "claim_boundary": "inventory of prerequisites; no fundamental unification derivation"
+}

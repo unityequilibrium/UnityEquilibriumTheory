@@ -1,0 +1,61 @@
+{
+  "major_result_id": "T13_CUT_POOLING_PROVENANCE_BOUNDARY",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "what_is_closed": [
+    "Published processing sums cuts before processing; raw metadata differences retained explicitly"
+  ],
+  "equation_or_mapping": "Source image sum across files; last input table supplies stage-derived time axis",
+  "units": "Raw metadata units retained as unverified except explicit source labels; differences are not uncertainties",
+  "derivation_class": "SOURCE_CODE_AND_DATA_AUDIT",
+  "observable": "acquisition metadata",
+  "data_role": "SOURCE_PROVENANCE",
+  "verification_status": "POOLING_IDENTIFIED_INDEPENDENCE_UNVERIFIED",
+  "cross_cut_differences": {
+    "Pressure": {
+      "differing_rows": 38,
+      "maximum_absolute_difference": 4.001129249832532e-10
+    },
+    "Sensor_B_Ohm": {
+      "differing_rows": 38,
+      "maximum_absolute_difference": 0.00605868205867921
+    },
+    "Temperature_B": {
+      "differing_rows": 38,
+      "maximum_absolute_difference": 0.09303813327068156
+    },
+    "shutter": {
+      "differing_rows": 1,
+      "maximum_absolute_difference": 0.003355704697986577
+    }
+  },
+  "source_locator": "treat_pickle.ipynb cell 1 at 7f7036bfda28f9330f19b40e57f4edf464b67d64",
+  "source_pooling": {
+    "operation": "sum across files",
+    "independence_check_present": false,
+    "exposure_weighting_present": false,
+    "last_input_supplies_time_axis": true,
+    "actual_cut_time_axes_equal": true,
+    "scope": "reviewed import/pooling cell only"
+  },
+  "open_blockers": [
+    "pre-sorted acquisition/aggregation procedure",
+    "cut independence and drift contribution",
+    "detector gain/noise and sensor calibration",
+    "independent Phi coupling"
+  ],
+  "next_action": "Keep cuts separate for sensitivity; obtain pre-sorting/DAQ provenance before constructing covariance or physical temperature calibration",
+  "dependency_unlocked": [
+    "cut-resolved sensitivity only"
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "evidence_hashes": {
+    "docs/core/artifacts/t13_ued_source_acquisition_audit.json": "d20308f305e411a3ad202bb50ab6edfe9cc5ac7b1e0e24ce2717ea7dbc6bf775",
+    "docs/core/artifacts/t13_ued_raw_structure_audit.json": "54a67053969dff823cb58503425a90e47277b90705560ef94720db79d5d058fa",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_treat_pickle_7f7036b.ipynb": "1492289fde53f4cadeacb7e4132344c899a660c31fad23a305f4024b1c2c7b52",
+    "docs/scripts/audit/audit_topic13_ued_cut_pooling.py": "5260516c46e9671c31cd3716d0185adaddfd534d3c00f3146d0c22e6109f94a9",
+    "docs/core/test/test_topic13_ued_cut_pooling.py": "247e50187ef757dad228ef2ad65c4854b44f5e5582d010c160f54982275191a5"
+  },
+  "claim_boundary": "Metadata differences do not prove physical drift or invalidate the experiment. Summed images are not independent frames. No covariance estimate, holdout, fitted alpha or thermal claim."
+}

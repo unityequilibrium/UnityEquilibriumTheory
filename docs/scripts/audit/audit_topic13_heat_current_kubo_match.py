@@ -23,10 +23,10 @@ from docs.core.uet_o2_heat_current_kubo_match import (  # noqa: E402
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_heat_current_kubo_match_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_heat_current_kubo_match.py"
-HEAT_MODULE = ROOT / "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py"
-CONTINUUM_MODULE = ROOT / "docs/core/uet_o2_continuum_collision_operator.py"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_heat_current_kubo_match_audit.json"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_heat_current_kubo_match.py"
+HEAT_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_covariant_entropy_heat_flux_balance.py"
+CONTINUUM_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_continuum_collision_operator.py"
 
 
 def sha256(path: Path) -> str:
@@ -84,9 +84,9 @@ def main() -> int:
         "observable": contract["observable"],
         "data_role": contract["data_role"],
         "evidence_artifacts": [
-            {"path": "docs/core/uet_o2_heat_current_kubo_match.py", "sha256": sha256(MODULE)},
-            {"path": "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py", "sha256": sha256(HEAT_MODULE)},
-            {"path": "docs/core/uet_o2_continuum_collision_operator.py", "sha256": sha256(CONTINUUM_MODULE)},
+            {"path": "docs/core/02_equations/o2/uet_o2_heat_current_kubo_match.py", "sha256": sha256(MODULE)},
+            {"path": "docs/core/02_equations/o2/uet_o2_covariant_entropy_heat_flux_balance.py", "sha256": sha256(HEAT_MODULE)},
+            {"path": "docs/core/02_equations/o2/uet_o2_continuum_collision_operator.py", "sha256": sha256(CONTINUUM_MODULE)},
         ],
         "verification_status": status,
         "open_blockers": [

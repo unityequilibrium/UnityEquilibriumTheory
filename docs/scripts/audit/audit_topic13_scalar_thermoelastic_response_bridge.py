@@ -13,8 +13,8 @@ from docs.core.uet_scalar_thermoelastic_response_bridge import (
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_scalar_thermoelastic_response_bridge_audit.json"
-REGISTRY_OUT = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_scalar_thermoelastic_bridge_addendum.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_scalar_thermoelastic_response_bridge_audit.json"
+REGISTRY_OUT = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_scalar_thermoelastic_bridge_addendum.json"
 EQUATION_ID = "uet.o2.thermal.scalar_thermoelastic_response_bridge"
 
 
@@ -73,11 +73,11 @@ def main() -> int:
         delta_phi=0.02,
     )
     lowitzer = _load(
-        "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json"
+        "docs/core/07_artifacts/topic13/t13_lowitzer_graphite_pvt_full_source_pair_audit.json"
     )
-    mp48 = _load("docs/core/artifacts/t13_mp48_independent_graphite_cv_audit.json")
+    mp48 = _load("docs/core/07_artifacts/topic13/t13_mp48_independent_graphite_cv_audit.json")
     factor_gate = _load(
-        "docs/core/artifacts/t13_material_interface_factor_resolution_audit.json"
+        "docs/core/07_artifacts/topic13/t13_material_interface_factor_resolution_audit.json"
     )
     cp_identity = (
         reference.c_v_vol
@@ -175,14 +175,14 @@ def main() -> int:
         "independent_SI_alpha_record_missing",
     ]
     source_paths = [
-        "docs/core/uet_scalar_thermoelastic_response_bridge.py",
-        "docs/core/test/test_topic13_scalar_thermoelastic_response_bridge.py",
+        "docs/core/03_lanes/thermal/uet_scalar_thermoelastic_response_bridge.py",
+        "docs/core/05_tests/regression/root/test_topic13_scalar_thermoelastic_response_bridge.py",
         "docs/scripts/audit/audit_topic13_scalar_thermoelastic_response_bridge.py",
     ]
     evidence_paths = [
-        "docs/core/artifacts/t13_material_interface_factor_resolution_audit.json",
-        "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
-        "docs/core/artifacts/t13_mp48_independent_graphite_cv_audit.json",
+        "docs/core/07_artifacts/topic13/t13_material_interface_factor_resolution_audit.json",
+        "docs/core/07_artifacts/topic13/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
+        "docs/core/07_artifacts/topic13/t13_mp48_independent_graphite_cv_audit.json",
     ]
     artifact = {
         "schema_version": "t13-scalar-thermoelastic-response-bridge-v1",
@@ -305,7 +305,7 @@ def main() -> int:
             {
                 "schema_version": "uet-equation-registry-addendum-v1",
                 "status": "CONDITIONAL_INTERFACE_NOT_ACCEPTED_UET_ACTION",
-                "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+                "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
                 "equation_entries": [entry],
                 "full_core_unlock": False,
                 "claim_promotion": False,

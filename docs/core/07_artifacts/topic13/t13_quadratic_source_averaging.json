@@ -1,0 +1,74 @@
+{
+  "major_result_id": "T13_QUADRATIC_SOURCE_SPATIAL_AVERAGING",
+  "topic": "0.13",
+  "closure_level": "CLOSED_FOR_LANE",
+  "what_is_closed": "Exact finite positive-weight averaging identity of the existing quadratic source",
+  "equation_or_mapping": "sum w_i J(chi_i)-J(sum w_i chi_i)=epsilon*h/2 * sum w_i |chi_i-chi_bar|^2",
+  "units": "chi energy; h energy; J energy^3; weights dimensionless",
+  "derivation_class": "algebraic identity checked against production residual",
+  "observable": "spatially averaged source, not detector temperature",
+  "data_role": "SYNTHETIC_ACTION_DIAGNOSTIC",
+  "rows": [
+    {
+      "case": "opposed_zero_mean",
+      "local_source_average": 0.2,
+      "source_of_mean": 0.0,
+      "unresolved_variance": 1.0,
+      "expected_gap": 0.2,
+      "identity_error": 0.0
+    },
+    {
+      "case": "uniform",
+      "local_source_average": 0.04000000000000001,
+      "source_of_mean": 0.04000000000000001,
+      "unresolved_variance": 0.0,
+      "expected_gap": 0.0,
+      "identity_error": 0.0
+    },
+    {
+      "case": "unequal_weights",
+      "local_source_average": 0.08100000000000002,
+      "source_of_mean": 0.029300000000000007,
+      "unresolved_variance": 0.2585,
+      "expected_gap": 0.0517,
+      "identity_error": 6.938893903907228e-18
+    },
+    {
+      "case": "GR_null",
+      "local_source_average": 0.0,
+      "source_of_mean": 0.0,
+      "unresolved_variance": 1.0,
+      "expected_gap": 0.0,
+      "identity_error": 0.0
+    }
+  ],
+  "verification_status": "PRODUCTION_RESIDUAL_IDENTITY_CHECKED",
+  "controlling_blocker": "physical_local_second_moment_and_UET_operator_normalization",
+  "open_blockers": [
+    "material_to_chi_map",
+    "dynamic_susceptibility",
+    "calibration_source_and_uncertainty"
+  ],
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "global_claim_promotion": false,
+  "claim_boundary": "Not an on-shell experiment or a new effective closure. Signed Fourier weights and renormalized quantum composites require separate treatment.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/scripts/audit/audit_topic13_quadratic_source_averaging.py",
+      "sha256": "5038ae25d984a061f3b58d643a13be3c6741c652b531fbc7572fe81d7b00ff6f"
+    },
+    {
+      "path": "docs/core/test/test_topic13_quadratic_source_averaging.py",
+      "sha256": "a68450a7123a570a2f7f3592e50f102876bd05b5011878a6ebe00987b2540fbf"
+    },
+    {
+      "path": "docs/core/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "path": "docs/core/uet_covariant_response.py",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    }
+  ]
+}

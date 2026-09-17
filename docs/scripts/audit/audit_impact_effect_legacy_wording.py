@@ -10,7 +10,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUTPUT = ROOT / "docs/core/artifacts/impact_effect_legacy_wording_audit.json"
+OUTPUT = ROOT / "docs/core/07_artifacts/verification/impact_effect_legacy_wording_audit.json"
 TEXT_SUFFIXES = {".md", ".py", ".txt"}
 EXCLUDED_PARTS = {".git", "__pycache__", "Result", "_Logs", "artifacts"}
 PATTERNS: tuple[tuple[str, re.Pattern[str], str], ...] = (
@@ -24,14 +24,14 @@ PATTERNS: tuple[tuple[str, re.Pattern[str], str], ...] = (
 
 CANONICAL_CONTRACT_PATHS = {
     "docs/core/AGENTS.md",
-    "docs/core/COSMOLOGICAL_OPEN_SYSTEM_AND_CAUSAL_TRACE_SPEC.md",
-    "docs/core/IMPACT_EFFECT_AND_INFORMATION_FLOW_SPEC.md",
-    "docs/core/MATTER_SPACE_RESEARCH_REPORT.md",
-    "docs/core/RELATIONAL_TWO_BODY_BASELINE_SPEC.md",
-    "docs/core/TRACE_RESEARCH_SPEC.md",
-    "docs/core/UET_FOUNDATION_COMPATIBILITY_AUDIT.md",
-    "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md",
-    "docs/core/UET_INFORMATION_FIELD_THERMODYNAMIC_TRACE_AUDIT.md",
+    "docs/core/01_contracts/COSMOLOGICAL_OPEN_SYSTEM_AND_CAUSAL_TRACE_SPEC.md",
+    "docs/core/01_contracts/IMPACT_EFFECT_AND_INFORMATION_FLOW_SPEC.md",
+    "docs/core/08_history/research_notes/MATTER_SPACE_RESEARCH_REPORT.md",
+    "docs/core/01_contracts/RELATIONAL_TWO_BODY_BASELINE_SPEC.md",
+    "docs/core/01_contracts/TRACE_RESEARCH_SPEC.md",
+    "docs/core/08_history/research_notes/UET_FOUNDATION_COMPATIBILITY_AUDIT.md",
+    "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md",
+    "docs/core/08_history/research_notes/UET_INFORMATION_FIELD_THERMODYNAMIC_TRACE_AUDIT.md",
 }
 
 

@@ -1,0 +1,226 @@
+{
+  "schema_version": "1.0",
+  "artifact": "matter_space_formula_audit",
+  "status": "WARN",
+  "claim_class": "candidate_normalized_effective_model",
+  "formula_registry": [
+    {
+      "formula_id": "MS-001",
+      "relation": "Omega = integral[a_C/2 C^2 + b_C/4 C^4 + kappa_C/2 |grad C|^2 + a_Phi/2 Phi^2 + b_Phi/4 Phi^4 + kappa_Phi/2 |grad Phi|^2 - g/2 C^2 Phi] dx",
+      "variables": {
+        "C": "matter/structure scalar field",
+        "Phi": "effective space-response scalar field",
+        "x": "normalized coordinate",
+        "a,b,kappa,g": "normalized candidate coefficients"
+      },
+      "unit_system": "normalized_v1",
+      "unit_closure_status": "Proxy",
+      "conversion_steps": "none in normalized lane; SI conversion is blocked",
+      "constant_origin": "heuristic_bridge",
+      "proof_status": "heuristic bridge",
+      "verification_role": "future gate",
+      "implementation": "docs/core/uet_matter_space.py::matter_space_free_energy",
+      "failure_mode": "unbounded or non-variational dynamics",
+      "next_hardening_step": "implement the discrete functional and directional-derivative gate",
+      "implementation_status": "PRESENT",
+      "last_verifier": "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
+    },
+    {
+      "formula_id": "MS-002",
+      "relation": "mu_C = a_C C + b_C C^3 - kappa_C laplacian(C) - g C Phi",
+      "variables": {
+        "mu_C": "functional derivative delta Omega/delta C"
+      },
+      "unit_system": "normalized_v1",
+      "unit_closure_status": "Proxy",
+      "conversion_steps": "none in normalized lane; SI conversion is blocked",
+      "constant_origin": "heuristic_bridge",
+      "proof_status": "derived",
+      "verification_role": "future gate",
+      "implementation": "docs/core/uet_matter_space.py::matter_space_chemical_potentials",
+      "failure_mode": "matter dynamics no longer descends the declared functional",
+      "next_hardening_step": "finite-difference directional derivative comparison",
+      "implementation_status": "PRESENT",
+      "last_verifier": "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
+    },
+    {
+      "formula_id": "MS-003",
+      "relation": "mu_Phi = a_Phi Phi + b_Phi Phi^3 - kappa_Phi laplacian(Phi) - g/2 C^2",
+      "variables": {
+        "mu_Phi": "functional derivative delta Omega/delta Phi"
+      },
+      "unit_system": "normalized_v1",
+      "unit_closure_status": "Proxy",
+      "conversion_steps": "none in normalized lane; SI conversion is blocked",
+      "constant_origin": "heuristic_bridge",
+      "proof_status": "derived",
+      "verification_role": "future gate",
+      "implementation": "docs/core/uet_matter_space.py::matter_space_chemical_potentials",
+      "failure_mode": "space response exchanges untracked energy with matter",
+      "next_hardening_step": "finite-difference directional derivative comparison",
+      "implementation_status": "PRESENT",
+      "last_verifier": "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
+    },
+    {
+      "formula_id": "MS-004",
+      "relation": "partial_t C = M_C laplacian(mu_C) + J_C; integral J_C dx = 0",
+      "variables": {
+        "M_C": "positive normalized mobility",
+        "J_C": "zero-net matter source"
+      },
+      "unit_system": "normalized_v1",
+      "unit_closure_status": "Proxy",
+      "conversion_steps": "none in normalized lane; SI conversion is blocked",
+      "constant_origin": "heuristic_bridge",
+      "proof_status": "heuristic bridge",
+      "verification_role": "future gate",
+      "implementation": "docs/core/uet_matter_space.py::matter_space_rhs",
+      "failure_mode": "closed matter amount drifts",
+      "next_hardening_step": "mass-drift and source-integral gates",
+      "implementation_status": "PRESENT",
+      "last_verifier": "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
+    },
+    {
+      "formula_id": "MS-005",
+      "relation": "partial_t C = -M_C mu_C + J_C",
+      "variables": {
+        "M_C": "positive normalized mobility",
+        "J_C": "order-parameter drive"
+      },
+      "unit_system": "normalized_v1",
+      "unit_closure_status": "Proxy",
+      "conversion_steps": "none in normalized lane; SI conversion is blocked",
+      "constant_origin": "heuristic_bridge",
+      "proof_status": "heuristic bridge",
+      "verification_role": "future gate",
+      "implementation": "docs/core/uet_matter_space.py::matter_space_rhs",
+      "failure_mode": "non-conserved control is mistaken for matter-density conservation",
+      "next_hardening_step": "separate lane test and explicit diagnostics",
+      "implementation_status": "PRESENT",
+      "last_verifier": "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
+    },
+    {
+      "formula_id": "MS-006",
+      "relation": "partial_t Phi = Pi; tau_Phi partial_t Pi + Pi = -M_Phi mu_Phi + J_Phi",
+      "variables": {
+        "Pi": "space-response rate",
+        "tau_Phi": "positive normalized response time",
+        "M_Phi": "positive normalized mobility",
+        "J_Phi": "open drive"
+      },
+      "unit_system": "normalized_v1",
+      "unit_closure_status": "Proxy",
+      "conversion_steps": "none in normalized lane; SI conversion is blocked",
+      "constant_origin": "heuristic_bridge",
+      "proof_status": "heuristic bridge",
+      "verification_role": "future gate",
+      "implementation": "docs/core/uet_matter_space.py::matter_space_rhs",
+      "failure_mode": "claimed memory lacks a physical state or ledger",
+      "next_hardening_step": "causal-control, stability, and open-work gates",
+      "implementation_status": "PRESENT",
+      "last_verifier": "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
+    },
+    {
+      "formula_id": "MS-007",
+      "relation": "E = Omega + tau_Phi/(2 M_Phi) integral Pi^2 dx",
+      "variables": {
+        "E": "normalized extended Lyapunov functional"
+      },
+      "unit_system": "normalized_v1",
+      "unit_closure_status": "Proxy",
+      "conversion_steps": "none in normalized lane; SI conversion is blocked",
+      "constant_origin": "heuristic_bridge",
+      "proof_status": "derived",
+      "verification_role": "future gate",
+      "implementation": "docs/core/uet_matter_space.py::matter_space_extended_energy",
+      "failure_mode": "dissipation is mislabeled as lost energy",
+      "next_hardening_step": "closed/open ledger residual gate",
+      "implementation_status": "PRESENT",
+      "last_verifier": "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
+    },
+    {
+      "formula_id": "MS-008",
+      "relation": "sigma_C = M_C |grad mu_C|^2 (conserved) or M_C mu_C^2 (nonconserved); sigma_Phi = Pi^2/M_Phi",
+      "variables": {
+        "sigma_C": "matter dissipation density",
+        "sigma_Phi": "space-response dissipation density"
+      },
+      "unit_system": "normalized_v1",
+      "unit_closure_status": "Proxy",
+      "conversion_steps": "none in normalized lane; SI conversion is blocked",
+      "constant_origin": "heuristic_bridge",
+      "proof_status": "derived",
+      "verification_role": "future gate",
+      "implementation": "docs/core/uet_matter_space.py::matter_space_dissipation",
+      "failure_mode": "trace source becomes negative or loses thermodynamic meaning",
+      "next_hardening_step": "non-negativity and discrete energy-law gates",
+      "implementation_status": "PRESENT",
+      "last_verifier": "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
+    },
+    {
+      "formula_id": "MS-009",
+      "relation": "R = G_ret * (sigma_C + sigma_Phi)",
+      "variables": {
+        "R": "derived causal record",
+        "G_ret": "existing finite-support trace ansatz"
+      },
+      "unit_system": "normalized_v1",
+      "unit_closure_status": "Proxy",
+      "conversion_steps": "none in normalized lane; SI conversion is blocked",
+      "constant_origin": "heuristic_bridge",
+      "proof_status": "heuristic bridge",
+      "verification_role": "diagnostic-only",
+      "implementation": "docs/core/uet_trace.py::compute_spacetime_trace",
+      "failure_mode": "derived information silently becomes a feedback state",
+      "next_hardening_step": "trace-enabled versus trace-disabled state-invariance gate",
+      "implementation_status": "PRESENT",
+      "last_verifier": "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
+    },
+    {
+      "formula_id": "MS-010",
+      "relation": "v_Phi = sqrt(M_Phi kappa_Phi / tau_Phi)",
+      "variables": {
+        "v_Phi": "linearized normalized propagation speed"
+      },
+      "unit_system": "normalized_v1",
+      "unit_closure_status": "Proxy",
+      "conversion_steps": "none in normalized lane; SI conversion is blocked",
+      "constant_origin": "heuristic_bridge",
+      "proof_status": "derived",
+      "verification_role": "future gate",
+      "implementation": "docs/core/uet_matter_space.py::MatterSpaceConfig.space_speed",
+      "failure_mode": "causal interpretation exceeds the implemented response scale",
+      "next_hardening_step": "arrival-speed control and SI speed-policy gate",
+      "implementation_status": "PRESENT",
+      "last_verifier": "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
+    }
+  ],
+  "coefficient_policy": {
+    "positive_required": [
+      "b_C",
+      "b_Phi",
+      "kappa_C",
+      "kappa_Phi",
+      "M_C",
+      "M_Phi",
+      "tau_Phi"
+    ],
+    "nonnegative_required": [
+      "a_Phi",
+      "g"
+    ],
+    "a_C": "finite signed normalized control",
+    "physical_constant_claim": false,
+    "fitting_status": "no data fitting in core verifier"
+  },
+  "unit_risks": [
+    "all v1 coefficients are normalized and cannot be read as SI transport constants",
+    "Phi has no dimensional observable map",
+    "R is not joules, entropy, curvature, or mass",
+    "v_Phi is normalized until dx and dt scales are source-locked"
+  ],
+  "legacy_alignment_warning": "legacy potential_V and potential_derivative are not an exact derivative pair and remain unchanged for compatibility",
+  "next_controller": "prearrival_leakage",
+  "implementation_status": "PRESENT",
+  "verification_status": "FAIL"
+}

@@ -3,14 +3,17 @@
 This file is generated from the canonical closure matrix and full gate. It is a status handoff, not a new scientific result.
 
 MAJOR_RESULT_CLOSURE:
-- Full Topic 13: `PARTIAL`.
+- O(2)/He-4 Core track: `CLOSED_FOR_CORE`.
+- Graphite TTG external-validation track: `OPEN`.
+- The legacy aggregate and counts below belong to the graphite/base-Phi requirement matrix; they are not the status of every Topic 13 lane.
 - Required subresults: `37`; `CLOSED_FOR_LANE=21`, `CLOSED_AS_NO_GO=6`, `CLOSED_FOR_CORE=0`, `OPEN=10`.
 - Progress arithmetic: `non_open=27/37`; `open_gap=10`; `non_open_fraction=0.7297`. Non-open is not the same as Core closure.
 
 WHAT_IS_ACTUALLY_CLOSED:
 - The named causal flux-Phi branch is `CLOSED_FOR_CORE` only as a bounded normalized branch; the original conserved-C baseline remains blocked/no-go.
 - Formal natural-unit bridge, EOS, SK/KMS, entropy, heat-current, source-boundary, and comparator lanes remain separated and machine-audited.
-- No input package is accepted for Full Topic 13 Core closure.
+- Canonical O(2)/He-4 composition records a local physical anchor, independent alpha, SI scale and scoped transport interface. This does not calibrate graphite or establish external validation.
+- The legacy graphite input packages below remain unaccepted; they do not negate the separate He-4 composition.
 
 WHAT_REMAINS_OPEN:
 | Major result | Open subresult | Required evidence |
@@ -45,7 +48,7 @@ CLOSURE_ARITHMETIC:
 - Core-ready requires all `37` required subresults to leave `OPEN`; current counts are `CLOSED_FOR_LANE=21`, `CLOSED_AS_NO_GO=6`, `CLOSED_FOR_CORE=0`, `OPEN=10`.
 - The visible progress count is `non_open=27` of `37` (`73.0%`), while the remaining closure gap is `open_gap=10`. This is a reporting metric only and does not promote lane evidence to Core.
 - The `10` open subresults are controlled by `3` root input packages, so the next work is evidence acquisition/derivation, not indefinite reruns.
-- Named core handoff count: 1; this does not promote Full Topic 13 while any subresult or root input package remains open.
+- Legacy matrix named causal handoff count: 1; do not use this count instead of the separate O(2)/He-4 composition track.
 
 ROOT_INPUT_PACKAGES:
 | Package | Status | Open subresults | Missing acceptance fields |
@@ -55,14 +58,16 @@ ROOT_INPUT_PACKAGES:
 | `T13_INPUT_PHYSICAL_TRANSPORT_MATCH` | `BLOCKED` | physical_uet_kubo_record, physical_sk_transport_match, physical_entropy_production_mapping, physical_heat_flux_entropy_map | physical_coefficient_record, finite_temperature_transport_completion, physical_anchor_supplied, physical_heat_flux_entropy_link |
 
 MINIMAL_INPUT_CONTRACT:
-- docs/core/artifacts/t13_full_closure_minimal_input_contract.json; SHA-256 6fbf0218e66700d0804dce1c07d2b6a08e3013c7568e07df46ad5b6443337aa7.
+- docs/core/07_artifacts/topic13/t13_full_closure_minimal_input_contract.json; SHA-256 6fbf0218e66700d0804dce1c07d2b6a08e3013c7568e07df46ad5b6443337aa7.
 - This is a field-level evidence admission contract; it does not create a source value or promote a comparator.
 
 DEPENDENCY_UNLOCKED:
-- Causal named branch only. Full Topic 13, curved 3+1, Gravity, and constitutive transport remain locked.
+- O(2)/He-4: Topic 13 thermal bridge may be integrated into Core
+- Graphite validation remains open; curved 3+1 and downstream acceptance require their own gates. This report grants no new unlock.
 
 STATUS:
 - `BLOCKED_OPEN_T13_FULL_BRIDGE`; `claim_promotion=false`; `full_core_unlock=true`.
+- Status scope: legacy_graphite_ttg_aggregate; not O(2)/He-4 Core readiness; unlock scope: o2_he4_core_ready from canonical matrix; not graphite validation.
 
 WHAT_CHANGED:
 - Added package-level closure arithmetic and blocker ownership to the generated dashboard; no equation, threshold, source role, or claim status was changed.
@@ -74,13 +79,14 @@ EQUATION_OR_MAPPING:
 - `alpha_Phi_K = (e0 / c_v) * s_material` only after an independent base-Phi map and SI anchor are accepted.
 
 VERIFICATION:
-- Holdout policy: `{'xie_2026_accessed': False, 'target_fit_performed': False, 'calibration_path_may_read_holdout': False}`.
+- Historical process holdout policy: `{'xie_2026_accessed': False, 'target_fit_performed': False, 'calibration_path_may_read_holdout': False}`.
+- Later agent-context exposure: `{'declaration_path': 'docs/core/99_review/unresolved_assets/T13_HOLDOUT_EXPOSURE_2026_09_10.json', 'incidental_public_summary_exposure': True, 'future_blind_holdout_eligibility': 'REVIEW_REQUIRED', 'scope': 'Later agent-context declaration; does not rewrite historical process audits'}`. Do not claim pristine blinding from historical no-access fields.
 - No numeric alpha, physical UET Kubo coefficient, or accepted Ding C_src payload is emitted by this report.
-- Source hashes are recorded in `docs/core/artifacts/t13_full_closure_progress.json` for the matrix, gate, and input audit.
+- Source hashes are recorded in `docs/core/07_artifacts/topic13/t13_full_closure_progress.json` for the matrix, gate, and input audit.
 
 CONTROLLING_BLOCKER:
 - `dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing`.
-- The three root input packages are still blocked: Ding-compatible source/material uncertainty, base-Phi/SI/alpha/beta, and physical transport matching.
+- The three legacy graphite root input packages remain blocked; this is not a statement that the He-4 lane lacks its recorded anchor/alpha/transport.
 
 NEXT_ACTION:
 - Obtain one authorized Ding-compatible numeric package or accepted same-regime reproduction.
@@ -94,4 +100,4 @@ CLAIM_BOUNDARY:
 RERUN_POLICY:
 - Do not rerun the same numeric gates as a substitute for missing evidence. Rerun when an accepted source, calibration record, physical transport record, or its hash changes.
 
-Generated UTC: `2026-08-29T04:25:11.778514+00:00`.
+Generated UTC: `2026-09-17T17:00:52.642126+00:00`.

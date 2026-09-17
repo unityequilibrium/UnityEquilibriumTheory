@@ -14,8 +14,8 @@ from docs.core.uet_material_lattice_interface_contract import (
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_uet_material_lattice_interface_contract_audit.json"
-REGISTRY_OUT = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_material_lattice_interface_addendum.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_material_lattice_interface_contract_audit.json"
+REGISTRY_OUT = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_material_lattice_interface_addendum.json"
 EQUATION_ID = "uet.o2.thermal.material_lattice_interface_contract"
 
 
@@ -66,13 +66,13 @@ def main() -> int:
         "SI_conversion_and_independent_alpha_record_missing",
     ]
     source_paths = [
-        "docs/core/uet_material_lattice_interface_contract.py",
-        "docs/core/test/test_topic13_material_lattice_interface_contract.py",
+        "docs/core/03_lanes/thermal/uet_material_lattice_interface_contract.py",
+        "docs/core/05_tests/regression/root/test_topic13_material_lattice_interface_contract.py",
         "docs/scripts/audit/audit_topic13_material_lattice_interface_contract.py",
     ]
     prior_paths = [
-        "docs/core/artifacts/t13_calorine_lattice_interface_input_boundary.json",
-        "docs/core/artifacts/t13_continuum_action_umklapp_direct_route_no_go.json",
+        "docs/core/07_artifacts/topic13/t13_calorine_lattice_interface_input_boundary.json",
+        "docs/core/07_artifacts/topic13/t13_continuum_action_umklapp_direct_route_no_go.json",
     ]
     artifact = {
         "schema_version": "t13-uet-material-lattice-interface-contract-v1",
@@ -161,7 +161,7 @@ def main() -> int:
     REGISTRY_OUT.write_text(json.dumps({
         "schema_version": "uet-equation-registry-addendum-v1",
         "status": "CONDITIONAL_INTERFACE_NOT_MERGED_AS_ACCEPTED_ACTION",
-        "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+        "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
         "equation_entries": [entry],
         "full_core_unlock": False,
         "claim_promotion": False,

@@ -1,0 +1,61 @@
+{
+  "major_result_id": "T13_COLLISION_EVIDENCE_RECONCILIATION",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "rows": [
+    {
+      "path": "docs/core/artifacts/t13_invariant_galerkin_collision_operator_audit.json",
+      "sha256": "0758838ca31bcf8e061613e6cf7eeb429cd2eab0850594604d260e675f61f854",
+      "recorded_status": "PASS_SCOPED_INVARIANT_SCALAR_GALERKIN_COLLISION",
+      "reference_hash_matches": {
+        "docs/core/uet_o2_invariant_galerkin_collision_operator.py": true,
+        "docs/core/test/test_topic13_invariant_galerkin_collision_operator.py": true,
+        "docs/scripts/audit/audit_topic13_invariant_galerkin_collision_operator.py": true,
+        "docs/core/uet_o2_continuum_collision_operator.py": false,
+        "docs/core/artifacts/t13_invariant_rate_collision_operator_repair.json": true
+      },
+      "all_declared_references_match": false,
+      "recorded_blocker": "self_consistent_width_and_vector_heat_current_basis_missing",
+      "diagnostic_refinement_pass": null
+    },
+    {
+      "path": "docs/core/artifacts/t13_coupled_gain_loss_operator_audit.json",
+      "sha256": "b3a9ebf6b2ac7a155c3a2b8bd12dd60fa71684924e40220d04cbcfa60becfaab",
+      "recorded_status": "PASS_STRUCTURAL_GAIN_LOSS_REFINEMENT_OPEN",
+      "reference_hash_matches": {
+        "docs/scripts/audit/audit_topic13_coupled_gain_loss_operator.py": true,
+        "docs/scripts/audit/audit_topic13_action_normalized_elastic_scattering.py": true,
+        "docs/core/uet_covariant_matter.py": true,
+        "docs/core/uet_covariant_response.py": true,
+        "docs/core/test/test_topic13_coupled_gain_loss_operator.py": true
+      },
+      "all_declared_references_match": true,
+      "recorded_blocker": "basis_completeness_and_physical_collision_current_matching",
+      "diagnostic_refinement_pass": true
+    },
+    {
+      "path": "docs/core/artifacts/t13_integrated_elastic_events_audit.json",
+      "sha256": "105b61c4c09d3d187da230a106add7e462b209abf2a80be8ade01b6a1a3dac3d",
+      "recorded_status": "MEASURED_REFINEMENT_NOT_PHYSICAL_CLOSURE",
+      "reference_hash_matches": {
+        "docs/scripts/audit/audit_topic13_integrated_elastic_events.py": true,
+        "docs/scripts/audit/audit_topic13_action_normalized_elastic_scattering.py": true,
+        "docs/core/test/test_topic13_action_normalized_elastic_scattering.py": true
+      },
+      "all_declared_references_match": true,
+      "recorded_blocker": [
+        "cutoff_and_joint_resolution_control",
+        "linearized_collision_gain_loss_and_conserved_projection",
+        "material_calibration"
+      ],
+      "diagnostic_refinement_pass": null
+    }
+  ],
+  "what_is_closed": "Current-source reuse of existing gain-loss evidence assessed; creation from scratch is not the next task",
+  "verification_status": "REFERENCE_HASH_RECONCILIATION_NOT_NEW_PHYSICS",
+  "controlling_blocker": "basis_completeness_and_physical_collision_current_matching",
+  "next_action": "Review existing vector/current/material handoffs before extending basis; do not repeat solved scalar or gain-loss construction",
+  "full_core_unlock": false,
+  "dependency_unlocked": [],
+  "claim_boundary": "Matching hashes do not prove continuum completeness. Historical mismatches are disclosed, not repaired by rewriting archived results."
+}

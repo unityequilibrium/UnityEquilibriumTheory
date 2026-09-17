@@ -1,0 +1,17 @@
+{
+  "registry_id": "uet.o2.signed_local_moment_interpolation_candidate",
+  "registration_status": "UNMERGED_INTERNAL_NUMERICAL_CANDIDATE",
+  "ontology": "Signed coefficients interpolate psi; they are not physical probabilities or new states",
+  "units": "Dimensionless coefficients and scaled features(1,E/cutoff,p/cutoff)",
+  "equation_or_mapping": "A s=t; A^T=Q R; s=s0+Q solve(R^T,t-A s0)",
+  "derivation_class": "Numerical ansatz with derived minimum-norm moment constraints",
+  "observable": "Pre-projection moment fidelity and internal response tensor",
+  "data_role": "INTERNAL_NO_TARGET_DATA_FIT",
+  "verification_status": "TWO_GRID_RESULT_RETAINED_FIXED_SUPPORT_REFINEMENT_BLOCKED",
+  "controlling_blocker": "rank_deficiency_and_coefficient_amplification_under_refinement",
+  "claim_boundary": "No probability interpretation, microscopic transport derivation or physical unlock",
+  "evidence_artifact": "docs/core/artifacts/t13_moment_interpolation_audit.json",
+  "refinement_evidence_artifact": "docs/core/artifacts/t13_interpolation_refinement_audit.json",
+  "dependency_unlocked": [],
+  "full_core_unlock": false
+}

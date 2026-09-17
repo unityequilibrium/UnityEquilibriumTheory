@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT.parent) not in sys.path:
     sys.path.insert(0, str(ROOT.parent))
 
+from docs.core.core_paths import canonical_artifact_path  # noqa: E402
 from docs.core.mass_density_correspondence import (  # noqa: E402
     MassDensityLaneConfig,
     integrated_density,
@@ -115,7 +116,8 @@ def build_artifact() -> dict:
 
 def main() -> int:
     artifact = build_artifact()
-    output = ROOT / "core" / "artifacts" / "mass_density_dimensional_contract_verification.json"
+    output = canonical_artifact_path("mass_density_dimensional_contract_verification.json")
+    output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(artifact, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(json.dumps(artifact, indent=2, ensure_ascii=False))
     return 0 if artifact["audit_status"] != "FAIL" else 1

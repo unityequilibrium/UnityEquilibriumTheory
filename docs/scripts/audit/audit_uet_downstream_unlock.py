@@ -4,11 +4,16 @@ from __future__ import annotations
 
 import hashlib
 import json
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
-CORE = ROOT / "docs/core/artifacts"
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+from docs.core.core_paths import canonical_artifact_path
+
+CORE = ROOT / "docs/core/07_artifacts"
 PHASE = ROOT / "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_matter_space_phase_coupling_diagnostic.json"
 THERMAL = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json"
 
@@ -24,9 +29,12 @@ def _sha(path: Path) -> str:
 def build_artifacts() -> tuple[dict, dict]:
     now = datetime.now(timezone.utc).isoformat()
     phase, thermal = _read(PHASE), _read(THERMAL)
-    wave8 = _read(CORE / "uet_main_theory_wave8_gate.json")
-    wave9 = _read(CORE / "uet_main_theory_wave9_gate.json")
-    fundamental = _read(CORE / "uet_fundamental_track_gate.json")
+    wave8_path = canonical_artifact_path("uet_main_theory_wave8_gate.json", "gates")
+    wave9_path = canonical_artifact_path("uet_main_theory_wave9_gate.json", "gates")
+    fundamental_path = canonical_artifact_path("uet_fundamental_track_gate.json", "gates")
+    wave8 = _read(wave8_path)
+    wave9 = _read(wave9_path)
+    fundamental = _read(fundamental_path)
     decisions = {
         "thermal_internal_diagnostic": {"status": "BLOCKED", "controller": thermal["controlling_blocker"], "allowed": "synthetic analytical control only"},
         "thermal_external_comparison": {"status": "BLOCKED", "controller": wave8["controlling_blockers"], "allowed": "source metadata and normalized observable definition only"},
@@ -52,9 +60,9 @@ def build_artifacts() -> tuple[dict, dict]:
         "input_identity": {
             PHASE.relative_to(ROOT).as_posix(): _sha(PHASE),
             THERMAL.relative_to(ROOT).as_posix(): _sha(THERMAL),
-            "docs/core/artifacts/uet_main_theory_wave8_gate.json": _sha(CORE / "uet_main_theory_wave8_gate.json"),
-            "docs/core/artifacts/uet_main_theory_wave9_gate.json": _sha(CORE / "uet_main_theory_wave9_gate.json"),
-            "docs/core/artifacts/uet_fundamental_track_gate.json": _sha(CORE / "uet_fundamental_track_gate.json"),
+            wave8_path.relative_to(ROOT).as_posix(): _sha(wave8_path),
+            wave9_path.relative_to(ROOT).as_posix(): _sha(wave9_path),
+            fundamental_path.relative_to(ROOT).as_posix(): _sha(fundamental_path),
         },
         "unlock_order": ["thermal/phase internal pilots", "fluid/vacuum/covariant stress-energy", "gravity/orbit", "galaxy/cosmology", "particle/Dirac"],
         "claim_boundary": "dependency decisions only; PASS_INTERNAL_ONLY is not physical or external validation",
@@ -74,7 +82,9 @@ def build_artifacts() -> tuple[dict, dict]:
 def main() -> int:
     audit, wave = build_artifacts()
     for name, payload in (("uet_downstream_unlock_gate.json", audit), ("uet_main_theory_wave11_gate.json", wave)):
-        (CORE / name).write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        canonical_artifact_path(name, "gates").write_text(
+            json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        )
     print(f"audit_status={wave['audit_status']}")
     print(f"downstream_unlock_status={wave['downstream_unlock_status']}")
     print(f"controlling_blocker={wave['controlling_blocker']}")

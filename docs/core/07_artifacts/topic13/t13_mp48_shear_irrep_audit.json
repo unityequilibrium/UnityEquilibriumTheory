@@ -1,0 +1,936 @@
+{
+  "major_result_id": "T13_MP48_GAMMA_E2G_SOURCE_IDENTIFICATION",
+  "topic": "0.13",
+  "closure_level": "CLOSED_FOR_LANE",
+  "what_is_closed": [
+    "Gamma source doublet tested against all declared D6h characters"
+  ],
+  "equation_or_mapping": "U_g: atom permutation times Cartesian rotation; D_pair=E^dagger*U_g*E",
+  "units": {
+    "representation": "1",
+    "atom_mapping_error": "angstrom"
+  },
+  "derivation_class": "source_structure_representation_test",
+  "observable": "material Gamma phonon irrep",
+  "data_role": "SOURCE_HARMONIC_DIAGNOSTIC",
+  "verification_status": "PASS_SOURCE_E2G",
+  "checks": {
+    "space_group": true,
+    "operation_count": true,
+    "character_match": true,
+    "invariant_subspace": true,
+    "force_symmetry": true
+  },
+  "operations": [
+    {
+      "fractional_rotation": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "fractional_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "atom_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "atom_mapping_error_angstrom": 0.0,
+      "character_real": 1.9999999999999996,
+      "character_imag": 0.0,
+      "expected_character": 2.0,
+      "character_error": 4.440892098500626e-16,
+      "subspace_leakage": 4.965068306494546e-16,
+      "force_commutator_relative": 4.201063751053128e-36
+    },
+    {
+      "fractional_rotation": [
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "fractional_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "atom_permutation": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "atom_mapping_error_angstrom": 0.0,
+      "character_real": 1.9999999999999996,
+      "character_imag": 0.0,
+      "expected_character": 2.0,
+      "character_error": 4.440892098500626e-16,
+      "subspace_leakage": 1.964765252070012e-12,
+      "force_commutator_relative": 2.512043384738992e-16
+    },
+    {
+      "fractional_rotation": [
+        [
+          1,
+          -1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "fractional_translation": [
+        0.0,
+        0.0,
+        0.4999999999999999
+      ],
+      "atom_permutation": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "atom_mapping_error_angstrom": 1.9390480333892417e-14,
+      "character_real": -0.9999999999999998,
+      "character_imag": 0.0,
+      "expected_character": -0.9999999999999966,
+      "character_error": 3.219646771412954e-15,
+      "subspace_leakage": 1.7116912856504963e-12,
+      "force_commutator_relative": 1.553691932784475e-15
+    },
+    {
+      "fractional_rotation": [
+        [
+          -1,
+          1,
+          0
+        ],
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "fractional_translation": [
+        0.0,
+        0.0,
+        0.4999999999999999
+      ],
+      "atom_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "atom_mapping_error_angstrom": 1.9133521935401913e-14,
+      "character_real": -0.9999999999999998,
+      "character_imag": 0.0,
+      "expected_character": -0.9999999999999966,
+      "character_error": 3.219646771412954e-15,
+      "subspace_leakage": 9.658055978561033e-13,
+      "force_commutator_relative": 1.5612879186494517e-15
+    },
+    {
+      "fractional_rotation": [
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          1,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "fractional_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "atom_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "atom_mapping_error_angstrom": 1.9255380288755167e-14,
+      "character_real": -0.9999999999999998,
+      "character_imag": 0.0,
+      "expected_character": -1.0000000000000022,
+      "character_error": 2.4424906541753444e-15,
+      "subspace_leakage": 9.750989447133705e-13,
+      "force_commutator_relative": 1.561287919104089e-15
+    },
+    {
+      "fractional_rotation": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          -1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "fractional_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "atom_permutation": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "atom_mapping_error_angstrom": 1.9255380288755167e-14,
+      "character_real": -0.9999999999999998,
+      "character_imag": 0.0,
+      "expected_character": -1.0000000000000022,
+      "character_error": 2.4424906541753444e-15,
+      "subspace_leakage": 1.7077671122190933e-12,
+      "force_commutator_relative": 1.553691933175484e-15
+    },
+    {
+      "fractional_rotation": [
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "fractional_translation": [
+        0.0,
+        0.0,
+        0.4999999999999999
+      ],
+      "atom_permutation": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "atom_mapping_error_angstrom": 7.858979821421719e-16,
+      "character_real": 1.9999999999999996,
+      "character_imag": 0.0,
+      "expected_character": 2.0,
+      "character_error": 4.440892098500626e-16,
+      "subspace_leakage": 1.9579235159205984e-12,
+      "force_commutator_relative": 2.5120434331065686e-16
+    },
+    {
+      "fractional_rotation": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "fractional_translation": [
+        0.0,
+        0.0,
+        0.4999999999999999
+      ],
+      "atom_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "atom_mapping_error_angstrom": 7.858979821421719e-16,
+      "character_real": 1.9999999999999996,
+      "character_imag": 0.0,
+      "expected_character": 2.0,
+      "character_error": 4.440892098500626e-16,
+      "subspace_leakage": 1.899068024530853e-13,
+      "force_commutator_relative": 5.328487531791071e-20
+    },
+    {
+      "fractional_rotation": [
+        [
+          -1,
+          1,
+          0
+        ],
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "fractional_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "atom_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "atom_mapping_error_angstrom": 1.9117374977077028e-14,
+      "character_real": -0.9999999999999998,
+      "character_imag": 0.0,
+      "expected_character": -0.9999999999999962,
+      "character_error": 3.552713678800501e-15,
+      "subspace_leakage": 9.750962139192452e-13,
+      "force_commutator_relative": 1.561287919104089e-15
+    },
+    {
+      "fractional_rotation": [
+        [
+          1,
+          -1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "fractional_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "atom_permutation": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "atom_mapping_error_angstrom": 1.9390480333892417e-14,
+      "character_real": -0.9999999999999998,
+      "character_imag": 0.0,
+      "expected_character": -0.9999999999999962,
+      "character_error": 3.552713678800501e-15,
+      "subspace_leakage": 1.7077669795959924e-12,
+      "force_commutator_relative": 1.553691933175484e-15
+    },
+    {
+      "fractional_rotation": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          -1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "fractional_translation": [
+        0.0,
+        0.0,
+        0.4999999999999999
+      ],
+      "atom_permutation": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "atom_mapping_error_angstrom": 1.9271411616768404e-14,
+      "character_real": -0.9999999999999998,
+      "character_imag": 0.0,
+      "expected_character": -1.0000000000000027,
+      "character_error": 2.886579864025407e-15,
+      "subspace_leakage": 1.711691417969539e-12,
+      "force_commutator_relative": 1.5536919327844751e-15
+    },
+    {
+      "fractional_rotation": [
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          1,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "fractional_translation": [
+        0.0,
+        0.0,
+        0.4999999999999999
+      ],
+      "atom_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "atom_mapping_error_angstrom": 1.9271411616768404e-14,
+      "character_real": -0.9999999999999998,
+      "character_imag": 0.0,
+      "expected_character": -1.0000000000000027,
+      "character_error": 2.886579864025407e-15,
+      "subspace_leakage": 9.65808354919167e-13,
+      "force_commutator_relative": 1.5612879186494517e-15
+    },
+    {
+      "fractional_rotation": [
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "fractional_translation": [
+        0.0,
+        0.0,
+        0.4999999999999999
+      ],
+      "atom_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "atom_mapping_error_angstrom": 1.9133521935401928e-14,
+      "character_real": -3.3306690738754696e-16,
+      "character_imag": 0.0,
+      "expected_character": 0.0,
+      "character_error": 3.3306690738754696e-16,
+      "subspace_leakage": 1.121585065843884e-12,
+      "force_commutator_relative": 8.932219767398755e-16
+    },
+    {
+      "fractional_rotation": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "fractional_translation": [
+        0.0,
+        0.0,
+        0.4999999999999999
+      ],
+      "atom_permutation": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "atom_mapping_error_angstrom": 1.9271411616768404e-14,
+      "character_real": -3.3306690738754696e-16,
+      "character_imag": 0.0,
+      "expected_character": 0.0,
+      "character_error": 3.3306690738754696e-16,
+      "subspace_leakage": 1.6140313002934751e-12,
+      "force_commutator_relative": 8.947607815244473e-16
+    },
+    {
+      "fractional_rotation": [
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          -1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "fractional_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "atom_permutation": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "atom_mapping_error_angstrom": 1.9117374977077028e-14,
+      "character_real": 3.885780586188048e-16,
+      "character_imag": 0.0,
+      "expected_character": 0.0,
+      "character_error": 3.885780586188048e-16,
+      "subspace_leakage": 1.893928703746437e-12,
+      "force_commutator_relative": 1.1009933662499593e-15
+    },
+    {
+      "fractional_rotation": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "fractional_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "atom_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "atom_mapping_error_angstrom": 1.9390480333892417e-14,
+      "character_real": 3.885780586188048e-16,
+      "character_imag": 0.0,
+      "expected_character": 0.0,
+      "character_error": 3.885780586188048e-16,
+      "subspace_leakage": 5.30007921562423e-13,
+      "force_commutator_relative": 1.1037387684984128e-15
+    },
+    {
+      "fractional_rotation": [
+        [
+          -1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "fractional_translation": [
+        0.0,
+        0.0,
+        0.4999999999999999
+      ],
+      "atom_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "atom_mapping_error_angstrom": 7.858979821421719e-16,
+      "character_real": -1.1102230246251565e-16,
+      "character_imag": 0.0,
+      "expected_character": 0.0,
+      "character_error": 1.1102230246251565e-16,
+      "subspace_leakage": 6.702773655971889e-13,
+      "force_commutator_relative": 1.6286578473155512e-15
+    },
+    {
+      "fractional_rotation": [
+        [
+          1,
+          -1,
+          0
+        ],
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "fractional_translation": [
+        0.0,
+        0.0,
+        0.4999999999999999
+      ],
+      "atom_permutation": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "atom_mapping_error_angstrom": 7.858979821421719e-16,
+      "character_real": -2.220446049250313e-16,
+      "character_imag": 0.0,
+      "expected_character": 0.0,
+      "character_error": 2.220446049250313e-16,
+      "subspace_leakage": 1.8493852240247336e-12,
+      "force_commutator_relative": 1.6420031546995153e-15
+    },
+    {
+      "fractional_rotation": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "fractional_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "atom_permutation": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "atom_mapping_error_angstrom": 1.9255380288755167e-14,
+      "character_real": -3.3306690738754696e-16,
+      "character_imag": 0.0,
+      "expected_character": 0.0,
+      "character_error": 3.3306690738754696e-16,
+      "subspace_leakage": 1.6121240138814428e-12,
+      "force_commutator_relative": 8.947607808884004e-16
+    },
+    {
+      "fractional_rotation": [
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "fractional_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "atom_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "atom_mapping_error_angstrom": 1.9117374977077047e-14,
+      "character_real": -3.3306690738754696e-16,
+      "character_imag": 0.0,
+      "expected_character": 0.0,
+      "character_error": 3.3306690738754696e-16,
+      "subspace_leakage": 1.1259548008957308e-12,
+      "force_commutator_relative": 8.932219760760386e-16
+    },
+    {
+      "fractional_rotation": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "fractional_translation": [
+        0.0,
+        0.0,
+        0.4999999999999999
+      ],
+      "atom_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "atom_mapping_error_angstrom": 1.940640005816132e-14,
+      "character_real": 3.885780586188048e-16,
+      "character_imag": 0.0,
+      "expected_character": 0.0,
+      "character_error": 3.885780586188048e-16,
+      "subspace_leakage": 5.057752364599935e-13,
+      "force_commutator_relative": 1.1037387689557153e-15
+    },
+    {
+      "fractional_rotation": [
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          -1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "fractional_translation": [
+        0.0,
+        0.0,
+        0.4999999999999999
+      ],
+      "atom_permutation": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "atom_mapping_error_angstrom": 1.9133521935401913e-14,
+      "character_real": 3.885780586188048e-16,
+      "character_imag": 0.0,
+      "expected_character": 0.0,
+      "character_error": 3.885780586188048e-16,
+      "subspace_leakage": 1.8990966362880515e-12,
+      "force_commutator_relative": 1.1009933665722889e-15
+    },
+    {
+      "fractional_rotation": [
+        [
+          1,
+          -1,
+          0
+        ],
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "fractional_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "atom_permutation": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "atom_mapping_error_angstrom": 0.0,
+      "character_real": -2.220446049250313e-16,
+      "character_imag": 0.0,
+      "expected_character": 0.0,
+      "character_error": 2.220446049250313e-16,
+      "subspace_leakage": 1.8563353705946504e-12,
+      "force_commutator_relative": 1.6420031552622387e-15
+    },
+    {
+      "fractional_rotation": [
+        [
+          -1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "fractional_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "atom_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "atom_mapping_error_angstrom": 2.7310535681538634e-16,
+      "character_real": -1.1102230246251565e-16,
+      "character_imag": 0.0,
+      "expected_character": 0.0,
+      "character_error": 1.1102230246251565e-16,
+      "subspace_leakage": 6.437008513222858e-13,
+      "force_commutator_relative": 1.6286578479895398e-15
+    }
+  ],
+  "space_group": 194,
+  "spglib_version": "2.7.0",
+  "phonopy_version": "4.4.0",
+  "open_blockers": [
+    "Phi representation and coupling",
+    "same-state strained data",
+    "thermal occupation/bath map"
+  ],
+  "dependency_unlocked": [
+    "conditional E2g selection rule applies to source Gamma doublet only"
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "evidence_hashes": {
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_FORCE_CONSTANTS.gz": "a410f36fd34e8603aec0dde48c1f8cb47fbf0a237ca911437f744fb7cbf02763",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_phonopy.yaml.gz": "00be787d0fbe986304ffdfa51a917b9aa0038deb6d31a563979afe42a7a2b5f8",
+    "docs/scripts/audit/audit_topic13_mp48_shear_irrep.py": "2ad13259e0aab2f48ae0e5f335320c47f032df3471179a14a5b26b1c568d8bc7",
+    "docs/core/uet_interlayer_mode_residue.py": "f7c40cffe59575c7337433099b3c6e4f2ec9ef392182fa2e82361ec315d21ff5",
+    "docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py": "66bfddff927a9d98ef045e3e56daf1c97ceca2c23aac99df7ff6bad1118b3604",
+    "docs/scripts/audit/audit_topic13_mp48_interlayer_mode_residue.py": "0b0bca29a4e0ae6ed4906fa5e855b62bd2ad207369f15f61ec0e94e97b532f52"
+  },
+  "claim_boundary": "Not finite-q irrep, Raman frequency agreement, full internal O(2) equivalence or Phi normalization."
+}

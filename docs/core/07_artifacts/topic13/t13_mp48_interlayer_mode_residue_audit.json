@@ -1,0 +1,384 @@
+{
+  "major_result_id": "T13_MP48_INTERLAYER_MODE_SHAPE_AND_MATERIAL_RESIDUE",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "verification_status": "PASS",
+  "what_is_closed": [
+    "Mass-centroid kinematic formula and full spectral response identity within source harmonic model."
+  ],
+  "equation_or_mapping": "mu=M_A*M_B/(M_A+M_B); Z_pair=B^dagger*P_pair*B/mu",
+  "units": {
+    "mu": "kg",
+    "Z_pair": "kg^-1",
+    "susceptibility": "s^2/kg"
+  },
+  "derivation_class": "derived_relation",
+  "observable": "material relative-layer displacement per generalized force",
+  "data_role": "SOURCE_HARMONIC_COMPARISON_NOT_CALIBRATION",
+  "checks": {
+    "source_hashes": true,
+    "independent_gamma": true,
+    "mapping": true,
+    "spectral_resolvent": true,
+    "q_parity": true,
+    "eigenpairs": true,
+    "predeclared_pair_weight": true,
+    "predeclared_isolation": true
+  },
+  "q_path_results": [
+    {
+      "q_fractional": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_indices": [
+        3,
+        4
+      ],
+      "frequencies_cm_inverse": [
+        29.083635244025864,
+        29.08363524403697
+      ],
+      "principal_weights": [
+        0.9999999612072138,
+        0.999999961207214
+      ],
+      "isolation_THz": 0.8719046428737492,
+      "eigenpair_relative_residual": 1.0213853493781144e-15
+    },
+    {
+      "q_fractional": [
+        -0.005,
+        0.0,
+        0.0
+      ],
+      "selected_indices": [
+        3,
+        4
+      ],
+      "frequencies_cm_inverse": [
+        31.012509689209587,
+        33.756046415546685
+      ],
+      "principal_weights": [
+        0.999809382280395,
+        0.9999112084160255
+      ],
+      "isolation_THz": 0.412453291955973,
+      "eigenpair_relative_residual": 4.93859859350858e-16
+    },
+    {
+      "q_fractional": [
+        0.005,
+        0.0,
+        0.0
+      ],
+      "selected_indices": [
+        3,
+        4
+      ],
+      "frequencies_cm_inverse": [
+        31.012509689209587,
+        33.756046415546685
+      ],
+      "principal_weights": [
+        0.999809382280395,
+        0.9999112084160255
+      ],
+      "isolation_THz": 0.412453291955973,
+      "eigenpair_relative_residual": 4.93859859350858e-16
+    },
+    {
+      "q_fractional": [
+        -0.01,
+        0.0,
+        0.0
+      ],
+      "selected_indices": [
+        3,
+        4
+      ],
+      "frequencies_cm_inverse": [
+        36.18463085878941,
+        44.94434123378962
+      ],
+      "principal_weights": [
+        0.999239386387496,
+        0.9996414527601873
+      ],
+      "isolation_THz": 0.05037138551676201,
+      "eigenpair_relative_residual": 6.496280936930846e-16
+    },
+    {
+      "q_fractional": [
+        0.01,
+        0.0,
+        0.0
+      ],
+      "selected_indices": [
+        3,
+        4
+      ],
+      "frequencies_cm_inverse": [
+        36.18463085878941,
+        44.94434123378962
+      ],
+      "principal_weights": [
+        0.999239386387496,
+        0.9996414527601873
+      ],
+      "isolation_THz": 0.05037138551676201,
+      "eigenpair_relative_residual": 6.496280936930846e-16
+    },
+    {
+      "q_fractional": [
+        -0.02,
+        0.0,
+        0.0
+      ],
+      "selected_indices": [
+        2,
+        4
+      ],
+      "frequencies_cm_inverse": [
+        51.92794811847641,
+        74.41352152879851
+      ],
+      "principal_weights": [
+        0.9969846892597518,
+        0.9985030305145723
+      ],
+      "isolation_THz": 0.05282024700865007,
+      "eigenpair_relative_residual": 5.296026229971039e-16
+    },
+    {
+      "q_fractional": [
+        0.02,
+        0.0,
+        0.0
+      ],
+      "selected_indices": [
+        2,
+        4
+      ],
+      "frequencies_cm_inverse": [
+        51.92794811847641,
+        74.41352152879851
+      ],
+      "principal_weights": [
+        0.9969846892597518,
+        0.9985030305145723
+      ],
+      "isolation_THz": 0.05282024700865007,
+      "eigenpair_relative_residual": 5.296026229971039e-16
+    },
+    {
+      "q_fractional": [
+        0.0,
+        0.0,
+        -0.005
+      ],
+      "selected_indices": [
+        3,
+        4
+      ],
+      "frequencies_cm_inverse": [
+        29.082469271118452,
+        29.082469271124534
+      ],
+      "principal_weights": [
+        0.9999382774539798,
+        0.9999382774539818
+      ],
+      "isolation_THz": 0.8541681554351549,
+      "eigenpair_relative_residual": 5.090198530111535e-16
+    },
+    {
+      "q_fractional": [
+        0.0,
+        0.0,
+        0.005
+      ],
+      "selected_indices": [
+        3,
+        4
+      ],
+      "frequencies_cm_inverse": [
+        29.082469271118452,
+        29.082469271124534
+      ],
+      "principal_weights": [
+        0.9999382774539798,
+        0.9999382774539818
+      ],
+      "isolation_THz": 0.8541681554351549,
+      "eigenpair_relative_residual": 5.090198530111535e-16
+    },
+    {
+      "q_fractional": [
+        0.0,
+        0.0,
+        -0.01
+      ],
+      "selected_indices": [
+        3,
+        4
+      ],
+      "frequencies_cm_inverse": [
+        29.078971558754933,
+        29.078971558762504
+      ],
+      "principal_weights": [
+        0.9997532414138222,
+        0.9997532414138222
+      ],
+      "isolation_THz": 0.8363619655635997,
+      "eigenpair_relative_residual": 4.987761131251136e-16
+    },
+    {
+      "q_fractional": [
+        0.0,
+        0.0,
+        0.01
+      ],
+      "selected_indices": [
+        3,
+        4
+      ],
+      "frequencies_cm_inverse": [
+        29.078971558754933,
+        29.078971558762504
+      ],
+      "principal_weights": [
+        0.9997532414138222,
+        0.9997532414138222
+      ],
+      "isolation_THz": 0.8363619655635997,
+      "eigenpair_relative_residual": 4.987761131251136e-16
+    },
+    {
+      "q_fractional": [
+        0.0,
+        0.0,
+        -0.02
+      ],
+      "selected_indices": [
+        3,
+        4
+      ],
+      "frequencies_cm_inverse": [
+        29.064983803962214,
+        29.064983803979445
+      ],
+      "principal_weights": [
+        0.9990133255162525,
+        0.999013325516253
+      ],
+      "isolation_THz": 0.8005470186045541,
+      "eigenpair_relative_residual": 5.055929218323771e-16
+    },
+    {
+      "q_fractional": [
+        0.0,
+        0.0,
+        0.02
+      ],
+      "selected_indices": [
+        3,
+        4
+      ],
+      "frequencies_cm_inverse": [
+        29.064983803962214,
+        29.064983803979445
+      ],
+      "principal_weights": [
+        0.9990133255162525,
+        0.999013325516253
+      ],
+      "isolation_THz": 0.8005470186045541,
+      "eigenpair_relative_residual": 5.055929218323771e-16
+    }
+  ],
+  "reduced_mass_kg": 1.9944236595077444e-26,
+  "gamma_residue_kg_inverse_real": [
+    [
+      5.013979634868701e+25,
+      -2435403185.0654545
+    ],
+    [
+      -1391658962.8945453,
+      5.013979634868704e+25
+    ]
+  ],
+  "gamma_residue_kg_inverse_imag": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ]
+  ],
+  "signed_gamma_frequencies_THz": [
+    -4.5543676248619814e-07,
+    3.418717849991245e-07,
+    8.068644450022067e-07,
+    0.8719054497381943,
+    0.8719054497385272,
+    2.2825543608622736,
+    26.08340177716972,
+    26.143419750925627,
+    47.526003220354156,
+    47.526003220354184,
+    47.60784434117903,
+    47.607844341179074
+  ],
+  "gamma_assembly_relative_error": 6.123698982663474e-16,
+  "resolvent_relative_errors": [
+    6.348442288744776e-13,
+    3.6428075212112315e-13
+  ],
+  "parity_max_error_THz": 0.0,
+  "source_frequency_factor": 15.633302,
+  "runtime_frequency_factor": 15.633302300230191,
+  "phonopy_version": "4.4.0",
+  "atomic_mass_constant_kg": 1.66053906892e-27,
+  "atomic_mass_constant_uncertainty_kg": 5.2e-37,
+  "primitive_lattice_angstrom": [
+    [
+      2.4599143663733205,
+      1.3322676295501878e-15,
+      0.0
+    ],
+    [
+      -1.2299571831866591,
+      2.130348332413595,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      7.07873971905342
+    ]
+  ],
+  "uncertainty_status": "No force-constant model-error or sample-isotope uncertainty closure.",
+  "open_blockers": [
+    "Raman/source-state equivalence",
+    "independent strain response",
+    "UET mode and Phi normalization"
+  ],
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "holdout_access": "No TTG or holdout file inputs; source readers consume force constants and structure only.",
+  "evidence_hashes": {
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_FORCE_CONSTANTS.gz": "a410f36fd34e8603aec0dde48c1f8cb47fbf0a237ca911437f744fb7cbf02763",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_phonopy.yaml.gz": "00be787d0fbe986304ffdfa51a917b9aa0038deb6d31a563979afe42a7a2b5f8",
+    "docs/scripts/audit/audit_topic13_mp48_interlayer_mode_residue.py": "0b0bca29a4e0ae6ed4906fa5e855b62bd2ad207369f15f61ec0e94e97b532f52",
+    "docs/core/uet_interlayer_mode_residue.py": "f7c40cffe59575c7337433099b3c6e4f2ec9ef392182fa2e82361ec315d21ff5",
+    "docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py": "66bfddff927a9d98ef045e3e56daf1c97ceca2c23aac99df7ff6bad1118b3604"
+  },
+  "claim_boundary": "Short-path material diagnostic only; no Phi identification, heat transport, causal proof or full Topic 13 closure."
+}

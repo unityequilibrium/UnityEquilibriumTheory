@@ -18,8 +18,8 @@ from docs.scripts.audit import audit_topic13_charged_one_loop_match as charged
 thermal = charged.thermal
 CFG = charged.CFG
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_charged_static_confluent_vertex_audit.json"
-REGISTRY_OUT = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_charged_static_vertex_addendum.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_charged_static_confluent_vertex_audit.json"
+REGISTRY_OUT = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_charged_static_vertex_addendum.json"
 EQUATION_ID = "uet.o2.thermal.charged_static_confluent_vertex"
 SAMPLES = tuple((T, mu, q) for T in (.1, .25, .5, 1.) for mu in (0., .2) for q in (-1, 1))
 
@@ -168,7 +168,7 @@ def main():
              "docs/scripts/audit/audit_topic13_charged_one_loop_match.py",
              "docs/scripts/audit/audit_topic13_charged_one_loop_current_vertex.py"]
     sha = lambda p: hashlib.sha256((ROOT / p).read_bytes()).hexdigest()
-    prior = "docs/core/artifacts/t13_charged_one_loop_current_vertex_audit.json"
+    prior = "docs/core/07_artifacts/topic13/t13_charged_one_loop_current_vertex_audit.json"
     artifact = {
         "schema_version": "t13-charged-static-confluent-vertex-v1",
         "major_result_id": "T13_CHARGED_STATIC_CONFLUENT_VERTEX_MATCH",
@@ -227,7 +227,7 @@ def main():
                   "downstream_dependencies": [], "dependency_role": "static_internal_handoff_only", "physical_dependency_unlock": False,
                   "failure_mode": artifact["open_blockers"], "next_hardening_step": artifact["report"]["NEXT_ACTION"]})
     REGISTRY_OUT.write_text(json.dumps({"schema_version": "uet-equation-registry-addendum-v1", "status": "CANDIDATE_DIAGNOSTIC_NOT_MERGED",
-                            "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json", "equation_entries": [entry],
+                            "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json", "equation_entries": [entry],
                             "full_core_unlock": False, "claim_promotion": False}, indent=2, allow_nan=False) + "\n", encoding="utf-8")
     print(json.dumps({"status": artifact["verification_status"], "checks": checks,
                       "max_nonzero_derivative_relative_error": max(w["relative_error"] for w in nonzero_witnesses),

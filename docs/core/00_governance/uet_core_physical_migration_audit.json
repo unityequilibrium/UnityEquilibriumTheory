@@ -1,0 +1,74 @@
+{
+  "artifact": "uet_core_physical_migration_audit",
+  "checks": [
+    {
+      "check_id": "manifest_schema",
+      "status": "PASS"
+    },
+    {
+      "check_id": "canonical_target_uniqueness",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "current_paths_exist",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "redirects_point_to_existing_sources",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "root_entrypoints_retained",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "organization_does_not_change_physics_status",
+      "observed": 0,
+      "status": "PASS"
+    }
+  ],
+  "controlling_blocker": null,
+  "duplicate_targets": {},
+  "generated_at": "2026-09-17T08:33:55+00:00",
+  "generator": "docs/scripts/audit/audit_uet_core_physical_migration.py",
+  "missing_current_paths": [],
+  "redirect_errors": [],
+  "root_entrypoint_errors": [],
+  "schema_version": "1.0",
+  "status": "PASS",
+  "summary": {
+    "already_canonical": 1965,
+    "compatibility_assets_present": 426,
+    "compatibility_counts": {
+      "none": 1541,
+      "redirect_or_shim": 426
+    },
+    "dirty_sources": 7,
+    "duplicate_targets": {},
+    "existing_target_conflicts": [],
+    "files_migrated_in_wave": 0,
+    "files_skipped_in_wave": 2,
+    "files_to_move": 0,
+    "files_total": 1967,
+    "last_successful_consolidation": {
+      "artifact": "docs/core/00_governance/uet_core_compatibility_consolidation_v4.json",
+      "files_archived": 426,
+      "generated_at": "2026-09-16T17:23:05+00:00",
+      "physical_move_performed": true,
+      "status": "PASS"
+    },
+    "migration_wave_counts": {
+      "already_canonical": 1965,
+      "public_boundary_preservation": 2
+    },
+    "physical_migration_complete": true,
+    "physical_move_performed": false,
+    "physical_move_performed_in_current_run": false,
+    "physics_status_changes": 0,
+    "retained_non_public_binary_count": 2
+  }
+}

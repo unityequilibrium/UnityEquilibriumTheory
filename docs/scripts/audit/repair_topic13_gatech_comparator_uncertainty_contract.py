@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 AUDIT = ROOT / "docs/scripts/audit/audit_topic13_gatech_standard_transport_comparator.py"
-TEMPLATE = ROOT / "docs/core/artifacts/t13_gatech_standard_transport_comparator_audit.json"
+TEMPLATE = ROOT / "docs/core/07_artifacts/topic13/t13_gatech_standard_transport_comparator_audit.json"
 TEST = ROOT / "docs/core/test/test_topic13_gatech_standard_transport_comparator.py"
 
 

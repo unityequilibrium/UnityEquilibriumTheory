@@ -26,10 +26,10 @@ from docs.core.uet_transport_coefficient_identifiability import (
 
 
 ROOT = Path(__file__).resolve().parents[3]
-MODULE_REL = "docs/core/uet_transport_coefficient_identifiability.py"
-TRANSPORT_REL = "docs/core/uet_covariant_superfluid_transport.py"
-SK_REL = "docs/core/thermal_sk_kms_entropy_contract.py"
-OUT = ROOT / "docs/core/artifacts/t13_transport_coefficient_identifiability_no_go.json"
+MODULE_REL = "docs/core/03_lanes/thermal/uet_transport_coefficient_identifiability.py"
+TRANSPORT_REL = "docs/core/02_equations/covariant/uet_covariant_superfluid_transport.py"
+SK_REL = "docs/core/03_lanes/thermal/thermal_sk_kms_entropy_contract.py"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_transport_coefficient_identifiability_no_go.json"
 
 
 def digest(relative: str) -> str:

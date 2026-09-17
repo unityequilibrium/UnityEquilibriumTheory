@@ -18,7 +18,7 @@ RAW = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
     "zenodo_5799133_hitrace_thermal_diffusivity.xlsx"
 )
-OUT = ROOT / "docs/core/artifacts/t13_zenodo_ig210_alpha_l_source_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_zenodo_ig210_alpha_l_source_audit.json"
 
 EXPECTED_RAW_SIZE = 33113
 EXPECTED_RAW_MD5 = "a0a8a2a6e9a9bc607a29c7d17471f89f"

@@ -13,12 +13,19 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from docs.core.core_paths import (  # noqa: E402
+    CANONICAL_ARTIFACT_ROOT,
+    canonical_artifact_path,
+    canonical_existing_path,
+)
+GR_CORRESPONDENCE_SOURCE = canonical_existing_path(ROOT / ("docs/core/" + "uet_gr_correspondence.py")).relative_to(ROOT).as_posix()
+
 from docs.core.uet_gr_correspondence import (
     flat_flrw_control, gr_correspondence_contract, minkowski_null_control,
     newtonian_poisson_residual, schwarzschild_exterior_null_control,
 )
 
-ARTIFACTS = ROOT / "docs/core/artifacts"
+ARTIFACTS = CANONICAL_ARTIFACT_ROOT
 
 
 def build_artifacts() -> tuple[dict, dict, dict]:
@@ -30,8 +37,16 @@ def build_artifacts() -> tuple[dict, dict, dict]:
     ]
     density = np.linspace(0.0, 0.5, 16)
     poisson = newtonian_poisson_residual(4.0 * np.pi * 0.25 * density, density, 0.25)
-    parent = json.loads((ARTIFACTS / "covariant_parent_verification.json").read_text(encoding="utf-8"))
-    spine = json.loads((ARTIFACTS / "covariant_theory_spine_verification.json").read_text(encoding="utf-8"))
+    parent = json.loads(
+        canonical_artifact_path(
+            "covariant_parent_verification.json", "verification"
+        ).read_text(encoding="utf-8")
+    )
+    spine = json.loads(
+        canonical_artifact_path(
+            "covariant_theory_spine_verification.json", "verification"
+        ).read_text(encoding="utf-8")
+    )
     metrics = {
         "maximum_analytic_einstein_residual": max(float(np.max(np.abs(record.residual))) for record in records),
         "newtonian_poisson_residual": float(np.max(np.abs(poisson))),
@@ -69,10 +84,10 @@ def build_artifacts() -> tuple[dict, dict, dict]:
     }
     addendum = {
         "schema_version": "1.0", "artifact": "uet_equation_correspondence_registry_gr_controls_addendum",
-        "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json", "status": "CANDIDATE_ENTRY_PENDING_MERGE",
+        "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json", "status": "CANDIDATE_ENTRY_PENDING_MERGE",
         "equation_entries": [{
             "equation_id": "uet.main_theory.gr_correspondence_controls", "version": "gr-controls-v1",
-            "classification": "standard_physics_interface", "relation_or_code_path": "docs/core/uet_gr_correspondence.py",
+            "classification": "standard_physics_interface", "relation_or_code_path": GR_CORRESPONDENCE_SOURCE,
             "variables": {"g_munu": "analytic metric input", "G_munu": "analytic Einstein-tensor input", "T_munu": "matching standard stress tensor", "Phi_N": "Newtonian potential"},
             "mathematical_role": "analytic GR and weak-field correspondence controls",
             "standard_physics_counterpart": "Einstein equation, FLRW perfect fluid, Schwarzschild exterior vacuum, and Poisson equation",
@@ -82,8 +97,8 @@ def build_artifacts() -> tuple[dict, dict, dict]:
             "assumptions": ["analytic tensors supplied", "no curvature derivation", "fixed coordinates", "closed response branch"],
             "symmetry_and_conservation": "Einstein residual identity only; curved Bianchi evolution not tested",
             "limiting_cases": ["Minkowski vacuum", "flat FLRW perfect fluid", "Schwarzschild exterior", "Newtonian Poisson"],
-            "implementation_paths": ["docs/core/uet_gr_correspondence.py"],
-            "verifier_paths": ["docs/scripts/audit/audit_uet_gr_correspondence.py", "docs/core/artifacts/gr_correspondence_verification.json", "docs/core/test/test_uet_gr_correspondence.py"],
+            "implementation_paths": [GR_CORRESPONDENCE_SOURCE],
+            "verifier_paths": ["docs/scripts/audit/audit_uet_gr_correspondence.py", "docs/core/07_artifacts/correspondence/gr_correspondence_verification.json", "docs/core/test/test_uet_gr_correspondence.py"],
             "evidence_class": "STANDARD_THEORY_REPRODUCTION", "proof_status": "analytic tensor-input identities pass; curved numerical closure blocked",
             "downstream_dependencies": ["uet.main_theory.covariant_parent", "uet.main_theory.hyperbolic_spine_control", "uet.main_theory.gravity_observables"],
             "claim_boundary": "correspondence controls, not a UET derivation or numerical GR validation",
@@ -98,7 +113,9 @@ def main() -> int:
     names = ("gr_correspondence_verification.json", "uet_main_theory_wave9_gate.json", "uet_equation_correspondence_registry_gr_controls_addendum.json")
     outputs = dict(zip(names, build_artifacts()))
     for name, payload in outputs.items():
-        (ARTIFACTS / name).write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        path = canonical_artifact_path(name)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     gate = outputs["uet_main_theory_wave9_gate.json"]
     print(f"audit_status={gate['audit_status']}")
     print(f"gravity_status={gate['gravity_status']}")

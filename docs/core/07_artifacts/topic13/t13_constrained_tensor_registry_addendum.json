@@ -1,0 +1,19 @@
+{
+  "registry_id": "uet.o2.constrained_three_source_tensor_reference",
+  "registration_status": "UNMERGED_INTERNAL_REFERENCE",
+  "ontology": "Three sources of the existing response, no new physical state",
+  "units": "Natural thermal response; entropy contraction divided by T",
+  "equation_or_mapping": "H Psi+C Lambda=W G; C^T Psi=0; K=G^T W Psi; sigma=X^T K X/T",
+  "derivation_class": "Finite constrained quadratic response and existing covariant lift",
+  "observable": "Internal 3x3 heat-response tensor, not SI material transport",
+  "data_role": "INTERNAL_FIXED_BINARY64_INPUTS_HIGH_PRECISION_REFERENCE",
+  "verification_status": "TWO_RULES_TWO_PRECISIONS_AND_SIXTEEN_LIFT_CASES",
+  "controlling_blocker": "input_interpolation_resolution_and_charged_frame_integration",
+  "claim_boundary": "No continuum, material, full Topic13 or global closure",
+  "evidence_artifacts": [
+    "docs/core/artifacts/t13_constrained_tensor_audit.json",
+    "docs/core/artifacts/t13_constrained_tensor_lift_audit.json"
+  ],
+  "dependency_unlocked": [],
+  "full_core_unlock": false
+}

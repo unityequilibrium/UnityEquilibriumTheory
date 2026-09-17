@@ -18,7 +18,7 @@ RAW = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
     "zenodo_6091274_isotropic_graphite_specific_heat.xlsx"
 )
-OUT = ROOT / "docs/core/artifacts/t13_zenodo_hitrace_isotropic_graphite_cp_source_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_zenodo_hitrace_isotropic_graphite_cp_source_audit.json"
 EXPECTED_RAW_MD5 = "6b9e617fb0266da9a5724d04eccb18b8"
 EXPECTED_RAW_SHA256 = "c38e74d22c8b409b347b5d65384f0c172d4a43162ffffe7c2eba231f48d57020"
 EXPECTED_RAW_SIZE = 27320

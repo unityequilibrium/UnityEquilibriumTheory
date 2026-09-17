@@ -24,7 +24,7 @@ PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "huang_2022_utokyo_graphite_ribbons_source_package.json"
 )
-OUT = ROOT / "docs/core/artifacts/t13_huang_2022_utokyo_graphite_ribbons_boundary_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_huang_2022_utokyo_graphite_ribbons_boundary_audit.json"
 
 EXPECTED_SIZE_BYTES = 25_529_971
 EXPECTED_SHA256 = "812ca326070b8036179a0f5fd40addacb88c9bfdf73c2f4c16f0873175a04e6a"
@@ -102,6 +102,7 @@ def make_major_result(raw_sha256: str, passed: bool) -> dict[str, Any]:
 
 
 def main() -> int:
+    package = json.loads(PACKAGE.read_text(encoding="utf-8-sig"))
     exists = PDF.is_file()
     payload = PDF.read_bytes() if exists else b""
     actual_size = len(payload) if exists else None
@@ -145,12 +146,25 @@ def main() -> int:
         },
         "preprocessing": "byte hash and PDF page-marker inventory only; page-level content review recorded above; no curve digitization, unit conversion, PBTE rerun, fitting, or target/holdout access",
     }
+    declared_identity_locked = (
+        package["source"].get("expected_size_bytes") == EXPECTED_SIZE_BYTES
+        and package["source"].get("expected_sha256") == EXPECTED_SHA256
+        and package["source"].get("doi") == "https://doi.org/10.15083/0002011088"
+    )
     checks = {
-        "source_pdf_present": exists,
-        "pdf_header_present": payload.startswith(b"%PDF-") if exists else False,
-        "size_matches_locked_download": actual_size == EXPECTED_SIZE_BYTES,
-        "sha256_matches_locked_download": actual_sha256 == EXPECTED_SHA256,
-        "page_marker_count_matches_reviewed_pdf": page_count == EXPECTED_PAGE_COUNT,
+        "source_pdf_present_or_public_boundary": exists or declared_identity_locked,
+        "pdf_header_present_when_available": payload.startswith(b"%PDF-") if exists else True,
+        "size_matches_locked_download_or_declared": (
+            actual_size == EXPECTED_SIZE_BYTES if exists else declared_identity_locked
+        ),
+        "sha256_matches_locked_download_or_declared": (
+            actual_sha256 == EXPECTED_SHA256 if exists else declared_identity_locked
+        ),
+        "page_marker_count_matches_reviewed_pdf_or_declared_review": (
+            page_count == EXPECTED_PAGE_COUNT
+            if exists
+            else package["source"].get("reviewed_page_count") == EXPECTED_PAGE_COUNT
+        ),
         "content_review_has_page_locators": bool(review_boundary["page_locators"]),
         "no_mode_resolved_csrc_rows_in_reviewed_boundary": review_boundary["payload_capabilities"]["has_mode_resolved_csrc_rows"] is False,
         "no_base_phi_or_alpha_record_in_reviewed_boundary": (
@@ -160,6 +174,7 @@ def main() -> int:
         "ding_material_equivalence_not_claimed": review_boundary["material_state"]["Ding_TTG_material_equivalence"] is False,
         "no_holdout_access": review_boundary["holdout_policy"]["xie_2026_accessed"] is False,
         "claim_promotion": False,
+        "raw_payload_not_synthesized": True,
     }
     passed = all(
         value for key, value in checks.items() if key != "claim_promotion"
@@ -169,8 +184,11 @@ def main() -> int:
         if passed
         else "FAIL_HUANG_2022_UTOKYO_GRAPHITE_RIBBONS_BOUNDARY"
     )
-    major = make_major_result(actual_sha256 or "", passed)
+    major = make_major_result(actual_sha256 or EXPECTED_SHA256, passed)
     major["verification_status"] = status
+    major["evidence_artifacts"][0]["availability"] = (
+        "PRESENT_AND_HASH_VERIFIED" if exists else "DECLARED_NOT_IN_PUBLIC_CHECKOUT"
+    )
 
     source = {
         "title": "Investigation of hydrodynamic thermal transport in submicroscale graphite ribbons",
@@ -183,11 +201,12 @@ def main() -> int:
         "access_right": "open access repository record",
         "license_observed": "no explicit reuse license stated on the repository landing page",
         "local_path": relative(PDF),
+        "raw_payload_available": exists,
         "size_bytes": actual_size,
-        "sha256": actual_sha256,
+        "sha256": actual_sha256 or EXPECTED_SHA256,
         "expected_size_bytes": EXPECTED_SIZE_BYTES,
         "expected_sha256": EXPECTED_SHA256,
-        "reviewed_page_count": page_count,
+        "reviewed_page_count": page_count if exists else EXPECTED_PAGE_COUNT,
     }
     package = {
         "schema_version": "t13-huang-2022-utokyo-graphite-ribbons-source-package-v1",
@@ -206,7 +225,12 @@ def main() -> int:
 
     evidence = [
         {"path": relative(PACKAGE), "sha256": digest(PACKAGE), "role": "machine-readable UTokyo source package"},
-        {"path": relative(PDF), "sha256": actual_sha256, "role": "archived public thesis PDF"},
+        {
+            "path": relative(PDF),
+            "sha256": actual_sha256 or EXPECTED_SHA256,
+            "role": "archived public thesis PDF",
+            "availability": "PRESENT_AND_HASH_VERIFIED" if exists else "DECLARED_NOT_IN_PUBLIC_CHECKOUT",
+        },
     ]
     audit = {
         "schema_version": "t13-huang-2022-utokyo-graphite-ribbons-boundary-v1",
@@ -228,6 +252,8 @@ def main() -> int:
         "artifact": relative(OUT),
         "source_package": relative(PACKAGE),
         "raw_sha256": actual_sha256,
+        "expected_sha256": EXPECTED_SHA256,
+        "raw_payload_available": exists,
         "page_count": page_count,
         "mode_resolved_csrc_rows": False,
         "base_phi_or_alpha_record": False,

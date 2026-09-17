@@ -9,7 +9,6 @@ from __future__ import annotations
 
 import hashlib
 import json
-import platform
 import sys
 from datetime import UTC, datetime
 from pathlib import Path
@@ -36,8 +35,8 @@ TOPIC_PRIMARY = ARTIFACT_DIR / "0_13_thermodynamic_bridge_verification.json"
 FOUNDATION_GATE = DATA_DIR / "thermodynamic_bridge_foundation_claim_gate.json"
 CATTANEO_ARTIFACT = ARTIFACT_DIR / "cattaneo_benchmark_artifact.json"
 THERMAL_PILOT = ARTIFACT_DIR / "matter_space_thermal_control.json"
-CORE_PROGRAM = ROOT / "docs/core/artifacts/uet_gr_research_program_gate.json"
-CORE_STATE_MAP = ROOT / "docs/core/artifacts/noether_phase_field_dependency_gate.json"
+CORE_PROGRAM = ROOT / "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json"
+CORE_STATE_MAP = ROOT / "docs/core/07_artifacts/gates/noether_phase_field_dependency_gate.json"
 READINESS_METADATA = ROOT / "docs/meta/topic_readiness.json"
 
 ARTIFACT_PATH = ARTIFACT_DIR / "0_13_core_thermodynamic_constraint_gate.json"
@@ -419,8 +418,10 @@ def build_artifact() -> dict[str, Any]:
             "Phi/trace observable, and it does not promote Topic 0.13 or the core program."
         ),
         "environment": {
-            "python_version": platform.python_version(),
-            "platform": platform.platform(),
+            # Runtime metadata is descriptive only; keep the artifact portable
+            # across local and CI patch versions and operating systems.
+            "python_version": f"{sys.version_info.major}.{sys.version_info.minor}",
+            "platform": "portable-research-runtime",
         },
     }
 

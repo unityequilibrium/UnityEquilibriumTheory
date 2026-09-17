@@ -7,10 +7,11 @@ import sys
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[2]
-if str(ROOT.parent) not in sys.path:
-    sys.path.insert(0, str(ROOT.parent))
+REPO_ROOT = Path(__file__).resolve().parents[3]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
+from docs.core.core_paths import canonical_artifact_path  # noqa: E402
 from docs.core.matter_interaction_forward import (  # noqa: E402
     MatterInteractionForwardConfig,
     MatterSource,
@@ -171,7 +172,7 @@ def build_artifact() -> dict:
 
 def main() -> int:
     artifact = build_artifact()
-    output = ROOT / "core" / "artifacts" / "matter_interaction_forward_verification.json"
+    output = canonical_artifact_path("matter_interaction_forward_verification.json", "verification")
     output.write_text(json.dumps(artifact, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(json.dumps(artifact, indent=2, ensure_ascii=False))
     return 0 if artifact["audit_status"] != "FAIL" else 1

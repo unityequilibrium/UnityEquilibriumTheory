@@ -24,12 +24,12 @@ from docs.core.thermal_response_beta_contract import (
 )
 
 
-CONTRACT_REL = "docs/core/thermal_response_beta_contract.py"
+CONTRACT_REL = "docs/core/03_lanes/thermal/thermal_response_beta_contract.py"
 THERMAL_AUDIT_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/thermal_closure_derivation_audit.json"
-PARAMETERS_REL = "docs/core/uet_parameters.py"
-MASTER_REL = "docs/core/uet_master_equation.py"
+PARAMETERS_REL = "docs/core/01_contracts/units/uet_parameters.py"
+MASTER_REL = "docs/core/02_equations/matter_space/uet_master_equation.py"
 FORMULA_REL = "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md"
-OUT = ROOT / "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_thermal_response_beta_contract_audit.json"
 
 
 def text(rel: str) -> str:
@@ -153,7 +153,7 @@ def main() -> int:
                 {"path": PARAMETERS_REL, "sha256": sha256(PARAMETERS_REL)},
                 {"path": MASTER_REL, "sha256": sha256(MASTER_REL)},
                 {"path": FORMULA_REL, "sha256": sha256(FORMULA_REL)},
-                {"path": "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json"},
+                {"path": "docs/core/07_artifacts/topic13/t13_thermal_response_beta_contract_audit.json"},
             ],
             "verification_status": status,
             "open_blockers": [

@@ -1,0 +1,190 @@
+{
+  "schema_version": "t13-uet-o2-heat-current-kubo-match-v1",
+  "artifact": "t13_uet_o2_heat_current_kubo_match_audit",
+  "generated_at": "2026-09-17",
+  "status": "PASS_ACTION_MATCHED_FINITE_CUTOFF_HEAT_CURRENT_KUBO_LANE",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_HEAT_CURRENT_KUBO_MATCH",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the declared Landau-frame heat-current source is projected with the same conserved collision operator used by the entropy lane",
+      "the zero-frequency retarded heat-current matrix matches the existing finite-cutoff pseudoinverse response",
+      "the scalar response matches kappa_natural at one declared normal state",
+      "the shared operator satisfies the stated KMS/FDT and entropy consistency checks"
+    ],
+    "equation_or_mapping": {
+      "heat_source": "b_q^i=(E-h*q)*(p^i/E)*sqrt(w), h=(epsilon+p)/n",
+      "retarded_heat_current": "G_R^qq(omega)=b_q^T*(L_cont-i*omega*I)^(-1)*b_q",
+      "dc_match": "Re G_R^qq(0)=K_qq=(b_q^perp)^T*L_cont^+*b_q^perp",
+      "KMS": "G^>/G^<=exp(beta*omega)",
+      "entropy": "sigma=b_q^T*L_cont*b_q/T>=0"
+    },
+    "units": {
+      "unit_lane": "natural finite-cutoff",
+      "temperature_chemical_potential_frequency": "energy",
+      "kappa_natural": "finite-cutoff natural heat-current response; not SI conductivity",
+      "heat_flux": "formal natural-unit moment current; not W m^-2",
+      "Phi": "effective response variable; not temperature or metric",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived physical/history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "action-derived finite-temperature EOS plus the shared finite-cutoff conservative collision operator, Landau heat-current source, retarded inversion, and covariant entropy balance",
+    "observable": "state-matched finite-cutoff retarded heat-current response and entropy witness",
+    "data_role": "ACTION_MATCHED_FINITE_CUTOFF_HEAT_KUBO_NOT_SI",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/02_equations/o2/uet_o2_heat_current_kubo_match.py",
+        "sha256": "1e1236c381468ab837071c9b6e9610277ea6e031e8f88a9fba8f7b4455eb6625"
+      },
+      {
+        "path": "docs/core/02_equations/o2/uet_o2_covariant_entropy_heat_flux_balance.py",
+        "sha256": "982de9c81ef7cd792f77b4bb1fd1ff138333a860b4fd136d8eab36ea7343c1b3"
+      },
+      {
+        "path": "docs/core/02_equations/o2/uet_o2_continuum_collision_operator.py",
+        "sha256": "734e3d178d50a72737e73faa21cf9d510c6d369c4b38023cd9bf180c0b435dc1"
+      }
+    ],
+    "verification_status": "PASS_ACTION_MATCHED_FINITE_CUTOFF_HEAT_CURRENT_KUBO_LANE",
+    "open_blockers": [
+      "continuum_limit_missing",
+      "loop_renormalized_off_shell_self_energy_missing",
+      "physical_heat_Kubo_coefficient_record_missing",
+      "finite_temperature_condensed_two_fluid_completion_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "state-matched finite-cutoff natural-unit heat-current Kubo lane only; no continuum, SI, physical transport, alpha, TTG, Core, or Full Topic 13 unlock",
+    "claim_boundary": "This closes only the state-matched finite-cutoff natural-unit heat-current Kubo interface. It is not a continuum-limit proof, an SI transport coefficient, a complete two-fluid theory, an alpha calibration, or Full Topic 13 closure."
+  },
+  "contract": {
+    "status": "PASS_ACTION_MATCHED_FINITE_CUTOFF_HEAT_CURRENT_KUBO_LANE",
+    "equations": {
+      "heat_source": "b_q^i=(E-h*q)*(p^i/E)*sqrt(w), h=(epsilon+p)/n",
+      "retarded_heat_current": "G_R^qq(omega)=b_q^T*(L_cont-i*omega*I)^(-1)*b_q",
+      "dc_match": "Re G_R^qq(0)=K_qq=(b_q^perp)^T*L_cont^+*b_q^perp",
+      "KMS": "G^>/G^<=exp(beta*omega)",
+      "entropy": "sigma=b_q^T*L_cont*b_q/T>=0"
+    },
+    "unit_contract": {
+      "unit_lane": "natural finite-cutoff",
+      "temperature_chemical_potential_frequency": "energy",
+      "kappa_natural": "finite-cutoff natural heat-current response; not SI conductivity",
+      "heat_flux": "formal natural-unit moment current; not W m^-2",
+      "Phi": "effective response variable; not temperature or metric",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived physical/history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "action-derived finite-temperature EOS plus the shared finite-cutoff conservative collision operator, Landau heat-current source, retarded inversion, and covariant entropy balance",
+    "observable": "state-matched finite-cutoff retarded heat-current response and entropy witness",
+    "data_role": "ACTION_MATCHED_FINITE_CUTOFF_HEAT_KUBO_NOT_SI",
+    "excluded": {
+      "continuum_limit": true,
+      "physical_SI_Kubo_coefficient": true,
+      "finite_temperature_condensed_two_fluid": true,
+      "dimensional_Phi_to_thermal_map": true,
+      "alpha_Phi_K": true,
+      "Ding_C_src": true,
+      "TTG_validation": true,
+      "Xie_2026_holdout": true
+    },
+    "claim_boundary": "This closes only the state-matched finite-cutoff natural-unit heat-current Kubo interface. It is not a continuum-limit proof, an SI transport coefficient, a complete two-fluid theory, an alpha calibration, or Full Topic 13 closure."
+  },
+  "state": {
+    "temperature": 0.22,
+    "chemical_potential": 0.35,
+    "space_response": 0.15,
+    "branch": "normal",
+    "finite_cutoff": 48.0,
+    "kappa_natural": 257.3728670227226,
+    "dc_response_scalar": 257.37286702272286,
+    "dc_matrix_relative_residual": 1.4221293203153756e-15,
+    "dc_scalar_relative_residual": 1.1043009218176348e-15,
+    "response_matrix_isotropy_residual": 4.434099491374344e-11,
+    "response_matrix_min_eigenvalue": 257.37286701129193,
+    "source_constraint_residual": 2.179123804113782e-19,
+    "entropy_match_residual": 3.304068358224876e-15,
+    "retarded_frequency_over_rate": [
+      0.0,
+      0.5,
+      1.0,
+      2.0
+    ],
+    "retarded_response_real": [
+      257.37286702272286,
+      254.1989437368279,
+      245.13347449098413,
+      214.55044151754745
+    ],
+    "retarded_response_imag": [
+      0.0,
+      28.390641480400138,
+      54.75128435790153,
+      95.8216874203725
+    ],
+    "kms_frequency_over_temperature": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "kms_ratio_residual": 1.346768607108103e-16,
+    "fdt_residual": 1.3877787807814457e-17,
+    "finite_cutoff_boundary_declared": true,
+    "same_operator_state_verified": true,
+    "retarded_heat_current_match_completed": true,
+    "physical_kubo_coefficient_emitted": false,
+    "numeric_alpha_Phi_K_emitted": false,
+    "continuum_limit_completed": false,
+    "parameter_fitting_performed": false,
+    "target_data_used": false,
+    "xie_2026_accessed": false,
+    "data_role": "ACTION_MATCHED_FINITE_CUTOFF_HEAT_KUBO_NOT_SI"
+  },
+  "checks": {
+    "normal_branch_is_explicit": true,
+    "same_operator_state_is_verified": true,
+    "finite_cutoff_is_declared": true,
+    "dc_matrix_matches_covariant_heat_response": true,
+    "dc_scalar_matches_kappa_natural": true,
+    "response_is_positive_semidefinite": true,
+    "source_is_projected_from_conserved_moments": true,
+    "entropy_witness_matches_shared_operator": true,
+    "retarded_response_is_finite": true,
+    "retarded_zero_frequency_is_positive": true,
+    "kms_ratio_is_resolved": true,
+    "fdt_is_resolved": true,
+    "heat_current_match_is_completed": true,
+    "physical_kubo_is_not_emitted": true,
+    "continuum_limit_is_not_claimed": true,
+    "numeric_alpha_is_not_emitted": true,
+    "no_parameter_fitting": true,
+    "no_target_data": true,
+    "xie_holdout_is_unread": true,
+    "Phi_ontology_is_preserved": true,
+    "C_ontology_is_preserved": true,
+    "R_gen_ontology_is_preserved": true,
+    "R_obs_remains_separate": true,
+    "physical_shortcuts_are_excluded": true
+  },
+  "failed_checks": [],
+  "physical_kubo_coefficient_emitted": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "continuum_limit_completed": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "claim_promotion": false,
+  "full_core_unlock": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "used_for_fit": false,
+    "used_for_tuning": false,
+    "used_for_calibration": false
+  },
+  "controlling_blocker": "continuum_limit_and_physical_heat_Kubo_promotion_missing",
+  "next_controller": "complete the continuum and renormalized retarded heat-current match, then source-lock physical units and uncertainty without promoting the natural lane"
+}

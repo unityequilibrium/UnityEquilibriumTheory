@@ -1,7 +1,7 @@
 {
   "schema_version": "matter-space-phase-coupling-diagnostic-v1",
   "artifact": "0_11_matter_space_phase_coupling_diagnostic",
-  "generated_at": "2026-07-30",
+  "generated_at": "2026-09-18",
   "status": "INTERNAL_DIAGNOSTIC",
   "verification_status": "PASS",
   "simulation_status": "SIMULATION_ONLY",
@@ -566,7 +566,7 @@
   },
   "causal_arrival": {
     "status": "INHERITED_BLOCKED_CORE_CONTROLLER",
-    "core_artifact": "docs/core/artifacts/matter_space_variational_verification.json",
+    "core_artifact": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
     "controller": "prearrival_leakage",
     "new_causal_claim": false
   },

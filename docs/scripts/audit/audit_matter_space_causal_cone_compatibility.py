@@ -28,8 +28,8 @@ from docs.core.uet_matter_space import MatterSpaceConfig, MatterSpaceState  # no
 from docs.core.uet_matter_space_split import causal_matter_space_split_step  # noqa: E402
 
 
-OUT = ROOT / "docs/core/artifacts/matter_space_causal_cone_compatibility.json"
-CORE_SOURCE = ROOT / "docs/core/uet_matter_space_split.py"
+OUT = ROOT / "docs/core/07_artifacts/archive/matter_space_causal_cone_compatibility.json"
+CORE_SOURCE = ROOT / "docs/core/02_equations/matter_space/uet_matter_space_split.py"
 
 
 def rel(path: Path) -> str:

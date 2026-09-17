@@ -19,8 +19,8 @@ import numpy as np
 
 
 ROOT = Path(__file__).resolve().parents[3]
-MASTER_PATH = ROOT / "docs/core/uet_master_equation.py"
-OUT = ROOT / "docs/core/artifacts/uet_legacy_variational_closure.json"
+MASTER_PATH = ROOT / "docs/core/02_equations/matter_space/uet_master_equation.py"
+OUT = ROOT / "docs/core/07_artifacts/gates/uet_legacy_variational_closure.json"
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 

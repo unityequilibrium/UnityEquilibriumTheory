@@ -27,8 +27,8 @@ def main() -> int:
     )
     text = replace_once(
         text,
-        '    oxford_numeric_path, oxford_numeric = load(\n        "docs/core/artifacts/t13_oxford_tgs_numeric_rows_audit.json"\n    )\n    material_boundary_path, material_boundary = load(',
-        '    oxford_numeric_path, oxford_numeric = load(\n        "docs/core/artifacts/t13_oxford_tgs_numeric_rows_audit.json"\n    )\n    desorbo_ceylon_path, desorbo_ceylon = load(\n        "docs/core/artifacts/t13_desorbo_ceylon_graphite_cp_audit.json"\n    )\n    desorbo_ceylon_package_path, desorbo_ceylon_package = load(\n        "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/desorbo_1955_ceylon_graphite_cp_source_package.json"\n    )\n    material_boundary_path, material_boundary = load(',
+        '    oxford_numeric_path, oxford_numeric = load(\n        "docs/core/07_artifacts/topic13/t13_oxford_tgs_numeric_rows_audit.json"\n    )\n    material_boundary_path, material_boundary = load(',
+        '    oxford_numeric_path, oxford_numeric = load(\n        "docs/core/07_artifacts/topic13/t13_oxford_tgs_numeric_rows_audit.json"\n    )\n    desorbo_ceylon_path, desorbo_ceylon = load(\n        "docs/core/07_artifacts/topic13/t13_desorbo_ceylon_graphite_cp_audit.json"\n    )\n    desorbo_ceylon_package_path, desorbo_ceylon_package = load(\n        "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/desorbo_1955_ceylon_graphite_cp_source_package.json"\n    )\n    material_boundary_path, material_boundary = load(',
         "DeSorbo source loading",
     )
     text = replace_once(

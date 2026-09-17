@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "artifact": "matter_space_thermal_control",
   "topic": "0.13_Thermodynamic_Bridge",
-  "generated_at": "2026-08-14T08:24:16.331975+00:00",
+  "generated_at": "2026-09-17T21:31:16.667893+00:00",
   "status": "SIMULATION_ONLY",
   "internal_gate_status": "FAIL",
   "dependency_status": "BLOCKED",
@@ -19,8 +19,8 @@
   },
   "metrics": {
     "cattaneo_analytical_residual": 0.0,
-    "cattaneo_phase_relative_error": 9.271874244056374e-08,
-    "cattaneo_lag_relative_error": 9.271874248716792e-08,
+    "cattaneo_phase_relative_error": 9.271874728739642e-08,
+    "cattaneo_lag_relative_error": 9.271874724079223e-08,
     "cattaneo_hysteresis_relative_error": 2.3093928019540135e-07,
     "cattaneo_convergence_error": 1.0357818269746133e-07,
     "nonlinear_homogeneous_core_crosscheck_error": 0.0,
@@ -34,7 +34,7 @@
     "pilot_visual_arrival_speed_relative_error": 0.008064516129032029,
     "pilot_visual_prearrival_leakage_fraction": 0.052060621423768744,
     "trace_source_minimum": 1.1456673200014236e-06,
-    "trace_lag_time": -0.6775763673485588,
+    "trace_lag_time": -0.6775763673485579,
     "trace_hysteresis_area": 0.5950466836340469
   },
   "thresholds": {
@@ -99,8 +99,8 @@
     {
       "coupling_g": 0.0,
       "tau_space": 0.2,
-      "phase_radians": -1.0853361147901348,
-      "lag_time": 1.4471148197201797,
+      "phase_radians": -1.0853361147901353,
+      "lag_time": 1.4471148197201804,
       "hysteresis_area": 1.1277178300736537,
       "max_ledger_closure_relative": 0.002600101122789942,
       "minimum_trace_source": 8.685339848301865e-05,
@@ -111,8 +111,8 @@
     {
       "coupling_g": 0.0,
       "tau_space": 0.5,
-      "phase_radians": -1.271547158272549,
-      "lag_time": 1.6953962110300653,
+      "phase_radians": -1.2715471582725493,
+      "lag_time": 1.6953962110300658,
       "hysteresis_area": 1.315400927249953,
       "max_ledger_closure_relative": 0.0005219378789188584,
       "minimum_trace_source": 0.00012585059041159605,
@@ -123,8 +123,8 @@
     {
       "coupling_g": 0.15,
       "tau_space": 0.2,
-      "phase_radians": -1.085723138224405,
-      "lag_time": 1.4476308509658733,
+      "phase_radians": -1.0857231382244057,
+      "lag_time": 1.4476308509658742,
       "hysteresis_area": 1.128083802254321,
       "max_ledger_closure_relative": 0.0033925069364990415,
       "minimum_trace_source": 6.409223126171808e-05,
@@ -135,8 +135,8 @@
     {
       "coupling_g": 0.15,
       "tau_space": 0.5,
-      "phase_radians": -1.2720073259052596,
-      "lag_time": 1.6960097678736794,
+      "phase_radians": -1.2720073259052604,
+      "lag_time": 1.6960097678736805,
       "hysteresis_area": 1.3157435197296707,
       "max_ledger_closure_relative": 0.000652683589980536,
       "minimum_trace_source": 9.974793093579742e-05,
@@ -147,8 +147,8 @@
     {
       "coupling_g": 0.3,
       "tau_space": 0.2,
-      "phase_radians": -1.0864368030716804,
-      "lag_time": 1.448582404095574,
+      "phase_radians": -1.0864368030716813,
+      "lag_time": 1.448582404095575,
       "hysteresis_area": 1.1287046698529157,
       "max_ledger_closure_relative": 0.005750330423237858,
       "minimum_trace_source": 3.7828884589579996e-05,
@@ -159,8 +159,8 @@
     {
       "coupling_g": 0.3,
       "tau_space": 0.5,
-      "phase_radians": -1.2728313571021324,
-      "lag_time": 1.6971084761361765,
+      "phase_radians": -1.272831357102133,
+      "lag_time": 1.6971084761361774,
       "hysteresis_area": 1.3162993605716278,
       "max_ledger_closure_relative": 0.0009418829797964042,
       "minimum_trace_source": 6.618270960982822e-05,
@@ -187,21 +187,21 @@
   },
   "source_package": {
     "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_second_sound_source_package.json",
-    "sha256": "3754d54cdee639be211a308d893b994ca78f7dd11aaeb191278b9085e7923b96",
+    "sha256": "8058eaa23f57e7c86cde8e57978e74ecb128edcf6d5c42b206fb0ade312dbcc2",
     "status": "FIGURE_DERIVED_NORMALIZED_COMPARISON_READY_RAW_AUTHOR_C_SRC_OPEN",
     "numeric_rows_consumed": 0,
     "holdout_consumed": false
   },
   "core_dependency": {
-    "path": "docs/core/artifacts/matter_space_variational_verification.json",
-    "sha256": "e5ae26fb40ff6cd4a0d1d0c86576e91218294e683902bb60b6afb0b2596cc62c",
+    "path": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
+    "sha256": "ad8b6671df932457007b4f293ca3962890718c633204445467a2b5877f81c4b9",
     "status": "FAIL",
     "controlling_blocker": "prearrival_leakage"
   },
   "outputs": {
     "timeseries_csv": {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/03_show_Result/matter_space_thermal_control_timeseries.csv",
-      "sha256": "8dd7de2709cfff5ffe3df66d6862328b9d58b2864a5b4365cc6dc6b1a1d92308"
+      "sha256": "792528ea06ee615ab9ae20cb797af895f86b9025ecfa88e35843008650898b60"
     },
     "figures": [
       {
@@ -229,7 +229,7 @@
         "sha256": "f0bf947ef6820a4e9883cce58371ece276bf3595d038deb097f0aa53f15bc6a9"
       }
     ],
-    "script_sha256": "7b8988c2c72574d85428ddcb7b9c880f4af361b060bcdcdc8837f6f2041d15c5"
+    "script_sha256": "7b9f718d83fabea5b5fdb0f8fefc005e6a90ce465a260ca375dd8a094d951030"
   },
   "run_integrity": {
     "unit_lane": "normalized",

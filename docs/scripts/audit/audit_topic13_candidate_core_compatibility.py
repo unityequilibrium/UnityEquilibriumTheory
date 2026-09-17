@@ -14,29 +14,29 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_candidate_core_compatibility_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_candidate_core_compatibility_audit.json"
 
 
 CANDIDATES: dict[str, dict[str, str]] = {
     "calorine_zenodo_nep_bte": {
         "source": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_nep_bte_reproduction_source_package.json",
-        "audit": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
+        "audit": "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
     },
     "mp48_independent_graphite_cv": {
         "source": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/mp48_independent_graphite_cv_source_package.json",
-        "audit": "docs/core/artifacts/t13_mp48_independent_graphite_cv_audit.json",
+        "audit": "docs/core/07_artifacts/topic13/t13_mp48_independent_graphite_cv_audit.json",
     },
     "qh15_graphite_specific_c": {
         "source": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/qh15_graphite_transport_source_package.json",
-        "audit": "docs/core/artifacts/t13_qh15_graphite_transport_boundary_audit.json",
+        "audit": "docs/core/07_artifacts/topic13/t13_qh15_graphite_transport_boundary_audit.json",
     },
     "gatech_gen3csp_graphite": {
         "source": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/gatech_gen3csp_graphite_source_package.json",
-        "audit": "docs/core/artifacts/t13_gatech_graphite_source_audit.json",
+        "audit": "docs/core/07_artifacts/topic13/t13_gatech_graphite_source_audit.json",
     },
     "kim_2018_graphite_green_kubo": {
         "source": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/kim_2018_graphite_green_kubo_source_package.json",
-        "audit": "docs/core/artifacts/t13_transport_kms_entropy_status_boundary_audit.json",
+        "audit": "docs/core/07_artifacts/topic13/t13_transport_kms_entropy_status_boundary_audit.json",
     },
 }
 

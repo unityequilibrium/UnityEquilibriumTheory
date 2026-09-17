@@ -1,0 +1,51 @@
+{
+  "schema_version": "curved-3p1-topic13-matter-gate-v1",
+  "artifact": "curved_3p1_topic13_matter_wiring_gate",
+  "generated_at": "2026-09-17T20:01:13.302718+00:00",
+  "status": "PARTIAL_CURVED_3P1_PRESCRIBED_MATTER_SOURCE_READY",
+  "requirements": {
+    "topic13_core_handoff": "PASS",
+    "stress_energy_construction": "PASS",
+    "adm_projection": "PASS",
+    "gh_trace_reversed_source": "PASS",
+    "natural_si_scale_compatibility": "PASS",
+    "self_consistent_matter_evolution": "OPEN",
+    "stress_energy_conservation_propagation": "OPEN",
+    "physical_si_einstein_coupling": "OPEN",
+    "constraint_preserving_boundaries": "OPEN",
+    "detector_observable_mapping": "OPEN"
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json",
+      "sha256": "d989b9dd637828dd64f975eaf1f744163ac71e362bde71e46e86e599eced1754"
+    },
+    {
+      "path": "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json",
+      "sha256": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+      "sha256": "8cfb5389380b90315414fc80ee759de1de6577d417b5928852021ae5232875c9"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+      "sha256": "905cc38dc027af573d21126d164d75d2060110a39573154239951bd0e61aca17"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json",
+      "sha256": "a09b39050aaea5ed49094f34d45719673eb275e7b94e88b88af71e4e47084325"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_curved_3p1_matter_wiring.py",
+      "sha256": "d45348efdbbd302c07f425f2f800cd677d14225f1ad49fb36b21de6a257614b1"
+    }
+  ],
+  "verification_artifact": "docs/core/07_artifacts/verification/curved_3p1_topic13_matter_wiring_verification.json",
+  "formula_artifact": "docs/core/07_artifacts/correspondence/curved_3p1_topic13_matter_wiring_formula_audit.json",
+  "controlling_blocker": "curved_3p1_self_consistent_matter_evolution_and_constraint_preserving_boundaries_open",
+  "claim_promotion": false,
+  "claim_boundary": "prescribed lane-specific stress-energy construction and projection only; not a self-consistent matter-coupled spacetime solution, Einstein-equation derivation, Gravity validation, or global UET closure",
+  "verification_sha256": "1140bd87632f432d33bb31e0e1fe04c83a2cd3de9044153bfa5b28e5acc247d1",
+  "formula_sha256": "fcfd4cfbf5f58c7e0d05ec9cbd8e3f80fb7d709bc38ed5644382b41d492dda67"
+}

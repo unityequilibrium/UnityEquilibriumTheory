@@ -22,10 +22,10 @@ from docs.core.uet_o2_action_1pi_sunset_tensor import (  # noqa: E402
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_action_1pi_sunset_tensor_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_action_1pi_sunset_tensor.py"
-ACTION_MODULE = ROOT / "docs/core/uet_o2_action_sunset_1pi_spectral.py"
-ZERO_ETA_MODULE = ROOT / "docs/core/uet_o2_action_sunset_zero_eta.py"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_action_1pi_sunset_tensor_audit.json"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_action_1pi_sunset_tensor.py"
+ACTION_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_action_sunset_1pi_spectral.py"
+ZERO_ETA_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_action_sunset_zero_eta.py"
 
 
 def sha256(path: Path) -> str:
@@ -139,13 +139,13 @@ def main() -> int:
         "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
     ]
     evidence = [
-        {"path": "docs/core/uet_o2_action_1pi_sunset_tensor.py", "sha256": sha256(MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_action_1pi_sunset_tensor.py", "sha256": sha256(MODULE)},
         {
-            "path": "docs/core/uet_o2_action_sunset_1pi_spectral.py",
+            "path": "docs/core/02_equations/o2/uet_o2_action_sunset_1pi_spectral.py",
             "sha256": sha256(ACTION_MODULE),
         },
         {
-            "path": "docs/core/uet_o2_action_sunset_zero_eta.py",
+            "path": "docs/core/02_equations/o2/uet_o2_action_sunset_zero_eta.py",
             "sha256": sha256(ZERO_ETA_MODULE),
         },
     ]

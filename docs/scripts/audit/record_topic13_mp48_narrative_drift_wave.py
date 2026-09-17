@@ -9,11 +9,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 PATHS = {
-    "mesh": ROOT / "docs/core/artifacts/t13_mp48_force_constant_csrc_mesh_convergence_audit.json",
-    "acceptance": ROOT / "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json",
+    "mesh": ROOT / "docs/core/07_artifacts/topic13/t13_mp48_force_constant_csrc_mesh_convergence_audit.json",
+    "acceptance": ROOT / "docs/core/07_artifacts/topic13/t13_independent_csrc_acceptance_contract.json",
     "full_gate": ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-    "register": ROOT / "docs/core/artifacts/uet_major_result_closure_register.json",
-    "dependency": ROOT / "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json",
+    "register": ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json",
+    "dependency": ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json",
     "update_log": ROOT / "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md",
     "manifest": ROOT / "docs/topics/0.13_Thermodynamic_Bridge/DATA_MANIFEST.md",
     "current": ROOT / "docs/topics/0.13_Thermodynamic_Bridge/FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md",

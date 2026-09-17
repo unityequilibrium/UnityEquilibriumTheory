@@ -16,10 +16,10 @@ from docs.core.uet_covariant_matter import CovariantMatterConfig, interaction_en
 from docs.core.uet_covariant_response import CovariantResponseConfig
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_action_normalized_elastic_scattering_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_action_normalized_elastic_scattering_audit.json"
 BRANCH = "T13_NORMAL_TREE_ELASTIC_CONTACT_PLUS_PHI_EXCHANGE_V1"
 EQUATION_ID = "uet.o2.thermal.normal_tree_elastic_scattering"
-REGISTRY_OUT = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_elastic_scattering_addendum.json"
+REGISTRY_OUT = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_elastic_scattering_addendum.json"
 
 
 @dataclass(frozen=True)
@@ -213,7 +213,7 @@ def main():
         "detailed_balance": all(r["max_detailed_balance_relative_error"]<1e-10 for r in sequence),
         "last_refinement_below_declared_2e_minus3": differences[-1]<2e-3,
     }
-    paths=["docs/core/uet_covariant_matter.py","docs/core/uet_covariant_response.py",
+    paths=["docs/core/02_equations/covariant/uet_covariant_matter.py","docs/core/02_equations/covariant/uet_covariant_response.py",
            "docs/scripts/audit/audit_topic13_action_normalized_elastic_scattering.py",
            "docs/core/test/test_topic13_action_normalized_elastic_scattering.py"]
     digest=lambda p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest()
@@ -281,7 +281,7 @@ def main():
     }
     REGISTRY_OUT.write_text(json.dumps({
         "schema_version":"uet-equation-registry-addendum-v1",
-        "extends":"docs/core/artifacts/uet_equation_correspondence_registry.json",
+        "extends":"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
         "status":"CANDIDATE_DIAGNOSTIC_NOT_MERGED","equation_entries":[entry],
         "full_core_unlock":False,"claim_promotion":False,
     },indent=2,allow_nan=False)+"\n",encoding="utf-8")

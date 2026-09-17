@@ -9,11 +9,11 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-CONTRACT = ROOT / "docs/core/artifacts/uet_research_room_wave1_contract.json"
-FOUNDATION = ROOT / "docs/core/artifacts/uet_foundation_dependency_gate.json"
-BRIEF = ROOT / "docs/core/UET_RESEARCH_ROOM_BRIEF.md"
-MAJOR_CONTRACT = ROOT / "docs/core/artifacts/uet_major_result_closure_contract.json"
-MAJOR_REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
+CONTRACT = ROOT / "docs/core/07_artifacts/archive/uet_research_room_wave1_contract.json"
+FOUNDATION = ROOT / "docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json"
+BRIEF = ROOT / "docs/core/00_governance/UET_RESEARCH_ROOM_BRIEF.md"
+MAJOR_CONTRACT = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_contract.json"
+MAJOR_REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
 
 
 def digest(path: Path) -> str:

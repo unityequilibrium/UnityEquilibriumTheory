@@ -14,15 +14,15 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUTPUT = ROOT / "docs/core/artifacts/t13_physical_transport_reconciliation_audit.json"
+OUTPUT = ROOT / "docs/core/07_artifacts/topic13/t13_physical_transport_reconciliation_audit.json"
 
 EVIDENCE = {
-    "physical_kubo_provenance": ROOT / "docs/core/artifacts/t13_physical_kubo_coefficient_provenance_audit.json",
-    "transport_kms_entropy": ROOT / "docs/core/artifacts/t13_transport_kms_entropy_status_boundary_audit.json",
-    "uet_natural_kubo": ROOT / "docs/core/artifacts/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json",
-    "uet_sk_kms": ROOT / "docs/core/artifacts/t13_uet_o2_condensed_sk_kms_kubo_match_audit.json",
-    "kim_external_green_kubo": ROOT / "docs/core/artifacts/t13_kim_2018_graphite_green_kubo_external_input_audit.json",
-    "flat_components": ROOT / "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+    "physical_kubo_provenance": ROOT / "docs/core/07_artifacts/topic13/t13_physical_kubo_coefficient_provenance_audit.json",
+    "transport_kms_entropy": ROOT / "docs/core/07_artifacts/topic13/t13_transport_kms_entropy_status_boundary_audit.json",
+    "uet_natural_kubo": ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json",
+    "uet_sk_kms": ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_condensed_sk_kms_kubo_match_audit.json",
+    "kim_external_green_kubo": ROOT / "docs/core/07_artifacts/topic13/t13_kim_2018_graphite_green_kubo_external_input_audit.json",
+    "flat_components": ROOT / "docs/core/07_artifacts/topic13/t13_flat_thermodynamic_bridge_components_gate.json",
 }
 
 

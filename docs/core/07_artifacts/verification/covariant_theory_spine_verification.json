@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "artifact": "covariant_theory_spine_verification",
+  "generated_at": "2026-09-16T08:45:58.181105+00:00",
+  "audit_status": "PASS",
+  "research_status": "INTERNAL_MINKOWSKI_1P1_HYPERBOLIC_CONTROL_ONLY",
+  "operator_mode": "covariant_theory_spine_v1",
+  "unit_lane": "natural",
+  "metrics": {
+    "maximum_characteristic_speed": 0.7,
+    "maximum_eigenvector_condition_number": 2.0,
+    "matter_gradient_constraint_max_abs": 1.0824674490095276e-15,
+    "response_gradient_constraint_max_abs": 0.0,
+    "temporal_errors": [
+      2.6145147948255916e-08,
+      6.800863023211205e-09,
+      1.7332842256581288e-09
+    ],
+    "temporal_orders": [
+      1.9427534942697007,
+      1.9722095861891091
+    ],
+    "minimum_temporal_order": 1.9427534942697007,
+    "generated_trace": 1.6615677588998802e-09,
+    "one_step_balance_residual": 2.9713515999704475e-07
+  },
+  "thresholds": {
+    "identity": 1e-10,
+    "causal_speed": 1.0000000001,
+    "constraint": 1e-10,
+    "convergence_order": 1.5
+  },
+  "checks": {
+    "strong_hyperbolicity": true,
+    "subluminal_characteristics": true,
+    "matter_constraint": true,
+    "response_constraint": true,
+    "temporal_convergence": true,
+    "no_clipping": true,
+    "fixed_background_disclosed": true,
+    "curved_claim_blocked": true
+  },
+  "characteristic_analysis": {
+    "status": "PASS_STRONG_HYPERBOLIC_LINEAR_CONTROL",
+    "sectors": {
+      "matter": {
+        "eigenvalues": [
+          -0.7,
+          0.7
+        ],
+        "eigenvector_condition_number": 1.428571428571429,
+        "real_characteristics": true,
+        "complete_eigenbasis": true
+      },
+      "response": {
+        "eigenvalues": [
+          -0.4999999999999999,
+          0.5000000000000001
+        ],
+        "eigenvector_condition_number": 2.0,
+        "real_characteristics": true,
+        "complete_eigenbasis": true
+      }
+    },
+    "maximum_characteristic_speed": 0.7,
+    "curved_3p1": "NOT_IMPLEMENTED"
+  },
+  "contract": {
+    "operator_mode": "covariant_theory_spine_v1",
+    "status": "MINKOWSKI_1P1_STRONGLY_HYPERBOLIC_CONTROL_ONLY",
+    "supported_background": "fixed Minkowski 1+1",
+    "first_order_reduction": true,
+    "strong_hyperbolicity": "checked for linear matter and response sectors",
+    "curved_3p1": "BLOCKED",
+    "dynamical_metric": "BLOCKED",
+    "hamiltonian_momentum_constraints": "not applicable to fixed-background control",
+    "claim_boundary": "numerical causal-control spine, not curved GR evolution"
+  },
+  "claim_boundary": "first-order fixed-Minkowski 1+1 control; not curved 3+1, dynamical metric, or GR numerical validation"
+}

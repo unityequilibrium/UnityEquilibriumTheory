@@ -1,0 +1,1671 @@
+{
+  "major_result_id": "T13_MULTIBRAGG_POSITION_DIAGNOSTIC",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "what_is_closed": "Unfitted multi-Bragg baseline offsets measured under existing candidate reciprocal map",
+  "equation_or_mapping": "Intensity maxima and uncorrected centroids in fixed4/8 pixel half-width windows",
+  "units": "pixels; momentum inverse angstrom",
+  "derivation_class": "external-image coordinate diagnostic",
+  "observable": "baseline OFF diffraction peak positions",
+  "data_role": "EXTERNAL_DATA_DIAGNOSTIC",
+  "rows": [
+    {
+      "member": "PROCESSED/PROC_400nm",
+      "baseline_OFF_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "probes": [
+        {
+          "G": [
+            -2,
+            0,
+            0
+          ],
+          "nominal_yx": [
+            51.51774678870973,
+            246.97141657836394
+          ],
+          "momentum_norm": 5.898739855431055,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                52,
+                246
+              ],
+              "centroid_yx": [
+                51.85684368227503,
+                246.3527274448901
+              ],
+              "peak_offset_pixels": 1.0845359968761246,
+              "centroid_offset_pixels": 0.705523172620332,
+              "peak_on_boundary": false,
+              "maximum_over_median": 3.8943213333730866
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                52,
+                246
+              ],
+              "centroid_yx": [
+                51.82383027109083,
+                246.13982678191184
+              ],
+              "peak_offset_pixels": 1.0845359968761246,
+              "centroid_offset_pixels": 0.8861313038990309,
+              "peak_on_boundary": false,
+              "maximum_over_median": 19.52176629322867
+            }
+          }
+        },
+        {
+          "G": [
+            -2,
+            1,
+            0
+          ],
+          "nominal_yx": [
+            99.0045463734291,
+            164.7218670087893
+          ],
+          "momentum_norm": 5.108458565119042,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                100,
+                164
+              ],
+              "centroid_yx": [
+                99.73893373652209,
+                164.6251799508021
+              ],
+              "peak_offset_pixels": 1.2296421841460978,
+              "centroid_offset_pixels": 0.7407247709189275,
+              "peak_on_boundary": false,
+              "maximum_over_median": 5.058726436670946
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                100,
+                164
+              ],
+              "centroid_yx": [
+                99.76523475981831,
+                164.50527451105518
+              ],
+              "peak_offset_pixels": 1.2296421841460978,
+              "centroid_offset_pixels": 0.7909229616480621,
+              "peak_on_boundary": false,
+              "maximum_over_median": 29.65242843732318
+            }
+          }
+        },
+        {
+          "G": [
+            -2,
+            2,
+            0
+          ],
+          "nominal_yx": [
+            146.49134595814843,
+            82.47231743921463
+          ],
+          "momentum_norm": 5.898739855431061,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                147,
+                83
+              ],
+              "centroid_yx": [
+                146.90068536756246,
+                82.51539441435258
+              ],
+              "peak_offset_pixels": 0.7329241565461876,
+              "centroid_offset_pixels": 0.4115997787735838,
+              "peak_on_boundary": false,
+              "maximum_over_median": 3.9544144798979675
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                147,
+                83
+              ],
+              "centroid_yx": [
+                147.05975115955326,
+                82.46372163638999
+              ],
+              "peak_offset_pixels": 0.7329241565461876,
+              "centroid_offset_pixels": 0.5684701934228957,
+              "peak_on_boundary": false,
+              "maximum_over_median": 17.682982351486462
+            }
+          }
+        },
+        {
+          "G": [
+            -1,
+            -1,
+            0
+          ],
+          "nominal_yx": [
+            99.00454637342906,
+            329.2209661479386
+          ],
+          "momentum_norm": 5.108458565119042,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                99,
+                328
+              ],
+              "centroid_yx": [
+                99.13501639548116,
+                328.2803327332015
+              ],
+              "peak_offset_pixels": 1.2209746123173109,
+              "centroid_offset_pixels": 0.9496386931745766,
+              "peak_on_boundary": false,
+              "maximum_over_median": 5.574242270615103
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                99,
+                328
+              ],
+              "centroid_yx": [
+                99.0604404355781,
+                328.1369218393396
+              ],
+              "peak_offset_pixels": 1.2209746123173109,
+              "centroid_offset_pixels": 1.0854843201029734,
+              "peak_on_boundary": false,
+              "maximum_over_median": 30.00358568785804
+            }
+          }
+        },
+        {
+          "G": [
+            -1,
+            0,
+            0
+          ],
+          "nominal_yx": [
+            146.49134595814843,
+            246.97141657836397
+          ],
+          "momentum_norm": 2.9493699277155274,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                147,
+                246
+              ],
+              "centroid_yx": [
+                146.6933919118498,
+                246.52202684514364
+              ],
+              "peak_offset_pixels": 1.0965304843059793,
+              "centroid_offset_pixels": 0.49272071169267423,
+              "peak_on_boundary": false,
+              "maximum_over_median": 7.85516580609439
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                147,
+                246
+              ],
+              "centroid_yx": [
+                146.69815418738216,
+                246.48257787197775
+              ],
+              "peak_offset_pixels": 1.0965304843059793,
+              "centroid_offset_pixels": 0.5307851962330355,
+              "peak_on_boundary": false,
+              "maximum_over_median": 33.22287250829118
+            }
+          }
+        },
+        {
+          "G": [
+            -1,
+            1,
+            0
+          ],
+          "nominal_yx": [
+            193.97814554286776,
+            164.7218670087893
+          ],
+          "momentum_norm": 2.9493699277155305,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                195,
+                165
+              ],
+              "centroid_yx": [
+                194.59816438260611,
+                165.05014236377488
+              ],
+              "peak_offset_pixels": 1.0590299770831915,
+              "centroid_offset_pixels": 0.7015611664861426,
+              "peak_on_boundary": false,
+              "maximum_over_median": 7.000762208511081
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                195,
+                165
+              ],
+              "centroid_yx": [
+                194.62005380815395,
+                165.0463901274969
+              ],
+              "peak_offset_pixels": 1.0590299770831915,
+              "centroid_offset_pixels": 0.7192784409520598,
+              "peak_on_boundary": false,
+              "maximum_over_median": 30.393996465239898
+            }
+          }
+        },
+        {
+          "G": [
+            -1,
+            2,
+            0
+          ],
+          "nominal_yx": [
+            241.4649451275871,
+            82.47231743921466
+          ],
+          "momentum_norm": 5.108458565119046,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                242,
+                83
+              ],
+              "centroid_yx": [
+                241.9961183538748,
+                83.22332314149138
+              ],
+              "peak_offset_pixels": 0.7514869269985707,
+              "centroid_offset_pixels": 0.9198665996637942,
+              "peak_on_boundary": false,
+              "maximum_over_median": 6.996331874834217
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                242,
+                83
+              ],
+              "centroid_yx": [
+                242.22482100898065,
+                83.26362448699949
+              ],
+              "peak_offset_pixels": 0.7514869269985707,
+              "centroid_offset_pixels": 1.0970771162491584,
+              "peak_on_boundary": false,
+              "maximum_over_median": 28.686051829213003
+            }
+          }
+        },
+        {
+          "G": [
+            0,
+            -2,
+            0
+          ],
+          "nominal_yx": [
+            146.49134595814843,
+            411.4705157175133
+          ],
+          "momentum_norm": 5.89873985543106,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                146,
+                411
+              ],
+              "centroid_yx": [
+                145.91172613976815,
+                410.6367988416523
+              ],
+              "peak_offset_pixels": 0.6802983838110016,
+              "centroid_offset_pixels": 1.0154028574682148,
+              "peak_on_boundary": false,
+              "maximum_over_median": 4.023783074682885
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                146,
+                411
+              ],
+              "centroid_yx": [
+                145.80579256891073,
+                410.56921083592584
+              ],
+              "peak_offset_pixels": 0.6802983838110016,
+              "centroid_offset_pixels": 1.1324018452248679,
+              "peak_on_boundary": false,
+              "maximum_over_median": 20.856892378243757
+            }
+          }
+        },
+        {
+          "G": [
+            0,
+            -1,
+            0
+          ],
+          "nominal_yx": [
+            193.97814554286776,
+            329.2209661479386
+          ],
+          "momentum_norm": 2.94936992771553,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                194,
+                329
+              ],
+              "centroid_yx": [
+                193.76565681603086,
+                328.6102956179018
+              ],
+              "peak_offset_pixels": 0.22204426547734352,
+              "centroid_offset_pixels": 0.646583293387813,
+              "peak_on_boundary": false,
+              "maximum_over_median": 7.26341407273198
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                194,
+                329
+              ],
+              "centroid_yx": [
+                193.74742464249803,
+                328.6051058725932
+              ],
+              "peak_offset_pixels": 0.22204426547734352,
+              "centroid_offset_pixels": 0.6576594959520953,
+              "peak_on_boundary": false,
+              "maximum_over_median": 31.823885094830306
+            }
+          }
+        },
+        {
+          "G": [
+            0,
+            1,
+            0
+          ],
+          "nominal_yx": [
+            288.95174471230644,
+            164.72186700878933
+          ],
+          "momentum_norm": 2.94936992771553,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                289,
+                165
+              ],
+              "centroid_yx": [
+                289.2752121433476,
+                165.3858323055088
+              ],
+              "peak_offset_pixels": 0.28228803302687566,
+              "centroid_offset_pixels": 0.738566919237616,
+              "peak_on_boundary": false,
+              "maximum_over_median": 7.129808568949546
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                289,
+                165
+              ],
+              "centroid_yx": [
+                289.29519147136,
+                165.3950968099869
+              ],
+              "peak_offset_pixels": 0.28228803302687566,
+              "centroid_offset_pixels": 0.7557738031480897,
+              "peak_on_boundary": false,
+              "maximum_over_median": 29.932353883169313
+            }
+          }
+        },
+        {
+          "G": [
+            0,
+            2,
+            0
+          ],
+          "nominal_yx": [
+            336.43854429702577,
+            82.47231743921466
+          ],
+          "momentum_norm": 5.89873985543106,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                337,
+                83
+              ],
+              "centroid_yx": [
+                336.915130396814,
+                82.96444559674582
+              ],
+              "peak_offset_pixels": 0.7705072299201715,
+              "centroid_offset_pixels": 0.6850725756781965,
+              "peak_on_boundary": false,
+              "maximum_over_median": 5.009102833809343
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                337,
+                83
+              ],
+              "centroid_yx": [
+                337.14260645585165,
+                83.16676693308575
+              ],
+              "peak_offset_pixels": 0.7705072299201715,
+              "centroid_offset_pixels": 0.9889204331129823,
+              "peak_on_boundary": false,
+              "maximum_over_median": 18.58508089503467
+            }
+          }
+        },
+        {
+          "G": [
+            1,
+            -2,
+            0
+          ],
+          "nominal_yx": [
+            241.4649451275871,
+            411.4705157175133
+          ],
+          "momentum_norm": 5.108458565119046,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                241,
+                411
+              ],
+              "centroid_yx": [
+                240.70829504094976,
+                410.7258519950351
+              ],
+              "peak_offset_pixels": 0.661482435212038,
+              "centroid_offset_pixels": 1.061623008974179,
+              "peak_on_boundary": false,
+              "maximum_over_median": 5.3743540815159605
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                241,
+                411
+              ],
+              "centroid_yx": [
+                240.59376971437808,
+                410.75176852338296
+              ],
+              "peak_offset_pixels": 0.661482435212038,
+              "centroid_offset_pixels": 1.129399898021132,
+              "peak_on_boundary": false,
+              "maximum_over_median": 30.89330966725424
+            }
+          }
+        },
+        {
+          "G": [
+            1,
+            -1,
+            0
+          ],
+          "nominal_yx": [
+            288.95174471230644,
+            329.2209661479386
+          ],
+          "momentum_norm": 2.9493699277155305,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                288,
+                329
+              ],
+              "centroid_yx": [
+                288.4710223619932,
+                329.03322535030054
+              ],
+              "peak_offset_pixels": 0.9770588702519867,
+              "centroid_offset_pixels": 0.5160819558834048,
+              "peak_on_boundary": false,
+              "maximum_over_median": 7.140502477030536
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                288,
+                329
+              ],
+              "centroid_yx": [
+                288.4426961750755,
+                329.0607452185908
+              ],
+              "peak_offset_pixels": 0.9770588702519867,
+              "centroid_offset_pixels": 0.5336676488770958,
+              "peak_on_boundary": false,
+              "maximum_over_median": 31.37562363872816
+            }
+          }
+        },
+        {
+          "G": [
+            1,
+            0,
+            0
+          ],
+          "nominal_yx": [
+            336.43854429702577,
+            246.97141657836397
+          ],
+          "momentum_norm": 2.9493699277155274,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                336,
+                247
+              ],
+              "centroid_yx": [
+                336.1584303412583,
+                247.3714816964993
+              ],
+              "peak_offset_pixels": 0.43947481434804764,
+              "centroid_offset_pixels": 0.4883809240381399,
+              "peak_on_boundary": false,
+              "maximum_over_median": 7.232320945169873
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                336,
+                247
+              ],
+              "centroid_yx": [
+                336.169699463282,
+                247.4202730317695
+              ],
+              "peak_offset_pixels": 0.43947481434804764,
+              "centroid_offset_pixels": 0.5232109138717679,
+              "peak_on_boundary": false,
+              "maximum_over_median": 31.221285462345303
+            }
+          }
+        },
+        {
+          "G": [
+            1,
+            1,
+            0
+          ],
+          "nominal_yx": [
+            383.9253438817451,
+            164.7218670087893
+          ],
+          "momentum_norm": 5.108458565119042,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                384,
+                165
+              ],
+              "centroid_yx": [
+                383.91310405159834,
+                165.63928911472118
+              ],
+              "peak_offset_pixels": 0.2879782922247755,
+              "centroid_offset_pixels": 0.9175037514334758,
+              "peak_on_boundary": false,
+              "maximum_over_median": 5.896372750903457
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                384,
+                165
+              ],
+              "centroid_yx": [
+                383.97570775389545,
+                165.80751580456922
+              ],
+              "peak_offset_pixels": 0.2879782922247755,
+              "centroid_offset_pixels": 1.0868163724366509,
+              "peak_on_boundary": false,
+              "maximum_over_median": 29.915302161505476
+            }
+          }
+        },
+        {
+          "G": [
+            2,
+            -2,
+            0
+          ],
+          "nominal_yx": [
+            336.43854429702577,
+            411.4705157175133
+          ],
+          "momentum_norm": 5.898739855431061,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                336,
+                411
+              ],
+              "centroid_yx": [
+                335.61208692183425,
+                411.37942838167646
+              ],
+              "peak_offset_pixels": 0.6431999229484493,
+              "centroid_offset_pixels": 0.8314617825001442,
+              "peak_on_boundary": false,
+              "maximum_over_median": 4.250939857771151
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                336,
+                411
+              ],
+              "centroid_yx": [
+                335.51634139909874,
+                411.47712125251905
+              ],
+              "peak_offset_pixels": 0.6431999229484493,
+              "centroid_offset_pixels": 0.9222265546153698,
+              "peak_on_boundary": false,
+              "maximum_over_median": 20.301014561045363
+            }
+          }
+        },
+        {
+          "G": [
+            2,
+            -1,
+            0
+          ],
+          "nominal_yx": [
+            383.9253438817451,
+            329.2209661479386
+          ],
+          "momentum_norm": 5.108458565119042,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                383,
+                329
+              ],
+              "centroid_yx": [
+                383.284788197792,
+                329.26378826660164
+              ],
+              "peak_offset_pixels": 0.9513607822576726,
+              "centroid_offset_pixels": 0.6419854500620779,
+              "peak_on_boundary": false,
+              "maximum_over_median": 5.622042037199814
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                383,
+                329
+              ],
+              "centroid_yx": [
+                383.2564633798667,
+                329.4276257704814
+              ],
+              "peak_offset_pixels": 0.9513607822576726,
+              "centroid_offset_pixels": 0.7000780852038059,
+              "peak_on_boundary": false,
+              "maximum_over_median": 30.955861612295404
+            }
+          }
+        },
+        {
+          "G": [
+            2,
+            0,
+            0
+          ],
+          "nominal_yx": [
+            431.4121434664645,
+            246.971416578364
+          ],
+          "momentum_norm": 5.898739855431055,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                431,
+                247
+              ],
+              "centroid_yx": [
+                431.4587298211936,
+                247.43546552586903
+              ],
+              "peak_offset_pixels": 0.4131334517341767,
+              "centroid_offset_pixels": 0.466381511348245,
+              "peak_on_boundary": false,
+              "maximum_over_median": 4.760360160432811
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                431,
+                247
+              ],
+              "centroid_yx": [
+                431.4614420014932,
+                247.65996037057903
+              ],
+              "peak_offset_pixels": 0.4131334517341767,
+              "centroid_offset_pixels": 0.6903063807859728,
+              "peak_on_boundary": false,
+              "maximum_over_median": 21.33719456010332
+            }
+          }
+        }
+      ]
+    },
+    {
+      "member": "PROCESSED/PROC_800nm",
+      "baseline_OFF_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "probes": [
+        {
+          "G": [
+            -2,
+            0,
+            0
+          ],
+          "nominal_yx": [
+            52.0130490448328,
+            247.32943650975668
+          ],
+          "momentum_norm": 5.898739855431055,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                51,
+                246
+              ],
+              "centroid_yx": [
+                51.903329673704235,
+                246.57418558125443
+              ],
+              "peak_offset_pixels": 1.6714274739607025,
+              "centroid_offset_pixels": 0.7631790782014122,
+              "peak_on_boundary": false,
+              "maximum_over_median": 2.537352722212455
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                51,
+                246
+              ],
+              "centroid_yx": [
+                51.92156815047493,
+                246.4489242715151
+              ],
+              "peak_offset_pixels": 1.6714274739607025,
+              "centroid_offset_pixels": 0.8852516906087837,
+              "peak_on_boundary": false,
+              "maximum_over_median": 14.737197914174454
+            }
+          }
+        },
+        {
+          "G": [
+            -2,
+            1,
+            0
+          ],
+          "nominal_yx": [
+            99.55394834346006,
+            164.9861834870186
+          ],
+          "momentum_norm": 5.108458565119042,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                100,
+                165
+              ],
+              "centroid_yx": [
+                100.3149852917696,
+                164.8288291256284
+              ],
+              "peak_offset_pixels": 0.44626558945653244,
+              "centroid_offset_pixels": 0.7771342430628119,
+              "peak_on_boundary": false,
+              "maximum_over_median": 4.860987370789522
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                100,
+                165
+              ],
+              "centroid_yx": [
+                100.30614256515585,
+                164.7419716053188
+              ],
+              "peak_offset_pixels": 0.44626558945653244,
+              "centroid_offset_pixels": 0.7908448585632214,
+              "peak_on_boundary": false,
+              "maximum_over_median": 26.294996972555722
+            }
+          }
+        },
+        {
+          "G": [
+            -2,
+            2,
+            0
+          ],
+          "nominal_yx": [
+            147.0948476420873,
+            82.64293046428051
+          ],
+          "momentum_norm": 5.898739855431061,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                148,
+                83
+              ],
+              "centroid_yx": [
+                147.49852194057627,
+                82.9038079875754
+              ],
+              "peak_offset_pixels": 0.9730361989021006,
+              "centroid_offset_pixels": 0.48063501892916277,
+              "peak_on_boundary": false,
+              "maximum_over_median": 2.454094117027939
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                148,
+                83
+              ],
+              "centroid_yx": [
+                147.63754695402773,
+                82.77342254181255
+              ],
+              "peak_offset_pixels": 0.9730361989021006,
+              "centroid_offset_pixels": 0.5581672916601599,
+              "peak_on_boundary": false,
+              "maximum_over_median": 12.428523403108878
+            }
+          }
+        },
+        {
+          "G": [
+            -1,
+            -1,
+            0
+          ],
+          "nominal_yx": [
+            99.55394834346004,
+            329.6726895324948
+          ],
+          "momentum_norm": 5.108458565119042,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                100,
+                329
+              ],
+              "centroid_yx": [
+                99.74008313088818,
+                328.9884693812372
+              ],
+              "peak_offset_pixels": 0.8071389517487919,
+              "centroid_offset_pixels": 0.7090862955084393,
+              "peak_on_boundary": false,
+              "maximum_over_median": 4.5018150099302074
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                100,
+                329
+              ],
+              "centroid_yx": [
+                99.66156612353406,
+                328.8274531074892
+              ],
+              "peak_offset_pixels": 0.8071389517487919,
+              "centroid_offset_pixels": 0.8520599748517398,
+              "peak_on_boundary": false,
+              "maximum_over_median": 25.21134008469423
+            }
+          }
+        },
+        {
+          "G": [
+            -1,
+            0,
+            0
+          ],
+          "nominal_yx": [
+            147.0948476420873,
+            247.3294365097567
+          ],
+          "momentum_norm": 2.9493699277155274,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                148,
+                246
+              ],
+              "centroid_yx": [
+                147.44575062278977,
+                246.8116062797506
+              ],
+              "peak_offset_pixels": 1.6083227986038757,
+              "centroid_offset_pixels": 0.6255246189991625,
+              "peak_on_boundary": false,
+              "maximum_over_median": 5.694812610152481
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                148,
+                246
+              ],
+              "centroid_yx": [
+                147.46154988899676,
+                246.78524967765566
+              ],
+              "peak_offset_pixels": 1.6083227986038757,
+              "centroid_offset_pixels": 0.6562086909822334,
+              "peak_on_boundary": false,
+              "maximum_over_median": 26.5395707284099
+            }
+          }
+        },
+        {
+          "G": [
+            -1,
+            1,
+            0
+          ],
+          "nominal_yx": [
+            194.63574694071454,
+            164.9861834870186
+          ],
+          "momentum_norm": 2.9493699277155305,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                195,
+                165
+              ],
+              "centroid_yx": [
+                195.2602170095845,
+                165.34029073313073
+              ],
+              "peak_offset_pixels": 0.3645150027499308,
+              "centroid_offset_pixels": 0.7178821690664602,
+              "peak_on_boundary": false,
+              "maximum_over_median": 6.243836528879749
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                195,
+                165
+              ],
+              "centroid_yx": [
+                195.2820456172882,
+                165.35907953254625
+              ],
+              "peak_offset_pixels": 0.3645150027499308,
+              "centroid_offset_pixels": 0.7461591251944948,
+              "peak_on_boundary": false,
+              "maximum_over_median": 28.255727218667552
+            }
+          }
+        },
+        {
+          "G": [
+            -1,
+            2,
+            0
+          ],
+          "nominal_yx": [
+            242.17664623934178,
+            82.64293046428054
+          ],
+          "momentum_norm": 5.108458565119046,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                243,
+                84
+              ],
+              "centroid_yx": [
+                242.68537920462447,
+                83.64289017416235
+              ],
+              "peak_offset_pixels": 1.5873087727244088,
+              "centroid_offset_pixels": 1.1219307694114757,
+              "peak_on_boundary": false,
+              "maximum_over_median": 4.841245035565153
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                243,
+                84
+              ],
+              "centroid_yx": [
+                242.79513994564527,
+                83.64062355612374
+              ],
+              "peak_offset_pixels": 1.5873087727244088,
+              "centroid_offset_pixels": 1.173850914830621,
+              "peak_on_boundary": false,
+              "maximum_over_median": 27.25206870474031
+            }
+          }
+        },
+        {
+          "G": [
+            0,
+            -2,
+            0
+          ],
+          "nominal_yx": [
+            147.0948476420873,
+            412.01594255523287
+          ],
+          "momentum_norm": 5.89873985543106,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                146,
+                412
+              ],
+              "centroid_yx": [
+                146.532651553837,
+                411.548240051144
+              ],
+              "peak_offset_pixels": 1.0949637091938154,
+              "centroid_offset_pixels": 0.7313070996338991,
+              "peak_on_boundary": false,
+              "maximum_over_median": 2.6700751451389526
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                146,
+                412
+              ],
+              "centroid_yx": [
+                146.42520641822472,
+                411.4434489512656
+              ],
+              "peak_offset_pixels": 1.0949637091938154,
+              "centroid_offset_pixels": 0.8810041403305575,
+              "peak_on_boundary": false,
+              "maximum_over_median": 14.79228915993318
+            }
+          }
+        },
+        {
+          "G": [
+            0,
+            -1,
+            0
+          ],
+          "nominal_yx": [
+            194.63574694071454,
+            329.6726895324948
+          ],
+          "momentum_norm": 2.94936992771553,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                194,
+                329
+              ],
+              "centroid_yx": [
+                194.52266962441513,
+                329.16942058867795
+              ],
+              "peak_offset_pixels": 0.925573000770868,
+              "centroid_offset_pixels": 0.5158159645377582,
+              "peak_on_boundary": false,
+              "maximum_over_median": 6.50129995365347
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                194,
+                329
+              ],
+              "centroid_yx": [
+                194.50085927918488,
+                329.1227729144319
+              ],
+              "peak_offset_pixels": 0.925573000770868,
+              "centroid_offset_pixels": 0.5662181276281281,
+              "peak_on_boundary": false,
+              "maximum_over_median": 29.10127297952371
+            }
+          }
+        },
+        {
+          "G": [
+            0,
+            1,
+            0
+          ],
+          "nominal_yx": [
+            289.71754553796904,
+            164.98618348701862
+          ],
+          "momentum_norm": 2.94936992771553,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                290,
+                166
+              ],
+              "centroid_yx": [
+                289.9796417352612,
+                165.66437271346305
+              ],
+              "peak_offset_pixels": 1.0524278811942023,
+              "centroid_offset_pixels": 0.7270729285981683,
+              "peak_on_boundary": false,
+              "maximum_over_median": 6.311004757245346
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                290,
+                166
+              ],
+              "centroid_yx": [
+                289.985472878262,
+                165.69349485555705
+              ],
+              "peak_offset_pixels": 1.0524278811942023,
+              "centroid_offset_pixels": 0.7563560218178691,
+              "peak_on_boundary": false,
+              "maximum_over_median": 30.188769412873445
+            }
+          }
+        },
+        {
+          "G": [
+            0,
+            2,
+            0
+          ],
+          "nominal_yx": [
+            337.25844483659625,
+            82.64293046428054
+          ],
+          "momentum_norm": 5.89873985543106,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                339,
+                83
+              ],
+              "centroid_yx": [
+                337.82625015761096,
+                83.28223564496427
+              ],
+              "peak_offset_pixels": 1.7777831815261271,
+              "centroid_offset_pixels": 0.8550520432240791,
+              "peak_on_boundary": false,
+              "maximum_over_median": 2.659530745199587
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                339,
+                83
+              ],
+              "centroid_yx": [
+                338.0417337061993,
+                83.34152095280106
+              ],
+              "peak_offset_pixels": 1.7777831815261271,
+              "centroid_offset_pixels": 1.0495571084487745,
+              "peak_on_boundary": false,
+              "maximum_over_median": 13.948579949945746
+            }
+          }
+        },
+        {
+          "G": [
+            1,
+            -2,
+            0
+          ],
+          "nominal_yx": [
+            242.17664623934178,
+            412.01594255523287
+          ],
+          "momentum_norm": 5.108458565119046,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                241,
+                411
+              ],
+              "centroid_yx": [
+                241.55077693510935,
+                411.4229066166512
+              ],
+              "peak_offset_pixels": 1.554553198861409,
+              "centroid_offset_pixels": 0.8622087974672074,
+              "peak_on_boundary": false,
+              "maximum_over_median": 4.355723215850738
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                241,
+                411
+              ],
+              "centroid_yx": [
+                241.46260478300331,
+                411.42205373738466
+              ],
+              "peak_offset_pixels": 1.554553198861409,
+              "centroid_offset_pixels": 0.9287406146686484,
+              "peak_on_boundary": false,
+              "maximum_over_median": 25.372590708028966
+            }
+          }
+        },
+        {
+          "G": [
+            1,
+            -1,
+            0
+          ],
+          "nominal_yx": [
+            289.71754553796904,
+            329.6726895324948
+          ],
+          "momentum_norm": 2.9493699277155305,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                289,
+                330
+              ],
+              "centroid_yx": [
+                289.2484460408663,
+                329.60125052568685
+              ],
+              "peak_offset_pixels": 0.7886721379621248,
+              "centroid_offset_pixels": 0.4745080293058604,
+              "peak_on_boundary": false,
+              "maximum_over_median": 5.642632268044293
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                289,
+                330
+              ],
+              "centroid_yx": [
+                289.2054306981185,
+                329.5992877075318
+              ],
+              "peak_offset_pixels": 0.7886721379621248,
+              "centroid_offset_pixels": 0.517348467769109,
+              "peak_on_boundary": false,
+              "maximum_over_median": 28.4250932443848
+            }
+          }
+        },
+        {
+          "G": [
+            1,
+            0,
+            0
+          ],
+          "nominal_yx": [
+            337.25844483659625,
+            247.3294365097567
+          ],
+          "momentum_norm": 2.9493699277155274,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                337,
+                248
+              ],
+              "centroid_yx": [
+                336.9175347715227,
+                247.69630783620576
+              ],
+              "peak_offset_pixels": 0.7186439507924184,
+              "centroid_offset_pixels": 0.5008135807253521,
+              "peak_on_boundary": false,
+              "maximum_over_median": 5.599565244540386
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                337,
+                248
+              ],
+              "centroid_yx": [
+                336.91265894560206,
+                247.74766466581536
+              ],
+              "peak_offset_pixels": 0.7186439507924184,
+              "centroid_offset_pixels": 0.5426625774188554,
+              "peak_on_boundary": false,
+              "maximum_over_median": 28.133429702123617
+            }
+          }
+        },
+        {
+          "G": [
+            1,
+            1,
+            0
+          ],
+          "nominal_yx": [
+            384.7993441352235,
+            164.9861834870186
+          ],
+          "momentum_norm": 5.108458565119042,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                385,
+                166
+              ],
+              "centroid_yx": [
+                384.7769937736784,
+                165.7999736669689
+              ],
+              "peak_offset_pixels": 1.0334828000808605,
+              "centroid_offset_pixels": 0.8140970431372075,
+              "peak_on_boundary": false,
+              "maximum_over_median": 4.457594839487392
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                385,
+                166
+              ],
+              "centroid_yx": [
+                384.8224845385098,
+                165.91258543972498
+              ],
+              "peak_offset_pixels": 1.0334828000808605,
+              "centroid_offset_pixels": 0.9266909173194993,
+              "peak_on_boundary": false,
+              "maximum_over_median": 25.564038878105443
+            }
+          }
+        },
+        {
+          "G": [
+            2,
+            -2,
+            0
+          ],
+          "nominal_yx": [
+            337.25844483659625,
+            412.01594255523287
+          ],
+          "momentum_norm": 5.898739855431061,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                337,
+                413
+              ],
+              "centroid_yx": [
+                336.6362582786519,
+                412.1531863669312
+              ],
+              "peak_offset_pixels": 1.0174295003413656,
+              "centroid_offset_pixels": 0.6371436076240113,
+              "peak_on_boundary": false,
+              "maximum_over_median": 2.7084195302350897
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                337,
+                413
+              ],
+              "centroid_yx": [
+                336.5667749638419,
+                412.2048150538802
+              ],
+              "peak_offset_pixels": 1.0174295003413656,
+              "centroid_offset_pixels": 0.7169937472679305,
+              "peak_on_boundary": false,
+              "maximum_over_median": 14.013337781512737
+            }
+          }
+        },
+        {
+          "G": [
+            2,
+            -1,
+            0
+          ],
+          "nominal_yx": [
+            384.79934413522346,
+            329.6726895324948
+          ],
+          "momentum_norm": 5.108458565119042,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                384,
+                330
+              ],
+              "centroid_yx": [
+                384.21874384696224,
+                329.92195444485594
+              ],
+              "peak_offset_pixels": 0.863761071509136,
+              "centroid_offset_pixels": 0.6318462560333931,
+              "peak_on_boundary": false,
+              "maximum_over_median": 4.350299781803277
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                384,
+                330
+              ],
+              "centroid_yx": [
+                384.18403591862216,
+                329.99320949857525
+              ],
+              "peak_offset_pixels": 0.863761071509136,
+              "centroid_offset_pixels": 0.6937847289132894,
+              "peak_on_boundary": false,
+              "maximum_over_median": 23.96692074816954
+            }
+          }
+        },
+        {
+          "G": [
+            2,
+            0,
+            0
+          ],
+          "nominal_yx": [
+            432.3402434338508,
+            247.32943650975673
+          ],
+          "momentum_norm": 5.898739855431055,
+          "radii": {
+            "4": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                433,
+                249
+              ],
+              "centroid_yx": [
+                432.54204587307083,
+                247.76677430251195
+              ],
+              "peak_offset_pixels": 1.7961239104000506,
+              "centroid_offset_pixels": 0.4816519173087181,
+              "peak_on_boundary": false,
+              "maximum_over_median": 2.8096357153801024
+            },
+            "8": {
+              "status": "MEASURED_NOT_CALIBRATED",
+              "peak_yx": [
+                433,
+                249
+              ],
+              "centroid_yx": [
+                432.57964690640426,
+                247.99028826354294
+              ],
+              "peak_offset_pixels": 1.7961239104000506,
+              "centroid_offset_pixels": 0.7028791241408192,
+              "peak_on_boundary": false,
+              "maximum_over_median": 15.312219438433461
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "verification_status": "POSITION_PROBES_RECORDED",
+  "controlling_blocker": "peak_shape_background_and_geometry_uncertainty",
+  "open_blockers": [
+    "reciprocal_index_validation",
+    "detector_distortion_covariance",
+    "physical_response",
+    "UET_mapping"
+  ],
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "global_claim_promotion": false,
+  "claim_boundary": "No peak fit, image transformation, threshold tuning or holdout. Symmetry-processed Bragg agreement is not independent orientation validation.",
+  "array_export_hashes": {
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/76ec79f27836037aeac1b68854bfbf791bbff2e6256bc1f51080454d525a9a27.npy": "bca59224d8588d760b0f4f9c7af5a90c67d3aabd73d204c997e8131e4977cd27",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/119dfcf6733f29adb2fa1ea4c49c743a0df0840b6e57b9b91f38cfc4afc3859a.npy": "b1b0a5f83da8d2bd6a68528710a424cc313608d51b9867f2e53bbd5fa2e6392f",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/7942e252bc61adaffb92e580b34d2a03ee9b864c525b1eccb3e5e4a3205ac76c.npy": "bcbb75e4a3693c3cf3f519137fa3557b788edec6e8d854548cd575ed8ccfe8f8",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/5fb8eb5e5caa006c3efbe91d52f6ec6f6a749953546d6f0887f67536f18beb1c.npy": "6dfee3710d7cefd319297aeed365bf9276eeb941557db3f57d10f5fd6526f85e",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/76a1dfe0e2c8c3825c582912bae05a42b7cbdfcad5bfd46a2dab73b016f74f1c.npy": "4222ddb5dbab042c6669645cfd43a059c76e26e40b5337d227800dcb65326a55",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/8b4a00429a20b8f7b8dfa719eb016174e1b7934fa27681cab5621fcca510c552.npy": "fa9545b55dc27d5cb7edc4df3ec0049fb65438684ce977c737b3c49312038f9e",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/37047d4bfdd099026ffb09841b6b32eb6ce6d1abca0331d9a704f6bdbd1e14e5.npy": "ce02ba0b009019f65f05f298bc283399275642b6365d274f048e9015f728719f",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/5af174c20afa7986a02c0e71725cebab8360f53e90f42ddcfda791d5ec1b6074.npy": "50bfe54293a26037094cc087c749efe4d8cbddb8d931b67f579eb586c0cda2d2",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/a59f326f2380d2e8eeacd98519c18a61fadf5b95ee45e29fd33bab8416649b14.npy": "1887fc03ef92323890ddba2e7e56a03ee5da0ba85168c36cc152c8664d193fed",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/016f35314b7dd85931d9bb9aedfa93d0ca0577e6bb1008808bc7f1aac10c2d19.npy": "d5916420058d39efaafa26825257b69bfe50cd97a9f9608ab97e9d86c658f87a",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/da849c15e140b6804f2071130e8935b9abb51d8456a46f3c1969a28471e4f477.npy": "e18a743a130352978f1c6c8935edfee74258d9ed06a97ed70c24791a06bc4ae5",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/d53788431bca67423acb165356454cf8e38551e1a74564b9289190b8ba167bd4.npy": "cd8853f5748a084d4c1af666a835a7570d2d8d60842c7bb5c278b4c0a76d10bd"
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_ued_numeric_inventory_audit.json",
+      "sha256": "b5ec9fbb53c2be6c8b6628dc9561605cd1df271d94511b9be55e1d42e67baddc"
+    },
+    {
+      "path": "docs/core/artifacts/t13_ued_mask_support_audit.json",
+      "sha256": "a83e252fb0cfe08624da122051658bd7fea5d1a5a37170365b925c803e73b7a0"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_phonopy.yaml.gz",
+      "sha256": "00be787d0fbe986304ffdfa51a917b9aa0038deb6d31a563979afe42a7a2b5f8"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_multibragg_positions.py",
+      "sha256": "0b538381e0c17e3616549e20ccad8e226dd2c155c0a36969ec0131d173895a74"
+    },
+    {
+      "path": "docs/core/test/test_topic13_multibragg_positions.py",
+      "sha256": "0e251a4d24932b72b7f9cb889c3ceed8b9f50f49348f915e01f935ec91cb018e"
+    }
+  ]
+}
