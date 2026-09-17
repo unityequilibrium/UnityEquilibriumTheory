@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_gh_principal_system_formula_audit",
-  "generated_at": "2026-09-17T16:58:38.897665+00:00",
+  "generated_at": "2026-09-17T20:00:29.142476+00:00",
   "status": "PASS_SOURCE_LOCKED_GH_PRINCIPAL_FORMULAS",
   "relations": [
     {

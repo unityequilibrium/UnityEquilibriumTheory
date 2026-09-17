@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_gh_time_evolution_gate",
-  "generated_at": "2026-09-17T16:58:43.279764+00:00",
+  "generated_at": "2026-09-17T20:00:36.925858+00:00",
   "status": "PARTIAL_GH_PERIODIC_VACUUM_EVOLUTION_READY",
   "requirements": {
     "nonlinear_vacuum_rhs": "PASS",
@@ -31,11 +31,11 @@
   "evidence_artifacts": [
     {
       "path": "docs/core/07_artifacts/verification/curved_3p1_gh_time_evolution_verification.json",
-      "sha256": "0ab859462141c05fdb738c982ca6c5edcb759fcf24789cae50765944a415898d"
+      "sha256": "7484cfb634bbf168d5016364462d5e0a02aedfa2da77adb97dac0121e5e97386"
     },
     {
       "path": "docs/core/07_artifacts/correspondence/curved_3p1_gh_time_evolution_formula_audit.json",
-      "sha256": "9a3f5ce3ef3a5b6ec49894c9ad6f8d47889e07d961a3963fac25d4dc7e3cb0b0"
+      "sha256": "63ef288d7fb914eccd4295259136a806e627a6b7f01dc85f78f1d35802b5867e"
     }
   ],
   "dependency_unlocked": "constraint-preserving boundary and Topic 13 matter-wiring waves only",

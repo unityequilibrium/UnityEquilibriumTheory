@@ -162,15 +162,15 @@
   "evidence_artifacts": [
     {
       "path": "docs/core/07_artifacts/topic13/t13_uet_material_lattice_interface_contract_audit.json",
-      "sha256": "58d55e76d7292c76462510691b1b806c0ad88a21412df978ae65a95089dde057"
+      "sha256": "8ae5d76d3570031187711182c598ab1ea1d892b7bd8819c5422eabffeb8ca406"
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_covariant_field_normalization_identifiability_no_go.json",
-      "sha256": "52fd700aa1de6009f3959f220dcc3b7b3ad43556357cc54e1f08fa793f82d786"
+      "sha256": "d437bd9c9edecc4cf63f2e468b355ebebe9c5009e6d479df85ae7aa2b2bd2a49"
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_covariant_matter_coupling_normalization_no_go.json",
-      "sha256": "14e886fb0a3824f85ab35969e003f3f3d9135e898006696001a53f90c656245d"
+      "sha256": "93661180c88a069e384f9732209d8b69595b1229fbcfe886ab42b0e0919f412a"
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_uet_o2_action_thermal_observable_bridge_audit.json",
@@ -178,7 +178,7 @@
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_calorine_lattice_interface_input_boundary.json",
-      "sha256": "4ff20fcf8c7d33fe47808d9fb87045ca71a782751f6cc6667b9edca9eec22c7b"
+      "sha256": "a7092296f958f51eb8c10bb951d3fde393dfe4cf844aa3b2431c12546cecd2ed"
     }
   ],
   "dependency_unlocked": [

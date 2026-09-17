@@ -66,7 +66,7 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json",
-        "sha256": "78577cbe192cb9e68c70565284bb3f82a92941c2e2b2dc7633d5ece89492d1b7",
+        "sha256": "1c08344c75a36a00be43f582364208b9250ba6c813e5cfce7f2e6504f437bc24",
         "summary": {
           "role": "formal SK/KMS and entropy interface",
           "status": "PASS_NAMED_SK_KMS_ENTROPY_INTERFACE_CONTRACT",

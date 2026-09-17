@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "covariant_diffusive_current_verification",
-  "generated_at": "2026-09-17T16:29:09.590016+00:00",
+  "generated_at": "2026-09-17T18:10:46.856599+00:00",
   "audit_status": "PASS",
   "evidence_status": "PARTIAL",
   "claim_class": "B",
@@ -31,7 +31,7 @@
       "periodic": 2.2737367544323206e-13,
       "zero_flux": 2.2737367544323206e-13
     },
-    "functional_directional_derivative_abs_residual": 1.533485838312032e-10,
+    "functional_directional_derivative_abs_residual": 1.5334850056447635e-10,
     "matter_space_rhs_max_abs_residual": 0.0,
     "epsilon_zero_space_response_invariance_max_abs": 0.0,
     "current_reconstruction_max_abs_error": 5.551115123125783e-17,

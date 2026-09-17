@@ -40,7 +40,7 @@
   "core_program_controller": "physical_kubo_coefficient_evidence_and_curved_3p1_solver_missing",
   "environment": {
     "platform": "portable-research-runtime",
-    "python_version": "3.12"
+    "python_version": "3.14"
   },
   "evidence_status": "THERMODYNAMIC_CONSTRAINT_EXPORTS_AVAILABLE_CORE_CLOSURE_NOT_DERIVED",
   "foundation_claim_ceiling_unchanged": "C - formula/lower-bound consistency only",
@@ -173,7 +173,7 @@
       "status": "BLOCKED"
     }
   },
-  "generated_at": "2026-09-17T17:10:52+00:00",
+  "generated_at": "2026-09-17T19:02:01+00:00",
   "limitations": [
     "No Landauer, Cattaneo, thermal pilot, or core solver is rerun.",
     "The foundation gate remains WARN and exports only class-C constraints.",
@@ -245,7 +245,7 @@
       "hash_scope": "canonical_json_without_generated_at_generated_at_utc_timestamp_utc_or_environment",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json",
       "role": "Matter-space thermal control pilot",
-      "scientific_payload_sha256": "b146393242a9d06771b7590de5d15ad9b5614df74594aeec240d960032165229"
+      "scientific_payload_sha256": "3695fba2d780af4580912d89a0d45782dae91b7293c4bcf24f0d3bae44aad87c"
     },
     {
       "exists": true,

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "hyperbolic_phase_field_bridge_formula_audit",
-  "generated_at": "2026-09-17T16:29:13+00:00",
+  "generated_at": "2026-09-17T20:00:12+00:00",
   "status": "WARN",
   "topic": "docs/core UET GR non-closed response",
   "version": "wave8_v1",

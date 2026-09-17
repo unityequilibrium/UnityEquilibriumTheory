@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_active_lane_units_observable_register",
-  "generated_at": "2026-09-17",
+  "generated_at": "2026-09-18",
   "audit_status": "PASS_WITH_OPEN_LANES",
   "purpose": "make F3 units and F7 observable gaps explicit for every active research lane",
   "rule": "normalized or natural-unit results are not SI predictions without an explicit conversion, measurement operator and uncertainty contract",

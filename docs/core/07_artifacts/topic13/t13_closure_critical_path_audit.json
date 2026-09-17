@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-closure-critical-path-v1",
   "artifact": "t13_closure_critical_path_audit",
-  "generated_at": "2026-09-17T16:47:31.845920+00:00",
+  "generated_at": "2026-09-17T17:00:52.642126+00:00",
   "status": "PASS_T13_CLOSURE_CRITICAL_PATH_WITH_EXTERNAL_INPUTS",
   "major_result": {
     "major_result_id": "T13_CLOSURE_CRITICAL_PATH",
@@ -37,17 +37,17 @@
     "evidence_artifacts": [
       {
         "path": "docs/core/07_artifacts/topic13/t13_full_closure_progress.json",
-        "sha256": "b9a7cfa49ded1dcec7c9f8bf77a6a242532bc132862adbf142ed011d97102ca8",
+        "sha256": "f42fdd706e3f4dbe3c8669ecf1fa1cbe3f8d6ab7b0a7b852c15d1b5e8efd63b9",
         "present": true
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
-        "sha256": "5c0f312227080e7c84f1b8aace680446c5051bbb0e7be5d88551e0ea5b64461b",
+        "sha256": "9e2602486d9237e99c49f581d3c6d6f7c9227d116f98e934e4a70766821837d7",
         "present": true
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json",
-        "sha256": "f6ddbefc6d1e6566d20ceb0659978109cd5ba47363f689b974c7334fc8906384",
+        "sha256": "c95131cb84b9d53cd0f5fd2e4e40a3c5ab47d552499c36f5a991845b9264440a",
         "present": true
       },
       {
@@ -62,7 +62,7 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json",
-        "sha256": "7ce1d17773eedb29ffd9260fd2a04f927acb3af74384fd90d2adc2d9a57c0e2b",
+        "sha256": "778cf38d3e1f92042e7fc13ab650da3bb9fb4212b05c469767245f09f6199b63",
         "present": true
       },
       {

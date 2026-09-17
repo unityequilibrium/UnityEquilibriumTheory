@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_gh_nonlinear_vacuum_rhs_verification",
-  "generated_at": "2026-09-17T16:58:40.983034+00:00",
+  "generated_at": "2026-09-17T20:00:32.887059+00:00",
   "topic": "docs/core curved 3+1 parent",
   "status": "PASS_GH_NONLINEAR_VACUUM_RHS",
   "major_result": {
@@ -85,7 +85,7 @@
     "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92",
     "docs/scripts/audit/audit_uet_curved_3p1_gh_nonlinear_vacuum.py": "f79d0dca5ee910ee34fcc57c061e688feaca592098383429e81bd975a7881e7c",
     "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a",
-    "docs/core/07_artifacts/verification/curved_3p1_gh_principal_system_verification.json": "07c6cc69c2e5c6f00b298442dd09698fc11a4c202646b7a3703093c7d4b05afb"
+    "docs/core/07_artifacts/verification/curved_3p1_gh_principal_system_verification.json": "c9a8581972514fa312c1ec01ecbfcc168eb9942457efdf7bb14f9986544f142e"
   },
   "parameters": {
     "gamma0": 0.4,
@@ -105,16 +105,16 @@
     },
     "independent_reference_errors": {
       "metric_rhs": 0.0,
-      "pi_rhs": 1.3877787807814457e-17,
+      "pi_rhs": 2.7755575615628914e-17,
       "phi_rhs": 0.0,
-      "gauge_constraint": 2.7755575615628914e-17,
+      "gauge_constraint": 5.551115123125783e-17,
       "christoffel": 0.0
     },
     "independent_variable_grid_reference_errors": {
       "metric_rhs": 0.0,
       "pi_rhs": 5.204170427930421e-17,
       "phi_rhs": 3.469446951953614e-18,
-      "gauge_constraint": 9.71445146547012e-17,
+      "gauge_constraint": 1.1102230246251565e-16,
       "christoffel": 0.0
     },
     "point_grid_constraint_error": 0.0,
@@ -124,7 +124,7 @@
     "kinematics_errors": {
       "lapse": 1.1102230246251565e-16,
       "shift": 2.7755575615628914e-17,
-      "normal_norm": 2.220446049250313e-16
+      "normal_norm": 0.0
     }
   },
   "checks": {

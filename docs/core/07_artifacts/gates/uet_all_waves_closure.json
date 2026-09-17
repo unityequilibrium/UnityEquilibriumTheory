@@ -7,7 +7,7 @@
   "foundation_gate": {
     "path": "docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json",
     "status": "BLOCKED",
-    "sha256": "a48224efc88897b97a42ccff7c140249871cb6479747f9e45ad2f586425fd8c2",
+    "sha256": "b3e142c660c3614a5185750156565fda017c8750523a7a9727097980734f75af",
     "controller": "foundation_coverage_units_observable_and_external_claim_gates_incomplete"
   },
   "wave_count": 12,
@@ -40,14 +40,14 @@
         {
           "path": "docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json",
           "exists": true,
-          "sha256": "a48224efc88897b97a42ccff7c140249871cb6479747f9e45ad2f586425fd8c2",
+          "sha256": "b3e142c660c3614a5185750156565fda017c8750523a7a9727097980734f75af",
           "status": "BLOCKED",
           "controller": "foundation_coverage_units_observable_and_external_claim_gates_incomplete"
         },
         {
           "path": "docs/core/07_artifacts/gates/uet_foundation_equation_inventory.json",
           "exists": true,
-          "sha256": "55a759e8cf96dbb8c1d5364594151d7e6af0e27f30ce26828f8fd16c4cf32e9d",
+          "sha256": "16bdb05432a09d23c50994f2510c20565de354b23ad6647404ed805687012486",
           "status": "PASS_WITH_DISCLOSED_GAPS",
           "controller": "topic_formula_audits_not_code_complete_or_correspondence_incomplete"
         }
@@ -79,14 +79,14 @@
         {
           "path": "docs/core/07_artifacts/verification/impact_effect_legacy_wording_audit.json",
           "exists": true,
-          "sha256": "ec13504e59ff67442c93584c9aaddc4fa3ed016f4a4055c64a1743fd7f9f58ed",
+          "sha256": "9c800c81d925740417449c2575819cbfa58f9fdb11224aee0f39894672b4f9e9",
           "status": "SCOPED_DISPOSITIONS_WITH_ACTIVE_PROSE_OPEN",
           "controller": "manually review ACTIVE_PROSE_MANUAL_REVIEW occurrences; canonical and archive routes are dispositioned but remain non-promotional"
         },
         {
           "path": "docs/core/07_artifacts/provenance/uet_topic_formula_correspondence_manifest.json",
           "exists": true,
-          "sha256": "eb380b4451f3579c7d2684fb176879e3487a1aaa3eecf2ff10e4ef72777b3264",
+          "sha256": "0a6746baa91d86a8cc4080c48fe9f1861c1fdfa03331cb4bfacca9a896d2428d",
           "status": "PASS_WITH_EXPLICIT_BLOCKED_DISPOSITIONS",
           "controller": "resolve the 152 open standard-counterpart rows and replace explicit blocked operator dispositions with accepted lane-specific measurement maps; do not promote topic rows into central identities"
         }
@@ -104,14 +104,14 @@
         {
           "path": "docs/core/07_artifacts/correspondence/matter_space_formula_audit.json",
           "exists": true,
-          "sha256": "1dad0545e4104530d1004b55c0ab1ddf2fc1e0b8553f5d4dcabd96a87378b18c",
+          "sha256": "d746e198389b665e31816826f006fda5eea5dfb36594baeefc9a722e553aabec",
           "status": "WARN",
           "controller": "prearrival_leakage"
         },
         {
           "path": "docs/core/07_artifacts/correspondence/o2_eos_formula_audit.json",
           "exists": true,
-          "sha256": "2a5e756443481ede26a87137b808160da5c6aef45d8c04fffff7e327d94c044d",
+          "sha256": "4f785a34496052d368980d64674c53de86cde3fab2c148024e98328c996f63e0",
           "status": "WARN",
           "controller": "not_declared"
         }
@@ -143,28 +143,28 @@
         {
           "path": "docs/core/07_artifacts/archive/matter_space_finite_cone_shared_ledger_integration.json",
           "exists": true,
-          "sha256": "337c78f867e30b79019f021d9dfe40b4fd0941bfc5495589e506d2aae9b4e62f",
+          "sha256": "60239b18bb55aa2c1b859beb171224708a1babbde73b27c6376e8bd4a8895f4a",
           "status": "PASS_NORMALIZED_SHARED_LEDGER_WITH_OPEN_UNITS_AND_FULL_CANDIDATE_BLOCKED",
           "controller": "derive a dimensional lane and close the full-candidate causal discretization separately without clipping or cone padding"
         },
         {
           "path": "docs/core/07_artifacts/archive/matter_space_causal_lane_comparison.json",
           "exists": true,
-          "sha256": "8b703d1f1e447ec02ad5b3216f0c97624dcf1052252c23dce249b6742338d44d",
+          "sha256": "5447c0b0ce78482fdf56817936becee838e11a6e4d1397f25fb35eb908c2d7b4",
           "status": "BLOCKED",
           "controller": "construct a characteristic/staggered or otherwise causal discrete integrator and rerun pre-arrival leakage without cone padding or clipping"
         },
         {
           "path": "docs/core/07_artifacts/verification/matter_space_causal_reference_verification.json",
           "exists": true,
-          "sha256": "e5b47d45135910986c3e9440f6715f676dd5e5debbc356dac614017f617ac5ee",
+          "sha256": "7aecc5f93906d5c56799c82a68fed5362bf0d71ad9b35efdfe039017a7324d7a",
           "status": "PASS",
           "controller": "not_declared"
         },
         {
           "path": "docs/core/07_artifacts/gates/matter_space_dependency_gate.json",
           "exists": true,
-          "sha256": "94e83e638a86e097e4eb5c5608ee38d601d60506464984ce0f7f1c558acff6f9",
+          "sha256": "762932e5f7a20a844d7643d2bba8e586885ddff7bf6ebe71c4f8d2048b09317e",
           "status": "BLOCKED",
           "controller": "prearrival_leakage"
         },
@@ -203,7 +203,7 @@
         {
           "path": "docs/core/07_artifacts/gates/matter_space_research_program_gate.json",
           "exists": true,
-          "sha256": "d2248626054f809a7f06b5005328c3b3720ddcb756874141a08619f4df7386db",
+          "sha256": "d4ea426dfbcf5d675d015c99854ae4b5019fb4bd72885cc6d1eba6db24b4e659",
           "status": "BLOCKED",
           "controller": "core_prearrival_leakage"
         },
@@ -228,21 +228,21 @@
         {
           "path": "docs/core/07_artifacts/archive/matter_space_phase_pilot.json",
           "exists": true,
-          "sha256": "5ead7ba2c9e7395042a2f57f4003a3d708aaaa465e4e4527a97d1691076b225d",
+          "sha256": "0dedd335ecc324acd8881a7831d3b29fcafe81bd3da8a4b16106fa8967c9d278",
           "status": "INTERNAL_DIAGNOSTIC",
           "controller": "repair inherited causal-support discretization and separately execute Topic 0.11 replicate/temporal acquisition"
         },
         {
           "path": "docs/core/07_artifacts/archive/matter_space_topic_pilot_sync.json",
           "exists": true,
-          "sha256": "fd072cd000b4dd735e86a080ac3730a9c81dbb9045fb72de659e62ac73fe50ee",
+          "sha256": "12ce434e203cd41ef5819a0ef8567e2eb81966cc7bcd508627e5f5513e39d53b",
           "status": "PASS_WITH_INHERITED_BLOCKERS",
           "controller": "0.11 finite-size replication executed but grid/seed robustness is blocked; 0.13 remains simulation-only; close SI observable mapping and external-data gates before validation claims"
         },
         {
           "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_matter_space_phase_coupling_diagnostic.json",
           "exists": true,
-          "sha256": "fd3b1eb06b9069ccc20cce45c4036fc99ee9f41c48cb212247d4f406cf22ad73",
+          "sha256": "d464d78aa6b3008d947d7198fead7a6711932762b818c9ff812fc64963268d8a",
           "status": "INTERNAL_DIAGNOSTIC",
           "controller": "repair inherited causal-support discretization and separately execute Topic 0.11 replicate/temporal acquisition"
         },
@@ -263,7 +263,7 @@
         {
           "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_noether_phase_field_dependency_gate.json",
           "exists": true,
-          "sha256": "a2744da85168c5e25f1b4c4cef3dfb1897fa8e689482a6c445b44323449bf70a",
+          "sha256": "9d5731fe679bccc4d79295035ee0508a90254c3d6e76f82906c47aa4a7fad216",
           "status": "BLOCKED",
           "controller": "topic_0_11_signed_noether_charge_eos_transport_matching_missing"
         }
@@ -281,14 +281,14 @@
         {
           "path": "docs/core/07_artifacts/archive/matter_space_topic_pilot_sync.json",
           "exists": true,
-          "sha256": "fd072cd000b4dd735e86a080ac3730a9c81dbb9045fb72de659e62ac73fe50ee",
+          "sha256": "12ce434e203cd41ef5819a0ef8567e2eb81966cc7bcd508627e5f5513e39d53b",
           "status": "PASS_WITH_INHERITED_BLOCKERS",
           "controller": "0.11 finite-size replication executed but grid/seed robustness is blocked; 0.13 remains simulation-only; close SI observable mapping and external-data gates before validation claims"
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json",
           "exists": true,
-          "sha256": "544708b2992a51e461f3149c188e9285f1e4bc864621534ceb64349d73efe375",
+          "sha256": "8ba9e888cd7826c746b608ba715b6569f03950141b8503c1a3bebe102f8d8dbe",
           "status": "SIMULATION_ONLY",
           "controller": "core_prearrival_leakage"
         },
@@ -309,7 +309,7 @@
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_observable_map_readiness.json",
           "exists": true,
-          "sha256": "92acecb72de07b0127edebd97caea71304f03b0343668c9775c3a3565a3941a8",
+          "sha256": "46d4e20b299094c26ea17ea4258b018dbb0f45cf283b53f46f14c7ba9724631c",
           "status": "PASS_WITH_BLOCKED_DIMENSIONAL_AND_DATA_LANES",
           "controller": "not_declared"
         }
@@ -327,17 +327,17 @@
         {
           "path": "docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json",
           "exists": true,
-          "sha256": "3e1e0afbd7eb5d883fcf8026fe4bb51a9a536db16d9c118b56b0c06daa2b75a9"
+          "sha256": "ccd5244ad34b2def3a2e27ed0e2bf7f97cb0dbb2d2e77a893c441fcd7deef3a5"
         },
         {
           "path": "docs/core/07_artifacts/correspondence/o2_eos_formula_audit.json",
           "exists": true,
-          "sha256": "2a5e756443481ede26a87137b808160da5c6aef45d8c04fffff7e327d94c044d"
+          "sha256": "4f785a34496052d368980d64674c53de86cde3fab2c148024e98328c996f63e0"
         },
         {
           "path": "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json",
           "exists": true,
-          "sha256": "bfd10d344ed36394da1a256e1453fdc020f4d426a806aafa4523f5d60e3bc0ee"
+          "sha256": "0703f321daf8b6257a32772b97fd9e6181dd2ce9d907d1cb6d8ec216cff8eaf8"
         }
       ]
     },
@@ -353,27 +353,27 @@
         {
           "path": "docs/core/07_artifacts/verification/impact_effect_core_verification.json",
           "exists": true,
-          "sha256": "b1e9ce9f5cd503586f4b5ed0b6381ead7a2125184ffc6241339d82ad690e7a6f"
+          "sha256": "657e3d2f9dffc46d5e303726782b60aa8cc1ee3b3bf5df80cd90dcd3300bd35b"
         },
         {
           "path": "docs/core/07_artifacts/gates/impact_effect_dependency_gate.json",
           "exists": true,
-          "sha256": "e245f6a1bf5191774b59b53e7fcb09583feaa999a34ad04d72767b6cc423ec6b"
+          "sha256": "e2adab76a8687d73b23e7c587932f2d60e31a1910276ceb2d6779ca28adf59dc"
         },
         {
           "path": "docs/core/07_artifacts/archive/carrier_neutral_comparator_contract.json",
           "exists": true,
-          "sha256": "90d9b5b2f11eadb493e0d362af5aaab0a9cf8e1fbc11654aec925ae22a040a1e"
+          "sha256": "9d1ca3840f2d0d138e4521383ec895661c5329830bad0e42f2fc2a448c7da29f"
         },
         {
           "path": "docs/core/07_artifacts/archive/carrier_observer_thought_experiment.json",
           "exists": true,
-          "sha256": "f54869317aaa15c70d6172ae34d3947dcdff5932981c1a642748f3e2f5f7b2e9"
+          "sha256": "1315eae2f9c66fb25affef122cae181de76d7ef3f875d66a979a2ba8cb382cc5"
         },
         {
           "path": "docs/core/07_artifacts/verification/photon_observer_baseline_verification.json",
           "exists": true,
-          "sha256": "94a441560e4f9cad930c8b09fb3cba904acc99dc67c5fab0ea1f077607fb0f99"
+          "sha256": "9615c83359dd57e6c9c7cc0994095736aca56b0d6dd2e5fe4b1be62e8000eda1"
         }
       ]
     },
@@ -389,12 +389,12 @@
         {
           "path": "docs/core/07_artifacts/gates/orbit_cosmology_correspondence_gate.json",
           "exists": true,
-          "sha256": "10221ec591ca13d424a903711751aac5ff90d50cc3a85661207f3fc12f5264bc"
+          "sha256": "3c753dcbe797b5bb18f826975fff0d1bfd3e5eba36d342557036bef4b6b75d74"
         },
         {
           "path": "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json",
           "exists": true,
-          "sha256": "9ae835cee2c87169bff498e348d048eb879b0f0098ff228bed5e71306a46eae1"
+          "sha256": "9163a9ce35b6e0c4f5306306498d424d60eec810fd92e35a0bbce68d25db8d04"
         }
       ]
     },
@@ -431,7 +431,7 @@
         {
           "path": "docs/core/07_artifacts/gates/particle_dirac_program_gate.json",
           "exists": true,
-          "sha256": "e0d1f33cd85443537a0cf81ae1e7d1764aee4e611f7d0fce8c72a50ba1579a7b"
+          "sha256": "ea0b3f02aaa455c26f2b1a823d2ea9ff0342e5d0beb8771cada0bb0fb8917502"
         }
       ]
     }

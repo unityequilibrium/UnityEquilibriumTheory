@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "covariant_diffusion_formula_audit",
-  "generated_at": "2026-09-17T16:29:09.590016+00:00",
+  "generated_at": "2026-09-17T18:10:46.856599+00:00",
   "status": "WARN",
   "implementation_status": "PRESENT",
   "derivation_status": "constitutive current reduction with exact discrete identities; microscopic and full hyperbolic phase-field derivations remain open",

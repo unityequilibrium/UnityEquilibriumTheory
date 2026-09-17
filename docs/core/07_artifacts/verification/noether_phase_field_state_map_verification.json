@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "noether_phase_field_state_map_verification",
-  "generated_at": "2026-09-17T16:41:53+00:00",
+  "generated_at": "2026-09-17T20:04:55+00:00",
   "topic": "docs/core UET GR non-closed response",
   "version": "wave9_v1",
   "benchmark_role": "analytic_state_map_gate",
@@ -170,7 +170,7 @@
     "docs\\data\\external\\condensed_matter\\phase_transitions\\hohenberg_halperin_1977\\source_record.json": "06cb9de42e6ccfc959ed38abb205513ed2cf3b768afd3c638887bf4abae829da",
     "docs\\data\\external\\condensed_matter\\phase_transitions\\hyperbolic_cahn_hilliard\\dhaouadi_dumbser_gavrilyuk_2025\\source_record.json": "8751305c6296e3fa70f12dc9723e174e56710296d42298dcf0e2f3ccfe09e574",
     "docs\\data\\external\\relativistic_transport\\jain_kovtun_2024\\source_record.json": "90c8c7dfe8256da2b1dbe6631d189470800ea8ed7eec228fc9bedf49dd39dbc7",
-    "docs\\core\\07_artifacts\\verification\\hyperbolic_phase_field_causal_feasibility.json": "a52fbe07fea223bd4031f2ddc49abec85fde37fb903297866c5c6b12119f069f"
+    "docs\\core\\07_artifacts\\verification\\hyperbolic_phase_field_causal_feasibility.json": "f274bac4da49e11f015dcc1bdf39a19019c9809a288d316d4c12d39be974bbe6"
   },
   "input_identity": {
     "upstream_feasibility_artifact": "docs\\core\\07_artifacts\\verification\\hyperbolic_phase_field_causal_feasibility.json",

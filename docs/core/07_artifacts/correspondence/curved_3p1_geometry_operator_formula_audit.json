@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_geometry_operator_formula_audit",
-  "generated_at": "2026-09-17T16:58:30.598861+00:00",
+  "generated_at": "2026-09-17T20:00:23.936678+00:00",
   "topic": "docs/core curved 3+1 parent",
   "version": "periodic-geometry-operator-v1",
   "benchmark_role": "formula and unit audit",

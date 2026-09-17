@@ -1,7 +1,7 @@
 {
   "schema_version": "curved-3p1-topic13-matter-formula-audit-v1",
   "artifact": "curved_3p1_topic13_matter_wiring_formula_audit",
-  "generated_at": "2026-09-17T16:59:11.655367+00:00",
+  "generated_at": "2026-09-17T20:01:13.302718+00:00",
   "status": "PASS_SOURCE_LOCKED_TOPIC13_MATTER_FORMULAS",
   "relations": [
     {

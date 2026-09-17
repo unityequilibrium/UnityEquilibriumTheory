@@ -168,7 +168,7 @@
   "evidence_artifacts": [
     {
       "path": "docs/core/07_artifacts/topic13/t13_scalar_thermoelastic_response_bridge_audit.json",
-      "sha256": "881e93f940f23f84ce4da7e7e66b14b86394f2da0b88006369b7b493ca2cac66"
+      "sha256": "e12a0d7502da49a727b141d240e4457442568847b558eeae0e99e72f198b55fa"
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_graphite_elastic_bulk_modulus_source_audit.json",

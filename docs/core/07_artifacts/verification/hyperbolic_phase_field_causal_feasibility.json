@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "hyperbolic_phase_field_causal_feasibility",
-  "generated_at": "2026-09-17T16:29:13+00:00",
+  "generated_at": "2026-09-17T20:00:12+00:00",
   "topic": "docs/core UET GR non-closed response",
   "version": "wave8_v1",
   "benchmark_role": "analytic_gate",
@@ -82,7 +82,7 @@
   "numeric": {
     "random_feasible_cases": 64,
     "maximum_dense_speed_residual": 0.0,
-    "maximum_interior_speed_to_cone_ratio": 0.9759000729485333,
+    "maximum_interior_speed_to_cone_ratio": 0.975900072948533,
     "all_negative_controls_rejected": true,
     "boundary_saturation": {
       "minimum_shifted_curvature": 0.5,
@@ -116,16 +116,16 @@
         40.0
       ],
       "tau_values": [
-        0.04000000000000001,
-        0.010000000000000002,
-        0.0025000000000000005,
-        0.0006250000000000001
+        0.04,
+        0.01,
+        0.0025,
+        0.000625
       ],
       "beta_values": [
-        0.04000000000000001,
-        0.010000000000000002,
-        0.0025000000000000005,
-        0.0006250000000000001
+        0.04,
+        0.01,
+        0.0025,
+        0.000625
       ],
       "gamma_values": [
         0.2,
@@ -148,22 +148,22 @@
         0.025
       ],
       "matter_characteristic_speeds": [
-        14.737282653189494,
-        36.99662146737185,
-        97.33961166965892,
-        264.3860813280457
+        14.7372826531895,
+        36.9966214673719,
+        97.3396116696589,
+        264.386081328046
       ],
       "auxiliary_characteristic_speeds": [
-        2.2360679774997894,
-        3.162277660168379,
-        4.472135954999579,
-        6.324555320336758
+        2.23606797749979,
+        3.16227766016838,
+        4.47213595499958,
+        6.32455532033676
       ],
       "maximum_characteristic_speeds": [
-        14.737282653189494,
-        36.99662146737185,
-        97.33961166965892,
-        264.3860813280457
+        14.7372826531895,
+        36.9966214673719,
+        97.3396116696589,
+        264.386081328046
       ],
       "strict_hyperbolicity": [
         true,
@@ -191,16 +191,16 @@
       ],
       "all_feasible": false,
       "tau_violation_factors": [
-        217.18749999999997,
-        1368.7499999999998,
-        9474.999999999998,
-        69899.99999999999
+        217.1875,
+        1368.75,
+        9475.0,
+        69900.0
       ],
       "beta_violation_factors": [
-        4.999999999999999,
-        9.999999999999998,
-        19.999999999999996,
-        39.99999999999999
+        5.0,
+        10.0,
+        20.0,
+        40.0
       ]
     },
     "generic_parabolic_probe": {
@@ -249,11 +249,11 @@
         0.0009765625
       ],
       "matter_characteristic_speeds": [
-        5.545268253204709,
-        17.74823934929885,
-        65.81793068761733,
-        257.83715791173313,
-        1025.8420931118005
+        5.54526825320471,
+        17.7482393492988,
+        65.8179306876173,
+        257.837157911733,
+        1025.8420931118
       ],
       "auxiliary_characteristic_speeds": [
         2.0,
@@ -263,11 +263,11 @@
         32.0
       ],
       "maximum_characteristic_speeds": [
-        5.545268253204709,
-        17.74823934929885,
-        65.81793068761733,
-        257.83715791173313,
-        1025.8420931118005
+        5.54526825320471,
+        17.7482393492988,
+        65.8179306876173,
+        257.837157911733,
+        1025.8420931118
       ],
       "strict_hyperbolicity": [
         true,
@@ -321,10 +321,10 @@
         512.0
       ],
       "relative_chemical_errors": [
-        0.04390706701977322,
-        0.012188348089927728,
-        0.003133783574217406,
-        0.0007890620983941193
+        0.0439070670197732,
+        0.0121883480899277,
+        0.00313378357421741,
+        0.000789062098394119
       ],
       "minimum_causal_tau_values": [
         11.6875,
@@ -336,7 +336,7 @@
       "minimum_causal_tau_strictly_increases": true,
       "interpretation": "better quasistatic Cahn-Hilliard chemical accuracy requires larger alpha while the fixed-cone tau lower bound grows"
     },
-    "local_current_map_max_abs_residual": 1.3322676295501878e-15
+    "local_current_map_max_abs_residual": 1.33226762955019e-15
   },
   "achieved_gates": {
     "external_source_provenance": "PASS",

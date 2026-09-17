@@ -1,7 +1,7 @@
 {
   "schema_version": "curved-3p1-topic13-matter-gate-v1",
   "artifact": "curved_3p1_topic13_matter_wiring_gate",
-  "generated_at": "2026-09-17T16:59:11.655367+00:00",
+  "generated_at": "2026-09-17T20:01:13.302718+00:00",
   "status": "PARTIAL_CURVED_3P1_PRESCRIBED_MATTER_SOURCE_READY",
   "requirements": {
     "topic13_core_handoff": "PASS",
@@ -46,6 +46,6 @@
   "controlling_blocker": "curved_3p1_self_consistent_matter_evolution_and_constraint_preserving_boundaries_open",
   "claim_promotion": false,
   "claim_boundary": "prescribed lane-specific stress-energy construction and projection only; not a self-consistent matter-coupled spacetime solution, Einstein-equation derivation, Gravity validation, or global UET closure",
-  "verification_sha256": "30b55e204e5b9d72fe7db939d3717cb16a6b65ef307a541b581e38e669a273bb",
-  "formula_sha256": "80176010f5095e1b0329bb5dce805107db7f5b9955deb0bdb6c76aa8927ca07a"
+  "verification_sha256": "1140bd87632f432d33bb31e0e1fe04c83a2cd3de9044153bfa5b28e5acc247d1",
+  "formula_sha256": "fcfd4cfbf5f58c7e0d05ec9cbd8e3f80fb7d709bc38ed5644382b41d492dda67"
 }

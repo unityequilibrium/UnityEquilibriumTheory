@@ -96,7 +96,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/topic13/t13_scalar_thermoelastic_response_bridge_audit.json",
-          "sha256": "c7147054173e2018d05fb33ee6567c4e0e9f9cf183b87b96ffd71bd4530d5e1c"
+          "sha256": "e11b0a366d7c0970a577ec8b6afde5598e7238598805825437757f851dfca18a"
         }
       ],
       "downstream_dependencies": [

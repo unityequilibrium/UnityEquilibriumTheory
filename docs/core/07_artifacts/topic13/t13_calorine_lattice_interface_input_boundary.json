@@ -118,11 +118,11 @@
   "evidence_artifacts": [
     {
       "path": "docs/core/07_artifacts/topic13/t13_lattice_momentum_relaxing_heat_parent_audit.json",
-      "sha256": "b72c4715ca747fb53ddd3a37658b39e1fcf1430630185e68293c278ad169f80a"
+      "sha256": "904c32edff8831e2dbeefe57b5d32777d05020ad7269599c207d562439a8d0e1"
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_continuum_action_umklapp_direct_route_no_go.json",
-      "sha256": "739581d3ccf6889b195e34484d3030f20c33b918fadc0997989ee2812aa3f8b3"
+      "sha256": "a6f370bd952df65876622bdc1acdca6485e48bfb6ccd4acd1d16b4614f187462"
     }
   ],
   "dependency_unlocked": [

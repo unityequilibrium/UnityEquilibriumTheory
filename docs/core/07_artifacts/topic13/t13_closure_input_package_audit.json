@@ -84,12 +84,12 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json",
-        "sha256": "53d2821aeba92fe5453dfbf6b891ca340291b4559e7e65525d4752c387c8e123",
+        "sha256": "1c47f402f0f1a5473c6f9af47177389e9c4ceceb0e1cfbc8a0f336700bddd15d",
         "role": "input-package acceptance evidence"
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json",
-        "sha256": "7ce1d17773eedb29ffd9260fd2a04f927acb3af74384fd90d2adc2d9a57c0e2b",
+        "sha256": "778cf38d3e1f92042e7fc13ab650da3bb9fb4212b05c469767245f09f6199b63",
         "role": "input-package acceptance evidence"
       },
       {
@@ -104,7 +104,7 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json",
-        "sha256": "b9cd8b98280fa4b97de641141f63a49e37e6c0628b31fb659a56cd9d9ada2ec0",
+        "sha256": "324571d831743cb182d8aaae162d94f6498dde545d7963c379de003ba46a4eab",
         "role": "input-package acceptance evidence"
       },
       {
@@ -124,12 +124,12 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_candidate_core_compatibility_audit.json",
-        "sha256": "38f5be27a97143862570b6b0e7eb3b93aa3564e57b84c09e138060146dae1208",
+        "sha256": "91cd2010a1d4a4355896a08804985b224d345b6125aacc32eec904b67ded433e",
         "role": "input-package acceptance evidence"
       },
       {
         "path": "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json",
-        "sha256": "bfd10d344ed36394da1a256e1453fdc020f4d426a806aafa4523f5d60e3bc0ee",
+        "sha256": "0703f321daf8b6257a32772b97fd9e6181dd2ce9d907d1cb6d8ec216cff8eaf8",
         "role": "input-package acceptance evidence"
       },
       {
@@ -139,7 +139,7 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json",
-        "sha256": "442bf7fc590cca3986ec8be3bb7f82736e9944afde73d243192427cd0cea45ee",
+        "sha256": "1c08344c75a36a00be43f582364208b9250ba6c813e5cfce7f2e6504f437bc24",
         "role": "input-package acceptance evidence"
       },
       {
@@ -164,7 +164,7 @@
       },
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-        "sha256": "25ea646a58e5d2a83e7c9425ee5fd46ecb3095992e68f77f120735b41a901f6d",
+        "sha256": "707fe3757d3cff312fc6b00e9b090f7e962cfbfe42ac094db8393b9640dcaed1",
         "role": "input-package acceptance evidence"
       }
     ],
@@ -366,12 +366,12 @@
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json",
-      "sha256": "53d2821aeba92fe5453dfbf6b891ca340291b4559e7e65525d4752c387c8e123",
+      "sha256": "1c47f402f0f1a5473c6f9af47177389e9c4ceceb0e1cfbc8a0f336700bddd15d",
       "role": "input-package acceptance evidence"
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json",
-      "sha256": "7ce1d17773eedb29ffd9260fd2a04f927acb3af74384fd90d2adc2d9a57c0e2b",
+      "sha256": "778cf38d3e1f92042e7fc13ab650da3bb9fb4212b05c469767245f09f6199b63",
       "role": "input-package acceptance evidence"
     },
     {
@@ -386,7 +386,7 @@
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json",
-      "sha256": "b9cd8b98280fa4b97de641141f63a49e37e6c0628b31fb659a56cd9d9ada2ec0",
+      "sha256": "324571d831743cb182d8aaae162d94f6498dde545d7963c379de003ba46a4eab",
       "role": "input-package acceptance evidence"
     },
     {
@@ -406,12 +406,12 @@
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_candidate_core_compatibility_audit.json",
-      "sha256": "38f5be27a97143862570b6b0e7eb3b93aa3564e57b84c09e138060146dae1208",
+      "sha256": "91cd2010a1d4a4355896a08804985b224d345b6125aacc32eec904b67ded433e",
       "role": "input-package acceptance evidence"
     },
     {
       "path": "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json",
-      "sha256": "bfd10d344ed36394da1a256e1453fdc020f4d426a806aafa4523f5d60e3bc0ee",
+      "sha256": "0703f321daf8b6257a32772b97fd9e6181dd2ce9d907d1cb6d8ec216cff8eaf8",
       "role": "input-package acceptance evidence"
     },
     {
@@ -421,7 +421,7 @@
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json",
-      "sha256": "442bf7fc590cca3986ec8be3bb7f82736e9944afde73d243192427cd0cea45ee",
+      "sha256": "1c08344c75a36a00be43f582364208b9250ba6c813e5cfce7f2e6504f437bc24",
       "role": "input-package acceptance evidence"
     },
     {
@@ -446,7 +446,7 @@
     },
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-      "sha256": "25ea646a58e5d2a83e7c9425ee5fd46ecb3095992e68f77f120735b41a901f6d",
+      "sha256": "707fe3757d3cff312fc6b00e9b090f7e962cfbfe42ac094db8393b9640dcaed1",
       "role": "input-package acceptance evidence"
     }
   ],

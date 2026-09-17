@@ -78,7 +78,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/topic13/t13_material_interface_factor_resolution_audit.json",
-          "sha256": "4941162fde3cfad29c6fb9870b90d9820c112248f6a85637aefa1c91b4e5e287"
+          "sha256": "711c22800d5d2c00601e86fbafbb6f2031bc2e64f437ee574d7386b00a9cf864"
         }
       ],
       "downstream_dependencies": [

@@ -34,7 +34,7 @@
     "evidence_artifacts": [
       {
         "path": "docs/core/07_artifacts/archive/uet_active_lane_units_observable_register.json",
-        "sha256": "eea8cba09f65c341f5c28a20b3f55eabdeed6c04a1abfe9fb85f0eb4a72784d6"
+        "sha256": "6188e1c5e4f8239d55cf8e12f29ec102fd2a7c2fdc6e1fdef99d682b609a5536"
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_energy_response_bridge_audit.json",

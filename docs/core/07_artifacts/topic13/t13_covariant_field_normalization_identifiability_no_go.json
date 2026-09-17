@@ -47,11 +47,11 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json",
-        "sha256": "7ce1d17773eedb29ffd9260fd2a04f927acb3af74384fd90d2adc2d9a57c0e2b"
+        "sha256": "7791d67fddfee351e32309f24f4e97f8f0a1b5bb4a677018702706b7b48b68f0"
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json",
-        "sha256": "53d2821aeba92fe5453dfbf6b891ca340291b4559e7e65525d4752c387c8e123"
+        "sha256": "1c47f402f0f1a5473c6f9af47177389e9c4ceceb0e1cfbc8a0f336700bddd15d"
       },
       {
         "path": "docs/core/03_lanes/thermal/thermal_energy_response_bridge.py",

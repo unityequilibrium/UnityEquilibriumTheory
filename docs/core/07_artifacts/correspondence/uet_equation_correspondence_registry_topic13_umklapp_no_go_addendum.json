@@ -70,7 +70,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/topic13/t13_continuum_action_umklapp_direct_route_no_go.json",
-          "sha256": "739581d3ccf6889b195e34484d3030f20c33b918fadc0997989ee2812aa3f8b3"
+          "sha256": "a6f370bd952df65876622bdc1acdca6485e48bfb6ccd4acd1d16b4614f187462"
         }
       ],
       "downstream_dependencies": [

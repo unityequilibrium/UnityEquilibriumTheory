@@ -216,11 +216,11 @@
   "evidence_artifacts": [
     {
       "path": "docs/core/07_artifacts/topic13/t13_calorine_lattice_interface_input_boundary.json",
-      "sha256": "4ff20fcf8c7d33fe47808d9fb87045ca71a782751f6cc6667b9edca9eec22c7b"
+      "sha256": "a7092296f958f51eb8c10bb951d3fde393dfe4cf844aa3b2431c12546cecd2ed"
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_continuum_action_umklapp_direct_route_no_go.json",
-      "sha256": "739581d3ccf6889b195e34484d3030f20c33b918fadc0997989ee2812aa3f8b3"
+      "sha256": "a6f370bd952df65876622bdc1acdca6485e48bfb6ccd4acd1d16b4614f187462"
     }
   ],
   "dependency_unlocked": [

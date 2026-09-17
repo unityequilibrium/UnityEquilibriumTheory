@@ -91,9 +91,14 @@ def _load(path: Path) -> dict[str, Any]:
 
 def _jsonable(value: Any) -> Any:
     if isinstance(value, np.ndarray):
-        return value.tolist()
+        return _jsonable(value.tolist())
     if isinstance(value, np.generic):
-        return value.item()
+        return _jsonable(value.item())
+    if isinstance(value, float):
+        # Keep generated numeric diagnostics stable across BLAS/NumPy builds.
+        # This only canonicalizes serialization; it does not alter pass/fail
+        # calculations, which are evaluated before the artifact is written.
+        return float(f"{value:.15g}")
     if isinstance(value, dict):
         return {key: _jsonable(item) for key, item in value.items()}
     if isinstance(value, (list, tuple)):
@@ -689,7 +694,12 @@ def build_artifacts() -> tuple[dict[str, Any], ...]:
     apply_latest_hyperbolic_phase_field_stage(
         OUT, verification, formula, mapping, program
     )
-    return verification, formula, mapping, program
+    # Return the exact canonical payload shape used by the JSON writer so
+    # stability tests are independent of NumPy scalar/array representations.
+    return tuple(
+        _jsonable(payload)
+        for payload in (verification, formula, mapping, program)
+    )
 
 
 def main() -> int:

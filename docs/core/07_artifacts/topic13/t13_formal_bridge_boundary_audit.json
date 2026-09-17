@@ -38,7 +38,7 @@
     "evidence_artifacts": [
       {
         "path": "docs/core/07_artifacts/topic13/t13_beta_symbol_separation_noncircularity_audit.json",
-        "sha256": "4d0c961696d0fd8a86839df24f53cdceda8d1a86e1ea330e77f8b54bd68798ec",
+        "sha256": "8696cb7972260fbb6b8350340689857a25ab4a5f1e414f86daba4b5ae573819a",
         "summary": {
           "status": "PASS_SCOPED_NO_GO_BETA_SYMBOL_IDENTIFICATION",
           "major_result_id": "T13_BETA_SYMBOL_SEPARATION_NONCIRCULARITY_NO_GO",
@@ -47,7 +47,7 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_thermal_response_beta_contract_audit.json",
-        "sha256": "dfb4a6d846cf5e956bacc5ab184daa96a0b8c495b6215bf43408df87b2f25da4",
+        "sha256": "7387893811404e69fa5e0f8387d9da90aae8aef9922c6c08614e9950d5ab6b38",
         "summary": {
           "status": "PASS_NAMED_FINITE_TEMPERATURE_BETA_CONTRACT",
           "major_result_id": "T13_THERMAL_RESPONSE_BETA_CONTRACT",
@@ -74,7 +74,7 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_phi_e_reference_normalization_audit.json",
-        "sha256": "ea498b53c03542c9e76c1a7d3a720708f8e30121d24bba6768bf8eee27455c9b",
+        "sha256": "bcfa29d9442a6b973e12e02de69e557384076fb01ab3b67e3261a8b362ca0771",
         "summary": {
           "status": "PASS_NAMED_PHI_E_REFERENCE_NORMALIZATION",
           "major_result_id": "T13_PHI_E_REFERENCE_NORMALIZATION",
@@ -83,7 +83,7 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json",
-        "sha256": "53d2821aeba92fe5453dfbf6b891ca340291b4559e7e65525d4752c387c8e123",
+        "sha256": "9b1fe80787fbf9989c2846f7fe5d1a829d1295041bffcc4860e4ebe09b601dce",
         "summary": {
           "status": "PASS_SCOPED_NO_GO_NORMALIZED_PHI_ENERGY_ANCHOR",
           "major_result_id": "T13_PHI_ENERGY_ANCHOR_IDENTIFIABILITY_NO_GO",
@@ -92,7 +92,7 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_covariant_field_normalization_identifiability_no_go.json",
-        "sha256": "52fd700aa1de6009f3959f220dcc3b7b3ad43556357cc54e1f08fa793f82d786",
+        "sha256": "d437bd9c9edecc4cf63f2e468b355ebebe9c5009e6d479df85ae7aa2b2bd2a49",
         "summary": {
           "status": "PASS_SCOPED_NO_GO_COVARIANT_FIELD_NORMALIZATION",
           "major_result_id": "T13_COVARIANT_FIELD_NORMALIZATION_IDENTIFIABILITY_NO_GO",
@@ -101,7 +101,7 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_collective_response_eos_stability_audit.json",
-        "sha256": "3a61b1e5c517aa0d16063e1506a0e2fbe26105649a73c7527e0b54f658fdeeda",
+        "sha256": "5deda16b91ee0cd3429ae7dbd588d38ee2acda308f41f4cb4af177d9ef05aea2",
         "summary": {
           "status": "PASS_NAMED_COLLECTIVE_RESPONSE_EOS_STABILITY_CONTRACT",
           "major_result_id": "T13_COLLECTIVE_RESPONSE_EOS_STABILITY_CONTRACT",
@@ -110,7 +110,7 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json",
-        "sha256": "78577cbe192cb9e68c70565284bb3f82a92941c2e2b2dc7633d5ece89492d1b7",
+        "sha256": "22bac3ed867f71a74ba79001d153e8d108ffd3670c6d8b9e23e9f7f75a91e2f9",
         "summary": {
           "status": "PASS_NAMED_SK_KMS_ENTROPY_INTERFACE_CONTRACT",
           "major_result_id": "T13_SK_KMS_ENTROPY_INTERFACE_CONTRACT",

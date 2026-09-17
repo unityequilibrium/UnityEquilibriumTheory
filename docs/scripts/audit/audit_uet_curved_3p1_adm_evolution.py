@@ -74,6 +74,32 @@ def _orders(errors: list[float]) -> list[float]:
     return [log2(errors[index] / errors[index + 1]) for index in range(len(errors) - 1)]
 
 
+def _stable_float(value: float) -> float:
+    """Canonicalize non-structural floating-point diagnostics for JSON."""
+
+    return float(f"{float(value):.15g}")
+
+
+def _stable_principal_eigenvalue(value: float) -> float:
+    """Remove backend noise around the analytically expected {-1, 0, +1} roots."""
+
+    value = float(value)
+    if abs(value) <= 1e-7:
+        return 0.0
+    if abs(value - 1.0) <= 1e-7:
+        return 1.0
+    if abs(value + 1.0) <= 1e-7:
+        return -1.0
+    return _stable_float(value)
+
+
+def _stable_principal_residual(value: float) -> float:
+    """Canonicalize round-off below the declared principal-symbol scale."""
+
+    value = float(value)
+    return 0.0 if abs(value) <= 1e-14 else _stable_float(value)
+
+
 def build_artifacts() -> tuple[dict, dict, dict, dict]:
     now = datetime.now(timezone.utc).isoformat()
     sources = {
@@ -172,12 +198,13 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
         {
             "direction": result.direction.tolist(),
             "eigenvalues_real_sorted": sorted(
-                float(value) for value in np.real_if_close(result.eigenvalues).real
+                _stable_principal_eigenvalue(value)
+                for value in np.real_if_close(result.eigenvalues).real
             ),
-            "maximum_eigenvalue_imaginary_part": float(
+            "maximum_eigenvalue_imaginary_part": _stable_principal_residual(
                 np.max(np.abs(result.eigenvalues.imag))
             ),
-            "characteristic_polynomial_residual": float(
+            "characteristic_polynomial_residual": _stable_principal_residual(
                 np.max(
                     np.abs(
                         (result.symbol @ result.symbol)

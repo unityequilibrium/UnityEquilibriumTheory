@@ -173,7 +173,7 @@
   "evidence_artifacts": [
     {
       "path": "docs/core/07_artifacts/topic13/t13_material_interface_factor_resolution_audit.json",
-      "sha256": "4941162fde3cfad29c6fb9870b90d9820c112248f6a85637aefa1c91b4e5e287"
+      "sha256": "711c22800d5d2c00601e86fbafbb6f2031bc2e64f437ee574d7386b00a9cf864"
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
@@ -181,7 +181,7 @@
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_mp48_independent_graphite_cv_audit.json",
-      "sha256": "1232a0a014f61aa50a3e035aa03d675c36bf8afcb2d6e5fcaee32ce1901491e8"
+      "sha256": "d41455ca12b6e2bc5bcf4357e9214e37b5ab1688267a9e67c180a5c3ff4a48d7"
     }
   ],
   "dependency_unlocked": [

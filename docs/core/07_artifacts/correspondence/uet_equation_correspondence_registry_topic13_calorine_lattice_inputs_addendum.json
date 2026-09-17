@@ -72,7 +72,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/topic13/t13_calorine_lattice_interface_input_boundary.json",
-          "sha256": "4ff20fcf8c7d33fe47808d9fb87045ca71a782751f6cc6667b9edca9eec22c7b"
+          "sha256": "a7092296f958f51eb8c10bb951d3fde393dfe4cf844aa3b2431c12546cecd2ed"
         }
       ],
       "downstream_dependencies": [

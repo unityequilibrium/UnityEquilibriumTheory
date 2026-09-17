@@ -237,7 +237,7 @@
       },
       "audit_artifact": {
         "path": "docs/core/07_artifacts/topic13/t13_mp48_independent_graphite_cv_audit.json",
-        "sha256": "1232a0a014f61aa50a3e035aa03d675c36bf8afcb2d6e5fcaee32ce1901491e8",
+        "sha256": "d41455ca12b6e2bc5bcf4357e9214e37b5ab1688267a9e67c180a5c3ff4a48d7",
         "status": "PASS_INDEPENDENT_NUMERIC_CV_WITH_EPISTEMIC_ENVELOPE"
       },
       "field_checks": [
@@ -639,7 +639,7 @@
       },
       "audit_artifact": {
         "path": "docs/core/07_artifacts/topic13/t13_mp48_independent_graphite_cv_audit.json",
-        "sha256": "1232a0a014f61aa50a3e035aa03d675c36bf8afcb2d6e5fcaee32ce1901491e8",
+        "sha256": "d41455ca12b6e2bc5bcf4357e9214e37b5ab1688267a9e67c180a5c3ff4a48d7",
         "status": "PASS_INDEPENDENT_NUMERIC_CV_WITH_EPISTEMIC_ENVELOPE"
       },
       "field_checks": [

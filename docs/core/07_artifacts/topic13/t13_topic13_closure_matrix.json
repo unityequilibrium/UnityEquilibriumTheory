@@ -116,7 +116,7 @@
   ],
   "input_package_audit": {
     "path": "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json",
-    "sha256": "f6ddbefc6d1e6566d20ceb0659978109cd5ba47363f689b974c7334fc8906384",
+    "sha256": "ebb1c0d0d842d6c5239082f3a9314fe79fcadbbd83fdb1ab7468e5933633c726",
     "summary": {
       "role": "grouped Topic 13 closure-input acceptance audit",
       "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
@@ -155,7 +155,7 @@
     "evidence_artifacts": [
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-        "sha256": "11012a31273fd4dd98d7c0a5e486dfeaa1bd9f53f984d12740d572bb41103e83",
+        "sha256": "aece8eab711b4b8cd9fd2e9f4daacca71adb3bfdfb2cc32ce29bc0a1a44c8566",
         "summary": {
           "role": "canonical full Topic 13 readiness gate",
           "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
@@ -163,7 +163,7 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json",
-        "sha256": "f6ddbefc6d1e6566d20ceb0659978109cd5ba47363f689b974c7334fc8906384",
+        "sha256": "ebb1c0d0d842d6c5239082f3a9314fe79fcadbbd83fdb1ab7468e5933633c726",
         "summary": {
           "role": "grouped Topic 13 closure-input acceptance audit",
           "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
@@ -171,18 +171,18 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_causal_named_branch_core_compatibility.json",
-        "sha256": "a030e71e97307ac8e3c2247247f9509feb086a9fe4b85aa94ebefaf6257c2633",
+        "sha256": "d9d4ffdf88480f65c6b9134a5a07ca2de2925757b9afca4218cfc5231bc85d86",
         "summary": {
           "role": "gate-linked evidence",
-          "reported_sha256": "a030e71e97307ac8e3c2247247f9509feb086a9fe4b85aa94ebefaf6257c2633"
+          "reported_sha256": "d9d4ffdf88480f65c6b9134a5a07ca2de2925757b9afca4218cfc5231bc85d86"
         }
       },
       {
         "path": "docs/core/07_artifacts/archive/conserved_c_finite_cone_no_go_assessment.json",
-        "sha256": "3fa8ca757e7e4a2422888c85211d1ca48b5b3d6ce8f1a3e5be6ae114cb6684a7",
+        "sha256": "5b5a3bbf80c10561a54af64a3c79a2b5c87a3f76af2ca06fbf905dddb82646ae",
         "summary": {
           "role": "gate-linked evidence",
-          "reported_sha256": "3fa8ca757e7e4a2422888c85211d1ca48b5b3d6ce8f1a3e5be6ae114cb6684a7"
+          "reported_sha256": "5b5a3bbf80c10561a54af64a3c79a2b5c87a3f76af2ca06fbf905dddb82646ae"
         }
       },
       {
@@ -209,10 +209,10 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_covariant_matter_coupling_normalization_no_go.json",
-        "sha256": "14e886fb0a3824f85ab35969e003f3f3d9135e898006696001a53f90c656245d",
+        "sha256": "93661180c88a069e384f9732209d8b69595b1229fbcfe886ab42b0e0919f412a",
         "summary": {
           "role": "gate-linked evidence",
-          "reported_sha256": "14e886fb0a3824f85ab35969e003f3f3d9135e898006696001a53f90c656245d"
+          "reported_sha256": "93661180c88a069e384f9732209d8b69595b1229fbcfe886ab42b0e0919f412a"
         }
       },
       {
@@ -240,7 +240,7 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json",
-        "sha256": "53d2821aeba92fe5453dfbf6b891ca340291b4559e7e65525d4752c387c8e123",
+        "sha256": "9b1fe80787fbf9989c2846f7fe5d1a829d1295041bffcc4860e4ebe09b601dce",
         "summary": {
           "role": "declared Topic 13 closure-contract evidence"
         }
@@ -317,10 +317,10 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_formal_bridge_boundary_audit.json",
-        "sha256": "37a1b051a0b5439657fe696149564e4b8ea9d188707895e67cd86cdcbbe56d68",
+        "sha256": "5433b8d74aa0f9208fff3d8755d77ed0bc676054fa79eb6d71196d72984f71e1",
         "summary": {
           "role": "gate-linked evidence",
-          "reported_sha256": "37a1b051a0b5439657fe696149564e4b8ea9d188707895e67cd86cdcbbe56d68"
+          "reported_sha256": "5433b8d74aa0f9208fff3d8755d77ed0bc676054fa79eb6d71196d72984f71e1"
         }
       },
       {
@@ -341,7 +341,7 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_beta_symbol_separation_noncircularity_audit.json",
-        "sha256": "4d0c961696d0fd8a86839df24f53cdceda8d1a86e1ea330e77f8b54bd68798ec",
+        "sha256": "8696cb7972260fbb6b8350340689857a25ab4a5f1e414f86daba4b5ae573819a",
         "summary": {
           "role": "declared Topic 13 closure-contract evidence"
         }
@@ -355,25 +355,25 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_collective_response_eos_stability_audit.json",
-        "sha256": "3a61b1e5c517aa0d16063e1506a0e2fbe26105649a73c7527e0b54f658fdeeda",
+        "sha256": "5deda16b91ee0cd3429ae7dbd588d38ee2acda308f41f4cb4af177d9ef05aea2",
         "summary": {
           "role": "gate-linked evidence",
-          "reported_sha256": "3a61b1e5c517aa0d16063e1506a0e2fbe26105649a73c7527e0b54f658fdeeda"
+          "reported_sha256": "5deda16b91ee0cd3429ae7dbd588d38ee2acda308f41f4cb4af177d9ef05aea2"
         }
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_flat_thermodynamic_bridge_components_gate.json",
-        "sha256": "4b0aa2a2f20301261457a866e718b2815b01019addcb17b6174981cf5d482a0a",
+        "sha256": "9185b732cd24e94212f74fcca7231b79b0bf96394dcf65b066f55a6c1d6ea3ab",
         "summary": {
           "role": "declared Topic 13 closure-contract evidence"
         }
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json",
-        "sha256": "7ce1d17773eedb29ffd9260fd2a04f927acb3af74384fd90d2adc2d9a57c0e2b",
+        "sha256": "4bff4bda6194215752358ec06c782a518753c8e3be1a5e7e6678c76fa2d3686d",
         "summary": {
           "role": "gate-linked evidence",
-          "reported_sha256": "7ce1d17773eedb29ffd9260fd2a04f927acb3af74384fd90d2adc2d9a57c0e2b"
+          "reported_sha256": "4bff4bda6194215752358ec06c782a518753c8e3be1a5e7e6678c76fa2d3686d"
         }
       },
       {
@@ -491,7 +491,7 @@
     ],
     "input_package_audit": {
       "path": "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json",
-      "sha256": "f6ddbefc6d1e6566d20ceb0659978109cd5ba47363f689b974c7334fc8906384",
+      "sha256": "ebb1c0d0d842d6c5239082f3a9314fe79fcadbbd83fdb1ab7468e5933633c726",
       "summary": {
         "role": "grouped Topic 13 closure-input acceptance audit",
         "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
@@ -735,7 +735,7 @@
     "evidence_artifacts": [
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-        "sha256": "11012a31273fd4dd98d7c0a5e486dfeaa1bd9f53f984d12740d572bb41103e83",
+        "sha256": "aece8eab711b4b8cd9fd2e9f4daacca71adb3bfdfb2cc32ce29bc0a1a44c8566",
         "summary": {
           "role": "canonical full Topic 13 readiness gate",
           "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
@@ -743,7 +743,7 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json",
-        "sha256": "f6ddbefc6d1e6566d20ceb0659978109cd5ba47363f689b974c7334fc8906384",
+        "sha256": "ebb1c0d0d842d6c5239082f3a9314fe79fcadbbd83fdb1ab7468e5933633c726",
         "summary": {
           "role": "grouped Topic 13 closure-input acceptance audit",
           "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
@@ -751,18 +751,18 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_causal_named_branch_core_compatibility.json",
-        "sha256": "a030e71e97307ac8e3c2247247f9509feb086a9fe4b85aa94ebefaf6257c2633",
+        "sha256": "d9d4ffdf88480f65c6b9134a5a07ca2de2925757b9afca4218cfc5231bc85d86",
         "summary": {
           "role": "gate-linked evidence",
-          "reported_sha256": "a030e71e97307ac8e3c2247247f9509feb086a9fe4b85aa94ebefaf6257c2633"
+          "reported_sha256": "d9d4ffdf88480f65c6b9134a5a07ca2de2925757b9afca4218cfc5231bc85d86"
         }
       },
       {
         "path": "docs/core/07_artifacts/archive/conserved_c_finite_cone_no_go_assessment.json",
-        "sha256": "3fa8ca757e7e4a2422888c85211d1ca48b5b3d6ce8f1a3e5be6ae114cb6684a7",
+        "sha256": "5b5a3bbf80c10561a54af64a3c79a2b5c87a3f76af2ca06fbf905dddb82646ae",
         "summary": {
           "role": "gate-linked evidence",
-          "reported_sha256": "3fa8ca757e7e4a2422888c85211d1ca48b5b3d6ce8f1a3e5be6ae114cb6684a7"
+          "reported_sha256": "5b5a3bbf80c10561a54af64a3c79a2b5c87a3f76af2ca06fbf905dddb82646ae"
         }
       },
       {
@@ -789,10 +789,10 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_covariant_matter_coupling_normalization_no_go.json",
-        "sha256": "14e886fb0a3824f85ab35969e003f3f3d9135e898006696001a53f90c656245d",
+        "sha256": "93661180c88a069e384f9732209d8b69595b1229fbcfe886ab42b0e0919f412a",
         "summary": {
           "role": "gate-linked evidence",
-          "reported_sha256": "14e886fb0a3824f85ab35969e003f3f3d9135e898006696001a53f90c656245d"
+          "reported_sha256": "93661180c88a069e384f9732209d8b69595b1229fbcfe886ab42b0e0919f412a"
         }
       },
       {
@@ -820,7 +820,7 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json",
-        "sha256": "53d2821aeba92fe5453dfbf6b891ca340291b4559e7e65525d4752c387c8e123",
+        "sha256": "9b1fe80787fbf9989c2846f7fe5d1a829d1295041bffcc4860e4ebe09b601dce",
         "summary": {
           "role": "declared Topic 13 closure-contract evidence"
         }
@@ -897,10 +897,10 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_formal_bridge_boundary_audit.json",
-        "sha256": "37a1b051a0b5439657fe696149564e4b8ea9d188707895e67cd86cdcbbe56d68",
+        "sha256": "5433b8d74aa0f9208fff3d8755d77ed0bc676054fa79eb6d71196d72984f71e1",
         "summary": {
           "role": "gate-linked evidence",
-          "reported_sha256": "37a1b051a0b5439657fe696149564e4b8ea9d188707895e67cd86cdcbbe56d68"
+          "reported_sha256": "5433b8d74aa0f9208fff3d8755d77ed0bc676054fa79eb6d71196d72984f71e1"
         }
       },
       {
@@ -921,7 +921,7 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_beta_symbol_separation_noncircularity_audit.json",
-        "sha256": "4d0c961696d0fd8a86839df24f53cdceda8d1a86e1ea330e77f8b54bd68798ec",
+        "sha256": "8696cb7972260fbb6b8350340689857a25ab4a5f1e414f86daba4b5ae573819a",
         "summary": {
           "role": "declared Topic 13 closure-contract evidence"
         }
@@ -935,25 +935,25 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_collective_response_eos_stability_audit.json",
-        "sha256": "3a61b1e5c517aa0d16063e1506a0e2fbe26105649a73c7527e0b54f658fdeeda",
+        "sha256": "5deda16b91ee0cd3429ae7dbd588d38ee2acda308f41f4cb4af177d9ef05aea2",
         "summary": {
           "role": "gate-linked evidence",
-          "reported_sha256": "3a61b1e5c517aa0d16063e1506a0e2fbe26105649a73c7527e0b54f658fdeeda"
+          "reported_sha256": "5deda16b91ee0cd3429ae7dbd588d38ee2acda308f41f4cb4af177d9ef05aea2"
         }
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_flat_thermodynamic_bridge_components_gate.json",
-        "sha256": "4b0aa2a2f20301261457a866e718b2815b01019addcb17b6174981cf5d482a0a",
+        "sha256": "9185b732cd24e94212f74fcca7231b79b0bf96394dcf65b066f55a6c1d6ea3ab",
         "summary": {
           "role": "declared Topic 13 closure-contract evidence"
         }
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json",
-        "sha256": "7ce1d17773eedb29ffd9260fd2a04f927acb3af74384fd90d2adc2d9a57c0e2b",
+        "sha256": "4bff4bda6194215752358ec06c782a518753c8e3be1a5e7e6678c76fa2d3686d",
         "summary": {
           "role": "gate-linked evidence",
-          "reported_sha256": "7ce1d17773eedb29ffd9260fd2a04f927acb3af74384fd90d2adc2d9a57c0e2b"
+          "reported_sha256": "4bff4bda6194215752358ec06c782a518753c8e3be1a5e7e6678c76fa2d3686d"
         }
       },
       {
@@ -1071,7 +1071,7 @@
     ],
     "input_package_audit": {
       "path": "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json",
-      "sha256": "f6ddbefc6d1e6566d20ceb0659978109cd5ba47363f689b974c7334fc8906384",
+      "sha256": "ebb1c0d0d842d6c5239082f3a9314fe79fcadbbd83fdb1ab7468e5933633c726",
       "summary": {
         "role": "grouped Topic 13 closure-input acceptance audit",
         "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
@@ -1191,7 +1191,7 @@
         "evidence_result_id": "T13_CAUSAL_FLUX_PHI_COUPLED_CORE_COMPATIBILITY",
         "artifact": {
           "path": "docs/core/07_artifacts/topic13/t13_causal_named_branch_core_compatibility.json",
-          "sha256": "a030e71e97307ac8e3c2247247f9509feb086a9fe4b85aa94ebefaf6257c2633"
+          "sha256": "d9d4ffdf88480f65c6b9134a5a07ca2de2925757b9afca4218cfc5231bc85d86"
         },
         "claim_boundary": "Named normalized causal branch only; original conserved-C baseline remains blocked."
       },
@@ -1301,7 +1301,7 @@
         "evidence_result_id": "T13_CAUSAL_FLUX_PHI_COUPLED_CORE_COMPATIBILITY",
         "artifact": {
           "path": "docs/core/07_artifacts/topic13/t13_causal_named_branch_core_compatibility.json",
-          "sha256": "a030e71e97307ac8e3c2247247f9509feb086a9fe4b85aa94ebefaf6257c2633"
+          "sha256": "d9d4ffdf88480f65c6b9134a5a07ca2de2925757b9afca4218cfc5231bc85d86"
         },
         "claim_boundary": "Named normalized causal branch only; original conserved-C baseline remains blocked."
       },
@@ -1337,18 +1337,18 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/topic13/t13_causal_named_branch_core_compatibility.json",
-          "sha256": "a030e71e97307ac8e3c2247247f9509feb086a9fe4b85aa94ebefaf6257c2633",
+          "sha256": "d9d4ffdf88480f65c6b9134a5a07ca2de2925757b9afca4218cfc5231bc85d86",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "a030e71e97307ac8e3c2247247f9509feb086a9fe4b85aa94ebefaf6257c2633"
+            "reported_sha256": "d9d4ffdf88480f65c6b9134a5a07ca2de2925757b9afca4218cfc5231bc85d86"
           }
         },
         {
           "path": "docs/core/07_artifacts/archive/conserved_c_finite_cone_no_go_assessment.json",
-          "sha256": "3fa8ca757e7e4a2422888c85211d1ca48b5b3d6ce8f1a3e5be6ae114cb6684a7",
+          "sha256": "5b5a3bbf80c10561a54af64a3c79a2b5c87a3f76af2ca06fbf905dddb82646ae",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "3fa8ca757e7e4a2422888c85211d1ca48b5b3d6ce8f1a3e5be6ae114cb6684a7"
+            "reported_sha256": "5b5a3bbf80c10561a54af64a3c79a2b5c87a3f76af2ca06fbf905dddb82646ae"
           }
         },
         {
@@ -1481,10 +1481,10 @@
         },
         {
           "path": "docs/core/07_artifacts/topic13/t13_covariant_matter_coupling_normalization_no_go.json",
-          "sha256": "14e886fb0a3824f85ab35969e003f3f3d9135e898006696001a53f90c656245d",
+          "sha256": "93661180c88a069e384f9732209d8b69595b1229fbcfe886ab42b0e0919f412a",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "14e886fb0a3824f85ab35969e003f3f3d9135e898006696001a53f90c656245d"
+            "reported_sha256": "93661180c88a069e384f9732209d8b69595b1229fbcfe886ab42b0e0919f412a"
           }
         },
         {
@@ -1512,7 +1512,7 @@
         },
         {
           "path": "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json",
-          "sha256": "53d2821aeba92fe5453dfbf6b891ca340291b4559e7e65525d4752c387c8e123",
+          "sha256": "9b1fe80787fbf9989c2846f7fe5d1a829d1295041bffcc4860e4ebe09b601dce",
           "summary": {
             "role": "declared Topic 13 closure-contract evidence"
           }
@@ -1806,10 +1806,10 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/topic13/t13_formal_bridge_boundary_audit.json",
-          "sha256": "37a1b051a0b5439657fe696149564e4b8ea9d188707895e67cd86cdcbbe56d68",
+          "sha256": "5433b8d74aa0f9208fff3d8755d77ed0bc676054fa79eb6d71196d72984f71e1",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "37a1b051a0b5439657fe696149564e4b8ea9d188707895e67cd86cdcbbe56d68"
+            "reported_sha256": "5433b8d74aa0f9208fff3d8755d77ed0bc676054fa79eb6d71196d72984f71e1"
           }
         },
         {
@@ -1830,7 +1830,7 @@
         },
         {
           "path": "docs/core/07_artifacts/topic13/t13_beta_symbol_separation_noncircularity_audit.json",
-          "sha256": "4d0c961696d0fd8a86839df24f53cdceda8d1a86e1ea330e77f8b54bd68798ec",
+          "sha256": "8696cb7972260fbb6b8350340689857a25ab4a5f1e414f86daba4b5ae573819a",
           "summary": {
             "role": "declared Topic 13 closure-contract evidence"
           }
@@ -1960,15 +1960,15 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/topic13/t13_collective_response_eos_stability_audit.json",
-          "sha256": "3a61b1e5c517aa0d16063e1506a0e2fbe26105649a73c7527e0b54f658fdeeda",
+          "sha256": "5deda16b91ee0cd3429ae7dbd588d38ee2acda308f41f4cb4af177d9ef05aea2",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "3a61b1e5c517aa0d16063e1506a0e2fbe26105649a73c7527e0b54f658fdeeda"
+            "reported_sha256": "5deda16b91ee0cd3429ae7dbd588d38ee2acda308f41f4cb4af177d9ef05aea2"
           }
         },
         {
           "path": "docs/core/07_artifacts/topic13/t13_flat_thermodynamic_bridge_components_gate.json",
-          "sha256": "4b0aa2a2f20301261457a866e718b2815b01019addcb17b6174981cf5d482a0a",
+          "sha256": "9185b732cd24e94212f74fcca7231b79b0bf96394dcf65b066f55a6c1d6ea3ab",
           "summary": {
             "role": "declared Topic 13 closure-contract evidence"
           }
@@ -2088,10 +2088,10 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/topic13/t13_flat_thermodynamic_bridge_components_gate.json",
-          "sha256": "4b0aa2a2f20301261457a866e718b2815b01019addcb17b6174981cf5d482a0a",
+          "sha256": "9185b732cd24e94212f74fcca7231b79b0bf96394dcf65b066f55a6c1d6ea3ab",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "4b0aa2a2f20301261457a866e718b2815b01019addcb17b6174981cf5d482a0a"
+            "reported_sha256": "9185b732cd24e94212f74fcca7231b79b0bf96394dcf65b066f55a6c1d6ea3ab"
           }
         },
         {
@@ -2128,26 +2128,26 @@
         },
         {
           "path": "docs/core/07_artifacts/topic13/t13_beta_symbol_separation_noncircularity_audit.json",
-          "sha256": "4d0c961696d0fd8a86839df24f53cdceda8d1a86e1ea330e77f8b54bd68798ec",
+          "sha256": "8696cb7972260fbb6b8350340689857a25ab4a5f1e414f86daba4b5ae573819a",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "4d0c961696d0fd8a86839df24f53cdceda8d1a86e1ea330e77f8b54bd68798ec"
+            "reported_sha256": "8696cb7972260fbb6b8350340689857a25ab4a5f1e414f86daba4b5ae573819a"
           }
         },
         {
           "path": "docs/core/07_artifacts/topic13/t13_collective_response_eos_stability_audit.json",
-          "sha256": "3a61b1e5c517aa0d16063e1506a0e2fbe26105649a73c7527e0b54f658fdeeda",
+          "sha256": "5deda16b91ee0cd3429ae7dbd588d38ee2acda308f41f4cb4af177d9ef05aea2",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "3a61b1e5c517aa0d16063e1506a0e2fbe26105649a73c7527e0b54f658fdeeda"
+            "reported_sha256": "5deda16b91ee0cd3429ae7dbd588d38ee2acda308f41f4cb4af177d9ef05aea2"
           }
         },
         {
           "path": "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json",
-          "sha256": "7ce1d17773eedb29ffd9260fd2a04f927acb3af74384fd90d2adc2d9a57c0e2b",
+          "sha256": "4bff4bda6194215752358ec06c782a518753c8e3be1a5e7e6678c76fa2d3686d",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "7ce1d17773eedb29ffd9260fd2a04f927acb3af74384fd90d2adc2d9a57c0e2b"
+            "reported_sha256": "4bff4bda6194215752358ec06c782a518753c8e3be1a5e7e6678c76fa2d3686d"
           }
         },
         {
@@ -2263,10 +2263,10 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/topic13/t13_flat_thermodynamic_bridge_components_gate.json",
-          "sha256": "4b0aa2a2f20301261457a866e718b2815b01019addcb17b6174981cf5d482a0a",
+          "sha256": "9185b732cd24e94212f74fcca7231b79b0bf96394dcf65b066f55a6c1d6ea3ab",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "4b0aa2a2f20301261457a866e718b2815b01019addcb17b6174981cf5d482a0a"
+            "reported_sha256": "9185b732cd24e94212f74fcca7231b79b0bf96394dcf65b066f55a6c1d6ea3ab"
           }
         },
         {
@@ -2303,26 +2303,26 @@
         },
         {
           "path": "docs/core/07_artifacts/topic13/t13_beta_symbol_separation_noncircularity_audit.json",
-          "sha256": "4d0c961696d0fd8a86839df24f53cdceda8d1a86e1ea330e77f8b54bd68798ec",
+          "sha256": "8696cb7972260fbb6b8350340689857a25ab4a5f1e414f86daba4b5ae573819a",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "4d0c961696d0fd8a86839df24f53cdceda8d1a86e1ea330e77f8b54bd68798ec"
+            "reported_sha256": "8696cb7972260fbb6b8350340689857a25ab4a5f1e414f86daba4b5ae573819a"
           }
         },
         {
           "path": "docs/core/07_artifacts/topic13/t13_collective_response_eos_stability_audit.json",
-          "sha256": "3a61b1e5c517aa0d16063e1506a0e2fbe26105649a73c7527e0b54f658fdeeda",
+          "sha256": "5deda16b91ee0cd3429ae7dbd588d38ee2acda308f41f4cb4af177d9ef05aea2",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "3a61b1e5c517aa0d16063e1506a0e2fbe26105649a73c7527e0b54f658fdeeda"
+            "reported_sha256": "5deda16b91ee0cd3429ae7dbd588d38ee2acda308f41f4cb4af177d9ef05aea2"
           }
         },
         {
           "path": "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json",
-          "sha256": "7ce1d17773eedb29ffd9260fd2a04f927acb3af74384fd90d2adc2d9a57c0e2b",
+          "sha256": "4bff4bda6194215752358ec06c782a518753c8e3be1a5e7e6678c76fa2d3686d",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "7ce1d17773eedb29ffd9260fd2a04f927acb3af74384fd90d2adc2d9a57c0e2b"
+            "reported_sha256": "4bff4bda6194215752358ec06c782a518753c8e3be1a5e7e6678c76fa2d3686d"
           }
         },
         {
@@ -2436,10 +2436,10 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/topic13/t13_flat_thermodynamic_bridge_components_gate.json",
-          "sha256": "4b0aa2a2f20301261457a866e718b2815b01019addcb17b6174981cf5d482a0a",
+          "sha256": "9185b732cd24e94212f74fcca7231b79b0bf96394dcf65b066f55a6c1d6ea3ab",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "4b0aa2a2f20301261457a866e718b2815b01019addcb17b6174981cf5d482a0a"
+            "reported_sha256": "9185b732cd24e94212f74fcca7231b79b0bf96394dcf65b066f55a6c1d6ea3ab"
           }
         },
         {
@@ -2476,26 +2476,26 @@
         },
         {
           "path": "docs/core/07_artifacts/topic13/t13_beta_symbol_separation_noncircularity_audit.json",
-          "sha256": "4d0c961696d0fd8a86839df24f53cdceda8d1a86e1ea330e77f8b54bd68798ec",
+          "sha256": "8696cb7972260fbb6b8350340689857a25ab4a5f1e414f86daba4b5ae573819a",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "4d0c961696d0fd8a86839df24f53cdceda8d1a86e1ea330e77f8b54bd68798ec"
+            "reported_sha256": "8696cb7972260fbb6b8350340689857a25ab4a5f1e414f86daba4b5ae573819a"
           }
         },
         {
           "path": "docs/core/07_artifacts/topic13/t13_collective_response_eos_stability_audit.json",
-          "sha256": "3a61b1e5c517aa0d16063e1506a0e2fbe26105649a73c7527e0b54f658fdeeda",
+          "sha256": "5deda16b91ee0cd3429ae7dbd588d38ee2acda308f41f4cb4af177d9ef05aea2",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "3a61b1e5c517aa0d16063e1506a0e2fbe26105649a73c7527e0b54f658fdeeda"
+            "reported_sha256": "5deda16b91ee0cd3429ae7dbd588d38ee2acda308f41f4cb4af177d9ef05aea2"
           }
         },
         {
           "path": "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json",
-          "sha256": "7ce1d17773eedb29ffd9260fd2a04f927acb3af74384fd90d2adc2d9a57c0e2b",
+          "sha256": "4bff4bda6194215752358ec06c782a518753c8e3be1a5e7e6678c76fa2d3686d",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "7ce1d17773eedb29ffd9260fd2a04f927acb3af74384fd90d2adc2d9a57c0e2b"
+            "reported_sha256": "4bff4bda6194215752358ec06c782a518753c8e3be1a5e7e6678c76fa2d3686d"
           }
         },
         {
@@ -2878,10 +2878,10 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/topic13/t13_flat_thermodynamic_bridge_components_gate.json",
-          "sha256": "4b0aa2a2f20301261457a866e718b2815b01019addcb17b6174981cf5d482a0a",
+          "sha256": "9185b732cd24e94212f74fcca7231b79b0bf96394dcf65b066f55a6c1d6ea3ab",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "4b0aa2a2f20301261457a866e718b2815b01019addcb17b6174981cf5d482a0a"
+            "reported_sha256": "9185b732cd24e94212f74fcca7231b79b0bf96394dcf65b066f55a6c1d6ea3ab"
           }
         },
         {
@@ -2918,26 +2918,26 @@
         },
         {
           "path": "docs/core/07_artifacts/topic13/t13_beta_symbol_separation_noncircularity_audit.json",
-          "sha256": "4d0c961696d0fd8a86839df24f53cdceda8d1a86e1ea330e77f8b54bd68798ec",
+          "sha256": "8696cb7972260fbb6b8350340689857a25ab4a5f1e414f86daba4b5ae573819a",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "4d0c961696d0fd8a86839df24f53cdceda8d1a86e1ea330e77f8b54bd68798ec"
+            "reported_sha256": "8696cb7972260fbb6b8350340689857a25ab4a5f1e414f86daba4b5ae573819a"
           }
         },
         {
           "path": "docs/core/07_artifacts/topic13/t13_collective_response_eos_stability_audit.json",
-          "sha256": "3a61b1e5c517aa0d16063e1506a0e2fbe26105649a73c7527e0b54f658fdeeda",
+          "sha256": "5deda16b91ee0cd3429ae7dbd588d38ee2acda308f41f4cb4af177d9ef05aea2",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "3a61b1e5c517aa0d16063e1506a0e2fbe26105649a73c7527e0b54f658fdeeda"
+            "reported_sha256": "5deda16b91ee0cd3429ae7dbd588d38ee2acda308f41f4cb4af177d9ef05aea2"
           }
         },
         {
           "path": "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json",
-          "sha256": "7ce1d17773eedb29ffd9260fd2a04f927acb3af74384fd90d2adc2d9a57c0e2b",
+          "sha256": "4bff4bda6194215752358ec06c782a518753c8e3be1a5e7e6678c76fa2d3686d",
           "summary": {
             "role": "gate-linked evidence",
-            "reported_sha256": "7ce1d17773eedb29ffd9260fd2a04f927acb3af74384fd90d2adc2d9a57c0e2b"
+            "reported_sha256": "4bff4bda6194215752358ec06c782a518753c8e3be1a5e7e6678c76fa2d3686d"
           }
         },
         {
@@ -3010,7 +3010,7 @@
   },
   "canonical_gate": {
     "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
-    "sha256": "11012a31273fd4dd98d7c0a5e486dfeaa1bd9f53f984d12740d572bb41103e83",
+    "sha256": "aece8eab711b4b8cd9fd2e9f4daacca71adb3bfdfb2cc32ce29bc0a1a44c8566",
     "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
     "legacy_graphite_ttg_aggregate_status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
     "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
@@ -3043,7 +3043,7 @@
     },
     "VERIFICATION": "Canonical gate, grouped input-package audit, blocker groups, major-result records, subresult statuses, evidence references, and holdout metadata were read and projected without consuming numeric holdout data.",
     "CONTROLLING_BLOCKER": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing",
-    "NEXT_ACTION": "Resolve the base Phi-to-Delta_u_ph correspondence and independent SI calibration before any promotion. Hand the bounded O(2)/He-4 thermal bridge to Core integration. Keep Ding numeric C_src(T) acquisition, graphite TTG numeric validation, raw Landauer row parity, the original conserved-C baseline, curved 3+1, and external claims on their separate open tracks.",
+    "NEXT_ACTION": "Source-lock a covariant field residue or response-observable amplitude with a system-specific SI coefficient/energy-density contract, or provide an independent non-TTG alpha_Phi_K calibration record; then derive base Phi-to-Phi_E without Xie 2026.",
     "CLAIM_BOUNDARY": "This matrix reports progress and closure boundaries. It does not promote a lane-level PASS, comparator, no-go, or formal interface to Full Topic 13, Core, external validation, or a global UET claim."
   }
 }

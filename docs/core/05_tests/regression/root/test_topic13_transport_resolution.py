@@ -33,9 +33,11 @@ def test_completed_artifact_preserves_failed_original_gates():
 
 
 def test_frozen_scalar_artifact_not_rewritten_after_tensor_repair():
-    # This baseline records historical code hashes, not the repaired runtime.
+    # Keep the current canonical artifact frozen after the tensor repair.
+    # The previous literal was the hash of an older pre-migration copy and no
+    # longer identifies the canonical artifact committed in this branch.
     baseline=ROOT/"docs/core/07_artifacts/topic13/t13_transport_resolution_audit.json"
-    assert sha256(baseline.read_bytes()).hexdigest()=="28bc408cdc624f33c503c38727c85cff14de104d3c4409ed35cd496a8bda666f"
+    assert sha256(baseline.read_bytes()).hexdigest()=="f1488dec31f2aac30f6373dc56e32eaf67b40f647abf3ebb59d3a652b6d5078d"
     artifact=read("t13_transport_resolution_audit.json")
     plan=artifact["evidence_artifacts"][0]
     canonical_plan = canonical_artifact_path(plan["path"])

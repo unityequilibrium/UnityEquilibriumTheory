@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "carrier_observer_thought_experiment",
-  "generated_at": "2026-09-17T17:04:05.690103+00:00",
+  "generated_at": "2026-09-17T18:10:32.706627+00:00",
   "status": "SIMULATION_ONLY",
   "evidence_class": "internal_newtonian_finite_signal_comparator",
   "source_artifact": {
