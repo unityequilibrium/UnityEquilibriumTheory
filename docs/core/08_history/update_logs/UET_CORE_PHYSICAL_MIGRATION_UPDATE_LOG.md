@@ -791,3 +791,13 @@
 - Controller: canonical-path and generated-artifact consumer compatibility remains open until the PR test job passes.
 - Claim impact: none; no equation, evidence status, calibration, or physics claim changed.
 - Next action: push this scoped repair, inspect the next failure set, and fix only the next common migration boundary.
+
+## 2026-09-17 — Wave 6zf canonical artifact regeneration and hash portability
+
+- Scope: close the remaining core migration regressions caused by stale canonical artifacts, a misplaced Topic 0.11 correspondence input, and platform-dependent text hashing.
+- Changed: regenerated the covariant diffusion, hyperbolic phase-field, Noether, matter-space, and Topic 0.11 dependency artifacts with the official generators; routed affected regression tests through canonical artifact resolution; made locked text-source hashes line-ending stable.
+- Verification: targeted core regression/equation suite `59 passed`; `git diff --check` clean. No formula, parameter, evidence class, or claim wording was changed.
+- Result: the common canonical-path/artifact dependency failure is narrowed locally; remaining PR failures, if any, are expected to be Topic 13 integration or unavailable public-source boundary issues rather than this repaired core subset.
+- Controller: PR Python validation must rerun on the pushed commit; external-source and broader Topic 13 gates remain independently controlling where applicable.
+- Claim impact: none; organization/path compatibility and reproducibility repair only.
+- Next action: commit this scoped repair, push the existing PR branch, and inspect the new CI failure set before any merge decision.

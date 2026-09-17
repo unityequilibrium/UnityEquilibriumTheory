@@ -1,5 +1,5 @@
 """Weighted angular rule reaches susceptibility and conserved moments."""
-from docs.core.core_paths import core_root
+from docs.core.core_paths import canonical_artifact_path
 import numpy as np
 import pytest
 from docs.core.uet_o2_energy_momentum_conserving_bethe_salpeter import (
@@ -55,7 +55,7 @@ def test_weighted_projector_preserves_five_invariants_and_shear(states):
 def test_full_path_artifact_keeps_failed_isotropy_visible():
     import json
     from pathlib import Path
-    artifact = core_root() / "artifacts/t13_weighted_direction_pilot.json"
+    artifact = canonical_artifact_path("t13_weighted_direction_pilot.json")
     record = json.loads(artifact.read_text())
     assert record["completed"] and not record["full_core_unlock"]
     a, b = record["rows"]

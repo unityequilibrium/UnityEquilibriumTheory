@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "hyperbolic_phase_field_external_comparator_verification",
-  "generated_at": "2026-09-16T17:50:24.224686+00:00",
+  "generated_at": "2026-09-17T10:22:04.276773+00:00",
   "audit_status": "PASS",
   "evidence_status": "PARTIAL_EXTERNAL_COMPARATOR",
   "claim_class": "B",
@@ -100,12 +100,12 @@
       512.0
     ],
     "chemical_limit_relative_l2_errors": [
-      0.043907067019773226,
-      0.012188348089927727,
-      0.003133783574217407,
+      0.04390706701977322,
+      0.012188348089927728,
+      0.003133783574217406,
       0.0007890620983941193
     ],
-    "chemical_limit_observed_order": 0.9677018346308619,
+    "chemical_limit_observed_order": 0.9677018346308615,
     "quasistatic_constraint_max_abs_residual": 6.458722445756848e-14,
     "paper_asymptotic_scaling": {
       "gamma_values": [
@@ -184,10 +184,10 @@
     "physical_validation": "BLOCKED"
   },
   "source_hashes": {
-    "docs\\core\\02_equations\\matter_space\\uet_hyperbolic_phase_field.py": "f03b8907a606f3b8937556c32ea5f01d9880787aba193edccf53ffa5f1fbb74a",
-    "docs\\core\\01_contracts\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "1609cfdada2ad9e67ebcb8e9ae53f2f3f035fdc70469424e486eb3f7e53c1f86",
-    "docs\\data\\external\\condensed_matter\\phase_transitions\\hyperbolic_cahn_hilliard\\dhaouadi_dumbser_gavrilyuk_2025\\source_record.json": "8751305c6296e3fa70f12dc9723e174e56710296d42298dcf0e2f3ccfe09e574",
-    "docs\\core\\07_artifacts\\verification\\covariant_diffusive_current_verification.json": "c0ea1e5cb0a836c9d80c36893bff91337657c9e237e277dda0add8aaa865c4b3"
+    "docs\\core\\02_equations\\matter_space\\uet_hyperbolic_phase_field.py": "24bee848039ee268421db2bf7dfd3675bfb0a4accaa3be303ef00ca1df80f261",
+    "docs\\core\\01_contracts\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "78b75f84c3a1a9982a658ffb80cfdb64ff09e231d14de488ecaa6913c5eac9b5",
+    "docs\\data\\external\\condensed_matter\\phase_transitions\\hyperbolic_cahn_hilliard\\dhaouadi_dumbser_gavrilyuk_2025\\source_record.json": "7a93f806ddbdd02f1fe3c0a316de52947ab5a2a6d9ca26976dfd2f2a032e1049",
+    "docs\\core\\07_artifacts\\verification\\covariant_diffusive_current_verification.json": "3fdae4b283065e8e66a74f7e52e793b8c518e8340a1f37a97b7f9c7cf5663166"
   },
   "run_contract": {
     "seed": 719061,

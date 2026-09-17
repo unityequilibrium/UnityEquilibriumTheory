@@ -22,6 +22,11 @@ def _sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def _sha256_text(path: Path) -> str:
+    normalized = path.read_text(encoding="utf-8").replace("\r\n", "\n").replace("\r", "\n")
+    return hashlib.sha256(normalized.encode("utf-8")).hexdigest()
+
+
 def test_preregistration_locks_synthetic_scope_and_initial_conditions() -> None:
     prereg = _read(DATA / "matter_space_coupled_preregistration.json")
     assert prereg["status"] == "LOCKED_BEFORE_EXECUTION"
@@ -39,7 +44,7 @@ def test_numerical_amendment_preserves_locked_failure_and_physics() -> None:
     amendment = _read(DATA / "matter_space_coupled_numerical_amendment_001.json")
     assert amendment["status"] == "POST_DIAGNOSTIC_NUMERICAL_AMENDMENT"
     assert amendment["blind_preregistration"] is False
-    assert amendment["trigger"]["locked_preregistration_sha256"] == _sha256(prereg_path)
+    assert amendment["trigger"]["locked_preregistration_sha256"] == _sha256_text(prereg_path)
     assert amendment["amendment"]["ledger_refinement_dt_fraction_of_preflight"] < amendment["trigger"]["locked_dt_fraction_of_preflight"]
     for key in (
         "physical_parameters_changed",
@@ -104,7 +109,7 @@ def test_hashes_and_diagnostic_claim_boundary_match_local_files() -> None:
     artifact = _read(ARTIFACT)
     for block in ("preregistration", "numerical_amendment"):
         path = ROOT / artifact[block]["path"]
-        assert artifact[block]["sha256"] == _sha256(path)
+        assert artifact[block]["sha256"] == _sha256_text(path)
     for dependency in artifact["dependencies"].values():
         path = ROOT / dependency["path"]
         assert dependency["sha256"] == _sha256(path)

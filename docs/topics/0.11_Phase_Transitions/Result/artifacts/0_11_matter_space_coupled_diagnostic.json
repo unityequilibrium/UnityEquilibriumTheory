@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "artifact": "0_11_matter_space_coupled_diagnostic",
   "topic": "0.11_Phase_Transitions",
-  "generated_at": "2026-07-26T05:09:44.976742+00:00",
+  "generated_at": "2026-09-17T10:38:14.895160+00:00",
   "status": "INTERNAL_DIAGNOSTIC",
   "internal_gate_status": "PASS",
   "dependency_status": "BLOCKED",
@@ -411,8 +411,8 @@
   },
   "dependencies": {
     "matter_space_core": {
-      "path": "docs/core/artifacts/matter_space_variational_verification.json",
-      "sha256": "e5ae26fb40ff6cd4a0d1d0c86576e91218294e683902bb60b6afb0b2596cc62c",
+      "path": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
+      "sha256": "8fa111f3e23134af2c1d3924a364fef7de27142bd636f0b0510a4c79867d6f3c",
       "status": "FAIL",
       "controlling_blocker": "prearrival_leakage"
     },
@@ -433,28 +433,28 @@
         "path": "docs/topics/0.11_Phase_Transitions/Result/03_show_Result/matter_space_coupled_profiles.png",
         "caption": "Canonical and coupled final profiles for two locked initial conditions.",
         "caveat": "Morphology is diagnostic only.",
-        "sha256": "aab613f6c7532dbc53f8889e7317239d5ed30f318009e29bd42457355ee761fc"
+        "sha256": "f2b18c077f512ea4e9cb66dc9c57af18d008c2fe8cd8571ead1807dcc2f58be3"
       },
       {
         "path": "docs/topics/0.11_Phase_Transitions/Result/03_show_Result/matter_space_coupled_ledger.png",
         "caption": "Extended-energy and conservation account for the locked localized coupled lane.",
         "caveat": "Normalized internal ledger, not SI energy; this panel intentionally preserves the pre-amendment residual.",
-        "sha256": "47069e1be366c90198fcbe18c61bad7a2687aa983b5851265ad60bcf2a6445ce"
+        "sha256": "e184c797837f3e9da8826e5d442328f846ad7df05cca35886313be9d228802a5"
       },
       {
         "path": "docs/topics/0.11_Phase_Transitions/Result/03_show_Result/matter_space_adiabatic_limit.png",
         "caption": "Coupling-effect persistence and adiabatic-reduction convergence.",
         "caveat": "Normalized numerical controls only.",
-        "sha256": "5373d1fe55ad8f142cc50e26098612c8ecbdad40abd2361a41ff68c50f07331a"
+        "sha256": "de7293f1ecd6dad8b7d737c139b9108f19bf41c2ff2d48d8e9798636c9191908"
       },
       {
         "path": "docs/topics/0.11_Phase_Transitions/Result/03_show_Result/matter_space_history_invariance.png",
         "caption": "Trace-history invariance contrasted with physical-state sensitivity.",
         "caveat": "R is derived and has no backreaction.",
-        "sha256": "c73e0695d00fe3ca65f3cafd9eb42bbe6ef1330bbfaf90ea77aded6abe5a6ff7"
+        "sha256": "defed5b327cf5db3395cd899aec4720c5fb01a0b1ce81e8a8b5352aef33d0a5b"
       }
     ],
-    "script_sha256": "b188a3cd4cc1cdbd0c001d4cf57cd4258e9180712c32bfc6f5ce7550a98b86cf"
+    "script_sha256": "7f9132391b3c345d79558112c130797cece9557d1df396e273e0097e2f3261a5"
   },
   "run_integrity": {
     "unit_lane": "normalized",

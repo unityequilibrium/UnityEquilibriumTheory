@@ -1,4 +1,4 @@
-from docs.core.core_paths import core_root
+from docs.core.core_paths import canonical_artifact_path
 import numpy as np
 import pytest
 from docs.core.uet_o2_continuum_collision_operator import _weighted_transition_rows, continuum_collision_operator_state
@@ -28,7 +28,7 @@ def test_invalid_weights_rejected():
 def test_failed_pilot_cannot_unlock_physical_result():
     import json
     from pathlib import Path
-    path=core_root()/"artifacts/t13_transition_pullback_pilot.json"
+    path=canonical_artifact_path("t13_transition_pullback_pilot.json")
     record=json.loads(path.read_text())
     assert record["completed"] and not record["full_core_unlock"]
     assert record["status"] == "BLOCKED_PULLBACK_NUMERICAL_FAILURE"

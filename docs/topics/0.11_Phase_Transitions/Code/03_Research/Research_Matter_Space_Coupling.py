@@ -32,7 +32,7 @@ ROOT = _bootstrap()
 TOPIC = ROOT / "docs" / "topics" / "0.11_Phase_Transitions"
 PREREG_PATH = TOPIC / "Data" / "03_Research" / "matter_space_coupled_preregistration.json"
 AMENDMENT_PATH = TOPIC / "Data" / "03_Research" / "matter_space_coupled_numerical_amendment_001.json"
-CORE_PATH = ROOT / "docs" / "core" / "artifacts" / "matter_space_variational_verification.json"
+CORE_PATH = ROOT / "docs" / "core" / "07_artifacts" / "verification" / "matter_space_variational_verification.json"
 TOPIC_GATE_PATH = TOPIC / "Result" / "artifacts" / "0_11_closure_status_audit.json"
 ARTIFACT_PATH = TOPIC / "Result" / "artifacts" / "0_11_matter_space_coupled_diagnostic.json"
 RESULT_DIR = TOPIC / "Result" / "03_show_Result"
@@ -59,6 +59,12 @@ def sha256_file(path: Path) -> str:
     return digest.hexdigest()
 
 
+
+
+def sha256_text_file(path: Path) -> str:
+    """Hash text payloads with repository-stable LF line endings."""
+    normalized = path.read_text(encoding="utf-8").replace("\r\n", "\n").replace("\r", "\n")
+    return hashlib.sha256(normalized.encode("utf-8")).hexdigest()
 def rms(field: np.ndarray) -> float:
     return float(np.sqrt(np.mean(np.square(np.asarray(field, dtype=float)))))
 
@@ -833,14 +839,14 @@ def main() -> int:
         },
         "preregistration": {
             "path": str(PREREG_PATH.relative_to(ROOT)).replace("\\", "/"),
-            "sha256": sha256_file(PREREG_PATH),
+            "sha256": sha256_text_file(PREREG_PATH),
             "status": prereg["status"],
             "random_seeds": prereg["random_seeds"],
             "parameter_fitting": False,
         },
         "numerical_amendment": {
             "path": str(AMENDMENT_PATH.relative_to(ROOT)).replace("\\", "/"),
-            "sha256": sha256_file(AMENDMENT_PATH),
+            "sha256": sha256_text_file(AMENDMENT_PATH),
             "status": amendment["status"],
             "blind_preregistration": False,
             "ledger_refinement_dt_fraction": ledger_fraction,

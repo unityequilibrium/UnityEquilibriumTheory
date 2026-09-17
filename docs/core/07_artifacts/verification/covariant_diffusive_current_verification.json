@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "covariant_diffusive_current_verification",
-  "generated_at": "2026-09-16T17:48:08.700888+00:00",
+  "generated_at": "2026-09-17T10:17:27.021059+00:00",
   "audit_status": "PASS",
   "evidence_status": "PARTIAL",
   "claim_class": "B",
@@ -31,7 +31,7 @@
       "periodic": 2.2737367544323206e-13,
       "zero_flux": 2.2737367544323206e-13
     },
-    "functional_directional_derivative_abs_residual": 1.5334850056447635e-10,
+    "functional_directional_derivative_abs_residual": 1.533485838312032e-10,
     "matter_space_rhs_max_abs_residual": 0.0,
     "epsilon_zero_space_response_invariance_max_abs": 0.0,
     "current_reconstruction_max_abs_error": 5.551115123125783e-17,
@@ -113,7 +113,7 @@
   },
   "source_hashes": {
     "docs\\core\\02_equations\\covariant\\uet_covariant_diffusion.py": "2c99fb608885b45dbbc92409cfee9a35b2fc428d1f48d7c44e1a1187a0106840",
-    "docs\\core\\01_contracts\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "1609cfdada2ad9e67ebcb8e9ae53f2f3f035fdc70469424e486eb3f7e53c1f86",
+    "docs\\core\\01_contracts\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "78b75f84c3a1a9982a658ffb80cfdb64ff09e231d14de488ecaa6913c5eac9b5",
     "docs\\core\\07_artifacts\\verification\\covariant_matter_action_verification.json": "f58b206833fd3bef2d5f43e5eeb494bc231348b3260da341537c382775503ea9"
   },
   "run_contract": {
@@ -162,11 +162,8 @@
     "audit_status": "PASS",
     "evidence_status": "PARTIAL_EXTERNAL_COMPARATOR",
     "role": "external_fixed_parameter_formula_comparator",
-    "causal_feasibility_artifact": "hyperbolic_phase_field_causal_feasibility.json",
-    "causal_feasibility_status": "PASS",
-    "fixed_light_cone_parameter_domain": "PASS_NORMALIZED_ANALYTIC",
-    "uniform_subluminal_limit": "NO_GO_EXACT_PARABOLIC_LIMIT",
-    "uet_derivation": "BLOCKED"
+    "uet_derivation": "BLOCKED",
+    "uniform_subluminal_limit": "BLOCKED"
   },
   "downstream_noether_phase_field_state_map": {
     "artifact": "noether_phase_field_state_map_verification.json",
