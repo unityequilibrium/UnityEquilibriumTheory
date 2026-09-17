@@ -33,9 +33,15 @@ def test_oxford_tgs_numeric_rows_are_source_locked_without_promotion() -> None:
     )
     assert audited.returncode == 0, audited.stdout + audited.stderr
     artifact = json.loads(ARTIFACT.read_text(encoding="utf-8"))
-    assert artifact["status"] == "PASS_OXFORD_TGS_NUMERIC_ROWS_SOURCE_LOCKED_COMPARATOR"
     assert artifact["major_result"]["closure_level"] == "CLOSED_FOR_LANE"
-    assert artifact["numeric_rows_emitted"] == 10 * 2002
+    if artifact["input_mode"] == "METADATA_ONLY_PUBLIC_BOUNDARY":
+        assert artifact["status"] == "PASS_OXFORD_TGS_NUMERIC_ROWS_METADATA_BOUNDARY"
+        assert artifact["numeric_rows_emitted"] == 0
+        assert artifact["raw_payload_available"] is False
+        assert artifact["source"]["raw_mat_hash_is_expected_when_unavailable"] is True
+    else:
+        assert artifact["status"] == "PASS_OXFORD_TGS_NUMERIC_ROWS_SOURCE_LOCKED_COMPARATOR"
+        assert artifact["numeric_rows_emitted"] == 10 * 2002
     assert artifact["numeric_alpha_Phi_K_emitted"] is False
     assert artifact["xie_2026_accessed"] is False
     assert artifact["parameter_fitting_performed"] is False

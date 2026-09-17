@@ -176,7 +176,7 @@ def main() -> int:
     ]
     source_paths = [
         "docs/core/03_lanes/thermal/uet_scalar_thermoelastic_response_bridge.py",
-        "docs/core/test/test_topic13_scalar_thermoelastic_response_bridge.py",
+        "docs/core/05_tests/regression/root/test_topic13_scalar_thermoelastic_response_bridge.py",
         "docs/scripts/audit/audit_topic13_scalar_thermoelastic_response_bridge.py",
     ]
     evidence_paths = [

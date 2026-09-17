@@ -10,7 +10,6 @@ from __future__ import annotations
 
 import hashlib
 import json
-import platform
 import sys
 from datetime import UTC, datetime
 from pathlib import Path
@@ -363,8 +362,10 @@ def build_artifact() -> dict[str, Any]:
             "introduce Phi or trace feedback, alter the Wave 55 controller, or promote topic status or claims."
         ),
         "environment": {
-            "python_version": platform.python_version(),
-            "platform": platform.platform(),
+            # Runtime metadata is descriptive only; keep the artifact portable
+            # across local and CI patch versions and operating systems.
+            "python_version": f"{sys.version_info.major}.{sys.version_info.minor}",
+            "platform": "portable-research-runtime",
         },
     }
 

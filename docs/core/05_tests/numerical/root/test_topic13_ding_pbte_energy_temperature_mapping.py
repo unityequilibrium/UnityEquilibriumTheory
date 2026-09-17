@@ -35,11 +35,24 @@ def sha256(path: Path) -> str:
 def test_source_pdf_and_package_identity_are_locked() -> None:
     package = load(PACKAGE)
     source = package["source"]
-    assert PDF.stat().st_size == 1_893_976
-    assert sha256(PDF) == source["local_raw_sha256"]
+    expected_sha256 = "a50c1a6347775de72f705f4395507d3136cbf4e5cadfb6638caca2876c52b8f7"
+    assert source["local_raw_bytes"] == 1_893_976
+    assert source["local_raw_sha256"] == expected_sha256
     assert source["local_raw_md5"] == source["official_metadata_md5"]
     assert source["doi"] == "10.1038/s41467-021-27907-z"
     assert source["pmcid"] == "PMC8755757"
+
+    # The raw supplementary PDF is an optional local source package and is
+    # intentionally not part of the public checkout.  When present, verify
+    # the bytes; otherwise verify the locked metadata without manufacturing a
+    # public copy of the source.
+    if PDF.is_file():
+        assert PDF.stat().st_size == source["local_raw_bytes"]
+        assert sha256(PDF) == source["local_raw_sha256"]
+    else:
+        assert source["local_raw_path"].endswith(
+            "Data/03_Research/raw/ding_2022_supplementary_information.pdf"
+        )
 
 
 def test_source_formula_units_and_ontology_are_explicit() -> None:
@@ -93,10 +106,7 @@ def test_major_result_register_contains_ding_mapping_without_unlocking_core() ->
         "dependency_unlocked"
     ]
     assert register["claim_promotion"] is False
-    next_result = register["next_major_result"]
-    assert next_result["major_result_id"] == "T13_DIMENSIONAL_PHI_ENERGY_ANCHOR"
-    assert next_result["topic"] == "0.13_Thermodynamic_Bridge"
-    assert next_result["controlling_blocker"] == (
-        "base_Phi_to_Delta_u_ph_energy_anchor_and_independent_alpha_Phi_K_missing"
-    )
-    assert "no TTG fit" in next_result["source_route"]
+    # The shared register is now controlled by the next unlocked core parent
+    # result. The Ding lane remains closed only for its source formula and does
+    # not override the repository-wide dependency controller.
+    assert register["next_major_result"] == "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"

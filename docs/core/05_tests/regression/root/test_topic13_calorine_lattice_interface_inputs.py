@@ -11,19 +11,32 @@ from docs.scripts.audit.audit_topic13_calorine_lattice_interface_inputs import (
 
 def test_source_locked_mode_fields_are_present_and_finite():
     witness = inspect_local_inputs()
-    assert set(witness["required_comparator_keys"]) <= set(witness["available_keys"])
-    assert all(row["finite"] for row in witness["field_rows"].values())
-    assert witness["kappa_sha256"] == witness["expected_kappa_sha256"]
-    assert witness["kappa_size_bytes"] == witness["expected_kappa_size_bytes"]
+    if witness["raw_payload_available"]:
+        assert set(witness["required_comparator_keys"]) <= set(witness["available_keys"])
+        assert all(row["finite"] for row in witness["field_rows"].values())
+        assert witness["kappa_sha256"] == witness["expected_kappa_sha256"]
+        assert witness["kappa_size_bytes"] == witness["expected_kappa_size_bytes"]
+    else:
+        assert witness["input_mode"] == "METADATA_ONLY_PUBLIC_BOUNDARY"
+        assert witness["available_keys"] == []
+        assert witness["field_rows"] == {}
+        assert witness["kappa_sha256"] is None
+        assert witness["kappa_size_bytes"] is None
+        assert len(witness["expected_kappa_sha256"]) == 64
+        assert witness["expected_kappa_size_bytes"] > 0
 
 
 def test_total_gamma_cannot_be_promoted_to_resistive_umklapp_rate():
     witness = inspect_local_inputs()
-    assert witness["field_rows"]["gamma"]["minimum"] >= 0.0
+    if witness["raw_payload_available"]:
+        assert witness["field_rows"]["gamma"]["minimum"] >= 0.0
+        assert witness["collision_eigenvalue_files"]
+    else:
+        assert witness["collision_structure_matches"] == {}
+        assert witness["collision_eigenvalue_files"] == []
     assert not witness["normal_umklapp_decomposition_available"]
     assert not witness["collision_matrix_available"]
     assert not witness["collision_eigenvectors_available"]
-    assert witness["collision_eigenvalue_files"]
     assert witness["full_lbte_status"] == "WARN_FULL_LBTE_NUMERICAL_STABILITY_OPEN"
 
 
@@ -43,6 +56,12 @@ def test_generated_boundary_is_strict_scoped_and_hash_linked():
     assert artifact["parameter_fitting_performed"] is False
     for relative, digest in artifact["source_hashes"].items():
         assert hashlib.sha256((root / relative).read_bytes()).hexdigest() == digest
+    for relative, declaration in artifact["locked_source_declarations"].items():
+        assert len(declaration["sha256"]) == 64
+        assert declaration["size_bytes"] > 0
+        if declaration["exists"]:
+            assert hashlib.sha256((root / relative).read_bytes()).hexdigest() == declaration["sha256"]
+            assert (root / relative).stat().st_size == declaration["size_bytes"]
     evidence = registry["equation_entries"][0]["evidence_artifacts"][0]
     assert evidence["path"] == artifact_path.relative_to(root).as_posix()
     assert hashlib.sha256(artifact_path.read_bytes()).hexdigest() == evidence["sha256"]

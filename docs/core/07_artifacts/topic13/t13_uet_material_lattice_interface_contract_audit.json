@@ -209,18 +209,18 @@
   ],
   "controlling_blocker": "physical_Phi_residue_strain_coupling_and_material_response_missing",
   "source_hashes": {
-    "docs/core/uet_material_lattice_interface_contract.py": "85be68b8054556b78378fb06b8a6e99c8f936063cab55c4359d86ff9f93b9ca3",
-    "docs/core/test/test_topic13_material_lattice_interface_contract.py": "c9a638afe131cabdef4ef72d51dde4ec62ca0afdce9ae5396c5ddd5c45ad4c02",
-    "docs/scripts/audit/audit_topic13_material_lattice_interface_contract.py": "73a370cba6051890e1d701299dc42e95ab683531a8bf3b00f4079b691a416d51"
+    "docs/core/03_lanes/thermal/uet_material_lattice_interface_contract.py": "ae2cac9ded42401e74d17187bf9d2d158bd5fdaa5b40682d606abd50ae9896f7",
+    "docs/core/05_tests/regression/root/test_topic13_material_lattice_interface_contract.py": "ed16394eb2f331826b542ccfe4b5c5b7e006c872be83291950f58f1af1913490",
+    "docs/scripts/audit/audit_topic13_material_lattice_interface_contract.py": "5c85bba18f2b5140ba584c2056bc1dadc8a65b0def4b3b1440d4ba061ff2357f"
   },
   "evidence_artifacts": [
     {
-      "path": "docs/core/artifacts/t13_calorine_lattice_interface_input_boundary.json",
-      "sha256": "5a2bf941484887b2140f6400055ccb80c4443435f32f1488f2cb4f8dec4d9fb0"
+      "path": "docs/core/07_artifacts/topic13/t13_calorine_lattice_interface_input_boundary.json",
+      "sha256": "7fe294c31f3f2e15d56784e97d67c53db749b256ee829550b08e7cd1a448bfd0"
     },
     {
-      "path": "docs/core/artifacts/t13_continuum_action_umklapp_direct_route_no_go.json",
-      "sha256": "167389b86edc90ea3f603f81f09d2e3219d5b513c5c1f3e4c481710d58495f9e"
+      "path": "docs/core/07_artifacts/topic13/t13_continuum_action_umklapp_direct_route_no_go.json",
+      "sha256": "5df3552791b3ad7971f4cc885d1fa369506962859f6551ac07101a2e3864abea"
     }
   ],
   "dependency_unlocked": [

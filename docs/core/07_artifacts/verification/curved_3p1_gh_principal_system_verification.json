@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_gh_principal_system_verification",
-  "generated_at": "2026-09-16T17:48:17.413693+00:00",
+  "generated_at": "2026-09-17T15:57:52.475058+00:00",
   "topic": "docs/core curved 3+1 parent",
   "status": "PASS_GH_PRINCIPAL_CHARACTERISTIC_SYSTEM",
   "major_result": {
@@ -81,9 +81,9 @@
     "accessed_on": "2026-08-28"
   },
   "source_hashes": {
-    "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92",
+    "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "74692aa7ebe2fd125c1d04ae34937efb715d6c67db42947c4593b67c6a5182d1",
     "docs/scripts/audit/audit_uet_curved_3p1_generalized_harmonic.py": "a95b9fff9a14fd0912d7d840dfdd4f8dc6d904c478e4a25aaf8df34066cbc2bb",
-    "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a"
+    "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "22e6b99c6a6070139ccbe9a5c6604788addc719b9e5b032b0416b175873c718e"
   },
   "parameters": [
     {
@@ -235,7 +235,7 @@
         ],
         "eigenvector_rank": 5,
         "transform_condition_number": 1.9663058539321208,
-        "characteristic_residual": 2.7755575615628914e-16,
+        "characteristic_residual": 2.6519114661352433e-16,
         "symmetrizer_residual": 0.0,
         "minimum_symmetrizer_eigenvalue": 0.5,
         "roundtrip_residual": 1.1102230246251565e-16
@@ -261,10 +261,10 @@
         ],
         "eigenvector_rank": 5,
         "transform_condition_number": 1.9663058539321208,
-        "characteristic_residual": 2.220446049250313e-16,
+        "characteristic_residual": 1.1102230246251565e-16,
         "symmetrizer_residual": 0.0,
         "minimum_symmetrizer_eigenvalue": 0.5,
-        "roundtrip_residual": 5.551115123125783e-17
+        "roundtrip_residual": 1.3877787807814457e-17
       },
       {
         "case": 1,
@@ -365,10 +365,10 @@
         ],
         "eigenvector_rank": 5,
         "transform_condition_number": 2.3971172417139024,
-        "characteristic_residual": 3.3306690738754696e-16,
+        "characteristic_residual": 2.220446049250313e-16,
         "symmetrizer_residual": 5.551115123125783e-17,
         "minimum_symmetrizer_eigenvalue": 0.4862425468862344,
-        "roundtrip_residual": 1.1102230246251565e-16
+        "roundtrip_residual": 5.551115123125783e-17
       },
       {
         "case": 1,
@@ -394,7 +394,7 @@
         "characteristic_residual": 1.1102230246251565e-16,
         "symmetrizer_residual": 2.7755575615628914e-17,
         "minimum_symmetrizer_eigenvalue": 0.4862425468862344,
-        "roundtrip_residual": 1.1102230246251565e-16
+        "roundtrip_residual": 1.3877787807814457e-17
       },
       {
         "case": 2,
@@ -420,7 +420,7 @@
         "characteristic_residual": 0.0,
         "symmetrizer_residual": 0.0,
         "minimum_symmetrizer_eigenvalue": 0.4457523584929245,
-        "roundtrip_residual": 1.6653345369377348e-16
+        "roundtrip_residual": 1.1102230246251565e-16
       },
       {
         "case": 2,
@@ -498,7 +498,7 @@
         "characteristic_residual": 4.440892098500626e-16,
         "symmetrizer_residual": 0.0,
         "minimum_symmetrizer_eigenvalue": 0.4457523584929245,
-        "roundtrip_residual": 1.1102230246251565e-16
+        "roundtrip_residual": 2.7755575615628914e-17
       },
       {
         "case": 2,

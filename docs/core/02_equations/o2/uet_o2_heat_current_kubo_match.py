@@ -212,7 +212,7 @@ def heat_current_kubo_match_state(
     # The entropy witness is the quadratic form in the retarded DC response,
     # not the unrelaxed source norm. This is the same L^+ response used by
     # the covariant balance lane: delta_f=L^+ b and delta_f^T L delta_f=b^T L^+ b.
-    entropy_from_operator = float(dc_matrix[0, 0])
+    entropy_from_operator = float(dc_matrix[0, 0]) / temperature
     entropy_match_residual = abs(
         entropy_from_operator - balance.kinetic_entropy_production
     ) / max(abs(balance.kinetic_entropy_production), 1.0)

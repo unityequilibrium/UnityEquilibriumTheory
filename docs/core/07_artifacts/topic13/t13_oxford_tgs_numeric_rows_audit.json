@@ -2,28 +2,29 @@
   "schema_version": "t13-oxford-tgs-numeric-rows-audit-v1",
   "artifact": "t13_oxford_tgs_numeric_rows_audit",
   "generated_at": "2026-09-17",
-  "status": "PASS_OXFORD_TGS_NUMERIC_ROWS_SOURCE_LOCKED_COMPARATOR",
+  "input_mode": "METADATA_ONLY_PUBLIC_BOUNDARY",
+  "raw_payload_available": false,
+  "status": "PASS_OXFORD_TGS_NUMERIC_ROWS_METADATA_BOUNDARY",
   "claim_promotion": false,
   "major_result": {
     "major_result_id": "T13_OXFORD_TGS_NUMERIC_ROWS_COMPARATOR",
     "topic": "0.13_Thermodynamic_Bridge",
     "closure_level": "CLOSED_FOR_LANE",
     "what_is_closed": [
-      "source-locked extraction of the selected Figure 1 map point",
-      "10 trace identities and 2002 source samples per trace",
-      "source time and intensity units preserved as labeled",
-      "yy1 minus yy subtraction preserved as the source-defined signal operation",
-      "raw extraction separated from fitting, thermal diffusivity, Ding C_src, and Phi calibration"
+      "Oxford TGS source-package identity and expected raw MATLAB payload hash are recorded",
+      "public checkout explicitly records that no MATLAB numeric rows were extracted",
+      "the pre-existing derived CSV, if present, is not consumed or promoted without its raw source payload",
+      "raw extraction is separated from fitting, thermal diffusivity, Ding C_src, and Phi calibration"
     ],
     "equation_or_mapping": "y_source(t) = yy1(t) - yy(t); source fit remains outside this artifact",
     "units": {
-      "xx_time_s": "s (source processing axis label)",
-      "xx1_time_s": "s (source processing axis label)",
-      "yy_signal_au": "intensity (a.u.) (source processing axis label)",
-      "yy1_signal_au": "intensity (a.u.) (source processing axis label)",
-      "y_delta_yy1_minus_yy_au": "a.u.; source subtraction only",
-      "ph_source_value": "source value; unit not declared in Figure 1 package",
-      "pv_source_value": "source value; unit not declared in Figure 1 package"
+      "xx_time_s": "s (source processing axis label; not loaded in public checkout)",
+      "xx1_time_s": "s (source processing axis label; not loaded in public checkout)",
+      "yy_signal_au": "intensity (a.u.) (source processing axis label; not loaded in public checkout)",
+      "yy1_signal_au": "intensity (a.u.) (source processing axis label; not loaded in public checkout)",
+      "y_delta_yy1_minus_yy_au": "a.u.; source subtraction contract only",
+      "ph_source_value": "source value; not loaded in public checkout",
+      "pv_source_value": "source value; not loaded in public checkout"
     },
     "derivation_class": "external source numeric-row extraction; no UET derivation",
     "observable": "Oxford Figure 1 transient-grating intensity trace",
@@ -31,17 +32,10 @@
     "evidence_artifacts": [
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/oxford_tgs_figure1_numeric_rows_manifest.json",
-        "sha256": "26d7f718f767c862ec84ddb80a15ebca8f66bf8f2e8b9a603a8b8857db94577c"
-      },
-      {
-        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/oxford_tgs_figure1_numeric_rows.csv.gz",
-        "sha256": "e5a6ee943166051f6dec99ced97306c381be0b2746113b5ff4cc4418be53e336"
-      },
-      {
-        "path": "docs/core/07_artifacts/topic13/t13_oxford_tgs_numeric_rows_audit.json"
+        "sha256": "0a7e948e664a26ffdbd0bcf7827beea77cbd64b697cdbb1694e29a11880b13ac"
       }
     ],
-    "verification_status": "PASS_OXFORD_TGS_NUMERIC_ROWS_SOURCE_LOCKED_COMPARATOR",
+    "verification_status": "PASS_OXFORD_TGS_NUMERIC_ROWS_METADATA_BOUNDARY",
     "open_blockers": [
       "material_and_temperature_regime_mapping_to_Ding_TTG_not_closed",
       "Ding_specific_PBTE_C_src_not_provided",
@@ -50,7 +44,7 @@
       "EOS_transport_KMS_entropy_and_dissipative_balance_remain_open"
     ],
     "dependency_unlocked": "Oxford TGS numeric comparator lane only; no Ding C_src, c_v, alpha_Phi_K, Full Topic 13, Core, Gravity, or external-validation unlock",
-    "claim_boundary": "Source-locked Oxford TGS Figure 1 raw-row extraction and source-defined signal subtraction only. It is not a Ding PBTE C_src source, not a volumetric c_v source, not a Phi calibration, and not external validation."
+    "claim_boundary": "Public metadata-only Oxford TGS boundary. No numeric rows were extracted or promoted because the raw MATLAB source payload is not present in this checkout."
   },
   "source": {
     "source_id": "oxford_ora_fh_group_tgs_methods_v1",
@@ -59,13 +53,15 @@
     "raw_mat_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/oxford_tgs_figure1/helsinki_unimp1_vacmod_map1.mat",
     "raw_mat_sha256": "1dbc938cf8cd048cf3ef7931cd78aef8236a72cd8048e2b42a56e9a9e04d2330",
     "raw_mat_expected_sha256": "1dbc938cf8cd048cf3ef7931cd78aef8236a72cd8048e2b42a56e9a9e04d2330",
-    "raw_mat_hash_match": true,
+    "raw_mat_hash_match": false,
+    "raw_mat_hash_is_expected_when_unavailable": true,
     "source_filename_variable": "helsinki_unimp1_vacmod_map1.mat",
     "processing_script_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/oxford_tgs_figure1/map_fitting_2d_supplementary_plots.m",
-    "processing_script_sha256": "8c044e2773cb2193c0ec5ea51e7ed33a1c63bb7a947e701947451f64e95f083d"
+    "processing_script_sha256": "8c044e2773cb2193c0ec5ea51e7ed33a1c63bb7a947e701947451f64e95f083d",
+    "processing_script_hash_is_expected_when_unavailable": true
   },
   "extraction": {
-    "reader": "h5py",
+    "reader": "h5py (not run: raw MATLAB v7.3 payload unavailable)",
     "matlab_dimension_order": "xxx(horizontal, vertical, trace, sample)",
     "hdf5_storage_shape": [
       2002,
@@ -81,11 +77,11 @@
     ],
     "selected_horizontal_index_1based": 1,
     "selected_vertical_index_1based": 2,
-    "selected_ph_source_value": 39.0,
-    "selected_pv_source_value": 3.9499999999999997,
-    "trace_count": 10,
-    "sample_count_per_trace": 2002,
-    "row_count": 20020,
+    "selected_ph_source_value": null,
+    "selected_pv_source_value": null,
+    "trace_count": 0,
+    "sample_count_per_trace": 0,
+    "row_count": 0,
     "raw_variables": [
       "xx",
       "xx1",
@@ -94,7 +90,8 @@
     ],
     "derived_column": "y_delta_yy1_minus_yy_au = yy1_signal_au - yy_signal_au",
     "output_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/oxford_tgs_figure1_numeric_rows.csv.gz",
-    "output_sha256": "e5a6ee943166051f6dec99ced97306c381be0b2746113b5ff4cc4418be53e336"
+    "output_sha256": null,
+    "output_present_but_unverified": true
   },
   "checks": {
     "manifest_status_is_source_locked": true,
@@ -117,12 +114,12 @@
     "xie_holdout_not_accessed": true,
     "alpha_not_emitted": true
   },
-  "numeric_rows_emitted": 20020,
+  "numeric_rows_emitted": 0,
   "numeric_alpha_Phi_K_emitted": false,
   "parameter_fitting_performed": false,
   "target_data_used": false,
   "xie_2026_accessed": false,
   "controlling_blocker": "material_temperature_and_physical_thermal_mapping_missing",
-  "next_action": "Retain the rows as a source comparator; do not infer c_v, C_src, thermal diffusivity, or alpha_Phi_K without a declared source mapping.",
-  "claim_boundary": "Source-locked Oxford TGS Figure 1 raw-row extraction and source-defined signal subtraction only. It is not a Ding PBTE C_src source, not a volumetric c_v source, not a Phi calibration, and not external validation."
+  "next_action": "Acquire or restore a permitted raw MATLAB v7.3 source payload, verify its hash, and rerun extraction before promoting numeric rows.",
+  "claim_boundary": "Public metadata-only Oxford TGS boundary. No numeric rows were extracted or promoted because the raw MATLAB source payload is not present in this checkout."
 }

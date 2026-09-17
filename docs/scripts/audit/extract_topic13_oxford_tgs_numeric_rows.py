@@ -48,12 +48,103 @@ def load_json(path: Path) -> dict:
     return value
 
 
+def build_metadata_only_manifest(package: dict) -> dict:
+    records = {record["archive_file"]: record for record in package["raw_files"]}
+    mat_record = records["helsinki_unimp1_vacmod_map1.mat"]
+    processing_record = records["map_fitting_2d_supplementary_plots.m"]
+    output_present = CSV_GZ.is_file()
+    return {
+        "schema_version": "t13-oxford-tgs-numeric-rows-manifest-v1",
+        "artifact": "oxford_tgs_figure1_numeric_rows_manifest",
+        "generated_at": date.today().isoformat(),
+        "status": "METADATA_ONLY_PUBLIC_BOUNDARY_EXTRACTION_PENDING",
+        "input_mode": "METADATA_ONLY_PUBLIC_BOUNDARY",
+        "raw_payload_available": False,
+        "topic": "0.13_Thermodynamic_Bridge",
+        "source": {
+            "source_id": package["source"]["source_id"],
+            "doi": package["source"]["doi"],
+            "record_url": package["source"]["record_url"],
+            "raw_mat_path": mat_record["local_path"],
+            "raw_mat_sha256": mat_record["sha256"],
+            "raw_mat_expected_sha256": mat_record["sha256"],
+            "raw_mat_hash_match": False,
+            "raw_mat_hash_is_expected_when_unavailable": True,
+            "source_filename_variable": mat_record["archive_file"],
+            "processing_script_path": processing_record["local_path"],
+            "processing_script_sha256": processing_record["sha256"],
+            "processing_script_hash_is_expected_when_unavailable": True,
+        },
+        "extraction": {
+            "reader": "h5py (not run: raw MATLAB v7.3 payload unavailable)",
+            "matlab_dimension_order": "xxx(horizontal, vertical, trace, sample)",
+            "hdf5_storage_shape": list(EXPECTED_SHAPE_HDF5),
+            "hdf5_to_matlab_transpose": [3, 2, 1, 0],
+            "selected_horizontal_index_1based": MATLAB_MAP_HORIZONTAL_INDEX,
+            "selected_vertical_index_1based": MATLAB_MAP_VERTICAL_INDEX,
+            "selected_ph_source_value": None,
+            "selected_pv_source_value": None,
+            "trace_count": 0,
+            "sample_count_per_trace": 0,
+            "row_count": 0,
+            "raw_variables": ["xx", "xx1", "yy", "yy1"],
+            "derived_column": "y_delta_yy1_minus_yy_au = yy1_signal_au - yy_signal_au",
+            "output_path": CSV_GZ.relative_to(ROOT).as_posix(),
+            "output_sha256": None,
+            "output_present_but_unverified": output_present,
+        },
+        "units": {
+            "xx_time_s": "s (source processing axis label; not loaded in public checkout)",
+            "xx1_time_s": "s (source processing axis label; not loaded in public checkout)",
+            "yy_signal_au": "intensity (a.u.) (source processing axis label; not loaded in public checkout)",
+            "yy1_signal_au": "intensity (a.u.) (source processing axis label; not loaded in public checkout)",
+            "y_delta_yy1_minus_yy_au": "a.u.; source subtraction contract only",
+            "ph_source_value": "source value; not loaded in public checkout",
+            "pv_source_value": "source value; not loaded in public checkout",
+        },
+        "uncertainty_boundary": {
+            "row_level_uncertainty_emitted": False,
+            "source_fit_start_std_proxy_declared": "Bp_std_l",
+            "fit_performed_by_extractor": False,
+            "thermal_diffusivity_emitted": False,
+            "material_identity_declared_for_selected_map": False,
+            "temperature_declared_for_selected_map": False,
+        },
+        "holdout_policy": {
+            "xie_2026_accessed": False,
+            "xie_2026_source_data_consumed": False,
+            "target_curve_used": False,
+            "ding_target_curve_used": False,
+            "alpha_fit_used": False,
+            "numeric_alpha_Phi_K_emitted": False,
+        },
+        "data_role": "TRAINING/COMPARISON",
+        "claim_boundary": (
+            "Public metadata-only Oxford TGS boundary. No MATLAB rows were extracted in this checkout; "
+            "the existing derived CSV, if present, is not consumed or promoted without the raw source payload."
+        ),
+    }
+
 def main() -> int:
     package = load_json(PACKAGE)
-    if not MAT.is_file():
-        raise SystemExit(f"missing source file: {MAT}")
-    if not PROCESSING.is_file():
-        raise SystemExit(f"missing processing source: {PROCESSING}")
+    if not MAT.is_file() or not PROCESSING.is_file():
+        manifest = build_metadata_only_manifest(package)
+        MANIFEST.write_text(
+            json.dumps(manifest, indent=2, ensure_ascii=True) + "\n",
+            encoding="utf-8",
+        )
+        print(
+            json.dumps(
+                {
+                    "status": manifest["status"],
+                    "rows": 0,
+                    "raw_payload_available": False,
+                    "manifest": MANIFEST.relative_to(ROOT).as_posix(),
+                },
+                indent=2,
+            )
+        )
+        return 0
 
     with h5py.File(MAT, "r") as source:
         arrays = {

@@ -36,8 +36,8 @@
   ],
   "controlling_blocker": "topic_0_11_signed_noether_charge_eos_transport_matching_missing",
   "environment": {
-    "platform": "Windows-11-10.0.26200-SP0",
-    "python_version": "3.12.14"
+    "platform": "portable-research-runtime",
+    "python_version": "3.12"
   },
   "evidence_status": "CONDITIONAL_HYDRODYNAMIC_COORDINATE_COMPATIBILITY",
   "gates": {
@@ -141,7 +141,7 @@
       "topic_controller": "ch_finite_k_replicate_temporal_acquisition_plan_defined_execution_open"
     }
   },
-  "generated_at": "2026-09-17T10:39:10+00:00",
+  "generated_at": "2026-09-17T12:53:13+00:00",
   "global_universe_closure": "UNRESOLVED",
   "limitations": [
     "No simulation, parameter fit, estimator rerun, or external-data comparison is performed.",
@@ -163,14 +163,14 @@
       "hash_scope": "canonical_json_without_generated_at_timestamp_utc_or_environment",
       "path": "docs/core/07_artifacts/verification/noether_phase_field_state_map_verification.json",
       "role": "Core Wave 9 state-coordinate verification",
-      "scientific_payload_sha256": "ee9e8a6384bd8545df9a193e53739d3b3b28c9949e253ac781199731b866c9da"
+      "scientific_payload_sha256": "e5bc35b0f5376bbeb70d11495b32e065ca1102349524c7da5c0d542c0c28fb79"
     },
     {
       "exists": true,
       "hash_scope": "canonical_json_without_generated_at_timestamp_utc_or_environment",
       "path": "docs/core/07_artifacts/correspondence/noether_phase_field_map_formula_audit.json",
       "role": "Core Wave 9 formula audit",
-      "scientific_payload_sha256": "3bd535be5f42ebb30724409a237693583d45418a9fa3354e312f826bb4602450"
+      "scientific_payload_sha256": "8d2843df68ac42e29ad173b200f12ccded14569e7560609426270f3d2ddad1ea"
     },
     {
       "exists": true,

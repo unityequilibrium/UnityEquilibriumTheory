@@ -1,7 +1,7 @@
 {
   "schema_version": "uet-equation-registry-addendum-v1",
   "status": "CONDITIONAL_INTERFACE_NOT_ACCEPTED_UET_ACTION",
-  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
   "equation_entries": [
     {
       "equation_id": "uet.o2.thermal.anisotropic_thermoelastic_response_bridge",
@@ -79,10 +79,10 @@
         "positive versus negative Schur stability margin"
       ],
       "implementation_paths": [
-        "docs/core/uet_anisotropic_thermoelastic_response_bridge.py"
+        "docs/core/03_lanes/thermal/uet_anisotropic_thermoelastic_response_bridge.py"
       ],
       "verifier_paths": [
-        "docs/core/test/test_topic13_anisotropic_thermoelastic_response_bridge.py",
+        "docs/core/05_tests/regression/root/test_topic13_anisotropic_thermoelastic_response_bridge.py",
         "docs/scripts/audit/audit_topic13_anisotropic_thermoelastic_response_bridge.py"
       ],
       "observable": "Conditional local adiabatic tensor DeltaPhi-to-DeltaT response",
@@ -92,8 +92,8 @@
       "verification_status": "PASS_CONDITIONAL_ANISOTROPIC_THERMOELASTIC_RESPONSE_BRIDGE",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_anisotropic_thermoelastic_response_bridge_audit.json",
-          "sha256": "9f091208770210f39e7d7ea2b552f2bddeb821999d58d20f3810df0435135312"
+          "path": "docs/core/07_artifacts/topic13/t13_anisotropic_thermoelastic_response_bridge_audit.json",
+          "sha256": "1c08907d381a4c40497e5cfd240e714e24107d981e995cc1c7d8c8e595579bf1"
         }
       ],
       "downstream_dependencies": [

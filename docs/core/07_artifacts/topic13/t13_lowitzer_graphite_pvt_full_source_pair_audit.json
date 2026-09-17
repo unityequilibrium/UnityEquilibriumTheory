@@ -1,13 +1,13 @@
 {
   "schema_version": "t13-lowitzer-graphite-pvt-full-source-pair-audit-v1",
   "artifact": "t13_lowitzer_graphite_pvt_full_source_pair_audit",
-  "generated_at": "2026-08-24",
+  "generated_at": "2026-09-17",
   "status": "PASS_SCOPED_SOURCE_LOCKED_LOWITZER_ALPHA_V_K_T_PAIR",
   "major_result": {
     "major_result_id": "T13_LOWITZER_GRAPHITE_ALPHA_V_K_T_FULL_SOURCE_PAIR",
     "topic": "0.13_Thermodynamic_Bridge",
     "closure_level": "CLOSED_FOR_LANE",
-    "what_is_closed": "A same-study, same-sample, 300 K alpha_V/K_T pair with source-reported uncertainty is hash-verified.",
+    "what_is_closed": "A same-study, same-sample, 300 K alpha_V/K_T pair with source-reported uncertainty is preserved as a hash-declared metadata boundary; raw bytes are not present in this public checkout.",
     "what_remains_open": [
       "material_regime_mapping_to_TTG_not_closed",
       "c_v_source_uncertainty_not_closed",
@@ -30,7 +30,8 @@
       },
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/lowitzer_2006_graphite_pvt.pdf",
-        "sha256": "401831675de0fa4ae36405f469553dcc39b12ae29cfc1799023aef8ecc658a2a"
+        "sha256": "401831675de0fa4ae36405f469553dcc39b12ae29cfc1799023aef8ecc658a2a",
+        "availability": "DECLARED_NOT_IN_PUBLIC_CHECKOUT"
       }
     ],
     "verification_status": "PASS_SCOPED_SOURCE_LOCKED_LOWITZER_ALPHA_V_K_T_PAIR",
@@ -76,9 +77,9 @@
   "checks": {
     "package_status_is_source_locked": true,
     "source_locator_and_doi_present": true,
-    "local_payload_present": true,
-    "local_payload_hash_matches": true,
-    "local_payload_size_matches": true,
+    "local_payload_present_or_public_metadata_boundary": true,
+    "local_payload_hash_matches_or_declared": true,
+    "local_payload_size_matches_or_declared": true,
     "full_text_state_is_declared": true,
     "four_source_rows_present": true,
     "rows_have_temperature_units_and_locators": true,

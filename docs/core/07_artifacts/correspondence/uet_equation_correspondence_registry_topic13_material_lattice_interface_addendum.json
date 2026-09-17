@@ -1,7 +1,7 @@
 {
   "schema_version": "uet-equation-registry-addendum-v1",
   "status": "CONDITIONAL_INTERFACE_NOT_MERGED_AS_ACCEPTED_ACTION",
-  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
   "equation_entries": [
     {
       "equation_id": "uet.o2.thermal.material_lattice_interface_contract",
@@ -79,10 +79,10 @@
         "field-coordinate rescaling"
       ],
       "implementation_paths": [
-        "docs/core/uet_material_lattice_interface_contract.py"
+        "docs/core/03_lanes/thermal/uet_material_lattice_interface_contract.py"
       ],
       "verifier_paths": [
-        "docs/core/test/test_topic13_material_lattice_interface_contract.py",
+        "docs/core/05_tests/regression/root/test_topic13_material_lattice_interface_contract.py",
         "docs/scripts/audit/audit_topic13_material_lattice_interface_contract.py"
       ],
       "observable": "Conditional phonon energy/current response to normalized Phi; no numeric physical coefficient",
@@ -92,8 +92,8 @@
       "verification_status": "PASS_CONDITIONAL_MATERIAL_LATTICE_INTERFACE_CONTRACT",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_uet_material_lattice_interface_contract_audit.json",
-          "sha256": "e6cfea6a55f8d54040fcaa570c3b244a98bd454fd1462144f8948c5caa16487c"
+          "path": "docs/core/07_artifacts/topic13/t13_uet_material_lattice_interface_contract_audit.json",
+          "sha256": "122ae24ba61f244f56c40e55c8162a552d14022f8191df2e2a8e94a8c334c4c8"
         }
       ],
       "downstream_dependencies": [

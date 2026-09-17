@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-cv-source-reconciliation-v1",
   "artifact": "t13_cv_source_reconciliation_audit",
-  "generated_at": "2026-08-25",
+  "generated_at": "2026-09-17",
   "status": "PASS_SCOPED_CV_SOURCE_RECONCILIATION_OPEN",
   "major_result": {
     "major_result_id": "T13_CV_SOURCE_RECONCILIATION",
@@ -33,40 +33,40 @@
     "data_role": "INTERNAL_SOURCE_RECONCILIATION_NOT_CALIBRATION",
     "evidence_artifacts": [
       {
-        "path": "docs/core/artifacts/t13_bipm_specific_heat_source_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_bipm_specific_heat_source_audit.json",
         "sha256": "6d71952c1ab294d3e391ca257abd49cde10c534f2265612561efacd4e2cc8a4d"
       },
       {
-        "path": "docs/core/artifacts/t13_npl_rsa40_graphite_specific_heat_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_npl_rsa40_graphite_specific_heat_audit.json",
         "sha256": "55d3dfef10bd44c3e0257fa8abb4212279445fd357310999a60f49b752865831"
       },
       {
-        "path": "docs/core/artifacts/t13_gatech_graphite_source_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_gatech_graphite_source_audit.json",
         "sha256": "56866720546cdf201c5b45ef7262f82679a5676482835d6d476933f114b3d394"
       },
       {
-        "path": "docs/core/artifacts/t13_iaea_gr280_same_state_cp_source_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_iaea_gr280_same_state_cp_source_audit.json",
         "sha256": "c0091ce3d6624e5fd1b5e814f2bd3822459a5d84426cd861d31a9a0052710213"
       },
       {
-        "path": "docs/core/artifacts/t13_iaea_cv_uncertainty_boundary_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_iaea_cv_uncertainty_boundary_audit.json",
         "sha256": "a51c4318a72603c521fd9c9aaa48f759a95054a9da00707427c59cd3abe34b3e"
       },
       {
-        "path": "docs/core/artifacts/t13_mp48_independent_graphite_cv_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_mp48_independent_graphite_cv_audit.json",
         "sha256": "56493e6d4883f3f78d24f630f5cdc6718eec350ce264152146979e3bb0ee39a9"
       },
       {
-        "path": "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
         "sha256": "818230a6f8aa68a14a1f642e1e7342d70bfa657f6e05476d3e190d336e77b386"
       },
       {
-        "path": "docs/core/artifacts/t13_desorbo_ceylon_graphite_cp_audit.json",
-        "sha256": "33ad2745513d3c2ddfdce02978fbf9f1df7b804529cda33cc0d21ac6b11cd7a8"
+        "path": "docs/core/07_artifacts/topic13/t13_desorbo_ceylon_graphite_cp_audit.json",
+        "sha256": "beba516b7fe770dcd602a0a5b5a562ea34595da7c8f92b25a2c25811d571e87b"
       },
       {
-        "path": "docs/core/artifacts/t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json",
-        "sha256": "8714a13530c99cba457b86d529928747f26b8536befe782843387f3f2a362add"
+        "path": "docs/core/07_artifacts/topic13/t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json",
+        "sha256": "7abf9b3292d2d46a2cb476768f452f23f6bad7ef40c2614255cf5c1f55048df0"
       }
     ],
     "verification_status": "PASS_SCOPED_CV_SOURCE_RECONCILIATION_OPEN",
@@ -84,7 +84,7 @@
   "candidates": [
     {
       "candidate_id": "bipm_2006_graphite",
-      "artifact_path": "docs/core/artifacts/t13_bipm_specific_heat_source_audit.json",
+      "artifact_path": "docs/core/07_artifacts/topic13/t13_bipm_specific_heat_source_audit.json",
       "artifact_sha256": "6d71952c1ab294d3e391ca257abd49cde10c534f2265612561efacd4e2cc8a4d",
       "artifact_status": "PASS_SCOPED_BIPM_CP_COMPARATOR_CV_OPEN",
       "closure_level": "CLOSED_FOR_LANE",
@@ -100,7 +100,7 @@
     },
     {
       "candidate_id": "npl_rsa40_ig11",
-      "artifact_path": "docs/core/artifacts/t13_npl_rsa40_graphite_specific_heat_audit.json",
+      "artifact_path": "docs/core/07_artifacts/topic13/t13_npl_rsa40_graphite_specific_heat_audit.json",
       "artifact_sha256": "55d3dfef10bd44c3e0257fa8abb4212279445fd357310999a60f49b752865831",
       "artifact_status": "PASS_SCOPED_NPL_CP_UNCERTAINTY_COMPARATOR_CV_OPEN",
       "closure_level": "CLOSED_FOR_LANE",
@@ -116,7 +116,7 @@
     },
     {
       "candidate_id": "gatech_gen3csp_graphite_cp_95ci",
-      "artifact_path": "docs/core/artifacts/t13_gatech_graphite_source_audit.json",
+      "artifact_path": "docs/core/07_artifacts/topic13/t13_gatech_graphite_source_audit.json",
       "artifact_sha256": "56866720546cdf201c5b45ef7262f82679a5676482835d6d476933f114b3d394",
       "artifact_status": "PASS_SOURCE_CP_95CI_CV_OPEN",
       "closure_level": "CLOSED_FOR_LANE",
@@ -132,7 +132,7 @@
     },
     {
       "candidate_id": "iaea_gr280_same_state_cp",
-      "artifact_path": "docs/core/artifacts/t13_iaea_gr280_same_state_cp_source_audit.json",
+      "artifact_path": "docs/core/07_artifacts/topic13/t13_iaea_gr280_same_state_cp_source_audit.json",
       "artifact_sha256": "c0091ce3d6624e5fd1b5e814f2bd3822459a5d84426cd861d31a9a0052710213",
       "artifact_status": "PASS_SCOPED_IAEA_GR280_SAME_STATE_CP_COMPARATOR",
       "closure_level": "CLOSED_FOR_LANE",
@@ -148,7 +148,7 @@
     },
     {
       "candidate_id": "iaea_manufactured_graphite",
-      "artifact_path": "docs/core/artifacts/t13_iaea_cv_uncertainty_boundary_audit.json",
+      "artifact_path": "docs/core/07_artifacts/topic13/t13_iaea_cv_uncertainty_boundary_audit.json",
       "artifact_sha256": "a51c4318a72603c521fd9c9aaa48f759a95054a9da00707427c59cd3abe34b3e",
       "artifact_status": "PASS_SCOPED_IAEA_CV_UNCERTAINTY_BOUNDARY_NO_GO",
       "closure_level": "CLOSED_FOR_LANE",
@@ -164,7 +164,7 @@
     },
     {
       "candidate_id": "mp48_harmonic_graphite",
-      "artifact_path": "docs/core/artifacts/t13_mp48_independent_graphite_cv_audit.json",
+      "artifact_path": "docs/core/07_artifacts/topic13/t13_mp48_independent_graphite_cv_audit.json",
       "artifact_sha256": "56493e6d4883f3f78d24f630f5cdc6718eec350ce264152146979e3bb0ee39a9",
       "artifact_status": "PASS_INDEPENDENT_NUMERIC_CV_WITH_EPISTEMIC_ENVELOPE",
       "closure_level": "CLOSED_FOR_LANE",
@@ -180,7 +180,7 @@
     },
     {
       "candidate_id": "lowitzer_graphite_pvt",
-      "artifact_path": "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
+      "artifact_path": "docs/core/07_artifacts/topic13/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
       "artifact_sha256": "818230a6f8aa68a14a1f642e1e7342d70bfa657f6e05476d3e190d336e77b386",
       "artifact_status": "PASS_SCOPED_SOURCE_LOCKED_LOWITZER_ALPHA_V_K_T_PAIR",
       "closure_level": "CLOSED_FOR_LANE",
@@ -196,8 +196,8 @@
     },
     {
       "candidate_id": "desorbo_ceylon_graphite",
-      "artifact_path": "docs/core/artifacts/t13_desorbo_ceylon_graphite_cp_audit.json",
-      "artifact_sha256": "33ad2745513d3c2ddfdce02978fbf9f1df7b804529cda33cc0d21ac6b11cd7a8",
+      "artifact_path": "docs/core/07_artifacts/topic13/t13_desorbo_ceylon_graphite_cp_audit.json",
+      "artifact_sha256": "beba516b7fe770dcd602a0a5b5a562ea34595da7c8f92b25a2c25811d571e87b",
       "artifact_status": "PASS_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_LOCKED_COMPARATOR",
       "closure_level": "CLOSED_FOR_LANE",
       "quantity_class": "natural_graphite_molar_Cp_without_standard_uncertainty",
@@ -212,8 +212,8 @@
     },
     {
       "candidate_id": "farooqui_ig210",
-      "artifact_path": "docs/core/artifacts/t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json",
-      "artifact_sha256": "8714a13530c99cba457b86d529928747f26b8536befe782843387f3f2a362add",
+      "artifact_path": "docs/core/07_artifacts/topic13/t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json",
+      "artifact_sha256": "7abf9b3292d2d46a2cb476768f452f23f6bad7ef40c2614255cf5c1f55048df0",
       "artifact_status": "PASS_SCOPED_FAROOQUI_IG210_VOLUMETRIC_CP_UNCERTAINTY",
       "closure_level": "CLOSED_FOR_LANE",
       "quantity_class": "volumetric_Cp_with_expanded_uncertainty",

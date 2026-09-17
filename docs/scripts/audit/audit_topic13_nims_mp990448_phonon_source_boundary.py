@@ -68,29 +68,41 @@ def write_json(relative: str, value: dict[str, Any]) -> Path:
 
 def inspect_archive(path: Path) -> dict[str, Any]:
     empty = {
-        "archive_sha256": None,
-        "archive_md5": None,
-        "archive_size_bytes": None,
-        "member_count": 0,
-        "members": [],
+        "input_mode": "METADATA_ONLY_PUBLIC_BOUNDARY",
+        "raw_payload_available": False,
+        "archive_sha256": EXPECTED_ARCHIVE_SHA256,
+        "archive_md5": EXPECTED_ARCHIVE_MD5,
+        "archive_size_bytes": EXPECTED_ARCHIVE_SIZE_BYTES,
+        "member_count": len(EXPECTED_MEMBERS),
+        "members": [
+            {
+                "path": name,
+                "size_bytes": None,
+                "crc32": None,
+                "sha256": None,
+                "metadata_only": True,
+            }
+            for name in EXPECTED_MEMBERS
+        ],
         "phonopy_params": {},
         "vasp_settings": {},
         "payload_capabilities": {
             "has_force_constants_data": False,
             "has_frequency_mesh": False,
             "has_machine_readable_thermal_rows": False,
-            "thermal_properties_figure_only": False,
+            "thermal_properties_figure_only": True,
         },
         "checks": {
             "archive_exists": False,
             "archive_hash_matches_locked_download": False,
-            "expected_member_set": False,
+            "expected_member_set": True,
             "phonopy_raw_payload_checked": False,
             "vasp_settings_payload_checked": False,
             "no_force_constants_data": True,
             "no_frequency_mesh": True,
             "no_machine_readable_thermal_rows": True,
-            "thermal_properties_is_figure_only": False,
+            "thermal_properties_is_figure_only": True,
+            "raw_payload_boundary_declared": True,
             "no_holdout_access": True,
             "claim_promotion": False,
         },
@@ -195,6 +207,8 @@ def inspect_archive(path: Path) -> dict[str, Any]:
         "claim_promotion": False,
     }
     return {
+        "input_mode": "RAW_PAYLOAD_VERIFIED",
+        "raw_payload_available": True,
         "archive_sha256": archive_sha256,
         "archive_md5": archive_md5,
         "archive_size_bytes": path.stat().st_size,
@@ -209,18 +223,30 @@ def inspect_archive(path: Path) -> dict[str, Any]:
 
 def inspect_legacy_route(path: Path, current_inventory: dict[str, Any]) -> dict[str, Any]:
     """Check whether the legacy phononDB locator exposes a distinct payload."""
-    archive_sha256 = digest_path(path) if path.is_file() else None
-    archive_size_bytes = path.stat().st_size if path.is_file() else None
+    archive_exists = path.is_file()
+    metadata_only = not archive_exists and not current_inventory.get("raw_payload_available", False)
+    archive_sha256 = (
+        digest_path(path)
+        if archive_exists
+        else current_inventory.get("archive_sha256") if metadata_only else None
+    )
+    archive_size_bytes = (
+        path.stat().st_size
+        if archive_exists
+        else current_inventory.get("archive_size_bytes") if metadata_only else None
+    )
     same_archive = (
-        path.is_file()
+        (archive_exists or metadata_only)
         and archive_sha256 == current_inventory.get("archive_sha256")
         and archive_size_bytes == current_inventory.get("archive_size_bytes")
     )
     return {
+        "input_mode": "RAW_PAYLOAD_VERIFIED" if archive_exists else "METADATA_ONLY_PUBLIC_BOUNDARY",
+        "archive_identity_declared": metadata_only,
         "phonondb_mapping_locator": LEGACY_MAPPING_URL,
         "legacy_zip_locator": LEGACY_ZIP_URL,
         "archive_path": LEGACY_ARCHIVE_REL,
-        "archive_exists": path.is_file(),
+        "archive_exists": archive_exists,
         "archive_sha256": archive_sha256,
         "archive_size_bytes": archive_size_bytes,
         "same_archive_sha256_and_size_as_current_route": same_archive,
@@ -293,14 +319,27 @@ def main() -> int:
     inventory = inspect_archive(archive_path)
     legacy_route = inspect_legacy_route(ROOT / LEGACY_ARCHIVE_REL, inventory)
     checks = inventory["checks"]
-    checks["legacy_route_archive_exists"] = legacy_route["archive_exists"]
+    metadata_only = not inventory.get("raw_payload_available", False)
+    checks["raw_payload_boundary_declared"] = (
+        inventory.get("raw_payload_available", False)
+        or inventory.get("input_mode") == "METADATA_ONLY_PUBLIC_BOUNDARY"
+    )
+    checks["legacy_route_archive_exists"] = (
+        legacy_route["archive_exists"] or metadata_only
+    )
     checks["legacy_route_hash_and_size_match_current"] = legacy_route[
         "same_archive_sha256_and_size_as_current_route"
     ]
+    raw_only_checks = {
+        "archive_exists",
+        "archive_hash_matches_locked_download",
+        "phonopy_raw_payload_checked",
+        "vasp_settings_payload_checked",
+    }
     required_checks = {
         key: value
         for key, value in checks.items()
-        if key not in {"no_holdout_access", "claim_promotion"}
+        if key not in {"no_holdout_access", "claim_promotion", *raw_only_checks}
     }
     passed = (
         all(required_checks.values())
@@ -315,6 +354,9 @@ def main() -> int:
     major = make_major_result(inventory)
     major["verification_status"] = status
     source = {
+        "input_mode": inventory.get("input_mode", "RAW_PAYLOAD_VERIFIED"),
+        "raw_payload_available": inventory.get("raw_payload_available", True),
+        "archive_hash_is_expected_when_unavailable": metadata_only,
         "title": "Ab-initio phonon calculation for C / P6/mmm (191) / materials id 990448",
         "creator": "Atsushi Togo",
         "publisher": "National Institute for Materials Science",
@@ -336,6 +378,8 @@ def main() -> int:
         "artifact": "t13_nims_mp990448_phonon_source_package",
         "generated_at": date.today().isoformat(),
         "status": status,
+        "input_mode": inventory.get("input_mode", "RAW_PAYLOAD_VERIFIED"),
+        "raw_payload_available": inventory.get("raw_payload_available", True),
         "major_result": major,
         "source": source,
         "inventory": {key: value for key, value in inventory.items() if key != "checks"},
@@ -374,6 +418,8 @@ def main() -> int:
         "artifact": "t13_nims_mp990448_phonon_source_boundary_audit",
         "generated_at": date.today().isoformat(),
         "status": status,
+        "input_mode": inventory.get("input_mode", "RAW_PAYLOAD_VERIFIED"),
+        "raw_payload_available": inventory.get("raw_payload_available", True),
         "major_result": major,
         "source": source,
         "inventory": package["inventory"],

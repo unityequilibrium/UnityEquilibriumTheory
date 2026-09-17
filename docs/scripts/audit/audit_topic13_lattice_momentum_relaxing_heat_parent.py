@@ -109,7 +109,7 @@ def main() -> int:
     ]
     source_paths = [
         "docs/core/03_lanes/thermal/uet_lattice_momentum_relaxing_heat_parent.py",
-        "docs/core/test/test_topic13_lattice_momentum_relaxing_heat_parent.py",
+        "docs/core/05_tests/regression/root/test_topic13_lattice_momentum_relaxing_heat_parent.py",
         "docs/scripts/audit/audit_topic13_lattice_momentum_relaxing_heat_parent.py",
     ]
     prior_path = "docs/core/07_artifacts/topic13/t13_coupled_response_heat_carrier_no_go_audit.json"

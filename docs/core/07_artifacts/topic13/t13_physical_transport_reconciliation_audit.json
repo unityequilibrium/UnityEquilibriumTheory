@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-physical-transport-reconciliation-v1",
   "artifact": "t13_physical_transport_reconciliation_audit",
-  "generated_at": "2026-08-29",
+  "generated_at": "2026-09-17",
   "status": "PASS_SCOPED_PHYSICAL_TRANSPORT_RECONCILIATION_OPEN",
   "major_result": {
     "major_result_id": "T13_PHYSICAL_TRANSPORT_RECONCILIATION",
@@ -37,27 +37,27 @@
     "data_role": "INTERNAL_TRANSPORT_RECONCILIATION_NOT_UET_CALIBRATION",
     "evidence_artifacts": [
       {
-        "path": "docs/core/artifacts/t13_physical_kubo_coefficient_provenance_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_physical_kubo_coefficient_provenance_audit.json",
         "sha256": "af78a1eb742e6438d679263771ef85b0f500726f4342a5f0a7ccefbe07a54f63",
         "role": "physical coefficient acceptance schema and fail-closed gate"
       },
       {
-        "path": "docs/core/artifacts/t13_transport_kms_entropy_status_boundary_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_transport_kms_entropy_status_boundary_audit.json",
         "sha256": "ea7f6c0b9696e14e2e3164548207754508f105a7fd675820eb79c0338fdecf13",
         "role": "formal SK/KMS, entropy, and heat-flux status boundary"
       },
       {
-        "path": "docs/core/artifacts/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json",
         "sha256": "5e909ff97aa0476619235460c012313f36b6065e642bbe4f7fba63f36bd8c7f6",
         "role": "declared action-derived UET natural-unit Kubo channel"
       },
       {
-        "path": "docs/core/artifacts/t13_kim_2018_graphite_green_kubo_external_input_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_kim_2018_graphite_green_kubo_external_input_audit.json",
         "sha256": "13b2b2c677d2d4d0e1035df99b9b6ae40619040caa976f71baf1d406bb25b208",
         "role": "source-locked external standard-physics comparator"
       },
       {
-        "path": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+        "path": "docs/core/07_artifacts/topic13/t13_flat_thermodynamic_bridge_components_gate.json",
         "sha256": "65a85d9abc2d051570af72898bd8b8848c29d1fb20685c9b284ce6915fe8a8fe",
         "role": "formal flat thermodynamic bridge component gate"
       }
@@ -78,7 +78,7 @@
     {
       "candidate_id": "physical_kubo_provenance_gate",
       "artifact": {
-        "path": "docs/core/artifacts/t13_physical_kubo_coefficient_provenance_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_physical_kubo_coefficient_provenance_audit.json",
         "sha256": "af78a1eb742e6438d679263771ef85b0f500726f4342a5f0a7ccefbe07a54f63",
         "role": "physical coefficient acceptance schema and fail-closed gate"
       },
@@ -95,7 +95,7 @@
     {
       "candidate_id": "formal_sk_kms_entropy_boundary",
       "artifact": {
-        "path": "docs/core/artifacts/t13_transport_kms_entropy_status_boundary_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_transport_kms_entropy_status_boundary_audit.json",
         "sha256": "ea7f6c0b9696e14e2e3164548207754508f105a7fd675820eb79c0338fdecf13",
         "role": "formal SK/KMS, entropy, and heat-flux status boundary"
       },
@@ -112,7 +112,7 @@
     {
       "candidate_id": "uet_condensed_relative_flow_natural_kubo",
       "artifact": {
-        "path": "docs/core/artifacts/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json",
         "sha256": "5e909ff97aa0476619235460c012313f36b6065e642bbe4f7fba63f36bd8c7f6",
         "role": "declared action-derived UET natural-unit Kubo channel"
       },
@@ -132,7 +132,7 @@
     {
       "candidate_id": "kim_2018_external_graphite_green_kubo",
       "artifact": {
-        "path": "docs/core/artifacts/t13_kim_2018_graphite_green_kubo_external_input_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_kim_2018_graphite_green_kubo_external_input_audit.json",
         "sha256": "13b2b2c677d2d4d0e1035df99b9b6ae40619040caa976f71baf1d406bb25b208",
         "role": "source-locked external standard-physics comparator"
       },
@@ -151,7 +151,7 @@
     {
       "candidate_id": "flat_formal_bridge_with_external_inputs",
       "artifact": {
-        "path": "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+        "path": "docs/core/07_artifacts/topic13/t13_flat_thermodynamic_bridge_components_gate.json",
         "sha256": "65a85d9abc2d051570af72898bd8b8848c29d1fb20685c9b284ce6915fe8a8fe",
         "role": "formal flat thermodynamic bridge component gate"
       },

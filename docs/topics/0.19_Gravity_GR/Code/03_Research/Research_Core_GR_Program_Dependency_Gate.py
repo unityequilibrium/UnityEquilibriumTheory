@@ -10,7 +10,6 @@ from __future__ import annotations
 
 import hashlib
 import json
-import platform
 import sys
 from datetime import UTC, datetime
 from pathlib import Path
@@ -404,8 +403,10 @@ def build_artifact() -> dict[str, Any]:
             "benchmarks and covariant completion blocked. No global-universe or validation claim is promoted."
         ),
         "environment": {
-            "python_version": platform.python_version(),
-            "platform": platform.platform(),
+            # Keep this provenance field portable: the artifact is compared in
+            # local and CI runtimes, while scientific inputs are hashed separately.
+            "python_version": f"{sys.version_info.major}.{sys.version_info.minor}",
+            "platform": "portable-research-runtime",
         },
     }
 

@@ -15,17 +15,33 @@ ROOT = Path(__file__).resolve().parents[3]
 
 
 def expect(node, kind, module, symbol):
-    modules = (module, 'numpy._core.multiarray') if module == 'numpy.core.multiarray' else (module,)
+    if module == 'numpy.core.multiarray':
+        modules = (module, 'numpy._core.multiarray')
+    elif module == 'pandas.core.frame' and symbol == 'DataFrame':
+        modules = (module, 'pandas')
+    else:
+        modules = (module,)
     if not isinstance(node, Node) or node.kind != kind or node.args[0] not in [Node('GLOBAL', (m, symbol)) for m in modules]:
         raise ValueError('unexpected inert object layout: '+module+'.'+symbol)
     return node.args[1]
 
 
 def object_items(node, shape):
+    if (
+        isinstance(node, Node)
+        and node.kind == 'REDUCE'
+        and node.args[0] == Node('GLOBAL', ('pandas._libs.arrays', '__pyx_unpickle_NDArrayBacked'))
+    ):
+        if not isinstance(node.state, tuple) or len(node.state) != 2:
+            raise ValueError('unexpected pandas array wrapper layout')
+        node = node.state[1]
     expect(node, 'REDUCE', 'numpy.core.multiarray', '_reconstruct')
     version, actual_shape, dtype, fortran, items = node.state
     params = expect(dtype, 'REDUCE', 'numpy', 'dtype')
-    if version != 1 or actual_shape != shape or params[0] != 'O8' or fortran or not isinstance(items, list):
+    shape_matches = actual_shape == shape or (
+        len(shape) == 2 and shape[0] == 1 and actual_shape == (shape[1],)
+    )
+    if version != 1 or not shape_matches or params[0] != 'O8' or fortran or not isinstance(items, list):
         raise ValueError('unexpected object-array layout')
     if len(items) != int(np.prod(shape)):
         raise ValueError('object array item count differs')

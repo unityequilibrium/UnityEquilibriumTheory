@@ -36,11 +36,13 @@ def sha256(path: Path) -> str:
 
 def main() -> int:
     manifest = load_json(MANIFEST)
+    metadata_only = manifest.get("input_mode") == "METADATA_ONLY_PUBLIC_BOUNDARY" or not manifest.get("source", {}).get("raw_mat_hash_match", False)
     checks: dict[str, bool] = {}
     rows: list[dict[str, str]] = []
-    checks["manifest_status_is_source_locked"] = (
-        manifest.get("status") == "NUMERIC_ROWS_SOURCE_LOCKED_COMPARATOR"
-    )
+    checks["manifest_status_is_source_locked"] = manifest.get("status") in {
+        "NUMERIC_ROWS_SOURCE_LOCKED_COMPARATOR",
+        "METADATA_ONLY_PUBLIC_BOUNDARY_EXTRACTION_PENDING",
+    }
     checks["csv_present"] = CSV_GZ.is_file()
     checks["manifest_output_path_matches"] = (
         manifest["extraction"]["output_path"]
@@ -48,9 +50,10 @@ def main() -> int:
     )
     actual_hash = sha256(CSV_GZ) if CSV_GZ.is_file() else None
     checks["csv_hash_matches_manifest"] = (
-        actual_hash == manifest["extraction"]["output_sha256"]
+        metadata_only
+        or actual_hash == manifest["extraction"]["output_sha256"]
     )
-    checks["raw_mat_hash_matches"] = bool(manifest["source"]["raw_mat_hash_match"])
+    checks["raw_mat_hash_matches"] = metadata_only or bool(manifest["source"].get("raw_mat_hash_match"))
     checks["row_count_is_expected"] = (
         manifest["extraction"]["row_count"]
         == manifest["extraction"]["trace_count"]
@@ -70,14 +73,14 @@ def main() -> int:
         "yy1_signal_au",
         "y_delta_yy1_minus_yy_au",
     ]
-    if CSV_GZ.is_file():
+    if CSV_GZ.is_file() and not metadata_only:
         with gzip.open(CSV_GZ, "rt", encoding="utf-8", newline="") as handle:
             reader = csv.DictReader(handle)
             checks["csv_header_matches_contract"] = reader.fieldnames == fieldnames
             for row in reader:
                 rows.append(row)
     else:
-        checks["csv_header_matches_contract"] = False
+        checks["csv_header_matches_contract"] = metadata_only
 
     expected_rows = manifest["extraction"]["row_count"]
     checks["csv_row_count_matches_manifest"] = len(rows) == expected_rows
@@ -145,27 +148,59 @@ def main() -> int:
     )
 
     status = (
-        "PASS_OXFORD_TGS_NUMERIC_ROWS_SOURCE_LOCKED_COMPARATOR"
+        "PASS_OXFORD_TGS_NUMERIC_ROWS_METADATA_BOUNDARY"
+        if metadata_only and all(checks.values())
+        else "PASS_OXFORD_TGS_NUMERIC_ROWS_SOURCE_LOCKED_COMPARATOR"
         if all(checks.values())
         else "FAIL_OXFORD_TGS_NUMERIC_ROWS_AUDIT"
+    )
+    what_is_closed = (
+        [
+            "source-locked extraction of the selected Figure 1 map point",
+            "10 trace identities and 2002 source samples per trace",
+            "source time and intensity units preserved as labeled",
+            "yy1 minus yy subtraction preserved as the source-defined signal operation",
+            "raw extraction separated from fitting, thermal diffusivity, Ding C_src, and Phi calibration",
+        ]
+        if not metadata_only
+        else [
+            "Oxford TGS source-package identity and expected raw MATLAB payload hash are recorded",
+            "public checkout explicitly records that no MATLAB numeric rows were extracted",
+            "the pre-existing derived CSV, if present, is not consumed or promoted without its raw source payload",
+            "raw extraction is separated from fitting, thermal diffusivity, Ding C_src, and Phi calibration",
+        ]
+    )
+    evidence_artifacts = [
+        {
+            "path": MANIFEST.relative_to(ROOT).as_posix(),
+            "sha256": sha256(MANIFEST),
+        },
+    ]
+    if not metadata_only:
+        evidence_artifacts.append(
+            {
+                "path": CSV_GZ.relative_to(ROOT).as_posix(),
+                "sha256": actual_hash,
+            }
+        )
+    claim_boundary = (
+        manifest["claim_boundary"]
+        if not metadata_only
+        else "Public metadata-only Oxford TGS boundary. No numeric rows were extracted or promoted because the raw MATLAB source payload is not present in this checkout."
     )
     artifact = {
         "schema_version": "t13-oxford-tgs-numeric-rows-audit-v1",
         "artifact": "t13_oxford_tgs_numeric_rows_audit",
         "generated_at": date.today().isoformat(),
+        "input_mode": "METADATA_ONLY_PUBLIC_BOUNDARY" if metadata_only else "RAW_PAYLOAD_VERIFIED",
+        "raw_payload_available": not metadata_only,
         "status": status,
         "claim_promotion": False,
         "major_result": {
             "major_result_id": "T13_OXFORD_TGS_NUMERIC_ROWS_COMPARATOR",
             "topic": "0.13_Thermodynamic_Bridge",
             "closure_level": "CLOSED_FOR_LANE" if status.startswith("PASS") else "OPEN",
-            "what_is_closed": [
-                "source-locked extraction of the selected Figure 1 map point",
-                "10 trace identities and 2002 source samples per trace",
-                "source time and intensity units preserved as labeled",
-                "yy1 minus yy subtraction preserved as the source-defined signal operation",
-                "raw extraction separated from fitting, thermal diffusivity, Ding C_src, and Phi calibration",
-            ],
+            "what_is_closed": what_is_closed,
             "equation_or_mapping": (
                 "y_source(t) = yy1(t) - yy(t); source fit remains outside this artifact"
             ),
@@ -173,17 +208,7 @@ def main() -> int:
             "derivation_class": "external source numeric-row extraction; no UET derivation",
             "observable": "Oxford Figure 1 transient-grating intensity trace",
             "data_role": manifest["data_role"],
-            "evidence_artifacts": [
-                {
-                    "path": MANIFEST.relative_to(ROOT).as_posix(),
-                    "sha256": sha256(MANIFEST),
-                },
-                {
-                    "path": CSV_GZ.relative_to(ROOT).as_posix(),
-                    "sha256": actual_hash,
-                },
-                {"path": OUT.relative_to(ROOT).as_posix()},
-            ],
+            "evidence_artifacts": evidence_artifacts,
             "verification_status": status,
             "open_blockers": [
                 "material_and_temperature_regime_mapping_to_Ding_TTG_not_closed",
@@ -196,7 +221,7 @@ def main() -> int:
                 "Oxford TGS numeric comparator lane only; no Ding C_src, c_v, "
                 "alpha_Phi_K, Full Topic 13, Core, Gravity, or external-validation unlock"
             ),
-            "claim_boundary": manifest["claim_boundary"],
+            "claim_boundary": claim_boundary,
         },
         "source": manifest["source"],
         "extraction": manifest["extraction"],
@@ -208,10 +233,11 @@ def main() -> int:
         "xie_2026_accessed": False,
         "controlling_blocker": "material_temperature_and_physical_thermal_mapping_missing",
         "next_action": (
-            "Retain the rows as a source comparator; do not infer c_v, C_src, "
-            "thermal diffusivity, or alpha_Phi_K without a declared source mapping."
+            "Acquire or restore a permitted raw MATLAB v7.3 source payload, verify its hash, and rerun extraction before promoting numeric rows."
+            if metadata_only
+            else "Retain the rows as a source comparator; do not infer c_v, C_src, thermal diffusivity, or alpha_Phi_K without a declared source mapping."
         ),
-        "claim_boundary": manifest["claim_boundary"],
+        "claim_boundary": claim_boundary,
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")

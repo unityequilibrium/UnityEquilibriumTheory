@@ -155,30 +155,30 @@
   ],
   "controlling_blocker": "new_Phi_strain_operator_or_independent_microscopic_match_missing",
   "source_hashes": {
-    "docs/core/uet_material_interface_factor_resolution.py": "7ebcbed3f6c2056a06e393afd9cba2c81614237bf924da0dc4f54b42ee9b3ce1",
-    "docs/core/test/test_topic13_material_interface_factor_resolution.py": "6cddf428adaa75764aa92600a1beb7c5272f014e1150a7b547199635c7b808ed",
-    "docs/scripts/audit/audit_topic13_material_interface_factor_resolution.py": "3d291c4a0aadde8a97475584bc3546172758dbad7d0f2cffb7d03e202a5bd94f"
+    "docs/core/03_lanes/thermal/uet_material_interface_factor_resolution.py": "e6e4633226e9561084c673884aa77d260476dad8a8294afadb088a8376e13cc0",
+    "docs/core/05_tests/regression/root/test_topic13_material_interface_factor_resolution.py": "e05bd204026de40d99bd1e1ebe5dce19bf760d803fbb6ffd537754a2a6332495",
+    "docs/scripts/audit/audit_topic13_material_interface_factor_resolution.py": "0415293d199d628aa95d2a85fafdfcea6210b11643222f70d8f315ceac90420c"
   },
   "evidence_artifacts": [
     {
-      "path": "docs/core/artifacts/t13_uet_material_lattice_interface_contract_audit.json",
-      "sha256": "e6cfea6a55f8d54040fcaa570c3b244a98bd454fd1462144f8948c5caa16487c"
+      "path": "docs/core/07_artifacts/topic13/t13_uet_material_lattice_interface_contract_audit.json",
+      "sha256": "122ae24ba61f244f56c40e55c8162a552d14022f8191df2e2a8e94a8c334c4c8"
     },
     {
-      "path": "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json",
+      "path": "docs/core/07_artifacts/topic13/t13_covariant_field_normalization_identifiability_no_go.json",
       "sha256": "41cda98a01b282fa5c2789ef93ce2f249041550e40763cdcb083658712c564ac"
     },
     {
-      "path": "docs/core/artifacts/t13_covariant_matter_coupling_normalization_no_go.json",
+      "path": "docs/core/07_artifacts/topic13/t13_covariant_matter_coupling_normalization_no_go.json",
       "sha256": "bdda0a764af624ffb7b7c8bb04d1cb1bb44539a0159e4ca8ba9b825473e09675"
     },
     {
-      "path": "docs/core/artifacts/t13_uet_o2_action_thermal_observable_bridge_audit.json",
+      "path": "docs/core/07_artifacts/topic13/t13_uet_o2_action_thermal_observable_bridge_audit.json",
       "sha256": "7ba49d3f629c91f3f88dda6ad717d8928e58439de7517a5979f0a465b9f52585"
     },
     {
-      "path": "docs/core/artifacts/t13_calorine_lattice_interface_input_boundary.json",
-      "sha256": "5a2bf941484887b2140f6400055ccb80c4443435f32f1488f2cb4f8dec4d9fb0"
+      "path": "docs/core/07_artifacts/topic13/t13_calorine_lattice_interface_input_boundary.json",
+      "sha256": "7fe294c31f3f2e15d56784e97d67c53db749b256ee829550b08e7cd1a448bfd0"
     }
   ],
   "dependency_unlocked": [

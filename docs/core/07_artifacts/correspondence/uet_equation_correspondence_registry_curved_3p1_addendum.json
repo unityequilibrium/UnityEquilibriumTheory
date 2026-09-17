@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_equation_correspondence_registry_curved_3p1_addendum",
-  "generated_at": "2026-09-16T10:25:14.691682+00:00",
+  "generated_at": "2026-09-17T15:58:28.102122+00:00",
   "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
   "status": "CANDIDATE_ENTRY_PENDING_MERGE",
   "equation_entries": [
@@ -9,7 +9,7 @@
       "equation_id": "uet.main_theory.curved_3p1.adm_constraints",
       "version": "adm-constraint-interface-v1",
       "classification": "standard_physics_constraint_interface",
-      "relation_or_code_path": "docs/core/uet_curved_3p1_constraints.py",
+      "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_constraints.py",
       "variables": {
         "gamma_ij": "positive-definite spatial metric",
         "K_ij": "extrinsic curvature",
@@ -32,7 +32,7 @@
       },
       "source_or_origin": {
         "path": "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json",
-        "sha256": "d989b9dd637828dd64f975eaf1f744163ac71e362bde71e46e86e599eced1754",
+        "sha256": "5540850bde07a4c41b011b8c181ca5700e4f89519c1a8eadd22a3c80e79ef760",
         "identity": {
           "schema_version": "1.0",
           "source_id": "gourgoulhon_2007_3p1_formalism",
@@ -72,7 +72,7 @@
         "spatially flat FLRW Friedmann control"
       ],
       "implementation_paths": [
-        "docs/core/uet_curved_3p1_constraints.py"
+        "docs/core/02_equations/covariant/uet_curved_3p1_constraints.py"
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_curved_3p1_constraints.py",
@@ -92,7 +92,7 @@
       "equation_id": "uet.main_theory.curved_3p1.periodic_spatial_geometry",
       "version": "periodic-geometry-operator-v1",
       "classification": "numerical_implementation",
-      "relation_or_code_path": "docs/core/uet_curved_3p1_geometry.py",
+      "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_geometry.py",
       "variables": {
         "gamma_ij": "positive-definite spatial metric on a uniform periodic Cartesian chart",
         "Gamma^k_ij": "Levi-Civita connection",
@@ -117,7 +117,7 @@
       },
       "source_or_origin": {
         "path": "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json",
-        "sha256": "d989b9dd637828dd64f975eaf1f744163ac71e362bde71e46e86e599eced1754",
+        "sha256": "5540850bde07a4c41b011b8c181ca5700e4f89519c1a8eadd22a3c80e79ef760",
         "identity": {
           "schema_version": "1.0",
           "source_id": "gourgoulhon_2007_3p1_formalism",
@@ -158,7 +158,7 @@
         "manufactured off-diagonal K divergence control"
       ],
       "implementation_paths": [
-        "docs/core/uet_curved_3p1_geometry.py"
+        "docs/core/02_equations/covariant/uet_curved_3p1_geometry.py"
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_curved_3p1_geometry.py",
@@ -178,7 +178,7 @@
       "equation_id": "uet.main_theory.curved_3p1.adm_evolution_rhs",
       "version": "adm-evolution-rhs-v1",
       "classification": "standard_physics_evolution_operator",
-      "relation_or_code_path": "docs/core/uet_curved_3p1_adm_evolution.py",
+      "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_adm_evolution.py",
       "variables": {
         "gamma_ij": "spatial metric; not Phi",
         "K_ij": "extrinsic curvature; not Pi",
@@ -311,7 +311,7 @@
         "spatially flat dust FLRW instantaneous control"
       ],
       "implementation_paths": [
-        "docs/core/uet_curved_3p1_adm_evolution.py"
+        "docs/core/02_equations/covariant/uet_curved_3p1_adm_evolution.py"
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_curved_3p1_adm_evolution.py",
@@ -331,7 +331,7 @@
       "equation_id": "uet.main_theory.curved_3p1.fixed_gauge_adm_hyperbolicity_no_go",
       "version": "fixed-geodesic-adm-symbol-v1",
       "classification": "formulation_no_go",
-      "relation_or_code_path": "docs/core/uet_curved_3p1_adm_evolution.py",
+      "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_adm_evolution.py",
       "variables": {
         "P_n": "dimensionless principal symbol",
         "h_ij": "linear metric perturbation",
@@ -429,7 +429,7 @@
         "fixed oblique direction"
       ],
       "implementation_paths": [
-        "docs/core/uet_curved_3p1_adm_evolution.py"
+        "docs/core/02_equations/covariant/uet_curved_3p1_adm_evolution.py"
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_curved_3p1_adm_evolution.py",
@@ -448,7 +448,7 @@
       "equation_id": "uet.main_theory.curved_3p1.generalized_harmonic_principal_system",
       "version": "gh-principal-system-v1",
       "classification": "standard_physics_hyperbolic_formulation",
-      "relation_or_code_path": "docs/core/uet_curved_3p1_generalized_harmonic.py",
+      "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py",
       "variables": {
         "psi_ab": "spacetime metric; not UET Phi",
         "Pi_ab": "minus normal metric derivative; not UET Pi",
@@ -523,7 +523,7 @@
         "sub/super-coordinate shift cases with normal-frame causal waves"
       ],
       "implementation_paths": [
-        "docs/core/uet_curved_3p1_generalized_harmonic.py"
+        "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_curved_3p1_generalized_harmonic.py",
@@ -543,7 +543,7 @@
       "equation_id": "uet.main_theory.curved_3p1.generalized_harmonic_nonlinear_vacuum_rhs",
       "version": "gh-nonlinear-vacuum-rhs-v1",
       "classification": "standard_physics_vacuum_evolution_operator",
-      "relation_or_code_path": "docs/core/uet_curved_3p1_generalized_harmonic.py",
+      "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py",
       "formula_ids": [
         "UET-CURVED3P1-GH-PSI-RHS-014",
         "UET-CURVED3P1-GH-PI-RHS-015",
@@ -623,7 +623,7 @@
         "manufactured periodic variable state"
       ],
       "implementation_paths": [
-        "docs/core/uet_curved_3p1_generalized_harmonic.py"
+        "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_curved_3p1_gh_nonlinear_vacuum.py",
@@ -643,7 +643,7 @@
       "equation_id": "uet.main_theory.curved_3p1.generalized_harmonic_periodic_vacuum_evolution",
       "version": "gh-periodic-vacuum-evolution-v1",
       "classification": "standard_physics_numerical_evolution_control",
-      "relation_or_code_path": "docs/core/uet_curved_3p1_gh_evolution.py",
+      "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_gh_evolution.py",
       "formula_ids": [
         "UET-CURVED3P1-GH-RK4-018",
         "UET-CURVED3P1-GH-CFL-019",
@@ -665,11 +665,11 @@
       "unit_lane": "geometric c=1 periodic coordinates",
       "parameter_dimensions": "geometric c=1 periodic-coordinate lane",
       "source_or_origin": {
-        "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a",
-        "docs/core/07_artifacts/verification/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json": "7b6e7ae7ff020f60389323871f23468b7d607cc6c123f10057621c08a1d3f21e",
-        "docs/core/07_artifacts/correspondence/curved_3p1_gh_nonlinear_vacuum_formula_audit.json": "a7f53a0cc7ad1aeed666b6fd8cbd296b3f67c8e447f23e491551774349457c3a",
-        "docs/core/07_artifacts/gates/curved_3p1_gh_nonlinear_vacuum_gate.json": "34054008efffb5b1233320aae346ee6c7a4ed99a5bb4c9e8e8b4a3e9caf64640",
-        "docs/core/uet_curved_3p1_gh_evolution.py": "aeb9f24af11e2d7b45eed1db3132831135c8a17ff9f23ca62fd88e9e7ad857cc"
+        "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "22e6b99c6a6070139ccbe9a5c6604788addc719b9e5b032b0416b175873c718e",
+        "docs/core/07_artifacts/verification/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json": "38bc6ba266f18c1b83245a1c00725d4acba377742cc5e3b53bc3b9074703c0df",
+        "docs/core/07_artifacts/correspondence/curved_3p1_gh_nonlinear_vacuum_formula_audit.json": "8873efaad4ebbd79e21a3d3bbfc672a039f11bf58835f01ee546dccfcaf22c86",
+        "docs/core/07_artifacts/gates/curved_3p1_gh_nonlinear_vacuum_gate.json": "14ee0e3525e82df57a3b15ceafb231fe5c188bfe39bfd44b44380e4edee56ebe",
+        "docs/core/02_equations/covariant/uet_curved_3p1_gh_evolution.py": "56a5ebaaed3fe686320c5802b7fb3217d76d729d0f601079ef526047601ff760"
       },
       "assumptions": [
         "vacuum",
@@ -685,7 +685,7 @@
         "constant off-diagonal reduction violation"
       ],
       "implementation_paths": [
-        "docs/core/uet_curved_3p1_gh_evolution.py"
+        "docs/core/02_equations/covariant/uet_curved_3p1_gh_evolution.py"
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_curved_3p1_gh_time_evolution.py",
@@ -705,7 +705,7 @@
       "equation_id": "uet.main_theory.curved_3p1.topic13_prescribed_matter_source",
       "version": "topic13-prescribed-matter-wiring-v1",
       "classification": "standard_physics_matter_source_interface",
-      "relation_or_code_path": "docs/core/uet_curved_3p1_matter_wiring.py",
+      "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_matter_wiring.py",
       "formula_ids": [
         "UET-CURVED3P1-MATTER-TAB-021",
         "UET-CURVED3P1-MATTER-ADM-022",
@@ -738,11 +738,11 @@
       "source_or_origin": [
         {
           "path": "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json",
-          "sha256": "d989b9dd637828dd64f975eaf1f744163ac71e362bde71e46e86e599eced1754"
+          "sha256": "5540850bde07a4c41b011b8c181ca5700e4f89519c1a8eadd22a3c80e79ef760"
         },
         {
           "path": "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json",
-          "sha256": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a"
+          "sha256": "22e6b99c6a6070139ccbe9a5c6604788addc719b9e5b032b0416b175873c718e"
         },
         {
           "path": "docs/core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json",
@@ -757,8 +757,8 @@
           "sha256": "4fe52bd87f1531dcaaadeeddd99ea48744d4ef574eb7b1e6d9c65bb8f41aa2a9"
         },
         {
-          "path": "docs/core/uet_curved_3p1_matter_wiring.py",
-          "sha256": "6c0dc1f670b385a37dbe5ab2cce09651a33fe7a6abd0d4e907a3aa9f83a61710"
+          "path": "docs/core/02_equations/covariant/uet_curved_3p1_matter_wiring.py",
+          "sha256": "91381c3b8d1afc286b3760f95f16f1b04a81bf784bb326c6dc052368614a5f31"
         }
       ],
       "assumptions": [
@@ -775,7 +775,7 @@
         "vacuum null source"
       ],
       "implementation_paths": [
-        "docs/core/uet_curved_3p1_matter_wiring.py"
+        "docs/core/02_equations/covariant/uet_curved_3p1_matter_wiring.py"
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_curved_3p1_matter_wiring.py",

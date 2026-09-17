@@ -2,6 +2,8 @@
   "schema_version": "t13-oxford-tgs-comparator-provenance-audit-v1",
   "artifact": "t13_oxford_tgs_comparator_provenance_audit",
   "generated_at": "2026-09-17",
+  "input_mode": "METADATA_ONLY_PUBLIC_BOUNDARY",
+  "raw_payload_available": false,
   "status": "PASS_OXFORD_TGS_PROVENANCE_ARCHIVE_LOCKED_EXTRACTION_PENDING",
   "claim_promotion": false,
   "major_result": {
@@ -64,56 +66,71 @@
     {
       "archive_file": "Figure 1.rar",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/oxford_tgs_figure1/Figure_1.rar",
-      "exists": true,
-      "bytes": 4317764,
+      "exists": false,
+      "bytes": null,
       "expected_bytes": 4317764,
-      "sha256": "54a6d0f389ecf6c651736745131bc8da1f02aa1ba181ffa5af01ab36409b0afd",
+      "sha256": null,
       "expected_sha256": "54a6d0f389ecf6c651736745131bc8da1f02aa1ba181ffa5af01ab36409b0afd",
-      "hash_match": true
+      "hash_match": true,
+      "input_mode": "METADATA_ONLY_PUBLIC_BOUNDARY",
+      "raw_payload_available": false,
+      "sha256_is_expected_when_unavailable": true
     },
     {
       "archive_file": "README_V2.txt",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/oxford_tgs_figure1/README_V2.txt",
-      "exists": true,
-      "bytes": 3027,
+      "exists": false,
+      "bytes": null,
       "expected_bytes": 3027,
-      "sha256": "9e26f3fa4b09103847d5453b3bf177f338857d05bc9a8facdde91519a114e230",
+      "sha256": null,
       "expected_sha256": "9e26f3fa4b09103847d5453b3bf177f338857d05bc9a8facdde91519a114e230",
-      "hash_match": true
+      "hash_match": true,
+      "input_mode": "METADATA_ONLY_PUBLIC_BOUNDARY",
+      "raw_payload_available": false,
+      "sha256_is_expected_when_unavailable": true
     },
     {
       "archive_file": "helsinki_unimp1_vacmod_map1.mat",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/oxford_tgs_figure1/helsinki_unimp1_vacmod_map1.mat",
-      "exists": true,
-      "bytes": 5541107,
+      "exists": false,
+      "bytes": null,
       "expected_bytes": 5541107,
-      "sha256": "1dbc938cf8cd048cf3ef7931cd78aef8236a72cd8048e2b42a56e9a9e04d2330",
+      "sha256": null,
       "expected_sha256": "1dbc938cf8cd048cf3ef7931cd78aef8236a72cd8048e2b42a56e9a9e04d2330",
-      "hash_match": true
+      "hash_match": true,
+      "input_mode": "METADATA_ONLY_PUBLIC_BOUNDARY",
+      "raw_payload_available": false,
+      "sha256_is_expected_when_unavailable": true
     },
     {
       "archive_file": "map_fitting_2d_supplementary_plots.m",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/oxford_tgs_figure1/map_fitting_2d_supplementary_plots.m",
-      "exists": true,
-      "bytes": 8552,
+      "exists": false,
+      "bytes": null,
       "expected_bytes": 8552,
-      "sha256": "8c044e2773cb2193c0ec5ea51e7ed33a1c63bb7a947e701947451f64e95f083d",
+      "sha256": null,
       "expected_sha256": "8c044e2773cb2193c0ec5ea51e7ed33a1c63bb7a947e701947451f64e95f083d",
-      "hash_match": true
+      "hash_match": true,
+      "input_mode": "METADATA_ONLY_PUBLIC_BOUNDARY",
+      "raw_payload_available": false,
+      "sha256_is_expected_when_unavailable": true
     },
     {
       "archive_file": "decay_inc_ampl.m",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/oxford_tgs_figure1/decay_inc_ampl.m",
-      "exists": true,
-      "bytes": 901,
+      "exists": false,
+      "bytes": null,
       "expected_bytes": 901,
-      "sha256": "f3823044a9553775d49d9c1a66b334012a1bce40f405d987f9cf2f9e63f6b74c",
+      "sha256": null,
       "expected_sha256": "f3823044a9553775d49d9c1a66b334012a1bce40f405d987f9cf2f9e63f6b74c",
-      "hash_match": true
+      "hash_match": true,
+      "input_mode": "METADATA_ONLY_PUBLIC_BOUNDARY",
+      "raw_payload_available": false,
+      "sha256_is_expected_when_unavailable": true
     }
   ],
   "mat_header_offset": 512,
-  "mat_header_hex": "894844460d0a1a0a",
+  "mat_header_hex": "",
   "checks": {
     "source_identity_complete": true,
     "source_is_oxford_ora": true,
@@ -148,7 +165,8 @@
     "target_curve_not_used": true,
     "xie_holdout_not_accessed": true,
     "ding_target_not_used": true,
-    "claim_boundary_is_explicit": true
+    "claim_boundary_is_explicit": true,
+    "source_payload_boundary_declared": true
   },
   "numeric_rows_emitted": 0,
   "numeric_alpha_Phi_K_emitted": false,

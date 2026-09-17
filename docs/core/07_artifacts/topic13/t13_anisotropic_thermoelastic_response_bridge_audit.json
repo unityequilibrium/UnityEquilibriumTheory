@@ -161,21 +161,21 @@
   ],
   "controlling_blocker": "same_state_thermoelastic_tensor_and_physical_Phi_strain_coupling_missing",
   "source_hashes": {
-    "docs/core/uet_anisotropic_thermoelastic_response_bridge.py": "e762938d8f8f9b1a0129de3a1058d8260e11d09d7020bae98e26a071b8fed840",
-    "docs/core/test/test_topic13_anisotropic_thermoelastic_response_bridge.py": "71c0ef256fb7705f111e0b250a34699fa6a60919a90418260b7c6be8321a8219",
-    "docs/scripts/audit/audit_topic13_anisotropic_thermoelastic_response_bridge.py": "fa00568eeddb1ec2573e1fc591a76ea825a750aee618519d01eedbfae387f8da"
+    "docs/core/03_lanes/thermal/uet_anisotropic_thermoelastic_response_bridge.py": "92e0a5c3c0b42b541ab3c947c2e48acec19c935903ddf01cd0c91d84c3c61341",
+    "docs/core/05_tests/regression/root/test_topic13_anisotropic_thermoelastic_response_bridge.py": "d7a9e6a82037924625197fb44f660a733364a8371f5c35e2f2cde33bc7861445",
+    "docs/scripts/audit/audit_topic13_anisotropic_thermoelastic_response_bridge.py": "13863269db5d35be5d82c2d43ab445d6a74ff1effdcaff3a83d760a688d859da"
   },
   "evidence_artifacts": [
     {
-      "path": "docs/core/artifacts/t13_scalar_thermoelastic_response_bridge_audit.json",
+      "path": "docs/core/07_artifacts/topic13/t13_scalar_thermoelastic_response_bridge_audit.json",
       "sha256": "980cbbfe4d9056fbcce1066f53b88d538184322dc220961932d837282811ba77"
     },
     {
-      "path": "docs/core/artifacts/t13_graphite_elastic_bulk_modulus_source_audit.json",
+      "path": "docs/core/07_artifacts/topic13/t13_graphite_elastic_bulk_modulus_source_audit.json",
       "sha256": "65238edbfb66b57c6b3c0a06f95d8b3d28d6dc613df7b83d825332aff4a996af"
     },
     {
-      "path": "docs/core/artifacts/t13_tpg_anisotropic_alpha_v_source_audit.json",
+      "path": "docs/core/07_artifacts/topic13/t13_tpg_anisotropic_alpha_v_source_audit.json",
       "sha256": "f8ed02677b5ef1aede683cc2b191538722bda56b520d1d6ba5af024638504c68"
     }
   ],

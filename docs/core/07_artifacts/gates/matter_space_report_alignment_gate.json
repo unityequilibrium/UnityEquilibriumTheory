@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "artifact": "matter_space_report_alignment_gate",
-  "generated_at": "2026-09-16T10:45:51.274216+00:00",
-  "source_snapshot_at": "2026-09-16T10:41:37.938463+00:00",
+  "generated_at": "2026-09-17T13:06:45.752962+00:00",
+  "source_snapshot_at": "2026-09-17T13:05:07.217231+00:00",
   "status": "WARN",
   "alignment_status": "PASS_WITH_HISTORICAL_BASE_REPORT_WARN",
   "evidence_status": "POST_WAVE10_ADDENDUM_ALIGNED_BASE_SNAPSHOT_RETAINED",
@@ -14,27 +14,27 @@
   "input_artifacts": {
     "matter_space_program": {
       "path": "docs/core/07_artifacts/gates/matter_space_research_program_gate.json",
-      "sha256": "82ede5f0f8412dd3ce49b70d129861fe9a433f6a52e35f38eb8074abdd311c25",
+      "sha256": "aabb4b5b3a78011ca69fdeda701a790ad9eac6c72765795b7c22a6e5b0ac5c37",
       "status": "BLOCKED",
       "controlling_blocker": "core_prearrival_leakage"
     },
     "gr_program": {
       "path": "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json",
-      "sha256": "09a3605cfd5e16802b3109528dfecb4c46dde71292306894ef48e3bf4c3373e7",
+      "sha256": "9f646c956d9f3e6b7224a06f407bed48b2f8161b6645d9e7a2a158527d3c8b63",
       "status": "BLOCKED",
       "program_stage": "O2_FINITE_DENSITY_EOS_AND_T0_SUPERFLUID_CONSTITUTIVE_VERIFIED",
       "controlling_blocker": "physical_kubo_coefficient_evidence_and_curved_3p1_solver_missing"
     },
     "noether_dependency": {
       "path": "docs/core/07_artifacts/gates/noether_phase_field_dependency_gate.json",
-      "sha256": "048f203bd1ae174b159c15e0757c2ff516d71a4745c1e5b6e6de58c975829d68",
+      "sha256": "a13fea11f3f57bea7d13231361debcc1909313b22c8346becd224b77b3a668d1",
       "status": "BLOCKED",
       "evidence_status": "PARTIAL_HYDRODYNAMIC_STATE_COORDINATE_MAP",
       "controlling_blocker": "noether_charge_equation_of_state_and_covariant_transport_matching_missing"
     },
     "topic_0_11_dependency": {
       "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_noether_phase_field_dependency_gate.json",
-      "sha256": "376a37801708eb36720618c6812f92d629968d1e1c815e4d35bfbaeb05c69638",
+      "sha256": "a55151b80bc6ed27d7ac8dec643976a86cae3c0f2bc98dbfcada4c3efee38105",
       "status": "BLOCKED",
       "evidence_status": "CONDITIONAL_HYDRODYNAMIC_COORDINATE_COMPATIBILITY",
       "controlling_blocker": "topic_0_11_signed_noether_charge_eos_transport_matching_missing",
@@ -42,7 +42,7 @@
     },
     "topic_0_19_dependency": {
       "path": "docs/topics/0.19_Gravity_GR/Result/artifacts/0_19_core_gr_program_dependency_gate.json",
-      "sha256": "95cb637c01c0a9bee51237bb114503aee59089e05292006f5d5a0ec0c18abb31",
+      "sha256": "d212235a6d622ef8af31e3b40d4147e7693f2b006d579861d3a0df5b20dd0b08",
       "status": "BLOCKED",
       "evidence_status": "CORE_CANDIDATE_GR_PARENT_AVAILABLE_TOPIC_PHYSICAL_VALIDATION_OPEN",
       "controlling_blocker": "topic_0_19_classical_gr_tests_and_covariant_completion_missing",
@@ -50,7 +50,7 @@
     },
     "topic_0_13_constraint": {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/0_13_core_thermodynamic_constraint_gate.json",
-      "sha256": "6f741404a3d05291cd89d819f5ff529495c00253a98e5960e39f1b4aa4560698",
+      "sha256": "81451c7ae02f6e1e4bcc515a500b1b1db9743387111595d6d031b8c4725c55fd",
       "status": "BLOCKED",
       "evidence_status": "THERMODYNAMIC_CONSTRAINT_EXPORTS_AVAILABLE_CORE_CLOSURE_NOT_DERIVED",
       "controlling_blocker": "topic_0_13_constraint_only_eos_transport_entropy_bridge_missing",
@@ -65,13 +65,13 @@
     },
     "addendum": {
       "path": "docs/core/08_history/research_notes/MATTER_SPACE_RESEARCH_REPORT_ADDENDUM_2026-07-23.md",
-      "sha256": "b78045effac1d50c1980e033e4a10aaf618b7f8cdad52dabc81b6b1f0121036c",
-      "bytes": 11152
+      "sha256": "008161462e17df0b6376efe60fff87d1f01ffe0efc0a1a666c4d88782bed379d",
+      "bytes": 11163
     },
     "topic_readiness": {
       "path": "docs/meta/topic_readiness.json",
-      "sha256": "af09c78c14c872b96617fe4fe85d7ffd74a878478bf516f925cea3f2cc69693e",
-      "bytes": 27377
+      "sha256": "b779539bdfd67032111fd14ee5350e5746e9d9b44bcbb29c867ce54f8575cbad",
+      "bytes": 28077
     }
   },
   "canonical_topics": {

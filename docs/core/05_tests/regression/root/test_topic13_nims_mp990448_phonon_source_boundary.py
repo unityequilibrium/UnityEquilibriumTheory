@@ -45,5 +45,20 @@ def test_nims_mp990448_is_a_payload_boundary_not_numeric_csrc() -> None:
     assert package["row_identity_contract"]["machine_readable_numeric_rows"] == []
     assert package["holdout_policy"]["xie_2026_accessed"] is False
     assert package["claim_promotion"] is False
-    assert digest(ARCHIVE) == audit["source"]["archive_sha256"]
-    assert digest(LEGACY_ARCHIVE) == audit["source"]["archive_sha256"]
+    if ARCHIVE.is_file() and LEGACY_ARCHIVE.is_file():
+        assert digest(ARCHIVE) == audit["source"]["archive_sha256"]
+        assert digest(LEGACY_ARCHIVE) == audit["source"]["archive_sha256"]
+    else:
+        assert audit["source"]["raw_payload_available"] is False
+        assert audit["source"]["input_mode"] == "METADATA_ONLY_PUBLIC_BOUNDARY"
+        assert audit["source"]["archive_hash_is_expected_when_unavailable"] is True
+        assert audit["source"]["archive_sha256"] == (
+            "eea6ca7569c9442754ce5492ddb2f545186f97ad8b82b209d95f1a80b0158767"
+        )
+        assert audit["source"]["archive_size_bytes"] == 133375
+        assert audit["legacy_route"]["archive_identity_declared"] is True
+        assert audit["legacy_route"]["route_decision"] == (
+            "BYTE_IDENTICAL_ALIAS_OF_CURRENT_NIMS_ARCHIVE"
+        )
+        assert isinstance(package["inventory"]["members"], list)
+        assert len(package["inventory"]["members"]) == 6

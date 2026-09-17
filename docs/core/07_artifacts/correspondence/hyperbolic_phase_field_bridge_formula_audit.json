@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "hyperbolic_phase_field_bridge_formula_audit",
-  "generated_at": "2026-09-17T10:27:22+00:00",
+  "generated_at": "2026-09-17T12:47:55+00:00",
   "status": "WARN",
   "topic": "docs/core UET GR non-closed response",
   "version": "wave8_v1",
@@ -61,11 +61,11 @@
     "physical_validation"
   ],
   "source_hashes": {
-    "docs\\core\\02_equations\\matter_space\\uet_hyperbolic_phase_field_bridge.py": "9389167d81a57be79517faef3f20a174b585372f530759ddb51bd837667a0eb1",
+    "docs\\core\\02_equations\\matter_space\\uet_hyperbolic_phase_field_bridge.py": "8902483bb56bb0ceb0f1cd21a2b27766378890531cb4226d392d275ff7e63e05",
     "docs\\core\\02_equations\\matter_space\\uet_hyperbolic_phase_field.py": "24bee848039ee268421db2bf7dfd3675bfb0a4accaa3be303ef00ca1df80f261",
-    "docs\\core\\02_equations\\covariant\\uet_covariant_diffusion.py": "2c99fb608885b45dbbc92409cfee9a35b2fc428d1f48d7c44e1a1187a0106840",
-    "docs\\core\\01_contracts\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "78b75f84c3a1a9982a658ffb80cfdb64ff09e231d14de488ecaa6913c5eac9b5",
-    "docs\\data\\external\\relativistic_transport\\jain_kovtun_2024\\source_record.json": "5521138bbc494f56e2ff62b7d8b03eddc54cffdd5d87f2fae16a2c2462a1ac7a",
+    "docs\\core\\02_equations\\covariant\\uet_covariant_diffusion.py": "a267b89e39db4a8dfac56e71a070539a9da05a55b8bb8b22216e7fd1b839bc53",
+    "docs\\core\\01_contracts\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "a52cbdb0cb9dd2f65be4813fd7b57da9a995f4ab9039d4631f95928f0997a8bf",
+    "docs\\data\\external\\relativistic_transport\\jain_kovtun_2024\\source_record.json": "90c8c7dfe8256da2b1dbe6631d189470800ea8ed7eec228fc9bedf49dd39dbc7",
     "docs\\data\\external\\relativistic_transport\\crossley_glorioso_liu_2017\\source_record.json": "5db63830bbde1e316184edab0e5e961fcef1f9add098c4a22403d2a029a623dd"
   },
   "notes": [

@@ -39,8 +39,8 @@
   "controlling_blocker": "topic_0_13_constraint_only_eos_transport_entropy_bridge_missing",
   "core_program_controller": "physical_kubo_coefficient_evidence_and_curved_3p1_solver_missing",
   "environment": {
-    "platform": "Windows-11-10.0.26200-SP0",
-    "python_version": "3.12.13"
+    "platform": "portable-research-runtime",
+    "python_version": "3.12"
   },
   "evidence_status": "THERMODYNAMIC_CONSTRAINT_EXPORTS_AVAILABLE_CORE_CLOSURE_NOT_DERIVED",
   "foundation_claim_ceiling_unchanged": "C - formula/lower-bound consistency only",
@@ -173,7 +173,7 @@
       "status": "BLOCKED"
     }
   },
-  "generated_at": "2026-08-20T16:05:09+00:00",
+  "generated_at": "2026-09-17T13:04:24+00:00",
   "limitations": [
     "No Landauer, Cattaneo, thermal pilot, or core solver is rerun.",
     "The foundation gate remains WARN and exports only class-C constraints.",
@@ -245,21 +245,21 @@
       "hash_scope": "canonical_json_without_generated_at_generated_at_utc_timestamp_utc_or_environment",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json",
       "role": "Matter-space thermal control pilot",
-      "scientific_payload_sha256": "8fc55c287218aa60bb84294247e0a5ccba02fcf0ba6f7c837a940888833550c5"
+      "scientific_payload_sha256": "e70710c0258074dfd43392357cbd15e0c016e9cbd7c4d48245ab24b665942170"
     },
     {
       "exists": true,
       "hash_scope": "canonical_json_without_generated_at_generated_at_utc_timestamp_utc_or_environment",
-      "path": "docs/core/artifacts/uet_gr_research_program_gate.json",
+      "path": "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json",
       "role": "Current core GR response program gate",
-      "scientific_payload_sha256": "6de328b881fcca261906372cc634b3653d85f79be1f247383079ec150be62680"
+      "scientific_payload_sha256": "b1d1e21349e443c5c33971b1bbc382a2ed6e1c99639a76afa82da78f61073182"
     },
     {
       "exists": true,
       "hash_scope": "canonical_json_without_generated_at_generated_at_utc_timestamp_utc_or_environment",
-      "path": "docs/core/artifacts/noether_phase_field_dependency_gate.json",
+      "path": "docs/core/07_artifacts/gates/noether_phase_field_dependency_gate.json",
       "role": "Core Noether/EOS/transport dependency gate",
-      "scientific_payload_sha256": "cbb9fc060f26b6fb638a0a3eff876539d6e563e556acda623b0c00cb0aaa27c0"
+      "scientific_payload_sha256": "f7e84e8f00b9b945249195fb14bed62e88a08a85b31485a2c613011cf0317d30"
     },
     {
       "exists": true,

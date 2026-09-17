@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-base-phi-si-reconciliation-v1",
   "artifact": "t13_base_phi_si_reconciliation_audit",
-  "generated_at": "2026-08-29",
+  "generated_at": "2026-09-17",
   "status": "PASS_SCOPED_BASE_PHI_RECONCILIATION_OPEN",
   "major_result": {
     "major_result_id": "T13_BASE_PHI_SI_RECONCILIATION",
@@ -38,52 +38,52 @@
     "data_role": "INTERNAL_BASE_PHI_RECONCILIATION_NOT_CALIBRATION",
     "evidence_artifacts": [
       {
-        "path": "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_alpha_phi_k_calibration_candidate_audit.json",
         "sha256": "4d5f2e0d96d5d30d126243c9754d38a591680c9f3e0bbb62f0a3ece35cb2e3bc",
         "role": "74-record paired base-Phi/SI search"
       },
       {
-        "path": "docs/core/artifacts/t13_mp48_phi_e_dimensional_comparator_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_mp48_phi_e_dimensional_comparator_audit.json",
         "sha256": "46fad518feb670e7e3fe4faac47582f7a5e93b88985c53225d4da4e6fc7cde44",
         "role": "named Phi_E harmonic dimensional comparator"
       },
       {
-        "path": "docs/core/artifacts/t13_dimensional_bridge_contract_audit.json",
-        "sha256": "caf37f860838c1e424a2a37cde6a9c852e2f2af0f13e6b17a1e9589161faf500",
+        "path": "docs/core/07_artifacts/topic13/t13_dimensional_bridge_contract_audit.json",
+        "sha256": "735791bfeb3d31cfb28bcda6b9c12cc856606473046972278d87e013df450c31",
         "role": "conditional alpha formula and SI unit contract"
       },
       {
-        "path": "docs/core/artifacts/t13_alpha_phi_k_identifiability_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_alpha_phi_k_identifiability_audit.json",
         "sha256": "31c38eef3132d72e5b090725f4d7524bde3d7da5eb5d69ad383ff442e097988e",
         "role": "normalized Phi scale identifiability no-go"
       },
       {
-        "path": "docs/core/artifacts/t13_phi_si_anchor_public_source_boundary_audit.json",
-        "sha256": "605245fa937cf5d2701a0afa0cc90a4f543052c4dd977066e1f3496bc12c50c5",
+        "path": "docs/core/07_artifacts/topic13/t13_phi_si_anchor_public_source_boundary_audit.json",
+        "sha256": "b68723bb8de2a87c6cff819b308ca2ddc9277d0798056afcba7d5fbf175e8ea3",
         "role": "official public source and author-request boundary"
       },
       {
-        "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json",
         "sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52",
         "role": "covariant action natural-unit route and SI boundary"
       },
       {
-        "path": "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json",
+        "path": "docs/core/07_artifacts/topic13/t13_covariant_field_normalization_identifiability_no_go.json",
         "sha256": "41cda98a01b282fa5c2789ef93ce2f249041550e40763cdcb083658712c564ac",
         "role": "covariant field normalization identifiability no-go"
       },
       {
-        "path": "docs/core/artifacts/thermal_dimensional_calibration_contract.json",
+        "path": "docs/core/07_artifacts/topic13/thermal_dimensional_calibration_contract.json",
         "sha256": "2e4117e7ac400cb4de4877b5750c1f16013f35c824122b16eb414f83719214b1",
         "role": "anti-fitting dimensional calibration contract"
       },
       {
-        "path": "docs/core/artifacts/uet_dimensional_observable_closure_audit.json",
-        "sha256": "fb30f8c552be7c26a8ec5bb43fa9651085d2e3188ba0b1f3c337e97529e280cd",
+        "path": "docs/core/07_artifacts/gates/uet_dimensional_observable_closure_audit.json",
+        "sha256": "932ca7e702ba50d719a8cac5183e98950089bea7eccc9d054fa05b1b3954339d",
         "role": "normalized TTG operator and observable audit"
       },
       {
-        "path": "docs/core/artifacts/t13_base_phi_independent_calibration_requirement.json",
+        "path": "docs/core/07_artifacts/topic13/t13_base_phi_independent_calibration_requirement.json",
         "sha256": "0c4aaa38c138f9818c1a1e81a93dc7512f859c0d9095e238d2c12e7a3cf31c05",
         "role": "independent base-Phi calibration acceptance protocol"
       }
@@ -106,7 +106,7 @@
     {
       "candidate_id": "paired_base_phi_si_search",
       "artifact": {
-        "path": "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_alpha_phi_k_calibration_candidate_audit.json",
         "sha256": "4d5f2e0d96d5d30d126243c9754d38a591680c9f3e0bbb62f0a3ece35cb2e3bc",
         "role": "74-record paired base-Phi/SI search"
       },
@@ -124,7 +124,7 @@
     {
       "candidate_id": "mp48_named_phi_e_comparator",
       "artifact": {
-        "path": "docs/core/artifacts/t13_mp48_phi_e_dimensional_comparator_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_mp48_phi_e_dimensional_comparator_audit.json",
         "sha256": "46fad518feb670e7e3fe4faac47582f7a5e93b88985c53225d4da4e6fc7cde44",
         "role": "named Phi_E harmonic dimensional comparator"
       },
@@ -142,8 +142,8 @@
     {
       "candidate_id": "conditional_dimensional_alpha_formula",
       "artifact": {
-        "path": "docs/core/artifacts/t13_dimensional_bridge_contract_audit.json",
-        "sha256": "caf37f860838c1e424a2a37cde6a9c852e2f2af0f13e6b17a1e9589161faf500",
+        "path": "docs/core/07_artifacts/topic13/t13_dimensional_bridge_contract_audit.json",
+        "sha256": "735791bfeb3d31cfb28bcda6b9c12cc856606473046972278d87e013df450c31",
         "role": "conditional alpha formula and SI unit contract"
       },
       "candidate_class": "CONDITIONAL_FORMULA_LANE",
@@ -160,7 +160,7 @@
     {
       "candidate_id": "normalized_phi_scale_no_go",
       "artifact": {
-        "path": "docs/core/artifacts/t13_alpha_phi_k_identifiability_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_alpha_phi_k_identifiability_audit.json",
         "sha256": "31c38eef3132d72e5b090725f4d7524bde3d7da5eb5d69ad383ff442e097988e",
         "role": "normalized Phi scale identifiability no-go"
       },
@@ -176,8 +176,8 @@
     {
       "candidate_id": "public_ding_paired_record_boundary",
       "artifact": {
-        "path": "docs/core/artifacts/t13_phi_si_anchor_public_source_boundary_audit.json",
-        "sha256": "605245fa937cf5d2701a0afa0cc90a4f543052c4dd977066e1f3496bc12c50c5",
+        "path": "docs/core/07_artifacts/topic13/t13_phi_si_anchor_public_source_boundary_audit.json",
+        "sha256": "b68723bb8de2a87c6cff819b308ca2ddc9277d0798056afcba7d5fbf175e8ea3",
         "role": "official public source and author-request boundary"
       },
       "candidate_class": "PUBLIC_SOURCE_BOUNDARY",
@@ -194,7 +194,7 @@
     {
       "candidate_id": "covariant_natural_unit_si_route",
       "artifact": {
-        "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json",
         "sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52",
         "role": "covariant action natural-unit route and SI boundary"
       },
@@ -211,7 +211,7 @@
     {
       "candidate_id": "covariant_field_rescaling_no_go",
       "artifact": {
-        "path": "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json",
+        "path": "docs/core/07_artifacts/topic13/t13_covariant_field_normalization_identifiability_no_go.json",
         "sha256": "41cda98a01b282fa5c2789ef93ce2f249041550e40763cdcb083658712c564ac",
         "role": "covariant field normalization identifiability no-go"
       },
@@ -227,7 +227,7 @@
     {
       "candidate_id": "thermal_calibration_contract",
       "artifact": {
-        "path": "docs/core/artifacts/thermal_dimensional_calibration_contract.json",
+        "path": "docs/core/07_artifacts/topic13/thermal_dimensional_calibration_contract.json",
         "sha256": "2e4117e7ac400cb4de4877b5750c1f16013f35c824122b16eb414f83719214b1",
         "role": "anti-fitting dimensional calibration contract"
       },
@@ -244,8 +244,8 @@
     {
       "candidate_id": "normalized_observable_closure",
       "artifact": {
-        "path": "docs/core/artifacts/uet_dimensional_observable_closure_audit.json",
-        "sha256": "fb30f8c552be7c26a8ec5bb43fa9651085d2e3188ba0b1f3c337e97529e280cd",
+        "path": "docs/core/07_artifacts/gates/uet_dimensional_observable_closure_audit.json",
+        "sha256": "932ca7e702ba50d719a8cac5183e98950089bea7eccc9d054fa05b1b3954339d",
         "role": "normalized TTG operator and observable audit"
       },
       "candidate_class": "NORMALIZED_OBSERVABLE_ONLY",
@@ -261,7 +261,7 @@
     {
       "candidate_id": "independent_calibration_protocol",
       "artifact": {
-        "path": "docs/core/artifacts/t13_base_phi_independent_calibration_requirement.json",
+        "path": "docs/core/07_artifacts/topic13/t13_base_phi_independent_calibration_requirement.json",
         "sha256": "0c4aaa38c138f9818c1a1e81a93dc7512f859c0d9095e238d2c12e7a3cf31c05",
         "role": "independent base-Phi calibration acceptance protocol"
       },

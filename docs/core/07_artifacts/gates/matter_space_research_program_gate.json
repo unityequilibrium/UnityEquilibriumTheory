@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "artifact": "matter_space_research_program_gate",
-  "generated_at": "2026-09-16T10:41:37.938463+00:00",
-  "source_snapshot_at": "2026-09-16T10:13:48.132501+00:00",
+  "generated_at": "2026-09-17T13:05:07.217231+00:00",
+  "source_snapshot_at": "2026-09-17T13:03:02.158263+00:00",
   "status": "BLOCKED",
   "program_state": "CANDIDATE_WITH_BLOCKED_PHYSICAL_INTERPRETATION",
   "controlling_blocker": "core_prearrival_leakage",
@@ -10,7 +10,7 @@
   "input_artifacts": {
     "ontology_contract": {
       "path": "docs/core/07_artifacts/correspondence/matter_space_ontology_contract.json",
-      "sha256": "c460094a30d7ae72f1ccc4c5c335e3fe402d99fe3120d1156bb5d52810ff2e99",
+      "sha256": "9ef6d7a742e8c32b30d039623edcb38c71af021e0f102cce91ff0b4209ac0741",
       "status": "PASS"
     },
     "formula_audit": {
@@ -38,7 +38,7 @@
     },
     "thermal_pilot": {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json",
-      "sha256": "a360eea9e257b7846eabaebeab6f20c00b658da7b432aec7c1e94d9449c041a4",
+      "sha256": "901ef7bc70c3fb5f657978db1aa8f48f7734003875fdb52d47ec17911653699f",
       "status": "SIMULATION_ONLY",
       "controlling_blocker": "core_prearrival_leakage"
     },
@@ -49,7 +49,7 @@
     },
     "phase_pilot": {
       "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_matter_space_coupled_diagnostic.json",
-      "sha256": "9ff733fc8726615f6ed06db44ea56aacb2e462a5b6072c8e1a2ac92317946045",
+      "sha256": "f1a099e80913d974f7bd475fe58c3a2ac70cf58b502fb60efb0a2c65774f53f9",
       "status": "INTERNAL_DIAGNOSTIC",
       "controlling_blocker": "inherited_core_prearrival_leakage"
     },
@@ -145,30 +145,30 @@
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/03_show_Result/matter_space_thermal_phase_lag.png",
-          "expected_sha256": "a83e271128c066e0b514ce08f7763e55cdde5a43731c2722adbc4f691916673a",
+          "expected_sha256": "70efb457dfc05003c98947241d75173a1d8630b60625f978e8d0af4831fc7685",
           "exists": true,
-          "actual_sha256": "a83e271128c066e0b514ce08f7763e55cdde5a43731c2722adbc4f691916673a",
+          "actual_sha256": "70efb457dfc05003c98947241d75173a1d8630b60625f978e8d0af4831fc7685",
           "match": true
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/03_show_Result/matter_space_thermal_hysteresis.png",
-          "expected_sha256": "2e60f37e47d943c64f4fe3dfaafdfb8482a865f020c5eb21205d7e968a83e9fb",
+          "expected_sha256": "48024c131f728ce07861e4b3e60c3758b2ffc541b896f771206ff8de45098d36",
           "exists": true,
-          "actual_sha256": "2e60f37e47d943c64f4fe3dfaafdfb8482a865f020c5eb21205d7e968a83e9fb",
+          "actual_sha256": "48024c131f728ce07861e4b3e60c3758b2ffc541b896f771206ff8de45098d36",
           "match": true
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/03_show_Result/matter_space_thermal_causal_arrival.png",
-          "expected_sha256": "a6a53713114591d0f2ae0b289a3ea5889774d3d120f783ec1b7ff10c55f3f1bb",
+          "expected_sha256": "b7ef14a3db080dc892b2069f2a4f7f010a7fefe1971f6806f93dbc1a4a378074",
           "exists": true,
-          "actual_sha256": "a6a53713114591d0f2ae0b289a3ea5889774d3d120f783ec1b7ff10c55f3f1bb",
+          "actual_sha256": "b7ef14a3db080dc892b2069f2a4f7f010a7fefe1971f6806f93dbc1a4a378074",
           "match": true
         },
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/03_show_Result/matter_space_thermal_ledger.png",
-          "expected_sha256": "f0bf947ef6820a4e9883cce58371ece276bf3595d038deb097f0aa53f15bc6a9",
+          "expected_sha256": "28f9fe12c7b9ef56521776e9bb75f30d22af40ee76f1b3aa70deee1b9b29f247",
           "exists": true,
-          "actual_sha256": "f0bf947ef6820a4e9883cce58371ece276bf3595d038deb097f0aa53f15bc6a9",
+          "actual_sha256": "28f9fe12c7b9ef56521776e9bb75f30d22af40ee76f1b3aa70deee1b9b29f247",
           "match": true
         },
         {
@@ -180,30 +180,30 @@
         },
         {
           "path": "docs/topics/0.11_Phase_Transitions/Result/03_show_Result/matter_space_coupled_profiles.png",
-          "expected_sha256": "aab613f6c7532dbc53f8889e7317239d5ed30f318009e29bd42457355ee761fc",
+          "expected_sha256": "f2b18c077f512ea4e9cb66dc9c57af18d008c2fe8cd8571ead1807dcc2f58be3",
           "exists": true,
-          "actual_sha256": "aab613f6c7532dbc53f8889e7317239d5ed30f318009e29bd42457355ee761fc",
+          "actual_sha256": "f2b18c077f512ea4e9cb66dc9c57af18d008c2fe8cd8571ead1807dcc2f58be3",
           "match": true
         },
         {
           "path": "docs/topics/0.11_Phase_Transitions/Result/03_show_Result/matter_space_coupled_ledger.png",
-          "expected_sha256": "47069e1be366c90198fcbe18c61bad7a2687aa983b5851265ad60bcf2a6445ce",
+          "expected_sha256": "e184c797837f3e9da8826e5d442328f846ad7df05cca35886313be9d228802a5",
           "exists": true,
-          "actual_sha256": "47069e1be366c90198fcbe18c61bad7a2687aa983b5851265ad60bcf2a6445ce",
+          "actual_sha256": "e184c797837f3e9da8826e5d442328f846ad7df05cca35886313be9d228802a5",
           "match": true
         },
         {
           "path": "docs/topics/0.11_Phase_Transitions/Result/03_show_Result/matter_space_adiabatic_limit.png",
-          "expected_sha256": "5373d1fe55ad8f142cc50e26098612c8ecbdad40abd2361a41ff68c50f07331a",
+          "expected_sha256": "de7293f1ecd6dad8b7d737c139b9108f19bf41c2ff2d48d8e9798636c9191908",
           "exists": true,
-          "actual_sha256": "5373d1fe55ad8f142cc50e26098612c8ecbdad40abd2361a41ff68c50f07331a",
+          "actual_sha256": "de7293f1ecd6dad8b7d737c139b9108f19bf41c2ff2d48d8e9798636c9191908",
           "match": true
         },
         {
           "path": "docs/topics/0.11_Phase_Transitions/Result/03_show_Result/matter_space_history_invariance.png",
-          "expected_sha256": "c73e0695d00fe3ca65f3cafd9eb42bbe6ef1330bbfaf90ea77aded6abe5a6ff7",
+          "expected_sha256": "defed5b327cf5db3395cd899aec4720c5fb01a0b1ce81e8a8b5352aef33d0a5b",
           "exists": true,
-          "actual_sha256": "c73e0695d00fe3ca65f3cafd9eb42bbe6ef1330bbfaf90ea77aded6abe5a6ff7",
+          "actual_sha256": "defed5b327cf5db3395cd899aec4720c5fb01a0b1ce81e8a8b5352aef33d0a5b",
           "match": true
         },
         {

@@ -42,11 +42,28 @@ def test_mp48_audit_is_passing_and_holdout_is_locked() -> None:
 
 def test_all_archived_members_match_package_hashes() -> None:
     package = load(PACKAGE_REL)
-    for member in package["archive_members"]:
-        path = member["local_path"]
-        assert (ROOT / path).is_file()
-        assert (ROOT / path).stat().st_size == member["size_bytes"]
-        assert sha256(path) == member["sha256"]
+    raw_payload_available = all(
+        (ROOT / member["local_path"]).is_file()
+        for member in package["archive_members"]
+    )
+    if raw_payload_available:
+        for member in package["archive_members"]:
+            path = member["local_path"]
+            assert (ROOT / path).stat().st_size == member["size_bytes"]
+            assert sha256(path) == member["sha256"]
+    else:
+        audit = load(AUDIT_REL)
+        assert audit["raw_payload_available"] is False
+        assert audit["input_mode"] == "PACKAGE_DECLARATION_METADATA_ONLY"
+        assert audit["numeric_payload_verified"] is False
+        assert (
+            package["source"]["archive"]["archive_hash_verification"]
+            == "NOT_LOCALLY_VERIFIED_ARCHIVE_NOT_DOWNLOADED"
+        )
+        for member in package["archive_members"]:
+            assert isinstance(member["local_path"], str)
+            assert isinstance(member["size_bytes"], int) and member["size_bytes"] > 0
+            assert isinstance(member["sha256"], str) and len(member["sha256"]) == 64
 
 
 def test_gate_exposes_comparator_without_unlocking_core() -> None:

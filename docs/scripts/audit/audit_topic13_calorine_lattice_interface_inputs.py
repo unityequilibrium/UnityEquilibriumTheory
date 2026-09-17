@@ -47,6 +47,35 @@ def _sha(path: str | Path) -> str:
 def inspect_local_inputs() -> dict[str, object]:
     summary = json.loads(SUMMARY.read_text(encoding="utf-8"))
     expected = summary["output_artifacts"]["kappa_hdf5"]
+    full_lbte = json.loads(FULL_LBTE.read_text(encoding="utf-8"))
+    if not KAPPA.is_file():
+        declared_keys = sorted(REQUIRED_COMPARATOR_KEYS)
+        return {
+            "input_mode": "METADATA_ONLY_PUBLIC_BOUNDARY",
+            "raw_payload_available": False,
+            "summary_path": SUMMARY.relative_to(ROOT).as_posix(),
+            "kappa_path": KAPPA.relative_to(ROOT).as_posix(),
+            "kappa_size_bytes": None,
+            "kappa_sha256": None,
+            "expected_kappa_size_bytes": expected["size_bytes"],
+            "expected_kappa_sha256": expected["sha256"],
+            "available_keys": [],
+            "required_comparator_keys": declared_keys,
+            "field_rows": {},
+            "hdf5_file_count_scanned": 0,
+            "collision_structure_matches": {},
+            "collision_eigenvalue_files": [],
+            "normal_umklapp_decomposition_available": False,
+            "collision_matrix_available": False,
+            "collision_eigenvectors_available": False,
+            "full_lbte_status": full_lbte["status"],
+            "full_lbte_open_blockers": full_lbte["major_result"]["open_blockers"],
+            "material_state": summary["source"]["structure"]["path"],
+            "transport_solver": summary["run"]["transport_solver"],
+            "holdout_accessed": summary["run"]["holdout_accessed"],
+            "fit_performed": summary["run"]["fit_performed"],
+        }
+
     with h5py.File(KAPPA, "r") as handle:
         keys = sorted(handle.keys())
         arrays = {
@@ -79,8 +108,9 @@ def inspect_local_inputs() -> dict[str, object]:
                 collision_eigenvalue_files.append(path.relative_to(ROOT).as_posix())
         if hits:
             matching_fields[path.relative_to(ROOT).as_posix()] = hits
-    full_lbte = json.loads(FULL_LBTE.read_text(encoding="utf-8"))
     return {
+        "input_mode": "RAW_PAYLOAD_VERIFIED",
+        "raw_payload_available": True,
         "summary_path": SUMMARY.relative_to(ROOT).as_posix(),
         "kappa_path": KAPPA.relative_to(ROOT).as_posix(),
         "kappa_size_bytes": KAPPA.stat().st_size,
@@ -103,41 +133,76 @@ def inspect_local_inputs() -> dict[str, object]:
         "holdout_accessed": summary["run"]["holdout_accessed"],
         "fit_performed": summary["run"]["fit_performed"],
     }
-
-
 def main() -> int:
     witness = inspect_local_inputs()
+    raw_payload_available = bool(witness["raw_payload_available"])
     key_set = set(witness["available_keys"])
     finite_comparator_fields = all(
         row["finite"] for row in witness["field_rows"].values()
     )
+    metadata_identity_locked = (
+        isinstance(witness["expected_kappa_sha256"], str)
+        and len(witness["expected_kappa_sha256"]) == 64
+        and isinstance(witness["expected_kappa_size_bytes"], int)
+        and witness["expected_kappa_size_bytes"] > 0
+    )
     checks = {
-        "kappa_binary_matches_source_summary_hash": witness["kappa_sha256"] == witness["expected_kappa_sha256"],
-        "kappa_binary_matches_source_summary_size": witness["kappa_size_bytes"] == witness["expected_kappa_size_bytes"],
-        "required_comparator_fields_present": REQUIRED_COMPARATOR_KEYS <= key_set,
-        "required_comparator_fields_finite": finite_comparator_fields,
-        "total_gamma_nonnegative": witness["field_rows"]["gamma"]["minimum"] >= 0.0,
+        "kappa_binary_identity_or_public_metadata_locked": (
+            witness["kappa_sha256"] == witness["expected_kappa_sha256"]
+            if raw_payload_available
+            else metadata_identity_locked
+        ),
+        "kappa_binary_size_or_public_metadata_locked": (
+            witness["kappa_size_bytes"] == witness["expected_kappa_size_bytes"]
+            if raw_payload_available
+            else metadata_identity_locked
+        ),
+        "required_comparator_fields_present_or_public_boundary_declared": (
+            REQUIRED_COMPARATOR_KEYS <= key_set if raw_payload_available else True
+        ),
+        "required_comparator_fields_finite_or_payload_not_public": (
+            finite_comparator_fields if raw_payload_available else True
+        ),
+        "total_gamma_nonnegative_or_payload_not_public": (
+            witness["field_rows"]["gamma"]["minimum"] >= 0.0
+            if raw_payload_available
+            else True
+        ),
         "normal_umklapp_split_absent": not witness["normal_umklapp_decomposition_available"],
         "collision_matrix_absent": not witness["collision_matrix_available"],
         "collision_eigenvectors_absent": not witness["collision_eigenvectors_available"],
         "full_lbte_stability_warning_preserved": witness["full_lbte_status"] == "WARN_FULL_LBTE_NUMERICAL_STABILITY_OPEN",
         "no_fit_or_holdout": not witness["fit_performed"] and not witness["holdout_accessed"],
+        "raw_payload_not_synthesized": True,
     }
     checks = {name: bool(value) for name, value in checks.items()}
     passed = all(checks.values())
-    status = "PASS_SCOPED_CALORINE_LATTICE_INTERFACE_INPUT_BOUNDARY" if passed else "WARN_CALORINE_LATTICE_INPUT_IDENTITY"
+    status = (
+        "PASS_SCOPED_CALORINE_LATTICE_INTERFACE_INPUT_BOUNDARY"
+        if raw_payload_available and passed
+        else "PASS_METADATA_ONLY_CALORINE_LATTICE_INTERFACE_BOUNDARY"
+        if passed
+        else "WARN_CALORINE_LATTICE_INPUT_IDENTITY"
+    )
     equations = {
         "admitted_source": "S_T may be constructed as a comparator from omega_qnu, v_qnu, c_qnu and q weights",
         "total_rta_width": "gamma_total(q,nu,T) is an archived total RTA linewidth",
         "prohibited_substitution": "gamma_total != gamma_R_Umklapp unless Normal/resistive decomposition or a full admissible collision operator is supplied",
         "required_operator": "C_ph=C_N+C_R with C_N|P_crystal>=0 and positive entropy production",
     }
-    what_is_closed = [
-        "The hash-locked 12x12x6 Calorine/Phono3py payload supplies frequency, q point, weight, group velocity, mode heat capacity, total gamma and mode-kappa arrays for a graphite comparator interface.",
-        "All admitted comparator arrays are finite and the archived total gamma is nonnegative on the recorded grid.",
-        "Across 29 local HDF5 files, collision eigenvalue files are present for selected full-LBTE runs, but no collision matrix/eigenvectors or Normal/Umklapp-resolved rates are archived.",
-        "The total RTA gamma is therefore rejected as a physical resistive-only Umklapp rate; the earlier sign-indefinite full-LBTE boundary remains controlling.",
-    ]
+    if raw_payload_available:
+        what_is_closed = [
+            "The hash-locked 12x12x6 Calorine/Phono3py payload supplies frequency, q point, weight, group velocity, mode heat capacity, total gamma and mode-kappa arrays for a graphite comparator interface.",
+            "All admitted comparator arrays are finite and the archived total gamma is nonnegative on the recorded grid.",
+            "Across 29 local HDF5 files, collision eigenvalue files are present for selected full-LBTE runs, but no collision matrix/eigenvectors or Normal/Umklapp-resolved rates are archived.",
+            "The total RTA gamma is therefore rejected as a physical resistive-only Umklapp rate; the earlier sign-indefinite full-LBTE boundary remains controlling.",
+        ]
+    else:
+        what_is_closed = [
+            "The public checkout retains the source summary's locked HDF5 path, SHA-256, size, units, and comparator-field declaration.",
+            "The raw Calorine HDF5 is intentionally not committed here; no numeric mode arrays are fabricated or treated as locally verified.",
+            "The full-LBTE stability warning, absent collision decomposition, and no-fit/no-holdout boundary remain explicit from committed metadata.",
+        ]
     open_blockers = [
         "normal_vs_umklapp_resolved_collision_input_missing",
         "admissible_positive_full_collision_matrix_and_eigenvectors_missing",
@@ -148,11 +213,22 @@ def main() -> int:
     ]
     source_paths = [
         SUMMARY.relative_to(ROOT).as_posix(),
-        KAPPA.relative_to(ROOT).as_posix(),
         FULL_LBTE.relative_to(ROOT).as_posix(),
         "docs/scripts/audit/audit_topic13_calorine_lattice_interface_inputs.py",
-        "docs/core/test/test_topic13_calorine_lattice_interface_inputs.py",
+        "docs/core/05_tests/regression/root/test_topic13_calorine_lattice_interface_inputs.py",
     ]
+    source_hashes = {path: _sha(path) for path in source_paths}
+    locked_source_declarations = {
+        str(witness["kappa_path"]): {
+            "exists": raw_payload_available,
+            "sha256": witness["expected_kappa_sha256"],
+            "size_bytes": witness["expected_kappa_size_bytes"],
+            "hash_verified": raw_payload_available,
+            "status": witness["input_mode"],
+        }
+    }
+    if raw_payload_available:
+        source_hashes[str(witness["kappa_path"])] = _sha(KAPPA)
     artifact = {
         "schema_version": "t13-calorine-lattice-interface-input-boundary-v1",
         "major_result_id": "T13_CALORINE_LATTICE_INTERFACE_INPUT_BOUNDARY",
@@ -186,7 +262,8 @@ def main() -> int:
         "checks": checks,
         "open_blockers": open_blockers,
         "controlling_blocker": "normal_umklapp_split_or_admissible_full_collision_operator_missing",
-        "source_hashes": {path: _sha(path) for path in source_paths},
+        "source_hashes": source_hashes,
+        "locked_source_declarations": locked_source_declarations,
         "evidence_artifacts": [
             {
                 "path": "docs/core/07_artifacts/topic13/t13_lattice_momentum_relaxing_heat_parent_audit.json",

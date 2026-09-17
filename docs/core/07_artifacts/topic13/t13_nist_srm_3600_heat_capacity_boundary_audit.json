@@ -2,13 +2,15 @@
   "schema_version": "t13-nist-srm-3600-heat-capacity-boundary-v1",
   "artifact": "t13_nist_srm_3600_heat_capacity_boundary_audit",
   "generated_at": "2026-08-21",
+  "input_mode": "METADATA_ONLY_PUBLIC_BOUNDARY",
+  "raw_payload_available": false,
   "status": "PASS_SCOPED_NIST_SRM_3600_HEAT_CAPACITY_COMPARATOR_BOUNDARY",
   "major_result": {
     "major_result_id": "T13_NIST_SRM_3600_HEAT_CAPACITY_COMPARATOR_BOUNDARY",
     "topic": "0.13_Thermodynamic_Bridge",
     "closure_level": "CLOSED_FOR_LANE",
     "what_is_closed": [
-      "The official NIST SRM 3600 paper is archived with a reproducible PDF hash and source locators.",
+      "The official NIST SRM 3600 PDF identity is hash-locked by public metadata; the raw payload is not present in this checkout.",
       "The source-reported 20 K to 295 K heat-capacity comparison range is recorded.",
       "The source-reported approximately +/-2 percent, 90 percent confidence uncertainty boundary and separate systematic-discrepancy warning are preserved without relabeling them as row-level standard uncertainty.",
       "The material boundary between glassy carbon/graphite-powder comparison data and Ding's HOPG PBTE C_src is explicit."
@@ -32,11 +34,13 @@
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nist_srm_3600_glassy_carbon_heat_capacity.pdf",
         "sha256": "5bbbd0e3949a1e38cbb7ec00bbfc1a75a9d4708f6a0656e5e49c8d44d32ba5da",
+        "sha256_is_expected_when_unavailable": true,
+        "available": false,
         "locator": "official NIST PDF, Figure 3 and section 4.1"
       },
       {
-        "path": "docs/core/artifacts/t13_nist_srm_3600_heat_capacity_boundary_audit.json",
-        "source_record_sha256": "c44f75d2add2e58a7932ac213045eaa7a009051db34a1e5c581a50cd8d3c03d7"
+        "path": "docs/core/07_artifacts/topic13/t13_nist_srm_3600_heat_capacity_boundary_audit.json",
+        "source_record_sha256": "18a88625b5d26d618ccbf90360f6692eaacc87e4711ad0602512a1a7e09995f7"
       }
     ],
     "verification_status": "PASS_SCOPED_NIST_SRM_3600_HEAT_CAPACITY_COMPARATOR_BOUNDARY",
@@ -66,6 +70,9 @@
     "local_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nist_srm_3600_glassy_carbon_heat_capacity.pdf",
     "local_sha256": "5bbbd0e3949a1e38cbb7ec00bbfc1a75a9d4708f6a0656e5e49c8d44d32ba5da",
     "local_bytes": 758635,
+    "local_sha256_is_expected_when_unavailable": true,
+    "raw_payload_available": false,
+    "input_mode": "METADATA_ONLY_PUBLIC_BOUNDARY",
     "page_count": 6,
     "source_locators": [
       {
@@ -109,13 +116,17 @@
       "raw_machine_readable_payload_stored": false,
       "preprocessing": "No numeric transcription or digitization performed."
     },
-    "source_record_sha256": "c44f75d2add2e58a7932ac213045eaa7a009051db34a1e5c581a50cd8d3c03d7"
+    "source_record_sha256": "18a88625b5d26d618ccbf90360f6692eaacc87e4711ad0602512a1a7e09995f7"
   },
   "checks": {
-    "source_file_exists": true,
-    "pdf_signature_present": true,
-    "source_byte_count_matches": true,
-    "source_sha256_matches": true,
+    "source_file_exists": false,
+    "pdf_signature_present": false,
+    "source_byte_count_matches": false,
+    "source_sha256_matches": false,
+    "source_identity_declared": true,
+    "raw_payload_available": false,
+    "input_mode": "METADATA_ONLY_PUBLIC_BOUNDARY",
+    "local_sha256_is_expected_when_unavailable": true,
     "declared_page_count": 6,
     "machine_readable_numeric_rows_emitted": 0,
     "figure_only_payload": true,

@@ -1,7 +1,7 @@
 {
   "schema_version": "uet-equation-registry-addendum-v1",
   "status": "STANDARD_COMPARATOR_NOT_MERGED_AS_UET_EQUATION",
-  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
   "equation_entries": [
     {
       "equation_id": "standard.lattice.thermal.momentum_relaxing_heat_parent",
@@ -64,10 +64,10 @@
         "radial quadrature refinement"
       ],
       "implementation_paths": [
-        "docs/core/uet_lattice_momentum_relaxing_heat_parent.py"
+        "docs/core/03_lanes/thermal/uet_lattice_momentum_relaxing_heat_parent.py"
       ],
       "verifier_paths": [
-        "docs/core/test/test_topic13_lattice_momentum_relaxing_heat_parent.py",
+        "docs/core/05_tests/regression/root/test_topic13_lattice_momentum_relaxing_heat_parent.py",
         "docs/scripts/audit/audit_topic13_lattice_momentum_relaxing_heat_parent.py"
       ],
       "observable": "Natural-unit heat-response form in a synthetic lattice rest frame, not material conductivity",
@@ -77,8 +77,8 @@
       "verification_status": "PASS_SCOPED_LATTICE_HEAT_PARENT",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_lattice_momentum_relaxing_heat_parent_audit.json",
-          "sha256": "6974fb64948fc38cc831ac6e53474b6ab22f10b30a32fa53ea67d854b0116f21"
+          "path": "docs/core/07_artifacts/topic13/t13_lattice_momentum_relaxing_heat_parent_audit.json",
+          "sha256": "ea938c76f8fc87558b815d6494161dceb5b0ce4b10a9e337c0d1cabb4178e4ff"
         }
       ],
       "downstream_dependencies": [

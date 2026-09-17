@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_gh_time_evolution_formula_audit",
-  "generated_at": "2026-09-16T17:48:30.275578+00:00",
+  "generated_at": "2026-09-17T15:57:57.054875+00:00",
   "status": "PASS_GH_TIME_EVOLUTION_NUMERICAL_CONTRACT",
   "formulas": [
     {

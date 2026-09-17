@@ -111,7 +111,7 @@
         {
           "path": "docs/core/07_artifacts/correspondence/o2_eos_formula_audit.json",
           "exists": true,
-          "sha256": "def856645cb17e953d5cbcbb9b8c7e5acdea974fb812e3421a131eb071df8cb0",
+          "sha256": "beca464c363c0da42752615ee276e7803a65ccc35bcb901c8417055eddeb0976",
           "status": "WARN",
           "controller": "not_declared"
         }
@@ -203,7 +203,7 @@
         {
           "path": "docs/core/07_artifacts/gates/matter_space_research_program_gate.json",
           "exists": true,
-          "sha256": "82ede5f0f8412dd3ce49b70d129861fe9a433f6a52e35f38eb8074abdd311c25",
+          "sha256": "aabb4b5b3a78011ca69fdeda701a790ad9eac6c72765795b7c22a6e5b0ac5c37",
           "status": "BLOCKED",
           "controller": "core_prearrival_leakage"
         },
@@ -263,7 +263,7 @@
         {
           "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_noether_phase_field_dependency_gate.json",
           "exists": true,
-          "sha256": "9e0f03db29786a8000782c8f82ef423e180d87223a9c2ba535f5a802db3f3743",
+          "sha256": "a55151b80bc6ed27d7ac8dec643976a86cae3c0f2bc98dbfcada4c3efee38105",
           "status": "BLOCKED",
           "controller": "topic_0_11_signed_noether_charge_eos_transport_matching_missing"
         }
@@ -288,7 +288,7 @@
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json",
           "exists": true,
-          "sha256": "509746deb1fc74ef81ff04cf5fdda91055a7e73dbb2b3b6a5de804c3f8786596",
+          "sha256": "901ef7bc70c3fb5f657978db1aa8f48f7734003875fdb52d47ec17911653699f",
           "status": "SIMULATION_ONLY",
           "controller": "core_prearrival_leakage"
         },
@@ -327,17 +327,17 @@
         {
           "path": "docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json",
           "exists": true,
-          "sha256": "088f31fc10a21138f63f2149c82919eb1688f403510bdb15d4acbf860c0e0d61"
+          "sha256": "1ec902310878af5e9f5fcdf1da430946ed08d56766b72e8a3b3704399938aaac"
         },
         {
           "path": "docs/core/07_artifacts/correspondence/o2_eos_formula_audit.json",
           "exists": true,
-          "sha256": "def856645cb17e953d5cbcbb9b8c7e5acdea974fb812e3421a131eb071df8cb0"
+          "sha256": "beca464c363c0da42752615ee276e7803a65ccc35bcb901c8417055eddeb0976"
         },
         {
           "path": "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json",
           "exists": true,
-          "sha256": "7b673e32edcfbd96faff2d48f83fa6d751b86b74c059dfb5f047d45c877e3c58"
+          "sha256": "8632f1b1514404359da866be4d69c42fdf58b0724cc6ffb94e9a0cc3de0bec72"
         }
       ]
     },
@@ -394,7 +394,7 @@
         {
           "path": "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json",
           "exists": true,
-          "sha256": "dba28247a59c5c108a761945186aa147fe899df26c6bbc60f7c5f2a03ffc4a83"
+          "sha256": "9f646c956d9f3e6b7224a06f407bed48b2f8161b6645d9e7a2a158527d3c8b63"
         }
       ]
     },

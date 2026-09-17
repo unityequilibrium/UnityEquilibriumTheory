@@ -801,3 +801,13 @@
 - Controller: PR Python validation must rerun on the pushed commit; external-source and broader Topic 13 gates remain independently controlling where applicable.
 - Claim impact: none; organization/path compatibility and reproducibility repair only.
 - Next action: commit this scoped repair, push the existing PR branch, and inspect the new CI failure set before any merge decision.
+
+## 2026-09-17 — Wave 6zg public-boundary and curved-artifact CI repair
+
+- Scope: repair metadata-only public-source boundaries for Topic 13 NIMS, NIST SRM 3600, and Oxford TGS inputs; refresh scalar thermoelastic, transport, Xie holdout, and curved 3+1 artifact consumers after canonical-path migration.
+- Changed: absent raw/private sources now fail closed as declared metadata-only packages; numeric extraction does not promote an unverified derived CSV; affected tests resolve canonical artifacts; all curved 3+1 generators were rerun from their source records.
+- Verification: Topic 13 generators and dependency chain PASS; curved 3+1 targeted regression `27 passed`; full core suite `2170 passed, 6 warnings`.
+- Result: local CI failure set is closed for the current publish tree. Raw/private payloads were not added; scientific evidence and claim boundaries remain unchanged.
+- Controller: required GitHub checks on the new commit remain the publish gate; foundation/scientific external-source blockers remain unchanged.
+- Claim impact: none; public-boundary, artifact-hash, and compatibility repair only.
+- Next action: commit this scoped repair, push the PR branch, then inspect GitHub checks before any merge decision.

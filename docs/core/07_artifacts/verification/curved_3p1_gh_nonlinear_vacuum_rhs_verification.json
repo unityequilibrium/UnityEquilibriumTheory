@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_gh_nonlinear_vacuum_rhs_verification",
-  "generated_at": "2026-09-16T17:48:26.561706+00:00",
+  "generated_at": "2026-09-17T15:57:54.631291+00:00",
   "topic": "docs/core curved 3+1 parent",
   "status": "PASS_GH_NONLINEAR_VACUUM_RHS",
   "major_result": {
@@ -82,10 +82,10 @@
     "accessed_on": "2026-08-28"
   },
   "source_hashes": {
-    "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92",
+    "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "74692aa7ebe2fd125c1d04ae34937efb715d6c67db42947c4593b67c6a5182d1",
     "docs/scripts/audit/audit_uet_curved_3p1_gh_nonlinear_vacuum.py": "860b57b84846efadb1b060404bdd944f7a711ea74a5d81b4010767f092a5a0c2",
-    "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a",
-    "docs/core/07_artifacts/verification/curved_3p1_gh_principal_system_verification.json": "c2fd2dd9dced796fad21d544b5eef248b3da1e1f09c33dc240532ef2eae567a1"
+    "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "22e6b99c6a6070139ccbe9a5c6604788addc719b9e5b032b0416b175873c718e",
+    "docs/core/07_artifacts/verification/curved_3p1_gh_principal_system_verification.json": "3bdb66e5fa3b582ff6610c076a4aa21961e7098ff5994b522e80044eff90e481"
   },
   "parameters": {
     "gamma0": 0.4,
@@ -105,16 +105,16 @@
     },
     "independent_reference_errors": {
       "metric_rhs": 0.0,
-      "pi_rhs": 2.7755575615628914e-17,
+      "pi_rhs": 1.3877787807814457e-17,
       "phi_rhs": 0.0,
-      "gauge_constraint": 5.551115123125783e-17,
+      "gauge_constraint": 2.7755575615628914e-17,
       "christoffel": 0.0
     },
     "independent_variable_grid_reference_errors": {
       "metric_rhs": 0.0,
       "pi_rhs": 5.204170427930421e-17,
       "phi_rhs": 3.469446951953614e-18,
-      "gauge_constraint": 1.1102230246251565e-16,
+      "gauge_constraint": 9.71445146547012e-17,
       "christoffel": 0.0
     },
     "point_grid_constraint_error": 0.0,
@@ -124,7 +124,7 @@
     "kinematics_errors": {
       "lapse": 1.1102230246251565e-16,
       "shift": 2.7755575615628914e-17,
-      "normal_norm": 0.0
+      "normal_norm": 2.220446049250313e-16
     }
   },
   "checks": {

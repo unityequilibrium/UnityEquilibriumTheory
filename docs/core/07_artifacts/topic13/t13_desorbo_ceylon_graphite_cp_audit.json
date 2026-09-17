@@ -2,18 +2,22 @@
   "schema_version": "t13-desorbo-ceylon-graphite-cp-audit-v1",
   "artifact": "t13_desorbo_ceylon_graphite_cp_audit",
   "generated_at": "2026-09-17",
-  "status": "PASS_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_LOCKED_COMPARATOR",
+  "status": "PASS_METADATA_ONLY_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_BOUNDARY",
+  "input_mode": "METADATA_ONLY_PUBLIC_BOUNDARY",
+  "raw_source_present": false,
+  "raw_source_declared_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nist_srd69_graphite_desorbo_1955.html",
+  "raw_source_declared_sha256": "2e9955e1a176adc93ee152aceb390da67f561bf5ba0a4c741e9936a552f1dc1b",
   "claim_promotion": false,
   "major_result": {
     "major_result_id": "T13_DESORBO_1955_CEYLON_GRAPHITE_CP_COMPARATOR",
     "topic": "0.13_Thermodynamic_Bridge",
     "closure_level": "CLOSED_FOR_LANE",
     "what_is_closed": [
-      "official NIST table row attributed to DeSorbo 1955 is archived with a local hash",
-      "Ceylon natural graphite material identity and primary-paper citation are recorded",
-      "7.841 J mol^-1 K^-1 at 298.15 K is source-locked as Cp,solid",
+      "the committed source package preserves the official NIST locator, numeric row, material identity and declared raw-file hash",
+      "the raw NIST HTML is intentionally absent from this public checkout, so its bytes are not locally rehashed here",
+      "7.841 J mol^-1 K^-1 at 298.15 K remains a package-level comparison row only",
       "the reported accuracy boundary is preserved without promotion to standard uncertainty",
-      "the row is isolated from fitting, target access, Phi calibration, and holdout access"
+      "the row remains isolated from fitting, target access, Phi calibration, and holdout access"
     ],
     "equation_or_mapping": "Cp,solid^m(298.15 K) = 7.841 J mol^-1 K^-1; conversion to c_v^V is not consumed",
     "units": {
@@ -26,17 +30,18 @@
     "evidence_artifacts": [
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/desorbo_1955_ceylon_graphite_cp_source_package.json",
-        "sha256": "3bf9cebd1b3129f9b0f1cd66b49e16c2d7743059a207ed203048894abb6a746b"
+        "sha256": "72b9ee0cb145c562f48c410beabf5eb1c8c8345e08f210e9fd6f05a0032c5f92"
       },
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nist_srd69_graphite_desorbo_1955.html",
-        "sha256": "2e9955e1a176adc93ee152aceb390da67f561bf5ba0a4c741e9936a552f1dc1b"
+        "sha256": "2e9955e1a176adc93ee152aceb390da67f561bf5ba0a4c741e9936a552f1dc1b",
+        "availability": "DECLARED_NOT_IN_PUBLIC_CHECKOUT"
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_desorbo_ceylon_graphite_cp_audit.json"
       }
     ],
-    "verification_status": "PASS_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_LOCKED_COMPARATOR",
+    "verification_status": "PASS_METADATA_ONLY_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_BOUNDARY",
     "open_blockers": [
       "standard_uncertainty_not_reported_in_archived_numeric_row",
       "density_and_cp_to_cv_conversion_not_source_locked",
@@ -95,18 +100,19 @@
   },
   "checks": {
     "package_status_is_numeric_comparator": true,
-    "raw_source_present": true,
-    "raw_hash_matches_package": true,
-    "nist_cp_table_locator_present": true,
-    "nist_numeric_row_present": true,
-    "nist_primary_reference_present": true,
+    "raw_source_present_or_public_metadata_boundary": true,
+    "raw_hash_matches_package_or_public_metadata_boundary": true,
+    "nist_cp_table_locator_present_or_package_locator": true,
+    "nist_numeric_row_present_or_package_row": true,
+    "nist_primary_reference_present_or_package_reference": true,
     "row_units_are_molar_cp": true,
     "row_temperature_is_declared": true,
     "accuracy_not_relabelled_as_standard_uncertainty": true,
     "volumetric_cv_not_emitted": true,
     "no_fit_or_target_used": true,
     "xie_holdout_not_accessed": true,
-    "alpha_not_emitted": true
+    "alpha_not_emitted": true,
+    "raw_payload_not_synthesized": true
   },
   "numeric_cp_emitted": true,
   "volumetric_cv_emitted": false,

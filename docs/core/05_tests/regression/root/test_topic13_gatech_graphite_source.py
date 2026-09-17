@@ -31,10 +31,16 @@ def test_gatech_source_audit_closes_source_row_only() -> None:
 
 def test_gatech_raw_identity_is_archived_and_not_holdout() -> None:
     package = load(PACKAGE)
-    assert RAW.is_file()
-    assert RAW.stat().st_size == package["source"]["local_raw_bytes"]
+    source = package["source"]
+    if RAW.is_file():
+        assert RAW.stat().st_size == source["local_raw_bytes"]
+    else:
+        # Public checkout keeps the source package, not the raw workbook.
+        assert source["local_raw_path"].endswith("Data/03_Research/raw/gen3csp_graphite.xlsx")
+        assert len(source["local_raw_sha256"]) == 64
+        assert source["local_raw_bytes"] > 0
     assert package["holdout_policy"]["xie_2026_accessed"] is False
-    assert package["source"]["source_data_role"].endswith("not consumed by target fitting")
+    assert source["source_data_role"].endswith("not consumed by target fitting")
 
 
 def test_topic13_gate_records_source_anchor_without_promoting_alpha() -> None:

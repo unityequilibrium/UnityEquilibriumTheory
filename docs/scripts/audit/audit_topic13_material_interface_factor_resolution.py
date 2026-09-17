@@ -95,7 +95,10 @@ def main() -> int:
         ),
         "calorine_heat_capacity_is_comparator_only": (
             calorine["verification_status"]
-            == "PASS_SCOPED_CALORINE_LATTICE_INTERFACE_INPUT_BOUNDARY"
+            in {
+                "PASS_SCOPED_CALORINE_LATTICE_INTERFACE_INPUT_BOUNDARY",
+                "PASS_METADATA_ONLY_CALORINE_LATTICE_INTERFACE_BOUNDARY",
+            }
             and calorine["data_role"]
             == "EXTERNAL_CANDIDATE_REPRODUCTION_NOT_CALIBRATION_NOT_HOLDOUT"
         ),
@@ -139,7 +142,7 @@ def main() -> int:
     ]
     source_paths = [
         "docs/core/03_lanes/thermal/uet_material_interface_factor_resolution.py",
-        "docs/core/test/test_topic13_material_interface_factor_resolution.py",
+        "docs/core/05_tests/regression/root/test_topic13_material_interface_factor_resolution.py",
         "docs/scripts/audit/audit_topic13_material_interface_factor_resolution.py",
     ]
     evidence_paths = [

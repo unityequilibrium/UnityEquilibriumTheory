@@ -1,7 +1,7 @@
 {
   "artifact": "uet_core_artifact_generator_review_queue",
   "canonical_path_authority": "docs/core/core_paths.py",
-  "generated_at": "2026-09-16T11:06:14+00:00",
+  "generated_at": "2026-09-17T12:00:19+00:00",
   "generator": "docs/scripts/audit/build_uet_core_artifact_generator_review_queue_v3.py",
   "records": [
     {
@@ -3779,7 +3779,7 @@
       "active_consumers": [],
       "artifact_name": "noether_phase_field_dependency_gate.json",
       "asset_id": "UET-ARTIFACT-580AC07654BA",
-      "blocker": "no pending migration action",
+      "blocker": "the recorded generator does not prove canonical output-path authority",
       "canonical_path": "docs/core/07_artifacts/gates/noether_phase_field_dependency_gate.json",
       "claim_boundary": "organization control only; no physics evidence or claim promotion",
       "consumer_count": 0,
@@ -3793,8 +3793,8 @@
       "generator_status": {
         "contains_legacy_output_literal": false,
         "path_exists": true,
-        "status": "CANONICAL_PATH_AUTHORITY_PRESENT",
-        "uses_canonical_path_authority": true
+        "status": "LEGACY_OUTPUT_PATH_OR_UNDECLARED",
+        "uses_canonical_path_authority": false
       },
       "legacy_path": "docs/core/artifacts/noether_phase_field_dependency_gate.json",
       "legacy_reference_paths": [
@@ -3822,10 +3822,10 @@
       ],
       "logical_area": "07_artifacts",
       "migration_state": "MIGRATED",
-      "next_action": "retain legacy index boundary and verify canonical consumers",
+      "next_action": "declare the canonical output path through the shared path authority, then run semantic preflight",
       "owner_id": "EVIDENCE",
-      "preflight_required": false,
-      "review_category": "MIGRATED",
+      "preflight_required": true,
+      "review_category": "GENERATOR_SWITCH_REQUIRED",
       "room_id": "ROOM_CORE_FOUNDATION",
       "sha256_before": "97b6213a72e7de38bc28e51ed5d4a1e8531e2f1bf79dfe0de683f81c2cafcd33"
     },
@@ -23299,19 +23299,19 @@
   "source_manifest": {
     "path": "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
     "record_count": 593,
-    "sha256": "025984afec3f4cdc2f91baad0fef9166fd0e46c5c956e961ef3446159141a665"
+    "sha256": "3cf89c9adfae5927fd706957587e9d003dde408a4565b8a8a60034766d64510b"
   },
   "summary": {
     "category_counts": {
       "GENERATOR_IDENTITY_UNRESOLVED": 516,
-      "GENERATOR_SWITCH_REQUIRED": 57,
-      "MIGRATED": 20
+      "GENERATOR_SWITCH_REQUIRED": 58,
+      "MIGRATED": 19
     },
     "claim_boundary": "organization control only; this artifact cannot promote physics status",
     "controlling_blocker": "generator_identity_or_consumer_path_not_closed",
-    "migrated_records": 20,
+    "migrated_records": 19,
     "next_wave": "resolve one bounded generator/consumer family and run semantic preflight",
-    "pending_records": 573,
+    "pending_records": 574,
     "records_total": 593,
     "status": "PASS_WITH_REVIEW_REQUIRED"
   }

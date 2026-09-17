@@ -21,9 +21,15 @@ def test_lowitzer_full_pair_is_source_locked_and_scoped() -> None:
 
     assert package["status"] == "SOURCE_LOCKED_THERMODYNAMIC_PAIR_COMPARATOR_MATERIAL_MAPPING_OPEN"
     assert package["source"]["payload_state"] == "FULL_TEXT_ARCHIVED"
-    assert raw.is_file()
-    assert hashlib.sha256(raw.read_bytes()).hexdigest() == package["source"]["local_raw_sha256"]
-    assert package["source"]["local_raw_size_bytes"] == raw.stat().st_size
+    if raw.is_file():
+        assert hashlib.sha256(raw.read_bytes()).hexdigest() == package["source"]["local_raw_sha256"]
+        assert package["source"]["local_raw_size_bytes"] == raw.stat().st_size
+    else:
+        # The public checkout retains the reviewed source package; the raw
+        # article payload remains an external, hash-declared input.
+        assert package["source"]["local_raw_path"] == RAW_REL
+        assert len(package["source"]["local_raw_sha256"]) == 64
+        assert package["source"]["local_raw_size_bytes"] > 0
     assert len(package["source_rows"]) == 4
     assert all(row["temperature_K"] == 300.0 for row in package["source_rows"])
     assert package["pair_contract"]["same_study_pair_present"] is True

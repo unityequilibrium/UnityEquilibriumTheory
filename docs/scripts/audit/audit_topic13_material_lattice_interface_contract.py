@@ -67,7 +67,7 @@ def main() -> int:
     ]
     source_paths = [
         "docs/core/03_lanes/thermal/uet_material_lattice_interface_contract.py",
-        "docs/core/test/test_topic13_material_lattice_interface_contract.py",
+        "docs/core/05_tests/regression/root/test_topic13_material_lattice_interface_contract.py",
         "docs/scripts/audit/audit_topic13_material_lattice_interface_contract.py",
     ]
     prior_paths = [

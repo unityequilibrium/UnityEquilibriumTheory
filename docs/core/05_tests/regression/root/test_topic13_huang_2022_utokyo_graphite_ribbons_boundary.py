@@ -18,11 +18,19 @@ def load(path: Path) -> dict:
 
 def test_utokyo_source_identity_is_locked() -> None:
     package = load(PACKAGE)
-    assert PDF.is_file()
-    assert PDF.stat().st_size == 25_529_971
-    assert hashlib.sha256(PDF.read_bytes()).hexdigest() == (
-        "812ca326070b8036179a0f5fd40addacb88c9bfdf73c2f4c16f0873175a04e6a"
-    )
+    if PDF.is_file():
+        assert PDF.stat().st_size == 25_529_971
+        assert hashlib.sha256(PDF.read_bytes()).hexdigest() == (
+            "812ca326070b8036179a0f5fd40addacb88c9bfdf73c2f4c16f0873175a04e6a"
+        )
+    else:
+        # The public checkout retains the reviewed source package and its
+        # expected identity; the raw thesis PDF remains an external payload.
+        assert package["source"]["expected_size_bytes"] == 25_529_971
+        assert package["source"]["expected_sha256"] == (
+            "812ca326070b8036179a0f5fd40addacb88c9bfdf73c2f4c16f0873175a04e6a"
+        )
+        assert package["source"]["raw_payload_available"] is False
     assert package["source"]["reviewed_page_count"] == 110
     assert package["source"]["doi"] == "https://doi.org/10.15083/0002011088"
 

@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "artifact": "matter_space_thermal_control",
   "topic": "0.13_Thermodynamic_Bridge",
-  "generated_at": "2026-08-14T08:24:16.331975+00:00",
+  "generated_at": "2026-09-17T13:03:02.158263+00:00",
   "status": "SIMULATION_ONLY",
   "internal_gate_status": "FAIL",
   "dependency_status": "BLOCKED",
@@ -19,8 +19,8 @@
   },
   "metrics": {
     "cattaneo_analytical_residual": 0.0,
-    "cattaneo_phase_relative_error": 9.271874244056374e-08,
-    "cattaneo_lag_relative_error": 9.271874248716792e-08,
+    "cattaneo_phase_relative_error": 9.271874337264729e-08,
+    "cattaneo_lag_relative_error": 9.271874346585565e-08,
     "cattaneo_hysteresis_relative_error": 2.3093928019540135e-07,
     "cattaneo_convergence_error": 1.0357818269746133e-07,
     "nonlinear_homogeneous_core_crosscheck_error": 0.0,
@@ -34,7 +34,7 @@
     "pilot_visual_arrival_speed_relative_error": 0.008064516129032029,
     "pilot_visual_prearrival_leakage_fraction": 0.052060621423768744,
     "trace_source_minimum": 1.1456673200014236e-06,
-    "trace_lag_time": -0.6775763673485588,
+    "trace_lag_time": -0.6775763673485585,
     "trace_hysteresis_area": 0.5950466836340469
   },
   "thresholds": {
@@ -99,8 +99,8 @@
     {
       "coupling_g": 0.0,
       "tau_space": 0.2,
-      "phase_radians": -1.0853361147901348,
-      "lag_time": 1.4471148197201797,
+      "phase_radians": -1.0853361147901353,
+      "lag_time": 1.4471148197201804,
       "hysteresis_area": 1.1277178300736537,
       "max_ledger_closure_relative": 0.002600101122789942,
       "minimum_trace_source": 8.685339848301865e-05,
@@ -123,8 +123,8 @@
     {
       "coupling_g": 0.15,
       "tau_space": 0.2,
-      "phase_radians": -1.085723138224405,
-      "lag_time": 1.4476308509658733,
+      "phase_radians": -1.0857231382244052,
+      "lag_time": 1.4476308509658737,
       "hysteresis_area": 1.128083802254321,
       "max_ledger_closure_relative": 0.0033925069364990415,
       "minimum_trace_source": 6.409223126171808e-05,
@@ -171,14 +171,14 @@
   ],
   "preregistration": {
     "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_thermal_preregistration.json",
-    "sha256": "f0cb51e720c8c4813973d4227566373b9f3c473308346974e048f49056792fcd",
+    "sha256": "5f7a4d77f055a32fa908709021aaabd9529f5c202d53636c0a2fc8f5acfeb288",
     "status": "LOCKED_BEFORE_EXECUTION",
     "parameter_fitting": false,
     "seed": 13013
   },
   "numerical_amendment": {
     "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_thermal_numerical_amendment_001.json",
-    "sha256": "a30b639531fda62983b380051b4ca86c791cda772b0440b3113c5ca7daf5f85e",
+    "sha256": "2d02ff9840ef2f051fb228983c0f568b379dca4955ca0a1a41578ed702ecaec1",
     "status": "POST_DIAGNOSTIC_NUMERICAL_AMENDMENT",
     "blind_preregistration": false,
     "analysis_dt": 5e-05,
@@ -193,8 +193,8 @@
     "holdout_consumed": false
   },
   "core_dependency": {
-    "path": "docs/core/artifacts/matter_space_variational_verification.json",
-    "sha256": "e5ae26fb40ff6cd4a0d1d0c86576e91218294e683902bb60b6afb0b2596cc62c",
+    "path": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
+    "sha256": "8fa111f3e23134af2c1d3924a364fef7de27142bd636f0b0510a4c79867d6f3c",
     "status": "FAIL",
     "controlling_blocker": "prearrival_leakage"
   },
@@ -208,28 +208,28 @@
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/03_show_Result/matter_space_thermal_phase_lag.png",
         "caption": "Fourier, Cattaneo, linear Phi, nonlinear Phi, and a separately plotted derived trace.",
         "caveat": "Visual phase similarity is not external validation.",
-        "sha256": "a83e271128c066e0b514ce08f7763e55cdde5a43731c2722adbc4f691916673a"
+        "sha256": "70efb457dfc05003c98947241d75173a1d8630b60625f978e8d0af4831fc7685"
       },
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/03_show_Result/matter_space_thermal_hysteresis.png",
         "caption": "Physical-control loops and the source-to-trace loop are kept on separate axes.",
         "caveat": "No material-level comparison is made.",
-        "sha256": "2e60f37e47d943c64f4fe3dfaafdfb8482a865f020c5eb21205d7e968a83e9fb"
+        "sha256": "48024c131f728ce07861e4b3e60c3758b2ffc541b896f771206ff8de45098d36"
       },
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/03_show_Result/matter_space_thermal_causal_arrival.png",
         "caption": "Compact-pulse detector response against the declared Phi propagation time.",
         "caveat": "Pre-arrival leakage blocks physical interpretation.",
-        "sha256": "a6a53713114591d0f2ae0b289a3ea5889774d3d120f783ec1b7ff10c55f3f1bb"
+        "sha256": "b7ef14a3db080dc892b2069f2a4f7f010a7fefe1971f6806f93dbc1a4a378074"
       },
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/03_show_Result/matter_space_thermal_ledger.png",
         "caption": "Normalized extended energy and open-system ledger closure.",
         "caveat": "This is not an SI heat or entropy balance.",
-        "sha256": "f0bf947ef6820a4e9883cce58371ece276bf3595d038deb097f0aa53f15bc6a9"
+        "sha256": "28f9fe12c7b9ef56521776e9bb75f30d22af40ee76f1b3aa70deee1b9b29f247"
       }
     ],
-    "script_sha256": "7b8988c2c72574d85428ddcb7b9c880f4af361b060bcdcdc8837f6f2041d15c5"
+    "script_sha256": "da38b35b7ee1ceb7462b5ae09a6db287ef612edebf7c5bcb775394bc59f32b15"
   },
   "run_integrity": {
     "unit_lane": "normalized",

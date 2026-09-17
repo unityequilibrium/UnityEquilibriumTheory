@@ -4,12 +4,11 @@
   "topic": "0.13_Thermodynamic_Bridge",
   "closure_level": "CLOSED_FOR_LANE",
   "closure_disposition": "SOURCE_INTERFACE_BOUNDARY_READY",
-  "verification_status": "PASS_SCOPED_CALORINE_LATTICE_INTERFACE_INPUT_BOUNDARY",
+  "verification_status": "PASS_METADATA_ONLY_CALORINE_LATTICE_INTERFACE_BOUNDARY",
   "what_is_closed": [
-    "The hash-locked 12x12x6 Calorine/Phono3py payload supplies frequency, q point, weight, group velocity, mode heat capacity, total gamma and mode-kappa arrays for a graphite comparator interface.",
-    "All admitted comparator arrays are finite and the archived total gamma is nonnegative on the recorded grid.",
-    "Across 29 local HDF5 files, collision eigenvalue files are present for selected full-LBTE runs, but no collision matrix/eigenvectors or Normal/Umklapp-resolved rates are archived.",
-    "The total RTA gamma is therefore rejected as a physical resistive-only Umklapp rate; the earlier sign-indefinite full-LBTE boundary remains controlling."
+    "The public checkout retains the source summary's locked HDF5 path, SHA-256, size, units, and comparator-field declaration.",
+    "The raw Calorine HDF5 is intentionally not committed here; no numeric mode arrays are fabricated or treated as locally verified.",
+    "The full-LBTE stability warning, absent collision decomposition, and no-fit/no-holdout boundary remain explicit from committed metadata."
   ],
   "equation_registry_ids": [
     "standard.graphite.pbte.calorine_lattice_interface_input_boundary"
@@ -40,28 +39,15 @@
   "observable": "Available PBTE comparator fields and missing collision decomposition, not UET conductivity",
   "data_role": "EXTERNAL_CANDIDATE_REPRODUCTION_NOT_CALIBRATION_NOT_HOLDOUT",
   "witness": {
+    "input_mode": "METADATA_ONLY_PUBLIC_BOUNDARY",
+    "raw_payload_available": false,
     "summary_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_pbte_run_m12x12x6_summary.json",
     "kappa_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/mesh_12x12x6/kappa-m12126.hdf5",
-    "kappa_size_bytes": 242650,
-    "kappa_sha256": "f4d2dace656514abe3abfe53d29679de91f7a9a94edd2b70adb29f8456037909",
+    "kappa_size_bytes": null,
+    "kappa_sha256": null,
     "expected_kappa_size_bytes": 242650,
     "expected_kappa_sha256": "f4d2dace656514abe3abfe53d29679de91f7a9a94edd2b70adb29f8456037909",
-    "available_keys": [
-      "frequency",
-      "gamma",
-      "grid_point",
-      "group_velocity",
-      "gv_by_gv",
-      "heat_capacity",
-      "kappa",
-      "kappa_unit_conversion",
-      "mesh",
-      "mode_kappa",
-      "qpoint",
-      "temperature",
-      "version",
-      "weight"
-    ],
+    "available_keys": [],
     "required_comparator_keys": [
       "frequency",
       "gamma",
@@ -72,100 +58,10 @@
       "temperature",
       "weight"
     ],
-    "field_rows": {
-      "group_velocity": {
-        "shape": [
-          76,
-          12,
-          3
-        ],
-        "finite": true,
-        "minimum": -103.57710558422542,
-        "maximum": 188.20005932169116,
-        "zero_count": 56
-      },
-      "weight": {
-        "shape": [
-          76
-        ],
-        "finite": true,
-        "minimum": 1.0,
-        "maximum": 24.0,
-        "zero_count": 0
-      },
-      "mode_kappa": {
-        "shape": [
-          3,
-          76,
-          12,
-          6
-        ],
-        "finite": true,
-        "minimum": -3.8628390804104195e-15,
-        "maximum": 6441.498340439994,
-        "zero_count": 378
-      },
-      "temperature": {
-        "shape": [
-          3
-        ],
-        "finite": true,
-        "minimum": 200.0,
-        "maximum": 300.0,
-        "zero_count": 0
-      },
-      "gamma": {
-        "shape": [
-          3,
-          76,
-          12
-        ],
-        "finite": true,
-        "minimum": 0.0,
-        "maximum": 0.428044075744705,
-        "zero_count": 9
-      },
-      "frequency": {
-        "shape": [
-          76,
-          12
-        ],
-        "finite": true,
-        "minimum": -0.00045080856262931317,
-        "maximum": 45.76120910268223,
-        "zero_count": 0
-      },
-      "heat_capacity": {
-        "shape": [
-          3,
-          76,
-          12
-        ],
-        "finite": true,
-        "minimum": 0.0,
-        "maximum": 8.613980221183839e-05,
-        "zero_count": 9
-      },
-      "qpoint": {
-        "shape": [
-          76,
-          3
-        ],
-        "finite": true,
-        "minimum": -0.5,
-        "maximum": 0.5833333333333333,
-        "zero_count": 51
-      }
-    },
-    "hdf5_file_count_scanned": 29,
+    "field_rows": {},
+    "hdf5_file_count_scanned": 0,
     "collision_structure_matches": {},
-    "collision_eigenvalue_files": [
-      "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/full_lbte_natural_isotope_pinv_method0/mesh_10x10x5/coleigs.hdf5",
-      "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/full_lbte_natural_isotope_pinv_method1/mesh_10x10x5/coleigs.hdf5",
-      "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/full_lbte_natural_isotope_pinv_method1/mesh_4x4x2/coleigs.hdf5",
-      "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/full_lbte_natural_isotope_pinv_method1/mesh_6x6x3/coleigs.hdf5",
-      "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/full_lbte_natural_isotope_pinv_method1/mesh_8x8x4/coleigs.hdf5"
-    ],
+    "collision_eigenvalue_files": [],
     "normal_umklapp_decomposition_available": false,
     "collision_matrix_available": false,
     "collision_eigenvectors_available": false,
@@ -183,16 +79,17 @@
     "fit_performed": false
   },
   "checks": {
-    "kappa_binary_matches_source_summary_hash": true,
-    "kappa_binary_matches_source_summary_size": true,
-    "required_comparator_fields_present": true,
-    "required_comparator_fields_finite": true,
-    "total_gamma_nonnegative": true,
+    "kappa_binary_identity_or_public_metadata_locked": true,
+    "kappa_binary_size_or_public_metadata_locked": true,
+    "required_comparator_fields_present_or_public_boundary_declared": true,
+    "required_comparator_fields_finite_or_payload_not_public": true,
+    "total_gamma_nonnegative_or_payload_not_public": true,
     "normal_umklapp_split_absent": true,
     "collision_matrix_absent": true,
     "collision_eigenvectors_absent": true,
     "full_lbte_stability_warning_preserved": true,
-    "no_fit_or_holdout": true
+    "no_fit_or_holdout": true,
+    "raw_payload_not_synthesized": true
   },
   "open_blockers": [
     "normal_vs_umklapp_resolved_collision_input_missing",
@@ -205,19 +102,27 @@
   "controlling_blocker": "normal_umklapp_split_or_admissible_full_collision_operator_missing",
   "source_hashes": {
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_pbte_run_m12x12x6_summary.json": "726370c72df0f8821ad3505d3dd270b1f90f093d28f44a0d55d6515030f740d0",
-    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/mesh_12x12x6/kappa-m12126.hdf5": "f4d2dace656514abe3abfe53d29679de91f7a9a94edd2b70adb29f8456037909",
-    "docs/core/artifacts/t13_calorine_full_lbte_stability_boundary_audit.json": "8b5de32a8c33b0a646c8e26faf263585d98bcb939df8adb78b1b16f9d832859d",
-    "docs/scripts/audit/audit_topic13_calorine_lattice_interface_inputs.py": "a36baa42c70d07fb1a222a7767c77f32c213d2bf8c316883b3aab0687c64f2f7",
-    "docs/core/test/test_topic13_calorine_lattice_interface_inputs.py": "34863948001bc0daad27ca494d7f48ed5429aeaaf44d69fc54fb95e0b208b1a1"
+    "docs/core/07_artifacts/topic13/t13_calorine_full_lbte_stability_boundary_audit.json": "8b5de32a8c33b0a646c8e26faf263585d98bcb939df8adb78b1b16f9d832859d",
+    "docs/scripts/audit/audit_topic13_calorine_lattice_interface_inputs.py": "b38f99387129e854249832573b4700c5c4d510006de8ebda45fce3d9989e367e",
+    "docs/core/05_tests/regression/root/test_topic13_calorine_lattice_interface_inputs.py": "a15217d3b22ed031193efd4105841a0e7084cf73aa9d6e9804e5512b12257c4c"
+  },
+  "locked_source_declarations": {
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/mesh_12x12x6/kappa-m12126.hdf5": {
+      "exists": false,
+      "sha256": "f4d2dace656514abe3abfe53d29679de91f7a9a94edd2b70adb29f8456037909",
+      "size_bytes": 242650,
+      "hash_verified": false,
+      "status": "METADATA_ONLY_PUBLIC_BOUNDARY"
+    }
   },
   "evidence_artifacts": [
     {
-      "path": "docs/core/artifacts/t13_lattice_momentum_relaxing_heat_parent_audit.json",
+      "path": "docs/core/07_artifacts/topic13/t13_lattice_momentum_relaxing_heat_parent_audit.json",
       "sha256": "6974fb64948fc38cc831ac6e53474b6ab22f10b30a32fa53ea67d854b0116f21"
     },
     {
-      "path": "docs/core/artifacts/t13_continuum_action_umklapp_direct_route_no_go.json",
-      "sha256": "167389b86edc90ea3f603f81f09d2e3219d5b513c5c1f3e4c481710d58495f9e"
+      "path": "docs/core/07_artifacts/topic13/t13_continuum_action_umklapp_direct_route_no_go.json",
+      "sha256": "5df3552791b3ad7971f4cc885d1fa369506962859f6551ac07101a2e3864abea"
     }
   ],
   "dependency_unlocked": [
@@ -232,10 +137,9 @@
   "report": {
     "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
     "WHAT_IS_ACTUALLY_CLOSED": [
-      "The hash-locked 12x12x6 Calorine/Phono3py payload supplies frequency, q point, weight, group velocity, mode heat capacity, total gamma and mode-kappa arrays for a graphite comparator interface.",
-      "All admitted comparator arrays are finite and the archived total gamma is nonnegative on the recorded grid.",
-      "Across 29 local HDF5 files, collision eigenvalue files are present for selected full-LBTE runs, but no collision matrix/eigenvectors or Normal/Umklapp-resolved rates are archived.",
-      "The total RTA gamma is therefore rejected as a physical resistive-only Umklapp rate; the earlier sign-indefinite full-LBTE boundary remains controlling."
+      "The public checkout retains the source summary's locked HDF5 path, SHA-256, size, units, and comparator-field declaration.",
+      "The raw Calorine HDF5 is intentionally not committed here; no numeric mode arrays are fabricated or treated as locally verified.",
+      "The full-LBTE stability warning, absent collision decomposition, and no-fit/no-holdout boundary remain explicit from committed metadata."
     ],
     "WHAT_REMAINS_OPEN": [
       "normal_vs_umklapp_resolved_collision_input_missing",
@@ -249,7 +153,7 @@
       "source_backed_material_mode_source_interface_comparator",
       "normal_umklapp_decomposition_acquisition_or_reproduction_gate"
     ],
-    "STATUS": "PASS_SCOPED_CALORINE_LATTICE_INTERFACE_INPUT_BOUNDARY",
+    "STATUS": "PASS_METADATA_ONLY_CALORINE_LATTICE_INTERFACE_BOUNDARY",
     "WHAT_CHANGED": "Audited the actual local PBTE binary schemas against the material-lattice interface instead of assuming that an archived gamma array supplies Umklapp.",
     "EQUATION_OR_MAPPING": {
       "admitted_source": "S_T may be constructed as a comparator from omega_qnu, v_qnu, c_qnu and q weights",
@@ -258,16 +162,17 @@
       "required_operator": "C_ph=C_N+C_R with C_N|P_crystal>=0 and positive entropy production"
     },
     "VERIFICATION": {
-      "kappa_binary_matches_source_summary_hash": true,
-      "kappa_binary_matches_source_summary_size": true,
-      "required_comparator_fields_present": true,
-      "required_comparator_fields_finite": true,
-      "total_gamma_nonnegative": true,
+      "kappa_binary_identity_or_public_metadata_locked": true,
+      "kappa_binary_size_or_public_metadata_locked": true,
+      "required_comparator_fields_present_or_public_boundary_declared": true,
+      "required_comparator_fields_finite_or_payload_not_public": true,
+      "total_gamma_nonnegative_or_payload_not_public": true,
       "normal_umklapp_split_absent": true,
       "collision_matrix_absent": true,
       "collision_eigenvectors_absent": true,
       "full_lbte_stability_warning_preserved": true,
-      "no_fit_or_holdout": true
+      "no_fit_or_holdout": true,
+      "raw_payload_not_synthesized": true
     },
     "CONTROLLING_BLOCKER": "normal_umklapp_split_or_admissible_full_collision_operator_missing",
     "NEXT_ACTION": "Acquire or reproduce Normal/Umklapp-resolved rates or a positive full collision matrix with eigenvectors; use existing mode arrays only as a comparator source interface.",

@@ -1,7 +1,7 @@
 {
   "schema_version": "curved-3p1-topic13-matter-wiring-v1",
   "artifact": "curved_3p1_topic13_matter_wiring_verification",
-  "generated_at": "2026-09-16T10:23:53.922856+00:00",
+  "generated_at": "2026-09-17T15:58:26.649406+00:00",
   "status": "PASS_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING",
   "major_result": {
     "major_result_id": "CORE_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING_READY",
@@ -31,11 +31,11 @@
     "evidence_artifacts": [
       {
         "path": "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json",
-        "sha256": "d989b9dd637828dd64f975eaf1f744163ac71e362bde71e46e86e599eced1754"
+        "sha256": "5540850bde07a4c41b011b8c181ca5700e4f89519c1a8eadd22a3c80e79ef760"
       },
       {
         "path": "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json",
-        "sha256": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a"
+        "sha256": "22e6b99c6a6070139ccbe9a5c6604788addc719b9e5b032b0416b175873c718e"
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json",
@@ -50,8 +50,8 @@
         "sha256": "4fe52bd87f1531dcaaadeeddd99ea48744d4ef574eb7b1e6d9c65bb8f41aa2a9"
       },
       {
-        "path": "docs/core/uet_curved_3p1_matter_wiring.py",
-        "sha256": "6c0dc1f670b385a37dbe5ab2cce09651a33fe7a6abd0d4e907a3aa9f83a61710"
+        "path": "docs/core/02_equations/covariant/uet_curved_3p1_matter_wiring.py",
+        "sha256": "91381c3b8d1afc286b3760f95f16f1b04a81bf784bb326c6dc052368614a5f31"
       }
     ],
     "verification_status": "PASS_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING",

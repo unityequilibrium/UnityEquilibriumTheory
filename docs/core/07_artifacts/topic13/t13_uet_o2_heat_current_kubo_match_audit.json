@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-uet-o2-heat-current-kubo-match-v1",
   "artifact": "t13_uet_o2_heat_current_kubo_match_audit",
-  "generated_at": "2026-08-17",
+  "generated_at": "2026-09-17",
   "status": "PASS_ACTION_MATCHED_FINITE_CUTOFF_HEAT_CURRENT_KUBO_LANE",
   "major_result": {
     "major_result_id": "T13_UET_O2_HEAT_CURRENT_KUBO_MATCH",
@@ -35,16 +35,16 @@
     "data_role": "ACTION_MATCHED_FINITE_CUTOFF_HEAT_KUBO_NOT_SI",
     "evidence_artifacts": [
       {
-        "path": "docs/core/uet_o2_heat_current_kubo_match.py",
-        "sha256": "0ebaae4f54459dbf2acbedbab8dfce2c874c7221cd789d813f4f4c02c5bc501e"
+        "path": "docs/core/02_equations/o2/uet_o2_heat_current_kubo_match.py",
+        "sha256": "1e1236c381468ab837071c9b6e9610277ea6e031e8f88a9fba8f7b4455eb6625"
       },
       {
-        "path": "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py",
-        "sha256": "89171426c2209521a16ca99e79ef4312cc9d3a987991692cc40ac9235a2fc251"
+        "path": "docs/core/02_equations/o2/uet_o2_covariant_entropy_heat_flux_balance.py",
+        "sha256": "982de9c81ef7cd792f77b4bb1fd1ff138333a860b4fd136d8eab36ea7343c1b3"
       },
       {
-        "path": "docs/core/uet_o2_continuum_collision_operator.py",
-        "sha256": "010c1322063b806a1d87d3708cf5509e696f7370170dc2b859f61fd8f884e9e2"
+        "path": "docs/core/02_equations/o2/uet_o2_continuum_collision_operator.py",
+        "sha256": "734e3d178d50a72737e73faa21cf9d510c6d369c4b38023cd9bf180c0b435dc1"
       }
     ],
     "verification_status": "PASS_ACTION_MATCHED_FINITE_CUTOFF_HEAT_CURRENT_KUBO_LANE",
@@ -100,14 +100,14 @@
     "space_response": 0.15,
     "branch": "normal",
     "finite_cutoff": 48.0,
-    "kappa_natural": 257.37286696883626,
-    "dc_response_scalar": 257.3728669688362,
-    "dc_matrix_relative_residual": 2.35949759879443e-15,
-    "dc_scalar_relative_residual": 2.208601844097686e-16,
-    "response_matrix_isotropy_residual": 4.434254094431807e-11,
-    "response_matrix_min_eigenvalue": 257.3728669574049,
-    "source_constraint_residual": 2.357633025130997e-19,
-    "entropy_match_residual": 5.3006444260694635e-15,
+    "kappa_natural": 257.3728670227226,
+    "dc_response_scalar": 257.37286702272286,
+    "dc_matrix_relative_residual": 1.4221293203153756e-15,
+    "dc_scalar_relative_residual": 1.1043009218176348e-15,
+    "response_matrix_isotropy_residual": 4.434099491374344e-11,
+    "response_matrix_min_eigenvalue": 257.37286701129193,
+    "source_constraint_residual": 2.179123804113782e-19,
+    "entropy_match_residual": 3.304068358224876e-15,
     "retarded_frequency_over_rate": [
       0.0,
       0.5,
@@ -115,24 +115,24 @@
       2.0
     ],
     "retarded_response_real": [
-      257.3728669688362,
-      254.19894368360573,
-      245.13347443966006,
-      214.5504414726266
+      257.37286702272286,
+      254.1989437368279,
+      245.13347449098413,
+      214.55044151754745
     ],
     "retarded_response_imag": [
       0.0,
-      28.390641474455947,
-      54.75128434643816,
-      95.82168740031013
+      28.390641480400138,
+      54.75128435790153,
+      95.8216874203725
     ],
     "kms_frequency_over_temperature": [
       0.25,
       0.5,
       1.0
     ],
-    "kms_ratio_residual": 0.0,
-    "fdt_residual": 3.469446951953614e-18,
+    "kms_ratio_residual": 1.346768607108103e-16,
+    "fdt_residual": 1.3877787807814457e-17,
     "finite_cutoff_boundary_declared": true,
     "same_operator_state_verified": true,
     "retarded_heat_current_match_completed": true,

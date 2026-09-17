@@ -1,7 +1,7 @@
 {
   "schema_version": "uet-equation-registry-addendum-v1",
   "status": "DIAGNOSTIC_FACTOR_GATE_NOT_NEW_ACTION_TERM",
-  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
   "equation_entries": [
     {
       "equation_id": "uet.o2.thermal.material_interface_factor_resolution",
@@ -64,10 +64,10 @@
         "field-coordinate rescaling"
       ],
       "implementation_paths": [
-        "docs/core/uet_material_interface_factor_resolution.py"
+        "docs/core/03_lanes/thermal/uet_material_interface_factor_resolution.py"
       ],
       "verifier_paths": [
-        "docs/core/test/test_topic13_material_interface_factor_resolution.py",
+        "docs/core/05_tests/regression/root/test_topic13_material_interface_factor_resolution.py",
         "docs/scripts/audit/audit_topic13_material_interface_factor_resolution.py"
       ],
       "observable": "Conditional material thermal coefficient factor gate; no numeric alpha",
@@ -77,8 +77,8 @@
       "verification_status": "PASS_FACTOR_RESOLUTION_WITH_COUPLING_SUBSTITUTION_NO_GO",
       "evidence_artifacts": [
         {
-          "path": "docs/core/artifacts/t13_material_interface_factor_resolution_audit.json",
-          "sha256": "3bb802c32d27275601584f4ce2a25b3fe28d187aefdb7eced2607938df0eb7be"
+          "path": "docs/core/07_artifacts/topic13/t13_material_interface_factor_resolution_audit.json",
+          "sha256": "e2f21b5e28098e7b78f3b0a30372a582059689e37390e9dacb8d426b1fe96928"
         }
       ],
       "downstream_dependencies": [

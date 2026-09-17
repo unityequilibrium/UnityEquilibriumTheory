@@ -38,6 +38,8 @@ OUT = ROOT / "docs/core/07_artifacts/topic13/t13_fixed_phi_spectrum_repair_audit
 EOS_PATH = "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py"
 STATIC_PATH = "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py"
 AUDIT_PATH = "docs/scripts/audit/audit_topic13_fixed_phi_spectrum_repair.py"
+LEGACY_EOS_MODULE = "docs.core.uet_o2_finite_temperature_quasiparticle_eos"
+LEGACY_STATIC_MODULE = "docs.core.uet_o2_formal_transverse_response"
 
 
 def digest(path: Path) -> str:
@@ -191,7 +193,14 @@ def consumer_inventory(root: Path = ROOT) -> dict:
                 dependencies.update(base+"."+alias.name for alias in node.names)
         imports[name] = dependencies
 
-    seeds = {EOS_PATH[:-3].replace("/", "."), STATIC_PATH[:-3].replace("/", ".")}
+    seeds = {
+        EOS_PATH[:-3].replace("/", "."),
+        STATIC_PATH[:-3].replace("/", "."),
+        # Keep the pre-migration import names as seed aliases.  The scanner
+        # audits reachability, so compatibility imports remain reviewable.
+        LEGACY_EOS_MODULE,
+        LEGACY_STATIC_MODULE,
+    }
     affected = set(seeds)
     while True:
         grown = affected | {name for name, deps in imports.items() if deps & affected}
@@ -247,7 +256,7 @@ def main() -> int:
         EOS_PATH, STATIC_PATH, AUDIT_PATH,
         "docs/core/02_equations/covariant/uet_covariant_matter.py",
         "docs/core/02_equations/o2/uet_o2_finite_density_eos.py",
-        "docs/core/test/test_topic13_fixed_phi_spectrum_regression.py",
+        "docs/core/05_tests/regression/root/test_topic13_fixed_phi_spectrum_regression.py",
     ]
     artifact = {
         "schema_version": "t13-fixed-phi-spectrum-repair-v1",

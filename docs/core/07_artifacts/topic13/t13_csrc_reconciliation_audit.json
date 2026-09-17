@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-csrc-reconciliation-v1",
   "artifact": "t13_csrc_reconciliation_audit",
-  "generated_at": "2026-08-29",
+  "generated_at": "2026-09-17",
   "status": "PASS_SCOPED_CSRC_RECONCILIATION_OPEN",
   "major_result": {
     "major_result_id": "T13_CSRC_SOURCE_RECONCILIATION",
@@ -35,27 +35,27 @@
     "data_role": "INTERNAL_CSRC_SOURCE_RECONCILIATION_NOT_CALIBRATION",
     "evidence_artifacts": [
       {
-        "path": "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_ding_pbte_numeric_input_availability_audit.json",
         "sha256": "1828db74760ac53c73345d0e4a8adc8fc00fc16bb25e84809a73aaa3cd9b3d9a",
         "role": "official Ding OA payload availability boundary"
       },
       {
-        "path": "docs/core/artifacts/t13_ding_pbte_author_request_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_ding_pbte_author_request_audit.json",
         "sha256": "66679f962d0725455c73bfbc856f6c5722b039a3c15b16d4620081d89b4b892a",
         "role": "bounded corresponding-author acquisition package"
       },
       {
-        "path": "docs/core/artifacts/t13_public_phonon_route_screening_audit.json",
-        "sha256": "ec5ed446dbc6469414dced797e574c0db002e392dffa3bcf3d3dbffef3e57e3a",
+        "path": "docs/core/07_artifacts/topic13/t13_public_phonon_route_screening_audit.json",
+        "sha256": "119ba228902990c66b6a27ca03cec1e2c3d020b21a73f8a624d8d65f314eae2e",
         "role": "public phonon route screening boundary"
       },
       {
-        "path": "docs/core/artifacts/t13_huberman_2019_public_pbte_boundary_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_huberman_2019_public_pbte_boundary_audit.json",
         "sha256": "22b065abd8177a9b1f181e79761baadc0c5c6242d44bea74a8fd6022aafec3c4",
         "role": "Huberman public PBTE formula/setup boundary"
       },
       {
-        "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json",
         "sha256": "5e4e0d42d6e70612eabce988b86ab10b628dea14d4270bf2364ad58f572d014b",
         "role": "Calorine public candidate-route boundary"
       },
@@ -65,22 +65,22 @@
         "role": "Calorine/Zenodo numeric PBTE candidate reproduction"
       },
       {
-        "path": "docs/core/artifacts/t13_mp48_spectral_csrc_reproduction_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_mp48_spectral_csrc_reproduction_audit.json",
         "sha256": "5b2c6332fb70c6ae98749d96051cc4dbbffa04d37eed8f90e09168d35c61c091",
         "role": "MP48 harmonic spectral C_src-like reproduction"
       },
       {
-        "path": "docs/core/artifacts/t13_mp48_ding_csrc_response_mapping_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_mp48_ding_csrc_response_mapping_audit.json",
         "sha256": "1deefbb6ebbed62345db2063612f9d8c172902dcb93068b800e579455e0d297c",
         "role": "MP48-to-Ding standard mode-sum response mapping"
       },
       {
-        "path": "docs/core/artifacts/t13_ding_2017_acs_supplementary_payload_boundary_audit.json",
-        "sha256": "e2676e6e59ba412944d27057333ece6b3ae827600a30125e63725390b176c8cb",
+        "path": "docs/core/07_artifacts/topic13/t13_ding_2017_acs_supplementary_payload_boundary_audit.json",
+        "sha256": "c4073b6c6010440663065d4ee8c0d89fb40bfc0973f817ba005a21aaa95258fa",
         "role": "Ding 2017 public supplementary payload boundary"
       },
       {
-        "path": "docs/core/artifacts/t13_figshare_dft_force_data_boundary_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_figshare_dft_force_data_boundary_audit.json",
         "sha256": "5128866124bbee80e1b3a100da54d37ceb41b4695260c182c1b0d952326ad9da",
         "role": "public Figshare DFT energy/force archive boundary"
       }
@@ -103,7 +103,7 @@
     {
       "candidate_id": "ding_official_oa_inventory",
       "artifact": {
-        "path": "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_ding_pbte_numeric_input_availability_audit.json",
         "sha256": "1828db74760ac53c73345d0e4a8adc8fc00fc16bb25e84809a73aaa3cd9b3d9a",
         "role": "official Ding OA payload availability boundary"
       },
@@ -120,7 +120,7 @@
     {
       "candidate_id": "ding_author_request_not_received",
       "artifact": {
-        "path": "docs/core/artifacts/t13_ding_pbte_author_request_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_ding_pbte_author_request_audit.json",
         "sha256": "66679f962d0725455c73bfbc856f6c5722b039a3c15b16d4620081d89b4b892a",
         "role": "bounded corresponding-author acquisition package"
       },
@@ -137,8 +137,8 @@
     {
       "candidate_id": "public_phonon_route_screening",
       "artifact": {
-        "path": "docs/core/artifacts/t13_public_phonon_route_screening_audit.json",
-        "sha256": "ec5ed446dbc6469414dced797e574c0db002e392dffa3bcf3d3dbffef3e57e3a",
+        "path": "docs/core/07_artifacts/topic13/t13_public_phonon_route_screening_audit.json",
+        "sha256": "119ba228902990c66b6a27ca03cec1e2c3d020b21a73f8a624d8d65f314eae2e",
         "role": "public phonon route screening boundary"
       },
       "candidate_class": "PUBLIC_ROUTE_NO_CORE_PAYLOAD",
@@ -154,7 +154,7 @@
     {
       "candidate_id": "huberman_public_pbte",
       "artifact": {
-        "path": "docs/core/artifacts/t13_huberman_2019_public_pbte_boundary_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_huberman_2019_public_pbte_boundary_audit.json",
         "sha256": "22b065abd8177a9b1f181e79761baadc0c5c6242d44bea74a8fd6022aafec3c4",
         "role": "Huberman public PBTE formula/setup boundary"
       },
@@ -170,7 +170,7 @@
     {
       "candidate_id": "calorine_candidate_route_boundary",
       "artifact": {
-        "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json",
         "sha256": "5e4e0d42d6e70612eabce988b86ab10b628dea14d4270bf2364ad58f572d014b",
         "role": "Calorine public candidate-route boundary"
       },
@@ -204,7 +204,7 @@
     {
       "candidate_id": "mp48_spectral_csrc",
       "artifact": {
-        "path": "docs/core/artifacts/t13_mp48_spectral_csrc_reproduction_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_mp48_spectral_csrc_reproduction_audit.json",
         "sha256": "5b2c6332fb70c6ae98749d96051cc4dbbffa04d37eed8f90e09168d35c61c091",
         "role": "MP48 harmonic spectral C_src-like reproduction"
       },
@@ -221,7 +221,7 @@
     {
       "candidate_id": "mp48_ding_mode_sum_mapping",
       "artifact": {
-        "path": "docs/core/artifacts/t13_mp48_ding_csrc_response_mapping_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_mp48_ding_csrc_response_mapping_audit.json",
         "sha256": "1deefbb6ebbed62345db2063612f9d8c172902dcb93068b800e579455e0d297c",
         "role": "MP48-to-Ding standard mode-sum response mapping"
       },
@@ -238,8 +238,8 @@
     {
       "candidate_id": "ding_2017_public_supplementary_boundary",
       "artifact": {
-        "path": "docs/core/artifacts/t13_ding_2017_acs_supplementary_payload_boundary_audit.json",
-        "sha256": "e2676e6e59ba412944d27057333ece6b3ae827600a30125e63725390b176c8cb",
+        "path": "docs/core/07_artifacts/topic13/t13_ding_2017_acs_supplementary_payload_boundary_audit.json",
+        "sha256": "c4073b6c6010440663065d4ee8c0d89fb40bfc0973f817ba005a21aaa95258fa",
         "role": "Ding 2017 public supplementary payload boundary"
       },
       "candidate_class": "DING_PUBLIC_SUPPLEMENTARY_NO_NUMERIC_PAYLOAD",
@@ -255,7 +255,7 @@
     {
       "candidate_id": "figshare_dft_force_data_boundary",
       "artifact": {
-        "path": "docs/core/artifacts/t13_figshare_dft_force_data_boundary_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_figshare_dft_force_data_boundary_audit.json",
         "sha256": "5128866124bbee80e1b3a100da54d37ceb41b4695260c182c1b0d952326ad9da",
         "role": "public Figshare DFT energy/force archive boundary"
       },

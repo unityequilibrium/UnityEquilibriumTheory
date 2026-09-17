@@ -9,7 +9,6 @@ from __future__ import annotations
 
 import hashlib
 import json
-import platform
 import sys
 from datetime import UTC, datetime
 from pathlib import Path
@@ -419,8 +418,10 @@ def build_artifact() -> dict[str, Any]:
             "Phi/trace observable, and it does not promote Topic 0.13 or the core program."
         ),
         "environment": {
-            "python_version": platform.python_version(),
-            "platform": platform.platform(),
+            # Runtime metadata is descriptive only; keep the artifact portable
+            # across local and CI patch versions and operating systems.
+            "python_version": f"{sys.version_info.major}.{sys.version_info.minor}",
+            "platform": "portable-research-runtime",
         },
     }
 
