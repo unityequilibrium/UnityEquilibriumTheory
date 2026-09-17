@@ -311,7 +311,13 @@ def canonical_existing_path(path: str | Path) -> Path:
     is returned so dry-runs and pre-migration consumers remain usable.
     """
 
-    candidate = Path(path)
+    # Artifact/manifests produced on Windows may serialize repository paths
+    # with backslashes. Treat those separators as repository separators on
+    # every platform before resolving the path; otherwise a Linux CI runner
+    # sees ``docs\\core\\...`` as one literal filename and bypasses the
+    # canonical-path migration logic.
+    raw_path = str(path).replace('\\', '/')
+    candidate = Path(raw_path)
     if not candidate.is_absolute():
         candidate = REPO_ROOT / candidate
     candidate = candidate.resolve()

@@ -782,3 +782,12 @@
 - Verification: py_compile PASS for the edited test and migration tool; dry-run reports 294 ready, 205 migrated, zero duplicate targets/conflicts, and one dirty-source hold for the edited validation file.
 - Controller: commit this small repair, then apply the full test move; the remaining hold is only the dirty-source guard.
 - Claim impact: none; organization/path compatibility only.
+## 2026-09-17 — Wave 6ze canonical-path CI repair
+
+- Scope: repair cross-platform path resolution and the Topic 0.11 Noether dependency generator after the physical migration.
+- Changed: canonical_existing_path now normalizes serialized backslashes before resolving migrated files; Topic 0.11 core inputs now read canonical verification/gate artifacts.
+- Verification: local diff/path review completed; the next PR run is required to measure the remaining active-test regressions.
+- Result: this narrows migration failures caused by Linux interpreting Windows path strings literally and removes one active generator dependency on the retired artifact directory.
+- Controller: canonical-path and generated-artifact consumer compatibility remains open until the PR test job passes.
+- Claim impact: none; no equation, evidence status, calibration, or physics claim changed.
+- Next action: push this scoped repair, inspect the next failure set, and fix only the next common migration boundary.
