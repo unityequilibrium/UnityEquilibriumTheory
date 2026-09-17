@@ -91,7 +91,11 @@ jobs:
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
           set -euo pipefail
-          git diff --name-only "$BASE_SHA" "$HEAD_SHA" | grep -E '(^|/)(test_[^/]+\.py|[^/]+_test\.py)$' > changed-tests.txt || true
+          git diff --name-only "$BASE_SHA" "$HEAD_SHA" \
+            | grep -E '(^|/)(test_[^/]+\.py|[^/]+_test\.py)$' \
+            | while IFS= read -r file; do
+                test -f "$file" && printf '%s\n' "$file"
+              done > changed-tests.txt || true
           if test -s changed-tests.txt; then
             tests="$(cat changed-tests.txt)"
             pytest -q $tests
