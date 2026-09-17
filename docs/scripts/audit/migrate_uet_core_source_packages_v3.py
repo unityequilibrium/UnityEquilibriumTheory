@@ -23,6 +23,7 @@ TARGET_README = TARGET_ROOT / "README.md"
 LEGACY_README = SOURCE_ROOT / "README.md"
 GENERATOR = "docs/scripts/audit/migrate_uet_core_source_packages_v3.py"
 EXCLUDED_PARTS = {"__pycache__", ".git"}
+NON_PUBLIC_BINARY_SUFFIXES = frozenset({".sqlite", ".sqlite3", ".db"})
 
 
 def repo_path(path: Path) -> str:
@@ -59,6 +60,8 @@ def dirty_paths() -> set[str]:
 
 
 def canonical_for(relative: str) -> str:
+    if Path(relative).suffix.lower() in NON_PUBLIC_BINARY_SUFFIXES:
+        return relative
     tail = relative.removeprefix("docs/core/data/external/")
     return f"docs/core/06_data/source_packages/{tail}"
 
@@ -82,21 +85,31 @@ def build_plan() -> dict[str, Any]:
                 "source_or_generated": "source",
                 "sha256_before": sha256(path),
                 "sha256_after": None,
-                "migration_state": "MIGRATION_READY",
+                "migration_state": "QUARANTINED" if canonical == relative else "MIGRATION_READY",
                 "dirty_source": relative in dirty,
                 "collision_key": canonical.lower(),
                 "rollback_path": relative,
-                "next_action": "apply_source_package_move",
+                "next_action": (
+                    "retain_non_public_binary_at_legacy_path"
+                    if canonical == relative
+                    else "apply_source_package_move"
+                ),
             }
         )
     by_target: dict[str, list[str]] = {}
     for row in rows:
         by_target.setdefault(row["collision_key"], []).append(row["legacy_path"])
     collisions = {key: values for key, values in by_target.items() if len(values) > 1}
-    existing = sorted({row["canonical_path"] for row in rows if (ROOT / row["canonical_path"]).exists()})
+    existing = sorted({
+        row["canonical_path"]
+        for row in rows
+        if row["canonical_path"] != row["legacy_path"]
+        and (ROOT / row["canonical_path"]).exists()
+    })
     summary = {
         "files_total": len(rows),
-        "migration_ready": sum(not row["dirty_source"] for row in rows),
+        "migration_ready": sum(row["migration_state"] == "MIGRATION_READY" for row in rows),
+        "quarantined": sum(row["migration_state"] == "QUARANTINED" for row in rows),
         "dirty_sources": sum(row["dirty_source"] for row in rows),
         "duplicate_targets": collisions,
         "existing_target_conflicts": existing,
@@ -178,6 +191,9 @@ def apply(payload: dict[str, Any]) -> dict[str, Any]:
     applied: list[dict[str, Any]] = []
     skipped: list[dict[str, str]] = []
     for row in payload["records"]:
+        if row.get("migration_state") == "QUARANTINED":
+            skipped.append({"path": row["legacy_path"], "reason": row["next_action"]})
+            continue
         source = ROOT / row["legacy_path"]
         target = ROOT / row["canonical_path"]
         if row["dirty_source"]:

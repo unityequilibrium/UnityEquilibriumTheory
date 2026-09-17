@@ -36,6 +36,12 @@ _TOOLING_DIRS = {
 }
 
 
+# Database binaries are retained at their existing legacy source path because the
+# public repository boundary rejects generated/database binaries. They remain
+# explicit source inputs and do not become evidence merely by being indexed.
+NON_PUBLIC_BINARY_SUFFIXES = frozenset({".sqlite", ".sqlite3", ".db"})
+
+
 def repo_root() -> Path:
     return REPO_ROOT
 
@@ -246,6 +252,8 @@ def canonical_path_for(legacy_path: str | Path) -> str:
     if tail == "data/README.md":
         return "docs/core/06_data/README.md"
     if tail.startswith("data/external/"):
+        if Path(tail).suffix.lower() in NON_PUBLIC_BINARY_SUFFIXES:
+            return relative
         return "docs/core/06_data/source_packages/" + tail[len("data/external/") :]
     if tail.startswith("data/"):
         rest = tail[len("data/") :]

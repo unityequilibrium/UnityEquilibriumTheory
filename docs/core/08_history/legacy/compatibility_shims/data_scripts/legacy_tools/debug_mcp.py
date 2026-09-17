@@ -5,7 +5,7 @@ from __future__ import annotations
 import runpy
 from pathlib import Path
 
-_CANONICAL_RELATIVE = "docs/scripts/core/debug/debug_mcp_v2.py"
+_CANONICAL_RELATIVE = "docs/scripts/core/legacy_tools/debug_mcp.py"
 
 
 def _run() -> None:

@@ -1,6 +1,6 @@
 {
   "canonical_path_authority": "docs/core/core_paths.py",
-  "generated_at": "2026-09-16T20:15:40+00:00",
+  "generated_at": "2026-09-17T08:33:01+00:00",
   "generator": "docs/scripts/audit/plan_uet_core_physical_migration.py",
   "migration_id": "UET-CORE-PHYSICAL-MIGRATION-V3",
   "physical_migration": {
@@ -13,7 +13,8 @@
       "status": "PASS"
     },
     "pending_move_targets": 0,
-    "performed_in_current_run": false
+    "performed_in_current_run": false,
+    "retained_non_public_binary_count": 2
   },
   "physical_migration_complete": true,
   "physical_move_performed": false,
@@ -36292,10 +36293,10 @@
     {
       "artifact_paths": [],
       "asset_id": "UET-CORE-FILE-A0F201FDAF0E",
-      "canonical_path": "docs/core/06_data/source_packages/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
-      "collision_key": "docs/core/06_data/source_packages/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
+      "canonical_path": "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
+      "collision_key": "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
       "compatibility_mode": "none",
-      "current_path": "docs/core/06_data/source_packages/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
+      "current_path": "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
       "dirty_source": false,
       "downstream_dependencies": [
         "LANE"
@@ -36308,12 +36309,14 @@
       "generator_path": null,
       "legacy_path": null,
       "logical_area": "06_data",
-      "migration_state": "MIGRATED",
-      "migration_wave": "already_canonical",
-      "next_action": "retain_canonical_path",
-      "organization_status": "MIGRATED",
+      "migration_state": "QUARANTINED",
+      "migration_wave": "public_boundary_preservation",
+      "next_action": "retain_non_public_binary_at_legacy_path",
+      "organization_status": "QUARANTINED",
       "owner_id": "DATA",
-      "rollback_path": "docs/core/06_data/source_packages/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
+      "public_boundary_reason": "database binary suffix is blocked by the repository public-boundary policy",
+      "retained_at_legacy_path": true,
+      "rollback_path": "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
       "sha256_before": "3de494ba22d7229eda9ba3047660b345fd82d3eea0e10747b7119bb4c2947196",
@@ -36326,10 +36329,10 @@
     {
       "artifact_paths": [],
       "asset_id": "UET-CORE-FILE-D45FBD82C4CD",
-      "canonical_path": "docs/core/06_data/source_packages/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
-      "collision_key": "docs/core/06_data/source_packages/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
+      "canonical_path": "docs/core/data/external/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
+      "collision_key": "docs/core/data/external/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
       "compatibility_mode": "none",
-      "current_path": "docs/core/06_data/source_packages/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
+      "current_path": "docs/core/data/external/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
       "dirty_source": false,
       "downstream_dependencies": [
         "LANE"
@@ -36342,12 +36345,14 @@
       "generator_path": null,
       "legacy_path": null,
       "logical_area": "06_data",
-      "migration_state": "MIGRATED",
-      "migration_wave": "already_canonical",
-      "next_action": "retain_canonical_path",
-      "organization_status": "MIGRATED",
+      "migration_state": "QUARANTINED",
+      "migration_wave": "public_boundary_preservation",
+      "next_action": "retain_non_public_binary_at_legacy_path",
+      "organization_status": "QUARANTINED",
       "owner_id": "DATA",
-      "rollback_path": "docs/core/06_data/source_packages/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
+      "public_boundary_reason": "database binary suffix is blocked by the repository public-boundary policy",
+      "retained_at_legacy_path": true,
+      "rollback_path": "docs/core/data/external/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
       "sha256_before": "0126ff52a0a8de8d683d56ee9eb10f7366f5f3b9df7ae4a25e2c269026d8566d",
@@ -58805,10 +58810,10 @@
     {
       "artifact_paths": [],
       "asset_id": "UET-CORE-FILE-C12895F83FD2",
-      "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_imports.py",
-      "collision_key": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_imports.py",
+      "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_imports.py",
+      "collision_key": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_imports.py",
       "compatibility_mode": "redirect_or_shim",
-      "current_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_imports.py",
+      "current_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_imports.py",
       "dirty_source": false,
       "downstream_dependencies": [
         "FOUNDATION",
@@ -58823,11 +58828,11 @@
       "legacy_path": null,
       "logical_area": "08_history",
       "migration_state": "MIGRATED",
-      "migration_wave": "already_canonical",
+      "migration_wave": "public_boundary_repair",
       "next_action": "retain_canonical_path",
       "organization_status": "MIGRATED",
       "owner_id": "ORG",
-      "rollback_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_imports.py",
+      "rollback_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_imports.py",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
       "sha256_before": "4d625778dd0b28351a84fdd3f1c9b6edbc9d261306e1e3ca7cc1ceb0c7acfbdf",
@@ -58838,10 +58843,10 @@
     {
       "artifact_paths": [],
       "asset_id": "UET-CORE-FILE-ADC854EF7398",
-      "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp.py",
-      "collision_key": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp.py",
+      "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp.py",
+      "collision_key": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp.py",
       "compatibility_mode": "redirect_or_shim",
-      "current_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp.py",
+      "current_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp.py",
       "dirty_source": false,
       "downstream_dependencies": [
         "FOUNDATION",
@@ -58856,11 +58861,11 @@
       "legacy_path": null,
       "logical_area": "08_history",
       "migration_state": "MIGRATED",
-      "migration_wave": "already_canonical",
+      "migration_wave": "public_boundary_repair",
       "next_action": "retain_canonical_path",
       "organization_status": "MIGRATED",
       "owner_id": "ORG",
-      "rollback_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp.py",
+      "rollback_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp.py",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
       "sha256_before": "13fc1574515a59386abc474d0b520e442a60660e9d8f5e399170ee00f4ef50bb",
@@ -58871,10 +58876,10 @@
     {
       "artifact_paths": [],
       "asset_id": "UET-CORE-FILE-4EF6833C6AC4",
-      "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp_v2.py",
-      "collision_key": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp_v2.py",
+      "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp_v2.py",
+      "collision_key": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp_v2.py",
       "compatibility_mode": "redirect_or_shim",
-      "current_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp_v2.py",
+      "current_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp_v2.py",
       "dirty_source": false,
       "downstream_dependencies": [
         "FOUNDATION",
@@ -58889,11 +58894,11 @@
       "legacy_path": null,
       "logical_area": "08_history",
       "migration_state": "MIGRATED",
-      "migration_wave": "already_canonical",
+      "migration_wave": "public_boundary_repair",
       "next_action": "retain_canonical_path",
       "organization_status": "MIGRATED",
       "owner_id": "ORG",
-      "rollback_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp_v2.py",
+      "rollback_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp_v2.py",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
       "sha256_before": "7bfb6663a9db1b3d583d6552bf22e2901050bafb4e8fb93eb0cdee564d6b0d4d",
@@ -58904,10 +58909,10 @@
     {
       "artifact_paths": [],
       "asset_id": "UET-CORE-FILE-D62BBECEB307",
-      "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_tests.py",
-      "collision_key": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_tests.py",
+      "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_tests.py",
+      "collision_key": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_tests.py",
       "compatibility_mode": "redirect_or_shim",
-      "current_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_tests.py",
+      "current_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_tests.py",
       "dirty_source": false,
       "downstream_dependencies": [
         "FOUNDATION",
@@ -58922,11 +58927,11 @@
       "legacy_path": null,
       "logical_area": "08_history",
       "migration_state": "MIGRATED",
-      "migration_wave": "already_canonical",
+      "migration_wave": "public_boundary_repair",
       "next_action": "retain_canonical_path",
       "organization_status": "MIGRATED",
       "owner_id": "ORG",
-      "rollback_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_tests.py",
+      "rollback_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_tests.py",
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256_after": null,
       "sha256_before": "719d893b70c34432908f5e37e1e58f2b02cb91b686b933e57b4405fe349e1a44",
@@ -68246,7 +68251,7 @@
   "schema_version": "1.0",
   "scope": "all non-cache files currently under docs/core",
   "summary": {
-    "already_canonical": 1967,
+    "already_canonical": 1965,
     "compatibility_assets_present": 426,
     "compatibility_counts": {
       "none": 1541,
@@ -68256,7 +68261,7 @@
     "duplicate_targets": {},
     "existing_target_conflicts": [],
     "files_migrated_in_wave": 0,
-    "files_skipped_in_wave": 0,
+    "files_skipped_in_wave": 2,
     "files_to_move": 0,
     "files_total": 1967,
     "last_successful_consolidation": {
@@ -68267,11 +68272,13 @@
       "status": "PASS"
     },
     "migration_wave_counts": {
-      "already_canonical": 1967
+      "already_canonical": 1965,
+      "public_boundary_preservation": 2
     },
     "physical_migration_complete": true,
     "physical_move_performed": false,
     "physical_move_performed_in_current_run": false,
-    "physics_status_changes": 0
+    "physics_status_changes": 0,
+    "retained_non_public_binary_count": 2
   }
 }

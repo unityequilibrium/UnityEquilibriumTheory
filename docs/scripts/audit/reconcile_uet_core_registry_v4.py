@@ -398,7 +398,14 @@ def build_records(
         generator = payload_generator(path) if generated else None
         baseline = physical.get(current, {})
         evidence = evidence_for(baseline, family, kind, area)
-        organization = "QUARANTINED" if area == "99_review" and kind == "unresolved_asset" else "MIGRATED"
+        baseline_organization = str(baseline.get("organization_status", ""))
+        organization = (
+            baseline_organization
+            if baseline_organization in {"UNASSIGNED", "ASSIGNED", "MIGRATION_READY", "MIGRATED", "QUARANTINED"}
+            else "QUARANTINED"
+            if area == "99_review" and kind == "unresolved_asset"
+            else "MIGRATED"
+        )
         status_source = status_source_for(
             baseline, "docs/core/00_governance/uet_core_physical_migration_manifest.json"
         )
@@ -450,13 +457,22 @@ def build_records(
             "sha256": record_hash,
             "sha256_before": baseline.get("sha256_before") or baseline.get("sha256"),
             "sha256_after": baseline.get("sha256_after"),
-            "migration_state": "MIGRATED_WITH_SHIM" if compatibility else "MIGRATED",
+            "migration_state": (
+                "QUARANTINED"
+                if baseline.get("migration_state") == "QUARANTINED"
+                else "MIGRATED_WITH_SHIM"
+                if compatibility
+                else "MIGRATED"
+            ),
             "migration_wave": "canonical_reconciliation_v4",
             "compatibility_mode": "redirect_or_shim" if compatibility else "none",
             "target_physical_path": canonical,
             "rollback_path": current,
             "next_action": (
-                "retain_compatibility_shim" if compatibility else
+                "retain_non_public_binary_at_legacy_path"
+                if baseline.get("migration_state") == "QUARANTINED"
+                else "retain_compatibility_shim"
+                if compatibility else
                 "review_unresolved_asset_and_assign_scope" if organization == "QUARANTINED" else
                 "declare_generator_and_rebuild_artifact" if generated and generator is None else
                 "assign_equation_family_and_link_verifier" if area == "02_equations" and family is None else

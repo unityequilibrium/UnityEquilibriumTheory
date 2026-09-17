@@ -3,8 +3,9 @@
   "canonical_path_authority": "docs/core/core_paths.py",
   "controlling_blocker": "generated_artifact_generator_provenance_incomplete",
   "counts": {
-    "MIGRATED": 1541,
-    "MIGRATED_WITH_SHIM": 426
+    "MIGRATED": 1539,
+    "MIGRATED_WITH_SHIM": 426,
+    "QUARANTINED": 2
   },
   "duplicate_targets": [],
   "files": [
@@ -107,7 +108,7 @@
       "owner_id": "ORG",
       "rollback_path": "docs/core/00_governance/UET_CORE_MIGRATION_ENFORCEMENT_REPORT.md",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "0ee630e4aeefd265e4ad5d4d679e7767311a96ec60f549679ce604d6e103347f",
+      "sha256": "f04a9268b2c4a046e9ca7aae8ebb7aeca041f328311d0f12471c88fa42fc99a4",
       "target_path": "docs/core/00_governance/UET_CORE_MIGRATION_ENFORCEMENT_REPORT.md"
     },
     {
@@ -3235,7 +3236,7 @@
       "owner_id": "ORG",
       "rollback_path": "docs/core/00_governance/uet_core_data_tooling_migration_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "cbc25cc27bdc9808edff66024c038044b7aebf191abac8f5c6187a7892887cef",
+      "sha256": "b2798f3b7d0888fcf23dee8f217001d14b71e4a5e626186c805746ea188a48ef",
       "target_path": "docs/core/00_governance/uet_core_data_tooling_migration_audit.json"
     },
     {
@@ -3252,7 +3253,7 @@
       "owner_id": "ORG",
       "rollback_path": "docs/core/00_governance/uet_core_data_tooling_migration_manifest.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "8d5b819c37132494abd3195eb493bef6f670a584fa80421fc3d34f98625571bb",
+      "sha256": "df76aeadd7354ff194c5366fd9b9879740f1e69e74711be6493ecdcb8d6ea726",
       "target_path": "docs/core/00_governance/uet_core_data_tooling_migration_manifest.json"
     },
     {
@@ -3303,7 +3304,7 @@
       "owner_id": "ORG",
       "rollback_path": "docs/core/00_governance/uet_core_imports_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "1ca205b53274c9292ce9821f149b62ff6ab17f634751d936de99405cc1e18dad",
+      "sha256": "08c4d525dd0a9aec27a8b5f96accb064a8a758e7a3a45e61be1d79a4138f7c1f",
       "target_path": "docs/core/00_governance/uet_core_imports_audit.json"
     },
     {
@@ -3337,7 +3338,7 @@
       "owner_id": "ORG",
       "rollback_path": "docs/core/00_governance/uet_core_links_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "b0088de05070ce7d3e6c5d8a7aa3ea4e8496cf14397eb21a1779be4b8ec937ee",
+      "sha256": "baf0fabf29d95ad63929e93d3f5e293f50b09fa6b72456603008b195709e6483",
       "target_path": "docs/core/00_governance/uet_core_links_audit.json"
     },
     {
@@ -3354,7 +3355,7 @@
       "owner_id": "ORG",
       "rollback_path": "docs/core/00_governance/uet_core_migration_enforcement_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "eaca476061ce1a19dec07206d3c319c6f0e11dd788a5ede782fa1ad9e15dc338",
+      "sha256": "5d6b6dc176059a5d4aeb811bca20156ceaadc37465cb183fb7b14d36991acae6",
       "target_path": "docs/core/00_governance/uet_core_migration_enforcement_audit.json"
     },
     {
@@ -3371,7 +3372,7 @@
       "owner_id": "ORG",
       "rollback_path": "docs/core/00_governance/uet_core_paths_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "2016b0b7bfa5448aaad0ff57c87f218a1faab56f451fde2eade1ab726e1b3f9a",
+      "sha256": "1f177a8259c890500f40a006c863e6418195a0b9768f89fd218714502e159f07",
       "target_path": "docs/core/00_governance/uet_core_paths_audit.json"
     },
     {
@@ -3388,7 +3389,7 @@
       "owner_id": "ORG",
       "rollback_path": "docs/core/00_governance/uet_core_physical_migration_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "fa65103097afa3a730e1bb9cfac95284f70f2b5d7054274ff0eef8d2ad37aa7c",
+      "sha256": "9df3db927e41b0c8bb0c2361eb3fd54c92d38d835c1d8a94bb6be06232491fb7",
       "target_path": "docs/core/00_governance/uet_core_physical_migration_audit.json"
     },
     {
@@ -3405,7 +3406,7 @@
       "owner_id": "ORG",
       "rollback_path": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "89deb5bb57be8e3ebf51ad5d3a687927abea19586eb6a6112d2204f59d30d208",
+      "sha256": "047f1b454df654a219f162b9d50a367503f8dcedfef4a9aa4d30970e507d9249",
       "target_path": "docs/core/00_governance/uet_core_physical_migration_manifest.json"
     },
     {
@@ -3439,7 +3440,7 @@
       "owner_id": "ORG",
       "rollback_path": "docs/core/00_governance/uet_core_source_package_migration_audit.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "55d762056606ccfc23525e8fb246cd68dbacdc9e6c32eecdb235034c81b715c2",
+      "sha256": "5cbef8a834853b6ec681f9a539b2295c2dab1a2649859e89f8488e1105a3abba",
       "target_path": "docs/core/00_governance/uet_core_source_package_migration_audit.json"
     },
     {
@@ -3456,7 +3457,7 @@
       "owner_id": "ORG",
       "rollback_path": "docs/core/00_governance/uet_core_source_package_migration_manifest.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "889ecef2b494ca5da808108ce716182af46a5bdfef91b8b57a5c15aeb89d4e58",
+      "sha256": "edbe61497e2edee9265c95387c91d48f1fa930cb6214d211c86d414c3e12aa66",
       "target_path": "docs/core/00_governance/uet_core_source_package_migration_manifest.json"
     },
     {
@@ -3473,7 +3474,7 @@
       "owner_id": "ORG",
       "rollback_path": "docs/core/00_governance/uet_core_source_package_redirects.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "db99ff9ca091f5fd642d995e284c0df63182fa6fa30678dac6a1edd6f579996f",
+      "sha256": "a6028f3519f78489fce43dd3ba5a3c2b64bceeae73223b71429330afc463e5a3",
       "target_path": "docs/core/00_governance/uet_core_source_package_redirects.json"
     },
     {
@@ -10341,7 +10342,7 @@
       "owner_id": "EVIDENCE",
       "rollback_path": "docs/core/05_tests/regression/root/test_core_paths_canonical_resolution.py",
       "room_id": "ROOM_CORE_FOUNDATION",
-      "sha256": "9c718721e9dc43777766b89bc48abb825703a3c20ed137fd6742bcad7b21b668",
+      "sha256": "2a202fb0d065934c3bbc5da6a483faec56218b7c9011791880d9cdda5ce3d9ae",
       "target_path": "docs/core/05_tests/regression/root/test_core_paths_canonical_resolution.py"
     },
     {
@@ -17923,7 +17924,7 @@
       "owner_id": "DATA",
       "rollback_path": "docs/core/06_data/source_packages/README.md",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "e91b2d90d74d21b0afa2c3ebeb3c2855ccf30a324abacb61244dfc747086911b",
+      "sha256": "4136e3c2823c73285957a3ae0235829a8139d4835443035ad46ce577f30b3625",
       "target_path": "docs/core/06_data/source_packages/README.md"
     },
     {
@@ -18231,40 +18232,6 @@
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256": "273cab8ac548b9b031979de840b55dec252822a6b627517623b35a19286ee349",
       "target_path": "docs/core/06_data/source_packages/particle_physics/pdg/electroweak_reference_package.json"
-    },
-    {
-      "asset_id": "UET-CORE-FILE-A0F201FDAF0E",
-      "canonical_path": "docs/core/06_data/source_packages/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
-      "compatibility_mode": "none",
-      "compatibility_plan": "canonical file already present; no physical move required",
-      "current_path": "docs/core/06_data/source_packages/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
-      "evidence_status": "BLOCKED",
-      "legacy_paths": [],
-      "migration_state": "MIGRATED",
-      "next_action": "retain_canonical_path_and_status_source",
-      "organization_status": "MIGRATED",
-      "owner_id": "DATA",
-      "rollback_path": "docs/core/06_data/source_packages/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
-      "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "3de494ba22d7229eda9ba3047660b345fd82d3eea0e10747b7119bb4c2947196",
-      "target_path": "docs/core/06_data/source_packages/particle_physics/pdg/pdg-2025-v0.2.2.sqlite"
-    },
-    {
-      "asset_id": "UET-CORE-FILE-D45FBD82C4CD",
-      "canonical_path": "docs/core/06_data/source_packages/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
-      "compatibility_mode": "none",
-      "compatibility_plan": "canonical file already present; no physical move required",
-      "current_path": "docs/core/06_data/source_packages/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
-      "evidence_status": "BLOCKED",
-      "legacy_paths": [],
-      "migration_state": "MIGRATED",
-      "next_action": "retain_canonical_path_and_status_source",
-      "organization_status": "MIGRATED",
-      "owner_id": "DATA",
-      "rollback_path": "docs/core/06_data/source_packages/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
-      "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "0126ff52a0a8de8d683d56ee9eb10f7366f5f3b9df7ae4a25e2c269026d8566d",
-      "target_path": "docs/core/06_data/source_packages/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite"
     },
     {
       "asset_id": "UET-CORE-FILE-F9C180FD77B6",
@@ -29404,82 +29371,6 @@
       "target_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/batch_update_seo.py"
     },
     {
-      "asset_id": "UET-CORE-FILE-C12895F83FD2",
-      "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_imports.py",
-      "compatibility_mode": "redirect_or_shim",
-      "compatibility_plan": "retain redirect_or_shim until compatibility approval",
-      "current_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_imports.py",
-      "evidence_status": "INTERNAL",
-      "legacy_paths": [
-        "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_imports.py"
-      ],
-      "migration_state": "MIGRATED_WITH_SHIM",
-      "next_action": "retain_compatibility_shim",
-      "organization_status": "MIGRATED",
-      "owner_id": "ORG",
-      "rollback_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_imports.py",
-      "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "4d625778dd0b28351a84fdd3f1c9b6edbc9d261306e1e3ca7cc1ceb0c7acfbdf",
-      "target_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_imports.py"
-    },
-    {
-      "asset_id": "UET-CORE-FILE-ADC854EF7398",
-      "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp.py",
-      "compatibility_mode": "redirect_or_shim",
-      "compatibility_plan": "retain redirect_or_shim until compatibility approval",
-      "current_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp.py",
-      "evidence_status": "INTERNAL",
-      "legacy_paths": [
-        "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp.py"
-      ],
-      "migration_state": "MIGRATED_WITH_SHIM",
-      "next_action": "retain_compatibility_shim",
-      "organization_status": "MIGRATED",
-      "owner_id": "ORG",
-      "rollback_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp.py",
-      "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "13fc1574515a59386abc474d0b520e442a60660e9d8f5e399170ee00f4ef50bb",
-      "target_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp.py"
-    },
-    {
-      "asset_id": "UET-CORE-FILE-4EF6833C6AC4",
-      "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp_v2.py",
-      "compatibility_mode": "redirect_or_shim",
-      "compatibility_plan": "retain redirect_or_shim until compatibility approval",
-      "current_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp_v2.py",
-      "evidence_status": "INTERNAL",
-      "legacy_paths": [
-        "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp_v2.py"
-      ],
-      "migration_state": "MIGRATED_WITH_SHIM",
-      "next_action": "retain_compatibility_shim",
-      "organization_status": "MIGRATED",
-      "owner_id": "ORG",
-      "rollback_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp_v2.py",
-      "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "7bfb6663a9db1b3d583d6552bf22e2901050bafb4e8fb93eb0cdee564d6b0d4d",
-      "target_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp_v2.py"
-    },
-    {
-      "asset_id": "UET-CORE-FILE-D62BBECEB307",
-      "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_tests.py",
-      "compatibility_mode": "redirect_or_shim",
-      "compatibility_plan": "retain redirect_or_shim until compatibility approval",
-      "current_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_tests.py",
-      "evidence_status": "INTERNAL",
-      "legacy_paths": [
-        "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_tests.py"
-      ],
-      "migration_state": "MIGRATED_WITH_SHIM",
-      "next_action": "retain_compatibility_shim",
-      "organization_status": "MIGRATED",
-      "owner_id": "ORG",
-      "rollback_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_tests.py",
-      "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "719d893b70c34432908f5e37e1e58f2b02cb91b686b933e57b4405fe349e1a44",
-      "target_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_tests.py"
-    },
-    {
       "asset_id": "UET-CORE-FILE-2C856B6B62A9",
       "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/fix_uet_paths.py",
       "compatibility_mode": "redirect_or_shim",
@@ -29497,6 +29388,82 @@
       "room_id": "ROOM_CORE_ORGANIZATION",
       "sha256": "2f659c3b7e03b18eca0ad61b54674074c6aae854fc545568029234548cf45fe5",
       "target_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/fix_uet_paths.py"
+    },
+    {
+      "asset_id": "UET-CORE-FILE-0DE453B27115",
+      "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_imports.py",
+      "compatibility_mode": "redirect_or_shim",
+      "compatibility_plan": "retain redirect_or_shim until compatibility approval",
+      "current_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_imports.py",
+      "evidence_status": "INTERNAL",
+      "legacy_paths": [
+        "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_imports.py"
+      ],
+      "migration_state": "MIGRATED_WITH_SHIM",
+      "next_action": "retain_compatibility_shim",
+      "organization_status": "MIGRATED",
+      "owner_id": "ORG",
+      "rollback_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_imports.py",
+      "room_id": "ROOM_CORE_ORGANIZATION",
+      "sha256": "ce4c3c3e0aefbd748c5c662c7f631726fb89791660590a113b27e6bfa81fa1ef",
+      "target_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_imports.py"
+    },
+    {
+      "asset_id": "UET-CORE-FILE-3FF8F91F5E32",
+      "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp.py",
+      "compatibility_mode": "redirect_or_shim",
+      "compatibility_plan": "retain redirect_or_shim until compatibility approval",
+      "current_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp.py",
+      "evidence_status": "INTERNAL",
+      "legacy_paths": [
+        "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp.py"
+      ],
+      "migration_state": "MIGRATED_WITH_SHIM",
+      "next_action": "retain_compatibility_shim",
+      "organization_status": "MIGRATED",
+      "owner_id": "ORG",
+      "rollback_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp.py",
+      "room_id": "ROOM_CORE_ORGANIZATION",
+      "sha256": "d99ecc4d00e004cea0799b8d7a273c6eb98c5e04ccabbcfc191b8fd1e97b19f2",
+      "target_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp.py"
+    },
+    {
+      "asset_id": "UET-CORE-FILE-443BB8A52806",
+      "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp_v2.py",
+      "compatibility_mode": "redirect_or_shim",
+      "compatibility_plan": "retain redirect_or_shim until compatibility approval",
+      "current_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp_v2.py",
+      "evidence_status": "INTERNAL",
+      "legacy_paths": [
+        "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp_v2.py"
+      ],
+      "migration_state": "MIGRATED_WITH_SHIM",
+      "next_action": "retain_compatibility_shim",
+      "organization_status": "MIGRATED",
+      "owner_id": "ORG",
+      "rollback_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp_v2.py",
+      "room_id": "ROOM_CORE_ORGANIZATION",
+      "sha256": "3825134f1357259a28043d52c4cbb23021746ad058855dd248c9cd9c47683adc",
+      "target_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp_v2.py"
+    },
+    {
+      "asset_id": "UET-CORE-FILE-81B33CFB49D9",
+      "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_tests.py",
+      "compatibility_mode": "redirect_or_shim",
+      "compatibility_plan": "retain redirect_or_shim until compatibility approval",
+      "current_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_tests.py",
+      "evidence_status": "INTERNAL",
+      "legacy_paths": [
+        "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_tests.py"
+      ],
+      "migration_state": "MIGRATED_WITH_SHIM",
+      "next_action": "retain_compatibility_shim",
+      "organization_status": "MIGRATED",
+      "owner_id": "ORG",
+      "rollback_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_tests.py",
+      "room_id": "ROOM_CORE_ORGANIZATION",
+      "sha256": "4478f389224c61b05759bafb0842309c031a62f8b26212958f759c3554138ff6",
+      "target_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_tests.py"
     },
     {
       "asset_id": "UET-CORE-FILE-FE13AE79DCD0",
@@ -34155,8 +34122,8 @@
       "evidence_status": "BLOCKED",
       "legacy_paths": [],
       "migration_state": "MIGRATED",
-      "next_action": "review_unresolved_asset_and_assign_scope",
-      "organization_status": "QUARANTINED",
+      "next_action": "retain_canonical_path_and_status_source",
+      "organization_status": "MIGRATED",
       "owner_id": "ORG",
       "rollback_path": "docs/core/99_review/unresolved_assets/T13_HOLDOUT_EXPOSURE_2026_09_10.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
@@ -34172,8 +34139,8 @@
       "evidence_status": "BLOCKED",
       "legacy_paths": [],
       "migration_state": "MIGRATED",
-      "next_action": "review_unresolved_asset_and_assign_scope",
-      "organization_status": "QUARANTINED",
+      "next_action": "retain_canonical_path_and_status_source",
+      "organization_status": "MIGRATED",
       "owner_id": "ORG",
       "rollback_path": "docs/core/99_review/unresolved_assets/sandbox_emergent.py",
       "room_id": "ROOM_CORE_ORGANIZATION",
@@ -34189,8 +34156,8 @@
       "evidence_status": "BLOCKED",
       "legacy_paths": [],
       "migration_state": "MIGRATED",
-      "next_action": "review_unresolved_asset_and_assign_scope",
-      "organization_status": "QUARANTINED",
+      "next_action": "retain_canonical_path_and_status_source",
+      "organization_status": "MIGRATED",
       "owner_id": "ORG",
       "rollback_path": "docs/core/99_review/unresolved_assets/t13_energy_response_audit_generator_drift.json",
       "room_id": "ROOM_CORE_ORGANIZATION",
@@ -34296,11 +34263,49 @@
       "owner_id": "ORG",
       "rollback_path": "docs/core/core_paths.py",
       "room_id": "ROOM_CORE_ORGANIZATION",
-      "sha256": "45d07d560ad903d404f3685cffeace3bc84fd29a5023bf9afcd95299179b6968",
+      "sha256": "dfd333ad6ad9ead3948e3e213b49b4f85a367238b1d1b3d962d034d3b4d1e9f3",
       "target_path": "docs/core/core_paths.py"
+    },
+    {
+      "asset_id": "UET-CORE-FILE-B6E8DE51557C",
+      "canonical_path": "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
+      "compatibility_mode": "redirect_or_shim",
+      "compatibility_plan": "retain redirect_or_shim until compatibility approval",
+      "current_path": "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
+      "evidence_status": "BLOCKED",
+      "legacy_paths": [
+        "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite"
+      ],
+      "migration_state": "QUARANTINED",
+      "next_action": "retain_non_public_binary_at_legacy_path",
+      "organization_status": "QUARANTINED",
+      "owner_id": "DATA",
+      "rollback_path": "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
+      "room_id": "ROOM_CORE_ORGANIZATION",
+      "sha256": "3de494ba22d7229eda9ba3047660b345fd82d3eea0e10747b7119bb4c2947196",
+      "target_path": "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite"
+    },
+    {
+      "asset_id": "UET-CORE-FILE-B618CCD5F796",
+      "canonical_path": "docs/core/data/external/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
+      "compatibility_mode": "redirect_or_shim",
+      "compatibility_plan": "retain redirect_or_shim until compatibility approval",
+      "current_path": "docs/core/data/external/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
+      "evidence_status": "BLOCKED",
+      "legacy_paths": [
+        "docs/core/data/external/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite"
+      ],
+      "migration_state": "QUARANTINED",
+      "next_action": "retain_non_public_binary_at_legacy_path",
+      "organization_status": "QUARANTINED",
+      "owner_id": "DATA",
+      "rollback_path": "docs/core/data/external/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
+      "room_id": "ROOM_CORE_ORGANIZATION",
+      "sha256": "0126ff52a0a8de8d683d56ee9eb10f7366f5f3b9df7ae4a25e2c269026d8566d",
+      "target_path": "docs/core/data/external/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite"
     }
   ],
-  "generated_at": "2026-09-16T20:28:05+00:00",
+  "generated_at": "2026-09-17T08:34:49+00:00",
   "generator": "docs/scripts/audit/reconcile_uet_core_registry_v4.py",
   "physical_migration": {
     "complete": true,

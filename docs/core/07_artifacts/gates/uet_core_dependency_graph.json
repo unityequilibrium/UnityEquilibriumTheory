@@ -1,6 +1,6 @@
 {
   "artifact": "uet_core_dependency_graph",
-  "edge_count": 10264,
+  "edge_count": 10256,
   "edges": [
     {
       "edge_type": "path_reference",
@@ -77,20 +77,14 @@
     {
       "edge_type": "path_reference",
       "from": "docs/core/00_governance/CORE_RESEARCH_ORGANIZATION_INDEX.md",
-      "reference": "docs/core/99_review/unresolved_assets/T13_HOLDOUT_EXPOSURE_2026_09_10.json",
-      "to": "docs/core/99_review/unresolved_assets/T13_HOLDOUT_EXPOSURE_2026_09_10.json"
+      "reference": "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
+      "to": "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite"
     },
     {
       "edge_type": "path_reference",
       "from": "docs/core/00_governance/CORE_RESEARCH_ORGANIZATION_INDEX.md",
-      "reference": "docs/core/99_review/unresolved_assets/sandbox_emergent.py",
-      "to": "docs/core/99_review/unresolved_assets/sandbox_emergent.py"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/CORE_RESEARCH_ORGANIZATION_INDEX.md",
-      "reference": "docs/core/99_review/unresolved_assets/t13_energy_response_audit_generator_drift.json",
-      "to": "docs/core/99_review/unresolved_assets/t13_energy_response_audit_generator_drift.json"
+      "reference": "docs/core/data/external/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
+      "to": "docs/core/data/external/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite"
     },
     {
       "edge_type": "path_reference",
@@ -32093,30 +32087,6 @@
     {
       "edge_type": "path_reference",
       "from": "docs/core/00_governance/uet_core_compatibility_consolidation_v4.json",
-      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_imports.py",
-      "to": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_imports.py"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_compatibility_consolidation_v4.json",
-      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp.py",
-      "to": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp.py"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_compatibility_consolidation_v4.json",
-      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp_v2.py",
-      "to": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp_v2.py"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_compatibility_consolidation_v4.json",
-      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_tests.py",
-      "to": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_tests.py"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_compatibility_consolidation_v4.json",
       "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/fix_uet_paths.py",
       "to": "docs/core/08_history/legacy/compatibility_shims/data_scripts/fix_uet_paths.py"
     },
@@ -34127,32 +34097,32 @@
     {
       "edge_type": "path_reference",
       "from": "docs/core/00_governance/uet_core_data_tooling_migration_manifest.json",
-      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_imports.py",
-      "to": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_imports.py"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_data_tooling_migration_manifest.json",
-      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp.py",
-      "to": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp.py"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_data_tooling_migration_manifest.json",
-      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp_v2.py",
-      "to": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp_v2.py"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_data_tooling_migration_manifest.json",
-      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_tests.py",
-      "to": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_tests.py"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_data_tooling_migration_manifest.json",
       "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/fix_uet_paths.py",
       "to": "docs/core/08_history/legacy/compatibility_shims/data_scripts/fix_uet_paths.py"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_data_tooling_migration_manifest.json",
+      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_imports.py",
+      "to": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_imports.py"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_data_tooling_migration_manifest.json",
+      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp.py",
+      "to": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp.py"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_data_tooling_migration_manifest.json",
+      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp_v2.py",
+      "to": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp_v2.py"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_data_tooling_migration_manifest.json",
+      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_tests.py",
+      "to": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_tests.py"
     },
     {
       "edge_type": "path_reference",
@@ -43847,18 +43817,6 @@
     {
       "edge_type": "path_reference",
       "from": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
-      "reference": "docs/core/06_data/source_packages/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
-      "to": "docs/core/06_data/source_packages/particle_physics/pdg/pdg-2025-v0.2.2.sqlite"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
-      "reference": "docs/core/06_data/source_packages/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
-      "to": "docs/core/06_data/source_packages/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
       "reference": "docs/core/07_artifacts/README.md",
       "to": "docs/core/07_artifacts/README.md"
     },
@@ -47753,32 +47711,32 @@
     {
       "edge_type": "path_reference",
       "from": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
-      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_imports.py",
-      "to": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_imports.py"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
-      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp.py",
-      "to": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp.py"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
-      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp_v2.py",
-      "to": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp_v2.py"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
-      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_tests.py",
-      "to": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_tests.py"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
       "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/fix_uet_paths.py",
       "to": "docs/core/08_history/legacy/compatibility_shims/data_scripts/fix_uet_paths.py"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
+      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_imports.py",
+      "to": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_imports.py"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
+      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp.py",
+      "to": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp.py"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
+      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp_v2.py",
+      "to": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp_v2.py"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
+      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_tests.py",
+      "to": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_tests.py"
     },
     {
       "edge_type": "path_reference",
@@ -49321,6 +49279,18 @@
       "from": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
       "reference": "docs/core/core_paths.py",
       "to": "docs/core/core_paths.py"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
+      "reference": "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
+      "to": "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_physical_migration_manifest.json",
+      "reference": "docs/core/data/external/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
+      "to": "docs/core/data/external/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite"
     },
     {
       "edge_type": "path_reference",
@@ -50897,32 +50867,20 @@
     {
       "edge_type": "path_reference",
       "from": "docs/core/00_governance/uet_core_source_package_migration_manifest.json",
-      "reference": "docs/core/06_data/source_packages/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
-      "to": "docs/core/06_data/source_packages/particle_physics/pdg/pdg-2025-v0.2.2.sqlite"
+      "reference": "docs/core/core_paths.py",
+      "to": "docs/core/core_paths.py"
     },
     {
       "edge_type": "path_reference",
       "from": "docs/core/00_governance/uet_core_source_package_migration_manifest.json",
       "reference": "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
-      "to": "docs/core/06_data/source_packages/particle_physics/pdg/pdg-2025-v0.2.2.sqlite"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_source_package_migration_manifest.json",
-      "reference": "docs/core/06_data/source_packages/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
-      "to": "docs/core/06_data/source_packages/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite"
+      "to": "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite"
     },
     {
       "edge_type": "path_reference",
       "from": "docs/core/00_governance/uet_core_source_package_migration_manifest.json",
       "reference": "docs/core/data/external/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
-      "to": "docs/core/06_data/source_packages/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_source_package_migration_manifest.json",
-      "reference": "docs/core/core_paths.py",
-      "to": "docs/core/core_paths.py"
+      "to": "docs/core/data/external/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite"
     },
     {
       "edge_type": "path_reference",
@@ -51143,26 +51101,14 @@
     {
       "edge_type": "path_reference",
       "from": "docs/core/00_governance/uet_core_source_package_redirects.json",
-      "reference": "docs/core/06_data/source_packages/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
-      "to": "docs/core/06_data/source_packages/particle_physics/pdg/pdg-2025-v0.2.2.sqlite"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_source_package_redirects.json",
       "reference": "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
-      "to": "docs/core/06_data/source_packages/particle_physics/pdg/pdg-2025-v0.2.2.sqlite"
-    },
-    {
-      "edge_type": "path_reference",
-      "from": "docs/core/00_governance/uet_core_source_package_redirects.json",
-      "reference": "docs/core/06_data/source_packages/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
-      "to": "docs/core/06_data/source_packages/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite"
+      "to": "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite"
     },
     {
       "edge_type": "path_reference",
       "from": "docs/core/00_governance/uet_core_source_package_redirects.json",
       "reference": "docs/core/data/external/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
-      "to": "docs/core/06_data/source_packages/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite"
+      "to": "docs/core/data/external/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite"
     },
     {
       "edge_type": "path_reference",
@@ -59530,6 +59476,12 @@
     },
     {
       "edge_type": "path_reference",
+      "from": "docs/core/05_tests/regression/root/test_core_paths_canonical_resolution.py",
+      "reference": "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
+      "to": "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite"
+    },
+    {
+      "edge_type": "path_reference",
       "from": "docs/core/05_tests/regression/root/test_ding_2022_source_mapping.py",
       "reference": "docs/core/07_artifacts/archive/ding_2022_fig1d_series_mapping.json",
       "to": "docs/core/07_artifacts/archive/ding_2022_fig1d_series_mapping.json"
@@ -61587,7 +61539,7 @@
       "to": "docs/core/99_review/unresolved_assets/sandbox_emergent.py"
     }
   ],
-  "generated_at": "2026-09-16T20:28:05+00:00",
+  "generated_at": "2026-09-17T08:34:49+00:00",
   "generator": "docs/scripts/audit/reconcile_uet_core_registry_v4.py",
   "node_count": 1967,
   "nodes": [
@@ -71078,24 +71030,6 @@
       "path": "docs/core/06_data/source_packages/particle_physics/pdg/electroweak_reference_package.json"
     },
     {
-      "canonical_path": "docs/core/06_data/source_packages/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
-      "evidence_status": "BLOCKED",
-      "file_kind": "declared_input_data",
-      "logical_area": "06_data",
-      "organization_status": "MIGRATED",
-      "owner_id": "DATA",
-      "path": "docs/core/06_data/source_packages/particle_physics/pdg/pdg-2025-v0.2.2.sqlite"
-    },
-    {
-      "canonical_path": "docs/core/06_data/source_packages/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
-      "evidence_status": "BLOCKED",
-      "file_kind": "declared_input_data",
-      "logical_area": "06_data",
-      "organization_status": "MIGRATED",
-      "owner_id": "DATA",
-      "path": "docs/core/06_data/source_packages/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite"
-    },
-    {
       "canonical_path": "docs/core/07_artifacts/README.md",
       "evidence_status": "INTERNAL",
       "file_kind": "artifact_navigation",
@@ -76937,42 +76871,6 @@
       "path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/batch_update_seo.py"
     },
     {
-      "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_imports.py",
-      "evidence_status": "INTERNAL",
-      "file_kind": "compatibility_python_shim",
-      "logical_area": "08_history",
-      "organization_status": "MIGRATED",
-      "owner_id": "ORG",
-      "path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_imports.py"
-    },
-    {
-      "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp.py",
-      "evidence_status": "INTERNAL",
-      "file_kind": "compatibility_python_shim",
-      "logical_area": "08_history",
-      "organization_status": "MIGRATED",
-      "owner_id": "ORG",
-      "path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp.py"
-    },
-    {
-      "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp_v2.py",
-      "evidence_status": "INTERNAL",
-      "file_kind": "compatibility_python_shim",
-      "logical_area": "08_history",
-      "organization_status": "MIGRATED",
-      "owner_id": "ORG",
-      "path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp_v2.py"
-    },
-    {
-      "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_tests.py",
-      "evidence_status": "INTERNAL",
-      "file_kind": "compatibility_python_shim",
-      "logical_area": "08_history",
-      "organization_status": "MIGRATED",
-      "owner_id": "ORG",
-      "path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_tests.py"
-    },
-    {
       "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/fix_uet_paths.py",
       "evidence_status": "INTERNAL",
       "file_kind": "compatibility_python_shim",
@@ -76980,6 +76878,42 @@
       "organization_status": "MIGRATED",
       "owner_id": "ORG",
       "path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/fix_uet_paths.py"
+    },
+    {
+      "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_imports.py",
+      "evidence_status": "INTERNAL",
+      "file_kind": "compatibility_python_shim",
+      "logical_area": "08_history",
+      "organization_status": "MIGRATED",
+      "owner_id": "ORG",
+      "path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_imports.py"
+    },
+    {
+      "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp.py",
+      "evidence_status": "INTERNAL",
+      "file_kind": "compatibility_python_shim",
+      "logical_area": "08_history",
+      "organization_status": "MIGRATED",
+      "owner_id": "ORG",
+      "path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp.py"
+    },
+    {
+      "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp_v2.py",
+      "evidence_status": "INTERNAL",
+      "file_kind": "compatibility_python_shim",
+      "logical_area": "08_history",
+      "organization_status": "MIGRATED",
+      "owner_id": "ORG",
+      "path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_mcp_v2.py"
+    },
+    {
+      "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_tests.py",
+      "evidence_status": "INTERNAL",
+      "file_kind": "compatibility_python_shim",
+      "logical_area": "08_history",
+      "organization_status": "MIGRATED",
+      "owner_id": "ORG",
+      "path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/legacy_tools/debug_tests.py"
     },
     {
       "canonical_path": "docs/core/08_history/legacy/compatibility_shims/data_scripts/maintenance/cleanup_outputs.py",
@@ -79218,7 +79152,7 @@
       "evidence_status": "BLOCKED",
       "file_kind": "unresolved_asset",
       "logical_area": "99_review",
-      "organization_status": "QUARANTINED",
+      "organization_status": "MIGRATED",
       "owner_id": "ORG",
       "path": "docs/core/99_review/unresolved_assets/T13_HOLDOUT_EXPOSURE_2026_09_10.json"
     },
@@ -79227,7 +79161,7 @@
       "evidence_status": "BLOCKED",
       "file_kind": "unresolved_asset",
       "logical_area": "99_review",
-      "organization_status": "QUARANTINED",
+      "organization_status": "MIGRATED",
       "owner_id": "ORG",
       "path": "docs/core/99_review/unresolved_assets/sandbox_emergent.py"
     },
@@ -79236,7 +79170,7 @@
       "evidence_status": "BLOCKED",
       "file_kind": "unresolved_asset",
       "logical_area": "99_review",
-      "organization_status": "QUARANTINED",
+      "organization_status": "MIGRATED",
       "owner_id": "ORG",
       "path": "docs/core/99_review/unresolved_assets/t13_energy_response_audit_generator_drift.json"
     },
@@ -79293,6 +79227,24 @@
       "organization_status": "MIGRATED",
       "owner_id": "ORG",
       "path": "docs/core/core_paths.py"
+    },
+    {
+      "canonical_path": "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
+      "evidence_status": "BLOCKED",
+      "file_kind": "compatibility_boundary",
+      "logical_area": "06_data",
+      "organization_status": "QUARANTINED",
+      "owner_id": "DATA",
+      "path": "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite"
+    },
+    {
+      "canonical_path": "docs/core/data/external/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
+      "evidence_status": "BLOCKED",
+      "file_kind": "compatibility_boundary",
+      "logical_area": "06_data",
+      "organization_status": "QUARANTINED",
+      "owner_id": "DATA",
+      "path": "docs/core/data/external/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite"
     }
   ],
   "rules": [
@@ -79421,6 +79373,26 @@
     {
       "edge_type": "path_reference",
       "from": "docs/core/00_governance/uet_core_compatibility_consolidation_v4.json",
+      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_imports.py"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_compatibility_consolidation_v4.json",
+      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp.py"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_compatibility_consolidation_v4.json",
+      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp_v2.py"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_compatibility_consolidation_v4.json",
+      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_tests.py"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_compatibility_consolidation_v4.json",
       "reference": "docs/core/artifacts/README.md"
     },
     {
@@ -80902,6 +80874,26 @@
       "edge_type": "path_reference",
       "from": "docs/core/00_governance/uet_core_legacy_module_aliases.json",
       "reference": "docs/core/uet_viz.py"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_migration_enforcement_audit.json",
+      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_imports.py"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_migration_enforcement_audit.json",
+      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp.py"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_migration_enforcement_audit.json",
+      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_mcp_v2.py"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/00_governance/uet_core_migration_enforcement_audit.json",
+      "reference": "docs/core/08_history/legacy/compatibility_shims/data_scripts/debug/debug_tests.py"
     },
     {
       "edge_type": "path_reference",

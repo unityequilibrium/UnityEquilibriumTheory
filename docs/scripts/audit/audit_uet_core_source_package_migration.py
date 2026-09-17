@@ -13,6 +13,7 @@ MANIFEST = CORE / "00_governance" / "uet_core_source_package_migration_manifest.
 REDIRECT_INDEX = CORE / "00_governance" / "uet_core_source_package_redirects.json"
 LEGACY_ROOT = CORE / "data" / "external"
 AUDIT = CORE / "00_governance" / "uet_core_source_package_migration_audit.json"
+NON_PUBLIC_BINARY_SUFFIXES = frozenset({".sqlite", ".sqlite3", ".db"})
 
 
 def sha256(path: Path) -> str:
@@ -27,9 +28,23 @@ def build() -> dict:
     payload = json.loads(MANIFEST.read_text(encoding="utf-8"))
     redirect = json.loads(REDIRECT_INDEX.read_text(encoding="utf-8"))
     failures: list[dict[str, str]] = []
+    retained_legacy = set()
     for row in payload.get("records", []):
         target = ROOT / row["canonical_path"]
-        if row.get("migration_state") != "MIGRATED":
+        state = row.get("migration_state")
+        if state == "QUARANTINED":
+            valid = (
+                Path(row["legacy_path"]).suffix.lower() in NON_PUBLIC_BINARY_SUFFIXES
+                and row["canonical_path"] == row["legacy_path"]
+                and target.exists()
+                and row.get("next_action") == "retain_non_public_binary_at_legacy_path"
+            )
+            if not valid:
+                failures.append({"path": row["legacy_path"], "reason": "invalid_non_public_binary_retention"})
+            else:
+                retained_legacy.add(row["legacy_path"])
+            continue
+        if state != "MIGRATED":
             failures.append({"path": row["legacy_path"], "reason": "record_not_migrated"})
         elif not target.exists():
             failures.append({"path": row["canonical_path"], "reason": "canonical_missing"})
@@ -43,6 +58,7 @@ def build() -> dict:
         path.relative_to(ROOT).as_posix()
         for path in LEGACY_ROOT.rglob("*")
         if path.is_file() and path.name != "README.md"
+        and path.relative_to(ROOT).as_posix() not in retained_legacy
     ] if LEGACY_ROOT.exists() else []
     failures.extend({"path": path, "reason": "raw_file_left_in_legacy_root"} for path in raw_legacy)
     checks = [

@@ -32,7 +32,7 @@
     {
       "check_id": "quarantine_is_explicit",
       "expected": "BLOCKED evidence for every quarantined record",
-      "observed": 3,
+      "observed": 2,
       "status": "PASS"
     },
     {
@@ -632,25 +632,24 @@
     "docs/core/07_artifacts/verification/uet_all_waves_completion_audit.json",
     "docs/core/07_artifacts/verification/uet_derivation_origin_audit.json"
   ],
-  "generated_at": "2026-09-16T20:28:05+00:00",
+  "generated_at": "2026-09-17T08:34:49+00:00",
   "generator": "docs/scripts/audit/reconcile_uet_core_registry_v4.py",
   "missing_canonical_targets": [],
   "next_action": "declare missing artifact generators and review quarantined assets before physical deprecation",
   "physics_status_changes": [],
   "quarantined_paths": [
-    "docs/core/99_review/unresolved_assets/T13_HOLDOUT_EXPOSURE_2026_09_10.json",
-    "docs/core/99_review/unresolved_assets/sandbox_emergent.py",
-    "docs/core/99_review/unresolved_assets/t13_energy_response_audit_generator_drift.json"
+    "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
+    "docs/core/data/external/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite"
   ],
   "schema_version": "2.0",
   "scope": {
     "actual_core_file_count": 1967,
-    "dependency_edge_count": 10264,
+    "dependency_edge_count": 10256,
     "generated_artifacts_without_generator": 585,
     "physical_manifest_record_count": 1967,
-    "quarantine_count": 3,
+    "quarantine_count": 2,
     "registry_record_count": 1967,
-    "unresolved_reference_count": 1634
+    "unresolved_reference_count": 1642
   },
   "status": "PASS_WITH_REVIEW_REQUIRED",
   "unassigned_paths": []

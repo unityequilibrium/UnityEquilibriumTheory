@@ -1,6 +1,6 @@
 {
   "canonical_path_authority": "docs/core/core_paths.py",
-  "generated_at": "2026-09-14T07:20:48+00:00",
+  "generated_at": "2026-09-17T08:33:01+00:00",
   "generator": "docs/scripts/audit/migrate_uet_core_source_packages_v3.py",
   "migration_id": "UET-CORE-SOURCE-PACKAGES-V3",
   "records": [
@@ -14,7 +14,7 @@
       "migration_state": "MIGRATED",
       "next_action": "verify_source_package_consumers",
       "rollback_path": "docs/core/data/external/particle_physics/ame2020/mass_1.mas20",
-      "sha256_after": "e8599c6d7f724fac91934e59f1b9de8fb8f63e820f4b39456b790665ed2a3307",
+      "sha256_after": "94299ea0fec7da4ed827372882dc6bc0c8f63b416d679b2969f4b60988d979b3",
       "sha256_before": "e8599c6d7f724fac91934e59f1b9de8fb8f63e820f4b39456b790665ed2a3307",
       "source_or_generated": "source"
     },
@@ -56,7 +56,7 @@
       "migration_state": "MIGRATED",
       "next_action": "verify_source_package_consumers",
       "rollback_path": "docs/core/data/external/particle_physics/katrin/katrin_latest_results_2025.html",
-      "sha256_after": "18f1a1a301f53b2004c0ae8b09a2b2cdaacc805ba44e505ea6fda1049f7ee5c0",
+      "sha256_after": "daf0beb694bb78e23e8026c04468dc07ddd32e3b71ab54ff47d2b16f54b6cacc",
       "sha256_before": "18f1a1a301f53b2004c0ae8b09a2b2cdaacc805ba44e505ea6fda1049f7ee5c0",
       "source_or_generated": "source"
     },
@@ -84,7 +84,7 @@
       "migration_state": "MIGRATED",
       "next_action": "verify_source_package_consumers",
       "rollback_path": "docs/core/data/external/particle_physics/muon_g2/doe_muon_g2_2025_press_release.html",
-      "sha256_after": "bccc16372170d54dad98464173782eab4aba9c9c25367aebf95f081533baad77",
+      "sha256_after": "9d06470c916ead6acff7723dc734683c7a297cb6385fee5690ab38cf9d97b427",
       "sha256_before": "bccc16372170d54dad98464173782eab4aba9c9c25367aebf95f081533baad77",
       "source_or_generated": "source"
     },
@@ -112,7 +112,7 @@
       "migration_state": "MIGRATED",
       "next_action": "verify_source_package_consumers",
       "rollback_path": "docs/core/data/external/particle_physics/muon_g2/fermilab_muon_g2_2025_press_release.html",
-      "sha256_after": "6577fe14bae688a1d531f58aa4faa9d53e4632a4199ae098861772b259b575a9",
+      "sha256_after": "60f5857b18626e4af53f4df557e16d444c86f5e1e7602bc77208d57c67af616e",
       "sha256_before": "6577fe14bae688a1d531f58aa4faa9d53e4632a4199ae098861772b259b575a9",
       "source_or_generated": "source"
     },
@@ -154,7 +154,7 @@
       "migration_state": "MIGRATED",
       "next_action": "verify_source_package_consumers",
       "rollback_path": "docs/core/data/external/particle_physics/muon_g2/theory/muon_g2_theory_white_paper_2025.html",
-      "sha256_after": "636b408ecbb10f436d510f9eb191dad81d90789b7c8e5508545a9e126107bc6e",
+      "sha256_after": "c306fa42ad255baf27a2f36f89b1883f471707fe5f79d989f04f9d6d1ae285a8",
       "sha256_before": "636b408ecbb10f436d510f9eb191dad81d90789b7c8e5508545a9e126107bc6e",
       "source_or_generated": "source"
     },
@@ -258,29 +258,35 @@
     },
     {
       "asset_id": "UET-SOURCE-3E6F3DFBB6AB",
-      "canonical_path": "docs/core/06_data/source_packages/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
-      "collision_key": "docs/core/06_data/source_packages/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
+      "canonical_path": "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
+      "collision_key": "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
       "dirty_source": false,
       "file_kind": "source_package_file",
       "legacy_path": "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
-      "migration_state": "MIGRATED",
-      "next_action": "verify_source_package_consumers",
+      "migration_state": "QUARANTINED",
+      "migration_wave": "public_boundary_preservation",
+      "next_action": "retain_non_public_binary_at_legacy_path",
+      "public_boundary_reason": "database binary suffix is blocked by the repository public-boundary policy",
+      "retained_at_legacy_path": true,
       "rollback_path": "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite",
-      "sha256_after": "3de494ba22d7229eda9ba3047660b345fd82d3eea0e10747b7119bb4c2947196",
+      "sha256_after": null,
       "sha256_before": "3de494ba22d7229eda9ba3047660b345fd82d3eea0e10747b7119bb4c2947196",
       "source_or_generated": "source"
     },
     {
       "asset_id": "UET-SOURCE-F7AD9229D6E6",
-      "canonical_path": "docs/core/06_data/source_packages/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
-      "collision_key": "docs/core/06_data/source_packages/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
+      "canonical_path": "docs/core/data/external/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
+      "collision_key": "docs/core/data/external/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
       "dirty_source": false,
       "file_kind": "source_package_file",
       "legacy_path": "docs/core/data/external/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
-      "migration_state": "MIGRATED",
-      "next_action": "verify_source_package_consumers",
+      "migration_state": "QUARANTINED",
+      "migration_wave": "public_boundary_preservation",
+      "next_action": "retain_non_public_binary_at_legacy_path",
+      "public_boundary_reason": "database binary suffix is blocked by the repository public-boundary policy",
+      "retained_at_legacy_path": true,
       "rollback_path": "docs/core/data/external/particle_physics/pdg/pdgall-2025-v0.2.2.sqlite",
-      "sha256_after": "0126ff52a0a8de8d683d56ee9eb10f7366f5f3b9df7ae4a25e2c269026d8566d",
+      "sha256_after": null,
       "sha256_before": "0126ff52a0a8de8d683d56ee9eb10f7366f5f3b9df7ae4a25e2c269026d8566d",
       "source_or_generated": "source"
     }
@@ -291,12 +297,14 @@
     "dirty_sources": 0,
     "duplicate_targets": {},
     "existing_target_conflicts": [],
-    "files_migrated_in_wave": 20,
-    "files_skipped_in_wave": 0,
+    "files_migrated_in_wave": 18,
+    "files_skipped_in_wave": 2,
     "files_total": 20,
-    "migration_ready": 20,
+    "migration_ready": 18,
     "physical_move_performed": true,
     "physics_status_changes": 0,
-    "raw_hash_changes": 0
+    "quarantined": 2,
+    "raw_hash_changes": 0,
+    "retained_non_public_binary_count": 2
   }
 }

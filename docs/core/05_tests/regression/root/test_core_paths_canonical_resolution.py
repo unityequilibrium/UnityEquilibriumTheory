@@ -27,3 +27,9 @@ def test_external_path_is_not_rewritten() -> None:
     external = Path("C:/outside/uet_source.py")
 
     assert canonical_existing_path(external) == external.resolve()
+
+
+def test_non_public_binary_source_is_retained_at_legacy_path() -> None:
+    legacy = "docs/core/data/external/particle_physics/pdg/pdg-2025-v0.2.2.sqlite"
+
+    assert canonical_path_for(legacy) == legacy

@@ -5,7 +5,7 @@ from __future__ import annotations
 import runpy
 from pathlib import Path
 
-_CANONICAL_RELATIVE = "docs/scripts/core/debug/debug_imports.py"
+_CANONICAL_RELATIVE = "docs/scripts/core/legacy_tools/debug_tests.py"
 
 
 def _run() -> None:

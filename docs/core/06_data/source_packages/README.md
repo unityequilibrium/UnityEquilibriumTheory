@@ -5,3 +5,5 @@ This directory is the canonical physical location for raw external files that we
 The files remain source packages, not automatic empirical evidence. Consult the package manifest, source hash, units, preprocessing record, and topic gate before using a file in a benchmark.
 
 The migration index is [`../00_governance/uet_core_source_package_redirects.json`](../../00_governance/uet_core_source_package_redirects.json).
+
+Public-boundary-restricted database binaries remain at their existing legacy source path under `docs/core/data/external/` and are recorded as quarantined inputs; they are not duplicated or treated as evidence.
