@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "noether_phase_field_dependency_gate",
-  "generated_at": "2026-09-17T20:04:55+00:00",
+  "generated_at": "2026-09-17T21:48:23+00:00",
   "topic": "docs/core UET GR non-closed response",
   "version": "wave9_v1",
   "benchmark_role": "dependency_gate",
@@ -9,12 +9,12 @@
   "status": "BLOCKED",
   "evidence_status": "PARTIAL_HYDRODYNAMIC_STATE_COORDINATE_MAP",
   "input_identity": {
-    "upstream_feasibility_artifact": "docs\\core\\07_artifacts\\verification\\hyperbolic_phase_field_causal_feasibility.json",
+    "upstream_feasibility_artifact": "docs/core/07_artifacts/verification/hyperbolic_phase_field_causal_feasibility.json",
     "source_records": [
-      "docs\\data\\external\\condensed_matter\\phase_transitions\\cahn_hilliard_1958\\source_record.json",
-      "docs\\data\\external\\condensed_matter\\phase_transitions\\hohenberg_halperin_1977\\source_record.json",
-      "docs\\data\\external\\condensed_matter\\phase_transitions\\hyperbolic_cahn_hilliard\\dhaouadi_dumbser_gavrilyuk_2025\\source_record.json",
-      "docs\\data\\external\\relativistic_transport\\jain_kovtun_2024\\source_record.json"
+      "docs/data/external/condensed_matter/phase_transitions/cahn_hilliard_1958/source_record.json",
+      "docs/data/external/condensed_matter/phase_transitions/hohenberg_halperin_1977/source_record.json",
+      "docs/data/external/condensed_matter/phase_transitions/hyperbolic_cahn_hilliard/dhaouadi_dumbser_gavrilyuk_2025/source_record.json",
+      "docs/data/external/relativistic_transport/jain_kovtun_2024/source_record.json"
     ]
   },
   "thresholds": {

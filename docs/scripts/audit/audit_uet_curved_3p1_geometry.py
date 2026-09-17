@@ -8,6 +8,7 @@ import sys
 from datetime import datetime, timezone
 from math import log2, pi
 from pathlib import Path
+from typing import Any
 
 import numpy as np
 
@@ -40,6 +41,21 @@ FORMULA = canonical_artifact_path("curved_3p1_geometry_operator_formula_audit.js
 
 def _sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _json_ready(value: Any) -> Any:
+    if isinstance(value, np.ndarray):
+        return _json_ready(value.tolist())
+    if isinstance(value, np.generic):
+        return _json_ready(value.item())
+    if isinstance(value, float):
+        # Canonicalize serialization across Python/NumPy builds only.
+        return float(f"{value:.15g}")
+    if isinstance(value, dict):
+        return {key: _json_ready(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [_json_ready(item) for item in value]
+    return value
 
 
 def _l2(error: np.ndarray) -> float:
@@ -367,7 +383,9 @@ def build_artifacts() -> tuple[dict, dict]:
         "open_items": contract["not_implemented"],
         "claim_ceiling": contract["claim_boundary"],
     }
-    return verification, formula
+    return tuple(
+        _json_ready(payload) for payload in (verification, formula)
+    )
 
 
 def main() -> int:

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_gh_branch_gate",
-  "generated_at": "2026-09-17T20:00:29.142476+00:00",
+  "generated_at": "2026-09-17T21:28:58.887368+00:00",
   "status": "PARTIAL_GH_PRINCIPAL_SYSTEM_READY",
   "requirements": {
     "source_and_formula_locators": "PASS",
@@ -41,11 +41,11 @@
   "evidence_artifacts": [
     {
       "path": "docs/core/07_artifacts/verification/curved_3p1_gh_principal_system_verification.json",
-      "sha256": "c9a8581972514fa312c1ec01ecbfcc168eb9942457efdf7bb14f9986544f142e"
+      "sha256": "c6e5b0501d20129410d6a97d771466fc9b848d9d03b213b2a88b9dbe1df14cea"
     },
     {
       "path": "docs/core/07_artifacts/correspondence/curved_3p1_gh_principal_system_formula_audit.json",
-      "sha256": "c07845cee3f31962b7c4d67e17cf5d2a89459ee1f19176b5aaf03080d53600b9"
+      "sha256": "3acf65f75367c13c3d91c028a144651e93bb73576caa34e9daed1bb41f236258"
     }
   ],
   "dependency_unlocked": "complete nonlinear GH RHS and gamma0 gauge-constraint damping wave only",

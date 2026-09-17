@@ -141,7 +141,7 @@
       "topic_controller": "ch_finite_k_replicate_temporal_acquisition_plan_defined_execution_open"
     }
   },
-  "generated_at": "2026-09-17T19:17:18+00:00",
+  "generated_at": "2026-09-17T22:07:11+00:00",
   "global_universe_closure": "UNRESOLVED",
   "limitations": [
     "No simulation, parameter fit, estimator rerun, or external-data comparison is performed.",
@@ -163,21 +163,21 @@
       "hash_scope": "canonical_json_without_generated_at_timestamp_utc_or_environment",
       "path": "docs/core/07_artifacts/verification/noether_phase_field_state_map_verification.json",
       "role": "Core Wave 9 state-coordinate verification",
-      "scientific_payload_sha256": "a80b58cd2ecfba7e38d5bc042d020bc0f00c0623538aaa0252ce4314afd30c0d"
+      "scientific_payload_sha256": "4c97311afca3eb00e394c654d1f85a823a69a550201f54a36a7f8e3b3847d58a"
     },
     {
       "exists": true,
       "hash_scope": "canonical_json_without_generated_at_timestamp_utc_or_environment",
       "path": "docs/core/07_artifacts/correspondence/noether_phase_field_map_formula_audit.json",
       "role": "Core Wave 9 formula audit",
-      "scientific_payload_sha256": "81b6042ba113bf3227b57e1d775143ac73b8f38c2a109ab717d08e04c58e6965"
+      "scientific_payload_sha256": "f91e2d74a9cf9374ce9bcfe91cf7595e6505bdcff791bc227c2466fb621c95c9"
     },
     {
       "exists": true,
       "hash_scope": "canonical_json_without_generated_at_timestamp_utc_or_environment",
       "path": "docs/core/07_artifacts/gates/noether_phase_field_dependency_gate.json",
       "role": "Core Wave 9 dependency gate",
-      "scientific_payload_sha256": "f7e84e8f00b9b945249195fb14bed62e88a08a85b31485a2c613011cf0317d30"
+      "scientific_payload_sha256": "ca744ec917bd7618e303741c76cd56ba53682ec119abd7b5009052d6795e0771"
     },
     {
       "exists": true,
@@ -198,7 +198,7 @@
       "hash_scope": "canonical_json_without_generated_at_timestamp_utc_or_environment",
       "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_matter_space_coupled_diagnostic.json",
       "role": "Topic 0.11 isolated matter-space pilot",
-      "scientific_payload_sha256": "8bdd15f23a4d494293931176d93cb46536a66c927687efa538468e1bdec5d894"
+      "scientific_payload_sha256": "e2e506958b79a5863b0741473fd05f0efbd73aa147f99e16c425af90b88b1cbc"
     },
     {
       "exists": true,

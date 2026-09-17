@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "artifact": "0_11_matter_space_coupled_diagnostic",
   "topic": "0.11_Phase_Transitions",
-  "generated_at": "2026-09-17T18:59:29.053777+00:00",
+  "generated_at": "2026-09-17T21:30:59.214605+00:00",
   "status": "INTERNAL_DIAGNOSTIC",
   "internal_gate_status": "PASS",
   "dependency_status": "BLOCKED",
@@ -412,7 +412,7 @@
   "dependencies": {
     "matter_space_core": {
       "path": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
-      "sha256": "8155a2f3f47438d2d0949ba054f70dcb11162b18c8017dd195ae10d1967b1351",
+      "sha256": "ad8b6671df932457007b4f293ca3962890718c633204445467a2b5877f81c4b9",
       "status": "FAIL",
       "controlling_blocker": "prearrival_leakage"
     },
@@ -426,7 +426,7 @@
   "outputs": {
     "profiles_csv": {
       "path": "docs/topics/0.11_Phase_Transitions/Result/03_show_Result/matter_space_coupled_profiles.csv",
-      "sha256": "97f2ff60b225027d71f0b3f42d1ba692cf70caeed57ce7da9ede66c16e03cb92"
+      "sha256": "b2811f60d371e5a2a71ffa9a7fccd2265cc6f3a8d895446b246d8aae4a29add6"
     },
     "figures": [
       {

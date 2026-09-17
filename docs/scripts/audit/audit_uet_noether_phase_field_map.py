@@ -87,6 +87,11 @@ def _sha(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def _rel(path: Path) -> str:
+    """Return repository-relative paths with one platform-independent spelling."""
+    return path.relative_to(ROOT).as_posix()
+
+
 def _json_ready(value: Any) -> Any:
     if isinstance(value, np.ndarray):
         return value.tolist()
@@ -142,7 +147,7 @@ def _source_provenance() -> dict[str, Any]:
         passed = passed and all(checks.values())
         records.append(
             {
-                "path": str(path.relative_to(ROOT)),
+                "path": _rel(path),
                 "doi": payload["doi"],
                 "title": payload["title"],
                 "benchmark_role": payload["benchmark_role"],
@@ -479,7 +484,7 @@ def build_artifacts() -> tuple[dict[str, Any], ...]:
         "external_physical_validation": "BLOCKED",
     }
     source_hashes = {
-        str(path.relative_to(ROOT)): _sha(path)
+        _rel(path): _sha(path)
         for path in (
             CORE,
             MATTER,
@@ -494,14 +499,12 @@ def build_artifacts() -> tuple[dict[str, Any], ...]:
         )
     }
     input_identity = {
-        "upstream_feasibility_artifact": str(
-            FEASIBILITY_ARTIFACT.relative_to(ROOT)
-        ),
+        "upstream_feasibility_artifact": _rel(FEASIBILITY_ARTIFACT),
         "source_records": [
-            str(CAHN_HILLIARD.relative_to(ROOT)),
-            str(HOHENBERG_HALPERIN.relative_to(ROOT)),
-            str(HYPERBOLIC_SOURCE.relative_to(ROOT)),
-            str(JAIN_KOVTUN.relative_to(ROOT)),
+            _rel(CAHN_HILLIARD),
+            _rel(HOHENBERG_HALPERIN),
+            _rel(HYPERBOLIC_SOURCE),
+            _rel(JAIN_KOVTUN),
         ],
     }
 

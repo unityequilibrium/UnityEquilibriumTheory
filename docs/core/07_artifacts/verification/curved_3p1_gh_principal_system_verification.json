@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_gh_principal_system_verification",
-  "generated_at": "2026-09-17T20:00:29.142476+00:00",
+  "generated_at": "2026-09-17T21:28:58.887368+00:00",
   "topic": "docs/core curved 3+1 parent",
   "status": "PASS_GH_PRINCIPAL_CHARACTERISTIC_SYSTEM",
   "major_result": {

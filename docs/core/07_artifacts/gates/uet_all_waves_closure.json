@@ -111,7 +111,7 @@
         {
           "path": "docs/core/07_artifacts/correspondence/o2_eos_formula_audit.json",
           "exists": true,
-          "sha256": "4f785a34496052d368980d64674c53de86cde3fab2c148024e98328c996f63e0",
+          "sha256": "ad00cee3399cf78ef69261908d4c41c03d31cb7d43b137612ace582f24a2b506",
           "status": "WARN",
           "controller": "not_declared"
         }
@@ -203,7 +203,7 @@
         {
           "path": "docs/core/07_artifacts/gates/matter_space_research_program_gate.json",
           "exists": true,
-          "sha256": "d4ea426dfbcf5d675d015c99854ae4b5019fb4bd72885cc6d1eba6db24b4e659",
+          "sha256": "80c6fb7743be813ba976c77d75ee7d27243e05d5d1713e7b6106f72b7e74b265",
           "status": "BLOCKED",
           "controller": "core_prearrival_leakage"
         },
@@ -228,7 +228,7 @@
         {
           "path": "docs/core/07_artifacts/archive/matter_space_phase_pilot.json",
           "exists": true,
-          "sha256": "0dedd335ecc324acd8881a7831d3b29fcafe81bd3da8a4b16106fa8967c9d278",
+          "sha256": "517aee9c6c6d8061982df98ac8619d659b74bd1e3b5371e5fa15f618e2427f57",
           "status": "INTERNAL_DIAGNOSTIC",
           "controller": "repair inherited causal-support discretization and separately execute Topic 0.11 replicate/temporal acquisition"
         },
@@ -263,7 +263,7 @@
         {
           "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_noether_phase_field_dependency_gate.json",
           "exists": true,
-          "sha256": "9d5731fe679bccc4d79295035ee0508a90254c3d6e76f82906c47aa4a7fad216",
+          "sha256": "d7a56b2c4c40ba2dc135dd10a05d1bb7fe86267faa67c70c83d6c4dbd4ec6631",
           "status": "BLOCKED",
           "controller": "topic_0_11_signed_noether_charge_eos_transport_matching_missing"
         }
@@ -288,7 +288,7 @@
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json",
           "exists": true,
-          "sha256": "8ba9e888cd7826c746b608ba715b6569f03950141b8503c1a3bebe102f8d8dbe",
+          "sha256": "fc445ac8cd2f2a5bc410bda589e31bf32200c677952b9f135ca1e3dc72768268",
           "status": "SIMULATION_ONLY",
           "controller": "core_prearrival_leakage"
         },
@@ -327,17 +327,17 @@
         {
           "path": "docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json",
           "exists": true,
-          "sha256": "ccd5244ad34b2def3a2e27ed0e2bf7f97cb0dbb2d2e77a893c441fcd7deef3a5"
+          "sha256": "3953cf320cd6c9bf8b9d5492457e436f1ebdeaa8a48f5ea5f504cfebcd164d19"
         },
         {
           "path": "docs/core/07_artifacts/correspondence/o2_eos_formula_audit.json",
           "exists": true,
-          "sha256": "4f785a34496052d368980d64674c53de86cde3fab2c148024e98328c996f63e0"
+          "sha256": "ad00cee3399cf78ef69261908d4c41c03d31cb7d43b137612ace582f24a2b506"
         },
         {
           "path": "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json",
           "exists": true,
-          "sha256": "0703f321daf8b6257a32772b97fd9e6181dd2ce9d907d1cb6d8ec216cff8eaf8"
+          "sha256": "a756c935b2ab4468e291c88e577f7665f2860815e43180a277b4ed87e699c157"
         }
       ]
     },
@@ -394,7 +394,7 @@
         {
           "path": "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json",
           "exists": true,
-          "sha256": "9163a9ce35b6e0c4f5306306498d424d60eec810fd92e35a0bbce68d25db8d04"
+          "sha256": "1032f7eb226afc4c3aac0fbb2cc36ea928ede78547f44e8fb36f29236da2f09d"
         }
       ]
     },

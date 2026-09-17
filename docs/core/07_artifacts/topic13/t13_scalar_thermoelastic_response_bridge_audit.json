@@ -173,7 +173,7 @@
   "evidence_artifacts": [
     {
       "path": "docs/core/07_artifacts/topic13/t13_material_interface_factor_resolution_audit.json",
-      "sha256": "711c22800d5d2c00601e86fbafbb6f2031bc2e64f437ee574d7386b00a9cf864"
+      "sha256": "859a69aa7c54c0f3d8aa47f80f3618b0a32479b90401d0839b17d3906f664397"
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",

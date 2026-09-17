@@ -42,7 +42,7 @@
   "core_program_stage": "O2_FINITE_DENSITY_EOS_AND_T0_SUPERFLUID_CONSTITUTIVE_VERIFIED",
   "environment": {
     "platform": "portable-research-runtime",
-    "python_version": "3.12"
+    "python_version": "3.14"
   },
   "evidence_status": "CORE_CANDIDATE_GR_PARENT_AVAILABLE_TOPIC_PHYSICAL_VALIDATION_OPEN",
   "gates": {
@@ -170,7 +170,7 @@
       "status": "BLOCKED"
     }
   },
-  "generated_at": "2026-09-17T12:39:35+00:00",
+  "generated_at": "2026-09-17T22:07:14+00:00",
   "global_universe_closure": "UNRESOLVED",
   "limitations": [
     "No Topic 0.19 simulation, physical-data comparison, metric PDE, or parameter fit is run.",
@@ -227,7 +227,7 @@
       "hash_scope": "canonical_json_without_generated_at_generated_at_utc_timestamp_utc_or_environment",
       "path": "docs/core/07_artifacts/gates/noether_phase_field_dependency_gate.json",
       "role": "Noether/phase-field dependency boundary",
-      "scientific_payload_sha256": "f7e84e8f00b9b945249195fb14bed62e88a08a85b31485a2c613011cf0317d30"
+      "scientific_payload_sha256": "ca744ec917bd7618e303741c76cd56ba53682ec119abd7b5009052d6795e0771"
     },
     {
       "exists": true,

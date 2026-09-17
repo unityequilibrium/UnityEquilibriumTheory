@@ -173,7 +173,7 @@
       "status": "BLOCKED"
     }
   },
-  "generated_at": "2026-09-17T19:02:01+00:00",
+  "generated_at": "2026-09-17T22:07:14+00:00",
   "limitations": [
     "No Landauer, Cattaneo, thermal pilot, or core solver is rerun.",
     "The foundation gate remains WARN and exports only class-C constraints.",
@@ -245,7 +245,7 @@
       "hash_scope": "canonical_json_without_generated_at_generated_at_utc_timestamp_utc_or_environment",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json",
       "role": "Matter-space thermal control pilot",
-      "scientific_payload_sha256": "3695fba2d780af4580912d89a0d45782dae91b7293c4bcf24f0d3bae44aad87c"
+      "scientific_payload_sha256": "91111919335f1b9a39b653dd6dd5856b1a73bd52d78e094958b42574a07775da"
     },
     {
       "exists": true,
@@ -259,7 +259,7 @@
       "hash_scope": "canonical_json_without_generated_at_generated_at_utc_timestamp_utc_or_environment",
       "path": "docs/core/07_artifacts/gates/noether_phase_field_dependency_gate.json",
       "role": "Core Noether/EOS/transport dependency gate",
-      "scientific_payload_sha256": "f7e84e8f00b9b945249195fb14bed62e88a08a85b31485a2c613011cf0317d30"
+      "scientific_payload_sha256": "ca744ec917bd7618e303741c76cd56ba53682ec119abd7b5009052d6795e0771"
     },
     {
       "exists": true,

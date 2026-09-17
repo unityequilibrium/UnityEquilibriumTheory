@@ -85,6 +85,11 @@ def _sha(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def _rel(path: Path) -> str:
+    """Return repository-relative paths with one platform-independent spelling."""
+    return path.relative_to(ROOT).as_posix()
+
+
 def _load(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -172,7 +177,7 @@ def _source_provenance() -> dict[str, Any]:
         all_pass = all_pass and status == "PASS"
         records.append(
             {
-                "path": str(path.relative_to(ROOT)),
+                "path": _rel(path),
                 "title": payload["title"],
                 "doi": payload["doi"],
                 "arxiv_id": payload["arxiv_id"],
@@ -191,7 +196,7 @@ def _source_provenance() -> dict[str, Any]:
         "status": "PASS" if all_pass else "FAIL",
         "records": records,
         "sourced_comparator_prerequisite": {
-            "artifact": str(COMPARATOR_ARTIFACT.relative_to(ROOT)),
+            "artifact": _rel(COMPARATOR_ARTIFACT),
             "audit_status": comparator.get("audit_status"),
             "evidence_status": comparator.get("evidence_status"),
             "passed": comparator_pass,
@@ -436,7 +441,7 @@ def build_artifacts() -> tuple[dict[str, Any], ...]:
         "PARTIAL_ANALYTIC_CAUSAL_BRIDGE" if audit_status == "PASS" else "BLOCKED"
     )
     source_hashes = {
-        str(path.relative_to(ROOT)): _sha(canonical_existing_path(path))
+        _rel(path): _sha(canonical_existing_path(path))
         for path in (
             CORE,
             COMPARATOR,
@@ -469,10 +474,10 @@ def build_artifacts() -> tuple[dict[str, Any], ...]:
         "blocked_gates": blocked,
         "source_hashes": source_hashes,
         "input_identity": {
-            "external_comparator_artifact": str(COMPARATOR_ARTIFACT.relative_to(ROOT)),
+            "external_comparator_artifact": _rel(COMPARATOR_ARTIFACT),
             "source_records": [
-                str(JAIN_KOVTUN.relative_to(ROOT)),
-                str(CROSSLEY_GLORIOSO_LIU.relative_to(ROOT)),
+                _rel(JAIN_KOVTUN),
+                _rel(CROSSLEY_GLORIOSO_LIU),
             ],
         },
         "thresholds": {
@@ -566,12 +571,10 @@ def build_artifacts() -> tuple[dict[str, Any], ...]:
         "status": "BLOCKED",
         "evidence_status": evidence_status,
         "input_identity": {
-            "external_comparator_artifact": str(
-                COMPARATOR_ARTIFACT.relative_to(ROOT)
-            ),
+            "external_comparator_artifact": _rel(COMPARATOR_ARTIFACT),
             "source_records": [
-                str(JAIN_KOVTUN.relative_to(ROOT)),
-                str(CROSSLEY_GLORIOSO_LIU.relative_to(ROOT)),
+                _rel(JAIN_KOVTUN),
+                _rel(CROSSLEY_GLORIOSO_LIU),
             ],
         },
         "thresholds": {
@@ -602,11 +605,11 @@ def build_artifacts() -> tuple[dict[str, Any], ...]:
         },
         "external_requirement_sources": [
             {
-                "source": str(JAIN_KOVTUN.relative_to(ROOT)),
+                "source": _rel(JAIN_KOVTUN),
                 "role": "causal_relativistic_current_entropy_and_sk_kms_requirements",
             },
             {
-                "source": str(CROSSLEY_GLORIOSO_LIU.relative_to(ROOT)),
+                "source": _rel(CROSSLEY_GLORIOSO_LIU),
                 "role": "dissipative_ctp_local_kms_and_entropy_readiness_requirements",
             },
         ],

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_gh_nonlinear_vacuum_rhs_verification",
-  "generated_at": "2026-09-17T20:00:32.887059+00:00",
+  "generated_at": "2026-09-17T21:28:59.703011+00:00",
   "topic": "docs/core curved 3+1 parent",
   "status": "PASS_GH_NONLINEAR_VACUUM_RHS",
   "major_result": {
@@ -85,7 +85,7 @@
     "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92",
     "docs/scripts/audit/audit_uet_curved_3p1_gh_nonlinear_vacuum.py": "f79d0dca5ee910ee34fcc57c061e688feaca592098383429e81bd975a7881e7c",
     "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a",
-    "docs/core/07_artifacts/verification/curved_3p1_gh_principal_system_verification.json": "c9a8581972514fa312c1ec01ecbfcc168eb9942457efdf7bb14f9986544f142e"
+    "docs/core/07_artifacts/verification/curved_3p1_gh_principal_system_verification.json": "c6e5b0501d20129410d6a97d771466fc9b848d9d03b213b2a88b9dbe1df14cea"
   },
   "parameters": {
     "gamma0": 0.4,

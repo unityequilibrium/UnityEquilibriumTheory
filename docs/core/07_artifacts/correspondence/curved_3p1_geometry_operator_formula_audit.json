@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_geometry_operator_formula_audit",
-  "generated_at": "2026-09-17T20:00:23.936678+00:00",
+  "generated_at": "2026-09-17T21:28:53.067942+00:00",
   "topic": "docs/core curved 3+1 parent",
   "version": "periodic-geometry-operator-v1",
   "benchmark_role": "formula and unit audit",
@@ -129,28 +129,28 @@
     "flat_max_abs_christoffel": 0.0,
     "flat_max_abs_ricci_scalar": 0.0,
     "ricci_l2_errors": [
-      0.025326008204864178,
-      0.0064824312434219634,
-      0.0016303327306680204
+      0.0253260082048642,
+      0.00648243124342196,
+      0.00163033273066802
     ],
     "ricci_observed_orders": [
-      1.9660127983411686,
-      1.9913685684143443
+      1.96601279834117,
+      1.99136856841434
     ],
     "momentum_divergence_l2_errors": [
-      0.0018399889847024965,
-      0.00046475273342829967,
-      0.00011648722591182725
+      0.0018399889847025,
+      0.0004647527334283,
+      0.000116487225911827
     ],
     "momentum_divergence_observed_orders": [
-      1.9851618740077892,
-      1.9962915939448886
+      1.98516187400779,
+      1.99629159394489
     ],
-    "max_metric_compatibility_residual": 2.7755575615628914e-17,
+    "max_metric_compatibility_residual": 2.77555756156289e-17,
     "max_ricci_antisymmetry": 0.0,
-    "matched_adm_hamiltonian_residual": 5.551115123125783e-17,
+    "matched_adm_hamiltonian_residual": 5.55111512312578e-17,
     "matched_adm_momentum_residual": 0.0,
-    "mismatched_density_hamiltonian_residual": 0.049440727456161015
+    "mismatched_density_hamiltonian_residual": 0.049440727456161
   },
   "open_items": [
     "non-periodic boundary conditions or multiple charts",

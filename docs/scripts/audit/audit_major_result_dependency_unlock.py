@@ -245,6 +245,17 @@ def main() -> int:
             "claim_boundary": topic13_core_entry.get("claim_boundary"),
         })
     partial_routes = {
+        # Refresh every promoted Topic 13 lane that is preserved in the
+        # dependency artifact.  Keeping this list explicit prevents a stale
+        # hash from surviving when the leaf audit is regenerated.
+        "collective_response_eos_stability_contract": "docs/core/07_artifacts/topic13/t13_collective_response_eos_stability_audit.json",
+        "causal_branch_selection": "docs/core/07_artifacts/topic13/t13_causal_branch_selection_audit.json",
+        "beta_symbol_separation_noncircularity_no_go": "docs/core/07_artifacts/topic13/t13_beta_symbol_separation_noncircularity_audit.json",
+        "covariant_matter_coupling_normalization_no_go": "docs/core/07_artifacts/topic13/t13_covariant_matter_coupling_normalization_no_go.json",
+        "formal_non_circular_bridge_boundary": "docs/core/07_artifacts/topic13/t13_formal_bridge_boundary_audit.json",
+        "sk_kms_entropy_interface": "docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json",
+        "base_phi_independent_calibration_requirement": "docs/core/07_artifacts/topic13/t13_base_phi_independent_calibration_requirement.json",
+        "phi_e_reference_normalization": "docs/core/07_artifacts/topic13/t13_phi_e_reference_normalization_audit.json",
         "covariant_action_si_anchor_route": "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json",
         "covariant_field_normalization_no_go": "docs/core/07_artifacts/topic13/t13_covariant_field_normalization_identifiability_no_go.json",
         "phi_energy_anchor_no_go": "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json",

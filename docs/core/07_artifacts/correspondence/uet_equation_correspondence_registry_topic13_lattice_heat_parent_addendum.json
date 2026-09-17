@@ -78,7 +78,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/topic13/t13_lattice_momentum_relaxing_heat_parent_audit.json",
-          "sha256": "caefc15011e5406460ba708e8c19ee7b5fd280220f5b2dc620e96a71816eb462"
+          "sha256": "904c32edff8831e2dbeefe57b5d32777d05020ad7269599c207d562439a8d0e1"
         }
       ],
       "downstream_dependencies": [

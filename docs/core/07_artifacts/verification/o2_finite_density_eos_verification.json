@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "o2_finite_density_eos_verification",
-  "generated_at": "2026-09-17T18:10:53.296363+00:00",
+  "generated_at": "2026-09-17T21:28:53.027126+00:00",
   "topic": "docs/core UET GR non-closed response",
   "version": "wave10_v1",
   "benchmark_role": "internal_tree_level_formula_verification",
@@ -34,18 +34,18 @@
     "double_well_reduction_relative_max": 0.001
   },
   "metrics": {
-    "stationarity_max_abs": 3.552713678800501e-15,
-    "dp_dmu_max_abs": 6.255866935589438e-10,
-    "d2p_dmu2_max_abs": 6.019540421675629e-10,
-    "dp_dphi_max_abs": 1.0552716755984903e-09,
+    "stationarity_max_abs": 3.5527136788005e-15,
+    "dp_dmu_max_abs": 6.25586693558944e-10,
+    "d2p_dmu2_max_abs": 6.01954042167563e-10,
+    "dp_dphi_max_abs": 1.05527167559849e-09,
     "legendre_max_abs": 0.0,
-    "first_law_df_dn_max_abs": 2.224509465520441e-11,
-    "inverse_susceptibility_max_abs": 3.1789266774495673e-09,
+    "first_law_df_dn_max_abs": 2.22450946552044e-11,
+    "inverse_susceptibility_max_abs": 3.17892667744957e-09,
     "signed_pressure_even_max_abs": 0.0,
     "signed_density_odd_max_abs": 0.0,
     "response_null_max_abs": 0.0,
-    "minimum_sound_speed_sq": 0.21488969006053865,
-    "maximum_sound_speed_sq": 0.30877462895800045,
+    "minimum_sound_speed_sq": 0.214889690060539,
+    "maximum_sound_speed_sq": 0.308774628958,
     "double_well_reduction_relative_residual": 1.0
   },
   "gates": {

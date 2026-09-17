@@ -93,7 +93,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/topic13/t13_uet_material_lattice_interface_contract_audit.json",
-          "sha256": "9f7b2677d27d4d37a37d20b0183d616693ddd492562f186500fe6613debe2d16"
+          "sha256": "01fba1bf3c0232f17ca6084a3d0d66e24c2852d8df0fc9cfab9d9a9d9a6ece08"
         }
       ],
       "downstream_dependencies": [

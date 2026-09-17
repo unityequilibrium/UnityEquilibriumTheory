@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "artifact": "matter_space_research_program_gate",
-  "generated_at": "2026-09-17T19:02:20.230877+00:00",
-  "source_snapshot_at": "2026-09-17T19:02:00.891525+00:00",
+  "generated_at": "2026-09-17T21:31:16.766718+00:00",
+  "source_snapshot_at": "2026-09-17T21:31:16.667893+00:00",
   "status": "BLOCKED",
   "program_state": "CANDIDATE_WITH_BLOCKED_PHYSICAL_INTERPRETATION",
   "controlling_blocker": "core_prearrival_leakage",
@@ -15,30 +15,30 @@
     },
     "formula_audit": {
       "path": "docs/core/07_artifacts/correspondence/matter_space_formula_audit.json",
-      "sha256": "1dad0545e4104530d1004b55c0ab1ddf2fc1e0b8553f5d4dcabd96a87378b18c",
+      "sha256": "d746e198389b665e31816826f006fda5eea5dfb36594baeefc9a722e553aabec",
       "status": "WARN"
     },
     "alignment_gate": {
       "path": "docs/core/07_artifacts/gates/master_equation_alignment_gate_v2.json",
-      "sha256": "27493ac469d39a520b9b098fb2250d3c9d9966fbd9bccced00f44008e390382a",
+      "sha256": "67dd9129783abe3aa0e2272b802fdf0e7282265dcfbc98ca4fc49d20408a0be3",
       "status": "BLOCKED",
       "controlling_blocker": "prearrival_leakage"
     },
     "core_verification": {
       "path": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
-      "sha256": "8155a2f3f47438d2d0949ba054f70dcb11162b18c8017dd195ae10d1967b1351",
+      "sha256": "ad8b6671df932457007b4f293ca3962890718c633204445467a2b5877f81c4b9",
       "status": "FAIL",
       "controlling_blocker": "prearrival_leakage"
     },
     "core_dependency_gate": {
       "path": "docs/core/07_artifacts/gates/matter_space_dependency_gate.json",
-      "sha256": "3f3a5d706082f282c1a3f2b19096169411411d7abe007ae74eb55c0ff8dccc29",
+      "sha256": "762932e5f7a20a844d7643d2bba8e586885ddff7bf6ebe71c4f8d2048b09317e",
       "status": "BLOCKED",
       "controlling_blocker": "prearrival_leakage"
     },
     "thermal_pilot": {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json",
-      "sha256": "6e3209dce5780c4fcd851d11214b22cde74dfe35c6fe73ff25752feb04671e5a",
+      "sha256": "fc445ac8cd2f2a5bc410bda589e31bf32200c677952b9f135ca1e3dc72768268",
       "status": "SIMULATION_ONLY",
       "controlling_blocker": "core_prearrival_leakage"
     },
@@ -49,7 +49,7 @@
     },
     "phase_pilot": {
       "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_matter_space_coupled_diagnostic.json",
-      "sha256": "6d813a15b17a92c7239f3caf2bc2fb7ee1409278f8e443c19d71031f88f8bce2",
+      "sha256": "eb32d922c198bf29f96e219ba551f48ccef2b5723957e3edaa3d69f13c1818ab",
       "status": "INTERNAL_DIAGNOSTIC",
       "controlling_blocker": "inherited_core_prearrival_leakage"
     },
@@ -138,9 +138,9 @@
       "checks": [
         {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/03_show_Result/matter_space_thermal_control_timeseries.csv",
-          "expected_sha256": "8dd7de2709cfff5ffe3df66d6862328b9d58b2864a5b4365cc6dc6b1a1d92308",
+          "expected_sha256": "792528ea06ee615ab9ae20cb797af895f86b9025ecfa88e35843008650898b60",
           "exists": true,
-          "actual_sha256": "8dd7de2709cfff5ffe3df66d6862328b9d58b2864a5b4365cc6dc6b1a1d92308",
+          "actual_sha256": "792528ea06ee615ab9ae20cb797af895f86b9025ecfa88e35843008650898b60",
           "match": true
         },
         {
@@ -173,9 +173,9 @@
         },
         {
           "path": "docs/topics/0.11_Phase_Transitions/Result/03_show_Result/matter_space_coupled_profiles.csv",
-          "expected_sha256": "97f2ff60b225027d71f0b3f42d1ba692cf70caeed57ce7da9ede66c16e03cb92",
+          "expected_sha256": "b2811f60d371e5a2a71ffa9a7fccd2265cc6f3a8d895446b246d8aae4a29add6",
           "exists": true,
-          "actual_sha256": "97f2ff60b225027d71f0b3f42d1ba692cf70caeed57ce7da9ede66c16e03cb92",
+          "actual_sha256": "b2811f60d371e5a2a71ffa9a7fccd2265cc6f3a8d895446b246d8aae4a29add6",
           "match": true
         },
         {
@@ -209,17 +209,17 @@
         {
           "consumer": "thermal_pilot",
           "path": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
-          "expected_sha256": "8155a2f3f47438d2d0949ba054f70dcb11162b18c8017dd195ae10d1967b1351",
+          "expected_sha256": "ad8b6671df932457007b4f293ca3962890718c633204445467a2b5877f81c4b9",
           "exists": true,
-          "actual_sha256": "8155a2f3f47438d2d0949ba054f70dcb11162b18c8017dd195ae10d1967b1351",
+          "actual_sha256": "ad8b6671df932457007b4f293ca3962890718c633204445467a2b5877f81c4b9",
           "match": true
         },
         {
           "consumer": "phase_pilot",
           "path": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
-          "expected_sha256": "8155a2f3f47438d2d0949ba054f70dcb11162b18c8017dd195ae10d1967b1351",
+          "expected_sha256": "ad8b6671df932457007b4f293ca3962890718c633204445467a2b5877f81c4b9",
           "exists": true,
-          "actual_sha256": "8155a2f3f47438d2d0949ba054f70dcb11162b18c8017dd195ae10d1967b1351",
+          "actual_sha256": "ad8b6671df932457007b4f293ca3962890718c633204445467a2b5877f81c4b9",
           "match": true
         },
         {

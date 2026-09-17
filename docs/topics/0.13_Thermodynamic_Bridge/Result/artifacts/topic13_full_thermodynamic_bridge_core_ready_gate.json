@@ -243,7 +243,7 @@
         "resolution_source": {
           "major_result_id": "T13_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY",
           "artifact": "docs/core/07_artifacts/topic13/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json",
-          "artifact_sha256": "b9cd8b98280fa4b97de641141f63a49e37e6c0628b31fb659a56cd9d9ada2ec0",
+          "artifact_sha256": "324571d831743cb182d8aaae162d94f6498dde545d7963c379de003ba46a4eab",
           "representative_source_artifact": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/lowitzer_2006_graphite_pvt_full_source_package.json",
           "representative_source_sha256": "0c045335d72f5bb19705ad7df983972a98f156e0f8954ca133dfc87630c1a9ef"
         },
@@ -293,7 +293,7 @@
         "resolution_source": {
           "major_result_id": "T13_PHI_ENERGY_ANCHOR_IDENTIFIABILITY_NO_GO",
           "artifact": "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json",
-          "artifact_sha256": "9b1fe80787fbf9989c2846f7fe5d1a829d1295041bffcc4860e4ebe09b601dce",
+          "artifact_sha256": "cafb22891c93080065c13810f83e4ed1b9f40a49fafddf51f25aff9950a816f0",
           "normalization_boundary_artifact": "docs/core/07_artifacts/topic13/t13_phi_si_anchor_public_source_boundary_audit.json",
           "normalization_boundary_sha256": "605245fa937cf5d2701a0afa0cc90a4f543052c4dd977066e1f3496bc12c50c5"
         },
@@ -4934,7 +4934,7 @@
         "data_role": "SOURCE_PROVENANCE_BOUNDARY_NOT_CALIBRATION",
         "audit": {
           "path": "docs/core/07_artifacts/topic13/t13_day2012_preferred_thermodynamic_table_boundary_audit.json",
-          "sha256": "7528a855d389fe4c5f9f4978efbd84ec8e42eb4a42748291ec6ce61445529802",
+          "sha256": "771031d37576cecca72a73967eca125f4599be497aec428d9f3f31e732725a51",
           "summary": {
             "status": "PASS_SCOPED_DAY2012_THERMODYNAMIC_ASSESSMENT_BOUNDARY_NO_GO",
             "major_result_id": "T13_DAY2012_PREFERRED_THERMODYNAMIC_ASSESSMENT_BOUNDARY",
@@ -9753,7 +9753,7 @@
         "data_role": "INDEPENDENT_REPRODUCTION_NOT_CALIBRATION",
         "audit": {
           "path": "docs/core/07_artifacts/topic13/t13_mp48_temperature_volume_uncertainty_boundary_audit.json",
-          "sha256": "63c19991f1164d094b914401a50433aea8bd33859fe85fde59707057da35666d",
+          "sha256": "175c32130dc685cfffbadd52a0ce774268a52ab6818ba46a4daa8da46001ecbe",
           "summary": {
             "status": "PASS_SCOPED_MP48_TEMPERATURE_VOLUME_UNCERTAINTY_BOUNDARY_NO_GO",
             "major_result_id": "T13_MP48_TEMPERATURE_VOLUME_UNCERTAINTY_BOUNDARY",
@@ -9919,7 +9919,7 @@
         "data_role": "SOURCE_PROVENANCE_BOUNDARY_NOT_CALIBRATION",
         "audit": {
           "path": "docs/core/07_artifacts/topic13/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json",
-          "sha256": "b9cd8b98280fa4b97de641141f63a49e37e6c0628b31fb659a56cd9d9ada2ec0",
+          "sha256": "324571d831743cb182d8aaae162d94f6498dde545d7963c379de003ba46a4eab",
           "summary": {
             "status": "PASS_SCOPED_GRAPHITE_ALPHA_V_K_T_SOURCE_PAIR_LOCKED_MATERIAL_OPEN",
             "major_result_id": "T13_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY",
@@ -10062,7 +10062,7 @@
         "data_role": "SOURCE_DISCOVERY_BOUNDARY_NOT_CALIBRATION",
         "audit": {
           "path": "docs/core/07_artifacts/topic13/t13_ding_alternate_public_dataset_discovery_boundary_audit.json",
-          "sha256": "f68fbfd54a8cf188b507c186bc8e350c0030c771979def1a3e1aaca916752f39",
+          "sha256": "6617a4a356d5ca2744881872e8d2763e474877704338918601d19db6b4bbf3cd",
           "summary": {
             "status": "PASS_SCOPED_DING_ALTERNATE_PUBLIC_DATASET_BOUNDARY_NO_GO",
             "major_result_id": "T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY_BOUNDARY",
@@ -11375,7 +11375,7 @@
       "formal_boundary_closure_level": "CLOSED_FOR_LANE",
       "formal_boundary_audit": {
         "path": "docs/core/07_artifacts/topic13/t13_formal_bridge_boundary_audit.json",
-        "sha256": "5433b8d74aa0f9208fff3d8755d77ed0bc676054fa79eb6d71196d72984f71e1",
+        "sha256": "0b3c3b017beac7f0f37cc221177b4fd0aad914eeb86ba804985209b37701b638",
         "summary": {
           "status": "PASS_FORMAL_NONCIRCULAR_BRIDGE_BOUNDARY",
           "major_result_id": "T13_FORMAL_NONCIRCULAR_BRIDGE_BOUNDARY",
@@ -11938,7 +11938,7 @@
         "data_role": "PROTOCOL_NOT_EVIDENCE",
         "audit": {
           "path": "docs/core/07_artifacts/topic13/t13_base_phi_independent_calibration_requirement.json",
-          "sha256": "23f34a2aa8cc9b76d06620bc873967b68905ebbf27c8c84d859122ca24e3af75",
+          "sha256": "64dd32725da18c701e9f800a56fe6cae2f1af82bec88014cc3dc733a7ae763a0",
           "summary": {
             "status": "PASS_OPEN_CALIBRATION_REQUIREMENT",
             "major_result_id": "T13_BASE_PHI_INDEPENDENT_CALIBRATION_REQUIREMENT",
@@ -12181,7 +12181,7 @@
         "data_role": "FORMULA_AND_DEPENDENCY_AUDIT_NOT_CALIBRATION",
         "audit": {
           "path": "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json",
-          "sha256": "4bff4bda6194215752358ec06c782a518753c8e3be1a5e7e6678c76fa2d3686d",
+          "sha256": "8e3e21e2f0f3f49b81929cd730c5c9874e71688ad439060df63897962cae6a20",
           "summary": {
             "status": "PASS_NATURAL_UNIT_ROUTE_IDENTIFIED_SI_MAPPING_BLOCKED",
             "major_result_id": "T13_COVARIANT_ACTION_SI_ANCHOR_ROUTE",
@@ -12253,7 +12253,7 @@
         "data_role": "INTERNAL_STRUCTURAL_AUDIT_NO_TARGET_OR_HOLDOUT",
         "audit": {
           "path": "docs/core/07_artifacts/topic13/t13_covariant_field_normalization_identifiability_no_go.json",
-          "sha256": "d437bd9c9edecc4cf63f2e468b355ebebe9c5009e6d479df85ae7aa2b2bd2a49",
+          "sha256": "6842d65c2295b2f4871adb3e071214c60ecb59ea4b877841a770cd39ccd0827e",
           "summary": {
             "status": "PASS_SCOPED_NO_GO_COVARIANT_FIELD_NORMALIZATION",
             "major_result_id": "T13_COVARIANT_FIELD_NORMALIZATION_IDENTIFIABILITY_NO_GO",
@@ -13551,7 +13551,7 @@
         "data_role": "INDEPENDENT_REFERENCE_NORMALIZATION_NOT_BASE_PHI_CALIBRATION",
         "audit": {
           "path": "docs/core/07_artifacts/topic13/t13_phi_e_reference_normalization_audit.json",
-          "sha256": "f011d4ae7787a5a482d26f92ceed961bef53f8fe91c6fb6f3e794af67be14faf",
+          "sha256": "bcfa29d9442a6b973e12e02de69e557384076fb01ab3b67e3261a8b362ca0771",
           "summary": {
             "status": "PASS_NAMED_PHI_E_REFERENCE_NORMALIZATION",
             "major_result_id": "T13_PHI_E_REFERENCE_NORMALIZATION",
@@ -13621,7 +13621,7 @@
         "data_role": "INTERNAL_STRUCTURAL_AUDIT_NO_TARGET_OR_HOLDOUT",
         "audit": {
           "path": "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json",
-          "sha256": "9b1fe80787fbf9989c2846f7fe5d1a829d1295041bffcc4860e4ebe09b601dce",
+          "sha256": "cafb22891c93080065c13810f83e4ed1b9f40a49fafddf51f25aff9950a816f0",
           "summary": {
             "status": "PASS_SCOPED_NO_GO_NORMALIZED_PHI_ENERGY_ANCHOR",
             "major_result_id": "T13_PHI_ENERGY_ANCHOR_IDENTIFIABILITY_NO_GO",
@@ -13806,7 +13806,7 @@
         "data_role": "INTERNAL_FORMAL_CONTRACT_NO_COEFFICIENTS",
         "audit": {
           "path": "docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json",
-          "sha256": "598d6acd34b974e0c63efe5ae27f3704df0e42c0c43b9d6931043c38d36589de",
+          "sha256": "51d5fa505ef0f7801ea801940498d7e8031760833b1f05dcc56a384cce307605",
           "summary": {
             "status": "PASS_NAMED_SK_KMS_ENTROPY_INTERFACE_CONTRACT",
             "major_result_id": "T13_SK_KMS_ENTROPY_INTERFACE_CONTRACT",
@@ -13974,7 +13974,7 @@
         "data_role": "INTERNAL_FORMULA_AND_UNIT_CONTRACT_NO_CALIBRATION",
         "audit": {
           "path": "docs/core/07_artifacts/topic13/t13_thermal_response_beta_contract_audit.json",
-          "sha256": "fad34747b2b6fda634aa7b96c5dccf3d2081d46d04b985ebbe53ba8ecf532336",
+          "sha256": "7387893811404e69fa5e0f8387d9da90aae8aef9922c6c08614e9950d5ab6b38",
           "summary": {
             "status": "PASS_NAMED_FINITE_TEMPERATURE_BETA_CONTRACT",
             "major_result_id": "T13_THERMAL_RESPONSE_BETA_CONTRACT",
@@ -14899,7 +14899,7 @@
         "data_role": "INTERNAL_FORMAL_BOUNDARY_AUDIT_NO_CALIBRATION",
         "audit": {
           "path": "docs/core/07_artifacts/topic13/t13_formal_bridge_boundary_audit.json",
-          "sha256": "5433b8d74aa0f9208fff3d8755d77ed0bc676054fa79eb6d71196d72984f71e1",
+          "sha256": "0b3c3b017beac7f0f37cc221177b4fd0aad914eeb86ba804985209b37701b638",
           "summary": {
             "status": "PASS_FORMAL_NONCIRCULAR_BRIDGE_BOUNDARY",
             "major_result_id": "T13_FORMAL_NONCIRCULAR_BRIDGE_BOUNDARY",
@@ -14960,7 +14960,7 @@
         "data_role": "INTERNAL_NUMERICAL_BRANCH_SELECTION_NO_EXTERNAL_TTG_OR_HOLDOUT",
         "audit": {
           "path": "docs/core/07_artifacts/topic13/t13_causal_branch_selection_audit.json",
-          "sha256": "093ce146b1a11d295e5804043aa8e6a77bd7ef20c58915d84818319a9b2330ce",
+          "sha256": "be5004a7302cec787373844fd9a50f9edb489c3a9d0cdad11ba978e0a808b93e",
           "summary": {
             "status": "PASS_CLOSED_AS_NO_GO_WITH_NAMED_COUPLED_BRANCH",
             "major_result_id": "T13_CAUSAL_THERMAL_BRANCH_SELECTION",
@@ -80049,7 +80049,7 @@
         "data_role": "INTERNAL_STRUCTURAL_AUDIT_NO_TARGET_OR_HOLDOUT",
         "audit": {
           "path": "docs/core/07_artifacts/topic13/t13_covariant_matter_coupling_normalization_no_go.json",
-          "sha256": "93661180c88a069e384f9732209d8b69595b1229fbcfe886ab42b0e0919f412a",
+          "sha256": "396422f838ac01431934ef4e6d457ea2cf1f5e3a34b1a997d79b72f161e5c5bc",
           "summary": {
             "status": "PASS_SCOPED_NO_GO_COVARIANT_MATTER_COUPLING_NORMALIZATION",
             "major_result_id": "T13_COVARIANT_MATTER_COUPLING_NORMALIZATION_IDENTIFIABILITY_NO_GO",
@@ -80449,7 +80449,7 @@
       "data_role": "PROTOCOL_NOT_EVIDENCE",
       "audit": {
         "path": "docs/core/07_artifacts/topic13/t13_base_phi_independent_calibration_requirement.json",
-        "sha256": "23f34a2aa8cc9b76d06620bc873967b68905ebbf27c8c84d859122ca24e3af75",
+        "sha256": "64dd32725da18c701e9f800a56fe6cae2f1af82bec88014cc3dc733a7ae763a0",
         "summary": {
           "status": "PASS_OPEN_CALIBRATION_REQUIREMENT",
           "major_result_id": "T13_BASE_PHI_INDEPENDENT_CALIBRATION_REQUIREMENT",
@@ -80487,7 +80487,7 @@
       "data_role": "FORMULA_AND_DEPENDENCY_AUDIT_NOT_CALIBRATION",
       "audit": {
         "path": "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json",
-        "sha256": "4bff4bda6194215752358ec06c782a518753c8e3be1a5e7e6678c76fa2d3686d",
+        "sha256": "8e3e21e2f0f3f49b81929cd730c5c9874e71688ad439060df63897962cae6a20",
         "summary": {
           "status": "PASS_NATURAL_UNIT_ROUTE_IDENTIFIED_SI_MAPPING_BLOCKED",
           "major_result_id": "T13_COVARIANT_ACTION_SI_ANCHOR_ROUTE",
@@ -80561,7 +80561,7 @@
       "data_role": "INTERNAL_STRUCTURAL_AUDIT_NO_TARGET_OR_HOLDOUT",
       "audit": {
         "path": "docs/core/07_artifacts/topic13/t13_covariant_field_normalization_identifiability_no_go.json",
-        "sha256": "d437bd9c9edecc4cf63f2e468b355ebebe9c5009e6d479df85ae7aa2b2bd2a49",
+        "sha256": "6842d65c2295b2f4871adb3e071214c60ecb59ea4b877841a770cd39ccd0827e",
         "summary": {
           "status": "PASS_SCOPED_NO_GO_COVARIANT_FIELD_NORMALIZATION",
           "major_result_id": "T13_COVARIANT_FIELD_NORMALIZATION_IDENTIFIABILITY_NO_GO",
@@ -80619,7 +80619,7 @@
       "data_role": "INTERNAL_NUMERICAL_BRANCH_SELECTION_NO_EXTERNAL_TTG_OR_HOLDOUT",
       "audit": {
         "path": "docs/core/07_artifacts/topic13/t13_causal_branch_selection_audit.json",
-        "sha256": "093ce146b1a11d295e5804043aa8e6a77bd7ef20c58915d84818319a9b2330ce",
+        "sha256": "be5004a7302cec787373844fd9a50f9edb489c3a9d0cdad11ba978e0a808b93e",
         "summary": {
           "status": "PASS_CLOSED_AS_NO_GO_WITH_NAMED_COUPLED_BRANCH",
           "major_result_id": "T13_CAUSAL_THERMAL_BRANCH_SELECTION",
@@ -80691,7 +80691,7 @@
       "data_role": "INTERNAL_STRUCTURAL_AUDIT_NO_TARGET_OR_HOLDOUT",
       "audit": {
         "path": "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json",
-        "sha256": "9b1fe80787fbf9989c2846f7fe5d1a829d1295041bffcc4860e4ebe09b601dce",
+        "sha256": "cafb22891c93080065c13810f83e4ed1b9f40a49fafddf51f25aff9950a816f0",
         "summary": {
           "status": "PASS_SCOPED_NO_GO_NORMALIZED_PHI_ENERGY_ANCHOR",
           "major_result_id": "T13_PHI_ENERGY_ANCHOR_IDENTIFIABILITY_NO_GO",
@@ -80740,7 +80740,7 @@
       "data_role": "INDEPENDENT_REFERENCE_NORMALIZATION_NOT_BASE_PHI_CALIBRATION",
       "audit": {
         "path": "docs/core/07_artifacts/topic13/t13_phi_e_reference_normalization_audit.json",
-        "sha256": "f011d4ae7787a5a482d26f92ceed961bef53f8fe91c6fb6f3e794af67be14faf",
+        "sha256": "bcfa29d9442a6b973e12e02de69e557384076fb01ab3b67e3261a8b362ca0771",
         "summary": {
           "status": "PASS_NAMED_PHI_E_REFERENCE_NORMALIZATION",
           "major_result_id": "T13_PHI_E_REFERENCE_NORMALIZATION",
@@ -80828,7 +80828,7 @@
       "data_role": "INTERNAL_FORMULA_AND_UNIT_CONTRACT_NO_CALIBRATION",
       "audit": {
         "path": "docs/core/07_artifacts/topic13/t13_thermal_response_beta_contract_audit.json",
-        "sha256": "fad34747b2b6fda634aa7b96c5dccf3d2081d46d04b985ebbe53ba8ecf532336",
+        "sha256": "7387893811404e69fa5e0f8387d9da90aae8aef9922c6c08614e9950d5ab6b38",
         "summary": {
           "status": "PASS_NAMED_FINITE_TEMPERATURE_BETA_CONTRACT",
           "major_result_id": "T13_THERMAL_RESPONSE_BETA_CONTRACT",
@@ -80987,7 +80987,7 @@
       "data_role": "INTERNAL_FORMAL_CONTRACT_NO_COEFFICIENTS",
       "audit": {
         "path": "docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json",
-        "sha256": "598d6acd34b974e0c63efe5ae27f3704df0e42c0c43b9d6931043c38d36589de",
+        "sha256": "51d5fa505ef0f7801ea801940498d7e8031760833b1f05dcc56a384cce307605",
         "summary": {
           "status": "PASS_NAMED_SK_KMS_ENTROPY_INTERFACE_CONTRACT",
           "major_result_id": "T13_SK_KMS_ENTROPY_INTERFACE_CONTRACT",
@@ -81280,7 +81280,7 @@
     },
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/0_13_core_thermodynamic_constraint_gate.json",
-      "sha256": "13b829fb993c35eb754f2eb0634280bd97c09f78ee572513bc8346b1b00b2fa2",
+      "sha256": "98bb0869787610211c9255654fe2f388b9a9d9c8253b55faa2d8e8565ef66b44",
       "summary": {
         "status": "BLOCKED",
         "controlling_blocker": "topic_0_13_constraint_only_eos_transport_entropy_bridge_missing"
@@ -81296,7 +81296,7 @@
     },
     {
       "path": "docs/core/07_artifacts/archive/covariant_superfluid_transport_contract.json",
-      "sha256": "e5f3c64e19db0bed2a110a5e48bddac4c59cb6dcaa5007826fced7aec61e747f",
+      "sha256": "c7322caccd6f979710ed3b9c0b568ead44c0989b62cd43c80c9ce2c351a35058",
       "summary": {
         "status": "BLOCKED",
         "next_controller": "physical_kubo_coefficient_evidence_and_curved_3p1_solver_missing"
@@ -81304,7 +81304,7 @@
     },
     {
       "path": "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json",
-      "sha256": "0703f321daf8b6257a32772b97fd9e6181dd2ce9d907d1cb6d8ec216cff8eaf8",
+      "sha256": "a756c935b2ab4468e291c88e577f7665f2860815e43180a277b4ed87e699c157",
       "summary": {
         "physical_coefficient_evidence": "BLOCKED_NOT_PROVIDED",
         "full_SK_KMS_completion": "BLOCKED"
@@ -81384,7 +81384,7 @@
     },
     {
       "path": "docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json",
-      "sha256": "ccd5244ad34b2def3a2e27ed0e2bf7f97cb0dbb2d2e77a893c441fcd7deef3a5",
+      "sha256": "3953cf320cd6c9bf8b9d5492457e436f1ebdeaa8a48f5ea5f504cfebcd164d19",
       "summary": {
         "audit_status": "PASS",
         "evidence_status": "TREE_LEVEL_MEAN_FIELD_DERIVATION"
@@ -81788,7 +81788,7 @@
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_mp48_temperature_volume_uncertainty_boundary_audit.json",
-      "sha256": "63c19991f1164d094b914401a50433aea8bd33859fe85fde59707057da35666d",
+      "sha256": "175c32130dc685cfffbadd52a0ce774268a52ab6818ba46a4daa8da46001ecbe",
       "summary": {
         "status": "PASS_SCOPED_MP48_TEMPERATURE_VOLUME_UNCERTAINTY_BOUNDARY_NO_GO",
         "closure_level": "CLOSED_FOR_LANE",
@@ -81799,7 +81799,7 @@
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json",
-      "sha256": "b9cd8b98280fa4b97de641141f63a49e37e6c0628b31fb659a56cd9d9ada2ec0",
+      "sha256": "324571d831743cb182d8aaae162d94f6498dde545d7963c379de003ba46a4eab",
       "summary": {
         "status": "PASS_SCOPED_GRAPHITE_ALPHA_V_K_T_SOURCE_PAIR_LOCKED_MATERIAL_OPEN",
         "closure_level": "CLOSED_FOR_LANE",
@@ -81809,7 +81809,7 @@
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_ding_alternate_public_dataset_discovery_boundary_audit.json",
-      "sha256": "f68fbfd54a8cf188b507c186bc8e350c0030c771979def1a3e1aaca916752f39",
+      "sha256": "6617a4a356d5ca2744881872e8d2763e474877704338918601d19db6b4bbf3cd",
       "summary": {
         "status": "PASS_SCOPED_DING_ALTERNATE_PUBLIC_DATASET_BOUNDARY_NO_GO",
         "closure_level": "CLOSED_FOR_LANE",
@@ -82223,7 +82223,7 @@
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_day2012_preferred_thermodynamic_table_boundary_audit.json",
-      "sha256": "7528a855d389fe4c5f9f4978efbd84ec8e42eb4a42748291ec6ce61445529802",
+      "sha256": "771031d37576cecca72a73967eca125f4599be497aec428d9f3f31e732725a51",
       "summary": {
         "status": "PASS_SCOPED_DAY2012_THERMODYNAMIC_ASSESSMENT_BOUNDARY_NO_GO",
         "closure_level": "CLOSED_FOR_LANE",

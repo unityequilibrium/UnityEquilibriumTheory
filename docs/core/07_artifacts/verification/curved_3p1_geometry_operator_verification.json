@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_geometry_operator_verification",
-  "generated_at": "2026-09-17T20:00:23.936678+00:00",
+  "generated_at": "2026-09-17T21:28:53.067942+00:00",
   "topic": "docs/core curved 3+1 parent",
   "version": "periodic-geometry-operator-v1",
   "benchmark_role": "internal analytic and convergence gate",
@@ -82,7 +82,7 @@
   },
   "source_hashes": {
     "docs/core/02_equations/covariant/uet_curved_3p1_geometry.py": "02f643a7d6efc3fb24508546477d647e12015ebdc7f1a70b4adeaeb1952266d3",
-    "docs/scripts/audit/audit_uet_curved_3p1_geometry.py": "287034babf8849415c1b29532922c1e094fdb77afc014c2dab958352a71db749",
+    "docs/scripts/audit/audit_uet_curved_3p1_geometry.py": "22f8de4a6e96dc68c7929a765d7150cdb5f8d5937e88830ac2c109ebdcaf06cf",
     "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json": "d989b9dd637828dd64f975eaf1f744163ac71e362bde71e46e86e599eced1754"
   },
   "input_identity": {
@@ -126,28 +126,28 @@
     "flat_max_abs_christoffel": 0.0,
     "flat_max_abs_ricci_scalar": 0.0,
     "ricci_l2_errors": [
-      0.025326008204864178,
-      0.0064824312434219634,
-      0.0016303327306680204
+      0.0253260082048642,
+      0.00648243124342196,
+      0.00163033273066802
     ],
     "ricci_observed_orders": [
-      1.9660127983411686,
-      1.9913685684143443
+      1.96601279834117,
+      1.99136856841434
     ],
     "momentum_divergence_l2_errors": [
-      0.0018399889847024965,
-      0.00046475273342829967,
-      0.00011648722591182725
+      0.0018399889847025,
+      0.0004647527334283,
+      0.000116487225911827
     ],
     "momentum_divergence_observed_orders": [
-      1.9851618740077892,
-      1.9962915939448886
+      1.98516187400779,
+      1.99629159394489
     ],
-    "max_metric_compatibility_residual": 2.7755575615628914e-17,
+    "max_metric_compatibility_residual": 2.77555756156289e-17,
     "max_ricci_antisymmetry": 0.0,
-    "matched_adm_hamiltonian_residual": 5.551115123125783e-17,
+    "matched_adm_hamiltonian_residual": 5.55111512312578e-17,
     "matched_adm_momentum_residual": 0.0,
-    "mismatched_density_hamiltonian_residual": 0.049440727456161015
+    "mismatched_density_hamiltonian_residual": 0.049440727456161
   },
   "checks": {
     "source_identity_locked": true,

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "noether_phase_field_map_formula_audit",
-  "generated_at": "2026-09-17T20:04:55+00:00",
+  "generated_at": "2026-09-17T21:48:23+00:00",
   "topic": "docs/core UET GR non-closed response",
   "version": "wave9_v1",
   "benchmark_role": "formula_audit",
@@ -68,16 +68,16 @@
     "external_physical_validation"
   ],
   "source_hashes": {
-    "docs\\core\\02_equations\\lorentz_noether\\uet_noether_phase_field_map.py": "e992834d7d3ca90476202d849551ab16d1aba4bb1156b0519b3cd79e2566f9e8",
-    "docs\\core\\02_equations\\covariant\\uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
-    "docs\\core\\02_equations\\covariant\\uet_covariant_diffusion.py": "a267b89e39db4a8dfac56e71a070539a9da05a55b8bb8b22216e7fd1b839bc53",
-    "docs\\core\\02_equations\\matter_space\\uet_hyperbolic_phase_field_bridge.py": "8902483bb56bb0ceb0f1cd21a2b27766378890531cb4226d392d275ff7e63e05",
-    "docs\\core\\01_contracts\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "a52cbdb0cb9dd2f65be4813fd7b57da9a995f4ab9039d4631f95928f0997a8bf",
-    "docs\\data\\external\\condensed_matter\\phase_transitions\\cahn_hilliard_1958\\source_record.json": "6e72e3beac4697e9b3b77d2397a6868d81434229edd32964102ff84724c10727",
-    "docs\\data\\external\\condensed_matter\\phase_transitions\\hohenberg_halperin_1977\\source_record.json": "06cb9de42e6ccfc959ed38abb205513ed2cf3b768afd3c638887bf4abae829da",
-    "docs\\data\\external\\condensed_matter\\phase_transitions\\hyperbolic_cahn_hilliard\\dhaouadi_dumbser_gavrilyuk_2025\\source_record.json": "8751305c6296e3fa70f12dc9723e174e56710296d42298dcf0e2f3ccfe09e574",
-    "docs\\data\\external\\relativistic_transport\\jain_kovtun_2024\\source_record.json": "90c8c7dfe8256da2b1dbe6631d189470800ea8ed7eec228fc9bedf49dd39dbc7",
-    "docs\\core\\07_artifacts\\verification\\hyperbolic_phase_field_causal_feasibility.json": "f274bac4da49e11f015dcc1bdf39a19019c9809a288d316d4c12d39be974bbe6"
+    "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py": "e992834d7d3ca90476202d849551ab16d1aba4bb1156b0519b3cd79e2566f9e8",
+    "docs/core/02_equations/covariant/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+    "docs/core/02_equations/covariant/uet_covariant_diffusion.py": "a267b89e39db4a8dfac56e71a070539a9da05a55b8bb8b22216e7fd1b839bc53",
+    "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field_bridge.py": "8902483bb56bb0ceb0f1cd21a2b27766378890531cb4226d392d275ff7e63e05",
+    "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md": "a52cbdb0cb9dd2f65be4813fd7b57da9a995f4ab9039d4631f95928f0997a8bf",
+    "docs/data/external/condensed_matter/phase_transitions/cahn_hilliard_1958/source_record.json": "6e72e3beac4697e9b3b77d2397a6868d81434229edd32964102ff84724c10727",
+    "docs/data/external/condensed_matter/phase_transitions/hohenberg_halperin_1977/source_record.json": "06cb9de42e6ccfc959ed38abb205513ed2cf3b768afd3c638887bf4abae829da",
+    "docs/data/external/condensed_matter/phase_transitions/hyperbolic_cahn_hilliard/dhaouadi_dumbser_gavrilyuk_2025/source_record.json": "8751305c6296e3fa70f12dc9723e174e56710296d42298dcf0e2f3ccfe09e574",
+    "docs/data/external/relativistic_transport/jain_kovtun_2024/source_record.json": "90c8c7dfe8256da2b1dbe6631d189470800ea8ed7eec228fc9bedf49dd39dbc7",
+    "docs/core/07_artifacts/verification/hyperbolic_phase_field_causal_feasibility.json": "11c1a24ae59ff5a5ad14f1daab8ba2b0b74fc65e6d79e9212b6122fae1472287"
   },
   "notes": [
     "The affine coordinate map is exact after coarse graining; the full microscopic map is intentionally not invertible.",

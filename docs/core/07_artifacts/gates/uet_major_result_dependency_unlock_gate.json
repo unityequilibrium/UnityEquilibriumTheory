@@ -6,7 +6,7 @@
   "claim_promotion": false,
   "register": {
     "path": "docs/core/07_artifacts/gates/uet_major_result_closure_register.json",
-    "sha256": "1fb0ed9760e9c13991f0b465f3337e37e5bb0e7bbcefa686a46b4f4ac98382d1"
+    "sha256": "28cbb1376aa3c6e210a6617219d6283ef82e34300d46dfbde7fca012b742d9c9"
   },
   "decisions": {
     "TOPIC_0_11_CHAOS_DIAGNOSTIC_ROLLOUT": {
@@ -139,7 +139,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/gates/core_curved_3p1_parent_gate.json",
-          "sha256": "1c60ea5af3d0f7ec2884aeb88fad3d644cfacd0e4aec9d0f74474554255fb103",
+          "sha256": "55b6fccea24ab6843eaa3ab134eee47ba653e9ebf2b87ac4e1fcdd074f443643",
           "summary": {
             "status": "PARTIAL_CURVED_3P1_GH_PERIODIC_PRESCRIBED_MATTER_READY",
             "major_result_id": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
@@ -184,7 +184,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/verification/curved_3p1_adm_constraint_interface_audit.json",
-          "sha256": "d696be2a6d2b4233550ce2b301e930b39267eb0233cb2fe97324186cfc5e9627",
+          "sha256": "ceddff3732f166cf740dc144f9de2293ec7dff28511ae13c0a2e63a6b612051d",
           "summary": {
             "status": "PASS_CURVED_3P1_ADM_CONSTRAINT_INTERFACE",
             "major_result_id": "CORE_CURVED_3P1_ADM_CONSTRAINT_INTERFACE_READY",
@@ -238,7 +238,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/verification/curved_3p1_geometry_operator_verification.json",
-          "sha256": "ada4e73ac8a0bc72feec1e01dc7b72f40614f000ec5639b80c35b4728e05f3b3",
+          "sha256": "5fd9a504ed87c47cb32fb1ad32ea562a19b6df966123c1059944ad017a8add0f",
           "summary": {
             "status": "PASS_CURVED_3P1_GEOMETRY_OPERATOR",
             "major_result_id": "CORE_CURVED_3P1_GEOMETRY_OPERATOR_READY",
@@ -290,7 +290,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/verification/curved_3p1_adm_evolution_operator_verification.json",
-          "sha256": "09b9190e56d9568274396f4ec690fe73f8004abfaefc0888a23dabba943e9870",
+          "sha256": "d214b6d72edfae40e4ab9e1ff3ea1ca500e5bb0ca6854aedefef7ba60f22b663",
           "summary": {
             "status": "PASS_ADM_EVOLUTION_RHS_OPERATOR_ONLY",
             "major_result_id": "CORE_CURVED_3P1_ADM_EVOLUTION_RHS_READY",
@@ -328,7 +328,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/archive/curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json",
-          "sha256": "09c8f61f54720837487fc67ff871a59fd552c25ac9d5fdb7ff123e07cd648bc0",
+          "sha256": "ed238d0ce583a61db5c0e5d9562c4260fc7c9cf37253be0835b15b49d527fd0f",
           "summary": {
             "status": "CLOSED_AS_NO_GO_FIXED_GAUGE_ADM_NOT_STRONGLY_HYPERBOLIC",
             "major_result_id": "CORE_CURVED_3P1_FIXED_GAUGE_ADM_HYPERBOLICITY_NO_GO",
@@ -375,7 +375,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/verification/curved_3p1_gh_principal_system_verification.json",
-          "sha256": "dafbe764933b13b56c921e1a5f54ff634803814cf94ebee88edfab8868c1f61a",
+          "sha256": "c6e5b0501d20129410d6a97d771466fc9b848d9d03b213b2a88b9dbe1df14cea",
           "summary": {
             "status": "PASS_GH_PRINCIPAL_CHARACTERISTIC_SYSTEM",
             "major_result_id": "CORE_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY",
@@ -418,7 +418,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/verification/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json",
-          "sha256": "f41381f331a98c09a11fec422a20d79cf17d51373f56f30762c9652c464aa7cc",
+          "sha256": "4e6cfc7a95b583cacf9cf2281518b926beaf14b82be0db6b914ecc668d04ec26",
           "summary": {
             "status": "PASS_GH_NONLINEAR_VACUUM_RHS",
             "major_result_id": "CORE_CURVED_3P1_GH_NONLINEAR_VACUUM_RHS_READY",
@@ -463,7 +463,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/verification/curved_3p1_gh_time_evolution_verification.json",
-          "sha256": "6481386253368be25087773e1fa7de1ba0a1c196e028c4f2131b7e55675f9795",
+          "sha256": "cf94824fb0f050c69472a7f6c0a1bad2a5775832e28a9492851e3ef096c8e9a6",
           "summary": {
             "status": "PASS_GH_PERIODIC_VACUUM_TIME_EVOLUTION",
             "major_result_id": "CORE_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY",
@@ -509,7 +509,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/verification/curved_3p1_topic13_matter_wiring_verification.json",
-          "sha256": "c442059c0898952766fe0800aecbb3d4c5eac95a603e3045cdcb34895f1ab2c9",
+          "sha256": "91f9c1da23a003fe16a5fa52cd835abe363935a23fb5c4cad241aa8759e18790",
           "summary": {
             "status": "PASS_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING",
             "major_result_id": "CORE_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING_READY",
@@ -534,7 +534,7 @@
     "claim_boundary": "ADM constraint, periodic spatial geometry, RHS operator, and fixed-gauge no-go, GH principal/nonlinear RHS, periodic vacuum evolution, and prescribed Topic 13 matter-source progress only; the parent is not CLOSED_FOR_CORE and Gravity remains blocked"
   },
   "topic13_partial_evidence": {
-    "register_sha256": "1fb0ed9760e9c13991f0b465f3337e37e5bb0e7bbcefa686a46b4f4ac98382d1",
+    "register_sha256": "28cbb1376aa3c6e210a6617219d6283ef82e34300d46dfbde7fca012b742d9c9",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",
@@ -542,7 +542,7 @@
     "reason": "The covariant matter-coupling no-go makes the missing physical response normalization explicit; it does not supply e0, alpha_Phi_K, Ding C_src, physical Kubo coefficients, or full closure.",
     "phi_energy_anchor_no_go": {
       "path": "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json",
-      "sha256": "9b1fe80787fbf9989c2846f7fe5d1a829d1295041bffcc4860e4ebe09b601dce",
+      "sha256": "cafb22891c93080065c13810f83e4ed1b9f40a49fafddf51f25aff9950a816f0",
       "summary": {
         "status": "PASS_SCOPED_NO_GO_NORMALIZED_PHI_ENERGY_ANCHOR",
         "full_core_unlock": false,
@@ -551,7 +551,7 @@
     },
     "covariant_action_si_anchor_route": {
       "path": "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json",
-      "sha256": "4bff4bda6194215752358ec06c782a518753c8e3be1a5e7e6678c76fa2d3686d",
+      "sha256": "8e3e21e2f0f3f49b81929cd730c5c9874e71688ad439060df63897962cae6a20",
       "summary": {
         "status": "PASS_NATURAL_UNIT_ROUTE_IDENTIFIED_SI_MAPPING_BLOCKED",
         "full_core_unlock": false
@@ -559,7 +559,7 @@
     },
     "covariant_field_normalization_no_go": {
       "path": "docs/core/07_artifacts/topic13/t13_covariant_field_normalization_identifiability_no_go.json",
-      "sha256": "d437bd9c9edecc4cf63f2e468b355ebebe9c5009e6d479df85ae7aa2b2bd2a49",
+      "sha256": "6842d65c2295b2f4871adb3e071214c60ecb59ea4b877841a770cd39ccd0827e",
       "summary": {
         "status": "PASS_SCOPED_NO_GO_COVARIANT_FIELD_NORMALIZATION",
         "full_core_unlock": false
@@ -567,7 +567,7 @@
     },
     "causal_branch_selection": {
       "path": "docs/core/07_artifacts/topic13/t13_causal_branch_selection_audit.json",
-      "sha256": "093ce146b1a11d295e5804043aa8e6a77bd7ef20c58915d84818319a9b2330ce",
+      "sha256": "be5004a7302cec787373844fd9a50f9edb489c3a9d0cdad11ba978e0a808b93e",
       "summary": {
         "status": "PASS_CLOSED_AS_NO_GO_WITH_NAMED_COUPLED_BRANCH",
         "full_core_unlock": false,
@@ -584,7 +584,7 @@
     },
     "thermal_response_beta_contract": {
       "path": "docs/core/07_artifacts/topic13/t13_thermal_response_beta_contract_audit.json",
-      "sha256": "fad34747b2b6fda634aa7b96c5dccf3d2081d46d04b985ebbe53ba8ecf532336",
+      "sha256": "7387893811404e69fa5e0f8387d9da90aae8aef9922c6c08614e9950d5ab6b38",
       "summary": {
         "status": "PASS_NAMED_FINITE_TEMPERATURE_BETA_CONTRACT",
         "full_core_unlock": false
@@ -600,7 +600,7 @@
     },
     "phi_e_reference_normalization": {
       "path": "docs/core/07_artifacts/topic13/t13_phi_e_reference_normalization_audit.json",
-      "sha256": "f011d4ae7787a5a482d26f92ceed961bef53f8fe91c6fb6f3e794af67be14faf",
+      "sha256": "bcfa29d9442a6b973e12e02de69e557384076fb01ab3b67e3261a8b362ca0771",
       "summary": {
         "status": "PASS_NAMED_PHI_E_REFERENCE_NORMALIZATION",
         "full_core_unlock": false
@@ -608,7 +608,7 @@
     },
     "base_phi_independent_calibration_requirement": {
       "path": "docs/core/07_artifacts/topic13/t13_base_phi_independent_calibration_requirement.json",
-      "sha256": "23f34a2aa8cc9b76d06620bc873967b68905ebbf27c8c84d859122ca24e3af75",
+      "sha256": "64dd32725da18c701e9f800a56fe6cae2f1af82bec88014cc3dc733a7ae763a0",
       "summary": {
         "status": "PASS_OPEN_CALIBRATION_REQUIREMENT",
         "full_core_unlock": false,
@@ -618,7 +618,7 @@
     "base_phi_calibration_controller": "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
     "sk_kms_entropy_interface": {
       "path": "docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json",
-      "sha256": "598d6acd34b974e0c63efe5ae27f3704df0e42c0c43b9d6931043c38d36589de",
+      "sha256": "51d5fa505ef0f7801ea801940498d7e8031760833b1f05dcc56a384cce307605",
       "summary": {
         "status": "PASS_NAMED_SK_KMS_ENTROPY_INTERFACE_CONTRACT",
         "full_core_unlock": false,
@@ -808,7 +808,7 @@
     "uet_o2_condensate_fluctuation_spectrum_full_core_unlock": false,
     "formal_non_circular_bridge_boundary": {
       "path": "docs/core/07_artifacts/topic13/t13_formal_bridge_boundary_audit.json",
-      "sha256": "5433b8d74aa0f9208fff3d8755d77ed0bc676054fa79eb6d71196d72984f71e1",
+      "sha256": "0b3c3b017beac7f0f37cc221177b4fd0aad914eeb86ba804985209b37701b638",
       "summary": {
         "status": "PASS_FORMAL_NONCIRCULAR_BRIDGE_BOUNDARY",
         "major_result_id": "T13_FORMAL_NONCIRCULAR_BRIDGE_BOUNDARY",
@@ -1017,7 +1017,7 @@
         "full_core_unlock": false,
         "audit": {
           "path": "docs/core/07_artifacts/topic13/t13_mp48_temperature_volume_uncertainty_boundary_audit.json",
-          "sha256": "63c19991f1164d094b914401a50433aea8bd33859fe85fde59707057da35666d",
+          "sha256": "175c32130dc685cfffbadd52a0ce774268a52ab6818ba46a4daa8da46001ecbe",
           "summary": {
             "status": "PASS_SCOPED_MP48_TEMPERATURE_VOLUME_UNCERTAINTY_BOUNDARY_NO_GO",
             "major_result_id": "T13_MP48_TEMPERATURE_VOLUME_UNCERTAINTY_BOUNDARY",
@@ -1032,7 +1032,7 @@
         "full_core_unlock": false,
         "audit": {
           "path": "docs/core/07_artifacts/topic13/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json",
-          "sha256": "b9cd8b98280fa4b97de641141f63a49e37e6c0628b31fb659a56cd9d9ada2ec0",
+          "sha256": "324571d831743cb182d8aaae162d94f6498dde545d7963c379de003ba46a4eab",
           "summary": {
             "status": "PASS_SCOPED_GRAPHITE_ALPHA_V_K_T_SOURCE_PAIR_LOCKED_MATERIAL_OPEN",
             "major_result_id": "T13_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY",
@@ -1047,7 +1047,7 @@
         "full_core_unlock": false,
         "audit": {
           "path": "docs/core/07_artifacts/topic13/t13_ding_alternate_public_dataset_discovery_boundary_audit.json",
-          "sha256": "f68fbfd54a8cf188b507c186bc8e350c0030c771979def1a3e1aaca916752f39",
+          "sha256": "6617a4a356d5ca2744881872e8d2763e474877704338918601d19db6b4bbf3cd",
           "summary": {
             "status": "PASS_SCOPED_DING_ALTERNATE_PUBLIC_DATASET_BOUNDARY_NO_GO",
             "major_result_id": "T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY_BOUNDARY",
@@ -2645,7 +2645,7 @@
     },
     "covariant_matter_coupling_normalization_no_go": {
       "path": "docs/core/07_artifacts/topic13/t13_covariant_matter_coupling_normalization_no_go.json",
-      "sha256": "93661180c88a069e384f9732209d8b69595b1229fbcfe886ab42b0e0919f412a",
+      "sha256": "396422f838ac01431934ef4e6d457ea2cf1f5e3a34b1a997d79b72f161e5c5bc",
       "summary": {
         "status": "PASS_SCOPED_NO_GO_COVARIANT_MATTER_COUPLING_NORMALIZATION",
         "full_core_unlock": false
@@ -2714,7 +2714,7 @@
     "claim_boundary": "CLOSED_FOR_CORE is an internal, lane-bounded composition result. It is not a prediction of the imported He-4 coefficients, not graphite TTG validation, not a complete two-fluid transport tensor, not curved 3+1, and not global UET closure.",
     "closure_matrix": {
       "path": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
-      "sha256": "5fd448a5af5c01293ffe2aaad3ccff1214e0c043ca5db76880ed451673e77605",
+      "sha256": "63ee527c8a0cda813bfcf965b45c1b02c3fad3f32c666536ba830beacccc254f",
       "full_core_unlock": true,
       "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
       "required_major_result_count": 10,
@@ -2735,7 +2735,6 @@
       },
       "full_topic_ready": true
     },
-    "register_sha256": "be26abde157ad34f893a2cc7b0a986dc8d0a0b1ae4f97362509e8ff597d83565"
-  },
-  "register_sha256": "2a5c43fd0bb9d2da79e1ee570db582b8f1ba52bc8db168e09409fbecbc52500f"
+    "register_sha256": "6b276a75f908f4a2958f2d4ef1fc76e1888e316e45be98b89dfb98ca5995775e"
+  }
 }

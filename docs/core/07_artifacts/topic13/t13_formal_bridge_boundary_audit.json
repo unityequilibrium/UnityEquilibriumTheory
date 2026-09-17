@@ -47,7 +47,7 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_thermal_response_beta_contract_audit.json",
-        "sha256": "7387893811404e69fa5e0f8387d9da90aae8aef9922c6c08614e9950d5ab6b38",
+        "sha256": "fad34747b2b6fda634aa7b96c5dccf3d2081d46d04b985ebbe53ba8ecf532336",
         "summary": {
           "status": "PASS_NAMED_FINITE_TEMPERATURE_BETA_CONTRACT",
           "major_result_id": "T13_THERMAL_RESPONSE_BETA_CONTRACT",
@@ -83,7 +83,7 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json",
-        "sha256": "9b1fe80787fbf9989c2846f7fe5d1a829d1295041bffcc4860e4ebe09b601dce",
+        "sha256": "cafb22891c93080065c13810f83e4ed1b9f40a49fafddf51f25aff9950a816f0",
         "summary": {
           "status": "PASS_SCOPED_NO_GO_NORMALIZED_PHI_ENERGY_ANCHOR",
           "major_result_id": "T13_PHI_ENERGY_ANCHOR_IDENTIFIABILITY_NO_GO",
@@ -92,7 +92,7 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_covariant_field_normalization_identifiability_no_go.json",
-        "sha256": "d437bd9c9edecc4cf63f2e468b355ebebe9c5009e6d479df85ae7aa2b2bd2a49",
+        "sha256": "6842d65c2295b2f4871adb3e071214c60ecb59ea4b877841a770cd39ccd0827e",
         "summary": {
           "status": "PASS_SCOPED_NO_GO_COVARIANT_FIELD_NORMALIZATION",
           "major_result_id": "T13_COVARIANT_FIELD_NORMALIZATION_IDENTIFIABILITY_NO_GO",
@@ -101,7 +101,7 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_collective_response_eos_stability_audit.json",
-        "sha256": "5deda16b91ee0cd3429ae7dbd588d38ee2acda308f41f4cb4af177d9ef05aea2",
+        "sha256": "17f6fdc1e190af09dfcfd5a18cbdb924176031ecf3dd244904595788a631f426",
         "summary": {
           "status": "PASS_NAMED_COLLECTIVE_RESPONSE_EOS_STABILITY_CONTRACT",
           "major_result_id": "T13_COLLECTIVE_RESPONSE_EOS_STABILITY_CONTRACT",
@@ -110,7 +110,7 @@
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json",
-        "sha256": "22bac3ed867f71a74ba79001d153e8d108ffd3670c6d8b9e23e9f7f75a91e2f9",
+        "sha256": "37026f4226706b5945fdfeb3e9b392d9f4f8cb83545ef52f334b754609c22268",
         "summary": {
           "status": "PASS_NAMED_SK_KMS_ENTROPY_INTERFACE_CONTRACT",
           "major_result_id": "T13_SK_KMS_ENTROPY_INTERFACE_CONTRACT",

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_adm_evolution_formula_audit",
-  "generated_at": "2026-09-17T20:01:07.277309+00:00",
+  "generated_at": "2026-09-17T21:28:55.636427+00:00",
   "topic": "docs/core curved 3+1 parent",
   "version": "adm-evolution-rhs-v1",
   "benchmark_role": "formula/unit/formulation audit",
@@ -186,7 +186,7 @@
   },
   "source_hashes": {
     "docs/core/02_equations/covariant/uet_curved_3p1_adm_evolution.py": "257fdbc032fac4a4402307c68d2bf4ddec81162b5d3a051e234e445e6c539c20",
-    "docs/scripts/audit/audit_uet_curved_3p1_adm_evolution.py": "e91b0129a98d5469827696da9af2f84ab7b827ce39d6e839a8507d2af9ff255d",
+    "docs/scripts/audit/audit_uet_curved_3p1_adm_evolution.py": "44b8e5ed7bf1a313530cc8811ef161f399ee9e3800d0a72e515c24732c12ca4d",
     "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json": "d989b9dd637828dd64f975eaf1f744163ac71e362bde71e46e86e599eced1754",
     "docs/data/external/gr_3p1/gundlach_martin_garcia_2006/source_record.json": "d9153620dad37fb08328b8dd308394023ac53b904b8ee2f4bf3a2239c0e200fc",
     "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a"
@@ -203,24 +203,24 @@
     "minkowski_metric_rhs_max_abs": 0.0,
     "minkowski_curvature_rhs_max_abs": 0.0,
     "flrw_metric_rhs_max_abs_error": 0.0,
-    "flrw_curvature_rhs_max_abs_error": 1.734723475976807e-17,
+    "flrw_curvature_rhs_max_abs_error": 1.73472347597681e-17,
     "lapse_hessian_l2_errors": [
-      0.0010383786150741107,
-      0.0002667977997294831,
-      6.715798198214879e-05
+      0.00103837861507411,
+      0.000266797799729483,
+      6.71579819821488e-05
     ],
     "lapse_hessian_observed_orders": [
-      1.9605139032831735,
-      1.9901159839637979
+      1.96051390328317,
+      1.9901159839638
     ],
     "shift_lie_l2_errors": [
-      0.0010623181356239281,
-      0.00026832511575144264,
-      6.725393123734638e-05
+      0.00106231813562393,
+      0.000268325115751443,
+      6.72539312373464e-05
     ],
     "shift_lie_observed_orders": [
-      1.9851618740077863,
-      1.9962915939448822
+      1.98516187400779,
+      1.99629159394488
     ],
     "principal_symbols": [
       {
@@ -309,9 +309,9 @@
       },
       {
         "direction": [
-          0.5773502691896258,
-          0.5773502691896258,
-          0.5773502691896258
+          0.577350269189626,
+          0.577350269189626,
+          0.577350269189626
         ],
         "eigenvalues_real_sorted": [
           -1.0,
@@ -337,9 +337,9 @@
       },
       {
         "direction": [
-          0.25400025400038106,
-          -0.38100038100057154,
-          0.8890008890013336
+          0.254000254000381,
+          -0.381000381000572,
+          0.889000889001334
         ],
         "eigenvalues_real_sorted": [
           -1.0,

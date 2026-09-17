@@ -94,12 +94,16 @@ def _json_ready(value: Any) -> Any:
     if isinstance(value, np.ndarray):
         if np.iscomplexobj(value):
             return [
-                {"real": float(item.real), "imag": float(item.imag)}
+                _json_ready({"real": item.real, "imag": item.imag})
                 for item in value.flat
             ]
-        return value.tolist()
+        return _json_ready(value.tolist())
     if isinstance(value, np.generic):
-        return value.item()
+        return _json_ready(value.item())
+    if isinstance(value, float):
+        # Canonicalize serialization across Python/NumPy builds without
+        # changing the pass/fail calculations performed before serialization.
+        return float(f"{value:.15g}")
     if isinstance(value, dict):
         return {key: _json_ready(item) for key, item in value.items()}
     if isinstance(value, (list, tuple)):
@@ -772,12 +776,15 @@ def build_artifacts(
             "are not implemented."
         ),
     }
-    return (
-        eos_verification,
-        formula_audit,
-        transport_verification,
-        transport_contract,
-        program,
+    return tuple(
+        _json_ready(payload)
+        for payload in (
+            eos_verification,
+            formula_audit,
+            transport_verification,
+            transport_contract,
+            program,
+        )
     )
 
 

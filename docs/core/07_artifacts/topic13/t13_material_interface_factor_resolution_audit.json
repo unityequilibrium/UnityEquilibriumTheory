@@ -162,15 +162,15 @@
   "evidence_artifacts": [
     {
       "path": "docs/core/07_artifacts/topic13/t13_uet_material_lattice_interface_contract_audit.json",
-      "sha256": "8ae5d76d3570031187711182c598ab1ea1d892b7bd8819c5422eabffeb8ca406"
+      "sha256": "9f7b2677d27d4d37a37d20b0183d616693ddd492562f186500fe6613debe2d16"
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_covariant_field_normalization_identifiability_no_go.json",
-      "sha256": "d437bd9c9edecc4cf63f2e468b355ebebe9c5009e6d479df85ae7aa2b2bd2a49"
+      "sha256": "6842d65c2295b2f4871adb3e071214c60ecb59ea4b877841a770cd39ccd0827e"
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_covariant_matter_coupling_normalization_no_go.json",
-      "sha256": "93661180c88a069e384f9732209d8b69595b1229fbcfe886ab42b0e0919f412a"
+      "sha256": "396422f838ac01431934ef4e6d457ea2cf1f5e3a34b1a997d79b72f161e5c5bc"
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_uet_o2_action_thermal_observable_bridge_audit.json",

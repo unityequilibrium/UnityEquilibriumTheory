@@ -8,6 +8,7 @@ import sys
 from datetime import datetime, timezone
 from math import log2, pi
 from pathlib import Path
+from typing import Any
 
 import numpy as np
 
@@ -51,6 +52,21 @@ SELECTION = canonical_artifact_path(
 
 def _sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _json_ready(value: Any) -> Any:
+    if isinstance(value, np.ndarray):
+        return _json_ready(value.tolist())
+    if isinstance(value, np.generic):
+        return _json_ready(value.item())
+    if isinstance(value, float):
+        # Canonicalize serialization across Python/NumPy builds only.
+        return float(f"{value:.15g}")
+    if isinstance(value, dict):
+        return {key: _json_ready(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [_json_ready(item) for item in value]
+    return value
 
 
 def _flat_metric(resolution: int, scale_factor: float = 1.0) -> np.ndarray:
@@ -396,7 +412,10 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
         "evidence": [VERIFY.relative_to(ROOT).as_posix(), NO_GO.relative_to(ROOT).as_posix(), FORMULA.relative_to(ROOT).as_posix()],
         "claim_promotion": False,
     }
-    return verification, no_go, formula, selection
+    return tuple(
+        _json_ready(payload)
+        for payload in (verification, no_go, formula, selection)
+    )
 
 
 def main() -> int:

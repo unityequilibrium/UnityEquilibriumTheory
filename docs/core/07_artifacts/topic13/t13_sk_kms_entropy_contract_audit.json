@@ -63,14 +63,14 @@
       },
       {
         "path": "docs/core/07_artifacts/archive/covariant_superfluid_transport_contract.json",
-        "sha256": "e5f3c64e19db0bed2a110a5e48bddac4c59cb6dcaa5007826fced7aec61e747f",
+        "sha256": "c7322caccd6f979710ed3b9c0b568ead44c0989b62cd43c80c9ce2c351a35058",
         "summary": {
           "status": "BLOCKED_PHYSICAL_COEFFICIENTS"
         }
       },
       {
         "path": "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json",
-        "sha256": "0703f321daf8b6257a32772b97fd9e6181dd2ce9d907d1cb6d8ec216cff8eaf8",
+        "sha256": "a756c935b2ab4468e291c88e577f7665f2860815e43180a277b4ed87e699c157",
         "summary": {
           "status": "PARTIAL_T0_PLUS_SIMULATION_CONTROL"
         }
