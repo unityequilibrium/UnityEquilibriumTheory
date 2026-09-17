@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "hyperbolic_phase_field_causal_feasibility",
-  "generated_at": "2026-09-17T21:28:52+00:00",
+  "generated_at": "2026-09-17T23:25:33+00:00",
   "topic": "docs/core UET GR non-closed response",
   "version": "wave8_v1",
   "benchmark_role": "analytic_gate",
@@ -82,7 +82,7 @@
   "numeric": {
     "random_feasible_cases": 64,
     "maximum_dense_speed_residual": 0.0,
-    "maximum_interior_speed_to_cone_ratio": 0.975900072948533,
+    "maximum_interior_speed_to_cone_ratio": 0.975900072949,
     "all_negative_controls_rejected": true,
     "boundary_saturation": {
       "minimum_shifted_curvature": 0.5,
@@ -148,21 +148,21 @@
         0.025
       ],
       "matter_characteristic_speeds": [
-        14.7372826531895,
-        36.9966214673719,
-        97.3396116696589,
+        14.737282653189,
+        36.996621467372,
+        97.339611669659,
         264.386081328046
       ],
       "auxiliary_characteristic_speeds": [
-        2.23606797749979,
-        3.16227766016838,
-        4.47213595499958,
-        6.32455532033676
+        2.2360679775,
+        3.162277660168,
+        4.472135955,
+        6.324555320337
       ],
       "maximum_characteristic_speeds": [
-        14.7372826531895,
-        36.9966214673719,
-        97.3396116696589,
+        14.737282653189,
+        36.996621467372,
+        97.339611669659,
         264.386081328046
       ],
       "strict_hyperbolicity": [
@@ -193,8 +193,8 @@
       "tau_violation_factors": [
         217.1875,
         1368.75,
-        9475.0,
-        69900.0
+        9474.999999999998,
+        69899.99999999999
       ],
       "beta_violation_factors": [
         5.0,
@@ -222,8 +222,8 @@
         0.0625,
         0.00390625,
         0.000244140625,
-        1.52587890625e-05,
-        9.5367431640625e-07
+        1.5258789e-05,
+        9.53674e-07
       ],
       "gamma_values": [
         0.25,
@@ -249,11 +249,11 @@
         0.0009765625
       ],
       "matter_characteristic_speeds": [
-        5.54526825320471,
-        17.7482393492988,
-        65.8179306876173,
+        5.545268253205,
+        17.748239349299,
+        65.817930687617,
         257.837157911733,
-        1025.8420931118
+        1025.842093111801
       ],
       "auxiliary_characteristic_speeds": [
         2.0,
@@ -263,11 +263,11 @@
         32.0
       ],
       "maximum_characteristic_speeds": [
-        5.54526825320471,
-        17.7482393492988,
-        65.8179306876173,
+        5.545268253205,
+        17.748239349299,
+        65.817930687617,
         257.837157911733,
-        1025.8420931118
+        1025.842093111801
       ],
       "strict_hyperbolicity": [
         true,
@@ -321,10 +321,10 @@
         512.0
       ],
       "relative_chemical_errors": [
-        0.0439070670197732,
-        0.0121883480899277,
-        0.00313378357421741,
-        0.000789062098394119
+        0.04390706702,
+        0.01218834809,
+        0.003133783574,
+        0.000789062098
       ],
       "minimum_causal_tau_values": [
         11.6875,
@@ -336,7 +336,7 @@
       "minimum_causal_tau_strictly_increases": true,
       "interpretation": "better quasistatic Cahn-Hilliard chemical accuracy requires larger alpha while the fixed-cone tau lower bound grows"
     },
-    "local_current_map_max_abs_residual": 1.33226762955019e-15
+    "local_current_map_max_abs_residual": 0.0
   },
   "achieved_gates": {
     "external_source_provenance": "PASS",
@@ -374,10 +374,10 @@
     ]
   },
   "thresholds": {
-    "maximum_dense_speed_residual": 1e-12,
+    "maximum_dense_speed_residual": 0.0,
     "maximum_speed_to_cone_ratio": 1.0,
     "all_negative_controls_rejected": true,
-    "local_current_map_max_abs_residual": 1e-12
+    "local_current_map_max_abs_residual": 0.0
   },
   "run_contract": {
     "seed": 811801,

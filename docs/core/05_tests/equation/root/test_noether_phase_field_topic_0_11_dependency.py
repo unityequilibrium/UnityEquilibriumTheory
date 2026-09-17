@@ -35,7 +35,8 @@ def _load_artifact() -> dict:
 
 def _stable_payload(payload: dict) -> dict:
     stable = json.loads(json.dumps(payload))
-    stable.pop("generated_at", None)
+    for key in ("generated_at", "timestamp_utc", "environment"):
+        stable.pop(key, None)
     return stable
 
 

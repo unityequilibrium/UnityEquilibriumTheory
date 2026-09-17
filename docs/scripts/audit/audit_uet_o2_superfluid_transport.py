@@ -103,7 +103,9 @@ def _json_ready(value: Any) -> Any:
     if isinstance(value, float):
         # Canonicalize serialization across Python/NumPy builds without
         # changing the pass/fail calculations performed before serialization.
-        return float(f"{value:.15g}")
+        if abs(value) <= 1.0e-12:
+            return 0.0
+        return float(f"{value:.12f}")
     if isinstance(value, dict):
         return {key: _json_ready(item) for key, item in value.items()}
     if isinstance(value, (list, tuple)):
@@ -117,6 +119,7 @@ def _dump(name: str, payload: dict[str, Any]) -> None:
     path.write_text(
         json.dumps(_json_ready(payload), indent=2) + "\n",
         encoding="utf-8",
+        newline="\n",
     )
 
 

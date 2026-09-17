@@ -61,7 +61,10 @@ def _json_ready(value: Any) -> Any:
         return _json_ready(value.item())
     if isinstance(value, float):
         # Canonicalize serialization across Python/NumPy builds only.
-        return float(f"{value:.15g}")
+        # This does not change the structural hyperbolicity calculations.
+        if abs(value) <= 1.0e-12:
+            return 0.0
+        return float(f"{value:.12f}")
     if isinstance(value, dict):
         return {key: _json_ready(item) for key, item in value.items()}
     if isinstance(value, (list, tuple)):
@@ -93,7 +96,10 @@ def _orders(errors: list[float]) -> list[float]:
 def _stable_float(value: float) -> float:
     """Canonicalize non-structural floating-point diagnostics for JSON."""
 
-    return float(f"{float(value):.15g}")
+    value = float(value)
+    if abs(value) <= 1.0e-12:
+        return 0.0
+    return float(f"{value:.12f}")
 
 
 def _stable_principal_eigenvalue(value: float) -> float:
@@ -113,7 +119,10 @@ def _stable_principal_residual(value: float) -> float:
     """Canonicalize round-off below the declared principal-symbol scale."""
 
     value = float(value)
-    return 0.0 if abs(value) <= 1e-14 else _stable_float(value)
+    # Eigensolver noise below the same 1e-7 root scale is not a structural
+    # hyperbolicity signal; classification still uses the raw principal symbol.
+    value = float(value)
+    return 0.0 if abs(value) <= 1e-7 else _stable_float(value)
 
 
 def build_artifacts() -> tuple[dict, dict, dict, dict]:
@@ -422,7 +431,11 @@ def main() -> int:
     ARTIFACTS.mkdir(parents=True, exist_ok=True)
     payloads = build_artifacts()
     for path, payload in zip((VERIFY, NO_GO, FORMULA, SELECTION), payloads):
-        path.write_text(json.dumps(payload, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
+        path.write_text(
+            json.dumps(payload, indent=2, ensure_ascii=True) + "\n",
+            encoding="utf-8",
+            newline="\n",
+        )
     verification, no_go, _, selection = payloads
     print(json.dumps({"rhs_status": verification["status"], "no_go_status": no_go["status"], "selection_status": selection["status"], "claim_promotion": False}, indent=2))
     return 0 if verification["status"].startswith("PASS") and no_go["status"].startswith("CLOSED_AS_NO_GO") else 1

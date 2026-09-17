@@ -173,7 +173,7 @@
       "status": "BLOCKED"
     }
   },
-  "generated_at": "2026-09-17T22:07:14+00:00",
+  "generated_at": "2026-09-17T23:02:50+00:00",
   "limitations": [
     "No Landauer, Cattaneo, thermal pilot, or core solver is rerun.",
     "The foundation gate remains WARN and exports only class-C constraints.",

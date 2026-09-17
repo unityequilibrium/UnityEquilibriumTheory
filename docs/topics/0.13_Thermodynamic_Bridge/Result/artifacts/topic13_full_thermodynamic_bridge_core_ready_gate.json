@@ -8572,7 +8572,7 @@
         "data_role": "COMPARISON_ONLY_NOT_CALIBRATION",
         "audit": {
           "path": "docs/core/07_artifacts/topic13/t13_desorbo_ceylon_graphite_cp_audit.json",
-          "sha256": "5c6c183c6637e12bb9d8e1c55f555e53f022bd89312d6192256e83055e09d93d",
+          "sha256": "76ec7afbab04db3cf7a23a7e8988aefe88c91d8280a93728097cc0e0db0f89d5",
           "summary": {
             "status": "PASS_METADATA_ONLY_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_BOUNDARY",
             "major_result_id": "T13_DESORBO_1955_CEYLON_GRAPHITE_CP_COMPARATOR",
@@ -10448,7 +10448,7 @@
         "data_role": "TRAINING/COMPARISON",
         "audit": {
           "path": "docs/core/07_artifacts/topic13/t13_oxford_tgs_comparator_provenance_audit.json",
-          "sha256": "7964ad6e0c0292a4cd6717496c432f745a4d1f485603273b19c1c253ecb910c2",
+          "sha256": "5762891074585ae3c66cc8baa93d73ed1359d7e09447e9cad69cc087283f49f0",
           "summary": {
             "status": "PASS_OXFORD_TGS_PROVENANCE_ARCHIVE_LOCKED_EXTRACTION_PENDING",
             "major_result_id": "T13_OXFORD_TGS_COMPARATOR_PROVENANCE",
@@ -10550,7 +10550,7 @@
         "data_role": "TRAINING/COMPARISON",
         "audit": {
           "path": "docs/core/07_artifacts/topic13/t13_oxford_tgs_numeric_rows_audit.json",
-          "sha256": "bfc7d0991c7af43cebde83cc91bb23b8a3cfdf08404d3b437378802926b40bae",
+          "sha256": "9b32d387c59ef335fe640a4dad0fbe46ce98b3a08342dce3d95c24d2363e7928",
           "summary": {
             "status": "PASS_OXFORD_TGS_NUMERIC_ROWS_METADATA_BOUNDARY",
             "major_result_id": "T13_OXFORD_TGS_NUMERIC_ROWS_COMPARATOR",
@@ -81280,7 +81280,7 @@
     },
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/0_13_core_thermodynamic_constraint_gate.json",
-      "sha256": "98bb0869787610211c9255654fe2f388b9a9d9c8253b55faa2d8e8565ef66b44",
+      "sha256": "b89482ef5d8ddf52dc7fb2f52536d55fab4c627dbab7b58cbca61b6ec44a5ee2",
       "summary": {
         "status": "BLOCKED",
         "controlling_blocker": "topic_0_13_constraint_only_eos_transport_entropy_bridge_missing"
@@ -81296,7 +81296,7 @@
     },
     {
       "path": "docs/core/07_artifacts/archive/covariant_superfluid_transport_contract.json",
-      "sha256": "c7322caccd6f979710ed3b9c0b568ead44c0989b62cd43c80c9ce2c351a35058",
+      "sha256": "ed8cb33f8e56ba3276ab9c2ca1915e5a14d7b094f5c37e3c85ca0cc8da43c5c9",
       "summary": {
         "status": "BLOCKED",
         "next_controller": "physical_kubo_coefficient_evidence_and_curved_3p1_solver_missing"
@@ -81304,7 +81304,7 @@
     },
     {
       "path": "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json",
-      "sha256": "a756c935b2ab4468e291c88e577f7665f2860815e43180a277b4ed87e699c157",
+      "sha256": "ca24b777f21148fbdbc4d144d6daecb1abe6323f2654d260b7a246fc68ed7355",
       "summary": {
         "physical_coefficient_evidence": "BLOCKED_NOT_PROVIDED",
         "full_SK_KMS_completion": "BLOCKED"
@@ -81384,7 +81384,7 @@
     },
     {
       "path": "docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json",
-      "sha256": "3953cf320cd6c9bf8b9d5492457e436f1ebdeaa8a48f5ea5f504cfebcd164d19",
+      "sha256": "05a17f4b1c917cad2a5d5fbcd709264d47356f0ab424effe5ff05377e180d558",
       "summary": {
         "audit_status": "PASS",
         "evidence_status": "TREE_LEVEL_MEAN_FIELD_DERIVATION"
@@ -81756,7 +81756,7 @@
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_oxford_tgs_numeric_rows_audit.json",
-      "sha256": "bfc7d0991c7af43cebde83cc91bb23b8a3cfdf08404d3b437378802926b40bae",
+      "sha256": "9b32d387c59ef335fe640a4dad0fbe46ce98b3a08342dce3d95c24d2363e7928",
       "summary": {
         "status": "PASS_OXFORD_TGS_NUMERIC_ROWS_METADATA_BOUNDARY",
         "closure_level": "CLOSED_FOR_LANE",
@@ -82002,7 +82002,7 @@
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_desorbo_ceylon_graphite_cp_audit.json",
-      "sha256": "5c6c183c6637e12bb9d8e1c55f555e53f022bd89312d6192256e83055e09d93d",
+      "sha256": "76ec7afbab04db3cf7a23a7e8988aefe88c91d8280a93728097cc0e0db0f89d5",
       "summary": {
         "status": "PASS_METADATA_ONLY_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_BOUNDARY",
         "closure_level": "CLOSED_FOR_LANE",

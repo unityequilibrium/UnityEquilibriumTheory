@@ -141,7 +141,7 @@
       "topic_controller": "ch_finite_k_replicate_temporal_acquisition_plan_defined_execution_open"
     }
   },
-  "generated_at": "2026-09-17T22:07:11+00:00",
+  "generated_at": "2026-09-17T23:02:06+00:00",
   "global_universe_closure": "UNRESOLVED",
   "limitations": [
     "No simulation, parameter fit, estimator rerun, or external-data comparison is performed.",
