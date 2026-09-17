@@ -1,7 +1,7 @@
 {
   "artifact": "uet_core_artifact_generator_review_queue",
   "canonical_path_authority": "docs/core/core_paths.py",
-  "generated_at": "2026-09-17T12:00:19+00:00",
+  "generated_at": "2026-09-17T16:23:55+00:00",
   "generator": "docs/scripts/audit/build_uet_core_artifact_generator_review_queue_v3.py",
   "records": [
     {
@@ -23299,7 +23299,7 @@
   "source_manifest": {
     "path": "docs/core/00_governance/uet_core_artifact_migration_manifest.json",
     "record_count": 593,
-    "sha256": "3cf89c9adfae5927fd706957587e9d003dde408a4565b8a8a60034766d64510b"
+    "sha256": "527533a742ffbbbb8a69a0e644f247c554f4210b25e973e34bda1048097ecfb1"
   },
   "summary": {
     "category_counts": {

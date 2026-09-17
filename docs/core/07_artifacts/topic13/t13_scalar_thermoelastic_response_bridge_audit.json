@@ -166,22 +166,22 @@
   ],
   "controlling_blocker": "physical_g_Phi_theta_Z_Phi_and_same_state_thermoelastic_inputs_missing",
   "source_hashes": {
-    "docs/core/03_lanes/thermal/uet_scalar_thermoelastic_response_bridge.py": "d45ff9b46d112d0376c58891d34a50175a0fe8fc083f174c9572928280190a69",
-    "docs/core/05_tests/regression/root/test_topic13_scalar_thermoelastic_response_bridge.py": "9b2a1dbe6374d9a6ad33cc454c7fbfe21c92052410efe2ddfcf9b93930f11505",
-    "docs/scripts/audit/audit_topic13_scalar_thermoelastic_response_bridge.py": "f5981ddc809f2284e9c4af92802b75e0537377914ca7ea454bd29015fde22b31"
+    "docs/core/03_lanes/thermal/uet_scalar_thermoelastic_response_bridge.py": "f379f657c597b8e453388fa4e96d1dd88d8dae8d6fa8d8629a133350f086306b",
+    "docs/core/05_tests/regression/root/test_topic13_scalar_thermoelastic_response_bridge.py": "824d7b0fe04af9ace67a1d6a71692e5cf0966c9fbc33cdf1bd7647d72681172a",
+    "docs/scripts/audit/audit_topic13_scalar_thermoelastic_response_bridge.py": "6da4a1d19a37977d9bdd09b2885bfdd51dd0ced6e65b52eac86c3e44a72b9abb"
   },
   "evidence_artifacts": [
     {
       "path": "docs/core/07_artifacts/topic13/t13_material_interface_factor_resolution_audit.json",
-      "sha256": "e2f21b5e28098e7b78f3b0a30372a582059689e37390e9dacb8d426b1fe96928"
+      "sha256": "4941162fde3cfad29c6fb9870b90d9820c112248f6a85637aefa1c91b4e5e287"
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
-      "sha256": "e98da60f2540bde8782fe48d131749e9a15f1dc1e6ea6fbde87623eb0090b657"
+      "sha256": "d8be3fc1d7fe8593c8a894ea9cd92431746d3acc4d2a0532baec0bd2a98efed6"
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_mp48_independent_graphite_cv_audit.json",
-      "sha256": "c8fde1c3eebef02a3787dd28491050912bb843ac5391ad298a4cce80c5b19a50"
+      "sha256": "1232a0a014f61aa50a3e035aa03d675c36bf8afcb2d6e5fcaee32ce1901491e8"
     }
   ],
   "dependency_unlocked": [

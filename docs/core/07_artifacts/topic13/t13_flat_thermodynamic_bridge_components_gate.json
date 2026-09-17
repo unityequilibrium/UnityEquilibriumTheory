@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-flat-thermodynamic-bridge-components-v1",
   "artifact": "t13_flat_thermodynamic_bridge_components_gate",
-  "generated_at": "2026-08-25",
+  "generated_at": "2026-09-18",
   "status": "PASS_SCOPED_T13_FLAT_COMPONENTS_WITH_EXTERNAL_INPUT",
   "claim_promotion": false,
   "major_result": {
@@ -45,8 +45,8 @@
     "data_role": "INTERNAL_FORMAL_COMPONENTS_PLUS_EXTERNAL_INPUT_COMPARATOR_NOT_CALIBRATION",
     "evidence_artifacts": [
       {
-        "path": "docs/core/artifacts/t13_uet_o2_thermodynamic_normal_component_audit.json",
-        "sha256": "3975ac974a3e265c14094b4b40a0fee86ddcee900fb1c2d534b97d3f38384719",
+        "path": "docs/core/07_artifacts/topic13/t13_uet_o2_thermodynamic_normal_component_audit.json",
+        "sha256": "1caee9d2d4590cad70acf6956d75812b5b79270d0d6ae738ea7a0fd3490a4a67",
         "summary": {
           "role": "action-derived finite-temperature normal component",
           "status": "PASS_ACTION_DERIVED_THERMODYNAMIC_NORMAL_COMPONENT_LANE",
@@ -55,8 +55,8 @@
         }
       },
       {
-        "path": "docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json",
-        "sha256": "42842e5e787a8de7007c026bf7c49dbeeeec7f48cabd403000f817e5c4a90c32",
+        "path": "docs/core/07_artifacts/topic13/t13_formal_thermodynamic_bridge_integration_audit.json",
+        "sha256": "6819e76863fd6c54fa70dd8f890eddbf7e137218f351d13d6c625e4d0f05533f",
         "summary": {
           "role": "formal cross-module thermodynamic bridge",
           "status": "PASS_FORMAL_T13_THERMODYNAMIC_BRIDGE_INTEGRATION",
@@ -65,8 +65,8 @@
         }
       },
       {
-        "path": "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json",
-        "sha256": "d9632a317270260f4d18be5d1cb8e7f0889ca9e3e9631ebe47aa32212320f4ba",
+        "path": "docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json",
+        "sha256": "78577cbe192cb9e68c70565284bb3f82a92941c2e2b2dc7633d5ece89492d1b7",
         "summary": {
           "role": "formal SK/KMS and entropy interface",
           "status": "PASS_NAMED_SK_KMS_ENTROPY_INTERFACE_CONTRACT",
@@ -75,8 +75,8 @@
         }
       },
       {
-        "path": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
-        "sha256": "9ea6f37eb43e353b8c89e42b1c3dd01c957b2063e41a09230483989accb2b3f4",
+        "path": "docs/core/07_artifacts/topic13/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+        "sha256": "905cc38dc027af573d21126d164d75d2060110a39573154239951bd0e61aca17",
         "summary": {
           "role": "action-derived entropy and heat-flux balance",
           "status": "PASS_ACTION_DERIVED_COVARIANT_ENTROPY_HEAT_FLUX_BALANCE_LANE",
@@ -85,8 +85,8 @@
         }
       },
       {
-        "path": "docs/core/artifacts/t13_kim_2018_graphite_green_kubo_external_input_audit.json",
-        "sha256": "13b2b2c677d2d4d0e1035df99b9b6ae40619040caa976f71baf1d406bb25b208",
+        "path": "docs/core/07_artifacts/topic13/t13_kim_2018_graphite_green_kubo_external_input_audit.json",
+        "sha256": "039277cde59fd168d088684e32d53fba9ba150030255708dcca4076c8f127df6",
         "summary": {
           "role": "source-locked external Green-Kubo comparator",
           "status": "PASS_SCOPED_SOURCE_LOCKED_EXTERNAL_GREEN_KUBO_INPUT",
@@ -105,8 +105,8 @@
         }
       },
       {
-        "path": "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json",
-        "sha256": "c3185da0a233894d7f338138bbe6acee287194e1852a80e40b0b5f6f2134e21b",
+        "path": "docs/core/07_artifacts/topic13/t13_xie_2026_holdout_access_audit.json",
+        "sha256": "7f848d3d6f6c9b5ab708587fb4190956c43ee46da50e4e5b732bc9285e9336ce",
         "summary": {
           "role": "locked holdout access audit",
           "status": "PASS_HOLDOUT_DATA_UNCONSUMED_METADATA_ONLY",

@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "artifact": "matter_space_report_alignment_gate",
-  "generated_at": "2026-09-17T13:06:45.752962+00:00",
-  "source_snapshot_at": "2026-09-17T13:05:07.217231+00:00",
+  "generated_at": "2026-09-17T17:15:08.951035+00:00",
+  "source_snapshot_at": "2026-09-17T17:15:07.622475+00:00",
   "status": "WARN",
   "alignment_status": "PASS_WITH_HISTORICAL_BASE_REPORT_WARN",
   "evidence_status": "POST_WAVE10_ADDENDUM_ALIGNED_BASE_SNAPSHOT_RETAINED",
@@ -14,27 +14,27 @@
   "input_artifacts": {
     "matter_space_program": {
       "path": "docs/core/07_artifacts/gates/matter_space_research_program_gate.json",
-      "sha256": "aabb4b5b3a78011ca69fdeda701a790ad9eac6c72765795b7c22a6e5b0ac5c37",
+      "sha256": "d2248626054f809a7f06b5005328c3b3720ddcb756874141a08619f4df7386db",
       "status": "BLOCKED",
       "controlling_blocker": "core_prearrival_leakage"
     },
     "gr_program": {
       "path": "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json",
-      "sha256": "9f646c956d9f3e6b7224a06f407bed48b2f8161b6645d9e7a2a158527d3c8b63",
+      "sha256": "9ae835cee2c87169bff498e348d048eb879b0f0098ff228bed5e71306a46eae1",
       "status": "BLOCKED",
       "program_stage": "O2_FINITE_DENSITY_EOS_AND_T0_SUPERFLUID_CONSTITUTIVE_VERIFIED",
       "controlling_blocker": "physical_kubo_coefficient_evidence_and_curved_3p1_solver_missing"
     },
     "noether_dependency": {
       "path": "docs/core/07_artifacts/gates/noether_phase_field_dependency_gate.json",
-      "sha256": "a13fea11f3f57bea7d13231361debcc1909313b22c8346becd224b77b3a668d1",
+      "sha256": "533950bbf54f13c999d4df4f60d813b2e4b6674e3c683b9b142531df6accfa55",
       "status": "BLOCKED",
       "evidence_status": "PARTIAL_HYDRODYNAMIC_STATE_COORDINATE_MAP",
       "controlling_blocker": "noether_charge_equation_of_state_and_covariant_transport_matching_missing"
     },
     "topic_0_11_dependency": {
       "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_noether_phase_field_dependency_gate.json",
-      "sha256": "a55151b80bc6ed27d7ac8dec643976a86cae3c0f2bc98dbfcada4c3efee38105",
+      "sha256": "a2744da85168c5e25f1b4c4cef3dfb1897fa8e689482a6c445b44323449bf70a",
       "status": "BLOCKED",
       "evidence_status": "CONDITIONAL_HYDRODYNAMIC_COORDINATE_COMPATIBILITY",
       "controlling_blocker": "topic_0_11_signed_noether_charge_eos_transport_matching_missing",
@@ -42,7 +42,7 @@
     },
     "topic_0_19_dependency": {
       "path": "docs/topics/0.19_Gravity_GR/Result/artifacts/0_19_core_gr_program_dependency_gate.json",
-      "sha256": "d212235a6d622ef8af31e3b40d4147e7693f2b006d579861d3a0df5b20dd0b08",
+      "sha256": "1bb41905d247b7eb004f1e67b064b237a12c6bdd4bd03273af2299c2ed319a9f",
       "status": "BLOCKED",
       "evidence_status": "CORE_CANDIDATE_GR_PARENT_AVAILABLE_TOPIC_PHYSICAL_VALIDATION_OPEN",
       "controlling_blocker": "topic_0_19_classical_gr_tests_and_covariant_completion_missing",
@@ -50,7 +50,7 @@
     },
     "topic_0_13_constraint": {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/0_13_core_thermodynamic_constraint_gate.json",
-      "sha256": "81451c7ae02f6e1e4bcc515a500b1b1db9743387111595d6d031b8c4725c55fd",
+      "sha256": "55b4f33cad840457afa7be41e65b6817101ea9372e732e3ad173d1572c2d0253",
       "status": "BLOCKED",
       "evidence_status": "THERMODYNAMIC_CONSTRAINT_EXPORTS_AVAILABLE_CORE_CLOSURE_NOT_DERIVED",
       "controlling_blocker": "topic_0_13_constraint_only_eos_transport_entropy_bridge_missing",
@@ -60,18 +60,18 @@
   "input_documents": {
     "base_report": {
       "path": "docs/core/08_history/research_notes/MATTER_SPACE_RESEARCH_REPORT.md",
-      "sha256": "f1545ca8b4a9fcc30722fe543f7567992cf4c12bcb454d9c76235542540e06c0",
-      "bytes": 23139
+      "sha256": "51be0280e86a025a6ec1cc74ae61694af0311102c5ae97d473baf7c9487d4d69",
+      "bytes": 22663
     },
     "addendum": {
       "path": "docs/core/08_history/research_notes/MATTER_SPACE_RESEARCH_REPORT_ADDENDUM_2026-07-23.md",
-      "sha256": "008161462e17df0b6376efe60fff87d1f01ffe0efc0a1a666c4d88782bed379d",
-      "bytes": 11163
+      "sha256": "d11bec3ccd951b6476062bbf557ad80b7f733e883334cb2b92de4af0684f1d9f",
+      "bytes": 10963
     },
     "topic_readiness": {
       "path": "docs/meta/topic_readiness.json",
-      "sha256": "b779539bdfd67032111fd14ee5350e5746e9d9b44bcbb29c867ce54f8575cbad",
-      "bytes": 28077
+      "sha256": "af09c78c14c872b96617fe4fe85d7ffd74a878478bf516f925cea3f2cc69693e",
+      "bytes": 27377
     }
   },
   "canonical_topics": {

@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-mp48-independent-graphite-cv-audit-v1",
   "artifact": "t13_mp48_independent_graphite_cv_audit",
-  "generated_at": "2026-09-17",
+  "generated_at": "2026-09-18",
   "status": "PASS_INDEPENDENT_NUMERIC_CV_WITH_EPISTEMIC_ENVELOPE",
   "input_mode": "PACKAGE_DECLARATION_METADATA_ONLY",
   "raw_payload_available": false,
@@ -23,7 +23,7 @@
     "evidence_artifacts": [
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/mp48_independent_graphite_cv_source_package.json",
-        "sha256": "fd963d3db5fb3c133f02ec33f5b3aa4b36e312903da53da1cd810b215c1f8517"
+        "sha256": "86f5d5015b5bd0172bc2bfae64271955c56470650bdb6b8459bb1280e5dbc3cf"
       },
       {
         "path": "docs/core/07_artifacts/topic13/t13_mp48_independent_graphite_cv_audit.json"

@@ -101,9 +101,9 @@
   ],
   "controlling_blocker": "normal_umklapp_split_or_admissible_full_collision_operator_missing",
   "source_hashes": {
-    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_pbte_run_m12x12x6_summary.json": "726370c72df0f8821ad3505d3dd270b1f90f093d28f44a0d55d6515030f740d0",
-    "docs/core/07_artifacts/topic13/t13_calorine_full_lbte_stability_boundary_audit.json": "8b5de32a8c33b0a646c8e26faf263585d98bcb939df8adb78b1b16f9d832859d",
-    "docs/scripts/audit/audit_topic13_calorine_lattice_interface_inputs.py": "b38f99387129e854249832573b4700c5c4d510006de8ebda45fce3d9989e367e",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_pbte_run_m12x12x6_summary.json": "946826b6bc0fc295c8c190b0e15442f758ff78786a1ba49c6815b36eb1d06096",
+    "docs/core/07_artifacts/topic13/t13_calorine_full_lbte_stability_boundary_audit.json": "ef130d620eddd3697ceb93f83de9bddda6313c6def57159a9acbc508ac0ca910",
+    "docs/scripts/audit/audit_topic13_calorine_lattice_interface_inputs.py": "eecfc7a0f9f8fefc17af1670b216c60e299b2893453973694a5f8ac46a1d5dd5",
     "docs/core/05_tests/regression/root/test_topic13_calorine_lattice_interface_inputs.py": "a15217d3b22ed031193efd4105841a0e7084cf73aa9d6e9804e5512b12257c4c"
   },
   "locked_source_declarations": {
@@ -118,11 +118,11 @@
   "evidence_artifacts": [
     {
       "path": "docs/core/07_artifacts/topic13/t13_lattice_momentum_relaxing_heat_parent_audit.json",
-      "sha256": "6974fb64948fc38cc831ac6e53474b6ab22f10b30a32fa53ea67d854b0116f21"
+      "sha256": "b72c4715ca747fb53ddd3a37658b39e1fcf1430630185e68293c278ad169f80a"
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_continuum_action_umklapp_direct_route_no_go.json",
-      "sha256": "5df3552791b3ad7971f4cc885d1fa369506962859f6551ac07101a2e3864abea"
+      "sha256": "739581d3ccf6889b195e34484d3030f20c33b918fadc0997989ee2812aa3f8b3"
     }
   ],
   "dependency_unlocked": [

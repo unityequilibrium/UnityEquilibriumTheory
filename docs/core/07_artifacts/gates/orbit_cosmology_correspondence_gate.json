@@ -1,27 +1,27 @@
 {
   "schema_version": "1.0",
   "artifact": "orbit_cosmology_correspondence_gate",
-  "generated_at": "2026-08-01T16:27:50.032869+00:00",
+  "generated_at": "2026-09-17T17:04:07.108944+00:00",
   "status": "BLOCKED",
   "local_baseline_status": "PASS_WITH_BLOCKED_UPSTREAM_AND_CLAIM_BOUNDARY",
   "inputs": {
     "orbital_baseline": {
-      "path": "docs/core/artifacts/relational_two_body_baseline_verification.json",
-      "sha256": "616775b8efa16afa92838cbf5ce5d80b529ade096ec20d9954df60d2276a5039",
+      "path": "docs/core/07_artifacts/verification/relational_two_body_baseline_verification.json",
+      "sha256": "a6574f50395f876f6f61438fd2761350e8721fc8e325f445e5d0a32bb8da1933",
       "status": "PASS"
     },
     "gr_closed_limit": {
-      "path": "docs/core/artifacts/gr_closed_limit_verification.json",
-      "sha256": "f9b5f1e3e5df7424767ceefa2196b11056a1620452a4ef440a7ce1800c340d23",
+      "path": "docs/core/07_artifacts/verification/gr_closed_limit_verification.json",
+      "sha256": "3ad94eb7a6999702988ded202ee61f10417f356601896263b717c9e363f0a3ae",
       "status": "PASS"
     },
     "gr_program_gate": {
-      "path": "docs/core/artifacts/uet_gr_research_program_gate.json",
-      "sha256": "55f822f280c824c0b03398a12626a2544d71437ec588907b44343023658a7309",
+      "path": "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json",
+      "sha256": "9ae835cee2c87169bff498e348d048eb879b0f0098ff228bed5e71306a46eae1",
       "status": "BLOCKED"
     },
     "cosmological_contract": {
-      "path": "docs/core/artifacts/uet_cosmological_open_system_trace_contract.json",
+      "path": "docs/core/07_artifacts/archive/uet_cosmological_open_system_trace_contract.json",
       "sha256": "2c1f663d6e881e8a0ba163efefd0d4e95d372d0c8c49422cdaaaca1e3f413c6a",
       "status": "CANDIDATE_GLOBAL_COSMOLOGICAL_INTERPRETATION_BLOCKED_FOR_CLOSURE"
     }

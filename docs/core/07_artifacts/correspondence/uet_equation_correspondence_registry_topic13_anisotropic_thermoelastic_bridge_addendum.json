@@ -93,7 +93,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/topic13/t13_anisotropic_thermoelastic_response_bridge_audit.json",
-          "sha256": "1c08907d381a4c40497e5cfd240e714e24107d981e995cc1c7d8c8e595579bf1"
+          "sha256": "97f8deb9e918175c2daeb9e6a5cae0e5caa9249d3f95ccc83e6253621540b7d2"
         }
       ],
       "downstream_dependencies": [

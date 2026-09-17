@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-phi-energy-anchor-identifiability-no-go-v1",
   "artifact": "t13_phi_energy_anchor_identifiability_no_go",
-  "generated_at": "2026-08-21",
+  "generated_at": "2026-09-18",
   "status": "PASS_SCOPED_NO_GO_NORMALIZED_PHI_ENERGY_ANCHOR",
   "major_result": {
     "major_result_id": "T13_PHI_ENERGY_ANCHOR_IDENTIFIABILITY_NO_GO",
@@ -33,15 +33,15 @@
     "data_role": "INTERNAL_STRUCTURAL_AUDIT_NO_TARGET_OR_HOLDOUT",
     "evidence_artifacts": [
       {
-        "path": "docs/core/artifacts/uet_active_lane_units_observable_register.json",
-        "sha256": "cc4058ef75c2cdebf2ed99d7da34f57aa58b235c17dd469ca11332f026fab781"
+        "path": "docs/core/07_artifacts/archive/uet_active_lane_units_observable_register.json",
+        "sha256": "eea8cba09f65c341f5c28a20b3f55eabdeed6c04a1abfe9fb85f0eb4a72784d6"
       },
       {
-        "path": "docs/core/artifacts/t13_energy_response_bridge_audit.json",
-        "sha256": "9e2e6b43ffdd744588bd0ff206c0a178915ca17ec1c43493cee7bab1c3ee07e8"
+        "path": "docs/core/07_artifacts/topic13/t13_energy_response_bridge_audit.json",
+        "sha256": "3ec9c33acb3802abe4158ce8922aee88a37b4454425bddc0efcb8244e9732151"
       },
       {
-        "path": "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json"
+        "path": "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json"
       }
     ],
     "verification_status": "PASS_SCOPED_NO_GO_NORMALIZED_PHI_ENERGY_ANCHOR",

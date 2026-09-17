@@ -1,7 +1,7 @@
 {
   "schema_version": "particle-dirac-program-gate-v1",
   "artifact": "particle_dirac_program_gate",
-  "generated_at": "2026-08-02",
+  "generated_at": "2026-09-18",
   "status": "DEFERRED_BLOCKED",
   "audit_status": "PASS",
   "evidence_status": "NOT_ESTABLISHED",

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_all_waves_completion_audit",
-  "generated_at": "2026-09-17",
+  "generated_at": "2026-09-18",
   "audit_status": "PASS_WITH_FOUNDATION_PHYSICS_BLOCKED",
   "status": "PROGRAM_CONTROL_CLOSED_FOUNDATION_PHYSICS_NOT_CLOSED",
   "objective": "close every planned research wave as a bounded project-control lane without promoting blocked physics",
@@ -628,7 +628,7 @@
   },
   "foundation_boundary": {
     "status": "BLOCKED",
-    "claim_ceiling": "candidate normalized effective models and explicitly labelled internal/provisional diagnostics; Wave 1 room coordination does not promote physical closure",
+    "claim_ceiling": "candidate normalized effective models and explicitly labelled internal/simulation diagnostics; no universal C, mass, particle or global-cosmology claim",
     "physical_promotion_allowed": false,
     "next_controller": "derive a dimensional Phi/energy anchor or source-lock independent alpha_Phi_K with uncertainty; source-normalize TTG rows; execute the locked Gaia query and archive/hash the returned 3D table; then close selection/mass-calibration/uncertainty/holdout gates before rerunning selected 0.11/0.13 lanes"
   },

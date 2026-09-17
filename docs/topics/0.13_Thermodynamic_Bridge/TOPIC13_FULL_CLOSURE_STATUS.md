@@ -58,7 +58,7 @@ ROOT_INPUT_PACKAGES:
 | `T13_INPUT_PHYSICAL_TRANSPORT_MATCH` | `BLOCKED` | physical_uet_kubo_record, physical_sk_transport_match, physical_entropy_production_mapping, physical_heat_flux_entropy_map | physical_coefficient_record, finite_temperature_transport_completion, physical_anchor_supplied, physical_heat_flux_entropy_link |
 
 MINIMAL_INPUT_CONTRACT:
-- docs/core/07_artifacts/topic13/t13_full_closure_minimal_input_contract.json; SHA-256 5f44455d3d6d634c096b8ad85663bb401748e9b05a8cadb96885d510be142b11.
+- docs/core/07_artifacts/topic13/t13_full_closure_minimal_input_contract.json; SHA-256 6fbf0218e66700d0804dce1c07d2b6a08e3013c7568e07df46ad5b6443337aa7.
 - This is a field-level evidence admission contract; it does not create a source value or promote a comparator.
 
 DEPENDENCY_UNLOCKED:
@@ -100,4 +100,4 @@ CLAIM_BOUNDARY:
 RERUN_POLICY:
 - Do not rerun the same numeric gates as a substitute for missing evidence. Rerun when an accepted source, calibration record, physical transport record, or its hash changes.
 
-Generated UTC: `2026-09-17T15:58:52.086643+00:00`.
+Generated UTC: `2026-09-17T17:00:52.642126+00:00`.

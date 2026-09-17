@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-oxford-tgs-numeric-rows-audit-v1",
   "artifact": "t13_oxford_tgs_numeric_rows_audit",
-  "generated_at": "2026-09-17",
+  "generated_at": "2026-09-18",
   "input_mode": "METADATA_ONLY_PUBLIC_BOUNDARY",
   "raw_payload_available": false,
   "status": "PASS_OXFORD_TGS_NUMERIC_ROWS_METADATA_BOUNDARY",
@@ -32,7 +32,7 @@
     "evidence_artifacts": [
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/oxford_tgs_figure1_numeric_rows_manifest.json",
-        "sha256": "0a7e948e664a26ffdbd0bcf7827beea77cbd64b697cdbb1694e29a11880b13ac"
+        "sha256": "a5947efa86f43e30ed2416fb3fe97954599a32b91e906dc5ab604a58c79e32a5"
       }
     ],
     "verification_status": "PASS_OXFORD_TGS_NUMERIC_ROWS_METADATA_BOUNDARY",

@@ -155,30 +155,30 @@
   ],
   "controlling_blocker": "new_Phi_strain_operator_or_independent_microscopic_match_missing",
   "source_hashes": {
-    "docs/core/03_lanes/thermal/uet_material_interface_factor_resolution.py": "e6e4633226e9561084c673884aa77d260476dad8a8294afadb088a8376e13cc0",
-    "docs/core/05_tests/regression/root/test_topic13_material_interface_factor_resolution.py": "e05bd204026de40d99bd1e1ebe5dce19bf760d803fbb6ffd537754a2a6332495",
-    "docs/scripts/audit/audit_topic13_material_interface_factor_resolution.py": "0415293d199d628aa95d2a85fafdfcea6210b11643222f70d8f315ceac90420c"
+    "docs/core/03_lanes/thermal/uet_material_interface_factor_resolution.py": "7ebcbed3f6c2056a06e393afd9cba2c81614237bf924da0dc4f54b42ee9b3ce1",
+    "docs/core/05_tests/regression/root/test_topic13_material_interface_factor_resolution.py": "416021577ce4772d1587912268a884b125534a1a930e174cdfef1b5f82b70384",
+    "docs/scripts/audit/audit_topic13_material_interface_factor_resolution.py": "49616ef557afeb4d916eaba2f7162054765bb54ecab5ec5b365d1a9b456117f4"
   },
   "evidence_artifacts": [
     {
       "path": "docs/core/07_artifacts/topic13/t13_uet_material_lattice_interface_contract_audit.json",
-      "sha256": "122ae24ba61f244f56c40e55c8162a552d14022f8191df2e2a8e94a8c334c4c8"
+      "sha256": "58d55e76d7292c76462510691b1b806c0ad88a21412df978ae65a95089dde057"
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_covariant_field_normalization_identifiability_no_go.json",
-      "sha256": "41cda98a01b282fa5c2789ef93ce2f249041550e40763cdcb083658712c564ac"
+      "sha256": "52fd700aa1de6009f3959f220dcc3b7b3ad43556357cc54e1f08fa793f82d786"
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_covariant_matter_coupling_normalization_no_go.json",
-      "sha256": "bdda0a764af624ffb7b7c8bb04d1cb1bb44539a0159e4ca8ba9b825473e09675"
+      "sha256": "14e886fb0a3824f85ab35969e003f3f3d9135e898006696001a53f90c656245d"
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_uet_o2_action_thermal_observable_bridge_audit.json",
-      "sha256": "7ba49d3f629c91f3f88dda6ad717d8928e58439de7517a5979f0a465b9f52585"
+      "sha256": "7983995dab41126e05f146f5c21512aa5c88b5f8cae7ba6d68a52e61def64ce3"
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_calorine_lattice_interface_input_boundary.json",
-      "sha256": "7fe294c31f3f2e15d56784e97d67c53db749b256ee829550b08e7cd1a448bfd0"
+      "sha256": "4ff20fcf8c7d33fe47808d9fb87045ca71a782751f6cc6667b9edca9eec22c7b"
     }
   ],
   "dependency_unlocked": [

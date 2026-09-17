@@ -1,12 +1,12 @@
 {
   "schema_version": "uet-major-result-dependency-unlock-v1",
   "artifact": "uet_major_result_dependency_unlock_gate",
-  "generated_at": "2026-09-17",
+  "generated_at": "2026-09-18",
   "status": "BLOCKED_DOWNSTREAM_MAJOR_RESULTS",
   "claim_promotion": false,
   "register": {
     "path": "docs/core/07_artifacts/gates/uet_major_result_closure_register.json",
-    "sha256": "c4ca18070402291174f510cca0cab85e975a37b63eea4922da88332783e7df4c"
+    "sha256": "41888f823b1deb3b4cc3a01139808d259b476317ed17f3f163084e6007ba3b4c"
   },
   "decisions": {
     "TOPIC_0_11_CHAOS_DIAGNOSTIC_ROLLOUT": {
@@ -139,7 +139,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/gates/core_curved_3p1_parent_gate.json",
-          "sha256": "9ea332da2e40b4f354982c8830509995db59539c280af62e9b3f6f7616db98c4",
+          "sha256": "2097380372c95acc150097f448f0ba8e0aabeeb001512a77c29730fa6e99209b",
           "summary": {
             "status": "PARTIAL_CURVED_3P1_GH_PERIODIC_PRESCRIBED_MATTER_READY",
             "major_result_id": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
@@ -184,7 +184,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/verification/curved_3p1_adm_constraint_interface_audit.json",
-          "sha256": "c361231093dc3bd4ec41607e9c8824565a43df28f40857c960e5514ceda4b685",
+          "sha256": "0d2a157871fdc2f6cf10522fd05ab67c055d2f287f0434bd232af174a98ce6d2",
           "summary": {
             "status": "PASS_CURVED_3P1_ADM_CONSTRAINT_INTERFACE",
             "major_result_id": "CORE_CURVED_3P1_ADM_CONSTRAINT_INTERFACE_READY",
@@ -238,7 +238,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/verification/curved_3p1_geometry_operator_verification.json",
-          "sha256": "a3859d10065d640a4228f34f3d512ffb00493a038ae3cb146dd26ba161ba2521",
+          "sha256": "63b6e524e4f020471b79f99cc805a14582ee096d16642c6ba7b2804677c7fdbe",
           "summary": {
             "status": "PASS_CURVED_3P1_GEOMETRY_OPERATOR",
             "major_result_id": "CORE_CURVED_3P1_GEOMETRY_OPERATOR_READY",
@@ -290,7 +290,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/verification/curved_3p1_adm_evolution_operator_verification.json",
-          "sha256": "045d06ad417f7a98b76a305774f00cddeea85af594a5dcc86be407983e66e8b4",
+          "sha256": "a1e2046d8c0f606e7153181a62f13e51548def769f11c9759253c457b2592747",
           "summary": {
             "status": "PASS_ADM_EVOLUTION_RHS_OPERATOR_ONLY",
             "major_result_id": "CORE_CURVED_3P1_ADM_EVOLUTION_RHS_READY",
@@ -328,7 +328,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/archive/curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json",
-          "sha256": "3e2ff6ff780238dd4e3342f3f10e9216f36dc9fd053afde1cbbaf7caf73fc0f9",
+          "sha256": "8111d182538c228687805ce54e59d00b828d5e12b1937c6b44c517f74e54e1e0",
           "summary": {
             "status": "CLOSED_AS_NO_GO_FIXED_GAUGE_ADM_NOT_STRONGLY_HYPERBOLIC",
             "major_result_id": "CORE_CURVED_3P1_FIXED_GAUGE_ADM_HYPERBOLICITY_NO_GO",
@@ -375,7 +375,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/verification/curved_3p1_gh_principal_system_verification.json",
-          "sha256": "3bdb66e5fa3b582ff6610c076a4aa21961e7098ff5994b522e80044eff90e481",
+          "sha256": "07c6cc69c2e5c6f00b298442dd09698fc11a4c202646b7a3703093c7d4b05afb",
           "summary": {
             "status": "PASS_GH_PRINCIPAL_CHARACTERISTIC_SYSTEM",
             "major_result_id": "CORE_CURVED_3P1_GH_PRINCIPAL_SYSTEM_READY",
@@ -418,7 +418,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/verification/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json",
-          "sha256": "38bc6ba266f18c1b83245a1c00725d4acba377742cc5e3b53bc3b9074703c0df",
+          "sha256": "e7cbf3f7c6b6801bb2c79b4620cc0dfc9636e4bdd0c9928d9f0b67fde0eebf4d",
           "summary": {
             "status": "PASS_GH_NONLINEAR_VACUUM_RHS",
             "major_result_id": "CORE_CURVED_3P1_GH_NONLINEAR_VACUUM_RHS_READY",
@@ -463,7 +463,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/verification/curved_3p1_gh_time_evolution_verification.json",
-          "sha256": "8cecc689130d32db108f49764563d5b85471a3ef2f6f424e719bd1539de7b175",
+          "sha256": "0ab859462141c05fdb738c982ca6c5edcb759fcf24789cae50765944a415898d",
           "summary": {
             "status": "PASS_GH_PERIODIC_VACUUM_TIME_EVOLUTION",
             "major_result_id": "CORE_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY",
@@ -509,7 +509,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/verification/curved_3p1_topic13_matter_wiring_verification.json",
-          "sha256": "8f0db26cb7cb757081a5c91c9051eafd97963b91172367c6d90746a22609c5bd",
+          "sha256": "30b55e204e5b9d72fe7db939d3717cb16a6b65ef307a541b581e38e669a273bb",
           "summary": {
             "status": "PASS_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING",
             "major_result_id": "CORE_CURVED_3P1_TOPIC13_PRESCRIBED_MATTER_WIRING_READY",
@@ -534,15 +534,15 @@
     "claim_boundary": "ADM constraint, periodic spatial geometry, RHS operator, and fixed-gauge no-go, GH principal/nonlinear RHS, periodic vacuum evolution, and prescribed Topic 13 matter-source progress only; the parent is not CLOSED_FOR_CORE and Gravity remains blocked"
   },
   "topic13_partial_evidence": {
-    "register_sha256": "c4ca18070402291174f510cca0cab85e975a37b63eea4922da88332783e7df4c",
+    "register_sha256": "41888f823b1deb3b4cc3a01139808d259b476317ed17f3f163084e6007ba3b4c",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",
     "full_core_unlock": false,
-    "reason": "Topic 13 has lane-level causal, field-normalization, beta, and collective-response EOS contracts; none supplies physical coefficient provenance, an SI Phi anchor, alpha_Phi_K, transport, KMS, entropy production, or full closure.",
+    "reason": "Formal beta, Phi_E, EOS, and SK/KMS/entropy interfaces are now composed into a bounded lane result; physical Phi normalization, independent alpha, source-backed beta, Kubo coefficients, and full closure remain open.",
     "phi_energy_anchor_no_go": {
       "path": "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json",
-      "sha256": "ce0837792cd63918dc371f64fa49801bfb0dd0f715264c8557cf54f5dcbe9059",
+      "sha256": "53d2821aeba92fe5453dfbf6b891ca340291b4559e7e65525d4752c387c8e123",
       "summary": {
         "status": "PASS_SCOPED_NO_GO_NORMALIZED_PHI_ENERGY_ANCHOR",
         "full_core_unlock": false,
@@ -551,7 +551,7 @@
     },
     "covariant_action_si_anchor_route": {
       "path": "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json",
-      "sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52",
+      "sha256": "7ce1d17773eedb29ffd9260fd2a04f927acb3af74384fd90d2adc2d9a57c0e2b",
       "summary": {
         "status": "PASS_NATURAL_UNIT_ROUTE_IDENTIFIED_SI_MAPPING_BLOCKED",
         "full_core_unlock": false
@@ -559,7 +559,7 @@
     },
     "covariant_field_normalization_no_go": {
       "path": "docs/core/07_artifacts/topic13/t13_covariant_field_normalization_identifiability_no_go.json",
-      "sha256": "41cda98a01b282fa5c2789ef93ce2f249041550e40763cdcb083658712c564ac",
+      "sha256": "52fd700aa1de6009f3959f220dcc3b7b3ad43556357cc54e1f08fa793f82d786",
       "summary": {
         "status": "PASS_SCOPED_NO_GO_COVARIANT_FIELD_NORMALIZATION",
         "full_core_unlock": false
@@ -567,7 +567,7 @@
     },
     "causal_branch_selection": {
       "path": "docs/core/07_artifacts/topic13/t13_causal_branch_selection_audit.json",
-      "sha256": "5e4a7ed55bdcb2e7779b0ec9bd45ca24f935bdcab2d0c50fa91d525103d1c8eb",
+      "sha256": "0b541bec030e50b28e91ad53396ca8b848c72ea72794c92fb3f62bfd847a9629",
       "summary": {
         "status": "PASS_CLOSED_AS_NO_GO_WITH_NAMED_COUPLED_BRANCH",
         "full_core_unlock": false,
@@ -576,7 +576,7 @@
     },
     "beta_symbol_separation_noncircularity_no_go": {
       "path": "docs/core/07_artifacts/topic13/t13_beta_symbol_separation_noncircularity_audit.json",
-      "sha256": "a3da7d05516f0d6f6deb8552be00a49d3817cfe684f2a677a907ebfa2b170576",
+      "sha256": "4d0c961696d0fd8a86839df24f53cdceda8d1a86e1ea330e77f8b54bd68798ec",
       "summary": {
         "status": "PASS_SCOPED_NO_GO_BETA_SYMBOL_IDENTIFICATION",
         "full_core_unlock": false
@@ -584,7 +584,7 @@
     },
     "thermal_response_beta_contract": {
       "path": "docs/core/07_artifacts/topic13/t13_thermal_response_beta_contract_audit.json",
-      "sha256": "fea0ca9bacd6497f67292a015f651d0183f65b150469eb0be533bdf91adee2c8",
+      "sha256": "fad34747b2b6fda634aa7b96c5dccf3d2081d46d04b985ebbe53ba8ecf532336",
       "summary": {
         "status": "PASS_NAMED_FINITE_TEMPERATURE_BETA_CONTRACT",
         "full_core_unlock": false
@@ -592,7 +592,7 @@
     },
     "collective_response_eos_stability_contract": {
       "path": "docs/core/07_artifacts/topic13/t13_collective_response_eos_stability_audit.json",
-      "sha256": "5bcdbfdd4f14b6d28ce6bdd737020030b85add2f5f0a38db22e9e36d9c77772d",
+      "sha256": "3a61b1e5c517aa0d16063e1506a0e2fbe26105649a73c7527e0b54f658fdeeda",
       "summary": {
         "status": "PASS_NAMED_COLLECTIVE_RESPONSE_EOS_STABILITY_CONTRACT",
         "full_core_unlock": false
@@ -600,7 +600,7 @@
     },
     "phi_e_reference_normalization": {
       "path": "docs/core/07_artifacts/topic13/t13_phi_e_reference_normalization_audit.json",
-      "sha256": "846745b7228f646a72bb4cec3cbc0d16dbe629da5b084f55955d4ba1a03db270",
+      "sha256": "f011d4ae7787a5a482d26f92ceed961bef53f8fe91c6fb6f3e794af67be14faf",
       "summary": {
         "status": "PASS_NAMED_PHI_E_REFERENCE_NORMALIZATION",
         "full_core_unlock": false
@@ -608,16 +608,17 @@
     },
     "base_phi_independent_calibration_requirement": {
       "path": "docs/core/07_artifacts/topic13/t13_base_phi_independent_calibration_requirement.json",
-      "sha256": "0c4aaa38c138f9818c1a1e81a93dc7512f859c0d9095e238d2c12e7a3cf31c05",
+      "sha256": "23f34a2aa8cc9b76d06620bc873967b68905ebbf27c8c84d859122ca24e3af75",
       "summary": {
         "status": "PASS_OPEN_CALIBRATION_REQUIREMENT",
-        "full_core_unlock": false
+        "full_core_unlock": false,
+        "closure_level": "OPEN"
       }
     },
     "base_phi_calibration_controller": "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
     "sk_kms_entropy_interface": {
       "path": "docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json",
-      "sha256": "d9632a317270260f4d18be5d1cb8e7f0889ca9e3e9631ebe47aa32212320f4ba",
+      "sha256": "442bf7fc590cca3986ec8be3bb7f82736e9944afde73d243192427cd0cea45ee",
       "summary": {
         "status": "PASS_NAMED_SK_KMS_ENTROPY_INTERFACE_CONTRACT",
         "full_core_unlock": false,
@@ -807,7 +808,7 @@
     "uet_o2_condensate_fluctuation_spectrum_full_core_unlock": false,
     "formal_non_circular_bridge_boundary": {
       "path": "docs/core/07_artifacts/topic13/t13_formal_bridge_boundary_audit.json",
-      "sha256": "69d5480c900b21476378cb787b0e49198b8451bb7c7a8df2dbbda42284dfcab9",
+      "sha256": "37a1b051a0b5439657fe696149564e4b8ea9d188707895e67cd86cdcbbe56d68",
       "summary": {
         "status": "PASS_FORMAL_NONCIRCULAR_BRIDGE_BOUNDARY",
         "major_result_id": "T13_FORMAL_NONCIRCULAR_BRIDGE_BOUNDARY",
@@ -2659,7 +2660,7 @@
     },
     "covariant_matter_coupling_normalization_no_go": {
       "path": "docs/core/07_artifacts/topic13/t13_covariant_matter_coupling_normalization_no_go.json",
-      "sha256": "bdda0a764af624ffb7b7c8bb04d1cb1bb44539a0159e4ca8ba9b825473e09675",
+      "sha256": "14e886fb0a3824f85ab35969e003f3f3d9135e898006696001a53f90c656245d",
       "summary": {
         "status": "PASS_SCOPED_NO_GO_COVARIANT_MATTER_COUPLING_NORMALIZATION",
         "full_core_unlock": false
@@ -2667,7 +2668,7 @@
     },
     "ding_experimental_heating_input_boundary": {
       "path": "docs/core/07_artifacts/topic13/t13_ding_experimental_heating_input_boundary_audit.json",
-      "sha256": "6e39bbf42037971dc2b5a1068df14835dd0b4689f26a60fff95bc26810b8b008",
+      "sha256": "a7d207da4edd6799b916548ce309daff614abb58884880cdd83a476f4e0e66ee",
       "summary": {
         "status": "PASS_SCOPED_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY",
         "closure_level": "CLOSED_FOR_LANE",
@@ -2717,7 +2718,7 @@
     "evidence_artifacts": [
       {
         "path": "docs/core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json",
-        "sha256": "13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418",
+        "sha256": "8cfb5389380b90315414fc80ee759de1de6577d417b5928852021ae5232875c9",
         "summary": {
           "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
           "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
@@ -2728,7 +2729,7 @@
     "claim_boundary": "CLOSED_FOR_CORE is an internal, lane-bounded composition result. It is not a prediction of the imported He-4 coefficients, not graphite TTG validation, not a complete two-fluid transport tensor, not curved 3+1, and not global UET closure.",
     "closure_matrix": {
       "path": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
-      "sha256": "b03ce5cc40c7529a2673fbf5f29b2d4c46a7ff3532a919849d719aae7879c592",
+      "sha256": "4ae07563a4219b377c45a5711d7834f4e5e545c7a1cb937d1a21aabb37f0278d",
       "full_core_unlock": true,
       "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
       "required_major_result_count": 10,
@@ -2749,6 +2750,6 @@
       },
       "full_topic_ready": true
     },
-    "register_sha256": "43e97ccc85cb6ebfa414a97561b22a3721da9153ca1576e40e1e351739446499"
+    "register_sha256": "b13473a128e7ef4b0353d0a15f43a7ed381adf1fa308e85f30be6aee404406f7"
   }
 }

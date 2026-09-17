@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_adm_constraint_interface_audit",
-  "generated_at": "2026-09-17T15:58:28.102122+00:00",
+  "generated_at": "2026-09-17T16:59:13.024434+00:00",
   "topic": "docs/core curved 3+1 parent",
   "version": "adm-constraint-interface-v1",
   "benchmark_role": "internal analytic constraint gate",
@@ -47,7 +47,7 @@
   },
   "source": {
     "path": "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json",
-    "sha256": "5540850bde07a4c41b011b8c181ca5700e4f89519c1a8eadd22a3c80e79ef760",
+    "sha256": "d989b9dd637828dd64f975eaf1f744163ac71e362bde71e46e86e599eced1754",
     "identity": {
       "schema_version": "1.0",
       "source_id": "gourgoulhon_2007_3p1_formalism",

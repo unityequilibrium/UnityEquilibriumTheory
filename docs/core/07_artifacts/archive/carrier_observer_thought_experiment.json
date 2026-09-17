@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0",
   "artifact": "carrier_observer_thought_experiment",
-  "generated_at": "2026-08-01T17:47:42.238087+00:00",
+  "generated_at": "2026-09-17T17:04:05.690103+00:00",
   "status": "SIMULATION_ONLY",
   "evidence_class": "internal_newtonian_finite_signal_comparator",
   "source_artifact": {
-    "path": "docs/core/artifacts/relational_two_body_baseline_verification.json",
-    "sha256": "616775b8efa16afa92838cbf5ce5d80b529ade096ec20d9954df60d2276a5039",
+    "path": "docs/core/07_artifacts/verification/relational_two_body_baseline_verification.json",
+    "sha256": "a6574f50395f876f6f61438fd2761350e8721fc8e325f445e5d0a32bb8da1933",
     "audit_status": "PASS"
   },
   "events": {

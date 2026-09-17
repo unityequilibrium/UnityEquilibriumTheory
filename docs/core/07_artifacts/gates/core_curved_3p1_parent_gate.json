@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "core_curved_3p1_parent_gate",
-  "generated_at": "2026-09-17T15:58:28.102122+00:00",
+  "generated_at": "2026-09-17T16:59:13.024434+00:00",
   "status": "PARTIAL_CURVED_3P1_GH_PERIODIC_PRESCRIBED_MATTER_READY",
   "major_result": {
     "major_result_id": "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY",
@@ -84,83 +84,83 @@
   "evidence_artifacts": [
     {
       "path": "docs/core/07_artifacts/verification/curved_3p1_adm_constraint_interface_audit.json",
-      "sha256": "c361231093dc3bd4ec41607e9c8824565a43df28f40857c960e5514ceda4b685"
+      "sha256": "0d2a157871fdc2f6cf10522fd05ab67c055d2f287f0434bd232af174a98ce6d2"
     },
     {
       "path": "docs/core/07_artifacts/correspondence/curved_3p1_adm_constraint_formula_audit.json",
-      "sha256": "a7b31efa3e4dcfd57d342c4090f892ee92946122c7696c8078d02aaed4506a0d"
+      "sha256": "c968cb0db1e8140b39d14f855dc49153920ed5310c4badaa138ff2907b1a0081"
     },
     {
       "path": "docs/core/07_artifacts/verification/curved_3p1_geometry_operator_verification.json",
-      "sha256": "a3859d10065d640a4228f34f3d512ffb00493a038ae3cb146dd26ba161ba2521"
+      "sha256": "63b6e524e4f020471b79f99cc805a14582ee096d16642c6ba7b2804677c7fdbe"
     },
     {
       "path": "docs/core/07_artifacts/correspondence/curved_3p1_geometry_operator_formula_audit.json",
-      "sha256": "3a730a982b2ca1571b2f9e79dc8015994990ce3876b6803d1341bae6b52bd8f7"
+      "sha256": "62d60c25bff6b6d64ddb49b0d52584750747612f3ad640d3c20c27eda8ff1433"
     },
     {
       "path": "docs/core/07_artifacts/verification/curved_3p1_adm_evolution_operator_verification.json",
-      "sha256": "045d06ad417f7a98b76a305774f00cddeea85af594a5dcc86be407983e66e8b4"
+      "sha256": "a1e2046d8c0f606e7153181a62f13e51548def769f11c9759253c457b2592747"
     },
     {
       "path": "docs/core/07_artifacts/archive/curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json",
-      "sha256": "3e2ff6ff780238dd4e3342f3f10e9216f36dc9fd053afde1cbbaf7caf73fc0f9"
+      "sha256": "8111d182538c228687805ce54e59d00b828d5e12b1937c6b44c517f74e54e1e0"
     },
     {
       "path": "docs/core/07_artifacts/correspondence/curved_3p1_adm_evolution_formula_audit.json",
-      "sha256": "5f0b998de052ece008fdf8c6a38e0e527b192dff46f21aca611602d7ae4edb9c"
+      "sha256": "4623f52341fc2f4e2236515bc85ee8eec813106e8c7c3a56412d648a04614c36"
     },
     {
       "path": "docs/core/07_artifacts/gates/curved_3p1_formulation_selection_gate.json",
-      "sha256": "cd7368abc30d460cda3dfee3a39ff2cdb616586b501f8ac8a67d05a7a26cc0d3"
+      "sha256": "8f317b1cd6f8dc33951c7612989744c25d443e973fcc113485c62b489f2409f8"
     },
     {
       "path": "docs/core/07_artifacts/verification/curved_3p1_gh_principal_system_verification.json",
-      "sha256": "3bdb66e5fa3b582ff6610c076a4aa21961e7098ff5994b522e80044eff90e481"
+      "sha256": "07c6cc69c2e5c6f00b298442dd09698fc11a4c202646b7a3703093c7d4b05afb"
     },
     {
       "path": "docs/core/07_artifacts/correspondence/curved_3p1_gh_principal_system_formula_audit.json",
-      "sha256": "eb8809286250cc2b767fd824d5f41363193b3a46335e0880d1ae505a0cdd4934"
+      "sha256": "911e72205b2071f59999ae231a75d988d4c8ab52592693f2032c16c4f28e0d6b"
     },
     {
       "path": "docs/core/07_artifacts/gates/curved_3p1_gh_branch_gate.json",
-      "sha256": "a7f56a89620829ccab797d26ca28862b424fc242ba2910143bdc6ee7f4393114"
+      "sha256": "3eb98b3f3f8f35335f0b31293a437af2042d2590bd3b49938a8d25fe22eef0e3"
     },
     {
       "path": "docs/core/07_artifacts/verification/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json",
-      "sha256": "38bc6ba266f18c1b83245a1c00725d4acba377742cc5e3b53bc3b9074703c0df"
+      "sha256": "e7cbf3f7c6b6801bb2c79b4620cc0dfc9636e4bdd0c9928d9f0b67fde0eebf4d"
     },
     {
       "path": "docs/core/07_artifacts/correspondence/curved_3p1_gh_nonlinear_vacuum_formula_audit.json",
-      "sha256": "8873efaad4ebbd79e21a3d3bbfc672a039f11bf58835f01ee546dccfcaf22c86"
+      "sha256": "fe145a277643d4f261e9da4f49cb58c5c1d35599a7ddae03d5ff2fc3b729de84"
     },
     {
       "path": "docs/core/07_artifacts/gates/curved_3p1_gh_nonlinear_vacuum_gate.json",
-      "sha256": "14ee0e3525e82df57a3b15ceafb231fe5c188bfe39bfd44b44380e4edee56ebe"
+      "sha256": "6b22a0ad93069f8dc372d29f8993e0e591405f9ee667b2cf2cf66a8b913f86d1"
     },
     {
       "path": "docs/core/07_artifacts/verification/curved_3p1_gh_time_evolution_verification.json",
-      "sha256": "8cecc689130d32db108f49764563d5b85471a3ef2f6f424e719bd1539de7b175"
+      "sha256": "0ab859462141c05fdb738c982ca6c5edcb759fcf24789cae50765944a415898d"
     },
     {
       "path": "docs/core/07_artifacts/correspondence/curved_3p1_gh_time_evolution_formula_audit.json",
-      "sha256": "b00f555fe6348466f725866835a3b6f6a47ee9b69fcec639ec807f9048879d57"
+      "sha256": "9a3f5ce3ef3a5b6ec49894c9ad6f8d47889e07d961a3963fac25d4dc7e3cb0b0"
     },
     {
       "path": "docs/core/07_artifacts/gates/curved_3p1_gh_time_evolution_gate.json",
-      "sha256": "76859ab47bfb1ec470ff7be721ef818e9a825377a85d25dd517355cd0f4a5b0a"
+      "sha256": "e5e6ddc50119658ca2fcd4a904d02f9e9c1ae29ae698981b6b338cad17a4311d"
     },
     {
       "path": "docs/core/07_artifacts/verification/curved_3p1_topic13_matter_wiring_verification.json",
-      "sha256": "8f0db26cb7cb757081a5c91c9051eafd97963b91172367c6d90746a22609c5bd"
+      "sha256": "30b55e204e5b9d72fe7db939d3717cb16a6b65ef307a541b581e38e669a273bb"
     },
     {
       "path": "docs/core/07_artifacts/correspondence/curved_3p1_topic13_matter_wiring_formula_audit.json",
-      "sha256": "4bbbdf6909abb5c2990ebdb80e4e987767f700fec24438ed1ad175a00eab65e7"
+      "sha256": "80176010f5095e1b0329bb5dce805107db7f5b9955deb0bdb6c76aa8927ca07a"
     },
     {
       "path": "docs/core/07_artifacts/gates/curved_3p1_topic13_matter_wiring_gate.json",
-      "sha256": "4e6c80f40449e8fb5f6df435b4656b17bd3f1adab5dc1c76b0deca7610c5ee41"
+      "sha256": "a87218cf7be8b0ac4b21dbd3080fd30abc16619534f4ddb985d8c45a465dcf8a"
     }
   ],
   "claim_promotion": false

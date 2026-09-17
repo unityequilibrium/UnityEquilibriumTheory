@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "artifact": "matter_space_research_program_gate",
-  "generated_at": "2026-09-17T13:05:07.217231+00:00",
-  "source_snapshot_at": "2026-09-17T13:03:02.158263+00:00",
+  "generated_at": "2026-09-17T17:15:07.622475+00:00",
+  "source_snapshot_at": "2026-09-17T17:13:37.621872+00:00",
   "status": "BLOCKED",
   "program_state": "CANDIDATE_WITH_BLOCKED_PHYSICAL_INTERPRETATION",
   "controlling_blocker": "core_prearrival_leakage",
@@ -10,7 +10,7 @@
   "input_artifacts": {
     "ontology_contract": {
       "path": "docs/core/07_artifacts/correspondence/matter_space_ontology_contract.json",
-      "sha256": "9ef6d7a742e8c32b30d039623edcb38c71af021e0f102cce91ff0b4209ac0741",
+      "sha256": "c460094a30d7ae72f1ccc4c5c335e3fe402d99fe3120d1156bb5d52810ff2e99",
       "status": "PASS"
     },
     "formula_audit": {
@@ -26,36 +26,36 @@
     },
     "core_verification": {
       "path": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
-      "sha256": "8fa111f3e23134af2c1d3924a364fef7de27142bd636f0b0510a4c79867d6f3c",
+      "sha256": "dad9484e0cb713be9c89a9eab48c602a0eec62066325937b9b8030eb561dcd89",
       "status": "FAIL",
       "controlling_blocker": "prearrival_leakage"
     },
     "core_dependency_gate": {
       "path": "docs/core/07_artifacts/gates/matter_space_dependency_gate.json",
-      "sha256": "ea146f361c1ff41eeb88d9c0fd7453ecccc2c6b1b16ddff449cccc4ea9f1d2ef",
+      "sha256": "94e83e638a86e097e4eb5c5608ee38d601d60506464984ce0f7f1c558acff6f9",
       "status": "BLOCKED",
       "controlling_blocker": "prearrival_leakage"
     },
     "thermal_pilot": {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json",
-      "sha256": "901ef7bc70c3fb5f657978db1aa8f48f7734003875fdb52d47ec17911653699f",
+      "sha256": "544708b2992a51e461f3149c188e9285f1e4bc864621534ceb64349d73efe375",
       "status": "SIMULATION_ONLY",
       "controlling_blocker": "core_prearrival_leakage"
     },
     "thermal_source_package": {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_second_sound_source_package.json",
-      "sha256": "3754d54cdee639be211a308d893b994ca78f7dd11aaeb191278b9085e7923b96",
+      "sha256": "8058eaa23f57e7c86cde8e57978e74ecb128edcf6d5c42b206fb0ade312dbcc2",
       "status": "FIGURE_DERIVED_NORMALIZED_COMPARISON_READY_RAW_AUTHOR_C_SRC_OPEN"
     },
     "phase_pilot": {
       "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_matter_space_coupled_diagnostic.json",
-      "sha256": "f1a099e80913d974f7bd475fe58c3a2ac70cf58b502fb60efb0a2c65774f53f9",
+      "sha256": "6288441419de1f100c4efea7d351f2316e91c461fe260a2c5d7036c0d880ec8f",
       "status": "INTERNAL_DIAGNOSTIC",
       "controlling_blocker": "inherited_core_prearrival_leakage"
     },
     "phase_topic_status": {
       "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_closure_status_audit.json",
-      "sha256": "c05a12df426889fcb260f5aba68feac635be71221d39c2ff32395e9d5f322946",
+      "sha256": "1d7c3f6b9de4c0f1d7579d3edfd23f9186f9b8bd189f2013e8095d6cecd2dcd1",
       "status": "WARN",
       "controlling_blocker": "ch_finite_k_replicate_temporal_acquisition_plan_defined_execution_open"
     }
@@ -209,25 +209,25 @@
         {
           "consumer": "thermal_pilot",
           "path": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
-          "expected_sha256": "8fa111f3e23134af2c1d3924a364fef7de27142bd636f0b0510a4c79867d6f3c",
+          "expected_sha256": "dad9484e0cb713be9c89a9eab48c602a0eec62066325937b9b8030eb561dcd89",
           "exists": true,
-          "actual_sha256": "8fa111f3e23134af2c1d3924a364fef7de27142bd636f0b0510a4c79867d6f3c",
+          "actual_sha256": "dad9484e0cb713be9c89a9eab48c602a0eec62066325937b9b8030eb561dcd89",
           "match": true
         },
         {
           "consumer": "phase_pilot",
           "path": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
-          "expected_sha256": "8fa111f3e23134af2c1d3924a364fef7de27142bd636f0b0510a4c79867d6f3c",
+          "expected_sha256": "dad9484e0cb713be9c89a9eab48c602a0eec62066325937b9b8030eb561dcd89",
           "exists": true,
-          "actual_sha256": "8fa111f3e23134af2c1d3924a364fef7de27142bd636f0b0510a4c79867d6f3c",
+          "actual_sha256": "dad9484e0cb713be9c89a9eab48c602a0eec62066325937b9b8030eb561dcd89",
           "match": true
         },
         {
           "consumer": "phase_pilot",
           "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_closure_status_audit.json",
-          "expected_sha256": "c05a12df426889fcb260f5aba68feac635be71221d39c2ff32395e9d5f322946",
+          "expected_sha256": "1d7c3f6b9de4c0f1d7579d3edfd23f9186f9b8bd189f2013e8095d6cecd2dcd1",
           "exists": true,
-          "actual_sha256": "c05a12df426889fcb260f5aba68feac635be71221d39c2ff32395e9d5f322946",
+          "actual_sha256": "1d7c3f6b9de4c0f1d7579d3edfd23f9186f9b8bd189f2013e8095d6cecd2dcd1",
           "match": true
         }
       ],

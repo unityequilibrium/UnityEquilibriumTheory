@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_active_lane_units_observable_register",
-  "generated_at": "2026-09-16",
+  "generated_at": "2026-09-17",
   "audit_status": "PASS_WITH_OPEN_LANES",
   "purpose": "make F3 units and F7 observable gaps explicit for every active research lane",
   "rule": "normalized or natural-unit results are not SI predictions without an explicit conversion, measurement operator and uncertainty contract",
-  "lane_count": 9,
+  "lane_count": 10,
   "observable_status_counts": {
     "BLOCKED": 1,
     "FORMAL_CONSTITUTIVE_ONLY": 1,
@@ -220,6 +220,37 @@
         "docs/core/07_artifacts/gates/orbit_cosmology_correspondence_gate.json",
         "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json"
       ]
+    },
+    {
+      "lane_id": "thermal_ttg_observable_bridge",
+      "variables": {
+        "Phi": "normalized effective response variable",
+        "Delta_Phi": "normalized response difference",
+        "Delta_Tq": "source-defined quasi-temperature difference in K only after independent mapping",
+        "alpha_Phi_K": "open scale in K per normalized Phi",
+        "y_TTG": "dimensionless normalized TTG signal",
+        "R_gen": "derived trace/history variable; not a direct TTG observable"
+      },
+      "unit_lane": "normalized_plus_external_K_contract_open",
+      "standard_counterpart": "TTG quasi-temperature response with Fourier and Cattaneo controls",
+      "observable_operator": "y_TTG^UET(t)=Delta_Phi(t)/Delta_Phi(0); Delta_Tq=alpha_Phi_K*Delta_Phi",
+      "observable_status": "SIMULATION_ONLY_OPEN_DIMENSIONAL_MAP",
+      "units_status": "BLOCKED_INDEPENDENT_ALPHA_Phi_K",
+      "uncertainty_status": "PROVISIONAL_FIGURE_DIGITIZATION_PLUS_OPEN_ALPHA_UNCERTAINTY",
+      "open_items": [
+        "full coupled pre-arrival leakage remains above 1e-6",
+        "independent alpha_Phi_K derivation or calibration with uncertainty",
+        "heat-flux and entropy maps are downstream and not direct TTG observables",
+        "Xie 2026 remains locked holdout"
+      ],
+      "evidence": [
+        "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/thermal_wave1_branch_gate.json",
+        "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_observable_map_readiness.json",
+        "docs/core/07_artifacts/topic13/thermal_dimensional_calibration_contract.json"
+      ],
+      "claim_boundary": "normalized observable/control lane only; no temperature prediction or external validation",
+      "wave1_status": "BLOCKED_OPEN_CALIBRATION",
+      "generated_by": "sync_uet_active_lane_wave1.py"
     }
   ],
   "foundation_effect": {
@@ -227,5 +258,11 @@
     "F7_observable_mapping": "BLOCKED_UNTIL_MEASUREMENT_OPERATOR_AND_UNCERTAINTY_CLOSURE",
     "claim_ceiling": "internal normalized/natural-unit diagnostics and conditional constitutive relations only"
   },
-  "next_controller": "close one dimensional thermal lane and source-lock an external 3D density operator before any external fit or physical claim"
+  "next_controller": "close one dimensional thermal lane and source-lock an external 3D density operator before any external fit or physical claim",
+  "wave1_extension": {
+    "status": "CANDIDATE_LANE_ADDED_WITH_BLOCKED_DIMENSIONAL_MAP",
+    "claim_promotion": false,
+    "selected_reference_branch": "frozen_C_normalized_control_only",
+    "full_candidate_gate": "preserved_separately"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "hyperbolic_phase_field_causal_feasibility",
-  "generated_at": "2026-09-17T12:47:55+00:00",
+  "generated_at": "2026-09-17T16:29:13+00:00",
   "topic": "docs/core UET GR non-closed response",
   "version": "wave8_v1",
   "benchmark_role": "analytic_gate",
@@ -360,11 +360,11 @@
   },
   "source_hashes": {
     "docs\\core\\02_equations\\matter_space\\uet_hyperbolic_phase_field_bridge.py": "8902483bb56bb0ceb0f1cd21a2b27766378890531cb4226d392d275ff7e63e05",
-    "docs\\core\\02_equations\\matter_space\\uet_hyperbolic_phase_field.py": "24bee848039ee268421db2bf7dfd3675bfb0a4accaa3be303ef00ca1df80f261",
+    "docs\\core\\02_equations\\matter_space\\uet_hyperbolic_phase_field.py": "f03b8907a606f3b8937556c32ea5f01d9880787aba193edccf53ffa5f1fbb74a",
     "docs\\core\\02_equations\\covariant\\uet_covariant_diffusion.py": "a267b89e39db4a8dfac56e71a070539a9da05a55b8bb8b22216e7fd1b839bc53",
     "docs\\core\\01_contracts\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "a52cbdb0cb9dd2f65be4813fd7b57da9a995f4ab9039d4631f95928f0997a8bf",
     "docs\\data\\external\\relativistic_transport\\jain_kovtun_2024\\source_record.json": "90c8c7dfe8256da2b1dbe6631d189470800ea8ed7eec228fc9bedf49dd39dbc7",
-    "docs\\data\\external\\relativistic_transport\\crossley_glorioso_liu_2017\\source_record.json": "5db63830bbde1e316184edab0e5e961fcef1f9add098c4a22403d2a029a623dd"
+    "docs\\data\\external\\relativistic_transport\\crossley_glorioso_liu_2017\\source_record.json": "080912a9861ce6c5df645f35d67ddfc9d7415c42dfd97e12ae0f0fd8007ff6b5"
   },
   "input_identity": {
     "external_comparator_artifact": "docs\\core\\07_artifacts\\verification\\hyperbolic_phase_field_external_comparator_verification.json",

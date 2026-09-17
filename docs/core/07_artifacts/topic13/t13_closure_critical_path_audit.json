@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-closure-critical-path-v1",
   "artifact": "t13_closure_critical_path_audit",
-  "generated_at": "2026-08-26T09:05:30.639327+00:00",
+  "generated_at": "2026-09-17T16:47:31.845920+00:00",
   "status": "PASS_T13_CLOSURE_CRITICAL_PATH_WITH_EXTERNAL_INPUTS",
   "major_result": {
     "major_result_id": "T13_CLOSURE_CRITICAL_PATH",
@@ -36,38 +36,38 @@
     "data_role": "INTERNAL_WORKFLOW_AUDIT_NOT_CALIBRATION",
     "evidence_artifacts": [
       {
-        "path": "docs/core/artifacts/t13_full_closure_progress.json",
-        "sha256": "1895bceaeab1cbddb5044ba180d6ec9bad91a493fdd1a9ddeef89147505fd200",
+        "path": "docs/core/07_artifacts/topic13/t13_full_closure_progress.json",
+        "sha256": "b9a7cfa49ded1dcec7c9f8bf77a6a242532bc132862adbf142ed011d97102ca8",
         "present": true
       },
       {
-        "path": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-        "sha256": "d597f0e0d334845e2d2e515ec372b560890b8fced4f0082169229f38bb3ab81a",
+        "path": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
+        "sha256": "5c0f312227080e7c84f1b8aace680446c5051bbb0e7be5d88551e0ea5b64461b",
         "present": true
       },
       {
-        "path": "docs/core/artifacts/t13_closure_input_package_audit.json",
-        "sha256": "a8ab343d42008fdc5e40ca93990df84baf22f754ddb949ea0e12b9a594e91384",
+        "path": "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json",
+        "sha256": "f6ddbefc6d1e6566d20ceb0659978109cd5ba47363f689b974c7334fc8906384",
         "present": true
       },
       {
-        "path": "docs/core/artifacts/t13_csrc_source_route_priority_audit.json",
-        "sha256": "3944af5e35e7565b58d1a9861871e9d5e3c5ebe2fda1f58c8bdcc293ce01c2b6",
+        "path": "docs/core/07_artifacts/topic13/t13_csrc_source_route_priority_audit.json",
+        "sha256": "41145237d4fceba16da744f9afcd0948d5f6a8662cc3b01494aa6fb6ccf10f6e",
         "present": true
       },
       {
-        "path": "docs/core/artifacts/t13_thermal_bridge_scale_dependency_no_go.json",
-        "sha256": "a54b9e179e0905ea4c7cc8ecbd55922593d3b1bd96c2ae356b5fb22cd68d38e8",
+        "path": "docs/core/07_artifacts/topic13/t13_thermal_bridge_scale_dependency_no_go.json",
+        "sha256": "9afea85e14a8aa3386d1688da54442b7a5cd2176ee8c4a875b3a9237beaf0860",
         "present": true
       },
       {
-        "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
-        "sha256": "09957acb844b57db0ce7e67e03dfa75f302f539b9639f43c27a0928ba618aa52",
+        "path": "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json",
+        "sha256": "7ce1d17773eedb29ffd9260fd2a04f927acb3af74384fd90d2adc2d9a57c0e2b",
         "present": true
       },
       {
-        "path": "docs/core/artifacts/t13_cv_source_reconciliation_audit.json",
-        "sha256": "8db38724c1d52ce95d182856854b53f207ba6774743671db9120f08c474774e1",
+        "path": "docs/core/07_artifacts/topic13/t13_cv_source_reconciliation_audit.json",
+        "sha256": "f78d68b4db2a95eb1d8f77dc9f79671296159b15363f353f36821b0e43f719fd",
         "present": true
       }
     ],
@@ -530,8 +530,8 @@
   "controlling_blocker": "external_input_package_state_unchanged",
   "next_controller": "Change one root package state by authorized Ding payload/reproduction, independent base-Phi SI anchor/alpha derivation, or physical Kubo match; then rerun dependent gates.",
   "source_state": {
-    "matrix_artifact": "docs/core/artifacts/t13_topic13_closure_matrix.json",
-    "input_audit_artifact": "docs/core/artifacts/t13_closure_input_package_audit.json",
-    "route_audit_artifact": "docs/core/artifacts/t13_csrc_source_route_priority_audit.json"
+    "matrix_artifact": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
+    "input_audit_artifact": "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json",
+    "route_audit_artifact": "docs/core/07_artifacts/topic13/t13_csrc_source_route_priority_audit.json"
   }
 }

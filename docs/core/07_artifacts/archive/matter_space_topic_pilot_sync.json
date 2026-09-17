@@ -32,7 +32,7 @@
     "claim_boundary": "Fourier/Cattaneo/trace and normalized matter-space diagnostic; no external validation or SI C-to-T identity"
   },
   "new_internal_bridge": {
-    "artifact": "docs/core/artifacts/resource_selection_thermal_bridge_verification.json",
+    "artifact": "docs/core/07_artifacts/provenance/resource_selection_thermal_bridge_verification.json",
     "status": "PASS_WITH_OPEN_THERMAL_MAPPING",
     "claim_boundary": "The declared interaction costs can close a normalized dissipated-work and bath-entropy proxy ledger. This supports an internal observable bridge only; it does not derive physical work, heat, temperature, or entropy from UET."
   },

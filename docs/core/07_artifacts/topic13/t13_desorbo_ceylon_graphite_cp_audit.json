@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-desorbo-ceylon-graphite-cp-audit-v1",
   "artifact": "t13_desorbo_ceylon_graphite_cp_audit",
-  "generated_at": "2026-09-17",
+  "generated_at": "2026-09-18",
   "status": "PASS_METADATA_ONLY_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_BOUNDARY",
   "input_mode": "METADATA_ONLY_PUBLIC_BOUNDARY",
   "raw_source_present": false,
@@ -30,7 +30,7 @@
     "evidence_artifacts": [
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/desorbo_1955_ceylon_graphite_cp_source_package.json",
-        "sha256": "72b9ee0cb145c562f48c410beabf5eb1c8c8345e08f210e9fd6f05a0032c5f92"
+        "sha256": "3bf9cebd1b3129f9b0f1cd66b49e16c2d7743059a207ed203048894abb6a746b"
       },
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nist_srd69_graphite_desorbo_1955.html",

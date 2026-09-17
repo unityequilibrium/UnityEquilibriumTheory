@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-mp48-temperature-volume-uncertainty-boundary-v1",
   "artifact": "t13_mp48_temperature_volume_uncertainty_boundary_audit",
-  "generated_at": "2026-09-17",
+  "generated_at": "2026-09-18",
   "status": "PASS_SCOPED_MP48_TEMPERATURE_VOLUME_UNCERTAINTY_BOUNDARY_NO_GO",
   "major_result": {
     "major_result_id": "T13_MP48_TEMPERATURE_VOLUME_UNCERTAINTY_BOUNDARY",
@@ -37,8 +37,8 @@
     "claim_boundary": "This result closes a route-level no-go boundary, not the thermal bridge. MP48 remains an independent harmonic comparator and is not a Ding PBTE C_src source, UET calibration, TTG prediction, or external validation."
   },
   "boundary_observations": {
-    "source_package_sha256": "fd963d3db5fb3c133f02ec33f5b3aa4b36e312903da53da1cd810b215c1f8517",
-    "base_mp48_audit_sha256": "c8fde1c3eebef02a3787dd28491050912bb843ac5391ad298a4cce80c5b19a50",
+    "source_package_sha256": "86f5d5015b5bd0172bc2bfae64271955c56470650bdb6b8459bb1280e5dbc3cf",
+    "base_mp48_audit_sha256": "1232a0a014f61aa50a3e035aa03d675c36bf8afcb2d6e5fcaee32ce1901491e8",
     "volume_anchor_source_id": "wang_2012_graphite_room_temperature_volume",
     "volume_anchor_temperature_scope": "room-temperature zero-pressure anchor; applying it at 100-300 K is an explicit comparator approximation",
     "volume_anchor_relative_uncertainty": 0.0012475898831802198,

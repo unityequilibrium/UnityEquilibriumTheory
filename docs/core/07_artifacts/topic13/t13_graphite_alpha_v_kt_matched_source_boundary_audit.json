@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-graphite-alpha-v-kt-matched-source-boundary-v1",
   "artifact": "t13_graphite_alpha_v_kt_matched_source_boundary_audit",
-  "generated_at": "2026-08-24",
+  "generated_at": "2026-09-18",
   "status": "PASS_SCOPED_GRAPHITE_ALPHA_V_K_T_SOURCE_PAIR_LOCKED_MATERIAL_OPEN",
   "major_result": {
     "major_result_id": "T13_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY",
@@ -24,48 +24,48 @@
     "evidence_artifacts": [
       {
         "role": "nist_alpha_v",
-        "path": "docs/core/artifacts/t13_nist_graphite_alpha_v_source_boundary_audit.json",
-        "sha256": "392bf8c98de925ea806a86392cbf440029a47e4e32173c2839cd04ff2cb553d5"
+        "path": "docs/core/07_artifacts/topic13/t13_nist_graphite_alpha_v_source_boundary_audit.json",
+        "sha256": "63fb151ac425e773fa90326fe462b353dea0abcaef0192c3e9231515bd92d0e6"
       },
       {
         "role": "hanfland_kt",
-        "path": "docs/core/artifacts/t13_graphite_isothermal_kt_source_audit.json",
-        "sha256": "63f0518c78febda473f89f8a0c3927d14b9d98a102dc560277bcd2a9daf8c0c4"
+        "path": "docs/core/07_artifacts/topic13/t13_graphite_isothermal_kt_source_audit.json",
+        "sha256": "e052fa8081dd30dbd0c584bacc1a260bc34363964c945500294ddd6de812bfbc"
       },
       {
         "role": "bosak_elastic_bulk",
-        "path": "docs/core/artifacts/t13_graphite_elastic_bulk_modulus_source_audit.json",
-        "sha256": "65238edbfb66b57c6b3c0a06f95d8b3d28d6dc613df7b83d825332aff4a996af"
+        "path": "docs/core/07_artifacts/topic13/t13_graphite_elastic_bulk_modulus_source_audit.json",
+        "sha256": "dacbd3ae7690f93189981bb09b1e4ba9c27b293eacdc9996ad0d317da1dd0fd0"
       },
       {
         "role": "tpg_alpha_v",
-        "path": "docs/core/artifacts/t13_tpg_anisotropic_alpha_v_source_audit.json",
-        "sha256": "f8ed02677b5ef1aede683cc2b191538722bda56b520d1d6ba5af024638504c68"
+        "path": "docs/core/07_artifacts/topic13/t13_tpg_anisotropic_alpha_v_source_audit.json",
+        "sha256": "0ec2ebe1c8b63b5d3b3d77e3ba048cdff651919bcf12358584c9750b414fe1ce"
       },
       {
         "role": "nelson_riley_alpha_v",
-        "path": "docs/core/artifacts/t13_natural_graphite_nelson_riley_alpha_v_source_audit.json",
-        "sha256": "c20b42f64b9107459b555dfaddc5150028c39b5254e4791782161b2b9861b861"
+        "path": "docs/core/07_artifacts/topic13/t13_natural_graphite_nelson_riley_alpha_v_source_audit.json",
+        "sha256": "ad0f287f97995d0ad37e33c823973637eedd22ca6392e4d7fcf5f680ee815046"
       },
       {
         "role": "nist_alpha_v",
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/nist_axm5q1_density_source_package.json",
-        "sha256": "9fa91225070b4b6091b0eb7c34295c5e0ab1a0316d282f26bd1f77df23269d5f"
+        "sha256": "dc0c0ffac3fda2b21f8f765da5c111a9a5b39d12f8b9a542cf81461d773e8974"
       },
       {
         "role": "hanfland_kt",
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/hanfland_1989_graphite_isothermal_kt_source_package.json",
-        "sha256": "5a5c380c972b4e83af14b2c3f361a27842e21bfaeced29f74ff75b1088b1bc53"
+        "sha256": "31990b3e4181b5e0b50ae5deebe4a78f9d2e69547e5e581405e22f2ad09f6b13"
       },
       {
         "role": "bosak_elastic_bulk",
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/bosak_2007_graphite_elastic_bulk_source_package.json",
-        "sha256": "c24c6bbb4aace7de2f2eaffd234336065a2f4e8f829d7c0cb9c1af3ae4f5f24c"
+        "sha256": "53c99428d840fb9bc235d01c5791effbab6ac610072718e1591caee5d77e151d"
       },
       {
         "role": "tpg_alpha_v",
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ihep_2001_32_tpg_anisotropic_alpha_v_source_package.json",
-        "sha256": "601721924bdf89b0299b57f8220c9bb54633f895a024e3b500673dc4905f3ba7"
+        "sha256": "7cf6fc2e9edc54c73c782adbf4d45426613854bd5f8364ec708a89a6e5fd11c1"
       },
       {
         "role": "nelson_riley_alpha_v",
@@ -75,17 +75,17 @@
       {
         "role": "lowitzer_candidate",
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/lowitzer_2006_graphite_pvt_candidate_source_package.json",
-        "sha256": "ef5e46d19cee679196093df802e21187ca39d5a50910b9a74727f53bf4062225"
+        "sha256": "0d4e91553567e887ed26e237dcdbd8bbefde5e786a19176bd011416a4db919f3"
       },
       {
         "role": "lowitzer_full",
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/lowitzer_2006_graphite_pvt_full_source_package.json",
-        "sha256": "bbfb9cd598e243b34e7d19580496d9e4b9c997e98be502ae70171ac454770c22"
+        "sha256": "0c045335d72f5bb19705ad7df983972a98f156e0f8954ca133dfc87630c1a9ef"
       },
       {
         "role": "lowitzer_full_audit",
-        "path": "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
-        "sha256": "818230a6f8aa68a14a1f642e1e7342d70bfa657f6e05476d3e190d336e77b386"
+        "path": "docs/core/07_artifacts/topic13/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
+        "sha256": "d8be3fc1d7fe8593c8a894ea9cd92431746d3acc4d2a0532baec0bd2a98efed6"
       },
       {
         "role": "tohei_table_comparator",
@@ -179,7 +179,7 @@
       "source_grade_uncertainty_available": true,
       "ding_material_regime_mapping_closed": false,
       "correction_witness_J_m3_K": 11673.6,
-      "source_sha256": "bbfb9cd598e243b34e7d19580496d9e4b9c997e98be502ae70171ac454770c22"
+      "source_sha256": "0c045335d72f5bb19705ad7df983972a98f156e0f8954ca133dfc87630c1a9ef"
     },
     "tohei_table_comparator": {
       "source_id": "tohei_kuwabara_oba_tanaka_2006_graphite_qha",

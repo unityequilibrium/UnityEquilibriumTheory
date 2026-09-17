@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-phi-e-reference-normalization-v1",
   "artifact": "t13_phi_e_reference_normalization_audit",
-  "generated_at": "2026-08-11",
+  "generated_at": "2026-09-18",
   "status": "PASS_NAMED_PHI_E_REFERENCE_NORMALIZATION",
   "major_result": {
     "major_result_id": "T13_PHI_E_REFERENCE_NORMALIZATION",
@@ -43,11 +43,11 @@
         "sha256": "86f5d5015b5bd0172bc2bfae64271955c56470650bdb6b8459bb1280e5dbc3cf"
       },
       {
-        "path": "docs/core/thermal_energy_response_bridge.py",
+        "path": "docs/core/03_lanes/thermal/thermal_energy_response_bridge.py",
         "sha256": "ce64f2fc25fe6a96d60c63a5d581686dfa3af0ab751e70160482845ee889f1d2"
       },
       {
-        "path": "docs/core/artifacts/t13_phi_e_reference_normalization_audit.json"
+        "path": "docs/core/07_artifacts/topic13/t13_phi_e_reference_normalization_audit.json"
       }
     ],
     "verification_status": "PASS_NAMED_PHI_E_REFERENCE_NORMALIZATION",

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_equation_correspondence_registry_curved_3p1_addendum",
-  "generated_at": "2026-09-17T15:58:28.102122+00:00",
+  "generated_at": "2026-09-17T16:59:13.024434+00:00",
   "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
   "status": "CANDIDATE_ENTRY_PENDING_MERGE",
   "equation_entries": [
@@ -32,7 +32,7 @@
       },
       "source_or_origin": {
         "path": "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json",
-        "sha256": "5540850bde07a4c41b011b8c181ca5700e4f89519c1a8eadd22a3c80e79ef760",
+        "sha256": "d989b9dd637828dd64f975eaf1f744163ac71e362bde71e46e86e599eced1754",
         "identity": {
           "schema_version": "1.0",
           "source_id": "gourgoulhon_2007_3p1_formalism",
@@ -117,7 +117,7 @@
       },
       "source_or_origin": {
         "path": "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json",
-        "sha256": "5540850bde07a4c41b011b8c181ca5700e4f89519c1a8eadd22a3c80e79ef760",
+        "sha256": "d989b9dd637828dd64f975eaf1f744163ac71e362bde71e46e86e599eced1754",
         "identity": {
           "schema_version": "1.0",
           "source_id": "gourgoulhon_2007_3p1_formalism",
@@ -665,11 +665,11 @@
       "unit_lane": "geometric c=1 periodic coordinates",
       "parameter_dimensions": "geometric c=1 periodic-coordinate lane",
       "source_or_origin": {
-        "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "22e6b99c6a6070139ccbe9a5c6604788addc719b9e5b032b0416b175873c718e",
-        "docs/core/07_artifacts/verification/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json": "38bc6ba266f18c1b83245a1c00725d4acba377742cc5e3b53bc3b9074703c0df",
-        "docs/core/07_artifacts/correspondence/curved_3p1_gh_nonlinear_vacuum_formula_audit.json": "8873efaad4ebbd79e21a3d3bbfc672a039f11bf58835f01ee546dccfcaf22c86",
-        "docs/core/07_artifacts/gates/curved_3p1_gh_nonlinear_vacuum_gate.json": "14ee0e3525e82df57a3b15ceafb231fe5c188bfe39bfd44b44380e4edee56ebe",
-        "docs/core/02_equations/covariant/uet_curved_3p1_gh_evolution.py": "56a5ebaaed3fe686320c5802b7fb3217d76d729d0f601079ef526047601ff760"
+        "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a",
+        "docs/core/07_artifacts/verification/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json": "e7cbf3f7c6b6801bb2c79b4620cc0dfc9636e4bdd0c9928d9f0b67fde0eebf4d",
+        "docs/core/07_artifacts/correspondence/curved_3p1_gh_nonlinear_vacuum_formula_audit.json": "fe145a277643d4f261e9da4f49cb58c5c1d35599a7ddae03d5ff2fc3b729de84",
+        "docs/core/07_artifacts/gates/curved_3p1_gh_nonlinear_vacuum_gate.json": "6b22a0ad93069f8dc372d29f8993e0e591405f9ee667b2cf2cf66a8b913f86d1",
+        "docs/core/02_equations/covariant/uet_curved_3p1_gh_evolution.py": "c18f231375609cebb76d342ba7ad94471eb280089458ace85882ed2450f3581e"
       },
       "assumptions": [
         "vacuum",
@@ -738,27 +738,27 @@
       "source_or_origin": [
         {
           "path": "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json",
-          "sha256": "5540850bde07a4c41b011b8c181ca5700e4f89519c1a8eadd22a3c80e79ef760"
+          "sha256": "d989b9dd637828dd64f975eaf1f744163ac71e362bde71e46e86e599eced1754"
         },
         {
           "path": "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json",
-          "sha256": "22e6b99c6a6070139ccbe9a5c6604788addc719b9e5b032b0416b175873c718e"
+          "sha256": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a"
         },
         {
           "path": "docs/core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json",
-          "sha256": "13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418"
+          "sha256": "8cfb5389380b90315414fc80ee759de1de6577d417b5928852021ae5232875c9"
         },
         {
           "path": "docs/core/07_artifacts/topic13/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
-          "sha256": "9ea6f37eb43e353b8c89e42b1c3dd01c957b2063e41a09230483989accb2b3f4"
+          "sha256": "905cc38dc027af573d21126d164d75d2060110a39573154239951bd0e61aca17"
         },
         {
           "path": "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json",
-          "sha256": "4fe52bd87f1531dcaaadeeddd99ea48744d4ef574eb7b1e6d9c65bb8f41aa2a9"
+          "sha256": "a09b39050aaea5ed49094f34d45719673eb275e7b94e88b88af71e4e47084325"
         },
         {
           "path": "docs/core/02_equations/covariant/uet_curved_3p1_matter_wiring.py",
-          "sha256": "91381c3b8d1afc286b3760f95f16f1b04a81bf784bb326c6dc052368614a5f31"
+          "sha256": "d45348efdbbd302c07f425f2f800cd677d14225f1ad49fb36b21de6a257614b1"
         }
       ],
       "assumptions": [

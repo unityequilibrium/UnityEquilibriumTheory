@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_gh_nonlinear_vacuum_gate",
-  "generated_at": "2026-09-17T15:57:54.631291+00:00",
+  "generated_at": "2026-09-17T16:58:40.983034+00:00",
   "status": "PARTIAL_GH_NONLINEAR_VACUUM_RHS_READY",
   "requirements": {
     "source_complete_rhs_locators": "PASS",
@@ -33,11 +33,11 @@
   "evidence_artifacts": [
     {
       "path": "docs/core/07_artifacts/verification/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json",
-      "sha256": "38bc6ba266f18c1b83245a1c00725d4acba377742cc5e3b53bc3b9074703c0df"
+      "sha256": "e7cbf3f7c6b6801bb2c79b4620cc0dfc9636e4bdd0c9928d9f0b67fde0eebf4d"
     },
     {
       "path": "docs/core/07_artifacts/correspondence/curved_3p1_gh_nonlinear_vacuum_formula_audit.json",
-      "sha256": "8873efaad4ebbd79e21a3d3bbfc672a039f11bf58835f01ee546dccfcaf22c86"
+      "sha256": "fe145a277643d4f261e9da4f49cb58c5c1d35599a7ddae03d5ff2fc3b729de84"
     }
   ],
   "dependency_unlocked": "time integration and constraint-propagation wave only",

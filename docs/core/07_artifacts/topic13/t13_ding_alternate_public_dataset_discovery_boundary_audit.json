@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-ding-alternate-public-dataset-discovery-boundary-v3",
   "artifact": "t13_ding_alternate_public_dataset_discovery_boundary_audit",
-  "generated_at": "2026-08-24",
+  "generated_at": "2026-09-18",
   "status": "PASS_SCOPED_DING_ALTERNATE_PUBLIC_DATASET_BOUNDARY_NO_GO",
   "major_result": {
     "major_result_id": "T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY_BOUNDARY",
@@ -25,32 +25,32 @@
       {
         "role": "candidate_package",
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_ding_alternate_public_dataset_discovery_package.json",
-        "sha256": "edcf733efdad47973138a469e96e6e81f1654bdfe64d34ee7bc7c3a61db5eb7f"
+        "sha256": "3448780bc28b5f415d0a644b67f70e1cc156bd53f3e204fbaa6a7fed0e2c0c89"
       },
       {
         "role": "ding_numeric_availability",
-        "path": "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
-        "sha256": "1828db74760ac53c73345d0e4a8adc8fc00fc16bb25e84809a73aaa3cd9b3d9a"
+        "path": "docs/core/07_artifacts/topic13/t13_ding_pbte_numeric_input_availability_audit.json",
+        "sha256": "db8d64f7956979740ebcb3c872ca20d46d50e3399c1e9d5d61c9effb17dd0ff9"
       },
       {
         "role": "ding_public_supplementary",
-        "path": "docs/core/artifacts/t13_ding_public_supplementary_payload_boundary_audit.json",
-        "sha256": "56cc07751ed820195ff73a8f2c8cb31bf70f0d6a11ac40751e1058448913e4c5"
+        "path": "docs/core/07_artifacts/topic13/t13_ding_public_supplementary_payload_boundary_audit.json",
+        "sha256": "2659e6ac8fb97d711441261dfdf8b65c0736fcc5032899447e7369dbe96d77a5"
       },
       {
         "role": "independent_csrc_acceptance",
-        "path": "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json",
-        "sha256": "880eb2cc94543f19fefae13ad8c64af820bb619d9c898cd4e1e710494519d281"
+        "path": "docs/core/07_artifacts/topic13/t13_independent_csrc_acceptance_contract.json",
+        "sha256": "faef9dbf350e4454530c30ab004d201aa8d3b9d9ae78b3ad8bc2573fa7f17bfe"
       },
       {
         "role": "locked_holdout_audit",
-        "path": "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json",
-        "sha256": "c3185da0a233894d7f338138bbe6acee287194e1852a80e40b0b5f6f2134e21b"
+        "path": "docs/core/07_artifacts/topic13/t13_xie_2026_holdout_access_audit.json",
+        "sha256": "7f848d3d6f6c9b5ab708587fb4190956c43ee46da50e4e5b732bc9285e9336ce"
       },
       {
         "role": "repository_registry_search_boundary",
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_ding_alternate_public_dataset_discovery_package.json",
-        "sha256": "edcf733efdad47973138a469e96e6e81f1654bdfe64d34ee7bc7c3a61db5eb7f",
+        "sha256": "3448780bc28b5f415d0a644b67f70e1cc156bd53f3e204fbaa6a7fed0e2c0c89",
         "summary": {
           "search_date": "2026-08-23",
           "scope": "Exact DOI/title matching against public metadata APIs; no candidate payload was downloaded or imported.",

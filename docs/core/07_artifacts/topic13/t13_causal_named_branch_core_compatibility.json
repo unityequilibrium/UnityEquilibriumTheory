@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-causal-named-branch-core-compatibility-v1",
   "artifact": "t13_causal_named_branch_core_compatibility",
-  "generated_at": "2026-08-24",
+  "generated_at": "2026-09-18",
   "status": "PASS_CAUSAL_NAMED_BRANCH_CORE_COMPATIBILITY",
   "major_result": {
     "major_result_id": "T13_CAUSAL_FLUX_PHI_COUPLED_CORE_COMPATIBILITY",
@@ -28,24 +28,24 @@
     "data_role": "INTERNAL_VERIFICATION",
     "evidence_artifacts": [
       {
-        "path": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
-        "sha256": "3b58b2633a30f8a91710a59c46097f76bb2f36e2dda07e8cae03c9268d3f76bc",
+        "path": "docs/core/07_artifacts/archive/conserved_c_finite_cone_no_go_assessment.json",
+        "sha256": "3fa8ca757e7e4a2422888c85211d1ca48b5b3d6ce8f1a3e5be6ae114cb6684a7",
         "summary": {
           "status": "NO_GO_FOR_DECLARED_CONSERVED_CATTANEO_LOCAL_GRADIENT_CLASS",
           "closure_level": null
         }
       },
       {
-        "path": "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
-        "sha256": "70eafbe2b7b845c76336117bb3fe940c7427862a7a0d30d328a67a804356761c",
+        "path": "docs/core/07_artifacts/verification/matter_space_conserved_flux_telegraph_verification.json",
+        "sha256": "862dcbfcb6d530a054312151b0b53b1de35e0dd9a3a6708b8333c439262a96b5",
         "summary": {
           "status": "PASS",
-          "closure_level": null
+          "closure_level": "CLOSED_FOR_LANE"
         }
       },
       {
-        "path": "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
-        "sha256": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b",
+        "path": "docs/core/07_artifacts/verification/matter_space_flux_phi_coupled_verification.json",
+        "sha256": "5a2ce3e2021d70dccc200bc6d990c2a1487783e3cc6eb4193065b79f182609e1",
         "summary": {
           "status": "PASS",
           "closure_level": "CLOSED_FOR_LANE"

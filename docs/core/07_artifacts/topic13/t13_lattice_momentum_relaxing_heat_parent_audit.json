@@ -446,14 +446,14 @@
   ],
   "controlling_blocker": "physical_lattice_collision_kernel_and_uet_to_lattice_mapping_missing",
   "source_hashes": {
-    "docs/core/03_lanes/thermal/uet_lattice_momentum_relaxing_heat_parent.py": "158e2c6a938f18c25a8e9915a57d0d9b5bd1d7a1259f175f50a1a4abe6b4c6f6",
-    "docs/core/05_tests/regression/root/test_topic13_lattice_momentum_relaxing_heat_parent.py": "f0c46f9c3a8c5a896118ff028d6510675cb3477dd3862b9049e144a40554712f",
+    "docs/core/03_lanes/thermal/uet_lattice_momentum_relaxing_heat_parent.py": "186b34484df51d416f7ea2cc770b91b717cc83c2dca87c5d8f983c51a9b2111a",
+    "docs/core/05_tests/regression/root/test_topic13_lattice_momentum_relaxing_heat_parent.py": "38b70097df13963281388acdbbb69e3e74b89ec9576843325bc532068e442981",
     "docs/scripts/audit/audit_topic13_lattice_momentum_relaxing_heat_parent.py": "2ba5227a832f00fac08b107013b84d73271748b753af6a8d0b654732b02014c8"
   },
   "evidence_artifacts": [
     {
       "path": "docs/core/07_artifacts/topic13/t13_coupled_response_heat_carrier_no_go_audit.json",
-      "sha256": "299fe0f67b8d6aa618e00bac4c2c98a2ef165b17af11c1245824593e78905f0b"
+      "sha256": "5252b8da8118fd8de3c23c24add6b7e2d919246b1a47f75088ab4fe9758c380d"
     }
   ],
   "dependency_unlocked": [

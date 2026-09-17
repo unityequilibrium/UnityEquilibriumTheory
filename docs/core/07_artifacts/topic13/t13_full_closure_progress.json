@@ -83,7 +83,7 @@
     "graphite_ttg_external_validation": "None; this is an external validation track, not a Core physical-unlock dependency.",
     "o2_he4_core": "Topic 13 thermal bridge may be integrated into Core"
   },
-  "generated_at": "2026-09-17T15:58:52.086643+00:00",
+  "generated_at": "2026-09-17T17:00:52.642126+00:00",
   "holdout_context_review": {
     "declaration_path": "docs/core/99_review/unresolved_assets/T13_HOLDOUT_EXPOSURE_2026_09_10.json",
     "future_blind_holdout_eligibility": "REVIEW_REQUIRED",
@@ -335,7 +335,7 @@
   ],
   "minimal_input_contract": {
     "path": "docs/core/07_artifacts/topic13/t13_full_closure_minimal_input_contract.json",
-    "sha256": "5f44455d3d6d634c096b8ad85663bb401748e9b05a8cadb96885d510be142b11",
+    "sha256": "6fbf0218e66700d0804dce1c07d2b6a08e3013c7568e07df46ad5b6443337aa7",
     "status": "PASS_SCOPED_MINIMAL_INPUT_CONTRACT_OPEN",
     "target_result": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
   },
@@ -487,11 +487,11 @@
   },
   "schema_version": "t13-full-closure-progress-v1",
   "source_hashes": {
-    "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json": "8f744622461c05fcd3e538f49d3b52bf31ded496c6e1aa8bdbf5ba8f80bbe1ab",
-    "docs/core/07_artifacts/topic13/t13_full_closure_minimal_input_contract.json": "5f44455d3d6d634c096b8ad85663bb401748e9b05a8cadb96885d510be142b11",
-    "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json": "b03ce5cc40c7529a2673fbf5f29b2d4c46a7ff3532a919849d719aae7879c592",
-    "docs/core/99_review/unresolved_assets/T13_HOLDOUT_EXPOSURE_2026_09_10.json": "8be0573bd919b36f643e2f66c739f74ece0c72379cea786608ea4889759011f6",
-    "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json": "1b27b83c1e519c7d985fc0ca3b72e6c5a504b6e677ebdfe7e1bb813b07af3bbf"
+    "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json": "f6ddbefc6d1e6566d20ceb0659978109cd5ba47363f689b974c7334fc8906384",
+    "docs/core/07_artifacts/topic13/t13_full_closure_minimal_input_contract.json": "6fbf0218e66700d0804dce1c07d2b6a08e3013c7568e07df46ad5b6443337aa7",
+    "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json": "c36cabbc4ad5542827651c8e30ade06a56522b80507e6edcd9fd5b752ab004ed",
+    "docs/core/99_review/unresolved_assets/T13_HOLDOUT_EXPOSURE_2026_09_10.json": "bfeda10609e542bc30a50f4cabd7d91e4bbca542873894f23c191171610ef1eb",
+    "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json": "25ea646a58e5d2a83e7c9425ee5fd46ecb3095992e68f77f120735b41a901f6d"
   },
   "subresults": [
     {

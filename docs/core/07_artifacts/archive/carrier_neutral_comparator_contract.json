@@ -1,7 +1,7 @@
 {
   "schema_version": "carrier-neutral-comparator-contract-v1",
   "artifact": "carrier_neutral_comparator_contract",
-  "generated_at": "2026-08-02",
+  "generated_at": "2026-09-18",
   "status": "BLOCKED",
   "contract_verification": "PASS",
   "dependency_status": "BLOCKED",

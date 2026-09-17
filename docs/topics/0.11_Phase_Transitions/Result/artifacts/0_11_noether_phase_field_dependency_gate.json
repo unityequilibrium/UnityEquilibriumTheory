@@ -141,7 +141,7 @@
       "topic_controller": "ch_finite_k_replicate_temporal_acquisition_plan_defined_execution_open"
     }
   },
-  "generated_at": "2026-09-17T12:53:13+00:00",
+  "generated_at": "2026-09-17T17:15:06+00:00",
   "global_universe_closure": "UNRESOLVED",
   "limitations": [
     "No simulation, parameter fit, estimator rerun, or external-data comparison is performed.",
@@ -163,14 +163,14 @@
       "hash_scope": "canonical_json_without_generated_at_timestamp_utc_or_environment",
       "path": "docs/core/07_artifacts/verification/noether_phase_field_state_map_verification.json",
       "role": "Core Wave 9 state-coordinate verification",
-      "scientific_payload_sha256": "e5bc35b0f5376bbeb70d11495b32e065ca1102349524c7da5c0d542c0c28fb79"
+      "scientific_payload_sha256": "ed31350a7e4fd7d8a8ec2f755a8e89e588ffb234503b90ea651d4f8d863d5f0b"
     },
     {
       "exists": true,
       "hash_scope": "canonical_json_without_generated_at_timestamp_utc_or_environment",
       "path": "docs/core/07_artifacts/correspondence/noether_phase_field_map_formula_audit.json",
       "role": "Core Wave 9 formula audit",
-      "scientific_payload_sha256": "8d2843df68ac42e29ad173b200f12ccded14569e7560609426270f3d2ddad1ea"
+      "scientific_payload_sha256": "80dbef6402189976f3d9b1b36cec68502724c57d91d097efde2fa27976901370"
     },
     {
       "exists": true,
@@ -198,7 +198,7 @@
       "hash_scope": "canonical_json_without_generated_at_timestamp_utc_or_environment",
       "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_matter_space_coupled_diagnostic.json",
       "role": "Topic 0.11 isolated matter-space pilot",
-      "scientific_payload_sha256": "d34d1ce08133eaf4bce5d1d9ecf0ec95485c70588c058113eaf710e1eb87ef04"
+      "scientific_payload_sha256": "95cd3dad488f9d76daeb39b5dd000e76f4301c9806a08d55a675bf0902baf9f1"
     },
     {
       "exists": true,

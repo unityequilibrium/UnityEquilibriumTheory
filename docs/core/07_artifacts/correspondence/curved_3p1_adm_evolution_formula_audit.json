@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_adm_evolution_formula_audit",
-  "generated_at": "2026-09-17T15:57:47.573289+00:00",
+  "generated_at": "2026-09-17T16:58:34.433837+00:00",
   "topic": "docs/core curved 3+1 parent",
   "version": "adm-evolution-rhs-v1",
   "benchmark_role": "formula/unit/formulation audit",
@@ -185,11 +185,11 @@
     }
   },
   "source_hashes": {
-    "docs/core/02_equations/covariant/uet_curved_3p1_adm_evolution.py": "c841d2f1b014ecea3b4355dad3cf31bb840eae3374b0834b7e000e6739313bcb",
-    "docs/scripts/audit/audit_uet_curved_3p1_adm_evolution.py": "d67d982904d4719bcfc4e3adeea58871b6167843b8b539dafd2405a5981cba0f",
-    "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json": "5540850bde07a4c41b011b8c181ca5700e4f89519c1a8eadd22a3c80e79ef760",
-    "docs/data/external/gr_3p1/gundlach_martin_garcia_2006/source_record.json": "de8f8165faf3549fba39a58f2ad171b333ef676abb965ab8736557a06798d773",
-    "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "22e6b99c6a6070139ccbe9a5c6604788addc719b9e5b032b0416b175873c718e"
+    "docs/core/02_equations/covariant/uet_curved_3p1_adm_evolution.py": "257fdbc032fac4a4402307c68d2bf4ddec81162b5d3a051e234e445e6c539c20",
+    "docs/scripts/audit/audit_uet_curved_3p1_adm_evolution.py": "e49e1c2060492e1e410447f71e838a430162aa15970ef2016c606b3c4c42f586",
+    "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json": "d989b9dd637828dd64f975eaf1f744163ac71e362bde71e46e86e599eced1754",
+    "docs/data/external/gr_3p1/gundlach_martin_garcia_2006/source_record.json": "d9153620dad37fb08328b8dd308394023ac53b904b8ee2f4bf3a2239c0e200fc",
+    "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a"
   },
   "thresholds": {
     "analytic_rhs_max_abs": 1e-12,

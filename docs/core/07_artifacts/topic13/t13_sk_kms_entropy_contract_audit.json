@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-sk-kms-entropy-contract-v1",
   "artifact": "t13_sk_kms_entropy_contract_audit",
-  "generated_at": "2026-08-11",
+  "generated_at": "2026-09-18",
   "status": "PASS_NAMED_SK_KMS_ENTROPY_INTERFACE_CONTRACT",
   "major_result": {
     "major_result_id": "T13_SK_KMS_ENTROPY_INTERFACE_CONTRACT",
@@ -55,22 +55,22 @@
     "data_role": "INTERNAL_FORMAL_CONTRACT_NO_COEFFICIENTS",
     "evidence_artifacts": [
       {
-        "path": "docs/core/thermal_sk_kms_entropy_contract.py",
+        "path": "docs/core/03_lanes/thermal/thermal_sk_kms_entropy_contract.py",
         "sha256": "ea63f10f1f0f18c22f9055196b60d727182d2582f9188e3079c0c1de1f334d1b",
         "summary": {
           "status": "PASS_NAMED_SK_KMS_ENTROPY_INTERFACE_CONTRACT"
         }
       },
       {
-        "path": "docs/core/artifacts/covariant_superfluid_transport_contract.json",
-        "sha256": "a24d96ce15bbda1bdc8b473b7dc2c9690a9482af29b98310bc20566506ef748c",
+        "path": "docs/core/07_artifacts/archive/covariant_superfluid_transport_contract.json",
+        "sha256": "5552138071ba0090b5a7980f410f2ef71514fa7da0f553e5259f98f1be2f7c39",
         "summary": {
           "status": "BLOCKED_PHYSICAL_COEFFICIENTS"
         }
       },
       {
-        "path": "docs/core/artifacts/covariant_superfluid_transport_verification.json",
-        "sha256": "49fc1a047cfa84e8155940a491eb9c3fb3c3536ac707b010ba15b32298632ad1",
+        "path": "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json",
+        "sha256": "bfd10d344ed36394da1a256e1453fdc020f4d426a806aafa4523f5d60e3bc0ee",
         "summary": {
           "status": "PARTIAL_T0_PLUS_SIMULATION_CONTROL"
         }

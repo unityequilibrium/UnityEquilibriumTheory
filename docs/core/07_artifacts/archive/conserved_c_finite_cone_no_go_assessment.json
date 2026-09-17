@@ -1,7 +1,7 @@
 {
   "schema_version": "conserved-c-finite-cone-no-go-assessment-v1",
   "artifact": "conserved_c_finite_cone_no_go_assessment",
-  "generated_at": "2026-08-25",
+  "generated_at": "2026-09-17",
   "status": "NO_GO_FOR_DECLARED_CONSERVED_CATTANEO_LOCAL_GRADIENT_CLASS",
   "proof_scope": "declared local conserved-C Cattaneo equation with mu_C=a_C*C-kappa_C*Laplacian(C)",
   "not_claimed": [
@@ -24,8 +24,8 @@
     "no_clipping_or_cone_padding": true
   },
   "evidence_input": {
-    "path": "docs/core/artifacts/matter_space_causal_cone_compatibility.json",
-    "sha256": "29c731e945a635eb5e2b0bbb3ab8d60aa0f65572af4a5433fcd314f402ad4d15"
+    "path": "docs/core/07_artifacts/archive/matter_space_causal_cone_compatibility.json",
+    "sha256": "fb822fa325b748e9ae976a3649891ae886daf5874416efbf68869be8e8552b47"
   },
   "next_action": "Keep conserved-C baseline blocked and close an explicit local regularization or named finite-cone branch with its own domain-of-dependence proof.",
   "claim_boundary": "Structural no-go evidence for one declared conserved-C local-gradient class; not a global no-go theorem and not a physical validation."

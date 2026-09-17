@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_gh_principal_system_formula_audit",
-  "generated_at": "2026-09-17T15:57:52.475058+00:00",
+  "generated_at": "2026-09-17T16:58:38.897665+00:00",
   "status": "PASS_SOURCE_LOCKED_GH_PRINCIPAL_FORMULAS",
   "relations": [
     {
@@ -158,9 +158,9 @@
     "accessed_on": "2026-08-28"
   },
   "source_hashes": {
-    "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "74692aa7ebe2fd125c1d04ae34937efb715d6c67db42947c4593b67c6a5182d1",
-    "docs/scripts/audit/audit_uet_curved_3p1_generalized_harmonic.py": "a95b9fff9a14fd0912d7d840dfdd4f8dc6d904c478e4a25aaf8df34066cbc2bb",
-    "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "22e6b99c6a6070139ccbe9a5c6604788addc719b9e5b032b0416b175873c718e"
+    "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92",
+    "docs/scripts/audit/audit_uet_curved_3p1_generalized_harmonic.py": "95ed43dabccdeef982a3d1f5e28b9f2d865bd4876c8dcaadbfbf8c441eeed3b6",
+    "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a"
   },
   "open_items": [
     "constraint-preserving boundaries",

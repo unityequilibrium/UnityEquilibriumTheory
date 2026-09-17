@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-thermal-response-beta-contract-v1",
   "artifact": "t13_thermal_response_beta_contract_audit",
-  "generated_at": "2026-08-21",
+  "generated_at": "2026-09-18",
   "status": "PASS_NAMED_FINITE_TEMPERATURE_BETA_CONTRACT",
   "major_result": {
     "major_result_id": "T13_THERMAL_RESPONSE_BETA_CONTRACT",
@@ -37,7 +37,7 @@
     "data_role": "INTERNAL_FORMULA_AND_UNIT_CONTRACT_NO_CALIBRATION",
     "evidence_artifacts": [
       {
-        "path": "docs/core/thermal_response_beta_contract.py",
+        "path": "docs/core/03_lanes/thermal/thermal_response_beta_contract.py",
         "sha256": "5c75a52a0fc99698bbd9662f8f4ec66762a291a08e9916c87afea7af89e07a9e"
       },
       {
@@ -45,19 +45,19 @@
         "sha256": "62943cca93cedf856959a3d01dfa8e44fbd5ddae086b9ad7cf0b06427da9b816"
       },
       {
-        "path": "docs/core/uet_parameters.py",
-        "sha256": "eff2fc6fe0fe35f18c49a032729e385c97b633a90e9a0bd3789be5051d316651"
+        "path": "docs/core/01_contracts/units/uet_parameters.py",
+        "sha256": "6fd9a6fb99f0e62beec0f326d7931b50d147aa789201c641dec0430abb7342e7"
       },
       {
-        "path": "docs/core/uet_master_equation.py",
-        "sha256": "dc06b67609725cfbec432a65c811e3da51f9cbbe2b91ea34f98d0a3a58486e8c"
+        "path": "docs/core/02_equations/matter_space/uet_master_equation.py",
+        "sha256": "4b8525d37f258352acca7c2cbc471e3f52384df599a45369fcc3f9231a91bd73"
       },
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
-        "sha256": "60e3b52f7657893b0e6177a376905dd35e29187e11a40b615191519404d28643"
+        "sha256": "27c267ffcb3fa6d49ed56253de0e96b29c52bba0c821f9ecc0077b7b82bd359e"
       },
       {
-        "path": "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json"
+        "path": "docs/core/07_artifacts/topic13/t13_thermal_response_beta_contract_audit.json"
       }
     ],
     "verification_status": "PASS_NAMED_FINITE_TEMPERATURE_BETA_CONTRACT",

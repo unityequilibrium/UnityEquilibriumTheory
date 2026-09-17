@@ -1,27 +1,27 @@
 {
   "schema_version": "1.1",
   "artifact": "uet_foundation_dependency_gate",
-  "generated_at": "2026-08-10",
+  "generated_at": "2026-09-18",
   "audit_status": "PASS",
   "status": "BLOCKED",
   "wave_type": "foundation_first_workflow",
   "controlling_blocker": "foundation_coverage_units_observable_and_external_claim_gates_incomplete",
-  "claim_ceiling": "candidate normalized effective models and explicitly labelled internal/provisional diagnostics; Wave 1 room coordination does not promote physical closure",
+  "claim_ceiling": "candidate normalized effective models and explicitly labelled internal/simulation diagnostics; no universal C, mass, particle or global-cosmology claim",
   "authority": "docs/topics/For Work/EQUATION_RESEARCH_AND_PHYSICAL_CORRESPONDENCE_STANDARD.md",
-  "protocol": "docs/core/artifacts/uet_equation_research_protocol.json",
-  "registry": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "protocol": "docs/core/07_artifacts/archive/uet_equation_research_protocol.json",
+  "registry": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
   "gates": {
     "F0_inventory": {
       "status": "PASS_CONDITIONAL_WITH_EXPLICIT_QUARANTINES",
       "reason": "Every discovered code surface and formula-audit row is now assigned to a declared family or explicitly quarantined; correspondence and physical meaning remain separate gates.",
       "evidence": [
-        "docs/core/artifacts/uet_foundation_equation_inventory.json",
-        "docs/core/artifacts/uet_code_surface_inventory.json",
-        "docs/core/artifacts/uet_foundation_coverage_closure.json"
+        "docs/core/07_artifacts/gates/uet_foundation_equation_inventory.json",
+        "docs/core/07_artifacts/archive/uet_code_surface_inventory.json",
+        "docs/core/07_artifacts/gates/uet_foundation_coverage_closure.json"
       ],
       "metrics": {
         "formula_audit_files": 39,
-        "formula_rows": 263,
+        "formula_rows": 365,
         "core_python_files": 51,
         "candidate_code_surfaces": 1941,
         "unlinked_core_files": 28,
@@ -34,9 +34,9 @@
       "status": "PASS_CONDITIONAL",
       "reason": "Lane-specific C, Phi, Pi, R_gen and standard physical quantities are separated; universal identity remains prohibited.",
       "evidence": [
-        "docs/core/artifacts/uet_equation_correspondence_registry.json",
-        "docs/core/artifacts/uet_foundation_compatibility_gate.json",
-        "docs/core/artifacts/impact_effect_legacy_wording_audit.json"
+        "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
+        "docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json",
+        "docs/core/07_artifacts/verification/impact_effect_legacy_wording_audit.json"
       ],
       "required_next_artifact": "manually review ACTIVE_PROSE_MANUAL_REVIEW occurrences; canonical and archive routes are dispositioned but remain non-promotional; lane-level ontology closure remains required"
     },
@@ -44,10 +44,10 @@
       "status": "BLOCKED_OPEN_CORRESPONDENCE_ROWS",
       "reason": "All inventoried topic rows now have an explicit correspondence record, but open standard-counterpart/derivation/observable mappings remain.",
       "evidence": [
-        "docs/core/artifacts/uet_foundation_correspondence_matrix.json",
-        "docs/core/artifacts/uet_full_correspondence_coverage.json",
-        "docs/core/artifacts/uet_topic_formula_correspondence_manifest.json",
-        "docs/core/artifacts/uet_equation_correspondence_registry.json"
+        "docs/core/07_artifacts/gates/uet_foundation_correspondence_matrix.json",
+        "docs/core/07_artifacts/correspondence/uet_full_correspondence_coverage.json",
+        "docs/core/07_artifacts/provenance/uet_topic_formula_correspondence_manifest.json",
+        "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json"
       ],
       "metrics": {
         "topic_formula_rows": 263,
@@ -70,10 +70,10 @@
       "status": "BLOCKED",
       "reason": "Normalized and natural-unit contracts exist for selected lanes; complete SI/dimensional observable contracts are not closed.",
       "evidence": [
-        "docs/core/artifacts/uet_equation_correspondence_registry.json",
-        "docs/core/artifacts/uet_active_lane_units_observable_register.json",
-        "docs/core/artifacts/thermal_dimensional_calibration_contract.json",
-        "docs/core/artifacts/mass_density_3d_external_source_package.json"
+        "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
+        "docs/core/07_artifacts/archive/uet_active_lane_units_observable_register.json",
+        "docs/core/07_artifacts/topic13/thermal_dimensional_calibration_contract.json",
+        "docs/core/07_artifacts/provenance/mass_density_3d_external_source_package.json"
       ],
       "metrics": {
         "active_lane_count": 10,
@@ -92,9 +92,9 @@
       "status": "BLOCKED",
       "reason": "Canonical candidate relations and O(2) EOS derivation are recorded, while heuristic bridges and legacy conflicts remain open.",
       "evidence": [
-        "docs/core/artifacts/uet_foundation_compatibility_gate.json",
-        "docs/core/artifacts/uet_equation_correspondence_registry.json",
-        "docs/core/artifacts/uet_derivation_origin_audit.json"
+        "docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json",
+        "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
+        "docs/core/07_artifacts/verification/uet_derivation_origin_audit.json"
       ],
       "metrics": {
         "origin_audit_status": "PASS",
@@ -111,8 +111,8 @@
       "status": "PASS_CONDITIONAL",
       "reason": "Selected canonical/characteristic lanes have local formal checks; legacy and unclosed families remain quarantined.",
       "evidence": [
-        "docs/core/artifacts/uet_foundation_compatibility_gate.json",
-        "docs/core/artifacts/matter_space_characteristic_cone_verification.json"
+        "docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json",
+        "docs/core/07_artifacts/verification/matter_space_characteristic_cone_verification.json"
       ],
       "required_next_artifact": "registry-linked verification matrix for all active families"
     },
@@ -120,9 +120,9 @@
       "status": "PASS_CONDITIONAL_SELECTED_LANE",
       "reason": "The selected characteristic cone lane passes its normalized verifier; the old full coupled lane and changing conserved-C lane retain separate blockers.",
       "evidence": [
-        "docs/core/artifacts/matter_space_characteristic_cone_verification.json",
-        "docs/core/artifacts/matter_space_finite_cone_shared_ledger_integration.json",
-        "docs/core/artifacts/matter_space_causal_lane_selection.json"
+        "docs/core/07_artifacts/verification/matter_space_characteristic_cone_verification.json",
+        "docs/core/07_artifacts/archive/matter_space_finite_cone_shared_ledger_integration.json",
+        "docs/core/07_artifacts/archive/matter_space_causal_lane_selection.json"
       ],
       "metrics": {
         "selected_lane_audit": "PASS",
@@ -139,15 +139,13 @@
       "status": "BLOCKED",
       "reason": "Internal normalized diagnostics exist, but physical measurement operators, dimensional maps and uncertainty contracts are incomplete.",
       "evidence": [
-        "docs/core/artifacts/matter_space_topic_pilot_sync.json",
-        "docs/core/artifacts/uet_active_lane_units_observable_register.json",
-        "docs/core/artifacts/matter_space_observable_verification.json",
-        "docs/core/artifacts/uet_equation_correspondence_registry.json",
-        "docs/core/artifacts/thermal_dimensional_calibration_contract.json",
-        "docs/core/artifacts/mass_density_3d_external_source_package.json",
-        "docs/core/artifacts/gaia_3d_query_manifest_verification.json",
-        "docs/core/artifacts/uet_research_room_wave1_contract.json",
-        "docs/core/artifacts/uet_research_room_wave1_integration_gate.json"
+        "docs/core/07_artifacts/archive/matter_space_topic_pilot_sync.json",
+        "docs/core/07_artifacts/archive/uet_active_lane_units_observable_register.json",
+        "docs/core/07_artifacts/verification/matter_space_observable_verification.json",
+        "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
+        "docs/core/07_artifacts/topic13/thermal_dimensional_calibration_contract.json",
+        "docs/core/07_artifacts/provenance/mass_density_3d_external_source_package.json",
+        "docs/core/07_artifacts/provenance/gaia_3d_query_manifest_verification.json"
       ],
       "metrics": {
         "active_lane_count": 10,
@@ -176,13 +174,11 @@
       "status": "BLOCKED",
       "reason": "Downstream evidence is simulation/internal or dependency-blocked; no foundation claim can be promoted to external physical validation.",
       "evidence": [
-        "docs/core/artifacts/matter_space_topic_pilot_sync.json",
-        "docs/core/artifacts/uet_foundation_extended_wave_closure.json",
-        "docs/core/artifacts/thermal_dimensional_calibration_contract.json",
-        "docs/core/artifacts/mass_density_3d_external_source_package.json",
-        "docs/core/artifacts/gaia_3d_query_manifest_verification.json",
-        "docs/core/artifacts/uet_research_room_wave1_contract.json",
-        "docs/core/artifacts/uet_research_room_wave1_integration_gate.json"
+        "docs/core/07_artifacts/archive/matter_space_topic_pilot_sync.json",
+        "docs/core/07_artifacts/gates/uet_foundation_extended_wave_closure.json",
+        "docs/core/07_artifacts/topic13/thermal_dimensional_calibration_contract.json",
+        "docs/core/07_artifacts/provenance/mass_density_3d_external_source_package.json",
+        "docs/core/07_artifacts/provenance/gaia_3d_query_manifest_verification.json"
       ],
       "required_next_artifact": "source-locked external data package plus preregistered holdout policy"
     }
@@ -193,8 +189,8 @@
     "standard_counterpart": "damped hyperbolic non-conserved order-parameter dynamics",
     "unit_lane": "normalized_only_v1",
     "evidence": [
-      "docs/core/artifacts/matter_space_characteristic_cone_verification.json",
-      "docs/core/artifacts/matter_space_causal_lane_selection.json"
+      "docs/core/07_artifacts/verification/matter_space_characteristic_cone_verification.json",
+      "docs/core/07_artifacts/archive/matter_space_causal_lane_selection.json"
     ],
     "controller": "conserved_changing_C_high_k_blocker_and_topic_observable_reruns",
     "claim_ceiling": "candidate normalized finite-cone collective-response lane; no mass/density/covariant/empirical claim",
@@ -212,22 +208,10 @@
     "gaia_3d_query_manifest_status": "PASS_WITH_BLOCKED_DATA_INTAKE",
     "gaia_3d_query_claim_status": "PREREGISTERED_QUERY_AND_HOLDOUT_ONLY",
     "gaia_3d_holdout_consumed": false,
-    "physical_promotion_allowed": false,
-    "research_room_wave1_status": "PASS_WITH_BLOCKED_LANES",
-    "research_room_wave1_claim_promotion": false,
-    "research_room_wave1_blockers": [
-      "Core O(2) finite-temperature/Kubo/SI/curved lanes remain open",
-      "Topic 0.10 latest simplified comparator run is below its internal speed threshold",
-      "Topic 0.11 source/formula/estimator policy remains blocked",
-      "Xie 2026 remains locked holdout and was not consumed",
-      "alpha_Phi_K has no independent derivation or calibration with uncertainty",
-      "current simplified comparator result is below its internal speed threshold",
-      "full original conserved-C candidate remains blocked; named coupled C/Phi lane passes the locked normalized causal checks",
-      "full_candidate_prearrival_leakage_and_open_alpha_Phi_K_calibration"
-    ]
+    "physical_promotion_allowed": false
   },
   "coverage_snapshot": {
-    "registry_entry_count": 35,
+    "registry_entry_count": 62,
     "inventory_missing_scope_count": 5,
     "code_unlinked_core_files": 28,
     "matrix_status": "BLOCKED",
@@ -241,72 +225,5 @@
     "physical_data_claims": "BLOCKED",
     "existing_downstream_topics": "retain current status; no promotion"
   },
-  "next_controller": "derive a dimensional Phi/energy anchor or source-lock independent alpha_Phi_K with uncertainty; source-normalize TTG rows; execute the locked Gaia query and archive/hash the returned 3D table; then close selection/mass-calibration/uncertainty/holdout gates before rerunning selected 0.11/0.13 lanes",
-  "research_room_wave1": {
-    "status": "PASS_WITH_BLOCKED_LANES",
-    "integration_status": "PASS_WITH_BLOCKED_LANES",
-    "claim_promotion": false,
-    "contract": {
-      "path": "docs/core/artifacts/uet_research_room_wave1_contract.json",
-      "sha256": "7df61943f54da4d907e4f9817d31178bbc01a2ff95117611548548c96e63e912"
-    },
-    "integration_gate": {
-      "path": "docs/core/artifacts/uet_research_room_wave1_integration_gate.json",
-      "sha256": "6b62d063fd4ec4bcb7f7a9d3ab2a47c83613203c550566f57b22d918f748d211"
-    },
-    "required_mapping_fields": [
-      "ontology",
-      "units",
-      "derivation_class",
-      "observable",
-      "data_role",
-      "verification_status",
-      "controlling_blocker",
-      "claim_boundary"
-    ],
-    "rooms": {
-      "core": {
-        "verification_status": "BLOCKED_FOUNDATION_GATE",
-        "controlling_blocker": "foundation_coverage_units_observable_and_external_claim_gates_incomplete",
-        "next_action": "close open-system/SK-KMS, dimensional observable, and curved 3+1 dependency artifacts",
-        "claim_boundary": "candidate effective theory; no global closure"
-      },
-      "topic_0_13": {
-        "verification_status": "PASS_WITH_BLOCKED_DIMENSIONAL_AND_FULL_CANDIDATE_LANES",
-        "controlling_blocker": "full_candidate_prearrival_leakage_and_open_alpha_Phi_K_calibration",
-        "next_action": "derive or independently calibrate alpha_Phi_K with uncertainty using training/calibration data only; do not read or tune on Xie 2026",
-        "claim_boundary": "permitted figure-derived source route and normalized internal controls; not raw author data, temperature prediction, external validation, or global closure"
-      },
-      "topic_0_11": {
-        "verification_status": "BLOCKED_SOURCE_AND_ESTIMATOR_POLICY",
-        "controlling_blocker": "source_formula_extraction_and_accepted_estimator_policy_remain_blocked",
-        "next_action": "finish source-backed formula extraction, estimator acceptance, and temporal/replicate acquisition before any exponent rerun",
-        "claim_boundary": "diagnostic/replication lane; no exponent or universality promotion"
-      },
-      "core_o2": {
-        "verification_status": "PASS",
-        "controlling_blocker": "finite_temperature_Kubo_SI_and_curved_transport_completion_open",
-        "next_action": "retain current lane and complete coefficient/transport mapping only after Core dependencies permit",
-        "claim_boundary": "formal natural-unit O(2) lane; no signed-O(2)-charge identity for C"
-      },
-      "topic_0_10_comparator": {
-        "verification_status": "FAIL_INTERNAL_SIMPLIFIED_BENCHMARK",
-        "controlling_blocker": "current simplified comparator result is below its internal speed threshold",
-        "next_action": "keep comparator separate and defer full constitutive transport",
-        "claim_boundary": "internal simplified benchmark only; no external CFD validation"
-      }
-    },
-    "controlling_blockers": [
-      "Core O(2) finite-temperature/Kubo/SI/curved lanes remain open",
-      "Topic 0.10 latest simplified comparator run is below its internal speed threshold",
-      "Topic 0.11 source/formula/estimator policy remains blocked",
-      "Xie 2026 remains locked holdout and was not consumed",
-      "alpha_Phi_K has no independent derivation or calibration with uncertainty",
-      "current simplified comparator result is below its internal speed threshold",
-      "full original conserved-C candidate remains blocked; named coupled C/Phi lane passes the locked normalized causal checks",
-      "full_candidate_prearrival_leakage_and_open_alpha_Phi_K_calibration"
-    ],
-    "next_action": "resolve the listed blockers in their owning rooms, then rerun this integration audit; do not start Gravity or full constitutive transport yet",
-    "claim_boundary": "Wave 1 closes coordination ambiguity only; UET remains a candidate effective theory with blocked foundation dependencies."
-  }
+  "next_controller": "derive a dimensional Phi/energy anchor or source-lock independent alpha_Phi_K with uncertainty; source-normalize TTG rows; execute the locked Gaia query and archive/hash the returned 3D table; then close selection/mass-calibration/uncertainty/holdout gates before rerunning selected 0.11/0.13 lanes"
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-day2012-preferred-thermodynamic-table-boundary-v1",
   "artifact": "t13_day2012_preferred_thermodynamic_table_boundary_audit",
-  "generated_at": "2026-08-22",
+  "generated_at": "2026-09-18",
   "status": "PASS_SCOPED_DAY2012_THERMODYNAMIC_ASSESSMENT_BOUNDARY_NO_GO",
   "major_result": {
     "major_result_id": "T13_DAY2012_PREFERRED_THERMODYNAMIC_ASSESSMENT_BOUNDARY",
@@ -76,7 +76,7 @@
       {
         "role": "day2012_source_package",
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/day_2012_preferred_thermodynamic_table_source_package.json",
-        "sha256": "315ac434db3025808a982eae86ed031c182e19b8957b50f557058c6e407f0367"
+        "sha256": "d058a2efe3bdb6f90b87cefd3d645c44e50514da48937ffc89ba14408d5d85b5"
       },
       {
         "role": "day2012_publisher_locator",
@@ -101,7 +101,7 @@
     "publisher_locator": "https://www.degruyterbrill.com/document/doi/10.2138/am.2011.3763/html",
     "primary_table_locator": "Table 2, printed page 56",
     "payload_state": "REMOTE_PRIMARY_TABLE_LOCATOR_SCREENED",
-    "package_sha256": "315ac434db3025808a982eae86ed031c182e19b8957b50f557058c6e407f0367"
+    "package_sha256": "d058a2efe3bdb6f90b87cefd3d645c44e50514da48937ffc89ba14408d5d85b5"
   },
   "assessment_values": {
     "B0_kbar": {

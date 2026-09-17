@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-collective-response-eos-stability-v1",
   "artifact": "t13_collective_response_eos_stability_audit",
-  "generated_at": "2026-08-11",
+  "generated_at": "2026-09-18",
   "status": "PASS_NAMED_COLLECTIVE_RESPONSE_EOS_STABILITY_CONTRACT",
   "major_result": {
     "major_result_id": "T13_COLLECTIVE_RESPONSE_EOS_STABILITY_CONTRACT",
@@ -33,12 +33,12 @@
     "data_role": "INTERNAL_FORMULA_STABILITY_CONTRACT_NO_CALIBRATION",
     "evidence_artifacts": [
       {
-        "path": "docs/core/thermal_collective_response_eos.py",
-        "sha256": "a67c60ea87b848896a37fb9f97cffbff843f20bf07d5d32ff8f3ec82f61544a3"
+        "path": "docs/core/03_lanes/thermal/thermal_collective_response_eos.py",
+        "sha256": "d7554ec33856fdc53beaae82119cc038d308f8d4b048cc0605e1b1fb6f66a734"
       },
       {
-        "path": "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json",
-        "sha256": "9383fe0c7ea3a5d85399d86df94b199f03435d3714bae1fc052f75f88e55c412"
+        "path": "docs/core/07_artifacts/topic13/t13_thermal_response_beta_contract_audit.json",
+        "sha256": "dfb4a6d846cf5e956bacc5ab184daa96a0b8c495b6215bf43408df87b2f25da4"
       },
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/thermal_closure_derivation_audit.json",
@@ -46,10 +46,10 @@
       },
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
-        "sha256": "13dc1de1666bdb8637417d1759676a08184f126a0a592feab55cbd85f811e6dd"
+        "sha256": "27c267ffcb3fa6d49ed56253de0e96b29c52bba0c821f9ecc0077b7b82bd359e"
       },
       {
-        "path": "docs/core/artifacts/t13_collective_response_eos_stability_audit.json"
+        "path": "docs/core/07_artifacts/topic13/t13_collective_response_eos_stability_audit.json"
       }
     ],
     "verification_status": "PASS_NAMED_COLLECTIVE_RESPONSE_EOS_STABILITY_CONTRACT",

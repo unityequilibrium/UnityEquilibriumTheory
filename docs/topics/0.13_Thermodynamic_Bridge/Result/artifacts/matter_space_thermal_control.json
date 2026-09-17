@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "artifact": "matter_space_thermal_control",
   "topic": "0.13_Thermodynamic_Bridge",
-  "generated_at": "2026-09-17T13:03:02.158263+00:00",
+  "generated_at": "2026-09-17T17:10:52.343891+00:00",
   "status": "SIMULATION_ONLY",
   "internal_gate_status": "FAIL",
   "dependency_status": "BLOCKED",
@@ -171,14 +171,14 @@
   ],
   "preregistration": {
     "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_thermal_preregistration.json",
-    "sha256": "5f7a4d77f055a32fa908709021aaabd9529f5c202d53636c0a2fc8f5acfeb288",
+    "sha256": "f0cb51e720c8c4813973d4227566373b9f3c473308346974e048f49056792fcd",
     "status": "LOCKED_BEFORE_EXECUTION",
     "parameter_fitting": false,
     "seed": 13013
   },
   "numerical_amendment": {
     "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_thermal_numerical_amendment_001.json",
-    "sha256": "2d02ff9840ef2f051fb228983c0f568b379dca4955ca0a1a41578ed702ecaec1",
+    "sha256": "a30b639531fda62983b380051b4ca86c791cda772b0440b3113c5ca7daf5f85e",
     "status": "POST_DIAGNOSTIC_NUMERICAL_AMENDMENT",
     "blind_preregistration": false,
     "analysis_dt": 5e-05,
@@ -187,14 +187,14 @@
   },
   "source_package": {
     "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_second_sound_source_package.json",
-    "sha256": "3754d54cdee639be211a308d893b994ca78f7dd11aaeb191278b9085e7923b96",
+    "sha256": "8058eaa23f57e7c86cde8e57978e74ecb128edcf6d5c42b206fb0ade312dbcc2",
     "status": "FIGURE_DERIVED_NORMALIZED_COMPARISON_READY_RAW_AUTHOR_C_SRC_OPEN",
     "numeric_rows_consumed": 0,
     "holdout_consumed": false
   },
   "core_dependency": {
     "path": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
-    "sha256": "8fa111f3e23134af2c1d3924a364fef7de27142bd636f0b0510a4c79867d6f3c",
+    "sha256": "dad9484e0cb713be9c89a9eab48c602a0eec62066325937b9b8030eb561dcd89",
     "status": "FAIL",
     "controlling_blocker": "prearrival_leakage"
   },
@@ -229,7 +229,7 @@
         "sha256": "28f9fe12c7b9ef56521776e9bb75f30d22af40ee76f1b3aa70deee1b9b29f247"
       }
     ],
-    "script_sha256": "da38b35b7ee1ceb7462b5ae09a6db287ef612edebf7c5bcb775394bc59f32b15"
+    "script_sha256": "7b9f718d83fabea5b5fdb0f8fefc005e6a90ce465a260ca375dd8a094d951030"
   },
   "run_integrity": {
     "unit_lane": "normalized",

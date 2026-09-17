@@ -1,11 +1,11 @@
 {
   "schema_version": "impact-effect-legacy-wording-audit-v2",
   "artifact": "impact_effect_legacy_wording_audit",
-  "generated_at": "2026-08-02",
+  "generated_at": "2026-09-18",
   "status": "SCOPED_DISPOSITIONS_WITH_ACTIVE_PROSE_OPEN",
   "scope": {
     "root": "docs/",
-    "files_scanned": 2823,
+    "files_scanned": 4855,
     "excluded_directory_names": [
       ".git",
       "Result",
@@ -16,47 +16,77 @@
     "rule": "inventory plus deterministic routing disposition; no legacy wording is rewritten or promoted automatically"
   },
   "summary": {
-    "occurrence_count": 664,
+    "occurrence_count": 776,
     "by_marker": {
-      "c_mass_identity": 53,
-      "trace_feedback": 7,
+      "information_field": 608,
       "vacuum_empty": 17,
-      "information_field": 587
+      "c_mass_identity": 106,
+      "trace_feedback": 45
     },
     "by_path": {
+      "docs/core/00_governance/redirects/root/UET_INFORMATION_FIELD_THERMODYNAMIC_TRACE_AUDIT.md": 2,
+      "docs/core/00_governance/UET_RESEARCH_ROOM_BRIEF.md": 1,
+      "docs/core/01_contracts/COSMOLOGICAL_OPEN_SYSTEM_AND_CAUSAL_TRACE_SPEC.md": 1,
+      "docs/core/01_contracts/IMPACT_EFFECT_AND_INFORMATION_FLOW_SPEC.md": 1,
+      "docs/core/01_contracts/MATTER_SPACE_FINITE_CONE_C_SPEC.md": 2,
+      "docs/core/01_contracts/RELATIONAL_TWO_BODY_BASELINE_SPEC.md": 1,
+      "docs/core/01_contracts/RESOURCE_PERSISTENCE_PRINCIPLE_SPEC.md": 1,
+      "docs/core/01_contracts/TRACE_RESEARCH_SPEC.md": 1,
+      "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md": 1,
+      "docs/core/01_contracts/UET_MAIN_THEORY_AXIOMS_SPEC.md": 1,
+      "docs/core/02_equations/covariant/uet_covariant_diffusion.py": 2,
+      "docs/core/02_equations/lorentz_noether/uet_lorentz.py": 1,
+      "docs/core/02_equations/lorentz_noether/uet_noether.py": 1,
+      "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py": 1,
+      "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field.py": 1,
+      "docs/core/02_equations/matter_space/uet_master_equation.py": 7,
+      "docs/core/02_equations/o2/standard_o2_finite_temperature_comparator.py": 1,
+      "docs/core/02_equations/o2/uet_o2_auxiliary_field_condensed.py": 1,
+      "docs/core/02_equations/o2/uet_o2_beta_correspondence.py": 1,
+      "docs/core/02_equations/o2/uet_o2_condensate_fluctuations.py": 1,
+      "docs/core/02_equations/o2/uet_o2_condensed_dissipative_transport_identifiability_no_go.py": 1,
+      "docs/core/02_equations/o2/uet_o2_condensed_loop_renormalized_vertex.py": 1,
+      "docs/core/02_equations/o2/uet_o2_condensed_relative_flow_kubo_admission.py": 1,
+      "docs/core/02_equations/o2/uet_o2_condensed_retarded_dissipation_no_go.py": 1,
+      "docs/core/02_equations/o2/uet_o2_condensed_sk_kms_kubo_match.py": 1,
+      "docs/core/02_equations/o2/uet_o2_equilibrium_kms.py": 1,
+      "docs/core/02_equations/o2/uet_o2_finite_temperature_hartree_thermodynamics.py": 1,
+      "docs/core/02_equations/o2/uet_o2_finite_temperature_normal_stability.py": 1,
+      "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py": 1,
+      "docs/core/02_equations/o2/uet_o2_finite_temperature_renormalized_hartree.py": 1,
+      "docs/core/02_equations/o2/uet_o2_finite_temperature_self_energy.py": 1,
+      "docs/core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py": 1,
+      "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py": 1,
+      "docs/core/02_equations/o2/uet_o2_formal_two_sector_thermodynamics.py": 1,
+      "docs/core/02_equations/o2/uet_o2_normal_response_curvature.py": 1,
+      "docs/core/02_equations/o2/uet_o2_one_loop_normal_branch.py": 2,
+      "docs/core/02_equations/o2/uet_o2_renormalized_normal_branch.py": 1,
+      "docs/core/03_lanes/review/uet_observables.py": 1,
+      "docs/core/03_lanes/thermal/thermal_collective_response_eos.py": 3,
+      "docs/core/03_lanes/thermal/thermal_response_beta_contract.py": 1,
+      "docs/core/03_lanes/thermal/uet_transport_coefficient_identifiability.py": 1,
+      "docs/core/03_lanes/topic13_support/T13_CORE_INTEGRATION_NOTE.md": 1,
+      "docs/core/03_lanes/topic13_support/T13_MATTER_STRAIN_SUSCEPTIBILITY_MATCH.md": 2,
+      "docs/core/03_lanes/topic13_support/t13_thermal_bridge_scale_dependency.py": 1,
+      "docs/core/05_tests/equation/root/test_lorentz_noether_comprehensive.py": 1,
+      "docs/core/05_tests/equation/root/test_noether_phase_field_topic_0_11_dependency.py": 1,
+      "docs/core/05_tests/regression/parameter_engine/engine.py": 2,
+      "docs/core/05_tests/regression/root/Research_Parameter_Sweep.py": 1,
+      "docs/core/05_tests/regression/root/test_matrix_proof.py": 1,
+      "docs/core/05_tests/regression/root/test_matter_space_research_program.py": 1,
+      "docs/core/05_tests/regression/root/test_uet_wave3_wave10_program.py": 1,
+      "docs/core/05_tests/regression/validation/test_matrix_proof.py": 1,
+      "docs/core/08_history/research_notes/MATTER_SPACE_RESEARCH_REPORT.md": 1,
+      "docs/core/08_history/research_notes/UET_CONCEPT_EQUATION_RECONSTRUCTION_AUDIT.md": 2,
+      "docs/core/08_history/research_notes/UET_FOUNDATION_COMPATIBILITY_AUDIT.md": 1,
+      "docs/core/08_history/research_notes/UET_FOUNDATION_RESEARCH_PROGRAM_REPORT.md": 5,
+      "docs/core/08_history/research_notes/UET_INFORMATION_FIELD_THERMODYNAMIC_TRACE_AUDIT.md": 1,
+      "docs/core/08_history/research_notes/UET_MAIN_THEORY_CLOSURE_REPORT.md": 1,
+      "docs/core/08_history/update_logs/CORE_FILE_ORGANIZATION_UPDATE_LOG.md": 1,
+      "docs/core/08_history/update_logs/UET_CORE_PHYSICAL_MIGRATION_UPDATE_LOG.md": 2,
+      "docs/core/08_history/update_logs/UET_WAVE3_WAVE10_UPDATE_LOG.md": 2,
       "docs/core/AGENTS.md": 4,
-      "docs/core/COSMOLOGICAL_OPEN_SYSTEM_AND_CAUSAL_TRACE_SPEC.md": 1,
-      "docs/core/data/scripts/audit/audit_data_sources.py": 2,
-      "docs/core/data/scripts/Legacy/test_engine_comparison.py": 1,
-      "docs/core/data/scripts/Runners/run_physics_anomalies.py": 1,
-      "docs/core/IMPACT_EFFECT_AND_INFORMATION_FLOW_SPEC.md": 1,
-      "docs/core/MATTER_SPACE_FINITE_CONE_C_SPEC.md": 2,
-      "docs/core/MATTER_SPACE_RESEARCH_REPORT.md": 1,
       "docs/core/README.md": 2,
-      "docs/core/RELATIONAL_TWO_BODY_BASELINE_SPEC.md": 1,
-      "docs/core/RESOURCE_PERSISTENCE_PRINCIPLE_SPEC.md": 1,
-      "docs/core/test/parameter_engine/engine.py": 2,
-      "docs/core/test/Research_Parameter_Sweep.py": 1,
-      "docs/core/test/test_lorentz_noether_comprehensive.py": 1,
-      "docs/core/test/test_matrix_proof.py": 1,
-      "docs/core/test/test_matter_space_research_program.py": 1,
-      "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py": 1,
-      "docs/core/test/test_uet_wave3_wave10_program.py": 1,
-      "docs/core/test/validation/test_matrix_proof.py": 1,
-      "docs/core/TRACE_RESEARCH_SPEC.md": 1,
-      "docs/core/UET_CONCEPT_EQUATION_RECONSTRUCTION_AUDIT.md": 2,
-      "docs/core/uet_covariant_diffusion.py": 2,
-      "docs/core/UET_FOUNDATION_COMPATIBILITY_AUDIT.md": 1,
-      "docs/core/UET_FOUNDATION_RESEARCH_PROGRAM_REPORT.md": 2,
-      "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md": 1,
-      "docs/core/uet_hyperbolic_phase_field.py": 1,
-      "docs/core/UET_INFORMATION_FIELD_THERMODYNAMIC_TRACE_AUDIT.md": 1,
-      "docs/core/uet_lorentz.py": 1,
-      "docs/core/uet_master_equation.py": 7,
-      "docs/core/uet_noether.py": 1,
-      "docs/core/uet_noether_phase_field_map.py": 1,
-      "docs/core/uet_observables.py": 1,
-      "docs/core/UET_WAVE3_WAVE10_UPDATE_LOG.md": 1,
       "docs/knowledge_base/tensorizer.py": 6,
       "docs/meta/Code/Research_Plasma_Sheath_Unification.py": 2,
       "docs/meta/Plasma_Sheath_Unification.md": 7,
@@ -66,14 +96,39 @@
       "docs/scripts/audit/audit_matter_interaction_forward.py": 1,
       "docs/scripts/audit/audit_matter_space_research_program.py": 1,
       "docs/scripts/audit/audit_relational_two_body_baseline.py": 2,
+      "docs/scripts/audit/audit_topic13_covariant_transport_implementation_boundary.py": 1,
+      "docs/scripts/audit/audit_topic13_dressed_ra_pair_microscopic_rung_boundary.py": 1,
+      "docs/scripts/audit/audit_topic13_finite_temperature_quasiparticle_eos.py": 1,
+      "docs/scripts/audit/audit_topic13_finite_temperature_quasiparticle_eos_v2.py": 1,
+      "docs/scripts/audit/audit_topic13_response_one_loop_match.py": 1,
+      "docs/scripts/audit/audit_topic13_standard_o2_finite_temperature_comparator.py": 2,
+      "docs/scripts/audit/audit_topic13_thermal_bridge_scale_dependency.py": 1,
+      "docs/scripts/audit/audit_topic13_transport_coefficient_identifiability.py": 1,
+      "docs/scripts/audit/audit_topic13_transport_kms_entropy_status_boundary.py": 1,
+      "docs/scripts/audit/audit_topic13_uet_o2_condensate_fluctuation_spectrum.py": 1,
+      "docs/scripts/audit/audit_topic13_uet_o2_condensate_gaussian_thermal.py": 1,
+      "docs/scripts/audit/audit_topic13_uet_o2_gaussian_offshell_background.py": 1,
+      "docs/scripts/audit/audit_topic13_uet_o2_normal_thermodynamic_consistency.py": 1,
+      "docs/scripts/audit/audit_topic13_uet_o2_one_loop_convergence.py": 1,
+      "docs/scripts/audit/audit_topic13_uet_o2_one_loop_normal_branch.py": 2,
+      "docs/scripts/audit/audit_uet_coarse_graining.py": 1,
       "docs/scripts/audit/audit_uet_foundation_compatibility.py": 5,
       "docs/scripts/audit/audit_uet_gr_covariant_matter.py": 1,
       "docs/scripts/audit/audit_uet_gr_legacy_alignment.py": 1,
+      "docs/scripts/audit/audit_uet_main_theory_axioms.py": 1,
+      "docs/scripts/audit/audit_uet_main_theory_closure.py": 1,
       "docs/scripts/audit/audit_uet_wave3_wave10_program.py": 1,
       "docs/scripts/audit/build_uet_active_lane_contract.py": 2,
       "docs/scripts/audit/build_uet_core_equation_family_contract.py": 2,
       "docs/scripts/audit/build_uet_foundation_compatibility_decision.py": 1,
       "docs/scripts/audit/build_uet_foundation_dependency_graph.py": 1,
+      "docs/scripts/audit/sync_topic13_collective_response_eos_into_gates.py": 2,
+      "docs/scripts/audit/sync_topic13_thermal_response_beta_contract_into_gates.py": 1,
+      "docs/scripts/audit/sync_topic13_uet_o2_one_loop_normal_branch.py": 1,
+      "docs/scripts/audit/topic13_closure_contract.py": 1,
+      "docs/scripts/core/audit/audit_data_sources.py": 2,
+      "docs/scripts/core/legacy/test_engine_comparison.py": 1,
+      "docs/scripts/core/runners/run_physics_anomalies.py": 1,
       "docs/scripts/Legacy/test_engine_comparison.py": 1,
       "docs/scripts/Runners/run_physics_anomalies.py": 1,
       "docs/topics/0.0_Grand_Unification/Code/01_Engine/Engine_Omni.py": 1,
@@ -134,7 +189,14 @@
       "docs/topics/0.13_Thermodynamic_Bridge/Doc/ANALYSIS_01_Thermodynamics.md": 4,
       "docs/topics/0.13_Thermodynamic_Bridge/Doc/ANALYSIS_Thermodynamic_Bridge_Research.md": 1,
       "docs/topics/0.13_Thermodynamic_Bridge/Doc/keed/03_Research/solution.md": 2,
+      "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md": 23,
+      "docs/topics/0.13_Thermodynamic_Bridge/FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md": 12,
+      "docs/topics/0.13_Thermodynamic_Bridge/LIMITATIONS.md": 1,
       "docs/topics/0.13_Thermodynamic_Bridge/README.md": 2,
+      "docs/topics/0.13_Thermodynamic_Bridge/RESEARCH_WAVE_2026-08-11_CAUSAL_BRANCH_SELECTION.md": 1,
+      "docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_FULL_CLOSURE_STATUS.md": 1,
+      "docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_SUBRESULT_CLOSURE_MAP.md": 1,
+      "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md": 3,
       "docs/topics/0.14_Complex_Systems/Code/03_Research/Research_Complex_Systems.py": 4,
       "docs/topics/0.14_Complex_Systems/Code/04_Competitor/Baseline_Market_Experiment.py": 1,
       "docs/topics/0.14_Complex_Systems/Doc/ANALYSIS_01_Complex_Systems.md": 3,
@@ -187,13 +249,14 @@
       "docs/topics/0.21_Yang_Mills_Mass_Gap/Doc/ANALYSIS_MASS_GAP_ENGLISH_REF.md": 1,
       "docs/topics/0.21_Yang_Mills_Mass_Gap/Doc/ANALYSIS_Proof_Mass_Gap.md": 1,
       "docs/topics/0.21_Yang_Mills_Mass_Gap/Doc/ANALYSIS_Yang_Mills_Mass_Gap.md": 2,
-      "docs/topics/0.22_Biophysics_Origin_of_Life/Code/03_Research/Research_Cancer_Cell_Chaos.py": 3,
-      "docs/topics/0.22_Biophysics_Origin_of_Life/Code/03_Research/Research_Clinical_Strategy_Comparison.py": 1,
-      "docs/topics/0.22_Biophysics_Origin_of_Life/Code/03_Research/Research_Personalized_Threshold.py": 1,
-      "docs/topics/0.22_Biophysics_Origin_of_Life/Code/03_Research/Research_Seizure_Prediction.py": 1,
-      "docs/topics/0.22_Biophysics_Origin_of_Life/Code/03_Research/Research_Self_Organizing_Protocell.py": 2,
-      "docs/topics/0.22_Biophysics_Origin_of_Life/Code/04_Competitor/Competitor_Cancer_Models.py": 2,
-      "docs/topics/0.22_Biophysics_Origin_of_Life/Doc/03_Research/paper/ANALYSIS_BIOGENESIS.md": 2,
+      "docs/topics/0.22_Biophysics_Origin_of_Life/Code/Legacy/03_Research/Research_Cancer_Cell_Chaos.py": 3,
+      "docs/topics/0.22_Biophysics_Origin_of_Life/Code/Legacy/03_Research/Research_Clinical_Strategy_Comparison.py": 1,
+      "docs/topics/0.22_Biophysics_Origin_of_Life/Code/Legacy/03_Research/Research_Personalized_Threshold.py": 1,
+      "docs/topics/0.22_Biophysics_Origin_of_Life/Code/Legacy/03_Research/Research_Seizure_Prediction.py": 1,
+      "docs/topics/0.22_Biophysics_Origin_of_Life/Code/Legacy/03_Research/Research_Self_Organizing_Protocell.py": 2,
+      "docs/topics/0.22_Biophysics_Origin_of_Life/Code/Legacy/04_Competitor/Competitor_Cancer_Models.py": 2,
+      "docs/topics/0.22_Biophysics_Origin_of_Life/Doc/Legacy/03_Research/paper/ANALYSIS_BIOGENESIS.md": 2,
+      "docs/topics/0.22_Biophysics_Origin_of_Life/DYNAMICS_RESEARCH_SPEC.md": 2,
       "docs/topics/0.23_Unity_Scale_Link/Code/05_Enhancement/Enhancement_Noether_Currents.py": 1,
       "docs/topics/0.23_Unity_Scale_Link/Code/05_Enhancement/Enhancement_Noether_U1_Gauge.py": 2,
       "docs/topics/0.23_Unity_Scale_Link/Code/05_Enhancement/Enhancement_Symmetry_Analysis.py": 1,
@@ -371,54 +434,44 @@
       "docs/UET_Documentation_Details/LEGACY_REPORTS/99_Legacy/legacy_reports/PROBLEM_ANALYSIS.md": 1
     },
     "by_disposition": {
+      "ACTIVE_PROSE_MANUAL_REVIEW": 299,
       "CANONICAL_CONTRACT_LITERAL": 12,
-      "CODE_OR_TEST_LITERAL": 283,
-      "LEGACY_ARCHIVE_QUARANTINED": 127,
-      "ACTIVE_PROSE_MANUAL_REVIEW": 242
+      "CODE_OR_TEST_LITERAL": 326,
+      "LEGACY_ARCHIVE_QUARANTINED": 139
     },
-    "active_prose_open": 242
+    "active_prose_open": 299
   },
   "claim_boundary": "legacy/candidate wording is not evidence for a universal identity of C, I_trace, mass, vacuum, photon, neutrino, or positron",
   "occurrences": [
     {
-      "marker": "c_mass_identity",
+      "marker": "information_field",
       "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CANONICAL_CONTRACT_LITERAL",
-      "disposition_basis": "canonical core contract; occurrence is retained as explicit boundary/legacy wording and is not a universal identity",
-      "reason": "lane_mapping_required",
-      "path": "docs/core/AGENTS.md",
-      "line": 47,
-      "snippet": "- `C` is a system-state coordinate; it is not universally mass."
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/00_governance/redirects/root/UET_INFORMATION_FIELD_THERMODYNAMIC_TRACE_AUDIT.md",
+      "line": 5,
+      "snippet": "Canonical source: [docs/core/08_history/research_notes/UET_INFORMATION_FIELD_THERMODYNAMIC_TRACE_AUDIT.md](../../../08_history/research_notes/UET_INFORMATION_FIELD_THERMODYNAMIC_TRACE_AUDIT.md)"
     },
     {
-      "marker": "trace_feedback",
+      "marker": "information_field",
       "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CANONICAL_CONTRACT_LITERAL",
-      "disposition_basis": "canonical core contract; occurrence is retained as explicit boundary/legacy wording and is not a universal identity",
-      "reason": "explicit_feedback_boundary_review",
-      "path": "docs/core/AGENTS.md",
-      "line": 51,
-      "snippet": "- `R` / `I_trace` is a derived causal/history observable with no feedback in the new mode."
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/00_governance/redirects/root/UET_INFORMATION_FIELD_THERMODYNAMIC_TRACE_AUDIT.md",
+      "line": 9,
+      "snippet": "Legacy path: docs/core/UET_INFORMATION_FIELD_THERMODYNAMIC_TRACE_AUDIT.md"
     },
     {
-      "marker": "trace_feedback",
+      "marker": "information_field",
       "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CANONICAL_CONTRACT_LITERAL",
-      "disposition_basis": "canonical core contract; occurrence is retained as explicit boundary/legacy wording and is not a universal identity",
-      "reason": "explicit_feedback_boundary_review",
-      "path": "docs/core/AGENTS.md",
-      "line": 110,
-      "snippet": "- Receiver feedback is allowed only through an explicit receiver-dynamics operator with a declared input, units, conservation/ledger rule, and detector interaction. The current matter-space operator has no `R_gen` feedback edge."
-    },
-    {
-      "marker": "c_mass_identity",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CANONICAL_CONTRACT_LITERAL",
-      "disposition_basis": "canonical core contract; occurrence is retained as explicit boundary/legacy wording and is not a universal identity",
-      "reason": "lane_mapping_required",
-      "path": "docs/core/AGENTS.md",
-      "line": 111,
-      "snippet": "- `C` remains a collective system-behaviour coordinate until a lane-specific map to density, charge, order parameter, or another standard quantity is closed. `C = mass` is never a universal identity."
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/00_governance/UET_RESEARCH_ROOM_BRIEF.md",
+      "line": 13,
+      "snippet": "| `Phi` | effective response variable | metric, particle, ether, information field, or equilibrium temperature |"
     },
     {
       "marker": "vacuum_empty",
@@ -426,49 +479,9 @@
       "disposition": "CANONICAL_CONTRACT_LITERAL",
       "disposition_basis": "canonical core contract; occurrence is retained as explicit boundary/legacy wording and is not a universal identity",
       "reason": "vacuum_wording_review",
-      "path": "docs/core/COSMOLOGICAL_OPEN_SYSTEM_AND_CAUSAL_TRACE_SPEC.md",
+      "path": "docs/core/01_contracts/COSMOLOGICAL_OPEN_SYSTEM_AND_CAUSAL_TRACE_SPEC.md",
       "line": 41,
       "snippet": "The phrase “space is not an empty vacuum” must be made precise. In this"
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/data/scripts/audit/audit_data_sources.py",
-      "line": 220,
-      "snippet": "\"source\": \"Derived from C-I field balance\","
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/data/scripts/audit/audit_data_sources.py",
-      "line": 229,
-      "snippet": "\"note\": \"I-field coupling\","
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "LEGACY_ARCHIVE_QUARANTINED",
-      "disposition_basis": "legacy/archive path; retained for history and excluded from active claim promotion",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/data/scripts/Legacy/test_engine_comparison.py",
-      "line": 55,
-      "snippet": "I_field = 0.1 * np.sin(x)  # Information field"
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/data/scripts/Runners/run_physics_anomalies.py",
-      "line": 11,
-      "snippet": "\"Solution: Information Field replaces Dark Matter Halo.\","
     },
     {
       "marker": "c_mass_identity",
@@ -476,7 +489,7 @@
       "disposition": "CANONICAL_CONTRACT_LITERAL",
       "disposition_basis": "canonical core contract; occurrence is retained as explicit boundary/legacy wording and is not a universal identity",
       "reason": "lane_mapping_required",
-      "path": "docs/core/IMPACT_EFFECT_AND_INFORMATION_FLOW_SPEC.md",
+      "path": "docs/core/01_contracts/IMPACT_EFFECT_AND_INFORMATION_FLOW_SPEC.md",
       "line": 167,
       "snippet": "- `C = mass` without a lane-specific map."
     },
@@ -486,7 +499,7 @@
       "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
       "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
       "reason": "lane_mapping_required",
-      "path": "docs/core/MATTER_SPACE_FINITE_CONE_C_SPEC.md",
+      "path": "docs/core/01_contracts/MATTER_SPACE_FINITE_CONE_C_SPEC.md",
       "line": 22,
       "snippet": "C is not universally mass, density, charge, force, or energy. A mapping to"
     },
@@ -496,9 +509,29 @@
       "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
       "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
       "reason": "lane_mapping_required",
-      "path": "docs/core/MATTER_SPACE_FINITE_CONE_C_SPEC.md",
+      "path": "docs/core/01_contracts/MATTER_SPACE_FINITE_CONE_C_SPEC.md",
       "line": 114,
       "snippet": "Forbidden claims include C = mass, R_gen as substance, Phi as metric,"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CANONICAL_CONTRACT_LITERAL",
+      "disposition_basis": "canonical core contract; occurrence is retained as explicit boundary/legacy wording and is not a universal identity",
+      "reason": "lane_mapping_required",
+      "path": "docs/core/01_contracts/RELATIONAL_TWO_BODY_BASELINE_SPEC.md",
+      "line": 105,
+      "snippet": "- `C` is baryonic mass density;"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/core/01_contracts/RESOURCE_PERSISTENCE_PRINCIPLE_SPEC.md",
+      "line": 107,
+      "snippet": "- C is universal mass or energy;"
     },
     {
       "marker": "information_field",
@@ -506,9 +539,769 @@
       "disposition": "CANONICAL_CONTRACT_LITERAL",
       "disposition_basis": "canonical core contract; occurrence is retained as explicit boundary/legacy wording and is not a universal identity",
       "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/MATTER_SPACE_RESEARCH_REPORT.md",
+      "path": "docs/core/01_contracts/TRACE_RESEARCH_SPEC.md",
+      "line": 28,
+      "snippet": "ใน implementation เดิม information-field terms จะถูกคำนวณเพิ่มเฉพาะเมื่อ"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CANONICAL_CONTRACT_LITERAL",
+      "disposition_basis": "canonical core contract; occurrence is retained as explicit boundary/legacy wording and is not a universal identity",
+      "reason": "lane_mapping_required",
+      "path": "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md",
+      "line": 559,
+      "snippet": "external comparator C          != established UET Noether density"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/core/01_contracts/UET_MAIN_THEORY_AXIOMS_SPEC.md",
+      "line": 60,
+      "snippet": "Not assumed: C is universal mass, energy, force, probability, or charge."
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "lane_mapping_required",
+      "path": "docs/core/02_equations/covariant/uet_covariant_diffusion.py",
+      "line": 213,
+      "snippet": "self.C = density"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "lane_mapping_required",
+      "path": "docs/core/02_equations/covariant/uet_covariant_diffusion.py",
+      "line": 577,
+      "snippet": "\"normalized_density\": \"C=n/density_scale_after_declared_coarse_graining\","
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/02_equations/lorentz_noether/uet_lorentz.py",
+      "line": 281,
+      "snippet": "I_4d: 4D information field"
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/02_equations/lorentz_noether/uet_noether.py",
+      "line": 794,
+      "snippet": "I = np.random.randn(N) * 0.1  # Information field"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "lane_mapping_required",
+      "path": "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py",
+      "line": 207,
+      "snippet": "C = (density - config.density_reference) / config.density_scale"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "lane_mapping_required",
+      "path": "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field.py",
+      "line": 228,
+      "snippet": "C=density_rate,"
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/02_equations/matter_space/uet_master_equation.py",
+      "line": 10,
+      "snippet": "+ (1/2)|∇I|² + (1/2)m_I²I²      # A2: Information Field Dynamics (Propagator)"
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/02_equations/matter_space/uet_master_equation.py",
+      "line": 406,
+      "snippet": "\"\"\"Advance the information field in the selected operator lane."
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/02_equations/matter_space/uet_master_equation.py",
+      "line": 587,
+      "snippet": "# The true 'boost' will emerge naturally from the C^2 -> I field warping."
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/02_equations/matter_space/uet_master_equation.py",
+      "line": 951,
+      "snippet": "self.I = None  # Information field state"
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/02_equations/matter_space/uet_master_equation.py",
+      "line": 1271,
+      "snippet": "\"spacetime_trace_v1 consumes source_history; pass no independent I field\""
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/02_equations/matter_space/uet_master_equation.py",
+      "line": 1491,
+      "snippet": "I: Optional[np.ndarray] = None,      # A2: Information field"
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/02_equations/matter_space/uet_master_equation.py",
+      "line": 1675,
+      "snippet": "\"spacetime_trace_v1 consumes source_history; pass no independent I field\""
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/02_equations/o2/standard_o2_finite_temperature_comparator.py",
+      "line": 186,
+      "snippet": "\"R_gen\": \"not used as state or feedback\","
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/02_equations/o2/uet_o2_auxiliary_field_condensed.py",
+      "line": 438,
+      "snippet": "\"R_gen\": \"derived history trace only; not a state or feedback\","
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/02_equations/o2/uet_o2_beta_correspondence.py",
+      "line": 74,
+      "snippet": "\"R_gen\": \"derived history trace only; not used as state or feedback\","
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/02_equations/o2/uet_o2_condensate_fluctuations.py",
+      "line": 157,
+      "snippet": "\"R_gen\": \"not a fluctuation state and has no feedback\","
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/02_equations/o2/uet_o2_condensed_dissipative_transport_identifiability_no_go.py",
+      "line": 197,
+      "snippet": "\"R_gen\": \"derived history trace; not an independent state or feedback input\","
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/02_equations/o2/uet_o2_condensed_loop_renormalized_vertex.py",
+      "line": 611,
+      "snippet": "\"R_gen\": \"derived history trace; not an independent state or feedback input\","
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/02_equations/o2/uet_o2_condensed_relative_flow_kubo_admission.py",
+      "line": 201,
+      "snippet": "\"R_gen\": \"derived history trace; not an independent state or feedback input\","
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/02_equations/o2/uet_o2_condensed_retarded_dissipation_no_go.py",
+      "line": 223,
+      "snippet": "\"R_gen\": \"derived history trace; not an independent state or feedback input\","
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/02_equations/o2/uet_o2_condensed_sk_kms_kubo_match.py",
+      "line": 240,
+      "snippet": "\"R_gen\": \"derived history trace; not an independent state or feedback input\","
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/02_equations/o2/uet_o2_equilibrium_kms.py",
+      "line": 130,
+      "snippet": "\"R_gen\": \"derived history trace only; not an equilibrium state or feedback source\","
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/02_equations/o2/uet_o2_finite_temperature_hartree_thermodynamics.py",
+      "line": 298,
+      "snippet": "\"R_gen\": \"derived history trace only; not a state or feedback\","
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/02_equations/o2/uet_o2_finite_temperature_normal_stability.py",
+      "line": 346,
+      "snippet": "\"R_gen\": \"derived history trace only; not a state or feedback\","
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py",
+      "line": 355,
+      "snippet": "\"R_gen\": \"derived history trace only; not a state or feedback term\","
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/02_equations/o2/uet_o2_finite_temperature_renormalized_hartree.py",
+      "line": 421,
+      "snippet": "\"R_gen\": \"derived history trace only; not a state or feedback\","
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/02_equations/o2/uet_o2_finite_temperature_self_energy.py",
+      "line": 351,
+      "snippet": "\"R_gen\": \"derived history trace only; not state or feedback\","
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py",
+      "line": 229,
+      "snippet": "\"R_gen\": \"derived history trace; not an independent state or feedback input\","
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py",
+      "line": 186,
+      "snippet": "\"R_gen\": \"derived history trace only; not a state or feedback term\","
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/02_equations/o2/uet_o2_formal_two_sector_thermodynamics.py",
+      "line": 205,
+      "snippet": "\"R_gen\": \"derived history trace only; not a state or feedback term\","
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/02_equations/o2/uet_o2_normal_response_curvature.py",
+      "line": 239,
+      "snippet": "\"R_gen\": \"derived history trace only; not used as state or feedback\","
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/02_equations/o2/uet_o2_one_loop_normal_branch.py",
+      "line": 182,
+      "snippet": "\"dpressure_dPhi\": \"natural energy density per natural Phi field unit\","
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/02_equations/o2/uet_o2_one_loop_normal_branch.py",
+      "line": 187,
+      "snippet": "\"R_gen\": \"not used as state or feedback\","
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/02_equations/o2/uet_o2_renormalized_normal_branch.py",
+      "line": 285,
+      "snippet": "\"R_gen\": \"derived history trace only; not a state or feedback\","
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/03_lanes/review/uet_observables.py",
+      "line": 57,
+      "snippet": "In high-speed collisions (e.g., Bullet Cluster), the Information Field (Gravity)"
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/03_lanes/thermal/thermal_collective_response_eos.py",
+      "line": 6,
+      "snippet": "a particle, an information field, or an SI observable."
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "lane_mapping_required",
+      "path": "docs/core/03_lanes/thermal/thermal_collective_response_eos.py",
+      "line": 85,
+      "snippet": "potentials and not a declaration that ``C`` is a charge density."
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/03_lanes/thermal/thermal_collective_response_eos.py",
+      "line": 168,
+      "snippet": "\"Phi\": \"dimensionless effective response coordinate; not a particle, information field, temperature, or heat flux\","
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/03_lanes/thermal/thermal_response_beta_contract.py",
+      "line": 98,
+      "snippet": "mass, charge, or information field in this contract."
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/03_lanes/thermal/uet_transport_coefficient_identifiability.py",
+      "line": 94,
+      "snippet": "\"R_gen\": \"derived history trace only; no transport state or feedback\","
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/core/03_lanes/topic13_support/T13_CORE_INTEGRATION_NOTE.md",
+      "line": 42,
+      "snippet": "NEXT_ACTION: Build the curved 3+1 parent, constraint evolution, well-posedness, observable/unit mapping, and uncertainty interface while preserving Topic 13 SK/KMS and entropy contracts. Keep metric/geometry separate from `Phi`, keep `C` di"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/core/03_lanes/topic13_support/T13_MATTER_STRAIN_SUSCEPTIBILITY_MATCH.md",
+      "line": 25,
+      "snippet": "Strain remains an external material variable. C is not mass, Phi is not"
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/03_lanes/topic13_support/T13_MATTER_STRAIN_SUSCEPTIBILITY_MATCH.md",
+      "line": 26,
+      "snippet": "temperature, and R_gen/R_obs are excluded from states and feedback."
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/03_lanes/topic13_support/t13_thermal_bridge_scale_dependency.py",
+      "line": 168,
+      "snippet": "\"Phi\": \"effective response variable; not temperature, metric, particle, or information field\","
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/05_tests/equation/root/test_lorentz_noether_comprehensive.py",
+      "line": 140,
+      "snippet": "I = np.random.randn(N) * 0.1  # Information field"
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/05_tests/equation/root/test_noether_phase_field_topic_0_11_dependency.py",
+      "line": 83,
+      "snippet": "assert \"the Noether map validates the matter-space Phi field or trace\" in artifact["
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/05_tests/regression/parameter_engine/engine.py",
+      "line": 9,
+      "snippet": "Information Field structure. They emerge from maximizing"
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/05_tests/regression/parameter_engine/engine.py",
+      "line": 62,
+      "snippet": "# In UET, polarization is Information Field Density."
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/05_tests/regression/root/Research_Parameter_Sweep.py",
+      "line": 60,
+      "snippet": "I = np.random.normal(0, 0.1, nx)  # Information field"
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/05_tests/regression/root/test_matrix_proof.py",
+      "line": 63,
+      "snippet": "f\"✅ PASS: Information Field Generated via Tensor Coupling (+{final_info - initial_info:.2f})\""
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/05_tests/regression/root/test_matter_space_research_program.py",
+      "line": 47,
+      "snippet": "assert \"R established as matter, energy, or an independent information field\" in gate["
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "lane_mapping_required",
+      "path": "docs/core/05_tests/regression/root/test_uet_wave3_wave10_program.py",
+      "line": 39,
+      "snippet": "assert \"C is universal mass\" in blocked"
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/05_tests/regression/validation/test_matrix_proof.py",
+      "line": 63,
+      "snippet": "f\"✅ PASS: Information Field Generated via Tensor Coupling (+{final_info - initial_info:.2f})\""
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CANONICAL_CONTRACT_LITERAL",
+      "disposition_basis": "canonical core contract; occurrence is retained as explicit boundary/legacy wording and is not a universal identity",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/08_history/research_notes/MATTER_SPACE_RESEARCH_REPORT.md",
       "line": 423,
       "snippet": "- `R` as an independent information field, matter, or energy reservoir;"
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/08_history/research_notes/UET_CONCEPT_EQUATION_RECONSTRUCTION_AUDIT.md",
+      "line": 39,
+      "snippet": "| Information field propagation | `nabla^2 I - m^2 I + beta C^2` should work in 1D/2D/3D | 1D Laplacian exists; non-1D branch sets `laplacian = zeros_like(I)` | important gap: 2D/3D `I` does not spatially propagate in the core helper. |"
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/08_history/research_notes/UET_CONCEPT_EQUATION_RECONSTRUCTION_AUDIT.md",
+      "line": 99,
+      "snippet": "> game\" concept, but the concept is not fully closed because the information field is not yet a"
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CANONICAL_CONTRACT_LITERAL",
+      "disposition_basis": "canonical core contract; occurrence is retained as explicit boundary/legacy wording and is not a universal identity",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/08_history/research_notes/UET_FOUNDATION_COMPATIBILITY_AUDIT.md",
+      "line": 41,
+      "snippet": "The historical box/wave expression is retained as a comparator description only. It is not claimed to be the equation implemented by `information_propagator_step()` in the canonical normalized lane. A covariant box equation, a dimensional i"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/core/08_history/research_notes/UET_FOUNDATION_RESEARCH_PROGRAM_REPORT.md",
+      "line": 111,
+      "snippet": "The program does not establish that (C) is universal mass, that (R_{gen})"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/core/08_history/research_notes/UET_FOUNDATION_RESEARCH_PROGRAM_REPORT.md",
+      "line": 147,
+      "snippet": "The reruns establish a reproducible numerical control: compact support follows the declared one-cell-per-macro-step contract, the normalized ledger gates pass, enabling/disabling the derived trace does not alter the physical state, and the "
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/core/08_history/research_notes/UET_FOUNDATION_RESEARCH_PROGRAM_REPORT.md",
+      "line": 366,
+      "snippet": "better direct `C=rho` fit. `mass_density_amplitude.py` defines the normalized"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/core/08_history/research_notes/UET_FOUNDATION_RESEARCH_PROGRAM_REPORT.md",
+      "line": 387,
+      "snippet": "remain blocked and `C` is still not mass density."
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/core/08_history/research_notes/UET_FOUNDATION_RESEARCH_PROGRAM_REPORT.md",
+      "line": 397,
+      "snippet": "The augmented C-density lane now exposes a deterministic SI 3D volume-density operator, `rho_3D=A_m*rho_hat/(L_x L_y L_z)`, with finite-volume mass closure and explicit source metadata. The focused 3D suite passes `8/8`, but the artifact re"
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CANONICAL_CONTRACT_LITERAL",
+      "disposition_basis": "canonical core contract; occurrence is retained as explicit boundary/legacy wording and is not a universal identity",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/08_history/research_notes/UET_INFORMATION_FIELD_THERMODYNAMIC_TRACE_AUDIT.md",
+      "line": 1,
+      "snippet": "# UET Information Field Thermodynamic-Trace Audit"
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/08_history/research_notes/UET_MAIN_THEORY_CLOSURE_REPORT.md",
+      "line": 30,
+      "snippet": "- Physical memory may affect dynamics; `R_gen` is computed afterward and has no automatic feedback."
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/core/08_history/update_logs/CORE_FILE_ORGANIZATION_UPDATE_LOG.md",
+      "line": 90,
+      "snippet": "- CLAIM_BOUNDARY: This wave establishes organization traceability for the existing normalized derived-trace candidate. It does not establish a physical information field, energy reservoir, universal carrier, SI observable, continuum Green-f"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/core/08_history/update_logs/UET_CORE_PHYSICAL_MIGRATION_UPDATE_LOG.md",
+      "line": 496,
+      "snippet": "- Still open: C is not universal mass; normalized shape and synthetic SI operators are not galaxy measurements; Gaia source identity is metadata-only without a local raw archive, selection/mass calibration, propagated uncertainty, or holdou"
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/08_history/update_logs/UET_CORE_PHYSICAL_MIGRATION_UPDATE_LOG.md",
+      "line": 547,
+      "snippet": "- Blocker narrowed: carrier/observer baselines now have one canonical lane path without identifying C with mass, R_gen with a photon, or the observer record with physical feedback."
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/core/08_history/update_logs/UET_WAVE3_WAVE10_UPDATE_LOG.md",
+      "line": 45,
+      "snippet": "- Claim impact: no claim upgrade. `C` is not assigned a universal mass meaning;"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/core/08_history/update_logs/UET_WAVE3_WAVE10_UPDATE_LOG.md",
+      "line": 216,
+      "snippet": "- Claim impact: no change; `C` is not universal mass density."
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CANONICAL_CONTRACT_LITERAL",
+      "disposition_basis": "canonical core contract; occurrence is retained as explicit boundary/legacy wording and is not a universal identity",
+      "reason": "lane_mapping_required",
+      "path": "docs/core/AGENTS.md",
+      "line": 78,
+      "snippet": "- `C` is a system-state coordinate; it is not universally mass."
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CANONICAL_CONTRACT_LITERAL",
+      "disposition_basis": "canonical core contract; occurrence is retained as explicit boundary/legacy wording and is not a universal identity",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/AGENTS.md",
+      "line": 82,
+      "snippet": "- `R` / `I_trace` is a derived causal/history observable with no feedback in the new mode."
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CANONICAL_CONTRACT_LITERAL",
+      "disposition_basis": "canonical core contract; occurrence is retained as explicit boundary/legacy wording and is not a universal identity",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/core/AGENTS.md",
+      "line": 144,
+      "snippet": "- Receiver feedback is allowed only through an explicit receiver-dynamics operator with a declared input, units, conservation/ledger rule, and detector interaction. The current matter-space operator has no `R_gen` feedback edge."
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CANONICAL_CONTRACT_LITERAL",
+      "disposition_basis": "canonical core contract; occurrence is retained as explicit boundary/legacy wording and is not a universal identity",
+      "reason": "lane_mapping_required",
+      "path": "docs/core/AGENTS.md",
+      "line": 145,
+      "snippet": "- `C` remains a collective system-behaviour coordinate until a lane-specific map to density, charge, order parameter, or another standard quantity is closed. `C = mass` is never a universal identity."
     },
     {
       "marker": "c_mass_identity",
@@ -529,346 +1322,6 @@
       "path": "docs/core/README.md",
       "line": 19,
       "snippet": "| R / I_trace | derived causal/history observable with no feedback in the new mode |"
-    },
-    {
-      "marker": "c_mass_identity",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CANONICAL_CONTRACT_LITERAL",
-      "disposition_basis": "canonical core contract; occurrence is retained as explicit boundary/legacy wording and is not a universal identity",
-      "reason": "lane_mapping_required",
-      "path": "docs/core/RELATIONAL_TWO_BODY_BASELINE_SPEC.md",
-      "line": 105,
-      "snippet": "- `C` is baryonic mass density;"
-    },
-    {
-      "marker": "c_mass_identity",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
-      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
-      "reason": "lane_mapping_required",
-      "path": "docs/core/RESOURCE_PERSISTENCE_PRINCIPLE_SPEC.md",
-      "line": 107,
-      "snippet": "- C is universal mass or energy;"
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/test/parameter_engine/engine.py",
-      "line": 9,
-      "snippet": "Information Field structure. They emerge from maximizing"
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/test/parameter_engine/engine.py",
-      "line": 62,
-      "snippet": "# In UET, polarization is Information Field Density."
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/test/Research_Parameter_Sweep.py",
-      "line": 63,
-      "snippet": "I = np.random.normal(0, 0.1, nx)  # Information field"
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/test/test_lorentz_noether_comprehensive.py",
-      "line": 139,
-      "snippet": "I = np.random.randn(N) * 0.1  # Information field"
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/test/test_matrix_proof.py",
-      "line": 62,
-      "snippet": "f\"✅ PASS: Information Field Generated via Tensor Coupling (+{final_info - initial_info:.2f})\""
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/test/test_matter_space_research_program.py",
-      "line": 46,
-      "snippet": "assert \"R established as matter, energy, or an independent information field\" in gate["
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py",
-      "line": 82,
-      "snippet": "assert \"the Noether map validates the matter-space Phi field or trace\" in artifact["
-    },
-    {
-      "marker": "c_mass_identity",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
-      "reason": "lane_mapping_required",
-      "path": "docs/core/test/test_uet_wave3_wave10_program.py",
-      "line": 38,
-      "snippet": "assert \"C is universal mass\" in blocked"
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/test/validation/test_matrix_proof.py",
-      "line": 62,
-      "snippet": "f\"✅ PASS: Information Field Generated via Tensor Coupling (+{final_info - initial_info:.2f})\""
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CANONICAL_CONTRACT_LITERAL",
-      "disposition_basis": "canonical core contract; occurrence is retained as explicit boundary/legacy wording and is not a universal identity",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/TRACE_RESEARCH_SPEC.md",
-      "line": 28,
-      "snippet": "ใน implementation เดิม information-field terms จะถูกคำนวณเพิ่มเฉพาะเมื่อ"
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
-      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/UET_CONCEPT_EQUATION_RECONSTRUCTION_AUDIT.md",
-      "line": 39,
-      "snippet": "| Information field propagation | `nabla^2 I - m^2 I + beta C^2` should work in 1D/2D/3D | 1D Laplacian exists; non-1D branch sets `laplacian = zeros_like(I)` | important gap: 2D/3D `I` does not spatially propagate in the core helper. |"
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
-      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/UET_CONCEPT_EQUATION_RECONSTRUCTION_AUDIT.md",
-      "line": 99,
-      "snippet": "> game\" concept, but the concept is not fully closed because the information field is not yet a"
-    },
-    {
-      "marker": "c_mass_identity",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
-      "reason": "lane_mapping_required",
-      "path": "docs/core/uet_covariant_diffusion.py",
-      "line": 213,
-      "snippet": "self.C = density"
-    },
-    {
-      "marker": "c_mass_identity",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
-      "reason": "lane_mapping_required",
-      "path": "docs/core/uet_covariant_diffusion.py",
-      "line": 577,
-      "snippet": "\"normalized_density\": \"C=n/density_scale_after_declared_coarse_graining\","
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CANONICAL_CONTRACT_LITERAL",
-      "disposition_basis": "canonical core contract; occurrence is retained as explicit boundary/legacy wording and is not a universal identity",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/UET_FOUNDATION_COMPATIBILITY_AUDIT.md",
-      "line": 41,
-      "snippet": "The historical box/wave expression is retained as a comparator description only. It is not claimed to be the equation implemented by `information_propagator_step()` in the canonical normalized lane. A covariant box equation, a dimensional i"
-    },
-    {
-      "marker": "c_mass_identity",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
-      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
-      "reason": "lane_mapping_required",
-      "path": "docs/core/UET_FOUNDATION_RESEARCH_PROGRAM_REPORT.md",
-      "line": 111,
-      "snippet": "The program does not establish that (C) is universal mass, that (R_{gen})"
-    },
-    {
-      "marker": "c_mass_identity",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
-      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
-      "reason": "lane_mapping_required",
-      "path": "docs/core/UET_FOUNDATION_RESEARCH_PROGRAM_REPORT.md",
-      "line": 147,
-      "snippet": "The reruns establish a reproducible numerical control: compact support follows the declared one-cell-per-macro-step contract, the normalized ledger gates pass, enabling/disabling the derived trace does not alter the physical state, and the "
-    },
-    {
-      "marker": "c_mass_identity",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CANONICAL_CONTRACT_LITERAL",
-      "disposition_basis": "canonical core contract; occurrence is retained as explicit boundary/legacy wording and is not a universal identity",
-      "reason": "lane_mapping_required",
-      "path": "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md",
-      "line": 463,
-      "snippet": "external comparator C          != established UET Noether density"
-    },
-    {
-      "marker": "c_mass_identity",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
-      "reason": "lane_mapping_required",
-      "path": "docs/core/uet_hyperbolic_phase_field.py",
-      "line": 228,
-      "snippet": "C=density_rate,"
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CANONICAL_CONTRACT_LITERAL",
-      "disposition_basis": "canonical core contract; occurrence is retained as explicit boundary/legacy wording and is not a universal identity",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/UET_INFORMATION_FIELD_THERMODYNAMIC_TRACE_AUDIT.md",
-      "line": 1,
-      "snippet": "# UET Information Field Thermodynamic-Trace Audit"
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/uet_lorentz.py",
-      "line": 281,
-      "snippet": "I_4d: 4D information field"
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/uet_master_equation.py",
-      "line": 10,
-      "snippet": "+ (1/2)|∇I|² + (1/2)m_I²I²      # A2: Information Field Dynamics (Propagator)"
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/uet_master_equation.py",
-      "line": 406,
-      "snippet": "\"\"\"Advance the information field in the selected operator lane."
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/uet_master_equation.py",
-      "line": 587,
-      "snippet": "# The true 'boost' will emerge naturally from the C^2 -> I field warping."
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/uet_master_equation.py",
-      "line": 951,
-      "snippet": "self.I = None  # Information field state"
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/uet_master_equation.py",
-      "line": 1271,
-      "snippet": "\"spacetime_trace_v1 consumes source_history; pass no independent I field\""
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/uet_master_equation.py",
-      "line": 1491,
-      "snippet": "I: Optional[np.ndarray] = None,      # A2: Information field"
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/uet_master_equation.py",
-      "line": 1675,
-      "snippet": "\"spacetime_trace_v1 consumes source_history; pass no independent I field\""
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/uet_noether.py",
-      "line": 769,
-      "snippet": "I = np.random.randn(N) * 0.1  # Information field"
-    },
-    {
-      "marker": "c_mass_identity",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
-      "reason": "lane_mapping_required",
-      "path": "docs/core/uet_noether_phase_field_map.py",
-      "line": 207,
-      "snippet": "C = (density - config.density_reference) / config.density_scale"
-    },
-    {
-      "marker": "information_field",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
-      "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/core/uet_observables.py",
-      "line": 57,
-      "snippet": "In high-speed collisions (e.g., Bullet Cluster), the Information Field (Gravity)"
-    },
-    {
-      "marker": "c_mass_identity",
-      "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
-      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
-      "reason": "lane_mapping_required",
-      "path": "docs/core/UET_WAVE3_WAVE10_UPDATE_LOG.md",
-      "line": 36,
-      "snippet": "- Claim impact: no claim upgrade. `C` is not assigned a universal mass meaning;"
     },
     {
       "marker": "information_field",
@@ -1047,7 +1500,7 @@
       "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
       "reason": "explicit_feedback_boundary_review",
       "path": "docs/scripts/audit/audit_impact_effect_core.py",
-      "line": 90,
+      "line": 91,
       "snippet": "\"metric\": \"no_R_gen_to_core_feedback_edge\","
     },
     {
@@ -1088,7 +1541,7 @@
       "reason": "legacy_or_ambiguous_information_field",
       "path": "docs/scripts/audit/audit_impact_effect_legacy_wording.py",
       "line": 34,
-      "snippet": "\"docs/core/UET_INFORMATION_FIELD_THERMODYNAMIC_TRACE_AUDIT.md\","
+      "snippet": "\"docs/core/08_history/research_notes/UET_INFORMATION_FIELD_THERMODYNAMIC_TRACE_AUDIT.md\","
     },
     {
       "marker": "c_mass_identity",
@@ -1097,7 +1550,7 @@
       "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
       "reason": "lane_mapping_required",
       "path": "docs/scripts/audit/audit_matter_interaction_forward.py",
-      "line": 128,
+      "line": 129,
       "snippet": "\"failure_mode\": \"C is silently reinterpreted as mass or density\","
     },
     {
@@ -1107,7 +1560,7 @@
       "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
       "reason": "legacy_or_ambiguous_information_field",
       "path": "docs/scripts/audit/audit_matter_space_research_program.py",
-      "line": 374,
+      "line": 381,
       "snippet": "\"R established as matter, energy, or an independent information field\","
     },
     {
@@ -1131,13 +1584,193 @@
       "snippet": "\"failure_mode\": \"C is used as the inertial mass without evidence\","
     },
     {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/scripts/audit/audit_topic13_covariant_transport_implementation_boundary.py",
+      "line": 87,
+      "snippet": "\"R_gen is not consumed as transport state or feedback\","
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "lane_mapping_required",
+      "path": "docs/scripts/audit/audit_topic13_dressed_ra_pair_microscopic_rung_boundary.py",
+      "line": 94,
+      "snippet": "\"ontology\":{\"C\":\"not q or collision density\",\"Phi\":\"effective response; exchange is lane-specific, not particle ontology\",\"R_gen\":\"excluded\",\"R_obs\":\"excluded\"},"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "lane_mapping_required",
+      "path": "docs/scripts/audit/audit_topic13_finite_temperature_quasiparticle_eos.py",
+      "line": 209,
+      "snippet": "\"C_not_relabelled_as_charge\": contract[\"unit_contract\"][\"C\"] == \"not relabeled as charge density\","
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "lane_mapping_required",
+      "path": "docs/scripts/audit/audit_topic13_finite_temperature_quasiparticle_eos_v2.py",
+      "line": 192,
+      "snippet": "\"C_not_relabelled_as_charge\": contract[\"unit_contract\"][\"C\"] == \"not relabeled as charge density\","
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "lane_mapping_required",
+      "path": "docs/scripts/audit/audit_topic13_response_one_loop_match.py",
+      "line": 112,
+      "snippet": "c=u*(1-u)/cfg.mass**2; a=c*s"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "lane_mapping_required",
+      "path": "docs/scripts/audit/audit_topic13_standard_o2_finite_temperature_comparator.py",
+      "line": 82,
+      "snippet": "\"c_not_relabelled\": contract[\"uET_boundary\"][\"C\"] == \"not relabeled as charge density\","
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/scripts/audit/audit_topic13_standard_o2_finite_temperature_comparator.py",
+      "line": 83,
+      "snippet": "\"trace_is_not_state\": contract[\"uET_boundary\"][\"R_gen\"] == \"not used as state or feedback\","
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/scripts/audit/audit_topic13_thermal_bridge_scale_dependency.py",
+      "line": 76,
+      "snippet": "\"the current normalized TTG lane is invariant under a continuous Phi field rescaling\","
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/scripts/audit/audit_topic13_transport_coefficient_identifiability.py",
+      "line": 66,
+      "snippet": "\"R_gen_has_no_feedback\": \"no transport state or feedback\" in contract[\"ontology\"][\"R_gen\"],"
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/scripts/audit/audit_topic13_transport_kms_entropy_status_boundary.py",
+      "line": 93,
+      "snippet": "and transport_no_go.get(\"checks\", {}).get(\"R_gen_has_no_feedback\") is True"
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/scripts/audit/audit_topic13_uet_o2_condensate_fluctuation_spectrum.py",
+      "line": 112,
+      "snippet": "\"trace_is_not_state\": contract[\"ontology\"][\"R_gen\"] == \"not a fluctuation state and has no feedback\","
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/scripts/audit/audit_topic13_uet_o2_condensate_gaussian_thermal.py",
+      "line": 263,
+      "snippet": "\"R_gen_is_not_state\": \"no feedback\" in contract[\"ontology\"][\"R_gen\"],"
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/scripts/audit/audit_topic13_uet_o2_gaussian_offshell_background.py",
+      "line": 235,
+      "snippet": "\"R_gen_is_not_state\": \"no feedback\" in contract[\"ontology\"][\"R_gen\"],"
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/scripts/audit/audit_topic13_uet_o2_normal_thermodynamic_consistency.py",
+      "line": 292,
+      "snippet": "\"response_derivative\": \"natural energy density per natural Phi field unit\","
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/scripts/audit/audit_topic13_uet_o2_one_loop_convergence.py",
+      "line": 166,
+      "snippet": "\"response_derivative\": \"natural energy density per natural Phi field unit\","
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "lane_mapping_required",
+      "path": "docs/scripts/audit/audit_topic13_uet_o2_one_loop_normal_branch.py",
+      "line": 129,
+      "snippet": "\"c_is_not_charge_density\": contract[\"ontology\"][\"C\"] == \"not identified with charge density\","
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/scripts/audit/audit_topic13_uet_o2_one_loop_normal_branch.py",
+      "line": 130,
+      "snippet": "\"trace_is_not_state\": contract[\"ontology\"][\"R_gen\"] == \"not used as state or feedback\","
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "lane_mapping_required",
+      "path": "docs/scripts/audit/audit_uet_coarse_graining.py",
+      "line": 131,
+      "snippet": "\"claim_boundary\": \"lane-specific candidate coarse coordinate; C is not mass, charge, or order universally\","
+    },
+    {
       "marker": "information_field",
       "status": "LEGACY_REVIEW_REQUIRED",
       "disposition": "CODE_OR_TEST_LITERAL",
       "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
       "reason": "legacy_or_ambiguous_information_field",
       "path": "docs/scripts/audit/audit_uet_foundation_compatibility.py",
-      "line": 266,
+      "line": 270,
       "snippet": "\"uet.legacy.information_field\","
     },
     {
@@ -1147,7 +1780,7 @@
       "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
       "reason": "legacy_or_ambiguous_information_field",
       "path": "docs/scripts/audit/audit_uet_foundation_compatibility.py",
-      "line": 272,
+      "line": 276,
       "snippet": "\"This closes the scoped normalized operator contract, not a covariant box equation or a physical SI information field.\","
     },
     {
@@ -1157,7 +1790,7 @@
       "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
       "reason": "legacy_or_ambiguous_information_field",
       "path": "docs/scripts/audit/audit_uet_foundation_compatibility.py",
-      "line": 414,
+      "line": 418,
       "snippet": "\"The new ontology is a controlled reframing with a separate operator, not a derivation that the legacy I field was already Phi or R. The alignment artifact itself records the legacy information role as WARN and trace feedback as heuristic.\""
     },
     {
@@ -1167,7 +1800,7 @@
       "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
       "reason": "lane_mapping_required",
       "path": "docs/scripts/audit/audit_uet_foundation_compatibility.py",
-      "line": 516,
+      "line": 520,
       "snippet": "\"The O(2) lane gives a genuine conditional derivation of an EOS in its own ontology. It establishes that C can map to Noether charge density in that lane, not that C universally means mass or density.\","
     },
     {
@@ -1177,7 +1810,7 @@
       "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
       "reason": "explicit_feedback_boundary_review",
       "path": "docs/scripts/audit/audit_uet_foundation_compatibility.py",
-      "line": 575,
+      "line": 579,
       "snippet": "\"statement\": \"Physical dynamics acts on declared state variables; R=I_trace is derived from history and has no feedback in the new mode.\","
     },
     {
@@ -1187,7 +1820,7 @@
       "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
       "reason": "lane_mapping_required",
       "path": "docs/scripts/audit/audit_uet_gr_covariant_matter.py",
-      "line": 416,
+      "line": 427,
       "snippet": "\"C is established as particle density\","
     },
     {
@@ -1197,7 +1830,7 @@
       "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
       "reason": "legacy_or_ambiguous_information_field",
       "path": "docs/scripts/audit/audit_uet_gr_legacy_alignment.py",
-      "line": 92,
+      "line": 114,
       "snippet": "\"independent_information_field_present\": \"I_4d\" in source,"
     },
     {
@@ -1206,8 +1839,28 @@
       "disposition": "CODE_OR_TEST_LITERAL",
       "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
       "reason": "lane_mapping_required",
+      "path": "docs/scripts/audit/audit_uet_main_theory_axioms.py",
+      "line": 37,
+      "snippet": "\"C is not universal mass, energy, force, probability, or charge\","
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/scripts/audit/audit_uet_main_theory_closure.py",
+      "line": 135,
+      "snippet": "- Physical memory may affect dynamics; `R_gen` is computed afterward and has no automatic feedback."
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "lane_mapping_required",
       "path": "docs/scripts/audit/audit_uet_wave3_wave10_program.py",
-      "line": 262,
+      "line": 272,
       "snippet": "\"blocked\": [\"C is universal mass\", \"R_gen is an independent substance\", \"Phi is metric/particle/ether\", \"photon or neutrino or positron equals R_gen\", \"UET derives GR\", \"global universe is proved open\", \"dark-matter replacement\", \"simulatio"
     },
     {
@@ -1237,7 +1890,7 @@
       "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
       "reason": "legacy_or_ambiguous_information_field",
       "path": "docs/scripts/audit/build_uet_core_equation_family_contract.py",
-      "line": 74,
+      "line": 104,
       "snippet": "{\"C\": \"legacy normalized state label\", \"I\": \"legacy information field label\", \"V\": \"legacy velocity/value tuple label\", \"beta\": \"normalized coupling\"},"
     },
     {
@@ -1247,7 +1900,7 @@
       "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
       "reason": "lane_mapping_required",
       "path": "docs/scripts/audit/build_uet_core_equation_family_contract.py",
-      "line": 163,
+      "line": 280,
       "snippet": "\"O(2) lane is a controlled realization; does not establish universal C=mass or legacy double-well reduction\","
     },
     {
@@ -1267,8 +1920,98 @@
       "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
       "reason": "legacy_or_ambiguous_information_field",
       "path": "docs/scripts/audit/build_uet_foundation_dependency_graph.py",
-      "line": 27,
+      "line": 34,
       "snippet": "{\"id\": \"neutrino.0.7\", \"status\": \"BLOCKED\", \"controller\": \"benchmark compatibility is not a derivation of neutrino or I-field identity\"},"
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/scripts/audit/sync_topic13_collective_response_eos_into_gates.py",
+      "line": 108,
+      "snippet": "EOS, mass/particle/information-field identification, transport coefficient,"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "lane_mapping_required",
+      "path": "docs/scripts/audit/sync_topic13_collective_response_eos_into_gates.py",
+      "line": 211,
+      "snippet": "- Claim impact: no promotion. The Full Topic 13 gate remains `PARTIAL/BLOCKED`; `C` is not called charge/mass and `Phi` is not called information/temperature/heat flux."
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/scripts/audit/sync_topic13_thermal_response_beta_contract_into_gates.py",
+      "line": 188,
+      "snippet": "- Verified with: `{action['status']}`; beta_T13 recovers from the declared stiffness slope and the analytic entropy derivative matches a synthetic finite difference. The contract does not identify beta_T13 with beta_th, beta_core, beta_wave"
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/scripts/audit/sync_topic13_uet_o2_one_loop_normal_branch.py",
+      "line": 156,
+      "snippet": "This lane uses no `R_gen` state/feedback and emits no physical Kubo value,"
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/scripts/audit/topic13_closure_contract.py",
+      "line": 211,
+      "snippet": "{\"subresult_id\": \"normalized_beta_si_map\", \"label\": \"Normalized beta to SI correspondence\", \"current_status\": \"OPEN\", \"required_closure_level\": \"CLOSED_FOR_CORE\", \"acceptance\": \"The base-Phi field normalization and dimensionful free-energy "
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/scripts/core/audit/audit_data_sources.py",
+      "line": 236,
+      "snippet": "\"source\": \"Derived from C-I field balance\","
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/scripts/core/audit/audit_data_sources.py",
+      "line": 245,
+      "snippet": "\"note\": \"I-field coupling\","
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "LEGACY_ARCHIVE_QUARANTINED",
+      "disposition_basis": "legacy/archive path; retained for history and excluded from active claim promotion",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/scripts/core/legacy/test_engine_comparison.py",
+      "line": 71,
+      "snippet": "I_field = 0.1 * np.sin(x)  # Information field"
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "CODE_OR_TEST_LITERAL",
+      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/scripts/core/runners/run_physics_anomalies.py",
+      "line": 11,
+      "snippet": "\"Solution: Information Field replaces Dark Matter Halo.\","
     },
     {
       "marker": "information_field",
@@ -1877,7 +2620,7 @@
       "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
       "reason": "legacy_or_ambiguous_information_field",
       "path": "docs/topics/0.11_Phase_Transitions/Code/03_Research/Research_Noether_Phase_Field_Dependency_Gate.py",
-      "line": 347,
+      "line": 348,
       "snippet": "\"the Noether map validates the matter-space Phi field or trace\","
     },
     {
@@ -1967,7 +2710,7 @@
       "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
       "reason": "legacy_or_ambiguous_information_field",
       "path": "docs/topics/0.11_Phase_Transitions/UPDATE_LOG.md",
-      "line": 927,
+      "line": 943,
       "snippet": "- Transitioned to a true Non-linear Emergent model where C^2 directly couples to the Information Field (I), removing the artificial 'referee' mechanic."
     },
     {
@@ -2316,8 +3059,368 @@
       "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
       "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
       "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
+      "line": 273,
+      "snippet": "multi-field action."
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
+      "line": 784,
+      "snippet": "This lane uses no `R_gen` state/feedback and emits no physical Kubo value,"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
+      "line": 1156,
+      "snippet": "| T13-058 | B_34=(1+f_3)(1+f_4); Gamma_s^Q(k)=sum_r integral[d^3p/(2*pi)^3] f_r v_rel sigma_22 B_34; sigma_22=lambda^2/(16*pi*s) | docs/core/uet_o2_kinetic_collision_kubo.py; docs/scripts/audit/audit_topic13_uet_o2_quantum_collision_enhance"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
+      "line": 1173,
+      "snippet": "| T13-060 | w_s(k)=k^2/(2*pi^2*T)*f_s(E_k)*(1+f_s(E_k))*dk; c_(s,k)=q_s*sqrt(w_s(k)); P=I-c*c^T/(c^T*c); L=P*diag(Gamma_s(k))*P; b_(s,k)=q_s*(k/E_s(k))*sqrt(w_s(k)); b_perp=P*b; K_R(omega)=b_perp^T*(L-i*omega*I)^(-1)*b_perp; rho=2*Im(K_R); "
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
+      "line": 1183,
+      "snippet": "| T13-061 | w_(s,k,n)=k^2/(2*pi^2*T)*f_s(E_k)*(1+f_s(E_k))*dk*dOmega/(4*pi); I_A=(q_s,E_k,p_x,p_y,p_z)*sqrt(w_(s,k,n)); Q=orth(I_A); P=I-Q*Q^T; L=P*diag(Gamma_s(k))*P; b_(s,k,n)=q_s*(p_x/E_k)*sqrt(w_(s,k,n)); G_R=(L-i*omega*I)^(-1); K_R=b_p"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
+      "line": 1193,
+      "snippet": "| T13-062 | p1+p2=p3+p4; E1+E2=E3+E4; sigma_22=lambda^2/(16*pi*s); W_f=f1*f2*(1+f3)*(1+f4)*v_rel*sigma_22*dmu; W_r=f3*f4*(1+f1)*(1+f2)*v_rel*sigma_22*dmu; v_c=(+1/sqrt(w1),+1/sqrt(w2),-1/sqrt(w3),-1/sqrt(w4)); L=sum_c W_c*v_c*v_c^T; G_R=(L-"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
+      "line": 1203,
+      "snippet": "| T13-063 | w_(s,k,n)=k^2/(2*pi^2*T)*f_s(E_k)*(1+f_s(E_k))*dk*dOmega/(4*pi); I_A=(q_s,E_k,p_x,p_y,p_z)*sqrt(w); Q=orth(I_A); P=I-Q*Q^T; u_c=B*v_c; u_c^P=P*u_c; L_width=P*diag(Gamma_action_s(k))*P; K_transition=sum_c W_c*u_c^P*(u_c^P)^T; L_c"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
+      "line": 1211,
+      "snippet": "| T13-064 | `M_tree=lambda`; `sigma_22=|M_tree|^2/(16*pi*s)`; `L_cont=L_width+K_transition`; `K_BS=gamma_ref*I-L_cont`; `S_SK=integral[Phi_a D_R Phi_r+i Phi_a N Phi_a/2]`; `N=coth(beta_th*omega/2)*rho` | `docs/core/uet_o2_tree_level_bs_sk_m"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
+      "line": 1223,
+      "snippet": "| T13-065 | `V_abcd=lambda*(delta_ab*delta_cd+delta_ac*delta_bd+delta_ad*delta_bc)`; `B_E^Lambda(0)=integral[(1+2*n_B(E))/(4*E^3)+n_B(E)*(1+n_B(E))/(2*T*E^2)] d^3k/(2*pi)^3`; `Gamma_1PI=V-(B_s*(V.V)+B_t*(V.V)+B_u*(V.V))/2`; `V(phi_r+phi_a/2"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
+      "line": 1233,
+      "snippet": "| T13-066 | \\`D_E^{-1}=(omega_n+i*mu_eff)^2+k^2+m_eff^2\\`; \\`E_particle=E-mu_eff\\`; \\`E_antiparticle=E+mu_eff\\`; \\`B_ch^R=B_vac(m)-B_vac(m_ref)+B_thermal(m,mu_eff)\\`; \\`Gamma_R^(4)=V-(B_s^R*(V.V)+B_t^R*(V.V)+B_u^R*(V.V))/2\\` | \\`docs/core/u"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
+      "line": 1243,
+      "snippet": "| T13-067 | \\`S_SK=S_E[Phi_r+Phi_a/2]-S_E[Phi_r-Phi_a/2]\\`; \\`D_tau Phi=partial_tau Phi+mu_eff*J*Phi\\`; \\`V(r+a/2)-V(r-a/2)=lambda*(r.r)*(r.a)+(lambda/4)*(a.a)*(r.a)\\`; \\`G_particle^>/G_particle^<=exp(beta*(E-mu_eff))\\`; \\`G_antiparticle^>/"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
+      "line": 1253,
+      "snippet": "| T13-068 | \\`S_IF=integral[Phi_a K_R Phi_r+i Phi_a N Phi_a/2]\\`; \\`g_R(t)=gamma_memory/memory_time*exp(-t/memory_time)*Theta(t)\\`; \\`K_R=kappa-chi*omega^2-i omega gamma_memory/(1-i omega memory_time)\\`; \\`rho=2 gamma_memory omega/(1+omega^"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
+      "line": 1263,
+      "snippet": "| T13-069 | \\`Sigma_R^(1)=3 lambda [I_vac^R(m_eff)+I_thermal(T,mu_eff)]\\`; \\`I_thermal=integral[(n_B(E-mu_eff)+n_B(E+mu_eff))/(4E)]d^3k/(2*pi)^3\\`; \\`Im Sigma_R^(1)=0\\`; \\`rho_Sigma^(1)=-2 Im Sigma_R^(1)=0\\` | \\`docs/core/uet_o2_one_loop_re"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
+      "line": 1273,
+      "snippet": "| T13-070 | \\`W_>^(2)=integral dPi_1...dPi_4 delta^4(P_in-P_out)|M_22|^2 f1*f2*(1+f3)*(1+f4)\\`; \\`W_<^(2)=integral dPi_1...dPi_4 delta^4(P_in-P_out)|M_22|^2 f3*f4*(1+f1)*(1+f2)\\`; \\`W_cut^(2)=0.5*(W_>^(2)+W_<^(2))>0\\`; \\`W_>^(2)/W_<^(2)=1\\`"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
+      "line": 1283,
+      "snippet": "| T13-071 | \\`A_c=log(W_f,c/W_r,c)\\`; \\`sigma_c=(W_f,c-W_r,c)*A_c/T>=0\\`; \\`partial_mu S^mu_discrete=sum_c sigma_c\\`; equilibrium \\`W_f=W_r\\Rightarrow A_c=sigma_c=0\\`; internal witness \\`W_f->W_f exp(+a_c/2), W_r->W_r exp(-a_c/2)\\` | \\`docs"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
+      "line": 1291,
+      "snippet": "| T13-072 | `p=(E_p,0,0,0)`, `E_p=m_eff`; `Gamma_>^cut=integral d^3k/(2*pi)^3 n_k v_rel sigma_22 <(1+n_3)(1+n_4)>_CM`; `Gamma_<^cut=integral d^3k/(2*pi)^3 (1+n_k) v_rel sigma_22 <n_3 n_4>_CM`; `rho_cut=2*E_p*(Gamma_>-Gamma_<)`; `N_cut=2*E_p"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
+      "line": 1303,
+      "snippet": "| T13-081 | `s(omega,k)=omega^2+m_eff^2+2*omega*E_k`; `rho_cut=2*omega*(Gamma_>-Gamma_<)`; `N_cut=2*omega*(Gamma_>+Gamma_<)`; `Sigma_R^eta=integral_0^Omega dnu/pi*rho_cut(nu)*[1/(omega-nu+i*eta)-1/(omega+nu+i*eta)]`; `Sigma_R,sub(omega;omeg"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
+      "line": 1312,
+      "snippet": "| T13-082 | `W_int=lambda*(chi_a chi_a)^2/4`; `V_abcd=2*lambda*(delta_ab*delta_cd+delta_ac*delta_bd+delta_ad*delta_bc)`; `M2_action=sum_{b,c,d}|V_abcd|^2/(1+delta_cd)=28*lambda^2`; `sigma_action=M2_action/(16*pi*s)`; `Sigma_R,sub2=Sigma_R^e"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
+      "line": 1321,
+      "snippet": "| T13-077 | `1/(x+i0)=PV(1/x)-i*pi*delta(x)`; `K(s,nu)=1/(sqrt(s)-nu+i0)-1/(sqrt(s)+nu+i0)`; `Sigma_R,sub2(s)=integral dnu/pi*rho(nu)*[K(s,nu)-K(0,nu)-s*dK/ds(0,nu)]`; `K(0,nu)=-2/nu`; `dK/ds(0,nu)=-2/nu^3`; `Im Sigma_R,sub2(omega)=-rho(ome"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
+      "line": 1330,
+      "snippet": "| T13-078 | `V_abcd=2*lambda*(delta_ab*delta_cd+delta_ac*delta_bd+delta_ad*delta_bc)`; `S_ab=sum_ijk V_aijk V_bijk=12*(N+2)*lambda^2*delta_ab`; `Sigma_sunset,ab^(2)=S_ab/6*I3(p)=2*(N+2)*lambda^2*delta_ab*I3(p)`; `Sigma_R,ab(s)=Sigma_ab(s)-S"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
+      "line": 1339,
+      "snippet": "| T13-079 | `D=alpha*beta+alpha*gamma+beta*gamma`; `I3_E(s;Lambda)=1/(4*pi)^4*integral_{alpha_i>=Lambda^-2} d^3alpha D^-2 exp[-m^2*(alpha+beta+gamma)-s*alpha*beta*gamma/D]`; `Sigma_E,R,ab(s)=Sigma_E,ab(s)-Sigma_E,ab(s_*)-(s-s_*)*dSigma_E,ab"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
+      "line": 1348,
+      "snippet": "| T13-080 | `s_th=9*m^2`; `Phi_3(s)=1/(128*pi^3*s)*integral ds12 sqrt(lambda(s,s12,m^2))*sqrt(lambda(s12,m^2,m^2))/s12`; `rho_disp=2*(N+2)*lambda^2*Phi_3/(2*pi)`; `Sigma_R(s)=integral_{s_th}^infty dsprime*rho_disp(sprime)/(sprime-s+i0)`; `I"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
+      "line": 1549,
+      "snippet": "| `T13-114` | `B_ab^th=(integral d^3k/(2*pi)^3)*(k/L)^2*(n_a+n_b)/(2 E_a E_b (E_a+E_b))`; `B_ab^R=B_ab^th(Phi)-B_ab^th(Phi_ref)`; `lambda_ab^R=lambda/(1+lambda B_ab^R)`; `G_R^rel(omega)=2*D_rel/(2*Gamma_rel-i*omega)` | `docs/core/uet_o2_con"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md",
+      "line": 1790,
+      "snippet": "=rho*coth(beta_th*omega/2)`; `sigma_formal=b_perp^T*L*b_perp/T`. Natural units only; Phi is not temperature, C is not mass or charge, R_gen is a derived history trace, and R_obs is separate."
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md",
+      "line": 1805,
+      "snippet": "EQUATION_OR_MAPPING: `w_(s,k,n)=k^2/(2*pi^2*T)*f_s(E_k)*(1+f_s(E_k))*dk*dOmega/(4*pi)`; `I_A=(q_s,E_k,p_x,p_y,p_z)*sqrt(w)`; `Q=orth(I_A)`; `P=I-Q*Q^T`; `L=P*diag(Gamma_s(k))*P`; `G_R=(L-i*omega*I)^(-1)`; `G_0=(gamma_ref*I-i*omega*I)^(-1)`;"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md",
+      "line": 1820,
+      "snippet": "EQUATION_OR_MAPPING: `p1+p2=p3+p4`; `E1+E2=E3+E4`; `sigma_22=lambda^2/(16*pi*s)`; `W_f=f1*f2*(1+f3)*(1+f4)*v_rel*sigma_22*dmu`; `W_r=f3*f4*(1+f1)*(1+f2)*v_rel*sigma_22*dmu`; `L=sum_c W_c*v_c*v_c^T`; `G_R=(L-i*omega*I)^(-1)`. Natural units o"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md",
+      "line": 1835,
+      "snippet": "EQUATION_OR_MAPPING: `u_c=B*v_c`; `u_c^P=P*u_c`; `L_width=P*diag(Gamma_action_s(k))*P`; `K_transition=sum_c W_c*u_c^P*(u_c^P)^T`; `L_cont=L_width+K_transition`; `G_R=(L_cont-i*omega*I)^(-1)`; `K_BS=gamma_ref*I-L_cont`; `G_R=G_0+G_0*K_BS*G_R"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md",
+      "line": 1850,
+      "snippet": "=coth(beta_th*omega/2)*rho`. Natural units only; `Phi` is not temperature, `C` is not mass or charge, `R_gen` is a derived history trace, and `R_obs` is separate."
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md",
+      "line": 1879,
+      "snippet": "_ch=sqrt(Z)*integral[(n_-(E)-n_+(E))d^3k/(2*pi)^3]\\`. Natural units only; \\`Phi\\` is not temperature, \\`C\\` is not mass or charge, \\`R_gen\\` is a derived history trace, and \\`R_obs\\` is separate."
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md",
+      "line": 1893,
+      "snippet": "EQUATION_OR_MAPPING: \\`S_SK=S_E[Phi_r+Phi_a/2]-S_E[Phi_r-Phi_a/2]\\`; \\`D_tau Phi=partial_tau Phi+mu_eff*J*Phi\\`; \\`V(r+a/2)-V(r-a/2)=lambda*(r.r)*(r.a)+(lambda/4)*(a.a)*(r.a)\\`; charged KMS and detailed balance as recorded in \\`T13-067\\`. N"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md",
+      "line": 1909,
+      "snippet": "=rho*coth(beta_th*omega/2)\\`. Natural units only; \\`Phi\\` is not temperature, \\`C\\` is not mass or charge, \\`R_gen\\` is a derived history trace, and \\`R_obs\\` is separate."
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md",
+      "line": 1923,
+      "snippet": "EQUATION_OR_MAPPING: \\`Sigma_R^(1)(omega,k)=3 lambda [I_vac^R+I_thermal]\\`; \\`I_thermal=integral[(n_-(E)+n_+(E))/(4E)]d^3k/(2*pi)^3\\`; \\`Im Sigma_R^(1)=0\\`; \\`rho_Sigma^(1)=0\\`. Natural units only; \\`Phi\\` is not temperature, \\`C\\` is not m"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md",
+      "line": 1937,
+      "snippet": "EQUATION_OR_MAPPING: \\`W_>^(2)=integral dPi_1...dPi_4 delta^4(P_in-P_out)|M_22|^2 f1*f2*(1+f3)*(1+f4)\\`; \\`W_<^(2)=integral ... f3*f4*(1+f1)*(1+f2)\\`; \\`W_cut^(2)=0.5*(W_>^(2)+W_<^(2))\\`. Natural units only; \\`Phi\\` is not temperature, \\`C\\"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md",
+      "line": 1952,
+      "snippet": "_cut=2*E_p*(Gamma_>+Gamma_<)`; `Gamma_>/Gamma_<=exp(beta*E_p)`. Natural units only; `Phi` is not temperature, `C` is not mass or charge, `R_gen` is a derived history trace, and `R_obs` is separate."
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md",
+      "line": 1970,
+      "snippet": "EQUATION_OR_MAPPING: \\`A_c=log(W_f,c/W_r,c)\\`; \\`sigma_c=(W_f,c-W_r,c)*A_c/T>=0\\`; \\`partial_mu S^mu_discrete=sum_c sigma_c\\`. Natural units only; \\`Phi\\` is not temperature, \\`C\\` is not mass or charge, \\`R_gen\\` is a derived history trace"
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/LIMITATIONS.md",
+      "line": 79,
+      "snippet": "not silently relabeled as a proper multi-field 1PI triangle."
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "legacy_or_ambiguous_information_field",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/README.md",
-      "line": 50,
+      "line": 438,
       "snippet": "UETI[\"UET information field\"]"
     },
     {
@@ -2327,8 +3430,68 @@
       "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
       "reason": "legacy_or_ambiguous_information_field",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/README.md",
-      "line": 92,
+      "line": 480,
       "snippet": "- **The Problem:** Thermodynamics deals with heat and work, while Information Theory deals with bits and bandwidth. Landauer's Principle gives a concrete bridge (`E >= k_B T ln 2`), but UET still needs an explicit, checkable mapping from in"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/RESEARCH_WAVE_2026-08-11_CAUSAL_BRANCH_SELECTION.md",
+      "line": 55,
+      "snippet": "This is a named internal causal-branch selection. It does not mean `C` is a universal mass/density, `Phi` is temperature or heat flux, `R_gen` is a dynamic substance, the baseline was repaired, or Topic 13/UET is closed."
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_FULL_CLOSURE_STATUS.md",
+      "line": 23,
+      "snippet": "| `T13_UET_BRIDGE_BETA_SI_CORRESPONDENCE` | `normalized_beta_si_map` | The base-Phi field normalization and dimensionful free-energy scale are independently fixed and propagated. |"
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/TOPIC13_SUBRESULT_CLOSURE_MAP.md",
+      "line": 29,
+      "snippet": "| normalized_beta_si_map | T13_UET_BRIDGE_BETA_SI_CORRESPONDENCE | OPEN | CLOSED_FOR_CORE | T13_INPUT_BASE_PHI_SI_ALPHA_BETA | none | The base-Phi field normalization and dimensionful free-energy scale are independently fixed and propagated"
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md",
+      "line": 335,
+      "snippet": "CLAIM_BOUNDARY: Internal natural-unit generic Euclidean one-loop three-point result. The bath term is response-relaxed, not silently labeled a proper multi-field 1PI triangle. Not a static vertex, retarded current, physical Kubo coefficient"
+    },
+    {
+      "marker": "information_field",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "legacy_or_ambiguous_information_field",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md",
+      "line": 1738,
+      "snippet": "- Verified with: `PASS_NAMED_FINITE_TEMPERATURE_BETA_CONTRACT`; beta_T13 recovers from the declared stiffness slope and the analytic entropy derivative matches a synthetic finite difference. The contract does not identify beta_T13 with beta"
+    },
+    {
+      "marker": "c_mass_identity",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "lane_mapping_required",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md",
+      "line": 1751,
+      "snippet": "- Claim impact: no promotion. The Full Topic 13 gate remains `PARTIAL/BLOCKED`; `C` is not called charge/mass and `Phi` is not called information/temperature/heat flux."
     },
     {
       "marker": "information_field",
@@ -3293,122 +4456,142 @@
     {
       "marker": "information_field",
       "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "disposition": "LEGACY_ARCHIVE_QUARANTINED",
+      "disposition_basis": "legacy/archive path; retained for history and excluded from active claim promotion",
       "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/topics/0.22_Biophysics_Origin_of_Life/Code/03_Research/Research_Cancer_Cell_Chaos.py",
+      "path": "docs/topics/0.22_Biophysics_Origin_of_Life/Code/Legacy/03_Research/Research_Cancer_Cell_Chaos.py",
       "line": 8,
       "snippet": "\"A healthy cell is an Information Field in equilibrium with the Organism's Utility (Ω)."
     },
     {
       "marker": "information_field",
       "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "disposition": "LEGACY_ARCHIVE_QUARANTINED",
+      "disposition_basis": "legacy/archive path; retained for history and excluded from active claim promotion",
       "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/topics/0.22_Biophysics_Origin_of_Life/Code/03_Research/Research_Cancer_Cell_Chaos.py",
+      "path": "docs/topics/0.22_Biophysics_Origin_of_Life/Code/Legacy/03_Research/Research_Cancer_Cell_Chaos.py",
       "line": 38,
       "snippet": "print(\"🧬 UET CANCER RESEARCH: INFORMATION FIELD STABILITY ANALYSIS\")"
     },
     {
       "marker": "information_field",
       "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "disposition": "LEGACY_ARCHIVE_QUARANTINED",
+      "disposition_basis": "legacy/archive path; retained for history and excluded from active claim promotion",
       "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/topics/0.22_Biophysics_Origin_of_Life/Code/03_Research/Research_Cancer_Cell_Chaos.py",
+      "path": "docs/topics/0.22_Biophysics_Origin_of_Life/Code/Legacy/03_Research/Research_Cancer_Cell_Chaos.py",
       "line": 59,
       "snippet": "print(\"Conclusion: Cancer occurred due to Information Field 'Melting' (Axiom 2).\")"
     },
     {
       "marker": "information_field",
       "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "disposition": "LEGACY_ARCHIVE_QUARANTINED",
+      "disposition_basis": "legacy/archive path; retained for history and excluded from active claim promotion",
       "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/topics/0.22_Biophysics_Origin_of_Life/Code/03_Research/Research_Clinical_Strategy_Comparison.py",
+      "path": "docs/topics/0.22_Biophysics_Origin_of_Life/Code/Legacy/03_Research/Research_Clinical_Strategy_Comparison.py",
       "line": 33,
       "snippet": "# - Targeted approach that stabilizes the information field."
     },
     {
       "marker": "information_field",
       "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "disposition": "LEGACY_ARCHIVE_QUARANTINED",
+      "disposition_basis": "legacy/archive path; retained for history and excluded from active claim promotion",
       "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/topics/0.22_Biophysics_Origin_of_Life/Code/03_Research/Research_Personalized_Threshold.py",
+      "path": "docs/topics/0.22_Biophysics_Origin_of_Life/Code/Legacy/03_Research/Research_Personalized_Threshold.py",
       "line": 67,
       "snippet": "print(\"unique Information Field Scale (Internal Kappa).\")"
     },
     {
       "marker": "information_field",
       "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "disposition": "LEGACY_ARCHIVE_QUARANTINED",
+      "disposition_basis": "legacy/archive path; retained for history and excluded from active claim promotion",
       "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/topics/0.22_Biophysics_Origin_of_Life/Code/03_Research/Research_Seizure_Prediction.py",
+      "path": "docs/topics/0.22_Biophysics_Origin_of_Life/Code/Legacy/03_Research/Research_Seizure_Prediction.py",
       "line": 10,
       "snippet": "Core Concept: Brain as C-I field system"
     },
     {
       "marker": "information_field",
       "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "disposition": "LEGACY_ARCHIVE_QUARANTINED",
+      "disposition_basis": "legacy/archive path; retained for history and excluded from active claim promotion",
       "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/topics/0.22_Biophysics_Origin_of_Life/Code/03_Research/Research_Self_Organizing_Protocell.py",
+      "path": "docs/topics/0.22_Biophysics_Origin_of_Life/Code/Legacy/03_Research/Research_Self_Organizing_Protocell.py",
       "line": 71,
       "snippet": "# Complexity = Shannon Entropy Reduction * Information Field Density"
     },
     {
       "marker": "information_field",
       "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "disposition": "LEGACY_ARCHIVE_QUARANTINED",
+      "disposition_basis": "legacy/archive path; retained for history and excluded from active claim promotion",
       "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/topics/0.22_Biophysics_Origin_of_Life/Code/03_Research/Research_Self_Organizing_Protocell.py",
+      "path": "docs/topics/0.22_Biophysics_Origin_of_Life/Code/Legacy/03_Research/Research_Self_Organizing_Protocell.py",
       "line": 91,
       "snippet": "# No I-field coupling. System remains 2D random noise."
     },
     {
       "marker": "information_field",
       "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "disposition": "LEGACY_ARCHIVE_QUARANTINED",
+      "disposition_basis": "legacy/archive path; retained for history and excluded from active claim promotion",
       "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/topics/0.22_Biophysics_Origin_of_Life/Code/04_Competitor/Competitor_Cancer_Models.py",
+      "path": "docs/topics/0.22_Biophysics_Origin_of_Life/Code/Legacy/04_Competitor/Competitor_Cancer_Models.py",
       "line": 42,
       "snippet": "\"  - Limitation: Only tracks physical volume, ignoring internal information field.\""
     },
     {
       "marker": "information_field",
       "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "CODE_OR_TEST_LITERAL",
-      "disposition_basis": "implementation/test/audit literal; source code requires separate semantic review before any prose claim",
+      "disposition": "LEGACY_ARCHIVE_QUARANTINED",
+      "disposition_basis": "legacy/archive path; retained for history and excluded from active claim promotion",
       "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/topics/0.22_Biophysics_Origin_of_Life/Code/04_Competitor/Competitor_Cancer_Models.py",
+      "path": "docs/topics/0.22_Biophysics_Origin_of_Life/Code/Legacy/04_Competitor/Competitor_Cancer_Models.py",
       "line": 72,
       "snippet": "\"Information Field\","
     },
     {
       "marker": "information_field",
       "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
-      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "disposition": "LEGACY_ARCHIVE_QUARANTINED",
+      "disposition_basis": "legacy/archive path; retained for history and excluded from active claim promotion",
       "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/topics/0.22_Biophysics_Origin_of_Life/Doc/03_Research/paper/ANALYSIS_BIOGENESIS.md",
+      "path": "docs/topics/0.22_Biophysics_Origin_of_Life/Doc/Legacy/03_Research/paper/ANALYSIS_BIOGENESIS.md",
       "line": 20,
       "snippet": "- จำเป็นต้องใช้ UET Solver เพื่อหาความหนาแน่นของ I-field ที่สูงพอจะบังคับให้กรดอะมิโนเรียงตัวเป็นโครงสร้างปิด (Protocell)"
     },
     {
       "marker": "information_field",
       "status": "LEGACY_REVIEW_REQUIRED",
-      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
-      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "disposition": "LEGACY_ARCHIVE_QUARANTINED",
+      "disposition_basis": "legacy/archive path; retained for history and excluded from active claim promotion",
       "reason": "legacy_or_ambiguous_information_field",
-      "path": "docs/topics/0.22_Biophysics_Origin_of_Life/Doc/03_Research/paper/ANALYSIS_BIOGENESIS.md",
+      "path": "docs/topics/0.22_Biophysics_Origin_of_Life/Doc/Legacy/03_Research/paper/ANALYSIS_BIOGENESIS.md",
       "line": 31,
       "snippet": "- ระบบที่สามารถกักเก็บ I-field ได้มากกว่า (Self-replication) จะมีโอกาส \"คงอยู่ (Persistence)\" สูงกว่าตามกฎความตายตัวทางฟิสิกส์"
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/topics/0.22_Biophysics_Origin_of_Life/DYNAMICS_RESEARCH_SPEC.md",
+      "line": 40,
+      "snippet": "R_gen   = derived trajectory/readout after evolution; no feedback by default"
+    },
+    {
+      "marker": "trace_feedback",
+      "status": "LEGACY_REVIEW_REQUIRED",
+      "disposition": "ACTIVE_PROSE_MANUAL_REVIEW",
+      "disposition_basis": "active topic or documentation prose; no automatic rewrite or promotion is permitted",
+      "reason": "explicit_feedback_boundary_review",
+      "path": "docs/topics/0.22_Biophysics_Origin_of_Life/DYNAMICS_RESEARCH_SPEC.md",
+      "line": 55,
+      "snippet": "| `R_gen` | derived trajectory/record | no feedback into the state by default |"
     },
     {
       "marker": "information_field",

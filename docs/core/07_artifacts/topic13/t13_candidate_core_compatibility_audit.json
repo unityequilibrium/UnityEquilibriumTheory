@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-candidate-core-compatibility-audit-v1",
   "artifact": "t13_candidate_core_compatibility_audit",
-  "generated_at": "2026-08-24",
+  "generated_at": "2026-09-18",
   "status": "PASS_SCOPED_T13_CANDIDATE_COMPATIBILITY_AUDIT_OPEN",
   "major_result": {
     "major_result_id": "T13_CANDIDATE_CORE_COMPATIBILITY_DIAGNOSTIC",
@@ -40,7 +40,7 @@
     "evidence_artifacts": [
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_nep_bte_reproduction_source_package.json",
-        "sha256": "a82b25ed00f896b759d2b577bdd046faf1c1ef1399b6f5d12b71c8bd6318e5ed",
+        "sha256": "fe09130558e9a274d92fb4e62abb3aa6339b193c3584e2c78acc4c7d5dee1b33",
         "role": "candidate source package",
         "status": "PASS_SCOPED_CALORINE_NUMERIC_C_SRC_REPRODUCTION",
         "claim_boundary": "This closes only a source-locked Calorine/Zenodo harmonic/RTA PBTE candidate reproduction lane. It is not Ding-regime equivalence, not source-grade uncertainty closure, not an alpha_Phi_K calibration, not a UET Phi map, not a TTG prediction, and not Full Topic 13 closure."
@@ -125,14 +125,14 @@
       "route_role": "numeric_C_src_candidate_route",
       "source_artifact": {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_nep_bte_reproduction_source_package.json",
-        "sha256": "a82b25ed00f896b759d2b577bdd046faf1c1ef1399b6f5d12b71c8bd6318e5ed",
+        "sha256": "fe09130558e9a274d92fb4e62abb3aa6339b193c3584e2c78acc4c7d5dee1b33",
         "role": "candidate source package",
         "status": "PASS_SCOPED_CALORINE_NUMERIC_C_SRC_REPRODUCTION",
         "claim_boundary": "This closes only a source-locked Calorine/Zenodo harmonic/RTA PBTE candidate reproduction lane. It is not Ding-regime equivalence, not source-grade uncertainty closure, not an alpha_Phi_K calibration, not a UET Phi map, not a TTG prediction, and not Full Topic 13 closure."
       },
       "audit_artifact": {
-        "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
-        "sha256": "a2fb52533d768697950c49722e24e5de0d9d3381c24be6c5bf2e23f88a8957e0",
+        "path": "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
+        "sha256": "c856857ced77aed07c24e062b1517ca313663e1ed58155e5c1dd78f0cb1895d1",
         "status": "PASS_SCOPED_CALORINE_NUMERIC_C_SRC_REPRODUCTION"
       },
       "field_checks": [
@@ -236,8 +236,8 @@
         "claim_boundary": "The package closes an independent harmonic graphite c_v comparator lane with auditable provenance and explicit non-statistical uncertainty bounds. It does not close Ding-specific PBTE C_src(T), e0, base Phi-to-energy correspondence, alpha_Phi_K, EOS, transport, SK/KMS, entropy, external validation, or global UET closure."
       },
       "audit_artifact": {
-        "path": "docs/core/artifacts/t13_mp48_independent_graphite_cv_audit.json",
-        "sha256": "56493e6d4883f3f78d24f630f5cdc6718eec350ce264152146979e3bb0ee39a9",
+        "path": "docs/core/07_artifacts/topic13/t13_mp48_independent_graphite_cv_audit.json",
+        "sha256": "1232a0a014f61aa50a3e035aa03d675c36bf8afcb2d6e5fcaee32ce1901491e8",
         "status": "PASS_INDEPENDENT_NUMERIC_CV_WITH_EPISTEMIC_ENVELOPE"
       },
       "field_checks": [
@@ -343,8 +343,8 @@
         "claim_boundary": "QH-15 is a source-locked macroscopic graphite C_v comparator with an explicit unit conversion and a bounded cross-check against the independent Calorine candidate. It is not Ding mode-resolved C_src, not an alpha_Phi_K calibration, not a Phi-to-temperature map, not external validation, and not Full Topic 13 closure."
       },
       "audit_artifact": {
-        "path": "docs/core/artifacts/t13_qh15_graphite_transport_boundary_audit.json",
-        "sha256": "51ddbb46b345233509c78cbb6575945017ddddf3fa14e3fcf233bbad5e9c1e11",
+        "path": "docs/core/07_artifacts/topic13/t13_qh15_graphite_transport_boundary_audit.json",
+        "sha256": "b7606f022bfe86405531915ebdfb084dd0e5b1c29711aabb97f65bc09e1d30be",
         "status": "PASS_SCOPED_QH15_CV_COMPARATOR_BOUNDARY"
       },
       "field_checks": [
@@ -450,8 +450,8 @@
         "claim_boundary": "This package source-locks one independent c_p row and its 95% confidence interval at 573.15 K. Its reported thermal conductivity is derived from diffusivity, c_p, and an assumed density, so it cannot independently source-lock density or volumetric c_v. It does not derive e0, identify Phi with Phi_E, or calibrate alpha_Phi_K."
       },
       "audit_artifact": {
-        "path": "docs/core/artifacts/t13_gatech_graphite_source_audit.json",
-        "sha256": "56866720546cdf201c5b45ef7262f82679a5676482835d6d476933f114b3d394",
+        "path": "docs/core/07_artifacts/topic13/t13_gatech_graphite_source_audit.json",
+        "sha256": "4aa3c12d1bc8069e6b84f596ba1ee5f88fc274e46634ac7964c2676dd68f19b5",
         "status": "PASS_SOURCE_CP_95CI_CV_OPEN"
       },
       "field_checks": [
@@ -551,14 +551,14 @@
       "route_role": "external_comparator_without_UET_Phi_scale",
       "source_artifact": {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_nep_bte_reproduction_source_package.json",
-        "sha256": "a82b25ed00f896b759d2b577bdd046faf1c1ef1399b6f5d12b71c8bd6318e5ed",
+        "sha256": "fe09130558e9a274d92fb4e62abb3aa6339b193c3584e2c78acc4c7d5dee1b33",
         "role": "candidate source package",
         "status": "PASS_SCOPED_CALORINE_NUMERIC_C_SRC_REPRODUCTION",
         "claim_boundary": "This closes only a source-locked Calorine/Zenodo harmonic/RTA PBTE candidate reproduction lane. It is not Ding-regime equivalence, not source-grade uncertainty closure, not an alpha_Phi_K calibration, not a UET Phi map, not a TTG prediction, and not Full Topic 13 closure."
       },
       "audit_artifact": {
-        "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
-        "sha256": "a2fb52533d768697950c49722e24e5de0d9d3381c24be6c5bf2e23f88a8957e0",
+        "path": "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
+        "sha256": "c856857ced77aed07c24e062b1517ca313663e1ed58155e5c1dd78f0cb1895d1",
         "status": "PASS_SCOPED_CALORINE_NUMERIC_C_SRC_REPRODUCTION"
       },
       "field_checks": [
@@ -638,8 +638,8 @@
         "claim_boundary": "The package closes an independent harmonic graphite c_v comparator lane with auditable provenance and explicit non-statistical uncertainty bounds. It does not close Ding-specific PBTE C_src(T), e0, base Phi-to-energy correspondence, alpha_Phi_K, EOS, transport, SK/KMS, entropy, external validation, or global UET closure."
       },
       "audit_artifact": {
-        "path": "docs/core/artifacts/t13_mp48_independent_graphite_cv_audit.json",
-        "sha256": "56493e6d4883f3f78d24f630f5cdc6718eec350ce264152146979e3bb0ee39a9",
+        "path": "docs/core/07_artifacts/topic13/t13_mp48_independent_graphite_cv_audit.json",
+        "sha256": "1232a0a014f61aa50a3e035aa03d675c36bf8afcb2d6e5fcaee32ce1901491e8",
         "status": "PASS_INDEPENDENT_NUMERIC_CV_WITH_EPISTEMIC_ENVELOPE"
       },
       "field_checks": [
@@ -718,8 +718,8 @@
         "claim_boundary": "QH-15 is a source-locked macroscopic graphite C_v comparator with an explicit unit conversion and a bounded cross-check against the independent Calorine candidate. It is not Ding mode-resolved C_src, not an alpha_Phi_K calibration, not a Phi-to-temperature map, not external validation, and not Full Topic 13 closure."
       },
       "audit_artifact": {
-        "path": "docs/core/artifacts/t13_qh15_graphite_transport_boundary_audit.json",
-        "sha256": "51ddbb46b345233509c78cbb6575945017ddddf3fa14e3fcf233bbad5e9c1e11",
+        "path": "docs/core/07_artifacts/topic13/t13_qh15_graphite_transport_boundary_audit.json",
+        "sha256": "b7606f022bfe86405531915ebdfb084dd0e5b1c29711aabb97f65bc09e1d30be",
         "status": "PASS_SCOPED_QH15_CV_COMPARATOR_BOUNDARY"
       },
       "field_checks": [
@@ -798,8 +798,8 @@
         "claim_boundary": "This package source-locks one independent c_p row and its 95% confidence interval at 573.15 K. Its reported thermal conductivity is derived from diffusivity, c_p, and an assumed density, so it cannot independently source-lock density or volumetric c_v. It does not derive e0, identify Phi with Phi_E, or calibrate alpha_Phi_K."
       },
       "audit_artifact": {
-        "path": "docs/core/artifacts/t13_gatech_graphite_source_audit.json",
-        "sha256": "56866720546cdf201c5b45ef7262f82679a5676482835d6d476933f114b3d394",
+        "path": "docs/core/07_artifacts/topic13/t13_gatech_graphite_source_audit.json",
+        "sha256": "4aa3c12d1bc8069e6b84f596ba1ee5f88fc274e46634ac7964c2676dd68f19b5",
         "status": "PASS_SOURCE_CP_95CI_CV_OPEN"
       },
       "field_checks": [
@@ -878,8 +878,8 @@
         "claim_boundary": "This package closes only a source-locked standard-physics Green-Kubo transport-input lane. It does not identify the coefficient with UET Phi response, does not provide Ding mode-resolved C_src, does not calibrate alpha_Phi_K, and does not close Full Topic 13."
       },
       "audit_artifact": {
-        "path": "docs/core/artifacts/t13_transport_kms_entropy_status_boundary_audit.json",
-        "sha256": "ea7f6c0b9696e14e2e3164548207754508f105a7fd675820eb79c0338fdecf13",
+        "path": "docs/core/07_artifacts/topic13/t13_transport_kms_entropy_status_boundary_audit.json",
+        "sha256": "2c3ad01f64607e9a070a0de2f0c473612af91b13ad7c5bfead94a1940c063ac7",
         "status": "PASS_SCOPED_TRANSPORT_KMS_ENTROPY_STATUS_BOUNDARY"
       },
       "field_checks": [
@@ -958,8 +958,8 @@
         "claim_boundary": "This package closes only a source-locked standard-physics Green-Kubo transport-input lane. It does not identify the coefficient with UET Phi response, does not provide Ding mode-resolved C_src, does not calibrate alpha_Phi_K, and does not close Full Topic 13."
       },
       "audit_artifact": {
-        "path": "docs/core/artifacts/t13_transport_kms_entropy_status_boundary_audit.json",
-        "sha256": "ea7f6c0b9696e14e2e3164548207754508f105a7fd675820eb79c0338fdecf13",
+        "path": "docs/core/07_artifacts/topic13/t13_transport_kms_entropy_status_boundary_audit.json",
+        "sha256": "2c3ad01f64607e9a070a0de2f0c473612af91b13ad7c5bfead94a1940c063ac7",
         "status": "PASS_SCOPED_TRANSPORT_KMS_ENTROPY_STATUS_BOUNDARY"
       },
       "field_checks": [

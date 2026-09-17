@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_topic_formula_correspondence_manifest",
-  "generated_at": "2026-08-08",
+  "generated_at": "2026-09-18",
   "audit_status": "PASS_WITH_EXPLICIT_BLOCKED_DISPOSITIONS",
   "matrix_status": "COMPLETE_ROW_INDEX_EXPLICIT_DISPOSITIONS_OPEN_PHYSICAL_MAPPING",
   "purpose": "exhaustive F2 row index; every row has an explicit blocked disposition, while no row is promoted into a physical correspondence or accepted measurement operator",
@@ -12,8 +12,8 @@
     "standard_counterpart_contract_count": 106,
     "rule": "Rows without an accepted lane-specific operator receive either a declared standard-comparator contract or an explicit unmatched blocked disposition; neither is physical acceptance."
   },
-  "source_artifact": "docs/core/artifacts/uet_full_correspondence_coverage.json",
-  "central_registry": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "source_artifact": "docs/core/07_artifacts/correspondence/uet_full_correspondence_coverage.json",
+  "central_registry": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
   "coverage": {
     "source_rows": 263,
     "manifest_rows": 263,
