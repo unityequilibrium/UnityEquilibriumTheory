@@ -1876,7 +1876,7 @@
       },
       "closure_matrix": {
         "path": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
-        "sha256": "ae84ef1b828f39ef3c14962cdd064206f0bd73e98dc4d92229cf473d81d98aa2",
+        "sha256": "508a11c1a837e898253302032f54eeccb2e1b1f89f1e5cc816376f17c73c4f2d",
         "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
         "closure_level": "CLOSED_FOR_CORE",
         "full_core_unlock": true,
@@ -7862,6 +7862,7 @@
       "major_result_id": "T13_TOPIC13_CLOSURE_MATRIX",
       "topic": "0.13_Thermodynamic_Bridge",
       "closure_level": "CLOSED_FOR_CORE",
+      "claim_promotion": false,
       "what_is_closed": [
         "The ten required Topic 13 result areas are reported separately by closure level.",
         "Each result area exposes evidence-producing subresults and an acceptance boundary.",
@@ -7904,20 +7905,72 @@
           }
         }
       ],
-      "input_package_audit": {
-        "path": "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json",
-        "sha256": "ebb1c0d0d842d6c5239082f3a9314fe79fcadbbd83fdb1ab7468e5933633c726",
-        "summary": {
-          "role": "grouped Topic 13 closure-input acceptance audit",
-          "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
-        }
-      },
       "verification_status": "PASS_MACHINE_READABLE_FULL_TOPIC_CLOSURE_CONTRACT_WITH_GATE_BOUNDARY",
       "open_blockers": [],
       "dependency_unlocked": "Full thermal bridge only; Core curved 3+1 remains a separate dependency.",
       "claim_boundary": "This matrix reports progress and closure boundaries. It does not promote a lane-level PASS, comparator, no-go, or formal interface to Full Topic 13, Core, external validation, or a global UET claim.",
+      "closure_summary": {
+        "closure_count_unit": "required_subresults",
+        "closed_lane_count": 21,
+        "closed_as_no_go_count": 6,
+        "closed_for_core_count": 0,
+        "open_subresult_count": 10,
+        "reported_subresult_count": 37,
+        "source_gate_projection_counts": {
+          "closed_lane_result_count": 192,
+          "closed_as_no_go_result_count": 16
+        },
+        "open_blocker_count": 7,
+        "open_blocker_groups": {
+          "source_and_material": [
+            "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+            "material_regime_mapping_to_TTG_not_closed",
+            "c_v_source_uncertainty_not_closed"
+          ],
+          "dimensional_and_calibration": [
+            "alpha_Phi_K_independent_calibration_missing",
+            "normalized_beta_and_SI_scale_correspondence_missing",
+            "dimensional_phi_to_thermal_observable_map_missing"
+          ],
+          "thermodynamic_transport": [
+            "physical_Kubo_coefficient_record_missing"
+          ],
+          "unclassified": []
+        },
+        "downstream_dependency_unlocked": false,
+        "required_major_result_count": 10,
+        "required_subresult_count": 37,
+        "required_input_package_count": 3,
+        "current_major_result_counts": {
+          "CLOSED_AS_NO_GO": 1,
+          "OPEN": 3,
+          "PARTIAL": 6
+        },
+        "current_subresult_counts": {
+          "CLOSED_AS_NO_GO": 6,
+          "CLOSED_FOR_LANE": 21,
+          "OPEN": 10
+        },
+        "full_topic_ready": true
+      },
+      "full_topic_closure_contract": {
+        "required_major_result_count": 10,
+        "required_subresult_count": 37,
+        "current_major_result_counts": {
+          "CLOSED_AS_NO_GO": 1,
+          "OPEN": 3,
+          "PARTIAL": 6
+        },
+        "current_subresult_counts": {
+          "CLOSED_AS_NO_GO": 6,
+          "CLOSED_FOR_LANE": 21,
+          "OPEN": 10
+        },
+        "full_topic_ready": true
+      },
       "required_major_result_count": 10,
       "required_subresult_count": 37,
+      "required_input_package_count": 3,
       "current_major_result_counts": {
         "CLOSED_AS_NO_GO": 1,
         "OPEN": 3,
@@ -7928,7 +7981,6 @@
         "CLOSED_FOR_LANE": 21,
         "OPEN": 10
       },
-      "required_input_package_count": 3,
       "closure_input_packages": [
         {
           "package_id": "T13_INPUT_DING_TTG_SOURCE",
@@ -8002,66 +8054,14 @@
           "claim_boundary": "The existing natural-unit Kubo and formal SK/KMS lanes remain lane evidence until a state-matched physical record passes this contract."
         }
       ],
-      "closure_summary": {
-        "closure_count_unit": "required_subresults",
-        "closed_lane_count": 21,
-        "closed_as_no_go_count": 6,
-        "closed_for_core_count": 0,
-        "open_subresult_count": 10,
-        "reported_subresult_count": 37,
-        "source_gate_projection_counts": {
-          "closed_lane_result_count": 192,
-          "closed_as_no_go_result_count": 16
-        },
-        "open_blocker_count": 7,
-        "open_blocker_groups": {
-          "source_and_material": [
-            "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
-            "material_regime_mapping_to_TTG_not_closed",
-            "c_v_source_uncertainty_not_closed"
-          ],
-          "dimensional_and_calibration": [
-            "alpha_Phi_K_independent_calibration_missing",
-            "normalized_beta_and_SI_scale_correspondence_missing",
-            "dimensional_phi_to_thermal_observable_map_missing"
-          ],
-          "thermodynamic_transport": [
-            "physical_Kubo_coefficient_record_missing"
-          ],
-          "unclassified": []
-        },
-        "downstream_dependency_unlocked": false,
-        "required_major_result_count": 10,
-        "required_subresult_count": 37,
-        "required_input_package_count": 3,
-        "current_major_result_counts": {
-          "CLOSED_AS_NO_GO": 1,
-          "OPEN": 3,
-          "PARTIAL": 6
-        },
-        "current_subresult_counts": {
-          "CLOSED_AS_NO_GO": 6,
-          "CLOSED_FOR_LANE": 21,
-          "OPEN": 10
-        },
-        "full_topic_ready": true
-      },
-      "full_topic_closure_contract": {
-        "required_major_result_count": 10,
-        "required_subresult_count": 37,
-        "current_major_result_counts": {
-          "CLOSED_AS_NO_GO": 1,
-          "OPEN": 3,
-          "PARTIAL": 6
-        },
-        "current_subresult_counts": {
-          "CLOSED_AS_NO_GO": 6,
-          "CLOSED_FOR_LANE": 21,
-          "OPEN": 10
-        },
-        "full_topic_ready": true
-      },
-      "claim_promotion": false
+      "input_package_audit": {
+        "path": "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json",
+        "sha256": "ebb1c0d0d842d6c5239082f3a9314fe79fcadbbd83fdb1ab7468e5933633c726",
+        "summary": {
+          "role": "grouped Topic 13 closure-input acceptance audit",
+          "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN"
+        }
+      }
     },
     {
       "major_result_id": "T13_TPG_ANISOTROPIC_ALPHA_V_COMPARATOR",
@@ -13379,7 +13379,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/verification/curved_3p1_geometry_operator_verification.json",
-          "sha256": "5fd9a504ed87c47cb32fb1ad32ea562a19b6df966123c1059944ad017a8add0f",
+          "sha256": "656d72eabc1fd39d8a12db7a7c3ceb144ff25a6fb69b1fc4a98d5ad49087e6c4",
           "summary": {
             "status": "PASS_CURVED_3P1_GEOMETRY_OPERATOR",
             "major_result_id": "CORE_CURVED_3P1_GEOMETRY_OPERATOR_READY",

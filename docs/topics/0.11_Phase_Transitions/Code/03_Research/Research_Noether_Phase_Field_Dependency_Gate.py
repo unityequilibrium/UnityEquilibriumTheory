@@ -375,7 +375,7 @@ def main() -> dict[str, Any]:
     artifact = build_artifact()
     ARTIFACT_PATH.write_text(
         json.dumps(artifact, indent=2, sort_keys=True) + "\n",
-        encoding="utf-8",
+        encoding="utf-8", newline="\n",
     )
     return artifact
 

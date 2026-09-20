@@ -6,7 +6,7 @@
   "claim_promotion": false,
   "register": {
     "path": "docs/core/07_artifacts/gates/uet_major_result_closure_register.json",
-    "sha256": "6045ba5e116fbbf0b522002d379e079df42a669c893d741fe68f89fbdb2e5b0f"
+    "sha256": "2872266eb159f0e4121a254c48cb262751926dfe17ab52244bc94a15b2b96a63"
   },
   "decisions": {
     "TOPIC_0_11_CHAOS_DIAGNOSTIC_ROLLOUT": {
@@ -238,7 +238,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/verification/curved_3p1_geometry_operator_verification.json",
-          "sha256": "5fd9a504ed87c47cb32fb1ad32ea562a19b6df966123c1059944ad017a8add0f",
+          "sha256": "656d72eabc1fd39d8a12db7a7c3ceb144ff25a6fb69b1fc4a98d5ad49087e6c4",
           "summary": {
             "status": "PASS_CURVED_3P1_GEOMETRY_OPERATOR",
             "major_result_id": "CORE_CURVED_3P1_GEOMETRY_OPERATOR_READY",
@@ -534,7 +534,7 @@
     "claim_boundary": "ADM constraint, periodic spatial geometry, RHS operator, and fixed-gauge no-go, GH principal/nonlinear RHS, periodic vacuum evolution, and prescribed Topic 13 matter-source progress only; the parent is not CLOSED_FOR_CORE and Gravity remains blocked"
   },
   "topic13_partial_evidence": {
-    "register_sha256": "018dc089cb9bae3de39a34c3bbc6b4a7948b8bce675ef3194908aed0606ed96a",
+    "register_sha256": "2872266eb159f0e4121a254c48cb262751926dfe17ab52244bc94a15b2b96a63",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",

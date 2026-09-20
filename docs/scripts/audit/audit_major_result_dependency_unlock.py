@@ -284,7 +284,7 @@ def main() -> int:
                 },
             }
     artifact = _canonicalize_artifact_paths(artifact)
-    OUT.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
+    OUT.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="utf-8", newline="\n")
     print(json.dumps({"status": artifact["status"], "decisions": decisions}, indent=2))
     return 0
 

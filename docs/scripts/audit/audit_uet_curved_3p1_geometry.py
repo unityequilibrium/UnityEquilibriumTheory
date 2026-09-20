@@ -50,7 +50,9 @@ def _json_ready(value: Any) -> Any:
         return _json_ready(value.item())
     if isinstance(value, float):
         # Canonicalize serialization across Python/NumPy builds only.
-        return float(f"{value:.15g}")
+        if abs(value) < 1.0e-12:
+            return 0.0
+        return float(f"{value:.12g}")
     if isinstance(value, dict):
         return {key: _json_ready(item) for key, item in value.items()}
     if isinstance(value, (list, tuple)):
@@ -393,11 +395,11 @@ def main() -> int:
     verification, formula = build_artifacts()
     VERIFY.write_text(
         json.dumps(verification, indent=2, ensure_ascii=True) + "\n",
-        encoding="utf-8",
+        encoding="utf-8", newline="\n",
     )
     FORMULA.write_text(
         json.dumps(formula, indent=2, ensure_ascii=True) + "\n",
-        encoding="utf-8",
+        encoding="utf-8", newline="\n",
     )
     print(
         json.dumps(

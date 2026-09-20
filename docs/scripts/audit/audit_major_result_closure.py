@@ -322,7 +322,7 @@ def main() -> int:
         "claim_boundary": "This register reports closed or partial research results; it never promotes the global UET claim.",
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
+    OUT.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="utf-8", newline="\n")
     dependency_path = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
     if dependency_path.is_file():
         dependency = load(dependency_path)
@@ -331,7 +331,7 @@ def main() -> int:
         dependency["register"]["sha256"] = sha256(OUT)
         dependency_path.write_text(
             json.dumps(dependency, indent=2, ensure_ascii=True) + "\n",
-            encoding="utf-8",
+            encoding="utf-8", newline="\n",
         )
     print(json.dumps({"artifact": rel(OUT), "entries": len(entries), "next_major_result": artifact["next_major_result"]}, indent=2))
     return 0
