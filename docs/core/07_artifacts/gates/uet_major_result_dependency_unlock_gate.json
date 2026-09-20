@@ -1,12 +1,12 @@
 {
   "schema_version": "uet-major-result-dependency-unlock-v1",
   "artifact": "uet_major_result_dependency_unlock_gate",
-  "generated_at": "2026-09-18",
+  "generated_at": "2026-09-20",
   "status": "BLOCKED_DOWNSTREAM_MAJOR_RESULTS",
   "claim_promotion": false,
   "register": {
     "path": "docs/core/07_artifacts/gates/uet_major_result_closure_register.json",
-    "sha256": "2bce7592ed1b122611889d9176d0b50f2ff31fa89c6b071484e2d87c5ccb64d2"
+    "sha256": "6045ba5e116fbbf0b522002d379e079df42a669c893d741fe68f89fbdb2e5b0f"
   },
   "decisions": {
     "TOPIC_0_11_CHAOS_DIAGNOSTIC_ROLLOUT": {
@@ -290,7 +290,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/verification/curved_3p1_adm_evolution_operator_verification.json",
-          "sha256": "4d2eec0eea54ba8c7007105ad822546fdb7ae4d450ed95f2e9a621f05685e1e3",
+          "sha256": "bd19dee3737c6994fe353a0fef049503793d498f90bb07c80c0e9ad8ff0e863a",
           "summary": {
             "status": "PASS_ADM_EVOLUTION_RHS_OPERATOR_ONLY",
             "major_result_id": "CORE_CURVED_3P1_ADM_EVOLUTION_RHS_READY",
@@ -328,7 +328,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/archive/curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json",
-          "sha256": "07f01b3007a0d145d290b92cfd40ef3185a50520082559015a082ce7672637c2",
+          "sha256": "f12fbf1250175daf6cc49e8c1390550b2c3a1b697c2b65b430bc4a891b056ded",
           "summary": {
             "status": "CLOSED_AS_NO_GO_FIXED_GAUGE_ADM_NOT_STRONGLY_HYPERBOLIC",
             "major_result_id": "CORE_CURVED_3P1_FIXED_GAUGE_ADM_HYPERBOLICITY_NO_GO",
@@ -534,7 +534,7 @@
     "claim_boundary": "ADM constraint, periodic spatial geometry, RHS operator, and fixed-gauge no-go, GH principal/nonlinear RHS, periodic vacuum evolution, and prescribed Topic 13 matter-source progress only; the parent is not CLOSED_FOR_CORE and Gravity remains blocked"
   },
   "topic13_partial_evidence": {
-    "register_sha256": "2bce7592ed1b122611889d9176d0b50f2ff31fa89c6b071484e2d87c5ccb64d2",
+    "register_sha256": "018dc089cb9bae3de39a34c3bbc6b4a7948b8bce675ef3194908aed0606ed96a",
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "current_level": "PARTIAL",
     "independent_cv_route": "CLOSED_FOR_LANE",
@@ -2714,7 +2714,7 @@
     "claim_boundary": "CLOSED_FOR_CORE is an internal, lane-bounded composition result. It is not a prediction of the imported He-4 coefficients, not graphite TTG validation, not a complete two-fluid transport tensor, not curved 3+1, and not global UET closure.",
     "closure_matrix": {
       "path": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
-      "sha256": "237a121a0a7abacff6dc42e4813d5ad760843c12ebaa48fe8cc4a66e9fe5c2ce",
+      "sha256": "508a11c1a837e898253302032f54eeccb2e1b1f89f1e5cc816376f17c73c4f2d",
       "full_core_unlock": true,
       "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
       "required_major_result_count": 10,
@@ -2735,6 +2735,6 @@
       },
       "full_topic_ready": true
     },
-    "register_sha256": "4bbf7248879cb48d14aac0ed61b8a439e169e6bc7a0385f673bef362268a8ea7"
+    "register_sha256": "6045ba5e116fbbf0b522002d379e079df42a669c893d741fe68f89fbdb2e5b0f"
   }
 }

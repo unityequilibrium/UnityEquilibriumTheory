@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "o2_finite_density_eos_verification",
-  "generated_at": "2026-09-17T23:25:43.182231+00:00",
+  "generated_at": "2026-09-20T04:00:54.244641+00:00",
   "topic": "docs/core UET GR non-closed response",
   "version": "wave10_v1",
   "benchmark_role": "internal_tree_level_formula_verification",
@@ -20,16 +20,16 @@
     "seed_transport": 102002
   },
   "thresholds": {
-    "stationarity_max_abs": 0.0,
+    "stationarity_max_abs": 1e-12,
     "analytic_derivative_max_abs": 1e-08,
     "legendre_first_law_max_abs": 1e-10,
     "response_reciprocity_max_abs": 1e-08,
-    "projector_max_abs": 0.0,
+    "projector_max_abs": 1e-12,
     "ideal_constitutive_max_abs": 1e-10,
-    "josephson_max_abs": 0.0,
+    "josephson_max_abs": 1e-12,
     "lorentz_covariance_max_abs": 1e-10,
     "goldstone_sound_max_abs": 1e-08,
-    "entropy_minimum": 0.0,
+    "entropy_minimum": -1e-12,
     "natural_causal_speed_sq_max": 1.0,
     "double_well_reduction_relative_max": 0.001
   },

@@ -156,7 +156,7 @@ def build(*, run_tests: bool = False) -> dict[str, Any]:
     evidence_rows, evidence_present, hashes_current, failed_paths = evidence_audit(waves)
     wave_numbers = [wave.get("wave") for wave in waves]
     expected_numbers = list(range(12))
-    log_text = CLOSURE_LOG.read_text(encoding="utf-8") if CLOSURE_LOG.exists() else ""
+    log_text = CLOSURE_LOG.read_text(encoding="utf-8", newline="\n") if CLOSURE_LOG.exists() else ""
     required_docs = {
         "closure_log": CLOSURE_LOG.exists(),
         "foundation_report": REPORT.exists(),
@@ -224,7 +224,7 @@ def main() -> int:
     args = parser.parse_args()
     report = build(run_tests=not args.skip_core_test)
     if not args.no_write:
-        OUTPUT.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        OUTPUT.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
     if args.json:
         print(json.dumps(report, indent=2, ensure_ascii=False))
     else:

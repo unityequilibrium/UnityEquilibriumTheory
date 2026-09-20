@@ -621,7 +621,7 @@ def sync_register_and_dependency(matrix: dict[str, Any]) -> None:
     register["generated_at"] = date.today().isoformat()
     register["claim_promotion"] = False
     register_path = ROOT / REGISTER_REL
-    register_path.write_text(json.dumps(register, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
+    register_path.write_text(json.dumps(register, indent=2, ensure_ascii=True) + "\n", encoding="utf-8", newline="\n")
 
     dependency = load_json(DEPENDENCY_REL)
     core_ready = dependency.setdefault("topic13_core_ready", {})
@@ -645,12 +645,12 @@ def sync_register_and_dependency(matrix: dict[str, Any]) -> None:
     dependency.setdefault("register", {})["sha256"] = register_hash
     core_ready["register_sha256"] = register_hash
     core_ready["full_core_unlock"] = matrix["full_core_unlock"]
-    (ROOT / DEPENDENCY_REL).write_text(json.dumps(dependency, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
+    (ROOT / DEPENDENCY_REL).write_text(json.dumps(dependency, indent=2, ensure_ascii=True) + "\n", encoding="utf-8", newline="\n")
 
 
 def main() -> int:
     matrix = build_matrix()
-    (ROOT / OUT_REL).write_text(json.dumps(matrix, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
+    (ROOT / OUT_REL).write_text(json.dumps(matrix, indent=2, ensure_ascii=True) + "\n", encoding="utf-8", newline="\n")
     sync_register_and_dependency(matrix)
     print(
         json.dumps(

@@ -161,7 +161,7 @@ def main() -> int:
         return 1
     if not args.no_write:
         OUT.parent.mkdir(parents=True, exist_ok=True)
-        OUT.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        OUT.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
     if args.json:
         print(json.dumps(result, indent=2, ensure_ascii=False))
     else:

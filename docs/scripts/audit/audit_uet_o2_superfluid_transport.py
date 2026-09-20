@@ -103,7 +103,7 @@ def _json_ready(value: Any) -> Any:
     if isinstance(value, float):
         # Canonicalize serialization across Python/NumPy builds without
         # changing the pass/fail calculations performed before serialization.
-        if abs(value) <= 1.0e-12:
+        if abs(value) < 1.0e-12:
             return 0.0
         return float(f"{value:.12f}")
     if isinstance(value, dict):

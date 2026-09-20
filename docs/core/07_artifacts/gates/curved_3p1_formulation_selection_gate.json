@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_formulation_selection_gate",
-  "generated_at": "2026-09-17T23:25:52.196106+00:00",
+  "generated_at": "2026-09-20T04:00:57.332697+00:00",
   "status": "PASS_SELECT_GENERALIZED_HARMONIC_NEXT_BRANCH",
   "evaluated_branch": "fixed_geodesic_gauge_adm",
   "evaluated_branch_result": "REJECTED_STRONG_HYPERBOLICITY",

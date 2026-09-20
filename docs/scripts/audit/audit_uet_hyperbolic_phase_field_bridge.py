@@ -103,7 +103,7 @@ def _jsonable(value: Any) -> Any:
         # Keep generated numeric diagnostics stable across BLAS/NumPy builds.
         # This only canonicalizes serialization; it does not alter pass/fail
         # calculations, which are evaluated before the artifact is written.
-        if abs(value) <= 1.0e-12:
+        if abs(value) < 1.0e-12:
             return 0.0
         return float(f"{value:.12f}")
     if isinstance(value, dict):

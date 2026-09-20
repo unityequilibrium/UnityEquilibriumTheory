@@ -62,7 +62,7 @@ def _json_ready(value: Any) -> Any:
     if isinstance(value, float):
         # Canonicalize serialization across Python/NumPy builds only.
         # This does not change the structural hyperbolicity calculations.
-        if abs(value) <= 1.0e-12:
+        if abs(value) < 1.0e-12:
             return 0.0
         return float(f"{value:.12f}")
     if isinstance(value, dict):
@@ -97,7 +97,7 @@ def _stable_float(value: float) -> float:
     """Canonicalize non-structural floating-point diagnostics for JSON."""
 
     value = float(value)
-    if abs(value) <= 1.0e-12:
+    if abs(value) < 1.0e-12:
         return 0.0
     return float(f"{value:.12f}")
 
