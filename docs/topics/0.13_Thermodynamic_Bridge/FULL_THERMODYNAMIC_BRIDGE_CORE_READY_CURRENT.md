@@ -15,7 +15,7 @@ VERIFICATION: Causal compatibility checks pass. MP48 aggregate harmonic rows dif
 CONTROLLING_BLOCKER: Ding-compatible numeric C_src/material uncertainty, independent alpha_Phi_K/SI scale, normalized beta/SI correspondence, physical Kubo provenance, dimensional Phi map, TTG material mapping, and c_v uncertainty.
 NEXT_ACTION: Obtain one admissible Ding-compatible/permissioned PBTE package with source-grade uncertainty, or an independently fixed base-Phi SI anchor and paired alpha record. Keep MP48 as `DERIVED_COMPARISON` only.
 CLAIM_BOUNDARY: The causal result is Core-ready only for the named normalized branch. The MP48 result is a harmonic comparator. Neither closes Full Topic 13 or establishes an SI/external UET prediction.
-EVIDENCE: `docs/core/artifacts/t13_causal_named_branch_core_compatibility.json` (`6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a`); `docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.json` (`c4f1b4ecb22c97bdb0e6cc61b595eca51f394f5ad05456227f38b6420d7e562b`); `docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.npz` (`fd535acd474382daf8c12bcd8d58b100a7d2fee63ba1c67913ca5556a1e33007`); matrix (`f5201be4da502f8622fffb9a07e8f779da20a04029313282d049b300469b2638`); full gate (`592b992713ffe0870cafc9e4e7cf64e392316a303dc7f5a3d1ad00e67215a7c4`).
+EVIDENCE: `docs/core/07_artifacts/topic13/t13_causal_named_branch_core_compatibility.json` (`6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a`); `docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.json` (`c4f1b4ecb22c97bdb0e6cc61b595eca51f394f5ad05456227f38b6420d7e562b`); `docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz` (`fd535acd474382daf8c12bcd8d58b100a7d2fee63ba1c67913ca5556a1e33007`); matrix (`f5201be4da502f8622fffb9a07e8f779da20a04029313282d049b300469b2638`); full gate (`592b992713ffe0870cafc9e4e7cf64e392316a303dc7f5a3d1ad00e67215a7c4`).
 
 ## 2026-08-22 - MP48 Ding C_src mode-sum response mapping wave
 
@@ -70,7 +70,7 @@ NEXT_ACTION: Keep the author-request package ready for an authorized external re
 
 CLAIM_BOUNDARY: UET remains a candidate effective theory. C remains a collective coordinate, Phi an effective response, R_gen a derived history trace, and R_obs an observer record. No numeric alpha_Phi_K, Kelvin prediction, physical transport coefficient, external validation, Full Topic 13 closure, or downstream unlock is claimed.
 
-EVIDENCE: full gate docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json SHA-256 203bf8c3d9dd45794fb8d7af1e2520e1457b73d3c683377915c57f4b30952d94; closure register docs/core/artifacts/uet_major_result_closure_register.json SHA-256 b3edbff7f1c8db89f61fceaeb74797ee721cd59515f6218b22e1123cca89bdf1; dependency gate docs/core/artifacts/uet_major_result_dependency_unlock_gate.json SHA-256 1a5b61b73e5f5bf2210e030fde5cfc3064eca9ab5f56dc89167e56b752255760; gate code SHA-256 6775b8e21da388094facc0535d59d7b3818d02a45c8f318aa81f30cbe128eb1a; closure test SHA-256 09758487eba1083e20bb0865d768bb9814a4294aa8fdc28ff5a285a177789559.
+EVIDENCE: full gate docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json SHA-256 203bf8c3d9dd45794fb8d7af1e2520e1457b73d3c683377915c57f4b30952d94; closure register docs/core/07_artifacts/gates/uet_major_result_closure_register.json SHA-256 b3edbff7f1c8db89f61fceaeb74797ee721cd59515f6218b22e1123cca89bdf1; dependency gate docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json SHA-256 1a5b61b73e5f5bf2210e030fde5cfc3064eca9ab5f56dc89167e56b752255760; gate code SHA-256 6775b8e21da388094facc0535d59d7b3818d02a45c8f318aa81f30cbe128eb1a; closure test SHA-256 09758487eba1083e20bb0865d768bb9814a4294aa8fdc28ff5a285a177789559.
 
 ## 2026-08-22 - QH-15 Graphite Comparator Boundary (T13-152)
 
@@ -101,7 +101,7 @@ NEXT_ACTION: Keep QH-15 as comparator evidence while obtaining an authorized Din
 
 CLAIM_BOUNDARY: QH-15 is not Ding `C_src`, not a Phi-to-temperature prediction, not an `alpha_Phi_K` calibration, not external validation, and not Full Topic 13 closure. `C`, `Phi`, `R_gen`, and `R_obs` meanings are unchanged.
 
-EVIDENCE: `docs/core/artifacts/t13_qh15_graphite_transport_boundary_audit.json`; `docs/scripts/audit/audit_topic13_qh15_graphite_transport_boundary.py`; `docs/core/test/test_topic13_qh15_graphite_transport_boundary.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.
+EVIDENCE: `docs/core/07_artifacts/topic13/t13_qh15_graphite_transport_boundary_audit.json`; `docs/scripts/audit/audit_topic13_qh15_graphite_transport_boundary.py`; `docs/core/test/test_topic13_qh15_graphite_transport_boundary.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.
 
 ## 2026-08-11 Causal Branch Selection Update
 
@@ -143,7 +143,7 @@ blocked by this and the remaining thermodynamic closure gates.
 
 STATUS: `OPEN_INDEPENDENT_BASE_PHI_CALIBRATION_REQUIRED`
 
-WHAT_CHANGED: `docs/core/artifacts/t13_base_phi_independent_calibration_requirement.json` is linked into the full gate, major-result
+WHAT_CHANGED: `docs/core/07_artifacts/topic13/t13_base_phi_independent_calibration_requirement.json` is linked into the full gate, major-result
 register, dependency gate, and formula audit.
 
 EQUATION_OR_MAPPING:
@@ -188,7 +188,7 @@ Gravity, or external-claim dependency is unlocked.
 
 STATUS: `PASS_NAMED_SK_KMS_ENTROPY_INTERFACE_CONTRACT`
 
-WHAT_CHANGED: `docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json` and `docs/core/thermal_sk_kms_entropy_contract.py` were added and linked into the
+WHAT_CHANGED: `docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json` and `docs/core/thermal_sk_kms_entropy_contract.py` were added and linked into the
 full gate, major-result register, dependency gate, formula audit, and update log.
 
 EQUATION_OR_MAPPING:
@@ -233,7 +233,7 @@ curved 3+1, Gravity, and transport remain blocked.
 
 STATUS: `PASS_REQUEST_SCHEMA_OPEN_EXTERNAL_RESPONSE`
 
-WHAT_CHANGED: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_pbte_author_request_manifest.json` and `docs/core/artifacts/t13_ding_pbte_author_request_audit.json` are linked to the full gate,
+WHAT_CHANGED: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_pbte_author_request_manifest.json` and `docs/core/07_artifacts/topic13/t13_ding_pbte_author_request_audit.json` are linked to the full gate,
 energy bridge, register, dependency gate, formula audit, and update log.
 
 EQUATION_OR_MAPPING:
@@ -275,7 +275,7 @@ downstream Core/Gravity dependencies remain blocked.
 
 STATUS: `PASS_KUBO_PROVENANCE_GATE_OPEN_PHYSICAL_COEFFICIENT`
 
-WHAT_CHANGED: `docs/core/artifacts/t13_physical_kubo_coefficient_provenance_audit.json` is linked into the Topic 13 transport gate,
+WHAT_CHANGED: `docs/core/07_artifacts/topic13/t13_physical_kubo_coefficient_provenance_audit.json` is linked into the Topic 13 transport gate,
 major-result register, dependency gate, formula audit, report, and update log.
 
 EQUATION_OR_MAPPING:
@@ -314,7 +314,7 @@ Core curved 3+1, Gravity, or constitutive transport dependency is unlocked.
 
 STATUS: `PASS_STANDARD_GRAPHITE_TRANSPORT_COMPARATOR_CONDITIONAL`
 
-WHAT_CHANGED: `docs/core/artifacts/t13_gatech_standard_transport_comparator_audit.json` and its source/hash evidence are linked into the
+WHAT_CHANGED: `docs/core/07_artifacts/topic13/t13_gatech_standard_transport_comparator_audit.json` and its source/hash evidence are linked into the
 Topic 13 full gate, major-result register, dependency gate, formula audit, and
 current-state report.
 
@@ -358,7 +358,7 @@ Full Topic 13, Core curved 3+1, or Gravity dependency is unlocked.
 
 STATUS: `PASS_CLOSED_TRANSPORT_IMPLEMENTATION_BOUNDARY`
 
-WHAT_CHANGED: `docs/core/artifacts/t13_covariant_transport_implementation_boundary_audit.json` hashes the transport implementation, contract,
+WHAT_CHANGED: `docs/core/07_artifacts/topic13/t13_covariant_transport_implementation_boundary_audit.json` hashes the transport implementation, contract,
 verification artifact, and tests, then links the boundary into the full gate,
 register, dependency gate, formula audit, report, update log, and ledger.
 
@@ -405,7 +405,7 @@ Core, Gravity, and physical constitutive transport remain blocked.
 
 STATUS: `PASS_STANDARD_O2_FINITE_T_NORMAL_COMPARATOR`
 
-WHAT_CHANGED: `docs/core/artifacts/t13_standard_o2_finite_temperature_comparator_audit.json` and its module/EOS hashes are linked into the full
+WHAT_CHANGED: `docs/core/07_artifacts/topic13/t13_standard_o2_finite_temperature_comparator_audit.json` and its module/EOS hashes are linked into the full
 Topic 13 gate, major-result register, dependency gate, formula audit, report,
 update log, and work ledger.
 
@@ -452,7 +452,7 @@ temperature UET EOS, physical transport, Full Topic 13, Core, or Gravity unlock.
 
 STATUS: `PASS_ACTION_DERIVED_ONE_LOOP_NORMAL_LANE`
 
-WHAT_CHANGED: `docs/core/artifacts/t13_uet_o2_one_loop_normal_branch_audit.json` and hashes of the action, mass map, and one-loop
+WHAT_CHANGED: `docs/core/07_artifacts/topic13/t13_uet_o2_one_loop_normal_branch_audit.json` and hashes of the action, mass map, and one-loop
 implementation are linked into the full gate, register, dependency gate,
 formula audit, report, update log, and ledger.
 
@@ -499,7 +499,7 @@ only. No physical thermal, transport, Full Topic 13, Core, or Gravity unlock.
 
 STATUS: `PASS_ACTION_DERIVED_ONE_LOOP_CONVERGENCE`
 
-WHAT_CHANGED: `docs/core/artifacts/t13_uet_o2_one_loop_convergence_audit.json` adds explicit cutoff/order sweeps and is linked into
+WHAT_CHANGED: `docs/core/07_artifacts/topic13/t13_uet_o2_one_loop_convergence_audit.json` adds explicit cutoff/order sweeps and is linked into
 the full gate, register, dependency gate, formula audit, report, update log,
 and ledger.
 
@@ -546,7 +546,7 @@ dependency is unlocked.
 
 STATUS: `PASS_THERMAL_UV_BOUNDARY`
 
-WHAT_CHANGED: `docs/core/artifacts/t13_uet_o2_one_loop_uv_boundary_audit.json` records the thermal tail bounds, vacuum cutoff-growth
+WHAT_CHANGED: `docs/core/07_artifacts/topic13/t13_uet_o2_one_loop_uv_boundary_audit.json` records the thermal tail bounds, vacuum cutoff-growth
 boundary, source hashes, explicit exclusion policy, and holdout contract; this
 sync links it into the full gate, register, dependency gate, formula audit,
 update log, and ledger.
@@ -596,7 +596,7 @@ physical transport, Full Topic 13, Core, or Gravity dependency is unlocked.
 
 STATUS: `PASS_T0_CONDENSATE_GOLDSTONE_IDEAL_LANE`
 
-WHAT_CHANGED: `docs/core/artifacts/t13_uet_o2_condensate_goldstone_ideal_lane_audit.json` verifies and records the existing EOS, covariant
+WHAT_CHANGED: `docs/core/07_artifacts/topic13/t13_uet_o2_condensate_goldstone_ideal_lane_audit.json` verifies and records the existing EOS, covariant
 Noether current, ideal stress, Josephson, and Goldstone interfaces, then this
 sync links the result into the full gate, register, dependency gate, formula
 audit, report, update log, and ledger.
@@ -650,7 +650,7 @@ temperature normal, physical transport, Full Topic 13, Core, or Gravity unlock.
 
 STATUS: `PASS_T0_QUADRATIC_FLUCTUATION_SPECTRUM`
 
-WHAT_CHANGED: `docs/core/artifacts/t13_uet_o2_condensate_fluctuation_spectrum_audit.json` and `docs/core/uet_o2_condensate_fluctuations.py` add and verify the fixed-Phi
+WHAT_CHANGED: `docs/core/07_artifacts/topic13/t13_uet_o2_condensate_fluctuation_spectrum_audit.json` and `docs/core/uet_o2_condensate_fluctuations.py` add and verify the fixed-Phi
 quadratic determinant; this sync links the result into the full gate, register,
 dependency gate, formula audit, report, update log, and ledger.
 
@@ -699,7 +699,7 @@ EOS, transport, SI, Full Topic 13, Core, or Gravity dependency is unlocked.
 
 STATUS: `PASS_ACTION_DERIVED_NORMAL_THERMODYNAMIC_CONSISTENCY`
 
-WHAT_CHANGED: `docs/core/artifacts/t13_uet_o2_normal_thermodynamic_consistency_audit.json` evaluates the declared normal determinant over
+WHAT_CHANGED: `docs/core/07_artifacts/topic13/t13_uet_o2_normal_thermodynamic_consistency_audit.json` evaluates the declared normal determinant over
 8 state points with fixed quadrature/cutoff policy,
 finite-difference derivative checks, Maxwell reciprocity, positivity, and
 Gibbs-Duhem identities. The result is linked into the full gate, register,
@@ -750,7 +750,7 @@ Core, Gravity, or constitutive-transport dependency is unlocked.
 
 STATUS: `PASS_SCOPED_BERUT_SOURCE_PACKAGE_BOUNDARY`
 
-WHAT_CHANGED: `docs/core/artifacts/t13_berut_source_package_availability_boundary.json` records the source identity, publisher locator,
+WHAT_CHANGED: `docs/core/07_artifacts/topic13/t13_berut_source_package_availability_boundary.json` records the source identity, publisher locator,
 current local inventory, source-surface scope, and non-calibration policy.
 
 EQUATION_OR_MAPPING: `E_min = k_B T ln(2)` remains an imported standard
@@ -787,7 +787,7 @@ alpha_Phi_K, Full Topic 13, Core, Gravity, or transport dependency is unlocked.
 
 STATUS: PASS_REMOTE_FIGURE3_BINARY_IDENTITY
 
-WHAT_CHANGED: docs/core/artifacts/t13_berut_figure3_remote_binary_identity.json records the official article/download locators,
+WHAT_CHANGED: docs/core/07_artifacts/topic13/t13_berut_figure3_remote_binary_identity.json records the official article/download locators,
 binary hash e4bab6be849a093b7578bc52ce6df9be95dc25d83d51ecb718b4f798a37d50fa, size
 479744 bytes, and embedded raster inventory.
 The binary itself remains outside the repository.
@@ -828,7 +828,7 @@ validation dependency is unlocked.
 
 STATUS: `PASS_ACTION_DERIVED_FIXED_BACKGROUND_GAUSSIAN_FINITE_T_LANE`
 
-WHAT_CHANGED: `docs/core/artifacts/t13_uet_o2_condensate_gaussian_thermal_audit.json` records the action-derived mode-root, thermal
+WHAT_CHANGED: `docs/core/07_artifacts/topic13/t13_uet_o2_condensate_gaussian_thermal_audit.json` records the action-derived mode-root, thermal
 determinant, finite-difference, convergence, units, ontology, and exclusion
 checks; this sync links it into the full gate, register, dependency graph,
 formula audit, current report, update log, and ledger.
@@ -886,7 +886,7 @@ validation dependency is unlocked.
 
 STATUS: `PASS_ACTION_DERIVED_OFFSHELL_THERMAL_BACKREACTION_BOUNDARY`
 
-WHAT_CHANGED: `docs/core/artifacts/t13_uet_o2_gaussian_offshell_background_audit.json` and `docs/core/uet_o2_gaussian_offshell_background.py` add the off-shell curvatures,
+WHAT_CHANGED: `docs/core/07_artifacts/topic13/t13_uet_o2_gaussian_offshell_background_audit.json` and `docs/core/uet_o2_gaussian_offshell_background.py` add the off-shell curvatures,
 mode roots, stable-domain audit, stationary determinant recovery, one-sided
 thermal tadpole witness, and convergence record; this sync links them into the
 full gate, closure register, dependency graph, formula audit, current report,
@@ -947,7 +947,7 @@ external-validation dependency is unlocked.
 
 STATUS: `PASS_SCOPED_NO_GO_CONSERVATIVE_ACTION_KUBO_IDENTIFIABILITY`
 
-WHAT_CHANGED: `docs/core/artifacts/t13_transport_coefficient_identifiability_no_go.json` and `docs/core/uet_transport_coefficient_identifiability.py` add two explicit PSD transport
+WHAT_CHANGED: `docs/core/07_artifacts/topic13/t13_transport_coefficient_identifiability_no_go.json` and `docs/core/uet_transport_coefficient_identifiability.py` add two explicit PSD transport
 witnesses and an action-level identifiability audit; this sync links them into
 the full gate, closure register, dependency graph, formula audit, current
 report, update log, and ledger.
@@ -1000,7 +1000,7 @@ Core, Gravity, or external-validation dependency is unlocked.
 
 STATUS: `PASS_ACTION_DERIVED_NORMAL_THERMAL_RESPONSE_CURVATURE`
 
-WHAT_CHANGED: `docs/core/artifacts/t13_uet_o2_normal_response_curvature_audit.json` and `docs/core/uet_o2_normal_response_curvature.py` add the action-derived response
+WHAT_CHANGED: `docs/core/07_artifacts/topic13/t13_uet_o2_normal_response_curvature_audit.json` and `docs/core/uet_o2_normal_response_curvature.py` add the action-derived response
 curvature, temperature slope, finite-difference checks, convergence records,
 units, and explicit non-identification rules; this sync links them into the
 full gate, closure register, dependency graph, formula audit, current report,
@@ -1056,7 +1056,7 @@ dependency is unlocked.
 
 STATUS: `PASS_SCOPED_NO_GO_ACTION_BETA_T13_CORRESPONDENCE`
 
-WHAT_CHANGED: `docs/core/artifacts/t13_beta_action_normalized_correspondence_no_go.json` and `docs/core/uet_o2_beta_correspondence.py` add explicit scale witnesses
+WHAT_CHANGED: `docs/core/07_artifacts/topic13/t13_beta_action_normalized_correspondence_no_go.json` and `docs/core/uet_o2_beta_correspondence.py` add explicit scale witnesses
 and a unit/derivation comparison between the action-derived curvature and the
 normalized beta contract; this sync links them into the bridge gate, register,
 dependency graph, formula audit, report, update log, and ledger.
@@ -1097,7 +1097,7 @@ DEPENDENCY_UNLOCKED: Renormalized normal one-loop scheme lane only. No Full Topi
 
 STATUS: `PASS_ACTION_DERIVED_RENORMALIZED_NORMAL_ONE_LOOP_SCHEME`
 
-WHAT_CHANGED: `docs/core/artifacts/t13_uet_o2_renormalized_normal_branch_audit.json` and `docs/core/uet_o2_renormalized_normal_branch.py` add the declared subtraction scheme, mass-derivative and response checks, convergence record, and thermodynamic identity audit; this sync links them to the full gate, closure register, dependency evidence, formula audit, report, update log, and ledger.
+WHAT_CHANGED: `docs/core/07_artifacts/topic13/t13_uet_o2_renormalized_normal_branch_audit.json` and `docs/core/uet_o2_renormalized_normal_branch.py` add the declared subtraction scheme, mass-derivative and response checks, convergence record, and thermodynamic identity audit; this sync links them to the full gate, closure register, dependency evidence, formula audit, report, update log, and ledger.
 
 EQUATION_OR_MAPPING:
 
@@ -1128,7 +1128,7 @@ DEPENDENCY_UNLOCKED: Thermal-only quadratic stability boundary lane only. No fin
 
 STATUS: `PASS_ACTION_DERIVED_THERMAL_QUADRATIC_STABILITY_BOUNDARY`
 
-WHAT_CHANGED: `docs/core/artifacts/t13_uet_o2_thermal_stability_boundary_audit.json` and `docs/core/uet_o2_thermal_stability_boundary.py` add the analytic boundary, mode-sign witnesses, one-sided thermal diagnostic, convergence record, and explicit non-promotion boundary; this sync links them into the full gate, closure register, dependency evidence, formula audit, report, update log, and ledger.
+WHAT_CHANGED: `docs/core/07_artifacts/topic13/t13_uet_o2_thermal_stability_boundary_audit.json` and `docs/core/uet_o2_thermal_stability_boundary.py` add the analytic boundary, mode-sign witnesses, one-sided thermal diagnostic, convergence record, and explicit non-promotion boundary; this sync links them into the full gate, closure register, dependency evidence, formula audit, report, update log, and ledger.
 
 EQUATION_OR_MAPPING:
 
@@ -1159,7 +1159,7 @@ DEPENDENCY_UNLOCKED: No-go for the current thermal-only Gaussian branch only. A 
 
 STATUS: `PASS_SCOPED_NO_GO_THERMAL_GAUSSIAN_CONDENSATE_STATIONARITY`
 
-WHAT_CHANGED: `docs/core/artifacts/t13_uet_o2_gaussian_thermal_stationarity_no_go.json` and `docs/core/uet_o2_gaussian_thermal_stationarity_no_go.py` add the algebraic no-go, analytic mode-root derivatives, finite-difference sign witnesses, and convergence record; this sync links them into the full gate, closure register, dependency evidence, formula audit, report, update log, and ledger.
+WHAT_CHANGED: `docs/core/07_artifacts/topic13/t13_uet_o2_gaussian_thermal_stationarity_no_go.json` and `docs/core/uet_o2_gaussian_thermal_stationarity_no_go.py` add the algebraic no-go, analytic mode-root derivatives, finite-difference sign witnesses, and convergence record; this sync links them into the full gate, closure register, dependency evidence, formula audit, report, update log, and ledger.
 
 EQUATION_OR_MAPPING:
 
@@ -1192,7 +1192,7 @@ DEPENDENCY_UNLOCKED: Public Ding supplementary provenance boundary only. No full
 
 STATUS: `PASS_PUBLIC_SUPPLEMENTARY_PAYLOAD_BOUNDARY_NO_NUMERIC_C_SRC`
 
-WHAT_CHANGED: Added `docs/core/artifacts/t13_ding_public_supplementary_payload_boundary_audit.json`, integrated it into the Topic 13 full gate under `verification_status.source_package`, and recorded the MOESM1-3 hashes in `DATA_MANIFEST.md`.
+WHAT_CHANGED: Added `docs/core/07_artifacts/topic13/t13_ding_public_supplementary_payload_boundary_audit.json`, integrated it into the Topic 13 full gate under `verification_status.source_package`, and recorded the MOESM1-3 hashes in `DATA_MANIFEST.md`.
 
 EQUATION_OR_MAPPING: `C_src(T) = sum_mu c_mu(T)` and `Delta_Tq = Delta_u_ph / C_src` remain Ding source definitions; the audited PDFs and figures are not relabeled as numeric `C_src` rows. The measurement layer remains `y_TTG = Delta_Tq(t) / Delta_Tq(0)`.
 
@@ -1211,7 +1211,7 @@ WHAT_IS_ACTUALLY_CLOSED: The archived MP48 total DOS and deposited harmonic ther
 WHAT_REMAINS_OPEN: This is not Ding PBTE `C_src`, does not establish Ding material-regime equivalence, does not provide PBTE mode-resolved uncertainty/convergence, and does not supply the base-Phi energy anchor or `alpha_Phi_K`.
 DEPENDENCY_UNLOCKED: MP48 harmonic spectral consistency lane only; no source, alpha, transport, Core, Gravity, or Galaxy unlock.
 STATUS: `PASS_SCOPED_HARMONIC_DOS_CROSS_FILE_REPRODUCTION`; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
-WHAT_CHANGED: Added and integrated `docs/core/artifacts/t13_mp48_spectral_csrc_reproduction_audit.json` (SHA-256 `5b2c6332fb70c6ae98749d96051cc4dbbffa04d37eed8f90e09168d35c61c091`) and linked it into the Topic 13 full gate (SHA-256 `af317db05b87a694502b5852ee14f6a90e3b094ead9bb521c88c6820efb03ad2`).
+WHAT_CHANGED: Added and integrated `docs/core/07_artifacts/topic13/t13_mp48_spectral_csrc_reproduction_audit.json` (SHA-256 `5b2c6332fb70c6ae98749d96051cc4dbbffa04d37eed8f90e09168d35c61c091`) and linked it into the Topic 13 full gate (SHA-256 `af317db05b87a694502b5852ee14f6a90e3b094ead9bb521c88c6820efb03ad2`).
 EQUATION_OR_MAPPING: `c_mu(T) = k_B x_mu^2 exp(x_mu)/(exp(x_mu)-1)^2`, `C_src^DOS = N_A integral[g(nu)c(nu,T)dnu]`; this is the harmonic MP48 comparator and is not relabeled as Ding `C_src`.
 VERIFICATION: 201-row uniform DOS grid, deposited rows at 200/250/300 K, finite kernel values, trapezoid/Simpson/every-second-bin envelope, source hashes, no target fit, no alpha fit, and no holdout access. Maximum trapezoid residual is `0.009992863239339345`; maximum coarse-grid difference is `0.014787789991730582`.
 CONTROLLING_BLOCKER: `Ding_material_regime_and_mode_resolved_C_src_acceptance_missing` for this lane; the full gate remains controlled by the existing Ding source, dimensional alpha, bridge/beta, EOS/transport/KMS/entropy, and SI-map blockers.
@@ -1225,7 +1225,7 @@ WHAT_IS_ACTUALLY_CLOSED: A standard harmonic energy-to-temperature comparator is
 WHAT_REMAINS_OPEN: The mapping from base UET `Phi` to named `Phi_E` is not derived, so this does not close base `alpha_Phi_K`; Ding PBTE material matching, physical transport, SK/KMS, entropy, and dissipative balance remain open.
 DEPENDENCY_UNLOCKED: Named `Phi_E` standard dimensional comparator only; no base-Phi, Full Topic 13, Core, Gravity, or transport unlock.
 STATUS: `PASS_SCOPED_PHI_E_DIMENSIONAL_COMPARATOR`; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
-WHAT_CHANGED: Added `docs/core/artifacts/t13_mp48_phi_e_dimensional_comparator_audit.json` (SHA-256 `46fad518feb670e7e3fe4faac47582f7a5e93b88985c53225d4da4e6fc7cde44`), integrated it under the dimensional-observable map, and refreshed the register (`9890c4464268d7ae043b445f62b400198b3479f8358bad9d2e4db27044bf7be7`) and full gate (`2e1c8ff8f845b24a10abff390a2fd8ef762021203155ccdbc65afb7c3e1d2871`).
+WHAT_CHANGED: Added `docs/core/07_artifacts/topic13/t13_mp48_phi_e_dimensional_comparator_audit.json` (SHA-256 `46fad518feb670e7e3fe4faac47582f7a5e93b88985c53225d4da4e6fc7cde44`), integrated it under the dimensional-observable map, and refreshed the register (`9890c4464268d7ae043b445f62b400198b3479f8358bad9d2e4db27044bf7be7`) and full gate (`2e1c8ff8f845b24a10abff390a2fd8ef762021203155ccdbc65afb7c3e1d2871`).
 EQUATION_OR_MAPPING: `u_th(T)=N_A integral[g(nu) h nu/(exp(h nu/(k_B T))-1)dnu]`; `Phi_E=Delta_u_ph/e0(T0)`; `Delta_Tq=(e0(T0)/c_v(T0))*Phi_E`; at `300 K`, conditional `alpha_Phi_E_K=126.72529975005031 K`.
 VERIFICATION: DOS source identity, zero negative-frequency weight, uniform grid, source volume, finite energy/capacity rows at `200/250/300 K`, volume cancellation in `e0/c_v`, no base-alpha emission, no target fit, and no Xie 2026 access. Focused Phi_E/spectral tests: `4 passed`.
 CONTROLLING_BLOCKER: `base_Phi_to_Phi_E_mapping_and_independent_alpha_Phi_K_missing` for this lane; full gate retains the existing dimensional and source/transport blockers.
@@ -1239,7 +1239,7 @@ WHAT_IS_ACTUALLY_CLOSED: The archived 200x200 MP48 force-constant matrix parses 
 WHAT_REMAINS_OPEN: This does not reproduce Ding PBTE `C_src`, third-order PBTE transport, the Ding material regime, the base-Phi energy anchor, or independent `alpha_Phi_K`.
 DEPENDENCY_UNLOCKED: MP48 harmonic force-constant source lane only; no Ding source, alpha, transport, Core, Gravity, or Galaxy unlock.
 STATUS: `PASS_SCOPED_FORCE_CONSTANT_HARMONIC_RECONSTRUCTION`; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
-WHAT_CHANGED: Added and integrated `docs/core/artifacts/t13_mp48_force_constant_harmonic_reconstruction_audit.json` (SHA-256 `3903fbbbc22476e1394305edd2c9ad3c948802d31a9a9c36c572b8eb395cedd1`) and linked it into the Topic 13 full gate (SHA-256 `f6005cb6225975168eaf9fdf41ff280a6a6c096c16b55129cc9a92fda01671fd`).
+WHAT_CHANGED: Added and integrated `docs/core/07_artifacts/topic13/t13_mp48_force_constant_harmonic_reconstruction_audit.json` (SHA-256 `3903fbbbc22476e1394305edd2c9ad3c948802d31a9a9c36c572b8eb395cedd1`) and linked it into the Topic 13 full gate (SHA-256 `f6005cb6225975168eaf9fdf41ff280a6a6c096c16b55129cc9a92fda01671fd`).
 EQUATION_OR_MAPPING: `D_ij(q) = sum_R Phi_ij(R) exp(2*pi*i*q.R)/sqrt(m_i*m_j)` and
 u_mu = sign(lambda_mu)*sqrt(abs(lambda_mu))*conversion_factor`; mapping is from supercell Cartesian coordinates to primitive atom plus integer translation.
 VERIFICATION: Force-constant shape `200x200x3x3`, pair symmetry residual `1.1e-14`, acoustic-sum residual `9.5e-14`, Gamma acoustic maximum `8.17e-7 THz`, no q-grid negative eigenvalue beyond roundoff, and q-grid maximum `48.41862978666018 THz` versus deposited summary `48.4370817598 THz` (relative gap `-0.0003809472509372913`). No fit, target access, holdout access, or alpha emission.
@@ -1254,7 +1254,7 @@ WHAT_IS_ACTUALLY_CLOSED: Official NIST SP 260-89 AXM-5Q1 graphite source is arch
 WHAT_REMAINS_OPEN: `K_T` is not source-locked, the AXM-5Q1 comparator is not established as Ding/HOPG material equivalence, row-level statistical uncertainty is absent, and `Cp -> Cv`, Ding `C_src`, base-Phi mapping, and `alpha_Phi_K` remain open.
 DEPENDENCY_UNLOCKED: NIST alpha_V source-comparator lane only; no `K_T`, volumetric `c_v`, Ding source, alpha, transport, Core, Gravity, or Galaxy unlock.
 STATUS: `PASS_SCOPED_NIST_ALPHA_V_SOURCE_BOUNDARY`; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
-WHAT_CHANGED: Added and integrated `docs/core/artifacts/t13_nist_graphite_alpha_v_source_boundary_audit.json` (SHA-256 `392bf8c98de925ea806a86392cbf440029a47e4e32173c2839cd04ff2cb553d5`) and linked it into the Topic 13 full gate (SHA-256 `4cc6d5b68e7ee84710da6fb357ec7b4c640ca30182835200b84b2be41507e2a8`).
+WHAT_CHANGED: Added and integrated `docs/core/07_artifacts/topic13/t13_nist_graphite_alpha_v_source_boundary_audit.json` (SHA-256 `392bf8c98de925ea806a86392cbf440029a47e4e32173c2839cd04ff2cb553d5`) and linked it into the Topic 13 full gate (SHA-256 `4cc6d5b68e7ee84710da6fb357ec7b4c640ca30182835200b84b2be41507e2a8`).
 EQUATION_OR_MAPPING: `Delta_L/L[%] = -0.201 + 6.595e-4*T + 9.593e-8*T^2 - 3.427e-12*T^3`, `alpha_L = d(Delta_L/L)/dT/(1+Delta_L/L)`, and comparator `alpha_V=3 alpha_L`.
 VERIFICATION: PDF presence and hash, source locators, explicit percent-to-strain conversion, finite rows, NIST program accuracy boundary, no invented `K_T`, no target fit, no alpha fit, and no Xie 2026 access. At 300 K the comparator gives `alpha_V = 2.1482823124269745e-5 K^-1`.
 CONTROLLING_BLOCKER: `isothermal_bulk_modulus_K_T_and_Ding_material_regime_mapping_missing` for this lane; full Topic 13 remains controlled by the existing Ding source, alpha, bridge/beta, EOS/transport/KMS/entropy, and SI-map blockers.
@@ -1283,7 +1283,7 @@ CLAIM_BOUNDARY: This closes only the state-independence boundary of the present 
 EVIDENCE_HASHES: audit fec9203a71d10330c63e415b2e8e264a39c392f14002a86ccbe583d79d0a4a8e; verifier b31bd59cbe63020635bb155c67d26796a70d6246a72cb0a8581caaea2556781d; regression 390d02fee6f56489efab63b50602e3785190cc3adf9385b4c82322cc7357f807; full gate dcf92c2f78a83fc6b8f9bdbc634f43c6b2cc583c2bf741d59a22013aaf39429b; register a91c91682f1959158568bdfa71f019c4a4114549441d6298794430c10d60fc05; dependency 352bd07ec29792fe032a6cfbebcba111949f909b323a7411fde2cfcaffe46575.
 DEPENDENCY_UNLOCKED: Source-locked graphite elastic bulk comparator only; no `K_T`, volumetric `c_v`, alpha, transport, Core, Gravity, or Galaxy unlock.
 STATUS: `PASS_SCOPED_GRAPHITE_ELASTIC_BULK_COMPARATOR`; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
-WHAT_CHANGED: Added and integrated `docs/core/artifacts/t13_graphite_elastic_bulk_modulus_source_audit.json` (SHA-256 `65238edbfb66b57c6b3c0a06f95d8b3d28d6dc613df7b83d825332aff4a996af`), the Bosak source package, and the archived primary PDF; current full-gate hash is `60bb65b47f33dcd08f2f01a40d200d78d01eaf79236c6ca02ae91a17572f57f1`.
+WHAT_CHANGED: Added and integrated `docs/core/07_artifacts/topic13/t13_graphite_elastic_bulk_modulus_source_audit.json` (SHA-256 `65238edbfb66b57c6b3c0a06f95d8b3d28d6dc613df7b83d825332aff4a996af`), the Bosak source package, and the archived primary PDF; current full-gate hash is `60bb65b47f33dcd08f2f01a40d200d78d01eaf79236c6ca02ae91a17572f57f1`.
 EQUATION_OR_MAPPING: `S=C_normal^-1`; `B_elastic=1/(2*S11+2*S12+4*S13+S33)`; no `C33 -> K_T` relabeling.
 VERIFICATION: Source hash, page locators, tensor positivity, compliance inversion, central-value agreement, uncertainty declaration, no `K_T` emission, no target fit, no alpha fit, and no Xie 2026 access pass.
 CONTROLLING_BLOCKER: `isothermal_K_T_material_regime_and_dynamic_to_thermal_conversion_missing` for this lane; the full gate remains controlled by Ding `C_src`, independent `alpha_Phi_K`, non-circular bridge/beta, EOS/transport/KMS/entropy, and base-Phi SI mapping.
@@ -1297,7 +1297,7 @@ WHAT_IS_ACTUALLY_CLOSED: The Hanfland et al. primary XRD equation-of-state PDF i
 WHAT_REMAINS_OPEN: Same-grade alpha_V and density uncertainty, mapping from natural graphite powder to the Ding TTG material, temperature-resolved K_T, matched Cp/Cv, base-Phi mapping, and independent `alpha_Phi_K` remain open. No local pressure-volume refit was performed.
 DEPENDENCY_UNLOCKED: Declared 300 K natural-graphite isothermal K_T source lane only; no same-grade Cp-to-Cv, alpha, transport, Core, Gravity, or Galaxy unlock.
 STATUS: `PASS_SCOPED_ISOTHERMAL_GRAPHITE_K_T_SOURCE`; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
-WHAT_CHANGED: Added and integrated `docs/core/artifacts/t13_graphite_isothermal_kt_source_audit.json` (SHA-256 `63f0518c78febda473f89f8a0c3927d14b9d98a102dc560277bcd2a9daf8c0c4`), the Hanfland source package, and the archived primary PDF; current full-gate hash is `236f82bdb7a810e587255fb1368d97e7e84f66167bb9f638d81f7dfbc0077c34`.
+WHAT_CHANGED: Added and integrated `docs/core/07_artifacts/topic13/t13_graphite_isothermal_kt_source_audit.json` (SHA-256 `63f0518c78febda473f89f8a0c3927d14b9d98a102dc560277bcd2a9daf8c0c4`), the Hanfland source package, and the archived primary PDF; current full-gate hash is `236f82bdb7a810e587255fb1368d97e7e84f66167bb9f638d81f7dfbc0077c34`.
 EQUATION_OR_MAPPING: `K_T=-V*(partial P/partial V)_T=dP/d(-ln V)`; source Murnaghan fit at `T=300 K`, `P=0` gives `33.8 +/- 3.0 GPa`; this is not inferred from `C33`.
 VERIFICATION: Source hash, page locators, fixed-temperature XRD method, isothermal derivative definition, scalar row identity, uncertainty, no figure refit, no target fit, no alpha fit, and no Xie 2026 access pass.
 CONTROLLING_BLOCKER: `same_grade_alpha_V_K_T_and_Ding_material_regime_mapping_missing` for this lane; the full gate still requires Ding `C_src`, independent `alpha_Phi_K`, non-circular bridge/beta, EOS/transport/KMS/entropy, and base-Phi SI mapping.
@@ -1326,7 +1326,7 @@ WHAT_IS_ACTUALLY_CLOSED: The IHEP 2001-32 report is archived with SHA-256 `e9527
 WHAT_REMAINS_OPEN: The two axes are not a same-specimen, same-point pair; same-state density/Cp/Cv, Ding TTG material mapping, base-Phi SI mapping, and `alpha_Phi_K` remain open. This comparator does not close the Hanfland `K_T` lane.
 DEPENDENCY_UNLOCKED: Source-locked TPG family-level `alpha_V` comparator only; no same-grade `K_T`, Ding `C_src`, alpha calibration, transport, Core, Gravity, or Galaxy unlock.
 STATUS: `PASS_SCOPED_TPG_ANISOTROPIC_ALPHA_V_COMPARATOR`; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
-WHAT_CHANGED: Added and integrated `docs/core/artifacts/t13_tpg_anisotropic_alpha_v_source_audit.json` (SHA-256 `f8ed02677b5ef1aede683cc2b191538722bda56b520d1d6ba5af024638504c68`), the IHEP source package, and the archived primary report; current full-gate hash is `1a35429f68456f46aa6e0f4ae75c822fba0ef2f88042774a80c34020cbdc70bc`.
+WHAT_CHANGED: Added and integrated `docs/core/07_artifacts/topic13/t13_tpg_anisotropic_alpha_v_source_audit.json` (SHA-256 `f8ed02677b5ef1aede683cc2b191538722bda56b520d1d6ba5af024638504c68`), the IHEP source package, and the archived primary report; current full-gate hash is `1a35429f68456f46aa6e0f4ae75c822fba0ef2f88042774a80c34020cbdc70bc`.
 EQUATION_OR_MAPPING: `alpha_V=2*alpha_a+alpha_c`; uncertainty is propagated only as a zero-covariance comparator assumption. The source scope is approximately 25-60 deg C, not an exact 300 K point.
 VERIFICATION: Source hash, report locators, units, sign and range checks, anisotropic reconstruction, uncertainty boundary, mixed-row boundary, no `K_T`, no target fit, no alpha fit, and no Xie 2026 access pass.
 CONTROLLING_BLOCKER: `same_specimen_alpha_V_K_T_and_Ding_material_regime_mapping_missing`; full Topic 13 is still controlled by Ding `C_src`, independent `alpha_Phi_K`, non-circular bridge/beta, EOS/transport/KMS/entropy, and base-Phi SI mapping.
@@ -1340,7 +1340,7 @@ WHAT_IS_ACTUALLY_CLOSED: The official OSTI/Argonne ANL-5524 report is archived w
 WHAT_REMAINS_OPEN: The source provides no row-level statistical uncertainty, does not identify the Hanfland specimen as the same state, and does not establish the Ding TTG material regime. Base-Phi mapping and `alpha_Phi_K` remain open.
 DEPENDENCY_UNLOCKED: Official natural/crystalline graphite family alpha_V comparator only; no same-specimen `K_T`, Ding `C_src`, alpha calibration, transport, Core, Gravity, or Galaxy unlock.
 STATUS: `PASS_SCOPED_NATURAL_GRAPHITE_ALPHA_V_COMPARATOR`; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
-WHAT_CHANGED: Added and integrated `docs/core/artifacts/t13_natural_graphite_nelson_riley_alpha_v_source_audit.json` (SHA-256 `c20b42f64b9107459b555dfaddc5150028c39b5254e4791782161b2b9861b861`), the ANL-5524 source package, and the archived official report; current full-gate hash is `03fc499a284a43a0f15e314ed7efc3e8d683e16ed05adc2b9f331f2b1b8f8ea6`.
+WHAT_CHANGED: Added and integrated `docs/core/07_artifacts/topic13/t13_natural_graphite_nelson_riley_alpha_v_source_audit.json` (SHA-256 `c20b42f64b9107459b555dfaddc5150028c39b5254e4791782161b2b9861b861`), the ANL-5524 source package, and the archived official report; current full-gate hash is `03fc499a284a43a0f15e314ed7efc3e8d683e16ed05adc2b9f331f2b1b8f8ea6`.
 EQUATION_OR_MAPPING: `alpha_a=-1.5e-6 K^-1`; `alpha_c=27.00e-6+3.05e-9*T_C K^-1`; `alpha_V=2*alpha_a+alpha_c`. No uncertainty was invented where Table XIX gives none.
 VERIFICATION: Source hash, Table XIX locator, Celsius/Kelvin scope, formula reconstruction, no-uncertainty boundary, no `K_T`, no target fit, no alpha fit, and no Xie 2026 access pass.
 CONTROLLING_BLOCKER: `same_specimen_alpha_V_K_T_uncertainty_and_Ding_material_regime_mapping_missing`; full Topic 13 remains controlled by Ding `C_src`, independent `alpha_Phi_K`, non-circular bridge/beta, EOS/transport/KMS/entropy, and base-Phi SI mapping.
@@ -1350,7 +1350,7 @@ CLAIM_BOUNDARY: Official natural/crystalline graphite family comparator only. It
 ## Latest Source-Route Boundary: MP48 C_src Mesh Convergence (2026-08-13)
 
 The latest independent MP48 force-constant route is machine-readable in
-`docs/core/artifacts/t13_mp48_force_constant_csrc_mesh_convergence_audit.json`.
+`docs/core/07_artifacts/topic13/t13_mp48_force_constant_csrc_mesh_convergence_audit.json`.
 It passes source-integrity and stability checks but fails the declared mesh
 convergence criterion: the maximum adjacent-mesh change is `0.513481935500736`
 against `0.01`. The route is therefore `CLOSED_FOR_LANE` as a no-go boundary,
@@ -1522,7 +1522,7 @@ WHAT_IS_ACTUALLY_CLOSED: The current audit now distinguishes metadata-only obser
 WHAT_REMAINS_OPEN: Xie 2026 remains a locked holdout and must not be used for calibration, tuning, fitting, or threshold adjustment.
 DEPENDENCY_UNLOCKED: Holdout-integrity reporting may proceed from the canonical access audit; no thermal-bridge, alpha, prediction, or external-validation dependency is unlocked.
 STATUS: `PASS_HOLDOUT_DATA_UNCONSUMED_METADATA_ONLY`; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
-WHAT_CHANGED: Added `docs/core/artifacts/t13_xie_2026_holdout_access_audit.json` (SHA-256 `c3185da0a233894d7f338138bbe6acee287194e1852a80e40b0b5f6f2134e21b`), wired it into the active full-gate and Ding source-mapping verifiers, and synchronized the major-result register/dependency gate.
+WHAT_CHANGED: Added `docs/core/07_artifacts/topic13/t13_xie_2026_holdout_access_audit.json` (SHA-256 `c3185da0a233894d7f338138bbe6acee287194e1852a80e40b0b5f6f2134e21b`), wired it into the active full-gate and Ding source-mapping verifiers, and synchronized the major-result register/dependency gate.
 EQUATION_OR_MAPPING: Access contract is `metadata_only_observed != numeric_payload_consumed`; the locked rule is
 umeric_payload_consumed = used_for_fit = used_for_tuning = used_for_calibration = used_for_threshold_adjustment = false`.
 VERIFICATION: Canonical holdout audit and full-gate evidence hash agree; full-gate holdout integrity is `PASS` with metadata-only observation recorded and all numeric-consumption controls false. Focused holdout/acceptance/KMS tests pass (`7 passed`).
@@ -1537,7 +1537,7 @@ WHAT_IS_ACTUALLY_CLOSED: The public NIMS lattice-thermal-conductivity collection
 WHAT_REMAINS_OPEN: Ding numeric `C_src` or a permitted same-regime PBTE reproduction with mode-resolved rows, SI units, uncertainty, convergence, and material-state mapping remains open. The independent `alpha_Phi_K` calibration remains open. :codex-annotation{index="1"}
 DEPENDENCY_UNLOCKED: NIMS graphite-source route exclusion only; no `C_src`, alpha, bridge, transport, Core, Gravity, or Galaxy unlock.
 STATUS: `PASS_SCOPED_NIMS_GRAPHITE_ROUTE_NO_GO`; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
-WHAT_CHANGED: Added `docs/core/artifacts/t13_nims_graphite_ltc_route_no_go.json` (SHA-256 `47814c603057bd8dede2cbebcf069e820ff389566612402f23997bd3acc529ff`), integrated it into the full-gate source-package lane, and added a focused test. The regenerated full gate is `1a6704861fc01734641f7af14eb0ae2663fae4d1a271d69eb326242d286f0f42`.
+WHAT_CHANGED: Added `docs/core/07_artifacts/topic13/t13_nims_graphite_ltc_route_no_go.json` (SHA-256 `47814c603057bd8dede2cbebcf069e820ff389566612402f23997bd3acc529ff`), integrated it into the full-gate source-package lane, and added a focused test. The regenerated full gate is `1a6704861fc01734641f7af14eb0ae2663fae4d1a271d69eb326242d286f0f42`.
 EQUATION_OR_MAPPING: Required source quantity remains `C_src(T)=sum_mu c_mu(T)` with `C_src` in `J m^-3 K^-1`; `Delta_Tq=Delta_u_ph/C_src`. This route emits no numeric `C_src` and no `Delta_Tq=alpha_Phi_K*Delta_Phi` calibration.
 VERIFICATION: Public NIMS collection/API metadata was source-located, query outcomes and response hashes were recorded, no numeric research payload was consumed, no fit/tuning/alpha emission occurred, Xie 2026 was not accessed, and focused source-route tests passed (`6 passed`).
 CONTROLLING_BLOCKER: `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing`; full Topic 13 remains additionally controlled by the dimensional Phi anchor/independent alpha, bridge/beta, EOS/transport/KMS/entropy, and uncertainty blockers.
@@ -2003,7 +2003,7 @@ CONTROLLING_BLOCKER: `full_finite_temperature_retarded_1PI_self_energy_missing`,
 NEXT_ACTION: Derive the full finite-temperature condensed retarded self-energy and all-channel SK/KMS kernel, or source-lock an independent physical condensed vertex anchor. Keep this coefficient scoped to the declared natural-unit lane and do not promote it to SI or Full Topic 13.
 CLAIM_BOUNDARY: Action-derived declared-channel result only; not an external measurement, complete interacting 1PI theory, SI thermal transport, alpha_Phi_K calibration, TTG prediction, external validation, or global UET closure.
 DATA_ROLE: `DERIVED_INTERNAL_NATURAL_UNIT`; the admitted coefficient is not a calibration, training, comparison, or holdout record. No external numeric source was consumed by these two lanes.
-EVIDENCE_PATHS: `docs/core/uet_o2_condensed_relative_flow_kubo_admission.py`; `docs/core/artifacts/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json`; `docs/core/uet_o2_condensed_sk_kms_kubo_match.py`; `docs/core/artifacts/t13_uet_o2_condensed_sk_kms_kubo_match_audit.json`.
+EVIDENCE_PATHS: `docs/core/uet_o2_condensed_relative_flow_kubo_admission.py`; `docs/core/07_artifacts/topic13/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json`; `docs/core/uet_o2_condensed_sk_kms_kubo_match.py`; `docs/core/07_artifacts/topic13/t13_uet_o2_condensed_sk_kms_kubo_match_audit.json`.
 EVIDENCE_HASHES: Kubo module `92dea65cf85d2fc2054e4f5c0b293712d2ea0b8b0df65ffa5e4b95de9dd2df67`; Kubo audit `5e909ff97aa0476619235460c012313f36b6065e642bbe4f7fba63f36bd8c7f6`; SK/KMS module `ab6fabaca6d2a19f8185535928638ecf4f1581cd2ad89ada78ed89e5341aff72`; SK/KMS audit `d13d59760f9ebe0a3d2471ad984ec95c6729846d08b2b9ce011e2e8eb2fcaf1c`; registry `ae143f9bd06738ae777415b46d39752c8fbb4a96b17f31de94eac3e563a7be44`; full gate `4b69d2f13ef9827f11898edc63b254dd837943b3ccdf4b88f7fe52b2ea0d2415`; register `6d41189d970ba4b17bb889176412fc66ed4b9cbcd02a8520d014ddc61800ddb0`; dependency `83f6351dc2ccee0f3ba80a593c2081ca82e04d0b0b9d5b69ec9ad91754bfff1d`.
 ## 2026-08-20 - Declared finite-temperature retarded 1PI response grid (T13-117)
 
@@ -2074,7 +2074,7 @@ CONTROLLING_BLOCKER: `complete_off_shell_all_channel_1pi_and_physical_renormaliz
 NEXT_ACTION: Complete the off-shell all-channel finite-temperature 1PI evaluation and source-lock an independent physical renormalization anchor without using TTG target residuals or Xie 2026.
 CLAIM_BOUNDARY: This closes only the declared-channel natural-unit real-time component interface. It is not a complete interacting 1PI theory, physical renormalization, physical Kubo coefficient, SI observable, `alpha_Phi_K` calibration, TTG prediction, external validation, or Full Topic 13 closure.
 DATA_ROLE: `ACTION_DERIVED_FINITE_T_DECLARED_CHANNEL_RETA_KELDYSH_1PI_NO_HOLDOUT`.
-EVIDENCE_PATHS: `docs/core/uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi.py`; `docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi.py`; `docs/core/test/test_topic13_uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi.py`; `docs/core/artifacts/t13_uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi_audit.json`.
+EVIDENCE_PATHS: `docs/core/uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi.py`; `docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi.py`; `docs/core/test/test_topic13_uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi.py`; `docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi_audit.json`.
 EVIDENCE_HASHES: module `48ac15b10b64c81aa4c85dd7941ce8004022e61dc08acc655c9ab2ef4f25f013`; audit `6fb21ef9accc84f9af43197c22225d62b88d4a9670f482804be98d7be23bc5e4`; test `f5a6c71cc0dce44249a45803ff728544dcef69a704882e07dd797126e53f805e`; artifact `ff5a8ea3972f02189f7f4ff3413855946526faeb7b8c5317adc6c09ba3ebea2f`; full gate `ed5ec6babcca07b09925c33ffc3ec0389bfd2ed80eac49b23f2d1440577d38eb`; register `68a8b651ace97ae6dd99e7a64609203f381fb520d6a66ed56d7d9a433e455251`; dependency `6a8ba736e60b18c28bab998a09308d81a1cccfdef52bc88ec863ef56d5377b0a`.
 
 ## Off-Shell Threshold-Crossing Declared 1PI Lane (2026-08-20, T13-122)
@@ -2091,7 +2091,7 @@ CONTROLLING_BLOCKER: `complete_off_shell_all_channel_1pi_and_physical_renormaliz
 NEXT_ACTION: Continue from this crossing lane to the complete off-shell all-channel 1PI object and an independent physical renormalization anchor. Keep the action-derived natural-unit lane separate from physical TTG transport and do not use holdout data for calibration.
 CLAIM_BOUNDARY: This is a declared action-derived natural-unit threshold-crossing response lane only. It is not complete interacting 1PI closure, physical renormalization, a physical Kubo coefficient, an SI observable, an `alpha_Phi_K` calibration, a TTG prediction, external validation, or global UET closure.
 DATA_ROLE: `ACTION_DERIVED_FINITE_T_OFFSHELL_THRESHOLD_CROSSING_NO_HOLDOUT`.
-EVIDENCE_PATHS: `docs/core/uet_o2_finite_temperature_offshell_threshold_crossing_1pi.py`; `docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_offshell_threshold_crossing_1pi.py`; `docs/core/test/test_topic13_uet_o2_finite_temperature_offshell_threshold_crossing_1pi.py`; `docs/core/artifacts/t13_uet_o2_finite_temperature_offshell_threshold_crossing_1pi_audit.json`; `docs/core/artifacts/uet_major_result_closure_register.json`; `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.
+EVIDENCE_PATHS: `docs/core/uet_o2_finite_temperature_offshell_threshold_crossing_1pi.py`; `docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_offshell_threshold_crossing_1pi.py`; `docs/core/test/test_topic13_uet_o2_finite_temperature_offshell_threshold_crossing_1pi.py`; `docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_offshell_threshold_crossing_1pi_audit.json`; `docs/core/07_artifacts/gates/uet_major_result_closure_register.json`; `docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.
 EVIDENCE_HASHES: module `1b481136ba677b79d441f9ec253d1a4bb167c576463ee677f799d912ebfe549f`; audit script `0ebe3a880d6fe66759349233abb5dba21c1cfe0e63c240eee2df0b0ed8782123`; test `db17e230f12020634e107422705a1aab5844108c12204928f52db986f32d2c7a`; audit artifact `b0d449ecdc994e150d0157ba450515ea617d462a46b3a8d8f1607f60a2953920`; full gate `0df1a55ddcb131d328935c53c0aea2793dce28e07274cb1d6763d9c64002c5c0`; register `e4478953864f311d9eb0b8b4a06f6dccb2aba7b56186f2d2627c2bf2334e4983`; dependency gate `f73572847b21611be4c8dd658680f9e3f8960468285335d903c373732056f364`.
 ## All 2-to-2 Permutation Identity (2026-08-20, T13-123)
 MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for `T13_UET_O2_FINITE_T_ALL_22_PERMUTATION_IDENTITY_LANE`.
@@ -2106,7 +2106,7 @@ CONTROLLING_BLOCKER: `complete_off_shell_all_channel_1pi_and_physical_renormaliz
 NEXT_ACTION: Use the now-explicit three-permutation coverage as input to the complete off-shell all-channel 1PI construction and then test a physical renormalization anchor. Keep the response as action-derived natural-unit evidence only.
 CLAIM_BOUNDARY: This closes the equal-mass `2<->2` permutation identity and action-level coverage lane only. It is not complete interacting 1PI closure, physical renormalization, a physical Kubo coefficient, an SI observable, an `alpha_Phi_K` calibration, a TTG prediction, external validation, or global UET closure.
 DATA_ROLE: `ACTION_DERIVED_FINITE_T_ALL_22_PERMUTATION_IDENTITY_NO_HOLDOUT`.
-EVIDENCE_PATHS: `docs/core/uet_o2_finite_temperature_all_22_permutation_identity.py`; `docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_all_22_permutation_identity.py`; `docs/core/test/test_topic13_uet_o2_finite_temperature_all_22_permutation_identity.py`; `docs/core/artifacts/t13_uet_o2_finite_temperature_all_22_permutation_identity_audit.json`; `docs/core/artifacts/uet_major_result_closure_register.json`; `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.
+EVIDENCE_PATHS: `docs/core/uet_o2_finite_temperature_all_22_permutation_identity.py`; `docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_all_22_permutation_identity.py`; `docs/core/test/test_topic13_uet_o2_finite_temperature_all_22_permutation_identity.py`; `docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_all_22_permutation_identity_audit.json`; `docs/core/07_artifacts/gates/uet_major_result_closure_register.json`; `docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`.
 EVIDENCE_HASHES: module `4e4609b56b9fc230ff70cca5c87bf2ccc809ed09b4f14e8b7906551c7b10d250`; audit script `a3ab76cb78c6c1b12e6ddba533b9d66506b3e9d9d59a8cd6a17c4e7a756b9bb3`; test `495d4f3fbe938f48860023ea8bb9e9de3227d83e5f85bf86fb6d507cd727c1f6`; audit artifact `d8a70695cb21d4530dc1073bfcf5a1cf0bf2d80f9f075e225aeee5f50323f84c`; full gate `af09632cc717526649df82a6c4245f96a6d14c26cb0e02ccc3444104484109c1`; register `c52b1c556c04fc4a76e264e866aea379d3cf2747207b40e58aa5ba08246fa0c3`; dependency gate `6d465f940bbc3d6d0892d83a3b7b8222161434b3afce399f76eaf364dc5b9e51`.
 ## IAEA GR-280 Same-State Cp Availability Comparator (2026-08-20, T13-124)
 MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for `T13_IAEA_GR280_SAME_STATE_CP_COMPARATOR`; Full Topic 13 remains `PARTIAL` and `BLOCKED_OPEN_T13_FULL_BRIDGE`.
@@ -2122,7 +2122,7 @@ CONTROLLING_BLOCKER: The source lane is now controlled by missing standard densi
 NEXT_ACTION: Acquire a source-grade density uncertainty or direct same-state volumetric c_v record, then match alpha_V and K_T to the same specimen/regime. Keep this comparator out of calibration and holdout paths while continuing the independent physical 1PI/renormalization wave.
 CLAIM_BOUNDARY: This closes only a source-traceable same-state reactor-graphite Cp and density comparator lane. It is not c_v, Ding TTG C_src, an alpha_Phi_K calibration, physical SI transport, external validation, or Full Topic 13 closure.
 DATA_ROLE: `EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_DING_TTG_GRADE`; no fit, target tuning, Landauer shortcut, or holdout access.
-EVIDENCE_PATHS: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_gr280_same_state_cp_source_package.json`; `docs/core/artifacts/t13_iaea_gr280_same_state_cp_source_audit.json`; `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/iaea_thermophysical_properties_web.pdf`.
+EVIDENCE_PATHS: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_gr280_same_state_cp_source_package.json`; `docs/core/07_artifacts/topic13/t13_iaea_gr280_same_state_cp_source_audit.json`; `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/iaea_thermophysical_properties_web.pdf`.
 EVIDENCE_HASHES: package `d090b066a8d3e6ea405a553700a1c15b33b28d652636cf6aff1cc054e2ab9d73`; audit `c0091ce3d6624e5fd1b5e814f2bd3822459a5d84426cd861d31a9a0052710213`; full gate `e64c34834dcb1ec36c9606b641601a8381430ae2ec02904986d6c25647be80e5`; register `9b1c2e395af59976dd9f9c3e249fb85ee56fa9c6f81e9176eb0db586182b2217`; dependency `a8b1411c0a993a08a86d7c2fcd5a095f807fc15e76e9829a1fa1035bb8958e8a`.
 ## T13-125 Zenodo Hi-Trace high-temperature Cp comparator
 
@@ -2138,7 +2138,7 @@ CONTROLLING_BLOCKER: `c_v_source_uncertainty_not_closed`, `density_uncertainty_n
 NEXT_ACTION: Acquire direct volumetric `c_v` or a same-state source-grade density/`alpha_V`/`K_T` package for the relevant material regime, while continuing the independent Ding `C_src` and `alpha_Phi_K` routes without entering calibration or holdout paths.
 CLAIM_BOUNDARY: This lane is a source-traceable high-temperature Cp comparator only. It is not `c_v`, not volumetric, not Ding/HOPG/TTG `C_src`, not an `alpha_Phi_K` calibration, not a temperature prediction, and not Full Topic 13 closure.
 DATA_ROLE: `EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_DING_TTG_GRADE`; no calibration, training, or holdout role.
-EVIDENCE_PATHS: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/zenodo_6091274_isotropic_graphite_specific_heat.xlsx`; `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/zenodo_hitrace_isotropic_graphite_cp_source_package.json`; `docs/scripts/audit/audit_topic13_zenodo_hitrace_isotropic_graphite_cp_source.py`; `docs/core/artifacts/t13_zenodo_hitrace_isotropic_graphite_cp_source_audit.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/artifacts/uet_major_result_closure_register.json`; `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`.
+EVIDENCE_PATHS: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/zenodo_6091274_isotropic_graphite_specific_heat.xlsx`; `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/zenodo_hitrace_isotropic_graphite_cp_source_package.json`; `docs/scripts/audit/audit_topic13_zenodo_hitrace_isotropic_graphite_cp_source.py`; `docs/core/07_artifacts/topic13/t13_zenodo_hitrace_isotropic_graphite_cp_source_audit.json`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/07_artifacts/gates/uet_major_result_closure_register.json`; `docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json`.
 EVIDENCE_HASHES: package `5d3cbbbf1eeab24c7f66f1cc01b16e80005aa80dfc9918edf62d82e6473dc8e3`; source audit `067238d11f9f426117cd29e757a8391f9089e97acfbeb0ab2b33c50d0eeb026a`; full gate `0b66d65364143b7f37fe1f58675b36da6ade7fd28e39caca09d6eeda2b8eeba0`; register `b04e38cc8b05b607314cc46f84d5a06473f04a30d5fc9e14d50de3486a9b2ced`; dependency `2e621c93e40aca38e3e4727a4f9cc7d5b570a1432120ee22aa84fcc4a46f1248`.
 
 ## Latest Hardening Lane: T13-126
@@ -2211,7 +2211,7 @@ WHAT_IS_ACTUALLY_CLOSED: A named normal-branch compactified radial heat-current 
 WHAT_REMAINS_OPEN: Loop-renormalized off-shell self-energy, physical Kubo provenance, condensed finite-temperature two-fluid completion, full SK/KMS matching, dimensional `Phi` to thermal observable mapping, independent `alpha_Phi_K`, and Ding `C_src` remain open.
 DEPENDENCY_UNLOCKED: This unlocks only the named natural-unit normal-branch lane; it does not unlock physical transport, SI mapping, TTG, Core, Gravity, or Full Topic 13.
 STATUS: `PASS_ACTION_DERIVED_REGULARIZED_CONTINUUM_HEAT_CURRENT_LANE`; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
-WHAT_CHANGED: Added `docs/core/artifacts/t13_uet_o2_regularized_continuum_heat_current_audit.json` and synchronized the full gate and research-room reporting surfaces.
+WHAT_CHANGED: Added `docs/core/07_artifacts/topic13/t13_uet_o2_regularized_continuum_heat_current_audit.json` and synchronized the full gate and research-room reporting surfaces.
 EQUATION_OR_MAPPING: `k=Lambda*u/(1-u)`; `b_q=(E-h*q)*(p_x/E)*sqrt(w)`; `L_reg=P*diag(Gamma_s(k))*P`; `kappa=Re[b_q^T(L_reg-i*omega*I)^(-1)b_q]`.
 VERIFICATION: `kappa_natural=153.316802`; radial maximum change `1.04244e-06`, angular change `7.28033e-07`, scale change `1.10828e-08`; conservation residual `8.47823e-23`; source residual `1.92646e-18`; entropy `1.21146e-09`; KMS residual `1.72929e-16`. No fit, target, physical coefficient, numeric alpha, or Xie 2026 holdout was used.
 CONTROLLING_BLOCKER: `loop_renormalized_off_shell_self_energy_missing` for this lane; full Topic 13 still retains the source, dimensional, alpha, EOS/transport/KMS/entropy, and material-regime blockers.
@@ -2235,7 +2235,7 @@ alpha_Phi_K, Full Topic 13, Core, Gravity, or transport dependency is unlocked.
 
 STATUS: PASS_REMOTE_FIGURE3_BINARY_IDENTITY
 
-WHAT_CHANGED: docs/core/artifacts/t13_berut_figure3_remote_binary_identity.json records the official article/download locators,
+WHAT_CHANGED: docs/core/07_artifacts/topic13/t13_berut_figure3_remote_binary_identity.json records the official article/download locators,
 binary hash e4bab6be849a093b7578bc52ce6df9be95dc25d83d51ecb718b4f798a37d50fa, size
 479744 bytes, and embedded raster inventory.
 The binary is archived locally at the hash-linked raw path; no raw measurement table is implied.
@@ -2272,7 +2272,7 @@ Core, Gravity, or constitutive-transport dependency is unlocked.
 
 STATUS: `PASS_SCOPED_BERUT_SOURCE_PACKAGE_BOUNDARY`
 
-WHAT_CHANGED: `docs/core/artifacts/t13_berut_source_package_availability_boundary.json` records the source identity, publisher locator,
+WHAT_CHANGED: `docs/core/07_artifacts/topic13/t13_berut_source_package_availability_boundary.json` records the source identity, publisher locator,
 current local inventory, source-surface scope, and non-calibration policy.
 
 EQUATION_OR_MAPPING: `E_min = k_B T ln(2)` remains an imported standard
@@ -2350,7 +2350,7 @@ VERIFICATION: Artifact records `numeric_payload_accessed=false`, `numeric_payloa
 CONTROLLING_BLOCKER: `aist_numeric_payload_not_publicly_redistributable` for this route; globally the Ding-compatible `C_src`, independent alpha/dimensional map, physical Kubo, EOS/transport/KMS/entropy, material-regime, and uncertainty blockers remain controlling.
 NEXT_ACTION: Acquire a permitted redistributable numeric graphite c_v or volumetric-heat-capacity source with provenance and uncertainty, or obtain a permissioned private source package without treating it as publicly reproducible. Do not substitute AIST metadata for Ding or calibration.
 CLAIM_BOUNDARY: This closes only a source-route boundary. It is not numeric c_v or C_src evidence, independent alpha_Phi_K calibration, TTG prediction, external validation, `CLOSED_FOR_CORE`, or global UET closure.
-EVIDENCE_PATHS: `docs/scripts/audit/audit_topic13_aist_graphite_source_route_boundary.py`; `docs/core/test/test_topic13_aist_graphite_source_route_boundary.py`; `docs/core/artifacts/t13_aist_graphite_source_route_boundary_audit.json`; `docs/scripts/audit/audit_topic13_full_bridge_gate.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/artifacts/uet_major_result_closure_register.json`; `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`.
+EVIDENCE_PATHS: `docs/scripts/audit/audit_topic13_aist_graphite_source_route_boundary.py`; `docs/core/test/test_topic13_aist_graphite_source_route_boundary.py`; `docs/core/07_artifacts/topic13/t13_aist_graphite_source_route_boundary_audit.json`; `docs/scripts/audit/audit_topic13_full_bridge_gate.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/07_artifacts/gates/uet_major_result_closure_register.json`; `docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json`.
 EVIDENCE_HASHES: verifier `96024a0bbabb09218681870804109eff417dfe0597a873c5a898cacefd5669ac`; regression `feaa4ef9b94d3dd32bf1b87a9c5da9f2781fa543e0b6403b6fcd4982e962e261`; AIST artifact `3a37c2cd5a37dccaa7f0a5aa7f4704c54ed73a11e04d5e7168d00682de2ff3de`; full-gate builder `7b87f0476f4d49f37993cc405e2c14b13ecfdc8044daaf2279a1729a030a3857`; full gate `7b156617b44d30367464e0d69ff5e13f82509d848c4c5bf320acfd43749ed663`; register `11f33ef3d80d5fe222b0b60d96b65c7bfb1b6d87c38f6218bca55f42680eaf0a`; dependency `6078156e584cd84b7ab75cf1598f1ca90c9cea2098e5c02d6046d9f514f94d78`.
 ## T13-149 - NIST SRM 3600 heat-capacity comparator boundary
 
@@ -2365,7 +2365,7 @@ VERIFICATION: SRM 3600 boundary verifier passed; focused Topic 13/register/depen
 CONTROLLING_BLOCKER: `figure_only_numeric_payload_and_Ding_material_mapping_missing` for this comparator; globally `dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing` remains primary, with Ding `C_src` and physical thermodynamic/transport evidence also open.
 NEXT_ACTION: Obtain a permitted same-state machine-readable heat-capacity/PBTE source with row locators, units, uncertainty, preprocessing, convergence, material identity, and hash, or obtain a permissioned Ding-compatible `C_src` package. Do not digitize Figure 3 into calibration without a declared digitization uncertainty contract.
 CLAIM_BOUNDARY: Comparator source boundary only; not numeric `C_src`, not independent `alpha_Phi_K`, not a Kelvin prediction, not external validation, not `CLOSED_FOR_CORE`, and not global UET closure.
-EVIDENCE_PATHS: `docs/core/artifacts/t13_nist_srm_3600_heat_capacity_boundary_audit.json`; `docs/scripts/audit/audit_topic13_nist_srm_3600_heat_capacity_boundary.py`; `docs/core/test/test_topic13_nist_srm_3600_heat_capacity_boundary.py`; `docs/scripts/audit/audit_topic13_full_bridge_gate.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/artifacts/uet_major_result_closure_register.json`; `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`.
+EVIDENCE_PATHS: `docs/core/07_artifacts/topic13/t13_nist_srm_3600_heat_capacity_boundary_audit.json`; `docs/scripts/audit/audit_topic13_nist_srm_3600_heat_capacity_boundary.py`; `docs/core/test/test_topic13_nist_srm_3600_heat_capacity_boundary.py`; `docs/scripts/audit/audit_topic13_full_bridge_gate.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/07_artifacts/gates/uet_major_result_closure_register.json`; `docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json`.
 EVIDENCE_HASHES: source `5bbbd0e3949a1e38cbb7ec00bbfc1a75a9d4708f6a0656e5e49c8d44d32ba5da`; source artifact `7317cadd672abd7eaacdda3eb5b4e5fdfc6bbe9fe6085a916ab93418ce6678b3`; full gate `17f9a8f09f17dacaaea987a086b1ad905bb206cc16dd8c6949538ff5167fe55c`; register `8037569bca69757892be6c7b216218fc7c437ad0413a1877dcdf723f75a40253`; dependency `3fcfbdbe603db366b0dc848df5da7602ac1ce649d07d86379e5fc3bf346b6016`.
 ## T13-150 - Perez-Castaneda HOPG specific-heat source boundary
 
@@ -2391,7 +2391,7 @@ NEXT_ACTION: Acquire a permitted machine-readable same-state heat-capacity or Di
 
 CLAIM_BOUNDARY: Source comparator boundary only; not numeric C_src, not alpha calibration, not prediction, not external validation, and not Full Topic 13 closure.
 
-EVIDENCE_PATHS: docs/core/artifacts/t13_perez_castaneda_hopg_source_boundary_audit.json; docs/scripts/audit/audit_topic13_perez_castaneda_hopg_boundary.py; docs/core/test/test_topic13_perez_castaneda_hopg_boundary.py; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json; docs/core/artifacts/uet_major_result_closure_register.json; docs/core/artifacts/uet_major_result_dependency_unlock_gate.json.
+EVIDENCE_PATHS: docs/core/07_artifacts/topic13/t13_perez_castaneda_hopg_source_boundary_audit.json; docs/scripts/audit/audit_topic13_perez_castaneda_hopg_boundary.py; docs/core/test/test_topic13_perez_castaneda_hopg_boundary.py; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json; docs/core/07_artifacts/gates/uet_major_result_closure_register.json; docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json.
 ## T13-151 - Calorine full-LBTE numerical stability boundary
 
 MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for the source-locked full-LBTE numerical-stability boundary; Full Topic 13 remains `BLOCKED_OPEN_T13_FULL_BRIDGE` / `PARTIAL`.
@@ -2405,7 +2405,7 @@ VERIFICATION: Latest method-1 mesh pair `0.129379135193` relative change (8x8x4 
 CONTROLLING_BLOCKER: `full_lbte_numerical_well_posedness_not_closed`, alongside the existing independent dimensional/`alpha_Phi_K`, Ding `C_src`, material, uncertainty, and thermodynamic-transport blockers.
 NEXT_ACTION: Resolve the sign-indefinite collision spectrum and obtain a declared source-supported convergence/uncertainty contract before treating full-LBTE output as a physical comparator; do not use it for `alpha_Phi_K` or holdout prediction.
 CLAIM_BOUNDARY: This is a numerical-stability boundary for one external candidate route, not a physical UET transport coefficient, Ding TTG validation, `Phi`-to-temperature prediction, Core closure, or global UET closure.
-EVIDENCE_PATHS: `docs/core/artifacts/t13_calorine_full_lbte_stability_boundary_audit.json`; `docs/scripts/audit/audit_topic13_calorine_full_lbte_stability.py`; `docs/core/test/test_topic13_calorine_full_lbte_stability.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/artifacts/uet_major_result_closure_register.json`; `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`.
+EVIDENCE_PATHS: `docs/core/07_artifacts/topic13/t13_calorine_full_lbte_stability_boundary_audit.json`; `docs/scripts/audit/audit_topic13_calorine_full_lbte_stability.py`; `docs/core/test/test_topic13_calorine_full_lbte_stability.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/07_artifacts/gates/uet_major_result_closure_register.json`; `docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json`.
 EVIDENCE_HASHES: artifact `8b5de32a8c33b0a646c8e26faf263585d98bcb939df8adb78b1b16f9d832859d`; full gate `6505ad8b6b1aac6da67d8ba7a3c10ae77f2c6047def0502a47377f44bdd8f14a`; register `a0207ee94c1cdc4e5d5a86f33763a7bbe3267716d3ce5bd7290a7f806b424344`; dependency `62195d85fbf71e31b98448215aa25e991a55b01f6d6dbca80b93cac1f561b91d`.
 
 ### 2026-08-22 - Ding publisher provenance locator wave (T13-151)
@@ -2436,7 +2436,7 @@ VERIFICATION: Analytic/finite-difference identity relative error `7.995153125698
 CONTROLLING_BLOCKER: `ding_pbte_numeric_C_src_or_accepted_independent_reproduction_missing` plus the independent dimensional/alpha and thermodynamic-transport blockers.
 NEXT_ACTION: Acquire the permitted Ding-compatible numeric mode/C_src or fixed-volume c_v source package with material/state, volume, uncertainty, convergence, and hash.
 CLAIM_BOUNDARY: Conditional identity only; no numeric C_src, alpha, temperature prediction, external validation, or Full Topic 13 closure.
-EVIDENCE: `docs/core/artifacts/t13_csrc_fixed_volume_identity_audit.json` (SHA-256 `155b15ac1184f0309e10db8466925d6ad6483d4321a7703d82ecfb09a086cdd5`); full gate `f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50`; closure register `eb044c3083382b61855baa8ee26ea847a85005c148f5e0b85612a74bfb7b3c0b`; dependency gate `985a9727e59db875b6446096942b07b70375da9ba59cb06cc456e9cd25ef93e2`.
+EVIDENCE: `docs/core/07_artifacts/topic13/t13_csrc_fixed_volume_identity_audit.json` (SHA-256 `155b15ac1184f0309e10db8466925d6ad6483d4321a7703d82ecfb09a086cdd5`); full gate `f0cddb266247c0454ed2f89775a7eefc033d3ce1ef8d84cde574a9e4bfc8df50`; closure register `eb044c3083382b61855baa8ee26ea847a85005c148f5e0b85612a74bfb7b3c0b`; dependency gate `985a9727e59db875b6446096942b07b70375da9ba59cb06cc456e9cd25ef93e2`.
 ## 2026-08-22 - IG-210 density-uncertainty blocker closure (T13-157)
 
 MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for the resolved blocker projection `density_uncertainty_not_source_locked`; Full Topic 13 remains `PARTIAL` / `BLOCKED_OPEN_T13_FULL_BRIDGE`.
@@ -2461,7 +2461,7 @@ NEXT_ACTION: Source-lock a permitted same-state IG-210 `K_T` only if it carries 
 
 CLAIM_BOUNDARY: This closes only the density-uncertainty gate projection and the source-traceable IG-210 volumetric `C_p` comparator. It is not `C_v`, Ding `C_src`, numeric `alpha_Phi_K`, a temperature prediction, physical transport, external validation, Full Topic 13 closure, or global UET closure.
 
-EVIDENCE_PATHS: `docs/core/artifacts/t13_farooqui_ig210_thermophysical_source_audit.json`; `docs/core/artifacts/t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json`; `docs/scripts/audit/audit_topic13_full_bridge_gate.py`; `docs/scripts/audit/audit_major_result_closure.py`; `docs/core/test/test_topic13_gatech_volumetric_cp_independence.py`; `docs/core/test/test_major_result_closure.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/artifacts/uet_major_result_closure_register.json`; `docs/core/artifacts/uet_major_result_dependency_unlock_gate.json`.
+EVIDENCE_PATHS: `docs/core/07_artifacts/topic13/t13_farooqui_ig210_thermophysical_source_audit.json`; `docs/core/07_artifacts/topic13/t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json`; `docs/scripts/audit/audit_topic13_full_bridge_gate.py`; `docs/scripts/audit/audit_major_result_closure.py`; `docs/core/test/test_topic13_gatech_volumetric_cp_independence.py`; `docs/core/test/test_major_result_closure.py`; `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`; `docs/core/07_artifacts/gates/uet_major_result_closure_register.json`; `docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json`.
 
 EVIDENCE_HASHES: source audit `1bf871b436166ba44243d6600fdfc06e9bbbf65a8fc23e2f99a728ff6402fb7e`; volumetric audit `8714a13530c99cba457b86d529928747f26b8536befe782843387f3f2a362add`; full gate `f2f67384475fc8680476dee1b893dc1b32c9a90d8a1e348580789426536899d4`; register `7093fccfbb6e027df11429e51515dc3ddbabde3ecd27cbdce70a51fddf76bd69`; dependency `41303c1d38bc86c8c1f5008aafb515e05990f32acd74af1605ed371616f1ccd1`.
 ### 2026-08-22 - NPL IG-11 graphite c_p uncertainty comparator lane

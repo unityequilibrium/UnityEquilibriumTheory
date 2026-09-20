@@ -3,13 +3,20 @@
 from __future__ import annotations
 
 import json
+import sys
 from datetime import date
 from pathlib import Path
 from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUTPUT = ROOT / "docs/core/artifacts/uet_foundation_dependency_graph.json"
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from docs.core.core_paths import canonical_artifact_path  # noqa: E402
+
+
+OUTPUT = ROOT / canonical_artifact_path("uet_foundation_dependency_graph.json", "gates")
 
 
 def main() -> int:

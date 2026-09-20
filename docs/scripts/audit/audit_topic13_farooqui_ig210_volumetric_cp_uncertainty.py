@@ -23,7 +23,7 @@ RAW = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
     "farooqui_2022_ig210_thermophysical_table.pdf"
 )
-OUT = ROOT / "docs/core/artifacts/t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json"
 
 
 def digest(path: Path, algorithm: str = "sha256") -> str:

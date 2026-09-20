@@ -10,11 +10,11 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-RESPONSE_REL = "docs/core/uet_covariant_response.py"
-SPEC_REL = "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
-FORMULA_REL = "docs/core/artifacts/covariant_action_formula_audit.json"
-NO_GO_REL = "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json"
-OUT = ROOT / "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json"
+RESPONSE_REL = "docs/core/02_equations/covariant/uet_covariant_response.py"
+SPEC_REL = "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
+FORMULA_REL = "docs/core/07_artifacts/correspondence/covariant_action_formula_audit.json"
+NO_GO_REL = "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json"
 
 
 def text(rel: str) -> str:
@@ -119,7 +119,7 @@ def main() -> int:
                 {"path": SPEC_REL, "sha256": sha256(SPEC_REL)},
                 {"path": FORMULA_REL, "sha256": sha256(FORMULA_REL)},
                 {"path": NO_GO_REL, "sha256": sha256(NO_GO_REL)},
-                {"path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json"}
+                {"path": "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json"}
             ],
             "verification_status": status,
             "open_blockers": [

@@ -1,0 +1,20 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "status": "CANDIDATE_HARMONIC_PROTOCOL_COMPARATOR",
+  "equation_entries": [{
+    "equation_id": "uet.thermal.mode_work_heat_protocol",
+    "classification": "standard_harmonic_comparator",
+    "ontology": {"epsilon": "positive material oscillator energy gap", "lambda": "declared external control, not Phi", "C_Phi_R_gen_R_obs": "unchanged"},
+    "units": {"epsilon": "J", "T": "K", "mode_capacity": "J/K", "d_epsilon_d_lambda": "J per declared control unit"},
+    "derivation_class": "equilibrium_harmonic_first_law",
+    "relation_or_code_path": "dU=sum[(n+1/2)*d_epsilon+epsilon*dn]; dT/dlambda|S=T*sum(C_i*d_epsilon_i/epsilon_i)/sum(C_i)",
+    "observable": "protocol-dependent mode energy, reversible heat and temperature gain",
+    "data_role": "CONDITIONAL_COMPARATOR_NOT_PHI_CALIBRATION",
+    "verification_status": "CONDITIONAL_HARMONIC_PROTOCOLS_TESTED",
+    "controlling_blocker": "physical_gap_source_derivative_and_relaxation_protocol_missing",
+    "claim_boundary": "Equilibrium/frozen-occupation limits only; no physical pump, microscopic bath or full Topic 13 closure."
+  }],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}

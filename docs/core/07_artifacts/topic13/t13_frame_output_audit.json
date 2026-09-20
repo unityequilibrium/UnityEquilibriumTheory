@@ -1,0 +1,313 @@
+{
+  "major_result_id": "T13_FRAME_CURRENT_OUTPUT_INTEGRATED",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "CLOSED_FOR_LANE",
+  "status": "FRAME_OUTPUT_INTEGRATED",
+  "what_is_closed": "Explicit energy, charge, invariant heat and canonical entropy outputs in production state",
+  "equation_or_mapping": "q_heat=Q-hV; S_L=s*u+(Q-muV)/T; linear Eckart transformation",
+  "units": "natural, signed O(2) charge",
+  "derivation_class": "Previously verified linear frame map propagated into state output",
+  "observable": "Formal current decomposition",
+  "data_role": "INTERNAL_COEFFICIENT_AND_SMALL_PROBE",
+  "checks": {
+    "canonical_frame_identity": true,
+    "heat_response_identity": true,
+    "finite_velocity_not_asserted": true,
+    "unit_force_large_formal_shift_disclosed": true,
+    "small_probe_shift": true
+  },
+  "states": [
+    {
+      "temperature": 0.22,
+      "chemical_potential": 0.35,
+      "space_response": 0.15,
+      "eos_branch": "normal",
+      "entropy_density": 0.0031073474100336523,
+      "pressure": 0.00011541104065115239,
+      "energy_density": 0.0007387032397939403,
+      "charge_density": 0.0004871367149648264,
+      "enthalpy_per_charge": 1.753335879244421,
+      "operator_state_count": 96,
+      "transition_channel_count": 64,
+      "heat_response_matrix": [
+        [
+          254.8247192326948,
+          3.2487440976493774e-10,
+          4.783113636204103e-10
+        ],
+        [
+          3.2487440976493774e-10,
+          254.82471924461043,
+          -2.0651652928818766e-10
+        ],
+        [
+          4.783113636204103e-10,
+          -2.0651652928818766e-10,
+          254.82471925479925
+        ]
+      ],
+      "kappa_natural": 254.8247192440348,
+      "heat_response_isotropy_residual": 4.450120184959954e-11,
+      "collision_operator_min_eigenvalue": 1.5926475013137965e-22,
+      "collision_operator_symmetry_residual": 1.3798490465439917e-22,
+      "thermal_force_covariant": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "thermal_force_contravariant": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "heat_flux_contravariant": [
+        0.0,
+        254.8247192440348,
+        0.0,
+        0.0
+      ],
+      "entropy_current_contravariant": [
+        0.0031073474100336523,
+        1158.2941783819765,
+        0.0,
+        0.0
+      ],
+      "entropy_production": 1158.2941783819765,
+      "kinetic_entropy_production": 1158.294178330433,
+      "entropy_balance_residual": 5.154356585990172e-08,
+      "kinetic_equation_residual": 4.526655987778134e-17,
+      "charge_balance_residual": 1.6135551881010886e-19,
+      "energy_balance_residual": 3.61578783519585e-19,
+      "momentum_balance_residual": 4.4386581728044585e-20,
+      "heat_flux_response_residual": 1.1354737658182265e-08,
+      "force_orthogonality_residual": 0.0,
+      "heat_flux_orthogonality_residual": 0.0,
+      "projector_orthogonality_residual": 7.062054167850703e-16,
+      "lorentz_covariance_residual": 1.4210854715202004e-14,
+      "equilibrium_heat_flux_norm": 0.0,
+      "finite_cutoff_boundary_declared": true,
+      "microscopic_sk_kms_match_completed": false,
+      "physical_kubo_coefficient_emitted": false,
+      "numeric_alpha_Phi_K_emitted": false,
+      "parameter_fitting_performed": false,
+      "target_data_used": false,
+      "xie_2026_accessed": false,
+      "data_role": "ACTION_DERIVED_FINITE_CUTOFF_NATURAL_MOMENT_RESPONSE_NOT_PHYSICAL_KUBO",
+      "frame_current_decomposition": {
+        "revision": "LINEAR_CHARGED_FRAME_CURRENT_V1",
+        "evaluation_frame": "LANDAU_ENERGY_FRAME_TO_LINEAR_ORDER",
+        "energy_flux_contravariant": [
+          0.0,
+          4.608955449109366e-14,
+          2.980277530976756e-14,
+          3.573612596917972e-14
+        ],
+        "charge_diffusion_contravariant": [
+          0.0,
+          -145.33708130270418,
+          -1.8532348181251255e-10,
+          -2.7274864153947825e-10
+        ],
+        "invariant_heat_contravariant": [
+          0.0,
+          254.82471923269478,
+          3.249641127036889e-10,
+          4.782557153523116e-10
+        ],
+        "landau_entropy_current_contravariant": [
+          0.0031073474100336523,
+          231.2180838906659,
+          2.949682791349507e-10,
+          4.340807302944843e-10
+        ],
+        "eckart_entropy_current_in_landau_coordinates_linear": [
+          0.0031073474100336523,
+          231.21808389066598,
+          2.949682791349505e-10,
+          4.340807302944841e-10
+        ],
+        "eckart_velocity_shift_linear": [
+          0.0,
+          -298349.6764623833,
+          -3.804342315398949e-07,
+          -5.599016316377878e-07
+        ],
+        "frame_shift_spatial_norm": 298349.6764623833,
+        "entropy_frame_identity_residual": 8.526512829121202e-14,
+        "heat_moment_response_residual": 1.0932127208335819e-13,
+        "legacy_entropy_current_role": "FORMAL_s_u_PLUS_HEAT_OVER_T_NOT_CANONICAL_LANDAU_CURRENT",
+        "legacy_heat_flux_role": "ISOTROPIC_LIFT_OF_INVARIANT_HEAT_RESPONSE_NOT_LANDAU_ENERGY_FLUX",
+        "finite_velocity_state_validated": false,
+        "claim_boundary": "Linear response coefficients/probes only; a unit force is not a validated finite fluid state. Signed O(2) charge is not material mass."
+      }
+    },
+    {
+      "temperature": 0.22,
+      "chemical_potential": 0.35,
+      "space_response": 0.15,
+      "eos_branch": "normal",
+      "entropy_density": 0.0031073474100336523,
+      "pressure": 0.00011541104065115239,
+      "energy_density": 0.0007387032397939403,
+      "charge_density": 0.0004871367149648264,
+      "enthalpy_per_charge": 1.753335879244421,
+      "operator_state_count": 96,
+      "transition_channel_count": 64,
+      "heat_response_matrix": [
+        [
+          254.8247192326948,
+          3.2487440976493774e-10,
+          4.783113636204103e-10
+        ],
+        [
+          3.2487440976493774e-10,
+          254.82471924461043,
+          -2.0651652928818766e-10
+        ],
+        [
+          4.783113636204103e-10,
+          -2.0651652928818766e-10,
+          254.82471925479925
+        ]
+      ],
+      "kappa_natural": 254.8247192440348,
+      "heat_response_isotropy_residual": 4.450120184959954e-11,
+      "collision_operator_min_eigenvalue": 1.5926475013137965e-22,
+      "collision_operator_symmetry_residual": 1.3798490465439917e-22,
+      "thermal_force_covariant": [
+        0.0,
+        1e-09,
+        0.0,
+        0.0
+      ],
+      "thermal_force_contravariant": [
+        0.0,
+        1e-09,
+        0.0,
+        0.0
+      ],
+      "heat_flux_contravariant": [
+        0.0,
+        2.548247192440348e-07,
+        0.0,
+        0.0
+      ],
+      "entropy_current_contravariant": [
+        0.0031073474100336523,
+        1.1582941783819765e-06,
+        0.0,
+        0.0
+      ],
+      "entropy_production": 1.1582941783819766e-15,
+      "kinetic_entropy_production": 1.1582941783304329e-15,
+      "entropy_balance_residual": 5.15437771166883e-26,
+      "kinetic_equation_residual": 4.257478101189635e-26,
+      "charge_balance_residual": 5.480635631060567e-29,
+      "energy_balance_residual": 2.641070663306997e-28,
+      "momentum_balance_residual": 5.072672072672353e-29,
+      "heat_flux_response_residual": 1.1354755525906035e-17,
+      "force_orthogonality_residual": 0.0,
+      "heat_flux_orthogonality_residual": 0.0,
+      "projector_orthogonality_residual": 7.062054167850703e-16,
+      "lorentz_covariance_residual": 5.456884859230801e-23,
+      "equilibrium_heat_flux_norm": 0.0,
+      "finite_cutoff_boundary_declared": true,
+      "microscopic_sk_kms_match_completed": false,
+      "physical_kubo_coefficient_emitted": false,
+      "numeric_alpha_Phi_K_emitted": false,
+      "parameter_fitting_performed": false,
+      "target_data_used": false,
+      "xie_2026_accessed": false,
+      "data_role": "ACTION_DERIVED_FINITE_CUTOFF_NATURAL_MOMENT_RESPONSE_NOT_PHYSICAL_KUBO",
+      "frame_current_decomposition": {
+        "revision": "LINEAR_CHARGED_FRAME_CURRENT_V1",
+        "evaluation_frame": "LANDAU_ENERGY_FRAME_TO_LINEAR_ORDER",
+        "energy_flux_contravariant": [
+          0.0,
+          5.155508021715215e-23,
+          2.9802775309304197e-23,
+          3.57361259695951e-23
+        ],
+        "charge_diffusion_contravariant": [
+          0.0,
+          -1.453370813027042e-07,
+          -1.8532348181251252e-19,
+          -2.727486415394784e-19
+        ],
+        "invariant_heat_contravariant": [
+          0.0,
+          2.548247192326948e-07,
+          3.2496411270368836e-19,
+          4.782557153523123e-19
+        ],
+        "landau_entropy_current_contravariant": [
+          0.0031073474100336523,
+          2.3121808389066598e-07,
+          2.9496827913494855e-19,
+          4.340807302944865e-19
+        ],
+        "eckart_entropy_current_in_landau_coordinates_linear": [
+          0.0031073474100336523,
+          2.312180838906658e-07,
+          2.9496827913494845e-19,
+          4.340807302944865e-19
+        ],
+        "eckart_velocity_shift_linear": [
+          0.0,
+          -0.00029834967646238334,
+          -3.804342315398948e-16,
+          -5.599016316377881e-16
+        ],
+        "frame_shift_spatial_norm": 0.00029834967646238334,
+        "entropy_frame_identity_residual": 1.852884572118782e-22,
+        "heat_moment_response_residual": 1.0556205266479734e-22,
+        "legacy_entropy_current_role": "FORMAL_s_u_PLUS_HEAT_OVER_T_NOT_CANONICAL_LANDAU_CURRENT",
+        "legacy_heat_flux_role": "ISOTROPIC_LIFT_OF_INVARIANT_HEAT_RESPONSE_NOT_LANDAU_ENERGY_FLUX",
+        "finite_velocity_state_validated": false,
+        "claim_boundary": "Linear response coefficients/probes only; a unit force is not a validated finite fluid state. Signed O(2) charge is not material mass."
+      }
+    }
+  ],
+  "verification_status": "CURRENT_PRODUCTION_OUTPUT_CHECKED",
+  "open_blockers": [
+    "material_charge_and_protocol_map",
+    "finite_cutoff_convergence",
+    "historical_composition_review",
+    "nonlinear_two_fluid_transport"
+  ],
+  "dependency_unlocked": [],
+  "claim_promotion": false,
+  "claim_boundary": "Backward-compatible fields retained with explicit legacy roles. No finite-flow certification, SI coefficient or old gate replacement.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/scripts/audit/audit_topic13_frame_output.py",
+      "sha256": "7bd826bcde021771ec4e0915ab86c794e728ac881a9b05c6fc313d27bb67307c"
+    },
+    {
+      "path": "docs/core/test/test_topic13_frame_output.py",
+      "sha256": "ec9ed96b611617ae15e0794ecda713d5a9f2e69b2d4bf48aeaa0e02d1dc12fc8"
+    },
+    {
+      "path": "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py",
+      "sha256": "eb9005f7e48f715b15ee53bdc26d8a1a975ae1717ebc6c0d445566102d6293b0"
+    },
+    {
+      "path": "docs/core/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "a1be58b8230240775654e7c0d6265870010f546238e96e59e36045e6a893e5d2"
+    },
+    {
+      "path": "docs/core/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    },
+    {
+      "path": "docs/core/uet_o2_continuum_collision_operator.py",
+      "sha256": "010c1322063b806a1d87d3708cf5509e696f7370170dc2b859f61fd8f884e9e2"
+    },
+    {
+      "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+      "sha256": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f"
+    }
+  ]
+}

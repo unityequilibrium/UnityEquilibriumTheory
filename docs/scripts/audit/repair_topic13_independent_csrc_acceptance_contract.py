@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-ARTIFACT_REL = "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json"
+ARTIFACT_REL = "docs/core/07_artifacts/topic13/t13_independent_csrc_acceptance_contract.json"
 FULL_GATE_REL = "docs/scripts/audit/audit_topic13_full_bridge_gate.py"
 SYNC_REL = "docs/scripts/audit/sync_topic13_major_result_lanes.py"
 
@@ -28,9 +28,9 @@ def build_artifact() -> dict:
     ding_inputs = load(
         "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_pbte_numeric_input_availability_package.json"
     )
-    ding_boundary = load("docs/core/artifacts/t13_ding_c_src_independent_reproduction_boundary_audit.json")
-    material_boundary = load("docs/core/artifacts/t13_ding_material_regime_boundary_audit.json")
-    mesh = load("docs/core/artifacts/t13_mp48_force_constant_csrc_mesh_convergence_audit.json")
+    ding_boundary = load("docs/core/07_artifacts/topic13/t13_ding_c_src_independent_reproduction_boundary_audit.json")
+    material_boundary = load("docs/core/07_artifacts/topic13/t13_ding_material_regime_boundary_audit.json")
+    mesh = load("docs/core/07_artifacts/topic13/t13_mp48_force_constant_csrc_mesh_convergence_audit.json")
 
     ding_author_payload_present = bool(
         ding_inputs.get("availability_contract", {})
@@ -96,15 +96,15 @@ def build_artifact() -> dict:
                     {"role": "Ding official OA and author-request availability"},
                 ),
                 evidence(
-                    "docs/core/artifacts/t13_ding_c_src_independent_reproduction_boundary_audit.json",
+                    "docs/core/07_artifacts/topic13/t13_ding_c_src_independent_reproduction_boundary_audit.json",
                     {"role": "current independent comparator boundary"},
                 ),
                 evidence(
-                    "docs/core/artifacts/t13_ding_material_regime_boundary_audit.json",
+                    "docs/core/07_artifacts/topic13/t13_ding_material_regime_boundary_audit.json",
                     {"role": "material/state equivalence controller"},
                 ),
                 evidence(
-                    "docs/core/artifacts/t13_mp48_force_constant_csrc_mesh_convergence_audit.json",
+                    "docs/core/07_artifacts/topic13/t13_mp48_force_constant_csrc_mesh_convergence_audit.json",
                     {"role": "independent force-constant convergence controller"},
                 ),
             ],
@@ -179,7 +179,7 @@ def patch_full_gate() -> None:
         text = text.replace(map_marker, map_marker + map_entry, 1)
 
     load_marker = '    phi_e_comparator_path, phi_e_comparator = load(\n'
-    load_insert = '    independent_csrc_acceptance_path, independent_csrc_acceptance = load(\n        "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json"\n    )\n'
+    load_insert = '    independent_csrc_acceptance_path, independent_csrc_acceptance = load(\n        "docs/core/07_artifacts/topic13/t13_independent_csrc_acceptance_contract.json"\n    )\n'
     if "independent_csrc_acceptance_path" not in text:
         text = text.replace(load_marker, load_insert + load_marker, 1)
 

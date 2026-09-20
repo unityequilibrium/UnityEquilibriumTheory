@@ -1,0 +1,8 @@
+{
+  "status": "LOCKED_BEFORE_EXECUTION",
+  "state": [0.22, 0.35, 0.15],
+  "base": {"collision_integration_order": 48, "angular_order": 32, "transition_quadrature_order": 24, "transition_channel_count": 64, "transition_interpolation_order": 40},
+  "cases": [{"radial_order": 24, "cutoff_factor": 48.0}, {"radial_order": 32, "cutoff_factor": 48.0}, {"radial_order": 48, "cutoff_factor": 48.0}, {"radial_order": 64, "cutoff_factor": 48.0}, {"radial_order": 48, "cutoff_factor": 36.0}, {"radial_order": 48, "cutoff_factor": 60.0}],
+  "diagnostic_rcond": [1e-10, 1e-12, 1e-14],
+  "policy": "Same natural_bridge_config; preserve production rcond=1e-12. Spectral inverse sensitivity is a diagnostic, not a selection or fit. No claim promotion threshold. Transition/directional basis remain fixed."
+}

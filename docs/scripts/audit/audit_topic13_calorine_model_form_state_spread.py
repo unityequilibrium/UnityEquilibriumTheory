@@ -8,8 +8,8 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-BASELINE_AUDIT_REL = "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json"
-VARIANT_AUDIT_REL = "docs/core/artifacts/t13_calorine_legacy_nep2_pbte_reproduction_audit.json"
+BASELINE_AUDIT_REL = "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_reproduction_audit.json"
+VARIANT_AUDIT_REL = "docs/core/07_artifacts/topic13/t13_calorine_legacy_nep2_pbte_reproduction_audit.json"
 BASELINE_PACKAGE_REL = (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "t13_calorine_zenodo_nep_bte_reproduction_source_package.json"
@@ -18,7 +18,7 @@ VARIANT_PACKAGE_REL = (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "calorine_legacy_nep2_pbte_reproduction_source_package.json"
 )
-OUT_REL = "docs/core/artifacts/t13_calorine_model_form_state_spread_comparison_audit.json"
+OUT_REL = "docs/core/07_artifacts/topic13/t13_calorine_model_form_state_spread_comparison_audit.json"
 COMMON_MESH = [10, 10, 5]
 COMMON_TEMPERATURES = [200.0, 300.0]
 

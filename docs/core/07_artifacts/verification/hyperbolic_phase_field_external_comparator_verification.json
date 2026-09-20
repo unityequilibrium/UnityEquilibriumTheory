@@ -1,0 +1,236 @@
+{
+  "schema_version": "1.0",
+  "artifact": "hyperbolic_phase_field_external_comparator_verification",
+  "generated_at": "2026-09-17T18:57:10.420812+00:00",
+  "audit_status": "PASS",
+  "evidence_status": "PARTIAL_EXTERNAL_COMPARATOR",
+  "claim_class": "B",
+  "claim": "formula-level external comparator with fixed-parameter first-order hyperbolicity, periodic mass and Lyapunov closure, and an explicitly non-uniform parabolic causal limit",
+  "source_provenance": {
+    "status": "PASS",
+    "missing_required_fields": [],
+    "required_formula_locators_present": [
+      "augmented_lyapunov_functional",
+      "characteristic_speeds",
+      "first_order_hyperbolic_system",
+      "formal_cahn_hilliard_scaling"
+    ],
+    "upstream_source_archive_sha256": "b2e7c43ef849dc7275850b3166169e8b0d656023b00aa481d764ad0731ec49e2",
+    "raw_source_committed": false,
+    "publisher_pdf_parsed": false,
+    "formula_source_version": "arXiv_2408.03862v1",
+    "peer_reviewed_identity": "doi_10.1098/rspa.2024.0606",
+    "benchmark_role": "EXTERNAL_MATHEMATICAL_COMPARATOR_NOT_PHYSICAL_VALIDATION"
+  },
+  "symbolic": {
+    "characteristic_polynomial": "-lambda*(beta*lambda**2 - gamma)*(alpha + g_second - lambda**2*tau)/(beta*tau)",
+    "expected_characteristic_polynomial": "-lambda*(beta*lambda**2 - gamma)*(alpha + g_second - lambda**2*tau)/(beta*tau)",
+    "characteristic_factorization_exact": true,
+    "source_energy_terms": "-q**2/tau**2",
+    "energy_plus_dissipation_exact": true,
+    "periodic_derivative_requirement": "D_transpose_equals_minus_D",
+    "strict_double_well_hyperbolicity": "alpha > 1",
+    "fixed_parameter_speeds": [
+      "sqrt((alpha+g_second)/tau)",
+      "sqrt(gamma/beta)"
+    ],
+    "paper_asymptotic_scaling": "alpha=gamma^-1,tau=gamma^2,beta=gamma^2",
+    "asymptotic_speed_behavior": [
+      "O(gamma^-3/2)",
+      "O(gamma^-1/2)"
+    ]
+  },
+  "numeric": {
+    "mass_conservation_abs_residual": 2.2204460492503132e-17,
+    "energy_identity_abs_residual": 4.336808689942018e-18,
+    "energy_directional_derivative_abs_residual": 4.0395489731004375e-10,
+    "gradient_constraint_rate_max_abs_residual": 5.551115123125783e-17,
+    "potential_derivative_abs_residual": 1.5630325506110765e-10,
+    "principal_eigenvalue_max_abs_residual": 2.220446049250313e-16,
+    "fixed_parameter_hyperbolicity": {
+      "status": "PASS_FIXED_PARAMETER_HYPERBOLIC_SUBLUMINAL_CONTROL",
+      "minimum_alpha_plus_g_second": 0.19999999999999996,
+      "maximum_alpha_plus_g_second": 3.2,
+      "strictly_hyperbolic": true,
+      "matter_characteristic_speed_max": 0.6324555320336759,
+      "auxiliary_characteristic_speed": 0.31622776601683794,
+      "maximum_characteristic_speed": 0.6324555320336759,
+      "normalized_light_speed": 1.0,
+      "within_normalized_light_cone": true,
+      "paper_hyperbolicity_condition": "alpha_penalty > 1 for strict double-well hyperbolicity",
+      "relativistic_note": "finite mathematical characteristic speeds do not by themselves establish a covariant or uniformly subluminal UET completion"
+    },
+    "critical_alpha_control": {
+      "status": "BLOCKED_NOT_STRICTLY_HYPERBOLIC",
+      "minimum_alpha_plus_g_second": 0.0,
+      "maximum_alpha_plus_g_second": 0.0,
+      "strictly_hyperbolic": false,
+      "matter_characteristic_speed_max": null,
+      "auxiliary_characteristic_speed": 0.7071067811865476,
+      "maximum_characteristic_speed": null,
+      "normalized_light_speed": 1.0,
+      "within_normalized_light_cone": false,
+      "paper_hyperbolicity_condition": "alpha_penalty > 1 for strict double-well hyperbolicity",
+      "relativistic_note": "finite mathematical characteristic speeds do not by themselves establish a covariant or uniformly subluminal UET completion"
+    },
+    "superluminal_parameter_control": {
+      "status": "HYPERBOLIC_BUT_FAILS_NORMALIZED_LIGHT_CONE",
+      "minimum_alpha_plus_g_second": 1.0,
+      "maximum_alpha_plus_g_second": 1.0,
+      "strictly_hyperbolic": true,
+      "matter_characteristic_speed_max": 31.622776601683793,
+      "auxiliary_characteristic_speed": 0.7071067811865476,
+      "maximum_characteristic_speed": 31.622776601683793,
+      "normalized_light_speed": 1.0,
+      "within_normalized_light_cone": false,
+      "paper_hyperbolicity_condition": "alpha_penalty > 1 for strict double-well hyperbolicity",
+      "relativistic_note": "finite mathematical characteristic speeds do not by themselves establish a covariant or uniformly subluminal UET completion"
+    },
+    "principal_cone_control": {
+      "expected_max_characteristic_speed": 1.0,
+      "observed_front_speed": 1.0,
+      "arrival_speed_relative_error": 0.0,
+      "outside_cone_leakage_ratio": 0.0,
+      "eigenvector_condition_number": 10.618135753627643
+    },
+    "chemical_limit_alpha_values": [
+      8.0,
+      32.0,
+      128.0,
+      512.0
+    ],
+    "chemical_limit_relative_l2_errors": [
+      0.04390706701977322,
+      0.012188348089927728,
+      0.003133783574217406,
+      0.0007890620983941193
+    ],
+    "chemical_limit_observed_order": 0.9677018346308615,
+    "quasistatic_constraint_max_abs_residual": 6.458722445756848e-14,
+    "paper_asymptotic_scaling": {
+      "gamma_values": [
+        0.2,
+        0.1,
+        0.05,
+        0.025
+      ],
+      "alpha_values": [
+        5.0,
+        10.0,
+        20.0,
+        40.0
+      ],
+      "tau_values": [
+        0.04000000000000001,
+        0.010000000000000002,
+        0.0025000000000000005,
+        0.0006250000000000001
+      ],
+      "beta_values": [
+        0.04000000000000001,
+        0.010000000000000002,
+        0.0025000000000000005,
+        0.0006250000000000001
+      ],
+      "matter_characteristic_speeds": [
+        10.0,
+        29.999999999999996,
+        87.17797887081346,
+        249.7999199359359
+      ],
+      "auxiliary_characteristic_speeds": [
+        2.2360679774997894,
+        3.162277660168379,
+        4.472135954999579,
+        6.324555320336758
+      ],
+      "maximum_characteristic_speeds": [
+        10.0,
+        29.999999999999996,
+        87.17797887081346,
+        249.7999199359359
+      ],
+      "normalized_light_speed": 1.0,
+      "all_subluminal": false,
+      "speed_increases_as_gamma_decreases": true,
+      "uniform_subluminal_parabolic_limit": false,
+      "interpretation": "the fixed-parameter system is hyperbolic, while the parabolic Cahn-Hilliard recovery is a singular non-uniform causal limit"
+    }
+  },
+  "achieved_gates": {
+    "primary_source_provenance": "PASS",
+    "formula_transcription_symbolic_closure": "PASS",
+    "double_well_functional_derivative": "PASS",
+    "periodic_mass_conservation": "PASS",
+    "periodic_lyapunov_identity": "PASS",
+    "gradient_constraint_involution": "PASS",
+    "analytic_characteristic_speeds": "PASS",
+    "fixed_parameter_hyperbolic_subluminal_control": "PASS",
+    "negative_parameter_controls": "PASS",
+    "quasistatic_cahn_hilliard_chemical_limit": "PASS",
+    "singular_limit_claim_restrained": "PASS",
+    "ontology_separation": "PASS",
+    "diffusive_bridge_dependency": "PASS"
+  },
+  "blocked_gates": {
+    "uet_native_derivation_of_auxiliary_system": "BLOCKED",
+    "covariant_action_and_current_mapping": "BLOCKED",
+    "uniform_subluminal_cahn_hilliard_limit": "BLOCKED",
+    "closed_time_path_kms_transport_matching": "BLOCKED",
+    "dissipative_bianchi_identity": "BLOCKED",
+    "curved_3p1_hyperbolic_solver": "BLOCKED",
+    "system_specific_si_map": "BLOCKED",
+    "external_numerical_benchmark_replication": "BLOCKED",
+    "physical_validation": "BLOCKED"
+  },
+  "source_hashes": {
+    "docs\\core\\02_equations\\matter_space\\uet_hyperbolic_phase_field.py": "f03b8907a606f3b8937556c32ea5f01d9880787aba193edccf53ffa5f1fbb74a",
+    "docs\\core\\01_contracts\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "a52cbdb0cb9dd2f65be4813fd7b57da9a995f4ab9039d4631f95928f0997a8bf",
+    "docs\\data\\external\\condensed_matter\\phase_transitions\\hyperbolic_cahn_hilliard\\dhaouadi_dumbser_gavrilyuk_2025\\source_record.json": "8751305c6296e3fa70f12dc9723e174e56710296d42298dcf0e2f3ccfe09e574",
+    "docs\\core\\07_artifacts\\verification\\covariant_diffusive_current_verification.json": "84796c850533ee89307fd3b087004d043c4c190d075fcc40c1105190ee964efb"
+  },
+  "run_contract": {
+    "seed": 719061,
+    "external_formula_source": true,
+    "raw_source_committed": false,
+    "parameter_fitting": false,
+    "spatial_dimension": 1,
+    "boundary_condition": "periodic",
+    "time_integrator_validated": false,
+    "physical_validation": false,
+    "trace_backreaction": false
+  },
+  "allowed_language": [
+    "external first-order hyperbolic Cahn-Hilliard comparator",
+    "fixed-parameter finite characteristic-speed control",
+    "periodic semi-discrete mass and Lyapunov identity",
+    "singular non-uniform Cahn-Hilliard causal limit"
+  ],
+  "blocked_language": [
+    "UET derives the external hyperbolic phase-field system",
+    "the paper auxiliary phase is UET space response",
+    "the Cahn-Hilliard limit remains uniformly subluminal",
+    "Topic 0.11 or 0.19 is externally validated"
+  ],
+  "next_controller": "noether_charge_equation_of_state_and_covariant_transport_matching_missing",
+  "downstream_hyperbolic_phase_field": {
+    "artifact": "hyperbolic_phase_field_external_comparator_verification.json",
+    "audit_status": "PASS",
+    "evidence_status": "PARTIAL_EXTERNAL_COMPARATOR",
+    "role": "external_fixed_parameter_formula_comparator",
+    "causal_feasibility_artifact": "hyperbolic_phase_field_causal_feasibility.json",
+    "causal_feasibility_status": "PASS",
+    "fixed_light_cone_parameter_domain": "PASS_NORMALIZED_ANALYTIC",
+    "uniform_subluminal_limit": "NO_GO_EXACT_PARABOLIC_LIMIT",
+    "uet_derivation": "BLOCKED"
+  },
+  "downstream_noether_phase_field_state_map": {
+    "artifact": "noether_phase_field_state_map_verification.json",
+    "audit_status": "PASS",
+    "evidence_status": "PARTIAL_HYDRODYNAMIC_STATE_COORDINATE_MAP",
+    "role": "hydrodynamic_state_coordinate_map_not_microscopic_derivation",
+    "affine_fixed_scale_layer": "PASS",
+    "microscopic_reconstruction": "NO_GO_MANY_TO_ONE",
+    "equation_of_state_and_transport": "BLOCKED"
+  }
+}

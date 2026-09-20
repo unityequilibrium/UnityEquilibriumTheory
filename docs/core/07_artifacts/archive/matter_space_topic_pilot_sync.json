@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "artifact": "matter_space_topic_pilot_sync",
+  "audit_status": "PASS_WITH_INHERITED_BLOCKERS",
+  "claim_status": "INTERNAL_DIAGNOSTIC_ONLY",
+  "selected_core_lane": {
+    "operator_mode": "matter_space_characteristic_cone_v1",
+    "status": "CANDIDATE_NORMALIZED_FINITE_CONE",
+    "claim_status": "SIMULATION_ONLY",
+    "artifact": "docs/core/artifacts/matter_space_characteristic_cone_verification.json"
+  },
+  "topic_0_11": {
+    "status": "SYNCED_INTERNAL_DIAGNOSTIC",
+    "source_artifact": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_matter_space_phase_coupling_diagnostic.json",
+    "prior_operator_mode": "matter_space_coupled_v1",
+    "selected_lane_available": true,
+    "selected_lane_rerun_artifact": "docs/topics/0.11_Phase_Transitions/Result/artifacts/matter_space_0_11_characteristic_lane_rerun.json",
+    "rerun_status": "RERUN_SELECTED_LANE_PASS_SIMULATION_ONLY",
+    "structure_factor_replication_artifact": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_conserved_order_spectral_finite_size_replication.json",
+    "structure_factor_replication_status": "WARN",
+    "controller": "spectral_core_finite_size_replication_not_robust",
+    "claim_boundary": "normalized simulation-only diagnostic; no universality, mass-generation, particle, or empirical claim"
+  },
+  "topic_0_13": {
+    "status": "SYNCED_SIMULATION_ONLY",
+    "source_artifact": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json",
+    "prior_operator_mode": "matter_space_coupled_v1_homogeneous_reduction_plus_spatial_causal_control",
+    "selected_lane_available": true,
+    "selected_lane_rerun_artifact": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_0_13_characteristic_thermal_lane_rerun.json",
+    "rerun_status": "RERUN_SELECTED_LANE_PASS_SIMULATION_ONLY_OPEN_SI_MAPPING",
+    "controller": "core_prearrival_leakage",
+    "claim_boundary": "Fourier/Cattaneo/trace and normalized matter-space diagnostic; no external validation or SI C-to-T identity"
+  },
+  "new_internal_bridge": {
+    "artifact": "docs/core/07_artifacts/provenance/resource_selection_thermal_bridge_verification.json",
+    "status": "PASS_WITH_OPEN_THERMAL_MAPPING",
+    "claim_boundary": "The declared interaction costs can close a normalized dissipated-work and bath-entropy proxy ledger. This supports an internal observable bridge only; it does not derive physical work, heat, temperature, or entropy from UET."
+  },
+  "checks": {
+    "selected_characteristic_lane_passes": true,
+    "phase_pilot_remains_internal_simulation_only": true,
+    "phase_pilot_controller_preserved": true,
+    "phase_selected_lane_rerun_passes": true,
+    "phase_structure_factor_replication_executed": true,
+    "phase_structure_factor_replication_remains_blocked": true,
+    "thermal_pilot_remains_simulation_only": true,
+    "thermal_prearrival_blocker_preserved": true,
+    "thermal_mapping_boundary_preserved": true,
+    "normalized_observable_contract_passes": true,
+    "thermal_selected_lane_rerun_passes": true,
+    "external_validation_not_claimed": true
+  },
+  "next_controller": "0.11 finite-size replication executed but grid/seed robustness is blocked; 0.13 remains simulation-only; close SI observable mapping and external-data gates before validation claims"
+}

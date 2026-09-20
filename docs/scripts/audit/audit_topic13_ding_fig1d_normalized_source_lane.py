@@ -10,13 +10,13 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-AUDIT_REL = "docs/core/artifacts/ding_2022_source_mapping_audit.json"
+AUDIT_REL = "docs/core/07_artifacts/provenance/ding_2022_source_mapping_audit.json"
 MANIFEST_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_fig1d_digitized_manifest.json"
 CSV_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_fig1d_digitized.csv"
 FIGURE_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ding_2022_fig1.png"
-MAPPING_REL = "docs/core/artifacts/ding_2022_fig1d_series_mapping.json"
+MAPPING_REL = "docs/core/07_artifacts/archive/ding_2022_fig1d_series_mapping.json"
 PACKAGE_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_second_sound_source_package.json"
-OUT = ROOT / "docs/core/artifacts/t13_ding_fig1d_normalized_source_lane_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_ding_fig1d_normalized_source_lane_audit.json"
 
 
 def load(rel: str) -> dict[str, Any]:

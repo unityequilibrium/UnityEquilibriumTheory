@@ -11,7 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 FORMULA = ROOT / "docs/topics/0.10_Fluid_Dynamics_Chaos/FORMULA_AUDIT.md"
 BENCHMARK = ROOT / "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_benchmark_validation.json"
-OUT = ROOT / "docs/core/artifacts/topic_0_10_standard_comparator_formula_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/correspondence/topic_0_10_standard_comparator_formula_audit.json"
 
 
 def main() -> int:

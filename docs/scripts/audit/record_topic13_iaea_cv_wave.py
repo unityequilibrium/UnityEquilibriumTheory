@@ -8,10 +8,10 @@ ROOT = Path(__file__).resolve().parents[3]
 TOPIC = ROOT / "docs/topics/0.13_Thermodynamic_Bridge"
 RAW = TOPIC / "Data/03_Research/raw/iaea_graphite_handbook_2017.pdf"
 PACKAGE = TOPIC / "Data/03_Research/iaea_graphite_handbook_constant_volume_source_package.json"
-AUDIT = ROOT / "docs/core/artifacts/t13_iaea_graphite_constant_volume_source_audit.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_iaea_graphite_constant_volume_source_audit.json"
 FULL = TOPIC / "Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-REGISTER = ROOT / "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY = ROOT / "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 
 
 def digest(path: Path) -> str:
@@ -53,7 +53,7 @@ CLAIM_BOUNDARY: Source-traceable IAEA table-derived manufactured-graphite mass-s
 
 Raw handbook: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/iaea_graphite_handbook_2017.pdf` (`{raw_hash}`).
 Source package: `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_graphite_handbook_constant_volume_source_package.json` (`{package_hash}`).
-Audit: `docs/core/artifacts/t13_iaea_graphite_constant_volume_source_audit.json` (`{audit_hash}`).
+Audit: `docs/core/07_artifacts/topic13/t13_iaea_graphite_constant_volume_source_audit.json` (`{audit_hash}`).
 
 Table 4.11 supplies a manufactured-graphite table-derived mass-specific
 lattice `c_v` at 300 K. The probable error in `c_p` is retained as such;

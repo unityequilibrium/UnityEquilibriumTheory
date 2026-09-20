@@ -15,6 +15,7 @@ from docs.core.uet_resource_selection import (  # noqa: E402
     ResourceSelectionConfig,
     simulate_resource_selection,
 )
+from docs.core.core_paths import canonical_artifact_path  # noqa: E402
 
 
 def _run(config: ResourceSelectionConfig) -> dict:
@@ -247,7 +248,7 @@ def main() -> int:
         "unit_lane": "normalized",
         "physical_mapping_status": "OPEN",
         "formula_ids": [row["formula_id"] for row in artifact["formula_audit"]],
-        "verifier_artifact": "docs/core/artifacts/resource_selection_dynamic_game_verification.json",
+        "verifier_artifact": "docs/core/07_artifacts/provenance/resource_selection_dynamic_game_verification.json",
         "no_intentionality": True,
         "no_parameter_fitting": True,
         "control_experiment_status": "PASS_COST_AND_INTERACTION_SEPARATED",
@@ -255,7 +256,9 @@ def main() -> int:
         "claim_boundary": "candidate non-agentic interaction-selection comparator; simulation-only",
         "next_controller": artifact["next_controller"],
     }
-    (ROOT / "core" / "artifacts" / "resource_selection_dynamic_game_contract.json").write_text(
+    canonical_artifact_path(
+        "resource_selection_dynamic_game_contract.json", "provenance"
+    ).write_text(
         json.dumps(contract, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )

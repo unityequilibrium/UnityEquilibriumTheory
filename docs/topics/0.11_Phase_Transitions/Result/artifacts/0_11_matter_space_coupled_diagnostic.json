@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "artifact": "0_11_matter_space_coupled_diagnostic",
   "topic": "0.11_Phase_Transitions",
-  "generated_at": "2026-07-26T05:09:44.976742+00:00",
+  "generated_at": "2026-09-17T21:30:59.214605+00:00",
   "status": "INTERNAL_DIAGNOSTIC",
   "internal_gate_status": "PASS",
   "dependency_status": "BLOCKED",
@@ -411,14 +411,14 @@
   },
   "dependencies": {
     "matter_space_core": {
-      "path": "docs/core/artifacts/matter_space_variational_verification.json",
-      "sha256": "e5ae26fb40ff6cd4a0d1d0c86576e91218294e683902bb60b6afb0b2596cc62c",
+      "path": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
+      "sha256": "ad8b6671df932457007b4f293ca3962890718c633204445467a2b5877f81c4b9",
       "status": "FAIL",
       "controlling_blocker": "prearrival_leakage"
     },
     "topic_closure_status": {
       "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_closure_status_audit.json",
-      "sha256": "c05a12df426889fcb260f5aba68feac635be71221d39c2ff32395e9d5f322946",
+      "sha256": "1d7c3f6b9de4c0f1d7579d3edfd23f9186f9b8bd189f2013e8095d6cecd2dcd1",
       "status": "WARN",
       "controlling_blocker": "ch_finite_k_replicate_temporal_acquisition_plan_defined_execution_open"
     }
@@ -426,7 +426,7 @@
   "outputs": {
     "profiles_csv": {
       "path": "docs/topics/0.11_Phase_Transitions/Result/03_show_Result/matter_space_coupled_profiles.csv",
-      "sha256": "97f2ff60b225027d71f0b3f42d1ba692cf70caeed57ce7da9ede66c16e03cb92"
+      "sha256": "b2811f60d371e5a2a71ffa9a7fccd2265cc6f3a8d895446b246d8aae4a29add6"
     },
     "figures": [
       {
@@ -454,7 +454,7 @@
         "sha256": "c73e0695d00fe3ca65f3cafd9eb42bbe6ef1330bbfaf90ea77aded6abe5a6ff7"
       }
     ],
-    "script_sha256": "b188a3cd4cc1cdbd0c001d4cf57cd4258e9180712c32bfc6f5ce7550a98b86cf"
+    "script_sha256": "c2bb36cf8fdb25847c72bac41b85fad3bafe450a8901d0e981c7706e837d445d"
   },
   "run_integrity": {
     "unit_lane": "normalized",

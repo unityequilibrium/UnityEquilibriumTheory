@@ -18,7 +18,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/uet_all_waves_closure.json"
+OUT = ROOT / "docs/core/07_artifacts/gates/uet_all_waves_closure.json"
 
 
 def rel(path: Path) -> str:
@@ -43,15 +43,15 @@ def evidence(path_text: str) -> dict[str, Any]:
 
 
 def build() -> dict[str, Any]:
-    foundation_path = ROOT / "docs/core/artifacts/uet_foundation_dependency_gate.json"
-    wave_program_path = ROOT / "docs/core/artifacts/uet_wave3_wave10_research_program.json"
-    extended_path = ROOT / "docs/core/artifacts/uet_foundation_extended_wave_closure.json"
-    pilot_sync_path = ROOT / "docs/core/artifacts/matter_space_topic_pilot_sync.json"
+    foundation_path = ROOT / "docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json"
+    wave_program_path = ROOT / "docs/core/07_artifacts/archive/uet_wave3_wave10_research_program.json"
+    extended_path = ROOT / "docs/core/07_artifacts/gates/uet_foundation_extended_wave_closure.json"
+    pilot_sync_path = ROOT / "docs/core/07_artifacts/archive/matter_space_topic_pilot_sync.json"
     foundation = load(foundation_path)
     wave_program = load(wave_program_path)
     extended = load(extended_path)
     pilot_sync = load(pilot_sync_path)
-    particle_gate_path = ROOT / "docs/core/artifacts/particle_dirac_program_gate.json"
+    particle_gate_path = ROOT / "docs/core/07_artifacts/gates/particle_dirac_program_gate.json"
     particle_gate = load(particle_gate_path)
 
     planned: list[dict[str, Any]] = []
@@ -103,7 +103,7 @@ def build() -> dict[str, Any]:
             "physics_status": "DEFERRED_BLOCKED",
             "controlling_blocker": particle_gate.get("controlling_blocker", "Lorentz-covariant action, spinor/current map, CPT and detector correspondence are not established"),
             "claim_ceiling": "particle, Dirac, neutrino, positron and antimatter identities remain deferred/not established",
-            "evidence": [evidence("docs/core/artifacts/particle_dirac_program_gate.json")],
+            "evidence": [evidence("docs/core/07_artifacts/gates/particle_dirac_program_gate.json")],
         }
     )
     planned.sort(key=lambda item: item["wave"])
@@ -161,7 +161,7 @@ def main() -> int:
         return 1
     if not args.no_write:
         OUT.parent.mkdir(parents=True, exist_ok=True)
-        OUT.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        OUT.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
     if args.json:
         print(json.dumps(result, indent=2, ensure_ascii=False))
     else:

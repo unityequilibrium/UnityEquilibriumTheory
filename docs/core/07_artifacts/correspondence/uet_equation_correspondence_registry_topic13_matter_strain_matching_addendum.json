@@ -1,0 +1,110 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "CONDITIONAL_EXTERNAL_SOURCE_NOT_ACCEPTED_UET_ACTION",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "equation_entries": [
+    {
+      "ontology": {
+        "Phi": "original response displacement; not temperature",
+        "chi": "canonical O(2) matter doublet, not identified with graphite phonons",
+        "strain": "external material mass-source probe",
+        "C": "unchanged collective coordinate",
+        "R_gen_R_obs": "excluded from state"
+      },
+      "units": {
+        "T_phi_eta": "E",
+        "x_D": "E^2",
+        "F": "E^4",
+        "F_x": "E^2",
+        "F_xx": "1",
+        "F_xT": "E",
+        "G": "E^3",
+        "r": "E^2",
+        "c": "E^3"
+      },
+      "unit_lane": "natural_thermal_increment_not_SI",
+      "derivation_class": "Gaussian_thermal_source_matching_with_external_deformation_ansatz",
+      "observable": "thermal increments to mixed response/strain/entropy coefficients",
+      "data_role": "SYNTHETIC_INTERNAL_MATCHING_NO_CALIBRATION",
+      "verification_status": "PASS_CONDITIONAL_THERMAL_SOURCE_MATCHING",
+      "controlling_blocker": "physical_material_mass_source_and_vacuum_matching_missing",
+      "claim_boundary": "Thermal Gaussian increment under an external mass-source ansatz only. Not physical graphite G or alpha, accepted UET action extension, pump calibration, vacuum/interaction closure, transport or Full Topic 13.",
+      "physical_dependency_unlock": false,
+      "equation_id": "uet.o2.thermal.matter_strain_susceptibility_matching",
+      "version": "1",
+      "classification": "conditional_external_source_matching",
+      "relation_or_code_path": {
+        "mass_source": "x=(m_raw^2-epsilon_nc*h*delta_phi+D_raw:eps)/A_chi=x0-eta*delta_phi+D:eps",
+        "thermal_free_energy": "F_th=2*T*integral dp*p^2/(2*pi^2)*log(1-exp(-sqrt(p^2+x)/T))",
+        "coupling": "G=-eta*D*F_xx; r=eta*F_xT",
+        "companion_terms": "delta_K=D*D^T*F_xx; delta_a=eta^2*F_xx; delta_beta=-D*F_xT; delta_c=-T*F_TT",
+        "entropy": "ds=beta:eps+c*dT/T+r*delta_phi",
+        "isentropic_map": "dT/delta_phi=T*(b^T*A^-1*h-r)/(c+T*b^T*A^-1*b)"
+      },
+      "standard_physics_counterpart": "Gaussian thermal free-energy source derivatives",
+      "variables": {
+        "Phi": "original response displacement; not temperature",
+        "chi": "canonical O(2) matter doublet, not identified with graphite phonons",
+        "strain": "external material mass-source probe",
+        "C": "unchanged collective coordinate",
+        "R_gen_R_obs": "excluded from state"
+      },
+      "mathematical_role": "reciprocal mixed susceptibility and complete Hessian matching",
+      "observable_mapping": "thermal increments to mixed response/strain/entropy coefficients",
+      "parameter_dimensions": {
+        "T_phi_eta": "E",
+        "x_D": "E^2",
+        "F": "E^4",
+        "F_x": "E^2",
+        "F_xx": "1",
+        "F_xT": "E",
+        "G": "E^3",
+        "r": "E^2",
+        "c": "E^3"
+      },
+      "source_or_origin": "existing matter coupling plus declared external strain-mass deformation",
+      "assumptions": [
+        "normal chi=0",
+        "mu=0",
+        "positive mass squared",
+        "fixed integration measure",
+        "thermal Gaussian increment only"
+      ],
+      "symmetry_and_conservation": "symmetric source Hessian; thermodynamic Maxwell reciprocity; state meanings unchanged",
+      "limiting_cases": [
+        "eta=0",
+        "D=0 retains r",
+        "matter-field reparameterization",
+        "natural-unit scaling"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_matter_strain_susceptibility.py"
+      ],
+      "verifier_paths": [
+        "docs/core/test/test_topic13_matter_strain_susceptibility.py",
+        "docs/scripts/audit/audit_topic13_matter_strain_susceptibility.py"
+      ],
+      "evidence_class": "INTERNAL_CONDITIONAL_THERMAL_DERIVATION",
+      "proof_status": "analytic source differentiation with independent numerical checks; physical matching open",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_matter_strain_susceptibility_matching_audit.json",
+          "sha256": "459dc674eea69bb28d38898fb7ae13b551ad0fa8a1e2b250c1d3503f617e3100"
+        }
+      ],
+      "downstream_dependencies": [
+        "joint_G_r_dynamic_interface"
+      ],
+      "dependency_role": "conditional_material_matching",
+      "failure_mode": [
+        "physical_UET_matter_to_material_excitation_identification_missing",
+        "independent_deformation_potential_D_and_Phi_Z_missing",
+        "vacuum_subtraction_and_no_double_counting_material_match_missing",
+        "complete_G_r_reciprocal_dynamic_and_pump_initialization_missing"
+      ],
+      "next_hardening_step": "identify physical mass-deformation source and carry G/r together without double counting"
+    }
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}

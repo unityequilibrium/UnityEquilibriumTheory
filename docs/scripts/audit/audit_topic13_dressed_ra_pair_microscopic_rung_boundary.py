@@ -11,8 +11,8 @@ from docs.scripts.audit.audit_topic13_action_normalized_elastic_scattering impor
 from docs.scripts.audit import audit_topic13_charged_one_loop_current_vertex as current
 
 ROOT=Path(__file__).resolve().parents[3]
-OUT=ROOT/"docs/core/artifacts/t13_dressed_ra_pair_microscopic_rung_boundary_audit.json"
-REGISTRY_OUT=ROOT/"docs/core/artifacts/uet_equation_correspondence_registry_topic13_ra_pair_rung_boundary_addendum.json"
+OUT=ROOT/"docs/core/07_artifacts/topic13/t13_dressed_ra_pair_microscopic_rung_boundary_audit.json"
+REGISTRY_OUT=ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_ra_pair_rung_boundary_addendum.json"
 EQUATION_ID="uet.o2.thermal.dressed_ra_pair_microscopic_rung_boundary"
 CFG=current.CFG
 
@@ -76,10 +76,10 @@ def main():
     paths=["docs/scripts/audit/audit_topic13_dressed_ra_pair_microscopic_rung_boundary.py",
         "docs/core/test/test_topic13_dressed_ra_pair_microscopic_rung_boundary.py",
         "docs/scripts/audit/audit_topic13_action_normalized_elastic_scattering.py",
-        "docs/core/uet_o2_action_derived_transition_kernel.py","docs/core/uet_o2_contact_sk_transition_vertex_match.py"]
+        "docs/core/02_equations/o2/uet_o2_action_derived_transition_kernel.py","docs/core/02_equations/o2/uet_o2_contact_sk_transition_vertex_match.py"]
     sha=lambda p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest()
-    priors=["docs/core/artifacts/t13_retarded_ra_mixed_current_vertex_audit.json",
-        "docs/core/artifacts/t13_microscopic_current_ladder_matching_boundary_audit.json"]
+    priors=["docs/core/07_artifacts/topic13/t13_retarded_ra_mixed_current_vertex_audit.json",
+        "docs/core/07_artifacts/topic13/t13_microscopic_current_ladder_matching_boundary_audit.json"]
     artifact={"schema_version":"t13-dressed-ra-pair-rung-boundary-v1","major_result_id":"T13_DRESSED_RA_PAIR_MICROSCOPIC_RUNG_BOUNDARY",
         "topic":"0.13_Thermodynamic_Bridge","closure_level":"CLOSED_FOR_LANE","closure_disposition":"CLOSED_AS_LEGACY_RUNG_NO_GO",
         "verification_status":"PASS_RA_PAIR_MATCH_LEGACY_RUNG_BLOCKED" if all(checks.values()) else "WARN_RA_PAIR_RUNG_BOUNDARY",
@@ -120,7 +120,7 @@ def main():
         "downstream_dependencies":[],"dependency_role":"microscopic_ladder_controller","physical_dependency_unlock":False,
         "failure_mode":artifact["open_blockers"],"next_hardening_step":artifact["report"]["NEXT_ACTION"]})
     REGISTRY_OUT.write_text(json.dumps({"schema_version":"uet-equation-registry-addendum-v1","status":"CANDIDATE_DIAGNOSTIC_NOT_MERGED",
-        "extends":"docs/core/artifacts/uet_equation_correspondence_registry.json","equation_entries":[entry],"full_core_unlock":False,"claim_promotion":False},indent=2,allow_nan=False)+"\n",encoding="utf-8")
+        "extends":"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json","equation_entries":[entry],"full_core_unlock":False,"claim_promotion":False},indent=2,allow_nan=False)+"\n",encoding="utf-8")
     print(json.dumps({"status":artifact["verification_status"],"checks":checks,"rung_rows":rung_rows},indent=2))
     return 0 if all(checks.values()) else 1
 

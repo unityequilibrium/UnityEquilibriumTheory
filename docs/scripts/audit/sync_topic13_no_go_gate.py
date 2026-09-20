@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 GATE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-NO_GO = ROOT / "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json"
+NO_GO = ROOT / "docs/core/07_artifacts/archive/conserved_c_finite_cone_no_go_assessment.json"
 
 
 def main() -> int:
@@ -17,8 +17,8 @@ def main() -> int:
     no_go = json.loads(NO_GO.read_text(encoding="utf-8-sig"))
     no_go_path = NO_GO.relative_to(ROOT).as_posix()
     no_go_hash = hashlib.sha256(NO_GO.read_bytes()).hexdigest()
-    telegraph_path = ROOT / "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json"
-    coupled_path = ROOT / "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json"
+    telegraph_path = ROOT / "docs/core/07_artifacts/verification/matter_space_conserved_flux_telegraph_verification.json"
+    coupled_path = ROOT / "docs/core/07_artifacts/verification/matter_space_flux_phi_coupled_verification.json"
     telegraph = json.loads(telegraph_path.read_text(encoding="utf-8-sig"))
     coupled = json.loads(coupled_path.read_text(encoding="utf-8-sig"))
     named_finite_cone_branch_pass = telegraph.get("status") == "PASS" and telegraph.get("major_result", {}).get("closure_level") == "CLOSED_FOR_LANE"

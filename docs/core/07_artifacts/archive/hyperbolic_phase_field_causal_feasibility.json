@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.0",
+  "artifact": "hyperbolic_phase_field_causal_feasibility",
+  "generated_at": "2026-09-16T08:39:48+00:00",
+  "topic": "docs/core UET GR non-closed response",
+  "version": "wave8_v1",
+  "benchmark_role": "analytic_gate",
+  "method_label": "fixed_light_cone_domain_feasibility",
+  "audit_status": "PASS",
+  "evidence_status": "PARTIAL_ANALYTIC_CAUSAL_BRIDGE",
+  "claim_class": "B",
+  "claim": "normalized analytic fixed-light-cone feasibility, an exact no-common-limit result for parabolic recovery, and a local mobility-one current-law map",
+  "source_provenance": {
+    "status": "PASS",
+    "records": [
+      {
+        "path": "docs\\data\\external\\relativistic_transport\\jain_kovtun_2024\\source_record.json",
+        "title": "Schwinger-Keldysh effective field theory for stable and causal relativistic hydrodynamics",
+        "doi": "10.1007/JHEP01(2024)162",
+        "arxiv_id": "2309.00511",
+        "benchmark_role": "EXTERNAL_COVARIANT_TRANSPORT_READINESS_SOURCE_NOT_UET_DERIVATION",
+        "checks": {
+          "doi_matches": true,
+          "arxiv_matches": true,
+          "archive_hash_matches_inspection": true,
+          "archive_size_matches_inspection": true,
+          "raw_source_not_committed": true,
+          "required_locators_present": true,
+          "claim_boundary_present": true
+        },
+        "status": "PASS"
+      },
+      {
+        "path": "docs\\data\\external\\relativistic_transport\\crossley_glorioso_liu_2017\\source_record.json",
+        "title": "Effective field theory of dissipative fluids",
+        "doi": "10.1007/JHEP09(2017)095",
+        "arxiv_id": "1511.03646",
+        "benchmark_role": "EXTERNAL_DISSIPATIVE_EFT_READINESS_SOURCE_NOT_UET_DERIVATION",
+        "checks": {
+          "doi_matches": true,
+          "arxiv_matches": true,
+          "archive_hash_matches_inspection": true,
+          "archive_size_matches_inspection": true,
+          "raw_source_not_committed": true,
+          "required_locators_present": true,
+          "claim_boundary_present": true
+        },
+        "status": "PASS"
+      }
+    ],
+    "sourced_comparator_prerequisite": {
+      "artifact": "docs\\core\\07_artifacts\\verification\\hyperbolic_phase_field_external_comparator_verification.json",
+      "audit_status": "PASS",
+      "evidence_status": "PARTIAL_EXTERNAL_COMPARATOR",
+      "passed": true
+    }
+  },
+  "symbolic": {
+    "curvature_domain_bound": "min(alpha+g_second)=alpha-1; max(alpha+g_second)=alpha+3*C_max^2-1",
+    "strict_hyperbolicity": "alpha_penalty > 1",
+    "matter_cone_bound": "tau_flux >= (alpha_penalty+3*C_max^2-1)/c_hat^2",
+    "auxiliary_cone_bound": "beta_wave >= gamma_gradient/c_hat^2",
+    "parabolic_fixed_cone_compatibility": {
+      "status": "ANALYTIC_NO_COMMON_EXACT_LIMIT",
+      "scope": "normalized_external_comparator_on_symmetric_amplitude_domain",
+      "max_abs_C": 1.25,
+      "normalized_light_speed": 1.0,
+      "fixed_cone_lower_bound": "tau_flux >= (alpha_penalty + 3*max_abs_C**2 - 1) / c_hat**2",
+      "parabolic_target": "alpha_penalty -> infinity and tau_flux -> 0",
+      "asymptotic_consequence": "tau_flux_lower_bound -> infinity as alpha_penalty -> infinity",
+      "common_exact_sequence_exists": false,
+      "allowed_interpretation": "retain finite relaxation/auxiliary dynamics, or use parabolic Cahn-Hilliard only as a long-time low-wavenumber approximation",
+      "forbidden_generalization": "this does not rule out all causal phase-field completions"
+    },
+    "local_current_map": {
+      "definition": "J=q/tau_flux",
+      "source_law": "q_t+grad(mu)=-q/tau_flux",
+      "mapped_law": "tau_flux*J_t+J=-grad(mu)",
+      "mobility": 1.0
+    }
+  },
+  "numeric": {
+    "random_feasible_cases": 64,
+    "maximum_dense_speed_residual": 0.0,
+    "maximum_interior_speed_to_cone_ratio": 0.9759000729485333,
+    "all_negative_controls_rejected": true,
+    "boundary_saturation": {
+      "minimum_shifted_curvature": 0.5,
+      "maximum_shifted_curvature": 5.1875,
+      "strict_hyperbolicity_margin": 0.5,
+      "max_abs_C": 1.25,
+      "normalized_light_speed": 1.0,
+      "strictly_hyperbolic_on_domain": true,
+      "minimum_tau_flux_for_cone": 5.1875,
+      "minimum_beta_wave_for_cone": 0.2,
+      "matter_bound_formula": "tau_flux >= (alpha_penalty + 3*max_abs_C**2 - 1) / c_hat**2",
+      "auxiliary_bound_formula": "beta_wave >= gamma_gradient / c_hat**2",
+      "status": "PASS_NORMALIZED_FIXED_LIGHT_CONE_DOMAIN",
+      "tau_flux": 5.1875,
+      "beta_wave": 0.2,
+      "tau_margin": 0.0,
+      "beta_margin": 0.0,
+      "matter_characteristic_speed_max": 1.0,
+      "auxiliary_characteristic_speed": 1.0,
+      "maximum_characteristic_speed": 1.0,
+      "matter_family_within_cone": true,
+      "auxiliary_family_within_cone": true,
+      "within_fixed_light_cone": true,
+      "parameter_fitting": false
+    },
+    "source_scaling_sequence": {
+      "alpha_values": [
+        5.0,
+        10.0,
+        20.0,
+        40.0
+      ],
+      "tau_values": [
+        0.04000000000000001,
+        0.010000000000000002,
+        0.0025000000000000005,
+        0.0006250000000000001
+      ],
+      "beta_values": [
+        0.04000000000000001,
+        0.010000000000000002,
+        0.0025000000000000005,
+        0.0006250000000000001
+      ],
+      "gamma_values": [
+        0.2,
+        0.1,
+        0.05,
+        0.025
+      ],
+      "max_abs_C": 1.25,
+      "normalized_light_speed": 1.0,
+      "minimum_tau_values": [
+        8.6875,
+        13.6875,
+        23.6875,
+        43.6875
+      ],
+      "minimum_beta_values": [
+        0.2,
+        0.1,
+        0.05,
+        0.025
+      ],
+      "matter_characteristic_speeds": [
+        14.737282653189494,
+        36.99662146737185,
+        97.33961166965892,
+        264.3860813280457
+      ],
+      "auxiliary_characteristic_speeds": [
+        2.2360679774997894,
+        3.162277660168379,
+        4.472135954999579,
+        6.324555320336758
+      ],
+      "maximum_characteristic_speeds": [
+        14.737282653189494,
+        36.99662146737185,
+        97.33961166965892,
+        264.3860813280457
+      ],
+      "strict_hyperbolicity": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "matter_cone_pass": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "auxiliary_cone_pass": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "feasible": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "all_feasible": false,
+      "tau_violation_factors": [
+        217.18749999999997,
+        1368.7499999999998,
+        9474.999999999998,
+        69899.99999999999
+      ],
+      "beta_violation_factors": [
+        4.999999999999999,
+        9.999999999999998,
+        19.999999999999996,
+        39.99999999999999
+      ]
+    },
+    "generic_parabolic_probe": {
+      "alpha_values": [
+        4.0,
+        16.0,
+        64.0,
+        256.0,
+        1024.0
+      ],
+      "tau_values": [
+        0.25,
+        0.0625,
+        0.015625,
+        0.00390625,
+        0.0009765625
+      ],
+      "beta_values": [
+        0.0625,
+        0.00390625,
+        0.000244140625,
+        1.52587890625e-05,
+        9.5367431640625e-07
+      ],
+      "gamma_values": [
+        0.25,
+        0.0625,
+        0.015625,
+        0.00390625,
+        0.0009765625
+      ],
+      "max_abs_C": 1.25,
+      "normalized_light_speed": 1.0,
+      "minimum_tau_values": [
+        7.6875,
+        19.6875,
+        67.6875,
+        259.6875,
+        1027.6875
+      ],
+      "minimum_beta_values": [
+        0.25,
+        0.0625,
+        0.015625,
+        0.00390625,
+        0.0009765625
+      ],
+      "matter_characteristic_speeds": [
+        5.545268253204709,
+        17.74823934929885,
+        65.81793068761733,
+        257.83715791173313,
+        1025.8420931118005
+      ],
+      "auxiliary_characteristic_speeds": [
+        2.0,
+        4.0,
+        8.0,
+        16.0,
+        32.0
+      ],
+      "maximum_characteristic_speeds": [
+        5.545268253204709,
+        17.74823934929885,
+        65.81793068761733,
+        257.83715791173313,
+        1025.8420931118005
+      ],
+      "strict_hyperbolicity": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "matter_cone_pass": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "auxiliary_cone_pass": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "feasible": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "all_feasible": false,
+      "tau_violation_factors": [
+        30.75,
+        315.0,
+        4332.0,
+        66480.0,
+        1052352.0
+      ],
+      "beta_violation_factors": [
+        4.0,
+        16.0,
+        64.0,
+        256.0,
+        1024.0
+      ]
+    },
+    "accuracy_causality_tradeoff": {
+      "alpha_values": [
+        8.0,
+        32.0,
+        128.0,
+        512.0
+      ],
+      "relative_chemical_errors": [
+        0.043907067019773226,
+        0.012188348089927727,
+        0.003133783574217407,
+        0.0007890620983941193
+      ],
+      "minimum_causal_tau_values": [
+        11.6875,
+        35.6875,
+        131.6875,
+        515.6875
+      ],
+      "chemical_error_strictly_decreases": true,
+      "minimum_causal_tau_strictly_increases": true,
+      "interpretation": "better quasistatic Cahn-Hilliard chemical accuracy requires larger alpha while the fixed-cone tau lower bound grows"
+    },
+    "local_current_map_max_abs_residual": 1.3322676295501878e-15
+  },
+  "achieved_gates": {
+    "external_source_provenance": "PASS",
+    "exact_symmetric_domain_curvature_bounds": "PASS",
+    "fixed_light_cone_parameter_inequalities": "PASS",
+    "finite_parameter_feasible_controls": "PASS",
+    "exact_parabolic_fixed_cone_no_common_limit": "PASS",
+    "causal_accuracy_tradeoff": "PASS",
+    "external_q_to_local_current_law": "PASS",
+    "trace_absent_from_physical_map": "PASS"
+  },
+  "blocked_gates": {
+    "source_order_parameter_to_noether_density_map": "BLOCKED",
+    "uet_native_covariant_phase_field_action": "BLOCKED",
+    "classical_entropy_current_and_dissipative_bianchi_closure": "BLOCKED",
+    "closed_time_path_kms_transport_matching": "BLOCKED",
+    "curved_3p1_well_posed_solver": "BLOCKED",
+    "system_specific_si_map": "BLOCKED",
+    "external_numerical_benchmark_replication": "BLOCKED",
+    "physical_validation": "BLOCKED"
+  },
+  "source_hashes": {
+    "docs\\core\\02_equations\\matter_space\\uet_hyperbolic_phase_field_bridge.py": "8902483bb56bb0ceb0f1cd21a2b27766378890531cb4226d392d275ff7e63e05",
+    "docs\\core\\02_equations\\matter_space\\uet_hyperbolic_phase_field.py": "f03b8907a606f3b8937556c32ea5f01d9880787aba193edccf53ffa5f1fbb74a",
+    "docs\\core\\02_equations\\covariant\\uet_covariant_diffusion.py": "a267b89e39db4a8dfac56e71a070539a9da05a55b8bb8b22216e7fd1b839bc53",
+    "docs\\core\\01_contracts\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "1609cfdada2ad9e67ebcb8e9ae53f2f3f035fdc70469424e486eb3f7e53c1f86",
+    "docs\\data\\external\\relativistic_transport\\jain_kovtun_2024\\source_record.json": "90c8c7dfe8256da2b1dbe6631d189470800ea8ed7eec228fc9bedf49dd39dbc7",
+    "docs\\data\\external\\relativistic_transport\\crossley_glorioso_liu_2017\\source_record.json": "080912a9861ce6c5df645f35d67ddfc9d7415c42dfd97e12ae0f0fd8007ff6b5"
+  },
+  "input_identity": {
+    "external_comparator_artifact": "docs\\core\\07_artifacts\\verification\\hyperbolic_phase_field_external_comparator_verification.json",
+    "source_records": [
+      "docs\\data\\external\\relativistic_transport\\jain_kovtun_2024\\source_record.json",
+      "docs\\data\\external\\relativistic_transport\\crossley_glorioso_liu_2017\\source_record.json"
+    ]
+  },
+  "thresholds": {
+    "maximum_dense_speed_residual": 1e-12,
+    "maximum_speed_to_cone_ratio": 1.0,
+    "all_negative_controls_rejected": true,
+    "local_current_map_max_abs_residual": 1e-12
+  },
+  "run_contract": {
+    "seed": 811801,
+    "unit_lane": "normalized",
+    "declared_amplitude_domain": "abs(C)<=1.25",
+    "parameter_fitting": false,
+    "trace_backreaction": false,
+    "covariant_derivation": false,
+    "physical_validation": false
+  },
+  "allowed_language": [
+    "fixed-light-cone feasibility inequalities for the normalized comparator",
+    "analytic no-common exact limit for fixed-cone and parabolic recovery",
+    "exact algebraic mobility-one local current-law map",
+    "Cahn-Hilliard as a late-time low-wavenumber approximation"
+  ],
+  "blocked_language": [
+    "all causal phase-field theories are impossible",
+    "the external comparator is a covariant UET derivation",
+    "the source order parameter is already the UET Noether density",
+    "the auxiliary phase is UET space response or information",
+    "Topic 0.11 or 0.19 is validated"
+  ],
+  "notes": [
+    "No parameters are fit to an external dataset.",
+    "The no-common-limit result is restricted to the declared normalized comparator."
+  ],
+  "next_controller": "noether_density_to_phase_field_order_parameter_map_missing"
+}

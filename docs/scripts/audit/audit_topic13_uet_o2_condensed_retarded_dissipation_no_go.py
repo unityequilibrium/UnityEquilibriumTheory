@@ -27,12 +27,12 @@ from docs.core.uet_o2_condensed_retarded_dissipation_no_go import (  # noqa: E40
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_condensed_retarded_dissipation_no_go_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_condensed_retarded_dissipation_no_go.py"
-FLUCTUATION_MODULE = ROOT / "docs/core/uet_o2_condensate_fluctuations.py"
-EOS_MODULE = ROOT / "docs/core/uet_o2_finite_density_eos.py"
-MATTER_MODULE = ROOT / "docs/core/uet_covariant_matter.py"
-RESPONSE_MODULE = ROOT / "docs/core/uet_covariant_response.py"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_condensed_retarded_dissipation_no_go_audit.json"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_condensed_retarded_dissipation_no_go.py"
+FLUCTUATION_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_condensate_fluctuations.py"
+EOS_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_finite_density_eos.py"
+MATTER_MODULE = ROOT / "docs/core/02_equations/covariant/uet_covariant_matter.py"
+RESPONSE_MODULE = ROOT / "docs/core/02_equations/covariant/uet_covariant_response.py"
 
 
 def sha256(path: Path) -> str:
@@ -118,11 +118,11 @@ def main() -> int:
     status = CONDENSED_RETARDED_DISSIPATION_NO_GO_STATUS if not failed else "BLOCKED_CONDENSED_RETARDED_DISSIPATION_NO_GO"
     contract = condensed_retarded_dissipation_contract()
     evidence = [
-        {"path": "docs/core/uet_o2_condensed_retarded_dissipation_no_go.py", "sha256": sha256(MODULE)},
-        {"path": "docs/core/uet_o2_condensate_fluctuations.py", "sha256": sha256(FLUCTUATION_MODULE)},
-        {"path": "docs/core/uet_o2_finite_density_eos.py", "sha256": sha256(EOS_MODULE)},
-        {"path": "docs/core/uet_covariant_matter.py", "sha256": sha256(MATTER_MODULE)},
-        {"path": "docs/core/uet_covariant_response.py", "sha256": sha256(RESPONSE_MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_condensed_retarded_dissipation_no_go.py", "sha256": sha256(MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_condensate_fluctuations.py", "sha256": sha256(FLUCTUATION_MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_finite_density_eos.py", "sha256": sha256(EOS_MODULE)},
+        {"path": "docs/core/02_equations/covariant/uet_covariant_matter.py", "sha256": sha256(MATTER_MODULE)},
+        {"path": "docs/core/02_equations/covariant/uet_covariant_response.py", "sha256": sha256(RESPONSE_MODULE)},
     ]
     artifact = {
         "schema_version": "t13-uet-o2-condensed-retarded-dissipation-no-go-v1",

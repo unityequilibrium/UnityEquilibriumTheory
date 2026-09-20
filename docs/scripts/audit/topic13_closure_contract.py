@@ -118,10 +118,10 @@ MAJOR_RESULT_CONTRACTS: dict[str, dict[str, Any]] = {
         ],
         "blocker_keys": [],
         "evidence_paths": [
-            "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
-            "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
-            "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
-            "docs/core/artifacts/t13_causal_named_branch_core_compatibility.json",
+            "docs/core/07_artifacts/archive/conserved_c_finite_cone_no_go_assessment.json",
+            "docs/core/07_artifacts/verification/matter_space_conserved_flux_telegraph_verification.json",
+            "docs/core/07_artifacts/verification/matter_space_flux_phi_coupled_verification.json",
+            "docs/core/07_artifacts/topic13/t13_causal_named_branch_core_compatibility.json",
         ],
         "required_subresults": [
             {"subresult_id": "conserved_c_local_gradient_no_go", "label": "Conserved-C local-gradient no-go", "required_closure_level": "CLOSED_AS_NO_GO", "gate_key": "causal_full_candidate_or_formal_no_go_branch", "acceptance": "The principal-symbol incompatibility is scoped to the declared baseline and recorded without deleting it."},
@@ -152,9 +152,9 @@ MAJOR_RESULT_CONTRACTS: dict[str, dict[str, Any]] = {
         ],
         "blocker_keys": ["dimensional_phi_to_thermal_observable_map_missing"],
         "evidence_paths": [
-            "docs/core/artifacts/t13_dimensional_bridge_contract_audit.json",
-            "docs/core/artifacts/t13_mp48_phi_e_dimensional_comparator_audit.json",
-            "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
+            "docs/core/07_artifacts/topic13/t13_dimensional_bridge_contract_audit.json",
+            "docs/core/07_artifacts/topic13/t13_mp48_phi_e_dimensional_comparator_audit.json",
+            "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json",
         ],
         "required_subresults": [
             {"subresult_id": "normalized_ttg_measurement_operator", "label": "Normalized TTG measurement operator", "current_status": "CLOSED_FOR_LANE", "acceptance": "The TTG and UET normalized curves use the declared ratio operators with no SI claim."},
@@ -179,9 +179,9 @@ MAJOR_RESULT_CONTRACTS: dict[str, dict[str, Any]] = {
         ],
         "blocker_keys": ["alpha_Phi_K_independent_calibration_missing"],
         "evidence_paths": [
-            "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json",
-            "docs/core/artifacts/t13_alpha_phi_k_identifiability_audit.json",
-            "docs/core/artifacts/t13_base_phi_independent_calibration_requirement.json",
+            "docs/core/07_artifacts/topic13/t13_alpha_phi_k_calibration_candidate_audit.json",
+            "docs/core/07_artifacts/topic13/t13_alpha_phi_k_identifiability_audit.json",
+            "docs/core/07_artifacts/topic13/t13_base_phi_independent_calibration_requirement.json",
         ],
         "required_subresults": [
             {"subresult_id": "alpha_candidate_search_boundary", "label": "Independent alpha candidate search boundary", "evidence_result_ids": ["T13_ALPHA_PHI_K_PAIRED_RECORD_SEARCH"], "required_closure_level": "CLOSED_FOR_LANE", "acceptance": "All screened candidates are recorded and zero eligible paired records is reported without a substitute value."},
@@ -201,9 +201,9 @@ MAJOR_RESULT_CONTRACTS: dict[str, dict[str, Any]] = {
         "acceptance_criteria": ["beta origin is separate from Landauer identity", "field normalization, energy reference, and Kelvin scale are declared", "normalized beta and uncertainty are derived without holdout fitting", "limiting cases and unit closure pass"],
         "blocker_keys": ["normalized_beta_and_SI_scale_correspondence_missing"],
         "evidence_paths": [
-            "docs/core/artifacts/t13_beta_action_normalized_correspondence_no_go.json",
-            "docs/core/artifacts/t13_beta_symbol_separation_noncircularity_audit.json",
-            "docs/core/artifacts/t13_uet_o2_action_thermal_stiffness_beta_audit.json",
+            "docs/core/07_artifacts/topic13/t13_beta_action_normalized_correspondence_no_go.json",
+            "docs/core/07_artifacts/topic13/t13_beta_symbol_separation_noncircularity_audit.json",
+            "docs/core/07_artifacts/topic13/t13_uet_o2_action_thermal_stiffness_beta_audit.json",
         ],
         "required_subresults": [
             {"subresult_id": "natural_beta_action_lane", "label": "Action-origin natural beta/stiffness lane", "evidence_result_ids": ["T13_UET_O2_ACTION_THERMAL_STIFFNESS_BETA_LANE", "T13_THERMAL_RESPONSE_BETA_CONTRACT"], "required_closure_level": "CLOSED_FOR_LANE", "acceptance": "The action-origin coefficient and finite-temperature response functional are recorded with natural-unit limits."},
@@ -223,8 +223,8 @@ MAJOR_RESULT_CONTRACTS: dict[str, dict[str, Any]] = {
         "acceptance_criteria": ["EOS origin and independent variables are explicit", "stability, reciprocity, and Gibbs-Duhem checks pass", "finite-temperature normal component is declared and matched", "physical coefficients, uncertainty, and Phi/SI map are source-backed"],
         "blocker_keys": ["c_v_source_uncertainty_not_closed", "material_regime_mapping_to_TTG_not_closed"],
         "evidence_paths": [
-            "docs/core/artifacts/t13_collective_response_eos_stability_audit.json",
-            "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+            "docs/core/07_artifacts/topic13/t13_collective_response_eos_stability_audit.json",
+            "docs/core/07_artifacts/topic13/t13_flat_thermodynamic_bridge_components_gate.json",
         ],
         "required_subresults": [
             {"subresult_id": "normalized_charge_eos", "label": "Normalized charge-density EOS", "evidence_result_ids": ["T13_COLLECTIVE_RESPONSE_EOS_STABILITY_CONTRACT"], "required_closure_level": "CLOSED_FOR_LANE", "acceptance": "The candidate EOS and independent-variable contract are machine-checked."},
@@ -245,8 +245,8 @@ MAJOR_RESULT_CONTRACTS: dict[str, dict[str, Any]] = {
         "acceptance_criteria": ["constitutive tensor and frame conventions are explicit", "finite-temperature normal and condensed sectors are stated", "physical Kubo coefficient has state, unit, locator, hash, and uncertainty", "stability, causality, and entropy constraints pass without replacing the baseline"],
         "blocker_keys": ["physical_Kubo_coefficient_record_missing"],
         "evidence_paths": [
-            "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
-            "docs/core/artifacts/t13_transport_kms_entropy_status_boundary_audit.json",
+            "docs/core/07_artifacts/topic13/t13_flat_thermodynamic_bridge_components_gate.json",
+            "docs/core/07_artifacts/topic13/t13_transport_kms_entropy_status_boundary_audit.json",
         ],
         "required_subresults": [
             {"subresult_id": "formal_covariant_transport_interface", "label": "Formal covariant transport interface", "evidence_result_ids": ["T13_COVARIANT_TRANSPORT_IMPLEMENTATION_BOUNDARY"], "required_closure_level": "CLOSED_FOR_LANE", "acceptance": "The tensor, frame, and coefficient provenance contract is explicit without a default physical value."},
@@ -267,8 +267,8 @@ MAJOR_RESULT_CONTRACTS: dict[str, dict[str, Any]] = {
         "acceptance_criteria": ["SK contour, retarded/advanced/Keldysh conventions, and KMS sign are explicit", "spectral positivity and FDT checks pass on the declared state", "microscopic response and coefficient provenance are matched", "the interface is linked to the entropy and heat-flux records"],
         "blocker_keys": ["physical_Kubo_coefficient_record_missing"],
         "evidence_paths": [
-            "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
-            "docs/core/artifacts/t13_transport_kms_entropy_status_boundary_audit.json",
+            "docs/core/07_artifacts/topic13/t13_flat_thermodynamic_bridge_components_gate.json",
+            "docs/core/07_artifacts/topic13/t13_transport_kms_entropy_status_boundary_audit.json",
         ],
         "required_subresults": [
             {"subresult_id": "formal_sk_kms_entropy_interface", "label": "Formal SK/KMS/FDT interface", "evidence_result_ids": ["T13_SK_KMS_ENTROPY_INTERFACE_CONTRACT", "T13_UET_O2_OPEN_SYSTEM_SK_KMS_ENTROPY_LANE"], "required_closure_level": "CLOSED_FOR_LANE", "acceptance": "The formal contour, KMS/FDT, retardedness, and positivity interfaces are machine-checked."},
@@ -288,8 +288,8 @@ MAJOR_RESULT_CONTRACTS: dict[str, dict[str, Any]] = {
         "acceptance_criteria": ["entropy current and forces are defined in one frame and unit system", "Onsager/positivity conditions pass", "dissipative-Bianchi or energy-exchange balance closes on the same state", "uncertainty is propagated from heat-flux and thermal-response inputs"],
         "blocker_keys": ["physical_Kubo_coefficient_record_missing"],
         "evidence_paths": [
-            "docs/core/artifacts/t13_transport_kms_entropy_status_boundary_audit.json",
-            "docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json",
+            "docs/core/07_artifacts/topic13/t13_transport_kms_entropy_status_boundary_audit.json",
+            "docs/core/07_artifacts/topic13/t13_flat_thermodynamic_bridge_components_gate.json",
         ],
         "required_subresults": [
             {"subresult_id": "formal_entropy_current_positivity", "label": "Formal entropy-current positivity", "evidence_result_ids": ["T13_UET_O2_FINITE_CHANNEL_ENTROPY_BALANCE_LANE"], "required_closure_level": "CLOSED_FOR_LANE", "acceptance": "The entropy current, force basis, and nonnegative production witness are explicit."},
@@ -309,9 +309,9 @@ MAJOR_RESULT_CONTRACTS: dict[str, dict[str, Any]] = {
         "acceptance_criteria": ["C_src, Delta_u_ph, Delta_Tq, heat flux, and entropy production share one state", "all units and uncertainty propagation are explicit", "the physical heat-current coefficient is source-backed or microscopically matched", "R_gen remains a derived history trace with no unregistered backreaction"],
         "blocker_keys": ["physical_Kubo_coefficient_record_missing", "dimensional_phi_to_thermal_observable_map_missing"],
         "evidence_paths": [
-            "docs/core/artifacts/t13_energy_response_bridge_audit.json",
-            "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
-            "docs/core/artifacts/t13_uet_o2_heat_current_kubo_match_audit.json",
+            "docs/core/07_artifacts/topic13/t13_energy_response_bridge_audit.json",
+            "docs/core/07_artifacts/topic13/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+            "docs/core/07_artifacts/topic13/t13_uet_o2_heat_current_kubo_match_audit.json",
         ],
         "required_subresults": [
             {"subresult_id": "finite_cutoff_heat_current_match", "label": "State-matched finite-cutoff heat-current match", "evidence_result_ids": ["T13_UET_O2_HEAT_CURRENT_KUBO_MATCH"], "required_closure_level": "CLOSED_FOR_LANE", "acceptance": "The natural heat-current response matches the declared covariant moment lane at finite cutoff."},
@@ -332,13 +332,13 @@ MAJOR_RESULT_CONTRACTS: dict[str, dict[str, Any]] = {
         "acceptance_criteria": ["Ding numeric C_src payload or accepted same-regime independent PBTE reproduction", "material/state mapping and mode-resolved row identity", "source-grade uncertainty and convergence package", "data-role separation and hash audit", "Xie 2026 remains locked and unread by calibration/fitting paths"],
         "blocker_keys": ["ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing", "material_regime_mapping_to_TTG_not_closed", "c_v_source_uncertainty_not_closed"],
         "evidence_paths": [
-            "docs/core/artifacts/t13_ding_alternate_public_dataset_discovery_boundary_audit.json",
-            "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
-            "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json",
-            "docs/core/artifacts/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json",
-            "docs/core/artifacts/t13_csrc_source_route_priority_audit.json",
-            "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
-            "docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json",
+            "docs/core/07_artifacts/topic13/t13_ding_alternate_public_dataset_discovery_boundary_audit.json",
+            "docs/core/07_artifacts/topic13/t13_ding_pbte_numeric_input_availability_audit.json",
+            "docs/core/07_artifacts/topic13/t13_independent_csrc_acceptance_contract.json",
+            "docs/core/07_artifacts/topic13/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json",
+            "docs/core/07_artifacts/topic13/t13_csrc_source_route_priority_audit.json",
+            "docs/core/07_artifacts/topic13/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
+            "docs/core/07_artifacts/topic13/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json",
         ],
         "required_subresults": [
             {"subresult_id": "source_identity_and_row_controller", "label": "Source identity and row controller", "evidence_result_ids": ["T13_DING_PBTE_AUTHOR_REQUEST_PACKAGE", "T13_DING_EXPERIMENTAL_HEATING_INPUT_BOUNDARY"], "required_closure_level": "CLOSED_FOR_LANE", "acceptance": "The requested numeric payload fields, locators, units, uncertainty, preprocessing, row identity, and hash are fixed."},

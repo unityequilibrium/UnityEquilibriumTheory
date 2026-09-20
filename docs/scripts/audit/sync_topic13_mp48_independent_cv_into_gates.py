@@ -10,14 +10,14 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-AUDIT_REL = "docs/core/artifacts/t13_mp48_independent_graphite_cv_audit.json"
+AUDIT_REL = "docs/core/07_artifacts/topic13/t13_mp48_independent_graphite_cv_audit.json"
 PACKAGE_REL = (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "mp48_independent_graphite_cv_source_package.json"
 )
 FULL_REL = "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-REGISTER_REL = "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY_REL = "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+REGISTER_REL = "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY_REL = "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 LOG_REL = "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
 LEDGER_REL = "WORK_LEDGER/2026/2026-08-11.md"
 NARROW_DING_BLOCKER = "ding_source_specific_C_src_and_mode_resolved_c_mu_not_available"

@@ -10,11 +10,11 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-ACTION_REL = "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json"
-MODULE_REL = "docs/core/thermal_sk_kms_entropy_contract.py"
+ACTION_REL = "docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json"
+MODULE_REL = "docs/core/03_lanes/thermal/thermal_sk_kms_entropy_contract.py"
 FULL_REL = "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-REGISTER_REL = "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY_REL = "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+REGISTER_REL = "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY_REL = "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 FORMULA_REL = "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md"
 REPORT_REL = "docs/topics/0.13_Thermodynamic_Bridge/FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md"
 LOG_REL = "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"

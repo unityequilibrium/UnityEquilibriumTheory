@@ -1,0 +1,70 @@
+{
+  "major_result_id": "T13_HE4_MATCHING_INDEPENDENCE_BOUNDARY",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "what_is_closed": [
+    "Existing Z matching identity reconstructed; its alpha agreement is algebraic by construction, not an independent physical test"
+  ],
+  "equation_or_mapping": "Z = theta_T * alpha_natural / alpha_external; theta_T * alpha_natural / Z = alpha_external",
+  "units": "theta: K per natural temperature; alpha_external: K per normalized response; Z: normalized response per natural Phi",
+  "derivation_class": "AUDIT_OF_EXISTING_CALIBRATION_MATCHING",
+  "observable": "local normalized He-4 superfluid-fraction coordinate",
+  "data_role": "CALIBRATION_IDENTITY_AUDIT_WITH_SYNTHETIC_RESCALE_PROBES",
+  "verification_status": "MATCHING_IDENTITY_CONFIRMED_PROTOCOL_MATCH_OPEN",
+  "recorded_core_status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+  "recorded_core_status_changed": false,
+  "external_alpha": -1.02237987858849,
+  "Z": -0.017488421860832278,
+  "synthetic_probes": [
+    {
+      "synthetic_natural_alpha_factor": 0.5,
+      "rematched_Z": -0.008744210930416139,
+      "alpha_after_rematching": -1.02237987858849,
+      "alpha_if_Z_frozen": -0.511189939294245
+    },
+    {
+      "synthetic_natural_alpha_factor": 1.0,
+      "rematched_Z": -0.017488421860832278,
+      "alpha_after_rematching": -1.02237987858849,
+      "alpha_if_Z_frozen": -1.02237987858849
+    },
+    {
+      "synthetic_natural_alpha_factor": 2.0,
+      "rematched_Z": -0.034976843721664555,
+      "alpha_after_rematching": -1.02237987858849,
+      "alpha_if_Z_frozen": -2.04475975717698
+    }
+  ],
+  "protocol_comparison": {
+    "external": "equilibrium SVP fraction-versus-temperature finite difference",
+    "natural": "energy Phi derivative at fixed T,mu divided by energy temperature derivative at fixed mu,Phi",
+    "conclusion": "Equality after scale matching does not independently establish that the two perturbation protocols coincide"
+  },
+  "SI_scale_class": "EXTERNAL_SCALE_CONVENTION_PLUS_ACTION_DERIVATION",
+  "natural_branch": "normal",
+  "independence": {
+    "holdout_independent_calibration_not_disputed": true,
+    "independent_action_to_material_prediction_established": false,
+    "failure_of_physical_model_proven": false
+  },
+  "open_blockers": [
+    "independent perturbation-protocol and state-variable correspondence beyond matching",
+    "physical validation of an observable not used to set theta,Z,e0",
+    "clarify normal-component versus whole-He-II interpretation"
+  ],
+  "dependency_unlocked": [
+    "calibrated interface interpretation only; no new physical unlock"
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "evidence_hashes": {
+    "docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json": "13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418",
+    "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json": "1c44ffce6310488bf3a9b2e9cce74d1281fb27a949c1b9d26c6f80d970b7fbd0",
+    "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json": "1a8289aadbed1c069add276bb3f734d6c642174cf2101a664fba4ee5a8bfd021",
+    "docs/core/artifacts/t13_uet_o2_action_thermal_observable_bridge_audit.json": "7ba49d3f629c91f3f88dda6ad717d8928e58439de7517a5979f0a465b9f52585",
+    "docs/core/he4_o2_response_calibration.py": "314a4a100fe7b71cb3dd81051c261a3a1f1ec80d7d4d3a08456a997629f253e3",
+    "docs/scripts/audit/audit_topic13_he4_matching_independence.py": "a6c861831077c56ac6fe263912cefec143ac1ca4b348a05a599a339c2c29340a",
+    "docs/core/test/test_topic13_he4_matching_independence.py": "a2331be909aac4e45ef570f86cf854d383cb049db496d256971b3e87e8120eaa"
+  },
+  "claim_boundary": "Does not invalidate external fraction calibration or forbid EFT matching. Synthetic rescaling is not physical data. Retain bounded composition as recorded, but do not call its matching identity an independent validation. No holdout, calibration retune or gate rewrite."
+}

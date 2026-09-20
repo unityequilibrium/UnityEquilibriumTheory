@@ -12,7 +12,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
 CORE = ROOT / "docs/core"
-OUT = ROOT / "docs/core/artifacts/t13_thermal_bridge_scale_dependency_no_go.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_thermal_bridge_scale_dependency_no_go.json"
 sys.path.insert(0, str(CORE))
 
 from t13_thermal_bridge_scale_dependency import (  # noqa: E402
@@ -27,10 +27,10 @@ def sha256(rel: str) -> str:
 
 def evidence_refs() -> list[dict[str, str]]:
     paths = [
-        "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json",
-        "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
-        "docs/core/artifacts/t13_beta_action_normalized_correspondence_no_go.json",
-        "docs/core/t13_thermal_bridge_scale_dependency.py",
+        "docs/core/07_artifacts/topic13/t13_covariant_field_normalization_identifiability_no_go.json",
+        "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json",
+        "docs/core/07_artifacts/topic13/t13_beta_action_normalized_correspondence_no_go.json",
+        "docs/core/03_lanes/topic13_support/t13_thermal_bridge_scale_dependency.py",
     ]
     return [
         {"path": path, "sha256": sha256(path)}

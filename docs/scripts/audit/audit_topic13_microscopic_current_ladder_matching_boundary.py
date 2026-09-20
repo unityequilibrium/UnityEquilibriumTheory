@@ -26,8 +26,8 @@ from docs.core.uet_o2_heat_current_kubo_match import heat_current_kubo_match_con
 from docs.scripts.audit import audit_topic13_charged_one_loop_current_vertex as current
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_microscopic_current_ladder_matching_boundary_audit.json"
-REGISTRY_OUT = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_current_ladder_boundary_addendum.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_microscopic_current_ladder_matching_boundary_audit.json"
+REGISTRY_OUT = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_current_ladder_boundary_addendum.json"
 EQUATION_ID = "uet.o2.thermal.microscopic_current_ladder_matching_boundary"
 ONE_LOOP_CFG = current.CFG
 
@@ -155,13 +155,13 @@ def main():
     paths = ["docs/scripts/audit/audit_topic13_microscopic_current_ladder_matching_boundary.py",
              "docs/core/test/test_topic13_microscopic_current_ladder_matching_boundary.py",
              "docs/scripts/audit/audit_topic13_charged_one_loop_current_vertex.py",
-             "docs/core/uet_o2_charged_current_correlator.py",
-             "docs/core/uet_o2_continuum_collision_operator.py",
-             "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
-             "docs/core/uet_o2_heat_current_kubo_match.py"]
+             "docs/core/02_equations/o2/uet_o2_charged_current_correlator.py",
+             "docs/core/02_equations/o2/uet_o2_continuum_collision_operator.py",
+             "docs/core/02_equations/o2/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+             "docs/core/02_equations/o2/uet_o2_heat_current_kubo_match.py"]
     sha = lambda p: hashlib.sha256((ROOT / p).read_bytes()).hexdigest()
-    prior_paths = ["docs/core/artifacts/t13_charged_one_loop_current_vertex_audit.json",
-                   "docs/core/artifacts/t13_charged_static_confluent_vertex_audit.json"]
+    prior_paths = ["docs/core/07_artifacts/topic13/t13_charged_one_loop_current_vertex_audit.json",
+                   "docs/core/07_artifacts/topic13/t13_charged_static_confluent_vertex_audit.json"]
     artifact = {
         "schema_version": "t13-microscopic-current-ladder-boundary-v1",
         "major_result_id": "T13_MICROSCOPIC_CURRENT_LADDER_MATCHING_BOUNDARY",
@@ -219,7 +219,7 @@ def main():
         "downstream_dependencies": [], "dependency_role": "narrowed_microscopic_transport_controller", "physical_dependency_unlock": False,
         "failure_mode": artifact["open_blockers"], "next_hardening_step": artifact["report"]["NEXT_ACTION"]})
     REGISTRY_OUT.write_text(json.dumps({"schema_version": "uet-equation-registry-addendum-v1", "status": "CANDIDATE_DIAGNOSTIC_NOT_MERGED",
-        "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json", "equation_entries": [entry],
+        "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json", "equation_entries": [entry],
         "full_core_unlock": False, "claim_promotion": False}, indent=2, allow_nan=False) + "\n", encoding="utf-8")
     print(json.dumps({"status": artifact["verification_status"], "checks": checks,
         "default_action_residuals": parameters["default_residuals"],

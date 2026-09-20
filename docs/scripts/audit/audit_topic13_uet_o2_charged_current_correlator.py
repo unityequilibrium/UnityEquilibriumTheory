@@ -19,10 +19,10 @@ from docs.core.uet_o2_charged_current_correlator import (  # noqa: E402
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_charged_current_correlator_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_charged_current_correlator.py"
-CONTINUUM = ROOT / "docs/core/uet_o2_continuum_collision_operator.py"
-CONTACT = ROOT / "docs/core/uet_o2_contact_sk_transition_vertex_match.py"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_charged_current_correlator_audit.json"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_charged_current_correlator.py"
+CONTINUUM = ROOT / "docs/core/02_equations/o2/uet_o2_continuum_collision_operator.py"
+CONTACT = ROOT / "docs/core/02_equations/o2/uet_o2_contact_sk_transition_vertex_match.py"
 
 
 def sha256(path: Path) -> str:
@@ -105,9 +105,9 @@ def main() -> int:
             "observable": contract["observable"],
             "data_role": contract["data_role"],
             "evidence_artifacts": [
-                {"path": "docs/core/uet_o2_charged_current_correlator.py", "sha256": sha256(MODULE)},
-                {"path": "docs/core/uet_o2_continuum_collision_operator.py", "sha256": sha256(CONTINUUM)},
-                {"path": "docs/core/uet_o2_contact_sk_transition_vertex_match.py", "sha256": sha256(CONTACT)},
+                {"path": "docs/core/02_equations/o2/uet_o2_charged_current_correlator.py", "sha256": sha256(MODULE)},
+                {"path": "docs/core/02_equations/o2/uet_o2_continuum_collision_operator.py", "sha256": sha256(CONTINUUM)},
+                {"path": "docs/core/02_equations/o2/uet_o2_contact_sk_transition_vertex_match.py", "sha256": sha256(CONTACT)},
             ],
             "verification_status": status,
             "open_blockers": open_blockers,

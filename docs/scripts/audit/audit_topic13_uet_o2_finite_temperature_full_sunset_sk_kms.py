@@ -23,10 +23,10 @@ from docs.core.uet_o2_finite_temperature_full_sunset_sk_kms import (  # noqa: E4
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_finite_temperature_full_sunset_sk_kms_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_finite_temperature_full_sunset_sk_kms.py"
-ONE_TO_THREE = ROOT / "docs/core/uet_o2_finite_temperature_sunset_sk_kms.py"
-TWO_TO_TWO = ROOT / "docs/core/uet_o2_finite_temperature_sunset_scattering_sk_kms.py"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_full_sunset_sk_kms_audit.json"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_full_sunset_sk_kms.py"
+ONE_TO_THREE = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_sk_kms.py"
+TWO_TO_TWO = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_scattering_sk_kms.py"
 
 
 def sha256(path: Path) -> str:
@@ -103,9 +103,9 @@ def main() -> int:
         "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
     ]
     evidence = [
-        {"path": "docs/core/uet_o2_finite_temperature_full_sunset_sk_kms.py", "sha256": sha256(MODULE)},
-        {"path": "docs/core/uet_o2_finite_temperature_sunset_sk_kms.py", "sha256": sha256(ONE_TO_THREE)},
-        {"path": "docs/core/uet_o2_finite_temperature_sunset_scattering_sk_kms.py", "sha256": sha256(TWO_TO_TWO)},
+        {"path": "docs/core/02_equations/o2/uet_o2_finite_temperature_full_sunset_sk_kms.py", "sha256": sha256(MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_sk_kms.py", "sha256": sha256(ONE_TO_THREE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_scattering_sk_kms.py", "sha256": sha256(TWO_TO_TWO)},
     ]
     closure_level = "CLOSED_FOR_LANE" if not failed else "OPEN"
     artifact = {

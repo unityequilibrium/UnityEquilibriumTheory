@@ -1,8 +1,10 @@
 {
   "schema_version": "t13-nims-mp990448-phonon-source-package-v1",
   "artifact": "t13_nims_mp990448_phonon_source_package",
-  "generated_at": "2026-08-23",
+  "generated_at": "2026-09-17",
   "status": "PASS_SCOPED_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY",
+  "input_mode": "METADATA_ONLY_PUBLIC_BOUNDARY",
+  "raw_payload_available": false,
   "major_result": {
     "major_result_id": "T13_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY",
     "topic": "0.13_Thermodynamic_Bridge",
@@ -56,6 +58,9 @@
     "claim_boundary": "This result closes only the NIMS MP-990448 payload boundary. It is not a numeric C_src value, not a Ding-regime reproduction, not an independent alpha_Phi_K calibration, not a Phi-to-temperature map, and not Full Topic 13 closure."
   },
   "source": {
+    "input_mode": "METADATA_ONLY_PUBLIC_BOUNDARY",
+    "raw_payload_available": false,
+    "archive_hash_is_expected_when_unavailable": true,
     "title": "Ab-initio phonon calculation for C / P6/mmm (191) / materials id 990448",
     "creator": "Atsushi Togo",
     "publisher": "National Institute for Materials Science",
@@ -73,6 +78,8 @@
     "calculation_description": "phonon band structure, phonon DOS, constant-volume thermal-properties figure, and phonon raw data are presented"
   },
   "inventory": {
+    "input_mode": "METADATA_ONLY_PUBLIC_BOUNDARY",
+    "raw_payload_available": false,
     "archive_sha256": "eea6ca7569c9442754ce5492ddb2f545186f97ad8b82b209d95f1a80b0158767",
     "archive_md5": "72f4a4e4410f140ba4f8c1ae4725a1a4",
     "archive_size_bytes": 133375,
@@ -80,88 +87,49 @@
     "members": [
       {
         "path": "band_structure.png",
-        "size_bytes": 51555,
-        "crc32": "b2b3de6a",
-        "sha256": "a3152e12440bbf61057569357942bcbcd502d0a382719bee6b6b2a01f3e9e68a",
-        "media_type": "image/png"
+        "size_bytes": null,
+        "crc32": null,
+        "sha256": null,
+        "metadata_only": true
       },
       {
         "path": "projected_dos.png",
-        "size_bytes": 28269,
-        "crc32": "9fbf9884",
-        "sha256": "eeec2b0c651025c06f1e33bf8d1d7b374602e66f7640f4c4a60e547e4331271d",
-        "media_type": "image/png"
+        "size_bytes": null,
+        "crc32": null,
+        "sha256": null,
+        "metadata_only": true
       },
       {
         "path": "thermal_properties.png",
-        "size_bytes": 29879,
-        "crc32": "43c6c2d8",
-        "sha256": "a57e87518d9ae6873f80d3056491fe5c979c00d059896569686c00f3b7a4edb3",
-        "media_type": "image/png"
+        "size_bytes": null,
+        "crc32": null,
+        "sha256": null,
+        "metadata_only": true
       },
       {
         "path": "total_dos.png",
-        "size_bytes": 23243,
-        "crc32": "f4b0d29a",
-        "sha256": "06525a4d791525d134c43ca46ec6b49d62c5ecd9761ff57ff2b0c1befbc01ac0",
-        "media_type": "image/png"
+        "size_bytes": null,
+        "crc32": null,
+        "sha256": null,
+        "metadata_only": true
       },
       {
         "path": "phonopy_params.yaml.xz",
-        "size_bytes": 3140,
-        "crc32": "9b400856",
-        "sha256": "92bfbcaa4cec51cbdf85c0d5d167bb8a57718e4d5074ac100378250257007a70",
-        "media_type": "application/x-xz"
+        "size_bytes": null,
+        "crc32": null,
+        "sha256": null,
+        "metadata_only": true
       },
       {
         "path": "vasp-settings.tar.lzma",
-        "size_bytes": 708,
-        "crc32": "3a539953",
-        "sha256": "9632c4429a7dfe5eda8721ee0561364943a75793a733f48a764f9d7f8e9d3738",
-        "media_type": "application/x-xz"
+        "size_bytes": null,
+        "crc32": null,
+        "sha256": null,
+        "metadata_only": true
       }
     ],
-    "phonopy_params": {
-      "compressed_sha256": "92bfbcaa4cec51cbdf85c0d5d167bb8a57718e4d5074ac100378250257007a70",
-      "decompressed_size_bytes": 43379,
-      "top_level_keys": [
-        "phonopy",
-        "physical_unit",
-        "space_group",
-        "supercell_matrix",
-        "primitive_cell",
-        "unit_cell",
-        "supercell",
-        "born_effective_charge",
-        "dielectric_constant",
-        "displacements",
-        "- atom",
-        "- atom"
-      ],
-      "has_force_constants_data": false,
-      "has_frequency_mesh": false,
-      "has_displacements": true,
-      "physical_units_declared": {
-        "length": "angstrom",
-        "force_constants": "eV/angstrom^2"
-      }
-    },
-    "vasp_settings": {
-      "compressed_sha256": "9632c4429a7dfe5eda8721ee0561364943a75793a733f48a764f9d7f8e9d3738",
-      "decompressed_size_bytes": 10240,
-      "members": [
-        "vasp-settings",
-        "vasp-settings/KPOINTS-force",
-        "vasp-settings/KPOINTS-nac",
-        "vasp-settings/PAW_dataset.txt",
-        "vasp-settings/INCAR-relax",
-        "vasp-settings/INCAR-nac",
-        "vasp-settings/POSCAR-unitcell",
-        "vasp-settings/INCAR-force",
-        "vasp-settings/KPOINTS-relax"
-      ],
-      "contains_force_output": false
-    },
+    "phonopy_params": {},
+    "vasp_settings": {},
     "payload_capabilities": {
       "has_force_constants_data": false,
       "has_frequency_mesh": false,
@@ -170,10 +138,12 @@
     }
   },
   "legacy_route": {
+    "input_mode": "METADATA_ONLY_PUBLIC_BOUNDARY",
+    "archive_identity_declared": true,
     "phonondb_mapping_locator": "https://github.com/atztogo/phonondb/blob/main/mdr/phonondb/README.md",
     "legacy_zip_locator": "https://mdr.nims.go.jp/download_all/wd3761563.zip",
     "archive_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nims_mdr_wd3761563_legacy.zip",
-    "archive_exists": true,
+    "archive_exists": false,
     "archive_sha256": "eea6ca7569c9442754ce5492ddb2f545186f97ad8b82b209d95f1a80b0158767",
     "archive_size_bytes": 133375,
     "same_archive_sha256_and_size_as_current_route": true,

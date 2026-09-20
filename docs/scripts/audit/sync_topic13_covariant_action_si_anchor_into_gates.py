@@ -10,10 +10,10 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-ACTION_REL = "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json"
+ACTION_REL = "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json"
 FULL_REL = "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-REGISTER_REL = "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY_REL = "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+REGISTER_REL = "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY_REL = "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 LOG_REL = "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
 LEDGER_REL = "WORK_LEDGER/2026/2026-08-11.md"
 
@@ -33,6 +33,19 @@ def digest(rel: str) -> str:
 def append_unique(items: list[Any], value: Any) -> None:
     if value not in items:
         items.append(value)
+
+
+def replace_evidence(items: list[Any], value: dict[str, Any]) -> None:
+    """Replace the same artifact's legacy-path record with its canonical one."""
+
+    canonical = value["path"]
+    legacy = f"docs/core/artifacts/{Path(canonical).name}"
+    items[:] = [
+        item
+        for item in items
+        if not isinstance(item, dict) or item.get("path") not in {canonical, legacy}
+    ]
+    items.append(value)
 
 
 def evidence(rel: str, summary: dict[str, Any]) -> dict[str, Any]:
@@ -80,14 +93,20 @@ def main() -> int:
             ),
         }
     )
-    append_unique(full.setdefault("evidence_artifacts", []), evidence(ACTION_REL, {"status": action["status"], "data_role": "FORMULA_AND_DEPENDENCY_AUDIT_NOT_CALIBRATION"}))
+    replace_evidence(
+        full.setdefault("evidence_artifacts", []),
+        evidence(ACTION_REL, {"status": action["status"], "data_role": "FORMULA_AND_DEPENDENCY_AUDIT_NOT_CALIBRATION"}),
+    )
     (ROOT / FULL_REL).write_text(json.dumps(full, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
 
     register = load(REGISTER_REL)
     register["generated_at"] = today
     full_entry = next(item for item in register["entries"] if item.get("major_result_id") == "T13_FULL_THERMODYNAMIC_BRIDGE")
     append_unique(full_entry["what_is_closed"], "covariant natural-unit action route identified with explicit SI-anchor and covariant-Phi-to-normalized-Phi blockers")
-    append_unique(full_entry["evidence_artifacts"], evidence(ACTION_REL, {"status": action["status"], "major_result_id": "T13_COVARIANT_ACTION_SI_ANCHOR_ROUTE"}))
+    replace_evidence(
+        full_entry["evidence_artifacts"],
+        evidence(ACTION_REL, {"status": action["status"], "major_result_id": "T13_COVARIANT_ACTION_SI_ANCHOR_ROUTE"}),
+    )
     for item in full_entry["evidence_artifacts"]:
         if item.get("path") == FULL_REL:
             item["sha256"] = digest(FULL_REL)
@@ -132,6 +151,10 @@ def main() -> int:
         for item in route_entry.get("evidence_artifacts", []):
             if item.get("path") == ACTION_REL:
                 item["sha256"] = digest(ACTION_REL)
+        replace_evidence(
+            route_entry["evidence_artifacts"],
+            evidence(ACTION_REL, {"status": action["status"], "major_result_id": "T13_COVARIANT_ACTION_SI_ANCHOR_ROUTE"}),
+        )
     register["next_major_result"] = {
         "major_result_id": "T13_DIMENSIONAL_PHI_ENERGY_ANCHOR",
         "topic": "0.13_Thermodynamic_Bridge",

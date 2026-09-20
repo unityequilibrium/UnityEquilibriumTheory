@@ -10,10 +10,10 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-AUDIT_REL = "docs/core/artifacts/t13_covariant_transport_implementation_boundary_audit.json"
+AUDIT_REL = "docs/core/07_artifacts/topic13/t13_covariant_transport_implementation_boundary_audit.json"
 FULL_REL = "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-REGISTER_REL = "docs/core/artifacts/uet_major_result_closure_register.json"
-DEPENDENCY_REL = "docs/core/artifacts/uet_major_result_dependency_unlock_gate.json"
+REGISTER_REL = "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+DEPENDENCY_REL = "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
 FORMULA_REL = "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md"
 REPORT_REL = "docs/topics/0.13_Thermodynamic_Bridge/FULL_THERMODYNAMIC_BRIDGE_CORE_READY_CURRENT.md"
 LOG_REL = "docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md"
@@ -130,7 +130,7 @@ def main() -> int:
 
 | formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| `T13-025` | `P=P(X,Phi)`; `N^mu=(Zq/lambda)xi^mu`; `T^mu_nu=f_s xi^mu xi^nu+p g^mu_nu`; `KuboRecord -> coefficient` only when matched evidence passes | `docs/core/uet_covariant_superfluid_transport.py`; `docs/core/artifacts/covariant_superfluid_transport_contract.json`; `{AUDIT_REL}` | implementation lane = natural units; frame = Landau; T=0 ideal sector; physical coefficient units must be source-declared | tree-level O(2) action for ideal sector; dissipative values require external/microscopic match | implementation boundary closes; physical coefficient, finite-T normal component, SI lane, and curved 3+1 remain open | prevents synthetic controls, natural-unit defaults, or T=0 ideal formulas from being promoted to physical full transport | a T=0/natural-unit interface can be mislabeled as finite-temperature SI constitutive closure | acquire state-matched Kubo record, derive normal component, and construct SI observable map |
+| `T13-025` | `P=P(X,Phi)`; `N^mu=(Zq/lambda)xi^mu`; `T^mu_nu=f_s xi^mu xi^nu+p g^mu_nu`; `KuboRecord -> coefficient` only when matched evidence passes | `docs/core/02_equations/covariant/uet_covariant_superfluid_transport.py`; `docs/core/07_artifacts/archive/covariant_superfluid_transport_contract.json`; `{AUDIT_REL}` | implementation lane = natural units; frame = Landau; T=0 ideal sector; physical coefficient units must be source-declared | tree-level O(2) action for ideal sector; dissipative values require external/microscopic match | implementation boundary closes; physical coefficient, finite-T normal component, SI lane, and curved 3+1 remain open | prevents synthetic controls, natural-unit defaults, or T=0 ideal formulas from being promoted to physical full transport | a T=0/natural-unit interface can be mislabeled as finite-temperature SI constitutive closure | acquire state-matched Kubo record, derive normal component, and construct SI observable map |
 
 The audit intentionally closes only the implementation boundary. It does not
 emit a physical transport coefficient or use `R_gen` as transport state.

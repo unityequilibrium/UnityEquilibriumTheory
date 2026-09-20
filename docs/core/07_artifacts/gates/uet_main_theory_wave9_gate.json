@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "artifact": "uet_main_theory_wave9_gate",
+  "generated_at": "2026-09-16T08:53:07.790446+00:00",
+  "audit_status": "PASS",
+  "gravity_status": "PASS_ANALYTIC_CONTROLS_CURVED_NUMERICS_BLOCKED",
+  "upstream_gates": [
+    "uet_main_theory_wave2_gate.json",
+    "uet_main_theory_wave5_gate.json"
+  ],
+  "checks": {
+    "analytic_tensor_inputs_close": true,
+    "newtonian_poisson_limit": true,
+    "parent_exact_gr_null_nesting": true,
+    "linear_propagation_subluminal": true,
+    "curvature_from_metric_not_claimed": true,
+    "curved_constraint_evolution_not_claimed": true
+  },
+  "controlling_blockers": [
+    "curvature_from_metric_not_implemented",
+    "dynamical_metric_constraint_evolution_not_implemented",
+    "gauge_invariant_observable_benchmarks_missing"
+  ],
+  "claim_promotion": false,
+  "next_controller": "derive and verify a curved 3+1 formulation before gravity, galaxy, or cosmology application unlock"
+}

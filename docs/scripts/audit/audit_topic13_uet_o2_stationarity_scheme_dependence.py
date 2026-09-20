@@ -21,9 +21,9 @@ from docs.core.uet_o2_finite_temperature_scheme_identifiability import (
 
 
 ROOT = Path(__file__).resolve().parents[3]
-MODULE_REL = "docs/core/uet_o2_finite_temperature_stationarity_scheme.py"
-IDENTIFIABILITY_REL = "docs/core/uet_o2_finite_temperature_scheme_identifiability.py"
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_finite_temperature_stationarity_scheme_dependence_audit.json"
+MODULE_REL = "docs/core/02_equations/o2/uet_o2_finite_temperature_stationarity_scheme.py"
+IDENTIFIABILITY_REL = "docs/core/02_equations/o2/uet_o2_finite_temperature_scheme_identifiability.py"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_stationarity_scheme_dependence_audit.json"
 
 TEMPERATURE = 0.25
 CHEMICAL_POTENTIAL = 1.30

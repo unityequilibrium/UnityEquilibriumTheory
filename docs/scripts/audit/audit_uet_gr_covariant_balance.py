@@ -26,16 +26,23 @@ from docs.core.uet_covariant_balance import (  # noqa: E402
     sourced_on_shell_metric_divergence,
 )
 from docs.core.uet_covariant_response import CovariantResponseConfig  # noqa: E402
+from docs.core.core_paths import canonical_artifact_path, canonical_existing_path  # noqa: E402
 
 from docs.scripts.audit.uet_gr_monotonic_stage import (  # noqa: E402
     apply_latest_hyperbolic_phase_field_stage,
 )
 
-CORE = ROOT / "docs/core/uet_covariant_balance.py"
-RESPONSE_CORE = ROOT / "docs/core/uet_covariant_response.py"
-SPEC = ROOT / "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
-OUT = ROOT / "docs/core/artifacts"
-CLOSED = OUT / "gr_closed_limit_verification.json"
+CORE = canonical_existing_path(ROOT / "docs/core/02_equations/covariant/uet_covariant_balance.py")
+RESPONSE_CORE = canonical_existing_path(ROOT / "docs/core/02_equations/covariant/uet_covariant_response.py")
+SPEC = canonical_existing_path(ROOT / "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md")
+OUT = ROOT / "docs/core/07_artifacts"
+
+
+def _artifact(name: str) -> Path:
+    return canonical_artifact_path(name)
+
+
+CLOSED = _artifact("gr_closed_limit_verification.json")
 
 
 def _sha(path: Path) -> str:
@@ -43,7 +50,9 @@ def _sha(path: Path) -> str:
 
 
 def _dump(name: str, payload: dict[str, Any]) -> None:
-    (OUT / name).write_text(
+    path = _artifact(name)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
         json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
 
@@ -157,7 +166,7 @@ def build_artifacts() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
     denominators = _epsilon_denominators()
     contract = balance_contract()
     closed = json.loads(CLOSED.read_text(encoding="utf-8"))
-    causal_path = OUT / "causal_nonclosed_kernel_verification.json"
+    causal_path = _artifact("causal_nonclosed_kernel_verification.json")
     causal_status = "NOT_RUN"
     if causal_path.exists():
         try:
@@ -165,7 +174,7 @@ def build_artifacts() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
         except (OSError, json.JSONDecodeError):
             causal_status = "FAIL"
     causal_passed = causal_status == "PASS"
-    reduction_path = OUT / "covariant_matter_space_reduction_verification.json"
+    reduction_path = _artifact("covariant_matter_space_reduction_verification.json")
     reduction_status = "NOT_RUN"
     reduction_evidence = "MISSING"
     if reduction_path.exists():
@@ -176,7 +185,7 @@ def build_artifacts() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
         except (OSError, json.JSONDecodeError):
             reduction_status, reduction_evidence = "FAIL", "BLOCKED"
     reduction_passed = reduction_status == "PASS" and reduction_evidence == "PARTIAL"
-    matter_path = OUT / "covariant_matter_action_verification.json"
+    matter_path = _artifact("covariant_matter_action_verification.json")
     matter_status = "NOT_RUN"
     matter_evidence = "MISSING"
     if matter_path.exists():
@@ -187,7 +196,7 @@ def build_artifacts() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
         except (OSError, json.JSONDecodeError):
             matter_status, matter_evidence = "FAIL", "BLOCKED"
     matter_passed = matter_status == "PASS" and matter_evidence == "PARTIAL"
-    diffusion_path = OUT / "covariant_diffusive_current_verification.json"
+    diffusion_path = _artifact("covariant_diffusive_current_verification.json")
     diffusion_status = "NOT_RUN"
     diffusion_evidence = "MISSING"
     if diffusion_path.exists():
@@ -306,8 +315,8 @@ def build_artifacts() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
             else "Local conservative exchange closes, but a causal non-closed constitutive source and its stability gates are not implemented."
         ),
         "artifact_dependencies": {"closed_limit": str(CLOSED.relative_to(ROOT)),
-                                  "balance_verification": "docs/core/artifacts/covariant_bianchi_exchange_verification.json",
-                                  "exchange_contract": "docs/core/artifacts/covariant_exchange_contract.json"},
+                                  "balance_verification": "docs/core/07_artifacts/verification/covariant_bianchi_exchange_verification.json",
+                                  "exchange_contract": "docs/core/07_artifacts/archive/covariant_exchange_contract.json"},
     }
     apply_latest_hyperbolic_phase_field_stage(OUT, verification, exchange_contract, program)
     return verification, exchange_contract, program

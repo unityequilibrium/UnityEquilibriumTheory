@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "artifact": "uet_dimensional_observable_closure_audit",
+  "generated_at": "2026-09-17T17:10:56.618606+00:00",
+  "audit_status": "PASS_ACCOUNTING",
+  "closure_status": "BLOCKED",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "measurement_operator": {
+    "observable_id": "TTG-QTEMP-001",
+    "name": "normalized_quasi_temperature_difference",
+    "standard_definition": "y_TTG(t;Lambda)=Delta_Tq(t;Lambda)/Delta_Tq(0;Lambda)",
+    "UET_candidate_definition": "y_TTG(t;Lambda)=Delta_Phi(t;Lambda)/Delta_Phi(0;Lambda)",
+    "dimensional_bridge": "Delta_Tq=alpha_Phi_K*Delta_Phi",
+    "alpha_Phi_K_status": "OPEN_CALIBRATION_DEPENDENT",
+    "raw_signal_status": "SOURCE_DATA_DECLARED_FOR_2026_HOLDOUT_BUT_NOT_LOCALLY_ARCHIVED",
+    "heat_flux_status": "NOT_DIRECTLY_MEASURED_IN_TTG_OPERATOR",
+    "entropy_status": "DERIVED_ONLY_AFTER_Tq_AND_q_UNITS_ARE_CLOSED"
+  },
+  "metrics": {
+    "source_package_hash_matches_readiness": true,
+    "numeric_source_rows_present": 1,
+    "alpha_phi_k_closed": false,
+    "heat_flux_map_closed": false,
+    "entropy_map_closed": false,
+    "holdout_consumed": false,
+    "pilot_prearrival_leakage": 0.017639381271029236,
+    "pilot_prearrival_threshold": 1e-06,
+    "o2_he4_core_closure_level": "CLOSED_FOR_CORE",
+    "o2_he4_full_core_unlock": true
+  },
+  "checks": {
+    "source_identity_locked": true,
+    "normalized_operator_defined": true,
+    "numeric_source_package": true,
+    "independent_dimensional_calibration": false,
+    "heat_flux_observable": false,
+    "entropy_observable": false,
+    "causal_pilot": false,
+    "holdout_preserved": true,
+    "no_parameter_fitting": true,
+    "o2_he4_core_ready": true
+  },
+  "input_identity": {
+    "readiness_path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_observable_map_readiness.json",
+    "readiness_sha256": "92acecb72de07b0127edebd97caea71304f03b0343668c9775c3a3565a3941a8",
+    "pilot_path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json",
+    "pilot_sha256": "544708b2992a51e461f3149c188e9285f1e4bc864621534ceb64349d73efe375",
+    "source_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_second_sound_source_package.json",
+    "source_sha256": "8058eaa23f57e7c86cde8e57978e74ecb128edcf6d5c42b206fb0ade312dbcc2",
+    "t13_he4_composition_path": "docs/core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+    "t13_he4_composition_sha256": "8cfb5389380b90315414fc80ee759de1de6577d417b5928852021ae5232875c9"
+  },
+  "tracks": {
+    "o2_he4_core_ready": {
+      "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+      "status": "CLOSED_FOR_CORE",
+      "full_core_unlock": true,
+      "what_is_closed": [
+        "named finite-cone causal branch plus scoped conserved-gradient no-go",
+        "He-4 SVP physical response anchor, independent alpha_Phi_K, field normalization, and uncertainty",
+        "non-Landauer action beta origin, normalized beta_T13, and SI energy-density scale",
+        "declared finite-temperature normal EOS and formal SK/KMS/Onsager interface",
+        "covariant heat-flux/entropy-current and dissipative conservation balance",
+        "one source-locked physical He II normal-component shear Kubo/FDT/entropy channel",
+        "Landauer imported-constraint role and Xie 2026 holdout isolation"
+      ],
+      "claim_boundary": "CLOSED_FOR_CORE is an internal, lane-bounded composition result. It is not a prediction of the imported He-4 coefficients, not graphite TTG validation, not a complete two-fluid transport tensor, not curved 3+1, and not global UET closure."
+    },
+    "legacy_graphite_ttg_external_validation": {
+      "status": "BLOCKED",
+      "checks": {
+        "numeric_source_package": true,
+        "independent_dimensional_calibration": false,
+        "causal_pilot": false,
+        "holdout_preserved": true
+      },
+      "claim_boundary": "Historical graphite pilot remains blocked and is not a Core physical-unlock dependency."
+    }
+  },
+  "provenance_gaps": [
+    "legacy graphite pilot has no accepted local numeric TTG package with complete locator, preprocessing, uncertainty, and hash",
+    "legacy graphite pilot has no independent graphite-specific alpha_Phi_K derivation or calibration",
+    "legacy graphite heat flux and entropy production are not direct closed TTG observables"
+  ],
+  "causal_gap": "legacy graphite pilot pre-arrival leakage exceeds the locked threshold",
+  "claim_boundary": "The bounded O(2)/He-4 dimensional thermal bridge is CLOSED_FOR_CORE. The historical graphite TTG external-validation track remains blocked."
+}

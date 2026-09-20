@@ -1,0 +1,289 @@
+{
+  "major_result_id": "T13_SAME_ACTION_LOCAL_THERMODYNAMIC_COMPOSITION",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "CLOSED_FOR_LANE",
+  "status": "SAME_ACTION_REFERENCE_CONSISTENT",
+  "what_is_closed": "One explicitly shared existing action for local alpha, beta, EOS and corrected entropy response",
+  "equation_or_mapping": "Existing alpha and beta derivatives plus sigma=X.q/T; identical config passed to all three builders",
+  "units": "Natural units only",
+  "derivation_class": "Same-configuration internal composition, not microscopic matching",
+  "observable": "Local natural response and entropy balance",
+  "data_role": "INTERNAL_NO_CALIBRATION",
+  "config": {
+    "eos": {
+      "matter": {
+        "matter_kinetic": 1.0,
+        "matter_mass_sq": 1.0,
+        "matter_quartic": 1.0,
+        "response_coupling": 0.8,
+        "unit_lane": "natural"
+      },
+      "response": {
+        "epsilon_nc": 0.05,
+        "einstein_coupling": 1.0,
+        "cosmological_constant": 0.0,
+        "phi_equilibrium": 0.0,
+        "response_kinetic": 1.0,
+        "response_mass_sq": 1.0,
+        "response_quartic": 1.0,
+        "curvature_coupling": 0.0,
+        "equilibrium_density": 0.0,
+        "unit_lane": "natural"
+      },
+      "branch_tolerance": 1e-12,
+      "inversion_tolerance": 1e-13,
+      "inversion_max_iterations": 256,
+      "phase_convention": "theta_equals_minus_mu_t",
+      "metric_signature": "minus_plus_plus_plus",
+      "unit_lane": "natural"
+    },
+    "quadrature_order": 128,
+    "cutoff_factor": 60.0,
+    "derivative_step": 0.0001,
+    "phase_tolerance": 1e-10
+  },
+  "config_sha256": "7f25aa4144d95e191285d468c25b61d1cfc9cdfcb8dc2d98884677da08b36928",
+  "component_config_hashes": {
+    "alpha": "7f25aa4144d95e191285d468c25b61d1cfc9cdfcb8dc2d98884677da08b36928",
+    "beta": "7f25aa4144d95e191285d468c25b61d1cfc9cdfcb8dc2d98884677da08b36928",
+    "entropy": "7f25aa4144d95e191285d468c25b61d1cfc9cdfcb8dc2d98884677da08b36928"
+  },
+  "default_entropy_config": {
+    "eos": {
+      "matter": {
+        "matter_kinetic": 1.0,
+        "matter_mass_sq": 1.0,
+        "matter_quartic": 1.0,
+        "response_coupling": 0.0,
+        "unit_lane": "natural"
+      },
+      "response": {
+        "epsilon_nc": 0.0,
+        "einstein_coupling": 1.0,
+        "cosmological_constant": 0.0,
+        "phi_equilibrium": 0.0,
+        "response_kinetic": 1.0,
+        "response_mass_sq": 1.0,
+        "response_quartic": 1.0,
+        "curvature_coupling": 0.0,
+        "equilibrium_density": 0.0,
+        "unit_lane": "natural"
+      },
+      "branch_tolerance": 1e-12,
+      "inversion_tolerance": 1e-13,
+      "inversion_max_iterations": 256,
+      "phase_convention": "theta_equals_minus_mu_t",
+      "metric_signature": "minus_plus_plus_plus",
+      "unit_lane": "natural"
+    },
+    "quadrature_order": 192,
+    "cutoff_factor": 70.0,
+    "derivative_step": 0.0001,
+    "phase_tolerance": 1e-10
+  },
+  "default_entropy_config_sha256": "ffec619141712674a8868b3c890c15166f22db2df78d3abcff4ec5a7ab71f458",
+  "alpha": {
+    "temperature": 0.22,
+    "chemical_potential": 0.35,
+    "space_response": 0.15,
+    "branch": "normal",
+    "pressure": 0.00011541104065115239,
+    "entropy_density": 0.0031073474100336523,
+    "charge_density": 0.0004871367149648264,
+    "energy_density": 0.0007387032397939403,
+    "thermodynamic_identity_residual": 0.0,
+    "energy_response_derivative": 4.091650198791521e-05,
+    "refined_energy_response_derivative": 4.091650184992338e-05,
+    "energy_temperature_susceptibility": 0.01768326159002319,
+    "refined_energy_temperature_susceptibility": 0.017682827496939876,
+    "alpha_phi_temperature_natural": 0.002313854928832818,
+    "refined_alpha_phi_temperature_natural": 0.0023139117235071276,
+    "response_probe_phi": 0.001,
+    "linear_energy_response": 4.091650198791521e-08,
+    "linear_temperature_response_natural": 2.313854928832818e-06,
+    "exact_energy_response": 4.091789128422667e-08,
+    "linearization_relative_residual": 3.395327246477082e-05,
+    "response_refinement_relative_change": 3.372522705123458e-09,
+    "susceptibility_refinement_relative_change": 2.4548850198734297e-05,
+    "coefficient_refinement_relative_change": 2.454487512745818e-05,
+    "phi_ontology_preserved": true,
+    "normalized_beta_t13_emitted": false,
+    "numeric_alpha_phi_k_emitted": false,
+    "numeric_e0_emitted": false,
+    "physical_cv_emitted": false,
+    "landauer_identity_used": false,
+    "parameter_fitting_performed": false,
+    "target_data_used": false,
+    "xie_2026_accessed": false,
+    "data_role": "ACTION_DERIVED_NATURAL_UNIT_LOCAL_BRIDGE_NO_SI_CALIBRATION"
+  },
+  "beta": {
+    "temperature": 0.22,
+    "chemical_potential": 0.35,
+    "space_response": 0.15,
+    "branch": "normal",
+    "effective_mass": 0.9969954864491614,
+    "pressure": 0.00011541104065115239,
+    "entropy_density": 0.0031073474100336523,
+    "response_epsilon_nc": 0.05,
+    "response_coupling": 0.8,
+    "phi_step": 0.005,
+    "temperature_step": 0.002,
+    "refined_phi_step": 0.002,
+    "refined_temperature_step": 0.001,
+    "a_phi_natural": -6.64380685883037e-07,
+    "beta_phi_natural": -2.4272597928982897e-06,
+    "refined_a_phi_natural": -6.643806768028438e-07,
+    "refined_beta_phi_natural": -2.4272627297309245e-06,
+    "curvature_relative_change": 1.3667154255993907e-08,
+    "beta_relative_change": 1.2099360315418654e-06,
+    "normalized_beta_T13_emitted": false,
+    "numeric_e0_emitted": false,
+    "numeric_alpha_Phi_K_emitted": false,
+    "landauer_identity_used": false,
+    "parameter_fitting_performed": false,
+    "target_data_used": false,
+    "xie_2026_accessed": false,
+    "data_role": "ACTION_DERIVED_NATURAL_RESPONSE_STIFFNESS_NOT_NORMALIZED_BETA"
+  },
+  "entropy": {
+    "temperature": 0.22,
+    "chemical_potential": 0.35,
+    "space_response": 0.15,
+    "eos_branch": "normal",
+    "entropy_density": 0.0031073474100336523,
+    "pressure": 0.00011541104065115239,
+    "energy_density": 0.0007387032397939403,
+    "charge_density": 0.0004871367149648264,
+    "enthalpy_per_charge": 1.753335879244421,
+    "operator_state_count": 96,
+    "transition_channel_count": 64,
+    "heat_response_matrix": [
+      [
+        254.8247192326948,
+        3.2487440976493774e-10,
+        4.783113636204103e-10
+      ],
+      [
+        3.2487440976493774e-10,
+        254.82471924461043,
+        -2.0651652928818766e-10
+      ],
+      [
+        4.783113636204103e-10,
+        -2.0651652928818766e-10,
+        254.82471925479925
+      ]
+    ],
+    "kappa_natural": 254.8247192440348,
+    "heat_response_isotropy_residual": 4.450120184959954e-11,
+    "collision_operator_min_eigenvalue": 1.5926475013137965e-22,
+    "collision_operator_symmetry_residual": 1.3798490465439917e-22,
+    "thermal_force_covariant": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "thermal_force_contravariant": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "heat_flux_contravariant": [
+      0.0,
+      254.8247192440348,
+      0.0,
+      0.0
+    ],
+    "entropy_current_contravariant": [
+      0.0031073474100336523,
+      1158.2941783819765,
+      0.0,
+      0.0
+    ],
+    "entropy_production": 1158.2941783819765,
+    "kinetic_entropy_production": 1158.294178330433,
+    "entropy_balance_residual": 5.154356585990172e-08,
+    "kinetic_equation_residual": 4.526655987778134e-17,
+    "charge_balance_residual": 1.6135551881010886e-19,
+    "energy_balance_residual": 3.61578783519585e-19,
+    "momentum_balance_residual": 4.4386581728044585e-20,
+    "heat_flux_response_residual": 1.1354737658182265e-08,
+    "force_orthogonality_residual": 0.0,
+    "heat_flux_orthogonality_residual": 0.0,
+    "projector_orthogonality_residual": 7.062054167850703e-16,
+    "lorentz_covariance_residual": 1.4210854715202004e-14,
+    "equilibrium_heat_flux_norm": 0.0,
+    "finite_cutoff_boundary_declared": true,
+    "microscopic_sk_kms_match_completed": false,
+    "physical_kubo_coefficient_emitted": false,
+    "numeric_alpha_Phi_K_emitted": false,
+    "parameter_fitting_performed": false,
+    "target_data_used": false,
+    "xie_2026_accessed": false,
+    "data_role": "ACTION_DERIVED_FINITE_CUTOFF_NATURAL_MOMENT_RESPONSE_NOT_PHYSICAL_KUBO"
+  },
+  "checks": {
+    "same_branch": true,
+    "same_pressure": true,
+    "same_entropy": true,
+    "same_energy": true,
+    "same_charge": true,
+    "same_coupling": true,
+    "entropy_original_threshold": true,
+    "energy_original_threshold": true,
+    "charge_original_threshold": true,
+    "momentum_original_threshold": true,
+    "covariance_original_threshold": true,
+    "isotropy_original_threshold": true,
+    "positive_heat_response": true
+  },
+  "default_comparison": {
+    "kappa_default": 257.3728670227229,
+    "kappa_shared_action": 254.8247192440348,
+    "relative_change": -0.009900607659870886,
+    "scope": "Full configuration difference including numerical controls; not isolated causal attribution to coupling alone"
+  },
+  "verification_status": "CURRENT_COMMON_ACTION_REFERENCE",
+  "open_blockers": [
+    "hydrodynamic_frame_charge_diffusion_map",
+    "finite_cutoff_transport_convergence",
+    "physical_state_and_protocol_correspondence",
+    "historical_composition_integration_review"
+  ],
+  "dependency_unlocked": [],
+  "claim_promotion": false,
+  "claim_boundary": "No SI coefficient or He4 external validation. No replacement of default branch or historical artifacts. No parameter search or holdout read.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/scripts/audit/audit_topic13_same_action_composition.py",
+      "sha256": "b548f8775a2ae7a081be3cad31bb86e64bbccaa930a3df2b9fdfbd42c5624259"
+    },
+    {
+      "path": "docs/core/test/test_topic13_same_action_composition.py",
+      "sha256": "20a7dfed17923555b263b7250470b44263a8336dfb76d174b1f098947dcfac6d"
+    },
+    {
+      "path": "docs/core/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "a1be58b8230240775654e7c0d6265870010f546238e96e59e36045e6a893e5d2"
+    },
+    {
+      "path": "docs/core/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    },
+    {
+      "path": "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py",
+      "sha256": "27f0ccf1717969a1cc1f86b533a5520595acdfba05f0e9e39b06a433901abd23"
+    },
+    {
+      "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+      "sha256": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f"
+    },
+    {
+      "path": "docs/core/uet_o2_continuum_collision_operator.py",
+      "sha256": "010c1322063b806a1d87d3708cf5509e696f7370170dc2b859f61fd8f884e9e2"
+    }
+  ]
+}

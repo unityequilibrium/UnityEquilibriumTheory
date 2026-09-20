@@ -25,12 +25,12 @@ from docs.core.thermal_collective_response_eos import (
 from docs.core.thermal_response_beta_contract import ThermalResponseBetaInputs
 
 
-EOS_REL = "docs/core/thermal_collective_response_eos.py"
-BETA_REL = "docs/core/thermal_response_beta_contract.py"
-BETA_AUDIT_REL = "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json"
+EOS_REL = "docs/core/03_lanes/thermal/thermal_collective_response_eos.py"
+BETA_REL = "docs/core/03_lanes/thermal/thermal_response_beta_contract.py"
+BETA_AUDIT_REL = "docs/core/07_artifacts/topic13/t13_thermal_response_beta_contract_audit.json"
 THERMAL_AUDIT_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/thermal_closure_derivation_audit.json"
 FORMULA_REL = "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md"
-OUT = ROOT / "docs/core/artifacts/t13_collective_response_eos_stability_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_collective_response_eos_stability_audit.json"
 
 
 def text(rel: str) -> str:
@@ -131,7 +131,7 @@ def main() -> int:
             "derivation_class": "declared normalized finite-temperature functional plus exact calculus, Hessian positivity conditions, and synthetic finite-difference verification",
             "observable": "candidate local response-EOS interface only; no physical charge EOS, pressure, heat flux, entropy production, or TTG observable",
             "data_role": "INTERNAL_FORMULA_STABILITY_CONTRACT_NO_CALIBRATION",
-            "evidence_artifacts": [{"path": EOS_REL, "sha256": sha256(EOS_REL)}, {"path": BETA_AUDIT_REL, "sha256": sha256(BETA_AUDIT_REL)}, {"path": THERMAL_AUDIT_REL, "sha256": sha256(THERMAL_AUDIT_REL)}, {"path": FORMULA_REL, "sha256": sha256(FORMULA_REL)}, {"path": "docs/core/artifacts/t13_collective_response_eos_stability_audit.json"}],
+            "evidence_artifacts": [{"path": EOS_REL, "sha256": sha256(EOS_REL)}, {"path": BETA_AUDIT_REL, "sha256": sha256(BETA_AUDIT_REL)}, {"path": THERMAL_AUDIT_REL, "sha256": sha256(THERMAL_AUDIT_REL)}, {"path": FORMULA_REL, "sha256": sha256(FORMULA_REL)}, {"path": "docs/core/07_artifacts/topic13/t13_collective_response_eos_stability_audit.json"}],
             "verification_status": status,
             "open_blockers": ["source_backed_finite_temperature_EOS_coefficient_provenance_missing", "physical_Phi_field_normalization_and_SI_energy_anchor_missing", "physical_charge_density_or_pressure_observable_mapping_not_declared", "covariant_transport_SK_KMS_entropy_production_and_dissipative_balance_missing", "independent_alpha_Phi_K_calibration_or_derivation_missing"],
             "dependency_unlocked": "named response-EOS formula and stability interface only; no physical EOS, Core curved 3+1, Gravity, transport, or external validation unlock",

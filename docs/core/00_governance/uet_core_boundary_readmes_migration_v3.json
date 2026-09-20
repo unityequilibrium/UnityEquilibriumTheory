@@ -1,0 +1,49 @@
+{
+  "artifact": "uet_core_boundary_readmes_migration_v3",
+  "claim_boundary": "physical organization and compatibility only; no physics/evidence promotion",
+  "generated_at": "2026-09-15T18:50:58+00:00",
+  "generator": "docs/scripts/audit/migrate_uet_core_boundary_readmes_v3.py",
+  "moves": [
+    {
+      "already_redirect": false,
+      "canonical_path": "docs/core/06_data/README.md",
+      "canonical_sha256_after": "943cf11f366aee6258c5dfbf36af1108d0a1595aaddfcfedbf15751b0a90860c",
+      "canonical_sha256_before": "943cf11f366aee6258c5dfbf36af1108d0a1595aaddfcfedbf15751b0a90860c",
+      "canonical_target_exists_before": true,
+      "compatibility_mode": "markdown_redirect",
+      "legacy_path": "docs/core/data/README.md",
+      "migration_state": "MIGRATED_WITH_SHIM",
+      "physical_move_performed": false,
+      "redirect_sha256_after": "f66dcd3e53d8ce5f16060f1173bc963e81b2fdb9d4450738e0d667eacf72bb51",
+      "source_sha256_before": "88b8ee990feae60d1aac125b41ee96a3bad4dc3fb4c4dba9042d5f31176cc2da"
+    },
+    {
+      "already_redirect": false,
+      "canonical_path": "docs/core/04_proofs/README.md",
+      "canonical_sha256_after": "094ad185f8a51f66b7032c055f4fff8bac82fb0971b2f8d6b191989ed58c246e",
+      "canonical_sha256_before": "094ad185f8a51f66b7032c055f4fff8bac82fb0971b2f8d6b191989ed58c246e",
+      "canonical_target_exists_before": true,
+      "compatibility_mode": "markdown_redirect",
+      "legacy_path": "docs/core/02_Proof/README.md",
+      "migration_state": "MIGRATED_WITH_SHIM",
+      "physical_move_performed": false,
+      "redirect_sha256_after": "8a9ee6c65e743f30d04c75cd7455f776c495255380df231e71953eb4b4c92e40",
+      "source_sha256_before": "b5b0b51b1bed373358dacaced5dfa3cec9538d40950f7f11c74709f384ce2e62"
+    }
+  ],
+  "physical_move_performed": false,
+  "physics_status_changes": 0,
+  "reference_changes": [],
+  "schema_version": "1.0",
+  "status": "PASS",
+  "summary": {
+    "canonical_targets_preserved": 2,
+    "files_reconciled": 2,
+    "files_selected": 2,
+    "physical_moves_performed": 0,
+    "physics_status_changes": 0,
+    "redirects_created_or_confirmed": 2,
+    "reference_files_changed": 0,
+    "reference_replacements": 0
+  }
+}

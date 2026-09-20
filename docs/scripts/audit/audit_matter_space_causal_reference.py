@@ -29,9 +29,9 @@ from docs.core.uet_matter_space import (  # noqa: E402
 )
 
 
-OUT = ROOT / "docs/core/artifacts/matter_space_causal_reference_verification.json"
+OUT = ROOT / "docs/core/07_artifacts/verification/matter_space_causal_reference_verification.json"
 DEFAULT_VERIFICATION = (
-    ROOT / "docs/core/artifacts/matter_space_variational_verification.json"
+    ROOT / "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
 )
 
 
@@ -171,7 +171,7 @@ def build_report(verification_path: Path = DEFAULT_VERIFICATION) -> dict[str, An
             "scope_boundary": "reference/control lane only; not a replacement for matter_space_step",
         },
         "evidence_inputs": {
-            "core_source": "docs/core/uet_matter_space.py",
+            "core_source": "docs/core/02_equations/matter_space/uet_matter_space.py",
             "default_candidate_verification": rel(verification_path),
         },
         "claim_boundary": (

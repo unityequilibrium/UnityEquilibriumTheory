@@ -26,11 +26,11 @@ from docs.core.uet_o2_finite_temperature_two_fluid_response import (  # noqa: E4
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_finite_temperature_two_fluid_response_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_finite_temperature_two_fluid_response.py"
-SECTOR_MODULE = ROOT / "docs/core/uet_o2_formal_two_sector_thermodynamics.py"
-STATIC_MODULE = ROOT / "docs/core/uet_o2_formal_transverse_response.py"
-HEAT_MODULE = ROOT / "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_two_fluid_response_audit.json"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py"
+SECTOR_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_formal_two_sector_thermodynamics.py"
+STATIC_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py"
+HEAT_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_covariant_entropy_heat_flux_balance.py"
 
 
 def sha256(path: Path) -> str:
@@ -217,10 +217,10 @@ def main() -> int:
         "observable": contract["observable"],
         "data_role": contract["data_role"],
         "evidence_artifacts": [
-            {"path": "docs/core/uet_o2_finite_temperature_two_fluid_response.py", "sha256": sha256(MODULE)},
-            {"path": "docs/core/uet_o2_formal_two_sector_thermodynamics.py", "sha256": sha256(SECTOR_MODULE)},
-            {"path": "docs/core/uet_o2_formal_transverse_response.py", "sha256": sha256(STATIC_MODULE)},
-            {"path": "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py", "sha256": sha256(HEAT_MODULE)},
+            {"path": "docs/core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py", "sha256": sha256(MODULE)},
+            {"path": "docs/core/02_equations/o2/uet_o2_formal_two_sector_thermodynamics.py", "sha256": sha256(SECTOR_MODULE)},
+            {"path": "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py", "sha256": sha256(STATIC_MODULE)},
+            {"path": "docs/core/02_equations/o2/uet_o2_covariant_entropy_heat_flux_balance.py", "sha256": sha256(HEAT_MODULE)},
         ],
         "verification_status": status,
         "open_blockers": [

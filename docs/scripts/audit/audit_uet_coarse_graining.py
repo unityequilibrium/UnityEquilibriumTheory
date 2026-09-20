@@ -13,12 +13,19 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from docs.core.core_paths import (  # noqa: E402
+    CANONICAL_ARTIFACT_ROOT,
+    canonical_artifact_path,
+    canonical_existing_path,
+)
+COARSE_GRAINING_SOURCE = canonical_existing_path(ROOT / ("docs/core/" + "uet_coarse_graining.py")).relative_to(ROOT).as_posix()
+
 from docs.core.uet_coarse_graining import (
     CoarseGrainingRecord, coarse_grain, coarse_graining_consistency,
     coarse_graining_contract, refine_coarse_graining, scale_dependence_audit,
 )
 
-ARTIFACTS = ROOT / "docs/core/artifacts"
+ARTIFACTS = CANONICAL_ARTIFACT_ROOT
 
 
 def _record(lane: str, cells: int) -> CoarseGrainingRecord:
@@ -86,8 +93,8 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
         "schema_version": "1.0", "artifact": "coarse_graining_formula_audit",
         "generated_at": now, "status": "WARN",
         "relations": [
-            {"formula_id": "UET-CG-BLOCK-001", "relation": "C_l=(block_average[X_l]-C_ref)/C_scale", "derivation_class": "declared coarse-graining operator", "unit_lane": "lane_specific", "proof_status": "mean preservation and many-to-one behavior verified", "code_path": "docs/core/uet_coarse_graining.py"},
-            {"formula_id": "UET-CG-SCALE-002", "relation": "Delta parameter / Delta log(scale)", "derivation_class": "descriptive finite-difference audit", "unit_lane": "parameter_specific", "proof_status": "not an RG beta function", "code_path": "docs/core/uet_coarse_graining.py"},
+            {"formula_id": "UET-CG-BLOCK-001", "relation": "C_l=(block_average[X_l]-C_ref)/C_scale", "derivation_class": "declared coarse-graining operator", "unit_lane": "lane_specific", "proof_status": "mean preservation and many-to-one behavior verified", "code_path": COARSE_GRAINING_SOURCE},
+            {"formula_id": "UET-CG-SCALE-002", "relation": "Delta parameter / Delta log(scale)", "derivation_class": "descriptive finite-difference audit", "unit_lane": "parameter_specific", "proof_status": "not an RG beta function", "code_path": COARSE_GRAINING_SOURCE},
         ],
         "open_items": ["microscopic dynamics to declared lower-level field", "covariant averaging and frame transport", "RG beta functions", "lane-specific dimensional observable calibration"],
         "claim_ceiling": "candidate declared-field coarse-graining contract",
@@ -103,11 +110,11 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
     }
     addendum = {
         "schema_version": "1.0", "artifact": "uet_equation_correspondence_registry_coarse_graining_addendum",
-        "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+        "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
         "status": "CANDIDATE_ENTRY_PENDING_MERGE",
         "equation_entries": [{
             "equation_id": "uet.main_theory.coarse_graining", "version": "lane-coarse-graining-v1",
-            "classification": "constitutive_lane_specific_equation", "relation_or_code_path": "docs/core/uet_coarse_graining.py",
+            "classification": "constitutive_lane_specific_equation", "relation_or_code_path": COARSE_GRAINING_SOURCE,
             "variables": {"X_lane": "declared lower-level lane field", "C_lane": "lane-specific collective coordinate", "ell": "phase, charge, density, or telegraph"},
             "mathematical_role": "many-to-one averaging and normalization map",
             "standard_physics_counterpart": "block-spin, volume-average, charge-density, and continuum coarse graining",
@@ -117,8 +124,8 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
             "assumptions": ["uniform block averaging v1", "declared frame and boundary", "many-to-one information loss", "no universal identity among C lanes"],
             "symmetry_and_conservation": "global mean preserved for equal-volume blocks",
             "limiting_cases": ["single-sample cell reproduces the lower-level field up to affine normalization", "coarser blocks erase within-cell fluctuations"],
-            "implementation_paths": ["docs/core/uet_coarse_graining.py"],
-            "verifier_paths": ["docs/scripts/audit/audit_uet_coarse_graining.py", "docs/core/artifacts/coarse_graining_verification.json", "docs/core/test/test_uet_coarse_graining.py"],
+            "implementation_paths": [COARSE_GRAINING_SOURCE],
+            "verifier_paths": ["docs/scripts/audit/audit_uet_coarse_graining.py", "docs/core/07_artifacts/correspondence/coarse_graining_verification.json", "docs/core/test/test_uet_coarse_graining.py"],
             "evidence_class": "INTERNAL_FORMAL", "proof_status": "operator consistency verified; microscopic and observable closure open",
             "downstream_dependencies": ["uet.main_theory.covariant_parent", "uet.main_theory.open_system", "uet.main_theory.observables"],
             "claim_boundary": "lane-specific candidate coarse coordinate; C is not mass, charge, or order universally",
@@ -133,7 +140,9 @@ def main() -> int:
     names = ("coarse_graining_verification.json", "coarse_graining_formula_audit.json", "uet_main_theory_wave3_gate.json", "uet_equation_correspondence_registry_coarse_graining_addendum.json")
     outputs = dict(zip(names, build_artifacts()))
     for name, payload in outputs.items():
-        (ARTIFACTS / name).write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        path = canonical_artifact_path(name)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     gate = outputs["uet_main_theory_wave3_gate.json"]
     print(f"audit_status={gate['audit_status']}")
     print(f"coarse_graining_status={gate['coarse_graining_status']}")

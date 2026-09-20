@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "artifact": "carrier_observer_thought_experiment",
+  "generated_at": "2026-09-17T18:10:32.706627+00:00",
+  "status": "SIMULATION_ONLY",
+  "evidence_class": "internal_newtonian_finite_signal_comparator",
+  "source_artifact": {
+    "path": "docs/core/07_artifacts/verification/relational_two_body_baseline_verification.json",
+    "sha256": "a6574f50395f876f6f61438fd2761350e8721fc8e325f445e5d0a32bb8da1933",
+    "audit_status": "PASS"
+  },
+  "events": {
+    "source_event": {
+      "time": 0.5000000000000003,
+      "position": [
+        0.9689124210963758,
+        0.24740396951364335
+      ]
+    },
+    "emission_event": {
+      "time": 0.5000000000000003,
+      "carrier_role": "finite_signal_comparator"
+    },
+    "arrival_event": {
+      "time": 0.9038672528557152,
+      "delay": 0.4038672528557149
+    },
+    "detector_record": {
+      "received_source_state": [
+        0.9689124210963758,
+        0.24740396951364335
+      ],
+      "arrival_index": 904
+    }
+  },
+  "interpretation": {
+    "what_is_shown": "A detector record can encode a source state from an earlier event because propagation takes finite time.",
+    "what_is_not_shown": "No photon identity, no R_gen particle identity, no global vacuum claim, and no Lorentz-covariant UET derivation.",
+    "physical_trace_layer": "R_gen remains a derived trace of source dynamics.",
+    "observer_layer": "R_obs is a detector record and does not alter source dynamics in this comparator."
+  },
+  "checks": {
+    "source_event_declared": true,
+    "emission_to_arrival_delay_positive": true,
+    "detector_receives_past_source_state": true,
+    "source_state_at_arrival_differs": true,
+    "observer_record_is_not_source_state": true,
+    "no_superluminal_inference": true,
+    "lorentz_covariance_not_claimed": true
+  },
+  "claim_boundary": "simulation-only observer-layer correspondence; detector and carrier units remain open",
+  "next_controller": "source-lock a dimensional photon detector map after foundation and carrier gates close"
+}

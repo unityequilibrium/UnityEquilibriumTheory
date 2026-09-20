@@ -1,0 +1,246 @@
+{
+  "schema_version": "t13-ding-alternate-public-dataset-discovery-boundary-v3",
+  "artifact": "t13_ding_alternate_public_dataset_discovery_boundary_audit",
+  "generated_at": "2026-09-18",
+  "status": "PASS_SCOPED_DING_ALTERNATE_PUBLIC_DATASET_BOUNDARY_NO_GO",
+  "major_result": {
+    "major_result_id": "T13_DING_ALTERNATE_PUBLIC_DATASET_DISCOVERY_BOUNDARY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": "The current three-route public inventory is bounded: the ISIS route is a Bi2Te3/Graphite nanocomposite PDOS dataset and the Caltech route is a graphite c-axis mean-free-path dataset; the NIMS/MDR route is an article/PDF-only graphite-ribbon record whose numeric BTE inputs remain available from the corresponding authors. None satisfies the Ding mode-resolved volumetric C_src(T) acceptance contract.",
+    "equation_or_mapping": {
+      "required_Ding_bridge": "C_src(T)=sum_mu c_mu(T); Delta_Tq=Delta_u_ph/C_src(T)",
+      "measurement_mapping": "y_TTG=Delta_Tq(t)/Delta_Tq(0); y_TTG^UET=Delta_Phi(t)/Delta_Phi(0)"
+    },
+    "units": {
+      "C_src": "J m^-3 K^-1",
+      "Delta_u_ph": "J m^-3",
+      "Delta_Tq": "K",
+      "normalized_TTG": "dimensionless"
+    },
+    "derivation_class": "public-source compatibility and availability boundary; no UET derivation",
+    "observable": "Ding-compatible mode-resolved volumetric C_src(T)",
+    "data_role": "SOURCE_DISCOVERY_BOUNDARY_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "role": "candidate_package",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_ding_alternate_public_dataset_discovery_package.json",
+        "sha256": "3448780bc28b5f415d0a644b67f70e1cc156bd53f3e204fbaa6a7fed0e2c0c89"
+      },
+      {
+        "role": "ding_numeric_availability",
+        "path": "docs/core/07_artifacts/topic13/t13_ding_pbte_numeric_input_availability_audit.json",
+        "sha256": "db8d64f7956979740ebcb3c872ca20d46d50e3399c1e9d5d61c9effb17dd0ff9"
+      },
+      {
+        "role": "ding_public_supplementary",
+        "path": "docs/core/07_artifacts/topic13/t13_ding_public_supplementary_payload_boundary_audit.json",
+        "sha256": "2659e6ac8fb97d711441261dfdf8b65c0736fcc5032899447e7369dbe96d77a5"
+      },
+      {
+        "role": "independent_csrc_acceptance",
+        "path": "docs/core/07_artifacts/topic13/t13_independent_csrc_acceptance_contract.json",
+        "sha256": "faef9dbf350e4454530c30ab004d201aa8d3b9d9ae78b3ad8bc2573fa7f17bfe"
+      },
+      {
+        "role": "locked_holdout_audit",
+        "path": "docs/core/07_artifacts/topic13/t13_xie_2026_holdout_access_audit.json",
+        "sha256": "7f848d3d6f6c9b5ab708587fb4190956c43ee46da50e4e5b732bc9285e9336ce"
+      },
+      {
+        "role": "repository_registry_search_boundary",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_ding_alternate_public_dataset_discovery_package.json",
+        "sha256": "3448780bc28b5f415d0a644b67f70e1cc156bd53f3e204fbaa6a7fed0e2c0c89",
+        "summary": {
+          "search_date": "2026-08-23",
+          "scope": "Exact DOI/title matching against public metadata APIs; no candidate payload was downloaded or imported.",
+          "target_doi": "10.1038/s41467-021-27907-z",
+          "target_title": "Observation of second sound in graphite over 200 K",
+          "queries": [
+            {
+              "registry": "DataCite",
+              "endpoint": "https://api.datacite.org/dois?query=10.1038%2Fs41467-021-27907-z&page%5Bsize%5D=25",
+              "query_kind": "DOI",
+              "returned_records": 0,
+              "exact_target_matches": 0,
+              "result": "NO_EXACT_DATASET_RECORD"
+            },
+            {
+              "registry": "Crossref",
+              "endpoint": "https://api.crossref.org/works/10.1038/s41467-021-27907-z",
+              "query_kind": "article DOI relations and links",
+              "article_record_found": true,
+              "dataset_relation_present": false,
+              "linked_resources": [
+                "https://www.nature.com/articles/s41467-021-27907-z",
+                "https://www.nature.com/articles/s41467-021-27907-z.pdf"
+              ],
+              "result": "ARTICLE_ONLY_NO_DATASET_RELATION"
+            },
+            {
+              "registry": "Zenodo",
+              "endpoint": "https://zenodo.org/api/records?q=s41467-021-27907-z&size=20",
+              "query_kind": "DOI token",
+              "returned_records": 20,
+              "exact_target_matches_in_returned_page": 0,
+              "result": "NO_EXACT_MATCH_IN_RETURNED_PAGE",
+              "scope_note": "The API token query is broad; this is a first-page exact-match check, not an exhaustive claim over all search hits."
+            },
+            {
+              "registry": "Figshare",
+              "endpoint": "https://api.figshare.com/v2/articles/search",
+              "query_kind": "exact DOI token",
+              "returned_records": 100,
+              "exact_target_matches_in_returned_page": 0,
+              "result": "NO_EXACT_MATCH_IN_RETURNED_PAGE"
+            },
+            {
+              "registry": "Dryad",
+              "endpoint": "https://datadryad.org/api/v2/datasets?query=10.1038%2Fs41467-021-27907-z",
+              "query_kind": "DOI",
+              "returned_records": 1,
+              "exact_target_matches_in_returned_page": 0,
+              "result": "NO_EXACT_MATCH_IN_RETURNED_PAGE"
+            }
+          ],
+          "route_conclusion": "No exact public dataset record was located in the checked metadata routes. The publisher article remains the authoritative captured route and states that supporting data are available from the corresponding author on reasonable request.",
+          "not_proven": [
+            "author-held data do not exist",
+            "all third-party repositories are empty",
+            "an independent same-regime reproduction is impossible"
+          ],
+          "xie_2026_consumed": false
+        }
+      }
+    ],
+    "verification_status": "PASS_SCOPED_DING_ALTERNATE_PUBLIC_DATASET_BOUNDARY_NO_GO",
+    "open_blockers": [
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "material_regime_mapping_to_TTG_not_closed"
+    ],
+    "dependency_unlocked": "Alternate public-route inventory boundary only; no numeric C_src, alpha_Phi_K, TTG prediction, Full Topic 13, Core, Gravity, or constitutive transport unlock.",
+    "claim_boundary": "This closes only the current source-discovery boundary. It does not claim that no future source exists, does not import or synthesize numeric data, and is not Ding validation or Full Topic 13 closure."
+  },
+  "candidate_observations": [
+    {
+      "candidate_id": "stfc_isis_99714235",
+      "source_identity": {
+        "title": "Evaluation of Phonon Density of State (PDOS) and its correlation with thermoelectric performance in Bi2Te3/Graphite nanocomposites",
+        "publisher": "STFC ISIS Neutron and Muon Source",
+        "doi": "10.5286/ISIS.E.99714235",
+        "locator": "https://data.isis.stfc.ac.uk/doi/INVESTIGATION/99714235/",
+        "experiment": "RB1868011",
+        "public_release_date": "2022-02-13",
+        "license": "CC-BY-4.0"
+      },
+      "access_route": {
+        "format": "RAW/Nexus",
+        "data_availability_route": null,
+        "local_payload_imported": false
+      },
+      "decision": "REJECTED_AS_DING_C_SRC_ROUTE",
+      "compatibility": {
+        "material_matches_ding_natural_graphite": false,
+        "observable_matches_mode_resolved_C_src": false,
+        "regime_matches_Ding_TTG_PBTE": false,
+        "mode_resolved_c_src_present": false,
+        "unitful_C_src_present": false,
+        "source_grade_uncertainty_present_for_C_src": false,
+        "Ding_mapping_closed": false
+      },
+      "local_payload_imported": false,
+      "remote_payload_hash": null
+    },
+    {
+      "candidate_id": "caltech_c_axis_graphite_mfp_2016",
+      "source_identity": {
+        "title": "Temperature-Dependent Mean Free Path Spectra of Thermal Phonons Along the c-Axis of Graphite",
+        "publisher": "CaltechAUTHORS",
+        "doi": "10.1021/acs.nanolett.5b04499",
+        "locator": "https://authors.library.caltech.edu/records/tvmw7-gwc42",
+        "eprint": "1509.05092v2",
+        "publication_year": 2016
+      },
+      "access_route": {
+        "format": null,
+        "data_availability_route": null,
+        "local_payload_imported": false
+      },
+      "decision": "REJECTED_AS_DING_C_SRC_ROUTE",
+      "compatibility": {
+        "material_matches_graphite": true,
+        "observable_matches_mode_resolved_C_src": false,
+        "regime_matches_Ding_TTG_PBTE": false,
+        "mode_resolved_c_src_present": false,
+        "unitful_C_src_present": false,
+        "source_grade_uncertainty_present_for_C_src": false,
+        "Ding_mapping_closed": false
+      },
+      "local_payload_imported": false,
+      "remote_payload_hash": null
+    },
+    {
+      "candidate_id": "nims_mdr_huang_2023_graphite_poiseuille",
+      "source_identity": {
+        "title": "Observation of phonon Poiseuille flow in isotopically purified graphite ribbons",
+        "publisher": "NIMS Materials Data Repository / Nature Communications",
+        "doi": "10.1038/s41467-023-37380-5",
+        "locator": "https://www.nature.com/articles/s41467-023-37380-5",
+        "repository_locator": "https://mdr.nims.go.jp/datasets/bf141c90-3911-4b2c-9fbc-274dad05d5d0",
+        "repository_id": "bf141c90-3911-4b2c-9fbc-274dad05d5d0",
+        "publication_year": 2023,
+        "license": "CC-BY-4.0"
+      },
+      "access_route": {
+        "format": "ARTICLE_PDF_ONLY",
+        "data_availability_route": "corresponding authors upon reasonable request",
+        "local_payload_imported": false
+      },
+      "decision": "REJECTED_AS_DING_C_SRC_ROUTE",
+      "compatibility": {
+        "material_matches_graphite": true,
+        "material_matches_ding_natural_graphite": false,
+        "observable_matches_mode_resolved_C_src": false,
+        "regime_matches_Ding_TTG_PBTE": false,
+        "mode_resolved_c_src_present": false,
+        "unitful_C_src_present": false,
+        "source_grade_uncertainty_present_for_C_src": false,
+        "Ding_mapping_closed": false
+      },
+      "local_payload_imported": false,
+      "remote_payload_hash": null
+    }
+  ],
+  "checks": {
+    "candidate_count_is_three": true,
+    "stfc_identity_is_public_isis_dataset": true,
+    "stfc_is_nanocomposite_pdos": true,
+    "caltech_identity_is_graphite_mfp_route": true,
+    "caltech_is_not_C_src_route": true,
+    "nims_identity_is_public_mdr_graphite_route": true,
+    "nims_public_record_is_pdf_only_author_request": true,
+    "nims_is_not_Ding_C_src_route": true,
+    "all_candidates_fail_C_src_acceptance": true,
+    "no_candidate_payload_imported": true,
+    "no_numeric_rows_imported": true,
+    "no_synthetic_replacement_created": true,
+    "no_alpha_fit_performed": true,
+    "no_target_curve_fit_performed": true,
+    "ding_public_numeric_input_remains_open": true,
+    "ding_supplementary_boundary_remains_open": true,
+    "acceptance_contract_still_rejects_current_route": true,
+    "holdout_is_unconsumed": true,
+    "package_holdout_policy_is_locked": true,
+    "registry_search_has_target_identity": true,
+    "datacite_exact_match_is_zero": true,
+    "crossref_has_no_dataset_relation": true,
+    "zenodo_exact_page_match_is_zero": "The API token query is broad; this is a first-page exact-match check, not an exhaustive claim over all search hits.",
+    "figshare_exact_page_match_is_zero": true,
+    "dryad_exact_page_match_is_zero": true,
+    "registry_search_does_not_overclaim": true
+  },
+  "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+  "next_controller": "Obtain an authorized Ding numeric package or a permitted same-regime PBTE reproduction with mode-resolved C_src(T), SI units, uncertainty, convergence, and material-state mapping. Keep current public routes as comparison-only and do not fit alpha_Phi_K.",
+  "claim_boundary": "No numeric C_src, alpha_Phi_K, TTG prediction, external validation, or Full Topic 13 closure is emitted."
+}

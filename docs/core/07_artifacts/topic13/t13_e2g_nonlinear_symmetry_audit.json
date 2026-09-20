@@ -1,0 +1,68 @@
+{
+  "major_result_id": "T13_E2G_NONLINEAR_O2_MATCH_BOUNDARY",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "what_is_closed": "Conditional E2 representation permits a cubic invariant absent from continuous O(2)",
+  "equation_or_mapping": "I3=s1^3-3*s1*s2^2=r^3*cos(3theta); internal torque=-partial_theta(c3*I3)",
+  "units": "I3 displacement^3; c3 fixed by chosen energy density units, not supplied",
+  "derivation_class": "Conditional polynomial group algebra",
+  "observable": "Allowed anisotropic term, not a measured coefficient",
+  "data_role": "NO_MATERIAL_CALIBRATION",
+  "rows": [
+    {
+      "degree": 1,
+      "e2_dimension": 0,
+      "continuous_rotation_dimension": 0
+    },
+    {
+      "degree": 2,
+      "e2_dimension": 1,
+      "continuous_rotation_dimension": 1
+    },
+    {
+      "degree": 3,
+      "e2_dimension": 1,
+      "continuous_rotation_dimension": 0
+    },
+    {
+      "degree": 4,
+      "e2_dimension": 1,
+      "continuous_rotation_dimension": 1
+    },
+    {
+      "degree": 5,
+      "e2_dimension": 1,
+      "continuous_rotation_dimension": 0
+    },
+    {
+      "degree": 6,
+      "e2_dimension": 2,
+      "continuous_rotation_dimension": 1
+    }
+  ],
+  "cubic_group_residual": 9.992007221626409e-16,
+  "arbitrary_rotation_difference": 0.9999999999999997,
+  "verification_status": "POLYNOMIAL_SYMMETRY_CONTROL",
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "open_blockers": [
+    "material_representation_and_extra_symmetries",
+    "anisotropy_coefficient_or_suppression_bound",
+    "dispersion_and_kinetic_residue"
+  ],
+  "claim_boundary": "Allowed does not mean nonzero. Harmonic/emergent O(2) remains possible in a declared approximation; two components alone do not establish exact O(2) charge.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/scripts/audit/audit_topic13_e2g_nonlinear_symmetry.py",
+      "sha256": "ef1eb74cbc71797273c10a16c90e5327932ab84c5fd8ecfe8ac69b259f70f537"
+    },
+    {
+      "path": "docs/core/test/test_topic13_e2g_nonlinear_symmetry.py",
+      "sha256": "5b462728d4a850c4f2171154aa25df6ae51a6fe115c3f00b30e18bb92276ff80"
+    },
+    {
+      "path": "docs/core/uet_shear_symmetry.py",
+      "sha256": "b5426f6b4f3cc9e3df83318a8f36d2c0d1534bfc2b98bc62cdd4268011be1deb"
+    }
+  ]
+}

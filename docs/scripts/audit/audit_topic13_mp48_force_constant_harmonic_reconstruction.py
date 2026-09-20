@@ -22,7 +22,7 @@ RAW = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw"
 FORCE_CONSTANTS_PATH = RAW / "mp48_FORCE_CONSTANTS.gz"
 PHONOPY_PATH = RAW / "mp48_phonopy.yaml.gz"
 SUMMARY_PATH = RAW / "mp48_summary.json.gz"
-OUT = ROOT / "docs/core/artifacts/t13_mp48_force_constant_harmonic_reconstruction_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_mp48_force_constant_harmonic_reconstruction_audit.json"
 
 ROUNDING_EIGENVALUE_TOLERANCE = 1.0e-12
 MAPPING_ERROR_TOLERANCE = 1.0e-10

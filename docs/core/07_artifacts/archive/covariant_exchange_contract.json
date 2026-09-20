@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "artifact": "covariant_exchange_contract",
+  "generated_at": "2026-09-16T09:41:08.601453+00:00",
+  "status": "CANDIDATE",
+  "scalar_equation": "E_phi = epsilon_nc * j_phi",
+  "matter_stress_balance": "nabla_mu T_m^(mu nu) = -epsilon_nc*j_phi*nabla^nu(phi)",
+  "response_balance": "nabla_mu T_response_eff^(mu nu) = +epsilon_nc*j_phi*nabla^nu(phi)",
+  "total_modeled_balance": "nabla_mu(T_m+T_response_eff)^(mu nu) = 0",
+  "matter_number_balance": "nabla_mu N^mu = 0 is an independent lane-specific equation",
+  "gr_limit": "epsilon_nc=0 gives J_phi=Q_m=Q_response=0 exactly",
+  "global_universe_closure": "UNRESOLVED",
+  "causal_source_policy": "IMPLEMENTED_CONSTITUTIVE_1P1D",
+  "downstream_reduction": "PARTIAL_RESPONSE_ONLY",
+  "covariant_matter_action": "PASS_O2_SCALAR_PILOT",
+  "reciprocal_coupling": "PASS_ACTION_LEVEL",
+  "matter_number_current": "PASS_ON_SHELL_O2",
+  "diffusive_matter_reduction": "PARTIAL_CONSTITUTIVE_WITH_EXACT_MODEL_B_LIMIT",
+  "local_convex_matter_causality": "PASS_CONTROL",
+  "gradient_phase_field_causality": "BLOCKED_UV",
+  "derived_trace_backreaction": false,
+  "downstream_hyperbolic_phase_field": {
+    "artifact": "hyperbolic_phase_field_external_comparator_verification.json",
+    "audit_status": "PASS",
+    "evidence_status": "PARTIAL_EXTERNAL_COMPARATOR",
+    "role": "external_fixed_parameter_formula_comparator",
+    "causal_feasibility_artifact": "hyperbolic_phase_field_causal_feasibility.json",
+    "causal_feasibility_status": "PASS",
+    "fixed_light_cone_parameter_domain": "PASS_NORMALIZED_ANALYTIC",
+    "uniform_subluminal_limit": "NO_GO_EXACT_PARABOLIC_LIMIT",
+    "uet_derivation": "BLOCKED"
+  },
+  "downstream_noether_phase_field_state_map": {
+    "artifact": "noether_phase_field_state_map_verification.json",
+    "audit_status": "PASS",
+    "evidence_status": "PARTIAL_HYDRODYNAMIC_STATE_COORDINATE_MAP",
+    "role": "hydrodynamic_state_coordinate_map_not_microscopic_derivation",
+    "affine_fixed_scale_layer": "PASS",
+    "microscopic_reconstruction": "NO_GO_MANY_TO_ONE",
+    "equation_of_state_and_transport": "BLOCKED"
+  }
+}

@@ -8,6 +8,7 @@ import sys
 from datetime import datetime, timezone
 from math import log2, pi
 from pathlib import Path
+from typing import Any
 
 import numpy as np
 
@@ -27,18 +28,36 @@ from docs.core.uet_curved_3p1_geometry import (
     curved_3p1_geometry_operator_contract,
     periodic_central_derivative,
 )
+from docs.core.core_paths import canonical_artifact_path
 
 
-ARTIFACTS = ROOT / "docs/core/artifacts"
+ARTIFACTS = ROOT / "docs/core/07_artifacts"
 SOURCE = ROOT / "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json"
-MODULE = ROOT / "docs/core/uet_curved_3p1_geometry.py"
+MODULE = ROOT / "docs/core/02_equations/covariant/uet_curved_3p1_geometry.py"
 AUDIT_SCRIPT = Path(__file__).resolve()
-VERIFY = ARTIFACTS / "curved_3p1_geometry_operator_verification.json"
-FORMULA = ARTIFACTS / "curved_3p1_geometry_operator_formula_audit.json"
+VERIFY = canonical_artifact_path("curved_3p1_geometry_operator_verification.json", "verification")
+FORMULA = canonical_artifact_path("curved_3p1_geometry_operator_formula_audit.json", "correspondence")
 
 
 def _sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _json_ready(value: Any) -> Any:
+    if isinstance(value, np.ndarray):
+        return _json_ready(value.tolist())
+    if isinstance(value, np.generic):
+        return _json_ready(value.item())
+    if isinstance(value, float):
+        # Canonicalize serialization across Python/NumPy builds only.
+        if abs(value) < 1.0e-12:
+            return 0.0
+        return float(f"{value:.12g}")
+    if isinstance(value, dict):
+        return {key: _json_ready(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [_json_ready(item) for item in value]
+    return value
 
 
 def _l2(error: np.ndarray) -> float:
@@ -266,7 +285,7 @@ def build_artifacts() -> tuple[dict, dict]:
             SOURCE.relative_to(ROOT).as_posix(): _sha256(SOURCE),
         },
         "input_identity": {
-            "module": "docs/core/uet_curved_3p1_geometry.py",
+            "module": "docs/core/02_equations/covariant/uet_curved_3p1_geometry.py",
             "source_record": SOURCE.relative_to(ROOT).as_posix(),
             "analytic_controls": [
                 "periodic Cartesian flat metric",
@@ -325,7 +344,7 @@ def build_artifacts() -> tuple[dict, dict]:
                 "verification_role": "formal/numerical prerequisite",
                 "failure_mode": "index placement or derivative error corrupts every curvature and divergence result",
                 "next_hardening_step": "add non-periodic boundary/multiple-chart implementation only after evolution requirements are defined",
-                "code_path": "docs/core/uet_curved_3p1_geometry.py",
+                "code_path": "docs/core/02_equations/covariant/uet_curved_3p1_geometry.py",
             },
             {
                 "formula_id": "UET-CURVED3P1-RICCI-004",
@@ -341,7 +360,7 @@ def build_artifacts() -> tuple[dict, dict]:
                 "verification_role": "spatial convergence gate",
                 "failure_mode": "incorrect Ricci curvature invalidates the Hamiltonian constraint input",
                 "next_hardening_step": "couple to gauge-declared metric/K evolution and test constraint propagation",
-                "code_path": "docs/core/uet_curved_3p1_geometry.py",
+                "code_path": "docs/core/02_equations/covariant/uet_curved_3p1_geometry.py",
             },
             {
                 "formula_id": "UET-CURVED3P1-MOMENTUM-DIVERGENCE-005",
@@ -357,7 +376,7 @@ def build_artifacts() -> tuple[dict, dict]:
                 "verification_role": "spatial convergence and ADM-input gate",
                 "failure_mode": "connection sign/index drift produces a false momentum-constraint residual",
                 "next_hardening_step": "test propagation under a declared strongly-hyperbolic evolution system",
-                "code_path": "docs/core/uet_curved_3p1_geometry.py",
+                "code_path": "docs/core/02_equations/covariant/uet_curved_3p1_geometry.py",
             },
         ],
         "source": verification["source"],
@@ -366,7 +385,9 @@ def build_artifacts() -> tuple[dict, dict]:
         "open_items": contract["not_implemented"],
         "claim_ceiling": contract["claim_boundary"],
     }
-    return verification, formula
+    return tuple(
+        _json_ready(payload) for payload in (verification, formula)
+    )
 
 
 def main() -> int:
@@ -374,11 +395,11 @@ def main() -> int:
     verification, formula = build_artifacts()
     VERIFY.write_text(
         json.dumps(verification, indent=2, ensure_ascii=True) + "\n",
-        encoding="utf-8",
+        encoding="utf-8", newline="\n",
     )
     FORMULA.write_text(
         json.dumps(formula, indent=2, ensure_ascii=True) + "\n",
-        encoding="utf-8",
+        encoding="utf-8", newline="\n",
     )
     print(
         json.dumps(

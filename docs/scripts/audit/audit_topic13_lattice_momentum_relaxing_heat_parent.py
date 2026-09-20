@@ -13,8 +13,8 @@ from docs.core.uet_lattice_momentum_relaxing_heat_parent import (
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_lattice_momentum_relaxing_heat_parent_audit.json"
-REGISTRY_OUT = ROOT / "docs/core/artifacts/uet_equation_correspondence_registry_topic13_lattice_heat_parent_addendum.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_lattice_momentum_relaxing_heat_parent_audit.json"
+REGISTRY_OUT = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_lattice_heat_parent_addendum.json"
 EQUATION_ID = "standard.lattice.thermal.momentum_relaxing_heat_parent"
 
 
@@ -108,11 +108,11 @@ def main() -> int:
         "independent_alpha_Phi_K_and_TTG_source_closure_missing",
     ]
     source_paths = [
-        "docs/core/uet_lattice_momentum_relaxing_heat_parent.py",
-        "docs/core/test/test_topic13_lattice_momentum_relaxing_heat_parent.py",
+        "docs/core/03_lanes/thermal/uet_lattice_momentum_relaxing_heat_parent.py",
+        "docs/core/05_tests/regression/root/test_topic13_lattice_momentum_relaxing_heat_parent.py",
         "docs/scripts/audit/audit_topic13_lattice_momentum_relaxing_heat_parent.py",
     ]
-    prior_path = "docs/core/artifacts/t13_coupled_response_heat_carrier_no_go_audit.json"
+    prior_path = "docs/core/07_artifacts/topic13/t13_coupled_response_heat_carrier_no_go_audit.json"
     artifact = {
         "schema_version": "t13-lattice-momentum-relaxing-heat-parent-v1",
         "major_result_id": "T13_LATTICE_MOMENTUM_RELAXING_HEAT_PARENT",
@@ -237,7 +237,7 @@ def main() -> int:
         json.dumps({
             "schema_version": "uet-equation-registry-addendum-v1",
             "status": "STANDARD_COMPARATOR_NOT_MERGED_AS_UET_EQUATION",
-            "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+            "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
             "equation_entries": [entry],
             "full_core_unlock": False,
             "claim_promotion": False,

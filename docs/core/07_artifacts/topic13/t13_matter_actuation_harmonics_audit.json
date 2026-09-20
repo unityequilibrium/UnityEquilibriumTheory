@@ -1,0 +1,153 @@
+{
+  "major_result_id": "T13_EXISTING_MATTER_ACTUATION_HARMONICS",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "equation_or_mapping": "DeltaJ=epsilon*h*(chi0*A*cos(wt)+A^2*(1+cos(2wt))/4)",
+  "units": "chi0,A energy; h energy; J energy^3; epsilon dimensionless",
+  "derivation_class": "Expansion of existing production response residual",
+  "observable": "Source harmonics, not measured Phi or temperature harmonics",
+  "data_role": "SYNTHETIC_ACTION_DIAGNOSTIC",
+  "rows": [
+    {
+      "background": 0.0,
+      "amplitude": 0.1,
+      "epsilon": 0.5,
+      "dc_fundamental_second_harmonic": [
+        0.001,
+        -1.7618285302889447e-19,
+        0.001
+      ],
+      "expected": [
+        0.0010000000000000002,
+        0.0,
+        0.0010000000000000002
+      ],
+      "maximum_absolute_error": 2.168404344971009e-19
+    },
+    {
+      "background": 0.0,
+      "amplitude": 0.05,
+      "epsilon": 0.5,
+      "dc_fundamental_second_harmonic": [
+        0.00025,
+        -4.404571325722362e-20,
+        0.00025
+      ],
+      "expected": [
+        0.00025000000000000006,
+        0.0,
+        0.00025000000000000006
+      ],
+      "maximum_absolute_error": 5.421010862427522e-20
+    },
+    {
+      "background": 0.0,
+      "amplitude": 0.025,
+      "epsilon": 0.5,
+      "dc_fundamental_second_harmonic": [
+        6.25e-05,
+        -1.1011428314305904e-20,
+        6.25e-05
+      ],
+      "expected": [
+        6.250000000000001e-05,
+        0.0,
+        6.250000000000001e-05
+      ],
+      "maximum_absolute_error": 1.3552527156068805e-20
+    },
+    {
+      "background": 0.4,
+      "amplitude": 0.1,
+      "epsilon": 0.5,
+      "dc_fundamental_second_harmonic": [
+        0.0009999999999999976,
+        0.016,
+        0.0009999999999999994
+      ],
+      "expected": [
+        0.0010000000000000002,
+        0.016000000000000004,
+        0.0010000000000000002
+      ],
+      "maximum_absolute_error": 3.469446951953614e-18
+    },
+    {
+      "background": 0.4,
+      "amplitude": 0.05,
+      "epsilon": 0.5,
+      "dc_fundamental_second_harmonic": [
+        0.0002499999999999975,
+        0.008000000000000004,
+        0.00024999999999999946
+      ],
+      "expected": [
+        0.00025000000000000006,
+        0.008000000000000002,
+        0.00025000000000000006
+      ],
+      "maximum_absolute_error": 2.5478751053409354e-18
+    },
+    {
+      "background": 0.4,
+      "amplitude": 0.025,
+      "epsilon": 0.5,
+      "dc_fundamental_second_harmonic": [
+        6.249999999999732e-05,
+        0.004000000000000002,
+        6.249999999999988e-05
+      ],
+      "expected": [
+        6.250000000000001e-05,
+        0.004000000000000001,
+        6.250000000000001e-05
+      ],
+      "maximum_absolute_error": 2.6969529040576923e-18
+    },
+    {
+      "background": 0.4,
+      "amplitude": 0.1,
+      "epsilon": 0.0,
+      "dc_fundamental_second_harmonic": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expected": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "maximum_absolute_error": 0.0
+    }
+  ],
+  "what_is_closed": "Classical zero-background coherent matter actuation has no first-order fundamental Phi source",
+  "verification_status": "PRODUCTION_SOURCE_HARMONICS_CHECKED",
+  "open_blockers": [
+    "physical_preparation_and_measurement_of_matter_amplitude",
+    "normal_state_variance_response",
+    "response_propagator_and_energy_input",
+    "material_SI_mapping"
+  ],
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "claim_boundary": "Prescribed chi is a diagnostic, not an on-shell driven solution. A normal thermal variance may respond linearly to another input; this result does not exclude that route. No epsilon division at GR null, no calibration value or holdout.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/scripts/audit/audit_topic13_matter_actuation_harmonics.py",
+      "sha256": "5c419574911339e3a5ac24e343c88dafa95b003deeed7e523f794671b9853ea4"
+    },
+    {
+      "path": "docs/core/test/test_topic13_matter_actuation_harmonics.py",
+      "sha256": "f2e88008473922b48fb129b03ebe0c1f086f3936f4db1d1127ee87c738d256fd"
+    },
+    {
+      "path": "docs/core/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "path": "docs/core/uet_covariant_response.py",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    }
+  ]
+}

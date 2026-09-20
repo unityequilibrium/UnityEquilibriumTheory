@@ -15,8 +15,8 @@ from docs.scripts.audit import audit_topic13_charged_one_loop_match as charged
 thermal=charged.thermal
 CFG=charged.CFG
 ROOT=Path(__file__).resolve().parents[3]
-OUT=ROOT/"docs/core/artifacts/t13_charged_one_loop_current_vertex_audit.json"
-REGISTRY_OUT=ROOT/"docs/core/artifacts/uet_equation_correspondence_registry_topic13_charged_current_vertex_addendum.json"
+OUT=ROOT/"docs/core/07_artifacts/topic13/t13_charged_one_loop_current_vertex_audit.json"
+REGISTRY_OUT=ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_charged_current_vertex_addendum.json"
 EQUATION_ID="uet.o2.thermal.charged_one_loop_current_vertex"
 SAMPLES=((.25,1,1,.3,.4),(.25,2,1,-.2,.5),(.5,1,2,.4,-.3))
 
@@ -209,11 +209,11 @@ def main():
     paths=["docs/scripts/audit/audit_topic13_charged_one_loop_current_vertex.py",
         "docs/core/test/test_topic13_charged_one_loop_current_vertex.py",
         "docs/scripts/audit/audit_topic13_charged_one_loop_match.py",
-        "docs/core/uet_o2_tree_level_charged_ward_vertex.py",
-        "docs/core/uet_o2_finite_density_charged_vertex.py",
-        "docs/core/uet_o2_charged_current_correlator.py"]
+        "docs/core/02_equations/o2/uet_o2_tree_level_charged_ward_vertex.py",
+        "docs/core/02_equations/o2/uet_o2_finite_density_charged_vertex.py",
+        "docs/core/02_equations/o2/uet_o2_charged_current_correlator.py"]
     sha=lambda p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest()
-    prior="docs/core/artifacts/t13_charged_one_loop_match_audit.json"
+    prior="docs/core/07_artifacts/topic13/t13_charged_one_loop_match_audit.json"
     artifact={"schema_version":"t13-charged-one-loop-current-vertex-v1",
         "major_result_id":"T13_CHARGED_ONE_LOOP_CURRENT_VERTEX_MATCH","topic":"0.13_Thermodynamic_Bridge",
         "closure_level":"PARTIAL","verification_status":"PASS_SCOPED_CHARGED_ONE_LOOP_VERTEX" if all(checks.values()) else "WARN_CHARGED_ONE_LOOP_VERTEX",
@@ -266,7 +266,7 @@ def main():
         "downstream_dependencies":[],"dependency_role":"diagnostic_only","physical_dependency_unlock":False,
         "failure_mode":artifact["open_blockers"],"next_hardening_step":artifact["report"]["NEXT_ACTION"]})
     REGISTRY_OUT.write_text(json.dumps({"schema_version":"uet-equation-registry-addendum-v1",
-        "status":"CANDIDATE_DIAGNOSTIC_NOT_MERGED","extends":"docs/core/artifacts/uet_equation_correspondence_registry.json",
+        "status":"CANDIDATE_DIAGNOSTIC_NOT_MERGED","extends":"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
         "equation_entries":[entry],"full_core_unlock":False,"claim_promotion":False},indent=2,allow_nan=False)+"\n",encoding="utf-8")
     print(json.dumps({"status":artifact["verification_status"],"checks":checks,
         "Ward_errors":[r["Ward_relative_error"] for r in rows],

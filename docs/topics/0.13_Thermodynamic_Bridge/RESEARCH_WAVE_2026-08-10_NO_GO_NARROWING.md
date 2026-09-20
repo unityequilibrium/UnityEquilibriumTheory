@@ -22,7 +22,7 @@ transport, and Galaxy remain blocked.
 STATUS: `BLOCKED_OPEN_T13_FULL_BRIDGE`
 
 WHAT_CHANGED: Added
-`docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json` and its
+`docs/core/07_artifacts/archive/conserved_c_finite_cone_no_go_assessment.json` and its
 deterministic audit/test linkage. The original conserved-C baseline remains
 `BLOCKED`; no branch replacement was made.
 

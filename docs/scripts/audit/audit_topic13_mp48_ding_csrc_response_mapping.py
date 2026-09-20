@@ -18,9 +18,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 RAW = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw"
 DING_TEXT = RAW / "ding_2022_pmc_full_text.txt"
-MESH_ARTIFACT = ROOT / "docs/core/artifacts/t13_mp48_force_constant_csrc_mesh_convergence_audit.json"
+MESH_ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_mp48_force_constant_csrc_mesh_convergence_audit.json"
 SOURCE_PACKAGE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/mp48_independent_graphite_cv_source_package.json"
-OUT = ROOT / "docs/core/artifacts/t13_mp48_ding_csrc_response_mapping_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_mp48_ding_csrc_response_mapping_audit.json"
 
 RESULT_ID = "T13_MP48_DING_C_SRC_MODE_SUM_RESPONSE_MAPPING"
 STATUS = "PASS_T13_DING_C_SRC_MODE_SUM_RESPONSE_MAPPING"

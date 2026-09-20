@@ -14,41 +14,41 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_closure_input_package_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json"
 GATE_REL = (
     "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
     "topic13_full_thermodynamic_bridge_core_ready_gate.json"
 )
-RECORD_CONTRACT_REL = "docs/core/artifacts/t13_closure_record_contract_audit.json"
-CANDIDATE_COMPATIBILITY_REL = "docs/core/artifacts/t13_candidate_core_compatibility_audit.json"
+RECORD_CONTRACT_REL = "docs/core/07_artifacts/topic13/t13_closure_record_contract_audit.json"
+CANDIDATE_COMPATIBILITY_REL = "docs/core/07_artifacts/topic13/t13_candidate_core_compatibility_audit.json"
 RECONCILIATION_RELS = {
-    "cv": "docs/core/artifacts/t13_cv_source_reconciliation_audit.json",
-    "transport": "docs/core/artifacts/t13_physical_transport_reconciliation_audit.json",
-    "base_phi": "docs/core/artifacts/t13_base_phi_si_reconciliation_audit.json",
-    "csrc": "docs/core/artifacts/t13_csrc_reconciliation_audit.json",
+    "cv": "docs/core/07_artifacts/topic13/t13_cv_source_reconciliation_audit.json",
+    "transport": "docs/core/07_artifacts/topic13/t13_physical_transport_reconciliation_audit.json",
+    "base_phi": "docs/core/07_artifacts/topic13/t13_base_phi_si_reconciliation_audit.json",
+    "csrc": "docs/core/07_artifacts/topic13/t13_csrc_reconciliation_audit.json",
 }
 
 EVIDENCE_RELS = [
     RECORD_CONTRACT_REL,
-    "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json",
-    "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
-    "docs/core/artifacts/t13_ding_pbte_author_request_audit.json",
-    "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
-    "docs/core/artifacts/t13_ding_material_regime_boundary_audit.json",
-    "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json",
-    "docs/core/artifacts/t13_dimensional_bridge_contract_audit.json",
-    "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
-    "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
-    "docs/core/artifacts/t13_physical_kubo_coefficient_provenance_audit.json",
-    "docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
-    "docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json",
-    "docs/core/artifacts/t13_huberman_2019_ttg_source_boundary_audit.json",
-    "docs/core/artifacts/t13_public_phonon_route_screening_audit.json",
+    "docs/core/07_artifacts/topic13/t13_independent_csrc_acceptance_contract.json",
+    "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
+    "docs/core/07_artifacts/topic13/t13_ding_pbte_author_request_audit.json",
+    "docs/core/07_artifacts/topic13/t13_ding_pbte_numeric_input_availability_audit.json",
+    "docs/core/07_artifacts/topic13/t13_ding_material_regime_boundary_audit.json",
+    "docs/core/07_artifacts/topic13/t13_alpha_phi_k_calibration_candidate_audit.json",
+    "docs/core/07_artifacts/topic13/t13_dimensional_bridge_contract_audit.json",
+    "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json",
+    "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json",
+    "docs/core/07_artifacts/topic13/t13_physical_kubo_coefficient_provenance_audit.json",
+    "docs/core/07_artifacts/topic13/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
+    "docs/core/07_artifacts/topic13/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json",
+    "docs/core/07_artifacts/topic13/t13_huberman_2019_ttg_source_boundary_audit.json",
+    "docs/core/07_artifacts/topic13/t13_public_phonon_route_screening_audit.json",
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_public_phonon_route_screening_package.json",
     CANDIDATE_COMPATIBILITY_REL,
-    "docs/core/artifacts/covariant_superfluid_transport_verification.json",
-    "docs/core/artifacts/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json",
-    "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json",
+    "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json",
+    "docs/core/07_artifacts/topic13/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json",
+    "docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json",
     *RECONCILIATION_RELS.values(),
     GATE_REL,
 ]
@@ -77,25 +77,25 @@ def artifact_ref(rel: str, role: str) -> dict[str, Any]:
 def main() -> int:
     gate = load(GATE_REL)
     record_contract = load(RECORD_CONTRACT_REL)
-    csrc_contract = load("docs/core/artifacts/t13_independent_csrc_acceptance_contract.json")
-    calorine = load("docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json")
-    author_request = load("docs/core/artifacts/t13_ding_pbte_author_request_audit.json")
-    oa_route = load("docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json")
-    material = load("docs/core/artifacts/t13_ding_material_regime_boundary_audit.json")
-    alpha = load("docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json")
-    dimensional = load("docs/core/artifacts/t13_dimensional_bridge_contract_audit.json")
-    anchor_no_go = load("docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json")
-    action_si = load("docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json")
-    kubo = load("docs/core/artifacts/t13_physical_kubo_coefficient_provenance_audit.json")
-    transport = load("docs/core/artifacts/covariant_superfluid_transport_verification.json")
+    csrc_contract = load("docs/core/07_artifacts/topic13/t13_independent_csrc_acceptance_contract.json")
+    calorine = load("docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_reproduction_audit.json")
+    author_request = load("docs/core/07_artifacts/topic13/t13_ding_pbte_author_request_audit.json")
+    oa_route = load("docs/core/07_artifacts/topic13/t13_ding_pbte_numeric_input_availability_audit.json")
+    material = load("docs/core/07_artifacts/topic13/t13_ding_material_regime_boundary_audit.json")
+    alpha = load("docs/core/07_artifacts/topic13/t13_alpha_phi_k_calibration_candidate_audit.json")
+    dimensional = load("docs/core/07_artifacts/topic13/t13_dimensional_bridge_contract_audit.json")
+    anchor_no_go = load("docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json")
+    action_si = load("docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json")
+    kubo = load("docs/core/07_artifacts/topic13/t13_physical_kubo_coefficient_provenance_audit.json")
+    transport = load("docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json")
     natural_kubo = load(
-        "docs/core/artifacts/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json"
+        "docs/core/07_artifacts/topic13/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json"
     )
-    sk_entropy = load("docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json")
-    lowitzer_pair = load("docs/core/artifacts/t13_lowitzer_graphite_pvt_full_source_pair_audit.json")
-    graphite_pair_boundary = load("docs/core/artifacts/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json")
-    huberman = load("docs/core/artifacts/t13_huberman_2019_ttg_source_boundary_audit.json")
-    public_phonon = load("docs/core/artifacts/t13_public_phonon_route_screening_audit.json")
+    sk_entropy = load("docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json")
+    lowitzer_pair = load("docs/core/07_artifacts/topic13/t13_lowitzer_graphite_pvt_full_source_pair_audit.json")
+    graphite_pair_boundary = load("docs/core/07_artifacts/topic13/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json")
+    huberman = load("docs/core/07_artifacts/topic13/t13_huberman_2019_ttg_source_boundary_audit.json")
+    public_phonon = load("docs/core/07_artifacts/topic13/t13_public_phonon_route_screening_audit.json")
     candidate_compatibility = load(CANDIDATE_COMPATIBILITY_REL)
     cv_reconciliation = load(RECONCILIATION_RELS["cv"])
     transport_reconciliation = load(RECONCILIATION_RELS["transport"])

@@ -9,10 +9,11 @@ import sys
 from datetime import date
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
+
+from docs.core.core_paths import canonical_existing_path  # noqa: E402
 
 from docs.core.he4_normal_viscosity_kubo import physical_transport_record  # noqa: E402
 from docs.core.topic13_closure_record_contract import validate_physical_transport_record  # noqa: E402
@@ -22,11 +23,11 @@ PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "he4_svp_normal_viscosity_kubo_source_package.json"
 )
-MODULE = ROOT / "docs/core/he4_normal_viscosity_kubo.py"
-CALIBRATION = ROOT / "docs/core/artifacts/t13_he4_o2_response_calibration_audit.json"
-SI_BETA = ROOT / "docs/core/artifacts/t13_he4_o2_si_beta_mapping_audit.json"
-HEAT_ENTROPY = ROOT / "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json"
-OUT = ROOT / "docs/core/artifacts/t13_he4_normal_viscosity_kubo_audit.json"
+MODULE = ROOT / "docs/core/03_lanes/thermal/he4_normal_viscosity_kubo.py"
+CALIBRATION = ROOT / "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json"
+SI_BETA = ROOT / "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json"
+HEAT_ENTROPY = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_he4_normal_viscosity_kubo_audit.json"
 
 
 def load(path: Path) -> dict:
@@ -91,7 +92,7 @@ def main() -> int:
             "observable": "normal-component shear viscosity of He II at 1.7 K and SVP",
             "data_role": "EXTERNAL_INPUT_NOT_UET_PREDICTION",
             "evidence_artifacts": [
-                {"path": str(path.relative_to(ROOT)).replace("\\", "/"), "sha256": sha256(path)}
+                {"path": str(path.relative_to(ROOT)).replace("\\", "/"), "sha256": sha256(canonical_existing_path(path))}
                 for path in evidence_paths
             ],
             "verification_status": status,

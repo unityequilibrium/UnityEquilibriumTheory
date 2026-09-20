@@ -13,6 +13,9 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from docs.core.core_paths import canonical_artifact_path, canonical_existing_path  # noqa: E402
+QUANTUM_MEASUREMENT_SOURCE = canonical_existing_path(ROOT / ("docs/core/" + "uet_quantum_measurement.py")).relative_to(ROOT).as_posix()
+
 from docs.core.uet_quantum_measurement import (
     DensityOperator, MeasurementContext, QuantumChannel, QuantumInstrument,
     apply_quantum_channel, born_probabilities, expectation,
@@ -20,7 +23,7 @@ from docs.core.uet_quantum_measurement import (
     sample_or_record_outcome,
 )
 
-ARTIFACTS = ROOT / "docs/core/artifacts"
+ARTIFACTS = ROOT / "docs/core/07_artifacts"
 
 
 def build_artifacts() -> tuple[dict, dict, dict]:
@@ -88,10 +91,10 @@ def build_artifacts() -> tuple[dict, dict, dict]:
     }
     addendum = {
         "schema_version": "1.0", "artifact": "uet_equation_correspondence_registry_quantum_measurement_addendum",
-        "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json", "status": "CANDIDATE_ENTRY_PENDING_MERGE",
+        "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json", "status": "CANDIDATE_ENTRY_PENDING_MERGE",
         "equation_entries": [{
             "equation_id": "uet.main_theory.operational_quantum_measurement", "version": "operational-qm-v1",
-            "classification": "standard_physics_interface", "relation_or_code_path": "docs/core/uet_quantum_measurement.py",
+            "classification": "standard_physics_interface", "relation_or_code_path": QUANTUM_MEASUREMENT_SOURCE,
             "variables": {"rho": "density operator", "E_o": "POVM effect", "K_r": "channel/instrument Kraus operator", "p(o)": "Born probability", "R_obs": "observer outcome record"},
             "mathematical_role": "preparation-channel-instrument-outcome interface",
             "standard_physics_counterpart": "finite-dimensional operational quantum mechanics",
@@ -101,8 +104,8 @@ def build_artifacts() -> tuple[dict, dict, dict]:
             "assumptions": ["Born rule", "CPTP channels", "positive complete POVMs", "declared detector interaction"],
             "symmetry_and_conservation": "trace preservation, positivity, and no-signalling baseline",
             "limiting_cases": ["identity channel preserves preparation", "projective instrument is a POVM special case"],
-            "implementation_paths": ["docs/core/uet_quantum_measurement.py"],
-            "verifier_paths": ["docs/scripts/audit/audit_uet_quantum_measurement.py", "docs/core/artifacts/quantum_measurement_verification.json", "docs/core/test/test_uet_quantum_measurement.py"],
+            "implementation_paths": [QUANTUM_MEASUREMENT_SOURCE],
+            "verifier_paths": ["docs/scripts/audit/audit_uet_quantum_measurement.py", "docs/core/07_artifacts/verification/quantum_measurement_verification.json", "docs/core/test/test_uet_quantum_measurement.py"],
             "evidence_class": "STANDARD_THEORY_REPRODUCTION", "proof_status": "finite-dimensional baseline tests pass",
             "downstream_dependencies": ["uet.main_theory.quantum_interpretations", "uet.main_theory.detector_observables"],
             "claim_boundary": "standard interface adopted by UET; not a UET derivation of quantum mechanics",
@@ -117,7 +120,9 @@ def main() -> int:
     names = ("quantum_measurement_verification.json", "uet_main_theory_wave6_gate.json", "uet_equation_correspondence_registry_quantum_measurement_addendum.json")
     outputs = dict(zip(names, build_artifacts()))
     for name, payload in outputs.items():
-        (ARTIFACTS / name).write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        canonical_artifact_path(name).write_text(
+            json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        )
     gate = outputs["uet_main_theory_wave6_gate.json"]
     print(f"audit_status={gate['audit_status']}")
     print(f"quantum_status={gate['quantum_status']}")

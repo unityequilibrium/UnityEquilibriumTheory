@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "artifact": "uet_main_theory_closure_gate",
+  "generated_at": "2026-09-16T10:57:26.246170+00:00",
+  "overall_status": "BLOCKED",
+  "categories": {
+    "methodological_closure": {
+      "status": "PASS",
+      "reason": "axioms, registry, per-wave gates, tests, update log, and dependency decisions are machine-readable"
+    },
+    "ontology_closure": {
+      "status": "PASS_CONTRACT_ONLY",
+      "reason": "C lanes, Phi, physical memory, R_gen, R_obs, and interpretation boundaries are separated; lane realizations remain incomplete"
+    },
+    "mathematical_eft_closure": {
+      "status": "PARTIAL_BLOCKED",
+      "reason": "conservative parent and linear controls pass internally; full SK action and curved 3+1 parent evolution are absent"
+    },
+    "numerical_closure": {
+      "status": "PARTIAL_BLOCKED",
+      "reason": "fixed-background hyperbolic control converges; curved metric constraints and thermal causal leakage fail/open"
+    },
+    "physical_correspondence_closure": {
+      "status": "PARTIAL_ANALYTIC_ONLY",
+      "reason": "operational QM and analytic GR controls reproduce standards; dimensional and curved physical mappings remain open"
+    },
+    "dimensional_observable_closure": {
+      "status": "BLOCKED",
+      "reason": "numeric TTG package, independent alpha_Phi_K, and causal repair are missing"
+    },
+    "empirical_status": {
+      "status": "BLOCKED_NO_EXTERNAL_HOLDOUT",
+      "reason": "no main-theory dimensional external holdout comparison has been executed"
+    },
+    "fundamental_unification_status": {
+      "status": "HYPOTHESIS_TRACK_BLOCKED",
+      "reason": "local gauge, spinor, CPT, anomaly, renormalization, and mass-generation gates are open"
+    }
+  },
+  "aggregation_policy": "NO_AVERAGING; every blocked category remains controlling for claims that depend on it",
+  "primary_eft_status": "CANDIDATE_PARTIALLY_CLOSED_EFFECTIVE_THEORY",
+  "completed_internal_spines": [
+    "minimal ontology",
+    "conservative covariant parent formula",
+    "lane-specific coarse graining",
+    "linear classical KMS constitutive bridge",
+    "fixed-Minkowski hyperbolic control",
+    "operational QM",
+    "prediction-invariant interpretation adapters",
+    "analytic GR correspondence controls"
+  ],
+  "controlling_blockers": [
+    "full_sk_kms_derivation",
+    "curved_3p1_dynamical_metric_constraints",
+    "dimensional_observable_calibration",
+    "external_holdout",
+    "fundamental_local_symmetry_and_spinor_completion"
+  ],
+  "input_identity": {
+    "wave0": {
+      "path": "docs/core/07_artifacts/gates/uet_main_theory_wave0_gate.json",
+      "sha256": "b8f83fd84583315d555cd923ee0e5c121388f056f900a28271efb73706f8dcfa"
+    },
+    "wave1": {
+      "path": "docs/core/07_artifacts/gates/uet_main_theory_ontology_gate.json",
+      "sha256": "bbed43103d0254fc9375d246936692412a305390d7a4dd54ce2b9432afbb9fb5"
+    },
+    "wave2": {
+      "path": "docs/core/07_artifacts/gates/uet_main_theory_wave2_gate.json",
+      "sha256": "b3d96e176ec48d71ea1fe516ecc202e16f54179c71ce8de0ef15d2c8b80ae99d"
+    },
+    "wave3": {
+      "path": "docs/core/07_artifacts/gates/uet_main_theory_wave3_gate.json",
+      "sha256": "e369f60568cecf66881610ab5e031184199a7e8e27bfb81d23a4ed6d9f2536cd"
+    },
+    "wave4": {
+      "path": "docs/core/07_artifacts/gates/uet_main_theory_wave4_gate.json",
+      "sha256": "eec0ba9f1f71e848bc568cae337451595d94cdf11d455780d43c2fa3f4a4e6c4"
+    },
+    "wave5": {
+      "path": "docs/core/07_artifacts/gates/uet_main_theory_wave5_gate.json",
+      "sha256": "7ed239c2e297d3e4377caaa7cefddfc73039b5a3815e4ee9911dd0409928df24"
+    },
+    "wave6": {
+      "path": "docs/core/07_artifacts/gates/uet_main_theory_wave6_gate.json",
+      "sha256": "9788298da4eaa50dcb5acde66d0a7c73e78ffbcea063a7cbc726ef19a70b4af2"
+    },
+    "wave7": {
+      "path": "docs/core/07_artifacts/gates/uet_main_theory_wave7_gate.json",
+      "sha256": "3a5028b24f3aa1b4412eb50784ee39095283b9f78a5aceea59804ebd47aeb759"
+    },
+    "wave8": {
+      "path": "docs/core/07_artifacts/gates/uet_main_theory_wave8_gate.json",
+      "sha256": "d3778d5e446f33eef448a0ee1945af131bc7e4a370c26ffed33083711fd03cdd"
+    },
+    "wave9": {
+      "path": "docs/core/07_artifacts/gates/uet_main_theory_wave9_gate.json",
+      "sha256": "3859f35ace966ac0d181b0456dc5a15f44e3cdcbcaa3e4b9f64e052b4d7c102e"
+    },
+    "wave10": {
+      "path": "docs/core/07_artifacts/gates/uet_main_theory_wave10_gate.json",
+      "sha256": "8853117e3017dbbec43d87872c97d65de28a554121e96671e5da45ee101dd577"
+    },
+    "wave11": {
+      "path": "docs/core/07_artifacts/gates/uet_main_theory_wave11_gate.json",
+      "sha256": "24b48df881e423808f4a10ef02aedd21598e469a65d3e39c3510f63ce3bcd241"
+    },
+    "foundation": {
+      "path": "docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json",
+      "sha256": "99d9f68f801b640887ea41627397139b5b6e3f11ce115613abcf6c58256f8aec"
+    },
+    "registry": {
+      "path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
+      "sha256": "9fd592d590291dea95e793cc8211e052004c33302c8585dae2c7e3d80676d307"
+    }
+  },
+  "downstream_unlock": "BLOCKED_EXCEPT_PHASE_INTERNAL_DIAGNOSTIC",
+  "claim_boundary": "methodological and several internal formula/control layers pass; the main physical theory is not closed or externally validated"
+}

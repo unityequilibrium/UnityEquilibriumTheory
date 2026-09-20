@@ -25,8 +25,8 @@ def main() -> None:
     )
     text = replace_once(
         text,
-        '    ding_source_mapping_path, ding_source_mapping = load(\n        "docs/core/artifacts/ding_2022_source_mapping_audit.json"\n    )\n',
-        '    ding_source_mapping_path, ding_source_mapping = load(\n        "docs/core/artifacts/ding_2022_source_mapping_audit.json"\n    )\n    alpha_search_path, alpha_search = load(\n        "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json"\n    )\n',
+        '    ding_source_mapping_path, ding_source_mapping = load(\n        "docs/core/07_artifacts/provenance/ding_2022_source_mapping_audit.json"\n    )\n',
+        '    ding_source_mapping_path, ding_source_mapping = load(\n        "docs/core/07_artifacts/provenance/ding_2022_source_mapping_audit.json"\n    )\n    alpha_search_path, alpha_search = load(\n        "docs/core/07_artifacts/topic13/t13_alpha_phi_k_calibration_candidate_audit.json"\n    )\n',
         "alpha search load",
     )
     text = replace_once(

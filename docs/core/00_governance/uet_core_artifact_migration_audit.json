@@ -1,0 +1,103 @@
+{
+  "artifact": "uet_core_artifact_migration_audit",
+  "checks": [
+    {
+      "check_id": "manifest_schema",
+      "status": "PASS"
+    },
+    {
+      "check_id": "active_legacy_sources_exist",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "active_source_hashes_stable",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "migrated_canonical_targets_exist",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "migrated_target_hashes_stable",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "migrated_target_semantic_hashes_stable",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "migrated_legacy_sources_absent",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "migrated_active_consumers_empty",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "migration_history_matches_manifest",
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "check_id": "canonical_targets_unique",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "active_canonical_targets_not_written_before_consumer_switch",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "legacy_artifact_boundary_present",
+      "status": "PASS"
+    },
+    {
+      "check_id": "physics_status_unchanged",
+      "observed": 0,
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary": "artifact organization and compatibility control only; no physics-status promotion",
+  "controlling_blocker": null,
+  "duplicate_targets": {},
+  "existing_targets": [],
+  "generated_at": "2026-09-16T11:12:28+00:00",
+  "generator": "docs/scripts/audit/audit_uet_core_artifact_migration_v3.py",
+  "migrated_active_consumer_rows": [],
+  "migrated_source_present": [],
+  "missing_sources": [],
+  "missing_targets": [],
+  "schema_version": "1.0",
+  "source_hash_mismatches": [],
+  "status": "PASS",
+  "summary": {
+    "active_legacy_files": 0,
+    "claim_promotion": false,
+    "consumer_rewrite_required": 0,
+    "disposition_counts": {
+      "migrated_canonical_output": 593
+    },
+    "duplicate_targets": {},
+    "existing_target_conflicts": [],
+    "files_migrated_in_prior_waves": 593,
+    "files_total": 593,
+    "generator_identity_ambiguous": 6,
+    "generator_identity_missing": 510,
+    "generator_identity_resolved": 77,
+    "json_files": 592,
+    "migrated_files": 593,
+    "npz_files": 1,
+    "physical_move_performed": true,
+    "physics_status_changes": 0
+  },
+  "target_hash_mismatches": [],
+  "target_semantic_hash_mismatches": []
+}

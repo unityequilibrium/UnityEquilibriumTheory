@@ -21,9 +21,9 @@ from docs.scripts.audit.audit_topic13_fixed_phi_spectrum_repair import fixed_phi
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_formal_transverse_response_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_formal_transverse_response.py"
-EOS_MODULE = ROOT / "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_formal_transverse_response_audit.json"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py"
+EOS_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py"
 
 
 def sha256(path: Path) -> str:
@@ -122,8 +122,8 @@ def main() -> int:
             "observable": contract["observable"],
             "data_role": contract["data_role"],
             "evidence_artifacts": [
-                {"path": "docs/core/uet_o2_formal_transverse_response.py", "sha256": sha256(MODULE)},
-                {"path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py", "sha256": sha256(EOS_MODULE)},
+                {"path": "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py", "sha256": sha256(MODULE)},
+                {"path": "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py", "sha256": sha256(EOS_MODULE)},
             ],
             "verification_status": FORMAL_TRANSVERSE_RESPONSE_STATUS if not failed else "BLOCKED_FORMAL_TRANSVERSE_RESPONSE_AUDIT",
             "open_blockers": [
@@ -143,8 +143,8 @@ def main() -> int:
         "source_hashes": {
             path: sha256(ROOT / path)
             for path in (
-                "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
-                "docs/core/uet_o2_formal_transverse_response.py",
+                "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py",
+                "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py",
                 "docs/scripts/audit/audit_topic13_fixed_phi_spectrum_repair.py",
                 "docs/scripts/audit/audit_topic13_formal_transverse_response.py",
             )

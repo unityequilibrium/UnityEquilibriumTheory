@@ -26,7 +26,7 @@ PACKAGE_REL = (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "t13_figshare_dft_force_data_source_package.json"
 )
-OUT_REL = "docs/core/artifacts/t13_figshare_dft_force_data_boundary_audit.json"
+OUT_REL = "docs/core/07_artifacts/topic13/t13_figshare_dft_force_data_boundary_audit.json"
 FIGSHARE_URL = (
     "https://figshare.com/articles/dataset/"
     "A_dataset_of_DFT_energies_and_forces_for_carbon_allotropes_of_"

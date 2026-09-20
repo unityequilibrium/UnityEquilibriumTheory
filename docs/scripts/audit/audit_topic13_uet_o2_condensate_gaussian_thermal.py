@@ -30,10 +30,10 @@ from docs.core.uet_o2_finite_density_eos import (
 
 
 ROOT = Path(__file__).resolve().parents[3]
-THERMAL_REL = "docs/core/uet_o2_condensate_gaussian_thermal.py"
-SPECTRUM_REL = "docs/core/uet_o2_condensate_fluctuations.py"
-EOS_REL = "docs/core/uet_o2_finite_density_eos.py"
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_condensate_gaussian_thermal_audit.json"
+THERMAL_REL = "docs/core/02_equations/o2/uet_o2_condensate_gaussian_thermal.py"
+SPECTRUM_REL = "docs/core/02_equations/o2/uet_o2_condensate_fluctuations.py"
+EOS_REL = "docs/core/02_equations/o2/uet_o2_finite_density_eos.py"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_condensate_gaussian_thermal_audit.json"
 
 TEMPERATURE = 0.25
 CHEMICAL_POTENTIAL = 1.3

@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "artifact": "hyperbolic_phase_field_covariant_mapping_gate",
+  "generated_at": "2026-09-20T04:00:50+00:00",
+  "topic": "docs/core UET GR non-closed response",
+  "version": "wave8_v1",
+  "benchmark_role": "dependency_gate",
+  "method_label": "covariant_transport_readiness",
+  "status": "BLOCKED",
+  "evidence_status": "PARTIAL_ANALYTIC_CAUSAL_BRIDGE",
+  "input_identity": {
+    "external_comparator_artifact": "docs/core/07_artifacts/verification/hyperbolic_phase_field_external_comparator_verification.json",
+    "source_records": [
+      "docs/data/external/relativistic_transport/jain_kovtun_2024/source_record.json",
+      "docs/data/external/relativistic_transport/crossley_glorioso_liu_2017/source_record.json"
+    ]
+  },
+  "thresholds": {
+    "required_fixed_cone_status": "PASS",
+    "required_local_current_map_status": "PASS_MOBILITY_ONE",
+    "required_covariant_state_map_status_for_promotion": "PASS"
+  },
+  "notes": [
+    "External characteristic formulas are sourced; fixed-cone inequalities are derived.",
+    "A local algebraic current map is not a covariant UET derivation."
+  ],
+  "completed_layers": {
+    "external_formula_transcription": "PASS",
+    "fixed_light_cone_normalized_parameter_domain": "PASS",
+    "external_q_to_local_current_law": "PASS_MOBILITY_ONE",
+    "noether_charge_variable_declaration": "PASS_SIGNED_O2_CHARGE",
+    "coarse_density_to_phase_coordinate": "PASS_AFFINE_FIXED_SCALE"
+  },
+  "classical_covariant_lane": {
+    "noether_density_to_phase_field_order_parameter": "PASS_HYDRODYNAMIC_AFFINE_ONLY",
+    "covariant_projected_current_law": "BLOCKED",
+    "nonnegative_entropy_current_divergence": "BLOCKED",
+    "stress_energy_exchange_and_bianchi_closure": "BLOCKED",
+    "curved_spacetime_well_posedness": "BLOCKED",
+    "equation_of_state_from_covariant_O2_action": "BLOCKED_CONTROLLING",
+    "covariant_coarse_graining_kernel": "BLOCKED",
+    "susceptibility_and_transport_matching": "BLOCKED"
+  },
+  "thermal_stochastic_lane": {
+    "closed_time_path_action": "BLOCKED_DOWNSTREAM",
+    "dynamical_kms_symmetry": "BLOCKED_DOWNSTREAM",
+    "fluctuation_dissipation_matching": "BLOCKED_DOWNSTREAM"
+  },
+  "external_requirement_sources": [
+    {
+      "source": "docs/data/external/relativistic_transport/jain_kovtun_2024/source_record.json",
+      "role": "causal_relativistic_current_entropy_and_sk_kms_requirements"
+    },
+    {
+      "source": "docs/data/external/relativistic_transport/crossley_glorioso_liu_2017/source_record.json",
+      "role": "dissipative_ctp_local_kms_and_entropy_readiness_requirements"
+    }
+  ],
+  "forbidden_shortcuts": [
+    "do_not_identify_source_C_with_UET_Noether_density_without_a_map",
+    "do_not_identify_source_auxiliary_phase_with_UET_Phi",
+    "do_not_use_trace_as_backreaction",
+    "do_not_call_a_1D_algebraic_flux_map_covariant",
+    "do_not_promote_normalized_feasibility_to_physical_validation"
+  ],
+  "global_universe_closure": "UNRESOLVED",
+  "gr_null_model": {
+    "parameter": "epsilon_nc",
+    "value": 0,
+    "verification_status": "PASS_INHERITED_EXACT_GR_RESPONSE_NULL"
+  },
+  "topic_0_11_status_impact": "NONE",
+  "topic_0_19_status_impact": "NONE",
+  "controlling_blocker": "noether_charge_equation_of_state_and_covariant_transport_matching_missing",
+  "required_next_evidence": [
+    "derive or independently calibrate the signed-charge equation of state",
+    "map equilibrium susceptibility and transport coefficients to the covariant matter theory",
+    "specify a covariant coarse-graining or hydrodynamic matching prescription",
+    "then construct entropy-current and dissipative-Bianchi closure"
+  ],
+  "downstream_hyperbolic_phase_field": {
+    "artifact": "hyperbolic_phase_field_external_comparator_verification.json",
+    "audit_status": "PASS",
+    "evidence_status": "PARTIAL_EXTERNAL_COMPARATOR",
+    "role": "external_fixed_parameter_formula_comparator",
+    "causal_feasibility_artifact": "hyperbolic_phase_field_causal_feasibility.json",
+    "causal_feasibility_status": "PASS",
+    "fixed_light_cone_parameter_domain": "PASS_NORMALIZED_ANALYTIC",
+    "uniform_subluminal_limit": "NO_GO_EXACT_PARABOLIC_LIMIT",
+    "uet_derivation": "BLOCKED"
+  },
+  "downstream_noether_phase_field_state_map": {
+    "artifact": "noether_phase_field_state_map_verification.json",
+    "audit_status": "PASS",
+    "evidence_status": "PARTIAL_HYDRODYNAMIC_STATE_COORDINATE_MAP",
+    "role": "hydrodynamic_state_coordinate_map_not_microscopic_derivation",
+    "affine_fixed_scale_layer": "PASS",
+    "microscopic_reconstruction": "NO_GO_MANY_TO_ONE",
+    "equation_of_state_and_transport": "BLOCKED"
+  }
+}

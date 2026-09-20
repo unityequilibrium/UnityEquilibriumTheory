@@ -19,9 +19,9 @@ from docs.core.uet_o2_gaussian_offshell_background import off_shell_mode_omega_s
 
 
 ROOT = Path(__file__).resolve().parents[3]
-STATIONARITY_REL = "docs/core/uet_o2_finite_temperature_stationarity_scheme.py"
-OFFSHELL_REL = "docs/core/uet_o2_gaussian_offshell_background.py"
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_condensed_goldstone_ward_audit.json"
+STATIONARITY_REL = "docs/core/02_equations/o2/uet_o2_finite_temperature_stationarity_scheme.py"
+OFFSHELL_REL = "docs/core/02_equations/o2/uet_o2_gaussian_offshell_background.py"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_condensed_goldstone_ward_audit.json"
 
 TEMPERATURE = 0.25
 CHEMICAL_POTENTIAL = 1.30

@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "artifact": "noether_phase_field_dependency_gate",
+  "generated_at": "2026-09-20T04:01:05+00:00",
+  "topic": "docs/core UET GR non-closed response",
+  "version": "wave9_v1",
+  "benchmark_role": "dependency_gate",
+  "method_label": "hydrodynamic_quotient_readiness",
+  "status": "BLOCKED",
+  "evidence_status": "PARTIAL_HYDRODYNAMIC_STATE_COORDINATE_MAP",
+  "input_identity": {
+    "upstream_feasibility_artifact": "docs/core/07_artifacts/verification/hyperbolic_phase_field_causal_feasibility.json",
+    "source_records": [
+      "docs/data/external/condensed_matter/phase_transitions/cahn_hilliard_1958/source_record.json",
+      "docs/data/external/condensed_matter/phase_transitions/hohenberg_halperin_1977/source_record.json",
+      "docs/data/external/condensed_matter/phase_transitions/hyperbolic_cahn_hilliard/dhaouadi_dumbser_gavrilyuk_2025/source_record.json",
+      "docs/data/external/relativistic_transport/jain_kovtun_2024/source_record.json"
+    ]
+  },
+  "thresholds": {
+    "required_state_coordinate_map": "PASS",
+    "required_equation_of_state_derivation_for_promotion": "PASS",
+    "required_covariant_transport_for_promotion": "PASS"
+  },
+  "completed_layers": {
+    "physical_conserved_variable_declaration": "PASS_SIGNED_O2_CHARGE",
+    "coarse_density_to_phase_coordinate": "PASS_AFFINE_FIXED_SCALE",
+    "continuity_current_scaling": "PASS",
+    "external_C_coordinate_adapter": "PASS_DECLARED_ONLY",
+    "microscopic_inverse_requirement": "REJECTED_AS_CATEGORY_ERROR"
+  },
+  "blocked_layers": {
+    "equation_of_state_from_covariant_O2_action": "BLOCKED_CONTROLLING",
+    "covariant_coarse_graining_kernel": "BLOCKED",
+    "susceptibility_and_transport_coefficient_matching": "BLOCKED",
+    "covariant_projected_current_law": "BLOCKED",
+    "entropy_current_and_dissipative_Bianchi_closure": "BLOCKED",
+    "curved_3p1_well_posed_solver": "BLOCKED",
+    "system_specific_SI_map": "BLOCKED",
+    "external_physical_validation": "BLOCKED"
+  },
+  "forbidden_shortcuts": [
+    "do_not_invert_C_to_microscopic_O2_fields",
+    "do_not_identify_scalar_amplitude_with_charge_density",
+    "do_not_identify_external_varphi_with_UET_Phi",
+    "do_not_import_trace_as_state_or_feedback",
+    "do_not_call_coordinate_compatibility_an_equation_of_state_derivation"
+  ],
+  "global_universe_closure": "UNRESOLVED",
+  "gr_null_model": {
+    "parameter": "epsilon_nc",
+    "value": 0,
+    "verification_status": "PASS_INHERITED_EXACT_GR_RESPONSE_NULL"
+  },
+  "topic_0_11_status_impact": "NONE",
+  "topic_0_19_status_impact": "NONE",
+  "controlling_blocker": "noether_charge_equation_of_state_and_covariant_transport_matching_missing",
+  "required_next_evidence": [
+    "derive or calibrate the charge-density equation of state independently of the test set",
+    "map equilibrium susceptibility and transport coefficients to the covariant matter theory",
+    "specify a covariant coarse-graining or hydrodynamic matching prescription",
+    "then construct entropy-current and dissipative-Bianchi closure"
+  ],
+  "notes": [
+    "Hydrodynamic quotient coordinates can be bijective even though the microscopic map is many-to-one.",
+    "No topic or global-universe claim is promoted by this coordinate result."
+  ]
+}

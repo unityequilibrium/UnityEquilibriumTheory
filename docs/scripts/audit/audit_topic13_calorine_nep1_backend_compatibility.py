@@ -28,12 +28,12 @@ STRUCTURE_REL = (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
     "calorine_zenodo_7811021_nep_C_CX/graphite-prim.xyz"
 )
-SOURCE_AUDIT_REL = "docs/core/artifacts/t13_calorine_public_model_variant_boundary_audit.json"
+SOURCE_AUDIT_REL = "docs/core/07_artifacts/topic13/t13_calorine_public_model_variant_boundary_audit.json"
 PACKAGE_REL = (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "calorine_nep1_backend_compatibility_source_package.json"
 )
-OUT_REL = "docs/core/artifacts/t13_calorine_nep1_backend_compatibility_audit.json"
+OUT_REL = "docs/core/07_artifacts/topic13/t13_calorine_nep1_backend_compatibility_audit.json"
 
 RECORD_URL = "https://zenodo.org/records/7811021"
 MODEL_URL = "https://zenodo.org/api/records/7811021/files/nep-C-CX.txt/content"

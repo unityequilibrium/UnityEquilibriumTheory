@@ -21,47 +21,47 @@ work, use this contract:
 
 Current foundation artifacts:
 
-- [Equation inventory](./UET_FOUNDATION_EQUATION_INVENTORY.md)
-- [Correspondence matrix](./UET_FOUNDATION_CORRESPONDENCE_MATRIX.md)
-- [Compatibility audit](./UET_FOUNDATION_COMPATIBILITY_AUDIT.md)
-- [Foundation compatibility decision](./UET_FOUNDATION_COMPATIBILITY_DECISION.md)
-- [Legacy variational closure audit](./artifacts/uet_legacy_variational_closure.json)
-- [Matter-space causal discretization diagnostic](./artifacts/matter_space_causal_discretization_diagnostic.json)
-- [Causal discretization repair artifact](./artifacts/causal_discretization_repair_artifact.json)
-- [Causal reference energy verification](./artifacts/matter_space_causal_reference_energy_verification.json)
-- [Causal Phi/Pi discrete-gradient verification](./artifacts/matter_space_causal_discrete_gradient_verification.json)
-- [Changing-C shared-ledger split verification](./artifacts/matter_space_causal_split_verification.json)
-- [Changing-C causal-cone compatibility audit](./artifacts/matter_space_causal_cone_compatibility.json)
-- [Finite-cone C candidate specification](./MATTER_SPACE_FINITE_CONE_C_SPEC.md)
-- [Finite-cone C lane comparison artifact](./artifacts/matter_space_causal_lane_comparison.json)
-- [Foundation status aggregate](./UET_FOUNDATION_STATUS_AGGREGATE.md)
-- [Machine-readable inventory gate](./artifacts/uet_foundation_equation_inventory.json)
-- [Machine-readable correspondence matrix](./artifacts/uet_foundation_correspondence_matrix.json)
-- [Machine-readable aggregate status](./artifacts/uet_foundation_status_aggregate.json)
-- [Thought experiment: observation as past behavior](./THOUGHT_EXPERIMENT_OBSERVATION_PAST_BEHAVIOR.md)
+- [Equation inventory](01_contracts/UET_FOUNDATION_EQUATION_INVENTORY.md)
+- [Correspondence matrix](01_contracts/UET_FOUNDATION_CORRESPONDENCE_MATRIX.md)
+- [Compatibility audit](08_history/research_notes/UET_FOUNDATION_COMPATIBILITY_AUDIT.md)
+- [Foundation compatibility decision](01_contracts/UET_FOUNDATION_COMPATIBILITY_DECISION.md)
+- [Legacy variational closure audit](07_artifacts/gates/uet_legacy_variational_closure.json)
+- [Matter-space causal discretization diagnostic](07_artifacts/archive/matter_space_causal_discretization_diagnostic.json)
+- [Causal discretization repair artifact](07_artifacts/archive/causal_discretization_repair_artifact.json)
+- [Causal reference energy verification](07_artifacts/verification/matter_space_causal_reference_energy_verification.json)
+- [Causal Phi/Pi discrete-gradient verification](07_artifacts/verification/matter_space_causal_discrete_gradient_verification.json)
+- [Changing-C shared-ledger split verification](07_artifacts/verification/matter_space_causal_split_verification.json)
+- [Changing-C causal-cone compatibility audit](07_artifacts/archive/matter_space_causal_cone_compatibility.json)
+- [Finite-cone C candidate specification](01_contracts/MATTER_SPACE_FINITE_CONE_C_SPEC.md)
+- [Finite-cone C lane comparison artifact](07_artifacts/archive/matter_space_causal_lane_comparison.json)
+- [Foundation status aggregate](01_contracts/UET_FOUNDATION_STATUS_AGGREGATE.md)
+- [Machine-readable inventory gate](07_artifacts/gates/uet_foundation_equation_inventory.json)
+- [Machine-readable correspondence matrix](07_artifacts/gates/uet_foundation_correspondence_matrix.json)
+- [Machine-readable aggregate status](07_artifacts/gates/uet_foundation_status_aggregate.json)
+- [Thought experiment: observation as past behavior](08_history/research_notes/THOUGHT_EXPERIMENT_OBSERVATION_PAST_BEHAVIOR.md)
 - [Canonical C ontology and physical mapping](../UET_Documentation_Details/03_Core_Theory/relational-C-and-physical-mapping.md)
-- [Relational two-body baseline specification](./RELATIONAL_TWO_BODY_BASELINE_SPEC.md)
-- [Relational two-body baseline artifact](./artifacts/relational_two_body_baseline_verification.json)
-- [Mass-density correspondence specification](./MASS_DENSITY_CORRESPONDENCE_SPEC.md)
-- [Mass-density correspondence artifact](./artifacts/mass_density_correspondence_verification.json)
-- [Matter-to-interaction forward mapping specification](./MATTER_INTERACTION_FORWARD_SPEC.md)
-- [Matter-to-interaction forward mapping artifact](./artifacts/matter_interaction_forward_verification.json)
-- [Persistence-energy diagnostic specification](./PERSISTENCE_ENERGY_DIAGNOSTIC_SPEC.md)
-- [Persistence-energy diagnostic artifact](./artifacts/persistence_energy_diagnostic_verification.json)
-- [Thermal observable bridge specification](./THERMAL_OBSERVABLE_BRIDGE_SPEC.md)
-- [Thermal observable bridge artifact](./artifacts/thermal_observable_bridge_verification.json)
-- [Curved 3+1 ADM constraint interface](./uet_curved_3p1_constraints.py)
-- [Curved 3+1 ADM constraint verification](./artifacts/curved_3p1_adm_constraint_interface_audit.json)
-- [Curved 3+1 parent dependency gate](./artifacts/core_curved_3p1_parent_gate.json)
-- [Curved 3+1 periodic geometry operator](./uet_curved_3p1_geometry.py)
-- [Curved 3+1 geometry verification](./artifacts/curved_3p1_geometry_operator_verification.json)
-- [Curved 3+1 ADM evolution RHS](./uet_curved_3p1_adm_evolution.py)
-- [Curved 3+1 ADM evolution verification](./artifacts/curved_3p1_adm_evolution_operator_verification.json)
-- [Fixed-gauge ADM hyperbolicity no-go](./artifacts/curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json)
-- [Curved 3+1 evolution branch specification](./CORE_CURVED_3P1_EVOLUTION_BRANCH_SPEC.md)
-- [Curved 3+1 generalized-harmonic principal system](./uet_curved_3p1_generalized_harmonic.py)
-- [Generalized-harmonic principal-system verification](./artifacts/curved_3p1_gh_principal_system_verification.json)
-- [Generalized-harmonic branch gate](./artifacts/curved_3p1_gh_branch_gate.json)
+- [Relational two-body baseline specification](01_contracts/RELATIONAL_TWO_BODY_BASELINE_SPEC.md)
+- [Relational two-body baseline artifact](07_artifacts/verification/relational_two_body_baseline_verification.json)
+- [Mass-density correspondence specification](01_contracts/MASS_DENSITY_CORRESPONDENCE_SPEC.md)
+- [Mass-density correspondence artifact](07_artifacts/correspondence/mass_density_correspondence_verification.json)
+- [Matter-to-interaction forward mapping specification](01_contracts/MATTER_INTERACTION_FORWARD_SPEC.md)
+- [Matter-to-interaction forward mapping artifact](./07_artifacts/verification/matter_interaction_forward_verification.json)
+- [Persistence-energy diagnostic specification](01_contracts/PERSISTENCE_ENERGY_DIAGNOSTIC_SPEC.md)
+- [Persistence-energy diagnostic artifact](07_artifacts/verification/persistence_energy_diagnostic_verification.json)
+- [Thermal observable bridge specification](01_contracts/THERMAL_OBSERVABLE_BRIDGE_SPEC.md)
+- [Thermal observable bridge artifact](07_artifacts/topic13/thermal_observable_bridge_verification.json)
+- [Curved 3+1 ADM constraint interface](02_equations/covariant/uet_curved_3p1_constraints.py)
+- [Curved 3+1 ADM constraint verification](07_artifacts/verification/curved_3p1_adm_constraint_interface_audit.json)
+- [Curved 3+1 parent dependency gate](07_artifacts/gates/core_curved_3p1_parent_gate.json)
+- [Curved 3+1 periodic geometry operator](02_equations/covariant/uet_curved_3p1_geometry.py)
+- [Curved 3+1 geometry verification](07_artifacts/verification/curved_3p1_geometry_operator_verification.json)
+- [Curved 3+1 ADM evolution RHS](02_equations/covariant/uet_curved_3p1_adm_evolution.py)
+- [Curved 3+1 ADM evolution verification](07_artifacts/verification/curved_3p1_adm_evolution_operator_verification.json)
+- [Fixed-gauge ADM hyperbolicity no-go](07_artifacts/archive/curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json)
+- [Curved 3+1 evolution branch specification](01_contracts/CORE_CURVED_3P1_EVOLUTION_BRANCH_SPEC.md)
+- [Curved 3+1 generalized-harmonic principal system](02_equations/covariant/uet_curved_3p1_generalized_harmonic.py)
+- [Generalized-harmonic principal-system verification](07_artifacts/verification/curved_3p1_gh_principal_system_verification.json)
+- [Generalized-harmonic branch gate](07_artifacts/gates/curved_3p1_gh_branch_gate.json)
 
 > **Historical engine layer for candidate UET equation families**
 > **Version 0.9.0** | Last Updated: 2026-01-13
@@ -125,16 +125,16 @@ $$
 
 | File | Role | Description |
 |:-----|:-----|:------------|
-| [`uet_master_equation.py`](./uet_master_equation.py) | **Legacy engine entry point** | Defines candidate Ω functionals and solver paths; not a universal physical law or single source of truth. |
-| [`uet_matrix_engine.py`](./uet_matrix_engine.py) | **The Solver** | Fast Tensor-based implementation for large-scale grids (3D Galaxies). |
-| [`uet_matrix_toolkit.py`](./uet_matrix_toolkit.py) | **The Tools** | Helper functions for visualization and matrix algebra. |
-| [`uet_4d_engine.py`](./uet_4d_engine.py) | **Relativity** | Extension for 4D spacetime metrics and tensor operations. |
+| [`uet_master_equation.py`](02_equations/matter_space/uet_master_equation.py) | **Legacy engine entry point** | Defines candidate Ω functionals and solver paths; not a universal physical law or single source of truth. |
+| [`uet_matrix_engine.py`](../scripts/core/runners/uet_matrix_engine.py) | **The Solver** | Fast Tensor-based implementation for large-scale grids (3D Galaxies). |
+| [`uet_matrix_toolkit.py`](../scripts/core/runners/uet_matrix_engine.py) | **The Tools** | Helper functions for visualization and matrix algebra. |
+| [`uet_4d_engine.py`](01_contracts/correspondence/uet_gr_correspondence.py) | **Relativity** | Extension for 4D spacetime metrics and tensor operations. |
 
 ---
 
 ## 📚 Documentation
-| [`../Doc/DOMAIN_MAPPING.md`](../Doc/DOMAIN_MAPPING.md) | C/I ในแต่ละสาขา (6 domains) |
-| [`../Doc/VALUE_EQUATION.md`](../Doc/VALUE_EQUATION.md) | 𝒱 = -ΔΩ — สมการ Value |
+| [`../UET_Documentation_Details/LEGACY_REPORTS/03_Evidence/DOMAIN_MAPPING.md`](../UET_Documentation_Details/LEGACY_REPORTS/03_Evidence/DOMAIN_MAPPING.md) | C/I ในแต่ละสาขา (6 domains) |
+| [`../UET_Documentation_Details/LEGACY_REPORTS/03_Evidence/VALUE_EQUATION.md`](../UET_Documentation_Details/LEGACY_REPORTS/03_Evidence/VALUE_EQUATION.md) | 𝒱 = -ΔΩ — สมการ Value |
 
 ---
 
@@ -150,7 +150,7 @@ C และ I มีความหมายต่างกันในแต่
 | **Biology** | lane-specific mapping from interaction structure | lane-specific second sector |
 | **Machine Learning** | lane-specific mapping from interaction structure | lane-specific second sector |
 
-> 📖 **Full domain mapping**: See [`../Doc/DOMAIN_MAPPING.md`](../Doc/DOMAIN_MAPPING.md)
+> 📖 **Full domain mapping**: See [`../UET_Documentation_Details/LEGACY_REPORTS/03_Evidence/DOMAIN_MAPPING.md`](../UET_Documentation_Details/LEGACY_REPORTS/03_Evidence/DOMAIN_MAPPING.md)
 
 ---
 
@@ -160,8 +160,8 @@ These scripts ensure the engine adheres to fundamental physics limits (Axiom 11)
 
 | Script | Purpose |
 |:-------|:--------|
-| [`test/`](./test/) | Unit tests for core functions |
-| [`validation/`](./validation/) | Physics validation scripts |
+| [`05_tests/`](./05_tests/) | Unit tests for core functions |
+| [`validation/`](./05_tests/) | Physics validation scripts |
 
 ---
 
@@ -169,8 +169,8 @@ These scripts ensure the engine adheres to fundamental physics limits (Axiom 11)
 
 - **🔙 [Research Root](../README.md)**
 - **🧪 [Topics (Applications)](../topics/)**
-- **📊 [Data Sources](../DATA_SOURCE_MAP.md)**
-- **📖 [Documentation Index](../Doc/DOC_INDEX.md)**
+- **📊 [Data Sources](../UET_Documentation_Details/LEGACY_REPORTS/03_Evidence/DATA_SOURCE_MAP.md)**
+- **📖 [Documentation Index](../UET_Documentation_Details/LEGACY_REPORTS/99_Legacy/DOC_INDEX.md)**
 
 ---
 

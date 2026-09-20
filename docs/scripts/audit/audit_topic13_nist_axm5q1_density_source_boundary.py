@@ -19,7 +19,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 PDF_PATH = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nist_sp260_89_graphite.pdf"
 PACKAGE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/nist_axm5q1_density_source_package.json"
-OUT = ROOT / "docs/core/artifacts/t13_nist_axm5q1_density_source_boundary_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_nist_axm5q1_density_source_boundary_audit.json"
 PDF_SHA256 = "fbcde491cadf6b8105d8b22bd15145e48709926aaf1d4a24335af2a8984c71b2"
 
 

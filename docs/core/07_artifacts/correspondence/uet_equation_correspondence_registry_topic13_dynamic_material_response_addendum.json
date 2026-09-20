@@ -1,0 +1,121 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "CONDITIONAL_INTERFACE_NOT_ACCEPTED_UET_ACTION",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "equation_entries": [
+    {
+      "ontology": {
+        "rho_and_K_el": "material inertia and stiffness, not UET C",
+        "phi_r": "prescribed response port, not temperature or an added state",
+        "state": "compatible material v,w,theta and optional longitudinal J",
+        "R_gen_R_obs": "excluded"
+      },
+      "units": {
+        "rho": "E^4",
+        "K_el": "E^4",
+        "v": "1",
+        "w": "E",
+        "theta": "E",
+        "phi_r": "E",
+        "q": "E",
+        "T": "E",
+        "c": "E^3",
+        "b": "E^3",
+        "G": "E^3",
+        "k": "E^2",
+        "tau": "E^-1",
+        "J": "E^4",
+        "Q": "E^5",
+        "ds": "E^3"
+      },
+      "unit_lane": "natural_conditional_material_comparator_not_SI",
+      "derivation_class": "linear_standard_thermoelastic_response_with_conditional_external_Phi_port",
+      "observable": "bulk temperature grating amplitude from independent initial and driven inputs",
+      "data_role": "SYNTHETIC_COMPARATOR_NO_CALIBRATION",
+      "verification_status": "PASS_CONDITIONAL_DYNAMIC_MATERIAL_RESPONSE",
+      "controlling_blocker": "physical_pump_to_Phi_entropy_initialization_and_material_coefficients_missing",
+      "claim_boundary": "Standard bulk material comparator with prescribed Phi, not full UET dynamics, physical alpha/Kubo/KMS, graphite validation or a replacement causal-cone gate.",
+      "physical_dependency_unlock": false,
+      "equation_id": "uet.o2.thermal.dynamic_material_response",
+      "version": "1",
+      "classification": "conditional_material_comparator",
+      "relation_or_code_path": {
+        "mechanical": "dot(v)=w; dot(w)=-(q^2/rho)*(A*v-b*theta+h*phi_r)",
+        "heat_balance": "c*dot(theta)=-T*b^T*w-q*J+Q",
+        "flux": "tau*dot(J)+J=k*q*theta for tau>0; J=k*q*theta for tau=0",
+        "initial_entropy": "theta0=T*(ds0-b^T*v0)/c",
+        "availability": "W=rho*w^2/(2*q^2)+v^T*A*v/2+c*theta^2/(2*T)+tau*J^2/(2*T*k)",
+        "power_balance": "dot(W)=-phi_r*h^T*w+theta*Q/T-J^2/(T*k); Fourier dissipation=k*q^2*theta^2/T",
+        "transfer": "H_Phi=T*s*b^T*D^-1*h/(c*s+k*q^2/(1+tau*s)+T*s*b^T*D^-1*b); D=A+rho*s^2*I/q^2"
+      },
+      "standard_physics_counterpart": "linear thermoelasticity with Fourier/Cattaneo conduction",
+      "variables": {
+        "rho_and_K_el": "material inertia and stiffness, not UET C",
+        "phi_r": "prescribed response port, not temperature or an added state",
+        "state": "compatible material v,w,theta and optional longitudinal J",
+        "R_gen_R_obs": "excluded"
+      },
+      "mathematical_role": "source-separated dynamic response and availability balance",
+      "observable_mapping": "bulk temperature grating amplitude from independent initial and driven inputs",
+      "parameter_dimensions": {
+        "rho": "E^4",
+        "K_el": "E^4",
+        "v": "1",
+        "w": "E",
+        "theta": "E",
+        "phi_r": "E",
+        "q": "E",
+        "T": "E",
+        "c": "E^3",
+        "b": "E^3",
+        "G": "E^3",
+        "k": "E^2",
+        "tau": "E^-1",
+        "J": "E^4",
+        "Q": "E^5",
+        "ds": "E^3"
+      },
+      "source_or_origin": "standard material conservation/constitutive equations plus an uncalibrated Phi-strain ansatz",
+      "assumptions": [
+        "linear bulk grating",
+        "constant reference coefficients",
+        "prescribed Phi",
+        "scalar flux relaxation"
+      ],
+      "symmetry_and_conservation": "reciprocal thermoelastic coupling; source-explicit availability balance; rotation covariance",
+      "limiting_cases": [
+        "Fourier tau=0",
+        "decoupled telegraph heat mode",
+        "no-conduction isentropic response"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_dynamic_thermoelastic_response.py"
+      ],
+      "verifier_paths": [
+        "docs/core/test/test_topic13_dynamic_thermoelastic_response.py",
+        "docs/scripts/audit/audit_topic13_dynamic_thermoelastic_response.py"
+      ],
+      "proof_status": "conditional linear derivation and internal verification only",
+      "evidence_class": "INTERNAL_STANDARD_COMPARATOR",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_dynamic_thermoelastic_response_audit.json",
+          "sha256": "f9487355e178403f273e6bf3c9a85e160680eb04bb7797efce216745687eabde"
+        }
+      ],
+      "downstream_dependencies": [
+        "physical_pump_and_material_interface"
+      ],
+      "dependency_role": "diagnostic_material_mapping",
+      "failure_mode": [
+        "physical_pump_to_Phi_entropy_initialization_missing",
+        "independent_G_Z_and_same_state_transport_inputs_missing",
+        "reciprocal_UET_material_dynamics_and_KMS_matching_missing",
+        "finite_geometry_detector_map_and_uncertainty_missing"
+      ],
+      "next_hardening_step": "derive physical pump/initialization and reciprocal material coupling before calibration"
+    }
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}

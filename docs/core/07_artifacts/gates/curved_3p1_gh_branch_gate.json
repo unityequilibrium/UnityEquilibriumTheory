@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "artifact": "curved_3p1_gh_branch_gate",
+  "generated_at": "2026-09-17T21:28:58.887368+00:00",
+  "status": "PARTIAL_GH_PRINCIPAL_SYSTEM_READY",
+  "requirements": {
+    "source_and_formula_locators": "PASS",
+    "state_ontology_and_units": "PASS",
+    "principal_equations": "PASS",
+    "complete_characteristic_basis": "PASS",
+    "positive_symmetrizer": "PASS",
+    "normal_frame_causal_speeds": "PASS",
+    "reduction_constraint_damping": "PASS",
+    "spatial_operator_convergence": "PASS",
+    "complete_nonlinear_gh_rhs": "OPEN",
+    "gamma0_gauge_constraint_damping": "OPEN",
+    "time_integration_and_cfl": "OPEN",
+    "constraint_propagation_convergence": "OPEN",
+    "constraint_preserving_boundaries": "OPEN",
+    "matter_and_observable_wiring": "OPEN"
+  },
+  "closed_requirements": [
+    "source_and_formula_locators",
+    "state_ontology_and_units",
+    "principal_equations",
+    "complete_characteristic_basis",
+    "positive_symmetrizer",
+    "normal_frame_causal_speeds",
+    "reduction_constraint_damping",
+    "spatial_operator_convergence"
+  ],
+  "open_requirements": [
+    "complete_nonlinear_gh_rhs",
+    "gamma0_gauge_constraint_damping",
+    "time_integration_and_cfl",
+    "constraint_propagation_convergence",
+    "constraint_preserving_boundaries",
+    "matter_and_observable_wiring"
+  ],
+  "controlling_blocker": "curved_3p1_generalized_harmonic_nonlinear_rhs_and_gamma0_constraint_damping_missing",
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/07_artifacts/verification/curved_3p1_gh_principal_system_verification.json",
+      "sha256": "c6e5b0501d20129410d6a97d771466fc9b848d9d03b213b2a88b9dbe1df14cea"
+    },
+    {
+      "path": "docs/core/07_artifacts/correspondence/curved_3p1_gh_principal_system_formula_audit.json",
+      "sha256": "3acf65f75367c13c3d91c028a144651e93bb73576caa34e9daed1bb41f236258"
+    }
+  ],
+  "dependency_unlocked": "complete nonlinear GH RHS and gamma0 gauge-constraint damping wave only",
+  "claim_boundary": "source-locked vacuum GH system with bounded periodic time-evolution controls; not a production numerical-relativity solver, matter-coupled system, or UET validation",
+  "claim_promotion": false
+}

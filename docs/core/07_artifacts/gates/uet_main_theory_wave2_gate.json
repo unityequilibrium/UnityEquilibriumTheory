@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "artifact": "uet_main_theory_wave2_gate",
+  "generated_at": "2026-09-16T08:45:48.673041+00:00",
+  "audit_status": "PASS",
+  "parent_status": "PASS_CONSERVATIVE_PARENT_ONLY",
+  "upstream_gate": "uet_main_theory_ontology_gate.json",
+  "checks": {
+    "exact_gr_null_nesting": true,
+    "response_decouples_at_null": true,
+    "null_exchange_vanishes": true,
+    "matter_equation_on_shell": true,
+    "o2_noether_current_on_shell": true,
+    "exchange_ledger_closes": true,
+    "matter_stress_is_symmetric": true,
+    "response_stress_is_symmetric": true,
+    "reciprocal_phi_source_matches_fd": true,
+    "reciprocal_matter_source_matches_fd": true,
+    "trace_is_not_parent_state": true
+  },
+  "controlling_blocker": "lane_specific_covariant_coarse_graining_not_closed",
+  "claim_promotion": false,
+  "next_controller": "define explicit coarse-graining operators for charge, phase, density, and telegraph lanes"
+}

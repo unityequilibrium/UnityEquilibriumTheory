@@ -54,11 +54,11 @@ from docs.core.uet_o2_finite_density_eos import (
 
 
 ROOT = Path(__file__).resolve().parents[3]
-EOS_REL = "docs/core/uet_o2_finite_density_eos.py"
-MATTER_REL = "docs/core/uet_covariant_matter.py"
-TRANSPORT_REL = "docs/core/uet_covariant_superfluid_transport.py"
-RESPONSE_REL = "docs/core/uet_covariant_response.py"
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_condensate_goldstone_ideal_lane_audit.json"
+EOS_REL = "docs/core/02_equations/o2/uet_o2_finite_density_eos.py"
+MATTER_REL = "docs/core/02_equations/covariant/uet_covariant_matter.py"
+TRANSPORT_REL = "docs/core/02_equations/covariant/uet_covariant_superfluid_transport.py"
+RESPONSE_REL = "docs/core/02_equations/covariant/uet_covariant_response.py"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_condensate_goldstone_ideal_lane_audit.json"
 
 METRIC = np.diag([-1.0, 1.0, 1.0, 1.0])
 MU = 1.3

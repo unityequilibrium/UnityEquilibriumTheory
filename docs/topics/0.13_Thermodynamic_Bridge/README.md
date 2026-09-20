@@ -279,7 +279,7 @@ VERIFICATION: Named causal leakage is `0.0 <= 1e-6`; `alpha_Phi_K=-1.02237987858
 CONTROLLING_BLOCKER: None for the bounded Topic 13 Core handoff. The next Core controller is `CORE_CURVED_3P1_OBSERVABLE_PARENT_READY`; the separate graphite external track remains controlled by missing raw/accepted `C_src`, graphite-specific alpha, and dimensional mapping.
 NEXT_ACTION: Start the curved 3+1 parent and constraint package. Keep graphite TTG/raw Landauer acquisition in external comparison tracks and do not use Xie 2026 until preregistered validation is authorized.
 CLAIM_BOUNDARY: `CLOSED_FOR_CORE` means internally integrated and ready for Core handoff only. It is not a prediction of imported He-4 coefficients, graphite validation, a complete external transport validation, curved 3+1, Gravity, or global UET closure.
-EVIDENCE: `docs/core/artifacts/t13_full_core_ready_acceptance_audit.json` (`846d2bfbc819c1b6f700f109645a451b5d3647a570527af5dc0e21240dacae41`); `docs/core/artifacts/t13_he4_core_thermodynamic_bridge_composition_audit.json` (`13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418`); `docs/core/artifacts/t13_topic13_closure_matrix.json` (`ba42d8a9c1745398ec0ee04300a792d18416fccae9205bc376a96f68d423036d`).
+EVIDENCE: `docs/core/07_artifacts/topic13/t13_full_core_ready_acceptance_audit.json` (`846d2bfbc819c1b6f700f109645a451b5d3647a570527af5dc0e21240dacae41`); `docs/core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json` (`13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418`); `docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json` (`ba42d8a9c1745398ec0ee04300a792d18416fccae9205bc376a96f68d423036d`).
 
 ## Canonical Current Gate (2026-08-26)
 
@@ -294,7 +294,7 @@ VERIFICATION: Incident fluence is 6.189358898018153 J m^-2; the captured tempera
 CONTROLLING_BLOCKER: ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing remains the source controller; independent base-Phi/SI/alpha/beta and physical transport packages are also blocked.
 NEXT_ACTION: Obtain an authorized Ding mode-resolved C_src package or accepted same-regime PBTE reproduction with material mapping, convergence, uncertainty, and permission. Do not infer C_src from incident fluence, the <3 K bound, or normalized TTG rows.
 CLAIM_BOUNDARY: Scoped route no-go only. This does not prove that an authorized raw Ding payload or accepted same-regime reproduction cannot supply C_src; it is not numeric C_src, alpha calibration, TTG prediction, external validation, Core closure, or global UET closure.
-EVIDENCE: docs/core/artifacts/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json (0a3b785b0a75e72a41ef9ef4521879ef74cc191d5d46271eaa2a08f6b87e657b); docs/core/artifacts/t13_topic13_closure_matrix.json (10d8a400e8e58d74e24f61f94e304227613fa8d1140726b84d620a5df16b49f6); docs/core/artifacts/t13_full_closure_progress.json (870d17180a03e31d19c1cfffc7ebcace39893d8484f5036d403a630e6620e239).
+EVIDENCE: docs/core/07_artifacts/topic13/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json (0a3b785b0a75e72a41ef9ef4521879ef74cc191d5d46271eaa2a08f6b87e657b); docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json (10d8a400e8e58d74e24f61f94e304227613fa8d1140726b84d620a5df16b49f6); docs/core/07_artifacts/topic13/t13_full_closure_progress.json (870d17180a03e31d19c1cfffc7ebcace39893d8484f5036d403a630e6620e239).
 ## 2026-08-24 - Causal Core handoff and MP48 mode diagnostic
 
 MAJOR_RESULT_CLOSURE: `T13_CAUSAL_FLUX_PHI_COUPLED_CORE_COMPATIBILITY` is `CLOSED_FOR_CORE` as a bounded named normalized branch; the Full Topic 13 gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
@@ -308,7 +308,7 @@ VERIFICATION: Causal compatibility checks pass. MP48 aggregate harmonic rows dif
 CONTROLLING_BLOCKER: Ding-compatible numeric C_src/material uncertainty, independent alpha_Phi_K/SI scale, normalized beta/SI correspondence, physical Kubo provenance, dimensional Phi map, TTG material mapping, and c_v uncertainty.
 NEXT_ACTION: Obtain one admissible Ding-compatible/permissioned PBTE package with source-grade uncertainty, or an independently fixed base-Phi SI anchor and paired alpha record. Keep MP48 as `DERIVED_COMPARISON` only.
 CLAIM_BOUNDARY: The causal result is Core-ready only for the named normalized branch. The MP48 result is a harmonic comparator. Neither closes Full Topic 13 or establishes an SI/external UET prediction.
-EVIDENCE: `docs/core/artifacts/t13_causal_named_branch_core_compatibility.json` (`6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a`); `docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.json` (`c4f1b4ecb22c97bdb0e6cc61b595eca51f394f5ad05456227f38b6420d7e562b`); `docs/core/artifacts/t13_mp48_mode_resolved_csrc_diagnostic.npz` (`fd535acd474382daf8c12bcd8d58b100a7d2fee63ba1c67913ca5556a1e33007`); matrix (`f5201be4da502f8622fffb9a07e8f779da20a04029313282d049b300469b2638`); full gate (`592b992713ffe0870cafc9e4e7cf64e392316a303dc7f5a3d1ad00e67215a7c4`).
+EVIDENCE: `docs/core/07_artifacts/topic13/t13_causal_named_branch_core_compatibility.json` (`6fccc88a1c8e9f75865c3d3246f829666f59db9980c42b4b503db99f756fd76a`); `docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.json` (`c4f1b4ecb22c97bdb0e6cc61b595eca51f394f5ad05456227f38b6420d7e562b`); `docs/core/07_artifacts/topic13/t13_mp48_mode_resolved_csrc_diagnostic.npz` (`fd535acd474382daf8c12bcd8d58b100a7d2fee63ba1c67913ca5556a1e33007`); matrix (`f5201be4da502f8622fffb9a07e8f779da20a04029313282d049b300469b2638`); full gate (`592b992713ffe0870cafc9e4e7cf64e392316a303dc7f5a3d1ad00e67215a7c4`).
 
 ## Canonical Current Gate (2026-08-24)
 
@@ -351,7 +351,7 @@ VERIFICATION: Source hashes, units, positivity, fixed-volume identity, convergen
 CONTROLLING_BLOCKER: `ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing`; `alpha_Phi_K` remains independently open.
 NEXT_ACTION: Obtain a permitted Ding-compatible numeric source or accepted same-regime PBTE reproduction with material/state mapping and source-grade uncertainty; do not use this component to calibrate `alpha_Phi_K`.
 CLAIM_BOUNDARY: Candidate equilibrium component only; not Ding validation, source-grade uncertainty closure, `alpha_Phi_K` calibration, prediction, transport validation, or Full Topic 13 closure.
-Machine-readable closure matrix: docs/core/artifacts/t13_topic13_closure_matrix.json. It reports nine major requirements separately and keeps full_core_unlock=false; it does not change the canonical readiness gate.
+Machine-readable closure matrix: docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json. It reports nine major requirements separately and keeps full_core_unlock=false; it does not change the canonical readiness gate.
 
 Current hardening result: an action-derived natural-unit Phi-to-thermal bridge and non-Landauer natural beta slope are CLOSED_FOR_LANE. Full Topic 13 remains blocked by the physical Phi/SI anchor, independent alpha_Phi_K, source-backed c_v or Ding C_src, EOS/transport/KMS/entropy, and dimensional TTG gates. The natural fixed-(mu,Phi) C_epsilon_T is not relabeled as source c_v.
 
@@ -359,15 +359,15 @@ Current hardening result T13-130: the covariant-action natural-unit to SI conver
 
 Current hardening result T13-092: finite-temperature condensate/normal thermodynamic split, branch-resolved static quasiparticle response, condensed stiffness boundary, and the normal-branch formal heat-flux/entropy balance are CLOSED_FOR_LANE. The static susceptibility is not Landau density or retarded Kubo, condensed dissipative transport remains open, and physical Phi/SI, alpha_Phi_K, Ding C_src, and Full Topic 13 remain blocked.
 
-Machine-readable lane artifact: docs/core/artifacts/t13_uet_o2_finite_temperature_two_fluid_response_audit.json.
+Machine-readable lane artifact: docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_two_fluid_response_audit.json.
 
 Current hardening result T13-093: the declared finite-cutoff continuum-resolution sequence is CLOSED_AS_NO_GO for continuum promotion under the unchanged `1e-2` controller because its maximum adjacent response change is `0.47541462972440046`. This is scoped to the current discretization; no extrapolated continuum or physical Kubo claim is allowed.
 
-Machine-readable boundary artifact: docs/core/artifacts/t13_uet_o2_continuum_limit_boundary_audit.json.
+Machine-readable boundary artifact: docs/core/07_artifacts/topic13/t13_uet_o2_continuum_limit_boundary_audit.json.
 
 Current hardening result T13-094: condensed dissipative transport identifiability is CLOSED_AS_NO_GO for the current static lane. Two positive-semidefinite entropy-production witnesses agree on the declared static state but give different responses under a nonzero probe, so no unique condensed dissipative matrix can be inferred without a relative-flow/collision kernel or retarded correlator.
 
-Machine-readable boundary artifact: docs/core/artifacts/t13_uet_o2_condensed_dissipative_transport_audit.json.
+Machine-readable boundary artifact: docs/core/07_artifacts/topic13/t13_uet_o2_condensed_dissipative_transport_audit.json.
 
 Source-route repair: the permitted Ding 2022 figure-derived normalized comparator now regenerates as PASS while raw author PBTE/C_src remains blocked; it is not a thermal prediction or calibration.
 
@@ -375,11 +375,11 @@ Machine-readable current status: docs/topics/0.13_Thermodynamic_Bridge/Result/ar
 
 Current hardening result T13-160: Calorine model/state spread comparison is CLOSED_FOR_LANE and the current full-LBTE route is CLOSED_AS_NO_GO. The full gate remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL with 9 open blocker groups; no Ding C_src, independent alpha_Phi_K, physical Kubo coefficient, holdout access, or downstream dependency is promoted.
 Current hardening result T13-161: the formal EOS-to-SK/KMS-to-entropy-to-heat-flux integration is CLOSED_FOR_LANE. It proves cross-module internal consistency only; physical Kubo coefficients, independent alpha_Phi_K, Ding-compatible C_src, SI mapping, and Full Topic 13 remain open.
-Machine-readable formal bridge artifact: docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json.
+Machine-readable formal bridge artifact: docs/core/07_artifacts/topic13/t13_formal_thermodynamic_bridge_integration_audit.json.
 
 Current hardening result T13-162: the Day 2012 preferred thermodynamic assessment route is CLOSED_FOR_LANE as a source-compatibility boundary. Table 2 records graphite B0 uncertainty and a thermal-expansion function, but it does not provide alpha uncertainty, a same-specimen alpha_V/K_T pair, or Ding TTG material mapping. Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.
 
-Machine-readable Day route artifact: docs/core/artifacts/t13_day2012_preferred_thermodynamic_table_boundary_audit.json.
+Machine-readable Day route artifact: docs/core/07_artifacts/topic13/t13_day2012_preferred_thermodynamic_table_boundary_audit.json.
 
 MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for T13_DAY2012_PREFERRED_THERMODYNAMIC_ASSESSMENT_BOUNDARY.
 WHAT_IS_ACTUALLY_CLOSED: Public Table 2 locator, graphite B0 and dB/dT uncertainty fields, the stated graphite volume-expansion function, source package hash, and the route-level no-go under the current same-state uncertainty contract.
@@ -503,7 +503,7 @@ graph LR
 ## Spacetime trace lane (diagnostic)
 
 - Core contract: docs/core/TRACE_RESEARCH_SPEC.md
-- Ontology and formula artifacts: docs/core/artifacts/trace_ontology_contract.json and trace_kernel_formula_audit.json
+- Ontology and formula artifacts: docs/core/07_artifacts/correspondence/trace_ontology_contract.json and trace_kernel_formula_audit.json
 - Synthetic benchmark: Code/03_Research/Research_Spacetime_Trace.py
 - Benchmark artifact: Result/artifacts/cattaneo_benchmark_artifact.json
 - Current status: normalized internal gates pass; SI closure and external benchmark remain open
@@ -636,7 +636,7 @@ NEXT_ACTION: Obtain an authorized author package or accepted same-regime PBTE re
 
 CLAIM_BOUNDARY: This closes only the page-level public supplementary content boundary. It does not create numeric C_src, calibrate alpha_Phi_K, produce a temperature prediction, validate UET externally, or close Full Topic 13.
 
-EVIDENCE: docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_supplementary_content_review_package.json; docs/core/artifacts/t13_ding_supplementary_content_review_audit.json; docs/scripts/audit/audit_topic13_ding_supplementary_content_review.py; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json.
+EVIDENCE: docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_supplementary_content_review_package.json; docs/core/07_artifacts/topic13/t13_ding_supplementary_content_review_audit.json; docs/scripts/audit/audit_topic13_ding_supplementary_content_review.py; docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json.
 
 ## Current Major Result: T13-172 flat thermodynamic component closure (2026-08-23)
 
@@ -651,7 +651,7 @@ VERIFICATION: Component artifact and provenance checks pass; focused integration
 CONTROLLING_BLOCKER: `physical_Kubo_coefficient_record_missing`; `alpha_Phi_K_independent_calibration_missing` remains the nearest dimensional controller.
 NEXT_ACTION: Obtain a state-matched UET response-space/Kubo record and an independent Phi/SI anchor without reading Xie 2026; continue authorized Ding `C_src` acquisition separately.
 CLAIM_BOUNDARY: Component closure only. No temperature prediction, alpha calibration, physical UET transport proof, curved 3+1 result, external validation, or global UET closure is claimed.
-Machine-readable artifact: `docs/core/artifacts/t13_flat_thermodynamic_bridge_components_gate.json`.
+Machine-readable artifact: `docs/core/07_artifacts/topic13/t13_flat_thermodynamic_bridge_components_gate.json`.
 
 ## Current Major Result: invariant-rate collision repair (2026-09-01)
 
@@ -813,7 +813,7 @@ NEXT_ACTION: Replace synthetic rates with a source-backed material collision ker
 
 CLAIM_BOUNDARY: Synthetic standard-physics parent only; not a UET transport derivation, physical Umklapp rate, material conductivity, TTG prediction, external validation or Full Topic 13 closure.
 
-Machine-readable artifact: `docs/core/artifacts/t13_lattice_momentum_relaxing_heat_parent_audit.json`.
+Machine-readable artifact: `docs/core/07_artifacts/topic13/t13_lattice_momentum_relaxing_heat_parent_audit.json`.
 
 ## Current Major Result: continuum-action direct Umklapp no-go (2026-09-02)
 
@@ -839,7 +839,7 @@ NEXT_ACTION: Build the external material-lattice interface first for TTG, keepin
 
 CLAIM_BOUNDARY: No-go only for direct Umklapp generation by the current homogeneous continuum lane; not a theorem against UET-material coupling or a future periodic UET branch, and not Full Topic 13 closure.
 
-Machine-readable artifact: `docs/core/artifacts/t13_continuum_action_umklapp_direct_route_no_go.json`.
+Machine-readable artifact: `docs/core/07_artifacts/topic13/t13_continuum_action_umklapp_direct_route_no_go.json`.
 
 ## Current Major Result: Calorine lattice-interface input boundary (2026-09-02)
 
@@ -865,7 +865,7 @@ NEXT_ACTION: Acquire or reproduce Normal/Umklapp-resolved rates or a positive fu
 
 CLAIM_BOUNDARY: Source-backed Calorine comparator input boundary only; not physical UET transport, Ding equivalence, TTG prediction, external validation or Full Topic 13 closure.
 
-Machine-readable artifact: `docs/core/artifacts/t13_calorine_lattice_interface_input_boundary.json`.
+Machine-readable artifact: `docs/core/07_artifacts/topic13/t13_calorine_lattice_interface_input_boundary.json`.
 
 ## Current Major Result: conditional UET-material lattice interface (2026-09-02)
 
@@ -891,7 +891,7 @@ NEXT_ACTION: Derive or source-lock `Z_Phi`, `g_Phi_theta` and `chi_u_theta` inde
 
 CLAIM_BOUNDARY: Conditional interface and identifiability result only; not an accepted UET action term, physical coupling, alpha calibration, TTG prediction, external validation or Full Topic 13 closure.
 
-Machine-readable artifact: `docs/core/artifacts/t13_uet_material_lattice_interface_contract_audit.json`.
+Machine-readable artifact: `docs/core/07_artifacts/topic13/t13_uet_material_lattice_interface_contract_audit.json`.
 
 ## Current Major Result: material-interface factor resolution (2026-09-02)
 
@@ -917,7 +917,7 @@ NEXT_ACTION: Design the distinct `Phi_E*theta` action candidate through ontology
 
 CLAIM_BOUNDARY: Factor-resolution and current-operator substitution no-go only; not a physical coupling, alpha calibration, material transport result, TTG prediction, external validation or Full Topic 13 closure.
 
-Machine-readable artifact: `docs/core/artifacts/t13_material_interface_factor_resolution_audit.json`.
+Machine-readable artifact: `docs/core/07_artifacts/topic13/t13_material_interface_factor_resolution_audit.json`.
 
 ## Current Major Result: scalar thermoelastic response bridge (2026-09-02)
 
@@ -943,7 +943,7 @@ NEXT_ACTION: Build a single accepted material/state package for `alpha_V`, `K_T`
 
 CLAIM_BOUNDARY: Conditional static scalar derivation only; not an accepted UET action term, anisotropic graphite model, dynamic transport, physical alpha calibration, TTG prediction, external validation or Full Topic 13 closure.
 
-Machine-readable artifact: `docs/core/artifacts/t13_scalar_thermoelastic_response_bridge_audit.json`.
+Machine-readable artifact: `docs/core/07_artifacts/topic13/t13_scalar_thermoelastic_response_bridge_audit.json`.
 
 ## Current Major Result: anisotropic thermoelastic response bridge (2026-09-02)
 
@@ -969,7 +969,7 @@ NEXT_ACTION: Acquire one same-state isothermal `C_ij`, `alpha_i` and `C_epsilon`
 
 CLAIM_BOUNDARY: Conditional static tensor derivation only; not accepted UET action, source-matched graphite tensor, dynamic transport, physical alpha calibration, TTG prediction, external validation or Full Topic 13 closure.
 
-Machine-readable artifact: `docs/core/artifacts/t13_anisotropic_thermoelastic_response_bridge_audit.json`.
+Machine-readable artifact: `docs/core/07_artifacts/topic13/t13_anisotropic_thermoelastic_response_bridge_audit.json`.
 ## Current Major Result: T13-173 causal gate semantics alignment (2026-08-23)
 
 MAJOR_RESULT_CLOSURE: CLOSED_AS_NO_GO for the declared local conserved-C gradient finite-cone compatibility question; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE / PARTIAL.

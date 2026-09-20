@@ -31,7 +31,7 @@ def main() -> int:
         '        "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_second_sound_source_package.json"\n'
         '    )\n'
         '    ding_source_mapping_path, ding_source_mapping = load(\n'
-        '        "docs/core/artifacts/ding_2022_source_mapping_audit.json"\n'
+        '        "docs/core/07_artifacts/provenance/ding_2022_source_mapping_audit.json"\n'
         '    )\n',
         "full-gate Ding source input",
     )

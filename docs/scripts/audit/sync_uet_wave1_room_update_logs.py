@@ -37,7 +37,7 @@ def prepend(path: Path) -> None:
 def main() -> int:
     prepend(ROOT / "docs/topics/0.11_Phase_Transitions/UPDATE_LOG.md")
     prepend(ROOT / "docs/topics/0.10_Fluid_Dynamics_Chaos/UPDATE_LOG.md")
-    prepend(ROOT / "docs/core/UET_RESEARCH_ROOM_WAVE1_UPDATE_LOG.md")
+    prepend(ROOT / "docs/core/08_history/update_logs/UET_RESEARCH_ROOM_WAVE1_UPDATE_LOG.md")
     print("status=PASS_UPDATE_LOGS_SYNCED")
     return 0
 

@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "artifact": "uet_downstream_unlock_gate",
+  "generated_at": "2026-09-16T10:26:03.295375+00:00",
+  "audit_status": "PASS",
+  "decisions": {
+    "thermal_internal_diagnostic": {
+      "status": "BLOCKED",
+      "controller": "core_prearrival_leakage",
+      "allowed": "synthetic analytical control only"
+    },
+    "thermal_external_comparison": {
+      "status": "BLOCKED",
+      "controller": [
+        "legacy_graphite_ttg_numeric_source_package_missing",
+        "legacy_graphite_alpha_phi_k_independent_calibration_missing",
+        "legacy_graphite_thermal_prearrival_leakage_gate_failed"
+      ],
+      "allowed": "source metadata and normalized observable definition only"
+    },
+    "phase_internal_diagnostic": {
+      "status": "PASS_INTERNAL_ONLY",
+      "controller": "ch_finite_k_replicate_temporal_acquisition_plan_defined_execution_open",
+      "allowed": "normalized mechanism diagnostic"
+    },
+    "phase_external_or_universality": {
+      "status": "BLOCKED",
+      "controller": "ch_finite_k_replicate_temporal_acquisition_plan_defined_execution_open",
+      "allowed": "none"
+    },
+    "fluid_vacuum_covariant_stress": {
+      "status": "BLOCKED",
+      "controller": [
+        "dimensional_observable_closure",
+        "curved_3p1_evolution"
+      ],
+      "allowed": "internal constitutive controls"
+    },
+    "gravity_orbit": {
+      "status": "BLOCKED",
+      "controller": [
+        "curvature_from_metric_not_implemented",
+        "dynamical_metric_constraint_evolution_not_implemented",
+        "gauge_invariant_observable_benchmarks_missing"
+      ],
+      "allowed": "analytic GR tensor-input controls"
+    },
+    "galaxy_cosmology": {
+      "status": "BLOCKED",
+      "controller": [
+        "gravity_orbit",
+        "metric_observable_uncertainty_holdout"
+      ],
+      "allowed": "legacy/internal comparison only"
+    },
+    "particle_dirac": {
+      "status": "BLOCKED",
+      "controller": [
+        "local_gauge_symmetry",
+        "dirac_spinor_action",
+        "c_p_t_cpt",
+        "anomaly_cancellation",
+        "renormalization",
+        "mass_generation"
+      ],
+      "allowed": "standard photon baseline and tree-level O2 controls"
+    }
+  },
+  "checks": {
+    "phase_not_overpromoted": true,
+    "thermal_not_overpromoted": true,
+    "gravity_not_overpromoted": true,
+    "galaxy_not_overpromoted": true,
+    "particle_not_overpromoted": true,
+    "one_internal_phase_lane_visible": true
+  },
+  "input_identity": {
+    "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_matter_space_phase_coupling_diagnostic.json": "60603592d00c7a1bd857fda8e06531cd3bd0d70031400a943e5d3033df87f679",
+    "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json": "a360eea9e257b7846eabaebeab6f20c00b658da7b432aec7c1e94d9449c041a4",
+    "docs/core/07_artifacts/gates/uet_main_theory_wave8_gate.json": "d3778d5e446f33eef448a0ee1945af131bc7e4a370c26ffed33083711fd03cdd",
+    "docs/core/07_artifacts/gates/uet_main_theory_wave9_gate.json": "3859f35ace966ac0d181b0456dc5a15f44e3cdcbcaa3e4b9f64e052b4d7c102e",
+    "docs/core/07_artifacts/gates/uet_fundamental_track_gate.json": "97a65eb3fd0d6a5c71a338e79454eb6c2869408be6a87808b5b6d8e0bfa8a43d"
+  },
+  "unlock_order": [
+    "thermal/phase internal pilots",
+    "fluid/vacuum/covariant stress-energy",
+    "gravity/orbit",
+    "galaxy/cosmology",
+    "particle/Dirac"
+  ],
+  "claim_boundary": "dependency decisions only; PASS_INTERNAL_ONLY is not physical or external validation"
+}

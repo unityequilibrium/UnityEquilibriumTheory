@@ -22,8 +22,8 @@ from docs.core.uet_o2_condensed_relative_flow_collision import (
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_condensed_relative_flow_collision_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_condensed_relative_flow_collision.py"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_condensed_relative_flow_collision_audit.json"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_condensed_relative_flow_collision.py"
 TEST = ROOT / "docs/core/test/test_topic13_uet_o2_condensed_relative_flow_collision.py"
 
 

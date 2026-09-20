@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0",
+  "artifact": "covariant_superfluid_transport_verification",
+  "generated_at": "2026-09-20T04:00:54.244641+00:00",
+  "topic": "docs/core UET GR non-closed response",
+  "version": "wave10_v1",
+  "benchmark_role": "internal_covariant_and_synthetic_transport_control",
+  "method_label": "T0_P_of_X_plus_longitudinal_Kubo_interface",
+  "audit_status": "PASS",
+  "evidence_status": "PARTIAL_T0_IDEAL_PLUS_SIMULATION_ONLY_DISSIPATIVE_CONTROL",
+  "unit_lane": "natural",
+  "input_identity": {
+    "eos_core": "docs/core/02_equations/o2/uet_o2_finite_density_eos.py",
+    "transport_core": "docs/core/02_equations/covariant/uet_covariant_superfluid_transport.py",
+    "parent_action": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+    "state_map": "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py",
+    "spec": "docs/core/01_contracts/O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md",
+    "parameter_policy": "fixed_deterministic_synthetic_control_no_fit",
+    "seed_eos": 102001,
+    "seed_transport": 102002
+  },
+  "thresholds": {
+    "stationarity_max_abs": 1e-12,
+    "analytic_derivative_max_abs": 1e-08,
+    "legendre_first_law_max_abs": 1e-10,
+    "response_reciprocity_max_abs": 1e-08,
+    "projector_max_abs": 1e-12,
+    "ideal_constitutive_max_abs": 1e-10,
+    "josephson_max_abs": 1e-12,
+    "lorentz_covariance_max_abs": 1e-10,
+    "goldstone_sound_max_abs": 1e-08,
+    "entropy_minimum": -1e-12,
+    "natural_causal_speed_sq_max": 1.0,
+    "double_well_reduction_relative_max": 0.001
+  },
+  "metrics": {
+    "projector_max_abs": 0.0,
+    "josephson_max_abs": 0.0,
+    "ideal_constitutive_max_abs": 0.0,
+    "action_noether_current_max_abs": 0.0,
+    "lorentz_covariance_max_abs": 0.0,
+    "entropy_production_minimum": 0.000534392195,
+    "goldstone_sound_max_abs": 0.0,
+    "diffusion_coefficient": 0.009888499477,
+    "characteristic_speed_sq": 0.010987221641,
+    "missing_provenance_blocked": true
+  },
+  "gates": {
+    "projector": true,
+    "josephson": true,
+    "ideal_current_stress": true,
+    "lorentz_covariance": true,
+    "entropy_sign": true,
+    "goldstone_sound": true,
+    "causal_speed": true,
+    "missing_provenance_blocks": true,
+    "trace_isolation": true
+  },
+  "physical_coefficient_evidence": "BLOCKED_NOT_PROVIDED",
+  "finite_temperature_two_fluid_completion": "BLOCKED",
+  "full_SK_KMS_completion": "BLOCKED",
+  "source_provenance": {
+    "status": "PASS",
+    "records": [
+      {
+        "path": "docs/data/external/relativistic_transport/son_relativistic_superfluid_2002/source_record.json",
+        "sha256": "da0317ae6f1bbf6e09ed7321c720f090572ad122e124782bb71059adb36ae56c",
+        "title": "Low-Energy Quantum Effective Action for Relativistic Superfluids",
+        "arxiv_id": "hep-ph/0204199",
+        "doi": null,
+        "benchmark_role": "EXTERNAL_RELATIVISTIC_SUPERFLUID_EFT_ROLE_SOURCE_NOT_UET_DERIVATION",
+        "local_copy_status": "NOT_INGESTED_URL_METADATA_ONLY",
+        "checks": {
+          "arxiv_url_present": true,
+          "benchmark_role_present": true,
+          "formula_locator_present": true,
+          "claim_boundary_present": true,
+          "local_copy_status_present": true
+        }
+      },
+      {
+        "path": "docs/data/external/relativistic_transport/chapman_hoyos_oz_superfluid_kubo_2013/source_record.json",
+        "sha256": "868f63a01bc6b0c90dee8ef26a46822e7c4d8fe44ef806262e8103367138ca8e",
+        "title": "Superfluid Kubo Formulas from Partition Function",
+        "arxiv_id": "1310.2247",
+        "doi": null,
+        "benchmark_role": "EXTERNAL_SUPERFLUID_KUBO_STRUCTURE_SOURCE_NOT_COEFFICIENT_DATA",
+        "local_copy_status": "NOT_INGESTED_URL_METADATA_ONLY",
+        "checks": {
+          "arxiv_url_present": true,
+          "benchmark_role_present": true,
+          "formula_locator_present": true,
+          "claim_boundary_present": true,
+          "local_copy_status_present": true
+        }
+      },
+      {
+        "path": "docs/data/external/relativistic_transport/jain_kovtun_2024/source_record.json",
+        "sha256": "90c8c7dfe8256da2b1dbe6631d189470800ea8ed7eec228fc9bedf49dd39dbc7",
+        "title": "Schwinger-Keldysh effective field theory for stable and causal relativistic hydrodynamics",
+        "arxiv_id": "2309.00511",
+        "doi": "10.1007/JHEP01(2024)162",
+        "benchmark_role": "EXTERNAL_COVARIANT_TRANSPORT_READINESS_SOURCE_NOT_UET_DERIVATION",
+        "local_copy_status": "TEMPORARY_INSPECTION_ONLY_NOT_REDISTRIBUTED",
+        "checks": {
+          "arxiv_url_present": true,
+          "benchmark_role_present": true,
+          "formula_locator_present": true,
+          "claim_boundary_present": true,
+          "local_copy_status_present": true
+        }
+      },
+      {
+        "path": "docs/data/external/relativistic_transport/haehl_loganayagam_rangamani_2018/source_record.json",
+        "sha256": "f3cc5c2505e341cc7c8cbee790b50b925087afc7ddd6f0d78479cc393e818f06",
+        "title": "Effective Action for Relativistic Hydrodynamics: Fluctuations, Dissipation, and Entropy Inflow",
+        "arxiv_id": "1803.11155",
+        "doi": null,
+        "benchmark_role": "EXTERNAL_DISSIPATIVE_EFT_READINESS_SOURCE_NOT_UET_DERIVATION",
+        "local_copy_status": "NOT_INGESTED_URL_METADATA_ONLY",
+        "checks": {
+          "arxiv_url_present": true,
+          "benchmark_role_present": true,
+          "formula_locator_present": true,
+          "claim_boundary_present": true,
+          "local_copy_status_present": true
+        }
+      }
+    ]
+  },
+  "source_hashes": {
+    "docs/core/02_equations/o2/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d",
+    "docs/core/02_equations/covariant/uet_covariant_superfluid_transport.py": "03d8022b2ff0dd5d6ccf523a76963056b1dc75f4926732f43d8b1484cdea1fd3",
+    "docs/core/02_equations/covariant/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+    "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py": "e992834d7d3ca90476202d849551ab16d1aba4bb1156b0519b3cd79e2566f9e8",
+    "docs/core/01_contracts/O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md": "3210f45543dd90b42ef5593b6693a2348819b363a98cce3c66411378f0d6474d",
+    "docs/data/external/relativistic_transport/son_relativistic_superfluid_2002/source_record.json": "da0317ae6f1bbf6e09ed7321c720f090572ad122e124782bb71059adb36ae56c",
+    "docs/data/external/relativistic_transport/chapman_hoyos_oz_superfluid_kubo_2013/source_record.json": "868f63a01bc6b0c90dee8ef26a46822e7c4d8fe44ef806262e8103367138ca8e",
+    "docs/data/external/relativistic_transport/jain_kovtun_2024/source_record.json": "90c8c7dfe8256da2b1dbe6631d189470800ea8ed7eec228fc9bedf49dd39dbc7",
+    "docs/data/external/relativistic_transport/haehl_loganayagam_rangamani_2018/source_record.json": "f3cc5c2505e341cc7c8cbee790b50b925087afc7ddd6f0d78479cc393e818f06"
+  },
+  "trace_input": false,
+  "trace_backreaction": false,
+  "topic_0_11_status_impact": "NONE",
+  "topic_0_19_status_impact": "NONE"
+}

@@ -1,0 +1,285 @@
+{
+  "schema_version": "1.0",
+  "artifact": "matter_space_variational_verification",
+  "generated_at": "2026-09-17T18:58:02.614246+00:00",
+  "status": "FAIL",
+  "claim_status": "candidate_normalized_effective_model",
+  "operator_mode": "matter_space_coupled_v1",
+  "controlling_blocker": "prearrival_leakage",
+  "failed_gates": [
+    "prearrival_leakage"
+  ],
+  "thresholds": {
+    "local_derivative_absolute_residual_max": 1e-10,
+    "discrete_directional_derivative_relative_error_max": 1e-06,
+    "conserved_matter_relative_drift_max": 1e-10,
+    "minimum_dissipation_density_min": -1e-12,
+    "closed_energy_relative_increase_max": 1e-09,
+    "ledger_closure_relative_residual_max": 1e-06,
+    "open_space_ledger_closure_relative_residual_max": 1e-06,
+    "decoupled_baseline_absolute_error_max": 1e-10,
+    "trace_switch_physical_absolute_error_max": 1e-12,
+    "physical_history_signal_to_discretization_min": 10.0,
+    "trace_history_physical_absolute_error_max": 1e-12,
+    "causal_arrival_speed_relative_error_max": 0.05,
+    "prearrival_leakage_fraction_max": 1e-06,
+    "temporal_convergence_order_min": 1.5,
+    "spatial_convergence_order_min": 1.5,
+    "adiabatic_local_equilibrium_relative_error_max": 0.05
+  },
+  "metrics": {
+    "local_derivative": {
+      "value": 2.708944180085382e-14,
+      "threshold": 1e-10,
+      "comparator": "le",
+      "gate": "PASS",
+      "detail": ""
+    },
+    "directional_derivative_periodic": {
+      "value": 6.594152954577989e-11,
+      "threshold": 1e-06,
+      "comparator": "le",
+      "gate": "PASS",
+      "detail": ""
+    },
+    "directional_derivative_zero_flux": {
+      "value": 5.137589588056775e-11,
+      "threshold": 1e-06,
+      "comparator": "le",
+      "gate": "PASS",
+      "detail": ""
+    },
+    "conserved_matter_drift": {
+      "value": 0.0,
+      "threshold": 1e-10,
+      "comparator": "le",
+      "gate": "PASS",
+      "detail": ""
+    },
+    "minimum_dissipation_density": {
+      "value": 6.403015858365036e-06,
+      "threshold": -1e-12,
+      "comparator": "ge",
+      "gate": "PASS",
+      "detail": ""
+    },
+    "closed_energy_increase": {
+      "value": 0.0,
+      "threshold": 1e-09,
+      "comparator": "le",
+      "gate": "PASS",
+      "detail": ""
+    },
+    "ledger_closure": {
+      "value": 6.109274493290241e-09,
+      "threshold": 1e-06,
+      "comparator": "le",
+      "gate": "PASS",
+      "detail": ""
+    },
+    "open_space_ledger_closure": {
+      "value": 9.031179185943516e-09,
+      "threshold": 1e-06,
+      "comparator": "le",
+      "gate": "PASS",
+      "detail": ""
+    },
+    "g_zero_decoupling": {
+      "value": 0.0,
+      "threshold": 1e-10,
+      "comparator": "le",
+      "gate": "PASS",
+      "detail": ""
+    },
+    "trace_switch_invariance": {
+      "value": 0.0,
+      "threshold": 1e-12,
+      "comparator": "le",
+      "gate": "PASS",
+      "detail": ""
+    },
+    "physical_history_signal": {
+      "value": 37369540462376.586,
+      "threshold": 10.0,
+      "comparator": "ge",
+      "gate": "PASS",
+      "detail": ""
+    },
+    "trace_history_no_backreaction": {
+      "value": 0.0,
+      "threshold": 1e-12,
+      "comparator": "le",
+      "gate": "PASS",
+      "detail": ""
+    },
+    "causal_arrival_speed": {
+      "value": 0.006036217303822644,
+      "threshold": 0.05,
+      "comparator": "le",
+      "gate": "PASS",
+      "detail": ""
+    },
+    "prearrival_leakage": {
+      "value": 0.017639381271029236,
+      "threshold": 1e-06,
+      "comparator": "le",
+      "gate": "FAIL",
+      "detail": "hard falsification/numerics gate; no cone-padding is applied"
+    },
+    "temporal_convergence": {
+      "value": 2.0135650491126595,
+      "threshold": 1.5,
+      "comparator": "ge",
+      "gate": "PASS",
+      "detail": ""
+    },
+    "spatial_convergence": {
+      "value": 1.9944392382862237,
+      "threshold": 1.5,
+      "comparator": "ge",
+      "gate": "PASS",
+      "detail": ""
+    },
+    "adiabatic_local_equilibrium": {
+      "value": 0.0003123576429969,
+      "threshold": 0.05,
+      "comparator": "le",
+      "gate": "PASS",
+      "detail": "requires tau, response time, and correlation length to shrink together"
+    }
+  },
+  "raw_diagnostics": {
+    "closed_trajectory": {
+      "relative_matter_drift": 0.0,
+      "max_relative_energy_increase": 0.0,
+      "max_ledger_closure_relative": 6.109274493290241e-09,
+      "minimum_dissipation_density": 6.403015858365036e-06,
+      "all_finite": 1.0,
+      "field_clipping_applied": 0.0,
+      "parameter_fitting_applied": 0.0,
+      "dt": 0.00010916191594008493
+    },
+    "open_space_drive": {
+      "space_input_power": 2.301685254493385e-07,
+      "closure_relative": 9.031179185943516e-09,
+      "joule_claim": 0.0
+    },
+    "history_separation": {
+      "decoupled_matter_absolute_error": 0.0,
+      "physical_history_signal": 0.15000694545883636,
+      "discretization_error": 4.014150123410332e-15,
+      "physical_history_signal_to_discretization": 37369540462376.586,
+      "trace_history_physical_absolute_error": 0.0,
+      "trace_switch_physical_absolute_error": 0.0,
+      "trace_observable_history_difference": 0.00043394804789372693
+    },
+    "temporal_convergence": {
+      "steps": [
+        10,
+        20,
+        40
+      ],
+      "errors": [
+        2.6241589331149617e-05,
+        6.437845910353679e-06,
+        1.594399316975914e-06
+      ],
+      "orders": [
+        2.0272051484586258,
+        2.0135650491126595
+      ],
+      "minimum_order": 2.0135650491126595
+    },
+    "spatial_convergence": {
+      "cells": [
+        32,
+        64,
+        128
+      ],
+      "errors": [
+        0.036161919454054496,
+        0.009075392968668609,
+        0.002271035951377608
+      ],
+      "orders": [
+        1.9944392382862237,
+        1.9986095691702337
+      ],
+      "minimum_order": 1.9944392382862237
+    },
+    "adiabatic_limit": {
+      "records": [
+        {
+          "a_space": 10.0,
+          "tau_space": 0.001,
+          "response_time": 0.1,
+          "correlation_length": 0.00031622776601683794,
+          "local_root": 0.01999920009598465,
+          "final_response": 0.0199929586656134,
+          "relative_error": 0.000312084000424735,
+          "steps": 2000.0
+        },
+        {
+          "a_space": 40.0,
+          "tau_space": 0.00025,
+          "response_time": 0.025,
+          "correlation_length": 0.00015811388300841897,
+          "local_root": 0.004999996875005861,
+          "final_response": 0.004998435108826948,
+          "relative_error": 0.0003123534310030481,
+          "steps": 2000.0
+        },
+        {
+          "a_space": 160.0,
+          "tau_space": 6.25e-05,
+          "response_time": 0.00625,
+          "correlation_length": 7.905694150420948e-05,
+          "local_root": 0.001249999987792969,
+          "final_response": 0.001249609540743036,
+          "relative_error": 0.0003123576429969,
+          "steps": 2000.0
+        }
+      ],
+      "all_three_limit_scales_shrink": true,
+      "highest_refinement_relative_error": 0.0003123576429969
+    },
+    "causal_pulse": {
+      "grid_cells": 1601,
+      "dx": 0.0125,
+      "dt": 0.0010000000000000002,
+      "declared_speed": 1.0,
+      "detector_distance": 1.0,
+      "expected_arrival": 1.0,
+      "arrival_threshold_fraction": 0.2,
+      "arrival_time": 0.9940000000000002,
+      "measured_speed": 1.0060362173038226,
+      "speed_relative_error": 0.006036217303822644,
+      "prearrival_guard_fraction": 0.05,
+      "prearrival_leakage_fraction": 0.017639381271029236,
+      "peak_detector_response": 0.5763924016673254,
+      "interpretation": "compact initial-rate pulse; leakage is measured before 95% of the declared arrival time"
+    }
+  },
+  "run_contract": {
+    "unit_lane": "normalized",
+    "dimension": "1D",
+    "integrator": "Heun/RK2",
+    "random_seeds": [
+      2207,
+      3319
+    ],
+    "parameter_fitting": false,
+    "field_clipping": false,
+    "external_validation": false,
+    "trace_backreaction": false,
+    "deterministic": true
+  },
+  "falsification_state": "NUMERICAL_CAUSALITY_REPAIR_REQUIRED",
+  "claim_boundary": [
+    "This artifact verifies only the normalized discrete candidate.",
+    "A failed causal-cone gate blocks downstream physical interpretation.",
+    "Phi is not established as geometry, ether, antimatter, or a particle.",
+    "R remains a derived observable with no feedback path.",
+    "No SI, galaxy, particle, or external-validation claim is supported."
+  ]
+}

@@ -9,10 +9,11 @@ import sys
 from datetime import date
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
+
+from docs.core.core_paths import canonical_existing_path  # noqa: E402
 
 from docs.core.he4_svp_reference import (  # noqa: E402
     SOURCE_DOI,
@@ -28,8 +29,8 @@ PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "he4_svp_o2_physical_anchor_source_package.json"
 )
-MODULE = ROOT / "docs/core/he4_svp_reference.py"
-OUT = ROOT / "docs/core/artifacts/t13_he4_svp_physical_anchor_audit.json"
+MODULE = ROOT / "docs/core/03_lanes/thermal/he4_svp_reference.py"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_he4_svp_physical_anchor_audit.json"
 
 
 def load(path: Path) -> dict:
@@ -106,8 +107,8 @@ def main() -> int:
             "observable": "rho, rho_s, rho_n, and rho_s/rho at He-4 SVP",
             "data_role": "CALIBRATION_REFERENCE_CANDIDATE_NOT_TARGET_DATA",
             "evidence_artifacts": [
-                {"path": str(PACKAGE.relative_to(ROOT)).replace("\\", "/"), "sha256": sha256(PACKAGE)},
-                {"path": str(MODULE.relative_to(ROOT)).replace("\\", "/"), "sha256": sha256(MODULE)},
+                {"path": str(PACKAGE.relative_to(ROOT)).replace("\\", "/"), "sha256": sha256(canonical_existing_path(PACKAGE))},
+                {"path": str(MODULE.relative_to(ROOT)).replace("\\", "/"), "sha256": sha256(canonical_existing_path(MODULE))},
             ],
             "verification_status": status,
             "open_blockers": [

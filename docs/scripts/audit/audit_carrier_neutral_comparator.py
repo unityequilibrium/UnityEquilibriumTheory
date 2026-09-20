@@ -9,8 +9,8 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-SPEC = ROOT / "docs/core/CARRIER_NEUTRAL_COMPARATOR_SPEC.md"
-OUTPUT = ROOT / "docs/core/artifacts/carrier_neutral_comparator_contract.json"
+SPEC = ROOT / "docs/core/01_contracts/CARRIER_NEUTRAL_COMPARATOR_SPEC.md"
+OUTPUT = ROOT / "docs/core/07_artifacts/archive/carrier_neutral_comparator_contract.json"
 
 
 LANES: tuple[dict[str, Any], ...] = (

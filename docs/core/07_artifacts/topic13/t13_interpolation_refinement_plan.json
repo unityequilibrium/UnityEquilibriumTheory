@@ -1,0 +1,11 @@
+{
+  "radial_orders": [8, 16, 32],
+  "angular_rules": ["axis_cube14", "product4x8", "product8x16"],
+  "support_order": 40,
+  "rank_relative_floor": 1e-12,
+  "state": [0.22, 0.35, 0.15],
+  "cutoff_factor": 48.0,
+  "channel_count": 64,
+  "transition_order": 24,
+  "policy": "Nine predetermined grids; mapping/probes only, not transport reruns. Preserve support40 and rank floor1e-12. If any channel-leg support is rank deficient, report the whole corrected-grid result blocked with all failed indices. No automatic support expansion or source selection. Product sphere grids are diagnostic-only."
+}

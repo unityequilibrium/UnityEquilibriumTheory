@@ -13,7 +13,7 @@ PACKAGE_REL = (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "day_2012_preferred_thermodynamic_table_source_package.json"
 )
-OUT = ROOT / "docs/core/artifacts/t13_day2012_preferred_thermodynamic_table_boundary_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_day2012_preferred_thermodynamic_table_boundary_audit.json"
 
 
 def load(relative: str) -> dict:

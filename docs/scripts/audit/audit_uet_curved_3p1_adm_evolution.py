@@ -8,6 +8,7 @@ import sys
 from datetime import datetime, timezone
 from math import log2, pi
 from pathlib import Path
+from typing import Any
 
 import numpy as np
 
@@ -22,22 +23,53 @@ from docs.core.uet_curved_3p1_adm_evolution import (
     compute_adm_evolution_rhs,
     fixed_gauge_adm_principal_symbol,
 )
+from docs.core.core_paths import CANONICAL_ARTIFACT_ROOT, canonical_artifact_path
 
 
-ARTIFACTS = ROOT / "docs/core/artifacts"
-MODULE = ROOT / "docs/core/uet_curved_3p1_adm_evolution.py"
+ARTIFACTS = CANONICAL_ARTIFACT_ROOT
+MODULE = ROOT / "docs/core/02_equations/covariant/uet_curved_3p1_adm_evolution.py"
 AUDIT_SCRIPT = Path(__file__).resolve()
 GOURGOULHON = ROOT / "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json"
 GUNDLACH = ROOT / "docs/data/external/gr_3p1/gundlach_martin_garcia_2006/source_record.json"
 LINDBLOM = ROOT / "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json"
-VERIFY = ARTIFACTS / "curved_3p1_adm_evolution_operator_verification.json"
-NO_GO = ARTIFACTS / "curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json"
-FORMULA = ARTIFACTS / "curved_3p1_adm_evolution_formula_audit.json"
-SELECTION = ARTIFACTS / "curved_3p1_formulation_selection_gate.json"
+VERIFY = canonical_artifact_path(
+    "curved_3p1_adm_evolution_operator_verification.json",
+    "verification",
+)
+NO_GO = canonical_artifact_path(
+    "curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json",
+    "archive",
+)
+FORMULA = canonical_artifact_path(
+    "curved_3p1_adm_evolution_formula_audit.json",
+    "correspondence",
+)
+SELECTION = canonical_artifact_path(
+    "curved_3p1_formulation_selection_gate.json",
+    "gates",
+)
 
 
 def _sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _json_ready(value: Any) -> Any:
+    if isinstance(value, np.ndarray):
+        return _json_ready(value.tolist())
+    if isinstance(value, np.generic):
+        return _json_ready(value.item())
+    if isinstance(value, float):
+        # Canonicalize serialization across Python/NumPy builds only.
+        # This does not change the structural hyperbolicity calculations.
+        if abs(value) < 1.0e-12:
+            return 0.0
+        return float(f"{value:.12f}")
+    if isinstance(value, dict):
+        return {key: _json_ready(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [_json_ready(item) for item in value]
+    return value
 
 
 def _flat_metric(resolution: int, scale_factor: float = 1.0) -> np.ndarray:
@@ -59,6 +91,38 @@ def _l2(error: np.ndarray) -> float:
 
 def _orders(errors: list[float]) -> list[float]:
     return [log2(errors[index] / errors[index + 1]) for index in range(len(errors) - 1)]
+
+
+def _stable_float(value: float) -> float:
+    """Canonicalize non-structural floating-point diagnostics for JSON."""
+
+    value = float(value)
+    if abs(value) < 1.0e-12:
+        return 0.0
+    return float(f"{value:.12f}")
+
+
+def _stable_principal_eigenvalue(value: float) -> float:
+    """Remove backend noise around the analytically expected {-1, 0, +1} roots."""
+
+    value = float(value)
+    if abs(value) <= 1e-7:
+        return 0.0
+    if abs(value - 1.0) <= 1e-7:
+        return 1.0
+    if abs(value + 1.0) <= 1e-7:
+        return -1.0
+    return _stable_float(value)
+
+
+def _stable_principal_residual(value: float) -> float:
+    """Canonicalize round-off below the declared principal-symbol scale."""
+
+    value = float(value)
+    # Eigensolver noise below the same 1e-7 root scale is not a structural
+    # hyperbolicity signal; classification still uses the raw principal symbol.
+    value = float(value)
+    return 0.0 if abs(value) <= 1e-7 else _stable_float(value)
 
 
 def build_artifacts() -> tuple[dict, dict, dict, dict]:
@@ -159,12 +223,13 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
         {
             "direction": result.direction.tolist(),
             "eigenvalues_real_sorted": sorted(
-                float(value) for value in np.real_if_close(result.eigenvalues).real
+                _stable_principal_eigenvalue(value)
+                for value in np.real_if_close(result.eigenvalues).real
             ),
-            "maximum_eigenvalue_imaginary_part": float(
+            "maximum_eigenvalue_imaginary_part": _stable_principal_residual(
                 np.max(np.abs(result.eigenvalues.imag))
             ),
-            "characteristic_polynomial_residual": float(
+            "characteristic_polynomial_residual": _stable_principal_residual(
                 np.max(
                     np.abs(
                         (result.symbol @ result.symbol)
@@ -356,14 +421,21 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
         "evidence": [VERIFY.relative_to(ROOT).as_posix(), NO_GO.relative_to(ROOT).as_posix(), FORMULA.relative_to(ROOT).as_posix()],
         "claim_promotion": False,
     }
-    return verification, no_go, formula, selection
+    return tuple(
+        _json_ready(payload)
+        for payload in (verification, no_go, formula, selection)
+    )
 
 
 def main() -> int:
     ARTIFACTS.mkdir(parents=True, exist_ok=True)
     payloads = build_artifacts()
     for path, payload in zip((VERIFY, NO_GO, FORMULA, SELECTION), payloads):
-        path.write_text(json.dumps(payload, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
+        path.write_text(
+            json.dumps(payload, indent=2, ensure_ascii=True) + "\n",
+            encoding="utf-8",
+            newline="\n",
+        )
     verification, no_go, _, selection = payloads
     print(json.dumps({"rhs_status": verification["status"], "no_go_status": no_go["status"], "selection_status": selection["status"], "claim_promotion": False}, indent=2))
     return 0 if verification["status"].startswith("PASS") and no_go["status"].startswith("CLOSED_AS_NO_GO") else 1

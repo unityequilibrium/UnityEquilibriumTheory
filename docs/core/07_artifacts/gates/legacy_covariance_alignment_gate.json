@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "artifact": "legacy_covariance_alignment_gate",
+  "generated_at": "2026-09-16T10:00:33.519726+00:00",
+  "audit_status": "PASS",
+  "evidence_status": "BLOCKED",
+  "claim_class": "LEGACY_EXPLORATORY_DIAGNOSTIC",
+  "controlling_blocker": "legacy_covariance_not_implemented",
+  "source_files": {
+    "docs/core/uet_lorentz.py": "0fc5fa82a1327cef1653941987c528510db49e958f6d91693a0542cab94f2c45",
+    "docs/core/uet_noether.py": "90467d709f10d9124633d776c947ed0dc8d3c66d8d38817fda2b2547e4afeb83"
+  },
+  "source_paths_used": {
+    "lorentz": "docs/core/02_equations/lorentz_noether/uet_lorentz.py",
+    "noether": "docs/core/02_equations/lorentz_noether/uet_noether.py"
+  },
+  "findings": {
+    "lorentz": {
+      "checked_methods": [
+        "check_lorentz_invariance",
+        "check_lorentz_invariance_complex",
+        "check_lorentz_invariance_schwarzschild",
+        "check_lorentz_invariance_kerr",
+        "check_lorentz_invariance_frw",
+        "check_lorentz_invariance_time_dependent"
+      ],
+      "placeholder_field_assignments": 6,
+      "lorentz_matrix_loads_after_assignment": 0,
+      "curved_metric_calls_in_claim_methods": 0,
+      "relativistic_omega_arguments": [
+        "self",
+        "C_4d",
+        "I_4d",
+        "dx",
+        "dt"
+      ],
+      "metric_argument_present": false,
+      "legacy_status_constant_present": true,
+      "completion_overclaim_present": false,
+      "independent_information_field_present": true
+    },
+    "noether": {
+      "lagrangian_arguments": [
+        "self",
+        "C",
+        "grad_C",
+        "I"
+      ],
+      "time_derivative_argument_present": false,
+      "gradient_flow_update_present": true,
+      "real_field_u1_proxy_present": true,
+      "legacy_status_constant_present": true,
+      "completion_overclaim_present": false,
+      "metric_argument_present": false
+    }
+  },
+  "gates": {
+    "actual_lorentz_transform_application": {
+      "status": "FAIL",
+      "reason": "The generated Lambda matrix is not loaded after assignment and C_transformed aliases C_4d."
+    },
+    "curved_metric_wiring": {
+      "status": "FAIL",
+      "reason": "Schwarzschild, Kerr, and FRW claim methods do not pass a metric into relativistic_omega."
+    },
+    "covariant_noether_action": {
+      "status": "FAIL",
+      "reason": "The legacy density has no spacetime derivative or metric argument."
+    },
+    "dynamics_consistent_conservation": {
+      "status": "FAIL",
+      "reason": "The claimed conservation checks evolve C with an ad hoc spatial-gradient update."
+    },
+    "legacy_claim_quarantine": {
+      "status": "PASS",
+      "reason": "Legacy modules carry explicit blocked evidence status and no completion banner."
+    }
+  },
+  "allowed_use": [
+    "legacy formula inventory",
+    "diagnostic code archaeology",
+    "negative alignment tests"
+  ],
+  "blocked_use": [
+    "Lorentz-invariance proof",
+    "curved-spacetime covariance evidence",
+    "Noether conservation proof",
+    "Einstein-equation derivation"
+  ],
+  "next_controller": "covariant_parent_action_missing",
+  "claim_impact": "legacy proof exports blocked; no topic readiness change"
+}

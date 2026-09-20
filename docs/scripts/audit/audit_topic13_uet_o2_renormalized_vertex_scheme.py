@@ -28,11 +28,11 @@ from docs.core.uet_o2_renormalized_vertex_scheme import (  # noqa: E402
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_renormalized_vertex_scheme_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_renormalized_vertex_scheme.py"
-UV_MODULE = ROOT / "docs/core/uet_o2_one_loop_vertex_uv_boundary.py"
-RENORMALIZED_NORMAL_MODULE = ROOT / "docs/core/uet_o2_renormalized_normal_branch.py"
-KMS_MODULE = ROOT / "docs/core/uet_o2_equilibrium_kms.py"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_renormalized_vertex_scheme_audit.json"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_renormalized_vertex_scheme.py"
+UV_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_one_loop_vertex_uv_boundary.py"
+RENORMALIZED_NORMAL_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_renormalized_normal_branch.py"
+KMS_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_equilibrium_kms.py"
 
 
 def sha256(path: Path) -> str:
@@ -131,10 +131,10 @@ def main() -> int:
         "BLOCKED_ACTION_DERIVED_RENORMALIZED_O2_ONE_LOOP_VERTEX_SCHEME"
     )
     evidence = [
-        {"path": "docs/core/uet_o2_renormalized_vertex_scheme.py", "sha256": sha256(MODULE)},
-        {"path": "docs/core/uet_o2_one_loop_vertex_uv_boundary.py", "sha256": sha256(UV_MODULE)},
-        {"path": "docs/core/uet_o2_renormalized_normal_branch.py", "sha256": sha256(RENORMALIZED_NORMAL_MODULE)},
-        {"path": "docs/core/uet_o2_equilibrium_kms.py", "sha256": sha256(KMS_MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_renormalized_vertex_scheme.py", "sha256": sha256(MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_one_loop_vertex_uv_boundary.py", "sha256": sha256(UV_MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_renormalized_normal_branch.py", "sha256": sha256(RENORMALIZED_NORMAL_MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_equilibrium_kms.py", "sha256": sha256(KMS_MODULE)},
     ]
     artifact = {
         "schema_version": "t13-uet-o2-renormalized-vertex-scheme-v1",

@@ -25,9 +25,10 @@ from docs.core.uet_covariant_parent import (
     evaluate_conservative_parent,
 )
 from docs.core.uet_covariant_response import CovariantResponseConfig
+from docs.core.core_paths import CANONICAL_ARTIFACT_ROOT, canonical_artifact_path
 
 
-ARTIFACTS = ROOT / "docs/core/artifacts"
+ARTIFACTS = CANONICAL_ARTIFACT_ROOT
 
 
 def _state(
@@ -213,7 +214,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "relation": "S_parent = integral sqrt(-g)[F(Phi)(R-2Lambda)/(2kappa)+L_O2-epsilon U(Phi)]",
                 "derivation_class": "candidate conservative action",
                 "unit_lane": "natural",
-                "code_path": "docs/core/uet_covariant_parent.py",
+                "code_path": "docs/core/02_equations/covariant/uet_covariant_parent.py",
                 "proof_status": "integrated formula evaluator checked locally",
             },
             {
@@ -221,7 +222,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "relation": "epsilon_nc=0 implies metric residual equals Einstein-GR residual",
                 "derivation_class": "exact algebraic limiting relation",
                 "unit_lane": "natural",
-                "code_path": "docs/core/uet_covariant_parent.py",
+                "code_path": "docs/core/02_equations/covariant/uet_covariant_parent.py",
                 "proof_status": "internal numerical identity gate",
             },
             {
@@ -229,7 +230,7 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "relation": "Q_m^nu + Q_response^nu = 0",
                 "derivation_class": "local conservative exchange identity",
                 "unit_lane": "natural",
-                "code_path": "docs/core/uet_covariant_balance.py",
+                "code_path": "docs/core/02_equations/covariant/uet_covariant_balance.py",
                 "proof_status": "internal local ledger identity",
             },
         ],
@@ -266,14 +267,14 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
     addendum = {
         "schema_version": "1.0",
         "artifact": "uet_equation_correspondence_registry_main_theory_addendum",
-        "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+        "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
         "status": "CANDIDATE_ENTRY_PENDING_MERGE",
         "equation_entries": [
             {
                 "equation_id": "uet.main_theory.covariant_parent",
                 "version": "covariant-parent-v1",
                 "classification": "foundational_equation",
-                "relation_or_code_path": "docs/core/uet_covariant_parent.py",
+                "relation_or_code_path": "docs/core/02_equations/covariant/uet_covariant_parent.py",
                 "variables": {
                     "g_munu": "Lorentz metric",
                     "chi_A": "global O(2) scalar matter doublet",
@@ -301,14 +302,14 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                     "response coupling zero decouples matter and Phi interaction",
                 ],
                 "implementation_paths": [
-                    "docs/core/uet_covariant_parent.py",
-                    "docs/core/uet_covariant_response.py",
-                    "docs/core/uet_covariant_matter.py",
-                    "docs/core/uet_covariant_balance.py",
+                    "docs/core/02_equations/covariant/uet_covariant_parent.py",
+                    "docs/core/02_equations/covariant/uet_covariant_response.py",
+                    "docs/core/02_equations/covariant/uet_covariant_matter.py",
+                    "docs/core/02_equations/covariant/uet_covariant_balance.py",
                 ],
                 "verifier_paths": [
                     "docs/scripts/audit/audit_uet_covariant_parent.py",
-                    "docs/core/artifacts/covariant_parent_verification.json",
+                    "docs/core/07_artifacts/verification/covariant_parent_verification.json",
                     "docs/core/test/test_uet_covariant_parent.py",
                 ],
                 "evidence_class": "INTERNAL_FORMAL",
@@ -341,7 +342,9 @@ def main() -> int:
         )
     )
     for name, payload in outputs.items():
-        (ARTIFACTS / name).write_text(
+        path = canonical_artifact_path(name)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(
             json.dumps(payload, indent=2, ensure_ascii=False) + "\n",
             encoding="utf-8",
         )

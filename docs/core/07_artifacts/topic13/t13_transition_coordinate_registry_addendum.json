@@ -1,0 +1,17 @@
+{
+  "registry_id": "uet.o2.transition_weighted_coordinate_pullback",
+  "registration_status": "UNMERGED_INTERNAL_DERIVED_CANDIDATE",
+  "ontology": "psi is the declared occupation-response variable; z=sqrt(W)*psi is a numerical entropy coordinate, not a new physical state",
+  "units": "S dimensionless; exact and basis susceptibility weight ratios transform numerical coordinates",
+  "equation_or_mapping": "U_b=V_e sqrt(W_e) S^T inv_sqrt(W_b)",
+  "derivation_class": "Linear change-of-coordinates identity conditional on psi interpolation",
+  "observable": "Channel amplitude and quadratic collision form, not SI heat transport",
+  "data_role": "INTERNAL_MANUFACTURED_CONTROL",
+  "verification_status": "INSTALLED_OPT_IN_NUMERICALLY_BLOCKED",
+  "controlling_blocker": "weighted_interpolation_conditioning_and_response_solver",
+  "claim_boundary": "No continuum, material or global claim promotion",
+  "evidence_artifact": "docs/core/artifacts/t13_transition_coordinate_map_audit.json",
+  "implementation_evidence_artifact": "docs/core/artifacts/t13_transition_pullback_pilot.json",
+  "dependency_unlocked": [],
+  "full_core_unlock": false
+}

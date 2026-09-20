@@ -23,11 +23,11 @@ from docs.core.uet_covariant_matter import CovariantMatterConfig  # noqa: E402
 from docs.core.uet_covariant_response import CovariantResponseConfig  # noqa: E402
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_nonlocal_sk_kms_memory_kernel_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_nonlocal_sk_kms_memory_kernel.py"
-COLLISION_MODULE = ROOT / "docs/core/uet_o2_kinetic_collision_kubo.py"
-OPEN_SYSTEM_MODULE = ROOT / "docs/core/uet_o2_open_system_sk_kms.py"
-KMS_MODULE = ROOT / "docs/core/uet_o2_equilibrium_kms.py"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_nonlocal_sk_kms_memory_kernel_audit.json"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_nonlocal_sk_kms_memory_kernel.py"
+COLLISION_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_kinetic_collision_kubo.py"
+OPEN_SYSTEM_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_open_system_sk_kms.py"
+KMS_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_equilibrium_kms.py"
 
 
 def sha256(path: Path) -> str:
@@ -94,10 +94,10 @@ def main() -> int:
         "BLOCKED_ACTION_DERIVED_NONLOCAL_SK_KMS_MEMORY_KERNEL_LANE"
     )
     evidence = [
-        {"path": "docs/core/uet_o2_nonlocal_sk_kms_memory_kernel.py", "sha256": sha256(MODULE)},
-        {"path": "docs/core/uet_o2_kinetic_collision_kubo.py", "sha256": sha256(COLLISION_MODULE)},
-        {"path": "docs/core/uet_o2_open_system_sk_kms.py", "sha256": sha256(OPEN_SYSTEM_MODULE)},
-        {"path": "docs/core/uet_o2_equilibrium_kms.py", "sha256": sha256(KMS_MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_nonlocal_sk_kms_memory_kernel.py", "sha256": sha256(MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_kinetic_collision_kubo.py", "sha256": sha256(COLLISION_MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_open_system_sk_kms.py", "sha256": sha256(OPEN_SYSTEM_MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_equilibrium_kms.py", "sha256": sha256(KMS_MODULE)},
     ]
     contract = nonlocal_sk_kms_memory_contract()
     artifact = {
@@ -153,7 +153,7 @@ def main() -> int:
         "closure_level": "CLOSED_FOR_LANE" if not failed else "OPEN",
         "data_role": state.data_role,
         "audit": {
-            "path": "docs/core/artifacts/t13_uet_o2_nonlocal_sk_kms_memory_kernel_audit.json",
+            "path": "docs/core/07_artifacts/topic13/t13_uet_o2_nonlocal_sk_kms_memory_kernel_audit.json",
             "summary": {
                 "status": status,
                 "major_result_id": "T13_UET_O2_NONLOCAL_SK_KMS_MEMORY_KERNEL_LANE",

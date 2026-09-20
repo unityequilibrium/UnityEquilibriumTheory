@@ -23,9 +23,9 @@ from docs.core.uet_matter_space_flux_phi import (  # noqa: E402
 )
 
 
-OUT = ROOT / "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json"
-CORE_SOURCE = ROOT / "docs/core/uet_matter_space_flux_phi.py"
-BASELINE_SOURCE = ROOT / "docs/core/uet_matter_space_flux_telegraph.py"
+OUT = ROOT / "docs/core/07_artifacts/verification/matter_space_flux_phi_coupled_verification.json"
+CORE_SOURCE = ROOT / "docs/core/02_equations/matter_space/uet_matter_space_flux_phi.py"
+BASELINE_SOURCE = ROOT / "docs/core/02_equations/matter_space/uet_matter_space_flux_telegraph.py"
 
 
 def sha256(path: Path) -> str:
@@ -305,11 +305,11 @@ def build_report() -> dict[str, Any]:
             },
         },
         "evidence_inputs": {
-            "implementation": "docs/core/uet_matter_space_flux_phi.py",
+            "implementation": "docs/core/02_equations/matter_space/uet_matter_space_flux_phi.py",
             "implementation_sha256": sha256(CORE_SOURCE),
-            "C_branch_implementation": "docs/core/uet_matter_space_flux_telegraph.py",
+            "C_branch_implementation": "docs/core/02_equations/matter_space/uet_matter_space_flux_telegraph.py",
             "C_branch_implementation_sha256": sha256(BASELINE_SOURCE),
-            "baseline_no_go": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
+            "baseline_no_go": "docs/core/07_artifacts/archive/conserved_c_finite_cone_no_go_assessment.json",
         },
         "major_result": {
             "major_result_id": "T13_CAUSAL_FLUX_PHI_COUPLED_LANE",
@@ -332,7 +332,7 @@ def build_report() -> dict[str, Any]:
             "observable": "normalized C/Phi response and ledger diagnostics",
             "data_role": "internal numerical verification; no TTG source consumed",
             "evidence_artifacts": [
-                {"path": "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json"}
+                {"path": "docs/core/07_artifacts/verification/matter_space_flux_phi_coupled_verification.json"}
             ],
             "verification_status": status,
             "open_blockers": [

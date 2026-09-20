@@ -17,9 +17,9 @@ PACKAGE = TOPIC / "Data/03_Research/matter_space_second_sound_source_package.jso
 MANIFEST = TOPIC / "Data/03_Research/ding_2022_fig1d_digitized_manifest.json"
 CSV_PATH = TOPIC / "Data/03_Research/ding_2022_fig1d_digitized.csv"
 FIGURE = TOPIC / "Data/03_Research/raw/ding_2022_fig1.png"
-MAPPING = ROOT / "docs/core/artifacts/ding_2022_fig1d_series_mapping.json"
-HOLDOUT_AUDIT = ROOT / "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json"
-OUT = ROOT / "docs/core/artifacts/ding_2022_source_mapping_audit.json"
+MAPPING = ROOT / "docs/core/07_artifacts/archive/ding_2022_fig1d_series_mapping.json"
+HOLDOUT_AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_xie_2026_holdout_access_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/provenance/ding_2022_source_mapping_audit.json"
 
 
 def sha256(path: Path) -> str:
@@ -187,7 +187,7 @@ def build_report() -> dict[str, Any]:
         "evidence_inputs": {
             "package": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_second_sound_source_package.json",
             "manifest": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_fig1d_digitized_manifest.json",
-            "mapping_artifact": "docs/core/artifacts/ding_2022_fig1d_series_mapping.json",
+            "mapping_artifact": "docs/core/07_artifacts/archive/ding_2022_fig1d_series_mapping.json",
             "numeric_file": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_fig1d_digitized.csv",
             "figure_asset": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ding_2022_fig1.png",
             "published_pdf": "https://www.nature.com/articles/s41467-021-27907-z.pdf",

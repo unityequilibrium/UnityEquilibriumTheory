@@ -15,9 +15,9 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/t13_csrc_source_route_priority_audit.json"
-ACCEPTANCE = ROOT / "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json"
-RECONCILIATION = ROOT / "docs/core/artifacts/t13_csrc_reconciliation_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_csrc_source_route_priority_audit.json"
+ACCEPTANCE = ROOT / "docs/core/07_artifacts/topic13/t13_independent_csrc_acceptance_contract.json"
+RECONCILIATION = ROOT / "docs/core/07_artifacts/topic13/t13_csrc_reconciliation_audit.json"
 
 REQUIRED_FIELDS = (
     "source_identity_and_locator",
@@ -79,7 +79,7 @@ ROUTE_SPECS: tuple[dict[str, Any], ...] = (
         "DIRECT_AUTHOR_PAYLOAD",
         "Ding corresponding-author numeric payload",
         "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_pbte_author_request_manifest.json",
-        "docs/core/artifacts/t13_ding_pbte_author_request_audit.json",
+        "docs/core/07_artifacts/topic13/t13_ding_pbte_author_request_audit.json",
         "REQUEST_PACKAGE_READY_NOT_SENT",
         "PASS_REQUEST_SCHEMA_OPEN_EXTERNAL_RESPONSE",
         "REQUEST_PACKAGE_READY_NOT_SENT",
@@ -104,7 +104,7 @@ ROUTE_SPECS: tuple[dict[str, Any], ...] = (
         "PUBLIC_SOURCE_BOUNDARY",
         "Ding official PMC OA distribution",
         "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_pbte_numeric_input_availability_package.json",
-        "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
+        "docs/core/07_artifacts/topic13/t13_ding_pbte_numeric_input_availability_audit.json",
         "OFFICIAL_OA_INVENTORY_LOCKED_REPRODUCTION_INPUTS_ABSENT",
         "PASS_SCOPED_OA_NUMERIC_INPUT_AVAILABILITY_NO_GO",
         "PUBLIC_OA_ROUTE_CLOSED_NO_NUMERIC_REPRODUCTION_PAYLOAD",
@@ -129,7 +129,7 @@ ROUTE_SPECS: tuple[dict[str, Any], ...] = (
         "INDEPENDENT_PBTE_REPRODUCTION_CANDIDATE",
         "Calorine/Zenodo NEP-RTA PBTE candidate",
         "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_nep_bte_reproduction_source_package.json",
-        "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
+        "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
         "PASS_SCOPED_CALORINE_NUMERIC_C_SRC_REPRODUCTION",
         "PASS_SCOPED_CALORINE_NUMERIC_C_SRC_REPRODUCTION",
         "NUMERIC_C_SRC_CANDIDATE_NOT_DING_ACCEPTED",
@@ -160,7 +160,7 @@ ROUTE_SPECS: tuple[dict[str, Any], ...] = (
         "INDEPENDENT_PBTE_REPRODUCTION_CANDIDATE",
         "Calorine legacy NEP2-compatible PBTE candidate",
         "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/calorine_legacy_nep2_pbte_reproduction_source_package.json",
-        "docs/core/artifacts/t13_calorine_legacy_nep2_pbte_reproduction_audit.json",
+        "docs/core/07_artifacts/topic13/t13_calorine_legacy_nep2_pbte_reproduction_audit.json",
         "PASS_SCOPED_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION",
         "PASS_SCOPED_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION",
         "NUMERIC_C_SRC_CANDIDATE_NOT_DING_ACCEPTED",
@@ -191,7 +191,7 @@ ROUTE_SPECS: tuple[dict[str, Any], ...] = (
         "HARMONIC_COMPARATOR",
         "Materials Project MP48 harmonic graphite comparator",
         "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/mp48_independent_graphite_cv_source_package.json",
-        "docs/core/artifacts/t13_mp48_independent_graphite_cv_audit.json",
+        "docs/core/07_artifacts/topic13/t13_mp48_independent_graphite_cv_audit.json",
         "SOURCE_LOCKED_INDEPENDENT_HARMONIC_CV_COMPARATOR",
         "PASS_INDEPENDENT_NUMERIC_CV_WITH_EPISTEMIC_ENVELOPE",
         "HARMONIC_CV_COMPARATOR_NOT_PBTE_ACCEPTED",
@@ -220,7 +220,7 @@ ROUTE_SPECS: tuple[dict[str, Any], ...] = (
         "PUBLIC_SOURCE_BOUNDARY",
         "NIMS MP-990448 graphite phonon archive",
         "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/nims_mdr_mp990448_phonon_source_package.json",
-        "docs/core/artifacts/t13_nims_mp990448_phonon_source_boundary_audit.json",
+        "docs/core/07_artifacts/topic13/t13_nims_mp990448_phonon_source_boundary_audit.json",
         "PASS_SCOPED_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY",
         "PASS_SCOPED_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY",
         "ARCHIVE_BOUNDARY_NO_MACHINE_READABLE_C_SRC",
@@ -245,7 +245,7 @@ ROUTE_SPECS: tuple[dict[str, Any], ...] = (
         "PUBLIC_SOURCE_BOUNDARY",
         "Huang 2023 NIMS graphite-ribbon archive",
         "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/huang_2023_nims_mdr_payload_source_package.json",
-        "docs/core/artifacts/t13_huang_2023_nims_mdr_payload_boundary_audit.json",
+        "docs/core/07_artifacts/topic13/t13_huang_2023_nims_mdr_payload_boundary_audit.json",
         "PASS_SCOPED_HUANG_2023_NIMS_MDR_PAYLOAD_BOUNDARY",
         "PASS_SCOPED_HUANG_2023_NIMS_MDR_PAYLOAD_BOUNDARY",
         "ARTICLE_ONLY_PUBLIC_ARCHIVE",
@@ -270,7 +270,7 @@ ROUTE_SPECS: tuple[dict[str, Any], ...] = (
         "PUBLIC_SOURCE_BOUNDARY",
         "Huberman 2019 public PBTE source",
         "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/huberman_2019_ttg_source_boundary_package.json",
-        "docs/core/artifacts/t13_huberman_2019_public_pbte_boundary_audit.json",
+        "docs/core/07_artifacts/topic13/t13_huberman_2019_public_pbte_boundary_audit.json",
         "PUBLIC_FORMULA_AND_SETUP_ONLY_NUMERIC_PAYLOAD_OPEN",
         "PASS_HUBERMAN_PUBLIC_PBTE_BOUNDARY_NO_ACCEPTED_NUMERIC_PAYLOAD",
         "PUBLIC_FORMULA_AND_SETUP_ONLY",
@@ -295,7 +295,7 @@ ROUTE_SPECS: tuple[dict[str, Any], ...] = (
         "INDEPENDENT_CV_COMPARATOR",
         "Materials Cloud QH-15 natural-graphite C_v comparator",
         "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/qh15_graphite_transport_source_package.json",
-        "docs/core/artifacts/t13_qh15_graphite_transport_boundary_audit.json",
+        "docs/core/07_artifacts/topic13/t13_qh15_graphite_transport_boundary_audit.json",
         "SOURCE_LOCKED_COMPARATOR_ONLY",
         "PASS_SCOPED_QH15_CV_COMPARATOR_BOUNDARY",
         "NUMERIC_NATURAL_GRAPHITE_CV_COMPARATOR_NO_SOURCE_GRADE_UNCERTAINTY",

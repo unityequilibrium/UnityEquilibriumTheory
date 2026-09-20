@@ -19,8 +19,8 @@ replace_once(
     "registry mapping",
 )
 replace_once(
-    '    tpg_alpha_v_path, tpg_alpha_v = load(\n        "docs/core/artifacts/t13_tpg_anisotropic_alpha_v_source_audit.json"\n    )\n',
-    '    tpg_alpha_v_path, tpg_alpha_v = load(\n        "docs/core/artifacts/t13_tpg_anisotropic_alpha_v_source_audit.json"\n    )\n    natural_alpha_v_path, natural_alpha_v = load(\n        "docs/core/artifacts/t13_natural_graphite_nelson_riley_alpha_v_source_audit.json"\n    )\n',
+    '    tpg_alpha_v_path, tpg_alpha_v = load(\n        "docs/core/07_artifacts/topic13/t13_tpg_anisotropic_alpha_v_source_audit.json"\n    )\n',
+    '    tpg_alpha_v_path, tpg_alpha_v = load(\n        "docs/core/07_artifacts/topic13/t13_tpg_anisotropic_alpha_v_source_audit.json"\n    )\n    natural_alpha_v_path, natural_alpha_v = load(\n        "docs/core/07_artifacts/topic13/t13_natural_graphite_nelson_riley_alpha_v_source_audit.json"\n    )\n',
     "natural graphite alpha_V artifact load",
 )
 replace_once(

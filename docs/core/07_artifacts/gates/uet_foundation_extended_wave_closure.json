@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "artifact": "uet_foundation_extended_wave_closure",
+  "audit_status": "PASS_WITH_DECLARED_DOWNSTREAM_BLOCKERS",
+  "program_status": "FOUNDATION_BLOCKED_DOWNSTREAM_STATUS_EXPLICIT",
+  "waves": [
+    {
+      "wave": 7,
+      "name": "O2 finite-density EOS and covariant transport",
+      "status": "PASS_CONDITIONAL_WITH_OPEN_TRANSPORT",
+      "evidence": [
+        "docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json",
+        "docs/core/07_artifacts/correspondence/o2_eos_formula_audit.json",
+        "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json"
+      ],
+      "local_results": {
+        "eos": "PASS",
+        "formula_audit": "WARN",
+        "transport": "PASS",
+        "physical_coefficient_evidence": "BLOCKED_NOT_PROVIDED",
+        "finite_temperature_two_fluid_completion": "BLOCKED"
+      },
+      "controller": "covariant_superfluid_kubo_transport_and_entropy_matching_missing",
+      "claim_boundary": "tree-level natural-unit O2 EOS and conditional ideal covariant constitutive structure; transport coefficient values and SI remain open"
+    },
+    {
+      "wave": 8,
+      "name": "Impact/effect/carrier and observer",
+      "status": "BLOCKED",
+      "evidence": [
+        "docs/core/07_artifacts/verification/impact_effect_core_verification.json",
+        "docs/core/07_artifacts/gates/impact_effect_dependency_gate.json",
+        "docs/core/07_artifacts/archive/carrier_neutral_comparator_contract.json",
+        "docs/core/07_artifacts/archive/carrier_observer_thought_experiment.json",
+        "docs/core/07_artifacts/verification/photon_observer_baseline_verification.json"
+      ],
+      "local_results": {
+        "impact_core": "PASS",
+        "impact_dependency": "BLOCKED",
+        "carrier": "BLOCKED",
+        "observer": "SIMULATION_ONLY",
+        "photon_baseline": "PASS",
+        "photon_baseline_status": "PASS_WITH_OPEN_DIMENSIONAL_AND_UET_MAPPING",
+        "photon_uet_mapping": "BLOCKED"
+      },
+      "controller": "foundation correspondence, units, and carrier/detector maps are incomplete; photon=SI detector/observable map and UET source-to-carrier law remain open",
+      "claim_boundary": "carrier-neutral and observer thought-experiment contracts only; no photon/neutrino/positron identity for R_gen"
+    },
+    {
+      "wave": 9,
+      "name": "Gravity, orbit, cosmology, and effective open subsystem",
+      "status": "BLOCKED",
+      "evidence": [
+        "docs/core/07_artifacts/gates/orbit_cosmology_correspondence_gate.json",
+        "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json"
+      ],
+      "local_results": {
+        "orbit_cosmology": "BLOCKED",
+        "gr_program": "BLOCKED"
+      },
+      "controller": "physical_kubo_coefficient_evidence_and_curved_3p1_solver_missing",
+      "claim_boundary": "local conditional covariant/closed-limit checks only; no Einstein derivation or global-open-universe claim"
+    },
+    {
+      "wave": 10,
+      "name": "Galaxy 0.1 and cosmic dynamic frame 0.26",
+      "status": "BLOCKED",
+      "evidence": [
+        "docs/topics/0.1_Galaxy_Rotation_Problem/Result/artifacts/galaxy_history_comparison.json",
+        "docs/topics/0.26_Cosmic_Dynamic_Frame/Result/artifacts/0_26_cosmic_dynamic_frame_verification.json"
+      ],
+      "local_results": {
+        "galaxy": "BLOCKED",
+        "cosmic": "WARN"
+      },
+      "controller": "galaxy=not_declared; cosmic=raw-frame provenance, units, and residual policy remain open",
+      "claim_boundary": "internal/external comparison only; dark-matter replacement and global cosmic law blocked"
+    },
+    {
+      "wave": 11,
+      "name": "Particle, Dirac, neutrino, and antimatter program",
+      "status": "DEFERRED_BLOCKED",
+      "evidence": [
+        "docs/core/07_artifacts/gates/particle_dirac_program_gate.json"
+      ],
+      "local_results": {
+        "required_prerequisites": [
+          "Lorentz-covariant action",
+          "spinor representation",
+          "conserved current",
+          "mass-eigenstate map",
+          "charge/conjugation convention",
+          "CPT and detector-observable gates"
+        ],
+        "current_status": "not established as a closed UET derivation"
+      },
+      "controller": "Lorentz-covariant action, spinor/current map, CPT and detector correspondence are not established",
+      "claim_boundary": "photon, neutrino, positron, antimatter, and Dirac relations remain deferred/not established"
+    }
+  ],
+  "checks": {
+    "all_wave_statuses_explicit": true,
+    "no_downstream_pass_promoted_to_physical_claim": true,
+    "o2_transport_open_boundary_disclosed": true,
+    "carrier_dependency_blocked": true,
+    "photon_standard_comparator_verified": true,
+    "global_open_claim_blocked": true,
+    "galaxy_cosmic_claim_blocked": true,
+    "particle_program_deferred": true
+  },
+  "claim_boundary": "This artifact closes the status accounting for downstream waves; it does not close their physics. A local EOS/transport or observer check cannot override the foundation dependency gate.",
+  "next_controller": "complete foundation correspondence and dimensional observable gates, then revisit downstream waves in dependency order"
+}

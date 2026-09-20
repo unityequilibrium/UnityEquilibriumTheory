@@ -13,10 +13,11 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from docs.core.core_paths import canonical_artifact_path  # noqa: E402
 from docs.scripts.audit.audit_matter_space_core import build_verification  # noqa: E402
 
 
-OUTPUT = ROOT / "docs/core/artifacts/matter_space_energy_ledger_verification.json"
+OUTPUT = ROOT / canonical_artifact_path("matter_space_energy_ledger_verification.json", "verification")
 
 
 def _metric(verification: dict[str, Any], name: str) -> dict[str, Any]:

@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 GATE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-AUDIT = ROOT / "docs/core/artifacts/t13_gatech_volumetric_cp_independence_audit.json"
+AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_gatech_volumetric_cp_independence_audit.json"
 
 
 def rel(path: Path) -> str:

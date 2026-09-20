@@ -27,9 +27,9 @@ from docs.core.uet_o2_finite_density_eos import O2FiniteDensityEOSConfig, o2_equ
 
 
 ROOT = Path(__file__).resolve().parents[3]
-MODULE_REL = "docs/core/uet_o2_condensate_fluctuations.py"
-EOS_REL = "docs/core/uet_o2_finite_density_eos.py"
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_condensate_fluctuation_spectrum_audit.json"
+MODULE_REL = "docs/core/02_equations/o2/uet_o2_condensate_fluctuations.py"
+EOS_REL = "docs/core/02_equations/o2/uet_o2_finite_density_eos.py"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_condensate_fluctuation_spectrum_audit.json"
 
 MU = 1.3
 PHI = 0.2

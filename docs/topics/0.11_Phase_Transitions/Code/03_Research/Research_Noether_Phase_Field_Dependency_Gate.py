@@ -10,7 +10,6 @@ from __future__ import annotations
 
 import hashlib
 import json
-import platform
 import sys
 from datetime import UTC, datetime
 from pathlib import Path
@@ -33,10 +32,12 @@ TOPIC_DIR = ROOT / "docs" / "topics" / TOPIC
 DATA_DIR = TOPIC_DIR / "Data" / "03_Research"
 ARTIFACT_DIR = TOPIC_DIR / "Result" / "artifacts"
 
-CORE_STATE_MAP = ROOT / "docs" / "core" / "artifacts" / "noether_phase_field_state_map_verification.json"
-CORE_FORMULA_AUDIT = ROOT / "docs" / "core" / "artifacts" / "noether_phase_field_map_formula_audit.json"
-CORE_DEPENDENCY_GATE = ROOT / "docs" / "core" / "artifacts" / "noether_phase_field_dependency_gate.json"
-CORE_PROGRAM_GATE = ROOT / "docs" / "core" / "artifacts" / "uet_gr_research_program_gate.json"
+CORE_VERIFICATION_DIR = ROOT / "docs" / "core" / "07_artifacts" / "verification"
+CORE_GATE_DIR = ROOT / "docs" / "core" / "07_artifacts" / "gates"
+CORE_STATE_MAP = CORE_VERIFICATION_DIR / "noether_phase_field_state_map_verification.json"
+CORE_FORMULA_AUDIT = ROOT / "docs" / "core" / "07_artifacts" / "correspondence" / "noether_phase_field_map_formula_audit.json"
+CORE_DEPENDENCY_GATE = CORE_GATE_DIR / "noether_phase_field_dependency_gate.json"
+CORE_PROGRAM_GATE = CORE_GATE_DIR / "uet_gr_research_program_gate.json"
 WAVE55_GATE = ARTIFACT_DIR / "0_11_structure_factor_ch_finite_k_next_path_decision_gate.json"
 MATTER_SPACE_PILOT = ARTIFACT_DIR / "0_11_matter_space_coupled_diagnostic.json"
 READINESS_METADATA = ROOT / "docs" / "meta" / "topic_readiness.json"
@@ -361,8 +362,10 @@ def build_artifact() -> dict[str, Any]:
             "introduce Phi or trace feedback, alter the Wave 55 controller, or promote topic status or claims."
         ),
         "environment": {
-            "python_version": platform.python_version(),
-            "platform": platform.platform(),
+            # Runtime metadata is descriptive only; keep the artifact portable
+            # across local and CI patch versions and operating systems.
+            "python_version": f"{sys.version_info.major}.{sys.version_info.minor}",
+            "platform": "portable-research-runtime",
         },
     }
 
@@ -372,7 +375,7 @@ def main() -> dict[str, Any]:
     artifact = build_artifact()
     ARTIFACT_PATH.write_text(
         json.dumps(artifact, indent=2, sort_keys=True) + "\n",
-        encoding="utf-8",
+        encoding="utf-8", newline="\n",
     )
     return artifact
 

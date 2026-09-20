@@ -13,12 +13,12 @@ PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "ding_graphite_material_regime_boundary_source_package.json"
 )
-OUT = ROOT / "docs/core/artifacts/t13_ding_material_regime_boundary_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_ding_material_regime_boundary_audit.json"
 DING_RAW = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
     "ding_2022_supplementary_information.pdf"
 )
-HUANG_AUDIT = ROOT / "docs/core/artifacts/t13_huang_2023_supplementary_payload_boundary_audit.json"
+HUANG_AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_huang_2023_supplementary_payload_boundary_audit.json"
 CALORINE_PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "t13_calorine_zenodo_nep_bte_reproduction_source_package.json"

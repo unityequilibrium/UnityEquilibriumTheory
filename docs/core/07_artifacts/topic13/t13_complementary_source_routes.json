@@ -1,0 +1,45 @@
+{
+  "major_result_id": "T13_COMPLEMENTARY_OBSERVABLE_SOURCE_ROUTES",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "what_is_closed": ["Primary-source feasibility routes identified; no matched numeric dataset acquired"],
+  "equation_or_mapping": "Literature capability mapping only; Bragg/strain observations are not rows of the current diffuse operator",
+  "units": {"observations": "source-specific; no cross-source numeric merge"},
+  "derivation_class": "PRIMARY_LITERATURE_ROUTE_REVIEW",
+  "observable": "non-basal diffraction and conditional late-time thermometry",
+  "data_role": "LITERATURE_ONLY_NOT_CALIBRATION",
+  "verification_status": "FULL_TEXT_REVIEWED_NUMERIC_PACKAGE_OPEN",
+  "reviewed_date": "2026-09-09",
+  "sources": [
+    {
+      "id": "pennacchio_2017_reflection",
+      "doi": "10.1063/1.4991483",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5491388/",
+      "locator": "TIME-RESOLVED EXPERIMENT ON HOPG; Figure 5",
+      "capability": "Graphite out-of-plane Bragg access demonstrated in reflection geometry, including 006 and 008; timed measurement selects 006",
+      "does_not_supply": "Matched 124-vector diffuse response, absolute mode populations or independent Phi calibration",
+      "numeric_payload_acquired": false,
+      "source_file_sha256": null
+    },
+    {
+      "id": "feist_2017_ucbed",
+      "url": "https://arxiv.org/pdf/1709.02805",
+      "locator": "Main text Figure 3; SI 3 and SI 5",
+      "capability": "Graphite multi-line deformation measurement and late quasi-equilibrium Debye-Waller thermometry, distinct line shift and intensity channels",
+      "does_not_supply": "Early-time universal thermometer, same preparation as Barantani, or diffuse population rows",
+      "source_consistency_warning": "SI 5 says 700 ps whereas abstract and setup specify 700 fs; timing statement must be reconciled before numerical use",
+      "numeric_payload_acquired": false,
+      "source_file_sha256": null
+    }
+  ],
+  "route_decision": {
+    "preferred_next_question": "Can a same-preparation equilibrium intensity/temperature calibration and orientation-resolved numeric data be obtained?",
+    "not_allowed": ["Treat cited temperatures as calibration for another sample", "Append Bragg or strain data directly to the diffuse operator", "Assume late equilibrium during early nonequilibrium dynamics"],
+    "required_inputs": ["Numeric rows and permission/provenance", "Orientation and detector calibration", "Pump/preparation and sample identity", "Response model for each observable", "Uncertainty and covariance", "Timing consistency and equilibrium evidence"]
+  },
+  "open_blockers": ["matched numeric sources unavailable in this pass", "response and uncertainty map", "independent Phi coupling"],
+  "dependency_unlocked": ["targeted source acquisition or experimental collaboration planning only"],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "claim_boundary": "Literature feasibility is not measurement acquisition or physical validation. Null source hashes deliberately mark unacquired source files; no fabricated provenance. No holdout or fit."
+}

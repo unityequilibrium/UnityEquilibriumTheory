@@ -1,0 +1,3364 @@
+{
+  "schema_version": "1.1",
+  "artifact": "uet_equation_correspondence_registry",
+  "generated_at": "2026-09-14",
+  "status": "CENTRAL_REGISTRY_WITH_CANDIDATE_ADDENDA_BLOCKED",
+  "authority": "docs/topics/For Work/EQUATION_RESEARCH_AND_PHYSICAL_CORRESPONDENCE_STANDARD.md",
+  "coverage": {
+    "scope": "docs/core equation families and their declared downstream lanes",
+    "coverage_status": "INITIAL_SEED_NOT_EXHAUSTIVE",
+    "missing_scope": [
+      "all equations in numbered topic research folders",
+      "legacy equations outside docs/core",
+      "complete observable mappings for physical SI lanes",
+      "complete impact/effect/carrier and cosmological lane correspondence"
+    ],
+    "rule": "merged candidate addenda do not promote downstream claims while foundation gates remain blocked",
+    "addenda_merged": [
+      "docs/core/artifacts/uet_equation_correspondence_registry_impact_effect_addendum.json",
+      "docs/core/artifacts/uet_equation_correspondence_registry_cosmology_addendum.json",
+      "docs/core/artifacts/uet_equation_correspondence_registry_persistence_addendum.json",
+      "docs/core/artifacts/uet_equation_correspondence_registry_wave_addendum.json",
+      "docs/core/artifacts/uet_equation_correspondence_registry_topic13_sunset_width_addendum.json",
+      "docs/core/artifacts/uet_equation_correspondence_registry_topic13_contact_sk_addendum.json",
+      "docs/core/artifacts/uet_equation_correspondence_registry_topic13_current_correlator_addendum.json",
+      "docs/core/artifacts/uet_equation_correspondence_registry_topic13_tree_level_charged_ward_addendum.json",
+      "docs/core/artifacts/uet_equation_correspondence_registry_topic13_thermodynamic_normal_component_addendum.json",
+      "docs/core/artifacts/uet_equation_correspondence_registry_topic13_condensed_relative_flow_addendum.json",
+      "docs/core/artifacts/uet_equation_correspondence_registry_topic13_continuum_relative_flow_addendum.json",
+      "docs/core/artifacts/uet_equation_correspondence_registry_topic13_condensed_loop_vertex_addendum.json",
+      "docs/core/artifacts/uet_equation_correspondence_registry_mass_density_addendum.json",
+      "docs/core/artifacts/uet_equation_correspondence_registry_main_theory_addendum.json",
+      "docs/core/artifacts/uet_equation_correspondence_registry_coarse_graining_addendum.json",
+      "docs/core/artifacts/uet_equation_correspondence_registry_open_system_addendum.json",
+      "docs/core/artifacts/uet_equation_correspondence_registry_theory_spine_addendum.json",
+      "docs/core/artifacts/uet_equation_correspondence_registry_quantum_measurement_addendum.json",
+      "docs/core/artifacts/uet_equation_correspondence_registry_quantum_interpretations_addendum.json",
+      "docs/core/artifacts/uet_equation_correspondence_registry_gr_controls_addendum.json",
+      "docs/core/artifacts/uet_equation_correspondence_registry_dynamical_stability_addendum.json",
+      "docs/core/artifacts/uet_equation_correspondence_registry_matter_space_flux_addendum.json",
+      "docs/core/artifacts/uet_equation_correspondence_registry_covariant_diffusion_addendum.json",
+      "docs/core/artifacts/uet_equation_correspondence_registry_noether_mapping_addendum.json"
+    ],
+    "extension_status": "CANDIDATE_ADDENDA_MERGED_NOT_EXHAUSTIVE"
+  },
+  "status_vocabulary": [
+    "DRAFT",
+    "LEGACY",
+    "CANDIDATE",
+    "WARN",
+    "INTERNAL",
+    "SIMULATION_ONLY",
+    "EXTERNAL_COMPARISON",
+    "PASS",
+    "BLOCKED"
+  ],
+  "entries": [
+    {
+      "equation_id": "uet.legacy.master_functional",
+      "version": "legacy-readme-v0",
+      "classification": "legacy_or_comparator",
+      "relation_or_code_path": "Omega[C,I,J] legacy seven-term functional described in docs/core/README.md and uet_master_equation.py",
+      "variables": {
+        "C": "legacy state label; no universal physical identity",
+        "I": "legacy information/instinctive field label; semantics not closed",
+        "J": "legacy exchange notation",
+        "Omega": "legacy normalized functional claim"
+      },
+      "mathematical_role": "historical functional and compatibility surface",
+      "standard_physics_counterpart": "effective free-energy functional only after lane-specific matching",
+      "observable_mapping": {
+        "status": "BLOCKED",
+        "reason": "legacy C/I semantics and units are not a single physical measurement model"
+      },
+      "unit_lane": "normalized_or_undocumented_legacy",
+      "parameter_dimensions": "OPEN",
+      "source_or_origin": "legacy repository documentation and implementation",
+      "assumptions": [
+        "legacy multi-domain interpretation",
+        "effective functional language"
+      ],
+      "symmetry_and_conservation": "OPEN",
+      "limiting_cases": [
+        "requires explicit baseline and closed-system limit"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_master_equation.py",
+        "docs/core/README.md"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_standards_v2.py",
+        "docs/scripts/audit/audit_uet_foundation_compatibility.py",
+        "docs/scripts/audit/audit_uet_legacy_variational_closure.py"
+      ],
+      "evidence_class": "LEGACY",
+      "proof_status": "open",
+      "downstream_dependencies": [
+        "uet.foundation.ontology",
+        "uet.foundation.correspondence"
+      ],
+      "claim_boundary": "legacy comparator; not a closed physical theory",
+      "failure_mode": "C, I, units, or coupling terms are interpreted as universal physical identities",
+      "next_hardening_step": "complete inventory and correspondence record before any new legacy promotion"
+    },
+    {
+      "equation_id": "uet.matter_space.omega",
+      "version": "matter-space-v1",
+      "classification": "foundational_equation",
+      "relation_or_code_path": "Omega[C,Phi] coupled effective functional",
+      "variables": {
+        "C": "system-state coordinate; lane-dependent realization",
+        "Phi": "effective space-response variable",
+        "g": "coupling coefficient in normalized candidate lane",
+        "kappa_C": "C gradient coefficient",
+        "kappa_Phi": "Phi gradient coefficient"
+      },
+      "mathematical_role": "candidate variational functional",
+      "standard_physics_counterpart": "coupled Landau-Ginzburg/effective-field functional",
+      "observable_mapping": {
+        "status": "OPEN",
+        "proxy": "field profiles and derived ledger diagnostics"
+      },
+      "unit_lane": "normalized",
+      "parameter_dimensions": "declared only within normalized v1",
+      "source_or_origin": "matter-space candidate research specification",
+      "assumptions": [
+        "bounded quartic coefficients",
+        "periodic or zero-flux boundary",
+        "effective response state"
+      ],
+      "symmetry_and_conservation": "conserved or nonconserved C lane selected explicitly; Phi is nonconserved response",
+      "limiting_cases": [
+        "g=0 decoupled baselines",
+        "Phi=0 ordered-space reference",
+        "adiabatic Phi limit"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_matter_space.py",
+        "docs/core/uet_spatial.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_matter_space_core.py",
+        "docs/core/artifacts/matter_space_variational_verification.json"
+      ],
+      "evidence_class": "INTERNAL",
+      "proof_status": "derived",
+      "downstream_dependencies": [
+        "uet.foundation.inventory",
+        "uet.foundation.correspondence",
+        "uet.foundation.units"
+      ],
+      "claim_boundary": "candidate normalized effective model",
+      "failure_mode": "normalized functional is treated as dimensional physical energy without a lane contract",
+      "next_hardening_step": "complete cross-lane correspondence and observable mapping"
+    },
+    {
+      "equation_id": "uet.matter_space.physical_dynamics",
+      "version": "matter-space-v1",
+      "classification": "constitutive_lane",
+      "relation_or_code_path": "mu_C, mu_Phi and C/Phi/Pi evolution in matter_space_step",
+      "variables": {
+        "mu_C": "functional derivative with respect to C",
+        "mu_Phi": "functional derivative with respect to Phi",
+        "Pi": "space-response rate",
+        "J_C": "declared matter source",
+        "J_Phi": "declared space-response drive"
+      },
+      "mathematical_role": "candidate physical dynamics derived from the matter-space functional",
+      "standard_physics_counterpart": "gradient flow plus damped hyperbolic response",
+      "observable_mapping": {
+        "status": "OPEN",
+        "proxy": "field evolution, flux, and ledger outputs"
+      },
+      "unit_lane": "normalized",
+      "parameter_dimensions": "normalized contract only",
+      "source_or_origin": "variational matter-space specification",
+      "assumptions": [
+        "finite-volume spatial operator",
+        "explicit boundary condition",
+        "source compatibility"
+      ],
+      "symmetry_and_conservation": "conserved C lane enforces zero-net source; Phi response is not a conserved density",
+      "limiting_cases": [
+        "g=0",
+        "no source",
+        "closed boundary",
+        "adiabatic response"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_matter_space.py",
+        "docs/core/uet_spatial.py",
+        "docs/core/uet_master_equation.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_matter_space_core.py",
+        "docs/core/artifacts/matter_space_dependency_gate.json"
+      ],
+      "evidence_class": "INTERNAL",
+      "proof_status": "derived",
+      "downstream_dependencies": [
+        "uet.matter_space.omega",
+        "uet.foundation.numerics"
+      ],
+      "claim_boundary": "opt-in normalized operator; not default UET law",
+      "failure_mode": "causal pre-arrival leakage or source ambiguity is hidden by clipping or fallback",
+      "next_hardening_step": "repair declared causal discretization before physical interpretation"
+    },
+    {
+      "equation_id": "uet.matter_space.energy_ledger",
+      "version": "matter-space-v1",
+      "classification": "observable_definition",
+      "relation_or_code_path": "E = Omega + tau_Phi/(2 M_Phi) integral Pi^2 and dissipation ledger",
+      "variables": {
+        "E": "extended normalized energy ledger",
+        "Omega": "matter-space functional",
+        "sigma_C": "C dissipation density",
+        "sigma_Phi": "Phi response dissipation density"
+      },
+      "mathematical_role": "internal Lyapunov/ledger relation",
+      "standard_physics_counterpart": "effective free-energy descent and entropy-production accounting",
+      "observable_mapping": {
+        "status": "OPEN",
+        "proxy": "ledger time series; not direct calorimetry"
+      },
+      "unit_lane": "normalized",
+      "parameter_dimensions": "normalized contract only",
+      "source_or_origin": "matter-space variational construction",
+      "assumptions": [
+        "closed periodic or no-flux boundary for descent result"
+      ],
+      "symmetry_and_conservation": "ledger descent is not a full energy-conservation theorem",
+      "limiting_cases": [
+        "closed system",
+        "open drive with explicit source/boundary ledger"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_matter_space.py"
+      ],
+      "verifier_paths": [
+        "docs/core/artifacts/matter_space_variational_verification.json"
+      ],
+      "evidence_class": "INTERNAL",
+      "proof_status": "derived",
+      "downstream_dependencies": [
+        "uet.matter_space.physical_dynamics",
+        "uet.foundation.units"
+      ],
+      "claim_boundary": "normalized internal ledger, not SI energy accounting",
+      "failure_mode": "ledger descent is reported as physical energy conservation or total-universe closure",
+      "next_hardening_step": "define a lane-specific dimensional energy/entropy map"
+    },
+    {
+      "equation_id": "uet.trace.derived_observable",
+      "version": "spacetime-trace-v1",
+      "classification": "observable_definition",
+      "relation_or_code_path": "R = I_trace = G_ret * (sigma_C + sigma_Phi)",
+      "variables": {
+        "R": "derived causal/history trace",
+        "G_ret": "retarded kernel",
+        "sigma": "dissipation or entropy-production source"
+      },
+      "mathematical_role": "one-way derived history functional",
+      "standard_physics_counterpart": "memory/convolution observable; no universal information substance asserted",
+      "observable_mapping": {
+        "status": "BLOCKED",
+        "reason": "kernel causal leakage gate fails and dimensional observable map is absent"
+      },
+      "unit_lane": "normalized",
+      "parameter_dimensions": "open for dimensional lanes",
+      "source_or_origin": "causal trace candidate specification",
+      "assumptions": [
+        "retarded support",
+        "no feedback from R to physical state"
+      ],
+      "symmetry_and_conservation": "history observable only; does not add energy or matter",
+      "limiting_cases": [
+        "no source gives zero new trace",
+        "zero-memory limit gives Markovian baseline"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_trace.py",
+        "docs/core/uet_master_equation.py"
+      ],
+      "verifier_paths": [
+        "docs/core/artifacts/spacetime_trace_verification.json",
+        "docs/core/artifacts/trace_kernel_formula_audit.json"
+      ],
+      "evidence_class": "INTERNAL",
+      "proof_status": "heuristic",
+      "downstream_dependencies": [
+        "uet.matter_space.energy_ledger",
+        "uet.foundation.numerics"
+      ],
+      "claim_boundary": "derived causal observable candidate with no backreaction",
+      "failure_mode": "trace is treated as a new field, energy reservoir, or source of physical feedback",
+      "next_hardening_step": "repair causal compact support and define an observable/unit map"
+    },
+    {
+      "equation_id": "uet.o2.finite_density_eos",
+      "version": "o2-tree-level-v1",
+      "classification": "constitutive_lane",
+      "relation_or_code_path": "p=q^2/(4 lambda), n=Z mu q/lambda, epsilon=mu n-p, c_s^2=q/(3 Z mu^2-m_eff^2)",
+      "variables": {
+        "n": "signed O(2) Noether charge density",
+        "mu": "chemical potential",
+        "m_eff": "lane-specific effective mass parameter",
+        "Phi": "space-response input to m_eff"
+      },
+      "mathematical_role": "tree-level finite-density EOS derived in a declared O(2) realization",
+      "standard_physics_counterpart": "relativistic finite-density O(2) mean-field condensate",
+      "observable_mapping": {
+        "status": "OPEN",
+        "proxy": "charge-density or condensate observables after lane mapping"
+      },
+      "unit_lane": "natural_units",
+      "parameter_dimensions": "natural-unit contract in O2 spec",
+      "source_or_origin": "conservative O(2) action and grand-potential derivation",
+      "assumptions": [
+        "homogeneous finite density",
+        "tree level",
+        "stable condensed branch q>0"
+      ],
+      "symmetry_and_conservation": "O(2) Noether charge symmetry in declared realization",
+      "limiting_cases": [
+        "q<=0 normal branch",
+        "epsilon_nc=0 removes Phi dependence",
+        "zero-temperature limit"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_o2_finite_density_eos.py",
+        "docs/core/O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_o2_superfluid_transport.py",
+        "docs/core/artifacts/o2_finite_density_eos_verification.json"
+      ],
+      "evidence_class": "INTERNAL",
+      "proof_status": "derived",
+      "downstream_dependencies": [
+        "uet.foundation.correspondence",
+        "uet.foundation.units"
+      ],
+      "claim_boundary": "tree-level finite-density O(2) mean-field realization; not universal C ontology",
+      "failure_mode": "Noether charge is silently identified with mass or universal C",
+      "next_hardening_step": "complete cross-lane map and external observable provenance"
+    },
+    {
+      "equation_id": "uet.o2.covariant_t0_transport",
+      "version": "o2-t0-covariant-v1",
+      "classification": "constitutive_lane",
+      "relation_or_code_path": "N^mu=f_s xi^mu and T^munu=f_s xi^mu xi^nu+p g^munu in pure T=0 sector",
+      "variables": {
+        "N": "O(2) Noether current",
+        "T": "stress-energy tensor in declared covariant convention",
+        "xi": "Goldstone phase gradient",
+        "f_s": "superfluid stiffness from pressure derivative"
+      },
+      "mathematical_role": "ideal covariant constitutive relation",
+      "standard_physics_counterpart": "relativistic pure superfluid constitutive structure",
+      "observable_mapping": {
+        "status": "BLOCKED",
+        "reason": "physical Kubo coefficients, finite-temperature sector, and curved 3+1 solver are absent"
+      },
+      "unit_lane": "natural_units",
+      "parameter_dimensions": "natural-unit contract in O2 transport spec",
+      "source_or_origin": "O(2) action and pressure derivatives",
+      "assumptions": [
+        "T=0",
+        "pure superfluid",
+        "flat or locally covariant constitutive sector"
+      ],
+      "symmetry_and_conservation": "Lorentz-covariant ideal constitutive relations in declared metric convention",
+      "limiting_cases": [
+        "zero counterflow",
+        "epsilon_nc=0 conservative limit"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_covariant_superfluid_transport.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_o2_superfluid_transport.py",
+        "docs/core/artifacts/covariant_superfluid_transport_verification.json"
+      ],
+      "evidence_class": "INTERNAL",
+      "proof_status": "derived",
+      "downstream_dependencies": [
+        "uet.o2.finite_density_eos",
+        "uet.foundation.correspondence"
+      ],
+      "claim_boundary": "ideal covariant constitutive derivation; dissipative coefficients open",
+      "failure_mode": "synthetic transport coefficients are presented as microscopic derivation",
+      "next_hardening_step": "Kubo/source package and curved 3+1 verification"
+    },
+    {
+      "equation_id": "uet.gr.closed_limit",
+      "version": "gr-correspondence-v1",
+      "classification": "foundational_equation",
+      "relation_or_code_path": "epsilon_nc=0 closed-response limit and covariant balance relation",
+      "variables": {
+        "g_munu": "metric tensor in the GR realization",
+        "T_munu": "matter stress-energy tensor",
+        "epsilon_nc": "non-closed coupling parameter",
+        "Q_nu": "exchange current in non-closed extension"
+      },
+      "mathematical_role": "declared null-model and correspondence boundary",
+      "standard_physics_counterpart": "Einstein GR closed limit",
+      "observable_mapping": {
+        "status": "OPEN",
+        "proxy": "requires physical GR benchmark package"
+      },
+      "unit_lane": "covariant_normalized",
+      "parameter_dimensions": "partially declared; physical benchmark lane absent",
+      "source_or_origin": "covariant UET GR research specification",
+      "assumptions": [
+        "declared metric convention",
+        "closed limit epsilon_nc=0"
+      ],
+      "symmetry_and_conservation": "covariant balance and Bianchi compatibility in declared parent sector",
+      "limiting_cases": [
+        "epsilon_nc=0 Einstein GR limit",
+        "epsilon_nc!=0 candidate exchange sector"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_covariant_nonclosed.py",
+        "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_gr_closed_limit.py",
+        "docs/core/artifacts/gr_closed_limit_verification.json",
+        "docs/core/artifacts/uet_gr_research_program_gate.json"
+      ],
+      "evidence_class": "INTERNAL",
+      "proof_status": "derived",
+      "downstream_dependencies": [
+        "uet.foundation.correspondence",
+        "uet.foundation.units",
+        "uet.foundation.data"
+      ],
+      "claim_boundary": "closed-limit correspondence; global open-universe claim unresolved",
+      "failure_mode": "a validated null model is treated as validation of the non-closed extension",
+      "next_hardening_step": "complete physical stress-energy and benchmark correspondence"
+    },
+    {
+      "equation_id": "uet.relational.two_body_baseline",
+      "version": "relational-two-body-v1",
+      "classification": "baseline_or_comparator",
+      "relation_or_code_path": "C_AB=-r_ref/r, U_AB=-G*m_A*m_B/r=U_0*C_AB, F_A=-grad_xA U_AB, and t_o=t_e+|x_A(t_e)-x_O|/u",
+      "variables": {
+        "C_AB": "dimensionless geometry-only relational interaction coordinate",
+        "U_AB": "standard Newtonian pair potential in normalized comparator units",
+        "m_A,m_B": "separate standard inertial/amplitude parameters",
+        "F_A": "standard force on body A",
+        "t_e,t_o": "source-event and observer-arrival times",
+        "u": "declared finite comparator signal speed"
+      },
+      "mathematical_role": "standard two-body correspondence baseline and delayed-observation diagnostic",
+      "standard_physics_counterpart": "Newtonian two-body mechanics with a finite-signal observer record",
+      "observable_mapping": {
+        "status": "OPEN",
+        "proxy": "normalized interaction coordinate, force, acceleration, conserved quantities, and delayed source record",
+        "reason": "no dimensional or empirical lane is selected yet"
+      },
+      "unit_lane": "normalized_comparator",
+      "parameter_dimensions": "code-unit contract only; SI mapping not supplied",
+      "source_or_origin": "standard counterpart relation plus declared normalized C correspondence",
+      "assumptions": [
+        "two point bodies",
+        "Newtonian relative mechanics",
+        "fixed observer in comparator",
+        "finite positive signal speed"
+      ],
+      "symmetry_and_conservation": "equal-and-opposite force, momentum conservation, Galilean common-boost invariance of relative C, bounded Verlet energy drift",
+      "limiting_cases": [
+        "mass rescaling leaves geometry-only C unchanged",
+        "signal speed increase reduces delay",
+        "zero UET interpretation leaves standard baseline unchanged"
+      ],
+      "implementation_paths": [
+        "docs/core/relational_two_body_baseline.py",
+        "docs/core/RELATIONAL_TWO_BODY_BASELINE_SPEC.md"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_relational_two_body_baseline.py",
+        "docs/core/test/test_relational_two_body_baseline.py",
+        "docs/core/artifacts/relational_two_body_baseline_verification.json"
+      ],
+      "evidence_class": "INTERNAL_CHECKED",
+      "proof_status": "checked local comparator; UET mapping open",
+      "downstream_dependencies": [
+        "uet.foundation.ontology",
+        "uet.foundation.correspondence",
+        "uet.foundation.units"
+      ],
+      "claim_boundary": "simulation-only standard comparator; does not derive mass, G, gravity, or galaxy dynamics",
+      "failure_mode": "geometry-only C is silently identified with mass or a normalized comparator is reported as a dimensional UET prediction",
+      "next_hardening_step": "select one dimensional lane and test C-to-density or C-to-interaction mapping with a declared observable and holdout protocol"
+    },
+    {
+      "equation_id": "uet.mass_density.correspondence_identifiability",
+      "version": "mass-density-identifiability-v1",
+      "classification": "observable_definition",
+      "relation_or_code_path": "rho(x)=m_A W_epsilon(x-x_A)+m_B W_epsilon(x-x_B) tested against C_AB=-r_ref/r under common mass rescaling",
+      "variables": {
+        "C_AB": "dimensionless geometry-only relational interaction coordinate",
+        "rho": "kernel-smoothed normalized mass-density observable",
+        "m_A,m_B": "separate standard mass/amplitude inputs",
+        "epsilon": "declared smoothing width"
+      },
+      "mathematical_role": "identifiability gate for a candidate C-to-mass-density lane",
+      "standard_physics_counterpart": "kernel-smoothed point-mass density observable",
+      "observable_mapping": {
+        "status": "BLOCKED",
+        "proxy": "normalized density profile and integrated mass",
+        "reason": "same geometry-only C yields different density amplitude under mass rescaling"
+      },
+      "unit_lane": "normalized_code_mass_per_code_length",
+      "parameter_dimensions": "code-unit density and declared kernel width; SI map absent",
+      "source_or_origin": "standard density observable definition plus constructive identifiability diagnostic",
+      "assumptions": [
+        "two point masses",
+        "fixed geometry",
+        "positive Gaussian kernel width",
+        "common mass rescaling"
+      ],
+      "symmetry_and_conservation": "density integral recovers declared mass within grid tolerance; normalized shape is invariant under common mass rescaling",
+      "limiting_cases": [
+        "same C with different density amplitude",
+        "direct rho=f(C) is non-identifiable",
+        "augmented amplitude/source map remains open"
+      ],
+      "implementation_paths": [
+        "docs/core/mass_density_correspondence.py",
+        "docs/core/MASS_DENSITY_CORRESPONDENCE_SPEC.md"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_mass_density_correspondence.py",
+        "docs/core/test/test_mass_density_correspondence.py",
+        "docs/core/artifacts/mass_density_correspondence_verification.json"
+      ],
+      "evidence_class": "INTERNAL_CHECKED",
+      "proof_status": "checked local identifiability diagnostic; physical map open",
+      "downstream_dependencies": [
+        "uet.relational.two_body_baseline",
+        "uet.foundation.ontology",
+        "uet.foundation.units",
+        "uet.foundation.observable"
+      ],
+      "claim_boundary": "direct C-to-rho map blocked; synthetic diagnostic only",
+      "failure_mode": "density amplitude is silently identified with C or fitted from the same data",
+      "next_hardening_step": "declare an independent matter-amplitude/source state, dimensional map, and holdout observable before galaxy work"
+    },
+    {
+      "equation_id": "uet.matter_interaction.forward_mapping",
+      "version": "matter-interaction-forward-v1",
+      "classification": "baseline_or_comparator",
+      "relation_or_code_path": "independent matter source -> rho_obs and C_AB -> U_N(C_AB) -> F_N -> a_N",
+      "variables": {
+        "source": "independent matter/amplitude input with m_A and m_B",
+        "rho_obs": "kernel-smoothed normalized density observable",
+        "C_AB": "dimensionless geometry-only relational interaction coordinate",
+        "U_N": "standard Newtonian pair potential",
+        "F_N": "standard force on body A",
+        "a_N": "standard acceleration of body A"
+      },
+      "mathematical_role": "forward correspondence that keeps source amplitude separate from relational C",
+      "standard_physics_counterpart": "Newtonian two-body mechanics plus a declared kernel-smoothed density observable",
+      "observable_mapping": {
+        "status": "OPEN",
+        "proxy": "normalized density profile, relational C, pair potential, force, and acceleration",
+        "reason": "no dimensional instrument map or empirical lane is selected"
+      },
+      "unit_lane": "normalized_comparator",
+      "parameter_dimensions": "code-unit masses, lengths, time, and density; SI map absent",
+      "source_or_origin": "standard counterpart relations plus declared normalized forward mapping",
+      "assumptions": [
+        "two point-body matter source",
+        "fixed two-body geometry",
+        "positive Gaussian smoothing width",
+        "common source rescaling diagnostic"
+      ],
+      "symmetry_and_conservation": "source amplitude is independent of C; standard equal-and-opposite force and acceleration scaling are retained",
+      "limiting_cases": [
+        "common mass rescaling leaves C unchanged",
+        "density scales linearly with source mass",
+        "pair force scales with m_A*m_B",
+        "extra UET response remains absent"
+      ],
+      "implementation_paths": [
+        "docs/core/matter_interaction_forward.py",
+        "docs/core/MATTER_INTERACTION_FORWARD_SPEC.md"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_matter_interaction_forward.py",
+        "docs/core/test/test_matter_interaction_forward.py",
+        "docs/core/artifacts/matter_interaction_forward_verification.json"
+      ],
+      "evidence_class": "INTERNAL_CHECKED",
+      "proof_status": "checked local standard comparator; UET constitutive extension open",
+      "downstream_dependencies": [
+        "uet.mass_density.correspondence_identifiability",
+        "uet.relational.two_body_baseline",
+        "uet.foundation.units",
+        "uet.foundation.observable"
+      ],
+      "claim_boundary": "simulation-only forward standard comparator; does not derive mass, gravity, or a UET extra force",
+      "failure_mode": "independent matter amplitude is hidden, or standard force is presented as a UET prediction",
+      "next_hardening_step": "define and audit a non-Newtonian constitutive response with units, observable map, and holdout policy"
+    },
+    {
+      "equation_id": "uet.persistence.energy_management_diagnostic",
+      "version": "persistence-energy-diagnostic-v1",
+      "classification": "constitutive_lane",
+      "relation_or_code_path": "P_C=eta_C*(dC/dt)^2 and E_available[n+1]=E_available[n]+(J_in-J_out-P_C)*dt",
+      "variables": {
+        "C": "dimensionless relational/organizational coordinate trajectory",
+        "P_C": "normalized path-cost rate under a Rayleigh-type constitutive ansatz",
+        "E_available": "separate normalized available-resource ledger",
+        "t_persist": "declared first threshold-crossing time"
+      },
+      "mathematical_role": "diagnostic path-cost and persistence ledger, not a force or mass equation",
+      "standard_physics_counterpart": "Rayleigh-type generalized-coordinate dissipation and explicit nonequilibrium resource bookkeeping",
+      "observable_mapping": {
+        "status": "OPEN",
+        "proxy": "prescribed C trajectory, path work, available-energy ledger, and threshold-crossing time",
+        "reason": "no physical work/heat/entropy measurement operator is selected"
+      },
+      "unit_lane": "normalized",
+      "parameter_dimensions": "normalized C, ledger energy, time, and path-cost coefficient; SI map absent",
+      "source_or_origin": "heuristic Rayleigh-type constitutive ansatz plus declared bookkeeping identity",
+      "assumptions": [
+        "prescribed C trajectory",
+        "non-negative quadratic path cost",
+        "declared sustain threshold",
+        "explicit input/output power"
+      ],
+      "symmetry_and_conservation": "ledger closure is checked by construction; no claim of total-energy conservation",
+      "limiting_cases": [
+        "constant C gives zero path cost",
+        "no input/output gives monotone available-energy decline",
+        "same endpoints can have different integrated path cost"
+      ],
+      "implementation_paths": [
+        "docs/core/persistence_energy_diagnostic.py",
+        "docs/core/PERSISTENCE_ENERGY_DIAGNOSTIC_SPEC.md"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_persistence_energy_diagnostic.py",
+        "docs/core/test/test_persistence_energy_diagnostic.py",
+        "docs/core/artifacts/persistence_energy_diagnostic_verification.json"
+      ],
+      "evidence_class": "INTERNAL_DIAGNOSTIC",
+      "proof_status": "open constitutive diagnostic; ledger identity checked locally",
+      "downstream_dependencies": [
+        "uet.matter_space.energy_ledger",
+        "uet.foundation.units",
+        "uet.foundation.observable"
+      ],
+      "claim_boundary": "simulation-only diagnostic for organizational path cost; not a UET derivation or biological/cosmological persistence law",
+      "failure_mode": "path-cost ansatz or available energy is promoted to universal physical law",
+      "next_hardening_step": "map path cost to measured work, heat flux, or entropy production in one declared physical lane"
+    },
+    {
+      "equation_id": "uet.thermal.observable_bridge",
+      "version": "thermal-observable-bridge-v1",
+      "classification": "observable_definition",
+      "relation_or_code_path": "T_norm=T0+alpha_T*C, q_F=-k*grad(T), tau_q*dq/dt+q=-k*grad(T), and sigma_F=q_F^2/(k*T^2)",
+      "variables": {
+        "C": "dimensionless relational/organizational trajectory",
+        "T_norm": "normalized temperature proxy under an explicit open gain",
+        "alpha_T": "open C-to-temperature mapping coefficient",
+        "q_F": "Fourier comparator heat flux",
+        "q": "Cattaneo delayed heat flux",
+        "sigma_F": "local normalized entropy-production proxy"
+      },
+      "mathematical_role": "synthetic observable-map and thermodynamic-sign diagnostic",
+      "standard_physics_counterpart": "Fourier/Cattaneo heat transport with a local entropy-production proxy",
+      "observable_mapping": {
+        "status": "BLOCKED",
+        "proxy": "normalized temperature, heat-flux, path-work, and entropy-production time series",
+        "reason": "alpha_T, SI units, physical measurement operator, and uncertainty are not closed"
+      },
+      "unit_lane": "normalized",
+      "parameter_dimensions": "normalized temperature, flux, conductivity, time, and entropy proxy; SI map absent",
+      "source_or_origin": "standard heat-transport comparator plus open heuristic C-to-T bridge",
+      "assumptions": [
+        "prescribed periodic C trajectory",
+        "positive normalized temperature",
+        "declared alpha_T gain",
+        "local entropy proxy used for diagnostic comparison"
+      ],
+      "symmetry_and_conservation": "Fourier source sign is non-negative by construction; Cattaneo analytic/numeric reference is checked locally",
+      "limiting_cases": [
+        "alpha_T change leaves C path work invariant",
+        "zero C amplitude removes thermal response",
+        "C is not temperature or heat flux by default"
+      ],
+      "implementation_paths": [
+        "docs/core/thermal_observable_bridge.py",
+        "docs/core/THERMAL_OBSERVABLE_BRIDGE_SPEC.md"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_thermal_observable_bridge.py",
+        "docs/core/test/test_thermal_observable_bridge.py",
+        "docs/core/artifacts/thermal_observable_bridge_verification.json"
+      ],
+      "evidence_class": "INTERNAL_DIAGNOSTIC",
+      "proof_status": "standard comparator checked locally; C-to-T correspondence open",
+      "downstream_dependencies": [
+        "uet.persistence.energy_management_diagnostic",
+        "uet.foundation.units",
+        "uet.foundation.observable"
+      ],
+      "claim_boundary": "simulation-only normalized bridge; does not establish C as temperature, heat, entropy, or a UET thermodynamic law",
+      "failure_mode": "open gain or entropy proxy is presented as a derived physical constant or external validation",
+      "next_hardening_step": "derive/source-lock dimensional C-to-temperature/flux map and complete external thermal source package"
+    },
+    {
+      "equation_id": "uet.impact_effect.information_flow",
+      "version": "impact-effect-information-flow-v1",
+      "classification": "foundational_interpretation",
+      "relation_or_code_path": "impact -> R_gen -> Psi_carrier -> detector interaction -> effect -> R_obs",
+      "variables": {
+        "impact": "physical interaction with declared mass, energy, momentum, field, or stress-energy coupling",
+        "Psi_carrier": "physical signal carrier; identity is lane-specific",
+        "effect": "receiver-side input-output influence or record update",
+        "R_gen": "generated physical/history trace",
+        "R_obs": "observer- or detector-dependent record",
+        "C": "candidate collective behaviour/coherence coordinate"
+      },
+      "mathematical_role": "separation of physical coupling, propagation, and observer-side information effect",
+      "standard_physics_counterpart": "field-mediated interaction, signal propagation, detector response, and information as a state/correlation relation",
+      "observable_mapping": {
+        "status": "OPEN",
+        "proxy": "source transition, carrier spectrum/energy/arrival, detector response, and receiver record",
+        "reason": "carrier-specific detector and dimensional unit lanes are not closed"
+      },
+      "unit_lane": "conceptual_until_carrier_lane_selected",
+      "parameter_dimensions": "open",
+      "source_or_origin": "ontology refinement from the observation-delay and matter-to-carrier thought experiments",
+      "assumptions": [
+        "impact and effect are different layers",
+        "effect does not require source-mass transfer",
+        "physical receiver change requires a causal carrier and detector interaction",
+        "mass-bearing phase can terminate while energy-momentum and trace continue in products"
+      ],
+      "symmetry_and_conservation": "carrier lane must preserve declared energy-momentum and relevant charge/current conservation",
+      "limiting_cases": [
+        "no carrier or detector interaction gives no observer effect",
+        "same carrier can produce different records under different detector maps",
+        "electron-positron annihilation is a standard reaction comparator, not a universal UET law"
+      ],
+      "implementation_paths": [
+        "docs/core/IMPACT_EFFECT_AND_INFORMATION_FLOW_SPEC.md",
+        "docs/core/uet_trace.py",
+        "docs/topics/0.7_Neutrino_Physics/README.md"
+      ],
+      "verifier_paths": [
+        "docs/core/artifacts/uet_impact_effect_information_flow_contract.json"
+      ],
+      "evidence_class": "INTERNAL_CONCEPTUAL",
+      "proof_status": "ontology candidate; carrier derivation, units, and observable mapping open",
+      "downstream_dependencies": [
+        "uet.foundation.ontology",
+        "uet.foundation.correspondence",
+        "uet.foundation.units",
+        "uet.foundation.observable",
+        "uet.cosmological.open_system_trace"
+      ],
+      "claim_boundary": "candidate impact/effect ontology; no universal photon, neutrino, positron, or massless-transition identity established",
+      "failure_mode": "effect is treated as a nonphysical force, information is treated as a new substance, or a particle lane is promoted without source and detector mapping",
+      "next_hardening_step": "build a no-fit carrier-neutral comparator for photon, neutrino, and matter-antimatter reaction lanes"
+    },
+    {
+      "equation_id": "uet.cosmological.open_system_trace",
+      "version": "cosmological-open-system-trace-v1",
+      "classification": "constitutive_lane",
+      "relation_or_code_path": "R_gen = G[interaction_history, energy_exchange, dissipation]; R_obs_O = M_O[R_gen; gamma_O, D_O]",
+      "variables": {
+        "B_sys": "collective system behaviour produced by interacting matter and fields",
+        "C": "lane-specific collective system-behaviour coordinate",
+        "Phi": "candidate effective space/system response",
+        "R_gen": "derived physical/history trace generated by completed interactions and dissipation",
+        "R_obs_O": "observer-dependent record after propagation, detector response, sampling, and reconstruction",
+        "E_available": "declared resource/energy ledger, not yet a universal SI quantity",
+        "tau_persist": "system-level persistence/lifetime functional, not coordinate time"
+      },
+      "mathematical_role": "causal ontology and observer-measurement separation for an effective cosmological non-closed-system hypothesis",
+      "standard_physics_counterpart": "finite-signal observation, energy-momentum exchange, open-system bookkeeping, and Newtonian/relativistic many-body baseline",
+      "observable_mapping": {
+        "status": "BLOCKED",
+        "proxy": "source interaction, emitted signal, arrival delay, detector record, orbital persistence, and energy ledger",
+        "reason": "no dimensional global cosmological boundary, stress-energy exchange map, or observer instrument contract is closed"
+      },
+      "unit_lane": "conceptual_normalized",
+      "parameter_dimensions": "open; E_available, power costs, response coefficients, and propagation map require a declared physical lane",
+      "source_or_origin": "ontology refinement from the observation-delay thought experiment plus open-system and persistence constitutive hypotheses",
+      "assumptions": [
+        "physical events and observer records are distinct",
+        "light can carry energy, momentum, and causal signals while having zero rest mass",
+        "source emission is distinct from free propagation",
+        "an effective cosmic subsystem may be non-closed without proving the whole universe is globally open",
+        "long-lived orbital patterns are candidate collective dynamical balances, not teleological forces"
+      ],
+      "symmetry_and_conservation": "standard signal propagation and many-body conservation remain the baseline; UET non-closed exchange and covariant closure are open gates",
+      "limiting_cases": [
+        "no interaction source gives R_gen = 0",
+        "observer map is removed while physical state is unchanged",
+        "closed effective subsystem targets an Einstein/GR-like correspondence but is not verified",
+        "inertial propagation in ideal vacuum does not require continuous fuel"
+      ],
+      "implementation_paths": [
+        "docs/core/COSMOLOGICAL_OPEN_SYSTEM_AND_CAUSAL_TRACE_SPEC.md",
+        "docs/core/uet_trace.py",
+        "docs/topics/0.13_Thermodynamic_Bridge/MATTER_COLLECTIVE_BEHAVIOR_OBSERVATION_CONTRACT.md"
+      ],
+      "verifier_paths": [
+        "docs/core/artifacts/uet_cosmological_open_system_trace_contract.json"
+      ],
+      "evidence_class": "INTERNAL_CONCEPTUAL",
+      "proof_status": "ontology candidate; derivation, units, global closure, and empirical mapping open",
+      "downstream_dependencies": [
+        "uet.foundation.ontology",
+        "uet.foundation.correspondence",
+        "uet.foundation.units",
+        "uet.foundation.observable",
+        "uet.gr.closed_limit"
+      ],
+      "claim_boundary": "candidate effective cosmological interpretation; no global open-universe proof, vacuum substance, Einstein replacement, or UET orbital derivation",
+      "failure_mode": "observer data is treated as a new substance, free propagation is treated as continuous fuel consumption, or an effective non-closed lane is promoted to a global cosmological theorem",
+      "next_hardening_step": "merge into the central registry after the foundation inventory and define a dimensional source-to-C, R_gen-to-observer, and closed-limit correspondence audit"
+    },
+    {
+      "equation_id": "uet.matter_space.finite_cone_C",
+      "version": "matter-space-finite-cone-C-v1",
+      "classification": "constitutive_lane",
+      "relation_or_code_path": "tau_C*C_tt + C_t = -M_C*mu_C + J_C; docs/core/uet_matter_space_finite_cone.py",
+      "variables": {
+        "C": "non-conserved collective system-behaviour/order coordinate in this lane",
+        "C_rate": "dC/dt",
+        "Phi": "effective space/system response",
+        "Pi": "dPhi/dt",
+        "mu_C": "functional derivative with respect to C",
+        "mu_Phi": "functional derivative with respect to Phi",
+        "J_C": "explicit normalized receiver/source input, not conserved mass flux"
+      },
+      "mathematical_role": "finite-cone candidate realization kept separate from conserved-C baseline",
+      "standard_physics_counterpart": "damped hyperbolic non-conserved order-parameter dynamics",
+      "observable_mapping": {
+        "status": "BLOCKED",
+        "proxy": "C response arrival, dispersion, relaxation, Phi/Pi response, and normalized ledger",
+        "reason": "no dimensional mass/density/charge map or physical measurement operator is closed"
+      },
+      "unit_lane": "normalized_only_v1",
+      "parameter_dimensions": "normalized coefficients; SI conversion is not defined",
+      "source_or_origin": "variational matter-space functional plus explicit telegraph constitutive candidate",
+      "assumptions": [
+        "C is a collective coordinate, not universal mass",
+        "C is non-conserved in this realization",
+        "b_C, kappa_C, M_C, tau_C, b_Phi, kappa_Phi, M_Phi, tau_Phi are positive",
+        "trace is derived after the physical step and has no backreaction"
+      ],
+      "symmetry_and_conservation": "energy/ledger is checked locally; mass conservation is not applicable to this non-conserved C lane",
+      "limiting_cases": [
+        "g=0 decouples C and Phi sectors",
+        "tau_C -> 0 gives an overdamped non-conserved order-parameter comparator",
+        "kappa_C -> 0 removes the C spatial principal-speed term",
+        "conserved-C Cahn-Hilliard behavior is a separate lane, not this limit"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_matter_space_finite_cone.py",
+        "docs/core/uet_master_equation.py",
+        "docs/core/uet_base_solver.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_matter_space_finite_cone.py",
+        "docs/core/test/test_matter_space_finite_cone.py",
+        "docs/core/artifacts/matter_space_causal_lane_comparison.json"
+      ],
+      "evidence_class": "INTERNAL_CHECKED_CANDIDATE",
+      "proof_status": "local derivative/ledger/speed checks pass; numerical compact-support and covariant/physical closure remain blocked",
+      "downstream_dependencies": [
+        "uet.foundation.ontology",
+        "uet.foundation.correspondence",
+        "uet.foundation.units",
+        "uet.matter_space.core",
+        "uet.phase_pilot.0.11",
+        "uet.thermal_pilot.0.13"
+      ],
+      "claim_boundary": "candidate normalized finite-cone collective-response lane; not mass, density, particle identity, covariant transport, or empirical validation",
+      "failure_mode": "promoting non-conserved C to mass or treating finite principal speed as proof of a photon/carrier transition",
+      "next_hardening_step": "close characteristic/staggered numerical support and then define lane-specific observable and dimensional mapping"
+    },
+    {
+      "equation_id": "uet.persistence.resource_allocation_principle",
+      "version": "resource-persistence-principle-v1",
+      "classification": "constitutive_principle_candidate",
+      "relation_or_code_path": "P_C=eta_C*(dC/dt)^2; dE_available/dt=J_in-J_out-P_C; t_persist=inf{t:E_available<=E_sustain}",
+      "variables": {
+        "C": "lane-specific collective system-behaviour coordinate",
+        "P_C": "normalized path-cost diagnostic; not yet measured power",
+        "E_available": "declared normalized resource ledger",
+        "J_in": "explicit resource input",
+        "J_out": "explicit resource output/loss",
+        "t_persist": "benchmark persistence criterion"
+      },
+      "mathematical_role": "result-based resource-constrained persistence principle and diagnostic",
+      "standard_physics_counterpart": "open-system work/heat/entropy accounting and dynamical selection after lane-specific mapping",
+      "observable_mapping": {
+        "status": "BLOCKED",
+        "proxy": "measured work, heat flux, entropy production, transition/failure rate, or persistence time",
+        "reason": "the normalized path-cost term has not yet been mapped to a dimensional physical observable"
+      },
+      "unit_lane": "normalized_only_v1",
+      "parameter_dimensions": "normalized diagnostic coefficients; physical power/energy dimensions are open",
+      "source_or_origin": "docs/core/RESOURCE_PERSISTENCE_PRINCIPLE_SPEC.md and docs/core/persistence_energy_diagnostic.py",
+      "assumptions": [
+        "selection is emergent from interaction and resource-constrained dynamics",
+        "no intention, agency, or universal optimizer is introduced",
+        "C is not universal mass, energy, force, or potential energy",
+        "resource accounting is lane-specific and does not assert global-universe conservation"
+      ],
+      "symmetry_and_conservation": "local normalized ledger identity checked; physical work/heat/entropy accounting remains lane-specific",
+      "limiting_cases": [
+        "eta_C=0 removes the path-cost diagnostic",
+        "J_in=J_out=P_C=0 gives constant normalized available resource",
+        "equal-endpoint paths can have different cumulative cost",
+        "failure to map P_C to a physical observable leaves this a constitutive comparator"
+      ],
+      "implementation_paths": [
+        "docs/core/RESOURCE_PERSISTENCE_PRINCIPLE_SPEC.md",
+        "docs/core/PERSISTENCE_ENERGY_DIAGNOSTIC_SPEC.md",
+        "docs/core/persistence_energy_diagnostic.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_persistence_energy_diagnostic.py",
+        "docs/core/test/test_persistence_energy_diagnostic.py",
+        "docs/core/artifacts/persistence_energy_diagnostic_verification.json"
+      ],
+      "evidence_class": "INTERNAL_DIAGNOSTIC",
+      "proof_status": "candidate principle; normalized path-cost and ledger checks pass locally; physical derivation and observable mapping open",
+      "downstream_dependencies": [
+        "uet.foundation.ontology",
+        "uet.foundation.correspondence",
+        "uet.foundation.units",
+        "uet.foundation.observable",
+        "uet.matter_space.core",
+        "uet.phase_pilot.0.11",
+        "uet.thermal_pilot.0.13"
+      ],
+      "claim_boundary": "candidate emergent persistence/resource-allocation principle; not a universal potential-energy law or empirical proof",
+      "failure_mode": "path cost is treated as measured power, C as mass, or emergent selection as intentional optimization without a physical lane",
+      "next_hardening_step": "derive an explicit interaction/state-transition lane and map path cost to measured work, heat, entropy production, or failure rate"
+    },
+    {
+      "equation_id": "uet.matter_space.characteristic_cone",
+      "version": "matter-space-characteristic-cone-v1",
+      "classification": "numerical_candidate_operator",
+      "relation_or_code_path": "tau_C*C_tt+C_t=-M_C*mu_C+J_C with coupled Phi/Pi telegraph response and strict CFL support contract",
+      "variables": {
+        "C": "C_telegraph_candidate collective order/behaviour coordinate; not universal density or mass",
+        "Phi": "effective space/system response",
+        "Pi": "time rate of Phi",
+        "tau_C": "normalized matter response relaxation time",
+        "M_C": "normalized mobility",
+        "kappa_C": "normalized spatial gradient coefficient"
+      },
+      "mathematical_role": "candidate finite-cone normalized operator with explicit compact-support numerical contract",
+      "standard_physics_counterpart": "damped telegraph/order-parameter response; not a conserved density law",
+      "observable_mapping": {
+        "status": "OPEN",
+        "proxy": "arrival radius, response profile, damping and ledger diagnostics",
+        "reason": "no SI material or detector mapping is declared"
+      },
+      "unit_lane": "normalized_only_v1",
+      "parameter_dimensions": "normalized candidate coefficients",
+      "source_or_origin": "docs/core/uet_matter_space_characteristic.py and matter-space finite-cone lane specification",
+      "assumptions": [
+        "one-dimensional finite-volume/finite-difference lane",
+        "non-conserved C realization is distinct from conserved-C comparator",
+        "strict CFL=1 compact-support contract",
+        "trace is derived and has no backreaction"
+      ],
+      "symmetry_and_conservation": "non-conserved C candidate; conserved-C branch remains a separate comparator",
+      "limiting_cases": [
+        "tau_C -> 0 approaches an overdamped/local response only under a declared refinement policy",
+        "g=0 decouples C and Phi",
+        "trace calculation does not alter physical state"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_matter_space_characteristic.py",
+        "docs/core/uet_master_equation.py",
+        "docs/core/__init__.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_matter_space_characteristic.py",
+        "docs/scripts/audit/audit_matter_space_causal_lane_selection.py",
+        "docs/core/artifacts/matter_space_characteristic_cone_verification.json",
+        "docs/core/artifacts/matter_space_causal_lane_selection.json",
+        "docs/core/test/test_matter_space_characteristic.py"
+      ],
+      "evidence_class": "INTERNAL_DIAGNOSTIC",
+      "proof_status": "candidate normalized numerical contract passes selected checks; physical correspondence and full coupled verification remain open",
+      "downstream_dependencies": [
+        "uet.foundation.ontology",
+        "uet.foundation.units",
+        "uet.matter_space.core",
+        "uet.phase_pilot.0.11",
+        "uet.thermal_pilot.0.13"
+      ],
+      "claim_boundary": "candidate normalized finite-cone operator; simulation-only, not a relativistic or SI physical law",
+      "failure_mode": "conserved-C and telegraph-C are silently treated as the same ontology, or numerical compact support is promoted to physical causality",
+      "next_hardening_step": "complete full coupled convergence/observable mapping and keep conserved-C changing-response blocker explicit"
+    },
+    {
+      "equation_id": "uet.persistence.resource_selection_dynamics",
+      "version": "resource-selection-dynamic-game-v1",
+      "classification": "constitutive_comparator",
+      "relation_or_code_path": "dp_i/dt=p_i(f_i-<f>), f_i=s*sum_j(A_ij*p_j)-w*c_i; C=sum_i,j(p_i*A_ij*p_j)",
+      "variables": {
+        "p_i": "normalized occupancy/proportion of interaction states",
+        "A_ij": "normalized compatibility/payoff comparator",
+        "c_i": "normalized behavior cost",
+        "C": "derived collective compatibility coordinate",
+        "E_available": "normalized resource ledger"
+      },
+      "mathematical_role": "non-agentic dynamic-selection comparator for persistence/resource allocation",
+      "standard_physics_counterpart": "evolutionary-game/replicator comparator plus open-system resource bookkeeping",
+      "observable_mapping": {
+        "status": "OPEN",
+        "proxy": "state fractions, transition/failure time, measured work or dissipation after lane-specific mapping"
+      },
+      "unit_lane": "normalized_only_v1",
+      "parameter_dimensions": "normalized comparator weights and costs",
+      "source_or_origin": "docs/core/uet_resource_selection.py and RESOURCE_SELECTION_DYNAMIC_GAME_SPEC.md",
+      "assumptions": [
+        "no intention, agency, or universal optimizer",
+        "interaction matrix and cost vectors are constitutive inputs",
+        "C is derived from interaction state and is not universal mass"
+      ],
+      "symmetry_and_conservation": "probability simplex is preserved; resource ledger is closed numerically under declared inputs",
+      "limiting_cases": [
+        "zero selection/cost weights remove the selection pressure",
+        "zero costs and zero net input leave resource constant",
+        "same physical state with different observer records does not alter the trajectory"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_resource_selection.py",
+        "docs/core/RESOURCE_SELECTION_DYNAMIC_GAME_SPEC.md"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_resource_selection.py",
+        "docs/core/test/test_resource_selection.py",
+        "docs/core/artifacts/resource_selection_dynamic_game_verification.json"
+      ],
+      "evidence_class": "INTERNAL_DIAGNOSTIC",
+      "proof_status": "normalized comparator and ledger checks pass locally; physical cost mapping remains open",
+      "downstream_dependencies": [
+        "uet.persistence.resource_allocation_principle",
+        "uet.thermal_pilot.0.13",
+        "uet.phase_pilot.0.11"
+      ],
+      "claim_boundary": "candidate non-agentic interaction-selection comparator; simulation-only and not a universal Darwinian or cosmological law",
+      "failure_mode": "interaction payoff is interpreted as intention, or normalized cost is reported as SI work/energy",
+      "next_hardening_step": "source-lock a physical lane and test measured work, heat, entropy or failure-rate mapping"
+    },
+    {
+      "equation_id": "uet.persistence.resource_selection_thermal_bridge",
+      "version": "resource-selection-thermal-bridge-v1",
+      "classification": "observable_mapping_comparator",
+      "relation_or_code_path": "Q_proxy=alpha_b*W_behavior+alpha_m*W_maintenance; Delta S_bath_proxy=Q_proxy/T_bath",
+      "variables": {
+        "W_behavior": "normalized behavior work from dynamic-selection lane",
+        "W_maintenance": "normalized maintenance work",
+        "Q_proxy": "declared normalized dissipated-work proxy",
+        "T_bath": "declared normalized bath-temperature scale",
+        "Delta S_bath_proxy": "normalized entropy-like bath proxy"
+      },
+      "mathematical_role": "explicit lane-specific observable bridge and ledger consistency diagnostic",
+      "standard_physics_counterpart": "isothermal heat/work to entropy bookkeeping comparator",
+      "observable_mapping": {
+        "status": "BLOCKED",
+        "proxy": "normalized dissipated work and bath entropy proxy",
+        "reason": "SI units, material identity, temperature calibration and external measurement remain absent"
+      },
+      "unit_lane": "normalized_only_v1",
+      "parameter_dimensions": "declared normalized scales; no fitted values",
+      "source_or_origin": "docs/core/resource_selection_thermal_bridge.py",
+      "assumptions": [
+        "cost-to-work scales are explicit lane inputs",
+        "isothermal bath relation is a comparator, not a complete entropy-current derivation",
+        "no C-to-temperature identity is assumed"
+      ],
+      "symmetry_and_conservation": "resource decline equals declared dissipated-work proxy within numerical tolerance",
+      "limiting_cases": [
+        "zero declared costs gives zero dissipated-work and entropy proxies",
+        "changing declared scales changes the proxy without changing interaction trajectory",
+        "unresolved SI mapping blocks external validation"
+      ],
+      "implementation_paths": [
+        "docs/core/resource_selection_thermal_bridge.py",
+        "docs/core/__init__.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_resource_selection_thermal_bridge.py",
+        "docs/core/test/test_resource_selection_thermal_bridge.py",
+        "docs/core/artifacts/resource_selection_thermal_bridge_verification.json"
+      ],
+      "evidence_class": "INTERNAL_OBSERVABLE_MAPPING_DIAGNOSTIC",
+      "proof_status": "normalized ledger bridge passes deterministic internal checks; external physical mapping blocked",
+      "downstream_dependencies": [
+        "uet.persistence.resource_selection_dynamics",
+        "uet.thermal_pilot.0.13",
+        "uet.foundation.units",
+        "uet.foundation.observable"
+      ],
+      "claim_boundary": "internal normalized observable bridge; not a derivation of SI heat, temperature or entropy production",
+      "failure_mode": "proxy is called measured heat/entropy, or scale is fitted and presented as derived",
+      "next_hardening_step": "source-lock a material experiment with units, uncertainty and measurement operator"
+    },
+    {
+      "equation_id": "uet.mass_density.augmented_amplitude_contract",
+      "version": "mass-density-amplitude-v1",
+      "classification": "observable_mapping_comparator",
+      "relation_or_code_path": "rho=A_m*rho_hat(x|geometry,relative_source_state) in docs/core/mass_density_amplitude.py",
+      "variables": {
+        "C_phase": "collective/relational coordinate; not used as a universal density amplitude",
+        "rho_hat": "unit-integral normalized kernel shape",
+        "A_m": "explicit declared matter-amplitude/source quantity in normalized code-mass units",
+        "rho": "normalized code mass per code length observable"
+      },
+      "mathematical_role": "explicit augmented correspondence contract that exposes the missing amplitude degree of freedom",
+      "standard_physics_counterpart": "kernel-smoothed mass-density observable with separately declared total mass",
+      "observable_mapping": {
+        "status": "BLOCKED",
+        "operator": "O[C_phase,geometry,A_m] -> rho",
+        "reason": "A_m has no dimensional source/uncertainty contract and C alone remains non-identifying"
+      },
+      "unit_lane": "normalized_code_mass_per_code_length",
+      "parameter_dimensions": "A_m code mass; rho_hat inverse code length; SI dimensions open",
+      "source_or_origin": "explicit source contract plus standard kernel observable definition",
+      "assumptions": [
+        "positive declared amplitude",
+        "declared relative source state",
+        "unit-integral normalized shape",
+        "no target-data fitting in the verifier"
+      ],
+      "symmetry_and_conservation": "integral rho equals declared A_m in the normalized lane",
+      "limiting_cases": [
+        "amplitude rescaling changes rho but not normalized shape",
+        "C-only direct identity remains non-identifiable"
+      ],
+      "implementation_paths": [
+        "docs/core/mass_density_amplitude.py",
+        "docs/scripts/audit/audit_mass_density_amplitude.py"
+      ],
+      "verifier_paths": [
+        "docs/core/artifacts/mass_density_amplitude_contract_verification.json",
+        "docs/core/test/test_mass_density_amplitude.py",
+        "docs/core/test/test_mass_density_amplitude_audit.py"
+      ],
+      "evidence_class": "INTERNAL_CHECKED_CORRESPONDENCE",
+      "proof_status": "checked local contract; physical mapping open",
+      "downstream_dependencies": [
+        "uet.mass_density.correspondence_identifiability",
+        "uet.foundation.units",
+        "uet.foundation.observable_mapping"
+      ],
+      "claim_boundary": "explicit normalized amplitude/source contract; not a derived mass mapping or galaxy prediction",
+      "failure_mode": "A_m is hidden as a fit or C is re-labelled as universal mass density",
+      "next_hardening_step": "derive or source-lock dimensional amplitude, relative matter source, uncertainty, and holdout policy"
+    },
+    {
+      "equation_id": "uet.mass_density.si_1d_amplitude_contract",
+      "version": "mass-density-si-1d-v1",
+      "classification": "observable_mapping_comparator",
+      "relation_or_code_path": "rho_1D=A_m*rho_hat/L_scale in docs/core/mass_density_dimensional.py",
+      "variables": {
+        "A_m": "explicit source amplitude in kg",
+        "L_scale": "explicit coordinate scale in m",
+        "rho_hat": "unit-integral normalized code-coordinate shape",
+        "rho_1D": "one-dimensional line-mass density in kg/m"
+      },
+      "mathematical_role": "synthetic dimensional closure for the augmented C-density contract",
+      "standard_physics_counterpart": "one-dimensional line-mass density observable",
+      "observable_mapping": {
+        "status": "BLOCKED",
+        "operator": "O[C_phase,geometry,A_m,L_scale] -> rho_1D",
+        "reason": "3D physical density operator, source provenance, uncertainty and holdout are not established"
+      },
+      "unit_lane": "SI_1D_LINE_MASS_DENSITY",
+      "parameter_dimensions": "A_m kg; L_scale m; rho_hat inverse code length; rho_1D kg/m",
+      "source_or_origin": "explicit SI conversion contract from declared synthetic source and coordinate scale",
+      "assumptions": [
+        "positive declared kg amplitude",
+        "positive metre scale",
+        "unit-integral shape",
+        "no target-data fitting"
+      ],
+      "symmetry_and_conservation": "integral over physical coordinate equals declared A_m in the synthetic 1D lane",
+      "limiting_cases": [
+        "changing L_scale changes density units while preserving total kg",
+        "3D mapping remains blocked"
+      ],
+      "implementation_paths": [
+        "docs/core/mass_density_dimensional.py",
+        "docs/scripts/audit/audit_mass_density_dimensional.py"
+      ],
+      "verifier_paths": [
+        "docs/core/artifacts/mass_density_dimensional_contract_verification.json",
+        "docs/core/test/test_mass_density_dimensional.py",
+        "docs/core/test/test_mass_density_dimensional_audit.py"
+      ],
+      "evidence_class": "INTERNAL_CHECKED_CORRESPONDENCE",
+      "proof_status": "checked local dimensional contract; physical 3D mapping open",
+      "downstream_dependencies": [
+        "uet.mass_density.augmented_amplitude_contract",
+        "uet.foundation.units",
+        "uet.foundation.observable_mapping"
+      ],
+      "claim_boundary": "synthetic SI 1D unit contract; not a physical 3D density map, galaxy prediction, or mass derivation",
+      "failure_mode": "a 1D line density is reported as a 3D galaxy density or source amplitude is fitted on target data",
+      "next_hardening_step": "source-lock a physical 3D density operator with provenance, uncertainty, calibration and holdout policy"
+    },
+    {
+      "equation_id": "uet.mass_density.si_3d_measurement_operator",
+      "version": "mass-density-si-3d-v1",
+      "classification": "observable_mapping_comparator",
+      "relation_or_code_path": "rho_3D=A_m*rho_hat(x_code)/(L_x*L_y*L_z) in docs/core/mass_density_3d.py",
+      "variables": {
+        "C_phase": "collective/relational coordinate; not used as universal density amplitude",
+        "rho_hat": "unit-integral normalized cell-centred 3D code-space shape",
+        "A_m": "explicit source amplitude in kg",
+        "L_x,L_y,L_z": "explicit coordinate scales in m",
+        "rho_3D": "volume-mass density observable in kg/m^3"
+      },
+      "mathematical_role": "synthetic SI 3D measurement-operator contract that separates source amplitude, geometry scales, and normalized shape",
+      "standard_physics_counterpart": "three-dimensional volume-mass density observable",
+      "observable_mapping": {
+        "status": "BLOCKED",
+        "operator": "O[C_phase,geometry,rho_hat,A_m,L_xyz] -> rho_3D",
+        "reason": "the SI operator closes for a declared synthetic shape, but C-to-shape derivation, external source provenance, calibration, uncertainty propagation, and holdout evidence remain open"
+      },
+      "unit_lane": "SI_3D_VOLUME_MASS_DENSITY_SYNTHETIC",
+      "parameter_dimensions": "A_m kg; L_x,L_y,L_z m; rho_hat inverse code volume; rho_3D kg/m^3",
+      "source_or_origin": "explicit finite-volume dimensional conversion contract from a declared synthetic source shape",
+      "assumptions": [
+        "non-negative rectangular cell-centred shape",
+        "unit-integral normalized code-space shape",
+        "positive declared kg amplitude",
+        "positive metre scales on all three axes",
+        "source locator/hash, uncertainty, calibration status and holdout policy are explicit",
+        "no target-data fitting in the verifier"
+      ],
+      "symmetry_and_conservation": "finite-volume integral of rho_3D recovers the declared source mass; common volume rescaling changes density scale but preserves total mass",
+      "limiting_cases": [
+        "volume rescaling preserves total kg and scales peak density inversely with physical volume",
+        "synthetic source remains simulation-only",
+        "C does not determine rho_hat or A_m in this lane"
+      ],
+      "implementation_paths": [
+        "docs/core/mass_density_3d.py",
+        "docs/scripts/audit/audit_mass_density_3d.py"
+      ],
+      "verifier_paths": [
+        "docs/core/artifacts/mass_density_3d_contract_verification.json",
+        "docs/core/test/test_mass_density_3d.py",
+        "docs/core/test/test_mass_density_3d_audit.py"
+      ],
+      "evidence_class": "INTERNAL_CHECKED_CORRESPONDENCE",
+      "proof_status": "checked local synthetic SI operator and integral closure; external physical mapping open",
+      "downstream_dependencies": [
+        "uet.mass_density.si_1d_amplitude_contract",
+        "uet.mass_density.augmented_amplitude_contract",
+        "uet.foundation.units",
+        "uet.foundation.observable_mapping",
+        "topic_0.1_galaxy_rotation"
+      ],
+      "claim_boundary": "synthetic SI 3D measurement-operator contract; not a C-to-mass derivation, external galaxy map, galaxy prediction, or dark-matter replacement",
+      "failure_mode": "synthetic rho_3D is reported as measured mass density, or A_m/shape/calibration is fitted on target data",
+      "next_hardening_step": "source-lock an external 3D density operator with calibration, propagated uncertainty, and holdout policy before galaxy comparison"
+    },
+    {
+      "equation_id": "uet.persistence.resource_selection_physical_cost_map",
+      "version": "resource-selection-physical-cost-map-v1",
+      "classification": "observable_mapping_contract",
+      "relation_or_code_path": "Q_J=alpha_b*W_behavior+alpha_m*W_maintenance; Delta_S_bath_J_per_K=Q_J/T_bath_K",
+      "variables": {
+        "W_behavior": "normalized integrated behavior cost",
+        "W_maintenance": "normalized integrated maintenance cost",
+        "alpha_b": "independent joule per normalized behavior-work scale",
+        "alpha_m": "independent joule per normalized maintenance-work scale",
+        "T_bath_K": "bath temperature in kelvin",
+        "Q_J": "integrated dissipated heat in joules",
+        "Delta_S_bath_J_per_K": "isothermal bath entropy proxy in joules per kelvin"
+      },
+      "mathematical_role": "explicit dimensional conversion contract; not a source of calibration values",
+      "standard_physics_counterpart": "work/heat accounting and isothermal entropy bookkeeping after independent calibration",
+      "observable_mapping": {
+        "status": "BLOCKED",
+        "proxy": "integrated heat or calorimetric/heat-flux observable plus bath temperature",
+        "reason": "independent alpha_b, alpha_m, uncertainty, detector operator, and source package are absent"
+      },
+      "unit_lane": "si_contract_only_v1",
+      "parameter_dimensions": "alpha_b, alpha_m: J per normalized work; T_bath_K: K; Q_J: J; Delta_S: J/K",
+      "source_or_origin": "docs/core/resource_selection_physical_cost_map.py and its contract verifier",
+      "assumptions": [
+        "normalized behavior and maintenance work are non-negative declared ledger components",
+        "alpha_b and alpha_m are independently derived or source-locked, never fitted to the target result",
+        "isothermal Delta_S=Q/T is a comparator and not a complete entropy-current derivation",
+        "C remains interaction-derived and is not identified with energy or temperature"
+      ],
+      "symmetry_and_conservation": "conversion preserves the declared normalized work decomposition; physical closure remains open",
+      "limiting_cases": [
+        "zero behavior and maintenance work gives zero mapped heat",
+        "missing or fitted scale is rejected before conversion",
+        "positive scale rescaling changes SI magnitude and is not identifiable without an external anchor"
+      ],
+      "implementation_paths": [
+        "docs/core/resource_selection_physical_cost_map.py",
+        "docs/core/resource_selection_thermal_bridge.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_resource_selection_physical_cost_map.py",
+        "docs/core/test/test_resource_selection_physical_cost_map.py",
+        "docs/core/artifacts/resource_selection_physical_cost_map_verification.json"
+      ],
+      "evidence_class": "INTERNAL_CONTRACT",
+      "proof_status": "contract behavior passes locally; independent dimensional calibration and physical measurement remain blocked",
+      "downstream_dependencies": [
+        "uet.persistence.resource_selection_dynamics",
+        "uet.foundation.units",
+        "uet.foundation.observable",
+        "uet.thermal_pilot.0.13"
+      ],
+      "claim_boundary": "SI conversion interface only; not physical heat/entropy evidence or a derivation of alpha scales",
+      "failure_mode": "fixture scales are presented as material calibration, or normalized C/work is called SI energy/temperature",
+      "next_hardening_step": "source-lock independent alpha_b and alpha_m with calorimetry or heat-flux data, uncertainty, detector operator, and holdout"
+    },
+    {
+      "equation_id": "uet.main_theory.covariant_parent",
+      "version": "covariant-parent-v1",
+      "classification": "foundational_equation",
+      "relation_or_code_path": "docs/core/uet_covariant_parent.py",
+      "variables": {
+        "g_munu": "Lorentz metric",
+        "chi_A": "global O(2) scalar matter doublet",
+        "Phi": "candidate response scalar",
+        "epsilon_nc": "closed/non-closed nesting parameter"
+      },
+      "mathematical_role": "integrated conservative scalar-tensor and O2 parent formula evaluator",
+      "standard_physics_counterpart": "scalar-tensor effective action with global O2 matter",
+      "observable_mapping": {
+        "status": "OPEN",
+        "reason": "curved solver, SI map, detector map, and external benchmark are absent"
+      },
+      "unit_lane": "natural_only_v1",
+      "parameter_dimensions": "declared by covariant response and matter contracts",
+      "source_or_origin": "candidate UET conservative parent assembled from existing action-derived modules",
+      "assumptions": [
+        "four-dimensional Lorentz metric with signature (-,+,+,+)",
+        "global O2 scalar matter pilot",
+        "positive response kinetic and bounded quartic potentials",
+        "derived trace and observer state are absent"
+      ],
+      "symmetry_and_conservation": "diffeomorphism-compatible local tensor formulas, global O2 current, and exchange-completed total balance",
+      "limiting_cases": [
+        "epsilon_nc=0 gives exact algebraic Einstein-GR residual with scalar matter",
+        "response coupling zero decouples matter and Phi interaction"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_covariant_parent.py",
+        "docs/core/uet_covariant_response.py",
+        "docs/core/uet_covariant_matter.py",
+        "docs/core/uet_covariant_balance.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_covariant_parent.py",
+        "docs/core/artifacts/covariant_parent_verification.json",
+        "docs/core/test/test_uet_covariant_parent.py"
+      ],
+      "evidence_class": "INTERNAL_FORMAL",
+      "proof_status": "conservative formula identities pass locally; physical closure remains blocked",
+      "downstream_dependencies": [
+        "uet.main_theory.ontology",
+        "uet.main_theory.coarse_graining",
+        "uet.main_theory.open_system",
+        "uet.main_theory.curved_3p1"
+      ],
+      "claim_boundary": "candidate natural-unit conservative parent; not curved GR or empirical validation",
+      "failure_mode": "component equations drift from the parent action or closed limit requires manual equation deletion",
+      "next_hardening_step": "close lane-specific covariant coarse graining before dissipative and observable promotion"
+    },
+    {
+      "equation_id": "uet.main_theory.coarse_graining",
+      "version": "lane-coarse-graining-v1",
+      "classification": "constitutive_lane_specific_equation",
+      "relation_or_code_path": "docs/core/uet_coarse_graining.py",
+      "variables": {
+        "X_lane": "declared lower-level lane field",
+        "C_lane": "lane-specific collective coordinate",
+        "ell": "phase, charge, density, or telegraph"
+      },
+      "mathematical_role": "many-to-one averaging and normalization map",
+      "standard_physics_counterpart": "block-spin, volume-average, charge-density, and continuum coarse graining",
+      "observable_mapping": {
+        "status": "PARTIAL",
+        "reason": "targets declared but material/catalog calibration remains open"
+      },
+      "unit_lane": "lane_specific",
+      "parameter_dimensions": "recorded per lane; C may be normalized",
+      "source_or_origin": "UET foundation Wave 3 constitutive contract",
+      "assumptions": [
+        "uniform block averaging v1",
+        "declared frame and boundary",
+        "many-to-one information loss",
+        "no universal identity among C lanes"
+      ],
+      "symmetry_and_conservation": "global mean preserved for equal-volume blocks",
+      "limiting_cases": [
+        "single-sample cell reproduces the lower-level field up to affine normalization",
+        "coarser blocks erase within-cell fluctuations"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_coarse_graining.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_coarse_graining.py",
+        "docs/core/artifacts/coarse_graining_verification.json",
+        "docs/core/test/test_uet_coarse_graining.py"
+      ],
+      "evidence_class": "INTERNAL_FORMAL",
+      "proof_status": "operator consistency verified; microscopic and observable closure open",
+      "downstream_dependencies": [
+        "uet.main_theory.covariant_parent",
+        "uet.main_theory.open_system",
+        "uet.main_theory.observables"
+      ],
+      "claim_boundary": "lane-specific candidate coarse coordinate; C is not mass, charge, or order universally",
+      "failure_mode": "mapping assumes desired observable or silently identifies distinct lane coordinates",
+      "next_hardening_step": "derive open-system memory and calibrate one dimensional observable lane"
+    },
+    {
+      "equation_id": "uet.main_theory.open_system_linear_kms",
+      "version": "open-system-linear-kms-v1",
+      "classification": "constitutive_lane_specific_equation",
+      "relation_or_code_path": "docs/core/uet_covariant_open_system.py",
+      "variables": {
+        "L": "provenance-bearing Onsager matrix",
+        "tau": "memory relaxation time",
+        "K_R": "physical retarded memory kernel",
+        "N": "noise covariance",
+        "R_gen": "post-evolution derived trace"
+      },
+      "mathematical_role": "linear causal memory and classical fluctuation-dissipation bridge",
+      "standard_physics_counterpart": "generalized Langevin/Maxwell memory with classical KMS fluctuation-dissipation",
+      "observable_mapping": {
+        "status": "OPEN",
+        "reason": "coefficients are simulation-only and no dimensional detector mapping is attached"
+      },
+      "unit_lane": "natural_or_normalized_v1",
+      "parameter_dimensions": "declared by coefficient record and lane contract",
+      "source_or_origin": "UET Main-Theory Wave 4 constitutive bridge",
+      "assumptions": [
+        "linear response",
+        "classical KMS limit",
+        "exponential memory",
+        "shared relaxation time for coupled sectors",
+        "provenance-bearing coefficients"
+      ],
+      "symmetry_and_conservation": "Onsager symmetry/PSD and extended entropy ledger; local covariant Q^mu integration remains open",
+      "limiting_cases": [
+        "tau to zero approaches instantaneous Onsager response distributionally",
+        "zero coefficient removes dissipation and noise"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_covariant_open_system.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_covariant_open_system.py",
+        "docs/core/artifacts/covariant_open_system_verification.json",
+        "docs/core/test/test_uet_covariant_open_system.py"
+      ],
+      "evidence_class": "INTERNAL_FORMAL",
+      "proof_status": "linear classical control passes; full SK/KMS derivation blocked",
+      "downstream_dependencies": [
+        "uet.main_theory.coarse_graining",
+        "uet.main_theory.curved_3p1",
+        "uet.main_theory.observables"
+      ],
+      "claim_boundary": "candidate constitutive bridge, not microscopic transport derivation",
+      "failure_mode": "KMS/PSD/entropy failure or generated trace used as an input state",
+      "next_hardening_step": "embed physical memory in a strongly-hyperbolic covariant 3+1 spine"
+    },
+    {
+      "equation_id": "uet.main_theory.hyperbolic_spine_control",
+      "version": "minkowski-1p1-spine-v1",
+      "classification": "numerical_implementation",
+      "relation_or_code_path": "docs/core/uet_covariant_theory_spine.py",
+      "variables": {
+        "phi": "sector coordinate",
+        "pi": "time derivative",
+        "psi": "declared spatial derivative",
+        "c": "characteristic speed"
+      },
+      "mathematical_role": "first-order strongly-hyperbolic fixed-background control",
+      "standard_physics_counterpart": "first-order reduction of damped relativistic wave/telegraph sectors",
+      "observable_mapping": {
+        "status": "OPEN",
+        "reason": "fixed-background control has no dimensional detector map"
+      },
+      "unit_lane": "natural_only_v1",
+      "parameter_dimensions": "natural-unit control parameters",
+      "source_or_origin": "UET Main-Theory Wave 5 numerical control",
+      "assumptions": [
+        "fixed Minkowski 1+1",
+        "periodic boundary",
+        "linear principal part",
+        "subluminal declared speeds"
+      ],
+      "symmetry_and_conservation": "periodic gradient constraint and damped energy ledger; no GR constraints",
+      "limiting_cases": [
+        "zero damping gives wave control",
+        "zero fields are exact fixed point"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_covariant_theory_spine.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_covariant_theory_spine.py",
+        "docs/core/artifacts/covariant_theory_spine_verification.json",
+        "docs/core/test/test_uet_covariant_theory_spine.py"
+      ],
+      "evidence_class": "INTERNAL_NUMERICAL",
+      "proof_status": "linear fixed-background hyperbolicity and convergence pass; curved 3+1 blocked",
+      "downstream_dependencies": [
+        "uet.main_theory.covariant_parent",
+        "uet.main_theory.open_system",
+        "uet.main_theory.gravity"
+      ],
+      "claim_boundary": "causal numerical control, not a curved covariant solver",
+      "failure_mode": "complex/incomplete characteristics, superluminal speed, constraint growth, or hidden stabilization",
+      "next_hardening_step": "derive a 3+1 formulation with dynamical metric and GR constraint propagation"
+    },
+    {
+      "equation_id": "uet.main_theory.operational_quantum_measurement",
+      "version": "operational-qm-v1",
+      "classification": "standard_physics_interface",
+      "relation_or_code_path": "docs/core/uet_quantum_measurement.py",
+      "variables": {
+        "rho": "density operator",
+        "E_o": "POVM effect",
+        "K_r": "channel/instrument Kraus operator",
+        "p(o)": "Born probability",
+        "R_obs": "observer outcome record"
+      },
+      "mathematical_role": "preparation-channel-instrument-outcome interface",
+      "standard_physics_counterpart": "finite-dimensional operational quantum mechanics",
+      "observable_mapping": {
+        "status": "FORMAL",
+        "reason": "outcomes map to detector records; hardware-specific calibration remains lane dependent"
+      },
+      "unit_lane": "dimensionless_probability",
+      "parameter_dimensions": "finite-dimensional operators",
+      "source_or_origin": "standard operational QM imported as the UET quantum interface baseline",
+      "assumptions": [
+        "Born rule",
+        "CPTP channels",
+        "positive complete POVMs",
+        "declared detector interaction"
+      ],
+      "symmetry_and_conservation": "trace preservation, positivity, and no-signalling baseline",
+      "limiting_cases": [
+        "identity channel preserves preparation",
+        "projective instrument is a POVM special case"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_quantum_measurement.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_quantum_measurement.py",
+        "docs/core/artifacts/quantum_measurement_verification.json",
+        "docs/core/test/test_uet_quantum_measurement.py"
+      ],
+      "evidence_class": "STANDARD_THEORY_REPRODUCTION",
+      "proof_status": "finite-dimensional baseline tests pass",
+      "downstream_dependencies": [
+        "uet.main_theory.quantum_interpretations",
+        "uet.main_theory.detector_observables"
+      ],
+      "claim_boundary": "standard interface adopted by UET; not a UET derivation of quantum mechanics",
+      "failure_mode": "nonpositive state/POVM, non-CPTP channel, nonnormalized Born probabilities, or signalling",
+      "next_hardening_step": "verify interpretation invariance and connect physical carrier/detector lanes"
+    },
+    {
+      "equation_id": "uet.main_theory.quantum_interpretation_adapters",
+      "version": "interpretation-adapters-v1",
+      "classification": "observable_definition",
+      "relation_or_code_path": "docs/core/uet_quantum_interpretations.py",
+      "variables": {
+        "rho_A": "agent-indexed probability assignment",
+        "relation_SR": "system-reference metadata",
+        "p_o": "shared operational Born probabilities"
+      },
+      "mathematical_role": "metadata views over one operational probability contract",
+      "standard_physics_counterpart": "QBism, relational QM, and operational QM comparison",
+      "observable_mapping": {
+        "status": "FORMAL",
+        "reason": "all views reference the same instrument outcomes"
+      },
+      "unit_lane": "dimensionless_probability",
+      "parameter_dimensions": "none",
+      "source_or_origin": "UET Main-Theory Wave 7 comparison layer",
+      "assumptions": [
+        "same preparation and instrument",
+        "interpretations add no dynamics"
+      ],
+      "symmetry_and_conservation": "empirical prediction invariance",
+      "limiting_cases": [
+        "changing agent or reference labels leaves probabilities unchanged"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_quantum_interpretations.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_quantum_interpretations.py",
+        "docs/core/artifacts/quantum_interpretation_invariance_verification.json",
+        "docs/core/test/test_uet_quantum_interpretations.py"
+      ],
+      "evidence_class": "INTERNAL_FORMAL",
+      "proof_status": "finite-dimensional invariance tests pass",
+      "downstream_dependencies": [
+        "uet.main_theory.operational_quantum_measurement",
+        "uet.main_theory.detector_observables"
+      ],
+      "claim_boundary": "interpretation comparison only; no new empirical prediction",
+      "failure_mode": "metadata changes physical state or probabilities without declared dynamics",
+      "next_hardening_step": "connect detector records to a dimensional physical observable lane"
+    },
+    {
+      "equation_id": "uet.main_theory.gr_correspondence_controls",
+      "version": "gr-controls-v1",
+      "classification": "standard_physics_interface",
+      "relation_or_code_path": "docs/core/uet_gr_correspondence.py",
+      "variables": {
+        "g_munu": "analytic metric input",
+        "G_munu": "analytic Einstein-tensor input",
+        "T_munu": "matching standard stress tensor",
+        "Phi_N": "Newtonian potential"
+      },
+      "mathematical_role": "analytic GR and weak-field correspondence controls",
+      "standard_physics_counterpart": "Einstein equation, FLRW perfect fluid, Schwarzschild exterior vacuum, and Poisson equation",
+      "observable_mapping": {
+        "status": "OPEN",
+        "reason": "no gauge-invariant numerical metric observable or external dataset"
+      },
+      "unit_lane": "natural_control",
+      "parameter_dimensions": "standard GR control conventions",
+      "source_or_origin": "standard analytic formulas used as UET null/limit controls",
+      "assumptions": [
+        "analytic tensors supplied",
+        "no curvature derivation",
+        "fixed coordinates",
+        "closed response branch"
+      ],
+      "symmetry_and_conservation": "Einstein residual identity only; curved Bianchi evolution not tested",
+      "limiting_cases": [
+        "Minkowski vacuum",
+        "flat FLRW perfect fluid",
+        "Schwarzschild exterior",
+        "Newtonian Poisson"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_gr_correspondence.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_gr_correspondence.py",
+        "docs/core/artifacts/gr_correspondence_verification.json",
+        "docs/core/test/test_uet_gr_correspondence.py"
+      ],
+      "evidence_class": "STANDARD_THEORY_REPRODUCTION",
+      "proof_status": "analytic tensor-input identities pass; curved numerical closure blocked",
+      "downstream_dependencies": [
+        "uet.main_theory.covariant_parent",
+        "uet.main_theory.hyperbolic_spine_control",
+        "uet.main_theory.gravity_observables"
+      ],
+      "claim_boundary": "correspondence controls, not a UET derivation or numerical GR validation",
+      "failure_mode": "GR null limit fails or curved claims rely on supplied Einstein tensors as if computed",
+      "next_hardening_step": "implement curvature, dynamical metric, constraints, and gauge-invariant observables"
+    },
+    {
+      "equation_id": "uet.thermal.ttg_normalized_observable",
+      "version": "wave1-v1",
+      "classification": "observable_mapping_candidate",
+      "relation_or_code_path": "y_TTG^UET = Delta_Phi(t) / Delta_Phi(0); Delta_Tq = alpha_Phi_K * Delta_Phi",
+      "variables": {
+        "Phi": "effective response variable in the declared normalized lane",
+        "Delta_Phi": "response difference between grating peak and valley",
+        "Delta_Tq": "source-defined quasi-temperature difference",
+        "alpha_Phi_K": "independent scale in K per normalized Phi",
+        "y_TTG": "dimensionless normalized TTG response"
+      },
+      "mathematical_role": "lane-specific measurement operator and dimensional bridge candidate",
+      "standard_physics_counterpart": "transient thermal-grating quasi-temperature response with Fourier/Cattaneo controls",
+      "observable_mapping": {
+        "status": "NORMALIZED_DEFINED_DIMENSIONAL_BLOCKED",
+        "operator": "y_TTG(t) = Delta_Tq(t) / Delta_Tq(0)",
+        "candidate_operator": "y_TTG^UET(t) = Delta_Phi(t) / Delta_Phi(0)",
+        "dimensional_bridge": "Delta_Tq = alpha_Phi_K * Delta_Phi",
+        "alpha_status": "OPEN_INDEPENDENT_DERIVATION_OR_CALIBRATION"
+      },
+      "unit_lane": "normalized_with_open_K_scale",
+      "parameter_dimensions": "alpha_Phi_K: K per normalized Phi; not yet identified",
+      "source_or_origin": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_second_sound_source_package.json",
+      "assumptions": [
+        "TTG quasi-temperature is kept distinct from equilibrium temperature",
+        "source rows are training/intake only until provenance and preregistration gates pass",
+        "Xie 2026 remains a locked holdout"
+      ],
+      "symmetry_and_conservation": "not a new conservation law; depends on the selected response lane",
+      "limiting_cases": [
+        "normalized response only",
+        "alpha_Phi_K unresolved",
+        "heat-flux and entropy maps remain downstream"
+      ],
+      "implementation_paths": [
+        "docs/core/thermal_source_observable_map.py",
+        "docs/scripts/audit/audit_thermal_source_observable_mapping.py"
+      ],
+      "verifier_paths": [
+        "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_observable_map_readiness.json",
+        "docs/core/artifacts/thermal_dimensional_calibration_contract.json"
+      ],
+      "evidence_class": "CANDIDATE_INTERNAL_WITH_PROVISIONAL_SOURCE_INTAKE",
+      "proof_status": "open",
+      "downstream_dependencies": [
+        "uet.foundation.units",
+        "uet.foundation.observable_mapping",
+        "uet.thermal.alpha_Phi_K"
+      ],
+      "claim_boundary": "normalized observable definition only; no temperature prediction or external validation",
+      "failure_mode": "Phi is treated as temperature or a fitted alpha is treated as derivation",
+      "next_hardening_step": "independently derive or calibrate alpha_Phi_K with uncertainty without reading the holdout"
+    },
+    {
+      "equation_id": "uet.thermal.causal_reference_branch",
+      "version": "wave1-v1",
+      "classification": "numerical_control_branch",
+      "relation_or_code_path": "causal_linear_space_step with frozen C at strict CFL=1",
+      "variables": {
+        "C": "frozen normalized collective coordinate",
+        "Phi": "normalized response field",
+        "Pi": "normalized response rate"
+      },
+      "mathematical_role": "compact-support reference recurrence for causal diagnostics",
+      "standard_physics_counterpart": "damped telegraph-like response control",
+      "observable_mapping": {
+        "status": "INTERNAL_COMPACT_SUPPORT_DIAGNOSTIC",
+        "operator": "pre-arrival support and post-arrival target response",
+        "physical_map": "not closed"
+      },
+      "unit_lane": "normalized",
+      "parameter_dimensions": "normalized control parameters only",
+      "source_or_origin": "docs/core/uet_matter_space.py",
+      "assumptions": [
+        "C is frozen",
+        "trace has no feedback",
+        "strict CFL=1 is declared and checked"
+      ],
+      "symmetry_and_conservation": "not a full coupled conserved-C branch",
+      "limiting_cases": [
+        "compact support in the tested discrete cone"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_matter_space.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_matter_space_causal_reference.py"
+      ],
+      "evidence_class": "INTERNAL_NUMERICAL_CONTROL",
+      "proof_status": "verified_in_declared_scope",
+      "downstream_dependencies": [
+        "uet.matter_space.physical_dynamics",
+        "uet.foundation.observable_mapping"
+      ],
+      "claim_boundary": "selected frozen-C normalized control only; full coupled candidate remains blocked",
+      "failure_mode": "reference branch is reported as proof of the full conserved-C operator",
+      "next_hardening_step": "resolve the unbounded high-k characteristic speed of the full coupled candidate"
+    },
+    {
+      "equation_id": "uet.phase.structure_factor_estimator_policy",
+      "version": "wave1-v1",
+      "classification": "estimator_policy_candidate",
+      "relation_or_code_path": "source-linked finite-k structure-factor estimator and finite-size replication policy",
+      "variables": {
+        "S(k)": "source-defined structure-factor observable",
+        "xi": "correlation-length estimator after accepted source policy",
+        "L": "finite system size"
+      },
+      "mathematical_role": "measurement/replication policy, not a new phase equation",
+      "standard_physics_counterpart": "finite-size structure-factor and correlation-length analysis",
+      "observable_mapping": {
+        "status": "SOURCE_AND_ESTIMATOR_GATED",
+        "observable": "accepted finite-k structure-factor lane only after source formula and normalization gates"
+      },
+      "unit_lane": "normalized finite-size diagnostic",
+      "parameter_dimensions": "source-specific estimator dimensions open",
+      "source_or_origin": "Topic 0.11 source archive and formula-fragment policy",
+      "assumptions": [
+        "morphology proxies are not silently accepted as S(k)"
+      ],
+      "symmetry_and_conservation": "depends on the declared conserved-order ensemble",
+      "limiting_cases": [
+        "finite-size replication before exponent rerun"
+      ],
+      "implementation_paths": [
+        "docs/topics/0.11_Phase_Transitions"
+      ],
+      "verifier_paths": [
+        "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_structure_factor_source_archive_policy_gate.json",
+        "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_structure_factor_full_text_formula_readiness_gate.json",
+        "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_structure_factor_ch_finite_k_next_path_decision_gate.json"
+      ],
+      "evidence_class": "INTERNAL_DIAGNOSTIC_WITH_OPEN_SOURCE_MAPPING",
+      "proof_status": "open",
+      "downstream_dependencies": [
+        "uet.foundation.observable_mapping",
+        "uet.phase.source_archive",
+        "uet.phase.estimator_acceptance"
+      ],
+      "claim_boundary": "no universality or exponent claim until source and estimator gates pass",
+      "failure_mode": "rerunning exponents with an unaccepted proxy estimator",
+      "next_hardening_step": "complete source-backed formula extraction and accepted estimator policy"
+    },
+    {
+      "equation_id": "uet.fluid.standard_comparator",
+      "version": "wave1-v1",
+      "classification": "standard_comparator",
+      "relation_or_code_path": "embedded simplified Navier-Stokes comparator in Topic 0.10",
+      "variables": {
+        "u,v": "dimensionless benchmark velocity arrays",
+        "nu": "dimensionless benchmark diffusivity",
+        "dt,dx,dy": "benchmark solver units"
+      },
+      "mathematical_role": "internal baseline for implementation comparison",
+      "standard_physics_counterpart": "simplified finite-difference fluid comparator",
+      "observable_mapping": {
+        "status": "INTERNAL_BENCHMARK_ONLY",
+        "observable": "runtime, stability, and declared benchmark error metrics"
+      },
+      "unit_lane": "dimensionless_benchmark",
+      "parameter_dimensions": "benchmark units only",
+      "source_or_origin": "Topic 0.10 embedded comparator and formula audit",
+      "assumptions": [
+        "unit-square simplified grid",
+        "not a full CFD solver"
+      ],
+      "symmetry_and_conservation": "comparator-specific and not a UET constitutive derivation",
+      "limiting_cases": [
+        "declared grid and timing contract only"
+      ],
+      "implementation_paths": [
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/02_Proof/Proof_Turbulence_Benchmarks.py"
+      ],
+      "verifier_paths": [
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_benchmark_validation.json"
+      ],
+      "evidence_class": "INTERNAL_SIMPLIFIED_BENCHMARK",
+      "proof_status": "checked_local_comparator_formula",
+      "downstream_dependencies": [
+        "uet.foundation.claim_boundary"
+      ],
+      "claim_boundary": "internal simplified benchmark only; no external CFD validation or full UET transport claim",
+      "failure_mode": "benchmark speed or pass is presented as physical validation",
+      "next_hardening_step": "keep full constitutive transport behind the post-Gravity dependency gate"
+    },
+    {
+      "equation_id": "uet.o2.thermal.on_shell_sunset_collision_width",
+      "version": "topic13-sunset-width-v1",
+      "classification": "action_matched_dissipative_width_lane",
+      "relation_or_code_path": "Gamma_cut(s;T)=-Im Sigma_R^cut(s;T)/sqrt(s)",
+      "variables": {
+        "Sigma_R^cut": "declared equal-mass finite-temperature 1<->3 plus labeled 2<->2 sunset retarded cut",
+        "s": "declared positive timelike invariant probe",
+        "T": "neutral thermal energy scale",
+        "Gamma_cut": "on-shell collision-width witness in natural energy units"
+      },
+      "mathematical_role": "action-matched neutral on-shell width witness; not a complete off-shell self-energy or current Kubo coefficient",
+      "standard_physics_counterpart": "on-shell damping width inferred from the imaginary part of a retarded self-energy",
+      "observable_mapping": {
+        "status": "LANE_ONLY_NATURAL_UNITS",
+        "observable": "declared timelike-probe collision-width witness",
+        "reason": "charged state matching, complete off-shell 1PI renormalization, current correlator, SI map, and external source calibration remain open"
+      },
+      "unit_lane": "natural_vacuum_3p1",
+      "parameter_dimensions": "Im Sigma_R and spectral measure: energy squared; sqrt(s) and Gamma_cut: energy/inverse time",
+      "source_or_origin": "docs/core/uet_o2_on_shell_sunset_width.py and finite-temperature sunset SK/KMS modules",
+      "assumptions": [
+        "neutral thermal lane with chemical_potential=0",
+        "equal-mass O(2) action-derived declared cuts",
+        "timelike probe is not promoted to a full transport-state dispersion relation",
+        "quadrature residual is numerical convergence information, not physical uncertainty"
+      ],
+      "symmetry_and_conservation": "channel KMS/FDT and retarded dissipative sign are inherited from the declared greater/lesser cut composition",
+      "limiting_cases": [
+        "positive spectral difference gives positive on-shell width",
+        "the neutral scope rejects nonzero chemical potential rather than silently changing weights",
+        "complete off-shell and current-correlator matching is required before physical transport promotion"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_o2_on_shell_sunset_width.py",
+        "docs/core/uet_o2_finite_temperature_full_sunset_sk_kms.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_topic13_uet_o2_on_shell_sunset_width.py",
+        "docs/core/test/test_topic13_uet_o2_on_shell_sunset_width.py",
+        "docs/core/artifacts/t13_uet_o2_on_shell_sunset_width_audit.json"
+      ],
+      "evidence_class": "INTERNAL_ACTION_MATCHED_LANE",
+      "proof_status": "named lane verifier passes; physical retarded self-energy, transport, SI, alpha_Phi_K, source, and holdout claims remain blocked",
+      "downstream_dependencies": [
+        "uet.o2.thermal.full_finite_temperature_1pi",
+        "uet.o2.transport.physical_kubo",
+        "uet.thermal.observable_bridge",
+        "uet.foundation.units"
+      ],
+      "claim_boundary": "neutral natural-unit on-shell width lane only; not physical UET transport, SI thermal observable, alpha_Phi_K, TTG prediction, or Full Topic 13 closure",
+      "failure_mode": "calling Gamma_cut a physical conductivity/viscosity or using the timelike probe as an SI calibration",
+      "next_hardening_step": "derive the charged finite-temperature off-shell retarded self-energy and match its current correlator through SK/KMS before physical Kubo admission"
+    },
+    {
+      "equation_id": "uet.o2.thermal.contact_sk_transition_vertex_match",
+      "version": "topic13-contact-sk-transition-v1",
+      "classification": "action_matched_kernel_normalization_lane",
+      "relation_or_code_path": "M_22=lambda; sigma_22=|M_22|^2/(16*pi*s)=lambda^2/(16*pi*s)",
+      "variables": {
+        "lambda": "declared O(2) quartic coupling",
+        "M_22": "declared contact-channel amplitude",
+        "s": "exact-kinematic two-body invariant",
+        "sigma_22": "declared contact-channel cross section"
+      },
+      "mathematical_role": "local SK r/a contact-vertex to charged exact-kinematic transition-kernel normalization audit",
+      "standard_physics_counterpart": "tree-level contact scattering amplitude and Bose detailed balance",
+      "observable_mapping": {
+        "status": "LANE_ONLY_NATURAL_UNITS",
+        "observable": "contact cross-section normalization residual and charged detailed-balance/KMS residuals",
+        "reason": "loop-renormalized vertex, off-shell retarded self-energy, current correlator, SI map, and external source calibration remain open"
+      },
+      "unit_lane": "natural_vacuum_3p1",
+      "parameter_dimensions": "lambda and M_22 dimensionless; sigma_22 inverse energy squared",
+      "source_or_origin": "docs/core/uet_o2_interacting_sk_kms_action.py and docs/core/uet_o2_action_derived_transition_kernel.py",
+      "assumptions": [
+        "declared local contact channel only",
+        "charged normal branch remains below its effective mass threshold",
+        "exact-kinematic finite channel is an action-derived lane, not a continuum-limit proof",
+        "no physical Kubo coefficient is emitted"
+      ],
+      "symmetry_and_conservation": "charged detailed balance and exact channel energy/momentum residuals are checked; charge is conserved by the declared channel signs",
+      "limiting_cases": [
+        "cross-section match residual is zero for the declared contact normalization",
+        "nonzero chemical potential is retained through particle/antiparticle KMS factors",
+        "loop/off-shell/current-correlator matching remains required for physical promotion"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_o2_contact_sk_transition_vertex_match.py",
+        "docs/core/uet_o2_interacting_sk_kms_action.py",
+        "docs/core/uet_o2_action_derived_transition_kernel.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_topic13_uet_o2_contact_sk_transition_vertex_match.py",
+        "docs/core/test/test_topic13_uet_o2_contact_sk_transition_vertex_match.py",
+        "docs/core/artifacts/t13_uet_o2_contact_sk_transition_vertex_match_audit.json"
+      ],
+      "evidence_class": "INTERNAL_ACTION_MATCHED_LANE",
+      "proof_status": "declared contact normalization and charged equilibrium interface pass locally; physical self-energy and Kubo remain open",
+      "downstream_dependencies": [
+        "uet.o2.thermal.full_finite_temperature_1pi",
+        "uet.o2.transport.physical_kubo",
+        "uet.foundation.observable_mapping"
+      ],
+      "claim_boundary": "local contact SK-to-transition normalization lane only; not a loop-renormalized physical vertex, transport coefficient, SI map, alpha_Phi_K, TTG prediction, or Full Topic 13 closure",
+      "failure_mode": "calling a tree-level contact normalization match a complete microscopic SK/KMS transport derivation",
+      "next_hardening_step": "match loop-renormalized charged off-shell self-energy and current correlator to the SK/KMS construction"
+    },
+    {
+      "equation_id": "uet.o2.transport.charged_current_correlator_interface",
+      "version": "topic13-charged-current-correlator-v1",
+      "classification": "action_matched_finite_cutoff_current_correlator_lane",
+      "relation_or_code_path": "G_R^JxJx(omega)=b_Jx,perp^T*(L_cont-i*omega*I)^(-1)*b_Jx,perp",
+      "variables": {
+        "b_Jx": "charged quasiparticle current source q_s*(p_x/E_s)*sqrt(w_s)",
+        "L_cont": "action-derived finite-cutoff conservative collision operator",
+        "G_R^JxJx": "retarded charged current-current response",
+        "rho_JJ": "2*Im(G_R^JxJx) spectral response",
+        "T": "declared natural thermal energy scale"
+      },
+      "mathematical_role": "charged current source, retarded response, KMS/FDT, and entropy-positivity interface tied to the action-matched collision lane",
+      "standard_physics_counterpart": "finite-temperature current-current retarded correlator with Wightman/KMS fluctuation-dissipation relations",
+      "observable_mapping": {
+        "status": "LANE_ONLY_NATURAL_FINITE_CUTOFF",
+        "observable": "charged current response, spectral/KMS/FDT residuals, and formal entropy witness",
+        "reason": "continuum limit, loop-renormalized off-shell self-energy, microscopic current vertex, physical Kubo units, SI map, and external calibration remain open"
+      },
+      "unit_lane": "natural_finite_cutoff_3p1",
+      "parameter_dimensions": "b_Jx and response are formal natural-unit lane quantities; beta_th*omega is dimensionless",
+      "source_or_origin": "docs/core/uet_o2_charged_current_correlator.py and action-derived continuum/contact SK modules",
+      "assumptions": [
+        "charged normal branch and finite-cutoff collocation basis are declared",
+        "current source uses the charge-weighted velocity moment",
+        "Gram projection removes charge and four-momentum zero modes",
+        "contact SK normalization is matched only at the declared local vertex",
+        "no physical transport coefficient is emitted"
+      ],
+      "symmetry_and_conservation": "charge and four-momentum conservation, source Ward projection, charged detailed balance, KMS/FDT, and non-negative formal entropy production are checked",
+      "limiting_cases": [
+        "zero frequency uses the dissipative subspace and excludes conserved zero modes",
+        "positive-frequency spectral response is non-negative in the declared convention",
+        "finite-cutoff dependence and microscopic off-shell matching remain explicit blockers"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_o2_charged_current_correlator.py",
+        "docs/core/uet_o2_continuum_collision_operator.py",
+        "docs/core/uet_o2_contact_sk_transition_vertex_match.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_topic13_uet_o2_charged_current_correlator.py",
+        "docs/core/test/test_topic13_uet_o2_charged_current_correlator.py",
+        "docs/core/artifacts/t13_uet_o2_charged_current_correlator_audit.json"
+      ],
+      "evidence_class": "INTERNAL_ACTION_MATCHED_FINITE_CUTOFF_LANE",
+      "proof_status": "current-source, conservation, retarded-response, KMS/FDT, and entropy interface pass locally; continuum, off-shell, microscopic vertex, physical Kubo, SI, and external claims remain open",
+      "downstream_dependencies": [
+        "uet.o2.thermal.full_finite_temperature_1pi",
+        "uet.o2.transport.physical_kubo",
+        "uet.thermal.observable_bridge",
+        "uet.foundation.units"
+      ],
+      "claim_boundary": "charged finite-cutoff current-correlator interface only; not a loop-renormalized physical transport coefficient, SI map, alpha calibration, TTG prediction, or Full Topic 13 closure",
+      "failure_mode": "calling a projected finite-cutoff current response with algebraic KMS checks a microscopic physical Kubo derivation",
+      "next_hardening_step": "derive the charged finite-temperature off-shell retarded self-energy and current vertex from the SK/KMS action, then establish continuum control"
+    },
+    {
+      "equation_id": "uet.o2.transport.tree_level_charged_ward_vertex",
+      "version": "topic13-tree-level-charged-ward-v1",
+      "classification": "action_derived_tree_level_finite_density_charged_ward_lane",
+      "relation_or_code_path": "nu_m*Gamma_E^0+q_i*Gamma_E^i=D_E^-1(P+Q)-D_E^-1(P)",
+      "variables": {
+        "D_E^-1": "(omega_n+i*mu_eff)^2+|p|^2+m_eff(Phi)^2",
+        "Gamma_E^0": "2*(omega_n+i*mu_eff)+nu_m",
+        "Gamma_E^i": "2*p_i+q_i",
+        "P": "Euclidean Matsubara momentum",
+        "Q": "Euclidean external transfer"
+      },
+      "mathematical_role": "tree-level charged current vertex and finite-density Euclidean Ward identity",
+      "standard_physics_counterpart": "bare charged scalar Ward-Takahashi identity before loop renormalization",
+      "observable_mapping": {
+        "status": "LANE_ONLY_NATURAL_TREE_LEVEL",
+        "observable": "Ward-identity residuals and charge-conjugation residual",
+        "reason": "loop self-energy, loop vertex, continuum, physical Kubo units, SI map, and external calibration remain open"
+      },
+      "unit_lane": "natural_3p1",
+      "parameter_dimensions": "D_E^-1 and Q.Gamma have energy^2; Q and Gamma have energy",
+      "source_or_origin": "docs/core/uet_o2_tree_level_charged_ward_vertex.py and docs/core/uet_o2_finite_density_charged_vertex.py",
+      "assumptions": [
+        "finite-density charged normal branch is declared",
+        "Euclidean propagator convention uses (omega_n+i*mu_eff)^2",
+        "vertex is tree-level and no loop self-energy is silently inserted",
+        "no physical transport coefficient is emitted"
+      ],
+      "symmetry_and_conservation": "finite-density Ward identity and charge-conjugation boundary are checked algebraically",
+      "limiting_cases": [
+        "Q=0 gives the derivative vertex Gamma_E^0=2*(omega_n+i*mu_eff), Gamma_E^i=2*p_i",
+        "mu_eff -> -mu_eff is checked against complex conjugation",
+        "loop-renormalized and continuum limits remain explicit blockers"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_o2_tree_level_charged_ward_vertex.py",
+        "docs/core/uet_o2_finite_density_charged_vertex.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_topic13_uet_o2_tree_level_charged_ward_vertex.py",
+        "docs/core/test/test_topic13_uet_o2_tree_level_charged_ward_vertex.py",
+        "docs/core/artifacts/t13_uet_o2_tree_level_charged_ward_vertex_audit.json"
+      ],
+      "evidence_class": "INTERNAL_ACTION_DERIVED_TREE_LEVEL_LANE",
+      "proof_status": "tree-level Ward identity passes locally; loop, continuum, physical Kubo, SI, and external claims remain open",
+      "downstream_dependencies": [
+        "uet.o2.thermal.full_finite_temperature_1pi",
+        "uet.o2.transport.physical_kubo",
+        "uet.thermal.observable_bridge",
+        "uet.foundation.units"
+      ],
+      "claim_boundary": "tree-level charged Ward identity only; not a loop-renormalized physical vertex, Kubo coefficient, SI map, TTG prediction, or Full Topic 13 closure",
+      "failure_mode": "calling a bare tree-level Ward identity a complete interacting microscopic current-vertex or physical transport derivation",
+      "next_hardening_step": "derive the loop-renormalized retarded self-energy and current vertex together through the SK/KMS action, then establish continuum control"
+    },
+    {
+      "equation_id": "uet.o2.thermal.thermodynamic_normal_component",
+      "version": "topic13-thermodynamic-normal-component-v1",
+      "classification": "action_derived_finite_temperature_thermodynamic_lane",
+      "relation_or_code_path": "p_n=p_qp; n_n=partial_mu p_n; s_n=partial_T p_n; epsilon_n=-p_n+T*s_n+mu*n_n; chi_n=partial_mu n_n",
+      "variables": {
+        "p_n": "thermal quasiparticle pressure sector",
+        "n_n": "thermal-sector charge derivative",
+        "s_n": "thermal-sector entropy derivative",
+        "epsilon_n": "thermal-sector energy density",
+        "chi_n": "thermal-sector charge susceptibility",
+        "Phi": "effective response variable, not temperature or metric"
+      },
+      "mathematical_role": "finite-temperature thermodynamic normal-component decomposition",
+      "standard_physics_counterpart": "thermal quasiparticle sector of a two-fluid thermodynamic description",
+      "observable_mapping": {
+        "status": "LANE_ONLY_NATURAL_UNITS",
+        "observable": "normal pressure, charge, entropy, energy, susceptibility, and static momentum response",
+        "reason": "physical normal flow, retarded Kubo, SI Phi normalization, alpha_Phi_K, and Ding C_src remain open"
+      },
+      "unit_lane": "natural_vacuum_3p1",
+      "parameter_dimensions": "sector densities and static response retain the declared natural-unit dimensions",
+      "source_or_origin": "docs/core/uet_o2_finite_temperature_normal_component.py and the declared O(2) quasiparticle EOS",
+      "assumptions": [
+        "tree-condensate plus thermal-quasiparticle approximation",
+        "natural-unit lane only",
+        "static Doppler response is not a retarded correlator",
+        "residual sector signs are retained and not clipped"
+      ],
+      "symmetry_and_conservation": "thermodynamic derivatives and total-state entropy/susceptibility stability are checked; no physical dissipative conservation law is claimed",
+      "limiting_cases": [
+        "normal-sector thermal quantities decrease on the declared low-temperature reference states",
+        "condensed and normal branches remain explicitly distinguished",
+        "physical normal-flow and Kubo matching remain required"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_o2_finite_temperature_normal_component.py",
+        "docs/core/uet_o2_finite_temperature_two_fluid_response.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_topic13_uet_o2_thermodynamic_normal_component.py",
+        "docs/core/test/test_topic13_uet_o2_thermodynamic_normal_component.py",
+        "docs/core/artifacts/t13_uet_o2_thermodynamic_normal_component_audit.json"
+      ],
+      "evidence_class": "INTERNAL_ACTION_DERIVED_LANE",
+      "proof_status": "thermodynamic component and declared stability/limit checks pass locally; physical flow, Kubo, SI, alpha, and source claims remain open",
+      "downstream_dependencies": [
+        "uet.o2.transport.physical_kubo",
+        "uet.thermal.observable_bridge",
+        "uet.foundation.units"
+      ],
+      "claim_boundary": "thermodynamic normal-component lane only; not physical normal-fluid density, SI thermal observable, alpha_Phi_K, TTG prediction, or Full Topic 13 closure",
+      "failure_mode": "calling a thermal pressure-sector decomposition or static susceptibility a complete physical two-fluid transport theory",
+      "next_hardening_step": "match the normal-flow response to a state-matched retarded Kubo coefficient and preserve the independent SI/alpha boundary"
+    },
+    {
+      "equation_id": "uet.o2.thermal.condensed_relative_flow_collision",
+      "version": "topic13-condensed-relative-flow-collision-v1",
+      "classification": "action_derived_condensed_relative_flow_kernel_lane",
+      "relation_or_code_path": "A_*^2=(Z*mu^2-m_eff^2)/lambda; sigma_ab(s_med)=lambda^2/[16*pi*(s_med+m_H^2)]; L_rel=Gamma_rel*((1,-1),(-1,1)); G_R^rel(omega)=2*D_rel/(2*Gamma_rel-i*omega)",
+      "variables": {
+        "A_*": "tree condensate amplitude",
+        "m_H^2": "tree radial screening scale 2*lambda*A_*^2",
+        "s_med": "positive medium-frame pair invariant 2*E_a*E_b*(1-cos(theta))",
+        "Gamma_rel": "relative-mode collision rate in natural energy units",
+        "D_rel": "relative-flow susceptibility in the declared natural-unit lane",
+        "Phi": "effective response variable, not temperature or metric"
+      },
+      "mathematical_role": "symmetry-compatible condensed relative-flow collision and retarded response interface",
+      "standard_physics_counterpart": "linearized two-sector relative-flow relaxation with a conserved common-flow mode",
+      "observable_mapping": {
+        "status": "LANE_ONLY_NATURAL_UNITS",
+        "observable": "condensed relative-flow collision rate, DC response, entropy production, and algebraic KMS/FDT interface",
+        "reason": "continuum-renormalized physical Kubo, complete two-fluid tensor, SI Phi normalization, alpha_Phi_K, and Ding C_src remain open"
+      },
+      "unit_lane": "natural_vacuum_3p1",
+      "parameter_dimensions": "temperature, chemical potential, effective mass, and collision rate are energies; contact cross section is inverse energy squared; relative response is a natural-unit coefficient",
+      "source_or_origin": "docs/core/uet_o2_condensed_relative_flow_collision.py and the declared O(2) tree-condensate quasiparticle dispersion",
+      "assumptions": [
+        "condensed branch q>0 with the existing tree amplitude",
+        "screened contact channel uses the tree radial curvature scale and no fitted infrared parameter",
+        "mode-space exchange operator is symmetrized to preserve common-flow conservation and positivity",
+        "retarded KMS/FDT values are an algebraic interface, not a complete microscopic SK proof"
+      ],
+      "symmetry_and_conservation": "the 2x2 relative-flow operator is symmetric positive semidefinite and annihilates the common-flow vector (1,1)",
+      "limiting_cases": [
+        "the common-flow mode remains a zero mode",
+        "the relative DC response is finite and positive on the declared condensed state",
+        "positive-frequency spectral density and KMS/FDT residuals pass refinement",
+        "physical Kubo and SI promotion remain explicitly excluded"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_o2_condensed_relative_flow_collision.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_topic13_uet_o2_condensed_relative_flow_collision.py",
+        "docs/core/test/test_topic13_uet_o2_condensed_relative_flow_collision.py",
+        "docs/core/artifacts/t13_uet_o2_condensed_relative_flow_collision_audit.json"
+      ],
+      "evidence_class": "INTERNAL_ACTION_DERIVED_SYMMETRY_COMPATIBLE_LANE",
+      "proof_status": "declared kernel, positivity, conservation, retarded interface, KMS/FDT, and refinement checks pass locally; complete microscopic vertex, physical Kubo, SI, alpha, and source claims remain open",
+      "downstream_dependencies": [
+        "uet.o2.transport.physical_kubo",
+        "uet.o2.transport.complete_two_fluid_tensor",
+        "uet.thermal.observable_bridge",
+        "uet.foundation.units"
+      ],
+      "claim_boundary": "condensed relative-flow kernel lane only; not a continuum-renormalized physical Kubo coefficient, SI thermal observable, alpha_Phi_K, TTG prediction, or Full Topic 13 closure",
+      "failure_mode": "calling a finite-cutoff/natural-unit contact-channel response or algebraic KMS interface a complete microscopic dissipative transport theory",
+      "next_hardening_step": "complete the condensed microscopic vertex and continuum/renormalization match or obtain a state-matched retarded correlator with units and uncertainty"
+    },
+    {
+      "equation_id": "uet.o2.thermal.continuum_relative_flow_kubo",
+      "version": "topic13-continuum-relative-flow-kubo-v1",
+      "classification": "action_derived_continuum_thermal_contact_response_lane",
+      "relation_or_code_path": "k=Lambda*u/(1-u); D_a=(1/3) integral[d^3k/(2*pi)^3] k^2 v_a^2[-partial_E n_a]; sigma_ab=lambda^2/[16*pi*(s_med+m_H^2)]; L_rel=Gamma_rel*((1,-1),(-1,1)); G_R^rel(omega)=2*D_rel/(2*Gamma_rel-i*omega)",
+      "variables": {
+        "u": "compactified radial coordinate in (0,1)",
+        "Lambda": "positive natural-energy quadrature scale; not a physical cutoff",
+        "D_a": "continuum thermal mode susceptibility in natural units",
+        "s_med": "positive medium-frame pair invariant 2*E_a*E_b*(1-cos(theta))",
+        "Gamma_rel": "relative-flow collision rate in natural energy units",
+        "D_rel": "relative-flow susceptibility",
+        "Phi": "effective response variable, not temperature or metric"
+      },
+      "mathematical_role": "compactified continuum thermal integral and relative-flow retarded response interface",
+      "standard_physics_counterpart": "continuum linearized two-sector relaxation response with a conserved common-flow mode",
+      "observable_mapping": {
+        "status": "LANE_ONLY_NATURAL_UNITS",
+        "observable": "continuum thermal relative-flow response, entropy production, and algebraic KMS/FDT interface",
+        "reason": "loop-renormalized physical Kubo, complete two-fluid tensor, SI Phi normalization, alpha_Phi_K, and Ding C_src remain open"
+      },
+      "unit_lane": "natural_continuum_3p1",
+      "parameter_dimensions": "temperature, chemical potential, mass scale, and collision rate are energies; Lambda is an integration scale; response remains natural-unit",
+      "source_or_origin": "docs/core/uet_o2_continuum_relative_flow_kubo.py; existing O(2) tree-condensate quasiparticle dispersion and screened contact channel",
+      "assumptions": [
+        "condensed branch q>0 with the existing tree amplitude",
+        "the radial map covers k in [0,infinity) and uses thermal convergence rather than a finite physical cutoff",
+        "screened contact coupling is the declared tree/action input and is not loop-renormalized here",
+        "the relative operator is symmetrized to preserve common-flow conservation and positivity",
+        "retarded KMS/FDT values are an algebraic natural-unit interface"
+      ],
+      "symmetry_and_conservation": "L_rel is symmetric positive semidefinite and annihilates the common-flow vector (1,1)",
+      "limiting_cases": [
+        "radial order refinement approaches a finite positive response",
+        "angular-order and compactification-scale refinements remain within the unchanged 1e-2 controller",
+        "the common-flow mode remains a zero mode",
+        "physical Kubo and SI promotion remain explicitly excluded"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_o2_continuum_relative_flow_kubo.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_topic13_uet_o2_continuum_relative_flow_kubo.py",
+        "docs/core/test/test_topic13_uet_o2_continuum_relative_flow_kubo.py",
+        "docs/core/artifacts/t13_uet_o2_continuum_relative_flow_kubo_audit.json"
+      ],
+      "evidence_class": "INTERNAL_ACTION_DERIVED_CONTINUUM_THERMAL_LANE",
+      "proof_status": "compactified continuum thermal integral, positivity, conservation, KMS/FDT, and refinement checks pass locally; loop renormalization, physical Kubo, SI, alpha, and source claims remain open",
+      "downstream_dependencies": [
+        "uet.o2.transport.physical_kubo",
+        "uet.o2.transport.complete_two_fluid_tensor",
+        "uet.thermal.observable_bridge",
+        "uet.foundation.units"
+      ],
+      "claim_boundary": "continuum thermal contact-response lane only; not a loop-renormalized physical Kubo coefficient, SI thermal observable, alpha_Phi_K, TTG prediction, or Full Topic 13 closure",
+      "failure_mode": "calling a converged natural-unit thermal contact integral a loop-renormalized physical transport coefficient or silently treating Lambda as a physical cutoff",
+      "next_hardening_step": "derive and source-lock the loop-renormalized condensed vertex/retarded correlator with units and uncertainty, then rerun physical Kubo admission"
+    },
+    {
+      "equation_id": "uet.o2.thermal.condensed_loop_relative_flow_kubo",
+      "version": "topic13-condensed-loop-relative-flow-kubo-v1",
+      "classification": "action_derived_condensed_thermal_loop_contact_response_lane",
+      "relation_or_code_path": "B_ab^R=B_ab^th(T,mu,Phi)-B_ab^th(T,mu,Phi_ref); lambda_ab^R=lambda/(1+lambda*B_ab^R); sigma_ab^R=(lambda_ab^R)^2/[16*pi*(s_med+2*lambda*A_*^2)]; L_rel=Gamma_rel*((1,-1),(-1,1)); G_R^rel(omega)=2*D_rel/(2*Gamma_rel-i*omega)",
+      "variables": {
+        "B_ab^th": "dimensionless finite thermal derivative-channel bubble",
+        "B_ab^R": "internal reference-subtracted loop bubble",
+        "lambda_ab^R": "loop-renormalized contact coupling in the declared channel",
+        "D_rel": "relative-flow susceptibility in natural units",
+        "Gamma_rel": "relative-flow collision rate in natural energy units",
+        "K_rel^natural": "zero-frequency natural-unit response coefficient",
+        "Phi": "effective response variable, not temperature or metric"
+      },
+      "mathematical_role": "finite thermal one-loop reference subtraction coupled to a state-matched relative-flow retarded response",
+      "standard_physics_counterpart": "finite-temperature derivative-channel vertex correction followed by a two-sector relaxation/KMS response",
+      "observable_mapping": {
+        "status": "LANE_ONLY_NATURAL_UNITS_OPEN_PHYSICAL_KUBO",
+        "observable": "loop-renormalized condensed contact-channel coupling and state-matched natural retarded response",
+        "reason": "the internal response has numerical quadrature uncertainty only; independent physical anchor, source provenance, SI mapping, and physical Kubo admission remain open"
+      },
+      "unit_lane": "natural_continuum_3p1",
+      "parameter_dimensions": "temperature, chemical potential, mass, and compactification scale are energies; bubbles and couplings are dimensionless; collision rate is energy; response remains natural-unit",
+      "source_or_origin": "docs/core/uet_o2_condensed_loop_renormalized_vertex.py; existing O(2) condensed quasiparticle dispersion and continuum relative-flow contact channel",
+      "assumptions": [
+        "target and reference states are both on the declared condensed branch",
+        "the (k/L)^2 factor defines the dimensionless derivative contact channel and regularizes the tree Goldstone infrared limit",
+        "thermal Bose weights provide ultraviolet convergence on k in [0,infinity)",
+        "reference subtraction is an internal scheme condition and is not an external measurement",
+        "the effective coupling is used only in the declared contact channel, not as a complete condensed 1PI vertex",
+        "the retarded KMS/FDT response is an action-derived natural-unit interface"
+      ],
+      "symmetry_and_conservation": "the relative collision operator is symmetric positive semidefinite and annihilates the common-flow vector (1,1)",
+      "limiting_cases": [
+        "Phi=Phi_ref gives zero subtracted bubble and lambda_ab^R=lambda",
+        "radial order, angular order, and compactification-scale refinements remain within the unchanged 1e-2 controller",
+        "the zero-frequency response is positive and entropy production is non-negative",
+        "physical Kubo and SI promotion remain explicitly excluded"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_o2_condensed_loop_renormalized_vertex.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_topic13_uet_o2_condensed_loop_renormalized_vertex.py",
+        "docs/core/test/test_topic13_uet_o2_condensed_loop_renormalized_vertex.py",
+        "docs/core/artifacts/t13_uet_o2_condensed_loop_renormalized_vertex_audit.json"
+      ],
+      "evidence_class": "INTERNAL_ACTION_DERIVED_CONDENSED_THERMAL_LOOP_LANE",
+      "proof_status": "finite loop bubble, reference subtraction, positive effective coupling, convergence, conservation, KMS/FDT, and entropy checks pass locally; physical Kubo, independent anchor, SI, alpha, source, and full Topic 13 claims remain open",
+      "downstream_dependencies": [
+        "uet.o2.transport.physical_kubo",
+        "uet.o2.transport.complete_two_fluid_tensor",
+        "uet.thermal.observable_bridge",
+        "uet.foundation.units"
+      ],
+      "claim_boundary": "loop-renormalized condensed contact-channel and state-matched natural retarded lane only; not a full 1PI vertex, physical Kubo coefficient, SI thermal observable, alpha_Phi_K, TTG prediction, or Full Topic 13 closure",
+      "failure_mode": "calling the declared finite thermal contact-channel subtraction a complete physical condensed 1PI vertex or physical Kubo coefficient without an independent anchor and accepted provenance record",
+      "next_hardening_step": "supply an independent state-matched condensed vertex/Kubo anchor with units and uncertainty, then test full interacting SK/KMS and complete scattering-channel admission"
+    },
+    {
+      "equation_id": "uet.dynamics.tangent_map",
+      "version": "dynamical-stability-v1",
+      "classification": "diagnostic_mapping",
+      "relation_or_code_path": "delta_dot_X = D F[X] delta_X for X=(C,Phi,Pi)",
+      "variables": {
+        "C": "lane-specific collective coordinate",
+        "Phi": "effective response variable",
+        "Pi": "time derivative of Phi",
+        "delta_X": "infinitesimal tangent state"
+      },
+      "mathematical_role": "exact discrete Jacobian action for the declared matter-space evolution",
+      "standard_physics_counterpart": "tangent linear model / variational equation",
+      "observable_mapping": {
+        "status": "INTERNAL_DIAGNOSTIC",
+        "proxy": "perturbation growth rates"
+      },
+      "unit_lane": "normalized",
+      "parameter_dimensions": "inherited from the normalized matter-space lane",
+      "source_or_origin": "analytic differentiation of docs/core/uet_matter_space.py",
+      "assumptions": [
+        "prescribed source histories",
+        "state-dependent sources require an explicit JVP"
+      ],
+      "symmetry_and_conservation": "inherits the selected conserved or nonconserved C lane",
+      "limiting_cases": [
+        "g=0 decoupled tangent sectors",
+        "zero source closed branch"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_dynamical_stability.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_dynamical_stability.py",
+        "docs/core/test/test_uet_dynamical_stability.py"
+      ],
+      "evidence_class": "INTERNAL_DIAGNOSTIC",
+      "proof_status": "exact discrete Jacobian checked against central finite difference",
+      "downstream_dependencies": [
+        "uet.matter_space.omega",
+        "uet.matter_space.dynamics"
+      ],
+      "claim_boundary": "diagnostic mapping; not a new physical law or an SI observable",
+      "failure_mode": "R_gen or R_obs is added to the tangent state, or a state-dependent source is admitted without a JVP",
+      "next_hardening_step": "add accepted physical state metrics lane by lane"
+    },
+    {
+      "equation_id": "uet.dynamics.lyapunov_spectrum",
+      "version": "dynamical-stability-v1",
+      "classification": "diagnostic_observable",
+      "relation_or_code_path": "lambda_i = lim_(T->infinity) log(s_i(T))/T with Benettin/QR and shadow cross-check",
+      "variables": {
+        "lambda_i": "Lyapunov exponent",
+        "s_i": "QR tangent stretch",
+        "T": "declared normalized observation time"
+      },
+      "mathematical_role": "dynamical sensitivity diagnostic distinct from the free-energy Lyapunov function",
+      "standard_physics_counterpart": "Lyapunov spectrum of a deterministic dynamical system",
+      "observable_mapping": {
+        "status": "INTERNAL_DIAGNOSTIC",
+        "proxy": "inverse predictability horizon when lambda_max is resolved positive"
+      },
+      "unit_lane": "inverse normalized time",
+      "parameter_dimensions": "SI conversion blocked until a dimensional state/time contract exists",
+      "source_or_origin": "standard Benettin/QR method with independent shadow-trajectory check",
+      "assumptions": [
+        "bounded trajectory",
+        "same forcing history",
+        "common noise for stochastic comparisons"
+      ],
+      "symmetry_and_conservation": "does not alter the base evolution or its conservation laws",
+      "limiting_cases": [
+        "stable linear control",
+        "logistic r=4",
+        "Lorenz-63"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_dynamical_stability.py"
+      ],
+      "verifier_paths": [
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Chaos_Method_Validation.py"
+      ],
+      "evidence_class": "INTERNAL_METHOD_VALIDATION",
+      "proof_status": "numerical diagnostic validated on standard controls",
+      "downstream_dependencies": [
+        "uet.dynamics.tangent_map"
+      ],
+      "claim_boundary": "positive finite-time growth alone is not proof of physical chaos",
+      "failure_mode": "different-noise divergence or numerical instability is labelled deterministic chaos",
+      "next_hardening_step": "apply only to preregistered bounded topic lanes"
+    },
+    {
+      "equation_id": "uet.dynamics.regime_classifier",
+      "version": "dynamical-stability-v1",
+      "classification": "verification_gate",
+      "relation_or_code_path": "lambda_resolution=max(dt,dx,2*block_SE,method_disagreement) error terms",
+      "variables": {
+        "lambda_resolution": "sign-resolution envelope",
+        "block_SE": "block standard error"
+      },
+      "mathematical_role": "separates stable, transient, unresolved, chaos-candidate, and numerical-instability outcomes",
+      "standard_physics_counterpart": "convergence-aware Lyapunov classification",
+      "observable_mapping": {
+        "status": "INTERNAL_GATE",
+        "proxy": "machine-readable regime class"
+      },
+      "unit_lane": "same inverse-time lane as lambda",
+      "parameter_dimensions": "inherited from the diagnostic time lane",
+      "source_or_origin": "preregistered UET diagnostic acceptance contract",
+      "assumptions": [
+        "no clipping",
+        "no fitting",
+        "ledger and convergence gates are reported"
+      ],
+      "symmetry_and_conservation": "classification requires the declared conservation gate to pass or be explicitly not applicable",
+      "limiting_cases": [
+        "lambda below negative resolution",
+        "sign unresolved",
+        "resolved positive lambda"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_dynamical_stability.py"
+      ],
+      "verifier_paths": [
+        "docs/core/test/test_uet_dynamical_stability.py"
+      ],
+      "evidence_class": "INTERNAL_GATE",
+      "proof_status": "checked implementation contract",
+      "downstream_dependencies": [
+        "uet.dynamics.lyapunov_spectrum"
+      ],
+      "claim_boundary": "CHAOS_CANDIDATE_DIAGNOSTIC is not external physical validation",
+      "failure_mode": "an arbitrary epsilon or a single unconverged run controls the sign",
+      "next_hardening_step": "add topic-specific spatial and statistical resolution budgets"
+    },
+    {
+      "equation_id": "uet.dynamics.closed_gradient_no_sustained_chaos_boundary",
+      "version": "dynamical-stability-v1",
+      "classification": "conditional_structural_boundary",
+      "relation_or_code_path": "dot(E_ext)<0 outside the invariant set plus LaSalle assumptions excludes a sustained recurrent chaotic attractor",
+      "variables": {
+        "E_ext": "matter-space extended energy",
+        "invariant_set": "zero-dissipation limiting set"
+      },
+      "mathematical_role": "conditional boundary for the closed finite-dimensional discretized branch",
+      "standard_physics_counterpart": "LaSalle invariance / gradient-like dynamical-system boundary",
+      "observable_mapping": {
+        "status": "CONDITIONAL",
+        "proxy": "closed-branch energy descent and long-window Lyapunov result"
+      },
+      "unit_lane": "normalized",
+      "parameter_dimensions": "inherits normalized energy and time lanes",
+      "source_or_origin": "matter-space energy ledger plus standard invariance principle",
+      "assumptions": [
+        "finite-dimensional discretization",
+        "autonomous closed system",
+        "bounded forward orbit",
+        "strict descent outside invariant set"
+      ],
+      "symmetry_and_conservation": "inherits the declared closed branch",
+      "limiting_cases": [
+        "does not cover driven, stochastic, memory, or continuum branches"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_matter_space.py",
+        "docs/core/uet_dynamical_stability.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_dynamical_stability.py",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_Thermal_Dynamical_Regime_Audit.py"
+      ],
+      "evidence_class": "CONDITIONAL_INTERNAL_DERIVATION",
+      "proof_status": "conditional finite-dimensional boundary; continuum proof open",
+      "downstream_dependencies": [
+        "uet.matter_space.omega",
+        "uet.dynamics.lyapunov_spectrum"
+      ],
+      "claim_boundary": "not a continuum PDE theorem and not a no-go for driven or open-system chaos",
+      "failure_mode": "the conditional finite-dimensional result is promoted to a universal no-chaos theorem",
+      "next_hardening_step": "state compactness and invariant-set assumptions for each admitted lane"
+    },
+    {
+      "equation_id": "uet.matter_space_flux.conservation",
+      "version": "normalized-flux-v1",
+      "classification": "constitutive_lane_specific_equation",
+      "relation_or_code_path": "docs/core/uet_matter_space_flux_telegraph.py",
+      "variables": {
+        "C": "conserved collective-coordinate field",
+        "J_C": "face flux of the conserved C lane",
+        "mu_C": "local branch chemical potential"
+      },
+      "mathematical_role": "finite-volume continuity update",
+      "standard_physics_counterpart": "one-dimensional continuity equation with a conservative face flux",
+      "observable_mapping": {
+        "status": "PARTIAL",
+        "observable": "normalized C profile and conserved integral",
+        "reason": "a dimensional mass, charge, or material-density mapping is not established"
+      },
+      "unit_lane": "normalized_v1",
+      "parameter_dimensions": "normalized branch coefficients; no SI dimensions declared",
+      "source_or_origin": "named matter-space flux branch introduced for the bounded Wave 3 link review",
+      "assumptions": [
+        "one-dimensional grid",
+        "periodic or zero-flux boundary",
+        "C is conserved only in this declared branch",
+        "kappa_C is fixed to zero in the named finite-cone branch"
+      ],
+      "symmetry_and_conservation": "the finite-volume face divergence has zero global sum under the declared closed boundaries",
+      "limiting_cases": [
+        "zero flux leaves the C profile unchanged",
+        "zero coupling reduces the branch chemical potential to the local C polynomial"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_matter_space_flux_telegraph.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_matter_space_conserved_flux_telegraph.py",
+        "docs/core/test/test_matter_space_conserved_flux_telegraph.py",
+        "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json"
+      ],
+      "evidence_class": "INTERNAL_NUMERICAL",
+      "proof_status": "named branch artifact passes its declared internal checks; this is not proof of a universal C ontology",
+      "downstream_dependencies": [
+        "uet.matter_space_flux.relaxation",
+        "uet.main_theory.observables"
+      ],
+      "claim_boundary": "normalized conserved flux branch only; C is not thereby mass, charge, or a universal physical density",
+      "failure_mode": "silently treating the conserved coordinate as a dimensional density or extending the branch to kappa_C>0 without a causal analysis",
+      "next_hardening_step": "complete the dimensional observable map and test the branch against an independently locked external lane"
+    },
+    {
+      "equation_id": "uet.matter_space_flux.relaxation",
+      "version": "normalized-flux-v1",
+      "classification": "constitutive_lane_specific_equation",
+      "relation_or_code_path": "docs/core/uet_matter_space_flux_telegraph.py",
+      "variables": {
+        "tau_C": "flux relaxation time in the normalized branch",
+        "J_C": "conserved face flux",
+        "M_C": "positive mobility coefficient",
+        "partial_x_mu_C": "face gradient of the local chemical potential"
+      },
+      "mathematical_role": "Maxwell-Cattaneo-like flux relaxation coupled to the continuity update",
+      "standard_physics_counterpart": "causal constitutive relaxation comparator for a conserved current",
+      "observable_mapping": {
+        "status": "PARTIAL",
+        "observable": "arrival time, flux profile, and normalized relaxation",
+        "reason": "no material-specific conductivity or dimensional transport map is declared"
+      },
+      "unit_lane": "normalized_v1",
+      "parameter_dimensions": "normalized mobility and relaxation coefficients",
+      "source_or_origin": "named matter-space flux branch introduced for the bounded Wave 3 link review",
+      "assumptions": [
+        "nearest-neighbor finite-volume stencil",
+        "CFL is a domain-of-dependence condition",
+        "Crank-Nicolson damping factor is used for the local flux relaxation",
+        "no field clipping or cone padding"
+      ],
+      "symmetry_and_conservation": "continuity remains conservative because relaxation acts on the face flux and C changes through a face divergence",
+      "limiting_cases": [
+        "tau_C tending to zero is a formal overdamped comparator, not a universal derivation",
+        "coupling_g equal to zero decouples Phi from the C branch"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_matter_space_flux_telegraph.py",
+        "docs/core/uet_matter_space_flux_phi.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_matter_space_conserved_flux_telegraph.py",
+        "docs/scripts/audit/audit_matter_space_flux_phi_coupled.py",
+        "docs/core/test/test_matter_space_conserved_flux_telegraph.py",
+        "docs/core/test/test_matter_space_flux_phi_coupled.py",
+        "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
+        "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json"
+      ],
+      "evidence_class": "INTERNAL_NUMERICAL",
+      "proof_status": "named branch artifacts pass their declared internal checks; external transport coefficients remain open",
+      "downstream_dependencies": [
+        "uet.matter_space_flux.conservation",
+        "uet.matter_space_flux.phi_response"
+      ],
+      "claim_boundary": "normalized finite-cone flux comparator; not a microscopic transport derivation or SI heat law",
+      "failure_mode": "calling the comparator a finite-cone closure for the original kappa_C>0 conserved-gradient equation",
+      "next_hardening_step": "derive or source-lock transport dimensions and define a detector-level arrival observable"
+    },
+    {
+      "equation_id": "uet.matter_space_flux.phi_response",
+      "version": "normalized-flux-phi-v1",
+      "classification": "constitutive_lane_specific_equation",
+      "relation_or_code_path": "docs/core/uet_matter_space_flux_phi.py",
+      "variables": {
+        "Phi": "effective response field",
+        "Pi": "discrete Phi response rate",
+        "mu_Phi": "response chemical potential",
+        "g": "shared C-Phi coupling coefficient"
+      },
+      "mathematical_role": "damped causal response lane driven by the same declared coupling potential",
+      "standard_physics_counterpart": "damped scalar response with a discrete-gradient spatial force",
+      "observable_mapping": {
+        "status": "PARTIAL",
+        "observable": "normalized Phi response and causal arrival",
+        "reason": "Phi-to-temperature, energy, metric, or detector units are not established"
+      },
+      "unit_lane": "normalized_v1",
+      "parameter_dimensions": "normalized response coefficients",
+      "source_or_origin": "named coupled C/Phi branch introduced for the bounded Wave 3 link review",
+      "assumptions": [
+        "Phi is a response variable, not a metric or particle",
+        "the coupling energy is -g*C^2*Phi/2",
+        "R_gen is absent from the physical update",
+        "the C and Phi boundary conditions are matched"
+      ],
+      "symmetry_and_conservation": "the shared coupling is reciprocal at the declared functional level; C conservation is supplied by the face-divergence lane",
+      "limiting_cases": [
+        "zero coupling removes the C-to-Phi source",
+        "zero initial Phi and Pi is the ordered-response reference"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_matter_space_flux_phi.py",
+        "docs/core/uet_matter_space_flux_telegraph.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_matter_space_flux_phi_coupled.py",
+        "docs/core/test/test_matter_space_flux_phi_coupled.py",
+        "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json"
+      ],
+      "evidence_class": "INTERNAL_NUMERICAL",
+      "proof_status": "coupled normalized lane passes its declared internal checks; dimensional thermal closure remains open",
+      "downstream_dependencies": [
+        "uet.matter_space_flux.shared_energy_ledger",
+        "uet.main_theory.observables"
+      ],
+      "claim_boundary": "effective normalized response branch only; Phi is not information, metric, ether, or a new particle",
+      "failure_mode": "using a normalized response as a dimensional temperature, energy reservoir, or spacetime geometry",
+      "next_hardening_step": "close one independently calibrated dimensional observable map"
+    },
+    {
+      "equation_id": "uet.matter_space_flux.shared_energy_ledger",
+      "version": "normalized-flux-phi-v1",
+      "classification": "numerical_energy_ledger",
+      "relation_or_code_path": "docs/core/uet_matter_space_flux_phi.py",
+      "variables": {
+        "E": "combined normalized C/Phi branch energy",
+        "W_C": "C flux dissipation work",
+        "W_Phi": "Phi damping work",
+        "W_exchange": "discrete coupling exchange work"
+      },
+      "mathematical_role": "combined energy-accounting identity for the staggered internal update",
+      "standard_physics_counterpart": "closed-system energy ledger with explicit dissipative and exchange terms",
+      "observable_mapping": {
+        "status": "PARTIAL",
+        "observable": "normalized energy residual and dissipation diagnostics",
+        "reason": "the ledger is not yet mapped to a dimensional calorimetric observable"
+      },
+      "unit_lane": "normalized_v1",
+      "parameter_dimensions": "normalized energy and work quantities",
+      "source_or_origin": "named coupled C/Phi branch introduced for the bounded Wave 3 link review",
+      "assumptions": [
+        "one-dimensional normalized lane",
+        "the old-time C/Phi coupling is used for the split exchange accounting",
+        "no trace backreaction",
+        "no fitted verifier parameters"
+      ],
+      "symmetry_and_conservation": "the C mass ledger is conservative; the combined energy residual is reported rather than hidden",
+      "limiting_cases": [
+        "zero coupling removes the exchange-work contribution",
+        "zero flux and zero Phi rate remove the declared dissipative work terms"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_matter_space_flux_phi.py",
+        "docs/core/uet_matter_space_flux_telegraph.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_matter_space_flux_phi_coupled.py",
+        "docs/core/test/test_matter_space_flux_phi_coupled.py",
+        "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json"
+      ],
+      "evidence_class": "INTERNAL_NUMERICAL",
+      "proof_status": "ledger residual passes the named internal tolerance in the generated artifact; this is not a thermodynamic proof",
+      "downstream_dependencies": [
+        "uet.main_theory.open_system",
+        "uet.main_theory.observables"
+      ],
+      "claim_boundary": "normalized numerical ledger only; it does not establish physical energy units or global open-system conservation",
+      "failure_mode": "reporting normalized residuals as SI energy closure or using the trace as an energy source",
+      "next_hardening_step": "define dimensional work/heat observables and independently validate the ledger scale"
+    },
+    {
+        "equation_id": "uet.covariant_diffusion.frame_decomposition",
+        "version": "covariant-diffusion-v1",
+        "classification": "kinematic_mapping",
+        "relation_or_code_path": "N^mu = n u^mu + j^mu; u_mu j^mu = 0",
+        "variables": {
+            "N_mu": "on-shell O(2) Noether current",
+            "u_mu": "normalized timelike frame velocity",
+            "n": "frame-projected charge density",
+            "j_mu": "spatial current orthogonal to u_mu"
+        },
+        "mathematical_role": "frame decomposition and reconstruction of a covariant current",
+        "standard_physics_counterpart": "relativistic current decomposition in a chosen timelike frame",
+        "observable_mapping": {
+            "status": "PARTIAL",
+            "observable": "normalized frame density/current and relaxation diagnostics",
+            "reason": "material-specific SI units, detector response, and external physical validation are open"
+        },
+        "unit_lane": "natural_to_normalized",
+        "parameter_dimensions": "density_scale, length_scale, time_scale, mobility, and relaxation are declared; SI transport dimensions remain open",
+        "source_or_origin": "existing covariant O(2) current bridge and its declared constitutive reduction",
+        "assumptions": [
+            "metric signature (-,+,+,+)",
+            "u_mu u^mu = -1",
+            "the current is supplied by the declared on-shell O(2) pilot"
+        ],
+        "symmetry_and_conservation": "the decomposition is kinematic and reconstructs N^mu exactly; it does not add a source or alter current conservation",
+        "limiting_cases": [
+            "zero spatial current gives a comoving current",
+            "changing the frame changes n and j without changing N^mu"
+        ],
+      "implementation_paths": [
+        "docs/core/uet_covariant_diffusion.py"
+      ],
+      "implementation_symbols": [
+        "docs/core/uet_covariant_diffusion.py::decompose_noether_current"
+      ],
+        "verifier_paths": [
+            "docs/scripts/audit/audit_uet_gr_covariant_diffusion.py",
+            "docs/core/test/test_covariant_diffusion.py",
+            "docs/core/test/test_gr_covariant_diffusion_alignment.py",
+            "docs/core/artifacts/covariant_diffusive_current_verification.json"
+        ],
+        "evidence_class": "INTERNAL_CONSTITUTIVE_NUMERICAL",
+        "proof_status": "current reconstruction and orthogonality pass local numerical checks; microscopic density matching is not established",
+        "downstream_dependencies": [
+            "uet.o2.finite_density_eos",
+            "uet.main_theory.coarse_graining"
+        ],
+        "claim_boundary": "frame decomposition and normalized mapping only; not a microscopic transport derivation",
+        "failure_mode": "identifying the projected charge density or normalized C with mass density without a lane contract",
+        "next_hardening_step": "close the coarse-graining and dimensional observable map"
+    },
+    {
+        "equation_id": "uet.covariant_diffusion.finite_relaxation_current",
+        "version": "covariant-diffusion-v1",
+        "classification": "constitutive_lane_specific_equation",
+        "relation_or_code_path": "partial_t C + partial_x J = 0; tau_J partial_t J + J = -M_C partial_x mu_C",
+        "variables": {
+            "C": "normalized coarse-grained charge/current coordinate",
+            "J": "finite-volume face current",
+            "mu_C": "conditioned matter chemical potential",
+            "tau_J": "current relaxation time"
+        },
+        "mathematical_role": "finite-relaxation constitutive bridge coupled to exact one-dimensional continuity",
+        "standard_physics_counterpart": "Maxwell-Cattaneo-type current relaxation with a conservative continuity equation",
+        "observable_mapping": {
+            "status": "PARTIAL",
+            "observable": "normalized frame density/current and relaxation diagnostics",
+            "reason": "material-specific SI units, detector response, and external physical validation are open"
+        },
+        "unit_lane": "natural_to_normalized",
+        "parameter_dimensions": "density_scale, length_scale, time_scale, mobility, and relaxation are declared; SI transport dimensions remain open",
+        "source_or_origin": "existing covariant O(2) current bridge and its declared constitutive reduction",
+        "assumptions": [
+            "one-dimensional periodic or zero-flux finite-volume lane",
+            "declared natural-to-normalized scales",
+            "C changes only through the face-current divergence"
+        ],
+        "symmetry_and_conservation": "continuity is conservative under the declared closed boundaries; current relaxation is a constitutive input",
+        "limiting_cases": [
+            "tau_J tending to zero gives the formal Model-B current",
+            "epsilon_nc = 0 removes the nested response coupling"
+        ],
+      "implementation_paths": [
+        "docs/core/uet_covariant_diffusion.py"
+      ],
+      "implementation_symbols": [
+        "docs/core/uet_covariant_diffusion.py::causal_current_rhs"
+      ],
+        "verifier_paths": [
+            "docs/scripts/audit/audit_uet_gr_covariant_diffusion.py",
+            "docs/core/test/test_covariant_diffusion.py",
+            "docs/core/test/test_gr_covariant_diffusion_alignment.py",
+            "docs/core/artifacts/covariant_diffusive_current_verification.json"
+        ],
+        "evidence_class": "INTERNAL_CONSTITUTIVE_NUMERICAL",
+        "proof_status": "local constitutive and conservation checks pass; transport coefficients and full gradient-phase closure remain open",
+        "downstream_dependencies": [
+            "uet.covariant_diffusion.frame_decomposition",
+            "uet.matter_space_flux.conservation"
+        ],
+        "claim_boundary": "candidate normalized constitutive current bridge; not a relativistic microscopic transport law",
+        "failure_mode": "calling finite current relaxation a complete causal Cahn-Hilliard or covariant transport derivation",
+        "next_hardening_step": "close coefficient provenance, KMS/Kubo matching, and the UV phase-field branch"
+    },
+    {
+        "equation_id": "uet.covariant_diffusion.energy_identity",
+        "version": "covariant-diffusion-v1",
+        "classification": "numerical_energy_ledger",
+        "relation_or_code_path": "d_t [F_C + tau_J integral(J^2)/(2 M_C)] = - integral(J^2/M_C)",
+        "variables": {
+            "F_C": "conditioned normalized matter free energy",
+            "J": "face current",
+            "M_C": "positive mobility coefficient",
+            "tau_J": "current relaxation time"
+        },
+        "mathematical_role": "semi-discrete closed-system energy ledger for the current bridge",
+        "standard_physics_counterpart": "dissipative energy balance for a finite-relaxation constitutive current",
+        "observable_mapping": {
+            "status": "PARTIAL",
+            "observable": "normalized frame density/current and relaxation diagnostics",
+            "reason": "material-specific SI units, detector response, and external physical validation are open"
+        },
+        "unit_lane": "natural_to_normalized",
+        "parameter_dimensions": "density_scale, length_scale, time_scale, mobility, and relaxation are declared; SI transport dimensions remain open",
+        "source_or_origin": "existing covariant O(2) current bridge and its declared constitutive reduction",
+        "assumptions": [
+            "periodic or zero-flux boundaries",
+            "positive mobility and relaxation time",
+            "the current-storage term is included in the extended energy"
+        ],
+        "symmetry_and_conservation": "current dissipation is non-negative and the ledger exposes, rather than hides, the residual",
+        "limiting_cases": [
+            "J = 0 removes current dissipation",
+            "the energy identity is conditional on the declared constitutive update"
+        ],
+      "implementation_paths": [
+        "docs/core/uet_covariant_diffusion.py"
+      ],
+      "implementation_symbols": [
+        "docs/core/uet_covariant_diffusion.py::current_energy_balance"
+      ],
+        "verifier_paths": [
+            "docs/scripts/audit/audit_uet_gr_covariant_diffusion.py",
+            "docs/core/test/test_covariant_diffusion.py",
+            "docs/core/test/test_gr_covariant_diffusion_alignment.py",
+            "docs/core/artifacts/covariant_diffusive_current_verification.json"
+        ],
+        "evidence_class": "INTERNAL_CONSTITUTIVE_NUMERICAL",
+        "proof_status": "the declared semi-discrete identity closes to numerical precision in periodic and zero-flux tests",
+        "downstream_dependencies": [
+            "uet.covariant_diffusion.finite_relaxation_current"
+        ],
+        "claim_boundary": "normalized numerical ledger only; it is not a dimensional thermodynamic energy proof",
+        "failure_mode": "reporting the normalized ledger as SI energy or treating the trace as an energy source",
+        "next_hardening_step": "define dimensional work/heat observables and independently validate the ledger scale"
+    },
+    {
+        "equation_id": "uet.covariant_diffusion.adiabatic_model_b_limit",
+        "version": "covariant-diffusion-v1",
+        "classification": "limiting_relation",
+        "relation_or_code_path": "J -> -M_C partial_x mu_C; partial_t C -> M_C partial_x^2 mu_C",
+        "variables": {
+            "J": "equilibrium face current",
+            "C": "conserved normalized coordinate",
+            "mu_C": "conditioned matter chemical potential",
+            "M_C": "mobility coefficient"
+        },
+        "mathematical_role": "exact discrete adiabatic limit from the finite-relaxation bridge to Model B",
+        "standard_physics_counterpart": "overdamped conserved gradient-flow comparator",
+        "observable_mapping": {
+            "status": "PARTIAL",
+            "observable": "normalized frame density/current and relaxation diagnostics",
+            "reason": "material-specific SI units, detector response, and external physical validation are open"
+        },
+        "unit_lane": "natural_to_normalized",
+        "parameter_dimensions": "density_scale, length_scale, time_scale, mobility, and relaxation are declared; SI transport dimensions remain open",
+        "source_or_origin": "existing covariant O(2) current bridge and its declared constitutive reduction",
+        "assumptions": [
+            "adiabatic current relaxation",
+            "the same declared chemical potential is used on both sides",
+            "one-dimensional finite-volume boundary rules are shared"
+        ],
+        "symmetry_and_conservation": "the limiting continuity equation remains conservative under the declared boundaries",
+        "limiting_cases": [
+            "finite tau_J retains current memory",
+            "kappa_matter greater than zero retains the fourth-order high-k blocker"
+        ],
+      "implementation_paths": [
+        "docs/core/uet_covariant_diffusion.py"
+      ],
+      "implementation_symbols": [
+        "docs/core/uet_covariant_diffusion.py::compare_adiabatic_limit"
+      ],
+        "verifier_paths": [
+            "docs/scripts/audit/audit_uet_gr_covariant_diffusion.py",
+            "docs/core/test/test_covariant_diffusion.py",
+            "docs/core/test/test_gr_covariant_diffusion_alignment.py",
+            "docs/core/artifacts/covariant_diffusive_current_verification.json"
+        ],
+        "evidence_class": "INTERNAL_CONSTITUTIVE_NUMERICAL",
+        "proof_status": "the bridge continuity update and Model-B RHS agree within the generated artifact tolerance",
+        "downstream_dependencies": [
+            "uet.covariant_diffusion.finite_relaxation_current",
+            "uet.matter_space_flux.conservation"
+        ],
+        "claim_boundary": "limiting comparator only; it does not establish finite-cone causality for the original fourth-order gradient system",
+        "failure_mode": "using the overdamped limit as proof of a relativistic causal Cahn-Hilliard theory",
+        "next_hardening_step": "keep the Model-B limit as a comparator while resolving the first-order hyperbolic UV closure"
+    },
+    {
+        "equation_id": "uet.noether_mapping.frame_projected_charge_density",
+        "version": "noether-mapping-v1",
+        "classification": "kinematic_mapping",
+        "relation_or_code_path": "n = -u_mu N^mu",
+        "variables": {
+            "N^mu": "covariant O(2) Noether current",
+            "u_mu": "declared unit timelike frame covector",
+            "n": "frame-projected signed charge density"
+        },
+        "mathematical_role": "frame projection of a covariant current to a hydrodynamic density",
+        "standard_physics_counterpart": "relativistic decomposition of a conserved current in a chosen frame",
+        "observable_mapping": {
+            "status": "PARTIAL",
+            "observable": "coarse signed O(2) charge/current coordinates and phase-field diagnostics",
+            "reason": "the fixed-scale coordinate layer is checked, while a covariant coarse-graining kernel, material units, detector response, and external validation remain open"
+        },
+        "unit_lane": "natural_to_normalized",
+        "parameter_dimensions": "natural charge/current scales and declared density, length, time, and chemical-potential scales; material SI mapping remains open",
+        "source_or_origin": "existing O(2) Noether-current identity plus a declared fixed-scale hydrodynamic coordinate map",
+        "assumptions": [
+            "metric signature (-,+,+,+) for the covariant current identity",
+            "signed global-O2 Noether charge convention",
+            "declared local cell-average coarse graining precedes the affine map",
+            "positive fixed reference and scale parameters"
+        ],
+        "symmetry_and_conservation": "the O(2) current and continuity scaling are used as declared; the coordinate map introduces no source and does not prove microscopic Cahn-Hilliard conservation",
+        "limiting_cases": [
+            "changing u_mu changes the projected density and spatial current without changing N^mu",
+            "zero spatial current gives a comoving current"
+        ],
+        "implementation_paths": [
+            "docs/core/uet_noether_phase_field_map.py",
+            "docs/core/uet_covariant_diffusion.py"
+        ],
+        "implementation_symbols": [
+            "docs/core/uet_covariant_diffusion.py::decompose_noether_current",
+            "docs/core/uet_noether_phase_field_map.py::normalize_noether_hydrodynamic_state"
+        ],
+        "verifier_paths": [
+            "docs/scripts/audit/audit_uet_noether_phase_field_map.py",
+            "docs/core/test/test_noether_phase_field_map.py",
+            "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
+            "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py",
+            "docs/core/artifacts/noether_phase_field_state_map_verification.json"
+        ],
+        "evidence_class": "INTERNAL_MAPPING_DIAGNOSTIC",
+        "proof_status": "kinematic projection is covered by existing local current/map checks; microscopic inversion is not established",
+        "downstream_dependencies": [
+            "uet.o2.finite_density_eos",
+            "uet.main_theory.coarse_graining"
+        ],
+        "claim_boundary": "frame-projected signed O(2) charge only; not mass density and not universal C",
+        "failure_mode": "a frame-projected charge density is silently renamed mass, energy, or universal C",
+        "next_hardening_step": "complete covariant coarse-graining, equation-of-state, transport, and observable matching before physical interpretation"
+    },
+    {
+        "equation_id": "uet.noether_mapping.affine_phase_coordinate",
+        "version": "noether-mapping-v1",
+        "classification": "coordinate_definition",
+        "relation_or_code_path": "C = (n_bar - n_ref) / n_scale",
+        "variables": {
+            "n_bar": "already coarse-grained signed charge density",
+            "n_ref": "declared density reference",
+            "n_scale": "positive density scale",
+            "C": "normalized hydrodynamic coordinate"
+        },
+        "mathematical_role": "exact affine coordinate change after the declared coarse-graining layer",
+        "standard_physics_counterpart": "dimensionless nondimensionalization of a lane-specific hydrodynamic variable",
+        "observable_mapping": {
+            "status": "PARTIAL",
+            "observable": "coarse signed O(2) charge/current coordinates and phase-field diagnostics",
+            "reason": "the fixed-scale coordinate layer is checked, while a covariant coarse-graining kernel, material units, detector response, and external validation remain open"
+        },
+        "unit_lane": "natural_to_normalized",
+        "parameter_dimensions": "natural charge/current scales and declared density, length, time, and chemical-potential scales; material SI mapping remains open",
+        "source_or_origin": "existing O(2) Noether-current identity plus a declared fixed-scale hydrodynamic coordinate map",
+        "assumptions": [
+            "metric signature (-,+,+,+) for the covariant current identity",
+            "signed global-O2 Noether charge convention",
+            "declared local cell-average coarse graining precedes the affine map",
+            "positive fixed reference and scale parameters"
+        ],
+        "symmetry_and_conservation": "the affine change preserves a declared continuity residual under constant scales",
+        "limiting_cases": [
+            "fixed positive scales give exact coordinate round-trip",
+            "changing the reference shifts C without changing the underlying coarse density"
+        ],
+        "implementation_paths": [
+            "docs/core/uet_noether_phase_field_map.py"
+        ],
+        "implementation_symbols": [
+            "docs/core/uet_noether_phase_field_map.py::normalize_noether_hydrodynamic_state",
+            "docs/core/uet_noether_phase_field_map.py::denormalize_phase_field_coordinates"
+        ],
+        "verifier_paths": [
+            "docs/scripts/audit/audit_uet_noether_phase_field_map.py",
+            "docs/core/test/test_noether_phase_field_map.py",
+            "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
+            "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py",
+            "docs/core/artifacts/noether_phase_field_state_map_verification.json"
+        ],
+        "evidence_class": "INTERNAL_MAPPING_DIAGNOSTIC",
+        "proof_status": "fixed-scale round-trip and negative controls pass; the upstream microscopic map remains many-to-one",
+        "downstream_dependencies": [
+            "uet.main_theory.coarse_graining",
+            "uet.matter_space_flux.conservation"
+        ],
+        "claim_boundary": "candidate C_charge coordinate on a declared O(2) lane; no universal C ontology",
+        "failure_mode": "the affine coordinate change is presented as a microscopic reconstruction or mass definition",
+        "next_hardening_step": "derive a covariant coarse-graining kernel and an independent physical observable map"
+    },
+    {
+        "equation_id": "uet.noether_mapping.normalized_current_coordinate",
+        "version": "noether-mapping-v1",
+        "classification": "coordinate_definition",
+        "relation_or_code_path": "J = j / (n_scale L/T)",
+        "variables": {
+            "j": "coarse spatial charge current",
+            "L": "declared length scale",
+            "T": "declared time scale",
+            "J": "normalized current coordinate"
+        },
+        "mathematical_role": "fixed-scale normalization of the spatial current paired with C",
+        "standard_physics_counterpart": "dimensionless current coordinate in a declared natural-to-normalized lane",
+        "observable_mapping": {
+            "status": "PARTIAL",
+            "observable": "coarse signed O(2) charge/current coordinates and phase-field diagnostics",
+            "reason": "the fixed-scale coordinate layer is checked, while a covariant coarse-graining kernel, material units, detector response, and external validation remain open"
+        },
+        "unit_lane": "natural_to_normalized",
+        "parameter_dimensions": "natural charge/current scales and declared density, length, time, and chemical-potential scales; material SI mapping remains open",
+        "source_or_origin": "existing O(2) Noether-current identity plus a declared fixed-scale hydrodynamic coordinate map",
+        "assumptions": [
+            "metric signature (-,+,+,+) for the covariant current identity",
+            "signed global-O2 Noether charge convention",
+            "declared local cell-average coarse graining precedes the affine map",
+            "positive fixed reference and scale parameters"
+        ],
+        "symmetry_and_conservation": "the O(2) current and continuity scaling are used as declared; the coordinate map introduces no source and does not prove microscopic Cahn-Hilliard conservation",
+        "limiting_cases": [
+            "the current scale is n_scale L/T",
+            "zero current maps to zero normalized current"
+        ],
+        "implementation_paths": [
+            "docs/core/uet_noether_phase_field_map.py"
+        ],
+        "implementation_symbols": [
+            "docs/core/uet_noether_phase_field_map.py::normalize_noether_hydrodynamic_state",
+            "docs/core/uet_noether_phase_field_map.py::denormalize_phase_field_coordinates"
+        ],
+        "verifier_paths": [
+            "docs/scripts/audit/audit_uet_noether_phase_field_map.py",
+            "docs/core/test/test_noether_phase_field_map.py",
+            "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
+            "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py",
+            "docs/core/artifacts/noether_phase_field_state_map_verification.json"
+        ],
+        "evidence_class": "INTERNAL_MAPPING_DIAGNOSTIC",
+        "proof_status": "current round-trip and legacy bridge compatibility pass for the declared scales",
+        "downstream_dependencies": [
+            "uet.noether_mapping.affine_phase_coordinate",
+            "uet.matter_space_flux.relaxation"
+        ],
+        "claim_boundary": "normalized current-coordinate map only; transport coefficients and SI meaning remain open",
+        "failure_mode": "the normalized current is treated as an independently derived microscopic transport law",
+        "next_hardening_step": "complete covariant coarse-graining, equation-of-state, transport, and observable matching before physical interpretation"
+    },
+    {
+        "equation_id": "uet.noether_mapping.continuity_residual_scaling",
+        "version": "noether-mapping-v1",
+        "classification": "conservation_scaling",
+        "relation_or_code_path": "R_hat = (T/n_scale) R_natural",
+        "variables": {
+            "R_natural": "natural continuity residual",
+            "R_hat": "normalized continuity residual",
+            "n_scale": "density scale",
+            "T": "time scale"
+        },
+        "mathematical_role": "exact residual scaling under constant space-time and density scales",
+        "standard_physics_counterpart": "nondimensional continuity-equation rescaling",
+        "observable_mapping": {
+            "status": "PARTIAL",
+            "observable": "coarse signed O(2) charge/current coordinates and phase-field diagnostics",
+            "reason": "the fixed-scale coordinate layer is checked, while a covariant coarse-graining kernel, material units, detector response, and external validation remain open"
+        },
+        "unit_lane": "natural_to_normalized",
+        "parameter_dimensions": "natural charge/current scales and declared density, length, time, and chemical-potential scales; material SI mapping remains open",
+        "source_or_origin": "existing O(2) Noether-current identity plus a declared fixed-scale hydrodynamic coordinate map",
+        "assumptions": [
+            "metric signature (-,+,+,+) for the covariant current identity",
+            "signed global-O2 Noether charge convention",
+            "declared local cell-average coarse graining precedes the affine map",
+            "positive fixed reference and scale parameters"
+        ],
+        "symmetry_and_conservation": "the residual vanishes together with the declared natural continuity residual",
+        "limiting_cases": [
+            "constant scales preserve exact proportionality",
+            "non-constant scales would require extra derivative terms and are outside v1"
+        ],
+        "implementation_paths": [
+            "docs/core/uet_noether_phase_field_map.py"
+        ],
+        "implementation_symbols": [
+            "docs/core/uet_noether_phase_field_map.py::map_continuity_terms"
+        ],
+        "verifier_paths": [
+            "docs/scripts/audit/audit_uet_noether_phase_field_map.py",
+            "docs/core/test/test_noether_phase_field_map.py",
+            "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
+            "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py",
+            "docs/core/artifacts/noether_phase_field_state_map_verification.json"
+        ],
+        "evidence_class": "INTERNAL_MAPPING_DIAGNOSTIC",
+        "proof_status": "analytic scaling identity passes deterministic numerical checks",
+        "downstream_dependencies": [
+            "uet.noether_mapping.affine_phase_coordinate",
+            "uet.noether_mapping.normalized_current_coordinate"
+        ],
+        "claim_boundary": "coordinate-level continuity scaling; it does not close dynamics or prove a physical conservation law by itself",
+        "failure_mode": "a zero normalized residual is used as evidence of microscopic conservation without the declared current dynamics",
+        "next_hardening_step": "connect the scaled residual to a covariant current law and dimensional measurement operator"
+    },
+    {
+        "equation_id": "uet.noether_mapping.o2_polar_current",
+        "version": "noether-mapping-v1",
+        "classification": "action_level_identity",
+        "relation_or_code_path": "N^mu = Z A^2 partial^mu(theta)",
+        "variables": {
+            "A": "O(2) polar amplitude",
+            "theta": "O(2) phase",
+            "Z": "declared kinetic coefficient",
+            "N^mu": "Noether current"
+        },
+        "mathematical_role": "polar-coordinate identity for the implemented global O(2) current",
+        "standard_physics_counterpart": "global O(2)/U(1) Noether current in a complex-scalar realization",
+        "observable_mapping": {
+            "status": "PARTIAL",
+            "observable": "coarse signed O(2) charge/current coordinates and phase-field diagnostics",
+            "reason": "the fixed-scale coordinate layer is checked, while a covariant coarse-graining kernel, material units, detector response, and external validation remain open"
+        },
+        "unit_lane": "natural_to_normalized",
+        "parameter_dimensions": "natural charge/current scales and declared density, length, time, and chemical-potential scales; material SI mapping remains open",
+        "source_or_origin": "existing O(2) Noether-current identity plus a declared fixed-scale hydrodynamic coordinate map",
+        "assumptions": [
+            "global O(2) scalar doublet written in polar variables",
+            "declared inverse metric and kinetic coefficient",
+            "away from any singular amplitude-coordinate patch"
+        ],
+        "symmetry_and_conservation": "the identity is associated with the declared global O(2) current; conservation still depends on the matter equations and boundary conditions",
+        "limiting_cases": [
+            "constant phase gives vanishing derivative current",
+            "changing amplitude and phase gradient can preserve the same current, demonstrating non-invertibility"
+        ],
+        "implementation_paths": [
+            "docs/core/uet_covariant_matter.py",
+            "docs/core/uet_noether_phase_field_map.py"
+        ],
+        "implementation_symbols": [
+            "docs/core/uet_covariant_matter.py::matter_noether_current",
+            "docs/core/test/test_noether_phase_field_map.py::test_polar_O2_identity_matches_matter_noether_current"
+        ],
+        "verifier_paths": [
+            "docs/scripts/audit/audit_uet_noether_phase_field_map.py",
+            "docs/core/test/test_noether_phase_field_map.py",
+            "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
+            "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py",
+            "docs/core/artifacts/noether_phase_field_state_map_verification.json"
+        ],
+        "evidence_class": "INTERNAL_ACTION_IDENTITY",
+        "proof_status": "polar-current identity passes the local analytic/numerical comparison in the declared metric convention",
+        "downstream_dependencies": [
+            "uet.o2.finite_density_eos",
+            "uet.main_theory.covariant_parent"
+        ],
+        "claim_boundary": "O(2) realization identity only; it does not identify the scalar amplitude, current, or charge with universal C or mass",
+        "failure_mode": "the O(2) current identity is used to infer a unique microscopic state from N^mu",
+        "next_hardening_step": "derive the covariant projected current law and match its hydrodynamic coefficients"
+    },
+    {
+        "equation_id": "uet.noether_mapping.symmetric_double_well_conjugacy",
+        "version": "noether-mapping-v1",
+        "classification": "constitutive_comparator",
+        "relation_or_code_path": "f = n_scale*mu_scale*(C^2 - 1)^2/4; df/dn = mu_scale*(C^3 - C)",
+        "variables": {
+            "C": "normalized lane coordinate",
+            "n": "coarse charge-coordinate realization",
+            "f": "declared natural free-energy density comparator",
+            "mu_scale": "chemical-potential scale"
+        },
+        "mathematical_role": "local conjugacy check for the symmetric double-well constitutive comparator",
+        "standard_physics_counterpart": "Landau/Cahn-Hilliard-style constitutive free-energy coordinate",
+        "observable_mapping": {
+            "status": "PARTIAL",
+            "observable": "coarse signed O(2) charge/current coordinates and phase-field diagnostics",
+            "reason": "the fixed-scale coordinate layer is checked, while a covariant coarse-graining kernel, material units, detector response, and external validation remain open"
+        },
+        "unit_lane": "natural_to_normalized",
+        "parameter_dimensions": "natural charge/current scales and declared density, length, time, and chemical-potential scales; material SI mapping remains open",
+        "source_or_origin": "existing O(2) Noether-current identity plus a declared fixed-scale hydrodynamic coordinate map",
+        "assumptions": [
+            "metric signature (-,+,+,+) for the covariant current identity",
+            "signed global-O2 Noether charge convention",
+            "declared local cell-average coarse graining precedes the affine map",
+            "positive fixed reference and scale parameters"
+        ],
+        "symmetry_and_conservation": "free-energy conjugacy does not itself impose charge conservation",
+        "limiting_cases": [
+            "C = plus or minus 1 gives the declared coexistence minima",
+            "the curvature changes sign near the comparator spinodal region"
+        ],
+        "implementation_paths": [
+            "docs/core/uet_noether_phase_field_map.py"
+        ],
+        "implementation_symbols": [
+            "docs/core/uet_noether_phase_field_map.py::symmetric_double_well_thermodynamic_map",
+            "docs/core/test/test_noether_phase_field_map.py::test_physical_free_energy_derivative_matches_mapped_chemical_potential"
+        ],
+        "verifier_paths": [
+            "docs/scripts/audit/audit_uet_noether_phase_field_map.py",
+            "docs/core/test/test_noether_phase_field_map.py",
+            "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
+            "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py",
+            "docs/core/artifacts/noether_phase_field_state_map_verification.json"
+        ],
+        "evidence_class": "INTERNAL_CONSTITUTIVE_COMPARATOR",
+        "proof_status": "local derivative and coefficient checks pass; the double well is explicitly not derived from the O(2) action",
+        "downstream_dependencies": [
+            "uet.noether_mapping.affine_phase_coordinate",
+            "uet.o2.finite_density_eos"
+        ],
+        "claim_boundary": "constitutive comparator in a declared coordinate; not the O(2) equation of state and not universal C physics",
+        "failure_mode": "local conjugacy is called a microscopic EOS derivation or used to identify C with mass",
+        "next_hardening_step": "compare against the exact finite-density O(2) EOS in a preregistered domain without fitting the comparator to holdout data"
+    },
+    {
+        "equation_id": "uet.noether_mapping.normalized_constitutive_scales",
+        "version": "noether-mapping-v1",
+        "classification": "unit_coordinate_map",
+        "relation_or_code_path": "tau_nat = T*tau_hat; M_nat = n_scale*L^2/(T*mu_scale)",
+        "variables": {
+            "tau_hat": "normalized relaxation parameter",
+            "M_hat": "normalized mobility parameter",
+            "tau_nat": "mapped relaxation scale",
+            "M_nat": "mapped mobility scale"
+        },
+        "mathematical_role": "dimensional coordinate conversion for declared constitutive parameters",
+        "standard_physics_counterpart": "unit conversion/nondimensionalization of relaxation and mobility coefficients",
+        "observable_mapping": {
+            "status": "PARTIAL",
+            "observable": "coarse signed O(2) charge/current coordinates and phase-field diagnostics",
+            "reason": "the fixed-scale coordinate layer is checked, while a covariant coarse-graining kernel, material units, detector response, and external validation remain open"
+        },
+        "unit_lane": "natural_to_normalized",
+        "parameter_dimensions": "natural charge/current scales and declared density, length, time, and chemical-potential scales; material SI mapping remains open",
+        "source_or_origin": "existing O(2) Noether-current identity plus a declared fixed-scale hydrodynamic coordinate map",
+        "assumptions": [
+            "metric signature (-,+,+,+) for the covariant current identity",
+            "signed global-O2 Noether charge convention",
+            "declared local cell-average coarse graining precedes the affine map",
+            "positive fixed reference and scale parameters"
+        ],
+        "symmetry_and_conservation": "parameter rescaling does not alter the underlying continuity law",
+        "limiting_cases": [
+            "positive density, length, time, and chemical-potential scales are required",
+            "nonnegative normalized gradient coefficient is enforced by the map contract"
+        ],
+        "implementation_paths": [
+            "docs/core/uet_noether_phase_field_map.py"
+        ],
+        "implementation_symbols": [
+            "docs/core/uet_noether_phase_field_map.py::map_normalized_constitutive_scales"
+        ],
+        "verifier_paths": [
+            "docs/scripts/audit/audit_uet_noether_phase_field_map.py",
+            "docs/core/test/test_noether_phase_field_map.py",
+            "docs/core/test/test_gr_noether_phase_field_map_alignment.py",
+            "docs/core/test/test_noether_phase_field_topic_0_11_dependency.py",
+            "docs/core/artifacts/noether_phase_field_state_map_verification.json"
+        ],
+        "evidence_class": "INTERNAL_DEFINITIONAL_MAP",
+        "proof_status": "fixed-scale conversion identity passes; no microscopic coefficient origin is supplied",
+        "downstream_dependencies": [
+            "uet.foundation.units",
+            "uet.covariant_diffusion.finite_relaxation_current"
+        ],
+        "claim_boundary": "declared natural-to-normalized scale map only; no SI transport prediction",
+        "failure_mode": "a coordinate conversion is presented as a measured or action-derived transport coefficient",
+        "next_hardening_step": "supply provenance, Kubo matching, and a material-specific observable/unit contract"
+    }
+  ],
+  "merge_history": {
+    "merged_equation_ids": [
+      "uet.matter_space_flux.conservation",
+      "uet.matter_space_flux.relaxation",
+      "uet.matter_space_flux.phi_response",
+      "uet.matter_space_flux.shared_energy_ledger",
+      "uet.covariant_diffusion.frame_decomposition",
+      "uet.covariant_diffusion.finite_relaxation_current",
+      "uet.covariant_diffusion.energy_identity",
+      "uet.covariant_diffusion.adiabatic_model_b_limit",
+      "uet.noether_mapping.frame_projected_charge_density",
+      "uet.noether_mapping.affine_phase_coordinate",
+      "uet.noether_mapping.normalized_current_coordinate",
+      "uet.noether_mapping.continuity_residual_scaling",
+      "uet.noether_mapping.o2_polar_current",
+      "uet.noether_mapping.symmetric_double_well_conjugacy",
+      "uet.noether_mapping.normalized_constitutive_scales"
+    ],
+    "already_present": [
+      "uet.impact_effect.information_flow",
+      "uet.cosmological.open_system_trace",
+      "uet.persistence.resource_allocation_principle",
+      "uet.matter_space.characteristic_cone",
+      "uet.persistence.resource_selection_dynamics",
+      "uet.persistence.resource_selection_thermal_bridge",
+      "uet.persistence.resource_selection_physical_cost_map",
+      "uet.o2.thermal.on_shell_sunset_collision_width",
+      "uet.o2.thermal.contact_sk_transition_vertex_match",
+      "uet.o2.transport.charged_current_correlator_interface",
+      "uet.o2.transport.tree_level_charged_ward_vertex",
+      "uet.o2.thermal.thermodynamic_normal_component",
+      "uet.o2.thermal.condensed_relative_flow_collision",
+      "uet.o2.thermal.continuum_relative_flow_kubo",
+      "uet.o2.thermal.condensed_loop_relative_flow_kubo",
+      "uet.mass_density.augmented_amplitude_contract",
+      "uet.mass_density.si_1d_amplitude_contract",
+      "uet.mass_density.si_3d_measurement_operator",
+      "uet.main_theory.covariant_parent",
+      "uet.main_theory.coarse_graining",
+      "uet.main_theory.open_system_linear_kms",
+      "uet.main_theory.hyperbolic_spine_control",
+      "uet.main_theory.operational_quantum_measurement",
+      "uet.main_theory.quantum_interpretation_adapters",
+      "uet.main_theory.gr_correspondence_controls",
+      "uet.dynamics.tangent_map",
+      "uet.dynamics.lyapunov_spectrum",
+      "uet.dynamics.regime_classifier",
+      "uet.dynamics.closed_gradient_no_sustained_chaos_boundary"
+    ],
+    "conflicts": [],
+    "source_policy": "addenda are merged as candidate records; evidence and claim boundaries are preserved"
+  }
+}

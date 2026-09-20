@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "artifact": "o2_eos_formula_audit",
+  "generated_at": "2026-09-20T04:00:54.244641+00:00",
+  "topic": "docs/core UET GR non-closed response",
+  "version": "wave10_v1",
+  "benchmark_role": "formula_audit",
+  "method_label": "action_to_EOS_and_transport_status_registry",
+  "status": "WARN",
+  "unit_lane": "natural",
+  "formula_registry": [
+    {
+      "formula_id": "response_shifted_mass",
+      "relation": "m_eff^2=m^2-epsilon_nc*h*(Phi-Phi_*)",
+      "variables": "natural-unit action scalars and couplings",
+      "unit_closure_status": "CLOSED_NATURAL_MASS_DIMENSIONS",
+      "constant_origin": "topic_derived_relation",
+      "proof_status": "derived",
+      "verification_role": "gate",
+      "implementation": "docs/core/02_equations/o2/uet_o2_finite_density_eos.py::effective_mass_sq"
+    },
+    {
+      "formula_id": "finite_density_grand_potential",
+      "relation": "Omega=(m_eff^2-Z*mu^2)A^2/2+lambda*A^4/4",
+      "variables": "homogeneous O2 amplitude, chemical potential, response scalar",
+      "unit_closure_status": "CLOSED_NATURAL_MASS_DIMENSION_4",
+      "constant_origin": "topic_derived_relation",
+      "proof_status": "derived_tree_level",
+      "verification_role": "gate",
+      "implementation": "docs/core/02_equations/o2/uet_o2_finite_density_eos.py::o2_equilibrium_state"
+    },
+    {
+      "formula_id": "canonical_legendre_transform",
+      "relation": "f=mu*n-p; Z^2*mu^3-Z*m_eff^2*mu-lambda*n=0",
+      "variables": "signed charge density and stable condensed root",
+      "unit_closure_status": "CLOSED_NATURAL_MASS_DIMENSION_4",
+      "constant_origin": "topic_derived_relation",
+      "proof_status": "derived",
+      "verification_role": "gate",
+      "implementation": "docs/core/02_equations/o2/uet_o2_finite_density_eos.py::o2_helmholtz_state"
+    },
+    {
+      "formula_id": "ideal_covariant_superfluid_current_stress",
+      "relation": "N^mu=f_s*xi^mu; T^mu_nu=f_s*xi^mu*xi^nu+p*g^mu_nu",
+      "variables": "T=0 pure-superfluid P(X,Phi) sector",
+      "unit_closure_status": "CLOSED_NATURAL_MASS_DIMENSIONS",
+      "constant_origin": "topic_derived_relation",
+      "proof_status": "derived_tree_level",
+      "verification_role": "gate",
+      "implementation": "docs/core/02_equations/covariant/uet_covariant_superfluid_transport.py"
+    },
+    {
+      "formula_id": "longitudinal_kubo_transport",
+      "relation": "D=sigma_reg/chi; tau*d_tJ+J=-sigma_reg*grad(mu)",
+      "variables": "regular non-condensate response only",
+      "unit_closure_status": "CLOSED_NATURAL_CONTROL_LANE_ONLY",
+      "constant_origin": "open_placeholder",
+      "proof_status": "open_coefficient_matching",
+      "verification_role": "synthetic_control",
+      "implementation": "docs/core/02_equations/covariant/uet_covariant_superfluid_transport.py"
+    }
+  ],
+  "completed_formula_gates": [
+    "tree_level_O2_EOS",
+    "stable_signed_canonical_inversion",
+    "response_reciprocity",
+    "T0_covariant_ideal_current_and_stress",
+    "local_longitudinal_entropy_control"
+  ],
+  "open_formula_gates": [
+    "physical_Kubo_coefficient_values",
+    "finite_temperature_normal_component",
+    "full_superfluid_transport_tensor",
+    "Schwinger_Keldysh_KMS_derivation",
+    "gradient_EFT_kappa_C",
+    "SI_lane"
+  ],
+  "source_hashes": {
+    "docs/core/02_equations/o2/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d",
+    "docs/core/02_equations/covariant/uet_covariant_superfluid_transport.py": "03d8022b2ff0dd5d6ccf523a76963056b1dc75f4926732f43d8b1484cdea1fd3",
+    "docs/core/02_equations/covariant/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+    "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py": "e992834d7d3ca90476202d849551ab16d1aba4bb1156b0519b3cd79e2566f9e8",
+    "docs/core/01_contracts/O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md": "3210f45543dd90b42ef5593b6693a2348819b363a98cce3c66411378f0d6474d",
+    "docs/data/external/relativistic_transport/son_relativistic_superfluid_2002/source_record.json": "da0317ae6f1bbf6e09ed7321c720f090572ad122e124782bb71059adb36ae56c",
+    "docs/data/external/relativistic_transport/chapman_hoyos_oz_superfluid_kubo_2013/source_record.json": "868f63a01bc6b0c90dee8ef26a46822e7c4d8fe44ef806262e8103367138ca8e",
+    "docs/data/external/relativistic_transport/jain_kovtun_2024/source_record.json": "90c8c7dfe8256da2b1dbe6631d189470800ea8ed7eec228fc9bedf49dd39dbc7",
+    "docs/data/external/relativistic_transport/haehl_loganayagam_rangamani_2018/source_record.json": "f3cc5c2505e341cc7c8cbee790b50b925087afc7ddd6f0d78479cc393e818f06"
+  }
+}

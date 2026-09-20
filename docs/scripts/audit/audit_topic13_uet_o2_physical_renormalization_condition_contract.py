@@ -23,8 +23,8 @@ from docs.core.uet_o2_physical_renormalization_condition_contract import (  # no
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_physical_renormalization_condition_contract.json"
-MODULE = ROOT / "docs/core/uet_o2_physical_renormalization_condition_contract.py"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_physical_renormalization_condition_contract.json"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_physical_renormalization_condition_contract.py"
 
 
 def sha256(path: Path) -> str:
@@ -79,7 +79,7 @@ def main() -> int:
     closure_level = "CLOSED_FOR_LANE" if not failed else "OPEN"
     evidence = [
         {
-            "path": "docs/core/uet_o2_physical_renormalization_condition_contract.py",
+            "path": "docs/core/02_equations/o2/uet_o2_physical_renormalization_condition_contract.py",
             "sha256": sha256(MODULE),
         }
     ]

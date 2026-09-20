@@ -41,8 +41,8 @@
   "core_program_controller": "physical_kubo_coefficient_evidence_and_curved_3p1_solver_missing",
   "core_program_stage": "O2_FINITE_DENSITY_EOS_AND_T0_SUPERFLUID_CONSTITUTIVE_VERIFIED",
   "environment": {
-    "platform": "Windows-11-10.0.26200-SP0",
-    "python_version": "3.14.2"
+    "platform": "portable-research-runtime",
+    "python_version": "3.14"
   },
   "evidence_status": "CORE_CANDIDATE_GR_PARENT_AVAILABLE_TOPIC_PHYSICAL_VALIDATION_OPEN",
   "gates": {
@@ -170,7 +170,7 @@
       "status": "BLOCKED"
     }
   },
-  "generated_at": "2026-08-14T12:25:53+00:00",
+  "generated_at": "2026-09-17T23:26:46+00:00",
   "global_universe_closure": "UNRESOLVED",
   "limitations": [
     "No Topic 0.19 simulation, physical-data comparison, metric PDE, or parameter fit is run.",
@@ -190,44 +190,44 @@
     {
       "exists": true,
       "hash_scope": "canonical_json_without_generated_at_generated_at_utc_timestamp_utc_or_environment",
-      "path": "docs/core/artifacts/uet_gr_research_program_gate.json",
+      "path": "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json",
       "role": "Current core GR research-program gate",
-      "scientific_payload_sha256": "6de328b881fcca261906372cc634b3653d85f79be1f247383079ec150be62680"
+      "scientific_payload_sha256": "b1d1e21349e443c5c33971b1bbc382a2ed6e1c99639a76afa82da78f61073182"
     },
     {
       "exists": true,
       "hash_scope": "canonical_json_without_generated_at_generated_at_utc_timestamp_utc_or_environment",
-      "path": "docs/core/artifacts/gr_closed_limit_verification.json",
+      "path": "docs/core/07_artifacts/verification/gr_closed_limit_verification.json",
       "role": "Exact implemented GR response-null verification",
-      "scientific_payload_sha256": "c58b0045435f68e3291285ca93bf87bc095cc354f7fc2b43041f62b200ac3705"
+      "scientific_payload_sha256": "e0880bab1811d2f4f4168f02ae47fcaf2e38980cbf341490fc29d4d9f3ad637b"
     },
     {
       "exists": true,
       "hash_scope": "canonical_json_without_generated_at_generated_at_utc_timestamp_utc_or_environment",
-      "path": "docs/core/artifacts/covariant_bianchi_exchange_verification.json",
+      "path": "docs/core/07_artifacts/verification/covariant_bianchi_exchange_verification.json",
       "role": "Local covariant exchange-balance verification",
-      "scientific_payload_sha256": "63610721813129ba6b0c1d5e7044df363fd702269a35d956a29045ba232d6237"
+      "scientific_payload_sha256": "d83ac8c2d1b13add4106b6605eaf9c8cd78d03acf94c3d76385d4d2773ba599f"
     },
     {
       "exists": true,
       "hash_scope": "canonical_json_without_generated_at_generated_at_utc_timestamp_utc_or_environment",
-      "path": "docs/core/artifacts/causal_nonclosed_kernel_verification.json",
+      "path": "docs/core/07_artifacts/verification/causal_nonclosed_kernel_verification.json",
       "role": "Flat local 1+1 causal constitutive kernel",
       "scientific_payload_sha256": "d9b2c345abf543bf945ad56415feb471a9f7e4c02397144b3d96e0aaddd716ce"
     },
     {
       "exists": true,
       "hash_scope": "canonical_json_without_generated_at_generated_at_utc_timestamp_utc_or_environment",
-      "path": "docs/core/artifacts/covariant_matter_space_reduction_verification.json",
+      "path": "docs/core/07_artifacts/verification/covariant_matter_space_reduction_verification.json",
       "role": "Partial response-sector reduction verification",
-      "scientific_payload_sha256": "6e3d77ce2425ba4957103b49af6db6474cf44f877b805d2215ccd8af34dab0a6"
+      "scientific_payload_sha256": "9f3c2bd20dfa14d86eb2e90bf4984f954e739d32e85b0a0788414c5d1222d0e6"
     },
     {
       "exists": true,
       "hash_scope": "canonical_json_without_generated_at_generated_at_utc_timestamp_utc_or_environment",
-      "path": "docs/core/artifacts/noether_phase_field_dependency_gate.json",
+      "path": "docs/core/07_artifacts/gates/noether_phase_field_dependency_gate.json",
       "role": "Noether/phase-field dependency boundary",
-      "scientific_payload_sha256": "cbb9fc060f26b6fb638a0a3eff876539d6e563e556acda623b0c00cb0aaa27c0"
+      "scientific_payload_sha256": "ca744ec917bd7618e303741c76cd56ba53682ec119abd7b5009052d6795e0771"
     },
     {
       "exists": true,

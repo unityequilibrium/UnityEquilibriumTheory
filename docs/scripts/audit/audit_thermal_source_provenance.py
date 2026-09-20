@@ -14,7 +14,7 @@ TOPIC = ROOT / "docs/topics/0.13_Thermodynamic_Bridge"
 PACKAGE = TOPIC / "Data/03_Research/matter_space_second_sound_source_package.json"
 REVIEW = TOPIC / "Data/03_Research/matter_space_thermal_source_review.json"
 MAP = TOPIC / "Result/artifacts/matter_space_thermal_observable_map_readiness.json"
-OUT = ROOT / "docs/core/artifacts/thermal_source_provenance_gate.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/thermal_source_provenance_gate.json"
 
 
 def sha256(path: Path) -> str:

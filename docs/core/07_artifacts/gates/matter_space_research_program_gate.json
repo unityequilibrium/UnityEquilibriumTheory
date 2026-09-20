@@ -1,0 +1,324 @@
+{
+  "schema_version": "1.0",
+  "artifact": "matter_space_research_program_gate",
+  "generated_at": "2026-09-17T21:31:16.766718+00:00",
+  "source_snapshot_at": "2026-09-17T21:31:16.667893+00:00",
+  "status": "BLOCKED",
+  "program_state": "CANDIDATE_WITH_BLOCKED_PHYSICAL_INTERPRETATION",
+  "controlling_blocker": "core_prearrival_leakage",
+  "claim_ceiling": "candidate normalized effective model",
+  "input_artifacts": {
+    "ontology_contract": {
+      "path": "docs/core/07_artifacts/correspondence/matter_space_ontology_contract.json",
+      "sha256": "c460094a30d7ae72f1ccc4c5c335e3fe402d99fe3120d1156bb5d52810ff2e99",
+      "status": "PASS"
+    },
+    "formula_audit": {
+      "path": "docs/core/07_artifacts/correspondence/matter_space_formula_audit.json",
+      "sha256": "d746e198389b665e31816826f006fda5eea5dfb36594baeefc9a722e553aabec",
+      "status": "WARN"
+    },
+    "alignment_gate": {
+      "path": "docs/core/07_artifacts/gates/master_equation_alignment_gate_v2.json",
+      "sha256": "67dd9129783abe3aa0e2272b802fdf0e7282265dcfbc98ca4fc49d20408a0be3",
+      "status": "BLOCKED",
+      "controlling_blocker": "prearrival_leakage"
+    },
+    "core_verification": {
+      "path": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
+      "sha256": "ad8b6671df932457007b4f293ca3962890718c633204445467a2b5877f81c4b9",
+      "status": "FAIL",
+      "controlling_blocker": "prearrival_leakage"
+    },
+    "core_dependency_gate": {
+      "path": "docs/core/07_artifacts/gates/matter_space_dependency_gate.json",
+      "sha256": "762932e5f7a20a844d7643d2bba8e586885ddff7bf6ebe71c4f8d2048b09317e",
+      "status": "BLOCKED",
+      "controlling_blocker": "prearrival_leakage"
+    },
+    "thermal_pilot": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/matter_space_thermal_control.json",
+      "sha256": "fc445ac8cd2f2a5bc410bda589e31bf32200c677952b9f135ca1e3dc72768268",
+      "status": "SIMULATION_ONLY",
+      "controlling_blocker": "core_prearrival_leakage"
+    },
+    "thermal_source_package": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_second_sound_source_package.json",
+      "sha256": "8058eaa23f57e7c86cde8e57978e74ecb128edcf6d5c42b206fb0ade312dbcc2",
+      "status": "FIGURE_DERIVED_NORMALIZED_COMPARISON_READY_RAW_AUTHOR_C_SRC_OPEN"
+    },
+    "phase_pilot": {
+      "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_matter_space_coupled_diagnostic.json",
+      "sha256": "eb32d922c198bf29f96e219ba551f48ccef2b5723957e3edaa3d69f13c1818ab",
+      "status": "INTERNAL_DIAGNOSTIC",
+      "controlling_blocker": "inherited_core_prearrival_leakage"
+    },
+    "phase_topic_status": {
+      "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_closure_status_audit.json",
+      "sha256": "1d7c3f6b9de4c0f1d7579d3edfd23f9186f9b8bd189f2013e8095d6cecd2dcd1",
+      "status": "WARN",
+      "controlling_blocker": "ch_finite_k_replicate_temporal_acquisition_plan_defined_execution_open"
+    }
+  },
+  "summary": {
+    "core_gates_passed": 16,
+    "core_gates_total": 17,
+    "core_status": "FAIL",
+    "thermal_status": "SIMULATION_ONLY",
+    "thermal_internal_gate_status": "FAIL",
+    "thermal_dependency_status": "BLOCKED",
+    "phase_status": "INTERNAL_DIAGNOSTIC",
+    "phase_internal_gate_status": "PASS",
+    "phase_dependency_status": "BLOCKED",
+    "phase_topic_status_impact": "NONE",
+    "phase_topic_readiness": "Draft",
+    "phase_topic_tier": "B",
+    "phase_topic_controller": "ch_finite_k_replicate_temporal_acquisition_plan_defined_execution_open"
+  },
+  "gates": {
+    "ontology_separation": {
+      "status": "PASS",
+      "evidence": "C, Phi, and Pi are physical state; R is derived and has no feedback edge."
+    },
+    "internal_variational_and_ledger_closure": {
+      "status": "PASS",
+      "evidence": "Functional derivatives, conservation, dissipation sign, energy descent, ledgers, convergence, and the three-scale adiabatic limit pass in the normalized core verifier."
+    },
+    "causal_compact_support": {
+      "status": "FAIL",
+      "value": 0.017639381271029236,
+      "threshold": 1e-06,
+      "comparator": "le",
+      "arrival_speed_relative_error": 0.006036217303822644,
+      "arrival_speed_threshold": 0.05
+    },
+    "trace_no_backreaction": {
+      "status": "PASS",
+      "core_trace_history_physical_difference": 0.0,
+      "phase_trace_history_physical_difference": 0.0
+    },
+    "pilot_energy_ledgers": {
+      "status": "WARN",
+      "evidence_state": "PASS_WITH_DISCLOSED_POST_DIAGNOSTIC_NUMERICAL_AMENDMENTS",
+      "locked_runs_passed": false,
+      "refined_runs_passed": true,
+      "blind_preregistration": false,
+      "physical_parameters_changed": false,
+      "thresholds_changed": false
+    },
+    "thermal_control": {
+      "status": "FAIL",
+      "claim_class": "SIMULATION_ONLY",
+      "dependency_status": "BLOCKED",
+      "failed_gates": [
+        "prearrival_leakage",
+        "external_source_ready"
+      ],
+      "external_source_package_status": "FIGURE_DERIVED_NORMALIZED_COMPARISON_READY_RAW_AUTHOR_C_SRC_OPEN"
+    },
+    "phase_transition_diagnostic": {
+      "status": "PASS",
+      "claim_class": "INTERNAL_DIAGNOSTIC",
+      "dependency_status": "BLOCKED",
+      "topic_status_impact": "NONE",
+      "topic_controller_unchanged": "ch_finite_k_replicate_temporal_acquisition_plan_defined_execution_open"
+    },
+    "SI_units": {
+      "status": "BLOCKED",
+      "reason": "No lane-specific observable map, dimensional coefficients, or SI ledger contract exists in v1."
+    },
+    "external_validation": {
+      "status": "BLOCKED",
+      "reason": "The thermal source package is metadata-only and no Phi-to-observable map with units and extraction uncertainty exists."
+    },
+    "artifact_integrity": {
+      "status": "PASS",
+      "checked_output_count": 10,
+      "checked_dependency_count": 3,
+      "checks": [
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/03_show_Result/matter_space_thermal_control_timeseries.csv",
+          "expected_sha256": "792528ea06ee615ab9ae20cb797af895f86b9025ecfa88e35843008650898b60",
+          "exists": true,
+          "actual_sha256": "792528ea06ee615ab9ae20cb797af895f86b9025ecfa88e35843008650898b60",
+          "match": true
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/03_show_Result/matter_space_thermal_phase_lag.png",
+          "expected_sha256": "a83e271128c066e0b514ce08f7763e55cdde5a43731c2722adbc4f691916673a",
+          "exists": true,
+          "actual_sha256": "a83e271128c066e0b514ce08f7763e55cdde5a43731c2722adbc4f691916673a",
+          "match": true
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/03_show_Result/matter_space_thermal_hysteresis.png",
+          "expected_sha256": "2e60f37e47d943c64f4fe3dfaafdfb8482a865f020c5eb21205d7e968a83e9fb",
+          "exists": true,
+          "actual_sha256": "2e60f37e47d943c64f4fe3dfaafdfb8482a865f020c5eb21205d7e968a83e9fb",
+          "match": true
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/03_show_Result/matter_space_thermal_causal_arrival.png",
+          "expected_sha256": "a6a53713114591d0f2ae0b289a3ea5889774d3d120f783ec1b7ff10c55f3f1bb",
+          "exists": true,
+          "actual_sha256": "a6a53713114591d0f2ae0b289a3ea5889774d3d120f783ec1b7ff10c55f3f1bb",
+          "match": true
+        },
+        {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/03_show_Result/matter_space_thermal_ledger.png",
+          "expected_sha256": "f0bf947ef6820a4e9883cce58371ece276bf3595d038deb097f0aa53f15bc6a9",
+          "exists": true,
+          "actual_sha256": "f0bf947ef6820a4e9883cce58371ece276bf3595d038deb097f0aa53f15bc6a9",
+          "match": true
+        },
+        {
+          "path": "docs/topics/0.11_Phase_Transitions/Result/03_show_Result/matter_space_coupled_profiles.csv",
+          "expected_sha256": "b2811f60d371e5a2a71ffa9a7fccd2265cc6f3a8d895446b246d8aae4a29add6",
+          "exists": true,
+          "actual_sha256": "b2811f60d371e5a2a71ffa9a7fccd2265cc6f3a8d895446b246d8aae4a29add6",
+          "match": true
+        },
+        {
+          "path": "docs/topics/0.11_Phase_Transitions/Result/03_show_Result/matter_space_coupled_profiles.png",
+          "expected_sha256": "aab613f6c7532dbc53f8889e7317239d5ed30f318009e29bd42457355ee761fc",
+          "exists": true,
+          "actual_sha256": "aab613f6c7532dbc53f8889e7317239d5ed30f318009e29bd42457355ee761fc",
+          "match": true
+        },
+        {
+          "path": "docs/topics/0.11_Phase_Transitions/Result/03_show_Result/matter_space_coupled_ledger.png",
+          "expected_sha256": "47069e1be366c90198fcbe18c61bad7a2687aa983b5851265ad60bcf2a6445ce",
+          "exists": true,
+          "actual_sha256": "47069e1be366c90198fcbe18c61bad7a2687aa983b5851265ad60bcf2a6445ce",
+          "match": true
+        },
+        {
+          "path": "docs/topics/0.11_Phase_Transitions/Result/03_show_Result/matter_space_adiabatic_limit.png",
+          "expected_sha256": "5373d1fe55ad8f142cc50e26098612c8ecbdad40abd2361a41ff68c50f07331a",
+          "exists": true,
+          "actual_sha256": "5373d1fe55ad8f142cc50e26098612c8ecbdad40abd2361a41ff68c50f07331a",
+          "match": true
+        },
+        {
+          "path": "docs/topics/0.11_Phase_Transitions/Result/03_show_Result/matter_space_history_invariance.png",
+          "expected_sha256": "c73e0695d00fe3ca65f3cafd9eb42bbe6ef1330bbfaf90ea77aded6abe5a6ff7",
+          "exists": true,
+          "actual_sha256": "c73e0695d00fe3ca65f3cafd9eb42bbe6ef1330bbfaf90ea77aded6abe5a6ff7",
+          "match": true
+        },
+        {
+          "consumer": "thermal_pilot",
+          "path": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
+          "expected_sha256": "ad8b6671df932457007b4f293ca3962890718c633204445467a2b5877f81c4b9",
+          "exists": true,
+          "actual_sha256": "ad8b6671df932457007b4f293ca3962890718c633204445467a2b5877f81c4b9",
+          "match": true
+        },
+        {
+          "consumer": "phase_pilot",
+          "path": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
+          "expected_sha256": "ad8b6671df932457007b4f293ca3962890718c633204445467a2b5877f81c4b9",
+          "exists": true,
+          "actual_sha256": "ad8b6671df932457007b4f293ca3962890718c633204445467a2b5877f81c4b9",
+          "match": true
+        },
+        {
+          "consumer": "phase_pilot",
+          "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_closure_status_audit.json",
+          "expected_sha256": "1d7c3f6b9de4c0f1d7579d3edfd23f9186f9b8bd189f2013e8095d6cecd2dcd1",
+          "exists": true,
+          "actual_sha256": "1d7c3f6b9de4c0f1d7579d3edfd23f9186f9b8bd189f2013e8095d6cecd2dcd1",
+          "match": true
+        }
+      ],
+      "core_artifact_status": "FAIL"
+    },
+    "artifact_layout": {
+      "status": "WARN",
+      "legacy_figure_count": 8,
+      "legacy_figure_paths": [
+        "docs/topics/0.13_Thermodynamic_Bridge/Result/03_show_Result/matter_space_thermal_phase_lag.png",
+        "docs/topics/0.13_Thermodynamic_Bridge/Result/03_show_Result/matter_space_thermal_hysteresis.png",
+        "docs/topics/0.13_Thermodynamic_Bridge/Result/03_show_Result/matter_space_thermal_causal_arrival.png",
+        "docs/topics/0.13_Thermodynamic_Bridge/Result/03_show_Result/matter_space_thermal_ledger.png",
+        "docs/topics/0.11_Phase_Transitions/Result/03_show_Result/matter_space_coupled_profiles.png",
+        "docs/topics/0.11_Phase_Transitions/Result/03_show_Result/matter_space_coupled_ledger.png",
+        "docs/topics/0.11_Phase_Transitions/Result/03_show_Result/matter_space_adiabatic_limit.png",
+        "docs/topics/0.11_Phase_Transitions/Result/03_show_Result/matter_space_history_invariance.png"
+      ],
+      "required_canonical_location": "Result/02_Figures",
+      "impact": "layout warning only; JSON evidence and recorded hashes remain the controlling evidence"
+    }
+  },
+  "downstream_dependency_gates": {
+    "0.10_Fluid_Dynamics_Chaos": {
+      "status": "BLOCKED",
+      "next_requirement": "constitutive stress and history-dependent viscosity mapping"
+    },
+    "0.12_Vacuum_Energy_Casimir": {
+      "status": "BLOCKED",
+      "next_requirement": "ordered-space boundary interpretation without identifying Phi with vacuum substance"
+    },
+    "0.19_Gravity_GR": {
+      "status": "BLOCKED",
+      "next_requirement": "geometry and Lorentz-covariant bridge"
+    },
+    "0.23_Unity_Scale_Link": {
+      "status": "BLOCKED",
+      "next_requirement": "SI units and cross-scale parameter policy"
+    },
+    "0.1_Galaxy_Rotation_Problem": {
+      "status": "BLOCKED",
+      "next_requirement": "full curves, uncertainties, baryonic and instantaneous baselines, history policy, locked parameters, and holdout"
+    },
+    "0.26_Cosmic_Dynamic_Frame": {
+      "status": "BLOCKED",
+      "next_requirement": "passing core causality plus 0.1 evidence and a causal-memory parameter policy"
+    }
+  },
+  "deferred_foundation": {
+    "topics": [
+      "0.5_Nuclear_Binding_Hadrons",
+      "0.6_Electroweak_Physics",
+      "0.7_Neutrino_Physics",
+      "0.9_Quantum_Nonlocality",
+      "0.17_Mass_Generation",
+      "0.20_Atomic_Physics"
+    ],
+    "entry_requirements": [
+      "Lorentz-covariant action",
+      "spinor representation",
+      "conserved current",
+      "CPT gates"
+    ],
+    "claim_state": "NOT_ESTABLISHED_DEFERRED"
+  },
+  "falsification_state": {
+    "causal_response_outside_declared_cone": "TRIGGERED_FOR_CURRENT_DISCRETIZATION",
+    "coupling_indistinguishable_from_numerical_error": "NOT_TRIGGERED_IN_0.11_PILOT",
+    "energy_ledger_cannot_close": "NOT_TRIGGERED_AFTER_DISCLOSED_DT_REFINEMENT",
+    "trace_feedback_required": "NOT_TRIGGERED",
+    "new_mass_or_energy_identity_required": "NOT_TRIGGERED",
+    "single_dataset_fit_required": "NOT_TESTED_EXTERNAL_DATA_ABSENT",
+    "interpretation": "The current physical spacetime-response interpretation is blocked; this does not by itself reject the entire effective ontology or variational model."
+  },
+  "claim_boundary": {
+    "allowed": [
+      "matter-space equation as a candidate normalized effective model",
+      "Phi as an effective space-response variable",
+      "R as a derived causal observable with no backreaction",
+      "0.13 as synthetic control / simulation-only",
+      "0.11 as internal diagnostic",
+      "space subsystem openness as a constitutive ansatz"
+    ],
+    "blocked": [
+      "universe globally proven to be an open system",
+      "Phi established as spacetime geometry, ether, metric tensor, antimatter, or particle",
+      "R established as matter, energy, or an independent information field",
+      "external thermodynamic validation",
+      "Dirac, positron, neutrino, or CPT derivation",
+      "galaxy dynamics or dark-matter replacement"
+    ]
+  },
+  "next_controller": "repair or replace the physical-response discretization so pre-arrival leakage is <= 1e-6 without clipping or cone padding"
+}

@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-CONTRACT = ROOT / "docs/core/artifacts/uet_major_result_closure_contract.json"
+CONTRACT = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_contract.json"
 FULL_GATE = ROOT / "docs/scripts/audit/audit_topic13_full_bridge_gate.py"
 
 

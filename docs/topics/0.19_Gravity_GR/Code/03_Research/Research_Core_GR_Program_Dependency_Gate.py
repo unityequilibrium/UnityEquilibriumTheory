@@ -10,7 +10,6 @@ from __future__ import annotations
 
 import hashlib
 import json
-import platform
 import sys
 from datetime import UTC, datetime
 from pathlib import Path
@@ -32,12 +31,12 @@ TOPIC = "0.19_Gravity_GR"
 TOPIC_DIR = ROOT / "docs" / "topics" / TOPIC
 ARTIFACT_DIR = TOPIC_DIR / "Result" / "artifacts"
 
-CORE_PROGRAM = ROOT / "docs/core/artifacts/uet_gr_research_program_gate.json"
-CORE_CLOSED_LIMIT = ROOT / "docs/core/artifacts/gr_closed_limit_verification.json"
-CORE_BALANCE = ROOT / "docs/core/artifacts/covariant_bianchi_exchange_verification.json"
-CORE_CAUSAL = ROOT / "docs/core/artifacts/causal_nonclosed_kernel_verification.json"
-CORE_REDUCTION = ROOT / "docs/core/artifacts/covariant_matter_space_reduction_verification.json"
-CORE_STATE_MAP = ROOT / "docs/core/artifacts/noether_phase_field_dependency_gate.json"
+CORE_PROGRAM = ROOT / "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json"
+CORE_CLOSED_LIMIT = ROOT / "docs/core/07_artifacts/verification/gr_closed_limit_verification.json"
+CORE_BALANCE = ROOT / "docs/core/07_artifacts/verification/covariant_bianchi_exchange_verification.json"
+CORE_CAUSAL = ROOT / "docs/core/07_artifacts/verification/causal_nonclosed_kernel_verification.json"
+CORE_REDUCTION = ROOT / "docs/core/07_artifacts/verification/covariant_matter_space_reduction_verification.json"
+CORE_STATE_MAP = ROOT / "docs/core/07_artifacts/gates/noether_phase_field_dependency_gate.json"
 TOPIC_PRIMARY = ARTIFACT_DIR / "0_19_gravity_gr_verification.json"
 TOPIC_BRANCH_GATE = TOPIC_DIR / "Data/03_Research/branch_claim_gate.json"
 READINESS_METADATA = ROOT / "docs/meta/topic_readiness.json"
@@ -404,8 +403,10 @@ def build_artifact() -> dict[str, Any]:
             "benchmarks and covariant completion blocked. No global-universe or validation claim is promoted."
         ),
         "environment": {
-            "python_version": platform.python_version(),
-            "platform": platform.platform(),
+            # Keep this provenance field portable: the artifact is compared in
+            # local and CI runtimes, while scientific inputs are hashed separately.
+            "python_version": f"{sys.version_info.major}.{sys.version_info.minor}",
+            "platform": "portable-research-runtime",
         },
     }
 

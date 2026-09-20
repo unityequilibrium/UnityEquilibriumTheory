@@ -28,14 +28,14 @@ def append_once(relative: str, marker: str, body: str) -> None:
 def main() -> int:
     day = date.today().isoformat()
     package = digest("docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_nep_bte_reproduction_source_package.json")
-    audit = digest("docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json")
+    audit = digest("docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_reproduction_audit.json")
     full = digest("docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json")
-    register = digest("docs/core/artifacts/uet_major_result_closure_register.json")
-    dependency = digest("docs/core/artifacts/uet_major_result_dependency_unlock_gate.json")
-    candidate = digest("docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json")
-    isotope = digest("docs/core/artifacts/t13_calorine_isotope_mass_sensitivity_audit.json")
-    uncertainty = digest("docs/core/artifacts/t13_calorine_state_uncertainty_decomposition_audit.json")
-    acceptance = digest("docs/core/artifacts/t13_independent_csrc_acceptance_contract.json")
+    register = digest("docs/core/07_artifacts/gates/uet_major_result_closure_register.json")
+    dependency = digest("docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json")
+    candidate = digest("docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json")
+    isotope = digest("docs/core/07_artifacts/topic13/t13_calorine_isotope_mass_sensitivity_audit.json")
+    uncertainty = digest("docs/core/07_artifacts/topic13/t13_calorine_state_uncertainty_decomposition_audit.json")
+    acceptance = digest("docs/core/07_artifacts/topic13/t13_independent_csrc_acceptance_contract.json")
 
     update = f"""### {day} - Calorine/Zenodo PBTE numeric C_src reproduction
 

@@ -17,7 +17,7 @@ replacements = [
         '        "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_graphite_cv_uncertainty_boundary_source_package.json"\n'
         '    )\n'
         '    phonix_path, phonix = load(\n'
-        '        "docs/core/artifacts/t13_phonix_mp47_graphite_comparator_audit.json"\n'
+        '        "docs/core/07_artifacts/topic13/t13_phonix_mp47_graphite_comparator_audit.json"\n'
         '    )\n',
     ),
     (

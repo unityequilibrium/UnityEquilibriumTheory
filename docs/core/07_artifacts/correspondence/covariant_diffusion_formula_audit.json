@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "artifact": "covariant_diffusion_formula_audit",
+  "generated_at": "2026-09-17T18:10:46.856599+00:00",
+  "status": "WARN",
+  "implementation_status": "PRESENT",
+  "derivation_status": "constitutive current reduction with exact discrete identities; microscopic and full hyperbolic phase-field derivations remain open",
+  "unit_lane": "natural_to_normalized",
+  "formula_registry": [
+    {
+      "id": "current_frame_decomposition",
+      "implementation": "docs/core/02_equations/covariant/uet_covariant_diffusion.py::decompose_noether_current",
+      "status": "IMPLEMENTED_KINEMATIC"
+    },
+    {
+      "id": "finite_relaxation_current",
+      "implementation": "docs/core/02_equations/covariant/uet_covariant_diffusion.py::causal_current_rhs",
+      "status": "IMPLEMENTED_CONSTITUTIVE"
+    },
+    {
+      "id": "semi_discrete_energy_identity",
+      "implementation": "docs/core/02_equations/covariant/uet_covariant_diffusion.py::current_energy_balance",
+      "status": "IMPLEMENTED_EXACT"
+    },
+    {
+      "id": "model_b_adiabatic_limit",
+      "implementation": "docs/core/02_equations/covariant/uet_covariant_diffusion.py::compare_adiabatic_limit",
+      "status": "IMPLEMENTED_EXACT_DISCRETE"
+    }
+  ],
+  "completed_formula_gates": [
+    "regular_epsilon_nested_matter_coupling",
+    "conserved_current_energy_identity",
+    "model_b_matter_equation_map",
+    "local_convex_characteristic_control",
+    "external_hyperbolic_phase_field_comparator_formula",
+    "fixed_light_cone_parameter_inequalities",
+    "external_q_to_local_current_law_map",
+    "noether_charge_to_phase_coordinate_affine_map",
+    "microscopic_and_coarse_graining_noninvertibility"
+  ],
+  "open_formula_gates": [
+    "microscopic_amplitude_to_charge_density_matching",
+    "first_order_hyperbolic_gradient_phase_field",
+    "spinodal_hyperbolicity_and_stability",
+    "closed_time_path_kms_transport_derivation",
+    "dissipative_current_coupled_bianchi_identity",
+    "curved_3p1_transport_solver",
+    "system_specific_SI_map",
+    "physical_validation"
+  ],
+  "epsilon_denominator_lines": [],
+  "source_hashes": {
+    "docs\\core\\02_equations\\covariant\\uet_covariant_diffusion.py": "a267b89e39db4a8dfac56e71a070539a9da05a55b8bb8b22216e7fd1b839bc53",
+    "docs\\core\\01_contracts\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "a52cbdb0cb9dd2f65be4813fd7b57da9a995f4ab9039d4631f95928f0997a8bf",
+    "docs\\core\\07_artifacts\\verification\\covariant_matter_action_verification.json": "2ec96e2aee84729ab3ea2ef6ccf8bd3b804c3718a388e20eb4f78a399f064a51"
+  },
+  "downstream_hyperbolic_phase_field": {
+    "artifact": "hyperbolic_phase_field_external_comparator_verification.json",
+    "audit_status": "PASS",
+    "evidence_status": "PARTIAL_EXTERNAL_COMPARATOR",
+    "role": "external_fixed_parameter_formula_comparator",
+    "causal_feasibility_artifact": "hyperbolic_phase_field_causal_feasibility.json",
+    "causal_feasibility_status": "PASS",
+    "fixed_light_cone_parameter_domain": "PASS_NORMALIZED_ANALYTIC",
+    "uniform_subluminal_limit": "NO_GO_EXACT_PARABOLIC_LIMIT",
+    "uet_derivation": "BLOCKED"
+  },
+  "downstream_noether_phase_field_state_map": {
+    "artifact": "noether_phase_field_state_map_verification.json",
+    "audit_status": "PASS",
+    "evidence_status": "PARTIAL_HYDRODYNAMIC_STATE_COORDINATE_MAP",
+    "role": "hydrodynamic_state_coordinate_map_not_microscopic_derivation",
+    "affine_fixed_scale_layer": "PASS",
+    "microscopic_reconstruction": "NO_GO_MANY_TO_ONE",
+    "equation_of_state_and_transport": "BLOCKED"
+  }
+}

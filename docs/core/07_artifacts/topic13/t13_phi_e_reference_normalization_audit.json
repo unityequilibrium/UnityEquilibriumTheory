@@ -1,0 +1,90 @@
+{
+  "schema_version": "t13-phi-e-reference-normalization-v1",
+  "artifact": "t13_phi_e_reference_normalization_audit",
+  "generated_at": "2026-09-18",
+  "status": "PASS_NAMED_PHI_E_REFERENCE_NORMALIZATION",
+  "major_result": {
+    "major_result_id": "T13_PHI_E_REFERENCE_NORMALIZATION",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "a source-backed reference energy density convention e0_ref=c_v(T_ref)*T_ref for named Phi_E",
+      "a dimensional Phi_E-to-quasi-temperature operator with alpha(T_ref)=T_ref by convention",
+      "an explicit uncertainty boundary and non-identity with base Phi"
+    ],
+    "equation_or_mapping": {
+      "branch_id": "T13-PHI-E-CVREF-001",
+      "definition": "e0_ref=c_v(T_ref)*T_ref; Phi_E=Delta_u/e0_ref",
+      "temperature_map": "Delta_Tq=(e0_ref/c_v(T))*Phi_E",
+      "reference_identity": "alpha_Phi_E_K(T_ref)=T_ref by coordinate convention",
+      "e0_ref": "J m^-3",
+      "c_v": "J m^-3 K^-1",
+      "T_ref": "K",
+      "Phi_E": "dimensionless named energy-response coordinate",
+      "alpha_Phi_E_K": "K per normalized Phi_E",
+      "uncertainty": "source c_v uncertainty cancels only in alpha(T_ref)=T_ref because e0_ref and denominator use the same row; this is not a physical calibration uncertainty",
+      "base_Phi_identity": "not asserted; base Phi-to-Phi_E remains open",
+      "C_identity": "c_v is not UET C and Phi_E is not UET C",
+      "R_gen_identity": "derived history trace only; absent and non-backreacting"
+    },
+    "units": {
+      "e0_ref": "J m^-3",
+      "c_v": "J m^-3 K^-1",
+      "T_ref": "K",
+      "Phi_E": "dimensionless",
+      "alpha_Phi_E_K": "K per normalized Phi_E"
+    },
+    "derivation_class": "source-backed coordinate convention and standard energy/heat-capacity dimensional map",
+    "observable": "named Phi_E energy-response/quasi-temperature operator only",
+    "data_role": "INDEPENDENT_REFERENCE_NORMALIZATION_NOT_BASE_PHI_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/mp48_independent_graphite_cv_source_package.json",
+        "sha256": "86f5d5015b5bd0172bc2bfae64271955c56470650bdb6b8459bb1280e5dbc3cf"
+      },
+      {
+        "path": "docs/core/03_lanes/thermal/thermal_energy_response_bridge.py",
+        "sha256": "ce64f2fc25fe6a96d60c63a5d581686dfa3af0ab751e70160482845ee889f1d2"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_phi_e_reference_normalization_audit.json"
+      }
+    ],
+    "verification_status": "PASS_NAMED_PHI_E_REFERENCE_NORMALIZATION",
+    "open_blockers": [
+      "base_Phi_to_Phi_E_mapping_missing",
+      "Ding_specific_PBTE_C_src_and_material_matching_missing",
+      "physical_field_normalization_and_independent_base_alpha_Phi_K_missing",
+      "EOS_transport_SK_KMS_entropy_and_dissipative_closure_missing"
+    ],
+    "dependency_unlocked": "named Phi_E dimensional operator only; no base-Phi bridge, full Topic 13, Core, or external-validation unlock",
+    "claim_boundary": "The reference alpha is a coordinate convention in Phi_E, not a derived or calibrated alpha_Phi_K for base UET Phi."
+  },
+  "reference_row": {
+    "temperature_K": 300.0,
+    "row_identity": "source_grid",
+    "heat_capacity_J_per_mol_cell_K": 34.791236430507276,
+    "volumetric_cv_J_per_m3_K": 1638091.3941289356
+  },
+  "reference_energy_density_J_per_m3": 491427418.2386807,
+  "witness": {
+    "delta_u_J_per_m3": 122856854.55967018,
+    "Phi_E": 0.25,
+    "alpha_Phi_E_K_at_reference": 300.0
+  },
+  "checks": {
+    "source_is_independent_cv_comparator": true,
+    "reference_row_is_source_grid": true,
+    "reference_identity": true,
+    "energy_normalization_round_trip": true,
+    "base_phi_map_remains_open": true,
+    "no_target_or_holdout": true
+  },
+  "numeric_base_alpha_Phi_K_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "base_Phi_to_Phi_E_mapping_and_independent_base_alpha_Phi_K_missing",
+  "next_controller": "Obtain an independent physical amplitude mapping from base Phi to Phi_E or retain Phi_E as a separate lane; do not use the coordinate convention as a base-Phi calibration.",
+  "claim_boundary": "No base-Phi alpha, TTG fit, physical field normalization, or external validation is emitted."
+}

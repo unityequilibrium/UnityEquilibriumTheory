@@ -17,8 +17,8 @@ MP48_PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "mp48_independent_graphite_cv_source_package.json"
 )
-MP48_AUDIT = ROOT / "docs/core/artifacts/t13_mp48_independent_graphite_cv_audit.json"
-OUT = ROOT / "docs/core/artifacts/t13_ding_c_src_independent_reproduction_boundary_audit.json"
+MP48_AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_mp48_independent_graphite_cv_audit.json"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_ding_c_src_independent_reproduction_boundary_audit.json"
 
 
 def digest(path: Path) -> str:

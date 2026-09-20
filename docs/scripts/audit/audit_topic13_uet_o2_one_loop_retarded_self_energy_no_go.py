@@ -23,10 +23,10 @@ from docs.core.uet_covariant_matter import CovariantMatterConfig  # noqa: E402
 from docs.core.uet_covariant_response import CovariantResponseConfig  # noqa: E402
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_one_loop_retarded_self_energy_no_go_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_one_loop_retarded_self_energy_no_go.py"
-ACTION_MODULE = ROOT / "docs/core/uet_covariant_matter.py"
-CHARGED_MODULE = ROOT / "docs/core/uet_o2_finite_density_charged_vertex.py"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_one_loop_retarded_self_energy_no_go_audit.json"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_one_loop_retarded_self_energy_no_go.py"
+ACTION_MODULE = ROOT / "docs/core/02_equations/covariant/uet_covariant_matter.py"
+CHARGED_MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_finite_density_charged_vertex.py"
 
 
 def sha256(path: Path) -> str:
@@ -73,9 +73,9 @@ def main() -> int:
         "BLOCKED_ACTION_DERIVED_ONE_LOOP_RETARDED_SELF_ENERGY_NO_GO"
     )
     evidence = [
-        {"path": "docs/core/uet_o2_one_loop_retarded_self_energy_no_go.py", "sha256": sha256(MODULE)},
-        {"path": "docs/core/uet_covariant_matter.py", "sha256": sha256(ACTION_MODULE)},
-        {"path": "docs/core/uet_o2_finite_density_charged_vertex.py", "sha256": sha256(CHARGED_MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_one_loop_retarded_self_energy_no_go.py", "sha256": sha256(MODULE)},
+        {"path": "docs/core/02_equations/covariant/uet_covariant_matter.py", "sha256": sha256(ACTION_MODULE)},
+        {"path": "docs/core/02_equations/o2/uet_o2_finite_density_charged_vertex.py", "sha256": sha256(CHARGED_MODULE)},
     ]
     artifact = {
         "schema_version": "t13-uet-o2-one-loop-retarded-self-energy-no-go-v1",
@@ -128,7 +128,7 @@ def main() -> int:
         "closure_level": "CLOSED_AS_NO_GO" if not failed else "OPEN",
         "data_role": state.data_role,
         "audit": {
-            "path": "docs/core/artifacts/t13_uet_o2_one_loop_retarded_self_energy_no_go_audit.json",
+            "path": "docs/core/07_artifacts/topic13/t13_uet_o2_one_loop_retarded_self_energy_no_go_audit.json",
             "summary": {
                 "status": status,
                 "major_result_id": "T13_UET_O2_ONE_LOOP_RETARDED_SELF_ENERGY_NO_GO",

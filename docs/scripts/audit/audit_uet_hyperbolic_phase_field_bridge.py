@@ -22,6 +22,11 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 
+from docs.core.core_paths import (  # noqa: E402
+    CANONICAL_ARTIFACT_ROOT,
+    canonical_artifact_path,
+    canonical_existing_path,
+)
 from docs.core.uet_hyperbolic_phase_field import (
     HyperbolicPhaseFieldConfig,
     compare_augmented_to_cahn_hilliard_chemical,
@@ -40,11 +45,17 @@ from docs.scripts.audit.uet_gr_monotonic_stage import (
     apply_latest_hyperbolic_phase_field_stage,
 )
 
-OUT = ROOT / "docs/core/artifacts"
-CORE = ROOT / "docs/core/uet_hyperbolic_phase_field_bridge.py"
-COMPARATOR = ROOT / "docs/core/uet_hyperbolic_phase_field.py"
-DIFFUSION = ROOT / "docs/core/uet_covariant_diffusion.py"
-SPEC = ROOT / "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
+OUT = CANONICAL_ARTIFACT_ROOT
+CORE = canonical_existing_path(
+    ROOT / "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field_bridge.py"
+)
+COMPARATOR = canonical_existing_path(
+    ROOT / "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field.py"
+)
+DIFFUSION = canonical_existing_path(
+    ROOT / "docs/core/02_equations/covariant/uet_covariant_diffusion.py"
+)
+SPEC = canonical_existing_path(ROOT / "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md")
 JAIN_KOVTUN = (
     ROOT
     / "docs/data/external/relativistic_transport/jain_kovtun_2024"
@@ -56,12 +67,27 @@ CROSSLEY_GLORIOSO_LIU = (
     / "source_record.json"
 )
 COMPARATOR_ARTIFACT = (
-    OUT / "hyperbolic_phase_field_external_comparator_verification.json"
+    canonical_artifact_path(
+        "hyperbolic_phase_field_external_comparator_verification.json",
+        "verification",
+    )
 )
+
+_OUTPUT_DOMAINS = {
+    "hyperbolic_phase_field_causal_feasibility.json": "verification",
+    "hyperbolic_phase_field_bridge_formula_audit.json": "correspondence",
+    "hyperbolic_phase_field_covariant_mapping_gate.json": "gates",
+    "uet_gr_research_program_gate.json": "gates",
+}
 
 
 def _sha(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _rel(path: Path) -> str:
+    """Return repository-relative paths with one platform-independent spelling."""
+    return path.relative_to(ROOT).as_posix()
 
 
 def _load(path: Path) -> dict[str, Any]:
@@ -70,9 +96,16 @@ def _load(path: Path) -> dict[str, Any]:
 
 def _jsonable(value: Any) -> Any:
     if isinstance(value, np.ndarray):
-        return value.tolist()
+        return _jsonable(value.tolist())
     if isinstance(value, np.generic):
-        return value.item()
+        return _jsonable(value.item())
+    if isinstance(value, float):
+        # Keep generated numeric diagnostics stable across BLAS/NumPy builds.
+        # This only canonicalizes serialization; it does not alter pass/fail
+        # calculations, which are evaluated before the artifact is written.
+        if abs(value) < 1.0e-12:
+            return 0.0
+        return float(f"{value:.12f}")
     if isinstance(value, dict):
         return {key: _jsonable(item) for key, item in value.items()}
     if isinstance(value, (list, tuple)):
@@ -81,10 +114,12 @@ def _jsonable(value: Any) -> Any:
 
 
 def _dump(name: str, payload: dict[str, Any]) -> None:
-    OUT.mkdir(parents=True, exist_ok=True)
-    (OUT / name).write_text(
+    path = canonical_artifact_path(name, _OUTPUT_DOMAINS.get(name))
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
         json.dumps(_jsonable(payload), indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
+        newline="\n",
     )
 
 
@@ -145,7 +180,7 @@ def _source_provenance() -> dict[str, Any]:
         all_pass = all_pass and status == "PASS"
         records.append(
             {
-                "path": str(path.relative_to(ROOT)),
+                "path": _rel(path),
                 "title": payload["title"],
                 "doi": payload["doi"],
                 "arxiv_id": payload["arxiv_id"],
@@ -164,7 +199,7 @@ def _source_provenance() -> dict[str, Any]:
         "status": "PASS" if all_pass else "FAIL",
         "records": records,
         "sourced_comparator_prerequisite": {
-            "artifact": str(COMPARATOR_ARTIFACT.relative_to(ROOT)),
+            "artifact": _rel(COMPARATOR_ARTIFACT),
             "audit_status": comparator.get("audit_status"),
             "evidence_status": comparator.get("evidence_status"),
             "passed": comparator_pass,
@@ -409,7 +444,7 @@ def build_artifacts() -> tuple[dict[str, Any], ...]:
         "PARTIAL_ANALYTIC_CAUSAL_BRIDGE" if audit_status == "PASS" else "BLOCKED"
     )
     source_hashes = {
-        str(path.relative_to(ROOT)): _sha(path)
+        _rel(path): _sha(canonical_existing_path(path))
         for path in (
             CORE,
             COMPARATOR,
@@ -442,10 +477,10 @@ def build_artifacts() -> tuple[dict[str, Any], ...]:
         "blocked_gates": blocked,
         "source_hashes": source_hashes,
         "input_identity": {
-            "external_comparator_artifact": str(COMPARATOR_ARTIFACT.relative_to(ROOT)),
+            "external_comparator_artifact": _rel(COMPARATOR_ARTIFACT),
             "source_records": [
-                str(JAIN_KOVTUN.relative_to(ROOT)),
-                str(CROSSLEY_GLORIOSO_LIU.relative_to(ROOT)),
+                _rel(JAIN_KOVTUN),
+                _rel(CROSSLEY_GLORIOSO_LIU),
             ],
         },
         "thresholds": {
@@ -498,25 +533,25 @@ def build_artifacts() -> tuple[dict[str, Any], ...]:
             {
                 "id": "symmetric_domain_shifted_curvature_bounds",
                 "origin": "derived_from_g_second_equals_3C_squared_minus_1",
-                "implementation": "docs/core/uet_hyperbolic_phase_field_bridge.py::shifted_curvature_domain_bounds",
+                "implementation": "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field_bridge.py::shifted_curvature_domain_bounds",
                 "status": "DERIVED_EXACT",
             },
             {
                 "id": "fixed_light_cone_parameter_bounds",
                 "origin": "derived_from_sourced_characteristic_speeds",
-                "implementation": "docs/core/uet_hyperbolic_phase_field_bridge.py::subluminal_parameter_bounds",
+                "implementation": "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field_bridge.py::subluminal_parameter_bounds",
                 "status": "DERIVED_EXACT_NORMALIZED",
             },
             {
                 "id": "fixed_cone_parabolic_no_common_limit",
                 "origin": "derived_from_tau_lower_bound_and_parabolic_target",
-                "implementation": "docs/core/uet_hyperbolic_phase_field_bridge.py::fixed_cone_parabolic_limit_no_go",
+                "implementation": "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field_bridge.py::fixed_cone_parabolic_limit_no_go",
                 "status": "DERIVED_EXACT_FOR_DECLARED_COMPARATOR",
             },
             {
                 "id": "external_q_to_current_law_map",
                 "origin": "algebraic_change_J_equals_q_over_tau",
-                "implementation": "docs/core/uet_hyperbolic_phase_field_bridge.py::map_external_flux_law_to_current",
+                "implementation": "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field_bridge.py::map_external_flux_law_to_current",
                 "status": "EXACT_LOCAL_MOBILITY_ONE_ONLY",
             },
         ],
@@ -539,12 +574,10 @@ def build_artifacts() -> tuple[dict[str, Any], ...]:
         "status": "BLOCKED",
         "evidence_status": evidence_status,
         "input_identity": {
-            "external_comparator_artifact": str(
-                COMPARATOR_ARTIFACT.relative_to(ROOT)
-            ),
+            "external_comparator_artifact": _rel(COMPARATOR_ARTIFACT),
             "source_records": [
-                str(JAIN_KOVTUN.relative_to(ROOT)),
-                str(CROSSLEY_GLORIOSO_LIU.relative_to(ROOT)),
+                _rel(JAIN_KOVTUN),
+                _rel(CROSSLEY_GLORIOSO_LIU),
             ],
         },
         "thresholds": {
@@ -575,11 +608,11 @@ def build_artifacts() -> tuple[dict[str, Any], ...]:
         },
         "external_requirement_sources": [
             {
-                "source": str(JAIN_KOVTUN.relative_to(ROOT)),
+                "source": _rel(JAIN_KOVTUN),
                 "role": "causal_relativistic_current_entropy_and_sk_kms_requirements",
             },
             {
-                "source": str(CROSSLEY_GLORIOSO_LIU.relative_to(ROOT)),
+                "source": _rel(CROSSLEY_GLORIOSO_LIU),
                 "role": "dissipative_ctp_local_kms_and_entropy_readiness_requirements",
             },
         ],
@@ -615,8 +648,8 @@ def build_artifacts() -> tuple[dict[str, Any], ...]:
         "benchmark_role": "program_gate",
         "method_label": "monotonic_gr_research_stage_gate",
         "input_identity": {
-            "causal_feasibility_artifact": "docs/core/artifacts/hyperbolic_phase_field_causal_feasibility.json",
-            "covariant_mapping_gate": "docs/core/artifacts/hyperbolic_phase_field_covariant_mapping_gate.json",
+            "causal_feasibility_artifact": "docs/core/07_artifacts/archive/hyperbolic_phase_field_causal_feasibility.json",
+            "covariant_mapping_gate": "docs/core/07_artifacts/gates/hyperbolic_phase_field_covariant_mapping_gate.json",
         },
         "notes": [
             "The controlling blocker is the physical density/order-parameter state map.",
@@ -667,7 +700,12 @@ def build_artifacts() -> tuple[dict[str, Any], ...]:
     apply_latest_hyperbolic_phase_field_stage(
         OUT, verification, formula, mapping, program
     )
-    return verification, formula, mapping, program
+    # Return the exact canonical payload shape used by the JSON writer so
+    # stability tests are independent of NumPy scalar/array representations.
+    return tuple(
+        _jsonable(payload)
+        for payload in (verification, formula, mapping, program)
+    )
 
 
 def main() -> int:

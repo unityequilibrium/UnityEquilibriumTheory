@@ -1,0 +1,871 @@
+{
+  "artifact": "uet_core_python_family_migration_history",
+  "events": [
+    {
+      "applied_at": "2026-09-15T11:22:44+00:00",
+      "claim_boundary": "Organization migration only; no physics status or claim changed.",
+      "family": "o2_extended",
+      "files_moved": 86,
+      "generator": "docs/scripts/audit/migrate_uet_core_python_family_v3.py",
+      "moves": [
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_action_1pi_sunset_euclidean.py",
+          "legacy_path": "docs/core/uet_o2_action_1pi_sunset_euclidean.py",
+          "sha256_after": "6bb3af9671e253ba71ede617f98dd724dc089ca1cdb4fef4bdf3375f5e437073",
+          "sha256_before": "6bb3af9671e253ba71ede617f98dd724dc089ca1cdb4fef4bdf3375f5e437073"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_action_1pi_sunset_retarded.py",
+          "legacy_path": "docs/core/uet_o2_action_1pi_sunset_retarded.py",
+          "sha256_after": "faa8ebe67b6e816b66ad19f96f22242f88dc91aeba48c0cb2046fbcdb5b41932",
+          "sha256_before": "faa8ebe67b6e816b66ad19f96f22242f88dc91aeba48c0cb2046fbcdb5b41932"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_action_1pi_sunset_tensor.py",
+          "legacy_path": "docs/core/uet_o2_action_1pi_sunset_tensor.py",
+          "sha256_after": "ccff2807b70d519b0132dde8a0d79f949eeffd42c51c48ac36f396810ad0e21a",
+          "sha256_before": "ccff2807b70d519b0132dde8a0d79f949eeffd42c51c48ac36f396810ad0e21a"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_action_derived_transition_kernel.py",
+          "legacy_path": "docs/core/uet_o2_action_derived_transition_kernel.py",
+          "sha256_after": "2f818500b353e8cf81caddf892bcf2db43a4341fe831b6f67e62423e3c2feb8f",
+          "sha256_before": "2f818500b353e8cf81caddf892bcf2db43a4341fe831b6f67e62423e3c2feb8f"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_action_sunset_1pi_spectral.py",
+          "legacy_path": "docs/core/uet_o2_action_sunset_1pi_spectral.py",
+          "sha256_after": "b0265da3808352deb526bbbe911c4f87cbec3d9d7f40a4fc4d9bdf2c6e627e2b",
+          "sha256_before": "b0265da3808352deb526bbbe911c4f87cbec3d9d7f40a4fc4d9bdf2c6e627e2b"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_action_sunset_zero_eta.py",
+          "legacy_path": "docs/core/uet_o2_action_sunset_zero_eta.py",
+          "sha256_after": "89e1d55e1f3d05b7129fc7b3f0ff35c7a8f83e28cb954874727309e1e0371e44",
+          "sha256_before": "89e1d55e1f3d05b7129fc7b3f0ff35c7a8f83e28cb954874727309e1e0371e44"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+          "legacy_path": "docs/core/uet_o2_action_thermal_observable_bridge.py",
+          "sha256_after": "a1be58b8230240775654e7c0d6265870010f546238e96e59e36045e6a893e5d2",
+          "sha256_before": "a1be58b8230240775654e7c0d6265870010f546238e96e59e36045e6a893e5d2"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
+          "legacy_path": "docs/core/uet_o2_action_thermal_stiffness_beta.py",
+          "sha256_after": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6",
+          "sha256_before": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_auxiliary_field_condensed.py",
+          "legacy_path": "docs/core/uet_o2_auxiliary_field_condensed.py",
+          "sha256_after": "588e676a0097fa06393b0b9542af846c4156ff869247521856b753b9d4fa9c1d",
+          "sha256_before": "588e676a0097fa06393b0b9542af846c4156ff869247521856b753b9d4fa9c1d"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_beta_correspondence.py",
+          "legacy_path": "docs/core/uet_o2_beta_correspondence.py",
+          "sha256_after": "c14a81e8b1ef8f9a953592ec1ff667ca5e1f2f91e75986f70a45e12efc85db84",
+          "sha256_before": "c14a81e8b1ef8f9a953592ec1ff667ca5e1f2f91e75986f70a45e12efc85db84"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_charge_conserving_ladder_response.py",
+          "legacy_path": "docs/core/uet_o2_charge_conserving_ladder_response.py",
+          "sha256_after": "d01d7d04bbdb2e86ac660c0e7fb18052e33b0efd75ccb6b8bc61c8649d452eea",
+          "sha256_before": "d01d7d04bbdb2e86ac660c0e7fb18052e33b0efd75ccb6b8bc61c8649d452eea"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_charged_current_correlator.py",
+          "legacy_path": "docs/core/uet_o2_charged_current_correlator.py",
+          "sha256_after": "991e38719578b9caf5b19be98bc3987db6a6a1ffae62d9b17e43203075077c59",
+          "sha256_before": "991e38719578b9caf5b19be98bc3987db6a6a1ffae62d9b17e43203075077c59"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_collisionless_kubo.py",
+          "legacy_path": "docs/core/uet_o2_collisionless_kubo.py",
+          "sha256_after": "ca2013138f968ab01272d4df54404ed1bf103b6ff6bb45a373ac75b34170096c",
+          "sha256_before": "ca2013138f968ab01272d4df54404ed1bf103b6ff6bb45a373ac75b34170096c"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_condensate_fluctuations.py",
+          "legacy_path": "docs/core/uet_o2_condensate_fluctuations.py",
+          "sha256_after": "d7085c664ca116c3b3fb57ed5dd19a9005e04d427d5a65407c846b043bde824d",
+          "sha256_before": "d7085c664ca116c3b3fb57ed5dd19a9005e04d427d5a65407c846b043bde824d"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_condensate_gaussian_thermal.py",
+          "legacy_path": "docs/core/uet_o2_condensate_gaussian_thermal.py",
+          "sha256_after": "589b832c3baaf99ed8b9bf8afdab0602fb4de6d129098116d11797e1af519dc5",
+          "sha256_before": "589b832c3baaf99ed8b9bf8afdab0602fb4de6d129098116d11797e1af519dc5"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_condensed_dissipative_transport_identifiability_no_go.py",
+          "legacy_path": "docs/core/uet_o2_condensed_dissipative_transport_identifiability_no_go.py",
+          "sha256_after": "91d3256f4ca4cb7818d396809eeaf055ae92aab6825c5e0d8ef5c086867e123e",
+          "sha256_before": "91d3256f4ca4cb7818d396809eeaf055ae92aab6825c5e0d8ef5c086867e123e"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_condensed_loop_renormalized_vertex.py",
+          "legacy_path": "docs/core/uet_o2_condensed_loop_renormalized_vertex.py",
+          "sha256_after": "6384e8bc5553b696c17a079b93fd97df95b8f545475732b2a23f7133f03fe0dc",
+          "sha256_before": "6384e8bc5553b696c17a079b93fd97df95b8f545475732b2a23f7133f03fe0dc"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_condensed_relative_flow_collision.py",
+          "legacy_path": "docs/core/uet_o2_condensed_relative_flow_collision.py",
+          "sha256_after": "d311f7106787e92638ac6a8d3d48a5b4d0ea6dbd688d83a52b2be824dff82d21",
+          "sha256_before": "d311f7106787e92638ac6a8d3d48a5b4d0ea6dbd688d83a52b2be824dff82d21"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_condensed_relative_flow_kubo_admission.py",
+          "legacy_path": "docs/core/uet_o2_condensed_relative_flow_kubo_admission.py",
+          "sha256_after": "92dea65cf85d2fc2054e4f5c0b293712d2ea0b8b0df65ffa5e4b95de9dd2df67",
+          "sha256_before": "92dea65cf85d2fc2054e4f5c0b293712d2ea0b8b0df65ffa5e4b95de9dd2df67"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_condensed_retarded_dissipation_no_go.py",
+          "legacy_path": "docs/core/uet_o2_condensed_retarded_dissipation_no_go.py",
+          "sha256_after": "10c05e45a462c4748df6300d5ee48c81fe2b95da6903317015fe2e13134801e3",
+          "sha256_before": "10c05e45a462c4748df6300d5ee48c81fe2b95da6903317015fe2e13134801e3"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_condensed_sk_kms_kubo_match.py",
+          "legacy_path": "docs/core/uet_o2_condensed_sk_kms_kubo_match.py",
+          "sha256_after": "ab6fabaca6d2a19f8185535928638ecf4f1581cd2ad89ada78ed89e5341aff72",
+          "sha256_before": "ab6fabaca6d2a19f8185535928638ecf4f1581cd2ad89ada78ed89e5341aff72"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_contact_sk_transition_vertex_match.py",
+          "legacy_path": "docs/core/uet_o2_contact_sk_transition_vertex_match.py",
+          "sha256_after": "f13f7f9950f85d5cdd4b9cecf4d48ce85d4c3436dbe5f85bdc516bab59ac71fa",
+          "sha256_before": "f13f7f9950f85d5cdd4b9cecf4d48ce85d4c3436dbe5f85bdc516bab59ac71fa"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_continuum_collision_operator.py",
+          "legacy_path": "docs/core/uet_o2_continuum_collision_operator.py",
+          "sha256_after": "1c58e860e4237f2f2b4a43fb5ba3d4d82967db791cb9cbff46df2a9c6bd296b2",
+          "sha256_before": "1c58e860e4237f2f2b4a43fb5ba3d4d82967db791cb9cbff46df2a9c6bd296b2"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_continuum_limit_boundary.py",
+          "legacy_path": "docs/core/uet_o2_continuum_limit_boundary.py",
+          "sha256_after": "6472bb8c8d926a003e0e4bfb61464a0ce9f8dba5c6d386940f129338b6f1779e",
+          "sha256_before": "6472bb8c8d926a003e0e4bfb61464a0ce9f8dba5c6d386940f129338b6f1779e"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_continuum_relative_flow_kubo.py",
+          "legacy_path": "docs/core/uet_o2_continuum_relative_flow_kubo.py",
+          "sha256_after": "70850509063f5adf4493a21ceea420c9f414e1605eea7220a00ce3549d0bca30",
+          "sha256_before": "70850509063f5adf4493a21ceea420c9f414e1605eea7220a00ce3549d0bca30"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_continuum_sunset_cut.py",
+          "legacy_path": "docs/core/uet_o2_continuum_sunset_cut.py",
+          "sha256_after": "d5f597c2669775cd49e8a1f20014c1acc458b79c4224906bc362c75ada6f2972",
+          "sha256_before": "d5f597c2669775cd49e8a1f20014c1acc458b79c4224906bc362c75ada6f2972"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_covariant_entropy_heat_flux_balance.py",
+          "legacy_path": "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py",
+          "sha256_after": "566d6a57a377269a0d551189341b4550e4da9ee8fa711ab04b7d4785bbcff209",
+          "sha256_before": "566d6a57a377269a0d551189341b4550e4da9ee8fa711ab04b7d4785bbcff209"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_dressed_ra_charge_current_ladder.py",
+          "legacy_path": "docs/core/uet_o2_dressed_ra_charge_current_ladder.py",
+          "sha256_after": "03f8d7f64e8db521c1c18f84d78aafb882b28b7ab32093b86c5a4d95992aa9d2",
+          "sha256_before": "03f8d7f64e8db521c1c18f84d78aafb882b28b7ab32093b86c5a4d95992aa9d2"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+          "legacy_path": "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+          "sha256_after": "98b43f2bde1bf335ed7296f51b253e707699e4052b0903d216ab5381eac5b835",
+          "sha256_before": "98b43f2bde1bf335ed7296f51b253e707699e4052b0903d216ab5381eac5b835"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_equilibrium_kms.py",
+          "legacy_path": "docs/core/uet_o2_equilibrium_kms.py",
+          "sha256_after": "d1a3777c87864271a75d242b2af57096ffe167ddef99a11d891f7aea95c1904d",
+          "sha256_before": "d1a3777c87864271a75d242b2af57096ffe167ddef99a11d891f7aea95c1904d"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_channel_entropy_balance.py",
+          "legacy_path": "docs/core/uet_o2_finite_channel_entropy_balance.py",
+          "sha256_after": "418247b1b61d23bdf0ee5212b5b4969216d1ced539636b741b04edd35e876f92",
+          "sha256_before": "418247b1b61d23bdf0ee5212b5b4969216d1ced539636b741b04edd35e876f92"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_density_charged_vertex.py",
+          "legacy_path": "docs/core/uet_o2_finite_density_charged_vertex.py",
+          "sha256_after": "188edb08ef56bf0a3908d1cab843632faf0580525fee527112cf41e6fcf4777f",
+          "sha256_before": "188edb08ef56bf0a3908d1cab843632faf0580525fee527112cf41e6fcf4777f"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_all_22_permutation_identity.py",
+          "legacy_path": "docs/core/uet_o2_finite_temperature_all_22_permutation_identity.py",
+          "sha256_after": "4e4609b56b9fc230ff70cca5c87bf2ccc809ed09b4f14e8b7906551c7b10d250",
+          "sha256_before": "4e4609b56b9fc230ff70cca5c87bf2ccc809ed09b4f14e8b7906551c7b10d250"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_all_onshell_cut_response.py",
+          "legacy_path": "docs/core/uet_o2_finite_temperature_all_onshell_cut_response.py",
+          "sha256_after": "acbcce6babc00aa65fce3db26cc22ea8f49376533bd78f4d4c0c02c0aad6d37f",
+          "sha256_before": "acbcce6babc00aa65fce3db26cc22ea8f49376533bd78f4d4c0c02c0aad6d37f"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi.py",
+          "legacy_path": "docs/core/uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi.py",
+          "sha256_after": "48ac15b10b64c81aa4c85dd7941ce8004022e61dc08acc655c9ab2ef4f25f013",
+          "sha256_before": "48ac15b10b64c81aa4c85dd7941ce8004022e61dc08acc655c9ab2ef4f25f013"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_declared_retarded_1pi_grid.py",
+          "legacy_path": "docs/core/uet_o2_finite_temperature_declared_retarded_1pi_grid.py",
+          "sha256_after": "f635e131e00c295cb90bf51607a8c41b392fef4af610682d9c4d3bc99e504885",
+          "sha256_before": "f635e131e00c295cb90bf51607a8c41b392fef4af610682d9c4d3bc99e504885"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_full_sunset_sk_kms.py",
+          "legacy_path": "docs/core/uet_o2_finite_temperature_full_sunset_sk_kms.py",
+          "sha256_after": "c10b0c42897365a6d29ee8ada0b9657a78456e02fc8a1bba34d96abc43f783db",
+          "sha256_before": "c10b0c42897365a6d29ee8ada0b9657a78456e02fc8a1bba34d96abc43f783db"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_hartree_thermodynamics.py",
+          "legacy_path": "docs/core/uet_o2_finite_temperature_hartree_thermodynamics.py",
+          "sha256_after": "476a91e839f0f32c8d7519fc5333e11aed3c59b4226db95284875cf8a248f471",
+          "sha256_before": "476a91e839f0f32c8d7519fc5333e11aed3c59b4226db95284875cf8a248f471"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_normal_component.py",
+          "legacy_path": "docs/core/uet_o2_finite_temperature_normal_component.py",
+          "sha256_after": "0a4010c0e390b7e910473698c4e5cc7dc6738df626e0de9c364b4258167a9335",
+          "sha256_before": "0a4010c0e390b7e910473698c4e5cc7dc6738df626e0de9c364b4258167a9335"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_normal_stability.py",
+          "legacy_path": "docs/core/uet_o2_finite_temperature_normal_stability.py",
+          "sha256_after": "b3073220c311dd3e68b1925b51d86a1a7aa8aad65d35c931ac34a0340a7991e7",
+          "sha256_before": "b3073220c311dd3e68b1925b51d86a1a7aa8aad65d35c931ac34a0340a7991e7"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_offshell_1pi.py",
+          "legacy_path": "docs/core/uet_o2_finite_temperature_offshell_1pi.py",
+          "sha256_after": "f66f8af3c908d9431ea5f6c33805633e5cc239ea0acf825d1917d2445bdfb96c",
+          "sha256_before": "f66f8af3c908d9431ea5f6c33805633e5cc239ea0acf825d1917d2445bdfb96c"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_offshell_threshold_crossing_1pi.py",
+          "legacy_path": "docs/core/uet_o2_finite_temperature_offshell_threshold_crossing_1pi.py",
+          "sha256_after": "1b481136ba677b79d441f9ec253d1a4bb167c576463ee677f799d912ebfe549f",
+          "sha256_before": "1b481136ba677b79d441f9ec253d1a4bb167c576463ee677f799d912ebfe549f"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py",
+          "legacy_path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+          "sha256_after": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
+          "sha256_before": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_renormalized_hartree.py",
+          "legacy_path": "docs/core/uet_o2_finite_temperature_renormalized_hartree.py",
+          "sha256_after": "833517333209bd9b2e6f0deb42f0a792454769ee35400626deb18369396ce725",
+          "sha256_before": "833517333209bd9b2e6f0deb42f0a792454769ee35400626deb18369396ce725"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_scheme_identifiability.py",
+          "legacy_path": "docs/core/uet_o2_finite_temperature_scheme_identifiability.py",
+          "sha256_after": "26d7a8f2dc54ce8f16771ffac86c5414f71963db2ea5cdd1d026716833598358",
+          "sha256_before": "26d7a8f2dc54ce8f16771ffac86c5414f71963db2ea5cdd1d026716833598358"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_self_energy.py",
+          "legacy_path": "docs/core/uet_o2_finite_temperature_self_energy.py",
+          "sha256_after": "120c020942b67763de0a71c9659a2feea711a9eb991c13422ce3831f85477d7b",
+          "sha256_before": "120c020942b67763de0a71c9659a2feea711a9eb991c13422ce3831f85477d7b"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_signed_cut_coverage.py",
+          "legacy_path": "docs/core/uet_o2_finite_temperature_signed_cut_coverage.py",
+          "sha256_after": "1e68712e89ceb0d2040bd6f31d040dcda26bad1b5b737e3ed4fd029eaabf828d",
+          "sha256_before": "1e68712e89ceb0d2040bd6f31d040dcda26bad1b5b737e3ed4fd029eaabf828d"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_stationarity_scheme.py",
+          "legacy_path": "docs/core/uet_o2_finite_temperature_stationarity_scheme.py",
+          "sha256_after": "cc7d69c74fbb1725ca5710b7a8b50d50e6739f977d92a044646fefb7fefa879f",
+          "sha256_before": "cc7d69c74fbb1725ca5710b7a8b50d50e6739f977d92a044646fefb7fefa879f"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_cut_multiplicity.py",
+          "legacy_path": "docs/core/uet_o2_finite_temperature_sunset_cut_multiplicity.py",
+          "sha256_after": "e2f0f8b2efefddfc5c634ef879a238a86111404f7ac797c404a0894597d3cceb",
+          "sha256_before": "e2f0f8b2efefddfc5c634ef879a238a86111404f7ac797c404a0894597d3cceb"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_renormalization_identifiability_no_go.py",
+          "legacy_path": "docs/core/uet_o2_finite_temperature_sunset_renormalization_identifiability_no_go.py",
+          "sha256_after": "dc43fe6e2ebd1fc3bde7bb180f885cd30029ca587b496d4851a63c50c04974f3",
+          "sha256_before": "dc43fe6e2ebd1fc3bde7bb180f885cd30029ca587b496d4851a63c50c04974f3"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_scattering_sk_kms.py",
+          "legacy_path": "docs/core/uet_o2_finite_temperature_sunset_scattering_sk_kms.py",
+          "sha256_after": "9ee0ab0c2b2e0a95783576bf57affcf996326fd4d697585c87dd6512cea597c0",
+          "sha256_before": "9ee0ab0c2b2e0a95783576bf57affcf996326fd4d697585c87dd6512cea597c0"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_sk_kms.py",
+          "legacy_path": "docs/core/uet_o2_finite_temperature_sunset_sk_kms.py",
+          "sha256_after": "e9e2f057cbd16f37b8cc68013f7805ee3c9dba7f31ae4fecaa4741554e053aa2",
+          "sha256_before": "e9e2f057cbd16f37b8cc68013f7805ee3c9dba7f31ae4fecaa4741554e053aa2"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_sunset_vacuum_match.py",
+          "legacy_path": "docs/core/uet_o2_finite_temperature_sunset_vacuum_match.py",
+          "sha256_after": "5a428e64c5f50075d2cf2ae733366b99a1ffecae1ec83014eb82c9e0edb83ee5",
+          "sha256_before": "5a428e64c5f50075d2cf2ae733366b99a1ffecae1ec83014eb82c9e0edb83ee5"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py",
+          "legacy_path": "docs/core/uet_o2_finite_temperature_two_fluid_response.py",
+          "sha256_after": "a68531bc34596aa115797e2353e1871913d4e9a158aeeb7f1ea5125c86aa236b",
+          "sha256_before": "a68531bc34596aa115797e2353e1871913d4e9a158aeeb7f1ea5125c86aa236b"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py",
+          "legacy_path": "docs/core/uet_o2_formal_transverse_response.py",
+          "sha256_after": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba",
+          "sha256_before": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_formal_two_sector_thermodynamics.py",
+          "legacy_path": "docs/core/uet_o2_formal_two_sector_thermodynamics.py",
+          "sha256_after": "531ed369c6e96dd071d40dadadd59e02cd6a459dcf2ddc48662c8f294cfcf49c",
+          "sha256_before": "531ed369c6e96dd071d40dadadd59e02cd6a459dcf2ddc48662c8f294cfcf49c"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_gaussian_offshell_background.py",
+          "legacy_path": "docs/core/uet_o2_gaussian_offshell_background.py",
+          "sha256_after": "a2e9162034b192af006134d98096f6f5588092e67f3047f991f91cc73d9fce09",
+          "sha256_before": "a2e9162034b192af006134d98096f6f5588092e67f3047f991f91cc73d9fce09"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_gaussian_thermal_stationarity_no_go.py",
+          "legacy_path": "docs/core/uet_o2_gaussian_thermal_stationarity_no_go.py",
+          "sha256_after": "aa88e19bfa7c996fab14c352984f2ce069b8643bf75798cb94b8b4e55bf8b6fc",
+          "sha256_before": "aa88e19bfa7c996fab14c352984f2ce069b8643bf75798cb94b8b4e55bf8b6fc"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_heat_current_kubo_continuum_boundary.py",
+          "legacy_path": "docs/core/uet_o2_heat_current_kubo_continuum_boundary.py",
+          "sha256_after": "df3b1e51508fafd68e7041c992f4bbdbe47d43f50065f46ff7ad24b705409457",
+          "sha256_before": "df3b1e51508fafd68e7041c992f4bbdbe47d43f50065f46ff7ad24b705409457"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_heat_current_kubo_match.py",
+          "legacy_path": "docs/core/uet_o2_heat_current_kubo_match.py",
+          "sha256_after": "0ebaae4f54459dbf2acbedbab8dfce2c874c7221cd789d813f4f4c02c5bc501e",
+          "sha256_before": "0ebaae4f54459dbf2acbedbab8dfce2c874c7221cd789d813f4f4c02c5bc501e"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_interacting_sk_kms_action.py",
+          "legacy_path": "docs/core/uet_o2_interacting_sk_kms_action.py",
+          "sha256_after": "91b432c04e11aebf4aa1c293a05ae611be4eca3243daa91546d671f63fd68da5",
+          "sha256_before": "91b432c04e11aebf4aa1c293a05ae611be4eca3243daa91546d671f63fd68da5"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_invariant_galerkin_collision_operator.py",
+          "legacy_path": "docs/core/uet_o2_invariant_galerkin_collision_operator.py",
+          "sha256_after": "278b168e5c3b444ac4df4b96b5a7d00410cd9485c511ab2a17aa4f11c6f6d94e",
+          "sha256_before": "278b168e5c3b444ac4df4b96b5a7d00410cd9485c511ab2a17aa4f11c6f6d94e"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_invariant_rate_collision_operator.py",
+          "legacy_path": "docs/core/uet_o2_invariant_rate_collision_operator.py",
+          "sha256_after": "6f66f41dd5ad852367542578c579d2626b97cd22f7cc947562ee8aa4b82fb413",
+          "sha256_before": "6f66f41dd5ad852367542578c579d2626b97cd22f7cc947562ee8aa4b82fb413"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_invariant_vector_current_galerkin.py",
+          "legacy_path": "docs/core/uet_o2_invariant_vector_current_galerkin.py",
+          "sha256_after": "8fa2dbbab44e5d497f4d82e7c22a6aff4cdf9fbfe41a39f8a64e4cb58c3a2ab6",
+          "sha256_before": "8fa2dbbab44e5d497f4d82e7c22a6aff4cdf9fbfe41a39f8a64e4cb58c3a2ab6"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_kinetic_collision_kubo.py",
+          "legacy_path": "docs/core/uet_o2_kinetic_collision_kubo.py",
+          "sha256_after": "fa4d5cf2f8fc549e47392df39bc468ed3addec37ade25a7969f82652911dce6f",
+          "sha256_before": "fa4d5cf2f8fc549e47392df39bc468ed3addec37ade25a7969f82652911dce6f"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_microscopic_kubo_match.py",
+          "legacy_path": "docs/core/uet_o2_microscopic_kubo_match.py",
+          "sha256_after": "34e5ff202d7e7579af278eff5fc509d03d6d48163b5e13cc7e657b76f943f667",
+          "sha256_before": "34e5ff202d7e7579af278eff5fc509d03d6d48163b5e13cc7e657b76f943f667"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_momentum_ladder_sk_kms.py",
+          "legacy_path": "docs/core/uet_o2_momentum_ladder_sk_kms.py",
+          "sha256_after": "c47aae04eca1e703919de6de9050e81d76dd036053bec9ef47c4cc0bbd648dbb",
+          "sha256_before": "c47aae04eca1e703919de6de9050e81d76dd036053bec9ef47c4cc0bbd648dbb"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_nonlocal_sk_kms_memory_kernel.py",
+          "legacy_path": "docs/core/uet_o2_nonlocal_sk_kms_memory_kernel.py",
+          "sha256_after": "9a80cbb16f227c102da432e461c8648c86f07a4ad8cea269f848b4f172efcb93",
+          "sha256_before": "9a80cbb16f227c102da432e461c8648c86f07a4ad8cea269f848b4f172efcb93"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_normal_response_curvature.py",
+          "legacy_path": "docs/core/uet_o2_normal_response_curvature.py",
+          "sha256_after": "043f6456d87a16af9cb7b42d613d2d229eb65efacccded35ad9d8873f7e8aad2",
+          "sha256_before": "043f6456d87a16af9cb7b42d613d2d229eb65efacccded35ad9d8873f7e8aad2"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_on_shell_sunset_width.py",
+          "legacy_path": "docs/core/uet_o2_on_shell_sunset_width.py",
+          "sha256_after": "a51b6da9513d9d1f1cf51dc0c11e08fb6cb818371ba3c88445de2b08c6cf6435",
+          "sha256_before": "a51b6da9513d9d1f1cf51dc0c11e08fb6cb818371ba3c88445de2b08c6cf6435"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_one_loop_normal_branch.py",
+          "legacy_path": "docs/core/uet_o2_one_loop_normal_branch.py",
+          "sha256_after": "381f652bff2a344b6f23aa4b179ec0f18e5d106608e9580c9068bdd99b1c17a5",
+          "sha256_before": "381f652bff2a344b6f23aa4b179ec0f18e5d106608e9580c9068bdd99b1c17a5"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_one_loop_retarded_self_energy_no_go.py",
+          "legacy_path": "docs/core/uet_o2_one_loop_retarded_self_energy_no_go.py",
+          "sha256_after": "a0e04de5efe2c23d93ef91a56766c38cc359c4787b5f51f2c7f97fa839a5f84e",
+          "sha256_before": "a0e04de5efe2c23d93ef91a56766c38cc359c4787b5f51f2c7f97fa839a5f84e"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_one_loop_vertex_uv_boundary.py",
+          "legacy_path": "docs/core/uet_o2_one_loop_vertex_uv_boundary.py",
+          "sha256_after": "fb47090eed90d4e37bab34516cc0ad0d60300981de91f9322d1513746e11e8e1",
+          "sha256_before": "fb47090eed90d4e37bab34516cc0ad0d60300981de91f9322d1513746e11e8e1"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_open_system_sk_kms.py",
+          "legacy_path": "docs/core/uet_o2_open_system_sk_kms.py",
+          "sha256_after": "92b2beb2d531d2c907953b42e4a381f1442dc035ab0cdebd7edf8a5ed0a9b063",
+          "sha256_before": "92b2beb2d531d2c907953b42e4a381f1442dc035ab0cdebd7edf8a5ed0a9b063"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_physical_renormalization_condition_contract.py",
+          "legacy_path": "docs/core/uet_o2_physical_renormalization_condition_contract.py",
+          "sha256_after": "de91bd610cd348bcfb345df191a4027416f8f1362db2508d9251ee3d98938a71",
+          "sha256_before": "de91bd610cd348bcfb345df191a4027416f8f1362db2508d9251ee3d98938a71"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_regularized_continuum_heat_current.py",
+          "legacy_path": "docs/core/uet_o2_regularized_continuum_heat_current.py",
+          "sha256_after": "eeb4cf5807e2974ff5af3ad74523b2919ac5f8ef105d1e294b908eb2b789e898",
+          "sha256_before": "eeb4cf5807e2974ff5af3ad74523b2919ac5f8ef105d1e294b908eb2b789e898"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_renormalized_normal_branch.py",
+          "legacy_path": "docs/core/uet_o2_renormalized_normal_branch.py",
+          "sha256_after": "cf536a7e04fe75f284c5c5078f5719276b2ca0459e84bbbb1dd027290c92537c",
+          "sha256_before": "cf536a7e04fe75f284c5c5078f5719276b2ca0459e84bbbb1dd027290c92537c"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_renormalized_vertex_scheme.py",
+          "legacy_path": "docs/core/uet_o2_renormalized_vertex_scheme.py",
+          "sha256_after": "410f77c9418d0d946f0b27dbae31586a9436070771d0de13c7debc384dce71d6",
+          "sha256_before": "410f77c9418d0d946f0b27dbae31586a9436070771d0de13c7debc384dce71d6"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_same_kernel_tagged_width.py",
+          "legacy_path": "docs/core/uet_o2_same_kernel_tagged_width.py",
+          "sha256_after": "30f4d4d78a2bc4f0403f504d72dac684e98251915b890a1c99af5bae2f5be92e",
+          "sha256_before": "30f4d4d78a2bc4f0403f504d72dac684e98251915b890a1c99af5bae2f5be92e"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_sunset_dispersion_interface.py",
+          "legacy_path": "docs/core/uet_o2_sunset_dispersion_interface.py",
+          "sha256_after": "325ddfded4a6ee8cd9d692082ed451df0d2acc739315b0a1902112e744bbd65e",
+          "sha256_before": "325ddfded4a6ee8cd9d692082ed451df0d2acc739315b0a1902112e744bbd65e"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_sunset_dispersion_interface_verified.py",
+          "legacy_path": "docs/core/uet_o2_sunset_dispersion_interface_verified.py",
+          "sha256_after": "91540303f7dfb5baaba8e2eff3be6b48bd35060b71c3016cbdea43b57c183bdf",
+          "sha256_before": "91540303f7dfb5baaba8e2eff3be6b48bd35060b71c3016cbdea43b57c183bdf"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_thermal_stability_boundary.py",
+          "legacy_path": "docs/core/uet_o2_thermal_stability_boundary.py",
+          "sha256_after": "0c5c71b9e2e2c085be8bdc93c2a02fe67dae1aecc0bfb32aae42bbd8afbb5397",
+          "sha256_before": "0c5c71b9e2e2c085be8bdc93c2a02fe67dae1aecc0bfb32aae42bbd8afbb5397"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_tree_level_bs_sk_match.py",
+          "legacy_path": "docs/core/uet_o2_tree_level_bs_sk_match.py",
+          "sha256_after": "ef3522ec6e925eee3fd937035829c801325f9e1ec39d5a809d42246f6c5e90c5",
+          "sha256_before": "ef3522ec6e925eee3fd937035829c801325f9e1ec39d5a809d42246f6c5e90c5"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_tree_level_charged_ward_vertex.py",
+          "legacy_path": "docs/core/uet_o2_tree_level_charged_ward_vertex.py",
+          "sha256_after": "ae592064486a75214c6fb4c1bd90627ef8951990c39eff2ad06e08406bff50b3",
+          "sha256_before": "ae592064486a75214c6fb4c1bd90627ef8951990c39eff2ad06e08406bff50b3"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_two_loop_sunset_cut.py",
+          "legacy_path": "docs/core/uet_o2_two_loop_sunset_cut.py",
+          "sha256_after": "9c4e4c569a6df5a92017dde3be656060197f34a7eb7ece390269cc006b5e7add",
+          "sha256_before": "9c4e4c569a6df5a92017dde3be656060197f34a7eb7ece390269cc006b5e7add"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/o2/uet_o2_ward_constrained_condensed.py",
+          "legacy_path": "docs/core/uet_o2_ward_constrained_condensed.py",
+          "sha256_after": "361da29567144649f248d85ea961d035bd427d8645d0af991d464f97fe50afa3",
+          "sha256_before": "361da29567144649f248d85ea961d035bd427d8645d0af991d464f97fe50afa3"
+        }
+      ],
+      "status": "MIGRATED_WITH_SHIM",
+      "target_prefix": "docs/core/02_equations/o2"
+    },
+    {
+      "applied_at": "2026-09-15T11:35:17+00:00",
+      "claim_boundary": "Organization migration only; no physics status or claim changed.",
+      "family": "thermal_remaining",
+      "files_moved": 6,
+      "generator": "docs/scripts/audit/migrate_uet_core_python_family_v3.py",
+      "moves": [
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/thermal_collective_response_eos.py",
+          "legacy_path": "docs/core/thermal_collective_response_eos.py",
+          "sha256_after": "a67c60ea87b848896a37fb9f97cffbff843f20bf07d5d32ff8f3ec82f61544a3",
+          "sha256_before": "a67c60ea87b848896a37fb9f97cffbff843f20bf07d5d32ff8f3ec82f61544a3"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/thermal_covariant_action_si_conversion.py",
+          "legacy_path": "docs/core/thermal_covariant_action_si_conversion.py",
+          "sha256_after": "24639807ce714cfb2f05adc5063e55392f33280bb9ddd42eaf16813e314ee9fe",
+          "sha256_before": "24639807ce714cfb2f05adc5063e55392f33280bb9ddd42eaf16813e314ee9fe"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/thermal_cp_cv_correction.py",
+          "legacy_path": "docs/core/thermal_cp_cv_correction.py",
+          "sha256_after": "5b768b74f46e7734acc1372a51bdbcaca28d7f822be151cc248675dac446ff47",
+          "sha256_before": "5b768b74f46e7734acc1372a51bdbcaca28d7f822be151cc248675dac446ff47"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/thermal_sk_kms_entropy_contract.py",
+          "legacy_path": "docs/core/thermal_sk_kms_entropy_contract.py",
+          "sha256_after": "ea63f10f1f0f18c22f9055196b60d727182d2582f9188e3079c0c1de1f334d1b",
+          "sha256_before": "ea63f10f1f0f18c22f9055196b60d727182d2582f9188e3079c0c1de1f334d1b"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_raman_deformation_constraint.py",
+          "legacy_path": "docs/core/uet_raman_deformation_constraint.py",
+          "sha256_after": "0d20ef2d9a72a5aa749adc875f549c2c93b8eaf6eb2a59789171b720be7d5e85",
+          "sha256_before": "0d20ef2d9a72a5aa749adc875f549c2c93b8eaf6eb2a59789171b720be7d5e85"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_reciprocal_thermal_dynamics.py",
+          "legacy_path": "docs/core/uet_reciprocal_thermal_dynamics.py",
+          "sha256_after": "f8336990a61dc4b798bea8b8d3c6f2acadba279f79d778e6ba5b391e3165db2a",
+          "sha256_before": "f8336990a61dc4b798bea8b8d3c6f2acadba279f79d778e6ba5b391e3165db2a"
+        }
+      ],
+      "status": "MIGRATED_WITH_SHIM",
+      "target_prefix": "docs/core/03_lanes/thermal"
+    },
+    {
+      "applied_at": "2026-09-15T11:53:29+00:00",
+      "claim_boundary": "Organization migration only; no physics status or claim changed.",
+      "family": "thermal_extended",
+      "files_moved": 12,
+      "generator": "docs/scripts/audit/migrate_uet_core_python_family_v3.py",
+      "moves": [
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_anisotropic_thermoelastic_response_bridge.py",
+          "legacy_path": "docs/core/uet_anisotropic_thermoelastic_response_bridge.py",
+          "sha256_after": "e762938d8f8f9b1a0129de3a1058d8260e11d09d7020bae98e26a071b8fed840",
+          "sha256_before": "e762938d8f8f9b1a0129de3a1058d8260e11d09d7020bae98e26a071b8fed840"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_dynamic_thermoelastic_response.py",
+          "legacy_path": "docs/core/uet_dynamic_thermoelastic_response.py",
+          "sha256_after": "ec02c5c96f30f8a6be38fd22d506c15ea6f2b8673ea76d1d25be00456a51d762",
+          "sha256_before": "ec02c5c96f30f8a6be38fd22d506c15ea6f2b8673ea76d1d25be00456a51d762"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_interlayer_mode_residue.py",
+          "legacy_path": "docs/core/uet_interlayer_mode_residue.py",
+          "sha256_after": "f7c40cffe59575c7337433099b3c6e4f2ec9ef392182fa2e82361ec315d21ff5",
+          "sha256_before": "f7c40cffe59575c7337433099b3c6e4f2ec9ef392182fa2e82361ec315d21ff5"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_lattice_momentum_relaxing_heat_parent.py",
+          "legacy_path": "docs/core/uet_lattice_momentum_relaxing_heat_parent.py",
+          "sha256_after": "186b34484df51d416f7ea2cc770b91b717cc83c2dca87c5d8f983c51a9b2111a",
+          "sha256_before": "186b34484df51d416f7ea2cc770b91b717cc83c2dca87c5d8f983c51a9b2111a"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_material_interface_factor_resolution.py",
+          "legacy_path": "docs/core/uet_material_interface_factor_resolution.py",
+          "sha256_after": "7ebcbed3f6c2056a06e393afd9cba2c81614237bf924da0dc4f54b42ee9b3ce1",
+          "sha256_before": "7ebcbed3f6c2056a06e393afd9cba2c81614237bf924da0dc4f54b42ee9b3ce1"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_material_lattice_interface_contract.py",
+          "legacy_path": "docs/core/uet_material_lattice_interface_contract.py",
+          "sha256_after": "85be68b8054556b78378fb06b8a6e99c8f936063cab55c4359d86ff9f93b9ca3",
+          "sha256_before": "85be68b8054556b78378fb06b8a6e99c8f936063cab55c4359d86ff9f93b9ca3"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_matter_strain_susceptibility.py",
+          "legacy_path": "docs/core/uet_matter_strain_susceptibility.py",
+          "sha256_after": "827e7745ce840baf5ef6c23b2f5cd8ba353711aedfefa36ec5e98a3358a2f421",
+          "sha256_before": "827e7745ce840baf5ef6c23b2f5cd8ba353711aedfefa36ec5e98a3358a2f421"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_mode_work_heat.py",
+          "legacy_path": "docs/core/uet_mode_work_heat.py",
+          "sha256_after": "c30c53d8ed87c9f8ecdb7946d1755eca1b8508d7f5509fc6851d90a987b55d31",
+          "sha256_before": "c30c53d8ed87c9f8ecdb7946d1755eca1b8508d7f5509fc6851d90a987b55d31"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_scalar_thermoelastic_response_bridge.py",
+          "legacy_path": "docs/core/uet_scalar_thermoelastic_response_bridge.py",
+          "sha256_after": "f379f657c597b8e453388fa4e96d1dd88d8dae8d6fa8d8629a133350f086306b",
+          "sha256_before": "f379f657c597b8e453388fa4e96d1dd88d8dae8d6fa8d8629a133350f086306b"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_shear_symmetry.py",
+          "legacy_path": "docs/core/uet_shear_symmetry.py",
+          "sha256_after": "b5426f6b4f3cc9e3df83318a8f36d2c0d1534bfc2b98bc62cdd4268011be1deb",
+          "sha256_before": "b5426f6b4f3cc9e3df83318a8f36d2c0d1534bfc2b98bc62cdd4268011be1deb"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_thermoelastic_spatial_compatibility.py",
+          "legacy_path": "docs/core/uet_thermoelastic_spatial_compatibility.py",
+          "sha256_after": "a3a4e96938984e4c7c4ac4c72ea78a541c5fa2dd0994f0f8cb431faaea823ca7",
+          "sha256_before": "a3a4e96938984e4c7c4ac4c72ea78a541c5fa2dd0994f0f8cb431faaea823ca7"
+        },
+        {
+          "canonical_path": "docs/core/03_lanes/thermal/uet_transport_coefficient_identifiability.py",
+          "legacy_path": "docs/core/uet_transport_coefficient_identifiability.py",
+          "sha256_after": "16865cd7de7f78eaf72afa5d3dfc900b2c0c33a775ea35a3f7185183804fb212",
+          "sha256_before": "16865cd7de7f78eaf72afa5d3dfc900b2c0c33a775ea35a3f7185183804fb212"
+        }
+      ],
+      "status": "MIGRATED_WITH_SHIM",
+      "target_prefix": "docs/core/03_lanes/thermal"
+    },
+    {
+      "applied_at": "2026-09-15T11:53:52+00:00",
+      "claim_boundary": "Organization migration only; no physics status or claim changed.",
+      "family": "curved_3p1",
+      "files_moved": 6,
+      "generator": "docs/scripts/audit/migrate_uet_core_python_family_v3.py",
+      "moves": [
+        {
+          "canonical_path": "docs/core/02_equations/covariant/uet_curved_3p1_adm_evolution.py",
+          "legacy_path": "docs/core/uet_curved_3p1_adm_evolution.py",
+          "sha256_after": "257fdbc032fac4a4402307c68d2bf4ddec81162b5d3a051e234e445e6c539c20",
+          "sha256_before": "257fdbc032fac4a4402307c68d2bf4ddec81162b5d3a051e234e445e6c539c20"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/covariant/uet_curved_3p1_constraints.py",
+          "legacy_path": "docs/core/uet_curved_3p1_constraints.py",
+          "sha256_after": "6706080b4a38f99f6c9bd633cf9e59bc216929db2cba2272ad9044bc15bf3b9f",
+          "sha256_before": "6706080b4a38f99f6c9bd633cf9e59bc216929db2cba2272ad9044bc15bf3b9f"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py",
+          "legacy_path": "docs/core/uet_curved_3p1_generalized_harmonic.py",
+          "sha256_after": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92",
+          "sha256_before": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/covariant/uet_curved_3p1_geometry.py",
+          "legacy_path": "docs/core/uet_curved_3p1_geometry.py",
+          "sha256_after": "02f643a7d6efc3fb24508546477d647e12015ebdc7f1a70b4adeaeb1952266d3",
+          "sha256_before": "02f643a7d6efc3fb24508546477d647e12015ebdc7f1a70b4adeaeb1952266d3"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/covariant/uet_curved_3p1_gh_evolution.py",
+          "legacy_path": "docs/core/uet_curved_3p1_gh_evolution.py",
+          "sha256_after": "c18f231375609cebb76d342ba7ad94471eb280089458ace85882ed2450f3581e",
+          "sha256_before": "c18f231375609cebb76d342ba7ad94471eb280089458ace85882ed2450f3581e"
+        },
+        {
+          "canonical_path": "docs/core/02_equations/covariant/uet_curved_3p1_matter_wiring.py",
+          "legacy_path": "docs/core/uet_curved_3p1_matter_wiring.py",
+          "sha256_after": "d45348efdbbd302c07f425f2f800cd677d14225f1ad49fb36b21de6a257614b1",
+          "sha256_before": "d45348efdbbd302c07f425f2f800cd677d14225f1ad49fb36b21de6a257614b1"
+        }
+      ],
+      "status": "MIGRATED_WITH_SHIM",
+      "target_prefix": "docs/core/02_equations/covariant"
+    },
+    {
+      "applied_at": "2026-09-15T11:54:13+00:00",
+      "claim_boundary": "Organization migration only; no physics status or claim changed.",
+      "family": "persistence_resource",
+      "files_moved": 1,
+      "generator": "docs/scripts/audit/migrate_uet_core_python_family_v3.py",
+      "moves": [
+        {
+          "canonical_path": "docs/core/03_lanes/persistence/uet_resource_selection.py",
+          "legacy_path": "docs/core/uet_resource_selection.py",
+          "sha256_after": "bc55c0a5b47e9980788e5c268c69c1dfeadcdf9dce7b540743d33a8f7a9a197f",
+          "sha256_before": "bc55c0a5b47e9980788e5c268c69c1dfeadcdf9dce7b540743d33a8f7a9a197f"
+        }
+      ],
+      "status": "MIGRATED_WITH_SHIM",
+      "target_prefix": "docs/core/03_lanes/persistence"
+    },
+    {
+      "applied_at": "2026-09-15T11:54:25+00:00",
+      "claim_boundary": "Organization migration only; no physics status or claim changed.",
+      "family": "matter_space_stability",
+      "files_moved": 1,
+      "generator": "docs/scripts/audit/migrate_uet_core_python_family_v3.py",
+      "moves": [
+        {
+          "canonical_path": "docs/core/02_equations/matter_space/uet_dynamical_stability.py",
+          "legacy_path": "docs/core/uet_dynamical_stability.py",
+          "sha256_after": "9ae6d3ee13001c243924e58238ea0d604c4d848824c9b98d29c441d26d0969b5",
+          "sha256_before": "9ae6d3ee13001c243924e58238ea0d604c4d848824c9b98d29c441d26d0969b5"
+        }
+      ],
+      "status": "MIGRATED_WITH_SHIM",
+      "target_prefix": "docs/core/02_equations/matter_space"
+    },
+    {
+      "applied_at": "2026-09-15T12:06:56+00:00",
+      "claim_boundary": "Organization migration only; no physics status or claim changed.",
+      "family": "support_audit",
+      "files_moved": 4,
+      "generator": "docs/scripts/audit/migrate_uet_core_python_family_v3.py",
+      "moves": [
+        {
+          "canonical_path": "docs/scripts/core/audit/reproducibility.py",
+          "legacy_path": "docs/core/reproducibility.py",
+          "sha256_after": "1bce9668c93fb1230f94192f3ce0afbce1b17a2a3151b0cf0845ece267b80c43",
+          "sha256_before": "1bce9668c93fb1230f94192f3ce0afbce1b17a2a3151b0cf0845ece267b80c43"
+        },
+        {
+          "canonical_path": "docs/scripts/core/audit/scientific_validation.py",
+          "legacy_path": "docs/core/scientific_validation.py",
+          "sha256_after": "66a4ecaa6cf192010b472ccfc086b0908e1b11ddf7a23217f85e41aee50a597f",
+          "sha256_before": "66a4ecaa6cf192010b472ccfc086b0908e1b11ddf7a23217f85e41aee50a597f"
+        },
+        {
+          "canonical_path": "docs/scripts/core/audit/truth_auditor.py",
+          "legacy_path": "docs/core/truth_auditor.py",
+          "sha256_after": "89aed08f29b037173ca2c7899ae953ac6cc5f931175e7c3735758a137a9e182f",
+          "sha256_before": "89aed08f29b037173ca2c7899ae953ac6cc5f931175e7c3735758a137a9e182f"
+        },
+        {
+          "canonical_path": "docs/scripts/core/audit/uet_bug_hunter.py",
+          "legacy_path": "docs/core/uet_bug_hunter.py",
+          "sha256_after": "983639f1aa236a726ca4725cc1c264085213d2086cb633ef6dad9904e2607fb2",
+          "sha256_before": "983639f1aa236a726ca4725cc1c264085213d2086cb633ef6dad9904e2607fb2"
+        }
+      ],
+      "status": "MIGRATED_WITH_SHIM",
+      "target_prefix": "docs/scripts/core/audit"
+    },
+    {
+      "applied_at": "2026-09-15T12:07:02+00:00",
+      "claim_boundary": "Organization migration only; no physics status or claim changed.",
+      "family": "support_runners",
+      "files_moved": 4,
+      "generator": "docs/scripts/audit/migrate_uet_core_python_family_v3.py",
+      "moves": [
+        {
+          "canonical_path": "docs/scripts/core/runners/uet_base_solver.py",
+          "legacy_path": "docs/core/uet_base_solver.py",
+          "sha256_after": "b601cd461686b1e8cf09a065619f6720c284edbc06505b35b8fe993e3c663127",
+          "sha256_before": "b601cd461686b1e8cf09a065619f6720c284edbc06505b35b8fe993e3c663127"
+        },
+        {
+          "canonical_path": "docs/scripts/core/runners/uet_glass_box.py",
+          "legacy_path": "docs/core/uet_glass_box.py",
+          "sha256_after": "7e42a61824a11d1abd7d6e864771265487a05a91993f0ae2fba3c9b578d0aeb7",
+          "sha256_before": "7e42a61824a11d1abd7d6e864771265487a05a91993f0ae2fba3c9b578d0aeb7"
+        },
+        {
+          "canonical_path": "docs/scripts/core/runners/uet_lite_engine.py",
+          "legacy_path": "docs/core/uet_lite_engine.py",
+          "sha256_after": "1c91cbfd4ef136594287855a6b2ea45ad9fc529045283b7aabe0f85f4062edea",
+          "sha256_before": "1c91cbfd4ef136594287855a6b2ea45ad9fc529045283b7aabe0f85f4062edea"
+        },
+        {
+          "canonical_path": "docs/scripts/core/runners/uet_matrix_engine.py",
+          "legacy_path": "docs/core/uet_matrix_engine.py",
+          "sha256_after": "5f3369f73cd3e572fd721c6c11ef3caf5fddb39d591d72aae528da4491cd02bc",
+          "sha256_before": "5f3369f73cd3e572fd721c6c11ef3caf5fddb39d591d72aae528da4491cd02bc"
+        }
+      ],
+      "status": "MIGRATED_WITH_SHIM",
+      "target_prefix": "docs/scripts/core/runners"
+    },
+    {
+      "applied_at": "2026-09-15T12:07:08+00:00",
+      "claim_boundary": "Organization migration only; no physics status or claim changed.",
+      "family": "support_data",
+      "files_moved": 2,
+      "generator": "docs/scripts/audit/migrate_uet_core_python_family_v3.py",
+      "moves": [
+        {
+          "canonical_path": "docs/scripts/core/data/uet_data_orchestrator.py",
+          "legacy_path": "docs/core/uet_data_orchestrator.py",
+          "sha256_after": "3347cb439a28a3b9cc10c0f5b6f8fd6b8eecc1a1d8a6f5b989e3834d0ac0a2ee",
+          "sha256_before": "3347cb439a28a3b9cc10c0f5b6f8fd6b8eecc1a1d8a6f5b989e3834d0ac0a2ee"
+        },
+        {
+          "canonical_path": "docs/scripts/core/data/uet_references.py",
+          "legacy_path": "docs/core/uet_references.py",
+          "sha256_after": "59bb81b8189f5270186559fd131f9accd9f7550b6df0aade2c9e67a1c2578608",
+          "sha256_before": "59bb81b8189f5270186559fd131f9accd9f7550b6df0aade2c9e67a1c2578608"
+        }
+      ],
+      "status": "MIGRATED_WITH_SHIM",
+      "target_prefix": "docs/scripts/core/data"
+    },
+    {
+      "applied_at": "2026-09-15T12:07:14+00:00",
+      "claim_boundary": "Organization migration only; no physics status or claim changed.",
+      "family": "parameters_contract",
+      "files_moved": 1,
+      "generator": "docs/scripts/audit/migrate_uet_core_python_family_v3.py",
+      "moves": [
+        {
+          "canonical_path": "docs/core/01_contracts/units/uet_parameters.py",
+          "legacy_path": "docs/core/uet_parameters.py",
+          "sha256_after": "eff2fc6fe0fe35f18c49a032729e385c97b633a90e9a0bd3789be5051d316651",
+          "sha256_before": "eff2fc6fe0fe35f18c49a032729e385c97b633a90e9a0bd3789be5051d316651"
+        }
+      ],
+      "status": "MIGRATED_WITH_SHIM",
+      "target_prefix": "docs/core/01_contracts/units"
+    },
+    {
+      "applied_at": "2026-09-15T12:07:20+00:00",
+      "claim_boundary": "Organization migration only; no physics status or claim changed.",
+      "family": "support_reporting",
+      "files_moved": 1,
+      "generator": "docs/scripts/audit/migrate_uet_core_python_family_v3.py",
+      "moves": [
+        {
+          "canonical_path": "docs/scripts/core/reporting/uet_viz.py",
+          "legacy_path": "docs/core/uet_viz.py",
+          "sha256_after": "8b5a00250bc28078f0ef6eb7a0e283f59e07b2ff0812a40704d0b73c164a82e8",
+          "sha256_before": "8b5a00250bc28078f0ef6eb7a0e283f59e07b2ff0812a40704d0b73c164a82e8"
+        }
+      ],
+      "status": "MIGRATED_WITH_SHIM",
+      "target_prefix": "docs/scripts/core/reporting"
+    }
+  ],
+  "schema_version": "1.0"
+}

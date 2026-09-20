@@ -1,0 +1,64 @@
+from docs.core.core_paths import repo_root
+import hashlib
+import json
+from pathlib import Path
+
+
+ROOT = repo_root()
+ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_nims_mp990448_phonon_source_boundary_audit.json"
+PACKAGE = ROOT / (
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
+    "nims_mdr_mp990448_phonon_source_package.json"
+)
+ARCHIVE = ROOT / (
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
+    "nims_mdr_mp990448_graphite_phonon_dataset.zip"
+)
+LEGACY_ARCHIVE = ROOT / (
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
+    "nims_mdr_wd3761563_legacy.zip"
+)
+
+
+def digest(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def test_nims_mp990448_is_a_payload_boundary_not_numeric_csrc() -> None:
+    audit = json.loads(ARTIFACT.read_text(encoding="utf-8-sig"))
+    package = json.loads(PACKAGE.read_text(encoding="utf-8-sig"))
+    assert audit["status"] == "PASS_SCOPED_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY"
+    assert audit["major_result"]["closure_level"] == "CLOSED_FOR_LANE"
+    assert audit["major_result"]["data_role"] == "SOURCE_PAYLOAD_BOUNDARY_NOT_CALIBRATION"
+    assert audit["inventory"]["member_count"] == 6
+    assert audit["checks"]["expected_member_set"] is True
+    assert audit["checks"]["no_force_constants_data"] is True
+    assert audit["checks"]["no_frequency_mesh"] is True
+    assert audit["checks"]["no_machine_readable_thermal_rows"] is True
+    assert audit["checks"]["thermal_properties_is_figure_only"] is True
+    assert audit["checks"]["legacy_route_archive_exists"] is True
+    assert audit["checks"]["legacy_route_hash_and_size_match_current"] is True
+    assert audit["legacy_route"]["route_decision"] == "BYTE_IDENTICAL_ALIAS_OF_CURRENT_NIMS_ARCHIVE"
+    assert audit["payload_capabilities"]["has_force_constants_data"] is False
+    assert audit["payload_capabilities"]["has_frequency_mesh"] is False
+    assert package["source"]["license"] == "CC BY 4.0"
+    assert package["row_identity_contract"]["machine_readable_numeric_rows"] == []
+    assert package["holdout_policy"]["xie_2026_accessed"] is False
+    assert package["claim_promotion"] is False
+    if ARCHIVE.is_file() and LEGACY_ARCHIVE.is_file():
+        assert digest(ARCHIVE) == audit["source"]["archive_sha256"]
+        assert digest(LEGACY_ARCHIVE) == audit["source"]["archive_sha256"]
+    else:
+        assert audit["source"]["raw_payload_available"] is False
+        assert audit["source"]["input_mode"] == "METADATA_ONLY_PUBLIC_BOUNDARY"
+        assert audit["source"]["archive_hash_is_expected_when_unavailable"] is True
+        assert audit["source"]["archive_sha256"] == (
+            "eea6ca7569c9442754ce5492ddb2f545186f97ad8b82b209d95f1a80b0158767"
+        )
+        assert audit["source"]["archive_size_bytes"] == 133375
+        assert audit["legacy_route"]["archive_identity_declared"] is True
+        assert audit["legacy_route"]["route_decision"] == (
+            "BYTE_IDENTICAL_ALIAS_OF_CURRENT_NIMS_ARCHIVE"
+        )
+        assert isinstance(package["inventory"]["members"], list)
+        assert len(package["inventory"]["members"]) == 6

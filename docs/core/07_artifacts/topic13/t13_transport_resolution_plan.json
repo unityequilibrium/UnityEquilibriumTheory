@@ -1,0 +1,29 @@
+{
+  "status": "PREREGISTERED_DIAGNOSTIC_NO_PROMOTION_THRESHOLD",
+  "state": [0.22, 0.35, 0.15],
+  "action": "natural_bridge_config unchanged",
+  "base": {
+    "radial_order": 8,
+    "collision_integration_order": 24,
+    "angular_order": 24,
+    "cutoff_factor": 48.0,
+    "transition_quadrature_order": 24,
+    "transition_channel_count": 64,
+    "transition_interpolation_order": 40
+  },
+  "cases": [
+    {"id": "base", "override": {}},
+    {"id": "radial12", "override": {"radial_order": 12}},
+    {"id": "radial16", "override": {"radial_order": 16}},
+    {"id": "radial24", "override": {"radial_order": 24}},
+    {"id": "collision32", "override": {"collision_integration_order": 32}},
+    {"id": "collision48", "override": {"collision_integration_order": 48}},
+    {"id": "angular32", "override": {"angular_order": 32}},
+    {"id": "angular48", "override": {"angular_order": 48}},
+    {"id": "cutoff36", "override": {"cutoff_factor": 36.0}},
+    {"id": "cutoff60", "override": {"cutoff_factor": 60.0}}
+  ],
+  "comparison_policy": "One factor at a time; retain every error and numerical residual. No convergence promotion from a single refinement or passing conservation identity.",
+  "excluded": ["parameter fitting", "source calibration", "holdout", "material uncertainty estimation", "simultaneous continuum-limit proof"],
+  "known_scope": "angular_order refines collision-angle integration, not the fixed six-direction moment basis. Transition discretization and inverse cutoff remain fixed."
+}

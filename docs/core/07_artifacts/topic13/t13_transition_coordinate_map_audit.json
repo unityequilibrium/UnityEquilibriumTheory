@@ -1,0 +1,80 @@
+{
+  "major_result_id": "T13_TRANSITION_COORDINATE_CORRESPONDENCE",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "status": "WEIGHTED_COORDINATE_MISMATCH_IDENTIFIED",
+  "what_is_closed": "Counterexample distinguishes normalized interpolation of psi from weighted solver coordinates",
+  "equation_or_mapping": "z_e=sqrt(W_e)*S.T*inv_sqrt(W_b)*z_b; U_b=V_e*sqrt(W_e)*S.T*inv_sqrt(W_b)",
+  "units": "Susceptibility-weighted natural coordinates; S dimensionless",
+  "derivation_class": "Change-of-coordinates identity conditional on psi interpolation",
+  "observable": "Transition amplitude and quadratic collision form, not material transport",
+  "data_role": "INTERNAL_MANUFACTURED_AND_EXISTING_MODEL",
+  "rows": [
+    {
+      "rule": "axis6",
+      "psi_constant_relative_error": 1.9623820885381483e+65,
+      "normalized_interpolation_constant_error": 6.661338147750939e-16,
+      "legacy_channel_constant_error": 1.962382088538148e+65,
+      "coordinate_channel_constant_error": 3.677613769070831e-16,
+      "row_norm_legacy": 5.821878858921818e+67,
+      "row_norm_coordinate": 5.921736250851375e+44
+    },
+    {
+      "rule": "axis_cube14",
+      "psi_constant_relative_error": 2.281014194015067e+56,
+      "normalized_interpolation_constant_error": 4.440892098500626e-16,
+      "legacy_channel_constant_error": 2.281014194015067e+56,
+      "coordinate_channel_constant_error": 5.30825383648903e-16,
+      "row_norm_legacy": 5.824699848939383e+67,
+      "row_norm_coordinate": 1.0869009187118213e+45
+    }
+  ],
+  "manufactured": {
+    "expected_channel_amplitude": -9.0,
+    "legacy_amplitude": -10.333333333333332,
+    "coordinate_amplitude": -9.0,
+    "legacy_constant_defect": 0.916666666666667,
+    "coordinate_constant_defect": 0.0
+  },
+  "production_changed": false,
+  "full_core_unlock": false,
+  "dependency_unlocked": [],
+  "open_blockers": [
+    "production_coordinate_map_repair",
+    "interpolation_consistency",
+    "transition_and_angular_convergence",
+    "material_mapping"
+  ],
+  "verification_status": "COUNTEREXAMPLE_AND_ACTUAL_GRID_AUDIT",
+  "claim_boundary": "Alternative mapping is not yet installed; positivity or projected conservation alone does not establish interpolation correspondence",
+  "evidence_artifacts": [
+    {
+      "path": "docs/scripts/audit/audit_topic13_transition_coordinate_map.py",
+      "sha256": "310bb034f0d6346a70dfe7b0168de60d6fc8fd24824bac414becb58628430477"
+    },
+    {
+      "path": "docs/core/test/test_topic13_transition_coordinate_map.py",
+      "sha256": "309d44c9104bd7be5be59e0501444b1fab760a4a057c1fd4c901b9f6cde3113a"
+    },
+    {
+      "path": "docs/core/uet_o2_continuum_collision_operator.py",
+      "sha256": "04df81c0a906ea14de8e563d86d1a3fba28741554b244276749a0296310000eb"
+    },
+    {
+      "path": "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+      "sha256": "98b43f2bde1bf335ed7296f51b253e707699e4052b0903d216ab5381eac5b835"
+    },
+    {
+      "path": "docs/core/uet_o2_action_derived_transition_kernel.py",
+      "sha256": "2f818500b353e8cf81caddf892bcf2db43a4341fe831b6f67e62423e3c2feb8f"
+    },
+    {
+      "path": "docs/core/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "a1be58b8230240775654e7c0d6265870010f546238e96e59e36045e6a893e5d2"
+    },
+    {
+      "path": "docs/core/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    }
+  ]
+}

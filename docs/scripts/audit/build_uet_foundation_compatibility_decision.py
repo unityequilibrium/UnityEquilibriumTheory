@@ -22,21 +22,21 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/artifacts/uet_foundation_compatibility_decision.json"
-REPORT = ROOT / "docs/core/UET_FOUNDATION_COMPATIBILITY_DECISION.md"
+OUT = ROOT / "docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json"
+REPORT = ROOT / "docs/core/01_contracts/UET_FOUNDATION_COMPATIBILITY_DECISION.md"
 
 INPUTS = {
-    "compatibility": ROOT / "docs/core/artifacts/uet_foundation_compatibility_gate.json",
-    "aggregate": ROOT / "docs/core/artifacts/uet_foundation_status_aggregate.json",
-    "inventory": ROOT / "docs/core/artifacts/uet_foundation_equation_inventory.json",
-    "family_contract": ROOT / "docs/core/artifacts/uet_core_equation_family_contract.json",
-    "legacy_variational": ROOT / "docs/core/artifacts/uet_legacy_variational_closure.json",
-    "matter_space": ROOT / "docs/core/artifacts/matter_space_variational_verification.json",
-    "causal_reference": ROOT / "docs/core/artifacts/matter_space_causal_reference_verification.json",
-    "trace": ROOT / "docs/core/artifacts/spacetime_trace_verification.json",
-    "gr_closed_limit": ROOT / "docs/core/artifacts/gr_closed_limit_verification.json",
-    "o2_eos": ROOT / "docs/core/artifacts/o2_finite_density_eos_verification.json",
-    "transport": ROOT / "docs/core/artifacts/covariant_superfluid_transport_verification.json",
+    "compatibility": ROOT / "docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json",
+    "aggregate": ROOT / "docs/core/07_artifacts/gates/uet_foundation_status_aggregate.json",
+    "inventory": ROOT / "docs/core/07_artifacts/gates/uet_foundation_equation_inventory.json",
+    "family_contract": ROOT / "docs/core/07_artifacts/archive/uet_core_equation_family_contract.json",
+    "legacy_variational": ROOT / "docs/core/07_artifacts/gates/uet_legacy_variational_closure.json",
+    "matter_space": ROOT / "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
+    "causal_reference": ROOT / "docs/core/07_artifacts/verification/matter_space_causal_reference_verification.json",
+    "trace": ROOT / "docs/core/07_artifacts/verification/spacetime_trace_verification.json",
+    "gr_closed_limit": ROOT / "docs/core/07_artifacts/verification/gr_closed_limit_verification.json",
+    "o2_eos": ROOT / "docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json",
+    "transport": ROOT / "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json",
 }
 
 
@@ -144,7 +144,7 @@ def build_decision() -> dict[str, Any]:
             "standard_physics_correspondence": "CONDITIONAL_TRANSPORT",
             "old_theory_special_case": "MARKOVIAN_COMPARATOR_ONLY",
             "reason": "The covariant current lane is a constitutive Maxwell-Cattaneo/control interface; coefficient origin, Kubo matching, and dimensional observables remain open.",
-            "evidence": ["docs/core/artifacts/covariant_diffusion_formula_audit.json", "docs/core/artifacts/covariant_diffusive_current_verification.json"]
+            "evidence": ["docs/core/07_artifacts/correspondence/covariant_diffusion_formula_audit.json", "docs/core/07_artifacts/verification/covariant_diffusive_current_verification.json"]
         },
         {
             "family_id": "core.hyperbolic_phase",
@@ -152,7 +152,7 @@ def build_decision() -> dict[str, Any]:
             "standard_physics_correspondence": "EXTERNAL_TELEGRAPH_COMPARATOR",
             "old_theory_special_case": "NOT_ESTABLISHED",
             "reason": "The hyperbolic phase-field path is a fixed-form external comparator; it is not derived from the UET action.",
-            "evidence": ["docs/core/artifacts/hyperbolic_phase_field_formula_audit.json", "docs/core/artifacts/hyperbolic_phase_field_covariant_mapping_gate.json"]
+            "evidence": ["docs/core/07_artifacts/correspondence/hyperbolic_phase_field_formula_audit.json", "docs/core/07_artifacts/gates/hyperbolic_phase_field_covariant_mapping_gate.json"]
         },
         {
             "family_id": "core.noether_mapping",
@@ -160,7 +160,7 @@ def build_decision() -> dict[str, Any]:
             "standard_physics_correspondence": "CONDITIONAL_O2_NOETHER_MAP",
             "old_theory_special_case": "NOT_ESTABLISHED",
             "reason": "The action-level Noether current is compatible in its parent lane, but the coarse-grained C mapping is many-to-one and does not prove the legacy C field or microscopic dissipation.",
-            "evidence": ["docs/core/artifacts/noether_phase_field_map_formula_audit.json", "docs/core/artifacts/noether_phase_field_state_map_verification.json"]
+            "evidence": ["docs/core/07_artifacts/correspondence/noether_phase_field_map_formula_audit.json", "docs/core/07_artifacts/verification/noether_phase_field_state_map_verification.json"]
         },
         {
             "family_id": "core.lorentz",
@@ -168,7 +168,7 @@ def build_decision() -> dict[str, Any]:
             "standard_physics_correspondence": "NOT_ESTABLISHED_GLOBAL",
             "old_theory_special_case": "NOT_ESTABLISHED",
             "reason": "Lorentz transformation utilities and tests do not establish covariance of every physical operator or the legacy master dynamics.",
-            "evidence": ["docs/core/test/test_lorentz_noether_comprehensive.py", "docs/core/UET_FOUNDATION_COMPATIBILITY_AUDIT.md"]
+            "evidence": ["docs/core/test/test_lorentz_noether_comprehensive.py", "docs/core/08_history/research_notes/UET_FOUNDATION_COMPATIBILITY_AUDIT.md"]
         },
         {
             "family_id": "core.parameter_contract",
@@ -176,7 +176,7 @@ def build_decision() -> dict[str, Any]:
             "standard_physics_correspondence": "PARAMETER_POLICY_ONLY",
             "old_theory_special_case": "NOT_ESTABLISHED",
             "reason": "The parameter registry still mixes normalized, natural-unit, and SI lanes globally; the scoped beta_normalized/Landauer separation is closed, but cross-family conversion remains open.",
-            "evidence": ["docs/core/artifacts/uet_foundation_compatibility_gate.json", "docs/core/uet_parameters.py"]
+            "evidence": ["docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json", "docs/core/01_contracts/units/uet_parameters.py"]
         },
         {
             "family_id": "core.observable_contract",
@@ -184,7 +184,7 @@ def build_decision() -> dict[str, Any]:
             "standard_physics_correspondence": "BLOCKED",
             "old_theory_special_case": "NOT_ESTABLISHED",
             "reason": "A complete measurement operator with units, uncertainty, resolution, and nuisance parameters is not closed for the core families.",
-            "evidence": ["docs/core/artifacts/uet_foundation_dependency_gate.json", "docs/core/artifacts/uet_foundation_status_aggregate.json"]
+            "evidence": ["docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json", "docs/core/07_artifacts/gates/uet_foundation_status_aggregate.json"]
         },
         {
             "family_id": "core.support_and_adapters",
@@ -192,7 +192,7 @@ def build_decision() -> dict[str, Any]:
             "standard_physics_correspondence": "NOT_APPLICABLE",
             "old_theory_special_case": "NOT_APPLICABLE",
             "reason": "Support and adapter code cannot create a physical claim without an owning equation family.",
-            "evidence": ["docs/core/artifacts/uet_code_surface_inventory.json"]
+            "evidence": ["docs/core/07_artifacts/archive/uet_code_surface_inventory.json"]
         },
         {
             "family_id": "core.o2_superfluid",

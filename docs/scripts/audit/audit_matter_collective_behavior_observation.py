@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUTPUT = ROOT / "docs/core/artifacts/matter_collective_behavior_observation_gate.json"
+OUTPUT = ROOT / "docs/core/07_artifacts/gates/matter_collective_behavior_observation_gate.json"
 
 
 def _source(relative_path: str, markers: list[str]) -> dict[str, object]:
@@ -37,7 +37,7 @@ def main() -> None:
             ],
         ),
         _source(
-            "docs/core/uet_matter_space.py",
+            "docs/core/02_equations/matter_space/uet_matter_space.py",
             [
                 "class MatterSpaceState",
                 "space_response",

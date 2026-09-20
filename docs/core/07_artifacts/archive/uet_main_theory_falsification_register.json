@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "artifact": "uet_main_theory_falsification_register",
+  "generated_at": "2026-09-16T10:57:26.246170+00:00",
+  "criteria": [
+    {
+      "branch": "conservative_parent",
+      "reject_or_reduce_if": "component equations cannot be obtained from one parent action or GR null nesting fails",
+      "current_state": "PASS_INTERNAL_FORMULA"
+    },
+    {
+      "branch": "coarse_graining",
+      "reject_or_reduce_if": "mapping assumes the desired observable or silently identifies distinct C lanes",
+      "current_state": "PASS_DECLARED_FIELD_MAP_ONLY"
+    },
+    {
+      "branch": "open_system",
+      "reject_or_reduce_if": "KMS, PSD, entropy, or exchange accounting fails, or trace must feed back as a state",
+      "current_state": "PASS_LINEAR_CLASSICAL_CONTROL_ONLY"
+    },
+    {
+      "branch": "causal_spine",
+      "reject_or_reduce_if": "principal system is not strongly hyperbolic, becomes superluminal, or requires clipping",
+      "current_state": "PASS_MINKOWSKI_CONTROL_CURVED_BLOCKED"
+    },
+    {
+      "branch": "thermal_observable",
+      "reject_or_reduce_if": "agreement requires in-sample alpha_Phi_K fitting, causal leakage persists, or holdout is consumed for tuning",
+      "current_state": "BLOCKED"
+    },
+    {
+      "branch": "quantum_interface",
+      "reject_or_reduce_if": "state/POVM positivity, CPTP, Born normalization, no-signalling, or interpretation invariance fails",
+      "current_state": "PASS_STANDARD_BASELINE"
+    },
+    {
+      "branch": "gravity",
+      "reject_or_reduce_if": "GR limit requires deleting equations, curved constraints fail, or observables depend on gauge choice",
+      "current_state": "ANALYTIC_CONTROLS_ONLY"
+    },
+    {
+      "branch": "fundamental_unification",
+      "reject_or_reduce_if": "ghost, anomaly, nonunitarity, nonrenormalizability outside declared EFT, or no falsifiable observable",
+      "current_state": "HYPOTHESIS_TRACK_BLOCKED"
+    },
+    {
+      "branch": "applications",
+      "reject_or_reduce_if": "improvement exists only in calibration data and disappears on uncertainty-aware holdout",
+      "current_state": "BLOCKED"
+    }
+  ],
+  "rule": "a branch failure cannot be hidden by averaging with a passing methodological category"
+}

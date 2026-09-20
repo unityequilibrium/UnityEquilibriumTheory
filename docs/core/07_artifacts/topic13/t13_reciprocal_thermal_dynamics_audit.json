@@ -1,0 +1,199 @@
+{
+  "schema_version": "t13-reciprocal-thermal-dynamics-v1",
+  "major_result_id": "T13_RECIPROCAL_MATERIAL_RESPONSE_ENERGY_ENTROPY",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_CONDITIONAL_RECIPROCAL_THERMAL_DYNAMICS",
+  "what_is_closed": [
+    "Joint G/r feedback from the declared local thermodynamic potential.",
+    "Positive modal availability, reciprocal power cancellation and linear entropy balance.",
+    "Independent dynamic/resolvent and normalization/rotation/energy-unit checks."
+  ],
+  "equation_registry_ids": [
+    "uet.thermal.reciprocal_material_response"
+  ],
+  "equation_or_mapping": {
+    "response": "z*Pi_dot=-a_q*phi-h.v+r*theta-gamma*Pi+f",
+    "heat": "c*theta_dot=-T*b.w-T*r*Pi-q*J+Q",
+    "entropy": "ds=b.v+c*theta/T+r*phi",
+    "availability_rate": "W_dot=theta*Q/T+Pi*f-gamma*Pi^2-J^2/(T*k)",
+    "Fourier_loss": "k*q^2*theta^2/T replaces J^2/(T*k) at tau=0"
+  },
+  "ontology": {
+    "Phi": "existing response displacement",
+    "Pi": "response time derivative",
+    "material": "v,w,theta and optional Cattaneo J",
+    "C": "unchanged",
+    "R_gen_R_obs": "excluded"
+  },
+  "state_variables": [
+    "v[3]",
+    "w[3]",
+    "theta",
+    "J (tau>0 only)",
+    "phi",
+    "Pi"
+  ],
+  "excluded_variables": [
+    "R_gen",
+    "R_obs"
+  ],
+  "units": {
+    "v": "1",
+    "w_theta_phi": "E",
+    "Pi": "E^2",
+    "J_rho_A": "E^4",
+    "b_h_c": "E^3",
+    "r_a_k": "E^2",
+    "z_kappa_phi": "1",
+    "gamma_q_T": "E",
+    "tau": "E^-1",
+    "f": "E^3",
+    "Q": "E^5"
+  },
+  "unit_lane": "natural_units_not_SI",
+  "derivation_class": "constitutive_ansatz",
+  "derivation_detail": "Reciprocal forces and availability derived exactly within a declared quadratic potential, with external dissipation inputs.",
+  "observable": "conditional material temperature and response transfer, not detector-calibrated TTG",
+  "data_role": "SYNTHETIC_INTERNAL_NO_CALIBRATION",
+  "coefficient_origin": "Same synthetic bare-plus-thermal increments as preceding susceptibility wave; not measured material coefficients.",
+  "checks": {
+    "independent_equation_covariance_and_limit_suite": true,
+    "matching_G_and_r_carried_together": true,
+    "positive_coupled_availability": true,
+    "reciprocal_matrix_balance": true,
+    "linear_entropy_balance": true,
+    "forced_availability_balance": true,
+    "dissipation_nonnegative": true,
+    "independent_laplace_elimination": true,
+    "conservative_limit_energy_identity": true,
+    "unforced_availability_nonincreasing": true,
+    "one_sided_r_is_rejected_by_balance": true,
+    "heat_preparation_generates_response_without_response_force": true,
+    "protected_whole_topic_files_unchanged": true
+  },
+  "test_count": 14,
+  "metrics": {
+    "schur_margin": 1.0995350355625293,
+    "energy_matrix_residual": 2.220446049250313e-16,
+    "conservative_matrix_residual": 0.0,
+    "laplace_absolute_error": 9.930136612989092e-16,
+    "one_sided_r_balance_defect": 0.023668113526574733,
+    "unforced_initial_availability": 0.00033055259277120556,
+    "unforced_final_availability": 6.527703009719858e-05,
+    "heat_only_initial_state_max_abs_phi": 0.00017494406109217752,
+    "G": [
+      0.0005313520740519262,
+      -0.0002656760370259631,
+      0.0003985140555389447,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "r": 0.016735883572534044
+  },
+  "synthetic_contract": {
+    "temperature": 0.8,
+    "q": 1.0,
+    "rho": 1.0,
+    "conductivity": 0.3,
+    "relaxation": 0.2,
+    "response_kinetic": 1.2,
+    "response_gradient": 0.3,
+    "response_damping": 0.08,
+    "bare_phi_curvature": 0.8,
+    "bare_heat_capacity": 2.4,
+    "bulk": 5.0,
+    "shear": 3.0,
+    "raw_mass_squared": 2.7,
+    "matter_kinetic": 1.2,
+    "matter_quartic": 0.2,
+    "response_coupling": 0.84,
+    "epsilon_nc": 0.5,
+    "raw_D": [
+      0.48,
+      -0.24,
+      0.36,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "bare_expansion": [
+      0.04,
+      0.04,
+      0.04,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "initial_entropy": 0.03,
+    "initial_phi": 0.02,
+    "initial_pi": 0.004,
+    "times": [
+      0.0,
+      20.0,
+      161
+    ]
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/T13_RECIPROCAL_THERMAL_DYNAMICS.md",
+      "sha256": "bece96a4d5e455d92d6c4bc82079a4583a914d74094256dd75b725a75580bedd"
+    },
+    {
+      "path": "docs/core/uet_reciprocal_thermal_dynamics.py",
+      "sha256": "f8336990a61dc4b798bea8b8d3c6f2acadba279f79d778e6ba5b391e3165db2a"
+    },
+    {
+      "path": "docs/core/test/test_topic13_reciprocal_thermal_dynamics.py",
+      "sha256": "a634b7b757d381bad9cea0a38b41feb3807806ef6b5a3e6a400cec7da301a979"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_reciprocal_thermal_dynamics.py",
+      "sha256": "53061a4dc6d48b2d519f36de5b76f01a98740f2f013b232ba7592a238b146220"
+    },
+    {
+      "path": "docs/core/uet_dynamic_thermoelastic_response.py",
+      "sha256": "ec02c5c96f30f8a6be38fd22d506c15ea6f2b8673ea76d1d25be00456a51d762"
+    },
+    {
+      "path": "docs/core/uet_matter_strain_susceptibility.py",
+      "sha256": "827e7745ce840baf5ef6c23b2f5cd8ba353711aedfefa36ec5e98a3358a2f421"
+    },
+    {
+      "path": "docs/core/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "path": "docs/core/uet_covariant_response.py",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    },
+    {
+      "path": "docs/core/uet_thermoelastic_spatial_compatibility.py",
+      "sha256": "a3a4e96938984e4c7c4ac4c72ea78a541c5fa2dd0994f0f8cb431faaea823ca7"
+    },
+    {
+      "path": "docs/core/artifacts/t13_matter_strain_susceptibility_matching_audit.json",
+      "sha256": "459dc674eea69bb28d38898fb7ae13b551ad0fa8a1e2b250c1d3503f617e3100"
+    }
+  ],
+  "protected_full_closure_hashes": {
+    "docs/core/artifacts/t13_topic13_closure_matrix.json": "9545138da34726bba60c3e8af29714d577f6579b2cb0489bbba94834f4cb45e5",
+    "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json": "dc0d658a353172074425d2a8259dce3a4fa7b6b75bea68310c7a1492421d5d58"
+  },
+  "input_policy": "No experimental curve, setup metadata, calibration source or holdout is read by this generator/model as a computational input. Prior research artifact is hashed only.",
+  "open_blockers": [
+    "physical_D_Z_and_material_mode_identity_missing",
+    "vacuum_subtraction_and_material_double_counting_match_missing",
+    "physical_pump_initial_entropy_and_response_force_map_missing",
+    "microscopic_dissipation_SK_KMS_and_noise_match_missing",
+    "continuum_causal_boundary_and_detector_geometry_missing",
+    "nonlinear_mean_heating_and_full_entropy_current_missing"
+  ],
+  "controlling_blocker": "physical_material_and_preparation_match_missing",
+  "dependency_unlocked": "Conditional reciprocal pump/material design only",
+  "physical_dependency_unlock": false,
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "claim_boundary": "Local quadratic natural-unit extension with external damping/transport; not accepted core action, physical alpha, Kubo/KMS, nonlinear total-energy closure or finite-cone proof. Separate He-4 Core-ready record is unchanged and not revalidated."
+}

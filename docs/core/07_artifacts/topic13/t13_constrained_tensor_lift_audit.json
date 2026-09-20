@@ -1,0 +1,282 @@
+{
+  "major_result_id": "T13_CONSTRAINED_TENSOR_LIFT",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "status": "INTERNAL_TENSOR_LIFT_CHECKED",
+  "what_is_closed": "Four tensors, four forces each tested through unchanged covariant lift",
+  "equation_or_mapping": "q=K X; sigma=X.T K X/T; compare X.T D X/T and existing boost0.37",
+  "units": "natural",
+  "derivation_class": "Existing tensor lift applied to independent constrained response",
+  "reported_matrix_precision_difference": {
+    "axis6": "6.57642055057e-113",
+    "axis_cube14": "0.0"
+  },
+  "observable": "Internal heat/entropy mapping",
+  "data_role": "INTERNAL_NO_FIT",
+  "rows": [
+    {
+      "rule": "axis6",
+      "dps": 120,
+      "force": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "entropy_balance_absolute": 0.0,
+      "boost_residual": 6.821210263296962e-13,
+      "entropy_original_gate": true,
+      "boost_original_gate": true,
+      "isotropy_original_gate": true
+    },
+    {
+      "rule": "axis6",
+      "dps": 120,
+      "force": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "entropy_balance_absolute": 0.0,
+      "boost_residual": 0.0,
+      "entropy_original_gate": true,
+      "boost_original_gate": true,
+      "isotropy_original_gate": true
+    },
+    {
+      "rule": "axis6",
+      "dps": 120,
+      "force": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "entropy_balance_absolute": 0.0,
+      "boost_residual": 0.0,
+      "entropy_original_gate": true,
+      "boost_original_gate": true,
+      "isotropy_original_gate": true
+    },
+    {
+      "rule": "axis6",
+      "dps": 120,
+      "force": [
+        0.0,
+        1.0,
+        -0.5,
+        0.25
+      ],
+      "entropy_balance_absolute": 0.0,
+      "boost_residual": 4.547473508864641e-13,
+      "entropy_original_gate": true,
+      "boost_original_gate": true,
+      "isotropy_original_gate": true
+    },
+    {
+      "rule": "axis6",
+      "dps": 180,
+      "force": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "entropy_balance_absolute": 0.0,
+      "boost_residual": 6.821210263296962e-13,
+      "entropy_original_gate": true,
+      "boost_original_gate": true,
+      "isotropy_original_gate": true
+    },
+    {
+      "rule": "axis6",
+      "dps": 180,
+      "force": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "entropy_balance_absolute": 0.0,
+      "boost_residual": 0.0,
+      "entropy_original_gate": true,
+      "boost_original_gate": true,
+      "isotropy_original_gate": true
+    },
+    {
+      "rule": "axis6",
+      "dps": 180,
+      "force": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "entropy_balance_absolute": 0.0,
+      "boost_residual": 0.0,
+      "entropy_original_gate": true,
+      "boost_original_gate": true,
+      "isotropy_original_gate": true
+    },
+    {
+      "rule": "axis6",
+      "dps": 180,
+      "force": [
+        0.0,
+        1.0,
+        -0.5,
+        0.25
+      ],
+      "entropy_balance_absolute": 0.0,
+      "boost_residual": 4.547473508864641e-13,
+      "entropy_original_gate": true,
+      "boost_original_gate": true,
+      "isotropy_original_gate": true
+    },
+    {
+      "rule": "axis_cube14",
+      "dps": 120,
+      "force": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "entropy_balance_absolute": 0.0,
+      "boost_residual": 2.2737367544323206e-13,
+      "entropy_original_gate": true,
+      "boost_original_gate": true,
+      "isotropy_original_gate": true
+    },
+    {
+      "rule": "axis_cube14",
+      "dps": 120,
+      "force": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "entropy_balance_absolute": 0.0,
+      "boost_residual": 0.0,
+      "entropy_original_gate": true,
+      "boost_original_gate": true,
+      "isotropy_original_gate": true
+    },
+    {
+      "rule": "axis_cube14",
+      "dps": 120,
+      "force": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "entropy_balance_absolute": 0.0,
+      "boost_residual": 0.0,
+      "entropy_original_gate": true,
+      "boost_original_gate": true,
+      "isotropy_original_gate": true
+    },
+    {
+      "rule": "axis_cube14",
+      "dps": 120,
+      "force": [
+        0.0,
+        1.0,
+        -0.5,
+        0.25
+      ],
+      "entropy_balance_absolute": 0.0,
+      "boost_residual": 2.2737367544323206e-13,
+      "entropy_original_gate": true,
+      "boost_original_gate": true,
+      "isotropy_original_gate": true
+    },
+    {
+      "rule": "axis_cube14",
+      "dps": 180,
+      "force": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "entropy_balance_absolute": 0.0,
+      "boost_residual": 2.2737367544323206e-13,
+      "entropy_original_gate": true,
+      "boost_original_gate": true,
+      "isotropy_original_gate": true
+    },
+    {
+      "rule": "axis_cube14",
+      "dps": 180,
+      "force": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "entropy_balance_absolute": 0.0,
+      "boost_residual": 0.0,
+      "entropy_original_gate": true,
+      "boost_original_gate": true,
+      "isotropy_original_gate": true
+    },
+    {
+      "rule": "axis_cube14",
+      "dps": 180,
+      "force": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "entropy_balance_absolute": 0.0,
+      "boost_residual": 0.0,
+      "entropy_original_gate": true,
+      "boost_original_gate": true,
+      "isotropy_original_gate": true
+    },
+    {
+      "rule": "axis_cube14",
+      "dps": 180,
+      "force": [
+        0.0,
+        1.0,
+        -0.5,
+        0.25
+      ],
+      "entropy_balance_absolute": 0.0,
+      "boost_residual": 2.2737367544323206e-13,
+      "entropy_original_gate": true,
+      "boost_original_gate": true,
+      "isotropy_original_gate": true
+    }
+  ],
+  "verification_status": "ORIGINAL_THRESHOLDS_RETAINED",
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "open_blockers": [
+    "physical_interpolation",
+    "resolution_and_input_sensitivity",
+    "charged_frame_integration",
+    "material_mapping"
+  ],
+  "claim_boundary": "Float64 lift of high-precision reference outputs; not full charged-frame state integration or physical validation",
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_constrained_tensor_audit.json",
+      "sha256": "fe5c2a78a5d7087ac106a84d5f6f9c1c0f17ddf143b21bbb7ec18aa2c977c80c"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_constrained_tensor_lift.py",
+      "sha256": "60d3f4c5548cea8f1744c0337be2a31eefb1270ad3873c5db36b4ecdb299b3c7"
+    },
+    {
+      "path": "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py",
+      "sha256": "566d6a57a377269a0d551189341b4550e4da9ee8fa711ab04b7d4785bbcff209"
+    }
+  ]
+}

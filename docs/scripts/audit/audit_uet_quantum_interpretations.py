@@ -13,12 +13,15 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from docs.core.core_paths import canonical_artifact_path, canonical_existing_path  # noqa: E402
+QUANTUM_INTERPRETATIONS_SOURCE = canonical_existing_path(ROOT / ("docs/core/" + "uet_quantum_interpretations.py")).relative_to(ROOT).as_posix()
+
 from docs.core.uet_quantum_interpretations import (
     compare_empirical_predictions, interpretation_contract,
 )
 from docs.core.uet_quantum_measurement import DensityOperator, POVMRecord
 
-ARTIFACTS = ROOT / "docs/core/artifacts"
+ARTIFACTS = ROOT / "docs/core/07_artifacts"
 
 
 def build_artifacts() -> tuple[dict, dict, dict]:
@@ -64,10 +67,10 @@ def build_artifacts() -> tuple[dict, dict, dict]:
     }
     addendum = {
         "schema_version": "1.0", "artifact": "uet_equation_correspondence_registry_quantum_interpretations_addendum",
-        "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json", "status": "CANDIDATE_ENTRY_PENDING_MERGE",
+        "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json", "status": "CANDIDATE_ENTRY_PENDING_MERGE",
         "equation_entries": [{
             "equation_id": "uet.main_theory.quantum_interpretation_adapters", "version": "interpretation-adapters-v1",
-            "classification": "observable_definition", "relation_or_code_path": "docs/core/uet_quantum_interpretations.py",
+            "classification": "observable_definition", "relation_or_code_path": QUANTUM_INTERPRETATIONS_SOURCE,
             "variables": {"rho_A": "agent-indexed probability assignment", "relation_SR": "system-reference metadata", "p_o": "shared operational Born probabilities"},
             "mathematical_role": "metadata views over one operational probability contract",
             "standard_physics_counterpart": "QBism, relational QM, and operational QM comparison",
@@ -77,8 +80,8 @@ def build_artifacts() -> tuple[dict, dict, dict]:
             "assumptions": ["same preparation and instrument", "interpretations add no dynamics"],
             "symmetry_and_conservation": "empirical prediction invariance",
             "limiting_cases": ["changing agent or reference labels leaves probabilities unchanged"],
-            "implementation_paths": ["docs/core/uet_quantum_interpretations.py"],
-            "verifier_paths": ["docs/scripts/audit/audit_uet_quantum_interpretations.py", "docs/core/artifacts/quantum_interpretation_invariance_verification.json", "docs/core/test/test_uet_quantum_interpretations.py"],
+            "implementation_paths": [QUANTUM_INTERPRETATIONS_SOURCE],
+            "verifier_paths": ["docs/scripts/audit/audit_uet_quantum_interpretations.py", "docs/core/07_artifacts/verification/quantum_interpretation_invariance_verification.json", "docs/core/test/test_uet_quantum_interpretations.py"],
             "evidence_class": "INTERNAL_FORMAL", "proof_status": "finite-dimensional invariance tests pass",
             "downstream_dependencies": ["uet.main_theory.operational_quantum_measurement", "uet.main_theory.detector_observables"],
             "claim_boundary": "interpretation comparison only; no new empirical prediction",
@@ -93,7 +96,9 @@ def main() -> int:
     names = ("quantum_interpretation_invariance_verification.json", "uet_main_theory_wave7_gate.json", "uet_equation_correspondence_registry_quantum_interpretations_addendum.json")
     outputs = dict(zip(names, build_artifacts()))
     for name, payload in outputs.items():
-        (ARTIFACTS / name).write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        canonical_artifact_path(name).write_text(
+            json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        )
     gate = outputs["uet_main_theory_wave7_gate.json"]
     print(f"audit_status={gate['audit_status']}")
     print(f"interpretation_status={gate['interpretation_status']}")

@@ -1,0 +1,139 @@
+{
+  "major_result_id": "T13_NATURAL_FIXED_CHARGE_RESPONSE",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "what_is_closed": [
+    "Fixed-charge response evaluated by chain-rule derivatives and direct charge-constrained roots at three steps"
+  ],
+  "equation_or_mapping": "(d epsilon/dx)_n = epsilon_x - epsilon_mu*n_x/n_mu, x=T or Phi",
+  "units": "natural lane only; n is O(2) charge density, not He-4 atom or mass density",
+  "derivation_class": "IMPLICIT_FUNCTION_CHAIN_RULE_AND_NUMERICAL_CROSSCHECK",
+  "observable": "natural energy susceptibility under declared constraints",
+  "data_role": "INTERNAL_DERIVATIVE_COMPARISON",
+  "verification_status": "ENSEMBLE_COMPARISON_NOT_PHYSICAL_CALIBRATION",
+  "state": [
+    0.22,
+    0.35,
+    0.15
+  ],
+  "branch": "normal",
+  "records": [
+    {
+      "step": 0.001,
+      "energy_derivatives_T_mu_Phi": [
+        0.01768326159002319,
+        0.0031376466725976937,
+        4.091650184992338e-05
+      ],
+      "charge_derivatives_T_mu_Phi": [
+        0.010379233736009257,
+        0.0024406729128308006,
+        3.3726851911589865e-05
+      ],
+      "fixed_mu_thermal_susceptibility": 0.01768326159002319,
+      "fixed_charge_thermal_susceptibility": 0.004340069216846376,
+      "fixed_charge_Phi_response": -2.441599975714929e-06,
+      "fixed_charge_alpha": -0.00056257166734522,
+      "fixed_mu_alpha": 0.00231385492102929,
+      "direct_fixed_charge_derivatives_T_Phi": [
+        0.00434059565941993,
+        -2.441601069870687e-06
+      ],
+      "absolute_chain_vs_direct_disagreement": [
+        5.264425735540187e-07,
+        1.0941557582926434e-12
+      ],
+      "max_charge_constraint_residual": 2.0328790734103208e-16,
+      "solved_mu_values": [
+        0.3542605986386081,
+        0.34575576483797266,
+        0.35001381868749787,
+        0.3499861812445248
+      ]
+    },
+    {
+      "step": 0.0005,
+      "energy_derivatives_T_mu_Phi": [
+        0.017682827496939876,
+        0.0031376378463105533,
+        4.091650186027751e-05
+      ],
+      "charge_derivatives_T_mu_Phi": [
+        0.010379134647553988,
+        0.0024406659924699776,
+        3.372685180994591e-05
+      ],
+      "fixed_mu_thermal_susceptibility": 0.017682827496939876,
+      "fixed_charge_thermal_susceptibility": 0.004339762209599406,
+      "fixed_charge_Phi_response": -2.441600806077231e-06,
+      "fixed_charge_alpha": -0.0005626116566194556,
+      "fixed_mu_alpha": 0.002313911724092675,
+      "direct_fixed_charge_derivatives_T_Phi": [
+        0.004339893826517697,
+        -2.4416012583050248e-06
+      ],
+      "absolute_chain_vs_direct_disagreement": [
+        1.3161691829119415e-07,
+        4.522277937866158e-13
+      ],
+      "max_charge_constraint_residual": 2.710505431213761e-16,
+      "solved_mu_values": [
+        0.3521283125359673,
+        0.3478757782167872,
+        0.3500069093523038,
+        0.3499930906307573
+      ]
+    },
+    {
+      "step": 0.00025,
+      "energy_derivatives_T_mu_Phi": [
+        0.017682718973761804,
+        0.0031376356396650967,
+        4.091650193660534e-05
+      ],
+      "charge_derivatives_T_mu_Phi": [
+        0.010379109875973801,
+        0.0024406642622188356,
+        3.372685214875909e-05
+      ],
+      "fixed_mu_thermal_susceptibility": 0.017682718973761804,
+      "fixed_charge_thermal_susceptibility": 0.004339685456628486,
+      "fixed_charge_Phi_response": -2.4416014100046344e-06,
+      "fixed_charge_alpha": -0.0005626217463008302,
+      "fixed_mu_alpha": 0.002313925929452285,
+      "direct_fixed_charge_derivatives_T_Phi": [
+        0.004339718361689266,
+        -2.4416009713167097e-06
+      ],
+      "absolute_chain_vs_direct_disagreement": [
+        3.29050607802972e-08,
+        4.3868792469091075e-13
+      ],
+      "max_charge_constraint_residual": 1.3552527156068805e-16,
+      "solved_mu_values": [
+        0.35106365225950953,
+        0.34893737042148254,
+        0.35000345467827504,
+        0.34999654531754826
+      ]
+    }
+  ],
+  "evidence_hashes": {
+    "docs/core/artifacts/t13_uet_o2_action_thermal_observable_bridge_audit.json": "7ba49d3f629c91f3f88dda6ad717d8928e58439de7517a5979f0a465b9f52585",
+    "docs/scripts/audit/audit_topic13_fixed_charge_response.py": "91a0ed17675cfbaee24e3ccbdd0179ed1a55fb4a3c622581f27525a86d4b0627",
+    "docs/core/uet_o2_action_thermal_observable_bridge.py": "a1be58b8230240775654e7c0d6265870010f546238e96e59e36045e6a893e5d2",
+    "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
+    "docs/core/test/test_topic13_fixed_charge_response.py": "3aa89fecb6b870ab11a99d31c50b74c7ecbce9f87712544d3be72503a792bfb5"
+  },
+  "open_blockers": [
+    "O(2) charge to material density correspondence",
+    "physical thermodynamic path and uncertainty",
+    "independent material observable"
+  ],
+  "dependency_unlocked": [
+    "ensemble-specific natural response comparison only"
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "claim_boundary": "No parameter or calibration retuning. This does not identify either susceptibility as physical c_v or SVP response. Existing Core composition remains unchanged; no holdout read."
+}

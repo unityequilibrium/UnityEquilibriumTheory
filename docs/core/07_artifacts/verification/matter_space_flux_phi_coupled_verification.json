@@ -1,0 +1,193 @@
+{
+  "schema_version": "matter-space-flux-phi-coupled-verification-v1",
+  "artifact": "matter_space_flux_phi_coupled_verification",
+  "generated_at": "2026-09-14",
+  "status": "PASS",
+  "operator_mode": "matter_space_conserved_flux_phi_coupled_v1",
+  "branch_id": "T13-CAUSAL-FLUX-PHI-COUPLED-001",
+  "equations": {
+    "conservation": "C_t + partial_x J_C = 0",
+    "flux_relaxation": "tau_C * J_C_t + J_C = -M_C * partial_x(mu_C)",
+    "chemical_potential_C": "mu_C = a_C*C + b_C*C^3 - coupling_g*C*Phi",
+    "response_equation": "tau_Phi * Phi_tt + Phi_t + M_Phi*mu_Phi = 0",
+    "chemical_potential_Phi": "mu_Phi = a_Phi*Phi + b_Phi*Phi^3 - kappa_Phi*Laplacian(Phi) - 0.5*coupling_g*C^2",
+    "coupling_energy": "V_CPhi = -0.5*coupling_g*C^2*Phi",
+    "energy_exchange": "Delta E = -W_C_diss - W_Phi_damp + W_CPhi_exchange + residual"
+  },
+  "units": {
+    "lane": "normalized",
+    "C": "normalized collective-coordinate density lane",
+    "J_C": "normalized conserved flux lane",
+    "Phi": "normalized effective response variable",
+    "R_gen": "derived history trace; absent from dynamics"
+  },
+  "derivation_class": "named local conserved C flux branch plus causal Phi discrete-gradient lane; staggered internal numerical integration",
+  "observable": "normalized coupled C/Phi response and shared energy ledger",
+  "data_role": "internal numerical branch verification; not external thermal data",
+  "config": {
+    "a_C": 0.8,
+    "b_C": 1.0,
+    "mobility_C": 0.04,
+    "tau_C": 0.7,
+    "a_Phi": 0.8,
+    "b_Phi": 0.6,
+    "kappa_Phi": 0.2,
+    "mobility_Phi": 0.5,
+    "tau_Phi": 0.7,
+    "coupling_g": 0.15,
+    "C_kappa": 0.0,
+    "boundary_condition": "zero_flux"
+  },
+  "domain_of_dependence": {
+    "initial_condition": "single-cell compact C pulse; zero Phi response",
+    "grid": {
+      "n": 161,
+      "dx": 0.001,
+      "center_index": 80,
+      "target_distance_cells": 40
+    },
+    "time_step": {
+      "dt": 0.0018708286933869708,
+      "C_cfl": 0.4,
+      "Phi_cfl": 0.7071067811865476,
+      "steps_before_target": 39,
+      "C_arrival_step_checked": 40,
+      "Phi_arrival_step_checked": 41
+    },
+    "metrics": {
+      "prearrival_max_outside_discrete_cone": 0.0,
+      "prearrival_leakage_fraction": 0.0,
+      "C_arrival_target_abs": 1.4032711954504658e-33,
+      "Phi_arrival_target_abs": 4.440892098500626e-16,
+      "support_excess_cells": 0,
+      "max_mass_drift": 4.0657581468206416e-20,
+      "max_combined_energy_relative_residual": 9.813156990275662e-07
+    },
+    "checks": {
+      "finite_cone_support": true,
+      "prearrival_threshold": true,
+      "arrival_target_nonzero": true,
+      "response_arrival_target_nonzero": true,
+      "mass_conservation": true,
+      "energy_ledger": true,
+      "no_clipping": true,
+      "no_cone_padding": true,
+      "no_parameter_fitting": true
+    }
+  },
+  "convergence": {
+    "initial_condition": "compact triangular C pulse with fixed physical width 0.004",
+    "physical_time_target": 0.01,
+    "temporal": {
+      "coarse": {
+        "dt": 0.0018708286933869708,
+        "steps": 5.0,
+        "physical_time": 0.009354143466934854,
+        "max_mass_drift": 0.0,
+        "max_energy_relative_residual": 2.855590860212542e-07
+      },
+      "refined": {
+        "dt": 0.0009354143466934854,
+        "steps": 11.0,
+        "physical_time": 0.01028955781362834,
+        "max_mass_drift": 5.421010862427522e-20,
+        "max_energy_relative_residual": 7.924819655632686e-08
+      },
+      "C_relative_l2_difference": 0.04631584791987388,
+      "Phi_relative_l2_difference": 0.0657760462966661
+    },
+    "spatial": {
+      "coarse": {
+        "dt": 0.0018708286933869708,
+        "steps": 5.0,
+        "physical_time": 0.009354143466934854,
+        "max_mass_drift": 0.0,
+        "max_energy_relative_residual": 2.855590860212542e-07
+      },
+      "refined": {
+        "dt": 0.0004677071733467427,
+        "steps": 21.0,
+        "physical_time": 0.009821850640281597,
+        "max_mass_drift": 5.421010862427522e-20,
+        "max_energy_relative_residual": 2.0156977218166533e-08
+      },
+      "C_relative_l2_difference": 0.07896545841232383,
+      "Phi_relative_l2_difference": 0.07248498360555874
+    },
+    "checks": {
+      "temporal_finite": true,
+      "spatial_finite": true,
+      "temporal_reasonable": true,
+      "spatial_reasonable": true
+    }
+  },
+  "verification": {
+    "checks": {
+      "finite_cone_support": true,
+      "prearrival_threshold": true,
+      "arrival_target_nonzero": true,
+      "response_arrival_target_nonzero": true,
+      "mass_conservation": true,
+      "energy_ledger": true,
+      "no_clipping": true,
+      "no_cone_padding": true,
+      "no_parameter_fitting": true,
+      "temporal_finite": true,
+      "spatial_finite": true,
+      "temporal_reasonable": true,
+      "spatial_reasonable": true
+    },
+    "full_original_conserved_gradient_candidate_replaced": false,
+    "full_original_conserved_gradient_candidate_pass": false,
+    "trace_backreaction": false,
+    "xie_2026_accessed": false,
+    "thresholds": {
+      "prearrival_leakage_fraction": 1e-06,
+      "energy_relative_residual": 1e-06
+    }
+  },
+  "evidence_inputs": {
+    "implementation": "docs/core/uet_matter_space_flux_phi.py",
+    "implementation_sha256": "d7435f6be8f72ed2e318f573e5ebd5ada7622209263a77ef72335f6410c868e0",
+    "C_branch_implementation": "docs/core/uet_matter_space_flux_telegraph.py",
+    "C_branch_implementation_sha256": "19cf32dac3e2fd3b1b16e2998542aa17d92c7701b874025ae373e0a3c7eeeda9",
+    "baseline_no_go": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json"
+  },
+  "major_result": {
+    "major_result_id": "T13_CAUSAL_FLUX_PHI_COUPLED_LANE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "named conserved C flux branch integrated with the causal Phi lane",
+      "finite-volume compact discrete domain of dependence for the named lane",
+      "C mass conservation and shared normalized energy ledger"
+    ],
+    "equation_or_mapping": {
+      "C_to_Phi": "mu_C and mu_Phi share V_CPhi = -0.5*coupling_g*C^2*Phi",
+      "measurement": "y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)"
+    },
+    "units": {
+      "lane": "normalized",
+      "alpha_Phi_K": "not derived by this internal branch"
+    },
+    "derivation_class": "named normalized internal coupled-lane verification",
+    "observable": "normalized C/Phi response and ledger diagnostics",
+    "data_role": "internal numerical verification; no TTG source consumed",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json"
+      }
+    ],
+    "verification_status": "PASS",
+    "open_blockers": [
+      "original kappa_C>0 conserved-gradient baseline remains blocked",
+      "TTG numeric source package remains provisional",
+      "alpha_Phi_K independent calibration remains open",
+      "non-circular bridge, beta, EOS, transport, KMS, and entropy remain open"
+    ],
+    "dependency_unlocked": "none; Topic 13 full bridge remains open",
+    "claim_boundary": "CLOSED_FOR_LANE only: this named normalized C/Phi branch does not close the original conserved-gradient baseline, establish SI thermal mapping, external validation, or global UET closure."
+  },
+  "claim_boundary": "This artifact verifies a named normalized coupled C/Phi branch only. It does not pass the original kappa_C>0 conserved-gradient equation, derive alpha_Phi_K, or establish external thermal validity.",
+  "next_controller": "if this named lane remains PASS, close the permitted TTG source package and independent alpha_Phi_K calibration without reading Xie 2026"
+}

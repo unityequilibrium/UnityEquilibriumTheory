@@ -19,8 +19,8 @@ from docs.core.uet_o2_finite_temperature_all_22_permutation_identity import (  #
 )
 
 
-OUT = ROOT / "docs/core/artifacts/t13_uet_o2_finite_temperature_all_22_permutation_identity_audit.json"
-MODULE = ROOT / "docs/core/uet_o2_finite_temperature_all_22_permutation_identity.py"
+OUT = ROOT / "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_all_22_permutation_identity_audit.json"
+MODULE = ROOT / "docs/core/02_equations/o2/uet_o2_finite_temperature_all_22_permutation_identity.py"
 
 
 def _hash(path: Path) -> str:
@@ -92,7 +92,7 @@ def main() -> int:
             "evidence_artifacts": [
                 str(MODULE.relative_to(ROOT)),
                 "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_all_22_permutation_identity.py",
-                "docs/core/artifacts/t13_uet_o2_finite_temperature_all_22_permutation_identity_audit.json",
+                "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_all_22_permutation_identity_audit.json",
             ],
             "verification_status": ALL_22_PERMUTATION_IDENTITY_STATUS
             if not failed

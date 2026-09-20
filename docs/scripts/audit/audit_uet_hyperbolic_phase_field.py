@@ -18,6 +18,11 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from docs.core.core_paths import (  # noqa: E402
+    CANONICAL_ARTIFACT_ROOT,
+    canonical_artifact_path,
+    canonical_existing_path,
+)
 from docs.core.uet_hyperbolic_phase_field import (  # noqa: E402
     HYPERBOLIC_PHASE_FIELD_SOURCE_ARXIV,
     HYPERBOLIC_PHASE_FIELD_SOURCE_DOI,
@@ -43,16 +48,16 @@ from docs.scripts.audit.uet_gr_monotonic_stage import (  # noqa: E402
     apply_latest_hyperbolic_phase_field_stage,
 )
 
-CORE = ROOT / "docs/core/uet_hyperbolic_phase_field.py"
-SPEC = ROOT / "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
+CORE = canonical_existing_path(ROOT / "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field.py")
+SPEC = canonical_existing_path(ROOT / "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md")
 SOURCE_RECORD = (
     ROOT
     / "docs/data/external/condensed_matter/phase_transitions"
     / "hyperbolic_cahn_hilliard/dhaouadi_dumbser_gavrilyuk_2025"
     / "source_record.json"
 )
-DIFFUSION = ROOT / "docs/core/artifacts/covariant_diffusive_current_verification.json"
-OUT = ROOT / "docs/core/artifacts"
+DIFFUSION = ROOT / "docs/core/07_artifacts/verification/covariant_diffusive_current_verification.json"
+OUT = CANONICAL_ARTIFACT_ROOT
 
 
 def _sha(path: Path) -> str:
@@ -60,7 +65,9 @@ def _sha(path: Path) -> str:
 
 
 def _dump(name: str, payload: dict[str, Any]) -> None:
-    (OUT / name).write_text(
+    path = canonical_artifact_path(name)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
         json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
 
@@ -446,10 +453,10 @@ def build_artifacts() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any], d
         "PARTIAL_EXTERNAL_COMPARATOR" if audit_status == "PASS" else "BLOCKED"
     )
     hashes = {
-        str(CORE.relative_to(ROOT)): _sha(CORE),
-        str(SPEC.relative_to(ROOT)): _sha(SPEC),
-        str(SOURCE_RECORD.relative_to(ROOT)): _sha(SOURCE_RECORD),
-        str(DIFFUSION.relative_to(ROOT)): _sha(DIFFUSION),
+        str(CORE.relative_to(ROOT)): _sha(canonical_existing_path(CORE)),
+        str(SPEC.relative_to(ROOT)): _sha(canonical_existing_path(SPEC)),
+        str(SOURCE_RECORD.relative_to(ROOT)): _sha(canonical_existing_path(SOURCE_RECORD)),
+        str(DIFFUSION.relative_to(ROOT)): _sha(canonical_existing_path(DIFFUSION)),
     }
     verification = {
         "schema_version": "1.0",
@@ -506,25 +513,25 @@ def build_artifacts() -> tuple[dict[str, Any], dict[str, Any], dict[str, Any], d
             {
                 "id": "external_first_order_hyperbolic_system",
                 "source_locator": "source_record::first_order_hyperbolic_system",
-                "implementation": "docs/core/uet_hyperbolic_phase_field.py::hyperbolic_phase_field_rhs",
+                "implementation": "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field.py::hyperbolic_phase_field_rhs",
                 "status": "IMPLEMENTED_EXTERNAL_COMPARATOR",
             },
             {
                 "id": "external_augmented_lyapunov_functional",
                 "source_locator": "source_record::augmented_lyapunov_functional",
-                "implementation": "docs/core/uet_hyperbolic_phase_field.py::hyperbolic_phase_field_energy_balance",
+                "implementation": "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field.py::hyperbolic_phase_field_energy_balance",
                 "status": "IMPLEMENTED_EXACT_PERIODIC_SEMI_DISCRETE",
             },
             {
                 "id": "external_characteristic_speeds",
                 "source_locator": "source_record::characteristic_speeds",
-                "implementation": "docs/core/uet_hyperbolic_phase_field.py::hyperbolicity_diagnostics",
+                "implementation": "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field.py::hyperbolicity_diagnostics",
                 "status": "IMPLEMENTED_WITH_SEPARATE_LIGHT_CONE_GATE",
             },
             {
                 "id": "external_formal_ch_scaling",
                 "source_locator": "source_record::formal_cahn_hilliard_scaling",
-                "implementation": "docs/core/uet_hyperbolic_phase_field.py::paper_asymptotic_scaling_diagnostics",
+                "implementation": "docs/core/02_equations/matter_space/uet_hyperbolic_phase_field.py::paper_asymptotic_scaling_diagnostics",
                 "status": "IMPLEMENTED_NEGATIVE_UNIFORM_CAUSAL_CONTROL",
             },
         ],
