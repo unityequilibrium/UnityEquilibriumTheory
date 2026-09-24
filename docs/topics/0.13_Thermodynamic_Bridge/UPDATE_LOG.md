@@ -7037,7 +7037,7 @@ EVIDENCE_PATHS:
 
 MAJOR_RESULT_CLOSURE: `T13_DING_FIG1D_LOCALIZED_PIXEL_MASK_QUALITY` is `PARTIAL`; source replay is exact, with a localized blue-trace extraction ambiguity identified.
 
-WHAT_IS_ACTUALLY_CLOSED: The archived PNG and declared extractor reproduce all 432 CSV rows, including row identity and numeric fields. Ten blue-trace adjacent jumps exceed the explicitly diagnostic 10x two-row pixel-uncertainty bound; red/green have none at that threshold. The affected blue region is approximately pixel x=562-595 (761-898 ps).
+WHAT_IS_ACTUALLY_CLOSED: The archived PNG and declared extractor reproduce all 432 CSV rows, including row identity and numeric fields. Ten blue-trace adjacent jumps exceed the explicitly diagnostic 10x two-row pixel-uncertainty bound; red/green have none at that threshold. The affected blue region is approximately pixel x=562-595 (760-897 ps).
 
 WHAT_REMAINS_OPEN: Physical interpretation and independent/manual extraction of the flagged blue segment; pixel-extraction uncertainty is not experimental uncertainty; graphite Phi normalization, independent `alpha_Phi_K`, raw author response data, and physical transport remain open.
 

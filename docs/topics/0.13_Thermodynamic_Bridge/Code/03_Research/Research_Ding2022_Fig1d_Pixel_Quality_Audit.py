@@ -319,7 +319,8 @@ def build_audit() -> dict[str, Any]:
 def main() -> int:
     artifact = build_audit()
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text(json.dumps(artifact, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    with OUTPUT.open("w", encoding="utf-8", newline="\n") as handle:
+        handle.write(json.dumps(artifact, indent=2, ensure_ascii=False) + "\n")
     print(json.dumps({"status": artifact["status"], "path": str(OUTPUT), "checks": artifact["verification"]["checks"]}, indent=2))
     return 0 if artifact["status"].startswith("PASS_") else 1
 

@@ -2,7 +2,7 @@
 
 MAJOR_RESULT_CLOSURE: `PARTIAL`; the existing extraction was replayed, and a localized blue-trace pixel-mask ambiguity was identified.
 
-WHAT_IS_ACTUALLY_CLOSED: The stored 432-row CSV reproduces from the archived figure and declared median-per-column extractor. Red and green traces have no gross adjacent jumps under the declared diagnostic triage rule. The blue trace has gross jumps and competing mask components near pixel columns 562-595 (about 761-898 ps).
+WHAT_IS_ACTUALLY_CLOSED: The stored 432-row CSV reproduces from the archived figure and declared median-per-column extractor. Red and green traces have no gross adjacent jumps under the declared diagnostic triage rule. The blue trace has gross jumps and competing mask components near pixel columns 562-595 (about 760-897 ps).
 
 WHAT_REMAINS_OPEN: This audit does not identify the physical cause of the blue pixels or repair the digitization. The affected segment is not qualified for dip-time, derivative, or velocity inference. Figure-pixel uncertainty is not experimental uncertainty; raw author numeric data, graphite Phi normalization, independent `alpha_Phi_K`, and physical transport remain open.
 
