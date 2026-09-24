@@ -1,3 +1,17 @@
+## 2026-09-24 - Pinned UED preprocessing operator boundary
+
+MAJOR_RESULT_CLOSURE: PARTIAL; source-to-save path and ideal averaging identities resolved.
+WHAT_IS_ACTUALLY_CLOSED: The pinned notebook constructs five rotations, masks paired intensities and saves their means; processed ratios require OFF-intensity weights.
+WHAT_REMAINS_OPEN: Published-array execution lineage, actual interpolation/mask operator, covariance and physical material/Phi normalization.
+DEPENDENCY_UNLOCKED: None; separate He-4 acceptance and graphite closure controls unchanged.
+STATUS: SOURCE_PATH_VERIFIED_PUBLISHED_ARRAY_LINEAGE_OPEN.
+WHAT_CHANGED: Topic-owned Research_UED_Processing_Boundary.py, eight tests and Result/artifacts/ued_processing_boundary.json with UED_PROCESSING_BOUNDARY.md.
+EQUATION_OR_MAPPING: Ideal five-angle averaging retains 0.2 of harmonics 1-to-5; paired ON/OFF is an OFF-weighted ratio mean. Real masked interpolation is not the ideal harmonic projector.
+VERIFICATION: Eight tests PASS after initial test-import correction; pinned notebook checksum and cells 19/20/24 verified. Two closure-control hashes unchanged; no foundation or calibration audit rerun.
+CONTROLLING_BLOCKER: published_array_processing_lineage_and_detector_operator.
+NEXT_ACTION: Source-locked raw-cut pooling/rotation/mask replay versus published arrays, not flexible profile fitting or silent six-angle replacement.
+CLAIM_BOUNDARY: No proof that the archive used this code revision, no attribution of all residuals to rotation count, no physical calibration or full-topic promotion.
+
 ## 2026-09-13 - Frozen profile residual versus baseline scatter
 
 MAJOR_RESULT_CLOSURE: PARTIAL; actual residual/scatter scale measured.
