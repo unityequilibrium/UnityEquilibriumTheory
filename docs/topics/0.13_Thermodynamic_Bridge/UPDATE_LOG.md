@@ -7032,3 +7032,33 @@ EVIDENCE_PATHS:
 - `docs/core/test/test_topic13_anisotropic_thermoelastic_response_bridge.py`
 - `docs/core/07_artifacts/topic13/t13_anisotropic_thermoelastic_response_bridge_audit.json`
 - `docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_anisotropic_thermoelastic_bridge_addendum.json`
+
+## 2026-09-24 - Ding Fig. 1d pixel-quality audit
+
+MAJOR_RESULT_CLOSURE: `T13_DING_FIG1D_LOCALIZED_PIXEL_MASK_QUALITY` is `PARTIAL`; source replay is exact, with a localized blue-trace extraction ambiguity identified.
+
+WHAT_IS_ACTUALLY_CLOSED: The archived PNG and declared extractor reproduce all 432 CSV rows, including row identity and numeric fields. Ten blue-trace adjacent jumps exceed the explicitly diagnostic 10x two-row pixel-uncertainty bound; red/green have none at that threshold. The affected blue region is approximately pixel x=562-595 (761-898 ps).
+
+WHAT_REMAINS_OPEN: Physical interpretation and independent/manual extraction of the flagged blue segment; pixel-extraction uncertainty is not experimental uncertainty; graphite Phi normalization, independent `alpha_Phi_K`, raw author response data, and physical transport remain open.
+
+DEPENDENCY_UNLOCKED: Local exclusion boundary for derivative-, dip-time-, and velocity-like use of the affected blue segment only. No alpha, prediction, Core, or Full Topic 13 dependency is unlocked.
+
+STATUS: `PASS_SOURCE_IDENTITY_AND_REPLAY_WITH_LOCALIZED_PIXEL_MASK_WARNING`; prior normalized-source lane scope is unchanged.
+
+WHAT_CHANGED: Added a read-only image/CSV replay audit, focused regression tests, machine-readable JSON evidence, and a short interpretation note. No source CSV, Core gate, equation, or holdout file was changed or read.
+
+EQUATION_OR_MAPPING: `y=1-(pixel_y-top)/(bottom-top)*1.2`; the current digitizer takes the median selected color-mask y pixel per x column. Gross-jump triage is `10 * 2 * 0.0114285714 = 0.2285714286`, diagnostic only and not a scientific acceptance gate.
+
+VERIFICATION: Source PNG/CSV hashes match the manifest; replay agrees across all 432 row identities and numeric fields; 3 focused tests pass. Largest blue jump is `0.942857` normalized units (`41.25x` the two-row extraction bound). Xie 2026 was not accessed.
+
+CONTROLLING_BLOCKER: `localized_blue_trace_pixel_mask_components_unresolved_for_dynamic_observables`.
+
+NEXT_ACTION: Independently inspect/re-digitize the identified source-image columns or obtain author numeric rows before using that blue segment for dip-time or velocity analysis; do not smooth, interpolate, or silently replace rows.
+
+CLAIM_BOUNDARY: Digitization quality only; no physical discontinuity, UET validation, dimensional temperature map, alpha calibration, or Full Topic 13 closure.
+
+EVIDENCE_PATHS:
+- `docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_Ding2022_Fig1d_Pixel_Quality_Audit.py`
+- `docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_ding2022_fig1d_pixel_quality_audit.py`
+- `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/ding_2022_fig1d_pixel_quality_audit.json`
+- `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/DING_FIG1D_PIXEL_QUALITY_AUDIT.md`
