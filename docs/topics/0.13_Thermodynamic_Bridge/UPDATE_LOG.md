@@ -1,3 +1,17 @@
+## 2026-09-24 - Core handoff revalidation
+
+MAJOR_RESULT_CLOSURE: PARTIAL; fresh Core results and exact provenance failure isolated.
+WHAT_IS_ACTUALLY_CLOSED: Seven Core test modules produce 54 passes and one ADM hash-link failure; fresh ADM metrics/checks/thresholds match stored results, with only two source-hash fields differing in three artifacts. Pre-migration ADM module hash recovered and complete AST matches current module.
+WHAT_REMAINS_OPEN: Provenance refresh, matter conservation/evolution disposition, boundaries and dimensional observables.
+DEPENDENCY_UNLOCKED: None; bounded He-4 acceptance preserved but not recertified; graphite matching unchanged.
+STATUS: BLOCKED_HANDOFF_REVALIDATION.
+WHAT_CHANGED: Topic-owned read-only handoff runner, three tests, Result/artifacts/core_handoff_revalidation.json and CORE_HANDOFF_REVALIDATION.md. No Core files edited.
+EQUATION_OR_MAPPING: Prescribed T_ab source wiring is not a self-consistent conserved matter evolution.
+VERIFICATION: Three comparator tests PASS; focused Core run 54 PASS/1 FAIL; 11 of 20 parent hashes stale. Recorded Core inputs unchanged throughout runner.
+CONTROLLING_BLOCKER: stale_core_provenance_and_prescribed_vs_conserved_matter_handoff.
+NEXT_ACTION: Core owner reviews source changes, refreshes evidence in dependency order, reruns tests and explicitly assigns open matter-conservation/evolution requirements.
+CLAIM_BOUNDARY: Provenance failure is retained, not bypassed; this does not certify the whole Core or transfer He-4 calibration to graphite.
+
 ## 2026-09-24 - Pinned UED preprocessing operator boundary
 
 MAJOR_RESULT_CLOSURE: PARTIAL; source-to-save path and ideal averaging identities resolved.
