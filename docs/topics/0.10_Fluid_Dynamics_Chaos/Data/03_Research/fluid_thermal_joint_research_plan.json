@@ -1,0 +1,421 @@
+{
+  "schema_version": "t010-t013-joint-research-plan-v1",
+  "record_role": "planning_manifest_not_physics_gate",
+  "date": "2026-09-26",
+  "area": "research-core",
+  "status": "PROPOSED_RESEARCH_DESIGN",
+  "claim_promotion": false,
+  "dependency_unlock": false,
+  "scientific_execution_performed": true,
+  "canonical_plan": "docs/topics/0.10_Fluid_Dynamics_Chaos/JOINT_RESEARCH_PLAN_TOPIC10_TOPIC13.md",
+  "published_base_commit": "d069507651964c0f963d1568667e2a9218400e42",
+  "source_policy": "Evidence hashes refer to the published-base checkout. Original dirty workspace reviewed for context only; differences are explicit and do not authorize importing unpublished results.",
+  "controlling_blocker": "fluid_state_and_velocity_observable_correspondence_unestablished",
+  "blocker_role": "proposed_physics_program_controller_not_replacement_of_legacy_speed_gate",
+  "next_controller": "J02 is partial at source/protocol-candidate level and J03 source admission may continue in parallel; Topic 10 physical J04 still requires a registered velocity/momentum state with Core F0-F8, while J05 requires its admitted lane-specific interface.",
+  "first_scientific_wave": "J01",
+  "work_packages": [
+    {
+      "id": "J00",
+      "owner": "Core and both topic maintainers",
+      "status": "PARTIALLY_COMPLETED",
+      "depends_on": [],
+      "blocker": "lane_scoped_source_and_dependency_admission_not_frozen",
+      "deliverable": "F0-F8 inventory, source/state/protocol lock, required Core gate fields and acceptance configuration per candidate lane",
+      "acceptance": [
+        "All consumed evidence has path, hash, role, state and units",
+        "Name exact required upstream gate fields per lane before candidate implementation",
+        "Record thresholds and uncertainty budgets before production; missing fields block acceptance"
+      ],
+      "failure_action": "Keep affected lane BLOCKED; comparator and source preparation may proceed without candidate promotion",
+      "execution_scope": "Source identities, units boundary, and F0-F8 obligations were recorded for J01 only; Topic 13 acquisition/protocol locks and a candidate-state admission remain open."
+    },
+    {
+      "id": "J01",
+      "owner": "Topic 0.10",
+      "status": "COMPLETED_SCOPED",
+      "depends_on": [
+        "J00"
+      ],
+      "blocker": "fluid_state_and_velocity_observable_correspondence_unestablished",
+      "deliverable": "2D/3D representability audit, rotational negative control, mobility initialization and coefficient-cap/clipping audit",
+      "acceptance": [
+        "Distinguish continuum mapping from boundary/stencil curl artifacts",
+        "Demonstrate admissible velocity-state mapping or scoped no-go for the declared rotational target",
+        "Record actual mobility, physical and effective coefficients, clipping and source hashes",
+        "Candidate extensions require registered ontology/units/origin before implementation"
+      ],
+      "failure_action": "Retain legacy engine as bounded scalar/gradient-flow comparator; block rotational-fluid use and specify a new candidate contract",
+      "execution_scope": "The existing 2D constant-M scalar-gradient map has a tested periodic rotational-flow no-go; current 3D scalar-only state and coefficient/clipping source paths are recorded. Runtime trajectory and clip-event counts remain open.",
+      "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_state_velocity_representability_audit.json",
+      "remaining_runtime_check": "Run the current engines and record actual per-step clipping counts when the configured Core runtime dependencies are available."
+    },
+    {
+      "id": "J02",
+      "owner": "Topic 0.13 and Core",
+      "status": "PARTIALLY_COMPLETED",
+      "depends_on": [
+        "J00"
+      ],
+      "blocker": "uet_two_fluid_second_sound_operator_not_admitted",
+      "deliverable": "Frozen He-4 Z/theta_T/e0/alpha record, source/protocol card for an independent dynamic response candidate, and a no-rematching comparison contract",
+      "acceptance": [
+        "Identify normal component versus full He-II material, fixed thermodynamic variables and timescale",
+        "Observable is not used to construct the matching constants",
+        "No rematching on test rows; uncertainties and covariance or labeled bounds included",
+        "Treat existing shear coefficient as external input, not conductivity or a UET prediction"
+      ],
+      "failure_action": "Keep bounded calibrated composition unchanged; mark stronger physical validation source/protocol-blocked",
+      "execution_scope": "Existing matching constants were frozen from the Topic 13 audits. NIST Table 4.3 second-sound values along SVP were source-locked as a different observable, and a local finite-difference diagnostic was calculated from rounded rows. No UET prediction, parameter fit, physical comparison, or gate change was made.",
+      "source_package": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_second_sound_response_source_package.json",
+      "protocol_card": "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md",
+      "result_artifact": "docs/core/07_artifacts/topic13/t13_he4_second_sound_response_protocol_audit.json",
+      "verifier": "docs/scripts/audit/audit_topic10_t13_he4_second_sound_protocol.py",
+      "verifier_status": "PASS_SOURCE_PROTOCOL_CANDIDATE_ONLY",
+      "verifier_checks": "15/15",
+      "completed_scope": [
+        "Freeze existing alpha, theta_T, Z_Phi, e0 and normal-shear input identities without rematching response rows",
+        "Identify He-II second-sound phase velocity as a separate dynamic observable and source candidate",
+        "Record full-He-II scope, SVP/T90 path, units, source-level uncertainty limits, previous exposure, and the boundary to Topic 10/OpenAI Navier-Stokes and Euler work"
+      ],
+      "unmet_acceptance": [
+        "Lock a primary resonance row with matched state, frequency, mode geometry, mean-flow/probe conditions, row uncertainty and covariance/bounds",
+        "Admit a UET two-fluid entropy/relative-velocity response operator through Core F0-F8 before prediction or comparison"
+      ],
+      "holdout_boundary": "The recommended response rows were viewed during protocol design; they are not a blind holdout. A fresh uninspected source is required for a future blind-validation claim.",
+      "next_controller": "Source-lock the primary resonance protocol and derive/admit the coupled two-fluid thermal eigenmode; keep J06 prediction blocked until then."
+    },
+    {
+      "id": "J03",
+      "owner": "Topic 0.13",
+      "status": "NOT_STARTED",
+      "depends_on": [
+        "J00"
+      ],
+      "blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing",
+      "deliverable": "Three separate graphite input-package admission records using existing minimal-input contract",
+      "acceptance": [
+        "Independent Phi-SI/alpha/beta normalization with explicit Jacobian",
+        "Authorized Ding-compatible C_src or accepted same-regime independent reproduction with source-grade uncertainty",
+        "State-matched physical transport/FDT/KMS/entropy record",
+        "No He-4-to-graphite parameter transfer or normalized-shape amplitude inference"
+      ],
+      "failure_action": "Retain graphite OPEN/BLOCKED; stop unchanged literature scans, name exact new source rows needed",
+      "input_package_ids": [
+        "T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
+        "T13_INPUT_DING_TTG_SOURCE",
+        "T13_INPUT_PHYSICAL_TRANSPORT_MATCH"
+      ]
+    },
+    {
+      "id": "J04",
+      "owner": "Topic 0.10",
+      "status": "NOT_STARTED",
+      "depends_on": [
+        "J01"
+      ],
+      "blocker": "matched_physical_problem_and_numerical_accuracy_not_demonstrated",
+      "deliverable": "Independent analytic/manufactured controls and matched incompressible comparator with work/error data",
+      "acceptance": [
+        "Physical candidate requires admitted representation; a J01 no-go cannot satisfy that prerequisite",
+        "Match PDE target, state, domain, boundary/initial conditions, forcing, physical coefficients, time horizon and observable",
+        "Separate grid/time convergence, divergence, mass, momentum and energy budgets",
+        "No silent physical-coefficient cap, clipping, fallback or NaN"
+      ],
+      "failure_action": "Report failed numerical obligation; do not run physical speed or chaos claims"
+    },
+    {
+      "id": "J05",
+      "owner": "Core admission; Topic 0.13 thermal; Topic 0.10 flow",
+      "status": "NOT_STARTED",
+      "depends_on": [
+        "J01",
+        "J02"
+      ],
+      "blocker": "conservative_state_matched_constitutive_interface_not_admitted",
+      "deliverable": "Registered lane-specific state/flux/observable interface and reciprocal energy/entropy tests",
+      "acceptance": [
+        "Required Core dependencies pass for the precise candidate; a planning checklist is not admission",
+        "Cross-subsystem exchange cancels in total ledger with explicit source and boundary work",
+        "Same-state units, transport operator, entropy production and uncertainty are consistent",
+        "Derived history/observer traces do not become independent dynamical reservoirs",
+        "Distinguish shear, bulk, heat conductivity, relaxation and mutual friction; missing required coefficient blocks that branch"
+      ],
+      "failure_action": "Continue reference controls only; retain constitutive candidate BLOCKED"
+    },
+    {
+      "id": "J06",
+      "owner": "Topics 0.10 and 0.13",
+      "status": "NOT_STARTED",
+      "depends_on": [
+        "J04",
+        "J05"
+      ],
+      "blocker": "independent_coupled_he4_response_not_tested",
+      "deliverable": "Bounded normal-component shear/response pilot with coupling-off controls and independent observation",
+      "acceptance": [
+        "Subsystem inertia and superfluid coupling explicitly admitted before decay-rate interpretation",
+        "Freeze calibration and test an unused response/protocol within source-supported regime",
+        "Account for energy, entropy and propagated source/numerical/measurement uncertainty",
+        "Thermal-pulse/counterflow extensions require their own complete transport inputs"
+      ],
+      "failure_action": "Publish bounded failure, no-go or source-blocked disposition without downgrading or upgrading unrelated He-4 composition",
+      "holdout_source_requirement": "The J02 second-sound rows are exposed during protocol design and cannot fulfill a blind-holdout claim. Select a fresh uninspected source or label any later comparison retrospective/out-of-calibration rather than blind."
+    },
+    {
+      "id": "J07",
+      "owner": "Topic 0.10 using Core diagnostics",
+      "status": "NOT_STARTED",
+      "depends_on": [
+        "J04",
+        "J05"
+      ],
+      "blocker": "candidate_fluid_chaos_not_resolved_under_converged_dynamics",
+      "deliverable": "Lane-specific tangent/shadow spectra, boundedness/stationarity and numerical-resolution report",
+      "acceptance": [
+        "State metric and perturbation scaling specified before QR",
+        "Tangent/shadow agreement and timestep/grid/statistical budgets resolve exponent sign",
+        "Positive exponent does not stand in for turbulence, SI validity or external validation",
+        "Physical stochastic lane requires admitted noise/FDT and common-noise comparison"
+      ],
+      "failure_action": "Classify stable, unresolved, numerically unstable or source-blocked explicitly; do not force a positive-chaos result"
+    },
+    {
+      "id": "J08",
+      "owner": "Topic 0.10",
+      "status": "NOT_STARTED",
+      "depends_on": [
+        "J04"
+      ],
+      "blocker": "time_to_equal_accuracy_advantage_not_measured",
+      "deliverable": "Work-precision, paired timings, peak memory and failed-run table",
+      "acceptance": [
+        "Same observable/error budget/physical horizon and eligible model scope",
+        "Warm-up and at least 10 paired alternated timing trials with fixed hardware/threads/dtype",
+        "Report median and dispersion/interval; do not omit required setup from only one solver",
+        "Legacy speedup >2.0 gate stays unchanged and separate"
+      ],
+      "failure_action": "Report no advantage or unresolved timing; accuracy failure disqualifies physical speed comparison"
+    },
+    {
+      "id": "J09",
+      "owner": "Method and evidence reviewers",
+      "status": "NOT_STARTED",
+      "depends_on": [
+        "J06",
+        "J07",
+        "J08"
+      ],
+      "blocker": "lane_scoped_external_evidence_and_claim_review_not_complete",
+      "deliverable": "Lane-specific closure/negative-result review, source-locked external comparison and public claim map",
+      "acceptance": [
+        "Every mandatory obligation has an evidence-backed verdict; failure is retained and bounds claims",
+        "Graphite claim additionally requires J03 and all existing graphite gates",
+        "External DNS comparison, experimental validation and independent external replication remain separate",
+        "Readiness promotion requires evidence review; no global UET/GR/Navier-Stokes closure inferred"
+      ],
+      "failure_action": "Release only bounded internal/calibrated or negative-result wording with exact next blocker"
+    }
+  ],
+  "planning_dependency_semantics": {
+    "meaning": "Acceptance order; read-only/source/reference preparation can precede it",
+    "no_go_is_not_admission": true,
+    "j09_graphite_additional_required_package": "J03",
+    "curved_self_consistent_claim_requires_parent_gate": true,
+    "full_constitutive_execution_requires_core_admission": true
+  },
+  "proposed_numerical_controls": {
+    "status": "PROPOSED_NOT_YET_PREREGISTERED_OR_RUN",
+    "periodic_2d_grids": [
+      32,
+      64,
+      128
+    ],
+    "separate_time_refinement_factors": [
+      1,
+      0.5,
+      0.25
+    ],
+    "smooth_second_order_spatial_observed_order_min": 1.8,
+    "finest_relative_l2_velocity_error_max": 0.01,
+    "normalized_incompressible_divergence_max": 1E-06,
+    "periodic_closed_mass_relative_drift_max": 1E-08,
+    "normalized_integrated_energy_budget_residual_max": 0.0001,
+    "normalization_policy": "Declare nonzero reference scales and integrated source/boundary flux before runs; physical observations use independently locked uncertainty budgets",
+    "scope": "Analytic/manufactured controls only; method order and boundary/source terms must be declared; budgets must converge under refinement",
+    "threshold_change_policy": "Version before production; changes after preview are exploratory, never retroactively preregistered"
+  },
+  "chaos_policy": {
+    "reuse_existing_controls": true,
+    "normalized_perturbation_amplitudes": [
+      1E-08,
+      1E-07,
+      1E-06
+    ],
+    "resolution": "max(delta_dt, delta_dx, 2*SE_block, delta_method)",
+    "exclude_from_dynamical_state": [
+      "R_gen",
+      "R_obs"
+    ],
+    "positive_exponent_is_not_external_validation": true
+  },
+  "holdout_policy": {
+    "xie_2026_accessed_by_this_work": false,
+    "target_fit_performed": false,
+    "calibration_may_read_holdout": false,
+    "prior_exposure_review_required": true,
+    "future_action": "Review exposure declaration before claiming blind validation; use a fresh holdout or label retrospective when needed"
+  },
+  "external_method_references": [
+    {
+      "url": "https://www.grc.nasa.gov/www/wind/valid/tutorial/spatconv.html",
+      "accessed": "2026-09-26",
+      "role": "Primary numerical-convergence methodology; does not prescribe this plan's thresholds"
+    },
+    {
+      "url": "https://turbulence.idies.jhu.edu/home",
+      "accessed": "2026-09-26",
+      "role": "Candidate external DNS catalog only; no numeric dataset or query admitted"
+    }
+  ],
+  "rerun_policy": "Rerun the J01 representability verifier when its code, controls, or audited source changes. Keep J04 physical matched-flow, J05 coupling, and existing speed/chaos gates separate; no result is promoted automatically.",
+  "publication_boundary": "Planning plus a scoped internal J01 representability result. No physical trajectory, external CFD validation, readiness promotion, or Core dependency unlock.",
+  "evidence_snapshot": [
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/README.md",
+      "published_base_sha256": "2b24bf535832f3167ad62c321543215d407568393f780e82a5d6b2a94c6fffe5",
+      "original_workspace_sha256": "421297d9be5029e6be9c61418738af945401214a6ab3c831021160d56fb0f150",
+      "matches_original_workspace": false
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_benchmark_validation.json",
+      "published_base_sha256": "02159cd1feccf1b4c1847925e1a1d710c3ba32f8d9178ec5a9fb69f876a9a06c",
+      "original_workspace_sha256": "5fc17bd8cf5af89dd62e89b3ead67d4265a6213425773f71c3a826809b5ffa8e",
+      "matches_original_workspace": false
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/chaos_method_validation.json",
+      "published_base_sha256": "03aaec8f323e457d73619296680cdf43bb388662c68d4cb68b15c8b169d98caf",
+      "original_workspace_sha256": "e1e70f5e08da828b8f141826e1a384bd31df6e41aacef59ec0c85950e159e3b6",
+      "matches_original_workspace": false
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/01_Engine/Engine_UET_2D.py",
+      "published_base_sha256": "63f1baac39d8fc31183af89e8a27e7b15a152bdc0ec9e64483197186c929223e",
+      "original_workspace_sha256": "34f4a32e3a3471a747ff2bc10bc1b58cfb0cbb6c7cea24eeba61f79da7459f98",
+      "matches_original_workspace": false
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/01_Engine/Engine_UET_3D.py",
+      "published_base_sha256": "df63d74616691a496c71ab912206c08346e1dd77b97870c357d9b2af79b3e452",
+      "original_workspace_sha256": "d66a1d9dc9613da78f1d3920a9ae02b41b51394d47fa655047dc2c8bb2c284f2",
+      "matches_original_workspace": false
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/02_Proof/Proof_Turbulence_Benchmarks.py",
+      "published_base_sha256": "4c5c011214563102e55fc7f7a7e5bf726612c4c888eaa54560ff93933f5b047c",
+      "original_workspace_sha256": "033daa1f429931113d09041641d7d46d5c7ddcddf5c490393ef24088b6b1fc23",
+      "matches_original_workspace": false
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_thermal_dynamical_regime_audit.json",
+      "published_base_sha256": "c1a70ab48c176c073b1a9e05ea2914521e4bba13bb8a9c2dc952639b27780aa7",
+      "original_workspace_sha256": "6c40fc0950fde8827d09d05e892e03b11563d3b987ca6cf06c17091b8ff2eddc",
+      "matches_original_workspace": false
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+      "published_base_sha256": "961aeac0383e25d1af64b3b161c67e2f57e76dfa26b0e94bfb9beeefd1bb9ec1",
+      "original_workspace_sha256": "784a72b282ee06014818ea04556e66b8195a062754516cd5c7fd28e6791cae5e",
+      "matches_original_workspace": false
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
+      "published_base_sha256": "508a11c1a837e898253302032f54eeccb2e1b1f89f1e5cc816376f17c73c4f2d",
+      "original_workspace_sha256": "969351376d918204c00c7d71e213a0e56f00d7fc04390b9c3a054faa5f5e7abb",
+      "matches_original_workspace": false
+    },
+    {
+      "path": "docs/core/03_lanes/topic13_support/T13_HE4_MATCHING_INDEPENDENCE.md",
+      "published_base_sha256": "0c376630eeee17daaada0d70a9a09961690faecb8a904b4ea20d3e84d12b671e",
+      "original_workspace_sha256": "0c376630eeee17daaada0d70a9a09961690faecb8a904b4ea20d3e84d12b671e",
+      "matches_original_workspace": true
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_he4_matching_independence_audit.json",
+      "published_base_sha256": "45dd4be70d1a6c448dce0cd6b0a2da7037a98cdc908428805bd2cf445cf9cabd",
+      "original_workspace_sha256": "f639bacd8447955b6799e08d2eaeda8575591b56d5dd7972b077c478e5a4ee5d",
+      "matches_original_workspace": false
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_he4_normal_viscosity_kubo_audit.json",
+      "published_base_sha256": "42a03cc5181cc4848202be699ed35f929d972c66c4ef7420003c62c583c79758",
+      "original_workspace_sha256": "f81a9121ef9dfa3ee31f1c91f45f1a19b96ba4cae2d9741fe504120249f8a745",
+      "matches_original_workspace": false
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_full_closure_minimal_input_contract.json",
+      "published_base_sha256": "6fbf0218e66700d0804dce1c07d2b6a08e3013c7568e07df46ad5b6443337aa7",
+      "original_workspace_sha256": "6fbf0218e66700d0804dce1c07d2b6a08e3013c7568e07df46ad5b6443337aa7",
+      "matches_original_workspace": true
+    },
+    {
+      "path": "docs/core/07_artifacts/gates/core_curved_3p1_parent_gate.json",
+      "published_base_sha256": "55b6fccea24ab6843eaa3ab134eee47ba653e9ebf2b87ac4e1fcdd074f443643",
+      "original_workspace_sha256": "6b44047efba638a621d1a9c1daf5b107e0016f28ebec04b9838c9b3a19e7569e",
+      "matches_original_workspace": false
+    },
+    {
+      "path": "docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json",
+      "published_base_sha256": "b3e142c660c3614a5185750156565fda017c8750523a7a9727097980734f75af",
+      "original_workspace_sha256": "99d9f68f801b640887ea41627397139b5b6e3f11ce115613abcf6c58256f8aec",
+      "matches_original_workspace": false
+    },
+    {
+      "path": "docs/core/00_governance/UET_RESEARCH_ROOM_BRIEF.md",
+      "published_base_sha256": "c04ed06843af1709bfafee36ba3c557d6706bbb7827ea458bdb8edbd8ab22d64",
+      "original_workspace_sha256": "ee25b5291c79df9dca7c3a737e36921e9a7d70919fbdc1b52ce177f6645c40a1",
+      "matches_original_workspace": false
+    }
+  ],
+  "current_execution_snapshot": {
+    "date": "2026-09-26",
+    "source_scope": "J02 He-4 second-sound source/protocol candidate; matching constants frozen; primary frequency-specific uncertainty and UET operator remain open.",
+    "verifier": "docs/scripts/audit/audit_topic10_t13_he4_second_sound_protocol.py",
+    "result_artifact": "docs/core/07_artifacts/topic13/t13_he4_second_sound_response_protocol_audit.json",
+    "verifier_status": "PASS_SOURCE_PROTOCOL_CANDIDATE_ONLY",
+    "verifier_checks": "15/15",
+    "protocol_card": "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md",
+    "source_package": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_second_sound_response_source_package.json",
+    "evidence_hashes": {
+      "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_second_sound_response_source_package.json": "3a46c9a09cf987cd4ea1c1e29e33dd7f9407ae4caaea28ecc610275362df1443",
+      "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md": "a860aa849242290940da88a1f04c556da3547c9145a1b63bd019f63f3ab7317b",
+      "docs/scripts/audit/audit_topic10_t13_he4_second_sound_protocol.py": "f3bf22ff8cd539f451a4e006ae3143d89ed8cb6e243daa906ed972908a117d5a",
+      "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json": "7886ffd3403f91d8951a9d33fb947468a99ebbc94d378cbdc7467e7efb5af27e",
+      "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json": "a09b39050aaea5ed49094f34d45719673eb275e7b94e88b88af71e4e47084325",
+      "docs/core/07_artifacts/topic13/t13_he4_normal_viscosity_kubo_audit.json": "42a03cc5181cc4848202be699ed35f929d972c66c4ef7420003c62c583c79758",
+      "docs/core/07_artifacts/topic13/t13_he4_matching_independence_audit.json": "45dd4be70d1a6c448dce0cd6b0a2da7037a98cdc908428805bd2cf445cf9cabd",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_state_velocity_representability_audit.json": "7e7b1e5889ea4d1e04abe3a2186ac67e378b7b8d1437375a1ee446c88ba3c1a4"
+    },
+    "result_artifact_sha256": "b58243db39bbd9fea686b388a918119f96139bb8fa8b20108abf4437550cc0a0",
+    "physical_uet_comparison_executed": false,
+    "blind_holdout": false,
+    "claim_promotion": false,
+    "dependency_unlock": false,
+    "latest_executed_package": "J02"
+  },
+  "execution_history": [
+    {
+      "date": "2026-09-26",
+      "source_scope": "J00 source/hash/unit inventory for the J01 lane; broader Topic 13 protocols and candidate admission remain open.",
+      "first_executed_package": "J01",
+      "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_State_Velocity_Representability.py",
+      "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_state_velocity_representability_audit.json",
+      "verifier_status": "PASS_SCOPED_NO_GO_FOR_LEGACY_ROTATIONAL_FLOW",
+      "engine_trajectory_executed": false,
+      "runtime_limitation": "Engine imports blocked because the configured Python runtime lacks scipy; solver clip-event counts remain unknown.",
+      "claim_promotion": false,
+      "dependency_unlock": false
+    }
+  ]
+}
