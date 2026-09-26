@@ -56,3 +56,27 @@
   not physical thermal validation.
 - Next controller: source-lock a material heat/work observable and independent
   cost scales with uncertainty and holdout.
+
+## 2026-09-26 - Topic 13 calibration evidence and holdout exposure record
+
+MAJOR_RESULT_CLOSURE: `T13_ACTUATION_READOUT_CALIBRATION_DESIGN` remains `PARTIAL`; no physical closure or claim promotion.
+
+WHAT_IS_ACTUALLY_CLOSED: The reproducibility path for the conditional input-output gain audit is repaired. The existing result still shows that `H_TU=alpha*b/D` is invariant under reciprocal rescaling of `alpha` and `b` in that declared linear control.
+
+WHAT_REMAINS_OPEN: An operational input-to-base-`Phi` operator and independent gain/absolute-amplitude anchor remain absent. The Xie article text was exposed in this research context; raw numeric rows and supplementary payload remain unopened, and blind-holdout eligibility requires review.
+
+DEPENDENCY_UNLOCKED: None.
+
+STATUS: `CALIBRATION_AUDIT_REPRODUCIBLE; HOLDOUT_ARTICLE_TEXT_EXPOSED_NUMERIC_PAYLOAD_UNTOUCHED`.
+
+WHAT_CHANGED: Corrected the actuation/readout audit's stale test-file path and regenerated its evidence artifact. Added an append-only declaration for the 2026-09-26 Xie article-text exposure; preserved earlier audit snapshots and the numeric access lock.
+
+EQUATION_OR_MAPPING: No equation, threshold, parameter, calibration, or holdout-derived mapping changed. Conditional control remains `D Phi=b U`, `DeltaT=alpha Phi`, `H_TU=alpha*b/D`.
+
+VERIFICATION: Focused actuation/readout audit and regression checks pass; exposure declaration parses and records numeric-payload, fit, calibration, tuning, and threshold-use flags separately. No Xie source rows were opened or used.
+
+CONTROLLING_BLOCKER: `operational_input_to_base_Phi_operator_and_gain`; separate holdout blind-eligibility review is required before any later comparison is described as pristine.
+
+NEXT_ACTION: Define and independently anchor the physical input-to-base-`Phi` operator before requesting paired measurements. Keep the Xie numeric payload locked and do not claim blind holdout status without review.
+
+CLAIM_BOUNDARY: Conditional linear identifiability and process-provenance update only; no numerical `alpha_Phi_K`, TTG prediction, external validation, Full Topic 13 closure, or global UET claim.
