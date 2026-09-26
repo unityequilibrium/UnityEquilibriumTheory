@@ -6,19 +6,19 @@
   "status": "PROPOSED_RESEARCH_DESIGN",
   "claim_promotion": false,
   "dependency_unlock": false,
-  "scientific_execution_performed": false,
+  "scientific_execution_performed": true,
   "canonical_plan": "docs/topics/0.10_Fluid_Dynamics_Chaos/JOINT_RESEARCH_PLAN_TOPIC10_TOPIC13.md",
   "published_base_commit": "d069507651964c0f963d1568667e2a9218400e42",
   "source_policy": "Evidence hashes refer to the published-base checkout. Original dirty workspace reviewed for context only; differences are explicit and do not authorize importing unpublished results.",
   "controlling_blocker": "fluid_state_and_velocity_observable_correspondence_unestablished",
   "blocker_role": "proposed_physics_program_controller_not_replacement_of_legacy_speed_gate",
-  "next_controller": "J00",
+  "next_controller": "J02/J03 Topic 13 source/protocol work may proceed in parallel; a new Topic 10 velocity/momentum candidate still requires Core F0-F8 admission before J04",
   "first_scientific_wave": "J01",
   "work_packages": [
     {
       "id": "J00",
       "owner": "Core and both topic maintainers",
-      "status": "NOT_STARTED",
+      "status": "PARTIALLY_COMPLETED",
       "depends_on": [],
       "blocker": "lane_scoped_source_and_dependency_admission_not_frozen",
       "deliverable": "F0-F8 inventory, source/state/protocol lock, required Core gate fields and acceptance configuration per candidate lane",
@@ -27,12 +27,13 @@
         "Name exact required upstream gate fields per lane before candidate implementation",
         "Record thresholds and uncertainty budgets before production; missing fields block acceptance"
       ],
-      "failure_action": "Keep affected lane BLOCKED; comparator and source preparation may proceed without candidate promotion"
+      "failure_action": "Keep affected lane BLOCKED; comparator and source preparation may proceed without candidate promotion",
+      "execution_scope": "Source identities, units boundary, and F0-F8 obligations were recorded for J01 only; Topic 13 acquisition/protocol locks and a candidate-state admission remain open."
     },
     {
       "id": "J01",
       "owner": "Topic 0.10",
-      "status": "NOT_STARTED",
+      "status": "COMPLETED_SCOPED",
       "depends_on": [
         "J00"
       ],
@@ -44,7 +45,10 @@
         "Record actual mobility, physical and effective coefficients, clipping and source hashes",
         "Candidate extensions require registered ontology/units/origin before implementation"
       ],
-      "failure_action": "Retain legacy engine as bounded scalar/gradient-flow comparator; block rotational-fluid use and specify a new candidate contract"
+      "failure_action": "Retain legacy engine as bounded scalar/gradient-flow comparator; block rotational-fluid use and specify a new candidate contract",
+      "execution_scope": "The existing 2D constant-M scalar-gradient map has a tested periodic rotational-flow no-go; current 3D scalar-only state and coefficient/clipping source paths are recorded. Runtime trajectory and clip-event counts remain open.",
+      "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_state_velocity_representability_audit.json",
+      "remaining_runtime_check": "Run the current engines and record actual per-step clipping counts when the configured Core runtime dependencies are available."
     },
     {
       "id": "J02",
@@ -255,8 +259,8 @@
       "role": "Candidate external DNS catalog only; no numeric dataset or query admitted"
     }
   ],
-  "rerun_policy": "Only rerun scientific validators after relevant source/code/config evidence changes; no scientific verifiers run for this planning-only change",
-  "publication_boundary": "Research proposal and source-state snapshot only; all physics gates and existing claim boundaries unchanged",
+  "rerun_policy": "Rerun the J01 representability verifier when its code, controls, or audited source changes. Keep J04 physical matched-flow, J05 coupling, and existing speed/chaos gates separate; no result is promoted automatically.",
+  "publication_boundary": "Planning plus a scoped internal J01 representability result. No physical trajectory, external CFD validation, readiness promotion, or Core dependency unlock.",
   "evidence_snapshot": [
     {
       "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/README.md",
@@ -354,5 +358,17 @@
       "original_workspace_sha256": "ee25b5291c79df9dca7c3a737e36921e9a7d70919fbdc1b52ce177f6645c40a1",
       "matches_original_workspace": false
     }
-  ]
+  ],
+  "current_execution_snapshot": {
+    "date": "2026-09-26",
+    "source_scope": "J00 source/hash/unit inventory for the J01 lane; broader Topic 13 protocols and candidate admission remain open.",
+    "first_executed_package": "J01",
+    "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_State_Velocity_Representability.py",
+    "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_state_velocity_representability_audit.json",
+    "verifier_status": "PASS_SCOPED_NO_GO_FOR_LEGACY_ROTATIONAL_FLOW",
+    "engine_trajectory_executed": false,
+    "runtime_limitation": "Engine imports blocked because the configured Python runtime lacks scipy; solver clip-event counts remain unknown.",
+    "claim_promotion": false,
+    "dependency_unlock": false
+  }
 }

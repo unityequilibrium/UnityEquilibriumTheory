@@ -1,12 +1,12 @@
 # แผนวิจัยร่วม Topic 0.10–0.13 และ Core
 
-วันที่: 2026-09-26 · สถานะ: **ข้อเสนอแผนวิจัย ยังไม่ใช่ผลทดลองใหม่**
+วันที่: 2026-09-26 · สถานะ: **แผนวิจัยเริ่มดำเนินการแล้ว; J01 มีผลตรวจแบบจำกัดขอบเขต**
 
 ## เป้าหมายและขอบเขต
 
 พัฒนา Topic 0.10 ให้ตอบได้ว่าแบบจำลอง UET แทนการไหลชนิดใดได้จริง เชื่อมสมดุลมวล โมเมนตัม พลังงาน และเอนโทรปีกับ Topic 0.13 ได้ภายใต้เงื่อนไขใด และต่างจากแบบจำลองมาตรฐานอย่างไร โดยใช้ Core เป็นเจ้าของ ontology, equation registry และ dependency admission การปิดงานอาจเป็นผลผ่านเฉพาะขอบเขต ผล no-go หรือการจำกัดแบบจำลองอย่างมีหลักฐาน ไม่จำเป็นต้องได้คำตอบสนับสนุน UET ทุกข้อ
 
-เอกสารนี้เป็นแผนหลักของงานร่วม มี [รายการงานที่เครื่องอ่านได้](Data/03_Research/fluid_thermal_joint_research_plan.json) เป็นตัวควบคุมลำดับงาน **ไม่ใช่ physical acceptance gate ใหม่** ทุกงานวิจัยยัง NOT_STARTED; การเขียนแผนไม่เลื่อน readiness, ไม่เปลี่ยนเกณฑ์เดิม และไม่ปลด Core dependency
+เอกสารนี้เป็นแผนหลักของงานร่วม มี [รายการงานที่เครื่องอ่านได้](Data/03_Research/fluid_thermal_joint_research_plan.json) เป็นตัวควบคุมลำดับงาน **ไม่ใช่ physical acceptance gate ใหม่** ณ 2026-09-26 มีการรัน J01 แบบ representability audit แล้ว; J02-J09 ยังไม่เริ่ม การรัน audit ไม่เลื่อน readiness, ไม่เปลี่ยน gate เดิม และไม่ปลด Core dependency
 
 ฐานเผยแพร่ที่ตรวจ: `d069507651964c0f963d1568667e2a9218400e42` บน `origin/main` หลัง fetch วันที่ข้างต้น ตรวจ working tree เดิมประกอบด้วย แต่ไม่ย้ายผลที่ยังไม่ commit มาปะปนกับหลักฐานบน main รายการ evidence ใน manifest บันทึก SHA-256 ของไฟล์บนฐานเผยแพร่และระบุว่าต่างจาก working tree เดิมหรือไม่ ต้องอ่านสถานะใหม่เมื่อเริ่มแต่ละ wave
 
@@ -53,6 +53,17 @@
 - legacy `I` ต้องระบุว่าเป็น legacy state หรือ derived trace ให้ชัด ห้ามตีความเป็น `R_gen` แล้วป้อนกลับโดยเงียบ
 
 ทางออกที่ยอมรับได้คือ (ก) จำกัด legacy engine เป็น gradient-flow comparator หรือ (ข) ลงทะเบียน candidate state/current/momentum extension แยกต่างหากและผ่าน F0–F8 ก่อน claim การพบ no-go ของ mapping เดิมยังเป็นความคืบหน้าที่มีคุณค่า
+
+## J01 execution checkpoint (2026-09-26)
+
+- [Verifier](Code/03_Research/Research_Fluid_State_Velocity_Representability.py) ผ่าน periodic manufactured controls ที่กริด 16, 32 และ 64; ลำดับการลู่เข้าของ vorticity เทียบค่าต่อเนื่องเท่ากับ 1.9917 และ 1.9979
+- สำหรับ mapping 2D u=-M grad(C) เมื่อ M เป็น scalar คงที่: curl ของความเร็วที่ได้ใกล้ศูนย์ ขณะที่เป้าหมายหมุนวนมี discrete divergence เป็นศูนย์และ vorticity ไม่เป็นศูนย์; การฉาย onto gradient subspace มีสัดส่วน 0 และ relative best-fit L2 residual เท่ากับ 1 ทุกกริด จึงเป็น scoped no-go สำหรับ nonzero periodic incompressible vortical targets
+- การตรวจ source พบว่าค่า mobility ที่คำนวณจาก bridge ประมาณ 1749.656 ถูกเขียนทับเป็น 0.5 หลังเริ่ม base solver; PhysicalProperties.mobility=1.0 ไม่ถูกใช้ในการ derive ส่วนค่าเริ่มต้น kappa=mu/rho≈1.00381×10^-6 m²/s ต่ำกว่า stability cap 0.0488281 m²/s
+- Engine 3D เก็บ/วิวัฒน์ C,I โดยไม่กำหนด state ความเร็ว/โมเมนตัม/ความดันแบบเวกเตอร์ การตรวจนี้ไม่แก้โค้ด solver และไม่สรุป no-go ของ UET ทุกแบบ
+- ยังไม่ได้รัน trajectory หรือวัดจำนวน clipping events: runtime import ของ Core หยุดที่ dependency scipy ซึ่งไม่มีใน Python runtime ที่ใช้ตรวจ; source แสดง floor C>=0.01 ทั้งสอง engine จำนวน clip จึงยังไม่ทราบ
+- ตัวควบคุมถัดไปของ Topic 10 คือปิดหน่วย/ontology/derivation ของ state ความเร็วใหม่กับ Core ก่อน J04 physical-flow acceptance; J02 He-4 protocol และ J03 graphite package ยังคงเป็นสายงาน Topic 13 แยกกัน
+
+ผลและ source hashes อยู่ใน [J01 artifact](Result/artifacts/fluid_state_velocity_representability_audit.json) ผลนี้ไม่เปลี่ยน speed FAIL, chaos-method PASS, readiness, Topic 13 closures หรือ dependency admission
 
 ## 4. โครงสร้างงานที่พัฒนาไปพร้อมกัน
 

@@ -59,3 +59,13 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
 - Blocker narrowed in source review: theorem requirements are mapped to the exact missing Topic 10 state/momentum/forcing/norm obligations; no scientific blocker closed.
 - Next controller: J00 scope and source admission, then J01 rotational-flow representability. Paper-specific finite-window control requires J04 admission and a reproducible forcing package.
 - Claim impact: none; legacy speed FAIL, method-control PASS and Core/Topic 13 boundaries are unchanged.
+
+## 2026-09-26 J01 periodic state/velocity representability audit
+
+- Wave type: scoped mathematical-control and source audit under the Topic 10–13 plan.
+- Changed: added the reproducible verifier and result artifact; synced METHOD, FORMULA_AUDIT, LIMITATIONS, VERIFICATION_SPEC, DATA_MANIFEST, README, the joint plan, and OpenAI applicability notes.
+- Verified: periodic manufactured controls at N=16/32/64; gradient-curl relative residuals below 5.0e-16; rotational target divergence exactly zero in the discrete control; gradient projection zero to numerical precision; best relative L2 residual 1; vorticity refinement orders 1.9917 and 1.9979. Static source checks passed for the mobility reset, unused physical mobility field, default kappa cap, clipping floors, and absent 3D vector state.
+- Result: scoped no-go established for nonzero periodic incompressible vortical targets under the current constant-M 2D scalar-gradient map. This is not a UET-wide no-go and does not validate a physical trajectory.
+- Runtime boundary: both engine imports are blocked in the configured Python runtime by missing SciPy; no integration or clip-event count was run. Claim promotion and dependency unlock remain false.
+- Controlling blocker: a separately registered Topic 10 velocity/momentum state with closed units and derivation must pass Core F0-F8 before physical matched-flow J04; Topic 13 J02/J03 work remains parallel.
+- Next action: review the candidate state contract with Core, restore the declared runtime dependency environment for the dynamic clipping pass, then begin J04 only after state admission.

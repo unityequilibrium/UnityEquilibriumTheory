@@ -53,3 +53,24 @@ Revision ของ Lean repository ที่ตรวจผ่าน GitHub API:
 ## ขอบเขตการตรวจครั้งนี้
 
 ตรวจ paper ฉบับ OpenAI, official OpenAI account, repository Lean README, Clay problem statement/rules และไฟล์ Topic 10 ข้างต้นแบบ read-only ไม่มีการรัน Lean, CFD, UET solver, formal certificate หรือการประเมิน peer-review ของ paper ด้วยตนเอง ไม่มี source payload ใหม่ที่รับเข้า benchmark หรือการเปลี่ยน claim/readiness gate
+
+## J01 execution result and OpenAI method value
+
+The OpenAI result helped sharpen the falsification target: use a smooth periodic vector field
+whose discrete divergence is zero and whose vorticity is nonzero, then separate continuum
+representability from stencil and boundary artifacts. The J01 verifier did this on 16, 32,
+and 64 grids. Vorticity converged at observed orders 1.9917 and 1.9979; the target's
+projection onto the legacy scalar-gradient space was zero to numerical precision and the
+best relative L2 residual was one.
+
+This is methodological value, not direct UET evidence. J01 closes only the representability
+question for the current constant-M 2D gradient map and current scalar-only 3D state. The
+engine trajectory and clip-event counts remain untested because Core engine import is blocked
+by missing SciPy in the configured runtime. OpenAI's theorem remains useful as a future
+proof-scope checklist; a paper-derived 3D adversarial test must still wait for an admitted
+velocity/momentum/forcing state and reproducible force source. The Topic 13 He-4 shear channel
+remains an external input candidate, not a UET transport prediction or a coupling unlock.
+
+See the machine-readable J01 result
+(Result/artifacts/fluid_state_velocity_representability_audit.json)
+and the joint Topic 10–13 plan (JOINT_RESEARCH_PLAN_TOPIC10_TOPIC13.md).
