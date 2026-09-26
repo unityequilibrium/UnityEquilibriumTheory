@@ -1,4 +1,4 @@
-# งาน OpenAI เรื่อง Navier–Stokes ช่วย Topic 0.10 ได้เพียงใด
+# งานวิจัย OpenAI ด้าน Navier–Stokes และ Euler ช่วย Topic 0.10 ได้เพียงใด
 
 วันที่ตรวจ: 2026-09-26 · ขอบเขต: paper, โครงการ Lean และ Topic 0.10 ณ commit `949f8d97a2ce9e76aa3635692b2c7308ee7a7735` · ประเภท: **การประเมินแหล่งงานวิจัยและช่องว่าง ไม่ใช่ผล verifier ใหม่**
 
@@ -16,6 +16,7 @@ Revision ของ Lean repository ที่ตรวจผ่าน GitHub API:
 | Lean formalization / independent certificate checking เป็นวิธีตรวจ lemma | **ปานกลางเฉพาะ proof track** | ต้อง formalize **ข้อความของ UET เอง** และตรวจ assumption bridge; ไม่ช่วย SI/data validation โดยตรง |
 | กลไก pulse/reynolds-stress cancellation หรือ profile ใน paper เป็นสมการ UET | **ต่ำมาก** | ไม่มี derivation จาก Core action หรือ Topic 10 ที่เชื่อมกลไกนั้น |
 | ผล speed benchmark / external CFD / Topic 13 thermal bridge | **ไม่มีผลโดยตรง** | paper ไม่วัด runtime UET, ไม่เปรียบเทียบกับข้อมูลของเรา และไม่ให้ thermal calibration |
+| ผล Euler แบบไม่มีแรงภายนอกและเกณฑ์ vorticity/gradient | **ปานกลางในอนาคต** | ช่วยเลือก observables และ stress tests ของ 3D vortical flow; ยังไม่มี state map ที่แทน flow นี้ได้ใน UET lane ปัจจุบัน |
 
 ระดับข้างต้นเป็นการจัดลำดับการใช้งาน ไม่ใช่คะแนนความจริงหรือเปอร์เซ็นต์ความคืบหน้าของทฤษฎี
 
@@ -74,3 +75,22 @@ remains an external input candidate, not a UET transport prediction or a couplin
 See the machine-readable J01 result
 (Result/artifacts/fluid_state_velocity_representability_audit.json)
 and the joint Topic 10–13 plan (JOINT_RESEARCH_PLAN_TOPIC10_TOPIC13.md).
+
+## ผล OpenAI ด้าน Euler: ความเกี่ยวข้องกับ vorticity ของ Topic 10
+
+OpenAI เผยแพร่ผลอีกชิ้นสำหรับ **สมการ Euler แบบ incompressible, 3D และไม่มีแรงภายนอก**: Theorem 1.1 สร้างข้อมูลเริ่มต้นที่เรียบ มี compact support และ divergence-free ซึ่งมี maximal smooth lifespan จำกัด โดย limsup ||∇u(t)||_{L∞} โตไม่จำกัด และอินทิกรัลตามเวลาของ ||curl u(t)||_{L∞} diverge [paper Euler ทางการ](https://cdn.openai.com/pdf/315b36cd-ec98-4023-8342-93345194ece1/euler.pdf) และ [repository Lean ของ OpenAI](https://github.com/openai/NavierStokesAndEuler) ระบุผลและ formalization ที่เกี่ยวข้อง การตรวจนี้อ่าน paper และ README แต่ไม่ได้ build Lean หรือรัน Comparator จึงไม่อ้างว่าได้ตรวจ proof certificate ด้วยตนเอง
+
+### ผลที่นำมาใช้กับ Topic 10 ได้
+
+- **ประโยชน์สูงทันทีด้านนิยามการทดสอบ:** แยกพลังงานรวมออกจากการโตของ ∇u และ vorticity; ระบุ norm, ช่วงเวลา, residual และความเรียบของแรงอย่างเปิดเผย งาน Euler ช่วยชี้ว่า ||curl u||_{L∞} และ ||∇u||_{L∞} เป็น observables สำคัญของโจทย์ regularity เฉพาะนี้ ไม่ใช่เกณฑ์รับรอง UET โดยตัวมันเอง
+- **ประโยชน์ปานกลางต่อการออกแบบ counterexample ในอนาคต:** เป็นแหล่งอ้างอิงสำหรับข้อมูล 3D divergence-free ที่มี rotation และการขยาย vorticity โดยไม่ใส่แรงภายนอก แต่การนำ construction หรือ profile มาเป็น benchmark ต้องสร้าง source package และ map เข้าสู่ state/momentum model ที่ผ่าน Core ก่อน
+- **ไม่ช่วยยืนยัน solver ปัจจุบัน:** J01 แสดงว่า legacy 2D u=-M∇C เมื่อ M คงที่แทน periodic target ที่มี nonzero vorticity ไม่ได้; 3D lane ปัจจุบันก็ยังไม่มี vector velocity state การมี paper Euler จึงช่วยให้ขอบเขต no-go และเกณฑ์ทดสอบคมขึ้น แต่ไม่ได้แก้ representability blocker
+- **ไม่มีการถ่ายโอนสมการหรือสถานะทางฟิสิกส์:** Euler ไม่มี viscosity/forcing; Navier–Stokes paper ใช้ smooth forcing ภายใต้ construction เฉพาะ; ทั้งคู่ไม่ใช่ constitutive equation, ไม่ใช่ข้อมูล CFD ของ UET, ไม่ใช่การทำนาย heat transport และไม่ปลด Topic 13
+
+OpenAI รายงานว่าการค้นพบใช้กลุ่ม agents สำรวจ statement หลายแบบ แล้ว cross-pollinate แนวทาง ก่อนทำ Lean formalization [ประกาศ OpenAI](https://openai.com/index/navier-stokes-solution/) จุดที่นำมาใช้ได้กับ workflow คือแยก conjecture/proof obligations ออกจากกันและมี checker ตรวจข้อความที่ formalize แล้ว ส่วนขนาดระบบและทรัพยากรที่ OpenAI รายงานไม่ใช่หลักฐานว่าการทำซ้ำระดับนั้นจำเป็นหรือจะเพิ่มความน่าเชื่อถือใน UET; independent mathematical review และ model-to-physics correspondence ยังเป็นคนละงาน
+
+**การจัดลำดับสุดท้าย:** ใช้ผล OpenAI เป็น *method and falsification reference* ระดับสูง, เป็น source สำหรับ future 3D test แบบมีเงื่อนไข, และให้น้ำหนักเป็นหลักฐานตรงต่อ UET/Core/ข้อมูลจริงเป็นศูนย์ในรอบนี้ ตัวควบคุมถัดไปยังเป็นการลงทะเบียน velocity/momentum state, ontology, units และ derivation ให้ผ่าน Core F0–F8 ก่อน physical-flow J04; คง J02 He-II second sound เป็นอีก observable คนละสมการและคนละ lane
+
+## Topic 13 second-sound boundary
+
+The J02 source review identifies a He-II second-sound phase-velocity candidate, which is a coupled thermal/entropy-wave observable of the full two-fluid material. It is outside the hypotheses of the classical incompressible Navier–Stokes theorem reviewed above. OpenAI's work can still discipline theorem scope, norm selection and residual obligations for a separately admitted incompressible normal-flow subproblem, but it supplies no second-sound equation, transport coefficient or He-4 response evidence. See the [J02 protocol card](../0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md) and [source/protocol audit](../../core/07_artifacts/topic13/t13_he4_second_sound_response_protocol_audit.json).

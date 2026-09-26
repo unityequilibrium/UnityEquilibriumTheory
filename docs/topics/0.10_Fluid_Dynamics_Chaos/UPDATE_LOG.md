@@ -69,3 +69,23 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
 - Runtime boundary: both engine imports are blocked in the configured Python runtime by missing SciPy; no integration or clip-event count was run. Claim promotion and dependency unlock remain false.
 - Controlling blocker: a separately registered Topic 10 velocity/momentum state with closed units and derivation must pass Core F0-F8 before physical matched-flow J04; Topic 13 J02/J03 work remains parallel.
 - Next action: review the candidate state contract with Core, restore the declared runtime dependency environment for the dynamic clipping pass, then begin J04 only after state admission.
+
+## 2026-09-26 J02 He-4 second-sound source/protocol candidate
+
+- Wave type: Topic 13 source/protocol and claim-boundary pass linked to Topic 10; no UET dynamic model was run.
+- Changed: added the He-4 second-sound source package and protocol card, a reproducible audit artifact, J02 manifest progress, and Topic 10/OpenAI applicability notes.
+- Verified: J02 protocol audit passed 15/15 checks; recommended source rows and frozen alpha/theta_T/Z/e0 plus external eta identities match the existing records.
+- Result: a bounded full-He-II dynamic response candidate is available for future comparison; current Topic 10 scalar state cannot emit this eigenmode.
+- Blocker narrowed: exact primary-row uncertainty/frequency/state and the admitted UET two-fluid operator remain open; response rows were seen and are not a blind holdout.
+- Next controller: source-lock a primary resonance protocol, then derive/admit a two-fluid thermal eigenmode through Core F0–F8; J06 needs a fresh blind source or a retrospective label.
+- Claim impact: none; no UET prediction, external validation, Core closure or dependency unlock.
+
+## 2026-09-26 OpenAI Euler result applicability addendum
+
+- Wave type: primary-source literature review; no model, benchmark, or acceptance-gate change.
+- Changed: expanded the Topic 10 OpenAI assessment and joint-plan source review to cover OpenAI's 3D unforced Euler result alongside its forced Navier–Stokes construction.
+- Verified: read both official papers, OpenAI's announcement, and the Lean repository README; local J01 outcome and current velocity-state blocker were cross-checked. Lean/Comparator, CFD, and UET solver were not run.
+- Result: theorem-scope, norm, vorticity and residual design value remains high; direct evidence for UET physics, performance or Topic 13 response remains absent.
+- Controlling blocker: register a vector velocity/momentum state with ontology, units and derivation through Core F0–F8; J01's no-go remains scoped to the current legacy mapping.
+- Next action: prepare that state contract for Core admission; only after admission define the matched physical-flow J04 test.
+- Claim impact: none; no readiness change, calibration, dependency unlock or promotion.

@@ -6,7 +6,7 @@
 
 พัฒนา Topic 0.10 ให้ตอบได้ว่าแบบจำลอง UET แทนการไหลชนิดใดได้จริง เชื่อมสมดุลมวล โมเมนตัม พลังงาน และเอนโทรปีกับ Topic 0.13 ได้ภายใต้เงื่อนไขใด และต่างจากแบบจำลองมาตรฐานอย่างไร โดยใช้ Core เป็นเจ้าของ ontology, equation registry และ dependency admission การปิดงานอาจเป็นผลผ่านเฉพาะขอบเขต ผล no-go หรือการจำกัดแบบจำลองอย่างมีหลักฐาน ไม่จำเป็นต้องได้คำตอบสนับสนุน UET ทุกข้อ
 
-เอกสารนี้เป็นแผนหลักของงานร่วม มี [รายการงานที่เครื่องอ่านได้](Data/03_Research/fluid_thermal_joint_research_plan.json) เป็นตัวควบคุมลำดับงาน **ไม่ใช่ physical acceptance gate ใหม่** ณ 2026-09-26 มีการรัน J01 แบบ representability audit แล้ว; J02-J09 ยังไม่เริ่ม การรัน audit ไม่เลื่อน readiness, ไม่เปลี่ยน gate เดิม และไม่ปลด Core dependency
+เอกสารนี้เป็นแผนหลักของงานร่วม มี [รายการงานที่เครื่องอ่านได้](Data/03_Research/fluid_thermal_joint_research_plan.json) เป็นตัวควบคุมลำดับงาน **ไม่ใช่ physical acceptance gate ใหม่** ณ 2026-09-26 มีการรัน J01 แบบ representability audit แล้ว; J02 partially completed at source/protocol-candidate level; J03-J09 remain not started การรัน audit ไม่เลื่อน readiness, ไม่เปลี่ยน gate เดิม และไม่ปลด Core dependency
 
 ฐานเผยแพร่ที่ตรวจ: `d069507651964c0f963d1568667e2a9218400e42` บน `origin/main` หลัง fetch วันที่ข้างต้น ตรวจ working tree เดิมประกอบด้วย แต่ไม่ย้ายผลที่ยังไม่ commit มาปะปนกับหลักฐานบน main รายการ evidence ใน manifest บันทึก SHA-256 ของไฟล์บนฐานเผยแพร่และระบุว่าต่างจาก working tree เดิมหรือไม่ ต้องอ่านสถานะใหม่เมื่อเริ่มแต่ละ wave
 
@@ -61,9 +61,21 @@
 - การตรวจ source พบว่าค่า mobility ที่คำนวณจาก bridge ประมาณ 1749.656 ถูกเขียนทับเป็น 0.5 หลังเริ่ม base solver; PhysicalProperties.mobility=1.0 ไม่ถูกใช้ในการ derive ส่วนค่าเริ่มต้น kappa=mu/rho≈1.00381×10^-6 m²/s ต่ำกว่า stability cap 0.0488281 m²/s
 - Engine 3D เก็บ/วิวัฒน์ C,I โดยไม่กำหนด state ความเร็ว/โมเมนตัม/ความดันแบบเวกเตอร์ การตรวจนี้ไม่แก้โค้ด solver และไม่สรุป no-go ของ UET ทุกแบบ
 - ยังไม่ได้รัน trajectory หรือวัดจำนวน clipping events: runtime import ของ Core หยุดที่ dependency scipy ซึ่งไม่มีใน Python runtime ที่ใช้ตรวจ; source แสดง floor C>=0.01 ทั้งสอง engine จำนวน clip จึงยังไม่ทราบ
-- ตัวควบคุมถัดไปของ Topic 10 คือปิดหน่วย/ontology/derivation ของ state ความเร็วใหม่กับ Core ก่อน J04 physical-flow acceptance; J02 He-4 protocol และ J03 graphite package ยังคงเป็นสายงาน Topic 13 แยกกัน
+- ตัวควบคุมถัดไปของ Topic 10 คือปิดหน่วย/ontology/derivation ของ state ความเร็วใหม่กับ Core ก่อน J04 physical-flow acceptance; J02 He-4 response-source/protocol candidate (partial) และ J03 graphite package ยังคงเป็นสายงาน Topic 13 แยกกัน
 
 ผลและ source hashes อยู่ใน [J01 artifact](Result/artifacts/fluid_state_velocity_representability_audit.json) ผลนี้ไม่เปลี่ยน speed FAIL, chaos-method PASS, readiness, Topic 13 closures หรือ dependency admission
+
+## J02 second-sound response source/protocol checkpoint (2026-09-26)
+
+A new source package and protocol card record the 1998 NIST review's recommended He-II second-sound phase speed along the SVP path: 20.33 m/s at T90 = 1.700 K, with 20.37 m/s at 1.650 K and 20.18 m/s at 1.750 K. The local slope (-1.9 m/s/K) is only a finite difference of rounded recommended rows. The response observable was not used to construct alpha, theta_T, Z_Phi or e0; all remain frozen. The review compiles both equilibrium anchors and sound data, so statistical independence is not claimed.
+
+The protocol audit passes 15/15 source, constants, status and claim-boundary checks. It does not run a UET model. The recommended rows lack mapped row-level uncertainty, covariance, primary-record frequency, mode geometry and local perturbation constraints. The distinct 1947 resonance result is recorded as a cross-check only because its abstract does not establish the same pressure and temperature-scale state. The values were inspected during protocol design and are not a blind holdout; J06 needs a fresh uninspected source or must label any later comparison retrospective.
+
+Topic 10 currently cannot predict this full-He-II thermal/entropy-wave eigenmode from its scalar C/I state or scalar-gradient velocity mapping. A coupled normal/superfluid response operator and state must first pass Core F0–F8. OpenAI's Navier–Stokes and unforced Euler work remains useful for theorem scope, norms, vorticity and residual discipline in a future incompressible-flow subproblem; neither supplies a second-sound model or validation. See the [Topic 10 applicability assessment](OPENAI_NAVIER_STOKES_APPLICABILITY_2026-09-26.md). The J01 legacy-map no-go scope and all Core/Topic 13 status labels remain unchanged.
+
+- Protocol card: [He-4 second-sound response protocol](../0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md)
+- Source package: [machine-readable response source](../0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_second_sound_response_source_package.json)
+- Audit artifact: [J02 protocol audit](../../core/07_artifacts/topic13/t13_he4_second_sound_response_protocol_audit.json)
 
 ## 4. โครงสร้างงานที่พัฒนาไปพร้อมกัน
 
@@ -198,10 +210,10 @@ Axial Raman ต้องได้ independent matched-state strain/Raman row พ
 
 ครอบคลุมในแผนนี้หมายถึงมีทางตัดสินทุกชั้นของคำอ้าง ไม่ใช่เปิดทุก topic หรือทุก physical regime พร้อมกัน ผลของการออกแบบครั้งนี้คือ dependency และ acceptance ที่ชัดขึ้น ยังไม่มี fluid/thermal scientific blocker ใดถูกประกาศว่าปิดใหม่
 
-## Source review: OpenAI Navier–Stokes relevance to Topic 10
+## Source review: OpenAI Navier–Stokes and Euler relevance to Topic 10
 
 The [paper applicability assessment](OPENAI_NAVIER_STOKES_APPLICABILITY_2026-09-26.md)
-prioritizes the theorem-scope card and rotational-flow representability checks
-inside J00/J01. A finite-window forcing stress case is conditional on later
-source and model admission. It does not add a scientific dependency, alter
-numerical thresholds or close any work package.
+prioritizes theorem scope, norm separation, rotational-flow representability and
+vorticity-aware observables inside J00/J01. A finite-window NS or Euler stress
+case is conditional on later source and model admission. These papers add no
+scientific dependency, alter no numerical threshold and close no work package.

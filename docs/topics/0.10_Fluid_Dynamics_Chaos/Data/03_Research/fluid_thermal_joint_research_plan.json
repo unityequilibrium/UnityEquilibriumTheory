@@ -12,7 +12,7 @@
   "source_policy": "Evidence hashes refer to the published-base checkout. Original dirty workspace reviewed for context only; differences are explicit and do not authorize importing unpublished results.",
   "controlling_blocker": "fluid_state_and_velocity_observable_correspondence_unestablished",
   "blocker_role": "proposed_physics_program_controller_not_replacement_of_legacy_speed_gate",
-  "next_controller": "J02/J03 Topic 13 source/protocol work may proceed in parallel; a new Topic 10 velocity/momentum candidate still requires Core F0-F8 admission before J04",
+  "next_controller": "J02 is partial at source/protocol-candidate level and J03 source admission may continue in parallel; Topic 10 physical J04 still requires a registered velocity/momentum state with Core F0-F8, while J05 requires its admitted lane-specific interface.",
   "first_scientific_wave": "J01",
   "work_packages": [
     {
@@ -53,19 +53,37 @@
     {
       "id": "J02",
       "owner": "Topic 0.13 and Core",
-      "status": "NOT_STARTED",
+      "status": "PARTIALLY_COMPLETED",
       "depends_on": [
         "J00"
       ],
-      "blocker": "he4_independent_response_protocol_correspondence_open",
-      "deliverable": "Frozen He-4 Z/theta_T/e0/alpha record, protocol card and independently informative response source",
+      "blocker": "uet_two_fluid_second_sound_operator_not_admitted",
+      "deliverable": "Frozen He-4 Z/theta_T/e0/alpha record, source/protocol card for an independent dynamic response candidate, and a no-rematching comparison contract",
       "acceptance": [
         "Identify normal component versus full He-II material, fixed thermodynamic variables and timescale",
         "Observable is not used to construct the matching constants",
         "No rematching on test rows; uncertainties and covariance or labeled bounds included",
         "Treat existing shear coefficient as external input, not conductivity or a UET prediction"
       ],
-      "failure_action": "Keep bounded calibrated composition unchanged; mark stronger physical validation source/protocol-blocked"
+      "failure_action": "Keep bounded calibrated composition unchanged; mark stronger physical validation source/protocol-blocked",
+      "execution_scope": "Existing matching constants were frozen from the Topic 13 audits. NIST Table 4.3 second-sound values along SVP were source-locked as a different observable, and a local finite-difference diagnostic was calculated from rounded rows. No UET prediction, parameter fit, physical comparison, or gate change was made.",
+      "source_package": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_second_sound_response_source_package.json",
+      "protocol_card": "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md",
+      "result_artifact": "docs/core/07_artifacts/topic13/t13_he4_second_sound_response_protocol_audit.json",
+      "verifier": "docs/scripts/audit/audit_topic10_t13_he4_second_sound_protocol.py",
+      "verifier_status": "PASS_SOURCE_PROTOCOL_CANDIDATE_ONLY",
+      "verifier_checks": "15/15",
+      "completed_scope": [
+        "Freeze existing alpha, theta_T, Z_Phi, e0 and normal-shear input identities without rematching response rows",
+        "Identify He-II second-sound phase velocity as a separate dynamic observable and source candidate",
+        "Record full-He-II scope, SVP/T90 path, units, source-level uncertainty limits, previous exposure, and the boundary to Topic 10/OpenAI Navier-Stokes and Euler work"
+      ],
+      "unmet_acceptance": [
+        "Lock a primary resonance row with matched state, frequency, mode geometry, mean-flow/probe conditions, row uncertainty and covariance/bounds",
+        "Admit a UET two-fluid entropy/relative-velocity response operator through Core F0-F8 before prediction or comparison"
+      ],
+      "holdout_boundary": "The recommended response rows were viewed during protocol design; they are not a blind holdout. A fresh uninspected source is required for a future blind-validation claim.",
+      "next_controller": "Source-lock the primary resonance protocol and derive/admit the coupled two-fluid thermal eigenmode; keep J06 prediction blocked until then."
     },
     {
       "id": "J03",
@@ -141,7 +159,8 @@
         "Account for energy, entropy and propagated source/numerical/measurement uncertainty",
         "Thermal-pulse/counterflow extensions require their own complete transport inputs"
       ],
-      "failure_action": "Publish bounded failure, no-go or source-blocked disposition without downgrading or upgrading unrelated He-4 composition"
+      "failure_action": "Publish bounded failure, no-go or source-blocked disposition without downgrading or upgrading unrelated He-4 composition",
+      "holdout_source_requirement": "The J02 second-sound rows are exposed during protocol design and cannot fulfill a blind-holdout claim. Select a fresh uninspected source or label any later comparison retrospective/out-of-calibration rather than blind."
     },
     {
       "id": "J07",
@@ -361,14 +380,42 @@
   ],
   "current_execution_snapshot": {
     "date": "2026-09-26",
-    "source_scope": "J00 source/hash/unit inventory for the J01 lane; broader Topic 13 protocols and candidate admission remain open.",
-    "first_executed_package": "J01",
-    "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_State_Velocity_Representability.py",
-    "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_state_velocity_representability_audit.json",
-    "verifier_status": "PASS_SCOPED_NO_GO_FOR_LEGACY_ROTATIONAL_FLOW",
-    "engine_trajectory_executed": false,
-    "runtime_limitation": "Engine imports blocked because the configured Python runtime lacks scipy; solver clip-event counts remain unknown.",
+    "source_scope": "J02 He-4 second-sound source/protocol candidate; matching constants frozen; primary frequency-specific uncertainty and UET operator remain open.",
+    "verifier": "docs/scripts/audit/audit_topic10_t13_he4_second_sound_protocol.py",
+    "result_artifact": "docs/core/07_artifacts/topic13/t13_he4_second_sound_response_protocol_audit.json",
+    "verifier_status": "PASS_SOURCE_PROTOCOL_CANDIDATE_ONLY",
+    "verifier_checks": "15/15",
+    "protocol_card": "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md",
+    "source_package": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_second_sound_response_source_package.json",
+    "evidence_hashes": {
+      "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_second_sound_response_source_package.json": "3a46c9a09cf987cd4ea1c1e29e33dd7f9407ae4caaea28ecc610275362df1443",
+      "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md": "a860aa849242290940da88a1f04c556da3547c9145a1b63bd019f63f3ab7317b",
+      "docs/scripts/audit/audit_topic10_t13_he4_second_sound_protocol.py": "f3bf22ff8cd539f451a4e006ae3143d89ed8cb6e243daa906ed972908a117d5a",
+      "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json": "7886ffd3403f91d8951a9d33fb947468a99ebbc94d378cbdc7467e7efb5af27e",
+      "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json": "a09b39050aaea5ed49094f34d45719673eb275e7b94e88b88af71e4e47084325",
+      "docs/core/07_artifacts/topic13/t13_he4_normal_viscosity_kubo_audit.json": "42a03cc5181cc4848202be699ed35f929d972c66c4ef7420003c62c583c79758",
+      "docs/core/07_artifacts/topic13/t13_he4_matching_independence_audit.json": "45dd4be70d1a6c448dce0cd6b0a2da7037a98cdc908428805bd2cf445cf9cabd",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_state_velocity_representability_audit.json": "7e7b1e5889ea4d1e04abe3a2186ac67e378b7b8d1437375a1ee446c88ba3c1a4"
+    },
+    "result_artifact_sha256": "b58243db39bbd9fea686b388a918119f96139bb8fa8b20108abf4437550cc0a0",
+    "physical_uet_comparison_executed": false,
+    "blind_holdout": false,
     "claim_promotion": false,
-    "dependency_unlock": false
-  }
+    "dependency_unlock": false,
+    "latest_executed_package": "J02"
+  },
+  "execution_history": [
+    {
+      "date": "2026-09-26",
+      "source_scope": "J00 source/hash/unit inventory for the J01 lane; broader Topic 13 protocols and candidate admission remain open.",
+      "first_executed_package": "J01",
+      "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_State_Velocity_Representability.py",
+      "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_state_velocity_representability_audit.json",
+      "verifier_status": "PASS_SCOPED_NO_GO_FOR_LEGACY_ROTATIONAL_FLOW",
+      "engine_trajectory_executed": false,
+      "runtime_limitation": "Engine imports blocked because the configured Python runtime lacks scipy; solver clip-event counts remain unknown.",
+      "claim_promotion": false,
+      "dependency_unlock": false
+    }
+  ]
 }
