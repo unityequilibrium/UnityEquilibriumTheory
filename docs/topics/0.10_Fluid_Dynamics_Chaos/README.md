@@ -101,3 +101,14 @@ against the unchanged `2.0x` threshold. The separate chaos-method artifact is
 `PASS_CHAOS_METHOD_VALIDATION`; it validates the diagnostic implementation on
 standard controls and does not change the fluid comparator or external-CFD
 status.
+
+## Joint fluid–thermal research design (2026-09-26)
+
+The [Topic 10–13 research plan](JOINT_RESEARCH_PLAN_TOPIC10_TOPIC13.md) and
+[machine-readable work packages](Data/03_Research/fluid_thermal_joint_research_plan.json)
+start with state/velocity representability, then matched numerical controls,
+Core-admitted thermodynamic coupling, independent He-4 response, chaos and
+work–precision comparisons. Graphite input acquisition proceeds on its own
+three-package track. This is a proposal, not a new physics result or readiness
+upgrade; the existing speed, method-validation and physical-dependency gates
+remain authoritative.

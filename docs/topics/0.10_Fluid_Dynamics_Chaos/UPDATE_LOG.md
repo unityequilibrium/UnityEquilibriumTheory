@@ -37,3 +37,15 @@ CONTROLLING_BLOCKER: Physical UET constitutive transport and external validation
 NEXT_ACTION: Consume the validated method in bounded, preregistered topic diagnostics without changing the speed threshold.
 
 CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET fluid dynamics is chaotic.
+
+## 2026-09-26 Joint Topic 10–13 research design
+
+- Wave type: planning / claim-boundary pass; scientific execution not started.
+- Changed: added `JOINT_RESEARCH_PLAN_TOPIC10_TOPIC13.md` and `Data/03_Research/fluid_thermal_joint_research_plan.json`; linked both topic entrypoints.
+- Verified: JSON structure, 10 unique work-package IDs, acyclic dependencies, required acceptance/failure fields, 16 published-base evidence hashes and relative plan links checked using PowerShell; no scientific verifier rerun because equations, inputs and thresholds were not changed.
+- Result: a reviewable joint plan with all work packages `NOT_STARTED`, `claim_promotion=false` and `dependency_unlock=false`.
+- Blocker narrowed in planning: general fluid-model readiness is separated into state/velocity representability, matched numerical verification, admitted constitutive interface, independent physical response and work–precision claims. No scientific blocker is newly closed.
+- Next controller: J00 source/protocol/admission lock; first scientific wave J01 `fluid_state_and_velocity_observable_correspondence_unestablished`.
+- Still open: external CFD, physical fluid-chaos validation, Core admission for full constitutive transport, and independent He-4 response protocol; graphite remains on its separate input track.
+- Claim impact: none; legacy speed FAIL and standard chaos-method PASS remain separate.
+- Publication: based on public main `d069507651964c0f963d1568667e2a9218400e42` in an isolated worktree; original dirty-workspace differences are recorded as hashes, not imported.

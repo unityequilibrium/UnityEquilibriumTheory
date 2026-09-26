@@ -5836,3 +5836,14 @@ EVIDENCE_PATHS:
 - `docs/core/test/test_topic13_anisotropic_thermoelastic_response_bridge.py`
 - `docs/core/07_artifacts/topic13/t13_anisotropic_thermoelastic_response_bridge_audit.json`
 - `docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_anisotropic_thermoelastic_bridge_addendum.json`
+
+## 2026-09-26 Joint fluid–thermal research planning handoff
+
+- Wave type: planning / claim-boundary pass; no thermal evidence-producing state changed.
+- Changed: linked `../0.10_Fluid_Dynamics_Chaos/JOINT_RESEARCH_PLAN_TOPIC10_TOPIC13.md` and its JSON work-package manifest from the topic entrypoint.
+- Verified: joint-plan JSON/dependency/link/source-hash checks; no scientific verifier rerun, new calibration, holdout access or equation change.
+- Result: J02 owns independent He-4 protocol/observable testing after freezing matching constants; J03 owns the three existing graphite input packages; J05 requires lane-specific Core admission before constitutive execution.
+- Blocker narrowed in planning only: bounded He-4 composition is explicitly separated from independent dynamic-response validation and graphite closure. No physical blocker closed.
+- Next controller: J00 admission/protocol lock, then J02 independent response-protocol/state-variable correspondence; graphite retains `dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing` and the separate C_src/transport inputs.
+- Claim impact: none; He-4 remains bounded `CLOSED_FOR_CORE`, graphite remains open, and one shear Kubo channel is not complete two-fluid thermal transport.
+- Workflow linkage: uses existing F0–F8 and research-room/hardening standards; no standards or canonical gate rewrite.
