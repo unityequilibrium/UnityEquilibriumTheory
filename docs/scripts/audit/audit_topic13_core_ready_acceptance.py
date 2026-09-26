@@ -72,6 +72,11 @@ def main() -> int:
         if item.get("major_result_id") == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
     )
     dependency = docs["dependency"]
+    aggregate_full_topic_ready = (
+        gate.get("status") == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+        and gate.get("legacy_graphite_ttg_aggregate_status")
+        == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+    )
 
     criteria = {
         "causal_branch_passes_locked_threshold": (
@@ -165,10 +170,24 @@ def main() -> int:
         "registry_matrix_and_dependency_are_consistent": (
             gate["core_result_status"] == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
             and core["status"] == "CLOSED_FOR_CORE"
-            and docs["matrix"]["status"] == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+            and docs["matrix"]["status"] == gate["status"]
+            and docs["matrix"]["bounded_core_track_status"] == core["status"]
+            and docs["matrix"]["bounded_core_track_result_status"] == gate["core_result_status"]
             and docs["matrix"]["full_core_unlock"] is True
+            and docs["matrix"]["full_core_unlock_scope"] == "BOUNDED_O2_HE4_CORE_TRACK"
+            and docs["matrix"]["bounded_core_track_unlock"] is True
+            and docs["matrix"]["full_topic_status"] == gate["status"]
+            and docs["matrix"]["full_topic_ready"] is aggregate_full_topic_ready
+            and docs["matrix"]["full_topic_closure_contract"]["full_topic_ready"]
+            is aggregate_full_topic_ready
             and register_entry["closure_level"] == "CLOSED_FOR_CORE"
             and dependency["topic13_core_ready"]["full_core_unlock"] is True
+            and dependency["topic13_core_ready"]["full_core_unlock_scope"]
+            == "BOUNDED_O2_HE4_CORE_TRACK"
+            and dependency["topic13_core_ready"]["full_topic_ready"]
+            is aggregate_full_topic_ready
+            and dependency["topic13_core_ready"]["full_topic_closure_contract"]["full_topic_ready"]
+            is aggregate_full_topic_ready
             and dependency["decisions"]["CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"]["status"]
             == "UNLOCKED"
             and dependency["decisions"]["GR_CLASSICAL_COMPATIBILITY_LANE"]["status"]
@@ -191,9 +210,14 @@ def main() -> int:
         "generated_at": date.today().isoformat(),
         "status": status,
         "claim_promotion": False,
+        "scope": "BOUNDED_O2_HE4_CORE_TRACK",
+        "aggregate_full_topic_status": gate.get("status"),
+        "aggregate_full_topic_ready": aggregate_full_topic_ready,
+        "aggregate_full_topic_open_blockers": gate.get("major_result", {}).get("what_remains_open", []),
         "major_result": {
             "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY_ACCEPTED",
             "topic": "0.13_Thermodynamic_Bridge",
+            "closure_scope": "BOUNDED_O2_HE4_CORE_TRACK",
             "closure_level": "CLOSED_FOR_CORE" if passed else "PARTIAL",
             "what_is_closed": [name for name, value in criteria.items() if value],
             "what_remains_open": [] if passed else [name for name, value in criteria.items() if not value],
@@ -247,7 +271,11 @@ def main() -> int:
         "next_action": "Start CORE_CURVED_3P1_OBSERVABLE_PARENT_READY as the next major result; keep graphite TTG and raw Landauer acquisition on external comparison tracks.",
         "claim_boundary": "Core-ready is not external-ready and not global UET closure.",
     }
-    OUT.write_text(json.dumps(report, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
+    OUT.write_text(
+        json.dumps(report, indent=2, ensure_ascii=True) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
     print(json.dumps({"status": status, "criteria_passed": sum(criteria.values()), "criteria_total": len(criteria), "failed": [name for name, value in criteria.items() if not value], "artifact": OUT.relative_to(ROOT).as_posix()}, indent=2))
     return 0 if passed else 1
 

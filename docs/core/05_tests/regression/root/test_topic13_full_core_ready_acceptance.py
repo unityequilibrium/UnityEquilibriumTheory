@@ -20,6 +20,11 @@ def test_full_topic13_core_ready_acceptance_passes_every_declared_criterion() ->
 
 def test_acceptance_preserves_external_and_global_claim_boundaries() -> None:
     audit = json.loads(AUDIT.read_text(encoding="utf-8-sig"))
+    assert audit["scope"] == "BOUNDED_O2_HE4_CORE_TRACK"
+    assert audit["major_result"]["closure_scope"] == "BOUNDED_O2_HE4_CORE_TRACK"
+    assert audit["aggregate_full_topic_status"] == "BLOCKED_OPEN_T13_FULL_BRIDGE"
+    assert audit["aggregate_full_topic_ready"] is False
+    assert len(audit["aggregate_full_topic_open_blockers"]) == 7
     external = audit["external_tracks_still_open"]
     assert external["graphite_ttg"]["status"] == "OPEN"
     assert external["raw_author_ding_source"] is False

@@ -53,7 +53,7 @@ def main() -> int:
     open_blockers = full_gate["major_result"]["what_remains_open"]
     if full_gate["status"] != "BLOCKED_OPEN_T13_FULL_BRIDGE":
         raise SystemExit("unexpected full Topic 13 gate status")
-    if matrix["status"] != "BLOCKED_OPEN_T13_FULL_BRIDGE" or matrix["full_core_unlock"]:
+    if matrix["status"] != "BLOCKED_OPEN_T13_FULL_BRIDGE" or matrix["full_topic_ready"] is not False:
         raise SystemExit("unexpected closure matrix status")
     if normalized_counts != expected_counts:
         raise SystemExit(f"unexpected closure counts: {normalized_counts}")
@@ -81,7 +81,7 @@ WHAT_REMAINS_OPEN:
 - The canonical Full Topic gate reports {len(open_blockers)} blocker groups: `{", ".join(open_blockers)}`.
 
 DEPENDENCY_UNLOCKED:
-- None. `full_core_unlock=false`; Gravity/GR and downstream transport promotion remain blocked.
+- Aggregate Full Topic 13 is not unlocked. The bounded O(2)/He-4 Core track is reported separately; Gravity/GR remains blocked.
 
 STATUS:
 - `{full_gate["status"]}`
@@ -141,6 +141,8 @@ EVIDENCE_HASHES:
         "blocker_count": len(open_blockers),
         "closure_counts": normalized_counts,
         "full_core_unlock": matrix["full_core_unlock"],
+        "full_core_unlock_scope": matrix["full_core_unlock_scope"],
+        "full_topic_ready": matrix["full_topic_ready"],
         "accepted_for_core": accepted_for_core,
         "holdout_accessed": holdout_accessed,
         "hashes": hashes,

@@ -270,6 +270,9 @@ def main() -> int:
             "current_major_result_counts": full_contract.get("current_major_result_counts", {}),
             "current_subresult_counts": full_contract.get("current_subresult_counts", {}),
             "full_topic_ready": full_contract.get("full_topic_ready", False),
+            "bounded_core_track_unlock": matrix.get("bounded_core_track_unlock", False),
+            "bounded_core_track": full_contract.get("bounded_core_track", {}),
+            "open_blockers": full_contract.get("open_blockers", []),
         }
         matrix_entry["required_major_result_count"] = full_contract.get("required_major_result_count")
         matrix_entry["required_subresult_count"] = full_contract.get("required_subresult_count")
@@ -296,8 +299,13 @@ def main() -> int:
         topic13_core_entry["closure_matrix"] = {
             "path": rel(MATRIX),
             "sha256": sha256(MATRIX),
-            "status": matrix.get("status"),
+            "status": matrix.get("bounded_core_track_status"),
+            "status_scope": "BOUNDED_O2_HE4_CORE_TRACK",
+            "result_status": matrix.get("bounded_core_track_result_status"),
             "full_core_unlock": matrix.get("full_core_unlock", False),
+            "full_core_unlock_scope": matrix.get("full_core_unlock_scope"),
+            "full_topic_status": matrix.get("status"),
+            "full_topic_ready": matrix.get("full_topic_ready", False),
             "required_major_result_count": matrix.get("full_topic_closure_contract", {}).get("required_major_result_count"),
             "required_subresult_count": matrix.get("full_topic_closure_contract", {}).get("required_subresult_count"),
         }
