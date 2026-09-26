@@ -55,14 +55,42 @@ def test_topic13_closure_matrix_reports_full_topic_contract_without_promotion() 
     assert matrix["schema_version"] == "t13-topic13-closure-matrix-v3"
     assert matrix["major_result"]["major_result_id"] == "T13_TOPIC13_CLOSURE_MATRIX"
     assert {item["requirement_id"] for item in matrix["requirements"]} == required
-    assert matrix["status"] == gate["core_result_status"] == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
-    assert matrix["major_result"]["closure_level"] == "CLOSED_FOR_CORE"
+    assert matrix["status"] == gate["status"] == "BLOCKED_OPEN_T13_FULL_BRIDGE"
+    assert matrix["status_scope"] == "FULL_TOPIC_13_AGGREGATE"
+    assert matrix["bounded_core_track_status"] == "CLOSED_FOR_CORE"
+    assert (
+        matrix["bounded_core_track_result_status"]
+        == gate["core_result_status"]
+        == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+    )
+    assert matrix["bounded_core_track_unlock"] is True
+    assert matrix["full_core_unlock_scope"] == "BOUNDED_O2_HE4_CORE_TRACK"
+    assert matrix["full_topic_status"] == gate["status"] == "BLOCKED_OPEN_T13_FULL_BRIDGE"
+    assert matrix["full_topic_ready"] is False
+    assert matrix["major_result"]["closure_level"] == "PARTIAL"
     assert matrix["claim_promotion"] is False
     assert matrix["full_core_unlock"] is True
     assert matrix["requirements_scope"].startswith("LEGACY_GRAPHITE_TTG")
     assert matrix["holdout_policy"]["xie_2026_accessed"] is False
     assert matrix["holdout_policy"]["calibration_path_may_read_holdout"] is False
-    assert matrix["major_result"]["open_blockers"] == []
+    assert matrix["major_result"]["open_blockers"] == gate["major_result"]["what_remains_open"]
+    assert len(matrix["major_result"]["open_blockers"]) == 7
+    assert matrix["full_topic_closure_contract"]["closure_level"] == "PARTIAL"
+    assert matrix["full_topic_closure_contract"]["full_topic_ready"] is False
+    assert (
+        matrix["full_topic_closure_contract"]["what_remains_open"]
+        == gate["major_result"]["what_remains_open"]
+    )
+    assert matrix["full_topic_closure_contract"]["bounded_core_track"]["status"] == "CLOSED_FOR_CORE"
+    assert matrix["closure_summary"]["full_topic_ready"] is False
+    assert matrix["full_topic_readiness_checks"] == {
+        "canonical_aggregate_gate_ready": False,
+        "aggregate_gate_blockers_clear": False,
+        "all_required_major_results_closed": False,
+        "all_required_subresults_closed": False,
+        "all_required_input_packages_accepted": False,
+        "holdout_unconsumed": True,
+    }
     assert matrix["closure_summary"]["open_blocker_groups"] == gate["major_result"]["closure_summary"]["open_blocker_groups"]
     assert matrix["full_topic_closure_contract"]["required_major_result_count"] == 10
     assert matrix["full_topic_closure_contract"]["required_subresult_count"] == 37
@@ -126,18 +154,33 @@ def test_topic13_closure_matrix_is_projected_into_register_and_dependency_gate()
     entry = next(item for item in register["entries"] if item.get("major_result_id") == "T13_TOPIC13_CLOSURE_MATRIX")
     full_entry = next(item for item in register["entries"] if item.get("major_result_id") == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY")
     projection = dependency["topic13_core_ready"]["closure_matrix"]
-    assert entry["closure_level"] == "CLOSED_FOR_CORE"
+    assert entry["closure_level"] == "PARTIAL"
     assert entry["claim_promotion"] is False
     assert entry["evidence_artifacts"][0]["path"] == "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json"
     assert entry["evidence_artifacts"][0]["sha256"] == digest(MATRIX)
     assert entry["closure_summary"]["reported_subresult_count"] == 37
-    assert entry["full_topic_closure_contract"]["full_topic_ready"] is True
+    assert entry["full_topic_closure_contract"]["full_topic_ready"] is False
+    assert entry["full_topic_closure_contract"]["bounded_core_track_unlock"] is True
+    assert len(entry["full_topic_closure_contract"]["open_blockers"]) == 7
+    assert entry["full_topic_closure_contract"]["bounded_core_track"]["status"] == "CLOSED_FOR_CORE"
     assert entry["input_package_audit"]["path"] == "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json"
     assert len(entry["closure_input_packages"]) == 3
     assert full_entry["closure_matrix"]["sha256"] == digest(MATRIX)
     assert full_entry["closure_matrix"]["required_major_result_count"] == 10
     assert full_entry["closure_matrix"]["required_subresult_count"] == 37
+    assert full_entry["closure_matrix"]["status"] == "CLOSED_FOR_CORE"
+    assert full_entry["closure_matrix"]["status_scope"] == "BOUNDED_O2_HE4_CORE_TRACK"
+    assert full_entry["closure_matrix"]["result_status"] == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+    assert full_entry["closure_matrix"]["full_topic_status"] == "BLOCKED_OPEN_T13_FULL_BRIDGE"
+    assert full_entry["closure_matrix"]["full_topic_ready"] is False
     assert projection["path"] == "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json"
     assert projection["sha256"] == digest(MATRIX)
+    assert projection["status"] == "CLOSED_FOR_CORE"
+    assert projection["status_scope"] == "BOUNDED_O2_HE4_CORE_TRACK"
+    assert projection["result_status"] == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
     assert projection["full_core_unlock"] is True
-    assert dependency["topic13_core_ready"]["full_topic_closure_contract"]["full_topic_ready"] is True
+    assert projection["full_core_unlock_scope"] == "BOUNDED_O2_HE4_CORE_TRACK"
+    assert projection["full_topic_status"] == "BLOCKED_OPEN_T13_FULL_BRIDGE"
+    assert projection["full_topic_ready"] is False
+    assert dependency["topic13_core_ready"]["full_topic_closure_contract"]["full_topic_ready"] is False
+    assert dependency["topic13_core_ready"]["full_topic_closure_contract"]["bounded_core_track_unlock"] is True

@@ -370,16 +370,70 @@ def build_requirement(gate: dict[str, Any], spec: dict[str, Any]) -> dict[str, A
     }
 
 
+def full_topic_readiness_checks(
+    gate: dict[str, Any],
+    requirements: list[dict[str, Any]],
+    input_audit: dict[str, Any] | None,
+) -> dict[str, bool]:
+    full_status = "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+    gate_summary = gate.get("major_result", {}).get("closure_summary", {})
+    gate_blockers = gate.get("major_result", {}).get("what_remains_open", [])
+    accepted_packages = {
+        item.get("package_id")
+        for item in (input_audit or {}).get("packages", [])
+        if item.get("accepted_for_core") is True
+    }
+    required_package_ids = {item["package_id"] for item in CLOSURE_INPUT_PACKAGES}
+    all_requirements_closed = all(
+        item.get("closure_level") == "CLOSED_FOR_CORE"
+        or (
+            item.get("requirement_id") == "causal_structure"
+            and item.get("closure_level") == "CLOSED_AS_NO_GO"
+            and item.get("core_handoff", {}).get("closure_level") == "CLOSED_FOR_CORE"
+        )
+        for item in requirements
+    )
+    all_subresults_closed = all(
+        subresult.get("status") in {"CLOSED_FOR_LANE", "CLOSED_AS_NO_GO", "CLOSED_FOR_CORE"}
+        for item in requirements
+        for subresult in item.get("required_subresults", [])
+    )
+    holdout_integrity = gate.get("verification_status", {}).get("holdout_integrity", {})
+    return {
+        "canonical_aggregate_gate_ready": (
+            gate.get("status") == full_status
+            and gate.get("legacy_graphite_ttg_aggregate_status") == full_status
+            and gate.get("major_result", {}).get("closure_level") == "CLOSED_FOR_CORE"
+        ),
+        "aggregate_gate_blockers_clear": (
+            not gate_blockers and gate_summary.get("open_blocker_count", 0) == 0
+        ),
+        "all_required_major_results_closed": all_requirements_closed,
+        "all_required_subresults_closed": all_subresults_closed,
+        "all_required_input_packages_accepted": required_package_ids <= accepted_packages,
+        "holdout_unconsumed": holdout_integrity.get("holdout_consumed") is False,
+    }
+
+
 def build_matrix() -> dict[str, Any]:
     gate = load_json(GATE_REL)
     summary = gate.get("major_result", {}).get("closure_summary", {})
     requirements = [build_requirement(gate, spec) for spec in REQUIREMENTS]
     core_track = gate.get("closure_tracks", {}).get("o2_he4_core_ready", {})
-    open_blockers = list(core_track.get("what_remains_open", []))
-    full_core_unlock = (
+    bounded_track_open_blockers = list(core_track.get("what_remains_open", []))
+    full_topic_open_blockers = list(gate.get("major_result", {}).get("what_remains_open", []))
+    bounded_core_track_unlock = (
         gate.get("core_result_status") == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
         and core_track.get("status") == "CLOSED_FOR_CORE"
     )
+    full_topic_readiness = full_topic_readiness_checks(
+        gate,
+        requirements,
+        load_json(INPUT_AUDIT_REL) if (ROOT / INPUT_AUDIT_REL).is_file() else None,
+    )
+    full_topic_ready = all(full_topic_readiness.values())
+    # Preserve the historical field as a bounded O(2)/He-4 track alias.
+    full_core_unlock = bounded_core_track_unlock
     major_status_counts: dict[str, int] = {}
     substatus_counts: dict[str, int] = {}
     required_subresult_count = 0
@@ -396,8 +450,9 @@ def build_matrix() -> dict[str, Any]:
         artifact_ref(
             GATE_REL,
             {
-                "role": "canonical full Topic 13 readiness gate",
-                "status": gate.get("core_result_status"),
+                "role": "canonical Full Topic 13 aggregate gate",
+                "status": gate.get("status"),
+                "bounded_core_track_status": gate.get("core_result_status"),
             },
         )
     ]
@@ -422,11 +477,12 @@ def build_matrix() -> dict[str, Any]:
     major_result = {
         "major_result_id": "T13_TOPIC13_CLOSURE_MATRIX",
         "topic": "0.13_Thermodynamic_Bridge",
-        "closure_level": "CLOSED_FOR_CORE" if full_core_unlock else "PARTIAL",
+        "closure_level": "CLOSED_FOR_CORE" if full_topic_ready else "PARTIAL",
         "what_is_closed": [
             "The ten required Topic 13 result areas are reported separately by closure level.",
             "Each result area exposes evidence-producing subresults and an acceptance boundary.",
             "Lane-level formal results are not counted as Full Topic 13 Core-ready closure.",
+            "The bounded O(2)/He-4 Core-ready track is kept separate from the aggregate graphite/TTG result.",
             "The current full-gate blocker groups and dependency state are projected without changing them.",
             "The normalized measurement operator remains separate from the dimensional thermal operator.",
         ],
@@ -452,8 +508,17 @@ def build_matrix() -> dict[str, Any]:
         "evidence_artifacts": evidence,
         "input_package_audit": input_audit_ref,
         "verification_status": "PASS_MACHINE_READABLE_FULL_TOPIC_CLOSURE_CONTRACT_WITH_GATE_BOUNDARY",
-        "open_blockers": open_blockers,
-        "dependency_unlocked": "Gravity/GR remains blocked until Full Topic 13 and Core curved 3+1 gates pass." if not full_core_unlock else "Full thermal bridge only; Core curved 3+1 remains a separate dependency.",
+        "open_blockers": full_topic_open_blockers,
+        "bounded_core_track_status": core_track.get("status", "OPEN"),
+        "bounded_core_track_result_status": gate.get("core_result_status", "OPEN"),
+        "bounded_core_track_unlock": bounded_core_track_unlock,
+        "dependency_unlocked": (
+            "Bounded O(2)/He-4 Core handoff only; aggregate graphite/TTG Full Topic 13 remains blocked."
+            if bounded_core_track_unlock and not full_topic_ready
+            else "Full thermal bridge only; Core curved 3+1 remains a separate dependency."
+            if full_topic_ready
+            else "None."
+        ),
         "claim_boundary": "This matrix reports progress and closure boundaries. It does not promote a lane-level PASS, comparator, no-go, or formal interface to Full Topic 13, Core, external validation, or a global UET claim.",
         "required_major_result_count": len(requirements),
         "required_subresult_count": required_subresult_count,
@@ -465,11 +530,18 @@ def build_matrix() -> dict[str, Any]:
     full_topic_closure_contract = {
         "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
         "topic": "0.13_Thermodynamic_Bridge",
-        "closure_level": "CLOSED_FOR_CORE" if full_core_unlock else "PARTIAL",
-        "full_topic_ready": full_core_unlock,
+        "closure_level": "CLOSED_FOR_CORE" if full_topic_ready else "PARTIAL",
+        "full_topic_ready": full_topic_ready,
         "requirements_scope": "LEGACY_GRAPHITE_TTG_EXTERNAL_VALIDATION_PROJECTION_RETAINED_FOR_BACKWARD_COMPATIBILITY",
+        "bounded_core_track": {
+            "scope": "O2_HE4_CORE_READY",
+            "status": core_track.get("status", "OPEN"),
+            "result_status": gate.get("core_result_status", "OPEN"),
+            "full_core_unlock_legacy_alias": full_core_unlock,
+            "open_blockers": bounded_track_open_blockers,
+        },
         "what_is_closed": [item["major_result_id"] for item in requirements if item["closure_level"] in {"CLOSED_FOR_CORE", "CLOSED_AS_NO_GO"}],
-        "what_remains_open": open_blockers,
+        "what_remains_open": full_topic_open_blockers,
         "equation_or_mapping": {
             item["requirement_id"]: item["equation_or_mapping"]
             for item in requirements
@@ -485,15 +557,18 @@ def build_matrix() -> dict[str, Any]:
         "input_package_audit": input_audit_ref,
         "verification_status": {
             "canonical_gate_status": gate.get("status"),
-            "full_core_unlock": full_core_unlock,
+            "bounded_core_track_status": core_track.get("status", "OPEN"),
+            "bounded_core_track_unlock": bounded_core_track_unlock,
+            "full_topic_ready": full_topic_ready,
+            "full_topic_readiness_checks": full_topic_readiness,
             "holdout_consumed": gate.get("verification_status", {}).get("holdout_integrity", {}).get("holdout_consumed", False),
             "claim_promotion": False,
             "major_result_status_counts": major_status_counts,
             "subresult_status_counts": substatus_counts,
         },
-        "open_blockers": open_blockers,
-        "dependency_unlocked": "None while any major result or required source/calibration blocker is open." if not full_core_unlock else "Topic 13 thermal bridge only; downstream gravity still requires Core curved 3+1.",
-        "claim_boundary": "CLOSED_FOR_CORE means the thermal bridge is internally integrated and ready for Core handoff. It is not external-ready and does not close global UET.",
+        "open_blockers": full_topic_open_blockers,
+        "dependency_unlocked": major_result["dependency_unlocked"],
+        "claim_boundary": "Only full_topic_ready=true means the aggregate bridge is internally integrated for Core handoff. The bounded O(2)/He-4 Core-ready track does not close graphite/TTG Full Topic 13, external validation, or global UET.",
         "required_major_result_count": len(requirements),
         "required_subresult_count": required_subresult_count,
         "current_major_result_counts": major_status_counts,
@@ -517,9 +592,18 @@ def build_matrix() -> dict[str, Any]:
         "schema_version": "t13-topic13-closure-matrix-v3",
         "artifact": "t13_topic13_closure_matrix",
         "generated_at": date.today().isoformat(),
-        "status": gate.get("core_result_status", "OPEN"),
+        "status": gate.get("status", "OPEN"),
+        "status_scope": "FULL_TOPIC_13_AGGREGATE",
+        "bounded_core_track_status": core_track.get("status", "OPEN"),
+        "bounded_core_track_result_status": gate.get("core_result_status", "OPEN"),
+        "bounded_core_track_unlock": bounded_core_track_unlock,
         "claim_promotion": False,
         "full_core_unlock": full_core_unlock,
+        "full_core_unlock_scope": "BOUNDED_O2_HE4_CORE_TRACK",
+        "full_topic_status": gate.get("status", "OPEN"),
+        "full_topic_ready": full_topic_ready,
+        "full_topic_readiness_checks": full_topic_readiness,
+        "full_topic_open_blockers": full_topic_open_blockers,
         "requirements_scope": "LEGACY_GRAPHITE_TTG_EXTERNAL_VALIDATION_PROJECTION_RETAINED_FOR_BACKWARD_COMPATIBILITY",
         "core_ready_track": core_track,
         "required_input_package_count": len(CLOSURE_INPUT_PACKAGES),
@@ -542,17 +626,19 @@ def build_matrix() -> dict[str, Any]:
             "open_blocker_count": summary.get("open_blocker_count"),
             "open_blocker_groups": summary.get("open_blocker_groups", {}),
             "downstream_dependency_unlocked": summary.get("downstream_dependency_unlocked", False),
+            "bounded_core_track_unlock": bounded_core_track_unlock,
             "required_major_result_count": len(requirements),
             "required_subresult_count": required_subresult_count,
             "required_input_package_count": len(CLOSURE_INPUT_PACKAGES),
             "current_major_result_counts": major_status_counts,
             "current_subresult_counts": substatus_counts,
-            "full_topic_ready": full_core_unlock,
+            "full_topic_ready": full_topic_ready,
         },
         "canonical_gate": {
             "path": GATE_REL,
             "sha256": sha256(GATE_REL),
-            "status": gate.get("core_result_status"),
+            "status": gate.get("status"),
+            "bounded_core_track_status": gate.get("core_result_status"),
             "legacy_graphite_ttg_aggregate_status": gate.get("legacy_graphite_ttg_aggregate_status"),
             "controlling_blocker": gate.get("controlling_blocker"),
         },
@@ -564,12 +650,12 @@ def build_matrix() -> dict[str, Any]:
             "calibration_path_may_read_holdout": False,
         },
         "report": {
-            "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_CORE" if full_core_unlock else "PARTIAL",
+            "MAJOR_RESULT_CLOSURE": major_result["closure_level"],
             "WHAT_IS_ACTUALLY_CLOSED": major_result["what_is_closed"],
-            "WHAT_REMAINS_OPEN": open_blockers,
+            "WHAT_REMAINS_OPEN": full_topic_open_blockers,
             "DEPENDENCY_UNLOCKED": major_result["dependency_unlocked"],
             "STATUS": matrix_status(gate),
-            "WHAT_CHANGED": f"Added a ten-result Topic 13 closure contract with {required_subresult_count} evidence-producing subresults and {len(CLOSURE_INPUT_PACKAGES)} grouped input packages; no equation, threshold, source role, fit path, or holdout policy changed.",
+            "WHAT_CHANGED": f"Separated the bounded O(2)/He-4 Core-ready track from the aggregate Full Topic 13 gate across ten result areas, {required_subresult_count} subresults, and {len(CLOSURE_INPUT_PACKAGES)} input packages; no equation, threshold, source role, fit path, or holdout policy changed.",
             "EQUATION_OR_MAPPING": major_result["equation_or_mapping"],
             "VERIFICATION": "Canonical gate, grouped input-package audit, blocker groups, major-result records, subresult statuses, evidence references, and holdout metadata were read and projected without consuming numeric holdout data.",
             "CONTROLLING_BLOCKER": gate.get("controlling_blocker"),
@@ -581,8 +667,13 @@ def build_matrix() -> dict[str, Any]:
 
 
 def matrix_status(gate: dict[str, Any]) -> str:
-    full_core_unlock = gate.get("core_result_status") == "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
-    return f"{gate.get('core_result_status', 'OPEN')}; full_core_unlock={full_core_unlock}"
+    bounded_track_status = (
+        gate.get("closure_tracks", {}).get("o2_he4_core_ready", {}).get("status", "OPEN")
+    )
+    return (
+        f"full_topic={gate.get('status', 'OPEN')}; "
+        f"bounded_o2_he4_core_track={bounded_track_status}"
+    )
 
 
 def sync_register_and_dependency(matrix: dict[str, Any]) -> None:
@@ -599,7 +690,10 @@ def sync_register_and_dependency(matrix: dict[str, Any]) -> None:
         "required_subresult_count": matrix["full_topic_closure_contract"]["required_subresult_count"],
         "current_major_result_counts": matrix["full_topic_closure_contract"]["current_major_result_counts"],
         "current_subresult_counts": matrix["full_topic_closure_contract"]["current_subresult_counts"],
-        "full_topic_ready": matrix["full_core_unlock"],
+        "full_topic_ready": matrix["full_topic_ready"],
+        "bounded_core_track_unlock": matrix["bounded_core_track_unlock"],
+        "bounded_core_track": matrix["full_topic_closure_contract"]["bounded_core_track"],
+        "open_blockers": matrix["full_topic_closure_contract"]["open_blockers"],
     }
     entry["claim_promotion"] = False
     entries = register.setdefault("entries", [])
@@ -613,8 +707,13 @@ def sync_register_and_dependency(matrix: dict[str, Any]) -> None:
     full_entry["closure_matrix"] = {
         "path": OUT_REL,
         "sha256": matrix_hash,
-        "status": matrix["status"],
+        "status": matrix["bounded_core_track_status"],
+        "status_scope": "BOUNDED_O2_HE4_CORE_TRACK",
+        "result_status": matrix["bounded_core_track_result_status"],
         "full_core_unlock": matrix["full_core_unlock"],
+        "full_core_unlock_scope": matrix["full_core_unlock_scope"],
+        "full_topic_status": matrix["status"],
+        "full_topic_ready": matrix["full_topic_ready"],
         "required_major_result_count": matrix["full_topic_closure_contract"]["required_major_result_count"],
         "required_subresult_count": matrix["full_topic_closure_contract"]["required_subresult_count"],
     }
@@ -629,7 +728,12 @@ def sync_register_and_dependency(matrix: dict[str, Any]) -> None:
         "path": OUT_REL,
         "sha256": matrix_hash,
         "full_core_unlock": matrix["full_core_unlock"],
-        "status": matrix["status"],
+        "full_core_unlock_scope": matrix["full_core_unlock_scope"],
+        "full_topic_status": matrix["status"],
+        "full_topic_ready": matrix["full_topic_ready"],
+        "status": matrix["bounded_core_track_status"],
+        "status_scope": "BOUNDED_O2_HE4_CORE_TRACK",
+        "result_status": matrix["bounded_core_track_result_status"],
         "required_major_result_count": matrix["full_topic_closure_contract"]["required_major_result_count"],
         "required_subresult_count": matrix["full_topic_closure_contract"]["required_subresult_count"],
     }
@@ -638,13 +742,18 @@ def sync_register_and_dependency(matrix: dict[str, Any]) -> None:
         "required_subresult_count": matrix["full_topic_closure_contract"]["required_subresult_count"],
         "current_major_result_counts": matrix["full_topic_closure_contract"]["current_major_result_counts"],
         "current_subresult_counts": matrix["full_topic_closure_contract"]["current_subresult_counts"],
-        "full_topic_ready": matrix["full_core_unlock"],
+        "full_topic_ready": matrix["full_topic_ready"],
+        "bounded_core_track_unlock": matrix["bounded_core_track_unlock"],
+        "bounded_core_track": matrix["full_topic_closure_contract"]["bounded_core_track"],
+        "open_blockers": matrix["full_topic_closure_contract"]["open_blockers"],
     }
     register_hash = sha256(REGISTER_REL)
     dependency["generated_at"] = date.today().isoformat()
     dependency.setdefault("register", {})["sha256"] = register_hash
     core_ready["register_sha256"] = register_hash
     core_ready["full_core_unlock"] = matrix["full_core_unlock"]
+    core_ready["full_core_unlock_scope"] = matrix["full_core_unlock_scope"]
+    core_ready["full_topic_ready"] = matrix["full_topic_ready"]
     (ROOT / DEPENDENCY_REL).write_text(json.dumps(dependency, indent=2, ensure_ascii=True) + "\n", encoding="utf-8", newline="\n")
 
 

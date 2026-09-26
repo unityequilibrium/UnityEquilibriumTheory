@@ -71,6 +71,8 @@ def test_topic13_pilot_does_not_change_full_topic_or_holdout_state() -> None:
     assert matrix["closure_summary"]["required_subresult_count"] == 37
     assert counts == {"CLOSED_FOR_LANE": 21, "CLOSED_AS_NO_GO": 6, "OPEN": 10}
     assert matrix["full_core_unlock"] is True
+    assert matrix["full_core_unlock_scope"] == "BOUNDED_O2_HE4_CORE_TRACK"
+    assert matrix["full_topic_ready"] is False
     assert full_gate["status"] == "BLOCKED_OPEN_T13_FULL_BRIDGE"
     assert full_gate["verification_status"]["alpha_Phi_K"]["status"] == "BLOCKED"
     assert full_gate["verification_status"]["holdout_integrity"]["holdout_consumed"] is False
