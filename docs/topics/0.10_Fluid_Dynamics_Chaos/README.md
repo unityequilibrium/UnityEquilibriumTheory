@@ -112,3 +112,13 @@ work–precision comparisons. Graphite input acquisition proceeds on its own
 three-package track. This is a proposal, not a new physics result or readiness
 upgrade; the existing speed, method-validation and physical-dependency gates
 remain authoritative.
+
+## OpenAI Navier–Stokes applicability review (2026-09-26)
+
+The [source-backed applicability review](OPENAI_NAVIER_STOKES_APPLICABILITY_2026-09-26.md)
+compares OpenAI's forced 3D incompressible blowup theorem and Lean release with
+the actual 2D/3D Topic 10 state, equations and verification gates. Its near-term
+use is a precise theorem-scope card and a rotational representability control
+for J00/J01. A paper-derived adversarial numerical case remains conditional on
+an admitted velocity/momentum/forcing lane and reproducible source package.
+This is a source review; no scientific result, threshold or claim status changed.

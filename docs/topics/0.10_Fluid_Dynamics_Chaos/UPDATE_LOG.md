@@ -49,3 +49,13 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
 - Still open: external CFD, physical fluid-chaos validation, Core admission for full constitutive transport, and independent He-4 response protocol; graphite remains on its separate input track.
 - Claim impact: none; legacy speed FAIL and standard chaos-method PASS remain separate.
 - Publication: based on public main `d069507651964c0f963d1568667e2a9218400e42` in an isolated worktree; original dirty-workspace differences are recorded as hashes, not imported.
+
+## 2026-09-26 OpenAI Navier–Stokes applicability review
+
+- Wave type: source and claim-boundary review; no evidence-producing model change.
+- Changed: added `OPENAI_NAVIER_STOKES_APPLICABILITY_2026-09-26.md` and linked it from Topic 10 and the joint plan.
+- Verified: read OpenAI Theorem 1.1 and construction outline, Lean repository README and Clay statement/rules; compared them with the Topic 10 2D/3D engines, formula audit, speed script and latest artifact. Link and diff checks recorded in the daily ledger. No Lean build, CFD run or new UET verifier was performed.
+- Result: high method/proof-scope utility, conditional future 3D adversarial-test utility, no direct evidence for UET speed, physical fluid validity, thermal transport or theorem closure.
+- Blocker narrowed in source review: theorem requirements are mapped to the exact missing Topic 10 state/momentum/forcing/norm obligations; no scientific blocker closed.
+- Next controller: J00 scope and source admission, then J01 rotational-flow representability. Paper-specific finite-window control requires J04 admission and a reproducible forcing package.
+- Claim impact: none; legacy speed FAIL, method-control PASS and Core/Topic 13 boundaries are unchanged.

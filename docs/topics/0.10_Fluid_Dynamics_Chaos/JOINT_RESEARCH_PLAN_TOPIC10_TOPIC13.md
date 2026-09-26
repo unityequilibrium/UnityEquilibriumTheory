@@ -186,3 +186,11 @@ Axial Raman ต้องได้ independent matched-state strain/Raman row พ
 - Navier–Stokes theorem: แยกเป็น optional future proof program พร้อม exact PDE/domain/forcing/regularity/solution class และ proof obligations ของตน ไม่อยู่ใน acceptance ของแผน benchmark นี้; formal checker ของ lemma ไม่แทนหลักฐาน physical correspondence
 
 ครอบคลุมในแผนนี้หมายถึงมีทางตัดสินทุกชั้นของคำอ้าง ไม่ใช่เปิดทุก topic หรือทุก physical regime พร้อมกัน ผลของการออกแบบครั้งนี้คือ dependency และ acceptance ที่ชัดขึ้น ยังไม่มี fluid/thermal scientific blocker ใดถูกประกาศว่าปิดใหม่
+
+## Source review: OpenAI Navier–Stokes relevance to Topic 10
+
+The [paper applicability assessment](OPENAI_NAVIER_STOKES_APPLICABILITY_2026-09-26.md)
+prioritizes the theorem-scope card and rotational-flow representability checks
+inside J00/J01. A finite-window forcing stress case is conditional on later
+source and model admission. It does not add a scientific dependency, alter
+numerical thresholds or close any work package.
