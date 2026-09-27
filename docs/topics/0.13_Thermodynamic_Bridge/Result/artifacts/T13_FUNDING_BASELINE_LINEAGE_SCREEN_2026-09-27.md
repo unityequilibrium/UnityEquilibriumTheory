@@ -23,3 +23,5 @@ NEXT_ACTION: Build a selected clean-baseline manifest for the Core composition, 
 CLAIM_BOUNDARY: This audit does not revalidate Core, reopen the holdout, admit a two-fluid operator or Noether-to-atom map, close Full Topic 13 or make the funding portfolio submission-ready. J02 rows were seen and cannot be called blind validation.
 
 Evidence: [machine-readable audit](t13_funding_baseline_lineage_audit.json), [verifier](../../Code/03_Research/Research_T13_Funding_Baseline_Lineage.py), [tests](../../Code/03_Research/test_t13_funding_baseline_lineage.py), [J02 protocol](../../HE4_SECOND_SOUND_PROTOCOL_CARD.md), and [J02 source package](../../Data/03_Research/he4_svp_second_sound_response_source_package.json).
+
+Subsequent read-only observation: [historical snapshot recovery](T13_FUNDING_HISTORICAL_SNAPSHOT_RECOVERY_2026-09-27.md) located all eight exact plan bytes in the dirty primary worktree. The clean-checkout counts above remain unchanged; G0 still requires owner handoff and revalidation.

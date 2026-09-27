@@ -6068,3 +6068,27 @@ CONTROLLING_BLOCKER: `full_clean_core_baseline_not_revalidated`.
 NEXT_ACTION: Select and review clean equivalents for the eight historical Core references, then rerun scoped Core/source/holdout-exposure audits before reconsidering G0. Acquire a primary frequency-matched response protocol separately.
 
 CLAIM_BOUNDARY: This handoff is neither a UET second-sound prediction nor an independent blind test or Core/Full Topic 13 closure.
+
+## 2026-09-27 - Read-only recovery of historical funding baseline bytes
+
+MAJOR_RESULT_CLOSURE: `T13_FUNDING_HISTORICAL_SNAPSHOT_RECOVERY` is `PARTIAL` for provenance recovery only.
+
+WHAT_IS_ACTUALLY_CLOSED: All eight historical plan hashes match files currently present in the dirty primary worktree: two tracked-clean, two modified and four untracked. They are not missing from that worktree.
+
+WHAT_REMAINS_OPEN: Owner-authorized handoff of modified/untracked records, nested source-chain reconciliation and clean Core verifier rerun.
+
+DEPENDENCY_UNLOCKED: None; G0 and Full Topic 13 remain blocked.
+
+STATUS: `PASS_HISTORICAL_BYTE_RECOVERY_ONLY`; clean-checkout lineage still `0 MATCH / 4 DRIFT / 4 MISSING`.
+
+WHAT_CHANGED: Added a Topic 13-only recovery manifest, read-only verifier, tests and result note; linked the funding plan and lineage note. No Core or primary-worktree file edited.
+
+EQUATION_OR_MAPPING: Relative path plus SHA-256 establishes historical file identity, not a thermal observable or scientific equivalence.
+
+VERIFICATION: Eight saved hashes, eight live source hashes, source branch/HEAD and Git states matched the record. The verifier can rerun against a supplied worktree; clean-checkout tests validate the saved manifest without needing that worktree. No Xie 2026 experimental data read.
+
+CONTROLLING_BLOCKER: `full_clean_core_baseline_not_revalidated`, now narrowed from file discovery to owner handoff and upstream provenance admission.
+
+NEXT_ACTION: Coordinate the eight-item admission decision with the Core owner, then inspect nested source chains and rerun scoped Core checks before G0 review.
+
+CLAIM_BOUNDARY: Located bytes are not permission to publish/copy owner work, clean Core reproduction, physical validation or Full Topic 13 closure.
