@@ -5836,3 +5836,32 @@ EVIDENCE_PATHS:
 - `docs/core/test/test_topic13_anisotropic_thermoelastic_response_bridge.py`
 - `docs/core/07_artifacts/topic13/t13_anisotropic_thermoelastic_response_bridge_audit.json`
 - `docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_anisotropic_thermoelastic_bridge_addendum.json`
+## 2026-09-27 - Conditional He-4 compressibility independence design
+
+MAJOR_RESULT_CLOSURE: `T13_HE4_CONDITIONAL_COMPRESSIBILITY_INDEPENDENCE_DESIGN` is `CLOSED_FOR_LANE` as a conditional analytic/numerical measurement design; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: The clamped-`Phi` chain rule identifies a response observable distinct from the density reused in `e0`. At the conditional root, the `(n_nat, chi_nat/n_nat)` Jacobian with respect to `(mu,Phi)` is locally nondegenerate, so density plus one response can select two free parameters rather than validate them.
+
+WHAT_REMAINS_OPEN: The Noether-to-atom/pressure/chemical-potential correspondence, physical `Phi` clamp or relaxation law, independent same-state response source, and full thermal/two-fluid closure.
+
+DEPENDENCY_UNLOCKED: Conditional measurement preregistration only; no Core or Full Topic 13 physical unlock.
+
+STATUS: `PASS_SCOPED_CONDITIONAL_COMPRESSIBILITY_DESIGN`; `full_core_unlock=false`.
+
+WHAT_CHANGED: Added an executable audit, three tests, hash-backed JSON and result note; the funding plan now names five bounded pre-sprint results. Reconciled four earlier result-note hashes with the clean publication checkout. No Core equation or source row changed.
+
+EQUATION_OR_MAPPING: `n_SI E_mu kappa_T|Phi=chi_nat|Phi/n_nat` under the three explicitly unadmitted map hypotheses. Ordinary relaxed response has an additional `(partial_Phi n_nat)(dPhi/dmu)|T` contribution.
+
+VERIFICATION: Focused suite `19 passed`; saved-artifact provenance test covers five JSONs and their input hashes. New artifact SHA-256 `dee8a9fa124e7316fedeefed312fb31fa84fc82ed4da25ab40b671a7a13b4538`. No measured compressibility, Xie 2026 holdout, or target fit was used.
+
+CONTROLLING_BLOCKER: `Noether_charge_to_helium_atom_identity_not_admitted`, followed by `Phi_clamp_or_relaxed_response_law_missing` for any actual compressibility comparison.
+
+NEXT_ACTION: Derive or source-lock the physical current/chemical-potential map and a `Phi` response protocol. If `Phi` is fixed independently, reserve a matched isothermal response as a test; if it is selected from the response, reserve a third non-reused observable.
+
+CLAIM_BOUNDARY: Conditional design and local rank witness only, not He-II agreement, second sound, external validation or Full Topic 13 closure.
+
+EVIDENCE_PATHS:
+- `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_conditional_compressibility_design.json`
+- `docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_He4_Conditional_Compressibility_Design.py`
+- `docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_he4_conditional_compressibility_design.py`
+- `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_HE4_CONDITIONAL_COMPRESSIBILITY_DESIGN_2026-09-27.md`

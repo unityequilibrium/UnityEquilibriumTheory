@@ -2,7 +2,7 @@
 
 วันที่ออกแผน: 27 กันยายน 2026 | D1: 28 กันยายน | D14: 11 ตุลาคม 2026 (Asia/Bangkok)
 
-สถานะ: แผนเสนอเพื่อรันใน Goal mode; Goal พอร์ต 14 วันและ gate G0-G5 ยังไม่เริ่ม แต่มีผลย่อยก่อน sprint สี่ชิ้นที่ต้องนำเข้ารอบ baseline โดยไม่เลื่อน readiness วันส่งมอบตีความจากคำตอบผู้ใช้ว่า “2 สัปดาห์”; ยังไม่ทราบวันปิดรับของทุนจริง ชื่อทุน สังกัดผู้ยื่น และงบที่ขอ
+สถานะ: แผนเสนอเพื่อรันใน Goal mode; Goal พอร์ต 14 วันและ gate G0-G5 ยังไม่เริ่ม แต่มีผลย่อยก่อน sprint ห้าชิ้นที่ต้องนำเข้ารอบ baseline โดยไม่เลื่อน readiness วันส่งมอบตีความจากคำตอบผู้ใช้ว่า “2 สัปดาห์”; ยังไม่ทราบวันปิดรับของทุนจริง ชื่อทุน สังกัดผู้ยื่น และงบที่ขอ
 
 ตัวควบคุมงาน: [funding_portfolio_14d_plan.json](Data/03_Research/funding_portfolio_14d_plan.json) | คำสั่งเริ่มงาน: [GOAL_BRIEF_FUNDING_14D.md](GOAL_BRIEF_FUNDING_14D.md)
 
@@ -212,6 +212,8 @@ CLAIM_BOUNDARY:
 Git: เก็บของเดิมใน dirty worktree; D1 สร้าง frozen input manifest ก่อนแยก execution checkout ใช้ short-lived scoped branch และ commit งานที่ตรวจแล้วทีละส่วน ห้ามรวม ledger หรือ Core migration ที่คนอื่นกำลังทำใน commit นี้ การตรวจทั้งหมดควรจบใน clean reproduction checkout ก่อน final release; ไม่ใช้ working directory dirty เป็นหลักฐานว่าบุคคลอื่น rerun ได้แล้ว
 
 การตรวจเผยแพร่ 27 ก.ย.: ผลย่อยก่อน sprint ทั้งสี่ถูก regenerate บน branch แยกจาก `origin/main` แล้ว โดยข้อสรุปและสถานะทางวิทยาศาสตร์ไม่เปลี่ยน; hash ของไฟล์อ้างอิงบางชิ้นเปลี่ยนเพราะฐาน Core ต่างจาก dirty worktree เดิม จึงเก็บ hash ชุดเดิมใน `baseline` เป็นประวัติเท่านั้น และใช้ `pre_sprint_evidence` เป็น hash ของผลที่ตรวจซ้ำใน checkout นี้ มี test ตรวจทั้ง JSON ที่บันทึกและ hash ของ input จริง การตรวจนี้ยัง **ไม่** revalidate Core baseline ทั้งชุด ไม่ปิด G0 และไม่ปลดล็อก Full Topic 13
+
+ผลย่อยที่ห้าเป็น [conditional compressibility design](Result/artifacts/T13_HE4_CONDITIONAL_COMPRESSIBILITY_DESIGN_2026-09-27.md): density ที่ใช้สร้าง `e0` ไม่ใช่ test ซ้ำอีกครั้ง; อนุพันธ์ isothermal ที่ตรึง `Phi` เป็น candidate observable คนละตัว แต่จะใช้เทียบข้อมูล He-II ได้ต่อเมื่อมี physical charge map, `E_mu` และโปรโตคอลตรึง `Phi` หรือกฎตอบสนองเมื่อ `Phi` ผ่อนคลาย ถ้าใช้ response นี้เลือก `Phi` ต้องเก็บ observable ที่สามไว้ทดสอบจริง ไม่ยกระดับ G0-G5 จากผลนี้
 
 ## 11. แหล่งอ้างอิงที่ใช้วางแผน
 

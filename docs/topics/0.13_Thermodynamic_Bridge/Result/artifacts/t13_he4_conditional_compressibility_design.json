@@ -1,0 +1,135 @@
+{
+  "schema_version": "t13-he4-conditional-compressibility-design-v1",
+  "major_result_id": "T13_HE4_CONDITIONAL_COMPRESSIBILITY_INDEPENDENCE_DESIGN",
+  "topic": "0.13",
+  "closure_level": "CLOSED_FOR_LANE",
+  "what_is_closed": "A clamped-Phi conditional response observable and minimum independent-measurement count under the unadmitted O(2)-to-He-4 charge map",
+  "equation_or_mapping": {
+    "hypothesized_number": "n_SI=e0*n_nat/E_mu",
+    "hypothesized_susceptibility": "chi_SI=e0*chi_nat/E_mu^2 at fixed T and Phi",
+    "clamped_isothermal_compressibility": "kappa_T|Phi=chi_SI|Phi/n_SI^2; n_SI*E_mu*kappa_T|Phi=chi_nat|Phi/n_nat",
+    "relaxed_phi_correction": "chi_nat,total=d_mu n_nat|Phi+(d_Phi n_nat)*(d_mu Phi)|T; the latter term is not supplied by the frozen-Phi EOS",
+    "frozen_density_anchor": "n_nat=1/T_nat because e0=n_SI*k_B*T0 and E_mu=k_B*theta_T",
+    "independence_boundary": "If Phi is physically clamped and independently fixed, density selects mu and matched clamped-Phi kappa_T is a distinct test. If Phi is free, its state and dPhi/dmu require an admitted response law; density and one response can select parameters rather than validate them"
+  },
+  "units": {
+    "chi_SI": "m^-3/J",
+    "kappa_T": "Pa^-1",
+    "E_mu": "J per hypothesized atom",
+    "n_E_mu_kappa": "dimensionless"
+  },
+  "derivation_class": "conditional chain-rule and local numerical Jacobian; no admitted physical charge correspondence",
+  "observable": "independent same-state clamped-Phi isothermal compressibility or an admitted relaxed-Phi correction to ordinary compressibility",
+  "data_role": "SYNTHETIC_CONDITIONAL_DESIGN_NO_PHYSICAL_RESPONSE_ROW",
+  "assumptions_not_admitted": [
+    "the scale convention is an absolute physical grand-canonical pressure map",
+    "O(2) Noether charge is helium atom number",
+    "the physical chemical-potential energy scale is k_B*theta_T with compatible ensemble and reference",
+    "Phi=0.15 is independently fixed at the physical He-II state",
+    "the approximate finite-temperature EOS is valid for liquid He-II at that state"
+  ],
+  "conditional_state": {
+    "temperature_natural": 0.22,
+    "mu_natural": 1.855688569255108,
+    "phi_natural": 0.15,
+    "charge_natural": 4.545454545447968,
+    "susceptibility_natural": 9.33719373747027
+  },
+  "conditional_response": {
+    "chi_SI_clamped_Phi_m3_inverse_per_J": 4.2083296750418315e+50,
+    "kappa_T_clamped_Phi_per_Pa": 8.809460260357415e-07,
+    "n_E_mu_kappa": 2.05418262224346,
+    "chi_nat_over_n_nat": 2.054182622246432
+  },
+  "local_rank_witness": {
+    "jacobian_variables": [
+      "mu_natural",
+      "Phi_natural"
+    ],
+    "jacobian_outputs": [
+      "n_natural",
+      "chi_natural/n_natural"
+    ],
+    "determinant_step_1e_minus_3": -0.09978837555780659,
+    "determinant_step_5e_minus_4": -0.0997886515226224,
+    "determinant_refinement_difference": 2.7596481580460797e-07,
+    "scope": "local numerical witness at the conditional root, not global identifiability or physical inference"
+  },
+  "synthetic_rescalings": [
+    {
+      "synthetic_density_and_e0_factor": 0.5,
+      "conditional_kappa_T_per_Pa": 1.761892052071483e-06,
+      "dimensionless_n_E_mu_kappa": 2.05418262224346
+    },
+    {
+      "synthetic_density_and_e0_factor": 1.0,
+      "conditional_kappa_T_per_Pa": 8.809460260357415e-07,
+      "dimensionless_n_E_mu_kappa": 2.05418262224346
+    },
+    {
+      "synthetic_density_and_e0_factor": 2.0,
+      "conditional_kappa_T_per_Pa": 4.4047301301787075e-07,
+      "dimensionless_n_E_mu_kappa": 2.05418262224346
+    }
+  ],
+  "minimum_measurement_policy": {
+    "already_used_for_scale_or_state": [
+      "physical temperature",
+      "physical density"
+    ],
+    "fixed_phi": "Independently determine and physically clamp Phi and E_mu, then reserve matched clamped-Phi kappa_T as a test; do not fit it",
+    "free_phi": "An admitted Phi response law is required to convert clamped to relaxed susceptibility. Density plus one response may select mu and Phi; reserve at least one further independent observable for falsification",
+    "source_requirements": [
+      "same material and thermodynamic state",
+      "clamped-Phi protocol or source-backed relaxed-Phi response correction",
+      "isothermal rather than adiabatic compressibility or justified conversion",
+      "independent instrument/provenance and covariance",
+      "declared chemical-potential energy scale",
+      "no parameter retuning after test"
+    ]
+  },
+  "checks": {
+    "input_charge_audit_is_conditional_only": true,
+    "same_condensed_root_and_positive_susceptibility": true,
+    "chain_rule_compressibility_identity": true,
+    "density_rescaling_does_not_create_response_validation": true,
+    "fixed_phi_density_locally_selects_mu": true,
+    "free_phi_density_and_kappa_locally_select_two_parameters": true,
+    "no_physical_compressibility_row_used": true
+  },
+  "verification_status": "PASS_SCOPED_CONDITIONAL_COMPRESSIBILITY_DESIGN",
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_conditional_charge_map_circularity.json",
+      "sha256": "54afd50fb9ed5d2a34cb792b8feb8dc442021b0d92c0e9ad1763849b9eed22e7"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_o2_si_beta_mapping_source_package.json",
+      "sha256": "5b0e63acc6932e4d050300f05a42d3dfb0411138883cdf6d6816ec0e16d9fe2e"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py",
+      "sha256": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_He4_Conditional_Compressibility_Design.py",
+      "sha256": "3391d7376e38739ae23739a97232e8bd86879913e03dfa9f50061059610129fc"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_he4_conditional_compressibility_design.py",
+      "sha256": "f875b417d6c09af6717d3133f04cbb355a3ebb19528cfc08cb82beefb319deb7"
+    }
+  ],
+  "open_blockers": [
+    "Noether_charge_to_helium_atom_identity_not_admitted",
+    "physical_mu_and_pressure_map_not_derived",
+    "Phi_state_independent_selection_missing",
+    "Phi_clamp_or_relaxed_response_law_missing",
+    "same_state_independent_isothermal_compressibility_not_source_locked",
+    "physical_two_fluid_response_operator_missing"
+  ],
+  "controlling_blocker": "Noether_charge_to_helium_atom_identity_not_admitted",
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "claim_boundary": "The numerical clamped-Phi compressibility is a conditional model output, not a He-II prediction or comparison. Ordinary measured compressibility cannot be substituted without a physical Phi-clamp or a derived relaxed-Phi correction. The map is still hypothetical; no external response row, TTG holdout, second sound, Core unlock, or Full Topic 13 closure is asserted."
+}

@@ -19,16 +19,17 @@
   "research_goal_id": "T13_HE4_PREDICTIVE_CONTENT_AND_MEASUREMENT_DESIGN",
   "research_goal_status": "PARTIAL_PRE_SPRINT_EVIDENCE_NOT_SCIENTIFIC_CLOSURE",
   "pre_sprint_evidence": {
-    "scope": "Four comparator/branch/state-selection/material-map subresults produced before the planned 14-day execution gates; the named funding Goal itself remains unstarted",
+    "scope": "Five comparator/branch/state-selection/material-map/measurement-design subresults produced before the planned 14-day execution gates; the named funding Goal itself remains unstarted",
     "hash_scope": "Reproduced on codex/research/t13-funding-evidence from origin/main; historical dirty-branch hashes are retained under baseline and are not asserted against this checkout",
     "current_controlling_blocker": "Noether_charge_to_helium_atom_identity_not_admitted_and_independent_observable_missing",
     "results": [
       {"major_result_id": "T13_CATTANEO_POLE_MEASUREMENT_DESIGN_CONTROL", "role": "STANDARD_COMPARATOR_ONLY", "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_thermal_pole_measurement_design_control.json", "sha256": "cbaaae67cf8c0ca12ced5ca44f2a4521cc3c6105e772133d19886311db1da369"},
       {"major_result_id": "T13_HE4_FROZEN_STATE_BRANCH_COMPATIBILITY_BOUNDARY", "role": "FROZEN_STATE_ADMISSIBILITY_ONLY", "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_frozen_branch_compatibility.json", "sha256": "1c00a986052fdac1fc9bad3b7007c0fb32dbf9472709ebac2a7e05f003e24bd3"},
       {"major_result_id": "T13_HE4_CONDENSED_STATE_SELECTION_BOUNDARY", "role": "INTERNAL_STATE_IDENTIFIABILITY_ONLY", "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_condensed_state_identifiability.json", "sha256": "7467dbd2e599140d2e9e5f0ecd836a83a287b8be62617deea8b87a31aa2fbfd9"},
-      {"major_result_id": "T13_HE4_CONDITIONAL_CHARGE_MAP_DENSITY_CIRCULARITY", "role": "CONDITIONAL_CIRCULARITY_ONLY", "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_conditional_charge_map_circularity.json", "sha256": "54afd50fb9ed5d2a34cb792b8feb8dc442021b0d92c0e9ad1763849b9eed22e7"}
+      {"major_result_id": "T13_HE4_CONDITIONAL_CHARGE_MAP_DENSITY_CIRCULARITY", "role": "CONDITIONAL_CIRCULARITY_ONLY", "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_conditional_charge_map_circularity.json", "sha256": "54afd50fb9ed5d2a34cb792b8feb8dc442021b0d92c0e9ad1763849b9eed22e7"},
+      {"major_result_id": "T13_HE4_CONDITIONAL_COMPRESSIBILITY_INDEPENDENCE_DESIGN", "role": "CONDITIONAL_CLAMPED_PHI_MEASUREMENT_DESIGN_ONLY", "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_conditional_compressibility_design.json", "sha256": "dee8a9fa124e7316fedeefed312fb31fa84fc82ed4da25ab40b671a7a13b4538"}
     ],
-    "scientific_route_implication": "Do not linearize the frozen normal natural state as condensed He II; current records do not select condensed mu. Even the hypothetical pressure/mu/charge identification reuses the density inside e0 and cannot validate itself. Derive or independently calibrate the material map and reserve a distinct observable before physical prediction, or pursue scoped non-identifiability",
+    "scientific_route_implication": "Do not linearize the frozen normal natural state as condensed He II; current records do not select condensed mu. The hypothetical pressure/mu/charge identification reuses density inside e0. A clamped-Phi isothermal response is a distinct conditional test only if Phi and E_mu are fixed independently; ordinary compressibility needs a Phi-relaxation contract. With Phi free, reserve a further independent observable. Derive or calibrate the material map before physical prediction, or pursue scoped non-identifiability",
     "acceptance_gates_promoted": false
   },
   "objective": "Determine the independent predictive content of the frozen He-4/O(2) thermal bridge, prove a scoped identifiability boundary or establish a fully specified response prediction, and design the additional measurements needed; package one reproducible result for a research funding portfolio.",
