@@ -2,7 +2,7 @@
 
 วันที่ออกแผน: 27 กันยายน 2026 | D1: 28 กันยายน | D14: 11 ตุลาคม 2026 (Asia/Bangkok)
 
-สถานะ: แผนเสนอเพื่อรันใน Goal mode; ยังไม่ได้เริ่ม Goal หรือประกาศผลวิจัยใหม่ วันส่งมอบตีความจากคำตอบผู้ใช้ว่า “2 สัปดาห์”; ยังไม่ทราบวันปิดรับของทุนจริง ชื่อทุน สังกัดผู้ยื่น และงบที่ขอ
+สถานะ: แผนเสนอเพื่อรันใน Goal mode; Goal พอร์ต 14 วันและ gate G0-G5 ยังไม่เริ่ม แต่มีผลย่อยก่อน sprint สองชิ้นที่ต้องนำเข้ารอบ baseline โดยไม่เลื่อน readiness วันส่งมอบตีความจากคำตอบผู้ใช้ว่า “2 สัปดาห์”; ยังไม่ทราบวันปิดรับของทุนจริง ชื่อทุน สังกัดผู้ยื่น และงบที่ขอ
 
 ตัวควบคุมงาน: [funding_portfolio_14d_plan.json](Data/03_Research/funding_portfolio_14d_plan.json) | คำสั่งเริ่มงาน: [GOAL_BRIEF_FUNDING_14D.md](GOAL_BRIEF_FUNDING_14D.md)
 
@@ -37,6 +37,8 @@
 | [Source priority](../../core/07_artifacts/topic13/t13_csrc_source_route_priority_audit.json) | มีการคัดเส้นทางข้อมูลแล้ว | ไม่มี Ding-compatible route ที่ผ่าน acceptance; จึงไม่วางเส้นตายหลักบนการรอ Ding |
 | [Core handoff](Result/artifacts/core_handoff_revalidation.json) | บันทึก revalidation เป็น `BLOCKED_HANDOFF_REVALIDATION` | ผลวันที่ 24 ก.ย. ระบุ provenance drift; ไม่อ้างว่าทั้ง Core ผ่านใหม่ |
 | [Holdout incident](../../core/08_history/update_logs/T13_HOLDOUT_EXPOSURE_REVIEW_REQUIRED_2026-09-24.md) | มีการบันทึก article/context exposure | Xie อยู่ `REVIEW_REQUIRED`; งดใช้และงดอ้าง pristine blinding |
+| [Thermal-pole design control](Result/artifacts/T13_THERMAL_POLE_MEASUREMENT_DESIGN_CONTROL_2026-09-27.md) | ตัวเทียบ Cattaneo แสดงว่าความถี่อย่างเดียวแยก transport pair ไม่ได้ แต่อัตราลดทอนช่วยแยก | เป็นเพียง standard comparator ไม่ใช่ UET second sound หรือข้อมูล He-II |
+| [Frozen-state branch boundary](Result/artifacts/T13_HE4_FROZEN_BRANCH_COMPATIBILITY_2026-09-27.md) | สถานะ natural bridge เดิมเป็น normal O(2), ไม่ใช่ condensed He-II background | ก่อนคำนวณ second sound ต้องมี condensed state และ transfer map ที่เลือกอย่างอิสระ; ห้ามย้าย calibration เดิมข้าม branch |
 
 มีงาน J02 ที่ commit `c42385d07e390b338096122275fe809737b8477a` ใน branch `codex/research/fluid-thermal-joint-plan` แล้ว: `HE4_SECOND_SOUND_PROTOCOL_CARD.md`, source package และ protocol audit ระบุ `PASS_SOURCE_PROTOCOL_CANDIDATE_ONLY` โดยยังขาด UET two-fluid operator และ primary frequency/uncertainty match ต้องนำเฉพาะแพ็กที่เกี่ยวข้องมาทบทวนใน D1; การอ่านจากอีก worktree ไม่เท่ากับ merge แล้ว
 
@@ -73,9 +75,9 @@ alpha_reconstructed = theta_T alpha_nat / Z_Phi = alpha_external
 
 ### Q2: มี observable ทดสอบอิสระได้หรือยัง
 
-ใช้ second-sound protocol J02 เป็นคำถามทดสอบลำดับแรก ตรวจ state vector, mass/entropy balance, relative motion, energy และ source coupling ก่อนเขียน eigenmode solver เปรียบเทียบกับ standard two-fluid comparator ที่ state/units ตรงกัน
+ใช้ second-sound protocol J02 เป็นคำถามทดสอบลำดับแรก แต่ต้องผ่าน **branch/state admission ก่อน**: จุด natural bridge ที่ตรึงไว้เป็น normal O(2) (`q=-0.8715`) ส่วน He-II anchor มี superfluid fraction ไม่เป็นศูนย์ ต้องมีวิธีเลือก condensed background และแมปสภาวะ/หน่วยอย่างอิสระ ไม่เลือก `mu` หรือ `Phi` จากความเร็วเสียงเป้าหมาย หลังจากนั้นจึงตรวจ state vector, mass/entropy balance, relative motion, energy และ source coupling ก่อนเขียน eigenmode solver เปรียบเทียบกับ standard two-fluid comparator ที่ state/units ตรงกัน
 
-หากไม่มี admitted dynamic operator ให้บันทึกช่องว่างนั้นและไปเส้นทาง structural identifiability ภายใน D5 การเติม tau, conductivity หรือ velocity state เพื่อให้ได้กราฟ ต้องถูกระบุเป็นสมมติฐานใหม่ พร้อม F0–F8 ก่อนตีความทางฟิสิกส์ ใน sprint นี้ไม่ตั้งเป้าสร้าง complete two-fluid theory ใหม่
+หากยังไม่มี independent condensed-state transfer **หรือ** admitted dynamic operator ให้บันทึกช่องว่างนั้นและไปเส้นทาง structural identifiability ภายใน D5 การเติม tau, conductivity หรือ velocity state เพื่อให้ได้กราฟ ต้องถูกระบุเป็นสมมติฐานใหม่ พร้อม F0–F8 ก่อนตีความทางฟิสิกส์ ใน sprint นี้ไม่ตั้งเป้าสร้าง complete two-fluid theory ใหม่
 
 Fourier/Cattaneo เป็น analytic numerical controls; normal shear viscosity เพียงตัวเดียวไม่ใช้แทน heat transport หรือ attenuation ทั้งระบบ Second-sound source เคยถูกดูขณะออกแบบ protocol แล้ว จึงเป็น source-backed comparison candidate ไม่ใช่ blind holdout
 
