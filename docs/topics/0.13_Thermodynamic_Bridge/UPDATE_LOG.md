@@ -6116,3 +6116,27 @@ CONTROLLING_BLOCKER: `clean_core_source_chain_and_owner_admission_not_revalidate
 NEXT_ACTION: Audit nested composition/matching references, obtain two substantive Core decisions and four owner handoffs, then rerun a clean Core baseline gate.
 
 CLAIM_BOUNDARY: This is provenance triage, not physical validation, G0 completion, Gravity unlock or full thermal bridge closure.
+
+## 2026-09-27 - Nested composition-reference recovery
+
+MAJOR_RESULT_CLOSURE: `T13_FUNDING_NESTED_REFERENCE_RECOVERY` is `PARTIAL` for provenance chain recovery.
+
+WHAT_IS_ACTUALLY_CLOSED: Twelve unique relocated candidates identified; eight match historical nested hashes, four do not. Source and clean statuses match all 12 recorded statuses; nine source/clean JSONs are equal and three differ by fields.
+
+WHAT_REMAINS_OPEN: Four unrecovered historical byte identities, three field-delta reviews including one nested causal `closure_level`, upstream source validity and Core reruns.
+
+DEPENDENCY_UNLOCKED: None; G0 and Full Topic 13 remain blocked.
+
+STATUS: `PASS_NESTED_REFERENCE_RECOVERY_ONLY`.
+
+WHAT_CHANGED: Added Topic 13 read-only nested-reference verifier, 12-row JSON, tests and note; plan and prior triage now point to this result. No Core or primary worktree edit.
+
+EQUATION_OR_MAPPING: Old path/hash/status to relocated source and clean artifact; not a thermal observable map.
+
+VERIFICATION: Live-source record verification matched saved bytes and field deltas. All 12 recorded statuses match; the causal nested summary has `closure_level` absent in source and `CLOSED_FOR_LANE` in clean. Xie 2026 experimental data were not used.
+
+CONTROLLING_BLOCKER: `nested_core_reference_source_chain_not_revalidated` plus top-level owner admission.
+
+NEXT_ACTION: Obtain Core review of the three field-delta candidates and four historical-hash drifts, then rerun clean Core verifiers on accepted inputs.
+
+CLAIM_BOUNDARY: Provenance recovery only; no G0, Core or physical prediction claim is promoted.

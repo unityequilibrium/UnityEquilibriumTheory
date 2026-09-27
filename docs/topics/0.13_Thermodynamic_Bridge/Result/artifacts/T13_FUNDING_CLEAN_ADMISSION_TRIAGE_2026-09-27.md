@@ -21,3 +21,5 @@ CONTROLLING_BLOCKER: `clean_core_source_chain_and_owner_admission_not_revalidate
 NEXT_ACTION: Review the two JSON-identical artifacts' nested hashes first without transferring bytes. Ask the Core owner to resolve the source-route and curved-gate deltas independently. For each absent record, determine publication safety, owner handoff and reproducible verifier before admission. Then rerun scoped Core checks and update G0 only if the full baseline contract is satisfied.
 
 CLAIM_BOUNDARY: A newer dirty-worktree source does not override the clean Core gate. The rejected harmonic comparator is not Ding, the curved parent is not full GR-ready, and neither result calibrates `alpha_Phi_K`, consumes Xie 2026 or closes Topic 13.
+
+Subsequent nested-reference review: [12-row recovery](T13_FUNDING_NESTED_REFERENCE_RECOVERY_2026-09-27.md) narrows the composition branch to eight recovered historical hashes, four unmatched hashes and three source/clean field deltas. The outer JSON equality above does not override that nested blocker.
