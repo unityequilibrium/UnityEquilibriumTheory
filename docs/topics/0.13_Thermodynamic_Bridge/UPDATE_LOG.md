@@ -6092,3 +6092,27 @@ CONTROLLING_BLOCKER: `full_clean_core_baseline_not_revalidated`, now narrowed fr
 NEXT_ACTION: Coordinate the eight-item admission decision with the Core owner, then inspect nested source chains and rerun scoped Core checks before G0 review.
 
 CLAIM_BOUNDARY: Located bytes are not permission to publish/copy owner work, clean Core reproduction, physical validation or Full Topic 13 closure.
+
+## 2026-09-27 - Eight-item clean-baseline admission triage
+
+MAJOR_RESULT_CLOSURE: `T13_FUNDING_CLEAN_ADMISSION_TRIAGE` is `PARTIAL` for a cross-worktree decision inventory.
+
+WHAT_IS_ACTUALLY_CLOSED: Two recovered outer JSON records are parsed-JSON identical to clean candidates, two have substantive source/gate deltas, and four have no same-named clean file.
+
+WHAT_REMAINS_OPEN: Nested reference checks for the first pair; Core-owner disposition for the changed pair; owner handoff/reproduction for the missing four; clean Core rerun.
+
+DEPENDENCY_UNLOCKED: None; G0 and Full Topic 13 unchanged.
+
+STATUS: `PASS_FIELD_DIFF_TRIAGE_ONLY`.
+
+WHAT_CHANGED: Added read-only field comparer, eight-row machine table, tests, result note and plan pointer. No primary/Core file copied or edited.
+
+EQUATION_OR_MAPPING: Same-path file hash and recursive JSON-field difference; JSON equality does not establish validity of nested evidence or thermal mapping.
+
+VERIFICATION: Eight focused tests and the live-source comparison pass. Source-route dirty record contains a rejected harmonic comparator, not Ding acceptance; curved gate remains partial despite additional subresults. Xie 2026 data were not used.
+
+CONTROLLING_BLOCKER: `clean_core_source_chain_and_owner_admission_not_revalidated`.
+
+NEXT_ACTION: Audit nested composition/matching references, obtain two substantive Core decisions and four owner handoffs, then rerun a clean Core baseline gate.
+
+CLAIM_BOUNDARY: This is provenance triage, not physical validation, G0 completion, Gravity unlock or full thermal bridge closure.
