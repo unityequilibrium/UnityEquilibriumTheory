@@ -14,7 +14,7 @@ WHAT_CHANGED: Added a deterministic script, three tests and a hash-backed JSON t
 
 EQUATION_OR_MAPPING: Input identity is `path + SHA-256`; neither hash agreement nor a local test pass is a physical mapping. The selected clean equivalent must be reviewed by content, data role and dependencies, not made to equal an old dirty-worktree hash.
 
-VERIFICATION: The current checkout has `MATCH=0`, `DRIFT=4`, `MISSING=4` for the eight historical references; five pre-sprint artifacts and the source-route record match. Three focused lineage tests pass. Audit SHA-256: `277e06034f6ddf5550a0e14e44dc71f3a2aa452942212a39485f45aa2ffae5e1`.
+VERIFICATION: The current checkout has `MATCH=0`, `DRIFT=4`, `MISSING=4` for the eight historical references; five pre-sprint artifacts and the source-route record match. Three focused lineage tests pass. Audit SHA-256: `6053a6e0dece7abca08cc0713db66de8914ea83f07bebbb8f89eb1006cc6c85c`. This identity screen cannot open G0; a separate hash-backed clean Core baseline verifier and J02 dependency review are required.
 
 CONTROLLING_BLOCKER: `full_clean_core_baseline_not_revalidated`; the missing J02 protocol and the historical-to-clean equivalence decisions are named subblockers.
 

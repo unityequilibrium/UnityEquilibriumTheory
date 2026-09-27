@@ -39,7 +39,8 @@ def audit() -> dict:
     pre_sprint_reproduced = bool(pre_sprint) and all(row["state"] == "MATCH" for row in pre_sprint)
     source_route_current = route["state"] == "MATCH"
     clean_baseline_revalidated = bool(plan["baseline"]["clean_reproduction_completed"])
-    g0_ready = clean_baseline_revalidated and protocol_present and pre_sprint_reproduced
+    # This screen cannot promote G0; a separate clean Core verifier must do that.
+    g0_ready = False
     blockers = []
     if counts["DRIFT"] or counts["MISSING"]:
         blockers.append("historical_dirty_branch_evidence_requires_clean_equivalent_selection")
@@ -68,8 +69,9 @@ def audit() -> dict:
         "referenced_j02_protocol": {"commit": protocol["commit"], "path": protocol["path"],
                                     "present_in_this_checkout": protocol_present},
         "clean_core_baseline_revalidated": clean_baseline_revalidated,
+        "g0_evaluation_authority": "separate hash-backed clean Core baseline verifier and J02 dependency review; not this identity screen or a planning Boolean",
         "g0_baseline_ready": g0_ready,
-        "g0_status": "READY_FOR_REVIEW" if g0_ready else "BLOCKED_LINEAGE_RECONCILIATION",
+        "g0_status": "BLOCKED_LINEAGE_RECONCILIATION",
         "verification_status": "PASS_IDENTITY_SCREEN_WITH_OPEN_G0" if pre_sprint_reproduced and source_route_current else "REVIEW_REQUIRED",
         "evidence_artifacts": [
             {"path": PLAN_PATH.relative_to(ROOT).as_posix(), "sha256": _sha256(PLAN_PATH)},
@@ -78,7 +80,7 @@ def audit() -> dict:
              "sha256": _sha256(Path(__file__).with_name("test_t13_funding_baseline_lineage.py"))},
         ],
         "open_blockers": blockers,
-        "controlling_blocker": "full_clean_core_baseline_not_revalidated" if not g0_ready else None,
+        "controlling_blocker": "full_clean_core_baseline_not_revalidated",
         "dependency_unlocked": [],
         "full_core_unlock": False,
         "claim_boundary": "Five pre-sprint saved artifacts matching this checkout do not establish clean reproduction of the older Core baseline. G0 remains open; no J02 integration, Xie 2026 access, physical map, external validation or Full Topic 13 closure is asserted.",

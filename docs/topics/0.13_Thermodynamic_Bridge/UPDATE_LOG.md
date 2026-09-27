@@ -5911,7 +5911,7 @@ WHAT_CHANGED: Added executable baseline-lineage verifier, three tests, JSON and 
 
 EQUATION_OR_MAPPING: Path plus SHA-256 identifies a saved input; historical hashes are audit evidence, not required values for selected clean equivalents.
 
-VERIFICATION: Focused suite `23 passed`; lineage artifact SHA-256 `277e06034f6ddf5550a0e14e44dc71f3a2aa452942212a39485f45aa2ffae5e1`. No Xie 2026 data or target curve was read.
+VERIFICATION: Focused suite `23 passed`; lineage artifact SHA-256 `6053a6e0dece7abca08cc0713db66de8914ea83f07bebbb8f89eb1006cc6c85c`. This identity screen cannot open G0 without a separate clean Core baseline verifier and J02 dependency review. No Xie 2026 data or target curve was read.
 
 CONTROLLING_BLOCKER: `full_clean_core_baseline_not_revalidated`, with historical-equivalent selection and J02 absence as named subblockers.
 

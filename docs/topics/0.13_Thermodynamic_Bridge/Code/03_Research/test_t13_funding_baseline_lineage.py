@@ -27,6 +27,7 @@ def test_g0_remains_open_until_full_baseline_and_protocol_are_revalidated():
     assert not AUDIT["referenced_j02_protocol"]["present_in_this_checkout"]
     assert not AUDIT["g0_baseline_ready"]
     assert AUDIT["g0_status"] == "BLOCKED_LINEAGE_RECONCILIATION"
+    assert "not this identity screen or a planning Boolean" in AUDIT["g0_evaluation_authority"]
     assert AUDIT["full_core_unlock"] is False
     assert AUDIT["dependency_unlocked"] == []
 
