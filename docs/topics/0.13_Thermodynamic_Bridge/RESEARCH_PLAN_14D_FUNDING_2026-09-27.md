@@ -215,6 +215,8 @@ Git: เก็บของเดิมใน dirty worktree; D1 สร้าง 
 
 ผลย่อยที่ห้าเป็น [conditional compressibility design](Result/artifacts/T13_HE4_CONDITIONAL_COMPRESSIBILITY_DESIGN_2026-09-27.md): density ที่ใช้สร้าง `e0` ไม่ใช่ test ซ้ำอีกครั้ง; อนุพันธ์ isothermal ที่ตรึง `Phi` เป็น candidate observable คนละตัว แต่จะใช้เทียบข้อมูล He-II ได้ต่อเมื่อมี physical charge map, `E_mu` และโปรโตคอลตรึง `Phi` หรือกฎตอบสนองเมื่อ `Phi` ผ่อนคลาย ถ้าใช้ response นี้เลือก `Phi` ต้องเก็บ observable ที่สามไว้ทดสอบจริง ไม่ยกระดับ G0-G5 จากผลนี้
 
+[Source-route screen สำหรับ compressibility](Result/artifacts/T13_HE4_COMPRESSIBILITY_SOURCE_ROUTE_2026-09-27.md) ยังเป็น `PARTIAL` แยกจากผลย่อยที่ปิดได้ห้าชิ้น: แหล่ง SVP เดิมไม่มี row นี้ในแพ็กเกจ, Brooks-Donnelly เป็น EOS-derived comparator, และ Elwell-Meyer เป็น primary pressure-volume route ที่ยังต้องได้ absolute baseline/การย้าย state/uncertainty ก่อนรับ numeric row ห้ามใช้ first-sound, density ตามเส้น SVP หรือค่าการเปลี่ยนของ compressibility แทน absolute isothermal row โดยอัตโนมัติ
+
 ## 11. แหล่งอ้างอิงที่ใช้วางแผน
 
 - [Donnelly–Barenghi 1998, NIST-hosted reference paper](https://srd.nist.gov/jpcrdreprint/1.556028.pdf), DOI 10.1063/1.556028: แหล่งข้อมูลสมบัติ He-4 ตาม SVP รวม second sound; ต้องย้อนจาก compilation ไป primary experiment สำหรับ protocol/uncertainty ที่ใช้ตัดสิน

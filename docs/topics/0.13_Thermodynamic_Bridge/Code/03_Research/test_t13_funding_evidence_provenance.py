@@ -26,3 +26,18 @@ def test_saved_pre_sprint_artifacts_match_manifest_and_current_inputs():
             source = (ROOT if evidence["path"].startswith("docs/") else ROOT / "docs") / evidence["path"]
             assert source.is_file(), evidence["path"]
             assert _sha256(source) == evidence["sha256"], evidence["path"]
+
+
+def test_compressibility_source_route_has_no_invented_numeric_row():
+    record = PLAN["source_route_screen"]
+    path = ROOT / record["path"]
+    assert _sha256(path) == record["sha256"]
+    route = json.loads(path.read_text(encoding="utf-8"))
+    assert route["status"] == "PARTIAL_SOURCE_ROUTE_NO_ACCEPTED_NUMERIC_ROW"
+    assert route["numeric_response_rows"] == []
+    assert record["numeric_response_rows_admitted"] == 0
+    assert route["full_core_unlock"] is False
+    assert all(not source["numeric_kappa_row_accepted"] for source in route["source_candidates"])
+    for evidence in route["evidence_artifacts"]:
+        source = ROOT / evidence["path"]
+        assert _sha256(source) == evidence["sha256"]

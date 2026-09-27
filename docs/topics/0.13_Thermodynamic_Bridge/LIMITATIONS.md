@@ -1,5 +1,18 @@
 # Limitations
 
+## He-II Isothermal-Response Source Route (2026-09-27)
+
+The current He-4 SVP density/superfluid package does not provide an accepted
+same-state isothermal-compressibility row. Brooks-Donnelly 1977 reports an
+EOS-derived comparator; Elwell-Meyer 1967 is a primary pressure-volume route
+that still needs an absolute baseline, SVP pressure transfer, row uncertainty
+and covariance. None is ingested as a numeric UET comparison. Moreover the
+current action diagnostic differentiates at clamped `Phi`; ordinary material
+compressibility needs a physical clamp or a relaxed-`Phi` correction. The
+Noether-to-atom map remains unadmitted. See the
+[source-route screen](Data/03_Research/he4_isothermal_compressibility_source_route.json)
+and [conditional response design](Result/artifacts/T13_HE4_CONDITIONAL_COMPRESSIBILITY_DESIGN_2026-09-27.md).
+
 ## Finite-q Material Response Boundary (2026-09-07)
 
 Spatial compatibility is mechanically quasistatic, bulk, linear and locally

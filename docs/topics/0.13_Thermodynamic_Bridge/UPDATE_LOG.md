@@ -5865,3 +5865,32 @@ EVIDENCE_PATHS:
 - `docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_He4_Conditional_Compressibility_Design.py`
 - `docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_he4_conditional_compressibility_design.py`
 - `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_HE4_CONDITIONAL_COMPRESSIBILITY_DESIGN_2026-09-27.md`
+
+## 2026-09-27 - He-II compressibility primary-source route screen
+
+MAJOR_RESULT_CLOSURE: `PARTIAL_SOURCE_ROUTE_NO_ACCEPTED_NUMERIC_ROW`; this is source screening, not an empirical closure.
+
+WHAT_IS_ACTUALLY_CLOSED: Donnelly-Barenghi 1998, Brooks-Donnelly 1977 and Elwell-Meyer 1967 are separated as existing SVP anchor, calculated EOS comparator and primary pressure-volume route respectively. The current local anchor has no absolute isothermal response row.
+
+WHAT_REMAINS_OPEN: Permitted primary numeric tables, absolute baseline, transfer to 1.7 K SVP, row uncertainty/covariance, physical `Phi` response and Noether-to-atom map.
+
+DEPENDENCY_UNLOCKED: Source-acquisition path only; no empirical comparison or Full Topic 13 unlock.
+
+STATUS: `PARTIAL_SOURCE_ROUTE_NO_ACCEPTED_NUMERIC_ROW`; `full_core_unlock=false`.
+
+WHAT_CHANGED: Added a source-route manifest with DOI/locators, zero accepted numeric rows and explicit role/independence checks; the funding plan points to it separately from five bounded pre-sprint results. Synced `LIMITATIONS.md` and a result note.
+
+EQUATION_OR_MAPPING: Target `kappa_T=-(1/V)(partial V/partial P)_T`; an SVP temperature-density path and a reported change in compressibility do not supply the absolute derivative at the target state.
+
+VERIFICATION: NIST reprints and APS primary abstract inspected online on 27 September 2026; focused local suite `20 passed` including route/hash/no-invented-row check. No primary PDF or numeric table was ingested.
+
+CONTROLLING_BLOCKER: `absolute_same_state_kappa_T_row_and_Phi_response_contract_missing` plus the prior `Noether_charge_to_helium_atom_identity_not_admitted`.
+
+NEXT_ACTION: Obtain permitted Elwell-Meyer numeric tables and an independent absolute baseline, then lock pressure transfer, uncertainty and covariance; separately derive the physical `Phi` protocol before testing any row.
+
+CLAIM_BOUNDARY: Source route only, not a measured UET response match, `alpha_Phi_K` calibration, TTG holdout access, or Full Topic 13 closure.
+
+EVIDENCE_PATHS:
+- `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_isothermal_compressibility_source_route.json`
+- `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_HE4_COMPRESSIBILITY_SOURCE_ROUTE_2026-09-27.md`
+- `docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_funding_evidence_provenance.py`

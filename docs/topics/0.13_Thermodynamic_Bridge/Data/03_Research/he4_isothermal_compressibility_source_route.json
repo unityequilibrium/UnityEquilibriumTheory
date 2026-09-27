@@ -1,0 +1,73 @@
+{
+  "schema_version": "t13-he4-isothermal-compressibility-source-route-v1",
+  "route_id": "T13_HE4_ISOTHERMAL_COMPRESSIBILITY_PRIMARY_SOURCE_SCREEN",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "screened_on": "2026-09-27",
+  "status": "PARTIAL_SOURCE_ROUTE_NO_ACCEPTED_NUMERIC_ROW",
+  "closure_level": "PARTIAL",
+  "what_is_closed": "A primary-source route for pressure-dependent He-II response is identified, and the current SVP density package is shown not to contain an independent isothermal-compressibility row",
+  "target_contract": {
+    "material": "liquid helium-4, He II",
+    "reference_temperature_K": 1.7,
+    "reference_pressure_path": "saturated vapour pressure",
+    "required_observable": "isothermal compressibility at the same state, with source covariance and a physical Phi-response protocol",
+    "required_units": "Pa^-1",
+    "forbidden_substitutions": ["first-sound speed without an isentropic-to-isothermal conversion", "temperature-dependent density along SVP as a pressure derivative", "pressure-averaged residual as a row uncertainty", "Brooks-Donnelly calculated value as an independent direct experiment", "Elwell-Meyer delta-kappa as an absolute SVP kappa row"]
+  },
+  "source_candidates": [
+    {
+      "source_id": "DONNELLY_BARENGHI_1998_SVP",
+      "title": "The Observed Properties of Liquid Helium at the Saturated Vapor Pressure",
+      "doi": "10.1063/1.556028",
+      "url": "https://srd.nist.gov/jpcrdreprint/1.556028.pdf",
+      "locator": "contents and Tables 1.2, 2.3, 3.3, 7.4; current local source package observable_contract",
+      "source_role": "EXISTING_DENSITY_AND_SUPERFLUID_ANCHOR_NOT_INDEPENDENT_KAPPA_ROW",
+      "finding": "The current UET package contains density and superfluid/normal-density rows, not a same-state isothermal pressure derivative. First sound and heat capacity in the review do not by themselves supply a source-accepted kappa_T row.",
+      "numeric_kappa_row_accepted": false,
+      "local_raw_source_sha256": null
+    },
+    {
+      "source_id": "BROOKS_DONNELLY_1977_CALCULATED",
+      "title": "The Calculated Thermodynamic Properties of Superfluid Helium-4",
+      "doi": "10.1063/1.555549",
+      "url": "https://srd.nist.gov/jpcrdreprint/1.555549.pdf",
+      "locator": "section 4.2.b, p. 66, Eq. (26) and table 4",
+      "source_role": "CALCULATED_EOS_COMPARATOR_CANDIDATE_NOT_INDEPENDENT_MEASUREMENT",
+      "finding": "The paper computes kappa_T by differentiating its P-V-T surface and compares with earlier measurements; the table is not a direct independently measured row. The authors report pressure-averaged model-minus-measurement deviations, not a row-level standard uncertainty.",
+      "numeric_kappa_row_accepted": false,
+      "local_raw_source_sha256": null
+    },
+    {
+      "source_id": "ELWELL_MEYER_1967_PRIMARY",
+      "title": "Molar Volume, Coefficient of Thermal Expansion, and Related Properties of Liquid He4 under Pressure",
+      "doi": "10.1103/PhysRev.164.245",
+      "url": "https://journals.aps.org/pr/abstract/10.1103/PhysRev.164.245",
+      "locator": "abstract; Brooks-Donnelly 1977 section 4.2.b cites tables IV and V",
+      "source_role": "PRIMARY_DIELECTRIC_VOLUME_PRESSURE_ROUTE_CANDIDATE",
+      "reported_domain": {"temperature_K": [1.25, 4.2], "pressure_atm": [0.5, 28.0]},
+      "finding": "The primary abstract reports measured dielectric-derived molar volume and the isobaric change in isothermal compressibility, not an accepted absolute kappa_T row at the 1.7 K SVP state. An absolute baseline, pressure-path transfer, uncertainty and shared-data audit are still required.",
+      "numeric_kappa_row_accepted": false,
+      "local_raw_source_sha256": null
+    }
+  ],
+  "independence_audit": {
+    "density_used_for_e0": true,
+    "absolute_kappa_source_locked": false,
+    "direct_vs_derived_role_separated": true,
+    "baseline_pressure_and_SVP_transfer_closed": false,
+    "row_level_uncertainty_and_covariance_closed": false,
+    "Phi_clamp_or_relaxed_response_law_closed": false,
+    "Noether_atom_number_map_admitted": false,
+    "reason": "An absolute response cannot be validated by recycling the density-normalized EOS or adding an unverified pressure extrapolation; the physical Phi derivative also differs from the clamped-Phi diagnostic."
+  },
+  "numeric_response_rows": [],
+  "evidence_artifacts": [
+    {"path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_o2_physical_anchor_source_package.json", "sha256": "4d02b1faac1cefe3ce79ced525183e2d38066604808d91f9c2769d515ab8b770"},
+    {"path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_conditional_compressibility_design.json", "sha256": "dee8a9fa124e7316fedeefed312fb31fa84fc82ed4da25ab40b671a7a13b4538"},
+    {"path": "docs/core/01_contracts/O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md", "sha256": "3210f45543dd90b42ef5593b6693a2348819b363a98cce3c66411378f0d6474d"}
+  ],
+  "next_action": "Access permitted Elwell-Meyer tables IV/V and an independently justified absolute kappa baseline; lock a same-state 1.7 K SVP pressure transfer, units, source uncertainty, covariance and Phi protocol before admitting a numeric row. Otherwise retain source-route-only status.",
+  "controlling_blocker": "absolute_same_state_kappa_T_row_and_Phi_response_contract_missing",
+  "full_core_unlock": false,
+  "claim_boundary": "Primary literature routes were screened, not numerically ingested or compared with UET. No isothermal response value, physical Phi map, external validation, Xie 2026 holdout access, or Full Topic 13 closure follows."
+}

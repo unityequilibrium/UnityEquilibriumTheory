@@ -32,6 +32,14 @@
     "scientific_route_implication": "Do not linearize the frozen normal natural state as condensed He II; current records do not select condensed mu. The hypothetical pressure/mu/charge identification reuses density inside e0. A clamped-Phi isothermal response is a distinct conditional test only if Phi and E_mu are fixed independently; ordinary compressibility needs a Phi-relaxation contract. With Phi free, reserve a further independent observable. Derive or calibrate the material map before physical prediction, or pursue scoped non-identifiability",
     "acceptance_gates_promoted": false
   },
+  "source_route_screen": {
+    "status": "PARTIAL_SOURCE_ROUTE_NO_ACCEPTED_NUMERIC_ROW",
+    "role": "SOURCE_ACQUISITION_ROUTE_NOT_PRE_SPRINT_CLOSURE",
+    "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_isothermal_compressibility_source_route.json",
+    "sha256": "dcb87b80e965dfac4c35c13e1e0378c531e030f1e885ce9a82dc73dbcfab9833",
+    "numeric_response_rows_admitted": 0,
+    "g0_gates_changed": false
+  },
   "objective": "Determine the independent predictive content of the frozen He-4/O(2) thermal bridge, prove a scoped identifiability boundary or establish a fully specified response prediction, and design the additional measurements needed; package one reproducible result for a research funding portfolio.",
   "plan_document": "docs/topics/0.13_Thermodynamic_Bridge/RESEARCH_PLAN_14D_FUNDING_2026-09-27.md",
   "goal_brief": "docs/topics/0.13_Thermodynamic_Bridge/GOAL_BRIEF_FUNDING_14D.md",
