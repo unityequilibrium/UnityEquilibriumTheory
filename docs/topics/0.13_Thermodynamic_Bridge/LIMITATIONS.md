@@ -488,3 +488,14 @@ and are not mapped to Ding. Consequently no physical graphite tensor is
 assembled. The coupling tensor `G`, response residue `Z_Phi` and curvature
 `a_Phi` remain UET-side blockers, and the Schur inequality is only a necessary
 stability condition.
+
+## He-4 J02 source-ancestry boundary
+
+The local He-4 `alpha_Phi_K` calibration uses the adopted superfluid-density
+reference around 1.6-1.8 K. That reference partly derives from second- and
+fourth-sound measurements. The J02 recommended second-sound table was not
+directly fitted, but its measurement-family ancestry overlaps the calibration
+source. Exact row covariance is not known. J02 is therefore a disclosed
+source-overlap comparator, not independent or blind He-II validation. The
+numeric local alpha and its independence from graphite TTG/Xie fitting are
+unchanged. See the [ancestry audit](Result/artifacts/T13_HE4_J02_CALIBRATION_SOURCE_ANCESTRY_2026-09-28.md).

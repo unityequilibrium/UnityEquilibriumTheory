@@ -1,0 +1,54 @@
+{
+  "schema_version": "t13-he4-j02-source-ancestry-v1",
+  "major_result_id": "T13_HE4_J02_CALIBRATION_SOURCE_ANCESTRY_BOUNDARY",
+  "topic": "0.13",
+  "closure_level": "CLOSED_FOR_LANE",
+  "what_is_closed": "J02 Table 4.3 is classified as a source-overlap comparator rather than an independent He-II response test of the current local He-4 calibration.",
+  "equation_or_mapping": "alpha_Phi_K = (rho_s/rho)|T0 / d_T(rho_s/rho)|T0; direct Table 4.3 rows were not fitted, but the adopted Section 2 rho_s database partly derives from sound measurements.",
+  "units": "alpha_Phi_K: K per normalized base Phi; Table 4.3 second-sound velocity: m s^-1",
+  "derivation_class": "source-lineage and measurement-method audit, not a new physical derivation",
+  "observable": "He-II superfluid fraction calibration versus second-sound phase-velocity comparator",
+  "data_role": "SOURCE_ANCESTRY_OVERLAP_COMPARATOR_NOT_BLIND_HOLDOUT",
+  "source_locators": [
+    {
+      "source": "Donnelly and Barenghi (1998), DOI 10.1063/1.556028",
+      "url": "https://srd.nist.gov/jpcrdreprint/1.556028.pdf",
+      "locator": "Section 2 adopted superfluid-density data and Table 2.1; Section 4 second-sound data and Tables 4.1 and 4.3",
+      "finding": "The Section 2 adopted database includes Maynard and Tam-Ahlers sound-derived superfluid-density measurements in the calibration temperature window; Section 4 draws on overlapping second-sound study families. Exact row-level covariance is not specified by the recommended tables."
+    },
+    {
+      "source": "Maynard (1976), DOI 10.1103/PhysRevB.14.3868",
+      "url": "https://link.aps.org/doi/10.1103/PhysRevB.14.3868",
+      "locator": "abstract, measurement method",
+      "finding": "First-, second-, and fourth-sound velocities were measured for the thermodynamic-property reconstruction."
+    }
+  ],
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_o2_local_response_calibration_source_package.json",
+      "sha256": "f10e9468c4417730dff0eed5c45d661fdf7aa1a96c7a3375792de98e4dbfac17"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_o2_physical_anchor_source_package.json",
+      "sha256": "4d02b1faac1cefe3ce79ced525183e2d38066604808d91f9c2769d515ab8b770"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_second_sound_response_source_package.json",
+      "sha256": "8a924ebb1e7e0342bc69a954bbc9b19255eafda47f0650c3f64e458878ca7a94"
+    }
+  ],
+  "verification_status": "PASS_METHOD_LEVEL_OVERLAP_SCREEN_ROW_COVARIANCE_OPEN",
+  "direct_j02_rows_used_for_calibration": false,
+  "shared_sound_measurement_family": true,
+  "exact_row_overlap_or_covariance_established": false,
+  "xie_2026_accessed": false,
+  "open_blockers": [
+    "independent_non_sound_calibration_or_response_source_not_admitted",
+    "exact_cross_table_row_covariance_unknown",
+    "uet_two_fluid_second_sound_operator_not_admitted"
+  ],
+  "controlling_blocker": "independent_non_sound_calibration_or_response_source_not_admitted",
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "claim_boundary": "The He-4 alpha remains a local calibration independent of graphite TTG/Xie target fitting, but J02 is not an independent or blind He-II validation. This audit does not change the numeric alpha, G0, or Full Topic 13 readiness."
+}

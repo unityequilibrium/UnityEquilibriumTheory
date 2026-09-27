@@ -4,7 +4,7 @@
   "topic": "0.13_Thermodynamic_Bridge",
   "joint_work_package": "J02",
   "status": "RESPONSE_SOURCE_CANDIDATE_PROTOCOL_OPEN",
-  "data_role": "INDEPENDENT_RESPONSE_CANDIDATE_NOT_BLIND_HOLDOUT",
+  "data_role": "SOURCE_ANCESTRY_OVERLAP_COMPARATOR_NOT_BLIND_HOLDOUT",
   "origin_commit": "c42385d07e390b338096122275fe809737b8477a",
   "import_boundary": "Topic 13 source package reviewed from the J02 commit; no Topic 10 implementation or claim imported",
   "material_state": {
@@ -77,12 +77,14 @@
     "eta_normal_component_Pa_s": {"value": 1.29e-6, "uncertainty_bound": 5e-8, "data_role": "EXTERNAL_INPUT_NOT_UET_PREDICTION", "source_artifact": "docs/core/07_artifacts/topic13/t13_he4_normal_viscosity_kubo_audit.json"}
   },
   "independence_and_holdout_policy": {
-    "observable_used_to_construct_alpha_Z_theta_or_e0": false,
+    "direct_table_4_3_rows_used_to_construct_alpha_Z_theta_or_e0": false,
+    "upstream_second_sound_measurement_family_used_for_calibration_source": true,
+    "source_ancestry_audit": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_j02_calibration_source_ancestry_audit.json",
     "no_rematching_on_response_rows": true,
     "no_fit_or_tuning_performed": true,
     "response_rows_examined_during_protocol_design": true,
     "blind_holdout": false,
-    "independence_class": "different dynamic observable and measurement channel; the 1998 review compiles both equilibrium anchors and sound data, so statistical/source independence is not claimed",
+    "independence_class": "The Table 4.3 rows were not directly fit, but the superfluid-density calibration source in Section 2 is derived partly from second- and fourth-sound measurements over the same temperature range; exact row-level overlap/covariance is unknown. J02 is a source-overlap comparator, not an independent He-II response test.",
     "fresh_blind_source_required_for_future_blind_validation": true,
     "xie_2026_accessed_by_this_package": false
   },
@@ -95,7 +97,8 @@
   "open_blockers": [
     "uet_two_fluid_second_sound_operator_not_admitted",
     "primary_row_state_frequency_and_row_uncertainty_not_locked",
+    "calibration_response_source_ancestry_overlap_not_resolved",
     "response_source_was_seen_and_is_not_a_blind_holdout"
   ],
-  "claim_boundary": "This package identifies a state-bounded external second-sound response candidate and freezes existing He-4 matching constants. It does not provide a UET second-sound prediction, independent action-to-material validation, a blind holdout result, a full two-fluid transport tensor, or any Topic 10/Core dependency unlock."
+  "claim_boundary": "This package identifies a state-bounded, source-overlap second-sound comparator and freezes existing He-4 matching constants. The He-4 alpha is independent of Xie/graphite target fitting, not independent of this sound-data ancestry. No UET second-sound prediction, independent He-II validation, blind holdout result, full two-fluid transport tensor, or Topic 10/Core dependency unlock follows."
 }

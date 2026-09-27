@@ -6140,3 +6140,27 @@ CONTROLLING_BLOCKER: `nested_core_reference_source_chain_not_revalidated` plus t
 NEXT_ACTION: Obtain Core review of the three field-delta candidates and four historical-hash drifts, then rerun clean Core verifiers on accepted inputs.
 
 CLAIM_BOUNDARY: Provenance recovery only; no G0, Core or physical prediction claim is promoted.
+
+## 2026-09-28 - J02 calibration source-ancestry boundary
+
+MAJOR_RESULT_CLOSURE: `T13_HE4_J02_CALIBRATION_SOURCE_ANCESTRY_BOUNDARY` is `CLOSED_FOR_LANE` for data-role classification only.
+
+WHAT_IS_ACTUALLY_CLOSED: J02 Table 4.3 is now explicitly a source-overlap comparator, not an independent He-II validation set. Direct J02 rows were not fit, but the superfluid-density calibration source includes sound-derived measurements over the same temperature range.
+
+WHAT_REMAINS_OPEN: Exact cross-table covariance, independent response/calibration source, primary matched protocol, and UET two-fluid operator.
+
+DEPENDENCY_UNLOCKED: None; G0 and Full Topic 13 remain blocked.
+
+STATUS: `PASS_METHOD_LEVEL_OVERLAP_SCREEN_ROW_COVARIANCE_OPEN`; `full_core_unlock=false` for this audit.
+
+WHAT_CHANGED: Corrected J02 data role, protocol card, lineage verifier/artifact, funding plan/roadmap and limitations; added a hashed machine-readable ancestry audit and source note. No Core or numeric calibration record changed.
+
+EQUATION_OR_MAPPING: `alpha_Phi_K = (rho_s/rho)|T0 / d_T(rho_s/rho)|T0`; Section 2 sound-derived calibration ancestry may overlap Section 4 second-sound study families. Exact row reuse was not established.
+
+VERIFICATION: NIST Donnelly-Barenghi Sections 2/4 and Maynard measurement-method abstract inspected; local source hashes verified. Twelve focused Topic13/Core tests passed. Xie 2026 was not read. Ancestry audit SHA-256 `24ac43dfc406eeabe77d385839c29f68dbc8d15ea5e2a793232af634eef5314a`; regenerated lineage audit SHA-256 `91ca07ee8dbfa0edaf4ee1abce103499c6d5a1a69611973112cc2065a504ee86`.
+
+CONTROLLING_BLOCKER: `independent_non_sound_calibration_or_response_source_not_admitted` for independent He-II testing; G0 is separately controlled by `full_clean_core_baseline_not_revalidated`.
+
+NEXT_ACTION: Seek a permitted, genuinely independent response/calibration measurement with protocol and uncertainty, or keep J02 as a disclosed comparator in the two-week portfolio. Obtain Core-owner baseline admission separately.
+
+CLAIM_BOUNDARY: No change to local alpha, graphite-TTG independence, G0, two-fluid prediction or Full Topic 13 readiness. Method-level overlap does not prove exact row-level covariance.

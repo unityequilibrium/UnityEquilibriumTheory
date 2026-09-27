@@ -25,3 +25,5 @@ CLAIM_BOUNDARY: This audit does not revalidate Core, reopen the holdout, admit a
 Evidence: [machine-readable audit](t13_funding_baseline_lineage_audit.json), [verifier](../../Code/03_Research/Research_T13_Funding_Baseline_Lineage.py), [tests](../../Code/03_Research/test_t13_funding_baseline_lineage.py), [J02 protocol](../../HE4_SECOND_SOUND_PROTOCOL_CARD.md), and [J02 source package](../../Data/03_Research/he4_svp_second_sound_response_source_package.json).
 
 Subsequent read-only observation: [historical snapshot recovery](T13_FUNDING_HISTORICAL_SNAPSHOT_RECOVERY_2026-09-27.md) located all eight exact plan bytes in the dirty primary worktree. The clean-checkout counts above remain unchanged; G0 still requires owner handoff and revalidation.
+
+28 September addendum: The J02 package was reclassified after a [source-ancestry audit](T13_HE4_J02_CALIBRATION_SOURCE_ANCESTRY_2026-09-28.md). It is a source-overlap comparator, not an independent He-II test. The earlier SHA-256 values above remain a dated snapshot; the current generated lineage audit is `91ca07ee8dbfa0edaf4ee1abce103499c6d5a1a69611973112cc2065a504ee86`. G0 remains blocked.

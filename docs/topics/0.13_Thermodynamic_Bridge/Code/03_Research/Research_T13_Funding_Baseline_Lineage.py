@@ -45,7 +45,7 @@ def _j02_review(protocol_path: Path, origin_commit: str) -> dict:
         "origin_commit_matches_plan": source["origin_commit"] == origin_commit,
         "source_role_is_nonblind_candidate": (
             source["status"] == "RESPONSE_SOURCE_CANDIDATE_PROTOCOL_OPEN"
-            and source["data_role"] == "INDEPENDENT_RESPONSE_CANDIDATE_NOT_BLIND_HOLDOUT"
+            and source["data_role"] == "SOURCE_ANCESTRY_OVERLAP_COMPARATOR_NOT_BLIND_HOLDOUT"
             and source["independence_and_holdout_policy"]["response_rows_examined_during_protocol_design"]
             and not source["independence_and_holdout_policy"]["blind_holdout"]
         ),
@@ -83,6 +83,11 @@ def _j02_review(protocol_path: Path, origin_commit: str) -> dict:
             == "not set until a primary source row, state, frequency and uncertainty budget are locked"
         ),
         "locked_xie_holdout_not_used": not source["independence_and_holdout_policy"]["xie_2026_accessed_by_this_package"],
+        "j02_source_ancestry_overlap_disclosed": (
+            not source["independence_and_holdout_policy"]["direct_table_4_3_rows_used_to_construct_alpha_Z_theta_or_e0"]
+            and source["independence_and_holdout_policy"]["upstream_second_sound_measurement_family_used_for_calibration_source"]
+            and "not an independent He-II response test" in source["independence_and_holdout_policy"]["independence_class"]
+        ),
     }
     paths = (protocol_path, J02_SOURCE, CORE_CALIBRATION, CORE_SI, CORE_ETA)
     return {
@@ -96,7 +101,7 @@ def _j02_review(protocol_path: Path, origin_commit: str) -> dict:
         "evidence_artifacts": [
             {"path": path.relative_to(ROOT).as_posix(), "sha256": _sha256(path)} for path in paths
         ],
-        "claim_boundary": "Reviewed J02 source/protocol candidate in this checkout, not a blind holdout, UET second-sound prediction, primary frequency-matched response row or G0/Core validation.",
+        "claim_boundary": "Reviewed J02 source-overlap comparator in this checkout, not an independent/blind He-II test, UET second-sound prediction, primary frequency-matched response row or G0/Core validation.",
     }
 
 

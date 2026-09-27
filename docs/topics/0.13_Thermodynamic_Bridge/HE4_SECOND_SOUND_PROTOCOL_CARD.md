@@ -4,7 +4,7 @@
 
 ## Question and purpose
 
-With the existing He-4 normalization constants held fixed, can a separately measured dynamic response be derived from an admitted UET state and reproduce the second-sound phase velocity of liquid He-II? The observable is a propagating thermal/entropy wave. Topic 10 currently has no admitted two-fluid dynamic state.
+With the existing He-4 normalization constants held fixed, can an admitted UET state derive the second-sound phase velocity of liquid He-II? The observable is a propagating thermal/entropy wave. The current J02 reference table is a protocol comparator with source ancestry overlap, not an independent response test. Topic 10 currently has no admitted two-fluid dynamic state.
 
 ## Frozen reference interface
 
@@ -26,7 +26,7 @@ The table summarizes resonance measurements. The recommended rows do not identif
 
 Lane, Fairbank and Fairbank's 1947 resonance paper reports a maximum of 20.46 m/s near 1.7 K and accuracy of at least +/-0.5%. Its abstract does not establish pressure-path and temperature-scale correspondence to the 1998 T90/SVP recommendation, so it is retained as a protocol cross-check rather than combined or scored against the table.
 
-The source values were inspected while designing this protocol. They were not used to construct alpha, Z, theta_T or e0 and have not been used for fitting, but this is no longer a blind holdout. Use a separately selected source or future experiment for any claim of blind validation.
+The Table 4.3 values were inspected while designing this protocol and were not directly fit into alpha, Z, theta_T or e0. However, alpha and Z use a superfluid-density calibration from Section 2 of the same review: the adopted database in the 1.6-1.8 K range includes Maynard and Tam-Ahlers values derived from second- and fourth-sound measurements. Section 4 also includes second-sound measurements from the overlapping study family. Exact row-level overlap and covariance are not resolved. Therefore these recommended J02 values are neither blind nor established as statistically independent of calibration. See the [source-ancestry audit](Result/artifacts/T13_HE4_J02_CALIBRATION_SOURCE_ANCESTRY_2026-09-28.md). This does not undo the narrower statement that the He-4 calibration did not use Xie 2026 or graphite TTG target fitting.
 
 ## State and comparison contract
 
@@ -45,8 +45,9 @@ The current Topic 10 scalar C/I evolution and scalar-gradient velocity mapping c
 - No admitted UET two-fluid second-sound operator or coupled relative-velocity/entropy state.
 - No primary source row with matched pressure path, temperature scale, frequency/mode protocol and row-level uncertainty.
 - The response candidate has been viewed during protocol design and cannot be described as a blind holdout.
+- The calibration superfluid-density source is partly sound-derived in this temperature window; J02 Table 4.3 cannot be claimed as an independent He-II response validation without a new source-independence design.
 
-**Claim boundary:** source/protocol candidate only. No UET prediction, independent action-to-material validation, blind holdout result, Core admission or dependency unlock is recorded.
+**Claim boundary:** source-overlap comparator and protocol candidate only. No UET prediction, independent He-II/action-to-material validation, blind holdout result, Core admission or dependency unlock is recorded.
 
 ## Source and lineage records
 

@@ -76,6 +76,8 @@
 
 Primary source หรือ experiment record ต้องให้ material/state, temperature scale/path, driving frequency, amplitude, geometry, preprocessing, uncertainty และสิทธิ์ใช้ข้อมูลที่ตรงกับการเทียบ ต้องระบุว่าข้อมูลเดียวกันเคยสร้าง calibration หรือ recommended inputs ที่เราใช้อยู่หรือไม่ ข้อมูลจากคนละหน้าใน review เดียวกันยังอาจมี provenance/covariance ร่วมกัน
 
+อัปเดต 28 ก.ย.: [J02 source-ancestry audit](Result/artifacts/T13_HE4_J02_CALIBRATION_SOURCE_ANCESTRY_2026-09-28.md) พบความทับซ้อนระดับวิธีวัดระหว่าง calibration ของ `alpha_Phi_K` กับ second-sound reference ในช่วงอุณหภูมิเดียวกัน จึงใช้ J02 เป็น comparator สำหรับออกแบบ protocol เท่านั้น ไม่ใช่ independent validation. งาน W5-W6 ต้องหาแหล่งวัดที่ไม่สืบจาก sound calibration หรือออกแบบการวัดตอบสนองอิสระ และตรวจ covariance ก่อนใช้คำว่า independent comparison; หากทำไม่ได้ ให้เลือกพอร์ตแบบ methods/measurement feasibility ตามกติกาด้านล่าง
+
 ถ้าทำแล็บ: ต้องมี feasibility assessment ของ cryogenic access, thermometry, excitation/readout, safety/operator requirements, duration และ quotation จากผู้ให้บริการจริง ไม่มีคำมั่นว่าจะได้ lab slot หรือข้อมูลในสองเดือนโดยยังไม่คุยกับแล็บ การติดต่อแล็บเป็น action ที่ต้องได้รับอนุญาตจริง; แผนสามารถเตรียม request packet ล่วงหน้าได้
 
 ถ้า W6 ยังหา input ไม่ได้ ให้ส่ง portfolio v2 เป็น **theory/methods + experimental design pilot** พร้อม measurement specification และเหตุผลขอทุนสร้างข้อมูล ไม่เติมข้อมูล synthetic เป็น external evidence เป้าหมาย empirical ยังคงเปิด
