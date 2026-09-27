@@ -6181,10 +6181,10 @@ WHAT_CHANGED: Added literature/source-key route audit, two guard tests and a dat
 
 EQUATION_OR_MAPPING: `alpha_Phi_K` uses a local superfluid-fraction temperature slope; second-sound velocity is a different response observable requiring an admitted two-fluid operator.
 
-VERIFICATION: NIST Sections 2/4 Tables 2.1/4.1 and the Heiserman, Maynard and Dash-Taylor primary abstracts inspected. The Table 4.1 Wang key-5 study-level uncertainty is printed as 0.07%, not established as a row-level sigma. Two focused guard tests passed. Machine screen SHA-256 `6730f659a833ad6c95433f52815cb37e343b9961fab7a318e4300f41488128b0`. Xie 2026 data were not read.
+VERIFICATION: NIST Sections 2/4 Tables 2.1/4.1 and the Heiserman, Maynard, Dash-Taylor and Wang primary abstracts inspected. Wang's abstract reports typical 0.07% precision and warns that its spline pools other-author data; this is not row-level sigma. Two focused guard tests passed. Machine screen SHA-256 `15c4d2813510b4e1b0438376037b82e64f9df088094bfd7802e97cedea7cdbc2`. Xie 2026 data were not read.
 
 CONTROLLING_BLOCKER: `primary_Wang_protocol_row_uncertainty_and_ancestry_not_verified`; the physical UET operator and clean Core baseline are separate blockers.
 
-NEXT_ACTION: Inspect permitted Wang primary rows and measurement conditions; independently check Dash numeric calibration and scale conversion. Stop source search at the D3 decision ceiling if admission cannot be supported, and return to identifiability/measurement design.
+NEXT_ACTION: Inspect permitted Wang study-only primary rows and measurement conditions, excluding its pooled spline; independently check Dash numeric calibration and scale conversion. Stop source search at the D3 decision ceiling if admission cannot be supported, and return to identifiability/measurement design.
 
 CLAIM_BOUNDARY: Study-key separation is a candidate source route, not demonstrated statistical independence, UET prediction, empirical validation or Full Topic 13 closure.

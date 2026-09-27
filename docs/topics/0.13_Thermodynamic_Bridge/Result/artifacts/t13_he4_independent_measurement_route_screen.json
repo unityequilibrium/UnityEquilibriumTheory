@@ -44,9 +44,13 @@
       "reported_study_level_uncertainty_percent": 0.07,
       "uncertainty_semantics": "as printed in Table 4.1; not a row-level standard deviation or covariance",
       "adopted_table_contains_key_5_rows_near_1p6_to_1p8_K": true,
+      "primary_abstract_verified": true,
+      "primary_abstract_locator": "https://link.springer.com/article/10.1007/BF00682305",
+      "primary_abstract_boundary": "Reports saturated-vapor-pressure acoustic-resonator measurements at 1.135-2.09 K with typical precision 0.07%; the paper's cubic spline pools its own and selected other-author data.",
+      "compilation_key_5_rows_visible_but_not_admitted": true,
       "primary_full_text_or_raw_rows_verified": false,
       "row_level_uncertainty_covariance_frequency_and_temperature_scale_verified": false,
-      "reason": "Key 5 is a separately named measurement study not listed among the Section 2 adopted superfluid-density studies. This makes it a better source-family route, not proof of statistical independence or a UET validation."
+      "reason": "Key 5 is a separately named measurement study not listed among the Section 2 adopted superfluid-density studies. Only source-identified study rows, not the paper's mixed-author spline, could be considered later; this does not prove statistical independence or UET validation."
     },
     {
       "route_id": "DASH_TAYLOR_OSCILLATING_DISK_NORMAL_DENSITY",
@@ -64,6 +68,7 @@
     "temperature_pressure_geometry_frequency_and_exposure_protocol_match",
     "row_uncertainty_and_cross_source_covariance_or_conservative_bound",
     "calibration_vs_comparison_role_frozen_before_score_or_fit",
+    "Wang_study_rows_separated_from_its_mixed_author_spline",
     "admitted_UET_HeII_two_fluid_operator_and_detector_map"
   ],
   "numeric_response_rows_admitted": 0,
