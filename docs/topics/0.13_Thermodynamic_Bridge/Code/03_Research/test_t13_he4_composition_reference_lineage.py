@@ -17,6 +17,10 @@ def test_current_composition_references_are_classified_without_promotion():
     assert len(result["records"]) == 12
     assert result["counts"]["RELOCATED_HASH_DRIFT"] == 12
     assert result["recorded_status_matches"] == 12
+    assert result["committed_snapshot_comparison"]["counts"]["BYTE_IDENTICAL_TO_COMMIT"] == 9
+    assert result["committed_snapshot_comparison"]["counts"]["CHANGED_SINCE_COMMIT"] == 3
+    deltas = [delta["path"] for record in result["committed_snapshot_comparison"]["records"] for delta in record.get("field_deltas", [])]
+    assert "/major_result/evidence_artifacts/1/summary/closure_level" in deltas
     assert result["g0_baseline_ready"] is False
     assert result["full_core_unlock"] is False
     assert result["dependency_unlocked"] == []
@@ -38,3 +42,8 @@ def test_ambiguous_basename_is_not_silently_selected(tmp_path):
     result = AUDIT._resolve(row, tmp_path, tmp_path / "docs/core/07_artifacts")
     assert result["classification"] == "AMBIGUOUS"
     assert len(result["candidates"]) == 2
+
+
+def test_field_delta_reports_nested_values_and_json_pointers():
+    changes = AUDIT._field_deltas({"a/b": [{"status": None}]}, {"a/b": [{"status": "CLOSED_FOR_LANE"}]})
+    assert changes == [{"path": "/a~1b/0/status", "before": None, "after": "CLOSED_FOR_LANE"}]

@@ -204,6 +204,225 @@
     "MISSING": 0
   },
   "recorded_status_matches": 12,
+  "committed_snapshot_comparison": {
+    "commit": "a62efba425f1b219241cf149bc4bab50cce4c379",
+    "comparison_scope": "committed tree only; historical dirty-worktree contents are not reconstructed",
+    "records": [
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_causal_named_branch_core_compatibility.json",
+        "state": "CHANGED_SINCE_COMMIT",
+        "committed_sha256": "f2338e9494f161f8f8045656d797eadb30b692c34cac7759a85b1625572e54ad",
+        "current_sha256": "d9d4ffdf88480f65c6b9134a5a07ca2de2925757b9afca4218cfc5231bc85d86",
+        "field_deltas": [
+          {
+            "path": "/generated_at",
+            "before": "2026-08-24",
+            "after": "2026-09-18"
+          },
+          {
+            "path": "/major_result/evidence_artifacts/0/path",
+            "before": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json",
+            "after": "docs/core/07_artifacts/archive/conserved_c_finite_cone_no_go_assessment.json"
+          },
+          {
+            "path": "/major_result/evidence_artifacts/0/sha256",
+            "before": "3b58b2633a30f8a91710a59c46097f76bb2f36e2dda07e8cae03c9268d3f76bc",
+            "after": "5b5a3bbf80c10561a54af64a3c79a2b5c87a3f76af2ca06fbf905dddb82646ae"
+          },
+          {
+            "path": "/major_result/evidence_artifacts/1/path",
+            "before": "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json",
+            "after": "docs/core/07_artifacts/verification/matter_space_conserved_flux_telegraph_verification.json"
+          },
+          {
+            "path": "/major_result/evidence_artifacts/1/sha256",
+            "before": "70eafbe2b7b845c76336117bb3fe940c7427862a7a0d30d328a67a804356761c",
+            "after": "862dcbfcb6d530a054312151b0b53b1de35e0dd9a3a6708b8333c439262a96b5"
+          },
+          {
+            "path": "/major_result/evidence_artifacts/1/summary/closure_level",
+            "before": null,
+            "after": "CLOSED_FOR_LANE"
+          },
+          {
+            "path": "/major_result/evidence_artifacts/2/path",
+            "before": "docs/core/artifacts/matter_space_flux_phi_coupled_verification.json",
+            "after": "docs/core/07_artifacts/verification/matter_space_flux_phi_coupled_verification.json"
+          },
+          {
+            "path": "/major_result/evidence_artifacts/2/sha256",
+            "before": "c29deb142a9121fe0bf3e260560138e1966152db1decd46cb7fb58b19f50c04b",
+            "after": "5a2ce3e2021d70dccc200bc6d990c2a1487783e3cc6eb4193065b79f182609e1"
+          }
+        ]
+      },
+      {
+        "path": "docs/core/07_artifacts/archive/conserved_c_finite_cone_no_go_assessment.json",
+        "state": "CHANGED_SINCE_COMMIT",
+        "committed_sha256": "e80e27f40d3f0903a9f5b7fa33aa1efa946517664431beabee62a8e965f8cafd",
+        "current_sha256": "5b5a3bbf80c10561a54af64a3c79a2b5c87a3f76af2ca06fbf905dddb82646ae",
+        "field_deltas": [
+          {
+            "path": "/evidence_input/path",
+            "before": "docs/core/artifacts/matter_space_causal_cone_compatibility.json",
+            "after": "docs/core/07_artifacts/archive/matter_space_causal_cone_compatibility.json"
+          },
+          {
+            "path": "/evidence_input/sha256",
+            "before": "29c731e945a635eb5e2b0bbb3ab8d60aa0f65572af4a5433fcd314f402ad4d15",
+            "after": "fb822fa325b748e9ae976a3649891ae886daf5874416efbf68869be8e8552b47"
+          },
+          {
+            "path": "/generated_at",
+            "before": "2026-08-25",
+            "after": "2026-09-17"
+          }
+        ]
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_he4_svp_physical_anchor_audit.json",
+        "state": "BYTE_IDENTICAL_TO_COMMIT",
+        "committed_sha256": "d0d2f3513c1354910894f31fb3157b4e818ff788670fba967378167c844999b5",
+        "current_sha256": "d0d2f3513c1354910894f31fb3157b4e818ff788670fba967378167c844999b5",
+        "field_deltas": []
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json",
+        "state": "BYTE_IDENTICAL_TO_COMMIT",
+        "committed_sha256": "7886ffd3403f91d8951a9d33fb947468a99ebbc94d378cbdc7467e7efb5af27e",
+        "current_sha256": "7886ffd3403f91d8951a9d33fb947468a99ebbc94d378cbdc7467e7efb5af27e",
+        "field_deltas": []
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json",
+        "state": "BYTE_IDENTICAL_TO_COMMIT",
+        "committed_sha256": "a09b39050aaea5ed49094f34d45719673eb275e7b94e88b88af71e4e47084325",
+        "current_sha256": "a09b39050aaea5ed49094f34d45719673eb275e7b94e88b88af71e4e47084325",
+        "field_deltas": []
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_uet_o2_action_thermal_observable_bridge_audit.json",
+        "state": "BYTE_IDENTICAL_TO_COMMIT",
+        "committed_sha256": "7983995dab41126e05f146f5c21512aa5c88b5f8cae7ba6d68a52e61def64ce3",
+        "current_sha256": "7983995dab41126e05f146f5c21512aa5c88b5f8cae7ba6d68a52e61def64ce3",
+        "field_deltas": []
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_uet_o2_action_thermal_stiffness_beta_audit.json",
+        "state": "BYTE_IDENTICAL_TO_COMMIT",
+        "committed_sha256": "fc05688ddfd0cd2f0c23b690d65bde32c9483e520fbfb581a797b831d323e7a6",
+        "current_sha256": "fc05688ddfd0cd2f0c23b690d65bde32c9483e520fbfb581a797b831d323e7a6",
+        "field_deltas": []
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_flat_thermodynamic_bridge_components_gate.json",
+        "state": "CHANGED_SINCE_COMMIT",
+        "committed_sha256": "58410cf5d6be6e6f048fa8ce694d4803082c1eb18809ffc42c8f7cbd29d1b195",
+        "current_sha256": "9185b732cd24e94212f74fcca7231b79b0bf96394dcf65b066f55a6c1d6ea3ab",
+        "field_deltas": [
+          {
+            "path": "/generated_at",
+            "before": "2026-08-25",
+            "after": "2026-09-18"
+          },
+          {
+            "path": "/major_result/evidence_artifacts/0/path",
+            "before": "docs/core/artifacts/t13_uet_o2_thermodynamic_normal_component_audit.json",
+            "after": "docs/core/07_artifacts/topic13/t13_uet_o2_thermodynamic_normal_component_audit.json"
+          },
+          {
+            "path": "/major_result/evidence_artifacts/0/sha256",
+            "before": "3975ac974a3e265c14094b4b40a0fee86ddcee900fb1c2d534b97d3f38384719",
+            "after": "1caee9d2d4590cad70acf6956d75812b5b79270d0d6ae738ea7a0fd3490a4a67"
+          },
+          {
+            "path": "/major_result/evidence_artifacts/1/path",
+            "before": "docs/core/artifacts/t13_formal_thermodynamic_bridge_integration_audit.json",
+            "after": "docs/core/07_artifacts/topic13/t13_formal_thermodynamic_bridge_integration_audit.json"
+          },
+          {
+            "path": "/major_result/evidence_artifacts/1/sha256",
+            "before": "42842e5e787a8de7007c026bf7c49dbeeeec7f48cabd403000f817e5c4a90c32",
+            "after": "6819e76863fd6c54fa70dd8f890eddbf7e137218f351d13d6c625e4d0f05533f"
+          },
+          {
+            "path": "/major_result/evidence_artifacts/2/path",
+            "before": "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json",
+            "after": "docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json"
+          },
+          {
+            "path": "/major_result/evidence_artifacts/2/sha256",
+            "before": "d9632a317270260f4d18be5d1cb8e7f0889ca9e3e9631ebe47aa32212320f4ba",
+            "after": "1c08344c75a36a00be43f582364208b9250ba6c813e5cfce7f2e6504f437bc24"
+          },
+          {
+            "path": "/major_result/evidence_artifacts/3/path",
+            "before": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+            "after": "docs/core/07_artifacts/topic13/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json"
+          },
+          {
+            "path": "/major_result/evidence_artifacts/3/sha256",
+            "before": "9ea6f37eb43e353b8c89e42b1c3dd01c957b2063e41a09230483989accb2b3f4",
+            "after": "905cc38dc027af573d21126d164d75d2060110a39573154239951bd0e61aca17"
+          },
+          {
+            "path": "/major_result/evidence_artifacts/4/path",
+            "before": "docs/core/artifacts/t13_kim_2018_graphite_green_kubo_external_input_audit.json",
+            "after": "docs/core/07_artifacts/topic13/t13_kim_2018_graphite_green_kubo_external_input_audit.json"
+          },
+          {
+            "path": "/major_result/evidence_artifacts/4/sha256",
+            "before": "13b2b2c677d2d4d0e1035df99b9b6ae40619040caa976f71baf1d406bb25b208",
+            "after": "039277cde59fd168d088684e32d53fba9ba150030255708dcca4076c8f127df6"
+          },
+          {
+            "path": "/major_result/evidence_artifacts/6/path",
+            "before": "docs/core/artifacts/t13_xie_2026_holdout_access_audit.json",
+            "after": "docs/core/07_artifacts/topic13/t13_xie_2026_holdout_access_audit.json"
+          },
+          {
+            "path": "/major_result/evidence_artifacts/6/sha256",
+            "before": "c3185da0a233894d7f338138bbe6acee287194e1852a80e40b0b5f6f2134e21b",
+            "after": "7f848d3d6f6c9b5ab708587fb4190956c43ee46da50e4e5b732bc9285e9336ce"
+          }
+        ]
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+        "state": "BYTE_IDENTICAL_TO_COMMIT",
+        "committed_sha256": "905cc38dc027af573d21126d164d75d2060110a39573154239951bd0e61aca17",
+        "current_sha256": "905cc38dc027af573d21126d164d75d2060110a39573154239951bd0e61aca17",
+        "field_deltas": []
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_he4_normal_viscosity_kubo_audit.json",
+        "state": "BYTE_IDENTICAL_TO_COMMIT",
+        "committed_sha256": "42a03cc5181cc4848202be699ed35f929d972c66c4ef7420003c62c583c79758",
+        "current_sha256": "42a03cc5181cc4848202be699ed35f929d972c66c4ef7420003c62c583c79758",
+        "field_deltas": []
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_xie_2026_holdout_access_audit.json",
+        "state": "BYTE_IDENTICAL_TO_COMMIT",
+        "committed_sha256": "7f848d3d6f6c9b5ab708587fb4190956c43ee46da50e4e5b732bc9285e9336ce",
+        "current_sha256": "7f848d3d6f6c9b5ab708587fb4190956c43ee46da50e4e5b732bc9285e9336ce",
+        "field_deltas": []
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_landauer_core_disposition_audit.json",
+        "state": "BYTE_IDENTICAL_TO_COMMIT",
+        "committed_sha256": "5a70d91f9f759fe70ba0a8a0f2557445fe179c04246ff7eb118769d25bee4689",
+        "current_sha256": "5a70d91f9f759fe70ba0a8a0f2557445fe179c04246ff7eb118769d25bee4689",
+        "field_deltas": []
+      }
+    ],
+    "counts": {
+      "BYTE_IDENTICAL_TO_COMMIT": 9,
+      "CHANGED_SINCE_COMMIT": 3,
+      "NO_UNIQUE_CURRENT_FILE": 0,
+      "COMMITTED_OBJECT_UNAVAILABLE": 0
+    }
+  },
   "verification_status": "REFERENCE_DRIFT_CLASSIFIED_NOT_REVALIDATED",
   "open_blockers": [
     "composition_evidence_paths_and_hashes_stale",

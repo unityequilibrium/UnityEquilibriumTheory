@@ -5929,9 +5929,9 @@ EVIDENCE_PATHS:
 
 MAJOR_RESULT_CLOSURE: `T13_HE4_COMPOSITION_REFERENCE_LINEAGE_SCREEN` is `PARTIAL`; the recorded bounded Core composition claim is not promoted or revalidated by this pass.
 
-WHAT_IS_ACTUALLY_CLOSED: Each of the composition artifact's 12 cited references has one current same-basename candidate; all top-level status strings match.
+WHAT_IS_ACTUALLY_CLOSED: Each of the composition artifact's 12 cited references has one current same-basename candidate; all top-level status strings match. Nine candidate files match the recorded committed-tree bytes; the other three have explicit field deltas.
 
-WHAT_REMAINS_OPEN: The cited paths are absent and all 12 hashes differ. Semantic equivalence, recursive source provenance, J02 review and clean G0 verification remain open.
+WHAT_REMAINS_OPEN: The cited paths are absent and all 12 recorded composition hashes differ. One changed causal-branch summary adds `CLOSED_FOR_LANE`; the historical dirty-worktree contents are not reconstructed. Semantic equivalence, recursive source provenance, J02 review and clean G0 verification remain open.
 
 DEPENDENCY_UNLOCKED: None.
 
@@ -5941,7 +5941,7 @@ WHAT_CHANGED: Added a read-only Topic 13 verifier, regression tests, JSON audit 
 
 EQUATION_OR_MAPPING: Path/hash identity and recorded status are provenance checks, not an observable map or physical result.
 
-VERIFICATION: Three new tests and 14 related Core tests passed. JSON SHA-256 `386dcf19a7ea36c49f5e5de7feba1f53e487ecd8e255168c83a0a02949021d81`. No Xie 2026 data was read.
+VERIFICATION: Four lineage tests and 14 related Core tests passed. Committed-tree comparison `9 BYTE_IDENTICAL / 3 CHANGED / 0 unavailable`. JSON SHA-256 `a23978b888dcbb49f9979a6b14d296bf9996965a2cbb10fd5b5e4adcd284fc95`. No Xie 2026 data was read.
 
 CONTROLLING_BLOCKER: `clean_equivalence_and_upstream_provenance_not_revalidated`.
 
