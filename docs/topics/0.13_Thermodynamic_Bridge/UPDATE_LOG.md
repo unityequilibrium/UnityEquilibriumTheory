@@ -6164,3 +6164,27 @@ CONTROLLING_BLOCKER: `independent_non_sound_calibration_or_response_source_not_a
 NEXT_ACTION: Seek a permitted, genuinely independent response/calibration measurement with protocol and uncertainty, or keep J02 as a disclosed comparator in the two-week portfolio. Obtain Core-owner baseline admission separately.
 
 CLAIM_BOUNDARY: No change to local alpha, graphite-TTG independence, G0, two-fluid prediction or Full Topic 13 readiness. Method-level overlap does not prove exact row-level covariance.
+
+## 2026-09-28 - Independent He-4 measurement source-route triage
+
+MAJOR_RESULT_CLOSURE: `T13_HE4_INDEPENDENT_MEASUREMENT_ROUTE_SCREEN` is `PARTIAL` for source-family triage, not data admission.
+
+WHAT_IS_ACTUALLY_CLOSED: J02 recommended spline, Heiserman key 1 and Tam-Ahlers key 3 are not promoted as independent He-II tests; Wang-Wagner-Donnelly key 5 and Dash-Taylor oscillating disks are named follow-up routes with distinct acceptance tasks.
+
+WHAT_REMAINS_OPEN: Wang primary rows/protocol/covariance, Dash numeric normal-density rows/modern scale, source permission, two-fluid operator and G0 revalidation.
+
+DEPENDENCY_UNLOCKED: None; admitted response row count stays zero.
+
+STATUS: `PASS_SOURCE_FAMILY_ROUTE_TRIAGE_ONLY`; `full_core_unlock=false`.
+
+WHAT_CHANGED: Added literature/source-key route audit, two guard tests and a dated note; synced Topic 13 funding plan, 12-week roadmap and limitations. No Core source, numerical calibration or held-out data changed.
+
+EQUATION_OR_MAPPING: `alpha_Phi_K` uses a local superfluid-fraction temperature slope; second-sound velocity is a different response observable requiring an admitted two-fluid operator.
+
+VERIFICATION: NIST Sections 2/4 Tables 2.1/4.1 and the Heiserman, Maynard and Dash-Taylor primary abstracts inspected. The Table 4.1 Wang key-5 study-level uncertainty is printed as 0.07%, not established as a row-level sigma. Two focused guard tests passed. Machine screen SHA-256 `6730f659a833ad6c95433f52815cb37e343b9961fab7a318e4300f41488128b0`. Xie 2026 data were not read.
+
+CONTROLLING_BLOCKER: `primary_Wang_protocol_row_uncertainty_and_ancestry_not_verified`; the physical UET operator and clean Core baseline are separate blockers.
+
+NEXT_ACTION: Inspect permitted Wang primary rows and measurement conditions; independently check Dash numeric calibration and scale conversion. Stop source search at the D3 decision ceiling if admission cannot be supported, and return to identifiability/measurement design.
+
+CLAIM_BOUNDARY: Study-key separation is a candidate source route, not demonstrated statistical independence, UET prediction, empirical validation or Full Topic 13 closure.

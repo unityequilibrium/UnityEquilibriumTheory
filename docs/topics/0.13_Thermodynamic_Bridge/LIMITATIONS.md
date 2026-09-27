@@ -499,3 +499,9 @@ source. Exact row covariance is not known. J02 is therefore a disclosed
 source-overlap comparator, not independent or blind He-II validation. The
 numeric local alpha and its independence from graphite TTG/Xie fitting are
 unchanged. See the [ancestry audit](Result/artifacts/T13_HE4_J02_CALIBRATION_SOURCE_ANCESTRY_2026-09-28.md).
+
+An [independent-measurement route screen](Result/artifacts/T13_HE4_INDEPENDENT_MEASUREMENT_ROUTE_SCREEN_2026-09-28.md)
+names Wang-Wagner-Donnelly second-sound data and Dash-Taylor oscillating-disk
+normal-density data as follow-up routes. Distinct study names/methods do not
+yet establish statistical independence, permitted numeric access, matched
+temperature scales or a UET two-fluid prediction; neither source is admitted.

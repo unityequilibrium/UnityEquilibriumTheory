@@ -78,6 +78,8 @@ Primary source หรือ experiment record ต้องให้ material/sta
 
 อัปเดต 28 ก.ย.: [J02 source-ancestry audit](Result/artifacts/T13_HE4_J02_CALIBRATION_SOURCE_ANCESTRY_2026-09-28.md) พบความทับซ้อนระดับวิธีวัดระหว่าง calibration ของ `alpha_Phi_K` กับ second-sound reference ในช่วงอุณหภูมิเดียวกัน จึงใช้ J02 เป็น comparator สำหรับออกแบบ protocol เท่านั้น ไม่ใช่ independent validation. งาน W5-W6 ต้องหาแหล่งวัดที่ไม่สืบจาก sound calibration หรือออกแบบการวัดตอบสนองอิสระ และตรวจ covariance ก่อนใช้คำว่า independent comparison; หากทำไม่ได้ ให้เลือกพอร์ตแบบ methods/measurement feasibility ตามกติกาด้านล่าง
 
+เส้นทางที่ลงชื่อแล้วอยู่ใน [measurement-route screen](Result/artifacts/T13_HE4_INDEPENDENT_MEASUREMENT_ROUTE_SCREEN_2026-09-28.md): ตรวจ primary Wang key 5 และ calibration ทางเลือก Dash-Taylor ก่อนขยายรายการแหล่งอื่น หาก primary rows/permission/uncertainty หรือ temperature-scale conversion ไม่ครบใน W6 ให้คง `NOT_ADMITTED` และทำพอร์ต feasibility แทนการเปลี่ยนแหล่งจากชื่อบทความอย่างเดียว
+
 ถ้าทำแล็บ: ต้องมี feasibility assessment ของ cryogenic access, thermometry, excitation/readout, safety/operator requirements, duration และ quotation จากผู้ให้บริการจริง ไม่มีคำมั่นว่าจะได้ lab slot หรือข้อมูลในสองเดือนโดยยังไม่คุยกับแล็บ การติดต่อแล็บเป็น action ที่ต้องได้รับอนุญาตจริง; แผนสามารถเตรียม request packet ล่วงหน้าได้
 
 ถ้า W6 ยังหา input ไม่ได้ ให้ส่ง portfolio v2 เป็น **theory/methods + experimental design pilot** พร้อม measurement specification และเหตุผลขอทุนสร้างข้อมูล ไม่เติมข้อมูล synthetic เป็น external evidence เป้าหมาย empirical ยังคงเปิด
