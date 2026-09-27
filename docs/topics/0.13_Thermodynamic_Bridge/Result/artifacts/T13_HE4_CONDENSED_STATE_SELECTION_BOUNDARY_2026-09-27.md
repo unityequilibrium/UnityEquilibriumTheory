@@ -1,0 +1,25 @@
+# Topic 13: condensed-state selection boundary for the He-4/O(2) bridge
+
+MAJOR_RESULT_CLOSURE: `T13_HE4_CONDENSED_STATE_SELECTION_BOUNDARY` is `CLOSED_FOR_LANE` for the **declared present-day equilibrium and local differential-response maps**. The planned He-4 predictive-content result and Full Topic 13 remain open.
+
+WHAT_IS_ACTUALLY_CLOSED: The published He-4 source package supplies total density and superfluid fraction at 1.7 K SVP; the present SI scale supplies `e0=(rho/m_He4) k_B T0`; and the local bridge supplies a *difference* map for the response coordinate. None of these declared records supplies an absolute relation between O(2) Noether charge or phase stiffness and helium atom number or superfluid mass density at a condensed action state. At fixed `T_nat=0.22` and `Phi=0.15`, two internal condensed witnesses with `mu=1.05` and `1.20` remain admissible under the tested tree and total-thermodynamic checks. They yield different tree Goldstone speed squares (`0.046899` versus `0.134095`) and different action natural thermal-response coefficients (`1.65147` versus `1.06478`). **Neither witness is a calibrated physical He-II state.**
+
+WHAT_REMAINS_OPEN: A justified absolute map from O(2) charge/current or phase stiffness to physical He-4 density/fraction with an independently fixed normalization; an independently selected condensed `(mu,Phi)` state and uncertainty; the local `alpha`/`Z_Phi` response recalculated at that state; and its longitudinal two-fluid operator. Source-row covariance and actual mode protocol remain separate empirical blockers.
+
+DEPENDENCY_UNLOCKED: None. The witnesses do not select a physical background or enable a second-sound comparison.
+
+STATUS: `PASS_SCOPED_CONDENSED_STATE_SELECTION_BOUNDARY`; internal structural result only.
+
+WHAT_CHANGED: Added a source-hashed executable audit, three focused tests, the JSON result and this note. No Core equation, frozen He-4 calibration, threshold, data role or holdout policy changed.
+
+EQUATION_OR_MAPPING: For the declared tree branch, `q=Z mu^2-m_eff^2(Phi)`, `n_O2=Z mu q/lambda`, and `d n_O2/d mu=Z(3Z mu^2-m_eff^2)/lambda>0` on the positive condensed branch. **Conditional path:** if `Phi` is independently fixed and a Noether-charge-to-atom-density normalization is derived or independently measured, one density anchor can select `mu` by monotone inversion. If both `mu` and `Phi` are free, one density equation is insufficient and another independent observable is needed. The source relation `Delta(rho_s/rho)/f0=Z_Phi DeltaPhi_nat` only fixes a local difference; it does not define `rho_s/rho=F(A,n_O2,chi_perp)` or identify Noether charge with atoms. Treating the formal normal-sector charge fraction as a Landau mass fraction is forbidden by its own contract.
+
+VERIFICATION: The tree branches are `STABLE_CONDENSED`; both have positive finite-temperature *total* entropy and charge susceptibility. This is not a full finite-temperature or dynamical stability proof. The action-response derivative refinement changes by `2.21e-5` and `1.28e-5` relative; exploratory quadrature orders 96/128/192 have relative spans below `6e-7` for each witness. Those numerical checks were conducted after the question was formulated, not preregistered as a physical acceptance gate or experimental uncertainty. Three focused tests pass, including analytic-versus-finite-difference charge monotonicity and all evidence hashes. Machine-readable artifact SHA-256: `0d2f2019932862377a279e44e87a0487563b816efdfd8e2722ed71b71706fdf3`.
+
+CONTROLLING_BLOCKER: `independent_absolute_O2_charge_or_phase_stiffness_to_HeII_density_map`. A mere physical density number and `e0` scale are not a charge-identity equation.
+
+NEXT_ACTION: Audit whether the existing action plus a *declared* SI chemical-potential/current normalization can derive `n_He4=N_scale n_O2`, or whether a calibrated phase-stiffness-to-superfluid-density relation is required. Record the state, units, source, uncertainty and symmetry/response assumptions before inverting for `mu`. If neither map is justified, finish a scoped non-identifiability conclusion and make the experimental/derivation task the funded next step. Do not choose `mu` by second-sound speed or recycle the normal-state `Z_Phi` at a condensed state.
+
+CLAIM_BOUNDARY: The counterfactual reuse of the normal-state `Z_Phi` would produce approximately `-730` or `-470 K` per normalized Phi for the two diagnostic states rather than the locally calibrated `-1.022 K`; these are **invalid extrapolations shown only to expose cross-branch sensitivity**, not predictions or evidence against UET. Their tree Goldstone speeds are not He-II second sound. No external validation, full two-fluid transport or global UET claim follows.
+
+Evidence: [JSON audit](t13_he4_condensed_state_identifiability.json), [reproducible calculation](../../Code/03_Research/Research_T13_He4_Condensed_State_Identifiability.py), [tests](../../Code/03_Research/test_t13_he4_condensed_state_identifiability.py), and the preceding [frozen-branch audit](T13_HE4_FROZEN_BRANCH_COMPATIBILITY_2026-09-27.md).

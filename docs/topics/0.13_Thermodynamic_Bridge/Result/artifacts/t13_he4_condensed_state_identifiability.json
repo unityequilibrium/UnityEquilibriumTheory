@@ -1,0 +1,160 @@
+{
+  "schema_version": "t13-he4-condensed-state-identifiability-v1",
+  "major_result_id": "T13_HE4_CONDENSED_STATE_SELECTION_BOUNDARY",
+  "topic": "0.13",
+  "closure_level": "CLOSED_FOR_LANE",
+  "what_is_closed": "The declared He-4 equilibrium and local differential-response records do not select an absolute condensed O(2) chemical potential; distinct tree-stable states with positive total thermodynamic checks remain and have different internal Goldstone and thermal responses",
+  "equation_or_mapping": {
+    "condensed_tree_charge": "n_O2=Z*mu*(Z*mu^2-m_eff^2)/lambda",
+    "charge_monotonicity_at_fixed_phi": "d(n_O2)/d(mu)=Z*(3*Z*mu^2-m_eff^2)/lambda>0 when q>0, Z>0, lambda>0",
+    "local_calibration": "Delta(rho_s/rho)/f0=Z_Phi*DeltaPhi_nat; alpha_K=theta_T*alpha_nat/Z_Phi at the frozen normal reference",
+    "missing_absolute_map": "No declared F(A,chi_perp,n_O2)->rho_s/rho or n_He4=N_scale*n_O2 with independently fixed N_scale at a condensed state",
+    "conditional_selection": "With Phi fixed and a justified independent Noether-to-atom density scale, one physical density anchor could select mu by monotone inversion; if Phi also free, another independent equation is required"
+  },
+  "units": {
+    "natural_action_state": "natural",
+    "tree_speed_sq": "dimensionless natural c=1",
+    "alpha_phi_t_natural": "natural energy per natural Phi",
+    "counterfactual_carryover": "K per normalized Phi, inadmissible extrapolation only",
+    "physical_number_density": "m^-3"
+  },
+  "derivation_class": "conditional structural identifiability analysis with two tree-stable natural-unit witnesses and existing action-derived response evaluator",
+  "observable": "absolute condensed-state selection and future He-II longitudinal response admission",
+  "data_role": "INTERNAL_STATE_SELECTION_WITNESSES_NO_TARGET_FIT_NO_EXTERNAL_PREDICTION",
+  "fixed_inputs": {
+    "temperature_natural": 0.22,
+    "space_response_natural": 0.15,
+    "physical_temperature_K": 1.7,
+    "physical_number_density_m3": 2.185648035384131e+28,
+    "physical_superfluid_fraction": 0.7714130767785583,
+    "normal_reference_alpha_phi_t_natural": 0.0023138578447835533,
+    "normal_reference_Z_Phi": -0.017488421860832278,
+    "external_alpha_Phi_K": -1.02237987858849,
+    "tree_mass_sq_at_fixed_phi": 0.994,
+    "tree_kinetic": 1.0,
+    "tree_quartic": 1.0
+  },
+  "witnesses": [
+    {
+      "mu_natural": 1.05,
+      "phi_natural": 0.15,
+      "temperature_natural": 0.22,
+      "tree_branch": "condensed",
+      "finite_temperature_branch": "condensed",
+      "tree_stability": "STABLE_CONDENSED",
+      "tree_charge_density": 0.11392500000000005,
+      "tree_charge_susceptibility": 2.3135000000000003,
+      "tree_condensate_amplitude": 0.32939338184001216,
+      "tree_goldstone_speed_sq": 0.04689863842662634,
+      "total_entropy_density": 0.03107078254419894,
+      "total_charge_susceptibility": 2.3636198733612397,
+      "alpha_phi_t_natural": 1.6514698600167634,
+      "alpha_phi_t_refined_natural": 1.6515062846932556,
+      "response_refinement_relative_change": 2.205542711506231e-05,
+      "quadrature_alpha_phi_t_natural": {
+        "96": 1.651470668852504,
+        "128": 1.6514698600167634,
+        "192": 1.6514696985273254
+      },
+      "quadrature_relative_span": 5.875524598680602e-07,
+      "counterfactual_normal_Z_carryover_K_per_Phi_norm": -729.7032351330258,
+      "physical_HeII_state_admitted": false
+    },
+    {
+      "mu_natural": 1.2,
+      "phi_natural": 0.15,
+      "temperature_natural": 0.22,
+      "tree_branch": "condensed",
+      "finite_temperature_branch": "condensed",
+      "tree_stability": "STABLE_CONDENSED",
+      "tree_charge_density": 0.5351999999999999,
+      "tree_charge_susceptibility": 3.3259999999999996,
+      "tree_condensate_amplitude": 0.66783231428256,
+      "tree_goldstone_speed_sq": 0.13409500901984367,
+      "total_entropy_density": 0.027786355801077967,
+      "total_charge_susceptibility": 3.3346009095033824,
+      "alpha_phi_t_natural": 1.0647845331846988,
+      "alpha_phi_t_refined_natural": 1.0647982107067577,
+      "response_refinement_relative_change": 1.2845177538251986e-05,
+      "quadrature_alpha_phi_t_natural": {
+        "96": 1.0647849761397388,
+        "128": 1.0647845331846988,
+        "192": 1.064784444971373
+      },
+      "quadrature_relative_span": 4.988505647686204e-07,
+      "counterfactual_normal_Z_carryover_K_per_Phi_norm": -470.47586964535736,
+      "physical_HeII_state_admitted": false
+    }
+  ],
+  "quadrature_policy": "Orders 96/128/192 are an exploratory post-hoc robustness check, not a preregistered physical acceptance gate or uncertainty estimate",
+  "checks": {
+    "frozen_reference_is_normal": true,
+    "witnesses_are_tree_stable_condensed_with_positive_total_thermo_checks": true,
+    "natural_response_changes_across_candidate_states": true,
+    "normal_state_gain_was_matched_locally": true,
+    "source_fractions_have_no_declared_absolute_O2_order_parameter_map": true,
+    "si_scale_is_thermal_cell_scale_not_charge_identity": true,
+    "no_candidate_promoted_to_physical_match": true
+  },
+  "verification_status": "PASS_SCOPED_CONDENSED_STATE_SELECTION_BOUNDARY",
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+      "sha256": "13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json",
+      "sha256": "705783a70c4c2b87505afa47863b2eceee73ead6c7dd26b3b415ba5dfb871d4f"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json",
+      "sha256": "4fe52bd87f1531dcaaadeeddd99ea48744d4ef574eb7b1e6d9c65bb8f41aa2a9"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_uet_o2_action_thermal_observable_bridge_audit.json",
+      "sha256": "7ba49d3f629c91f3f88dda6ad717d8928e58439de7517a5979f0a465b9f52585"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_o2_physical_anchor_source_package.json",
+      "sha256": "4d02b1faac1cefe3ce79ced525183e2d38066604808d91f9c2769d515ab8b770"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_frozen_branch_compatibility.json",
+      "sha256": "6ca734bd4aaceea177ef96609dc1c3063d5bc5dfdeb697d14f9dc506a794cad9"
+    },
+    {
+      "path": "docs/core/01_contracts/O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md",
+      "sha256": "3210f45543dd90b42ef5593b6693a2348819b363a98cce3c66411378f0d6474d"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_finite_density_eos.py",
+      "sha256": "9cf2fcbaac868a22643b753ed931b466cf125ff2da3e7452ca70e548f419bfe8"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "1e61a7763406a4174fc0c0b1149d1b33cdb39ae69bd84fbe5c9ee6e8fb23c465"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_formal_two_sector_thermodynamics.py",
+      "sha256": "531ed369c6e96dd071d40dadadd59e02cd6a459dcf2ddc48662c8f294cfcf49c"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_He4_Condensed_State_Identifiability.py",
+      "sha256": "4a1a0051249b5c09c2696c4fa08bf1687c4f23d875d902b49951284dc6406877"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_he4_condensed_state_identifiability.py",
+      "sha256": "66c6b140eec8c1954125dcc590bca9d1d225931ed04ac4a4f56963d69d220336"
+    }
+  ],
+  "open_blockers": [
+    "independent_absolute_O2_charge_or_phase_stiffness_to_HeII_density_map",
+    "independently_selected_condensed_mu_and_phi_with_uncertainty",
+    "rederived_condensed_alpha_and_Z_Phi_at_same_state",
+    "admitted_longitudinal_two_fluid_operator"
+  ],
+  "controlling_blocker": "independent_absolute_O2_charge_or_phase_stiffness_to_HeII_density_map",
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "claim_boundary": "The two internal witnesses are not calibrated He-II candidates; their tree Goldstone speeds are not second sound. The counterfactual reuse of normal Z_Phi is intentionally invalid and only diagnoses cross-branch sensitivity. No physical mapping, holdout fit, TTG validation, or Full Topic 13 closure is claimed."
+}
