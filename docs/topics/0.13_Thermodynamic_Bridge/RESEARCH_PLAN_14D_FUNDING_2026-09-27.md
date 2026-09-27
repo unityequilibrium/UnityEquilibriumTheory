@@ -223,6 +223,8 @@ Git: เก็บของเดิมใน dirty worktree; D1 สร้าง 
 
 [Local relaxed-`Phi` response boundary](Result/artifacts/T13_HE4_RELAXED_PHI_RESPONSE_BOUNDARY_2026-09-27.md) ปิดคำถามย่อยที่สำคัญต่อ D4–D5: EOS ที่ตรึง `Phi` ไม่กำหนด ordinary isothermal response เอง แม้คง pressure/density/response แบบตรึงไว้ที่ anchor เดิม ศักย์ตอบสนองท้องถิ่นที่เสถียรสองแบบยังให้ relaxed susceptibility ต่างกัน อีกทั้ง root conditional เดิมไม่ stationary สำหรับ flat partial combination ของ action ที่ประกาศ (`Omega_Phi=-0.04130585` ในหน่วย natural) ผลนี้ไม่ใช่ helium prediction หรือ no-go ของ full UET; ก่อนเทียบ source ต้องปิด stationary background/กฎ `Phi` และ effective curvature `K` อย่างอิสระ
 
+[Conditional flat partial-action stationary root](Result/artifacts/T13_HE4_FLAT_PARTIAL_STATIONARY_ROOT_2026-09-27.md) แสดงว่าการไม่ stationary ของ root เดิมไม่ใช่จุดจบเชิงตัวเลข: เมื่อแก้ `Phi` และ `mu` ใน approximation เดิมร่วมกับเป้าความหนาแน่นที่เคยใช้สร้าง `e0` พบ root condensed ที่ลู่เข้าและ curvature `Phi` เป็นบวก แต่การ match density ยังคง circular และไม่ได้ปิด finite-temperature action/physical map ขั้น D4–D5 จึงต้องใช้ root นี้เป็น conditional internal witness และตรวจ Ward/renormalization กับ observable อิสระก่อนอ้าง predictive content
+
 ## 11. แหล่งอ้างอิงที่ใช้วางแผน
 
 - [Donnelly–Barenghi 1998, NIST-hosted reference paper](https://srd.nist.gov/jpcrdreprint/1.556028.pdf), DOI 10.1063/1.556028: แหล่งข้อมูลสมบัติ He-4 ตาม SVP รวม second sound; ต้องย้อนจาก compilation ไป primary experiment สำหรับ protocol/uncertainty ที่ใช้ตัดสิน

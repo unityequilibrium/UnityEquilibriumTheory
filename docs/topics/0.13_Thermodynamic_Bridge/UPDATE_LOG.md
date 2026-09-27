@@ -5972,3 +5972,27 @@ CONTROLLING_BLOCKER: `declared_flat_partial_action_not_stationary_at_conditional
 NEXT_ACTION: Derive/register the physical finite-temperature stationary background or explain why the flat partial-action probe is inapplicable; then source-lock independent effective stiffness/relaxation input before using ordinary isothermal compressibility as a test.
 
 CLAIM_BOUNDARY: Conditional local class witness and flat partial-action probe only; no full-action no-go, physical He-II prediction or external validation.
+
+## 2026-09-27 - Conditional flat partial-action stationary root
+
+MAJOR_RESULT_CLOSURE: `T13_HE4_FLAT_PARTIAL_STATIONARY_ROOT_CONDITIONAL` is `CLOSED_FOR_LANE` for a numerical root of the declared flat partial approximation, not physical He-II closure.
+
+WHAT_IS_ACTUALLY_CLOSED: Fixed-`mu` stationarity moves `Phi` to about `0.677271`; joint stationarity plus the recycled density condition has a condensed, locally `Phi`-stable root at `mu=1.851515585`, `Phi=0.674642478`.
+
+WHAT_REMAINS_OPEN: Full finite-temperature Ward/renormalization completion, admitted atom/pressure/Phi map, independent source row and two-fluid dynamics. Density matching remains circular.
+
+DEPENDENCY_UNLOCKED: Conditional internal response design only; no physical or Core unlock.
+
+STATUS: `PASS_CONDITIONAL_FLAT_PARTIAL_STATIONARY_ROOT`; G0 and Full Topic 13 unchanged.
+
+WHAT_CHANGED: Added nested-bracket numerical audit, three tests, JSON and note; no Core or external source file changed.
+
+EQUATION_OR_MAPPING: `epsilon_nc U'(Phi)=partial_Phi p_qp`, `partial_mu p_qp=1/T_nat` only under the unadmitted density map, `K_eff=epsilon_nc U''-p_PhiPhi>0`.
+
+VERIFICATION: Three derivative/quadrature runs agree; 11 linked Topic 13 tests pass. JSON SHA-256 `8cc0725c298f746500511bf9e4da7585e41a207e658dc02c76f1d0e5726797a3`. No Xie 2026 data read.
+
+CONTROLLING_BLOCKER: `full_finite_temperature_action_and_material_map_not_admitted`.
+
+NEXT_ACTION: Confront the partial root with a Ward-consistent finite-temperature condensate scheme and source-lock an independent physical response protocol before comparison.
+
+CLAIM_BOUNDARY: Synthetic local root and recycled density only, not a He-II prediction or external validation.
