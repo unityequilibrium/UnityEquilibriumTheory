@@ -5924,3 +5924,27 @@ EVIDENCE_PATHS:
 - `docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Funding_Baseline_Lineage.py`
 - `docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_funding_baseline_lineage.py`
 - `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_FUNDING_BASELINE_LINEAGE_SCREEN_2026-09-27.md`
+
+## 2026-09-27 - He-4 Core composition reference lineage
+
+MAJOR_RESULT_CLOSURE: `T13_HE4_COMPOSITION_REFERENCE_LINEAGE_SCREEN` is `PARTIAL`; the recorded bounded Core composition claim is not promoted or revalidated by this pass.
+
+WHAT_IS_ACTUALLY_CLOSED: Each of the composition artifact's 12 cited references has one current same-basename candidate; all top-level status strings match.
+
+WHAT_REMAINS_OPEN: The cited paths are absent and all 12 hashes differ. Semantic equivalence, recursive source provenance, J02 review and clean G0 verification remain open.
+
+DEPENDENCY_UNLOCKED: None.
+
+STATUS: `REFERENCE_DRIFT_CLASSIFIED_NOT_REVALIDATED`; G0 remains blocked.
+
+WHAT_CHANGED: Added a read-only Topic 13 verifier, regression tests, JSON audit and explanatory result note; no Core file was changed.
+
+EQUATION_OR_MAPPING: Path/hash identity and recorded status are provenance checks, not an observable map or physical result.
+
+VERIFICATION: Three new tests and 14 related Core tests passed. JSON SHA-256 `386dcf19a7ea36c49f5e5de7feba1f53e487ecd8e255168c83a0a02949021d81`. No Xie 2026 data was read.
+
+CONTROLLING_BLOCKER: `clean_equivalence_and_upstream_provenance_not_revalidated`.
+
+NEXT_ACTION: Compare each relocated payload and its producer/source chain, then ask the Core owner to reverify the selected clean baseline; review J02 before evaluating G0.
+
+CLAIM_BOUNDARY: Matching status strings and passing stored-status tests do not prove equivalence or independent He-4 prediction.

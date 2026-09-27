@@ -219,6 +219,8 @@ Git: เก็บของเดิมใน dirty worktree; D1 สร้าง 
 
 [G0 clean-baseline lineage screen](Result/artifacts/T13_FUNDING_BASELINE_LINEAGE_SCREEN_2026-09-27.md) ระบุชัดว่า 5 ผลย่อยใหม่ hash ตรง checkout นี้ แต่ baseline 8 ชิ้นจาก dirty branch เดิมเป็น `DRIFT` 4 และ `MISSING` 4; ไม่มีชิ้นใด `MATCH` อีกทั้ง J02 protocol ยังไม่อยู่ใน checkout นี้ จึงคง G0 = `BLOCKED_LINEAGE_RECONCILIATION` การเลือก clean equivalent ต้องตรวจเนื้อหา/บทบาทข้อมูลและ rerun Core ที่เกี่ยวข้อง ไม่บังคับให้ hash เก่าเท่ากันหรือเรียกการตรวจผลย่อยว่า G0 ผ่าน
 
+[He-4 composition reference-lineage screen](Result/artifacts/T13_HE4_COMPOSITION_REFERENCE_LINEAGE_2026-09-27.md) แยกการย้ายที่ของหลักฐานออกจากการตรวจเนื้อหา: reference 12 ชิ้นใน Core composition มีคู่ชื่อเดียวกันในตำแหน่งใหม่ทั้งหมดและ status ตรงกัน แต่ hash เปลี่ยนทั้ง 12 ชิ้น จึงยังไม่ยอมรับว่าเทียบเท่าหรือว่า Core baseline ถูก reproduce แล้ว ผล Core test ที่ผ่านตรวจสถานะที่บันทึกไว้ ไม่ได้ตรวจห่วงโซ่ source/hash ทั้งชุด
+
 ## 11. แหล่งอ้างอิงที่ใช้วางแผน
 
 - [Donnelly–Barenghi 1998, NIST-hosted reference paper](https://srd.nist.gov/jpcrdreprint/1.556028.pdf), DOI 10.1063/1.556028: แหล่งข้อมูลสมบัติ He-4 ตาม SVP รวม second sound; ต้องย้อนจาก compilation ไป primary experiment สำหรับ protocol/uncertainty ที่ใช้ตัดสิน
