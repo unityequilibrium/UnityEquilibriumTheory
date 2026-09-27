@@ -5894,3 +5894,33 @@ EVIDENCE_PATHS:
 - `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_isothermal_compressibility_source_route.json`
 - `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_HE4_COMPRESSIBILITY_SOURCE_ROUTE_2026-09-27.md`
 - `docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_funding_evidence_provenance.py`
+
+## 2026-09-27 - Funding baseline lineage screen
+
+MAJOR_RESULT_CLOSURE: `T13_FUNDING_CLEAN_BASELINE_LINEAGE_SCREEN` is `PARTIAL`; G0 and Full Topic 13 remain open.
+
+WHAT_IS_ACTUALLY_CLOSED: The eight historical dirty-branch baseline paths are classified against the clean checkout (`0 MATCH`, `4 DRIFT`, `4 MISSING`), while all five saved pre-sprint results and the separate source-route manifest hash-match the checkout.
+
+WHAT_REMAINS_OPEN: Select/reverify clean equivalents for each Core input, review the missing J02 protocol and rerun the relevant Core/source/holdout-exposure audits before G0 can be evaluated.
+
+DEPENDENCY_UNLOCKED: None; local subresult reproduction does not unlock G0.
+
+STATUS: `PASS_IDENTITY_SCREEN_WITH_OPEN_G0`; G0 = `BLOCKED_LINEAGE_RECONCILIATION`.
+
+WHAT_CHANGED: Added executable baseline-lineage verifier, three tests, JSON and result note; the 14-day plan links the screen. No Core file or physical gate changed.
+
+EQUATION_OR_MAPPING: Path plus SHA-256 identifies a saved input; historical hashes are audit evidence, not required values for selected clean equivalents.
+
+VERIFICATION: Focused suite `23 passed`; lineage artifact SHA-256 `277e06034f6ddf5550a0e14e44dc71f3a2aa452942212a39485f45aa2ffae5e1`. No Xie 2026 data or target curve was read.
+
+CONTROLLING_BLOCKER: `full_clean_core_baseline_not_revalidated`, with historical-equivalent selection and J02 absence as named subblockers.
+
+NEXT_ACTION: Build the selected clean-baseline manifest, review J02's referenced commit and rerun source/observable/Core audits only after their dependencies are present.
+
+CLAIM_BOUNDARY: Reproducible pre-sprint artifacts are not G0 completion, Core readiness, external validation or Full Topic 13 closure.
+
+EVIDENCE_PATHS:
+- `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_funding_baseline_lineage_audit.json`
+- `docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Funding_Baseline_Lineage.py`
+- `docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_funding_baseline_lineage.py`
+- `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_FUNDING_BASELINE_LINEAGE_SCREEN_2026-09-27.md`

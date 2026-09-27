@@ -217,6 +217,8 @@ Git: เก็บของเดิมใน dirty worktree; D1 สร้าง 
 
 [Source-route screen สำหรับ compressibility](Result/artifacts/T13_HE4_COMPRESSIBILITY_SOURCE_ROUTE_2026-09-27.md) ยังเป็น `PARTIAL` แยกจากผลย่อยที่ปิดได้ห้าชิ้น: แหล่ง SVP เดิมไม่มี row นี้ในแพ็กเกจ, Brooks-Donnelly เป็น EOS-derived comparator, และ Elwell-Meyer เป็น primary pressure-volume route ที่ยังต้องได้ absolute baseline/การย้าย state/uncertainty ก่อนรับ numeric row ห้ามใช้ first-sound, density ตามเส้น SVP หรือค่าการเปลี่ยนของ compressibility แทน absolute isothermal row โดยอัตโนมัติ
 
+[G0 clean-baseline lineage screen](Result/artifacts/T13_FUNDING_BASELINE_LINEAGE_SCREEN_2026-09-27.md) ระบุชัดว่า 5 ผลย่อยใหม่ hash ตรง checkout นี้ แต่ baseline 8 ชิ้นจาก dirty branch เดิมเป็น `DRIFT` 4 และ `MISSING` 4; ไม่มีชิ้นใด `MATCH` อีกทั้ง J02 protocol ยังไม่อยู่ใน checkout นี้ จึงคง G0 = `BLOCKED_LINEAGE_RECONCILIATION` การเลือก clean equivalent ต้องตรวจเนื้อหา/บทบาทข้อมูลและ rerun Core ที่เกี่ยวข้อง ไม่บังคับให้ hash เก่าเท่ากันหรือเรียกการตรวจผลย่อยว่า G0 ผ่าน
+
 ## 11. แหล่งอ้างอิงที่ใช้วางแผน
 
 - [Donnelly–Barenghi 1998, NIST-hosted reference paper](https://srd.nist.gov/jpcrdreprint/1.556028.pdf), DOI 10.1063/1.556028: แหล่งข้อมูลสมบัติ He-4 ตาม SVP รวม second sound; ต้องย้อนจาก compilation ไป primary experiment สำหรับ protocol/uncertainty ที่ใช้ตัดสิน
