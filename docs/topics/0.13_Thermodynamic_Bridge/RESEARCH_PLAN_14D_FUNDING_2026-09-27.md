@@ -225,6 +225,8 @@ Git: เก็บของเดิมใน dirty worktree; D1 สร้าง 
 
 [Conditional flat partial-action stationary root](Result/artifacts/T13_HE4_FLAT_PARTIAL_STATIONARY_ROOT_2026-09-27.md) แสดงว่าการไม่ stationary ของ root เดิมไม่ใช่จุดจบเชิงตัวเลข: เมื่อแก้ `Phi` และ `mu` ใน approximation เดิมร่วมกับเป้าความหนาแน่นที่เคยใช้สร้าง `e0` พบจุด stationary เฉพาะทิศ `Phi` บน tree-condensed branch ที่ลู่เข้าและ curvature `Phi` เป็นบวก แต่ **ไม่ได้** แก้สมดุล amplitude ของ condensate ที่ finite temperature หรือ Ward/Goldstone identity การ match density ยังคง circular ขั้น D4–D5 จึงใช้เป็น conditional internal witness เท่านั้น และต้องตรวจ microscopic Ward-consistent completion กับ observable อิสระก่อนอ้าง predictive content
 
+[Phi/amplitude compatibility result](Result/artifacts/T13_HE4_PHI_AMPLITUDE_COMPATIBILITY_2026-09-27.md) ใช้ no-go ของ Core กับ root conditional ใหม่นี้โดยตรง: ที่ `T>0`, `q>0`, `x=q/lambda` ระบบอยู่ใน stable thermal-only Gaussian domain ที่ `partial_x Omega>0` จึง **ไม่** stationary พร้อมกันในทิศ amplitude ในคลาสนั้น การค้น root เพิ่มในคลาสเดิมไม่ใช่ทางปิดผลหลัก ต้องเลือก renormalized/interacting Ward-preserving branch ที่ประกาศชัดก่อน ไม่เอาผล formal Ward lane มาแทน microscopic completion
+
 ## 11. แหล่งอ้างอิงที่ใช้วางแผน
 
 - [Donnelly–Barenghi 1998, NIST-hosted reference paper](https://srd.nist.gov/jpcrdreprint/1.556028.pdf), DOI 10.1063/1.556028: แหล่งข้อมูลสมบัติ He-4 ตาม SVP รวม second sound; ต้องย้อนจาก compilation ไป primary experiment สำหรับ protocol/uncertainty ที่ใช้ตัดสิน

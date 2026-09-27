@@ -5996,3 +5996,27 @@ CONTROLLING_BLOCKER: `finite_T_condensate_amplitude_and_Ward_stationarity_not_ve
 NEXT_ACTION: Test simultaneous Ward-consistent finite-temperature amplitude/Phi stationarity in one declared scheme; do not transplant this partial root into other branches. Source-lock an independent physical response protocol only after that mapping is justified.
 
 CLAIM_BOUNDARY: Synthetic Phi-only stationary point on a tree-condensed background and recycled density only; not full finite-T condensate stationarity, He-II prediction or external validation.
+
+## 2026-09-27 - Phi-only root amplitude compatibility
+
+MAJOR_RESULT_CLOSURE: `T13_HE4_PHI_ONLY_ROOT_THERMAL_GAUSSIAN_AMPLITUDE_NO_GO` is `CLOSED_AS_NO_GO` for simultaneous stationarity in the tree plus stable thermal-Gaussian class at the conditional Phi-only root.
+
+WHAT_IS_ACTUALLY_CLOSED: The root lies in the existing Core no-go domain; its tree-amplitude derivative is zero and stable thermal Gaussian amplitude derivative is positive, so Phi stationarity cannot close the condensate amplitude equation in that class.
+
+WHAT_REMAINS_OPEN: Named Ward-preserving interacting/renormalized completion, full amplitude/Phi stationarity, physical map and independent response data.
+
+DEPENDENCY_UNLOCKED: Research route narrowed; no physical/Core/Full Topic 13 unlock.
+
+STATUS: `PASS_SCOPED_PHI_ROOT_AMPLITUDE_NO_GO`.
+
+WHAT_CHANGED: Added a Topic 13 interface calculation, two tests, hash-backed JSON and note; no Core or source file changed.
+
+EQUATION_OR_MAPPING: At `T>0`, `q>0`, `x=q/lambda`, the existing scoped theorem gives `partial_x(Omega_tree+Omega_G)>0`; the separate `partial_Phi Omega=0` is insufficient.
+
+VERIFICATION: Positive mode/derivative margins at three representative momenta and positive one-sided amplitude secants at three steps and two quadrature orders; 23 Topic 13 He-4 tests and eight related Core tests pass. JSON SHA-256 `6bc82feda38344a3e9183b3c5d762952b7b0526e49368d486e3dfbe1ab13c716`. No Xie 2026 data read.
+
+CONTROLLING_BLOCKER: `ward_preserving_condensed_2PI_or_1N_microscopic_completion_missing`.
+
+NEXT_ACTION: Choose one declared Ward-preserving interacting/renormalized scheme and test simultaneous amplitude/Phi stationarity before any material-response comparison.
+
+CLAIM_BOUNDARY: Scoped no-go only, not a global UET failure or He-II prediction.
