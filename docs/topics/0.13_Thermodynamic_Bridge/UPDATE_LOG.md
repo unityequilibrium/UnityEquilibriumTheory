@@ -6020,3 +6020,27 @@ CONTROLLING_BLOCKER: `ward_preserving_condensed_2PI_or_1N_microscopic_completion
 NEXT_ACTION: Choose one declared Ward-preserving interacting/renormalized scheme and test simultaneous amplitude/Phi stationarity before any material-response comparison.
 
 CLAIM_BOUNDARY: Scoped no-go only, not a global UET failure or He-II prediction.
+
+## 2026-09-27 - Formal auxiliary Phi/condensate joint root
+
+MAJOR_RESULT_CLOSURE: `T13_FORMAL_AUXILIARY_PHI_CONDENSATE_JOINT_STATIONARITY` is `CLOSED_FOR_LANE` at Core's published formal auxiliary configuration (`Z=1.2`), not at the prior normalized `Z=1` root.
+
+WHAT_IS_ACTUALLY_CLOSED: A positive-condensate stationary point satisfies auxiliary, amplitude, Ward-gap and Phi equations within the fixed formal functional; analytic and numerical Phi envelope derivatives agree.
+
+WHAT_REMAINS_OPEN: Microscopic 2PI/1N or equivalent matching, physical renormalization, material/observable map, independent alpha and source data.
+
+DEPENDENCY_UNLOCKED: Formal feasibility only; no physical or Full Topic 13 unlock.
+
+STATUS: `PASS_FORMAL_AUXILIARY_PHI_JOINT_ROOT`; `full_core_unlock=false`.
+
+WHAT_CHANGED: Added a Topic 13 verifier, two tests, hash-backed JSON and result note. Core/source/holdout files were not changed.
+
+EQUATION_OR_MAPPING: `partial_Phi Omega_total=epsilon_nc*[U'(Phi)-h_coupling*(Z mu^2-m_eff^2(Phi))/(2 lambda)]=0` on the auxiliary stationary envelope; this equation is `T`-independent at fixed `mu` in the declared formal scheme.
+
+VERIFICATION: `Phi=0.268626816335582` at `mu=1.3,Z=1.2` across `T=0.20,0.25,0.28`; positive condensate and profiled Phi curvature, Ward/gap residuals, off-root finite-difference derivative and two-order quadrature check pass. Twenty-five Topic 13 He-4 and three Core auxiliary tests pass. JSON SHA-256 `eafd283cc7cde049c4217a3462ea1f13103bbcaeee5185240797f43527eaf662`. The original `Z=1` case is rejected by the function's domain; no Xie 2026 data read.
+
+CONTROLLING_BLOCKER: `microscopic_2pi_or_controlled_1N_matching_missing`.
+
+NEXT_ACTION: Choose a controlled condensed finite-temperature approximation and fixed renormalization prescription before any physical-response comparison; do not transfer this root to `Z=1`.
+
+CLAIM_BOUNDARY: Synthetic flat homogeneous formal lane only; not a full Hessian/curved stability result, He-II prediction, TTG calibration, microscopic closure or Full Topic 13.

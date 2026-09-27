@@ -227,6 +227,8 @@ Git: เก็บของเดิมใน dirty worktree; D1 สร้าง 
 
 [Phi/amplitude compatibility result](Result/artifacts/T13_HE4_PHI_AMPLITUDE_COMPATIBILITY_2026-09-27.md) ใช้ no-go ของ Core กับ root conditional ใหม่นี้โดยตรง: ที่ `T>0`, `q>0`, `x=q/lambda` ระบบอยู่ใน stable thermal-only Gaussian domain ที่ `partial_x Omega>0` จึง **ไม่** stationary พร้อมกันในทิศ amplitude ในคลาสนั้น การค้น root เพิ่มในคลาสเดิมไม่ใช่ทางปิดผลหลัก ต้องเลือก renormalized/interacting Ward-preserving branch ที่ประกาศชัดก่อน ไม่เอาผล formal Ward lane มาแทน microscopic completion
 
+[Formal auxiliary joint root](Result/artifacts/T13_HE4_FORMAL_AUXILIARY_PHI_JOINT_ROOT_2026-09-27.md) แสดงว่าใน **formal** auxiliary-field branch ของ Core ที่กำหนด `Z=1.2` มีจุดสมดุลร่วมของ `Phi`, condensate amplitude, auxiliary gap และ Ward gap โดยไม่ใช้ target density แต่สมการ `Phi` ของ approximation นี้ไม่ขึ้นกับ `T` โดยตรงเมื่อ fix `mu` และ branch เดิม `Z=1` อยู่นอก domain ของมัน ผลนี้เป็น feasibility ของคนละพารามิเตอร์และยังไม่ใช่ microscopic/He-II bridge; D4–D5 ต้องตรวจ scheme จริงก่อนเทียบข้อมูล
+
 ## 11. แหล่งอ้างอิงที่ใช้วางแผน
 
 - [Donnelly–Barenghi 1998, NIST-hosted reference paper](https://srd.nist.gov/jpcrdreprint/1.556028.pdf), DOI 10.1063/1.556028: แหล่งข้อมูลสมบัติ He-4 ตาม SVP รวม second sound; ต้องย้อนจาก compilation ไป primary experiment สำหรับ protocol/uncertainty ที่ใช้ตัดสิน

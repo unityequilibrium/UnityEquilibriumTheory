@@ -1,0 +1,245 @@
+{
+  "schema_version": "t13-he4-formal-auxiliary-phi-joint-root-v1",
+  "major_result_id": "T13_FORMAL_AUXILIARY_PHI_CONDENSATE_JOINT_STATIONARITY",
+  "topic": "0.13",
+  "closure_level": "CLOSED_FOR_LANE",
+  "what_is_closed": "At Core's fixed formal auxiliary-field configuration in a flat homogeneous partial-action composition, a positive-condensate root jointly satisfies the auxiliary, amplitude, Ward-gap and Phi stationarity equations at fixed chemical potential",
+  "equation_or_mapping": {
+    "auxiliary_solution": "M^2=Z*mu^2; rho=(M^2-m_eff^2(Phi)-2*lambda*I_R)/lambda",
+    "Phi_stationarity": "0=epsilon_nc*[U'(Phi)-h*(Z*mu^2-m_eff^2(Phi))/(2*lambda)]",
+    "Phi_curvature": "epsilon_nc*U''(Phi)-epsilon_nc^2*h^2/(2*lambda)>0",
+    "thermal_boundary": "At fixed mu and fixed subtraction, this formal Phi equation has no explicit T; rho and thermodynamic observables still vary with T"
+  },
+  "units": {
+    "lane": "natural",
+    "Phi_and_mu": "natural energy",
+    "rho": "natural amplitude squared",
+    "SI_thermal_map": "not emitted"
+  },
+  "derivation_class": "conditional flat homogeneous composition of the declared response potential and existing formal auxiliary functional; stationary-envelope derivative with numerical finite-difference cross-check",
+  "observable": "internal joint formal stationarity; not an admitted He-II or TTG operator",
+  "data_role": "SYNTHETIC_FORMAL_ACTION_CONTROL_NO_RESPONSE_SOURCE",
+  "reference_config": {
+    "T_natural": 0.25,
+    "mu_natural": 1.3,
+    "Phi_seed": 0.2,
+    "Z_auxiliary": 1.2,
+    "Z_prior_normalized": 1.0,
+    "fixed_momentum_cutoff": 91.0,
+    "Phi_bracket": [
+      0.0,
+      0.5
+    ],
+    "Phi_root": 0.268626816335582,
+    "normalized_domain_rejection": "auxiliary-field condensed lane requires Z > 1"
+  },
+  "temperature_and_resolution_records": [
+    {
+      "temperature": 0.2,
+      "quadrature_order": 128,
+      "Phi": 0.268626816335582,
+      "condensate_amplitude_sq": 1.8985997169574238,
+      "auxiliary_gap_residual": 5.898059818321144e-17,
+      "amplitude_stationarity_residual": 0.0,
+      "ward_phase_gap_sq": 0.0,
+      "charge_density_natural": 2.9700647882391937,
+      "entropy_density_natural": 0.025073655911533738,
+      "analytic_Phi_residual": -5.551115123125783e-18,
+      "profiled_Phi_derivative_fd": 2.686739719592879e-10,
+      "analytic_Phi_curvature": 0.12108560993637717,
+      "profiled_Phi_curvature_fd": 0.12108563041124398
+    },
+    {
+      "temperature": 0.2,
+      "quadrature_order": 192,
+      "Phi": 0.268626816335582,
+      "condensate_amplitude_sq": 1.8985997169574136,
+      "auxiliary_gap_residual": 4.5102810375396984e-17,
+      "amplitude_stationarity_residual": 0.0,
+      "ward_phase_gap_sq": 0.0,
+      "charge_density_natural": 2.970064788239192,
+      "entropy_density_natural": 0.02507365591153346,
+      "analytic_Phi_residual": -5.551115123125783e-18,
+      "profiled_Phi_derivative_fd": 2.6922908347160046e-10,
+      "analytic_Phi_curvature": 0.12108560993637717,
+      "profiled_Phi_curvature_fd": 0.12108561930901374
+    },
+    {
+      "temperature": 0.25,
+      "quadrature_order": 128,
+      "Phi": 0.268626816335582,
+      "condensate_amplitude_sq": 1.8953336398644622,
+      "auxiliary_gap_residual": -1.0061396160665481e-16,
+      "amplitude_stationarity_residual": 0.0,
+      "ward_phase_gap_sq": 0.0,
+      "charge_density_natural": 2.9710059399834523,
+      "entropy_density_natural": 0.041514266141061615,
+      "analytic_Phi_residual": -5.551115123125783e-18,
+      "profiled_Phi_derivative_fd": 2.6922908347160046e-10,
+      "analytic_Phi_curvature": 0.12108560993637717,
+      "profiled_Phi_curvature_fd": 0.12108564151347423
+    },
+    {
+      "temperature": 0.25,
+      "quadrature_order": 192,
+      "Phi": 0.268626816335582,
+      "condensate_amplitude_sq": 1.8953336398644494,
+      "auxiliary_gap_residual": -1.3877787807814457e-17,
+      "amplitude_stationarity_residual": 0.0,
+      "ward_phase_gap_sq": 0.0,
+      "charge_density_natural": 2.97100593998345,
+      "entropy_density_natural": 0.04151426614106088,
+      "analytic_Phi_residual": -5.551115123125783e-18,
+      "profiled_Phi_derivative_fd": 2.6922908347160046e-10,
+      "analytic_Phi_curvature": 0.12108560993637717,
+      "profiled_Phi_curvature_fd": 0.12108561930901374
+    },
+    {
+      "temperature": 0.28,
+      "quadrature_order": 128,
+      "Phi": 0.268626816335582,
+      "condensate_amplitude_sq": 1.8930055233544523,
+      "auxiliary_gap_residual": -1.0755285551056204e-16,
+      "amplitude_stationarity_residual": 0.0,
+      "ward_phase_gap_sq": 0.0,
+      "charge_density_natural": 2.971842568159451,
+      "entropy_density_natural": 0.05348014427614986,
+      "analytic_Phi_residual": -5.551115123125783e-18,
+      "profiled_Phi_derivative_fd": 2.681188604469753e-10,
+      "analytic_Phi_curvature": 0.12108560993637717,
+      "profiled_Phi_curvature_fd": 0.12108564151347423
+    },
+    {
+      "temperature": 0.28,
+      "quadrature_order": 192,
+      "Phi": 0.268626816335582,
+      "condensate_amplitude_sq": 1.8930055233544376,
+      "auxiliary_gap_residual": 4.85722573273506e-17,
+      "amplitude_stationarity_residual": 0.0,
+      "ward_phase_gap_sq": 0.0,
+      "charge_density_natural": 2.9718425681594476,
+      "entropy_density_natural": 0.053480144276149416,
+      "analytic_Phi_residual": -5.551115123125783e-18,
+      "profiled_Phi_derivative_fd": 2.6922908347160046e-10,
+      "analytic_Phi_curvature": 0.12108560993637717,
+      "profiled_Phi_curvature_fd": 0.12108561930901374
+    }
+  ],
+  "off_root_envelope_witnesses": [
+    {
+      "temperature": 0.2,
+      "quadrature_order": 128,
+      "Phi": 0.2,
+      "analytic_Phi_residual": -0.007962499999999996,
+      "profiled_Phi_derivative_fd": -0.007962499800062695
+    },
+    {
+      "temperature": 0.2,
+      "quadrature_order": 192,
+      "Phi": 0.2,
+      "analytic_Phi_residual": -0.007962499999999996,
+      "profiled_Phi_derivative_fd": -0.007962499800062695
+    },
+    {
+      "temperature": 0.25,
+      "quadrature_order": 128,
+      "Phi": 0.2,
+      "analytic_Phi_residual": -0.007962499999999996,
+      "profiled_Phi_derivative_fd": -0.007962499799507583
+    },
+    {
+      "temperature": 0.25,
+      "quadrature_order": 192,
+      "Phi": 0.2,
+      "analytic_Phi_residual": -0.007962499999999996,
+      "profiled_Phi_derivative_fd": -0.007962499800062695
+    },
+    {
+      "temperature": 0.28,
+      "quadrature_order": 128,
+      "Phi": 0.2,
+      "analytic_Phi_residual": -0.007962499999999996,
+      "profiled_Phi_derivative_fd": -0.007962499799507583
+    },
+    {
+      "temperature": 0.28,
+      "quadrature_order": 192,
+      "Phi": 0.2,
+      "analytic_Phi_residual": -0.007962499999999996,
+      "profiled_Phi_derivative_fd": -0.007962499800062695
+    }
+  ],
+  "quadrature_differences": {
+    "0.2": {
+      "condensate_amplitude_sq": 1.021405182655144e-14,
+      "charge_density_natural": 1.7763568394002505e-15,
+      "entropy_density_natural": 2.7755575615628914e-16
+    },
+    "0.25": {
+      "condensate_amplitude_sq": 1.2878587085651816e-14,
+      "charge_density_natural": 2.220446049250313e-15,
+      "entropy_density_natural": 7.355227538141662e-16
+    },
+    "0.28": {
+      "condensate_amplitude_sq": 1.4654943925052066e-14,
+      "charge_density_natural": 3.552713678800501e-15,
+      "entropy_density_natural": 4.440892098500626e-16
+    }
+  },
+  "checks": {
+    "core_auxiliary_artifact_is_formal_only": true,
+    "gaussian_root_remains_a_separate_blocked_branch": true,
+    "original_normalized_action_is_outside_auxiliary_domain": true,
+    "Phi_bracket_and_analytic_root": true,
+    "joint_auxiliary_amplitude_Ward_and_Phi_stationarity": true,
+    "local_Phi_curvature_positive_and_fd_agrees": true,
+    "off_root_envelope_derivative_agrees": true,
+    "quadrature_refinement_agrees": true,
+    "no_response_target_or_holdout_input": true
+  },
+  "verification_status": "PASS_FORMAL_AUXILIARY_PHI_JOINT_ROOT",
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_uet_o2_auxiliary_field_condensed_audit.json",
+      "sha256": "cfdb27855aa08ae113a3775df50d2bec5f67da2d22fcdf0615f959edf7c909c5"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_phi_amplitude_compatibility.json",
+      "sha256": "6bc82feda38344a3e9183b3c5d762952b7b0526e49368d486e3dfbe1ab13c716"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_auxiliary_field_condensed.py",
+      "sha256": "81d6786c88797b9c1efe37995813e44ca2c846a3ad4aaa74cb0d4db08e2935c2"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_finite_density_eos.py",
+      "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_response.py",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_uet_o2_auxiliary_field_condensed.py",
+      "sha256": "9c555f50cc9e85f115549b4e5f44d705bac67a81d3362c91b8a83e104098b758"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_He4_Formal_Auxiliary_Phi_Joint_Root.py",
+      "sha256": "87cb25f95c3c8286fe9373a094e2add7030decfdc58fe5581cb89fe11ebeeff3"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_he4_formal_auxiliary_phi_joint_root.py",
+      "sha256": "5fa743beff7bfea60af6b2f7d12477d8a24c592fd44a2d1c7afd6dc4ca83d9ee"
+    }
+  ],
+  "open_blockers": [
+    "microscopic_2pi_or_controlled_1N_matching_missing",
+    "physical_finite_temperature_renormalization_scheme_missing",
+    "Z_1_normalized_branch_outside_auxiliary_domain",
+    "material_map_and_independent_response_data_missing"
+  ],
+  "controlling_blocker": "microscopic_2pi_or_controlled_1N_matching_missing",
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "claim_boundary": "This is only a flat homogeneous formal joint stationary point for Core's declared Z>1 auxiliary-field configuration. It is not a full Hessian or curved/action-level stability result, cannot be transplanted to the previous Z=1 root, does not resolve microscopic matching or scheme identifiability, and does not predict He-II, alpha_Phi_K, TTG or Full Topic 13. No Xie 2026 holdout was used."
+}
