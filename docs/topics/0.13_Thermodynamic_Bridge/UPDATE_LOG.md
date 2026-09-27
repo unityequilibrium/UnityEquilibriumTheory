@@ -5948,3 +5948,27 @@ CONTROLLING_BLOCKER: `clean_equivalence_and_upstream_provenance_not_revalidated`
 NEXT_ACTION: Compare each relocated payload and its producer/source chain, then ask the Core owner to reverify the selected clean baseline; review J02 before evaluating G0.
 
 CLAIM_BOUNDARY: Matching status strings and passing stored-status tests do not prove equivalence or independent He-4 prediction.
+
+## 2026-09-27 - Conditional relaxed-Phi response boundary
+
+MAJOR_RESULT_CLOSURE: `T13_HE4_RELAXED_PHI_RESPONSE_NONIDENTIFIABILITY_BOUNDARY` is `CLOSED_FOR_LANE` for an explicit local synthetic completion class only.
+
+WHAT_IS_ACTUALLY_CLOSED: Two stable local response potentials keep the same conditional anchor pressure/charge and clamped susceptibility while producing distinct relaxed susceptibilities; `chi_relaxed=chi_clamped+p_muPhi^2/K`. The declared flat partial potential is nonstationary at that conditional root.
+
+WHAT_REMAINS_OPEN: Full-action finite-temperature stationary background and effective curvature, admitted He-II charge and pressure map, measurement protocol and source row, dynamic transport, and Full Topic 13.
+
+DEPENDENCY_UNLOCKED: None.
+
+STATUS: `PASS_SCOPED_RELAXED_RESPONSE_NONIDENTIFIABILITY`; G0 and full Core unlock unchanged.
+
+WHAT_CHANGED: Added Topic 13 calculation, tests, JSON and explanatory note; no Core or external source file was changed.
+
+EQUATION_OR_MAPPING: `Omega_K=-p_qp+U_K`, `Omega_PhiPhi|0=K>0`, `dPhi/dmu=p_muPhi/K`, `chi_relaxed=p_mumu+p_muPhi^2/K` within the hypothetical local completion. The separate declared flat partial-action probe uses `Omega_Phi=epsilon_nc U'-p_Phi`.
+
+VERIFICATION: Three linked test modules gave eight passes; two derivative stencils and the prior clamped EOS state agree. Declared flat partial-action `Omega_Phi=-0.04130585`, local curvature positive `0.05257457`. Artifact SHA-256 `73d5cfc943187d345992b330514830a31529d2dd9af07d995d94a2f9d3d8fd09`. No Xie 2026 data read.
+
+CONTROLLING_BLOCKER: `declared_flat_partial_action_not_stationary_at_conditional_root`.
+
+NEXT_ACTION: Derive/register the physical finite-temperature stationary background or explain why the flat partial-action probe is inapplicable; then source-lock independent effective stiffness/relaxation input before using ordinary isothermal compressibility as a test.
+
+CLAIM_BOUNDARY: Conditional local class witness and flat partial-action probe only; no full-action no-go, physical He-II prediction or external validation.
