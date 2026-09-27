@@ -2,7 +2,7 @@
 
 วันที่ออกแผน: 27 กันยายน 2026 | D1: 28 กันยายน | D14: 11 ตุลาคม 2026 (Asia/Bangkok)
 
-สถานะ: แผนเสนอเพื่อรันใน Goal mode; Goal พอร์ต 14 วันและ gate G0-G5 ยังไม่เริ่ม แต่มีผลย่อยก่อน sprint สามชิ้นที่ต้องนำเข้ารอบ baseline โดยไม่เลื่อน readiness วันส่งมอบตีความจากคำตอบผู้ใช้ว่า “2 สัปดาห์”; ยังไม่ทราบวันปิดรับของทุนจริง ชื่อทุน สังกัดผู้ยื่น และงบที่ขอ
+สถานะ: แผนเสนอเพื่อรันใน Goal mode; Goal พอร์ต 14 วันและ gate G0-G5 ยังไม่เริ่ม แต่มีผลย่อยก่อน sprint สี่ชิ้นที่ต้องนำเข้ารอบ baseline โดยไม่เลื่อน readiness วันส่งมอบตีความจากคำตอบผู้ใช้ว่า “2 สัปดาห์”; ยังไม่ทราบวันปิดรับของทุนจริง ชื่อทุน สังกัดผู้ยื่น และงบที่ขอ
 
 ตัวควบคุมงาน: [funding_portfolio_14d_plan.json](Data/03_Research/funding_portfolio_14d_plan.json) | คำสั่งเริ่มงาน: [GOAL_BRIEF_FUNDING_14D.md](GOAL_BRIEF_FUNDING_14D.md)
 
@@ -40,6 +40,7 @@
 | [Thermal-pole design control](Result/artifacts/T13_THERMAL_POLE_MEASUREMENT_DESIGN_CONTROL_2026-09-27.md) | ตัวเทียบ Cattaneo แสดงว่าความถี่อย่างเดียวแยก transport pair ไม่ได้ แต่อัตราลดทอนช่วยแยก | เป็นเพียง standard comparator ไม่ใช่ UET second sound หรือข้อมูล He-II |
 | [Frozen-state branch boundary](Result/artifacts/T13_HE4_FROZEN_BRANCH_COMPATIBILITY_2026-09-27.md) | สถานะ natural bridge เดิมเป็น normal O(2), ไม่ใช่ condensed He-II background | ก่อนคำนวณ second sound ต้องมี condensed state และ transfer map ที่เลือกอย่างอิสระ; ห้ามย้าย calibration เดิมข้าม branch |
 | [Condensed-state selection boundary](Result/artifacts/T13_HE4_CONDENSED_STATE_SELECTION_BOUNDARY_2026-09-27.md) | ผู้สมัคร condensed สองจุดที่ผ่านเกณฑ์ภายในให้ response ต่างกัน แต่ข้อมูล density/fraction/e0/gain ปัจจุบันยังไม่เลือกจุดใด | ต้อง derive หรือ calibrate แมป absolute charge/phase-stiffness สู่ density ของ He-II อย่างอิสระ; candidate ไม่ใช่ physical fit |
+| [Conditional charge-map circularity](Result/artifacts/T13_HE4_CONDITIONAL_CHARGE_MAP_CIRCULARITY_2026-09-27.md) | หากสมมติแมป pressure/mu/charge แบบง่าย การ match density จะวน เพราะ density ค่าเดียวกันถูกใช้สร้าง `e0` | ต้องมี observable อิสระที่ไม่ได้ใช้ calibration และหลักฐานยอมรับ charge identity; ค่า `mu` ที่ได้แบบมีเงื่อนไขไม่ใช่ผลทำนาย |
 
 มีงาน J02 ที่ commit `c42385d07e390b338096122275fe809737b8477a` ใน branch `codex/research/fluid-thermal-joint-plan` แล้ว: `HE4_SECOND_SOUND_PROTOCOL_CARD.md`, source package และ protocol audit ระบุ `PASS_SOURCE_PROTOCOL_CANDIDATE_ONLY` โดยยังขาด UET two-fluid operator และ primary frequency/uncertainty match ต้องนำเฉพาะแพ็กที่เกี่ยวข้องมาทบทวนใน D1; การอ่านจากอีก worktree ไม่เท่ากับ merge แล้ว
 
@@ -77,6 +78,8 @@ alpha_reconstructed = theta_T alpha_nat / Z_Phi = alpha_external
 ### Q2: มี observable ทดสอบอิสระได้หรือยัง
 
 ใช้ second-sound protocol J02 เป็นคำถามทดสอบลำดับแรก แต่ต้องผ่าน **branch/state admission ก่อน**: จุด natural bridge ที่ตรึงไว้เป็น normal O(2) (`q=-0.8715`) ส่วน He-II anchor มี superfluid fraction ไม่เป็นศูนย์ ต้องมีแมป absolute ระหว่าง O(2) charge หรือ phase stiffness กับจำนวนอะตอมหรือ superfluid density ของ He-II ที่ derive/calibrate โดยไม่ใช้ target จึงจะเลือก condensed background และแมปสภาวะ/หน่วยได้ ไม่เลือก `mu` หรือ `Phi` จากความเร็วเสียงเป้าหมาย หลังจากนั้นจึงตรวจ state vector, mass/entropy balance, relative motion, energy และ source coupling ก่อนเขียน eigenmode solver เปรียบเทียบกับ standard two-fluid comparator ที่ state/units ตรงกัน
+
+**ห้ามนับข้อมูลซ้ำ:** `e0=n_He4 k_B T0` ใช้ความหนาแน่นที่ 1.7 K ไปแล้ว ดังนั้นหากสมมติ `n_He4=(e0/(k_B theta_T))n_O2` และเลือก `mu` จากความหนาแน่นแถวเดียวกัน การ match แถวนั้นเป็น identity ไม่ใช่ validation ต้องกันข้อมูลหรือการวัดอีกชนิดหนึ่งที่ไม่ถูกใช้เลือกสเกล/พารามิเตอร์ไว้เป็น comparison จริง
 
 หากยังไม่มี independent condensed-state transfer **หรือ** admitted dynamic operator ให้บันทึกช่องว่างนั้นและไปเส้นทาง structural identifiability ภายใน D5 การเติม tau, conductivity หรือ velocity state เพื่อให้ได้กราฟ ต้องถูกระบุเป็นสมมติฐานใหม่ พร้อม F0–F8 ก่อนตีความทางฟิสิกส์ ใน sprint นี้ไม่ตั้งเป้าสร้าง complete two-fluid theory ใหม่
 
