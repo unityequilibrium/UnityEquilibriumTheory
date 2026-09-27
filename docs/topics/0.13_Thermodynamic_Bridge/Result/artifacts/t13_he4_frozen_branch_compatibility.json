@@ -1,0 +1,111 @@
+{
+  "schema_version": "t13-he4-frozen-branch-compatibility-v1",
+  "major_result_id": "T13_HE4_FROZEN_STATE_BRANCH_COMPATIBILITY_BOUNDARY",
+  "topic": "0.13",
+  "closure_level": "CLOSED_FOR_LANE",
+  "what_is_closed": "The frozen natural bridge reference is a normal O(2) state and cannot itself be linearized as a condensed He-II two-fluid state",
+  "equation_or_mapping": {
+    "tree_branch_control": "q=Z*mu^2-[m^2-epsilon_nc*h*(Phi-Phi_*)]",
+    "condensed_condition": "q>branch_tolerance*max(1,abs(Z*mu^2),abs(m_eff^2)); normal below negative tolerance",
+    "mu_boundary_at_frozen_phi": "sqrt(m_eff(Phi)^2/Z)",
+    "phi_boundary_at_frozen_mu": "Phi_*+(m^2-Z*mu^2)/(epsilon_nc*h)",
+    "mapping_boundary": "local T_K=theta_T*T_nat and DeltaPhi_norm=Z_Phi*DeltaPhi_nat do not identify a condensed background"
+  },
+  "units": {
+    "natural_state": "natural action units",
+    "mu_boundary": "natural energy",
+    "phi_boundary": "natural action Phi; not SI temperature",
+    "physical_anchor_temperature": "K",
+    "superfluid_fraction": "dimensionless"
+  },
+  "derivation_class": "exact tree-branch algebra plus independent module cross-check at a frozen source-calibrated reference",
+  "observable": "branch admissibility of proposed He-II second-sound inference from frozen bridge state",
+  "data_role": "STRUCTURAL_BRANCH_COMPATIBILITY_AUDIT_NO_HOLDOUT_NO_FIT",
+  "frozen_natural_state": {
+    "temperature": 0.22,
+    "chemical_potential": 0.35,
+    "space_response": 0.15,
+    "branch": "normal",
+    "condensate_control": -0.8715,
+    "effective_mass_sq": 0.994,
+    "matter_kinetic": 1.0,
+    "response_mass_coupling": 0.04000000000000001,
+    "mu_critical_at_frozen_phi": 0.9969954864491614,
+    "delta_mu_to_tree_boundary": 0.6469954864491614,
+    "phi_critical_at_frozen_mu": 21.937499999999996,
+    "delta_phi_to_tree_boundary": 21.787499999999998,
+    "condensate_amplitude": 0.0
+  },
+  "physical_anchor": {
+    "temperature_K": 1.7,
+    "phase": "He II",
+    "superfluid_fraction": 0.7714130767785583
+  },
+  "existing_partial_lanes": {
+    "finite_temperature_two_sector": "ACTION_DERIVED_INTERNAL_NATURAL_TWO_FLUID_STATIC_LANE",
+    "condensed_relative_flow_collision": "ACTION_DERIVED_INTERNAL_NATURAL_RELATIVE_FLOW_LANE",
+    "interpretation": "static two-sector state and a natural-unit relative-flow kernel exist, but their own contracts exclude complete condensed two-fluid transport"
+  },
+  "checks": {
+    "reference_identity_matches_bridge": true,
+    "declared_branch_matches_recalculation": true,
+    "normal_branch_has_negative_condensate_control": true,
+    "tree_thresholds_are_outside_frozen_point": true,
+    "physical_anchor_is_heii_with_nonzero_superfluid_fraction": true,
+    "no_target_or_fit_in_calibration": true,
+    "static_and_collision_lanes_exclude_complete_two_fluid_transport": true
+  },
+  "verification_status": "PASS_SCOPED_FROZEN_STATE_BRANCH_MISMATCH",
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+      "sha256": "13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json",
+      "sha256": "705783a70c4c2b87505afa47863b2eceee73ead6c7dd26b3b415ba5dfb871d4f"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_uet_o2_action_thermal_observable_bridge_audit.json",
+      "sha256": "7ba49d3f629c91f3f88dda6ad717d8928e58439de7517a5979f0a465b9f52585"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_o2_physical_anchor_source_package.json",
+      "sha256": "4d02b1faac1cefe3ce79ced525183e2d38066604808d91f9c2769d515ab8b770"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "d2e1ece391ef77dd1247c1a38c7cad13b4af5eff1fa31f53d923d6095cf65367"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_finite_density_eos.py",
+      "sha256": "9cf2fcbaac868a22643b753ed931b466cf125ff2da3e7452ca70e548f419bfe8"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py",
+      "sha256": "a68531bc34596aa115797e2353e1871913d4e9a158aeeb7f1ea5125c86aa236b"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_condensed_relative_flow_collision.py",
+      "sha256": "545d204cd7d56c9e0dd0c1075afe4d698bdbe62a1e2cd969a78f21d95cc58238"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_He4_Frozen_Branch_Compatibility.py",
+      "sha256": "9175adf605f294992336a614fc7966f93c58f456821dc9e21e4f63e1c39aa0c4"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_he4_frozen_branch_compatibility.py",
+      "sha256": "a382c6996c176f1f90dccc235e3b627c20e7a08c6a57dc6fb6b992e1deacc2a8"
+    }
+  ],
+  "open_blockers": [
+    "state_matched_condensed_action_background_and_independent_transfer_map",
+    "admitted_condensed_two_fluid_longitudinal_response_operator",
+    "physical_normal_superfluid_inertia_and_transport_provenance"
+  ],
+  "controlling_blocker": "state_matched_condensed_action_background_and_independent_transfer_map",
+  "next_action": "Keep the frozen normal-branch local calibration intact; select a condensed natural background independently, rederive its response and SI mapping, then construct and verify a longitudinal two-fluid operator before any second-sound comparison",
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "claim_boundary": "The result blocks only an attempted second-sound inference from the frozen normal reference. It does not invalidate the existing local effective-response calibration or Core-bounded composition, establish a physical He-II phase map, or prove that all future UET condensed extensions fail. Tree thresholds are algebraic, not admissible fit targets."
+}
