@@ -20,12 +20,13 @@
   "research_goal_status": "PARTIAL_PRE_SPRINT_EVIDENCE_NOT_SCIENTIFIC_CLOSURE",
   "pre_sprint_evidence": {
     "scope": "Four comparator/branch/state-selection/material-map subresults produced before the planned 14-day execution gates; the named funding Goal itself remains unstarted",
+    "hash_scope": "Reproduced on codex/research/t13-funding-evidence from origin/main; historical dirty-branch hashes are retained under baseline and are not asserted against this checkout",
     "current_controlling_blocker": "Noether_charge_to_helium_atom_identity_not_admitted_and_independent_observable_missing",
     "results": [
-      {"major_result_id": "T13_CATTANEO_POLE_MEASUREMENT_DESIGN_CONTROL", "role": "STANDARD_COMPARATOR_ONLY", "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_thermal_pole_measurement_design_control.json", "sha256": "97849dbeb2da2f06f3fce7c83341d808da3a4a42e4a614206ae90d1d13c7a59b"},
-      {"major_result_id": "T13_HE4_FROZEN_STATE_BRANCH_COMPATIBILITY_BOUNDARY", "role": "FROZEN_STATE_ADMISSIBILITY_ONLY", "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_frozen_branch_compatibility.json", "sha256": "6ca734bd4aaceea177ef96609dc1c3063d5bc5dfdeb697d14f9dc506a794cad9"},
-      {"major_result_id": "T13_HE4_CONDENSED_STATE_SELECTION_BOUNDARY", "role": "INTERNAL_STATE_IDENTIFIABILITY_ONLY", "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_condensed_state_identifiability.json", "sha256": "0d2f2019932862377a279e44e87a0487563b816efdfd8e2722ed71b71706fdf3"},
-      {"major_result_id": "T13_HE4_CONDITIONAL_CHARGE_MAP_DENSITY_CIRCULARITY", "role": "CONDITIONAL_CIRCULARITY_ONLY", "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_conditional_charge_map_circularity.json", "sha256": "977f43f874d9abcedd18579278cf35e5fa0b0cbcdfbc4b797069b4895f292f4a"}
+      {"major_result_id": "T13_CATTANEO_POLE_MEASUREMENT_DESIGN_CONTROL", "role": "STANDARD_COMPARATOR_ONLY", "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_thermal_pole_measurement_design_control.json", "sha256": "cbaaae67cf8c0ca12ced5ca44f2a4521cc3c6105e772133d19886311db1da369"},
+      {"major_result_id": "T13_HE4_FROZEN_STATE_BRANCH_COMPATIBILITY_BOUNDARY", "role": "FROZEN_STATE_ADMISSIBILITY_ONLY", "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_frozen_branch_compatibility.json", "sha256": "1c00a986052fdac1fc9bad3b7007c0fb32dbf9472709ebac2a7e05f003e24bd3"},
+      {"major_result_id": "T13_HE4_CONDENSED_STATE_SELECTION_BOUNDARY", "role": "INTERNAL_STATE_IDENTIFIABILITY_ONLY", "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_condensed_state_identifiability.json", "sha256": "7467dbd2e599140d2e9e5f0ecd836a83a287b8be62617deea8b87a31aa2fbfd9"},
+      {"major_result_id": "T13_HE4_CONDITIONAL_CHARGE_MAP_DENSITY_CIRCULARITY", "role": "CONDITIONAL_CIRCULARITY_ONLY", "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_conditional_charge_map_circularity.json", "sha256": "54afd50fb9ed5d2a34cb792b8feb8dc442021b0d92c0e9ad1763849b9eed22e7"}
     ],
     "scientific_route_implication": "Do not linearize the frozen normal natural state as condensed He II; current records do not select condensed mu. Even the hypothetical pressure/mu/charge identification reuses the density inside e0 and cannot validate itself. Derive or independently calibrate the material map and reserve a distinct observable before physical prediction, or pursue scoped non-identifiability",
     "acceptance_gates_promoted": false
@@ -72,6 +73,7 @@
     "branch": "codex/research/core-physical-migration",
     "head": "a62efba425f1b219241cf149bc4bab50cce4c379",
     "dirty_worktree": true,
+    "hash_scope": "Historical dirty-branch snapshot; not a current-checkout hash assertion",
     "clean_reproduction_completed": false,
     "historical_core_ready_is_not_independent_validation": true,
     "current_core_handoff_record": "BLOCKED_HANDOFF_REVALIDATION",

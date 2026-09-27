@@ -100,19 +100,19 @@
   "evidence_artifacts": [
     {
       "path": "docs/core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json",
-      "sha256": "13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418"
+      "sha256": "8cfb5389380b90315414fc80ee759de1de6577d417b5928852021ae5232875c9"
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json",
-      "sha256": "705783a70c4c2b87505afa47863b2eceee73ead6c7dd26b3b415ba5dfb871d4f"
+      "sha256": "7886ffd3403f91d8951a9d33fb947468a99ebbc94d378cbdc7467e7efb5af27e"
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json",
-      "sha256": "4fe52bd87f1531dcaaadeeddd99ea48744d4ef574eb7b1e6d9c65bb8f41aa2a9"
+      "sha256": "a09b39050aaea5ed49094f34d45719673eb275e7b94e88b88af71e4e47084325"
     },
     {
       "path": "docs/core/07_artifacts/topic13/t13_uet_o2_action_thermal_observable_bridge_audit.json",
-      "sha256": "7ba49d3f629c91f3f88dda6ad717d8928e58439de7517a5979f0a465b9f52585"
+      "sha256": "7983995dab41126e05f146f5c21512aa5c88b5f8cae7ba6d68a52e61def64ce3"
     },
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_o2_physical_anchor_source_package.json",
@@ -120,7 +120,7 @@
     },
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_frozen_branch_compatibility.json",
-      "sha256": "6ca734bd4aaceea177ef96609dc1c3063d5bc5dfdeb697d14f9dc506a794cad9"
+      "sha256": "1c00a986052fdac1fc9bad3b7007c0fb32dbf9472709ebac2a7e05f003e24bd3"
     },
     {
       "path": "docs/core/01_contracts/O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md",
@@ -128,15 +128,15 @@
     },
     {
       "path": "docs/core/02_equations/o2/uet_o2_finite_density_eos.py",
-      "sha256": "9cf2fcbaac868a22643b753ed931b466cf125ff2da3e7452ca70e548f419bfe8"
+      "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
     },
     {
       "path": "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
-      "sha256": "1e61a7763406a4174fc0c0b1149d1b33cdb39ae69bd84fbe5c9ee6e8fb23c465"
+      "sha256": "1cf745562548bc9a61d9ebb86069b8aff73e2a776756aa9efe7ab1a45b669ebe"
     },
     {
       "path": "docs/core/02_equations/o2/uet_o2_formal_two_sector_thermodynamics.py",
-      "sha256": "531ed369c6e96dd071d40dadadd59e02cd6a459dcf2ddc48662c8f294cfcf49c"
+      "sha256": "06d31737dbf177dd7db8a6e2f5c8bb684891f3b96569b3b7ea8652305dee4cce"
     },
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_He4_Condensed_State_Identifiability.py",

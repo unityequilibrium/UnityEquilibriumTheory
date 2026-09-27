@@ -211,6 +211,8 @@ CLAIM_BOUNDARY:
 
 Git: เก็บของเดิมใน dirty worktree; D1 สร้าง frozen input manifest ก่อนแยก execution checkout ใช้ short-lived scoped branch และ commit งานที่ตรวจแล้วทีละส่วน ห้ามรวม ledger หรือ Core migration ที่คนอื่นกำลังทำใน commit นี้ การตรวจทั้งหมดควรจบใน clean reproduction checkout ก่อน final release; ไม่ใช้ working directory dirty เป็นหลักฐานว่าบุคคลอื่น rerun ได้แล้ว
 
+การตรวจเผยแพร่ 27 ก.ย.: ผลย่อยก่อน sprint ทั้งสี่ถูก regenerate บน branch แยกจาก `origin/main` แล้ว โดยข้อสรุปและสถานะทางวิทยาศาสตร์ไม่เปลี่ยน; hash ของไฟล์อ้างอิงบางชิ้นเปลี่ยนเพราะฐาน Core ต่างจาก dirty worktree เดิม จึงเก็บ hash ชุดเดิมใน `baseline` เป็นประวัติเท่านั้น และใช้ `pre_sprint_evidence` เป็น hash ของผลที่ตรวจซ้ำใน checkout นี้ มี test ตรวจทั้ง JSON ที่บันทึกและ hash ของ input จริง การตรวจนี้ยัง **ไม่** revalidate Core baseline ทั้งชุด ไม่ปิด G0 และไม่ปลดล็อก Full Topic 13
+
 ## 11. แหล่งอ้างอิงที่ใช้วางแผน
 
 - [Donnelly–Barenghi 1998, NIST-hosted reference paper](https://srd.nist.gov/jpcrdreprint/1.556028.pdf), DOI 10.1063/1.556028: แหล่งข้อมูลสมบัติ He-4 ตาม SVP รวม second sound; ต้องย้อนจาก compilation ไป primary experiment สำหรับ protocol/uncertainty ที่ใช้ตัดสิน
