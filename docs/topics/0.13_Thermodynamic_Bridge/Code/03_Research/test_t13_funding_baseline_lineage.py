@@ -2,6 +2,7 @@
 
 import hashlib
 import importlib.util
+import json
 from pathlib import Path
 
 
@@ -24,16 +25,22 @@ def test_historical_snapshot_is_not_relabelled_clean_reproduction():
 
 def test_g0_remains_open_until_full_baseline_and_protocol_are_revalidated():
     assert not AUDIT["clean_core_baseline_revalidated"]
-    assert not AUDIT["referenced_j02_protocol"]["present_in_this_checkout"]
+    assert AUDIT["referenced_j02_protocol"]["present_in_this_checkout"]
+    assert AUDIT["j02_dependency_review"]["status"] == "PASS_SOURCE_PROTOCOL_CANDIDATE_ONLY"
+    assert all(AUDIT["j02_dependency_review"]["checks"].values())
+    assert AUDIT["j02_dependency_review"]["row_uncertainty_status"] == "NOT_REPORTED_PER_ROW"
+    assert not AUDIT["j02_dependency_review"]["blind_holdout"]
+    assert not AUDIT["j02_dependency_review"]["uet_two_fluid_operator_admitted"]
     assert not AUDIT["g0_baseline_ready"]
     assert AUDIT["g0_status"] == "BLOCKED_LINEAGE_RECONCILIATION"
-    assert "not this identity screen or a planning Boolean" in AUDIT["g0_evaluation_authority"]
+    assert "not this identity screen, J02 source review or a planning Boolean" in AUDIT["g0_evaluation_authority"]
     assert AUDIT["full_core_unlock"] is False
     assert AUDIT["dependency_unlocked"] == []
 
 
 def test_source_hashes_match_and_no_holdout_source_is_opened():
-    for item in AUDIT["evidence_artifacts"]:
+    assert AUDIT == json.loads(MODULE.OUTPUT.read_text(encoding="utf-8"))
+    for item in AUDIT["evidence_artifacts"] + AUDIT["j02_dependency_review"]["evidence_artifacts"]:
         source = MODULE.ROOT / item["path"]
         assert source.is_file()
         assert hashlib.sha256(source.read_bytes()).hexdigest() == item["sha256"]

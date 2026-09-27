@@ -3,7 +3,7 @@
   "major_result_id": "T13_FUNDING_CLEAN_BASELINE_LINEAGE_SCREEN",
   "topic": "0.13",
   "closure_level": "PARTIAL",
-  "what_is_closed": "Historical versus current-checkout identity is classified for each planned baseline input, while saved pre-sprint evidence is checked separately",
+  "what_is_closed": "Historical versus current-checkout identity is classified for each planned baseline input; saved pre-sprint evidence and the imported J02 source/protocol candidate are reviewed separately",
   "equation_or_mapping": "source identity is path plus SHA-256; a passing local audit is not a physical mapping",
   "units": "not applicable to source identity",
   "derivation_class": "deterministic file-identity reconciliation",
@@ -118,10 +118,52 @@
   "referenced_j02_protocol": {
     "commit": "c42385d07e390b338096122275fe809737b8477a",
     "path": "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md",
-    "present_in_this_checkout": false
+    "present_in_this_checkout": true
+  },
+  "j02_dependency_review": {
+    "status": "PASS_SOURCE_PROTOCOL_CANDIDATE_ONLY",
+    "origin_commit": "c42385d07e390b338096122275fe809737b8477a",
+    "checks": {
+      "protocol_and_package_present": true,
+      "origin_commit_matches_plan": true,
+      "source_role_is_nonblind_candidate": true,
+      "rows_have_locator_units_and_no_imputed_uncertainty": true,
+      "finite_difference_is_only_protocol_diagnostic": true,
+      "he4_alpha_and_normalization_match_current_core": true,
+      "si_scale_and_external_shear_match_current_core": true,
+      "no_uet_two_fluid_operator_or_quantitative_threshold": true,
+      "locked_xie_holdout_not_used": true
+    },
+    "response_row_count": 4,
+    "row_uncertainty_status": "NOT_REPORTED_PER_ROW",
+    "blind_holdout": false,
+    "uet_two_fluid_operator_admitted": false,
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md",
+        "sha256": "1ed016a39c0c8f3867ab5c6ebaf849fb45d7d47e474a0ffefbeecd2f637c1631"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_second_sound_response_source_package.json",
+        "sha256": "f32e6244fcc110de62bf99b9421ea24c9783ce2f448081aefc869dcccadade07"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json",
+        "sha256": "7886ffd3403f91d8951a9d33fb947468a99ebbc94d378cbdc7467e7efb5af27e"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json",
+        "sha256": "a09b39050aaea5ed49094f34d45719673eb275e7b94e88b88af71e4e47084325"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_he4_normal_viscosity_kubo_audit.json",
+        "sha256": "42a03cc5181cc4848202be699ed35f929d972c66c4ef7420003c62c583c79758"
+      }
+    ],
+    "claim_boundary": "Reviewed J02 source/protocol candidate in this checkout, not a blind holdout, UET second-sound prediction, primary frequency-matched response row or G0/Core validation."
   },
   "clean_core_baseline_revalidated": false,
-  "g0_evaluation_authority": "separate hash-backed clean Core baseline verifier and J02 dependency review; not this identity screen or a planning Boolean",
+  "g0_evaluation_authority": "separate hash-backed clean Core baseline verifier; not this identity screen, J02 source review or a planning Boolean",
   "g0_baseline_ready": false,
   "g0_status": "BLOCKED_LINEAGE_RECONCILIATION",
   "verification_status": "PASS_IDENTITY_SCREEN_WITH_OPEN_G0",
@@ -132,20 +174,19 @@
     },
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Funding_Baseline_Lineage.py",
-      "sha256": "6d72ed2591e39fcdb319a5e99987f46f79202515dbd2057c645a7e62daa62336"
+      "sha256": "395eb9ba93899c4e6f76d43f9f449598b7e7e51324827a622171ac7b214bb37f"
     },
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_funding_baseline_lineage.py",
-      "sha256": "97a52e6bf1a202039f654deb23d1a26e38c890c56e33acba24b24be91a07db3a"
+      "sha256": "17c1bc59725bcf1256c8eb546c6e73c26a07c907628549cf86339973663c8aed"
     }
   ],
   "open_blockers": [
     "historical_dirty_branch_evidence_requires_clean_equivalent_selection",
-    "full_clean_core_baseline_not_revalidated",
-    "j02_protocol_not_present_in_clean_checkout"
+    "full_clean_core_baseline_not_revalidated"
   ],
   "controlling_blocker": "full_clean_core_baseline_not_revalidated",
   "dependency_unlocked": [],
   "full_core_unlock": false,
-  "claim_boundary": "Five pre-sprint saved artifacts matching this checkout do not establish clean reproduction of the older Core baseline. G0 remains open; no J02 integration, Xie 2026 access, physical map, external validation or Full Topic 13 closure is asserted."
+  "claim_boundary": "Five pre-sprint saved artifacts and the reviewed J02 source/protocol candidate do not establish clean reproduction of the older Core baseline or an admitted two-fluid operator. G0 remains open; no Xie 2026 access, physical prediction, external validation or Full Topic 13 closure is asserted."
 }

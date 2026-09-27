@@ -6044,3 +6044,27 @@ CONTROLLING_BLOCKER: `microscopic_2pi_or_controlled_1N_matching_missing`.
 NEXT_ACTION: Choose a controlled condensed finite-temperature approximation and fixed renormalization prescription before any physical-response comparison; do not transfer this root to `Z=1`.
 
 CLAIM_BOUNDARY: Synthetic flat homogeneous formal lane only; not a full Hessian/curved stability result, He-II prediction, TTG calibration, microscopic closure or Full Topic 13.
+
+## 2026-09-27 - J02 source/protocol handoff into clean funding checkout
+
+MAJOR_RESULT_CLOSURE: `PARTIAL` for `T13_FUNDING_CLEAN_BASELINE_LINEAGE_SCREEN`; J02 source/protocol presence and consistency are closed as a source-candidate subresult, not as G0 or physical closure.
+
+WHAT_IS_ACTUALLY_CLOSED: The named J02 protocol and four recommended Table 4.3 rows are present in this checkout; frozen He-4 calibration, SI scale and external normal shear values match current Core artifacts. The rows were seen during protocol design and are not blind validation.
+
+WHAT_REMAINS_OPEN: Historical-to-clean equivalence and rerun of eight Core baseline references, primary frequency/geometry/row uncertainty, and admitted two-fluid UET operator.
+
+DEPENDENCY_UNLOCKED: Removes only `j02_protocol_not_present_in_clean_checkout`; no G0, Core, second-sound or Full Topic 13 unlock.
+
+STATUS: `PASS_IDENTITY_SCREEN_WITH_OPEN_G0`; G0=`BLOCKED_LINEAGE_RECONCILIATION`; J02 review=`PASS_SOURCE_PROTOCOL_CANDIDATE_ONLY`.
+
+WHAT_CHANGED: Reviewed and adapted Topic 13 J02 protocol/source files from commit `c42385d07`; extended lineage verifier, tests and note. No Topic 10 or Core file touched.
+
+EQUATION_OR_MAPPING: Candidate observable `u2=omega/k`; four recommended SVP/T90 rows remain a source-protocol input, not an output of a UET two-fluid eigenmode. The finite-difference slope `-1.9 m/s/K` has no row-level covariance and is diagnostic only.
+
+VERIFICATION: NIST Table 4.3 and Lane et al. abstract inspected online; local frozen constants match Core records and source rows have null uncertainty. Three lineage tests and eight related Core tests pass. Revised audit SHA-256 `6f9b1c31ff4e86157b3709c9bec678757a16697d2bcf47a1b4df3f6bcda73ee0`; source package SHA-256 `f32e6244fcc110de62bf99b9421ea24c9783ce2f448081aefc869dcccadade07`. Xie 2026 was not read.
+
+CONTROLLING_BLOCKER: `full_clean_core_baseline_not_revalidated`.
+
+NEXT_ACTION: Select and review clean equivalents for the eight historical Core references, then rerun scoped Core/source/holdout-exposure audits before reconsidering G0. Acquire a primary frequency-matched response protocol separately.
+
+CLAIM_BOUNDARY: This handoff is neither a UET second-sound prediction nor an independent blind test or Core/Full Topic 13 closure.
