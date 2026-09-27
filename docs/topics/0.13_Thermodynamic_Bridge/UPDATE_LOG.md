@@ -6212,3 +6212,27 @@ CONTROLLING_BLOCKER: `named_admissible_condensed_model_to_observable_operator_mi
 NEXT_ACTION: Freeze one Ward-consistent condensed model and an independent He-II state map, then derive `h` or a same-calibration/different-response proof inside that declared class. Do not score J02 or infer a nonidentifiability theorem from an undefined `h`.
 
 CLAIM_BOUNDARY: Frozen-bundle route exclusion only, not a global UET no-go, He-II prediction, Full Topic 13 closure or external validation.
+
+## 2026-09-28 - Finite-temperature condensed scheme route decision
+
+MAJOR_RESULT_CLOSURE: `T13_FINITE_T_CONDENSED_SCHEME_ROUTE_DECISION` is `CLOSED_FOR_LANE` for choosing the next derivation attempt only.
+
+WHAT_IS_ACTUALLY_CLOSED: Six Core/literature candidate routes have explicit roles and admission boundaries. None is inherited as a physical UET He-II response operator; the first bounded attempt is single-charge, fixed-prescription UET-action longitudinal response.
+
+WHAT_REMAINS_OPEN: Joint finite-T condensed state, Ward-consistent driven response, independent material map, permitted response rows and G0.
+
+DEPENDENCY_UNLOCKED: Bounded derivation task only; G1/G2 and Full Topic 13 remain open.
+
+STATUS: `PASS_ROUTE_SELECTION_ONLY`; all physical operator candidates `NOT_ADMITTED`.
+
+WHAT_CHANGED: Added a source-backed scheme decision JSON, explanatory note and claim-drift/hash guard tests; synced the 14-day plan and limitations. No Core equation or numeric calibration changed.
+
+EQUATION_OR_MAPPING: `h(p;protocol)=detector[longitudinal_response(source;stationary_condensed_UET_state(p))]` remains undefined until a single declared state/current/source prescription is derived.
+
+VERIFICATION: Primary method papers and four Core modules were inspected; the decision records exact local hashes. Four focused tests passed. Decision JSON SHA-256 `d21f740c4c89354479f73af508356dd3a759c13e10a88a376722a65852384a5d`. Xie 2026 was not read.
+
+CONTROLLING_BLOCKER: `single_charge_Ward_consistent_finite_T_condensed_source_coupled_response_not_derived`.
+
+NEXT_ACTION: Derive or refute one fixed-prescription single-charge UET condensed longitudinal response with Core-owner review. At D5, if not admitted, retain unresolved G1/G2 and submit a methods/measurement-feasibility claim only.
+
+CLAIM_BOUNDARY: Method selection is not a general no-go, physical second-sound prediction, external validation or Full Topic 13 closure.

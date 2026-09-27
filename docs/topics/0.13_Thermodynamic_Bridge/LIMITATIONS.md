@@ -513,3 +513,13 @@ the longitudinal two-fluid source/detector operator. The available tree,
 Gaussian and formal condensed alternatives do not yet supply one physically
 admitted common model domain. This is not a no-go for future UET completions or
 a proved same-calibration/different-response theorem.
+
+The [finite-T scheme route decision](Result/artifacts/T13_FUNDING_CONDENSED_SCHEME_SELECTION_2026-09-28.md)
+does not admit any of the inspected methods as a physical UET He-II response.
+An equilibrium Ward/Goldstone condition is insufficient without a driven
+longitudinal operator; published symmetry-improved 2PI linear-response and
+solution-existence objections must be checked rather than ignored. A
+two-chemical-potential Bose-gas construction or standard Landau two-fluid
+calculation can serve as a comparator but cannot silently change the UET
+single-charge action or supply its material map. If the bounded UET derivation
+is not admitted by D5, G1/G2 remain unresolved and the portfolio must say so.
