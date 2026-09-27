@@ -6236,3 +6236,27 @@ CONTROLLING_BLOCKER: `single_charge_Ward_consistent_finite_T_condensed_source_co
 NEXT_ACTION: Derive or refute one fixed-prescription single-charge UET condensed longitudinal response with Core-owner review. At D5, if not admitted, retain unresolved G1/G2 and submit a methods/measurement-feasibility claim only.
 
 CLAIM_BOUNDARY: Method selection is not a general no-go, physical second-sound prediction, external validation or Full Topic 13 closure.
+
+## 2026-09-28 - Rest-EOS dynamical-response boundary
+
+MAJOR_RESULT_CLOSURE: `T13_REST_EOS_DYNAMICAL_RESPONSE_NONIDENTIFIABILITY_BOUNDARY` is `CLOSED_FOR_LANE` in the declared standard two-fluid EFT class only.
+
+WHAT_IS_ACTUALLY_CLOSED: Two explicit positive-energy, subluminal linear longitudinal examples share the same rest thermodynamics for all positive `b,y`, yet have different low-mode speeds. The missing parameter for a rest-EOS-only argument is the relative-flow curvature.
+
+WHAT_REMAINS_OPEN: Finite-T lift of Core's formal tree stiffness into a stationary relative-flow current, physical material map, source/detector operator and G0/G1/G2.
+
+DEPENDENCY_UNLOCKED: Relative-flow stiffness derivation or independent measurement design only; no physical Core gate.
+
+STATUS: `PASS_SCOPED_STANDARD_EFT_CONSTRUCTIVE_WITNESS`; Full Topic 13 remains open.
+
+WHAT_CHANGED: Added analytic verifier, generated JSON, two tests and a result note; synced funding plan and limitations. No Core or numeric calibration edit.
+
+EQUATION_OR_MAPPING: `F_zeta=-3b^(4/3)/4+y^2-zeta(X+y^2)/2`; `F_zeta|X=-y^2` is identical across `zeta`, while `G_S=-2F_X y^2=zeta y^2` changes the longitudinal roots.
+
+VERIFICATION: Three focused tests passed, including three off-anchor thermodynamic identity checks, the `zeta -> 0` limit and conditional tree-stiffness values; source hashes are in the generated JSON. JSON SHA-256 `d483a7242be63e712f234ceed21aafef95605ad730705cc99159a015eb6e47ba`. No Xie 2026 access.
+
+CONTROLLING_BLOCKER: `formal_tree_stiffness_to_finite_T_relative_flow_current_and_source_operator_not_derived`.
+
+NEXT_ACTION: Use the conditional tree relation `-2F_X=f_s_tree=Z*q/lambda` only under matched phase normalization; derive the finite-T current/operator and independently selected material state. If this lift fails, identify independent measurement or prove a UET-class ambiguity; do not count this external EFT witness as G2.
+
+CLAIM_BOUNDARY: Rest-EOS-only theorem in a comparator class, not a UET no-go, He-II prediction, external validation or Full Topic 13 closure.

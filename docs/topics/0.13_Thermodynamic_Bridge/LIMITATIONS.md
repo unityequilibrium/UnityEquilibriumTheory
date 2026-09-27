@@ -523,3 +523,14 @@ two-chemical-potential Bose-gas construction or standard Landau two-fluid
 calculation can serve as a comparator but cannot silently change the UET
 single-charge action or supply its material map. If the bounded UET derivation
 is not admitted by D5, G1/G2 remain unresolved and the portfolio must say so.
+
+The [rest-EOS dynamic witness](Result/artifacts/T13_FUNDING_REST_EOS_DYNAMIC_DEGENERACY_2026-09-28.md)
+shows, in a standard nondissipative two-fluid EFT class, that identical
+zero-relative-flow thermodynamics can coexist with different stable
+longitudinal speeds. It isolates relative-flow curvature as a missing input
+for a rest-EOS-only argument. Core does declare `f_s_tree=Z*q/lambda`; it can
+be identified with `-2F_X` only conditionally at tree level with matched
+phase normalization, branch and natural units. This does not establish a
+finite-T current or an He-II map, nor that either EFT
+completion is an admitted UET or He-II model. Its subluminal check is local
+to the linear longitudinal witness, not a proof for all UET branches.

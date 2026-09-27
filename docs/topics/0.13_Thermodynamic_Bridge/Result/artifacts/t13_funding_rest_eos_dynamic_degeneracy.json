@@ -1,0 +1,129 @@
+{
+  "major_result_id": "T13_REST_EOS_DYNAMICAL_RESPONSE_NONIDENTIFIABILITY_BOUNDARY",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_SCOPED_STANDARD_EFT_CONSTRUCTIVE_WITNESS",
+  "what_is_closed": "Within the stated nondissipative finite-T two-fluid EFT class, two positive-energy subluminal longitudinal linearizations have identical rest thermodynamics for every b,y but different low-mode speeds",
+  "equation_or_mapping": "F_zeta(b,X,y)=-3*b^(4/3)/4+y^2-zeta*(X+y^2)/2; X=-y^2+xi^2; det[[K_N*c^2-G_N,M*c],[M*c,K_S*c^2-G_S]]=0",
+  "units": "rescaled dimensionless EFT comparator at b=y=1; dimensional coefficients and He-II SI map not supplied",
+  "derivation_class": "CONSTRUCTIVE_STANDARD_EFT_CLASS_COUNTEREXAMPLE_NOT_UET_ACTION",
+  "observable": "linear longitudinal low-mode characteristic speed, not a measured He-II response",
+  "data_role": "SYNTHETIC_ANALYTIC_CONTROL_NO_EMPIRICAL_FIT",
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py",
+      "sha256": "d8a32af7f257986e4e84581cd4af325fb9c09ee2b3c00fa96c77cca130b28ccf"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py",
+      "sha256": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_frozen_branch_compatibility.json",
+      "sha256": "1c00a986052fdac1fc9bad3b7007c0fb32dbf9472709ebac2a7e05f003e24bd3"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_condensed_state_identifiability.json",
+      "sha256": "7467dbd2e599140d2e9e5f0ecd836a83a287b8be62617deea8b87a31aa2fbfd9"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_funding_condensed_scheme_selection_2026-09-28.json",
+      "sha256": "d21f740c4c89354479f73af508356dd3a759c13e10a88a376722a65852384a5d"
+    }
+  ],
+  "primary_source": "https://arxiv.org/html/1108.2513",
+  "checks": {
+    "same_rest_EOS_and_charge_entropy_energy": true,
+    "different_low_mode_speeds": true,
+    "positive_quadratic_energy": true,
+    "linear_longitudinal_subluminal": true,
+    "secular_roots_close": true
+  },
+  "examples": [
+    {
+      "zeta": 0.1,
+      "rest_state": {
+        "F": 0.25,
+        "pressure": 1.25,
+        "charge_density": 2.0,
+        "entropy_density": 1.0,
+        "temperature": 1.0,
+        "energy_density": 1.75,
+        "relative_flow_curvature_minus_2_F_X": 0.1
+      },
+      "longitudinal_state": {
+        "K_N": 2.9,
+        "G_N": 0.3333333333333333,
+        "K_S": 2.0,
+        "G_S": 0.1,
+        "M": -1.9,
+        "speed_sq_low": 0.007368223242278544,
+        "speed_sq_high": 0.7799880985968018,
+        "positive_quadratic_energy": true,
+        "linear_longitudinal_subluminal": true,
+        "secular_residual_low": 3.469446951953614e-17,
+        "secular_residual_high": 1.1796119636642288e-16
+      }
+    },
+    {
+      "zeta": 0.2,
+      "rest_state": {
+        "F": 0.25,
+        "pressure": 1.25,
+        "charge_density": 2.0,
+        "entropy_density": 1.0,
+        "temperature": 1.0,
+        "energy_density": 1.75,
+        "relative_flow_curvature_minus_2_F_X": 0.2
+      },
+      "longitudinal_state": {
+        "K_N": 2.8,
+        "G_N": 0.3333333333333333,
+        "K_S": 2.0,
+        "G_S": 0.2,
+        "M": -1.8,
+        "speed_sq_low": 0.015215631292428027,
+        "speed_sq_high": 0.7824034163266197,
+        "positive_quadratic_energy": true,
+        "linear_longitudinal_subluminal": true,
+        "secular_residual_low": 1.3877787807814457e-17,
+        "secular_residual_high": 2.0816681711721685e-16
+      }
+    }
+  ],
+  "conditional_core_tree_mapping": {
+    "conditional_equation": "-2*F_X=f_s_tree=Z*q/lambda only if the EFT and UET phase normalizations, stationary branch and natural units are matched",
+    "frozen_q": -0.8715,
+    "frozen_f_s_tree": 0.0,
+    "candidate_tree_states": [
+      {
+        "mu_natural": 1.05,
+        "q": 0.10850000000000004,
+        "f_s_tree": 0.10850000000000004,
+        "physical_HeII_state_admitted": false
+      },
+      {
+        "mu_natural": 1.2,
+        "q": 0.44599999999999995,
+        "f_s_tree": 0.44599999999999995,
+        "physical_HeII_state_admitted": false
+      }
+    ],
+    "finite_T_physical_correspondence_admitted": false,
+    "SI_or_HeII_material_map_admitted": false
+  },
+  "open_blockers": [
+    "formal_tree_stiffness_to_finite_T_relative_flow_current_not_derived",
+    "Core_formal_stiffness_not_independently_mapped_to_HeII",
+    "driven_source_detector_and_dissipative_response_not_derived",
+    "clean_Core_baseline_and_independent_source_not_admitted"
+  ],
+  "dependency_unlocked": [
+    "independent_relative_flow_stiffness_measurement_design_only"
+  ],
+  "g1_physical_unlock": false,
+  "g2_science_unlock": false,
+  "full_core_unlock": false,
+  "xie_2026_accessed": false,
+  "claim_boundary": "Rest-EOS-only counterexample in an external EFT class; not two admitted UET completions, He-II second-sound prediction, proof that Core static stiffness is insufficient, or Full Topic 13 closure"
+}
