@@ -19,6 +19,13 @@ def test_saved_stationary_root_is_conditional_and_non_promoting():
     assert result["verification_status"] == "PASS_CONDITIONAL_FLAT_PARTIAL_STATIONARY_ROOT"
     assert result["full_core_unlock"] is False
     assert result["dependency_unlocked"] == []
+    assert len(result["known_finite_temperature_boundaries"]) == 3
+    assert {item["status"] for item in result["known_finite_temperature_boundaries"]} == {
+        "PASS_SCOPED_NO_GO_THERMAL_GAUSSIAN_CONDENSATE_STATIONARITY",
+        "PASS_SCOPED_CONDENSED_GOLDSTONE_WARD_BOUNDARY",
+        "PASS_FORMAL_WARD_CONSTRAINED_CONDENSED_STATIONARITY",
+    }
+    assert result["controlling_blocker"] == "finite_T_condensate_amplitude_and_Ward_stationarity_not_verified"
     assert all(result["checks"].values())
 
 

@@ -5975,11 +5975,11 @@ CLAIM_BOUNDARY: Conditional local class witness and flat partial-action probe on
 
 ## 2026-09-27 - Conditional flat partial-action stationary root
 
-MAJOR_RESULT_CLOSURE: `T13_HE4_FLAT_PARTIAL_STATIONARY_ROOT_CONDITIONAL` is `CLOSED_FOR_LANE` for a numerical root of the declared flat partial approximation, not physical He-II closure.
+MAJOR_RESULT_CLOSURE: `T13_HE4_FLAT_PARTIAL_STATIONARY_ROOT_CONDITIONAL` is `CLOSED_FOR_LANE` for Phi-only stationarity of the declared flat partial approximation, not finite-T condensate-amplitude or physical He-II closure.
 
-WHAT_IS_ACTUALLY_CLOSED: Fixed-`mu` stationarity moves `Phi` to about `0.677271`; joint stationarity plus the recycled density condition has a condensed, locally `Phi`-stable root at `mu=1.851515585`, `Phi=0.674642478`.
+WHAT_IS_ACTUALLY_CLOSED: Fixed-`mu` Phi stationarity moves `Phi` to about `0.677271`; joint Phi stationarity plus the recycled density condition has a tree-condensed (`q>0`), locally Phi-stable point at `mu=1.851515585`, `Phi=0.674642478`.
 
-WHAT_REMAINS_OPEN: Full finite-temperature Ward/renormalization completion, admitted atom/pressure/Phi map, independent source row and two-fluid dynamics. Density matching remains circular.
+WHAT_REMAINS_OPEN: Finite-temperature condensate-amplitude stationarity and Ward/renormalization completion, admitted atom/pressure/Phi map, independent source row and two-fluid dynamics. Density matching remains circular.
 
 DEPENDENCY_UNLOCKED: Conditional internal response design only; no physical or Core unlock.
 
@@ -5989,10 +5989,10 @@ WHAT_CHANGED: Added nested-bracket numerical audit, three tests, JSON and note; 
 
 EQUATION_OR_MAPPING: `epsilon_nc U'(Phi)=partial_Phi p_qp`, `partial_mu p_qp=1/T_nat` only under the unadmitted density map, `K_eff=epsilon_nc U''-p_PhiPhi>0`.
 
-VERIFICATION: Three derivative/quadrature runs agree; 11 linked Topic 13 tests pass. JSON SHA-256 `8cc0725c298f746500511bf9e4da7585e41a207e658dc02c76f1d0e5726797a3`. No Xie 2026 data read.
+VERIFICATION: Three derivative/quadrature runs agree; 11 linked Topic 13 tests pass. Existing Gaussian/Ward boundary artifact hashes are linked in the JSON. JSON SHA-256 `007b0b0bf0036248b5fc1487131d4d0e4f23cb42e561d07905f4a94905792a99`. No Xie 2026 data read.
 
-CONTROLLING_BLOCKER: `full_finite_temperature_action_and_material_map_not_admitted`.
+CONTROLLING_BLOCKER: `finite_T_condensate_amplitude_and_Ward_stationarity_not_verified`.
 
-NEXT_ACTION: Confront the partial root with a Ward-consistent finite-temperature condensate scheme and source-lock an independent physical response protocol before comparison.
+NEXT_ACTION: Test simultaneous Ward-consistent finite-temperature amplitude/Phi stationarity in one declared scheme; do not transplant this partial root into other branches. Source-lock an independent physical response protocol only after that mapping is justified.
 
-CLAIM_BOUNDARY: Synthetic local root and recycled density only, not a He-II prediction or external validation.
+CLAIM_BOUNDARY: Synthetic Phi-only stationary point on a tree-condensed background and recycled density only; not full finite-T condensate stationarity, He-II prediction or external validation.

@@ -30,6 +30,11 @@ from docs.core.uet_covariant_response import (  # noqa: E402
 DOCS = ROOT / "docs"
 CHARGE_AUDIT = DOCS / "topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_conditional_charge_map_circularity.json"
 RESPONSE_AUDIT = DOCS / "topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_relaxed_phi_response_boundary.json"
+WARD_BOUNDARIES = (
+    DOCS / "core/07_artifacts/topic13/t13_uet_o2_gaussian_thermal_stationarity_no_go.json",
+    DOCS / "core/07_artifacts/topic13/t13_uet_o2_condensed_goldstone_ward_audit.json",
+    DOCS / "core/07_artifacts/topic13/t13_uet_o2_ward_constrained_condensed_audit.json",
+)
 OUTPUT = DOCS / "topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_flat_partial_stationary_root.json"
 PHI_BRACKET = (0.5, 1.0)
 MU_BRACKET = (1.85, 1.855)
@@ -137,6 +142,7 @@ def audit() -> dict:
     }
     sources = (
         CHARGE_AUDIT, RESPONSE_AUDIT,
+        *WARD_BOUNDARIES,
         DOCS / "core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py",
         DOCS / "core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
         DOCS / "core/02_equations/covariant/uet_covariant_response.py",
@@ -148,7 +154,7 @@ def audit() -> dict:
         "major_result_id": "T13_HE4_FLAT_PARTIAL_STATIONARY_ROOT_CONDITIONAL",
         "topic": "0.13",
         "closure_level": "CLOSED_FOR_LANE" if all(checks.values()) else "OPEN",
-        "what_is_closed": "A condensed local stationary root exists in the declared flat partial-action approximation after reselecting mu and Phi under the same recycled density condition",
+        "what_is_closed": "A locally Phi-stationary point with tree-condensed q>0 exists in the flat partial-action approximation after reselecting mu and Phi under the same recycled density condition",
         "equation_or_mapping": {
             "flat_partial_stationarity": "0=epsilon_nc*U'(Phi)-partial_Phi p_qp(T,mu,Phi)",
             "recycled_density_constraint": "n_nat=partial_mu p_qp=1/T_nat only under the unadmitted e0,E_mu,atom-number map",
@@ -159,18 +165,23 @@ def audit() -> dict:
         "derivation_class": "conditional flat partial-action stationary solve and local implicit-function response",
         "observable": "synthetic natural-unit condensed background; no admitted physical He-II measurement operator",
         "data_role": "SYNTHETIC_CIRCULAR_DENSITY_ANCHOR_NOT_VALIDATION",
-        "assumption_boundary": "Flat homogeneous partial action omits curved terms, vacuum counterterms and microscopic finite-T completion; density target reuses the same physical density used to define e0",
+        "assumption_boundary": "Flat homogeneous partial action holds the tree-condensate quasiparticle background fixed while solving Phi; it does not solve finite-T amplitude stationarity or Ward identity. Curved terms, vacuum counterterms and microscopic completion are omitted; density target reuses the physical density used to define e0",
+        "known_finite_temperature_boundaries": [
+            {"path": path.relative_to(ROOT).as_posix(), "sha256": _sha(path),
+             "status": json.loads(path.read_text(encoding="utf-8"))["status"]}
+            for path in WARD_BOUNDARIES
+        ],
         "prior_anchor": {"T_natural": t, "mu_natural": old_mu, "Phi_natural": old_phi, "target_natural_charge": target_n},
         "solver_brackets": {"Phi": list(PHI_BRACKET), "mu": list(MU_BRACKET), "role": "exploratory internal brackets selected before external response comparison"},
         "runs": runs,
         "checks": checks,
         "verification_status": "PASS_CONDITIONAL_FLAT_PARTIAL_STATIONARY_ROOT" if all(checks.values()) else "REVIEW_REQUIRED",
         "evidence_artifacts": [{"path": path.relative_to(ROOT).as_posix(), "sha256": _sha(path)} for path in sources],
-        "open_blockers": ["full_finite_temperature_action_and_material_map_not_admitted", "density_constraint_recycled_from_e0", "independent_response_source_and_uncertainty_missing", "dynamic_two_fluid_operator_missing"],
-        "controlling_blocker": "full_finite_temperature_action_and_material_map_not_admitted",
+        "open_blockers": ["finite_T_condensate_amplitude_and_Ward_stationarity_not_verified", "full_finite_temperature_action_and_material_map_not_admitted", "density_constraint_recycled_from_e0", "independent_response_source_and_uncertainty_missing", "dynamic_two_fluid_operator_missing"],
+        "controlling_blocker": "finite_T_condensate_amplitude_and_Ward_stationarity_not_verified",
         "dependency_unlocked": [],
         "full_core_unlock": False,
-        "claim_boundary": "This is a synthetic local root of a flat partial action and a recycled density condition, not an independent He-II fit or prediction. It neither closes full finite-temperature UET stationarity nor selects an SI Phi map, physical Kubo coefficient, TTG response, Xie 2026 comparison, or Full Topic 13.",
+        "claim_boundary": "This is a synthetic Phi-stationary point on a tree-condensed quasiparticle background with a recycled density condition, not a complete finite-T condensate stationary solution or an independent He-II fit. Existing Gaussian/Ward blockers remain. No SI Phi map, physical Kubo coefficient, TTG response, Xie 2026 comparison, or Full Topic 13 closure follows.",
     }
 
 

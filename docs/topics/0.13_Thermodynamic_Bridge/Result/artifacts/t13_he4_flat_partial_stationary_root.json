@@ -3,7 +3,7 @@
   "major_result_id": "T13_HE4_FLAT_PARTIAL_STATIONARY_ROOT_CONDITIONAL",
   "topic": "0.13",
   "closure_level": "CLOSED_FOR_LANE",
-  "what_is_closed": "A condensed local stationary root exists in the declared flat partial-action approximation after reselecting mu and Phi under the same recycled density condition",
+  "what_is_closed": "A locally Phi-stationary point with tree-condensed q>0 exists in the flat partial-action approximation after reselecting mu and Phi under the same recycled density condition",
   "equation_or_mapping": {
     "flat_partial_stationarity": "0=epsilon_nc*U'(Phi)-partial_Phi p_qp(T,mu,Phi)",
     "recycled_density_constraint": "n_nat=partial_mu p_qp=1/T_nat only under the unadmitted e0,E_mu,atom-number map",
@@ -19,7 +19,24 @@
   "derivation_class": "conditional flat partial-action stationary solve and local implicit-function response",
   "observable": "synthetic natural-unit condensed background; no admitted physical He-II measurement operator",
   "data_role": "SYNTHETIC_CIRCULAR_DENSITY_ANCHOR_NOT_VALIDATION",
-  "assumption_boundary": "Flat homogeneous partial action omits curved terms, vacuum counterterms and microscopic finite-T completion; density target reuses the same physical density used to define e0",
+  "assumption_boundary": "Flat homogeneous partial action holds the tree-condensate quasiparticle background fixed while solving Phi; it does not solve finite-T amplitude stationarity or Ward identity. Curved terms, vacuum counterterms and microscopic completion are omitted; density target reuses the physical density used to define e0",
+  "known_finite_temperature_boundaries": [
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_uet_o2_gaussian_thermal_stationarity_no_go.json",
+      "sha256": "cacea415a8e2dc3ca0c5206f6b91561c545a29211c185f3074ec0a501462a9dc",
+      "status": "PASS_SCOPED_NO_GO_THERMAL_GAUSSIAN_CONDENSATE_STATIONARITY"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_uet_o2_condensed_goldstone_ward_audit.json",
+      "sha256": "3725dd780c2fbf253930f7e09708a6c83fb58d90c672a6b8d8ec5997c1566a1b",
+      "status": "PASS_SCOPED_CONDENSED_GOLDSTONE_WARD_BOUNDARY"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_uet_o2_ward_constrained_condensed_audit.json",
+      "sha256": "a082c4f028cbcf567feaa793ca797b3bac476150bd40566a5941c4429e83122b",
+      "status": "PASS_FORMAL_WARD_CONSTRAINED_CONDENSED_STATIONARITY"
+    }
+  ],
   "prior_anchor": {
     "T_natural": 0.22,
     "mu_natural": 1.855688569255108,
@@ -115,6 +132,18 @@
       "sha256": "73d5cfc943187d345992b330514830a31529d2dd9af07d995d94a2f9d3d8fd09"
     },
     {
+      "path": "docs/core/07_artifacts/topic13/t13_uet_o2_gaussian_thermal_stationarity_no_go.json",
+      "sha256": "cacea415a8e2dc3ca0c5206f6b91561c545a29211c185f3074ec0a501462a9dc"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_uet_o2_condensed_goldstone_ward_audit.json",
+      "sha256": "3725dd780c2fbf253930f7e09708a6c83fb58d90c672a6b8d8ec5997c1566a1b"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_uet_o2_ward_constrained_condensed_audit.json",
+      "sha256": "a082c4f028cbcf567feaa793ca797b3bac476150bd40566a5941c4429e83122b"
+    },
+    {
       "path": "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py",
       "sha256": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f"
     },
@@ -128,21 +157,22 @@
     },
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_He4_Flat_Partial_Stationary_Root.py",
-      "sha256": "bfde21097f39a1a36f61f3c91aca2eef4ff6663cb375378b7bed1ac5a0638632"
+      "sha256": "6b67dc7790d93326b5ec64687b9ef56375c45132ae0874e432197818becf7d27"
     },
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_he4_flat_partial_stationary_root.py",
-      "sha256": "4653919d9409ffae2b4e1a08e010d17ba5e135e1a8dd009b5e9a94a1b4a84792"
+      "sha256": "296d06034b0f2a38c00320742fef5617811493e9d80df78fbd70458b8cd78ea6"
     }
   ],
   "open_blockers": [
+    "finite_T_condensate_amplitude_and_Ward_stationarity_not_verified",
     "full_finite_temperature_action_and_material_map_not_admitted",
     "density_constraint_recycled_from_e0",
     "independent_response_source_and_uncertainty_missing",
     "dynamic_two_fluid_operator_missing"
   ],
-  "controlling_blocker": "full_finite_temperature_action_and_material_map_not_admitted",
+  "controlling_blocker": "finite_T_condensate_amplitude_and_Ward_stationarity_not_verified",
   "dependency_unlocked": [],
   "full_core_unlock": false,
-  "claim_boundary": "This is a synthetic local root of a flat partial action and a recycled density condition, not an independent He-II fit or prediction. It neither closes full finite-temperature UET stationarity nor selects an SI Phi map, physical Kubo coefficient, TTG response, Xie 2026 comparison, or Full Topic 13."
+  "claim_boundary": "This is a synthetic Phi-stationary point on a tree-condensed quasiparticle background with a recycled density condition, not a complete finite-T condensate stationary solution or an independent He-II fit. Existing Gaussian/Ward blockers remain. No SI Phi map, physical Kubo coefficient, TTG response, Xie 2026 comparison, or Full Topic 13 closure follows."
 }
