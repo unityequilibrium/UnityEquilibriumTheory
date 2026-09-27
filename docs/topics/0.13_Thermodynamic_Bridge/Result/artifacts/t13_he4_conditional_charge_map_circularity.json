@@ -1,0 +1,133 @@
+{
+  "schema_version": "t13-he4-conditional-charge-map-circularity-v1",
+  "major_result_id": "T13_HE4_CONDITIONAL_CHARGE_MAP_DENSITY_CIRCULARITY",
+  "topic": "0.13",
+  "closure_level": "CLOSED_FOR_LANE",
+  "what_is_closed": "A hypothetical full pressure/chemical-potential/charge identity selects an internal condensed mu, but its density match is algebraically circular because e0 was built from that same physical density",
+  "equation_or_mapping": {
+    "hypothesized_pressure": "p_SI=e0*p_nat as a full grand-canonical material pressure, beyond the admitted scale convention",
+    "hypothesized_mu": "mu_SI=mu_offset+k_B*theta_T*mu_nat",
+    "hypothesized_charge_identity": "n_He4=partial_(mu_SI) p_SI=(e0/(k_B*theta_T))*n_O2",
+    "density_cancellation": "e0=n_He4*k_B*T0 and T0=theta_T*T_nat imply n_O2_required=1/T_nat independently of n_He4",
+    "finite_temperature_inversion": "n_O2(T_nat,mu,Phi)=1/T_nat solved only under all three extra hypotheses"
+  },
+  "units": {
+    "e0": "J/m^3",
+    "mu_SI": "J per hypothesized atom",
+    "E_mu": "J per natural chemical-potential unit",
+    "n_He4": "m^-3",
+    "n_O2": "natural-unit Noether charge density"
+  },
+  "derivation_class": "conditional chain-rule derivation, exact density cancellation, and internal finite-temperature root; not a physical map derivation",
+  "observable": "whether the He-4 density anchor independently validates or only normalizes a proposed O(2) charge map",
+  "data_role": "CONDITIONAL_SYNTHETIC_CIRCULARITY_WITNESS_NO_TARGET_FIT",
+  "additional_assumptions_not_admitted": [
+    "the scale convention is an absolute physical grand-canonical pressure map",
+    "O(2) Noether charge is helium atom number",
+    "the physical chemical-potential energy scale is k_B*theta_T with compatible ensemble and reference",
+    "Phi=0.15 is independently fixed at the physical He-II state",
+    "the approximate finite-temperature EOS is valid for liquid He-II at that state"
+  ],
+  "inputs": {
+    "physical_number_density_m3": 2.185648035384131e+28,
+    "reference_temperature_K": 1.7,
+    "theta_T_K_per_natural_T": 7.727272727272727,
+    "temperature_natural": 0.22,
+    "e0_J_per_m3": 512994.17164886114,
+    "hypothetical_E_mu_J": 1.0668651363636363e-22,
+    "derived_natural_charge_target": 4.545454545454545
+  },
+  "conditional_internal_root": {
+    "mu_natural": 1.855688569255108,
+    "phi_natural": 0.15,
+    "branch": "condensed",
+    "total_charge_natural": 4.545454545447968,
+    "tree_goldstone_speed_sq_not_second_sound": 0.262359240384386,
+    "physical_HeII_match_admitted": false
+  },
+  "synthetic_density_rescalings": [
+    {
+      "synthetic_density_factor": 0.5,
+      "implied_natural_charge_target": 4.545454545454545,
+      "reconstructed_density_m3": 1.0928240176904844e+28,
+      "input_density_m3": 1.0928240176920655e+28,
+      "relative_match_residual": 1.4467999377255703e-12
+    },
+    {
+      "synthetic_density_factor": 1.0,
+      "implied_natural_charge_target": 4.545454545454545,
+      "reconstructed_density_m3": 2.185648035380969e+28,
+      "input_density_m3": 2.185648035384131e+28,
+      "relative_match_residual": 1.4467999377255703e-12
+    },
+    {
+      "synthetic_density_factor": 2.0,
+      "implied_natural_charge_target": 4.545454545454545,
+      "reconstructed_density_m3": 4.371296070761938e+28,
+      "input_density_m3": 4.371296070768262e+28,
+      "relative_match_residual": 1.4467999377255703e-12
+    }
+  ],
+  "checks": {
+    "energy_scale_reuses_same_density": true,
+    "temperature_scale_matches_frozen_natural_state": true,
+    "target_density_cancels_algebraically": true,
+    "conditional_root_is_internal_condensed": true,
+    "density_rescalings_leave_natural_target_unchanged": true,
+    "charge_identity_is_not_admitted_by_current_selection_audit": true,
+    "source_scale_is_declared_convention": true
+  },
+  "verification_status": "PASS_SCOPED_DENSITY_CIRCULARITY_BOUNDARY",
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json",
+      "sha256": "4fe52bd87f1531dcaaadeeddd99ea48744d4ef574eb7b1e6d9c65bb8f41aa2a9"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_o2_si_beta_mapping_source_package.json",
+      "sha256": "5b0e63acc6932e4d050300f05a42d3dfb0411138883cdf6d6816ec0e16d9fe2e"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json",
+      "sha256": "705783a70c4c2b87505afa47863b2eceee73ead6c7dd26b3b415ba5dfb871d4f"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_frozen_branch_compatibility.json",
+      "sha256": "6ca734bd4aaceea177ef96609dc1c3063d5bc5dfdeb697d14f9dc506a794cad9"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_condensed_state_identifiability.json",
+      "sha256": "0d2f2019932862377a279e44e87a0487563b816efdfd8e2722ed71b71706fdf3"
+    },
+    {
+      "path": "docs/core/01_contracts/O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md",
+      "sha256": "3210f45543dd90b42ef5593b6693a2348819b363a98cce3c66411378f0d6474d"
+    },
+    {
+      "path": "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py",
+      "sha256": "e992834d7d3ca90476202d849551ab16d1aba4bb1156b0519b3cd79e2566f9e8"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py",
+      "sha256": "8d4b392e59e0b575709c6d02526692440de5b2e6c803b06754cce4356fe0e848"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_He4_Conditional_Charge_Map_Circularity.py",
+      "sha256": "328f636521148b770a8a770c6e8b5cb48bf7a5c83b3296d57beb07d883db5350"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_he4_conditional_charge_map_circularity.py",
+      "sha256": "db63a1614732cefff7ad0c1efe3d73660ff169cc2a843ddce4fd0440efc04471"
+    }
+  ],
+  "open_blockers": [
+    "absolute_material_pressure_and_chemical_potential_correspondence_not_derived",
+    "Noether_charge_to_helium_atom_identity_not_admitted",
+    "independent_phase_stiffness_or_pressure_observable_not_source_locked",
+    "condensed_response_and_two_fluid_operator_not_admitted"
+  ],
+  "controlling_blocker": "Noether_charge_to_helium_atom_identity_not_admitted",
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "claim_boundary": "The conditional mu root is not an admitted He-II state. Matching the same density used to define e0 is not validation or a prediction, even if the extra identifications were adopted. No physical pressure comparison, second sound, holdout access, or Full Topic 13 closure follows."
+}
