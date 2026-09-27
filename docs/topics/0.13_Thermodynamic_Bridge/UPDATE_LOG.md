@@ -6188,3 +6188,27 @@ CONTROLLING_BLOCKER: `primary_Wang_protocol_row_uncertainty_and_ancestry_not_ver
 NEXT_ACTION: Inspect permitted Wang study-only primary rows and measurement conditions, excluding its pooled spline; independently check Dash numeric calibration and scale conversion. Stop source search at the D3 decision ceiling if admission cannot be supported, and return to identifiability/measurement design.
 
 CLAIM_BOUNDARY: Study-key separation is a candidate source route, not demonstrated statistical independence, UET prediction, empirical validation or Full Topic 13 closure.
+
+## 2026-09-28 - Frozen He-II operator-domain decision
+
+MAJOR_RESULT_CLOSURE: `T13_FROZEN_HEII_OPERATOR_DOMAIN_BOUNDARY` is `CLOSED_FOR_LANE` for the frozen calibration bundle only; the funding predictive-content result remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: The frozen state is normal (`q=-0.8715`), not an admitted condensed He-II linearization. Tree-condensed witnesses lack material admission; the thermal-only Gaussian Phi root has a scoped amplitude no-go; the formal auxiliary root uses a different `Z` prescription.
+
+WHAT_REMAINS_OPEN: A named physical condensed finite-T completion, absolute charge/stiffness material map, longitudinal source-to-detector operator, admitted independent data and G0 clean baseline.
+
+DEPENDENCY_UNLOCKED: None; G1 physical and G2 scientific result remain open.
+
+STATUS: `PASS_SCOPED_OPERATOR_DOMAIN_BOUNDARY`; G1=`BLOCKED_NO_ADMITTED_CONDENSED_STATE_AND_LONGITUDINAL_OPERATOR`; G2=`UNRESOLVED_OPERATOR_COMPLETION_BOUNDARY_NOT_NONIDENTIFIABILITY_PROOF`.
+
+WHAT_CHANGED: Added a deterministic cross-artifact decision script, generated JSON, two tests and result note; synced the 14-day plan and limitations. No Core, numeric calibration, source row, threshold or holdout changed.
+
+EQUATION_OR_MAPPING: `q=Z*mu^2-m_eff(Phi)^2=0.35^2-0.994=-0.8715` at the frozen point; local calibration `g` exists, but the physical second-sound map `h` is not admitted on this domain.
+
+VERIFICATION: Twelve linked Topic 13 tests pass; source artifacts are checked by SHA-256. Decision JSON SHA-256 `3e93e42c98af6944747d248b6f5f4f2a997fa538eeed3e1c62c48d22acc9ae01`. No Xie 2026 access.
+
+CONTROLLING_BLOCKER: `named_admissible_condensed_model_to_observable_operator_missing`.
+
+NEXT_ACTION: Freeze one Ward-consistent condensed model and an independent He-II state map, then derive `h` or a same-calibration/different-response proof inside that declared class. Do not score J02 or infer a nonidentifiability theorem from an undefined `h`.
+
+CLAIM_BOUNDARY: Frozen-bundle route exclusion only, not a global UET no-go, He-II prediction, Full Topic 13 closure or external validation.

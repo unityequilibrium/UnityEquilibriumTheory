@@ -505,3 +505,11 @@ names Wang-Wagner-Donnelly second-sound data and Dash-Taylor oscillating-disk
 normal-density data as follow-up routes. Distinct study names/methods do not
 yet establish statistical independence, permitted numeric access, matched
 temperature scales or a UET two-fluid prediction; neither source is admitted.
+
+The [funding operator-domain decision](Result/artifacts/T13_FUNDING_HEII_OPERATOR_DOMAIN_DECISION_2026-09-28.md)
+also prevents transferring the frozen normal-branch calibration directly to a
+condensed He-II second-sound claim. A local `Phi` response map does not define
+the longitudinal two-fluid source/detector operator. The available tree,
+Gaussian and formal condensed alternatives do not yet supply one physically
+admitted common model domain. This is not a no-go for future UET completions or
+a proved same-calibration/different-response theorem.
