@@ -5,7 +5,10 @@
     "existing_folder_wins": true,
     "new_semantic_aliases_allowed": false,
     "raw_directories_public_by_default": false,
-    "draft_directories": ["1_raw", "ch_drafts"]
+    "draft_directories": [
+      "1_raw",
+      "ch_drafts"
+    ]
   },
   "books": [
     {
@@ -14,7 +17,9 @@
       "canonical_source_path": "uet_history/3_publish/books/00_uet_core_theory",
       "public_path": "uet_history/3_publish/books/00_uet_core_theory",
       "state": "public_curated",
-      "public_files": ["README.md"]
+      "public_files": [
+        "README.md"
+      ]
     },
     {
       "book_id": "00_1_terrain_and_daily_living",
@@ -25,7 +30,10 @@
       "public_path": "uet_history/3_publish/books/earth_terrain_migration/01_terrain_living",
       "state": "local_only",
       "public_files": [],
-      "excluded_local_paths": ["1_raw/", "ch_drafts/"]
+      "excluded_local_paths": [
+        "1_raw/",
+        "ch_drafts/"
+      ]
     },
     {
       "book_id": "00_2_mobility_and_climate_shocks",
@@ -36,7 +44,10 @@
       "public_path": "uet_history/3_publish/books/earth_terrain_migration/02_mobility_disasters",
       "state": "local_only",
       "public_files": [],
-      "excluded_local_paths": ["1_raw/", "ch_drafts/"]
+      "excluded_local_paths": [
+        "1_raw/",
+        "ch_drafts/"
+      ]
     },
     {
       "book_id": "00_3_imprints_and_capital_genesis",
@@ -47,7 +58,10 @@
       "public_path": "uet_history/3_publish/books/earth_terrain_migration/03_imprints_capital",
       "state": "local_only",
       "public_files": [],
-      "excluded_local_paths": ["1_raw/", "ch_drafts/"]
+      "excluded_local_paths": [
+        "1_raw/",
+        "ch_drafts/"
+      ]
     },
     {
       "book_id": "0.1_origin_of_wealth",
@@ -57,8 +71,14 @@
       "canonical_source_path": "uet_history/3_publish/books/economics_ai_energy/01_economics",
       "public_path": "uet_history/3_publish/books/economics_ai_energy/01_economics",
       "state": "public_curated",
-      "public_files": ["README.md", "book_1_blueprint.md"],
-      "excluded_local_paths": ["1_raw/", "ch_drafts/"]
+      "public_files": [
+        "README.md",
+        "book_1_blueprint.md"
+      ],
+      "excluded_local_paths": [
+        "1_raw/",
+        "ch_drafts/"
+      ]
     },
     {
       "book_id": "0.2_ai_and_the_divergence",
@@ -163,6 +183,36 @@
       "public_path": "uet_history/3_publish/books/origin_of_wealth_and_economics",
       "state": "deprecated_alias",
       "replacement_book_id": "0.1_origin_of_wealth",
+      "public_files": []
+    },
+    {
+      "book_id": "04_1_planetary_orbital_transition",
+      "title": "Planetary Exit & Orbital Substrate",
+      "section_id": "section_04_space_civilization",
+      "volume_number": 1,
+      "canonical_source_path": "uet_history/3_publish/books/space_civilization_infrastructure/01_planetary_orbital_transition",
+      "public_path": "uet_history/3_publish/books/space_civilization_infrastructure/01_planetary_orbital_transition",
+      "state": "local_only",
+      "public_files": []
+    },
+    {
+      "book_id": "04_2_closed_loop_infrastructure",
+      "title": "Closed-Loop Systems & Extraterrestrial Metabolism",
+      "section_id": "section_04_space_civilization",
+      "volume_number": 2,
+      "canonical_source_path": "uet_history/3_publish/books/space_civilization_infrastructure/02_closed_loop_infrastructure",
+      "public_path": "uet_history/3_publish/books/space_civilization_infrastructure/02_closed_loop_infrastructure",
+      "state": "local_only",
+      "public_files": []
+    },
+    {
+      "book_id": "04_3_space_civilization_governance",
+      "title": "Coordination, Relativistic Latency & Macro-Equilibrium",
+      "section_id": "section_04_space_civilization",
+      "volume_number": 3,
+      "canonical_source_path": "uet_history/3_publish/books/space_civilization_infrastructure/03_space_civilization_governance",
+      "public_path": "uet_history/3_publish/books/space_civilization_infrastructure/03_space_civilization_governance",
+      "state": "local_only",
       "public_files": []
     }
   ]

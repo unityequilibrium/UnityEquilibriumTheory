@@ -1,141 +1,166 @@
 {
-    "schema_version":  1,
-    "canonical_root":  "uet_history/3_publish/books",
-    "rules":  {
-                  "existing_folder_wins":  true,
-                  "section_parent_controls_volume_membership":  true,
-                  "raw_and_draft_directories_public_by_default":  false
-              },
-    "sections":  [
-                     {
-                         "section_id": "section_00_earth_terrain_migration",
-                         "title": "Section 0: Earth, Terrain & Human Dispersal",
-                         "profile": "THREE_BOOK_SECTION",
-                         "canonical_source_path": "uet_history/3_publish/books/earth_terrain_migration",
-                         "state": "local_only",
-                         "public_files": [],
-                         "manifest_path": "uet_history/3_publish/books/earth_terrain_migration/SECTION_MANIFEST.json",
-                         "blueprint_path": "uet_history/3_publish/books/earth_terrain_migration/SECTION_BLUEPRINT.md",
-                         "volume_count": 3,
-                         "volumes": [
-                             {
-                                 "volume_number": 1,
-                                 "book_id": "00_1_terrain_and_daily_living",
-                                 "canonical_source_path": "uet_history/3_publish/books/earth_terrain_migration/01_terrain_living",
-                                 "state": "local_only"
-                             },
-                             {
-                                 "volume_number": 2,
-                                 "book_id": "00_2_mobility_and_climate_shocks",
-                                 "canonical_source_path": "uet_history/3_publish/books/earth_terrain_migration/02_mobility_disasters",
-                                 "state": "local_only"
-                             },
-                             {
-                                 "volume_number": 3,
-                                 "book_id": "00_3_imprints_and_capital_genesis",
-                                 "canonical_source_path": "uet_history/3_publish/books/earth_terrain_migration/03_imprints_capital",
-                                 "state": "local_only"
-                             }
-                         ]
-                     },
-                     {
-                         "section_id":  "section_03_history_hegemony",
-                         "title":  "Section 3: History \u0026 Hegemony",
-                         "profile":  "THREE_BOOK_SECTION",
-                         "canonical_source_path":  "uet_history/3_publish/books/history_media_power",
-                         "state":  "local_only",
-                         "public_files":  [
-
-                                          ],
-                         "manifest_path":  "uet_history/3_publish/books/history_media_power/SECTION_MANIFEST.json",
-                         "blueprint_path":  "uet_history/3_publish/books/history_media_power/SECTION_BLUEPRINT.md",
-                         "volume_count":  3,
-                         "volumes":  [
-                                         {
-                                             "volume_number":  1,
-                                             "book_id":  "03_1_history_media_and_cold_war",
-                                             "canonical_source_path":  "uet_history/3_publish/books/history_media_power/01_history_media",
-                                             "state":  "local_only"
-                                         },
-                                         {
-                                             "volume_number":  2,
-                                             "book_id":  "03_2_global_discourse_and_authoritarianism",
-                                             "canonical_source_path":  "uet_history/3_publish/books/history_media_power/02_political_psychology",
-                                             "state":  "local_only"
-                                         },
-                                         {
-                                             "volume_number":  3,
-                                             "book_id":  "03_3_reformation_of_the_mind",
-                                             "canonical_source_path":  "uet_history/3_publish/books/history_media_power/03_philosophy_governance",
-                                             "state":  "local_only"
-                                         }
-                                     ]
-                     },
-                     {
-                         "section_id":  "section_biology_psychology_economics",
-                         "title":  "Bio, Psychology \u0026 Biopolitics",
-                         "profile":  "THREE_BOOK_SECTION",
-                         "canonical_source_path":  "uet_history/3_publish/books/biology_psychology_economics",
-                         "state":  "local_only",
-                         "public_files":  [
-
-                                          ],
-                         "manifest_path":  "uet_history/3_publish/books/biology_psychology_economics/SECTION_MANIFEST.json",
-                         "blueprint_path":  "uet_history/3_publish/books/biology_psychology_economics/SECTION_BLUEPRINT.md",
-                         "volume_count":  3,
-                         "volumes":  [
-                                         {
-                                             "volume_number":  1,
-                                             "book_id":  "01_bio",
-                                             "canonical_source_path":  "uet_history/3_publish/books/biology_psychology_economics/01_biology",
-                                             "state":  "local_only"
-                                         },
-                                         {
-                                             "volume_number":  2,
-                                             "book_id":  "02_bio_psycho",
-                                             "canonical_source_path":  "uet_history/3_publish/books/biology_psychology_economics/02_biology_psychology",
-                                             "state":  "local_only"
-                                         },
-                                         {
-                                             "volume_number":  3,
-                                             "book_id":  "03_psy_econmi",
-                                             "canonical_source_path":  "uet_history/3_publish/books/biology_psychology_economics/03_psychology_economics",
-                                             "state":  "local_only"
-                                         }
-                                     ]
-                     },
-                     {
-                         "section_id":  "section_economics_ai_energy",
-                         "title":  "Economics, AI \u0026 Energy",
-                         "profile":  "THREE_BOOK_SECTION",
-                         "canonical_source_path":  "uet_history/3_publish/books/economics_ai_energy",
-                         "state":  "local_only",
-                         "public_files":  [
-
-                                          ],
-                         "manifest_path":  "uet_history/3_publish/books/economics_ai_energy/SECTION_MANIFEST.json",
-                         "blueprint_path":  "uet_history/3_publish/books/economics_ai_energy/SECTION_BLUEPRINT.md",
-                         "volume_count":  3,
-                         "volumes":  [
-                                         {
-                                             "volume_number":  1,
-                                             "book_id":  "0.1_origin_of_wealth",
-                                             "canonical_source_path":  "uet_history/3_publish/books/economics_ai_energy/01_economics",
-                                             "state":  "public_curated"
-                                         },
-                                         {
-                                             "volume_number":  2,
-                                             "book_id":  "0.2_ai_and_the_divergence",
-                                             "canonical_source_path":  "uet_history/3_publish/books/economics_ai_energy/02_economics_ai",
-                                             "state":  "local_only"
-                                         },
-                                         {
-                                             "volume_number":  3,
-                                             "book_id":  "0.3_dynamic_energy_money",
-                                             "canonical_source_path":  "uet_history/3_publish/books/economics_ai_energy/03_economics_energy",
-                                             "state":  "local_only"
-                                         }
-                                     ]
-                     }
-                 ]
+  "schema_version": 1,
+  "canonical_root": "uet_history/3_publish/books",
+  "rules": {
+    "existing_folder_wins": true,
+    "section_parent_controls_volume_membership": true,
+    "raw_and_draft_directories_public_by_default": false
+  },
+  "sections": [
+    {
+      "section_id": "section_00_earth_terrain_migration",
+      "title": "Section 0: Earth, Terrain & Human Dispersal",
+      "profile": "THREE_BOOK_SECTION",
+      "canonical_source_path": "uet_history/3_publish/books/earth_terrain_migration",
+      "state": "local_only",
+      "public_files": [],
+      "manifest_path": "uet_history/3_publish/books/earth_terrain_migration/SECTION_MANIFEST.json",
+      "blueprint_path": "uet_history/3_publish/books/earth_terrain_migration/SECTION_BLUEPRINT.md",
+      "volume_count": 3,
+      "volumes": [
+        {
+          "volume_number": 1,
+          "book_id": "00_1_terrain_and_daily_living",
+          "canonical_source_path": "uet_history/3_publish/books/earth_terrain_migration/01_terrain_living",
+          "state": "local_only"
+        },
+        {
+          "volume_number": 2,
+          "book_id": "00_2_mobility_and_climate_shocks",
+          "canonical_source_path": "uet_history/3_publish/books/earth_terrain_migration/02_mobility_disasters",
+          "state": "local_only"
+        },
+        {
+          "volume_number": 3,
+          "book_id": "00_3_imprints_and_capital_genesis",
+          "canonical_source_path": "uet_history/3_publish/books/earth_terrain_migration/03_imprints_capital",
+          "state": "local_only"
+        }
+      ]
+    },
+    {
+      "section_id": "section_03_history_hegemony",
+      "title": "Section 3: History & Hegemony",
+      "profile": "THREE_BOOK_SECTION",
+      "canonical_source_path": "uet_history/3_publish/books/history_media_power",
+      "state": "local_only",
+      "public_files": [],
+      "manifest_path": "uet_history/3_publish/books/history_media_power/SECTION_MANIFEST.json",
+      "blueprint_path": "uet_history/3_publish/books/history_media_power/SECTION_BLUEPRINT.md",
+      "volume_count": 3,
+      "volumes": [
+        {
+          "volume_number": 1,
+          "book_id": "03_1_history_media_and_cold_war",
+          "canonical_source_path": "uet_history/3_publish/books/history_media_power/01_history_media",
+          "state": "local_only"
+        },
+        {
+          "volume_number": 2,
+          "book_id": "03_2_global_discourse_and_authoritarianism",
+          "canonical_source_path": "uet_history/3_publish/books/history_media_power/02_political_psychology",
+          "state": "local_only"
+        },
+        {
+          "volume_number": 3,
+          "book_id": "03_3_reformation_of_the_mind",
+          "canonical_source_path": "uet_history/3_publish/books/history_media_power/03_philosophy_governance",
+          "state": "local_only"
+        }
+      ]
+    },
+    {
+      "section_id": "section_biology_psychology_economics",
+      "title": "Bio, Psychology & Biopolitics",
+      "profile": "THREE_BOOK_SECTION",
+      "canonical_source_path": "uet_history/3_publish/books/biology_psychology_economics",
+      "state": "local_only",
+      "public_files": [],
+      "manifest_path": "uet_history/3_publish/books/biology_psychology_economics/SECTION_MANIFEST.json",
+      "blueprint_path": "uet_history/3_publish/books/biology_psychology_economics/SECTION_BLUEPRINT.md",
+      "volume_count": 3,
+      "volumes": [
+        {
+          "volume_number": 1,
+          "book_id": "01_bio",
+          "canonical_source_path": "uet_history/3_publish/books/biology_psychology_economics/01_biology",
+          "state": "local_only"
+        },
+        {
+          "volume_number": 2,
+          "book_id": "02_bio_psycho",
+          "canonical_source_path": "uet_history/3_publish/books/biology_psychology_economics/02_biology_psychology",
+          "state": "local_only"
+        },
+        {
+          "volume_number": 3,
+          "book_id": "03_psy_econmi",
+          "canonical_source_path": "uet_history/3_publish/books/biology_psychology_economics/03_psychology_economics",
+          "state": "local_only"
+        }
+      ]
+    },
+    {
+      "section_id": "section_economics_ai_energy",
+      "title": "Economics, AI & Energy",
+      "profile": "THREE_BOOK_SECTION",
+      "canonical_source_path": "uet_history/3_publish/books/economics_ai_energy",
+      "state": "local_only",
+      "public_files": [],
+      "manifest_path": "uet_history/3_publish/books/economics_ai_energy/SECTION_MANIFEST.json",
+      "blueprint_path": "uet_history/3_publish/books/economics_ai_energy/SECTION_BLUEPRINT.md",
+      "volume_count": 3,
+      "volumes": [
+        {
+          "volume_number": 1,
+          "book_id": "0.1_origin_of_wealth",
+          "canonical_source_path": "uet_history/3_publish/books/economics_ai_energy/01_economics",
+          "state": "public_curated"
+        },
+        {
+          "volume_number": 2,
+          "book_id": "0.2_ai_and_the_divergence",
+          "canonical_source_path": "uet_history/3_publish/books/economics_ai_energy/02_economics_ai",
+          "state": "local_only"
+        },
+        {
+          "volume_number": 3,
+          "book_id": "0.3_dynamic_energy_money",
+          "canonical_source_path": "uet_history/3_publish/books/economics_ai_energy/03_economics_energy",
+          "state": "local_only"
+        }
+      ]
+    },
+    {
+      "section_id": "section_04_space_civilization",
+      "title": "Section 4: Space Civilization Infrastructure",
+      "profile": "THREE_BOOK_SECTION",
+      "canonical_source_path": "uet_history/3_publish/books/space_civilization_infrastructure",
+      "state": "local_only",
+      "public_files": [],
+      "manifest_path": "uet_history/3_publish/books/space_civilization_infrastructure/SECTION_MANIFEST.json",
+      "blueprint_path": "uet_history/3_publish/books/space_civilization_infrastructure/SECTION_BLUEPRINT.md",
+      "volume_count": 3,
+      "volumes": [
+        {
+          "volume_number": 1,
+          "book_id": "04_1_planetary_orbital_transition",
+          "canonical_source_path": "uet_history/3_publish/books/space_civilization_infrastructure/01_planetary_orbital_transition",
+          "state": "local_only"
+        },
+        {
+          "volume_number": 2,
+          "book_id": "04_2_closed_loop_infrastructure",
+          "canonical_source_path": "uet_history/3_publish/books/space_civilization_infrastructure/02_closed_loop_infrastructure",
+          "state": "local_only"
+        },
+        {
+          "volume_number": 3,
+          "book_id": "04_3_space_civilization_governance",
+          "canonical_source_path": "uet_history/3_publish/books/space_civilization_infrastructure/03_space_civilization_governance",
+          "state": "local_only"
+        }
+      ]
+    }
+  ]
 }
