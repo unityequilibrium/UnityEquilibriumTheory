@@ -2,6 +2,7 @@
 
 import importlib.util
 import json
+import math
 from pathlib import Path
 
 
@@ -11,9 +12,24 @@ AUDIT = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(AUDIT)
 
 
+def _assert_same_with_fp_tolerance(actual, saved):
+    if isinstance(actual, dict):
+        assert actual.keys() == saved.keys()
+        for key in actual:
+            _assert_same_with_fp_tolerance(actual[key], saved[key])
+    elif isinstance(actual, list):
+        assert len(actual) == len(saved)
+        for current, recorded in zip(actual, saved):
+            _assert_same_with_fp_tolerance(current, recorded)
+    elif isinstance(actual, float):
+        assert math.isclose(actual, saved, rel_tol=1e-12, abs_tol=1e-13)
+    else:
+        assert actual == saved
+
+
 def test_saved_formal_root_is_reproducible_and_scoped():
     result = AUDIT.audit()
-    assert result == json.loads(AUDIT.OUTPUT.read_text(encoding="utf-8"))
+    _assert_same_with_fp_tolerance(result, json.loads(AUDIT.OUTPUT.read_text(encoding="utf-8")))
     assert result["verification_status"] == "PASS_FORMAL_AUXILIARY_PHI_JOINT_ROOT"
     assert result["closure_level"] == "CLOSED_FOR_LANE"
     assert result["full_core_unlock"] is False

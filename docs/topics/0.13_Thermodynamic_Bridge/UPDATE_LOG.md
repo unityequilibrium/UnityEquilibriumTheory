@@ -6260,3 +6260,13 @@ CONTROLLING_BLOCKER: `formal_tree_stiffness_to_finite_T_relative_flow_current_an
 NEXT_ACTION: Use the conditional tree relation `-2F_X=f_s_tree=Z*q/lambda` only under matched phase normalization; derive the finite-T current/operator and independently selected material state. If this lift fails, identify independent measurement or prove a UET-class ambiguity; do not count this external EFT witness as G2.
 
 CLAIM_BOUNDARY: Rest-EOS-only theorem in a comparator class, not a UET no-go, He-II prediction, external validation or Full Topic 13 closure.
+
+## 2026-09-30 - PR #28 reproducibility and artifact-link repair
+
+WHAT_CHANGED: Kept the saved composition audit's historical comparison distinct from a CI checkout where its source commit is unavailable; compared formal-root floating outputs within `rel=1e-12, abs=1e-13`; verified the recovery record's older evidence hash against committed history; regenerated the He-II operator decision with LF bytes and refreshed the scheme decision's source hash through its generator.
+
+VERIFICATION: `git diff --check` passed; eight directly invoked tests passed across composition, historical recovery, He-II operator domain, and scheme selection. The formal-root test could not run locally because the bundled Python lacks SciPy; the full CI rerun remains required. Current He-II decision SHA-256 is `248fc600c23690902e5a8515e7f8695e91e120a4d6a242e96e7a70c1d3a27283`.
+
+CONTROLLING_BLOCKER: PR #28 must pass Linux CI before review or merge; the scientific G0 baseline remains blocked by clean Core lineage reconciliation.
+
+CLAIM_BOUNDARY: No physical operator, He-II prediction, external validation, or Full Topic 13 closure is promoted by this CI repair.

@@ -24,6 +24,24 @@ def git_value(root: Path, *args: str) -> str:
     ).stdout.strip()
 
 
+def evidence_digest_in_history(path: str, digest: str) -> bool:
+    """Verify a historical evidence link against committed bytes, not today's file."""
+    revisions = subprocess.run(
+        ["git", "log", "--format=%H", "--", path],
+        cwd=ROOT, capture_output=True, text=True, check=False,
+    )
+    if revisions.returncode != 0:
+        return False
+    for commit in revisions.stdout.splitlines():
+        blob = subprocess.run(
+            ["git", "show", f"{commit}:{path}"],
+            cwd=ROOT, capture_output=True, check=False,
+        )
+        if blob.returncode == 0 and hashlib.sha256(blob.stdout).hexdigest() == digest:
+            return True
+    return False
+
+
 def inspect_source(source_root: Path) -> dict:
     plan = json.loads(PLAN.read_text(encoding="utf-8"))
     rows = []
@@ -65,6 +83,10 @@ def verify_record(record: dict, *, source_root: Path | None = None) -> dict:
         "untracked_count": sum(row["git_worktree_state"] == "UNTRACKED" for row in rows) == 4,
         "modified_count": sum(row["git_worktree_state"] == "MODIFIED" for row in rows) == 2,
         "tracked_clean_count": sum(row["git_worktree_state"] == "TRACKED_CLEAN" for row in rows) == 2,
+        "historical_evidence_hashes_recoverable": all(
+            evidence_digest_in_history(item["path"], item["sha256"])
+            for item in record["evidence_artifacts"]
+        ),
         "no_unlock": record["g0_ready"] is False and record["full_core_unlock"] is False
         and record["admission"] == "NOT_IMPORTED_PENDING_OWNER_HANDOFF_AND_REVALIDATION",
     }

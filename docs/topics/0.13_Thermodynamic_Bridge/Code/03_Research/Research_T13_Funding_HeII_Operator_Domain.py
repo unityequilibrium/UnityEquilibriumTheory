@@ -119,5 +119,5 @@ def audit() -> dict:
 
 
 if __name__ == "__main__":
-    OUTPUT.write_text(json.dumps(audit(), indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
+    OUTPUT.write_bytes((json.dumps(audit(), indent=2, ensure_ascii=True) + "\n").encode("utf-8"))
     print(OUTPUT)

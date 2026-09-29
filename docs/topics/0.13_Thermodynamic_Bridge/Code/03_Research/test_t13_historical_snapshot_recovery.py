@@ -17,7 +17,8 @@ def test_record_matches_funding_plan_without_promoting_g0():
     assert record["dependency_unlocked"] == []
     assert record["data_role"] == "PROVENANCE_OBSERVATION_NOT_PHYSICAL_VALIDATION"
     evidence = record["evidence_artifacts"][0]
-    assert MODULE.sha256(MODULE.ROOT / evidence["path"]) == evidence["sha256"]
+    assert MODULE.evidence_digest_in_history(evidence["path"], evidence["sha256"])
+    assert MODULE.sha256(MODULE.ROOT / evidence["path"]) != evidence["sha256"]
 
 
 def test_a_changed_hash_cannot_pass_as_recovered():
