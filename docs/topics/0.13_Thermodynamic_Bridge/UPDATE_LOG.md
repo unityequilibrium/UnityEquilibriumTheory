@@ -6265,8 +6265,18 @@ CLAIM_BOUNDARY: Rest-EOS-only theorem in a comparator class, not a UET no-go, He
 
 WHAT_CHANGED: Kept the saved composition audit's historical comparison distinct from a CI checkout where its source commit is unavailable; compared formal-root floating outputs within `rel=1e-12, abs=1e-13`; verified the recovery record's older evidence hash against committed history; regenerated the He-II operator decision with LF bytes and refreshed the scheme decision's source hash through its generator.
 
-VERIFICATION: `git diff --check` passed; eight directly invoked tests passed across composition, historical recovery, He-II operator domain, and scheme selection. The formal-root test could not run locally because the bundled Python lacks SciPy; the full CI rerun remains required. Current He-II decision SHA-256 is `248fc600c23690902e5a8515e7f8695e91e120a4d6a242e96e7a70c1d3a27283`.
+VERIFICATION: `git diff --check` passed; eight directly invoked tests passed across composition, historical recovery, He-II operator domain, and scheme selection. The formal-root test could not run in the bundled Python because it lacks SciPy; the full CI rerun remained required. First-pass He-II decision SHA-256 was `248fc600c23690902e5a8515e7f8695e91e120a4d6a242e96e7a70c1d3a27283`.
 
 CONTROLLING_BLOCKER: PR #28 must pass Linux CI before review or merge; the scientific G0 baseline remains blocked by clean Core lineage reconciliation.
 
 CLAIM_BOUNDARY: No physical operator, He-II prediction, external validation, or Full Topic 13 closure is promoted by this CI repair.
+
+## 2026-09-30 - PR #28 dependent artifact hash reconciliation
+
+WHAT_CHANGED: The first Linux CI rerun exposed two stale saved-artifact source hashes after verifier/test edits. Regenerated the formal auxiliary-root artifact, He-II operator decision, condensed-scheme selection, and rest-EOS dynamic-degeneracy artifact in dependency order using their canonical generators. Numerical conclusions and claim status did not change.
+
+VERIFICATION: `git diff --check` passed; 15 focused tests passed locally with system Python, SciPy, and pytest across six Topic 13 modules. The four regenerated JSON SHA-256 values are `7e7636c42bab5784dcdd578539e5511e2e95780b5a8d0b3cc0fc98fe8c12abda`, `2196eb4726c0ec4f74c4f12ea6ff6097776caab13a1a40f82b34982e1731b6d6`, `894ec7d73f6ce17264f6c90bb0f23a4c2cace5853c5140a708ab8b4e051a41ca`, and `72d4d3e49e652196d7e3b1205b01b9f6d4991fd8d40c42584dfa103368dd7cff`, respectively. Linux CI on the follow-up commit remains to be checked.
+
+CONTROLLING_BLOCKER: PR #28 needs passing Linux CI and review; the scientific G0 baseline remains blocked by clean Core lineage reconciliation.
+
+CLAIM_BOUNDARY: Artifact provenance repair is not physical validation, prediction, or Full Topic 13 closure.
