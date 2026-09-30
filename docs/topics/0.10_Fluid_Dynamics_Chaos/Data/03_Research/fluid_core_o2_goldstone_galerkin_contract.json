@@ -1,0 +1,90 @@
+{
+  "schema_version": "t010-core-o2-goldstone-galerkin-v1",
+  "date": "2026-10-01",
+  "record_role": "FINITE_TREE_GOLDSTONE_GALERKIN_CURRENT_DIAGNOSTIC_NOT_TRANSPORT",
+  "card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_GALERKIN_DERIVATION.md",
+  "source_contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_collision_contract.json",
+  "collision_verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Collision.py",
+  "collision_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_collision_audit.json",
+  "source_adapter": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py",
+  "core_source_contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_common_flow_contract.json",
+  "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "previous_candidate_controller": "leading_Goldstone_decay_channel_checked_but_connected_collision_heat_current_thermalization_and_material_admission_open",
+  "candidate_controller": "finite_Goldstone_Galerkin_current_response_basis_cutoff_and_interacting_heat_current_admission_open",
+  "mu": 1.28,
+  "temperatures": [
+    0.002,
+    0.004
+  ],
+  "lambda_exploratory": 0.01,
+  "verification": {
+    "locked_before_first_execution": true,
+    "orders": [
+      24,
+      48,
+      72
+    ],
+    "cutoff_factors": [
+      20,
+      30,
+      40
+    ],
+    "feature_orders": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "default_order": 72,
+    "default_cutoff_factor": 40,
+    "default_feature_order": 5,
+    "algebra_relative_tolerance": 1e-8,
+    "event_relative_tolerance": 1e-9,
+    "relative_eigenvalue_tolerance": 1e-9,
+    "order_refinement_relative_tolerance": 0.01,
+    "cutoff_refinement_relative_tolerance": 0.01,
+    "basis_response_refinement_relative_tolerance": 0.01,
+    "source_representation_relative_tolerance": 0.01,
+    "negative_control_floor": 0.0001,
+    "energy_scale": 2,
+    "frequency_over_basis_rate": [
+      0,
+      0.5,
+      1,
+      2
+    ],
+    "max_cutoff_energy_over_radial_gap": 0.1,
+    "threshold_policy": "Locked before first execution; no relaxation; structural checks and measured refinement targets separate"
+  },
+  "admission": {
+    "physical_heat_current": false,
+    "full_interacting_transport": false,
+    "continuum_spectral_gap": false,
+    "thermalization": false,
+    "physical_frequency_window": false,
+    "collective_sound_damping": false,
+    "live_Phi": false,
+    "physical_UET_operator": false,
+    "physical_HeII_state": false,
+    "physical_J04_executed": false,
+    "physical_J05_executed": false,
+    "physical_J06_executed": false,
+    "claim_promotion": false,
+    "dependency_unlock": false
+  },
+  "reused_inputs": [
+    "docs/core/02_equations/o2/uet_o2_invariant_galerkin_collision_operator.py",
+    "docs/core/07_artifacts/topic13/t13_invariant_galerkin_collision_operator_audit.json",
+    "docs/core/07_artifacts/topic13/t13_collision_evidence_reconciliation.json",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_ideal_modes_audit.json"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/1407.7431v2",
+      "version": "1407.7431v2",
+      "doi": "10.1103/PhysRevC.90.055803",
+      "equations": "10-23",
+      "review_scope": "selected current/conserved constraints/polynomial variational method; distinct downward-curving neutron/binary-collision model, not coefficient transfer"
+    }
+  ]
+}

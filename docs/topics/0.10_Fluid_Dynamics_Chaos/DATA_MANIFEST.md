@@ -190,3 +190,18 @@ The first failed diagnostic and exact verifier are retained with explicit
 historical roles. New rates have natural energy units; no experimental lifetime,
 SI conversion, fitted material coupling or measured He-II source is supplied.
 Primary references are selected leading-action/FGR/NR correspondence only.
+
+## Shared Goldstone collision/current identity
+
+[The new contract](Data/03_Research/fluid_core_o2_goldstone_galerkin_contract.json)
+and [artifact](Result/artifacts/fluid_core_o2_goldstone_galerkin_audit.json)
+hash the prior Goldstone card/source/artifact, current Core AST sources and
+Topic13 normal scalar Galerkin/reconciliation evidence. Historical paths/records
+remain historical; no old artifact is relabeled as a current full Core rerun.
+
+New natural low-T/coupling controls are exploratory, not liquid-He rows or
+recalibration of the earlier ideal lambda=1 states. Selected primary
+arXiv1407.7431v2 equations10-23 supplies method/current-constraint correspondence
+only; its downward-curving neutron/binary-collision rates are not transferred.
+First diagnostic/source archives are explicitly historical. No material lifetime,
+heat-current mapping, SI conductivity or independent response dataset is added.

@@ -1,0 +1,288 @@
+"""Shared scalar/vector 1<->2 Goldstone Galerkin form; finite kinetic-current diagnostic."""
+from __future__ import annotations
+import argparse
+from functools import lru_cache
+import hashlib
+import importlib.util
+import json
+from pathlib import Path
+import numpy as np
+
+ROOT=next(p for p in Path(__file__).resolve().parents if (p/"docs/core").is_dir())
+TOPIC=ROOT/"docs/topics/0.10_Fluid_Dynamics_Chaos"
+CONTRACT=TOPIC/"Data/03_Research/fluid_core_o2_goldstone_galerkin_contract.json"
+OUTPUT=TOPIC/"Result/artifacts/fluid_core_o2_goldstone_galerkin_audit.json"
+REGISTRY=ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_goldstone_galerkin_addendum.json"
+
+
+def load(path,name):
+    spec=importlib.util.spec_from_file_location(name,path)
+    m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);return m
+
+
+def relative(a,b):
+    return float(np.linalg.norm(np.asarray(a)-np.asarray(b))/max(np.linalg.norm(a),np.linalg.norm(b),1e-300))
+
+
+def energy(k,a):
+    k=np.asarray(k);root=np.sqrt(a["B"]**2+4*a["mu"]**2*k*k)
+    return np.sqrt(k*k*(k*k+2*a["r"])/(k*k+a["B"]+root))
+
+
+def inverse_energy(E,a):
+    # Algebraic inverse of the same rationalized lower tree root.
+    return E*np.sqrt(1+4*a["mu"]**2/(np.sqrt(a["r"]**2+4*a["mu"]**2*E*E)+a["r"]))
+
+
+def features_scalar(E,k,T,K,N):
+    return np.r_[E,T,T*(k/K)**(2*np.arange(1,N-1))]
+
+
+def gram_spectrum(G,Q,tolerance):
+    chol=np.linalg.cholesky(G);inverse=np.linalg.inv(chol)
+    C=inverse@Q@inverse.T;values=np.linalg.eigvalsh(C)
+    scale=float(np.max(abs(values)));threshold=scale*tolerance
+    return {"rates":values.tolist(),"relative_threshold":tolerance,
+      "null_count":int(np.sum(abs(values)<=threshold)),
+      "negative_resolved_count":int(np.sum(values < -threshold)),
+      "positive_count":int(np.sum(values > threshold)),
+      "Gram_condition":float(np.linalg.cond(G)),
+      "Gram_whitening_error":relative(inverse@G@inverse.T,np.eye(len(G))),
+      "operator_symmetry_error":relative(C,C.T)}
+
+
+@lru_cache(maxsize=None)
+def state(T,mu,m2,lam,order,factor,N,eigen_tol):
+    r=mu*mu-m2;B=3*mu*mu-m2;c=np.sqrt(r/B)
+    a={"mu":mu,"r":r,"B":B,"g3":mu*np.sqrt(lam)/B**1.5}
+    K=factor*T/c;x,w=np.polynomial.legendre.leggauss(order)
+    ks=.5*K*(x+1);dk=.5*K*w;fractions=.5*(x+1);dw=.5*w
+    Es=energy(ks,a);occupations=1/np.expm1(Es/T)
+    powers=(ks[:,None]/K)**(2*np.arange(N)[None,:])
+    gm=ks**4*dk*occupations*(1+occupations)/(6*np.pi**2)
+    Gv=powers.T@(gm[:,None]*powers)
+    # Stable curvature correction to E*v_g/k, avoiding subtraction of c^2.
+    root=np.sqrt(B*B+4*mu*mu*ks*ks)
+    da=8*mu**4*ks*ks/(B*root*(root+B))
+    mean_da=float(np.sum(gm*da)/np.sum(gm));source_da=da-mean_da
+    b=powers.T@(gm*source_da)
+    D=float(np.sum(gm*source_da*source_da))
+    # Execute the linear-dispersion current and its momentum constraint too;
+    # do not encode its zero as an assumed output value.
+    linear_current=(c*ks)*c/ks
+    linear_mean=float(np.sum(gm*linear_current)/np.sum(gm))
+    linear_D=float(np.sum(gm*(linear_current-linear_mean)**2))
+    linear_relative=linear_D/float(np.sum(gm*linear_current**2))
+    scalar=np.array([features_scalar(E,k,T,K,N) for E,k in zip(Es,ks)])
+    Gs=scalar.T@((ks*ks*dk*occupations*(1+occupations)/(2*np.pi**2))[:,None]*scalar)
+    Qv=np.zeros((N,N));Qs=np.zeros((N,N));loss=np.zeros((N,N))
+    max_energy=max_geometry=max_balance=max_parent_factor=0.;min_triangle=float("inf");event_count=0
+    for k,ek,nk,delta_k in zip(ks,Es,occupations,dk):
+        p=k*fractions;ep=energy(p,a);eq=ek-ep;q=inverse_energy(eq,a)
+        qz=((k-p)*(k+p)+q*q)/(2*k)
+        area=np.stack([p+q-k,p+q+k,k-p+q,k+p-q],axis=1)
+        min_triangle=min(min_triangle,float(np.min(area)))
+        if np.any(area<=0):raise ValueError("non-interior on-shell triangle; clipping forbidden")
+        transverse=np.sqrt(np.prod(area,axis=1))/(2*k)
+        Q=np.column_stack((-transverse,np.zeros_like(q),qz))
+        KK=np.array([0.,0.,k]);P=KK-Q
+        eq_checked=energy(q,a)
+        max_energy=max(max_energy,float(np.max(abs(ek-ep-eq_checked)/ek)))
+        max_geometry=max(max_geometry,float(np.max(abs(np.linalg.norm(Q,axis=1)-q)/q)),
+                         float(np.max(abs(np.linalg.norm(P,axis=1)-p)/p)))
+        vg=q/eq_checked*(1-2*mu*mu/np.sqrt(B*B+4*mu*mu*q*q))
+        amplitude=a["g3"]*(6*ek*ep*eq_checked-2*(ek*np.einsum("ij,ij->i",P,Q)+ep*(Q@KK)+eq_checked*(P@KK)))
+        dgamma=k*dw*p*q/(ep*eq_checked*vg)*amplitude**2/(32*np.pi*ek*k)
+        npop=1/np.expm1(ep/T);qpop=1/np.expm1(eq_checked/T)
+        equilibrium=nk*(1+npop)*(1+qpop);reverse=(1+nk)*npop*qpop
+        max_balance=max(max_balance,float(np.max(abs(equilibrium-reverse)/np.maximum(equilibrium,reverse))))
+        lhs=(1+npop)*(1+qpop)/(1+nk);rhs=1+npop+qpop
+        max_parent_factor=max(max_parent_factor,float(np.max(abs(lhs-rhs)/rhs)))
+        parent_measure=k*k*delta_k/(2*np.pi**2);weights=parent_measure*dgamma*equilibrium
+        fk=(k/K)**(2*np.arange(N));fp=(p[:,None]/K)**(2*np.arange(N));fq=(q[:,None]/K)**(2*np.arange(N))
+        delta=KK[None,None,:]*fk[None,:,None]-P[:,None,:]*fp[:,:,None]-Q[:,None,:]*fq[:,:,None]
+        Qv+=np.einsum("a,aij,alj->il",weights,delta,delta)/3
+        scalar_parent=features_scalar(ek,k,T,K,N)
+        scalar_p=np.array([features_scalar(e,v,T,K,N) for e,v in zip(ep,p)])
+        scalar_q=np.array([features_scalar(e,v,T,K,N) for e,v in zip(eq_checked,q)])
+        ds=scalar_parent[None,:]-scalar_p-scalar_q
+        Qs+=ds.T@(weights[:,None]*ds)
+        loss+=float(np.sum(weights))*k*k*np.outer(fk,fk)/3
+        event_count+=order
+    vs=gram_spectrum(Gv,Qv,eigen_tol);ss=gram_spectrum(Gs,Qs,eigen_tol)
+    Gred=Gv[1:,1:]-np.outer(Gv[1:,0],Gv[0,1:])/Gv[0,0]
+    Qred=Qv[1:,1:];bred=b[1:]-Gv[1:,0]*b[0]/Gv[0,0]
+    chol=np.linalg.cholesky(Gred);inv=np.linalg.inv(chol)
+    C=inv@Qred@inv.T;values,vectors=np.linalg.eigh(C);white_b=inv@bred
+    if np.min(values)<=0:raise ValueError("unresolved positive reduced spectrum; no clipping/regulator")
+    amplitudes=vectors.T@white_b
+    R=float(bred@np.linalg.solve(Qred,bred))
+    spectral_R=float(np.sum(amplitudes*amplitudes/values))
+    represented=float(bred@np.linalg.solve(Gred,bred))
+    rate=float(np.min(values))
+    reduced_source_error=(D-represented)/D
+    ratios=[0.,.5,1.,2.];responses=[]
+    for ratio in ratios:
+        omega=rate*ratio
+        direct=bred@np.linalg.solve(Qred-1j*omega*Gred,bred)
+        spectral=np.sum(amplitudes*amplitudes/(values-1j*omega))
+        responses.append({"omega_over_min_basis_rate":ratio,"real":float(direct.real),"imag":float(direct.imag),
+                          "independent_spectral_error":relative(direct,spectral)})
+    return {"T":T,"mu":mu,"lambda_c":lam,"mass_squared_c":m2,"order":order,"cutoff_factor":factor,"feature_order":N,
+      "cutoff_k":K,"cutoff_E_over_radial_gap":float(energy(K,a)/np.sqrt(2*B)),
+      "event_count":event_count,"Gram_scalar":Gs.tolist(),"Gram_vector":Gv.tolist(),
+      "collision_scalar":Qs.tolist(),"collision_vector":Qv.tolist(),"Gram_vector_reduced":Gred.tolist(),
+      "collision_vector_reduced":Qred.tolist(),"source_vector":b.tolist(),"source_vector_reduced":bred.tolist(),
+      "scalar_spectrum":ss,"vector_spectrum":vs,"expected_total_nulls":4,
+      "resolved_total_nulls":ss["null_count"]+3*vs["null_count"],
+      "raw_energy_invariant_error":float(np.linalg.norm(Qs[:,0])/max(np.linalg.norm(Qs),1e-300)),
+      "raw_momentum_invariant_error":float(np.linalg.norm(Qv[:,0])/max(np.linalg.norm(Qv),1e-300)),
+      "phonon_number_form":float(Qs[1,1]),
+      "max_event_energy_error":max_energy,"max_event_geometry_error":max_geometry,
+      "max_detailed_balance_error":max_balance,"max_parent_linearization_factor_error":max_parent_factor,
+      "minimum_triangle_factor":min_triangle,"parent_loss_only_momentum_defect":float(np.linalg.norm(loss[:,0])/np.linalg.norm(loss)),
+      "source_momentum_constraint_error":float(abs(b[0])/max(np.sqrt(Gv[0,0]*D),1e-300)),
+      "unprojected_current_momentum_coefficient":float(c*c+mean_da),
+      "curvature_projected_source_norm":D,"source_representation_relative_squared_error":float(reduced_source_error),
+      "current_response":R,"independent_DC_response_error":relative(R,spectral_R),
+      "source_weighted_basis_time":R/D,"minimum_reduced_basis_rate":rate,
+      "reduced_basis_rates":values.tolist(),"frequency_response":responses,
+      "linear_current_projected_source_norm":linear_D,
+      "linear_current_projected_relative_squared_norm":linear_relative,
+      "isotropic_reduction":"one scalar plus three identical vector blocks; exact rotational average",
+      "posterior_collision_projection_used":False,"interpolation_used":False,
+      "artificial_diagonal_width_used":False,"physical_heat_current_matched":False,
+      "continuum_limit_completed":False,"physical_thermalization_time":None}
+
+
+def audit(p,path):
+    rules=p["verification"];checks={}
+    def flag(name,value):checks[name]={"pass":bool(value)}
+    def close(name,value,tolerance):checks[name]={"metric":float(value),"threshold":tolerance,"pass":bool(np.isfinite(value) and value<=tolerance)}
+    def greater(name,value,floor=0.):checks[name]={"metric":float(value),"minimum":floor,"pass":bool(np.isfinite(value) and value>floor)}
+    flag("scope",p["record_role"]=="FINITE_TREE_GOLDSTONE_GALERKIN_CURRENT_DIAGNOSTIC_NOT_TRANSPORT")
+    flag("locked_nonempty_state",p["temperatures"]==[.002,.004] and p["mu"]==1.28 and p["lambda_exploratory"]==.01)
+    flag("locked_targets",rules["locked_before_first_execution"] is True and rules["orders"]==[24,48,72]
+      and rules["cutoff_factors"]==[20,30,40] and rules["feature_orders"]==[2,3,4,5] and
+      rules["basis_response_refinement_relative_tolerance"]==.01 and rules["cutoff_refinement_relative_tolerance"]==.01)
+    for name,value in p["admission"].items():flag("boundary/"+name,value is False)
+    base=load(ROOT/p["source_adapter"],"galerkin_base")
+    original=json.loads((ROOT/p["core_source_contract"]).read_text(encoding="utf-8"))
+    ns,AST=base.source_functions(original)
+    old=json.loads((ROOT/p["collision_artifact"]).read_text(encoding="utf-8"))
+    flag("leading_channel_prior_passed",old["status"]=="PASS_LEADING_GOLDSTONE_CHANNEL_ONLY")
+    collision_contract=json.loads((ROOT/p["source_contract"]).read_text(encoding="utf-8"))
+    flag("same_fixed_Phi_configuration",original["configuration"]==collision_contract["configuration"])
+    c=original["configuration"];m2=c["mass_squared"]/c["Z"];mu=p["mu"];lam=p["lambda_exploratory"]/c["Z"]**2
+    cfg=base.configuration(original,128,70);a={"B":3*mu*mu-m2,"r":mu*mu-m2,"mu":mu}
+    for k in [.0001,.02,.1,.4]:
+        source=ns["EOS"]["condensed_quasiparticle_energies"](k,mu,c["Phi_fixed"],cfg)[1]
+        close("source_root_correspondence/"+str(k),relative(energy(k,a),source),rules["algebra_relative_tolerance"])
+        close("inverse_root/"+str(k),relative(inverse_energy(source,a),k),rules["algebra_relative_tolerance"])
+    rows=[];gates=[];tol=rules["algebra_relative_tolerance"];etol=rules["event_relative_tolerance"]
+    for T in p["temperatures"]:
+        def calc(order=rules["default_order"],factor=rules["default_cutoff_factor"],N=rules["default_feature_order"]):
+            return state(T,mu,m2,lam,order,factor,N,rules["relative_eigenvalue_tolerance"])
+        orders=[calc(order=o) for o in rules["orders"]]
+        cuts=[calc(factor=f) for f in rules["cutoff_factors"]]
+        basis=[calc(N=n) for n in rules["feature_orders"]]
+        ref=basis[-1];label=str(T)
+        for sweep_name,sweep in [("order",orders),("cutoff",cuts),("basis",basis)]:
+            for row in sweep:
+                prefix=label+"/"+sweep_name+"/"+str((row["order"],row["cutoff_factor"],row["feature_order"]))
+                for name in ("raw_energy_invariant_error","raw_momentum_invariant_error",
+                             "source_momentum_constraint_error","independent_DC_response_error"):
+                    close(prefix+"/"+name,row[name],tol)
+                for name in ("max_event_energy_error","max_event_geometry_error","max_detailed_balance_error","max_parent_linearization_factor_error"):
+                    close(prefix+"/"+name,row[name],etol)
+                flag(prefix+"/four_finite_basis_nulls",row["resolved_total_nulls"]==4)
+                flag(prefix+"/positive_dissipative_subspaces",all(row[k]["negative_resolved_count"]==0 and
+                     row[k]["positive_count"]==row["feature_order"]-1 for k in ("scalar_spectrum","vector_spectrum")))
+                close(prefix+"/whitening",max(row[k]["Gram_whitening_error"] for k in ("scalar_spectrum","vector_spectrum")),tol)
+                close(prefix+"/spectral_symmetry",max(row[k]["operator_symmetry_error"] for k in ("scalar_spectrum","vector_spectrum")),tol)
+                greater(prefix+"/positive_number_change",row["phonon_number_form"])
+                greater(prefix+"/positive_projected_source",row["curvature_projected_source_norm"])
+                greater(prefix+"/positive_response",row["current_response"])
+                greater(prefix+"/parent_loss_only_fails",row["parent_loss_only_momentum_defect"],rules["negative_control_floor"])
+                greater(prefix+"/unprojected_source_overlaps_momentum",row["unprojected_current_momentum_coefficient"],rules["negative_control_floor"])
+                close(prefix+"/low_energy_cutoff",row["cutoff_E_over_radial_gap"],rules["max_cutoff_energy_over_radial_gap"])
+                close(prefix+"/independent_frequency_resolvents",max(q["independent_spectral_error"] for q in row["frequency_response"]),tol)
+                close(prefix+"/linear_dispersion_source_zero",row["linear_current_projected_relative_squared_norm"],tol)
+                flag(prefix+"/no_operator_patch",not any(row[k] for k in
+                    ("posterior_collision_projection_used","interpolation_used","artificial_diagonal_width_used")))
+        # Convergence is a separate measured target, never folded into a structural PASS.
+        target={}
+        for name,sweep,threshold in [
+          ("order",orders,rules["order_refinement_relative_tolerance"]),
+          ("cutoff",cuts,rules["cutoff_refinement_relative_tolerance"]),
+          ("basis",basis,rules["basis_response_refinement_relative_tolerance"])]:
+            delta=max(relative(sweep[-1][k],sweep[-2][k]) for k in ("current_response","source_weighted_basis_time"))
+            target[name]={"relative_change":delta,"threshold":threshold,"pass":delta<=threshold}
+        delta=abs(ref["source_representation_relative_squared_error"])
+        target["source_representation"]={"relative_squared_error":delta,"threshold":rules["source_representation_relative_tolerance"],
+                                      "pass":delta<=rules["source_representation_relative_tolerance"]}
+        monotone=all(basis[i+1]["current_response"]>=basis[i]["current_response"]*(1-tol) for i in range(len(basis)-1))
+        flag(label+"/nested_variational_response_monotone",monotone)
+        rows.append({"T":T,"final":ref,"order_sweep":orders,"cutoff_sweep":cuts,"basis_sweep":basis,"measured_targets":target})
+        gates.append({"T":T,"pass":all(v["pass"] for v in target.values()),"targets":target})
+    if rows:
+        ref=rows[-1]["final"];scale=rules["energy_scale"]
+        scaled=state(ref["T"]*scale,mu*scale,m2*scale**2,lam,ref["order"],ref["cutoff_factor"],ref["feature_order"],rules["relative_eigenvalue_tolerance"])
+        for name,exponent in [("Gram_vector",5),("collision_vector",6),("current_response",4),
+                              ("source_weighted_basis_time",-1),("minimum_reduced_basis_rate",1)]:
+            close("whole_action_scaling/"+name,relative(np.asarray(scaled[name]),np.asarray(ref[name])*scale**exponent),tol)
+        scale_record={"factor":scale,"state":scaled,"dimension_exponents":{"Gram":5,"Q":6,"R":4,"tau_basis":-1,"rate":1}}
+    else:scale_record=None;flag("nonempty_current_response",False)
+    paths=[path,ROOT/p["card"],REGISTRY,Path(__file__).resolve(),ROOT/p["source_adapter"],
+      ROOT/p["core_source_contract"],ROOT/p["source_contract"],ROOT/p["collision_verifier"],ROOT/p["collision_artifact"]]+[
+      ROOT/f for f in original["core_sources"].values()]+[ROOT/f for f in p["reused_inputs"]]
+    archive=TOPIC/"Result/previews/fluid_core_o2_goldstone_galerkin_first_execution.json"
+    archive_source=TOPIC/"Result/previews/core_o2_goldstone_galerkin_first_execution_verifier.py.txt"
+    paths.extend([archive,archive_source])
+    hashes={f.relative_to(ROOT).as_posix() if f.is_relative_to(ROOT) else f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in paths}
+    passed=all(q["pass"] for q in checks.values());converged=bool(gates) and all(q["pass"] for q in gates)
+    return {"schema_version":"t010-core-o2-goldstone-galerkin-audit-v1","date":p["date"],
+      "status":"PASS_FINITE_GALERKIN_DIAGNOSTIC_ONLY" if passed else "FINITE_GALERKIN_DIAGNOSTIC_FAIL",
+      "check_count":len(checks),"passing_check_count":sum(q["pass"] for q in checks.values()),"checks":checks,
+      "input_hashes":hashes,"source_AST_definition_hashes":AST,"locked_verification":rules,"state_results":rows,
+      "whole_action_scale_control":scale_record,
+      "refinement_gate":{"status":"PASS_CURRENT_FINITE_REFINEMENT_TARGETS_ONLY" if converged else "MEASURED_REFINEMENT_TARGETS_OPEN",
+                         "target_pass":converged,"state_targets":gates,"physical_admission":False},
+      "first_execution_record":{"artifact":archive.relative_to(ROOT).as_posix(),
+        "verifier_source_archive":archive_source.relative_to(ROOT).as_posix(),
+        "role":"historical first diagnostic; linear-current zero was then encoded rather than executed",
+        "revision":"execute the linear-current source constraint; other numerical targets and rates unchanged"},
+      "candidate_controller":p["candidate_controller"],"physical_controller":p["physical_controller"],
+      "selected_finite_temperature_cubic_gain_loss_form_evaluated":bool(rows),
+      "shared_scalar_vector_Galerkin_basis_evaluated":bool(rows),
+      "physical_heat_current_matched":False,"full_interacting_collision_completed":False,
+      "continuum_spectral_gap_established":False,"thermalization_derived":False,
+      "physical_frequency_window_established":False,"collective_sound_damping_assigned":False,
+      "physical_UET_operator_admitted":False,"physical_HeII_state_assigned":False,
+      "physical_J04_executed":False,"physical_J05_executed":False,"physical_J06_executed":False,
+      "whole_Core_runtime_executed":False,"live_Phi_executed":False,"claim_promotion":False,"dependency_unlock":False,
+      "thresholds_relaxed":False,"parameters_fitted":False,
+      "notes":["Finite shared basis replaces disconnected representative triads, but rank is not continuum completeness.",
+        "Source is constrained kinetic energy-current, not a matched condensate/charge material heat current.",
+        "Finite source-weighted basis time and reduced spectrum do not establish a continuum gap or hydrodynamic window.",
+        "Leading tree vertex with source curvature is approximate; other channels and self-consistent thermal state remain open."]}
+
+
+def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--contract-json",type=Path,default=CONTRACT);parser.add_argument("--output",type=Path,default=OUTPUT)
+    args=parser.parse_args();path=args.contract_json.resolve()
+    a=audit(json.loads(path.read_text(encoding="utf-8")),path)
+    args.output.parent.mkdir(parents=True,exist_ok=True)
+    args.output.write_text(json.dumps(a,ensure_ascii=False,indent=2)+"\n",encoding="utf-8",newline="\n")
+    print(a["status"],a["passing_check_count"],"/",a["check_count"],a["refinement_gate"]["status"])
+    for row in a["state_results"]:
+        print("T",row["T"],"R",row["final"]["current_response"],"tau_basis",row["final"]["source_weighted_basis_time"],
+              "targets",row["measured_targets"])
+    failed=[(k,v) for k,v in a["checks"].items() if not v["pass"]]
+    if failed:print("FAIL",failed)
+    return 0 if not failed else 1
+
+
+if __name__=="__main__":
+    raise SystemExit(main())

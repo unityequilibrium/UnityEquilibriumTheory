@@ -213,3 +213,19 @@ projection/transport time or physical hydrodynamic frequency window is known.
 Upper/lower quasiparticle branches are not the two ideal collective sounds.
 No existing contact-channel Kubo value or archived sound-speed field is treated
 as current physical two-fluid admission. Physical/material/SI gates stay open.
+
+## Current response is not converged or physically matched
+
+[The shared-basis artifact](Result/artifacts/fluid_core_o2_goldstone_galerkin_audit.json)
+has four finite-basis nulls and positive dissipative subspaces, but finite rank
+does not establish continuum connectivity or a spectral gap. Its selected
+finite-T cubic gain/loss form uses tree energies/leading vertices without
+self-consistent thermal self-energy or all additional scattering channels.
+
+The kinetic E*v_g current constrained against momentum is not yet matched to
+the full condensate/charge material heat current or hydrodynamic frame.
+Finite natural response and source-weighted basis time are diagnostic quantities.
+Last basis response changes18-19%; cutoff changes5-6% exceed the locked1%
+acceptance targets. Neither value is an admitted transport coefficient,
+thermalization time, frequency window or collective sound damping.
+A nearly exact source expansion does not cure an unconverged collision solution.

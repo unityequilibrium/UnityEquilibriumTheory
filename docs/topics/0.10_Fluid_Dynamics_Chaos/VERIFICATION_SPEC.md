@@ -271,3 +271,27 @@ handling repair allows unsupported-admission tests to emit a failing artifact.
 check fresh source hashes, rates/normalization, extra null modes, archived
 failure identity and fail-closed unsupported thermalization/operator/empty inputs.
 No physical transport or package gate is promoted.
+
+## Shared scalar/vector Goldstone Galerkin diagnostic (2026-10-01)
+
+[Contract](Data/03_Research/fluid_core_o2_goldstone_galerkin_contract.json):
+T=.002/.004, mu1.28, exploratory lambda.01, cutoffs20/30/40*T/c,
+orders24/48/72 and features2/3/4/5. Event1e-9 and algebra1e-8 controls;
+relative spectral tolerance1e-9 with no absolute rate cutoff.
+R/current-time order, cutoff and last-basis acceptance remain1%.
+Source representation has its own1% squared-norm target.
+Whole-action scale2 checks G:E5,Q:E6,R:E4,rate:E1 and basis-time:E-1.
+
+[Verifier](Code/03_Research/Research_Fluid_Core_O2_Goldstone_Galerkin.py)
+passes454 structural controls. The separate measured gate remains OPEN because
+basis/cutoff targets fail at both states. No tolerance or parameter is fitted.
+[Four regressions](Code/03_Research/test_fluid_core_o2_goldstone_galerkin.py)
+preserve fresh hashes, raw invariants, source constraint/independent resolvents
+and failed target boundaries; false current admission, empty states and relaxed
+basis targets fail closed.
+
+The [first diagnostic](Result/previews/fluid_core_o2_goldstone_galerkin_first_execution.json)
+and [exact source](Result/previews/core_o2_goldstone_galerkin_first_execution_verifier.py.txt)
+are retained. First source encoded the linear-current zero; current source
+executes the current/momentum constraint numerically. R/time, locked rules and
+all measured refinement outcomes remain unchanged. No physical promotion.

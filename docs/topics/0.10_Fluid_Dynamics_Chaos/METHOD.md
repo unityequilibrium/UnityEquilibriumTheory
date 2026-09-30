@@ -209,3 +209,20 @@ balance failure, energy/momentum invariants, number nonconservation and a
 positive disconnected entropy form. Its extra null modes prohibit identifying
 a physical relaxation time. Existing Topic13 scalar/contact/Kubo lanes are
 reviewed as bounded prior evidence, not transferred to hydrodynamic velocities.
+
+## Shared cubic Galerkin form and constrained current response
+
+[The new card](CORE_O2_GOLDSTONE_GALERKIN_DERIVATION.md) reuses the prior
+canonical identical-daughter decay measure and Bose detailed balance to
+linearize the complete gain/loss form for the selected 1<->2 process.
+Parent and daughter roles enter the same event integral; no extra daughter
+term or symmetry factor is appended. Current spectrum/inverse-root checks and
+parent linearization factors guard this normalization.
+
+Use exact isotropic averaging of scalar and Cartesian-vector polynomial
+features. Check raw energy/momentum invariant columns before Gram whitening;
+then constrain only the source/state to zero total kinetic momentum.
+Solve the finite reduced Q-i*omega*G system and its independent whitened
+spectral form. Execute the linear-dispersion zero-current limit and detect
+parent-loss-only invariant failure. Separate quadrature, cutoff, basis and
+source-representation targets; preserve failed refinement despite structural PASS.

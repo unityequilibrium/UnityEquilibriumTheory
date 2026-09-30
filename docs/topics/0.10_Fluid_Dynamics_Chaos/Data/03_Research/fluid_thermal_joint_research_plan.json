@@ -12,7 +12,7 @@
   "source_policy": "Original evidence_snapshot hashes retain the published-base comparison. current_execution_snapshot records the current branch-local candidate inputs; execution_history retains as-executed historical identities. Original dirty workspace differences do not authorize importing unpublished results.",
   "controlling_blocker": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
   "blocker_role": "proposed_physics_program_controller_not_replacement_of_legacy_speed_gate",
-  "next_controller": "Extend existing collision evidence with a connected condensed derivative-vertex gain/loss operator and conserved vector heat-current projection; check interacting finite-T state, allowed processes and joint convergence before identifying a transport time/frequency window. Leading single-phonon decay and disconnected triad positivity do not establish hydrodynamic thermalization. Nonlinear/live-response, material/SI and independent He-II source/protocol admission remain separate.",
+  "next_controller": "Resolve the measured finite-basis/cutoff current-response failures before any transport use: retain the current 1% targets, develop a numerically stable higher-order shared vector basis, test low-energy-valid cutoff and soft-current convergence, and separate source representation from collision-solution convergence. Then match the kinetic energy-current to condensate/charge heat-current/frame and complete interacting thermal state/additional channels. No continuum gap, physical relaxation time, frequency window, collective damping or material/SI admission follows yet.",
   "first_scientific_wave": "J01",
   "work_packages": [
     {
@@ -259,6 +259,18 @@
         "operator_admitted": false,
         "thermalization_derived": false,
         "next_action": "Extend existing collision evidence with a connected condensed derivative-vertex gain/loss operator and conserved vector heat-current projection; check interacting finite-T state, allowed processes and joint convergence before identifying a transport time/frequency window. Leading single-phonon decay and disconnected triad positivity do not establish hydrodynamic thermalization. Nonlinear/live-response, material/SI and independent He-II source/protocol admission remain separate."
+      },
+      "core_o2_goldstone_galerkin": {
+        "status": "PASS_FINITE_GALERKIN_DIAGNOSTIC_ONLY",
+        "candidate_controller": "finite_Goldstone_Galerkin_current_response_basis_cutoff_and_interacting_heat_current_admission_open",
+        "controlling_measured_blocker": "finite_basis_and_cutoff_current_response_not_converged",
+        "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_galerkin_contract.json",
+        "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_galerkin_audit.json",
+        "refinement_target_pass": false,
+        "physical_package_executed": false,
+        "operator_admitted": false,
+        "thermalization_derived": false,
+        "next_action": "Resolve the measured finite-basis/cutoff current-response failures before any transport use: retain the current 1% targets, develop a numerically stable higher-order shared vector basis, test low-energy-valid cutoff and soft-current convergence, and separate source representation from collision-solution convergence. Then match the kinetic energy-current to condensate/charge heat-current/frame and complete interacting thermal state/additional channels. No continuum gap, physical relaxation time, frequency window, collective damping or material/SI admission follows yet."
       }
     },
     {
@@ -1105,6 +1117,123 @@
       "parameters_fitted": false,
       "next_action": "Extend existing collision evidence with a connected condensed derivative-vertex gain/loss operator and conserved vector heat-current projection; check interacting finite-T state, allowed processes and joint convergence before identifying a transport time/frequency window. Leading single-phonon decay and disconnected triad positivity do not establish hydrodynamic thermalization. Nonlinear/live-response, material/SI and independent He-II source/protocol admission remain separate.",
       "package_role": "microscopic asymptotic preparation; not physical packages"
+    },
+    {
+      "date": "2026-10-01",
+      "latest_executed_package": "J01_J02_SHARED_GOLDSTONE_GALERKIN_CURRENT_DIAGNOSTIC_ONLY",
+      "status": "PASS_FINITE_GALERKIN_DIAGNOSTIC_ONLY",
+      "scope": "Shared scalar/vector cubic gain-loss form, raw invariants and constrained finite kinetic-current response",
+      "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_galerkin_contract.json",
+      "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_GALERKIN_DERIVATION.md",
+      "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Galerkin.py",
+      "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_galerkin_audit.json",
+      "result_artifact_sha256": "4b4c706aab168108e7d5829a6a0563eaf9f99c893afd2586020eb89b55e6d24b",
+      "reference_check_count": 454,
+      "evidence_hashes": {
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_galerkin_contract.json": "d36a29ef8524a9c839ba237ac7507ea6e8c217d777a8f9fcd87302e9b5b37fee",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_GALERKIN_DERIVATION.md": "5cd09900d57ae2d61c2007f6a0b2f7d565903894721c81b8b81b29257bccac90",
+        "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_goldstone_galerkin_addendum.json": "73bb37bd79dfc2bfde8231998db142d539db83a9b1186e1e23c1dff8dadd6fb8",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Galerkin.py": "f7caeae9655172514adc464723917a1a8e367a3a1832ada2938a2d44f1afdc74",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py": "b083323ad31df5527a94a888e8eae43984eb77698bda1c6c3d080e2ea940f5e2",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_common_flow_contract.json": "c9a190c89d682080a9a90254cfd205e606cd9063f9d34c68b00eeeef8634c75c",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_collision_contract.json": "331535ea4a63e47e0d100c317511013605ab5044f1bdbff835ba48fbd3e6b912",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Collision.py": "1b8cc6ff1782da5c5f01dcf4d95052871a4ea2c7a5e1aa967478e9f800cd3fe8",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_collision_audit.json": "c130a512a015940ed5db9f2a181fa34731910fa17aa58c5c4e59e0cdb3dfe56b",
+        "docs/core/02_equations/covariant/uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
+        "docs/core/02_equations/o2/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d",
+        "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
+        "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba",
+        "docs/core/02_equations/o2/uet_o2_invariant_galerkin_collision_operator.py": "278b168e5c3b444ac4df4b96b5a7d00410cd9485c511ab2a17aa4f11c6f6d94e",
+        "docs/core/07_artifacts/topic13/t13_invariant_galerkin_collision_operator_audit.json": "433427f32612e478d71a1a4ff64f96e3d22da7fc33d3de0c10f3a0a480234011",
+        "docs/core/07_artifacts/topic13/t13_collision_evidence_reconciliation.json": "cad197d2635b08d3454cc49734b292b32971c2f18e3d3f1d2b2c0b5ca77c9bf6",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_ideal_modes_audit.json": "b2e5d7fb5fff8f1a48148e1661bbf640027174b58b9fe765f53cded351c512f6",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_goldstone_galerkin_first_execution.json": "18e4854a368c5b0d6860da12435bd8dae00d8d77302d66036c40972404ae710a",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_goldstone_galerkin_first_execution_verifier.py.txt": "0be34c2e579b4aaf44dae168c63a4b50276508759c6073751e9c2484c0439c81"
+      },
+      "refinement_gate": {
+        "status": "MEASURED_REFINEMENT_TARGETS_OPEN",
+        "target_pass": false,
+        "state_targets": [
+          {
+            "T": 0.002,
+            "pass": false,
+            "targets": {
+              "order": {
+                "relative_change": 4.194469874887878e-14,
+                "threshold": 0.01,
+                "pass": true
+              },
+              "cutoff": {
+                "relative_change": 0.06311632907676756,
+                "threshold": 0.01,
+                "pass": false
+              },
+              "basis": {
+                "relative_change": 0.186583177918203,
+                "threshold": 0.01,
+                "pass": false
+              },
+              "source_representation": {
+                "relative_squared_error": 1.5808165345367487e-15,
+                "threshold": 0.01,
+                "pass": true
+              }
+            }
+          },
+          {
+            "T": 0.004,
+            "pass": false,
+            "targets": {
+              "order": {
+                "relative_change": 4.1696434622480434e-14,
+                "threshold": 0.01,
+                "pass": true
+              },
+              "cutoff": {
+                "relative_change": 0.049384489584590734,
+                "threshold": 0.01,
+                "pass": false
+              },
+              "basis": {
+                "relative_change": 0.18494194728805985,
+                "threshold": 0.01,
+                "pass": false
+              },
+              "source_representation": {
+                "relative_squared_error": 3.254594234366193e-16,
+                "threshold": 0.01,
+                "pass": true
+              }
+            }
+          }
+        ],
+        "physical_admission": false
+      },
+      "candidate_controller": "finite_Goldstone_Galerkin_current_response_basis_cutoff_and_interacting_heat_current_admission_open",
+      "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+      "controlling_measured_blocker": "finite_basis_and_cutoff_current_response_not_converged",
+      "first_execution_record": {
+        "artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_goldstone_galerkin_first_execution.json",
+        "verifier_source_archive": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_goldstone_galerkin_first_execution_verifier.py.txt",
+        "role": "historical first diagnostic; linear-current zero was then encoded rather than executed",
+        "revision": "execute the linear-current source constraint; other numerical targets and rates unchanged"
+      },
+      "physical_heat_current_matched": false,
+      "full_interacting_collision_completed": false,
+      "continuum_spectral_gap_established": false,
+      "thermalization_derived": false,
+      "physical_frequency_window_established": false,
+      "collective_sound_damping_assigned": false,
+      "physical_UET_operator_admitted": false,
+      "physical_J04_executed": false,
+      "physical_J05_executed": false,
+      "physical_J06_executed": false,
+      "claim_promotion": false,
+      "dependency_unlock": false,
+      "thresholds_relaxed": false,
+      "parameters_fitted": false,
+      "next_action": "Resolve the measured finite-basis/cutoff current-response failures before any transport use: retain the current 1% targets, develop a numerically stable higher-order shared vector basis, test low-energy-valid cutoff and soft-current convergence, and separate source representation from collision-solution convergence. Then match the kinetic energy-current to condensate/charge heat-current/frame and complete interacting thermal state/additional channels. No continuum gap, physical relaxation time, frequency window, collective damping or material/SI admission follows yet.",
+      "package_role": "selected finite kinetic reference; measured refinement remains open"
     }
   ],
   "last_updated": "2026-09-30",
@@ -1213,53 +1342,111 @@
   },
   "latest_executed_reference_snapshot": {
     "date": "2026-10-01",
-    "latest_executed_package": "J01_J02_LEADING_GOLDSTONE_COLLISION_CHANNEL_REFERENCE_ONLY",
-    "status": "PASS_LEADING_GOLDSTONE_CHANNEL_ONLY",
-    "scope": "Leading tree 1->2 derivative vertex, curved source kinematics, T=0 occupation/pole decay and equilibrium triad invariants",
-    "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_collision_contract.json",
-    "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_COLLISION_DERIVATION.md",
-    "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Collision.py",
-    "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_collision_audit.json",
-    "result_artifact_sha256": "c130a512a015940ed5db9f2a181fa34731910fa17aa58c5c4e59e0cdb3dfe56b",
-    "reference_check_count": 159,
+    "latest_executed_package": "J01_J02_SHARED_GOLDSTONE_GALERKIN_CURRENT_DIAGNOSTIC_ONLY",
+    "status": "PASS_FINITE_GALERKIN_DIAGNOSTIC_ONLY",
+    "scope": "Shared scalar/vector cubic gain-loss form, raw invariants and constrained finite kinetic-current response",
+    "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_galerkin_contract.json",
+    "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_GALERKIN_DERIVATION.md",
+    "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Galerkin.py",
+    "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_galerkin_audit.json",
+    "result_artifact_sha256": "4b4c706aab168108e7d5829a6a0563eaf9f99c893afd2586020eb89b55e6d24b",
+    "reference_check_count": 454,
     "evidence_hashes": {
-      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_collision_contract.json": "331535ea4a63e47e0d100c317511013605ab5044f1bdbff835ba48fbd3e6b912",
-      "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_COLLISION_DERIVATION.md": "939eff35c8acb5af2343d5c5316a169b64994285394db7639804c4f10489e932",
-      "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_goldstone_collision_addendum.json": "3279879e15154836ae2a51e7eec5a714132fa479448378deb26d1f6eed2cc056",
-      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Collision.py": "1b8cc6ff1782da5c5f01dcf4d95052871a4ea2c7a5e1aa967478e9f800cd3fe8",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_galerkin_contract.json": "d36a29ef8524a9c839ba237ac7507ea6e8c217d777a8f9fcd87302e9b5b37fee",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_GALERKIN_DERIVATION.md": "5cd09900d57ae2d61c2007f6a0b2f7d565903894721c81b8b81b29257bccac90",
+      "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_goldstone_galerkin_addendum.json": "73bb37bd79dfc2bfde8231998db142d539db83a9b1186e1e23c1dff8dadd6fb8",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Galerkin.py": "f7caeae9655172514adc464723917a1a8e367a3a1832ada2938a2d44f1afdc74",
       "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py": "b083323ad31df5527a94a888e8eae43984eb77698bda1c6c3d080e2ea940f5e2",
       "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_common_flow_contract.json": "c9a190c89d682080a9a90254cfd205e606cd9063f9d34c68b00eeeef8634c75c",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_collision_contract.json": "331535ea4a63e47e0d100c317511013605ab5044f1bdbff835ba48fbd3e6b912",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Collision.py": "1b8cc6ff1782da5c5f01dcf4d95052871a4ea2c7a5e1aa967478e9f800cd3fe8",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_collision_audit.json": "c130a512a015940ed5db9f2a181fa34731910fa17aa58c5c4e59e0cdb3dfe56b",
       "docs/core/02_equations/covariant/uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
       "docs/core/02_equations/o2/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d",
       "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
       "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba",
-      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_ideal_modes_audit.json": "b2e5d7fb5fff8f1a48148e1661bbf640027174b58b9fe765f53cded351c512f6",
-      "docs/core/02_equations/covariant/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
-      "docs/core/02_equations/o2/uet_o2_condensed_relative_flow_collision.py": "f86d2d5984c0fabd4e4f97fe8bf1f08668d7bc2bae9d33322ea633b97a38fc83",
+      "docs/core/02_equations/o2/uet_o2_invariant_galerkin_collision_operator.py": "278b168e5c3b444ac4df4b96b5a7d00410cd9485c511ab2a17aa4f11c6f6d94e",
+      "docs/core/07_artifacts/topic13/t13_invariant_galerkin_collision_operator_audit.json": "433427f32612e478d71a1a4ff64f96e3d22da7fc33d3de0c10f3a0a480234011",
       "docs/core/07_artifacts/topic13/t13_collision_evidence_reconciliation.json": "cad197d2635b08d3454cc49734b292b32971c2f18e3d3f1d2b2c0b5ca77c9bf6",
-      "docs/core/07_artifacts/topic13/t13_uet_o2_condensed_relative_flow_collision_audit.json": "7f5ddc443ce8999455daa18334f2e8ba1a4cc4ec2432a7c7e301ef997dffa39f",
-      "docs/core/07_artifacts/topic13/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json": "0606829e2ebc3e5cc7131e3c56b327a586a1976169eedbc9525afa3b3d5dbc9f",
-      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_goldstone_collision_first_execution.json": "97dfefabaf3f2fee8729cbbf16128e05630464e2bee479ec479f4798aee0fe6c",
-      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_goldstone_collision_first_execution_verifier.py.txt": "90675cceb7f78044a2af490909c2d2f4f76accdbdc5ac54205a9e05ee9939060"
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_ideal_modes_audit.json": "b2e5d7fb5fff8f1a48148e1661bbf640027174b58b9fe765f53cded351c512f6",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_goldstone_galerkin_first_execution.json": "18e4854a368c5b0d6860da12435bd8dae00d8d77302d66036c40972404ae710a",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_goldstone_galerkin_first_execution_verifier.py.txt": "0be34c2e579b4aaf44dae168c63a4b50276508759c6073751e9c2484c0439c81"
     },
-    "candidate_controller": "leading_Goldstone_decay_channel_checked_but_connected_collision_heat_current_thermalization_and_material_admission_open",
+    "refinement_gate": {
+      "status": "MEASURED_REFINEMENT_TARGETS_OPEN",
+      "target_pass": false,
+      "state_targets": [
+        {
+          "T": 0.002,
+          "pass": false,
+          "targets": {
+            "order": {
+              "relative_change": 4.194469874887878e-14,
+              "threshold": 0.01,
+              "pass": true
+            },
+            "cutoff": {
+              "relative_change": 0.06311632907676756,
+              "threshold": 0.01,
+              "pass": false
+            },
+            "basis": {
+              "relative_change": 0.186583177918203,
+              "threshold": 0.01,
+              "pass": false
+            },
+            "source_representation": {
+              "relative_squared_error": 1.5808165345367487e-15,
+              "threshold": 0.01,
+              "pass": true
+            }
+          }
+        },
+        {
+          "T": 0.004,
+          "pass": false,
+          "targets": {
+            "order": {
+              "relative_change": 4.1696434622480434e-14,
+              "threshold": 0.01,
+              "pass": true
+            },
+            "cutoff": {
+              "relative_change": 0.049384489584590734,
+              "threshold": 0.01,
+              "pass": false
+            },
+            "basis": {
+              "relative_change": 0.18494194728805985,
+              "threshold": 0.01,
+              "pass": false
+            },
+            "source_representation": {
+              "relative_squared_error": 3.254594234366193e-16,
+              "threshold": 0.01,
+              "pass": true
+            }
+          }
+        }
+      ],
+      "physical_admission": false
+    },
+    "candidate_controller": "finite_Goldstone_Galerkin_current_response_basis_cutoff_and_interacting_heat_current_admission_open",
     "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+    "controlling_measured_blocker": "finite_basis_and_cutoff_current_response_not_converged",
     "first_execution_record": {
-      "artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_goldstone_collision_first_execution.json",
-      "verifier_source_archive": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_goldstone_collision_first_execution_verifier.py.txt",
-      "status": "LEADING_GOLDSTONE_CHANNEL_FAIL",
-      "passing_checks": 153,
-      "check_count": 159,
-      "repair": "factored triangle/soft-daughter placement replaces cancellation-sensitive cosine reconstruction; no threshold or rate formula change",
-      "role": "immutable historical diagnostic, not current-source evidence"
+      "artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_goldstone_galerkin_first_execution.json",
+      "verifier_source_archive": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_goldstone_galerkin_first_execution_verifier.py.txt",
+      "role": "historical first diagnostic; linear-current zero was then encoded rather than executed",
+      "revision": "execute the linear-current source constraint; other numerical targets and rates unchanged"
     },
+    "physical_heat_current_matched": false,
+    "full_interacting_collision_completed": false,
+    "continuum_spectral_gap_established": false,
     "thermalization_derived": false,
-    "finite_temperature_rate_emitted": false,
-    "collision_spectral_gap_established": false,
     "physical_frequency_window_established": false,
-    "collective_two_fluid_sound_damping_assigned": false,
+    "collective_sound_damping_assigned": false,
     "physical_UET_operator_admitted": false,
-    "physical_prediction_executed": false,
     "physical_J04_executed": false,
     "physical_J05_executed": false,
     "physical_J06_executed": false,
@@ -1267,8 +1454,8 @@
     "dependency_unlock": false,
     "thresholds_relaxed": false,
     "parameters_fitted": false,
-    "next_action": "Extend existing collision evidence with a connected condensed derivative-vertex gain/loss operator and conserved vector heat-current projection; check interacting finite-T state, allowed processes and joint convergence before identifying a transport time/frequency window. Leading single-phonon decay and disconnected triad positivity do not establish hydrodynamic thermalization. Nonlinear/live-response, material/SI and independent He-II source/protocol admission remain separate.",
-    "package_role": "microscopic asymptotic preparation; not physical packages"
+    "next_action": "Resolve the measured finite-basis/cutoff current-response failures before any transport use: retain the current 1% targets, develop a numerically stable higher-order shared vector basis, test low-energy-valid cutoff and soft-current convergence, and separate source representation from collision-solution convergence. Then match the kinetic energy-current to condensate/charge heat-current/frame and complete interacting thermal state/additional channels. No continuum gap, physical relaxation time, frequency window, collective damping or material/SI admission follows yet.",
+    "package_role": "selected finite kinetic reference; measured refinement remains open"
   },
   "current_he4_EOS_source_acquisition_snapshot": {
     "date": "2026-09-30",
@@ -1600,5 +1787,122 @@
     "parameters_fitted": false,
     "next_action": "Extend existing collision evidence with a connected condensed derivative-vertex gain/loss operator and conserved vector heat-current projection; check interacting finite-T state, allowed processes and joint convergence before identifying a transport time/frequency window. Leading single-phonon decay and disconnected triad positivity do not establish hydrodynamic thermalization. Nonlinear/live-response, material/SI and independent He-II source/protocol admission remain separate.",
     "package_role": "microscopic asymptotic preparation; not physical packages"
+  },
+  "current_core_o2_goldstone_galerkin_snapshot": {
+    "date": "2026-10-01",
+    "latest_executed_package": "J01_J02_SHARED_GOLDSTONE_GALERKIN_CURRENT_DIAGNOSTIC_ONLY",
+    "status": "PASS_FINITE_GALERKIN_DIAGNOSTIC_ONLY",
+    "scope": "Shared scalar/vector cubic gain-loss form, raw invariants and constrained finite kinetic-current response",
+    "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_galerkin_contract.json",
+    "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_GALERKIN_DERIVATION.md",
+    "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Galerkin.py",
+    "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_galerkin_audit.json",
+    "result_artifact_sha256": "4b4c706aab168108e7d5829a6a0563eaf9f99c893afd2586020eb89b55e6d24b",
+    "reference_check_count": 454,
+    "evidence_hashes": {
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_galerkin_contract.json": "d36a29ef8524a9c839ba237ac7507ea6e8c217d777a8f9fcd87302e9b5b37fee",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_GALERKIN_DERIVATION.md": "5cd09900d57ae2d61c2007f6a0b2f7d565903894721c81b8b81b29257bccac90",
+      "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_goldstone_galerkin_addendum.json": "73bb37bd79dfc2bfde8231998db142d539db83a9b1186e1e23c1dff8dadd6fb8",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Galerkin.py": "f7caeae9655172514adc464723917a1a8e367a3a1832ada2938a2d44f1afdc74",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py": "b083323ad31df5527a94a888e8eae43984eb77698bda1c6c3d080e2ea940f5e2",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_common_flow_contract.json": "c9a190c89d682080a9a90254cfd205e606cd9063f9d34c68b00eeeef8634c75c",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_collision_contract.json": "331535ea4a63e47e0d100c317511013605ab5044f1bdbff835ba48fbd3e6b912",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Collision.py": "1b8cc6ff1782da5c5f01dcf4d95052871a4ea2c7a5e1aa967478e9f800cd3fe8",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_collision_audit.json": "c130a512a015940ed5db9f2a181fa34731910fa17aa58c5c4e59e0cdb3dfe56b",
+      "docs/core/02_equations/covariant/uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
+      "docs/core/02_equations/o2/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d",
+      "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
+      "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba",
+      "docs/core/02_equations/o2/uet_o2_invariant_galerkin_collision_operator.py": "278b168e5c3b444ac4df4b96b5a7d00410cd9485c511ab2a17aa4f11c6f6d94e",
+      "docs/core/07_artifacts/topic13/t13_invariant_galerkin_collision_operator_audit.json": "433427f32612e478d71a1a4ff64f96e3d22da7fc33d3de0c10f3a0a480234011",
+      "docs/core/07_artifacts/topic13/t13_collision_evidence_reconciliation.json": "cad197d2635b08d3454cc49734b292b32971c2f18e3d3f1d2b2c0b5ca77c9bf6",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_ideal_modes_audit.json": "b2e5d7fb5fff8f1a48148e1661bbf640027174b58b9fe765f53cded351c512f6",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_goldstone_galerkin_first_execution.json": "18e4854a368c5b0d6860da12435bd8dae00d8d77302d66036c40972404ae710a",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_goldstone_galerkin_first_execution_verifier.py.txt": "0be34c2e579b4aaf44dae168c63a4b50276508759c6073751e9c2484c0439c81"
+    },
+    "refinement_gate": {
+      "status": "MEASURED_REFINEMENT_TARGETS_OPEN",
+      "target_pass": false,
+      "state_targets": [
+        {
+          "T": 0.002,
+          "pass": false,
+          "targets": {
+            "order": {
+              "relative_change": 4.194469874887878e-14,
+              "threshold": 0.01,
+              "pass": true
+            },
+            "cutoff": {
+              "relative_change": 0.06311632907676756,
+              "threshold": 0.01,
+              "pass": false
+            },
+            "basis": {
+              "relative_change": 0.186583177918203,
+              "threshold": 0.01,
+              "pass": false
+            },
+            "source_representation": {
+              "relative_squared_error": 1.5808165345367487e-15,
+              "threshold": 0.01,
+              "pass": true
+            }
+          }
+        },
+        {
+          "T": 0.004,
+          "pass": false,
+          "targets": {
+            "order": {
+              "relative_change": 4.1696434622480434e-14,
+              "threshold": 0.01,
+              "pass": true
+            },
+            "cutoff": {
+              "relative_change": 0.049384489584590734,
+              "threshold": 0.01,
+              "pass": false
+            },
+            "basis": {
+              "relative_change": 0.18494194728805985,
+              "threshold": 0.01,
+              "pass": false
+            },
+            "source_representation": {
+              "relative_squared_error": 3.254594234366193e-16,
+              "threshold": 0.01,
+              "pass": true
+            }
+          }
+        }
+      ],
+      "physical_admission": false
+    },
+    "candidate_controller": "finite_Goldstone_Galerkin_current_response_basis_cutoff_and_interacting_heat_current_admission_open",
+    "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+    "controlling_measured_blocker": "finite_basis_and_cutoff_current_response_not_converged",
+    "first_execution_record": {
+      "artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_goldstone_galerkin_first_execution.json",
+      "verifier_source_archive": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_goldstone_galerkin_first_execution_verifier.py.txt",
+      "role": "historical first diagnostic; linear-current zero was then encoded rather than executed",
+      "revision": "execute the linear-current source constraint; other numerical targets and rates unchanged"
+    },
+    "physical_heat_current_matched": false,
+    "full_interacting_collision_completed": false,
+    "continuum_spectral_gap_established": false,
+    "thermalization_derived": false,
+    "physical_frequency_window_established": false,
+    "collective_sound_damping_assigned": false,
+    "physical_UET_operator_admitted": false,
+    "physical_J04_executed": false,
+    "physical_J05_executed": false,
+    "physical_J06_executed": false,
+    "claim_promotion": false,
+    "dependency_unlock": false,
+    "thresholds_relaxed": false,
+    "parameters_fitted": false,
+    "next_action": "Resolve the measured finite-basis/cutoff current-response failures before any transport use: retain the current 1% targets, develop a numerically stable higher-order shared vector basis, test low-energy-valid cutoff and soft-current convergence, and separate source representation from collision-solution convergence. Then match the kinetic energy-current to condensate/charge heat-current/frame and complete interacting thermal state/additional channels. No continuum gap, physical relaxation time, frequency window, collective damping or material/SI admission follows yet.",
+    "package_role": "selected finite kinetic reference; measured refinement remains open"
   }
 }

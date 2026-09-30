@@ -222,3 +222,18 @@ This leading asymptotic channel is distinct from screened contact mode-space
 Kubo, ideal collective mode damping and heat-current relaxation. Bose triad
 entropy positivity does not prove connected thermalization. No live Phi,
 complete finite-T vertex, nonlinear operator, SI mapping or Core unlock.
+
+## Shared kinetic collision form versus physical heat current
+
+[Card](CORE_O2_GOLDSTONE_GALERKIN_DERIVATION.md) and
+[unmerged registry](../../core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_goldstone_galerkin_addendum.json)
+record Bose gain/loss variables, identical-daughter normalization, natural
+Gram/collision dimensions and source-frame constraint before execution.
+Whole-action scaling confirms G:E5,Q:E6, generalized rates:E1 and R:E4.
+Raw collision invariants are checked before source reduction.
+
+The leading cubic process is integrated over shared scalar/vector functions;
+it is not all-channel/self-consistent interacting thermal completion.
+E*v_g is a kinetic quasiparticle current, not automatically T^0i-mu*j^i.
+Constrained finite response/time has failed basis/cutoff acceptance and no
+continuum gap, physical frame/SI, two-fluid damping or dependency admission.

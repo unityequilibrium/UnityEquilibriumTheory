@@ -352,3 +352,21 @@ retain eight null modes in a disconnected 12-node diagnostic. No transport
 time, finite-T rate, thermalization or collective sound damping is assigned.
 Next: connected collision/vector heat-current projection and interacting
 thermal-state convergence; nonlinear/live response and material admission remain.
+
+## Shared collision/current basis: measured refinement still open (2026-10-01)
+
+[The Galerkin derivation](CORE_O2_GOLDSTONE_GALERKIN_DERIVATION.md) extends
+the leading Goldstone channel into a shared scalar/vector 1<->2 gain/loss form
+at exploratory natural T=.002/.004 and lambda=.01. Every event uses exact
+curved kinematics and the same polynomial functions. Four conservation nulls
+remain in the finite basis; no interpolation/diagonal-width/collision projection
+is added. The kinetic energy-current source is constrained to zero momentum.
+
+[The artifact](Result/artifacts/fluid_core_o2_goldstone_galerkin_audit.json)
+passes454 structural/source/unit controls, but its separate 1% refinement gate
+FAILS: current response changes18.66%/18.49% between the last two basis sizes
+and6.31%/4.94% between the last two cutoffs. Quadrature order and source
+representation pass. Source representation is not collision-solution convergence.
+No finite response/time is accepted for physical transport or second-sound damping.
+Next: stable higher-order basis and low-energy-valid cutoff/soft-current
+convergence, then interacting physical heat-current/frame/material admission.

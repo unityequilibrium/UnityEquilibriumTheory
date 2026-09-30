@@ -402,3 +402,19 @@ heat-current projection, interacting thermal state and resolution/allowed-channe
 control. A single-mode width or positive disconnected graph cannot establish
 omega*tau <<1. Material/independent EOS/entropy/response sources and nonlinear/
 live-response work remain separate; J04/J05/J06 stay NOT_STARTED.
+
+## Shared-basis kinetic current handoff (2026-10-01)
+
+[The Galerkin package](CORE_O2_GOLDSTONE_GALERKIN_DERIVATION.md) replaces
+disconnected representative-triad diagnostics with shared scalar/vector event
+integrals for the selected leading Goldstone cubic process. Raw invariants,
+four finite-basis nulls, source momentum constraint and independent finite
+resolvents pass; the joint JSON preserves every earlier snapshot.
+
+The1% cutoff and basis response gates FAIL. Current-source representation and
+quadrature PASS cannot promote this package. The controlling measured blocker
+is finite_basis_and_cutoff_current_response_not_converged.
+Next: stable higher-order vector functions, low-energy-valid cutoff/soft-current
+convergence, then full kinetic-to-condensate/charge heat-current/frame and
+interacting thermal collision completion. Material/SI/He-II ancestry and
+nonlinear/live-response obligations remain. Physical J04/J05/J06 stay NOT_STARTED.

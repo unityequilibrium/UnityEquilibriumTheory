@@ -458,3 +458,45 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
   identical bytes locally. Historical preview/source identity, prior snapshots/
   history, ten-package DAG, unchanged physical states/Core/Topic13 sources,
   18-file scope, UTF-8 prefixes, JSON and new links pass. No physical promotion.
+
+## 2026-10-01 Shared Goldstone Galerkin form and current-response convergence
+
+- Area/wave: research-core; selected kinetic vector/current artifact pass.
+- Prior controller: disconnected cubic channels without a shared collision/
+  vector heat-current basis. Reviewed existing Topic13 normal scalar Galerkin
+  and historical collocation/reconciliation scope before extending the method.
+- Before code: card/contract/unmerged registry fixes Bose gain/loss convention,
+  scalar/vector features, source momentum frame, dimensions and1% targets.
+- Actually ran: curved event integrals with orders24/48/72, cutoff factors20/
+  30/40, features2/3/4/5 at naturalT .002/.004, lambda.01; raw invariants,
+  normalization/detailed balance, four nulls, PSD/Gram, source frame, independent
+  DC/frequency resolvents, negative controls and whole-action dimensional scaling.
+- Result454/454 structural controls pass. Separate refinement gate FAILS:
+  basis18.6583%/18.4942%, cutoff6.3116%/4.9384%; order and source representation
+  pass. No failed target is counted as transport convergence.
+- Retained exact first source/output; revised encoded linear-source zero into
+  an actual current/momentum-constraint computation. All R/time/refinement and
+  locked rules stay unchanged; no threshold or coefficient tuning.
+- Narrowed: shared selected-process scalar/vector form and kinetic-current
+  diagnostic now exist, replacing extra disconnected nulls with four expected
+  finite-basis conservation nulls. Finite rank is not continuum completeness.
+- Controlling measured blocker:
+  finite_basis_and_cutoff_current_response_not_converged.
+- Next: stable higher-order shared vector basis, low-energy-valid cutoff and
+  soft-current convergence. Then interacting state/additional channels and
+  physical condensate/charge heat-current/frame correspondence.
+- Candidate controller:
+  finite_Goldstone_Galerkin_current_response_basis_cutoff_and_interacting_heat_current_admission_open.
+- Overall controller unchanged:
+  vector_momentum_constitutive_origin_and_material_frame_admission_open.
+- No admitted transport/thermalization time, continuum gap/frequency window,
+  physical collective damping, live-response/material/SI or J04/J05/J06 unlock.
+  Previous artifacts/source packages and null material inputs remain unchanged.
+
+- Final local review: all39 scoped regressions pass with warnings as errors;
+  the revised portability regression also passes its focused rerun. Eleven
+  current artifacts/input hashes are fresh; new output reproduces identical
+  bytes locally. First-source/preview identity and unchanged measured targets,
+  prior snapshots/history, ten-package DAG, unchanged physical/Core/Topic13
+  state, 18-file scope, UTF-8 prefixes, JSON and links pass.
+  Structural PASS does not promote the failed1% cutoff/basis response gate.
