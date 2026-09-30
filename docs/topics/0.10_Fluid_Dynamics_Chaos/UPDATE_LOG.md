@@ -118,3 +118,23 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
   origin; identify the physical state/observable map and independent measurement
   source before physical execution. Existing Topic 13 source-overlap boundary
   remains authoritative.
+
+## 2026-09-30 Additional OpenAI applicability review
+
+- Wave: research-core; source and research-design review only.
+- Changed: separate dated assessment and source/scope manifest, plus README link.
+  Retained the previous assessment and its hashed J01 ancestry unchanged.
+- Actually inspected: OpenAI theorem statements/construction scope; pinned
+  formalization metadata, Comparator configs/reference/solution adapter;
+  Lei-Ren v2 abstract/scope/contents and force-topology follow-up abstract/version.
+  Reviewed Topic 10 reference artifacts and Topic 13's source-overlap protocol.
+- Result: clarified energy versus regularity, independent force versus residual
+  construction, challenge placeholders versus proof dependencies, and the
+  reference-2D versus physical-3D boundary. P0-P5 are proposed, not executed.
+- Verification: source byte hashes, local evidence hashes, JSON/link consistency
+  and diff review. No Lean/nanoda, solver, CFD or new physics/performance run.
+- Controller unchanged:
+  vector_momentum_constitutive_origin_and_material_frame_admission_open.
+- Next: conservative origin/material-frame admission before physical J04/J05;
+  scoped reference lemma work may proceed with explicit independent labels.
+- Claim impact: none; no Core/Topic 13 promotion or dependency unlock.

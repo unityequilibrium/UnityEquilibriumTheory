@@ -150,3 +150,13 @@ does not recover parent Pi dynamics; the frozen-flow limit also requires zero
 acceleration. The next controller is
 vector_momentum_constitutive_origin_and_material_frame_admission_open.
 Legacy speed, chaos-method, J04/J05 and Core admission boundaries are unchanged.
+
+## OpenAI applicability update (2026-09-30)
+
+The [additional review](OPENAI_APPLICABILITY_UPDATE_2026-09-30.md) maps OpenAI's
+classical 3D results to the current 2D vector-reference boundary, records pinned
+formalization/Comparator metadata and a newly screened explanatory source, and
+proposes scoped P0-P5 work within the existing joint plan. These are design inputs,
+not executed theorem, trajectory, physical or performance results. The
+vector_momentum_constitutive_origin_and_material_frame_admission_open controller
+and all Core/Topic 13 admission boundaries remain unchanged.
