@@ -1,7 +1,7 @@
 {
   "schema_version": "uet-major-result-closure-register-v1",
   "artifact": "uet_major_result_closure_register",
-  "generated_at": "2026-09-20",
+  "generated_at": "2026-09-26",
   "contract": {
     "path": "docs/core/07_artifacts/gates/uet_major_result_closure_contract.json",
     "sha256": "09f117fe996ca96cab183c6c67235fa68b71a917104e6786eff216740887b6a4"
@@ -725,7 +725,7 @@
         },
         {
           "path": "docs/core/07_artifacts/topic13/t13_oxford_tgs_numeric_rows_audit.json",
-          "sha256": "bfc7d0991c7af43cebde83cc91bb23b8a3cfdf08404d3b437378802926b40bae",
+          "sha256": "9b32d387c59ef335fe640a4dad0fbe46ce98b3a08342dce3d95c24d2363e7928",
           "summary": {
             "status": "PASS_OXFORD_TGS_NUMERIC_ROWS_METADATA_BOUNDARY",
             "closure_level": "CLOSED_FOR_LANE",
@@ -971,7 +971,7 @@
         },
         {
           "path": "docs/core/07_artifacts/topic13/t13_desorbo_ceylon_graphite_cp_audit.json",
-          "sha256": "5c6c183c6637e12bb9d8e1c55f555e53f022bd89312d6192256e83055e09d93d",
+          "sha256": "76ec7afbab04db3cf7a23a7e8988aefe88c91d8280a93728097cc0e0db0f89d5",
           "summary": {
             "status": "PASS_METADATA_ONLY_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_BOUNDARY",
             "closure_level": "CLOSED_FOR_LANE",
@@ -1876,9 +1876,9 @@
       },
       "closure_matrix": {
         "path": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
-        "sha256": "508a11c1a837e898253302032f54eeccb2e1b1f89f1e5cc816376f17c73c4f2d",
-        "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
-        "closure_level": "CLOSED_FOR_CORE",
+        "sha256": "e6e84772a400273c438e0b8ca3c7b5b14c9d720da0420fb4021b1c0e7a54fe66",
+        "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
+        "closure_level": "PARTIAL",
         "full_core_unlock": true,
         "required_major_result_count": 10,
         "required_subresult_count": 37
@@ -4151,7 +4151,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/topic13/t13_desorbo_ceylon_graphite_cp_audit.json",
-          "sha256": "5c6c183c6637e12bb9d8e1c55f555e53f022bd89312d6192256e83055e09d93d",
+          "sha256": "76ec7afbab04db3cf7a23a7e8988aefe88c91d8280a93728097cc0e0db0f89d5",
           "summary": {
             "status": "PASS_METADATA_ONLY_DESORBO_CEYLON_GRAPHITE_CP_SOURCE_BOUNDARY",
             "major_result_id": "T13_DESORBO_1955_CEYLON_GRAPHITE_CP_COMPARATOR",
@@ -5193,7 +5193,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/topic13/t13_full_core_ready_acceptance_audit.json",
-          "sha256": "5529df214ebe49d913c05fe87f337fdcf6007982507dd8ce9052a4d6e1b195bc",
+          "sha256": "9d4b1270b29a3856980fe9d91795533c63acc0ee8f3ebd749f73524438a56990",
           "summary": {
             "status": "PASS_T13_FULL_CORE_READY_ACCEPTANCE",
             "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY_ACCEPTED",
@@ -5563,9 +5563,14 @@
       "claim_boundary": "CLOSED_FOR_CORE is an internal, lane-bounded composition result. It is not a prediction of the imported He-4 coefficients, not graphite TTG validation, not a complete two-fluid transport tensor, not curved 3+1, and not global UET closure.",
       "closure_matrix": {
         "path": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
-        "sha256": "508a11c1a837e898253302032f54eeccb2e1b1f89f1e5cc816376f17c73c4f2d",
-        "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+        "sha256": "e6e84772a400273c438e0b8ca3c7b5b14c9d720da0420fb4021b1c0e7a54fe66",
+        "status": "CLOSED_FOR_CORE",
+        "status_scope": "BOUNDED_O2_HE4_CORE_TRACK",
+        "result_status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
         "full_core_unlock": true,
+        "full_core_unlock_scope": "BOUNDED_O2_HE4_CORE_TRACK",
+        "full_topic_status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
+        "full_topic_ready": false,
         "required_major_result_count": 10,
         "required_subresult_count": 37
       }
@@ -7008,7 +7013,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/topic13/t13_oxford_tgs_comparator_provenance_audit.json",
-          "sha256": "7964ad6e0c0292a4cd6717496c432f745a4d1f485603273b19c1c253ecb910c2",
+          "sha256": "5762891074585ae3c66cc8baa93d73ed1359d7e09447e9cad69cc087283f49f0",
           "summary": {
             "status": "PASS_OXFORD_TGS_PROVENANCE_ARCHIVE_LOCKED_EXTRACTION_PENDING",
             "major_result_id": "T13_OXFORD_TGS_COMPARATOR_PROVENANCE",
@@ -7055,7 +7060,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/topic13/t13_oxford_tgs_numeric_rows_audit.json",
-          "sha256": "bfc7d0991c7af43cebde83cc91bb23b8a3cfdf08404d3b437378802926b40bae",
+          "sha256": "9b32d387c59ef335fe640a4dad0fbe46ce98b3a08342dce3d95c24d2363e7928",
           "summary": {
             "status": "PASS_OXFORD_TGS_NUMERIC_ROWS_METADATA_BOUNDARY",
             "major_result_id": "T13_OXFORD_TGS_NUMERIC_ROWS_COMPARATOR",
@@ -7861,12 +7866,13 @@
     {
       "major_result_id": "T13_TOPIC13_CLOSURE_MATRIX",
       "topic": "0.13_Thermodynamic_Bridge",
-      "closure_level": "CLOSED_FOR_CORE",
+      "closure_level": "PARTIAL",
       "claim_promotion": false,
       "what_is_closed": [
         "The ten required Topic 13 result areas are reported separately by closure level.",
         "Each result area exposes evidence-producing subresults and an acceptance boundary.",
         "Lane-level formal results are not counted as Full Topic 13 Core-ready closure.",
+        "The bounded O(2)/He-4 Core-ready track is kept separate from the aggregate graphite/TTG result.",
         "The current full-gate blocker groups and dependency state are projected without changing them.",
         "The normalized measurement operator remains separate from the dimensional thermal operator."
       ],
@@ -7892,7 +7898,7 @@
       "evidence_artifacts": [
         {
           "path": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
-          "sha256": "508a11c1a837e898253302032f54eeccb2e1b1f89f1e5cc816376f17c73c4f2d",
+          "sha256": "e6e84772a400273c438e0b8ca3c7b5b14c9d720da0420fb4021b1c0e7a54fe66",
           "summary": {
             "role": "compact Topic 13 closure projection"
           }
@@ -7906,8 +7912,16 @@
         }
       ],
       "verification_status": "PASS_MACHINE_READABLE_FULL_TOPIC_CLOSURE_CONTRACT_WITH_GATE_BOUNDARY",
-      "open_blockers": [],
-      "dependency_unlocked": "Full thermal bridge only; Core curved 3+1 remains a separate dependency.",
+      "open_blockers": [
+        "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+        "alpha_Phi_K_independent_calibration_missing",
+        "normalized_beta_and_SI_scale_correspondence_missing",
+        "physical_Kubo_coefficient_record_missing",
+        "dimensional_phi_to_thermal_observable_map_missing",
+        "material_regime_mapping_to_TTG_not_closed",
+        "c_v_source_uncertainty_not_closed"
+      ],
+      "dependency_unlocked": "Bounded O(2)/He-4 Core handoff only; aggregate graphite/TTG Full Topic 13 remains blocked.",
       "claim_boundary": "This matrix reports progress and closure boundaries. It does not promote a lane-level PASS, comparator, no-go, or formal interface to Full Topic 13, Core, external validation, or a global UET claim.",
       "closure_summary": {
         "closure_count_unit": "required_subresults",
@@ -7938,6 +7952,7 @@
           "unclassified": []
         },
         "downstream_dependency_unlocked": false,
+        "bounded_core_track_unlock": true,
         "required_major_result_count": 10,
         "required_subresult_count": 37,
         "required_input_package_count": 3,
@@ -7951,7 +7966,7 @@
           "CLOSED_FOR_LANE": 21,
           "OPEN": 10
         },
-        "full_topic_ready": true
+        "full_topic_ready": false
       },
       "full_topic_closure_contract": {
         "required_major_result_count": 10,
@@ -7966,7 +7981,24 @@
           "CLOSED_FOR_LANE": 21,
           "OPEN": 10
         },
-        "full_topic_ready": true
+        "full_topic_ready": false,
+        "bounded_core_track_unlock": true,
+        "bounded_core_track": {
+          "scope": "O2_HE4_CORE_READY",
+          "status": "CLOSED_FOR_CORE",
+          "result_status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+          "full_core_unlock_legacy_alias": true,
+          "open_blockers": []
+        },
+        "open_blockers": [
+          "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+          "alpha_Phi_K_independent_calibration_missing",
+          "normalized_beta_and_SI_scale_correspondence_missing",
+          "physical_Kubo_coefficient_record_missing",
+          "dimensional_phi_to_thermal_observable_map_missing",
+          "material_regime_mapping_to_TTG_not_closed",
+          "c_v_source_uncertainty_not_closed"
+        ]
       },
       "required_major_result_count": 10,
       "required_subresult_count": 37,

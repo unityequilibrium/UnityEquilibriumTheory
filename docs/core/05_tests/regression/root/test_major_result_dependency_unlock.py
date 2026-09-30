@@ -17,6 +17,12 @@ def test_curved_parent_work_unlocks_after_topic13_core_ready() -> None:
     assert curved["status"] == "UNLOCKED"
     assert curved["depends_on"] == ["T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"]
     assert artifact["topic13_core_ready"]["full_core_unlock"] is True
+    assert artifact["topic13_core_ready"]["full_core_unlock_scope"] == "BOUNDED_O2_HE4_CORE_TRACK"
+    assert artifact["topic13_core_ready"]["full_topic_ready"] is False
+    assert artifact["topic13_core_ready"]["full_topic_status"] == "BLOCKED_OPEN_T13_FULL_BRIDGE"
+    assert artifact["topic13_core_ready"]["full_topic_closure_contract"]["full_topic_ready"] is False
+    assert artifact["topic13_core_ready"]["closure_matrix"]["status"] == "CLOSED_FOR_CORE"
+    assert artifact["topic13_core_ready"]["closure_matrix"]["full_topic_ready"] is False
     assert artifact["decisions"]["GR_CLASSICAL_COMPATIBILITY_LANE"]["status"] == "BLOCKED_DEPENDENCY"
     assert artifact["decisions"]["CONSTITUTIVE_TRANSPORT_CORE_LANE"]["status"] == "BLOCKED_DEPENDENCY"
     assert artifact["decisions"]["GALAXY_COMPATIBILITY_TRACK"]["status"] == "BLOCKED_DEPENDENCY"

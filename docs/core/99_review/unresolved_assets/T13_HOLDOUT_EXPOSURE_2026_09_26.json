@@ -1,0 +1,46 @@
+{
+  "record_type": "human_readable_agent_event_declaration_not_generated_verifier",
+  "recorded_on": "2026-09-26",
+  "topic": "0.13",
+  "event": "INCIDENTAL_PUBLIC_HOLDOUT_ARTICLE_TEXT_EXPOSURE_AFTER_PRIOR_WARNING",
+  "scope": "Current research conversation during online source discovery; not a calibration or numeric-data process",
+  "related_prior_event": "docs/core/99_review/unresolved_assets/T13_HOLDOUT_EXPOSURE_2026_09_10.json",
+  "source": {
+    "identity": "Xie et al., Room-temperature second sound in isotopically pure graphite",
+    "doi": "10.1038/s41467-026-70807-3",
+    "locator": "https://www.nature.com/articles/s41467-026-70807-3",
+    "data_role": "LOCKED_HOLDOUT"
+  },
+  "exposure": {
+    "article_text_returned_by_search": true,
+    "abstract_or_body_excerpts_visible": true,
+    "article_numeric_statements_visible": true,
+    "source_data_rows_or_table_payload_opened": false,
+    "supplementary_numeric_payload_opened_or_downloaded": false,
+    "figures_manually_inspected": false,
+    "source_curves_digitized": false,
+    "numeric_source_payload_archived": false
+  },
+  "research_impact": {
+    "source_rows_consumed": false,
+    "used_for_fit": false,
+    "used_for_tuning": false,
+    "used_for_calibration": false,
+    "used_for_threshold_adjustment": false,
+    "used_for_model_or_equation_selection": false,
+    "claim_promotion": false,
+    "numeric_payload_remains_locked": true,
+    "future_blind_holdout_eligibility": "REVIEW_REQUIRED"
+  },
+  "containment": [
+    "Do not use exposed article text to choose models, parameters, data cuts, thresholds, or conclusions.",
+    "Do not issue further broad searches for or open the locked Xie 2026 article or its supplementary payload.",
+    "Keep numeric source access locked until accepted non-holdout inputs and separate authorization are recorded.",
+    "Do not describe a future comparison from this agent context as a pristine blind holdout without an independence review.",
+    "Preserve the preregistered equations and thresholds; no post-exposure model changes are authorized by this event."
+  ],
+  "basis": "Observed web-tool output and actions in this research turn; not a forensic audit of other processes.",
+  "full_topic_unlock": false,
+  "claim_promotion": false,
+  "claim_boundary": "Article-text exposure is a research-process deviation. It is not raw numeric source-data consumption, calibration, fit, or external validation; the numeric payload remains unopened."
+}

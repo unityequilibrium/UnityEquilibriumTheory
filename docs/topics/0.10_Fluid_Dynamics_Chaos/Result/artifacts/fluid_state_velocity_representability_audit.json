@@ -1,0 +1,329 @@
+{
+  "schema_version": "t010-fluid-state-velocity-representability-audit-v1",
+  "record_role": "scoped_research_result_not_global_physics_gate",
+  "generated_at_utc": "2026-09-26T09:54:48.211457+00:00",
+  "topic": "0.10_Fluid_Dynamics_Chaos",
+  "joint_program": "Topic 10 + Topic 13 + Core",
+  "controller": "fluid_state_and_velocity_observable_correspondence_unestablished",
+  "status": "PASS_SCOPED_NO_GO_FOR_LEGACY_ROTATIONAL_FLOW",
+  "claim_promotion": false,
+  "dependency_unlock": false,
+  "universal_uet_no_go": false,
+  "scope": {
+    "2d_target": "nonzero smooth periodic incompressible velocity with nonzero vorticity",
+    "2d_legacy_map": "u=-M*grad(C), with one spatially constant scalar M per run",
+    "domain_and_operator": "periodic square; matched second-order centered finite differences",
+    "3d_scope": "static state-surface audit of the existing UETFluid3D class",
+    "excluded": [
+      "variable or singular mobility",
+      "nonperiodic boundary-driven dynamics",
+      "a separately registered velocity, momentum, stream-function, or vector-potential state",
+      "physical CFD accuracy, external data, and theorem-level Navier-Stokes claims"
+    ]
+  },
+  "2d_representability": {
+    "scoped_disposition": "NO_GO_FOR_NONZERO_PERIODIC_INCOMPRESSIBLE_VORTICAL_TARGET",
+    "continuum_reasoning": [
+      "For constant M, curl(-M*grad(C))=0 for every sufficiently smooth scalar C.",
+      "Incompressibility also requires Laplacian(C)=0.",
+      "On a periodic domain, integration by parts gives integral(|grad(C)|^2)=-integral(C*Laplacian(C))=0; therefore grad(C)=0 and the represented velocity is zero."
+    ],
+    "discrete_control": {
+      "grid_size": 32,
+      "domain_length": 6.283185307179586,
+      "spacing": 0.19634954084936207,
+      "constant_mobility": 2.3,
+      "gradient_velocity_curl_rms": 1.103172168922029e-15,
+      "gradient_velocity_divergence_rms": 9.045003175060009,
+      "gradient_velocity_curl_relative": 2.759574353383661e-16,
+      "gradient_velocity_is_nonzero": true,
+      "rotational_target_divergence_rms": 0.0,
+      "rotational_target_divergence_relative": 0.0,
+      "rotational_target_vorticity_rms": 0.9935868511442058,
+      "rotational_target_speed_rms": 1.0,
+      "rotational_target_gradient_projection_fraction": 0.0,
+      "rotational_target_best_relative_l2_residual": 1.0,
+      "max_discrete_gradient_orthogonality_correlation": 5.448160979808779e-18,
+      "pass": true
+    },
+    "interpretation": "The tested rotational target has zero discrete divergence, nonzero discrete vorticity, a zero gradient-subspace projection to numerical tolerance, and a relative best-fit L2 residual of one. Boundary or stencil artifacts are excluded by the periodic matched-operator design.",
+    "claim_boundary": "This closes only the declared constant-scalar-mobility gradient map for this periodic target class; it is not a no-go for all UET models or other domains."
+  },
+  "refinement_control": {
+    "analytic_continuum_vorticity_rms": 1.0,
+    "grids": [
+      {
+        "grid_size": 16,
+        "domain_length": 6.283185307179586,
+        "spacing": 0.39269908169872414,
+        "constant_mobility": 2.3,
+        "gradient_velocity_curl_rms": 4.996820696767567e-16,
+        "gradient_velocity_divergence_rms": 7.016522476283518,
+        "gradient_velocity_curl_relative": 1.39387005564839e-16,
+        "gradient_velocity_is_nonzero": true,
+        "rotational_target_divergence_rms": 0.0,
+        "rotational_target_divergence_relative": 0.0,
+        "rotational_target_vorticity_rms": 0.9744953584044328,
+        "rotational_target_speed_rms": 1.0,
+        "rotational_target_gradient_projection_fraction": 0.0,
+        "rotational_target_best_relative_l2_residual": 1.0,
+        "max_discrete_gradient_orthogonality_correlation": 1.7807649418310027e-17,
+        "pass": true
+      },
+      {
+        "grid_size": 32,
+        "domain_length": 6.283185307179586,
+        "spacing": 0.19634954084936207,
+        "constant_mobility": 2.3,
+        "gradient_velocity_curl_rms": 1.103172168922029e-15,
+        "gradient_velocity_divergence_rms": 9.045003175060009,
+        "gradient_velocity_curl_relative": 2.759574353383661e-16,
+        "gradient_velocity_is_nonzero": true,
+        "rotational_target_divergence_rms": 0.0,
+        "rotational_target_divergence_relative": 0.0,
+        "rotational_target_vorticity_rms": 0.9935868511442058,
+        "rotational_target_speed_rms": 1.0,
+        "rotational_target_gradient_projection_fraction": 0.0,
+        "rotational_target_best_relative_l2_residual": 1.0,
+        "max_discrete_gradient_orthogonality_correlation": 5.448160979808779e-18,
+        "pass": true
+      },
+      {
+        "grid_size": 64,
+        "domain_length": 6.283185307179586,
+        "spacing": 0.09817477042468103,
+        "constant_mobility": 2.3,
+        "gradient_velocity_curl_rms": 2.051343795147303e-15,
+        "gradient_velocity_divergence_rms": 9.647575155170795,
+        "gradient_velocity_curl_relative": 4.994101841443475e-16,
+        "gradient_velocity_is_nonzero": true,
+        "rotational_target_divergence_rms": 0.0,
+        "rotational_target_divergence_relative": 0.0,
+        "rotational_target_vorticity_rms": 0.9983943930356184,
+        "rotational_target_speed_rms": 1.0,
+        "rotational_target_gradient_projection_fraction": 0.0,
+        "rotational_target_best_relative_l2_residual": 1.0,
+        "max_discrete_gradient_orthogonality_correlation": 4.033453126344314e-18,
+        "pass": true
+      }
+    ],
+    "observed_orders": [
+      1.9916550282637022,
+      1.9979141144314085
+    ],
+    "minimum_order": 1.9916550282637022,
+    "second_order_control_pass": true
+  },
+  "source_audit": {
+    "static_checks": {
+      "2d_scalar_gradient_velocity_map": true,
+      "2d_derived_mobility_precedes_constructor_reset": true,
+      "physical_properties_mobility_not_read_by_derivation": true,
+      "2d_clipping_floor_present": true,
+      "3d_clipping_floor_present": true,
+      "3d_has_no_vector_velocity_momentum_or_pressure_state": true,
+      "kappa_cap_expression_present": true
+    },
+    "2d": {
+      "velocity_map": "u=-M*D_x(C), v=-M*D_y(C)",
+      "mobility_derived_then_overridden_after_super_init": true,
+      "effective_constructor_mobility": 0.5,
+      "physical_property_mobility_default": 1.0,
+      "physical_property_mobility_used_in_derivation": false,
+      "bridge_constant": 1750.0,
+      "bridge_constant_source_classification": "repository labels it an unverified placeholder",
+      "nominal_bridge_formula_value_before_constructor_reset": 1749.6563674894248,
+      "nominal_bridge_units": "not closed by the source contract",
+      "default_grid": {
+        "nx": 64,
+        "ny": 64,
+        "lx": 1.0,
+        "ly": 1.0,
+        "dx": 0.015625,
+        "dy": 0.015625,
+        "dt": 0.001
+      },
+      "default_physical_input": {
+        "density_kg_m3": 998.2,
+        "dynamic_viscosity_Pa_s": 0.001002,
+        "kinematic_viscosity_m2_s": 1.0038068523342016e-06,
+        "stability_limit_m2_s": 0.048828125,
+        "effective_kappa_m2_s": 1.0038068523342016e-06,
+        "cap_active": false
+      },
+      "clip_floor": 0.01,
+      "clip_event_count": null,
+      "clip_event_count_status": "not measured because the engine step was not executed"
+    },
+    "3d": {
+      "evolved_scalar_states": [
+        "C",
+        "I"
+      ],
+      "vector_velocity_momentum_pressure_assignments": [],
+      "velocity_state_status": "absent_in_current_UETFluid3D",
+      "clip_floor": 0.01,
+      "clip_event_count": null,
+      "clip_event_count_status": "not measured because the engine step was not executed"
+    }
+  },
+  "f0_f8_obligations": [
+    {
+      "stage": "F0 ontology",
+      "status": "BLOCKED_FOR_NEW_CANDIDATE",
+      "finding": "Legacy C/I scalar state does not declare an independent velocity or momentum state."
+    },
+    {
+      "stage": "F1 standard correspondence",
+      "status": "SCOPED_NO_GO",
+      "finding": "The declared constant-M scalar-gradient map cannot represent a nonzero periodic incompressible vortical target."
+    },
+    {
+      "stage": "F2 formula identity",
+      "status": "SOURCE_LOCKED",
+      "finding": "The inspected 2D implementation assigns u=-M*D_x(C), v=-M*D_y(C); source hashes are attached."
+    },
+    {
+      "stage": "F3 units",
+      "status": "OPEN",
+      "finding": "C, effective M, the bridge constant, and resulting velocity lack a closed dimensional map; only mu/rho has SI kinematic-viscosity units."
+    },
+    {
+      "stage": "F4 derivation class",
+      "status": "HEURISTIC_BRIDGE",
+      "finding": "The mobility bridge is explicitly marked as a placeholder and is not a derivation from Navier-Stokes momentum balance."
+    },
+    {
+      "stage": "F5 parameter and numerical behavior",
+      "status": "SOURCE_AUDITED_RUNTIME_LIMITED",
+      "finding": "Constructor mobility reset, default inactive kappa cap, and C floor are recorded; trajectory and clip counts were not executed."
+    },
+    {
+      "stage": "F6 observable map",
+      "status": "PASS_FOR_ANALYTIC_REPRESENTABILITY_CONTROL",
+      "finding": "Periodic divergence, vorticity, gradient projection, and refinement controls are measured and recorded."
+    },
+    {
+      "stage": "F7 evidence and provenance",
+      "status": "PASS_INTERNAL_REPRODUCIBLE_ARTIFACT",
+      "finding": "The audit script, source roles, units scope, and SHA-256 source identities are recorded; no external data were consumed."
+    },
+    {
+      "stage": "F8 admission and claim",
+      "status": "BLOCKED_FOR_PHYSICAL_CANDIDATE",
+      "finding": "No new state is registered or admitted; claim_promotion and dependency_unlock remain false."
+    }
+  ],
+  "engine_runtime_probe": {
+    "2d": {
+      "status": "BLOCKED_MODULE_IMPORT",
+      "module_import_only": true,
+      "failure_tail": [
+        "return _bootstrap._gcd_import(name[level:], package, level)",
+        "from scipy.special import i0, j0",
+        "ModuleNotFoundError: No module named 'scipy'"
+      ]
+    },
+    "3d": {
+      "status": "BLOCKED_MODULE_IMPORT",
+      "module_import_only": true,
+      "failure_tail": [
+        "return _bootstrap._gcd_import(name[level:], package, level)",
+        "from scipy.special import i0, j0",
+        "ModuleNotFoundError: No module named 'scipy'"
+      ]
+    }
+  },
+  "execution_limits": {
+    "engine_step_executed": false,
+    "physical_solver_trajectory_run": false,
+    "reason": "This wave verifies the velocity representation and source structure. Runtime import probes are reported separately; no solver trajectory or clipping event count is inferred from the manufactured controls.",
+    "clip_counts": "unknown; clipping sites and floors are source-audited, but no engine step was executed"
+  },
+  "topic13_and_core_link": {
+    "current_bridge": "Topic 13's source-locked He-4 normal-component shear-viscosity channel may be a later external input for a bounded shear-response pilot.",
+    "limitations": "It is not a UET-predicted viscosity, thermal conductivity, complete two-fluid transport tensor, or admission of Topic 10 flow.",
+    "required_before_coupling": [
+      "Core admission of a separate velocity/momentum state and its ontology, units, derivation class, and observables",
+      "Topic 13 frozen-parameter independent-response protocol and source uncertainty",
+      "J05 reciprocal energy and entropy ledger with exchange and boundary/source work explicit"
+    ]
+  },
+  "openai_research_utility": {
+    "method_utility": "high_for_proof_scope_and_adversarial_test_design",
+    "direct_uet_evidence": "none",
+    "this_wave_connection": "Its theorem assumptions make divergence-free vector velocity, force regularity, and norm obligations explicit; the current 2D gradient mapping and 3D scalar-only state do not yet instantiate those theorem variables.",
+    "source_review": "docs/topics/0.10_Fluid_Dynamics_Chaos/OPENAI_NAVIER_STOKES_APPLICABILITY_2026-09-26.md"
+  },
+  "next_blocker": "Register and audit a distinct velocity/momentum state contract through Core F0-F8 before any physical matched-flow J04, chaos J07, or runtime J08 candidate claim.",
+  "verifier_provenance": {
+    "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_State_Velocity_Representability.py",
+    "sha256": "60cd5dfa1efaab0b445caa1228e31714eead17374f35ede7becf84c1f277176a",
+    "role": "script that generated this result artifact"
+  },
+  "input_hashes": [
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/01_Engine/Engine_UET_2D.py",
+      "sha256": "63f1baac39d8fc31183af89e8a27e7b15a152bdc0ec9e64483197186c929223e",
+      "source_role": "Topic 10 2D solver; parsed statically, not stepped",
+      "evidence_state": "current checked-out source, content hash bound below",
+      "unit_scope": "C and M are not dimensionally closed as an SI velocity mapping"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/01_Engine/Engine_UET_3D.py",
+      "sha256": "df63d74616691a496c71ab912206c08346e1dd77b97870c357d9b2af79b3e452",
+      "source_role": "Topic 10 3D solver; parsed statically, not stepped",
+      "evidence_state": "current checked-out source, content hash bound below",
+      "unit_scope": "C and I scalar fields; no vector-velocity units are declared"
+    },
+    {
+      "path": "docs/core/01_contracts/units/uet_parameters.py",
+      "sha256": "6fd9a6fb99f0e62beec0f326d7931b50d147aa789201c641dec0430abb7342e7",
+      "source_role": "Core parameter and mobility-placeholder source; parsed statically",
+      "evidence_state": "current checked-out canonical parameter source, content hash bound below",
+      "unit_scope": "bridge constant has no declared dimension in this source"
+    },
+    {
+      "path": "docs/core/__init__.py",
+      "sha256": "3abc9d9b68c2d4855c177a1a7dd48f9358adc134cb77d3bb0714e80ecf6bceb3",
+      "source_role": "Core package import and compatibility surface",
+      "evidence_state": "current checked-out source, content hash bound below",
+      "unit_scope": "software import lifecycle, not a physical observable"
+    },
+    {
+      "path": "docs/core/core_compat.py",
+      "sha256": "2bccb868520afaaaf321e3c0b1d83495f9826612ac740b2a72382f2f281c0d0d",
+      "source_role": "Core compatibility resolver",
+      "evidence_state": "current checked-out source, content hash bound below",
+      "unit_scope": "module mapping, not a physical observable"
+    },
+    {
+      "path": "docs/scripts/core/runners/uet_base_solver.py",
+      "sha256": "94684cc4b70da6869682fdf4af3e0a34f0c16148339ac0bf1e09ea586576298b",
+      "source_role": "Base solver lifecycle/logger source; not instantiated",
+      "evidence_state": "current checked-out source, content hash bound below",
+      "unit_scope": "grid spacings are source-defined; field ontology remains topic-owned"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_thermal_joint_research_plan.json",
+      "sha256": "50f0123f3dd70a9f8c268add7fd6666139cab7a1d2442b693ebeaa1c144e0244",
+      "source_role": "Joint Topic 10/13 plan and acceptance boundary",
+      "evidence_state": "current checked-out planning record, content hash bound below",
+      "unit_scope": "workflow contract; no physical units"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/OPENAI_NAVIER_STOKES_APPLICABILITY_2026-09-26.md",
+      "sha256": "5dca5d7feb648a011f16e289951dd21434471a18837e1d80e719c9c7d3a9dfd9",
+      "source_role": "OpenAI Navier-Stokes relevance mapping; method context only",
+      "evidence_state": "local source-applicability review, not solver data",
+      "unit_scope": "standard Navier-Stokes theorem obligations; not UET parameter input"
+    }
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "finite_difference_tolerance": 1e-12,
+    "random_seed_rule": "20260926 + grid_size; fixed deterministic controls"
+  }
+}

@@ -5836,6 +5836,7 @@ EVIDENCE_PATHS:
 - `docs/core/test/test_topic13_anisotropic_thermoelastic_response_bridge.py`
 - `docs/core/07_artifacts/topic13/t13_anisotropic_thermoelastic_response_bridge_audit.json`
 - `docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_anisotropic_thermoelastic_bridge_addendum.json`
+
 ## 2026-09-27 - Conditional He-4 compressibility independence design
 
 MAJOR_RESULT_CLOSURE: `T13_HE4_CONDITIONAL_COMPRESSIBILITY_INDEPENDENCE_DESIGN` is `CLOSED_FOR_LANE` as a conditional analytic/numerical measurement design; Full Topic 13 remains open.
@@ -6280,3 +6281,48 @@ VERIFICATION: `git diff --check` passed; 15 focused tests passed locally with sy
 CONTROLLING_BLOCKER: PR #28 needs passing Linux CI and review; the scientific G0 baseline remains blocked by clean Core lineage reconciliation.
 
 CLAIM_BOUNDARY: Artifact provenance repair is not physical validation, prediction, or Full Topic 13 closure.
+
+## 2026-09-26 - Calibration audit reproducibility and holdout exposure
+
+MAJOR_RESULT_CLOSURE: `T13_ACTUATION_READOUT_CALIBRATION_DESIGN` remains `PARTIAL`; no physical subresult was promoted.
+
+WHAT_IS_ACTUALLY_CLOSED: The audit can again regenerate evidence hashes from the current canonical test path. Its conditional linear result remains limited to reciprocal input/readout gain rescaling.
+
+WHAT_REMAINS_OPEN: Operational input-to-base-`Phi` mapping, an independent amplitude/gain anchor, same-material provenance, and blind-holdout eligibility review.
+
+DEPENDENCY_UNLOCKED: None.
+
+STATUS: `CALIBRATION_AUDIT_REPRODUCIBLE; HOLDOUT_ARTICLE_TEXT_EXPOSED_NUMERIC_PAYLOAD_UNTOUCHED`.
+
+WHAT_CHANGED: Fixed a stale regression-test path in the calibration audit and regenerated its artifact. Added the append-only `T13_HOLDOUT_EXPOSURE_2026_09_26.json`; historical no-access snapshots remain historical and Xie numeric data remain locked.
+
+EQUATION_OR_MAPPING: `D Phi=b U`; `DeltaT=alpha Phi`; `H_TU=alpha*b/D`. No physical equation or calibration value changed.
+
+VERIFICATION: Audit and focused regression tests pass; exposure JSON parses and distinguishes article-text visibility from numeric-source consumption. No fit, tuning, calibration, or threshold adjustment was made.
+
+CONTROLLING_BLOCKER: `operational_input_to_base_Phi_operator_and_gain`.
+
+NEXT_ACTION: Define the physical actuation/readout operator and its independent gain anchor before requesting paired calibration data. Require a separate review before calling any future comparison blind.
+
+CLAIM_BOUNDARY: Conditional identifiability and process-record hardening only; not a numeric scale, external validation, or Full Topic 13 closure.
+
+## 2026-09-26 Joint fluid–thermal research planning handoff
+
+- Wave type: planning / claim-boundary pass; no thermal evidence-producing state changed.
+- Changed: linked `../0.10_Fluid_Dynamics_Chaos/JOINT_RESEARCH_PLAN_TOPIC10_TOPIC13.md` and its JSON work-package manifest from the topic entrypoint.
+- Verified: joint-plan JSON/dependency/link/source-hash checks; no scientific verifier rerun, new calibration, holdout access or equation change.
+- Result: J02 owns independent He-4 protocol/observable testing after freezing matching constants; J03 owns the three existing graphite input packages; J05 requires lane-specific Core admission before constitutive execution.
+- Blocker narrowed in planning only: bounded He-4 composition is explicitly separated from independent dynamic-response validation and graphite closure. No physical blocker closed.
+- Next controller: J00 admission/protocol lock, then J02 independent response-protocol/state-variable correspondence; graphite retains `dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing` and the separate C_src/transport inputs.
+- Claim impact: none; He-4 remains bounded `CLOSED_FOR_CORE`, graphite remains open, and one shear Kubo channel is not complete two-fluid thermal transport.
+- Workflow linkage: uses existing F0–F8 and research-room/hardening standards; no standards or canonical gate rewrite.
+
+## 2026-09-26 He-4 second-sound response protocol candidate (J02)
+
+- Wave type: source/protocol and uncertainty-boundary pass; no calibration or physical gate changed.
+- Changed: added a state-bounded second-sound response source package, protocol card and machine-readable audit, linked to the Topic 10 joint plan.
+- Verified: audit passed 15/15 checks for source rows, frozen matching constants, external shear-input role, uncertainty status and holdout exposure.
+- Result: recommended SVP phase-speed values are recorded as a candidate independent observable; no row-level uncertainty/frequency match or UET mode comparison is claimed.
+- Blocker narrowed: primary measurement protocol and UET two-fluid thermal eigenmode are the next controllers; the response rows are no longer blind.
+- Next controller: extract a matched primary resonance record, then derive/admit the response operator through Core F0–F8 before a numerical test.
+- Claim impact: none; existing He-4 bounded CLOSED_FOR_CORE composition is unchanged, and no external validation or dependency unlock is claimed.
