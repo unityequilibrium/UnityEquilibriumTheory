@@ -264,3 +264,35 @@
 - Claim impact: allows a disciplined candidate-EFT architecture claim only
 - Workflow linkage: Wave 12 hashes and reads every Wave 0-11 gate plus foundation registry/dependency state
 - Notes: foundation and compatibility remain BLOCKED; no application or fundamental claim was promoted
+
+### 2026-09-26 - Wave 13 Topic 13 Core-scope reconciliation
+
+MAJOR_RESULT_CLOSURE: `T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY` is `CLOSED_FOR_CORE` only for the bounded O(2)/He-4 lane. The legacy graphite/TTG external-validation projection remains `BLOCKED_OPEN_T13_FULL_BRIDGE`.
+
+WHAT_IS_ACTUALLY_CLOSED: The current closure matrix and acceptance record allow the O(2)/He-4 thermal bridge to be integrated into Core and unlock continued `CORE_CURVED_3P1_OBSERVABLE_PARENT_READY` work. The normalized-Phi-only route is structurally unable to identify absolute `alpha_Phi_K`; the separately sourced He-4 lane has its own independent local calibration and is not a universal scale for graphite.
+
+WHAT_REMAINS_OPEN: Graphite/TTG source acceptance (`C_src`, material/state match, and uncertainty), graphite-specific dimensional scale/calibration and beta-SI correspondence, physical transport provenance, and the curved 3+1 parent blockers remain open. The global claim promotion flag remains false.
+
+DEPENDENCY_UNLOCKED: Curved 3+1 parent work only. Its current gate remains `PARTIAL`, with `constraint_preserving_boundaries` and `dimensional_observable_mapping` controlling. Gravity, full constitutive transport, and Galaxy remain locked behind their declared dependencies.
+
+STATUS: `T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY` for O(2)/He-4; graphite/TTG aggregate `BLOCKED_OPEN_T13_FULL_BRIDGE`; `claim_promotion=false`.
+
+WHAT_CHANGED: Reconciled the Core handoff note with the current closure matrix, normalized-scale identifiability result, major-result dependency gate, and curved 3+1 parent gate. No equation, parameter, generated verifier artifact, or physical claim was changed.
+
+EQUATION_OR_MAPPING: `y_TTG = Delta_Tq(t)/Delta_Tq(0)`; `y_TTG^UET = Delta_Phi(t)/Delta_Phi(0)`; `Delta_Tq = alpha_Phi_K * Delta_Phi_norm`. The transformation `Delta_Phi -> s Delta_Phi`, `alpha_Phi_K -> alpha_Phi_K/s` leaves the normalized signal and dimensional product invariant, so normalized shape alone cannot supply an absolute scale.
+
+VERIFICATION: Read and hash-checked `t13_topic13_closure_matrix.json`, `t13_full_core_ready_acceptance_audit.json`, `t13_alpha_phi_k_identifiability_audit.json`, `uet_major_result_dependency_unlock_gate.json`, and `core_curved_3p1_parent_gate.json`. Core link audit passed 245/245; its timestamp-only artifact rewrite was not retained. The 2026-09-26 Xie article-text exposure is disclosed in PR #26: numeric rows/supplementary payload were not accessed or used, but future blind-holdout eligibility is `REVIEW_REQUIRED`; no fit, calibration, tuning, model selection, or threshold change was made.
+
+CONTROLLING_BLOCKER: For graphite/TTG, accepted source-backed `C_src` plus same-regime uncertainty and an independent dimensional calibration/transport chain; for Core curved 3+1, constraint-preserving boundaries and dimensional-observable mapping.
+
+NEXT_ACTION: Continue the two separately scoped routes: close the curved 3+1 parent blockers for Core, and source-lock the missing graphite/TTG external inputs without using Xie 2026 as calibration or a pristine-blind claim.
+
+CLAIM_BOUNDARY: This is a status reconciliation of existing lane-specific evidence, not a new derivation, not external graphite validation, not Gravity compatibility, and not global UET closure. `C`, `Phi`, and `R_gen` retain their existing meanings.
+
+- Wave type: cross-artifact scope reconciliation and Core handoff documentation
+- Added or changed: `T13_CORE_INTEGRATION_NOTE.md` and this update log; no generated verification artifact was retained or hand-edited
+- Verified with: current closure/acceptance/identifiability/dependency/curved-parent artifacts and SHA-256 checks
+- Result: bounded O(2)/He-4 Topic 13 Core handoff remains accepted; external graphite/TTG aggregate remains open
+- Claim impact: none; `claim_promotion=false`
+- Workflow linkage: curved 3+1 is unlocked for parent work only; Gravity remains blocked until its Core parent closes
+- Notes: article-text exposure is distinct from numeric-payload use; PR #26 records the event and requires future holdout-eligibility review
