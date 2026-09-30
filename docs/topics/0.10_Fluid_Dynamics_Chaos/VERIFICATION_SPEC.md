@@ -228,3 +228,25 @@ changes add empty-state rejection and archive-integrity guards only.
 checks fresh input identities, target independence, two curvature methods,
 unchanged prior FAIL, term omission sensitivity and false-admission/empty-state
 failure. No full Ward, physical dynamics, He-II state or Core/Topic 13 gate is admitted.
+
+## Local scalar tensor and conditional ideal modes (2026-09-30)
+
+[Contract](Data/03_Research/fluid_core_o2_ideal_modes_contract.json) locks the
+three prior controls, radial orders128/256/384 and cutoffs45/70/100 separately,
+thermal and source/metric steps1e-3/3e-4/1e-4. Derivative correspondence1e-5,
+implicit refinement1e-6, finite refinement1e-5, source/metric1e-7, algebra/
+covariance/work/pole1e-8, proxy correspondence1e-5 and sensitivity floor1e-7.
+
+[Research_Fluid_Core_O2_Ideal_Modes.py](Code/03_Research/Research_Fluid_Core_O2_Ideal_Modes.py)
+passes 171 controls; numerical tolerances, states and coefficients did not
+change after the first execution. Thermal Hessian derivatives, finite metric/
+phase derivatives, local stress symmetry and conjugate-map inverse pass.
+Independent state-coordinate operators, positive energy and real/complex local
+work cancellation agree, with two distinct real acoustic pairs at each point.
+
+[test_fluid_core_o2_ideal_modes.py](Code/03_Research/test_fluid_core_o2_ideal_modes.py)
+adds four fresh-source/tensor/mode/assumption regressions. Unsupported
+thermalization, empty states and false physical operator admission fail closed.
+Earlier source/phase artifacts remain current and unchanged. A local ideal
+PASS is not full microscopic Ward completion, nonlinear dynamics, material
+He-II prediction, thermalization or physical package execution.

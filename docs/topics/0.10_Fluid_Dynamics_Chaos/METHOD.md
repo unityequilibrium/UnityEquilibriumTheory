@@ -172,3 +172,23 @@ earlier tree-only mismatch as a negative control; detect pure-Doppler and
 omitted-occupation-curvature errors. Orders/cutoffs, angles and source steps
 are locked and swept separately. A scalar target PASS does not derive all
 Ward identities, stress/entrainment or physical two-fluid dynamics.
+
+## Source-derived local two-current operator
+
+[The local derivation](CORE_O2_LOCAL_IDEAL_TWO_FLUID_DERIVATION.md) keeps
+matter phase and UET response distinct. Independently integrate E_mu/E_mu_mu
+for n,s and the EOS Hessian; compare thermal derivatives with fixed-bound
+five-point differences and separate order/cutoff refinements.
+
+Construct a declared second-order local scalar P(T,y,x). Differentiate its
+phase sources for current and its metric at fixed beta/p for stress. Check
+finite source/metric derivatives, Lorentz/rotation transformations and the
+two-current conjugate/entrainment map. These checks apply to this local model,
+not the untruncated microscopic action in arbitrary flow.
+
+Build (delta n,delta s,g,v_s) from charge, entropy, momentum conservation and
+phase integrability. Entropy conservation is explicitly an ideal local-equilibrium
+assumption. Independently assemble the generalized chemical/temperature/velocity
+operator. Check positive work Hessian, local real/complex energy cancellation,
+coordinate/pole agreement and both acoustic pairs. Detect wrong entropy velocity,
+missing T*s inertia and reversed phase-force sign. No speed is fitted.

@@ -1,0 +1,2961 @@
+{
+  "schema_version": "t010-core-o2-ideal-modes-audit-v1",
+  "date": "2026-09-30",
+  "status": "PASS_LOCAL_IDEAL_REFERENCE_ONLY",
+  "check_count": 171,
+  "passing_check_count": 171,
+  "checks": {
+    "record_scope": {
+      "pass": true
+    },
+    "configuration_matches_source": {
+      "pass": true
+    },
+    "three_locked_states": {
+      "pass": true
+    },
+    "ideal_thermalization_assumption_explicit": {
+      "pass": true
+    },
+    "thresholds_locked": {
+      "pass": true
+    },
+    "boundary/complete_nonlinear_current_stress_entrainment": {
+      "pass": true
+    },
+    "boundary/interacting_thermal_completion": {
+      "pass": true
+    },
+    "boundary/thermalization": {
+      "pass": true
+    },
+    "boundary/live_Phi": {
+      "pass": true
+    },
+    "boundary/physical_two_fluid_operator": {
+      "pass": true
+    },
+    "boundary/physical_normal_density": {
+      "pass": true
+    },
+    "boundary/physical_HeII_state": {
+      "pass": true
+    },
+    "boundary/physical_J04_executed": {
+      "pass": true
+    },
+    "boundary/physical_J05_executed": {
+      "pass": true
+    },
+    "boundary/physical_J06_executed": {
+      "pass": true
+    },
+    "boundary/claim_promotion": {
+      "pass": true
+    },
+    "boundary/dependency_unlock": {
+      "pass": true
+    },
+    "0.04/order_refinement": {
+      "metric": 1.0580652178773099e-07,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "0.04/cutoff_refinement": {
+      "metric": 1.9587539743596382e-08,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "0.04/finite_derivative/H_thermal": {
+      "metric": 7.304121774480497e-10,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.04/finite_step/H_thermal": {
+      "metric": 7.182861368327429e-10,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.04/finite_derivative/s": {
+      "metric": 4.064191062218961e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.04/finite_step/s": {
+      "metric": 3.292189303483183e-10,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.04/finite_derivative/thermal_charge": {
+      "metric": 4.088047941617748e-11,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.04/finite_step/thermal_charge": {
+      "metric": 1.8257000976061934e-11,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.04/source_pressure": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.04/source_charge": {
+      "metric": 2.416113953489033e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.04/source_entropy": {
+      "metric": 1.2923153370320364e-10,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.04/separate_static_proxy": {
+      "metric": 5.782154913749441e-09,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.04/positive/s": {
+      "metric": 0.0003650340301433846,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "0.04/positive/phase_curvature": {
+      "metric": 0.6383556058070382,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "0.04/positive/ideal_normal_charge_coefficient": {
+      "metric": 4.74108427246378e-05,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "0.04/positive/ideal_normal_inertia": {
+      "metric": 7.528723989327178e-05,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "0.04/EOS_Hessian_positive": {
+      "metric": 0.02526514550852677,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.04/source_current/0.001": {
+      "metric": 1.0333340880434326e-13,
+      "threshold": 1e-07,
+      "pass": true
+    },
+    "0.04/metric_stress/0.001": {
+      "metric": 6.012649838186369e-12,
+      "threshold": 1e-07,
+      "pass": true
+    },
+    "0.04/source_current/0.0003": {
+      "metric": 1.7016795324790945e-13,
+      "threshold": 1e-07,
+      "pass": true
+    },
+    "0.04/metric_stress/0.0003": {
+      "metric": 4.0963617334473437e-13,
+      "threshold": 1e-07,
+      "pass": true
+    },
+    "0.04/source_current/0.0001": {
+      "metric": 4.971309452339918e-13,
+      "threshold": 1e-07,
+      "pass": true
+    },
+    "0.04/metric_stress/0.0001": {
+      "metric": 2.9580965031011874e-12,
+      "threshold": 1e-07,
+      "pass": true
+    },
+    "0.04/stress_symmetric": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.04/two_current_stress": {
+      "metric": 2.311832025878968e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.04/conjugate_phase": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.04/conjugate_thermal": {
+      "metric": 1.90671227024918e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.04/entrainment_positive": {
+      "metric": 1.5663831172105733,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.04/entrainment_inverse": {
+      "metric": 2.9667237490700053e-19,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.04/boost_metric/0.03": {
+      "metric": 1.8005659651236898e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.04/boost_current/0.03": {
+      "metric": 2.715629900127128e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.04/boost_stress/0.03": {
+      "metric": 3.0359561807230912e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.04/boost_metric/0.08": {
+      "metric": 2.1007559737054046e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.04/boost_current/0.08": {
+      "metric": 1.350421791231104e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.04/boost_stress/0.08": {
+      "metric": 2.5905547305668794e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.04/rotation_current": {
+      "metric": 3.316897684959085e-20,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.04/rotation_stress": {
+      "metric": 3.012259504062974e-17,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.04/energy_positive": {
+      "metric": 0.25541055781677174,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.04/work_symmetry": {
+      "metric": 1.1957854100241276e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.04/independent_operator_coordinates": {
+      "metric": 1.5744104112184887e-17,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.04/whitened_operator_symmetric": {
+      "metric": 7.110494481245161e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.04/independent_poles": {
+      "metric": 1.6956313298370821e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.04/real_poles": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.04/opposite_acoustic_pairs": {
+      "metric": 5.141819175122345e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.04/two_distinct_positive_acoustic_speeds": {
+      "metric": 0.13915648341377712,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.04/subluminal_reference_speeds": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.04/mode_residuals": {
+      "metric": 3.304847298798661e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.04/local_real_and_complex_work": {
+      "metric": 1.4892881000197065e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.04/super_velocity_entropy_error_detected": {
+      "metric": 1.4142525253355318,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.04/wrong_Josephson_instability_detected": {
+      "metric": 0.20299272387016817,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.04/omit_Ts_inertia_error_detected": {
+      "metric": 0.19394204418218122,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.08/order_refinement": {
+      "metric": 1.6667258251500837e-08,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "0.08/cutoff_refinement": {
+      "metric": 3.0856806206402654e-09,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "0.08/finite_derivative/H_thermal": {
+      "metric": 1.888465030299312e-09,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.08/finite_step/H_thermal": {
+      "metric": 1.6089593400750168e-09,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.08/finite_derivative/s": {
+      "metric": 3.2379144503870398e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.08/finite_step/s": {
+      "metric": 6.802970364185203e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.08/finite_derivative/thermal_charge": {
+      "metric": 8.912183602855426e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.08/finite_step/thermal_charge": {
+      "metric": 2.520447606829664e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.08/source_pressure": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.08/source_charge": {
+      "metric": 3.785618662892389e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.08/source_entropy": {
+      "metric": 1.1734234906969213e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.08/separate_static_proxy": {
+      "metric": 1.1207431852729913e-09,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.08/positive/s": {
+      "metric": 0.002317267126544222,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "0.08/positive/phase_curvature": {
+      "metric": 0.6379678125765317,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "0.08/positive/ideal_normal_charge_coefficient": {
+      "metric": 0.00046219363732169505,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "0.08/positive/ideal_normal_inertia": {
+      "metric": 0.0007769892258953075,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "0.08/EOS_Hessian_positive": {
+      "metric": 0.07413042522339021,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.08/source_current/0.001": {
+      "metric": 1.140193282607429e-13,
+      "threshold": 1e-07,
+      "pass": true
+    },
+    "0.08/metric_stress/0.001": {
+      "metric": 6.045296376044475e-12,
+      "threshold": 1e-07,
+      "pass": true
+    },
+    "0.08/source_current/0.0003": {
+      "metric": 1.764554637426846e-13,
+      "threshold": 1e-07,
+      "pass": true
+    },
+    "0.08/metric_stress/0.0003": {
+      "metric": 4.089025787271061e-13,
+      "threshold": 1e-07,
+      "pass": true
+    },
+    "0.08/source_current/0.0001": {
+      "metric": 3.3483521555081444e-13,
+      "threshold": 1e-07,
+      "pass": true
+    },
+    "0.08/metric_stress/0.0001": {
+      "metric": 3.2030351298301904e-12,
+      "threshold": 1e-07,
+      "pass": true
+    },
+    "0.08/stress_symmetric": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.08/two_current_stress": {
+      "metric": 1.1558849912219966e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.08/conjugate_phase": {
+      "metric": 1.6940621463588894e-19,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.08/conjugate_thermal": {
+      "metric": 1.734445059320072e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.08/entrainment_positive": {
+      "metric": 1.5667280631311171,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.08/entrainment_inverse": {
+      "metric": 2.9670077697259374e-19,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.08/boost_metric/0.03": {
+      "metric": 1.8005659651236898e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.08/boost_current/0.03": {
+      "metric": 2.715811819477712e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.08/boost_stress/0.03": {
+      "metric": 2.695631806288309e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.08/boost_metric/0.08": {
+      "metric": 2.1007559737054046e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.08/boost_current/0.08": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.08/boost_stress/0.08": {
+      "metric": 2.478602780047147e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.08/rotation_current": {
+      "metric": 2.674435416705338e-19,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.08/rotation_stress": {
+      "metric": 6.027956635129233e-18,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.08/energy_positive": {
+      "metric": 0.2553809356452447,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.08/work_symmetry": {
+      "metric": 9.67932281481771e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.08/independent_operator_coordinates": {
+      "metric": 1.4388538029760337e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.08/whitened_operator_symmetric": {
+      "metric": 4.4068271104922456e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.08/independent_poles": {
+      "metric": 5.258996724906732e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.08/real_poles": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.08/opposite_acoustic_pairs": {
+      "metric": 5.482883103110013e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.08/two_distinct_positive_acoustic_speeds": {
+      "metric": 0.09886363561568501,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.08/subluminal_reference_speeds": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.08/mode_residuals": {
+      "metric": 3.3857351767206383e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.08/local_real_and_complex_work": {
+      "metric": 3.5583580215172303e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.08/super_velocity_entropy_error_detected": {
+      "metric": 1.4146725633722776,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.08/wrong_Josephson_instability_detected": {
+      "metric": 0.22940456824816624,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.08/omit_Ts_inertia_error_detected": {
+      "metric": 0.23858937028364446,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.16/order_refinement": {
+      "metric": 3.0272312877419502e-09,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "0.16/cutoff_refinement": {
+      "metric": 5.605418243824689e-10,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "0.16/finite_derivative/H_thermal": {
+      "metric": 6.16260574648895e-09,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.16/finite_step/H_thermal": {
+      "metric": 5.428641059394779e-09,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.16/finite_derivative/s": {
+      "metric": 1.8893962442421543e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.16/finite_step/s": {
+      "metric": 2.9224728608015912e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.16/finite_derivative/thermal_charge": {
+      "metric": 7.851111185390286e-11,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.16/finite_step/thermal_charge": {
+      "metric": 7.385980540994696e-11,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.16/source_pressure": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.16/source_charge": {
+      "metric": 6.288688890958957e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.16/source_entropy": {
+      "metric": 1.658524423375617e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.16/separate_static_proxy": {
+      "metric": 2.7106207059693966e-10,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.16/positive/s": {
+      "metric": 0.012758423488791588,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "0.16/positive/phase_curvature": {
+      "metric": 0.6352645057242812,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "0.16/positive/ideal_normal_charge_coefficient": {
+      "metric": 0.0034250510737799944,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "0.16/positive/ideal_normal_inertia": {
+      "metric": 0.006425413132645047,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "0.16/EOS_Hessian_positive": {
+      "metric": 0.18939919335288516,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.16/source_current/0.001": {
+      "metric": 9.64326500612939e-14,
+      "threshold": 1e-07,
+      "pass": true
+    },
+    "0.16/metric_stress/0.001": {
+      "metric": 5.988134121008865e-12,
+      "threshold": 1e-07,
+      "pass": true
+    },
+    "0.16/source_current/0.0003": {
+      "metric": 1.2830193480572926e-13,
+      "threshold": 1e-07,
+      "pass": true
+    },
+    "0.16/metric_stress/0.0003": {
+      "metric": 3.29803523626804e-13,
+      "threshold": 1e-07,
+      "pass": true
+    },
+    "0.16/source_current/0.0001": {
+      "metric": 3.907316294477087e-13,
+      "threshold": 1e-07,
+      "pass": true
+    },
+    "0.16/metric_stress/0.0001": {
+      "metric": 3.2714241513101052e-12,
+      "threshold": 1e-07,
+      "pass": true
+    },
+    "0.16/stress_symmetric": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.16/two_current_stress": {
+      "metric": 2.3142387472267123e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.16/conjugate_phase": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.16/conjugate_thermal": {
+      "metric": 3.46909083517558e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.16/entrainment_positive": {
+      "metric": 1.5693856841304223,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.16/entrainment_inverse": {
+      "metric": 9.276451364913848e-21,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.16/boost_metric/0.03": {
+      "metric": 1.8005659651236898e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.16/boost_current/0.03": {
+      "metric": 2.8533842980430758e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.16/boost_stress/0.03": {
+      "metric": 2.9179477729368953e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.16/boost_metric/0.08": {
+      "metric": 2.1007559737054046e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.16/boost_current/0.08": {
+      "metric": 1.354015779214729e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.16/boost_stress/0.08": {
+      "metric": 3.029799068196003e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.16/rotation_current": {
+      "metric": 2.67606424179711e-19,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.16/rotation_stress": {
+      "metric": 1.6880191741604356e-17,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.16/energy_positive": {
+      "metric": 0.25523766471930426,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.16/work_symmetry": {
+      "metric": 1.6253502050151352e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.16/independent_operator_coordinates": {
+      "metric": 3.774013775554553e-17,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.16/whitened_operator_symmetric": {
+      "metric": 3.89908869370551e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.16/independent_poles": {
+      "metric": 6.030771788087126e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.16/real_poles": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.16/opposite_acoustic_pairs": {
+      "metric": 1.139708740361633e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.16/two_distinct_positive_acoustic_speeds": {
+      "metric": 0.044771558671415856,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.16/subluminal_reference_speeds": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.16/mode_residuals": {
+      "metric": 2.3879562930435742e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.16/local_real_and_complex_work": {
+      "metric": 1.7170981003846167e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.16/super_velocity_entropy_error_detected": {
+      "metric": 1.4183947174609524,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.16/wrong_Josephson_instability_detected": {
+      "metric": 0.26773481304237634,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.16/omit_Ts_inertia_error_detected": {
+      "metric": 0.3176990671362987,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "prior_phase_scalar_gate_passed": {
+      "pass": true
+    }
+  },
+  "input_hashes": {
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_ideal_modes_contract.json": "3ceeff7a1319b875d0331fb9e62e4a2be2478fda0e624a0a6ad1a3144c92c84d",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_LOCAL_IDEAL_TWO_FLUID_DERIVATION.md": "64aee45e05b613cb3ce222ff3ca39687f0b4d45f7443ff03846a160f287c6454",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_ideal_modes_addendum.json": "90a412d61d1021a397aa86ee65052700f3793b9d1712c0faedfa870c8d041474",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Ideal_Modes.py": "5dce792cd7b8d31056d13424f6313d01f2d68219f260553a3cb3c6923f847ea1",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py": "b083323ad31df5527a94a888e8eae43984eb77698bda1c6c3d080e2ea940f5e2",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_common_flow_contract.json": "c9a190c89d682080a9a90254cfd205e606cd9063f9d34c68b00eeeef8634c75c",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Flow_Hessian.py": "d8ecff1e604f545d68ec03b5abf4a6cc53e3ea377cafee0c75762dd1c2ccbc62",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_flow_hessian_contract.json": "06dd62d5be82f115ef444360e58c2b2c19a993193db6a99736e5e65075174210",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_flow_hessian_audit.json": "6477296e19d63eb62843c61941a64b0b16f364af28dd54ea121dd0c7c908bdf9",
+    "docs/core/02_equations/covariant/uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
+    "docs/core/02_equations/o2/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d",
+    "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
+    "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba",
+    "docs/core/02_equations/covariant/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+    "docs/core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py": "d8a32af7f257986e4e84581cd4af325fb9c09ee2b3c00fa96c77cca130b28ccf",
+    "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_two_fluid_response_audit.json": "c642e7b3e87539008d5005ca403ff6104736bd477b51791f74954bd8eef9ad0f",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_two_fluid_eos_reference_contract.json": "0554b385b88b442eeb99b4fbf49f45d34735904f6f24892472db9f48319de9ea",
+    "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md": "3e63ee75d51935420e9d4cb5e2141cf5cdb52c7596a6ea31a78e621ae1313449",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_common_flow_composition_audit.json": "8667c87e7073a43a8255c3ad15980fa95c39890f2d4ca9ffbb75e9a0e4dbdae3"
+  },
+  "source_AST_definition_hashes": {
+    "response": {
+      "_finite_scalar": "611afaf642e9806923015be0db63b9842119fe6cfc28d7f893d9dd33ce03e23e",
+      "response_displacement": "8b990dbbcabc8331c8bc3ca7392291a1658961280f97635541fc6b0f6a9cfbd1"
+    },
+    "finite_density": {
+      "_finite_scalar": "171028c1f34cb4018cbba2ac0d4680f7f51a22f2bd50e86fd80bea09309b8ef3",
+      "effective_mass_sq": "a0720c80988fbb29643cdf35e8a621b435b4134a37d573c6ef6d2d379bcc54e6",
+      "condensate_control": "fca1db7402b342ede2ee88e170e58f583e01ac2b6f9c60a447b4a296ed6af337"
+    },
+    "EOS": {
+      "_finite": "f3076cb3dc5681858247a40f79cd2568bc9094264bc32f6eeb85fca22bde0f28",
+      "_positive": "a21ba65fba46599ec105ae704744850ad4ea07e6481f3f23de132308ba217499",
+      "_quadrature": "62bbbb0ca27952d3e5e178d6e22eedd3310cbb53007cad0a8c676ee177925c02",
+      "_thermal_log": "afd4177023ddf33b98fb14d726f937b3e9888730a58798cb98972a943a85da64",
+      "_effective_chemical_potential": "93c1524b912e51f3d395935107bd3fca6ad7c369a792c2b8452bf3a3c1c6b22e",
+      "_condensed_amplitude_sq": "cd5a4bc9ad918a0cf2654241882102ce320bc0ba966e124faf8f0ab8d5aa1921",
+      "condensed_quasiparticle_energies": "6ac351825a1892245a41c6945205ae01a1ccb44ac31934f87494a9e02ca56ae5",
+      "_thermal_pressure_normal": "7ca90fc13293d08408f3b25c841c8ab095b30ff9711dc753dfb950d3dcc757e7",
+      "_thermal_pressure_condensed": "ea8ac8daf0bc4f8c83fc343dc7238f57f677c13f1aa5fa92d0d7e9abca1e6f5f",
+      "quasiparticle_pressure": "bbe6876d8db4c878ce94294c9c25bc10b8a257fe604e8a1f63f0c8680d1c69e0"
+    },
+    "transverse": {
+      "FormalTransverseResponse": "15f39deb7da0d6c4133254bc6d03212fe4ad3b2dda9d8cc694143bd10c393f5d",
+      "_positive": "f5645bdb8a7e35833f7ab6a05d9b5c1a1539f945e3bc6e1a43e822291bc27f38",
+      "_quadrature": "62bbbb0ca27952d3e5e178d6e22eedd3310cbb53007cad0a8c676ee177925c02",
+      "_minus_bose_derivative": "e79eafdd7dd4956ad8fdbfd1e2affd3f7bdd59d86a4144ed7e33ffafbf484c21",
+      "_branch_energies": "e6bf9885a7c95c814e678941f7ad7e73b766134f5dcca5758af460828982f810",
+      "formal_transverse_quasiparticle_response": "bec0adf319910ebd4254497b5eff5fa07d7f6f20d2423a95194aedd9cbe2069c"
+    }
+  },
+  "state_results": [
+    {
+      "point": {
+        "branch": "condensed",
+        "T": 0.04,
+        "mu": 1.28
+      },
+      "reference": {
+        "T": 0.04,
+        "mu": 1.28,
+        "order": 384,
+        "cutoff_factor": 100,
+        "pressure": 0.10189245591065266,
+        "n": 0.8171425862757336,
+        "s": 0.0003650340301433846,
+        "thermal_charge_sector_derivative": -9.41372426654339e-06,
+        "phase_curvature": 0.6383556058070382,
+        "ideal_normal_charge_coefficient": 4.74108427246378e-05,
+        "ideal_normal_inertia": 7.528723989327178e-05,
+        "H": [
+          [
+            3.915264755781215,
+            -0.0008253407997316244
+          ],
+          [
+            -0.0008253407997316244,
+            0.025265320620995645
+          ]
+        ],
+        "H_thermal": [
+          [
+            6.475578121524648e-05,
+            -0.0008253407997316244
+          ],
+          [
+            -0.0008253407997316244,
+            0.025265320620995645
+          ]
+        ],
+        "thermal_pressure": 3.815910652628905e-06,
+        "thermal_charge": -9.41372426654339e-06,
+        "H_tree": 3.9151999999999996,
+        "phase_details": {
+          "order": 384,
+          "cutoff_factor": 100,
+          "root_curvature_term": -1.451108940682994e-05,
+          "occupation_curvature_term": 2.988310355503438e-05,
+          "thermal_phase_correction": -4.4394192961864324e-05,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "flow_phase_stiffness": 0.6383556058070382
+        }
+      },
+      "order_sweep": [
+        {
+          "T": 0.04,
+          "mu": 1.28,
+          "order": 128,
+          "cutoff_factor": 70,
+          "pressure": 0.10189245580389998,
+          "n": 0.8171425862757339,
+          "s": 0.00036503136133813317,
+          "thermal_charge_sector_derivative": -9.413724266249018e-06,
+          "phase_curvature": 0.6383556058070244,
+          "ideal_normal_charge_coefficient": 4.7410842742623416e-05,
+          "ideal_normal_inertia": 7.52871331640833e-05,
+          "H": [
+            [
+              3.915264755781226,
+              -0.0008253408002283894
+            ],
+            [
+              -0.0008253408002283894,
+              0.025265320623304187
+            ]
+          ],
+          "H_thermal": [
+            [
+              6.475578122649282e-05,
+              -0.0008253408002283894
+            ],
+            [
+              -0.0008253408002283894,
+              0.025265320623304187
+            ]
+          ],
+          "thermal_pressure": 3.81580389994664e-06,
+          "thermal_charge": -9.413724266249018e-06,
+          "H_tree": 3.9151999999999996,
+          "phase_details": {
+            "order": 128,
+            "cutoff_factor": 70,
+            "root_curvature_term": -1.4511089406969064e-05,
+            "occupation_curvature_term": 2.9883103568623426e-05,
+            "thermal_phase_correction": -4.439419297559249e-05,
+            "tree_phase_stiffness": 0.6384000000000001,
+            "flow_phase_stiffness": 0.6383556058070244
+          }
+        },
+        {
+          "T": 0.04,
+          "mu": 1.28,
+          "order": 256,
+          "cutoff_factor": 70,
+          "pressure": 0.10189245590939375,
+          "n": 0.8171425862757336,
+          "s": 0.0003650339986705215,
+          "thermal_charge_sector_derivative": -9.41372426654354e-06,
+          "phase_curvature": 0.6383556058070382,
+          "ideal_normal_charge_coefficient": 4.74108427246378e-05,
+          "ideal_normal_inertia": 7.528723863435724e-05,
+          "H": [
+            [
+              3.915264755781215,
+              -0.0008253407997319288
+            ],
+            [
+              -0.0008253407997319288,
+              0.02526532062100574
+            ]
+          ],
+          "H_thermal": [
+            [
+              6.475578121525483e-05,
+              -0.0008253407997319288
+            ],
+            [
+              -0.0008253407997319288,
+              0.02526532062100574
+            ]
+          ],
+          "thermal_pressure": 3.815909393713327e-06,
+          "thermal_charge": -9.41372426654354e-06,
+          "H_tree": 3.9151999999999996,
+          "phase_details": {
+            "order": 256,
+            "cutoff_factor": 70,
+            "root_curvature_term": -1.4511089406830674e-05,
+            "occupation_curvature_term": 2.988310355504567e-05,
+            "thermal_phase_correction": -4.4394192961876345e-05,
+            "tree_phase_stiffness": 0.6384000000000001,
+            "flow_phase_stiffness": 0.6383556058070382
+          }
+        },
+        {
+          "T": 0.04,
+          "mu": 1.28,
+          "order": 384,
+          "cutoff_factor": 70,
+          "pressure": 0.10189245591093866,
+          "n": 0.8171425862757336,
+          "s": 0.00036503403729350333,
+          "thermal_charge_sector_derivative": -9.4137242665408e-06,
+          "phase_curvature": 0.6383556058070382,
+          "ideal_normal_charge_coefficient": 4.74108427246378e-05,
+          "ideal_normal_inertia": 7.528724017927652e-05,
+          "H": [
+            [
+              3.915264755781215,
+              -0.0008253407997315713
+            ],
+            [
+              -0.0008253407997315713,
+              0.025265320620995315
+            ]
+          ],
+          "H_thermal": [
+            [
+              6.475578121523227e-05,
+              -0.0008253407997315713
+            ],
+            [
+              -0.0008253407997315713,
+              0.025265320620995315
+            ]
+          ],
+          "thermal_pressure": 3.815910938635986e-06,
+          "thermal_charge": -9.4137242665408e-06,
+          "H_tree": 3.9151999999999996,
+          "phase_details": {
+            "order": 384,
+            "cutoff_factor": 70,
+            "root_curvature_term": -1.4511089406826302e-05,
+            "occupation_curvature_term": 2.9883103555032894e-05,
+            "thermal_phase_correction": -4.4394192961859194e-05,
+            "tree_phase_stiffness": 0.6384000000000001,
+            "flow_phase_stiffness": 0.6383556058070382
+          }
+        }
+      ],
+      "cutoff_sweep": [
+        {
+          "T": 0.04,
+          "mu": 1.28,
+          "order": 384,
+          "cutoff_factor": 45,
+          "pressure": 0.10189245591104831,
+          "n": 0.8171425862757336,
+          "s": 0.0003650340400346725,
+          "thermal_charge_sector_derivative": -9.413724266540872e-06,
+          "phase_curvature": 0.6383556058070382,
+          "ideal_normal_charge_coefficient": 4.74108427246378e-05,
+          "ideal_normal_inertia": 7.528724028892328e-05,
+          "H": [
+            [
+              3.915264755781215,
+              -0.0008253407997316888
+            ],
+            [
+              -0.0008253407997316888,
+              0.0252653206209993
+            ]
+          ],
+          "H_thermal": [
+            [
+              6.475578121523547e-05,
+              -0.0008253407997316888
+            ],
+            [
+              -0.0008253407997316888,
+              0.0252653206209993
+            ]
+          ],
+          "thermal_pressure": 3.8159110482823225e-06,
+          "thermal_charge": -9.413724266540872e-06,
+          "H_tree": 3.9151999999999996,
+          "phase_details": {
+            "order": 384,
+            "cutoff_factor": 45,
+            "root_curvature_term": -1.4511089406826608e-05,
+            "occupation_curvature_term": 2.9883103555037275e-05,
+            "thermal_phase_correction": -4.439419296186388e-05,
+            "tree_phase_stiffness": 0.6384000000000001,
+            "flow_phase_stiffness": 0.6383556058070382
+          }
+        },
+        {
+          "T": 0.04,
+          "mu": 1.28,
+          "order": 384,
+          "cutoff_factor": 70,
+          "pressure": 0.10189245591093866,
+          "n": 0.8171425862757336,
+          "s": 0.00036503403729350333,
+          "thermal_charge_sector_derivative": -9.4137242665408e-06,
+          "phase_curvature": 0.6383556058070382,
+          "ideal_normal_charge_coefficient": 4.74108427246378e-05,
+          "ideal_normal_inertia": 7.528724017927652e-05,
+          "H": [
+            [
+              3.915264755781215,
+              -0.0008253407997315713
+            ],
+            [
+              -0.0008253407997315713,
+              0.025265320620995315
+            ]
+          ],
+          "H_thermal": [
+            [
+              6.475578121523227e-05,
+              -0.0008253407997315713
+            ],
+            [
+              -0.0008253407997315713,
+              0.025265320620995315
+            ]
+          ],
+          "thermal_pressure": 3.815910938635986e-06,
+          "thermal_charge": -9.4137242665408e-06,
+          "H_tree": 3.9151999999999996,
+          "phase_details": {
+            "order": 384,
+            "cutoff_factor": 70,
+            "root_curvature_term": -1.4511089406826302e-05,
+            "occupation_curvature_term": 2.9883103555032894e-05,
+            "thermal_phase_correction": -4.4394192961859194e-05,
+            "tree_phase_stiffness": 0.6384000000000001,
+            "flow_phase_stiffness": 0.6383556058070382
+          }
+        },
+        {
+          "T": 0.04,
+          "mu": 1.28,
+          "order": 384,
+          "cutoff_factor": 100,
+          "pressure": 0.10189245591065266,
+          "n": 0.8171425862757336,
+          "s": 0.0003650340301433846,
+          "thermal_charge_sector_derivative": -9.41372426654339e-06,
+          "phase_curvature": 0.6383556058070382,
+          "ideal_normal_charge_coefficient": 4.74108427246378e-05,
+          "ideal_normal_inertia": 7.528723989327178e-05,
+          "H": [
+            [
+              3.915264755781215,
+              -0.0008253407997316244
+            ],
+            [
+              -0.0008253407997316244,
+              0.025265320620995645
+            ]
+          ],
+          "H_thermal": [
+            [
+              6.475578121524648e-05,
+              -0.0008253407997316244
+            ],
+            [
+              -0.0008253407997316244,
+              0.025265320620995645
+            ]
+          ],
+          "thermal_pressure": 3.815910652628905e-06,
+          "thermal_charge": -9.41372426654339e-06,
+          "H_tree": 3.9151999999999996,
+          "phase_details": {
+            "order": 384,
+            "cutoff_factor": 100,
+            "root_curvature_term": -1.451108940682994e-05,
+            "occupation_curvature_term": 2.988310355503438e-05,
+            "thermal_phase_correction": -4.4394192961864324e-05,
+            "tree_phase_stiffness": 0.6384000000000001,
+            "flow_phase_stiffness": 0.6383556058070382
+          }
+        }
+      ],
+      "finite_derivative_sweep": [
+        {
+          "step": 0.001,
+          "thermal_charge": -9.41372425518877e-06,
+          "s": 0.0003650340451914794,
+          "H_thermal": [
+            [
+              6.475578114087746e-05,
+              -0.0008253408165174325
+            ],
+            [
+              -0.0008253408165174325,
+              0.025265320411410833
+            ]
+          ]
+        },
+        {
+          "step": 0.0003,
+          "thermal_charge": -9.41372426675636e-06,
+          "s": 0.0003650340302650443,
+          "H_thermal": [
+            [
+              6.47557794218832e-05,
+              -0.0008253407999006068
+            ],
+            [
+              -0.0008253407999006068,
+              0.025265320620146903
+            ]
+          ]
+        },
+        {
+          "step": 0.0001,
+          "thermal_charge": -9.413724266928227e-06,
+          "s": 0.0003650340301448682,
+          "H_thermal": [
+            [
+              6.4755770642663e-05,
+              -0.0008253408027092421
+            ],
+            [
+              -0.0008253408027092421,
+              0.025265320635547994
+            ]
+          ]
+        }
+      ],
+      "source_zero_flow": {
+        "branch": "condensed",
+        "T": 0.04,
+        "mu": 1.28,
+        "Phi_fixed": 0.15,
+        "order": 384,
+        "cutoff_factor": 100,
+        "derivative_relative_step": 0.0001,
+        "pressure": 0.10189245591065266,
+        "charge_density": 0.8171425862737592,
+        "entropy_density": 0.0003650340301905585,
+        "enthalpy": 1.0459571117916195,
+        "tree_phase_stiffness": 0.6384000000000001,
+        "static_Doppler_momentum_proxy": 7.528724032859426e-05,
+        "proposed_composite_inertia": 1.0460298472403289,
+        "composition_residual": 7.27354487093379e-05,
+        "relative_composition_residual": 6.953477369812248e-05,
+        "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+      },
+      "source_metric_derivative_controls": [
+        {
+          "step": 0.001,
+          "current_relative_error": 1.0333340880434326e-13,
+          "stress_relative_error": 6.012649838186369e-12
+        },
+        {
+          "step": 0.0003,
+          "current_relative_error": 1.7016795324790945e-13,
+          "stress_relative_error": 4.0963617334473437e-13
+        },
+        {
+          "step": 0.0001,
+          "current_relative_error": 4.971309452339918e-13,
+          "stress_relative_error": 2.9580965031011874e-12
+        }
+      ],
+      "local_current": [
+        0.8171790915077494,
+        -0.0009574494926358169,
+        0.0006381877736575573,
+        -0.0012765853375019656
+      ],
+      "local_stress": [
+        [
+          0.9441136969503405,
+          -0.00122552074815035,
+          0.0008168511454346824,
+          -0.001634007328367273
+        ],
+        [
+          -0.00122552074815035,
+          0.10189157902520213,
+          -9.577774387088838e-07,
+          1.9152498399198595e-06
+        ],
+        [
+          0.0008168511454346824,
+          -9.577774387088838e-07,
+          0.10189078144673987,
+          -1.2770772566115661e-06
+        ],
+        [
+          -0.001634007328367273,
+          1.9152498399198595e-06,
+          -1.2770772566115661e-06,
+          0.10189269630003105
+        ]
+      ],
+      "local_thermal_conjugate": [
+        0.04000377270041239,
+        0.0006790995799682974,
+        -0.0008984180036287639,
+        0.0009611767254139672
+      ],
+      "entrainment_matrix": [
+        [
+          1.566524975896083,
+          -0.36012933240129896
+        ],
+        [
+          -0.36012933240129896,
+          915.8081554122145
+        ]
+      ],
+      "linear_operator": [
+        [
+          0.0,
+          0.0,
+          0.6297327779826709,
+          0.15846910861487573
+        ],
+        [
+          0.0,
+          0.0,
+          4.848551104554528,
+          -5.071011475676021
+        ],
+        [
+          0.20871133599761454,
+          0.021265988236152382,
+          0.0,
+          0.0
+        ],
+        [
+          0.1995408813006045,
+          0.006518390683510116,
+          0.0,
+          0.0
+        ]
+      ],
+      "energy_Hessian": [
+        [
+          0.25541232806477376,
+          0.00834354007489295,
+          0.0,
+          0.0
+        ],
+        [
+          0.00834354007489295,
+          39.58021753474309,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          13282.463288833722,
+          -13891.886939100275
+        ],
+        [
+          0.0,
+          0.0,
+          -13891.886939100275,
+          14530.317940192124
+        ]
+      ],
+      "generalized_M": [
+        [
+          3.915264755781215,
+          -0.0008253407997316244,
+          0.0,
+          0.0
+        ],
+        [
+          -0.0008253407997316244,
+          0.025265320620995645,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          7.528723989327178e-05,
+          1.0458818245542514
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.28
+        ]
+      ],
+      "generalized_L": [
+        [
+          0.0,
+          0.0,
+          4.74108427246378e-05,
+          0.8170951754330089
+        ],
+        [
+          0.0,
+          0.0,
+          0.0003650340301433846,
+          0.0
+        ],
+        [
+          0.8171425862757336,
+          0.0003650340301433846,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "modes": [
+        {
+          "speed_real": -0.4038128661557646,
+          "speed_imag": 0.0,
+          "state_real": [
+            1.3990455892270834,
+            0.0011052685705363382,
+            -0.7231571927302859,
+            -0.6913449714570551
+          ],
+          "state_imag": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "normal_velocity_real": -1.2226850991579858,
+          "super_velocity_real": -0.6913449714570551,
+          "entropy_current_real": -0.0004463216693419034,
+          "relative_velocity_magnitude": 0.5313401277009308,
+          "eigen_residual": 3.304847298798661e-15
+        },
+        {
+          "speed_real": -0.2646563827419876,
+          "speed_imag": 0.0,
+          "state_real": [
+            -0.01743035155046009,
+            0.11238967342191553,
+            0.0047149230758045365,
+            0.010373707526557372
+          ],
+          "state_imag": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "normal_velocity_real": -81.48457943417984,
+          "super_velocity_real": 0.010373707526557372,
+          "entropy_current_real": -0.02974464442539742,
+          "relative_velocity_magnitude": 81.49495314170639,
+          "eigen_residual": 1.606108980771213e-15
+        },
+        {
+          "speed_real": 0.2646563827419877,
+          "speed_imag": 0.0,
+          "state_real": [
+            -0.017430351550460063,
+            0.11238967342191547,
+            -0.004714923075804516,
+            -0.010373707526557354
+          ],
+          "state_imag": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "normal_velocity_real": 81.48457943417989,
+          "super_velocity_real": -0.010373707526557354,
+          "entropy_current_real": 0.02974464442539744,
+          "relative_velocity_magnitude": 81.49495314170645,
+          "eigen_residual": 9.71159469768142e-16
+        },
+        {
+          "speed_real": 0.40381286615576484,
+          "speed_imag": 0.0,
+          "state_real": [
+            1.3990455892272926,
+            0.0011052685705365117,
+            0.7231571927303935,
+            0.6913449714571585
+          ],
+          "state_imag": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "normal_velocity_real": 1.2226850991520875,
+          "super_velocity_real": 0.6913449714571585,
+          "entropy_current_real": 0.0004463216693397503,
+          "relative_velocity_magnitude": 0.531340127694929,
+          "eigen_residual": 1.736621780982723e-15
+        }
+      ],
+      "local_work_controls": [
+        {
+          "signed_residual": 7.105427357601002e-15,
+          "relative_residual": 1.4892881000197065e-16
+        },
+        {
+          "signed_residual": 0.0,
+          "relative_residual": 0.0
+        }
+      ],
+      "negative_controls": {
+        "entropy_velocity_work_defect": 1.4142525253355318,
+        "wrong_Josephson_growth": 0.20299272387016817,
+        "omit_Ts_inertia_relative_defect": 0.19394204418218122
+      },
+      "mode_role": "conditional ideal local-equilibrium acoustic eligibility; no physical He-II speed"
+    },
+    {
+      "point": {
+        "branch": "condensed",
+        "T": 0.08,
+        "mu": 1.28
+      },
+      "reference": {
+        "T": 0.08,
+        "mu": 1.28,
+        "order": 384,
+        "cutoff_factor": 100,
+        "pressure": 0.10193955753696793,
+        "n": 0.8170609937352823,
+        "s": 0.002317267126544222,
+        "thermal_charge_sector_derivative": -9.100626471777396e-05,
+        "phase_curvature": 0.6379678125765317,
+        "ideal_normal_charge_coefficient": 0.00046219363732169505,
+        "ideal_normal_inertia": 0.0007769892258953075,
+        "H": [
+          [
+            3.915716016389696,
+            -0.0034254058260127403
+          ],
+          [
+            -0.0034254058260127403,
+            0.07413347953645819
+          ]
+        ],
+        "H_thermal": [
+          [
+            0.0005160163896965244,
+            -0.0034254058260127403
+          ],
+          [
+            -0.0034254058260127403,
+            0.07413347953645819
+          ]
+        ],
+        "thermal_pressure": 5.091753696789255e-05,
+        "thermal_charge": -9.100626471777396e-05,
+        "H_tree": 3.9151999999999996,
+        "phase_details": {
+          "order": 384,
+          "cutoff_factor": 100,
+          "root_curvature_term": -0.0001560009209658568,
+          "occupation_curvature_term": 0.000276186502502571,
+          "thermal_phase_correction": -0.0004321874234684278,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "flow_phase_stiffness": 0.6379678125765317
+        }
+      },
+      "order_sweep": [
+        {
+          "T": 0.08,
+          "mu": 1.28,
+          "order": 128,
+          "cutoff_factor": 70,
+          "pressure": 0.10193955732346258,
+          "n": 0.8170609937352827,
+          "s": 0.0023172644577379507,
+          "thermal_charge_sector_derivative": -9.100626471735749e-05,
+          "phase_curvature": 0.6379678125765188,
+          "ideal_normal_charge_coefficient": 0.00046219363733868146,
+          "ideal_normal_inertia": 0.0007769890124125484,
+          "H": [
+            [
+              3.915716016389682,
+              -0.003425405826251305
+            ],
+            [
+              -0.003425405826251305,
+              0.07413347953663928
+            ]
+          ],
+          "H_thermal": [
+            [
+              0.0005160163896820913,
+              -0.003425405826251305
+            ],
+            [
+              -0.003425405826251305,
+              0.07413347953663928
+            ]
+          ],
+          "thermal_pressure": 5.0917323462546773e-05,
+          "thermal_charge": -9.100626471735749e-05,
+          "H_tree": 3.9151999999999996,
+          "phase_details": {
+            "order": 128,
+            "cutoff_factor": 70,
+            "root_curvature_term": -0.00015600092096619534,
+            "occupation_curvature_term": 0.00027618650251511225,
+            "thermal_phase_correction": -0.0004321874234813076,
+            "tree_phase_stiffness": 0.6384000000000001,
+            "flow_phase_stiffness": 0.6379678125765188
+          }
+        },
+        {
+          "T": 0.08,
+          "mu": 1.28,
+          "order": 256,
+          "cutoff_factor": 70,
+          "pressure": 0.10193955753445011,
+          "n": 0.8170609937352823,
+          "s": 0.0023172670950720787,
+          "thermal_charge_sector_derivative": -9.10062647178067e-05,
+          "phase_curvature": 0.6379678125765315,
+          "ideal_normal_charge_coefficient": 0.0004621936373220281,
+          "ideal_normal_inertia": 0.0007769892233779624,
+          "H": [
+            [
+              3.9157160163896965,
+              -0.0034254058260139867
+            ],
+            [
+              -0.0034254058260139867,
+              0.07413347953647859
+            ]
+          ],
+          "H_thermal": [
+            [
+              0.0005160163896967194,
+              -0.0034254058260139867
+            ],
+            [
+              -0.0034254058260139867,
+              0.07413347953647859
+            ]
+          ],
+          "thermal_pressure": 5.0917534450077056e-05,
+          "thermal_charge": -9.10062647178067e-05,
+          "H_tree": 3.9151999999999996,
+          "phase_details": {
+            "order": 256,
+            "cutoff_factor": 70,
+            "root_curvature_term": -0.00015600092096591095,
+            "occupation_curvature_term": 0.0002761865025026631,
+            "thermal_phase_correction": -0.00043218742346857406,
+            "tree_phase_stiffness": 0.6384000000000001,
+            "flow_phase_stiffness": 0.6379678125765315
+          }
+        },
+        {
+          "T": 0.08,
+          "mu": 1.28,
+          "order": 384,
+          "cutoff_factor": 70,
+          "pressure": 0.10193955753753994,
+          "n": 0.8170609937352823,
+          "s": 0.0023172671336945685,
+          "thermal_charge_sector_derivative": -9.100626471777891e-05,
+          "phase_curvature": 0.6379678125765316,
+          "ideal_normal_charge_coefficient": 0.0004621936373219171,
+          "ideal_normal_inertia": 0.0007769892264676194,
+          "H": [
+            [
+              3.915716016389696,
+              -0.003425405826013199
+            ],
+            [
+              -0.003425405826013199,
+              0.07413347953646905
+            ]
+          ],
+          "H_thermal": [
+            [
+              0.0005160163896965551,
+              -0.003425405826013199
+            ],
+            [
+              -0.003425405826013199,
+              0.07413347953646905
+            ]
+          ],
+          "thermal_pressure": 5.091753753990719e-05,
+          "thermal_charge": -9.100626471777891e-05,
+          "H_tree": 3.9151999999999996,
+          "phase_details": {
+            "order": 384,
+            "cutoff_factor": 70,
+            "root_curvature_term": -0.00015600092096586842,
+            "occupation_curvature_term": 0.0002761865025026093,
+            "thermal_phase_correction": -0.00043218742346847773,
+            "tree_phase_stiffness": 0.6384000000000001,
+            "flow_phase_stiffness": 0.6379678125765316
+          }
+        }
+      ],
+      "cutoff_sweep": [
+        {
+          "T": 0.08,
+          "mu": 1.28,
+          "order": 384,
+          "cutoff_factor": 45,
+          "pressure": 0.10193955753775924,
+          "n": 0.8170609937352823,
+          "s": 0.002317267136436047,
+          "thermal_charge_sector_derivative": -9.100626471779296e-05,
+          "phase_curvature": 0.6379678125765316,
+          "ideal_normal_charge_coefficient": 0.0004621936373219171,
+          "ideal_normal_inertia": 0.0007769892266869376,
+          "H": [
+            [
+              3.915716016389696,
+              -0.003425405826013769
+            ],
+            [
+              -0.003425405826013769,
+              0.0741334795364793
+            ]
+          ],
+          "H_thermal": [
+            [
+              0.0005160163896966377,
+              -0.003425405826013769
+            ],
+            [
+              -0.003425405826013769,
+              0.0741334795364793
+            ]
+          ],
+          "thermal_pressure": 5.0917537759205364e-05,
+          "thermal_charge": -9.100626471779296e-05,
+          "H_tree": 3.9151999999999996,
+          "phase_details": {
+            "order": 384,
+            "cutoff_factor": 45,
+            "root_curvature_term": -0.00015600092096589225,
+            "occupation_curvature_term": 0.0002761865025026526,
+            "thermal_phase_correction": -0.00043218742346854484,
+            "tree_phase_stiffness": 0.6384000000000001,
+            "flow_phase_stiffness": 0.6379678125765316
+          }
+        },
+        {
+          "T": 0.08,
+          "mu": 1.28,
+          "order": 384,
+          "cutoff_factor": 70,
+          "pressure": 0.10193955753753994,
+          "n": 0.8170609937352823,
+          "s": 0.0023172671336945685,
+          "thermal_charge_sector_derivative": -9.100626471777891e-05,
+          "phase_curvature": 0.6379678125765316,
+          "ideal_normal_charge_coefficient": 0.0004621936373219171,
+          "ideal_normal_inertia": 0.0007769892264676194,
+          "H": [
+            [
+              3.915716016389696,
+              -0.003425405826013199
+            ],
+            [
+              -0.003425405826013199,
+              0.07413347953646905
+            ]
+          ],
+          "H_thermal": [
+            [
+              0.0005160163896965551,
+              -0.003425405826013199
+            ],
+            [
+              -0.003425405826013199,
+              0.07413347953646905
+            ]
+          ],
+          "thermal_pressure": 5.091753753990719e-05,
+          "thermal_charge": -9.100626471777891e-05,
+          "H_tree": 3.9151999999999996,
+          "phase_details": {
+            "order": 384,
+            "cutoff_factor": 70,
+            "root_curvature_term": -0.00015600092096586842,
+            "occupation_curvature_term": 0.0002761865025026093,
+            "thermal_phase_correction": -0.00043218742346847773,
+            "tree_phase_stiffness": 0.6384000000000001,
+            "flow_phase_stiffness": 0.6379678125765316
+          }
+        },
+        {
+          "T": 0.08,
+          "mu": 1.28,
+          "order": 384,
+          "cutoff_factor": 100,
+          "pressure": 0.10193955753696793,
+          "n": 0.8170609937352823,
+          "s": 0.002317267126544222,
+          "thermal_charge_sector_derivative": -9.100626471777396e-05,
+          "phase_curvature": 0.6379678125765317,
+          "ideal_normal_charge_coefficient": 0.00046219363732169505,
+          "ideal_normal_inertia": 0.0007769892258953075,
+          "H": [
+            [
+              3.915716016389696,
+              -0.0034254058260127403
+            ],
+            [
+              -0.0034254058260127403,
+              0.07413347953645819
+            ]
+          ],
+          "H_thermal": [
+            [
+              0.0005160163896965244,
+              -0.0034254058260127403
+            ],
+            [
+              -0.0034254058260127403,
+              0.07413347953645819
+            ]
+          ],
+          "thermal_pressure": 5.091753696789255e-05,
+          "thermal_charge": -9.100626471777396e-05,
+          "H_tree": 3.9151999999999996,
+          "phase_details": {
+            "order": 384,
+            "cutoff_factor": 100,
+            "root_curvature_term": -0.0001560009209658568,
+            "occupation_curvature_term": 0.000276186502502571,
+            "thermal_phase_correction": -0.0004321874234684278,
+            "tree_phase_stiffness": 0.6384000000000001,
+            "flow_phase_stiffness": 0.6379678125765317
+          }
+        }
+      ],
+      "finite_derivative_sweep": [
+        {
+          "step": 0.001,
+          "thermal_charge": -9.100626466157177e-05,
+          "s": 0.002317267129245866,
+          "H_thermal": [
+            [
+              0.0005160163894551646,
+              -0.00342540581150901
+            ],
+            [
+              -0.00342540581150901,
+              0.07413347949870687
+            ]
+          ]
+        },
+        {
+          "step": 0.0003,
+          "thermal_charge": -9.100626471835565e-05,
+          "s": 0.0023172671265674896,
+          "H_thermal": [
+            [
+              0.0005160164088661833,
+              -0.00342540583575285
+            ],
+            [
+              -0.00342540583575285,
+              0.07413347951582379
+            ]
+          ]
+        },
+        {
+          "step": 0.0001,
+          "thermal_charge": -9.100626471858503e-05,
+          "s": 0.0023172671265517253,
+          "H_thermal": [
+            [
+              0.0005160165243076625,
+              -0.0034254058538862814
+            ],
+            [
+              -0.0034254058538862814,
+              0.07413347953326638
+            ]
+          ]
+        }
+      ],
+      "source_zero_flow": {
+        "branch": "condensed",
+        "T": 0.08,
+        "mu": 1.28,
+        "Phi_fixed": 0.15,
+        "order": 384,
+        "cutoff_factor": 100,
+        "derivative_relative_step": 0.0001,
+        "pressure": 0.10193955753696793,
+        "charge_density": 0.8170609937321892,
+        "entropy_density": 0.002317267126517031,
+        "enthalpy": 1.0460234533473236,
+        "tree_phase_stiffness": 0.6384000000000001,
+        "static_Doppler_momentum_proxy": 0.0007769892267661129,
+        "proposed_composite_inertia": 1.0467315492267664,
+        "composition_residual": 0.0007080958794427605,
+        "relative_composition_residual": 0.000676482790612206,
+        "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+      },
+      "source_metric_derivative_controls": [
+        {
+          "step": 0.001,
+          "current_relative_error": 1.140193282607429e-13,
+          "stress_relative_error": 6.045296376044475e-12
+        },
+        {
+          "step": 0.0003,
+          "current_relative_error": 1.764554637426846e-13,
+          "stress_relative_error": 4.089025787271061e-13
+        },
+        {
+          "step": 0.0001,
+          "current_relative_error": 3.3483521555081444e-13,
+          "stress_relative_error": 3.2030351298301904e-12
+        }
+      ],
+      "local_current": [
+        0.8170975098180285,
+        -0.0009564530091447296,
+        0.0006369703931363958,
+        -0.0012751875605729614
+      ],
+      "local_stress": [
+        [
+          0.9441329498422717,
+          -0.0012240744641741662,
+          0.0008149513281524118,
+          -0.0016319619962367597
+        ],
+        [
+          -0.0012240744641741662,
+          0.1019386865072067,
+          -9.585991908103463e-07,
+          1.9151390416887565e-06
+        ],
+        [
+          0.0008149513281524118,
+          -9.585991908103463e-07,
+          0.10193789151864889,
+          -1.2784068330713867e-06
+        ],
+        [
+          -0.0016319619962367597,
+          1.9151390416887565e-06,
+          -1.2784068330713867e-06,
+          0.10193980398054867
+        ]
+      ],
+      "local_thermal_conjugate": [
+        0.08000368615621711,
+        0.0006783079605993194,
+        -0.0009261811913834574,
+        0.0009636575996720816
+      ],
+      "entrainment_matrix": [
+        [
+          1.5674771991416705,
+          -0.3373483123520012
+        ],
+        [
+          -0.3373483123520012,
+          153.48024208932063
+        ]
+      ],
+      "linear_operator": [
+        [
+          0.0,
+          0.0,
+          0.5948520544659027,
+          0.1948317934897521
+        ],
+        [
+          0.0,
+          0.0,
+          2.9823671285455555,
+          -3.1173086958360328
+        ],
+        [
+          0.20869774345608527,
+          0.0409011098873786,
+          0.0,
+          0.0
+        ],
+        [
+          0.19952457642229834,
+          0.00921921715779642,
+          0.0,
+          0.0
+        ]
+      ],
+      "energy_Hessian": [
+        [
+          0.2553914578205419,
+          0.011800597961979417,
+          0.0,
+          0.0
+        ],
+        [
+          0.011800597961979417,
+          13.489727287725628,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1287.0191331774545,
+          -1345.252198215458
+        ],
+        [
+          0.0,
+          0.0,
+          -1345.252198215458,
+          1407.1653500057407
+        ]
+      ],
+      "generalized_M": [
+        [
+          3.915716016389696,
+          -0.0034254058260127403,
+          0.0,
+          0.0
+        ],
+        [
+          -0.0034254058260127403,
+          0.07413347953645819,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0007769892258953075,
+          1.0452464641253896
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.28
+        ]
+      ],
+      "generalized_L": [
+        [
+          0.0,
+          0.0,
+          0.00046219363732169505,
+          0.8165988000979606
+        ],
+        [
+          0.0,
+          0.0,
+          0.002317267126544222,
+          0.0
+        ],
+        [
+          0.8170609937352823,
+          0.002317267126544222,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "modes": [
+        {
+          "speed_real": -0.40395542995353717,
+          "speed_imag": 0.0,
+          "state_real": [
+            -1.3973888776560308,
+            -0.008663477595753102,
+            0.7228179885592331,
+            0.6904061035271283
+          ],
+          "state_imag": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "normal_velocity_real": 1.510252649336884,
+          "super_velocity_real": 0.6904061035271283,
+          "entropy_current_real": 0.00349965881708468,
+          "relative_velocity_magnitude": 0.8198465458097557,
+          "eigen_residual": 6.085405611265735e-16
+        },
+        {
+          "speed_real": -0.30509179433785255,
+          "speed_imag": 0.0,
+          "state_real": [
+            -0.07184937576510982,
+            0.19233222279217013,
+            0.02336411973016487,
+            0.041176340925989825
+          ],
+          "state_imag": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "normal_velocity_real": -25.322494022585893,
+          "super_velocity_real": 0.041176340925989825,
+          "entropy_current_real": -0.058678982960650855,
+          "relative_velocity_magnitude": 25.363670363511883,
+          "eigen_residual": 7.887207840704527e-16
+        },
+        {
+          "speed_real": 0.3050917943378524,
+          "speed_imag": 0.0,
+          "state_real": [
+            0.0718493757651096,
+            -0.1923322227921704,
+            0.023364119730164775,
+            0.0411763409259897
+          ],
+          "state_imag": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "normal_velocity_real": -25.322494022585843,
+          "super_velocity_real": 0.0411763409259897,
+          "entropy_current_real": -0.05867898296065074,
+          "relative_velocity_magnitude": 25.363670363511833,
+          "eigen_residual": 1.876997627233272e-15
+        },
+        {
+          "speed_real": 0.4039554299535374,
+          "speed_imag": 0.0,
+          "state_real": [
+            1.3973888776560976,
+            0.008663477595753316,
+            0.7228179885592682,
+            0.6904061035271608
+          ],
+          "state_imag": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "normal_velocity_real": 1.5102526493383128,
+          "super_velocity_real": 0.6904061035271608,
+          "entropy_current_real": 0.003499658817087991,
+          "relative_velocity_magnitude": 0.819846545811152,
+          "eigen_residual": 3.3857351767206383e-15
+        }
+      ],
+      "local_work_controls": [
+        {
+          "signed_residual": -3.552713678800501e-15,
+          "relative_residual": 3.5583580215172303e-16
+        },
+        {
+          "signed_residual": 0.0,
+          "relative_residual": 0.0
+        }
+      ],
+      "negative_controls": {
+        "entropy_velocity_work_defect": 1.4146725633722776,
+        "wrong_Josephson_growth": 0.22940456824816624,
+        "omit_Ts_inertia_relative_defect": 0.23858937028364446
+      },
+      "mode_role": "conditional ideal local-equilibrium acoustic eligibility; no physical He-II speed"
+    },
+    {
+      "point": {
+        "branch": "condensed",
+        "T": 0.16,
+        "mu": 1.28
+      },
+      "reference": {
+        "T": 0.16,
+        "mu": 1.28,
+        "order": 384,
+        "cutoff_factor": 100,
+        "pressure": 0.10248102016916888,
+        "n": 0.8165636184008599,
+        "s": 0.012758423488791588,
+        "thermal_charge_sector_derivative": -0.0005883815991401766,
+        "phase_curvature": 0.6352645057242812,
+        "ideal_normal_charge_coefficient": 0.0034250510737799944,
+        "ideal_normal_inertia": 0.006425413132645047,
+        "H": [
+          [
+            3.9178972775732928,
+            -0.00858747581968903
+          ],
+          [
+            -0.00858747581968903,
+            0.1894189720249638
+          ]
+        ],
+        "H_thermal": [
+          [
+            0.0026972775732933955,
+            -0.00858747581968903
+          ],
+          [
+            -0.00858747581968903,
+            0.1894189720249638
+          ]
+        ],
+        "thermal_pressure": 0.0005923801691688526,
+        "thermal_charge": -0.0005883815991401766,
+        "H_tree": 3.9151999999999996,
+        "phase_details": {
+          "order": 384,
+          "cutoff_factor": 100,
+          "root_curvature_term": -0.001278562080880153,
+          "occupation_curvature_term": 0.001856932194838755,
+          "thermal_phase_correction": -0.003135494275718908,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "flow_phase_stiffness": 0.6352645057242812
+        }
+      },
+      "order_sweep": [
+        {
+          "T": 0.16,
+          "mu": 1.28,
+          "order": 128,
+          "cutoff_factor": 70,
+          "pressure": 0.10248101974215834,
+          "n": 0.8165636184008597,
+          "s": 0.012758420819977717,
+          "thermal_charge_sector_derivative": -0.0005883815991403832,
+          "phase_curvature": 0.6352645057242804,
+          "ideal_normal_charge_coefficient": 0.0034250510737807716,
+          "ideal_normal_inertia": 0.0064254127056358225,
+          "H": [
+            [
+              3.917897277573294,
+              -0.008587475819690632
+            ],
+            [
+              -0.008587475819690632,
+              0.18941897202500263
+            ]
+          ],
+          "H_thermal": [
+            [
+              0.0026972775732945014,
+              -0.008587475819690632
+            ],
+            [
+              -0.008587475819690632,
+              0.18941897202500263
+            ]
+          ],
+          "thermal_pressure": 0.000592379742158314,
+          "thermal_charge": -0.0005883815991403832,
+          "H_tree": 3.9151999999999996,
+          "phase_details": {
+            "order": 128,
+            "cutoff_factor": 70,
+            "root_curvature_term": -0.0012785620808805054,
+            "occupation_curvature_term": 0.001856932194839174,
+            "thermal_phase_correction": -0.0031354942757196797,
+            "tree_phase_stiffness": 0.6384000000000001,
+            "flow_phase_stiffness": 0.6352645057242804
+          }
+        },
+        {
+          "T": 0.16,
+          "mu": 1.28,
+          "order": 256,
+          "cutoff_factor": 70,
+          "pressure": 0.10248102016413334,
+          "n": 0.8165636184008598,
+          "s": 0.01275842345732052,
+          "thermal_charge_sector_derivative": -0.0005883815991403407,
+          "phase_curvature": 0.6352645057242807,
+          "ideal_normal_charge_coefficient": 0.0034250510737804385,
+          "ideal_normal_inertia": 0.006425413127610245,
+          "H": [
+            [
+              3.9178972775732936,
+              -0.008587475819690885
+            ],
+            [
+              -0.008587475819690885,
+              0.18941897202496963
+            ]
+          ],
+          "H_thermal": [
+            [
+              0.0026972775732942303,
+              -0.008587475819690885
+            ],
+            [
+              -0.008587475819690885,
+              0.18941897202496963
+            ]
+          ],
+          "thermal_pressure": 0.0005923801641333057,
+          "thermal_charge": -0.0005883815991403407,
+          "H_tree": 3.9151999999999996,
+          "phase_details": {
+            "order": 256,
+            "cutoff_factor": 70,
+            "root_curvature_term": -0.001278562080880404,
+            "occupation_curvature_term": 0.0018569321948389836,
+            "thermal_phase_correction": -0.0031354942757193874,
+            "tree_phase_stiffness": 0.6384000000000001,
+            "flow_phase_stiffness": 0.6352645057242807
+          }
+        },
+        {
+          "T": 0.16,
+          "mu": 1.28,
+          "order": 384,
+          "cutoff_factor": 70,
+          "pressure": 0.10248102017031298,
+          "n": 0.8165636184008599,
+          "s": 0.012758423495943218,
+          "thermal_charge_sector_derivative": -0.0005883815991402551,
+          "phase_curvature": 0.6352645057242807,
+          "ideal_normal_charge_coefficient": 0.0034250510737805495,
+          "ideal_normal_inertia": 0.006425413133790019,
+          "H": [
+            [
+              3.917897277573293,
+              -0.008587475819690334
+            ],
+            [
+              -0.008587475819690334,
+              0.18941897202498129
+            ]
+          ],
+          "H_thermal": [
+            [
+              0.0026972775732937424,
+              -0.008587475819690334
+            ],
+            [
+              -0.008587475819690334,
+              0.18941897202498129
+            ]
+          ],
+          "thermal_pressure": 0.0005923801703129454,
+          "thermal_charge": -0.0005883815991402551,
+          "H_tree": 3.9151999999999996,
+          "phase_details": {
+            "order": 384,
+            "cutoff_factor": 70,
+            "root_curvature_term": -0.0012785620808803142,
+            "occupation_curvature_term": 0.0018569321948389839,
+            "thermal_phase_correction": -0.003135494275719298,
+            "tree_phase_stiffness": 0.6384000000000001,
+            "flow_phase_stiffness": 0.6352645057242807
+          }
+        }
+      ],
+      "cutoff_sweep": [
+        {
+          "T": 0.16,
+          "mu": 1.28,
+          "order": 384,
+          "cutoff_factor": 45,
+          "pressure": 0.10248102017075161,
+          "n": 0.8165636184008598,
+          "s": 0.012758423498685329,
+          "thermal_charge_sector_derivative": -0.0005883815991403352,
+          "phase_curvature": 0.6352645057242805,
+          "ideal_normal_charge_coefficient": 0.0034250510737807716,
+          "ideal_normal_inertia": 0.006425413134229041,
+          "H": [
+            [
+              3.9178972775732936,
+              -0.008587475819691309
+            ],
+            [
+              -0.008587475819691309,
+              0.18941897202498575
+            ]
+          ],
+          "H_thermal": [
+            [
+              0.00269727757329414,
+              -0.008587475819691309
+            ],
+            [
+              -0.008587475819691309,
+              0.18941897202498575
+            ]
+          ],
+          "thermal_pressure": 0.0005923801707515867,
+          "thermal_charge": -0.0005883815991403352,
+          "H_tree": 3.9151999999999996,
+          "phase_details": {
+            "order": 384,
+            "cutoff_factor": 45,
+            "root_curvature_term": -0.0012785620808804425,
+            "occupation_curvature_term": 0.0018569321948391105,
+            "thermal_phase_correction": -0.003135494275719553,
+            "tree_phase_stiffness": 0.6384000000000001,
+            "flow_phase_stiffness": 0.6352645057242805
+          }
+        },
+        {
+          "T": 0.16,
+          "mu": 1.28,
+          "order": 384,
+          "cutoff_factor": 70,
+          "pressure": 0.10248102017031298,
+          "n": 0.8165636184008599,
+          "s": 0.012758423495943218,
+          "thermal_charge_sector_derivative": -0.0005883815991402551,
+          "phase_curvature": 0.6352645057242807,
+          "ideal_normal_charge_coefficient": 0.0034250510737805495,
+          "ideal_normal_inertia": 0.006425413133790019,
+          "H": [
+            [
+              3.917897277573293,
+              -0.008587475819690334
+            ],
+            [
+              -0.008587475819690334,
+              0.18941897202498129
+            ]
+          ],
+          "H_thermal": [
+            [
+              0.0026972775732937424,
+              -0.008587475819690334
+            ],
+            [
+              -0.008587475819690334,
+              0.18941897202498129
+            ]
+          ],
+          "thermal_pressure": 0.0005923801703129454,
+          "thermal_charge": -0.0005883815991402551,
+          "H_tree": 3.9151999999999996,
+          "phase_details": {
+            "order": 384,
+            "cutoff_factor": 70,
+            "root_curvature_term": -0.0012785620808803142,
+            "occupation_curvature_term": 0.0018569321948389839,
+            "thermal_phase_correction": -0.003135494275719298,
+            "tree_phase_stiffness": 0.6384000000000001,
+            "flow_phase_stiffness": 0.6352645057242807
+          }
+        },
+        {
+          "T": 0.16,
+          "mu": 1.28,
+          "order": 384,
+          "cutoff_factor": 100,
+          "pressure": 0.10248102016916888,
+          "n": 0.8165636184008599,
+          "s": 0.012758423488791588,
+          "thermal_charge_sector_derivative": -0.0005883815991401766,
+          "phase_curvature": 0.6352645057242812,
+          "ideal_normal_charge_coefficient": 0.0034250510737799944,
+          "ideal_normal_inertia": 0.006425413132645047,
+          "H": [
+            [
+              3.9178972775732928,
+              -0.00858747581968903
+            ],
+            [
+              -0.00858747581968903,
+              0.1894189720249638
+            ]
+          ],
+          "H_thermal": [
+            [
+              0.0026972775732933955,
+              -0.00858747581968903
+            ],
+            [
+              -0.00858747581968903,
+              0.1894189720249638
+            ]
+          ],
+          "thermal_pressure": 0.0005923801691688526,
+          "thermal_charge": -0.0005883815991401766,
+          "H_tree": 3.9151999999999996,
+          "phase_details": {
+            "order": 384,
+            "cutoff_factor": 100,
+            "root_curvature_term": -0.001278562080880153,
+            "occupation_curvature_term": 0.001856932194838755,
+            "thermal_phase_correction": -0.003135494275718908,
+            "tree_phase_stiffness": 0.6384000000000001,
+            "flow_phase_stiffness": 0.6352645057242812
+          }
+        }
+      ],
+      "finite_derivative_sweep": [
+        {
+          "step": 0.001,
+          "thermal_charge": -0.0005883815989548429,
+          "s": 0.012758423488799115,
+          "H_thermal": [
+            [
+              0.002697277567893111,
+              -0.008587475806959958
+            ],
+            [
+              -0.008587475806959958,
+              0.18941897200224128
+            ]
+          ]
+        },
+        {
+          "step": 0.0003,
+          "thermal_charge": -0.0005883815991374399,
+          "s": 0.012758423488804769,
+          "H_thermal": [
+            [
+              0.0026972774660788206,
+              -0.008587475857651026
+            ],
+            [
+              -0.008587475857651026,
+              0.1894189718601436
+            ]
+          ]
+        },
+        {
+          "step": 0.0001,
+          "thermal_charge": -0.0005883815990939821,
+          "s": 0.012758423488767483,
+          "H_thermal": [
+            [
+              0.0026972775785141095,
+              -0.008587475640396221
+            ],
+            [
+              -0.008587475640396221,
+              0.18941897088295612
+            ]
+          ]
+        }
+      ],
+      "source_zero_flow": {
+        "branch": "condensed",
+        "T": 0.16,
+        "mu": 1.28,
+        "Phi_fixed": 0.15,
+        "order": 384,
+        "cutoff_factor": 100,
+        "derivative_relative_step": 0.0001,
+        "pressure": 0.10248102016916888,
+        "charge_density": 0.8165636183957248,
+        "entropy_density": 0.012758423488812749,
+        "enthalpy": 1.0472427793047376,
+        "tree_phase_stiffness": 0.6384000000000001,
+        "static_Doppler_momentum_proxy": 0.006425413134386733,
+        "proposed_composite_inertia": 1.052379973134387,
+        "composition_residual": 0.005137193829649389,
+        "relative_composition_residual": 0.004881500941479222,
+        "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+      },
+      "source_metric_derivative_controls": [
+        {
+          "step": 0.001,
+          "current_relative_error": 9.64326500612939e-14,
+          "stress_relative_error": 5.988134121008865e-12
+        },
+        {
+          "step": 0.0003,
+          "current_relative_error": 1.2830193480572926e-13,
+          "stress_relative_error": 3.29803523626804e-13
+        },
+        {
+          "step": 0.0001,
+          "current_relative_error": 3.907316294477087e-13,
+          "stress_relative_error": 3.2714241513101052e-12
+        }
+      ],
+      "local_current": [
+        0.8166001996385461,
+        -0.0009494351262749555,
+        0.0006283412411013487,
+        -0.001265336562981363
+      ],
+      "local_stress": [
+        [
+          0.9448109017196232,
+          -0.001213235559755399,
+          0.000800193984856638,
+          -0.0016165686978013285
+        ],
+        [
+          -0.001213235559755399,
+          0.10248019151168933,
+          -9.658413410568637e-07,
+          1.915501954025675e-06
+        ],
+        [
+          0.000800193984856638,
+          -9.658413410568637e-07,
+          0.10247941684793087,
+          -1.2899458851542253e-06
+        ],
+        [
+          -0.0016165686978013285,
+          1.915501954025675e-06,
+          -1.2899458851542253e-06,
+          0.10248131131493839
+        ]
+      ],
+      "local_thermal_conjugate": [
+        0.16000486150121845,
+        0.0009142810545923099,
+        -0.0012859173659536189,
+        0.0013035909889845898
+      ],
+      "entrainment_matrix": [
+        [
+          1.5741474472273163,
+          -0.4271014186542014
+        ],
+        [
+          -0.4271014186542014,
+          39.87780592776198
+        ]
+      ],
+      "linear_operator": [
+        [
+          0.0,
+          0.0,
+          0.5330476037997666,
+          0.25833336429235965
+        ],
+        [
+          0.0,
+          0.0,
+          1.9856191696018668,
+          -2.0666669143388776
+        ],
+        [
+          0.20858720435816042,
+          0.07681205798433065,
+          0.0,
+          0.0
+        ],
+        [
+          0.1994252490653432,
+          0.009041119196647296,
+          0.0,
+          0.0
+        ]
+      ],
+      "energy_Hessian": [
+        [
+          0.2552643188036393,
+          0.01157263257170854,
+          0.0,
+          0.0
+        ],
+        [
+          0.01157263257170854,
+          5.279826878009744,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          155.6320160830415,
+          -161.98450507262646
+        ],
+        [
+          0.0,
+          0.0,
+          -161.98450507262646,
+          169.63710329762392
+        ]
+      ],
+      "generalized_M": [
+        [
+          3.9178972775732928,
+          -0.00858747581968903,
+          0.0,
+          0.0
+        ],
+        [
+          -0.00858747581968903,
+          0.1894189720249638,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006425413132645047,
+          1.0408173661786624
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.28
+        ]
+      ],
+      "generalized_L": [
+        [
+          0.0,
+          0.0,
+          0.0034250510737799944,
+          0.8131385673270799
+        ],
+        [
+          0.0,
+          0.0,
+          0.012758423488791588,
+          0.0
+        ],
+        [
+          0.8165636184008599,
+          0.012758423488791588,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "modes": [
+        {
+          "speed_real": -0.4067927067104099,
+          "speed_imag": 0.0,
+          "state_real": [
+            -1.340003387265679,
+            -0.08592352014151436,
+            0.7033251040934151,
+            0.6588302828940517
+          ],
+          "state_imag": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "normal_velocity_real": 2.7396066104217742,
+          "super_velocity_real": 0.6588302828940517,
+          "entropy_current_real": 0.03495306132845387,
+          "relative_velocity_magnitude": 2.0807763275277225,
+          "eigen_residual": 1.5111645199923053e-15
+        },
+        {
+          "speed_real": -0.36202114803899477,
+          "speed_imag": 0.0,
+          "state_real": [
+            0.4041528929787741,
+            -0.29551080301568083,
+            -0.1701622390767991,
+            -0.2152541180837741
+          ],
+          "state_imag": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "normal_velocity_real": 8.385139453918093,
+          "super_velocity_real": -0.2152541180837741,
+          "entropy_current_real": 0.10698116016566167,
+          "relative_velocity_magnitude": 8.600393572001867,
+          "eigen_residual": 1.8815292393287497e-15
+        },
+        {
+          "speed_real": 0.36202114803899466,
+          "speed_imag": 0.0,
+          "state_real": [
+            0.40415289297876794,
+            -0.2955108030156815,
+            0.1701622390767957,
+            0.21525411808377093
+          ],
+          "state_imag": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "normal_velocity_real": -8.38513945391811,
+          "super_velocity_real": 0.21525411808377093,
+          "entropy_current_real": -0.10698116016566189,
+          "relative_velocity_magnitude": 8.600393572001881,
+          "eigen_residual": 2.1030107993922624e-15
+        },
+        {
+          "speed_real": 0.4067927067104105,
+          "speed_imag": 0.0,
+          "state_real": [
+            -1.3400033872656922,
+            -0.08592352014151272,
+            -0.7033251040934217,
+            -0.658830282894058
+          ],
+          "state_imag": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "normal_velocity_real": -2.7396066104217742,
+          "super_velocity_real": -0.658830282894058,
+          "entropy_current_real": -0.03495306132845387,
+          "relative_velocity_magnitude": 2.0807763275277162,
+          "eigen_residual": 2.3879562930435742e-15
+        }
+      ],
+      "local_work_controls": [
+        {
+          "signed_residual": -4.440892098500626e-16,
+          "relative_residual": 1.7170981003846167e-16
+        },
+        {
+          "signed_residual": -4.440892098500626e-16,
+          "relative_residual": 8.372118615883026e-17
+        }
+      ],
+      "negative_controls": {
+        "entropy_velocity_work_defect": 1.4183947174609524,
+        "wrong_Josephson_growth": 0.26773481304237634,
+        "omit_Ts_inertia_relative_defect": 0.3176990671362987
+      },
+      "mode_role": "conditional ideal local-equilibrium acoustic eligibility; no physical He-II speed"
+    }
+  ],
+  "candidate_controller": "fixed_Phi_local_ideal_two_fluid_reference_passed_but_thermalization_live_response_and_material_observable_admission_open",
+  "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "locked_verification": {
+    "locked_before_first_execution": true,
+    "radial_orders": [
+      128,
+      256,
+      384
+    ],
+    "order_sweep_cutoff": 70,
+    "cutoffs": [
+      45,
+      70,
+      100
+    ],
+    "cutoff_sweep_order": 384,
+    "thermal_derivative_steps": [
+      0.001,
+      0.0003,
+      0.0001
+    ],
+    "source_metric_steps": [
+      0.001,
+      0.0003,
+      0.0001
+    ],
+    "derivative_relative_tolerance": 1e-05,
+    "implicit_refinement_relative_tolerance": 1e-06,
+    "finite_difference_refinement_relative_tolerance": 1e-05,
+    "source_metric_relative_tolerance": 1e-07,
+    "algebra_covariance_work_pole_tolerance": 1e-08,
+    "proxy_correspondence_relative_tolerance": 1e-05,
+    "positive_and_negative_floor": 1e-07,
+    "normal_velocity_probe": [
+      0.001,
+      -0.002,
+      0.0015
+    ],
+    "phase_spatial_probe": [
+      0.0015,
+      -0.001,
+      0.002
+    ],
+    "lorentz_boosts": [
+      0.03,
+      0.08
+    ],
+    "boost_direction": [
+      1.0,
+      2.0,
+      -1.0
+    ],
+    "rotation_angle": 0.4,
+    "relative_metric": "norm(a-b)/max(norm(a),norm(b),1e-30)",
+    "threshold_policy": "retain first diagnostic, no fitting and no post-preview numerical rule relaxation"
+  },
+  "assumptions": {
+    "fixed_Phi": true,
+    "tree_reduced_thermal_Gaussian": true,
+    "ideal_local_equilibrium_entropy_conservation": true,
+    "thermalization_derived": false,
+    "physical_hydrodynamic_frequency_window_known": false,
+    "no_material_SI_assignment": true
+  },
+  "local_pressure_current_stress_entrainment_checked": true,
+  "conditional_ideal_acoustic_pairs_checked": true,
+  "microscopic_entropy_conservation_derived": false,
+  "thermalization_derived": false,
+  "physical_frequency_window_established": false,
+  "complete_nonlinear_operator_derived": false,
+  "whole_Core_runtime_executed": false,
+  "live_Phi_executed": false,
+  "physical_UET_operator_admitted": false,
+  "physical_HeII_state_assigned": false,
+  "physical_normal_density_assigned": false,
+  "physical_prediction_executed": false,
+  "physical_J04_executed": false,
+  "physical_J05_executed": false,
+  "physical_J06_executed": false,
+  "claim_promotion": false,
+  "dependency_unlock": false,
+  "thresholds_relaxed": false,
+  "mode_coefficients_fitted": false,
+  "notes": [
+    "Metric/current variation is of a declared local second-order scalar Taylor action, not arbitrary nonlinear thermal microphysics.",
+    "EOS derivatives and phase curvature use independent source-mode integrals, not fitted sound speeds.",
+    "Entropy conservation is an explicit ideal local-equilibrium assumption, not derived thermalization.",
+    "Natural charge/current coefficients and acoustic speeds are not material SI densities or He-II observables.",
+    "Prior tree-only FAIL and independent phase-Hessian PASS artifacts remain unchanged."
+  ]
+}

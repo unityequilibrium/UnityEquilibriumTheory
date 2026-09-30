@@ -308,3 +308,28 @@ longitudinal-mode consistency remain open, followed by material/SI mapping.
 Physical J04/J05/J06, frozen Topic 13 constants and original null material
 requirements remain unchanged. The new narrower candidate controller is
 fixed_Phi_flow_scalar_correspondence_passed_but_two_fluid_current_stress_entrainment_modes_and_material_mapping_open.
+
+## Local current/stress and conditional ideal modes (2026-09-30)
+
+[The local two-fluid derivation](CORE_O2_LOCAL_IDEAL_TWO_FLUID_DERIVATION.md)
+uses independently differentiated source-mode thermodynamics and phase curvature.
+A local quadratic scalar pressure supplies current, stress and entrainment;
+finite source/metric variations and frame transformations test the same model.
+
+[The 171-check artifact](Result/artifacts/fluid_core_o2_ideal_modes_audit.json)
+passes controls. Conditional ideal conservation gives two distinct real acoustic
+pairs at each prior condensed control. Positive speeds in natural c=1 units are:
+
+| Natural T (not K) | Lower positive speed | Higher positive speed |
+| --- | --- | --- |
+| 0.04 | 0.2646564 | 0.4038129 |
+| 0.08 | 0.3050918 | 0.4039554 |
+| 0.16 | 0.3620211 | 0.4067927 |
+
+These are local ideal-mode eligibility results, not physical He-II sound speeds.
+Entropy conservation assumes local equilibrium; thermalization and the physical
+frequency window are not derived. The local Taylor tensor is not a complete
+nonlinear/interacting/live-Phi operator. Physical J04/J05/J06, material inputs,
+Topic 13 constants and previous artifacts remain unchanged.
+Next: nonlinear/thermalization/live-response completion, then material/SI and
+independent EOS/entropy/measurement admission.

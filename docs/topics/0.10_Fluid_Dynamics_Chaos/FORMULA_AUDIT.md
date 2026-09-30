@@ -190,3 +190,21 @@ gives E^4 inertia units. Neither enthalpy nor the proxy defines that correction.
 The current scalar test passes, but no full tensor Ward identity, stress or
 entrainment audit, material mass density, Kubo coefficient or physical second
 sound derivation is claimed. The overall physical controller is unchanged.
+
+## Local scalar-pressure tensor, entrainment and ideal modes
+
+[Derivation](CORE_O2_LOCAL_IDEAL_TWO_FLUID_DERIVATION.md) and the separate
+[unmerged registry](../../core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_ideal_modes_addendum.json)
+record the inverse-temperature vector, phase covector, density/temperature
+Hessian, metric convention and natural dimensions before numerical execution.
+
+Current/stress follow local scalar source/metric variation; the conjugate
+two-current map exposes symmetric local entrainment. The thermal EOS Hessian
+is differentiated independently from both Gaussian modes. Charge, momentum
+and phase integrability plus ASSUMED ideal entropy conservation give the
+linear operator. Positive quadratic energy and reciprocal local work pass.
+
+The signed thermal pressure derivative is not the normal charge coefficient.
+No phase meaning is assigned to Phi. Local ideal-mode eligibility is not
+thermalization, a complete nonlinear action, a physical material normal density,
+He-II speed or SI observable correspondence. Overall physical admission stays open.

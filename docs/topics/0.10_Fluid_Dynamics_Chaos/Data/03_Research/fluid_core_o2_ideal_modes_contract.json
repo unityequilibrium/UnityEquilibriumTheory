@@ -1,0 +1,156 @@
+{
+  "schema_version": "t010-core-o2-local-ideal-modes-v1",
+  "date": "2026-09-30",
+  "record_role": "FIXED_PHI_LOCAL_IDEAL_TWO_FLUID_REFERENCE_NOT_ADMISSION",
+  "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "previous_candidate_controller": "fixed_Phi_flow_scalar_correspondence_passed_but_two_fluid_current_stress_entrainment_modes_and_material_mapping_open",
+  "passed_reference_next_controller": "fixed_Phi_local_ideal_two_fluid_reference_passed_but_thermalization_live_response_and_material_observable_admission_open",
+  "card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_LOCAL_IDEAL_TWO_FLUID_DERIVATION.md",
+  "configuration": {
+    "Z": 1.0,
+    "mass_squared": 1.0,
+    "lambda": 1.0,
+    "response_coupling": 0.0,
+    "epsilon_nc": 0.0,
+    "phi_equilibrium": 0.0,
+    "phase_tolerance": 1e-10,
+    "Phi_fixed": 0.15
+  },
+  "states": [
+    {
+      "branch": "condensed",
+      "T": 0.04,
+      "mu": 1.28
+    },
+    {
+      "branch": "condensed",
+      "T": 0.08,
+      "mu": 1.28
+    },
+    {
+      "branch": "condensed",
+      "T": 0.16,
+      "mu": 1.28
+    }
+  ],
+  "source_adapter": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py",
+  "source_contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_common_flow_contract.json",
+  "phase_verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Flow_Hessian.py",
+  "phase_contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_flow_hessian_contract.json",
+  "phase_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_flow_hessian_audit.json",
+  "derivation": {
+    "pressure": "local second-order P(T,y,x) Taylor model; f independently from phase integral",
+    "current": "j=f*p+P_y*u",
+    "stress": "T=f*p*p+(T*P_T+y*P_y)*u*u-P*g_inverse",
+    "ideal_charge_normal": "n_n=n-mu*f",
+    "ideal_normal_inertia": "chi_n=mu*n_n+T*s",
+    "state": [
+      "delta_n",
+      "delta_s",
+      "g",
+      "v_s"
+    ],
+    "EOS": "H=pressure Hessian; K=H inverse",
+    "phase": "mu*v_s_t+grad(delta_mu)=0",
+    "entropy": "delta_s_t+div(s*v_n)=0; ADDITIONAL_IDEAL_LOCAL_EQUILIBRIUM_ASSUMPTION",
+    "energy": "e2=1/2 delta_density*K*delta_density+1/2 chi_n*v_n^2+1/2 mu^2*f*v_s^2",
+    "scope": "linear response/local quadratic action; not nonlinear microscopic Ward completion or physical operator"
+  },
+  "assumptions": {
+    "fixed_Phi": true,
+    "tree_reduced_thermal_Gaussian": true,
+    "ideal_local_equilibrium_entropy_conservation": true,
+    "thermalization_derived": false,
+    "physical_hydrodynamic_frequency_window_known": false,
+    "no_material_SI_assignment": true
+  },
+  "verification": {
+    "locked_before_first_execution": true,
+    "radial_orders": [
+      128,
+      256,
+      384
+    ],
+    "order_sweep_cutoff": 70,
+    "cutoffs": [
+      45,
+      70,
+      100
+    ],
+    "cutoff_sweep_order": 384,
+    "thermal_derivative_steps": [
+      0.001,
+      0.0003,
+      0.0001
+    ],
+    "source_metric_steps": [
+      0.001,
+      0.0003,
+      0.0001
+    ],
+    "derivative_relative_tolerance": 1e-05,
+    "implicit_refinement_relative_tolerance": 1e-06,
+    "finite_difference_refinement_relative_tolerance": 1e-05,
+    "source_metric_relative_tolerance": 1e-07,
+    "algebra_covariance_work_pole_tolerance": 1e-08,
+    "proxy_correspondence_relative_tolerance": 1e-05,
+    "positive_and_negative_floor": 1e-07,
+    "normal_velocity_probe": [
+      0.001,
+      -0.002,
+      0.0015
+    ],
+    "phase_spatial_probe": [
+      0.0015,
+      -0.001,
+      0.002
+    ],
+    "lorentz_boosts": [
+      0.03,
+      0.08
+    ],
+    "boost_direction": [
+      1.0,
+      2.0,
+      -1.0
+    ],
+    "rotation_angle": 0.4,
+    "relative_metric": "norm(a-b)/max(norm(a),norm(b),1e-30)",
+    "threshold_policy": "retain first diagnostic, no fitting and no post-preview numerical rule relaxation"
+  },
+  "admission": {
+    "complete_nonlinear_current_stress_entrainment": false,
+    "interacting_thermal_completion": false,
+    "thermalization": false,
+    "live_Phi": false,
+    "physical_two_fluid_operator": false,
+    "physical_normal_density": false,
+    "physical_HeII_state": false,
+    "physical_J04_executed": false,
+    "physical_J05_executed": false,
+    "physical_J06_executed": false,
+    "claim_promotion": false,
+    "dependency_unlock": false
+  },
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1212.0670v3",
+      "version": "1212.0670v3",
+      "doi": "10.1103/PhysRevD.87.065001",
+      "equations": [
+        "49-64",
+        "78",
+        "110-121"
+      ],
+      "review_scope": "selected ideal constitutive/two-current/linear-mode correspondence, not full paper replication"
+    }
+  ],
+  "reused_inputs": [
+    "docs/core/02_equations/covariant/uet_covariant_matter.py",
+    "docs/core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py",
+    "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_two_fluid_response_audit.json",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_two_fluid_eos_reference_contract.json",
+    "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_common_flow_composition_audit.json"
+  ]
+}

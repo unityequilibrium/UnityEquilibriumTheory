@@ -372,3 +372,18 @@ modes at the same ensemble. Material/SI, independent EOS/entropy/protocol,
 Core admission and physical J04/J05/J06 remain separate prerequisites.
 This narrows J01/J02 preparation only; no work-package status or dependency
 is promoted. Original null material inputs and Topic 13 constants are unchanged.
+
+## Local ideal operator preparation (2026-09-30)
+
+The [current/stress/ideal-mode reference](CORE_O2_LOCAL_IDEAL_TWO_FLUID_DERIVATION.md)
+extends the independently derived phase curvature with current source/metric
+variation, EOS derivatives and local entrainment. Its conditional ideal operator
+has two acoustic pairs at all three controls and positive reciprocal work.
+Both reference coefficients and operators are evaluated without sound-speed fitting.
+
+The new snapshot/history records the additional local-equilibrium entropy
+assumption. Nonlinear/interacting/live-response completion, collision/thermalization
+and a physical hydrodynamic window are explicit remaining blockers, followed by
+material/SI and independent source/protocol admission. J01/J02 preparation narrows;
+J04/J05/J06 remain NOT_STARTED and no package dependency is unlocked.
+The source acquisition and overall material/frame controller remain unchanged.

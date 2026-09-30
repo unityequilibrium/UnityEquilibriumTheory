@@ -162,3 +162,17 @@ The current artifact maps the original verifier hash to that archive explicitly;
 its historical original-path hashes are not asserted to match today's verifier.
 No new physical material values, fitting, SI assignment, source dataset or
 independent measurement is introduced.
+
+## Local ideal current/stress and mode inputs
+
+[Contract](Data/03_Research/fluid_core_o2_ideal_modes_contract.json) and
+[171-check artifact](Result/artifacts/fluid_core_o2_ideal_modes_audit.json)
+identify the current Core source-mode functions, previous source/phase adapters
+and the phase artifact by hashes. EOS derivatives are newly evaluated integrals,
+not new experimental data. Core/Topic 13 sources and all prior packages are unchanged.
+
+Entropy conservation is an additional ideal local-equilibrium assumption.
+No collision/relaxation dataset or physical hydrodynamic frequency window is
+provided. Local source/metric variations test a declared Taylor action.
+Natural current coefficients and two acoustic pairs have no material SI map,
+new calibration, fitted speed or independent He-II validation.

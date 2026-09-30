@@ -383,3 +383,42 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
   retained exactly; the archived source matches its original hash. Prior
   snapshots/history, ten-package DAG, physical statuses, Core/Topic 13 sources,
   18-file scope, JSON/links and UTF-8 prior-prefix preservation pass.
+
+## 2026-09-30 Local current/stress, entrainment and conditional ideal modes
+
+- Area/wave: research-core; local mathematical/current-and-mode reference for
+  J01/J02 preparation, not physical package execution.
+- Before code: recorded scalar Taylor pressure, phase/beta ontology, natural
+  units, source/metric variation, independent EOS derivatives and local operator;
+  explicitly separated ideal entropy assumption from derived thermalization.
+  Registry/state/thresholds were locked before numerical execution.
+- Changed: local derivation/contract, source-integral/tensor/mode verifier,
+  171-check artifact/four tests, joint snapshot/history and matching topic docs.
+- Actually ran: both-mode analytic EOS derivatives versus five-point thermal
+  derivatives; local phase/metric source variations; Lorentz/rotation, symmetric
+  stress, two-current conjugates/entrainment inverse; two independent state
+  operators, positive energy, local real/complex work and eigenmodes.
+- Result: 171/171 controls pass. Positive natural speeds approximately
+  (0.2646564,0.4038129), (0.3050918,0.4039554), (0.3620211,0.4067927).
+  No speed fitting or post-preview numerical amendment.
+- Sensitivity: wrong entropy velocity, omitted T*s inertia and reversed
+  Josephson sign are detected. Thermal residual pressure-sector charge is
+  negative while the derived conditional normal current coefficient is positive.
+- Narrowed: local fixed-Phi current/stress/entrainment and conditional ideal
+  acoustic eligibility checked. Next remains nonlinear/interacting/live-response
+  completion and action-consistent thermalization/frequency-window admission,
+  followed by material/SI and independent EOS/entropy/response protocol.
+- Overall controller unchanged:
+  vector_momentum_constitutive_origin_and_material_frame_admission_open.
+- Claim boundary: local quadratic scalar model plus explicit ideal entropy
+  assumption; no full microscopic/nonlinear Ward completion, derived collisions,
+  measured He-II sound, physical normal density, Kubo, J04/J05/J06 or unlock.
+- Core/Topic 13 sources, frozen constants, previous FAIL/PASS artifacts and null
+  material inputs remain unchanged. Draft PR29 review; no merge.
+
+- Final local review: all 31 scoped tests pass with warnings as errors. Nine
+  current artifacts/input hashes are fresh; the new reference reproduces identical
+  bytes locally. Prior snapshots/history, ten-package DAG, physical package states,
+  Core/Topic 13 sources, 16-file scope, UTF-8 prefixes, new JSON and links pass.
+  The ideal entropy assumption and all nonlinear/thermalization/material blockers
+  remain explicit; no physical gate is promoted.

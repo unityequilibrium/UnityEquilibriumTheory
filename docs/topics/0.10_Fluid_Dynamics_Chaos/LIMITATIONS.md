@@ -175,3 +175,24 @@ transport and an independent response protocol remain unadmitted. The earlier
 tree-only FAIL is retained; no coefficient is fitted to enthalpy.
 The overall material/frame controller remains unchanged; only the next candidate
 task narrows to complete two-fluid current/stress/entrainment/mode correspondence.
+
+## Local ideal modes do not establish a physical hydrodynamic window
+
+[The local reference](Result/artifacts/fluid_core_o2_ideal_modes_audit.json)
+has two real acoustic pairs under ideal local-equilibrium entropy conservation.
+Gaussian quasiparticles alone do not establish collisions, relaxation times,
+local equilibration or a physical frequency window. This added assumption is
+machine-readable and cannot be counted as derived thermalization.
+
+Current/stress variations refer to a local second-order pressure Taylor model
+with independently sourced coefficients, not arbitrary nonlinear/interacting
+finite-flow Ward completion. Entrainment is a local constitutive correspondence.
+Live Phi, nonlinear dynamics, thermal gap/self-energy/vacuum completion,
+dissipative tensors, Kubo transport and physical frequency/source matching remain
+open. The declared lambda=1 controls are not an established weak-coupling material.
+
+Natural n_n=n-mu*f is a conditional charge/current coefficient. It differs from
+the signed thermal pressure-sector derivative and is not kg/m^3. The recorded
+natural speeds are not He-II velocities or a physical Topic 13 response test.
+Material/SI and independent thermodynamic/calibration/response ancestry remain
+separate; no physical package, dependency, claim tier or Core gate is promoted.
