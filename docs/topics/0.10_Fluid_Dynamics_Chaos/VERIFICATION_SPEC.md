@@ -135,3 +135,24 @@
 - Controls were specified before the first audit and not amended after preview.
   PASS_STANDARD_TWO_FLUID_AND_PATH_UNDERDETERMINATION_REFERENCE_ONLY does not
   advance physical J05/J06, perform material prediction or formal verification.
+
+## He-II fixed-constraint source audit
+
+- Verifier: Code/03_Research/Research_He4_Fixed_Constraint_EOS_Source.py.
+- Card/package: HE4_FIXED_CONSTRAINT_EOS_SOURCE_CARD.md;
+  Data/03_Research/he4_tn1334_fixed_constraint_eos_source_candidate.json.
+- Artifact: Result/artifacts/he4_tn1334_fixed_constraint_eos_source_audit.json;
+  56 checks on source metadata, three SI-converted liquid rows, EOS branch,
+  assumed printing compatibility and retained physical-admission boundaries.
+- Before first execution: symmetric half-last-displayed-unit boxes, including T;
+  closed overlap for three standard thermodynamic relations, no adjustable
+  residual tolerance and no physical acceptance budget. Decimal precision 60.
+- Five locked negative controls: MPa treated as Pa, alpha*T not divided by T,
+  P*kappa not divided by P, vapor density substitution and blank transport as zero.
+- Four regressions rerun the source-fresh audit, guard conversion/constraints,
+  distinguish printing compatibility from exact point identities, and require
+  corrupted phase/blank imports to emit a failed artifact and exit 1.
+- PASS_SOURCE_CANDIDATE_PRINTING_COMPATIBILITY_ONLY does not establish physical
+  row uncertainty, independent experiments, material input admission or UET
+  prediction. Raw PDF review is manual; the offline verifier hashes the curated
+  transcription and does not rediscover it from the upstream PDF.

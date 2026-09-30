@@ -90,3 +90,25 @@ NIST saturation-path calorimetry and heat-integrated entropy are not independent
 fixed-pressure inputs. A Core-to-material Helmholtz/entropy/internal-energy
 Legendre map, independent superfluid response density and source-matched EOS,
 protocol and covariance remain open. Physical J05/J06 stay unexecuted.
+
+## He-II source-candidate admission boundary
+
+The three TN1334 rows are calculated fitted-EOS values, not independent
+experimental observations. Their fixed-variable derivatives can be used for
+source/reference checks without equating an SVP path derivative to c_p or c_v.
+The assumed printing boxes are not experimental errors. Global density
+uncertainty estimates do not supply per-row errors for all derived quantities.
+
+Exact EOS training/response overlap, the selected edition's absolute entropy
+anchor, derivative covariance and primary response frequency/geometry/state
+remain unresolved. Arp fits sound as well as thermodynamic data; its bibliography
+does not establish which exact rows overlap. The TN1334 rho_s fit and calculated
+second/fourth sound are not independent targets and are not ingested here.
+Its classical adiabatic speed is not silently identified with the full mixed
+two-fluid first-sound eigenvalue.
+
+IR8474 explicitly excludes He-II; older NBS1029 code/data use T58 and fitted
+Brooks-Donnelly ancestry, not a fresh independent validation source.
+No frozen Topic 13 matching constant, physical Core equation or original
+unassigned material requirement changed. Physical operator/SI/phase mapping,
+transport, prediction and J05/J06 remain blocked.

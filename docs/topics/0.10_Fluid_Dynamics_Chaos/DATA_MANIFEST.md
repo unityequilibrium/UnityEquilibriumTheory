@@ -88,3 +88,27 @@ Nikuni-Griffin (86)-(88), (C1)-(C10) supplies general two-fluid structure; its
 dilute-gas condensate-density and transport identities are not assigned to liquid
 helium. The current artifact hashes eight local inputs. Prior mode/vector/action
 source files stay unchanged, and Topic 13 protocol/calibration boundaries persist.
+
+## He-II fixed-constraint candidate acquisition
+
+Candidate: Data/03_Research/he4_tn1334_fixed_constraint_eos_source_candidate.json.
+Card: HE4_FIXED_CONSTRAINT_EOS_SOURCE_CARD.md.
+Verifier/output: Code/03_Research/Research_He4_Fixed_Constraint_EOS_Source.py;
+Result/artifacts/he4_tn1334_fixed_constraint_eos_source_audit.json.
+
+Source: https://nvlpubs.nist.gov/nistpubs/Legacy/TN/nbstechnicalnote1334.pdf,
+September 1998 revised PDF, SHA256
+1532e4c65e1d2bc29da10db9e9ffd57e48ed46070a583bd8019581b44dc81c22.
+Full rendered printed pages 3,4,14,15 reviewed. Three liquid rows at
+1.650/1.700/1.750 K preserve raw tokens and the corresponding derivative columns.
+Temporary PDF path and upstream filename are recorded in the package; it is
+not committed or required to rerun the offline audit. Numeric facts with
+attribution only are distributed, not the full PDF.
+
+Role: fitted-EOS source candidate and printing diagnostic, not independent
+experimental validation. MPa and J/g units and dimensionless derivative
+products are converted explicitly; all transport blanks/physical uncertainties
+stay null. These rows are now ingested only in the new source package. The
+previous two-fluid reference's statement of no numeric ingestion remains
+correct for that historical wave; its hashed inputs and unassigned requirements
+are unchanged. Topic 13 data/calibration/protocol are consumed read only.

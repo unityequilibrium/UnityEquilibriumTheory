@@ -218,3 +218,26 @@ Core needs a material thermodynamic Legendre/state/SI mapping and independent
 superfluid phase/relative-motion correspondence before this comparator can
 validate a UET mode. Existing single-velocity exclusion and physical gates remain
 unchanged; no He-II data fit, attenuation, trajectory or dependency unlock.
+
+## He-II fixed-constraint source checkpoint (2026-09-30)
+
+The [source card](HE4_FIXED_CONSTRAINT_EOS_SOURCE_CARD.md) and
+[56-check source audit](Result/artifacts/he4_tn1334_fixed_constraint_eos_source_audit.json)
+package three liquid He-II rows from NIST TN1334 revised (September 1998).
+Fixed-pressure c_p/expansivity, fixed-volume c_v and fixed-temperature
+compressibility exist at these SVP equilibrium states; the source columns
+alpha_p*T and P*kappa_T need explicit SI conversion. This fills part of the
+source-acquisition gap exposed by the earlier path-only reference.
+
+The printing-compatibility diagnostics pass with all five interpretation-error
+controls detected. Printing resolution is not physical uncertainty. These are
+calculated fitted-EOS rows; source sound/superfluid-density ancestry and primary
+response protocol are unresolved. Modern NIST IR8474 excludes He-II. No two-fluid
+speed, UET parameter fit or independent prediction was calculated.
+
+The source controller is
+he4_fixed_constraint_EOS_source_found_but_covariance_entropy_anchor_and_independence_open.
+Per-row uncertainty/covariance, absolute entropy anchor and exact training/test
+ancestry, plus the physical Core state/SI/phase mapping remain required.
+Original admitted material requirements stay null. Overall physical admission
+and J04/J05/J06 remain unchanged.

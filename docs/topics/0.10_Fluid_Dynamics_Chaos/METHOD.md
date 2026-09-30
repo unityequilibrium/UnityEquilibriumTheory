@@ -97,3 +97,22 @@ zero-mass-current subspace; finite expansion explicitly drives its missing momen
 Two different isothermal compressibilities reproduce the same synthetic local
 SVP tangent yet change the EOS/modes. No material rows or Core scalar equations
 are numerically mapped into this standard comparator.
+
+## Offline He-II EOS source conversion
+
+Use HE4_FIXED_CONSTRAINT_EOS_SOURCE_CARD.md and
+Data/03_Research/he4_tn1334_fixed_constraint_eos_source_candidate.json.
+Match the liquid first row to the parallel derivative table; preserve raw
+printed tokens. Convert MPa to Pa by 1e6, J/(g K) to J/(kg K) by 1000, divide
+alpha*T by T and P*kappa_T by P in Pa. Density is already SI.
+The source Gruneisen symbol is not the UET response field. Transport blanks
+stay null.
+
+The offline verifier uses Decimal arithmetic at precision 60 and endpoint
+enclosures from an assumed symmetric half-last-displayed-unit printing rule,
+including T. Check interval compatibility of c_p-c_v, classical adiabatic
+sound squared and the Gruneisen relation. These boxes are diagnostic printing
+enclosures, not row uncertainties or a probabilistic covariance. Failures
+must be retained without relaxing the rule. Deliberately wrong unit, derivative,
+phase and blank-as-zero interpretations must be detected. No material
+two-fluid/UET mode prediction or EOS parameter fit occurs.

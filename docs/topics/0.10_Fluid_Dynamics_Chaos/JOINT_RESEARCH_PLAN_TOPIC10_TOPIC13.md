@@ -298,3 +298,24 @@ make that ambiguity explicit. Source overlap, primary response protocol,
 uncertainty and the separate dissipative tensor remain controlling downstream.
 No parent gate, legacy single-velocity exclusion, matching constant or physical
 J04/J05/J06 status is promoted.
+
+## He-II source-acquisition checkpoint (2026-09-30)
+
+The [fixed-constraint source card](HE4_FIXED_CONSTRAINT_EOS_SOURCE_CARD.md)
+packages three TN1334 fitted-EOS liquid rows with explicit derivative constraints.
+The source audit passes 56 transcription/unit/printing checks and detects five
+incorrect interpretations. This is J02 source preparation, not physical J05/J06.
+
+Fixed-pressure/volume/temperature derivatives are found, but per-row uncertainty,
+covariance, the selected entropy reference and exact EOS/response experimental
+ancestry remain unresolved. Source-computed sound speeds cannot validate UET
+independently. Modern IR8474 is outside the He-II domain. No source rs fit or
+two-fluid numerical speed is imported or predicted in this wave.
+
+The narrower acquisition controller is
+he4_fixed_constraint_EOS_source_found_but_covariance_entropy_anchor_and_independence_open.
+Resolve that source package or select a better source, then freeze a primary
+state/frequency/geometry/uncertainty response and independent experiment split.
+The physical Legendre/state/SI and superfluid-phase response correspondence,
+dissipative closure and earlier single-velocity exclusion remain controlling.
+All physical package states and Core/Topic 13 dependency gates are unchanged.

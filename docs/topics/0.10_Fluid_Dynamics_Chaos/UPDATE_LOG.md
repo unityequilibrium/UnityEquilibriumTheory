@@ -238,3 +238,32 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
 - Claim boundary: standard comparator only; no UET state admission, physical
   J04/J05/J06, material prediction/attenuation, full nonlinear entropy/FDT,
   PDE trajectory, formal kernel proof or Core/Topic 13 unlock.
+
+## 2026-09-30 He-II fixed-constraint EOS source acquisition
+
+- Wave: research-core; primary-source candidate packaging for J02, not physical J05/J06.
+- Changed: source card/raw-token package, offline verifier/56-check artifact,
+  four regression tests; Topic 10 docs and joint plan expose the source controller.
+- Source review: TN1334 revised September 1998, full rendered printed pages
+  3,4,14,15 and Section 5 ancestry; Arp publisher abstract/references,
+  Maynard official abstract, IR8474 excluded scope and NBS1029 archive lineage.
+- Actual data: three calculated liquid rows at 1.650/1.700/1.750 K; explicit
+  alpha*T/P*kappa, MPa and J/g conversions. Source products, fixed derivatives
+  and liquid/vapor pairs are distinct. Original unassigned inputs stay null.
+- Ran: first audit 56/56 with warnings as errors; four new regression tests pass.
+  All three printing-compatibility identities pass on every selected row; five
+  intentionally wrong interpretations are detected. No rule, token or threshold
+  amended after first execution. Printing boxes are not physical uncertainty.
+- Narrowed: fixed-constraint EOS source fields now found, but controller is
+  he4_fixed_constraint_EOS_source_found_but_covariance_entropy_anchor_and_independence_open.
+- Next: resolve selected-edition entropy anchor, derivative covariance and exact
+  fitted experimental ancestry; freeze primary response protocol and independent
+  source split, plus physical Core state/Legendre/SI/superfluid response mapping.
+- Claim boundary: no material admission, independent response validation, fitted
+  UET parameter, sound eigenvalue/attenuation, physical J04/J05/J06, formal proof
+  or Core/Topic 13 unlock. Overall momentum/material-frame admission stays open.
+
+- Final local review: all 15 scoped tests pass; all five current artifacts remain
+  source-fresh; new/current/historical snapshots, ten-package DAG, blocked physical
+  package states, unchanged null material requirements, links/JSON and UTF-8
+  source prefixes pass. New source artifact reproduces byte-for-byte locally.

@@ -130,3 +130,14 @@ cannot silently supply c_p/c_v or alpha_p/kappa_T. Local synthetic witnesses
 demonstrate this missing derivative freedom. Source-locked SI conversion factors
 do not repair it. The full Core Helmholtz/entropy/internal-energy Legendre mapping
 and superfluid phase/stiffness correspondence remain unperformed admission tasks.
+
+## Source conversion audit: TN1334 candidate (2026-09-30)
+
+The source card records the material ontology, held variables and SI conventions
+before code. c_p-c_v=T alpha_p^2/(rho kappa_T), c_adiabatic^2=c_p/(c_v rho kappa_T)
+and Gamma=alpha_p/(rho c_v kappa_T) are standard thermodynamic reference identities.
+The last ratio is dimensionless; the first has J/(kg K), and the second m^2/s^2.
+The source's phi is Gamma, not the UET Phi field. Source alpha*T and P*kappa are
+dimensionless products, not directly SI coefficients. Printing-interval
+compatibility is not physical uncertainty or a proof of the material EOS.
+No new central equation or UET scalar-to-material correspondence is promoted.
