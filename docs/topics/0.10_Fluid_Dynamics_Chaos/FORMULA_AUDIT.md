@@ -113,3 +113,20 @@ mass. Its reciprocal coefficients satisfy H_T a=H_w b=rho_s s.
 The positive perturbation availability is not full SI internal energy or entropy.
 No C=mass, Phi=T, Q=entropy flux assignment is made. Numerical coefficients are
 synthetic; EOS/transport and independent He-II measurement remain unadmitted.
+
+## Compressible two-fluid and thermodynamic derivative reference
+
+The [separate registry](../../core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_two_fluid_eos_reference.json)
+records a standard comparator, not a new admitted UET equation.
+e(rho,sigma) is a material internal-energy target; mu_mass=e_rho and T=e_sigma.
+Gibbs pressure gives the mass/entropy mixed longitudinal mode matrix.
+Its positive availability weight makes H M symmetric and yields two sound pairs.
+The c^4 quartic retains compressibility/thermal expansion; the reduced c2 relation
+is exact in the declared decoupling limit only.
+
+The SVP-to-fixed-pressure chain rules and heat-capacity difference come from
+thermodynamic differentials with explicit held variables. NIST C_s/path expansion
+cannot silently supply c_p/c_v or alpha_p/kappa_T. Local synthetic witnesses
+demonstrate this missing derivative freedom. Source-locked SI conversion factors
+do not repair it. The full Core Helmholtz/entropy/internal-energy Legendre mapping
+and superfluid phase/stiffness correspondence remain unperformed admission tasks.

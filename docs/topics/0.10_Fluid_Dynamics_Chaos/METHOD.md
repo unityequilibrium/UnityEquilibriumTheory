@@ -79,3 +79,21 @@ invalid real-only norm is retained; added post-preview sign-error controls detec
 both imaginary work defects and real unstable poles. All tolerances are unchanged.
 A failed verifier leaves exclusion unresolved. A passing reference exclusion
 requires separate two-fluid state admission before physical J02/J05/J06.
+
+## Compressible two-fluid/EOS comparator
+
+Use TWO_FLUID_STATE_EOS_REFERENCE.md and
+Data/03_Research/fluid_two_fluid_eos_reference_contract.json. Construct a standard
+ideal longitudinal matrix from mass/normal-entropy transport, total pressure
+momentum and the superfluid chemical-potential equation at rest.
+The positive internal-energy Hessian and common/relative kinetic decomposition
+supply a reciprocal quadratic-work symmetrizer. Both acoustic branches are
+compared with an independently derived thermodynamic quartic.
+
+Finite differences check Gibbs pressure and constant-pressure specific heat.
+A periodic local work-flux calculation checks the operator; wrong entropy-carrier
+and superfluid-sign controls must fail. Zero expansion admits the reduced
+zero-mass-current subspace; finite expansion explicitly drives its missing momentum.
+Two different isothermal compressibilities reproduce the same synthetic local
+SVP tangent yet change the EOS/modes. No material rows or Core scalar equations
+are numerically mapped into this standard comparator.

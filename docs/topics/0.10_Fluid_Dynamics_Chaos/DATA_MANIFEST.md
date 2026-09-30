@@ -71,3 +71,20 @@ The invalid complex-metric preview retains its original payload and SHA256 in
 Result/artifacts/fluid_second_sound_mode_initial_metric_diagnostic.json.
 The repaired artifact and three regression tests explicitly separate this
 unaccepted preview from reference evidence. No independent observation is added.
+
+## Two-fluid/EOS source requirements
+
+New requirements and standard reference controls:
+Data/03_Research/he4_two_fluid_thermodynamic_input_requirements.json and
+Data/03_Research/fluid_two_fluid_eos_reference_contract.json.
+No real He-II numeric row is extracted; all material values/uncertainties are null.
+NIST Section 1 density/expansion follows SVP, Section 7 note (9) defines C_s at
+saturation pressure, notes (11),(13) state enthalpy-path correction and unit
+conversion; Section 8 notes (8),(9) identify calorimetry-integrated entropy and
+its units. Fountain-pressure entropy is a separate candidate method with its
+own source/uncertainty record. No statistical independence is assumed.
+
+Nikuni-Griffin (86)-(88), (C1)-(C10) supplies general two-fluid structure; its
+dilute-gas condensate-density and transport identities are not assigned to liquid
+helium. The current artifact hashes eight local inputs. Prior mode/vector/action
+source files stay unchanged, and Topic 13 protocol/calibration boundaries persist.

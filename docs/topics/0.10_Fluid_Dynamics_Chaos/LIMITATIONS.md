@@ -74,3 +74,19 @@ state-matched conductivity, shear/bulk transport, relaxation and, where relevant
 mutual friction and boundary data; D_w is not measured normal viscosity.
 The 123-check preview is invalid evidence; the repaired 139 checks include
 post-preview harness controls and are not a blind preregistration.
+
+## Two-fluid/EOS reference boundary
+
+The 59-check standard comparator is ideal, longitudinal, linear and at zero mean
+flow/counterflow, with positive normal/superfluid densities and EOS Hessian.
+It omits vortices, full entrainment at finite counterflow, dissipation, full
+nonlinear entropy/FDT and material frequency/geometry effects. The matrix
+symmetrizer is not a global PDE or UET stability proof.
+
+The local path witnesses demonstrate first-derivative underdetermination, not
+that all experimental EOS data are insufficient or that a chosen EOS ansatz
+cannot be calibrated. No real He-II corrections or mode speeds are calculated.
+NIST saturation-path calorimetry and heat-integrated entropy are not independent
+fixed-pressure inputs. A Core-to-material Helmholtz/entropy/internal-energy
+Legendre map, independent superfluid response density and source-matched EOS,
+protocol and covariance remain open. Physical J05/J06 stay unexecuted.

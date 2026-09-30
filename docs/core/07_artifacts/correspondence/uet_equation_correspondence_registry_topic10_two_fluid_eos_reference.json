@@ -1,0 +1,65 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "STANDARD_REFERENCE_NOT_MERGED",
+  "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
+  "equation_entries": [
+    {
+      "equation_id": "standard.topic10_13.two_fluid_linear_EOS_reference",
+      "version": "1",
+      "classification": "standard_physics_reference_not_UET_equation",
+      "relation_or_code_path": {
+        "thermodynamics": "de=mu_mass*d_rho+T*d_sigma; p=rho*mu_mass+sigma*T-e",
+        "state": "rho_t=-div(j); sigma_t=-sigma*div(v_n); j_t=-grad(delta_p); v_s_t=-grad(delta_mu_mass)",
+        "mass_current": "j=rho_n*v_n+rho_s*v_s; w=v_n-v_s",
+        "sound_polynomial": "c^4-(rho*A+2*sigma*B+sigma^2*D/rho_n)*c^2+sigma^2*rho_s/rho_n*(A*D-B^2)=0",
+        "thermo": "c_T^2=rho*(A-B^2/D); c_S^2=rho*A+2*sigma*B+sigma^2*D/rho; c_v=T/(rho*D); c_p/c_v=c_S^2/c_T^2",
+        "path": "alpha_p=alpha_path+kappa_T*p_path_prime; c_p=c_sat+T*alpha_p*p_path_prime/rho; c_p-c_v=T*alpha_p^2/(rho*kappa_T)"
+      },
+      "variables": {
+        "rho": "material mass density, not C",
+        "sigma": "physical entropy density target, not Q or R trace",
+        "e": "material internal-energy EOS target, not normalized Core free-energy ledger",
+        "mu_mass": "chemical potential per mass, not Core mu_C",
+        "vartheta_sf": "separate U(1) superfluid phase, not Phi or theta_T",
+        "rho_s": "superfluid response density, not automatically condensate fraction",
+        "T": "EOS conjugate e_sigma, not a rematching of Phi"
+      },
+      "mathematical_role": "full compressible longitudinal state and quadratic-work/thermodynamic derivative comparator",
+      "standard_physics_counterpart": "ideal rest-state Landau two-fluid hydrodynamics; separate superfluid phase/chemical potential",
+      "observable_mapping": {
+        "status": "BLOCKED",
+        "reference": "two acoustic branches under a positive EOS Hessian",
+        "physical": "UET state-to-mass/entropy/phase mapping and independent He-II EOS/protocol are missing"
+      },
+      "unit_lane": "normalized_controls_with_explicit_SI_dimension_targets",
+      "parameter_dimensions": "See TWO_FLUID_STATE_EOS_REFERENCE.md; A,B,D are derivatives of material internal energy, not Core scalar Hessian",
+      "source_or_origin": "standard hydrodynamic equations; local thermodynamic and path chain-rule derivations in the card",
+      "assumptions": [
+        "uniform rest state; both components and entropy positive",
+        "vortex-free ideal longitudinal linear response",
+        "positive internal-energy Hessian; no dissipative transport or mean counterflow",
+        "rho_s frozen at rest equilibrium at linear order; no general entrainment model",
+        "normalized controls only, with separate SI target dimensions"
+      ],
+      "symmetry_and_conservation": "total mass current; entropy transported by normal velocity; positive quadratic work symmetrizer",
+      "limiting_cases": [
+        "zero thermal expansion gives invariant zero-mass-current counterflow",
+        "finite expansion mixes density/entropy and prevents silent common-flow clamping",
+        "path-only EOS tangent can match while transverse compressibility differs"
+      ],
+      "implementation_paths": [
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Two_Fluid_EOS_Reference.py"
+      ],
+      "verifier_paths": [
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Two_Fluid_EOS_Reference.py"
+      ],
+      "evidence_class": "STANDARD_REFERENCE_AND_LOCAL_PATH_UNDERDETERMINATION",
+      "proof_status": "analytic derivation with executed 59-check standard reference and local EOS witnesses; no formal kernel proof",
+      "blockers": [
+        "two_fluid_fixed_pressure_EOS_and_UET_state_mapping_missing",
+        "independent_response_protocol_and_transport_missing"
+      ],
+      "claim_boundary": "Reference state contract only; no Phi-to-T/phase identification, UET operator admission, SI material prediction, full nonlinear closure or Core unlock"
+    }
+  ]
+}

@@ -197,3 +197,24 @@ superfluid phase/chemical-potential dynamics before second-sound prediction.
 No table-speed fit, He-II validation, physical J04/J05 execution or Core unlock
 is implied. The overall physical controller remains
 vector_momentum_constitutive_origin_and_material_frame_admission_open.
+
+## Compressible two-fluid/EOS reference checkpoint (2026-09-30)
+
+The [two-fluid state/EOS reference](TWO_FLUID_STATE_EOS_REFERENCE.md) supplies a
+standard comparator with mass density, entropy density, total mass current and
+superfluid potential flow. Its 59 checks cover both acoustic branches, reciprocal
+quadratic work, finite-expansion mixing and the zero-expansion counterflow limit.
+This is a standard-physics reference, not an admitted UET extension.
+
+SVP density/heat-capacity tangents do not identify a complete fixed-pressure EOS.
+Two synthetic positive EOS witnesses reproduce the same local path but yield
+different sound poles. The narrower input controller is
+two_fluid_fixed_pressure_EOS_and_UET_state_mapping_missing.
+[Material requirements](Data/03_Research/he4_two_fluid_thermodynamic_input_requirements.json)
+keep real values/uncertainties unassigned and separate saturation-path, constant
+pressure and constant volume heat capacities, plus source ancestry.
+
+Core needs a material thermodynamic Legendre/state/SI mapping and independent
+superfluid phase/relative-motion correspondence before this comparator can
+validate a UET mode. Existing single-velocity exclusion and physical gates remain
+unchanged; no He-II data fit, attenuation, trajectory or dependency unlock.

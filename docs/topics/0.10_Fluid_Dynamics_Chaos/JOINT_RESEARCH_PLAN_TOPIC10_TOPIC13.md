@@ -280,3 +280,21 @@ sensitivity. The initial complex-metric preview is retained as invalid; the
 repaired controls pass with original tolerances and an explicit post-preview
 harness amendment. No physical/Core/Topic 13 dependency unlock occurs.
 The overall momentum/material-frame/SI admission controller remains unchanged.
+
+## Standard two-fluid/EOS checkpoint (2026-09-30)
+
+The [standard state/EOS comparator](TWO_FLUID_STATE_EOS_REFERENCE.md) extends the
+earlier counterflow control to full longitudinal density/entropy mixing and
+both sound branches. Its 59-check reference verifies reciprocal work and
+identifies the limited conditions for zero-mass-current reduction. It is a
+J02/J05 preparation follow-up, not physical package execution.
+
+The new coupled input controller is
+two_fluid_fixed_pressure_EOS_and_UET_state_mapping_missing.
+J02/J05 need independent material rho/rho_s/entropy, fixed-pressure EOS derivatives
+and a physical Core state/Legendre/phase correspondence. SVP path slopes alone
+leave isothermal compressibility undetermined; two positive local EOS witnesses
+make that ambiguity explicit. Source overlap, primary response protocol,
+uncertainty and the separate dissipative tensor remain controlling downstream.
+No parent gate, legacy single-velocity exclusion, matching constant or physical
+J04/J05/J06 status is promoted.

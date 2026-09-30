@@ -12,7 +12,7 @@
   "source_policy": "Original evidence_snapshot hashes retain the published-base comparison. current_execution_snapshot records the current branch-local candidate inputs; execution_history retains as-executed historical identities. Original dirty workspace differences do not authorize importing unpublished results.",
   "controlling_blocker": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
   "blocker_role": "proposed_physics_program_controller_not_replacement_of_legacy_speed_gate",
-  "next_controller": "For He-II second sound, replace the ineligible single-velocity branch with a separately registered two-fluid state; retain overall physical momentum/material-frame/SI admission and source-independence obligations.",
+  "next_controller": "Lock independent fixed-pressure EOS with derivative constraints/covariance and primary response protocol; derive/admit physical Core state/Legendre and superfluid phase/relative-motion mapping before UET prediction.",
   "first_scientific_wave": "J01",
   "work_packages": [
     {
@@ -187,6 +187,14 @@
         "disposition": "NOT_ELIGIBLE_AS_HYDRODYNAMIC_SECOND_SOUND_OPERATOR_UNDER_DECLARED_ASSUMPTIONS",
         "physical_package_executed": false,
         "next_action": "Register and materially justify separate entropy/temperature, relative-flow and superfluid phase/chemical-potential dynamics; independently lock EOS/transport and primary response protocol. Retain existing candidate as bounded isothermal reference."
+      },
+      "two_fluid_EOS_preparation": {
+        "status": "STANDARD_REFERENCE_COMPLETE_MATERIAL_MAPPING_BLOCKED",
+        "coupled_input_blocker": "two_fluid_fixed_pressure_EOS_and_UET_state_mapping_missing",
+        "reference_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_two_fluid_eos_reference_audit.json",
+        "material_requirements": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/he4_two_fluid_thermodynamic_input_requirements.json",
+        "physical_package_executed": false,
+        "next_action": "Lock independent fixed-pressure EOS with derivative constraints/covariance and primary response protocol; derive/admit physical Core state/Legendre and superfluid phase/relative-motion mapping before UET prediction."
       }
     },
     {
@@ -253,6 +261,14 @@
         "disposition": "NOT_ELIGIBLE_AS_HYDRODYNAMIC_SECOND_SOUND_OPERATOR_UNDER_DECLARED_ASSUMPTIONS",
         "physical_package_executed": false,
         "next_action": "Register and materially justify separate entropy/temperature, relative-flow and superfluid phase/chemical-potential dynamics; independently lock EOS/transport and primary response protocol. Retain existing candidate as bounded isothermal reference."
+      },
+      "two_fluid_EOS_preparation": {
+        "status": "STANDARD_REFERENCE_COMPLETE_MATERIAL_MAPPING_BLOCKED",
+        "coupled_input_blocker": "two_fluid_fixed_pressure_EOS_and_UET_state_mapping_missing",
+        "reference_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_two_fluid_eos_reference_audit.json",
+        "material_requirements": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/he4_two_fluid_thermodynamic_input_requirements.json",
+        "physical_package_executed": false,
+        "next_action": "Lock independent fixed-pressure EOS with derivative constraints/covariance and primary response protocol; derive/admit physical Core state/Legendre and superfluid phase/relative-motion mapping before UET prediction."
       }
     },
     {
@@ -280,6 +296,14 @@
         "disposition": "NOT_ELIGIBLE_AS_HYDRODYNAMIC_SECOND_SOUND_OPERATOR_UNDER_DECLARED_ASSUMPTIONS",
         "physical_package_executed": false,
         "next_action": "Register and materially justify separate entropy/temperature, relative-flow and superfluid phase/chemical-potential dynamics; independently lock EOS/transport and primary response protocol. Retain existing candidate as bounded isothermal reference."
+      },
+      "two_fluid_EOS_preparation": {
+        "status": "STANDARD_REFERENCE_COMPLETE_MATERIAL_MAPPING_BLOCKED",
+        "coupled_input_blocker": "two_fluid_fixed_pressure_EOS_and_UET_state_mapping_missing",
+        "reference_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_two_fluid_eos_reference_audit.json",
+        "material_requirements": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/he4_two_fluid_thermodynamic_input_requirements.json",
+        "physical_package_executed": false,
+        "next_action": "Lock independent fixed-pressure EOS with derivative constraints/covariance and primary response protocol; derive/admit physical Core state/Legendre and superfluid phase/relative-motion mapping before UET prediction."
       }
     },
     {
@@ -523,7 +547,8 @@
     "engine_trajectory_executed": false,
     "claim_promotion": false,
     "dependency_unlock": false,
-    "control_amendment": "Initial insensitive control retained as FAIL; mixed harmonic added after preview without tolerance relaxation. Not blind preregistration."
+    "control_amendment": "Initial insensitive control retained as FAIL; mixed harmonic added after preview without tolerance relaxation. Not blind preregistration.",
+    "snapshot_role": "CURRENT_VECTOR_REFERENCE_ONLY_NOT_LATEST_GLOBAL_EXECUTION"
   },
   "execution_history": [
     {
@@ -635,6 +660,41 @@
       },
       "next_action": "Register and materially justify separate entropy/temperature, relative-flow and superfluid phase/chemical-potential dynamics; independently lock EOS/transport and primary response protocol. Retain existing candidate as bounded isothermal reference.",
       "package_role": "candidate screening; not physical J05"
+    },
+    {
+      "date": "2026-09-30",
+      "latest_executed_package": "J02_J05_STANDARD_TWO_FLUID_EOS_PREPARATION",
+      "status": "PASS_STANDARD_TWO_FLUID_AND_PATH_UNDERDETERMINATION_REFERENCE_ONLY",
+      "scope": "Ideal compressible standard-physics state, quadratic work, thermodynamic sound quartic and local SVP-path EOS underdetermination",
+      "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/TWO_FLUID_STATE_EOS_REFERENCE.md",
+      "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_two_fluid_eos_reference_contract.json",
+      "material_requirements": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/he4_two_fluid_thermodynamic_input_requirements.json",
+      "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Two_Fluid_EOS_Reference.py",
+      "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_two_fluid_eos_reference_audit.json",
+      "result_artifact_sha256": "64b57395685be2031c8399bf6488ae96ed4f31e74db960d18010093cf7b33370",
+      "reference_check_count": 59,
+      "evidence_hashes": {
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Two_Fluid_EOS_Reference.py": "3d0837db500366dee21f49bc957705e45d76ab899698b8b3fcd889124519b312",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_two_fluid_eos_reference_contract.json": "0554b385b88b442eeb99b4fbf49f45d34735904f6f24892472db9f48319de9ea",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/he4_two_fluid_thermodynamic_input_requirements.json": "e0b77fa97a24233ee7e2ec6b8327a2ca8092ee2a8c2d1ca49700906bf6cf373f",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/TWO_FLUID_STATE_EOS_REFERENCE.md": "76023afd4038b26607cbf9b59e0c9ceb5d84af596a4a9c3296aa959baffda3e2",
+        "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_two_fluid_eos_reference.json": "2221d8d2a6a5866c5f036b9e244c71f53468f0169aa255be550710ffa7ac26e8",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_second_sound_mode_eligibility_contract.json": "a1b44982d04efad610a9f06ba5f8d8d27f81e726f7548e2fbaec9b333bb31920",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_second_sound_mode_eligibility_audit.json": "c9bdaff5bca7d39a7e1f0bb78e10322918453271a4ac293f841593c11d79be18",
+        "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md": "3e63ee75d51935420e9d4cb5e2141cf5cdb52c7596a6ea31a78e621ae1313449"
+      },
+      "reference_disposition": "REFERENCE_STATE_AND_FIXED_PRESSURE_INPUT_OBLIGATIONS_IDENTIFIED",
+      "coupled_input_blocker": "two_fluid_fixed_pressure_EOS_and_UET_state_mapping_missing",
+      "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+      "physical_uet_operator_admitted": false,
+      "physical_prediction_executed": false,
+      "physical_J05_executed": false,
+      "numerical_HeII_data_ingested": false,
+      "claim_promotion": false,
+      "dependency_unlock": false,
+      "thresholds_relaxed": false,
+      "next_action": "Lock independent fixed-pressure EOS with derivative constraints/covariance and primary response protocol; derive/admit physical Core state/Legendre and superfluid phase/relative-motion mapping before UET prediction.",
+      "package_role": "standard comparator/source requirements; not physical J05"
     }
   ],
   "last_updated": "2026-09-30",
@@ -706,5 +766,73 @@
       "initial_nominal_pass_accepted": false
     },
     "next_action": "Register and materially justify separate entropy/temperature, relative-flow and superfluid phase/chemical-potential dynamics; independently lock EOS/transport and primary response protocol. Retain existing candidate as bounded isothermal reference."
+  },
+  "current_two_fluid_EOS_reference_snapshot": {
+    "date": "2026-09-30",
+    "latest_executed_package": "J02_J05_STANDARD_TWO_FLUID_EOS_PREPARATION",
+    "status": "PASS_STANDARD_TWO_FLUID_AND_PATH_UNDERDETERMINATION_REFERENCE_ONLY",
+    "scope": "Ideal compressible standard-physics state, quadratic work, thermodynamic sound quartic and local SVP-path EOS underdetermination",
+    "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/TWO_FLUID_STATE_EOS_REFERENCE.md",
+    "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_two_fluid_eos_reference_contract.json",
+    "material_requirements": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/he4_two_fluid_thermodynamic_input_requirements.json",
+    "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Two_Fluid_EOS_Reference.py",
+    "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_two_fluid_eos_reference_audit.json",
+    "result_artifact_sha256": "64b57395685be2031c8399bf6488ae96ed4f31e74db960d18010093cf7b33370",
+    "reference_check_count": 59,
+    "evidence_hashes": {
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Two_Fluid_EOS_Reference.py": "3d0837db500366dee21f49bc957705e45d76ab899698b8b3fcd889124519b312",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_two_fluid_eos_reference_contract.json": "0554b385b88b442eeb99b4fbf49f45d34735904f6f24892472db9f48319de9ea",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/he4_two_fluid_thermodynamic_input_requirements.json": "e0b77fa97a24233ee7e2ec6b8327a2ca8092ee2a8c2d1ca49700906bf6cf373f",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/TWO_FLUID_STATE_EOS_REFERENCE.md": "76023afd4038b26607cbf9b59e0c9ceb5d84af596a4a9c3296aa959baffda3e2",
+      "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_two_fluid_eos_reference.json": "2221d8d2a6a5866c5f036b9e244c71f53468f0169aa255be550710ffa7ac26e8",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_second_sound_mode_eligibility_contract.json": "a1b44982d04efad610a9f06ba5f8d8d27f81e726f7548e2fbaec9b333bb31920",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_second_sound_mode_eligibility_audit.json": "c9bdaff5bca7d39a7e1f0bb78e10322918453271a4ac293f841593c11d79be18",
+      "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md": "3e63ee75d51935420e9d4cb5e2141cf5cdb52c7596a6ea31a78e621ae1313449"
+    },
+    "reference_disposition": "REFERENCE_STATE_AND_FIXED_PRESSURE_INPUT_OBLIGATIONS_IDENTIFIED",
+    "coupled_input_blocker": "two_fluid_fixed_pressure_EOS_and_UET_state_mapping_missing",
+    "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+    "physical_uet_operator_admitted": false,
+    "physical_prediction_executed": false,
+    "physical_J05_executed": false,
+    "numerical_HeII_data_ingested": false,
+    "claim_promotion": false,
+    "dependency_unlock": false,
+    "thresholds_relaxed": false,
+    "next_action": "Lock independent fixed-pressure EOS with derivative constraints/covariance and primary response protocol; derive/admit physical Core state/Legendre and superfluid phase/relative-motion mapping before UET prediction."
+  },
+  "latest_executed_reference_snapshot": {
+    "date": "2026-09-30",
+    "latest_executed_package": "J02_J05_STANDARD_TWO_FLUID_EOS_PREPARATION",
+    "status": "PASS_STANDARD_TWO_FLUID_AND_PATH_UNDERDETERMINATION_REFERENCE_ONLY",
+    "scope": "Ideal compressible standard-physics state, quadratic work, thermodynamic sound quartic and local SVP-path EOS underdetermination",
+    "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/TWO_FLUID_STATE_EOS_REFERENCE.md",
+    "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_two_fluid_eos_reference_contract.json",
+    "material_requirements": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/he4_two_fluid_thermodynamic_input_requirements.json",
+    "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Two_Fluid_EOS_Reference.py",
+    "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_two_fluid_eos_reference_audit.json",
+    "result_artifact_sha256": "64b57395685be2031c8399bf6488ae96ed4f31e74db960d18010093cf7b33370",
+    "reference_check_count": 59,
+    "evidence_hashes": {
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Two_Fluid_EOS_Reference.py": "3d0837db500366dee21f49bc957705e45d76ab899698b8b3fcd889124519b312",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_two_fluid_eos_reference_contract.json": "0554b385b88b442eeb99b4fbf49f45d34735904f6f24892472db9f48319de9ea",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/he4_two_fluid_thermodynamic_input_requirements.json": "e0b77fa97a24233ee7e2ec6b8327a2ca8092ee2a8c2d1ca49700906bf6cf373f",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/TWO_FLUID_STATE_EOS_REFERENCE.md": "76023afd4038b26607cbf9b59e0c9ceb5d84af596a4a9c3296aa959baffda3e2",
+      "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_two_fluid_eos_reference.json": "2221d8d2a6a5866c5f036b9e244c71f53468f0169aa255be550710ffa7ac26e8",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_second_sound_mode_eligibility_contract.json": "a1b44982d04efad610a9f06ba5f8d8d27f81e726f7548e2fbaec9b333bb31920",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_second_sound_mode_eligibility_audit.json": "c9bdaff5bca7d39a7e1f0bb78e10322918453271a4ac293f841593c11d79be18",
+      "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md": "3e63ee75d51935420e9d4cb5e2141cf5cdb52c7596a6ea31a78e621ae1313449"
+    },
+    "reference_disposition": "REFERENCE_STATE_AND_FIXED_PRESSURE_INPUT_OBLIGATIONS_IDENTIFIED",
+    "coupled_input_blocker": "two_fluid_fixed_pressure_EOS_and_UET_state_mapping_missing",
+    "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+    "physical_uet_operator_admitted": false,
+    "physical_prediction_executed": false,
+    "physical_J05_executed": false,
+    "numerical_HeII_data_ingested": false,
+    "claim_promotion": false,
+    "dependency_unlock": false,
+    "thresholds_relaxed": false,
+    "next_action": "Lock independent fixed-pressure EOS with derivative constraints/covariance and primary response protocol; derive/admit physical Core state/Legendre and superfluid phase/relative-motion mapping before UET prediction."
   }
 }

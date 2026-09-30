@@ -114,3 +114,24 @@
 - PASS_CURRENT_CANDIDATE_HYDRODYNAMIC_MODE_EXCLUSION_ONLY is a scoped rest-frame
   reference result. Audit failure reports UNRESOLVED_AUDIT_FAILED. No physical
   He-II prediction, PDE trajectory, formal checker or Core/Topic 13 unlock.
+
+## Standard two-fluid/EOS reference audit
+
+- Verifier: Code/03_Research/Research_Fluid_Two_Fluid_EOS_Reference.py.
+- Contract/card: Data/03_Research/fluid_two_fluid_eos_reference_contract.json;
+  TWO_FLUID_STATE_EOS_REFERENCE.md.
+- Inputs: Data/03_Research/he4_two_fluid_thermodynamic_input_requirements.json;
+  material values/uncertainties remain null, not an admitted dataset.
+- Artifact: Result/artifacts/fluid_two_fluid_eos_reference_audit.json; 59 checks.
+- Identity tolerance 1e-9; EOS/Gibbs/c_p directional tolerance 1e-7,
+  steps 1e-3/1e-4/1e-5; error sensitivity floor 1e-8.
+- Seven halved wavenumbers; N=32 periodic work/flux controls, no time evolution.
+- Compare two acoustic pairs/quartic, ideal complex work, local/mean conservation,
+  common/relative inertia, zero-expansion subspace and finite-expansion defects.
+- Distinct EOS witnesses must share the specified local SVP tangent and yield
+  different modes; omitting the saturation heat correction must be detectable.
+- Three source-fresh regression tests guard physical non-admission, forbidden
+  entropy/common-flow shortcuts and path-input underdetermination.
+- Controls were specified before the first audit and not amended after preview.
+  PASS_STANDARD_TWO_FLUID_AND_PATH_UNDERDETERMINATION_REFERENCE_ONLY does not
+  advance physical J05/J06, perform material prediction or formal verification.

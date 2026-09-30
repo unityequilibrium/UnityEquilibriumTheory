@@ -201,3 +201,40 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
   locked thresholds, check set and acceptance gates; cross-platform eigensolver
   rounding is not required to reproduce identical JSON bytes. Local byte
   determinism remains checked within one runtime. Three mode tests rerun pass.
+
+## 2026-09-30 Compressible two-fluid/EOS standard reference
+
+- Wave: research-core; standard state/thermodynamic reference and source-obligation
+  pass for J02/J05 preparation, not physical package execution.
+- Before code: registered rho/sigma/j/v_s ontology, material internal-energy
+  Hessian/SI targets, ideal hydrodynamic equations and locked synthetic controls.
+  Kept C/Phi/Q/R and e0 separate from material mass/entropy/phase/internal energy.
+- Changed: TWO_FLUID_STATE_EOS_REFERENCE.md, standard contract and material input
+  requirements, separate Core reference registry, verifier/59-check artifact,
+  three regression tests and topic docs/joint manifest.
+- Source review: Nikuni-Griffin (86)-(88),(C1)-(C10); NIST Section 1 (1.2)-(1.6),
+  Section 7 notes (9),(11),(13), Section 8 notes (8),(9). Numerical source rows
+  were not ingested. SVP versus fixed-pressure/volume derivatives and entropy's
+  calorimetric lineage are explicit; condensate density is not assigned to rho_s.
+- Ran: warnings-as-errors reference audit, thermodynamic/Gibbs/c_p finite
+  derivatives, both sound-pair quartic, positive reciprocal work, periodic local
+  flux/mean balances, zero-expansion limit, forbidden entropy/sign/clamping controls,
+  six SI dimension relations and two local path-EOS witnesses. 59/59 pass.
+- Result: finite-expansion normalized c^2 values 1.2464504275 and 9.6735495725;
+  reduced slow estimate 1.2591478697 is not exact. Pure entropy gradients have
+  pressure coupling 0.92 and can drive total momentum from initially j=0.
+- Path witnesses: identical rho'=-0.04,s'=1.5,T'=1,p'=0.3; kappa_T=0.1 or 0.2
+  yields slow c^2=0.6297999941 or 0.6245377687. This is local path-input
+  underdetermination with synthetic values, not a numerical He-II result.
+- No threshold/control changed after the first audit. Three new tests and all
+  eleven scoped tests pass locally; original vector/action/mode artifacts remain
+  source-fresh.
+- Narrowed input controller: two_fluid_fixed_pressure_EOS_and_UET_state_mapping_missing.
+  Overall controller remains vector_momentum_constitutive_origin_and_material_frame_admission_open.
+- Next: independent fixed-pressure EOS/derivative/covariance and primary protocol;
+  source-locked physical Helmholtz/entropy/internal-energy Legendre/state/SI map and
+  superfluid phase/stiffness correspondence. Existing matching constants and
+  calibration/response ancestry restrictions stay unchanged.
+- Claim boundary: standard comparator only; no UET state admission, physical
+  J04/J05/J06, material prediction/attenuation, full nonlinear entropy/FDT,
+  PDE trajectory, formal kernel proof or Core/Topic 13 unlock.
