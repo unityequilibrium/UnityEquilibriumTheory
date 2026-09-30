@@ -532,3 +532,8 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
   reproduces identical bytes locally. Prior snapshots/history, ten-package DAG,
   unchanged physical/Core/Topic13 sources,16-file scope, UTF-8 prefixes, JSON
   and links pass. All old numerical failures remain; no physical gate promotion.
+
+- CI follow-up: scope/safety on4a6a534b5 detected an extra blank line at EOF
+  in the new regression file. Removed that whitespace only; evidence-producing
+  code, locked contract, all artifact bytes and numerical targets are unchanged.
+  No scientific verifier rerun is needed; current-head CI will rerun after push.
