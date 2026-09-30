@@ -10,7 +10,7 @@
 
 ## Start and continue
 
-โมเดลแนะนำสำหรับ Goal owner คือ GPT-6 Astra / high; ใช้ xhigh เฉพาะ derivation/no-go review ที่ต้องเพิ่ม effort และใช้ Sol / high กับ implementation เมื่อมีการแบ่งงานที่รองรับจริง อ่าน `RESEARCH_ROADMAP_MODELS_12W_2026-09-27.md` สำหรับการประเมินโมเดลและแผน W3–W12 คำแนะนำนี้ไม่ได้สั่งเปลี่ยนโมเดลหรือเปิดห้องอื่นอัตโนมัติ
+โมเดลแนะนำสำหรับ Goal owner คือ GPT-6 Astra / high; ใช้ xhigh เฉพาะ derivation/no-go review ที่ต้องเพิ่ม effort และใช้ GPT-6.1 Sol / high กับ implementation เมื่อมีการแบ่งงานที่รองรับจริง หากใช้ได้ตัวเดียวและโควตาจำกัด ให้ใช้ Sol 6.1 / high โดยไม่ลดเกณฑ์ตรวจ อ่าน `RESEARCH_ROADMAP_MODELS_12W_2026-09-27.md` โดยเฉพาะ revision 1 ตุลาคม สำหรับสถานะปัจจุบัน แพ็ก A–E และแผน W3–W12 คำแนะนำนี้ไม่ได้สั่งเปลี่ยนโมเดลหรือเปิดห้องอื่นอัตโนมัติ
 
 1. อ่าน AGENTS, topic standards และแผน ตรวจ current goal ก่อนสร้างเป้าหมายซ้ำ เริ่ม D01 จากข้อมูลปัจจุบัน; วันในตารางคือวันครบกำหนด สามารถทำล่วงหน้าเมื่อ prerequisites พร้อม
 2. ยืนยัน hashes ใน baseline กับไฟล์จริง หากเปลี่ยน ให้บันทึกเหตุและเลือก snapshot อย่างตรวจสอบได้ ไม่ยึดสถานะจากข้อความแชท ย้ายเฉพาะ committed source/protocol J02 ที่ต้องใช้จาก `c42385d07e390b338096122275fe809737b8477a` หลังตรวจ dependency; อย่าเขียนทับอีกห้อง

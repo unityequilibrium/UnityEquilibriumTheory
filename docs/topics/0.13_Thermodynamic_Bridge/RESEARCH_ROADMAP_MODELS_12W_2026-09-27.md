@@ -4,6 +4,46 @@
 
 เอกสารนี้เพิ่มภาพระยะยาวและแผนรองรับรอบทุนถัดไปตามคำขอผู้ใช้ โดยคงผลงาน 14 วันเป็น milestone แรก ข้อมูลวันเปิด/ปิดรับทุนจริงยังไม่ทราบ ช่วงสัปดาห์ 8 และ 12 เป็นวันเตรียมพอร์ตที่เสนอ ไม่ใช่การยืนยันว่าหน่วยงานจะเปิดรอบในวันนั้น
 
+## 0. Revision 1 ตุลาคม: ผลที่ต้องซื้อด้วยเวลาที่เพิ่ม
+
+คงวันส่งมอบพอร์ตภายใน 11 ตุลาคมตามแผนเดิม ไม่เริ่มนับ 14 วันใหม่จาก revision นี้ วันดังกล่าวยังเป็น planning target ไม่ใช่ deadline ของทุนที่ยืนยันแล้ว หากผู้ยื่นต้องการเปลี่ยนวัน ให้บันทึก calendar revision แยกจากการเปลี่ยน scientific acceptance
+
+**คำถามหลัก:** หลังแช่แข็ง equilibrium matching แล้ว สมการ O(2)/He-4 กำหนด thermal response อิสระได้แค่ไหน และการวัดใดตัดความกำกวมที่เหลือ? ไม่ตั้ง Goal ว่าเพิ่ม artifacts ให้มากที่สุด หรือปิดทุกระบบในสองสัปดาห์
+
+สถานะต้องอ่านแบบแยก lane: Core matrix บันทึก O(2)/He-4 composition เป็น bounded `CLOSED_FOR_CORE` แล้ว แต่การรับ interface และ imported shear channel ไม่ได้ปิด independent second-sound prediction, complete finite-temperature transport หรือ graphite TTG validation งานใหม่นี้ไม่ถอนสถานะเดิมและไม่ขยายสถานะเดิมไปครอบคลุมโจทย์ใหม่ ใช้ Core snapshot ปัจจุบันกับ hash/lineage review ก่อน handoff; ห้ามใช้ `full_core_unlock=false` ของ diagnostic ใหม่ไปเขียนทับ gate ของ composition เดิม
+
+หลักฐาน 1 ตุลาคมแยกคำถามย่อยได้ชัด: [thermal phase-gradient curvature](Result/artifacts/T13_THERMAL_GRADIENT_CURVATURE_STATIONARITY_2026-10-01.md) คำนวณได้และตรวจสองวิธีแล้ว แต่ `f_path=f_held-2Z*Omega_x/lambda` มี nonstationary amplitude-path term ที่ยังต้องจัดการ จึงยังไม่เป็น physical current หรือ He-II mode prediction ผลนี้ไม่พิสูจน์ว่า consistent perturbative completion เป็นไปไม่ได้
+
+### ผลส่งมอบสองสัปดาห์ที่ต้องมี
+
+| วันที่ภายใน | ผลที่รับงาน | ไม่ให้นับเป็นความสำเร็จแทน |
+| --- | --- | --- |
+| 2 ต.ค. / D5 | decision card เลือก predictive, structural หรือ unresolved; มีสมการ/สมมติฐาน/หลักฐานที่ใช้ตัดสิน | เรียก missing operator ว่า no-go หรือเลือกผู้สมัครเพราะความเร็วดูดี |
+| 7 ต.ค. / D10 | หนึ่ง scientific result ที่พิสูจน์/ตรวจซ้ำได้ พร้อม measurement design; หาก unresolved ต้องระบุ proof obligation ที่ยังไม่เสร็จ | เปลี่ยน diagnostic `PASS` เป็น physical closure หรือลดเกณฑ์เพื่อทันวัน |
+| 11 ต.ค. / D14 | portfolio v1: report, claim map, evidence hashes, rerun/review, pitch และคำอธิบายว่าเงินทุนจะซื้อหลักฐานอะไร | เอกสารสวยแต่ไม่มีผลใหม่ หรือรับรอง submission-ready ทั้งที่ยังไม่รู้ call/PI |
+
+### แพ็กวิจัยต่อที่มีปลายทาง
+
+| แพ็ก / เจ้าของ | คำถามและ acceptance | ทางออกเมื่อยังไม่ผ่าน |
+| --- | --- | --- |
+| A / Topic 13, W3–W4 | เลือกหนึ่ง loop-ordering/resummation prescription; derive tadpole, stationary amplitude, zero-momentum Ward/self-energy และ current จาก approximation เดียว; ตรวจ derivative protocol, low-T limit, stability และ error-control assumptions | ส่ง consistency-boundary proof เฉพาะ class ที่ทดสอบ หรือคง unresolved พร้อม missing calculation; ห้ามอ้าง no-go ของทุก completion |
+| B / Topic 13 + Core admission, หลัง A พร้อม | ปิด source-to-state และ detector-to-observable map พร้อม units, independent parameter origins, normal-component definition และ uncertainty; เลือก observable หลักหนึ่งชนิดก่อนขยาย | ถ้ายังไม่ admitted ให้ใช้ operator-completion/identifiability result; งด physical prediction score |
+| C / Source owner, คู่ขนาน A–B ถึง W6 | primary measurement record ที่ state/frequency/protocol/permission/uncertainty ตรง; ล็อก calibration/comparison overlap และ competitor ก่อนเทียบ | measurement-feasibility package พร้อม precision/geometry/readout และรายการที่ต้องขอ; ไม่สร้าง empirical rows แทน |
+| D / Topic 10 numerical support, หลัง operator lock | คำนวณอีกวิธีด้วย fixed parameters; ตรวจ analytic limits, convergence และ conservation/ledger ที่เกี่ยวข้อง | ซ่อมเฉพาะ discrepancy ที่เปลี่ยนข้อสรุป ไม่เปิด turbulence/chaos wave ใหม่ |
+| E / Research lead + human reviewer, W7–W12 | comparison แบบไม่ rematch หรือ scoped structural result พร้อม sufficient-measurement argument; ตรวจอีก state/protocol เฉพาะเมื่อ preregistration พร้อม | เผย failed comparison/remaining identifiability; conditional result ต้องติดป้าย ไม่เลื่อนเป็น external validation |
+
+การได้เวลาสองเดือนควรเพิ่มอย่างน้อย **consistent response prescription + independent input หรือ feasibility specification** การได้เดือนที่สามควรเพิ่ม **comparison/independent reproduction หรือ measurement-design proof ที่แรงขึ้น** ไม่สัญญาว่ารันนานพอแล้ว Full Topic 13 จะปิดเอง
+
+### วิธีตัดสินทุกสองสัปดาห์
+
+รับงานด้วยหนึ่ง result card: คำถาม, version/สมมติฐาน, สิ่งที่ปิดจริง, equation/observable, units, source/hash, วิธีตรวจอีกแบบ, blocker ที่เหลือ และ next decision ทุก card ใช้ 11 report fields เดิม และแยก `research_result_ready`, `portfolio_review_ready`, `submission_ready` ออกจากกัน
+
+หากสอง wave ไม่เพิ่ม source, proof, operator หรือ independent check ที่เปลี่ยนข้อสรุป ให้หยุด rerun เดิมและตัดสินเลือก measurement request, scoped model revision หรือยุติ branch ด้วยเหตุผล การตัดสินเชิงวิจัยนี้ไม่ใช่การเปลี่ยนสถานะ Goal ของระบบโดยอัตโนมัติ ห้ามยุติ scope ด้วยการตั้ง complete เมื่อยัง unresolved
+
+จัดสรร effort เริ่มต้นประมาณ 60% สมการ/identifiability, 20% verification, 20% source/portfolio/call-fit แล้วปรับตาม controller จริง ช่วง 8–11 ตุลาคมเน้น verification และ portfolio หลัง scientific freeze การค้น/รันแต่ละงานต้องระบุว่า input ใหม่ใดจะทำให้ข้อสรุปเปลี่ยน ไม่เปิดทุก topic แข่งกัน
+
+ความใหม่ยังต้องมี related-work/claim comparison ที่แยก imported two-fluid EFT ออกจาก contribution ของ UET; การคำนวณ method มาตรฐานซ้ำไม่รับประกัน novelty และโมเดล AI สองตัวเห็นตรงกันไม่แทนผู้เชี่ยวชาญหรือ external replication
+
 ## 1. สิ่งที่งานสองสัปดาห์จะซื้อให้ระยะยาว
 
 เป้าหมายระยะยาวคือทำให้สะพานความร้อนของ UET มีสมการและ observable ที่เชื่อมกับการวัดในสภาวะระบุชัด โดยรู้ว่าความสามารถทำนายใดมาจาก derivation และค่าใดต้องอาศัยการวัดภายนอก งานสองสัปดาห์แรกตัดสินว่าทุนควรซื้อการวัดอะไรหรือควรแก้ model class ตรงไหน
@@ -20,26 +60,26 @@
 
 ## 2. ใช้โมเดลไหน
 
-ตรวจ [OpenAI model catalog](https://developers.openai.com/api/docs/models), [model selection](https://developers.openai.com/api/docs/guides/model-selection) และ [GPT-6 Astra](https://developers.openai.com/api/docs/models/gpt-6-astra) วันที่ 27 กันยายน 2026 เอกสารจัด Astra สำหรับงาน reasoning/coding ซับซ้อน, Sol สำหรับสมดุลความสามารถกับต้นทุน และ Luna สำหรับงานจำนวนมากที่ต้องการประสิทธิภาพ การแบ่งงานด้านล่างเป็นข้อเสนอสำหรับ UET; ยังไม่ใช่ผล benchmark เปรียบเทียบที่ทำกับ repo นี้
+ตรวจ official OpenAI documentation อีกครั้งวันที่ 1 ตุลาคม 2026: [model selection](https://developers.openai.com/api/docs/guides/model-selection), [GPT-6 Astra](https://developers.openai.com/api/docs/models/gpt-6-astra) และ [GPT-6.1 Sol](https://developers.openai.com/api/docs/models/gpt-6.1-sol) จัด Astra สำหรับงานยากที่สุด และเสนอให้เปรียบเทียบ Sol 6.1 กับ Astra บนงานจริงเมื่อคำนึงถึงต้นทุน การแบ่งงานด้านล่างเป็นข้อเสนอสำหรับ UET ไม่ใช่ benchmark ที่พิสูจน์แล้วใน repo นี้
 
 | งาน | โมเดล/effort เริ่มต้นที่เสนอ | ส่งมอบที่ตรวจได้ |
 | --- | --- | --- |
 | เจ้าของ Goal และการตัดสินวิจัย | **GPT-6 Astra / high** | อธิบายว่าอะไรปิดจริง next controller และหลักฐานที่เปลี่ยนข้อสรุป |
 | derivation, identifiability, no-go, units/protocol conflict | Astra / xhigh เฉพาะโจทย์ที่นิยามแล้ว | proof/assumptions/counterexample พร้อมวิธีหักล้าง |
-| implementation, tests, numerical controls, artifact production | **GPT-6 Sol / high**; medium สำหรับงานตรงไปตรงมา | executable result และ log; ให้ Astra ตรวจสมการที่กระทบ interpretation |
+| implementation, tests, numerical controls, artifact production | **GPT-6.1 Sol / high**; medium สำหรับงานตรงไปตรงมา | executable result และ log; ให้ Astra ตรวจสมการที่กระทบ interpretation |
 | inventory, hash/link checks, metadata extraction ที่ schema ชัด | GPT-6 Luna / medium | structured rows พร้อม locator; ส่ง uncertainty/ambiguity กลับผู้วิเคราะห์ |
 | ตรวจข้อสรุปก่อน D10/W8/W12 | Astra / high หรือ xhigh ในบริบทสะอาดและวิธีคำนวณอีกแบบ | adversarial review และ independent reimplementation; ไม่ถือเป็น external validation |
-| เขียนเอกสาร/สไลด์จาก claim map ที่ล็อกแล้ว | Sol / medium; Astra ตรวจ claim รอบสุดท้าย | แต่ละข้อความสำคัญย้อนถึงหลักฐานได้ |
+| เขียนเอกสาร/สไลด์จาก claim map ที่ล็อกแล้ว | Sol 6.1 / medium; Astra ตรวจ claim รอบสุดท้าย | แต่ละข้อความสำคัญย้อนถึงหลักฐานได้ |
 
 **ถ้าเลือกโมเดลเดียวสำหรับ Goal นี้ ให้เลือก GPT-6 Astra / high.** เมื่อผล reasoning รอบแรกยังขาด proof obligation ที่ระบุได้ ให้ใช้ xhigh กับคำถามนั้น ส่วน max ให้ใช้เฉพาะข้อยากที่ระบุช่องว่างได้และต้องวัดผลว่าช่วยจริง ห้ามตีความว่า effort สูงขึ้นจะสร้างข้อมูลการทดลองที่ขาดอยู่
 
-**ถ้าต้องควบคุมค่าใช้จ่าย ให้ Sol ทำ execution เป็นส่วนใหญ่ แล้วใช้ Astra ที่จุด D2, D5, D10 และก่อนส่งพอร์ต.** Luna เป็นตัวเลือกเสริม; ไม่จำเป็นต้องเปิดสามโมเดลตลอดเวลา เวลารันและค่าใช้จ่ายจริงต้องวัดจากงานที่เสร็จผ่านเกณฑ์ รวมรอบแก้ ไม่เทียบเพียงราคาต่อ token
+**ถ้าต้องควบคุมค่าใช้จ่าย ให้ Sol 6.1 / high ทำ execution เป็นส่วนใหญ่ แล้วใช้ Astra ที่จุดตัดสิน D5, D10, W4/W6 และก่อนส่งพอร์ต.** หากใช้ได้ตัวเดียวและ Astra ใช้เวลาหรือโควตามากเกินไป ให้ใช้ Sol 6.1 / high โดยรักษา analytic checks และ review ไม่ลดเกณฑ์วิจัยเพื่อประหยัด Luna เป็นตัวเลือกเสริม ไม่จำเป็นต้องเปิดสามโมเดลตลอดเวลา เวลารันและค่าใช้จ่ายจริงต้องวัดจากงานที่เสร็จผ่านเกณฑ์ รวมรอบแก้ ไม่เทียบเพียงราคาต่อ token
 
 รายชื่อโมเดล/effort เหล่านี้มีในเครื่องมือของ session ปัจจุบัน แต่สิทธิ์ใช้งานและโควตาขึ้นกับบัญชี/การตั้งค่าจริง แผนนี้ไม่ได้เปลี่ยนโมเดลให้แชท ไม่ตั้งค่า routing อัตโนมัติ ไม่เริ่มห้องใหม่หรือซื้อ API การใช้ Codex ผ่านบัญชีกับราคา API เป็นคนละเรื่อง; ไม่ประมาณค่าใช้จ่ายบัญชีจากตาราง API
 
 ### ทดลองแบ่งงานใน D1 แบบสั้น
 
-ให้ Astra และ Sol ทำโจทย์เดียวกันจาก source packet ที่ตรึงไว้ จำกัดการประเมินรวมประมาณ 60–90 นาทีถ้าทั้งคู่ใช้ได้ ไม่ปล่อยให้การเลือกโมเดลกิน sprint หากใช้ได้ตัวเดียวให้ใช้ตัวนั้นและตรวจด้วยเครื่องมือ
+ให้ Astra และ Sol 6.1 ทำโจทย์เดียวกันจาก source packet ที่ตรึงไว้ จำกัดการประเมินรวมประมาณ 60–90 นาทีถ้าทั้งคู่ใช้ได้ ใช้เมื่อเริ่มแบ่งงานหรือเปลี่ยนรุ่น ไม่ restart D1 เพราะเปลี่ยนโมเดล ไม่ปล่อยให้การเลือกโมเดลกิน sprint หากใช้ได้ตัวเดียวให้ใช้ตัวนั้นและตรวจด้วยเครื่องมือ
 
 โจทย์ตรวจหกข้อ: (1) matching identity ไม่ใช่ validation, (2) chain-rule Phi Jacobian, (3) source uncertainty ไม่ใช่ sigma เมื่อไม่มีนิยาม, (4) initial rate ทำให้ dip time เปลี่ยน, (5) source missing ไม่ใช่ no-go, (6) historical no-access ไม่รับรอง blinding หลัง exposure ให้ reference answers จาก artifacts/derivations และทดสอบโค้ดจริง
 
@@ -60,6 +100,8 @@
 ## 4. แผนสัปดาห์ 3–12
 
 นับจาก D1 = 28 ก.ย. 2026: W8 จบ 22 พ.ย.; W12 จบ 20 ธ.ค. หากรอบทุนถัดไปอยู่ 2–3 เดือน **หลัง** รอบแรก ให้ใช้วันประกาศจริงจัด submission buffer ใหม่ โดยเก็บ milestone วิจัยเดิม ไม่เดาวันเปิดทุน
+
+สองถึงสามเดือนหลัง 11 ตุลาคมจะอยู่ราว 11 ธันวาคม–11 มกราคม จึงไม่เท่ากับ W8/W12 จากวันเริ่ม sprint หาก call จริงอยู่เดือนมกราคม ให้ใช้ช่วงหลัง 20 ธันวาคมกับ reviewer response, missing institutional documents และ rerun ของ release ที่ตรึงแล้ว ไม่ขยายทฤษฎีใหม่จนกิน submission buffer รอบทุนดังกล่าวยังไม่ได้รับการยืนยัน
 
 | ช่วง | งานที่เน้น | สิ่งที่ต้องปิดก่อนขยับ |
 | --- | --- | --- |

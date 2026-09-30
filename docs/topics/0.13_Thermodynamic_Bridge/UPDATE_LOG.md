@@ -1,3 +1,27 @@
+## 2026-10-01 - Funding timeline and model-selection revision
+
+MAJOR_RESULT_CLOSURE: Planning contract revised; no scientific closure or Core status changed.
+
+WHAT_IS_ACTUALLY_CLOSED: The existing 14-day/12-week plan now distinguishes research-result, portfolio-review and submission readiness, with explicit A-E work-package acceptance and a missed-round scenario.
+
+WHAT_REMAINS_OPEN: Matched stationary finite-T response, independent material/source/detector admission, physical comparison, novelty review, funder deadline, PI eligibility and resources.
+
+DEPENDENCY_UNLOCKED: None. Recorded bounded O(2)/He-4 composition is not overwritten by new diagnostic flags.
+
+STATUS: PLANNING_REVISION; scientific funding objective remains unresolved/partial, not completed by this document.
+
+WHAT_CHANGED: Updated the canonical roadmap, planning JSON and Goal brief; added planning-contract regression tests. Astra/high owns critical decisions, Sol 6.1/high is the proposed implementation model, not an automatic setting change.
+
+EQUATION_OR_MAPPING: No equation changed. The existing amplitude-path/tadpole boundary determines the next matched Ward/current research package.
+
+VERIFICATION: Official OpenAI model-selection/Astra/Sol 6.1 pages retrieved on 1 October. Four planning/date/link/hash tests plus eleven thermal/operator tests passed (15 total). Whitespace review passed. A separate full thermal run passed 31 tests; none of these checks establishes empirical validation.
+
+CONTROLLING_BLOCKER: joint_finite_T_stationary_current_response_not_derived; funder/PI information separately controls actual submission readiness.
+
+NEXT_ACTION: D5 route decision on 2 October; scientific freeze on 7 October; portfolio target remains 11 October. W4/W6/W8/W12 accept evidence, not elapsed time.
+
+CLAIM_BOUNDARY: Planning and model recommendations only. No guarantee of a funding round in two to three months, physical validation, Full Topic13 closure, Goal reconfiguration or model switching.
+
 ## 2026-09-07 - Finite-q thermoelastic compatibility
 
 MAJOR_RESULT_CLOSURE: T13_THERMOELASTIC_FINITE_Q_COMPATIBILITY is CLOSED_FOR_LANE under a conditional material ansatz; Full Topic 13 is not unlocked.
