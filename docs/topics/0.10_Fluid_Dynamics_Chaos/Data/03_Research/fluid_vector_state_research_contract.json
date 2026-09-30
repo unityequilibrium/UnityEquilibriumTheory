@@ -1,0 +1,216 @@
+{
+  "schema_version": "t10-vector-state-research-contract-v1",
+  "artifact": "fluid_vector_state_research_contract",
+  "date": "2026-09-30",
+  "status": "CANDIDATE_NORMALIZED_REFERENCE_ONLY",
+  "owner": "Core equation admission; Topic 0.10 reference verification",
+  "controlling_blocker": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "claim_promotion": false,
+  "dependency_unlock": false,
+  "physical_uet_operator_admitted": false,
+  "parent_functional": "docs/core/02_equations/matter_space/uet_matter_space.py",
+  "parent_contract": "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+  "foundation_gate": "docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json",
+  "unit_lane": "normalized",
+  "dimension": 2,
+  "domain": "periodic [0,2*pi)^2; continuum identities also require smooth fields",
+  "independent_state": [
+    "C",
+    "Phi",
+    "Q",
+    "u"
+  ],
+  "constraints": [
+    "div(u)=0",
+    "rho0 constant positive",
+    "Q=D_t Phi",
+    "Pi=partial_t Phi=Q-u.dot(grad(Phi))"
+  ],
+  "ontology": {
+    "C": "lane-specific relational/structural scalar; not identified with mass density",
+    "Phi": "effective response scalar; not temperature, metric, or information",
+    "Q": "proposed material response rate; distinct from Core Eulerian Pi",
+    "Pi": "Core Eulerian rate reconstructed from Q and u; equals Q only when advective rate vanishes",
+    "u": "new independent solenoidal fluid velocity, not scalar-gradient readout",
+    "rho0": "separate constant reference inertia coefficient; not C",
+    "R_gen": "derived trace only; no state or feedback edge",
+    "R_obs": "observer record only",
+    "legacy_I": "excluded; no I-to-Phi substitution"
+  },
+  "equations": {
+    "D_t": "partial_t+u.dot(grad)",
+    "mu_C": "a_C*C+b_C*C^3-kappa_C*Delta(C)-g*C*Phi",
+    "mu_Phi": "a_Phi*Phi+b_Phi*Phi^3-kappa_Phi*Delta(Phi)-g*C^2/2",
+    "C": "D_t C=M_C*Delta(mu_C)+J_C",
+    "Phi": "D_t Phi=Q",
+    "Q": "tau_Phi*D_t Q+Q=-M_Phi*mu_Phi+J_Phi",
+    "momentum": "rho0*D_t u=-grad(p)+div(2*eta*D(u))+f_rev+F_ext",
+    "f_rev": "mu_C*grad(C)+mu_Phi*grad(Phi)",
+    "stress_gauge": "f_rev=grad(f)-div(kappa_C*grad(C) tensor grad(C)+kappa_Phi*grad(Phi) tensor grad(Phi))",
+    "energy": "E=Omega+integral[rho0*|u|^2/2+tau_Phi*Q^2/(2*M_Phi)] dx",
+    "dissipation": "D=integral[M_C*|grad(mu_C)|^2+Q^2/M_Phi+2*eta*D(u):D(u)] dx",
+    "power": "P=integral[mu_C*J_C+Q*J_Phi/M_Phi+u.dot(F_ext)] dx",
+    "ledger": "dE/dt+D-P=0",
+    "source_mass": "integral J_C dx=0 for the declared closed conserved scalar",
+    "Pi_coordinate_transform": "partial_t Pi=partial_t Q-partial_t u.dot(grad(Phi))-u.dot(grad(partial_t Phi))"
+  },
+  "derivation": {
+    "scalar_functional": "source-linked normalized Core constitutive functional; expanded formally from 1D to smooth 2D periodic fields",
+    "inertial_fluid_equation": "constitutive_ansatz adopting standard incompressible momentum balance, not derived from UET action",
+    "advected_Phi_Q_pair": "constitutive_ansatz requiring a new material-frame admission record",
+    "reversible_force": "derived_relation from cancellation of advective functional work; uniqueness only up to a gradient and additional work-orthogonal terms",
+    "incompressibility": "declared constraint, not derived from the scalar functional",
+    "units": "normalized identities; formal SI dimension table is a proposal with no numeric UET coefficient/measurement calibration",
+    "no_automatic_admission": true,
+    "zero_velocity_limit": "At an instant u=0 gives Pi=Q. Parent Eulerian dynamics require u=0 and partial_t u=0 (frozen-flow algebraic control), not merely initially zero u; nonuniform scalar capillary force can start fluid motion.",
+    "dimensional_slice": "SI table uses a 3D energy-per-volume dimensional target. A 2D slice integral is per unit out-of-plane length until a physical thickness is supplied; no joule claim."
+  },
+  "coefficients": {
+    "a_matter": -1,
+    "b_matter": 1,
+    "kappa_matter": 1,
+    "mobility_matter": 1,
+    "a_space": 1,
+    "b_space": 1,
+    "kappa_space": 1,
+    "mobility_space": 1,
+    "tau_space": 1,
+    "coupling_g": 0.25,
+    "rho0": 1,
+    "eta": 0.1
+  },
+  "coefficient_origin": "Parent Core defaults for scalar controls; rho0=1 and eta=0.1 are declared synthetic reference controls, not He-4 or water parameters.",
+  "reference_verification": {
+    "grids": [
+      16,
+      32,
+      64
+    ],
+    "derivative": "Fourier pseudospectral on resolved trigonometric controls; no timestep evolution",
+    "relative_identity_tolerance": 1e-9,
+    "directional_derivative_tolerance": 1e-7,
+    "negative_control_work_floor": 1e-8,
+    "finite_difference_steps": [
+      0.001,
+      0.0001,
+      0.00001
+    ],
+    "threshold_policy": "Identity tolerances locked before first audit, unchanged after failure. Version 2 controls were amended after version 1 preview; not a blind preregistration or physical threshold.",
+    "manufactured_fields": {
+      "C": "0.7+0.23*sin(x)+0.17*cos(y)+0.11*sin(x+y)",
+      "Phi": "-0.2+0.19*cos(x)+0.13*sin(y)+0.07*cos(x-y)",
+      "Q": "0.12*sin(x+0.3)+0.08*cos(y-0.4)+0.05*sin(x+y+0.2)",
+      "streamfunction": "0.3*sin(x)*sin(y)+0.17*cos(x+y)+0.09*sin(x-y)+0.12*sin(2*x+y+0.31)",
+      "velocity": "u=(partial_y(streamfunction),-partial_x(streamfunction))",
+      "J_C": "0.1*sin(x+0.1)",
+      "J_Phi": "0.07*cos(x-y+0.4)",
+      "F_ext": "(0.02+0.1*sin(y),-0.03+0.08*cos(x))",
+      "boost": "V=(0.37,-0.21)",
+      "note": "All amplitudes and thresholds locked before first reference audit; no time integration."
+    },
+    "control_version": 2
+  },
+  "admission_gates": {
+    "F0": {
+      "status": "CANDIDATE_INVENTORY_RECORDED",
+      "scope": "parent, legacy, source, state and comparator inventory"
+    },
+    "F1": {
+      "status": "CANDIDATE",
+      "missing": "Core approval of independent u and Q with explicit Eulerian/material transform"
+    },
+    "F2": {
+      "status": "BLOCKED",
+      "missing": "physical lane realizing C/Phi, rho0 and the mechanical stress"
+    },
+    "F3": {
+      "status": "BLOCKED_SI",
+      "available": "normalized dimensional bookkeeping; SI dimension table only"
+    },
+    "F4": {
+      "status": "BLOCKED_UET_ORIGIN",
+      "available": "conditional normalized energy/stress derivation",
+      "missing": "Core-admitted mechanical inertia and advective closure; no unique UET derivation"
+    },
+    "F5": {
+      "status": "DIAGNOSTIC_ONLY",
+      "scope": "separate normalized reference checks; cannot satisfy blocked UET upstream gates"
+    },
+    "F6": {
+      "status": "NOT_STARTED",
+      "missing": "time integration, spatial/time convergence, stability and pressure/boundary checks"
+    },
+    "F7": {
+      "status": "BLOCKED",
+      "missing": "instrument/observable/coefficient map and uncertainty"
+    },
+    "F8": {
+      "status": "BLOCKED",
+      "missing": "independent source, parameter lock, holdout and external comparison"
+    }
+  },
+  "topic13_handoff": {
+    "usable": "conditional reversible scalar-fluid work ledger and a concrete frame/state contract for review",
+    "forbidden": [
+      "Phi equals temperature",
+      "rho0 equals Landau total/normal mass density",
+      "eta equals He-4 input without state matching",
+      "Q equals entropy flux",
+      "normalized loss equals SI heat or entropy"
+    ],
+    "required_for_second_sound": [
+      "normal and superfluid velocities with relative-flow inertia",
+      "admitted entropy and temperature equations",
+      "state-matched EOS/transport and mutual exchange",
+      "frequency/mode-specific measurement map and source uncertainty"
+    ],
+    "current_J02_status": "source/protocol candidate only; no dynamic prediction or unlock",
+    "dissipated_energy_policy": "normalized Lyapunov/free-energy loss; any physical heat-bath/entropy ledger is an additional required equation"
+  },
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/1104.1336",
+      "accessed": "2026-09-30",
+      "locator": "Section 1 equations (1.1)-(1.4), page 2",
+      "role": "standard constant-density Model H comparator for separate velocity and capillary stress; does not derive the Q/Phi extension or UET SI mapping"
+    }
+  ],
+  "implementation": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Vector_State_Contract.py",
+  "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_vector_state_contract_audit.json",
+  "next_action": "Core review/admit the material-rate transform and independent momentum constitutive origin, or reject this candidate with a scoped no-go; then choose time-discrete J04 reference controls only for the admitted scope.",
+  "control_design_history": {
+    "initial_version": 1,
+    "disposition": "FAIL_INSUFFICIENT_NEGATIVE_CONTROL_SENSITIVITY",
+    "initial_manufactured_fields": {
+      "C": "0.7+0.23*sin(x)+0.17*cos(y)+0.11*sin(x+y)",
+      "Phi": "-0.2+0.19*cos(x)+0.13*sin(y)+0.07*cos(x-y)",
+      "Q": "0.12*sin(x+0.3)+0.08*cos(y-0.4)+0.05*sin(x+y+0.2)",
+      "streamfunction": "0.3*sin(x)*sin(y)+0.17*cos(x+y)+0.09*sin(x-y)",
+      "velocity": "u=(partial_y(streamfunction),-partial_x(streamfunction))",
+      "J_C": "0.1*sin(x+0.1)",
+      "J_Phi": "0.07*cos(x-y+0.4)",
+      "F_ext": "(0.02+0.1*sin(y),-0.03+0.08*cos(x))",
+      "boost": "V=(0.37,-0.21)",
+      "note": "All amplitudes and thresholds locked before first reference audit; no time integration."
+    },
+    "reason": "Initial trigonometric streamfunction gave zero total reciprocal work by cancellation; missing-force and wrong-sign controls were insensitive. Thresholds unchanged. Control amendment follows observed preview and is not blind preregistration.",
+    "initial_failure_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_vector_state_contract_initial_control_failure.json",
+    "amendment": "Add fixed mixed second harmonic 0.12*sin(2*x+y+0.31) to streamfunction, within resolved Fourier bandwidth."
+  },
+  "auxiliary_symbols": {
+    "mu_C": "variational derivative of Omega with respect to C",
+    "mu_Phi": "variational derivative with respect to Phi",
+    "p": "pressure multiplier enforcing div u=0; zero mean gauge in reference",
+    "D_u": "symmetric velocity gradient (grad u+grad u^T)/2",
+    "h": "tau_Phi/M_Phi; normalized rate inertia coefficient",
+    "J_C": "scalar source with zero integral in closed conserved lane",
+    "J_Phi": "external response drive; its work is Q J_Phi/M_Phi",
+    "F_ext": "external fluid force density; work is u dot F_ext",
+    "Omega": "normalized scalar free-energy functional; no automatic SI energy meaning",
+    "E": "normalized total reference functional including fluid and rate inertia",
+    "D": "integrated nonnegative reference dissipation, distinct from tensor D_u",
+    "P": "integrated external normalized power",
+    "f": "scalar free-energy density, including gradient terms",
+    "f_rev": "reciprocal force density determined conditionally from advective work"
+  }
+}

@@ -1,0 +1,994 @@
+{
+  "schema_version": "t10-vector-state-contract-audit-v1",
+  "status": "PASS_NORMALIZED_VECTOR_REFERENCE_IDENTITIES_ONLY",
+  "controlling_blocker": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "claim_promotion": false,
+  "dependency_unlock": false,
+  "physical_uet_operator_admitted": false,
+  "unit_lane": "normalized",
+  "scope": "Manufactured instantaneous 2D periodic Fourier identities, not PDE trajectories or formal kernel proof.",
+  "origin": "Conditional constitutive reference proposal; canonical scalar source algebra checked statically.",
+  "thresholds": {
+    "grids": [
+      16,
+      32,
+      64
+    ],
+    "derivative": "Fourier pseudospectral on resolved trigonometric controls; no timestep evolution",
+    "relative_identity_tolerance": 1e-09,
+    "directional_derivative_tolerance": 1e-07,
+    "negative_control_work_floor": 1e-08,
+    "finite_difference_steps": [
+      0.001,
+      0.0001,
+      1e-05
+    ],
+    "threshold_policy": "Identity tolerances locked before first audit, unchanged after failure. Version 2 controls were amended after version 1 preview; not a blind preregistration or physical threshold.",
+    "manufactured_fields": {
+      "C": "0.7+0.23*sin(x)+0.17*cos(y)+0.11*sin(x+y)",
+      "Phi": "-0.2+0.19*cos(x)+0.13*sin(y)+0.07*cos(x-y)",
+      "Q": "0.12*sin(x+0.3)+0.08*cos(y-0.4)+0.05*sin(x+y+0.2)",
+      "streamfunction": "0.3*sin(x)*sin(y)+0.17*cos(x+y)+0.09*sin(x-y)+0.12*sin(2*x+y+0.31)",
+      "velocity": "u=(partial_y(streamfunction),-partial_x(streamfunction))",
+      "J_C": "0.1*sin(x+0.1)",
+      "J_Phi": "0.07*cos(x-y+0.4)",
+      "F_ext": "(0.02+0.1*sin(y),-0.03+0.08*cos(x))",
+      "boost": "V=(0.37,-0.21)",
+      "note": "All amplitudes and thresholds locked before first reference audit; no time integration."
+    },
+    "control_version": 2
+  },
+  "coefficients": {
+    "a_matter": -1,
+    "b_matter": 1,
+    "kappa_matter": 1,
+    "mobility_matter": 1,
+    "a_space": 1,
+    "b_space": 1,
+    "kappa_space": 1,
+    "mobility_space": 1,
+    "tau_space": 1,
+    "coupling_g": 0.25,
+    "rho0": 1,
+    "eta": 0.1
+  },
+  "canonical_source_expressions": {
+    "local_density": "0.5 * config.a_matter * C ** 2 + 0.25 * config.b_matter * C ** 4 + 0.5 * config.a_space * Phi ** 2 + 0.25 * config.b_space * Phi ** 4 - 0.5 * config.coupling_g * C ** 2 * Phi",
+    "mu_C": "config.a_matter * C + config.b_matter * C ** 3 - config.kappa_matter * lap_C - config.coupling_g * C * Phi",
+    "mu_Phi": "config.a_space * Phi + config.b_space * Phi ** 3 - config.kappa_space * lap_Phi - 0.5 * config.coupling_g * C ** 2",
+    "dPi": "(-state.space_rate - config.mobility_space * mu_space + space_drive) / config.tau_space"
+  },
+  "input_hashes": {
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Vector_State_Contract.py": "3b81d328a8a7c073ed3804cf3815b09ca7b50b3d25a8547b7a18d84f6e8bfe0f",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_vector_state_research_contract.json": "ce7fee2d3a093e983316d9a867a1a2bbd16ab36efb77b5c97f5380bba2017f70",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_vector_state_addendum.json": "8ca6c181b68abc783a5eb55c9a6d03290eb5c2a50e6b0ac60c5e51b35458767d",
+    "docs/core/02_equations/matter_space/uet_matter_space.py": "488db6aa26b99856e2eb82a2f46a9857f623f418ef8e537498fa71d5e4f633aa",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/VECTOR_STATE_RESEARCH_CONTRACT.md": "63f2ef383cea4133069910db370c7156666a6f8325314a8ca97951e81cd8cac7",
+    "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md": "d178f1978c93a09350a4da6ea11153a93fbfb13ad12c9d390846f741ad5db848",
+    "docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json": "b3e142c660c3614a5185750156565fda017c8750523a7a9727097980734f75af",
+    "docs/core/07_artifacts/correspondence/matter_space_ontology_contract.json": "c460094a30d7ae72f1ccc4c5c335e3fe402d99fe3120d1156bb5d52810ff2e99",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_state_velocity_representability_audit.json": "7e7b1e5889ea4d1e04abe3a2186ac67e378b7b8d1437375a1ee446c88ba3c1a4"
+  },
+  "numpy_version": "2.3.5",
+  "grids": [
+    {
+      "grid": 16,
+      "checks": {
+        "canonical_mu_C_alignment": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "canonical_mu_Phi_alignment": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "stress_gauge": {
+          "metric": 9.023852460632355e-16,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "reversible_mean_force_zero": {
+          "metric": 1.2643861424099487e-18,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "independent_velocity_divergence": {
+          "metric": 2.35420714783512e-16,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "nonzero_vortical_state": {
+          "metric": 0.4919349550499537,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "nonzero_solenoidal_force": {
+          "metric": 0.00551166943856396,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "viscous_factor_and_periodic_equivalence": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "closed_energy_ledger": {
+          "metric": 1.2779328143640988e-16,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "open_source_work_ledger": {
+          "metric": 8.78578809875318e-17,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "nonnegative_dissipation": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "closed_scalar_mass": {
+          "metric": 1.0957462050031184e-15,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "closed_mean_momentum": {
+          "metric": 7.364035363722183e-17,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "closed_rhs_incompressibility": {
+          "metric": 3.581926212509032e-15,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "open_scalar_mass": {
+          "metric": 5.478731025015592e-16,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "open_mean_momentum": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "open_rhs_incompressibility": {
+          "metric": 3.64128626380568e-15,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "total_work_control_sensitive": {
+          "metric": 0.00914081327268752,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "Phi_work_control_sensitive": {
+          "metric": 0.008503285819690894,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "missing_force_detected_with_expected_defect": {
+          "metric": 1.1553258350005535e-15,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "wrong_force_sign_detected_with_expected_defect": {
+          "metric": 5.342948306008566e-16,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "silent_rate_substitution_detected_with_expected_defect": {
+          "metric": 1.9394208461420703e-15,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "missing_force_must_fail_ledger": {
+          "metric": 0.009140813272688675,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "wrong_sign_must_fail_ledger": {
+          "metric": 0.018281626545375573,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "rate_substitution_must_fail_ledger": {
+          "metric": 0.008503285819688955,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "material_rate_Galilean_transform": {
+          "metric": 1.1006120699512464e-17,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "Eulerian_material_rate_are_distinct": {
+          "metric": 0.031093217733792564,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "boosted_open_ledger": {
+          "metric": 3.035090434114735e-16,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "boosted_C_rhs": {
+          "metric": 6.090746351534466e-17,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "boosted_Phi_rhs": {
+          "metric": 1.0986879215042855e-17,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "boosted_Q_rhs": {
+          "metric": 3.8961495605551095e-17,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "boosted_velocity_rhs": {
+          "metric": 1.7612868463318355e-16,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "boosted_power_shift": {
+          "metric": 1.1102230246251565e-16,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "kinetic_boost_energy_shift": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "frozen_zero_flow_parent_rate_algebra": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "zero_velocity_Pi_equals_Q": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "Eulerian_Pi_coordinate_rhs_directional_derivative": {
+          "metric": 2.3498510979615e-12,
+          "threshold": 1e-07,
+          "pass": true
+        },
+        "unchanged_parent_Pi_rhs_is_detectably_different": {
+          "metric": 0.05422462751206946,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "initial_rest_is_not_frozen_parent_evolution": {
+          "metric": 0.0008906660653690565,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "uniform_scalar_force_vanishes": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "directional_energy_derivative": {
+          "metric": 6.411537967210279e-14,
+          "threshold": 1e-07,
+          "pass": true
+        },
+        "Young_polynomial_minorant_on_control": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "minorant_lower_bound_on_control": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        }
+      },
+      "details": {
+        "solenoidal_force_rms": 0.00551166943856396,
+        "closed": {
+          "rate": -13.900236533828798,
+          "dissipation": 13.9002365338288,
+          "power": 0.0,
+          "residual": 1.7763568394002505e-15,
+          "normalized_residual": 1.2779328143640988e-16
+        },
+        "open": {
+          "rate": -13.097966297191196,
+          "dissipation": 13.9002365338288,
+          "power": 0.8022702366376026,
+          "residual": 1.2212453270876722e-15,
+          "normalized_residual": 8.78578809875318e-17
+        },
+        "reciprocal_work": {
+          "C": -0.0006375274529966255,
+          "Phi": -0.008503285819690894,
+          "total": -0.00914081327268752
+        },
+        "negative_controls": {
+          "missing_reciprocal_force": 0.009140813272688675,
+          "wrong_force_sign": 0.018281626545375573,
+          "silent_Pi_Q_substitution": -0.008503285819688955
+        },
+        "boosted_open": {
+          "rate": -13.63882061837089,
+          "dissipation": 13.9002365338288,
+          "power": 0.26141591545790566,
+          "residual": 4.218847493575595e-15,
+          "normalized_residual": 3.035090434114735e-16
+        },
+        "Pi_coordinate_rhs": {
+          "directional_relative_error": 2.3498510979615e-12,
+          "unchanged_parent_rhs_rms_defect": 0.05422462751206946
+        },
+        "initial_rest_parent_boundary": {
+          "acceleration_rms": 0.00551166943856396,
+          "Eulerian_Pi_rhs_defect_without_frozen_flow_constraint": 0.0008906660653690565
+        },
+        "directional_derivative": [
+          {
+            "step": 0.001,
+            "relative_error": 6.411537967210279e-14
+          },
+          {
+            "step": 0.0001,
+            "relative_error": 2.6895152771544417e-13
+          },
+          {
+            "step": 1e-05,
+            "relative_error": 2.688960165642129e-13
+          }
+        ],
+        "polynomial_bound": {
+          "analytic_density_lower_bound": -0.5,
+          "regularity_claim": false
+        }
+      },
+      "pass": true
+    },
+    {
+      "grid": 32,
+      "checks": {
+        "canonical_mu_C_alignment": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "canonical_mu_Phi_alignment": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "stress_gauge": {
+          "metric": 2.1029922690233475e-15,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "reversible_mean_force_zero": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "independent_velocity_divergence": {
+          "metric": 4.497100254153147e-16,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "nonzero_vortical_state": {
+          "metric": 0.49193495504995366,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "nonzero_solenoidal_force": {
+          "metric": 0.005511669438563963,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "viscous_factor_and_periodic_equivalence": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "closed_energy_ledger": {
+          "metric": 3.8337984430922967e-16,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "open_source_work_ledger": {
+          "metric": 8.78578809875318e-17,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "nonnegative_dissipation": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "closed_scalar_mass": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "closed_mean_momentum": {
+          "metric": 3.2630530071522194e-17,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "closed_rhs_incompressibility": {
+          "metric": 1.406893856445875e-14,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "open_scalar_mass": {
+          "metric": 5.478731025015592e-16,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "open_mean_momentum": {
+          "metric": 7.799716490477675e-17,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "open_rhs_incompressibility": {
+          "metric": 1.4144686761908253e-14,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "total_work_control_sensitive": {
+          "metric": 0.009140813272687514,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "Phi_work_control_sensitive": {
+          "metric": 0.008503285819690872,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "missing_force_detected_with_expected_defect": {
+          "metric": 1.160530005428484e-15,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "wrong_force_sign_detected_with_expected_defect": {
+          "metric": 2.321060010856968e-15,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "silent_rate_substitution_detected_with_expected_defect": {
+          "metric": 3.693226280354622e-15,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "missing_force_must_fail_ledger": {
+          "metric": 0.009140813272688675,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "wrong_sign_must_fail_ledger": {
+          "metric": 0.01828162654537735,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "rate_substitution_must_fail_ledger": {
+          "metric": 0.008503285819687179,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "material_rate_Galilean_transform": {
+          "metric": 1.0450925232168211e-17,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "Eulerian_material_rate_are_distinct": {
+          "metric": 0.031093217733792557,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "boosted_open_ledger": {
+          "metric": 4.792248053865371e-17,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "boosted_C_rhs": {
+          "metric": 7.131761651608107e-17,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "boosted_Phi_rhs": {
+          "metric": 1.0302523821446262e-17,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "boosted_Q_rhs": {
+          "metric": 4.025216467451342e-17,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "boosted_velocity_rhs": {
+          "metric": 7.346729195488705e-16,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "boosted_power_shift": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "kinetic_boost_energy_shift": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "frozen_zero_flow_parent_rate_algebra": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "zero_velocity_Pi_equals_Q": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "Eulerian_Pi_coordinate_rhs_directional_derivative": {
+          "metric": 5.834379160865908e-12,
+          "threshold": 1e-07,
+          "pass": true
+        },
+        "unchanged_parent_Pi_rhs_is_detectably_different": {
+          "metric": 0.054224627512069454,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "initial_rest_is_not_frozen_parent_evolution": {
+          "metric": 0.0008906660653690564,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "uniform_scalar_force_vanishes": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "directional_energy_derivative": {
+          "metric": 2.6884050541298166e-13,
+          "threshold": 1e-07,
+          "pass": true
+        },
+        "Young_polynomial_minorant_on_control": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "minorant_lower_bound_on_control": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        }
+      },
+      "details": {
+        "solenoidal_force_rms": 0.005511669438563963,
+        "closed": {
+          "rate": -13.900236533828794,
+          "dissipation": 13.9002365338288,
+          "power": 0.0,
+          "residual": 5.329070518200751e-15,
+          "normalized_residual": 3.8337984430922967e-16
+        },
+        "open": {
+          "rate": -13.097966297191196,
+          "dissipation": 13.9002365338288,
+          "power": 0.8022702366376026,
+          "residual": 1.2212453270876722e-15,
+          "normalized_residual": 8.78578809875318e-17
+        },
+        "reciprocal_work": {
+          "C": -0.0006375274529966426,
+          "Phi": -0.008503285819690872,
+          "total": -0.009140813272687514
+        },
+        "negative_controls": {
+          "missing_reciprocal_force": 0.009140813272688675,
+          "wrong_force_sign": 0.01828162654537735,
+          "silent_Pi_Q_substitution": -0.008503285819687179
+        },
+        "boosted_open": {
+          "rate": -13.638820618370893,
+          "dissipation": 13.9002365338288,
+          "power": 0.26141591545790566,
+          "residual": 6.661338147750939e-16,
+          "normalized_residual": 4.792248053865371e-17
+        },
+        "Pi_coordinate_rhs": {
+          "directional_relative_error": 5.834379160865908e-12,
+          "unchanged_parent_rhs_rms_defect": 0.054224627512069454
+        },
+        "initial_rest_parent_boundary": {
+          "acceleration_rms": 0.005511669438563963,
+          "Eulerian_Pi_rhs_defect_without_frozen_flow_constraint": 0.0008906660653690564
+        },
+        "directional_derivative": [
+          {
+            "step": 0.001,
+            "relative_error": 2.6884050541298166e-13
+          },
+          {
+            "step": 0.0001,
+            "relative_error": 1.9516055438373314e-12
+          },
+          {
+            "step": 1e-05,
+            "relative_error": 2.193567549824138e-11
+          }
+        ],
+        "polynomial_bound": {
+          "analytic_density_lower_bound": -0.5,
+          "regularity_claim": false
+        }
+      },
+      "pass": true
+    },
+    {
+      "grid": 64,
+      "checks": {
+        "canonical_mu_C_alignment": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "canonical_mu_Phi_alignment": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "stress_gauge": {
+          "metric": 5.796884639340421e-15,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "reversible_mean_force_zero": {
+          "metric": 4.599880250050122e-19,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "independent_velocity_divergence": {
+          "metric": 1.4499810375263014e-15,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "nonzero_vortical_state": {
+          "metric": 0.4919349550499539,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "nonzero_solenoidal_force": {
+          "metric": 0.005511669438563963,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "viscous_factor_and_periodic_equivalence": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "closed_energy_ledger": {
+          "metric": 1.2779328143640986e-16,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "open_source_work_ledger": {
+          "metric": 3.434444438603515e-16,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "nonnegative_dissipation": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "closed_scalar_mass": {
+          "metric": 1.0957462050031184e-15,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "closed_mean_momentum": {
+          "metric": 5.5456967086948754e-17,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "closed_rhs_incompressibility": {
+          "metric": 1.1922637531493124e-13,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "open_scalar_mass": {
+          "metric": 5.478731025015592e-16,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "open_mean_momentum": {
+          "metric": 1.559943298095535e-16,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "open_rhs_incompressibility": {
+          "metric": 1.1906276181969201e-13,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "total_work_control_sensitive": {
+          "metric": 0.00914081327268755,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "Phi_work_control_sensitive": {
+          "metric": 0.008503285819690865,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "missing_force_detected_with_expected_defect": {
+          "metric": 4.676814491233472e-15,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "wrong_force_sign_detected_with_expected_defect": {
+          "metric": 2.248201624865942e-15,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "silent_rate_substitution_detected_with_expected_defect": {
+          "metric": 3.686287386450715e-15,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "missing_force_must_fail_ledger": {
+          "metric": 0.009140813272692228,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "wrong_sign_must_fail_ledger": {
+          "metric": 0.01828162654537735,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "rate_substitution_must_fail_ledger": {
+          "metric": 0.008503285819687179,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "material_rate_Galilean_transform": {
+          "metric": 1.0549195753218418e-17,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "Eulerian_material_rate_are_distinct": {
+          "metric": 0.031093217733792564,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "boosted_open_ledger": {
+          "metric": 1.7970930201995136e-16,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "boosted_C_rhs": {
+          "metric": 7.10281115064053e-17,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "boosted_Phi_rhs": {
+          "metric": 1.0269927667638271e-17,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "boosted_Q_rhs": {
+          "metric": 3.837846937030975e-17,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "boosted_velocity_rhs": {
+          "metric": 2.829308766751621e-15,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "boosted_power_shift": {
+          "metric": 2.220446049250313e-16,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "kinetic_boost_energy_shift": {
+          "metric": 1.2429736017900243e-16,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "frozen_zero_flow_parent_rate_algebra": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "zero_velocity_Pi_equals_Q": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "Eulerian_Pi_coordinate_rhs_directional_derivative": {
+          "metric": 1.3329108526148841e-11,
+          "threshold": 1e-07,
+          "pass": true
+        },
+        "unchanged_parent_Pi_rhs_is_detectably_different": {
+          "metric": 0.054224627512069475,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "initial_rest_is_not_frozen_parent_evolution": {
+          "metric": 0.0008906660653690595,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "uniform_scalar_force_vanishes": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "directional_energy_derivative": {
+          "metric": 1.57818202950466e-13,
+          "threshold": 1e-07,
+          "pass": true
+        },
+        "Young_polynomial_minorant_on_control": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "minorant_lower_bound_on_control": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        }
+      },
+      "details": {
+        "solenoidal_force_rms": 0.005511669438563963,
+        "closed": {
+          "rate": -13.900236533828801,
+          "dissipation": 13.900236533828803,
+          "power": 0.0,
+          "residual": 1.7763568394002505e-15,
+          "normalized_residual": 1.2779328143640986e-16
+        },
+        "open": {
+          "rate": -13.097966297191196,
+          "dissipation": 13.900236533828803,
+          "power": 0.8022702366376026,
+          "residual": 4.773959005888173e-15,
+          "normalized_residual": 3.434444438603515e-16
+        },
+        "reciprocal_work": {
+          "C": -0.0006375274529966854,
+          "Phi": -0.008503285819690865,
+          "total": -0.00914081327268755
+        },
+        "negative_controls": {
+          "missing_reciprocal_force": 0.009140813272692228,
+          "wrong_force_sign": 0.01828162654537735,
+          "silent_Pi_Q_substitution": -0.008503285819687179
+        },
+        "boosted_open": {
+          "rate": -13.638820618370895,
+          "dissipation": 13.900236533828803,
+          "power": 0.2614159154579056,
+          "residual": 2.4980018054066022e-15,
+          "normalized_residual": 1.7970930201995136e-16
+        },
+        "Pi_coordinate_rhs": {
+          "directional_relative_error": 1.3329108526148841e-11,
+          "unchanged_parent_rhs_rms_defect": 0.054224627512069475
+        },
+        "initial_rest_parent_boundary": {
+          "acceleration_rms": 0.005511669438563963,
+          "Eulerian_Pi_rhs_defect_without_frozen_flow_constraint": 0.0008906660653690595
+        },
+        "directional_derivative": [
+          {
+            "step": 0.001,
+            "relative_error": 1.57818202950466e-13
+          },
+          {
+            "step": 0.0001,
+            "relative_error": 1.3790635300381382e-12
+          },
+          {
+            "step": 1e-05,
+            "relative_error": 2.687849942617504e-13
+          }
+        ],
+        "polynomial_bound": {
+          "analytic_density_lower_bound": -0.5,
+          "regularity_claim": false
+        }
+      },
+      "pass": true
+    }
+  ],
+  "invalid_input_rejections": {
+    "rho0=0": true,
+    "eta=-1": true,
+    "mobility_matter=0": true,
+    "mobility_space=0": true,
+    "tau_space=0": true,
+    "b_matter=0": true,
+    "b_space=0": true,
+    "kappa_matter=0": true,
+    "kappa_space=0": true,
+    "a_space=-1": true,
+    "coupling_g=-1": true,
+    "rho0=nan": true,
+    "nonzero_mean_closed_source": true
+  },
+  "claim_boundary_checks": {
+    "locked_scalar_coefficients_match_parent_defaults": true,
+    "normalized_periodic_2d_only": true,
+    "claim_promotion_false": true,
+    "dependency_unlock_false": true,
+    "physical_operator_not_admitted": true,
+    "required_admission_still_blocked": true,
+    "diagnostic_not_F5_admission": true,
+    "trace_not_independent_state": true
+  },
+  "reference_check_count": 150,
+  "foundation_gate_status_observed": "BLOCKED",
+  "admission_gates": {
+    "F0": {
+      "status": "CANDIDATE_INVENTORY_RECORDED",
+      "scope": "parent, legacy, source, state and comparator inventory"
+    },
+    "F1": {
+      "status": "CANDIDATE",
+      "missing": "Core approval of independent u and Q with explicit Eulerian/material transform"
+    },
+    "F2": {
+      "status": "BLOCKED",
+      "missing": "physical lane realizing C/Phi, rho0 and the mechanical stress"
+    },
+    "F3": {
+      "status": "BLOCKED_SI",
+      "available": "normalized dimensional bookkeeping; SI dimension table only"
+    },
+    "F4": {
+      "status": "BLOCKED_UET_ORIGIN",
+      "available": "conditional normalized energy/stress derivation",
+      "missing": "Core-admitted mechanical inertia and advective closure; no unique UET derivation"
+    },
+    "F5": {
+      "status": "DIAGNOSTIC_ONLY",
+      "scope": "separate normalized reference checks; cannot satisfy blocked UET upstream gates"
+    },
+    "F6": {
+      "status": "NOT_STARTED",
+      "missing": "time integration, spatial/time convergence, stability and pressure/boundary checks"
+    },
+    "F7": {
+      "status": "BLOCKED",
+      "missing": "instrument/observable/coefficient map and uncertainty"
+    },
+    "F8": {
+      "status": "BLOCKED",
+      "missing": "independent source, parameter lock, holdout and external comparison"
+    }
+  },
+  "excluded": [
+    "Core runtime import/integration",
+    "timestep/spatial PDE convergence",
+    "SI material calibration",
+    "external CFD",
+    "He-II second sound",
+    "chaos/performance",
+    "well-posedness/global regularity"
+  ],
+  "next_action": "Core review/admit the material-rate transform and independent momentum constitutive origin, or reject this candidate with a scoped no-go; then choose time-discrete J04 reference controls only for the admitted scope."
+}

@@ -217,3 +217,27 @@ prioritizes theorem scope, norm separation, rotational-flow representability and
 vorticity-aware observables inside J00/J01. A finite-window NS or Euler stress
 case is conditional on later source and model admission. These papers add no
 scientific dependency, alter no numerical threshold and close no work package.
+
+## Vector-state checkpoint — 2026-09-30
+
+J01's legacy no-go remains scoped and unchanged. Its follow-up now provides a
+[vector/material-rate candidate](VECTOR_STATE_RESEARCH_CONTRACT.md) and a separate
+instantaneous normalized audit (150 checks). Independent u supports vortical
+states; conditional scalar/fluid work exchange, stress gauge and frame identities
+pass the selected controls. The initial control's cancelling-work FAIL is retained;
+the amended harmonic controls detect missing/reversed force and Pi/Q confusion
+without tolerance relaxation.
+
+This does not admit physical J04/J05, run a trajectory or close UET/Core.
+The controller has narrowed to
+vector_momentum_constitutive_origin_and_material_frame_admission_open.
+Starting at rest is not the same as freezing u and its acceleration to zero;
+the parent Eulerian Pi evolution needs the latter for this limit.
+
+Topic 13 consumes only a proposed reciprocal-work/frame interface. He-II second
+sound still requires an admitted two-fluid entropy/temperature/relative-flow state,
+state-matched transport and a primary measurement protocol. The current
+[Topic 13 protocol](../0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md)
+also records calibration/response source ancestry overlap: the recommended rows
+are neither blind nor established as independent. J02/J03 source work can continue
+in parallel, with no He-4-to-graphite parameter transfer.

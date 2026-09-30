@@ -132,3 +132,21 @@ scalar-gradient velocity map cannot represent a nonzero periodic incompressible 
 target; the current 3D source does not define a vector velocity state. See the machine-readable
 audit for source hashes, refinement metrics, mobility reset, unit boundary, and the missing
 SciPy runtime limitation. This does not upgrade readiness or change existing gates.
+
+## Vector-state reference follow-up (2026-09-30)
+
+The [candidate state/derivation contract](VECTOR_STATE_RESEARCH_CONTRACT.md) separates
+an independent incompressible velocity from C and distinguishes material rate Q
+from Core Eulerian Pi. The [reference audit](Result/artifacts/fluid_vector_state_contract_audit.json)
+passes 150 checks across three instantaneous Fourier grids, invalid-input rejection
+and claim-boundary checks. Reciprocal scalar/fluid work and stress identities close
+under the declared assumptions. This is not time integration, spatial/time PDE
+convergence, an admitted UET operator, physical validation or a formal-kernel proof.
+
+The initial control had cancelling work and failed negative-control sensitivity.
+Its FAIL artifact is retained; amended controls detect missing force, reversed force
+and silent Pi/Q substitution without relaxing tolerances. Merely starting at rest
+does not recover parent Pi dynamics; the frozen-flow limit also requires zero
+acceleration. The next controller is
+vector_momentum_constitutive_origin_and_material_frame_admission_open.
+Legacy speed, chaos-method, J04/J05 and Core admission boundaries are unchanged.

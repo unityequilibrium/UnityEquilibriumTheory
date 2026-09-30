@@ -89,3 +89,32 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
 - Controlling blocker: register a vector velocity/momentum state with ontology, units and derivation through Core F0–F8; J01's no-go remains scoped to the current legacy mapping.
 - Next action: prepare that state contract for Core admission; only after admission define the matched physical-flow J04 test.
 - Claim impact: none; no readiness change, calibration, dependency unlock or promotion.
+
+## 2026-09-30 Vector-state contract and reciprocal-work reference
+
+- Area/wave: research-core; candidate-state, formula and reference-artifact pass.
+- Changed: candidate F0-F4 contract and separate equation-registry draft; explicit
+  independent u, material Q and reconstructed Eulerian Pi; derivation/unit card;
+  verifier, retained initial-control FAIL and current reference artifact; two
+  regression tests; Topic 10 docs and joint-plan controller/source-overlap boundary.
+- Ran: N=16/32/64 instantaneous Fourier audit, canonical scalar AST comparison,
+  energy and Pi-coordinate directional derivatives, stress/pressure/frame,
+  closed/open mass/momentum/work checks and coefficient/source rejection.
+  Version 2 passes 150/150 reference checks; two regression tests pass.
+- Evidence: largest normalized energy residual below 4e-16; stress residual below
+  6e-15; missing force gives 0.0091408 normalized work defect, reversed force
+  0.0182816 and rate substitution -0.00850329. These are control units, not SI.
+- Retained failure: initial net-work cancellation made force-error controls
+  insensitive (nine failed checks). Its reproducible FAIL remains; a mixed
+  harmonic was added after preview. No tolerance was relaxed, and no blind
+  preregistration is claimed.
+- Additional boundary: initial u=0 can have nonzero scalar-force acceleration;
+  parent Pi dynamics require a frozen zero-flow/zero-acceleration algebraic limit.
+- Controller narrowed: vector_momentum_constitutive_origin_and_material_frame_admission_open.
+  Reference checks do not satisfy blocked physical F2/F3/F4/F7/F8 or unlock J04/J05.
+- Claim impact: none; no time trajectory, SI/CFD/He-II validation, chaos/speed
+  result, global regularity, central registry promotion or Core unlock.
+- Next: Core assess/admit or reject vector inertia/advection and material-frame
+  origin; identify the physical state/observable map and independent measurement
+  source before physical execution. Existing Topic 13 source-overlap boundary
+  remains authoritative.

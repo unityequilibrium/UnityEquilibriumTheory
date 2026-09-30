@@ -60,3 +60,26 @@ Result/artifacts/fluid_state_velocity_representability_audit.json.
 The source audit also records that the computed mobility is reset to 0.5 in the 2D
 constructor, the bridge constant is an unverified placeholder, and velocity units are not
 closed. The formula remains a heuristic gradient bridge, not an admitted momentum law.
+
+## Candidate vector-state formula addendum (2026-09-30)
+
+The [candidate registry draft](../../core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_vector_state_addendum.json)
+and [derivation card](VECTOR_STATE_RESEARCH_CONTRACT.md) inventory a conditional
+normalized scalar/fluid reference; they are not merged into the central equation
+registry or admitted physical Core gates.
+
+| Relation | Origin and boundary |
+| --- | --- |
+| Q = D_t Phi; Pi = Q - u dot grad Phi | Coordinate identity within a proposed material-frame state |
+| tau D_t Q + Q = -M_Phi mu_Phi + J_Phi | Constitutive ansatz; UET action origin open |
+| rho0 D_t u = -grad p + div(2 eta D(u)) + f_rev + F_ext | Independent incompressible momentum reference; rho0 is not C |
+| f_rev = mu_C grad C + mu_Phi grad Phi | Conditional reciprocal-work derivation from the parent functional |
+| f_rev = grad f - div(gradient stress) | Conditional translation/stress identity |
+| dE/dt + D - P = 0 | Normalized instantaneous work identity; no physical heat/entropy closure |
+| partial_t Pi = partial_t Q - partial_t u dot grad Phi - u dot grad(partial_t Phi) | Required Eulerian coordinate transform; unmodified parent RHS is a negative control |
+
+At u=0, Pi=Q at that instant. Parent Eulerian evolution also requires
+partial_t u=0; nonuniform scalar force can invalidate that frozen-flow assumption.
+The source-linked scalar formulas, synthetic inertia/viscosity and all exclusions
+are hashed in the reference audit. Bounded polynomial energy is not global
+regularity. Next controller: vector momentum origin and material-frame admission.

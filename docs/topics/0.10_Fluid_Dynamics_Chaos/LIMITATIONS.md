@@ -22,3 +22,26 @@ recorded default grid. A C floor of 0.01 is present, but clip-event counts are u
 because the solver was not stepped. Importing the engine was blocked in the configured
 runtime by missing scipy; the audit's manufactured controls do not depend on that import.
 See Result/artifacts/fluid_state_velocity_representability_audit.json.
+
+## Vector-reference boundary (2026-09-30)
+
+The new (C, Phi, Q, u) package is a normalized constitutive candidate. Independent
+momentum, incompressibility and material advection were assumed rather than
+derived from a UET action. Reciprocal work constrains the force but does not
+uniquely fix all possible work-orthogonal stresses. Pi remains partial_t Phi;
+using the parent Pi RHS unchanged is inconsistent with this candidate's
+material-rate dynamics in general.
+
+The reference audit is instantaneous and uses resolved synthetic trigonometric
+fields. Three grids demonstrate the identities on these fields, not PDE spatial
+convergence, time stability, turbulence, global regularity or SI validity.
+Canonical algebra is read statically; migrated Core runtime imports are not repaired.
+The initial control failure and post-preview amendment are retained.
+
+The SI dimension table has no material calibration; a 2D integral needs a physical
+thickness before a total joule interpretation. Positive quartics bound the
+polynomial below without proving convexity or a stable equilibrium. Normalized
+free-energy loss is not heat/entropy or a complete isolated energy model.
+Topic 13 still needs independent relative-fluid/entropy/temperature dynamics and
+source-independent measurements; its current J02 rows have unresolved calibration
+ancestry overlap. All required physical admission gates remain blocked.

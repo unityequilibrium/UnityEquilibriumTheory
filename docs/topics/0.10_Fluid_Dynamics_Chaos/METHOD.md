@@ -28,3 +28,21 @@ The result is scoped to the legacy 2D map u=-M grad(C) with constant scalar mobi
 periodic domain, and to the current 3D source surface. It does not run the UET engine,
 test physical CFD accuracy, or approve an added velocity state. Runtime import probes and
 unmeasured clipping counts are disclosed in the artifact.
+
+## Conditional vector/material-rate reference audit
+
+Run python docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Vector_State_Contract.py.
+The normalized instantaneous 2D periodic controls use Fourier derivatives at
+N=16/32/64, restricted arithmetic extraction of the canonical Core scalar
+polynomial/potentials, and an explicit independent momentum constitutive reference.
+Core modules are not imported, and no trajectory is advanced.
+
+The [contract](VECTOR_STATE_RESEARCH_CONTRACT.md) derives conditional reciprocal
+force and the Eulerian/material rate transform. Checks cover directional energy
+and Pi-coordinate derivatives, pressure projection, stress gauge, closed/open
+mass/momentum/work balances, Galilean transformations, frozen-flow and initial-rest
+distinction, coefficient/source rejection and failure-sensitive controls.
+The initial cancelling-work control is reproducible with --initial-control-diagnostic
+and intentionally exits 1. Version 2 follows that preview and is not blind
+preregistration; tolerances are unchanged. --output supports isolated test outputs.
+No physical J04 or Topic 13 mode is implemented.
