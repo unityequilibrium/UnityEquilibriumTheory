@@ -40,6 +40,7 @@ flowchart LR
 | Embedded speed benchmark | Runnable internal gate | `Result/artifacts/fluid_benchmark_validation.json` | implementation speed comparison |
 | Stress finite-output check | Runnable internal gate | same artifact | stress-test diagnostic |
 | UET fluid formulas | Formula-audited | `FORMULA_AUDIT.md` | model/component description |
+| Periodic velocity representability | Scoped source and analytic-control audit | Result/artifacts/fluid_state_velocity_representability_audit.json | no-go only for the current constant-M scalar-gradient map on nonzero periodic incompressible vortical targets |
 | External CFD validation | Not yet packaged | `DATA_MANIFEST.md` | future validation target |
 | Millennium proof target | Not part of current gate | `LIMITATIONS.md` | no mathematical-proof claim |
 
@@ -101,3 +102,33 @@ against the unchanged `2.0x` threshold. The separate chaos-method artifact is
 `PASS_CHAOS_METHOD_VALIDATION`; it validates the diagnostic implementation on
 standard controls and does not change the fluid comparator or external-CFD
 status.
+
+## Joint fluid–thermal research design (2026-09-26)
+
+The [Topic 10–13 research plan](JOINT_RESEARCH_PLAN_TOPIC10_TOPIC13.md) and
+[machine-readable work packages](Data/03_Research/fluid_thermal_joint_research_plan.json)
+start with state/velocity representability, then matched numerical controls,
+Core-admitted thermodynamic coupling, independent He-4 response, chaos and
+work–precision comparisons. Graphite input acquisition proceeds on its own
+three-package track. The work plan now includes a scoped J01 result; its unexecuted
+packages remain proposed. This audit is not physical validation or a readiness
+upgrade, and the existing speed, method-validation and physical-dependency gates
+remain authoritative.
+
+## OpenAI Navier–Stokes applicability review (2026-09-26)
+
+The [source-backed applicability review](OPENAI_NAVIER_STOKES_APPLICABILITY_2026-09-26.md)
+compares OpenAI's forced 3D incompressible blowup theorem and Lean release with
+the actual 2D/3D Topic 10 state, equations and verification gates. Its method
+guidance informed the completed J01 periodic rotational representability control.
+A paper-derived 3D adversarial numerical case remains conditional on an admitted
+velocity/momentum/forcing lane and reproducible source package.
+The source review informed a scoped J01 control; no physical result, threshold, readiness, or claim status changed.
+
+## J01 execution note (2026-09-26)
+
+The periodic representability control now has a scoped result. The current 2D constant-M
+scalar-gradient velocity map cannot represent a nonzero periodic incompressible vortical
+target; the current 3D source does not define a vector velocity state. See the machine-readable
+audit for source hashes, refinement metrics, mobility reset, unit boundary, and the missing
+SciPy runtime limitation. This does not upgrade readiness or change existing gates.

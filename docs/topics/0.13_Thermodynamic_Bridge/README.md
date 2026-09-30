@@ -1004,3 +1004,13 @@ CONTROLLING_BLOCKER: Physical source, dimensional calibration, and transport clo
 NEXT_ACTION: Roll the method to Topic 0.11/Core O(2); reopen Topic 13 chaos validity only for a newly accepted overlapping physical or open-system regime.
 
 CLAIM_BOUNDARY: Normalized diagnostic lane only; not physical chaos evidence, TTG prediction, Full Topic 13 closure, or global UET closure.
+
+## Joint work with Topic 0.10 (2026-09-26)
+
+The [joint research design](../0.10_Fluid_Dynamics_Chaos/JOINT_RESEARCH_PLAN_TOPIC10_TOPIC13.md)
+uses the bounded He-4 composition as an input, retains the matching-independence
+protocol blocker, and requires an unused response observable after parameter
+freeze. A shear-viscosity input does not supply thermal conductivity or full
+two-fluid transport. Graphite Phi/SI calibration, Ding-compatible C_src and
+physical transport remain separate input packages. This planning pass changes
+no thermal gate, source value, claim status or Core dependency.
